@@ -354,6 +354,7 @@
             <Polish>Wyjdź</Polish>
             <Italian>Esci</Italian>
             <German>Aussteigen!</German>
+            <Spanish>Sal del vehículo!</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -707,11 +708,13 @@
             <English>Turn on</English>
             <German>Aktivieren</German>
             <Polish>Włącz</Polish>
+            <Spanish>Encender</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
             <German>Deaktivieren</German>
             <Polish>Wyłącz</Polish>
+            <Spanish>Apagar</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -721,6 +724,7 @@
             <Portuguese>Passar carregador</Portuguese>
             <Czech>Podat zásobník</Czech>
             <Italian>Passa caricatore</Italian>
+            <Spanish>Pasar cargador</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -730,6 +734,7 @@
             <Portuguese>Carregador primário</Portuguese>
             <Czech>Zásobník do primární zbraně</Czech>
             <Italian>Caricatore Primario</Italian>
+            <Spanish>Cargador primario</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -739,6 +744,7 @@
             <Portuguese>Carregador da pistola</Portuguese>
             <Czech>Zásobník do pistole</Czech>
             <Italian>Caricatore Pistola</Italian>
+            <Spanish>Cargador de pistola</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -748,6 +754,7 @@
             <Portuguese>%1 passou a você um carregador %2.</Portuguese>
             <Czech>%1 ti podal %2 zásobník.</Czech>
             <Italian>%1 ti ha passato un caricatore %2 .</Italian>
+            <Spanish>%1 te pasó un cargador %2.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -757,6 +764,7 @@
             <Portuguese>Mostrar a interação "Passar carregador"</Portuguese>
             <Czech>Zobrazit "interakci "podat zásobník"</Czech>
             <Italian>Mostra interazione "passa caricatore"</Italian>
+            <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
         </Key>
     </Package>
 </Project>

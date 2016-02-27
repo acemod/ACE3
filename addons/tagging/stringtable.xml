@@ -4,54 +4,80 @@
         <Key ID="STR_ACE_tagging_tagWallBlack">
             <English>Tag black</English>
             <German>Schwarz markieren</German>
+            <Spanish>Marcar en negro</Spanish>
+            <Polish>Oznakuj na czarno</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallRed">
             <English>Tag red</English>
             <German>Rot markieren</German>
+            <Spanish>Marcar en rojo</Spanish>
+            <Polish>Oznakuj na czerwono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallGreen">
             <English>Tag green</English>
             <German>Grün markieren</German>
+            <Spanish>Marcar en verde</Spanish>
+            <Polish>Oznakuj na zielono</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallBLue">
             <English>Tag blue</English>
             <German>Blau markieren</German>
+            <Spanish>Marcar en azul</Spanish>
+            <Polish>Oznakuj na niebiesko</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlack">
             <English>Tag ground black</English>
             <German>Boden schwarz markieren</German>
+            <Polish>Oznakuj ziemię na czarno</Polish>
+            <Spanish>Marcar suelo en negro</Spanish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundRed">
             <English>Tag ground red</English>
             <German>Boden rot markieren</German>
+            <Polish>Oznakuj ziemię na czerwono</Polish>
+            <Spanish>Marcar suelo en rojo</Spanish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundGreen">
             <English>Tag ground green</English>
             <German>Boden grün markieren</German>
+            <Polish>Oznakuj ziemię na zielono</Polish>
+            <Spanish>Marcar suelo en verde</Spanish>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlue">
             <English>Tag ground blue</English>
             <German>Boden blau markieren</German>
+            <Polish>Oznakuj ziemię na niebiesko</Polish>
+            <Spanish>Marcar suelo en azul</Spanish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlack">
             <English>Black spray paint</English>
             <German>Schwarze Sprühfarbe</German>
+            <Spanish>Pintura negra</Spanish>
+            <Polish>Czarna farba w sprayu</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintRed">
             <English>Red spray paint</English>
             <German>Rote Sprühfarbe</German>
+            <Spanish>Pintura roja</Spanish>
+            <Polish>Czerwona farba w sprayu</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintGreen">
             <English>Green spray paint</English>
             <German>Grüne Sprühfarbe</German>
+            <Spanish>Pintura verde</Spanish>
+            <Polish>Zielona farba w sprayu</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlue">
             <English>Blue spray paint</English>
             <German>Blaue Sprühfarbe</German>
+            <Spanish>Pintura azul</Spanish>
+            <Polish>Niebieska farba w sprayu</Polish>
         </Key>
         <Key ID="STR_ACE_tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
+            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
+            <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
         </Key>
     </Package>
 </Project>

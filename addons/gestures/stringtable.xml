@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_Name">
@@ -119,6 +119,7 @@
             <Portuguese>Parar</Portuguese>
             <Czech>Stop</Czech>
             <Italian>Stop</Italian>
+            <Spanish>Detenerse</Spanish>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">
@@ -143,6 +144,7 @@
             <Portuguese>Reagrupar</Portuguese>
             <Czech>Přeskupit</Czech>
             <Italian>Raggruppare</Italian>
+            <Spanish>Reunirse</Spanish>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -154,6 +156,7 @@
             <Portuguese>Mover em frente</Portuguese>
             <Czech>Kupředu</Czech>
             <Italian>Muovere avanti</Italian>
+            <Spanish>Avanzar</Spanish>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
@@ -165,6 +168,7 @@
             <Portuguese>Engajar</Portuguese>
             <Czech>Útok</Czech>
             <Italian>Ingaggiare</Italian>
+            <Spanish>Atacar</Spanish>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -176,6 +180,7 @@
             <Portuguese>Ponta</Portuguese>
             <Czech>Ukázat</Czech>
             <Italian>Puntare</Italian>
+            <Spanish>Señalar</Spanish>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -187,6 +192,7 @@
             <Portuguese>Esperar</Portuguese>
             <Czech>Čekej</Czech>
             <Italian>Mantenere</Italian>
+            <Spanish>Esperar</Spanish>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -198,6 +204,7 @@
             <Portuguese>Aviso</Portuguese>
             <Czech>Pozor</Czech>
             <Italian>Attenzione</Italian>
+            <Spanish>Atención</Spanish>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
@@ -229,6 +236,8 @@
             <Czech>Zobrazit posunky v interakčním menu</Czech>
             <Polish>Pokaż gesty w menu interakcji</Polish>
             <Italian>Mostra Gesti su Menù Interazione</Italian>
+            <Spanish>Mostrar gestos en el menú de interacción</Spanish>
+            <French>Afficher les signaux dans le menu d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -236,6 +245,8 @@
             <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
             <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
             <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
+            <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
+            <French>Affiche les signaux dans le menu d'interaction personnel, ou seulement par raccourcis, ou encore les désactiver complètement</French>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
@@ -243,6 +254,8 @@
             <Czech>Pouze klávesové zkratky</Czech>
             <Polish>Tylko skróty klaw.</Polish>
             <Italian>Solo Hotkey</Italian>
+            <Spanish>Solo mediante teclas</Spanish>
+            <French>Juste par raccourcis</French>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -250,6 +263,8 @@
             <Czech>Klávesové zkratky + interakční menu</Czech>
             <Polish>Skróty klaw. + menu interakcji</Polish>
             <Italian>Hotkey + Menù Interazione</Italian>
+            <Spanish>Teclas y Menú de Interacción</Spanish>
+            <French>Raccourcis et menu d'interaction</French>
         </Key>
     </Package>
 </Project>
