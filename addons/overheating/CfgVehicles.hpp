@@ -30,6 +30,15 @@ class CfgVehicles {
                     priority = 2.9;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
+                class ACE_CheckTemperatureSpareBarrels {
+                    displayName = CSTRING(CheckTemperatureSpareBarrelsShort);
+                    condition = QUOTE( 'ACE_SpareBarrel' in magazines _player);
+                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    statement = QUOTE([ARR_2('spareBarrelsCheckTemperatures',[ARR_2(_player,_player)])] call EFUNC(common,serverEvent););
+                    showDisabled = 0;
+                    priority = 2.8;
+                    icon = QUOTE(PATHTOF(UI\temp_ca.paa));
+                };
             };
         };
     };
