@@ -4122,7 +4122,7 @@
             <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
-            <English>Delay cease fire of AI during medical unconsciousness</English>
+            <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
         </Key>
     </Package>
