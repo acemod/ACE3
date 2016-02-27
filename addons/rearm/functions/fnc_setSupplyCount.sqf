@@ -3,7 +3,7 @@
  * Sets the supply count.
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Supply Count <NUMBER>
  *
  * Return value:
@@ -16,8 +16,8 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_supply", 0, [0]]];
+params [["_truck", objNull, [objNull]], ["_supply", 0, [0]]];
 
-if (isNull _target) exitWith {};
+if (isNull _truck) exitWith {};
 
-_target setVariable [QGVAR(currentSupply), (_supply max 0), true];
+_truck setVariable [QGVAR(currentSupply), (_supply max 0), true];

@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Delete dummy object <BOOL> (optional)
- * 2: Unholster Weapon <BOOL> (optional)
+ * 1: Delete dummy object <BOOL><OPTIONAL>
+ * 2: Unholster Weapon <BOOL><OPTIONAL>
  *
  * Return Value:
  * None

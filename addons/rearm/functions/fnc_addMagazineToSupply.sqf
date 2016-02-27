@@ -3,7 +3,7 @@
  * Adds magazines to the supply.
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  * 2: Only partial <BOOL><OPTIONAL>
  *
@@ -17,27 +17,27 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_magazineClass", "", [""]], ["_partial", false, [false]]];
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_partial", false, [false]]];
 
-if (isNull _target ||
+if (isNull _truck ||
     {_magazineClass isEqualTo ""} ||
     {GVAR(supply) == 0}) exitWith {};
 
 // With limited supply, we add the caliber to the supply count
 if (GVAR(supply) == 1) then {
-    private _supply = [_target] call FUNC(getSupplyCount);
+    private _supply = [_truck] call FUNC(getSupplyCount);
     ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
     if (!_partial || {GVAR(level) == 1}) then {
-        [_target, _supply + _cal] call FUNC(setSupplyCount);
+        [_truck, _supply + _cal] call FUNC(setSupplyCount);
     } else {
         private _magazinePart = ((REARM_COUNT select _idx) / (getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count"))) min 1;
-        [_target, (_supply + (_cal * _magazinePart))] call FUNC(setSupplyCount);
+        [_truck, (_supply + (_cal * _magazinePart))] call FUNC(setSupplyCount);
     };
 };
 
 // With magazine specific supply, we add or update the magazineSupply array
 if (GVAR(supply) == 2) then {
-    private _magazineSupply = _target getVariable [QGVAR(magazineSupply), []];
+    private _magazineSupply = _truck getVariable [QGVAR(magazineSupply), []];
     private _magazineIdx = -1;
     {
         _x params ["_magazine", "_rounds"];
@@ -60,5 +60,5 @@ if (GVAR(supply) == 2) then {
         (_magazineSupply select _magazineIdx) params ["", "_rounds"];
         _magazineSupply set [_magazineIdx, [_magazineClass, (_rounds + _roundsPerTransaction)]];
     };
-    _target setVariable [QGVAR(magazineSupply), _magazineSupply, true];
+    _truck setVariable [QGVAR(magazineSupply), _magazineSupply, true];
 };

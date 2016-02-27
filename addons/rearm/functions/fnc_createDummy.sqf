@@ -10,7 +10,7 @@
  * Created Dummy <OBJECT>
  *
  * Example:
- * ["500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_createDummy
+ * [player, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_createDummy
  *
  * Public: No
  */

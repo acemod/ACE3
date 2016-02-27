@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Get the remaining ammunition amount
+ * Get the remaining ammunition amount.
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
@@ -16,17 +16,17 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [["_truck", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 if (GVAR(supply) == 0) exitWith {};
 
 if (GVAR(supply) == 1) then {
     [
         5,
-        [_unit, _target, [_target] call FUNC(getSupplyCount)],
+        [_unit, _truck, [_truck] call FUNC(getSupplyCount)],
         {
             params ["_args"];
-            _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_supplyCount", 0, [0]]];
+            _args params [["_unit", objNull, [objNull]], ["_truck", objNull, [objNull]], ["_supplyCount", 0, [0]]];
             if (_supplyCount > 0 ) then {
                 ["displayTextStructured", [_unit], [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit]] call EFUNC(common,targetEvent);
             } else {
@@ -42,14 +42,14 @@ if (GVAR(supply) == 1) then {
 } else {
     [
         5,
-        [_unit, _target],
+        [_unit, _truck],
         {
             params ["_args"];
-            _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
+            _args params [["_unit", objNull, [objNull]], ["_truck", objNull, [objNull]]];
             private _supply = 1.5;
             private _numChars = count (localize LSTRING(Hint_RemainingAmmo));
             private _text = "";
-            private _magazines = _target getVariable QGVAR(magazineSupply);
+            private _magazines = _truck getVariable QGVAR(magazineSupply);
             if !(isNil "_magazines") then {
                 {
                     _x params ["_magazineClass", "_rounds"];

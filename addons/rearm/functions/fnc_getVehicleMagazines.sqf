@@ -3,7 +3,7 @@
  * Returns all magazines a turret can hold according to config.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Turret Path <ARRAY>
  *
  * Return Value:
@@ -16,8 +16,8 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
 
-if (isNull _target) exitWith {[]};
+if (isNull _vehicle) exitWith {[]};
 
-([typeOf _target, _turretPath] call FUNC(getConfigMagazines))
+([typeOf _vehicle, _turretPath] call FUNC(getConfigMagazines))

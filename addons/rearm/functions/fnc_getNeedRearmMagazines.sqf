@@ -3,7 +3,7 @@
  * Get rearm return value.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Magazine Classname <STRING>
  *
  * Return Value:
@@ -19,20 +19,20 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_magazineClass"];
+params ["_vehicle", "_magazineClass"];
 
 private _return = [false, [], 0];
 {
-    private _magazines = [_target, _x] call FUNC(getVehicleMagazines);
+    private _magazines = [_vehicle, _x] call FUNC(getVehicleMagazines);
 
     if (_magazineClass in _magazines) then {
-        private _currentMagazines = {_x == _magazineClass} count (_target magazinesTurret _x);
+        private _currentMagazines = {_x == _magazineClass} count (_vehicle magazinesTurret _x);
 
-        if ((_target magazineTurretAmmo [_magazineClass, _x]) < getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count")) exitWith {
+        if ((_vehicle magazineTurretAmmo [_magazineClass, _x]) < getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count")) exitWith {
             _return = [true, _x, _currentMagazines];
         };
 
-        if (_currentMagazines < ([_target, _x, _magazineClass] call FUNC(getMaxMagazines))) exitWith {
+        if (_currentMagazines < ([_vehicle, _x, _magazineClass] call FUNC(getMaxMagazines))) exitWith {
             _return = [true, _x, _currentMagazines];
         };
     };

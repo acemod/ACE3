@@ -16,13 +16,13 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-private _dummy = _unit getVariable [QGVAR(dummy), objNull];
-if !(isNull _dummy) exitWith {};
+private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
+if !(isNull _attachedDummy) exitWith {};
 
-_target attachTo [_unit, [0,1,0], "pelvis"];
+_dummy attachTo [_unit, [0,1,0], "pelvis"];
 {
-    [[_target, [[-1,0,0],[0,0,1]]], QFUNC(makeDummy), _x] call EFUNC(common,execRemoteFnc);
+    [[_dummy, [[-1,0,0],[0,0,1]]], QFUNC(makeDummy), _x] call EFUNC(common,execRemoteFnc);
 } count (position _unit nearObjects ["CAManBase", 100]);
-_unit setVariable [QGVAR(dummy), _target];
+_unit setVariable [QGVAR(dummy), _dummy];

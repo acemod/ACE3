@@ -3,7 +3,7 @@
  * Get the supply count.
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  *
  * Return value:
  * Supply count <NUMBER>
@@ -15,13 +15,13 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]]];
+params [["_truck", objNull, [objNull]]];
 
-private _supply = _target getVariable QGVAR(currentSupply);
+private _supply = _truck getVariable QGVAR(currentSupply);
 
 if (isNil "_supply") then {
-    _supply = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(defaultSupply));
-    _target setVariable [QGVAR(currentSupply), _supply, true];
+    _supply = getNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply));
+    _truck setVariable [QGVAR(currentSupply), _supply, true];
 };
 
 _supply

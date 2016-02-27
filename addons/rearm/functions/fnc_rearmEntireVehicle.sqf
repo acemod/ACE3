@@ -17,11 +17,11 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+params [["_truck", objNull, [objNull]], "", ["_vehicle", objNull, [objNull]]];
 
 [
     10,
-    [_target, _vehicle],
+    [_truck, _vehicle],
     FUNC(rearmEntireVehicleSuccess),
     "",
     format [localize LSTRING(BasicRearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],

@@ -17,9 +17,9 @@
 
 params [["_unit", objNull, [objNull]]];
 
-private _dummy = _unit getVariable [QGVAR(dummy), objNull];
-if (isNull _dummy) exitwith {false};
-private _magazineClass = _dummy getVariable QGVAR(magazineClass);
+private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
+if (isNull _attachedDummy) exitwith {false};
+private _magazineClass = _attachedDummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];

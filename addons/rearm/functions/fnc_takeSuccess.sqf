@@ -19,11 +19,11 @@
 #include "script_component.hpp"
 
 params [["_args", [objNull, "", objNull], [[]], 3]];
-_args params ["_unit", "_magazineClass", "_target"];
+_args params ["_unit", "_magazineClass", "_truck"];
 
 private _success = true;
 if (GVAR(supply) > 0) then {
-    _success = [_target, _magazineClass] call FUNC(removeMagazineFromSupply);
+    _success = [_truck, _magazineClass] call FUNC(removeMagazineFromSupply);
 };
 if !(_success) exitWith {};
 
@@ -39,6 +39,6 @@ private _actionID = _unit addAction [
     false,
     true,
     "",
-    '!isNull (_target getVariable [QGVAR(dummy), objNull])'
+    '!isNull (_truck getVariable [QGVAR(dummy), objNull])'
 ];
 _unit setVariable [QGVAR(ReleaseActionID), _actionID];

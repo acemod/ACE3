@@ -11,7 +11,7 @@
  *   1: Caliber index <NUMBER>
  *
  * Example:
- * ["500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_hasEnoughSupply
+ * ["500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_getCaliber
  *
  * Public: No
  */

@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Params <ARRAY>
- *   0: Target <OBJECT>
+ *   0: Vehicle <OBJECT>
  *   1: Unit <OBJECT>
  *   2: Turret Path <ARRAY>
  *   3: Number of magazines <NUMBER>
@@ -22,18 +22,18 @@
 #include "script_component.hpp"
 
 params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
-_args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
+_args params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
 
-//hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazineClass, _numRounds];
+//hint format ["Vehicle: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _vehicle, _turretPath, _numMagazines, _magazineClass, _numRounds];
 
 if (local _unit) then {
     [_unit, true, true] call FUNC(dropAmmo);
 };
 
 if (isServer) then {
-    private _turretOwnerID = _target turretOwner _turretPath;
+    private _turretOwnerID = _vehicle turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
-        [_this, QFUNC(rearmSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+        [_this, QFUNC(rearmSuccessLocal), _vehicle] call EFUNC(common,execRemoteFnc);
     } else {
         EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
         _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);

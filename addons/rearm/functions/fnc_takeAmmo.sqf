@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", ["", objNull], [[]]]];
+params [["_truck", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", ["", objNull], [[]]]];
 _args params ["_magazineClass", "_vehicle"];
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
@@ -28,7 +28,7 @@ REARM_HOLSTER_WEAPON
 
 [
     (REARM_DURATION_TAKE select _idx),
-    [_unit, _magazineClass, _target],
+    [_unit, _magazineClass, _truck],
     FUNC(takeSuccess),
     "",
     format [localize LSTRING(TakeAction), getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],

@@ -3,7 +3,7 @@
  * Returns true if the magazine is in the current supply
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  *
  * Return value:
@@ -16,16 +16,16 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_magazineClass", "", [""]]];
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]]];
 
-if (isNull _target ||
+if (isNull _truck ||
     {_magazineClass isEqualTo ""}) exitWith {false};
 
 // With limited supply, we need to check supply
 if (GVAR(supply) == 1) exitWith {_this call FUNC(hasEnoughSupply)};
 // With magazine specific supply, we need to check them
 if (GVAR(supply) == 2) exitWith {
-    private _magazineSupply = _target getVariable [QGVAR(magazineSupply), []];
+    private _magazineSupply = _truck getVariable [QGVAR(magazineSupply), []];
     private _magazinePresent = false;
     {
         _x params ["_magazine", "_rounds"];

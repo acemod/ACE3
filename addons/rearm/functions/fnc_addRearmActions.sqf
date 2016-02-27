@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]]];
+params [["_truck", objNull, [objNull]]];
 
-private _vehicles = nearestObjects [_target, ["AllVehicles"], 20];
+private _vehicles = nearestObjects [_truck, ["AllVehicles"], 20];
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
 
 private _vehicleActions = [];
@@ -26,7 +26,7 @@ private _vehicleActions = [];
     private _vehicle = _x;
     private _needToAdd = false;
     private _action = [];
-    if !((_vehicle == _target) || (_vehicle isKindOf "CAManBase")) then {
+    if !((_vehicle == _truck) || (_vehicle isKindOf "CAManBase")) then {
         private _magazineHelper = [];
         {
             private _turretPath = _x;
@@ -42,8 +42,8 @@ private _vehicleActions = [];
                         {true},
                         {},
                         [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
-                    if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_target, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_target, _magazine] call FUNC(magazineInSupply))}) then {
-                        _actions pushBack [_action, [], _target];
+                    if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_truck, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_truck, _magazine] call FUNC(magazineInSupply))}) then {
+                        _actions pushBack [_action, [], _truck];
                         _magazineHelper pushBack _magazine;
                         _needToAdd = true;
                     };
@@ -56,8 +56,8 @@ private _vehicleActions = [];
                             {true},
                             {},
                             [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
-                        if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_target, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_target, _magazine] call FUNC(magazineInSupply))}) then {
-                            _actions pushBack [_action, [], _target];
+                        if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_truck, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_truck, _magazine] call FUNC(magazineInSupply))}) then {
+                            _actions pushBack [_action, [], _truck];
                             _magazineHelper pushBack _magazine;
                             _needToAdd = true;
                         };
@@ -79,7 +79,7 @@ private _vehicleActions = [];
                 {true},
                 {},
                 _vehicle] call EFUNC(interact_menu,createAction);
-            _vehicleActions pushBack [_action, [], _target];
+            _vehicleActions pushBack [_action, [], _truck];
         } else {
             _action = [_vehicle,
                 getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
@@ -88,7 +88,7 @@ private _vehicleActions = [];
                 {true},
                 {},
                 []] call EFUNC(interact_menu,createAction);
-            _vehicleActions pushBack [_action, _actions, _target];
+            _vehicleActions pushBack [_action, _actions, _truck];
         };
     };
 } forEach _vehicles;

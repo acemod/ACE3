@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Rearm information <ARRAY>
- *   0: Target <OBJECT>
+ *   0: Ammo Truck <OBJECT>
  *   1: Vehicle <OBJECT
  *
  * Return Value:
@@ -18,15 +18,15 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params [["_target", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+_args params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
 
 if (isServer) then {
     {
         _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [[_target, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+            [[_truck, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _truck] call EFUNC(common,execRemoteFnc);
         } else {
-            EGVAR(common,remoteFnc) = [[_target, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
+            EGVAR(common,remoteFnc) = [[_truck, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
             _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
         };
     } count REARM_TURRET_PATHS;

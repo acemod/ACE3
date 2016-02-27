@@ -3,7 +3,7 @@
  * Removes a magazine from the supply.
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  * 2: Number of Rounds to withdraw <NUMBER><OPTIONAL>
  *
@@ -17,16 +17,16 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_magazineClass", "", [""]], ["_numRounds", -1, [0]]];
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_numRounds", -1, [0]]];
 
-if (isNull _target ||
+if (isNull _truck ||
     {_magazineClass isEqualTo ""}) exitWith {false};
 
 private _return = false;
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
 if (GVAR(supply) == 1) then {
-    private _supply = [_target] call FUNC(getSupplyCount);
+    private _supply = [_truck] call FUNC(getSupplyCount);
     if (GVAR(level) == 2) then {
         // Remove partial magazine supply count
         private _rearmAmount = (REARM_COUNT select _idx);
@@ -35,19 +35,19 @@ if (GVAR(supply) == 1) then {
         };
         private _magazinePart = (_rearmAmount / (getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count"))) min 1;
         if (_supply >= (_cal * _magazinePart)) then {
-            [_target, (_supply - (_cal * _magazinePart))] call FUNC(setSupplyCount);
+            [_truck, (_supply - (_cal * _magazinePart))] call FUNC(setSupplyCount);
             _return = true;
         };
     } else {
         // Remove entire magazine supply count
         if (_supply >= _cal) then {
-            [_target, (_supply - _cal)] call FUNC(setSupplyCount);
+            [_truck, (_supply - _cal)] call FUNC(setSupplyCount);
             _return = true;
         };
     };
 };
 if (GVAR(supply) == 2) then {
-    private _magazineSupply = _target getVariable [QGVAR(magazineSupply), []];
+    private _magazineSupply = _truck getVariable [QGVAR(magazineSupply), []];
     private _magazineIdx = -1;
     {
         _x params ["_magazine"];
@@ -71,14 +71,14 @@ if (GVAR(supply) == 2) then {
         private _roundsPerTransaction = _rearmAmount min _configRounds;
         if (_rounds >= _roundsPerTransaction) then {
             _magazineSupply set [_magazineIdx, [_magazineClass, (_rounds - _roundsPerTransaction)]];
-            _target setVariable [QGVAR(magazineSupply), _magazineSupply, true];
+            _truck setVariable [QGVAR(magazineSupply), _magazineSupply, true];
             _return = true;
         };
     } else {
         // Remove entire magazine
         if (_rounds >= _configRounds) then {
             _magazineSupply set [_magazineIdx, [_magazineClass, (_rounds - _configRounds)]];
-            _target setVariable [QGVAR(magazineSupply), _magazineSupply, true];
+            _truck setVariable [QGVAR(magazineSupply), _magazineSupply, true];
             _return = true;
         };
     };

@@ -3,7 +3,7 @@
  * Check whether enough supply is left to take the magazine.
  *
  * Argument:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  *
  * Return value:
@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_magazineClass", "", [""]]];
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]]];
 
-if (isNull _target ||
+if (isNull _truck ||
     {_magazineClass isEqualTo ""}) exitWith {false};
 
 // With infinite supply, there is always enough
@@ -26,7 +26,7 @@ if (GVAR(supply) == 0) exitWith {true};
 // With magazine specific supply, we need to check stored magazines
 if (GVAR(supply) == 2) exitWith {_this call FUNC(magazineInSupply)};
 
-private _supply = [_target] call FUNC(getSupplyCount);
+private _supply = [_truck] call FUNC(getSupplyCount);
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
 // With caliber based rearming, we only need partial supply
