@@ -353,6 +353,7 @@
             <English>Get Out</English>
             <Polish>Wyjdź</Polish>
             <Italian>Esci</Italian>
+            <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
@@ -653,6 +654,7 @@
             <Portuguese>Abrir</Portuguese>
             <Russian>Открыть</Russian>
             <Italian>Apri</Italian>
+            <German>Öffnen</German>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
