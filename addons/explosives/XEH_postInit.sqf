@@ -42,6 +42,11 @@ if (isServer) then {
     ["clientRequestsOrientations", {
         params ["_logic"];
         TRACE_1("clientRequestsOrientations received:",_logic);
+        // Filter the array before sending it
+        GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
+            _x params ["_explosive"];
+            (!isNull _explosive && {alive _explosive})
+        };
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
         ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
