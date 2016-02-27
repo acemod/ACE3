@@ -3318,7 +3318,6 @@
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
             <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
-            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
         </Key>
@@ -3415,7 +3414,6 @@
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
             <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
-            <English>Where can the Epinephrine be used? (Basic Medical)</English>
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
         </Key>
