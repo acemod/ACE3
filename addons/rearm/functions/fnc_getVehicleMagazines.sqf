@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk, Jonpas
- * Returns all magazines a turret can hold according to config.
+ * Returns all magazines a turret of a vehicle object can hold according to config.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

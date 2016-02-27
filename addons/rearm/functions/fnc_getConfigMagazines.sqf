@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk, Jonpas
- * Returns all magazines a turret can hold according to config.
+ * Returns all magazines a turret of a vehicle class can hold according to config.
  *
  * Arguments:
  * 0: Vehicle class <STRING>
@@ -10,7 +10,7 @@
  * Magazine classes in TurretPath <ARRAY>
  *
  * Example:
- * ["B_MBT_01_arty_F", [0]] call ace_rearm_fnc_getVehicleMagazines
+ * ["B_MBT_01_arty_F", [0]] call ace_rearm_fnc_getConfigMagazines
  *
  * Public: No
  */
