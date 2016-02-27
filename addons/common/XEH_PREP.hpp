@@ -225,7 +225,6 @@ PREP(binocularMagazine);
 PREP(removeBinocularMagazine);
 
 // ACE_Debug
-PREP(exportConfig);
 PREP(getChildren);
 PREP(getDisplayConfigName);
 PREP(monitor);
@@ -234,13 +233,10 @@ PREP(showUser);
 PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
-// ACE_CuratorFix
-PREP(addCuratorUnloadEventhandler);
-PREP(fixCrateContent);
-
 PREP(globalEvent);
 PREP(_handleNetEvent);
 PREP(addEventHandler);
+PREP(objectEvent);
 PREP(targetEvent);
 PREP(serverEvent);
 PREP(localEvent);

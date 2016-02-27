@@ -21,7 +21,7 @@ class RscTitles {
                 style = 48 + 0x800;
                 scale = 1;
                 sizeEx = 1;
-                font = "PuristaMedium";
+                font = "RobotoCondensed";
                 colorText[] = { 1, 1, 1, 1 };
                 colorBackground[] = { 1, 1, 1, 1 };
                 shadow = 1;
@@ -37,7 +37,7 @@ class RscTitles {
                 style = 2;
                 sizeEx = 0.04;
                 lineSpacing = 1;
-                font = "PuristaMedium";
+                font = "RobotoCondensed";
                 text = "";
                 colorText[] = { 1, 1, 1, 0.9 };
                 colorBackground[] = { 1, 0, 0, 0 };
@@ -54,7 +54,7 @@ class RscTitles {
                 style = 0;
                 sizeEx = 0.04;
                 lineSpacing = 1;
-                font = "PuristaMedium";
+                font = "RobotoCondensed";
                 text = "";
                 colorText[] = { 1, 1, 1, 0.9 };
                 colorBackground[] = { 1, 0, 0, 0 };

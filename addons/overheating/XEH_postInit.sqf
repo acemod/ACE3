@@ -23,9 +23,8 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call CBA_fnc_canUseWeapon &&
-    {currentWeapon ACE_player in (ACE_player getVariable [QGVAR(jammedWeapons), []])}
-    ) exitWith {false};
+
+    if !([ACE_player] call FUNC(canUnjam)) exitWith {false};
 
     // Statement
     [ACE_player, currentMuzzle ACE_player, false] call FUNC(clearJam);

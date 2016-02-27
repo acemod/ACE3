@@ -60,7 +60,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_target, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
+if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
@@ -125,7 +125,12 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
-        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel), true];
+        private _fuel = [_source] call FUNC(getFuel);
+        if (_fuel == REFUEL_INFINITE_FUEL) then {
+            _source setVariable [QGVAR(fuelCounter), 0, true];
+        } else {
+            _source setVariable [QGVAR(fuelCounter), _fuel, true];
+        };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
     },

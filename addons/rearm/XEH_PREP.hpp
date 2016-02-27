@@ -4,6 +4,7 @@ PREP(canRearm);
 PREP(canStoreAmmo);
 PREP(canTakeAmmo);
 PREP(createDummy);
+PREP(disable);
 PREP(dropAmmo);
 PREP(getConfigMagazines);
 PREP(getMaxMagazines);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
@@ -319,6 +319,7 @@
             <Portuguese>Velocidade da animação de interação</Portuguese>
             <Czech>Rychlost animace interakce</Czech>
             <Italian>Velocità Animazioni Interazioni</Italian>
+            <Spanish>Velocidad de animación del menú de interacción</Spanish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -328,6 +329,7 @@
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
+            <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
         </Key>
     </Package>
 </Project>

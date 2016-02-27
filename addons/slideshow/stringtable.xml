@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
@@ -106,6 +106,7 @@
             <Czech>Názvy interakcí</Czech>
             <Spanish>Nombres de interacción</Spanish>
             <Italian>Nomi Interazioni</Italian>
+            <German>Interaktionsnamen</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -116,6 +117,7 @@
             <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
             <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
             <Italian>Lista di nomi che verranno usati per per le interazioni, separati da virgole, in ordine per immagini.</Italian>
+            <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Komma getrennt, in Reihenfolge der Bilder.</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -127,6 +129,7 @@
             <Spanish>Duración de diapositiva</Spanish>
             <Czech>Doba trvání snímku</Czech>
             <Italian>Durata Diapositiva</Italian>
+            <German>Länge der Diavorführung pro Bild</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -138,6 +141,7 @@
             <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
+            <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
@@ -149,6 +153,7 @@
             <Spanish>Diapositivas</Spanish>
             <Czech>Snímky</Czech>
             <Italian>Diapositive</Italian>
+            <German>Dias</German>
         </Key>
     </Package>
 </Project>

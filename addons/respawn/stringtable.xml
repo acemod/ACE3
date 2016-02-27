@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -214,6 +214,7 @@
             <Russian>Этот модуль позволяет настроить систему возрождения.</Russian>
             <French>Ce module permet de régler les options de Respawn</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
+            <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -236,6 +237,7 @@
             <Russian>Отображает сообщение в чате, в случае, когда убивают союзных игроков. В докладе указывается, кто стрелял, в кого. Кто кого убил.</Russian>
             <French>Ce module permet l'affiche de message dans le chat lors d'un tir fraticide et indique qui a tué qui.</French>
             <Italian>Usando questo modulo nella tua missione farà in modo che ogni uccisione per fuoco amico venga mostrata in forma di messaggio in chat.</Italian>
+            <Spanish>El usar este módulo, todas las muertes por fuego amigo serán indicadas en el chat.</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
@@ -257,6 +259,7 @@
             <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>
             <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
             <Italian>Questo modulo ti consente di usare Punti di Raccolta in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; Respawn ACE</Italian>
+            <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
