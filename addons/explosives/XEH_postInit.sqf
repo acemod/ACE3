@@ -51,6 +51,7 @@ if (isServer) then {
         TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
         {
             params ["_explosive","_direction","_pitch"];
+            TRACE_3("orientation set:",_explosive,_direction,_pitch);
             [_explosive, _direction, _pitch] call FUNC(setPosition);
         } forEach _explosivesOrientations;
         deleteGroup GVAR(localGroup);

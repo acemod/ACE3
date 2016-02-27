@@ -39,4 +39,5 @@ if (isServer) then {
         params ["_explosive"];
         (!isNull _explosive && {alive _explosive})
     };
+    TRACE_1("setPosition",GVAR(explosivesOrientations));
 };
