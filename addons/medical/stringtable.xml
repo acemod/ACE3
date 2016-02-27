@@ -2676,7 +2676,7 @@
             <Czech>Střelné poranění</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
-            <English>Smal Velocity Wound</English>
+            <English>Small Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
@@ -3077,7 +3077,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
-            <German>Behandle ferngesteuerte Einheiten als KI und nicht als Spieler?</German>
+            <German>Legt fest, ob ferngesteuerte Einheiten als KI anstatt als Spieler behandelt werden sollen.</German>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
@@ -3152,7 +3152,7 @@
             <Russian>Коэффициент, изменяющий уровень боли</Russian>
             <Polish>Mnożnik modyfikujący intensywność bólu</Polish>
             <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
-            <German>Multiplikator um den Schmerzintensität zu verändern</German>
+            <German>Multiplikator um die Schmerzintensität zu verändern</German>
             <Czech>Koeficient intenzity bolesti</Czech>
             <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
             <French>Coefficient modifiant l'intensité de la douleur</French>
@@ -4108,14 +4108,22 @@
             <English>Whether or not the object will be a medical vehicle.</English>
             <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
-            <German>Ist das Objekt ein Sanitätsfahrzeug?</German>
+            <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_delayUnconCaptive">
-            <English>Delay Medical Unconscious Captivity</English>
-            <German>Verzögert Gefangenschaft bei medizinischer Bewustlosigkeit</German>
+            <English>Delay cease fire of AI during medical unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
             <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
+            <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
+            <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
+            <English>Delay cease fire of AI for unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
         </Key>
     </Package>
 </Project>
