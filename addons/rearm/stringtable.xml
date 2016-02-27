@@ -83,9 +83,33 @@
             <English>Unlimited ammo supply</English>
             <German>Unbegrenzter Munitionsvorat</German>
         </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_limited">
+            <English>Limited ammo supply based on caliber</English>
+            <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
+        </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
             <German>Nur bestimmte Magazine</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
+            <English>Check remaining ammunition</English>
+            <German>Verbleibende Munition prüfen</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
+            <English>Checking remaining ammunition...</English>
+            <German>Überprüfe verbleibende Munition...</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
+            <English>There is ammunition worth %1 points left.</English>
+            <German>Es ist noch Munition für %1 Punkte übrig.</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
+            <English>The following ammunition is left:%1</English>
+            <German>Folgende Munition ist übrig:%1</German>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_Empty">
+            <English>There is no ammunition left.</English>
+            <German>Es ist keine Munition übrig.</German>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>

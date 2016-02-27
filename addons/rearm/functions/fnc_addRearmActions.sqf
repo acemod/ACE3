@@ -15,25 +15,24 @@
  */
 #include "script_component.hpp"
 
-private ["_vehicleActions", "_actions", "_action", "_vehicles", "_vehicle", "_needToAdd", "_magazineHelper", "_turretPath", "_magazines", "_magazine", "_icon", "_cnt"];
 params [["_target", objNull, [objNull]]];
 
-_vehicles = nearestObjects [_target, ["AllVehicles"], 20];
+private _vehicles = nearestObjects [_target, ["AllVehicles"], 20];
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
 
-_vehicleActions = [];
+private _vehicleActions = [];
 {
-    _actions = [];
-    _vehicle = _x;
-    _needToAdd = false;
-    _action = [];
+    private _actions = [];
+    private _vehicle = _x;
+    private _needToAdd = false;
+    private _action = [];
     if !((_vehicle == _target) || (_vehicle isKindOf "CAManBase")) then {
-        _magazineHelper = [];
+        private _magazineHelper = [];
         {
-            _turretPath = _x;
-            _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
+            private _turretPath = _x;
+            private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
             {
-                _magazine = _x;
+                private _magazine = _x;
                 _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
                 if ((_currentMagazines < ([_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines))) && !(_magazine in _magazineHelper)) then {
                     _action = [_magazine,
@@ -43,9 +42,11 @@ _vehicleActions = [];
                         {true},
                         {},
                         [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
-                    _actions pushBack [_action, [], _target];
-                    _magazineHelper pushBack _magazine;
-                    _needToAdd = true;
+                    if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_target, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_target, _magazine] call FUNC(magazineInSupply))}) then {
+                        _actions pushBack [_action, [], _target];
+                        _magazineHelper pushBack _magazine;
+                        _needToAdd = true;
+                    };
                 } else {
                     if (((_vehicle magazineTurretAmmo [_magazine, _turretPath]) < getNumber (configFile >> "CfgMagazines" >> _magazine >> "count")) && !(_magazine in _magazineHelper)) then {
                         _action = [_magazine,
@@ -55,16 +56,18 @@ _vehicleActions = [];
                             {true},
                             {},
                             [_magazine, _vehicle]] call EFUNC(interact_menu,createAction);
-                        _actions pushBack [_action, [], _target];
-                        _magazineHelper pushBack _magazine;
-                        _needToAdd = true;
+                        if (GVAR(supply) == 0 || {(GVAR(supply) == 1) && ([_target, _magazine] call FUNC(hasEnoughSupply))} || {(GVAR(supply) == 2) && ([_target, _magazine] call FUNC(magazineInSupply))}) then {
+                            _actions pushBack [_action, [], _target];
+                            _magazineHelper pushBack _magazine;
+                            _needToAdd = true;
+                        };
                     };
                 };
             } forEach _magazines;
         } forEach REARM_TURRET_PATHS;
     };
     if (_needToAdd && !(_vehicle getVariable [QGVAR(disabled), false])) then {
-        _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
+        private _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
         if !((_icon select [0, 1]) == "\") then {
             _icon = "";
         };

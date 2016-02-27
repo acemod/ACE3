@@ -1,16 +1,16 @@
 /*
  * Author: GitHawk
- * Check if a unit can pick up ammo.
+ * Checks if unit can read supply counter.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
- * Can Pick Up Ammo <BOOL>
+ * Can read supply counter <BOOL>
  *
  * Example:
- * [player, tank] call ace_rearm_fnc_canTakeAmmo
+ * [truck, player] call ace_rearm_fnc_canReadSupplyCounter
  *
  * Public: No
  */
@@ -21,6 +21,6 @@ params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 !(isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
+    {!alive _target} ||
     {(_target distance _unit) > REARM_ACTION_DISTANCE} ||
-    {!isNull (_unit getVariable [QGVAR(dummy), objNull])} ||
-    {GVAR(level) == 0})
+    {GVAR(supply) == 0})

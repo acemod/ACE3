@@ -15,6 +15,26 @@
 #define MACRO_REARM_TRUCK_ACTIONS \
         class ACE_Actions : ACE_Actions { \
             class ACE_MainActions : ACE_MainActions { \
+                class GVAR(ReadSupplyCounter) { \
+                    displayName = CSTRING(ReadSupplyCounter); \
+                    distance = REARM_ACTION_DISTANCE; \
+                    condition = QUOTE(_this call FUNC(canReadSupplyCounter)); \
+                    statement = QUOTE(_this call FUNC(readSupplyCounter)); \
+                    exceptions[] = {"isNotInside"}; \
+                    showDisabled = 0; \
+                    priority = 2; \
+                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                }; \
+                class GVAR(Rearm) { \
+                    displayName = CSTRING(Rearm); \
+                    distance = REARM_ACTION_DISTANCE; \
+                    condition = QUOTE(_this call FUNC(canRearmVehicle)); \
+                    insertChildren = QUOTE(_target call FUNC(addRearmActions)); \
+                    exceptions[] = {"isNotInside"}; \
+                    showDisabled = 0; \
+                    priority = 2; \
+                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                }; \
                 class GVAR(TakeAmmo) { \
                     displayName = CSTRING(TakeAmmo); \
                     distance = REARM_ACTION_DISTANCE; \
@@ -35,6 +55,9 @@
                 }; \
             }; \
         };
+
+#define MACRO_REARM_DEFAULT_SUPPLY \
+        GVAR(defaultSupply) = 1200;
 
 class CfgVehicles {
     class ACE_Module;
@@ -66,6 +89,26 @@ class CfgVehicles {
                         name = CSTRING(RearmSettings_caliber);
                         value = 2;
                         default = 1;
+                    };
+                };
+            };
+            class supply {
+                displayName = CSTRING(RearmSettings_supply_DisplayName);
+                description = CSTRING(RearmSettings_supply_Description);
+                typeName = "NUMBER";
+                class values {
+                    class unlimited {
+                        name = CSTRING(RearmSettings_unlimited);
+                        value = 0;
+                        default = 1;
+                    };
+                    class magazine {
+                        name = CSTRING(RearmSettings_limited);
+                        value = 1;
+                    };
+                    class caliber  {
+                        name = CSTRING(RearmSettings_magazineSupply);
+                        value = 2;
                     };
                 };
             };
@@ -110,6 +153,7 @@ class CfgVehicles {
     class Truck_03_base_F : Truck_F {};
     class O_Truck_03_ammo_F : Truck_03_base_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 
@@ -117,10 +161,12 @@ class CfgVehicles {
     class Truck_02_Ammo_base_F : Truck_02_base_F {};
     class I_Truck_02_ammo_F : Truck_02_Ammo_base_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
     class O_Truck_02_Ammo_F : Truck_02_Ammo_base_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 
@@ -129,6 +175,7 @@ class CfgVehicles {
     class B_Truck_01_mover_F : B_Truck_01_transport_F {};
     class B_Truck_01_ammo_F : B_Truck_01_mover_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 
@@ -137,12 +184,14 @@ class CfgVehicles {
     class Heli_Transport_04_base_F : Helicopter_Base_H {};
     class O_Heli_Transport_04_ammo_F : Heli_Transport_04_base_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 
     class Pod_Heli_Transport_04_base_F: StaticWeapon {};
     class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 
@@ -161,6 +210,7 @@ class CfgVehicles {
     class B_Slingload_01_Ammo_F : Slingload_01_Base_F {
         XEH_ENABLED;
         transportAmmo = 0;
+        MACRO_REARM_DEFAULT_SUPPLY
         MACRO_REARM_TRUCK_ACTIONS
     };
 

@@ -16,11 +16,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_vehicle", objNull, [objNull]]]; // _target is for future possible finite ammo, _unit placeholder
+
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
 
 [
     10,
-    _vehicle,
+    [_target, _vehicle],
     FUNC(rearmEntireVehicleSuccess),
     "",
     format [localize LSTRING(BasicRearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],

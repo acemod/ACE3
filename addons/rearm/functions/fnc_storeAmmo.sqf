@@ -16,16 +16,20 @@
  */
 #include "script_component.hpp"
 
-private "_dummy";
 params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-_dummy = _unit getVariable [QGVAR(dummy), objNull];
+private _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _dummy) exitwith {};
 
 [
     5,
-    _unit,
-    {params ["_unit"]; [_unit, true, true] call FUNC(dropAmmo)},
+    [_unit, _target, _dummy],
+    {
+        params ["_args"];
+        _args params ["_unit", "_target", "_dummy"];
+        [_target, (_dummy getVariable [QGVAR(magazineClass), ""]), true] call FUNC(addMagazineToSupply);
+        [_unit, true, true] call FUNC(dropAmmo);
+    },
     "",
     format [localize LSTRING(StoreAmmoAction), getText(configFile >> "CfgMagazines" >> (_dummy getVariable QGVAR(magazineClass)) >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")],
     {true},

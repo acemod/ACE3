@@ -21,7 +21,6 @@
  */
 #include "script_component.hpp"
 
-private ["_dummy", "_weaponSelect", "_turretOwnerID"];
 params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
 
@@ -32,7 +31,7 @@ if (local _unit) then {
 };
 
 if (isServer) then {
-    _turretOwnerID = _target turretOwner _turretPath;
+    private _turretOwnerID = _target turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
         [_this, QFUNC(rearmSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
     } else {

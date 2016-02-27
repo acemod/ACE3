@@ -11,6 +11,6 @@ class ACE_Settings {
         description = CSTRING(RearmSettings_supply_Description);
         value = 0;
         typeName = "SCALAR";
-        values[] = {CSTRING(RearmSettings_unlimited), CSTRING(RearmSettings_caliber), CSTRING(RearmSettings_magazineSupply)};
+        values[] = {CSTRING(RearmSettings_unlimited), CSTRING(RearmSettings_limited), CSTRING(RearmSettings_magazineSupply)};
     };
 };

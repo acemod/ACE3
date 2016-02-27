@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Check if a unit can pick up ammo.
+ * Check if a unit can rearm a vehicle.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -10,7 +10,7 @@
  * Can Pick Up Ammo <BOOL>
  *
  * Example:
- * [player, tank] call ace_rearm_fnc_canTakeAmmo
+ * [player, tank] call ace_rearm_fnc_canRearmVehicle
  *
  * Public: No
  */
@@ -23,4 +23,4 @@ params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
     {!local _unit} ||
     {(_target distance _unit) > REARM_ACTION_DISTANCE} ||
     {!isNull (_unit getVariable [QGVAR(dummy), objNull])} ||
-    {GVAR(level) == 0})
+    {GVAR(level) > 0})

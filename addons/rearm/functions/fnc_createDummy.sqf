@@ -16,12 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_dummyName", "_dummy"];
 params [["_unit", objNull, [objNull]], ["_magazineClass", "", [""]]];
 
-_ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
-_dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
-_dummy = objNull;
+private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+private _dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
+private _dummy = objNull;
 if !(_dummyName == "") then {
     _dummy = _dummyName createVehicle (position _unit);
 } else {

@@ -3,28 +3,30 @@
  * Rearm an entire vehicle.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Rearm information <ARRAY>
+ *   0: Target <OBJECT>
+ *   1: Vehicle <OBJECT
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank] call ace_rearm_fnc_rearmEntireVehicleSuccess
+ * [[ammo_truck, tank]] call ace_rearm_fnc_rearmEntireVehicleSuccess
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params [["_vehicle", objNull, [objNull]]];
+params ["_args"];
+_args params [["_target", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
 
 if (isServer) then {
     {
         _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+            [[_target, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
         } else {
-            EGVAR(common,remoteFnc) = [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
+            EGVAR(common,remoteFnc) = [[_target, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
             _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
         };
     } count REARM_TURRET_PATHS;
