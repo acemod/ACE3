@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
@@ -31,7 +31,7 @@
             <Russian>Демонтировать колючую проволоку</Russian>
             <Polish>Zwiń koncentrinę</Polish>
             <Spanish>Desmontar alambre de espino</Spanish>
-            <French>Descendre le fil barbelé</French>
+            <French>Démonter le fil barbelé</French>
             <Czech>Svinout ostnatý drát</Czech>
             <Italian>Smonta la concertina</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>

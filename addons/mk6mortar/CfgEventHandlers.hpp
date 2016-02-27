@@ -17,12 +17,6 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_DisplayLoad_EventHandlers {
-    class RscUnitInfo {
-        ADDON = QUOTE(_this call FUNC(turretDisplayLoaded));
-    };
-};
-
 class Extended_FiredBIS_EventHandlers {
     class Mortar_01_base_F {
         class ADDON {
