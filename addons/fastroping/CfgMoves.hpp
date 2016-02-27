@@ -9,7 +9,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
         class Crew;
         class ACE_freefallLoop: Crew {
-            file = PATHTOF(anim\freefallLoop.rtm);
+            file = QUOTE(PATHTOF(anim\freefallLoop.rtm));
             interpolateTo[] = {"Unconscious", 1};
             disableWeapons = 1;
             disableWeaponsLong = 1;
@@ -18,7 +18,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             speed = 0.204082;
         };
         class ACE_freefallStart: Crew {
-            file = PATHTOF(anim\freefallStart.rtm);
+            file = QUOTE(PATHTOF(anim\freefallStart.rtm));
             interpolateTo[] = {"Unconscious", 1};
             disableWeapons = 1;
             disableWeaponsLong = 1;
@@ -27,7 +27,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             speed = 0.61224502;
         };
         class ACE_slidingLoop: Crew {
-            file = PATHTOF(anim\slidingLoop.rtm);
+            file = QUOTE(PATHTOF(anim\slidingLoop.rtm));
             interpolateTo[] = {"Unconscious", 1};
             disableWeapons = 1;
             disableWeaponsLong = 1;

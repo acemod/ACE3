@@ -4,7 +4,7 @@
         control = "Checkbox"; \
         displayName = CSTRING(Eden_equipFRIES); \
         tooltip = CSTRING(Eden_equipFRIES_Tooltip); \
-        expression = [_this] call FUNC(equipFRIES); \
+        expression = QUOTE([_this] call FUNC(equipFRIES)); \
         typeName = "BOOL"; \
         condition = "objectVehicle"; \
         defaultValue = false; \
@@ -22,7 +22,7 @@ class CfgVehicles {
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = PATHTOF(data\friesAnchorBar.p3d);
+        model = QUOTE(PATHTOF(data\friesAnchorBar.p3d));
         animated = 1;
         class AnimationSources: AnimationSources {
             class extendHookRight {
@@ -40,7 +40,7 @@ class CfgVehicles {
     class ACE_friesGantry: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = PATHTOF(data\friesGantry.p3d);
+        model = QUOTE(PATHTOF(data\friesGantry.p3d));
         animated = 1;
         class AnimationSources: AnimationSources {
             class adjustWidth {
@@ -90,7 +90,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_FRIES_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
         category = "ACE";
-        function = QUOTE(FUNC(moduleEquipFRIES));
+        function = QFUNC(moduleEquipFRIES);
         functionPriority = 10;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -108,29 +108,29 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
-                condition = [vehicle _player] call FUNC(canPrepareFRIES);
-                statement = [vehicle _player] call FUNC(prepareFRIES);
+                condition = QUOTE([vehicle _player] call FUNC(canPrepareFRIES));
+                statement = QUOTE([vehicle _player] call FUNC(prepareFRIES));
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
-                condition = [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player]] call EFUNC(common,serverEvent);
+                condition = QUOTE([ARR_2(_player,vehicle _player)] call FUNC(canDeployRopes));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)),[vehicle _player])] call EFUNC(common,serverEvent));
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_cutRopes {
                 displayName = CSTRING(Interaction_cutRopes);
-                condition = [vehicle _player] call FUNC(canCutRopes);
-                statement = [vehicle _player] call FUNC(cutRopes);
+                condition = QUOTE([vehicle _player] call FUNC(canCutRopes));
+                statement = QUOTE([vehicle _player] call FUNC(cutRopes));
                 showDisabled = 0;
                 priority = 1;
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
-                condition = [_player, vehicle _player] call FUNC(canFastRope);
-                statement = [_player, vehicle _player] call FUNC(fastRope);
+                condition = QUOTE([ARR_2(_player,vehicle _player)] call FUNC(canFastRope));
+                statement = QUOTE([ARR_2(_player,vehicle _player)] call FUNC(fastRope));
                 showDisabled = 0;
                 priority = 1;
             };
@@ -143,7 +143,7 @@ class CfgVehicles {
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
         scope = 1;
-        model = PATHTOF(data\helper.p3d);
+        model = QUOTE(PATHTOF(data\helper.p3d));
         class ACE_Actions {
             class ACE_MainActions {
                 condition = "false";
