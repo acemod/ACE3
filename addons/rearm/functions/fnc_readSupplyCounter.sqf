@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Get the remaining fuel amount
+ * Get the remaining ammunition amount
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
