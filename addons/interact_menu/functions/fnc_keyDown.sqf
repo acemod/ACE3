@@ -77,21 +77,31 @@ if (GVAR(useCursorMenu)) then {
 
 GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
 
-if (GVAR(menuAnimationSpeed) > 0) then {
-    //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
-    if (GVAR(openedMenuType) == 0) then {
-        if (isNull curatorCamera) then {
-            if (vehicle ACE_player != ACE_player) then {
-                GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
-            };
-        } else {
-            GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
+//Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
+if (GVAR(openedMenuType) == 0) then {
+    if (isNull curatorCamera) then {
+        if (vehicle ACE_player != ACE_player) then {
+            GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
+            GVAR(expanded) = true;
+            GVAR(expandedTime) = ACE_diagTime;
+            GVAR(lastPath) = +GVAR(menuDepthPath);
+            GVAR(startHoverTime) = -1000;
         };
     } else {
-        GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
+        GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
+        GVAR(expanded) = true;
+        GVAR(expandedTime) = ACE_diagTime;
+        GVAR(lastPath) = +GVAR(menuDepthPath);
+        GVAR(startHoverTime) = -1000;
     };
-};                   
-                       
+} else {
+    GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
+    GVAR(expanded) = true;
+    GVAR(expandedTime) = ACE_diagTime;
+    GVAR(lastPath) = +GVAR(menuDepthPath);
+    GVAR(startHoverTime) = -1000;
+};
+
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 
 true
