@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_player", "_weapon"];
@@ -26,7 +27,14 @@ playSound "ACE_BarrelSwap";
 // don't consume the barrel, but rotate through them.
 [localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
 
-// Publish the temperature variable
-_player setVariable [format [QGVAR(%1_temp), _weapon], 0, true];
+private _temp = _player getVariable [format [QGVAR(%1_temp), _weapon], 0];
+private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+
+// Instruct the server to load the coolest spare barrel into the weapon and
+// store the removed barrel with the former weapon temperature. The server
+// also updates the current weapon temperature to match that of the new
+// loaded barrel.
+["spareBarrelLoadedCoolest", [_player, _weapon, _temp, _barrelMass]] call EFUNC(common,serverEvent);
+
 // Store the update time
 _player setVariable [format [QGVAR(%1_time), _weapon], ACE_time];

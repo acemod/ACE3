@@ -15,7 +15,7 @@ class CfgVehicles {
                 };
                 class ACE_SwapBarrel {
                     displayName = CSTRING(SwapBarrel);
-                    condition = QUOTE( 'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
+                    condition = QUOTE( 'ACE_SpareBarrel' in magazines _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
@@ -99,7 +99,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpareBarrel,6);
         };
     };
-
+/*
     // Add ACE_SpareBarrel to every machine gunner.
     #define MACRO_ADDSPAREBARREL \
         items[] = {"FirstAidKit", "ACE_SpareBarrel"}; \
@@ -124,4 +124,5 @@ class CfgVehicles {
     // Czech
     class I_Soldier_02_F; class I_Soldier_AR_F:I_Soldier_02_F {MACRO_ADDSPAREBARREL};
     class I_Soldier_support_base_F; class I_Soldier_AAR_F:I_Soldier_support_base_F {MACRO_ADDSPAREBARREL};
+*/
 };

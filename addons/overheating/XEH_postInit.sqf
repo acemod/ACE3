@@ -8,6 +8,46 @@ if (isServer) then {
         GVAR(pseudoRandomList) pushBack [-1 + random 2, -1 + random 2];
     };
     publicVariable QGVAR(pseudoRandomList);
+
+    // Keep track of the temperature of stored spare barrels
+    GVAR(storedSpareBarrels) = [] call CBA_fnc_hashCreate;
+    ["spareBarrelLoadedCoolest", {
+        params ["_unit", "_weapon", "_weaponTemp", "_barrelMass"];
+        TRACE_4("spareBarrelLoadedCoolest1",_unit,_weapon,_weaponTemp,_barrelMass);
+
+        // Find all spare barrel the player has
+        private _allMags = magazinesDetail _unit;
+        TRACE_1("spareBarrelLoadedCoolest2",_allMags);
+        _allMags = _allMags select {_x find "ACE Spare Barrel" == 0};
+        TRACE_1("spareBarrelLoadedCoolest3",_allMags);
+        if ((count _allMags) < 1) exitWith {};
+
+        // Determine which on is coolest
+        private _coolestTemp = 10000;
+        private _coolestMag = _allMags select 0;
+        {
+            private _temp = 0;
+            if ([GVAR(storedSpareBarrels), _x] call CBA_fnc_hashHasKey) then {
+                _temp = ([GVAR(storedSpareBarrels), _x] call CBA_fnc_hashGet) select 0;
+            };
+            TRACE_2("spareBarrelLoadedCoolest4",_x,_temp);
+            if (_temp < _coolestTemp) then {
+                _coolestTemp = _temp;
+                _coolestMag = _x;
+            };
+        } forEach _allMags;
+        TRACE_3("spareBarrelLoadedCoolest5",_coolestTemp,_coolestMag,_weaponTemp);
+
+        // The new weapon temperature is similar to the coolest barrel
+        // Publish the new temperature value
+        _unit setVariable [format [QGVAR(%1_temp), _weapon], _coolestTemp, true];
+
+        // Heat up the coolest barrel to the former weapon temperature
+        [GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, ACE_Time, _barrelMass]] call CBA_fnc_hashSet;
+    }] call EFUNC(common,addEventHandler);
+
+    // Schedule cool down calculation of stored spare barrels
+    [] call FUNC(updateSpareBarrelsTemperaturesThread);
 };
 
 

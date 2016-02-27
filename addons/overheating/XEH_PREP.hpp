@@ -1,4 +1,5 @@
 
+PREP(calculateCooling);
 PREP(canUnjam);
 PREP(checkTemperature);
 PREP(clearJam);
@@ -10,5 +11,6 @@ PREP(jamWeapon);
 PREP(overheat);
 PREP(swapBarrel);
 PREP(swapBarrelCallback);
+PREP(updateSpareBarrelsTemperaturesThread);
 PREP(updateTemperature);
 PREP(updateTemperatureThread);
