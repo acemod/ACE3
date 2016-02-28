@@ -154,54 +154,54 @@ class CfgVehicles {
 
     class Heli_Light_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
+        GVAR(ropeOrigins)[] = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
     };
     class Heli_Attack_02_base_F: Helicopter_Base_F {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{1.25, 1.5, -0.6}, {-1.1, 1.5, -0.6}};
+        GVAR(ropeOrigins)[] = {{1.25, 1.5, -0.6}, {-1.1, 1.5, -0.6}};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {
         GVAR(enabled) = 2;
-        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
+        GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesAnchorBar";
-        GVAR(friesAttachmentPoint[]) = {0.065, 2.2, -0.15};
+        GVAR(friesAttachmentPoint)[] = {0.065, 2.2, -0.15};
         GVAR(onPrepare) = QFUNC(onPrepareCommon);
         GVAR(onCut) = QFUNC(onCutCommon);
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{0.94, -4.82, -1.16}, {-0.94, -4.82, -1.16}};
+        GVAR(ropeOrigins)[] = {{0.94, -4.82, -1.16}, {-0.94, -4.82, -1.16}};
     };
     class Heli_Transport_03_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{0.75, -5.29, -0.11}, {-0.87, -5.29, -0.11}};
+        GVAR(ropeOrigins)[] = {{0.75, -5.29, -0.11}, {-0.87, -5.29, -0.11}};
     };
     class Heli_light_03_base_F: Helicopter_Base_F {
         GVAR(enabled) = 2;
-        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
+        GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
-        GVAR(friesAttachmentPoint[]) = {1.04, 2.5, -0.34};
+        GVAR(friesAttachmentPoint)[] = {1.04, 2.5, -0.34};
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
         GVAR(enabled) = 2;
-        GVAR(ropeOrigins[]) = {"ropeOriginRight", "ropeOriginLeft"};
+        GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantry";
-        GVAR(friesAttachmentPoint[]) = {-1.07, 3.26, -0.5};
+        GVAR(friesAttachmentPoint)[] = {-1.07, 3.26, -0.5};
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_Transport_04_base_F;
     class O_Heli_Transport_04_bench_F: Heli_Transport_04_base_F {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{1.03, 1.6, -0.23}, {1.03, -1.36, -0.23}, {-1.23, 1.6, -0.23}, {-1.23, -1.36, -0.23}};
+        GVAR(ropeOrigins)[] = {{1.03, 1.6, -0.23}, {1.03, -1.36, -0.23}, {-1.23, 1.6, -0.23}, {-1.23, -1.36, -0.23}};
     };
     class O_Heli_Transport_04_covered_F: Heli_Transport_04_base_F {
         GVAR(enabled) = 1;
-        GVAR(ropeOrigins[]) = {{0.83, -4.7, -0.03}, {-1.02, -4.7, -0.03}};
+        GVAR(ropeOrigins)[] = {{0.83, -4.7, -0.03}, {-1.02, -4.7, -0.03}};
     };
 };
