@@ -110,6 +110,19 @@ if (GVAR(level) >= 2) then {
         };
     };
 
+    // Handle toruniquets
+    private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+    {
+        private _appliedTime = _x;
+        if (_appliedTime > 0) then {
+            // There's a tourniquet applied at time _appliedTime
+            if (CBA_missionTime - _appliedTime > 120) then {
+                // Increase pain at a rate of 0.001 units/s
+                _unit setVariable [QGVAR(pain), (_unit getVariable [QGVAR(pain), 0]) + 0.001];
+            };
+        }
+    } forEach _tourniquets;
+
     // Set the vitals
     _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
     _unit setVariable  [QGVAR(heartRate), _heartRate max 0, _syncValues];
