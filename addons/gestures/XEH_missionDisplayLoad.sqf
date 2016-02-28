@@ -4,9 +4,6 @@ disableSerialization;
 
 params ["_display"];
 
-// reload mutex, you can't play signal while reloading
-GVAR(ReloadMutex) = true;
-
 _display displayAddEventHandler ["KeyDown", {
     if ((_this select 1) in actionKeys "ReloadMagazine") then {
         if (isNull ACE_player || {!alive ACE_player}) exitWith {false};
