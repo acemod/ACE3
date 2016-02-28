@@ -24,7 +24,7 @@ if !(local _unit) exitWith {
 // Quit if the unit already has a vital loop, or is dead, unless it's forced
 if ((_unit getVariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitWith{};
 
-// Schedule the loop to be executed again later
+// Schedule the loop to be executed again 1 sec later
 // @todo: should the loop be started righ away instead?
 _unit setVariable [QGVAR(addedToUnitLoop), true, true];
-[DFUNC(vitalLoop), 1, [_unit, ACE_time]] call EFUNC(common,waitAndExecute);
+[DFUNC(vitalLoop), [_unit, ACE_time], 1] call EFUNC(common,waitAndExecute);

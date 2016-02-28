@@ -44,5 +44,5 @@ if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
     [_unit, _pain] call FUNC(playInjuredSound);
 };
 
-// Schedule the loop to be executed again later
-[DFUNC(vitalLoop), 1, [_unit, ACE_time]] call EFUNC(common,waitAndExecute);
+// Schedule the loop to be executed again 1 sec later
+[DFUNC(vitalLoop), [_unit, ACE_time], 1] call EFUNC(common,waitAndExecute);
