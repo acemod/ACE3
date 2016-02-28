@@ -110,7 +110,7 @@ if (GVAR(level) >= 2) then {
         };
     };
 
-    // Handle toruniquets
+    // Handle tourniquets
     private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
     {
         private _appliedTime = _x;
@@ -120,7 +120,7 @@ if (GVAR(level) >= 2) then {
                 // Increase pain at a rate of 0.001 units/s
                 _unit setVariable [QGVAR(pain), (_unit getVariable [QGVAR(pain), 0]) + 0.001];
             };
-        }
+        };
     } forEach _tourniquets;
 
     // Set the vitals
