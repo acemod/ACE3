@@ -16,7 +16,8 @@
 private ["_tourniquets", "_part", "_applyingTo"];
 params ["_target", "_tourniquetItem", "_selectionName"];
 
-[_target] call FUNC(addToInjuredCollection);
+//If we're not already tracking vitals, start:
+[_target] call FUNC(addVitalLoop);
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 
