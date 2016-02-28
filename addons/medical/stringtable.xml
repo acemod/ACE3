@@ -2100,7 +2100,7 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_cpr">
+        <Key ID="STR_ACE_Medical_Activity_CPR">
             <English>%1 performed CPR</English>
             <Polish>%1 wykonał cykl RKO</Polish>
             <Czech>%1 provádí CPR</Czech>
@@ -2146,16 +2146,6 @@
             <Italian>%1 ha applicato un laccio emostatico</Italian>
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_Activity_CPR">
-            <English>%1 performed CPR</English>
-            <German>%1 hat eine HLW durchgeführt</German>
-            <Polish>%1 wykonał cykl RKO</Polish>
-            <Russian>%1 провел сердечно-легочную реанимацию</Russian>
-            <Spanish>%1 realicó RCP</Spanish>
-            <Portuguese>%1 realizou RCP</Portuguese>
-            <Czech>%1 provádí CPR</Czech>
-            <Italian>%1 ha eseguito CPR</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
