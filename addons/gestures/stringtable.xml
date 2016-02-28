@@ -237,7 +237,7 @@
             <Polish>Pokaż gesty w menu interakcji</Polish>
             <Italian>Mostra Gesti su Menù Interazione</Italian>
             <Spanish>Mostrar gestos en el menú de interacción</Spanish>
-            <French>Afficher les signaux dans le menu d'interaction</French>
+            <French>Afficher les gestes au menu d'interaction.</French>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -246,7 +246,7 @@
             <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
             <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
             <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
-            <French>Affiche les signaux dans le menu d'interaction personnel, ou seulement par raccourcis, ou encore les désactiver complètement</French>
+            <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
@@ -255,7 +255,7 @@
             <Polish>Tylko skróty klaw.</Polish>
             <Italian>Solo Hotkey</Italian>
             <Spanish>Solo mediante teclas</Spanish>
-            <French>Juste par raccourcis</French>
+            <French>Seulement les touches</French>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -264,7 +264,7 @@
             <Polish>Skróty klaw. + menu interakcji</Polish>
             <Italian>Hotkey + Menù Interazione</Italian>
             <Spanish>Teclas y Menú de Interacción</Spanish>
-            <French>Raccourcis et menu d'interaction</French>
+            <French>Touches + menu d'interaction</French>
         </Key>
     </Package>
 </Project>

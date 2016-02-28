@@ -45,7 +45,7 @@
             <Czech>Odpálit VŠE</Czech>
             <Polish>Detonuj wszystkie</Polish>
             <Italian>Detona Tutti</Italian>
-            <French>Mise à feu (tous)</French>
+            <French>Tout mettre à feu</French>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -315,7 +315,7 @@
             <German>"Zünden"-Menü</German>
             <Spanish>Menú de detonación</Spanish>
             <Polish>Menu detonacji</Polish>
-            <French>Menu de mise à feux</French>
+            <French>Menu de mise à feu</French>
             <Czech>Menu detonace</Czech>
             <Italian>Menù di detonazione</Italian>
             <Hungarian>Robbantási menü</Hungarian>
@@ -646,7 +646,7 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
-            <French>Mine M6 SLAM (Par le bas)</French>
+            <French>Mine M6 SLAM (par le bas)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -660,7 +660,7 @@
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
-            <French>Mine M6 SLAM (De flanc)</French>
+            <French>Mine M6 SLAM (de flanc)</French>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>

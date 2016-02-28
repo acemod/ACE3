@@ -5,7 +5,7 @@
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>
             <Russian>Индикатор пальца для показывающего</Russian>
-            <French>Afficher un indicateur de pointage pour soit même</French>
+            <French>Afficher un indicateur de pointage pour soi-même</French>
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
             <Portuguese>Mostrar indicador para si mesmo</Portuguese>
@@ -53,7 +53,7 @@
             <English>Action "point a finger at"</English>
             <German>Aktion: "Zeige Finger auf"</German>
             <Russian>Действие "показать пальцем на"</Russian>
-            <French>Action 'Pointer le doigt vers"</French>
+            <French>Action 'Pointer du doigt"</French>
             <Polish>Akcja "wskaż palcem"</Polish>
             <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
             <Portuguese>Ação "Apontar um dedo para"</Portuguese>
@@ -76,7 +76,7 @@
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
             <German>Zeigen Einstellungen</German>
-            <French>Option "Montrer du doigt"</French>
+            <French>Options "Montrer du doigt"</French>
             <Polish>Ustawienia wskazywania palcem</Polish>
             <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
             <German>Zeigen aktiviert</German>
-            <French>Activer "Montrer du doigt"</French>
+            <French>"Montrer du doigt" activé</French>
             <Polish>Aktywuj wskazywanie</Polish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
             <Portuguese>Apontamento ativado</Portuguese>

@@ -32,6 +32,7 @@
             <Polish>Plecaki</Polish>
             <Italian>Zaini</Italian>
             <Spanish>Mochilas</Spanish>
+            <French>Sacs à dos</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -40,6 +41,7 @@
             <Polish>Hełmy</Polish>
             <Italian>Copricapi</Italian>
             <Spanish>Cascos</Spanish>
+            <French>Equipement de tête</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -48,6 +50,7 @@
             <Polish>Gogle</Polish>
             <Italian>Occhiali</Italian>
             <Spanish>Gafas</Spanish>
+            <French>Lunettes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -56,6 +59,7 @@
             <Polish>Uniformy</Polish>
             <Italian>Uniformi</Italian>
             <Spanish>Uniformes</Spanish>
+            <French>Uniformes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -64,6 +68,7 @@
             <Polish>Kamizelki</Polish>
             <Italian>Vests</Italian>
             <Spanish>Chalecos</Spanish>
+            <French>Gilets</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -72,6 +77,7 @@
             <Polish>Granaty</Polish>
             <Italian>Granate</Italian>
             <Spanish>Granadas</Spanish>
+            <French>Grenades</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -80,6 +86,7 @@
             <Polish>Medyczne</Polish>
             <Italian>Medico</Italian>
             <Spanish>Médico</Spanish>
+            <French>Médical</French>
         </Key>
     </Package>
 </Project>
