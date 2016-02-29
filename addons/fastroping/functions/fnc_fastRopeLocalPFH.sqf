@@ -25,25 +25,15 @@ private ["_vectorUp", "_vectorDir", "_origin"];
 if (vehicle _unit != _unit) exitWith {};
 
 //Start fast roping
-if (animationState _unit != "ACE_slidingLoop") exitWith {
+if (animationState _unit != "ACE_FastRoping") exitWith {
     _unit disableCollisionWith _dummy;
-    _unit attachTo [_dummy, [0, 0, -0.5]];
-    [_unit, "ACE_slidingLoop", 2] call EFUNC(common,doAnimation);
+    _unit attachTo [_dummy, [0, 0, -1.45]];
+    [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
 };
 
 //End of fast rope
 if (isNull attachedTo _unit) exitWith {
-    if ((getPos _unit) select 2 > 1) then {
-        [_unit, "ACE_freeFallStart", 2] call EFUNC(common,doAnimation);
-        [_unit, "ACE_freeFallLoop", 1] call EFUNC(common,doAnimation);
-        [{
-            isTouchingGround _this
-        }, {
-            [_this, "", 2] call EFUNC(common,doAnimation);
-        }, _unit] call EFUNC(common,waitUntilAndExecute);
-    } else {
-        [_unit, "", 2] call EFUNC(common,doAnimation);
-    };
+    [_unit, "", 2] call EFUNC(common,doAnimation);
     _unit setVectorUp [0, 0, 1];
 
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
