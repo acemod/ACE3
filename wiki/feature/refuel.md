@@ -54,6 +54,12 @@ You can only use the nozzle within a close distance from its source. You may nee
 ### The engine of the fuel truck is broken. Why?
 While refueling, you can't move the fuel truck. Return the nozzle.
 
+### How do I replenish the ammunition supply on an ammo truck?
+Please check the API description for more details.
+
+### Something broke, I can't use the fuel truck / nozzle any longer. What to do?
+You can reset the fuel truck and its nozzle by calling `ace_refuel_fnc_reset` with its first parameter being the fuel truck object.
+
 ## 4. Dependencies
 
 `ace_interaction`
