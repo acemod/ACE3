@@ -46,6 +46,7 @@
             <Czech>Měním kolo...</Czech>
             <Spanish>Cambiando rueda...</Spanish>
             <Italian>Sto sostituendo la ruota...</Italian>
+            <French>Remplacement de la roue...</French>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedWheel">
             <English>Wheel replaced</English>
@@ -56,6 +57,7 @@
             <Czech>Kolo vyměněno</Czech>
             <Spanish>Rueda cambiada</Spanish>
             <Italian>Ruota sostituita</Italian>
+            <French>Roue remplacée</French>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveWheel">
             <English>Remove Wheel</English>
@@ -78,6 +80,7 @@
             <Czech>Odstraňuji kolo...</Czech>
             <Spanish>Quitando rueda...</Spanish>
             <Italian>Sto rimuovendo la ruota...</Italian>
+            <French>Démontage de la roue...</French>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedWheel">
             <English>Wheel removed</English>
@@ -88,6 +91,7 @@
             <Czech>Kolo odstraněno</Czech>
             <Spanish>Rueda quitada</Spanish>
             <Italian>Ruota rimossa</Italian>
+            <French>Roue démontée</French>
         </Key>
         <Key ID="STR_ACE_Repair_ReplaceTrack">
             <English>Change Track</English>
@@ -98,6 +102,7 @@
             <Czech>Vyměnit pás</Czech>
             <Spanish>Cambiar oruga</Spanish>
             <Italian>Cambia cingolo</Italian>
+            <French>Changer la chenille</French>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacingTrack">
             <English>Replacing Track...</English>
@@ -108,6 +113,7 @@
             <Czech>Měním pás...</Czech>
             <Spanish>Cambiando oruga...</Spanish>
             <Italian>Sto sostituendo il cingolo...</Italian>
+            <French>Remplacement de la chenille...</French>
         </Key>
         <Key ID="STR_ACE_Repair_ReplacedTrack">
             <English>Track replaced</English>
@@ -118,6 +124,7 @@
             <Czech>Pás vyměněn</Czech>
             <Spanish>Oruga cambiada</Spanish>
             <Italian>Cingolo sostituito</Italian>
+            <French>Chenille remplacée</French>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
@@ -128,6 +135,7 @@
             <Czech>Odstranit pás</Czech>
             <Spanish>Quitar oruga</Spanish>
             <Italian>Rimuovi cingolo</Italian>
+            <French>Enlever la chenille</French>
         </Key>
         <Key ID="STR_ACE_Repair_RemovingTrack">
             <English>Removing Track...</English>
@@ -138,6 +146,7 @@
             <Czech>Odstraňuji pás...</Czech>
             <Spanish>Quitando oruga...</Spanish>
             <Italian>Sto rimuovendo il cingolo...</Italian>
+            <French>Enlèvement de la chenille...</French>
         </Key>
         <Key ID="STR_ACE_Repair_RemovedTrack">
             <English>Track removed</English>
@@ -148,6 +157,7 @@
             <Czech>Pás odstraněn</Czech>
             <Spanish>Oruga quitada</Spanish>
             <Italian>Cingolo rimosso</Italian>
+            <French>Chenille enlevée</French>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepair">
             <English>Full Repair</English>
@@ -158,6 +168,7 @@
             <Czech>Kompletní oprava</Czech>
             <Spanish>Reparación completa</Spanish>
             <Italian>Riparazione completa</Italian>
+            <French>Réparations complètes</French>
         </Key>
         <Key ID="STR_ACE_Repair_fullyRepairing">
             <English>Repairing Vehicle...</English>
@@ -168,6 +179,7 @@
             <Czech>Opravuji vozidlo...</Czech>
             <Spanish>Reparando vehículo...</Spanish>
             <Italian>Sto riparando il veicolo...</Italian>
+            <French>Réparation du véhicule...</French>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation">
             <English>Full Repair Locations</English>
@@ -178,6 +190,7 @@
             <Czech>Oblast pro kompletní opravu</Czech>
             <Spanish>Lugares de reparación completa</Spanish>
             <Italian>Luoghi Riparazione Completa</Italian>
+            <French>Lieu de réparation complète</French>
         </Key>
         <Key ID="STR_ACE_Repair_fullRepairLocation_description">
             <English>At what locations can a vehicle be fully repaired?</English>
@@ -188,6 +201,7 @@
             <Spanish>¿En qué lugares puede un vehículo ser reparado totalmente?</Spanish>
             <Czech>V které oblasti může být vozidlo plně opraveno?</Czech>
             <Italian>In quali luoghi è possibile riparare completamente un veicolo?</Italian>
+            <French>Où peuvent être réparés complètement les véhicules ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_name">
             <English>Allow Full Repair</English>
@@ -198,6 +212,7 @@
             <Czech>Povolit kompletní opravu</Czech>
             <Spanish>Permitir reparación completa</Spanish>
             <Italian>Consenti Riparazione Completa</Italian>
+            <French>Autoriser les réparations complètes.</French>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_fullRepair_description">
             <English>Who can perform a full repair on a vehicle?</English>
@@ -208,6 +223,7 @@
             <Spanish>¿Quién puede realizar una reparación completa de un vehículo?</Spanish>
             <Czech>Kdo může provést úplné opravy na vozidle?</Czech>
             <Italian>Chi può eseguire una riparazione completa su un veicolo?</Italian>
+            <French>Qui peut faire une réparation complète ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_name">
             <English>Add Spare Parts</English>
@@ -218,6 +234,7 @@
             <Russian>Добавлять запчасти</Russian>
             <Czech>Přidat náhradní díly</Czech>
             <Italian>Aggiungi Parti di Ricambio</Italian>
+            <French>Ajouter des pièces de rechange</French>
         </Key>
         <Key ID="STR_ACE_Repair_addSpareParts_description">
             <English>Add spare parts to vehicles (requires Cargo component)?</English>
@@ -228,6 +245,7 @@
             <Russian>Добавлять запасные части в технику (требуется модуль Грузоперевозок)?</Russian>
             <Czech>Přidat náhradní díly do vozidla (vyžaduje úložný prostor)?</Czech>
             <Italian>Aggiungi parti di ricambio ai veicoli (richiede componente Cargo)?</Italian>
+            <French>Ajouter des pièces de rechage aux véhicules ? (à besoin du système de cargaison)</French>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
             <English>Repair &gt;&gt;</English>
@@ -250,6 +268,7 @@
             <Czech>Zobrazit text při opravě</Czech>
             <Spanish>Mostrar texto en la reparación</Spanish>
             <Italian>Mostra testo mentre ripari</Italian>
+            <French>Afficher du texte pendant la réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextDesc">
             <English>Display a notification whenever you repair a vehicle</English>
@@ -260,6 +279,7 @@
             <Spanish>Mostrar una notificación cada vez que se reparare un vehículo</Spanish>
             <Czech>Zobrazit oznámení kdykoliv opravíš vozidlo</Czech>
             <Italian>Mostra una notifica quando stai riparando un veicolo</Italian>
+            <French>Afficher une notification lorsque l'on répare un véhicule</French>
         </Key>
         <Key ID="STR_ACE_Repair_Repairing">
             <English>Repairing...</English>
@@ -306,6 +326,7 @@
             <Czech>Kompletně opravená část</Czech>
             <Spanish>Parte totalmente reparado</Spanish>
             <Italian>Parte riparata completamente</Italian>
+            <French>Pièce entièrement réparée</French>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedPartially">
             <English>Partially repaired %1</English>
@@ -316,6 +337,7 @@
             <Spanish>Parcialmente reparada %1</Spanish>
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
+            <French>%1 pratiquement réparée</French>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointFully">
             <English>Fully repaired %1</English>
@@ -326,6 +348,7 @@
             <Czech>%1 - kompletně opraveno</Czech>
             <Spanish>Totalmente reparada %1</Spanish>
             <Italian>%1 completamente riparato</Italian>
+            <French>%1 entièrement réparée</French>
         </Key>
         <Key ID="STR_ACE_Repair_RepairedHitPointPartially">
             <English>Partially repaired %1</English>
@@ -336,6 +359,7 @@
             <Spanish>Parcialmente reparada %1</Spanish>
             <Czech>%1 - částečně opraveno</Czech>
             <Italian>%1 parzialmente riparato</Italian>
+            <French>%1 pratiquement réparée</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitBody">
             <English>Body</English>
@@ -381,6 +405,7 @@
             <Spanish>Estabilizador horizontal izquierdo</Spanish>
             <Czech>Levý horizontální stabilizátor</Czech>
             <Italian>Stabilizzatore Orizzontale Sinistro</Italian>
+            <French>Stabilisateur horizontal gauche</French>
             <German>Linkes Höhenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitHStabilizerR1">
@@ -391,6 +416,7 @@
             <Spanish>Estabilizador horizontal derecho</Spanish>
             <Czech>Pravý horizontální stabilizátor</Czech>
             <Italian>Stabilizzatore Orizzontale Destro</Italian>
+            <French>Stabilisateur horizontal droit</French>
             <German>Rechtes Höhenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitVStabilizer1">
@@ -401,6 +427,7 @@
             <Portuguese>Estabilizador Vertical</Portuguese>
             <Spanish>Estabilizador vertical</Spanish>
             <Italian>Stabilizzatore Verticale</Italian>
+            <French>Stabilisateur vertical</French>
             <German>Seitenleitwerk</German>
         </Key>
         <Key ID="STR_ACE_Repair_HitFuel">
@@ -424,6 +451,7 @@
             <Portuguese>Transmissão</Portuguese>
             <Spanish>Transmisión</Spanish>
             <Italian>Trasmissione</Italian>
+            <French>Instruments</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitGear">
             <English>Gear</English>
@@ -434,6 +462,7 @@
             <Spanish>Rueda</Spanish>
             <Czech>Podvozek</Czech>
             <Italian>Motore</Italian>
+            <French>Trains d'attérissage</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitStarter">
             <English>Starter</English>
@@ -444,6 +473,7 @@
             <Portuguese>Arranque</Portuguese>
             <Spanish>Motor de arranque</Spanish>
             <Italian>Motore d'avviamento</Italian>
+            <French>Démarreur</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitTail">
             <English>Tail</English>
@@ -454,6 +484,7 @@
             <Spanish>Tail</Spanish>
             <Portuguese>Cauda</Portuguese>
             <Italian>Coda</Italian>
+            <French>Queue</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -464,6 +495,7 @@
             <Portuguese>Tubo de Pitot </Portuguese>
             <Spanish>Tubo del pitot </Spanish>
             <Italian>Tubo di Pitot</Italian>
+            <French>Sonde pitot</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitStaticPort">
             <English>Static Port</English>
@@ -474,6 +506,7 @@
             <Spanish>Puerto estático</Spanish>
             <Czech>Statický port</Czech>
             <Italian>Porta Statica</Italian>
+            <French>Port statique</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -484,6 +517,7 @@
             <Portuguese>Munição</Portuguese>
             <Spanish>Munición</Spanish>
             <Italian>Munizioni</Italian>
+            <French>Munitions</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitTurret">
             <English>Turret</English>
@@ -518,6 +552,7 @@
             <Polish>Rakiety</Polish>
             <Spanish>Misiles</Spanish>
             <Italian>Missili</Italian>
+            <French>Missiles</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitLTrack">
             <English>Left Track</English>
@@ -684,6 +719,7 @@
             <Spanish>Cabrestante</Spanish>
             <Czech>Naviják</Czech>
             <Italian>Gancio</Italian>
+            <French>Treuil</French>
         </Key>
         <Key ID="STR_ACE_Repair_HitRGlass">
             <English>Glass (right)</English>
@@ -728,6 +764,7 @@
             <Italian>ERA</Italian>
             <German>Reaktivpanzerung</German>
             <Spanish>ERA</Spanish>
+            <French>ERA</French>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -738,6 +775,7 @@
             <Spanish>Ajustes de reparación</Spanish>
             <Czech>Nastavení oprav</Czech>
             <Italian>Impostazioni Riparazioni</Italian>
+            <French>Réglages de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
@@ -748,6 +786,7 @@
             <Spanish>Proporciona un sistema de reparación para todo tipo de vehículos.</Spanish>
             <Czech>Poskytuje rozsáhlý systém oprav pro všechny typy vozidel.</Czech>
             <Italian>Fornisce un sistema di riparazione per tutti i tipi di veicoli.</Italian>
+            <French>Fournit un système de réparation pour tous les types de véhicules.</French>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
@@ -758,6 +797,7 @@
             <Czech>Kdokoliv</Czech>
             <Spanish>Cualquiera</Spanish>
             <Italian>Chiunque</Italian>
+            <French>Tout le monde</French>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
@@ -768,6 +808,7 @@
             <Czech>Pouze inženýr</Czech>
             <Spanish>Solo ingeniero</Spanish>
             <Italian>Solo Geniere</Italian>
+            <French>Ingénieurs seulement</French>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
             <English>Repair Specialist only</English>
@@ -778,6 +819,7 @@
             <Czech>Pouze specialista na opravování</Czech>
             <Spanish>Solo especialista en reparación</Spanish>
             <Italian>Solo Specialista Riparazioni</Italian>
+            <French>Spécialistes de réparation seulement</French>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -788,6 +830,7 @@
             <Czech>Možnost Výměny Kol</Czech>
             <Spanish>Permitir rueda</Spanish>
             <Italian>Consenti Ruota</Italian>
+            <French>Autoriser les roues</French>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -798,6 +841,7 @@
             <Czech>Kdo může odstranit a vyměnit kola?</Czech>
             <Spanish>¿Quién puede quitar y cambiar las ruedas?</Spanish>
             <Italian>Chi può rimuovere e sostituire le ruote?</Italian>
+            <French>Qui peut enlever et remplacer les roues ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -808,6 +852,7 @@
             <Czech>Možnost Opravování</Czech>
             <Spanish>Permitir reparación</Spanish>
             <Italian>Consenti Riparazioni</Italian>
+            <French>Autoriser les réparations</French>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Repair_description">
             <English>Who can perform repair actions?</English>
@@ -818,6 +863,7 @@
             <Czech>Kdo může provádět opravy?</Czech>
             <Spanish>¿Quién puede realizar reparaciones?</Spanish>
             <Italian>Chi può eseguire riparazioni?</Italian>
+            <French>Qui peut réparer ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_name">
             <English>Repair Threshold</English>
@@ -828,6 +874,7 @@
             <Spanish>Umbral de reparación</Spanish>
             <Czech>Práh oprav</Czech>
             <Italian>Limite Riparazioni</Italian>
+            <French>Seuil de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_description">
             <English>What is the maximum damage that can be repaired with a toolkit?</English>
@@ -838,6 +885,7 @@
             <Spanish>¿Cuál es el daño máximo que puede ser reparado con una caja de herramientas?</Spanish>
             <Czech>Jaké maximální poškození může být opraveno pomocí opravárenské sady?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato con il Toolkit?</Italian>
+            <French>Quel est le maximum de dommages réparable par une trousse à outils ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_name">
             <English>Repair Threshold (Engineer)</English>
@@ -848,6 +896,7 @@
             <Spanish>Umbral de Reparación (Ingeniero)</Spanish>
             <Czech>Práh oprav (Inženýr)</Czech>
             <Italian>Limite Riparazioni (Geniere)</Italian>
+            <French>Seuil de réparatoin (ingénieur)</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>What is the maximum damage that can be repaired by an engineer?</English>
@@ -858,6 +907,7 @@
             <Spanish>¿Cuál es el daño máximo que puede ser reparado por un ingeniero?</Spanish>
             <Czech>Jaké maximální poškození může být opraveno pomoci inženýra?</Czech>
             <Italian>Qual'è il danno massimo che può essere riparato da un Geniere?</Italian>
+            <French>Quel est le maximum de dommages qui peuvent être réparés par un ingénieur ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_name">
             <English>Remove toolkit on use</English>
@@ -868,6 +918,7 @@
             <Spanish>Eliminar conjunto de herramientas al usarlo</Spanish>
             <Czech>Odstranit sadu nástrojů po použití</Czech>
             <Italian>Rimuovi Toolkit dopo l'uso</Italian>
+            <French>Enlever la trousse à outils après usage</French>
         </Key>
         <Key ID="STR_ACE_Repair_consumeItem_ToolKit_description">
             <English>Should the toolkit be removed on usage?</English>
@@ -878,6 +929,7 @@
             <Spanish>¿Deben retirarse las herramientas al usarlas?</Spanish>
             <Czech>Má být odstraněna sada nástroju po použití?</Czech>
             <Italian>Il Toolkit dev'essere rimosso dopo l'uso?</Italian>
+            <French>La trousse à outils devrait-elle être enlevée après usage ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
@@ -888,6 +940,7 @@
             <Czech>Kdekoliv</Czech>
             <Spanish>En cualquier sitio</Spanish>
             <Italian>Ovunque</Italian>
+            <French>N'importe où</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairVehicleOnly">
             <English>Repair Vehicle only</English>
@@ -898,6 +951,7 @@
             <Spanish>Reparar solo en vehículo</Spanish>
             <Czech>Pouze opravárenské vozidlo</Czech>
             <Italian>Solo Veicoli Riparazioni</Italian>
+            <French>Véhicule de réparation seulement</French>
         </Key>
         <Key ID="STR_ACE_Repair_repairFacilityOnly">
             <English>Repair Facility only</English>
@@ -908,6 +962,7 @@
             <Spanish>Reparar solo en instalación</Spanish>
             <Czech>Pouze opravárenské zařízení</Czech>
             <Italian>Solo Strutture Riparazioni</Italian>
+            <French>Installation de réparation seulement</French>
         </Key>
         <Key ID="STR_ACE_Repair_vehicleAndFacility">
             <English>Repair Facility or Vehicle</English>
@@ -918,6 +973,7 @@
             <Spanish>Reparar en instalación o vehículo</Spanish>
             <Czech>Opravárenské zařízení nebo vozidlo</Czech>
             <Italian>Strutture Riparazioni o Veicoli</Italian>
+            <French>Installations ou véhicule de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_DisplayName">
             <English>Assign Engineer</English>
@@ -928,6 +984,7 @@
             <Czech>Přiřadit Inženýra</Czech>
             <Spanish>Asignar ingeniero</Spanish>
             <Italian>Assegna Geniere</Italian>
+            <French>Assigner le rôle d'ingénieur</French>
         </Key>
         <Key ID="STR_ACE_Repair_EnableList_DisplayName">
             <English>List</English>
@@ -938,6 +995,7 @@
             <Czech>Seznam</Czech>
             <Spanish>Lista</Spanish>
             <Italian>Lista</Italian>
+            <French>Liste</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_EnableList_Description">
             <English>List of unit names that will be classified as engineer, separated by commas.</English>
@@ -948,6 +1006,7 @@
             <Spanish>Lista de los nombres de las unidades que serán clasificados como ingeniero, separados por comas.</Spanish>
             <Czech>Seznam jmen jednotek, které budou klasifikovány jako inženýr, oddělit čárkami.</Czech>
             <Italian>Lista di unità che verranno classificate come genieri, separate da virgole.</Italian>
+            <French>Liste des noms d'unités qui seront considérées ingénieurs. Séparé par des virgules</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_DisplayName">
             <English>Is Engineer</English>
@@ -958,6 +1017,7 @@
             <Spanish>Es un ingeniero</Spanish>
             <Czech>Inženýr</Czech>
             <Italian>E' Geniere</Italian>
+            <French>Est ingénieur</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_Description">
             <English>Select the engineering skill level of the unit</English>
@@ -968,6 +1028,7 @@
             <Spanish>Selecciona el nivel de conocimientos de ingeniería de la unidad</Spanish>
             <Czech>Vyberte úroveň dovednosti inženýra pro jednotku</Czech>
             <Italian>Seleziona il livello di abilità geniere dell'unità</Italian>
+            <French>Sélectionner le niveau d'habilité en réparation de l'unité</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_none">
             <English>None</English>
@@ -978,6 +1039,7 @@
             <Czech>Nikdo</Czech>
             <Spanish>Ningún</Spanish>
             <Italian>Nessuna</Italian>
+            <French>Aucun</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_engineer">
             <English>Engineer</English>
@@ -988,6 +1050,7 @@
             <Czech>Inženýr</Czech>
             <Spanish>Ingeniero</Spanish>
             <Italian>Geniere</Italian>
+            <French>Ingénieur</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
             <English>Specialist</English>
@@ -998,6 +1061,7 @@
             <Czech>Specialista</Czech>
             <Spanish>Especialista</Spanish>
             <Italian>Specialista Riparazioni</Italian>
+            <French>Spécialiste</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
@@ -1008,6 +1072,7 @@
             <Spanish>Asignar una o varias unidades como ingeniero</Spanish>
             <Czech>Přiřaďte jednu nebo více osob jako inženýra</Czech>
             <Italian>Assegna una o più unità come genieri</Italian>
+            <French>Assigner un ou plusieurs unités comme ingénieur</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_DisplayName">
             <English>Assign Repair Vehicle</English>
@@ -1018,6 +1083,7 @@
             <Spanish>Asignar vehículo de reparación</Spanish>
             <Czech>Přiřaďte opraváresnké vozidlo</Czech>
             <Italian>Assegna Veicolo Riparazioni</Italian>
+            <French>Assigner en tant que véhicule de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_DisplayName">
             <English>List</English>
@@ -1028,6 +1094,7 @@
             <Czech>Seznam</Czech>
             <Spanish>Lista</Spanish>
             <Italian>Lista</Italian>
+            <French>Liste</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as repair vehicle, separated by commas.</English>
@@ -1038,6 +1105,7 @@
             <Spanish>Lista de los vehículos que se clasifican como vehículo de reparación, separados por comas.</Spanish>
             <Czech>Seznam vozidel, která budou klasifikována jako opravárenská, oddělit čárkami.</Czech>
             <Italian>Lista di Veicoli che verranno considerati veicoli riparazioni, separati da virgole.</Italian>
+            <French>Liste de véhicules qui seront considérés comme véhicules de réparation. Séparé par des virgules.</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_DisplayName">
             <English>Is Repair Vehicle</English>
@@ -1048,6 +1116,7 @@
             <Spanish>Es un vehículo de reparación</Spanish>
             <Czech>Opravárenské vozidlo</Czech>
             <Italian>E' Veicolo Riparazioni</Italian>
+            <French>Est un véhicule de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_role_Description">
             <English>Is the vehicle classified as a repair vehicle?</English>
@@ -1058,6 +1127,7 @@
             <Spanish>¿Está el vehículo clasificado como un vehículo de reparación?</Spanish>
             <Czech>Je vozidlo klasifikováno jako opravárenské?</Czech>
             <Italian>Il veicolo è classificato dome veicolo riparazioni?</Italian>
+            <French>Le véhicule est-il considéré comme un véhicule de réparation ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairVehicle_Module_Description">
             <English>Assign one or multiple vehicles as a repair vehicle</English>
@@ -1068,6 +1138,7 @@
             <Spanish>Asignar uno o varios vehículos como vehículo de reparación</Spanish>
             <Czech>Přiřaďte jedno nebo více vozidel jako opravárenské vozidlo</Czech>
             <Italian>Assegna uno o più veicoli come veicoli riparazioni</Italian>
+            <French>Assigner un ou plusieurs véhicules en tant que véhicule de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_DisplayName">
             <English>Assign Repair Facility</English>
@@ -1078,6 +1149,7 @@
             <Spanish>Asignar instalación de reparación</Spanish>
             <Czech>Přiřaďte opravárenské zařízení</Czech>
             <Italian>Assegna Struttura Riparazioni</Italian>
+            <French>Assigner en tant qu'installation de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_DisplayName">
             <English>List</English>
@@ -1088,6 +1160,7 @@
             <Czech>Seznam</Czech>
             <Spanish>Lista</Spanish>
             <Italian>Lista</Italian>
+            <French>Liste</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_EnableList_Description">
             <English>List of objects that will be classified as repair Facility, separated by commas.</English>
@@ -1098,6 +1171,7 @@
             <Spanish>Lista de los objetos que se clasifican como instalaciones para la reparación, separados por comas.</Spanish>
             <Czech>Seznam objektů, které budou klasifikovány jako opravárenské zařízení, oddělit čárkami.</Czech>
             <Italian>Lista di oggetti che verranno classificati come strutture riparazioni, separate da virgole.</Italian>
+            <French>Liste des objets considérés comme installations de réparation. Séparé par des virgules</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_DisplayName">
             <English>Is Repair Facility</English>
@@ -1108,6 +1182,7 @@
             <Spanish>Es una instalación de reparación</Spanish>
             <Czech>Opravárenské zařízení</Czech>
             <Italian>E' Struttura Riparazioni</Italian>
+            <French>Est une installation de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_role_Description">
             <English>Is the object classified as a repair Facility?</English>
@@ -1118,6 +1193,7 @@
             <Spanish>¿Está el objeto clasificado como una instalación de reparación?</Spanish>
             <Czech>Je objekt klasifikován jako opravárenské zařízení?</Czech>
             <Italian>L'oggetto è classificato come struttura riparazioni?</Italian>
+            <French>L'objet est-il considéré comme une installation de réparation ?</French>
         </Key>
         <Key ID="STR_ACE_Repair_AssignRepairFacility_Module_Description">
             <English>Assign one or multiple objects as a repair Facility</English>
@@ -1128,6 +1204,7 @@
             <Spanish>Asignar uno o varios objetos como una instalación de reparación</Spanish>
             <Czech>Přiřaďte jeden nebo více objektů jako opravárenské zařízení</Czech>
             <Italian>Assegna uno o più oggetti come strutture riparazioni</Italian>
+            <French>Assigner un ou plusieurs objets en tant que véhicule de réparation</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_DisplayName">
             <English>Add Spare Parts</English>
@@ -1138,6 +1215,7 @@
             <Russian>Добавить запчасти</Russian>
             <Czech>Přidat náhradní díly</Czech>
             <Italian>Aggiungi Parti di Ricambio</Italian>
+            <French>Ajouter des pièces de rechange</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Module_Description">
             <English>Add spare parts to one or multiple objects</English>
@@ -1148,6 +1226,7 @@
             <Russian>Добавить запасные части в одно или несколько транспортных средств</Russian>
             <Czech>Přidat náhradní díly do jednoho nebo více objektů</Czech>
             <Italian>Aggiungi parti di ricambio ad uno o più oggetti</Italian>
+            <French>Ajouter des pièces de rechange à un ou plusieurs objets</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_DisplayName">
             <English>List</English>
@@ -1158,6 +1237,7 @@
             <Russian>Список</Russian>
             <Czech>Seznam</Czech>
             <Italian>Lista</Italian>
+            <French>Liste</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_List_Description">
             <English>List of objects that will get spare parts added, separated by commas.</English>
@@ -1168,6 +1248,7 @@
             <Russian>Список транспортных средств, в которые будут добавляться запчасти, разделенный запятыми.</Russian>
             <Czech>Seznam objektů, které dostanou náhradní díly, oddělit čárkami.</Czech>
             <Italian>Lista di oggetti a cui verranno aggiunte parti di ricambio, separate da virgole.</Italian>
+            <French>Liste des objets qui recevront des pièces de réparation en plus. Séparé par des virgules</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_DisplayName">
             <English>Part</English>
@@ -1178,6 +1259,7 @@
             <Russian>Запчасть</Russian>
             <Czech>Díl</Czech>
             <Italian>Parte</Italian>
+            <French>Pièce</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Part_Description">
             <English>Spare part.</English>
@@ -1188,6 +1270,7 @@
             <Russian>Запасная часть.</Russian>
             <Czech>Náhradní díl.</Czech>
             <Italian>Parte di ricambio.</Italian>
+            <French>Pièce de rechange</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_DisplayName">
             <English>Amount</English>
@@ -1198,6 +1281,7 @@
             <Russian>Количество</Russian>
             <Czech>Množství</Czech>
             <Italian>Quantità</Italian>
+            <French>Quantité</French>
         </Key>
         <Key ID="STR_ACE_Repair_AddSpareParts_Amount_Description">
             <English>Number of selected spare parts.</English>
@@ -1208,6 +1292,7 @@
             <Russian>Число выбранных запасных частей.</Russian>
             <Czech>Počet vybraných náhradních dílů.</Czech>
             <Italian>Numero di parti di ricambio selezionate.</Italian>
+            <French>Nombre de pièces de rechange séléctionnées</French>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_name">
             <English>Wheel repair requirements</English>
@@ -1218,6 +1303,7 @@
             <Portuguese>Requerimentos para reparo de rodas</Portuguese>
             <Czech>Vyžaduje opravu kol</Czech>
             <Italian>Requisiti riparazione ruote</Italian>
+            <French>Exigences de réparation de roue</French>
         </Key>
         <Key ID="STR_ACE_Repair_wheelRepairRequiredItems_description">
             <English>Items required to remove/replace wheels</English>
@@ -1228,6 +1314,7 @@
             <Portuguese>Itens requeridos para remover/trocar rodas</Portuguese>
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
+            <French>Items exigés pour enlever/remplacer les roues</French>
         </Key>
     </Package>
 </Project>

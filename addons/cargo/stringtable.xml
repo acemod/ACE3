@@ -65,7 +65,7 @@
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
-            <French>Activer mise en cargaison</French>
+            <French>Activer la cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -76,7 +76,7 @@
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
-            <French>Active</French>
+            <French>Activer le chargement dans le module de cargaison.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -87,7 +87,7 @@
             <Czech>Nastavení nákladu</Czech>
             <Spanish>Ajustes de carga</Spanish>
             <Italian>Impostazioni Cargo</Italian>
-            <French>Options de cargaison</French>
+            <French>Réglages de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -98,7 +98,7 @@
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
             <Czech>Konfigurace nákladního modulu</Czech>
             <Italian>Configura le impostazioni del modulo cargo</Italian>
-            <French>Configure les options du module de cargaison</French>
+            <French>Configurer les réglages du module de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -133,7 +133,7 @@
             <Russian>Погрузка</Russian>
             <Italian>Caricando</Italian>
             <Spanish>Cargando</Spanish>
-            <French>Chargement cargaison</French>
+            <French>Chargement de la cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -144,7 +144,7 @@
             <Russian>Выгрузка</Russian>
             <Italian>Scaricando</Italian>
             <Spanish>Descargando</Spanish>
-            <French>Déchargement cargaison</French>
+            <French>Déchargement de la cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -155,7 +155,7 @@
             <Russian>%1&lt;br/&gt;не может быть погружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
-            <French>%1&lt;br/&gt;ne peut être chargé</French>
+            <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -166,7 +166,7 @@
             <Russian>%1&lt;br/&gt;не может быть выгружен</Russian>
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
-            <French>%1&lt;br/&gt;ne peut être déchargé</French>
+            <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
@@ -182,7 +182,7 @@
             <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
             <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
             <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
-            <French>Rend l'objet synchronisé chargeable par le système de cargaison.</French>
+            <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>

@@ -10,6 +10,7 @@
             <Spanish>Menú médico</Spanish>
             <Czech>Zdravotnikcá nabídka</Czech>
             <Italian>Menù Medico</Italian>
+            <French>Menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
@@ -20,6 +21,7 @@
             <Spanish>Permitir menú médico</Spanish>
             <Czech>Povolit zdravotnickou nabídku</Czech>
             <Italian>Consenti Menù Medico</Italian>
+            <French>Autoriser le menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
@@ -30,6 +32,7 @@
             <Spanish>Permitir a los clientes utilizar el menú médico</Spanish>
             <Czech>Povolit klientům používat zdravotnickou nabídku</Czech>
             <Italian>Consenti ai clients di usare il Menù Medico</Italian>
+            <French>Autoriser les clients à utiliser le menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
@@ -40,6 +43,7 @@
             <Spanish>Utiliza el menú médico</Spanish>
             <Czech>Použít zdravotnickou nabídku</Czech>
             <Italian>Usa Menù Medico</Italian>
+            <French>Utiliser le menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
@@ -50,6 +54,7 @@
             <Spanish>Si está permitido por el servidor, active la opción de utilizar el menú médico a través del menú de las teclas</Spanish>
             <Czech>Pokud je povoleno serverem, umožní použít zdravotnickou nabídku skrze kláv. zkratku a interakční menu</Czech>
             <Italian>Se consentito dal server, abilita l'opzione di usare il Menù Medico attraverso hotkeys e menù interazione</Italian>
+            <French>Si autorisé par le serveur, active l'option d'utiliser le menu médical à travers les raccourcis clavier et le menu d'interaction.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
@@ -60,6 +65,7 @@
             <Spanish>Reabrir menú médico</Spanish>
             <Czech>Znovu otevřít zdravotnickou nabídku</Czech>
             <Italian>Ri-apri Menù Medico</Italian>
+            <French>Ré-ouvrir le menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
@@ -70,6 +76,7 @@
             <Spanish>Reabre el menú médico despues de un tratamiento con éxito</Spanish>
             <Czech>Znovu otevřít zdravotnickou nabídku po úspěšné léčbě </Czech>
             <Italian>Ri-Apri il Menù Medico dopo un trattamento riuscito</Italian>
+            <French>Ré-ouvrir le menu médical après un traitement réussi</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
@@ -80,6 +87,7 @@
             <Spanish>Abrir menú médico</Spanish>
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
+            <French>Ouvir le menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
@@ -90,6 +98,7 @@
             <Spanish>Ajustes del mení médico</Spanish>
             <Czech>Nastavení zdravotnické nabídky</Czech>
             <Italian>Impostazioni Menù Medico</Italian>
+            <French>Réglages du menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
@@ -100,6 +109,7 @@
             <Spanish>Configurar el uso del menú médico</Spanish>
             <Czech>Konfigurace využití zdravotnické nabídky</Czech>
             <Italian>Configura l'uso del Menù Medico</Italian>
+            <French>Configurer l'utilisation du menu médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -414,7 +424,7 @@
             <German>Mittel</German>
             <Russian>среднего размера</Russian>
             <Spanish>Mediana</Spanish>
-            <French>moyenne</French>
+            <French>Moyenne</French>
             <Polish>średnim</Polish>
             <Portuguese>Médio</Portuguese>
             <Czech>Střední</Czech>
@@ -436,7 +446,7 @@
             <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-            <French>Il y a %2 %1 Blessure Ouverte</French>
+            <French>Il y a %2 %1 Blessure(s) Ouverte(s)</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
@@ -469,7 +479,7 @@
             <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-            <French>Il y a %2 %1 Blessure Bandée</French>
+            <French>Il y a %2 %1 Blessure(s) Bandée(s)</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
@@ -546,7 +556,7 @@
             <German>Blutung</German>
             <Russian>Кровотечение</Russian>
             <Spanish>Sangrando</Spanish>
-            <French>Seignement</French>
+            <French>Saignement</French>
             <Polish>Krwawienie zewnętrzne</Polish>
             <Portuguese>Sangrando</Portuguese>
             <Czech>Krvácí</Czech>
@@ -557,7 +567,7 @@
             <German>hat Schmerzen</German>
             <Russian>Испытывает боль</Russian>
             <Spanish>Con Dolor</Spanish>
-            <French>A De La Douleur</French>
+            <French>Souffre</French>
             <Polish>W bólu</Polish>
             <Portuguese>Com dor</Portuguese>
             <Czech>v bolestech</Czech>
@@ -579,7 +589,7 @@
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
-            <French>Garot [CAT]</French>
+            <French>Garrot [CAT]</French>
             <Polish>Opaska uciskowa [CAT]</Polish>
             <Portuguese>Torniquete [CAT]</Portuguese>
             <Czech>Škrtidlo [CAT]</Czech>

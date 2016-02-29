@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Attach">
         <Key ID="STR_ACE_Attach_AttachDetach">
@@ -90,7 +90,7 @@
             <German>Leuchtstab befestigt</German>
             <Spanish>Barra de luz acoplada</Spanish>
             <Polish>Przyczepiono światło chemiczne</Polish>
-            <French>Chemlight attachée</French>
+            <French>Cyalume attachée</French>
             <Czech>Chemické světlo připnuto</Czech>
             <Portuguese>Chemlight Fixada</Portuguese>
             <Italian>Chemlight attaccata</Italian>
@@ -102,7 +102,7 @@
             <German>Leuchtstab entfernt</German>
             <Spanish>Barra de luz quitada</Spanish>
             <Polish>Odczepiono światło chemiczne</Polish>
-            <French>Chemlight détachée</French>
+            <French>Cyalume détachée</French>
             <Czech>Chemické světlo odepnuto</Czech>
             <Portuguese>Chemlight Separada</Portuguese>
             <Italian>Chemlight staccata</Italian>
@@ -138,7 +138,7 @@
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
             <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
-            <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
+            <French>La balise IR permet de signaler votre position grâce à un clignotement visible par des JVN.</French>
             <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
             <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
             <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>

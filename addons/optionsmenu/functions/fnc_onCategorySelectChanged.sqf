@@ -22,6 +22,6 @@ disableSerialization;
 _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 
 _ctrlComboBox = (_settingsMenu displayCtrl 14);
-GVAR(currentCategorySelection) = lbCurSel _ctrlComboBox;
+GVAR(currentCategorySelection) = _ctrlComboBox lbValue (lbCurSel _ctrlComboBox);
 
 [true] call FUNC(settingsMenuUpdateList);

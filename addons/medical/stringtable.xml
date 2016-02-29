@@ -54,6 +54,7 @@
             <German>Adenosin injizieren</German>
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
+            <French>Injecter de l'adénosine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -252,6 +253,7 @@
             <German>Adenosin injizieren...</German>
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
+            <French>Injection d'adénosine...</French>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -440,7 +442,7 @@
             <Russian>Жгут</Russian>
             <Czech>Škrtidlo</Czech>
             <Polish>Staza</Polish>
-            <French>Tourniquet</French>
+            <French>Garrot</French>
             <Hungarian>Érszorító</Hungarian>
             <Italian>Laccio emostatico</Italian>
             <Portuguese>Torniquete</Portuguese>
@@ -452,7 +454,7 @@
             <Russian>Снять жгут</Russian>
             <Czech>Sundat škrtidlo</Czech>
             <Polish>Zdejmij stazę</Polish>
-            <French>Enlever le Tourniquet</French>
+            <French>Enlever le garrot</French>
             <Hungarian>Érszorító leszedése</Hungarian>
             <Italian>Rimuovi laccio emostatico</Italian>
             <Portuguese>Remover Torniquete</Portuguese>
@@ -762,7 +764,7 @@
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete [CAT]</Spanish>
-            <French>Tourniquet [CAT]</French>
+            <French>Garrot [CAT]</French>
             <Polish>Staza [typ. CAT]</Polish>
             <Czech>Škrtidlo [CAT]</Czech>
             <Hungarian>Érszorító [CAT]</Hungarian>
@@ -834,7 +836,7 @@
             <German>Wird verwendet, um mittlere bis große Wunden abzudecken und Blutungen zu stoppen</German>
             <Russian>Для тампонирования ран среднего и большого размера и остановки кровотечения.</Russian>
             <Spanish>Se utiliza para vendar heridas medianas o grandes y detener el sangrado</Spanish>
-            <French>Utilisé pour couvrir des blessures de taille moyenne à grande. Arrête l'hémorragies</French>
+            <French>Utilisé pour couvrir des blessures de taille moyenne à grande. Arrête l'hémorragie.</French>
             <Polish>Używany w celu opatrywania średnich i dużych ran oraz tamowania krwawienia. Dobrze radzi sobie z tamowaniem ran płatowych oraz postrzałowych.</Polish>
             <Hungarian>Közepestől nagyig terjedő sebek betakarására és vérzés elállítására használt kötszer</Hungarian>
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
@@ -845,7 +847,7 @@
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
             <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых сочетанных ранениях возможно тампонирование раны.</Russian>
             <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes lesiones o politraumatismos.</Spanish>
-            <French>Bandage servant à recouvrir les blessures pour arrêter les hémmoragies et faciliter la guérisson. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques</French>
+            <French>Bandage servant à recouvrir les blessures pour arrêter les hémoragies et faciliter la guérison. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques.</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
             <Hungarian>Egy kötszerfajta, melyet a sebek nyomására használnak a vérzés elállítása és sebgyógyulás érdekében. A nyomókötés egy lehetőség nagyobb polytraumatikus sérülések esetén.</Hungarian>
             <Italian>Un bendaggio usato per coprire la ferita, fermare il sanguinamento e facilitarne la guarigione. Questa tecnica è opzionale su ferite multiple.</Italian>
@@ -894,7 +896,7 @@
             <German>Tourniquet [CAT]</German>
             <Russian>Жгут</Russian>
             <Spanish>Torniquete (CAT)</Spanish>
-            <French>Tourniquet (CAT)</French>
+            <French>Garrot (CAT)</French>
             <Polish>Staza (typ. CAT)</Polish>
             <Czech>Škrtidlo (CAT)</Czech>
             <Hungarian>Érszorító (CAT)</Hungarian>
@@ -966,18 +968,21 @@
             <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
+            <French>Auto-injécteur d'adénosine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
             <German>Wird verwendet um die Symptome von Epiniphrin zu lindern</German>
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
+            <French>Utilisé pour contrer les effets de l'adrénaline</French>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
             <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
+            <French>Un composé utilisé pour contrer les effets de l'adrénaline</French>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -1127,7 +1132,7 @@
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
             <Russian>Пакет крови для возмещения объёма потерянной крови (хранить в холодильнике)</Russian>
             <Spanish>Sangre intravenosa, para restarurar el volumen sanguíneo (mantener frío)</Spanish>
-            <French>Cullot sanguin O- ,utiliser seulement lors de perte sanguine majeur afin de remplacer le volume sanguin perdu. Habituelment utiliser lors du transport ou dans un etablisement de soin. </French>
+            <French>Cullot sanguin O-, utilisé seulement lors de perte sanguine majeure afin de remplacer le volume sanguin perdu. Habituelment utilisé lors du transport ou dans un etablisement de soins. </French>
             <Polish>Krew IV, używana do uzupełnienia krwi u pacjenta, trzymać w warunkach chłodniczych.</Polish>
             <Hungarian>Vér-infúzió, intravénás bejuttatásra egy páciensnek (hidegen tárolandó)</Hungarian>
             <Italian>Sangue usato per ripristinare pazienti in cui si è verificata una perdita di sangue (conservare al fresco)</Italian>
@@ -1141,7 +1146,7 @@
             <Polish>Krew 0 Rh-, używana w rzadkich i szczególnych przypadkach do uzupełnienia krwi u pacjenta, zazwyczaj w trakcie fazie transportu rannej osoby do szpitala.</Polish>
             <Spanish>Utilice sólo durante gran pérdida de sangre para reemplazar el volumen de sangre perdida. Uso habitual durante el transporte de heridos.</Spanish>
             <Italian>Sangue 0 negativo usato per ripristinare sangue in pazienti in cui si è verificata una perdita di sangue.</Italian>
-            <French>Cullot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC</French>
+            <French>Cullot sanguin O- utilisé dans de rares et stricts cas pour compléter une perte de sang importante. Administré normalement lors d'un MEDEVAC.</French>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento. </Portuguese>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
@@ -2095,7 +2100,7 @@
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_cpr">
+        <Key ID="STR_ACE_Medical_Activity_CPR">
             <English>%1 performed CPR</English>
             <Polish>%1 wykonał cykl RKO</Polish>
             <Czech>%1 provádí CPR</Czech>
@@ -2104,6 +2109,7 @@
             <Portuguese>%1 realizou RCP</Portuguese>
             <Russian>%1 провел сердечно-легочную реанимацию</Russian>
             <Spanish>%1 realicó RCP</Spanish>
+            <French>%1 à fait une RPC</French>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2141,16 +2147,6 @@
             <Portuguese>%1 aplicou um torniquete</Portuguese>
             <Czech>%1 použil škrtidlo</Czech>
         </Key>
-        <Key ID="STR_ACE_Medical_Activity_CPR">
-            <English>%1 performed CPR</English>
-            <German>%1 hat eine HLW durchgeführt</German>
-            <Polish>%1 wykonał cykl RKO</Polish>
-            <Russian>%1 провел сердечно-легочную реанимацию</Russian>
-            <Spanish>%1 realicó RCP</Spanish>
-            <Portuguese>%1 realizou RCP</Portuguese>
-            <Czech>%1 provádí CPR</Czech>
-            <Italian>%1 ha eseguito CPR</Italian>
-        </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
             <German>%1 hat das eigene Erste-Hilfe-Set verwendet</German>
@@ -2160,6 +2156,7 @@
             <Russian>%1 использовал аптечку</Russian>
             <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
             <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
+            <French>%1 à utilisé un PAK</French>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2277,6 +2274,7 @@
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
+            <French>Soigner les plaies entièrement bandées.</French>
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
@@ -2788,7 +2786,7 @@
             <German>Tourniquet entfernen...</German>
             <Polish>Zdejmowanie stazy...</Polish>
             <Spanish>Quitando torniquete...</Spanish>
-            <French>Retire le tourniquet...</French>
+            <French>Retire le garrot...</French>
             <Portuguese>Removendo torniquete...</Portuguese>
             <Hungarian>Érszorító eltávolítása...</Hungarian>
             <Czech>Sundavám škrtidlo...</Czech>
@@ -3059,7 +3057,7 @@
             <German>KI kann bewusstlos werden</German>
             <Czech>Umožňuje AI upadnout do bezvědomí</Czech>
             <Portuguese>Permite IA ficar inconsciente</Portuguese>
-            <French>Autoriser les IA à tomber inconsciente</French>
+            <French>Autoriser les IA à tomber inconscients</French>
             <Hungarian>Engedélyezi az AI eszméletének elvesztését</Hungarian>
             <Italian>Permetti alle IA di diventare incoscienti</Italian>
         </Key>
@@ -3095,7 +3093,7 @@
             <German>Verhindere direkten Tod</German>
             <Czech>Zabránit okamžité smrti</Czech>
             <Portuguese>Previnir morte instantânea</Portuguese>
-            <French>Empêcher la morte instantanée</French>
+            <French>Empêcher la mort instantanée</French>
             <Hungarian>Azonnali halál kiiktatása</Hungarian>
             <Italian>Previeni morte istantanea</Italian>
         </Key>
@@ -3200,6 +3198,7 @@
             <German>Standard Sanitätseinstellungen [ACE]</German>
             <Polish>Podstawowe ustawienia medyczne</Polish>
             <Spanish>Ajustes médicos básicos [ACE]</Spanish>
+            <French>Réglages du système médical basic [ACE]</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3314,12 +3313,14 @@
             <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
+            <French>Autoriser l'adrénaline</French>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
             <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
+            <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3410,12 +3411,14 @@
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
+            <French>Position des adrénalines</French>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
             <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
+            <French>Où peuvent être utilisées les adrénalines ? (Médical basique)</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3618,6 +3621,7 @@
             <Portuguese>Curar hitpoints</Portuguese>
             <Czech>Léčit hitponty</Czech>
             <Italian>Cura Hitpoints</Italian>
+            <French>Soigner les dommages</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
@@ -3628,6 +3632,7 @@
             <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura Hitpoints completamente bendati</Italian>
+            <French>Soigner les plaies entièrement bandées.</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3658,6 +3663,7 @@
             <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
+            <French>Configure les réglages de traitement dans ACE médical basique</French>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
@@ -4076,6 +4082,7 @@
             <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
             <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
+            <French>%1 est trop loin pour être soigné</French>
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
@@ -4086,6 +4093,7 @@
             <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
             <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
             <Italian>Questa persona (%1) è sveglia e non può essere caricata.</Italian>
+            <French>Cette personne (%1) est consciente et ne peut être chargées.</French>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
@@ -4096,6 +4104,7 @@
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
             <Czech>Žádné škrtidlo na této části těla!</Czech>
             <Italian>Non c'è nessun laccio emostatico su questa parte del corpo!</Italian>
+            <French>Il n'y a pas de garrot sur ce membre !</French>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedic_Description">
             <English>Medical training</English>
@@ -4103,6 +4112,7 @@
             <Italian>Addestramento Medico</Italian>
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
+            <French>Entraînement médical</French>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -4110,12 +4120,7 @@
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
             <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Medical_delayUnconCaptive">
-            <English>Delay cease fire of AI during medical unconsciousness</English>
-            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
-            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <French>Définit si le véhicule est un véhicule médical ou non.</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
@@ -4124,6 +4129,8 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
     </Package>
 </Project>
