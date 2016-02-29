@@ -54,7 +54,7 @@ You can only use the nozzle within a close distance from its source. You may nee
 ### The engine of the fuel truck is broken. Why?
 While refueling, you can't move the fuel truck. Return the nozzle.
 
-### How do I replenish the ammunition supply on an ammo truck?
+### How do I replenish the fuel supply on an fuel truck?
 Please check the API description for more details.
 
 ### Something broke, I can't use the fuel truck / nozzle any longer. What to do?
