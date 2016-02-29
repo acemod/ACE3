@@ -110,18 +110,10 @@ if (GVAR(level) >= 2) then {
         };
     };
 
-    // Handle tourniquets
-    private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
-    {
-        private _appliedTime = _x;
-        if (_appliedTime > 0) then {
-            // There's a tourniquet applied at time _appliedTime
-            if (CBA_missionTime - _appliedTime > 120) then {
-                // Increase pain at a rate of 0.001 units/s
-                _unit setVariable [QGVAR(pain), (_unit getVariable [QGVAR(pain), 0]) + 0.001];
-            };
-        };
-    } forEach _tourniquets;
+    // Handle pain due tourniquets, that have been applied more than 120 s ago
+    private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
+    // Increase pain at a rate of 0.001 units/s per old tourniquet
+    _painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _interval;
 
     // Set the vitals
     _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
@@ -130,10 +122,11 @@ if (GVAR(level) >= 2) then {
     _bloodPressure = [_unit] call FUNC(getBloodPressure);
     _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
-    if (_painStatus > 0 && {_painStatus < 10}) then {
-        _painReduce = if (_painStatus > 5) then {0.002} else {0.001};
-        _unit setVariable [QGVAR(pain), (_painStatus - _painReduce * _interval) max 0, _syncValues];
-    };
+    _painReduce = if (_painStatus > 5) then {0.002} else {0.001};
+
+    // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
+    _unit setVariable [QGVAR(pain), (_painStatus - _painReduce * _interval) max 0, _syncValues];
+
     TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_interval,_syncValues,_unit);
     // TODO Disabled until implemented fully
     // Handle airway
