@@ -64,6 +64,7 @@ PREP(onWoundUpdateRequest);
 PREP(onPropagateWound);
 PREP(parseConfigForInjuries);
 PREP(playInjuredSound);
+PREP(reviveStateLoop);
 PREP(selectionNameToNumber);
 PREP(serverRemoveBody);
 PREP(setCardiacArrest);
