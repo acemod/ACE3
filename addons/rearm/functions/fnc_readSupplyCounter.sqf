@@ -58,7 +58,6 @@ if (GVAR(supply) == 1) then {
                     _text = format ["%1<br/>%2", _text, _line];
                     _supply = _supply + 0.5;
                 } forEach _magazines;
-                diag_log _text;
             };
             if (_supply > 1.5) then {
                 ["displayTextStructured", [_unit], [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)]] call EFUNC(common,targetEvent);
