@@ -38,7 +38,7 @@ The caliber of the weapon will be rounded to the nearest number and the number o
 To fully rearm 2000 rounds of 7.62mm machine gun, you need five ammo boxes.
 
 ## 3. Limiting the ammunition supply
-With ACE 3.6.0 ammunition supply can be limited on ammo trucks.
+With ACE3 3.6.0 ammunition supply can be limited on ammo trucks.
 
 ### 3.1 Rearming with setting `Unlimited ammo supply`
 All ammo trucks have an unlimited ammunition supply by default. You can rearm as many vehicles as often as you like.
@@ -47,7 +47,7 @@ All ammo trucks have an unlimited ammunition supply by default. You can rearm as
 On this setting all ammo trucks have a limited ammunition supply. The supply consumption is based on "caliber points". With 1000 points worth of ammunition supply, you can rearm four magazines of 250mm caliber (i.e. bombs) or eight magazines of 120mm caliber (i.e. tank rounds) or 125 magazines of 7.62mm caliber.
 
 ### 3.3 Rearming with setting `Only specific Magazines`
-On this setting, the mission creator mission creator has to use the framework to add specific magazines to the ammo truck(s). This allows you to create munition specific ammo trucks i.e. one ammo truck for missiles and one for bombs.
+On this setting, the mission creator has to use the framework to add specific magazines to the ammo truck(s). This allows you to create munition specific ammo trucks i.e. one ammo truck for missiles and one for bombs.
 
 ### 3.4 Checking the ammunition supply
 - Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
