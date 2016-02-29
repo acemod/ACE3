@@ -18,6 +18,7 @@ PREP(addUnconsciousCondition);
 PREP(addUnloadPatientActions);
 PREP(addVitalLoop);
 PREP(adjustPainLevel);
+PREP(bodyCleanupLoop);
 PREP(canAccessMedicalEquipment);
 PREP(canTreat);
 PREP(canTreatCached);
