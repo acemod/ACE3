@@ -9,7 +9,7 @@
  * ReturnValue:
  * None
  *
- * Public: Yes
+ * Public: No
  */
 
 #include "script_component.hpp"
