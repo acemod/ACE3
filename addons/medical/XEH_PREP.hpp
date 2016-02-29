@@ -57,6 +57,7 @@ PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(isInStableCondition);
 PREP(itemCheck);
+PREP(medicationEffectLoop);
 PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
 PREP(onWoundUpdateRequest);
