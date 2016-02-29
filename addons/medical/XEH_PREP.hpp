@@ -117,3 +117,4 @@ PREP(unconsciousPFH);
 // Networked litter
 PREP(createLitter);
 PREP(handleCreateLitter);
+PREP(litterCleanupLoop);
