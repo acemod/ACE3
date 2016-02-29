@@ -25,11 +25,11 @@ if (isNil {_logic getVariable _moduleVariable}) exitWith {
 };
 
 private _value = _logic getVariable _moduleVariable;
-if ((missionVersion > 12) && {_value isEqualTo -1}) then {
+if (_value isEqualTo -1) then {
     //3den missions will save modules with value = 0 as -1
     //If the setting has a "values" array, we should be able to assume that -1 is not a valid number as it would not be a valid index for the array
     if (isArray (configFile >> "ACE_Settings" >> _settingName >> "values")) then {
-        ACE_LOGWARNING_1("3den Mission - Module For Setting [%1] is saved as (-1), switching to (0)",_settingName);
+        ACE_LOGWARNING_2("Module For Setting [%1] is saved as (-1), switching to (0) - missionVersion [%2]",_settingName,missionVersion);
         _value = 0;
     };
 };
