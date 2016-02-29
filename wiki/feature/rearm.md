@@ -47,7 +47,7 @@ All ammo trucks have an unlimited ammunition supply by default. You can rearm as
 On this setting all ammo trucks have a limited ammunition supply. The supply consumption is based on "caliber points". With 1000 points worth of ammunition supply, you can rearm four magazines of 250mm caliber (i.e. bombs) or eight magazines of 120mm caliber (i.e. tank rounds) or 125 magazines of 7.62mm caliber.
 
 ### 3.3 Rearming with setting `Only specific Magazines`
-On this setting, the mission creator mission creator has to use the API to add specific magazines to the ammo truck(s). This allows you to create munition specific ammo trucks i.e. one ammo truck for missiles and one for bombs.
+On this setting, the mission creator mission creator has to use the framework to add specific magazines to the ammo truck(s). This allows you to create munition specific ammo trucks i.e. one ammo truck for missiles and one for bombs.
 
 ### 3.4 Checking the ammunition supply
 - Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
@@ -68,16 +68,16 @@ When rearming with multiple people, you may pick up more ammo boxes than needed.
 
 ### I'm carrying something - it's not an ammo box. What's wrong?
 Nothing. Some objects, especially missiles and bombs, have proper static 3-D models which replace the ammo box.
-Mod developers can use the API to use their custom models as ammo box replacement.
+Mod developers can use the framework to use their custom models as ammo box replacement.
 
 ### Does rearm work with vehicles from mods?
 Yes, if the vehicle has the correct config entries or uses inheritance from vanilla ammo. Otherwise there is a compatibility mode.
 
 ### How do I replenish the ammunition supply on an ammo truck?
-Please check the API description for more details.
+Please check the framework description for more details.
 
 ### The limited supply option `Only specific Magazines` doesn't work. What's wrong?
-The mission creator has to use the API to add specific magazines to the ammo truck(s). On this setting all ammo trucks are empty by default. For more information, please check the API description.
+The mission creator has to use the framework to add specific magazines to the ammo truck(s). On this setting all ammo trucks are empty by default. For more information, please check the framework description.
 
 ## 5. Dependencies
 

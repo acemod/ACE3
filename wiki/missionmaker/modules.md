@@ -477,6 +477,29 @@ Allow Full Repair | Option | Who can perform a full repair on a vehicle? | Repai
 Adds Spare Parts | Boolean | Adds spare part to vehicles (requires Cargo component) | Yes
 Wheel repair requirements | Option | Items required to remove / replace wheels. | None
 
+### 2.7 Rearm Settings
+*Part of: ace_rearm*
+
+This module allows to tweak all the rearm settings used in ACE3.
+
+**Settings:**
+
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Rearm Amount | Option | How fast should a vehicle be rearmed? | Entire Vehicle
+Ammunition supply | Option | How much ammunition does an ammo truck carry? | Unlimited ammo supply
+
+### 2.8 Rearm Settings
+*Part of: ace_refuel*
+
+This module allows to tweak all the refuel settings used in ACE3.
+
+**Settings:**
+
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Flow Rate | Number | How fast should a vehicle be refueled? | 10
+
 ## 3. ACE3 Medical
 *Part of: ace_medical*
 

@@ -8,7 +8,6 @@ parent: wiki
 ---
 
 ## 1. Config Values
-If your mod has custom vehicles that are not extending an ArmA 3 vehicle class or that has a different fuel tank size than the ArmA 3 base class, you need to add the parameter `ace_refuel_fuelCapacity` to it.
 
 ```cpp
 class CfgVehicles {
@@ -18,6 +17,10 @@ class CfgVehicles {
 };
 ```
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ace_refuel_fuelCapacity is only needed if you aren't inheriting from any of BI base classes or if your vehicle has a different fuel tank size.</p>
+</div>
 
 ## 2. Functions
 
