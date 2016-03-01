@@ -13,7 +13,10 @@ If you want to prepare a helicopter from your addon for fast roping, there's a f
 By using simple rope origin points you will only need two config entries:
 ```
 ace_fastroping_enabled = 1;
-ace_fastroping_ropeOrigins[] = {{x, y, z}, {x, y, z}};
+ace_fastroping_ropeOrigins[] = {
+    {x, y, z}, 
+    {x, y, z}
+};
 ```
 This will create the ropes at the two given points. If you have defined memory points for the rope origins, you can use them too:
 ```
