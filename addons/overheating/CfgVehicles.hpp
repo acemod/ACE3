@@ -34,7 +34,7 @@ class CfgVehicles {
                     displayName = CSTRING(CheckTemperatureSpareBarrelsShort);
                     condition = QUOTE( 'ACE_SpareBarrel' in magazines _player);
                     exceptions[] = {"isNotInside", "isNotSitting"};
-                    statement = QUOTE( [ARR_1(_player)] call FUNC(checkSpareBarrelsTemperatures); );
+                    statement = QUOTE( [_player] call FUNC(checkSpareBarrelsTemperatures); );
                     showDisabled = 0;
                     priority = 2.8;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
