@@ -18,9 +18,10 @@
 params ["_player","_unit"];
 
 // Find all spare barrel the player has
-private _allMags = magazinesDetail _unit;
-_allMags = _allMags select {_x find "ACE Spare Barrel" == 0};
-if ((count _allMags) < 1) exitWith {};
+TRACE_2("sendSpareBarrelsTemperatureHunt",_player,_unit);
+private _allBarrels = [_unit, "ACE_SpareBarrel"] call FakeCBA_fnc_getMagazineIds;
+TRACE_1("_allBarrels",_allBarrels);
+if ((count _allBarrels) < 1) exitWith {};
 
 // Determine the temp of each barrel
 private _temps = [];
@@ -30,7 +31,7 @@ private _temps = [];
         _temp = ([GVAR(storedSpareBarrels), _x] call CBA_fnc_hashGet) select 0;
     };
     _temps pushBack _temp;
-} forEach _allMags;
+} forEach _allBarrels;
 TRACE_1("_temps",_temps);
 
 // Count cool
