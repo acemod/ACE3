@@ -67,6 +67,7 @@
             <Italian>Simulazione Riflessi Esplosioni</Italian>
             <German>Druckwellensimulation</German>
             <Spanish>Activar simulación de reflexiones</Spanish>
+            <Portuguese>Simulação de reflexo de explosão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
@@ -74,6 +75,7 @@
             <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
             <German>Aktiviere die ACE-Druckwellensimulation</German>
             <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
+            <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>

@@ -20,6 +20,7 @@
             <Polish>Próba zmiany</Polish>
             <Italian>Sto provando a cambiare</Italian>
             <Spanish>Intentando cambiar</Spanish>
+            <Portuguese>Tentando trocar</Portuguese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>

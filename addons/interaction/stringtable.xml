@@ -355,6 +355,7 @@
             <Italian>Esci</Italian>
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
+            <Portuguese>Saia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -709,12 +710,14 @@
             <German>Aktivieren</German>
             <Polish>Włącz</Polish>
             <Spanish>Encender</Spanish>
+            <Portuguese>Ligar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
             <German>Deaktivieren</German>
             <Polish>Wyłącz</Polish>
             <Spanish>Apagar</Spanish>
+            <Portuguese>Desligar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
