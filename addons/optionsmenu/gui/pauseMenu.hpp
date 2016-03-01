@@ -1,13 +1,13 @@
 
 class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
     class Attributes {
-        font = "PuristaMedium";
+        font = "RobotoCondensed";
         color = "#E5E5E5";
         align = "left";
         shadow = "true";
     };
     class AttributesImage {
-        font = "PuristaMedium";
+        font = "RobotoCondensed";
         color = "#E5E5E5";
         align = "left";
     };
@@ -46,7 +46,7 @@ class ACE_Open_SettingsMenu_BtnBase : ACE_gui_buttonBase {
     colorFocused[] = {0,0,0,1};
     colorText[] = {1,1,1,1};
     default = 0;
-    font = "PuristaMedium";
+    font = "RobotoCondensed";
     idc = -1;
     period = 1.2;
     periodFocus = 1.2;
@@ -101,10 +101,6 @@ class RscDisplayMovieInterrupt: RscStandardDisplay {
     };
 };
 class RscDisplayMain: RscStandardDisplay {
-    //Hide the button if there is no world (-world=empty)
-    //Seems odd to use onMouseMoving, but I don't want to overload onLoad
-    onMouseMoving = QUOTE(((_this select 0) displayCtrl 80085) ctrlShow (missionName != '');  _this execVM QUOTE(QUOTE(PATHTOF(script_loadMainMenuBox.sqf))););
-
     class controls {
         class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
             action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";
@@ -153,17 +149,17 @@ class RscDisplayMain: RscStandardDisplay {
 
                     shadow = 0;
                     class H1 {
-                        font = "PuristaMedium";
-                        fontBold = "PuristaLight";
+                        font = "RobotoCondensed";
+                        fontBold = "RobotoCondensedLight";
                         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
                     };
                     class H2: H1 {
                         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
-                        font = "PuristaLight";
+                        font = "RobotoCondensedLight";
                     };
                     class P: H1 {
                         sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-                        fontBold = "PuristaLight";
+                        fontBold = "RobotoCondensedLight";
                     };
                     colorBold[] = {0.6,0.6,0.6,1};
                     colorLink[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};

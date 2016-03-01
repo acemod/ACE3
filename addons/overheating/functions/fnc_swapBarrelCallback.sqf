@@ -9,13 +9,24 @@
  * Return value:
  * None
  *
+ * Example:
+ * [player, currentWeapon player] call ace_overheating_fnc_swapBarrelCallback
+ *
  * Public: No
  */
-#include "\z\ace\addons\overheating\script_component.hpp"
+#include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_player,_weapon);
+params ["_player", "_weapon"];
+TRACE_2("params",_player,_weapon);
+
+// Barrel mount gesture
+_player playAction QGVAR(GestureMountMuzzle);
+playSound "ACE_BarrelSwap";
 
 // don't consume the barrel, but rotate through them.
 [localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
 
-_player setVariable [format [QGVAR(%1), _weapon], [0, 0], false];
+// Publish the temperature variable
+_player setVariable [format [QGVAR(%1_temp), _weapon], 0, true];
+// Store the update time
+_player setVariable [format [QGVAR(%1_time), _weapon], ACE_time];

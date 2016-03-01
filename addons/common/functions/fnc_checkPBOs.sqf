@@ -41,10 +41,8 @@ if (!isServer) then {
 
         // Display error message.
         if (_missingAddon || {_missingAddonServer} || {_oldVersionClient} || {_oldVersionServer}) then {
-            private ["_text", "_error"];
-
-            _text = "[ACE] Version mismatch:<br/><br/>";
-            _error = format ["ACE version mismatch: %1: ", profileName];
+            private _text = "[ACE] Version mismatch:<br/><br/>";
+            private _error = format ["ACE version mismatch: %1: ", profileName];
 
             if (_missingAddon) then {
                 _text = _text + "Detected missing addon on client<br/>";
@@ -69,13 +67,11 @@ if (!isServer) then {
             if (_mode < 2) then {
                 _text = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _text]];
 
-                private ["_rscLayer", "_ctrlHint"];
-
-                _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
+                private _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
                 _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
                 disableSerialization;
-                _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
+                private _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
                 _ctrlHint ctrlSetStructuredText _text;
 
                 if (_mode == 0) then {

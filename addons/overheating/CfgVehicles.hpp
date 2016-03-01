@@ -4,6 +4,15 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
+                class ACE_UnJam {
+                    displayName = CSTRING(UnjamWeapon);
+                    condition = QUOTE( [_player] call FUNC(canUnjam) );
+                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
+                    showDisabled = 0;
+                    priority = 4;
+                    icon = QUOTE(PATHTOF(UI\unjam_ca.paa));
+                };
                 class ACE_SwapBarrel {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( 'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
@@ -11,7 +20,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
-                    hotkey = "B";
                 };
                 class ACE_CheckTemperature {
                     displayName = CSTRING(CheckTemperatureShort);
@@ -21,7 +29,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2.9;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
-                    hotkey = "P";
                 };
             };
         };

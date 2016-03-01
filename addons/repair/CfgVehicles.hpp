@@ -302,8 +302,8 @@ class CfgVehicles {
         MACRO_REPAIRVEHICLE
     };
 
-    class thingX;
-    class ACE_RepairItem_Base: thingX {
+    class ThingX;
+    class ACE_RepairItem_Base: ThingX {
         XEH_ENABLED;
         icon = "iconObject_circle";
         mapSize = 0.7;

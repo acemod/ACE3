@@ -24,6 +24,9 @@ _unit setVariable ["ACE_isUnconscious", false, true];
 // tourniquets
 _unit setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
+//Delayed Medications (from tourniquets)
+_unit setVariable [QGVAR(occludedMedications), nil, true];
+
 // wounds and injuries
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];

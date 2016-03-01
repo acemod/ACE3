@@ -3,15 +3,15 @@
 ["AddCargoByClass", {_this call FUNC(addCargoItem)}] call EFUNC(common,addEventHandler);
 
 ["LoadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
-    private ["_loaded", "_hint", "_itemName", "_vehicleName"];
+    params ["_item", "_vehicle"];
+    TRACE_2("LoadCargo EH",_item,_vehicle);
 
-    _loaded = [_item, _vehicle] call FUNC(loadItem);
+    private _loaded = [_item, _vehicle] call FUNC(loadItem);
 
     // Show hint as feedback
-    _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
-    _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
-    _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
+    private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
 
@@ -22,17 +22,17 @@
 }] call EFUNC(common,addEventHandler);
 
 ["UnloadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
-    private ["_unloaded", "_itemClass", "_hint", "_itemName", "_vehicleName"];
+    params ["_item", "_vehicle", ["_unloader", objNull]];
+    TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
 
-    _unloaded = [_item, _vehicle] call FUNC(unloadItem);
+    private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
 
-    _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
     // Show hint as feedback
-    _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
-    _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
-    _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
+    private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
     ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
 
@@ -42,4 +42,11 @@
     };
 
     // TOOO maybe drag/carry the unloaded item?
+}] call EFUNC(common,addEventHandler);
+
+["ServerUnloadCargo", {
+    params ["_item", "_emptyPosAGL"];
+
+    _item hideObjectGlobal false;
+    _item setPosASL (AGLtoASL _emptyPosAGL);
 }] call EFUNC(common,addEventHandler);

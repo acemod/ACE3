@@ -45,7 +45,17 @@ if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
                 if (((_x distance ACE_player) < 15) && {!(_x in _minesHelped)}) then {
                     TRACE_2("Making Defuse Helper",(_x),(typeOf _x));
                     _defuseHelper = "ACE_DefuseObject" createVehicleLocal (getPos _x);
-                    _defuseHelper attachTo [_x, [0,0,0]];
+
+                    private _config = configFile >> "CfgAmmo" >> typeOf _x;
+
+                    private _defuseObjectPosition = getArray (_config >> QGVAR(defuseObjectPosition));
+                    if (_defuseObjectPosition isEqualTo []) then {
+                        _defuseObjectPosition = [0,0,0];
+                    };
+
+                    TRACE_1("DefuseObjectPosition",(_defuseObjectPosition));
+
+                    _defuseHelper attachTo [_x, _defuseObjectPosition];
                     _defuseHelper setVariable [QGVAR(Explosive),_x];
                     _addedDefuseHelpers pushBack _defuseHelper;
                     _minesHelped pushBack _x;

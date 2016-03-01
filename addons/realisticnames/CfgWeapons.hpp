@@ -527,10 +527,10 @@ class CfgWeapons {
     };
     // class ACE_LMG_coax_PKT_mem2: LMG_coax {};
     class ACE_LMG_coax_MAG58_mem2: LMG_coax {
-        displayName = "MAG 58";
+        displayName = "MAG 58M";
     };
     class ACE_LMG_coax_MAG58_mem3: LMG_coax {
-        displayName = "MAG 58";
+        displayName = "MAG 58M";
     };
     class ACE_LMG_coax_L94A1_mem3: LMG_coax {
         displayName = "L94A1";

@@ -14,15 +14,15 @@
             <Portuguese>FERIMENTOS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
-            <English>No injuries on this bodypart ...</English>
-            <German>Körperteil nicht verletzt ...</German>
-            <Italian>Non ci sono lesioni in questa parte del corpo ...</Italian>
-            <Russian>Данная часть тела не повреждена ...</Russian>
-            <French>Aucune blessures sur cette partie du corps ...</French>
-            <Polish>Brak obrażeń na tej części ciała ...</Polish>
-            <Spanish>Sin heridas en esta parte del cuerpo ...</Spanish>
-            <Hungarian>Ezen a testrészen nincs sérülés ...</Hungarian>
-            <Czech>Žádné zranění na této části těla ...</Czech>
+            <English>No injuries on this bodypart...</English>
+            <German>Körperteil nicht verletzt...</German>
+            <Italian>Non ci sono lesioni in questa parte del corpo...</Italian>
+            <Russian>Данная часть тела не повреждена...</Russian>
+            <French>Aucune blessures sur cette partie du corps...</French>
+            <Polish>Brak obrażeń na tej części ciała...</Polish>
+            <Spanish>Sin heridas en esta parte del cuerpo...</Spanish>
+            <Hungarian>Ezen a testrészen nincs sérülés...</Hungarian>
+            <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
@@ -42,12 +42,18 @@
             <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
             <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
             <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il livello di dettagli della simulazione dei rifiuti indica il numero di rifiuti che verranno creati localmente nel client. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio client.</Italian>
+            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
             <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
             <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Inject_Adenosine">
+            <English>Inject Adenosine</English>
+            <German>Adenosin injizieren</German>
+            <Spanish>Inyectar Adenosina</Spanish>
+            <Polish>Wstrzyknij adenozynę</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -71,7 +77,7 @@
             <Russian>Ввести адреналин</Russian>
             <Hungarian>Epinefrin beadása</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
-            <Italian>Inietta epinefrina</Italian>
+            <Italian>Inietta adrenalina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Morphine">
             <English>Inject Morphine</English>
@@ -106,14 +112,14 @@
             <French>Transfuser du Plasma</French>
             <Russian>Перелить плазму</Russian>
             <Hungarian>Infúzió (vérplazma)</Hungarian>
-            <Italian>Trasfusione di Plasma</Italian>
+            <Italian>Trasfusione di plasma</Italian>
             <Portuguese>Transfundir Plasma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
             <German>Salzlösungstransfusion</German>
             <Spanish>Transfundir salino</Spanish>
-            <Czech>Transfúze fyziologický roztoku</Czech>
+            <Czech>Transfúze fyziologického roztoku</Czech>
             <Polish>Przetocz sól fizjologiczną</Polish>
             <French>Transfuser de la solution saline</French>
             <Russian>Перелить физраствор</Russian>
@@ -218,104 +224,110 @@
             <Italian>Benda la gamba destra</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Morphine">
-            <English>Injecting Morphine ...</English>
-            <German>Morphin injizieren ...</German>
-            <Spanish>Inyectando Morfina ...</Spanish>
-            <Polish>Wstrzykiwanie morfiny ...</Polish>
-            <Czech>Aplikuji morfin ...</Czech>
-            <Russian>Введение морфина ...</Russian>
+            <English>Injecting Morphine...</English>
+            <German>Morphin injizieren...</German>
+            <Spanish>Inyectando Morfina...</Spanish>
+            <Polish>Wstrzykiwanie morfiny...</Polish>
+            <Czech>Aplikuji morfin...</Czech>
+            <Russian>Введение морфина...</Russian>
             <French>Injection de Morphine...</French>
-            <Hungarian>Morfium beadása ...</Hungarian>
-            <Portuguese>Injetando Morfina ...</Portuguese>
-            <Italian>Inietto la morfina ...</Italian>
+            <Hungarian>Morfium beadása...</Hungarian>
+            <Portuguese>Injetando Morfina...</Portuguese>
+            <Italian>Inietto la morfina...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
-            <English>Injecting Epinephrine ...</English>
-            <German>Epinephrin injizieren ...</German>
-            <Spanish>Inyectando Epinefrina ...</Spanish>
-            <Polish>Wstrzykiwanie adrenaliny ...</Polish>
-            <Czech>Aplikuji adrenalin ...</Czech>
-            <Russian>Введение адреналина ...</Russian>
-            <French>Injection d'Adrénaline ...</French>
-            <Hungarian>Epinefrin beadása ...</Hungarian>
-            <Portuguese>Injetando Epinefrina ...</Portuguese>
-            <Italian>Inietto l'epinefrina ...</Italian>
+            <English>Injecting Epinephrine...</English>
+            <German>Epinephrin injizieren...</German>
+            <Spanish>Inyectando Epinefrina...</Spanish>
+            <Polish>Wstrzykiwanie adrenaliny...</Polish>
+            <Czech>Aplikuji adrenalin...</Czech>
+            <Russian>Введение адреналина...</Russian>
+            <French>Injection d'Adrénaline...</French>
+            <Hungarian>Epinefrin beadása...</Hungarian>
+            <Portuguese>Injetando Epinefrina...</Portuguese>
+            <Italian>Inietto l'adrenalina...</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Injecting_Adenosine">
+            <English>Injecting Adenosine...</English>
+            <German>Adenosin injizieren...</German>
+            <Spanish>Inyectando Adenosina...</Spanish>
+            <Polish>Wstrzykiwanie adenozyny...</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
-            <English>Injecting Atropine ...</English>
-            <German>Atropin injizieren ...</German>
-            <Spanish>Inyectando Atropina ...</Spanish>
-            <Czech>Aplikuji atropin ...</Czech>
-            <Polish>Wstrzykiwanie atropiny ...</Polish>
-            <French>Injection d'Atropine ...</French>
-            <Russian>Введение атропина ...</Russian>
-            <Hungarian>Atropin beadása ...</Hungarian>
-            <Italian>Inietto l'atropina ...</Italian>
+            <English>Injecting Atropine...</English>
+            <German>Atropin injizieren...</German>
+            <Spanish>Inyectando Atropina...</Spanish>
+            <Czech>Aplikuji atropin...</Czech>
+            <Polish>Wstrzykiwanie atropiny...</Polish>
+            <French>Injection d'Atropine...</French>
+            <Russian>Введение атропина...</Russian>
+            <Hungarian>Atropin beadása...</Hungarian>
+            <Italian>Inietto l'atropina...</Italian>
             <Portuguese>Injetando Atropina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
-            <English>Transfusing Blood ...</English>
-            <German>Bluttransfusion ...</German>
-            <Spanish>Transfusión de sangre ...</Spanish>
-            <Polish>Przetaczanie krwi ...</Polish>
-            <Czech>Probíhá transfúze krve ...</Czech>
-            <Russian>Переливание крови ...</Russian>
-            <French>Transfusion Sanguine ...</French>
-            <Hungarian>Infúzió vérrel ...</Hungarian>
-            <Portuguese>Transfundindo Sangue ...</Portuguese>
-            <Italian>Effettuo la trasfusione di sangue ...</Italian>
+            <English>Transfusing Blood...</English>
+            <German>Bluttransfusion...</German>
+            <Spanish>Transfusión de sangre...</Spanish>
+            <Polish>Przetaczanie krwi...</Polish>
+            <Czech>Probíhá transfúze krve...</Czech>
+            <Russian>Переливание крови...</Russian>
+            <French>Transfusion Sanguine...</French>
+            <Hungarian>Infúzió vérrel...</Hungarian>
+            <Portuguese>Transfundindo Sangue...</Portuguese>
+            <Italian>Effettuo la trasfusione di sangue...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
-            <English>Transfusing Saline ...</English>
-            <German>Salzlösungtransfusion ...</German>
-            <Spanish>Transfusión de salino ...</Spanish>
-            <Czech>Probíha transfúze fyziologický roztoku ...</Czech>
-            <Polish>Przetaczanie soli fizjologicznej ...</Polish>
-            <French>Transfusion de saline ...</French>
-            <Russian>Переливание физраствора ...</Russian>
-            <Hungarian>Infúzió sós vizzel ...</Hungarian>
+            <English>Transfusing Saline...</English>
+            <German>Salzlösungtransfusion...</German>
+            <Spanish>Transfusión de salino...</Spanish>
+            <Czech>Probíha transfúze fyziologického roztoku...</Czech>
+            <Polish>Przetaczanie soli fizjologicznej...</Polish>
+            <French>Transfusion de saline...</French>
+            <Russian>Переливание физраствора...</Russian>
+            <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
             <Portuguese>Transfundindo Soro...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
-            <English>Transfusing Plasma ...</English>
-            <German>Plasmatransfusion ...</German>
-            <Spanish>Transfusión de plasma ...</Spanish>
-            <Czech>Probíha transfúze plazmy ...</Czech>
-            <Polish>Przetaczanie osocza ...</Polish>
-            <French>Transfusion de Plasma ...</French>
-            <Russian>Переливание плазмы ...</Russian>
-            <Hungarian>Infúzió vérplazmával ...</Hungarian>
-            <Italian>Effettu la trasfusione di plasma ...</Italian>
+            <English>Transfusing Plasma...</English>
+            <German>Plasmatransfusion...</German>
+            <Spanish>Transfusión de plasma...</Spanish>
+            <Czech>Probíha transfúze plazmy...</Czech>
+            <Polish>Przetaczanie osocza...</Polish>
+            <French>Transfusion de Plasma...</French>
+            <Russian>Переливание плазмы...</Russian>
+            <Hungarian>Infúzió vérplazmával...</Hungarian>
+            <Italian>Effettu la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo Plasma...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaging">
-            <English>Bandaging ...</English>
-            <German>Verbinden ...</German>
-            <Spanish>Vendando ...</Spanish>
-            <Polish>Bandażowanie ...</Polish>
-            <Czech>Obvazuji ...</Czech>
-            <French>Pansement ...</French>
-            <Italian>Sto applicando la benda ...</Italian>
-            <Hungarian>Bekötözés ...</Hungarian>
-            <Portuguese>Atando ...</Portuguese>
-            <Russian>Перевязывание ...</Russian>
+            <English>Bandaging...</English>
+            <German>Verbinden...</German>
+            <Spanish>Vendando...</Spanish>
+            <Polish>Bandażowanie...</Polish>
+            <Czech>Obvazuji...</Czech>
+            <French>Pansement...</French>
+            <Italian>Sto bendando...</Italian>
+            <Hungarian>Bekötözés...</Hungarian>
+            <Portuguese>Atando...</Portuguese>
+            <Russian>Перевязывание...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
-            <English>Applying Tourniquet ...</English>
-            <German>Setze Tourniquet an ...</German>
-            <Spanish>Aplicando torniquete ...</Spanish>
-            <Czech>Aplikuji škrtidlo</Czech>
-            <Polish>Zakładanie stazy ...</Polish>
-            <French>Mise en place du Garrot ...</French>
-            <Russian>Наложение жгута ...</Russian>
-            <Hungarian>Érszorító felhelyezése ...</Hungarian>
-            <Italian>Sto applicando il laccio emostatico ...</Italian>
+            <English>Applying Tourniquet...</English>
+            <German>Setze Tourniquet an...</German>
+            <Spanish>Aplicando torniquete...</Spanish>
+            <Czech>Aplikuji škrtidlo...</Czech>
+            <Polish>Zakładanie stazy...</Polish>
+            <French>Mise en place du Garrot...</French>
+            <Russian>Наложение жгута...</Russian>
+            <Hungarian>Érszorító felhelyezése...</Hungarian>
+            <Italian>Sto applicando il laccio emostatico...</Italian>
             <Portuguese>Applicando Torniquete</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Medical">
             <English>Medical</English>
-            <Czech>Zdravotní</Czech>
+            <Czech>Lékařské</Czech>
             <French>Médical</French>
             <German>Sanitäter</German>
             <Italian>Medico</Italian>
@@ -378,7 +390,7 @@
             <German>Puls überprüfen</German>
             <Spanish>Comprobar pulso</Spanish>
             <Russian>Проверить пульс</Russian>
-            <Czech>Zkontrolovat pulz</Czech>
+            <Czech>Zkontrolovat puls</Czech>
             <Polish>Sprawdź tętno</Polish>
             <French>Vérifier le pouls</French>
             <Hungarian>Pulzus ellenőrzése</Hungarian>
@@ -458,15 +470,15 @@
             <Portuguese>Diagnosticar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnosing">
-            <English>Diagnosing ...</English>
-            <German>Diagnostizieren ...</German>
+            <English>Diagnosing...</English>
+            <German>Diagnostizieren...</German>
             <Italian>Diagnosi in corso...</Italian>
-            <Russian>Диагностика ...</Russian>
+            <Russian>Диагностика...</Russian>
             <French>Diagnostic en cours</French>
-            <Polish>Diagnozowanie ...</Polish>
-            <Spanish>Diagnosticando ...</Spanish>
+            <Polish>Diagnozowanie...</Polish>
+            <Spanish>Diagnosticando...</Spanish>
             <Hungarian>Diagnózis folyamatban...</Hungarian>
-            <Czech>Diagnostika ...</Czech>
+            <Czech>Diagnostika...</Czech>
             <Portuguese>Diagnosticando...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CPR">
@@ -478,19 +490,19 @@
             <Polish>RKO</Polish>
             <Spanish>RCP</Spanish>
             <Hungarian>Újraélesztés</Hungarian>
-            <Czech>KPR</Czech>
+            <Czech>CPR</Czech>
             <Portuguese>SBV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
-            <English>Performing CPR ...</English>
-            <German>HLW durchführen ...</German>
+            <English>Performing CPR...</English>
+            <German>HLW durchführen...</German>
             <Italian>Eseguendo RCP...</Italian>
-            <Russian>Сердечно-лёгочная реанимация ...</Russian>
+            <Russian>Сердечно-лёгочная реанимация...</Russian>
             <French>RPC en cours</French>
-            <Polish>Przeprowadzanie RKO ...</Polish>
-            <Spanish>Realizando RCP ...</Spanish>
+            <Polish>Przeprowadzanie RKO...</Polish>
+            <Spanish>Realizando RCP...</Spanish>
             <Hungarian>Újraélesztés folyamatban...</Hungarian>
-            <Czech>Provádím KPR ...</Czech>
+            <Czech>Provádím CPR...</Czech>
             <Portuguese>Realizando o SBV...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
@@ -502,7 +514,7 @@
             <French>Administrer du sang en IV (1000ml)</French>
             <Czech>Podat krev. transfúzi (1000ml)</Czech>
             <Hungarian>Vér adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (1˙000ml)</Italian>
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_500">
@@ -514,7 +526,7 @@
             <French>Administrer du sang en IV (500ml)</French>
             <Czech>Podat krev. transfúzi (500ml) </Czech>
             <Hungarian>Vér adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (500ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (500ml)</Italian>
             <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_250">
@@ -526,7 +538,7 @@
             <French>Administrer du sang en IV (250ml)</French>
             <Czech>Podat krev. transfúzi (250ml)</Czech>
             <Hungarian>Vér adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione sangue IV (250ml)</Italian>
+            <Italian>Effettua trasfusione sangue EV (250ml)</Italian>
             <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_1000">
@@ -538,7 +550,7 @@
             <French>Administrer du plasma en IV (1000ml)</French>
             <Czech>Podat plazmu (1000ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (1˙000ml)</Italian>
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_500">
@@ -550,7 +562,7 @@
             <French>Administrer du plasma en IV (500ml)</French>
             <Czech>Podat plazmu (500ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (500ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (500ml)</Italian>
             <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_250">
@@ -562,7 +574,7 @@
             <French>Administrer du plasma en IV (250ml)</French>
             <Czech>Podat plazmu (250ml)</Czech>
             <Hungarian>Vérplazma adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione plasma IV (250ml)</Italian>
+            <Italian>Effettua trasfusione plasma EV (250ml)</Italian>
             <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_1000">
@@ -574,7 +586,7 @@
             <French>Administrer de la solution saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (1000ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_500">
@@ -586,7 +598,7 @@
             <French>Administrer de la solution saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (500ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (500ml)</Italian>
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_250">
@@ -598,7 +610,7 @@
             <French>Administrer de la solution saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
-            <Italian>Effettua trasfusione salina IV (250ml)</Italian>
+            <Italian>Effettua trasfusione salina EV (250ml)</Italian>
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Minor">
@@ -760,13 +772,13 @@
         <Key ID="STR_ACE_Medical_receivingIvVolume">
             <English>Receiving IV [%1ml]</English>
             <German>Erhalte IV [%1ml]</German>
-            <Spanish>Reciviendo IV [%1ml]</Spanish>
+            <Spanish>Recibiendo IV [%1ml]</Spanish>
             <Russian>Принимается переливание [%1 мл]</Russian>
             <Polish>Otrzymywanie IV [pozostało %1ml]</Polish>
             <French>Transfusion en IV [%1ml]</French>
             <Czech>Přijímání transfúze [%1ml]</Czech>
             <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
-            <Italian>Ricevendo IV [%1ml]</Italian>
+            <Italian>Ricevendo EV [%1ml]</Italian>
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
@@ -776,7 +788,7 @@
             <Spanish>Vendaje (Básico)</Spanish>
             <French>Bandage (Standard)</French>
             <Polish>Bandaż (jałowy)</Polish>
-            <Czech>Obvaz (standartní)</Czech>
+            <Czech>Obvaz (Standartní)</Czech>
             <Hungarian>Kötszer (Általános)</Hungarian>
             <Italian>Bendaggio (base)</Italian>
             <Portuguese>Bandagem(Básico)</Portuguese>
@@ -927,7 +939,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Desc_Short">
             <English>Used to combat moderate to severe pain experiences</English>
-            <German>Wird verwendet um moderate bis starke Schmärzen zu lindern.</German>
+            <German>Wird verwendet um moderate bis starke Schmerzen zu lindern.</German>
             <Russian>Для снятия средних и сильных болевых ощущений</Russian>
             <Spanish>Usado para combatir los estados dolorosos de moderados a severos</Spanish>
             <French>Utilisé pour réduire les douleurs modérées à sévères.</French>
@@ -948,6 +960,24 @@
             <Italian>Un analgesico usato per combattere il dolore.</Italian>
             <Portuguese>Um analgésico usado para combater dores moderadas e fortes.</Portuguese>
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Display">
+            <English>Adenosine autoinjector</English>
+            <German>Adenosin-Autoinjektor</German>
+            <Spanish>Asenosina auto-inyectable</Spanish>
+            <Polish>Autostrzykawka z adenozyną</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
+            <English>Used to counter effects of Epinephrine</English>
+            <German>Wird verwendet um die Symptome von Epiniphrin zu lindern</German>
+            <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
+            <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
+            <English>A drug used to counter the effects of Epinephrine</English>
+            <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
+            <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
+            <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -994,7 +1024,7 @@
             <German>Epiniphrin-Autoinjektor</German>
             <Czech>Autoinjektor adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
-            <Italian>Autoiniettore di epinefrina</Italian>
+            <Italian>Autoiniettore di adrenalina</Italian>
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Short">
@@ -1016,7 +1046,7 @@
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
-            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
+            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
@@ -1029,7 +1059,7 @@
             <Polish>Osocze IV (1000ml)</Polish>
             <German>Plasma IV (1000ml)</German>
             <Hungarian>Vérplazma-infúzió (1000ml)</Hungarian>
-            <Italian>Plasma IV (1000ml)</Italian>
+            <Italian>Plasma EV (1000ml)</Italian>
             <Portuguese>Plasma IV (1000ml)</Portuguese>
             <Czech>Krevní plazma (1000ml)</Czech>
         </Key>
@@ -1065,7 +1095,7 @@
             <Polish>Osocze IV (500ml)</Polish>
             <German>Plasma IV (500ml)</German>
             <Hungarian>Vérplazma-infúzió (500ml)</Hungarian>
-            <Italian>Plasma IV (500ml)</Italian>
+            <Italian>Plasma EV (500ml)</Italian>
             <Portuguese>Plasma IV (500ml)</Portuguese>
             <Czech>Krevní plazma (500ml)</Czech>
         </Key>
@@ -1077,7 +1107,7 @@
             <Polish>Osocze IV (250ml)</Polish>
             <German>Plasma IV (250ml)</German>
             <Hungarian>Vérplazma-infúzió (250ml)</Hungarian>
-            <Italian>Plasma IV (250ml)</Italian>
+            <Italian>Plasma EV (250ml)</Italian>
             <Portuguese>Plasma IV (250ml)</Portuguese>
             <Czech>Krevní plazma (250ml)</Czech>
         </Key>
@@ -1089,7 +1119,7 @@
             <Polish>Krew IV (1000ml)</Polish>
             <German>Blut IV (1000ml)</German>
             <Hungarian>Vér-infúzió (1000ml)</Hungarian>
-            <Italian>Sangue IV (1000ml)</Italian>
+            <Italian>Sangue EV (1000ml)</Italian>
             <Portuguese>Sangue IV (1000ml)</Portuguese>
             <Czech>Krevní transfúze (1000ml)</Czech>
         </Key>
@@ -1125,7 +1155,7 @@
             <Polish>Krew IV (500ml)</Polish>
             <German>Blut IV (500ml)</German>
             <Hungarian>Vér-infúzió (500ml)</Hungarian>
-            <Italian>Sangue IV (500ml)</Italian>
+            <Italian>Sangue EV (500ml)</Italian>
             <Portuguese>Sangue IV (500ml)</Portuguese>
             <Czech>Krevní transfúze (500ml)</Czech>
         </Key>
@@ -1137,7 +1167,7 @@
             <Polish>Krew IV (250ml)</Polish>
             <German>Blut IV (250ml)</German>
             <Hungarian>Vér-infúzió (250ml)</Hungarian>
-            <Italian>Samgue IV (250ml)</Italian>
+            <Italian>Sangue EV (250ml)</Italian>
             <Portuguese>Sangue IV (250ml)</Portuguese>
             <Czech>Krevní transfúze (250ml)</Czech>
         </Key>
@@ -1149,7 +1179,7 @@
             <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
-            <Italian>Soluzione salina IV (1000ml)</Italian>
+            <Italian>Soluzione salina EV (1˙000ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (1000ml)</Czech>
         </Key>
@@ -1172,7 +1202,7 @@
             <French>Un remplacant temporaire pour rétablir la tension artérielle lors de perte sanguine, administré par intra-veineuse</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>Egy orvosi térfogat-helyreállító készítmény, melyet intravénás módon lehet a szervezetbe juttatni.</Hungarian>
-            <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione IV.</Italian>
+            <Italian>Una soluzione medica per ripristinare il volume del sangue introdotta tramite trasfusione EV.</Italian>
             <German>Ein medizinisches Volumenersatzmittel, dass durch einen intravenösen Zugang in den Blutkreislauf verabreicht wird. </German>
             <Portuguese>Uma reposição temporaria para restaurar a pressão arterial perdida por perda de sangue. </Portuguese>
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
@@ -1185,7 +1215,7 @@
             <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
-            <Italian>Soluzione salina IV (500ml)</Italian>
+            <Italian>Soluzione salina EV (500ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (500ml)</Czech>
         </Key>
@@ -1197,7 +1227,7 @@
             <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
-            <Italian>Soluzione salina IV (250ml)</Italian>
+            <Italian>Soluzione salina EV (250ml)</Italian>
             <Portuguese>Soro IV (1000ml)</Portuguese>
             <Czech>Fyziologický roztok (250ml)</Czech>
         </Key>
@@ -1207,7 +1237,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen(Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (Gerinnungsmittel)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
@@ -1383,15 +1413,15 @@
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
-            <French>Mesure de la tension ...</French>
-            <Russian>Проверка артериального давления ...</Russian>
+            <French>Mesure de la tension...</French>
+            <Russian>Проверка артериального давления...</Russian>
             <Spanish>Comprobando presión arterial...</Spanish>
             <Polish>Sprawdzanie ciśnienia krwi...</Polish>
             <German>Blutdruck kontrollieren...</German>
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
-            <Czech>Kontroluji krevní tlak ...</Czech>
+            <Czech>Kontroluji krevní tlak...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1492,7 +1522,7 @@
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
             <German>Niedrig</German>
-            <Italian>Basso</Italian>
+            <Italian>Bassa</Italian>
             <Russian>Низкое</Russian>
             <French>Faible</French>
             <Polish>Niskie</Polish>
@@ -1516,7 +1546,7 @@
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
             <English>High</English>
             <German>Hoch</German>
-            <Italian>Alto</Italian>
+            <Italian>Alta</Italian>
             <Russian>Высокое</Russian>
             <French>Haute</French>
             <Polish>Wysokie</Polish>
@@ -1550,16 +1580,16 @@
             <Czech>Tep</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Content">
-            <English>Checking Heart Rate ...</English>
-            <French>Vérification du rythme cardiaque ...</French>
-            <Russian>Проверка пульса ...</Russian>
-            <Spanish>Comprobando ritmo cardíaco ...</Spanish>
-            <Polish>Sprawdzanie tętna ...</Polish>
-            <German>Kontrolliere Herzfrequenz ...</German>
+            <English>Checking Heart Rate...</English>
+            <French>Vérification du rythme cardiaque...</French>
+            <Russian>Проверка пульса...</Russian>
+            <Spanish>Comprobando ritmo cardíaco...</Spanish>
+            <Polish>Sprawdzanie tętna...</Polish>
+            <German>Kontrolliere Herzfrequenz...</German>
             <Hungarian>Szívverés-szám mérése...</Hungarian>
-            <Italian>Controllando il battito cardiaco ...</Italian>
-            <Portuguese>Aferindo Pulso ...</Portuguese>
-            <Czech>Kontroluji srdeční tep ...</Czech>
+            <Italian>Controllando il battito cardiaco...</Italian>
+            <Portuguese>Aferindo Pulso...</Portuguese>
+            <Czech>Kontroluji srdeční tep...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
@@ -1595,6 +1625,7 @@
             <Portuguese>Nada</Portuguese>
             <French>Aucun</French>
             <Hungarian>Nincs</Hungarian>
+            <Italian>Niente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
@@ -1713,7 +1744,7 @@
             <German>Du prüfst ob der Patient ansprechbar ist</German>
             <Hungarian>Ellenőrzöd a páciens reagálóképességét</Hungarian>
             <Italian>Controlli la risposta del paziente</Italian>
-            <Portuguese>Aferindo se o paciente tem reação...</Portuguese>
+            <Portuguese>Aferindo se o paciente tem reação</Portuguese>
             <Czech>Zkontroloval jsi reakci pacienta</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Responsive">
@@ -1754,7 +1785,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
-            <Italian>Paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
+            <Italian>Il paziente %1&lt;br/&gt;è %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Italian>
             <Russian>Пациент %1&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Russian>
             <German>Patient %1&lt;br/&gt;ist %2.&lt;br/&gt;%3.&lt;br/&gt;%4</German>
             <French>Patient %1&lt;br/&gt;est %2.&lt;br/&gt;%3.&lt;br/&gt;</French>
@@ -1766,7 +1797,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
             <English>alive</English>
-            <Italian>Vivo</Italian>
+            <Italian>vivo</Italian>
             <Russian>жив</Russian>
             <German>lebendig</German>
             <French>vivant</French>
@@ -1778,7 +1809,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseDead">
             <English>dead</English>
-            <Italian>Morto</Italian>
+            <Italian>morto</Italian>
             <Russian>мёртв</Russian>
             <Spanish>muerto</Spanish>
             <German>tot</German>
@@ -1790,7 +1821,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
-            <Italian>Ha perso sangue</Italian>
+            <Italian>Ha perso poco sangue</Italian>
             <Spanish>Ha perdido un poco de sangre</Spanish>
             <Russian>Есть кровопотеря</Russian>
             <German>Er hat etwas Blut verloren</German>
@@ -1826,7 +1857,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_inPain">
             <English>He is in pain</English>
-            <Italian>è affetto da dolore</Italian>
+            <Italian>Sente dolori</Italian>
             <Russian>Испытывает боль</Russian>
             <German>Er hat Schmerzen</German>
             <French>Il souffre</French>
@@ -1838,7 +1869,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
-            <Italian>Non è affetto da dolore</Italian>
+            <Italian>Non sente dolori</Italian>
             <Russian>Не испытывает боли</Russian>
             <German>Er hat keine Schmerzen</German>
             <French>Il ne souffre pas</French>
@@ -1905,7 +1936,7 @@
             <Polish>Szycie</Polish>
             <Hungarian>Összevarrás</Hungarian>
             <Italian>Suturando</Italian>
-            <Portuguese>Suturando...</Portuguese>
+            <Portuguese>Suturando</Portuguese>
             <Czech>Šití</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_You_Treat_Airway">
@@ -2041,16 +2072,16 @@
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
-            <English>Placing body in bodybag</English>
-            <Spanish>Colocando cuerpo en bolsa para cadáveres</Spanish>
-            <Russian>Упаковка тела ...</Russian>
-            <German>Körper wird in Leichensack gepackt</German>
-            <Polish>Pakowanie ciała do worka na zwłoki ...</Polish>
-            <French>Placement du corps dans la housse</French>
-            <Hungarian>Test hullazsákba helyezése ...</Hungarian>
-            <Italian>Stai mettendo il corpo nella sacca</Italian>
+            <English>Placing body in bodybag...</English>
+            <Spanish>Colocando cuerpo en bolsa para cadáveres...</Spanish>
+            <Russian>Упаковка тела...</Russian>
+            <German>Körper wird in Leichensack gepackt...</German>
+            <Polish>Pakowanie ciała do worka na zwłoki...</Polish>
+            <French>Placement du corps dans la housse...</French>
+            <Hungarian>Test hullazsákba helyezése...</Hungarian>
+            <Italian>Stai mettendo il corpo nella sacca...</Italian>
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
-            <Czech>Umístňuji tělo do pytle na mrtvoly</Czech>
+            <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2063,6 +2094,16 @@
             <Italian>%1 ha bendato il paziente</Italian>
             <Portuguese>%1 aplicou bandagem no paciente</Portuguese>
             <Czech>%1 již obvázal pacienta</Czech>
+        </Key>
+        <Key ID="STR_ACE_Medical_Activity_cpr">
+            <English>%1 performed CPR</English>
+            <Polish>%1 wykonał cykl RKO</Polish>
+            <Czech>%1 provádí CPR</Czech>
+            <German>%1 hat eine HLW durchgeführt</German>
+            <Italian>%1 ha eseguito CPR</Italian>
+            <Portuguese>%1 realizou RCP</Portuguese>
+            <Russian>%1 провел сердечно-легочную реанимацию</Russian>
+            <Spanish>%1 realicó RCP</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2084,7 +2125,7 @@
             <Polish>%1 podał IV</Polish>
             <French>%1 a administré une IV</French>
             <Hungarian>%1 infúziót adott</Hungarian>
-            <Italian>%1 ha somministrato una IV</Italian>
+            <Italian>%1 ha somministrato una EV</Italian>
             <Portuguese>%1 aplicou um intravenoso</Portuguese>
             <Czech>%1 již aplikoval IV</Czech>
         </Key>
@@ -2092,7 +2133,7 @@
             <English>%1 applied a tourniquet</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
-            <German>%1 hat einen Tourniquet angelegt</German>
+            <German>%1 hat ein Tourniquet angelegt</German>
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
@@ -2108,6 +2149,7 @@
             <Spanish>%1 realicó RCP</Spanish>
             <Portuguese>%1 realizou RCP</Portuguese>
             <Czech>%1 provádí CPR</Czech>
+            <Italian>%1 ha eseguito CPR</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
@@ -2115,6 +2157,9 @@
             <Polish>%1 użył apteczki</Polish>
             <Portuguese>%1 utilizou KPS</Portuguese>
             <Czech>%1 používá PAK</Czech>
+            <Russian>%1 использовал аптечку</Russian>
+            <Italian>%1 ha usato Kit Pronto Soccorso Personale</Italian>
+            <Spanish>%1 usó Kit de Primeros Auxilios</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2230,6 +2275,9 @@
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
+            <Czech>Heal fully bandaged hitpoints</Czech>
+            <Italian>Cura hitpoints completamente bendati</Italian>
+            <German>Heilt vollständig bandagierte Trefferpunkte</German>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -2241,6 +2289,7 @@
             <French>La douleur est seulement supprimée temporairement</French>
             <Hungarian>A fájdalom csak ideiglenesen csökken</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
+            <Italian>Dolore è soppresso solo temporaneamente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -2300,7 +2349,7 @@
             <Portuguese>Selecione o tipo de menu que você prefere; padrão seleções 3d ou radial.</Portuguese>
             <Hungarian>Válaszd ki a neked megfelelő menüt: Alapértelmezett 3D válogatás, vagy kerek.</Hungarian>
             <Czech>Zvolte typ menu: základní 3D výběr nebo kruhový</Czech>
-            <Italian>Seleziona il tipo di menù che preferisci: selezione 3d predefinita o radiale.</Italian>
+            <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -2627,7 +2676,7 @@
             <Czech>Střelné poranění</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
-            <English>Smal Velocity Wound</English>
+            <English>Small Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
@@ -2723,28 +2772,28 @@
             <Czech>Zlomená stehenní kost</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
-            <English>Treating ...</English>
-            <German>Behandeln ...</German>
-            <Hungarian>Ellátás ...</Hungarian>
-            <Polish>Opatrywanie ran ...</Polish>
-            <French>Traitement ...</French>
-            <Russian>Лечение ...</Russian>
-            <Spanish>Tratando ...</Spanish>
+            <English>Treating...</English>
+            <German>Behandeln...</German>
+            <Hungarian>Ellátás...</Hungarian>
+            <Polish>Opatrywanie ran...</Polish>
+            <French>Traitement...</French>
+            <Russian>Лечение...</Russian>
+            <Spanish>Tratando...</Spanish>
             <Portuguese>Tratando...</Portuguese>
-            <Czech>Ošetřuji ...</Czech>
-            <Italian>Curando ...</Italian>
+            <Czech>Ošetřuji...</Czech>
+            <Italian>Curando...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
-            <English>Removing Tourniquet ...</English>
-            <German>Tourniquet entfernen ...</German>
-            <Polish>Zdejmowanie stazy ...</Polish>
-            <Spanish>Quitando torniquete ...</Spanish>
-            <French>Retire le tourniquet ...</French>
+            <English>Removing Tourniquet...</English>
+            <German>Tourniquet entfernen...</German>
+            <Polish>Zdejmowanie stazy...</Polish>
+            <Spanish>Quitando torniquete...</Spanish>
+            <French>Retire le tourniquet...</French>
             <Portuguese>Removendo torniquete...</Portuguese>
-            <Hungarian>Érszorító eltávolítása ...</Hungarian>
-            <Czech>Sundavám škrtidlo ...</Czech>
-            <Russian>Снятие жгута ...</Russian>
-            <Italian>Togliendo il laccio emostatico ...</Italian>
+            <Hungarian>Érszorító eltávolítása...</Hungarian>
+            <Czech>Sundavám škrtidlo...</Czech>
+            <Russian>Снятие жгута...</Russian>
+            <Italian>Togliendo il laccio emostatico...</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
@@ -2756,6 +2805,7 @@
             <Portuguese>ACE Médico</Portuguese>
             <French>ACE Médical</French>
             <Hungarian>ACE Orvosi Rendszer</Hungarian>
+            <Italian>ACE Medical</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
             <English>Medical Settings [ACE]</English>
@@ -2767,6 +2817,7 @@
             <Portuguese>Ajustes médicos [ACE]</Portuguese>
             <French>Option médicale [ACE]</French>
             <Hungarian>Orvosi beállítások [ACE]</Hungarian>
+            <Italian>Impostazioni Mediche [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_DisplayName">
             <English>Medical Level</English>
@@ -2778,6 +2829,7 @@
             <Portuguese>Nível médico</Portuguese>
             <French>Niveau de simulation médicale</French>
             <Hungarian>Orvosi szint</Hungarian>
+            <Italian>Livello Medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_Description">
             <English>What is the medical simulation level?</English>
@@ -2789,6 +2841,7 @@
             <Portuguese>Qual o nível de simulação médica?</Portuguese>
             <French>Quel niveau de simulation médicale choisissez vous?</French>
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
+            <Italian>Qual'è il livello di simulazione medica?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_basic">
             <English>Basic</English>
@@ -2800,6 +2853,7 @@
             <Portuguese>Básica</Portuguese>
             <French>Basique</French>
             <Hungarian>Alap</Hungarian>
+            <Italian>Basico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advanced">
             <English>Advanced</English>
@@ -2811,6 +2865,7 @@
             <Portuguese>Avançada</Portuguese>
             <French>Avancée</French>
             <Hungarian>Fejlett</Hungarian>
+            <Italian>Avanzato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
@@ -2822,6 +2877,7 @@
             <Portuguese>Configuração médica</Portuguese>
             <French>Paramètre des infirmiers</French>
             <Hungarian>Orvosok beállítása</Hungarian>
+            <Italian>Parametri Medici</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Description">
             <English>What is the level of detail prefered for medics?</English>
@@ -2833,6 +2889,23 @@
             <Portuguese>Qual o nível de detalhe preferido para os médicos?</Portuguese>
             <French>Quel niveau de détail voullez vous pour les infirmier?</French>
             <Hungarian>Mi a javasolt részletesség orvosok számára?</Hungarian>
+            <Italian>Qual'è il livello di dettagli preferito per i medici?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_DisplayName">
+            <English>Locations boost training</English>
+            <Czech>Místa pro vylepšení zkušeností</Czech>
+            <Italian>Località aumentano addestramento</Italian>
+            <German>Örtliche Trainingssteigerung</German>
+            <Spanish>Ubicación mejora entrenamiento.</Spanish>
+            <Polish>Miejsca zwiększają wyszkolenie</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
+            <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
+            <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem] </Czech>
+            <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+            <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
+            <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
+            <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -2844,6 +2917,7 @@
             <Portuguese>Desativar médicos</Portuguese>
             <French>Désactiver les infirmiers</French>
             <Hungarian>Orvosok letiltása</Hungarian>
+            <Italian>Disabilita medici</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -2855,6 +2929,7 @@
             <Portuguese>Ativar lixo médico</Portuguese>
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
+            <Italian>Abilita Barella</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
@@ -2866,6 +2941,7 @@
             <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
             <French>Activer la création de détrimus au début des traitements</French>
             <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
+            <Italian>Abilita la creazione della barella dopo trattamento</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
             <English>Life time of litter objects</English>
@@ -2877,6 +2953,7 @@
             <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
             <French>Durée d'affichage des détritus</French>
             <Hungarian>Szemétobjektumok élettartama</Hungarian>
+            <Italian>Tempo di vita delle barelle</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
@@ -2888,6 +2965,7 @@
             <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
             <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
+            <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>
@@ -2899,6 +2977,7 @@
             <Portuguese>Ativar gritos</Portuguese>
             <French>Activer les hurlements</French>
             <Hungarian>Kiáltások engedélyezése</Hungarian>
+            <Italian>Abilita Grida</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_Description">
             <English>Enable screaming by injuried units</English>
@@ -2910,6 +2989,7 @@
             <Portuguese>Ativa gritos para unidades feridas</Portuguese>
             <French>Active les hurlements d'unités blessées</French>
             <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
+            <Italian>Abilita Grida da parte delle unità ferite</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
@@ -2921,6 +3001,7 @@
             <Portuguese>Dano do jogador</Portuguese>
             <French>Dégats des joueurs</French>
             <Hungarian>Játékos sérülés</Hungarian>
+            <Italian>Danno Giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_Description">
             <English>What is the damage a player can take before being killed?</English>
@@ -2932,6 +3013,7 @@
             <Portuguese>Qal é o dano que um jogador pode sofrer antes de morrer?</Portuguese>
             <French>Quels dégats peut subir un joueur avant d'être tué</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy játékos, mielőtt meghal?</Hungarian>
+            <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_DisplayName">
             <English>AI Damage</English>
@@ -2943,6 +3025,7 @@
             <Portuguese>Dano da IA</Portuguese>
             <French>Dégats des IA</French>
             <Hungarian>AI sérülés</Hungarian>
+            <Italian>Danno AI</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_Description">
             <English>What is the damage an AI can take before being killed?</English>
@@ -2954,6 +3037,7 @@
             <Portuguese>Qual é o dano que uma IA pode sofrer antes de morrer?</Portuguese>
             <French>Quels dégats peut subir une IA avant d'être tuée</French>
             <Hungarian>Mennyi sérülést szenvedhet el egy AI, mielőtt meghal?</Hungarian>
+            <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
             <English>AI Unconsciousness</English>
@@ -2965,6 +3049,7 @@
             <Portuguese>Inconsciência da IA</Portuguese>
             <French>Inconscience des IA</French>
             <Hungarian>AI eszméletlenség</Hungarian>
+            <Italian>Incoscienza IA</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
@@ -2976,6 +3061,7 @@
             <Portuguese>Permite IA ficar inconsciente</Portuguese>
             <French>Autoriser les IA à tomber inconsciente</French>
             <Hungarian>Engedélyezi az AI eszméletének elvesztését</Hungarian>
+            <Italian>Permetti alle IA di diventare incoscienti</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -2987,10 +3073,11 @@
             <French>Contrôle à distance des IA</French>
             <Hungarian>Távvezérelt AI</Hungarian>
             <Russian>Зевса считать ботом</Russian>
+            <Italian>IA Controllate in Remoto</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
-            <German>Behandle ferngesteuerte Einheiten als KI und nicht als Spieler?</German>
+            <German>Legt fest, ob ferngesteuerte Einheiten als KI anstatt als Spieler behandelt werden sollen.</German>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
@@ -2998,17 +3085,19 @@
             <French>Soigner les unitées controlées à distance comme des IA et non comme des joueurs?</French>
             <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
             <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
+            <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
             <Russian>Откл. мгновенную смерть</Russian>
-            <Polish>Wył. natychmiast. śmierć</Polish>
+            <Polish>Wyłącz natychmiastową śmierć</Polish>
             <Spanish>Prevenir muerte instantánea</Spanish>
             <German>Verhindere direkten Tod</German>
             <Czech>Zabránit okamžité smrti</Czech>
             <Portuguese>Previnir morte instantânea</Portuguese>
             <French>Empêcher la morte instantanée</French>
             <Hungarian>Azonnali halál kiiktatása</Hungarian>
+            <Italian>Previeni morte istantanea</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
             <English>Have a unit move to unconscious instead of death</English>
@@ -3020,6 +3109,7 @@
             <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
             <French>Forcer l'inconscience au lieu de la mort instantanée</French>
             <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
+            <Italian>Imposta un'unità come incosciente invece di morta</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
@@ -3031,6 +3121,7 @@
             <Portuguese>Coeficiente de sangramento</Portuguese>
             <French>Coefficient de saignement</French>
             <Hungarian>Vérzési koefficiens</Hungarian>
+            <Italian>Coefficiente sanguinamento</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_Description">
             <English>Coefficient to modify the bleeding speed</English>
@@ -3042,6 +3133,7 @@
             <Portuguese>Coeficiente para modificar a velocidade do sangramento</Portuguese>
             <French>Coefficient modifiant la vitesse de saignement</French>
             <Hungarian>Egy szorzó a vérzés sebességének szabályozására</Hungarian>
+            <Italian>Coefficiente che modifica la velocità di sanguinamento</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_DisplayName">
             <English>Pain coefficient</English>
@@ -3053,17 +3145,19 @@
             <Portuguese>Coeficiente de dor</Portuguese>
             <French>Coefficient de douleur</French>
             <Hungarian>Fájdalmi koefficiens</Hungarian>
+            <Italian>Coefficiente dolore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_Description">
             <English>Coefficient to modify the pain intensity</English>
             <Russian>Коэффициент, изменяющий уровень боли</Russian>
             <Polish>Mnożnik modyfikujący intensywność bólu</Polish>
             <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
-            <German>Multiplikator um den Schmerzintensität zu verändern</German>
+            <German>Multiplikator um die Schmerzintensität zu verändern</German>
             <Czech>Koeficient intenzity bolesti</Czech>
             <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
             <French>Coefficient modifiant l'intensité de la douleur</French>
             <Hungarian>Egy szorzó a fájdalom erősségének szabályozására</Hungarian>
+            <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
             <English>Sync status</English>
@@ -3075,6 +3169,7 @@
             <Portuguese>Sincronizar estado</Portuguese>
             <French>Status de la synchronisation</French>
             <Hungarian>Szinkronizációs állapot</Hungarian>
+            <Italian>Sincronizza stato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_Description">
             <English>Keep unit status synced. Recommended on.</English>
@@ -3086,6 +3181,7 @@
             <Portuguese>Mater o estado da unidade sincronizado. Recomendado ativado.</Portuguese>
             <French>Garder l'unité synchronisée, Recommandé sur oui.</French>
             <Hungarian>Egységállapotok szinkronizálása. Javasolt a bekapcsolása.</Hungarian>
+            <Italian>Mantieni lo stato delle unità sincronizzato. Consigliato attivo.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -3097,6 +3193,13 @@
             <Portuguese>Proporciona o sistema médico para os jogadores e a IA.</Portuguese>
             <French>Fourni un système médical pour les joueurs tout comme pour les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
+            <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
+            <English>Basic Medical Settings [ACE]</English>
+            <German>Standard Sanitätseinstellungen [ACE]</German>
+            <Polish>Podstawowe ustawienia medyczne</Polish>
+            <Spanish>Ajustes médicos básicos [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3108,6 +3211,7 @@
             <Portuguese>Ajustes médicos avançados [ACE]</Portuguese>
             <French>Paramètres des soins avancés</French>
             <Hungarian>Fejlett orvosi beállítások [ACE]</Hungarian>
+            <Italian>Impostazioni Mediche Avanzate [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -3118,7 +3222,8 @@
             <Czech>Povoleno pro</Czech>
             <Portuguese>Habilitado para</Portuguese>
             <French>Activer pour</French>
-            <Hungarian>Engedélyezve...</Hungarian>
+            <Hungarian>Engedélyezve</Hungarian>
+            <Italian>Abilitato per</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -3130,6 +3235,7 @@
             <Portuguese>Selecione quais unidades o sistema médico avançado será habilitado</Portuguese>
             <French>Sélectionne pour quelle unité le système de soin avancé est activé</French>
             <Hungarian>Kiválasztható, mely egységek számára legyen engedélyezve a fejlett orvosi rendszer</Hungarian>
+            <Italian>Seleziona per quali unità verrà abilitato i sistema medico avanzato</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_playeronly">
             <English>Players only</English>
@@ -3141,28 +3247,31 @@
             <Portuguese>Somente jogadores</Portuguese>
             <French>Joueur uniquement</French>
             <Hungarian>Csak játékosok</Hungarian>
+            <Italian>Solo giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_playersandai">
             <English>Players and AI</English>
             <Russian>Игроков и ботов</Russian>
             <Polish>Gracze oraz AI</Polish>
-            <Spanish>Jugadors e IA</Spanish>
+            <Spanish>Jugadores e IA</Spanish>
             <German>Spieler und KI</German>
             <Czech>Hráči a AI</Czech>
             <Portuguese>Jogadores e IA</Portuguese>
             <French>Joueur et IA</French>
             <Hungarian>Játékosok és AI</Hungarian>
+            <Italian>Giocatori ed IA</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
             <English>Enable Advanced wounds</English>
             <Russian>Усложненные раны</Russian>
-            <Polish>Akt. zaawansowane rany</Polish>
+            <Polish>Aktywuj zaawansowane rany</Polish>
             <Spanish>Activa heridas avanzadas</Spanish>
             <German>Aktiviere erweiterte Wunden</German>
             <Czech>Povolit pokročilé zranění</Czech>
             <Portuguese>Ativar ferimentos avançados</Portuguese>
             <French>Activer les blessures avancées</French>
             <Hungarian>Komplex sebek engedélyezése</Hungarian>
+            <Italian>Abilita ferite Avanzate</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_Description">
             <English>Allow reopening of bandaged wounds?</English>
@@ -3174,6 +3283,7 @@
             <Portuguese>Permitr reabertura de ferimentos enfaixados?</Portuguese>
             <French>Permettre la réouverture des bandages</French>
             <Hungarian>Visszanyílhatnak a bekötözött sebek?</Hungarian>
+            <Italian>Permetti la riapertura di ferite bendate?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
@@ -3185,6 +3295,7 @@
             <Portuguese>Batidas de veículos</Portuguese>
             <French>Accident en véhicule</French>
             <Hungarian>Járműbalesetek</Hungarian>
+            <Italian>Schianto Veicoli</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
@@ -3196,17 +3307,31 @@
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
             <French>Les unités subissent des dégats lors d'accident</French>
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
+            <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
+            <English>Allow Epinephrine</English>
+            <German>Erlaube Epiniphrin</German>
+            <Spanish>Permitir Epinefrina</Spanish>
+            <Polish>Ograniczenia adrenaliny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
+            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+            <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
+            <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
+            <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование аптечки</Russian>
-            <Polish>Ust. apteczek osobistych</Polish>
+            <Polish>Ustawienie apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
             <Czech>Povolit osobní lékárničky</Czech>
             <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
             <French>Permettre le kit de premier secours</French>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
+            <Italian>Consenti Kit di Pronto Soccorso</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_Description">
             <English>Who can use the PAK for full heal?</English>
@@ -3218,6 +3343,7 @@
             <Portuguese>Quem pode usar o KPS para cura completa?</Portuguese>
             <French>Qui peut utilier les kit de premier secours pour soigner</French>
             <Hungarian>Ki használhatja az elsősegélycsomagot teljes gyógyításra?</Hungarian>
+            <Italian>Chi può usare il KPS per cura completa?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anyone">
             <English>Anyone</English>
@@ -3229,6 +3355,7 @@
             <Portuguese>Qualquer um</Portuguese>
             <French>Tout le monde</French>
             <Hungarian>Akárki</Hungarian>
+            <Italian>Chiunque</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Medic">
             <English>Medics only</English>
@@ -3240,6 +3367,7 @@
             <Portuguese>Somente médicos</Portuguese>
             <French>Infirmier uniquement</French>
             <Hungarian>Csak orvosok</Hungarian>
+            <Italian>Solo medici</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
             <English>Doctors only</English>
@@ -3251,17 +3379,19 @@
             <Portuguese>Somente doutores</Portuguese>
             <French>Médecin uniquement</French>
             <Hungarian>Csak doktorok</Hungarian>
+            <Italian>Solo dottori</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
             <Russian>Удалять аптечки после использования</Russian>
             <Polish>Usuń apteczkę po użyciu</Polish>
             <Spanish>Eliminar EPA después del uso</Spanish>
-            <German>Entferne Erste-Hilfe-Set bei Verwendung</German>
+            <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
             <Czech>Odebrat osobní lékárničku po použití</Czech>
             <Portuguese>Remover o KPS depois do uso</Portuguese>
             <French>Enlever le KPS à l'utilisation</French>
             <Hungarian>Elsősegélycsomag eltávolítása használatkor</Hungarian>
+            <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_Description">
             <English>Should PAK be removed on usage?</English>
@@ -3273,17 +3403,31 @@
             <Portuguese>Deve o KPS ser removido depois do uso?</Portuguese>
             <French>Le Kit de Premier Secours doit il être enlevé à l'utilisation?</French>
             <Hungarian>Eltávolítódjon az elsősegélycsomag használatkor?</Hungarian>
+            <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
+            <English>Locations Epinephrine</English>
+            <German>Orte für Epiniphrin</German>
+            <Spanish>Ubicaciones epinefrina</Spanish>
+            <Polish>Ograniczenia adrenaliny</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
+            <English>Where can the Epinephrine be used? (Basic Medical)</English>
+            <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
+            <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
+            <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Russian>Место использования аптечки</Russian>
-            <Polish>Ogr. apteczek osobistych</Polish>
-            <Spanish>Ubicacions del EPA</Spanish>
+            <Polish>Ograniczenie apteczek osobistych</Polish>
+            <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
             <Czech>Lokace osobní lékárničky</Czech>
             <Portuguese>Localizações do KPS</Portuguese>
             <French>Lieu d'utilisation du KPS</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
+            <Italian>Locazioni Kit Pronto Soccorso</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
             <English>Where can the PAK be used?</English>
@@ -3295,10 +3439,11 @@
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
             <French>Où le Kit de Premier Secour peut être utilisé</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
+            <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
-            <German>Voraussetzungen für das Erste-Hilfe-Set</German>
+            <German>Bedingungen für d. Erste-Hilfe-Set</German>
             <Czech>Podmínka osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
             <French>Condition d'utilisation du KPS</French>
@@ -3306,6 +3451,7 @@
             <Hungarian>Elsősegélycsomag állapot</Hungarian>
             <Portuguese>Condição do KPS</Portuguese>
             <Russian>Условие использования аптечки</Russian>
+            <Italian>Condizioni Kit Pronto Soccorso</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the PAK be used?</English>
@@ -3317,6 +3463,7 @@
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться аптечка?</Russian>
+            <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -3324,10 +3471,11 @@
             <Polish>Wszędzie</Polish>
             <Spanish>Donde sea</Spanish>
             <German>Überall</German>
-            <Czech>Kdekoliv</Czech>
+            <Czech>Kdekoli</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
             <French>PArtout</French>
             <Hungarian>Akárhol</Hungarian>
+            <Italian>Ovunque</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicle">
             <English>Medical vehicles</English>
@@ -3339,6 +3487,7 @@
             <Portuguese>Veículos médcos</Portuguese>
             <French>Dans les véhicules médicals</French>
             <Hungarian>Orvosi járművek</Hungarian>
+            <Italian>Veicoli medici</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_facility">
             <English>Medical facility</English>
@@ -3350,6 +3499,7 @@
             <Portuguese>Instalação médica</Portuguese>
             <French>Dans les installations médicales</French>
             <Hungarian>Orvosi létesítmény</Hungarian>
+            <Italian>Strutture mediche</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicleAndFacility">
             <English>Vehicles &amp; facility</English>
@@ -3361,17 +3511,19 @@
             <Portuguese>Veículos e instalações</Portuguese>
             <French>Dans les véhicules et les installations médicals</French>
             <Hungarian>Járművek &amp; létesítmény</Hungarian>
+            <Italian>Veicoli e Strutture</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical Kit (Adv)</English>
             <Russian>Хирургический набор может использоваться (усл.)</Russian>
-            <Polish>Ust. zestawu chirurg.</Polish>
+            <Polish>Ustawienia zestawu chirurgicznego</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
             <German>Erlaube Operationskasten</German>
             <Czech>Povolit chirurgickou soupravu (Pokr.)</Czech>
             <Portuguese>Permite kit cirúrgico (avançado)</Portuguese>
             <French>Permettre les kit de chirurgie (Avancé)</French>
             <Hungarian>Sebészkészlet (Fejlett) engedélyezése</Hungarian>
+            <Italian>Permetti Kit Chirurgico (Avanzato)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
             <English>Who can use the Surgical Kit?</English>
@@ -3383,17 +3535,19 @@
             <Portuguese>Quem pode usar o kit cirúrgico?</Portuguese>
             <French>Qui peut utiliser les kit de chirurgie</French>
             <Hungarian>Ki használhatja a sebészkészletet?</Hungarian>
+            <Italian>Chi può usare il Kit Chirurgico?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
             <English>Remove Surgical Kit (Adv)</English>
             <Russian>Удалять хирургический набор (усл.)</Russian>
-            <Polish>Usuń zest. chir. po użyciu</Polish>
+            <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
             <Spanish>Eliminar equipo quirúrgico (Avanzado)</Spanish>
             <German>Entferne Operationskasten (erweitert)</German>
             <Czech>Odebrat chirurgickou soupravu (Pokr.)</Czech>
             <Portuguese>Remover kit cirúrgico (avançado)</Portuguese>
             <French>Supprimer les kit de chirurgie (Avancé)</French>
             <Hungarian>Sebészkészlet (Fejlett) eltávolítása</Hungarian>
+            <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
             <English>Should Surgical kit be removed on usage?</English>
@@ -3405,17 +3559,19 @@
             <Portuguese>Deve o kit cirúrgico ser removido após o uso?</Portuguese>
             <French>Le kit de chirurgie doit il être supprimé à l'utilisation</French>
             <Hungarian>Eltávolítódjon a sebészkészlet használatkor?</Hungarian>
+            <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical Kit (Adv)</English>
             <Russian>Место использования хирургического набора (усл.)</Russian>
-            <Polish>Ogr. zestawu chirurg.</Polish>
+            <Polish>Ograniczenie zestawu chirurgicznego</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
             <German>Orte für Operationskästen (erweitert)</German>
             <Czech>Lokace chirurgické soupravy (Pokr.)</Czech>
             <Portuguese>Localizações do kit cirúrgico (avançado)</Portuguese>
             <French>Lieu d'utilisation du kit de chirurgie</French>
             <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
+            <Italian>Località Kit Chirurgico (Avanzato)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
             <English>Where can the Surgical Kit be used?</English>
@@ -3427,17 +3583,19 @@
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
             <French>Où peut être utilisé les kit de chirurgie</French>
             <Hungarian>Hol lehet a sebészkészletet használni?</Hungarian>
+            <Italian>Dove può essere usato il Kit Chirurgico?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
-            <German>Voraussetzungen für den Operationskasten (erweitert)</German>
+            <German>Beding. für d. Operationskasten (erw.)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
-            <Polish>Warunek zestawu chir.</Polish>
+            <Polish>Warunek zestawu chirurgicznego</Polish>
             <Hungarian>Sebészkészlet állapot</Hungarian>
             <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
             <Russian>Условие использования хирургического набора (усл.)</Russian>
+            <Italian>Condizioni Kit Chirurgico (Avanzato)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical Kit be used?</English>
@@ -3449,6 +3607,7 @@
             <Hungarian>Mikor lehet a sebészkészletet használni?</Hungarian>
             <Portuguese>Onde o kit cirúrgico pode ser utilizado?</Portuguese>
             <Russian>Когда может использоваться хирургический набор?</Russian>
+            <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Heal hitpoints</English>
@@ -3457,6 +3616,8 @@
             <Spanish>Curar puntos de vida</Spanish>
             <Russian>Исцелять части тела</Russian>
             <Portuguese>Curar hitpoints</Portuguese>
+            <Czech>Léčit hitponty</Czech>
+            <Italian>Cura Hitpoints</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
@@ -3465,6 +3626,8 @@
             <Spanish>Curar miembros totalmente vendados</Spanish>
             <Russian>Исцелять полностью перебинтованные части тела</Russian>
             <Portuguese>Curar totalmente hitpoints enfaixados</Portuguese>
+            <Czech>Heal fully bandaged hitpoints</Czech>
+            <Italian>Cura Hitpoints completamente bendati</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -3476,6 +3639,7 @@
             <French>Suppression de la douleur</French>
             <Hungarian>Fájdalomcsillapítás</Hungarian>
             <Russian>Приглушение боли</Russian>
+            <Italian>Soppressione dolore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
@@ -3487,17 +3651,25 @@
             <French>La douleur est temporairement supprimée, pas enlevée</French>
             <Hungarian>A fájdalom csak ideiglenesen csökken, nem távolítódik el</Hungarian>
             <Russian>Боль приглушается только временно</Russian>
+            <Italian>Dolore è solo temporaneamente soppresso, non rimosso</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
+            <English>Configure the treatment settings from ACE Basic Medical</English>
+            <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
+            <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
+            <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
-            <English>Configure the treatment settings from ACE Medical</English>
+            <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
-            <Spanish>Configure las opciones de tratamiento del ACE Médico</Spanish>
+            <Spanish>Configure las opciones de tratamiento del sistema médico avanzado de ACE</Spanish>
             <German>Behandlungseinstellungen vom ACE-Medizin konfigurieren</German>
             <Czech>Konfigurace nastavení léčby ze zdravotnické systému ACE</Czech>
             <Portuguese>Configure as opções de tratamento do ACE Médico</Portuguese>
             <French>Configure les paramètres de traitement du système de soin ACE</French>
             <Hungarian>Kezelési lehetőségek konfigurálása az ACE Orvosi rendszerből</Hungarian>
+            <Italian>Configura le impostazioni trattamenti per ACE Medical</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_Module_DisplayName">
             <English>Revive Settings [ACE]</English>
@@ -3509,6 +3681,7 @@
             <Portuguese>Sistema de reavivamento [ACE]</Portuguese>
             <French>Paramètre du revive [ACE]</French>
             <Hungarian>Újraélesztés beállításai [ACE]</Hungarian>
+            <Italian>Impostazioni Revive [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_DisplayName">
             <English>Enable Revive</English>
@@ -3520,6 +3693,7 @@
             <Portuguese>Habilitar reavivamento</Portuguese>
             <French>Activer le revive</French>
             <Hungarian>Újraélesztés engedélyezése</Hungarian>
+            <Italian>Abilita Revive</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_Description">
             <English>Enable a basic revive system</English>
@@ -3531,17 +3705,19 @@
             <Portuguese>Habilitar um sistema básico de reavivamento</Portuguese>
             <French>Active un sytème de revive basique</French>
             <Hungarian>Egy alap újraélesztési rendszer engedélyezése</Hungarian>
+            <Italian>Abilita un sistema revive basico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_DisplayName">
             <English>Max Revive time</English>
             <Russian>Макс. время реанимации</Russian>
-            <Polish>Maks. czas agonii</Polish>
+            <Polish>Maksymalny czas agonii</Polish>
             <Spanish>Tiempo máximo de resucitado</Spanish>
             <German>Maximale Wiederbelebungszeit</German>
             <Czech>Maximální čas pro oživení</Czech>
             <Portuguese>Tempo máximo de reavivamento</Portuguese>
             <French>Temps maximum pour le revive</French>
             <Hungarian>Maximum újraélesztési idő</Hungarian>
+            <Italian>Tempo massimo Revive</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_Description">
             <English>Max amount of seconds a unit can spend in revive state</English>
@@ -3553,6 +3729,7 @@
             <Portuguese>Quantidade máxima de segundos que uma unidade pode gastar em um estado de reavivamento</Portuguese>
             <French>Nombre de seconde maximum qu'une unité peut être en attente d'un revive</French>
             <Hungarian>Maximum másodperc, amit egy egység újraélesztési állapotban tölthet</Hungarian>
+            <Italian>Numero massimo di secondi che un'unità può spendere in stato revive</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_DisplayName">
             <English>Max Revive lives</English>
@@ -3564,6 +3741,7 @@
             <Portuguese>Vidas máximas do reavivado</Portuguese>
             <French>Nombre maximum de revive</French>
             <Hungarian>Maximum újraélesztési lehetőségek</Hungarian>
+            <Italian>Numero massimo Revives</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_Description">
             <English>Max amount of lives a unit. 0 or -1 is disabled.</English>
@@ -3575,6 +3753,7 @@
             <Portuguese>Quantidade máxima de vidas por unidade. 0 ou -1 é desativado.</Portuguese>
             <French>Nombre de vie maximale d'une unité. 0 ou -1 désactive</French>
             <Hungarian>Egy egység maximum "életei". 0 vagy -1 letiltja.</Hungarian>
+            <Italian>Numero massimo di vite di un'unità. 0 o -1 per disabilitare.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -3586,6 +3765,7 @@
             <Portuguese>Proporciona um sistema médico para jogadores e IA.</Portuguese>
             <French>Fourni un sytème médical pour les joueurs et les IAs</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
+            <Italian>Fornisce un sistema medico sia per giocatori che IA</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_DisplayName">
             <English>Set Medic Class [ACE]</English>
@@ -3597,6 +3777,7 @@
             <Portuguese>Definir classe médica [ACE]</Portuguese>
             <French>Définir comme unité médicale [ACE]</French>
             <Hungarian>Orvos beállítása [ACE]</Hungarian>
+            <Italian>Imposta Classe Medico [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_DisplayName">
             <English>List</English>
@@ -3608,6 +3789,7 @@
             <Portuguese>Lista</Portuguese>
             <French>Liste</French>
             <Hungarian>Lista</Hungarian>
+            <Italian>Lista</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_Description">
             <English>List of unit names that will be classified as medic, separated by commas.</English>
@@ -3619,6 +3801,7 @@
             <Portuguese>Lista dos nomes das unidades que se classificam como médicos, separados por vírgulas.</Portuguese>
             <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule</French>
             <Hungarian>Azon egységek nevei, melyek orvosként vannak meghatározva, vesszővel elválasztva.</Hungarian>
+            <Italian>Lista di nomi unità che verranno classificati come medici, separati da virgole.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_DisplayName">
             <English>Is Medic</English>
@@ -3630,6 +3813,7 @@
             <Portuguese>É médico</Portuguese>
             <French>Est infirmier</French>
             <Hungarian>Orvos-e</Hungarian>
+            <Italian>E' Medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
@@ -3641,6 +3825,7 @@
             <Hungarian>Ez a modul engedélyezi az orvosi jelző hozzárendelését kiválasztott egységekhez.</Hungarian>
             <Russian>Этот модуль позволяет назначить класс медика выбранным юнитам.</Russian>
             <Spanish>Este módulo permite asignar la clase médico a las unidades seleccionadas.</Spanish>
+            <Italian>Questo modulo ti permette di assegnare la classe Medico alle unità selezionate.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_none">
             <English>None</English>
@@ -3652,6 +3837,7 @@
             <Portuguese>Nada</Portuguese>
             <French>Aucun</French>
             <Hungarian>Nincs</Hungarian>
+            <Italian>Nessuno</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_medic">
             <English>Regular medic</English>
@@ -3663,6 +3849,7 @@
             <Portuguese>Médico regular</Portuguese>
             <French>Infirmier standard</French>
             <Hungarian>Hagyományos orvos</Hungarian>
+            <Italian>Medico Regolare</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
@@ -3674,6 +3861,19 @@
             <Portuguese>Doutor (Somente médicos avançados)</Portuguese>
             <French>Médecin (traitements avancés uniquement)</French>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
+            <Italian>Dottore (Solo Medici Avanzati)</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctorShort">
+            <English>Doctor</English>
+            <Russian>Врач</Russian>
+            <Polish>Doktor</Polish>
+            <Spanish>Doctor</Spanish>
+            <German>Arzt</German>
+            <Czech>Doktor</Czech>
+            <Portuguese>Doutor</Portuguese>
+            <French>Médecin</French>
+            <Hungarian>Doktor</Hungarian>
+            <Italian>Dottore</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
@@ -3685,6 +3885,7 @@
             <Portuguese>Atribui a classe médica do ACE a uma unidade</Portuguese>
             <French>Assigner la classe médicale à une unité</French>
             <Hungarian>Az ACE orvosi jelző hozzárendelése egy egységhez</Hungarian>
+            <Italian>Assegna la classe medico ACE ad un'unità</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_DisplayName">
             <English>Set Medical Vehicle [ACE]</English>
@@ -3696,6 +3897,7 @@
             <Portuguese>Definir veículo médico [ACE]</Portuguese>
             <French>Définir comme véhicule médical [ACE]</French>
             <Hungarian>Orvosi jármű beállítása [ACE]</Hungarian>
+            <Italian>Imposta Veicolo Medico [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_DisplayName">
             <English>List</English>
@@ -3707,6 +3909,7 @@
             <Portuguese>Lista</Portuguese>
             <French>Liste</French>
             <Hungarian>Lista</Hungarian>
+            <Italian>Lista</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as medical vehicle, separated by commas.</English>
@@ -3718,17 +3921,19 @@
             <Portuguese>Lista de veículos que serão classificados como veículos médicos, separados por vírgulas.</Portuguese>
             <French>Liste de véhicule classé comme véhicule médical, séparation par virgule.</French>
             <Hungarian>Orvosi járműveknek tekintett járművek listája, vesszővel elválasztva.</Hungarian>
+            <Italian>Lista di veicoli che verranno classificati come veicoli medici, separati da virgole.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
             <Russian>Является медицинским транспортом</Russian>
-            <Polish>Jest pojazdem med.</Polish>
+            <Polish>Jest pojazdem medycznym</Polish>
             <Spanish>Es vehículo médico</Spanish>
             <German>Ist medizinisches Fahrzeug</German>
-            <Czech>Je zdravotnické vozidlo</Czech>
+            <Czech>Zdravotnické vozidlo</Czech>
             <Portuguese>É um veículo médico</Portuguese>
             <French>Véhicule médical</French>
             <Hungarian>Orvosi jármű-e</Hungarian>
+            <Italian>E' Veicolo Medico</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_Description">
             <English>Whatever or not the objects in the list will be a medical vehicle.</English>
@@ -3740,6 +3945,7 @@
             <Portuguese>Se serão ou não os objetos dessa lista veículos médicos.</Portuguese>
             <French>Quoi qu'il arrive les objets de la liste seront des véhicules médical</French>
             <Hungarian>A listában lévő objektumok orvosi járművek-e, vagy sem.</Hungarian>
+            <Italian>Gli oggetti nella lista verranno considerati veicoli medici o meno.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
@@ -3751,6 +3957,7 @@
             <Portuguese>Atribui a classe médica ACE a uma unidade</Portuguese>
             <French>Assigne la classe médicale à une unité</French>
             <Hungarian>Hozzárendeli az ACE orvosi jelzőt egy egységhez</Hungarian>
+            <Italian>Assegna la classe medico ACE ad un'unità</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_DisplayName">
             <English>Set Medical Facility [ACE]</English>
@@ -3762,17 +3969,19 @@
             <Portuguese>Definir instalação médica [ACE]</Portuguese>
             <French>Définir comme équipement médical [ACE]</French>
             <Hungarian>Orvosi létesítmény beállítása [ACE]</Hungarian>
+            <Italian>Imposta Struttura Medica [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
             <Russian>Является госпиталем</Russian>
-            <Polish>Jest budynkiem med.</Polish>
+            <Polish>Jest budynkiem medycznym</Polish>
             <Spanish>Es centro médico</Spanish>
             <German>Ist eine medizinische Einrichtung</German>
-            <Czech>Je zdravotnické zařízení</Czech>
+            <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
             <French>Est un équipement médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
+            <Italian>E' Struttura Medica</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_Description">
             <English>Registers an object as a medical facility</English>
@@ -3784,6 +3993,7 @@
             <Portuguese>Registra um objeto como instalacão médica</Portuguese>
             <French>Enregistrer un objet comme un équipement médical</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
+            <Italian>Registra un oggetto come struttura medica</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_Description">
             <English>Defines an object as a medical facility. This allows for more advanced treatments. Can be used on buildings and vehicles.</English>
@@ -3795,17 +4005,19 @@
             <Portuguese>Define um objeto como instalação médica. Isso permite tratamentos mais avançados. Pode ser utilizado em edifícios e veículos.</Portuguese>
             <French>Définir un objet comme équipement médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
             <Hungarian>Egy objektumot orvosi létesítményként határoz meg. Ez fejlett ellátási lehetőségeket engedélyez. Használható járműveken és épületeken.</Hungarian>
+            <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
-            <German>[ACE] Sanitätskiste (standard)</German>
+            <German>[ACE] Sanitätskiste (Standard)</German>
             <Czech>[ACE] Zdravotnické zásoby (základní)</Czech>
             <Portuguese>[ACE] Caixa com suprimentos médicos</Portuguese>
             <French>[ACE] Caisse médicale (basique)</French>
             <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
+            <Italian>[ACE] Cassa Rifornimenti Medici (Basico)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
@@ -3817,17 +4029,19 @@
             <Portuguese>[ACE] Caixa com suprimentos médicos (Avançados)</Portuguese>
             <French>[ACE] Caisse médicale (avancée)</French>
             <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
+            <Italian>[ACE] Cassa Rifornimenti Medici (Avanzato)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
             <German>Jederzeit</German>
-            <Czech>Kdykoli</Czech>
+            <Czech>Kdykoliv</Czech>
             <Spanish>Siempre</Spanish>
             <French>Tout le temps</French>
             <Polish>Zawsze</Polish>
             <Hungarian>Akármikor</Hungarian>
             <Portuguese>Sempre</Portuguese>
             <Russian>В любое время</Russian>
+            <Italian>Sempre</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
@@ -3839,6 +4053,7 @@
             <Hungarian>Stabil</Hungarian>
             <Portuguese>Estável</Portuguese>
             <Russian>После стабилизации</Russian>
+            <Italian>Stabile</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
@@ -3860,6 +4075,7 @@
             <Portuguese>A distância de %1 está muito longe para tratamento</Portuguese>
             <Spanish>La distancia hasta %1 se ha agrandado demasiado para el tratamiento</Spanish>
             <Czech>%1 je příliš daleko, léčba není možná</Czech>
+            <Italian>Distanza da %1 è diventata troppo alta per permettere trattamento</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
@@ -3869,15 +4085,45 @@
             <Russian>Боец (%1) в сознании и не может быть погружен</Russian>
             <Portuguese>Esta pessoa (%1) está acordada e não pode ser carregada</Portuguese>
             <Czech>Tato osoba (%1) je vzhůru a nemůže být naložena</Czech>
+            <Italian>Questa persona (%1) è sveglia e non può essere caricata.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
-            <German>An diesem Körperteil befindet sich kein Tourniquet</German>
+            <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
             <Portuguese>Não existe nenhum torniquete nesta parte do corpo!</Portuguese>
             <Czech>Žádné škrtidlo na této části těla!</Czech>
+            <Italian>Non c'è nessun laccio emostatico su questa parte del corpo!</Italian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Attributes_isMedic_Description">
+            <English>Medical training</English>
+            <Polish>Wyszkolenie medyczne</Polish>
+            <Italian>Addestramento Medico</Italian>
+            <German>Sanitätsausbildung</German>
+            <Spanish>Entrenamiento médico</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
+            <English>Whether or not the object will be a medical vehicle.</English>
+            <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
+            <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
+            <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
+            <Spanish>Es un vehículo médico?</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_delayUnconCaptive">
+            <English>Delay cease fire of AI during medical unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
+            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
+            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
+            <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
+            <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
+            <English>Delay cease fire of AI for unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
         </Key>
     </Package>
 </Project>

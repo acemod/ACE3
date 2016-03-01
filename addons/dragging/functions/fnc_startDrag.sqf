@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Start the dragging process.
  *
  * Argument:
@@ -9,14 +8,19 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_startDrag;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // check weight
-private "_weight";
-_weight = [_target] call FUNC(getWeight);
+private _weight = [_target] call FUNC(getWeight);
 
 if (_weight > missionNamespace getVariable ["ACE_maxWeightDrag", 1E11]) exitWith {
     [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);

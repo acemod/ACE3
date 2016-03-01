@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_turretPath"];
+params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]]];
 
 if (isNull _target) exitWith {[]};
 

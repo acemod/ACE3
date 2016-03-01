@@ -140,7 +140,7 @@ class controlsBackground {
 
 class controls {
     class TopMenuClick: GVAR(RscActiveTextPicture) {
-        idc = -1;
+        idc = IDC_TOPMENUBUTTON;
         text = "#(argb,8,8,3)color(0,0,0,0)";
         x = X_PART(0);
         y = Y_PART(0);

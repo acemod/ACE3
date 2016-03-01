@@ -2,11 +2,6 @@
 
 ADDON = false;
 
-PREP(fireLauncherBackblast);
-PREP(fireOverpressureZone);
-PREP(getDistance);
-PREP(overpressureDamage);
-PREP(cacheOverPressureValues);
-PREP(firedEHOP);
-PREP(firedEHBB);
+#include "XEH_PREP.hpp"
+
 ADDON = true;

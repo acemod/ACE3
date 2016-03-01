@@ -9,19 +9,16 @@
  * None
  *
  * Example:
- * [player] call ace_common_fnc_removeBinocularMagazine
+ * player call ace_common_fnc_removeBinocularMagazine
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_binocular", "_selectBinocular"];
-
-_binocular = binocular _unit;
-
-_selectBinocular = currentWeapon _unit == _binocular;
+private _binocular = binocular _unit;
+private _selectBinocular = currentWeapon _unit == _binocular;
 
 _unit addWeapon _binocular;
 

@@ -5,7 +5,7 @@
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     [ACE_player, currentWeapon ACE_player] call FUNC(switchLaserLightMode);
     true

@@ -16,15 +16,31 @@
 #include "script_component.hpp"
 
 params ["_object"];
+private _type = typeOf _object;
+TRACE_2("params",_object,_type);
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(canLoad)) != 1) exitWith {};
-
-private ["_type", "_action"];
-_type = typeOf _object;
+if ((_object getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad))]) != 1) exitWith {};
 
 // do nothing if the class is already initialized
 if (_type in GVAR(initializedItemClasses)) exitWith {};
 GVAR(initializedItemClasses) pushBack _type;
 
-_action = [QGVAR(load), localize LSTRING(loadObject), QUOTE(PATHTOF(UI\Icon_load.paa)), {[_player, _target] call FUNC(startLoadIn)}, {GVAR(enable) && {[_player, _target] call FUNC(canLoad)}}] call EFUNC(interact_menu,createAction);
+TRACE_1("Adding load cargo action to class", _type);
+
+private _condition = {
+    GVAR(enable) &&
+    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) == 1} &&
+    {locked _target < 2} &&
+    {alive _target} &&
+    {[_player, _target, []] call EFUNC(common,canInteractWith)}
+};
+private _statement = {
+    params ["_target", "_player"];
+    [_player, _target] call FUNC(startLoadIn);
+};
+private _text = localize LSTRING(loadObject);
+private _icon = QUOTE(PATHTOF(UI\Icon_load.paa));
+
+private _action = [QGVAR(load), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+

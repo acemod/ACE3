@@ -21,7 +21,6 @@ if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
     false
 };
 
-private "_eventData";
-_eventData = [_name, _args, _ttl];
+private _eventData = [_name, _args, _ttl];
 
 ["SEH", _eventData] call FUNC(globalEvent);

@@ -29,3 +29,5 @@ _player setVariable ["ACE_hasEarPlugsIn", true, true];
 
 /*// No Earplugs in inventory, telling user
 [localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);*/
+
+[] call FUNC(updateHearingProtection);

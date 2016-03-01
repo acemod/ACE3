@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(acquireTarget);
-PREP(turnOn);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

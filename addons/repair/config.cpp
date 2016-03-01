@@ -17,3 +17,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgActions.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgEden.hpp"

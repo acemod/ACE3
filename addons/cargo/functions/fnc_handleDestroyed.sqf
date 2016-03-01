@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Handle object being destroyed.
+ * Handle object being destroyed. Only runs on server.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -16,10 +16,9 @@
 #include "script_component.hpp"
 
 params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
-private["_loaded"];
-
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 if (_loaded isEqualTo []) exitWith {};
 
 {
@@ -27,6 +26,7 @@ if (_loaded isEqualTo []) exitWith {};
     if (_x isEqualType objNull) then {
         deleteVehicle _x;
     };
+    nil
 } count _loaded;
 
 [_vehicle] call FUNC(validateCargoSpace);

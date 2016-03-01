@@ -31,8 +31,8 @@ _painToAdd = 0;
 _woundsCreated = [];
 
 call compile _extensionOutput;
-_foundIndex = -1;
 {
+    _foundIndex = -1;
     _toAddClassID = _x select 1;
     _bodyPartNToAdd = _x select 2;
     {

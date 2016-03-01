@@ -11,7 +11,7 @@ class ACE_Interaction_Button_Base {
     access = 0;
     type = 1;
     text = "";
-    font = "PuristaMedium";
+    font = "RobotoCondensed";
     sizeEx = "0.8 / 40 / (getResolution select 5)";
     shadow = 2;
 

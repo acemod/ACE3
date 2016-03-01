@@ -23,7 +23,7 @@ private ["_result", "_magazines"];
 _result = false;
 _magazines = magazines _unit;
 {
-    if (getNumber (ConfigFile >> "CfgMagazines" >> _x >> "ACE_Placeable") == 1) exitWith {
+    if (getNumber (ConfigFile >> "CfgMagazines" >> _x >> QGVAR(Placeable)) == 1) exitWith {
         _result = true;
     };
 } count _magazines;

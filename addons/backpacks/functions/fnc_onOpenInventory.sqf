@@ -16,11 +16,10 @@
 params ["_unit", "_backpack"];
 
 // exit if the target is not a real backpack, i.e. parachute, static weapon bag etc.
-if !([_backpack] call FUNC(isBackpack)) exitWith {false};
+if !(_backpack call FUNC(isBackpack)) exitWith {false};
 
 // get the unit that wears the backpack object
-private "_target";
-_target = objectParent _backpack;
+private _target = objectParent _backpack;
 
 if (isNull _target) exitWith {false};
 

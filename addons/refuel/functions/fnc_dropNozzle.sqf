@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_nozzle", ["_disconnectOnly", false]];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_disconnectOnly", false, [false]]];
 
 detach _nozzle;
 _nozzle setVariable [QGVAR(isRefueling), false, true];

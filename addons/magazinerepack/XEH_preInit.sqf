@@ -2,10 +2,6 @@
 
 ADDON = false;
 
-PREP(getMagazineChildren);
-PREP(magazineRepackFinish);
-PREP(magazineRepackProgress);
-PREP(simulateRepackEvents);
-PREP(startRepackingMagazine);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

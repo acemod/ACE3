@@ -28,5 +28,5 @@ private ["_color", "_index", "_lastPos", "_lastSpd", "_max", "_positions", "_sta
         _lastPos = _pos2;
         _lastSpd = _data1 select 1;
     };
-    // drawIcon3D ["", [1,0,0,1], _lastPos, 0, 0, 0, format["%1m/s", _lastSpd], 1, 0.05, "PuristaMedium"];
+    // drawIcon3D ["", [1,0,0,1], _lastPos, 0, 0, 0, format["%1m/s", _lastSpd], 1, 0.05, "RobotoCondensed"];
 } forEach GVAR(traces);

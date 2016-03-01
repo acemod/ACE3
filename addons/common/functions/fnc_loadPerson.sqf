@@ -17,28 +17,26 @@
 
 params ["_caller", "_unit"];
 
-private ["_vehicle", "_loadcar", "_loadair", "_loadtank", "_loadboat"];
-
-_vehicle = objNull;
+private _vehicle = objNull;
 
 if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
 
-_loadcar = nearestObject [_unit, "Car"];
+private _loadcar = nearestObject [_unit, "Car"];
 
 if (_unit distance _loadcar <= 10) then {
     _vehicle = _loadcar;
 } else {
-    _loadair = nearestObject [_unit, "Air"];
+    private _loadair = nearestObject [_unit, "Air"];
 
     if (_unit distance _loadair <= 10) then {
         _vehicle = _loadair;
     } else {
-        _loadtank = nearestObject [_unit, "Tank"];
+        private _loadtank = nearestObject [_unit, "Tank"];
 
         if (_unit distance _loadtank <= 10) then {
             _vehicle = _loadtank;
         } else {
-            _loadboat = nearestObject [_unit, "Ship_F"];
+            private _loadboat = nearestObject [_unit, "Ship_F"];
 
             if (_unit distance _loadboat <= 10) then {
                 _vehicle = _loadboat;
