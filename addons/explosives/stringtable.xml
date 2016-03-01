@@ -91,6 +91,7 @@
             <Czech>Blokováno</Czech>
             <Polish>Zablokowany</Polish>
             <Italian>Bloccato</Italian>
+            <German>Blockiert</German>
             <French>Bloqué</French>
         </Key>
         <Key ID="STR_ACE_Explosives_CancelAction">

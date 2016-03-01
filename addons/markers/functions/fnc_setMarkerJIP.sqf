@@ -17,8 +17,8 @@
  */
 #include "script_component.hpp"
 
-params ["_allMapMarkers", "_allMapMarkersProperties", "_logic"];
-TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
+params ["_allMapMarkers", "_allMapMarkersProperties"];
+TRACE_3("params",_allMapMarkers,_allMapMarkersProperties);
 
 {
     private _index = _allMapMarkers find _x;
@@ -51,4 +51,7 @@ TRACE_3("params",_allMapMarkers,_allMapMarkersProperties,_logic);
     false
 } count allMapMarkers;
 
-deleteVehicle _logic;
+private _group = group GVAR(localLogic);
+deleteVehicle GVAR(localLogic);
+GVAR(localLogic) = nil;
+deleteGroup _group;

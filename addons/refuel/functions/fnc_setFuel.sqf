@@ -12,7 +12,7 @@
  * Example:
  * [fuelTruck, 42] call ace_refuel_fnc_setFuel
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
