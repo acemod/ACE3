@@ -10,6 +10,7 @@ module.exports = function (grunt) {
         "js/vendor/jquery/jquery.min.js",
         "js/vendor/foundation/foundation.js",
         "js/vendor/foundation/foundation.topbar.js",
+        "js/vendor/foundation/foundation.clearing.js",
         "js/vendor/slick/slick.js",
         "js/vendor/jekyll-toc/jekyll-toc.js",
         "js/core/utils.js",
@@ -48,6 +49,12 @@ module.exports = function (grunt) {
                     "js/**/*.js"
                 ],
                 tasks: ["concat", "uglify"]
+            },
+            img: {
+                files: [
+                    "img/**/*"
+                ],
+                tasks: ["imagemin"]
             }
         },
         concat: {
