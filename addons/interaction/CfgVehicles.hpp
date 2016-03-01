@@ -1,3 +1,6 @@
+
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleInteraction: ACE_Module {
@@ -539,8 +542,11 @@ class CfgVehicles {
 
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 2;
-        XEH_ENABLED;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
