@@ -51,6 +51,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
+            <German>Adenosin injizieren</German>
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
         </Key>
@@ -248,6 +249,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
+            <German>Adenosin injizieren...</German>
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
         </Key>
@@ -937,7 +939,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Desc_Short">
             <English>Used to combat moderate to severe pain experiences</English>
-            <German>Wird verwendet um moderate bis starke Schmärzen zu lindern.</German>
+            <German>Wird verwendet um moderate bis starke Schmerzen zu lindern.</German>
             <Russian>Для снятия средних и сильных болевых ощущений</Russian>
             <Spanish>Usado para combatir los estados dolorosos de moderados a severos</Spanish>
             <French>Utilisé pour réduire les douleurs modérées à sévères.</French>
@@ -961,16 +963,19 @@
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
+            <German>Adenosin-Autoinjektor</German>
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
+            <German>Wird verwendet um die Symptome von Epiniphrin zu lindern</German>
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
+            <German>Ein Medikament, das die Symptome von Epiniphrin bekämpft.</German>
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
         </Key>
@@ -1041,7 +1046,7 @@
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
             <Italian>Una sostanza che permette di dilatare i bronchi, aumentare il battito cardiaco e combattere effetti di reazioni allergiche. Usato anche in casi di arresto cardiaco.</Italian>
-            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen(Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
+            <German>Ein Medikament, das die Bronchien erweitert, die Herzfrequenz erhöht und Symptome von allergischen Reaktionen (Anaphylaxie) bekämpft. Wird bei plötzlichem Herzstillstand verabreicht.</German>
             <Portuguese>Uma droga trabalha dilatando os bronquios, aumentando a frequência cardíaca e combate efeitos de reações alérgicas(anáfilaticas). Usado em casos de parada cardiaca com poucas changes de recuperação.</Portuguese>
             <Hungarian>Egy hormon, mely a szimpatikus idegrendszer által kitágítja a hörgőket, valamint megnöveli a szívverést, ezzel ellensúlyozva ilyen jellegű allergiás reakciókat (anafilaxiás sokk). Hirtelen szívmegállás esetén is használt, idő alatt csökkenő hatásfokkal.</Hungarian>
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
@@ -1232,7 +1237,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen(Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (Gerinnungsmittel)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
@@ -2128,7 +2133,7 @@
             <English>%1 applied a tourniquet</English>
             <Spanish>%1 aplicado torniquete</Spanish>
             <Russian>%1 наложил жгут</Russian>
-            <German>%1 hat einen Tourniquet angelegt</German>
+            <German>%1 hat ein Tourniquet angelegt</German>
             <Polish>%1 założył stazę</Polish>
             <French>%1 a appliqué un garrot</French>
             <Hungarian>%1 felhelyezett egy érszorítót</Hungarian>
@@ -2272,6 +2277,7 @@
             <Portuguese>Curar hitpoints totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
+            <German>Heilt vollständig bandagierte Trefferpunkte</German>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -2670,7 +2676,7 @@
             <Czech>Střelné poranění</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
-            <English>Smal Velocity Wound</English>
+            <English>Small Velocity Wound</English>
             <German>Kleines Ballistisches Trauma</German>
             <Italian>Lenta Velocità Ferita</Italian>
             <Russian>Малая огнестрельная рана</Russian>
@@ -2889,6 +2895,7 @@
             <English>Locations boost training</English>
             <Czech>Místa pro vylepšení zkušeností</Czech>
             <Italian>Località aumentano addestramento</Italian>
+            <German>Örtliche Trainingssteigerung</German>
             <Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
         </Key>
@@ -2896,6 +2903,7 @@
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
             <Czech>Zlepšit zkušenosti zdravotníka v medickém vozidle nebo poblíž zdravotního zařízení [nezkušení se stane zdravotníkem, zdravotník se stane doktorem] </Czech>
             <Italian>Aumenta il rating medico in veicoli medici o vicino strutture mediche [non addestrato diventa medico, medico diventa dottore]</Italian>
+            <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
             <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
         </Key>
@@ -3069,7 +3077,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
-            <German>Behandle ferngesteuerte Einheiten als KI und nicht als Spieler?</German>
+            <German>Legt fest, ob ferngesteuerte Einheiten als KI anstatt als Spieler behandelt werden sollen.</German>
             <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
             <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
             <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
@@ -3144,7 +3152,7 @@
             <Russian>Коэффициент, изменяющий уровень боли</Russian>
             <Polish>Mnożnik modyfikujący intensywność bólu</Polish>
             <Spanish>Coeficiente para modificar la intensidad del dolor</Spanish>
-            <German>Multiplikator um den Schmerzintensität zu verändern</German>
+            <German>Multiplikator um die Schmerzintensität zu verändern</German>
             <Czech>Koeficient intenzity bolesti</Czech>
             <Portuguese>Coeficiente para modificar a instensidade de dor</Portuguese>
             <French>Coefficient modifiant l'intensité de la douleur</French>
@@ -3189,6 +3197,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
+            <German>Standard Sanitätseinstellungen [ACE]</German>
             <Polish>Podstawowe ustawienia medyczne</Polish>
             <Spanish>Ajustes médicos básicos [ACE]</Spanish>
         </Key>
@@ -3302,11 +3311,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
             <English>Allow Epinephrine</English>
+            <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
+            <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
         </Key>
@@ -3375,7 +3386,7 @@
             <Russian>Удалять аптечки после использования</Russian>
             <Polish>Usuń apteczkę po użyciu</Polish>
             <Spanish>Eliminar EPA después del uso</Spanish>
-            <German>Entferne Erste-Hilfe-Set bei Verwendung</German>
+            <German>Entf. Erste-Hilfe-Set bei Verwendung</German>
             <Czech>Odebrat osobní lékárničku po použití</Czech>
             <Portuguese>Remover o KPS depois do uso</Portuguese>
             <French>Enlever le KPS à l'utilisation</French>
@@ -3396,11 +3407,13 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
             <English>Locations Epinephrine</English>
+            <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
+            <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
         </Key>
@@ -3430,7 +3443,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
-            <German>Voraussetzungen für das Erste-Hilfe-Set</German>
+            <German>Bedingungen für d. Erste-Hilfe-Set</German>
             <Czech>Podmínka osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
             <French>Condition d'utilisation du KPS</French>
@@ -3574,7 +3587,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
-            <German>Voraussetzungen für den Operationskasten (erweitert)</German>
+            <German>Beding. für d. Operationskasten (erw.)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
             <Spanish>Condición de equipo quirúrgico (Av)</Spanish>
             <French>Conditions d'utilisation du kit de chirurgie</French>
@@ -3642,6 +3655,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
+            <German>Behandlungseinstellungen der Standard ACE-Medizin konfigurieren</German>
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
         </Key>
@@ -3998,7 +4012,7 @@
             <Russian>[ACE] Ящик с медикаментами (базовая медицина)</Russian>
             <Polish>[ACE] Skrzynka z zapasami medycznymi (podstawowa)</Polish>
             <Spanish>[ACE] Caja de suministros médicos (Básica)</Spanish>
-            <German>[ACE] Sanitätskiste (standard)</German>
+            <German>[ACE] Sanitätskiste (Standard)</German>
             <Czech>[ACE] Zdravotnické zásoby (základní)</Czech>
             <Portuguese>[ACE] Caixa com suprimentos médicos</Portuguese>
             <French>[ACE] Caisse médicale (basique)</French>
@@ -4075,7 +4089,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
-            <German>An diesem Körperteil befindet sich kein Tourniquet</German>
+            <German>An diesem Körperteil befindet sich kein Tourniquet!</German>
             <Polish>Na tej części ciała nie ma stazy!</Polish>
             <Spanish>No hay torniquete en esta parte del cuerpo!</Spanish>
             <Russian>Нет жгута на этой части тела!</Russian>
@@ -4087,28 +4101,29 @@
             <English>Medical training</English>
             <Polish>Wyszkolenie medyczne</Polish>
             <Italian>Addestramento Medico</Italian>
+            <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
             <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
+            <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_delayUnconCaptive">
-            <English>Delay Medical Unconscious Captivity</English>
+            <English>Delay cease fire of AI during medical unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
             <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
-            <English>Delay Medical Unconscious Captivity</English>
-            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
+            <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
-            <English>Delay Medical Unconscious Captivity</English>
-            <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <English>Delay cease fire of AI for unconsciousness</English>
+            <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
         </Key>
     </Package>
 </Project>
