@@ -1,3 +1,4 @@
+
 #define MACRO_REARM_ACTIONS \
         class ACE_Actions { \
             class ACE_MainActions { \
@@ -13,8 +14,8 @@
         };
 
 #define MACRO_REARM_TRUCK_ACTIONS \
-        class ACE_Actions : ACE_Actions { \
-            class ACE_MainActions : ACE_MainActions { \
+        class ACE_Actions: ACE_Actions { \
+            class ACE_MainActions: ACE_MainActions { \
                 class GVAR(TakeAmmo) { \
                     displayName = CSTRING(TakeAmmo); \
                     distance = REARM_ACTION_DISTANCE; \
@@ -36,9 +37,11 @@
             }; \
         };
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
-    class ACE_moduleRearmSettings : ACE_Module {
+    class ACE_moduleRearmSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_rearm.paa));
@@ -76,66 +79,66 @@ class CfgVehicles {
     };
 
     class LandVehicle;
-    class Car : LandVehicle {
+    class Car: LandVehicle {
         MACRO_REARM_ACTIONS
     };
 
-    class Tank : LandVehicle {
+    class Tank: LandVehicle {
         MACRO_REARM_ACTIONS
     };
 
-    class StaticWeapon : LandVehicle {
+    class StaticWeapon: LandVehicle {
         MACRO_REARM_ACTIONS
     };
 
     class Air;
-    class Helicopter : Air {
+    class Helicopter: Air {
         MACRO_REARM_ACTIONS
     };
 
-    class Plane : Air {
+    class Plane: Air {
         MACRO_REARM_ACTIONS
     };
 
     class Ship;
-    class Ship_F : Ship {
+    class Ship_F: Ship {
         MACRO_REARM_ACTIONS
     };
 
 
     // Ammo Vehicles (with full inheritance for granted ACE_Actions)
-    class Car_F : Car {};
-    class Truck_F : Car_F {};
+    class Car_F: Car {};
+    class Truck_F: Car_F {};
 
-    class Truck_03_base_F : Truck_F {};
-    class O_Truck_03_ammo_F : Truck_03_base_F {
+    class Truck_03_base_F: Truck_F {};
+    class O_Truck_03_ammo_F: Truck_03_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Truck_02_base_F : Truck_F {};
-    class Truck_02_Ammo_base_F : Truck_02_base_F {};
-    class I_Truck_02_ammo_F : Truck_02_Ammo_base_F {
+    class Truck_02_base_F: Truck_F {};
+    class Truck_02_Ammo_base_F: Truck_02_base_F {};
+    class I_Truck_02_ammo_F: Truck_02_Ammo_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
-    class O_Truck_02_Ammo_F : Truck_02_Ammo_base_F {
-        transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
-    };
-
-    class Truck_01_base_F : Truck_F {};
-    class B_Truck_01_transport_F : Truck_01_base_F {};
-    class B_Truck_01_mover_F : B_Truck_01_transport_F {};
-    class B_Truck_01_ammo_F : B_Truck_01_mover_F {
+    class O_Truck_02_Ammo_F: Truck_02_Ammo_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Helicopter_Base_F : Helicopter {};
-    class Helicopter_Base_H : Helicopter_Base_F {};
-    class Heli_Transport_04_base_F : Helicopter_Base_H {};
-    class O_Heli_Transport_04_ammo_F : Heli_Transport_04_base_F {
+    class Truck_01_base_F: Truck_F {};
+    class B_Truck_01_transport_F: Truck_01_base_F {};
+    class B_Truck_01_mover_F: B_Truck_01_transport_F {};
+    class B_Truck_01_ammo_F: B_Truck_01_mover_F {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+
+    class Helicopter_Base_F: Helicopter {};
+    class Helicopter_Base_H: Helicopter_Base_F {};
+    class Heli_Transport_04_base_F: Helicopter_Base_H {};
+    class O_Heli_Transport_04_ammo_F: Heli_Transport_04_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
@@ -158,8 +161,7 @@ class CfgVehicles {
         };
     };
 
-    class B_Slingload_01_Ammo_F : Slingload_01_Base_F {
-        XEH_ENABLED;
+    class B_Slingload_01_Ammo_F: Slingload_01_Base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
@@ -167,8 +169,11 @@ class CfgVehicles {
 
     // Dummy Vehicles
     class ThingX;
-    class GVAR(defaultCarriedObject) : ThingX {
-        XEH_ENABLED;
+    class GVAR(defaultCarriedObject): ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         displayName = QGVAR(dummy_obj);
         scope = 1;
         scopeCurator = 1;
@@ -187,59 +192,59 @@ class CfgVehicles {
             };
         };
     };
-    class GVAR(Bo_GBU12_LGB) : GVAR(defaultCarriedObject) {
+    class GVAR(Bo_GBU12_LGB): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_01_F.p3d";
     };
-    class GVAR(Bo_Mk82) : GVAR(defaultCarriedObject) {
+    class GVAR(Bo_Mk82): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Bomb_02_F";
     };
-    class GVAR(Bomb_04_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Bomb_04_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_F.p3d";
     };
-    class GVAR(Bomb_03_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Bomb_03_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Bomb_03_F.p3d";
     };
-    class GVAR(Missile_AA_04_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Missile_AA_04_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_04_F.p3d";
     };
-    class GVAR(Missile_AA_03_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Missile_AA_03_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AA_03_F.p3d";
     };
-    class GVAR(Missile_AGM_02_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Missile_AGM_02_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_02_F.p3d";
     };
-    class GVAR(Missile_AGM_01_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Missile_AGM_01_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
     };
-    class GVAR(R_230mm_fly) : GVAR(defaultCarriedObject) {
+    class GVAR(R_230mm_fly): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-    class GVAR(R_230mm_HE) : GVAR(defaultCarriedObject) {
+    class GVAR(R_230mm_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Missile_AT_02_F";
     };
-    class GVAR(M_PG_AT) : GVAR(defaultCarriedObject) {
+    class GVAR(M_PG_AT): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F\Ammo\Rocket_01_F";
     };
-    class GVAR(Rocket_04_HE_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Rocket_04_HE_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_HE_F.p3d";
     };
-    class GVAR(Rocket_03_HE_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Rocket_03_HE_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(Rocket_04_AP_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Rocket_04_AP_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_04_AP_F.p3d";
     };
-    class GVAR(Rocket_03_AP_F) : GVAR(defaultCarriedObject) {
+    class GVAR(Rocket_03_AP_F): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_AP_F.p3d";
     };
     // Using wrong model
-    class GVAR(R_80mm_HE) : GVAR(defaultCarriedObject) {
+    class GVAR(R_80mm_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(R_60mm_HE) : GVAR(defaultCarriedObject) {
+    class GVAR(R_60mm_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
-    class GVAR(R_Hydra_HE) : GVAR(defaultCarriedObject) {
+    class GVAR(R_Hydra_HE): GVAR(defaultCarriedObject) {
         model = "\A3\Weapons_F_EPC\Ammo\Rocket_03_HE_F.p3d";
     };
 };

@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -51,7 +53,10 @@ class CfgVehicles {
         };
     };
     class ACE_SpottingScopeObject: StaticATWeapon {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         side = 1;
         typicalCargo[] = {"Soldier"};

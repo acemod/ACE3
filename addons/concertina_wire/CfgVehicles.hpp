@@ -1,11 +1,13 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Fence;
-    class ThingX;
-    class NonStrategic;
-
     class ACE_ConcertinaWireNoGeo: Fence {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         displayName = "";
         model = PATHTOF(data\ACE_ConcertinaWireNoGeo.p3d);
@@ -94,8 +96,13 @@ class CfgVehicles {
             };
         };
     };
+
+    class ThingX;
     class ACE_ConcertinaWireCoil: ThingX {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRECOIL;
         model = PATHTOF(data\ACE_ConcertinaWireCoil.p3d);
@@ -137,7 +144,10 @@ class CfgVehicles {
         };
     };
 
+    class NonStrategic;
     class Land_Razorwire_F: NonStrategic {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
 };
