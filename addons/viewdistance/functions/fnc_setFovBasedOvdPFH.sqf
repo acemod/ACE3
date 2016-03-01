@@ -36,9 +36,9 @@ _zoom = (call CBA_fnc_getFov) select 1;
 if ((vehicle ACE_player) isKindOf "Air") exitWith {
     if (_zoom > VD_ZOOM_NORMAL) then {
         // Dynamically set Object View Distance based on player's Zoom Level and View Distance
-    	setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION_AIR * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
+        setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION_AIR * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
     } else {
-    	setObjectViewDistance (GVAR(fovBasedPFHminimalViewDistance) + viewDistance / 10);
+        setObjectViewDistance (GVAR(fovBasedPFHminimalViewDistance) + viewDistance / 10);
     };
     TRACE_2("FoV Based",getObjectViewDistance select 0,_zoom);
 };
@@ -46,8 +46,8 @@ if ((vehicle ACE_player) isKindOf "Air") exitWith {
 // Land
 if (_zoom > VD_ZOOM_NORMAL) then {
     // Dynamically set Object View Distance based on player's Zoom Level and View Distance
-	setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
+    setObjectViewDistance ((_zoom / VD_ZOOM_DIVISION * (viewDistance - GVAR(fovBasedPFHminimalViewDistance))) + GVAR(fovBasedPFHminimalViewDistance));
 } else {
-	setObjectViewDistance GVAR(fovBasedPFHminimalViewDistance);
+    setObjectViewDistance GVAR(fovBasedPFHminimalViewDistance);
 };
 TRACE_2("FoV Based",getObjectViewDistance select 0,_zoom);
