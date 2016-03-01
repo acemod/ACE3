@@ -1,6 +1,7 @@
 
 PREP(calculateCooling);
 PREP(canUnjam);
+PREP(checkSpareBarrelsTemperatures);
 PREP(checkTemperature);
 PREP(clearJam);
 PREP(displayTemperature);

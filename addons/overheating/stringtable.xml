@@ -230,7 +230,10 @@
             <Russian>Проверка температуры...</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
-            <English>Check spare barrel temperatures</English>
+            <English>Check spare barrels temperatures</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
+            <English>Checking spare barrels temperatures...</English>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
