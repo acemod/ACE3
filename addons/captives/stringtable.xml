@@ -201,7 +201,7 @@
             <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
             <Italian>Sincronizza un'unità per metterle le manette.</Italian>
             <Spanish>Sincroniza una unidad para hacer que esté esposada.</Spanish>
-            <French>Synchronise une unité pour la rendre captive.</French>
+            <French>Synchronisez une unité pour la rendre captive.</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -234,7 +234,7 @@
             <Czech>Může spoutat spolubojovníky</Czech>
             <German>Kann Kameraden fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
-            <French>Peut menotter sa propre faction</French>
+            <French>Peut capturer sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
             <Russian>Связать союзника</Russian>
             <Italian>Puoi ammanettare unità alleate</Italian>
@@ -295,7 +295,7 @@
             <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
             <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
             <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
-            <French>Requiert la reddition des joueurs avant qu'ils ne puissent être arrêtés</French>
+            <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -317,7 +317,7 @@
             <Spanish>Rendición o desarme</Spanish>
             <Czech>Vzdávání nebo beze zbraně</Czech>
             <Italian>Resa o senza armi</Italian>
-            <French>Reddition ou désarmement</French>
+            <French>Capitulation ou desarmé</French>
         </Key>
     </Package>
 </Project>

@@ -4,8 +4,8 @@
 #define PREFIX ace
 
 #define MAJOR 3
-#define MINOR 4
-#define PATCHLVL 3
+#define MINOR 5
+#define PATCHLVL 0
 #define BUILD 0
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD

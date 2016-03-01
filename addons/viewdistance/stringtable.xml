@@ -262,6 +262,7 @@
             <Polish>Oparty na FoV</Polish>
             <Italian>Basato su Campo Visivo (FoV)</Italian>
             <Spanish>Basada en campo de visión</Spanish>
+            <French>Champ de vision basé</French>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>

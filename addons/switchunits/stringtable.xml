@@ -20,6 +20,7 @@
             <Polish>Próba zmiany</Polish>
             <Italian>Sto provando a cambiare</Italian>
             <Spanish>Intentando cambiar</Spanish>
+            <French>Essaye de basculer</French>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -160,7 +161,7 @@
             <German>Aktiviere eine Sicherheitszone um feindliche Einheiten? Spieler können nicht zu Einheiten in der Sicherheitszone wechseln.</German>
             <Czech>Povolit bezpečnou zónu kolem nepřátelských jednotek? Hráči se nemohou změnit strany/jednotky uvnitř bezpečné zóny.</Czech>
             <Portuguese>Habilitar uma zona segur ao redor das unidades inimigas? Jogadores não conseguirão trocar para unidades dentro dessa zona segura.</Portuguese>
-            <French>Activer une zone sécurisée autour des enemis?  Les joueurs ne peuvent changer d'unité dand la zone sécurisée</French>
+            <French>Activer une zone sécurisée autour des enemis ? Les joueurs ne peuvent changer d'unité dand la zone sécurisée</French>
             <Hungarian>Engedélyezve legyen-e egy biztonságos zóna az ellenségek körül? A játékosok nem tudnak a biztonságos zónán belüli egységekre váltani.</Hungarian>
             <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>

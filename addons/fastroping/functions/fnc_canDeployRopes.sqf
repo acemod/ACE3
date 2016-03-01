@@ -17,14 +17,16 @@
 
 #include "script_component.hpp"
 params ["_unit", "_vehicle"];
-private ["_deployedRopes", "_config"];
+private ["_config", "_enabled", "_deploymentStage"];
 
-_deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+_enabled = getNumber (_config >> QGVAR(enabled));
+_deploymentStage = _vehicle getVariable [QGVAR(deploymentStage), 0];
 
-((driver _vehicle != _unit) &&
+(driver _vehicle != _unit) &&
+{getPos _vehicle select 2 > 2} &&
+{_enabled == 1 || {_enabled == 2 && {!(isNull (_vehicle getVariable [QGVAR(FRIES), objNull]))}}} &&
 {
-    ((_vehicle getVariable [QGVAR(deploymentStage), 0]) == 2) ||
-    {!(isText (_config >> QGVAR(onPrepare))) && {(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 0}}
-} &&
-{getPos _vehicle select 2 > 2})
+    (_deploymentStage == 0 && {getText (_config >> QGVAR(onPrepare)) == ""}) ||
+    {_deploymentStage == 2 && {getText (_config >> QGVAR(onPrepare)) != ""}}
+}

@@ -32,7 +32,7 @@
             <Portuguese>Mostrar DAGR</Portuguese>
             <Czech>Přepnout DAGR</Czech>
             <Italian>Apri DAGR</Italian>
-            <French>Afficher le DAGR</French>
+            <French>Activer/Desactiver le DAGR</French>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
