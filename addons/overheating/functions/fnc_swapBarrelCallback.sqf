@@ -34,7 +34,7 @@ private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >
 // store the removed barrel with the former weapon temperature. The server
 // also updates the current weapon temperature to match that of the new
 // loaded barrel.
-["spareBarrelLoadedCoolest", [_player, _weapon, _temp, _barrelMass]] call EFUNC(common,serverEvent);
+["spareBarrelsLoadCoolest", [_player, _weapon, _temp, _barrelMass]] call EFUNC(common,serverEvent);
 
 // Store the update time
 _player setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
