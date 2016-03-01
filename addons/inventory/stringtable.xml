@@ -20,7 +20,7 @@
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
+            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
@@ -32,6 +32,7 @@
             <Polish>Plecaki</Polish>
             <Italian>Zaini</Italian>
             <Spanish>Mochilas</Spanish>
+            <French>Sacs à dos</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -40,6 +41,7 @@
             <Polish>Hełmy</Polish>
             <Italian>Copricapi</Italian>
             <Spanish>Cascos</Spanish>
+            <French>Equipement de tête</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -48,6 +50,7 @@
             <Polish>Gogle</Polish>
             <Italian>Occhiali</Italian>
             <Spanish>Gafas</Spanish>
+            <French>Lunettes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -56,6 +59,7 @@
             <Polish>Uniformy</Polish>
             <Italian>Uniformi</Italian>
             <Spanish>Uniformes</Spanish>
+            <French>Uniformes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -64,6 +68,7 @@
             <Polish>Kamizelki</Polish>
             <Italian>Vests</Italian>
             <Spanish>Chalecos</Spanish>
+            <French>Vestes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -72,6 +77,7 @@
             <Polish>Granaty</Polish>
             <Italian>Granate</Italian>
             <Spanish>Granadas</Spanish>
+            <French>Grenades</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -80,6 +86,7 @@
             <Polish>Medyczne</Polish>
             <Italian>Medico</Italian>
             <Spanish>Médico</Spanish>
+            <French>Médicale</French>
         </Key>
     </Package>
 </Project>

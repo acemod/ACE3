@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="FCS">
         <Key ID="STR_ACE_FCS_LaseTarget">
@@ -19,7 +19,7 @@
             <Spanish>Ajustado a</Spanish>
             <Polish>Wyzerowany na</Polish>
             <Czech>Nastaveno na</Czech>
-            <French>Zéroté à</French>
+            <French>Remise à zéro à</French>
             <Russian>Выставлено на</Russian>
             <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>

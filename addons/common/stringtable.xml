@@ -738,7 +738,7 @@
             <Czech>ACE3 Vybavení</Czech>
             <Spanish>ACE3 Equipo</Spanish>
             <Italian>Equipaggiamento ACE3</Italian>
-            <French>Equipement ACE3</French>
+            <French>ACE3 Equipement</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
@@ -749,7 +749,7 @@
             <Spanish>ACE3 Común</Spanish>
             <Czech>ACE3 Obecné</Czech>
             <Italian>Comune ACE3</Italian>
-            <French>Commun ACE3</French>
+            <French>ACE3 Commun</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -760,7 +760,7 @@
             <Czech>ACE3 Zbraně</Czech>
             <Spanish>ACE3 Armas</Spanish>
             <Italian>Armi ACE3</Italian>
-            <French>Armes ACE3</French>
+            <French>ACE3 Armes</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
@@ -771,7 +771,7 @@
             <Spanish>ACE3 Movimiento</Spanish>
             <Czech>ACE3 Pohyb</Czech>
             <Italian>Movimento ACE3</Italian>
-            <French>Mouvement ACE3</French>
+            <French>ACE3 Mouvement</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
@@ -782,7 +782,7 @@
             <Czech>ACE3 Nastavení optiky</Czech>
             <Spanish>ACE3 Ajuste de miras</Spanish>
             <Italian>Regolazione Ottiche ACE3</Italian>
-            <French>Ajustement de la lunette ACE3</French>
+            <French>ACE3 Ajustement de la lunette </French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
@@ -793,7 +793,7 @@
             <Czech>ACE3 Vozidla</Czech>
             <Spanish>ACE3 Vehículos</Spanish>
             <Italian>Veicoli ACE3</Italian>
-            <French>Vehicules ACE3</French>
+            <French>ACE3 Vehicules</French>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
