@@ -24,9 +24,6 @@ TRACE_2("params",_player,_weapon);
 _player playAction QGVAR(GestureMountMuzzle);
 playSound "ACE_BarrelSwap";
 
-// don't consume the barrel, but rotate through them.
-[localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
-
 private _temp = _player getVariable [format [QGVAR(%1_temp), _weapon], 0];
 private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 

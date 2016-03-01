@@ -55,3 +55,8 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
         ["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
     };
 }] call EFUNC(common,addEventHandler);
+
+// Install event handlers to display temp when a barrel was swapped
+["barrelSwapped", {
+    _this call FUNC(displayTemperature);
+}] call EFUNC(common,addEventHandler);

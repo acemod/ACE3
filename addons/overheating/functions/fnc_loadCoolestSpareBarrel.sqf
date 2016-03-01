@@ -48,3 +48,5 @@ _unit setVariable [format [QGVAR(%1_temp), _weapon], _coolestTemp, true];
 // Heat up the coolest barrel to the former weapon temperature
 [GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, ACE_Time, _barrelMass]] call CBA_fnc_hashSet;
 
+// Send an event so the local machine can show the hint
+["barrelSwapped", _unit, [_unit, _weapon]] call EFUNC(common,objectEvent);
