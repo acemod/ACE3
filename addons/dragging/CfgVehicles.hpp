@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     // Static weapons
     class LandVehicle;
@@ -85,7 +87,10 @@ class CfgVehicles {
 
     // Barrier
     class RoadCone_F: ThingX {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 0;

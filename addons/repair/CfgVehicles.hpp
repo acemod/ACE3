@@ -15,6 +15,8 @@
         }; \
     };
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRepairSettings: ACE_Module {
@@ -304,7 +306,10 @@ class CfgVehicles {
 
     class ThingX;
     class ACE_RepairItem_Base: ThingX {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
