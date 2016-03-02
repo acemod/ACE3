@@ -59,8 +59,8 @@ GVAR(Overlay) = true;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (ACE_diagTime > GVAR(updateTimer)) then {
-        GVAR(updateTimer) = ACE_diagTime + 1;
+    if (diag_tickTime > GVAR(updateTimer)) then {
+        GVAR(updateTimer) = diag_tickTime + 1;
 
         private ["_outputData"];
         _outputData = [] call FUNC(generateOutputData);

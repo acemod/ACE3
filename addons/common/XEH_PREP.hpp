@@ -276,5 +276,3 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
-
-PREP(timePFH);

@@ -134,19 +134,19 @@ GVAR(menuRun) = true;
                         GVAR(vectorConnected) = false;
                         if (!GVAR(busy)) then {
                             GVAR(busy) = true;
-                            GVAR(busyTimer) = ACE_time;
+                            GVAR(busyTimer) = CBA_missionTime;
                         };
                         (__dsp displayCtrl __mainText) ctrlSetText "Acquiring Data.";
-                        if (ACE_time - GVAR(busyTimer) > 0.5) then {
+                        if (CBA_missionTime - GVAR(busyTimer) > 0.5) then {
                             (__dsp displayCtrl __mainText) ctrlSetText "Acquiring Data..";
                         };
-                        if (ACE_time - GVAR(busyTimer) > 1.0) then {
+                        if (CBA_missionTime - GVAR(busyTimer) > 1.0) then {
                             (__dsp displayCtrl __mainText) ctrlSetText "Acquiring Data...";
                         };
-                        if (ACE_time - GVAR(busyTimer) > 1.5) then {
+                        if (CBA_missionTime - GVAR(busyTimer) > 1.5) then {
                             (__dsp displayCtrl __mainText) ctrlSetText "Position Acquired";
                         };
-                        if (ACE_time - GVAR(busyTimer) > 3.0) then {
+                        if (CBA_missionTime - GVAR(busyTimer) > 3.0) then {
                             GVAR(busy) = false;
                         };
                     };
@@ -156,7 +156,7 @@ GVAR(menuRun) = true;
                             if (!GVAR(busy)) then {
                                 GVAR(showNoWaypointsFound) = true;
                                 GVAR(busy) = true;
-                                GVAR(busyTimer) = ACE_time;
+                                GVAR(busyTimer) = CBA_missionTime;
                             };
                         } else {
                             GVAR(menu) = "goto_wp"; GVAR(numSelections) = GVAR(numWaypoints); GVAR(selection) = 0;
@@ -168,7 +168,7 @@ GVAR(menuRun) = true;
                  };
             };
             if (GVAR(busy) && GVAR(showNoWaypointsFound)) then {
-                if (ACE_time - GVAR(busyTimer) > 2) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 2) then {
                     GVAR(showNoWaypointsFound) = false;
                     GVAR(busy) = false;
                 };
@@ -206,21 +206,21 @@ GVAR(menuRun) = true;
                 if (!GVAR(busy)) then {
                     GVAR(showInfoUpdating) = true;
                     GVAR(busy) = true;
-                    GVAR(busyTimer) = ACE_time;
+                    GVAR(busyTimer) = CBA_missionTime;
                 };
             };
             if (GVAR(busy) && GVAR(showInfoUpdating)) then {
                 (__dsp displayCtrl __mainText) ctrlSetText "Info Update.";
-                if (ACE_time - GVAR(busyTimer) > 1) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 1) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Info Update..";
                 };
-                if (ACE_time - GVAR(busyTimer) > 1.2) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 1.2) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Info Update...";
                 };
-                if (ACE_time - GVAR(busyTimer) > 1.4) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 1.4) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Info Updated";
                 };
-                if (ACE_time - GVAR(busyTimer) > 2.9) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 2.9) then {
                     GVAR(showInfoUpdating) = false;
                     GVAR(busy) = false;
                 };
@@ -289,21 +289,21 @@ GVAR(menuRun) = true;
                         GVAR(numSelections) = GVAR(numWaypoints);
                         GVAR(showDeleting) = true;
                         GVAR(busy) = true;
-                        GVAR(busyTimer) = ACE_time;
+                        GVAR(busyTimer) = CBA_missionTime;
                     };
                 };
                 if (GVAR(busy) && GVAR(showDeleting)) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Deleting.";
-                    if (ACE_time - GVAR(busyTimer) > 1) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Deleting..";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 1.2) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1.2) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Deleting...";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 1.4) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1.4) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Waypoint Deleted";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 2.9) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 2.9) then {
                         GVAR(showDeleting) = false;
                         GVAR(busy) = false;
                     };
@@ -313,7 +313,7 @@ GVAR(menuRun) = true;
                         if (!GVAR(busy)) then {
                             GVAR(showOutOfSpace) = true;
                             GVAR(busy) = true;
-                            GVAR(busyTimer) = ACE_time;
+                            GVAR(busyTimer) = CBA_missionTime;
                         };
                     } else {
                         GVAR(digit1) = 0;
@@ -330,7 +330,7 @@ GVAR(menuRun) = true;
                 };
                 if (GVAR(busy) && GVAR(showOutOfSpace)) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Out of Space";
-                    if (ACE_time - GVAR(busyTimer) > 2.5) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 2.5) then {
                         GVAR(showOutOfSpace) = false;
                         GVAR(busy) = false;
                     };
@@ -425,22 +425,22 @@ GVAR(menuRun) = true;
                             };
                         };
                         GVAR(busy) = true;
-                        GVAR(busyTimer) = ACE_time;
+                        GVAR(busyTimer) = CBA_missionTime;
                     };
                     (__dsp displayCtrl __F1) ctrlSetText "";
                     (__dsp displayCtrl __F2) ctrlSetText "";
                     (__dsp displayCtrl __F3) ctrlSetText "";
                     (__dsp displayCtrl __mainText) ctrlSetText "Saving.";
-                    if (ACE_time - GVAR(busyTimer) > 1) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Saving..";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 1.2) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1.2) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Saving...";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 1.4) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 1.4) then {
                         (__dsp displayCtrl __mainText) ctrlSetText "Waypoint Saved";
                     };
-                    if (ACE_time - GVAR(busyTimer) > 2.9) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 2.9) then {
                         GVAR(edit) = false;
                         GVAR(add) = false;
                         GVAR(busy) = false;
@@ -464,7 +464,7 @@ GVAR(menuRun) = true;
                 if (GVAR(F3)) then {
                     if (!GVAR(busy)) then {
                         GVAR(busy) = true;
-                        GVAR(busyTimer) = ACE_time;
+                        GVAR(busyTimer) = CBA_missionTime;
                     } else {
                         (__dsp displayCtrl __F1) ctrlSetText "Save";
                         (__dsp displayCtrl __F2) ctrlSetText "Vector";
@@ -472,7 +472,7 @@ GVAR(menuRun) = true;
                         GVAR(output) = str GVAR(digit1) + str GVAR(digit2) + str GVAR(digit3) + str GVAR(digit4) + str GVAR(digit5) + str GVAR(digit6) + str GVAR(digit7) + str GVAR(digit8);
                         (__dsp displayCtrl __mainText) ctrlSetText GVAR(output);
                     };
-                    if (ACE_time - GVAR(busyTimer) > 0.1) then {
+                    if (CBA_missionTime - GVAR(busyTimer) > 0.1) then {
                         GVAR(add) = false;
                         GVAR(edit) = false;
                         GVAR(busy) = false;
@@ -512,16 +512,16 @@ GVAR(menuRun) = true;
             if (GVAR(SEL)) then {
                 if (!GVAR(busy)) then {
                     GVAR(busy) = true;
-                    GVAR(busyTimer) = ACE_time;
+                    GVAR(busyTimer) = CBA_missionTime;
                 };
                 (__dsp displayCtrl __mainText) ctrlSetText "Connecting.";
-                if (ACE_time - GVAR(busyTimer) > 0.2) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.2) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Connecting..";
                 };
-                if (ACE_time - GVAR(busyTimer) > 0.4) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.4) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Connecting...";
                 };
-                if (ACE_time - GVAR(busyTimer) > 0.6) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.6) then {
                     if (ACE_player hasWeapon "ACE_Vector") then {
                         GVAR(displaySelection) = "VECTOR";
                         (__dsp displayCtrl __mainText) ctrlSetText "Vector Connected";
@@ -531,7 +531,7 @@ GVAR(menuRun) = true;
                         GVAR(vectorConnected) = false;
                     };
                 };
-                if (ACE_time - GVAR(busyTimer) > 3.1) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 3.1) then {
                     GVAR(busy) = false;
                     if (GVAR(vectorConnected)) then {
                         GVAR(menu) = "main"; GVAR(numSelections) = 5;
@@ -556,19 +556,19 @@ GVAR(menuRun) = true;
                 GVAR(updateInterval) = GVAR(tmpUpdateRate);
                 if (!GVAR(busy)) then {
                     GVAR(busy) = true;
-                    GVAR(busyTimer) = ACE_time;
+                    GVAR(busyTimer) = CBA_missionTime;
                 };
                 (__dsp displayCtrl __mainText) ctrlSetText "Updating.";
-                if (ACE_time - GVAR(busyTimer) > 0.2) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.2) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Updating..";
                 };
-                if (ACE_time - GVAR(busyTimer) > 0.4) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.4) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Updating...";
                 };
-                if (ACE_time - GVAR(busyTimer) > 0.6) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 0.6) then {
                     (__dsp displayCtrl __mainText) ctrlSetText "Update Success";
                 };
-                if (ACE_time - GVAR(busyTimer) > 2.1) then {
+                if (CBA_missionTime - GVAR(busyTimer) > 2.1) then {
                     GVAR(busy) = false;
                     GVAR(menu) = "options"; GVAR(numSelections) = 2;
                 };

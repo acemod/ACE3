@@ -39,9 +39,9 @@ _target setVariable [QGVAR(tourniquets), _tourniquets, true];
         // Tourniquet has been removed
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
-    if (ACE_time - _time > 120) then {
+    if (CBA_missionTime - _time > 120) then {
         _target setVariable [QGVAR(pain), (_target getVariable [QGVAR(pain), 0]) + 0.005];
     };
-}, 5, [_target, _applyingTo, _part, ACE_time] ] call CBA_fnc_addPerFrameHandler;
+}, 5, [_target, _applyingTo, _part, CBA_missionTime] ] call CBA_fnc_addPerFrameHandler;
 
 true

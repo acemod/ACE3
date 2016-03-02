@@ -30,7 +30,7 @@ createDialog "ace_huntir_cam_dialog_off";
     createDialog "ace_huntir_cam_dialog_inactive";
     uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18881];
     [{
-        GVAR(startTime) = ACE_time;
+        GVAR(startTime) = CBA_missionTime;
         GVAR(done) = false;
         GVAR(connectionDelay) = 5;
         GVAR(state) = "searching";
@@ -44,7 +44,7 @@ createDialog "ace_huntir_cam_dialog_off";
             };
 
             private ["_elapsedTime", "_nearestHuntIRs"];
-            _elapsedTime = ACE_time - GVAR(startTime);
+            _elapsedTime = CBA_missionTime - GVAR(startTime);
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
 
             if ((!dialog) || GVAR(done)) exitWith {

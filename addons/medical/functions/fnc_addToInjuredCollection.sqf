@@ -27,8 +27,8 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
     [{
         params ["_args", "_idPFH"];
         _args params ["_unit", "_interval"];
-        _interval = ACE_time - _interval;
-        (_this select 0) set [1, ACE_time];
+        _interval = CBA_missionTime - _interval;
+        (_this select 0) set [1, CBA_missionTime];
 
         if (!alive _unit || !local _unit) then {
            [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -55,5 +55,5 @@ if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
                 [_unit, _pain] call FUNC(playInjuredSound);
             };
         };
-    }, 1, [_unit, ACE_time]] call CBA_fnc_addPerFrameHandler;
+    }, 1, [_unit, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 };

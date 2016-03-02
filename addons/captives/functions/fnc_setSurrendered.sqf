@@ -103,7 +103,7 @@ if (_state) then {
             params ["_args", "_pfID"];
             _args params ["_unit", "_maxTime"];
             //If waited long enough or they re-surrendered or they are unconscious, exit loop
-            if ((ACE_time > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
+            if ((CBA_missionTime > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
             };
             //Only break animation if they are actualy the "hands up" animation (because we are using switchmove there won't be an transition)
@@ -112,7 +112,7 @@ if (_state) then {
                 //Break out of hands up animation loop
                 [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
-        }, 0, [_unit, (ACE_time + 20)]] call CBA_fnc_addPerFrameHandler;
+        }, 0, [_unit, (CBA_missionTime + 20)]] call CBA_fnc_addPerFrameHandler;
     };
 };
 

@@ -29,4 +29,4 @@ playSound "ACE_BarrelSwap";
 // Publish the temperature variable
 _player setVariable [format [QGVAR(%1_temp), _weapon], 0, true];
 // Store the update time
-_player setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
+_player setVariable [format [QGVAR(%1_time), _weapon], CBA_missionTime];

@@ -19,5 +19,5 @@
 
 params ["_func", "_params", "_delay"];
 
-GVAR(waitAndExecArray) pushBack [ACE_time + _delay, _func, _params];
+GVAR(waitAndExecArray) pushBack [CBA_missionTime + _delay, _func, _params];
 GVAR(waitAndExecArray) sort true;

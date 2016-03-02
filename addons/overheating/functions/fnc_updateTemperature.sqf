@@ -72,7 +72,7 @@ _fnc_cooling = {
 };
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, ACE_time - _lastTime] call _fnc_cooling;
+_temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call _fnc_cooling;
 TRACE_1("cooledTo",_temperature);
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
@@ -81,6 +81,6 @@ _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 // Store the update time locally
-_unit setVariable [_timeVarName, ACE_time];
+_unit setVariable [_timeVarName, CBA_missionTime];
 
 _temperature

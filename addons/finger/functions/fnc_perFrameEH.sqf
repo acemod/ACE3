@@ -31,7 +31,7 @@ _iconSize = BASE_SIZE * _fovCorrection;
 {
     _data = HASH_GET(GVAR(fingersHash), _x);
     _data params ["_lastTime", "_pos", "_name"];
-    _timeLeftToShow = _lastTime + FP_TIMEOUT - ACE_diagTime;
+    _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {
         HASH_REM(GVAR(fingersHash), _x);
     } else {

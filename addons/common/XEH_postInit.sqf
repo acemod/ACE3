@@ -13,7 +13,7 @@
     BEGIN_COUNTER(waitAndExec);
 
     //Handle the waitAndExec array:
-    while {!(GVAR(waitAndExecArray) isEqualTo []) && {GVAR(waitAndExecArray) select 0 select 0 <= ACE_Time}} do {
+    while {!(GVAR(waitAndExecArray) isEqualTo []) && {GVAR(waitAndExecArray) select 0 select 0 <= CBA_missionTime}} do {
         private _entry = GVAR(waitAndExecArray) deleteAt 0;
         (_entry select 2) call (_entry select 1);
     };

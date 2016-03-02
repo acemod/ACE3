@@ -24,7 +24,7 @@ GVAR(keyDownSelfAction) = false;
 GVAR(keyDownTime) = 0;
 GVAR(openedMenuType) = -1;
 
-GVAR(lastTime) = ACE_diagTime;
+GVAR(lastTime) = diag_tickTime;
 GVAR(rotationAngle) = 0;
 
 GVAR(selectedAction) = [[],[]];
@@ -40,8 +40,8 @@ GVAR(lastPath) = [];
 
 GVAR(expanded) = false;
 
-GVAR(startHoverTime) = ACE_diagTime;
-GVAR(expandedTime) = ACE_diagTime;
+GVAR(startHoverTime) = diag_tickTime;
+GVAR(expandedTime) = diag_tickTime;
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 

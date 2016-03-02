@@ -115,7 +115,7 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     };
 }, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
 
-_startingTime = ACE_time;
+_startingTime = CBA_missionTime;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

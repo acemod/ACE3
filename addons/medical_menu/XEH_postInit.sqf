@@ -31,7 +31,7 @@ GVAR(pendingReopen) = false;
     false
 },
 {
-    if (ACE_time - GVAR(lastOpenedOn) > 0.5) exitWith {
+    if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
     false

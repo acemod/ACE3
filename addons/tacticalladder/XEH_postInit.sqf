@@ -8,7 +8,7 @@ GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
 /*["interactMenuOpened", {
-    if ((ACE_time > GVAR(cancelTime)) && !isNull GVAR(ladder)) then {
+    if ((CBA_missionTime > GVAR(cancelTime)) && !isNull GVAR(ladder)) then {
         GVAR(ladder) call FUNC(cancelTLdeploy);
     };
 }] call EFUNC(common,addEventHandler);*/

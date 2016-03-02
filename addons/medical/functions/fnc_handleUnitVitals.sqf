@@ -19,9 +19,9 @@ TRACE_3("ACE_DEBUG",_unit,_interval,_unit);
 if (_interval == 0) exitWith {};
 
 _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
-_syncValues = (ACE_time - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
+_syncValues = (CBA_missionTime - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
 if (_syncValues) then {
-    _unit setVariable [QGVAR(lastMomentValuesSynced), ACE_time];
+    _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
 _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));

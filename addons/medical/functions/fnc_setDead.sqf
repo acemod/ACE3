@@ -38,7 +38,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     };
 
     _unit setVariable [QGVAR(inReviveState), true, true];
-    _unit setVariable [QGVAR(reviveStartTime), ACE_time];
+    _unit setVariable [QGVAR(reviveStartTime), CBA_missionTime];
     [_unit, true] call FUNC(setUnconscious);
 
     [{
@@ -53,7 +53,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
             [_unit] call EFUNC(common,unloadPerson);
         };
 
-        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
+        if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTime)}) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
             _unit setVariable [QGVAR(inReviveState), nil, true];
             _unit setVariable [QGVAR(reviveStartTime), nil];

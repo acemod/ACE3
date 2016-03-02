@@ -25,7 +25,7 @@ if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
 
 GVAR(lastHint) params ["_lastHintTime", "_lastHintPriority"];
 
-private _time = ACE_time;
+private _time = CBA_missionTime;
 
 if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;
