@@ -56,7 +56,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 1.5;
+                distance = 1;
                 condition = "true";
                 class ACE_Defuse {
                     displayName = CSTRING(Defuse);
@@ -66,7 +66,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = PATHTOF(UI\Defuse_ca.paa);
                     priority = 0.8;
-                    distance = 1;
                 };
             };
         };
