@@ -256,6 +256,7 @@ class CfgVehicles {
 
     // Ammo boxes
     class ThingX;
+    class Items_base_F;
     class ReammoBox_F: ThingX {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
@@ -278,6 +279,22 @@ class CfgVehicles {
     class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
         GVAR(canLoad) = 0;
     };
+
+    class PlasticCase_01_base_F: Items_base_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    };
+    class Land_PlasticCase_01_large_F: PlasticCase_01_base_F {
+        GVAR(size) = 2; // 1 = small, 2 = large
+    };
+    class MetalCase_01_base_F: Items_base_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    };
+    class Land_MetalCase_01_large_F: MetalCase_01_base_F {
+        GVAR(size) = 2; // 1 = small, 2 = large
+    };
+
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
