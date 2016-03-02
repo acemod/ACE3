@@ -12,74 +12,6 @@
 }
 
 class CfgVehicles {
-    class Building;
-    class NonStrategic: Building {
-        class AnimationSources;
-    };
-    class ACE_friesBase: NonStrategic {
-        destrType = "";
-    };
-    class ACE_friesAnchorBar: ACE_friesBase {
-        author = "jokoho48";
-        scope = 1;
-        model = PATHTOF(data\friesAnchorBar.p3d);
-        animated = 1;
-        class AnimationSources: AnimationSources {
-            class extendHookRight {
-                source = "user";
-                initPhase = 0;
-                animPeriod = 1.5;
-            };
-            class extendHookLeft {
-                source = "user";
-                initPhase = 0;
-                animPeriod = 1.5;
-            };
-        };
-    };
-    class ACE_friesGantry: ACE_friesBase {
-        author = "jokoho48";
-        scope = 1;
-        model = PATHTOF(data\friesGantry.p3d);
-        animated = 1;
-        class AnimationSources: AnimationSources {
-            class adjustWidth {
-                source = "user";
-                initPhase = 0.211;
-                animPeriod = 0;
-            };
-            class rotateGantryLeft {
-                source = "user";
-                initPhase = 0;
-                animPeriod = 0;
-            };
-            class rotateGantryRight {
-                source = "user";
-                initPhase = 0;
-                animPeriod = 0;
-            };
-        };
-    };
-    class ACE_friesGantryReverse: ACE_friesGantry {
-        class AnimationSources: AnimationSources {
-            class adjustWidth {
-                source = "user";
-                initPhase = 0.213;
-                animPeriod = 0;
-            };
-            class rotateGantryLeft {
-                source = "user";
-                initPhase = 0.5;
-                animPeriod = 0;
-            };
-            class rotateGantryRight {
-                source = "user";
-                initPhase = 0.5;
-                animPeriod = 0;
-            };
-        };
-    };
-
     class Logic;
     class Module_F: Logic {
         class ModuleDescription;
@@ -103,8 +35,11 @@ class CfgVehicles {
         };
     };
 
-    class Air;
-    class Helicopter: Air {
+    class Helicopter_Base_F;
+    class ACE_friesBase: Helicopter_Base_F {
+        destrType = "";
+        class Turrets {};
+
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -136,22 +71,76 @@ class CfgVehicles {
             };
         };
     };
-
-    class Helicopter_Base_H;
-    class Helicopter_Base_F;
+    class ACE_friesAnchorBar: ACE_friesBase {
+        author = "jokoho48";
+        scope = 1;
+        model = PATHTOF(data\friesAnchorBar.p3d);
+        animated = 1;
+        class AnimationSources {
+            class extendHookRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 1.5;
+            };
+            class extendHookLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 1.5;
+            };
+        };
+    };
+    class ACE_friesGantry: ACE_friesBase {
+        author = "jokoho48";
+        scope = 1;
+        model = PATHTOF(data\friesGantry.p3d);
+        animated = 1;
+        class AnimationSources {
+            class adjustWidth {
+                source = "user";
+                initPhase = 0.211;
+                animPeriod = 0;
+            };
+            class rotateGantryLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+            class rotateGantryRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+        };
+    };
+    class ACE_friesGantryReverse: ACE_friesGantry {
+        class AnimationSources {
+            class adjustWidth {
+                source = "user";
+                initPhase = 0.213;
+                animPeriod = 0;
+            };
+            class rotateGantryLeft {
+                source = "user";
+                initPhase = 0.5;
+                animPeriod = 0;
+            };
+            class rotateGantryRight {
+                source = "user";
+                initPhase = 0.5;
+                animPeriod = 0;
+            };
+        };
+    };
 
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
         scope = 1;
         model = PATHTOF(data\helper.p3d);
-        class ACE_Actions {
-            class ACE_MainActions {
-                condition = "false";
-            };
-        };
+        class ACE_Actions {};
         class Turrets {};
     };
 
+    class Helicopter_Base_H;
     class Heli_Light_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
