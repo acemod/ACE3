@@ -20,7 +20,7 @@
             <German>Bereite Fast Roping System vor</German>
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système de corde lisse</French>
-            <Spanish>Preparar el sistema fast roping</English>
+            <Spanish>Preparar el sistema fast roping</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -34,7 +34,7 @@
             <German>Abseilen</German>
             <Polish>Zjedź na linie</Polish>
             <French>Descendre à la corde</French>
-            <English>Descender por la cuerda</English>
+            <Spanish>Descender por la cuerda</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
