@@ -588,3 +588,16 @@ class CfgMods {
 
 #include "CfgModuleCategories.hpp"
 #include "CfgVehicleClasses.hpp"
+
+class CfgSettings {
+    class CBA {
+        class Versioning {
+            class ACE {
+                class dependencies {
+                    CBA[] = {"cba_main", {2,3,1}, "true"};
+                };
+            };
+        };
+    };
+};
+
