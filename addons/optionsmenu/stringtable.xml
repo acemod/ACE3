@@ -212,7 +212,7 @@
             <Czech>Měřítko UI v menu nastavení</Czech>
             <Russian>Размер интерфейса меню настройки</Russian>
             <Spanish>Opción de escalado del menú IU</Spanish>
-            <German>UI Skalierung</German>
+            <German>Nutzeroberflächen-Skalierung</German>
             <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
             <Portuguese>Escalar o menu de opções</Portuguese>
             <Italian>Proporzioni della interfaccia utente</Italian>
@@ -227,6 +227,7 @@
             <French>Autoriser l'exportation de la configuration [ACE]</French>
             <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
             <Russian>Разрешить экспорт настроек [ACE]</Russian>
+            <Italian>Consenti Esportazione del Config [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -238,6 +239,7 @@
             <French>Autoriser</French>
             <Hungarian>Engedélyezés</Hungarian>
             <Russian>Разрешить</Russian>
+            <Italian>Consenti</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -249,6 +251,7 @@
             <French>Autorise l'exportation des toutes les options vers un fichier de configuration</French>
             <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
             <Russian>Разрешить экспорт всех настроек в формате серверного конфига.</Russian>
+            <Italian>Consenti esportazione di tutti i parametri ad config formato per server.</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -257,9 +260,10 @@
             <German>Wenn erlaubt, können die Einstellungsmodifikationen angezeigt und im SP exportiert werden. Wenn auf "Exportieren" geklickt wird, wird eine formatierte Config-Datei in der Zwischenablage abgespeichert.</German>
             <Czech>Pokud je povoleno, budete mít přístup k modifikaci nastavení a exportování v SP. Kliknutím na export umístníte formátovaný config do vaší schránky.</Czech>
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
-            <French>Quand autoriser, vous pouvez accéder au modification et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse papier</French>
+            <French>Quand autorisé, vous pouvez accéder aux modifications et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse-papier</French>
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
             <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
+            <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -271,17 +275,19 @@
             <French>Cacher</French>
             <Hungarian>Elrejtés</Hungarian>
             <Russian>Скрыть</Russian>
+            <Italian>Nascondi</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
             <Polish>Po prawej u góry, w dół</Polish>
             <Spanish>Arriba a la derecha, hacia abajo</Spanish>
-            <German>Open rechts, nach unten</German>
+            <German>Oben rechts, nach unten</German>
             <Czech>Vpravo nahoře, dolů</Czech>
             <Portuguese>Superior direito, para baixo</Portuguese>
             <French>Haut droit, vers le bas</French>
             <Hungarian>Jobb felül, lefele</Hungarian>
             <Russian>Справа — сверху вниз</Russian>
+            <Italian>In Alto a Destra, verso il Basso</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -293,6 +299,7 @@
             <French>Haut droit, vers la gauche</French>
             <Hungarian>Jobb felül, balra</Hungarian>
             <Russian>Сверху — справа налево</Russian>
+            <Italian>In Alto a Destra, verso Sinistra</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -304,6 +311,7 @@
             <French>Haut gauche, vers le bas</French>
             <Hungarian>Bal felül, lefele</Hungarian>
             <Russian>Слева - сверху вниз</Russian>
+            <Italian>In Alto a Sinistra, verso il Basso</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -315,6 +323,7 @@
             <French>Haut gauche, vers la droite</French>
             <Hungarian>Bal felül, jobbra</Hungarian>
             <Russian>Сверху — слева направо</Russian>
+            <Italian>In Alto a Sinistra, verso Destra</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -326,6 +335,7 @@
             <French>Haut</French>
             <Hungarian>Fent</Hungarian>
             <Russian>Сверху</Russian>
+            <Italian>Alto</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -337,6 +347,7 @@
             <French>Bas</French>
             <Hungarian>Alul</Hungarian>
             <Russian>Снизу</Russian>
+            <Italian>Basso</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
@@ -345,9 +356,10 @@
             <Czech>Debug do schránky</Czech>
             <German>Debug in die Zwischenablage</German>
             <Portuguese>Depuração para área de transferência</Portuguese>
-            <French>Debug vers le presse papier</French>
+            <French>Debug vers le presse-papier</French>
             <Hungarian>Debug a vágólapra</Hungarian>
             <Russian>Отладка в буфер обмена</Russian>
+            <Italian>Debug su Blocco Note</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -356,10 +368,14 @@
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
             <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
+            <French>Copie le Debug dans le RPT et le presse-papier</French>
+            <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
+            <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
+            <German>Behebe Headbug</German>
             <Polish>Fix Headbug</Polish>
             <French>HeadBug</French>
             <Hungarian>"Fejhiba" fix</Hungarian>
@@ -367,9 +383,11 @@
             <Russian>Fix Headbug</Russian>
             <Czech>Fix Headbug</Czech>
             <Spanish>Corregir error de cabeza (headbug)</Spanish>
+            <Italian>Sistema Headbug</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
+            <German>Setzt die derzeitige Animation zurück.</German>
             <Polish>Resetuje aktualną animację.</Polish>
             <French>Réinitialise l'état de l'animation</French>
             <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
@@ -377,6 +395,7 @@
             <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
             <Czech>Resetovat aktuální animaci.</Czech>
             <Spanish>Restablece tu estado de animación.</Spanish>
+            <Italian>Resetta il tuo stato animazione</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -388,6 +407,7 @@
             <French>Nouveautés ACE</French>
             <Hungarian>ACE hírek</Hungarian>
             <Russian>Новости ACE</Russian>
+            <Italian>News ACE</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -399,22 +419,29 @@
             <Hungarian>Hírek mutatása a főmenüben</Hungarian>
             <Russian>Показывать новости в Главном Меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
+            <Italian>Mostra News nel Menù Princinpale</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
+            <German>Alle Kategorien</German>
             <Polish>Wszystkie kategorie</Polish>
             <Portuguese>Todas categorias</Portuguese>
             <Russian>Все категории</Russian>
             <Czech>Všechny Kategorie</Czech>
             <Spanish>Todas las categorías</Spanish>
+            <Italian>Tutte le Categorie</Italian>
+            <French>Toutes les catégories</French>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
+            <German>Logistik</German>
             <Polish>Logistyka</Polish>
             <Portuguese>Logística</Portuguese>
             <Russian>Логистика</Russian>
             <Czech>Logistika</Czech>
             <Spanish>Logística</Spanish>
+            <Italian>Logistica</Italian>
+            <French>Logistique</French>
         </Key>
     </Package>
 </Project>

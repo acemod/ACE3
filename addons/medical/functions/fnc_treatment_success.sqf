@@ -64,16 +64,30 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
+if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
-//Get current damage before treatment (for litter)
-_previousDamage = if (_selectionName in GVAR(SELECTIONS)) then {
-    _target getHitPointDamage ([_target, _selectionName, true] call FUNC(translateSelections));
+//Get current blood loose on limb (for "bloody" litter)
+private _bloodLossOnSelection = 0;
+private _partNumber = ([_selectionName] call FUNC(selectionNameToNumber)) max 0;
+if ((GVAR(level) >= 2) && {([_target] call FUNC(hasMedicalEnabled))}) then {
+    //Advanced Medical - Add all bleeding from wounds on selection
+    private _openWounds = _target getvariable [QGVAR(openWounds), []];
+    {
+        _x params ["", "", "_selectionX", "_amountOf", "_bleedingRatio"];
+        if (_selectionX == _partNumber) then {
+            _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _bleedingRatio);
+        };
+    } forEach _openWounds;
+    TRACE_1("advanced",_bloodLossOnSelection);
 } else {
-    damage _target;
+    //Basic Medical (just use blodyPartStatus):
+    private _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+    _bloodLossOnSelection = _damageBodyParts select _partNumber;
+    TRACE_1("basic",_bloodLossOnSelection);
 };
 
 _args call _callback;
-_args pushBack _previousDamage;
+_args pushBack _bloodLossOnSelection;
 _args call FUNC(createLitter);
 
 //If we're not already tracking vitals, start:

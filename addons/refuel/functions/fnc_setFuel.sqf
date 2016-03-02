@@ -12,11 +12,11 @@
  * Example:
  * [fuelTruck, 42] call ace_refuel_fnc_setFuel
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
-private ["_maxFuel"];
-params ["_target", "_fuel"];
+
+params [["_target", objNull, [objNull]], ["_fuel", nil, [0]]];
 
 if (isNull _target ||
     {isNil "_fuel"}) exitWith {};

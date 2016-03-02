@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(speedLimiter);
-PREP(startEngine);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -42,14 +44,18 @@ class CfgVehicles {
         };
     };*/
 
-    class thingX;
-    class ACE_SandbagObject: thingX {
+    class ThingX;
+    class ACE_SandbagObject: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         author = ECSTRING(common,ACETeam);
-        XEH_ENABLED;
-        scope = 1;
+        scope = 2;
         side = -1;
         model = PATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
+        vehicleClass = "ACE_Logistics_Items";
         typicalCargo[] = {};
         armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
         mapSize = 0.4;

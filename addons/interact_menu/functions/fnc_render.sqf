@@ -8,8 +8,12 @@
  * Return value:
  * None
  *
+ * Example:
+ * [] call ace_interact_menu_fnc_render
+ *
  * Public: No
  */
+// #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_render);
@@ -42,7 +46,7 @@ if (GVAR(openedMenuType) >= 0) then {
         };
     } forEach GVAR(currentOptions);
 
-    if(_closestSelection == -1) exitWith {};
+    if (_closestSelection == -1) exitWith {END_COUNTER(fnc_renderMenuOpen);};
 
     private _closest = GVAR(currentOptions) select _closestSelection;
     _closest params ["_action", "_sPos", "_hoverPath"];
@@ -112,8 +116,6 @@ if (GVAR(openedMenuType) >= 0) then {
 
 if(!_foundTarget && GVAR(actionSelected)) then {
     GVAR(actionSelected) = false;
-    GVAR(expanded) = false;
-    GVAR(lastPath) = [];
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);

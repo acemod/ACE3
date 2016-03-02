@@ -11,7 +11,7 @@
  * Action node <ARRAY> or <NIL> if not found 
  *
  * Example:
- * [_actionTree, ["ACE_TapShoulderRight","VulcanPinchAction"]] call ace_interact_menu_fnc_findActionNode;
+ * [actionTree, ["ACE_TapShoulderRight","VulcanPinchAction"]] call ace_interact_menu_fnc_findActionNode;
  *
  * Public: No
  */
@@ -19,18 +19,16 @@
 
 params ["_actionTreeList", "_parentPath"];
 
-private ["_parentNode", "_foundParentNode", "_fnc_findFolder", "_actionTree"];
-
 // Hack to make this work on the root node too
-if (count _parentPath == 0) exitWith {
+if (_parentPath isEqualTo []) exitWith {
     [[],_actionTreeList]
 };
 
 // Search the class action trees and find where to insert the entry
-_parentNode = [[],_actionTreeList];
-_foundParentNode = false;
+private _parentNode = [[],_actionTreeList];
+private _foundParentNode = false;
 
-_fnc_findFolder = {
+private _fnc_findFolder = {
     params ["_parentPath", "_level", "_actionNode"];
 
     {

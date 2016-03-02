@@ -37,18 +37,17 @@ GVAR(AllMarkerNames) = [];
         // create markers
         {
             if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
-                private ["_markerName", "_marker", "_markerColor"];
+                
+                private _markerName = str _x;
 
-                _markerName = str _x;
-
-                _marker = createMarkerLocal [_markerName, position _x];
+                private _marker = createMarkerLocal [_markerName, position _x];
                 _markerName setMarkerTypeLocal "mil_triangle";
                 _markerName setMarkerShapeLocal "ICON";
                 _markerName setMarkerSizeLocal [0.5, 0.7];
                 _markerName setMarkerDirLocal getDir _x;
 
                 // commy's one liner magic
-                _markerColor = format ["Color%1", side group _x];
+                private _markerColor = format ["Color%1", side group _x];
 
                 if ((_x getVariable [QGVAR(IsPlayerControlled), false])) then {
                     _markerName setMarkerColorLocal "ColorOrange";

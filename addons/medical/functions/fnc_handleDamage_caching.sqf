@@ -29,9 +29,10 @@ if (_hitPointIndex >= 0) then {_newDamage = _damage - (_unit getHitIndex _hitPoi
 TRACE_7("ACE_DEBUG: HandleDamage_Caching Called",_unit, _selectionName, _damage, _source, _projectile,_hitPointIndex,_newDamage);
 
 // Check for vehicle crash
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
+private _vehicle = vehicle _unit;
+if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_source in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selectionName == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selectionName = _hitSelections select (floor(random(count _hitSelections)));
+        _selectionName = selectRandom _hitSelections;
         _projectile = "vehiclecrash";
         _this set [1, _selectionName];
         _this set [4, _projectile];
@@ -40,7 +41,7 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
 
 // Handle falling damage
 _impactVelocity = (velocity _unit) select 2;
-if (_impactVelocity < -5 && {vehicle _unit == _unit}) then {
+if (_impactVelocity < -5 && {_vehicle == _unit}) then {
      TRACE_1("Starting isFalling", time);
     _unit setVariable [QGVAR(isFalling), true];
     _unit setVariable [QGVAR(impactVelocity), _impactVelocity];
@@ -59,7 +60,7 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
         };
     } else {
         if (_selectionName == "") then {
-            _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+            _selectionName = selectRandom ["leg_l", "leg_r"];
             _this set [1, _selectionName];
         };
         _newDamage = _newDamage * 0.7;

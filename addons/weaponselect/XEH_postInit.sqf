@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, handgunWeapon ACE_player] call FUNC(selectWeaponMode);
@@ -21,7 +21,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMode);
@@ -34,7 +34,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, primaryWeapon ACE_player] call FUNC(selectWeaponMuzzle);
@@ -47,7 +47,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, secondaryWeapon ACE_player] call FUNC(selectWeaponMode);
@@ -60,7 +60,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, binocular ACE_player] call FUNC(selectWeaponMode);
@@ -73,7 +73,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, 1] call FUNC(selectNextGrenade);
@@ -86,7 +86,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     [ACE_player, 2] call FUNC(selectNextGrenade);
@@ -99,14 +99,13 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon)) exitWith {false};
+    if !([ACE_player] call CBA_fnc_canUseWeapon) exitWith {false};
 
     // Statement
     if ((currentWeapon ACE_player) != "") then {
         [ACE_player] call FUNC(putWeaponAway);
     } else {
-        private ["_weapon"];
-        _weapon = switch (true) do {
+        private _weapon = switch (true) do {
             case ((primaryWeapon ACE_player) != ""): {primaryWeapon ACE_player};
             case ((handgunWeapon ACE_player) != ""): {handgunWeapon ACE_player};
             case ((secondaryWeapon ACE_player) != ""): {secondaryWeapon ACE_player};
@@ -196,3 +195,7 @@ if (!hasInterface) exitWith {};
 },
 {false},
 [10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
+
+
+// Register fire event handler
+["firedPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);

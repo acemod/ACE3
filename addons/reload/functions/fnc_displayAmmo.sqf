@@ -12,13 +12,11 @@
 
 #define COUNT_BARS 12
 
-EXPLODE_1_PVT(_this,_target);
+params ["_target"];
 
-private ["_weapon","_muzzle","_magazine","_showNumber","_ammo","_maxRounds","_count","_text","_color","_picture","_ammoBarsStructuredText", "_a", "_loadedName", "_string"];
-
-_weapon = currentWeapon _target;
-_muzzle = currentMuzzle _target;
-_magazine = currentMagazine _target;
+private _weapon = currentWeapon _target;
+private _muzzle = currentMuzzle _target;
+private _magazine = currentMagazine _target;
 
 // currentWeapon returns "" for static weapons before they are shot once
 if (_target isKindOf "StaticWeapon") then {
@@ -31,8 +29,8 @@ if (_target isKindOf "StaticWeapon") then {
 
     if (_magazine == "") then {
         // Try to get magazine using magazinesAmmoFull
-        private ["_magazines"];
-        _magazines = magazinesAmmoFull _target;
+        private _magazines = magazinesAmmoFull _target;
+
         {
             if (_x select 2) exitWith {
                 _magazine = _x select 0;
@@ -45,10 +43,10 @@ if (_magazine == "") exitWith {};
 if (_weapon == "") exitWith {};
 if (!( _muzzle isEqualType "")) then {_muzzle = _weapon};
 
-_showNumber = false;
-_ammo = 0;
-_maxRounds = 1;
-_count = 0;
+private _showNumber = false;
+private _ammo = 0;
+private _maxRounds = 1;
+private _count = 0;
 
 // not grenade launcher
 if (_muzzle == _weapon) then {
@@ -75,16 +73,16 @@ if (_muzzle == _weapon) then {
     };
 };
 
-_ammoBarsStructuredText = if (_showNumber) then {
+private _ammoBarsStructuredText = if (_showNumber) then {
     parseText format ["<t align='center' >%1x</t>", _count]
 } else {
-    _color = [((2 * (1 - _ammo / _maxRounds)) min 1), ((2 * _ammo / _maxRounds) min 1), 0];
+    private _color = [((2 * (1 - _ammo / _maxRounds)) min 1), ((2 * _ammo / _maxRounds) min 1), 0];
 
-    _string = "";
+    private _string = "";
     for "_a" from 1 to _count do {
         _string = _string + "|";
     };
-    _text = [_string, _color] call EFUNC(common,stringToColoredText);
+    private _text = [_string, _color] call EFUNC(common,stringToColoredText);
 
     _string = "";
     for "_a" from (_count + 1) to (_maxRounds min COUNT_BARS) do {
@@ -97,11 +95,11 @@ _ammoBarsStructuredText = if (_showNumber) then {
 
 if (_target isKindOf "StaticWeapon") then {
     //Vehicle mags (usualy) don't have pictures, so just show the text above ammo count
-    _loadedName = getText (configFile >> "CfgMagazines" >> _magazine >> "displaynameshort");
+    private _loadedName = getText (configFile >> "CfgMagazines" >> _magazine >> "displaynameshort");
     _loadedName = parseText format ["<t align='center' >%1</t>", _loadedName];
-    _text = composeText [_loadedName, linebreak, _ammoBarsStructuredText];
+    private _text = composeText [_loadedName, linebreak, _ammoBarsStructuredText];
     [_text] call EFUNC(common,displayTextStructured);
 } else {
-    _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
+    private _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
     [_ammoBarsStructuredText, _picture] call EFUNC(common,displayTextPicture);
 };

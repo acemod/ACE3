@@ -10,6 +10,29 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
 ["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
 
+//Treatment EventHandlers:
+["actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call EFUNC(common,addEventHandler);
+["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
+["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
+["addToMedicalLog", DFUNC(addToLog)] call EFUNC(common,addEventHandler);
+["addToTriageCard", DFUNC(addToTriageCard)] call EFUNC(common,addEventHandler);
+["setDead", DFUNC(setDead)] call EFUNC(common,addEventHandler);
+["setHitPointDamage", DFUNC(setHitPointDamage)] call EFUNC(common,addEventHandler);
+["setUnconscious", DFUNC(setUnconscious)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_bandageLocal", DFUNC(treatmentBasic_bandageLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call EFUNC(common,addEventHandler);
+["treatmentIVLocal", DFUNC(treatmentIVLocal)] call EFUNC(common,addEventHandler);
+["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call EFUNC(common,addEventHandler);
+["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
+
+//Handle Deleting Bodies on Server:
+if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
+
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {
@@ -246,6 +269,9 @@ GVAR(lastHeartBeatSound) = ACE_time;
 };
 
 ["SettingsInitialized", {
+    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
+    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+
     if (GVAR(level) == 2) exitWith {
         [
             {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
@@ -275,9 +301,6 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
-
-// Networked litter
-[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {

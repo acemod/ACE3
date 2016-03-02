@@ -1,56 +1,53 @@
 /*
- * Author: commy2 and joko // Jonas
- * Sets a public variable, but wait a certain amount of time to transfer the value over the network. Changing the value by calling this function again resets the windup timer.
+ * Author: commy2 and CAA-Picard and joko and PabstMirror
+ * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
  *
- * Arguments:
+ * Argument:
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
- * 3: Windup time <NUMBER> (default: 1)
+ * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
- * Return Value:
- * None
+ * Return value:
+ * Nothing.
+ *
+ * Example:
+ * [player, "balls", 2, 1] call ace_common_fnc_setVariablePublic;
  *
  * Public: No
  */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_object", "_varName", "_value", ["_sync", 1]];
+params ["_object", "_varName", "_value", ["_delay", 1]];
+TRACE_4("params",_object,_varName,_value,_delay);
 
 // set value locally
 _object setVariable [_varName, _value];
 
-// Exit if in SP
+// Exit if in SP - "duh"
 if (!isMultiplayer) exitWith {};
 
-private ["_idName", "_syncTime"];
+// If we are on embargo, exit
+if (_object isEqualTo (_object getVariable [format ["ACE_onEmbargo_%1", _varName], objNull])) exitWith {};
 
-_idName = format ["ACE_setVariablePublic_%1", _varName];
+// Publish Now and set last update time:
+_object setVariable [_varName, _value, true];
+_object setVariable [format ["ACE_onEmbargo_%1", _varName], _object];
 
-if (_idName in GVAR(setVariableNames)) exitWith {};
+TRACE_2("Starting Embargo", _varName, _delay);
 
-_syncTime = ACE_diagTime + _sync;
+[{
+    params ["_object", "_varName", "_value"];
+    if (isNull _object) exitWith {TRACE_1("objNull",_this);};
 
-GVAR(setVariableNames) pushBack _idName;
+    _object setVariable [format ["ACE_onEmbargo_%1", _varName], nil]; //Remove Embargo
+    private _curValue = _object getVariable _varName;
 
-GVAR(setVariablePublicArray) pushBack [_object, _varName, _syncTime, _idName];
+    TRACE_4("End of embargo", _object, _varName, _value, _curValue);
 
-if (isNil QGVAR(setVariablePublicPFH)) exitWith {};
-
-GVAR(setVariablePublicPFH) = [{
-    {
-        _x params ["_object", "_varName", "_syncTime", "_idName"];
-        if (ACE_diagTime > _syncTime) then {
-            // set value public
-            _object setVariable [_varName, _object getVariable _varName, true];
-            GVAR(setVariablePublicArray) deleteAt (GVAR(setVariablePublicArray) find _x);
-            GVAR(setVariableNames) deleteAt (GVAR(setVariableNames) find _x);
-        };
-        nil
-    } count +GVAR(setVariablePublicArray);
-
-    if (GVAR(setVariablePublicArray) isEqualTo []) then {
-        [GVAR(setVariablePublicPFH)] call CBA_fnc_removePerFrameHandler;
-        GVAR(setVariablePublicPFH) = nil;
+    //If value at start of embargo doesn't equal current, then broadcast and start new embargo
+    if (!(_value isEqualTo _curValue)) then {
+        _this call FUNC(setVariablePublic);
     };
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, _this, _delay] call FUNC(waitAndExecute);

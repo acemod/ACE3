@@ -16,11 +16,10 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle", "_dummy", "_actionID"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
-_source = _nozzle getVariable QGVAR(source);
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _source = _nozzle getVariable QGVAR(source);
 
 if (isNull _nozzle || {_source != _target}) exitWith {false};
 
@@ -28,15 +27,14 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
     2,
     [_unit, _nozzle, _target],
     {
-        private "_actionID";
         params ["_args"];
-        _args params ["_unit", "_nozzle", "_target"];
-        _unit setVariable [QGVAR(nozzle), nil];
+        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]]];
+        _unit setVariable [QGVAR(nozzle), nil, true];
         detach _nozzle;
-        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         _unit setVariable [QGVAR(isRefueling), false];
-        _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(ReleaseActionID), nil];
@@ -44,7 +42,10 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
 
         _target setVariable [QGVAR(isConnected), false, true];
         _target setVariable [QGVAR(ownedNozzle), nil, true];
-        ropeDestroy (_nozzle getVariable QGVAR(rope));
+        private _rope = _nozzle getVariable [QGVAR(rope), objNull];
+        if !(isNull _rope) then {
+            ropeDestroy _rope;
+        };
         deleteVehicle _nozzle;
 
         if !(local _target) then {

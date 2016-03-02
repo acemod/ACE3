@@ -12,6 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
-[crew _vehicle, {getText (configFile >> "CfgVehicles" >> typeOf _this >> "simulation") == "UAVPilot"}] call FUNC(filter) // return
+crew _vehicle select {getText (configFile >> "CfgVehicles" >> typeOf _x >> "simulation") == "UAVPilot"} // return

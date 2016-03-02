@@ -16,11 +16,10 @@
 #include "script_component.hpp"
 
 params ["_projectile"];
+TRACE_1("params",_projectile);
 
 if (alive _projectile) then {
     playSound3D ["A3\Sounds_F\weapons\Explosion\explosion_mine_1.wss", _projectile, false, getPosASL _projectile, 5, 1.2, 400];
 
-    private _affected = _projectile nearEntities ["CAManBase", 20];
-
-    ["flashbangExplosion", _affected, [_projectile]] call EFUNC(common,targetEvent);
+    ["flashbangExplosion", [getPosASL _projectile]] call EFUNC(common,globalEvent);
 };

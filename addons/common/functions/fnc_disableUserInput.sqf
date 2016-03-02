@@ -31,8 +31,7 @@ if (_state) then {
     closeDialog 0;
     createDialog QGVAR(DisableMouse_Dialog);
 
-    private "_dlg";
-    _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
+    private _dlg = uiNamespace getVariable QGVAR(dlgDisableMouse);
 
     _dlg displayAddEventHandler ["KeyDown", {
         params ["", "_key"];
@@ -42,15 +41,13 @@ if (_state) then {
 
             disableSerialization;
 
-            private ["_dlg", "_ctrl"];
-
-            _dlg = findDisplay 49;
+            private _dlg = findDisplay 49;
 
             for "_index" from 100 to 2000 do {
                 (_dlg displayCtrl _index) ctrlEnable false;
             };
 
-            _ctrl = _dlg displayctrl 103;
+            private _ctrl = _dlg displayctrl 103;
             _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(while {!isNull (uiNamespace getVariable [ARR_2(QUOTE(QGVAR(dlgDisableMouse)),displayNull)])} do {closeDialog 0}; failMission 'LOSER'; [false] call DFUNC(disableUserInput);)];
             _ctrl ctrlEnable true;
             _ctrl ctrlSetText "ABORT";
@@ -58,7 +55,7 @@ if (_state) then {
 
             _ctrl = _dlg displayctrl ([104, 1010] select isMultiplayer);
             _ctrl ctrlSetEventHandler ["buttonClick", QUOTE(closeDialog 0; player setDamage 1; [false] call DFUNC(disableUserInput);)];
-            _ctrl ctrlEnable (call {private "_config"; _config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
+            _ctrl ctrlEnable (call {private _config = missionConfigFile >> "respawnButton"; !isNumber _config || {getNumber _config == 1}});
             _ctrl ctrlSetText "RESPAWN";
             _ctrl ctrlSetTooltip "Respawn.";
         };
@@ -66,8 +63,7 @@ if (_state) then {
         if (_key in actionKeys "TeamSwitch" && {teamSwitchEnabled}) then {
             (uiNamespace getVariable [QGVAR(dlgDisableMouse), displayNull]) closeDisplay 0;
 
-            private "_acc";
-            _acc = accTime;
+            private _acc = accTime;
             teamSwitch;
             setAccTime _acc;
         };

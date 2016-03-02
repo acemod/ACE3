@@ -37,7 +37,7 @@ class GVAR(medicalMenu) {
             w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};

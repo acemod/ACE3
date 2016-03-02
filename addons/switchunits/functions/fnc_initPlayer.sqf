@@ -21,7 +21,7 @@ params ["_playerUnit", "_sides"];
 if (vehicle _playerUnit == _playerUnit) then {
     [_sides] call FUNC(markAiOnMap);
 
-    _playerUnit setVariable [QGVAR(IsPlayerUnit), true];
+    _playerUnit setVariable [QGVAR(IsPlayerUnit), true, true];
     _playerUnit allowDamage false;
 
     GVAR(OriginalUnit) = _playerUnit;
@@ -39,7 +39,7 @@ if (vehicle _playerUnit == _playerUnit) then {
     _playerUnit linkItem  "ItemMap";
     removeUniform _playerUnit;
 
-    [_playerUnit, "ACE_SwitchUnits", true] call EFUNC(common,setForceWalkStatus);
+    [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
 
     [_playerUnit, _sides] call FUNC(addMapFunction);
 };

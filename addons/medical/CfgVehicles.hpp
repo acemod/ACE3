@@ -1,6 +1,8 @@
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -57,6 +59,12 @@ class CfgVehicles {
                         value = 2;
                     };
                 };
+            };
+            class increaseTrainingInLocations {
+                displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
+                description = CSTRING(MedicalSettings_increaseTrainingInLocations_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
             };
             class allowLitterCreation {
                 displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);
@@ -145,7 +153,48 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class ACE_moduleBasicMedicalSettings: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(BasicMedicalSettings_Module_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        category = "ACE_medical";
+        function = QUOTE(FUNC(moduleBasicMedicalSettings));
+        functionPriority = 10;
+        isGlobal = 2;
+        isSingular = 1;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
 
+        class Arguments {
+            class medicSetting_basicEpi {
+                displayName = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_DisplayName);
+                description = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_Description);
+                typeName = "NUMBER";
+                class values {
+                    class anyone { name = CSTRING(AdvancedMedicalSettings_anyone); value = 0; };
+                    class Medic { name = CSTRING(AdvancedMedicalSettings_Medic); value = 1; default = 1; };
+                    class Special { name = CSTRING(AdvancedMedicalSettings_Special); value = 2; };
+                };
+            };
+            class useLocation_basicEpi {
+                displayName = CSTRING(BasicMedicalSettings_useLocation_basicEpi_DisplayName);
+                description = CSTRING(BasicMedicalSettings_useLocation_basicEpi_Description);
+                typeName = "NUMBER";
+                class values {
+                    class anywhere { name = CSTRING(AdvancedMedicalSettings_anywhere); value = 0; default = 1; };
+                    class vehicle { name = CSTRING(AdvancedMedicalSettings_vehicle); value = 1; };
+                    class facility { name = CSTRING(AdvancedMedicalSettings_facility); value = 2; };
+                    class vehicleAndFacility { name = CSTRING(AdvancedMedicalSettings_vehicleAndFacility); value = 3; };
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(BasicMedicalSettings_Module_Description);
+            sync[] = {};
+        };
+    };
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);
@@ -603,7 +652,10 @@ class CfgVehicles {
 
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         scopeCurator = 2;
         side = -1;
@@ -653,6 +705,9 @@ class CfgVehicles {
     };
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
+    };
+    class ACE_MedicalLitter_adenosine: ACE_MedicalLitterBase {
+        model = QUOTE(PATHTOF(data\littergeneric_adenosine.p3d));
     };
     class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
         model = QUOTE(PATHTOF(data\littergeneric_atropine.p3d));
@@ -715,6 +770,16 @@ class CfgVehicles {
         vehicleClass = "Items";
         class TransportItems {
             MACRO_ADDITEM(ACE_morphine,1);
+        };
+    };
+    class ACE_adenosineItem: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        displayName = CSTRING(Adenosine_Display);
+        author = ECSTRING(common,ACETeam);
+        vehicleClass = "Items";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_adenosine,1);
         };
     };
     class ACE_atropineItem: Item_Base_F {
@@ -835,6 +900,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
             MACRO_ADDITEM(ACE_morphine,15);
+            MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);

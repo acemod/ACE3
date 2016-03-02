@@ -17,6 +17,7 @@
 
 private ["_part", "_tourniquets", "_output"];
 params ["_caller", "_target", "_selectionName"];
+TRACE_3("params",_caller,_target,_selectionName);
 
 // grab the required data
 _part = [_selectionName] call FUNC(selectionNameToNumber);
@@ -34,3 +35,21 @@ _target setVariable [QGVAR(tourniquets), _tourniquets, true];
 
 // Adding the tourniquet item to the caller
 _caller addItem "ACE_tourniquet";
+
+//Handle all injected medications now that blood is flowing:
+private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+private _updatedArray = false;
+TRACE_2("meds",_part,_delayedMedications);
+{
+    _x params ["", "", "_medPartNum"];
+    if (_part == _medPartNum) then {
+        TRACE_1("delayed medication call after tourniquet removeal",_x);
+        ["treatmentAdvanced_medicationLocal", [_target], _x] call EFUNC(common,targetEvent);
+        _delayedMedications set [_forEachIndex, -1];
+        _updatedArray = true;
+    };
+} forEach _delayedMedications;
+if (_updatedArray) then {
+    _delayedMedications = _delayedMedications - [-1];
+    _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+};

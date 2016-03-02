@@ -80,10 +80,10 @@ _painToAdd = 0;
 _woundsCreated = [];
 {
     if (_x select 0 <= _damage) exitWith {
-        for "_i" from 0 to (1+ floor(random(_x select 1)-1)) /* step +1 */ do {
+        for "_i" from 0 to ((_x select 1)-1) do {
 
             // Find the injury we are going to add. Format [ classID, allowdSelections, bloodloss, painOfInjury, minimalDamage]
-            _toAddInjury =  if (random(1) >= 0.85) then {_allInjuriesForDamageType select _highestPossibleSpot} else {_allPossibleInjuries select (floor(random (count _allPossibleInjuries)));};
+            _toAddInjury =  if (random(1) >= 0.85) then {_allInjuriesForDamageType select _highestPossibleSpot} else {selectRandom _allPossibleInjuries};
             _toAddClassID = _toAddInjury select 0;
             _foundIndex = -1;
 

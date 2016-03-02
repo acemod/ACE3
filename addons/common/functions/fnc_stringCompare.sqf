@@ -18,16 +18,14 @@ params ["_string", "_searchTerm"];
 _string = toLower _string; // removes case sensitivity
 _searchTerm = toLower _searchTerm;
 
-private ["_arraySearchTerm", "_arrayString", "_sizeSearchTerm", "_sizeString", "_matchingCharacters", "_searchIterator", "_targetIterator"];
+private _arraySearchTerm = toArray _searchTerm; // splits string into array of unicode decimals
+private _arrayString = toArray _string;
+private _sizeSearchTerm = count _arraySearchTerm; // We only measure the array once
+private _sizeString = count _arrayString;
 
-_arraySearchTerm = toArray _searchTerm; // splits string into array of unicode decimals
-_arrayString = toArray _string;
-_sizeSearchTerm = count _arraySearchTerm; // We only measure the array once
-_sizeString = count _arrayString;
-
-_matchingCharacters = 0;
-_searchIterator = 0;
-_targetIterator = 0;
+private _matchingCharacters = 0;
+private _searchIterator = 0;
+private _targetIterator = 0;
 
 while {_searchIterator < _sizeSearchTerm && _targetIterator < _sizeString} do { // Prevents us from going out of bounds
     if (_arraySearchTerm select _searchIterator == _arrayString select _targetIterator) then { // If we have a match, start looking for the next character in the search term

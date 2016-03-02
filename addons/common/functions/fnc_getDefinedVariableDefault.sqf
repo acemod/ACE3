@@ -14,8 +14,7 @@
 
 params ["_varName"];
 
-private "_variableDefinition";
-_variableDefinition = [_varName] call FUNC(getDefinedVariableInfo);
+private _variableDefinition = _varName call FUNC(getDefinedVariableInfo);
 
 if !(_variableDefinition isEqualTo []) exitWith {
     _variableDefinition select 1;

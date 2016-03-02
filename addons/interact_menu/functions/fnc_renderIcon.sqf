@@ -15,21 +15,20 @@
  */
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
-private ["_ctrl", "_pos", "_displayNum"];
 
 params ["_text", "_icon", "_sPos", "_textSettings"];
 
-//systemChat format ["Icon %1 - %2,%3", _text, _sPos select 0, _sPos select 1];
+TRACE_2("Icon",_text,_sPos);
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    private _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
         ((finddisplay _displayNum) displayctrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
         ((finddisplay _displayNum) displayctrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     };
 };
-_ctrl = GVAR(iconCtrls) select GVAR(iconCount);
+private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
 if(_icon == "") then {
     _icon = DEFAULT_ICON;
@@ -41,11 +40,10 @@ _text = if (GVAR(UseListMenu)) then {
     format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_break_line" callExtension _text];
 };
 
-//_ctrl ctrlSetStructuredText parseText _text;
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-_pos = if (GVAR(UseListMenu)) then {
+private _pos = if (GVAR(UseListMenu)) then {
     [(_sPos select 0)-(0.0095*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.20*SafeZoneW, 0.035*SafeZoneW]
 } else {
     [(_sPos select 0)-(0.0750*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.15*SafeZoneW, 0.100*SafeZoneW]

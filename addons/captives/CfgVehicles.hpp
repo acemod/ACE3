@@ -32,7 +32,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                     priority = 2.3;
-                    hotkey = "E";
                 };
                 class ACE_StopEscorting {
                     displayName = CSTRING(StopEscorting);
@@ -43,7 +42,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                     priority = 2.3;
-                    hotkey = "E";
                 };
                 class ACE_LoadCaptive {
                     displayName = CSTRING(LoadCaptive);
@@ -54,7 +52,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QUOTE(PATHTOF(UI\captive_ca.paa));
                     priority = 2.2;
-                    hotkey = "L";
                 };
                 class GVAR(UnloadCaptive) {
                     displayName = CSTRING(UnloadCaptive);
@@ -74,7 +71,6 @@ class CfgVehicles {
                 exceptions[] = {"isNotEscorting"};
                 showDisabled = 0;
                 priority = 2.3;
-                hotkey = "C";
             };
             class ACE_StartSurrenderingSelf {
                 displayName = CSTRING(StartSurrendering);
@@ -165,7 +161,7 @@ class CfgVehicles {
             description = CSTRING(ModuleSurrender_Description);
             sync[] = {"AnyAI"};
         };
-    };    
+    };
     class GVAR(ModuleHandcuffed): Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";

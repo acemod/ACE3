@@ -37,35 +37,29 @@ if (_textMessage isEqualType "") then {
 
 (ARR_SELECT(_this,4,call BIS_fnc_displayMission)) createDisplay "RscDisplayCommonMessagePause";
 
-private ["_display", "_ctrlRscMessageBox", "_ctrlBcgCommonTop", "_ctrlBcgCommon", "_ctrlText", "_ctrlBackgroundButtonOK", "_ctrlBackgroundButtonMiddle", "_ctrlBackgroundButtonCancel", "_ctrlButtonOK", "_ctrlButtonCancel"];
-
-_display = uiNamespace getVariable "RscDisplayCommonMessage_display";
-_ctrlRscMessageBox =          _display displayCtrl 2351;
-_ctrlBcgCommonTop =           _display displayCtrl 235100;
-_ctrlBcgCommon =              _display displayCtrl 235101;
-_ctrlText =                   _display displayCtrl 235102;
-_ctrlBackgroundButtonOK =     _display displayCtrl 235103;
-_ctrlBackgroundButtonMiddle = _display displayCtrl 235104;
-_ctrlBackgroundButtonCancel = _display displayCtrl 235105;
-_ctrlButtonOK =               _display displayCtrl 235106;
-_ctrlButtonCancel =           _display displayCtrl 235107;
+private _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
+private _ctrlRscMessageBox =          _display displayCtrl 2351;
+private _ctrlBcgCommonTop =           _display displayCtrl 235100;
+private _ctrlBcgCommon =              _display displayCtrl 235101;
+private _ctrlText =                   _display displayCtrl 235102;
+private _ctrlBackgroundButtonOK =     _display displayCtrl 235103;
+private _ctrlBackgroundButtonMiddle = _display displayCtrl 235104;
+private _ctrlBackgroundButtonCancel = _display displayCtrl 235105;
+private _ctrlButtonOK =               _display displayCtrl 235106;
+private _ctrlButtonCancel =           _display displayCtrl 235107;
 
 _ctrlBcgCommonTop ctrlSetText _textHeader;
 
-private ["_ctrlButtonOKPos", "_ctrlBcgCommonPos", "_bottomSpaceY", "_ctrlTextPos", "_marginX", "_marginY"];
+private _ctrlButtonOKPos = ctrlPosition _ctrlButtonOK;
+private _ctrlBcgCommonPos = ctrlPosition _ctrlBcgCommon;
+private _bottomSpaceY = (_ctrlButtonOKPos select 1) - ((_ctrlBcgCommonPos select 1) + (_ctrlBcgCommonPos select 3));
 
-_ctrlButtonOKPos = ctrlPosition _ctrlButtonOK;
-_ctrlBcgCommonPos = ctrlPosition _ctrlBcgCommon;
-_bottomSpaceY = (_ctrlButtonOKPos select 1) - ((_ctrlBcgCommonPos select 1) + (_ctrlBcgCommonPos select 3));
-
-_ctrlTextPos = ctrlPosition _ctrlText;
-_marginX = (_ctrlTextPos select 0) - (_ctrlBcgCommonPos select 0);
-_marginY = (_ctrlTextPos select 1) - (_ctrlBcgCommonPos select 1);
-
-private ["_ctrlTextPosH", "_bottomPosY"];
+private _ctrlTextPos = ctrlPosition _ctrlText;
+private _marginX = (_ctrlTextPos select 0) - (_ctrlBcgCommonPos select 0);
+private _marginY = (_ctrlTextPos select 1) - (_ctrlBcgCommonPos select 1);
 
 _ctrlText ctrlSetStructuredText _textMessage;
-_ctrlTextPosH = ctrlTextHeight _ctrlText;
+private _ctrlTextPosH = ctrlTextHeight _ctrlText;
 
 _ctrlBcgCommon ctrlSetPosition [
     _ctrlBcgCommonPos select 0,
@@ -83,11 +77,10 @@ _ctrlText ctrlSetPosition [
 ];
 _ctrlText ctrlCommit 0;
 
-_bottomPosY = (_ctrlBcgCommonPos select 1) + _ctrlTextPosH + (_marginY * 2) + _bottomSpaceY;
+private _bottomPosY = (_ctrlBcgCommonPos select 1) + _ctrlTextPosH + (_marginY * 2) + _bottomSpaceY;
 
 {
-    private "_xPos";
-    _xPos = ctrlPosition _x;
+    private _xPos = ctrlPosition _x;
 
     _xPos set [1, _bottomPosY];
     _x ctrlSetPosition _xPos;
@@ -100,10 +93,8 @@ _bottomPosY = (_ctrlBcgCommonPos select 1) + _ctrlTextPosH + (_marginY * 2) + _b
     _ctrlButtonCancel
 ];
 
-private ["_ctrlRscMessageBoxPos", "_ctrlRscMessageBoxPosH"];
-
-_ctrlRscMessageBoxPos = ctrlPosition _ctrlRscMessageBox;
-_ctrlRscMessageBoxPosH = _bottomPosY + (_ctrlButtonOKPos select 3);
+private _ctrlRscMessageBoxPos = ctrlPosition _ctrlRscMessageBox;
+private _ctrlRscMessageBoxPosH = _bottomPosY + (_ctrlButtonOKPos select 3);
 
 _ctrlRscMessageBox ctrlSetPosition [
     0.5 - (_ctrlBcgCommonPos select 2) / 2,

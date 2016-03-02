@@ -15,41 +15,38 @@
 // Exit if the action menu is already compiled for zeus
 if !(isNil {missionNamespace getVariable [QGVAR(ZeusActions), nil]}) exitWith {};
 
-private "_recurseFnc";
-_recurseFnc = {
-    private ["_actions", "_displayName", "_icon", "_statement", "_condition", "_showDisabled",
-            "_enableInside", "_canCollapse", "_runOnHover", "_children", "_entry", "_entryCfg", "_insertChildren", "_modifierFunction"];
+private _recurseFnc = {
     params ["_actionsCfg"];
-    _actions = [];
+    private _actions = [];
 
     {
-        _entryCfg = _x;
+        private _entryCfg = _x;
         if(isClass _entryCfg) then {
-            _displayName = getText (_entryCfg >> "displayName");
+            private _displayName = getText (_entryCfg >> "displayName");
 
-            _icon = getText (_entryCfg >> "icon");
-            _statement = compile (getText (_entryCfg >> "statement"));
+            private _icon = getText (_entryCfg >> "icon");
+            private _statement = compile (getText (_entryCfg >> "statement"));
 
-            _condition = getText (_entryCfg >> "condition");
+            private _condition = getText (_entryCfg >> "condition");
             if (_condition == "") then {_condition = "true"};
 
-            _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
-            _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
+            private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
-            _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
-            _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
-            _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
-            _runOnHover = true;
+            private _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
+            private _enableInside = (getNumber (_entryCfg >> "enableInside")) > 0;
+            private _canCollapse = (getNumber (_entryCfg >> "canCollapse")) > 0;
+            private _runOnHover = true;
             if (isText (_entryCfg >> "runOnHover")) then {
                 _runOnHover = compile getText (_entryCfg >> "runOnHover");
             } else {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
 
-            _condition = compile _condition;
-            _children = [_entryCfg] call _recurseFnc;
+            private _condition = compile _condition;
+            private _children = [_entryCfg] call _recurseFnc;
 
-            _entry = [
+            private _entry = [
                         [
                             configName _entryCfg,
                             _displayName,
@@ -60,7 +57,7 @@ _recurseFnc = {
                             {},
                             [0,0,0],
                             10, //distace
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover],
+                            [_showDisabled,_enableInside,_canCollapse,_runOnHover,false],
                             _modifierFunction
                         ],
                         _children
@@ -71,8 +68,7 @@ _recurseFnc = {
     _actions
 };
 
-private ["_actionsCfg"];
-_actionsCfg = configFile >> "ACE_ZeusActions";
+private _actionsCfg = configFile >> "ACE_ZeusActions";
 
 // Create a master action to base zeus actions on
 GVAR(ZeusActions) = [
@@ -87,7 +83,7 @@ GVAR(ZeusActions) = [
             {},
             {[0,0,0]},
             10,
-            [false,true,false]
+            [false,true,false,false,false]
         ],
         [_actionsCfg] call _recurseFnc
     ]

@@ -33,7 +33,7 @@ if (!_ignoreRange && {(_unit distance (_item select 0)) > _range}) exitWith {TRA
 if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private ["_exp", "_previousExp"];
     _previousExp = _item select 0;
-    _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> "ACE_Explosive");
+    _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
     if (_exp != "") then {
         _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
         _exp setDir (getDir _previousExp);

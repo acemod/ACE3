@@ -23,12 +23,9 @@ if (isNil QGVAR(lastHint)) then {
 
 if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
 
-private ["_lastHintTime", "_lastHintPriority", "_time"];
+GVAR(lastHint) params ["_lastHintTime", "_lastHintPriority"];
 
-_lastHintTime = GVAR(lastHint) select 0;
-_lastHintPriority = GVAR(lastHint) select 1;
-
-_time = ACE_time;
+private _time = ACE_time;
 
 if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;

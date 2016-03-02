@@ -38,12 +38,25 @@
             <Portuguese>Derrubar escada</Portuguese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
-            <English>Extend, +Ctrl tilt</English>
-            <German>Ausfahren, +Strg kippen</German>
-            <Polish>Rozłóż, +Ctrl nachyl</Polish>
-            <Portuguese>Extender, +Ctrl tilt</Portuguese>
-            <Russian>Разложить, +Ctrl наклонить</Russian>
-            <Czech>Prodloužit, +Ctrl naklonit</Czech>
+            <English>Extend</English>
+            <German>Ausfahren</German>
+            <Polish>Rozłóż</Polish>
+            <Portuguese>Extender</Portuguese>
+            <Russian>Разложить</Russian>
+            <Czech>Prodloužit</Czech>
+            <Italian>Estendi, +Ctrl ruota</Italian>
+            <Spanish>Extender</Spanish>
+            <French>Déployer</French>
+        </Key>
+        <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
+            <English>+Ctrl tilt</English>
+            <German>+Strg kippen</German>
+            <Polish>+Ctrl nachyl</Polish>
+            <Portuguese>+Ctrl tilt</Portuguese>
+            <Russian>+Ctrl наклонить</Russian>
+            <Czech>+Ctrl naklonit</Czech>
+            <Spanish>+Ctrl inclinar</Spanish>
+            <French>+Ctrl incliner</French>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>

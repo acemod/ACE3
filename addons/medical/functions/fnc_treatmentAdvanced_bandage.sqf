@@ -19,14 +19,19 @@
 #include "script_component.hpp"
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
 if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 
-[[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentAdvanced_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,targetEvent);
+};
+
 /*    {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);

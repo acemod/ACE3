@@ -61,7 +61,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\attach_ca.paa);
-                    // hotkey = "T";
                 };
                 class GVAR(Detach) {
                     displayName = CSTRING(Detach);
@@ -71,7 +70,6 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 5;
                     icon = PATHTOF(UI\detach_ca.paa);
-                    hotkey = "T";
                 };
             };
         };

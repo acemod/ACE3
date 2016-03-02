@@ -18,7 +18,7 @@ private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 
 if (!local _unit) exitWith {
-    [_this, QUOTE(DFUNC(addToTriageCard)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["addToTriageCard", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 _log = _unit getVariable [QGVAR(triageCard), []];

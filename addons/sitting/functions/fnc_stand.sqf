@@ -16,7 +16,6 @@
 #include "script_component.hpp"
 
 params ["_player"];
-private ["_animation"];
 
 (_player getVariable QGVAR(isSitting)) params ["_seat", "_actionID"];
 
@@ -24,7 +23,7 @@ private ["_animation"];
 _player removeAction _actionID;
 
 // Restore animation
-_animation = switch (currentWeapon _player) do {
+private _animation = switch (currentWeapon _player) do {
     case "": {"amovpercmstpsnonwnondnon"};
     case (primaryWeapon _player): {"amovpercmstpslowwrfldnon"};
     case (handgunWeapon _player): {"amovpercmstpslowwpstdnon"};

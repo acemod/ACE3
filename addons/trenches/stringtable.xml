@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="trenches">
+        <Key ID="STR_ACE_Trenches_EntrenchingToolName">
+            <English>Entrenching Tool</English>
+            <German>Schanzzeug</German>
+            <Polish>Saperka</Polish>
+            <Italian>Pala</Italian>
+            <Spanish>Pala para trincheras</Spanish>
+            <French>Outil de tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
+            <English>Entrenching Tool</English>
+            <Polish>Saperka, używana do budowy wnęk</Polish>
+            <German>Mit Schanzzeug können Erdwälle oder Gräben ausgehoben werden. </German>
+            <Italian>Pala</Italian>
+            <Spanish>Pala para trincheras</Spanish>
+            <French>Outil de tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
+            <English>Envelope - Small</English>
+            <German>Rund - Klein</German>
+            <Polish>Wnęka - mała</Polish>
+            <Italian>Fascia - Piccola</Italian>
+            <Spanish>Trinchera pequeña</Spanish>
+            <French>Envelope - petite</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
+            <English>Small Personal Trench</English>
+            <German>Kleiner Schützengraben</German>
+            <Polish>Mała jednoosobowa wnęka</Polish>
+            <Italian>Piccola Trincea Personale</Italian>
+            <Spanish>Trinchera personal pequeña</Spanish>
+            <French>Petite tranchée personelle</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
+            <English>Dig Small Trench</English>
+            <German>Grabe kleinen Schützengraben</German>
+            <Polish>Kop małą wnękę</Polish>
+            <Italian>Scava Trincea Piccola</Italian>
+            <Spanish>Cavar trinchera pequeña</Spanish>
+            <French>Creuser une petite tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnvelopeBigName">
+            <English>Envelope - Big</English>
+            <German>Rund - Groß</German>
+            <Polish>Wnęka - duża</Polish>
+            <Italian>Fascia - Grande</Italian>
+            <Spanish>Trinchera grande</Spanish>
+            <French>Enveloppe - grande</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
+            <English>Large Personal Trench</English>
+            <German>Großer Schützengraben</German>
+            <Polish>Duża jednoosobowa wnęka</Polish>
+            <Italian>Grande Trincea Personale</Italian>
+            <Spanish>Trinchera personal grande</Spanish>
+            <French>Grande tranchée personelle</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
+            <English>Dig Big Trench</English>
+            <German>Grabe großen Schützengraben</German>
+            <Polish>Kop dużą wnękę</Polish>
+            <Italian>Scava Trincea Grande</Italian>
+            <Spanish>Cavar trinchera grande</Spanish>
+            <French>Creuser une grande tranchée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_ConfirmDig">
+            <English>Confirm Dig</English>
+            <German>Graben bestätigen</German>
+            <Polish>Potwierdź kopanie</Polish>
+            <Italian>Conferma Scava</Italian>
+            <Spanish>Confirmar cavado</Spanish>
+            <French>Confirmer la creusée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_CancelDig">
+            <English>Cancel Dig</English>
+            <German>Graben abbrechen</German>
+            <Polish>Anuluj kopanie</Polish>
+            <Italian>Cancella Scava</Italian>
+            <Spanish>Cancelar cavado</Spanish>
+            <French>Annuler la creusée</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_ScrollAction">
+            <English>+Ctrl rotate</English>
+            <German>+Strg drehen</German>
+            <Polish>+Ctrl obrót</Polish>
+            <Italian>+Ctrl ruota</Italian>
+            <Spanish>+Ctrl rotar</Spanish>
+            <French>+Ctrl rotation</French>
+        </Key>
+        <Key ID="STR_ACE_Trenches_DiggingTrench">
+            <English>Digging Trench</English>
+            <German>Grabe Schützengraben</German>
+            <Polish>Kopanie okopu</Polish>
+            <Italian>Sto Scavando la Trincea</Italian>
+            <Spanish>Cavando trinchera</Spanish>
+            <French>Creuse la tranchée</French>
+        </Key>
+    </Package>
+</Project>

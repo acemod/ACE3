@@ -167,4 +167,23 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    
+    // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
+        // curatorCanAttach = 1;
+        // displayName = CSTRING(ModuleSetSupp_DisplayName);
+        // function = QFUNC(moduleSetSuppression);
+        // class ModuleDescription {
+            // description = "Set group of units to supressed.";
+            // sync[] = {};
+        // };
+    // };
+    // class GVAR(moduleDisableSuppression): GVAR(moduleBase) {
+        // curatorCanAttach = 1;
+        // displayName = CSTRING(ModuleDisableSupp_DisplayName);
+        // function = QFUNC(moduleDisableSuppression);
+        // class ModuleDescription {
+            // description = "Remove suppression for units in group";
+            // sync[] = {};
+        // };
+    // };
 };

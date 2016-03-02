@@ -15,4 +15,9 @@ class ACE_Settings {
         typeName = "BOOL";
         isClientSetable = 0;
     };
+    class GVAR(useAmmoHandling) {
+        value = 0;
+        typeName = "BOOL";
+        isClientSetable = 0;
+    };
 };

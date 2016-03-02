@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Attach">
         <Key ID="STR_ACE_Attach_AttachDetach">
@@ -7,7 +7,7 @@
             <Spanish>Acoplar objeto &gt;&gt;</Spanish>
             <Polish>Przyczep &gt;&gt;</Polish>
             <French>Attacher l'objet &gt;&gt;</French>
-            <Czech>Připnout předmět &gt;&gt;</Czech>
+            <Czech>Připnout &gt;&gt;</Czech>
             <Portuguese>Fixar item &gt;&gt;</Portuguese>
             <Italian>Attacca l'oggetto &gt;&gt;</Italian>
             <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
@@ -90,7 +90,7 @@
             <German>Leuchtstab befestigt</German>
             <Spanish>Barra de luz acoplada</Spanish>
             <Polish>Przyczepiono światło chemiczne</Polish>
-            <French>Chemlight attachée</French>
+            <French>Cyalume attachée</French>
             <Czech>Chemické světlo připnuto</Czech>
             <Portuguese>Chemlight Fixada</Portuguese>
             <Italian>Chemlight attaccata</Italian>
@@ -102,7 +102,7 @@
             <German>Leuchtstab entfernt</German>
             <Spanish>Barra de luz quitada</Spanish>
             <Polish>Odczepiono światło chemiczne</Polish>
-            <French>Chemlight détachée</French>
+            <French>Cyalume détachée</French>
             <Czech>Chemické světlo odepnuto</Czech>
             <Portuguese>Chemlight Separada</Portuguese>
             <Italian>Chemlight staccata</Italian>
@@ -115,7 +115,7 @@
             <Spanish>Sin espacio en inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
             <French>Pas de place dans l'inventaire</French>
-            <Czech>Není místo v inventáři</Czech>
+            <Czech>Nedostatek místa v inventáři</Czech>
             <Portuguese>Sem espaço no inventário</Portuguese>
             <Italian>Non hai più spazio</Italian>
             <Hungarian>Nincs több hely</Hungarian>
@@ -138,7 +138,7 @@
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
             <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
-            <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
+            <French>La balise IR permet de signaler votre position grâce à un clignotement visible par des JVN.</French>
             <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
             <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
             <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
@@ -175,7 +175,7 @@
             <German>Befestigen fehlgeschlagen</German>
             <Russian>Не удалось присоединить</Russian>
             <Spanish>Error al acoplar</Spanish>
-            <Czech>Připnutí selhalo</Czech>
+            <Czech>Připnout přesmět se nezdařilo</Czech>
             <Portuguese>Erro ao fixar</Portuguese>
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
@@ -187,7 +187,7 @@
             <Spanish>%1&lt;br/&gt;acoplada</Spanish>
             <Polish>Przyczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;attachée</French>
-            <Czech>%1&lt;br/&gt;Připnutý</Czech>
+            <Czech>%1&lt;br/&gt;Připnuto</Czech>
             <Portuguese>%1&lt;br/&gt;Fixada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
@@ -199,7 +199,7 @@
             <Spanish>%1&lt;br/&gt;quitada</Spanish>
             <Polish>Odczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;détachée</French>
-            <Czech>%1&lt;br/&gt;Odepnutý</Czech>
+            <Czech>%1&lt;br/&gt;Odepnuto</Czech>
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>

@@ -50,7 +50,7 @@
 #define ST_TILE_PICTURE   144
 #define ST_WITH_RECT      160
 #define ST_LINE           176
-#define FontM             "PuristaMedium"
+#define FontM             "RobotoCondensed"
 #define __XA SafeZoneXAbs
 #define __X SafeZoneX
 #define __Y SafeZoneY
@@ -146,7 +146,7 @@ class ace_huntir_cam_dialog {
         style = 48;
         colorText[ ]={ 1,1,1,1 };
         colorBackground[ ]={ 0.4,0.4,0.4,1 };
-        font = "PuristaMedium";
+        font = "RobotoCondensed";
         sizeEx = 0.021;
         lineSpacing = 1;
         x = __X;

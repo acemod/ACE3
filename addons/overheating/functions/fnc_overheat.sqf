@@ -15,156 +15,54 @@
  *
  * Public: No
  */
-#include "\z\ace\addons\overheating\script_component.hpp"
+#include "script_component.hpp"
 
-private ["_unit", "_weapon", "_ammo", "_projectile", "_velocity", "_variableName", "_overheat", "_temperature", "_time", "_bulletMass", "_energyIncrement", "_barrelMass", "_scaledTemperature", "_intensity", "_position", "_direction", "_dispersion", "_count", "_slowdownFactor", "_jamChance", "_surface"];
+params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
+TRACE_4("params",_unit,_weapon,_ammo,_projectile);
 
-_unit = _this select 0;
-_weapon = _this select 1;
-_ammo = _this select 4;
-_projectile = _this select 6;
+// Only do heat calculations every 3 bullets
+if (((_unit ammo _weapon) % 3) != 0) exitWith {};
 
-_velocity = velocity _projectile;
+BEGIN_COUNTER(overheat);
 
-// each weapon has it's own variable. Can't store the temperature in the weapon since they are not objects unfortunately.
-_variableName = format [QGVAR(%1), _weapon];
-
-// get old values
-_overheat = _unit getVariable [_variableName, [0, 0]];
-_temperature = _overheat select 0;
-_time = _overheat select 1;
-
-// Get physical parameters
-_bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
-if (_bulletMass == 0) then {
-  // If the bullet mass is not configured, estimate it directly in grams
-  _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
-};
-_energyIncrement = 0.75 * 0.0005 * _bulletMass * (vectorMagnitudeSqr _velocity);
-_barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
-
-// Calculate cooling
-_temperature = [_temperature, _barrelMass, ACE_time - _time] call FUNC(cooldown);
-// Calculate heating
-_temperature = _temperature + _energyIncrement / (_barrelMass * 466); // Steel Heat Capacity = 466 J/(Kg.K)
-
-// set updated values
-_time = ACE_time;
-_unit setVariable [_variableName, [_temperature, _time], false];
-_scaledTemperature = (_temperature / 1000) min 1 max 0;
-
-// Smoke SFX, beginning at TEMP 0.15
-private "_intensity";
-
-_intensity = (_scaledTemperature - 0.2) * 1.25;
-if (_intensity > 0) then {
-  private ["_position", "_direction"];
-
-  _position = position _projectile;
-  _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
-
-  drop [
-    "\A3\data_f\ParticleEffects\Universal\Refract",
-    "",
-    "Billboard",
-    1.1,
-    2,
-    _position,
-    _direction,
-    1,
-    1.2,
-    1.0,
-    0.1,
-    [0.1,0.15],
-    [[0.06,0.06,0.06,0.32*_scaledTemperature], [0.3,0.3,0.3,0.28*_scaledTemperature], [0.3,0.3,0.3,0.25*_scaledTemperature], [0.3,0.3,0.3,0.22*_scaledTemperature], [0.3,0.3,0.3,0.1*_scaledTemperature]],
-    [1,0],
-    0.1,
-    0.05,
-    "",
-    "",
-    ""
-  ];
-
-  _intensity = (_scaledTemperature - 0.5) * 2;
-  if (_intensity > 0) then {
-    drop [
-      ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16],
-      "",
-      "Billboard",
-      1,
-      1.2,
-      _position,
-      [0,0,0.25],
-      0,
-      1.275,
-      1,
-      0.025,
-      [0.28,0.33,0.37],
-      [[0.6,0.6,0.6,0.3*_intensity]],
-      [0.2],
-      1,
-      0.04,
-      "",
-      "",
-      ""
-    ];
-  };
+// Get bullet parameters
+private _bulletMass = GVAR(cacheAmmoData) getVariable _ammo;
+if (isNil "_bulletMass") then {
+    _bulletMass = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_BulletMass");
+    if (_bulletMass == 0) then {
+        // If the bullet mass is not configured, estimate it
+        _bulletMass = 3.4334 + 0.5171 * (getNumber (configFile >> "CfgAmmo" >> _ammo >> "hit") + getNumber (configFile >> "CfgAmmo" >> _ammo >> "caliber"));
+    };
+    GVAR(cacheAmmoData) setVariable [_ammo, _bulletMass];
 };
 
+// Projectile motion is roughly equal to Barrel heat
+// Ref: https://en.wikipedia.org/wiki/Physics_of_firearms
+// Muzzle Engergy = 1/2 * m * v^2 = (1/2 * 0.001 g/kg * bulletMass (grams) * v^2)
+// Multiple by 3 becase we only calc every 3rd bullet: (3 * 1/2 * 0.001) = 0.0015
+private _energyIncrement = 0.0015 * _bulletMass * (vectorMagnitudeSqr velocity _projectile);
 
-// dispersion and bullet slow down
-private ["_dispersion", "_slowdownFactor", "_count"];
-
-_dispersion = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_Dispersion");
-
-_count = count _dispersion;
-if (_count > 0) then {
-  _dispersion = ([_dispersion, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
-} else {
-  _dispersion = 0;
+// Increase overheating depending on how obstrusive is the current supressor,
+// if any. Typical arma supressors have visibleFire=0.5 and audibleFire=0.3,
+// so they produce x2.1 overheating
+private _silencer = switch (_weapon) do {
+    case (primaryWeapon _unit) : {(primaryWeaponItems _unit) select 0};
+    case (handgunWeapon _unit) : {(handgunItems _unit) select 0};
+    default {""};
+};
+if (_silencer != "") then {
+    private _silencerCoef = GVAR(cacheSilencerData) getVariable _silencer;
+    if (isNil "_silencerCoef") then {
+        _silencerCoef = 1 +
+                        (1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "audibleFire")) +
+                        (1 - getNumber (configFile >> "CfgWeapons" >> _silencer >> "ItemInfo" >> "AmmoCoef" >> "visibleFire"));
+        GVAR(cacheSilencerData) setVariable [_silencer, _silencerCoef];
+    };
+    _energyIncrement = _energyIncrement * _silencerCoef;
 };
 
-_slowdownFactor = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_slowdownFactor");
+TRACE_2("heat",_bulletMass,_energyIncrement);
 
-_count = count _slowdownFactor;
-if (_count > 0) then {
-  _slowdownFactor = ([_slowdownFactor, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray)) max 0;
-} else {
-  _slowdownFactor = 1;
-};
+[_unit, _weapon, _energyIncrement] call FUNC(updateTemperature);
 
-[_projectile, _dispersion - 2 * random _dispersion, _dispersion - 2 * random _dispersion, (_slowdownFactor - 1) * vectorMagnitude _velocity] call EFUNC(common,changeProjectileDirection);
-
-
-// jamming
-private "_jamChance";
-
-_jamChance = getArray (configFile >> "CfgWeapons" >> _weapon >> "ACE_Overheating_jamChance");
-
-_count = count _jamChance;
-if (_count == 0) then {
-  _jamChance = [0];
-  _count = 1;
-};
-
-_jamChance = [_jamChance, (_count - 1) * _scaledTemperature] call EFUNC(common,interpolateFromArray);
-
-// increase jam chance on dusty grounds if prone
-if (stance _unit == "PRONE") then {
-  private "_surface";
-  _surface = toArray (surfaceType getPosASL _unit);
-  _surface deleteAt 0;
-
-  _surface = configFile >> "CfgSurfaces" >> toString _surface;
-  if (isClass _surface) then {
-    _jamChance = _jamChance + (getNumber (_surface >> "dust")) * _jamChance;
-  };
-};
-
-if ("Jam" in (missionNamespace getVariable ["ACE_Debug", []])) then {
-  _jamChance = 0.5;
-};
-
-if (random 1 < _jamChance) then {
-  [_unit, _weapon] call FUNC(jamWeapon);
-};
+END_COUNTER(overheat);

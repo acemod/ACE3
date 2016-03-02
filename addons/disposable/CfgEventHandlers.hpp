@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -10,11 +17,9 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_FiredBIS_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            firedBIS = QUOTE(_this call FUNC(replaceATWeapon));
-        };
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayInventory {
+        ADDON = QUOTE([ARR_2(ACE_player, _this select 0)] call FUNC(updateInventoryDisplay));
     };
 };
 

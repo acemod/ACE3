@@ -12,14 +12,12 @@
  */
 #include "script_component.hpp"
 
-private "_fnc_parseConfigForDisplayNames";
-_fnc_parseConfigForDisplayNames = {
+private _fnc_parseConfigForDisplayNames = {
     params ["_optionEntry"];
 
     if !(isClass _optionEntry) exitWith {false};
 
-    private "_values";
-    _values = getArray (_optionEntry >> "values");
+    private _values = getArray (_optionEntry >> "values");
 
     _x set [3, getText (_optionEntry >> "displayName")];
     _x set [4, getText (_optionEntry >> "description")];
@@ -27,8 +25,7 @@ _fnc_parseConfigForDisplayNames = {
     _x set [8, getText (_optionEntry >> "category")];
 
     {
-        private "_text";
-        _text = _x;
+        private _text = _x;
 
         if (_text isEqualType "" && {count _text > 1} && {_text select [0, 1] == "$"}) then {
             _text = localize (_text select [1]); //chop off the leading $
@@ -42,7 +39,7 @@ _fnc_parseConfigForDisplayNames = {
         } else {
             private _value = missionNamespace getVariable [_name, -1];
             if ((_value < 0) || {_value >= (count _values)}) then {
-                ACE_LOGWARNING_3("Setting [%1] out of bounds %2 (values[] count is %3)(", _name, _value, count _values);
+                ACE_LOGWARNING_3("Setting [%1] out of bounds %2 (values[] count is %3)", _name, _value, count _values);
             };
         };
     };

@@ -22,7 +22,7 @@
 #include "script_component.hpp"
 
 private ["_dummy", "_weaponSelect", "_turretOwnerID"];
-params ["_args"];
+params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazineClass, _numRounds];

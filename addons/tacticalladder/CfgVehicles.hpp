@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -34,7 +36,10 @@ class CfgVehicles {
 
     class House;
     class ACE_TacticalLadder: House {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         displayName = CSTRING(DisplayName);
         class DestructionEffects {};
         model = PATHTOF(data\ace_tacticalladder.p3d);
@@ -68,7 +73,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 selection = "roadway";
                 distance = 5;
-                condition = "true";
+                condition = QUOTE(_target call FUNC(isLadderEmpty));
 
                 class ACE_PickUp {
                     selection = "";
