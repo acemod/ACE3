@@ -35,8 +35,11 @@ class CfgVehicles {
         };
     };
 
-    class Air;
-    class Helicopter: Air {
+    class Helicopter_Base_F;
+    class ACE_friesBase: Helicopter_Base_F {
+        destrType = "";
+        class Turrets {};
+
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -68,20 +71,12 @@ class CfgVehicles {
             };
         };
     };
-
-    class Helicopter_Base_F: Helicopter {
-        class AnimationSources;
-    };
-    class ACE_friesBase: Helicopter_Base_F {
-        destrType = "";
-        class Turrets {};
-    };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
         model = PATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
-        class AnimationSources: AnimationSources {
+        class AnimationSources {
             class extendHookRight {
                 source = "user";
                 initPhase = 0;
@@ -99,7 +94,7 @@ class CfgVehicles {
         scope = 1;
         model = PATHTOF(data\friesGantry.p3d);
         animated = 1;
-        class AnimationSources: AnimationSources {
+        class AnimationSources {
             class adjustWidth {
                 source = "user";
                 initPhase = 0.211;
@@ -118,7 +113,7 @@ class CfgVehicles {
         };
     };
     class ACE_friesGantryReverse: ACE_friesGantry {
-        class AnimationSources: AnimationSources {
+        class AnimationSources {
             class adjustWidth {
                 source = "user";
                 initPhase = 0.213;
@@ -141,11 +136,7 @@ class CfgVehicles {
         author = "KoffeinFlummi";
         scope = 1;
         model = PATHTOF(data\helper.p3d);
-        class ACE_Actions {
-            class ACE_MainActions {
-                condition = "false";
-            };
-        };
+        class ACE_Actions {};
         class Turrets {};
     };
 
