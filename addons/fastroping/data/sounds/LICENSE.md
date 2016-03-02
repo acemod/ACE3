@@ -1,4 +1,6 @@
-Uses a sound from Tessa Elieff (Freesound.org)
-according to Creative Commons Attribution License.
+Source sounds are adapted and changed.
 
-Also sounds from helenacm and Adam_N, both under CC 0. Thanks anyway.
+**Fastroping_Rope (fastroping_rope.ogg):**  
+"[Rub.aif](http://freesound.org/people/le_abbaye_Noirlac/sounds/129471/)" by [Tessa Elieff](http://freesound.org/people/le_abbaye_Noirlac/) is [CreativeCommons Attributions 3.0](http://creativecommons.org/licenses/by/3.0/)
+
+All other sounds from helenacm and Adam_N, both under Creative Commons 0 (no attribution required).
