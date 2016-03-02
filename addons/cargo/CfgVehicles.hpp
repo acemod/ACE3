@@ -280,6 +280,7 @@ class CfgVehicles {
         GVAR(canLoad) = 0;
     };
 
+    //Plastic and metal case
     class PlasticCase_01_base_F: Items_base_F {
         GVAR(size) = 1; // 1 = small, 2 = large
         GVAR(canLoad) = 1;

@@ -85,7 +85,8 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
-
+    
+    //Plastic and metal case
     class PlasticCase_01_base_F: Items_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
