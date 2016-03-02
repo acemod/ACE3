@@ -12,12 +12,69 @@
 }
 
 class CfgVehicles {
-    class Building;
-    class NonStrategic: Building {
+    class Logic;
+    class Module_F: Logic {
+        class ModuleDescription;
+    };
+    class ACE_Module: Module_F {};
+    class ACE_moduleEquipFRIES: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(Module_FRIES_DisplayName);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
+        category = "ACE";
+        function = QUOTE(FUNC(moduleEquipFRIES));
+        functionPriority = 10;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = "BaerMitUmlaut";
+
+        class ModuleDescription: ModuleDescription {
+            description = CSTRING(Module_FRIES_Description);
+            sync[] = {"AnyVehicle"};
+        };
+    };
+
+    class Air;
+    class Helicopter: Air {
+        class ACE_SelfActions {
+            class ACE_prepareFRIES {
+                displayName = CSTRING(Interaction_prepareFRIES);
+                condition = [vehicle _player] call FUNC(canPrepareFRIES);
+                statement = [vehicle _player] call FUNC(prepareFRIES);
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_deployRopes {
+                displayName = CSTRING(Interaction_deployRopes);
+                condition = [_player, vehicle _player] call FUNC(canDeployRopes);
+                statement = [QGVAR(deployRopes), [vehicle _player]] call EFUNC(common,serverEvent);
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_cutRopes {
+                displayName = CSTRING(Interaction_cutRopes);
+                condition = [vehicle _player] call FUNC(canCutRopes);
+                statement = [vehicle _player] call FUNC(cutRopes);
+                showDisabled = 0;
+                priority = 1;
+            };
+            class ACE_fastRope {
+                displayName = CSTRING(Interaction_fastRope);
+                condition = [_player, vehicle _player] call FUNC(canFastRope);
+                statement = [_player, vehicle _player] call FUNC(fastRope);
+                showDisabled = 0;
+                priority = 1;
+            };
+        };
+    };
+
+    class Helicopter_Base_F: Helicopter {
         class AnimationSources;
     };
-    class ACE_friesBase: NonStrategic {
+    class ACE_friesBase: Helicopter_Base_F {
         destrType = "";
+        class Turrets {};
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
@@ -80,66 +137,6 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription;
-    };
-    class ACE_Module: Module_F {};
-    class ACE_moduleEquipFRIES: ACE_Module {
-        scope = 2;
-        displayName = CSTRING(Module_FRIES_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
-        category = "ACE";
-        function = QUOTE(FUNC(moduleEquipFRIES));
-        functionPriority = 10;
-        isGlobal = 0;
-        isTriggerActivated = 0;
-        isDisposable = 0;
-        author = "BaerMitUmlaut";
-
-        class ModuleDescription: ModuleDescription {
-            description = CSTRING(Module_FRIES_Description);
-            sync[] = {"AnyVehicle"};
-        };
-    };
-
-    class Air;
-    class Helicopter: Air {
-        class ACE_SelfActions {
-            class ACE_prepareFRIES {
-                displayName = CSTRING(Interaction_prepareFRIES);
-                condition = [vehicle _player] call FUNC(canPrepareFRIES);
-                statement = [vehicle _player] call FUNC(prepareFRIES);
-                showDisabled = 0;
-                priority = 1;
-            };
-            class ACE_deployRopes {
-                displayName = CSTRING(Interaction_deployRopes);
-                condition = [_player, vehicle _player] call FUNC(canDeployRopes);
-                statement = [QGVAR(deployRopes), [vehicle _player]] call EFUNC(common,serverEvent);
-                showDisabled = 0;
-                priority = 1;
-            };
-            class ACE_cutRopes {
-                displayName = CSTRING(Interaction_cutRopes);
-                condition = [vehicle _player] call FUNC(canCutRopes);
-                statement = [vehicle _player] call FUNC(cutRopes);
-                showDisabled = 0;
-                priority = 1;
-            };
-            class ACE_fastRope {
-                displayName = CSTRING(Interaction_fastRope);
-                condition = [_player, vehicle _player] call FUNC(canFastRope);
-                statement = [_player, vehicle _player] call FUNC(fastRope);
-                showDisabled = 0;
-                priority = 1;
-            };
-        };
-    };
-
-    class Helicopter_Base_H;
-    class Helicopter_Base_F;
-
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
         scope = 1;
@@ -152,6 +149,7 @@ class CfgVehicles {
         class Turrets {};
     };
 
+    class Helicopter_Base_H;
     class Heli_Light_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins[]) = {{1.41, 1.38, 0}, {-1.41, 1.38, 0}};
