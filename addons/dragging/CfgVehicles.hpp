@@ -93,7 +93,7 @@ class CfgVehicles {
         };
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
-        GVAR(carryDirection) = 90;
+        GVAR(carryDirection) = 270;
 
         GVAR(canDrag) = 1;
         GVAR(dragPosition[]) = {0,1.2,0};
@@ -105,7 +105,7 @@ class CfgVehicles {
         };
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
-        GVAR(carryDirection) = 90;
+        GVAR(carryDirection) = 270;
 
         GVAR(canDrag) = 1;
         GVAR(dragPosition[]) = {0,1.2,0};
