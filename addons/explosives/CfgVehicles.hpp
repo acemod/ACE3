@@ -56,7 +56,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 1;
+                distance = 1.5;
                 condition = "true";
                 class ACE_Defuse {
                     displayName = CSTRING(Defuse);
@@ -88,12 +88,11 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 1;
+                distance = 1.5;
                 condition = "true";
                 class ACE_SetTrigger {
                     selection = "";
                     displayName = CSTRING(TriggerMenu);
-                    distance = 1;
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
@@ -105,7 +104,6 @@ class CfgVehicles {
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(Pickup);
-                    distance = 1;
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
