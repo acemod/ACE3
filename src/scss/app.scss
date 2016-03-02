@@ -6,7 +6,7 @@
 // Or selectively include components
 //@import "foundation/components/accordion";
 //   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
+@import "foundation/components/block-grid";
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
 @import "foundation/components/buttons";
@@ -33,7 +33,7 @@
 //   "foundation/components/switches",
 @import "foundation/components/tables";
 //   "foundation/components/tabs",
-//   "foundation/components/thumbs",
+@import "foundation/components/thumbs";
 //   "foundation/components/tooltips",
 @import "foundation/components/top-bar";
 @import "foundation/components/type";
@@ -65,8 +65,3 @@
 @import "ui/toc";
 @import "ui/_search";
 @import "ui/_articles";
-
-
-
-
-
