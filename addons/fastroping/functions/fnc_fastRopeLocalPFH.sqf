@@ -31,12 +31,16 @@ if (animationState _unit != "ACE_FastRoping") exitWith {
     [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
 };
 
-[_unit] spawn {
-     while {!(isNull attachedTo (_this select 0))} do {
-     playSound "ACE_Fastroping_Rope";
-     sleep 1;
-     };
-};
+[{
+    params ["_args", "_idPFH"];
+    _args params ["_unit"];
+
+    if (isNull (attachedTo _unit)) exitWith {
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
+    };
+
+    playSound "ACE_Fastroping_Rope";
+}, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
 
 //End of fast rope
 if (isNull attachedTo _unit) exitWith {
