@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drag an object. Called from ace_dragging_fnc_startDrag
  *
  * Arguments:
@@ -10,24 +9,29 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_dragObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
-
-private ["_position", "_direction", "_offset", "_UAVCrew"];
+TRACE_2("params",_unit,_target);
 
 // get attachTo offset and direction.
-_position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
-_direction = _target getVariable [QGVAR(dragDirection), 0];
+private _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
+private _direction = _target getVariable [QGVAR(dragDirection), 0];
 
 // add height offset of model
-_offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
-
+private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
+if (_target isKindOf "CAManBase") then {
+    _offset = 0;
+};
 _position = _position vectorAdd [0, 0, _offset];
 
 // attach object
+TRACE_3("attaching",_position,_offset,_direction);
 _target attachTo [_unit, _position];
 ["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
 
@@ -49,13 +53,13 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 
 // check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(dragObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
-_UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

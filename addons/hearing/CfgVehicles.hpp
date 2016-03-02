@@ -103,13 +103,14 @@ class CfgVehicles {
         icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
-                displayName = CSTRING(CombatDeafness_DisplayName);
-                description = CSTRING(CombatDeafness_Description);
+                displayName = CSTRING(EnableCombatDeafness_DisplayName);
+                description = CSTRING(EnableCombatDeafness_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class DisableEarRinging {
-                displayName = CSTRING(DisableEarRinging);
+                displayName = CSTRING(DisableEarRinging_DisplayName);
+                description = CSTRING(DisableEarRinging_Description);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {

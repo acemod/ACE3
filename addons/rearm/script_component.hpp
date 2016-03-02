@@ -1,6 +1,11 @@
 #define COMPONENT rearm
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define CBA_DEBUG_SYNCHRONOUS
+// #define ENABLE_PERFORMANCE_COUNTERS
+
 #ifdef DEBUG_ENABLED_REARM
     #define DEBUG_MODE_FULL
 #endif
@@ -28,4 +33,4 @@
 #define REARM_UNHOLSTER_WEAPON \
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
     _unit selectWeapon _weaponSelect; \
-    _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
+    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];

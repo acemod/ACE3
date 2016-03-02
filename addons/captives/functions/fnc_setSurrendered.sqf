@@ -23,6 +23,17 @@ if (!local _unit) exitWith {
     ERROR("running surrender on remote unit");
 };
 
+if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
+    // It's to soon to call this function, delay it
+    if (EGVAR(common,settingsInitFinished)) then {
+        // Settings are already initialized, but the small wait isn't over
+        [DFUNC(setSurrendered), _this, 0.05] call EFUNC(common,waitAndExecute);
+    } else {
+        // Settings are not initialized yet
+        [DFUNC(setSurrendered), _this] call EFUNC(common,runAfterSettingsInit);
+    };
+};
+
 if ((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _state) exitWith {
     ERROR("Surrender: current state same as new");
 };
@@ -33,7 +44,7 @@ if (_state) then {
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
-    [_unit, QGVAR(Surrendered), true] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
 
     if (_unit == ACE_player) then {
         ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
@@ -65,7 +76,7 @@ if (_state) then {
     }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
-    [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];

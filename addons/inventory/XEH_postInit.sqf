@@ -5,8 +5,6 @@ if (!hasInterface) exitWith {};
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
 
-["inventoryDisplayLoaded", {_this call FUNC(inventoryDisplayLoaded)}] call EFUNC(common,addEventHandler);
-
 // add custom filters
 
 // generate list of grenades
@@ -18,7 +16,7 @@ GVAR(Grenades_ItemList) = [];
 } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 // make list case insensitive
-GVAR(Grenades_ItemList) = [GVAR(Grenades_ItemList), {toLower _this}] call EFUNC(common,map);
+GVAR(Grenades_ItemList) = GVAR(Grenades_ItemList) apply {toLower _x};
 
 // filter duplicates
 GVAR(Grenades_ItemList) = GVAR(Grenades_ItemList) arrayIntersect GVAR(Grenades_ItemList);
@@ -41,8 +39,11 @@ GVAR(Medical_ItemList) = [];
     ("true" configClasses (configFile >> QEGVAR(Medical,Actions) >> "Advanced"))
 );
 
+// remove all numbers from list
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) select {_x isEqualType ""};
+
 // make list case insensitive
-GVAR(Medical_ItemList) = [GVAR(Medical_ItemList), {if (_this isEqualType "") then {toLower _this}}] call EFUNC(common,map);
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) apply {toLower _x};
 
 // filter duplicates
 GVAR(Medical_ItemList) = GVAR(Medical_ItemList) arrayIntersect GVAR(Medical_ItemList);

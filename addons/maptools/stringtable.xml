@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MapTools">
         <Key ID="STR_ACE_MapTools_Name">
@@ -46,7 +46,7 @@
             <Portuguese>Ocultar Ferramenta de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök elrejtése</Hungarian>
             <Polish>Ukryj narzędzia nawigacyjne</Polish>
-            <Czech>Schovat pomůcku k mapě</Czech>
+            <Czech>Schovat pomůcky k mapě</Czech>
             <Russian>Скрыть инструменты</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
@@ -58,7 +58,7 @@
             <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
             <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
-            <Czech>Zobrazit normální pomůcku k mapě</Czech>
+            <Czech>Zobrazit pomůcku k mapě (Velkou)</Czech>
             <Russian>Показать инструменты (средн. размер)</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
@@ -70,7 +70,7 @@
             <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
             <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
-            <Czech>Zobrazit malou pomůcku k mapě</Czech>
+            <Czech>Zobrazit pomůcku k mapě (Malou)</Czech>
             <Russian>Показать инструменты (малый размер)</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
@@ -101,7 +101,7 @@
             <English>Show GPS on Map</English>
             <German>Zeige GPS auf der Karte</German>
             <Spanish>Mostrar el GPS sobre el mapa</Spanish>
-            <French>Ranger le GPS</French>
+            <French>Montrer le GPS</French>
             <Italian>Visualizza il GPS sulla mappa</Italian>
             <Portuguese>Mostrar GPS no Mapa</Portuguese>
             <Hungarian>GPS megjelenítése a térképen</Hungarian>
@@ -113,7 +113,7 @@
             <English>Hide GPS on Map</English>
             <German>Verstecke GPS auf der Karte</German>
             <Spanish>Ocultar el GPS del mapa</Spanish>
-            <French>Montrer le GPS</French>
+            <French>Ranger le GPS</French>
             <Italian>Nascondi il GPS sulla mappa</Italian>
             <Portuguese>Ocultar GPS no Mapa</Portuguese>
             <Hungarian>GPS elrejtése a térképről</Hungarian>

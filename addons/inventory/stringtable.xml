@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Inventory">
         <Key ID="STR_ACE_Inventory_SettingName">
@@ -28,30 +28,65 @@
         <Key ID="STR_ACE_Inventory_Backpacks">
             <English>Backpacks</English>
             <German>Rucksäcke</German>
+            <Czech>Batohy</Czech>
+            <Polish>Plecaki</Polish>
+            <Italian>Zaini</Italian>
+            <Spanish>Mochilas</Spanish>
+            <French>Sacs à dos</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
             <German>Kopfbedeckungen</German>
+            <Czech>Pokrývka hlavy</Czech>
+            <Polish>Hełmy</Polish>
+            <Italian>Copricapi</Italian>
+            <Spanish>Cascos</Spanish>
+            <French>Equipement de tête</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
             <German>Brillen</German>
+            <Czech>Brýle</Czech>
+            <Polish>Gogle</Polish>
+            <Italian>Occhiali</Italian>
+            <Spanish>Gafas</Spanish>
+            <French>Lunettes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
             <German>Uniformen</German>
+            <Czech>Uniformy</Czech>
+            <Polish>Uniformy</Polish>
+            <Italian>Uniformi</Italian>
+            <Spanish>Uniformes</Spanish>
+            <French>Uniformes</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
             <German>Westen</German>
+            <Czech>Vesty</Czech>
+            <Polish>Kamizelki</Polish>
+            <Italian>Vests</Italian>
+            <Spanish>Chalecos</Spanish>
+            <French>Gilets</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
             <German>Granaten</German>
+            <Czech>Granáty</Czech>
+            <Polish>Granaty</Polish>
+            <Italian>Granate</Italian>
+            <Spanish>Granadas</Spanish>
+            <French>Grenades</French>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
-            <German>Sanimaterial</German>
+            <German>Sanitätsmaterial</German>
+            <Czech>Lékařské vybavení</Czech>
+            <Polish>Medyczne</Polish>
+            <Italian>Medico</Italian>
+            <Spanish>Médico</Spanish>
+            <French>Médical</French>
         </Key>
     </Package>
 </Project>

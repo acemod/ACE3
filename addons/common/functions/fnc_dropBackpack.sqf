@@ -12,11 +12,9 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_backpackObject", "_holder"];
-
-_backpackObject = backpackContainer _unit;
+private _backpackObject = backpackContainer _unit;
 
 _unit addBackpack "ACE_FakeBackpack";
 removeBackpack _unit;

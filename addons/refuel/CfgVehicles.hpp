@@ -1,3 +1,4 @@
+
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -111,9 +112,11 @@
         }; \
     };
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
-    class ACE_moduleRefuelSettings : ACE_Module {
+    class ACE_moduleRefuelSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
         icon = QUOTE(PATHTOF(ui\icon_module_refuel.paa));
@@ -134,30 +137,29 @@ class CfgVehicles {
     };
 
     class ThingX;
-    class ACE_refuel_fuelNozzle : ThingX {
-        XEH_ENABLED;
+    class ACE_refuel_fuelNozzle: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
-        model = "\A3\Structures_F_Heli\VR\Helpers\Sign_sphere10cm_F.p3d";
+        model = PATHTOF(data\nozzle.p3d);
     };
 
     class All;
-
-    class Static : All {};
-
-    class Building : Static {};
-
-    class NonStrategic : Building {};
-
+    class Static: All {};
+    class Building: Static {};
+    class NonStrategic: Building {};
     class HouseBase: NonStrategic {};
-
     class House: HouseBase {};
+    class House_F: House {};
 
-    class House_F : House {};
+    class House_Small_F: House_F {
+        class EventHandlers;
 
-    class House_Small_F : House_F {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -168,80 +170,80 @@ class CfgVehicles {
         };
     };
 
-    class AllVehicles : All {
+    class AllVehicles: All {
         GVAR(flowRate) = 1;
     };
-    class Land : AllVehicles {};
-    class LandVehicle : Land {};
-    class Car : LandVehicle {
+    class Land: AllVehicles {};
+    class LandVehicle: Land {};
+    class Car: LandVehicle {
         MACRO_CONNECT_ACTIONS
     };
 
-    class Tank : LandVehicle {
+    class Tank: LandVehicle {
         MACRO_CONNECT_ACTIONS
         GVAR(flowRate) = 4;
     };
 
-    class StaticWeapon : LandVehicle {
+    class StaticWeapon: LandVehicle {
         MACRO_CONNECT_ACTIONS
     };
 
-    class Air : AllVehicles {
+    class Air: AllVehicles {
         GVAR(flowRate) = 8;
     };
 
-    class Helicopter : Air {
+    class Helicopter: Air {
         MACRO_CONNECT_ACTIONS
         GVAR(fuelCapacity) = 1500;
     };
 
-    class Helicopter_Base_F : Helicopter {};
+    class Helicopter_Base_F: Helicopter {};
 
-    class Helicopter_Base_H : Helicopter_Base_F {
+    class Helicopter_Base_H: Helicopter_Base_F {
         GVAR(fuelCapacity) = 3000;
     };
 
-    class Plane : Air {
+    class Plane: Air {
         MACRO_CONNECT_ACTIONS
         GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 16;
     };
 
-    class Plane_Base_F : Plane {};
+    class Plane_Base_F: Plane {};
 
-    class Ship : AllVehicles {};
+    class Ship: AllVehicles {};
 
-    class Ship_F : Ship {
+    class Ship_F: Ship {
         MACRO_CONNECT_ACTIONS
         GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 4;
     };
 
-    class Boat_Civil_01_base_F : Ship_F {
+    class Boat_Civil_01_base_F: Ship_F {
         GVAR(fuelCapacity) = 200;
     };
 
-    class Boat_F : Ship_F {
+    class Boat_F: Ship_F {
         GVAR(flowRate) = 1;
     };
 
-    class Boat_Armed_01_base_F : Boat_F {
+    class Boat_Armed_01_base_F: Boat_F {
         GVAR(fuelCapacity) = 300;
     };
-    class Rubber_duck_base_F : Boat_F  {
+    class Rubber_duck_base_F: Boat_F  {
         GVAR(fuelCapacity) = 30;
     };
-    class SDV_01_base_F : Boat_F {
+    class SDV_01_base_F: Boat_F {
         // SDV is using electrical propulsion
         GVAR(fuelCapacity) = 0;
     };
 
-    class Car_F : Car {
+    class Car_F: Car {
         // Assuming large vehicle tank
         GVAR(fuelCapacity) = 60;
     };
 
-    class Kart_01_Base_F : Car_F {
+    class Kart_01_Base_F: Car_F {
         GVAR(fuelCapacity) = 8;
     };
 
@@ -257,7 +259,7 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 50;
     };
 
-    class Quadbike_01_base_F : Car_F {
+    class Quadbike_01_base_F: Car_F {
         // Assuming usual Yamaha quad
         GVAR(fuelCapacity) = 10;
     };
@@ -284,7 +286,7 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 269;
     };
 
-    class Truck_F : Car_F {
+    class Truck_F: Car_F {
         GVAR(fuelCapacity) = 400;
         GVAR(flowRate) = 2;
     };
@@ -294,7 +296,7 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 583;
     };
 
-    class B_Truck_01_transport_F : Truck_01_base_F {};
+    class B_Truck_01_transport_F: Truck_01_base_F {};
 
     class B_Truck_01_mover_F: B_Truck_01_transport_F {};
 
@@ -310,7 +312,7 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 600;
     };
 
-    class Van_01_base_F : Truck_F {
+    class Van_01_base_F: Truck_F {
         // Small Truck
         // Assuming 80L as in Ford Transit
         GVAR(fuelCapacity) = 80;
@@ -319,7 +321,7 @@ class CfgVehicles {
     class Van_01_fuel_base_F: Van_01_base_F {
         transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
+        GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
 
@@ -338,11 +340,11 @@ class CfgVehicles {
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.08,-4.81,-.8}};
+        GVAR(hooks)[] = {{-1.08,-4.81,-.8}};
         GVAR(fuelCargo) = 1000;
     };
 
-    class APC_Tracked_02_base_F : Tank_F {
+    class APC_Tracked_02_base_F: Tank_F {
         // BM-2T
         // Assuming 1 L/km
         GVAR(fuelCapacity) = 1000;
@@ -370,111 +372,111 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 1160;
     };
 
-    class MBT_01_arty_base_F : MBT_01_base_F {
+    class MBT_01_arty_base_F: MBT_01_base_F {
         // Assuming similar 2S3
         GVAR(fuelCapacity) = 830;
     };
 
-    class MBT_02_arty_base_F : MBT_02_base_F {
+    class MBT_02_arty_base_F: MBT_02_base_F {
         // Assuming similar 2S3
         GVAR(fuelCapacity) = 830;
     };
 
-    class Heli_Attack_01_base_F : Helicopter_Base_F {
+    class Heli_Attack_01_base_F: Helicopter_Base_F {
         // Commanche
     };
 
-    class Heli_Attack_02_base_F : Helicopter_Base_F {
+    class Heli_Attack_02_base_F: Helicopter_Base_F {
         // Mi-48 Kajman
     };
 
-    class Heli_Light_01_base_F : Helicopter_Base_H {
+    class Heli_Light_01_base_F: Helicopter_Base_H {
         // MH-6
         GVAR(fuelCapacity) = 242;
     };
 
-    class Heli_Light_02_base_F : Helicopter_Base_H {
+    class Heli_Light_02_base_F: Helicopter_Base_H {
         // Ka-60 Kasatka
         GVAR(fuelCapacity) = 1450;
     };
 
-    class Heli_light_03_base_F : Helicopter_Base_F {
+    class Heli_light_03_base_F: Helicopter_Base_F {
         // AW159
         GVAR(fuelCapacity) = 1004;
     };
 
-    class Heli_Transport_01_base_F : Helicopter_Base_H  {
+    class Heli_Transport_01_base_F: Helicopter_Base_H  {
         // Ghost Hawk
         // Assuming similar UH60
         GVAR(fuelCapacity) = 1360;
     };
 
-    class Heli_Transport_02_base_F : Helicopter_Base_H {
+    class Heli_Transport_02_base_F: Helicopter_Base_H {
         // AW101
         GVAR(fuelCapacity) = 3222;
     };
 
-    class Heli_Transport_03_base_F : Helicopter_Base_H {
+    class Heli_Transport_03_base_F: Helicopter_Base_H {
         // Chinook 47I
         GVAR(fuelCapacity) = 3914;
     };
 
-    class Heli_Transport_04_base_F : Helicopter_Base_H {
+    class Heli_Transport_04_base_F: Helicopter_Base_H {
         // Mi-290 Taru
         GVAR(fuelCapacity) = 3914;
     };
 
-    class Plane_CAS_01_base_F : Plane_Base_F {
+    class Plane_CAS_01_base_F: Plane_Base_F {
         // Assuming similar to A10
         GVAR(fuelCapacity) = 6223;
     };
 
-    class Plane_CAS_02_base_F : Plane_Base_F {
+    class Plane_CAS_02_base_F: Plane_Base_F {
         // Yak-130
         GVAR(fuelCapacity) = 2099;
     };
 
-    class UAV_01_base_F : Helicopter_Base_F {
+    class UAV_01_base_F: Helicopter_Base_F {
         // Darter is electrical
         GVAR(fuelCapacity) = 0;
     };
 
-    class UAV : Plane {};
+    class UAV: Plane {};
 
-    class UAV_02_base_F : UAV {
+    class UAV_02_base_F: UAV {
         // Assuming similar YAHBON-R2
         GVAR(fuelCapacity) = 270;
     };
 
-    class UGV_01_base_F : Car_F {
+    class UGV_01_base_F: Car_F {
         // Stomper
         GVAR(fuelCapacity) = 100;
     };
 
-    class Plane_Fighter_03_base_F : Plane_Base_F {
+    class Plane_Fighter_03_base_F: Plane_Base_F {
         // L-159 ALCA
         GVAR(fuelCapacity) = 1914;
     };
 
     // Vanilla fuel vehicles
-    class Truck_02_fuel_base_F : Truck_02_base_F {
+    class Truck_02_fuel_base_F: Truck_02_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
+        GVAR(hooks)[] = {{0.99,-3.47,-0.67},{-1.04,-3.47,-0.67}};
         GVAR(fuelCargo) = 10000;
     };
 
-    class B_Truck_01_fuel_F : B_Truck_01_mover_F {
+    class B_Truck_01_fuel_F: B_Truck_01_mover_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
+        GVAR(hooks)[] = {{.28,-4.99,-.3},{-.25,-4.99,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
-    class O_Truck_03_fuel_F : Truck_03_base_F {
+    class O_Truck_03_fuel_F: Truck_03_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
+        GVAR(hooks)[] = {{1.3,-1.59,-.62},{-1.16,-1.59,-.62}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -490,18 +492,17 @@ class CfgVehicles {
         };
     };
 
-    class B_Slingload_01_Fuel_F : Slingload_01_Base_F  {
-        XEH_ENABLED;
+    class B_Slingload_01_Fuel_F: Slingload_01_Base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
+        GVAR(hooks)[] = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
         GVAR(fuelCargo) = 10000;
     };
 
-    class O_Heli_Transport_04_fuel_F : Heli_Transport_04_base_F  {
+    class O_Heli_Transport_04_fuel_F: Heli_Transport_04_base_F  {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.52,1.14,-1.18}};
+        GVAR(hooks)[] = {{-1.52,1.14,-1.18}};
         GVAR(fuelCargo) = 10000;
     };
 
@@ -509,39 +510,66 @@ class CfgVehicles {
     class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-1.49,1.41,-.3}};
+        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
         GVAR(fuelCargo) = 10000;
     };
 
+    class StorageBladder_base_F: NonStrategic {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
+                position = "[-3.35,2.45,0.17]";
+                distance = 4;
+                condition = "true";
+            };
+        };
+    };
+    class Land_StorageBladder_01_F: StorageBladder_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        MACRO_REFUEL_ACTIONS
+        transportFuel = 0; //60k
+        GVAR(hooks)[] = {{-3.35,2.45,0.17}};
+        GVAR(fuelCargo) = 60000;
+    };
+
     // Vanilla buildings
-    class Land_Fuelstation_Feed_F : House_Small_F {
-        XEH_ENABLED;
+    class Land_Fuelstation_Feed_F: House_Small_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{0,0,-0.5}};
+        GVAR(hooks)[] = {{0,0,-0.5}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
-    class Land_fs_feed_F : House_Small_F {
-        XEH_ENABLED;
+    class Land_fs_feed_F: House_Small_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
-        GVAR(hooks[]) = {{-0.4,0.022,-.23}};
+        GVAR(hooks)[] = {{-0.4,0.022,-.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
     /* // Barrels found in config  \
-        BarrelHelper : Misc_thing 100
-        BarrelBase : BarrelHelper 100
-        Barrels : BarrelBase 400
-        Barrel1 : BarrelBase 100
-        Barrel2 : BarrelBase 100
-        Barrel3 : BarrelBase 100
-        Barrel4 : BarrelBase 100
-        Barrel5 : BarrelBase 100
-        Barrel6 : BarrelBase 100
-        Wooden_barrel : BarrelBase 100
-        Wooden_barrels : Wooden_barrel 400
+        BarrelHelper: Misc_thing 100
+        BarrelBase: BarrelHelper 100
+        Barrels: BarrelBase 400
+        Barrel1: BarrelBase 100
+        Barrel2: BarrelBase 100
+        Barrel3: BarrelBase 100
+        Barrel4: BarrelBase 100
+        Barrel5: BarrelBase 100
+        Barrel6: BarrelBase 100
+        Wooden_barrel: BarrelBase 100
+        Wooden_barrels: Wooden_barrel 400
     */
 
     // Trucks

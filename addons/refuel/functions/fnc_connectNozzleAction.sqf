@@ -18,31 +18,31 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_endASL", "_rate", "_maxFuel"];
+private ["_closeInDistance", "_endPosTestOffset"];
 
-params ["_unit", "_target", "_startingPosition", "_nozzle"];
-_startingOffset = _target worldToModel _startingPosition;
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_startingPosition", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
+private _startingOffset = _target worldToModel _startingPosition;
 
-_startDistanceFromCenter = vectorMagnitude _startingOffset;
-_closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
+private _startDistanceFromCenter = vectorMagnitude _startingOffset;
+private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
-_closeInMax = _startDistanceFromCenter;
-_closeInMin = 0;
+private _closeInMax = _startDistanceFromCenter;
+private _closeInMin = 0;
 
 while {(_closeInMax - _closeInMin) > 0.01} do {
     _closeInDistance = (_closeInMax + _closeInMin) / 2;
     _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
     _endPosTestOffset set [2, (_startingOffset select 2)];
-    _endPosTest = _target modelToWorldVisual _endPosTestOffset;
+    private _endPosTest = _target modelToWorldVisual _endPosTestOffset;
 
-    _doesIntersect = false;
+    private _doesIntersect = false;
     {
         if (_doesIntersect) exitWith {};
-        _startingPosShifted = _startingPosition vectorAdd _x;
+        private _startingPosShifted = _startingPosition vectorAdd _x;
         _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
         {
             _endPosShifted = _endPosTest vectorAdd _x;
-            _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
 
             //Uncomment to see the lazor show, and see how the scanning works:
             // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
@@ -60,13 +60,13 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_target, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
+if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
-_closeInDistance = (_closeInDistance - 0.0085);
+_closeInDistance = (_closeInDistance - 0.05);
 
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, (_startingOffset select 2)];
@@ -75,14 +75,13 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
     2,
     [_unit, _nozzle, _target, _endPosTestOffset],
     {
-        private "_actionID";
         params ["_args"];
-        _args params ["_unit", "_nozzle", "_target", "_endPosTestOffset"];
-        _unit setVariable [QGVAR(nozzle), nil];
+        _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
+        _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
-        _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+        private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(ReleaseActionID), nil];
@@ -90,12 +89,48 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
 
         detach _nozzle;
         _nozzle attachTo [_target, _endPosTestOffset];
+        _endPosTestOffset params ["_x", "_y"];
+        private _bb = boundingBoxReal _target;
+        _bb params ["_ll", "_rr"];
+        _ll set [2, 0];
+        _rr set [2, 0];
+        _ll params ["_x1", "_y1"];
+        _rr params ["_x2", "_y2"];
+        private _c1 = _ll vectorCos _endPosTestOffset;
+        private _c2 = _ll vectorCos [_x1, _y2, 0];
+        private _cn = (_ll vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
+        private _dirAndUp = [[1, 0, 0],[0, 0, 1]];
+        if (_c1 > _c2 && (_cn > 0)) then {
+            _dirAndUp = [[1, 0, 0.8],[0, 0, 1]];
+        } else {
+            _c1 = [_x1, _y2, 0] vectorCos _endPosTestOffset;
+            _c2 = [_x1, _y2, 0] vectorCos _rr;
+            _cn = ([_x1, _y2, 0] vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
+            if (_c1 > _c2 && (_cn > 0)) then {
+                _dirAndUp = [[0, -1, 0.8],[0, 0, 1]];
+            } else {
+                _c1 = _rr vectorCos _endPosTestOffset;
+                _c2 = _rr vectorCos [_x2, _y1, 0];
+                _cn = (_rr vectorCrossProduct [0, 0, 1]) vectorCos _endPosTestOffset;
+                if (_c1 > _c2 && (_cn > 0)) then {
+                    _dirAndUp = [[-1, 0, 0.8],[0, 0, 1]];
+                } else {
+                    _dirAndUp = [[0, 1, 0.8],[0, 0, 1]];
+                };
+            };
+        };
+        [[_nozzle, _dirAndUp], "{(_this select 0) setVectorDirAndUp (_this select 1)}", 2] call EFUNC(common,execRemoteFnc);
         _nozzle setVariable [QGVAR(sink), _target, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
-        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel), true];
+        private _fuel = [_source] call FUNC(getFuel);
+        if (_fuel == REFUEL_INFINITE_FUEL) then {
+            _source setVariable [QGVAR(fuelCounter), 0, true];
+        } else {
+            _source setVariable [QGVAR(fuelCounter), _fuel, true];
+        };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
     },

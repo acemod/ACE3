@@ -34,7 +34,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     _this call FUNC(updatePPEffects);
     _this call FUNC(onVisionModeChanged);
 }] call EFUNC(common,addEventHandler);
-["zeusDisplayChanged",      {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+
 ["cameraViewChanged",       {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onCameraViewChanged);
@@ -70,3 +70,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 },
 {false},
 [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
+
+// Register fire event handler
+["firedPlayer", DFUNC(blending)] call EFUNC(common,addEventHandler);
+["firedPlayerVehicle", DFUNC(blending)] call EFUNC(common,addEventHandler);

@@ -4,6 +4,15 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
+                class ACE_UnJam {
+                    displayName = CSTRING(UnjamWeapon);
+                    condition = QUOTE( [_player] call FUNC(canUnjam) );
+                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
+                    showDisabled = 0;
+                    priority = 4;
+                    icon = QUOTE(PATHTOF(UI\unjam_ca.paa));
+                };
                 class ACE_SwapBarrel {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( 'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
@@ -90,29 +99,4 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpareBarrel,6);
         };
     };
-
-    // Add ACE_SpareBarrel to every machine gunner.
-    #define MACRO_ADDSPAREBARREL \
-        items[] = {"FirstAidKit", "ACE_SpareBarrel"}; \
-        respawnitems[] = {"FirstAidKit", "ACE_SpareBarrel"};
-
-    // NATO
-    class B_Soldier_02_f; class B_soldier_AR_F:B_Soldier_02_f {MACRO_ADDSPAREBARREL};
-    class B_Soldier_support_base_F; class B_soldier_AAR_F:B_Soldier_support_base_F {MACRO_ADDSPAREBARREL};
-    class B_Soldier_base_F; class B_CTRG_soldier_AR_A_F:B_Soldier_base_F {MACRO_ADDSPAREBARREL};
-
-    // Guerrilla
-    class I_G_Soldier_base_F; class I_G_Soldier_AR_F:I_G_Soldier_base_F {MACRO_ADDSPAREBARREL};
-    class B_G_Soldier_AR_F:I_G_Soldier_AR_F {MACRO_ADDSPAREBARREL};
-    class O_G_Soldier_AR_F:I_G_Soldier_AR_F {MACRO_ADDSPAREBARREL};
-
-    // Iran
-    class O_Soldier_base_F; class O_Soldier_AR_F:O_Soldier_base_F {MACRO_ADDSPAREBARREL};
-    class O_Soldier_support_base_F; class O_Soldier_AAR_F:O_Soldier_support_base_F {MACRO_ADDSPAREBARREL};
-    class O_Soldier_Urban_base; class O_soldierU_AR_F:O_Soldier_Urban_base {MACRO_ADDSPAREBARREL};
-    class O_soldierU_AAR_F:O_Soldier_Urban_base {MACRO_ADDSPAREBARREL};
-
-    // Czech
-    class I_Soldier_02_F; class I_Soldier_AR_F:I_Soldier_02_F {MACRO_ADDSPAREBARREL};
-    class I_Soldier_support_base_F; class I_Soldier_AAR_F:I_Soldier_support_base_F {MACRO_ADDSPAREBARREL};
 };

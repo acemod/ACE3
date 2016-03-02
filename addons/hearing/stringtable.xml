@@ -20,7 +20,7 @@
             <Polish>Stopery do uszu umożliwiają użytkownikowi przebywać w pobliżu głośnej broni bez poniesienia konsekwencji jaką jest utrata słuchu.</Polish>
             <Czech>Ochranné špunty umožňují uživateli, aby neutrpěl zranění jeho sluchu v blízkosti hlasitých zbraní.</Czech>
             <Russian>Беруши позволяют носителю находиться возле громкого вооружения без потери слуха.</Russian>
-            <French>Bouchons Anti-Bruits pour la prévention des traumatismes sonores aigus.</French>
+            <French>Bouchons Anti-Bruits pour la prévention des traumatismes sonores aigüs.</French>
             <Hungarian>Erősebb hanghatásoktól védő füldugó, megakadályozza a nagy hanggal járó fegyverzettől való halláskárosodást.</Hungarian>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
@@ -97,7 +97,7 @@
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>Нет места в инвентаре</Russian>
         </Key>
-        <Key ID="STR_ACE_Hearing_DisableEarRinging">
+        <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
             <French>Désactiver le bourdonnement</French>
             <Spanish>Desactivar zumbido de oídos</Spanish>
@@ -109,6 +109,13 @@
             <Italian>Disabilita i fischi nelle orecchie</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
+            <English>Remove tinnitus effect when the player takes hearing damage</English>
+            <German>Deaktiviert Ohrklingeln wenn der Spieler Hörschäden davonträgt.</German>
+            <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
+            <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
+            <French>Enlève les acouphènes quand le joueur prend des dommages auditifs.</French>
+        </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
             <Polish>Słuch</Polish>
@@ -119,26 +126,30 @@
             <French>Audition</French>
             <Hungarian>Hallás</Hungarian>
             <Russian>Слух</Russian>
+            <Italian>Udito</Italian>
         </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_DisplayName">
-            <English>Combat Deafness</English>
+        <Key ID="STR_ACE_Hearing_EnableCombatDeafness_DisplayName">
+            <English>Enable Combat Deafness</English>
             <Polish>Wł. głuchotę bojową</Polish>
-            <Spanish>¿Habilitar sordera de combate?</Spanish>
+            <Spanish>Habilitar sordera de combate</Spanish>
             <German>Aktiviere Taubheit im Gefecht?</German>
             <Czech>Povolit ztrátu sluchu?</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
-            <French>Activer la surdité au combat?</French>
+            <French>Activer la surdité au combat</French>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Оглушение</Russian>
+            <Italian>Sordità da combattimento</Italian>
         </Key>
-        <Key ID="STR_ACE_Hearing_CombatDeafness_Description">
+        <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Spanish>Habilita la sordera de combate</Spanish>
-            <German>Aktiviere Taubheit im Gefecht?</German>
-            <Czech>Povolit ztrátu sluchu?</Czech>
+            <German>Verringert das Hörvermögen wenn der Spieler einen Hörschaden davonträg</German>
+            <Czech>Snižuje schopnost sluchu pokud dojde k jeho poškození hlasitou a blízkou střelbou</Czech>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
+            <Italian>Riduci l'abilità uditiva quando il giocatore riceve danno uditivo</Italian>
+            <French>Réduire l'audition lorsque le joueur prend des dommages auditifs.</French>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
@@ -150,6 +161,7 @@
             <Portuguese>Este módulo ativa / desativa surdez em combate. Quando ativado, os jogadores podem ficar surdos quando uma arma é disparada ao seu redor ou uma explosão ocorre sem proteção auditiva.</Portuguese>
             <French>Ce module active / désactivé la surdité au combat. Si active, des joueurs peuvent devenir sourds sans protection d'oreille, si une arme est utilisée ou une explosion a lieu à proximité</French>
             <Spanish>Controles de sordera de combate y zumbido en los oídos. Al activarlo, los jugadores pueden ser ensordecidos cuando un arma se dispara cerca o una explosión tiene lugar sin protección auditiva</Spanish>
+            <Italian>Controlla la sordità da combattimento e fischio alle orecchie. Quando attivato, i giocatori possono essere assordati quando un'arma spara vicino o avviene un'esplosione senza protezione uditiva</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
@@ -158,7 +170,9 @@
             <Russian>Влияет на юнита Зевса</Russian>
             <Portuguese>Afeta Zeus CR</Portuguese>
             <Spanish>Efecto Zeus RC</Spanish>
-            <Czech>Ovlivnit Zeus RC</Czech>
+            <Czech>Vliv na Zeus RC</Czech>
+            <Italian>Effetto Zeus RC</Italian>
+            <French>Effets Zeus RC</French>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
@@ -168,18 +182,30 @@
             <Portuguese>Permite que unidades remotamente controladas pelo Zeus sejam atingidas por danos auditivos.</Portuguese>
             <Spanish>Permitir a las unidades por control remoto de zeus que puedan tener daños auditivos.</Spanish>
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
+            <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
+            <French>Autoriser le Zeus contrôlé à distance de prendre des dommages auditifs.</French>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
+            <German>Füge Ohrenstöpsel zu Einheiten hinzu</German>
             <Polish>Dodaj stopery dla jednostek</Polish>
             <Russian>Добавлять юнитам беруши</Russian>
             <Portuguese>Adiciona protetores de ouvido as unidades</Portuguese>
+            <Czech>Přidat špunty jednotce</Czech>
+            <Italian>Aggiungi Tappi per Orecchie alle unità</Italian>
+            <Spanish>Agregar tapones de oida a la unidad</Spanish>
+            <French>Ajouter des bouchons anti-bruits aux unités.</French>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
+            <German>Fügt die "ACE_EarPlugs" zu allen Einheiten mit lauten Waffen hinzu. Wird deaktiviert wenn eine eigene Inventarkonfiguration vorgenommen wurde.</German>
             <Polish>Dodaje `ACE_EarPlugs` -  stopery - do wszystkich jednostek, które posiadają głośną broń. Można wyłaczyć w przypadku korzystania z niestandardowych loadoutów.</Polish>
             <Russian>Добавляет предмет `ACE_EarPlugs` всем юнитам, которые имеют громкое оружие. Можно отключить при ручной настройке снаряжения.</Russian>
             <Portuguese>Adicionar o item `ACE_EarPlugs` a todas as unidades que tenham armas barulhentas. Pode ser desabilitado com carregamentos customizados.</Portuguese>
+            <Czech>Přidat `ACE_EarPlugs` všem jednotkám které mají zbraň. Můžete vypnout, pokud používáte vlastní výbavu.</Czech>
+            <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
+            <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
+            <French>Ajouter l'item "ACE_EarPlugs" à toutes les unités qui ont des armes lourdes. Peut être desactivé si des équipements personnels sont utilisés.</French>
         </Key>
     </Package>
 </Project>

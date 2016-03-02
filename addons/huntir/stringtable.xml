@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
         <Key ID="STR_DN_ACE_HUNTIRBOX">
@@ -17,7 +17,7 @@
             <English>HuntIR Round</English>
             <German>HuntIR Granate</German>
             <Spanish>Proyectil HuntIR</Spanish>
-            <Czech>HuntIR Round</Czech>
+            <Czech>HuntIR náboj</Czech>
             <Russian>HuntIR снаряд</Russian>
             <Italian>HuntIR Round</Italian>
             <Polish>Nabój HuntIR</Polish>
@@ -101,7 +101,7 @@
             <English>Help</English>
             <German>Hilfe</German>
             <Spanish>Ayuda</Spanish>
-            <Czech>Pomoc</Czech>
+            <Czech>Nápověda</Czech>
             <Russian>Помощь</Russian>
             <Italian>Help</Italian>
             <Polish>Pomoc</Polish>
@@ -171,7 +171,7 @@
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_RES">
             <English>R - Reset camera</English>
-            <German>R - Reset</German>
+            <German>R - Kamera zurücksetzen</German>
             <Spanish>R - Reiniciar camara</Spanish>
             <Czech>R - Reset kamery</Czech>
             <Russian>R - Сбросить настройки камеры</Russian>

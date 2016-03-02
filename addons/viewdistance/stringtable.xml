@@ -11,6 +11,7 @@
             <French>Limiteur de distance de vue</French>
             <Hungarian>Látótáv-korlátozó</Hungarian>
             <Russian>Ограничитель дальности видимости</Russian>
+            <Italian>Limitatore Distanza Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_Module_Description">
             <English>Allows limiting maximum view distance that can be set by players.</English>
@@ -22,6 +23,7 @@
             <French>Permet de limiter la distance de vue que les joueurs peuvent choisir</French>
             <Hungarian>Lehetővé teszi a játékosok által a látótávolság maximumának korlátozását.</Hungarian>
             <Russian>Позволяет ограничить максимальную дальность видимости, которая может быть установлена игроками.</Russian>
+            <Italian>Consente di limitare la distanza visiva massima che può essere impostata dai giocatori.</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_DisplayName">
             <English>Enable ACE viewdistance</English>
@@ -33,6 +35,7 @@
             <French>Activer la distance de vue ACE</French>
             <Hungarian>ACE látótávolság engedélyezése</Hungarian>
             <Russian>Ограничить дальность видимости</Russian>
+            <Italian>Abilita distanza visiva ACE</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_enabled_Description">
             <English>Enables ACE viewdistance</English>
@@ -44,6 +47,7 @@
             <French>Activer la distance de vue ACE</French>
             <Hungarian>Engedélyezi az ACE látótávolságot</Hungarian>
             <Russian>Включает ограничитель дальности видимости ACE</Russian>
+            <Italian>Abilita distanza visiva ACE</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_DisplayName">
             <English>View Distance Limit</English>
@@ -55,6 +59,7 @@
             <French>Limite de distance de vue</French>
             <Hungarian>Látótáv-korlát</Hungarian>
             <Russian>Дальность видимости</Russian>
+            <Italian>Limite Distanza Visiva</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_Description">
             <English>Sets the limit for how high clients can raise their view distance (up to 10000)</English>
@@ -66,6 +71,7 @@
             <French>Défini pour les clients la limite de distance de vue maximale (jusqu'à 10000)</French>
             <Hungarian>Korlátozza, mekkora látótávolságot állíthatnak be a kliensek (maximum 10000-ig)</Hungarian>
             <Russian>Устанавливает предел дальности, насколько клиенты могут увеличить свою дальность видимости (до 10000)</Russian>
+            <Italian>Imposta il limite massimo a cui i client possono alzare la propria distanza visiva (massimo 10000)</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_limit_setting">
             <English>Limit for client's view distance set here and can overridden by module</English>
@@ -77,6 +83,7 @@
             <French>Limite de la distance de vue pour les clients et peut être forcé par ce module</French>
             <Hungarian>A kliens látótávolsága itt állítható be, és felülbírálható modulok által</Hungarian>
             <Russian>Предел дальности видимости клиентов устанавливается здесь и может быть переопределен модулем</Russian>
+            <Italian>Limite per la distanza visiva del client impostato qui e può essere scavalcato dal modulo</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>
@@ -88,6 +95,7 @@
             <French>Distance de vue (à pied)</French>
             <Hungarian>Kliens látótáv (gyalog)</Hungarian>
             <Russian>Дальность видимости (Пешком)</Russian>
+            <Italian>Distanza Visiva Client (a Piedi)</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_Description">
             <English>Changes in game view distance when the player is on foot.</English>
@@ -99,6 +107,7 @@
             <French>Change la distance de vue quand le joueur est à pied</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos gyalogosan van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается пешком.</Russian>
+            <Italian>Cambia la distanza visiva in gioco quando il giocatore è a piedi.</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_DisplayName">
             <English>Client View Distance (Land Vehicle)</English>
@@ -110,6 +119,7 @@
             <French>Distance de vue (à pied)</French>
             <Hungarian>Kliens látótáv (szárazföldi jármű)</Hungarian>
             <Russian>Дальность видимости (В наземном трансп.)</Russian>
+            <Italian>Distanza Visiva Client (Veicolo Terrestre)</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_landVehicle_Description">
             <English>Changes in game view distance when the player is in a land vehicle.</English>
@@ -121,6 +131,7 @@
             <French>Change la distance de vue quand le joueur est dans un véhicule</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos szárazföldi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в наземном транспорте.</Russian>
+            <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un veicolo terrestre.</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_DisplayName">
             <English>Client View Distance (Air Vehicle)</English>
@@ -132,6 +143,7 @@
             <French>Distance de vue (véhicule aérien)</French>
             <Hungarian>Kliens látótáv (légi jármű)</Hungarian>
             <Russian>Дальность видимости (В воздушном трансп.)</Russian>
+            <Italian>Distanza Visiva Client (Veicoli d'Aria)</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_airVehicle_Description">
             <English>Changes in game view distance when the player is in an air vehicle.</English>
@@ -143,6 +155,7 @@
             <French>Change la distance de vue quand le joueur est dans un véhicule aérien</French>
             <Hungarian>Megváltoztatja a játékon belüli látótávolságot, amennyiben a játékos légi járműben van.</Hungarian>
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается в воздушном транспорте.</Russian>
+            <Italian>Cambia la distanza visiva in gioco quando il giocatore è in un mezzo aereo.</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_DisplayName">
             <English>Dynamic Object View Distance</English>
@@ -154,6 +167,7 @@
             <French>Distance de vue pour les objet dynamique </French>
             <Hungarian>Dinamikus objektum-látótáv</Hungarian>
             <Russian>Динамич. дальность отрисовки объектов</Russian>
+            <Italian>Distanza Visiva Oggetti Dinamica</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_Description">
             <English>Sets the object view distance as a coefficient of the view distance or based on field of view. FoV Based's lowest and highest value is the value which is set when enabling the option.</English>
@@ -165,6 +179,7 @@
             <French>Défini la distance d'affichage des objets comme un coefficient de la distance de vue</French>
             <Hungarian>Beállítja az objektum-látótávot a megadott látótáv koefficienseként.</Hungarian>
             <Russian>Устанавливает дальность отрисовки объектов как коэффициент от общей дальности видимости.</Russian>
+            <Italian>Imposta la distanza visiva degli oggetti come un coefficiente basato sulla distanza visiva oppure basato sul campo visivo.</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_off">
             <English>Off</English>
@@ -176,6 +191,7 @@
             <French>Eteint</French>
             <Hungarian>Kikapcsolva</Hungarian>
             <Russian>Выкл.</Russian>
+            <Italian>Disabilitato</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_verylow">
             <English>Very Low</English>
@@ -187,6 +203,7 @@
             <French>Très bas</French>
             <Hungarian>Minimális</Hungarian>
             <Russian>Очень низкая</Russian>
+            <Italian>Molto Basso</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_low">
             <English>Low</English>
@@ -198,6 +215,7 @@
             <French>Bas</French>
             <Hungarian>Alacsony</Hungarian>
             <Russian>Низкая</Russian>
+            <Italian>Basso</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_medium">
             <English>Medium</English>
@@ -209,6 +227,7 @@
             <French>Moyen</French>
             <Hungarian>Közepes</Hungarian>
             <Russian>Средняя</Russian>
+            <Italian>Medio</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_high">
             <English>High</English>
@@ -220,6 +239,7 @@
             <French>Haut</French>
             <Hungarian>Magas</Hungarian>
             <Russian>Высокая</Russian>
+            <Italian>Alto</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_veryhigh">
             <English>Very High</English>
@@ -231,11 +251,18 @@
             <French>Très haut</French>
             <Hungarian>Maximális</Hungarian>
             <Russian>Очень высокая</Russian>
+            <Italian>Molto Alto</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_object_fovBased">
             <English>FoV Based</English>
+            <German>Sichtfeld basierend</German>
             <Russian>Зависит от зума</Russian>
             <Portuguese>Baseado em FoV</Portuguese>
+            <Czech>Založeno na FoV</Czech>
+            <Polish>Oparty na FoV</Polish>
+            <Italian>Basato su Campo Visivo (FoV)</Italian>
+            <Spanish>Basada en campo de visión</Spanish>
+            <French>Champ de vision basé</French>
         </Key>
         <Key ID="STR_ACE_ViewDistance_infotext">
             <English>View Distance:</English>
@@ -247,6 +274,7 @@
             <French>Distance de vue</French>
             <Hungarian>Látótávolság:</Hungarian>
             <Russian>Дальность видимости:</Russian>
+            <Italian>Distanza Visiva:</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_objectinfotext">
             <English>Object View Distance is</English>
@@ -258,6 +286,7 @@
             <French>La distance d'affichage des objets est:</French>
             <Hungarian>Az objektum-látótávolság:</Hungarian>
             <Russian>Дальность видимости объектов:</Russian>
+            <Italian>Distanza Visiva Oggetti è</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_invalid">
             <English>That option is invalid! The limit is</English>
@@ -269,6 +298,7 @@
             <French>Cette option est non valide! La limite est</French>
             <Hungarian>Ez a beállítás érvénytelen! A maximum mennyiség</Hungarian>
             <Russian>Настройка не верна! Текущий предел</Russian>
+            <Italian>Questa opzione è invalida! Il limite è</Italian>
         </Key>
         <Key ID="STR_ACE_ViewDistance_videosettings">
             <English>Video Settings</English>
@@ -280,6 +310,7 @@
             <French>Paramètres vidéo</French>
             <Hungarian>Videobeállítások</Hungarian>
             <Russian>Видео настройки</Russian>
+            <Italian>Impostazioni Video</Italian>
         </Key>
     </Package>
 </Project>

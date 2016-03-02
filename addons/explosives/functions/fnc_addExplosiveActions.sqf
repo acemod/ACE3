@@ -22,7 +22,7 @@ _list = [];
 _itemCount = [];
 {
     _item = ConfigFile >> "CfgMagazines" >> _x;
-    if (getNumber(_item >> "ACE_Placeable") == 1) then {
+    if (getNumber(_item >> QGVAR(Placeable)) == 1) then {
         _index = _list find _item;
         if (_index != -1) then {
             _itemCount set [_index, (_itemCount select _index) + 1];

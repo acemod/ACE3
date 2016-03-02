@@ -1,21 +1,22 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
+
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.3.2-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/badge/Version-3.5.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.3.2/ace3_3.3.2.zip">
-        <img src="https://img.shields.io/badge/Download-65.7_MB-green.svg?style=flat-square" alt="ACE3 Download">
+    <a href="https://github.com/acemod/ACE3/releases/download/v3.5.0/ace3_3.5.0.zip">
+        <img src="https://img.shields.io/badge/Download-72.6_MB-green.svg?style=flat-square" alt="ACE3 Download">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
-        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
+        <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Fehlermeldungen">
     </a>
     <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
         <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat-square" alt="BIF Thread">
     </a>
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
-        <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 License">
+        <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="ACE3 Lizenz">
     </a>
     <a href="http://slackin.ace3mod.com/">
         <img src="http://slackin.ace3mod.com/badge.svg?style=flat-square&label=Slack" alt="ACE3 Slack">
@@ -24,7 +25,11 @@
         <img src="https://img.shields.io/travis/acemod/ACE3.svg?style=flat-square&label=Build" alt="ACE3 Build Status">
     </a>
 </p>
-<p align="center"><sup><strong>Benötigt die aktuellste Version von <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Besucht uns auf <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
+</p>
+<p align="center">
+    <sup><strong>Benötigt die aktuellste Version von<a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.<br/>
+    Besucht uns auf <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup>
+</p>
 
 **ACE3** ist ein Gemeinschaftsprojekt der sich zusammengeschlossenen Moddinggruppen von **ACE2**, **AGM** und **CSE** mit dem Ziel den Realismus und die Spieltiefe von Arma 3 zu steigern.
 
@@ -58,7 +63,6 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 - Magazine umpacken
 - Realistische Waffen Er- bzw. Überhitzung
 - Temporäre Taubheit bei zu lauten Geräuschen
-- Verbesserte Ragdoll-Physik
 - Verbesserte Interaktionen für MG2s und Munitionsschlepper
 - Einstellbare Zielfernrohre
 - Keine Ruheanimationen bei gesenkter Waffe

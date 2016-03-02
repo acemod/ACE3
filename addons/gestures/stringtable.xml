@@ -113,10 +113,13 @@
         <Key ID="STR_ACE_Gestures_stop">
             <English>Stop</English>
             <French>Stop</French>
-            <German>Stop</German>
+            <German>Halt</German>
             <Polish>Stop</Polish>
             <Russian>Стоп</Russian>
             <Portuguese>Parar</Portuguese>
+            <Czech>Stop</Czech>
+            <Italian>Stop</Italian>
+            <Spanish>Detenerse</Spanish>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">
@@ -139,6 +142,9 @@
             <Polish>Zbiórka</Polish>
             <Russian>Собраться</Russian>
             <Portuguese>Reagrupar</Portuguese>
+            <Czech>Přeskupit</Czech>
+            <Italian>Raggruppare</Italian>
+            <Spanish>Reunirse</Spanish>
         </Key>
         <!-- FORWARD -->
         <Key ID="STR_ACE_Gestures_forward">
@@ -148,14 +154,21 @@
             <Polish>Naprzód</Polish>
             <Russian>Вперед</Russian>
             <Portuguese>Mover em frente</Portuguese>
+            <Czech>Kupředu</Czech>
+            <Italian>Muovere avanti</Italian>
+            <Spanish>Avanzar</Spanish>
         </Key>
         <!-- ENGAGE -->
         <Key ID="STR_ACE_Gestures_engage">
             <English>Engage</English>
+            <German>Angriff</German>
             <French>Engager</French>
             <Polish>Atak</Polish>
             <Russian>Открыть огонь</Russian>
             <Portuguese>Engajar</Portuguese>
+            <Czech>Útok</Czech>
+            <Italian>Ingaggiare</Italian>
+            <Spanish>Atacar</Spanish>
         </Key>
         <!-- POINT -->
         <Key ID="STR_ACE_Gestures_point">
@@ -165,6 +178,9 @@
             <Polish>Wskaż</Polish>
             <Russian>Показать направление</Russian>
             <Portuguese>Ponta</Portuguese>
+            <Czech>Ukázat</Czech>
+            <Italian>Puntare</Italian>
+            <Spanish>Señalar</Spanish>
         </Key>
         <!-- HOLD -->
         <Key ID="STR_ACE_Gestures_hold">
@@ -174,6 +190,9 @@
             <Polish>Wstrzymać</Polish>
             <Russian>Ждать</Russian>
             <Portuguese>Esperar</Portuguese>
+            <Czech>Čekej</Czech>
+            <Italian>Mantenere</Italian>
+            <Spanish>Esperar</Spanish>
         </Key>
         <!-- WARNING -->
         <Key ID="STR_ACE_Gestures_warning">
@@ -183,6 +202,9 @@
             <Polish>Uwaga</Polish>
             <Russian>Внимание</Russian>
             <Portuguese>Aviso</Portuguese>
+            <Czech>Pozor</Czech>
+            <Italian>Attenzione</Italian>
+            <Spanish>Atención</Spanish>
         </Key>
         <Key ID="STR_ACE_Gestures_Hi">
             <English>Hi</English>
@@ -210,15 +232,39 @@
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
+            <German>Zeige Gesten im Interaktionsmenü</German>
+            <Czech>Zobrazit posunky v interakčním menu</Czech>
+            <Polish>Pokaż gesty w menu interakcji</Polish>
+            <Italian>Mostra Gesti su Menù Interazione</Italian>
+            <Spanish>Mostrar gestos en el menú de interacción</Spanish>
+            <French>Afficher les gestes au menu d'interaction.</French>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
+            <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
+            <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
+            <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
+            <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
+            <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
+            <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
+            <German>Nur Schnelltasten</German>
+            <Czech>Pouze klávesové zkratky</Czech>
+            <Polish>Tylko skróty klaw.</Polish>
+            <Italian>Solo Hotkey</Italian>
+            <Spanish>Solo mediante teclas</Spanish>
+            <French>Seulement les touches</French>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
+            <German>Schnelltasten+ Interaktionsmenü</German>
+            <Czech>Klávesové zkratky + interakční menu</Czech>
+            <Polish>Skróty klaw. + menu interakcji</Polish>
+            <Italian>Hotkey + Menù Interazione</Italian>
+            <Spanish>Teclas y Menú de Interacción</Spanish>
+            <French>Touches + menu d'interaction</French>
         </Key>
     </Package>
 </Project>

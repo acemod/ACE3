@@ -222,7 +222,7 @@
             <German>TANZEN!</German>
             <Spanish>BAILAR!</Spanish>
             <Polish>TAŃCZ!</Polish>
-            <Czech>TANČIT!</Czech>
+            <Czech>TANCUJ!</Czech>
             <French>Danse!</French>
             <Russian>ТАНЦЕВАТЬ!</Russian>
             <Hungarian>TÁNC!</Hungarian>
@@ -348,6 +348,14 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_GetOut">
+            <English>Get Out</English>
+            <Polish>Wyjdź</Polish>
+            <Italian>Esci</Italian>
+            <German>Aussteigen!</German>
+            <Spanish>Sal del vehículo!</Spanish>
+            <French>Sortez !</French>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -511,7 +519,7 @@
             <Spanish>Te has unido al equipo %1</Spanish>
             <French>Tu as rejoint l'équipe %1</French>
             <Polish>Dołączyłeś do %1</Polish>
-            <Czech>Připojil ses do %1 týmu</Czech>
+            <Czech>Připojili jste se do %1 týmu</Czech>
             <Russian>Вы присоединились к группе %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
@@ -535,7 +543,7 @@
             <Spanish>Has dejado el equipo</Spanish>
             <French>Tu as quitté l'équipe</French>
             <Polish>Opuściłeś drużynę</Polish>
-            <Czech>Opustil jsi tým</Czech>
+            <Czech>Opustili jste tým</Czech>
             <Russian>Вы покинули группу</Russian>
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
@@ -563,7 +571,7 @@
             <Portuguese>Rolar</Portuguese>
             <Italian>Scorri</Italian>
             <Hungarian>Görgetés</Hungarian>
-            <Czech>Otáčení</Czech>
+            <Czech>Posunout</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -607,7 +615,7 @@
             <Spanish>Empujar</Spanish>
             <French>Pousser</French>
             <Polish>Pchnij</Polish>
-            <Czech>Odstrčit</Czech>
+            <Czech>Tlačit</Czech>
             <Hungarian>Tolás</Hungarian>
             <Russian>Толкать</Russian>
             <Portuguese>Empurrar</Portuguese>
@@ -646,6 +654,8 @@
             <Hungarian>Nyitás</Hungarian>
             <Portuguese>Abrir</Portuguese>
             <Russian>Открыть</Russian>
+            <Italian>Apri</Italian>
+            <German>Öffnen</German>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -657,6 +667,7 @@
             <French>Système d'interaction</French>
             <Hungarian>Interakciós rendszer</Hungarian>
             <Portuguese>Sistema de interação</Portuguese>
+            <Italian>Sistema Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -668,6 +679,7 @@
             <French>Active la gestion d'équipe</French>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
+            <Italian>Abilità Management Squadra</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -679,6 +691,7 @@
             <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut: oui</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
+            <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -690,6 +703,21 @@
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
+            <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_TurnOn">
+            <English>Turn on</English>
+            <German>Aktivieren</German>
+            <Polish>Włącz</Polish>
+            <Spanish>Encender</Spanish>
+            <French>Allumer</French>
+        </Key>
+        <Key ID="STR_ACE_Interaction_TurnOff">
+            <English>Turn off</English>
+            <German>Deaktivieren</German>
+            <Polish>Wyłącz</Polish>
+            <Spanish>Apagar</Spanish>
+            <French>Eteindre</French>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -697,6 +725,10 @@
             <Polish>Podaj magazynek</Polish>
             <Russian>Передать магазин</Russian>
             <Portuguese>Passar carregador</Portuguese>
+            <Czech>Podat zásobník</Czech>
+            <Italian>Passa caricatore</Italian>
+            <Spanish>Pasar cargador</Spanish>
+            <French>Donner un chargeur</French>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -704,6 +736,10 @@
             <Polish>Magazynek karabinowy</Polish>
             <Russian>Основной магазин</Russian>
             <Portuguese>Carregador primário</Portuguese>
+            <Czech>Zásobník do primární zbraně</Czech>
+            <Italian>Caricatore Primario</Italian>
+            <Spanish>Cargador primario</Spanish>
+            <French>Chargeur d'arme principale</French>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -711,6 +747,10 @@
             <Polish>Magazynek pistoletowy</Polish>
             <Russian>Магазин к пистолету</Russian>
             <Portuguese>Carregador da pistola</Portuguese>
+            <Czech>Zásobník do pistole</Czech>
+            <Italian>Caricatore Pistola</Italian>
+            <Spanish>Cargador de pistola</Spanish>
+            <French>Chargeur d'arme secondaire</French>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -718,6 +758,10 @@
             <Polish>%1 podał Ci magazynek %2.</Polish>
             <Russian>%1 передал вам магазин %2.</Russian>
             <Portuguese>%1 passou a você um carregador %2.</Portuguese>
+            <Czech>%1 ti podal %2 zásobník.</Czech>
+            <Italian>%1 ti ha passato un caricatore %2 .</Italian>
+            <Spanish>%1 te pasó un cargador %2.</Spanish>
+            <French>%1 vous a passé un chargeur %2.</French>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -725,6 +769,10 @@
             <Polish>Pokaż interakcję "podaj magazynek"</Polish>
             <Russian>Показывать действие "передать магазин"</Russian>
             <Portuguese>Mostrar a interação "Passar carregador"</Portuguese>
+            <Czech>Zobrazit "interakci "podat zásobník"</Czech>
+            <Italian>Mostra interazione "passa caricatore"</Italian>
+            <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
+            <French>Montrer l'interaction "donner un chargeur".</French>
         </Key>
     </Package>
 </Project>

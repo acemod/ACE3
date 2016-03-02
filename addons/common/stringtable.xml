@@ -418,7 +418,7 @@
             <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
             <Polish>Kolor tła dla powiadomień ACE</Polish>
             <French>Notification ACE: couleur de l'arrière plan</French>
-            <Czech>Barva pozadí ACE nápověd.</Czech>
+            <Czech>Barva pozadí ACE nápovědy.</Czech>
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
         </Key>
@@ -430,7 +430,7 @@
             <Russian>Цвет шрифта всплывающих подсказок</Russian>
             <Polish>Kolor tekstu powiadomień</Polish>
             <French>Notification: couleur du texte</French>
-            <Czech>Barva fontu nápověd.</Czech>
+            <Czech>Barva fontu nápovědy.</Czech>
             <Hungarian>Súgószöveg betűinek színe</Hungarian>
             <Portuguese>Cor do do texto da hint</Portuguese>
         </Key>
@@ -475,11 +475,12 @@
             <Polish>Sprawdzaj PBO</Polish>
             <Spanish>Comprobar PBOs</Spanish>
             <German>Überprüfe PBOs</German>
-            <Czech>Zkontrolovat PBO</Czech>
+            <Czech>Zkontrolovat soubory PBO</Czech>
             <Portuguese>Verificar PBOs</Portuguese>
             <French>Vérifier les PBOs</French>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
             <Russian>Проверка аддонов</Russian>
+            <Italian>Controlla PBO</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
@@ -490,6 +491,7 @@
             <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
             <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
             <French>Ce module contrôle si les PBOs de chaque joueur sont corrects</French>
+            <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -501,6 +503,7 @@
             <French>Action</French>
             <Hungarian>Cselekvés</Hungarian>
             <Russian>Действие</Russian>
+            <Italian>Azione</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -509,9 +512,10 @@
             <German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
             <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
             <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
-            <French>Que faire avec les personnes n'ayant pas les bon PBOs</French>
+            <French>Que faire avec les personnes n'ayant pas les bons PBO ?</French>
             <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
+            <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -523,6 +527,7 @@
             <French>Avertir une fois</French>
             <Hungarian>Egyszeri figyelmeztetés</Hungarian>
             <Russian>Предупредить один раз</Russian>
+            <Italian>Avverti una volta</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -534,6 +539,7 @@
             <French>Avertir (permanent)</French>
             <Hungarian>Figyelmeztetés (tartós)</Hungarian>
             <Russian>Предупреждать (постоянно)</Russian>
+            <Italian>Avverti (permanente)</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -545,6 +551,7 @@
             <French>Ejecter</French>
             <Hungarian>Kirúgás</Hungarian>
             <Russian>Кикнуть</Russian>
+            <Italian>Kick</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -556,6 +563,7 @@
             <French>Vérifier tous les addons</French>
             <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
             <Russian>Проверять все аддоны</Russian>
+            <Italian>Controlla tutti gli addon</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -567,6 +575,7 @@
             <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE</French>
             <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
+            <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -578,6 +587,7 @@
             <French>Liste blanche</French>
             <Hungarian>Fehérlista</Hungarian>
             <Russian>Вайтлист доп. аддонов</Russian>
+            <Italian>Lista Bianca</Italian>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -586,9 +596,10 @@
             <German>Welche Addons werden dennoch erlaubt?</German>
             <Czech>Jaké addony jsou povoleny?</Czech>
             <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
-            <French>Quels addons sont tolérés</French>
+            <French>Quels addons sont tolérés ?</French>
             <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
+            <Italian>Quali addon sono permessi in ogni caso?</Italian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -600,6 +611,7 @@
             <French>LSD - Véhicules</French>
             <Hungarian>LSD járművek</Hungarian>
             <Russian>Транспорт под LSD</Russian>
+            <Italian>Veicoli LSD</Italian>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -611,6 +623,7 @@
             <French>Ajoute l'effet LSD aux véhicules synchronisés</French>
             <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
             <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
+            <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -622,6 +635,7 @@
             <French>Allumer l'ordinateur de poche</French>
             <Hungarian>Kézi eszköz kapcsolása</Hungarian>
             <Russian>Включить портативное устройство</Russian>
+            <Italian>Apri dispositivo palmare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -633,6 +647,7 @@
             <French>Fermer l'ordinateur de poche</French>
             <Hungarian>Kézi eszköz bezárása</Hungarian>
             <Russian>Закрыть портативное устройство</Russian>
+            <Italian>Chiudi dispositivo palmare</Italian>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -644,11 +659,12 @@
             <French>Changer (cycle) d'ordinateur de poche</French>
             <Hungarian>Kézi eszköz váltása</Hungarian>
             <Russian>Следующее портативное устройство</Russian>
+            <Italian>Cicla tra dispositivi palmari</Italian>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
             <Czech>Zakázáno</Czech>
-            <French>Non</French>
+            <French>Désactiver</French>
             <German>Deaktiviert</German>
             <Italian>Disattivato</Italian>
             <Polish>Wyłączone</Polish>
@@ -658,8 +674,8 @@
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
-            <Czech>Zapnuto</Czech>
-            <French>Oui</French>
+            <Czech>Povoleno</Czech>
+            <French>Activer</French>
             <German>Aktiviert</German>
             <Italian>Attivato</Italian>
             <Polish>Włączone</Polish>
@@ -699,6 +715,8 @@
             <Russian>Только в транспорте</Russian>
             <Czech>Pouze vozidla</Czech>
             <Spanish>Solo vehículos</Spanish>
+            <Italian>Solo veicoli</Italian>
+            <French>Vehicules seulement</French>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -708,14 +726,19 @@
             <Czech>Nevynucovat</Czech>
             <Portuguese>Não forçar</Portuguese>
             <Russian>Не обязывать</Russian>
+            <Italian>Non forzare</Italian>
+            <French>Ne pas forcer</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
+            <German>ACE-Ausrüstung</German>
             <Polish>ACE3 Wyposażenie</Polish>
             <Portuguese>Equipamentos ACE3</Portuguese>
             <Russian>ACE3 Снаряжение</Russian>
             <Czech>ACE3 Vybavení</Czech>
             <Spanish>ACE3 Equipo</Spanish>
+            <Italian>Equipaggiamento ACE3</Italian>
+            <French>Equipement ACE3</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
@@ -725,6 +748,8 @@
             <Russian>ACE3 Общие</Russian>
             <Spanish>ACE3 Común</Spanish>
             <Czech>ACE3 Obecné</Czech>
+            <Italian>Comune ACE3</Italian>
+            <French>Commun ACE3</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -734,6 +759,8 @@
             <Russian>ACE3 Оружие</Russian>
             <Czech>ACE3 Zbraně</Czech>
             <Spanish>ACE3 Armas</Spanish>
+            <Italian>Armi ACE3</Italian>
+            <French>Armes ACE3</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
@@ -743,6 +770,8 @@
             <Russian>ACE3 Перемещение</Russian>
             <Spanish>ACE3 Movimiento</Spanish>
             <Czech>ACE3 Pohyb</Czech>
+            <Italian>Movimento ACE3</Italian>
+            <French>Mouvement ACE3</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
@@ -752,6 +781,8 @@
             <Russian>ACE3 Прицелы</Russian>
             <Czech>ACE3 Nastavení optiky</Czech>
             <Spanish>ACE3 Ajuste de miras</Spanish>
+            <Italian>Regolazione Ottiche ACE3</Italian>
+            <French>Ajustement de la lunette ACE3</French>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
@@ -761,6 +792,16 @@
             <Russian>ACE3 Транспорт</Russian>
             <Czech>ACE3 Vozidla</Czech>
             <Spanish>ACE3 Vehículos</Spanish>
+            <Italian>Veicoli ACE3</Italian>
+            <French>Vehicules ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_NoRoomToUnload">
+            <English>No Room to unload</English>
+            <German>Kein Platz zum Entladen</German>
+            <Polish>Brak miejsca na rozładunek</Polish>
+            <Italian>Non c'è spazio per scaricare</Italian>
+            <Spanish>No hay espacio para descargar.</Spanish>
+            <French>Pas de place pour décharger</French>
         </Key>
     </Package>
 </Project>

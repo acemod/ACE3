@@ -8,6 +8,7 @@
 
 if(!isServer) exitWith { };
 
+BEGIN_COUNTER(frago);
 // _startTime = ACE_diagTime;
 
 private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
@@ -108,7 +109,9 @@ _fragArcs set[360, 0];
 #endif
 _doRandom = true;
 if(_isArmed && (count _objects) > 0) then {
-    [_lastPos, _shellType] call FUNC(doReflections);
+    if (GVAR(ReflectionsEnabled)) then {
+        [_lastPos, _shellType] call FUNC(doReflections);
+    };
     {
         //if(random(1) > 0.5) then {
             _target = _x;
@@ -212,3 +215,4 @@ if(_isArmed && (count _objects) > 0) then {
     // ACE_player sideChat format["tracks: %1", (count GVAR(trackedObjects))];
 // #endif
 // _endTime = ACE_diagTime;
+END_COUNTER(frago);

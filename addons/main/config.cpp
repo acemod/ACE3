@@ -6,6 +6,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
+            // Vanilla
+            "3den",
             "a3_air_f",
             "a3_air_f_beta",
             "a3_air_f_beta_heli_attack_01",
@@ -49,6 +51,7 @@ class CfgPatches {
             "a3_anims_f_config_sdr",
             "a3_anims_f_epa",
             "a3_anims_f_epc",
+            "a3_anims_f_exp_a",
             "a3_anims_f_heli",
             "a3_anims_f_kart",
             "a3_anims_f_mark_deployment",
@@ -106,6 +109,9 @@ class CfgPatches {
             "a3_data_f_curator_misc",
             "a3_data_f_curator_respawn",
             "a3_data_f_curator_virtual",
+            "a3_data_f_exp_a",
+            "a3_data_f_exp_a_virtual",
+            "a3_data_f_exp_b",
             "a3_data_f_heli",
             "a3_data_f_hook",
             "a3_data_f_kart",
@@ -119,6 +125,7 @@ class CfgPatches {
             "a3_functions_f_curator",
             "a3_functions_f_epa",
             "a3_functions_f_epc",
+            "a3_functions_f_exp_a",
             "a3_functions_f_heli",
             "a3_functions_f_mark",
             "a3_functions_f_mp_mark",
@@ -129,6 +136,7 @@ class CfgPatches {
             "a3_language_f_epa",
             "a3_language_f_epb",
             "a3_language_f_epc",
+            "a3_language_f_exp_a",
             "a3_language_f_gamma",
             "a3_language_f_heli",
             "a3_language_f_kart",
@@ -154,6 +162,7 @@ class CfgPatches {
             "a3_missions_f_epa",
             "a3_missions_f_epb",
             "a3_missions_f_epc",
+            "a3_missions_f_exp_a",
             "a3_missions_f_gamma",
             "a3_missions_f_heli",
             "a3_missions_f_kart",
@@ -186,6 +195,7 @@ class CfgPatches {
             "a3_modules_f_epb",
             "a3_modules_f_epb_misc",
             "a3_modules_f_events",
+            "a3_modules_f_exp_a",
             "a3_modules_f_groupmodifiers",
             "a3_modules_f_hc",
             "a3_modules_f_heli",
@@ -215,6 +225,9 @@ class CfgPatches {
             "a3_music_f_heli",
             "a3_music_f_mark",
             "a3_plants_f_bush",
+            "a3_props_f_exp_a",
+            "a3_props_f_exp_a_military",
+            "a3_props_f_exp_a_military_equipment",
             "a3_roads_f",
             "a3_rocks_f",
             "a3_signs_f",
@@ -253,6 +266,8 @@ class CfgPatches {
             "a3_sounds_f_bootcamp",
             "a3_sounds_f_epb",
             "a3_sounds_f_epc",
+            "a3_sounds_f_exp_a",
+            "a3_sounds_f_mark",
             "a3_static_f",
             "a3_static_f_beta_mortar_01",
             "a3_static_f_gamma",
@@ -337,6 +352,9 @@ class CfgPatches {
             "a3_structures_f_epc_items_documents",
             "a3_structures_f_epc_items_electronics",
             "a3_structures_f_epc_walls",
+            "a3_structures_f_exp_a",
+            "a3_structures_f_exp_a_vr_blocks",
+            "a3_structures_f_exp_a_vr_helpers",
             "a3_structures_f_furniture",
             "a3_structures_f_heli_civ_accessories",
             "a3_structures_f_heli_civ_constructions",
@@ -446,6 +464,7 @@ class CfgPatches {
             "a3_ui_f",
             "a3_ui_f_bootcamp",
             "a3_ui_f_curator",
+            "a3_ui_f_exp_a",
             "a3_ui_f_heli",
             "a3_ui_f_kart",
             "a3_ui_f_mark",
@@ -541,7 +560,12 @@ class CfgPatches {
             "a3_weapons_f_vests",
             "a3data",
             "map_vr",
-            "extended_eventhandlers", "cba_ui", "cba_xeh", "cba_xeh_a3", "cba_jr"
+            // CBA
+            "extended_eventhandlers",
+            "cba_ui",
+            "cba_xeh",
+            "cba_xeh_a3",
+            "cba_jr"
         };
         author[] = {ECSTRING(common,ACETeam)};
         authorUrl = "http://ace3mod.com/";

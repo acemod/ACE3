@@ -8,12 +8,13 @@ class CfgPatches {
         requiredAddons[] = {"ace_main","ace_modules"};
         author[] = {"KoffeinFlummi"};
         authorUrl = "https://github.com/KoffeinFlummi/";
-        VERSION_CONFIG;
+        VERSION_CONFIG_COMMON;
     };
 };
 
 #include "CfgEventHandlers.hpp"
 
+#include "CfgLocationTypes.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
@@ -23,6 +24,7 @@ class CfgPatches {
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
 #include "CfgUnitInsignia.hpp"
+#include "CfgEden.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -78,19 +80,11 @@ class CfgUIGrids {
                 displayName = "ACE Hint";
                 description = "Textual in game feedback to the player.";
                 preview = "\a3\Ui_f\data\GUI\Cfg\UIGrids\grid_hint_ca.paa";
-                saveToProfile[] = {0,1};                
+                saveToProfile[] = {0,1};
             };
         };
     };
 };
-
-/*
-// check dll
-class RscStandardDisplay;
-class RscDisplayMain: RscStandardDisplay {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getVariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
-};
-*/
 
 class ACE_Extensions {
     extensions[] = {};

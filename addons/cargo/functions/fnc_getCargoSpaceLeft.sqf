@@ -16,5 +16,6 @@
 #include "script_component.hpp"
 
 params ["_object"];
+// TRACE_1("params",_object);
 
 _object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(space))]

@@ -57,7 +57,7 @@ class Rsctitles {
             h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(Injuries);
@@ -103,7 +103,7 @@ class Rsctitles {
             h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0.9};
             text = "";

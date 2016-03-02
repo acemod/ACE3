@@ -18,7 +18,6 @@ if (isServer) then {
     }];
 };
 
-["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
 ["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
 ["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
@@ -34,3 +33,10 @@ if (!hasInterface) exitWith {};
 ["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
+
+["SettingsInitialized", {
+    // Hold on a little bit longer to ensure anims will work
+    [{
+        GVAR(captivityEnabled) = true;
+    }, [], 0.05] call EFUNC(common,waitAndExecute);
+}] call EFUNC(common,addEventHandler);

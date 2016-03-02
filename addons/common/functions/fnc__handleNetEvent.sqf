@@ -17,14 +17,8 @@ params ["_eventType", "_event"];
 if (_eventType == "ACEg") then {
     _event params ["_eventName", "_eventArgs"];
 
-    private ["_eventNames", "_eventIndex"];
-
-    _eventNames = GVAR(events) select 0;
-    _eventIndex = _eventNames find _eventName;
-
-    if (_eventIndex != -1) then {
-        private "_events";
-        _events = (GVAR(events) select 1) select _eventIndex;
+    private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
+    if (!isNil "_eventFunctions") then {
 
         #ifdef DEBUG_EVENTS
             ACE_LOGINFO_1("* Net Event %1",_eventName);
@@ -38,7 +32,7 @@ if (_eventType == "ACEg") then {
                     ACE_LOGINFO_1("    ID: %1",_forEachIndex);
                 #endif
             };
-        } forEach _events;
+        } forEach _eventFunctions;
     };
 };
 
@@ -46,9 +40,8 @@ if (_eventType == "ACEc") then {
     if (isServer) then {
         _event params ["_eventName", "_eventTargets", "_eventArgs"];
 
-        private ["_sentEvents", "_owner", "_serverFlagged"];
+        private _sentEvents = [];
 
-        _sentEvents = [];
         if (!IS_ARRAY(_eventTargets)) then {
             _eventTargets = [_eventTargets];
         };
@@ -59,9 +52,11 @@ if (_eventType == "ACEc") then {
             ["ACEg", ACEg] call FUNC(_handleNetEvent);
         };
 
-        _serverFlagged = false;
+        private _serverFlagged = false;
+
         {
-            _owner = _x;
+            private _owner = _x;
+
             if (IS_OBJECT(_x)) then {
                 _owner = owner _x;
             };

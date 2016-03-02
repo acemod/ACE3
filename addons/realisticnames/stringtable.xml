@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RealisticNames">
         <Key ID="STR_ACE_RealisticNames_HMG_01_Name">
@@ -229,17 +229,17 @@
             <Hungarian>Bardelas</Hungarian>
             <Italian>Bardelas</Italian>
         </Key>
-        <Key ID="STR_ACE_RealisticNames_APC_Wheeled_cannon_Name">
-            <English>Patria AMV</English>
-            <German>Patria AMV</German>
-            <Spanish>Patria AMV</Spanish>
-            <Polish>Patria AMV</Polish>
-            <Czech>Patria AMV</Czech>
-            <French>Patria AMV</French>
-            <Russian>Patria AMV</Russian>
-            <Portuguese>Patria AMV</Portuguese>
-            <Hungarian>Patria AMV</Hungarian>
-            <Italian>Patria AMV</Italian>
+        <Key ID="STR_ACE_RealisticNames_APC_Wheeled_01_cannon_Name">
+            <English>Badger IFV</English>
+            <German>SPz Badger</German>
+            <Spanish>Badger IFV</Spanish>
+            <Polish>Badger IFV</Polish>
+            <Czech>Badger IFV</Czech>
+            <French>Badger IFV</French>
+            <Russian>БМП Badger</Russian>
+            <Portuguese>Badger IFV</Portuguese>
+            <Hungarian>Badger IFV</Hungarian>
+            <Italian>Badger IFV</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name">
             <English>Nemmera</English>
@@ -426,7 +426,7 @@
             <German>KamAZ Transport</German>
             <Spanish>KamAZ de transporte</Spanish>
             <Polish>KamAZ transportowy</Polish>
-            <Czech>KamAZ-5350 (valník)</Czech>
+            <Czech>KamAZ (valník)</Czech>
             <French>KamAZ Transport</French>
             <Russian>КамАЗ Транспортный</Russian>
             <Portuguese>KamAZ Transporte</Portuguese>
@@ -438,7 +438,7 @@
             <German>KamAZ Transport (bedeckt)</German>
             <Spanish>KamAZ de transporte (cubierto)</Spanish>
             <Polish>KamAZ Transportowy (zakryty)</Polish>
-            <Czech>KamAZ-5350 (valník-krytý)</Czech>
+            <Czech>KamAZ (valník-krytý)</Czech>
             <French>KamAZ Transport (bâché)</French>
             <Russian>КамАЗ Транспортный (крытый)</Russian>
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
@@ -450,7 +450,7 @@
             <German>KamAZ Munition</German>
             <Spanish>KamAZ de munición</Spanish>
             <Polish>KamAZ Amunicyjny</Polish>
-            <Czech>KamAZ-5350 (muniční)</Czech>
+            <Czech>KamAZ (muniční)</Czech>
             <French>KamAZ Munitions</French>
             <Russian>КамАЗ Боеприпасы</Russian>
             <Portuguese>KamAZ Munições</Portuguese>
@@ -462,7 +462,7 @@
             <German>KamAZ Treibstoff</German>
             <Spanish>KamAZ de combustible</Spanish>
             <Polish>KamAZ cysterna</Polish>
-            <Czech>KamAZ-5350 (cisterna)</Czech>
+            <Czech>KamAZ (cisterna)</Czech>
             <French>KamAZ Citerne</French>
             <Russian>КамАЗ Заправщик</Russian>
             <Portuguese>KamAZ Combustível</Portuguese>
@@ -474,7 +474,7 @@
             <German>KamAZ Instandsetzung</German>
             <Spanish>KamAZ de reparación</Spanish>
             <Polish>KamAZ Naprawczy</Polish>
-            <Czech>KamAZ-5350 (opravárenský)</Czech>
+            <Czech>KamAZ (opravárenský)</Czech>
             <French>KamAZ Réparation</French>
             <Russian>КамАЗ Ремонтный</Russian>
             <Portuguese>KamAZ Reparador</Portuguese>
@@ -486,7 +486,7 @@
             <German>KamAZ Sanitäter</German>
             <Spanish>KamAZ médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
-            <Czech>KamAZ-5350 (zdravotnický)</Czech>
+            <Czech>KamAZ (zdravotnický)</Czech>
             <French>KamAZ Médical</French>
             <Russian>КамАЗ Медицинский</Russian>
             <Portuguese>KamAZ Médico</Portuguese>
@@ -594,7 +594,7 @@
             <German>Typhoon Transport</German>
             <Spanish>Typhoon de transporte</Spanish>
             <Polish>Typhoon Transportowy</Polish>
-            <Czech>KamAZ-63968 Typhoon (valník)</Czech>
+            <Czech>KamAZ Typhoon (valník)</Czech>
             <French>Typhoon Transport</French>
             <Russian>Тайфун Транспортный</Russian>
             <Portuguese>Typhoon Transporte</Portuguese>
@@ -606,7 +606,7 @@
             <German>Typhoon Transport (bedeckt)</German>
             <Spanish>Typhoon de transporte (cubierto)</Spanish>
             <Polish>Typhoon Transportowy (przykryty)</Polish>
-            <Czech>KamAZ-63968 Typhoon (valník-krytý)</Czech>
+            <Czech>KamAZ Typhoon (valník-krytý)</Czech>
             <French>Typhoon Transport (bâché)</French>
             <Russian>Тайфун Транспортный (крытый)</Russian>
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
@@ -618,7 +618,7 @@
             <German>Typhoon Gerät</German>
             <Spanish>Typhoon con dispositivo</Spanish>
             <Polish>Typhoon Urządzenie</Polish>
-            <Czech>KamAZ-63968 Typhoon (zařízení)</Czech>
+            <Czech>KamAZ Typhoon (zařízení)</Czech>
             <French>Typhoon Dispositif</French>
             <Russian>Тайфун Устройство</Russian>
             <Portuguese>Typhoon Dispositivo</Portuguese>
@@ -630,7 +630,7 @@
             <German>Typhoon Munition</German>
             <Spanish>Typhoon de munición</Spanish>
             <Polish>Typhoon Amunicyjny</Polish>
-            <Czech>KamAZ-63968 Typhoon (muniční)</Czech>
+            <Czech>KamAZ Typhoon (muniční)</Czech>
             <French>Typhoon Munitions</French>
             <Russian>Тайфун Боеприпасы</Russian>
             <Portuguese>Typhoon Munições</Portuguese>
@@ -642,7 +642,7 @@
             <German>Typhoon Treibstoff</German>
             <Spanish>Typhoon de combustible</Spanish>
             <Polish>Typhoon Cysterna</Polish>
-            <Czech>KamAZ-63968 Typhoon (cisterna)</Czech>
+            <Czech>KamAZ Typhoon (cisterna)</Czech>
             <French>Typhoon Citerne</French>
             <Russian>Тайфун Заправщик</Russian>
             <Portuguese>Typhoon Combustível</Portuguese>
@@ -654,7 +654,7 @@
             <German>Typhoon Instandsetzung</German>
             <Spanish>Typhoon de reparación</Spanish>
             <Polish>Typhoon Naprawczy</Polish>
-            <Czech>KamAZ-63968 Typhoon (opravárenský)</Czech>
+            <Czech>KamAZ Typhoon (opravárenský)</Czech>
             <French>Typhoon Réparation</French>
             <Russian>Тайфун Ремонтный</Russian>
             <Portuguese>Typhoon Reparador</Portuguese>
@@ -666,7 +666,7 @@
             <German>Typhoon Sanitäter</German>
             <Spanish>Typhoon médico</Spanish>
             <Polish>Typhoon Medyczny</Polish>
-            <Czech>KamAZ-63968 Typhoon (zdravotnický)</Czech>
+            <Czech>KamAZ Typhoon (zdravotnický)</Czech>
             <French>Typhoon Médical</French>
             <Russian>Тайфун Медицинский</Russian>
             <Portuguese>Typhoon Médico</Portuguese>
@@ -1730,7 +1730,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
-            <Czech>ASP-1 Kir (Čená)</Czech>
+            <Czech>ASP-1 Kir (Černá)</Czech>
             <French>ASP-1 Kir (Noir)</French>
             <Spanish>ASP-1 Kir (Negro)</Spanish>
             <Russian>ASP-1 Kir (Чёрный)</Russian>

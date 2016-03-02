@@ -18,14 +18,13 @@
  */
 #include "script_component.hpp"
 
-private ["_endPosOffset"],
-params ["_unit", "_target", ["_nozzle", objNull]];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
-[_unit, QGVAR(vehAttach), true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
 
 REFUEL_HOLSTER_WEAPON
 
-_endPosOffset = [0, 0, 0];
+private _endPosOffset = [0, 0, 0];
 if (isNull _nozzle) then { // func is called on fuel truck
     _target setVariable [QGVAR(engineHit), _target getHitPointDamage "HitEngine", true];
     if !(local _target) then {
@@ -35,7 +34,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
     };
 
     _target setVariable [QGVAR(isConnected), true, true];
-    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> "ace_refuel_hooks");
+    _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hooks));
     if (count _endPosOffset == 2) then {
         if (_unit distance (_target modelToWorld (_endPosOffset select 0)) <  _unit distance (_target modelToWorld (_endPosOffset select 1))) then {
             _endPosOffset = _endPosOffset select 0;
@@ -49,28 +48,30 @@ if (isNull _nozzle) then { // func is called on fuel truck
         2,
         [_unit, _target, _endPosOffset],
         {
-            private ["_newNozzle", "_rope", "_actionID"];
             params ["_args"];
-            _args params ["_unit", "_target", "_endPosOffset"];
+            _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosOffset", [0,0,0], [[]], 3]];
 
-            _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
-            _newNozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
-            _unit setVariable [QGVAR(nozzle), _newNozzle];
+            private _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
+            _newNozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
+            _unit setVariable [QGVAR(nozzle), _newNozzle, true];
 
-            _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, 0, 0], REFUEL_HOSE_LENGTH];
+            if (_target isKindOf "AllVehicles") then {
+                // Currently ropeCreate requires its first parameter to be a real vehicle
+                private _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
+                _newNozzle setVariable [QGVAR(rope), _rope, true];
+            };
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
-            _newNozzle setVariable [QGVAR(rope), _rope, true];
             _target setVariable [QGVAR(ownedNozzle), _newNozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
-            _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+            private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
             if (_actionID != -1) then {
                 _unit removeAction _actionID;
             };
             _actionID = _unit addAction [
                 format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
-                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus); REFUEL_UNHOLSTER_WEAPON',
+                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); REFUEL_UNHOLSTER_WEAPON',
                 nil,
                 20,
                 false,
@@ -85,29 +86,28 @@ if (isNull _nozzle) then { // func is called on fuel truck
         {true},
         ["isnotinside"]
     ] call EFUNC(common,progressBar);
-} else { // func is called in muzzle either connected or on ground
+} else { // func is called on muzzle either connected or on ground
     [
         2,
         [_unit, _nozzle],
         {
-            private ["_actionID"];
             params ["_args"];
-            _args params ["_unit", "_nozzle"];
+            _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
             if (_nozzle getVariable [QGVAR(jerryCan), false]) then {
                 _nozzle attachTo [_unit, [0,1,0], "pelvis"];
             } else {
-                _nozzle attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"]; // TODO replace with right coordinates for real model
+                _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             };
-            _unit setVariable [QGVAR(nozzle), _nozzle];
+            _unit setVariable [QGVAR(nozzle), _nozzle, true];
 
             _unit setVariable [QGVAR(isRefueling), true];
-            _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+            private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
             if (_actionID != -1) then {
                 _unit removeAction _actionID;
             };
             _actionID = _unit addAction [
                 format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
-                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus); REFUEL_UNHOLSTER_WEAPON',
+                '_unit = _this select 0; _nozzle = _unit getVariable QGVAR(nozzle); [_unit, _nozzle] call FUNC(dropNozzle); [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); REFUEL_UNHOLSTER_WEAPON',
                 nil,
                 20,
                 false,
@@ -128,18 +128,24 @@ if (isNull _nozzle) then { // func is called on fuel truck
 };
 if !(_nozzle getVariable [QGVAR(jerryCan), false]) then {
     [{
-        private ["_nozzle"];
         params ["_args", "_pfID"];
-        _args params ["_unit", "_source", "_endPosOffset"];
-
-        if (_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)) exitWith {
-            _nozzle =  _unit getVariable [QGVAR(nozzle), objNull];
+        _args params [["_unit", player, [objNull]], ["_source", objNull, [objNull]], ["_endPosOffset", [0, 0, 0], [[]], 3]];
+        _args params ["", "", "", ["_nozzle", _unit getVariable [QGVAR(nozzle), objNull], [objNull]]];
+        if (isNull _source || {_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)} || {!alive _source}) exitWith {
             if !(isNull _nozzle) then {
                 [_unit, _nozzle] call FUNC(dropNozzle);
                 REFUEL_UNHOLSTER_WEAPON
 
-                [_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
-                [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+                [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
+                if (isNull _source || {!alive _source}) then {
+                    private _rope = _nozzle getVariable [QGVAR(rope), objNull];
+                    if !(isNull _rope) then {
+                        ropeDestroy _rope;
+                    };
+                    deleteVehicle _nozzle;
+                } else {
+                    [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+                };
             };
             [_pfID] call cba_fnc_removePerFrameHandler;
         };

@@ -17,17 +17,15 @@ params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
-private ["_muteUnitReasons", "_speaker"];
-
 // add reason to mute to the unit
-_muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
+private _muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
 
 if !(_reason in _muteUnitReasons) then {
     _muteUnitReasons pushBack _reason;
     _unit setVariable [QGVAR(muteUnitReasons), _muteUnitReasons, true];
 };
 
-_speaker = speaker _unit;
+private _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};
 

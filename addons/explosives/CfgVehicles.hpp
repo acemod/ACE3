@@ -1,3 +1,6 @@
+
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -10,17 +13,8 @@ class CfgVehicles {
                 showDisabled = 1;
                 priority = 4;
                 icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
                 //Sub-menu items
-                class ACE_Detonate {
-                    displayName = CSTRING(Detonate);
-                    condition = QUOTE([_player] call FUNC(canDetonate));
-                    statement = "";
-                    insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-                    showDisabled = 1;
-                    icon = PATHTOF(UI\Explosives_Menu_ca.paa);
-                    priority = 2;
-                };
                 class ACE_Place {
                     displayName = CSTRING(Place);
                     condition = QUOTE((vehicle _player == _player) and {[_player] call FUNC(hasExplosives)});
@@ -46,7 +40,10 @@ class CfgVehicles {
 
     class Items_base_F;
     class ACE_DefuseObject: Items_base_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         author = "ACE";
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
@@ -75,7 +72,10 @@ class CfgVehicles {
         };
     };
     class ACE_Explosives_Place: Items_base_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         author = "ACE";
         _generalMacro = "ACE_Explosives_Place";
         displayName = "Multi-meter";
@@ -117,7 +117,7 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_DemoCharge:ACE_Explosives_Place {
+    class ACE_Explosives_Place_DemoCharge: ACE_Explosives_Place {
         displayName = "Demo Charge";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
         class ACE_Actions: ACE_Actions {
@@ -126,15 +126,15 @@ class CfgVehicles {
             };
         };
     };
-    class ACE_Explosives_Place_APERSBoundingMine:ACE_Explosives_Place {
+    class ACE_Explosives_Place_APERSBoundingMine: ACE_Explosives_Place {
         displayName = "APERS Bounding Mine";
         model = "\A3\Weapons_F\explosives\mine_AP_bouncing";
     };
-    class ACE_Explosives_Place_APERSMine:ACE_Explosives_Place {
+    class ACE_Explosives_Place_APERSMine: ACE_Explosives_Place {
         displayName = "APERS Mine";
         model = "\A3\Weapons_F\explosives\mine_ap";
     };
-    class ACE_Explosives_Place_APERSTripwireMine:ACE_Explosives_Place {
+    class ACE_Explosives_Place_APERSTripwireMine: ACE_Explosives_Place {
         displayName = "APERS Tripwire Mine";
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
         class ACE_Actions: ACE_Actions {
@@ -144,12 +144,12 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_ATMine:ACE_Explosives_Place {
+    class ACE_Explosives_Place_ATMine: ACE_Explosives_Place {
         displayName = "AT Mine";
         model = "\A3\Weapons_f\Explosives\mine_at";
     };
 
-    class ACE_Explosives_Place_Claymore:ACE_Explosives_Place {
+    class ACE_Explosives_Place_Claymore: ACE_Explosives_Place {
         displayName = "Claymore";
         model = "\A3\Weapons_F\explosives\mine_AP_miniclaymore";
         class ACE_Actions: ACE_Actions {
@@ -159,7 +159,7 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_SatchelCharge:ACE_Explosives_Place {
+    class ACE_Explosives_Place_SatchelCharge: ACE_Explosives_Place {
         displayName = "Satchel Charge";
         model = "\A3\Weapons_F\Explosives\satchel";
         class ACE_Actions: ACE_Actions {
@@ -169,28 +169,28 @@ class CfgVehicles {
         };
     };
 
-    class ACE_Explosives_Place_SLAM:ACE_Explosives_Place {
+    class ACE_Explosives_Place_SLAM: ACE_Explosives_Place {
         displayName = "SLAM";
         model = "\A3\Weapons_F\Explosives\mine_SLAM_directional";
     };
 
     // IEDs
-    class ACE_Explosives_Place_IEDUrbanBig:ACE_Explosives_Place {
+    class ACE_Explosives_Place_IEDUrbanBig: ACE_Explosives_Place {
         displayName = "IED Urban Big";
         model = "\A3\Weapons_F\Explosives\IED_urban_big";
     };
 
-    class ACE_Explosives_Place_IEDLandBig:ACE_Explosives_Place {
+    class ACE_Explosives_Place_IEDLandBig: ACE_Explosives_Place {
         displayName = "IED Land Big";
         model = "\A3\Weapons_F\Explosives\IED_land_big";
     };
 
-    class ACE_Explosives_Place_IEDUrbanSmall:ACE_Explosives_Place {
+    class ACE_Explosives_Place_IEDUrbanSmall: ACE_Explosives_Place {
         displayName = "IED Urban Small";
         model = "\A3\Weapons_F\Explosives\IED_urban_small";
     };
 
-    class ACE_Explosives_Place_IEDLandSmall:ACE_Explosives_Place {
+    class ACE_Explosives_Place_IEDLandSmall: ACE_Explosives_Place {
         displayName = "IED Land Small";
         model = "\A3\Weapons_F\Explosives\IED_land_small";
     };
@@ -338,4 +338,77 @@ class CfgVehicles {
     class O_Soldier_sniper_base_F;
     class O_sniper_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
     class O_spotter_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
+
+    // Editor placed mines
+    class MineBase;
+    class SLAMDirectionalMine: MineBase {
+        displayName = CSTRING(Module_SLAMSideAttack_DisplayName);
+    };
+    class ACE_SLAMBottomMine: SLAMDirectionalMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
+        displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
+        // TODO: Find a way to place the mine laying down instead of standing up
+    };
+
+    class IEDUrbanBig_F;
+    class ACE_IEDUrbanBig_Range: IEDUrbanBig_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDUrbanBig_Range_Ammo";
+        displayName = CSTRING(Module_IEDUrbanBig_Range_DisplayName);
+    };
+    class IEDLandBig_F;
+    class ACE_IEDLandBig_Range: IEDLandBig_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDLandBig_Range_Ammo";
+        displayName = CSTRING(Module_IEDLandBig_Range_DisplayName);
+    };
+    class IEDUrbanSmall_F;
+    class ACE_IEDUrbanSmall_Range: IEDUrbanSmall_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDUrbanSmall_Range_Ammo";
+        displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
+    };
+    class IEDLandSmall_F;
+    class ACE_IEDLandSmall_Range: IEDLandSmall_F {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_IEDLandSmall_Range_Ammo";
+        displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
+    };
+
+    // Zeus placed mines
+    class ModuleMine_F;
+    class ModuleMine_SLAMDirectionalMine_F: ModuleMine_F {
+        displayName = CSTRING(Module_SLAMSideAttack_DisplayName);
+    };
+    class ACE_ModuleMine_SLAMBottomMine: ModuleMine_SLAMDirectionalMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
+        explosive = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
+        icon = "iconExplosiveGP";
+    };
+    class ModuleExplosive_IEDUrbanBig_F;
+    class ACE_ModuleExplosive_IEDUrbanBig_Range: ModuleExplosive_IEDUrbanBig_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(Module_IEDUrbanBig_Range_DisplayName);
+        explosive = "ACE_IEDUrbanBig_Range_Ammo";
+    };
+    class ModuleExplosive_IEDLandBig_F;
+    class ACE_ModuleExplosive_IEDLandBig_Range: ModuleExplosive_IEDLandBig_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(Module_IEDLandBig_Range_DisplayName);
+        explosive = "ACE_IEDLandBig_Range_Ammo";
+    };
+    class ModuleExplosive_IEDUrbanSmall_F;
+    class ACE_ModuleExplosive_IEDUrbanSmall_Range: ModuleExplosive_IEDUrbanSmall_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(Module_IEDUrbanSmall_Range_DisplayName);
+        explosive = "ACE_IEDUrbanSmall_Range_Ammo";
+    };
+    class ModuleExplosive_IEDLandSmall_F;
+    class ACE_ModuleExplosive_IEDLandSmall_Range: ModuleExplosive_IEDLandSmall_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
+        explosive = "ACE_IEDLandSmall_Range_Ammo";
+    };
 };

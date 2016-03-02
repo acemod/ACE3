@@ -65,8 +65,8 @@ if (_activated) then {
                 _altitude = 1000;
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
-                _sounds = if (getnumber (_CfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
-                _sound = _sounds call bis_fnc_selectrandom;
+                _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
+                _sound = selectRandom _sounds;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
                 _shakeRadius = 300;

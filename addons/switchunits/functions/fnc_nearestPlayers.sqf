@@ -16,11 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_nearestPlayers"];
-
 params ["_position", "_radius"];
 
-_nearestPlayers = [];
+private _nearestPlayers = [];
 
 {
     if ([_x] call EFUNC(common,isPlayer) && {alive _x}) then {

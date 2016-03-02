@@ -40,7 +40,11 @@ if ((_tourniquets select _part) > 0) exitWith {
 };
 
 _removeItem = _items select 0;
-[[_target, _removeItem, _selectionName], QUOTE(DFUNC(treatmentTourniquetLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentTourniquetLocal", _target, [_target, _removeItem, _selectionName]] call EFUNC(common,targetEvent);
+};
 
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);

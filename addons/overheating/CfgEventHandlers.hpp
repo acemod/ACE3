@@ -1,7 +1,14 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
-  class ADDON {
-    init = QUOTE( call COMPILE_FILE(XEH_preInit) );
-  };
+    class ADDON {
+        init = QUOTE( call COMPILE_FILE(XEH_preInit) );
+    };
 };
 
 class Extended_PostInit_EventHandlers {
@@ -10,18 +17,10 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_FiredBIS_EventHandlers {
-    class CAManBase {
-        class GVAR(Overheat) {
-            clientFiredBIS = QUOTE( if (_this select 0 == ACE_player) then {_this call FUNC(overheat)}; );
-        };
-    };
-};
-
 class Extended_Take_EventHandlers {
     class CAManBase {
         class GVAR(UnjamReload) {
-            clientTake = QUOTE( if (_this select 0 == ACE_player && {(_this select 1) in [ARR_3(uniformContainer (_this select 0), vestContainer (_this select 0), backpackContainer (_this select 0))]} && {_this select 2 == currentMagazine (_this select 0)}) then {_vehicle = vehicle (_this select 0); [ARR_3(_vehicle, currentWeapon _vehicle, true)] call FUNC(clearJam)}; );
+            clientTake = QUOTE( _this call FUNC(handleTakeEH) );
         };
     };
 };

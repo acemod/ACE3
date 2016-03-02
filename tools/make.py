@@ -73,8 +73,10 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
-importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
-versionFiles = ["README.md", "mod.cpp"]
+importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
+versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
+
+ciBuild = False # Used for CI builds
 
 ###############################################################################
 # http://akiscode.com/articles/sha-1directoryhash.shtml
@@ -330,15 +332,20 @@ def copy_important_files(source_dir,destination_dir):
 
     originalDir = os.getcwd()
 
-    #copy importantFiles
+    # Copy importantFiles
     try:
         print_blue("\nSearching for important files in {}".format(source_dir))
         print("Source_dir: {}".format(source_dir))
         print("Destination_dir: {}".format(destination_dir))
 
         for file in importantFiles:
+            filePath = os.path.join(module_root_parent, file)
+            # Take only file name for destination path (to put it into root of release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             print_green("Copying file => {}".format(os.path.join(source_dir,file)))
-            shutil.copyfile(os.path.join(source_dir,file),os.path.join(destination_dir,file))
+            shutil.copyfile(os.path.join(source_dir,filePath),os.path.join(destination_dir,file))
     except:
         print_error("COPYING IMPORTANT FILES.")
         raise
@@ -626,6 +633,10 @@ def stash_version_files_for_building():
     try:
         for file in versionFiles:
             filePath = os.path.join(module_root_parent, file)
+            # Take only file name for stash location if in subfolder (otherwise it gets removed when removing folders from release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             stashPath = os.path.join(release_dir, file)
             print("Temporarily stashing {} => {}.bak for version update".format(filePath, stashPath))
             shutil.copy(filePath, "{}.bak".format(stashPath))
@@ -642,6 +653,10 @@ def restore_version_files():
     try:
         for file in versionFiles:
             filePath = os.path.join(module_root_parent, file)
+            # Take only file name for stash path if in subfolder (otherwise it gets removed when removing folders from release dir)
+            if "\\" in file:
+                count = file.count("\\")
+                file = file.split("\\", count)[-1]
             stashPath = os.path.join(release_dir, file)
             print("Restoring {}".format(filePath))
             shutil.move("{}.bak".format(stashPath), filePath)
@@ -697,11 +712,9 @@ def version_stamp_pboprefix(module,commitID):
         f.close()
 
         if configtext:
-            patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
-            if patchestext:
+            if re.search(r"version=(.*?)$", configtext, re.DOTALL):
                 if configtext:
-                    patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
-                    configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
+                    configtext = re.sub(r"version=(.*?)$", "version={}\n".format(commitID), configtext, flags=re.DOTALL)
                     f = open(configpath, "w")
                     f.write(configtext)
                     f.close()
@@ -744,6 +757,7 @@ def main(argv):
     global dssignfile
     global prefix
     global pbo_name_prefix
+    global ciBuild
 
     if sys.platform != "win32":
         print_error("Non-Windows platform (Cygwin?). Please re-run from cmd.")
@@ -847,6 +861,10 @@ See the make.cfg file for additional build options.
     else:
         version_update = False
 
+    if "--ci" in argv:
+        argv.remove("--ci")
+        ciBuild = True
+
     print_yellow("\nCheck external references is set to {}".format(str(check_external)))
 
     # Get the directory the make script is in.
@@ -936,7 +954,7 @@ See the make.cfg file for additional build options.
     # See if we have been given specific modules to build from command line.
     if len(argv) > 1 and not make_release_zip:
         arg_modules = True
-        modules = argv[1:]
+        modules = [a for a in argv[1:] if a[0] != "-"]
 
     # Find the tools we need.
     try:
@@ -975,6 +993,17 @@ See the make.cfg file for additional build options.
         print ("No cache found.")
         cache = {}
 
+    # Check the build version (from main) with cached version - forces a full rebuild when version changes
+    project_version = get_project_version()
+    cacheVersion = "None";
+    if 'cacheVersion' in cache:
+        cacheVersion = cache['cacheVersion']
+
+    if (project_version != cacheVersion):
+        cache = {}
+        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, project_version))
+        cache['cacheVersion'] = project_version
+
     if not os.path.isdir(os.path.join(release_dir, project, "addons")):
         try:
             os.makedirs(os.path.join(release_dir, project, "addons"))
@@ -998,6 +1027,9 @@ See the make.cfg file for additional build options.
         # Set version
         set_version_in_files();
         print("Version in files has been changed, make sure you commit and push the updates!")
+
+    amountOfBuildsFailed = 0
+    namesOfBuildsFailed = []
 
     try:
         # Temporarily copy optionals_root for building. They will be removed later.
@@ -1082,9 +1114,6 @@ See the make.cfg file for additional build options.
                     except:
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
-
-        amountOfBuildsFailed = 0
-        namesOfBuildsFailed = []
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
@@ -1399,6 +1428,7 @@ See the make.cfg file for additional build options.
         for failedModuleName in namesOfBuildsFailed:
             print("- {} failed.".format(failedModuleName))
 
+        sys.exit(1)
     else:
         print_green("\Completed with 0 errors.")
 
@@ -1407,4 +1437,8 @@ if __name__ == "__main__":
     main(sys.argv)
     d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
+
+    if ciBuild:
+        sys.exit(0)
+
     input("Press Enter to continue...")

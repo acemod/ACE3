@@ -12,12 +12,11 @@
  * Example:
  * [can] call ace_refuel_fnc_makeJerryCan
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_actions", "_action"];
-params ["_target", ["_fuelAmount", 20]];
+params [["_target", objNull, [objNull]], ["_fuelAmount", 20, [0]]];
 
 if (isNull _target ||
     {_target isKindOf "AllVehicles"} ||
@@ -28,7 +27,7 @@ _target setVariable [QGVAR(jerryCan), true, true];
 _target setVariable [QGVAR(source), _target, true];
 
 // Main Action
-_action = [QGVAR(Refuel),
+private _action = [QGVAR(Refuel),
     localize LSTRING(Refuel),
     QUOTE(PATHTOF(ui\icon_refuel_interact.paa)),
     {},

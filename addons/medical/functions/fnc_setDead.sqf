@@ -20,7 +20,7 @@ params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
 if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
     false;
 };
 
@@ -46,6 +46,12 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         params ["_args", "_idPFH"];
         _args params ["_unit"];
         _startTime = _unit getVariable [QGVAR(reviveStartTime), 0];
+
+        //If we are in reivie state in a blown up vehicle, try to unload so that people can access the body
+        if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) then {
+            TRACE_2("Unloading", _unit, vehicle _unit);
+            [_unit] call EFUNC(common,unloadPerson);
+        };
 
         if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -80,7 +86,7 @@ if (isPLayer _unit) then {
 
 ["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
 
-//Delay a frame before killing the unit via scripted damage 
+//Delay a frame before killing the unit via scripted damage
 //to avoid triggering the "Killed" Event twice (and having the wrong killer)
 
 if (!_delaySetDamage) then {

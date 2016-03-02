@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg
- *
  * Calculates the temperature based on altitude and weather
  *
  * Arguments:
@@ -9,8 +8,10 @@
  * Return Value:
  * temperature - degrees celsius <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * 500 call ace_weather_fnc_calculateTemperatureAtHeight
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

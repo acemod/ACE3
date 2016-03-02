@@ -15,23 +15,22 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_nozzle"];
-
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 if (isNull _unit  ||
     {isNull _nozzle} ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit}) exitWith {};
-private ["_attachedNozzle", "_actionID"];
-_attachedNozzle = _unit getVariable [QGVAR(nozzle), nil];
+
+private _attachedNozzle = _unit getVariable [QGVAR(nozzle), nil];
 if (isNil "_attachedNozzle") exitWith {};
 
 if (_nozzle != _attachedNozzle) exitWith {};
 
-_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
 if (_actionID != -1) then {
     _unit removeAction _actionID;
     _unit setVariable [QGVAR(isRefueling), false, true];
     _unit setVariable [QGVAR(ReleaseActionID), nil];
-    _unit setVariable [QGVAR(nozzle), nil];
+    _unit setVariable [QGVAR(nozzle), nil, true];
 };

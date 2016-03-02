@@ -16,53 +16,46 @@
  */
 #include "script_component.hpp"
 
-params ["_item", "_vehicle"];
-private ["_loaded", "_space", "_itemSize", "_emptyPos", "_validVehiclestate"];
+params ["_item", "_vehicle", ["_unloader", objNull]];
+TRACE_3("params",_item,_vehicle,_unloader);
 
-if !([_item, _vehicle] call FUNC(canUnloadItem)) exitWith {
+private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+
+//This covers testing vehicle stability and finding a safe position
+private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+TRACE_1("findUnloadPosition",_emptyPosAGL);
+
+if ((count _emptyPosAGL) != 3) exitWith {
+    TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
+    if ((!isNull _unloader) && {_unloader == ACE_player}) then {
+        //display text saying there are no safe places to exit the vehicle
+        ["displayTextStructured", [localize ELSTRING(common,NoRoomToUnload)]] call EFUNC(common,localEvent);
+    };
     false
 };
 
-_itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
-_validVehiclestate = true;
-_emptyPos = [];
-if (_vehicle isKindOf "Ship" ) then {
-    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
-    TRACE_1("SHIP Ground Check", getPosATL _vehicle );
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, _itemClass]); // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air" ) then {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
-        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
-    } else {
-        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, _itemClass]);
-    };
+if !(_item in _loaded) exitWith {
+    ACE_LOGERROR_3("Tried to unload item [%1] not in vehicle[%2] cargo[%3]", _item, _vehicle, _loaded);
+    false
 };
 
-TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitWith {false};
-
-if (count _emptyPos == 0) exitWith {false};
-
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded deleteAt (_loaded find _item);
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
-_space = [_vehicle] call FUNC(getCargoSpaceLeft);
-_itemSize = [_item] call FUNC(getSizeItem);
+private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
+private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
     detach _item;
-    _item setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
-    ["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
+    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+    // do both on server to ensure they are executed in the correct order
+    ["ServerUnloadCargo", [_item, _emptyPosAGL]] call EFUNC(common,serverEvent);
 } else {
-    createVehicle [_item, _emptyPos, [], 0, ""];
+    private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
+    _newItem setPosASL (AGLtoASL _emptyPosAGL);
 };
 
 true

@@ -136,3 +136,8 @@ if (!hasInterface) exitWith {};
 },
 {false},
 [201, [true, true, false]], true] call CBA_fnc_addKeybind;
+
+
+// Register fire event handler
+["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);

@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  * 2: Nozzle <OBJECT>
- * 3: Connection Point <OBJECT>
+ * 3: Connection Point <ARRAY>
  *
  * Return Value:
  * None
@@ -18,16 +18,18 @@
 
 #define PFH_STEPSIZE 0.1
 
-private ["_rate", "_maxFuel"];
-params ["_unit", "_target", "_nozzle", "_connectToPoint"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
-_rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate) * PFH_STEPSIZE;
-_maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
+private _rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate) * PFH_STEPSIZE;
+private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
 
 [{
-    private ["_source", "_tooFar", "_fuelInSource", "_fuelInSink", "_finished", "_fueling"];
     params ["_args", "_pfID"];
-    _args params ["_source", "_sink", "_unit", "_nozzle", "_rate", "_startFuel", "_maxFuel", "_connectFromPoint", "_connectToPoint"];
+    _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_startFuel", 0, [0]], ["_maxFuel", 0, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
+
+    if !(_nozzle getVariable [QGVAR(isConnected), false]) exitWith {
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
 
     if (!alive _source || {!alive _sink}) exitWith {
         [objNull, _nozzle] call FUNC(dropNozzle);
@@ -36,7 +38,7 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         _sink setVariable [QGVAR(nozzle), objNull, true];
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
-    _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (REFUEL_HOSE_LENGTH - 2);
+    private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (REFUEL_HOSE_LENGTH - 2);
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
 
@@ -47,24 +49,26 @@ _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(f
         [_pfID] call cba_fnc_removePerFrameHandler;
     };
 
-    _finished = false;
-    _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
+    private _finished = false;
+    private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
-        _fuelInSource = [_source] call FUNC(getFuel);
+        private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
         if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
             _fuelInSource = _fuelInSource - _rate;
+        } else {
+            _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _rate, true];
         };
-        if (_fuelInSource < 0 && {_fuelInSource > -1}) then {
+        if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
             _fuelInSource = 0;
             _finished = true;
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
         };
 
-        _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rate / _maxFuel);
+        private _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rate / _maxFuel);
         if (_fuelInSink > 1) then {
             _fuelInSink = 1;
             _finished = true;

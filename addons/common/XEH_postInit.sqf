@@ -1,5 +1,6 @@
 // ACE - Common
 // #define ENABLE_PERFORMANCE_COUNTERS
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 
@@ -57,6 +58,39 @@
 // Eventhandlers
 //////////////////////////////////////////////////
 
+//Status Effect EHs:
+["setStatusEffect", {_this call FUNC(statusEffect_set)}] call FUNC(addEventHandler);
+["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
+["blockSprint", false, []] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+
+["forceWalk", {
+    params ["_object", "_set"];
+    TRACE_2("forceWalk EH",_object,_set);
+    _object forceWalk (_set > 0);
+}] call FUNC(addEventHandler);
+["blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
+    params ["_object", "_set"];
+    TRACE_2("blockSprint EH",_object,_set);
+    _object allowSprint (_set == 0);
+}] call FUNC(addEventHandler);
+["setCaptive", {
+    params ["_object", "_set"];
+    TRACE_2("setCaptive EH",_object,_set);
+    _object setCaptive (_set > 0);
+}] call FUNC(addEventHandler);
+["blockDamage", { //Name reversed from `allowDamage` because we want NOR logic
+    params ["_object", "_set"];
+    if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
+        TRACE_2("blockDamage EH (using medical)",_object,_set);
+       _object setvariable [QEGVAR(medical,allowDamage), (_set == 0), true];
+    } else {
+        TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
+       _object allowDamage (_set == 0);
+    };
+}] call FUNC(addEventHandler);
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -80,8 +114,7 @@ if (isServer) then {
     params ["_name", "_value", "_force"];
 
     if (_force) then {
-        private "_settingData";
-        _settingData = [_name] call FUNC(getSettingData);
+        private _settingData = [_name] call FUNC(getSettingData);
 
         if (_settingData isEqualTo []) exitWith {};
 
@@ -116,6 +149,9 @@ if (isServer) then {
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 ["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
 ["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
+["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
+["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
+["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
@@ -162,10 +198,8 @@ QGVAR(remoteFnc) addPublicVariableEventHandler {
 // Check files, previous installed version etc.
 //////////////////////////////////////////////////
 
-private ["_currentVersion", "_previousVersion"];
-
-_currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
-_previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
+private _currentVersion = getText (configFile >> "CfgPatches" >> QUOTE(ADDON) >> "version");
+private _previousVersion = profileNamespace getVariable ["ACE_VersionNumberString", ""];
 
 // check previous version number from profile
 if (_currentVersion != _previousVersion) then {
@@ -220,7 +254,7 @@ call FUNC(checkFiles);
         // Publish all settings data after all configs and modules are read
         publicVariable QGVAR(settings);
     };
-    
+
     // Load user settings from profile
     if (hasInterface) then {
         call FUNC(loadSettingsFromProfile);
@@ -259,32 +293,6 @@ if (!hasInterface) exitWith {};
 
 call FUNC(assignedItemFix);
 
-GVAR(ScrollWheelFrame) = diag_frameno;
-
-["mainDisplayLoaded", {
-    [{
-        call FUNC(handleScrollWheelInit);
-        call FUNC(handleModifierKeyInit);
-    }, [], 0.1] call FUNC(waitAndExecute); // needs delay, otherwise doesn't work without pressing "RESTART" in editor once. Tested in 1.52RC
-}] call FUNC(addEventHandler);
-
-// add PFH to execute event that fires when the main display (46) is created
-private "_fnc_initMainDisplayCheck";
-_fnc_initMainDisplayCheck = {
-    [{
-        if !(isNull findDisplay 46) then {
-            // Raise ACE event locally
-            ["mainDisplayLoaded", [findDisplay 46]] call FUNC(localEvent);
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 0, []] call CBA_fnc_addPerFrameHandler;
-};
-
-call _fnc_initMainDisplayCheck;
-
-// repeat this every time a savegame is loaded
-addMissionEventHandler ["Loaded", _fnc_initMainDisplayCheck];
-
 // @todo remove?
 enableCamShake true;
 
@@ -311,17 +319,6 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-//CBA has events for zeus's display onLoad and onUnload (Need to delay a frame for display to be ready)
-private _zeusDisplayChangedFNC = {
-    [{
-        private _data = !(isNull findDisplay 312);
-        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    }, []] call FUNC(execNextFrame);
-};
-["CBA_curatorOpened", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-["CBA_curatorClosed", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-
-
 // default variables
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
@@ -344,7 +341,7 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     BEGIN_COUNTER(stateChecker);
 
     // "playerChanged" event
-    private _data = call FUNC(player); // reuse one variable to reduce number of variables that have to be set to private each frame
+    private _data = call FUNC(player);
     if !(_data isEqualTo ACE_player) then {
         private _oldPlayer = ACE_player;
 
@@ -411,14 +408,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         ["visibleMapChanged", [ACE_player, _data]] call FUNC(localEvent);
     };
 
-    // "inventoryDisplayChanged" event
-    _data = !(isNull findDisplay 602);
-    if !(_data isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
-        // Raise ACE event locally
-        GVAR(OldInventoryDisplayIsOpen) = _data;
-        ["inventoryDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
     // "activeCameraChanged" event
     _data = call FUNC(isfeatureCameraActive);
     if !(_data isEqualTo GVAR(OldIsCamera)) then {
@@ -435,9 +424,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-// @todo still needed?
-[QGVAR(StateArrested), false, true, QUOTE(ADDON)] call FUNC(defineVariable);
-
 ["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
 ["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);
 
@@ -448,6 +434,8 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         [_unit, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);
     };
 }] call FUNC(addEventhandler);
+
+["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
 
 
 //////////////////////////////////////////////////
