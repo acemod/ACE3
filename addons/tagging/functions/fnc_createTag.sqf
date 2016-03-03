@@ -7,6 +7,7 @@
  * 1: Vector dir and up <ARRAY>
  * 2: Colour of the tag (valid colours are black, red, green and blue) <STRING>
  * 3: Object it should be tied too <OBJECT>
+ * 4: Unit that created the tag <OBJECT>
  *
  * Return Value:
  * None
@@ -19,8 +20,8 @@
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object"];
-TRACE_4("createTag:", _tagPosASL, _vectorDirAndUp, _color, _object);
+params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object", "_unit"];
+TRACE_5("createTag:", _tagPosASL, _vectorDirAndUp, _color, _object, _unit);
 
 if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
     ACE_LOGERROR_1("%1 is not a valid tag colour.", _color);
@@ -30,6 +31,9 @@ private _tag = "UserTexture1m_F" createVehicle [0,0,0];
 _tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + _color + '\' + str (floor (random 3)) + '.paa'];
 _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
+
+// Throw a global event for mision makers
+["tagCreated", [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
 
 if (isNull _object) exitWith {};
 
