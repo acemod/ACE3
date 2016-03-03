@@ -12,8 +12,6 @@ GVAR(trench) = objNull;
 GVAR(digPFH) = -1;
 GVAR(digDirection) = 0;
 
-[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
-
 // Cancel dig sandbag if interact menu opened
 ["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
 
