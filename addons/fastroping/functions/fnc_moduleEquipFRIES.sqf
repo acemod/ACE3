@@ -17,6 +17,15 @@
 #include "script_component.hpp"
 params ["_module"];
 
+private _attached = _module getVariable ["bis_fnc_curatorAttachObject_object",objnull];
+if (!isNull _attached) exitWith {
+    TRACE_1("zeus",_attached);
+    if ((alive _attached) && {(_attached isKindOf "Helicopter")}) then {
+        [_attached] call FUNC(equipFRIES);
+    };
+    deleteVehicle _module;
+};
+
 private _synchedUnits = synchronizedObjects _module;
 {
     if (_x isKindOf "CAManBase") then {
