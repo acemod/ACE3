@@ -594,7 +594,7 @@ class CfgSettings {
         class Versioning {
             class ACE {
                 class dependencies {
-                    CBA[] = {"cba_main", {2,3,1}, "true"};
+                    CBA[] = {"cba_main", REQUIRED_CBA_VERSION, "true"};
                 };
             };
         };
