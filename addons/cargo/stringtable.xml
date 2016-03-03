@@ -172,6 +172,7 @@
             <English>Make Object Loadable</English>
             <German>Füge Objekt zum Frachtsystem hinzu</German>
             <Polish>Ustaw jako ładowalny</Polish>
+            <Russian>Сделать объект загружаемым</Russian>
             <Italian>Rendi oggetto caricabile</Italian>
             <Spanish>Hacer objeto cargable</Spanish>
             <French>Rendre l'objet chargeable</French>
@@ -180,6 +181,7 @@
             <English>Sets the synced object as loadable by the cargo system.</English>
             <German>Das synchronisierte Objekt wird dem Frachtsystem hinzugefügt und ist be- und entladbar.</German>
             <Polish>Ustawia zsynchronizowany obiekt jako możliwy do załadowania poprzez system cargo</Polish>
+            <Russian>Отмечает выбранный объект как загружаемый для системы погрузки.</Russian>
             <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
             <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
             <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
@@ -188,6 +190,7 @@
             <English>Object's Size</English>
             <German>Objektgröße</German>
             <Polish>Rozmiar obiektu</Polish>
+            <Russian>Размер объекта</Russian>
             <Italian>Dimensioni dell'oggetto</Italian>
             <Spanish>Tamaño del objeto</Spanish>
             <French>Taille de l'objet</French>
