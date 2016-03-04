@@ -356,6 +356,7 @@
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
+            <Russian>Высадка!</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -388,7 +389,7 @@
             <French>Vert</French>
             <Polish>Zielonych</Polish>
             <Czech>Zelený</Czech>
-            <Russian>Зеленый</Russian>
+            <Russian>Зелёный</Russian>
             <Portuguese>Verde</Portuguese>
             <Italian>Verde</Italian>
             <Hungarian>Zöld</Hungarian>
@@ -437,7 +438,7 @@
             <Portuguese>Atribuir Verde</Portuguese>
             <Hungarian>Hozzávonás a Zöldhöz</Hungarian>
             <Czech>Přiřadit k zeleným</Czech>
-            <Russian>Назначить в Зеленую группу</Russian>
+            <Russian>Назначить в Зелёную группу</Russian>
             <French>Assigner à vert</French>
             <Italian>Assegna al team verde</Italian>
         </Key>
@@ -461,7 +462,7 @@
             <Portuguese>Atribuir Amarelo</Portuguese>
             <Hungarian>Hozzávonás a Sárgához</Hungarian>
             <Czech>Přiřadit ke žlutým</Czech>
-            <Russian>Назначить в Желтую группу</Russian>
+            <Russian>Назначить в Жёлтую группу</Russian>
             <French>Assigner à jaune</French>
             <Italian>Assegna al team giallo</Italian>
         </Key>
@@ -473,7 +474,7 @@
             <Portuguese>Entrar em Vermelho</Portuguese>
             <Hungarian>Belépés a Pirosba</Hungarian>
             <Czech>Připojit k červeným</Czech>
-            <Russian>Присоединиться к Красной группе</Russian>
+            <Russian>Вступить в Красную группу</Russian>
             <French>Rejoindre rouge</French>
             <Italian>Unirsi al team rosso</Italian>
         </Key>
@@ -485,7 +486,7 @@
             <Portuguese>Entrar em Verde</Portuguese>
             <Hungarian>Belépés a Zöldbe</Hungarian>
             <Czech>Připojit k zeleným</Czech>
-            <Russian>Присоединиться к Зеленой группе</Russian>
+            <Russian>Вступить в Зелёную группу</Russian>
             <French>Rejoindre vert</French>
             <Italian>Unirsi al team verde</Italian>
         </Key>
@@ -497,7 +498,7 @@
             <Portuguese>Entrar em Azul</Portuguese>
             <Hungarian>Belépés a Kékbe</Hungarian>
             <Czech>Připojit k modrým</Czech>
-            <Russian>Присоединиться к Синей группе</Russian>
+            <Russian>Вступить в Синюю группу</Russian>
             <French>Rejoindre bleu</French>
             <Italian>Unirsi al team blu</Italian>
         </Key>
@@ -509,7 +510,7 @@
             <Portuguese>Entrar em Amarelo</Portuguese>
             <Hungarian>Belépés a Sárgába</Hungarian>
             <Czech>Připojit ke žlutým</Czech>
-            <Russian>Присоединиться к Жёлтой группе</Russian>
+            <Russian>Вступить в Жёлтую группу</Russian>
             <French>Rejoindre jaune</French>
             <Italian>Unirsi al team giallo</Italian>
         </Key>
@@ -520,7 +521,7 @@
             <French>Tu as rejoint l'équipe %1</French>
             <Polish>Dołączyłeś do %1</Polish>
             <Czech>Připojili jste se do %1 týmu</Czech>
-            <Russian>Вы присоединились к группе %1</Russian>
+            <Russian>Вы вступили в группу %1</Russian>
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
@@ -675,7 +676,7 @@
             <Spanish>Habilitar gestión de equipos</Spanish>
             <German>Aktiviere Gruppenverwaltung</German>
             <Czech>Povolit správu týmu</Czech>
-            <Russian>Управление группами</Russian>
+            <Russian>Управление группой</Russian>
             <French>Active la gestion d'équipe</French>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
@@ -687,7 +688,7 @@
             <Spanish>¿Deben tener permitido los jugadores el uso del menu de gestión de equipos? Por defecto: Si</Spanish>
             <German>Sollen Spieler das Gruppenverwaltungsmenü verwenden dürfen? Standard: Ja</German>
             <Czech>Mohou hráči použít menu správy týmu? Výchozí: Ano</Czech>
-            <Russian>Разрешить ли игрокам использовать меню управления группами? По-умолчани: Да</Russian>
+            <Russian>Разрешить игрокам использовать меню управления группой? По-умолчанию: Да</Russian>
             <French>Permettre aux joueurs d'utiliser la gestion de groupe? Défaut: oui</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
@@ -702,7 +703,7 @@
             <French>La gestion d'équipe permet l'allocation de couleur aux membres d'équipe, de prendre le commandement, de rejoindre ou quitter une équipe. </French>
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
-            <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
+            <Russian>Управление группой позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
             <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
@@ -711,6 +712,7 @@
             <Polish>Włącz</Polish>
             <Spanish>Encender</Spanish>
             <French>Allumer</French>
+            <Russian>Включить</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -718,6 +720,7 @@
             <Polish>Wyłącz</Polish>
             <Spanish>Apagar</Spanish>
             <French>Eteindre</French>
+            <Russian>Отключить</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>

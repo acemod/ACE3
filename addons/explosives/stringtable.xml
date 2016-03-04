@@ -642,7 +642,7 @@
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+            <Russian>ПТ-мина M6 SLAM (детонация вверх)</Russian>
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od dołu)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
@@ -656,7 +656,7 @@
             <!-- <Italian>Mina M6 SLAM</Italian> -->
             <!-- <Polish>Mina M6 SLAM</Polish> -->
             <!-- <Portuguese>Mina SLAM M6</Portuguese> -->
-            <!-- <Russian>ПТ-мина M6 SLAM</Russian> -->
+            <Russian>ПТ-мина M6 SLAM (детонация вбок)</Russian>
             <!-- <Spanish>Mina M6 SLAM</Spanish> -->
             <Polish>Mina M6 SLAM (atak od boku)</Polish>
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
@@ -670,7 +670,7 @@
             <!-- <Italian>IED grande (urbano)</Italian> -->
             <!-- <Polish>Duży IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI grande (urbano)</Portuguese> -->
-            <!-- <Russian>Большое СВУ (городское)</Russian> -->
+            <Russian>Большое СВУ (городское, нажимная плита)</Russian>
             <!-- <Spanish>IED grande (Urbano)</Spanish> -->
             <Polish>Duży IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
@@ -684,7 +684,7 @@
             <!-- <Italian>IED grande (interrato)</Italian> -->
             <!-- <Polish>Duży IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI grande (entrincheirado)</Portuguese> -->
-            <!-- <Russian>Большое СВУ (зарытое)</Russian> -->
+            <Russian>Большое СВУ (зарытое, нажимная плита)</Russian>
             <!-- <Spanish>IED grande (Enterrado)</Spanish> -->
             <Polish>Duży IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
@@ -698,7 +698,7 @@
             <!-- <Italian>IED piccolo (urbano)</Italian> -->
             <!-- <Polish>Mały IED (miasto)</Polish> -->
             <!-- <Portuguese>AEI pequeno (urbano)</Portuguese> -->
-            <!-- <Russian>Малое СВУ (городское)</Russian> -->
+            <Russian>Малое СВУ (городское, нажимная плита)</Russian>
             <!-- <Spanish>IED pequeño (Urbano)</Spanish> -->
             <Polish>Mały IED (miejski, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
@@ -712,7 +712,7 @@
             <!-- <Italian>IED piccolo (interrato)</Italian> -->
             <!-- <Polish>Mały IED (zakopany)</Polish> -->
             <!-- <Portuguese>AEI pequeno (entrincheirado)</Portuguese> -->
-            <!-- <Russian>Малое СВУ (зарытое)</Russian> -->
+            <Russian>Малое СВУ (зарытое, нажимная плита)</Russian>
             <!-- <Spanish>IED pequeño (Enterrado)</Spanish> -->
             <Polish>Mały IED (zakopany, płyta naciskowa)</Polish>
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
@@ -721,7 +721,7 @@
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>
             <Spanish>Conectar a %1</Spanish>
-            <Russian>Подключиться к %1</Russian>
+            <Russian>Подключить к %1</Russian>
             <German>Verbinde mit %1</German>
             <Czech>Připojit k %1</Czech>
             <Polish>Podłącz do %1</Polish>

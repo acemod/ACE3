@@ -238,6 +238,7 @@
             <Italian>Mostra Gesti su Menù Interazione</Italian>
             <Spanish>Mostrar gestos en el menú de interacción</Spanish>
             <French>Afficher les gestes au menu d'interaction.</French>
+            <Russian>Отображать жесты в меню взаимодействия</Russian>
         </Key>
         <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -247,6 +248,7 @@
             <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
             <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
             <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
+            <Russian>Отображать жесты в меню взаимодействия или по заданным клавишам, либо совсем отключить.</Russian>
         </Key>
         <Key ID="STR_ACE_Gestures_justKeybinds">
             <English>Just Keybinds</English>
@@ -256,6 +258,7 @@
             <Italian>Solo Hotkey</Italian>
             <Spanish>Solo mediante teclas</Spanish>
             <French>Seulement les touches</French>
+            <Russian>Только по клавишам</Russian>
         </Key>
         <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -265,6 +268,7 @@
             <Italian>Hotkey + Menù Interazione</Italian>
             <Spanish>Teclas y Menú de Interacción</Spanish>
             <French>Touches + menu d'interaction</French>
+            <Russian>По клавишам + меню взаимодействия</Russian>
         </Key>
     </Package>
 </Project>

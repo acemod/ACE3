@@ -197,7 +197,7 @@
             <German>Welche Fahrzeugteile können vollständig in Stand gesetzt werden?</German>
             <Polish>W jakich miejscach pojazd może zostać w pełni naprawiony?</Polish>
             <Portuguese>Em quais locais um veículo pode ser reparado por completo?</Portuguese>
-            <Russian>В каких местах транспорт может быть полностью отремеонтирован?</Russian>
+            <Russian>В каких местах транспорт может быть полностью отремонтирован?</Russian>
             <Spanish>¿En qué lugares puede un vehículo ser reparado totalmente?</Spanish>
             <Czech>V které oblasti může být vozidlo plně opraveno?</Czech>
             <Italian>In quali luoghi è possibile riparare completamente un veicolo?</Italian>
@@ -765,6 +765,7 @@
             <German>Reaktivpanzerung</German>
             <Spanish>ERA</Spanish>
             <French>ERA</French>
+            <Russian>Активная защита</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -969,7 +970,7 @@
             <German>Reperatureinrichtung oder Reperaturfahrzeug</German>
             <Polish>Przy budynkach i pojazdach naprawczych</Polish>
             <Portuguese>Instalação e veículo de reparo</Portuguese>
-            <Russian>Только у ремонтного транспорта или ремонтных сооружений</Russian>
+            <Russian>У ремонтного транспорта и ремонтных сооружений</Russian>
             <Spanish>Reparar en instalación o vehículo</Spanish>
             <Czech>Opravárenské zařízení nebo vozidlo</Czech>
             <Italian>Strutture Riparazioni o Veicoli</Italian>

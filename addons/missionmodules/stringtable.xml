@@ -165,7 +165,7 @@
             <Portuguese>Segue os jogadores. Se esta desabilitado (falso), o loop reproduzirá os sons somente perto de sua posição lógica.</Portuguese>
             <French>Suivre le joueur. Si défini sur false, les sons seront joués en boucle autour la position logique</French>
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
-            <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
+            <Russian>Следовать за игроками. Если отключить, звуки будут циклически проигрываться только около позиции Логики.</Russian>
             <Italian>Segui Giocatori. Se impostato su falso, il ciclo eseguirà i suoni solo vicino ad una posizione logica.</Italian>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">

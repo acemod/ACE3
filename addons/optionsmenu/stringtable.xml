@@ -125,7 +125,7 @@
             <English>Array. Seperate elements by using ,.</English>
             <German>Array. Teile unterschiedliche Elemente mit ,.</German>
             <Spanish>Matriz. Separa elementos usando ,.</Spanish>
-            <Russian>Массив. Разделяйте элемены, используя запятую.</Russian>
+            <Russian>Массив. Разделяйте элементы, используя запятую.</Russian>
             <Polish>Tablica. Oddziel elementy używając ,.</Polish>
             <French>Tableau. Séparation par ,.</French>
             <Czech>Tabulka. Odděl elementy použitím ,.</Czech>
@@ -262,7 +262,7 @@
             <Portuguese>Quando permitido, você tem acesso à modificação de definições e exportação em SP. Clicando em exportação colocará a configuração formatada em sua área de transferência.</Portuguese>
             <French>Quand autorisé, vous pouvez accéder aux modifications et à l'exporation en solo. Cliquer sur exporter placera la configuration dans le presse-papier</French>
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
-            <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
+            <Russian>Когда разрешено, у вас появляется доступ к модификации настроек и экспорту их в одиночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
             <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">

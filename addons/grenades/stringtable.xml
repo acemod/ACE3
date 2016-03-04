@@ -141,7 +141,7 @@
             <Italian>M127A1 Bengala (Giallo)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
             <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Жёлтые)</Russian>
+            <Russian>M127A1 Фальшфейер (Жёлтый)</Russian>
             <Spanish>Bengala M127A1 (Amarilla)</Spanish>
             <French>M127A1 Feux à main (Jaune)</French>
         </Key>
@@ -189,7 +189,7 @@
             <Italian>Bengala (Giallo)</Italian>
             <Polish>Flara ręczna (żółta)</Polish>
             <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
-            <Russian>Фальшфейер (Жёлтые)</Russian>
+            <Russian>Фальшфейер (Жёлтый)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feux à main (Jaune)</French>
         </Key>
@@ -238,7 +238,7 @@
             <Italian>M127A1 (Giallo)</Italian>
             <Polish>M127A1 (żółta)</Polish>
             <Portuguese>M127A1 (Amarelo)</Portuguese>
-            <Russian>M127A1 (Жёлтые)</Russian>
+            <Russian>M127A1 (Жёлтый)</Russian>
             <Spanish>M127A1 (Amarilla)</Spanish>
         </Key>
     </Package>

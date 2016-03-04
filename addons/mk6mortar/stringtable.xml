@@ -6,7 +6,7 @@
             <German>82mm Distanztabelle</German>
             <Polish>Tabela strzelnicza 82mm</Polish>
             <French>Table de tir 82mm</French>
-            <Russian>82 мм Таблица дальностей и прицелов</Russian>
+            <Russian>82мм Таблица дальностей и прицелов</Russian>
             <Spanish>Tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla</Hungarian>
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
@@ -18,7 +18,7 @@
             <German>Distanztabelle für den Mk6 82mm Mortar</German>
             <Polish>Tabela strzelnicza dla moździerza 82mm Mk6</Polish>
             <French>Table de tir pour le mortier Mk6 82mm</French>
-            <Russian>Таблица дальностей и прицелов для Mk6 82 мм мортиры</Russian>
+            <Russian>Таблица дальностей и прицелов для миномёта Mk6 82мм</Russian>
             <Spanish>Tabla de distancias para el mortero Mk6 de 82mm</Spanish>
             <Hungarian>Hatótáv-tábla a Mk6 82mm-es mozsárhoz</Hungarian>
             <Portuguese>Tabela de distâncias para morteiro Mk6 82mm</Portuguese>
@@ -30,7 +30,7 @@
             <German>Öffne 82mm Distanztabelle</German>
             <Polish>Otwórz tabelę strzelniczą 82mm</Polish>
             <French>Ouvrir la table de tir 82mm</French>
-            <Russian>Открыть 82 мм Таблицу дальностей и прицелов</Russian>
+            <Russian>Открыть 82мм Таблицу дальностей и прицелов</Russian>
             <Spanish>Abrir tabla de distancias de 82mm</Spanish>
             <Hungarian>82mm hatótáv-tábla megnyitása</Hungarian>
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
@@ -139,7 +139,7 @@
             <German>Dieses Modul erlaubt das Einstellen des Mk6-Mörsers.</German>
             <Czech>Tento modul umožňuje nastavení minometu Mk6.</Czech>
             <Portuguese>Este módulo permite que você ajuste o morteiro Mk6.</Portuguese>
-            <Russian>Модуль настройки миномета Mk6.</Russian>
+            <Russian>Модуль настройки миномёта Mk6.</Russian>
             <French>Ce module permet de régler les options du mortier Mk6</French>
             <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
@@ -150,6 +150,7 @@
             <Spanish>Usar manejo de munición.</Spanish>
             <Polish>Aktywuj obsługę amunicji</Polish>
             <French>Utiliser la gestion des munitions</French>
+            <Russian>Использовать ручную перезарядку</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -157,6 +158,7 @@
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
             <French>Enlever les chargeurs de mortier, requiert des obus individuels qui doivent être chargés par le tireur ou le servant. N'affect pas les mortiers IA.</French>
+            <Russian>Отменяет автоматическую перезарядку, потребуется заряжание каждой мины заряжающим или стрелком. Не затрагивает миномёты управляемые ботами.</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -164,6 +166,7 @@
             <Spanish>Extraer ronda</Spanish>
             <Polish>Wyładuj pocisk</Polish>
             <French>Enlever l'obus</French>
+            <Russian>Извлечь заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -171,6 +174,7 @@
             <Spanish>Cargar mortero</Spanish>
             <Polish>Załaduj moździerz</Polish>
             <French>Charger le mortier</French>
+            <Russian>Зарядить миномёт</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -178,6 +182,7 @@
             <Spanish>Descargando ronda</Spanish>
             <Polish>Rozładowywanie moździerza</Polish>
             <French>Déchargement de l'obus</French>
+            <Russian>Извлечение заряда...</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -185,6 +190,7 @@
             <Spanish>Preparando ronda</Spanish>
             <Polish>Przygotowywanie pocisku</Polish>
             <French>Praparation de l'obus</French>
+            <Russian>Подготовка заряда...</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -192,6 +198,7 @@
             <Spanish>Cargar HE</Spanish>
             <Polish>Załaduj pocisk wybuchowy</Polish>
             <French>Charger HE</French>
+            <Russian>Зарядить ОФ-заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -199,6 +206,7 @@
             <Spanish>Cargar Humo</Spanish>
             <Polish>Załaduj pocisk dymny</Polish>
             <French>Charger Fumigène</French>
+            <Russian>Зарядить дымовой заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -206,6 +214,7 @@
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
             <French>Charger Eclairante</French>
+            <Russian>Зарядить осветительный заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -213,6 +222,7 @@
             <Spanish>Cagar HE Guiada</Spanish>
             <Polish>Załaduj kierowany pocisk wybuchowy</Polish>
             <French>Charger HE guidé</French>
+            <Russian>Зарядить управляемый заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -220,6 +230,7 @@
             <Spanish>Cargar HE Guiada por Laser</Spanish>
             <Polish>Załaduj laserowo napr. pocisk wybuchowy</Polish>
             <French>Charger HE guidé au laser</French>
+            <Russian>Зарядить заряд c лазерным наведением</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -227,6 +238,7 @@
             <Spanish>Ronda 82mm HE</Spanish>
             <Polish>Pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE</French>
+            <Russian>82мм ОФ-заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -234,6 +246,7 @@
             <Spanish>Ronda 82mm Humo</Spanish>
             <Polish>Pocisk dymny kal. 82mm</Polish>
             <French>Obus de 82mm fumigène</French>
+            <Russian>82мм дымовой заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -241,6 +254,7 @@
             <Spanish>Ronda 82mm Iluminación</Spanish>
             <Polish>Pocisk oświetlający kal. 82mm</Polish>
             <French>Obus de 82mm éclairant</French>
+            <Russian>82мм осветительный заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -248,6 +262,7 @@
             <Spanish>Ronda 82mm Guiada</Spanish>
             <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE guidé</French>
+            <Russian>82мм управляемый заряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -255,6 +270,7 @@
             <Spanish>Ronda 82mm Guiada por Laser</Spanish>
             <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE guidé au laser</French>
+            <Russian>82мм заряд c лазерным наведением</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -262,6 +278,7 @@
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
             <French>Utilisé dans le mortier Mk6</French>
+            <Russian>Используется для миномёта Mk6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -269,6 +286,7 @@
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
             <French>[ACE] Obus de 82mm HE</French>
+            <Russian>[ACE] ящик 82мм ОФ-зарядов</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -276,6 +294,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
             <French>[ACE] Obus de 82mm fumigène</French>
+            <Russian>[ACE] ящик 82мм дымовых зарядов</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -283,6 +302,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
             <French>[ACE] Obus de 82mm éclairants</French>
+            <Russian>[ACE] ящик 82мм осветительных зарядов</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -290,6 +310,7 @@
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
             <French>[ACE] Obus de 82mm par défaut</French>
+            <Russian>[ACE] ящик 82мм стандартных зарядов</Russian>
         </Key>
     </Package>
 </Project>

@@ -16,6 +16,7 @@
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
             <German>Versuche zu Wechseln</German>
+            <Russian>Попытка переключёния</Russian>
             <Czech>Snažím se přehodit</Czech>
             <Polish>Próba zmiany</Polish>
             <Italian>Sto provando a cambiare</Italian>

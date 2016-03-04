@@ -7,6 +7,7 @@
             <Spanish>Marcar en negro</Spanish>
             <Polish>Oznakuj na czarno</Polish>
             <French>Tag noir</French>
+            <Russian>Чёрная метка</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallRed">
             <English>Tag red</English>
@@ -14,6 +15,7 @@
             <Spanish>Marcar en rojo</Spanish>
             <Polish>Oznakuj na czerwono</Polish>
             <French>Tag rouge</French>
+            <Russian>Красная метка</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallGreen">
             <English>Tag green</English>
@@ -21,6 +23,7 @@
             <Spanish>Marcar en verde</Spanish>
             <Polish>Oznakuj na zielono</Polish>
             <French>Tag vert</French>
+            <Russian>Зелёная метка</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagWallBLue">
             <English>Tag blue</English>
@@ -28,6 +31,7 @@
             <Spanish>Marcar en azul</Spanish>
             <Polish>Oznakuj na niebiesko</Polish>
             <French>Tag bleu</French>
+            <Russian>Синяя метка</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlack">
             <English>Tag ground black</English>
@@ -35,6 +39,7 @@
             <Polish>Oznakuj ziemię na czarno</Polish>
             <Spanish>Marcar suelo en negro</Spanish>
             <French>Tag fond noir</French>
+            <Russian>Отметить поверхность чёрным</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundRed">
             <English>Tag ground red</English>
@@ -42,6 +47,7 @@
             <Polish>Oznakuj ziemię na czerwono</Polish>
             <Spanish>Marcar suelo en rojo</Spanish>
             <French>Tag fond rouge</French>
+            <Russian>Отметить поверхность красным</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundGreen">
             <English>Tag ground green</English>
@@ -49,6 +55,7 @@
             <Polish>Oznakuj ziemię na zielono</Polish>
             <Spanish>Marcar suelo en verde</Spanish>
             <French>Tag fond vert</French>
+            <Russian>Отметить поверхность зелёным</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_tagGroundBlue">
             <English>Tag ground blue</English>
@@ -56,6 +63,7 @@
             <Polish>Oznakuj ziemię na niebiesko</Polish>
             <Spanish>Marcar suelo en azul</Spanish>
             <French>Tag font bleu</French>
+            <Russian>Отметить поверхность синим</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlack">
             <English>Black spray paint</English>
@@ -63,6 +71,7 @@
             <Spanish>Pintura negra</Spanish>
             <Polish>Czarna farba w sprayu</Polish>
             <French>Peinture pulvérisée noire</French>
+            <Russian>Спрей с чёрной краской</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintRed">
             <English>Red spray paint</English>
@@ -70,6 +79,7 @@
             <Spanish>Pintura roja</Spanish>
             <Polish>Czerwona farba w sprayu</Polish>
             <French>Peinture pulvérisée rouge</French>
+            <Russian>Спрей с красной краской</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintGreen">
             <English>Green spray paint</English>
@@ -77,6 +87,7 @@
             <Spanish>Pintura verde</Spanish>
             <Polish>Zielona farba w sprayu</Polish>
             <French>Peinture pulvérisée verte</French>
+            <Russian>Спрей с зелёной краской</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_spraypaintBlue">
             <English>Blue spray paint</English>
@@ -84,6 +95,7 @@
             <Spanish>Pintura azul</Spanish>
             <Polish>Niebieska farba w sprayu</Polish>
             <French>Peinture pulvérisée bleue</French>
+            <Russian>Спрей с синей краской</Russian>
         </Key>
         <Key ID="STR_ACE_tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -91,6 +103,7 @@
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <French>Un spray de peinture pour taguer les murs.</French>
+            <Russian>Метка наносимая аэрозольной краской на стенах.</Russian>
         </Key>
     </Package>
 </Project>

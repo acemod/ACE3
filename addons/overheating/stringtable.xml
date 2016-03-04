@@ -17,7 +17,7 @@
             <English>Display a notification whenever your weapon gets jammed</English>
             <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
             <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
-            <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
+            <Russian>Показывать уведомление каждый раз, когда клинит ваше оружие.</Russian>
             <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
             <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
             <French>Affiche une notification lors d'un enrayement</French>
@@ -32,6 +32,7 @@
             <Italian>Effetti Particelle Surriscaldamento</Italian>
             <Spanish>Efectos de partículas</Spanish>
             <French>Effet de surchauffe</French>
+            <Russian>Эффект перегрева</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -40,6 +41,7 @@
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Montrer les effets lorsque l'arme surchauffe.</French>
+            <Russian>Отображает графический эффект перегрева оружия.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -48,6 +50,7 @@
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
             <Spanish>Efectos de partículas para todos</Spanish>
             <French>Effets de surchauffe pour tout le monde.</French>
+            <Russian>Эффект перегрева оружия для всех</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -56,6 +59,7 @@
             <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
             <French>Montrer les effets de surchauffe des autres joueurs.</French>
+            <Russian>Отображает графический эффект перегрева оружия у других игроков.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -64,6 +68,7 @@
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
             <French>Disperssion dûe à la surchauffe</French>
+            <Russian>Разброс при перегреве</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -72,6 +77,7 @@
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
             <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
+            <Russian>Перегрев оружия будет снижать точность стрельбы и начальную скорость пули. Применяется для всех игроков.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -79,6 +85,8 @@
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
             <French>Des-enrayer l'arme au rechargement.</French>
+            <Russian>Расклинивать оружие перезарядкой</Russian>
+            
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -86,6 +94,7 @@
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
             <Polish>Przeładowywanie usuwa zacięcie</Polish>
             <French>Recharger vide la chambre de l'arme</French>
+            <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -93,6 +102,7 @@
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
             <French>Chance de rater le des-enrayement</French>
+            <Russian>Шанс неудачи при устранении заклинивания</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -100,6 +110,7 @@
             <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
             <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
+            <Russian>Вероятность того, что устранить заклинивание не получится сразу и действие потребуется повторить.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -144,7 +155,7 @@
             <Polish>Usuń zacięcie</Polish>
             <Czech>Uvolnit zbraň</Czech>
             <French>Désenrayer l'arme</French>
-            <Russian>Исправить клин оружия.</Russian>
+            <Russian>Устранить заклинивание</Russian>
             <Hungarian>Akadás elhárítása</Hungarian>
             <Portuguese>Destravar arma</Portuguese>
             <Italian>Ripulisci l'arma</Italian>
@@ -167,6 +178,7 @@
             <Spanish>Falló el desencasquillado</Spanish>
             <Polish>Porażka przy usuwaniu zacięcia</Polish>
             <French>Toujours enrayé !</French>
+            <Russian>Не удалось устранить</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>

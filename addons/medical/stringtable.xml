@@ -55,6 +55,7 @@
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
             <French>Injecter de l'adénosine</French>
+            <Russian>Ввести аденозин</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -254,6 +255,7 @@
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
             <French>Injection d'adénosine...</French>
+            <Russian>Введение аденозина...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -355,7 +357,7 @@
             <English>Packing Bandage</English>
             <German>Mullbinde</German>
             <Spanish>Vendaje compresivo</Spanish>
-            <Russian>Компресионный пакет</Russian>
+            <Russian>Компрессионный пакет</Russian>
             <Polish>Bandaż uciskowy</Polish>
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
@@ -619,7 +621,7 @@
             <English>Minor</English>
             <German>Gering</German>
             <Spanish>Menor</Spanish>
-            <Russian>Несрочная помощь</Russian>
+            <Russian>Не срочная помощь</Russian>
             <Polish>Normalny</Polish>
             <French>Mineur</French>
             <Czech>Minimální</Czech>
@@ -845,7 +847,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Use">
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
-            <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых сочетанных ранениях возможно тампонирование раны.</Russian>
+            <Russian>Повязка для тампонирования раны, остановки кровотечения и лучшего заживления. При тяжёлых множественных ранениях возможно тампонирование.</Russian>
             <Spanish>Se utiliza para detener la hemorragia de una herida y favorecer su cicatrización. Se usa en grandes lesiones o politraumatismos.</Spanish>
             <French>Bandage servant à recouvrir les blessures pour arrêter les hémoragies et faciliter la guérison. Recouvrir une blessure est optionnel dans le cas de blessures polytraumatiques.</French>
             <Polish>Opatrunek stosowany w celu zatrzymania krwawienia i osłony większych ran.</Polish>
@@ -917,7 +919,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Desc_Use">
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
-            <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения</Russian>
+            <Russian>Жгут используется для прижатия сосудов к костным выступам, которое приводит к остановке или значительному уменьшению кровотечения.</Russian>
             <Spanish>Dispositivo utilizado para eliminar el pulso distal y de ese modo controlar la pérdida de sangre</Spanish>
             <French>Un dispositif permettant de compresser les artères et veines afin de réduire la perte de sang.</French>
             <Polish>Opaska uciskowa CAT służy do tamowanie krwotoków w sytuacji zranienia kończyn z masywnym krwawieniem tętniczym lub żylnym.</Polish>
@@ -969,6 +971,7 @@
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
             <French>Auto-injécteur d'adénosine</French>
+            <Russian>Аденозин в пневмошприце</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -976,6 +979,7 @@
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
             <French>Utilisé pour contrer les effets de l'adrénaline</French>
+            <Russian>Для подавления негативных эффектов адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -983,6 +987,7 @@
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
             <French>Un composé utilisé pour contrer les effets de l'adrénaline</French>
+            <Russian>Препарат используется для подавления негативных эффектов от адреналина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -1046,7 +1051,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Use">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
-            <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца с уменьшенной вероятностью благоприятного исхода.</Russian>
+            <Russian>Препарат, вызывающий симпатическую реакцию, приводящую к расширению бронхов, увеличению частоты сердечных сокращений и купированию аллергических реакций (анафилактического шока). Применяется при остановке сердца и критических состояниях.</Russian>
             <Spanish>Medicamento que dilata los bronquios, aumenta la frecuencia cardiaca y contrarresta los efectos de las reacciones alérgicas (anafilaxis). Se utiliza en caso de paros cardiacos repentinos.</Spanish>
             <French>Medicament qui fonctionne sur le système nerveux sympathique créant une dilatation des bronches, augmente la fréquence cardiaque et annule les effets d'une réaction allergique (anaphylaxie). Utilisé lors d'arrêt cardio-respiratoire pour augmenter les chances de retrouver un pouls.</French>
             <Polish>EpiPen z adrenaliną ma działanie sympatykomimetyczne, tj. pobudza receptory alfa- i beta-adrenergiczne. Pobudzenie układu współczulnego prowadzi do zwiększenia częstotliwości pracy serca, zwiększenia pojemności wyrzutowej serca i przyśpieszenia krążenia wieńcowego. Pobudzenie oskrzelowych receptorów beta-adrenergicznych wywołuje rozkurcz mięśni gładkich oskrzeli, co w efekcie zmniejsza towarzyszące oddychaniu świsty i duszności.</Polish>
@@ -1299,7 +1304,7 @@
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Use">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
             <Polish>W znacznym stopniu poprawia stan pacjenta</Polish>
-            <Russian>Полевая аптчека для продвинутого лечения и зашивания ран</Russian>
+            <Russian>Полевая аптечка для продвинутого лечения и зашивания ран</Russian>
             <German>Persönliches Erste-Hilfe-Set zum ambulanten Nähen und fortgeschrittener Behandlung.</German>
             <French>Trousse de premiers soins pour coudre sur le terrain et traitements avancés.</French>
             <Spanish>Equipo de primeros auxilios para sutura de campaña o tratamientos avanzados</Spanish>
@@ -2162,7 +2167,7 @@
             <English>Heavily wounded</English>
             <German>Schwer verwundet:</German>
             <Polish>Ciężko ranny</Polish>
-            <Russian>Тяжелые ранения</Russian>
+            <Russian>Тяжёлые ранения</Russian>
             <Italian>Gravemente ferito</Italian>
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
@@ -2896,6 +2901,7 @@
             <German>Örtliche Trainingssteigerung</German>
             <Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
+            <Russian>Места повышения мед.статуса</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -2904,6 +2910,7 @@
             <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
             <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
+            <Russian>Повышение статуса в медицинском транспорте или вблизи медицинских пунктов [неподготовленные становится медиками, медики становится врачами]</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -3199,6 +3206,7 @@
             <Polish>Podstawowe ustawienia medyczne</Polish>
             <Spanish>Ajustes médicos básicos [ACE]</Spanish>
             <French>Réglages du système médical basic [ACE]</French>
+            <Russian>Настройки базовой медицины [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3314,6 +3322,7 @@
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Autoriser l'adrénaline</French>
+            <Russian>Разрешить адреналин</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
@@ -3321,6 +3330,7 @@
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
             <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
+            <Russian>Кому разрешено выполнять полное лечение с помощью адреналина? (Только для базовой медицины)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3348,7 +3358,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anyone">
             <English>Anyone</English>
-            <Russian>Кем угодно</Russian>
+            <Russian>Кто угодно</Russian>
             <Polish>Wszyscy</Polish>
             <Spanish>Nadie</Spanish>
             <German>Jeder</German>
@@ -3360,7 +3370,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Medic">
             <English>Medics only</English>
-            <Russian>Только медиками</Russian>
+            <Russian>Только медики</Russian>
             <Polish>Tylko medycy</Polish>
             <Spanish>Solo médicos</Spanish>
             <German>Nur Sanitäter</German>
@@ -3372,7 +3382,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
             <English>Doctors only</English>
-            <Russian>Только врачами</Russian>
+            <Russian>Только врачи</Russian>
             <Polish>Tylko doktorzy</Polish>
             <Spanish>Solo doctores</Spanish>
             <German>Nur Ärzte</German>
@@ -3412,6 +3422,7 @@
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Position des adrénalines</French>
+            <Russian>Места использования адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
@@ -3419,10 +3430,11 @@
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
             <French>Où peuvent être utilisées les adrénalines ? (Médical basique)</French>
+            <Russian>Где может быть использоваться адреналин? (Базовая медицина)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
-            <Russian>Место использования аптечки</Russian>
+            <Russian>Места использования аптечки</Russian>
             <Polish>Ograniczenie apteczek osobistych</Polish>
             <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
@@ -3518,7 +3530,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical Kit (Adv)</English>
-            <Russian>Хирургический набор может использоваться (усл.)</Russian>
+            <Russian>Использование хирургического набора (усл.)</Russian>
             <Polish>Ustawienia zestawu chirurgicznego</Polish>
             <Spanish>Permitir equipo quirúrgico (Avanzado)</Spanish>
             <German>Erlaube Operationskasten</German>
@@ -3566,7 +3578,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical Kit (Adv)</English>
-            <Russian>Место использования хирургического набора (усл.)</Russian>
+            <Russian>Места использования хирургического набора (усл.)</Russian>
             <Polish>Ograniczenie zestawu chirurgicznego</Polish>
             <Spanish>Ubicaciones del equipo quirúrgico (Avanzado)</Spanish>
             <German>Orte für Operationskästen (erweitert)</German>
@@ -3664,10 +3676,11 @@
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
             <French>Configure les réglages de traitement dans ACE médical basique</French>
+            <Russian>Настройка лечения в медицинской системе ACE-базовая медицина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
-            <Russian>Настройка лечения в медицинской системе ACE</Russian>
+            <Russian>Настройка лечения в медицинской системе ACE-усложненная медицина</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del sistema médico avanzado de ACE</Spanish>
             <German>Behandlungseinstellungen vom ACE-Medizin konfigurieren</German>
@@ -3859,7 +3872,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
-            <Russian>Врач (только усложн.)</Russian>
+            <Russian>Врач (только усл. медицина)</Russian>
             <Polish>Doktor (tylko zaawansowani medycy)</Polish>
             <Spanish>Doctor (Solo medicina avanzada)</Spanish>
             <German>Arzt (Nur erweitertes Sanitätssystem)</German>
@@ -3955,7 +3968,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
-            <Russian>Задает юниту класс медика</Russian>
+            <Russian>Задает технике класс медицинской</Russian>
             <Polish>Moduł ten pozwala na przypisanie danym pojazdom statusu pojazdów medycznych. Wewnątrz takiego pojazdu można wykonywać zaawansowane zabiegi medyczne.</Polish>
             <Spanish>Asigna la clase médico ACE a una unidad</Spanish>
             <German>Weist die ACE-Sanitäterklasse einer Einheit zu</German>
@@ -4113,6 +4126,7 @@
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
             <French>Entraînement médical</French>
+            <Russian>Медицинское обучение</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -4121,16 +4135,19 @@
             <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
             <French>Définit si le véhicule est un véhicule médical ou non.</French>
+            <Russian>Определяет является ли транспорт медицинским.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
             <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
+            <Russian>Прекращение стрельбы ботов-противников, когда игрок в бессознательном состоянии по медицинским причинам.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
             <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Russian>Прекращение стрельбы ботов по игрокам в бессознательном состоянии</Russian>
         </Key>
     </Package>
 </Project>
