@@ -24,7 +24,7 @@ params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object", "_unit"];
 TRACE_5("createTag:", _tagPosASL, _vectorDirAndUp, _color, _object, _unit);
 
 if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag colour.", _color);
+    ACE_LOGERROR_1("%1 is not a valid tag color.", _color);
 };
 
 private _tag = "UserTexture1m_F" createVehicle [0,0,0];
@@ -33,7 +33,7 @@ _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers
-["tagCreated", [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
+[QGVAR(tagCreated), [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
 
 if (isNull _object) exitWith {};
 
