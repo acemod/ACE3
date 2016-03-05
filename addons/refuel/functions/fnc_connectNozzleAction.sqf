@@ -119,7 +119,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
                 };
             };
         };
-        [QGVAR(setVectorDirAndUp), [_nozzle, _dirAndUp]] call EFUNC(common,globalEvent);
+        ["setVectorDirAndUp", _nozzle, [_nozzle, _dirAndUp]] call EFUNC(common,targetEvent);
         _nozzle setVariable [QGVAR(sink), _target, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _target setVariable [QGVAR(nozzle), _nozzle, true];

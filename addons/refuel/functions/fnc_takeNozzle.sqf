@@ -28,7 +28,7 @@ private _endPosOffset = [0, 0, 0];
 if (isNull _nozzle) then { // func is called on fuel truck
     _target setVariable [QGVAR(engineHit), _target getHitPointDamage "HitEngine", true];
     if !(local _target) then {
-        [QGVAR(setVehicleHitPointDamage), _target, ["HitEngine", 1]] call EFUNC(common,targetEvent);
+        ["setHitPointDamage", _target, ["HitEngine", 1]] call EFUNC(common,targetEvent);
     } else {
         _target setHitPointDamage ["HitEngine", 1];
     };

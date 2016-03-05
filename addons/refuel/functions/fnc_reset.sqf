@@ -20,7 +20,7 @@ params [["_target", objNull, [objNull]]];
 if (local _target) then {
     _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
 } else {
-    [QGVAR(setVehicleHitPointDamage), _target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]] call EFUNC(common,targetEvent);
+    ["setHitPointDamage", _target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]] call EFUNC(common,targetEvent);
 };
 _target setVariable [QGVAR(engineHit), nil, true];
 _target setVariable [QGVAR(isConnected), false, true];
