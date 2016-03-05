@@ -6,9 +6,6 @@
     <a href="https://github.com/acemod/ACE3/releases">
         <img src="https://img.shields.io/badge/Version-3.5.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.5.0/ace3_3.5.0.zip">
-        <img src="https://img.shields.io/badge/Download-72.6_MB-green.svg?style=flat-square" alt="ACE3 Download">
-    </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Fehlermeldungen">
     </a>

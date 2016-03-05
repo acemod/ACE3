@@ -15,6 +15,8 @@
 
 params ["_statement"];
 
+ACE_DEPRECATED("ace_common_fnc_addScrollWheelEventHandler", "3.8.0", "'MouseZChanged' Display EventHandler");
+
 if (_statement isEqualType "") then {
     _statement = compile _statement;
 };

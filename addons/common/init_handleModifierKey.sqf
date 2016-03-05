@@ -12,9 +12,17 @@
  */
 #include "script_component.hpp"
 
-disableSerialization;
+_this spawn {//
+    waitUntil {!isNull findDisplay 46};//
+    sleep 2;//
 
-params ["_display"];
+    disableSerialization;
 
-_display displayAddEventHandler ["KeyDown", FUNC(handleModifierKey)];
-_display displayAddEventHandler ["KeyUp", FUNC(handleModifierKeyUp)];
+    params ["_display"];
+
+    _display displayAddEventHandler ["KeyDown", {_this call FUNC(handleModifierKey)}];
+    _display displayAddEventHandler ["KeyUp", {_this call FUNC(handleModifierKeyUp)}];
+};//
+
+//@todo, remove all lines with comments after CBA update, events rewrite branch
+// note 2, will break in save games after ~ 10 seconds thanks to CBA, fixed with above
