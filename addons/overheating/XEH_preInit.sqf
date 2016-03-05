@@ -12,7 +12,7 @@ if (isNil "CBA_fnc_getMagazineIndex") then {
 
         if (_displayName isEqualTo "") exitWith {[]};
 
-        magazinesDetail _unit select {_x find _displayName == 0} apply {_x = _x splitString "[:]"; _x select (count _x - 1)};
+        (magazinesDetail _unit select {_x find _displayName == 0}) apply {_x = _x splitString "[:]"; _x select (count _x - 1)};
     };
 };
 
