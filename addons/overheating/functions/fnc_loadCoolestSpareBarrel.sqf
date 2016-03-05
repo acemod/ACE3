@@ -21,7 +21,7 @@ params ["_unit", "_weapon", "_weaponTemp", "_barrelMass"];
 TRACE_4("loadCoolestSpareBarrel1",_unit,_weapon,_weaponTemp,_barrelMass);
 
 // Find all spare barrel the player has
-private _allBarrels = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIds;
+private _allBarrels = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
 TRACE_1("_allBarrels",_allBarrels);
 if ((count _allBarrels) < 1) exitWith {};
 

@@ -4,8 +4,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-if (isNil "CBA_fnc_getMagazineIds") then {
-    CBA_fnc_getMagazineIds = {
+if (isNil "CBA_fnc_getMagazineIndex") then {
+    CBA_fnc_getMagazineIndex = {
         params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
         private _displayName = getText (configFile >> "CfgMagazines" >> _magazine >> "displayName");
