@@ -110,10 +110,20 @@ class CfgVehicles {
                 initPhase = 0;
                 animPeriod = 0;
             };
+            class hideGantryLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+            class hideGantryRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
         };
     };
     class ACE_friesGantryReverse: ACE_friesGantry {
-        class AnimationSources {
+        class AnimationSources: AnimationSources {
             class adjustWidth {
                 source = "user";
                 initPhase = 0.213;
