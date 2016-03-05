@@ -4,14 +4,16 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-FakeCBA_fnc_getMagazineIds = {
-    params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
+if (isNil "CBA_fnc_getMagazineIds") then {
+    CBA_fnc_getMagazineIds = {
+        params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
-    private _displayName = getText (configFile >> "CfgMagazines" >> _magazine >> "displayName");
+        private _displayName = getText (configFile >> "CfgMagazines" >> _magazine >> "displayName");
 
-    if (_displayName isEqualTo "") exitWith {[]};
+        if (_displayName isEqualTo "") exitWith {[]};
 
-    magazinesDetail _unit select {_x find _displayName == 0} apply {_x = _x splitString "[:]"; _x select (count _x - 1)};
+        magazinesDetail _unit select {_x find _displayName == 0} apply {_x = _x splitString "[:]"; _x select (count _x - 1)};
+    };
 };
 
 ADDON = true;

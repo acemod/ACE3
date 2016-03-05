@@ -19,7 +19,7 @@ params ["_player","_unit"];
 
 // Find all spare barrel the player has
 TRACE_2("sendSpareBarrelsTemperatureHunt",_player,_unit);
-private _allBarrels = [_unit, "ACE_SpareBarrel"] call FakeCBA_fnc_getMagazineIds;
+private _allBarrels = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIds;
 TRACE_1("_allBarrels",_allBarrels);
 if ((count _allBarrels) < 1) exitWith {};
 
