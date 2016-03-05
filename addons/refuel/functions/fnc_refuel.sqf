@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-#define PFH_STEPSIZE 0.1
+#define PFH_STEPSIZE 1
 
 params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
