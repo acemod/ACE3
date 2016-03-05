@@ -8,6 +8,7 @@ PREP(canFastRope);
 PREP(canPrepareFRIES);
 PREP(checkVehicleThread);
 PREP(cutRopes);
+PREP(deployAI);
 PREP(deployRopes);
 PREP(equipFRIES);
 PREP(fastRope);
