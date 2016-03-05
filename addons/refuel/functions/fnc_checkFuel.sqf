@@ -27,9 +27,9 @@ private _fuel = [_target] call FUNC(getFuel);
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_fuel", 0, [0]]];
         if (_fuel > 0 ) then {
-            ["displayTextStructured", [_unit], [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit]] call EFUNC(common,targetEvent);
+            ["displayTextStructured", _unit, [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit]] call EFUNC(common,objectEvent);
         } else {
-            ["displayTextStructured", [_unit], [LSTRING(Hint_Empty), 2, _unit]] call EFUNC(common,targetEvent);
+            ["displayTextStructured", _unit, [LSTRING(Hint_Empty), 2, _unit]] call EFUNC(common,objectEvent);
         };
         true
     },

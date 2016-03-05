@@ -17,11 +17,8 @@
 
 params [["_target", objNull, [objNull]]];
 
-if (local _target) then {
-    _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
-} else {
-    ["setHitPointDamage", _target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]] call EFUNC(common,targetEvent);
-};
+["setHitPointDamage", _target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]] call EFUNC(common,objectEvent);
+
 _target setVariable [QGVAR(engineHit), nil, true];
 _target setVariable [QGVAR(isConnected), false, true];
 
@@ -38,11 +35,7 @@ if !(isNil "_nozzle") then {
     };
 
     {
-        if (local _x) then {
-            [_x, _nozzle] call FUNC(resetLocal);
-        } else {
-            [QGVAR(resetLocal), _x, [_x, _nozzle]] call EFUNC(common,targetEvent);
-        };
+        [QGVAR(resetLocal), _x, [_x, _nozzle]] call EFUNC(common,objectEvent);
     } count allPlayers;
     deleteVehicle _nozzle;
 };
