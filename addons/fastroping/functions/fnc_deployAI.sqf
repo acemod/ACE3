@@ -22,6 +22,7 @@ private ["_config", "_configEnabled", "_deployTime", "_unitsToDeploy", "_deployG
 
 if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
     if (hasInterface) then {
+        // Note: BIS_fnc_guiMessage causes a CTD with call, so spawn is used instead.
         ["deployAI was called with an invalid or non-existant vehicle.", QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
     };
     ACE_LOGERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
