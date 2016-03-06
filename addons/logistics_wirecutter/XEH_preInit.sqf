@@ -2,11 +2,6 @@
 
 ADDON = false;
 
-PREP(cutDownFence);
-PREP(cutDownFenceAbort);
-PREP(cutDownFenceCallback);
-PREP(getNearestFence);
-PREP(interactEH);
-PREP(isFence);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

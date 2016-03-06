@@ -18,7 +18,6 @@
 
 private ["_weapon", "_listedItemClasses", "_actions", "_allGear"];
 
-PARAMS_2(_player,_unit);
 params ["_player", "_unit"];
 
 _weapon = currentWeapon _player;

@@ -1,31 +1,28 @@
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
- * Handles HuntIR projectiles
+ * Handles HuntIR projectiles. Called from the unified fired EH for all CAManBase.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_7(_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 if (_ammo != "F_HuntIR") exitWith {};
 
+if (!hasInterface) exitWith {};
+
 [{
-    PARAMS_1(_projectile);
- 
+    params ["_projectile"];
+
     //If null (deleted or hit water) exit:
     if (isNull _projectile) exitWith {};
     //If it's not spinning (hit ground), bail:
@@ -33,15 +30,16 @@ if (_ammo != "F_HuntIR") exitWith {};
 
     "ACE_HuntIR_Propell" createVehicle (getPosATL _projectile);
     [{
-        PARAMS_1(_position);
         private ["_huntir"];
+        params ["_position"];
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
         _huntir setVariable [QGVAR(startTime), ACE_time, true];
         [{
-            EXPLODE_1_PVT(_this select 0,_huntir);
+            params ["_args", "_idPFH"];
+            _args params ["_huntir"];
             if (isNull _huntir) exitWith {
-                [_this select 1] call CBA_fnc_removePerFrameHandler;
+                [_idPFH] call CBA_fnc_removePerFrameHandler;
             };
             private ["_parachuteDamage", "_velocity"];
             _parachuteDamage = _huntir getHitPointDamage "HitParachute";

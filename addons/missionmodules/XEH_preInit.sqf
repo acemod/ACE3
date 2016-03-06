@@ -2,6 +2,6 @@
 
 ADDON = false;
 
-PREP(moduleAmbianceSound);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

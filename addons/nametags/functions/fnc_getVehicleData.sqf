@@ -22,7 +22,7 @@
 
 private ["_type", "_varName", "_data", "_isAir", "_config", "_fnc_addTurret", "_fnc_addTurretUnit"];
 
-PARAMS_1(_type);
+params ["_type"];
 
 _varName = format ["ACE_CrewInfo_Cache_%1", _type];
 _data = + (uiNamespace getVariable _varName);

@@ -1,3 +1,4 @@
+
 class ACE_Settings {
     class GVAR(DisplayText) {
         typeName = "BOOL";

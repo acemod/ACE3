@@ -17,7 +17,7 @@
 
 #define TextIDC 11123
 
-PARAMS_1(_text);
+params ["_text"];
 
 private["_ctrl"];
 

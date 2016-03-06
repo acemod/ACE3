@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(canRefuelUAV);
-PREP(refuelUAV);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

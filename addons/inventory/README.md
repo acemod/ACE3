@@ -1,7 +1,7 @@
 ace_inventory
 =============
 
-Increases the size of the inventory dialog.
+Adds options to increase the size of the inventory dialog.
 
 
 ## Maintainers

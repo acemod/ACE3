@@ -13,7 +13,7 @@
  * ARRAY - [NUMBER - Elevation In Degrees, NUMBER - Shot Durration]
  *
  * Example:
- * [_rangeToHit, _heightToHit, _muzzleVelocity, _airFriction, TIME_STEP] call FUNC(simulateFindSolution);
+ * [_rangeToHit, _heightToHit, _muzzleVelocity, _airFriction, TIME_STEP] call ace_mk6mortar_fnc_dev_simulateFindSolution;
  *
  * Public: No
  */
@@ -51,5 +51,5 @@ while {(_numberOfAttempts < MAX_ATTEMPTS) && {(abs _error) > 0.2}} do {
 };
 if (_numberOfAttempts >= MAX_ATTEMPTS) exitWith {[]};
 
-//return the elevation and ACE_time required
+//return the elevation and time required
 [_solutionElevation, (_lastTestResult select 1)]

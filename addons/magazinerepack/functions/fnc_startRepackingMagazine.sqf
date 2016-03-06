@@ -21,10 +21,10 @@
 
 private ["_magazineCfg", "_fullMagazineCount", "_isBelt", "_startingAmmoCounts", "_simEvents", "_totalTime"];
 
-PARAMS_3(_target,_player,_magazineClassname);
+params ["_target", "_player", "_magazineClassname"];
 
 if (isNil "_magazineClassname" || {_magazineClassname == ""}) exitWith {ERROR("Bad Mag Classname");};
-_magazineCfg = configfile >> "CfgMagazines" >> _magazineClassname;
+_magazineCfg = configFile >> "CfgMagazines" >> _magazineClassname;
 // Calculate actual ammo to transfer during repack
 _fullMagazineCount = getNumber (_magazineCfg >> "count");
 //Is linked belt magazine:
@@ -57,17 +57,17 @@ _startingAmmoCounts = [];
     };
 } forEach (magazinesAmmoFull _player);
 
-if ((count _startingAmmoCounts) < 2) exitwith {ERROR("Not Enough Mags to Repack");};
+if ((count _startingAmmoCounts) < 2) exitWith {ERROR("Not Enough Mags to Repack");};
 
 _simEvents = [_fullMagazineCount, _startingAmmoCounts, _isBelt] call FUNC(simulateRepackEvents);
 _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);
 
 [
-_totalTime,
-[_magazineClassname, _startingAmmoCounts, _simEvents],
-{_this call FUNC(magazineRepackFinish)},
-{_this call FUNC(magazineRepackFinish)},
-(localize LSTRING(RepackingMagazine)),
-{_this call FUNC(magazineRepackProgress)},
-["isNotInside", "isNotSitting"]
+    _totalTime,
+    [_magazineClassname, _startingAmmoCounts, _simEvents],
+    {_this call FUNC(magazineRepackFinish)},
+    {_this call FUNC(magazineRepackFinish)},
+    (localize LSTRING(RepackingMagazine)),
+    {_this call FUNC(magazineRepackProgress)},
+    ["isNotInside", "isNotSitting"]
 ] call EFUNC(common,progressBar);

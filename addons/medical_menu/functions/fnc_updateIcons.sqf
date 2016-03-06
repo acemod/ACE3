@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [] call ace_medical_menu_updateIcons
+ * [] call ace_medical_menu_fnc_updateIcons
  *
  * Public: No
  */
@@ -18,7 +18,7 @@
 #define START_IDC 111
 #define END_IDC 118
 
-private ["_display", "_idc", "_options", "_name", "_amount"];
+private ["_display", "_idc", "_options", "_amount"];
 
 disableSerialization;
 

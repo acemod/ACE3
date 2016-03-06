@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interact_menu"};
-        author[] = {"commy2", "KoffeinFlummi", "esteldunedain", "bux578"};
+        author[] = {"commy2", "KoffeinFlummi", "esteldunedain", "bux578", "dixon13"};
         authorUrl = "https://github.com/commy2/";
         VERSION_CONFIG;
     };
@@ -14,6 +14,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "Menu_Config.hpp"
+#include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_ZeusActions.hpp"

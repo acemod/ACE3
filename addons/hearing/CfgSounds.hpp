@@ -11,8 +11,20 @@ class CfgSounds {
         sound[] = {QUOTE(PATHTOF(sounds\ACE_earringing_heavy.wav)),8,1.7};
         titles[] = {};
     };
-    class ACE_Combat_Deafness {
+    class ACE_Combat_Deafness_Heavy {
+        sound[] = {QUOTE(PATHTOF(sounds\deafness.ogg)),8,1};
+        titles[] = {};
+    };
+    class ACE_Combat_Deafness_Medium {
         sound[] = {QUOTE(PATHTOF(sounds\deafness.ogg)),3,1};
+        titles[] = {};
+    };
+    class ACE_Combat_Deafness_Heavy_NoRing {
+        sound[] = {QUOTE(PATHTOF(sounds\deafness_noring.ogg)),8,1};
+        titles[] = {};
+    };
+    class ACE_Combat_Deafness_Medium_NoRing {
+        sound[] = {QUOTE(PATHTOF(sounds\deafness_noring.ogg)),3,1};
         titles[] = {};
     };
 	class ACE_Ring_Backblast {

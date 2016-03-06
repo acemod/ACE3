@@ -6,9 +6,8 @@ GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
 GVAR(ProtractorStart) = ACE_time;
-
+GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
-GVAR(initMessageEnabled) = false;
 
 GVAR(extensionAvailable) = true;
 /* @TODO: Remove this until versioning is in sync with cmake/build versioning
@@ -23,3 +22,19 @@ if (!GVAR(extensionAvailable)) exitWith {
 };
 */
 [] call FUNC(initializeTerrainExtension);
+
+if (!hasInterface) exitWith {};
+
+["SettingsInitialized", {
+    //If not enabled, dont't add PFEH
+    if (!GVAR(enabled)) exitWith {};
+
+    // Register fire event handler
+    ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+    ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+
+}] call EFUNC(common,addEventHandler);
+
+#ifdef DEBUG_MODE_FULL
+    call FUNC(diagnoseWeapons);
+#endif

@@ -1,18 +1,27 @@
-// by commy2
+/*
+ * Author: commy2
+ * Handle the Unconscious of a Unit while Dragging
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_unit] call ace_dragging_fnc_handleUnconscious;
+ *
+ * Public: No
+*/
 #include "script_component.hpp"
 
-private ["_unit", "_isUnconscious"];
+params ["_unit"];
 
-_unit = _this select 0;
-_isUnconscious = _this select 1;
-
-private "_player";
-_player = ACE_player;
+private _player = ACE_player;
 
 if (_player getVariable [QGVAR(isDragging), false]) then {
 
-    private "_draggedObject";
-    _draggedObject = _player getVariable [QGVAR(draggedObject), objNull];
+    private _draggedObject = _player getVariable [QGVAR(draggedObject), objNull];
 
     // handle falling unconscious
     if (_unit == _player) then {
@@ -28,8 +37,7 @@ if (_player getVariable [QGVAR(isDragging), false]) then {
 
 if (_player getVariable [QGVAR(isCarrying), false]) then {
 
-    private "_carriedObject";
-    _carriedObject = _player getVariable [QGVAR(carriedObject), objNull];
+    private _carriedObject = _player getVariable [QGVAR(carriedObject), objNull];
 
     // handle falling unconscious
     if (_unit == _player) then {

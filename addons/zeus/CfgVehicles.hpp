@@ -23,6 +23,7 @@ class CfgVehicles {
         function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = "SilentSpike";
         class Arguments {
@@ -115,4 +116,74 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class GVAR(moduleSetMedic): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedic_DisplayName);
+        function = QFUNC(moduleSetMedic);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalVehicle_DisplayName);
+        function = QFUNC(moduleSetMedicalVehicle);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalFacility_DisplayName);
+        function = QFUNC(moduleSetMedicalFacility);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+
+    class GVAR(moduleAddSpareTrack): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
+        function = QFUNC(moduleAddSpareTrack);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        class ModuleDescription {
+            description = CSTRING(ModuleAddSpareTrack_Description);
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
+        function = QFUNC(moduleAddSpareWheel);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        class ModuleDescription {
+            description = CSTRING(ModuleAddSpareWheel_Description);
+            sync[] = {};
+        };
+    };
+    
+    // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
+        // curatorCanAttach = 1;
+        // displayName = CSTRING(ModuleSetSupp_DisplayName);
+        // function = QFUNC(moduleSetSuppression);
+        // class ModuleDescription {
+            // description = "Set group of units to supressed.";
+            // sync[] = {};
+        // };
+    // };
+    // class GVAR(moduleDisableSuppression): GVAR(moduleBase) {
+        // curatorCanAttach = 1;
+        // displayName = CSTRING(ModuleDisableSupp_DisplayName);
+        // function = QFUNC(moduleDisableSuppression);
+        // class ModuleDescription {
+            // description = "Remove suppression for units in group";
+            // sync[] = {};
+        // };
+    // };
 };

@@ -15,7 +15,7 @@ class RscTitles {
                 idc = 64432;
                 style = 0;
                 x = 0.497;y = 0.297;w = 0.2;h = 0.2;
-                font = "PuristaMedium";
+                font = "RobotoCondensed";
                 sizeEx = __FONTHEIGHT;
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[]={0,0,0,0};

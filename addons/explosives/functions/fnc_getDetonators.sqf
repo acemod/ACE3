@@ -16,16 +16,10 @@
 #include "script_component.hpp"
 // IGNORE_PRIVATE_WARNING(_detonators);
 
-private ["_unit", "_items", "_result", "_config"];
-_unit = _this select 0;
-_items = (items _unit);
-_result = [];
+params ["_unit"];
+TRACE_1("params",_unit);
 
-{
-    _config = ConfigFile >> "CfgWeapons" >> _x;
-    if (getNumber (_config >> "ACE_Detonator") == 1 && {!(_x in _result)}) then {
-        _result pushBack _x;
-    };
-} forEach _items;
+private _result = (items _unit) select {getNumber (ConfigFile >> "CfgWeapons" >> _x >> QGVAR(Detonator)) == 1};
+_result = _result arrayIntersect _result;
 
 _result

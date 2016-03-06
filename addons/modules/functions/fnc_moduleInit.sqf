@@ -15,5 +15,5 @@
 #include "script_component.hpp"
 
 if ((_this select 0) isKindOf "Module_F") then {
-    GVAR(moduleInitCollection) pushback (_this select 0);
+    GVAR(moduleInitCollection) pushBack (_this select 0);
 };

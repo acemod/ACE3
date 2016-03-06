@@ -1,11 +1,13 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Fence;
-    class thingX;
-    class NonStrategic;
-    
     class ACE_ConcertinaWireNoGeo: Fence {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         displayName = "";
         model = PATHTOF(data\ACE_ConcertinaWireNoGeo.p3d);
@@ -48,7 +50,7 @@ class CfgVehicles {
             class wire_16: wire_2{};
             class wire_17: wire_2{};
             class wire_18: wire_2{};
-            
+
             class wire_2_1: wire_2 {
                 animPeriod = 8;
             };
@@ -67,13 +69,14 @@ class CfgVehicles {
             class wire_15_1: wire_2_1 {};
             class wire_16_1: wire_2_1 {};
             class wire_17_1: wire_2_1 {};
-            class wire_18_1: wire_2_1 {};			
+            class wire_18_1: wire_2_1 {};
         };
     };
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRE;
         model = PATHTOF(data\ACE_ConcertinaWire.p3d);
+        EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -93,8 +96,13 @@ class CfgVehicles {
             };
         };
     };
-    class ACE_ConcertinaWireCoil: thingX {
-        XEH_ENABLED;
+
+    class ThingX;
+    class ACE_ConcertinaWireCoil: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRECOIL;
         model = PATHTOF(data\ACE_ConcertinaWireCoil.p3d);
@@ -113,6 +121,8 @@ class CfgVehicles {
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
+        EGVAR(cargo,size) = 1;
+        EGVAR(cargo,canLoad) = 1;
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
@@ -133,8 +143,11 @@ class CfgVehicles {
             };
         };
     };
-    
+
+    class NonStrategic;
     class Land_Razorwire_F: NonStrategic {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
 };

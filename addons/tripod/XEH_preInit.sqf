@@ -2,9 +2,6 @@
 
 ADDON = false;
 
-PREP(adjust);
-PREP(handleScrollWheel);
-PREP(pickup);
-PREP(place);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

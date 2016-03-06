@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {"ACE_ModuleMine_SLAMBottomMine", "ACE_ModuleExplosive_IEDUrbanBig_Range", "ACE_ModuleExplosive_IEDLandBig_Range", "ACE_ModuleExplosive_IEDUrbanSmall_Range", "ACE_ModuleExplosive_IEDLandSmall_Range"};
         weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
@@ -11,6 +11,8 @@ class CfgPatches {
         VERSION_CONFIG;
     };
 };
+
+#include "ACE_Settings.hpp"
 
 #include "CfgEventHandlers.hpp"
 
@@ -21,6 +23,7 @@ class CfgPatches {
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
+#include "GUI_VirtualAmmo.hpp"
 
 class CfgActions {
     class None;
@@ -34,10 +37,8 @@ class CfgActions {
 
 class CfgMineTriggers {
     class RangeTrigger;
-    class MagneticTrigger: RangeTrigger {
+    class ACE_MagneticTrigger: RangeTrigger {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
 };
-
-#include "ACE_Settings.hpp"

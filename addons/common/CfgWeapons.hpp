@@ -13,7 +13,7 @@ class CfgWeapons {
     };
 
     class ACE_FakePrimaryWeapon: Rifle_Base_F {
-        scope = 2;
+        scope = 1;
         scopeCurator = 1;
         scopeArsenal = 1;
         displayName = "";

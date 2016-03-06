@@ -8,6 +8,7 @@
 
 if(!isServer) exitWith { };
 
+BEGIN_COUNTER(frago);
 // _startTime = ACE_diagTime;
 
 private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
@@ -67,7 +68,7 @@ _gC = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_GURNEY_C");
 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
 if(_warn) then {
-    diag_log text format["Ammo class %1 lacks proper explosive properties definitions for frag!", _shellType]; //TODO: turn this off when we get closer to release
+    ACE_LOGWARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_shellType); //TODO: turn this off when we get closer to release
 };
 
 _fragPower = (((_m/_c)+_k)^-(1/2))*_gC;
@@ -108,7 +109,9 @@ _fragArcs set[360, 0];
 #endif
 _doRandom = true;
 if(_isArmed && (count _objects) > 0) then {
-    [_lastPos, _shellType] call FUNC(doReflections);
+    if (GVAR(ReflectionsEnabled)) then {
+        [_lastPos, _shellType] call FUNC(doReflections);
+    };
     {
         //if(random(1) > 0.5) then {
             _target = _x;
@@ -187,9 +190,9 @@ if(_isArmed && (count _objects) > 0) then {
             _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
             _randomDir = random(_sectorSize);
             _vec = [cos(_sectorOffset + _randomDir), sin(_sectorOffset + _randomDir), sin(30 - (random 45))];
-            
+
             _fp = (_fragPower-(random (_fragPowerRandom)));
-            
+
             _vel = _vec vectorMultiply _fp;
 
             _fragType = round (random ((count _fragTypes)-1));
@@ -197,7 +200,7 @@ if(_isArmed && (count _objects) > 0) then {
             _fragObj setPosASL _lastPos;
             _fragObj setVectorDir _vec;
             _fragObj setVelocity _vel;
-            
+
             if(GVAR(traceFrags)) then {
                 GVAR(TOTALFRAGS) = GVAR(TOTALFRAGS) + 1;
                 [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(addTrack);
@@ -205,10 +208,11 @@ if(_isArmed && (count _objects) > 0) then {
             _fragCount = _fragCount + 1;
         };
     };
-    
+
 };
 // #ifdef DEBUG_MODE_FULL
     // ACE_player sideChat format["total frags: %1", GVAR(TOTALFRAGS)];
     // ACE_player sideChat format["tracks: %1", (count GVAR(trackedObjects))];
 // #endif
 // _endTime = ACE_diagTime;
+END_COUNTER(frago);

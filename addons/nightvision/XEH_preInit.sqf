@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(blending);
-PREP(changeNVGBrightness);
-PREP(updatePPEffects);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

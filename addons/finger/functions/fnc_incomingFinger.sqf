@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_sourceUnit,_fingerPosPrecise);
-
 private ["_data", "_fingerPos"];
+
+params ["_sourceUnit", "_fingerPosPrecise"];
 
 //add some random float to location if it's not our own finger:
 _fingerPos = if (_sourceUnit == ACE_player) then {
@@ -27,7 +27,7 @@ _fingerPos = if (_sourceUnit == ACE_player) then {
     _fingerPosPrecise vectorAdd [random (2*FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2*FP_RANDOMIZATION_X) - FP_RANDOMIZATION_X, random (2*FP_RANDOMIZATION_Y) - FP_RANDOMIZATION_Y]
 };
 
-_data = [ACE_diagTime, _fingerPos, ([_sourceUnit] call EFUNC(common,getName))];
+_data = [ACE_diagTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName))];
 HASH_SET(GVAR(fingersHash), _sourceUnit, _data);
 
 if (GVAR(pfeh_id) == -1) then {

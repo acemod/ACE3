@@ -30,18 +30,18 @@ class ACE_settingsMenu {
             w = W_PART(38);
             h = H_PART(1);
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = H_PART(1);
             colorText[] = {0.95, 0.95, 0.95, 0.75};
-            colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = "";
         };
         class CenterBackground: HeaderBackground {
             y = Y_PART(2.1);
             h = H_PART(2.5);
             text = "";
-            colorText[] = {0, 0, 0, "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
-            colorBackground[] = {0,0,0,"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.9])"};
+            colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
+            colorBackground[] = {0,0,0,"(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
         };
         class LeftBackground: CenterBackground {
             y = Y_PART(4.8);
@@ -67,7 +67,7 @@ class ACE_settingsMenu {
             w = W_PART(38);
             h = H_PART(1);
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = H_PART(1);
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0};
@@ -256,7 +256,7 @@ class ACE_settingsMenu {
             idc = 1102;
             text = CSTRING(OpenExport);
             x = X_PART(18);
-            action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {createDialog 'ACE_serverSettingsMenu'; });
+            action = QUOTE(if (GVAR(serverConfigGeneration) > 0) then {closeDialog 0; createDialog 'ACE_serverSettingsMenu';});
         };
         class action_debug: actionClose {
             idc = 1102;
@@ -287,7 +287,7 @@ class ACE_serverSettingsMenu: ACE_settingsMenu {
             w = W_PART(38);
             h = H_PART(1);
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = H_PART(1);
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0};

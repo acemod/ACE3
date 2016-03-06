@@ -10,7 +10,7 @@
  *
  *
  * Return Value:
- * <BOOL>
+ * Succesful treatment started <BOOL>
  *
  * Public: No
  */
@@ -24,27 +24,31 @@ _selectionName = _this select 2;
 _className = _this select 3;
 _items = _this select 4;
 
-if (count _items == 0) exitwith {};
+if (count _items == 0) exitWith {false};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
-if (_part == 0 || _part == 1) exitwith {
-   // [_caller,"You cannot apply a CAT on this body part!"] call EFUNC(common,sendHintTo);
+if (_part == 0 || _part == 1) exitWith {
+    // ["displayTextStructured", [_caller], ["You cannot apply a CAT on this body part!"]] call EFUNC(common,targetEvent);
     false;
 };
 
-_tourniquets = _target getvariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
-if ((_tourniquets select _part) > 0) exitwith {
+_tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+if ((_tourniquets select _part) > 0) exitWith {
    _output = "There is already a tourniquet on this body part!"; // TODO localization
    ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
     false;
 };
 
 _removeItem = _items select 0;
-[[_target, _removeItem, _selectionName], QUOTE(DFUNC(treatmentTourniquetLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentTourniquetLocal", _target, [_target, _removeItem, _selectionName]] call EFUNC(common,targetEvent);
+};
 
 [_target, _removeItem] call FUNC(addToTriageCard);
-[_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_appliedTourniquet), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
 
-true;
+true

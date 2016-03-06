@@ -7,7 +7,7 @@
  * 1: Slider Data (angle: -180..180) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [Slider, 2] call ace_markers_fnc_onSliderPosChangedAngle;
@@ -16,11 +16,11 @@
  */
 #include "script_component.hpp"
 
-private ["_direction"];
+params ["_ctrl", "_data"];
+TRACE_2("params",_ctrl,_data);
 
-PARAMS_2(_ctrl,_data);
+private _direction = round _data;
 
-_direction = round _data;
 if (_direction < 0) then {
     _direction = _direction + 360;
 };
