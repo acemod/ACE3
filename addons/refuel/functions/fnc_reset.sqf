@@ -17,7 +17,7 @@
 
 params [["_target", objNull, [objNull]]];
 
-["setHitPointDamage", _target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]] call EFUNC(common,objectEvent);
+["setVanillaHitPointDamage", _target, [_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]] ] ] call EFUNC(common,objectEvent);
 
 _target setVariable [QGVAR(engineHit), nil, true];
 _target setVariable [QGVAR(isConnected), false, true];
