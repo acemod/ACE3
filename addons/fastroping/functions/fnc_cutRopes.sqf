@@ -32,8 +32,10 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
         };
     };
 
-    [QGVAR(ropeDetach), [_hook, _ropeTop]] call EFUNC(common,serverEvent);
-    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy, _hook], 60] call EFUNC(common,waitAndExecute);
+    detach _dummy;
+    deleteVehicle _ropeTop;
+    deleteVehicle _hook;
+    [{{deleteVehicle _x} count _this}, [_ropeBottom, _dummy], 60] call EFUNC(common,waitAndExecute);
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
