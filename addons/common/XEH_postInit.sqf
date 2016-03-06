@@ -152,14 +152,13 @@ if (isServer) then {
 ["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
 ["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
 ["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
+["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
+["setHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
     ["enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call FUNC(addEventHandler);
 };
-
-["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
-["setHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
 
 
 //////////////////////////////////////////////////
