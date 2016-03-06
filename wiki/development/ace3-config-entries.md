@@ -32,6 +32,10 @@ ace_gforcecoef
 ace_offset
 ace_hasReserveParachute
 ace_reserveParachute
+ace_refuel_flowRate
+ace_refuel_fuelCapacity
+ace_refuel_fuelCargo
+ace_refuel_hooks
 ```
 
 
@@ -105,6 +109,8 @@ ace_standardatmosphere
 ace_dragmodel
 ace_muzzlevelocities
 ace_barrellengths
+ace_rearm_caliber
+ace_rearm_dummy
 ```
 
 
