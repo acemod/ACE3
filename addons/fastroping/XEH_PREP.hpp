@@ -1,3 +1,4 @@
+PREP(canCloseRamp);
 PREP(canCutRopes);
 PREP(canDeployRopes);
 PREP(canFastRope);
