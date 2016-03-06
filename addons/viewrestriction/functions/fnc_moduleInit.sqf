@@ -26,10 +26,9 @@ if (GVAR(mode) == 3) then {
     [_logic, QGVAR(modeSelectiveLand), "modeSelectiveLand"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(modeSelectiveAir), "modeSelectiveAir"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(modeSelectiveSea), "modeSelectiveSea"] call EFUNC(common,readSettingFromModule);
-    // Disabled - Reference comment in FUNC(canChangeCamera)
-    //[_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule);
+    //[_logic, QGVAR(modeSelectiveUAV), "modeSelectiveUAV"] call EFUNC(common,readSettingFromModule); // Disabled - Reference comment in FUNC(canChangeCamera)
 
-    diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1 (Foot: %2, Land: %3, Air: %4, Sea: %5, UAV: %6)", GVAR(mode), GVAR(modeSelectiveFoot), GVAR(modeSelectiveLand), GVAR(modeSelectiveAir), GVAR(modeSelectiveSea), /*GVAR(modeSelectiveUAV)*/ "N/A"];
+    ACE_LOGINFO_5("View Restriction Module Initialized. Mode: %1 (Foot: %2, Land: %3, Air: %4, Sea: %5)",GVAR(mode),GVAR(modeSelectiveFoot),GVAR(modeSelectiveLand), GVAR(modeSelectiveAir),GVAR(modeSelectiveSea));
 } else {
-    diag_log text format["[ACE]: View Restriction Module Initialized with mode: %1", GVAR(mode)];
+    ACE_LOGINFO_1("View Restriction Module Initialized. Mode: %1",GVAR(mode));
 };

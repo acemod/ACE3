@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-// Remote control hates switchCamera (control returns to player, camera is left on remotely controleld object/unit), make sure remote controlled units are not impacted
+// Remote control hates switchCamera (control returns to player, camera is left on remotely controlled object/unit), make sure remote controlled units are not impacted
 
 (player == ACE_player) &&
 {ACE_player == cameraOn} &&

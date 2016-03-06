@@ -15,7 +15,7 @@
 
 class CfgVehicles {
     class ACE_Module;
-    class GVAR(ModuleSettings): ACE_Module {
+    class GVAR(Module): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         function = QFUNC(moduleInit);

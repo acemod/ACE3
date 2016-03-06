@@ -3,6 +3,7 @@
 
 class ACE_Settings {
     class GVAR(mode) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(Mode);
@@ -10,6 +11,7 @@ class ACE_Settings {
         values[] = {MACRO_VALUES, CSTRING(Selective)};
     };
     class GVAR(modeSelectiveFoot) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveFoot);
@@ -17,6 +19,7 @@ class ACE_Settings {
         values[] = {MACRO_VALUES};
     };
     class GVAR(modeSelectiveLand) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveLand);
@@ -24,6 +27,7 @@ class ACE_Settings {
         values[] = {MACRO_VALUES};
     };
     class GVAR(modeSelectiveAir) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveAir);
@@ -31,6 +35,7 @@ class ACE_Settings {
         values[] = {MACRO_VALUES};
     };
     class GVAR(modeSelectiveSea) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveSea);
@@ -39,6 +44,7 @@ class ACE_Settings {
     };
     // Disabled - Reference comment in FUNC(canChangeCamera)
     /*class GVAR(modeSelectiveUAV) {
+        category = CSTRING(ModuleDisplayName);
         value = 0;
         typeName = "SCALAR";
         displayName = CSTRING(ModeSelectiveUAV);
