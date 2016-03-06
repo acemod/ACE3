@@ -13,6 +13,7 @@ PREP(loadCoolestSpareBarrel);
 PREP(overheat);
 PREP(sendSpareBarrelsTemperaturesHint);
 PREP(swapBarrel);
+PREP(swapBarrelAssistant);
 PREP(swapBarrelCallback);
 PREP(updateSpareBarrelsTemperaturesThread);
 PREP(updateTemperature);

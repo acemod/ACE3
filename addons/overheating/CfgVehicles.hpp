@@ -4,7 +4,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class ACE_UnJam {
+                class GVAR(UnJam) {
                     displayName = CSTRING(UnjamWeapon);
                     condition = QUOTE( [_player] call FUNC(canUnjam) );
                     exceptions[] = {"isNotInside", "isNotSitting"};
@@ -13,7 +13,7 @@ class CfgVehicles {
                     priority = 4;
                     icon = QUOTE(PATHTOF(UI\unjam_ca.paa));
                 };
-                class ACE_SwapBarrel {
+                class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( 'ACE_SpareBarrel' in magazines _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(swapBarrel); );
@@ -21,22 +21,40 @@ class CfgVehicles {
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
                 };
-                class ACE_CheckTemperature {
+                class GVAR(CheckTemperature) {
                     displayName = CSTRING(CheckTemperatureShort);
-                    condition = "switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (secondaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}";
+                    condition = "switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}";
                     exceptions[] = {"isNotInside", "isNotSitting"};
-                    statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
+                    statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(checkTemperature); );
                     showDisabled = 0;
                     priority = 2.9;
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
-                class ACE_CheckTemperatureSpareBarrels {
+                class GVAR(CheckTemperatureSpareBarrels) {
                     displayName = CSTRING(CheckTemperatureSpareBarrelsShort);
                     condition = QUOTE( 'ACE_SpareBarrel' in magazines _player);
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(checkSpareBarrelsTemperatures); );
                     showDisabled = 0;
                     priority = 2.8;
+                    icon = QUOTE(PATHTOF(UI\temp_ca.paa));
+                };
+            };
+        };
+
+        class ACE_Actions {
+            class ACE_Weapon {
+                class GVAR(SwapBarrel) {
+                    displayName = CSTRING(SwapBarrel);
+                    condition = QUOTE( 'ACE_SpareBarrel' in magazines _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _target >> 'ACE_Overheating_allowSwapBarrel') == 1} );
+                    statement = QUOTE([ARR_3(_player, _target, currentWeapon _target)] call FUNC(swapBarrelAssistant););
+                    icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
+                };
+                class GVAR(CheckTemperature) {
+                    displayName = CSTRING(CheckTemperatureShort);
+                    condition = "switch (currentWeapon _target) do {case (''): {false}; case (primaryWeapon _target); case (handgunWeapon _target): {true}; default {false}}";
+                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    statement = QUOTE( [ARR_3(_player, _target, currentWeapon _target)] call FUNC(checkTemperature); );
                     icon = QUOTE(PATHTOF(UI\temp_ca.paa));
                 };
             };

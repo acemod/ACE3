@@ -56,7 +56,7 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
     };
 }] call EFUNC(common,addEventHandler);
 
-// Install event handlers to display temp when a barrel was swapped
-["barrelSwapped", {
-    _this call FUNC(displayTemperature);
-}] call EFUNC(common,addEventHandler);
+// Install event handler to display temp when a barrel was swapped
+["showWeaponTemperature", DFUNC(displayTemperature)] call EFUNC(common,addEventHandler);
+// Install event handler to initiate an assisted barrel swap
+["initiateSwapBarrelAssisted", DFUNC(swapBarrel)] call EFUNC(common,addEventHandler);
