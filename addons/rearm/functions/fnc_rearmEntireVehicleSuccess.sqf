@@ -24,10 +24,9 @@ if (isServer) then {
     {
         _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [[_truck, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _truck] call EFUNC(common,execRemoteFnc);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), _truck, [_truck, _vehicle, _x]] call EFUNC(common,objectEvent);
         } else {
-            EGVAR(common,remoteFnc) = [[_truck, _vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
-            _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), _turretOwnerID, [_truck, _vehicle, _x]] call EFUNC(common,targetEvent);
         };
     } count REARM_TURRET_PATHS;
 } else {

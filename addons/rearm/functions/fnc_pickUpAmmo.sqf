@@ -23,6 +23,6 @@ if !(isNull _attachedDummy) exitWith {};
 
 _dummy attachTo [_unit, [0,1,0], "pelvis"];
 {
-    [[_dummy, [[-1,0,0],[0,0,1]]], QFUNC(makeDummy), _x] call EFUNC(common,execRemoteFnc);
+    [QGVAR(makeDummyEH), _x, [_dummy, [[-1,0,0],[0,0,1]]]] call EFUNC(common,objectEvent);
 } count (position _unit nearObjects ["CAManBase", 100]);
 _unit setVariable [QGVAR(dummy), _dummy];
