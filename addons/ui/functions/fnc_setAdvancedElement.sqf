@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [show, 303, [188] ] call ace_ui_fnc_setAdvancedElement
+ * [show, 303, [188]] call ace_ui_fnc_setAdvancedElement
  *
  * Public: No
  */
@@ -29,7 +29,7 @@ _show = [1, 0] select _show;
 
 // Disable/Enable elements
 {
-    local _idc = _x;
+    private _idc = _x;
 
     // Loop through IGUI displays as they can be present several times for some reason
     {

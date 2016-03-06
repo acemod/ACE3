@@ -9,17 +9,15 @@
  * None
  *
  * Example:
- * call ace_ui_fnc_setBasicElements
+ * [] call ace_ui_fnc_setElements
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-//@todo - change to EFUNC(common,showHud) setter
+private _shownHUD = shownHUD; // [hud, info, radar, compass, direction, menu, group, cursors]
 
-local _shownHUD = shownHUD; // [hud, info, radar, compass, direction, menu, group, cursors]
-
-showHUD [
+["ui", [
     _shownHUD select 0,
     GVAR(soldierVehicleWeaponInfo),
     GVAR(vehicleRadar),
@@ -28,17 +26,4 @@ showHUD [
     GVAR(commandMenu),
     GVAR(groupBar),
     _shownHUD select 7
-];
-
-/*
-["UIselective", [
-    _shownHUD select 0,
-    _shownHUD select 1,
-    _shownHUD select 2,
-    _shownHUD select 3,
-    _shownHUD select 4,
-    GVAR(commandMenu),
-    _shownHUD select 6,
-    _shownHUD select 7
 ]] call EFUNC(common,showHud);
-*/
