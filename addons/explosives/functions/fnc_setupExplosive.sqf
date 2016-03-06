@@ -141,6 +141,13 @@ GVAR(TweakedAngle) = 0;
     //Don't allow placing in a bad position:
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
+    if (_unit != ACE_player ||
+        {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
+        {!(_magClassname in (magazines _unit))}
+    ) then {
+        GVAR(placeAction) = PLACE_CANCEL;
+    };
+
     if (GVAR(placeAction) != PLACE_WAITING) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;

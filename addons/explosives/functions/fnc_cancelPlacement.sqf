@@ -18,11 +18,6 @@
 
 params ["_unit", "_key"];
 
-if (_key != 1) exitWith {};
-
-if (_unit == ACE_player &&
-    {([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} &&
-    {(_magClassname in (magazines _unit))}
-) exitWith {};
+if (_key != 1 || {!GVAR(pfeh_running)}) exitWith {};
 
 GVAR(placeAction) = PLACE_CANCEL;

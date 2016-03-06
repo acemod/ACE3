@@ -18,7 +18,7 @@
 
 params ["_unit", "_key"];
 
-if (_key != 1) exitWith {};
+if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
