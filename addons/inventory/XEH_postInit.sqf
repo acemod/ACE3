@@ -22,27 +22,14 @@ private _fnc_addToCache = {
     GVAR(ItemKeyNamespace) setVariable [format ["%1:%2", _displayName, _picture], _this];
 };
 
-// weapons and items
-{
-    if (getNumber (_x >> "scope") > 0) then {_x call _fnc_addToCache};
-    false
-} count (
-    ("true" configClasses (configFile >> "CfgWeapons")) + 
-    ("true" configClasses (configFile >> "CfgGlasses"))
-);
+private _allItems = [];
 
-// magazines
-{
-    if (getNumber (_x >> "scope") == 2) then {_x call _fnc_addToCache};
-    false
-} count ("true" configClasses (configFile >> "CfgMagazines"));
+_allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons"));
+_allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgGlasses"));
+_allItems append ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgMagazines"));
+_allItems append ("getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles"));
 
-// backpacks
-{
-    if (getNumber (_x >> "scope") > 0 && {getNumber (_x >> "isBackpack") == 1}) then {_x call _fnc_addToCache};
-    false
-} count ("true" configClasses (configFile >> "CfgVehicles"));
-
+{_x call _fnc_addToCache; false} count _allItems;
 
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
