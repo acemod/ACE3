@@ -1,8 +1,6 @@
 class CfgVehicles {
     class ACE_Module;
-
-    // Basic
-    class ACE_ModuleUI: ACE_Module {
+    class GVAR(Module): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         displayName = CSTRING(ModuleName);
@@ -11,6 +9,13 @@ class CfgVehicles {
         isGlobal = 1;
         //icon = QUOTE(PATHTOF(UI\Icon_Module_UI_ca.paa));
         class Arguments {
+            // BASIC
+            class allowSelectiveUI {
+                displayName = CSTRING(AllowSelectiveUI);
+                description = CSTRING(AllowSelectiveUI_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class soldierVehicleWeaponInfo {
                 displayName = CSTRING(SoldierVehicleWeaponInfo);
                 typeName = "BOOL";
@@ -34,37 +39,26 @@ class CfgVehicles {
             class groupBar {
                 displayName = CSTRING(GroupBar);
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
-        };
-        class ModuleDescription {
-            description = CSTRING(ModuleDescription);
-        };
-    };
 
-    // Advanced
-    class ACE_ModuleUI_Advanced: ACE_Module {
-        author = ECSTRING(common,ACETeam);
-        category = "ACE";
-        displayName = CSTRING(ModuleName_Advanced);
-        function = QFUNC(moduleInitAdvanced);
-        scope = 2;
-        isGlobal = 1;
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_UI_ca.paa));
-        class Arguments {
+            // ADVANCED
             // Upper Weapon Info
             class weaponName {
                 displayName = CSTRING(WeaponName);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class weaponNameBackground {
                 displayName = CSTRING(WeaponNameBackground);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class firingMode {
                 displayName = CSTRING(FiringMode);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -72,37 +66,43 @@ class CfgVehicles {
             // Lower Weapon Info
             class ammoType {
                 displayName = CSTRING(AmmoType);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class ammoCount {
                 displayName = CSTRING(AmmoCount);
-                description = CSTRING(AmmoCountDesc);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class magCount {
                 displayName = CSTRING(MagCount);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class grenadeFlareType {
-                displayName = CSTRING(GrenadeFlareType);
+            class throwableName {
+                displayName = CSTRING(throwableName);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class grenadeFlareCount {
-                displayName = CSTRING(GrenadeFlareCount);
+            class throwableCount {
+                displayName = CSTRING(throwableCount);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class zeroing {
                 displayName = CSTRING(Zeroing);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class weaponLowerInfoBackground {
                 displayName = CSTRING(WeaponLowerInfoBackground);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
@@ -110,55 +110,63 @@ class CfgVehicles {
             // Stance
             class stance {
                 displayName = CSTRING(Stance);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
 
-
             // Vehicle
             class vehicleName {
                 displayName = CSTRING(VehicleName);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleNameBackground {
                 displayName = CSTRING(VehicleNameBackground);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleFuelBar {
                 displayName = CSTRING(VehicleFuelBar);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleSpeed {
                 displayName = CSTRING(VehicleSpeed);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleAltitude {
                 displayName = CSTRING(VehicleAltitude);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleDamage {
                 displayName = CSTRING(VehicleDamage);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleInfoBackground {
                 displayName = CSTRING(VehicleInfoBackground);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class vehicleGunnerWeapon {
                 displayName = CSTRING(VehicleGunnerWeapon);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
         };
         class ModuleDescription {
-            description = CSTRING(ModuleDescription_Advanced);
+            description = CSTRING(ModuleDescription);
         };
     };
 };

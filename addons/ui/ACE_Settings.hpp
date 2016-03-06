@@ -1,182 +1,208 @@
 class ACE_Settings {
+    class GVAR(allowSelectiveUI) {
+        category = CSTRING(Category);
+        displayName = CSTRING(AllowSelectiveUI);
+        description = CSTRING(AllowSelectiveUI_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
+
 // BASIC
     class GVAR(soldierVehicleWeaponInfo) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(SoldierVehicleWeaponInfo);
         category = CSTRING(Category);
+        displayName = CSTRING(SoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleRadar) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleRadar);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleRadar);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleCompass) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleCompass);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleCompass);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(commandMenu) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(CommandMenu);
         category = CSTRING(Category);
+        displayName = CSTRING(CommandMenu);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(groupBar) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(GroupBar);
         category = CSTRING(Category);
+        displayName = CSTRING(GroupBar);
+        typeName = "BOOL";
+        value = 0;
+        isClientSettable = 1;
     };
 
 // ADVANCED
     // Upper Weapon Info
     class GVAR(weaponName) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(WeaponName);
         category = CSTRING(Category);
+        displayName = CSTRING(WeaponName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(weaponNameBackground) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(WeaponNameBackground);
         category = CSTRING(Category);
+        displayName = CSTRING(WeaponNameBackground);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(firingMode) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(FiringMode);
         category = CSTRING(Category);
+        displayName = CSTRING(FiringMode);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
 
     // Lower Weapon Info
     class GVAR(ammoType) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(AmmoType);
         category = CSTRING(Category);
+        displayName = CSTRING(AmmoType);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(ammoCount) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(AmmoCount);
-        description = CSTRING(AmmoCountDesc);
         category = CSTRING(Category);
+        displayName = CSTRING(AmmoCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 0;
+        isClientSettable = 1;
     };
     class GVAR(magCount) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
+        category = CSTRING(Category);
         displayName = CSTRING(MagCount);
-        category = CSTRING(Category);
-    };
-    class GVAR(grenadeFlareType) {
-        value = 1;
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(GrenadeFlareType);
-        category = CSTRING(Category);
-    };
-    class GVAR(grenadeFlareCount) {
         value = 1;
-        typeName = "BOOL";
         isClientSettable = 1;
-        displayName = CSTRING(GrenadeFlareCount);
+    };
+    class GVAR(throwableName) {
         category = CSTRING(Category);
+        displayName = CSTRING(throwableName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(throwableCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(throwableCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(zeroing) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(Zeroing);
         category = CSTRING(Category);
+        displayName = CSTRING(Zeroing);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(weaponLowerInfoBackground) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(WeaponLowerInfoBackground); //todo
         category = CSTRING(Category);
+        displayName = CSTRING(WeaponLowerInfoBackground); //todo
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
 
     // Stance
     class GVAR(stance) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(Stance);
         category = CSTRING(Category);
+        displayName = CSTRING(Stance);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
 
 
     // Vehicle
     class GVAR(vehicleName) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleName);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleNameBackground) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleNameBackground);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleNameBackground);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleFuelBar) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleFuelBar);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleFuelBar);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleSpeed) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleSpeed);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleSpeed);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleAltitude) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleAltitude);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleAltitude);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleDamage) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleDamage);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleDamage);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleInfoBackground) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleInfoBackground);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleInfoBackground);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
     class GVAR(vehicleGunnerWeapon) {
-        value = 1;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        displayName = CSTRING(VehicleGunnerWeapon);
         category = CSTRING(Category);
+        displayName = CSTRING(VehicleGunnerWeapon);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
     };
 };

@@ -1,8 +1,8 @@
 #define COMPONENT ui
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+ #define DEBUG_MODE_FULL
+ #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -28,8 +28,8 @@
     [QGVAR(ammoType), 300, [155] ], \
     [QGVAR(ammoCount), 300, [184] ], \
     [QGVAR(magCount), 300, [185] ], \
-    [QGVAR(grenadeName), 300, [152] ], \
-    [QGVAR(grenadeCount), 300, [151] ], \
+    [QGVAR(throwableName), 300, [152] ], \
+    [QGVAR(throwableCount), 300, [151] ], \
     [QGVAR(weaponLowerInfoBackground), 300, [1202] ], \
     [QGVAR(zeroing), 300, [168] ], \
     [QGVAR(stance), 303, [188, 1201] ], \

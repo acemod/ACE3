@@ -20,13 +20,36 @@ if (!_activated) exitWith {};
 
 // Exit if HUD visibility is hardcoded in mission config and showHUD command is overriden
 if (isArray (missionConfigFile >> "showHUD")) exitWith {
-    ACE_LOGINFO("User Interface (Basic) Module Failed to Initialize - showHUD overriden in mission config!");
+    ACE_LOGINFO("User Interface Module Failed to Initialize - showHUD overriden in mission config!");
 };
 
+// Basic
+[_logic, QGVAR(allowSelectiveUI), "allowSelectiveUI"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(commandMenu), "commandMenu"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(groupBar), "groupBar"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("User Interface (Basic) Module Initialized.");
+// Advanced
+[_logic, QGVAR(weaponName), "weaponName"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(weaponNameBackground), "weaponNameBackground"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(firingMode), "firingMode"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(ammoType), "ammoType"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(ammoCount), "ammoCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(magCount), "magCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(throwableName), "throwableName"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(throwableCount), "throwableCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(zeroing), "zeroing"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(weaponLowerInfoBackground), "weaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(stance), "stance"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleName), "vehicleName"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleNameBackground), "vehicleNameBackground"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleFuelBar), "vehicleFuelBar"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleSpeed), "vehicleSpeed"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleAltitude), "vehicleAltitude"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleDamage), "vehicleDamage"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleInfoBackground), "vehicleInfoBackground"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(vehicleGunnerWeapon), "vehicleGunnerWeapon"] call EFUNC(common,readSettingFromModule);
+
+ACE_LOGINFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));
