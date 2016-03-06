@@ -10,19 +10,20 @@ if !(hasInterface) exitWith {};
     // Exit if all Selective Modes are Disabled
     if (GVAR(mode) == 3 &&
         {GVAR(modeSelectiveFoot) == 0} &&
-        {GVAR(modeSelectiveVehicle) == 0} &&
+        {GVAR(modeSelectiveLand) == 0} &&
         {GVAR(modeSelectiveAir) == 0} &&
-        {GVAR(modeSelectiveUAV) == 0}) exitWith {ERROR("Selective mode enabled, but all sub-modes are disabled")};
+        {GVAR(modeSelectiveSea) == 0}/* &&
+        {GVAR(modeSelectiveUAV) == 0}*/
+    ) exitWith {
+        ACE_LOGWARNING("Selective mode enabled, but all sub-modes are disabled.")
+    };
 
     // Exit if third person view is not available
     if !(difficultyEnabled "3rdPersonView") exitWith {
         ACE_LOGWARNING("View Restriction is enabled, but 3rd person is disabled with server difficulty.");
     };
 
-    // Make sure to load-in in correct mode
-    call FUNC(changeCamera);
-
-    // Add Event Handler for changing camera
+    // Add Event Handler for changing camera - also happens on spawn
     ["cameraViewChanged", {
         call FUNC(changeCamera);
     }] call EFUNC(common,addEventHandler);
