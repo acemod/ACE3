@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-params ["_scroll"];
+if (GVAR(digPFH) == -1) exitWith {false};
 
-if (GETMVAR(ACE_Modifier,0) == 0 || GVAR(digPFH) == -1) exitWith { false };
+params ["_scroll"];
 
 GVAR(digDirection) = GVAR(digDirection) + (_scroll * 5);
 
