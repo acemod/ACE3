@@ -19,4 +19,7 @@ if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
-["mouseHint", []] call EFUNC(common,showHud); //This is equivalent to the old showHud true
+// Disable action menu, showHud also disables all scripted UI (such as drawIcon3D)
+inGameUISetEventHandler ["PrevAction", "false"];
+inGameUISetEventHandler ["NextAction", "false"];
+inGameUISetEventHandler ["Action", "false"];
