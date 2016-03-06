@@ -33,7 +33,7 @@ _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers
-[QGVAR(tagCreated), [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
+["tagCreated", [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
 
 if (isNull _object) exitWith {};
 
