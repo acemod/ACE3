@@ -22,7 +22,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleDisplayName);
         scope = 2;
         isGlobal = 1;
-        //icon = QUOTE(PATHTOF(UI\Icon_Module_ViewRestriction_ca.paa)); //add icon
+        icon = QUOTE(PATHTOF(UI\Icon_Module_ViewRestriction_ca.paa));
         class Arguments {
             class mode {
                 displayName = CSTRING(Mode);
