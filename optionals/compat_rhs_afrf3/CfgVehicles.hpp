@@ -208,6 +208,7 @@ class CfgVehicles {
     class Heli_Light_02_base_F: Helicopter_Base_H {};
     class RHS_Mi8_base : Heli_Light_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3700;
+        EGVAR(fastroping,enabled) = 0;
         class EventHandlers: EventHandlers {
             class RHS_EventHandlers;
         };
@@ -228,7 +229,7 @@ class CfgVehicles {
 
         class EventHandlers: EventHandlers {
             class RHS_EventHandlers: RHS_EventHandlers {
-                getOut = QUOTE(if !(_this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_mi8_doors});
+                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_mi8_doors});
             };
         };
     };
@@ -250,7 +251,7 @@ class CfgVehicles {
 
         class EventHandlers: EventHandlers {
             class RHS_EventHandlers: RHS_EventHandlers {
-                getOut = QUOTE(if !(_this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_mi8_doors});
+                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_mi8_doors});
             };
         };
     };
@@ -258,10 +259,12 @@ class CfgVehicles {
     class Heli_Attack_02_base_F;
     class RHS_Ka52_base : Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
+        EGVAR(fastroping,enabled) = 0;
     };
 
     class RHS_Mi24_base : Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1851;
+        EGVAR(fastroping,enabled) = 0;
     };
 
     class rhs_t80b : rhs_tank_base {
