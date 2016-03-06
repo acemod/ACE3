@@ -7,10 +7,10 @@ params ["_unit"];
 
 // Reset captive status for respawning unit
 if (!(_unit getVariable ["ACE_isUnconscious", false])) then {
-    [_unit, QGVAR(unconscious), false] call EFUNC(common,setCaptivityStatus);
+    [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
 };
 
-// Remove maximum unconsciousness ACE_time handler
+// Remove maximum unconsciousness time handler
 _maxUnconHandle = _unit getVariable [QGVAR(maxUnconTimeHandle), -1];
 if (_maxUnconHandle > 0) then {
     [_maxUnconHandle] call CBA_fnc_removePerFrameHandler;

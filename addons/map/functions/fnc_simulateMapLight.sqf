@@ -16,6 +16,7 @@
 
 #include "script_component.hpp"
 
+private ["_hmd", "_flashlight", "_screenSize", "_realViewPortY", "_realViewPortX", "_fillTex", "_colourAlpha", "_shadeAlpha", "_colourList", "_maxColour"];
 params ["_mapCtrl", "_mapScale", "_mapCentre", "_lightLevel"];
 
 _hmd = hmd ACE_player;
@@ -50,6 +51,7 @@ if (_flashlight == "") then {
     //ambient shade fill
     _mapCtrl drawIcon [_fillTex, [1,1,1,_shadeAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
 } else {
+    private ["_mousePos", "_colour", "_size", "_flashTex", "_beamSize", "_viewPortRatioFixY", "_offsetX", "_offsetYDown", "_offsetYUp"];
     //mouse pos
     _mousePos = GVAR(mousePos);
 

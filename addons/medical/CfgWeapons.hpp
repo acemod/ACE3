@@ -75,6 +75,17 @@ class CfgWeapons {
             mass = 1;
         };
     };
+    class ACE_adenosine: ACE_ItemCore {
+        scope = 2;
+        displayName = CSTRING(Adenosine_Display);
+        picture = QUOTE(PATHTOF(ui\items\adenosine_x_ca.paa));
+        model = QUOTE(PATHTOF(data\adenosine.p3d));
+        descriptionShort = CSTRING(adenosine_Desc_Short);
+        descriptionUse = CSTRING(adenosine_Desc_Use);
+        class ItemInfo: InventoryItem_Base_F {
+            mass = 1;
+        };
+    };
     class ACE_atropine: ACE_ItemCore {
         scope = 2;
         displayName = CSTRING(Atropine_Display);
@@ -84,7 +95,6 @@ class CfgWeapons {
         descriptionUse = CSTRING(Atropine_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-
         };
     };
     class ACE_epinephrine: ACE_ItemCore {

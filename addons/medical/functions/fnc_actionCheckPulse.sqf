@@ -15,5 +15,8 @@
 #include "script_component.hpp"
 
 params ["_caller","_target", "_selectionName"];
-[[_caller, _target, _selectionName], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
-
+if (local _target) then {
+    ["actionCheckPulseLocal", [_caller, _target, _selectionName]] call EFUNC(common,localEvent);
+} else {
+    ["actionCheckPulseLocal", _target, [_caller, _target, _selectionName]] call EFUNC(common,targetEvent);
+};

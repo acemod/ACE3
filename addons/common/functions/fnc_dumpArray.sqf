@@ -18,7 +18,7 @@
 
 params ["_var", ["_depth", 0, [0]]];
 
-local _pad = "";
+private _pad = "";
 
 for "_i" from 0 to _depth do {
     _pad = _pad + toString [9];

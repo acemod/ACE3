@@ -53,5 +53,5 @@ namespace ace {
 
         };
         typedef std::shared_ptr<model> model_p;
-    };
-};
+    }
+}

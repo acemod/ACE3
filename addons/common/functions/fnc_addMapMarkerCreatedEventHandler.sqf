@@ -14,12 +14,11 @@
 
 params ["_statement"];
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-private "_actionsVar";
-_actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
+private _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
 _actionsVar params ["_id", "_actionIDs", "_actions"];
 

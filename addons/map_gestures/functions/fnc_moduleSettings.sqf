@@ -17,8 +17,6 @@
  */
 #include "script_component.hpp"
 
-private ["_defaultColor", "_defaultLeadColor"];
-
 params ["_logic", "", "_activated"];
 
 if (!_activated || !isServer) exitWith {};
@@ -27,11 +25,19 @@ if (!_activated || !isServer) exitWith {};
 [_logic, QGVAR(maxRange), "maxRange"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(interval), "interval"] call EFUNC(common,readSettingFromModule);
 
-_defaultLeadColor = call compile ("[" + (_logic getVariable ["defaultLeadColor", ""]) + "]");
-if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
+//For default fallback colors, setting to empty ("") will not force on clients
+private _defaultLeadColor = _logic getVariable ["defaultLeadColor", ""];
+if (_defaultLeadColor != "") then {
+    _defaultLeadColor = call compile ("[" + _defaultLeadColor + "]");
+    if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
+    [QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
+};
 
-_defaultColor = call compile ("[" + (_logic getVariable ["defaultColor", ""]) + "]");
-if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
+private _defaultColor = _logic getVariable ["defaultColor", ""];
+if (_defaultColor != "") then {
+    _defaultColor = call compile ("[" + _defaultColor + "]");
+    if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
+    [QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);
+};
 
-[QGVAR(defaultLeadColor), _defaultLeadColor, false, true] call EFUNC(common,setSetting);
-[QGVAR(defaultColor), _defaultColor, false, true] call EFUNC(common,setSetting);
+ACE_LOGINFO("Map Gestures Module Initialized.");

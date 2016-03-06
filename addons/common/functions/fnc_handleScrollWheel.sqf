@@ -12,11 +12,6 @@
  */
 #include "script_component.hpp"
 
-// prevents a bug that causes the MouseZChanged to trigger N-times, where N is the number of times you consecutively pressed "Restart" instead of "Preview" in the editor
-if (GVAR(ScrollWheelFrame) == diag_frameno) exitWith {};
-
-GVAR(ScrollWheelFrame) = diag_frameno;
-
 {
     [_this select 1] call _x;
     false

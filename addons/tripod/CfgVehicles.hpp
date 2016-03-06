@@ -1,3 +1,6 @@
+
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -32,9 +35,12 @@ class CfgVehicles {
         };
     };
 
-    class thingX;
-    class ACE_TripodObject: thingX {
-        XEH_ENABLED;
+    class ThingX;
+    class ACE_TripodObject: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         EGVAR(dragging,canDrag) = 1;
         EGVAR(dragging,dragPosition[]) = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;

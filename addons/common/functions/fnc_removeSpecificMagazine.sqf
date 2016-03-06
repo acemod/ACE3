@@ -14,15 +14,14 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_magazineType", "_ammoCount"];
+params [["_unit", objNull, [objNull]], ["_magazineType", "", [""]], ["_ammoCount", 0, [0]]];
 
-private ["_isRemoved", "_magazines", "_index"];
-
-_isRemoved = false;
+private _isRemoved = false;
 
 // Check uniform
-_magazines = [magazinesAmmoCargo uniformContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
-_index = _magazines find [_magazineType, _ammoCount];
+private _magazines = magazinesAmmoCargo uniformContainer _unit select {_x select 0 == _magazineType};
+private _index = _magazines find [_magazineType, _ammoCount];
+
 if (_index > -1) exitWith {
     {
         _unit removeItemFromUniform (_x select 0);
@@ -40,8 +39,9 @@ if (_index > -1) exitWith {
 };
 
 // Check vest
-_magazines = [magazinesAmmoCargo vestContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
-_index = _magazines find [_magazineType,_ammoCount];
+_magazines = magazinesAmmoCargo vestContainer _unit select {_x select 0 == _magazineType};
+_index = _magazines find [_magazineType, _ammoCount];
+
 if (_index > -1) exitWith {
     {
         _unit removeItemFromVest (_x select 0);
@@ -59,8 +59,9 @@ if (_index > -1) exitWith {
 };
 
 // Check backpack
-_magazines = [magazinesAmmoCargo backpackContainer _unit, {_this select 0 == _magazineType}] call FUNC(filter);
-_index = _magazines find [_magazineType,_ammoCount];
+_magazines = magazinesAmmoCargo backpackContainer _unit select {_x select 0 == _magazineType};
+_index = _magazines find [_magazineType, _ammoCount];
+
 if (_index > -1) exitWith {
     {
         _unit removeItemFromBackpack (_x select 0);

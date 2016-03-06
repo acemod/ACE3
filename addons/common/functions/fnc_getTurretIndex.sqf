@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-local _vehicle = vehicle _unit;
+private _vehicle = vehicle _unit;
 if (_unit == _vehicle) exitWith {[]};
 
 scopeName "main"; 

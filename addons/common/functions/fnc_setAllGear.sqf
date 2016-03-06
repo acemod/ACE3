@@ -1,6 +1,6 @@
 /*
  * Author: bux578, commy2
- * Applies gear to unit.
+ * Applies gear to unit. It must be called in the machine in which the unit is local.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -19,6 +19,10 @@
 #include "script_component.hpp"
 
 params ["_unit", "_allGear", ["_clearAttachments", false], ["_clearBackpack", false]];
+
+if (!local _unit) exitWith {
+    ACE_LOGWARNING_1("setAllGear - %1 has to be local.",_unit);
+};
 
 // remove all starting gear of a player
 removeAllWeapons _unit;
@@ -148,7 +152,7 @@ if (_backpack != "") then {
     _unit addBackpack _backpack;
 
     if (_clearBackpack) then {
-        local _backpackObject = unitBackpack _unit;
+        private _backpackObject = unitBackpack _unit;
 
         clearMagazineCargoGlobal _backpackObject;
         clearWeaponCargoGlobal _backpackObject;

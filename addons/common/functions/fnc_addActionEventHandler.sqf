@@ -17,18 +17,16 @@
 
 params ["_unit", "_action", "_condition", "_statement"];
 
-if (typeName _condition == "STRING") then {
+if (_condition isEqualType "") then {
     _condition = compile _condition;
 };
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-private ["_name", "_actionsVar"];
-
-_name = format ["ACE_Action_%1", _action];
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
+private _name = format ["ACE_Action_%1", _action];
+private _actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
 
 if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, fixes respawn issues
     _actionsVar = [-1, [-1, [], []], objNull];
@@ -44,8 +42,7 @@ _actions pushBack [_condition, _statement];
 
 // first action to add, unit needs addAction command
 if (_actionID == -1) then {
-    private "_addAction";
-    _addAction = call compile format [
+    private _addAction = call compile format [
         "[
             '',
             {if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)},

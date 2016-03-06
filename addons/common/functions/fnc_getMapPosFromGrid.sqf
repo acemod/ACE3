@@ -25,17 +25,15 @@ if (count GVAR(mapGridData) == 0) exitWith {
 
 GVAR(mapGridData) params ["_offsetX", "_realOffsetY", "_stepXat5", "_stepYat5"];
 
-private ["_countInput", "_countInputHalf", "_xPart", "_yPart", "_xPos", "_yPos"];
-
-_countInput = count _inputString;
-_countInputHalf = floor (_countInput / 2);
+private _countInput = count _inputString;
+private _countInputHalf = floor (_countInput / 2);
 
 //Split string, ignoring middle
-_xPart = _inputString select [0, _countInputHalf];
-_yPart = _inputString select [ceil (_countInput / 2), _countInputHalf];
+private _xPart = _inputString select [0, _countInputHalf];
+private _yPart = _inputString select [ceil (_countInput / 2), _countInputHalf];
 
-_xPos = ((parseNumber _xPart) * _stepXat5 * 10 ^ (5 - _countInputHalf)) + _offsetX;
-_yPos = ((parseNumber _yPart) * _stepYat5 * 10 ^ (5 - _countInputHalf)) + _realOffsetY;
+private _xPos = ((parseNumber _xPart) * _stepXat5 * 10 ^ (5 - _countInputHalf)) + _offsetX;
+private _yPos = ((parseNumber _yPart) * _stepYat5 * 10 ^ (5 - _countInputHalf)) + _realOffsetY;
 
 if (_getCenterOfGrid) then {
     _xPos = _xPos + 0.5 * _stepXat5 * 10 ^ (5 - _countInputHalf);

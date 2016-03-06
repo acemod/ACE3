@@ -3,6 +3,6 @@
 
 ADDON = false;
 
-PREP(camshake);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

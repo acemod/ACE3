@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_UAVbattery">
         <Key ID="STR_ACE_Logistics_UAVbattery_Full">
@@ -62,16 +62,16 @@
             <Russian>Используется для зарядки переносных БПЛА</Russian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
-            <English>Recharging ...</English>
-            <German>Aufladen ...</German>
-            <Spanish>Recargando ...</Spanish>
-            <French>Rechargement ...</French>
-            <Polish>Ładowanie ...</Polish>
-            <Hungarian>Akku feltöltése ...</Hungarian>
-            <Czech>Dobíjení ...</Czech>
-            <Portuguese>Recarregando ...</Portuguese>
-            <Italian>In ricarica ...</Italian>
-            <Russian>Заряжается ...</Russian>
+            <English>Recharging...</English>
+            <German>Aufladen...</German>
+            <Spanish>Recargando...</Spanish>
+            <French>Rechargement...</French>
+            <Polish>Ładowanie...</Polish>
+            <Hungarian>Akku feltöltése...</Hungarian>
+            <Czech>Dobíjení...</Czech>
+            <Portuguese>Recarregando...</Portuguese>
+            <Italian>In ricarica...</Italian>
+            <Russian>Заряжается...</Russian>
         </Key>
     </Package>
 </Project>

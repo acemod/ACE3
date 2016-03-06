@@ -17,8 +17,8 @@
 #include <string>
 
 extern "C" {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
-};
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+}
 
 std::string getImagePathFromStructuredText(const std::string & input) {
 	std::string returnValue = "";

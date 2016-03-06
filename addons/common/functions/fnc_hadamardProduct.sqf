@@ -16,8 +16,7 @@
 
 params ["_vector1", "_vector2"];
 
-private "_newVector";
-_newVector = [];
+private _newVector = [];
 
 for "_i" from 0 to ((count _vector1 min count _vector2) - 1) do {
     _newVector pushBack ((_vector1 select _i) * (_vector2 select _i));

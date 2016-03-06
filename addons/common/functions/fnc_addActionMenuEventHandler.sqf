@@ -21,39 +21,35 @@
 
 params ["_unit", "_displayName", "_action", "_condition", "_statement", "_condition2", "_statement2", ["_priority", 0]];
 
-if (typeName _condition == "STRING") then {
+if (_condition isEqualType "") then {
     _condition = compile _condition;
 };
 
-if (typeName _statement == "STRING") then {
+if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-if (typeName _condition2 == "STRING") then {
+if (_condition2 isEqualType "") then {
     _condition2 = compile _condition2;
 };
 
-if (typeName _statement2 == "STRING") then {
+if (_statement2 isEqualType "") then {
     _statement2 = compile _statement2;
 };
 
-private ["_name", "_actionsVar"];
-
-_name = format ["ACE_ActionMenu_%1", _action];
-_actionsVar = _unit getVariable [_name, [-1, [], []]];
+private _name = format ["ACE_ActionMenu_%1", _action];
+private _actionsVar = _unit getVariable [_name, [-1, [], []]];
 
 _actionsVar params ["_id", "_actionIDs", "_actions"];
 
 _id = _id + 1;
 
-private ["_nameVar", "_addAction", "_actionID"];
-
-_nameVar = format ["%1_ID%2", _name, _id];
+private _nameVar = format ["%1_ID%2", _name, _id];
 missionNamespace setVariable [_nameVar, [_condition, _statement, _condition2, _statement2]];
 
 _actionIDs pushBack _id;
 
-_addAction = call compile format [
+private _addAction = call compile format [
     "[
         '%2',
         {if (inputAction '%1' == 0) then {if (_this call (%3 select 2)) then {_this call (%3 select 3)}} else {_this call (%3 select 1)}},
@@ -70,7 +66,7 @@ _addAction = call compile format [
     _priority
 ];
 
-_actionID = _unit addAction _addAction;
+private _actionID = _unit addAction _addAction;
 
 _actions pushBack [_actionID, _nameVar];
 

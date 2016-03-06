@@ -92,6 +92,6 @@ class RscText;
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
-#define FontCSE       "PuristaMedium"
+#define FontCSE       "RobotoCondensed"
 
 #endif

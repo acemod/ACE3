@@ -14,13 +14,13 @@
 
 BEGIN_COUNTER(timePFH);
 
-local _lastTickTime = ACE_diagTime;
-local _lastGameTime = ACE_gameTime;
+private _lastTickTime = ACE_diagTime;
+private _lastGameTime = ACE_gameTime;
 
 ACE_gameTime = time;
 ACE_diagTime = diag_tickTime;
 
-local _delta = ACE_diagTime - _lastTickTime;
+private _delta = ACE_diagTime - _lastTickTime;
 
 if (ACE_gameTime <= _lastGameTime) then {
     TRACE_1("paused",_delta);

@@ -2,7 +2,7 @@
 
 ADDON = false;
 
-PREP(pfhUpdateGForces);
+#include "XEH_PREP.hpp"
 
 GVAR(GForces) = [];
 GVAR(GForces_Index) = 0;

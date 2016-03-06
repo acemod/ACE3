@@ -10,7 +10,7 @@ class RscTitles {
 		text = "";
 		colorBackground[] = { 0, 0, 0, 0 };
 		colorText[] = { 0.239, 0.216, 0.153, 1 };
-		font = "PuristaMedium";
+		font = "RobotoCondensed";
 		sizeEx = 0.04;
 		waitForLoad = 0;
 	};
@@ -25,7 +25,7 @@ class RscTitles {
 		text = "";
 		colorBackground[] = {};
 		colorText[] = {};
-		font = "PuristaMedium";
+		font = "RobotoCondensed";
 		sizeEx = 0.02;
 		waitForLoad = 0;
 	};

@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>
- * 1: Use blacklist <BOOL> <OPTIONAL>
+ * 1: Use blacklist <BOOL> (default: false)
  *
  * Return Value:
  * None <NIL>

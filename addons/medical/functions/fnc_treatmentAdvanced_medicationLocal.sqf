@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Treatment classname <STRING>
- *
+ * 2: Injection Site Part Number <NUMBER>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -16,13 +16,24 @@
 #include "script_component.hpp"
 
 private ["_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
-params ["_target", "_className"];
+
+params ["_target", "_className", "_partNumber"];
+TRACE_3("params",_target,_className,_partNumber);
+
+private _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+if ((_tourniquets select _partNumber) > 0) exitWith {
+    TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
+    private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+    _delayedMedications pushBack _this;
+    _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+    true
+};
 
 // We have added a new dose of this medication to our system, so let's increase it
 _varName = format[QGVAR(%1_inSystem), _className];
-_currentInSystem = _target getvariable [_varName, 0];
+_currentInSystem = _target getVariable [_varName, 0];
 _currentInSystem = _currentInSystem + 1;
-_target setvariable [_varName, _currentInSystem];
+_target setVariable [_varName, _currentInSystem];
 
 // Find the proper attributes for the used medication
 _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
@@ -51,11 +62,11 @@ if (isClass (_medicationConfig >> _className)) then {
 if (isNil _hrCallback) then {
     _hrCallback = compile _hrCallback;
 } else {
-    _hrCallback = missionNamespace getvariable _hrCallback;
+    _hrCallback = missionNamespace getVariable _hrCallback;
 };
 
 // Adjust the heart rate based upon config entry
-_heartRate = _target getvariable [QGVAR(heartRate), 70];
+_heartRate = _target getVariable [QGVAR(heartRate), 70];
 if (alive _target) then {
     if (_heartRate > 0) then {
         if (_heartRate <= 45) then {
@@ -72,19 +83,19 @@ if (alive _target) then {
 
 if (_painReduce > 0) then {
     // Reduce pain
-    _painSuppress = _target getvariable [QGVAR(painSuppress), 0];
-    _target setvariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
+    _painSuppress = _target getVariable [QGVAR(painSuppress), 0];
+    _target setVariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
     if (!GVAR(painIsOnlySuppressed)) then {
-        _pain = _target getvariable [QGVAR(pain), 0];
-        _target setvariable [QGVAR(pain), (_pain - _painReduce) max 0, true];
+        _pain = _target getVariable [QGVAR(pain), 0];
+        _target setVariable [QGVAR(pain), (_pain - _painReduce) max 0, true];
     };
 };
 
-_resistance = _target getvariable [QGVAR(peripheralResistance), 100];
+_resistance = _target getVariable [QGVAR(peripheralResistance), 100];
 _resistance = _resistance + _viscosityChange;
-_target setvariable [QGVAR(peripheralResistance), _resistance max 0];
+_target setVariable [QGVAR(peripheralResistance), _resistance max 0];
 
-// Call back to ensure that the medication is decreased over ACE_time
+// Call back to ensure that the medication is decreased over time
 [_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

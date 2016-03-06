@@ -18,15 +18,11 @@
 
 params ["_unit", "_team"];
 
-// make sure correct team is set on JIP
-_unit setVariable [QGVAR(assignedFireTeam), _team, true];
-
-// join fire team on every machine in that group
-["assignTeam", units group _unit, [_unit, _team]] call EFUNC(common,targetEvent);
+["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
 
 // display message
 if (_unit == ACE_player) then {
-	private "_message";
+    private "_message";
 
     if (_team == "MAIN") then {
         _message = localize LSTRING(LeftTeam);

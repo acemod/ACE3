@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // prevent the placing unit from running
-[_unit, "ACE_Sandbag", true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Sandbag", true] call EFUNC(common,statusEffect_set);
 
 // create the sandbag
 private "_sandBag";
