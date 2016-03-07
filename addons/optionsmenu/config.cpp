@@ -25,9 +25,11 @@ class CfgAddons {
 #include "gui\define.hpp"
 #include "gui\settingsMenu.hpp"
 #include "gui\pauseMenu.hpp"
+#include "gui\3den.hpp"
 
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+#include "Cfg3den.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_clipboard"};

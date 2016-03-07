@@ -443,5 +443,15 @@
             <Italian>Logistica</Italian>
             <French>Logistique</French>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_Uncategorized">
+            <English>General</English>
+            <Czech>Obecné</Czech>
+            <French>Général</French>
+            <German>Allgemein</German>
+            <Italian>Generale</Italian>
+            <Polish>Ogólne</Polish>
+            <Portuguese>Geral</Portuguese>
+            <Russian>Общие</Russian>
+        </Key>
     </Package>
 </Project>
