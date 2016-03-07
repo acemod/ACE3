@@ -38,5 +38,5 @@ if (isServer) then {
         [QGVAR(rearmSuccessLocalEH), _turretOwnerID, _this] call EFUNC(common,targetEvent);
     };
 } else {
-    [_this, QFUNC(rearmSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [QGVAR(rearmSuccessLocalEH), _this] call EFUNC(common,serverEvent);
 };

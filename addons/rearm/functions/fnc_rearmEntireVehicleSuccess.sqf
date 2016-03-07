@@ -30,5 +30,5 @@ if (isServer) then {
         };
     } count REARM_TURRET_PATHS;
 } else {
-    [_this, QFUNC(rearmEntireVehicleSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call EFUNC(common,serverEvent);
 };
