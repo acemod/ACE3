@@ -15,7 +15,7 @@
  * Public: No
  */
 
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 params ["_vehicle", "_door"];
 
 (_vehicle doorPhase _door > 0) &&

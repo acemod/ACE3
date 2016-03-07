@@ -14,7 +14,7 @@
  * Public: No
  */
 
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 params ["_vehicle"];
 
 _vehicle setVariable [QEGVAR(fastroping,doorsLocked), true, true];
