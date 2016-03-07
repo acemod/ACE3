@@ -19,7 +19,6 @@ params ["_vehicle"];
 
 private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
-(isNumber (_config >> QGVAR(enabled)) &&
-{(getNumber (_config >> QGVAR(enabled)) == 1) || {!(isNull (_vehicle getVariable [QGVAR(FRIES), objNull]))}} &&
+((getNumber (_config >> QGVAR(enabled)) == 1) || {!(isNull (_vehicle getVariable [QGVAR(FRIES), objNull]))}) &&
 {(_vehicle getVariable [QGVAR(deploymentStage), 0]) == 0} &&
-{isText (_config >> QGVAR(onPrepare))})
+{getText (_config >> QGVAR(onPrepare)) != ""}
