@@ -20,7 +20,7 @@ params ["_vehicle", "_door"];
 
 (_vehicle doorPhase _door > 0) &&
 {alive _vehicle} &&
-{!(_vehicle getVariable QEGVAR(fastroping,doorsLocked),false])} &&
+{!(_vehicle getVariable [QEGVAR(fastroping,doorsLocked),false])} &&
 {
     if (_vehicle isKindOf "RHS_CH_47F") then {
         ACE_player in [driver _vehicle, _vehicle turretUnit [3], _vehicle turretUnit [4]]
