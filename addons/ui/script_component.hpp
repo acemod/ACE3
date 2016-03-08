@@ -20,27 +20,27 @@
 // Elements
 #define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
 
-// Element, IDD, IDC
+// IDD, IDC, Element (must be string to compare to changed setting name)
 #define ELEMENTS_ADVANCED [ \
-    [QGVAR(weaponName), 300, [118] ], \
-    [QGVAR(weaponNameBackground), 300, [1001, 1008] ], \
-    [QGVAR(firingMode), 300, [187, 1203] ], \
-    [QGVAR(ammoType), 300, [155] ], \
-    [QGVAR(ammoCount), 300, [184] ], \
-    [QGVAR(magCount), 300, [185] ], \
-    [QGVAR(throwableName), 300, [152] ], \
-    [QGVAR(throwableCount), 300, [151] ], \
-    [QGVAR(weaponLowerInfoBackground), 300, [1202] ], \
-    [QGVAR(zeroing), 300, [168] ], \
-    [QGVAR(stance), 303, [188, 1201] ], \
-    [QGVAR(vehicleName), 300, [120] ], \
-    [QGVAR(vehicleNameBackground), 300, [1000, 1013] ], \
-    [QGVAR(vehicleFuelBar), 300, [113, 1202] ], \
-    [QGVAR(vehicleSpeed), 300, [121, 1004, 1006] ], \
-    [QGVAR(vehicleAltitude), 300, [122, 1005, 1014] ], \
-    [QGVAR(vehicleDamage), 300, [111] ], \
-    [QGVAR(vehicleInfoBackground), 300, [1200] ], \
-    [QGVAR(vehicleGunnerWeapon), 300, [150] ] \
+    [300, [118], QGVAR(weaponName)], \
+    [300, [1001, 1008], QGVAR(weaponNameBackground)], \
+    [300, [187, 1203], QGVAR(firingMode)], \
+    [300, [155], QGVAR(ammoType)], \
+    [300, [184], QGVAR(ammoCount)], \
+    [300, [185], QGVAR(magCount)], \
+    [300, [152], QGVAR(throwableName)], \
+    [300, [151], QGVAR(throwableCount)], \
+    [300, [1202], QGVAR(weaponLowerInfoBackground)], \
+    [300, [168], QGVAR(zeroing)], \
+    [303, [188, 1201], QGVAR(stance)], \
+    [300, [120], QGVAR(vehicleName)], \
+    [300, [1000, 1013], QGVAR(vehicleNameBackground)], \
+    [300, [113, 1202], QGVAR(vehicleFuelBar)], \
+    [300, [121, 1004, 1006], QGVAR(vehicleSpeed)], \
+    [300, [122, 1005, 1014], QGVAR(vehicleAltitude)], \
+    [300, [111], QGVAR(vehicleDamage)], \
+    [300, [1200], QGVAR(vehicleInfoBackground)], \
+    [300, [150], QGVAR(vehicleGunnerWeapon)] \
 ]
 
 

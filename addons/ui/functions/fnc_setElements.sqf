@@ -3,7 +3,7 @@
  * Sets basic visible elements of the UI using showHUD setter.
  *
  * Arguments:
- * 0: Force change even when disallowed <BOOL>
+ * 0: Force change even when disallowed <BOOL> (default: false)
  *
  * Return Value:
  * None

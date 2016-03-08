@@ -3,31 +3,28 @@
  * Sets advanced visible element of the UI using displays and controls.
  *
  * Arguments:
- * 0: Element info <ARRAY>
- *   0: Show/Hide Element OR Element Variable <BOOL/STRING>
- *   1: Element IDD <NUMBER>
- *   2: Element IDCs <ARRAY>
- * 1: Force change even when disallowed <BOOL>
+ * 0: Element IDD <NUMBER>
+ * 1: Element IDCs <ARRAY>
+ * 2: Show/Hide Element OR Element ACE Settings Variable <BOOL/STRING>
+ * 3: Force change even when disallowed <BOOL> (default: false)
  *
  * Return Value:
- * None
+ * Successfully Set <BOOL>
  *
  * Example:
- * [[show, 303, [188]], false] call ace_ui_fnc_setAdvancedElement
+ * [303, [188], true, false] call ace_ui_fnc_setAdvancedElement
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_elementInfo", ["_force", false, [true]] ];
+params ["_idd", "_elements", "_show", ["_force", false, [true]] ];
 
 if (_elementInfo in GVAR(elementsSet)) exitWith {};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured)
 };
-
-_elementInfo params ["_show", "_idd", "_elements"];
 
 // Get show/hide boolean from mission namespace if it's a string
 if (typeName _show == "STRING") then {

@@ -12,17 +12,13 @@ if (!hasInterface) exitWith {};
     ["infoDisplayChanged", {
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
-        if (!GVAR(allowSelectiveUI)) then {
-            {
-                [_x, true] call FUNC(setAdvancedElement);
-            } forEach ELEMENTS_ADVANCED;
-        } else {
-            {
-                [_x] call FUNC(setAdvancedElement);
-            } forEach ELEMENTS_ADVANCED;
-        };
+        private _force = [true, false] select (GVAR(allowSelectiveUI));
+        {
+            [_x select 0, _x select 1, _x select 2, _force] call FUNC(setAdvancedElement);
+        } forEach ELEMENTS_ADVANCED;
     }] call EFUNC(common,addEventHandler);
 
+    // On changing settings
     ["SettingChanged", {
         params ["_name"];
 
@@ -33,11 +29,11 @@ if (!hasInterface) exitWith {};
 
         // Selective UI Advanced
         {
-            _x params ["_element"];
+            params ["_idd", "_elements", "_name"];
 
-            if (_name == _element) then {
-                [_x] call FUNC(setAdvancedElement);
-                TRACE_2("Setting Changed",_name,_element);
+            if (_name == _name) then {
+                [_idd, _elements, _name] call FUNC(setAdvancedElement);
+                TRACE_2("Setting Changed",_name,_name);
             };
         } forEach ELEMENTS_ADVANCED;
     }] call EFUNC(common,addEventHandler);
