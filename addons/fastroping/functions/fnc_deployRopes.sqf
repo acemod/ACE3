@@ -35,13 +35,14 @@ _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
 
     _origin = getPosATL _hook;
 
-    _dummy = createVehicle [QGVAR(helper), _origin vectorAdd [0, 0, -1], [], 0, "CAN_COLLIDE"];
+    _dummy = createVehicle [QGVAR(helper), _origin, [], 0, "CAN_COLLIDE"];
     _dummy allowDamage false;
     _dummy disableCollisionWith _vehicle;
+    _dummy attachTo [_hook, [0, 0, 0]];
 
     _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 0.5];
     _ropeBottom = ropeCreate [_dummy, [0, 0, 0], 1];
-    ropeUnwind [_ropeBottom, 30, 34.5, false];
+    ropeUnwind [_ropeBottom, 30, 35, false];
 
     _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
