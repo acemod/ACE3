@@ -29,11 +29,11 @@ if (!hasInterface) exitWith {};
 
         // Selective UI Advanced
         {
-            params ["_idd", "_elements", "_name"];
+            _x params ["_idd", "_elements", "_elementName"];
 
-            if (_name == _name) then {
-                [_idd, _elements, _name] call FUNC(setAdvancedElement);
-                TRACE_2("Setting Changed",_name,_name);
+            if (_name == _elementName) then {
+                [_idd, _elements, _elementName] call FUNC(setAdvancedElement);
+                TRACE_2("Setting Changed",_name,_elementName);
             };
         } forEach ELEMENTS_ADVANCED;
     }] call EFUNC(common,addEventHandler);
