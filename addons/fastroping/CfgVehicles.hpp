@@ -35,11 +35,8 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter_Base_F;
-    class ACE_friesBase: Helicopter_Base_F {
-        destrType = "";
-        class Turrets {};
-
+    class Helicopter;
+    class Helicopter_Base_F: Helicopter {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -70,6 +67,10 @@ class CfgVehicles {
                 priority = 1;
             };
         };
+    };
+    class ACE_friesBase: Helicopter_Base_F {
+        destrType = "";
+        class Turrets {};
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
@@ -110,10 +111,20 @@ class CfgVehicles {
                 initPhase = 0;
                 animPeriod = 0;
             };
+            class hideGantryLeft {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
+            class hideGantryRight {
+                source = "user";
+                initPhase = 0;
+                animPeriod = 0;
+            };
         };
     };
     class ACE_friesGantryReverse: ACE_friesGantry {
-        class AnimationSources {
+        class AnimationSources: AnimationSources {
             class adjustWidth {
                 source = "user";
                 initPhase = 0.213;
@@ -165,10 +176,28 @@ class CfgVehicles {
     class Heli_Transport_02_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins)[] = {{0.94, -4.82, -1.16}, {-0.94, -4.82, -1.16}};
+        GVAR(onPrepare) = QFUNC(onPrepareCommon);
+        GVAR(onCut) = QFUNC(onCutCommon);
+
+        class UserActions {
+            class Ramp_Open;
+            class Ramp_Close: Ramp_Open {
+                condition = QUOTE([ARR_5(this,'CargoRamp_Open',[[0],[1],[2]])] call FUNC(canCloseRamp));
+            };
+        };
     };
     class Heli_Transport_03_base_F: Helicopter_Base_H {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins)[] = {{0.75, -5.29, -0.11}, {-0.87, -5.29, -0.11}};
+        GVAR(onPrepare) = QFUNC(onPrepareCommon);
+        GVAR(onCut) = QFUNC(onCutCommon);
+
+        class UserActions {
+            class Ramp_Open;
+            class Ramp_Close: Ramp_Open {
+                condition = QUOTE([ARR_5(this,'Door_rear_source',[[0],[3],[4]])] call FUNC(canCloseRamp));
+            };
+        };
     };
     class Heli_light_03_base_F: Helicopter_Base_F {
         GVAR(enabled) = 2;
@@ -184,7 +213,9 @@ class CfgVehicles {
         GVAR(friesAttachmentPoint)[] = {-1.07, 3.26, -0.5};
         EQUIP_FRIES_ATTRIBUTE;
     };
-    class Heli_Transport_04_base_F;
+    class Heli_Transport_04_base_F: Helicopter_Base_H {
+        class UserActions;
+    };
     class O_Heli_Transport_04_bench_F: Heli_Transport_04_base_F {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins)[] = {{1.03, 1.6, -0.23}, {1.03, -1.36, -0.23}, {-1.23, 1.6, -0.23}, {-1.23, -1.36, -0.23}};
@@ -192,5 +223,14 @@ class CfgVehicles {
     class O_Heli_Transport_04_covered_F: Heli_Transport_04_base_F {
         GVAR(enabled) = 1;
         GVAR(ropeOrigins)[] = {{0.83, -4.7, -0.03}, {-1.02, -4.7, -0.03}};
+        GVAR(onPrepare) = QFUNC(onPrepareCommon);
+        GVAR(onCut) = QFUNC(onCutCommon);
+
+        class UserActions: UserActions {
+            class CloseDoor_6;
+            class Ramp_Close: CloseDoor_6 {
+                condition = QUOTE([ARR_6(this,'Door_6_source',[[0],[1],[2],[3]])] call FUNC(canCloseRamp));
+            };
+        };
     };
 };
