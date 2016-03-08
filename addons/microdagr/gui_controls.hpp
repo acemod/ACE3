@@ -18,7 +18,7 @@ class controlsBackground {
     };
     class RangefinderConnectedIcon: RscPicture {
         idc = IDC_RANGEFINDERCONNECTEDICON;
-        text = "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa";
+        text = QUOTE(PATHTOF(images\icon_menuLaser.paa));
         x = X_PART(6.35);
         y = Y_PART(0.1);
         w = W_PART(2.7);
@@ -486,7 +486,7 @@ class controls {
                 onbuttonclick = QUOTE([5] call FUNC(saveCurrentAndSetNewMode));
             };
             class ButtonBL: ButtonTL {
-                text = "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa";
+                text = QUOTE(PATHTOF(images\icon_menuLaser.paa));
                 x = W_PART(3);
                 y = H_PART(10.5);
                 onbuttonclick = QUOTE(_this call FUNC(appMenuButtonConnectRangefinder));
