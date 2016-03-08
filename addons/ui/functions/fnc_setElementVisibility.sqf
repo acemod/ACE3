@@ -25,6 +25,8 @@ params [
     ["_show", false, [true, ""]]
 ];
 
+private _return = false;
+
 if (_set) then {
     if ([_idd, _elements] in GVAR(elementsSet)) exitWith { TRACE_3("Element already set",_idd,_elements,GVAR(elementsSet)); };
 
@@ -33,6 +35,7 @@ if (_set) then {
 
     if (_success) then {
         GVAR(elementsSet) pushBack [_idd, _elements];
+        _return = true;
     };
 } else {
     if ([_idd, _elements] in GVAR(elementsSet)) then {
@@ -41,7 +44,9 @@ if (_set) then {
 
         private _index = GVAR(elementsSet) find [_idd, _elements];
         GVAR(elementsSet) deleteAt _index;
+        _return = true;
     };
 };
 
-TRACE_1("Visibility set",GVAR(elementsSet));
+TRACE_2("Visibility set",_return,GVAR(elementsSet));
+_return
