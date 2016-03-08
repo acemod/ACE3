@@ -14,6 +14,11 @@ class CfgVehicles {
         GVAR(dragDirection) = 0;
     };
 
+    class StaticCannon: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
     //remove actions from Taru Pods
     class Pod_Heli_Transport_04_base_F: StaticWeapon {
         GVAR(canCarry) = 0;
