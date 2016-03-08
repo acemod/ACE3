@@ -21,6 +21,8 @@
 
 params ["_elementInfo", ["_force", false, [true]] ];
 
+if (_elementInfo in GVAR(elementsSet)) exitWith {};
+
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured)
 };
@@ -34,6 +36,7 @@ if (typeName _show == "STRING") then {
 _show = [1, 0] select _show;
 
 // Disable/Enable elements
+private _success = false;
 {
     private _idc = _x;
 
@@ -44,6 +47,10 @@ _show = [1, 0] select _show;
 
             (_x displayCtrl _idc) ctrlSetFade _show;
             (_x displayCtrl _idc) ctrlCommit 0;
+
+            _success = true;
         };
     } forEach (uiNamespace getVariable "IGUI_displays");
 } forEach _elements;
+
+_success

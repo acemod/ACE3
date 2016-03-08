@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if (isArray (missionConfigFile >> "showHUD")) exitWith {};
+
 params [ ["_force", false, [true]] ];
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {

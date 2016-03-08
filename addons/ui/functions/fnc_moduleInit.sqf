@@ -18,18 +18,18 @@ params ["_logic", "_units", "_activated"];
 
 if (!_activated) exitWith {};
 
-// Exit if HUD visibility is hardcoded in mission config and showHUD command is overriden
-if (isArray (missionConfigFile >> "showHUD")) exitWith {
-    ACE_LOGINFO("User Interface Module Failed to Initialize - showHUD overriden in mission config!");
-};
-
 // Basic
-[_logic, QGVAR(allowSelectiveUI), "allowSelectiveUI"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(commandMenu), "commandMenu"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(groupBar), "groupBar"] call EFUNC(common,readSettingFromModule);
+if (isArray (missionConfigFile >> "showHUD")) then {
+    // HUD visibility is hardcoded in mission config and showHUD command is overriden
+    ACE_LOGINFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
+} else {
+    [_logic, QGVAR(allowSelectiveUI), "allowSelectiveUI"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(commandMenu), "commandMenu"] call EFUNC(common,readSettingFromModule);
+    [_logic, QGVAR(groupBar), "groupBar"] call EFUNC(common,readSettingFromModule);
+};
 
 // Advanced
 [_logic, QGVAR(weaponName), "weaponName"] call EFUNC(common,readSettingFromModule);
