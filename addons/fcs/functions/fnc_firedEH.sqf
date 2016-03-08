@@ -29,6 +29,27 @@ private _offset = 0;
     };
 } forEach _FCSMagazines;
 
+// Calculate the correction due to vanilla zeroing
+private _zeroDistance = currentZeroing _gunner;
+if (_zeroDistance > 0) then {
+    private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
+    if !(_weaponCombo isEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
+        // Hackish way of getting initSpeed. @todo: replace it by correct calculation and caching
+        private _initSpeed = vectorMagnitude velocity _projectile;
+
+        private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
+        private _antiOffset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, 0, _zeroDistance];
+        _antiOffset = parseNumber _antiOffset;
+
+        _gunner setVariable [QGVAR(lastWeaponCombo), _weaponCombo];
+        _gunner setVariable [QGVAR(lastAntiOffset), _antiOffset];
+    };
+    private _antiOffset = _gunner getVariable QGVAR(lastAntiOffset);
+
+    _offset = _offset - _antiOffset;
+    TRACE_4("fired",_gunner, currentZeroing _gunner, _antiOffset, _offset);
+};
+
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
 // Remove the platform velocity
