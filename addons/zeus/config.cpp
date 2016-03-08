@@ -36,7 +36,7 @@ class CfgPatches {
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
-    GVAR(cargoAndRepair[]) = {"ace_cargo", "ace_repair"};
+    GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
 };
 
 #include "CfgEventHandlers.hpp"
