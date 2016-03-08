@@ -1,3 +1,4 @@
+PREP(3den_exportToClipboard);
 PREP(3den_openSettingsDisplay);
 PREP(3den_resizeSubcatagoies);
 PREP(3den_saveSettings);

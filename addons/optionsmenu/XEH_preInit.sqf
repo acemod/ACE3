@@ -60,5 +60,9 @@ recomp = {
         (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(call recomp; _this call FUNC(3den_openSettingsDisplay);)];
         (_3denDisplay displayCtrl 120) menuSetValue [[_aceIndex,_addedIndex], _forEachIndex];
     } forEach GVAR(categories);
+
+    private _addedIndex = (_3denDisplay displayCtrl 120) menuAdd [[_aceIndex], format [" - %1 - ", localize LSTRING(Export)]];
+    (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(call recomp; _this call FUNC(3den_exportToClipboard);)];
+
 };
 ADDON = true;
