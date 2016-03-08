@@ -5,5 +5,6 @@ class ACE_Settings {
         value = 2;
         typeName = "SCALAR";
         isClientSettable = 0;
+        values[] = {CSTRING(MapFill_None), CSTRING(MapFill_OnlyRoads), CSTRING(MapFill_Full)};
     };
 };
