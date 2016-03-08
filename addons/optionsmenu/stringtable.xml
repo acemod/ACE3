@@ -453,5 +453,10 @@
             <Portuguese>Geral</Portuguese>
             <Russian>Общие</Russian>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_clientSetting">
+            <English>Client Settings</English>
+            <German>Client-Einstellungen</German>
+            <Spanish>Configuración de Cliente</Spanish>
+        </Key>
     </Package>
 </Project>

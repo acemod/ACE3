@@ -28,22 +28,43 @@ if (isNil "_currentSavedSettings") then { ACE_LOGERROR("_currentSavedSettings ni
 
 //ToDo: Maybe flesh out this sub-catogies stuff later
 // for now just seperate general from clientSettable settings
-private _subCatagoriesNames = ["Client", "General"];
-private _subCatagoriesSettings = [[], []];
+private _subCatagoriesNames = [];
+private _subCatagoriesSettings = [];
 {
     if ((_x select 8) == _categoryLocalized) then {
-        private _subCatIndex = if (_x select 2) then {
-            0
+
+        private _xSubCatName = "";
+        if (_x select 2) then {
+            _xSubCatName = localize LSTRING(clientSetting);
+            TRACE_1("test1",_xSubCatName);
         } else {
-            1
+            _xSubCatName = getText (configFile >> "ACE_Settings" >> (_x select 0) >> "subCategory");
+            if (_xSubCatName == "") then {
+                //Lets try to guess subCategory based on setting name (will work for CBA's `GVAR` pattern but var name can be anything)
+                ((_x select 0) splitString "_") params [["_varPrefix", "", [""]], ["_varComponent", "", [""]], ["_varReal", "", [""]]];
+                if (_varReal != "") then {
+                    _xSubCatName = toUpper format ["%1 - %2", _varPrefix, _varComponent];
+                };
+            };
+            if (_xSubCatName == "") then { //Non Conforming var name (eg. "mySetting" instead of "ace_x_y")
+                _xSubCatName = localize LSTRING(Uncategorized);
+            };
+        };
+        private _subCatIndex = _subCatagoriesNames find _xSubCatName;
+        if (_subCatIndex == -1) then {
+            _subCatIndex = _subCatagoriesNames pushBack _xSubCatName;
+            _subCatagoriesSettings pushBack [];
         };
         (_subCatagoriesSettings select _subCatIndex) pushBack _x;
     };
 } forEach EGVAR(common,settings);
 
-//Move client to bottom of list:
-_subCatagoriesNames pushBack (_subCatagoriesNames deleteAt 0);
-_subCatagoriesSettings pushBack (_subCatagoriesSettings deleteAt 0);
+//Move client to bottom of list (if present):
+private _clientSettingsIndex = _subCatagoriesNames find (localize LSTRING(clientSetting));
+if (_clientSettingsIndex != -1) then {
+    _subCatagoriesNames pushBack (_subCatagoriesNames deleteAt _clientSettingsIndex);
+    _subCatagoriesSettings pushBack (_subCatagoriesSettings deleteAt _clientSettingsIndex);
+};
 
 
 disableSerialization;
@@ -69,7 +90,7 @@ _title ctrlSetText format ["ACE Settings: %1", _categoryLocalized];
 
     _subCatMinimize cbSetChecked true;
 
-    _subCatTitle ctrlSetText format ["Category: %1", _x];
+    _subCatTitle ctrlSetText format ["%1", _x];
     _subCatTitle buttonSetAction QUOTE(_this call FUNC(3den_resizeSubcatagoies););
 
     private _totalY = 0;
