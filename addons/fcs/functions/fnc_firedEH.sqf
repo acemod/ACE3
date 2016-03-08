@@ -64,7 +64,7 @@ if (vectorMagnitude velocity _vehicle > 2) then {
 if (!local _gunner) exitWith {};
 
 if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
-    private _zeroing = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _vehicle];
+    private _zeroing = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], currentZeroing _gunner];
 
     if (_zeroing < 50) exitWith {};
     if (_zeroing > 1500) exitWith {};
