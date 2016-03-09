@@ -43,6 +43,7 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(zeroing), "zeroing"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(weaponLowerInfoBackground), "weaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(stance), "stance"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(staminaBar), "staminaBar"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleName), "vehicleName"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleNameBackground), "vehicleNameBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleFuelBar), "vehicleFuelBar"] call EFUNC(common,readSettingFromModule);

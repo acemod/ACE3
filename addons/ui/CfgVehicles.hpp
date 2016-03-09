@@ -115,6 +115,14 @@ class CfgVehicles {
                 defaultValue = 1;
             };
 
+            // Stamina Bar
+            class staminaBar {
+                displayName = CSTRING(StaminaBar);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+
             // Vehicle
             class vehicleName {
                 displayName = CSTRING(VehicleName);

@@ -32,6 +32,7 @@
     [300, [151], QGVAR(throwableCount)], \
     [300, [1202], QGVAR(weaponLowerInfoBackground)], \
     [300, [168], QGVAR(zeroing)], \
+    [305, [193], QGVAR(staminaBar)], \
     [303, [188, 1201], QGVAR(stance)], \
     [300, [120], QGVAR(vehicleName)], \
     [300, [1000, 1013], QGVAR(vehicleNameBackground)], \
@@ -86,4 +87,9 @@ RscStanceInfo = 303
 --------------------
 188 (Stance)
 + 1201 (Stance Background)
+
+
+RscStaminaBar = 305
+--------------------
+193 (Stamina Bar)
 */

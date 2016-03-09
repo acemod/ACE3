@@ -64,6 +64,9 @@
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
         </Key>
+        <Key ID="STR_ACE_UI_StaminaBar">
+            <English>Stamina Bar</English>
+        </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
         </Key>

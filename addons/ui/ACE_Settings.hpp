@@ -139,6 +139,15 @@ class ACE_Settings {
         isClientSettable = 1;
     };
 
+    // Stamina Bar
+    class GVAR(staminaBar) {
+        category = CSTRING(Category);
+        displayName = CSTRING(StaminaBar);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
 
     // Vehicle
     class GVAR(vehicleName) {
