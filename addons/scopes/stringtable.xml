@@ -7,6 +7,12 @@
         <Key ID="STR_ACE_Scopes_Enabled_description">
             <English>Enable adjustment in mils for high powered scopes</English>
         </Key>
+        <Key ID="STR_ACE_Scopes_defaultZeroDistance_displayName">
+            <English>Default zero distance</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_defaultZeroDistance_description">
+            <English>High power scopes will start zeroed at this distance</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>
