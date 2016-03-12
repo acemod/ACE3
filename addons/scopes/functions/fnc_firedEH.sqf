@@ -27,7 +27,7 @@ if (_adjustment isEqualTo []) then {
     _adjustment = [0,0,0];
 } else {
     _adjustment = _adjustment select _weaponIndex;
-}
+};
 // Convert it from mils to degrees
 private _zeroing = _adjustment vectorMultiply 0.05625;
 _zeroing params ["_elevation", "_windage", "_zero"];
@@ -38,7 +38,7 @@ _elevation = _elevation + _zero;
 if (_adjustVertical) then {
     // Calculate the correction due to vanilla zeroing
     private _zeroDistance = (currentZeroing _unit - GVAR(defaultZeroDistance));
-    if (_zeroDistance == 0) then {
+    if (_zeroDistance != 0) then {
         private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
         if !(_weaponCombo isEqualTo (_unit getVariable [QGVAR(lastWeaponCombo), []])) then {
             // Hackish way of getting initSpeed. @todo: replace it by correct calculation and caching
