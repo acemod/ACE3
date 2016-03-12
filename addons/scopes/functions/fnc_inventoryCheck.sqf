@@ -15,32 +15,37 @@
  */
 #include "script_component.hpp"
 
-private ["_newOptics", "_adjustment"];
-
 params ["_player"];
 
-_adjustment = ACE_player getVariable QGVAR(Adjustment);
-if (isNil "_adjustment") then {
-    // [Windage, Elevation, Zero]
-    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    ACE_player setVariable [QGVAR(Adjustment), _adjustment];
-    [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
-};
+private _adjustment = _player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
+private _supportsAdjustment = _player getVariable [QGVAR(SupportsAdjustment), [[false, false], [false, false], [false, false]]];
+private _oldOptics = _player getVariable [QGVAR(Optics), ["", "", ""]];
+private _newOptics = [_player] call FUNC(getOptics);
 
-if (isNil QGVAR(Optics)) then {
-    GVAR(Optics) = ["", "", ""];
-};
-_newOptics = [_player] call FUNC(getOptics);
-
+private _oldAdjustment = +_adjustment;
+private _oldSupportsAdjustment = +_supportsAdjustment;
 {
-    if (_newOptics select _forEachIndex != _x) then {
-        // The optic for this weapon changed, set adjustment to zero
-        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
-            _adjustment set [_forEachIndex, [0, 0, 0]];
-            [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
-        };
-    };
-} forEach GVAR(Optics);
+    private _newOptic = _newOptics select _forEachIndex;
+    if (_newOptic != _x) then {
+        // Check if the new optic supports adjusting
+        private _opticConfig = configFile >> "CfgWeapons" >> _newOptic;
+        _adjustment set [_forEachIndex, [0, 0, 0]];
+        _supportsAdjustment set [_foreachindex,
+            [(count getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal")) == 2,
+            (count getArray (_opticConfig >> "ACE_ScopeAdjust_Verical")) == 2]];
 
-_adjustment = ACE_player getVariable QGVAR(Adjustment);
-GVAR(Optics) = _newOptics;
+        // The optic for this weapon changed, set adjustment to zero
+        _adjustment set [_forEachIndex, [0, 0, 0]];
+    };
+} forEach _oldOptics;
+
+// If some adjustment changed, broadcast it
+if !(_adjustment isEqualTo _oldAdjustment) then {
+    [_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+};
+// If some scope started/finished supporting adjustment, broadcast it
+if !(_supportsAdjustment isEqualTo _oldSupportsAdjustment) then {
+    [_player, QGVAR(SupportsAdjustment), _supportsAdjustment, 0.5] call EFUNC(common,setVariablePublic);
+};
+
+_player setVariable [QGVAR(Optics), _newOptics];
