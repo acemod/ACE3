@@ -444,6 +444,11 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 // Add various canInteractWith conditions
 //////////////////////////////////////////////////
 
+["isNotDead", {
+    params ["_unit", "_target"];
+    alive _unit
+}] call FUNC(addCanInteractWithCondition);
+
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 
 ["isNotInside", {
