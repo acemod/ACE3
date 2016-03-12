@@ -1,6 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Scopes">
+        <Key ID="STR_ACE_Scopes_Enabled_displayName">
+            <English>Enable ACE Scope Adjustment</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_Enabled_description">
+            <English>Enable adjustment in mils for high powered scopes</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>

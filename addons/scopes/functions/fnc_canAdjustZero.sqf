@@ -19,6 +19,7 @@ private ["_weaponIndex", "_adjustment", "_elevation"];
 
 params ["_unit"];
 
+if !(GVAR(enabled)) exitWith {false};
 if (cameraView == "GUNNER") exitWith {false};
 if (vehicle _unit != _unit) exitWith {false};
 if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {false};
