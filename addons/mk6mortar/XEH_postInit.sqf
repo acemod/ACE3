@@ -17,5 +17,6 @@
 
 if (!hasInterface) exitWith {};
 
+["localMortarInit", FUNC(mortarInit)] call EFUNC(common,addEventHandler);
 ["playerVehicleChanged", {_this call FUNC(handlePlayerVehicleChanged);}] call EFUNC(common,addEventHandler);
 ["infoDisplayChanged", {_this call FUNC(turretDisplayLoaded);}] call EFUNC(common,addEventHandler);

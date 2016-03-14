@@ -27,12 +27,12 @@ if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 if (!EGVAR(common,settingsInitFinished)) then {
     EGVAR(common,runAtSettingsInitialized) pushBack [{
         if (GVAR(useAmmoHandling) && {!(_this getVariable [QGVAR(initialized),false]) && !(_this getVariable [QGVAR(exclude),false])}) then {
-            _this call FUNC(mortarInit);
+            ["localMortarInit", _this, [_this]] call EFUNC(common,objectEvent);
         };
     }, _newVehicle];
 } else {
     if (GVAR(useAmmoHandling) && {!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])}) then {
-        _newVehicle call FUNC(mortarInit);
+        ["localMortarInit", _newVehicle, [_newVehicle]] call EFUNC(common,objectEvent);
     };
 };
 
