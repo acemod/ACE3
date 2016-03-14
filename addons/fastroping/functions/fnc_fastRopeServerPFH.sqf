@@ -54,14 +54,14 @@ if (((getPos _unit select 2) < 0.2) || {ropeLength _ropeTop == 34.5} || {vectorM
     deleteVehicle _ropeBottom;
 
     _origin = getPosASL _hook;
-    _dummy attachTo [_hook, [0, 0, 0]];
+    _dummy setPosASL (_origin vectorAdd [0, 0, -1]);
 
     //Restore original mass and center of mass
     _dummy setMass 40;
     _dummy setCenterOfMass [0.000143227,0.00105986,-0.246147];
 
     _ropeTop = ropeCreate [_dummy, [0, 0, 0], _hook, [0, 0, 0], 0.5];
-    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], 35];
+    _ropeBottom = ropeCreate [_dummy, [0, 0, 0], 34.5];
 
     _ropeTop addEventHandler ["RopeBreak", {[_this, "top"] call FUNC(onRopeBreak)}];
     _ropeBottom addEventHandler ["RopeBreak", {[_this, "bottom"] call FUNC(onRopeBreak)}];
