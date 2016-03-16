@@ -26,7 +26,6 @@ if (vehicle _unit != _unit) exitWith {};
 
 //Start fast roping
 if (animationState _unit != "ACE_FastRoping") exitWith {
-    detach _dummy;
     _unit disableCollisionWith _dummy;
     _unit attachTo [_dummy, [0, 0, -1.45]];
     [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
