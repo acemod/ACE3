@@ -24,6 +24,6 @@ ACE2, AGM and CSE had a lot of features implemented or planned. All of them are 
 Please refrain from making requests for any planned or existing features from either ACE2, AGM or CSE. Most of them are already being or have been considered for porting or a rewrite.
 
 ## Requesting a feature
-In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for [ACE3 Feature requests](https://github.com/acemod/ACE3/issues/414). Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
+In order to avoid duplicates and keep the issue tracker organized, we have created a common issue for [ACE3 Feature requests](https://github.com/acemod/ACE3/issues/3594). Any and all relevant requests should be submitted there, where they will also get discussed and evaluated. Before adding a new one, make sure to check the previous entries from the thread and do a quick search for similar suggestions; please don't reiterate requests for features that had already been accepted for inclusion, or those which were disregarded earlier.
 
 Following their approval, feature requests may be moved by moderators to a separate issue for further discussion.
