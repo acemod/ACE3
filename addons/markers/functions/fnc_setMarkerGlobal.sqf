@@ -1,7 +1,6 @@
 /*
  * Author: commy2
- * Sets newly placed marker
- * Handles the QGVAR(setMarkerNetwork) event.
+ * Sets newly placed marker on each client
  *
  * Arguments:
  * 0: Markername <STRING>
@@ -11,7 +10,7 @@
  * None
  *
  * Example:
- * [[],[],dummyLogic] call ace_markers_fnc_setMarkerJIP;
+ * ["marker",["markerclass", "colorRed", [0,0,0], 60, ""]] call ace_markers_fnc_setMarkerGlobal;
  *
  * Public: No
  */
@@ -19,28 +18,12 @@
 
 params ["_marker", "_data"];
 TRACE_2("params",_marker,_data);
-_data params ["_markerClassname", "_colorClassname", "_pos", "_dir"];
 
-private _config = configfile >> "CfgMarkers" >> _markerClassname;
+[_marker, _data] call FUNC(setMarkerLocal);
 
-if (!isClass _config) then {
-    WARNING("CfgMarker not found, changed to milDot");
-    _config = configFile >> "CfgMarkers" >> "MilDot";
+if(GVAR(enableUniqueMaps) && {time == 0} && {_marker in allMapMarkers}) then {
+    GVAR(briefingMarkers) pushBack [_marker, _data];
 };
-
-_marker setMarkerTypeLocal configName _config;
-
-_config = configfile >> "CfgMarkerColors" >> _colorClassname;
-
-if (!isClass _config) then {
-    WARNING("CfgMarkerColors not found, changed to Default");
-    _config = configFile >> "CfgMarkerColors" >> "Default";
-};
-
-_marker setMarkerColorLocal configName _config;
-
-_marker setMarkerPosLocal _pos;
-_marker setMarkerDirLocal _dir;
 
 // save properties on server machine for JIP, marker editing ready
 if (isMultiplayer && {isServer}) then {

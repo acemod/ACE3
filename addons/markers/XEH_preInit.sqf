@@ -49,7 +49,22 @@ if (isNil QGVAR(MarkerColorsCache)) then {
     };
 };
 
-//Server Sync JIP markers:
-[QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call EFUNC(common,addEventHandler);
+GVAR(mapDisplaysWithDrawEHs) = [];
+GVAR(currentMarkerPosition) = [];
+GVAR(currentMarkerAngle) = 0;
+GVAR(currentMarkerColorConfigName) = "";
+GVAR(currentMarkerConfigName) = "";
+GVAR(localLogic) = objNull;
+GVAR(currentMap) = "";
+GVAR(currentMapID) = -1;
+GVAR(currentMapMarkers) = [];
+GVAR(currentMapMarkersProperties) = [];
+GVAR(newMapMarkers) = [];
+GVAR(briefingMarkers) = [];
+GVAR(postBriefingMarkers) = [];
+
+//server events
+[QGVAR(sendMapData), DFUNC(sendMapData)] call EFUNC(common,addEventHandler);
+[QGVAR(updateMapData), DFUNC(updateMapData)] call EFUNC(common,addEventHandler);
 
 ADDON = true;

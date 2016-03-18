@@ -1,12 +1,20 @@
 
 PREP(getEnabledChannels);
-PREP(initInsertMarker);
 PREP(mapDrawEH);
 PREP(onLBSelChangedChannel);
 PREP(onLBSelChangedColor);
 PREP(onLBSelChangedShape);
 PREP(onSliderPosChangedAngle);
 PREP(placeMarker);
-PREP(sendMarkersJIP);
-PREP(setMarkerJIP);
-PREP(setMarkerNetwork);
+PREP(initInsertMarker);
+PREP(getAssignedMap);
+PREP(getMapID);
+PREP(isMap);
+PREP(onMapChange);
+PREP(sendMapData);
+PREP(loadMapData);
+PREP(updateMapData);
+PREP(setMarkerGlobal);
+PREP(setMarkerLocal);
+PREP(registerMap);
+PREP(loadBriefingMarkers);

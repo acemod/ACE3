@@ -22,7 +22,7 @@
     disableserialization;
     params ["_display"];
     TRACE_1("params",_display);
-    
+
     //Can't place markers when can't interact
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
@@ -134,7 +134,7 @@
 
     private _offsetButtons = 0;
 
-    if (isMultiplayer) then {
+    if (isMultiplayer && {(!GVAR(enableUniqueMaps) || time == 0)}) then {
         _pos set [1,_posY + 5 * _posH + 7 * BORDER];
         _pos set [3,_posH];
         _descriptionChannel ctrlSetStructuredText parseText format ["<t size='0.8'>%1:</t>", localize "str_a3_cfgvehicles_modulerespawnposition_f_arguments_marker_0"];

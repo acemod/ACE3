@@ -13,4 +13,6 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
+#include "ACE_Settings.hpp"
 #include "InsertMarker.hpp"
