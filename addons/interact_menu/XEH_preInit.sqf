@@ -45,6 +45,13 @@ GVAR(expanded) = false;
 
 GVAR(startHoverTime) = ACE_diagTime;
 GVAR(expandedTime) = ACE_diagTime;
+
+// reset on mission load
+addMissionEventHandler ["Loaded", {
+    GVAR(startHoverTime) = 0;
+    GVAR(expandedTime) = 0;
+}];
+
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 
