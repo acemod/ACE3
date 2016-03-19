@@ -21,7 +21,7 @@ TRACE_2("updateMapData",_map,_mapData);
 _mapData params ["_newMarkers", "_deletedMarkers"];
 
 private _mapID = _map call FUNC(getMapID);
-if(_mapID <= 0) exitWith {};
+if (_mapID <= 0) exitWith {};
 
 private _mapMarkers = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkers), _mapID], []];
 private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkersProperties), _mapID], []];
@@ -41,7 +41,7 @@ private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", Q
 
 {
     private _index = _mapMarkers find _x;
-    if(_index >= 0) then {
+    if (_index >= 0) then {
         _mapMarkers deleteAt _index;
         _mapMarkersProperties deleteAt _index;
     };

@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params ["_clientLogic", "_clientMap"];
 TRACE_2("sendMapData",_clientLogic,_clientMap);
@@ -21,10 +21,10 @@ TRACE_2("sendMapData",_clientLogic,_clientMap);
 private _newClientMap = "";
 private _mapData = [[],[]];
 
-if(GVAR(enableUniqueMaps)) then {
-    if(_clientMap != "" && {_clientMap call FUNC(isMap)}) then {
+if (GVAR(enableUniqueMaps)) then {
+    if (_clientMap != "" && {_clientMap call FUNC(isMap)}) then {
         private _mapID = _clientMap call FUNC(getMapID);
-        if(_mapID != 0) then {
+        if (_mapID != 0) then {
             //client map is unique, send him markers of this map
             private _mapMarkers = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkers), _mapID], []];
             private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkersProperties), _mapID], []];
@@ -41,7 +41,7 @@ if(GVAR(enableUniqueMaps)) then {
     _mapData = [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[])];
 };
 
-if(isMultiplayer) then {
+if (isMultiplayer) then {
     [QGVAR(loadMapData), [_clientLogic], [_newClientMap, _mapData]] call EFUNC(common,targetEvent);
 } else {
     [QGVAR(loadMapData), [_newClientMap, _mapData]] call EFUNC(common,localEvent);

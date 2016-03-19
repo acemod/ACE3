@@ -16,9 +16,9 @@ if(hasInterface) then {
 
     //request map data from server on each inventory change (after first request is done for this ACE_player)
     ["playerInventoryChanged", {
-        if(!GVAR(enableUniqueMaps) || {GVAR(currentMapID) < 0}) exitWith {};
+        if (!GVAR(enableUniqueMaps) || {GVAR(currentMapID) < 0}) exitWith {};
         private _assignedMap = ACE_player call FUNC(getAssignedMap);
-        if(GVAR(currentMap) != _assignedMap) then {
+        if (GVAR(currentMap) != _assignedMap) then {
             GVAR(currentMap) = _assignedMap;
             [QGVAR(onMapItemChange), [_assignedMap]] call EFUNC(common,localEvent);
         };
@@ -29,22 +29,21 @@ if(hasInterface) then {
         params ["", "_mapOn"];
         TRACE_1("visibleMapChanged",_mapOn);
 
-        if(!GVAR(enableUniqueMaps)) exitWith {};
-
+        if (!GVAR(enableUniqueMaps)) exitWith {};
         if (_mapOn) then {
             GVAR(newMapMarkers) = [];
         } else {
             private _assignedMap = ACE_player call FUNC(getAssignedMap);
-            if(_assignedMap == "") exitWith {};
+            if (_assignedMap == "") exitWith {};
 
             //can't update markers data if map is not unique
             private _mapID = _assignedMap call FUNC(getMapID);
-            if(_mapID <= 0) exitWith {};
+            if (_mapID <= 0) exitWith {};
 
             //find any deleted markers
             private _deletedMarkers = [];
             {
-                if(!(_x in allMapMarkers)) then {
+                if (!(_x in allMapMarkers)) then {
                     _deletedMarkers pushBack _x;
                     private _markerIndex = GVAR(currentMapMarkers) find _x;
                     GVAR(currentMapMarkers) deleteAt _markerIndex;
@@ -52,7 +51,7 @@ if(hasInterface) then {
                 };
             } forEach +GVAR(currentMapMarkers);
 
-            if(count GVAR(newMapMarkers) > 0 || {count _deletedMarkers > 0}) then {
+            if (count GVAR(newMapMarkers) > 0 || {count _deletedMarkers > 0}) then {
                 //update markers data on server
                 [QGVAR(updateMapData), [_assignedMap, [GVAR(newMapMarkers), _deletedMarkers]]] call EFUNC(common,serverEvent);
             };
@@ -61,7 +60,7 @@ if(hasInterface) then {
 
     //save post briefing markers for access verification during loadBriefingMarkers event
     [{
-        if(!didJIP && {GVAR(enableUniqueMaps)}) then {
+        if (!didJIP && {GVAR(enableUniqueMaps)}) then {
             TRACE_1("postBriefingMarkers saved",allMapMarkers);
             GVAR(postBriefingMarkers) = allMapMarkers;
         };
@@ -71,7 +70,7 @@ if(hasInterface) then {
 if(isServer) then {
     //after mission start send order each client to add all briefing markers to their unique maps and delete global markers
     [{
-        if(GVAR(enableUniqueMaps)) then {
+        if (GVAR(enableUniqueMaps)) then {
             [QGVAR(loadBriefingMarkers), []] call EFUNC(common,globalEvent);
         };
     }, [], 0.5] call EFUNC(common,waitAndExecute);

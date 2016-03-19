@@ -32,7 +32,7 @@ if (_closeNum == 1) then {
             markerText _marker
         ];
 
-        if(GVAR(enableUniqueMaps) && {time > 0}) then {
+        if (GVAR(enableUniqueMaps) && {time > 0}) then {
             //delete global marker and create local - unique for this map
             deleteMarker _marker;
             private _newMarker = createMarkerLocal [format ["%1_%2", _marker, GVAR(currentMapID)], [0,0,0]];
@@ -40,7 +40,7 @@ if (_closeNum == 1) then {
 
             GVAR(currentMapMarkers) pushBack _newMarker;
             GVAR(currentMapMarkersProperties) pushBack _data;
-            GVAR(newMapMarkers) pushback [_newMarker, _data];
+            GVAR(newMapMarkers) pushBack [_newMarker, _data];
         } else {
             //unique maps disabled or player is on briefing - make global marker
             [QGVAR(setMarkerGlobal), [_marker, _data]] call EFUNC(common,globalEvent);

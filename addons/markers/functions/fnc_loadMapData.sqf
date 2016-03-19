@@ -17,10 +17,10 @@ params ["_newMap", "_mapData"];
 TRACE_2("loadMapData",_newMap,_mapData);
 
 private _currentMap = ACE_player call FUNC(getAssignedMap);
-if(_currentMap != "" && {_newMap != ""}) then {
+if (_currentMap != "" && {_newMap != ""}) then {
     _mapData params ["_allMapMarkers", "_allMapMarkersProperties"];
 
-    if(GVAR(enableUniqueMaps)) then {
+    if (GVAR(enableUniqueMaps)) then {
         {
             private _marker = createMarkerLocal [_x, [0,0,0]];
             private _data = _allMapMarkersProperties select _forEachIndex;
@@ -31,14 +31,14 @@ if(_currentMap != "" && {_newMap != ""}) then {
         GVAR(currentMapMarkersProperties) = _allMapMarkersProperties;
 
         private _newMapID = _newMap call FUNC(getMapID);
-        if(GVAR(currentMapID) != _newMapID) then {
+        if (GVAR(currentMapID) != _newMapID) then {
             GVAR(currentMapID) = _newMapID;
             ACE_player unlinkItem _currentMap;
             ACE_player linkItem _newMap;
         };
     } else {
         {
-            if(_x in allMapMarkers) then {
+            if (_x in allMapMarkers) then {
                 private _data = _allMapMarkersProperties select _forEachIndex;
                 [_x, _data] call FUNC(setMarkerLocal);
             };
@@ -46,7 +46,7 @@ if(_currentMap != "" && {_newMap != ""}) then {
     };
 };
 
-if(isMultiplayer) then {
+if (isMultiplayer) then {
     private _group = group GVAR(localLogic);
     deleteVehicle GVAR(localLogic);
     GVAR(localLogic) = nil;

@@ -21,7 +21,7 @@ TRACE_2("params",_marker,_data);
 
 [_marker, _data] call FUNC(setMarkerLocal);
 
-if(GVAR(enableUniqueMaps) && {time == 0} && {_marker in allMapMarkers}) then {
+if (GVAR(enableUniqueMaps) && {time == 0} && {_marker in allMapMarkers}) then {
     GVAR(briefingMarkers) pushBack [_marker, _data];
 };
 

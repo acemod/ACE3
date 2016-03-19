@@ -34,7 +34,7 @@ if (!isClass _config) then {
 
 _marker setMarkerColorLocal configName _config;
 
-if(_text != "") then {_marker setMarkerTextLocal _text;};
+if (_text != "") then {_marker setMarkerTextLocal _text;};
 
 _marker setMarkerPosLocal _pos;
 _marker setMarkerDirLocal _dir;
