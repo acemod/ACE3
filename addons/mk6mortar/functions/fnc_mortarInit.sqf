@@ -31,7 +31,7 @@ if (count magazines _mortar > 0) then {
 private _currentWeapon = _mortar weaponsTurret [0] select 0;
 private _newWeapon = "";
 
-if (tolower _currentWeapon == "mortar_82mm") then {
+if (_currentWeapon == "mortar_82mm") then {
     _newWeapon = "ace_mortar_82mm";
 } else {
     _newWeapon = getText (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(replaceWith));
