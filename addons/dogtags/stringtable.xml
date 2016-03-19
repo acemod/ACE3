@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Dogtags">
+        <Key ID="STR_ACE_Dogtags_itemName">
+            <English>Dog Tag</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Nieśmiertelnik</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_checkItem">
+            <English>Check Dog Tag</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Sprawdź nieśmiertelnik</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_checkDogtag">
+            <English>Check</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Sprawdź</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_takeDogtag">
+            <English>Take</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Zabierz</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
+            <English>Dogtag taken from %1...</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_noDogtag">
+            <English>I can't seem to find his dogtag!</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Brak nieśmiertelnika</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
+            <English>Somebody else has already taken the dogtag...</English>
+            <German></German>
+            <French></French>
+            <Czech></Czech>
+            <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
+            <Spanish></Spanish>
+            <Hungarian></Hungarian>
+            <Russian></Russian>
+            <Italian></Italian>
+            <Portuguese></Portuguese>
+        </Key>		
+    </Package>
+</Project>
