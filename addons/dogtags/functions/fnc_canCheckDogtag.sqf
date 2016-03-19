@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Checks if dogtag can be checked.
  *
  * Arguments:
@@ -15,6 +15,6 @@
 
 params ["_player", "_target"];
 
-if(isNull _target) exitWith {false};
+if (isNull _target) exitWith {false};
 
-!alive _target
+!alive _target || _target getVariable ["ACE_isUnconscious", false]

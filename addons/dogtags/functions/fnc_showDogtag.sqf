@@ -14,12 +14,15 @@
 
 disableSerialization;
 
-params ["_nickname"];
+params ["_nickname", ["_doubleTags", false, [false]]];
 
-if(!hasInterface || {_nickname == ""}) exitWith {};
+if (!hasInterface || {_nickname == ""}) exitWith {};
 
-(QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(tag), "PLAIN", 1, true];
-
+if (_doubleTags) then {
+    (QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(doubleTag), "PLAIN", 1, true];
+} else {
+    (QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(singleTag), "PLAIN", 1, true];
+};
 private _display = uiNamespace getvariable [QGVAR(tag), displayNull];
 if(isNull _display) exitWith {};
 

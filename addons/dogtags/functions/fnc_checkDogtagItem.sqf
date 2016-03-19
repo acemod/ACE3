@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Check dogtag self menu action
  *
  * Arguments:

@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Checks unit dogtag
  *
  * Arguments:
@@ -15,9 +15,6 @@
 
 params ["_player", "_target"];
 
-if(_target getVariable [QGVAR(dogtagTaken), false]) then {
-    [localize LSTRING(noDogtag)] call EFUNC(common,displayText);
-} else {
-    private _nickname = [_target, false, true] call EFUNC(common,getName);
-    [QGVAR(showDogtag), [_nickname]] call EFUNC(common,localEvent);
-};
+private _doubleTags = !(_target getVariable [QGVAR(dogtagTaken), false]);
+private _nickname = [_target, false, true] call EFUNC(common,getName);
+[QGVAR(showDogtag), [_nickname, _doubleTags]] call EFUNC(common,localEvent);

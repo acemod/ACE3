@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Adds dogtag item to unit (triggered by server)
  *
  * Arguments:
@@ -15,7 +15,7 @@
 
 params ["_item", "_nickname"];
 
-if(_item == "") exitWith {};
+if (_item == "") exitWith {};
 
 [ace_player, _item] call CBA_fnc_addItem;
 

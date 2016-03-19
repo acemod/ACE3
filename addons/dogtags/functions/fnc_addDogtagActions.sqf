@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Creates one action per dogtag.
  *
  * Arguments:
@@ -20,9 +20,9 @@ private _unitDogtags = [];
 private _unitDogtagIDs = [];
 {
     private _id = getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(tagID));
-    if(_id > 0) then {
-        _unitDogtags pushback _x;
-        _unitDogtagIDs pushback _id;
+    if (_id > 0) then {
+        _unitDogtags pushBack _x;
+        _unitDogtagIDs pushBack _id;
     };
 } forEach items _player;
 

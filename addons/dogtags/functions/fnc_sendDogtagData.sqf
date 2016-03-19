@@ -1,5 +1,5 @@
 /*
- * Author: SzwedzikPl
+ * Author: SzwedzikPL
  * Server: returns to client nickname on given dogtag
  *
  * Arguments:
@@ -23,7 +23,7 @@ private _allDogtagNicknames = missionNameSpace getVariable [QGVAR(allDogtagNickn
 
 private _nickname = "";
 private _index = _allDogtags find _item;
-if(_index >= 0) then {
+if (_index >= 0) then {
     _nickname = _allDogtagNicknames select _index;
 };
 
