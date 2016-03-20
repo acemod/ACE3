@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 GVAR(tagsToTest) = GVAR(tagsToTest) select {
-    params ["_tag", "_tagPosASL", "_vectorDirAndUp"];
+    _x params ["_tag", "_tagPosASL", "_vectorDirAndUp"];
 
     _vectorDirAndUp params ["_v1", "_v2"];
 
