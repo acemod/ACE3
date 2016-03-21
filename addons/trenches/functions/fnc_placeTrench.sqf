@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [ACE_player] call ace_trenches_fnc_placeTrench
+ * [ACE_player, "ace_trenches_trenchBig"] call ace_trenches_fnc_placeTrench
  *
  * Public: No
  */

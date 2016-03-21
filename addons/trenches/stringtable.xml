@@ -101,5 +101,17 @@
             <Spanish>Cavando trinchera</Spanish>
             <French>Creuse la tranchée</French>
         </Key>
+        <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
+            <English>Continue Digging Trench</English>
+            <Polish>Wzów kopanie okopu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemoveEnvelope">
+            <English>Remove Trench</English>
+            <Polish>Usuń okop</Polish>
+        </Key>
+        <Key ID="STR_ACE_Trenches_RemovingTrench">
+            <English>Removing Trench</English>
+            <Polish>Usuwanie okopu</Polish>
+        </Key>
     </Package>
 </Project>

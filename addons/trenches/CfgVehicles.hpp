@@ -1,3 +1,28 @@
+class CBA_Extended_EventHandlers;
+
+#define ACE_TRENCHES_ACTIONS class ACE_Actions { \
+        class ACE_MainActions { \
+            displayName = ECSTRING(interaction,MainAction); \
+            selection = ""; \
+            distance = 10; \
+            condition = QUOTE(true); \
+            class ACE_ContinueDiggingTrench { \
+                displayName = CSTRING(ContinueDiggingTrench); \
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench);); \
+                showDisabled = 0; \
+                priority = -1; \
+            }; \
+            class ACE_RemoveTrench { \
+                displayName = CSTRING(RemoveEnvelope); \
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
+                statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
+                showDisabled = 0; \
+                priority = -1; \
+            }; \
+        }; \
+    }
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -34,6 +59,12 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeSmallDescription);
         model = QUOTE(PATHTOEF(apl,ace_envelope_small4.p3d));
         scope = 2;
+        GVAR(diggingDuration) = 20;
+        GVAR(removalDuration) = 12;
+        ACE_TRENCHES_ACTIONS;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
     class ACE_envelope_big: BagFence_base_F {
         author = ECSTRING(common,ACETeam);
@@ -41,8 +72,13 @@ class CfgVehicles {
         descriptionShort = CSTRING(EnevlopeBigDescription);
         model = QUOTE(PATHTOEF(apl,ace_envelope_big4.p3d));
         scope = 2;
+        GVAR(diggingDuration) = 25;
+        GVAR(removalDuration) = 15;
+        ACE_TRENCHES_ACTIONS;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
-
 
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
         scope = 1;
