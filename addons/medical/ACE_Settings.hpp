@@ -260,7 +260,6 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);
-        displayName = CSTRING(healHitPointAfterAdvBandage);
         typeName = "BOOL";
         value = 0;
     };
@@ -268,7 +267,6 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);
-        displayName = CSTRING(painIsOnlySuppressed);
         typeName = "BOOL";
         value = 1;
     };
