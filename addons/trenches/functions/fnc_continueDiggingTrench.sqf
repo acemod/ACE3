@@ -65,23 +65,8 @@ private _fnc_onFailure = {
 };
 [(_digTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call EFUNC(common,progressBar);
 
-// Schedule progressive raising of the trench
-private _fnc_setPlacing = {
-    params ["_unit", "_trench", "_trenchId", "_pos", "_vecDirAndUp", "_progress"];
-
-    // If the progress bar was cancelled, cancel elevation
-    // We use an uid to avoid any chance of an older trench being raised when a new one is built
-    if (_unit getVariable [QGVAR(isDiggingId), -1] != _trenchId) exitWith {};
-
-    _trench setPosASL _pos;
-    _trench setVectorDirAndUp _vecDirAndUp;
-
-    // Save progress local
-    _trench setVariable [QGVAR(progress), _progress];
-};
-
 if(_actualProgress == 0) then {
-    [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp, _actualProgress] call _fnc_setPlacing;
+    [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp, _actualProgress] call FUNC(setTrenchPlacement);
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;
@@ -90,7 +75,7 @@ for "_i" from _progressLeft to 10 do {
     private _vectorDiffZ = 1 - (_i / 10);
     private _delay = _digTime * ((_i / 10) - _actualProgress);
     private _progress = _i / 10;
-    [_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, _vectorDiffZ], _vecDirAndUp, _progress], _delay] call EFUNC(common,waitAndExecute);
+    [DFUNC(setTrenchPlacement), [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, _vectorDiffZ], _vecDirAndUp, _progress], _delay] call EFUNC(common,waitAndExecute);
 };
 
 // Play animation

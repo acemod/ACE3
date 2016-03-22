@@ -4,20 +4,18 @@ class CBA_Extended_EventHandlers;
         class ACE_MainActions { \
             displayName = ECSTRING(interaction,MainAction); \
             selection = ""; \
-            distance = 10; \
+            distance = 3; \
             condition = QUOTE(true); \
             class ACE_ContinueDiggingTrench { \
                 displayName = CSTRING(ContinueDiggingTrench); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canContinueDiggingTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(continueDiggingTrench);); \
-                showDisabled = 0; \
                 priority = -1; \
             }; \
             class ACE_RemoveTrench { \
                 displayName = CSTRING(RemoveEnvelope); \
                 condition = QUOTE([ARR_2(_target,_player)] call FUNC(canRemoveTrench)); \
                 statement = QUOTE([ARR_2(_target,_player)] call FUNC(removeTrench);); \
-                showDisabled = 0; \
                 priority = -1; \
             }; \
         }; \
@@ -30,9 +28,9 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(digEnvelopeSmall) {
                     displayName = CSTRING(DigEnvelopeSmall);
-                    condition = QUOTE([ARR_2(_this select 0,'ace_trenches_trenchSmall')] call FUNC(canDigTrench));
+                    condition = QUOTE(_player call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchSmall')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call EFUNC(common,execNextFrame));
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
@@ -40,9 +38,9 @@ class CfgVehicles {
                 };
                 class GVAR(digEnvelopeBig) {
                     displayName = CSTRING(DigEnvelopeBig);
-                    condition = QUOTE([ARR_2(_this select 0,'ace_trenches_trenchBig')] call FUNC(canDigTrench));
+                    condition = QUOTE(_player call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchBig')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call EFUNC(common,execNextFrame));
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
@@ -61,6 +59,8 @@ class CfgVehicles {
         scope = 2;
         GVAR(diggingDuration) = 20;
         GVAR(removalDuration) = 12;
+        GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
+        GVAR(placementData)[] = {2,3,0.35};
         ACE_TRENCHES_ACTIONS;
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -74,6 +74,8 @@ class CfgVehicles {
         scope = 2;
         GVAR(diggingDuration) = 25;
         GVAR(removalDuration) = 15;
+        GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
+        GVAR(placementData)[] = {6,1.1,0.20};
         ACE_TRENCHES_ACTIONS;
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};

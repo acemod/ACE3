@@ -1,5 +1,8 @@
 
+PREP(canContinueDiggingTrench);
 PREP(canDigTrench);
+PREP(canRemoveTrench);
+PREP(continueDiggingTrench);
 PREP(handleInteractMenuOpened);
 PREP(handleKilled);
 PREP(handlePlayerChanged);
@@ -9,7 +12,5 @@ PREP(handleUnconscious);
 PREP(placeCancel);
 PREP(placeConfirm);
 PREP(placeTrench);
-PREP(canContinueDiggingTrench);
-PREP(canRemoveTrench);
-PREP(continueDiggingTrench);
 PREP(removeTrench);
+PREP(setTrenchPlacement);

@@ -36,9 +36,9 @@ params ["_unit"];
 if (isNull GVAR(trench)) exitWith {};
 
 deleteVehicle GVAR(trench);
-private _trench = createVehicle [GVAR(trenchType) select 0, [0, 0, 0], [], 0, "NONE"];
+private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
 
-GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
+GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);
 private _angle = (GVAR(digDirection) + getDir _unit);
 
