@@ -67,6 +67,15 @@ private _fnc_onFailure = {
 
 if(_actualProgress == 0) then {
     [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp, _actualProgress] call FUNC(setTrenchPlacement);
+
+    //Remove grass
+    {
+        private _trenchGrassCutter = createVehicle ["Land_ClutterCutter_medium_F", [0, 0, 0], [], 0, "NONE"];
+        private _cutterPos = AGLToASL (_trench modelToWorld _x);
+        _cutterPos set [2, getTerrainHeightASL _cutterPos];
+        _trenchGrassCutter setPosASL _cutterPos;
+        deleteVehicle _trenchGrassCutter;
+    } foreach getArray (configFile >> "CfgVehicles" >> (typeof _trench) >> QGVAR(grassCuttingPoints));
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;

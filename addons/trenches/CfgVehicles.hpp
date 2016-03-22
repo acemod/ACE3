@@ -61,6 +61,7 @@ class CfgVehicles {
         GVAR(removalDuration) = 12;
         GVAR(noGeoClass) = "ACE_envelope_small_NoGeo";
         GVAR(placementData)[] = {2,3,0.35};
+        GVAR(grassCuttingPoints)[] = {{0,-0.5,0}};
         ACE_TRENCHES_ACTIONS;
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -76,6 +77,7 @@ class CfgVehicles {
         GVAR(removalDuration) = 15;
         GVAR(noGeoClass) = "ACE_envelope_big_NoGeo";
         GVAR(placementData)[] = {6,1.1,0.20};
+        GVAR(grassCuttingPoints)[] = {{-1.5,-1,0},{1.5,-1,0}};
         ACE_TRENCHES_ACTIONS;
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
