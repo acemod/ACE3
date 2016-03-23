@@ -96,22 +96,22 @@
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
             <German>Grabe Schützengraben</German>
-            <Polish>Kopanie okopu</Polish>
+            <Polish>Kopanie wnęki</Polish>
             <Italian>Sto Scavando la Trincea</Italian>
             <Spanish>Cavando trinchera</Spanish>
             <French>Creuse la tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
-            <Polish>Wzów kopanie okopu</Polish>
+            <Polish>Wzów kopanie wnęki</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
-            <Polish>Usuń okop</Polish>
+            <Polish>Usuń wnękę</Polish>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
-            <Polish>Usuwanie okopu</Polish>
+            <Polish>Usuwanie wnęki</Polish>
         </Key>
     </Package>
 </Project>
