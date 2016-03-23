@@ -253,7 +253,7 @@ Atropine | lower the heart rate of the patient
 
 ##### 2.2.2.3 Cardiac arrest
 
-- A patient will enter cardiac arrest when:</br>
+- A patient will enter cardiac arrest when:
  - The heart rate is below 20.
  - The heart rate is above 200.
  - The systolic blood pressure is above 260.
