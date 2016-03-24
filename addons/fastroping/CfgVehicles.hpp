@@ -35,8 +35,8 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter;
-    class Helicopter_Base_F: Helicopter {
+    class Air;
+    class Helicopter: Air {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -68,6 +68,8 @@ class CfgVehicles {
             };
         };
     };
+
+    class Helicopter_Base_F;
     class ACE_friesBase: Helicopter_Base_F {
         destrType = "";
         class Turrets {};

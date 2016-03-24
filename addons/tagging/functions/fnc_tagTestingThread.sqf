@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-_fnc_isLeaning = {
+GVAR(tagsToTest) = GVAR(tagsToTest) select {
     params ["_tag", "_tagPosASL", "_vectorDirAndUp"];
 
     _vectorDirAndUp params ["_v1", "_v2"];
@@ -34,7 +34,6 @@ _fnc_isLeaning = {
     };
     true
 };
-GVAR(tagsToTest) = [GVAR(tagsToTest), _fnc_isLeaning] call EFUNC(common,filter);
 
 // If there's no more tag
 if (GVAR(tagsToTest) isEqualTo []) exitWith {

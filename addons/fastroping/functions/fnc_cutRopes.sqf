@@ -32,10 +32,11 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
         };
     };
 
-    detach _dummy;
-    deleteVehicle _ropeTop;
+    //Destroy rope
+    //Only delete the hook first so the rope falls down.
+    //Note: ropeDetach was used here before, but the command seems a bit broken.
     deleteVehicle _hook;
-    [{{deleteVehicle _x} count _this}, [_ropeBottom, _dummy], 60] call EFUNC(common,waitAndExecute);
+    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy], 60] call EFUNC(common,waitAndExecute);
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
