@@ -1,76 +1,240 @@
----
-title: Home
-browserTitle: The realism mod for Arma 3
-layout: default
-group: mainNav
-order: 0
-sitemap:
-    exclude: "yes"
----
+<!-- Happy April Fool's Day from ABE3 !-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The realism mod for Arma 3 · ABE3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ABE3 is a joint effort by the teams behind ACE2, AGM and CSE to improve the realism and authenticity of Arma 3.">
 
-<div class="row">
-    <div class="large-12 columns">
-        <div class="slider">
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-            <picture>
-                <source srcset="{{ site.baseurl }}/img/slider01.jpg" media="(min-width: 641px)">
-                <img src="{{ site.baseurl }}/img/slider01_mobile.jpg"
-                     srcset="{{ site.baseurl }}/img/slider01_mobile.jpg"
-                     alt="ACE3 Medical uses advanced and very realistic medical simulations">
-            </picture>
+    <link href="swatch/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/docs/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="bootstrap/docs/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="test/bootswatch.css" rel="stylesheet">
 
-            <picture>
-                <source srcset="{{ site.baseurl }}/img/slider02.jpg" media="(min-width: 641px)">
-                <img src="{{ site.baseurl }}/img/slider02_mobile.jpg"
-                     srcset="{{ site.baseurl }}/img/slider02_mobile.jpg"
-                     alt="ACE3 Laser aims to realistically model behaviour of lasers">
-            </picture>
+    <script>
+        if (document.location.hostname.search("ace3mod.com") !== -1) {
 
-            <picture>
-                <source srcset="{{ site.baseurl }}/img/slider03.jpg" media="(min-width: 641px)">
-                <img src="{{ site.baseurl }}/img/slider03_mobile.jpg"
-                     srcset="{{ site.baseurl }}/img/slider03_mobile.jpg"
-                     alt="ACE3 Explosions contain shrapnel and shockwaves">
-            </picture>
-        </div>
-    </div>
-</div>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<div class="row">
-    <a class="hide-for-small-only" href="https://github.com/acemod/ACE3"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
-    <div class="large-12 columns">
-        <div class="panel callout radius">
-            <div class="row">
-                <div class="large-7 columns">
-                    <h1>Advanced Combat Environment 3 <small>(ACE3)</small></h1>
-                    <h2 class="subheader">{{ page.browserTitle }}</h2>
-                </div>
-                <div class="large-5 columns">
-                    <a class="button" target="_blank" href="{{site.githubUrl}}/releases/latest" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);"><i class="fa fa-download"></i> Get ACE3 v{{site.version.major}}.{{site.version.minor}}.{{site.version.patch}}</a><br>
-                    <a href="{{site.baseurl}}/wiki/user/installation-guide.html">Installation Guide</a>
-                </div>
+            ga('create', 'UA-61422074-1', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+
+        }
+    </script>
+</head>
+
+<body id="top" class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+
+
+<!-- Navbar
+  ================================================== -->
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="/index2.html">ABE3</a>
+            <div class="nav-collapse" id="main-menu">
+                <ul class="nav" id="main-menu-left">
+                    <li><a href="/index2.html">Home</a></li>
+                    <li><a href="/wiki/">Wiki</a></li>
+                    <li><a href="/news.html">News</a></li>
+                    <li><a href="/team.html">The Team</a></li>
+                    <li style="padding-top: 6px">&nbsp;
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out the new @ace3mod website!" data-via="ace3mod" data-size="large">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </li>
+                </ul>
+                <ul class="nav pull-right" id="main-menu-right">
+                    <li><a rel="tooltip" target="_blank" href="https://github.com/acemod/ACE3" title="Fork me on github">Fork me on github <i class="icon-share-alt"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="large-12 columns">
+<div class="container">
+
+
+    <!-- Masthead
+    ================================================== -->
+    <header class="jumbotron subhead" id="overview">
+        <div class="row">
+            <div class="span6">
+                <h1><img src="img/peanut-butter-jelly-time.gif">&nbsp;<blink><FONT COLOR="#FF0000">A</FONT><FONT COLOR="#FF5A00">B</FONT><FONT COLOR="#FFB400">E</FONT><FONT COLOR="#FFff00">3</FONT></blink> <FONT COLOR="#A5ff00">f</FONT><FONT COLOR="#4Bff00">o</FONT><FONT COLOR="#00ff00">r</FONT><FONT COLOR="#00ff5A"> </FONT><FONT COLOR="#00ffB4">A</FONT><FONT COLOR="#00ffff">r</FONT><FONT COLOR="#00B4ff">m</FONT><FONT COLOR="#005Aff">a</FONT>&nbsp;<FONT COLOR="#0000ff">3</FONT></h1>
+                <p class="lead">The realism mod with 100% more bananas</p>
+                <table cellpadding="2" cellspacing="2">
+                    <tr>
+                        <td>
+                            <img src="img/test/ie_logo.gif">
+                        </td>
+                        <td>
+                            <img src="img/test/ns_logo.gif">
+                        </td>
+                        <td>
+                            <img src="img/test/noframes.gif">
+                        </td>
+                        <td>
+                            <img src="img/test/notepad.gif">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <marquee>To get started, download ABE3 from our github page and place it in your Arma 3 folder.</marquee>
+
+    </header>
+
+    <main>
+
+        <div class="row hidden-phone">
+            <div class="span4">
+                <img src="img/8bit_slider1.jpg"/>
+            </div>
+            <div class="span4">
+                <img src="img/8bit_slider2.jpg"/>
+            </div>
+            <div class="span4">
+                <img src="img/8bit_slider3.jpg"/>
+            </div>
+        </div>
+
+        <div class="row visible-phone">
+            <div class="span12">
+                <img src="img/8bit_slider1.jpg"/><br>
+            </div>
+            <div class="span12">
+                <img src="img/8bit_slider2.jpg"/><br>
+            </div>
+            <div class="span12">
+                <img src="img/8bit_slider3.jpg"/><br>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <center>
+            <!-- TRIPLE MC HAMMER -->
+            <img src="img/test/mchammer.gif">&nbsp;&nbsp;
+            <img src="img/test/mchammer.gif">&nbsp;&nbsp;
+            <img src="img/test/mchammer.gif">
+        </center>
+
+        <br>
+        <br>
+
 
         <div class="row">
-            <div class="large-4 medium-4 columns">
-                <p><a href="{{ site.baseurl }}/wiki/index.html">ACE3 Documentation</a>
-                    <br/>Everything you need to know about using the mod.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-                <p><a target="_blank" href="{{ site.githubUrl }}" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);">ACE3 on Github</a><br/>Latest code, issue reports, feature requests
-                    and more.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-                <p><a target="_blank" href="http://twitter.com/ace3mod" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);">@ace3mod</a><br/>Ping us on Twitter if you have questions.<br/>
-                    If you made something with this mod (screenshots, artwork, videos) we'd love to see it.</p>
+            <div class="span12">
+                <div class="alert alert-block">
+                    <img class="pull-left" style="margin-top: -8px" src="img/test/drudgesiren.gif" width="80">
+                    <h4 class="alert-heading"><blink>NEW RELEASE</blink></h4>
+                    <p>Get ABE3 v1.0.0 now: <a href="https://github.com/glowbal/ABE3/releases/latest">https://github.com/glowbal/ABE3/releases/latest</a>.</p>
+                    <p></p>
+                </div>
             </div>
         </div>
 
+    </main>
+
+    <br><br><br><br>
+
+    <!-- Footer
+     ================================================== -->
+    <footer class="footer">
+        <p class="pull-left" style="margin-top: -14px"><img src="img/test/geocities.jpg"></p>
+    </footer>
+    <center><img src="img/test/counter2.gif"></center>
+
+    <br>
+    <div class="row">
+        <center><a href="/index2.html">Get back to our not so fancy page</a></center>
     </div>
-</div>
+
+</div><!-- /container -->
+
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="bootstrap/docs/assets/js/jquery.js"></script>
+<script src="bootstrap/docs/assets/js/google-code-prettify/prettify.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-transition.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-alert.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-dropdown.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-scrollspy.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-tab.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-tooltip.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-popover.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-button.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-collapse.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-carousel.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-typeahead.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-affix.js"></script>
+
+
+<script>
+
+    jQuery(document).ready(function($) {
+
+        var $window = $(window);
+        var timeoutId;
+        var gifUrl = "img/explosion.gif";
+
+        function getRand(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function expl() {
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(expl, (getRand(1,6) * 1000));
+
+            var height = $window.height();
+            var width = $window.width();
+
+            height = getRand(0, height - 32);
+            width = getRand(0, width - 32);
+
+            var $img = $("<img/>");
+            $img.css({
+                "position": "absolute",
+                "z-index": "999",
+                "width": "64px",
+                "height": "64px",
+                "top": height,
+                "left": width
+            });
+
+            $("body").append($img);
+
+            $img.attr("src", gifUrl);
+
+            var innerTimeoutId = setTimeout(function($image) {
+                $image.remove();
+            }, 750, $img);
+        }
+
+        expl();
+
+    });
+
+</script>
+
+</body>
+</html>
