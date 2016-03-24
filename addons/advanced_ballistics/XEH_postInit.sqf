@@ -21,13 +21,15 @@ if (!GVAR(extensionAvailable)) exitWith {
     };
 };
 */
-[] call FUNC(initializeTerrainExtension);
 
 if (!hasInterface) exitWith {};
 
 ["SettingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
+
+    //Run the terrain processor
+    [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
     ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
