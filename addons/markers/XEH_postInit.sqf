@@ -5,7 +5,7 @@
 [QGVAR(loadBriefingMarkers), DFUNC(loadBriefingMarkers)] call EFUNC(common,addEventHandler);
 [QGVAR(onMapItemChange), DFUNC(onMapChange)] call EFUNC(common,addEventHandler);
 
-if(hasInterface) then {
+if (hasInterface) then {
     //request map data from server
     ["playerChanged", {
         private _assignedMap = ACE_player call FUNC(getAssignedMap);
@@ -51,7 +51,7 @@ if(hasInterface) then {
     }] call EFUNC(common,addEventHandler);
 };
 
-if(isServer) then {
+if (isServer) then {
     //after mission start send order each client to add all briefing markers to their unique maps and delete global markers
     [{
         [QGVAR(loadBriefingMarkers), []] call EFUNC(common,globalEvent);

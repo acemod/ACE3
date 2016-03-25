@@ -24,7 +24,7 @@ private _deletedMarkers = [];
     if (!(_x in allMapMarkers)) then {
         _deletedMarkers pushBack _x;
         private _markerIndex = GVAR(currentMapMarkers) find _x;
-        if(_markerIndex >= 0) then {
+        if (_markerIndex >= 0) then {
             GVAR(currentMapMarkers) deleteAt _markerIndex;
             GVAR(currentMapMarkersProperties) deleteAt _markerIndex;
         };

@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-if(!isServer) exitWith {};
+if (!isServer) exitWith {};
 
 params ["_map", "_mapData"];
 TRACE_2("updateMapData",_map,_mapData);
