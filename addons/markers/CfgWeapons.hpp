@@ -4,7 +4,6 @@
         scopeArsenal = 0; \
         scopeCurator = 0; \
         descriptionShort = QUOTE(MAPID); \
-        GVAR(mapID) = MAPID; \
     }
 
 class CfgWeapons {
@@ -13,7 +12,6 @@ class CfgWeapons {
         scope = 0;
         scopeArsenal = 0;
         scopeCurator = 0;
-        GVAR(mapID) = 0;
     };
 
     ACE_MAP_ITEM(ACE_map,1);

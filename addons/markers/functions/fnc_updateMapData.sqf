@@ -20,11 +20,11 @@ TRACE_2("updateMapData",_map,_mapData);
 
 _mapData params ["_newMarkers", "_deletedMarkers"];
 
-private _mapID = _map call FUNC(getMapID);
-if (_mapID <= 0) exitWith {};
+//can't update markers data if map is not unique
+if (!(_map call FUNC(isUniqueMap))) exitWith {};
 
-private _mapMarkers = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkers), _mapID], []];
-private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkersProperties), _mapID], []];
+private _mapMarkers = missionNamespace getVariable [format ["%1_markers", _map], []];
+private _mapMarkersProperties = missionNamespace getVariable [format ["%1_markersProperties", _map], []];
 
 {
     _x params ["_marker", "_data"];
@@ -47,5 +47,5 @@ private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", Q
     };
 } forEach _deletedMarkers;
 
-missionNamespace setVariable [format ["%1_%2", QGVAR(allMapMarkers), _mapID], _mapMarkers];
-missionNamespace setVariable [format ["%1_%2", QGVAR(allMapMarkersProperties), _mapID], _mapMarkersProperties];
+missionNamespace setVariable [format ["%1_markers", _map], _mapMarkers];
+missionNamespace setVariable [format ["%1_markersProperties", _map], _mapMarkersProperties];

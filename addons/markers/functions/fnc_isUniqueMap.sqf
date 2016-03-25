@@ -1,12 +1,12 @@
 /*
  * Author: SzwedzikPL
- * Checks if item is a map
+ * Checks if item is a unique map
  *
  * Arguments:
  * 0: Item class <STRING>
  *
  * Return Value:
- * is a map <BOOL>
+ * is a unique map <BOOL>
  *
  * Public: No
  */
@@ -14,4 +14,4 @@
 
 params ["_item"];
 
-_item == "ItemMap" || _item call FUNC(isUniqueMap)
+(_item find "ACE_map_") >= 0

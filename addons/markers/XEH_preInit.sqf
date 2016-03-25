@@ -56,7 +56,6 @@ GVAR(currentMarkerColorConfigName) = "";
 GVAR(currentMarkerConfigName) = "";
 GVAR(localLogic) = objNull;
 GVAR(currentMap) = "";
-GVAR(currentMapID) = -1;
 GVAR(currentMapMarkers) = [];
 GVAR(currentMapMarkersProperties) = [];
 GVAR(newMapMarkers) = [];

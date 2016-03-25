@@ -17,13 +17,12 @@ params ["_currentMap"];
 TRACE_1("onMapChange",_currentMap);
 
 if (_currentMap == "") then {
-    GVAR(currentMapID) = 0;
+    GVAR(currentMap) = "";
     {deleteMarkerLocal _x} forEach GVAR(currentMapMarkers);
     GVAR(currentMapMarkers) = [];
     GVAR(currentMapMarkersProperties) = [];
 } else {
-    private _currentMapID = _currentMap call FUNC(getMapID);
-    if (GVAR(currentMapID) != _currentMapID) then {
+    if (GVAR(currentMap) != _currentMap) then {
         if (isMultiplayer) then {
             GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
         };

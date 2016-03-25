@@ -23,11 +23,10 @@ private _mapData = [[],[]];
 
 if (GVAR(enableUniqueMaps)) then {
     if (_clientMap != "" && {_clientMap call FUNC(isMap)}) then {
-        private _mapID = _clientMap call FUNC(getMapID);
-        if (_mapID != 0) then {
+        if (_clientMap call FUNC(isUniqueMap)) then {
             //client map is unique, send him markers of this map
-            private _mapMarkers = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkers), _mapID], []];
-            private _mapMarkersProperties = missionNamespace getVariable [format ["%1_%2", QGVAR(allMapMarkersProperties), _mapID], []];
+            private _mapMarkers = missionNamespace getVariable [format ["%1_markers", _clientMap], []];
+            private _mapMarkersProperties = missionNamespace getVariable [format ["%1_markersProperties", _clientMap], []];
             _newClientMap = _clientMap;
             _mapData = [_mapMarkers, _mapMarkersProperties];
         } else {

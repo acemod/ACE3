@@ -35,7 +35,7 @@ if (_closeNum == 1) then {
         if (GVAR(enableUniqueMaps) && {time > 0}) then {
             //delete global marker and create local - unique for this map
             deleteMarker _marker;
-            private _newMarker = createMarkerLocal [format ["%1_%2", _marker, GVAR(currentMapID)], [0,0,0]];
+            private _newMarker = createMarkerLocal [format ["%1_%2", _marker, GVAR(currentMap)], [0,0,0]];
             [_newMarker, _data] call FUNC(setMarkerLocal);
 
             GVAR(currentMapMarkers) pushBack _newMarker;

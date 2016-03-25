@@ -30,9 +30,8 @@ if (_currentMap != "" && {_newMap != ""}) then {
         GVAR(currentMapMarkers) = _allMapMarkers;
         GVAR(currentMapMarkersProperties) = _allMapMarkersProperties;
 
-        private _newMapID = _newMap call FUNC(getMapID);
-        if (GVAR(currentMapID) != _newMapID) then {
-            GVAR(currentMapID) = _newMapID;
+        if (GVAR(currentMap) != _newMap) then {
+            GVAR(currentMap) = _newMap;
             ACE_player unlinkItem _currentMap;
             ACE_player linkItem _newMap;
         };
