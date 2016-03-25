@@ -14,4 +14,4 @@
 
 params ["_item"];
 
-(_item find "ACE_map_") >= 0
+((toLower _item) find "ace_map_") == 0
