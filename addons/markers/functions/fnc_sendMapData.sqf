@@ -25,8 +25,10 @@ if (GVAR(enableUniqueMaps)) then {
     if (_clientMap != "" && {_clientMap call FUNC(isMap)}) then {
         if (_clientMap call FUNC(isUniqueMap)) then {
             //client map is unique, send him markers of this map
-            private _mapMarkers = missionNamespace getVariable [format ["%1_markers", _clientMap], []];
-            private _mapMarkersProperties = missionNamespace getVariable [format ["%1_markersProperties", _clientMap], []];
+            private _mapMarkers = GVAR(mapNamespace) getVariable (format ["%1_markers", _clientMap]);
+            if (isNil "_mapMarkers") then {_mapMarkers = [];};
+            private _mapMarkersProperties = GVAR(mapNamespace) getVariable (format ["%1_markersProperties", _clientMap]);
+            if (isNil "_mapMarkersProperties") then {_mapMarkersProperties = [];};
             _newClientMap = _clientMap;
             _mapData = [_mapMarkers, _mapMarkersProperties];
         } else {
@@ -37,7 +39,12 @@ if (GVAR(enableUniqueMaps)) then {
 } else {
     //if uniqueMaps disabled send data of all markers (JIP support)
     _newClientMap = _clientMap;
-    _mapData = [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[])];
+
+    private _allMapMarkers = GVAR(mapNamespace) getVariable QGVAR(allMapMarkers);
+    if (isNil "_allMapMarkers") then {_allMapMarkers = [];};
+    private _allMapMarkersProperties = GVAR(mapNamespace) getVariable QGVAR(allMapMarkersProperties);
+    if (isNil "_allMapMarkersProperties") then {_allMapMarkersProperties = [];};
+    _mapData = [_allMapMarkers, _allMapMarkersProperties];
 };
 
 if (isMultiplayer) then {

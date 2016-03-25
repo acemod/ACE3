@@ -49,6 +49,8 @@ if (isNil QGVAR(MarkerColorsCache)) then {
     };
 };
 
+GVAR(mapNamespace) = [] call CBA_fnc_createNamespace;
+
 GVAR(mapDisplaysWithDrawEHs) = [];
 GVAR(currentMarkerPosition) = [];
 GVAR(currentMarkerAngle) = 0;

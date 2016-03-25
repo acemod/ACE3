@@ -27,8 +27,10 @@ if (GVAR(enableUniqueMaps) && {time == 0} && {_marker in allMapMarkers}) then {
 
 // save properties on server machine for JIP, marker editing ready
 if (isMultiplayer && {isServer}) then {
-    private _allMapMarkers = GETGVAR(allMapMarkers,[]);
-    private _allMapMarkersProperties = GETGVAR(allMapMarkersProperties,[]);
+    private _allMapMarkers = GVAR(mapNamespace) getVariable QGVAR(allMapMarkers);
+    if (isNil "_allMapMarkers") then {_allMapMarkers = [];};
+    private _allMapMarkersProperties = GVAR(mapNamespace) getVariable QGVAR(allMapMarkersProperties);
+    if (isNil "_allMapMarkersProperties") then {_allMapMarkersProperties = [];};
 
     private _index = _allMapMarkers find _marker;
 
@@ -40,6 +42,6 @@ if (isMultiplayer && {isServer}) then {
         _allMapMarkersProperties set [_index, _data];
     };
 
-    GVAR(allMapMarkers) = _allMapMarkers;
-    GVAR(allMapMarkersProperties) = _allMapMarkersProperties;
+    GVAR(mapNamespace) setVariable [QGVAR(allMapMarkers), _allMapMarkers];
+    GVAR(mapNamespace) setVariable [QGVAR(allMapMarkersProperties), _allMapMarkersProperties];
 };

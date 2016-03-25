@@ -14,13 +14,15 @@
 
 if (!isServer || {!GVAR(enableUniqueMaps)}) exitWith {""};
 
-private _registeredMaps = missionNamespace getVariable [QGVAR(registeredMaps), []];
+private _registeredMaps = GVAR(mapNamespace) getVariable QGVAR(registeredMaps);
+if (isNil "_registeredMaps") then {_registeredMaps = [];};
+
 private _newMapID = count _registeredMaps + 1;
 
 if (_newMapID > 999) exitWith {""};
 
 private _map = format ["ACE_map_%1", _newMapID];
 _registeredMaps pushBack _map;
-missionNamespace setVariable [QGVAR(registeredMaps), _registeredMaps];
+GVAR(mapNamespace) setVariable [QGVAR(registeredMaps), _registeredMaps];
 
 _map

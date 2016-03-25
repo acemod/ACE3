@@ -23,8 +23,10 @@ _mapData params ["_newMarkers", "_deletedMarkers"];
 //can't update markers data if map is not unique
 if (!(_map call FUNC(isUniqueMap))) exitWith {};
 
-private _mapMarkers = missionNamespace getVariable [format ["%1_markers", _map], []];
-private _mapMarkersProperties = missionNamespace getVariable [format ["%1_markersProperties", _map], []];
+private _mapMarkers = GVAR(mapNamespace) getVariable (format ["%1_markers", _map]);
+if (isNil "_mapMarkers") then {_mapMarkers = [];};
+private _mapMarkersProperties = GVAR(mapNamespace) getVariable (format ["%1_markersProperties", _map]);
+if (isNil "_mapMarkersProperties") then {_mapMarkersProperties = [];};
 
 {
     _x params ["_marker", "_data"];
@@ -47,5 +49,5 @@ private _mapMarkersProperties = missionNamespace getVariable [format ["%1_marker
     };
 } forEach _deletedMarkers;
 
-missionNamespace setVariable [format ["%1_markers", _map], _mapMarkers];
-missionNamespace setVariable [format ["%1_markersProperties", _map], _mapMarkersProperties];
+GVAR(mapNamespace) setVariable [format ["%1_markers", _map], _mapMarkers];
+GVAR(mapNamespace) setVariable [format ["%1_markersProperties", _map], _mapMarkersProperties];
