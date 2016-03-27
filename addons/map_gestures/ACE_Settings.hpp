@@ -45,15 +45,15 @@ class ACE_Settings {
         value[] = {1, 0.88, 0, 0.7};
     };
     class GVAR(GroupColorConfigurations) {
-        displayName = CSTRING(GroupColorConfigurations_displayName);
-        description = CSTRING(GroupColorConfigurations_description);
+        displayName = CSTRING(groupColorConfigurations_displayName);
+        description = CSTRING(groupColorConfigurations_description);
         category = CSTRING(mapGestures_category);
         typeName = "ARRAY";
         value[] = {};
     };
     class GVAR(GroupColorConfigurationMapping) {
-        displayName = CSTRING(GroupColorConfigurationMapping_displayName);
-        description = CSTRING(GroupColorConfigurationMapping_description);
+        displayName = CSTRING(groupColorConfigurationMapping_displayName);
+        description = CSTRING(groupColorConfigurationMapping_description);
         category = CSTRING(mapGestures_category);
         typeName = "ARRAY";
         value[] = {{}, {}};
