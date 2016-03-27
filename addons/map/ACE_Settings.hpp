@@ -9,7 +9,7 @@ class ACE_Settings {
     class GVAR(BFT_Enabled) {
         category = CSTRING(Module_DisplayName);
         value = 0;
-        typeName = "BOOL";d
+        typeName = "BOOL";
         displayName = CSTRING(BFT_Enabled_DisplayName);
         description = CSTRING(BFT_Enabled_Description);
     };
