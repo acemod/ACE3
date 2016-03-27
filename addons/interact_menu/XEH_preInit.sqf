@@ -4,6 +4,9 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
+
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
     if (GVAR(cursorKeepCentered)) then {
@@ -42,6 +45,13 @@ GVAR(expanded) = false;
 
 GVAR(startHoverTime) = ACE_diagTime;
 GVAR(expandedTime) = ACE_diagTime;
+
+// reset on mission load
+addMissionEventHandler ["Loaded", {
+    GVAR(startHoverTime) = 0;
+    GVAR(expandedTime) = 0;
+}];
+
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 

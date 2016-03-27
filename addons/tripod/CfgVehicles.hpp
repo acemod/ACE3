@@ -42,7 +42,7 @@ class CfgVehicles {
         };
 
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,1,0};
+        EGVAR(dragging,dragPosition)[] = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
         scope = 2;
         displayName = CSTRING(DisplayName);

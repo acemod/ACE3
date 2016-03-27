@@ -82,12 +82,16 @@
             <French>Annuler la creusée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
-            <English>+Ctrl rotate</English>
-            <German>+Strg drehen</German>
-            <Polish>+Ctrl obrót</Polish>
-            <Italian>+Ctrl ruota</Italian>
-            <Spanish>+Ctrl rotar</Spanish>
-            <French>+Ctrl rotation</French>
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>

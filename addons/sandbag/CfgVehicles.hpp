@@ -52,7 +52,7 @@ class CfgVehicles {
 
         author = ECSTRING(common,ACETeam);
         scope = 2;
-        side = -1;
+        side = 3;
         model = PATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
         vehicleClass = "ACE_Logistics_Items";

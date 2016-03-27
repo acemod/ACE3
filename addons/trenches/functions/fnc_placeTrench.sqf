@@ -95,10 +95,4 @@ _unit setVariable [QGVAR(Dig), [
     {[_this select 0] call FUNC(placeConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
-_unit setVariable [QGVAR(Cancel), [
-    _unit, "zoomtemp",
-    {GVAR(digPFH) != -1},
-    {[_this select 0] call FUNC(placeCancel)}
-] call EFUNC(common,addActionEventHandler)];
-
 _unit setVariable [QGVAR(isPlacing), true, true];
