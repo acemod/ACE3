@@ -119,7 +119,7 @@ class CfgVehicles {
         accuracy = 1000;
         autocenter = 0;
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
+        EGVAR(dragging,dragPosition)[] = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;

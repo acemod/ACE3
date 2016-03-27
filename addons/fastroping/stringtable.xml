@@ -57,5 +57,9 @@
             <French>Equipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
         </Key>
+        <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
+            <English>LET UNITS FAST ROPE</English>
+            <German>EINHEITEN ABSEILEN LASSEN</German>
+        </Key>
     </Package>
 </Project>
