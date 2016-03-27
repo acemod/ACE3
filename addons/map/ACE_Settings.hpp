@@ -9,7 +9,7 @@ class ACE_Settings {
     class GVAR(BFT_Enabled) {
         category = CSTRING(Module_DisplayName);
         value = 0;
-        typeName = "BOOL";
+        typeName = "BOOL";d
         displayName = CSTRING(BFT_Enabled_DisplayName);
         description = CSTRING(BFT_Enabled_Description);
     };
@@ -62,7 +62,7 @@ class ACE_Settings {
         displayName = CSTRING(MapShowCursorCoordinates_DisplayName);
         description = CSTRING(MapShowCursorCoordinates_Description);
     };
-    class GVAR(DefaultChannel) {
+    class GVAR(defaultChannel) {
         category = CSTRING(Module_DisplayName);
         value = -1;
         typeName = "SCALAR";
