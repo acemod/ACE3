@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: The colour of the tag (valid colours are black, red, green and blue) <STRING>
+ * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  *
  * Return Value:
  * None
@@ -17,11 +17,11 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_color"];
+params ["_unit", "_colorTexture"];
 
 private _startPosASL = eyePos _unit;
 private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
 private _cameraDir = (AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff _cameraPosASL;
 private _endPosASL = _startPosASL vectorAdd (_cameraDir vectorMultiply 2.5);
 
-[_unit, _startPosASL, _endPosASL, _color] call FUNC(tagDirection);
+[_unit, _startPosASL, _endPosASL, _colorTexture] call FUNC(tagDirection);

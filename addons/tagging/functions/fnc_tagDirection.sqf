@@ -6,7 +6,7 @@
  * 0: Unit
  * 1: Start position ASL <ARRAY>
  * 2: End position ASL <ARRAY>
- * 3: The colour of the tag (valid colours are black, red, green and blue) <STRING>
+ * 3: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  *
  * Return Value:
  * Sucess <BOOLEAN>
@@ -19,7 +19,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_startPosASL", "_endPosASL", "_color"];
+params ["_unit", "_startPosASL", "_endPosASL", "_colorTexture"];
 
 // Check for intersections below the unit
 private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit, objNull, true, 1, "GEOM", "FIRE"];
@@ -102,6 +102,6 @@ _unit playActionNow "PutDown";
 
     // Tell the server to create the tag and handle its destruction
     ["createTag", _this] call EFUNC(common,serverEvent);
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _color, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _colorTexture, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
 
 true

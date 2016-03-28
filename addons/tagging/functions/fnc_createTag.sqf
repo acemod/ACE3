@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Position ASL <ARRAY>
  * 1: Vector dir and up <ARRAY>
- * 2: Colour of the tag (valid colours are black, red, green and blue) <STRING>
+ * 2: Colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  * 3: Object it should be tied too <OBJECT>
  *
  * Return Value:
@@ -19,15 +19,21 @@
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object"];
-TRACE_4("createTag:", _tagPosASL, _vectorDirAndUp, _color, _object);
+params ["_tagPosASL", "_vectorDirAndUp", "_colorTexture", "_object"];
+TRACE_4("createTag:",_tagPosASL,_vectorDirAndUp,_colorTexture,_object);
 
-if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag colour.", _color);
+private _customTexture = [true, false] select (_colorTexture find ".paa" == -1);
+
+if (!_customTexture && {!((toLower _colorTexture) in ["black", "red", "green", "blue"])}) exitWith {
+    ACE_LOGERROR_1("%1 is not a valid tag colour.",_colorTexture);
 };
 
 private _tag = "UserTexture1m_F" createVehicle [0,0,0];
-_tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + _color + '\' + str (floor (random 3)) + '.paa'];
+if (!_customTexture) then {
+    _tag setObjectTextureGlobal [0, "\z\ace\addons\tagging\UI\tags\" + _colorTexture + "\" + str (floor (random 3)) + ".paa"];
+} else {
+    _tag setObjectTextureGlobal [0, _colorTexture];
+};
 _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
