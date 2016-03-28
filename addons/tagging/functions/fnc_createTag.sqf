@@ -1,5 +1,5 @@
 /*
- * Author: BaerMitUmlaut and esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * 3: Object it should be tied too <OBJECT>
  *
  * Return Value:
- * None
+ * Tag created <BOOL>
  *
  * Example:
  * [positionASL, vectorDirAndUp, "black", object] call ace_tagging_fnc_createTag
@@ -19,25 +19,20 @@
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_colorTexture", "_object"];
-TRACE_4("createTag:",_tagPosASL,_vectorDirAndUp,_colorTexture,_object);
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object"];
+TRACE_4("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object);
 
-private _customTexture = [true, false] select (_colorTexture find ".paa" == -1);
-
-if (!_customTexture && {!((toLower _colorTexture) in ["black", "red", "green", "blue"])}) exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag colour.",_colorTexture);
+if (_texture == "") exitWith {
+    ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
+    false
 };
 
 private _tag = "UserTexture1m_F" createVehicle [0,0,0];
-if (!_customTexture) then {
-    _tag setObjectTextureGlobal [0, "\z\ace\addons\tagging\UI\tags\" + _colorTexture + "\" + str (floor (random 3)) + ".paa"];
-} else {
-    _tag setObjectTextureGlobal [0, _colorTexture];
-};
+_tag setObjectTextureGlobal [0, _texture];
 _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
-if (isNull _object) exitWith {};
+if (isNull _object) exitWith {true};
 
 // If the tag is applied to an object, handle its destruction
 _object setVariable [QGVAR(testVar), true];
@@ -75,3 +70,5 @@ GVAR(tagsToTest) pushBack [_tag, _tagPosASL, _vectorDirAndUp];
 if (!GVAR(testingThread)) then {
     call FUNC(tagTestingThread);
 };
+
+true
