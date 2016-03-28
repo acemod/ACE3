@@ -590,6 +590,7 @@ class ACE_Medical_Advanced {
                 class Medium {
                     name = CSTRING(Wounds_VelocityWound_Medium);
                     minDamage = 0.3;
+                    maxDamage = 0.85;
                     bleedingRate = 0.05;
                 };
                 class Large {

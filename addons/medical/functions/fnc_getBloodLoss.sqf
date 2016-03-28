@@ -24,7 +24,7 @@ params ["_unit"];
 _totalBloodLoss = 0;
 
 private _bloodLossMuliplier = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
-_bloodLossMuliplier = _bloodLossMuliplier apply { 1 + _x };  
+_bloodLossMuliplier = _bloodLossMuliplier apply { 1 + _x^2 };  
 
 // Advanced medical bloodloss handling
 if (GVAR(level) >= 2) then {
