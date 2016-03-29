@@ -19,3 +19,5 @@
 #define VERSION_CONFIG_COMMON VERSION_CONFIG;\
     versionDesc = "ACE 3";\
     versionAct = QUOTE(call COMPILE_FILE(init_versionTooltip))
+
+#define DELAY_SETNAME 1
