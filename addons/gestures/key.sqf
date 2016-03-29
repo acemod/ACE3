@@ -25,7 +25,7 @@
 
     false
 } count [
-    ["stop", DIK_NUMPAD2],
+    ["freeze", DIK_NUMPAD2],
     ["cover", DIK_NUMPAD3],
     ["forward", DIK_NUMPAD4],
     ["regroup", DIK_NUMPAD5],

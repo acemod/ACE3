@@ -97,19 +97,6 @@
             <Portuguese>Apontar</Portuguese>
             <Italian>Puntare a</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureFreeze">
-            <English>Freeze</English>
-            <German>Keine Bewegung</German>
-            <Spanish>Alto</Spanish>
-            <Polish>Stać</Polish>
-            <Czech>Stát</Czech>
-            <French>Halte</French>
-            <Russian>Замереть</Russian>
-            <Hungarian>Állj</Hungarian>
-            <Portuguese>Alto</Portuguese>
-            <Italian>Fermi</Italian>
-        </Key>
-        <!-- STOP -->
         <Key ID="STR_ACE_Gestures_stop">
             <English>Stop</English>
             <French>Stop</French>
@@ -120,6 +107,19 @@
             <Czech>Stop</Czech>
             <Italian>Stop</Italian>
             <Spanish>Detenerse</Spanish>
+        </Key>
+        <!-- STOP -->
+        <Key ID="STR_ACE_Gestures_freeze">
+            <English>Freeze</English>
+            <German>Keine Bewegung</German>
+            <Spanish>Alto</Spanish>
+            <Polish>Stać</Polish>
+            <Czech>Stát</Czech>
+            <French>Halte</French>
+            <Russian>Замереть</Russian>
+            <Hungarian>Állj</Hungarian>
+            <Portuguese>Alto</Portuguese>
+            <Italian>Fermi</Italian>
         </Key>
         <!-- COVER -->
         <Key ID="STR_ACE_Gestures_cover">

@@ -46,10 +46,10 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.3;
                 };
-                class GVAR(Freeze) {
-                    displayName = CSTRING(BIgestureFreeze);
+                class GVAR(Stop) {
+                    displayName = CSTRING(stop);
                     condition = QUOTE(canStand _target);
-                    statement = QUOTE(_target playActionNow 'gestureFreeze';);
+                    statement = QUOTE(_target playActionNow 'gestureFreeze';); // BI animation - is actualls "stop" in all stances but prone
                     showDisabled = 1;
                     priority = 1.2;
                 };
@@ -67,10 +67,10 @@ class CfgVehicles {
                     showDisabled = 1;
                     priority = 1.8;
                 };
-                class GVAR(Stop) {
-                    displayName = CSTRING(stop);
+                class GVAR(Freeze) {
+                    displayName = CSTRING(freeze);
                     condition = QUOTE(canStand _target && GVAR(ReloadMutex));
-                    statement = QUOTE(QUOTE(QGVAR(stop)) call FUNC(playSignal));
+                    statement = QUOTE(QUOTE(QGVAR(freeze)) call FUNC(playSignal));
                     showDisabled = 1;
                     priority = 1.7;
                 };
