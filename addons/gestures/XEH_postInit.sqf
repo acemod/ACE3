@@ -5,14 +5,14 @@ if (!hasInterface) exitWith {};
 // reload mutex, you can't play signal while reloading
 GVAR(ReloadMutex) = true;
 
+// Add keybinds
 {
-    _x params ["_currentName", "_key", ["_vanillaKey", ""] ];
-
-    private _signalName = format [QGVAR(%1), _currentName];
+    _x params ["_currentName", "_key", ["_vanillaKey", false] ];
 
     // Don't add "ace_gestures_" prefix to BI gestures
-    if (_vanillaKey == "BI") then {
-        _signalName = _currentName;
+    private _signalName = _currentName;
+    if (!_vanillaKey) then {
+        _signalName = format [QGVAR(%1), _currentName];
     };
 
     private _code = compile format [QUOTE('%1' call FUNC(playSignal)), _signalName];
@@ -39,10 +39,10 @@ GVAR(ReloadMutex) = true;
     ["Point", 71], // Numpad 7
     ["Hold", 72], // Numpad 8
     ["Warning", 73], // Numpad 9
-    ["Go", -1, "BI"],
-    ["Advance", -1, "BI"],
-    ["Follow", -1, "BI"],
-    ["Up", -1, "BI"],
-    ["Stop", -1, "BI"],
-    ["CeaseFire", -1, "BI"]
+    ["Go", -1, true],
+    ["Advance", -1, true],
+    ["Follow", -1, true],
+    ["Up", -1, true],
+    ["Stop", -1, true],
+    ["CeaseFire", -1, true]
 ];
