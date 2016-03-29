@@ -4,7 +4,7 @@
  * detonate editor-placed explosives.
  *
  * Arguments:
- * 0: Explosives objects to detonate <ARRAY>
+ * 0: Explosives objects to detonate <OBJECT or ARRAY>
  * 1: Fuze delay (for each explosive; use negative number for random time up to value) <NUMBER> <OPTIONAL>
  *
  * Return Value:
@@ -18,10 +18,13 @@
  */
 #include "script_component.hpp"
 
-params ["_explosiveArr",["_fuzeTime",0]];
+params [["_explosiveArr", [], [[], objNull]], ["_fuzeTime", 0, [0]]];
 
-private _detTime;
+if (_explosiveArr isEqualType objNull) then {
+    _explosiveArr = [_explosiveArr];
+};
+
 {
-    _detTime = if (_fuzeTime < 0) then {random abs _fuzeTime} else {_fuzeTime};
+    private _detTime = if (_fuzeTime < 0) then {random abs _fuzeTime} else {_fuzeTime};
     [objNull, -1, [_x, _detTime]] call FUNC(detonateExplosive);
 } forEach _explosiveArr;
