@@ -586,6 +586,6 @@ class CfgMods {
     };
 };
 
-#include "CfgDependencies.hpp"
+#include "CfgSettings.hpp"
 #include "CfgModuleCategories.hpp"
 #include "CfgVehicleClasses.hpp"

@@ -1,3 +1,4 @@
+
 class CfgSettings {
     class CBA {
         class Versioning {

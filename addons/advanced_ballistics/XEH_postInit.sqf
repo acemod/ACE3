@@ -40,13 +40,13 @@ if (!hasInterface) exitWith {};
             ACE_LOGWARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [
-    ["RH_acc","ace_compat_rh_acc"],
-    ["RH_de_cfg","ace_compat_rh_de"],
-    ["RH_m4_cfg","ace_compat_rh_m4"],
-    ["RH_PDW","ace_compat_rh_pdw"],
-    ["RKSL_PMII","ace_compat_rksl_pm_ii"],
-    ["iansky_opt","ace_compat_sma3_iansky"],
-    ["R3F_Armes","ace_compat_r3f"]
+        ["RH_acc","ace_compat_rh_acc"],
+        ["RH_de_cfg","ace_compat_rh_de"],
+        ["RH_m4_cfg","ace_compat_rh_m4"],
+        ["RH_PDW","ace_compat_rh_pdw"],
+        ["RKSL_PMII","ace_compat_rksl_pm_ii"],
+        ["iansky_opt","ace_compat_sma3_iansky"],
+        ["R3F_Armes","ace_compat_r3f"]
     ];
 }] call EFUNC(common,addEventHandler);
 
