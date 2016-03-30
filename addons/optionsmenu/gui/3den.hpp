@@ -136,6 +136,8 @@ class GVAR(scalar): ctrlControlsGroupNoScrollbars {
             x = "(25+319) * pixelW";
             w = "150 * pixelW";
             h = "25 * pixelH";
+            onSetFocus = "_ctrl = _this select 0; _ctrl setVariable ['lastText', ctrlText (_this select 0)];";
+            onKillFocus = "_ctrl = _this select 0; if ((_ctrl getVariable ['lastText', '']) != (ctrlText _ctrl)) then {_ctrlGroup = ctrlParentControlsGroup _ctrl; (_ctrlGroup controlsGroupCtrl 1000) cbSetChecked true;};";
         };
     };
 };

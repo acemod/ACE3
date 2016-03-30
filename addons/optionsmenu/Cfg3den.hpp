@@ -30,7 +30,7 @@ class display3DEN {
             class Items {
                 items[] += {"ACE_Settings"}; // += must be used; you want to expand the array, not override it!
                 class ACE_Settings {
-                    text = "ACE Settings"; // Item text
+                    text = CSTRING(OpenConfigMenu); // Item text
                     // picture = "\z\ace\addons\common\data\icon_banana_ca.paa"; //Doesn't seem to work
                     items[] = {};
                 };

@@ -26,17 +26,14 @@ TRACE_1("",_categoryLocalized);
 private _currentSavedSettings = QUOTE(ADDON) get3DENMissionAttribute "ACE_MissionSettings";
 if (isNil "_currentSavedSettings") then { ACE_LOGERROR("_currentSavedSettings nil"); };
 
-//ToDo: Maybe flesh out this sub-catogies stuff later
-// for now just seperate general from clientSettable settings
 private _subCatagoriesNames = [];
 private _subCatagoriesSettings = [];
 {
     if ((_x select 8) == _categoryLocalized) then {
 
         private _xSubCatName = "";
-        if (_x select 2) then {
-            _xSubCatName = localize LSTRING(clientSetting);
-            TRACE_1("test1",_xSubCatName);
+        if (_x select 2) then { //Client Settable, put into own category at bottom
+            _xSubCatName = localize LSTRING(3den_clientSetting);
         } else {
             _xSubCatName = getText (configFile >> "ACE_Settings" >> (_x select 0) >> "subCategory");
             if (_xSubCatName == "") then {
@@ -47,7 +44,7 @@ private _subCatagoriesSettings = [];
                 };
             };
             if (_xSubCatName == "") then { //Non Conforming var name (eg. "mySetting" instead of "ace_x_y")
-                _xSubCatName = localize LSTRING(Uncategorized);
+                _xSubCatName = localize LSTRING(3den_Uncategorized);
             };
         };
         private _subCatIndex = _subCatagoriesNames find _xSubCatName;
@@ -59,8 +56,8 @@ private _subCatagoriesSettings = [];
     };
 } forEach EGVAR(common,settings);
 
-//Move client to bottom of list (if present):
-private _clientSettingsIndex = _subCatagoriesNames find (localize LSTRING(clientSetting));
+//Move Client Settable to bottom of list (if present):
+private _clientSettingsIndex = _subCatagoriesNames find (localize LSTRING(3den_clientSetting));
 if (_clientSettingsIndex != -1) then {
     _subCatagoriesNames pushBack (_subCatagoriesNames deleteAt _clientSettingsIndex);
     _subCatagoriesSettings pushBack (_subCatagoriesSettings deleteAt _clientSettingsIndex);
@@ -74,7 +71,7 @@ private _title = _display displayCtrl 200;
 private _categoriesBase = _display displayCtrl 201;
 
 if (_categoryLocalized == "") then {
-    _categoryLocalized = localize LSTRING(Uncategorized);
+    _categoryLocalized = localize LSTRING(3den_Uncategorized);
 };
 _title ctrlSetText format ["ACE Settings: %1", _categoryLocalized];
 

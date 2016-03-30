@@ -15,14 +15,11 @@ GVAR(serverSideValues) = [];
 GVAR(categories) = [];
 GVAR(currentCategorySelection) = 0;
 
-recomp = {
-#include "XEH_PREP.hpp"
-};
 
 [] spawn {
     sleep 0.1; //is3den command has problems at pre-init, need spawn/sleep
-    if (!is3DEN) exitWith {};
-    ACE_LOGINFO("3den detected, localizing settings");
+    if ((!is3DEN) || {!hasInterface}) exitWith {};
+    ACE_LOGINFO("3den detected, setting up ace_settings menu");
 
     //Post-init won't run in 3den, so we need to directly call some settings funcs normally run at common: post-init
     call EFUNC(common,loadSettingsFromProfile);
@@ -47,22 +44,26 @@ recomp = {
 
     private _menuItemsArray = getArray (configfile >> "Display3DEN" >> "Controls" >> "MenuStrip" >> "Items" >> "items");
     private _aceIndex = _menuItemsArray find "ACE_Settings";
-
     TRACE_1("",_aceIndex);
+
+    if (_aceIndex == -1) exitWith {ERROR("ACE_Settings not found in menu strip");};
 
     {
         private _displayName = _x;
         if (_displayName == "") then {
-            _displayName = localize LSTRING(Uncategorized);
+            _displayName = localize LSTRING(3den_Uncategorized);
         };
         private _addedIndex = (_3denDisplay displayCtrl 120) menuAdd [[_aceIndex], _displayName];
         TRACE_3("Adding",_x,_displayName,_addedIndex);
-        (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(call recomp; _this call FUNC(3den_openSettingsDisplay);)];
+        (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(_this call FUNC(3den_openSettingsDisplay);)];
         (_3denDisplay displayCtrl 120) menuSetValue [[_aceIndex,_addedIndex], _forEachIndex];
     } forEach GVAR(categories);
 
-    private _addedIndex = (_3denDisplay displayCtrl 120) menuAdd [[_aceIndex], format [" - %1 - ", localize LSTRING(Export)]];
-    (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(call recomp; _this call FUNC(3den_exportToClipboard);)];
+    private _addedIndex = (_3denDisplay displayCtrl 120) menuAdd [[_aceIndex], format [" - %1 - ", localize LSTRING(3den_resetSettings)]];
+    (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(_this call FUNC(3den_resetSettings);)];
 
+    private _addedIndex = (_3denDisplay displayCtrl 120) menuAdd [[_aceIndex], format [" - %1 - ", localize LSTRING(Export)]];
+    (_3denDisplay displayCtrl 120) menuSetAction [[_aceIndex,_addedIndex], QUOTE(_this call FUNC(3den_exportToClipboard);)];
 };
+
 ADDON = true;

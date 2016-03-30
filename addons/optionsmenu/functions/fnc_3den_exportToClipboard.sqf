@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Export all mission configs to a format for ace_server.pbo
+ * Export all 3DEN mission configs to a format for ace_server.pbo
  *
  * Arguments:
  * None
