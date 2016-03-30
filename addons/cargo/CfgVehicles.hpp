@@ -254,8 +254,7 @@ class CfgVehicles {
     };
 
     class Heli_Attack_02_base_F: Helicopter_Base_F {
-        GVAR(space) = 0;
-        GVAR(hasCargo) = 0;
+        GVAR(space) = 4;
     };
 
     // jets
