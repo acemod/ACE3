@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
@@ -7,6 +7,7 @@
             <Polish>Wyposaż FRIES</Polish>
             <French>Equiper le FRIES</French>
             <Spanish>Equipar FRIES</Spanish>
+            <Italian>Equipaggia la FRIES</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
@@ -14,6 +15,7 @@
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
             <French>Equipe les hélicoptères compatibles avec un Module Fast Rope Insertion Extraction System.</French>
             <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
+            <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Exstraction System</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
@@ -21,6 +23,7 @@
             <Polish>Przygotuj system zjazdu na linach</Polish>
             <French>Préparer le système de corde lisse</French>
             <Spanish>Preparar el sistema fast roping</Spanish>
+            <Italian>Prepara le corde</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -28,6 +31,7 @@
             <Polish>Wypuść liny</Polish>
             <French>Déployer les cordes</French>
             <Spanish>Desplegar cuerdas</Spanish>
+            <Italian>Srotola le corde</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -35,6 +39,7 @@
             <Polish>Zjedź na linie</Polish>
             <French>Descendre à la corde</French>
             <Spanish>Descender por la cuerda</Spanish>
+            <Italian>Scendi sulla corda</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -42,6 +47,7 @@
             <Polish>Odetnij liny</Polish>
             <French>Détacher les cordes</French>
             <Spanish>Cortar cuerdas</Spanish>
+            <Italian>Taglia le corde</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
@@ -49,6 +55,7 @@
             <Polish>Wyposaż helikopter w FRIES</Polish>
             <French>Equiper l'hélicoptère avec le FRIED</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
+            <Italian>Equipaggia l'elicottero con FRIES</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
@@ -56,10 +63,12 @@
             <Polish>Wyposaża wybrany helikopter w zestaw Fast Rope Insertion Extraction System</Polish>
             <French>Equipe l'hélicoptère sélectionné avec un Fast Rope Insertion Extraction System</French>
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción Extracción Fast Rope</Spanish>
+            <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
             <German>EINHEITEN ABSEILEN LASSEN</German>
+            <Italian>SCENDI DALLE CORDE</Italian>
         </Key>
     </Package>
 </Project>

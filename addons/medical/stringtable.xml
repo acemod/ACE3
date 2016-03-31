@@ -55,6 +55,7 @@
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
             <French>Injecter de l'adénosine</French>
+            <Italian>Inietta andenosina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -254,6 +255,7 @@
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
             <French>Injection d'adénosine...</French>
+            <Italian>Inietto l'andenosina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -969,6 +971,7 @@
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
             <French>Auto-injécteur d'adénosine</French>
+            <Italian>Autoiniettore di adenosina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -976,6 +979,7 @@
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
             <French>Utilisé pour contrer les effets de l'adrénaline</French>
+            <Italian>Usato per contrastare l'effetto dell'epinefrina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -983,6 +987,7 @@
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
             <French>Un composé utilisé pour contrer les effets de l'adrénaline</French>
+            <Italian>Medicamento usato per contrastare l'effetto dell'epinefrina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -3199,6 +3204,7 @@
             <Polish>Podstawowe ustawienia medyczne</Polish>
             <Spanish>Ajustes médicos básicos [ACE]</Spanish>
             <French>Réglages du système médical basic [ACE]</French>
+            <Italian>Impostazioni Mediche Di Base [ACE]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3314,6 +3320,7 @@
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Autoriser l'adrénaline</French>
+            <Italian>Permette epinefrina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
@@ -3321,6 +3328,7 @@
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
             <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
+            <Italian>Chi può usare l'epinefrina per la cura completa? (solo per sistema medico di base)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3412,6 +3420,7 @@
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Position des adrénalines</French>
+            <Italian>Ubicazione epinefrina</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
@@ -3419,6 +3428,7 @@
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
             <French>Où peuvent être utilisées les adrénalines ? (Médical basique)</French>
+            <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3664,6 +3674,7 @@
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
             <French>Configure les réglages de traitement dans ACE médical basique</French>
+            <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
@@ -4125,12 +4136,14 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
             <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
+            <Italian>Ritarda il cessate il fuoco dell'IA quando il giocatore è svenuto per motivi medici.</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
             <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Italian>Ritarda il cessate il fuoco dell'IA quando si è svenuti</Italian>
         </Key>
     </Package>
 </Project>
