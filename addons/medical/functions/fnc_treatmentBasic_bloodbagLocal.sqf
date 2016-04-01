@@ -15,7 +15,7 @@
 #include "script_component.hpp"
 #define BLOODBAGHEAL 70
 
-PARAMS_2(_target,_treatmentClassname);
+params ["_target", "_treatmentClassname"];
 
 private ["_blood", "_bloodAdded"];
 

@@ -17,10 +17,10 @@
  */
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["", "", "_unit"];
 TRACE_1("params",_unit);
+
+if (!local _unit) exitWith {};
 
 private ["_attachedList"];
 
@@ -29,9 +29,14 @@ if ((count _attachedList) == 0) exitWith {};
 
 (_attachedList select 0) params ["_xObject"];
 if (!isNull _xObject) then {
+    TRACE_1("detaching and moving attached light",_xObject);
     detach _xObject;
     _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
-    [{deleteVehicle (_this select 0)}, [_xObject], 2] call EFUNC(common,waitAndExecute);
+    [{
+        params ["_detachedLight"];
+        TRACE_1("delayed delete",_detachedLight);
+        deleteVehicle _detachedLight;
+    }, [_xObject], 2] call EFUNC(common,waitAndExecute);
     (_attachedList select 0) set [0, objNull];
 };
 

@@ -41,7 +41,7 @@ class ACE_Settings {
         displayName = CSTRING(consumeItem_ToolKit_name);
         description = CSTRING(consumeItem_ToolKit_description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
@@ -57,8 +57,24 @@ class ACE_Settings {
         displayName = CSTRING(engineerSetting_fullRepair_name);
         description = CSTRING(engineerSetting_fullRepair_description);
         typeName = "SCALAR";
-        value = 3;
+        value = 2;
         values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
+    };
+    class GVAR(addSpareParts) {
+        displayName = CSTRING(addSpareParts_name);
+        description = CSTRING(addSpareParts_description);
+        typeName = "BOOL";
+        value = 1;
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
+    };
+    class GVAR(wheelRepairRequiredItems) {
+        displayName = CSTRING(wheelRepairRequiredItems_name);
+        description = CSTRING(wheelRepairRequiredItems_description);
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"None", "ToolKit"};
+        _values[] = {{}, {"ToolKit"}};
     };
 };

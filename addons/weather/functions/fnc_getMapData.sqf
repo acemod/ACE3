@@ -1,6 +1,5 @@
 /*
  * Author: Ruthberg, esteldunedain
- *
  * Get the weather data for the current map
  *
  * Argument:
@@ -8,6 +7,11 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [] call ace_weather_fnc_getMapData
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

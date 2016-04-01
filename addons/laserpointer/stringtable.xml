@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laserpointer">
         <Key ID="STR_ACE_Laserpointer_red">
@@ -6,7 +6,7 @@
             <French>Pointeur laser (rouge)</French>
             <German>Laserpointer (rot)</German>
             <Russian>Лазерный прицел (красный)</Russian>
-            <Czech>Laserové ukazovátko (červené)</Czech>
+            <Czech>Laserové ukazovátko (Červené)</Czech>
             <Polish>Wskaźnik laserowy (czerwony)</Polish>
             <Hungarian>Lézer-pointer (piros)</Hungarian>
             <Spanish>Puntero láser (rojo)</Spanish>
@@ -18,7 +18,7 @@
             <French>Pointeur laser (vert)</French>
             <German>Laserpointer (grün)</German>
             <Russian>Лазерный прицел (зелёный)</Russian>
-            <Czech>Laserové ukazovátko (zelené)</Czech>
+            <Czech>Laserové ukazovátko (Zelené)</Czech>
             <Polish>Wskaźnik laserowy (zielony)</Polish>
             <Hungarian>Lézer-pointer (zöld)</Hungarian>
             <Spanish>Puntero láser (verde)</Spanish>

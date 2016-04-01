@@ -184,14 +184,14 @@ class GVAR(interface) {
                     colorBorder[] = {0,0,0,0};
                     colorBackground[] = {COL_BACK};
                     colorSelect[] = {
-                        "profilenamespace getvariable ['GUI_BCG_RGB_R',0.77]",
-                        "profilenamespace getvariable ['GUI_BCG_RGB_G',0.51]",
-                        "profilenamespace getvariable ['GUI_BCG_RGB_B',0.08]",
+                        "profilenamespace getVariable ['GUI_BCG_RGB_R',0.77]",
+                        "profilenamespace getVariable ['GUI_BCG_RGB_G',0.51]",
+                        "profilenamespace getVariable ['GUI_BCG_RGB_B',0.08]",
                         1
                     };
                     multiselectEnabled = 0;
+                    maxHistoryDelay = 10e10;
                     onTreeDblClick = QUOTE([ARR_2('onTreeDblClick',_this)] call FUNC(handleInterface));
-                    onTreeSelChanged = QUOTE([ARR_2('onTreeSelChanged',_this)] call FUNC(handleInterface));
                 };
                 class unitFrame: RscFrame {
                     x = 0;

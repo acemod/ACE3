@@ -10,9 +10,12 @@
                 priority = 2; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
+                exceptions[] = {"isNotOnLadder"}; \
             }; \
         }; \
     };
+
+class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
     class ACE_Module;
@@ -24,6 +27,7 @@ class CfgVehicles {
         function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(Common,ACETeam);
         class Arguments {
@@ -90,6 +94,21 @@ class CfgVehicles {
                     class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
                 };
             };
+            class addSpareParts {
+                displayName = CSTRING(addSpareParts_name);
+                description = CSTRING(addSpareParts_description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class wheelRepairRequiredItems {
+                displayName = CSTRING(wheelRepairRequiredItems_name);
+                description = CSTRING(wheelRepairRequiredItems_description);
+                typeName = "NUMBER";
+                class values {
+                    class None { name = "None"; value = 0;  default = 1;};
+                    class ToolKit { name = "ToolKit"; value = 1; };
+                };
+            };
         };
         class ModuleDescription {
             description = CSTRING(moduleDescription);
@@ -111,7 +130,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignEngineerRole_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignEngineerRole_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -155,7 +174,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairVehicle_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairVehicle_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -187,7 +206,7 @@ class CfgVehicles {
         function = QFUNC(moduleAssignRepairFacility);
         class Arguments {
             class EnableList {
-                displayName = CSTRING(AssignRepairFacility_EnableList_DisplayName);
+                displayName = CSTRING(EnableList_DisplayName);
                 description = CSTRING(AssignRepairFacility_EnableList_Description);
                 defaultValue = "";
                 typeName = "STRING";
@@ -214,19 +233,57 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class ACE_moduleAddSpareParts: Module_F {
+        scope = 2;
+        displayName = CSTRING(AddSpareParts_Module_DisplayName);
+        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        category = "ACE_Logistics";
+        function = QFUNC(moduleAddSpareParts);
+        functionPriority = 10;
+        isGlobal = 0;
+        isTriggerActivated = 0;
+        isDisposable = 0;
+        author = ECSTRING(common,ACETeam);
+        class Arguments {
+            class List {
+                displayName = CSTRING(EnableList_DisplayName);
+                description = CSTRING(AddSpareParts_List_Description);
+                defaultValue = "";
+                typeName = "STRING";
+            };
+            class Part {
+                displayName = CSTRING(AddSpareParts_Part_DisplayName);
+                description = CSTRING(AddSpareParts_Part_Description);
+                typeName = "STRING";
+                class values {
+                    class Wheel {
+                        name = CSTRING(SpareWheel);
+                        value = "ACE_Wheel";
+                        default = 1;
+                    };
+                    class Track {
+                        name = CSTRING(SpareTrack);
+                        value = "ACE_Track";
+                    };
+                };
+            };
+            class Amount {
+                displayName = CSTRING(AddSpareParts_Amount_DisplayName);
+                description = CSTRING(AddSpareParts_Amount_Description);
+                typeName = "NUMBER";
+                defaultValue = 1;
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(AddSpareParts_Module_Description);
+            sync[] = {};
+        };
+    };
 
 
     class LandVehicle;
     class Car: LandVehicle {
         MACRO_REPAIRVEHICLE
-        class ACE_Cargo {
-            class Cargo {
-                class ACE_Wheel {
-                    type = "ACE_Wheel";
-                    amount = 1;
-                };
-            };
-        };
     };
 
     class Tank: LandVehicle {
@@ -247,9 +304,12 @@ class CfgVehicles {
         MACRO_REPAIRVEHICLE
     };
 
-    class thingX;
-    class ACE_RepairItem_Base: thingX {
-        XEH_ENABLED;
+    class ThingX;
+    class ACE_RepairItem_Base: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
@@ -287,7 +347,7 @@ class CfgVehicles {
 
     class Helicopter_Base_H;
     class Heli_Transport_04_base_F: Helicopter_Base_H {
-        GVAR(hitpointGroups[]) = { {"HitEngine", {"HitEngine1", "HitEngine2"}}, {"Glass_1_hitpoint", {"Glass_2_hitpoint", "Glass_3_hitpoint", "Glass_4_hitpoint", "Glass_5_hitpoint", "Glass_6_hitpoint", "Glass_7_hitpoint", "Glass_8_hitpoint", "Glass_9_hitpoint", "Glass_10_hitpoint", "Glass_11_hitpoint", "Glass_12_hitpoint", "Glass_13_hitpoint", "Glass_14_hitpoint", "Glass_15_hitpoint", "Glass_16_hitpoint", "Glass_17_hitpoint", "Glass_18_hitpoint", "Glass_19_hitpoint", "Glass_20_hitpoint"}} };
+        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}}, {"Glass_1_hitpoint", {"Glass_2_hitpoint", "Glass_3_hitpoint", "Glass_4_hitpoint", "Glass_5_hitpoint", "Glass_6_hitpoint", "Glass_7_hitpoint", "Glass_8_hitpoint", "Glass_9_hitpoint", "Glass_10_hitpoint", "Glass_11_hitpoint", "Glass_12_hitpoint", "Glass_13_hitpoint", "Glass_14_hitpoint", "Glass_15_hitpoint", "Glass_16_hitpoint", "Glass_17_hitpoint", "Glass_18_hitpoint", "Glass_19_hitpoint", "Glass_20_hitpoint"}} };
     };
     class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
         GVAR(canRepair) = 1;
@@ -300,15 +360,29 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
+    class Heli_Transport_02_base_F;
+    class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
+        GVAR(hitpointPositions)[] = {{"HitVRotor", {-1,-9.4,1.8}}, {"HitHRotor", {0,1.8,1.3}}};
+    };
+
+    class Helicopter_Base_F;
+    class Heli_light_03_base_F: Helicopter_Base_F {
+        GVAR(hitpointPositions)[] = {{"HitVRotor", {-0.5,-5.55,1.2}}, {"HitHRotor", {0,1.8,1.5}}};
+    };
+
     class B_APC_Tracked_01_base_F;
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         GVAR(canRepair) = 1;
         transportRepair = 0;
     };
 
+    class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
+        GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
+    };
+
     class Car_F;
     class Offroad_01_base_F: Car_F {
-        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2"}} };
+        GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2"}} };
     };
     class Offroad_01_repair_base_F: Offroad_01_base_F {
         GVAR(canRepair) = 1;
@@ -316,7 +390,7 @@ class CfgVehicles {
     };
 
     class MRAP_01_base_F: Car_F {
-        GVAR(hitpointGroups[]) = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
+        GVAR(hitpointGroups)[] = { {"HitGlass1", {"HitGlass2", "HitGlass3", "HitGlass4", "HitGlass5", "HitGlass6"}} };
     };
 
     class B_Truck_01_mover_F;
@@ -347,6 +421,9 @@ class CfgVehicles {
 
     class Quadbike_01_base_F;
     class B_Quadbike_01_F: Quadbike_01_base_F {
-        GVAR(hitpointPositions[]) = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
+        GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
+    };
+    class Hatchback_01_base_F: Car_F {
+        GVAR(hitpointPositions)[] = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
     };
 };

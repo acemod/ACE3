@@ -41,7 +41,7 @@ if (_newModes isEqualTo []) then {
 };
 
 // Update camera in case of change
-if !(isNil QGVAR(camera)) then {
+if (GVAR(isSet)) then {
     [] call FUNC(transitionCamera);
 };
 

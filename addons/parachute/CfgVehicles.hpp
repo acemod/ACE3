@@ -20,7 +20,6 @@ class CfgVehicles {
                  showDisabled = 0;
                  priority = 2.9;
                  icon = QUOTE(PATHTOF(UI\cut_ca.paa));
-                 hotkey = "C"; // Did this realy Work?
              };
          };
      };
@@ -94,7 +93,7 @@ class CfgVehicles {
         displayName = CSTRING(ReserveParachute);
         scope = 1;
         mass = 70;
-        ParachuteClass = "NonSteerable_Parachute_F";
+        ParachuteClass = "Steerable_Parachute_F";
         ace_reserveParachute = "";
         ace_hasReserveParachute = 0;
     };

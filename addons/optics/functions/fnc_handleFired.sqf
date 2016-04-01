@@ -2,26 +2,18 @@
  * Original Author: Taosenai
  * Adapted By: KoffeinFlummi, commy2
  *
- * Animates the scope when firing.
+ * Animates the scope when firing. Called from the unified fired EH only for the local player.
  *
  * Arguments:
- * 0: Unit (Object)
- * 1: Weapon (String)
- * 2: Muzzle (String)
- * 3: Mode (String)
- * 4: Ammo (Object)
- * 5: Magazine (String)
- * 6: Projectile (Object)
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weapon"];
-
-_unit = _this select 0;
-_weapon = _this select 1;
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 // check if compatible scope is used
 private "_display";

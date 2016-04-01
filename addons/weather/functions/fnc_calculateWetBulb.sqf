@@ -1,36 +1,35 @@
 /*
  * Author: Ruthberg
- *
  * Calculates wet bulb based on temperature and relative humidity
  *
  * Arguments:
- * 0: temperature - degrees celcius <NUMBER>
+ * 0: temperature - degrees celsius <NUMBER>
  * 1: pressure - hPa <NUMBER>
  * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
- * 0: wet bulb <NUMBER>
+ * wet bulb <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * [0, 1020, 0.5] call ace_weather_fnc_calculateWetBulb
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_es", "_e", "_eDiff", "_eGuessPrev", "_cTempDelta", "_twGuess", "_eguess"];
-
-PARAMS_3(_temperature,_pressure,_relativeHumidity);
+params ["_temperature", "_pressure", "_relativeHumidity"];
 
 // Source: http://cosmoquest.org/forum/showthread.php?155366-Calculating-Wet-Bulb-Temperature-from-RH-amp-Dry-Bulb
-_es = 6.112 * exp((17.67 * _temperature) / (_temperature + 243.5));
-_e = _es * _relativeHumidity;
-_eDiff = _es - _e;
-_eGuessPrev = _es;
-_cTempDelta = 3.3145;
-_twGuess = _temperature;
+private _es = 6.112 * exp((17.67 * _temperature) / (_temperature + 243.5));
+private _e = _es * _relativeHumidity;
+private _eDiff = _es - _e;
+private _eGuessPrev = _es;
+private _cTempDelta = 3.3145;
+private _twGuess = _temperature;
 
 for "_j" from 1 to 50 do {
     _twGuess = _twGuess - _cTempDelta;
-    _eguess = 6.112 * exp((17.67 * _twGuess) / (_twGuess + 243.5));
+    private _eguess = 6.112 * exp((17.67 * _twGuess) / (_twGuess + 243.5));
     _eguess = _eguess - (_pressure * (_temperature - _twGuess) * 0.00066 * (1 + (0.00115 * _twGuess)));
     _eDiff = _eguess - _e;
     if (abs(_eDiff) <= 0.001) exitWith {};

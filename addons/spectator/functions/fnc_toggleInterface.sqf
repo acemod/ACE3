@@ -43,7 +43,7 @@ if (GVAR(showMap)) then {
 
     // Centre map on camera/unit upon opening
     if (_toggleMap) then {
-        _map ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
+        _map ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(freeCamera)] select (GVAR(camMode) == 0)];
         ctrlMapAnimCommit _map;
     };
 } else {

@@ -17,8 +17,6 @@ private ["_dir", "_params", "_control", "_button", "_screenPos", "_shiftKey", "_
 
 _control   = _this select 0;
 _dir       = _this select 1;
-diag_log "Scroll";
-diag_log _this;
 _handled   = false;
 
 _handled = true;

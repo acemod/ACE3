@@ -21,7 +21,7 @@ if !(GVAR(showIcons)) exitWith {};
 private ["_refPoint","_drawVehicles","_leader","_color","_txt","_unit"];
 
 // Draw groups unless leader is within distance
-_refPoint = [GVAR(camera),GVAR(camUnit)] select (GVAR(camMode) > 0);
+_refPoint = [GVAR(freeCamera),GVAR(camUnit)] select (GVAR(camMode) > 0);
 _drawVehicles = [];
 {
     _leader = leader _x;

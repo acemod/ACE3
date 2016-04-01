@@ -20,4 +20,6 @@
 params ["_unit", "_target", "_hitPoint"];
 TRACE_3("params",_unit,_target,_hitPoint);
 
+if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
 alive _target && {_target getHitPointDamage _hitPoint < 1}

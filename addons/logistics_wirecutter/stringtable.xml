@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_Wirecutter">
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
@@ -38,16 +38,16 @@
             <Russian>Разрезать забор</Russian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
-            <English>Cutting Fences / Wires ...</English>
-            <German>Zaun / Draht schneiden ...</German>
-            <Spanish>Cortando alambrado / cables ...</Spanish>
-            <Polish>Przecinanie płotu / drutów ...</Polish>
-            <Czech>Přestřihávám plot / dráty ...</Czech>
-            <French>Cisaille l'obstacle ...</French>
-            <Portuguese>Cortando Cerca / Arame ...</Portuguese>
-            <Italian>Sto tagliando ...</Italian>
-            <Hungarian>Drótok elvágása ...</Hungarian>
-            <Russian>Разрезаем забор / провода ...</Russian>
+            <English>Cutting Fences / Wires...</English>
+            <German>Zaun / Draht schneiden...</German>
+            <Spanish>Cortando alambrado / cables...</Spanish>
+            <Polish>Przecinanie płotu / drutów...</Polish>
+            <Czech>Přestřihávám plot / dráty...</Czech>
+            <French>Cisaille l'obstacle...</French>
+            <Portuguese>Cortando Cerca / Arame...</Portuguese>
+            <Italian>Sto tagliando...</Italian>
+            <Hungarian>Drótok elvágása...</Hungarian>
+            <Russian>Разрезаем забор / провода...</Russian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>

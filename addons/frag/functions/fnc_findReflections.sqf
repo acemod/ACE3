@@ -3,6 +3,7 @@
 
 private ["_split", "_radi", "_params", "_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_indirectHitRange", "_indirectHit", "_distanceCount", "_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_rand", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
 
+BEGIN_COUNTER(fnc_findReflections);
 _params = _this select 0;
 _pos = _params select 0;
 _explosiveInfo = _params select 1;
@@ -29,7 +30,7 @@ if(_zIndex < 5) then {
     };
     for "_i" from 0 to _radi do {
         _test = true;
-        _vec = [1, ((_i*_split)+_rand) mod 360, _zAng] call cba_fnc_polar2vect;
+        _vec = [1, ((_i*_split)+_rand) mod 360, _zAng] call CBA_fnc_polar2vect;
         for "_x" from 1 to _distanceCount do {
             _testPos = _pos vectorAdd (_vec vectorMultiply _x);
             // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
@@ -122,5 +123,6 @@ if(_zIndex < 5) then {
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
     [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
+END_COUNTER(fnc_findReflections);

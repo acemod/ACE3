@@ -3,7 +3,7 @@
  * Handles player getting into new vehicle.  Loads PFEG for mortar display if it is a mortar.
  *
  * Arguments:
- * 0:Player <OBJECT>
+ * 0: Player <OBJECT>
  * 1: New Vehicle <OBJECT>
  *
  * Return Value:
@@ -16,18 +16,30 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_player,_newVehicle);
-
-private["_tubeWeaponName" ,"_fireModes", "_lastFireMode"];
+params ["_player", "_newVehicle"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 
-_tubeWeaponName = (weapons _newVehicle) select 0;
-_fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
+// Run magazine handling initialization if enabled
+if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])) then {
+    // Make sure that mortar init is executed after settings init
+    [{
+        params ["_mortar"];
+        if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
+            //wait for proper turret locality change
+            [{
+                ["initMortar", [_this], [_this]] call EFUNC(common,globalEvent);
+            }, _mortar, 0.05] call EFUNC(common,waitAndExecute);
+        };
+    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
+};
+
+private _tubeWeaponName = (weapons _newVehicle) select 0;
+private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
 //Restore last firemode:
-_lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
+private _lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
 if (_lastFireMode != -1) then {
     _player action ["SwitchWeapon", _newVehicle, _player, _lastFireMode];
 };
@@ -49,7 +61,7 @@ if (_lastFireMode != -1) then {
 
         //Save firemode on vehicle:
         _mortarVeh setVariable [QGVAR(lastFireMode), _currentChargeMode];
-        
+
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
             closeDialog 0;

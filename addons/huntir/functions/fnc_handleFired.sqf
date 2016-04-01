@@ -1,16 +1,10 @@
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
- * Handles HuntIR projectiles
+ * Handles HuntIR projectiles. Called from the unified fired EH for all CAManBase.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
@@ -19,9 +13,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 if (_ammo != "F_HuntIR") exitWith {};
+
+if (!hasInterface) exitWith {};
 
 [{
     params ["_projectile"];

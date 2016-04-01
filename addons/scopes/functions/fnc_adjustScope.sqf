@@ -44,7 +44,8 @@ _maxVertical = getArray (_opticConfig >> "ACE_ScopeAdjust_Vertical");
 _maxHorizontal = getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal");
 
 if ((count _maxHorizontal < 2) || (count _maxVertical < 2)) exitWith {false};
-if ((_verticalIncrement == 0) && (_horizontalIncrement == 0)) exitWith {false};
+if ((_verticalIncrement == 0) && (_turretAndDirection in [ELEVATION_UP, ELEVATION_DOWN])) exitWith {false};
+if ((_horizontalIncrement == 0) && (_turretAndDirection in [WINDAGE_UP, WINDAGE_DOWN])) exitWith {false};
 
 _zeroing   = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];

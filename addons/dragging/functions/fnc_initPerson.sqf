@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Initialize variables for drag or carryable persons. Called from init EH.
  *
  * Argument:
@@ -8,6 +7,9 @@
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [player] call ace_dragging_fnc_initPerson;
  *
  * Public: No
  */

@@ -22,3 +22,29 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 
+class CfgMovesBasic {
+    class ManActions {
+        GVAR(GestureMountMuzzle) = QGVAR(GestureMountMuzzle);
+        GVAR(GestureDismountMuzzle) = QGVAR(GestureDismountMuzzle);
+    };
+
+    class Actions {
+        class NoActions: ManActions {
+            GVAR(GestureMountMuzzle)[] = {QGVAR(GestureMountMuzzle), "Gesture"};
+            GVAR(GestureDismountMuzzle)[] = {QGVAR(GestureDismountMuzzle), "Gesture"};
+        };
+    };
+};
+
+class CfgGesturesMale {
+    class States {
+        class GestureMountMuzzle;
+        class GVAR(GestureMountMuzzle): GestureMountMuzzle {
+            speed = 0.3;
+        };
+        class GestureDismountMuzzle;
+        class GVAR(GestureDismountMuzzle): GestureDismountMuzzle {
+            speed = 0.3;
+        };
+    };
+};

@@ -13,6 +13,7 @@
  */
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
 params ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;
@@ -92,7 +93,7 @@ GVAR(no_cams) sort true;
     GVAR(pos) = getPosVisual GVAR(huntIR);
 
     if ((!dialog) || (count GVAR(no_cams) == 0) || ((GVAR(pos) select 2) <= 20)) exitWith {
-        [_this select 1] call cba_fnc_removePerFrameHandler;
+        [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         GVAR(stop) = true;
 

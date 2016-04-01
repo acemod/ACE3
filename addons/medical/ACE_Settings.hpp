@@ -11,6 +11,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "Normal", "Advanced"};
     };
+    class GVAR(increaseTrainingInLocations) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
+        description = CSTRING(MedicalSettings_increaseTrainingInLocations_Description);
+        value = 0;
+        typeName = "BOOL";
+    };
     class GVAR(enableFor) {
         category = CSTRING(Category_Medical);
         value = 0;
@@ -126,6 +133,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class GVAR(medicSetting_basicEpi) {
+        category = CSTRING(Category_Medical);
+        typeName = "SCALAR";
+        value = 1;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
+    };
     class GVAR(medicSetting_PAK) {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
@@ -150,17 +163,23 @@ class ACE_Settings {
         value = 0;
         values[] = {"No", "Yes"};
     };
+    class GVAR(useLocation_basicEpi) {
+        category = CSTRING(Category_Medical);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
+    };
     class GVAR(useLocation_PAK) {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
         value = 3;
-        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useLocation_SurgicalKit) {
         category = CSTRING(Category_Medical);
         typeName = "SCALAR";
         value = 2;
-        values[] = {"Anywhere", "Medical vehicles", "Medical facility", "vehicle & facility", "Disabled"};
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useCondition_PAK) {
         category = CSTRING(Category_Medical);
@@ -220,7 +239,15 @@ class ACE_Settings {
         description = CSTRING(menuTypeDescription);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(useSelection)/*, CSTRING(useRadial)*/};
-        // isClientSettable = 1;
+        values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
+        isClientSettable = 1;
+    };
+
+    class GVAR(delayUnconCaptive) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_delayUnconCaptive_DisplayName);
+        description = CSTRING(MedicalSettings_delayUnconCaptive_Description);
+        typeName = "SCALAR";
+        value = 3;
     };
 };

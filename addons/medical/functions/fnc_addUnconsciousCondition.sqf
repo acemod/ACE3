@@ -3,23 +3,22 @@
  * Adds new condition for the unconscious state. Conditions are not actively checked for units unless unit is in unconscious state.
  *
  * Arguments:
- * 0: Code, should return a boolean <CODE>
+ * 0-N: Code, should return a boolean <CODE>
  *
  * ReturnValue:
- * <NIL>
+ * None
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };
-if (typeName _this == typeName []) then {
+if (_this isEqualType []) then {
     {
-        if (typeName _x == typeName {}) then {
+        if (_x isEqualType {}) then {
             GVAR(unconsciousConditions) pushback _x;
         };
-    }foreach _this;
+    } foreach _this;
 };

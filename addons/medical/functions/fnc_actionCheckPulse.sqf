@@ -7,15 +7,16 @@
 * 1: The patient <OBJECT>
 *
 * Return Value:
-* NONE
+* None
 *
 * Public: No
 */
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_selectionName"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-[[_caller, _target, _selectionName], QUOTE(DFUNC(actionCheckPulseLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+params ["_caller","_target", "_selectionName"];
+if (local _target) then {
+    ["actionCheckPulseLocal", [_caller, _target, _selectionName]] call EFUNC(common,localEvent);
+} else {
+    ["actionCheckPulseLocal", _target, [_caller, _target, _selectionName]] call EFUNC(common,targetEvent);
+};

@@ -20,7 +20,7 @@ params ["_caller", "_target"];
 private "_display";
 #define DEFUALTPATH "\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa"
 //Sanity Checks
-if (_caller != ACE_player) exitwith {ERROR("Player isn't caller?");};
+if (_caller != ACE_player) exitWith {ERROR("Player isn't caller?");};
 if (!([_player, _target] call FUNC(canPlayerDisarmUnit))) exitWith {ERROR("Can't Disarm Unit");};
 if (dialog) then {ERROR("Dialog open when trying to open disarm dialog"); closeDialog 0;};
 
@@ -72,7 +72,7 @@ GVAR(disarmTarget) = _target;
         _icon = format [DEFUALTPATH, toLower (rank _target)];
         if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
-        _playerName ctrlSetText ([GVAR(disarmTarget)] call EFUNC(common,getName));
+        _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));
 
         //Clear both inventory lists:
         lbClear _groundContainer;
