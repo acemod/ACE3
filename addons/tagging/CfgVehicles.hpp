@@ -3,7 +3,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Equipment {
-                class ACE_tagWallBlack {
+                class ACE_TagBlack {
                     displayName = CSTRING(TagBlack);
                     condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'black' call FUNC(getTexture))] call FUNC(tag));
@@ -11,19 +11,19 @@ class CfgVehicles {
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlack.paa));
                 };
-                class ACE_tagWallRed: ACE_tagWallBlack {
+                class ACE_TagRed: ACE_TagBlack {
                     displayName = CSTRING(TagRed);
                     condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'red' call FUNC(getTexture))] call FUNC(tag));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingRed.paa));
                 };
-                class ACE_tagWallGreen: ACE_tagWallBlack {
+                class ACE_TagGreen: ACE_TagBlack {
                     displayName = CSTRING(TagGreen);
                     condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'green' call FUNC(getTexture))] call FUNC(tag));
                     icon = QUOTE(PATHTOF(UI\icons\iconTaggingGreen.paa));
                 };
-                class ACE_tagWallBlue: ACE_tagWallBlack {
+                class ACE_TagBlue: ACE_TagBlack {
                     displayName = CSTRING(TagBlue);
                     condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'blue' call FUNC(getTexture))] call FUNC(tag));
