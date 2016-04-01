@@ -7,6 +7,7 @@
             <Spanish>Marcar en negro</Spanish>
             <Polish>Oznakuj na czarno</Polish>
             <French>Tag noir</French>
+            <Italian>Marca nero</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_TagRed">
             <English>Tag red</English>
@@ -14,6 +15,7 @@
             <Spanish>Marcar en rojo</Spanish>
             <Polish>Oznakuj na czerwono</Polish>
             <French>Tag rouge</French>
+            <Italian>Marca rosso</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_TagGreen">
             <English>Tag green</English>
@@ -21,6 +23,7 @@
             <Spanish>Marcar en verde</Spanish>
             <Polish>Oznakuj na zielono</Polish>
             <French>Tag vert</French>
+            <Italian>Marca verde</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_TagBLue">
             <English>Tag blue</English>
@@ -28,6 +31,7 @@
             <Spanish>Marcar en azul</Spanish>
             <Polish>Oznakuj na niebiesko</Polish>
             <French>Tag bleu</French>
+            <Italian>Marca blu</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -35,6 +39,7 @@
             <Spanish>Pintura negra</Spanish>
             <Polish>Czarna farba w sprayu</Polish>
             <French>Peinture pulvérisée noire</French>
+            <Italian>Bomboletta spray nera</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -42,6 +47,7 @@
             <Spanish>Pintura roja</Spanish>
             <Polish>Czerwona farba w sprayu</Polish>
             <French>Peinture pulvérisée rouge</French>
+            <Italian>Bomboletta spray rossa</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -49,6 +55,7 @@
             <Spanish>Pintura verde</Spanish>
             <Polish>Zielona farba w sprayu</Polish>
             <French>Peinture pulvérisée verte</French>
+            <Italian>Bomboletta spray verde</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -56,6 +63,7 @@
             <Spanish>Pintura azul</Spanish>
             <Polish>Niebieska farba w sprayu</Polish>
             <French>Peinture pulvérisée bleue</French>
+            <Italian>Bomboletta spray blu</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -63,6 +71,7 @@
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
             <French>Un spray de peinture pour taguer les murs.</French>
+            <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
         </Key>
     </Package>
 </Project>
