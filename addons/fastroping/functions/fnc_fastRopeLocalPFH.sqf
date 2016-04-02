@@ -39,7 +39,7 @@ if (animationState _unit != "ACE_FastRoping") exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
-    playSound "ACE_Fastroping_Rope";
+    playSound QGVAR(Rope);
 }, 1, [_unit]] call CBA_fnc_addPerFrameHandler;
 
 //End of fast rope
@@ -47,7 +47,7 @@ if (isNull attachedTo _unit) exitWith {
     [_unit, "", 2] call EFUNC(common,doAnimation);
     _unit setVectorUp [0, 0, 1];
 
-    playSound "ACE_Fastroping_Thud";
+    playSound QGVAR(Thud);
 
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
