@@ -29,7 +29,7 @@ if (_map in ["takistan", "zargabad", "mountains_acr"]) then { _lat = 35; _altitu
 if (_map in ["shapur_baf", "provingGrounds_pmc"]) then { _lat = 35; _altitude = 100; };
 if (_map in ["fallujah"]) then { _lat = 33; _altitude = 0; };
 if (_map in ["fata"]) then { _lat = 33; _altitude = 1347; };
-if (_map in ["abbottabad"]) then { _lat = 34; _altitude = 0; };
+if (_map in ["abbottabad"]) then { _lat = 34; _altitude = 1256; };
 if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
 if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
 if (_map in ["bornholm"]) then { _lat = 55; _altitude = 0; };
