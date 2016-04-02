@@ -52,10 +52,4 @@ _unit setVariable [QGVAR(Deploy), [
     {[_this select 0] call FUNC(deployConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
-_unit setVariable [QGVAR(Cancel), [
-    _unit, "zoomtemp",
-    {GVAR(deployPFH) != -1},
-    {[_this select 0] call FUNC(deployCancel)}
-] call EFUNC(common,addActionEventHandler)];
-
 _unit setVariable [QGVAR(isDeploying), true, true];

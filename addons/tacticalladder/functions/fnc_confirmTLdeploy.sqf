@@ -34,7 +34,6 @@ detach _ladder;
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
 GVAR(ladder) = objNull;
 

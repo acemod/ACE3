@@ -152,6 +152,8 @@ if (isServer) then {
 ["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
 ["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
 ["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
+["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
+["setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
@@ -441,6 +443,11 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 //////////////////////////////////////////////////
 // Add various canInteractWith conditions
 //////////////////////////////////////////////////
+
+["isNotDead", {
+    params ["_unit", "_target"];
+    alive _unit
+}] call FUNC(addCanInteractWithCondition);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 

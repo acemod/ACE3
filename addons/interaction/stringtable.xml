@@ -711,6 +711,7 @@
             <Polish>Włącz</Polish>
             <Spanish>Encender</Spanish>
             <French>Allumer</French>
+            <Italian>Accendi</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -718,6 +719,7 @@
             <Polish>Wyłącz</Polish>
             <Spanish>Apagar</Spanish>
             <French>Eteindre</French>
+            <Italian>Spegni</Italian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>

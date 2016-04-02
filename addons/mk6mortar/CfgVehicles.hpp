@@ -139,8 +139,7 @@ class CfgVehicles {
     class ACE_Box_82mm_Mo_HE: Box_NATO_AmmoOrd_F {
         displayName = CSTRING(HEBox_DisplayName);
         author = ECSTRING(common,ACETeam);
-        transportMaxWeapons = 4;
-        transportMaxMagazines = 8;
+        maximumLoad = 400;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,8);
         };
@@ -161,7 +160,7 @@ class CfgVehicles {
     };
     class ACE_Box_82mm_Mo_Combo: ACE_Box_82mm_Mo_HE {
         displayName = CSTRING(ComboBox_DisplayName);
-        transportMaxMagazines = 48;
+        maximumLoad = 2400;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,32);
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
