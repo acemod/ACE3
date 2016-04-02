@@ -19,7 +19,7 @@ private ["_weaponIndex", "_adjustment", "_layer", "_display", "_zeroing", "_vert
 
 disableSerialization;
 
-_weaponIndex = [ACE_player, currentWeapon ACE_player] call EFUNC(common,getWeaponIndex);
+_weaponIndex = [ACE_player, currentWeapon ACE_player] call CFUNC(getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _adjustment = ACE_player getVariable QGVAR(Adjustment);

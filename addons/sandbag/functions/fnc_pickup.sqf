@@ -36,5 +36,5 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
         _x setPosASL (getPosASL _x);
     } count (_unit nearObjects ["ACE_SandbagObject", 5]);
 
-    [_unit, "ACE_Sandbag_empty"] call EFUNC(common,addToInventory);
-}, [_unit, _sandbag], 1.5] call EFUNC(common,waitAndExecute);
+    [_unit, "ACE_Sandbag_empty"] call CFUNC(addToInventory);
+}, [_unit, _sandbag], 1.5] call CFUNC(waitAndExecute);

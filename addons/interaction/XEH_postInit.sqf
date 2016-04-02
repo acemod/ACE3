@@ -3,30 +3,30 @@
 
 ACE_Modifier = 0;
 
-["pardon", {(_this select 0) addRating -rating (_this select 0)}] call EFUNC(common,addEventHandler);
+["pardon", {(_this select 0) addRating -rating (_this select 0)}] call CFUNC(addEventHandler);
 
 ["getDown", {
     params ["_target"];
 
     _target setUnitPos "DOWN";
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 ["sendAway", {
     params ["_unit", "_position"];
 
     _unit setUnitPos "AUTO";
     _unit doMove _position;
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 ["lampTurnOn", {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 ["lampTurnOff", {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 if (!hasInterface) exitWith {};
 
@@ -38,14 +38,14 @@ GVAR(isOpeningDoor) = false;
     if (_unit == ACE_player) then {
         addCamShake [4, 0.5, 5];
         private _message = parseText format ([["%1 &gt;", localize LSTRING(YouWereTappedRight)], ["&lt; %1", localize LSTRING(YouWereTappedLeft)]] select (_shoulderNum == 1));
-        [_message] call EFUNC(common,displayTextStructured);
+        [_message] call CFUNC(displayTextStructured);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // add keybinds
 ["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if (GVAR(isOpeningDoor) || {[MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor) select 1 == ''}) exitWith {false};
 
@@ -63,7 +63,7 @@ GVAR(isOpeningDoor) = false;
 
 ["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
@@ -77,5 +77,5 @@ GVAR(isOpeningDoor) = false;
 {false},
 [20, [true, false, false]], false] call CBA_fnc_addKeybind;
 
-["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
-["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSwimming", {!underwater (_this select 0)}] call CFUNC(addCanInteractWithCondition);
+["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call CFUNC(addCanInteractWithCondition);

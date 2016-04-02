@@ -32,7 +32,7 @@ GVAR(WindInfo) = false;
 ["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, ACE_player, []] call CFUNC(canInteractWith)) exitWith {false};
 
     // Statement
     [] call FUNC(displayWindInfo);
@@ -78,4 +78,4 @@ simulWeatherSync;
         END_COUNTER(weatherPFEH);
     }, 1, []] call CBA_fnc_addPerFrameHandler;
 
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

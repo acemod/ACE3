@@ -18,4 +18,4 @@
 
 params ["_module"];
 
-[_module, QGVAR(disableNVGsWithSights), "disableNVGsWithSights"] call EFUNC(common,readSettingFromModule);
+[_module, QGVAR(disableNVGsWithSights), "disableNVGsWithSights"] call CFUNC(readSettingFromModule);

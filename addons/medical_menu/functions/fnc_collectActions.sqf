@@ -42,7 +42,7 @@ GVAR(actionsBasic) = [_configBasic] call _fnc_compileActionsLevel;
 GVAR(actionsAdvanced) = [_configAdvanced] call _fnc_compileActionsLevel;
 
 //Manually add the drag actions, if dragging exists.
-if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
+if (["ace_dragging"] call CFUNC(isModLoaded)) then {
     _condition = {
         (ACE_player != GVAR(INTERACTION_TARGET)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call EFUNC(dragging,canDrag)}
     };

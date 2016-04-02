@@ -27,14 +27,14 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
 if !(local _unit) exitWith {
-    [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
+    [[_unit, _set], QFUNC(stageSpectator), _unit] call CFUNC(execRemoteFnc);
 };
 
 // Prevent unit falling into water
 _unit enableSimulation !_set;
 
 // Move to/from group as appropriate
-[_unit, _set, QGVAR(isStaged), side group _unit] call EFUNC(common,switchToGroupSide);
+[_unit, _set, QGVAR(isStaged), side group _unit] call CFUNC(switchToGroupSide);
 
 if (_set) then {
     // Position should only be saved on first entry
@@ -43,14 +43,14 @@ if (_set) then {
     };
 
     // Ghosts can't talk
-    [_unit, QGVAR(isStaged)] call EFUNC(common,hideUnit);
-    [_unit, QGVAR(isStaged)] call EFUNC(common,muteUnit);
+    [_unit, QGVAR(isStaged)] call CFUNC(hideUnit);
+    [_unit, QGVAR(isStaged)] call CFUNC(muteUnit);
 
     _unit setPos (markerPos QGVAR(respawn));
 } else {
     // Physical beings can talk
-    [_unit, QGVAR(isStaged)] call EFUNC(common,unhideUnit);
-    [_unit, QGVAR(isStaged)] call EFUNC(common,unmuteUnit);
+    [_unit, QGVAR(isStaged)] call CFUNC(unhideUnit);
+    [_unit, QGVAR(isStaged)] call CFUNC(unmuteUnit);
 
     _unit setPosATL GVAR(oldPos);
 };
@@ -64,7 +64,7 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
 
-    ["spectatorStaged",[_set]] call EFUNC(common,localEvent);
+    ["spectatorStaged",[_set]] call CFUNC(localEvent);
 };
 
 //BandAid for #2677 - if player in unitList weird before being staged, weird things can happen
@@ -73,6 +73,6 @@ if ((player in GVAR(unitList)) || {ACE_player in GVAR(unitList)}) then {
     if (!(isNull (findDisplay 12249))) then {//If display is open now, close it and restart
         ACE_LOGWARNING("Player in unitList, call ace_spectator_fnc_stageSpectator before ace_spectator_fnc_setSpectator");
         ["fixWeirdList", true] call FUNC(interrupt);
-        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call EFUNC(common,execNextFrame);
+        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call CFUNC(execNextFrame);
     };
 };

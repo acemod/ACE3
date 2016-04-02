@@ -21,7 +21,7 @@ if (_weapon == "") exitWith {
 };
 
 if (_weapon == primaryWeapon _unit) exitWith {
-    if (_unit call EFUNC(common,isPlayer)) then {
+    if (_unit call CFUNC(isPlayer)) then {
         private _isRunning = _velocity > 4;
 
         [
@@ -36,7 +36,7 @@ if (_weapon == primaryWeapon _unit) exitWith {
 };
 
 if (_weapon == handgunWeapon _unit) exitWith {
-    if (_unit call EFUNC(common,isPlayer)) then {
+    if (_unit call CFUNC(isPlayer)) then {
         [
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
             "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",

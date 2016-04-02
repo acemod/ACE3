@@ -13,17 +13,17 @@ GVAR(ParsedTextCached) = [];
     if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);
 
 ["SettingsInitialized", {
     //Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
     addMissionEventHandler ["Draw3D", DFUNC(render)];
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 //Add Actions to Houses:
-["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
+["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CFUNC(addEventHandler);
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
@@ -51,17 +51,17 @@ GVAR(ParsedTextCached) = [];
 
     GVAR(actionSelected) = false;
     [GVAR(openedMenuType), false] call FUNC(keyUp);
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);
 
 // disable firing while the interact menu is is is opened
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CFUNC(addEventHandler);
 
 // background options
 ["interactMenuOpened", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call CFUNC(blurScreen);};
     if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 ["interactMenuClosed", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call CFUNC(blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

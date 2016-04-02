@@ -23,6 +23,6 @@ params ["_logic", "", "_activated"];
 
 if (!_activated) exitWith {};
 
-[_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enable), "enable"] call CFUNC(readSettingFromModule);
 
 ACE_LOGINFO("Cargo Module Initialized.");

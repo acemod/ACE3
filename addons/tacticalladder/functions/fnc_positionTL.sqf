@@ -21,13 +21,13 @@
 params ["_unit", "_ladder"];
 
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Ladder", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Ladder", true] call CFUNC(statusEffect_set);
 
 {
     _ladder animate [_x, 0];
 } count __ANIMS;
 
-[_unit, "amovpercmstpslowwrfldnon_player_idlesteady03", 2] call EFUNC(common,doAnimation);
+[_unit, "amovpercmstpslowwrfldnon_player_idlesteady03", 2] call CFUNC(doAnimation);
 
 _ladder attachTo [_unit, [0, 0.75, 0], ""]; // Position ladder in front of player
 
@@ -49,4 +49,4 @@ _unit setVariable [QGVAR(Deploy), [
     _unit, "DefaultAction",
     {!isNull GVAR(ladder)},
     {[_this select 0, GVAR(ladder)] call FUNC(confirmTLdeploy)}
-] call EFUNC(common,addActionEventHandler)];
+] call CFUNC(addActionEventHandler)];

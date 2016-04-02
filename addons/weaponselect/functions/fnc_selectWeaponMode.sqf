@@ -29,8 +29,8 @@ if (_weapon in (_unit getVariable [QEGVAR(safemode,safedWeapons), []])) exitWith
     [_unit, _weapon, _weapon] call EFUNC(safemode,unlockSafety);
 };
 
-private _muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);
-private _modes = [_weapon] call EFUNC(common,getWeaponModes);
+private _muzzles = [_weapon] call CFUNC(getWeaponMuzzles);
+private _modes = [_weapon] call CFUNC(getWeaponModes);
 
 private _index = (_modes find currentWeaponMode _unit) + 1;
 

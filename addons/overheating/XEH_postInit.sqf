@@ -21,7 +21,7 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
 
     if !([ACE_player] call FUNC(canUnjam)) exitWith {false};
@@ -39,9 +39,9 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
 ["SettingsInitialized", {
     // Register fire event handler
-    ["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+    ["firedPlayer", DFUNC(firedEH)] call CFUNC(addEventHandler);
     // Only add eh to non local players if dispersion is enabled
     if (GVAR(overheatingDispersion)) then {
-        ["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+        ["firedPlayerNonLocal", DFUNC(firedEH)] call CFUNC(addEventHandler);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

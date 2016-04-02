@@ -58,7 +58,7 @@ if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
                 false
             };
         }, {}
-    ] call EFUNC(common,addActionEventHandler)];
+    ] call CFUNC(addActionEventHandler)];
 };
 
 if (_muzzle isEqualType "") then {
@@ -70,4 +70,4 @@ if (_muzzle isEqualType "") then {
 
 // show info box
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize LSTRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);
+[localize LSTRING(PutOnSafety), _picture] call CFUNC(displayTextPicture);

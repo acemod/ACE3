@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
     [{
         _this call FUNC(treatment);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CFUNC(execNextFrame);
 };
 
 if !(_target isKindOf "CAManBase") exitWith {false};
@@ -148,9 +148,9 @@ if (_target getVariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAni
 
 if (_caller != _target && {vehicle _target == _target} && {_patientAnim != ""}) then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, _patientAnim, 2, true] call EFUNC(common,doAnimation);
+        [_target, _patientAnim, 2, true] call CFUNC(doAnimation);
     } else {
-        [_target, _patientAnim, 1, true] call EFUNC(common,doAnimation);
+        [_target, _patientAnim, 1, true] call CFUNC(doAnimation);
     };
 };
 
@@ -179,7 +179,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 
     if (isWeaponDeployed _caller) then {
         TRACE_1("Weapon Deployed, breaking out first",(stance _caller));
-        [_caller, "", 0] call EFUNC(common,doAnimation);
+        [_caller, "", 0] call CFUNC(doAnimation);
     };
 
     if ((stance _caller) == "STAND") then {
@@ -191,7 +191,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     } else {
         _caller setVariable [QGVAR(treatmentPrevAnimCaller), animationState _caller];
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
+    [_caller, _callerAnim] call CFUNC(doAnimation);
 };
 
 //Get treatment time
@@ -222,12 +222,12 @@ _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);
 
 // Display Icon
 _iconDisplayed = getText (_config >> "actionIconPath");
 if (_iconDisplayed != "") then {
-    [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
+    [QGVAR(treatmentActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call CFUNC(displayIcon);
 };
 
 // handle display of text/hints
@@ -239,7 +239,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    ["displayTextStructured", [_caller], [[_displayText, [_caller] call CFUNC(getName), [_target] call CFUNC(getName)], 1.5, _caller]] call CFUNC(targetEvent);
 };
 
 true;

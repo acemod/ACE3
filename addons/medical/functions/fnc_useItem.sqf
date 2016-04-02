@@ -23,20 +23,20 @@ if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
 
-if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
+if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call CFUNC(hasItem)}) exitWith {
     if (local _patient) then {
-        ["useItem", [_patient, _item]] call EFUNC(common,localEvent);
+        ["useItem", [_patient, _item]] call CFUNC(localEvent);
     } else {
-        ["useItem", _patient, [_patient, _item]] call EFUNC(common,targetEvent);
+        ["useItem", _patient, [_patient, _item]] call CFUNC(targetEvent);
     };
     [true, _patient];
 };
 
-if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
+if ([_medic, _item] call CFUNC(hasItem)) exitWith {
     if (local _medic) then {
-        ["useItem", [_medic, _item]] call EFUNC(common,localEvent);
+        ["useItem", [_medic, _item]] call CFUNC(localEvent);
     } else {
-        ["useItem", _medic, [_medic, _item]] call EFUNC(common,targetEvent);
+        ["useItem", _medic, [_medic, _item]] call CFUNC(targetEvent);
     };
     [true, _medic];
 };
@@ -45,12 +45,12 @@ _return = [false, objNull];
 if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) then {
     _crew = crew vehicle _medic;
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
+        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call CFUNC(hasItem))}) exitWith {
             _return = [true, _x];
             if (local _x) then {
-                ["useItem", [_x, _item]] call EFUNC(common,localEvent);
+                ["useItem", [_x, _item]] call CFUNC(localEvent);
             } else {
-                ["useItem", _x, [_x, _item]] call EFUNC(common,targetEvent);
+                ["useItem", _x, [_x, _item]] call CFUNC(targetEvent);
             };
         };
     } forEach _crew;

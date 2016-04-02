@@ -2,8 +2,8 @@
 ["ACE3 Equipment", QGVAR(MenuKey), "Configure DAGR",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
+    if !([ACE_player, "ACE_DAGR"] call CFUNC(hasItem)) exitWith {false};
 
     // Statement
     if (!GVAR(menuRun)) then {
@@ -19,8 +19,8 @@
 ["ACE3 Equipment", QGVAR(ToggleKey), "Toggle DAGR",
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    if !([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
+    if !([ACE_player, "ACE_DAGR"] call CFUNC(hasItem)) exitWith {false};
 
     // Statement
     [] call FUNC(toggleOverlay);
@@ -32,11 +32,11 @@
 //Add deviceKey entry:
 private ["_conditonCode", "_toggleCode", "_closeCode"];
 _conditonCode = {
-    ([ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem));
+    ([ACE_player, "ACE_DAGR"] call CFUNC(hasItem));
 };
 _toggleCode = {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {};
     
     // Statement
     [] call FUNC(toggleOverlay);
@@ -56,4 +56,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-["DAGR", QUOTE(PATHTOF(UI\DAGR_Icon.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+["DAGR", QUOTE(PATHTOF(UI\DAGR_Icon.paa)), _conditonCode, _toggleCode, _closeCode] call CFUNC(deviceKeyRegisterNew);

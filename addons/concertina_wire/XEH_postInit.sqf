@@ -8,6 +8,6 @@ GVAR(deployPFH) = -1;
     if (GVAR(deployPFH) != -1) then {
         GVAR(placer) setVariable [QGVAR(wireDeployed), true];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
-[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call EFUNC(common,addEventHandler);
+[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call CFUNC(addEventHandler);

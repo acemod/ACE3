@@ -24,7 +24,7 @@
     TRACE_1("params",_display);
     
     //Can't place markers when can't interact
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {
         _display closeDisplay 2;  //emulate "Cancel" button
     };
 
@@ -238,4 +238,4 @@
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
     _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-}, _this] call EFUNC(common,execNextFrame);
+}, _this] call CFUNC(execNextFrame);

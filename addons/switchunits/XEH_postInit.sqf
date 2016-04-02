@@ -25,5 +25,5 @@ if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
         if ((_name == QGVAR(EnableSwitchUnits)) && {_value}) then {
             [player] call FUNC(startSwitchUnits);
         };
-    }] call EFUNC(common,addEventhandler);
+    }] call CFUNC(addEventhandler);
 };

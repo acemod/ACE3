@@ -57,7 +57,7 @@ _text = format ["
     _var = missionNamespace getVariable [(_x select 0), "ERROR: Not Defined"];
     _text = format ["%1 - %2", (_x select 0), _var];
     [_text] call _outputText;
-} forEach EGVAR(common,settings);
+} forEach CGVAR(settings);
 
 
 _text = format ["

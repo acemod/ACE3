@@ -18,7 +18,7 @@
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitWith {
     [{
         _this call FUNC(dismount);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CFUNC(execNextFrame);
 };
 params ["_wire", "_unit"];
 
@@ -36,4 +36,4 @@ _delay = if (getNumber(_config >> "engineer") == 1 || getNumber(_config >> "canD
     localize "STR_ACE_UNROLLWIRE",
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

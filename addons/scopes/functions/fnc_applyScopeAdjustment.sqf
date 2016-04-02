@@ -22,7 +22,7 @@ private ["_adjustmentDifference", "_pitchBankYaw", "_adjustment", "_weaponIndex"
 
 params ["_unit", "_elevation", "_windage", "_zero"];
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call CFUNC(getWeaponIndex);
 
 _adjustment = _unit getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
@@ -35,7 +35,7 @@ _adjustmentDifference = (_adjustment select _weaponIndex) vectorDiff [_elevation
 if (_adjustmentDifference isEqualTo [0,0,0]) exitWith {false};  // Don't coninue if no adjustment is made
 
 _adjustment set [_weaponIndex, [_elevation, _windage, _zero]];
-[_unit, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+[_unit, QGVAR(Adjustment), _adjustment, 0.5] call CFUNC(setVariablePublic);
 
 playSound selectRandom ["ACE_Scopes_Click_1", "ACE_Scopes_Click_2", "ACE_Scopes_Click_3"];
 
@@ -44,11 +44,11 @@ if (cameraView == "GUNNER") then {
     // Convert adjustmentDifference from mils to degrees
     _adjustmentDifference = _adjustmentDifference apply {_x * 0.05625};
     _adjustmentDifference params ["_elevationDifference", "_windageDifference"];
-    _pitchBankYaw = [_unit] call EFUNC(common,getPitchBankYaw);
+    _pitchBankYaw = [_unit] call CFUNC(getPitchBankYaw);
     _pitchBankYaw params ["_pitch", "_bank", "_yaw"];
     _pitch = _pitch + _elevationDifference;
     _yaw = _yaw + _windageDifference;
-    [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
+    [_unit, _pitch, _bank, _yaw] call CFUNC(setPitchBankYaw);
 } else {
     [] call FUNC(showZeroing);
 };

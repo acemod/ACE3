@@ -39,7 +39,7 @@ if (_vehicle distance ACE_player > 8000) exitWith {false};
 
 //AI will have no clue how to use:
 _shooterMan = gunner _vehicle;
-if (!([_shooterMan] call EFUNC(common,isPlayer))) exitWith {false};
+if (!([_shooterMan] call CFUNC(isPlayer))) exitWith {false};
 
 //Calculate air density:
 _altitude = (getPosASL _vehicle) select 2;

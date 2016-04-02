@@ -12,7 +12,7 @@ if (!hasInterface) exitWith {};
 // Check inventory when it changes
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(inventoryCheck);
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);
 
 
 // Instantly hide knobs when scoping in
@@ -29,14 +29,14 @@ if (!hasInterface) exitWith {};
             GVAR(fadePFH) = nil;
         };
     };
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);
 
 
 // Add keybinds
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMinor), localize LSTRING(AdjustUpMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -49,7 +49,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMinor), localize LSTRING(AdjustDownMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -62,7 +62,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMinor), localize LSTRING(AdjustLeftMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -75,7 +75,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMinor), localize LSTRING(AdjustRightMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -88,7 +88,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMajor), localize LSTRING(AdjustUpMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -101,7 +101,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMajor), localize LSTRING(AdjustDownMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -114,7 +114,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMajor), localize LSTRING(AdjustLeftMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -127,7 +127,7 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMajor), localize LSTRING(AdjustRightMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -139,5 +139,5 @@ if (!hasInterface) exitWith {};
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(firedEH)] call CFUNC(addEventHandler);
+["firedPlayerNonLocal", DFUNC(firedEH)] call CFUNC(addEventHandler);

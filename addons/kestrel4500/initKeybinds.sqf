@@ -1,7 +1,7 @@
 ["ACE3 Equipment", QGVAR(KestrelDialogKey), localize LSTRING(KestrelDialogKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
     if (GVAR(Kestrel4500)) exitWith {
         closeDialog 0;
         false
@@ -16,7 +16,7 @@
 ["ACE3 Equipment", QGVAR(DisplayKestrelKey), localize LSTRING(DisplayKestrelKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
     
     // Statement
     [] call FUNC(displayKestrel);
@@ -33,7 +33,7 @@ _conditonCode = {
 };
 _toggleCode = {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {};
     
     // Statement
     if (!GVAR(Overlay)) then {
@@ -56,4 +56,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call CFUNC(deviceKeyRegisterNew);

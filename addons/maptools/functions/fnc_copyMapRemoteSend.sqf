@@ -14,4 +14,4 @@
 
 params ["_requester"];
 
-["drawing_sendbackMarkers", _requester, [GVAR(drawing_lineMarkers)]] call EFUNC(common,targetEvent);
+["drawing_sendbackMarkers", _requester, [GVAR(drawing_lineMarkers)]] call CFUNC(targetEvent);

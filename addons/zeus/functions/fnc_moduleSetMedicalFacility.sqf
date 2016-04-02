@@ -20,24 +20,24 @@ private ["_mouseOver", "_unit"];
 
 if !(_activated && local _logic) exitWith {};
 
-if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
-    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
+if !(["ACE_Medical"] call CFUNC(isModLoaded)) then {
+    [LSTRING(RequiresAddon)] call CFUNC(displayTextStructured);
 } else {
     _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
-        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
+        [LSTRING(NothingSelected)] call CFUNC(displayTextStructured);
     } else {
         _unit = (_mouseOver select 1);
 
         if (_unit isKindOf "Man" || {!(_unit isKindOf "Building")}) then {
-            [LSTRING(OnlyStructures)] call EFUNC(common,displayTextStructured);
+            [LSTRING(OnlyStructures)] call CFUNC(displayTextStructured);
         } else {
             if !(alive _unit) then {
-                [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
+                [LSTRING(OnlyAlive)] call CFUNC(displayTextStructured);
             } else {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
-                    [LSTRING(OnlyNonCaptive)] call EFUNC(common,displayTextStructured);
+                    [LSTRING(OnlyNonCaptive)] call CFUNC(displayTextStructured);
                 } else {
                     if (!(GETVAR(_unit,EGVAR(medical,isMedicalFacility),false))) then {
                         _unit setVariable [QEGVAR(medical,isMedicalFacility), true, true];

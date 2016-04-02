@@ -19,8 +19,8 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(zeusAscension), "zeusAscension"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(zeusBird), "zeusBird"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(radioOrdnance), "radioOrdnance"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(revealMines), "revealMines"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(remoteWind), "remoteWind"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(zeusAscension), "zeusAscension"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(zeusBird), "zeusBird"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(radioOrdnance), "radioOrdnance"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(revealMines), "revealMines"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(remoteWind), "remoteWind"] call CFUNC(readSettingFromModule);

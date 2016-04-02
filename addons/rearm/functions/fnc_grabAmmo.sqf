@@ -19,7 +19,7 @@
 params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 REARM_HOLSTER_WEAPON
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QGVAR(vehRearm), true] call CFUNC(statusEffect_set);
 
 [
     5,
@@ -50,4 +50,4 @@ REARM_HOLSTER_WEAPON
     localize LSTRING(GrabAction),
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

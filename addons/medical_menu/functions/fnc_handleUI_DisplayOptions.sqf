@@ -34,7 +34,7 @@ if (_name isEqualTo "toggle") exitWith {
     _newTarget = ACE_player;
     //If we are on the player, and only if our old target is still valid, switch to it:
     if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
-            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside"]] call EFUNC(common,canInteractWith)} &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside"]] call CFUNC(canInteractWith)} &&
             {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS)] call FUNC(canOpenMenu)}) then {
         _newTarget = GVAR(INTERACTION_TARGET_PREVIOUS);
     };
@@ -44,7 +44,7 @@ if (_name isEqualTo "toggle") exitWith {
     closeDialog 0;
     [{
         [_this select 0] call FUNC(openMenu);
-    }, [_newTarget], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_newTarget], 0.1] call CFUNC(waitAndExecute);
 };
 
 // Clean the dropdown options list from all actions

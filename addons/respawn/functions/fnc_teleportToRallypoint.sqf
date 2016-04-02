@@ -28,4 +28,4 @@ if (isNull _rallypoint) exitWith {};
 
 _unit setPosASL getPosASL _rallypoint;
 
-[[localize LSTRING(TeleportedToRallypoint), localize LSTRING(TeleportedToBase)] select _toBase] call EFUNC(common,displayTextStructured);
+[[localize LSTRING(TeleportedToRallypoint), localize LSTRING(TeleportedToBase)] select _toBase] call CFUNC(displayTextStructured);

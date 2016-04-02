@@ -16,7 +16,7 @@
 
 params ["_caller", "_target", "_selectionName"];
 if (local _target) then {
-    ["actionCheckBloodPressureLocal", [_caller, _target, _selectionName]] call EFUNC(common,localEvent);
+    ["actionCheckBloodPressureLocal", [_caller, _target, _selectionName]] call CFUNC(localEvent);
 } else {
-    ["actionCheckBloodPressureLocal", _target, [_caller, _target, _selectionName]] call EFUNC(common,targetEvent);
+    ["actionCheckBloodPressureLocal", _target, [_caller, _target, _selectionName]] call CFUNC(targetEvent);
 };

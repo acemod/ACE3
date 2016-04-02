@@ -17,7 +17,7 @@
 params ["_target", "_backpack"];
 
 // do cam shake if the target is the player
-if (_target call EFUNC(common,isPlayer)) then {
+if (_target call CFUNC(isPlayer)) then {
     addCamShake [4, 0.5, 5];
 };
 

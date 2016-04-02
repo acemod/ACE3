@@ -23,7 +23,7 @@ _magazine = _this select 3;
 
 if (!alive _target) exitWith {false};
 if (vehicle _target != _target) exitWith {false};
-if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, []] call CFUNC(canInteractWith)) exitWith {false};
 
 // target is awake
 if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};

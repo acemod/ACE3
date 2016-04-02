@@ -79,7 +79,7 @@ TRACE_1("cooledTo",_temperature);
 _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 
 // Publish the temperature variable
-[_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
+[_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call CFUNC(setApproximateVariablePublic);
 // Store the update time locally
 _unit setVariable [_timeVarName, ACE_time];
 

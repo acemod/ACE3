@@ -40,10 +40,10 @@ private _clientSettableCategories = [""];
         };
         _clientSettableCategories pushBackUnique (_x select 8); //Add to list of user-settable categories
     };
-} forEach EGVAR(common,settings);
+} forEach CGVAR(settings);
 
 //Delay a frame
-[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call CFUNC(execNextFrame);
 
 disableSerialization;
 _menu = uiNamespace getVariable "ACE_settingsMenu";

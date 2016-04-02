@@ -34,12 +34,12 @@ _count = 0;
 
 //If function is called with an optional string then check if player has that magzine otherwise check all magazines of the player to see if they are compatible with the static weapon
 if (_magazineClassOptional != "") then {
-    if ([_unit,_magazineClassOptional] call EFUNC(common,hasMagazine)) then {
+    if ([_unit,_magazineClassOptional] call CFUNC(hasMagazine)) then {
         _hasCompatibleMagazine = true;
     };
  } else {
     {
-        if ([_unit,_x] call EFUNC(common,hasMagazine)) exitWith {_hasCompatibleMagazine = true};
+        if ([_unit,_x] call CFUNC(hasMagazine)) exitWith {_hasCompatibleMagazine = true};
     } forEach _listOfMagNames;
 };
 //If static weapon has a magazine then find the ammo count

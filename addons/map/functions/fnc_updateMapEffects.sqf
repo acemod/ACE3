@@ -19,7 +19,7 @@ _mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
 
 if (GVAR(mapIllumination)) then {
     //get nearby lighting
-    _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
+    _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call CFUNC(cachedCall);
 
     _light params ["_applyLighting", "_lightLevel"];
 

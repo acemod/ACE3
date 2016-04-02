@@ -18,7 +18,7 @@ if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
 // Conditions: canInteract (these don't apply to zeus)
 if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith))
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call CFUNC(canInteractWith))
 }) exitWith {false};
 
 while {dialog} do {
@@ -102,6 +102,6 @@ if (GVAR(openedMenuType) == 0) then {
     GVAR(startHoverTime) = -1000;
 };
 
-["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
+["interactMenuOpened", [_menuType]] call CFUNC(localEvent);
 
 true

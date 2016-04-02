@@ -15,7 +15,7 @@
 
 params ["_vehicle", "_turret"];
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call CFUNC(getTurretConfigPath);
 
 // Update display for infantry rangefinders
 if (_vehicle == ACE_player) exitWith {[5,5500,25,true] call FUNC(getRange)};
@@ -34,7 +34,7 @@ GVAR(time) = ACE_time;
 
 private _weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);  // @todo doesn't work for sub turrets
 
-if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
+if (_turret isEqualTo ([_vehicle] call CFUNC(getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
 };
 

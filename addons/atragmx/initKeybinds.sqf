@@ -1,7 +1,7 @@
 ["ACE3 Equipment", QGVAR(ATragMXDialogKey), localize LSTRING(ATragMXDialogKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
     if (GVAR(active)) exitWith {
         closeDialog 0;
         false
@@ -21,7 +21,7 @@ _conditonCode = {
 };
 _toggleCode = {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {};
     if (GVAR(active)) exitWith {
         closeDialog 0;
     };
@@ -33,4 +33,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\ATRAG_Icon.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\ATRAG_Icon.paa)), _conditonCode, _toggleCode, _closeCode] call CFUNC(deviceKeyRegisterNew);

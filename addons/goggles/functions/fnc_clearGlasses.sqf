@@ -34,7 +34,7 @@ if (stance _unit != "PRONE") then {
     if (cameraView == "INTERNAL") then {
         addCamShake [5, 1.75, 2];
     };
-}, [], 0.3] call EFUNC(common,waitAndExecute);
+}, [], 0.3] call CFUNC(waitAndExecute);
 
 call FUNC(removeDirtEffect);
 call FUNC(removeRainEffect);

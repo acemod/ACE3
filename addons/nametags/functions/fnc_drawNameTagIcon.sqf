@@ -44,7 +44,7 @@ _fnc_parameters = {
 
     //Set Text:
     private _name = if (_drawName) then {
-        [_target, true, true] call EFUNC(common,getName)
+        [_target, true, true] call CFUNC(getName)
     } else {
         ""
     };
@@ -74,7 +74,7 @@ _fnc_parameters = {
     ]
 };
 
-private _parameters = [_this, _fnc_parameters, _target, QGVAR(drawParameters), 0.1] call EFUNC(common,cachedCall);
+private _parameters = [_this, _fnc_parameters, _target, QGVAR(drawParameters), 0.1] call CFUNC(cachedCall);
 _parameters set [2, _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .3)])];
 
 

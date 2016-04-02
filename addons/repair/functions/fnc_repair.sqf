@@ -113,7 +113,7 @@ if !(_return && alive _target) exitWith {false};
 //Claim required objects
 {
     TRACE_2("Claiming", _x, (typeOf _x));
-    [_caller, _x, false] call EFUNC(common,claim);
+    [_caller, _x, false] call CFUNC(claim);
 } forEach _claimObjectsAvailable;
 
 _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
@@ -167,7 +167,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     } else {
         _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
+    [_caller, _callerAnim] call CFUNC(doAnimation);
 };
 
 //Get repair time
@@ -211,12 +211,12 @@ TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
     _text,
     _callbackProgress,
     ["isNotOnLadder"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);
 
 // Display Icon
 _iconDisplayed = getText (_config >> "actionIconPath");
 if (_iconDisplayed != "") then {
-    [QGVAR(repairActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call EFUNC(common,displayIcon);
+    [QGVAR(repairActionIcon), true, _iconDisplayed, [1,1,1,1], getNumber(_config >> "actionIconDisplayTime")] call CFUNC(displayIcon);
 };
 
 // handle display of text/hints
@@ -228,7 +228,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    ["displayTextStructured", [_caller], [[_displayText, [_caller] call CFUNC(getName), [_target] call CFUNC(getName)], 1.5, _caller]] call CFUNC(targetEvent);
 };
 
 true;

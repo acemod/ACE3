@@ -20,7 +20,7 @@ params [["_unit", objNull, [objNull]], ["_isUnconscious", false, [false]]];
 
 if (!local _unit || {!_isUnconscious}) exitWith {};
 
-[_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_refuel", false] call CFUNC(statusEffect_set);
 private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if !(isNull _nozzle) then {
     [_unit, _nozzle] call FUNC(dropNozzle);

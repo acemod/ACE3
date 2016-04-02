@@ -23,21 +23,21 @@ private ["_timeToCut", "_progressCheck", "_onCompletion", "_onFail"];
 
 if (_unit != ACE_player) exitWith {};
 
-_timeToCut = if ([ACE_player] call EFUNC(common,isEngineer)) then {7.5} else {11};
+_timeToCut = if ([ACE_player] call CFUNC(isEngineer)) then {7.5} else {11};
 
-[ACE_player, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
+[ACE_player, "AinvPknlMstpSnonWnonDr_medic5", 0] call CFUNC(doAnimation);
 
 _onCompletion = {
     TRACE_1("_onCompletion",_this);
     (_this select 0) params ["_fenceObject", "", "_unit"];
     _fenceObject setdamage 1;
-    [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_unit, "AmovPknlMstpSrasWrflDnon", 1] call CFUNC(doAnimation);
 };
 
 _onFail = {
     TRACE_1("_onFail", _this);
     (_this select 0) params ["", "", "_unit"];
-    [_unit, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_unit, "AmovPknlMstpSrasWrflDnon", 1] call CFUNC(doAnimation);
 };
 
 _progressCheck = {
@@ -52,4 +52,4 @@ _progressCheck = {
     ((!isNull _fenceObject) && {(damage _fenceObject) < 1} && {("ACE_wirecutter" in (items ACE_player))})
 };
 
-[_timeToCut, [_fenceObject,0,_unit], _onCompletion, _onFail, localize LSTRING(CuttingFence), _progressCheck] call EFUNC(common,progressBar);
+[_timeToCut, [_fenceObject,0,_unit], _onCompletion, _onFail, localize LSTRING(CuttingFence), _progressCheck] call CFUNC(progressBar);

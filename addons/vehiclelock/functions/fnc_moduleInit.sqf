@@ -25,6 +25,6 @@ TRACE_3("params",_logic,_syncedObjects,_activated);
 if (!_activated) exitWith {WARNING("Vehicle Lock Init Module - placed but not active");};
 
 //Set the GVAR for default lockpick strength
-[_logic, QGVAR(DefaultLockpickStrength), "DefaultLockpickStrength"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(LockVehicleInventory), "LockVehicleInventory"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(VehicleStartingLockState), "VehicleStartingLockState"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(DefaultLockpickStrength), "DefaultLockpickStrength"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(LockVehicleInventory), "LockVehicleInventory"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(VehicleStartingLockState), "VehicleStartingLockState"] call CFUNC(readSettingFromModule);

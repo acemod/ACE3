@@ -2,12 +2,12 @@
 //#include "initKeybinds.sqf";
 
 // Add interaction menu exception
-["isNotSpectating", {!(GETVAR((_this select 0),GVAR(isStaged),false))}] call EFUNC(common,addCanInteractWithCondition);
+["isNotSpectating", {!(GETVAR((_this select 0),GVAR(isStaged),false))}] call CFUNC(addCanInteractWithCondition);
 
 ["SettingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // Create a radio channel for any spectators to text chat in
 if (isServer) then {

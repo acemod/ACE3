@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (["STMapGestures"] call EFUNC(common,isModLoaded)) exitWith {
+if (["STMapGestures"] call CFUNC(isModLoaded)) exitWith {
     ACE_LOGWARNING("st_map_gestures is installed - exiting [remove st_map_gestures.pbo to allow ace version]");
 };
 
@@ -18,4 +18,4 @@ if (!hasInterface) exitWith {};
 
         [_pfhId] call CBA_fnc_removePerFrameHandler;
     }, 1, []] call CBA_fnc_addPerFrameHandler;
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

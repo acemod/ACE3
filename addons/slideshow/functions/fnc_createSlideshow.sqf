@@ -56,7 +56,7 @@ if (isServer) then {
 _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
 
 // If interaction menu module is not present, set default duration value
-if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
+if !(["ace_interact_menu"] call CFUNC(isModLoaded)) then {
     _duration = NOINTERACTMENU_DURATION;
     ACE_LOGINFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
 };
@@ -80,5 +80,5 @@ if (_duration == 0) then {
     missionNamespace setVariable [_varString, 0];
 
     // Automatic transitions handler
-    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
+    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CFUNC(waitAndExecute);
 };

@@ -18,7 +18,7 @@
 
 params ["_unit", "_target"];
 
-if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, []] call CFUNC(canInteractWith)) exitWith {false};
 
 //#2644 - Units with injured legs cannot bear the extra weight of carrying an object
 //The fireman carry animation does not slow down for injured legs, so you could carry and run

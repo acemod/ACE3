@@ -3,7 +3,7 @@
  * Replace the disposable launcher with the used dummy. Called from the unified fired EH.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * Nothing
@@ -36,7 +36,7 @@ _unit selectWeapon _replacementTube;
 
 
 // AI - Remove the ai's missle launcher tube after the missle has exploded
-if !([_unit] call EFUNC(common,isPlayer)) then {
+if !([_unit] call CFUNC(isPlayer)) then {
     [{
         params ["_args","_idPFH"];
         _args params ["_unit", "_tube", "_projectile"];
@@ -47,7 +47,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
 
             //If (tube is dropped) OR (is dead) OR (is player) just exit
-            if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call EFUNC(common,isPlayer)}) exitWith {};
+            if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call CFUNC(isPlayer)}) exitWith {};
 
             //private  _items = secondaryWeaponItems _unit;
             private _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];

@@ -39,7 +39,7 @@ if (_isPIP) then {
 // calculate lighting
 private ["_dayOpacity", "_nightOpacity"];
 
-_dayOpacity = call EFUNC(common,ambientBrightness);
+_dayOpacity = call CFUNC(ambientBrightness);
 _nightOpacity = [1,0] select (_dayOpacity == 1);
 
 // Apply lighting and make layers visible

@@ -19,7 +19,7 @@
 params ["_caller", "_target", "_treatmentClassname"];
 
 if (local _target) then {
-    ["treatmentBasic_bloodbagLocal", [_target, _treatmentClassname]] call EFUNC(common,localEvent);
+    ["treatmentBasic_bloodbagLocal", [_target, _treatmentClassname]] call CFUNC(localEvent);
 } else {
-    ["treatmentBasic_bloodbagLocal", _target, [_target, _treatmentClassname]] call EFUNC(common,targetEvent);
+    ["treatmentBasic_bloodbagLocal", _target, [_target, _treatmentClassname]] call CFUNC(targetEvent);
 };

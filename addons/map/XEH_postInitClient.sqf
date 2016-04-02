@@ -104,7 +104,7 @@ call FUNC(determineZoom);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
             };
-        }] call EFUNC(common,addEventHandler);
+        }] call CFUNC(addEventHandler);
 
         if (GVAR(mapGlow)) then {
             ["visibleMapChanged", {
@@ -127,10 +127,10 @@ call FUNC(determineZoom);
                         [""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call EFUNC(common,addEventHandler);
+            }] call CFUNC(addEventHandler);
         };
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
@@ -144,4 +144,4 @@ GVAR(hasWatch) = true;
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
     } count (assignedItems ACE_player);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

@@ -29,24 +29,24 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call CFUNC(addEventHandler);
 ["playerVisionModeChanged", {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onVisionModeChanged);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 ["cameraViewChanged",       {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onCameraViewChanged);
-}] call EFUNC(common,addEventHandler);
-["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
+["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call CFUNC(addEventHandler);
+["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call CFUNC(addEventHandler);
 
 // Add keybinds
 ["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
@@ -60,7 +60,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 ["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
 
@@ -72,5 +72,5 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
 
 // Register fire event handler
-["firedPlayer", DFUNC(blending)] call EFUNC(common,addEventHandler);
-["firedPlayerVehicle", DFUNC(blending)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(blending)] call CFUNC(addEventHandler);
+["firedPlayerVehicle", DFUNC(blending)] call CFUNC(addEventHandler);

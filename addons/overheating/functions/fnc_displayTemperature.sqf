@@ -34,15 +34,15 @@ private _string = "";
 for "_a" from 1 to _count do {
     _string = _string + "|";
 };
-private _text = [_string, _color] call EFUNC(common,stringToColoredText);
+private _text = [_string, _color] call CFUNC(stringToColoredText);
 
 _string = "";
 for "_a" from (_count + 1) to 12 do {
     _string = _string + "|";
 };
 
-_text = composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
+_text = composeText [_text, [_string, [0.5, 0.5, 0.5]] call CFUNC(stringToColoredText)];
 
 private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
 
-[_text, _picture] call EFUNC(common,displayTextPicture);
+[_text, _picture] call CFUNC(displayTextPicture);

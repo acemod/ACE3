@@ -21,7 +21,7 @@ params ["_target"];
 TRACE_2("",_target,isPlayer _target);
 
 //Hide the body globaly
-["hideObjectGlobal", [_target, true]] call EFUNC(common,serverEvent);
+["hideObjectGlobal", [_target, true]] call CFUNC(serverEvent);
 
 if (isNil QGVAR(bodiesToDelete)) then {GVAR(bodiesToDelete) = [];};
 GVAR(bodiesToDelete) pushBack _target;

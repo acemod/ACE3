@@ -30,9 +30,9 @@ if (!isServer) exitWith {};
     params ["_units"];
     {
         TRACE_2("event",_x,local _x);
-        ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
+        ["SetHandcuffed", [_x], [_x, true]] call CFUNC(targetEvent);
     } forEach _units;
-}, [_units], 0.05] call EFUNC(common,waitAndExecute);
+}, [_units], 0.05] call CFUNC(waitAndExecute);
 
 if (!isNull _logic) then {
     deleteVehicle _logic;

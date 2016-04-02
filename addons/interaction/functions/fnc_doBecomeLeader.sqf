@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-["selectLeader", units group _unit, [group _unit, _unit]] call EFUNC(common,targetEvent);
+["selectLeader", units group _unit, [group _unit, _unit]] call CFUNC(targetEvent);

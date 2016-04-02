@@ -38,8 +38,8 @@ if (local _unit) then {
         } forEach (fullCrew (vehicle _unit));
         if (!(_turretPath isEqualTo [])) then {
             TRACE_1("Setting FFV Handcuffed Animation",_turretPath);
-            [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-            [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
+            [_unit, "ACE_HandcuffedFFV", 2] call CFUNC(doAnimation);
+            [_unit, "ACE_HandcuffedFFV", 1] call CFUNC(doAnimation);
         };
     };
 };

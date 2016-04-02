@@ -27,16 +27,16 @@ private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 if (_hitPointDamage >= 1) exitWith {};
 
 // don't die by spawning / moving the wheel
-["fixCollision", _unit] call EFUNC(common,localEvent);
+["fixCollision", _unit] call CFUNC(localEvent);
 
 // spawn track
 private _newTrack = ["ACE_Track", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
 TRACE_2("new track created",_newTrack,damage _newTrack);
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, 1]] call EFUNC(common,targetEvent);
+["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, 1]] call CFUNC(targetEvent);
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [localize LSTRING(RemovedTrack)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(RemovedTrack)] call CFUNC(displayTextStructured);
 };

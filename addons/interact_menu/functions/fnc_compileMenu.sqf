@@ -57,7 +57,7 @@ private _recurseFnc = {
 
             // Add canInteract (including exceptions) and canInteractWith to condition
             if ((configName _entryCfg) != "ACE_MainActions") then {
-                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call CFUNC(canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
             };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));

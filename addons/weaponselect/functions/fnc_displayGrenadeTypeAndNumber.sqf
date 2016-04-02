@@ -23,7 +23,7 @@ params ["_magazine", "_numberofGrenades"];
 private _color = [[1, 0, 0], [1, 1, 1]] select (_numberofGrenades > 0);
 private _name = getText (configFile >> "CfgMagazines" >> _magazine >> "displayNameShort");
 
-private _text = [format ["%1  x%2", _name, _numberofGrenades], _color] call EFUNC(common,stringToColoredText);
+private _text = [format ["%1  x%2", _name, _numberofGrenades], _color] call CFUNC(stringToColoredText);
 private _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
 
-["displayTextPicture", [_text, _picture]] call EFUNC(common,localEvent);
+["displayTextPicture", [_text, _picture]] call CFUNC(localEvent);

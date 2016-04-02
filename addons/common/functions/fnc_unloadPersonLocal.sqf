@@ -20,7 +20,7 @@ params ["_unit", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_unit,_vehicle,_unloader);
 
 //This covers testing vehicle stability and finding a safe position
-private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call CFUNC(findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPos);
 
 if (count _emptyPos != 3) exitwith {

@@ -20,12 +20,12 @@ params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
 if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
+    ["setDead", _unit, [_unit, _force]] call CFUNC(targetEvent);
     false;
 };
 
 _reviveVal = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
-if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
+if (((_reviveVal == 1 && {[_unit] call CFUNC(isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
     if (_unit getVariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
             _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
@@ -50,7 +50,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         //If we are in reivie state in a blown up vehicle, try to unload so that people can access the body
         if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) then {
             TRACE_2("Unloading", _unit, vehicle _unit);
-            [_unit] call EFUNC(common,unloadPerson);
+            [_unit] call CFUNC(unloadPerson);
         };
 
         if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
@@ -84,7 +84,7 @@ if (isPLayer _unit) then {
     _unit setVariable ["isDeadPlayer", true, true];
 };
 
-["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+["medical_onSetDead", [_unit]] call CFUNC(localEvent);
 
 //Delay a frame before killing the unit via scripted damage
 //to avoid triggering the "Killed" Event twice (and having the wrong killer)
@@ -92,7 +92,7 @@ if (isPLayer _unit) then {
 if (!_delaySetDamage) then {
     [_unit, 1] call FUNC(setStructuralDamage);
 } else {
-    [FUNC(setStructuralDamage), [_unit, 1]] call EFUNC(common,execNextFrame);
+    [FUNC(setStructuralDamage), [_unit, 1]] call CFUNC(execNextFrame);
 };
 
 true;

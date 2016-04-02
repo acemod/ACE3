@@ -89,6 +89,6 @@ if (_changed) then {
     };
   } else {
     profileNamespace setVariable [_name, _newValue];
-    [_name, _newValue] call EFUNC(common,setSetting);
+    [_name, _newValue] call CFUNC(setSetting);
   };
 };

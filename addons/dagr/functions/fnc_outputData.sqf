@@ -33,14 +33,14 @@ GVAR(outputPFH) = [{
     private["_dagrElevation", "_dagrGrid", "_dagrHeading", "_dagrSpeed", "_dagrTime", "_elevation", "_gridArray", "_speed"];
 
     // Abort Condition
-    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call CFUNC(hasItem)) exitWith {
         GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
     // GRID
-    _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
+    _gridArray = [(getPos ACE_player), false] call CFUNC(getMapGridFromPos);
     _gridArray params ["_gridArrayX","_gridArrayY"];
     _dagrGrid = format ["%1 %2", ((_gridArrayX) select [0,4]), ((_gridArrayY) select [0,4])];
 
@@ -52,7 +52,7 @@ GVAR(outputPFH) = [{
 
     // Elevation
     _elevation = getPosASL ACE_player;
-    _elevation = floor ((_elevation select 2) + EGVAR(common,mapAltitude));
+    _elevation = floor ((_elevation select 2) + CGVAR(mapAltitude));
     _dagrElevation = str _elevation + "m";
 
     // Heading

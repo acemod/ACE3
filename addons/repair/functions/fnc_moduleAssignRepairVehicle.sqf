@@ -24,6 +24,6 @@ if (!isNull _logic) then {
     _list = _logic getVariable ["EnableList", ""];
     _setting = _logic getVariable ["role", 0];
 
-    [_list, "ACE_isRepairVehicle", _setting, true] call EFUNC(common,assignObjectsInList);
-    [synchronizedObjects _logic, "ACE_isRepairVehicle", _setting, true] call EFUNC(common,assignObjectsInList);
+    [_list, "ACE_isRepairVehicle", _setting, true] call CFUNC(assignObjectsInList);
+    [synchronizedObjects _logic, "ACE_isRepairVehicle", _setting, true] call CFUNC(assignObjectsInList);
 };

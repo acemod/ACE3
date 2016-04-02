@@ -22,14 +22,14 @@ TRACE_3("params",_item,_vehicle,_unloader);
 private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
 //This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPosAGL = [_vehicle, _itemClass, _unloader] call CFUNC(findUnloadPosition);
 TRACE_1("findUnloadPosition",_emptyPosAGL);
 
 if ((count _emptyPosAGL) != 3) exitWith {
     TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {_unloader == ACE_player}) then {
         //display text saying there are no safe places to exit the vehicle
-        ["displayTextStructured", [localize ELSTRING(common,NoRoomToUnload)]] call EFUNC(common,localEvent);
+        ["displayTextStructured", [localize ELSTRING(common,NoRoomToUnload)]] call CFUNC(localEvent);
     };
     false
 };
@@ -52,7 +52,7 @@ if (_item isEqualType objNull) then {
     detach _item;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    ["ServerUnloadCargo", [_item, _emptyPosAGL]] call EFUNC(common,serverEvent);
+    ["ServerUnloadCargo", [_item, _emptyPosAGL]] call CFUNC(serverEvent);
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);

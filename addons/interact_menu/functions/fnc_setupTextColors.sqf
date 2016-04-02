@@ -20,9 +20,9 @@ private _mixColor = {
     for "_index" from 0 to 3 do {
         private _mix = linearConversion [0, 1, _ratio, (_color1 select _index), (_color2 select _index)];
         if (_index != 3) then {
-            _return = _return + ([255 * _mix] call EFUNC(common,toHex));
+            _return = _return + ([255 * _mix] call CFUNC(toHex));
         } else {
-            _return = "#" + ([255 * _mix] call EFUNC(common,toHex)) + _return;
+            _return = "#" + ([255 * _mix] call CFUNC(toHex)) + _return;
         };
     };
     _return

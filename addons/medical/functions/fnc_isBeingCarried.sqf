@@ -19,7 +19,7 @@ params ["_target"];
 
 private "_owner";
 
-_owner = _target getVariable [QEGVAR(common,owner), objNull];
+_owner = _target getVariable [QCGVAR(owner), objNull];
 
 if (isNull _owner) exitWith {false};
 

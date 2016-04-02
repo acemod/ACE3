@@ -32,7 +32,7 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
 if (vehicle _caller == _caller) then {
-    [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
+    [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call CFUNC(doAnimation);
 };
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
@@ -46,7 +46,7 @@ if (_weaponSelect != "") then {
 //Unclaim repair objects:
 {
     TRACE_2("Releasing", _x, (typeOf _x));
-    [objNull, _x, false] call EFUNC(common,claim);
+    [objNull, _x, false] call CFUNC(claim);
 } forEach _claimedObjects;
 
 // Record specific callback

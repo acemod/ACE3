@@ -24,7 +24,7 @@ _player playAction QGVAR(GestureMountMuzzle);
 playSound "ACE_BarrelSwap";
 
 // don't consume the barrel, but rotate through them.
-[localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call EFUNC(common,displayTextPicture);
+[localize LSTRING(SwappedBarrel), QUOTE(PATHTOF(UI\spare_barrel_ca.paa))] call CFUNC(displayTextPicture);
 
 // Publish the temperature variable
 _player setVariable [format [QGVAR(%1_temp), _weapon], 0, true];

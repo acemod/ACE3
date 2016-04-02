@@ -9,14 +9,14 @@ GVAR(trackedBullets) = [];
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
-    ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+    ["firedPlayer", DFUNC(handleFired)] call CFUNC(addEventHandler);
+    ["firedPlayerNonLocal", DFUNC(handleFired)] call CFUNC(addEventHandler);
 
     if (GVAR(vehicleEnabled)) then {
-        ["firedPlayerVehicle", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
-        ["firedPlayerVehicleNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+        ["firedPlayerVehicle", DFUNC(handleFired)] call CFUNC(addEventHandler);
+        ["firedPlayerVehicleNonLocal", DFUNC(handleFired)] call CFUNC(addEventHandler);
     };
 
     [] call FUNC(updateTrajectoryPFH);
 
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

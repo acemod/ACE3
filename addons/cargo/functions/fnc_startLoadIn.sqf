@@ -40,15 +40,15 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     [
         5 * _size,
         [_object,_vehicle],
-        {["LoadCargo", _this select 0] call EFUNC(common,localEvent)},
+        {["LoadCargo", _this select 0] call CFUNC(localEvent)},
         {},
         localize LSTRING(LoadingItem)
-    ] call EFUNC(common,progressBar);
+    ] call CFUNC(progressBar);
     _return = true;
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    ["displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+    ["displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call CFUNC(localEvent);
 };
 
 _return

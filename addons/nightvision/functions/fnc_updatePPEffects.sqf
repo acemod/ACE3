@@ -41,7 +41,7 @@ if (ctrlIDD _display == 312 || currentVisionMode ACE_player != 1) exitWith {
 _config = configFile >> "CfgVehicles" >> typeOf _currentVehicle;
 _hmd = hmd ACE_player;
 _cameraView = cameraView;
-_turret = [ACE_player] call EFUNC(common,getTurretIndex);
+_turret = [ACE_player] call CFUNC(getTurretIndex);
 
 
 _fnc_isUsingHMD = {
@@ -53,7 +53,7 @@ _fnc_isUsingHMD = {
 
     private ["_result", "_turretConfig", "_turretConfigOpticsIn", "_index"];
     _result = true;
-    _turretConfig = [_config, _turret] call EFUNC(common,getTurretConfigPath);
+    _turretConfig = [_config, _turret] call CFUNC(getTurretConfigPath);
     _turretConfigOpticsIn = _turretConfig >> "OpticsIn";
 
     if (isClass _turretConfigOpticsIn) then {

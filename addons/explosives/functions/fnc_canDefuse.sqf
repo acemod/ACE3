@@ -26,7 +26,7 @@ if (isNull(_target getVariable [QGVAR(Explosive),objNull])) exitWith {
     false
 };
 if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};
-_isSpecialist = [_unit] call EFUNC(Common,isEOD);
+_isSpecialist = [_unit] call CFUNC(isEOD);
 
 if (GVAR(RequireSpecialist) && {!_isSpecialist}) exitWith {false};
 

@@ -101,7 +101,7 @@ _unit playActionNow "PutDown";
     playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
-    ["createTag", _this] call EFUNC(common,serverEvent);
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _color, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
+    ["createTag", _this] call CFUNC(serverEvent);
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _color, _object, _unit], 0.6] call CFUNC(waitAndExecute);
 
 true

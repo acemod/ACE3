@@ -71,8 +71,8 @@ class %1 {
 
         "ace_clipboard" callExtension _compiledConfigEntry;
     };
-} forEach EGVAR(common,settings);
+} forEach CGVAR(settings);
 
 "ace_clipboard" callExtension "--COMPLETE--";
 
-[LSTRING(settingsExported)] call EFUNC(common,displayTextStructured);
+[LSTRING(settingsExported)] call CFUNC(displayTextStructured);

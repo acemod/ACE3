@@ -11,7 +11,7 @@ GVAR(showNamesTime) = -10;
 ["ACE3 Common", QGVAR(showNameTags), localize LSTRING(ShowNames),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
 
     // Statement
     GVAR(showNamesTime) = ACE_time;
@@ -26,7 +26,7 @@ GVAR(showNamesTime) = -10;
 ["SettingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // Change settings accordingly when they are changed
 ["SettingChanged", {
@@ -34,4 +34,4 @@ GVAR(showNamesTime) = -10;
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

@@ -19,6 +19,6 @@
 private ["_weaponDir", "_refSystem"];
 
 _weaponDir = _target weaponDirection currentWeapon _target;
-_refSystem = _weaponDir call EFUNC(common,createOrthonormalReference);
+_refSystem = _weaponDir call CFUNC(createOrthonormalReference);
 
 (_target selectionPosition "righthand") vectorAdd ((_refSystem select 2) vectorMultiply 0.1);

@@ -30,4 +30,4 @@ if (isNull _dummy) exitwith {};
     format [localize LSTRING(StoreAmmoAction), getText(configFile >> "CfgMagazines" >> (_dummy getVariable QGVAR(magazineClass)) >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")],
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

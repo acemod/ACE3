@@ -20,7 +20,7 @@ params [["_unit", objNull, [objNull]], ["_disable", true, [false]]];
 
 if (!local _unit) exitWith {};
 
-if !([_unit] call EFUNC(common,isPlayer)) then {
+if !([_unit] call CFUNC(isPlayer)) then {
     if (_disable) then {
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";

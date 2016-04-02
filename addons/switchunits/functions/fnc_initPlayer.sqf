@@ -39,7 +39,7 @@ if (vehicle _playerUnit == _playerUnit) then {
     _playerUnit linkItem  "ItemMap";
     removeUniform _playerUnit;
 
-    [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call EFUNC(common,statusEffect_set);
+    [_playerUnit, "forceWalk", "ACE_SwitchUnits", true] call CFUNC(statusEffect_set);
 
     [_playerUnit, _sides] call FUNC(addMapFunction);
 };

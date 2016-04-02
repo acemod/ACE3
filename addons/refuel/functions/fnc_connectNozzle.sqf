@@ -28,8 +28,8 @@ if (isNull _nozzle) exitWith {};
 
 GVAR(placeAction) = PLACE_WAITING;
 
-[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call CFUNC(execNextFrame);
+_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call CFUNC(AddActionEventHandler)];
 
 private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL;}];
 
@@ -41,7 +41,7 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
     if (cameraView == "EXTERNAL") then {
         _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
     };
-    private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+    private _virtualPos = _virtualPosASL call CFUNC(ASLToPosition);
     private _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
 
     //Don't allow placing in a bad position:
@@ -49,11 +49,11 @@ private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", locali
 
     if ((GVAR(placeAction) != PLACE_WAITING) ||
             {_unit != ace_player} ||
-            {!([_unit, _target, []] call EFUNC(common,canInteractWith))}) then {
+            {!([_unit, _target, []] call CFUNC(canInteractWith))}) then {
 
         [_pfID] call CBA_fnc_removePerFrameHandler;
         [] call EFUNC(interaction,hideMouseHint);
-        [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+        [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call CFUNC(removeActionEventHandler);
         _unit removeAction _actionID;
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {

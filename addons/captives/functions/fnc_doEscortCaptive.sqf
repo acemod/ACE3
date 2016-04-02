@@ -22,7 +22,7 @@ params ["_unit", "_target","_state"];
 if (_state) then {
     if (_unit getVariable [QGVAR(isEscorting), false]) exitWith {};
 
-    [_unit, _target, false] call EFUNC(common,claim);
+    [_unit, _target, false] call CFUNC(claim);
     _unit setVariable [QGVAR(isEscorting), true, true];
 
     _target attachTo [_unit, [0, 1, 0]];
@@ -46,7 +46,7 @@ if (_state) then {
 
         if (!(_unit getVariable [QGVAR(isEscorting), false])) then {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-            [objNull, _target, false] call EFUNC(common,claim);
+            [objNull, _target, false] call CFUNC(claim);
             detach _target;
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(escortedUnit), objNull, true];

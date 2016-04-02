@@ -22,7 +22,7 @@ GVAR(trenchType) = missionNamespace getVariable _trenchTypeName;
 
 TRACE_2("",_trenchTypeName,GVAR(trenchType));
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Trenches", true] call CFUNC(statusEffect_set);
 
 // create the trench
 private "_trench";
@@ -31,7 +31,7 @@ _trench = createVehicle [GVAR(trenchType) select 1, [0, 0, 0], [], 0, "NONE"];
 GVAR(trench) = _trench;
 
 // prevent collisions with trench
-["enableSimulationGlobal", [_trench, false]] call EFUNC(common,serverEvent);
+["enableSimulationGlobal", [_trench, false]] call CFUNC(serverEvent);
 
 GVAR(digDirection) = 0;
 
@@ -93,6 +93,6 @@ _unit setVariable [QGVAR(Dig), [
     _unit, "DefaultAction",
     {GVAR(digPFH) != -1},
     {[_this select 0] call FUNC(placeConfirm)}
-] call EFUNC(common,addActionEventHandler)];
+] call CFUNC(addActionEventHandler)];
 
 _unit setVariable [QGVAR(isPlacing), true, true];

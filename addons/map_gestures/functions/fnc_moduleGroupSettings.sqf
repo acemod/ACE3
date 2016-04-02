@@ -41,5 +41,5 @@ _configurationIndex = _configurations pushBack [_leadColor, _color];
     HASH_SET(_configurationGroupMappings,groupID (group _x),_configurationIndex);
 } count _units;
 
-[QGVAR(GroupColorConfigurations), _configurations, false, true] call EFUNC(common,setSetting);
-[QGVAR(GroupColorConfigurationMapping), _configurationGroupMappings, false, true] call EFUNC(common,setSetting);
+[QGVAR(GroupColorConfigurations), _configurations, false, true] call CFUNC(setSetting);
+[QGVAR(GroupColorConfigurationMapping), _configurationGroupMappings, false, true] call CFUNC(setSetting);

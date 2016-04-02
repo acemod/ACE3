@@ -18,7 +18,7 @@ params ["_vehicle","_turret","_distance","_angleTarget"];
 
 private _FCSMagazines = [];
 private _FCSElevation = [];
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call CFUNC(getTurretConfigPath);
 
 {
     private _magazine = _x;
@@ -69,6 +69,6 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
     false
 } count (_vehicle magazinesTurret _turret);
 
-[_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],     _distance] call EFUNC(common,setVariablePublic);
-[_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines] call EFUNC(common,setVariablePublic);
-[_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],     _distance] call CFUNC(setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines] call CFUNC(setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call CFUNC(setVariablePublic);

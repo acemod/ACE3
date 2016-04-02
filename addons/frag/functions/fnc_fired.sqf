@@ -4,7 +4,7 @@
  * If spall is not enabled (default), then cache and only track those that will actually trigger fragmentation.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * Nothing
@@ -24,7 +24,7 @@ private _shouldAdd = GVAR(cacheRoundsTypesToTrack) getVariable _ammo;
 if (isNil "_shouldAdd") then {
     TRACE_1("no cache for round",_ammo);
 
-    if (!EGVAR(common,settingsInitFinished)) exitWith {
+    if (!CGVAR(settingsInitFinished)) exitWith {
         //Just incase fired event happens before settings init, don't want to set cache wrong if spall setting changes
         TRACE_1("Settings not init yet - exit without setting cache",_ammo);
         _shouldAdd = false;

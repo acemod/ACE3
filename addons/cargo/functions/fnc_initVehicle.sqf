@@ -27,7 +27,7 @@ if (isServer) then {
             _cargoClassname = getText (_x >> "type");
             _cargoCount = getNumber (_x >> "amount");
             TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
-            ["AddCargoByClass", [_cargoClassname, _vehicle, _cargoCount]] call EFUNC(common,localEvent);
+            ["AddCargoByClass", [_cargoClassname, _vehicle, _cargoCount]] call CFUNC(localEvent);
         };
     } count ("true" configClasses (configFile >> "CfgVehicles" >> _type >> "ACE_Cargo" >> "Cargo"));
 };
@@ -43,7 +43,7 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 TRACE_1("Adding unload cargo action to class", _type);
 
 private _condition = {
-    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, ["isNotSwimming"]] call CFUNC(canInteractWith)}
 };
 private _statement = {
     GVAR(interactionVehicle) = _target;

@@ -22,8 +22,8 @@ params ["_unit", "_cameraView"];
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
     if ((vehicle _unit == _unit)
         || {isTurnedOut _unit}
-        || {!([_unit] call EFUNC(common,hasHatch))
-            && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}
+        || {!([_unit] call CFUNC(hasHatch))
+            && {[_unit] call CFUNC(getTurretIndex) in ([vehicle _unit] call CFUNC(getTurretsFFV))}
            }) then {
         if ((_cameraView == "GUNNER") && {currentVisionMode _unit == 1}) then {
             _unit action ["NVGogglesOff", _unit];

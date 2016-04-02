@@ -26,7 +26,7 @@ if (!isNull _logic) then {
     _amount = _logic getVariable ["Amount", 1];
 
     // Parse list
-    _list = [_list, true, true] call EFUNC(common,parseList);
+    _list = [_list, true, true] call CFUNC(parseList);
 
     // Add synchronized objects to list
     {

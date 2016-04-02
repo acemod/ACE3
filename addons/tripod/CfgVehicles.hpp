@@ -7,7 +7,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(place) {
                 displayName = CSTRING(Placedown);
-                condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
+                condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call CFUNC(hasItem));
                 statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
                 showDisabled = 0;
                 priority = 2;
@@ -85,7 +85,7 @@ class CfgVehicles {
                     distance = 5;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call CFUNC(execNextFrame));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

@@ -19,12 +19,12 @@
 params ["_driver", "_vehicle"];
 
 if (GVAR(isSpeedLimiter)) exitWith {
-    [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Off)] call CFUNC(displayTextStructured);
     playSound "ACE_Sound_Click";
     GVAR(isSpeedLimiter) = false;
 };
 
-[localize LSTRING(On)] call EFUNC(common,displayTextStructured);
+[localize LSTRING(On)] call CFUNC(displayTextStructured);
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 

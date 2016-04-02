@@ -19,6 +19,6 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(maxReviveTime), "maxReviveTime"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(amountOfReviveLives), "amountOfReviveLives"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(enableRevive), "enableRevive"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(maxReviveTime), "maxReviveTime"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(amountOfReviveLives), "amountOfReviveLives"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(enableRevive), "enableRevive"] call CFUNC(readSettingFromModule);

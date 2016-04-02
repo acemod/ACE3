@@ -26,7 +26,7 @@ GVAR(adjustPFH) = [{
     if (!(_unit getVariable [QGVAR(adjusting), false]) || {isNull _tripod} || {_unit distance _tripod > 5}) exitWith {
         call EFUNC(interaction,hideMouseHint);
 
-        [_unit, "DefaultAction", _unit getVariable [QGVAR(Adjust), -1]] call EFUNC(common,removeActionEventHandler);
+        [_unit, "DefaultAction", _unit getVariable [QGVAR(Adjust), -1]] call CFUNC(removeActionEventHandler);
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
@@ -44,4 +44,4 @@ _unit setVariable [QGVAR(Adjust), [
     _unit, "DefaultAction",
     {GVAR(adjustPFH) != -1},
     {(_this select 0) setVariable [QGVAR(adjusting), false, true]}
-] call EFUNC(common,addActionEventHandler)];
+] call CFUNC(addActionEventHandler)];

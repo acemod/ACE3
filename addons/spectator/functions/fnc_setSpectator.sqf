@@ -30,12 +30,12 @@ if !(hasInterface) exitWith {};
 if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Handle common addon audio
-if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
+if (["ace_hearing"] call CFUNC(isModLoaded)) then {
     EGVAR(hearing,disableVolumeUpdate) = _set;
     EGVAR(hearing,deafnessDV) = 0;
 };
-if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
-if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
+if (["acre_sys_radio"] call CFUNC(isModLoaded)) then {[_set] call acre_api_fnc_setSpectator};
+if (["task_force_radio"] call CFUNC(isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
 if (_set) then {
     // Initalize camera variables
@@ -97,10 +97,10 @@ if (_set) then {
                 };
             }];
         };
-    }, !_force] call EFUNC(common,execNextFrame);
+    }, !_force] call CFUNC(execNextFrame);
 
     // Cache and disable nametag settings
-    if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_nametags"] call CFUNC(isModLoaded)) then {
         GVAR(nametagSettingCache) = [EGVAR(nametags,showPlayerNames), EGVAR(nametags,showNamesForAI)];
         EGVAR(nametags,showPlayerNames) = 0;
         EGVAR(nametags,showNamesForAI) = false;
@@ -157,7 +157,7 @@ if (_set) then {
     GVAR(mousePos) = nil;
 
     // Reset nametag settings
-    if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_nametags"] call CFUNC(isModLoaded)) then {
         EGVAR(nametags,showPlayerNames) = GVAR(nametagSettingCache) select 0;
         EGVAR(nametags,showNamesForAI) = GVAR(nametagSettingCache) select 1;
         GVAR(nametagSettingCache) = nil;
@@ -170,4 +170,4 @@ GVAR(interrupts) = [];
 // Mark spectator state for reference
 GVAR(isSet) = _set;
 
-["spectatorSet",[_set]] call EFUNC(common,localEvent);
+["spectatorSet",[_set]] call CFUNC(localEvent);

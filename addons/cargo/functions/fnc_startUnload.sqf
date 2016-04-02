@@ -37,15 +37,15 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     [
         5 * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
-        {["UnloadCargo", _this select 0] call EFUNC(common,localEvent)},
+        {["UnloadCargo", _this select 0] call CFUNC(localEvent)},
         {},
         localize LSTRING(UnloadingItem),
         {true},
         ["isNotSwimming"]
-    ] call EFUNC(common,progressBar);
+    ] call CFUNC(progressBar);
 } else {
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    ["displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+    ["displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call CFUNC(localEvent);
 };

@@ -20,7 +20,7 @@
 params ["_unit", "_target", "_hitPoint"];
 TRACE_3("params",_unit,_target,_hitPoint);
 
-if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call CFUNC(canInteractWith)) exitWith {false};
 
 //check for a near track object is handled by claimObjects[] config
 

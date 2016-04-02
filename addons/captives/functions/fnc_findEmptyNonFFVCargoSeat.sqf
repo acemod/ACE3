@@ -27,7 +27,7 @@ _realCargoCount = if (isArray (_vehicleConfig >> "getInProxyOrder")) then {count
 //Find FFV turrets:
 _ffvCargoIndexes = [];
 {
-    _turretConfig = [_vehicleConfig, _x] call EFUNC(common,getTurretConfigPath);
+    _turretConfig = [_vehicleConfig, _x] call CFUNC(getTurretConfigPath);
     _isCargoProxy = ((getText (_turretConfig >> "proxyType")) == "CPCargo") && {isNumber (_turretConfig >> "proxyIndex")};
 
     if (_isCargoProxy) then {

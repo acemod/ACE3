@@ -16,7 +16,7 @@
 
 params ["_vehicle", "_turret", "_delta"];
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call CFUNC(getTurretConfigPath);
 
 private _min = getNumber (_turretConfig >> QGVAR(MinDistance));
 private _max = getNumber (_turretConfig >> QGVAR(MaxDistance));

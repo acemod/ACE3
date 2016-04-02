@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if !([_unit] call FUNC(canClimb)) exitWith {
-    [localize LSTRING(CanNotClimb)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(CanNotClimb)] call CFUNC(displayTextStructured);
 };
 
 if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
@@ -26,7 +26,7 @@ if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
         if (local (_this select 0) && {_this select 1 == "ACE_Climb"}) then {
             // abort climb animation
             if !(_this call FUNC(canClimb)) then {
-                [_this select 0, "AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+                [_this select 0, "AmovPercMstpSnonWnonDnon", 2] call CFUNC(doAnimation);
             };
         };
     }];
@@ -38,6 +38,6 @@ if !(_unit getVariable [QGVAR(isClimbInit), false]) then {
     _unit setVariable [QGVAR(isClimbInit), true];
 };
 
-[_unit] call EFUNC(common,fixLoweredRifleAnimation);
-[_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
-[_unit, "ACE_Climb", 0] call EFUNC(common,doAnimation);
+[_unit] call CFUNC(fixLoweredRifleAnimation);
+[_unit, "AmovPercMstpSnonWnonDnon", 0] call CFUNC(doAnimation);
+[_unit, "ACE_Climb", 0] call CFUNC(doAnimation);

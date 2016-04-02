@@ -28,7 +28,7 @@ if (_unit isKindOf "CAManBase") then {
     if (_unit == ACE_player) then {
         ["firedPlayer", _this] call FUNC(localEvent);
     } else {
-        if ([_unit] call EFUNC(common,isPlayer)) then {
+        if ([_unit] call CFUNC(isPlayer)) then {
             ["firedPlayerNonLocal", _this] call FUNC(localEvent);
         } else {
             ["firedNonPlayer", _this] call FUNC(localEvent);
@@ -57,7 +57,7 @@ if (_unit isKindOf "CAManBase") then {
     if (_gunner == ACE_player) then {
         ["firedPlayerVehicle", _this] call FUNC(localEvent);
     } else {
-        if ([_gunner] call EFUNC(common,isPlayer)) then {
+        if ([_gunner] call CFUNC(isPlayer)) then {
             ["firedPlayerVehicleNonLocal", _this] call FUNC(localEvent);
         } else {
             ["firedNonPlayerVehicle", _this] call FUNC(localEvent);

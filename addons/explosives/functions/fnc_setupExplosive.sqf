@@ -32,12 +32,12 @@ if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Explosives", true] call CFUNC(statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
-_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
-_unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
+_unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call CFUNC(AddActionEventHandler)];
+_unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call CFUNC(AddActionEventHandler)];
 
 //Display to show virtual object:
 (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutRsc [QGVAR(virtualAmmo), "PLAIN", 0, false];
@@ -64,7 +64,7 @@ GVAR(TweakedAngle) = 0;
 
     private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
 
-    _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
+    _lookDirVector = ((positionCameraToWorld [0,0,0]) call CFUNC(positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call CFUNC(positionToASL));
     _basePosASL = (eyePos _unit);
     if (cameraView == "EXTERNAL") then {  //If external, show explosive over the right shoulder
         _basePosASL = _basePosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
@@ -72,7 +72,7 @@ GVAR(TweakedAngle) = 0;
     if ((stance _unit) == "PRONE") then {
         //If prone, lower base and increase up angle of look - Makes it much easier to attach to underside of vehicles
         _basePosASL set [2, ((_basePosASL select 2) - 0.3)];
-        _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,3,10]) call EFUNC(common,positionToASL));
+        _lookDirVector = ((positionCameraToWorld [0,0,0]) call CFUNC(positionToASL)) vectorFromTo ((positionCameraToWorld [0,3,10]) call CFUNC(positionToASL));
     };
     _cameraAngle = (_lookDirVector select 0) atan2 (_lookDirVector select 1);
 
@@ -82,7 +82,7 @@ GVAR(TweakedAngle) = 0;
         {
             _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
             #ifdef DEBUG_MODE_FULL
-            drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
+            drawLine3d [(eyePos _unit) call CFUNC(ASLToPosition), (_testPos) call CFUNC(ASLToPosition), [1,0,0,1]];
             #endif
             if (lineIntersects [eyePos _unit, _testPos, _unit]) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
@@ -142,7 +142,7 @@ GVAR(TweakedAngle) = 0;
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
     if (_unit != ACE_player ||
-        {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
+        {!([_unit, objNull, ["isNotSwimming"]] call CFUNC(canInteractWith))} ||
         {!(_magClassname in (magazines _unit))}
     ) then {
         GVAR(placeAction) = PLACE_CANCEL;
@@ -152,16 +152,16 @@ GVAR(TweakedAngle) = 0;
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
 
-        [_unit, "forceWalk", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", "ACE_Explosives", false] call CFUNC(statusEffect_set);
         [] call EFUNC(interaction,hideMouseHint);
-        [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
-        [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+        [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call CFUNC(removeActionEventHandler);
+        [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call CFUNC(removeActionEventHandler);
 
         (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
         if (GVAR(placeAction) == PLACE_APPROVE) then {
             _placeAngle = 0;
-            _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
+            _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call CFUNC(ASLToPosition));
 
             TRACE_1("Planting Mass", (getMass _expSetupVehicle));
             //If the object is too heavy, it can kill a player if it colides
@@ -173,7 +173,7 @@ GVAR(TweakedAngle) = 0;
                 _expSetupVehicle setDir _placeAngle;
                 _placeAngle = _placeAngle + 180; //CfgAmmos seem to be 180 for some reason
             } else {
-                _modelOffset = _attachVehicle worldToModel (_virtualPosASL call EFUNC(common,ASLToPosition));
+                _modelOffset = _attachVehicle worldToModel (_virtualPosASL call CFUNC(ASLToPosition));
                 _placeAngle = _cameraAngle - (getDir _attachVehicle) + 180;
                 _expSetupVehicle attachTo [_attachVehicle, _modelOffset];
                 _expSetupVehicle setVectorDirAndUp [[0,0,-1],[(sin _placeAngle),(cos _placeAngle),0]];
@@ -187,18 +187,18 @@ GVAR(TweakedAngle) = 0;
             _unit removeMagazine _magClassname;
             _unit playActionNow "PutDown";
             _unit setVariable [QGVAR(PlantingExplosive), true];
-            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
+            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CFUNC(waitAndExecute);
 
         };
     } else {
-        _screenPos = worldToScreen (_virtualPosASL call EFUNC(common,ASLToPosition));
+        _screenPos = worldToScreen (_virtualPosASL call CFUNC(ASLToPosition));
         if (_badPosition || {_screenPos isEqualTo []}) then {
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
         } else {
             //Show the model on the hud in aprox the same size/location as it will be placed:
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
 
-            _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
+            _realDistance = ((_virtualPosASL call CFUNC(ASLToPosition)) distance (positionCameraToWorld [0,0,0])) / ((call CBA_fnc_getFov) select 1);
             _screenPos = [(_screenPos select 0), _realDistance, (_screenPos select 1)];
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
 

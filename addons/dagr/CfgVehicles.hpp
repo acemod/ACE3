@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(menu) {
                     displayName = CSTRING(ConfigureDAGR);
-                    condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));
+                    condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call CFUNC(hasItem));
                     statement = QUOTE(call FUNC(menuInit));
                     showDisabled = 0;
                     priority = 0.1;
@@ -13,7 +13,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     class GVAR(toggle) {
                         displayName = CSTRING(ToggleDAGR);
-                        condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));
+                        condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call CFUNC(hasItem));
                         statement = QUOTE(call FUNC(toggleOverlay));
                         showDisabled = 0;
                         priority = 0.2;

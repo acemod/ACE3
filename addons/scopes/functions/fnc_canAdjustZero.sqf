@@ -23,7 +23,7 @@ if (cameraView == "GUNNER") exitWith {false};
 if (vehicle _unit != _unit) exitWith {false};
 if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {false};
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call CFUNC(getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
 _adjustment = _unit getVariable QGVAR(Adjustment);

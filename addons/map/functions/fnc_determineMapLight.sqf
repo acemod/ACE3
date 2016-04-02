@@ -53,7 +53,7 @@ _fnc_calcColor = {
     };
 };
 
-_lightLevel = 0.04 + (0.96 * call EFUNC(common,ambientBrightness));
+_lightLevel = 0.04 + (0.96 * call CFUNC(ambientBrightness));
 
 /*
 // check if player has NVG enabled
@@ -87,7 +87,7 @@ TRACE_1("Player is on foot or in an open vehicle","");
 
 // Check if player is near a campfires, streetlamps, units with flashlights, vehicles with lights on, etc. - 40m
 {
-    _lightLevel = _lightLevel max ([_unit, _x] call EFUNC(common,lightIntensityFromObject));
+    _lightLevel = _lightLevel max ([_unit, _x] call CFUNC(lightIntensityFromObject));
 } forEach nearestObjects [_unit, ["All"], 40];
 
 // @todo: Illumination flares (timed)

@@ -5,7 +5,7 @@
  * velocity of shots with and without AB significantly mismatch
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * None

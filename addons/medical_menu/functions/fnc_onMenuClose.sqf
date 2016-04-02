@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), false] call EFUNC(common,blurScreen);};
+if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), false] call CFUNC(blurScreen);};
 if (EGVAR(interact_menu,menuBackground)==2) then {(uiNamespace getVariable [QEGVAR(interact_menu,menuBackground), displayNull]) closeDisplay 0;};
 
 [GVAR(MenuPFHID)] call CBA_fnc_removePerFrameHandler;

@@ -30,7 +30,7 @@ private _animation = switch (currentWeapon _player) do {
     default {"amovpercmstpsnonwnondnon"};
 };
 
-[_player, _animation, 2] call EFUNC(common,doAnimation);
+[_player, _animation, 2] call CFUNC(doAnimation);
 
 // Set variables to nil
 _player setVariable [QGVAR(isSitting), nil];

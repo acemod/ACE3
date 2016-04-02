@@ -40,7 +40,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     };
     private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (REFUEL_HOSE_LENGTH - 2);
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
-        [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
+        [LSTRING(Hint_TooFar), 2, _unit] call CFUNC(displayTextStructured);
 
         [objNull, _nozzle] call FUNC(dropNozzle);
         _nozzle setVariable [QGVAR(isConnected), false, true];
@@ -57,7 +57,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_SourceEmpty), 2, _unit] call CFUNC(displayTextStructured);
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
         if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
@@ -68,18 +68,18 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
             _fuelInSource = 0;
             _finished = true;
-            [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_SourceEmpty), 2, _unit] call CFUNC(displayTextStructured);
         };
 
         private _fuelInSink = (_unit getVariable [QGVAR(tempFuel), _startFuel])  + ( _rate / _maxFuel);
         if (_fuelInSink > 1) then {
             _fuelInSink = 1;
             _finished = true;
-            [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
+            [LSTRING(Hint_Completed), 2, _unit] call CFUNC(displayTextStructured);
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
-        ["setFuel", _sink, [_sink, _fuelInSink]] call EFUNC(common,objectEvent);
+        ["setFuel", _sink, [_sink, _fuelInSink]] call CFUNC(objectEvent);
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
         _unit setVariable [QGVAR(tempFuel), fuel _sink];

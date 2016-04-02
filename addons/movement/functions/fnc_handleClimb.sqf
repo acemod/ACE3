@@ -20,7 +20,7 @@ params ["_unit", "_anim"];
 
 private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
-[_unit, "AmovPknlMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+[_unit, "AmovPknlMstpSnonWnonDnon", 2] call CFUNC(doAnimation);
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");
 

@@ -19,7 +19,7 @@ params ["_caller", "_target"];
 
 _genericMessages = [LSTRING(diagnoseMessage)];
 
-_genericMessages pushBack ([_target] call EFUNC(common,getName));
+_genericMessages pushBack ([_target] call CFUNC(getName));
 if (alive _target) then {
     _genericMessages pushBack LSTRING(diagnoseAlive);
 } else {
@@ -43,4 +43,4 @@ if (alive _target) then {
     };
 };
 
-["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);
+["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call CFUNC(targetEvent);

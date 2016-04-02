@@ -3,7 +3,7 @@
  * Handle fire of local launchers. Called from the unified fired EH only for the local player.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return value:
  * None
@@ -37,7 +37,7 @@ private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call CFUNC(targetEvent);
 
 // Damage to the firer
 private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FUNC(getDistance));
@@ -63,28 +63,28 @@ if (_distance < _backblastRange) then {
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
 
-    private _ref = _direction call EFUNC(common,createOrthonormalReference);
+    private _ref = _direction call CFUNC(createOrthonormalReference);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange) vectorAdd ((_ref select 1) vectorMultiply _backblastRange * tan _backblastAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange) vectorDiff ((_ref select 1) vectorMultiply _backblastRange * tan _backblastAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange) vectorAdd ((_ref select 2) vectorMultiply _backblastRange * tan _backblastAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _backblastRange) vectorDiff ((_ref select 2) vectorMultiply _backblastRange * tan _backblastAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
 
     [   _position,
         _position vectorAdd (_direction vectorMultiply ((_distance/2) min _backblastRange)),
         [1,0,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
 #endif

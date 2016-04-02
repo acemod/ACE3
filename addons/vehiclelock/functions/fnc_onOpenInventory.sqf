@@ -41,7 +41,7 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         TRACE_1("delaying a frame", ace_player);
         //Just opens a dummy groundContainer (so the player can still see their own inventory)
         ACE_player action ["Gear", objNull];
-    }, []] call EFUNC(common,execNextFrame);
+    }, []] call CFUNC(execNextFrame);
 };
 
 _handeled

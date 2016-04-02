@@ -52,10 +52,10 @@ if (!([[_unit, _veh]] call _condition)) exitWith {false};
 _returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
 switch (_funcType) do {
     case "startLockpick": {
-        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition] call EFUNC(common,progressBar);
+        [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition] call CFUNC(progressBar);
     };
     case "finishLockpick": {
-        ["VehicleLock_SetVehicleLock", [_veh], [_veh, false]] call EFUNC(common,targetEvent);
+        ["VehicleLock_SetVehicleLock", [_veh], [_veh, false]] call CFUNC(targetEvent);
     };
     default {
         ERROR("bad function type");

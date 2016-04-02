@@ -24,14 +24,14 @@ _onFinish = {
     (_this select 0) params ["_caller", "_target"];
     _caller removeItem "ACE_UAVBattery";
     playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
-      ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
+      ["setFuel", [_target], [_target, 1]] call CFUNC(targetEvent); //setFuel is local
 };
 
 _onFailure = {
     (_this select 0) params ["_caller", "_target"];
-    [_caller, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
+    [_caller, "AmovPknlMstpSrasWrflDnon", 1] call CFUNC(doAnimation);
 };
 
-[_caller, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
+[_caller, "AinvPknlMstpSnonWnonDr_medic5", 0] call CFUNC(doAnimation);
 
-[10, [_caller, _target], _onFinish, _onFailure, (localize LSTRING(Battery_Recharge)), {(_this select 0) call FUNC(canRefuelUAV)}] call EFUNC(common,progressBar);
+[10, [_caller, _target], _onFinish, _onFailure, (localize LSTRING(Battery_Recharge)), {(_this select 0) call FUNC(canRefuelUAV)}] call CFUNC(progressBar);

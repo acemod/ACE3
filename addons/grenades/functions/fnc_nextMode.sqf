@@ -36,7 +36,7 @@ private _hint = localize ([
     LSTRING(DropGrenade)  
 ] select _mode);
 
-[_hint] call EFUNC(common,displayTextStructured);
+[_hint] call CFUNC(displayTextStructured);
 
 GVAR(currentThrowMode) = _mode;
 

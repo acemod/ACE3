@@ -32,7 +32,7 @@ GVAR(camera) = objNull;
     if (!isNull ((_this select 0) displayCtrl 1713001)) then {
         uiNamespace setVariable [QGVAR(RscWeaponInfo2D), _this select 0];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
 ["activeCameraChanged", {
@@ -49,7 +49,7 @@ GVAR(camera) = objNull;
         "ace_optics_rendertarget0" setPiPEffect [0];
         GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // Register fire event handler
-["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(handleFired)] call CFUNC(addEventHandler);

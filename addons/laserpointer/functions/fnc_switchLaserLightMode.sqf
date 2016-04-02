@@ -46,7 +46,7 @@ if (!_error) then {
     private _description = getText (configFile >> "CfgWeapons" >> _nextPointer >> "ACE_modeDescription");
     private _picture = getText (configFile >> "CfgWeapons" >> _nextPointer >> "picture");
 
-    [_description, _picture] call EFUNC(common,displayTextPicture);
+    [_description, _picture] call CFUNC(displayTextPicture);
 } else {
     ACE_LOGERROR_3("Failed to add %1 to %2 - reverting to %3",_nextPointer,_weapon,_pointer);
 };

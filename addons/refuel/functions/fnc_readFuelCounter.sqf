@@ -28,14 +28,14 @@ params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
         private _currentFuel = [_target] call FUNC(getFuel);
         if (_currentFuel == REFUEL_INFINITE_FUEL) then {
             private _fuelCounter = 0.01 * round (100 * (_target getVariable [QGVAR(fuelCounter), 0]));
-            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
+            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call CFUNC(displayTextStructured);
         } else {
             private _fuelCounter = 0.01 * round (100 * ((_target getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel));
-            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);
+            [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call CFUNC(displayTextStructured);
         };
     },
     "",
     localize LSTRING(CheckFuelCounterAction),
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

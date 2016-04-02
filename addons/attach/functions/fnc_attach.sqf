@@ -43,16 +43,16 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem attachTo [_unit, [-0.05, 0, 0.12], "rightshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
-        [_onAtachText] call EFUNC(common,displayTextStructured);
+        [_onAtachText] call CFUNC(displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
-    [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", "ACE_Attach", true] call CFUNC(statusEffect_set);
 
-    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
-    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
+    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CFUNC(execNextFrame);
+    _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call CFUNC(AddActionEventHandler)];
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
 
@@ -76,7 +76,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         if (cameraView == "EXTERNAL") then {
             _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
-        _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+        _virtualPos = _virtualPosASL call CFUNC(ASLToPosition);
         _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
 
         //Don't allow placing in a bad position:
@@ -84,13 +84,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
         if ((GVAR(placeAction) != PLACE_WAITING) ||
                 {_unit != ACE_player} ||
-                {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))} ||
+                {!([_unit, _attachToVehicle, []] call CFUNC(canInteractWith))} ||
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;
-            [_unit, "forceWalk", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
+            [_unit, "forceWalk", "ACE_Attach", false] call CFUNC(statusEffect_set);
             [] call EFUNC(interaction,hideMouseHint);
-            [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
+            [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call CFUNC(removeActionEventHandler);
             _unit removeAction _actionID;
 
             (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];

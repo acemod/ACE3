@@ -16,5 +16,5 @@
 params ["_logic"];
 if !(isServer) exitWith {};
 
-[_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(maxRange), "maxRange"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enabled), "enabled"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(maxRange), "maxRange"] call CFUNC(readSettingFromModule);

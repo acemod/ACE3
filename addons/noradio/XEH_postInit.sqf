@@ -4,7 +4,7 @@
 // unmute unit if that player disconnects
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
-        [_this select 0, "isPlayer"] call EFUNC(common,unmuteUnit);
+        [_this select 0, "isPlayer"] call CFUNC(unmuteUnit);
     }];
 };
 
@@ -15,10 +15,10 @@ if (!hasInterface) exitWith {};
     params ["_newPlayer", "_oldPlayer"];
 
     // mute the new player
-    [_newPlayer, "isPlayer"] call EFUNC(common,muteUnit);
+    [_newPlayer, "isPlayer"] call CFUNC(muteUnit);
 
     // unmute the old player
     if (alive _oldPlayer) then {
-        [_oldPlayer, "isPlayer"] call EFUNC(common,unmuteUnit);
+        [_oldPlayer, "isPlayer"] call CFUNC(unmuteUnit);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);

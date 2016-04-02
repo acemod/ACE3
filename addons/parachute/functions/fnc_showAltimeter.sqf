@@ -36,12 +36,12 @@ GVAR(AltimeterActive) = true;
     _hour = floor daytime;
     _minute = floor ((daytime - _hour) * 60);
 
-    _height = ((getPosASL _unit) select 2) + EGVAR(common,mapAltitude);
+    _height = ((getPosASL _unit) select 2) + CGVAR(mapAltitude);
     _curTime = ACE_time;
     _timeDiff = _curTime - _prevTime;
     _descentRate = if(_timeDiff > 0) then {floor((_oldHeight - _height) / _timeDiff)} else {0};
 
-    _TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call EFUNC(common,numberToDigitsString),[_minute, 2] call EFUNC(common,numberToDigitsString)]);
+    _TimeText ctrlSetText (format ["%1:%2",[_hour, 2] call CFUNC(numberToDigitsString),[_minute, 2] call CFUNC(numberToDigitsString)]);
     _HeightText ctrlSetText (format ["%1", floor(_height)]);
     _DecendRate ctrlSetText (format ["%1", _descentRate max 0]);
 

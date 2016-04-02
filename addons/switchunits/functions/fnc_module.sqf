@@ -25,14 +25,14 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(SwitchToWest), "SwitchToWest"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(SwitchToEast), "SwitchToEast"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(SwitchToIndependent), "SwitchToIndependent"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(SwitchToCivilian), "SwitchToCivilian"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(SwitchToWest), "SwitchToWest"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(SwitchToEast), "SwitchToEast"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(SwitchToIndependent), "SwitchToIndependent"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(SwitchToCivilian), "SwitchToCivilian"] call CFUNC(readSettingFromModule);
 
-[_logic, QGVAR(EnableSafeZone), "EnableSafeZone"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(SafeZoneRadius), "SafeZoneRadius"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(EnableSafeZone), "EnableSafeZone"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(SafeZoneRadius), "SafeZoneRadius"] call CFUNC(readSettingFromModule);
 
-[QGVAR(EnableSwitchUnits), true, false, true] call EFUNC(common,setSetting);
+[QGVAR(EnableSwitchUnits), true, false, true] call CFUNC(setSetting);
 
 ACE_LOGINFO("SwitchUnits Module Initialized.");

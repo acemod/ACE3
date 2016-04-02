@@ -34,11 +34,11 @@ if (local _unit) then {
 if (isServer) then {
     _turretOwnerID = _target turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
-        [_this, QFUNC(rearmSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+        [_this, QFUNC(rearmSuccessLocal), _target] call CFUNC(execRemoteFnc);
     } else {
-        EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
-        _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+        CGVAR(remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
+        _turretOwnerID publicVariableClient QCGVAR(remoteFnc);
     };
 } else {
-    [_this, QFUNC(rearmSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [_this, QFUNC(rearmSuccess), 1] call CFUNC(execRemoteFnc);
 };

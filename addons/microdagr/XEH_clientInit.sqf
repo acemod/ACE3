@@ -9,18 +9,18 @@ _conditonCode = {
     ("ACE_microDAGR" in (items ACE_player))
 };
 _toggleCode = {
-    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {};
+    if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)) exitWith {};
     [] call FUNC(openDisplay); //toggle display mode
 };
 _closeCode = {
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {};
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
 };
-[(localize LSTRING(itemName)), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(itemName)), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call CFUNC(deviceKeyRegisterNew);
 
 
 //Add Eventhandler:
-["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call EFUNC(common,addEventHandler);
+["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call CFUNC(addEventHandler);
 
 //Global Variables to default:
 GVAR(gpsPositionASL) = [0,0,0];
@@ -39,4 +39,4 @@ GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
 
-GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];
+GVAR(mgrsGridZoneDesignator) = format ["%1 %2",CGVAR(MGRS_data) select 0, CGVAR(MGRS_data) select 1];

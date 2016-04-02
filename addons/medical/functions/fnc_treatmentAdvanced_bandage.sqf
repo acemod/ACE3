@@ -19,17 +19,17 @@
 #include "script_component.hpp"
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog); // TODO expand message
 
 if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 
 if (local _target) then {
-    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,localEvent);
+    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call CFUNC(localEvent);
 } else {
-    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,targetEvent);
+    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call CFUNC(targetEvent);
 };
 
 /*    {

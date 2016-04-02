@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _turret = _vehicle call EFUNC(common,getTurretCommander);
+private _turret = _vehicle call CFUNC(getTurretCommander);
 private _weapons = _vehicle weaponsTurret _turret;
 
 if (

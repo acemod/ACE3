@@ -42,9 +42,9 @@ if (_dir != 1) then {
         // Already drawing -> Add tempLineMarker to permanent list
         if (GVAR(drawing_syncMarkers)) then {
             deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
-            ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call EFUNC(common,globalEvent);
+            ["drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call CFUNC(globalEvent);
             // Log who drew on the briefing screen
-            [ACE_INFOFORMAT_1("Player %1 drew on the briefing screen", profileName)] call EFUNC(common,serverLog);
+            [ACE_INFOFORMAT_1("Player %1 drew on the briefing screen", profileName)] call CFUNC(serverLog);
         } else {
             GVAR(drawing_tempLineMarker) call FUNC(updateLineMarker);
             GVAR(drawing_lineMarkers) pushBack (+GVAR(drawing_tempLineMarker));

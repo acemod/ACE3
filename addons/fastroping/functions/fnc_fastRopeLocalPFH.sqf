@@ -28,12 +28,12 @@ if (vehicle _unit != _unit) exitWith {};
 if (animationState _unit != "ACE_FastRoping") exitWith {
     _unit disableCollisionWith _dummy;
     _unit attachTo [_dummy, [0, 0, -1.45]];
-    [_unit, "ACE_FastRoping", 2] call EFUNC(common,doAnimation);
+    [_unit, "ACE_FastRoping", 2] call CFUNC(doAnimation);
 };
 
 //End of fast rope
 if (isNull attachedTo _unit) exitWith {
-    [_unit, "", 2] call EFUNC(common,doAnimation);
+    [_unit, "", 2] call CFUNC(doAnimation);
     _unit setVectorUp [0, 0, 1];
 
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;

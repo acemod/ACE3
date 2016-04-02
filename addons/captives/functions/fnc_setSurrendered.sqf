@@ -25,12 +25,12 @@ if (!local _unit) exitWith {
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
     // It's to soon to call this function, delay it
-    if (EGVAR(common,settingsInitFinished)) then {
+    if (CGVAR(settingsInitFinished)) then {
         // Settings are already initialized, but the small wait isn't over
-        [DFUNC(setSurrendered), _this, 0.05] call EFUNC(common,waitAndExecute);
+        [DFUNC(setSurrendered), _this, 0.05] call CFUNC(waitAndExecute);
     } else {
         // Settings are not initialized yet
-        [DFUNC(setSurrendered), _this] call EFUNC(common,runAfterSettingsInit);
+        [DFUNC(setSurrendered), _this] call CFUNC(runAfterSettingsInit);
     };
 };
 
@@ -44,14 +44,14 @@ if (_state) then {
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
-    [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(Surrendered), true] call CFUNC(statusEffect_set);
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false]] call CFUNC(showHud);
     };
 
-    [_unit] call EFUNC(common,fixLoweredRifleAnimation);
-    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
+    [_unit] call CFUNC(fixLoweredRifleAnimation);
+    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call CFUNC(doAnimation);
 
     // fix anim on mission start (should work on dedicated servers)
     [{
@@ -68,15 +68,15 @@ if (_state) then {
                 params ["_unit", "_newAnimation"];
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     TRACE_1("Surrender animation interrupted",_newAnimation);
-                    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
+                    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call CFUNC(doAnimation);
                 };
             }];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
-    }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
+    }, [_unit], 0.01] call CFUNC(waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
-    [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(Surrendered), false] call CFUNC(statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
@@ -86,7 +86,7 @@ if (_state) then {
     if (_unit == ACE_player) then {
         //only re-enable HUD if not handcuffed
         if (!(_unit getVariable [QGVAR(isHandcuffed), false])) then {
-            ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+            ["captive", []] call CFUNC(showHud); //same as showHud true;
         };
     };
 
@@ -95,7 +95,7 @@ if (_state) then {
 
     //if we are in "hands up" animationState, crack it now
     if (((vehicle _unit) == _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) then {
-        [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+        [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call CFUNC(doAnimation);
     } else {
         //spin up a PFEH, to watching animationState for the next 20 seconds to make sure we don't enter "hands up"
         //Handles long animation chains
@@ -110,11 +110,11 @@ if (_state) then {
             if (((vehicle _unit) == _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
                 //Break out of hands up animation loop
-                [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+                [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call CFUNC(doAnimation);
             };
         }, 0, [_unit, (ACE_time + 20)]] call CBA_fnc_addPerFrameHandler;
     };
 };
 
 //Global Event after changes:
-["CaptiveStatusChanged", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);
+["CaptiveStatusChanged", [_unit, _state, "SetSurrendered"]] call CFUNC(globalEvent);

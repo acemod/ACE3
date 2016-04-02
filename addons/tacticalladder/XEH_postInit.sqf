@@ -11,16 +11,16 @@ GVAR(currentAngle) = 0;
     if ((ACE_time > GVAR(cancelTime)) && !isNull GVAR(ladder)) then {
         GVAR(ladder) call FUNC(cancelTLdeploy);
     };
-}] call EFUNC(common,addEventHandler);*/
+}] call CFUNC(addEventHandler);*/
 
 // Cancel adjustment if interact menu opens
-["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
+["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call CFUNC(addEventHandler);
 
 // Cancel adjusting on player change.
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CFUNC(addEventhandler);
+["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CFUNC(addEventhandler);
 
 // handle falling unconscious
-["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
+["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CFUNC(addEventhandler);
 
 // @todo captivity?

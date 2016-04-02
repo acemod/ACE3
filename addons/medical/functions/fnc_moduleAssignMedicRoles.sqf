@@ -21,6 +21,6 @@ if (!isNull _logic) then {
     _list = _logic getVariable ["EnableList", ""];
     _setting = _logic getVariable ["role", 0];
 
-    [_list, QGVAR(medicClass), _setting, true] call EFUNC(common,assignObjectsInList);
-    [synchronizedObjects _logic, QGVAR(medicClass), _setting, true] call EFUNC(common,assignObjectsInList);
+    [_list, QGVAR(medicClass), _setting, true] call CFUNC(assignObjectsInList);
+    [synchronizedObjects _logic, QGVAR(medicClass), _setting, true] call CFUNC(assignObjectsInList);
 };
