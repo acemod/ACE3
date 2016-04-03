@@ -11,8 +11,6 @@ GVAR(sandBag) = objNull;
 GVAR(deployPFH) = -1;
 GVAR(deployDirection) = 0;
 
-[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
-
 // Cancel deploy sandbag if interact menu opened
 ["interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call EFUNC(common,addEventHandler);
 

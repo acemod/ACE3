@@ -3,7 +3,8 @@
  * Cancels trench dig
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Key <NUMBER>
  *
  * Return Value:
  * None
@@ -15,7 +16,9 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", "_key"];
+
+if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 
 // enable running again
 [_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
@@ -31,6 +34,5 @@ GVAR(digPFH) = -1;
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
 _unit setVariable [QGVAR(isPlacing), false, true];

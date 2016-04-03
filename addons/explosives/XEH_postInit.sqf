@@ -81,5 +81,3 @@ if (isServer) then {
     _this call FUNC(interactEH);
 
 }] call EFUNC(common,addEventHandler);
-
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(common,addScrollWheelEventHandler);
