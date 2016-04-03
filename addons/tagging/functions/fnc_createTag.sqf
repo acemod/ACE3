@@ -6,7 +6,8 @@
  * 0: Position ASL <ARRAY>
  * 1: Vector dir and up <ARRAY>
  * 2: Colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
- * 3: Object it should be tied too <OBJECT>
+ * 3: Object it should be tied to <OBJECT>
+ * 4: Unit that created the tag <OBJECT>
  *
  * Return Value:
  * Tag created <BOOL>
@@ -19,8 +20,8 @@
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object"];
-TRACE_4("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object);
+params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object", "_unit"];
+TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_color,_object,_unit);
 
 if (_texture == "") exitWith {
     ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
@@ -31,6 +32,9 @@ private _tag = "UserTexture1m_F" createVehicle [0,0,0];
 _tag setObjectTextureGlobal [0, _texture];
 _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
+
+// Throw a global event for mision makers
+["tagCreated", [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
 
 if (isNull _object) exitWith {true};
 
