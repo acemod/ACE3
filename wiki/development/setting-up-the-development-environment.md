@@ -45,18 +45,9 @@ Should the script fail, here is how you create the required links manually:
 
 First, to set up the links, create `z` folders both in your Arma 3 directory and on your P-drive. Then run the following commands as admin, replacing the text in brackets with the appropriate paths:
 
-Windows 8:
-
 ```sh
-mklink /D /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
-mklink /D /J "P:\z\ace" "[location of the ACE3 project]"
-```
-
-Windows 7 and Vista:
-
-```sh
-mklink /D "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
-mklink /D "P:\z\ace" "[location of the ACE3 project]"
+mklink /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
+mklink /J "P:\z\ace" "[location of the ACE3 project]"
 ```
 
 Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
