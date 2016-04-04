@@ -26,4 +26,4 @@ if (isServer) then {
     if (GVAR(isSet)) then {
         [false] call FUNC(setSpectator);
     };
-}] call EFUNC(common,addEventHandler)
+}] call EFUNC(common,addEventHandler);
