@@ -60,7 +60,21 @@ private _recurseFnc = {
                 _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
             };
 
-            private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
+            private _insertChildren = (getText (_entryCfg >> "insertChildren"));
+            private _additionalChildren = configProperties [(_entryCfg >> "additionalChildren")];
+
+            if (_additionalChildren isEqualTo []) then {
+                _insertChildren = compile _insertChildren;
+            } else {
+                if (_insertChildren == "") then {_insertChildren = "[]";};
+                _insertChildren = ["_return = ", _insertChildren, ";"];
+                {
+                    _insertChildren append ["_return append ", (getText _x), ";"];
+                } forEach _additionalChildren;
+                _insertChildren pushBack "_return";
+                _insertChildren = compile (_insertChildren joinString "");
+            }; 
+
             private _modifierFunction = compile (getText (_entryCfg >> "modifierFunction"));
 
             private _showDisabled = (getNumber (_entryCfg >> "showDisabled")) > 0;
