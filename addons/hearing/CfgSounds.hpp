@@ -27,8 +27,8 @@ class CfgSounds {
         sound[] = {QUOTE(PATHTOF(sounds\deafness_noring.ogg)),3,1};
         titles[] = {};
     };
-	class ACE_Ring_Backblast {
-		sound[] = {QUOTE(PATHTOF(sounds\backblast_ring.ogg)),1,1};
-		titles[] = {};
-	};
+    class ACE_Ring_Backblast {
+        sound[] = {QUOTE(PATHTOF(sounds\backblast_ring.ogg)),1,1};
+        titles[] = {};
+    };
 };
