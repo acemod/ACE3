@@ -10,12 +10,12 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-					opticsZoomMin = 0.011;
-					opticsZoomMax = 0.045;
-					opticsZoomInit = 0.045;
-					discretefov[] = {0.045, 0.011};
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+				 opticsZoomMin = 0.011;
+				 opticsZoomMax = 0.045;
+				 opticsZoomInit = 0.045;
+				 discretefov[] = {0.045, 0.011};
+				 discreteDistance[] = {100};
+				 discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -29,8 +29,8 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+                 discreteDistance[] = {100};
+                 discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -44,8 +44,8 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class Snip {
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+                 discreteDistance[] = {100};
+                 discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -59,12 +59,12 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class AMS {
-					opticsZoomMin = 0.0285;
-					opticsZoomMax = 0.085;
-					opticsZoomInit = 0.085;
-					discretefov[] = {0.085, 0.0285};
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+				 opticsZoomMin = 0.0285;
+				 opticsZoomMax = 0.085;
+				 opticsZoomInit = 0.085;
+				 discretefov[] = {0.085, 0.0285};
+				 discreteDistance[] = {100};
+				 discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -78,12 +78,12 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-					opticsZoomMin = 0.026;
-					opticsZoomMax = 0.06;
-					opticsZoomInit = 0.06;
-					discretefov[] = {0.06, 0.026};
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+				 opticsZoomMin = 0.026;
+				 opticsZoomMax = 0.06;
+				 opticsZoomInit = 0.06;
+				 discretefov[] = {0.06, 0.026};
+				 discreteDistance[] = {100};
+				 discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -97,12 +97,12 @@ class CfgWeapons {
         class ItemInfo : InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class KHS {
-					opticsZoomMin = 0.026;
-					opticsZoomMax = 0.06;
-					opticsZoomInit = 0.06;
-					discretefov[] = {0.06, 0.026};
-                    discreteDistance[] = {100};
-                    discreteDistanceInitIndex = 0;
+				 opticsZoomMin = 0.026;
+				 opticsZoomMax = 0.06;
+				 opticsZoomInit = 0.06;
+				 discretefov[] = {0.06, 0.026};
+				 discreteDistance[] = {100};
+				 discreteDistanceInitIndex = 0;
                 };
             };
         };
