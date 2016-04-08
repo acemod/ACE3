@@ -19,7 +19,7 @@ if (!ctrlShown (_display displayCtrl 154)) exitWith {
 // @todo, all weapon types
 private ["_optic", "_isPIP"];
 _optic = (primaryWeaponItems ACE_player) select 2;
-_isPIP = (getText (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "modelOptics")) == QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+_isPIP = (getText (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "modelOptics")) == QPATHTOF(models\ace_optics_pip.p3d);
 
 if (_isPIP) then {
     GVAR(camera) setPosATL positionCameraToWorld [0,0,0.4];

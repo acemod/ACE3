@@ -20,7 +20,7 @@ class CfgVehicles {
     class ACE_moduleEquipFRIES: ACE_Module {
         scope = 2;
         displayName = CSTRING(Module_FRIES_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_FRIES_ca.paa);
         category = "ACE";
         function = QUOTE(FUNC(moduleEquipFRIES));
         functionPriority = 10;
@@ -77,7 +77,7 @@ class CfgVehicles {
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = QUOTE(PATHTOF(data\friesAnchorBar.p3d));
+        model = QPATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
         class AnimationSources {
             class extendHookRight {
@@ -95,7 +95,7 @@ class CfgVehicles {
     class ACE_friesGantry: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = QUOTE(PATHTOF(data\friesGantry.p3d));
+        model = QPATHTOF(data\friesGantry.p3d);
         animated = 1;
         class AnimationSources {
             class adjustWidth {
@@ -148,7 +148,7 @@ class CfgVehicles {
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
         scope = 1;
-        model = PATHTOF(data\helper.p3d);
+        model = QPATHTOF(data\helper.p3d);
         class ACE_Actions {};
         class Turrets {};
     };

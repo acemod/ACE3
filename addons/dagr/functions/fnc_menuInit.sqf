@@ -179,7 +179,7 @@ GVAR(menuRun) = true;
                 (__dsp displayCtrl __Option2) ctrlSetText "WP LIST";
                 (__dsp displayCtrl __Option3) ctrlSetText "CONNECT TO";
                 (__dsp displayCtrl __Option4) ctrlSetText "OPTIONS";
-                (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
+                (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
             };
         };
         case "goto_wp": {
@@ -190,7 +190,7 @@ GVAR(menuRun) = true;
                 (__dsp displayCtrl __Option3) ctrlSetText GVAR(wpString3);
                 (__dsp displayCtrl __Option4) ctrlSetText GVAR(wpString4);
                 if (GVAR(numSelections) > 0) then {
-                    (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
+                    (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
                 };
             };
             if (GVAR(SEL)) then {
@@ -238,7 +238,7 @@ GVAR(menuRun) = true;
                     (__dsp displayCtrl __F2) ctrlSetText "Edit";
                     (__dsp displayCtrl __F3) ctrlSetText "Delete";
                     if (GVAR(numSelections) > 0) then {
-                        (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
+                        (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
                     };
                 };
                 if (GVAR(F3) && GVAR(numWaypoints) > 0) then {
@@ -399,7 +399,7 @@ GVAR(menuRun) = true;
                     (__dsp displayCtrl __F3) ctrlSetText "Cancel";
                     GVAR(output) = str GVAR(digit1) + str GVAR(digit2) + str GVAR(digit3) + str GVAR(digit4) + str GVAR(digit5) + str GVAR(digit6) + str GVAR(digit7) + str GVAR(digit8);
                     (__dsp displayCtrl __mainText) ctrlSetText GVAR(output);
-                    (__dsp displayCtrl __PSelection1 + GVAR(pointer)) ctrlSetText QUOTE(PATHTOF(UI\DAGR_PSelection.paa));
+                    (__dsp displayCtrl __PSelection1 + GVAR(pointer)) ctrlSetText QPATHTOF(UI\DAGR_PSelection.paa);
                 };
                 if (GVAR(F1)) then {
                     if (!GVAR(busy)) then {
@@ -507,7 +507,7 @@ GVAR(menuRun) = true;
         case "connect": {
             if (!GVAR(busy)) then {
                 (__dsp displayCtrl __Option0) ctrlSetText "Vector 21";
-                (__dsp displayCtrl __Selection0) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
+                (__dsp displayCtrl __Selection0) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
             };
             if (GVAR(SEL)) then {
                 if (!GVAR(busy)) then {
@@ -542,7 +542,7 @@ GVAR(menuRun) = true;
         case "options": {
             (__dsp displayCtrl __Option0) ctrlSetText "Signal Delay";
             (__dsp displayCtrl __Option1) ctrlSetText (if (GVAR(useDegrees)) then { "Direction: Deg" } else { "Direction: MIL" });
-            (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QUOTE(PATHTOF(UI\DAGR_Selection.paa));
+            (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
             if (GVAR(SEL)) then {
                 GVAR(vectorConnected) = false;
                 switch (GVAR(selection)) do {

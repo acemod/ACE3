@@ -9,41 +9,41 @@
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 class GVAR(TakeNozzle) { \
                     displayName = CSTRING(TakeNozzle); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                     statement = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(TakeNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuelCounter) { \
                     displayName = CSTRING(CheckFuelCounter); \
                     condition = "true"; \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(readFuelCounter)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuel) { \
                     displayName = CSTRING(CheckFuel); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckFuel)); \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(Connect) { \
                     displayName = CSTRING(Connect); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
             }; \
         }; \
@@ -59,13 +59,13 @@
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 class GVAR(Connect) { \
                     displayName = CSTRING(Connect); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
             }; \
         }; \
@@ -80,34 +80,34 @@
             statement = ""; \
             showDisabled = 0; \
             priority = 2; \
-            icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                 statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(TakeNozzle)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOn) { \
                 displayName = CSTRING(TurnOn); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOff) { \
                 displayName = CSTRING(TurnOff); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(Disconnect) { \
                 displayName = CSTRING(Disconnect); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \
     };
@@ -119,7 +119,7 @@ class CfgVehicles {
     class ACE_moduleRefuelSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\icon_module_refuel.paa));
+        icon = QPATHTOF(ui\icon_module_refuel.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
@@ -146,7 +146,7 @@ class CfgVehicles {
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
-        model = PATHTOF(data\nozzle.p3d);
+        model = QPATHTOF(data\nozzle.p3d);
     };
 
     class All;

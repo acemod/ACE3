@@ -11,7 +11,7 @@ class CfgVehicles {
         scope = 2;
         isGlobal = 1;
         isSingular = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Sitting_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Sitting_ca.paa);
         class Arguments {
             class enable {
                 displayName = CSTRING(Enable);
@@ -34,7 +34,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSitting"};
                 statement = QUOTE(_player call FUNC(stand));
                 priority = 0;
-                icon = PATHTOF(UI\stand_ca.paa);
+                icon = QPATHTOF(UI\stand_ca.paa);
             };
         };
     };

@@ -33,7 +33,7 @@ _fnc_parameters = {
     private _icon = "";
     private _size = 0;
     if (_drawSoundwave) then {
-        _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor random 10];
+        _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
         _size = 1;
     } else {
         if (_drawRank && {rank _target != ""}) then {

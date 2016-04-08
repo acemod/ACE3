@@ -8,7 +8,7 @@ class CfgVehicles {
                     distance = 2.0;
                     condition = QUOTE(_target call FUNC(canCopy));
                     statement = QUOTE(_target call FUNC(updateClassNames));
-                    icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                    icon = QPATHTOF(UI\RangeCard_Icon.paa);
                 };
             };
         };
@@ -20,7 +20,7 @@ class CfgVehicles {
                     statement = QUOTE(false call FUNC(openRangeCard));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                    icon = QPATHTOF(UI\RangeCard_Icon.paa);
                     exceptions[] = {"notOnMap"};
                     class GVAR(openCopy) {
                         displayName = CSTRING(OpenRangeCardCopy);
@@ -28,7 +28,7 @@ class CfgVehicles {
                         statement = QUOTE(true call FUNC(openRangeCard));
                         showDisabled = 0;
                         priority = 0.1;
-                        icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                        icon = QPATHTOF(UI\RangeCard_Icon.paa);
                         exceptions[] = {"notOnMap"};
                     };
                     class GVAR(makeCopy) {
@@ -37,7 +37,7 @@ class CfgVehicles {
                         statement = QUOTE(GVAR(ammoClassCopy) = GVAR(ammoClass); GVAR(magazineClassCopy) = GVAR(magazineClass); GVAR(weaponClassCopy) = GVAR(ammoClass););
                         showDisabled = 0;
                         priority = 0.1;
-                        icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                        icon = QPATHTOF(UI\RangeCard_Icon.paa);
                         exceptions[] = {"notOnMap"};
                     };
                 };

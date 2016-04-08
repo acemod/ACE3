@@ -8,7 +8,7 @@
                     condition = QUOTE(_this call FUNC(canRearm)); \
                     statement = QUOTE(_player call FUNC(rearm)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -24,7 +24,7 @@
                     exceptions[] = {"isNotInside"}; \
                     showDisabled = 0; \
                     priority = 2; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
                 class GVAR(StoreAmmo) { \
                     displayName = CSTRING(StoreAmmo); \
@@ -32,7 +32,7 @@
                     condition = QUOTE(_this call FUNC(canStoreAmmo)); \
                     statement = QUOTE(_this call FUNC(storeAmmo)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -44,7 +44,7 @@ class CfgVehicles {
     class ACE_moduleRearmSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\icon_module_rearm.paa));
+        icon = QPATHTOF(ui\icon_module_rearm.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRearmSettings);
         functionPriority = 1;
@@ -188,7 +188,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside"};
                 showDisabled = 0;
                 priority = 2;
-                icon = PATHTOF(ui\icon_rearm_interact.paa);
+                icon = QPATHTOF(ui\icon_rearm_interact.paa);
             };
         };
     };

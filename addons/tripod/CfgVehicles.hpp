@@ -11,7 +11,7 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
                 showDisabled = 0;
                 priority = 2;
-                icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
             };
         };
     };
@@ -46,7 +46,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         scope = 2;
         displayName = CSTRING(DisplayName);
-        model = PATHTOF(data\sniper_tripod.p3d);
+        model = QPATHTOF(data\sniper_tripod.p3d);
 
         class AnimationSources {
             class slide_down_tripod {
@@ -76,7 +76,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
 
                 class ACE_Adjust {
@@ -89,7 +89,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
             };
         };

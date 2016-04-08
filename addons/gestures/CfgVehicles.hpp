@@ -9,7 +9,7 @@ class CfgVehicles {
                 statement = "";
                 showDisabled = 1;
                 priority = 3.5;
-                icon = PATHTOF(UI\gestures_ca.paa);
+                icon = QPATHTOF(UI\gestures_ca.paa);
 
                 class GVAR(Advance) {
                     displayName = CSTRING(Advance);

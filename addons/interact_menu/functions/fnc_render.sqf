@@ -56,7 +56,7 @@ if (GVAR(openedMenuType) >= 0) then {
     GVAR(lastTime) = _cTime;
 
     GVAR(rotationAngle) = (GVAR(rotationAngle) + (270*_delta)) mod 360;
-    [_sPos, format [QUOTE(PATHTOF(ui\selector%1.paa)), floor (((abs GVAR(rotationAngle)) mod 90) / 6)]] call FUNC(renderSelector);
+    [_sPos, format [QPATHTOF(ui\selector%1.paa), floor (((abs GVAR(rotationAngle)) mod 90) / 6)]] call FUNC(renderSelector);
 
     _foundTarget = true;
     GVAR(actionSelected) = true;
