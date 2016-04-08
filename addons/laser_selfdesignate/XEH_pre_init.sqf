@@ -1,12 +1,11 @@
 #include "script_component.hpp"
 
-PREP(initDesignatorActions);
-PREP(laserHudDesignateOn);
-PREP(laserHudDesignateOff);
-PREP(unitTurretHasDesignator);
+ADDON = false;
 
-PREP(findLaserSource);
+#include "XEH_PREP.hpp"
 
 GVAR(active) = false;
 
 FUNC(getPosASL) = {visiblePositionASL (_this select 0)};
+
+ADDON = true;

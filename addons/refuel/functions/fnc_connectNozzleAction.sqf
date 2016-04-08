@@ -60,7 +60,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 //Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1) || {!([_target, _unit, _itemClassname] call FUNC(canAttach))}) exitWith {
+if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
@@ -77,7 +77,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
-        _unit setVariable [QGVAR(nozzle), nil];
+        _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
         [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
@@ -119,13 +119,18 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
                 };
             };
         };
-        [[_nozzle, _dirAndUp], "{(_this select 0) setVectorDirAndUp (_this select 1)}", 2] call EFUNC(common,execRemoteFnc);
+        ["setVectorDirAndUp", _nozzle, [_nozzle, _dirAndUp]] call EFUNC(common,objectEvent);
         _nozzle setVariable [QGVAR(sink), _target, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
-        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel), true];
+        private _fuel = [_source] call FUNC(getFuel);
+        if (_fuel == REFUEL_INFINITE_FUEL) then {
+            _source setVariable [QGVAR(fuelCounter), 0, true];
+        } else {
+            _source setVariable [QGVAR(fuelCounter), _fuel, true];
+        };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
     },

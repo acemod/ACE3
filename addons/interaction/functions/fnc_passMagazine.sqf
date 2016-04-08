@@ -21,10 +21,7 @@ params ["_player", "_target", "_weapon"];
 private ["_compatibleMags", "_filteredMags", "_magToPass", "_magToPassIndex", "_playerName", "_magToPassDisplayName"];
 
 _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
-_filteredMags = [magazinesAmmoFull _player, {
-    params ["_className", "", "_loaded"];
-    _className in _compatibleMags && !_loaded
-}] call EFUNC(common,filter);
+_filteredMags = magazinesAmmoFull _player select {(_x select 0) in _compatibleMags && {!(_x select 2)}};
 
 //select magazine with most ammo
 _magToPass = _filteredMags select 0;

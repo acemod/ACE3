@@ -3,6 +3,7 @@
 
 private ["_split", "_radi", "_params", "_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_indirectHitRange", "_indirectHit", "_distanceCount", "_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_rand", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
 
+BEGIN_COUNTER(fnc_findReflections);
 _params = _this select 0;
 _pos = _params select 0;
 _explosiveInfo = _params select 1;
@@ -124,3 +125,4 @@ if(_zIndex < 5) then {
     [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
     [(_this select 1)] call CBA_fnc_removePerFrameHandler;
 };
+END_COUNTER(fnc_findReflections);

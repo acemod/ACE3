@@ -16,7 +16,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define REFUEL_INFINITE_FUEL -1
+#define REFUEL_INFINITE_FUEL -10
 #define REFUEL_ACTION_DISTANCE 7
 #define REFUEL_HOSE_LENGTH 12
 

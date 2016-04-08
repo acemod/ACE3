@@ -54,8 +54,9 @@ private _fnc_renderNearbyActions = {
                 } count GVAR(objectActionList);
 
                 // Iterate through base level class actions and render them if appropiate
-                private _actionsVarName = format [QGVAR(Act_%1), typeOf _target];
-                private _classActions = missionNamespace getVariable [_actionsVarName, []];
+                private _namespace = GVAR(ActNamespace);
+                private _classActions = _namespace getVariable typeOf _target;
+
                 {
                     private _action = _x;
                     // Try to render the menu
@@ -95,8 +96,8 @@ private _fnc_renderSelfActions = {
     GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
 
     // Iterate through base level class actions and render them if appropiate
-    private _actionsVarName = format [QGVAR(SelfAct_%1), typeOf _target];
-    private _classActions = missionNamespace getVariable [_actionsVarName, []];
+    private _namespace = GVAR(ActSelfNamespace);
+    private _classActions = _namespace getVariable typeOf _target;
 
     private _pos = if !(GVAR(useCursorMenu)) then {
         //Convert to ASL, add offset and then convert back to AGL (handles waves when over water)

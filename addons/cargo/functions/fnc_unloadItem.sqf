@@ -50,8 +50,9 @@ _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
     detach _item;
-    _item setPosASL (AGLtoASL _emptyPosAGL);
-    ["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
+    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+    // do both on server to ensure they are executed in the correct order
+    ["ServerUnloadCargo", [_item, _emptyPosAGL]] call EFUNC(common,serverEvent);
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);

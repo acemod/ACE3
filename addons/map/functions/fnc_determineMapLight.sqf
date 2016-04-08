@@ -90,26 +90,21 @@ TRACE_1("Player is on foot or in an open vehicle","");
     _lightLevel = _lightLevel max ([_unit, _x] call EFUNC(common,lightIntensityFromObject));
 } forEach nearestObjects [_unit, ["All"], 40];
 
-
 // @todo: Illumination flares (timed)
 
-
 // Using chemlights
-_nearObjects = [_unit nearObjects ["SmokeShell", 4], {
-    alive _this && {(typeOf _this == "Chemlight_red") || {
-                    (typeOf _this == "Chemlight_green") || {
-                    (typeOf _this == "Chemlight_blue") || {
-                    (typeOf _this == "Chemlight_yellow")}}}}}] call EFUNC(common,filter);
+_nearObjects = (_unit nearObjects ["SmokeShell", 4]) select {alive _x && {toLower typeOf _x in ["chemlight_red", "chemlight_green", "chemlight_blue", "chemlight_yellow"]}};
+
 if (count (_nearObjects) > 0) then {
     _light = _nearObjects select 0;
 
     _ll = (1 - ((((_unit distance _light) - 2)/2) max 0)) * 0.4;
     if (_ll > _lightLevel) then {
-        _flareTint = switch (typeOf _light) do {
-            case "Chemlight_red" : {[1,0,0,1]};
-            case "Chemlight_green" : {[0,1,0,1]};
-            case "Chemlight_blue" : {[0,0,1,1]};
-            case "Chemlight_yellow" : {[1,1,0,1]};
+        _flareTint = switch (toLower typeOf _light) do {
+            case "chemlight_red" : {[1,0,0,1]};
+            case "chemlight_green" : {[0,1,0,1]};
+            case "chemlight_blue" : {[0,0,1,1]};
+            case "chemlight_yellow" : {[1,1,0,1]};
         };
         _lightTint = [_lightTint, _flareTint, (_ll - _lightLevel)/(1 - _lightLevel)] call _fnc_blendColor;
         _lightLevel = _ll;

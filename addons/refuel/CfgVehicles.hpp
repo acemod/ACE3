@@ -1,3 +1,4 @@
+
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -111,6 +112,8 @@
         }; \
     };
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRefuelSettings: ACE_Module {
@@ -135,7 +138,10 @@ class CfgVehicles {
 
     class ThingX;
     class ACE_refuel_fuelNozzle: ThingX {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
         scope = 1;
@@ -144,20 +150,16 @@ class CfgVehicles {
     };
 
     class All;
-
     class Static: All {};
-
     class Building: Static {};
-
     class NonStrategic: Building {};
-
     class HouseBase: NonStrategic {};
-
     class House: HouseBase {};
-
     class House_F: House {};
 
     class House_Small_F: House_F {
+        class EventHandlers;
+
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -490,8 +492,7 @@ class CfgVehicles {
         };
     };
 
-    class B_Slingload_01_Fuel_F: Slingload_01_Base_F  {
-        XEH_ENABLED;
+    class B_Slingload_01_Fuel_F: Slingload_01_Base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
@@ -524,7 +525,10 @@ class CfgVehicles {
         };
     };
     class Land_StorageBladder_01_F: StorageBladder_base_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         MACRO_REFUEL_ACTIONS
         transportFuel = 0; //60k
         GVAR(hooks)[] = {{-3.35,2.45,0.17}};
@@ -533,7 +537,10 @@ class CfgVehicles {
 
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
@@ -541,7 +548,10 @@ class CfgVehicles {
     };
 
     class Land_fs_feed_F: House_Small_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};

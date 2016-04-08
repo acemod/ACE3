@@ -25,7 +25,7 @@ private _leave = false;
 
 if (GVAR(EnableSafeZone)) then {
     private _allNearestPlayers = [position _unit, GVAR(SafeZoneRadius)] call FUNC(nearestPlayers);
-    private _nearestEnemyPlayers = [_allNearestPlayers, {((side GVAR(OriginalGroup)) getFriend (side _this) < 0.6) && !(_this getVariable [QGVAR(IsPlayerControlled), false])}] call EFUNC(common,filter);
+    private _nearestEnemyPlayers = _allNearestPlayers select {((side GVAR(OriginalGroup)) getFriend side _x < 0.6) && !(_x getVariable [QGVAR(IsPlayerControlled), false])};
 
     if (count _nearestEnemyPlayers > 0) exitWith {
         _leave = true;

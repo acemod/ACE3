@@ -2,32 +2,10 @@
 
 ADDON = false;
 
-PREP(addActionToClass);
-PREP(addActionToObject);
-PREP(addMainAction);
-PREP(compileMenu);
-PREP(compileMenuSelfAction);
-PREP(compileMenuZeus);
-PREP(collectActiveActionTree);
-PREP(createAction);
-PREP(ctrlSetParsedTextCached);
-PREP(findActionNode);
-PREP(handlePlayerChanged);
-PREP(isSubPath);
-PREP(keyDown);
-PREP(keyUp);
-PREP(removeActionFromClass);
-PREP(removeActionFromObject);
-PREP(render);
-PREP(renderActionPoints);
-PREP(renderBaseMenu);
-PREP(renderIcon);
-PREP(renderMenu);
-PREP(renderSelector);
-PREP(setupTextColors);
-PREP(splitPath);
-PREP(userActions_addHouseActions);
-PREP(userActions_getHouseActions);
+#include "XEH_PREP.hpp"
+
+GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
@@ -67,6 +45,13 @@ GVAR(expanded) = false;
 
 GVAR(startHoverTime) = ACE_diagTime;
 GVAR(expandedTime) = ACE_diagTime;
+
+// reset on mission load
+addMissionEventHandler ["Loaded", {
+    GVAR(startHoverTime) = 0;
+    GVAR(expandedTime) = 0;
+}];
+
 GVAR(iconCtrls) = [];
 GVAR(iconCount) = 0;
 

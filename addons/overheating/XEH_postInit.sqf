@@ -13,8 +13,9 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-GVAR(cacheWeaponData) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
+GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
+GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
+GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
@@ -22,9 +23,8 @@ GVAR(cacheWeaponData) setText QGVAR(cacheWeaponData);
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !([ACE_player] call EFUNC(common,canUseWeapon) &&
-    {currentWeapon ACE_player in (ACE_player getVariable [QGVAR(jammedWeapons), []])}
-    ) exitWith {false};
+
+    if !([ACE_player] call FUNC(canUnjam)) exitWith {false};
 
     // Statement
     [ACE_player, currentMuzzle ACE_player, false] call FUNC(clearJam);

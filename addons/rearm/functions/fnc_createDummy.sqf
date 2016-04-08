@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 private ["_ammo", "_dummyName", "_dummy"];
-params ["_unit", "_magazineClass"];
+params [["_unit", objNull, [objNull]], ["_magazineClass", "", [""]]];
 
 _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 _dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));

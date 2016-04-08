@@ -13,12 +13,13 @@
 
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["_object"];
 
 if (!(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {};
 
-{
-    _x addCuratorEditableObjects [[_object], true];
-}forEach allCurators;
+[{
+    TRACE_1("Delayed addCuratorEditableObjects",_this);
+    {
+        _x addCuratorEditableObjects [[_this], true];
+    } forEach allCurators;
+}, _object] call EFUNC(common,execNextFrame);

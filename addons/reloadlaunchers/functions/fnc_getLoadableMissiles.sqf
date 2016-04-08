@@ -22,7 +22,7 @@ private "_magazines";
 _magazines = magazines _unit;
 
 // case sensitvity
-_magazines = [_magazines, {toLower _this}] call EFUNC(common,map);
+_magazines = _magazines apply {toLower _x};
 
 // get reloaders magazine types compatible with targets launcher. No duplicates.
-[getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines"), {toLower _this in _magazines}] call EFUNC(common,filter)
+getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines") select {toLower _x in _magazines} // return

@@ -2,10 +2,6 @@
 
 ADDON = false;
 
-PREP(canCheckAmmo);
-PREP(canLinkBelt);
-PREP(checkAmmo);
-PREP(displayAmmo);
-PREP(startLinkingBelt);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

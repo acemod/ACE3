@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -50,6 +57,16 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
     };
+    class PlasticCase_01_base_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
+        };
+    };
+    class MetalCase_01_base_F {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
+        };
+    };
     class RoadCone_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
@@ -91,6 +108,11 @@ class Extended_InitPost_EventHandlers {
         };
     };
     class ACE_ConcertinaWireCoil {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class Land_PortableLight_single_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };

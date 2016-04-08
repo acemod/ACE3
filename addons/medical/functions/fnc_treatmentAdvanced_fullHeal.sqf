@@ -12,7 +12,10 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-// TODO replace by event system
-[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_fullHealLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_fullHealLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+};
 
 true;

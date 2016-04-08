@@ -22,6 +22,7 @@ private ["_muzzleVelocityTableCount", "_barrelLengthTableCount", "_lowerDataInde
     "_upperDataIndex", "_lowerBarrelLength", "_upperBarrelLength", "_lowerMuzzleVelocity",
     "_upperMuzzleVelocity", "_interpolationRatio"];
 params ["_barrelLength", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocity"];
+TRACE_4("params",_barrelLength,_muzzleVelocityTable,_barrelLengthTable,_muzzleVelocity);
 
 // If barrel length is not defined, then there is no point in calculating muzzle velocity
 if (_barrelLength == 0) exitWith { 0 };

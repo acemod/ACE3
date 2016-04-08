@@ -19,7 +19,7 @@
 #define ICON_TEXT_ALIGN "left"
 #define ICON_ANGLE 0
 #define ICON_SHADOW 1
-#define TEXT_FONT "PuristaBold"
+#define TEXT_FONT "RobotoCondensedBold"
 #define TEXT_ICON_RENDER_SIZE 20
 #define TEXT_SIZE 0.030
 #define TEXT_SHADOW 0

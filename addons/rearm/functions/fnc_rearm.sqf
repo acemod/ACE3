@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 private ["_magazineClass", "_ammo", "_tmpCal", "_cal", "_idx", "_needRearmMags", "_magazineDisplayName"];
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _dummy) exitwith {false};
