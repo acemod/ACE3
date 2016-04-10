@@ -87,9 +87,17 @@ _g = profilenamespace getvariable ['Map_BLUFOR_G',0.8];
 _b = profilenamespace getvariable ['Map_BLUFOR_B',1];
 _a = profilenamespace getvariable ['Map_BLUFOR_A',0.8];
 GVAR(colorWest) = [_r,_g,_b,_a];
-
-["WEST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
-["EAST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
-["IND", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
+/*
+if (isServer) then {
+    ["WEST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
+    ["EAST", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
+    ["IND", call FUNC(generateEncryptionKey)] call FUNC(addDefaultSideEncryptionKey);
+};
+*/
+if (isServer) then {
+    ["WEST", "west-key"] call FUNC(addDefaultSideEncryptionKey);
+    ["EAST", "east-key"] call FUNC(addDefaultSideEncryptionKey);
+    ["IND", "ind-key"] call FUNC(addDefaultSideEncryptionKey);
+};
 
 ADDON = true;

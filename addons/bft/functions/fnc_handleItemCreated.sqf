@@ -39,7 +39,9 @@ _exists = false;
 {
     if (_magID == (_x select 0)) exitwith {_exists = true};
 } forEach GVAR(deviceData);
-if (_exists) exitwith {};
+if (_exists) exitwith {
+    diag_log format["handleItemCreated: Already exists: %1", _magID];
+};
 
 _deviceType = if (_magazine != "") then { getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) } else { _item };
 _deviceSide = getText(configFile >> "ACE_BFT" >> "Devices" >> _deviceType >> "deviceSide");
@@ -90,4 +92,8 @@ _app = [-1, []];
 // format: device ID, deviceSide [side, encryptionKeys], deviceInformation [elementType, elementSize, callsign, orbatID], appInformation [appID, appData], timeLoggedIn, owner, item, deviceType, _refreshRate [TX, RX], _deviceModes, deviceState]
 _deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner, _item, _deviceType, _refreshRate, _deviceModes, [STATE_NORMAL]];
 
-["bft_addDeviceData", _deviceInformation] call EFUNC(common,globalEvent);
+diag_log format["Prep raising bft_addDeviceData _deviceInformation with: %1", _deviceInformation];
+[{
+    diag_log format["exec bft_addDeviceData _deviceInformation with: %1", _deviceInformation];
+    ["bft_addDeviceData", _this] call EFUNC(common,globalEvent);
+}, _deviceInformation, 1] call EFUNC(common,waitAndExecute);

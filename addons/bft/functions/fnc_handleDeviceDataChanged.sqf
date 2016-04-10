@@ -15,8 +15,10 @@
 private ["_data", "_deviceID", "_displayData", "_encryptionKeys", "_deviceModes"];
 _data = _this select 0;
 _deviceID = D_GET_ID(_data);
+diag_log format["hanldeDeviceDataChanged for: %1", _deviceID];
 
 if (isNull D_GET_OWNER(_data)) exitwith { // doesn't have an owner anymore, remove.
+    diag_log format["hanldeDeviceDataChanged for: %1 - has no owner, removing", _deviceID];
     if !(_this select 1) then {
         // remove from availableDevices
         {
@@ -30,8 +32,12 @@ _encryptionKeys = D_GET_ENCRYPTION(_data);
 _deviceModes = D_GET_DEVICEMODES(_data);
 
 if (_this select 1) then { // add new
-    if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitwith {}; // if the encryption key is not know, the device is not available
-    if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitwith {}; // if the encryption key is not know, the device is not available
+    if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitwith {
+        diag_log format["hanldeDeviceDataChanged for: %1 - encryptionkeys not known - %2", _deviceID, _encryptionKeys];
+    }; // if the encryption key is not know, the device is not available
+    if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitwith {
+        diag_log format["hanldeDeviceDataChanged for: %1 - viewModes not known - %2", _deviceID, _deviceModes];         
+    }; // if the encryption key is not know, the device is not available
     if (!(D_GET_OWNER(_data) isKindOf "CAManBAse") && {D_GET_DEVICE_STATE_VALUE(_data) isEqualTo STATE_NORMAL} && {!(isEngineOn D_GET_OWNER(_data))}) exitwith {};
 
     _displayData = _data call FUNC(deviceDataToMapData);

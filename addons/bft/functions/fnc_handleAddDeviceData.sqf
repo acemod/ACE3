@@ -20,6 +20,7 @@
 
 private ["_currentDevices"];
 // [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableInformation, _app, -1, _owner]
+diag_log format["added to deviceData: %1", _this];
 GVAR(deviceData) pushback _this;
 
 systemChat format["handleAddDeviceData: %1", _this];
@@ -34,6 +35,8 @@ if (local (_this select 5)) then {
         systemChat format["handleAdd - ownedDevices: %1 %2", (_this select 5), _currentDevices];
         diag_log format["handleAdd - ownedDevices: %1 %2", (_this select 5), _currentDevices];
     };
+} else {
+    diag_log format["handleAdd - not the owner of device: %1", (_this select 5)];
 };
 
 ["bft_deviceDataChanged", [_this, true]] call EFUNC(common,localEvent);

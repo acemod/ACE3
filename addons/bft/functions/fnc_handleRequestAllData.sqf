@@ -15,8 +15,11 @@
 
 PARAMS_1(_origin);
 
+diag_log format["handleRequestAllData: Request from Origin: %1", _origin];
+
 {
-    ["bft_addDeviceData", _x, _origin] call EFUNC(common,targetEvent);
+    diag_log format["handleRequestAllData: Add Device Data to origin: %1", _x];
+    ["bft_addDeviceData", _origin, _x] call EFUNC(common,targetEvent);
 } forEach GVAR(deviceData);
 
 // Alternative:
@@ -25,12 +28,14 @@ PARAMS_1(_origin);
 //};
 
 {
+    diag_log format["handleRequestAllData: Add synced array variable: %1", _x];
     private ["_varName", "_variable"];
     _varName = _x;
     _variable = missionNamespace getvariable [_varName, []];
-    
+
     {
-        ["bft_syncedArrayPushback", [_varName, _x], _origin] call EFUNC(common,targetEvent);
+        diag_log format["handleRequestAllData: Add synced array variable (%1) value: %2", _varName, _x];
+        ["bft_syncedArrayPushback", _origin, [_varName, _x]] call EFUNC(common,targetEvent);
     } forEach _variable;
 
     // Alternative:

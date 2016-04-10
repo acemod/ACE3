@@ -33,18 +33,19 @@ if (_turnedOn) then {
     private ["_deviceData", "_encryptionKeys", "_deviceModes", "_displayData"];
     {
         _deviceData = [_x] call FUNC(getDeviceData);
+        if (!(_deviceData isEqualTo [])) then {
+            if !(isNull D_GET_OWNER(_deviceData)) then {
+                if !(D_GET_DEVICE_STATE_VALUE(_deviceData) isEqualTo STATE_NORMAL) exitwith {}; // means we didn't remove it
+                _encryptionKeys = D_GET_ENCRYPTION(_deviceData);
+                if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitWith {};
 
-        if !(isNull D_GET_OWNER(_deviceData)) then {
-            if !(D_GET_DEVICE_STATE_VALUE(_deviceData) isEqualTo STATE_NORMAL) exitwith {}; // means we didn't remove it
-            _encryptionKeys = D_GET_ENCRYPTION(_deviceData);
-            if !([_encryptionKeys, GVAR(registeredEncyptionKeys)] call FUNC(encryptionKeyMatch)) exitWith {};
+                _deviceModes = D_GET_DEVICEMODES(_deviceData);
+                if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitWith {};
 
-            _deviceModes = D_GET_DEVICEMODES(_deviceData);
-            if !([_deviceModes, GVAR(registeredViewModes)] call FUNC(encryptionKeyMatch)) exitWith {};
-
-            _displayData = _deviceData call FUNC(deviceDataToMapData);
-            if (count _displayData > 0) then {
-                GVAR(availableDevices) pushback _displayData;
+                _displayData = _deviceData call FUNC(deviceDataToMapData);
+                if (count _displayData > 0) then {
+                    GVAR(availableDevices) pushback _displayData;
+                };
             };
         };
     }foreach (_object getvariable [QGVAR(ownedDevices), []]);
