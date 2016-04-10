@@ -18,16 +18,14 @@
 
 #include "script_component.hpp"
 
-private ["_handled","_previousInterface","_playerDevices","_vehicleDevices","_playerDeviceId","_vehicleDeviceId","_playerDeviceData","_vehicleDeviceData","_playerDeviceInterface","_vehicleDeviceInterface","_playerDeviceDisplayName","_playerDeviceDialogName","_vehicleDeviceDisplayName","_vehicleDeviceDialogName","_selectedInterface","_interfaceName","_deviceID","_isDialog","_interface","_interfaces"];
-
 params ["_type"];
 
-_handled = false;
+private _handled = false;
 
 // exit if we have already an interface starting up
 if (GVAR(ifOpenStart)) exitWith {_handled};
 
-_previousInterface = "";
+private _previousInterface = "";
 
 // if UAV gunner view is open, exit the view
 if (GVAR(uavViewActive)) then {
@@ -51,61 +49,61 @@ if !(I_CLOSED) then {
 };
 
 // see if player is carrying any devices
-_playerDevices = [ACE_player] call EFUNC(bft,getOwnedDevices);
+private _playerDevices = [ACE_player] call EFUNC(bft,getOwnedDevices);
 
 // get devices for the vehicle the player might be in
-_vehicleDevices = [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
+private _vehicleDevices = [vehicle ACE_player] call EFUNC(bft,getOwnedDevices);
 
 // select a device --- the first one for now
-_playerDeviceId = if !(_playerDevices isEqualTo []) then {_playerDevices select 0} else {""};
-_vehicleDeviceId = if !(_vehicleDevices isEqualTo []) then {_vehicleDevices select 0} else {""};
+private _playerDeviceId = ["", _playerDevices select 0] select !(_playerDevices isEqualTo []);
+private _vehicleDeviceId = ["", _vehicleDevices select 0] select !(_vehicleDevices isEqualTo []);
 
 // bail if we could not retrieve a device ID
 if (_playerDeviceId == "" && _vehicleDeviceId == "") exitWith {_handled};
 
 // get device data
-_playerDeviceData = if (_playerDeviceId != "") then {[_playerDeviceId] call EFUNC(bft,getDeviceData)} else {[]};
-_vehicleDeviceData = if (_vehicleDeviceId != "") then {[_vehicleDeviceId] call EFUNC(bft,getDeviceData)} else {[]};
+private _playerDeviceData = [[], [_playerDeviceId] call EFUNC(bft,getDeviceData)] select (_playerDeviceId != "");
+private _playerDeviceData = [[], [_vehicleDeviceId] call EFUNC(bft,getDeviceData)] select (_vehicleDeviceId != "");
 
 // bail if we could not receive device data
 if (_playerDeviceData isEqualTo [] && _vehicleDeviceData isEqualTo []) exitWith {_handled};
 
 // get interface for device
-_playerDeviceInterface = if !(_playerDeviceData isEqualTo []) then {
+private _playerDeviceInterface = if !(_playerDeviceData isEqualTo []) then {
     _interfaces = [_playerDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
     // select the first device -- for now
     if (count _interfaces > 0) then {_interfaces select 0} else {""};
 } else {""};
-_vehicleDeviceInterface = if !(_vehicleDeviceData isEqualTo []) then {
+private _vehicleDeviceInterface = if !(_vehicleDeviceData isEqualTo []) then {
     _interfaces = [_vehicleDeviceId,ACE_player] call EFUNC(bft,getInterfaces);
     // select the first device -- for now
     if (count _interfaces > 0) then {_interfaces select 0} else {""};
 } else {""};
 
 // get uiNamespace variable names
-_playerDeviceDisplayName = if (_playerDeviceInterface != "") then {
+private _playerDeviceDisplayName = if (_playerDeviceInterface != "") then {
     if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "displayName")) then {
         getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "displayName")
     } else {""};
 } else {""};
-_playerDeviceDialogName = if (_playerDeviceInterface != "") then {
+private _playerDeviceDialogName = if (_playerDeviceInterface != "") then {
     if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "dialogName")) then {
         getText (configFile >> "ACE_BFT" >> "Interfaces" >> _playerDeviceInterface >> "dialogName")
     } else {""};
 } else {""};
-_vehicleDeviceDisplayName = if (_vehicleDeviceInterface != "") then {
+private _vehicleDeviceDisplayName = if (_vehicleDeviceInterface != "") then {
     if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "displayName")) then {
         getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "displayName")
     } else {""};
 } else {""};
-_vehicleDeviceDialogName = if (_vehicleDeviceInterface != "") then {
+private _vehicleDeviceDialogName = if (_vehicleDeviceInterface != "") then {
     if (isText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "dialogName")) then {
         getText (configFile >> "ACE_BFT" >> "Interfaces" >> _vehicleDeviceInterface >> "dialogName")
     } else {""};
 } else {""};
 
 // logic to determine which interface to open
-_selectedInterface = switch (_type) do {
+private _selectedInterface = switch (_type) do {
     case 0: {
         // display first, vehicle device first
         if (_vehicleDeviceDisplayName != "") exitWith {[_vehicleDeviceInterface,_vehicleDeviceDisplayName,_vehicleDeviceId,false]};
@@ -133,19 +131,17 @@ _selectedInterface = switch (_type) do {
     default {["","","",false]};
 };
 
-_interface = _selectedInterface select 0;
-_interfaceName = _selectedInterface select 1;
-_deviceID = _selectedInterface select 2;
-_isDialog = _selectedInterface select 3;
+_selectedInterface params ["_interface", "_interfaceName", "_deviceID", "_isDialog"];
 
 if (_interfaceName != "" && _interfaceName != _previousInterface) then {
     // queue the start up of the interface as we might still have one closing down
     [{
         if (I_CLOSED) then {
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-            ((_this select 0) + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
+            params ["_args", "_idPFH"];
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
+            (_args + [ACE_player, vehicle ACE_player]) call FUNC(ifOpen);
         };
-    },0,[_deviceID,_interface,_type,_interfaceName,_isDialog]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_deviceID,_interface,_type,_interfaceName,_isDialog]] call CBA_fnc_addPerFrameHandler;
 };
 
 true

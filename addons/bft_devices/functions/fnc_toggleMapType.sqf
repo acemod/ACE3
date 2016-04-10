@@ -18,17 +18,17 @@
 
 #include "script_component.hpp"
 
-private ["_mapTypes","_currentMapType","_currentMapTypeIndex"];
-
 params ["_interfaceID"];
 
-_mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
-_currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);
-_currentMapTypeIndex = (_mapTypes select 0) find _currentMapType;
-if (_currentMapTypeIndex == count (_mapTypes select 0) - 1) then {
-    [_interfaceID,[["mapType",_mapTypes select 0 select 0]]] call FUNC(setSettings);
+private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
+_mapTypes params ["_mapTypesIndexes"];
+
+private _currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);
+private _currentMapTypeIndex = _mapTypesIndexes find _currentMapType;
+if (_currentMapTypeIndex == count _mapTypesIndexes - 1) then {
+    [_interfaceID,[["mapType", _mapTypesIndexes select 0]]] call FUNC(setSettings);
 } else {
-    [_interfaceID,[["mapType",(_mapTypes select 0) select (_currentMapTypeIndex + 1)]]] call FUNC(setSettings);
+    [_interfaceID,[["mapType", _mapTypesIndexes select (_currentMapTypeIndex + 1)]]] call FUNC(setSettings);
 };
 
 true

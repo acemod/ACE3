@@ -18,11 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_nightMode"];
-
 params ["_interfaceID"];
 
-_nightMode = [_interfaceID,"nightMode"] call FUNC(getSettings);
+private _nightMode = [_interfaceID,"nightMode"] call FUNC(getSettings);
 
 if (_nightMode != 2) then {
     if (_nightMode == 0) then {_nightMode = 1} else {_nightMode = 0};

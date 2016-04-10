@@ -18,8 +18,6 @@
 
 #include "script_component.hpp"
 
-private ["_uavGunner"];
-
 // see if there is a selected UAV and if it is alive before continuing
 if (isNil QGVAR(actUav) || {!alive GVAR(actUav)}) exitWith {false};
 
@@ -28,7 +26,7 @@ if (isNil QGVAR(actUav) || {!alive GVAR(actUav)}) exitWith {false};
 // see http://feedback.arma3.com/view.php?id=23693
 if (UAVControl GVAR(actUav) select 1 != "GUNNER") then {
     // see if there is actually a gunner AI that we can remote control
-    _uavGunner = gunner GVAR(actUav);
+    private _uavGunner = gunner GVAR(actUav);
     if (!isNull _uavGunner) then {
         [] call FUNC(ifClose);
         player remoteControl _uavGunner;

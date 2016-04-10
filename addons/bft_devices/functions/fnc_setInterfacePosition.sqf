@@ -19,38 +19,33 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_xOffset","_yOffset","_display","_isDialog","_backgroundCtrl","_backgroundClassName","_displayConfigContainers","_displayConfigClasses","_idc","_ctrl","_ctrlPosition"];
-
 disableSerialization;
 
-_displayName = _this select 0;
-_xOffset = _this select 1 select 0;
-_yOffset = _this select 1 select 1;
-_display = uiNamespace getVariable _displayName;
-_isDialog = I_GET_ISDIALOG;
+params ["_displayName", "_offset"];
+_offset params ["_xOffset", "_yOffset"];
+
+private _display = uiNamespace getVariable _displayName;
+private _isDialog = I_GET_ISDIALOG;
 
 // get both classes "controls" and "controlsBackground" if they exist
-_displayConfigContainers = if (_isDialog) then {
-        "true" configClasses (configFile >> _displayName)
-    } else {
-        "true" configClasses (configFile >> "RscTitles" >> _displayName)
-    };
+private _displayConfigContainers = [configFile >> "RscTitles" >> _displayName, configFile >> _displayName] select (_isDialog);
+_displayConfigContainers = "true" configClasses _displayConfigContainers;
 
 // iterate through the config to find all controls to move, excluding any child controls (i.e. the ones of control groups)
 {
     if (isClass _x) then {
-        _displayConfigClasses = "true" configClasses _x;
+        private _displayConfigClasses = "true" configClasses _x;
         {
             if (isClass _x) then {
                 // only move controls that have an IDC
                 if (isNumber (_x >> "idc")) then {
                     // only move controls that have a positive IDC
-                    _idc = getNumber (_x >> "idc");
+                    private _idc = getNumber (_x >> "idc");
                     if (_idc > 0) then {
-                        _ctrl = _display displayCtrl _idc;
-                        _ctrlPosition = ctrlPosition _ctrl;
-                        _ctrlPosition set [0,(_ctrlPosition select 0) + _xOffset];
-                        _ctrlPosition set [1,(_ctrlPosition select 1) + _yOffset];
+                        private _ctrl = _display displayCtrl _idc;
+                        private _ctrlPosition = ctrlPosition _ctrl;
+                        _ctrlPosition set [0, (_ctrlPosition select 0) + _xOffset];
+                        _ctrlPosition set [1, (_ctrlPosition select 1) + _yOffset];
                         _ctrl ctrlSetPosition _ctrlPosition;
                         _ctrl ctrlCommit 0;
                     } else {diag_log str ["invalid IDC",_x]};

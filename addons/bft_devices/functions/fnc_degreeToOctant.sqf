@@ -18,10 +18,8 @@
 
 #include "script_component.hpp"
 
-private ["_octant"];
-
 params ["_dir"];
 
-_octant = round (_dir / 45);
+private _octant = round (_dir / 45);
 
 ["N ","NE","E ","SE","S ","SW","W ","NW","N "] select _octant

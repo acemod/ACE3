@@ -24,12 +24,10 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-private["_displayName","_interfaceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex","_mode"];
-
 params ["_display", "_dikCode", "_shiftKey", "_ctrlKey", "_altKey"];
 
-_displayName = I_GET_NAME;
-_interfaceID = I_GET_ID;
+private _displayName = I_GET_NAME;
+private _interfaceID = I_GET_ID;
 
 if (_dikCode == DIK_F1 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg)]}) exitWith {
     [_interfaceID,[["mode","BFT"]]] call FUNC(setSettings);
@@ -40,8 +38,8 @@ if (_dikCode == DIK_F2 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg)]}) 
     true
 };
 if (_dikCode == DIK_F3 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg)]}) exitWith {
-    _mode = [_interfaceID,"mode"] call FUNC(getSettings);
-    _mode = if (_mode == "HCAM") then {"HCAM_FULL"} else {"HCAM"};
+    private _mode = [_interfaceID,"mode"] call FUNC(getSettings);
+    _mode = ["HCAM", "HCAM_FULL"] select (_mode == "HCAM");
     [_interfaceID,[["mode",_mode]]] call FUNC(setSettings);
     true
 };
@@ -62,11 +60,11 @@ if (_dikCode == DIK_F7 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEG
     true
 };
 if (_dikCode == DIK_DELETE && {GVAR(cursorOnMap)}) exitWith {
-    _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
-    _currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);
-    _currentMapTypeIndex = (_mapTypes select 0) find _currentMapType;
-    _ctrlScreen = _display displayCtrl ((_mapTypes select 1) select _currentMapTypeIndex);
-    /*_markerIndex = [_ctrlScreen,GVAR(mapCursorPos)] call FUNC(findUserMarker);
+    private _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
+    private _currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);
+    private _currentMapTypeIndex = (_mapTypes select 0) find _currentMapType;
+    private _ctrlScreen = _display displayCtrl ((_mapTypes select 1) select _currentMapTypeIndex);
+    /*private _markerIndex = [_ctrlScreen,GVAR(mapCursorPos)] call FUNC(findUserMarker);
     if (_markerIndex != -1) then {
         [call FUNC(getPlayerEncryptionKey),_markerIndex] call FUNC(deleteUserMarker);
     };*/

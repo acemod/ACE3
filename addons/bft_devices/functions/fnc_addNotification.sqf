@@ -20,12 +20,10 @@
 
 #include "script_component.hpp"
 
-private ["_time","_done"];
-
 params ["_appID", "_notification", "_decayTime"];
 
-_time = call FUNC(currentTime);
-_done = false;
+private _time = call FUNC(currentTime);
+private _done = false;
 
 // search for other _appID notifications
 {

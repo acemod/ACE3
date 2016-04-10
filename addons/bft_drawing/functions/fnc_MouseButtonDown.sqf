@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-if (_this select 1 != 0) exitWith {};
+params ["_ctrl", "_key"];
+
+if (_key != 0) exitWith {};
 
 switch (true) do {
     case (!GVAR(editkeydown) && count (GVAR(mouseover) select 1) != 0): {
@@ -9,10 +11,10 @@ switch (true) do {
         _selection = +GVAR(mouseover);
         GVAR(selection) = _selection;
 
-        (_this select 0) ctrlMapAnimAdd [0.5,MAPANIMZOOM,AD_GET_POSITION(_selection)];
-        GVAR(editingDraw_editBFT) = (_this select 0) ctrlAddEventhandler ["Draw",FUNC(editingDraw_editBFT)];
+        _ctrl ctrlMapAnimAdd [0.5,MAPANIMZOOM,AD_GET_POSITION(_selection)];
+        GVAR(editingDraw_editBFT) = _ctrl ctrlAddEventhandler ["Draw",FUNC(editingDraw_editBFT)];
 
-        [(_this select 0),GVAR(selection)] call FUNC(initBFTEdit);
+        [_ctrl, GVAR(selection)] call FUNC(initBFTEdit);
     };
     case (GVAR(editkeydown) && (GVAR(mouseover) select 0 == 1)): {
         // left button holded on salute report

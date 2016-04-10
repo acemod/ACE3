@@ -18,10 +18,8 @@
 
 #include "script_component.hpp"
 
-private ["_cam"];
-
 if (!isNil QGVAR(hCams)) then {
-    _cam = GVAR(hCams) select 0;
+    private _cam = GVAR(hCams) select 0;
     _cam cameraEffect ["TERMINATE","BACK"];
     camDestroy _cam;
     deleteVehicle (GVAR(hCams) select 1);

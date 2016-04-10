@@ -9,7 +9,7 @@
  *   1: _this variable from the onLBSelChanged event <ARRAY>
  *     0: Interface control <OBJECT>
  *     1: Selected item (-1 if nothing is selected) <INTEGER>
- *     2: 
+ *     2:
  *
  * Return Value:
  *   TRUE <BOOL>
@@ -22,16 +22,14 @@
 
 #include "script_component.hpp"
 
-private ["_control", "_display", "_interfaceID", "_function", "_selectedIndex"];
-
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 
-_function = _this select 0;
-_control = _this select 1 select 0;
-_display = ctrlParent _control;
-_interfaceID = I_GET_ID;
-_selectedIndex = _this select 1 select 1;
+params ["_function"];
+_function params ["_control", "_selectedIndex"];
+
+private _display = ctrlParent _control;
+private _interfaceID = I_GET_ID;
 
 switch (_function) do {
     case "UAVlist": {

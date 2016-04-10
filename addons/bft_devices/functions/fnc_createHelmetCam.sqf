@@ -19,13 +19,11 @@
 
 #include "script_component.hpp"
 
-private ["_newHost","_camOffSet","_targetOffSet","_oldCam","_oldHost","_nop","_target","_cam"];
-
 params ["_renderTarget", "_data"];
 
-_newHost = objNull;
-_camOffSet = [];
-_targetOffSet = [];
+private _newHost = objNull;
+private _camOffSet = [];
+private _targetOffSet = [];
 
 // see if given unit name is still in the list of units with valid helmet cams
 {
@@ -55,11 +53,11 @@ if (isNull _newHost) exitWith {false};
 // make sure there is no camera currently set up
 [] call FUNC(deleteHelmetCam);
 
-_target = "Sign_Sphere10cm_F" createVehicleLocal position player;
+private _target = "Sign_Sphere10cm_F" createVehicleLocal position player;
 hideObject _target;
 _target attachTo [_newHost,_targetOffSet];
 
-_cam = "camera" camCreate getPosATL _newHost;
+private _cam = "camera" camCreate getPosATL _newHost;
 _cam camPrepareFov 0.700;
 _cam camPrepareTarget _target;
 _cam camCommitPrepared 0;

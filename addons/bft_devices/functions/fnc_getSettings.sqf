@@ -6,7 +6,7 @@
  *
  * Arguments:
  *   0: Interface ID <STRING>
- *   
+ *
  *   (Optional)
  *   1: Name of individual property to read <STRING>
  *
@@ -19,7 +19,7 @@
  * Example:
  *   // Return all settings for TAD
  *   ["interfaceID"] call ace_bft_devices_fnc_getSettings;
- *   
+ *
  *   // Return available map types for TAD
  *   ["interfaceID","mapTypes"] call ace_bft_devices_fnc_getSettings;
  *
@@ -28,18 +28,17 @@
 
 #include "script_component.hpp"
 
-private ["_commonProperties","_deviceAppData","_combinedProperties","_property","_value","_interfaceID","_deviceData"];
+private ["_property"];
 
-_interfaceID = _this select 0;
+params ["_interfaceID", ["_property", ""]];
 
 // Fetch common and device specific property hashes
-_commonProperties = HASH_GET(GVAR(settings),"COMMON");
-_deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
+private _commonProperties = HASH_GET(GVAR(settings),"COMMON");
+private _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
 
 // Return value of requested property
-if (count _this == 2) exitWith {
-    _property = _this select 1;
-    _value = HASH_GET(_deviceAppData,_property);
+if (_property != "") exitWith {
+    private _value = HASH_GET(_deviceAppData,_property);
     if (isNil "_value") then {
         _value = HASH_GET(_commonProperties,_property);
     };
@@ -47,7 +46,7 @@ if (count _this == 2) exitWith {
 };
 
 // Return list of all property hashes
-_combinedProperties = +_commonProperties;
+private _combinedProperties = +_commonProperties;
 {
     HASH_SET(_combinedProperties,_x,(_deviceAppData select 1) select _forEachIndex);
 } forEach (_deviceAppData select 0);

@@ -18,12 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_showMenu"];
-
 params ["_interfaceID"];
 
-_showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
-_showMenu = !_showMenu;
-[_interfaceID,[["showMenu",_showMenu]]] call FUNC(setSettings);
+private _showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
+[_interfaceID,[["showMenu",!_showMenu]]] call FUNC(setSettings);
 
 true

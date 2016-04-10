@@ -18,13 +18,11 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_interfaceID","_mode"];
-
 if (I_CLOSED) exitWith {true};
 
-_displayName = I_GET_NAME;
-_interfaceID = I_GET_ID;
-_mode = [_interfaceID,"mode"] call FUNC(getSettings);
+private _displayName = I_GET_NAME;
+private _interfaceID = I_GET_ID;
+private _mode = [_interfaceID,"mode"] call FUNC(getSettings);
 
 call {
     if (_displayName == QEGVAR(bft_device_gd300,GD300_dlg)) exitWith {

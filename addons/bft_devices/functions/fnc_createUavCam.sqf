@@ -24,17 +24,15 @@
 
 #include "script_component.hpp"
 
-private ["_renderTarget","_seat","_uav","_seatName","_camPosMemPt","_camDirMemPt","_cam","_uavDeviceData"];
-
 params ["_deviceID", "_uavCams"];
 
-_uav = objNull;
+private _uav = objNull;
 
 // see if given UAV name is still in the list of valid UAVs
 {
     if (_deviceID == (_x select 0)) exitWith {
         // get the owner of the device (aka the UAV)
-        _uavDeviceData = _x select 1;
+        private _uavDeviceData = _x select 1;
         _uav = D_GET_OWNER(_uavDeviceData);
     };
 } count GVAR(UAVlist);
@@ -49,14 +47,14 @@ if (isNull _uav) exitWith {false};
 if (!alive _uav) exitWith {false};
 
 {
-    _seat = _x select 0;
-    _renderTarget = _x select 1;
+    private _seat = _x select 0;
+    private _renderTarget = _x select 1;
     // check existing cameras
-    _cam = objNull;
-    _camPosMemPt = "";
-    _camDirMemPt = "";
-    
-    _seatName = call {
+    private _cam = objNull;
+    private _camPosMemPt = "";
+    private _camDirMemPt = "";
+
+    private _seatName = call {
         if (_seat == 0) exitWith {"Driver"};
         if (_seat == 1) exitWith {"Gunner"};
         ""

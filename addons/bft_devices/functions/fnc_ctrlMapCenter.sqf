@@ -18,11 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_ctrlPos","_ctrlPosCenter"];
-
 params ["_ctrlScreen"];
 
-_ctrlPos = ctrlPosition _ctrlScreen;
-_ctrlPosCenter = [(_ctrlPos select 0) + ((_ctrlPos select 2) / 2),(_ctrlPos select 1) + ((_ctrlPos select 3) / 2)];
+private _ctrlPos = ctrlPosition _ctrlScreen;
+private _ctrlPosCenter = [(_ctrlPos select 0) + ((_ctrlPos select 2) / 2),(_ctrlPos select 1) + ((_ctrlPos select 3) / 2)];
 
 _ctrlScreen ctrlMapScreenToWorld _ctrlPosCenter

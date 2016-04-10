@@ -17,19 +17,18 @@
 
 #include "script_component.hpp"
 
-private ["_ownedDevices", "_return", "_deviceData"];
 params ["_player", "_target", "_targetDeviceType"];
 
 if (GVAR(ifOpenStart) || {GVAR(uavViewActive)} || {!I_CLOSED}) exitWith {false};
 // if (_player != _target && {_target isKindOf "CAManBase"}) exitwith {false};
 
-_ownedDevices = [_target] call EFUNC(bft,getOwnedDevices);
+private _ownedDevices = [_target] call EFUNC(bft,getOwnedDevices);
 
 if (count _ownedDevices == 0) exitwith {false};
 
-_return = false;
+private _return = false;
 {
-    _deviceData = [_x] call EFUNC(bft,getDeviceData);
+    private _deviceData = [_x] call EFUNC(bft,getDeviceData);
     if (toLower D_GET_DEVICETYPE(_deviceData) isEqualTo toLower _targetDeviceType) exitwith {_return = true;};
 } forEach _ownedDevices;
 /*

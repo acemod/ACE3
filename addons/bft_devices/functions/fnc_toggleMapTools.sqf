@@ -18,11 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_newMapTools"];
-
 params ["_interfaceID"];
 
-_newMapTools = !([_interfaceID,"mapTools"] call FUNC(getSettings));
+private _newMapTools = !([_interfaceID,"mapTools"] call FUNC(getSettings));
 [_interfaceID,[["mapTools",_newMapTools]]] call FUNC(setSettings);
 
 _newMapTools

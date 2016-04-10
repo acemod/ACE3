@@ -43,8 +43,6 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_inVehicle","_interfaceID","_deviceData","_deviceOwner","_deviceAppData"];
-
 // exit should we have an interface open already or are in the process of starting one
 if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
 
@@ -52,10 +50,10 @@ GVAR(ifOpenStart) = true;
 
 params ["_deviceID", "_interfaceConfigName", "_interfaceType", "_displayName", "_isDialog", "_player", "_vehicle"];
 
-_inVehicle = (_vehicle != _player);
+private _inVehicle = (_vehicle != _player);
 
 // genrate interface ID
-_interfaceID = format ["%1%2",_deviceID,_interfaceConfigName];
+private _interfaceID = format ["%1%2",_deviceID,_interfaceConfigName];
 
 // start setting up event-handlers
 GVAR(ifOpen) = [
@@ -158,9 +156,9 @@ GVAR(ifOpen) set [13,
 ];
 
 // get device owner
-_deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
-_deviceOwner = D_GET_OWNER(_deviceData);
-_deviceAppData = D_GET_APP_DATA(_deviceData);
+private _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
+private _deviceOwner = D_GET_OWNER(_deviceData);
+private _deviceAppData = D_GET_APP_DATA(_deviceData);
 
 // if the device is a personal device, get settings from device appData store
 if (!(_deviceAppData isEqualTo []) && (_deviceOwner isKindOf "ParachuteBase" || _deviceOwner isKindOf "CAManBase")) then {

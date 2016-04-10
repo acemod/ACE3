@@ -18,18 +18,16 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_mapTypes"];
+params ["_display"];
 
-_displayName = I_GET_NAME;
-
-uiNamespace setVariable [_displayName,_this select 0];
+uiNamespace setVariable [I_GET_NAME, _display];
 
 [] call FUNC(ifUpdate);
 
 // setup bft_drawing
-_mapTypes = [I_GET_ID,"mapTypes"] call FUNC(getSettings);
+private _mapTypes = [I_GET_ID,"mapTypes"] call FUNC(getSettings);
 {
-    0 = [(_this select 0) displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
+    0 = [_display displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
 } count (_mapTypes select 1);
 
 // send "bft_deviceOpened" event

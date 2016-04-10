@@ -18,30 +18,28 @@
 
 #include "script_component.hpp"
 
-private ["_deviceData","_deviceEncryption","_uavDevices","_uavDevice","_uavDeviceData","_uavEncryption"];
-
 // bail if no interface is open
 if (I_CLOSED) exitWith {};
 
 // get encryption keys for currently open device
-_deviceData = [I_GET_DEVICE] call EFUNC(bft,getDeviceData);
-_deviceEncryption = D_GET_ENCRYPTION(_deviceData);
+private _deviceData = [I_GET_DEVICE] call EFUNC(bft,getDeviceData);
+private _deviceEncryption = D_GET_ENCRYPTION(_deviceData);
 
 GVAR(UAVlist) = [];
 
 // interate through all UAVs and create a list containing [deviceID,[deviceData]]
 {
     // check if UAV has a device
-    _uavDevices = [_x] call EFUNC(bft,getOwnedDevices);
+    private _uavDevices = [_x] call EFUNC(bft,getOwnedDevices);
     if !(_uavDevices isEqualTo []) then {
-        _uavDevice = _uavDevices select 0;
-        _uavDeviceData = [_uavDevice] call EFUNC(bft,getDeviceData);
+        private _uavDevice = _uavDevices select 0;
+        private _uavDeviceData = [_uavDevice] call EFUNC(bft,getDeviceData);
         // check if UAV has matching encryption key
-        _uavEncryption = D_GET_ENCRYPTION(_uavDeviceData);
+        private _uavEncryption = D_GET_ENCRYPTION(_uavDeviceData);
         if ([_deviceEncryption,_uavEncryption] call EFUNC(BFT,encryptionKeyMatch)) then {
             0 = GVAR(UAVlist) pushBack [_uavDevice,_uavDeviceData];
         };
     };
-} count allUnitsUav;
+} count allUnitsUAV;
 
 true

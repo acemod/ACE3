@@ -18,11 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_brightness"];
-
 params ["_interfaceID"];
 
-_brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
+private _brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
 _brightness = _brightness - 0.1;
 // make sure brightness is not larger than 0.5
 if (_brightness < 0.5) then {_brightness = 0.5};

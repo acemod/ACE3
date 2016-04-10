@@ -22,19 +22,16 @@
 
 #include "\z\ace\addons\bft_devices\UI\defines\shared_defines.hpp"
 
-private ["_ctrlScreen", "_dirToSecondPos", "_display", "_dstToSecondPos", "_heading", "_isDialog", "_mode", "_position", "_vehicle"];
+params ["_mode", "_ctrl"];
+_ctrl params ["_ctrlScreen"];
 
-_mode = _this select 0;
-_ctrlScreen = _this select 1 select 0;
-_display = ctrlParent _ctrlScreen;
+private _display = ctrlParent _ctrlScreen;
 
-_vehicle = vehicle ACE_player;
-_position = getPosASL _vehicle;
-_heading = direction _vehicle;
+private _vehicle = vehicle ACE_player;
+private _position = getPosASL _vehicle;
+private _heading = direction _vehicle;
 
-_isDialog = I_GET_ISDIALOG;
-
-if (_isDialog) then {
+if (I_GET_ISDIALOG) then {
     GVAR(mapWorldPos) = [_ctrlScreen] call FUNC(ctrlMapCenter);
     GVAR(mapScale) = ctrlMapScale _ctrlScreen;
 } else {
@@ -52,7 +49,7 @@ if (_mode == 1 && !GVAR(drawMapTools)) then {
 };
 
 if (GVAR(drawMapTools)) then {
-    _dirToSecondPos = call {
+    private _dirToSecondPos = call {
         if (GVAR(mapToolsArrowToCursor)) exitWith {
             _ctrlScreen drawArrow [_position,GVAR(mapCursorPos),COLOR_NEON_YELLOW_ARR];
             [_position,GVAR(mapCursorPos)] call FUNC(dirTo)
@@ -60,7 +57,7 @@ if (GVAR(drawMapTools)) then {
         _ctrlScreen drawArrow [GVAR(mapCursorPos),_position,COLOR_NEON_YELLOW_ARR];
         [GVAR(mapCursorPos),_position] call FUNC(dirTo)
     };
-    _dstToSecondPos = [_position,GVAR(mapCursorPos)] call FUNC(distance2D);
+    private _dstToSecondPos = [_position,GVAR(mapCursorPos)] call FUNC(distance2D);
     call {
         // Call this if we are drawing for a TAD
         if (_mode == 1) exitWith {

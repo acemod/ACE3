@@ -13,7 +13,7 @@
  * Example:
  *   // returns true
  *   ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_fnc_isDialog;
-     
+
  *   // returns false
  *   ["ace_bft_devices_TAD_dlg"] call ace_bft_devices_fnc_isDialog;
  *
@@ -22,11 +22,9 @@
 
 #include "script_component.hpp"
 
-private ["_subString"];
-
 params ["_interfaceName"];
 
 // select the last three characters from the interface name
-_subString = _interfaceName select [(count _interfaceName) - 3];
+private _subString = _interfaceName select [count _interfaceName - 3];
 
-if (_subString == "dlg") then {true} else {false};
+_subString == "dlg"

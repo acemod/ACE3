@@ -20,9 +20,7 @@
 
 params ["_interfaceID"];
 
-private ["_drawSizeMultiplier"];
-
-_drawSizeMultiplier = [_interfaceID,"drawSizeMultiplier"] call FUNC(getSettings);
+private _drawSizeMultiplier = [_interfaceID,"drawSizeMultiplier"] call FUNC(getSettings);
 _drawSizeMultiplier = [_drawSizeMultiplier - 0.1] call EFUNC(bft_drawing,updateDrawSize);
 
 [_interfaceID,[["drawSizeMultiplier",_drawSizeMultiplier]],false] call FUNC(setSettings);

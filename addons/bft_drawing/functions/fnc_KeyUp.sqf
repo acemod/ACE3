@@ -1,8 +1,10 @@
 #include "script_component.hpp"
 
+params ["_ctrl", "_key"];
+
 // --- ToDo: make setting for DIK_CODE
-if (_this select 1 == DIK_LCONTROL) then {
+if (_key == DIK_LCONTROL) then {
     GVAR(editkeydown) = false;
 
-    (_this select 0) ctrlRemoveEventhandler ["Draw",GVAR(editingDraw)];
+    _ctrl ctrlRemoveEventhandler ["Draw", GVAR(editingDraw)];
 };

@@ -18,18 +18,16 @@
 
 #include "script_component.hpp"
 
-private ["_interfaceID"];
-
 // bail if there is no interface open
 if (I_CLOSED) exitWith {false};
 
-_interfaceID = I_GET_ID;
+private _interfaceID = I_GET_ID;
 
 if (I_GET_ISDIALOG) then {
     // reset position to default
     [_interfaceID,[["dlgIfPosition",[]]],true,true] call FUNC(setSettings);
 } else {
-    _dspIfPosition = [_interfaceID,"dspIfPosition"] call FUNC(getSettings);
+    private _dspIfPosition = [_interfaceID,"dspIfPosition"] call FUNC(getSettings);
     // toggle position
     [_interfaceID,[["dspIfPosition",!_dspIfPosition]]] call FUNC(setSettings);
 };

@@ -18,13 +18,11 @@
 
 #include "script_component.hpp"
 
-private ["_displayName","_display"];
-
 if !(I_CLOSED) then {
     // [_ifType,_displayName,_player,_playerKilledEhId,_vehicle,_vehicleGetOutEhId]
-    _displayName = I_GET_NAME;
-    _display = uiNamespace getVariable [_displayName,displayNull];
-    
+    private _displayName = I_GET_NAME;
+    private _display = uiNamespace getVariable [_displayName,displayNull];
+
     if !(isNull _display) then {
         _display closeDisplay 0;
         // only call ifOnUnload for displays (dialogs call ifOnUnload themselves when they close)

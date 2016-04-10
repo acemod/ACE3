@@ -9,7 +9,7 @@
  *   1: _this variable from the onMouseButtonDown event <ARRAY>
  *     0: Interface control <OBJECT>
  *     1: Mouse button pressed <INTEGER>
- *     2: 
+ *     2:
  *
  * Return Value:
  *   TRUE <BOOL>
@@ -22,23 +22,21 @@
 
 #include "script_component.hpp"
 
-private ["_control","_display","_interfaceID","_function","_mouseButton","_mode"];
-
 // ignore function call if the interface has not finished setup
 if (GVAR(ifOpenStart) || I_CLOSED) exitWith {true};
 
-_function = _this select 0;
-_control = _this select 1 select 0;
-_mouseButton = _this select 1 select 1;
-_display = ctrlParent _control;
-_interfaceID = I_GET_ID;
+params ["_function", "_key"];
+_key params ["_control", "_mouseButton"];
+
+private _display = ctrlParent _control;
+private _interfaceID = I_GET_ID;
 
 switch (_function) do {
     case "close": {
         [] call FUNC(ifClose);
     };
     case "btnACT": {
-        _mode = [_interfaceID,"mode"] call FUNC(getSettings);
+        private _mode = [_interfaceID,"mode"] call FUNC(getSettings);
         call {
             if (_mode == "UAV") exitWith {[] call FUNC(remoteControlUAV)};
             if (_mode == "HCAM") exitWith {[_interfaceID,[["mode","HCAM_FULL"]]] call FUNC(setSettings)};

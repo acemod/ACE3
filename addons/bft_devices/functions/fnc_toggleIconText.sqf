@@ -18,11 +18,9 @@
 
 #include "script_component.hpp"
 
-private ["_showIconText"];
-
 params ["_interfaceID"];
 
-_showIconText = !([_interfaceID,"showIconText"] call FUNC(getSettings));
+private _showIconText = !([_interfaceID,"showIconText"] call FUNC(getSettings));
 [_interfaceID,[["showIconText",_showIconText]]] call FUNC(setSettings);
 
 _showIconText
