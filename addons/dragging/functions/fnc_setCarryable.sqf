@@ -43,7 +43,15 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses_carry) = _initializedClasses;
 
-private _carryAction = [QGVAR(carry), localize LSTRING(Carry), "", {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);
+_icon = "";
+
+if (_object isKindOf "Man") then {
+	_icon = "\z\ace\addons\dragging\ui\icons\person_carry.paa";
+} else {
+	_icon = "\z\ace\addons\dragging\ui\icons\box_carry.paa";
+};
+
+private _carryAction = [QGVAR(carry), localize LSTRING(Carry), _icon, {[_player, _target] call FUNC(startCarry)}, {[_player, _target] call FUNC(canCarry)}] call EFUNC(interact_menu,createAction);
 private _dropAction = [QGVAR(drop_carry), localize LSTRING(Drop), "", {[_player, _target] call FUNC(dropObject_carry)}, {[_player, _target] call FUNC(canDrop_carry)}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _carryAction] call EFUNC(interact_menu,addActionToClass);
