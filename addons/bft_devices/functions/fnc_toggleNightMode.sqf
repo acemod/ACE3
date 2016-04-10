@@ -20,7 +20,7 @@
 
 private ["_nightMode"];
 
-PARAMS_1(_interfaceID);
+params ["_interfaceID"];
 
 _nightMode = [_interfaceID,"nightMode"] call FUNC(getSettings);
 

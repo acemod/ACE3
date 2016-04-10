@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_side,_type);
+params ["_side", "_type"];
 
 if (isClass (configFile >> "ACE_BFT" >> "Types" >> _type)) exitwith {
     getText (configFile >> "ACE_BFT" >> "Types" >> _type >> "iconPath");

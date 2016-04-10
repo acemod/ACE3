@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 if !(local _unit) exitwith {};
 

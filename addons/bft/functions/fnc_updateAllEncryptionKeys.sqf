@@ -15,6 +15,6 @@
 
 #include "script_component.hpp"
 
-PARAMS_3(_side, _oldKey, _newKey);
+params ["_side", " _oldKey", " _newKey"];
 
 // TODO

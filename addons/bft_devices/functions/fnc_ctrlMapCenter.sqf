@@ -20,7 +20,7 @@
 
 private ["_ctrlPos","_ctrlPosCenter"];
 
-PARAMS_1(_ctrlScreen);
+params ["_ctrlScreen"];
 
 _ctrlPos = ctrlPosition _ctrlScreen;
 _ctrlPosCenter = [(_ctrlPos select 0) + ((_ctrlPos select 2) / 2),(_ctrlPos select 1) + ((_ctrlPos select 3) / 2)];

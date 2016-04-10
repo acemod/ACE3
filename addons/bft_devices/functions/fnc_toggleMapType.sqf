@@ -20,7 +20,7 @@
 
 private ["_mapTypes","_currentMapType","_currentMapTypeIndex"];
 
-PARAMS_1(_interfaceID);
+params ["_interfaceID"];
 
 _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
 _currentMapType = [_interfaceID,"mapType"] call FUNC(getSettings);

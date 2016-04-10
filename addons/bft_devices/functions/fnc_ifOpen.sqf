@@ -50,7 +50,7 @@ if (GVAR(ifOpenStart) || (!I_CLOSED)) exitWith {false};
 
 GVAR(ifOpenStart) = true;
 
-PARAMS_7(_deviceID,_interfaceConfigName,_interfaceType,_displayName,_isDialog,_player,_vehicle);
+params ["_deviceID", "_interfaceConfigName", "_interfaceType", "_displayName", "_isDialog", "_player", "_vehicle"];
 
 _inVehicle = (_vehicle != _player);
 

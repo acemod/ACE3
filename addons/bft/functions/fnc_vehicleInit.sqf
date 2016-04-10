@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_vehicle);
+params ["_vehicle"];
 
 systemChat format["VehicleInit: %1",_this];
 diag_log format["VehicleInit: %1",_this];

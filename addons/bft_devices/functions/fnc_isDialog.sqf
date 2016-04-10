@@ -24,7 +24,7 @@
 
 private ["_subString"];
 
-PARAMS_1(_interfaceName);
+params ["_interfaceName"];
 
 // select the last three characters from the interface name
 _subString = _interfaceName select [(count _interfaceName) - 3];

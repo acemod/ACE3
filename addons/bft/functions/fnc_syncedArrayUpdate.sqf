@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_varName,_data);
+params ["_varName", "_data"];
 
 if (typeName _data == "ARRAY" && (count _data == 0)) exitwith {};
 

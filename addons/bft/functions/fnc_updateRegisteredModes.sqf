@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_modes,_add);
+params ["_modes", "_add"];
 
 if (isNil "_add") then {
     if !(GVAR(registeredViewModes) isEqualTo _modes) then {

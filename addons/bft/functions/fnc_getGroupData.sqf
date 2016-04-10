@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_groupID);
+params ["_groupID"];
 
 private ["_data"];
 _data = [_groupID, "", -1/*parent group ID*/];

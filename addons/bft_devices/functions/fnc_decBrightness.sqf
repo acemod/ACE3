@@ -20,7 +20,7 @@
 
 private ["_brightness"];
 
-PARAMS_1(_interfaceID);
+params ["_interfaceID"];
 
 _brightness = [_interfaceID,"brightness"] call FUNC(getSettings);
 _brightness = _brightness - 0.1;

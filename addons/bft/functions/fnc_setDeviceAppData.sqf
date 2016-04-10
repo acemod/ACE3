@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_deviceID,_deviceData);
+params ["_deviceID", "_deviceData"];
 
 private ["_data"];
 _data = [_deviceID] call FUNC(getDeviceData);

@@ -31,7 +31,7 @@
 
 private ["_commonProperties","_deviceAppData","_properties","_commonPropertiesUpdate","_combinedPropertiesUpdate","_key","_value","_currentValue","_updateInterface","_forceInterfaceUpdate"];
 
-PARAMS_1(_interfaceID);
+params ["_interfaceID"];
 
 _commonProperties = HASH_GET(GVAR(settings),"COMMON");
 _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);

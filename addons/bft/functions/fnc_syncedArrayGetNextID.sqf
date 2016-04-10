@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_varName);
+params ["_varName"];
 
 private ["_variable", "_nextID"];
 _variable = missionNamespace getvariable [_varName, []];

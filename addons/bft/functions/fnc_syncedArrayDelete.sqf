@@ -14,6 +14,6 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_varName,_dataID);
+params ["_varName", "_dataID"];
 
 ["bft_syncedArrayDelete", [_varName, _dataID]] call EFUNC(common,globalEvent);

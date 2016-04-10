@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_varName,_elementID);
+params ["_varName", "_elementID"];
 
 private ["_variable"];
 _variable = missionNamespace getvariable [_varName, []];

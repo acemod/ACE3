@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_groupID);
+params ["_groupID"];
 
 if (count _this < 3) exitwith {}; // What is the 3rd parameter?
 

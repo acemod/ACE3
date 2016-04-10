@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_item);
+params ["_unit", "_item"];
 
 private ["_magazine", "_previousMags", "_newMagName", "_newMags", "_magID"];
 

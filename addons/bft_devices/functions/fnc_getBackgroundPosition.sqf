@@ -24,7 +24,7 @@
 
 private ["_display","_isDialog","_backgroundCtrl","_backgroundClassName","_backgroundPosition","_backgroundConfigPosition","_displayConfigContainers"];
 
-PARAMS_1(_displayName);
+params ["_displayName"];
 
 _display = uiNamespace getVariable _displayName;
 _isDialog = I_GET_ISDIALOG;

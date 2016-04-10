@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_deviceID);
+params ["_unit", "_deviceID"];
 
 private ["_ownedIDs"];
 _ownedIDs = _unit getvariable [QGVAR(ownedDevices), []];

@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_deviceID);
+params ["_deviceID"];
 
 private ["_data"];
 _data = [];

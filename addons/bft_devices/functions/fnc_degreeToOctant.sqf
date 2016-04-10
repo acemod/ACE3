@@ -20,7 +20,7 @@
 
 private ["_octant"];
 
-PARAMS_1(_dir);
+params ["_dir"];
 
 _octant = round (_dir / 45);
 

@@ -20,7 +20,7 @@
 
 private ["_showMenu"];
 
-PARAMS_1(_interfaceID);
+params ["_interfaceID"];
 
 _showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
 _showMenu = !_showMenu;

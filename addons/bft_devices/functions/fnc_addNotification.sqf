@@ -22,7 +22,7 @@
 
 private ["_time","_done"];
 
-PARAMS_3(_appID,_notification,_decayTime);
+params ["_appID", "_notification", "_decayTime"];
 
 _time = call FUNC(currentTime);
 _done = false;

@@ -12,7 +12,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_side,_key);
+params ["_side", "_key"];
 
 private ["_variableName", "_keys"];
 

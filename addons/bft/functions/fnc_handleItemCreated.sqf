@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_4(_owner,_item,_magazine,_magID);
+params ["_owner", "_item", "_magazine", "_magID"];
 
 private ["_deviceType", "_deviceSide", "_refreshRate", "_deviceEncryptionKeys", "_assignableInformation", "_app", "_deviceInformation", "_exists", "_deviceModes", "_defaultValues", "_elementCallsign", "_elementSize", "_elementType", "_groupID"];
 

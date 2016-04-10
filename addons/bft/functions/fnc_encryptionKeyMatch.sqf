@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_keySetOne,_keySetTwo);
+params ["_keySetOne", "_keySetTwo"];
 
 private ["_return"];
 // ToDo: replace with arrayIntersect when available

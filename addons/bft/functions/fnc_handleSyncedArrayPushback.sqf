@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_varName,_data);
+params ["_varName", "_data"];
 
 private ["_variable"];
 

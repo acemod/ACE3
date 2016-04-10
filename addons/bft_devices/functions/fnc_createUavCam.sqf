@@ -26,7 +26,7 @@
 
 private ["_renderTarget","_seat","_uav","_seatName","_camPosMemPt","_camDirMemPt","_cam","_uavDeviceData"];
 
-PARAMS_2(_deviceID,_uavCams);
+params ["_deviceID", "_uavCams"];
 
 _uav = objNull;
 

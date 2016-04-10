@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
 private ["_magazine", "_data", "_magID", "_unMatchedDevices", "_ownedDevices", "_matchedIDs"];
 

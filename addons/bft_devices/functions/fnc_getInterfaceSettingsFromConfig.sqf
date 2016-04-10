@@ -20,7 +20,7 @@
 
 private ["_interfaceConfigPath","_configHash"];
 
-PARAMS_1(_interface);
+params ["_interface"];
 
 _interfaceConfigPath = configFile >> "ACE_BFT" >> "Interfaces" >> _interface >> "InterfaceSettings";
 

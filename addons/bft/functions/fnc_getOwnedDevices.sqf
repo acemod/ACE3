@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_owner);
+params ["_owner"];
 
 // Or use OBJECT getvariable [QGVAR(ownedDevices), []]; ?
 private ["_ids"];

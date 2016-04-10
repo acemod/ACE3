@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_deviceID,_newOwner);
+params ["_deviceID", "_newOwner"];
 
 private ["_data", "_newData", "_previousOwner", "_currentDevices"];
 

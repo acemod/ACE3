@@ -21,7 +21,7 @@
 
 private ["_dirTo"];
 
-PARAMS_2(_pos1,_pos2);
+params ["_pos1", "_pos2"];
 
 _dirTo = ((_pos2 select 0) - (_pos1 select 0)) atan2 ((_pos2 select 1) - (_pos1 select 1));
 

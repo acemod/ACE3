@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_detailsEntry);
+params ["_detailsEntry"];
 
 private ["_index", "_value", "_id"];
 _index = _detailsEntry find "[";

@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_groupID);
+params ["_groupID"];
 
 private ["_data", "_found", "_color"];
 _data = [_groupID] call FUNC(getGroupData);

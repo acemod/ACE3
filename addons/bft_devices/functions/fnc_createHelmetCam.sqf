@@ -21,7 +21,7 @@
 
 private ["_newHost","_camOffSet","_targetOffSet","_oldCam","_oldHost","_nop","_target","_cam"];
 
-PARAMS_2(_renderTarget,_data);
+params ["_renderTarget", "_data"];
 
 _newHost = objNull;
 _camOffSet = [];

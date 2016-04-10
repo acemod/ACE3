@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_2(_keys,_add);
+params ["_keys", "_add"];
 
 if (isNil "_add") then {
     if !(GVAR(registeredEncyptionKeys) isEqualTo _keys) then {

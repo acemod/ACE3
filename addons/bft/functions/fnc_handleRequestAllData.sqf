@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_origin);
+params ["_origin"];
 
 diag_log format["handleRequestAllData: Request from Origin: %1", _origin];
 

@@ -26,7 +26,7 @@
 
 private["_displayName","_interfaceID","_mapTypes","_currentMapType","_currentMapTypeIndex","_ctrlScreen","_markerIndex","_mode"];
 
-PARAMS_5(_display,_dikCode,_shiftKey,_ctrlKey,_altKey);
+params ["_display", "_dikCode", "_shiftKey", "_ctrlKey", "_altKey"];
 
 _displayName = I_GET_NAME;
 _interfaceID = I_GET_ID;

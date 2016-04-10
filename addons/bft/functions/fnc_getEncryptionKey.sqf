@@ -14,7 +14,7 @@
 
 #include "script_component.hpp"
 
-PARAMS_1(_side);
+params ["_side"];
 
 if (typeName _side == "OBJECT") then {
     _side = str side _side;

@@ -20,7 +20,7 @@
 #include "script_component.hpp"
 
 private ["_deviceData","_deviceOwner","_interfaces","_interface","_deviceType","_vehicleInterfaces","_assignedVehicleRole","_roleIndex","_roleName","_whereAvailable","_found"];
-PARAMS_2(_deviceID,_unit);
+params ["_deviceID", "_unit"];
 
 _deviceData = [_deviceID] call EFUNC(bft,getDeviceData);
 _deviceOwner = D_GET_OWNER(_deviceData);
