@@ -5,21 +5,6 @@ class ACE_BFT {
      */
     class Devices {
         // Personal Devices
-        class DK10_b {
-            deviceSide = "WEST";
-            refreshRate[] = {5,2};
-            reportingModes[] = {"FBCB2"};
-            defaultInformation[] = {"Inf", 0, "", 0};
-            interface = "DK10";
-            icon = PATHTOF(UI\icon_bft_DK10.paa);
-        };
-        class DK10_o: DK10_b {
-            deviceSide = "EAST";
-        };
-        class DK10_i: DK10_b {
-            deviceSide = "IND";
-        };
-
         class GD300_b {
             deviceSide = "WEST";
             refreshRate[] = {5,2};
@@ -142,32 +127,6 @@ class ACE_BFT {
      * {"Driver",{"Cargo",{0}}}
      */
     class Interfaces {
-        class DK10 {
-            dialogName = QGVAR(DK10_dlg);
-            backgroundDay = QUOTE(PATHTOF(UI\images\DK10_background_ca.paa));
-            backgroundNight = QUOTE(PATHTOF(UI\images\DK10_background_night_ca.paa));
-
-            class InterfaceSettings {
-                dlgIfPosition[] = {};
-                mode = "DESKTOP";
-                showIconText = "true";
-                mapWorldPos[] = {};
-                mapScaleDsp = 2;
-                mapScaleDlg = 2;
-                class mapTypes {
-                    SAT = IDC_SCREEN;
-                    TOPO = IDC_SCREEN_TOPO;
-                };
-                mapType = "SAT";
-                drawSizeMultiplier = 1;
-                uavCam = "";
-                hCam = "";
-                mapTools = "true";
-                nightMode = 2;
-                brightness = 0.9;
-            };
-        };
-
         class GD300 {
             displayName = QGVAR(GD300_dsp);
             dialogName = QGVAR(GD300_dlg);

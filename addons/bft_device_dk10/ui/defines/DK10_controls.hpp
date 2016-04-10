@@ -8,9 +8,9 @@
 #define SCREEN_CONTENT_W DK10_SCREEN_CONTENT_W
 #define SCREEN_CONTENT_H DK10_SCREEN_CONTENT_H
 
-#include "shared_macros.hpp"
+#include "\z\ace\addons\bft_devices\UI\defines\shared_macros.hpp"
 
-class GVAR(DK10_RscText): GVAR(RscText) {
+class GVAR(DK10_RscText): EGVAR(bft_devices,RscText) {
     style = ST_CENTER;
     w = pxToScreen_W(DK10_OSD_ELEMENT_STD_W);
     h = pxToScreen_H(DK10_OSD_ELEMENT_STD_H);
@@ -20,17 +20,17 @@ class GVAR(DK10_RscText): GVAR(RscText) {
     colorBackground[] = COLOR_TRANSPARENT;
     shadow = 0;
 };
-class GVAR(DK10_RscListbox): GVAR(RscListbox) {
+class GVAR(DK10_RscListbox): EGVAR(bft_devices,RscListbox) {
     sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.2);
 };
-class GVAR(DK10_RscEdit): GVAR(RscEdit) {
+class GVAR(DK10_RscEdit): EGVAR(bft_devices,RscEdit) {
     sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE * 1.2);
 };
-class GVAR(DK10_RscButton): GVAR(RscButton) {
+class GVAR(DK10_RscButton): EGVAR(bft_devices,RscButton) {
     font = GUI_FONT_MONO;
     sizeEx = pxToScreen_H(DK10_OSD_TEXT_STD_SIZE);
 };
-class GVAR(DK10_background): GVAR(RscPicture) {
+class GVAR(DK10_background): EGVAR(bft_devices,RscPicture) {
     idc = IDC_BACKGROUND;
     text = "";
     x = GUI_GRID_X;
@@ -38,7 +38,7 @@ class GVAR(DK10_background): GVAR(RscPicture) {
     w = GUI_GRID_W;
     h = GUI_GRID_H;
 };
-class GVAR(DK10_header): GVAR(RscPicture) {
+class GVAR(DK10_header): EGVAR(bft_devices,RscPicture) {
     IDC_COUNTER
     text = "#(argb,8,8,3)color(0,0,0,1)";
     x = pxToScreen_X(DK10_MAP_X);
@@ -46,9 +46,9 @@ class GVAR(DK10_header): GVAR(RscPicture) {
     w = pxToScreen_W(DK10_MAP_W);
     h = pxToScreen_H(DK10_OSD_HEADER_H);
 };
-class GVAR(DK10_OSD_battery): GVAR(RscPicture) {
+class GVAR(DK10_OSD_battery): EGVAR(bft_devices,RscPicture) {
     IDC_COUNTER
-    text = QUOTE(PATHTOF(UI\icons\battery_ca.paa));
+    text = QUOTE(PATHTOEF(bft_devices,UI\icons\battery_ca.paa));
     x = pxToScreen_X(DK10_OSD_X(1));
     y = pxToScreen_Y(DK10_MAP_Y + (DK10_OSD_HEADER_H - DK10_OSD_ICON_STD_SIZE) / 2);
     w = pxToScreen_W(DK10_OSD_ICON_STD_SIZE);
@@ -63,7 +63,7 @@ class GVAR(DK10_OSD_time): GVAR(DK10_RscText) {
 };
 class GVAR(DK10_OSD_signalStrength): GVAR(DK10_OSD_battery) {
     IDC_COUNTER
-    text = QUOTE(PATHTOF(UI\icons\signalStrength_ca.paa));
+    text = QUOTE(PATHTOEF(bft_devices,UI\icons\signalStrength_ca.paa));
     x = pxToScreen_X(DK10_OSD_X(7) + DK10_OSD_ELEMENT_STD_W - DK10_OSD_ICON_STD_SIZE * 2);
     colorText[] = COLOR_WHITE;
 };
@@ -88,7 +88,7 @@ class GVAR(DK10_OSD_dirOctant): GVAR(DK10_OSD_dirDegree) {
     style = ST_RIGHT;
     x = pxToScreen_X(DK10_OSD_X(1));
 };
-class GVAR(DK10_window_back_TL): GVAR(RscFrame) {
+class GVAR(DK10_window_back_TL): EGVAR(bft_devices,RscFrame) {
     x = pxToScreen_X(DK10_WINDOW_BACK_L_X);
     y = pxToScreen_Y(DK10_WINDOW_BACK_T_Y);
     w = pxToScreen_W(DK10_WINDOW_BACK_L_W);
@@ -104,7 +104,7 @@ class GVAR(DK10_window_back_TR): GVAR(DK10_window_back_TL) {
 class GVAR(DK10_window_back_BR): GVAR(DK10_window_back_TR) {
     y = pxToScreen_Y(DK10_WINDOW_BACK_B_Y);
 };
-class GVAR(DK10_btnF1): GVAR(RscButtonInv) {
+class GVAR(DK10_btnF1): EGVAR(bft_devices,RscButtonInv) {
     x = pxToScreen_X(506);
     y = pxToScreen_Y(1545);
     w = pxToScreen_W(52);
@@ -225,7 +225,7 @@ class GVAR(DK10_brightness): GVAR(DK10_RscText) {
     h = pxToScreen_H(DK10_MAP_H);
     colorBackground[] = COLOR_TRANSPARENT;
 };
-class GVAR(DK10_RscMapControl): GVAR(RscMapControl) {
+class GVAR(DK10_RscMapControl): EGVAR(bft_devices,RscMapControl) {
     onDraw = onDrawBFT(0);
     text = "#(argb,8,8,3)color(1,1,1,1)";
     x = pxToScreen_X(SCREEN_CONTENT_X);

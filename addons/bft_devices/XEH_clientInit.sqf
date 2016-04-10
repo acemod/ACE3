@@ -13,7 +13,6 @@ GVAR(rscLayerMailNotification) = [QGVAR(mailNotification)] call BIS_fnc_rscLayer
 GVAR(ifOpenStart) = false;
 
 // Initialize all uiNamespace variables
-SETUVAR(GVAR(DK10_dlg), displayNull);
 SETUVAR(GVAR(GD300_dsp), displayNull);
 SETUVAR(GVAR(GD300_dlg), displayNull);
 SETUVAR(GVAR(JV5_dlg), displayNull);
@@ -58,7 +57,7 @@ HASH_SET(GVAR(settings),"COMMON",_tempHash);
 // when main map is opened, close any open interface
 ["visibleMapChanged",{
     params ["", "_mapIsVisible"];
-    
+
     if (_mapIsVisible) then {
         [] call FUNC(ifClose);
     };

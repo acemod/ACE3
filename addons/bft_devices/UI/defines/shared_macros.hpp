@@ -9,13 +9,13 @@
 #define pxToGroup_Y(PIXEL) (((PIXEL) - SCREEN_CONTENT_Y) / GUI_GRID_PX_H * GUI_GRID_H)
 
 // Calling ifOnMouseButtonUp
-#define onMBU(PARAM) QUOTE([ARR_2('PARAM',_this)] call FUNC(ifOnMouseButtonUp))
+#define onMBU(PARAM) QUOTE([ARR_2('PARAM',_this)] call EFUNC(bft_devices,ifOnMouseButtonUp))
 
 // Calling ifOnLBSelChanged
-#define onLBSC(PARAM) QUOTE([ARR_2('PARAM',_this)] call FUNC(ifOnLBSelChanged))
+#define onLBSC(PARAM) QUOTE([ARR_2('PARAM',_this)] call EFUNC(bft_devices,ifOnLBSelChanged))
 
 // Calling onDraw for BFT
-#define onDrawBFT(PARAM) QUOTE([ARR_2(PARAM,_this)] call FUNC(ifOnDrawBFT))
+#define onDrawBFT(PARAM) QUOTE([ARR_2(PARAM,_this)] call EFUNC(bft_devices,ifOnDrawBFT))
 
 // set IDC counter to 0
 __EXEC(_idc = 0);

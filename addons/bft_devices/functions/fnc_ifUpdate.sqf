@@ -60,23 +60,23 @@ if (isNil "_mode") then {
 {
     call {
         private ["_value"];
-        
+
         _value = (_settings select 1) select _forEachIndex;
         if (isNil "_value") exitWith {};
-        
+
         // ------------ DISPLAY POSITION ------------
         if (_x == "dspIfPosition") exitWith {
             _dspIfPosition = _value;
-            
+
             if !(_isDialog) then {
                 // get the current position of the background control
                 _backgroundPosition = [_displayName] call FUNC(getBackgroundPosition);
                 _backgroundPositionX = _backgroundPosition select 0 select 0;
                 _backgroundPositionW = _backgroundPosition select 0 select 2;
-                
+
                 // get the original position of the background control
                 _backgroundConfigPositionX = _backgroundPosition select 1 select 0;
-                
+
                 // figure out if we need to do anything
                 if !((_backgroundPositionX != _backgroundConfigPositionX) isEqualTo _dspIfPosition) then {
                     // calculate offset required to shift position to the opposite
@@ -92,7 +92,7 @@ if (isNil "_mode") then {
         // ------------ DIALOG POSITION ------------
         if (_x == "dlgIfPosition") exitWith {
             _backgroundOffset = _value;
-            
+
             if (_isDialog) then {
                 if (_backgroundOffset isEqualTo []) then {
                     _backgroundOffset = if (_interfaceInit) then {
@@ -123,21 +123,21 @@ if (isNil "_mode") then {
                 _osdCtrl ctrlSetBackgroundColor [0,0,0,1 - _brightness];
             };
         };
-        
+
         // ------------ NIGHT MODE ------------
         // 0 = day mode, 1 = night mode, 2 = automatic
         if (_x == "nightMode") exitWith {
             _nightMode = _value;
             // transform nightMode into boolean
             _nightMode = if (_nightMode == 1 || {_nightMode == 2 && ([] call EFUNC(common,ambientBrightness)) < 0.2}) then {true} else {false};
-            
+
             // get config path for background
             _backgroundConfig = if (_nightMode) then {
                 configFile >> "ACE_BFT" >> "Interfaces" >> I_GET_CONFIGNAME >> "backgroundNight";
             } else {
                 configFile >> "ACE_BFT" >> "Interfaces" >> I_GET_CONFIGNAME >> "backgroundDay";
             };
-            
+
             // check for existence of background
             if (isText _backgroundConfig) then {
                 _background = getText _backgroundConfig;
@@ -149,11 +149,11 @@ if (isNil "_mode") then {
                 };
             };
         };
-        
+
         // ------------ MODE ------------
         if (_x == "mode") exitWith {
             _displayItems = call {
-                if (_displayName == QGVAR(DK10_dlg)) exitWith {
+                if (_displayName == QEGVAR(bft_device_dk10,DK10_dlg)) exitWith {
                     [IDC_GROUP_DESKTOP,
                     IDC_GROUP_UAV,
                     IDC_GROUP_HCAM,
@@ -186,12 +186,12 @@ if (isNil "_mode") then {
             if !(_displayItems isEqualTo []) then {
                 _btnActCtrl = _display displayCtrl IDC_BTNACT;
                 _displayItemsToShow = [];
-                
+
                 if (!_interfaceInit) then {
                     [] call FUNC(deleteHelmetCam);
                     [] call FUNC(deleteUAVcam);
                 };
-                
+
                 call {
                     // ---------- DESKTOP -----------
                     if (_mode == "DESKTOP") exitWith {
@@ -204,9 +204,9 @@ if (isNil "_mode") then {
                         _mapTypes = [_interfaceID,"mapTypes"] call FUNC(getSettings);
                         _mapType = [_interfaceID,"mapType"] call FUNC(getSettings);
                         _mapIDC = HASH_GET(_mapTypes,_mapType);
-                        
+
                         _displayItemsToShow pushBack _mapIDC;
-                        
+
                         _mapTools = [_interfaceID,"mapTools"] call FUNC(getSettings);
                         if (!isNil "_mapTools" && {_mapTools}) then {
                             _displayItemsToShow append [
@@ -216,14 +216,14 @@ if (isNil "_mode") then {
                                 IDC_OSD_HOOK_DIR
                             ];
                         };
-                        
+
                         _showMenu = [_interfaceID,"showMenu"] call FUNC(getSettings);
                         if (!isNil "_showMenu" && {_showMenu}) then {
                             _displayItemsToShow pushBack IDC_GROUP_MENU;
                         };
-                        
+
                         _btnActCtrl ctrlSetTooltip "";
-                        
+
                         // update scale and world position when not on interface init
                         if (!_interfaceInit) then {
                             if (_isDialog) then {
@@ -241,7 +241,7 @@ if (isNil "_mode") then {
                             _targetMapName = [_interfaceID,"mapType"] call FUNC(getSettings);
                             _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
                             _targetMapCtrl = _display displayCtrl _targetMapIDC;
-                            
+
                             // If we find the map to be shown, we are switching away from BFT. Lets save map scale and position
                             if (ctrlShown _targetMapCtrl) then {
                                 _mapScale = GVAR(mapScale) * GVAR(mapScaleFactor) / 0.86 * (safezoneH * 0.8);
@@ -310,7 +310,7 @@ if (isNil "_mode") then {
                         _btnActCtrl ctrlSetTooltip "Toggle Fullscreen";
                     };
                 };
-                
+
                 // hide every _displayItems not in _displayItemsToShow
                 {(_display displayCtrl _x) ctrlShow (_x in _displayItemsToShow)} count _displayItems;
             };
@@ -341,7 +341,7 @@ if (isNil "_mode") then {
                     [_interfaceID,[["mapScaleDsp",_mapScaleKm]],false] call FUNC(setSettings);
                 };
                 GVAR(mapScale) = _mapScaleKm / GVAR(mapScaleFactor);
-                
+
                 _osdCtrl = _display displayCtrl IDC_OSD_MAP_SCALE;
                 if (!isNull _osdCtrl) then {
                     // divide by 2 because we want to display the radius, not the diameter
@@ -350,7 +350,7 @@ if (isNil "_mode") then {
                     } else {
                         [_mapScaleKm / 2,0,1] call CBA_fnc_formatNumber
                     };
-                    _osdCtrl ctrlSetText format ["%1",_mapScaleTxt];    
+                    _osdCtrl ctrlSetText format ["%1",_mapScaleTxt];
                 };
             };
         };
@@ -379,7 +379,7 @@ if (isNil "_mode") then {
                 _targetMapName = _value;
                 _targetMapIDC = HASH_GET(_mapTypes,_targetMapName);
                 _targetMapCtrl = _display displayCtrl _targetMapIDC;
-                
+
                 if (!_interfaceInit && _isDialog) then {
                     _previousMapCtrl = controlNull;
                     {
@@ -395,18 +395,18 @@ if (isNil "_mode") then {
                         if (isNil "_targetMapWorldPos") then {_targetMapWorldPos = [_previousMapCtrl] call FUNC(ctrlMapCenter)};
                     };
                 };
-                
+
                 // Hide all unwanted map types
                 {
                     if (_x != _targetMapName) then {
                         (_display displayCtrl ((_mapTypes select 1) select _forEachIndex)) ctrlShow false;
                     };
                 } forEach (_mapTypes select 0);
-                
+
                 // Update OSD element if it exists
                 _osdCtrl = _display displayCtrl IDC_OSD_MAP_TGGL;
                 if (!isNull _osdCtrl) then {_osdCtrl ctrlSetText _targetMapName;};
-                
+
                 // show correct map contorl
                 if (!ctrlShown _targetMapCtrl) then {
                     _targetMapCtrl ctrlShow true;
@@ -489,13 +489,13 @@ if (isNil "_mode") then {
                 _uavListCtrl = _display displayCtrl IDC_UAVLIST;
                 lbClear _uavListCtrl;
                 _uavListCtrl lbSetCurSel -1;
-                
+
                 // Populate list of UAVs
                 {
                     _uavDevice = _x select 0;
                     _uavDeviceData = _x select 1;
                     _uav = D_GET_OWNER(_uavDeviceData);
-                    
+
                     if (!(crew _uav isEqualTo [])) then {
                         _index = _uavListCtrl lbAdd format ["%1 (%2)",D_GET_CALLSIGN(_uavDeviceData),getText (configfile >> "cfgVehicles" >> typeOf _uav >> "displayname")];
                         _uavListCtrl lbSetData [_index,_uavDevice];
@@ -592,7 +592,7 @@ if (!isNull _loadingCtrl) then {
             setMousePosition _this;
         },_mousePos] call EFUNC(common,execNextFrame);
     };
-    
+
     _loadingCtrl ctrlShow false;
     while {ctrlShown _loadingCtrl} do {};
 };

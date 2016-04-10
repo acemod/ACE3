@@ -112,7 +112,7 @@
 #define IDC_MSG_BTNSEND  16130
 
 // onMouseMoving
-#define onMM QUOTE(GVAR(cursorOnMap) = _this select 3; GVAR(mapCursorPos) = _this select 0 ctrlMapScreenToWorld [ARR_2(_this select 1,_this select 2)];)
+#define onMM QUOTE(EGVAR(bft_devices,cursorOnMap) = _this select 3; EGVAR(bft_devices,mapCursorPos) = _this select 0 ctrlMapScreenToWorld [ARR_2(_this select 1,_this select 2)];)
 
 // Colors
 #define COLOR_NEON_GREEN {57/255,255/255,20/255,1}

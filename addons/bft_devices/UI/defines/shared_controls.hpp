@@ -103,7 +103,7 @@
 ///////////////////////////////////////////////////////////////////////////
 /// Base Classes
 ///////////////////////////////////////////////////////////////////////////
-class GVAR(RscText) {
+class EGVAR(bft_devices,RscText) {
     access = 0;
     type = 0;
     idc = -1;
@@ -122,7 +122,7 @@ class GVAR(RscText) {
     SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     linespacing = 1;
 };
-class GVAR(RscStructuredText) {
+class EGVAR(bft_devices,RscStructuredText) {
     access = 0;
     type = 13;
     idc = -1;
@@ -142,7 +142,7 @@ class GVAR(RscStructuredText) {
     size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     shadow = 1;
 };
-class GVAR(RscPicture) {
+class EGVAR(bft_devices,RscPicture) {
     access = 0;
     type = 0;
     idc = -1;
@@ -160,7 +160,7 @@ class GVAR(RscPicture) {
     w = 0.2;
     h = 0.15;
 };
-class GVAR(RscEdit) {
+class EGVAR(bft_devices,RscEdit) {
     access = 0;
     type = 2;
     x = 0;
@@ -185,7 +185,7 @@ class GVAR(RscEdit) {
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
     canModify = 1;
 };
-class GVAR(RscCombo) {
+class EGVAR(bft_devices,RscCombo) {
     access = 0;
     type = 4;
     colorSelect[] = {0,0,0,1};
@@ -234,7 +234,7 @@ class GVAR(RscCombo) {
     font = "PuristaMedium";
     sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 };
-class GVAR(RscListBox) {
+class EGVAR(bft_devices,RscListBox) {
     access = 0;
     type = 5;
     w = 0.4;
@@ -293,7 +293,7 @@ class GVAR(RscListBox) {
         border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
     };
 };
-class GVAR(RscButton) {
+class EGVAR(bft_devices,RscButton) {
     access = 0;
     type = 1;
     text = "";
@@ -340,7 +340,7 @@ class GVAR(RscButton) {
     borderSize = 0;
 };
 
-class GVAR(ActiveText) {
+class EGVAR(bft_devices,ActiveText) {
     access = 0;
     type = CT_ACTIVETEXT;
     style = ST_LEFT;
@@ -404,7 +404,7 @@ class GVAR(ActiveText) {
     borderSize = 0;
 };
 
-class GVAR(HTML) {
+class EGVAR(bft_devices,HTML) {
     access = 0; // Control access (0 - ReadAndWrite, 1 - ReadAndCreate, 2 - ReadOnly, 3 - ReadOnlyVerified)
     style = ST_LEFT; // Style
     default = 0; // Control selected by default (only one within a display can be used)
@@ -467,7 +467,7 @@ class GVAR(HTML) {
 
 // Invisable button
 
-class GVAR(RscButtonInv) {
+class EGVAR(bft_devices,RscButtonInv) {
     access = 0;
     type = 1;
     text = "";
@@ -532,7 +532,7 @@ class GVAR(RscButtonInv) {
 
 
 
-class GVAR(RscShortcutButton) {
+class EGVAR(bft_devices,RscShortcutButton) {
     type = 16;
     x = 0.1;
     y = 0.1;
@@ -619,7 +619,7 @@ class GVAR(RscShortcutButton) {
         align = "left";
     };
 };
-class GVAR(RscShortcutButtonMain) {
+class EGVAR(bft_devices,RscShortcutButtonMain) {
     idc = -1;
     style = 0;
     default = 0;
@@ -669,7 +669,7 @@ class GVAR(RscShortcutButtonMain) {
         align = "false";
     };
 };
-class GVAR(RscFrame) {
+class EGVAR(bft_devices,RscFrame) {
     type = 0;
     idc = -1;
     style = 64;
@@ -680,7 +680,7 @@ class GVAR(RscFrame) {
     sizeEx = 0.02;
     text = "";
 };
-class GVAR(RscSlider) {
+class EGVAR(bft_devices,RscSlider) {
     access = 0;
     type = 3;
     style = 1024;
@@ -690,7 +690,7 @@ class GVAR(RscSlider) {
     shadow = 0;
     h = 0.025;
 };
-class GVAR(IGUIBack) {
+class EGVAR(bft_devices,IGUIBack) {
     type = 0;
     idc = 124;
     style = 128;
@@ -710,7 +710,7 @@ class GVAR(IGUIBack) {
         "(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"
     };
 };
-class GVAR(RscCheckbox) {
+class EGVAR(bft_devices,RscCheckbox) {
     idc = -1;
     type = 7;
     style = 0;
@@ -742,7 +742,7 @@ class GVAR(RscCheckbox) {
         "CHECKED"
     };
 };
-class GVAR(RscButtonMenu) {
+class EGVAR(bft_devices,RscButtonMenu) {
     idc = -1;
     type = 16;
     style = "0x02 + 0xC0";
@@ -817,7 +817,7 @@ class GVAR(RscButtonMenu) {
         1
     };
 };
-class GVAR(RscButtonMenuOK) {
+class EGVAR(bft_devices,RscButtonMenuOK) {
     idc = 1;
     shortcuts[] = {
         "0x00050000 + 0",
@@ -833,14 +833,14 @@ class GVAR(RscButtonMenuOK) {
         1
     };
 };
-class GVAR(RscButtonMenuCancel) {
+class EGVAR(bft_devices,RscButtonMenuCancel) {
     idc = 2;
     shortcuts[] = {
         "0x00050000 + 1"
     };
     text = "Cancel";
 };
-class GVAR(RscControlsGroup) {
+class EGVAR(bft_devices,RscControlsGroup) {
     class VScrollbar {
         color[] = {1,1,1,1};
         width = 0.021;
@@ -876,7 +876,7 @@ class GVAR(RscControlsGroup) {
     style = 16;
 };
 /*
-class GVAR(RscFrame) {
+class EGVAR(bft_devices,RscFrame) {
     type = 0;
     idc = -1;
     style = 64;
@@ -889,7 +889,7 @@ class GVAR(RscFrame) {
 };
 */
 /*
-class GVAR(RscSlider) {
+class EGVAR(bft_devices,RscSlider) {
     access = 0;
     type = 3;
     style = 1024;
@@ -901,7 +901,7 @@ class GVAR(RscSlider) {
 };
 */
 
-class GVAR(RscMapControl) {
+class EGVAR(bft_devices,RscMapControl) {
   access = 0;
   idc = -1;
   type = CT_MAP_MAIN;
@@ -1250,10 +1250,10 @@ class GVAR(RscMapControl) {
     };
 };
 
-class GVAR(MenuItem): GVAR(ActiveText) {
+class EGVAR(bft_devices,MenuItem): EGVAR(bft_devices,ActiveText) {
     colorActive[] = {255/255,165/255,0/255,1};
 };
 
-class GVAR(MenuExit): GVAR(MenuItem) {
+class EGVAR(bft_devices,MenuExit): EGVAR(bft_devices,MenuItem) {
     color[] = {1,1,1,0.75};
 };

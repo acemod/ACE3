@@ -9,7 +9,7 @@ class CfgVehicles {
                     statement = "";
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\inventory\DK10_icon.paa);
+                    // TODO icon = PATHTOF(UI\inventory\DK10_icon.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     insertChildren = QUOTE(_this call FUNC(getBFTActionChildren));
                 };
@@ -65,9 +65,9 @@ class CfgVehicles {
         class TransportMagazines {};
         class TransportBackpacks {};
         class TransportItems {
-            MACRO_ADDITEM(ACE_DK10_b,5);
-            MACRO_ADDITEM(ACE_GD300_b,15);
-            MACRO_ADDITEM(ACE_HelmetCam,25);
+            //MACRO_ADDITEM(ACE_DK10_b,5);
+            //MACRO_ADDITEM(ACE_GD300_b,15);
+            //MACRO_ADDITEM(ACE_HelmetCam,25);
         };
     };
     class Box_East_Support_F;
@@ -83,9 +83,9 @@ class CfgVehicles {
         class TransportMagazines {};
         class TransportBackpacks {};
         class TransportItems {
-            MACRO_ADDITEM(ACE_DK10_o,5);
-            MACRO_ADDITEM(ACE_GD300_o,15);
-            MACRO_ADDITEM(ACE_HelmetCam,25);
+            //MACRO_ADDITEM(ACE_DK10_o,5);
+            //MACRO_ADDITEM(ACE_GD300_o,15);
+            //MACRO_ADDITEM(ACE_HelmetCam,25);
         };
     };
     class Box_IND_Support_F;
@@ -101,9 +101,9 @@ class CfgVehicles {
         class TransportMagazines {};
         class TransportBackpacks {};
         class TransportItems {
-            MACRO_ADDITEM(ACE_DK10_i,5);
-            MACRO_ADDITEM(ACE_GD300_i,15);
-            MACRO_ADDITEM(ACE_HelmetCam,25);
+            //MACRO_ADDITEM(ACE_DK10_i,5);
+            //MACRO_ADDITEM(ACE_GD300_i,15);
+            //MACRO_ADDITEM(ACE_HelmetCam,25);
         };
     };
 

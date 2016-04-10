@@ -17,12 +17,12 @@
 class GVAR(DISPLAY_NAME) {
     idd = IDD_DK10_DLG;
     movingEnable = true;
-    onLoad = QUOTE(_this call FUNC(ifOnLoad));
-    onUnload = QUOTE([] call FUNC(ifOnUnload));
-    onKeyDown = QUOTE(_this call FUNC(ifOnKeyDown));
+    onLoad = QUOTE(_this call EFUNC(bft_devices,ifOnLoad));
+    onUnload = QUOTE([] call EFUNC(bft_devices,ifOnUnload));
+    onKeyDown = QUOTE(_this call EFUNC(bft_devices,ifOnKeyDown));
     objects[] = {};
     class controlsBackground {
-        class windowsBG: GVAR(RscPicture) {
+        class windowsBG: EGVAR(bft_devices,RscPicture) {
             idc = IDC_WIN_BACK;
             text = "#(argb,8,8,3)color(0.2,0.431,0.647,1)";
             x = pxToScreen_X(DK10_MAP_X);
@@ -64,7 +64,7 @@ class GVAR(DISPLAY_NAME) {
         class hookDst: GVAR(DK10_OSD_hookDst) {};
         class hookDir: GVAR(DK10_OSD_hookDir) {};
         // ---------- DESKTOP -----------
-        class Desktop: GVAR(RscControlsGroup) {
+        class Desktop: EGVAR(bft_devices,RscControlsGroup) {
             idc = IDC_GROUP_DESKTOP;
             x = pxToScreen_X(SCREEN_CONTENT_X);
             y = pxToScreen_Y(SCREEN_CONTENT_Y);
@@ -74,10 +74,10 @@ class GVAR(DISPLAY_NAME) {
             class HScrollbar {};
             class Scrollbar {};
             class controls {
-                class appBFT: GVAR(ActiveText) {
+                class appBFT: EGVAR(bft_devices,ActiveText) {
                     style = ST_PICTURE;
                     idc = IDC_ACTBFTTXT;
-                    text = QUOTE(PATHTOF(UI\icons\appBFT.paa));
+                    text = QUOTE(PATHTOEF(bft_devices,UI\icons\appBFT.paa));
                     x = pxToGroup_X(SCREEN_CONTENT_X + DK10_DESKTOP_ICON_OFFSET_X);
                     y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y);
                     w = pxToScreen_W(DK10_DESKTOP_ICON_W);
@@ -87,21 +87,21 @@ class GVAR(DISPLAY_NAME) {
                 };
                 class appUAV: appBFT {
                     idc = IDC_ACTUAVTXT;
-                    text = QUOTE(PATHTOF(UI\icons\appUAV.paa));
+                    text = QUOTE(PATHTOEF(bft_devices,UI\icons\appUAV.paa));
                     y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 2 + DK10_DESKTOP_ICON_H);
                     onMouseButtonUp = onMBU(modeUAV);
                     toolTip = "UAV Video Feeds";
                 };
                 class appHCAM: appBFT {
                     idc = IDC_ACTVIDTXT;
-                    text = QUOTE(PATHTOF(UI\icons\appHelmetCam.paa));
+                    text = QUOTE(PATHTOEF(bft_devices,UI\icons\appHelmetCam.paa));
                     y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 3 + DK10_DESKTOP_ICON_H * 2);
                     onMouseButtonUp = onMBU(modeHCAM);
                     toolTip = "Live Helmet Cam Video Feeds";
                 };
                 class appMAIL: appBFT {
                     idc = IDC_ACTMSGTXT;
-                    text = QUOTE(PATHTOF(UI\icons\appMail.paa));
+                    text = QUOTE(PATHTOEF(bft_devices,UI\icons\appMail.paa));
                     y = pxToGroup_Y(SCREEN_CONTENT_Y + DK10_DESKTOP_ICON_OFFSET_Y * 4 + DK10_DESKTOP_ICON_H * 3);
                     onMouseButtonUp = onMBU(modeMESSAGE);
                     toolTip = "Text Messaging System";
@@ -109,7 +109,7 @@ class GVAR(DISPLAY_NAME) {
             };
         };
         // ---------- UAV -----------
-        class UAV: GVAR(RscControlsGroup) {
+        class UAV: EGVAR(bft_devices,RscControlsGroup) {
             idc = IDC_GROUP_UAV;
             x = pxToScreen_X(SCREEN_CONTENT_X);
             y = pxToScreen_Y(SCREEN_CONTENT_Y);
@@ -151,7 +151,7 @@ class GVAR(DISPLAY_NAME) {
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                     onLBSelChanged = onLBSC(UAVlist);
                 };
-                class UAVdisplay: GVAR(RscPicture) {
+                class UAVdisplay: EGVAR(bft_devices,RscPicture) {
                     idc = IDC_UAVDISPLAY;
                     text = "#(argb,512,512,1)r2t(rendertarget8,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
@@ -159,7 +159,7 @@ class GVAR(DISPLAY_NAME) {
                     w = pxToScreen_W(DK10_WINDOW_CONTENT_R_W);
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                 };
-                class UAV2nddisplay: GVAR(RscPicture) {
+                class UAV2nddisplay: EGVAR(bft_devices,RscPicture) {
                     idc = IDC_UAV2NDDISPLAY;
                     text = "#(argb,512,512,1)r2t(rendertarget9,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
@@ -170,7 +170,7 @@ class GVAR(DISPLAY_NAME) {
             };
         };
         // ---------- HELMET CAM -----------
-        class HCAM: GVAR(RscControlsGroup) {
+        class HCAM: EGVAR(bft_devices,RscControlsGroup) {
             idc = IDC_GROUP_HCAM;
             x = pxToScreen_X(SCREEN_CONTENT_X);
             y = pxToScreen_Y(SCREEN_CONTENT_Y);
@@ -206,7 +206,7 @@ class GVAR(DISPLAY_NAME) {
                     h = pxToScreen_H(DK10_WINDOW_CONTENT_H);
                     onLBSelChanged = onLBSC(HCAMlist);
                 };
-                class HcamDisplay: GVAR(RscPicture) {
+                class HcamDisplay: EGVAR(bft_devices,RscPicture) {
                     idc = IDC_HCAMDISPLAY;
                     text = "#(argb,512,512,1)r2t(rendertarget12,1.0)";
                     x = pxToGroup_X(DK10_WINDOW_CONTENT_R_X);
@@ -217,7 +217,7 @@ class GVAR(DISPLAY_NAME) {
             };
         };
         // ---------- MESSAGING -----------
-        class MESSAGE: GVAR(RscControlsGroup) {
+        class MESSAGE: EGVAR(bft_devices,RscControlsGroup) {
             idc = IDC_GROUP_MESSAGE;
             x = pxToScreen_X(SCREEN_CONTENT_X);
             y = pxToScreen_Y(SCREEN_CONTENT_Y);
@@ -227,7 +227,7 @@ class GVAR(DISPLAY_NAME) {
             class HScrollbar {};
             class Scrollbar {};
             class controls {
-                class msgframe: GVAR(RscFrame) {
+                class msgframe: EGVAR(bft_devices,RscFrame) {
                     IDC_COUNTER
                     text = "Read Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_MESSAGETEXT_FRAME_X);
@@ -256,7 +256,7 @@ class GVAR(DISPLAY_NAME) {
                     h = pxToScreen_H(DK10_MESSAGE_MESSAGETEXT_H);
                     canModify = 0;
                 };
-                class composeFrame: GVAR(RscFrame) {
+                class composeFrame: EGVAR(bft_devices,RscFrame) {
                     IDC_COUNTER
                     text = "Compose Message"; //--- ToDo: Localize;
                     x = pxToGroup_X(DK10_MESSAGE_COMPOSE_FRAME_X);
@@ -305,7 +305,7 @@ class GVAR(DISPLAY_NAME) {
             };
         };
         // ---------- FULLSCREEN HCAM -----------
-        class HcamFull: GVAR(RscPicture) {
+        class HcamFull: EGVAR(bft_devices,RscPicture) {
             idc = IDC_HCAM_FULL;
             text = "#(argb,512,512,1)r2t(rendertarget13,1.0)";
             x = pxToScreen_X(SCREEN_CONTENT_X);
@@ -406,4 +406,4 @@ class GVAR(DISPLAY_NAME) {
     };
 };
 
-#include "shared_undefines.hpp"
+#include "\z\ace\addons\bft_devices\UI\defines\shared_undefines.hpp"
