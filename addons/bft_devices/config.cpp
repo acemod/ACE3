@@ -33,10 +33,11 @@ class CfgPatches {
 #include "UI\defines\GD300_dialog.hpp"
 #include "UI\defines\JV5_dialog.hpp"
 #include "UI\defines\TAD_dialog.hpp"
-
+/*
 // Displays
 class RscTitles {
     titles[]={};
     #include "UI\defines\GD300_display.hpp"
     #include "UI\defines\TAD_display.hpp"
 };
+*/

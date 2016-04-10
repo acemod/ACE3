@@ -1,3 +1,6 @@
+#ifndef BFT_DEVICES_SHARED_MACROS_HPP_
+#define BFT_DEVICES_SHARED_MACROS_HPP_
+
 // Base bacros to convert pixel space to screen space
 #define pxToScreen_X(PIXEL) ((PIXEL) / GUI_GRID_PX_W * GUI_GRID_W + GUI_GRID_X)
 #define pxToScreen_Y(PIXEL) ((PIXEL) / GUI_GRID_PX_H * GUI_GRID_H + GUI_GRID_Y)
@@ -20,3 +23,5 @@
 // set IDC counter to 0
 __EXEC(_idc = 0);
 #define IDC_COUNTER __EXEC(_idc = _idc + 1); idc = __EVAL(_idc);
+
+#endif /* BFT_DEVICES_SHARED_MACROS_HPP_ */

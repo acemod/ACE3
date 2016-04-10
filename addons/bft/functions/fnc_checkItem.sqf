@@ -20,7 +20,6 @@ private ["_magazine", "_previousMags", "_newMagName", "_newMags", "_magID"];
 
 if !(local _unit) exitwith {};
 
-
 if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) != ""}) then {
 
     if !(isClass (configFile >> "ACE_BFT" >> "Devices" >> (getText(configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType))))) exitwith {};

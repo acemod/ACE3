@@ -1,6 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////
 /// Styles
 ///////////////////////////////////////////////////////////////////////////
+#ifndef BFT_DEVICES_SHARED_CONTROLS_HPP_
+#define BFT_DEVICES_SHARED_CONTROLS_HPP_
 
 // Control types
 #define CT_STATIC           0
@@ -1257,3 +1259,5 @@ class EGVAR(bft_devices,MenuItem): EGVAR(bft_devices,ActiveText) {
 class EGVAR(bft_devices,MenuExit): EGVAR(bft_devices,MenuItem) {
     color[] = {1,1,1,0.75};
 };
+
+#endif /* BFT_DEVICES_SHARED_CONTROLS_HPP_ */

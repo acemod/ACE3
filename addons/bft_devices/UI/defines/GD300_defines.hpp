@@ -1,3 +1,5 @@
+#ifndef BFT_DEVICE_GD300_DEFINES_
+#define BFT_DEVICE_GD300_DEFINES_
 // Map position within background, pixel based
 #define GD300_MAP_X (452)
 #define GD300_MAP_Y (713)
@@ -100,3 +102,5 @@
 // like to pxToGrou, just for the menu
 #define pxToMenu_X(PIXEL) (((PIXEL) - GD300_OSD_MENU_X) / GUI_GRID_PX_W * GUI_GRID_W)
 #define pxToMenu_Y(PIXEL) (((PIXEL) - GD300_OSD_MENU_Y) / GUI_GRID_PX_H * GUI_GRID_H)
+
+#endif /* BFT_DEVICE_GD300_DEFINES_ */

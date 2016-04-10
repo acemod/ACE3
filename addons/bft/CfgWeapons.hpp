@@ -1,4 +1,3 @@
-
 class CfgWeapons {
     class ACE_ItemCore;
     class InventoryItem_Base_F;

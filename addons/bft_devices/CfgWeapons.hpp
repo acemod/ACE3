@@ -64,5 +64,5 @@ class CfgWeapons {
         class ItemInfo: InventoryItem_Base_F {
             mass = 4;
         };
-    }
+    };
 };
