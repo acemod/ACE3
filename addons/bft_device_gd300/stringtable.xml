@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="BFT_Device_dg300">
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemName_b">
+            <English>GD300 Android (NATO)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemDescription_b">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemName_o">
+            <English>GD300 Android (CSAT)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemDescription_o">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemName_i">
+            <English>GD300 Android (AAF)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Device_GD300_GD300_itemDescription_i">
+            <English>GD300 rugged wearable computer</English>
+        </Key>
+    </Package>
+</Project>
