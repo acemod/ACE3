@@ -44,7 +44,8 @@ if (isText (configFile >> "CfgWeapons" >> _item >> QGVAR(deviceType)) && {getTex
         diag_log format["%1 id %2", _item, _magID];
 
         if (_magID != "") then {
-            ["bft_itemCreated", [_unit, _item, _magazine, _magID]] call EFUNC(common,serverEvent);
+            GVAR(pendingIdAssignmentList) pushback _magID;
+            ["bft_itemCreated", [_unit, _item, _magazine, _magID, "comes-from-checkItem"]] call EFUNC(common,serverEvent);
         };
     };
 };

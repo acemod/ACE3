@@ -61,6 +61,8 @@ PREP(updateAllEncryptionKeys);
 PREP(updateAvailableDevicesPosition);
 PREP(handleUpdateAllEncryptionKeys);
 
+GVAR(pendingIdAssignmentList) = [];
+
 // Synced data collections
 GVAR(syncedArrayVariables) = [];
 GVAR(saluteReports) = [];

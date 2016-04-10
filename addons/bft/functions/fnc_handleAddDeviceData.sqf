@@ -32,6 +32,7 @@ if (local (_this select 5)) then {
         _currentDevices pushback (_this select 0);
         (_this select 5) setvariable [QGVAR(ownedDevices), _currentDevices, true];
 
+        GVAR(pendingIdAssignmentList) = GVAR(pendingIdAssignmentList) - [(_this select 0)]; // remove the id from the assignment list
         systemChat format["handleAdd - ownedDevices: %1 %2", (_this select 5), _currentDevices];
         diag_log format["handleAdd - ownedDevices: %1 %2", (_this select 5), _currentDevices];
     };
