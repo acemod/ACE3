@@ -33,7 +33,7 @@ private ["_deviceType", "_deviceSide", "_refreshRate", "_deviceEncryptionKeys", 
     ORBAT element ID
 */
 systemChat format["handleItemCreated: %1", _this];
-diag_log format["handleItemCreated: %1", _this];
+diag_log format["handleItemCreated: entry args: %1", _this];
 
 _exists = false;
 {
@@ -94,6 +94,6 @@ _deviceInformation = [_magID, [_deviceSide, _deviceEncryptionKeys], _assignableI
 
 diag_log format["Prep raising bft_addDeviceData _deviceInformation with: %1", _deviceInformation];
 [{
-    diag_log format["exec bft_addDeviceData _deviceInformation with: %1", _deviceInformation];
+    diag_log format["exec bft_addDeviceData _deviceInformation with: %1", _this];
     ["bft_addDeviceData", _this] call EFUNC(common,globalEvent);
 }, _deviceInformation, 1] call EFUNC(common,waitAndExecute);

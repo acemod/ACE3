@@ -27,12 +27,12 @@ _data set [5, _newOwner];
 
 ["bft_deviceDataChanged", [_data, isNull _previousOwner]] call EFUNC(common,localEvent);
 
-systemChat format["handleUpdate - setting new owner from %1 to %2", _previousOwner, _newOwner];
-diag_log format["handleUpdate - setting new owner from %1 to %2", _previousOwner, _newOwner];
+systemChat format["handleUpdateDeviceOwner - setting new owner from %1 to %2", _previousOwner, _newOwner];
+diag_log format["handleUpdateDeviceOwner - setting new owner from %1 to %2", _previousOwner, _newOwner];
 
 _newData = [_deviceID] call FUNC(getDeviceData);
-systemChat format["handleUpdate - validate new owner - %1", (_newData select 5) == _newOwner];
-diag_log format["handleUpdate - validate new owner - %1", (_newData select 5) == _newOwner];
+systemChat format["handleUpdateDeviceOwner - validate new owner - %1", (_newData select 5) == _newOwner];
+diag_log format["handleUpdateDeviceOwner - validate new owner - %1", (_newData select 5) == _newOwner];
 
 if (!isNull _newOwner && {local _newOwner}) then {
     _currentDevices = _newOwner getvariable [QGVAR(ownedDevices), []];
@@ -40,20 +40,26 @@ if (!isNull _newOwner && {local _newOwner}) then {
         _currentDevices pushback _deviceID;
         _newOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
 
-        systemChat format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
-        diag_log format["handleUpdate - new ownedDevices: %1 %2", _newOwner, _currentDevices];
+        systemChat format["handleUpdateDeviceOwner - new ownedDevices: %1 %2", _newOwner, _currentDevices];
+        diag_log format["handleUpdateDeviceOwner - new ownedDevices: %1 %2", _newOwner, _currentDevices];
 
     };
 };
 if (!isNull _previousOwner && {local _previousOwner}) then {
+    diag_log format["handleUpdateDeviceOwner - removing device (%1) from owner %2 ", _deviceId, _previousOwner];
     _currentDevices = _previousOwner getvariable [QGVAR(ownedDevices), []];
     if (_deviceID in _currentDevices) then {
         _currentDevices = _currentDevices - [_deviceID];
         _previousOwner setvariable [QGVAR(ownedDevices), _currentDevices, true];
 
-        systemChat format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
-        diag_log format["handleUpdate - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
+        systemChat format["handleUpdateDeviceOwner - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
+        diag_log format["handleUpdateDeviceOwner - new ownedDevices: %1 %2", _previousOwner, _currentDevices];
+    } else {
+        diag_log format["handleUpdateDeviceOwner - tried removing a deviceId that doesnt exist in our previous owner ids: %1 %2", _previousOwner, _currentDevices];
     };
+} else {
+    diag_log format["handleUpdateDeviceOwner - no previous owner to remove stuff from %1 %2", _previousOwner, _deviceId];
 };
-systemChat format["handleUpdate - devices: %1", GVAR(deviceData)];
-diag_log format["handleUpdate - devices: %1", GVAR(deviceData)];
+
+systemChat format["handleUpdateDeviceOwner - devices: %1", GVAR(deviceData)];
+diag_log format["handleUpdateDeviceOwner - devices: %1", GVAR(deviceData)];
