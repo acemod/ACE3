@@ -29,7 +29,7 @@ uiNamespace setVariable [_displayName,_this select 0];
 // setup bft_drawing
 _mapTypes = [I_GET_ID,"mapTypes"] call FUNC(getSettings);
 {
-	0 = [(_this select 0) displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
+    0 = [(_this select 0) displayCtrl _x] call EFUNC(bft_drawing,doBFTDraw);
 } count (_mapTypes select 1);
 
 // send "bft_deviceOpened" event

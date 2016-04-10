@@ -38,7 +38,7 @@ _deviceAppData = HASH_GET(GVAR(settings),_interfaceID);
 
 // Return value of requested property
 if (count _this == 2) exitWith {
-	_property = _this select 1;
+    _property = _this select 1;
     _value = HASH_GET(_deviceAppData,_property);
     if (isNil "_value") then {
         _value = HASH_GET(_commonProperties,_property);
