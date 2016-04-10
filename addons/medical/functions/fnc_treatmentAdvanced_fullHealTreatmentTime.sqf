@@ -15,12 +15,12 @@
  */
 #include "script_component.hpp"
 
-private ["_target", "_totalDamage"];
-_target = _this;
+private "_totalDamage";
+
 _totalDamage = 0;
 
 {
     _totalDamage = _totalDamage + _x;
-} forEach (_target getVariable [QGVAR(bodyPartStatus), []]);
+} forEach (_this getVariable [QGVAR(bodyPartStatus), []]);
 
 (10 max (_totalDamage * 10) min 120)

@@ -65,5 +65,5 @@ namespace ace {
             //ace::vector3<float> axis_dir;
         };
         typedef std::shared_ptr<animation> animation_p;
-    };
-};
+    }
+}

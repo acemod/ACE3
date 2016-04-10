@@ -4,9 +4,9 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
- * 1: Set unconsciouns <BOOL> <OPTIONAL>
- * 2: Minimum unconscious ACE_time <NUMBER> <OPTIONAL>
- * 3: Force AI Unconscious (skip random death chance) <BOOL> <OPTIONAL>
+ * 1: Set unconsciouns <BOOL> (default: true)
+ * 2: Minimum unconscious time <NUMBER> (default: (round(random(10)+5)))
+ * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * ReturnValue:
  * nil
@@ -19,28 +19,30 @@
 
 #include "script_component.hpp"
 
-#define DEFAULT_DELAY   (round(random(10)+5))
+#define DEFAULT_DELAY (round(random(10)+5))
 
-private ["_unit", "_set", "_animState", "_originalPos", "_startingTime","_minWaitingTime", "_force", "_isDead"];
-_unit = _this select 0;
-_set = if (count _this > 1) then {_this select 1} else {true};
-_minWaitingTime = if (count _this > 2) then {_this select 2} else {DEFAULT_DELAY};
-_force = if (count _this > 3) then {_this select 3} else {false};
+// only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
+};
+
+private ["_animState", "_originalPos", "_startingTime", "_isDead"];
+params ["_unit", ["_set", true], ["_minWaitingTime", DEFAULT_DELAY], ["_force", false]];
 
 // No change, fuck off. (why is there no xor?)
 if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
 
-if !(_set) exitwith {
-    _unit setvariable ["ACE_isUnconscious", false, true];
+if !(_set) exitWith {
+    _unit setVariable ["ACE_isUnconscious", false, true];
 };
 
-if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitwith{};
+if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
-if (!local _unit) exitwith {
-    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (!local _unit) exitWith {
+    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
 };
 
-_unit setvariable ["ACE_isUnconscious", true, true];
+_unit setVariable ["ACE_isUnconscious", true, true];
 _unit setUnconscious true;
 
 if (_unit == ACE_player) then {
@@ -92,13 +94,22 @@ _unit setUnitPos "DOWN";
 if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
     [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 };
+// Delay Unconscious so the AI dont instant stop shooting on the unit #3121
+if (GVAR(delayUnconCaptive) == 0) then {
+    [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+} else {
+    [{
+        params ["_unit"];
+        if (_unit getVariable ["ACE_isUnconscious", false]) then {
+            [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+        };
+    },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
+};
 
-[_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
-    _unit = _this select 0;
-    _anim = _this select 1;
+    params ["_unit", "_anim"];
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };

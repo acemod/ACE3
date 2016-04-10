@@ -17,7 +17,7 @@ TRACE_1("", _launchParams);
 // TODO:: Make sure the missile maintains LOS
 _foundTargetPos = [0,0,0];
 if(!isNil "_target") then {
-    _foundTargetPos = getPosASL _target;
+    _foundTargetPos = aimPos _target ;
     //_foundTargetPos = (_target modelToWorldVisual (getCenterOfMass _target));
 };
 
@@ -27,7 +27,7 @@ _angleOkay = [_projectile, _foundTargetPos, _angleFov] call FUNC(checkSeekerAngl
 
 _losOkay = false;
 if(_angleOkay) then {
-    _losOkay = [_projectile, _target] call FUNC(checkSeekerLos);
+    _losOkay = [_projectile, _target] call FUNC(checkSeekerLos); //Note: Func does not exist?  probably FUNC(checkLos)??
 };
 TRACE_2("", _angleOkay, _losOkay);
 

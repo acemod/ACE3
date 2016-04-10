@@ -28,7 +28,7 @@ if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
 EGVAR(weather,WindInfo) = false;
-0 cutText ["", "PLAIN"];
+(["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 GVAR(Protractor) = true;
 
 [{
@@ -36,7 +36,7 @@ GVAR(Protractor) = true;
     if !(GVAR(Protractor) && !(weaponLowered ACE_player) && currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {
         GVAR(Protractor) = false;
         1 cutText ["", "PLAIN"];
-        [_idPFH] call cba_fnc_removePerFrameHandler;
+        [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 
     1 cutRsc ["RscProtractor", "PLAIN", 1, false];
@@ -47,7 +47,7 @@ GVAR(Protractor) = true;
     __ctrl1 ctrlSetTextColor [1, 1, 1, 1];
 
     __ctrl2 ctrlSetScale 1;
-    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY + 0.001 - 0.0012 * (-58 max (asin((ACE_player weaponDirection currentWeapon ACE_player) select 2)) min 58), 0.2, 0.2 * 4/3];
+    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY - 0.001 - 0.1074 * (-0.86 max ((ACE_player weaponDirection currentWeapon ACE_player) select 2) min 0.86), 0.2, 0.2 * 4/3];
     __ctrl2 ctrlCommit 0;
     __ctrl2 ctrlSetText QUOTE(PATHTOF(UI\protractor_marker.paa));
     __ctrl2 ctrlSetTextColor [1, 1, 1, 1];

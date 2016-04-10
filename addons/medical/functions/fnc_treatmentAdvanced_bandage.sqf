@@ -7,7 +7,8 @@
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  * 3: Treatment classname <STRING>
- *
+ * 4: Item <STRING>
+ * 5: specific Spot <NUMBER> (default: -1)
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -16,28 +17,25 @@
  */
 
 #include "script_component.hpp"
+params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-private ["_caller", "_target", "_selectionName", "_className", "_items", "_specificSpot"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_items = _this select 4;
+[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
-_specificSpot = if (count _this > 6) then {_this select 6} else {-1};
-
-if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
+if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
     _this call FUNC(treatmentBasic_bandage);
 };
 
-[[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentAdvanced_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,localEvent);
+} else {
+    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,targetEvent);
+};
+
 /*    {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
     };
-}foreach _items;*/
-
-[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+}forEach _items;*/
 
 true;

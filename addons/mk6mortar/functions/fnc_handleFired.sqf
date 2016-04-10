@@ -21,9 +21,16 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(airResistanceEnabled)) exitWith {};
-
 PARAMS_7(_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
+
+if (GVAR(useAmmoHandling) && {_vehicle getVariable [QGVAR(initialized),false] && !(_vehicle getVariable [QGVAR(exclude),false])}) then {
+    // if !(_vehicle getVariable [QGVAR(exclude),false]) then {
+        _vehicle removeMagazineGlobal (_vehicle magazinesTurret [0] select 0);
+        TRACE_1("",_vehicle magazinesTurret [0]);
+    // };
+};
+
+if (!GVAR(airResistanceEnabled)) exitWith {};
 
 private ["_shooterMan", "_temperature", "_newMuzzleVelocityCoefficent", "_bulletVelocity", "_bulletSpeed"];
 
@@ -59,8 +66,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     PARAMS_2(_args,_pfID);
     EXPLODE_4_PVT(_args,_shell,_airFriction,_time,_relativeDensity);
 
-    if (isNull _shell || {!alive _shell}) exitwith {
-        [_pfID] call cba_fnc_removePerFrameHandler;
+    if (isNull _shell || {!alive _shell}) exitWith {
+        [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
     _deltaT = ACE_time - _time;

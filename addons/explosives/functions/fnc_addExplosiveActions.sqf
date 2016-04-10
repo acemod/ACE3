@@ -22,7 +22,7 @@ _list = [];
 _itemCount = [];
 {
     _item = ConfigFile >> "CfgMagazines" >> _x;
-    if (getNumber(_item >> "ACE_Placeable") == 1) then {
+    if (getNumber(_item >> QGVAR(Placeable)) == 1) then {
         _index = _list find _item;
         if (_index != -1) then {
             _itemCount set [_index, (_itemCount select _index) + 1];
@@ -45,7 +45,7 @@ _children = [];
                 format ["Explosive_%1", _forEachIndex],
                 format [_name + " (%1)", _itemCount select _forEachIndex],
                 getText(_x >> "picture"),
-                {_this call FUNC(setupExplosive);},
+                {[{_this call FUNC(setupExplosive)}, _this] call EFUNC(common,execNextFrame)},
                 {true},
                 {},
                 (configName _x)

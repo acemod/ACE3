@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>
- * 1: Use blacklist <BOOL> <OPTIONAL>
+ * 1: Use blacklist <BOOL> (default: false)
  *
  * Return Value:
  * None <NIL>
@@ -20,7 +20,7 @@
 params [["_newUnits",[],[[]]],["_blacklist",false,[false]]];
 
 // Function only matters on player clients
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
 
 // If adding to a list we can exit here, since it won't show up until the UI refreshes anyway
 if !(_newUnits isEqualTo []) exitWith {

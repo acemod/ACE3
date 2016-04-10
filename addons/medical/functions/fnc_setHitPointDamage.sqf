@@ -7,10 +7,10 @@
  * 0: Unit <OBJECT>
  * 1: HitPoint <STRING>
  * 2: Damage <NUMBER>
- * 3: Disable overall damage adjustment (optional) <BOOL>
+ * 3: Disable overall damage adjustment <BOOL> (default: false)
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: Yes
  */
@@ -22,18 +22,15 @@
 #define ARMDAMAGETRESHOLD2 1.7
 
 private ["_unit", "_selection", "_damage", "_selections", "_damages", "_damageOld", "_damageSumOld", "_damageNew", "_damageSumNew", "_damageFinal", "_armdamage", "_legdamage"];
-
-_unit = _this select 0;
-_selection = _this select 1;
-_damage = _this select 2;
+params ["_unit", "_selection", "_damage", ["_disabled", false]];
 
 // Unit isn't local, give function to machine where it is.
 if !(local _unit) exitWith {
-    [_this, QUOTE(DFUNC(setHitPointDamage)), _unit] call EFUNC(common,execRemoteFnc);
+    ["setHitPointDamage", _unit, _this] call EFUNC(common,targetEvent);
 };
 
 // Check if overall damage adjustment is disabled
-if (count _this > 3 && {_this select 3}) exitWith {
+if (_disabled) exitWith {
     _unit setHitPointDamage [_selection, _damage];
 };
 
@@ -50,8 +47,7 @@ if !(_selection in _selections) exitWith {
     _unit setHitPointDamage [_selection, _damage];
 };
 
-GVAR(unit) = _unit;
-_damages = [_selections, {GVAR(unit) getHitPointDamage _this}] call EFUNC(common,map);
+_damages = _selections apply {_unit getHitPointDamage _x};
 
 _damageOld = damage _unit;
 _damageSumOld = 0;

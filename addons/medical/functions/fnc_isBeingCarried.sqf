@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_target);
+params ["_target"];
 
 private "_owner";
 

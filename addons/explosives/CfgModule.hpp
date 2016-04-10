@@ -6,6 +6,7 @@ class ACE_ModuleExplosive: ACE_Module {
     function = QUOTE(FUNC(module));
     scope = 2;
     isGlobal = 1;
+    isSingular = 1;
     icon = PATHTOF(UI\Icon_Module_Explosives_ca.paa);
     class Arguments {
         class RequireSpecialist {

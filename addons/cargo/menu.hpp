@@ -33,7 +33,7 @@ class GVAR(menu) {
             w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
@@ -67,7 +67,7 @@ class GVAR(menu) {
             colorSelectBackground[] = {0.3, 0.3, 0.3, 1.0};
             colorSelectBackground2[] = {0.3, 0.3, 0.3, 1.0};
         };
-        class btnUnload: ACE_gui_buttonBase {
+        class btnCancel: ACE_gui_buttonBase {
             text = "Cancel";
             idc = 11;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -93,7 +93,7 @@ class GVAR(menu) {
             periodOver = 1;
             action = QUOTE(closeDialog 0);
         };
-        class btnCancel: btnUnload {
+        class btnUnload: btnCancel {
             text = CSTRING(unloadObject);
             idc = 12;
             x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";

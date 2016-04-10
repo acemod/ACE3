@@ -7,8 +7,8 @@
  * Upon unstage, units will be moved to the position they were in upon staging
  *
  * Arguments:
- * 0: Unit to put into spectator stage <OBJECT> <OPTIONAL>
- * 1: Spectator stage <BOOL> <OPTIONAL>
+ * 0: Unit to put into spectator stage <OBJECT> (default: player)
+ * 1: Unit should be staged <BOOL> (default: true)
  *
  * Return Value:
  * None <NIL>
@@ -26,7 +26,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 // No change, no service (but allow spectators to be reset)
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
-if !(local _unit) exitwith {
+if !(local _unit) exitWith {
     [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
 };
 
@@ -65,4 +65,14 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     _unit setVariable [QGVAR(isStaged), _set, true];
 
     ["spectatorStaged",[_set]] call EFUNC(common,localEvent);
+};
+
+//BandAid for #2677 - if player in unitList weird before being staged, weird things can happen
+if ((player in GVAR(unitList)) || {ACE_player in GVAR(unitList)}) then {
+    [] call FUNC(updateUnits);  //update list now
+    if (!(isNull (findDisplay 12249))) then {//If display is open now, close it and restart
+        ACE_LOGWARNING("Player in unitList, call ace_spectator_fnc_stageSpectator before ace_spectator_fnc_setSpectator");
+        ["fixWeirdList", true] call FUNC(interrupt);
+        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call EFUNC(common,execNextFrame);
+    };
 };

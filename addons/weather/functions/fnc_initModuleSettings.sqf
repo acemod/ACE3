@@ -10,15 +10,15 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [module, [], true] call ace_weather_fnc_initModuleSettings
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 

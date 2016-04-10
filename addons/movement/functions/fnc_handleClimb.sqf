@@ -16,12 +16,10 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_anim", "_pos"];
+params ["_unit", "_anim"];
 
-_unit = _this select 0;
-_anim = _this select 1;
+private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
-_pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 [_unit, "AmovPknlMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");

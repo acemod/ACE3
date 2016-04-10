@@ -2,7 +2,6 @@
 
 ADDON = false;
 
-PREP(pickup);
-PREP(place);
+#include "XEH_PREP.hpp"
 
 ADDON = true;
