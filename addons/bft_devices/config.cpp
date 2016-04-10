@@ -25,12 +25,10 @@ class CfgPatches {
 #include "ACE_BFT.hpp"
 
 // Defines
-#include "UI\defines\GD300_defines.hpp"
 #include "UI\defines\JV5_defines.hpp"
 #include "UI\defines\TAD_defines.hpp"
 
 // Dialogs
-#include "UI\defines\GD300_dialog.hpp"
 #include "UI\defines\JV5_dialog.hpp"
 #include "UI\defines\TAD_dialog.hpp"
 /*

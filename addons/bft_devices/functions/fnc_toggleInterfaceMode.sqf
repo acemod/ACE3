@@ -27,7 +27,7 @@ _interfaceID = I_GET_ID;
 _mode = [_interfaceID,"mode"] call FUNC(getSettings);
 
 call {
-    if (_displayName == QGVAR(GD300_dlg)) exitWith {
+    if (_displayName == QEGVAR(bft_device_gd300,GD300_dlg)) exitWith {
         call {
             if (_mode != "BFT") exitWith {_mode = "BFT"};
             _mode = "MESSAGE";

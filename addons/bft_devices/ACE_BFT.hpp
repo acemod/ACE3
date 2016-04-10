@@ -5,21 +5,6 @@ class ACE_BFT {
      */
     class Devices {
         // Personal Devices
-        class GD300_b {
-            deviceSide = "WEST";
-            refreshRate[] = {5,2};
-            reportingModes[] = {"FBCB2"};
-            defaultInformation[] = {"Inf", 0, "", 0};
-            interface = "GD300";
-            icon = PATHTOF(UI\icon_bft_GD300.paa);
-        };
-        class GD300_o: GD300_b {
-            deviceSide = "EAST";
-        };
-        class GD300_i: GD300_b {
-            deviceSide = "IND";
-        };
-
         class MicroDAGR_b {
             deviceSide = "WEST";
             refreshRate[] = {5,2};
@@ -127,36 +112,9 @@ class ACE_BFT {
      * {"Driver",{"Cargo",{0}}}
      */
     class Interfaces {
-        class GD300 {
-            displayName = QGVAR(GD300_dsp);
-            dialogName = QGVAR(GD300_dlg);
-            backgroundDay = QUOTE(PATHTOF(UI\images\GD300_background_ca.paa));
-            backgroundNight = QUOTE(PATHTOF(UI\images\GD300_background_night_ca.paa));
-
-            class InterfaceSettings {
-                dlgIfPosition[] = {};
-                dspIfPosition = "false";
-                mode = "BFT";
-                showIconText = "true";
-                mapWorldPos[] = {};
-                mapScaleDsp = 0.4;
-                mapScaleDlg = 0.4;
-                class mapTypes {
-                    SAT = IDC_SCREEN;
-                    TOPO = IDC_SCREEN_TOPO;
-                };
-                mapType = "SAT";
-                drawSizeMultiplier = 1;
-                showMenu = "false";
-                mapTools = "true";
-                nightMode = 2;
-                brightness = 0.9;
-            };
-        };
-
         class MicroDAGR {
             displayName = QGVAR(GD300_dsp);
-            dialogName = QGVAR(GD300_dlg);
+            dialogName = QEGVAR(bft_device_gd300,GD300_dlg);
             backgroundDay = QUOTE(PATHTOF(UI\images\MicroDAGR_background_ca.paa));
             backgroundNight = QUOTE(PATHTOF(UI\images\MicroDAGR_background_night_ca.paa));
 

@@ -31,7 +31,7 @@ PARAMS_5(_display,_dikCode,_shiftKey,_ctrlKey,_altKey);
 _displayName = I_GET_NAME;
 _interfaceID = I_GET_ID;
 
-if (_dikCode == DIK_F1 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
+if (_dikCode == DIK_F1 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg)]}) exitWith {
     [_interfaceID,[["mode","BFT"]]] call FUNC(setSettings);
     true
 };
@@ -45,19 +45,19 @@ if (_dikCode == DIK_F3 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg)]}) 
     [_interfaceID,[["mode",_mode]]] call FUNC(setSettings);
     true
 };
-if (_dikCode == DIK_F4 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QGVAR(GD300_dlg)]}) exitWith {
+if (_dikCode == DIK_F4 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg)]}) exitWith {
     [_interfaceID,[["mode","MESSAGE"]]] call FUNC(setSettings);
     true
 };
-if (_dikCode == DIK_F5 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
+if (_dikCode == DIK_F5 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
     [_interfaceID] call FUNC(toggleMapTools);
     true
 };
-if (_dikCode == DIK_F6 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
+if (_dikCode == DIK_F6 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
     [_interfaceID] call FUNC(toggleMapType);
     true
 };
-if (_dikCode == DIK_F7 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QGVAR(GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
+if (_dikCode == DIK_F7 && {_displayName in [QEGVAR(bft_device_dk10,DK10_dlg),QEGVAR(bft_device_gd300,GD300_dlg),QGVAR(TAD_dlg),QGVAR(MicroDAGR_dlg),QGVAR(JV5_dlg)]}) exitWith {
     [_interfaceID] call FUNC(centerMapOnPlayerPosition);
     true
 };

@@ -169,7 +169,7 @@ if (isNil "_mode") then {
                     IDC_OSD_HOOK_DIR,
                     IDC_NOTIFICATION]
                 };
-                if (_displayName == QGVAR(GD300_dlg)) exitWith {
+                if (_displayName == QEGVAR(bft_device_gd300,GD300_dlg)) exitWith {
                     [IDC_GROUP_MENU,
                     IDC_GROUP_MESSAGE,
                     IDC_GROUP_COMPOSE,
