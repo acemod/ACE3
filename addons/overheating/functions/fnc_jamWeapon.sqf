@@ -43,7 +43,7 @@ if (_ammo > 0) then {
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
 
-["overheating_jammed", [_unit,_weapon]] call EFUNC(common,localEvent);
+["weaponJammed", [_unit,_weapon]] call EFUNC(common,localEvent);
 
 
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
