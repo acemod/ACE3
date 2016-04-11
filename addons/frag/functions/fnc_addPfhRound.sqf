@@ -55,12 +55,19 @@ if(_doFragTrack && alive _round) then {
     _spallTrack = [];
     _spallTrackID = [];
 
+    private _force = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force));
+    if (_force == 0) then {
+        private _forceNonInherit = configProperties [configFile >> "CfgAmmo" >> _type, QUOTE(configName _x == QUOTE(QGVAR(forceOnce))), false];
+        if (_forceNonInherit isEqualTo []) exitWith {};
+        _force = getNumber (_forceNonInherit select 0);
+    };
+    
     private["_args"];
     _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
     (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
     (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
     (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")),
-    (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force))),
+    (_force),
     (getNumber(configFile >> "CfgAmmo" >> _type >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))))
     ];
     TRACE_1("Initializing track", _round);
