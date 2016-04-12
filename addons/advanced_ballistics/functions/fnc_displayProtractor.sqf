@@ -47,7 +47,7 @@ GVAR(Protractor) = true;
     __ctrl1 ctrlSetTextColor [1, 1, 1, 1];
 
     __ctrl2 ctrlSetScale 1;
-    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY + 0.001 - 0.0012 * (-58 max (asin((ACE_player weaponDirection currentWeapon ACE_player) select 2)) min 58), 0.2, 0.2 * 4/3];
+    __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY - 0.001 - 0.1074 * (-0.86 max ((ACE_player weaponDirection currentWeapon ACE_player) select 2) min 0.86), 0.2, 0.2 * 4/3];
     __ctrl2 ctrlCommit 0;
     __ctrl2 ctrlSetText QUOTE(PATHTOF(UI\protractor_marker.paa));
     __ctrl2 ctrlSetTextColor [1, 1, 1, 1];
