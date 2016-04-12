@@ -1,9 +1,9 @@
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params [["_debugNonFrag", false, [false]]];
+params [["_debugMissing", true, [false]], ["_debugForce", false, [false]], ["_debugNonFrag", false, [false]]];
 
-diag_log text format ["Start [%1]", _this];
+diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
 
 private _allMagsConfigs = configProperties [configFile >> "CfgMagazines", "isClass _x", true];
 private _processedCfgAmmos = [];
@@ -25,15 +25,14 @@ private _processedCfgAmmos = [];
         private _force = getNumber (_ammoConfig >> QGVAR(force));
         private _fragPower = getNumber(_ammoConfig >> "indirecthit")*(sqrt((getNumber (_ammoConfig >> "indirectHitRange"))));
 
-        if (_force == 0) then {
-            private _forceNonInherit = configProperties [configFile >> "CfgAmmo" >> _ammo, QUOTE(configName _x == QUOTE(QGVAR(forceOnce))), false];
-            if (_forceNonInherit isEqualTo []) exitWith {};
-            _force = getNumber (_forceNonInherit select 0);
-        };
-
         private _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
 
         if (_shouldAdd) then {
+            if (_debugForce && {((getNumber(_ammoConfig >> "hit")) < 5) || {_fragPower < 10}}) then {
+                diag_log text format ["Ammo [%1] from Mag [%2] - Weak but will still frag!",_ammo,configName _x];
+                diag_log text format [" - _force=%1,_fragPower=%2",_force,_fragPower];
+            };
+        
             _warn = false;
 
             _fragTypes = getArray (_ammoConfig >> "ACE_frag_CLASSES");
@@ -47,7 +46,7 @@ private _processedCfgAmmos = [];
             _gC = getNumber(_ammoConfig >> "ACE_frag_GURNEY_C");
             if(_gC == 0) then { _warn = true;};
 
-            if(_warn) then {
+            if(_debugMissing && _warn) then {
                 diag_log text format ["Ammo [%1] from Mag [%2] MISSING frag configs:",_ammo,configName _x];
                 diag_log text format [" - _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5",_c,_m,_k,_gC,_fragTypes];
             };
@@ -60,4 +59,4 @@ private _processedCfgAmmos = [];
     };
 } forEach _allMagsConfigs;
 
-diag_log text format ["End [%1-%2]",count _allMagsConfigs, count _processedCfgAmmos];
+diag_log text format ["~~~~~~~~~~~~~End [%1-%2]~~~~~~~~~~~~~", count _allMagsConfigs, count _processedCfgAmmos];

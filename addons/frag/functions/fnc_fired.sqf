@@ -44,12 +44,6 @@ if (isNil "_shouldAdd") then {
     private _force = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(force));
     private _fragPower = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))));
 
-    if (_force == 0) then {
-        private _forceNonInherit = configProperties [configFile >> "CfgAmmo" >> _ammo, QUOTE(configName _x == QUOTE(QGVAR(forceOnce))), false];
-        if (_forceNonInherit isEqualTo []) exitWith {};
-        _force = getNumber (_forceNonInherit select 0);
-    };
-
     _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
     TRACE_6("SettingCache[willFrag?]",_skip,_explosive,_indirectRange,_force,_fragPower,_shouldAdd);
     GVAR(cacheRoundsTypesToTrack) setVariable [_ammo, _shouldAdd];
