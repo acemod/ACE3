@@ -24,11 +24,11 @@ _returnValue = switch (_showType) do {
     case (DISPLAY_MODE_CLOSED): { true }; //Can always close
     case (DISPLAY_MODE_HIDDEN): { true }; //Can always hide
     case (DISPLAY_MODE_DIALOG): {
-         ("ACE_microDAGR" in (items ACE_player)) && {[ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)}
+         ("ACE_microDAGR" in (items ACE_player)) && {[ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)}
     };
     case (DISPLAY_MODE_DISPLAY): {
         //Can't have minimap up while zoomed in
-        (cameraview != "GUNNER") && {"ACE_microDAGR" in (items ACE_player)} && {[ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)}
+        (cameraview != "GUNNER") && {"ACE_microDAGR" in (items ACE_player)} && {[ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call CFUNC(canInteractWith)}
     };
     default { false };
 };

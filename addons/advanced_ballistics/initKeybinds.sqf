@@ -1,7 +1,7 @@
 ["ACE3 Equipment", QGVAR(ProtractorKey), localize LSTRING(ProtractorKey),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, []] call CFUNC(canInteractWith)) exitWith {false};
 
     // Statement
     [] call FUNC(displayProtractor);

@@ -74,7 +74,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 class ACE_CopyMap {
                     displayName = CSTRING(CopyMap);
-                    condition = QUOTE(([_target] call EFUNC(common,isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
+                    condition = QUOTE(([_target] call CFUNC(isPlayer) && {'ItemMap' in assigneditems _player} && {'ACE_MapTools' in items _player} && {'ItemMap' in assignedItems _target}));
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(copyMapStart));
                     showDisabled = 0;
                     priority = -1;

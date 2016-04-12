@@ -67,7 +67,7 @@ if (isNull _holder) exitWith {
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     [{
         _this call FUNC(disarmDropItems);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CFUNC(execNextFrame);
 };
 _holder setVariable [QGVAR(holderInUse), true];
 

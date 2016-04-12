@@ -37,7 +37,7 @@ if (_ammo > 0) then {
     [{
         params ["_unit", "_weapon", "_ammo"];
         _unit setAmmo [_weapon, _ammo];
-    }, [_unit, _weapon, _ammo]] call EFUNC(common,execNextFrame);
+    }, [_unit, _weapon, _ammo]] call CFUNC(execNextFrame);
 };
 
 // only display the hint once, after you try to shoot an already jammed weapon
@@ -58,12 +58,12 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
         playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _this select 0];
 
         if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {(_this select 1) ammo currentWeapon (_this select 1) > 0} && {GVAR(DisplayTextOnJam)}) then {
-            [localize LSTRING(WeaponJammed)] call EFUNC(common,displayTextStructured);
+            [localize LSTRING(WeaponJammed)] call CFUNC(displayTextStructured);
             GVAR(knowAboutJam) = true;
         };
     };
 
-    private _id = [_unit, "DefaultAction", _condition, _statement] call EFUNC(common,addActionEventHandler);
+    private _id = [_unit, "DefaultAction", _condition, _statement] call CFUNC(addActionEventHandler);
 
     _unit setVariable [QGVAR(JammingActionID), _id];
 };

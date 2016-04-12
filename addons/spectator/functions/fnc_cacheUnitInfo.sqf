@@ -27,7 +27,7 @@ if (isNil { GETVAR((group _unit),GVAR(gColor),nil) }) then {
 
 // Unit info should be updated each time
 _icon = getText (configFile >> "CfgVehicles" >> typeOf _unit >> "Icon");
-_name = [_unit,false] call EFUNC(common,getName);
+_name = [_unit,false] call CFUNC(getName);
 
 // Handle CfgVehicleIcons
 if (isText (configFile >> "CfgVehicleIcons" >> _icon)) then {

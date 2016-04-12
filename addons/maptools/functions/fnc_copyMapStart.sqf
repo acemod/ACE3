@@ -19,4 +19,4 @@
 
 params ["_player", "_target"];
 
-["drawing_requestMarkers", _target, [_player]] call EFUNC(common,targetEvent);
+["drawing_requestMarkers", _target, [_player]] call CFUNC(targetEvent);

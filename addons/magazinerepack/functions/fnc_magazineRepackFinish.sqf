@@ -27,7 +27,7 @@ _args params ["_magazineClassname", "_lastAmmoCount"];
 _fullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 //Don't show anything if player can't interact:
-if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
+if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call CFUNC(canInteractWith))) exitWith {};
 
 _structuredOutputText = if (_errorCode == 0) then {
     format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackComplete))];
@@ -38,7 +38,7 @@ _structuredOutputText = if (_errorCode == 0) then {
 _picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
 _structuredOutputText = _structuredOutputText + format ["<img align='center' size='1.8' color='#ffffff' image='%1'/> <br/>", _picture];
 
-//EFUNC(common,displayTextStructured) doesn't have room for this, and I don't think it's nessacary, can fix in the future if wanted:
+//CFUNC(displayTextStructured) doesn't have room for this, and I don't think it's nessacary, can fix in the future if wanted:
 
 // _fullMags = 0;
 // _partialMags = 0;
@@ -54,4 +54,4 @@ _structuredOutputText = _structuredOutputText + format ["<img align='center' siz
 // } forEach (magazinesAmmoFull ACE_player);
 // _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize LSTRING(RepackedMagazinesCount)) + "</t>"), _fullMags, _partialMags];
 
-[parseText _structuredOutputText, 2] call EFUNC(common,displayTextStructured);
+[parseText _structuredOutputText, 2] call CFUNC(displayTextStructured);

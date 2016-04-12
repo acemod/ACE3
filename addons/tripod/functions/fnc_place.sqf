@@ -21,7 +21,7 @@ params ["_unit", "_tripodClass"];
 _unit removeItem _tripodClass;
 
 if (stance _unit == "STAND") then {
-    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call EFUNC(common,doAnimation);
+    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call CFUNC(doAnimation);
 };
 
 [{
@@ -53,4 +53,4 @@ if (stance _unit == "STAND") then {
         };
     }, 0, [_tripod, _direction, _position]] call CBA_fnc_addPerFrameHandler;
 
-}, [_unit], 1] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call CFUNC(waitAndExecute);

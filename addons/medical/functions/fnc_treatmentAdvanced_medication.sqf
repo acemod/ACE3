@@ -22,13 +22,13 @@ TRACE_5("params",_caller,_target,_selectionName,_className,_items);
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
-["treatmentAdvanced_medicationLocal", [_target], [_target, _className, _part]] call EFUNC(common,targetEvent);
+["treatmentAdvanced_medicationLocal", [_target], [_target, _className, _part]] call CFUNC(targetEvent);
 
 {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
-        [_target, "activity", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
-        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller, false, true] call EFUNC(common,getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity", LSTRING(Activity_usedItem), [[_caller, false, true] call CFUNC(getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
+        [_target, "activity_view", LSTRING(Activity_usedItem), [[_caller, false, true] call CFUNC(getName), getText (configFile >> "CfgWeapons" >> _x >> "displayName")]] call FUNC(addToLog);
     };
 } forEach _items;
 

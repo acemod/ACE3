@@ -104,7 +104,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(Pickup);
                     condition = "true";
-                    statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
+                    statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call CFUNC(addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                     priority = 5;

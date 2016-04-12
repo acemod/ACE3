@@ -31,7 +31,7 @@ _editText = ctrlText (_display displayCtrl IDC_MODEMARK_CORDSEDIT);
 switch (_keypadButton) do {
 case ("ok"): {
         if ((count GVAR(newWaypointPosition)) == 0) then {
-            _actualPos = [_editText, true] call EFUNC(common,getMapPosFromGrid);
+            _actualPos = [_editText, true] call CFUNC(getMapPosFromGrid);
             _actualPos set [2, (getTerrainHeightASL _actualPos)];
             GVAR(newWaypointPosition) = _actualPos;
             [APP_MODE_MARK] call FUNC(saveCurrentAndSetNewMode);

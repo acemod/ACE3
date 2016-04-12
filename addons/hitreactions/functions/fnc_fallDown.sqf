@@ -49,7 +49,7 @@ if (_vehicle isKindOf "StaticWeapon") exitWith {
 if (_vehicle != _unit) exitWith {};
 
 // this checks most things, so it doesn't mess with being inside vehicles or while dragging etc.
-if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
+if !([_unit, _vehicle] call CFUNC(canInteractWith)) exitWith {};
 
 // handle ladders
 if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "ACE_isLadder") == 1) exitWith {
@@ -71,6 +71,6 @@ private _anim = _unit call FUNC(getRandomAnimation);
 if (_anim == "") exitWith {};
 
 // don't mess with transitions. don't fall then.
-if !([_unit] call EFUNC(common,inTransitionAnim)) then {
-    [_unit, _anim, 2] call EFUNC(common,doAnimation);
+if !([_unit] call CFUNC(inTransitionAnim)) then {
+    [_unit, _anim, 2] call CFUNC(doAnimation);
 };

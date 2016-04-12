@@ -19,8 +19,8 @@ if !(isServer) exitWith {};
 
 params ["_logic"];
 
-[_logic, QGVAR(RequireSpecialist), "RequireSpecialist"] call EFUNC(Common,readSettingFromModule);
-[_logic, QGVAR(PunishNonSpecialists),"PunishNonSpecialists"] call EFUNC(Common,readSettingFromModule);
-[_logic, QGVAR(ExplodeOnDefuse),"ExplodeOnDefuse"] call EFUNC(Common,readSettingFromModule);
+[_logic, QGVAR(RequireSpecialist), "RequireSpecialist"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(PunishNonSpecialists),"PunishNonSpecialists"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(ExplodeOnDefuse),"ExplodeOnDefuse"] call CFUNC(readSettingFromModule);
 
 ACE_LOGINFO("Explosive Module Initialized.");

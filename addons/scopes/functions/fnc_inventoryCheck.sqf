@@ -24,7 +24,7 @@ if (isNil "_adjustment") then {
     // [Windage, Elevation, Zero]
     _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     ACE_player setVariable [QGVAR(Adjustment), _adjustment];
-    [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+    [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call CFUNC(setVariablePublic);
 };
 
 if (isNil QGVAR(Optics)) then {
@@ -37,7 +37,7 @@ _newOptics = [_player] call FUNC(getOptics);
         // The optic for this weapon changed, set adjustment to zero
         if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
             _adjustment set [_forEachIndex, [0, 0, 0]];
-            [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+            [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call CFUNC(setVariablePublic);
         };
     };
 } forEach GVAR(Optics);

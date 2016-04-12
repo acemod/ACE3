@@ -15,7 +15,7 @@
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call CFUNC(getTurretConfigPath);
 
 if (isNil "_distance") then {
     _distance = [
@@ -29,7 +29,7 @@ if (isNil "_distance") then {
 private _weapon = _vehicle currentWeaponTurret _turret;
 private _weaponDirection = _vehicle weaponDirection _weapon; // @todo doesn't work for sub turrets
 
-if (_turret isEqualTo ([_vehicle] call EFUNC(common,getTurretCommander))) then {
+if (_turret isEqualTo ([_vehicle] call CFUNC(getTurretCommander))) then {
     _weaponDirection = eyeDirection _vehicle;
 };
 
@@ -107,7 +107,7 @@ if (_viewDiff != 0) then {
     _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
 };
 
-[_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],   _FCSAzimuth] call EFUNC(common,setVariablePublic);
+[_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],   _FCSAzimuth] call CFUNC(setVariablePublic);
 
 // CALCULATE SOLUTION
 [_vehicle,_turret,_distance,_angleTarget] call FUNC(calculateSolution);
@@ -117,5 +117,5 @@ if (_playSound) then {
 };
 
 if (_showHint) then {
-    [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
+    [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call CFUNC(displayTextStructured);
 };

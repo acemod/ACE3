@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-!([_unit] call EFUNC(common,isPlayer)
+!([_unit] call CFUNC(isPlayer)
 || {_unit in playableUnits}
 || {vehicle _unit != _unit}
 || {_unit getVariable [QGVAR(IsPlayerUnit), false]}

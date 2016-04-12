@@ -19,7 +19,7 @@ private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers", "_nearbyMe
 
 if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([ACE_player, ACE_player, ["isNotInside"]] call CFUNC(canInteractWith)) exitWith {false};
 //make sure player is dismounted or in a static weapon:
 if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) exitWith {false};
 //Check camera view (not in GUNNER)
@@ -46,7 +46,7 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
             {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
             {!(lineIntersects [(eyePos _x), _playerEyePos, ACE_player, _x])} &&
-            {[_x] call EFUNC(common,isPlayer)}) then {
+            {[_x] call CFUNC(isPlayer)}) then {
 
         _sendFingerToPlayers pushBack _x;
     };
@@ -55,7 +55,7 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
-[QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call EFUNC(common,targetEvent);
+[QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call CFUNC(targetEvent);
 
 ACE_player playActionNow "GestureGo";
 

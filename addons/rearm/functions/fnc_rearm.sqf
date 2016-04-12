@@ -72,4 +72,4 @@ if (_magazineDisplayName == "") then {
     format [localize LSTRING(RearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName"), _magazineDisplayName],
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

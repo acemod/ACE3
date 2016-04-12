@@ -15,6 +15,6 @@
 
 params ["_logic"];
 
-[_logic, QGVAR(allowHandcuffOwnSide), "allowHandcuffOwnSide"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(allowSurrender), "allowSurrender"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(requireSurrender), "requireSurrender"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(allowHandcuffOwnSide), "allowHandcuffOwnSide"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(allowSurrender), "allowSurrender"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(requireSurrender), "requireSurrender"] call CFUNC(readSettingFromModule);

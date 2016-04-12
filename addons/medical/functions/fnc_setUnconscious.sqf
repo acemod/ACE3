@@ -22,8 +22,8 @@
 #define DEFAULT_DELAY (round(random(10)+5))
 
 // only run this after the settings are initialized
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
+if !(CGVAR(settingsInitFinished)) exitWith {
+    CGVAR(runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
 private ["_animState", "_originalPos", "_startingTime", "_isDead"];
@@ -36,10 +36,10 @@ if !(_set) exitWith {
     _unit setVariable ["ACE_isUnconscious", false, true];
 };
 
-if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
+if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call CFUNC(isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
+    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call CFUNC(targetEvent);
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
@@ -54,7 +54,7 @@ if (_unit == ACE_player) then {
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
 _isDead = false;
-if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
+if (!([_unit, GVAR(remoteControlledAI)] call CFUNC(isPlayer)) && !_force) then {
     _enableUncon = _unit getVariable [QGVAR(enableUnconsciousnessAI), GVAR(enableUnconsciousnessAI)];
     if (_enableUncon == 0 or {_enableUncon == 1 and (random 1) < 0.5}) then {
         [_unit, true] call FUNC(setDead);
@@ -66,7 +66,7 @@ if (_isDead) exitWith {};
 // If a unit has the launcher out, it will sometimes start selecting the primairy weapon while unconscious,
 // therefor we force it to select the primairy weapon before going unconscious
 if ((vehicle _unit) isKindOf "StaticWeapon") then {
-    [_unit] call EFUNC(common,unloadPerson);
+    [_unit] call CFUNC(unloadPerson);
 };
 if (animationState _unit in ["ladderriflestatic","laddercivilstatic"]) then {
     _unit action ["ladderOff", (nearestBuilding _unit)];
@@ -87,39 +87,39 @@ if (vehicle _unit != _unit) then {
 _originalPos = unitPos _unit;
 
 _unit setUnitPos "DOWN";
-[_unit, true] call EFUNC(common,disableAI);
+[_unit, true] call CFUNC(disableAI);
 
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 //Unconscious units shouldn't be put in another group #527:
 if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-    [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+    [_unit, true, "ACE_isUnconscious", side group _unit] call CFUNC(switchToGroupSide);
 };
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 if (GVAR(delayUnconCaptive) == 0) then {
-    [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(unconscious), true] call CFUNC(statusEffect_set);
 } else {
     [{
         params ["_unit"];
         if (_unit getVariable ["ACE_isUnconscious", false]) then {
-            [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+            [_unit, "setCaptive", QGVAR(unconscious), true] call CFUNC(statusEffect_set);
         };
-    },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
+    },[_unit], GVAR(delayUnconCaptive)] call CFUNC(waitAndExecute);
 };
 
-_anim = [_unit] call EFUNC(common,getDeathAnim);
-[_unit, _anim, 1, true] call EFUNC(common,doAnimation);
+_anim = [_unit] call CFUNC(getDeathAnim);
+[_unit, _anim, 1, true] call CFUNC(doAnimation);
 [{
     params ["_unit", "_anim"];
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
-        [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
+        [_unit, _anim, 2, true] call CFUNC(doAnimation);
     };
-}, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
+}, [_unit, _anim], 0.5, 0] call CFUNC(waitAndExecute);
 
 _startingTime = ACE_time;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
 // unconscious can't talk
-[_unit, "isUnconscious"] call EFUNC(common,muteUnit);
+[_unit, "isUnconscious"] call CFUNC(muteUnit);
 
-["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
+["medical_onUnconscious", [_unit, true]] call CFUNC(globalEvent);

@@ -33,14 +33,14 @@ GVAR(outputPFH) = [{
     private["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
 
     // Abort Condition
-    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
+    if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call CFUNC(hasItem)) exitWith {
         GVAR(outputPFH) = -1;
         135471 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
     // GRID
-    _gridArray = [(getPos ACE_player), false] call EFUNC(common,getMapGridFromPos);
+    _gridArray = [(getPos ACE_player), false] call CFUNC(getMapGridFromPos);
     _gridArray params ["_gridArrayX","_gridArrayY"];
     _dagrGrid = format ["%1 %2", (_gridArrayX select [0,4]), (_gridArrayY select [0,4])];
 
@@ -65,8 +65,8 @@ GVAR(outputPFH) = [{
     _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
-    _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
-    _MYpos = [_dagrGrid, true] call EFUNC(common,getMapPosFromGrid);
+    _WPpos = [_dagrGrid2, true] call CFUNC(getMapPosFromGrid);
+    _MYpos = [_dagrGrid, true] call CFUNC(getMapPosFromGrid);
     _distance = _MYpos distance _WPpos;
     _distance = floor (_distance * 10) / 10;
     _dagrDistance = str _distance + "m";

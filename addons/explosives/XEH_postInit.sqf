@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 //Event for setting explosive placement angle/pitch:
-[QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
+[QGVAR(place), {_this call FUNC(setPosition)}] call CFUNC(addEventHandler);
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
@@ -26,7 +26,7 @@ if (isServer) then {
         if (!_isUnconscious) exitWith {};
         TRACE_1("Knocked Out, Doing Deadman", _unit);
         [_unit] call FUNC(onIncapacitated);
-    }] call EFUNC(common,addEventHandler);
+    }] call CFUNC(addEventHandler);
 };
 
 if (!hasInterface) exitWith {};
@@ -48,8 +48,8 @@ if (isServer) then {
             (!isNull _explosive && {alive _explosive})
         };
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
-    }] call EFUNC(common,addEventHandler);
+        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call CFUNC(targetEvent);
+    }] call CFUNC(addEventHandler);
 } else {
     ["serverSendsOrientations", {
         params ["_explosivesOrientations"];
@@ -63,12 +63,12 @@ if (isServer) then {
         deleteVehicle GVAR(localLogic);
         GVAR(localLogic) = nil;
         deleteGroup _group;
-    }] call EFUNC(common,addEventHandler);
+    }] call CFUNC(addEventHandler);
 
     //  Create a logic to get the client ID
     GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
-    ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
+    ["clientRequestsOrientations", [GVAR(localLogic)]] call CFUNC(serverEvent);
 };
 
 ["interactMenuOpened", {
@@ -80,4 +80,4 @@ if (isServer) then {
     //Show defuse actions on CfgAmmos (allMines):
     _this call FUNC(interactEH);
 
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

@@ -3,7 +3,7 @@
  * Change the blending when the player fires??. Called from the unified fired EH only for the local player and his vehicle.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * Nothing
@@ -66,7 +66,7 @@ if (call _fnc_isTracer) then {
     _visibleFireTime = _visibleFireTime + 2;
 };
 
-_darkness = 1 - (call EFUNC(common,ambientBrightness));
+_darkness = 1 - (call CFUNC(ambientBrightness));
 
 _visibleFire = _darkness * _visibleFireCoef * _visibleFire * _nvgBrightnessCoef / 10 min 1;
 _visibleFireTime = _darkness * _visibleFireTimeCoef * _visibleFireTime * _nvgBrightnessCoef / 10 min 0.5;

@@ -12,6 +12,12 @@
 #define QFUNC(var1) QUOTE(DFUNC(var1))
 #define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
 
+#define QCFUNC(var) QEFUNC(COREMODULE,var)
+#define CFUNC(var) EFUNC(COREMODULE,var)
+
+#define CGVAR(var) EGVAR(COREMODULE,var)
+#define QCGVAR(var) QEGVAR(COREMODULE,var)
+
 #define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
 
 #define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
@@ -89,17 +95,17 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))
 
-#define HASH_CREATE                    ([] call EFUNC(common,hashCreate))
-#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
-#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
-#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
-#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
+#define HASH_CREATE                    ([] call CFUNC(hashCreate))
+#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call CFUNC(hashSet))
+#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call CFUNC(hashGet))
+#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call CFUNC(hashRem))
+#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call CFUNC(hashHasKey))
 
-#define HASHLIST_CREATELIST(keys)                ([keys] call EFUNC(common,hashListCreateList))
-#define HASHLIST_CREATEHASH(hashList)            ([hashList] call EFUNC(common,hashListCreateHash))
-#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
-#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
-#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
+#define HASHLIST_CREATELIST(keys)                ([keys] call CFUNC(hashListCreateList))
+#define HASHLIST_CREATEHASH(hashList)            ([hashList] call CFUNC(hashListCreateHash))
+#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call CFUNC(hashListSelect))
+#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call CFUNC(hashListSet))
+#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call CFUNC(hashListPush))
 
 // Time functions for accuracy per frame
 #define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))

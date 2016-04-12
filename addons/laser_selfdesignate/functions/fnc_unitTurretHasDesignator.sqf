@@ -16,8 +16,8 @@ params ["_unit"];
 
 // Get the player turret path
 private ["_turret","_config","_turretConfig"];
-_turret = [_unit] call EFUNC(common,getTurretIndex);
+_turret = [_unit] call CFUNC(getTurretIndex);
 _config = configFile >> "CfgVehicles" >> typeOf vehicle _unit;
-_turretConfig = [_config, _turret] call EFUNC(common,getTurretConfigPath);
+_turretConfig = [_config, _turret] call CFUNC(getTurretConfigPath);
 
 getNumber (_turretConfig >> QGVAR(Enabled)) > 0

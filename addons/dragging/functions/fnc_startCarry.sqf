@@ -23,7 +23,7 @@ TRACE_2("params",_unit,_target);
 private _weight = [_target] call FUNC(getWeight);
 
 if (_weight > missionNamespace getVariable ["ACE_maxWeightCarry", 1E11]) exitWith {
-    [localize LSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(UnableToDrag)] call CFUNC(displayTextStructured);
 };
 
 private _timer = ACE_time + 5;
@@ -43,8 +43,8 @@ if (_target isKindOf "CAManBase") then {
     _target setDir (getDir _unit + 180);
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit));
 
-    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
-    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon", 2, true] call CFUNC(doAnimation);
+    [_target, "AinjPfalMstpSnonWrflDnon_carried_Up", 2, true] call CFUNC(doAnimation);
 
     _timer = ACE_time + 15;
 
@@ -52,14 +52,14 @@ if (_target isKindOf "CAManBase") then {
 
     // select no weapon and stop sprinting
     _unit action ["SwitchWeapon", _unit, _unit, 99];
-    [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
+    [_unit, "AmovPercMstpSnonWnonDnon", 0] call CFUNC(doAnimation);
 
-    [_unit, "forceWalk", "ACE_dragging", true] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", "ACE_dragging", true] call CFUNC(statusEffect_set);
 
 };
 
 // prevent multiple players from accessing the same object
-[_unit, _target, true] call EFUNC(common,claim);
+[_unit, _target, true] call CFUNC(claim);
 
 
 // prevents draging and carrying at the same time

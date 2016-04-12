@@ -24,7 +24,7 @@ private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","
 //If function has been called with an optional classname hten add that magazine to the static weapon. Otherwise add the compatible magazine
 if(_magazineClassOptional != "") then {
     _unit removeMagazine _magazineClassOptional;
-    [QGVAR(addMagazine), [_static, _magazineClassOptional]] call EFUNC(common,globalEvent);
+    [QGVAR(addMagazine), [_static, _magazineClassOptional]] call CFUNC(globalEvent);
 } else {
     //Get weapon & magazine information of static weapon
     _weapon = (_static weaponsTurret [0]) select 0;
@@ -49,7 +49,7 @@ if(_magazineClassOptional != "") then {
     } forEach _magazines;
     //If the static weapon already has an empty magazine then remove it
     if (_count == 0) then {
-        [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call EFUNC(common,globalEvent);
+        [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call CFUNC(globalEvent);
     };
     //Find out the ammo count of the compatible magazine found
     if (_magazineClassDetails != "") then{
@@ -60,6 +60,6 @@ if(_magazineClassOptional != "") then {
     };
 
     _unit removeMagazine _magazineClass;
-    [QGVAR(addMagazine), [_static, _magazineClass]] call EFUNC(common,globalEvent);
-    [QGVAR(setAmmo), _static, [_static, _magazineClass,_roundsLeft]] call EFUNC(common,targetEvent);
+    [QGVAR(addMagazine), [_static, _magazineClass]] call CFUNC(globalEvent);
+    [QGVAR(setAmmo), _static, [_static, _magazineClass,_roundsLeft]] call CFUNC(targetEvent);
 };

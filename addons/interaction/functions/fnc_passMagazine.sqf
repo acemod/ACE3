@@ -49,6 +49,6 @@ _player playActionNow "PutDown";
 
 _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 
-_playerName = [_player] call EFUNC(common,getName);
+_playerName = [_player] call CFUNC(getName);
 _magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
-["displayTextStructured", [_target], [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target]] call EFUNC(common,targetEvent);
+["displayTextStructured", [_target], [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target]] call CFUNC(targetEvent);

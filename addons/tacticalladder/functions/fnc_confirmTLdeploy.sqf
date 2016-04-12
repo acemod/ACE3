@@ -19,7 +19,7 @@
 params ["_unit", "_ladder"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Ladder", false] call CFUNC(statusEffect_set);
 
 private ["_pos1", "_pos2"];
 
@@ -33,7 +33,7 @@ detach _ladder;
 // remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call CFUNC(removeActionEventHandler);
 
 GVAR(ladder) = objNull;
 

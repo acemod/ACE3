@@ -82,14 +82,14 @@ private _ammoBarsStructuredText = if (_showNumber) then {
     for "_a" from 1 to _count do {
         _string = _string + "|";
     };
-    private _text = [_string, _color] call EFUNC(common,stringToColoredText);
+    private _text = [_string, _color] call CFUNC(stringToColoredText);
 
     _string = "";
     for "_a" from (_count + 1) to (_maxRounds min COUNT_BARS) do {
         _string = _string + "|";
     };
 
-    composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
+    composeText [_text, [_string, [0.5, 0.5, 0.5]] call CFUNC(stringToColoredText)];
 };
 
 
@@ -98,8 +98,8 @@ if (_target isKindOf "StaticWeapon") then {
     private _loadedName = getText (configFile >> "CfgMagazines" >> _magazine >> "displaynameshort");
     _loadedName = parseText format ["<t align='center' >%1</t>", _loadedName];
     private _text = composeText [_loadedName, linebreak, _ammoBarsStructuredText];
-    [_text] call EFUNC(common,displayTextStructured);
+    [_text] call CFUNC(displayTextStructured);
 } else {
     private _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
-    [_ammoBarsStructuredText, _picture] call EFUNC(common,displayTextPicture);
+    [_ammoBarsStructuredText, _picture] call CFUNC(displayTextPicture);
 };

@@ -47,7 +47,7 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
             };
             _fncCondition = {
                 params ["", "_player", "_attachedFence"];
-                if (!([_player, _attachedFence, []] call EFUNC(common,canInteractWith))) exitWith {false};
+                if (!([_player, _attachedFence, []] call CFUNC(canInteractWith))) exitWith {false};
                 ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))})
             };
 

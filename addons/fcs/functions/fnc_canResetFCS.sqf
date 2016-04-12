@@ -14,4 +14,4 @@
 
 params ["_unit"];
 
-count ((vehicle _unit) getVariable [format ["%1_%2", QGVAR(Magazines), [_unit] call EFUNC(common,getTurretIndex)], []]) > 1 // return
+count ((vehicle _unit) getVariable [format ["%1_%2", QGVAR(Magazines), [_unit] call CFUNC(getTurretIndex)], []]) > 1 // return

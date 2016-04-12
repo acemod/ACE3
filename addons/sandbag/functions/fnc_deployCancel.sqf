@@ -21,7 +21,7 @@ params ["_unit", "_key"];
 if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Sandbag", false] call CFUNC(statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(sandBag);
@@ -33,7 +33,7 @@ GVAR(deployPFH) = -1;
 // remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call CFUNC(removeActionEventHandler);
+[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call CFUNC(removeActionEventHandler);
 
 _unit setVariable [QGVAR(isDeploying), false, true];

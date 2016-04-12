@@ -4,7 +4,7 @@
  * From TMR: Small Arms
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * Nothing

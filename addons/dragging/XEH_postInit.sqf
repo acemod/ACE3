@@ -16,15 +16,15 @@ if (isNil "ACE_maxWeightCarry") then {
     ACE_maxWeightCarry = 600;
 };
 
-["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call EFUNC(common,addCanInteractWithCondition);
-["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
+["isNotDragging", {!((_this select 0) getVariable [QGVAR(isDragging), false])}] call CFUNC(addCanInteractWithCondition);
+["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call CFUNC(addCanInteractWithCondition);
 
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["playerWeaponChanged", {_this call FUNC(handlePlayerWeaponChanged)}] call EFUNC(common,addEventhandler);
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CFUNC(addEventhandler);
+["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CFUNC(addEventhandler);
+["playerWeaponChanged", {_this call FUNC(handlePlayerWeaponChanged)}] call CFUNC(addEventhandler);
 
 // handle waking up dragged unit and falling unconscious while dragging
-["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
+["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CFUNC(addEventhandler);
 
 //@todo Captivity?

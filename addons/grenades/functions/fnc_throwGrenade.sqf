@@ -3,7 +3,7 @@
  * Adjust the grenades throwing direction and speed to the selected throwing mode. Called from the unified fired EH only for CAManBase
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * None
@@ -32,7 +32,7 @@ if (local _unit) then {
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call EFUNC(common,waitAndExecute);
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CFUNC(waitAndExecute);
     };
 };
 
@@ -42,7 +42,7 @@ if (getNumber (_config >> QGVAR(flare)) == 1) then {
     private _color = getArray (_config >> QGVAR(color));
     private _intensity = _color deleteAt 3;
 
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call CFUNC(waitAndExecute);
 };
 
 // handle throw modes

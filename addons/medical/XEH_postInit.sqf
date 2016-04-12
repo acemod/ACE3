@@ -6,32 +6,32 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["medical_propagateWound", FUNC(onPropagateWound)] call EFUNC(common,addEventHandler);
-["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
-["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
+["medical_propagateWound", FUNC(onPropagateWound)] call CFUNC(addEventHandler);
+["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call CFUNC(addEventHandler);
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call CFUNC(addEventHandler);
 
 //Treatment EventHandlers:
-["actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call EFUNC(common,addEventHandler);
-["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
-["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
-["addToMedicalLog", DFUNC(addToLog)] call EFUNC(common,addEventHandler);
-["addToTriageCard", DFUNC(addToTriageCard)] call EFUNC(common,addEventHandler);
-["setDead", DFUNC(setDead)] call EFUNC(common,addEventHandler);
-["setHitPointDamage", DFUNC(setHitPointDamage)] call EFUNC(common,addEventHandler);
-["setUnconscious", DFUNC(setUnconscious)] call EFUNC(common,addEventHandler);
-["treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call EFUNC(common,addEventHandler);
-["treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call EFUNC(common,addEventHandler);
-["treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call EFUNC(common,addEventHandler);
-["treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
-["treatmentBasic_bandageLocal", DFUNC(treatmentBasic_bandageLocal)] call EFUNC(common,addEventHandler);
-["treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call EFUNC(common,addEventHandler);
-["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call EFUNC(common,addEventHandler);
-["treatmentIVLocal", DFUNC(treatmentIVLocal)] call EFUNC(common,addEventHandler);
-["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call EFUNC(common,addEventHandler);
-["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
+["actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call CFUNC(addEventHandler);
+["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call CFUNC(addEventHandler);
+["addToInjuredCollection", DFUNC(addToInjuredCollection)] call CFUNC(addEventHandler);
+["addToMedicalLog", DFUNC(addToLog)] call CFUNC(addEventHandler);
+["addToTriageCard", DFUNC(addToTriageCard)] call CFUNC(addEventHandler);
+["setDead", DFUNC(setDead)] call CFUNC(addEventHandler);
+["setHitPointDamage", DFUNC(setHitPointDamage)] call CFUNC(addEventHandler);
+["setUnconscious", DFUNC(setUnconscious)] call CFUNC(addEventHandler);
+["treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call CFUNC(addEventHandler);
+["treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call CFUNC(addEventHandler);
+["treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call CFUNC(addEventHandler);
+["treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call CFUNC(addEventHandler);
+["treatmentBasic_bandageLocal", DFUNC(treatmentBasic_bandageLocal)] call CFUNC(addEventHandler);
+["treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call CFUNC(addEventHandler);
+["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call CFUNC(addEventHandler);
+["treatmentIVLocal", DFUNC(treatmentIVLocal)] call CFUNC(addEventHandler);
+["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call CFUNC(addEventHandler);
+["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call CFUNC(addEventHandler);
 
 //Handle Deleting Bodies on Server:
-if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
+if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call CFUNC(addEventHandler);}; 
 
 ["medical_onUnconscious", {
     params ["_unit", "_status"];
@@ -52,7 +52,7 @@ if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(commo
             if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 
 // Initialize all effects
@@ -121,7 +121,7 @@ GVAR(effectTimeBlood) = ACE_time;
         GVAR(effectBloodVolumeCC) ppEffectEnable false;
         GVAR(effectPainCA) ppEffectEnable false;
         GVAR(effectPainCC) ppEffectEnable false;
-        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
+        ["unconscious", false] call CFUNC(setDisableUserInputStatus);
     };
 
     // Unconsciousness effect
@@ -129,13 +129,13 @@ GVAR(effectTimeBlood) = ACE_time;
         GVAR(effectUnconsciousCC) ppEffectEnable true;
         GVAR(effectUnconsciousRB) ppEffectEnable true;
         GVAR(effectBlind) = true;
-        ["unconscious", true] call EFUNC(common,setDisableUserInputStatus);
+        ["unconscious", true] call CFUNC(setDisableUserInputStatus);
     } else {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
-        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
+        ["unconscious", false] call CFUNC(setDisableUserInputStatus);
         if (GVAR(effectBlind)) then {
-            _strength = 0.78 * (call EFUNC(common,ambientBrightness));
+            _strength = 0.78 * (call CFUNC(ambientBrightness));
             GVAR(effectBlindingCC) ppEffectEnable true;
             GVAR(effectBlindingCC) ppEffectAdjust [1,1,_strength, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
             GVAR(effectBlindingCC) ppEffectCommit 0;
@@ -143,11 +143,11 @@ GVAR(effectTimeBlood) = ACE_time;
             [{
                 GVAR(effectBlindingCC) ppEffectAdjust [1,1,0, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
                 GVAR(effectBlindingCC) ppEffectCommit ((_this select 0) * 2);
-            }, [_strength], 0.01, 0] call EFUNC(common,waitAndExecute);
+            }, [_strength], 0.01, 0] call CFUNC(waitAndExecute);
 
             [{
                 GVAR(effectBlindingCC) ppEffectEnable false;
-            }, [], (_strength * 2) + 0.5, 0] call EFUNC(common,waitAndExecute);
+            }, [], (_strength * 2) + 0.5, 0] call CFUNC(waitAndExecute);
 
             GVAR(effectBlind) = false;
         };
@@ -210,15 +210,15 @@ GVAR(lastHeartBeatSound) = ACE_time;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CFUNC(waitAndExecute);
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CFUNC(waitAndExecute);
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CFUNC(waitAndExecute);
                     } else {
                         GVAR(effectPainCA) ppEffectEnable false;
                     };
@@ -232,15 +232,15 @@ GVAR(lastHeartBeatSound) = ACE_time;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CFUNC(waitAndExecute);
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CFUNC(waitAndExecute);
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CFUNC(waitAndExecute);
                     } else {
                         GVAR(effectPainCC) ppEffectEnable false;
                     };
@@ -270,7 +270,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
 ["SettingsInitialized", {
     // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
-    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call CFUNC(addSyncedEventHandler);
 
     if (GVAR(level) == 2) exitWith {
         [
@@ -291,20 +291,20 @@ GVAR(lastHeartBeatSound) = ACE_time;
         {((_this select 0) getVariable [QGVAR(inReviveState), false])},
         {((_this select 0) getVariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
-["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
+["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call CFUNC(addCanInteractWithCondition);
 
 // Item Event Handler
 ["playerInventoryChanged", {
     [ACE_player] call FUNC(itemCheck);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {
         ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
-    }] call EFUNC(common,addEventHandler);
+    }] call CFUNC(addEventHandler);
 };

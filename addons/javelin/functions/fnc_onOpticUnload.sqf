@@ -14,7 +14,7 @@ _args = uiNamespace getVariable[QGVAR(arguments), nil ];
 if(!isNil "_args") then {
     _disableFireEH = _args select 6;
     if(_disableFireEH > 0  && difficulty > 0) then {
-        [ACE_player, "DefaultAction", _disableFireEH] call EFUNC(common,removeActionEventHandler);
+        [ACE_player, "DefaultAction", _disableFireEH] call CFUNC(removeActionEventHandler);
     };
     uiNameSpace setVariable [QGVAR(arguments),nil];
 };

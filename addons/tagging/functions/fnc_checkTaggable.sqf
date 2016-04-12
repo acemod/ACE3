@@ -53,4 +53,4 @@
     };
 
     true
-}, missionNamespace, QGVAR(checkTaggableCache), 0.5] call EFUNC(common,cachedCall);
+}, missionNamespace, QGVAR(checkTaggableCache), 0.5] call CFUNC(cachedCall);

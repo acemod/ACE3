@@ -32,8 +32,8 @@ if (!hasInterface) exitWith {};
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
-    ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+    ["firedPlayer", DFUNC(handleFired)] call CFUNC(addEventHandler);
+    ["firedPlayerNonLocal", DFUNC(handleFired)] call CFUNC(addEventHandler);
 
     //Add warnings for missing compat PBOs (only if AB is on)
     {
@@ -50,7 +50,7 @@ if (!hasInterface) exitWith {};
         ["iansky_opt","ace_compat_sma3_iansky"],
         ["R3F_Armes","ace_compat_r3f"]
     ];
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);
 
 #ifdef DEBUG_MODE_FULL
     call FUNC(diagnoseWeapons);

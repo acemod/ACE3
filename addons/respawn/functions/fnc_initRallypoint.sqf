@@ -45,7 +45,7 @@ if (hasInterface) then {
         _marker setMarkerTextLocal _date;
 
         _rallypoint setVariable [QGVAR(marker), _marker];
-    }, [_rallypoint, _respawnMarker, _side, _name], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_rallypoint, _respawnMarker, _side, _name], 0.1] call CFUNC(waitAndExecute);
 };
 
 if (!isServer) exitWith {};
@@ -60,7 +60,7 @@ if (isNil _name) then {
         createMarker [_respawnMarker, _rallypoint];
     };
 
-    ["rallypointMoved", [_rallypoint, _side]] call EFUNC(common,globalEvent);
+    ["rallypointMoved", [_rallypoint, _side]] call CFUNC(globalEvent);
 } else {
     deleteVehicle _rallypoint;
     ACE_LOGERROR("Multiple Rallypoints of same type.");

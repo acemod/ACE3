@@ -10,9 +10,9 @@ if (!hasInterface) exitWith {};
     if (!GVAR(enable)) exitWith {};
 
     // Add interaction menu exception
-    ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call EFUNC(common,addCanInteractWithCondition);
+    ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call CFUNC(addCanInteractWithCondition);
 
     // Handle interruptions
-    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-}] call EFUNC(common,addEventHandler);
+    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call CFUNC(addEventhandler);
+    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call CFUNC(addEventhandler);
+}] call CFUNC(addEventHandler);

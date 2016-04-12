@@ -10,10 +10,10 @@ if (isServer) then {
 };
 
 //Add Event Handlers:
-["drawing_removeLineMarker", FUNC(removeLineMarker) ] call EFUNC(common,addEventHandler);
-["drawing_addLineMarker", FUNC(addLineMarker) ] call EFUNC(common,addEventHandler);
+["drawing_removeLineMarker", FUNC(removeLineMarker) ] call CFUNC(addEventHandler);
+["drawing_addLineMarker", FUNC(addLineMarker) ] call CFUNC(addEventHandler);
 
-["drawing_requestMarkers", FUNC(copyMapRemoteSend) ] call EFUNC(common,addEventHandler);
-["drawing_sendbackMarkers", FUNC(copyMapReceiveMarkers) ] call EFUNC(common,addEventHandler);
+["drawing_requestMarkers", FUNC(copyMapRemoteSend) ] call CFUNC(addEventHandler);
+["drawing_sendbackMarkers", FUNC(copyMapReceiveMarkers) ] call CFUNC(addEventHandler);
 
 ADDON = true;

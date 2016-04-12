@@ -49,9 +49,9 @@ if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(
     _logOutPut = LSTRING(Check_Pulse_None);
 };
 
-["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
+["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call CFUNC(getName), round(_heartRate)], 1.5, _caller]] call CFUNC(targetEvent);
 
 if (_logOutPut != "") then {
-    [_unit,"activity", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
-    [_unit,"quick_view", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"activity", LSTRING(Check_Pulse_Log),[[_caller] call CFUNC(getName),_logOutPut]] call FUNC(addToLog);
+    [_unit,"quick_view", LSTRING(Check_Pulse_Log),[[_caller] call CFUNC(getName),_logOutPut]] call FUNC(addToLog);
 };

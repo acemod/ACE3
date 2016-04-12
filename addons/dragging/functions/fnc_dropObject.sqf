@@ -20,7 +20,7 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call CFUNC(removeActionEventHandler);
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
@@ -30,17 +30,17 @@ if !(_unit getVariable ["ACE_isUnconscious", false]) then {
 };
 
 // prevent collision damage
-["fixCollision", _unit] call EFUNC(common,localEvent);
-["fixCollision", _target, _target] call EFUNC(common,targetEvent);
+["fixCollision", _unit] call CFUNC(localEvent);
+["fixCollision", _target, _target] call CFUNC(targetEvent);
 
 // release object
 detach _target;
 
 if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2, true] call CFUNC(doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
+        [_target, "", 2, true] call CFUNC(doAnimation);  //@todo "AinjPpneMrunSnonWnonDb_release" seems to fall back to unconsciousness anim.
     };
 };
 
@@ -59,15 +59,15 @@ _unit setVariable [QGVAR(isDragging), false, true];
 _unit setVariable [QGVAR(draggedObject), objNull, true];
 
 // make object accesable for other units
-[objNull, _target, true] call EFUNC(common,claim);
+[objNull, _target, true] call CFUNC(claim);
 
 if !(_target isKindOf "CAManBase") then {
-    ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
-    ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+    ["fixPosition", _target, _target] call CFUNC(targetEvent);
+    ["fixFloating", _target, _target] call CFUNC(targetEvent);
 };
 
 if (_unit getVariable ["ACE_isUnconscious", false]) then {
-    [_unit, "unconscious", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "unconscious", 2, true] call CFUNC(doAnimation);
 };
 
 // recreate UAV crew

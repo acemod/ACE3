@@ -20,7 +20,7 @@ private ["_moment", "_logVarName", "_log","_newLog", "_logs"];
 params ["_unit", "_type", "_message", "_arguments"];
 
 if (!local _unit) exitWith {
-    ["addToMedicalLog", _unit, _this] call EFUNC(common,targetEvent);
+    ["addToMedicalLog", _unit, _this] call CFUNC(targetEvent);
 };
 
 date params ["", "", "", "_hour", "_minute"];
@@ -43,7 +43,7 @@ if (count _log >= 8) then {
 _log pushBack [_message, _moment, _type, _arguments];
 
 _unit setVariable [_logVarName, _log, true];
-["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
+["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call CFUNC(localEvent);
 
 _logs = _unit getVariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {

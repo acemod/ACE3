@@ -31,15 +31,15 @@ if (!alive _unit) exitWith {
         _unit removeWeapon "ACE_FakePrimaryWeapon";
     };
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-        [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+        [_unit, false, "ACE_isUnconscious", side group _unit] call CFUNC(switchToGroupSide);
     };
-    [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
-    [_unit, false] call EFUNC(common,disableAI);
+    [_unit, "setCaptive", QGVAR(unconscious), false] call CFUNC(statusEffect_set);
+    [_unit, false] call CFUNC(disableAI);
     //_unit setUnitPos _originalPos;
     _unit setUnconscious false;
 
-    [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
-    ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+    [_unit, "isUnconscious"] call CFUNC(unmuteUnit);
+    ["medical_onUnconscious", [_unit, false]] call CFUNC(globalEvent);
 
     TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , QGVAR(unconscious));
 
@@ -59,10 +59,10 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
 
         if (vehicle _unit == _unit) then {
             if (animationState _unit == "AinjPpneMstpSnonWrflDnon") then {
-                [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call EFUNC(common,doAnimation);
-                [_unit,"amovppnemstpsnonwnondnon", 1] call EFUNC(common,doAnimation);
+                [_unit,"AinjPpneMstpSnonWrflDnon_rolltofront", 2] call CFUNC(doAnimation);
+                [_unit,"amovppnemstpsnonwnondnon", 1] call CFUNC(doAnimation);
             } else {
-                [_unit,"amovppnemstpsnonwnondnon", 2] call EFUNC(common,doAnimation);
+                [_unit,"amovppnemstpsnonwnondnon", 2] call CFUNC(doAnimation);
             };
         } else {
             _vehicle = vehicle _unit;
@@ -73,7 +73,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
             };
             //Make sure we have a valid, non-terminal animation:
             if ((_awakeInVehicleAnimation != "") && {(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> _awakeInVehicleAnimation >> "terminal")) == 0}) then {
-                [_unit, _awakeInVehicleAnimation, 2] call EFUNC(common,doAnimation);
+                [_unit, _awakeInVehicleAnimation, 2] call CFUNC(doAnimation);
             } else {
                 //Don't have a valid animation saved, reset the unit animation with a moveInXXX
                 TRACE_1("No Valid Animation, doing seat reset", _awakeInVehicleAnimation);
@@ -96,25 +96,25 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         };
         _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
 
-        ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+        ["medical_onUnconscious", [_unit, false]] call CFUNC(globalEvent);
         // EXIT PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
+        [_unit, "setCaptive", QGVAR(unconscious), false] call CFUNC(statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:
         if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-            [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
+            [_unit, false, "ACE_isUnconscious", side group _unit] call CFUNC(switchToGroupSide);
         };
-        [_unit, false] call EFUNC(common,disableAI);
+        [_unit, false] call CFUNC(disableAI);
         _unit setUnitPos _originalPos; // This is not position but stance (DOWN, MIDDLE, UP)
 
         _unit setUnconscious false;
 
-        [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
+        [_unit, "isUnconscious"] call CFUNC(unmuteUnit);
 
         // ensure this statement runs only once
         _args set [4, true];
@@ -123,7 +123,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
 
 if (_parachuteCheck) then {
     if !(vehicle _unit isKindOf "ParachuteBase") then {
-        [_unit, [_unit] call EFUNC(common,getDeathAnim), 1, true] call EFUNC(common,doAnimation);
+        [_unit, [_unit] call CFUNC(getDeathAnim), 1, true] call CFUNC(doAnimation);
         _args set [5, false];
     };
 };

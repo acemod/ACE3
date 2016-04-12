@@ -38,7 +38,7 @@ if (_position isEqualTo []) then {_position = getPosATL _unit};
 
 _position set [2, 0];
 
-[localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
+[localize LSTRING(Deploy)] call CFUNC(displayTextStructured);
 
 [{
     params ["_rallypoint", "_unit", "_position"];
@@ -48,7 +48,7 @@ _position set [2, 0];
 
     _rallypoint setVariable [QGVAR(markerDate), [dayTime, "HH:MM"] call BIS_fnc_timeToString, true];
 
-    ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
+    ["rallypointMoved", [_rallypoint, _side, _position]] call CFUNC(globalEvent);
 
-    [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
-}, [_rallypoint, _unit, _position], 5] call EFUNC(common,waitAndExecute);
+    [localize LSTRING(Deployed)] call CFUNC(displayTextStructured);
+}, [_rallypoint, _unit, _position], 5] call CFUNC(waitAndExecute);

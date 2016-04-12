@@ -6,7 +6,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(open) {
                     displayName = CSTRING(activateMonitor);
-                    condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call EFUNC(common,hasItem));
+                    condition = QUOTE([ARR_2(ACE_player,'ACE_HuntIR_monitor')] call CFUNC(hasItem));
                     statement = QUOTE(call FUNC(huntir));
                     showDisabled = 0;
                     priority = 2;

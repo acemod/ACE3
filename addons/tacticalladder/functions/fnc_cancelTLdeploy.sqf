@@ -23,7 +23,7 @@ params ["_unit", "_key"];
 if (_key != 1 || {isNull GVAR(ladder)}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Ladder", false] call CFUNC(statusEffect_set);
 
 detach GVAR(ladder);
 
@@ -36,6 +36,6 @@ GVAR(ladder) animate ["rotate", 0];
 // remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(Common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call CFUNC(removeActionEventHandler);
 
 GVAR(ladder) = objNull;

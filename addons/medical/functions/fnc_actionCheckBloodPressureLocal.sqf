@@ -57,9 +57,9 @@ if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(
     _logOutPut = "";
 };
 
-["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller]] call EFUNC(common,targetEvent);
+["displayTextStructured", [_caller], [[_output, [_target] call CFUNC(getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller]] call CFUNC(targetEvent);
 
 if (_logOutPut != "") then {
-    [_target,"activity", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
-    [_target,"quick_view", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"activity", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call CFUNC(getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"quick_view", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call CFUNC(getName), _logOutPut]] call FUNC(addToLog);
 };

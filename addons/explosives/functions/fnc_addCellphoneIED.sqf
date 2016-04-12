@@ -53,7 +53,7 @@ _count = _count + 1;
 publicVariable QGVAR(CellphoneIEDs);
 
 //display IED number message:
-[format ["IED %1 code: %2", _count,_code]] call EFUNC(common,displayTextStructured);
+[format ["IED %1 code: %2", _count,_code]] call CFUNC(displayTextStructured);
 
 if !(_hasRequired) exitWith {};
 [format ["IED %1", _count],_code] call FUNC(addToSpeedDial);

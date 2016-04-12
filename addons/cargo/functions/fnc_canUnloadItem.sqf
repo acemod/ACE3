@@ -25,6 +25,6 @@ if !(_item in _loaded) exitWith {false};
 
 private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
-private _emptyPos = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
+private _emptyPos = [_vehicle, _itemClass, _unloader] call CFUNC(findUnloadPosition);
 
 (count _emptyPos) == 3

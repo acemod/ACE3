@@ -62,7 +62,7 @@ _closeInDistance = (_closeInMax + _closeInMin) / 2;
 //Checks (too close to center or can't attach)
 if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
-    [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(Failed)] call CFUNC(displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
@@ -79,7 +79,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", "ACE_refuel", false] call CFUNC(statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
@@ -119,7 +119,7 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
                 };
             };
         };
-        ["setVectorDirAndUp", _nozzle, [_nozzle, _dirAndUp]] call EFUNC(common,objectEvent);
+        ["setVectorDirAndUp", _nozzle, [_nozzle, _dirAndUp]] call CFUNC(objectEvent);
         _nozzle setVariable [QGVAR(sink), _target, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
@@ -138,4 +138,4 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
     localize LSTRING(ConnectAction),
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

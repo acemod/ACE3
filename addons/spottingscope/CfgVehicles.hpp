@@ -8,7 +8,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(place) {
                     displayName = CSTRING(Placedown);
-                    condition = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call EFUNC(common,hasItem));
+                    condition = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call CFUNC(hasItem));
                     statement = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call FUNC(place));
                     showDisabled = 0;
                     priority = 2;

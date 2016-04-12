@@ -18,7 +18,7 @@ if (_isIR == 2) exitWith {};
 
 _isIR = _isIR == 1;
 
-private _brightness = 2 - call EFUNC(common,ambientBrightness);
+private _brightness = 2 - call CFUNC(ambientBrightness);
 
 {
     private _weapon = currentWeapon _x;

@@ -18,6 +18,6 @@
 
 params ["_unit", "_target"];
 
-if !([_unit, _target, ["isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_unit, _target, ["isNotCarrying"]] call CFUNC(canInteractWith)) exitWith {false};
 
 _unit getVariable [QGVAR(carriedObject), objNull] == _target

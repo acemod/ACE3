@@ -30,7 +30,7 @@ private _return = [];
         private _canClaimObject = objNull;
         {
             if ((!(_x in _ableToAquire))
-                    && {[_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)}
+                    && {[_unit, _x, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call CFUNC(canInteractWith)}
                     &&{(damage _x) < 1}
                     ) exitWith { _canClaimObject = _x; };
         } forEach _nearObjects;

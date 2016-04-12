@@ -19,7 +19,7 @@
 params ["_unit", "_tripod"];
 
 if (stance _unit == "STAND") then {
-    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call EFUNC(common,doAnimation);
+    [_unit, "AmovPercMstpSrasWrflDnon_diary"] call CFUNC(doAnimation);
 };
 
 [{
@@ -29,5 +29,5 @@ if (stance _unit == "STAND") then {
 
     deleteVehicle _tripod;
 
-    [_unit, "ACE_Tripod"] call EFUNC(common,addToInventory);
-}, [_unit, _tripod], 1] call EFUNC(common,waitAndExecute);
+    [_unit, "ACE_Tripod"] call CFUNC(addToInventory);
+}, [_unit, _tripod], 1] call CFUNC(waitAndExecute);

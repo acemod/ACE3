@@ -26,7 +26,7 @@ GVAR(initializedClasses) = _initializedClasses;
 
 {
     private ["_turretConfig","_onAction","_offAction"];
-    _turretConfig = [configFile >> "CfgVehicles" >> _type, _x] call EFUNC(common,getTurretConfigPath);
+    _turretConfig = [configFile >> "CfgVehicles" >> _type, _x] call CFUNC(getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) exitWith {
         // @todo: Add the state variables to the vehicle, instead of to the client

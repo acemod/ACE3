@@ -21,11 +21,11 @@ params ["_medic", "_patient", "_item"];
 if (isNil QGVAR(setting_allowSharedEquipment)) then {
     GVAR(setting_allowSharedEquipment) = true;
 };
-if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
+if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call CFUNC(hasItem)}) exitWith {
     true
 };
 
-if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
+if ([_medic, _item] call CFUNC(hasItem)) exitWith {
     true
 };
 
@@ -33,7 +33,7 @@ _return = false;
 if ((vehicle _medic != _medic) && {[vehicle _medic] call FUNC(isMedicalVehicle)}) then {
     _crew = crew vehicle _medic;
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
+        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call CFUNC(hasItem))}) exitWith {
             _return = true;
         };
     } forEach _crew;

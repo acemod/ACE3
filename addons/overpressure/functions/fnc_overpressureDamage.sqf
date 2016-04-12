@@ -66,7 +66,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             [   _posASL,
             _targetPositionASL,
             [0,1,0,1]
-            ] call EFUNC(common,addLineToDebugDraw);
+            ] call CFUNC(addLineToDebugDraw);
             #endif
         };
     };

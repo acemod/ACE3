@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Trenches", false] call CFUNC(statusEffect_set);
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
@@ -27,7 +27,7 @@ GVAR(digPFH) = -1;
 // remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call CFUNC(removeActionEventHandler);
 
 _unit setVariable [QGVAR(isPlacing), false, true];
 
@@ -83,7 +83,7 @@ private _fnc_onFailure = {
     (_this select 0) params ["_unit"];
     _unit setVariable [QGVAR(isDiggingId), -1, true];
 };
-[12.5, [_unit], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call EFUNC(common,progressBar);
+[12.5, [_unit], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call CFUNC(progressBar);
 
 // Schedule progressive raising of the trench
 private _fnc_setPlacing = {
@@ -99,16 +99,16 @@ private _fnc_setPlacing = {
 
 // For loops are for wimps
 [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp] call _fnc_setPlacing;
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.9], _vecDirAndUp], 3.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.8], _vecDirAndUp], 4.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.7], _vecDirAndUp], 5.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.6], _vecDirAndUp], 6.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.5], _vecDirAndUp], 7.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.4], _vecDirAndUp], 8.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.3], _vecDirAndUp], 9.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.2], _vecDirAndUp],10.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.1], _vecDirAndUp],11.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.0], _vecDirAndUp],12.0] call EFUNC(common,waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.9], _vecDirAndUp], 3.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.8], _vecDirAndUp], 4.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.7], _vecDirAndUp], 5.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.6], _vecDirAndUp], 6.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.5], _vecDirAndUp], 7.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.4], _vecDirAndUp], 8.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.3], _vecDirAndUp], 9.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.2], _vecDirAndUp],10.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.1], _vecDirAndUp],11.0] call CFUNC(waitAndExecute);
+[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.0], _vecDirAndUp],12.0] call CFUNC(waitAndExecute);
 
 // Play animation
-[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
+[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call CFUNC(doAnimation);

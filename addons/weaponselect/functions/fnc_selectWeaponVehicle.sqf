@@ -19,7 +19,7 @@
 
 params ["_unit", "_vehicle", "_index"];
 
-private _turret = _unit call EFUNC(common,getTurretIndex);
+private _turret = _unit call CFUNC(getTurretIndex);
 
 if (_turret isEqualTo [] && {_unit == driver _vehicle}) then {
     private _weapons = weapons _vehicle;

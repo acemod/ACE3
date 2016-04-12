@@ -44,25 +44,25 @@ if (STANCE _unit == "Prone") then {
 if (ACE_player != _unit) then {
     // If the unit is a player, call the function on the player.
     if (isPlayer _unit) then {
-        [[_unit, _target], QFUNC(startDefuse), _unit] call EFUNC(common,execRemoteFnc);
+        [[_unit, _target], QFUNC(startDefuse), _unit] call CFUNC(execRemoteFnc);
     } else {
         _unit playActionNow _actionToPlay;
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";
-        _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
+        _defuseTime = [[_unit] call CFUNC(isEOD), _target] call _fnc_DefuseTime;
         [{
             params ["_unit", "_target"];
             TRACE_2("defuse finished",_unit,_target);
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";
-        }, [_unit, _target], _defuseTime] call EFUNC(common,waitAndExecute);
+        }, [_unit, _target], _defuseTime] call CFUNC(waitAndExecute);
     };
 } else {
     _unit playActionNow _actionToPlay;
-    _isEOD = [_unit] call EFUNC(Common,isEOD);
+    _isEOD = [_unit] call CFUNC(isEOD);
     _defuseTime = [_isEOD, _target] call _fnc_DefuseTime;
     if (_isEOD || {!GVAR(RequireSpecialist)}) then {
-        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive))] call EFUNC(common,progressBar);
+        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive))] call CFUNC(progressBar);
     };
 };

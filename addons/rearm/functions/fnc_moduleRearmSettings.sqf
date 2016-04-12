@@ -21,6 +21,6 @@ params ["_logic", "", ["_activated", false, [false]]];
 
 if (!_activated) exitWith {};
 
-[_logic, QGVAR(level), "level"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(level), "level"] call CFUNC(readSettingFromModule);
 
 diag_log text format ["[ACE]: Rearm Module Initialized on level: %1", GVAR(level)];

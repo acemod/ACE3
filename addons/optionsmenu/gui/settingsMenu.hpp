@@ -270,7 +270,7 @@ class ACE_settingsMenu {
             text = CSTRING(headBugFix);
             x = X_PART(34);
             w = W_PART(5);
-            action = QUOTE(0 spawn EFUNC(common,headBugFix); closedialog 0;);
+            action = QUOTE(0 spawn CFUNC(headBugFix); closedialog 0;);
             tooltip = CSTRING(headBugFixTooltip);
         };
     };

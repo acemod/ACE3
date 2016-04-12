@@ -74,7 +74,7 @@ _roleImages = ROLE_IMAGES;
 {   
     _unit = _x select 0;
     _roleType = _x select 1;
-    _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call EFUNC(common,getName), _roleImages select _roleType];
+    _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call CFUNC(getName), _roleImages select _roleType];
 } forEach _toShow;
 
 ("ACE_CrewInfo_CrewInfo" call BIS_fnc_rscLayer) cutRsc ["ACE_CrewInfo_dialog", "PLAIN", 1, false];

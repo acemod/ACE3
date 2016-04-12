@@ -3,7 +3,7 @@
  * Determines whether to place dust on the goggles, based on calibre of weapon fired and other requirements. Called from the unified fired EH only for the local player.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * Function is handled? <BOOL>

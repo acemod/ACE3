@@ -22,7 +22,7 @@ params ["_player", "_unit"];
 
 _weapon = currentWeapon _player;
 if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
-    [_player, "AmovPercMstpSlowWrflDnon", 0] call EFUNC(common,doAnimation);
+    [_player, "AmovPercMstpSlowWrflDnon", 0] call CFUNC(doAnimation);
 };
 
 _listedItemClasses = [];

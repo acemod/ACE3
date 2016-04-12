@@ -12,9 +12,9 @@ GVAR(pendingReopen) = false;
         GVAR(pendingReopen) = false;
         [{
             [GVAR(INTERACTION_TARGET)] call FUNC(openMenu);
-        }, []] call EFUNC(common,execNextFrame);
+        }, []] call CFUNC(execNextFrame);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);
 
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
@@ -23,7 +23,7 @@ GVAR(pendingReopen) = false;
     if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
 
     // Conditions: canInteract
-    if !([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, _target, ["isNotInside"]] call CFUNC(canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement

@@ -65,7 +65,7 @@ GVAR(no_cams) sort true;
 } forEach GVAR(no_cams);
 [{
     //Close monitor if we no longer have the item:
-    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call CFUNC(hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
         closeDialog 0;
     };
 

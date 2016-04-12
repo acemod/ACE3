@@ -24,11 +24,11 @@ if (isNull _vehicle) exitWith {};
 _newAttenuation = 1;
 if (ACE_player != _vehicle) then {
     _effectType = "";
-    _turretPath = [ACE_player] call EFUNC(common,getTurretIndex);
+    _turretPath = [ACE_player] call CFUNC(getTurretIndex);
     _effectType = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "attenuationEffectType");
 
     if (!(_turretPath isEqualTo [])) then {
-        _turretConfig = [(configFile >> "CfgVehicles" >> (typeOf _vehicle)), _turretPath] call EFUNC(common,getTurretConfigPath);
+        _turretConfig = [(configFile >> "CfgVehicles" >> (typeOf _vehicle)), _turretPath] call CFUNC(getTurretConfigPath);
 
         if ((getNumber (_turretConfig >> "disableSoundAttenuation")) == 1) then {
             _effectType = "";

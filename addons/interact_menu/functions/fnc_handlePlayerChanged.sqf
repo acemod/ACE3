@@ -18,13 +18,13 @@ private _ehid = [_newUnit, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
     if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
         [GVAR(openedMenuType),true] call FUNC(keyUp);
     };
-}] call EFUNC(common,addActionEventHandler);
+}] call CFUNC(addActionEventHandler);
 
 _newUnit setVariable [QGVAR(AAEHID), _ehid];
 
 // remove from old unit
 _ehid = _oldUnit getVariable [QGVAR(AAEHID), -1];
 
-[_oldUnit, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+[_oldUnit, "DefaultAction", _ehid] call CFUNC(removeActionEventHandler);
 
 _oldUnit setVariable [QGVAR(AAEHID), -1];

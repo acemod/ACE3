@@ -32,7 +32,7 @@ private _condition = {
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) == 1} &&
     {locked _target < 2} &&
     {alive _target} &&
-    {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    {[_player, _target, []] call CFUNC(canInteractWith)}
 };
 private _statement = {
     params ["_target", "_player"];

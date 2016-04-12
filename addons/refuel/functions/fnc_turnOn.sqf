@@ -25,10 +25,10 @@ params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
         _nozzle setVariable [QGVAR(isRefueling), true, true];
-        [LSTRING(Hint_Started), 1.5, _unit] call EFUNC(common,displayTextStructured);
+        [LSTRING(Hint_Started), 1.5, _unit] call CFUNC(displayTextStructured);
     },
     "",
     localize LSTRING(TurnOnAction),
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

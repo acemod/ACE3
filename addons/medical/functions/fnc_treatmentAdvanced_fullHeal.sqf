@@ -13,9 +13,9 @@
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 if (local _target) then {
-    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call EFUNC(common,localEvent);
+    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call CFUNC(localEvent);
 } else {
-    ["treatmentAdvanced_fullHealLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+    ["treatmentAdvanced_fullHealLocal", _target, [_caller, _target]] call CFUNC(targetEvent);
 };
 
 true;

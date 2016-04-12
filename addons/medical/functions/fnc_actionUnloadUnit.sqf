@@ -19,6 +19,6 @@ params ["_caller", "_target", ["_drag", false]];
 
 // cannot unload a unit not in a vehicle.
 if (vehicle _target == _target) exitWith {};
-if (([_target] call EFUNC(common,isAwake))) exitWith {};
+if (([_target] call CFUNC(isAwake))) exitWith {};
 
-["unloadPersonEvent", _target, [_target, vehicle _target, _caller]] call EFUNC(common,targetEvent);
+["unloadPersonEvent", _target, [_target, vehicle _target, _caller]] call CFUNC(targetEvent);

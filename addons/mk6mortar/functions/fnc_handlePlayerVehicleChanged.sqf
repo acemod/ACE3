@@ -29,10 +29,10 @@ if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVa
         if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
             //wait for proper turret locality change
             [{
-                ["initMortar", [_this], [_this]] call EFUNC(common,globalEvent);
-            }, _mortar, 0.05] call EFUNC(common,waitAndExecute);
+                ["initMortar", [_this], [_this]] call CFUNC(globalEvent);
+            }, _mortar, 0.05] call CFUNC(waitAndExecute);
         };
-    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
+    }, _newVehicle] call CFUNC(runAfterSettingsInit);
 };
 
 private _tubeWeaponName = (weapons _newVehicle) select 0;
@@ -65,7 +65,7 @@ if (_lastFireMode != -1) then {
         if (shownArtilleryComputer && {!GVAR(allowComputerRangefinder)}) then {
             //Don't like this solution, but it works
             closeDialog 0;
-            [parseText "Computer Disabled"] call EFUNC(common,displayTextStructured);
+            [parseText "Computer Disabled"] call CFUNC(displayTextStructured);
         };
 
         _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
@@ -87,7 +87,7 @@ if (_lastFireMode != -1) then {
             _realElevation = asin (_weaponDir select 2);
         } else {
             //Valid range, will fire at camera dir
-            _lookVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
+            _lookVector = ((positionCameraToWorld [0,0,0]) call CFUNC(positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call CFUNC(positionToASL));
             _realAzimuth = ((_lookVector select 0) atan2 (_lookVector select 1));
             _upVectorDir = (((vectorUp _mortarVeh) select 0) atan2 ((vectorUp _mortarVeh) select 1));
             _elevationDiff = (cos (_realAzimuth - _upVectorDir)) * acos ((vectorUp _mortarVeh) select 2);

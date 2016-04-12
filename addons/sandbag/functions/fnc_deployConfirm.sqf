@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Sandbag", false] call CFUNC(statusEffect_set);
 
 // remove sandbag from inventory
 _unit removeItem "ACE_Sandbag_empty";
@@ -41,7 +41,7 @@ _unit removeItem "ACE_Sandbag_empty";
     _sandBag setDir _direction;
 
     GVAR(sandBag) = objNull;
-}, [_unit], 1] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call CFUNC(waitAndExecute);
 
 // remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
@@ -50,7 +50,7 @@ GVAR(deployPFH) = -1;
 // remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call CFUNC(removeActionEventHandler);
 
 // play animation
 _unit playActionNow "PutDown";

@@ -19,7 +19,7 @@ params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(filterUnits), "unitsFilter"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(filterSides), "sidesFilter"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(restrictModes), "cameraModes"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(restrictVisions), "visionModes"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(filterUnits), "unitsFilter"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(filterSides), "sidesFilter"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(restrictModes), "cameraModes"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(restrictVisions), "visionModes"] call CFUNC(readSettingFromModule);

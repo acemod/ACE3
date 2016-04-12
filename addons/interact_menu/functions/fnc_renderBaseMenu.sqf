@@ -69,7 +69,7 @@ private _activeActionTree = [
                         [_object, _baseActionNode, [], _distanceToBasePoint],
                         DFUNC(collectActiveActionTree),
                         _object, _uid, 1.0, "interactMenuClosed"
-                    ] call EFUNC(common,cachedCall);
+                    ] call CFUNC(cachedCall);
 
 END_COUNTER(fnc_collectActiveActionTree)
 

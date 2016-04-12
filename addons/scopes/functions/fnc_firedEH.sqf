@@ -3,7 +3,7 @@
  * Adjusts the flight path of the bullet according to the zeroing. Called from the unified fired EH only for local and non-local players on foot.
  *
  * Argument:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return value:
  * None
@@ -20,7 +20,7 @@ private ["_adjustment", "_weaponIndex", "_zeroing", "_adjustment"];
 _adjustment = _unit getVariable [QGVAR(Adjustment), []];
 if (_adjustment isEqualTo []) exitWith {};
 
-_weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+_weaponIndex = [_unit, currentWeapon _unit] call CFUNC(getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;
@@ -31,4 +31,4 @@ if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 _zeroing = _zeroing vectorMultiply 0.05625;
 _zeroing params ["_elevation", "_windage", "_zero"];
 
-[_projectile, _windage, _elevation + _zero, 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, _windage, _elevation + _zero, 0] call CFUNC(changeProjectileDirection);

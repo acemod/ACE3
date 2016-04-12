@@ -19,7 +19,7 @@
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
 
 // restore all gear
-[_unit, _allGear, true, true] call EFUNC(common,setAllGear);
+[_unit, _allGear, true, true] call CFUNC(setAllGear);
 
 // restore the last active weapon, muzzle and weaponMode
 _activeWeaponAndMuzzle params ["_activeWeapon", "_activeMuzzle", "_activeWeaponMode"];

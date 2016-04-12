@@ -145,7 +145,7 @@ FUNC(disableFire) = {
             _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
             if(!isNil "_canFire") exitWith { false };
             true
-        }] call EFUNC(common,addActionEventHandler);
+        }] call CFUNC(addActionEventHandler);
     };
     _firedEH
 };
@@ -153,7 +153,7 @@ FUNC(enableFire) = {
     _firedEH = _this select 0;
 
     if(_firedEH > 0 && difficulty > 0) then {
-        [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
+        [ACE_player, "DefaultAction", _firedEH] call CFUNC(removeActionEventHandler);
     };
     -1
 };
@@ -210,7 +210,7 @@ if (isNull _newTarget) then {
                     [_currentTarget,[-1,-1,-2],_currentTarget selectionPosition "zamerny"];
                 };
 
-                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
+                _bpos = _boundsInput call CFUNC(worldToScreenBounds);
 
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
@@ -249,7 +249,7 @@ if (isNull _newTarget) then {
                     [_newTarget,[-1,-1,-1],_currentTarget selectionPosition "zamerny"];
                 };
 
-                _bpos = _boundsInput call EFUNC(common,worldToScreenBounds);
+                _bpos = _boundsInput call CFUNC(worldToScreenBounds);
 
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;

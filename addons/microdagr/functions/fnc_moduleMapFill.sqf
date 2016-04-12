@@ -18,4 +18,4 @@
 if !(isServer) exitWith {};
 params ["_logic"];
 
-[_logic, QGVAR(MapDataAvailable), "MapDataAvailable"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(MapDataAvailable), "MapDataAvailable"] call CFUNC(readSettingFromModule);

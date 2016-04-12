@@ -31,7 +31,7 @@ _chance = [0.5, 0.8] select (count weapons _unit > 0);
         _position = getPosASL _unit vectorAdd (eyeDirection _unit vectorMultiply SEND_DISTANCE);
         _position set [2, 0];
 
-        ["sendAway", [_x], [_x, _position]] call EFUNC(common,targetEvent);
+        ["sendAway", [_x], [_x, _position]] call CFUNC(targetEvent);
     };
     false
 } count (_unit nearEntities ["Civilian", SEND_RADIUS]);

@@ -26,7 +26,7 @@ params ["_unit", "_selection", "_damage", ["_disabled", false]];
 
 // Unit isn't local, give function to machine where it is.
 if !(local _unit) exitWith {
-    ["setHitPointDamage", _unit, _this] call EFUNC(common,targetEvent);
+    ["setHitPointDamage", _unit, _this] call CFUNC(targetEvent);
 };
 
 // Check if overall damage adjustment is disabled

@@ -19,4 +19,4 @@ params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 
-[_logic, QGVAR(allow), "allow"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(allow), "allow"] call CFUNC(readSettingFromModule);

@@ -3,7 +3,7 @@
  * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
  * Argument:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return value:
  * None
@@ -53,7 +53,7 @@ if (GVAR(overheatingDispersion)) then {
     TRACE_4("change",_dispersion,_slowdownFactor,_dispersionX,_dispersionY);
 
     TRACE_PROJECTILE_INFO(_projectile);
-    [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call EFUNC(common,changeProjectileDirection);
+    [_projectile, _dispersionX * _dispersion, _dispersionY * _dispersion, _slowdownFactor * vectorMagnitude (velocity _projectile)] call CFUNC(changeProjectileDirection);
     TRACE_PROJECTILE_INFO(_projectile);
 };
 
@@ -94,7 +94,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1.5, 15, 150], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+_jamChance = _jamChance * ([[0.5, 1.5, 15, 150], 3 * _scaledTemperature] call CFUNC(interpolateFromArray));
 
 // increase jam chance on dusty grounds if prone (and at ground level)
 if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {

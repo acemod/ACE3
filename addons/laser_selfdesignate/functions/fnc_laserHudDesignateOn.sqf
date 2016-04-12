@@ -40,7 +40,7 @@ FUNC(laserHudDesignatePFH) = {
     /*
 
     _gunnerInfo = [_vehicle, (currentWeapon _vehicle)] call CBA_fnc_getFirer;
-    _turretInfo = [_vehicle, _gunnerInfo select 1] call EFUNC(common,getTurretDirection);
+    _turretInfo = [_vehicle, _gunnerInfo select 1] call CFUNC(getTurretDirection);
     _povPos = _turretInfo select 0;
 
     _laserCode = (vehicle ACE_player) getVariable["ace_laser_code", ACE_DEFAULT_LASER_CODE];

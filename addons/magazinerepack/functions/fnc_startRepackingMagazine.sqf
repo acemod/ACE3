@@ -31,9 +31,9 @@ _fullMagazineCount = getNumber (_magazineCfg >> "count");
 _isBelt = (isNumber (_magazineCfg >> "ACE_isBelt")) && {(getNumber (_magazineCfg >> "ACE_isBelt")) == 1};
 
 //Check canInteractWith:
-if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
+if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call CFUNC(canInteractWith))) exitWith {};
 
-[_player] call EFUNC(common,goKneeling);
+[_player] call CFUNC(goKneeling);
 
 _startingAmmoCounts = [];
 {
@@ -70,4 +70,4 @@ _totalTime = (_simEvents select ((count _simEvents) - 1) select 0);
     (localize LSTRING(RepackingMagazine)),
     {_this call FUNC(magazineRepackProgress)},
     ["isNotInside", "isNotSitting"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

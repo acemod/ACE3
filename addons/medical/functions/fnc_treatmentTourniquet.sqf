@@ -28,27 +28,27 @@ if (count _items == 0) exitWith {false};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitWith {
-    // ["displayTextStructured", [_caller], ["You cannot apply a CAT on this body part!"]] call EFUNC(common,targetEvent);
+    // ["displayTextStructured", [_caller], ["You cannot apply a CAT on this body part!"]] call CFUNC(targetEvent);
     false;
 };
 
 _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 if ((_tourniquets select _part) > 0) exitWith {
    _output = "There is already a tourniquet on this body part!"; // TODO localization
-   ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
+   ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call CFUNC(targetEvent);
     false;
 };
 
 _removeItem = _items select 0;
 if (local _target) then {
-    ["treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call EFUNC(common,localEvent);
+    ["treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call CFUNC(localEvent);
 } else {
-    ["treatmentTourniquetLocal", _target, [_target, _removeItem, _selectionName]] call EFUNC(common,targetEvent);
+    ["treatmentTourniquetLocal", _target, [_target, _removeItem, _selectionName]] call CFUNC(targetEvent);
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);
-[_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_appliedTourniquet), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog); // TODO expand message
 
 
 true

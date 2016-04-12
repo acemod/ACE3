@@ -15,7 +15,7 @@
 params ["_vehicle"];
 
 {
-    private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
+    private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call CFUNC(getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
         _vehicle setVariable [format ["%1_%2", QGVAR(Distance),  _x],  0, true];

@@ -48,7 +48,7 @@ class CfgVehicles {
             class ACE_deployRopes {
                 displayName = CSTRING(Interaction_deployRopes);
                 condition = QUOTE([ARR_2(_player, vehicle _player)] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [vehicle _player])] call EFUNC(common,serverEvent));
+                statement = QUOTE([ARR_2(QUOTE(QGVAR(deployRopes)), [vehicle _player])] call CFUNC(serverEvent));
                 showDisabled = 0;
                 priority = 1;
             };

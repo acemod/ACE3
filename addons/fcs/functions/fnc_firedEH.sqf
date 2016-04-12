@@ -3,7 +3,7 @@
  * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * None
@@ -30,7 +30,7 @@ private _offset = 0;
     };
 } forEach _FCSMagazines;
 
-[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
+[_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call CFUNC(changeProjectileDirection);
 
 // Remove the platform velocity
 if (vectorMagnitude velocity _vehicle > 2) then {

@@ -19,8 +19,8 @@
 params ["_unit", "_item"];
 TRACE_2("params",_unit,_item);
 
-if ([_unit, _item] call EFUNC(common,hasItem)) exitWith {
-    [[_unit, _item], QUOTE(EFUNC(common,useItem)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if ([_unit, _item] call CFUNC(hasItem)) exitWith {
+    [[_unit, _item], QUOTE(CFUNC(useItem)), _unit] call CFUNC(execRemoteFnc); /* TODO Replace by event system */
     [true, _unit];
 };
 

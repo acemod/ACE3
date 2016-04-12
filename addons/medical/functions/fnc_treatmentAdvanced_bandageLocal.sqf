@@ -90,7 +90,7 @@ _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 _target setVariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
 
 if (USE_WOUND_EVENT_SYNC) then {
-    ["medical_propagateWound", [_target, _mostEffectiveInjury]] call EFUNC(common,globalEvent);
+    ["medical_propagateWound", [_target, _mostEffectiveInjury]] call CFUNC(globalEvent);
 };
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {

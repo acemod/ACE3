@@ -23,7 +23,7 @@ private _dlgRangefinder = uiNamespace getVariable ["ACE_dlgRangefinder", display
 private _distance = parseNumber ctrlText (_dlgRangefinder displayCtrl 151);
 
 if (_distance == 0) then {
-    _distance = _this call EFUNC(common,getTargetDistance);
+    _distance = _this call CFUNC(getTargetDistance);
 } else {
     // Is distance out of bound?
     _distance = _distance min _maxDistance;

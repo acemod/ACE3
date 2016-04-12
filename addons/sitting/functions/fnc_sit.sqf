@@ -39,8 +39,8 @@ private _sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDire
 private _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
 
 // Get random animation and perform it (before moving player to ensure correct placement)
-[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
-[_player, "", 1] call EFUNC(common,doAnimation); // Correctly applies animation's config values (such as disallow throwing of grenades, intercept keybinds... etc).
+[_player, call FUNC(getRandomAnimation), 2] call CFUNC(doAnimation); // Correctly places when using non-transitional animations
+[_player, "", 1] call CFUNC(doAnimation); // Correctly applies animation's config values (such as disallow throwing of grenades, intercept keybinds... etc).
 
 // Set direction and position
 _player setDir _sitDirection;

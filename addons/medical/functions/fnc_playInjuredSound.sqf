@@ -25,7 +25,7 @@ if ((_unit getVariable [QGVAR(playingInjuredSound),false])) exitWith {};
 _unit setVariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
-if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
+if (_pain > 0 && {[_unit] call CFUNC(isAwake)}) exitWith {
     // Classnames of the available sounds.
     _availableSounds_A = [
         "WoundedGuyA_01",
@@ -76,7 +76,7 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Clean up the lock
     [{
         (_this select 0) setVariable [QGVAR(playingInjuredSound),nil];
-    }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
+    }, [_unit], _delay, _delay] call CFUNC(waitAndExecute);
 };
 
 // Clean up in case there has not been played any sounds.

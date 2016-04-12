@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventHandler);
+["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CFUNC(addEventHandler);
 
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];
@@ -8,4 +8,4 @@ if (isServer) then {
 
 [QGVAR(resetLocal), {
     _this call FUNC(resetLocal);
-}] call EFUNC(common,addEventHandler);
+}] call CFUNC(addEventHandler);

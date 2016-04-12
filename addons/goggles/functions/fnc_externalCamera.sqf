@@ -19,7 +19,7 @@
 if ((!isNil {is3DEN}) && {is3DEN}) exitWith {true};
 
 if (GVAR(showInThirdPerson)) then {
-    cameraView in ["GROUP"] || EFUNC(common,isFeatureCameraActive) 
+    cameraView in ["GROUP"] || CFUNC(isFeatureCameraActive) 
 } else {
-    cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive) 
+    cameraView in ["EXTERNAL", "GROUP"] || CFUNC(isFeatureCameraActive) 
 };

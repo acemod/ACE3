@@ -3,7 +3,7 @@
 ["ACE3 Vehicles", QGVAR(lazeTarget), localize LSTRING(LaseTarget),
 {
     // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if !((!GVAR(enabled) && FUNC(canUseFCS)) || FUNC(canUseRangefinder)) exitWith {false};
 
@@ -11,7 +11,7 @@
     GVAR(isDownStateKey1) = true;
 
     // Statement
-    [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyDown);
+    [vehicle ACE_player, [ACE_player] call CFUNC(getTurretIndex)] call FUNC(keyDown);
     // Return false so it doesn't block the rest weapon action
     false
 },
@@ -20,12 +20,12 @@
     GVAR(isDownStateKey1) = false;
 
     // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(GVAR(enabled) && FUNC(canUseFCS)) exitWith {false};
 
     // Statement
-    [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyUp);
+    [vehicle ACE_player, [ACE_player] call CFUNC(getTurretIndex)] call FUNC(keyUp);
     false
 },
 [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
@@ -33,12 +33,12 @@
 ["ACE3 Vehicles", QGVAR(adjustRangeUp), localize LSTRING(AdjustRangeUp),
 {
     // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(call FUNC(canUseFCS)) exitWith {false};
 
     // Statement
-    [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), 50] call FUNC(adjustRange);
+    [vehicle ACE_player, [ACE_player] call CFUNC(getTurretIndex), 50] call FUNC(adjustRange);
     true
 },
 {false},
@@ -47,12 +47,12 @@
 ["ACE3 Vehicles", QGVAR(adjustRangDown), localize LSTRING(AdjustRangeDown),
 {
     // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call CFUNC(canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(call FUNC(canUseFCS)) exitWith {false};
 
     // Statement
-    [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex), -50] call FUNC(adjustRange);
+    [vehicle ACE_player, [ACE_player] call CFUNC(getTurretIndex), -50] call FUNC(adjustRange);
     true
 },
 {false},

@@ -3,7 +3,7 @@
  * Display Grenade information on grenade throw. Called from the unified fired EH only for the local player.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return Value:
  * None

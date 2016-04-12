@@ -21,7 +21,7 @@ params ["_unit", "_key"];
 if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_Trenches", false] call CFUNC(statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(trench);
@@ -33,6 +33,6 @@ GVAR(digPFH) = -1;
 // remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
-[_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call CFUNC(removeActionEventHandler);
 
 _unit setVariable [QGVAR(isPlacing), false, true];

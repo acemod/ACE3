@@ -40,7 +40,7 @@ GVAR(deployPFH) = [{
     _args params ["_wireNoGeo", "_wireNoGeoPos", "_unit"];
 
     private ["_range", "_posStart", "_posEnd", "_dirVect", "_dir", "_anim", "_wire"];
-    _posStart = (_wireNoGeo modelToWorldVisual (_wireNoGeo selectionPosition "start")) call EFUNC(common,positionToASL);
+    _posStart = (_wireNoGeo modelToWorldVisual (_wireNoGeo selectionPosition "start")) call CFUNC(positionToASL);
     _posEnd = (getPosASL _unit) vectorAdd (vectorDir _unit);
     _dirVect = _posStart vectorDiff _posEnd;
     _dir = _dirVect call CBA_fnc_vectDir;
@@ -64,7 +64,7 @@ GVAR(deployPFH) = [{
             };
         }, 0, [_wireNoGeo, _wire, _anim, _dir, _wireNoGeoPos]] call CBA_fnc_addPerFrameHandler;
 
-        [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(Common,removeActionEventHandler);
+        [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call CFUNC(removeActionEventHandler);
         call EFUNC(interaction,hideMouseHint);
 
         [_idPFH] call CBA_fnc_removePerFrameHandler;
@@ -82,4 +82,4 @@ GVAR(placer) setVariable [QGVAR(Deploy),
     [GVAR(placer), "DefaultAction",
     {GVAR(deployPFH) != -1},
     {GVAR(placer) setVariable [QGVAR(wireDeployed), true]}
-] call EFUNC(common,AddActionEventHandler)];
+] call CFUNC(AddActionEventHandler)];

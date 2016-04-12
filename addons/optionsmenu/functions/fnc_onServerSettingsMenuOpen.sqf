@@ -51,10 +51,10 @@ GVAR(serverSideValues) = [];
             GVAR(serverSideValues) pushBack _setting;
         };
     };
-} forEach EGVAR(common,settings);
+} forEach CGVAR(settings);
 
 //Delay a frame
-[{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+[{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call CFUNC(execNextFrame);
 
 disableSerialization;
 _menu = uiNamespace getVariable "ACE_serverSettingsMenu";

@@ -7,7 +7,7 @@ class CfgVehicles {
                     displayName = CSTRING(DigEnvelopeSmall);
                     condition = QUOTE([ARR_2(_this select 0,'ace_trenches_trenchSmall')] call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchSmall')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchSmall')])] call CFUNC(execNextFrame));
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
@@ -17,7 +17,7 @@ class CfgVehicles {
                     displayName = CSTRING(DigEnvelopeBig);
                     condition = QUOTE([ARR_2(_this select 0,'ace_trenches_trenchBig')] call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchBig')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ace_trenches_trenchBig')])] call CFUNC(execNextFrame));
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;

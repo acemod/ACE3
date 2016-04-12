@@ -34,7 +34,7 @@ private _hitPointNewDamage = (_hitPointCurDamage - 0.5) max _postRepairDamageMin
 if (_hitPointNewDamage < _hitPointCurDamage) then {
     // raise event to set the new hitpoint damage
     TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
-    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPointIndex, _hitPointNewDamage]] call EFUNC(common,targetEvent);
+    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPointIndex, _hitPointNewDamage]] call CFUNC(targetEvent);
     _hitPointCurDamage = _hitPointNewDamage;
 };
 
@@ -55,7 +55,7 @@ if (isArray _hitpointGroupConfig) then {
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
                     if (_subPointNewDamage < _subPointCurDamage) then {
                         TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
-                        ["setVehicleHitPointDamage", _vehicle, [_vehicle, _subHitIndex, _subPointNewDamage]] call EFUNC(common,targetEvent);
+                        ["setVehicleHitPointDamage", _vehicle, [_vehicle, _subHitIndex, _subPointNewDamage]] call CFUNC(targetEvent);
                     };
                 };
             } forEach _subHitArray;
@@ -71,5 +71,5 @@ if (GVAR(DisplayTextOnRepair)) then {
     ([_hitPointClassname, _textLocalized, _textDefault] call FUNC(getHitPointString)) params ["_text"];
 
     // Display text
-    [_text] call EFUNC(common,displayTextStructured);
+    [_text] call CFUNC(displayTextStructured);
 };

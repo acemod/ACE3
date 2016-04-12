@@ -22,7 +22,7 @@ private ["_ammo", "_dummyName", "_dummy", "_actionID"];
 params [["_args", [objNull, "", objNull], [[]]]];
 _args params ["_unit", "_magazineClass", "_target"]; // _target is for future possible finite ammo
 
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QGVAR(vehRearm), true] call CFUNC(statusEffect_set);
 _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 

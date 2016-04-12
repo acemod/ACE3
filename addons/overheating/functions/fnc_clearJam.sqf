@@ -49,20 +49,20 @@ if (_weapon in _jammedWeapons) then {
         _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
         if (_jammedWeapons isEqualTo []) then {
             private _id = _unit getVariable [QGVAR(JammingActionID), -1];
-            [_unit, "DefaultAction", _id] call EFUNC(common,removeActionEventHandler);
+            [_unit, "DefaultAction", _id] call CFUNC(removeActionEventHandler);
             _unit setVariable [QGVAR(JammingActionID), -1];
         };
         if (GVAR(DisplayTextOnJam)) then {
             [{
-                [localize LSTRING(WeaponUnjammed)] call EFUNC(common,displayTextStructured);
-            }, [], _delay] call EFUNC(common,waitAndExecute);
+                [localize LSTRING(WeaponUnjammed)] call CFUNC(displayTextStructured);
+            }, [], _delay] call CFUNC(waitAndExecute);
         };
     } else {
         // Failure
         if (GVAR(DisplayTextOnJam)) then {
             [{
-                [localize LSTRING(WeaponUnjamFailed)] call EFUNC(common,displayTextStructured);
-            }, [], _delay] call EFUNC(common,waitAndExecute);
+                [localize LSTRING(WeaponUnjamFailed)] call CFUNC(displayTextStructured);
+            }, [], _delay] call CFUNC(waitAndExecute);
         };
     };
 };

@@ -33,10 +33,10 @@ _position = _position vectorAdd [0, 0, _offset];
 // attach object
 TRACE_3("attaching",_position,_offset,_direction);
 _target attachTo [_unit, _position];
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+["setDir", _target, [_target, _direction]] call CFUNC(targetEvent);
 
 if (_target isKindOf "CAManBase") then {
-    [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
+    [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call CFUNC(doAnimation);
 };
 
 _unit setVariable [QGVAR(isDragging), true, true];
@@ -47,7 +47,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     _unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
-] call EFUNC(common,addActionEventHandler)];
+] call CFUNC(addActionEventHandler)];
 
 // show mouse hint
 [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
@@ -59,7 +59,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
-private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+private _UAVCrew = _target call CFUNC(getVehicleUAVCrew);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

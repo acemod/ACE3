@@ -21,11 +21,11 @@ TRACE_2("params",_player,_weapon);
 
 // Make the standing player kneel down
 if (stance _player != "PRONE") then {
-    [_player, "amovpknlmstpsraswrfldnon", 1] call EFUNC(common,doAnimation);
+    [_player, "amovpknlmstpsraswrfldnon", 1] call CFUNC(doAnimation);
 };
 
 // Barrel dismount gesture
 _player playActionNow QGVAR(GestureDismountMuzzle);
 playSound "ACE_BarrelSwap";
 
-[5, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
+[5, [_player, _weapon], {(_this select 0) call FUNC(swapBarrelCallback)}, {}, (localize LSTRING(SwappingBarrel))] call CFUNC(progressBar);

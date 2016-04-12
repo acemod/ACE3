@@ -23,11 +23,11 @@ if (ACE_player == _unit) then {
     GVAR(unitGear) = [];
 
     if (GVAR(SavePreDeathGear)) then {
-        GVAR(unitGear) = [_unit] call EFUNC(common,getAllGear);
+        GVAR(unitGear) = [_unit] call CFUNC(getAllGear);
         GVAR(unitGear) append [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit];
     };
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {
-    [_this, QUOTE(DFUNC(showFriendlyFireMessage)), 2] call EFUNC(common,execRemoteFnc);
+    [_this, QUOTE(DFUNC(showFriendlyFireMessage)), 2] call CFUNC(execRemoteFnc);
 };

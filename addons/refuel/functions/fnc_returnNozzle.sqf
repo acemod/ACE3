@@ -31,7 +31,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         detach _nozzle;
-        [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", "ACE_refuel", false] call CFUNC(statusEffect_set);
         REFUEL_UNHOLSTER_WEAPON
         _unit setVariable [QGVAR(isRefueling), false];
         private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
@@ -48,13 +48,13 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         };
         deleteVehicle _nozzle;
 
-        ["setVanillaHitPointDamage", _target, [_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]] ] ] call EFUNC(common,objectEvent);
+        ["setVanillaHitPointDamage", _target, [_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]] ] ] call CFUNC(objectEvent);
         _target setVariable [QGVAR(engineHit), nil, true];
     },
     "",
     localize LSTRING(ReturnAction),
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);
 
 true

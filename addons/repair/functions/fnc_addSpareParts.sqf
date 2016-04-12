@@ -22,11 +22,11 @@ params ["_vehicle", ["_amount", 1], ["_part", ""], ["_force", false]];
 TRACE_2("params",_vehicle,_amount);
 
 // Exit if ace_cargo is not loaded
-if !(["ace_cargo"] call EFUNC(common,isModLoaded)) exitWith {};
+if !(["ace_cargo"] call CFUNC(isModLoaded)) exitWith {};
 
 // Collect until SettingsInitialized
-if (!EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSpareParts), _this];
+if (!CGVAR(settingsInitFinished)) exitWith {
+    CGVAR(runAtSettingsInitialized) pushBack [FUNC(addSpareParts), _this];
 };
 
 // Exit if not forced and add spare parts is disabled (after settings initted to make sure it really is)
@@ -41,4 +41,4 @@ if (_part == "") then {
 if (_part == "") exitWith {};
 
 // Load
-["AddCargoByClass", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);
+["AddCargoByClass", [_part, _vehicle, _amount]] call CFUNC(localEvent);

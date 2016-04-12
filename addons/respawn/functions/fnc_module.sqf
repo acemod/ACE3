@@ -23,8 +23,8 @@ if !(_activated) exitWith {};
 
 GVAR(Module) = true;
 
-[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(SavePreDeathGear),             "SavePreDeathGear"]             call CFUNC(readSettingFromModule);
+[_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call CFUNC(readSettingFromModule);
 
 if (isServer && {GVAR(RemoveDeadBodiesDisconnected)}) then {
     addMissionEventHandler ["HandleDisconnect", {
@@ -35,7 +35,7 @@ if (isServer && {GVAR(RemoveDeadBodiesDisconnected)}) then {
                 deleteVehicle _unit;
             };
         },
-        _this, 4] call EFUNC(common,waitAndExecute);
+        _this, 4] call CFUNC(waitAndExecute);
         false
     }];
 };

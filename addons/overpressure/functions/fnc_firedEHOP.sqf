@@ -3,7 +3,7 @@
  * Handle fire of Vehicle Weapons. Called from the unified fired EH only for the local player vehicle.
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * None. Parameters inherited from CFUNC(firedEH)
  *
  * Return value:
  * None
@@ -40,31 +40,31 @@ private _direction = vectorDir _projectile;
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
+["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call CFUNC(targetEvent);
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange),
         [1,0,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
 
-    private _ref = _direction call EFUNC(common,createOrthonormalReference);
+    private _ref = _direction call CFUNC(createOrthonormalReference);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
     [   _position,
         _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
         [1,1,0,1]
-    ] call EFUNC(common,addLineToDebugDraw);
+    ] call CFUNC(addLineToDebugDraw);
 
 #endif

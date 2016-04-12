@@ -20,7 +20,7 @@ params ["_unit", "_weapon"];
 
 if (_weapon == "") exitWith {};
 
-private _muzzles = _weapon call EFUNC(common,getWeaponMuzzles);
+private _muzzles = _weapon call CFUNC(getWeaponMuzzles);
 
 if (currentWeapon _unit != _weapon) exitWith {
     if (count _muzzles > 1) then {

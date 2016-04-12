@@ -19,8 +19,8 @@ params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
 // only run this after the settings are initialized
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
+if !(CGVAR(settingsInitFinished)) exitWith {
+    CGVAR(runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
 };
 
 // Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)

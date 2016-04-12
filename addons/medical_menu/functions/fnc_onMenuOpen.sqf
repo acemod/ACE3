@@ -22,7 +22,7 @@ params ["_display"];
 
 if (isNil "_display") exitWith {};
 
-if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call EFUNC(common,blurScreen);};
+if (EGVAR(interact_menu,menuBackground)==1) then {[QGVAR(id), true] call CFUNC(blurScreen);};
 if (EGVAR(interact_menu,menuBackground)==2) then {0 cutRsc[QEGVAR(interact_menu,menuBackground), "PLAIN", 1, false];};
 
 if (isNil QGVAR(LatestDisplayOptionMenu)) then {
@@ -61,7 +61,7 @@ disableSerialization;
 (_display displayCtrl 306) ctrlSetTooltip localize LSTRING(SELECT_LEG_L);
 (_display displayCtrl 2001) ctrlSetTooltip localize LSTRING(SELECT_TRIAGE_STATUS);
 
-(_display displayCtrl 1) ctrlSetText format ["%1", [_target] call EFUNC(common,getName)];
+(_display displayCtrl 1) ctrlSetText format ["%1", [_target] call CFUNC(getName)];
 setMousePosition [0.4, 0.4];
 
 if (GVAR(MenuPFHID) != -1) exitWith {ERROR("PFID already running");};
@@ -77,14 +77,14 @@ GVAR(MenuPFHID) = [{
     [GVAR(LatestDisplayOptionMenu)] call FUNC(handleUI_DisplayOptions);
 
     //Check that it's valid to stay open:
-    if !(([ACE_player, GVAR(INTERACTION_TARGET), ["isNotInside"]] call EFUNC(common,canInteractWith)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call FUNC(canOpenMenu)}) then {
+    if !(([ACE_player, GVAR(INTERACTION_TARGET), ["isNotInside"]] call CFUNC(canInteractWith)) && {[ACE_player, GVAR(INTERACTION_TARGET)] call FUNC(canOpenMenu)}) then {
         closeDialog 314412;
         //If we failed because of distance check, show UI message:
         if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
-            ["displayTextStructured", [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2, ACE_player]] call EFUNC(common,localEvent);
+            ["displayTextStructured", [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call CFUNC(getName)], 2, ACE_player]] call CFUNC(localEvent);
         };
     };
 
 }, 0, [_display]] call CBA_fnc_addPerFrameHandler;
 
-["Medical_onMenuOpen", [ACE_player, _target]] call EFUNC(common,localEvent);
+["Medical_onMenuOpen", [ACE_player, _target]] call CFUNC(localEvent);

@@ -47,4 +47,4 @@ if (isNull _vehicle) then {
 if (isNull _vehicle) exitWith {ERROR("");};
 
 _unit setVariable [QGVAR(isEscorting), false, true];
-["MoveInCaptive", [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
+["MoveInCaptive", [_target], [_target, _vehicle]] call CFUNC(targetEvent);

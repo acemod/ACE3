@@ -20,13 +20,13 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // remove drop action
-[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "DefaultAction", _unit getVariable [QGVAR(ReleaseActionID), -1]] call CFUNC(removeActionEventHandler);
 
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 // prevent collision damage
-["fixCollision", _unit] call EFUNC(common,localEvent);
-["fixCollision", _target, _target] call EFUNC(common,targetEvent);
+["fixCollision", _unit] call CFUNC(localEvent);
+["fixCollision", _target, _target] call CFUNC(targetEvent);
 
 // release object
 detach _target;
@@ -34,13 +34,13 @@ detach _target;
 // fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-        [_unit, "", 2, true] call EFUNC(common,doAnimation);
+        [_unit, "", 2, true] call CFUNC(doAnimation);
     };
 
     if (_target getVariable ["ACE_isUnconscious", false]) then {
-        [_target, "unconscious", 2, true] call EFUNC(common,doAnimation);
+        [_target, "unconscious", 2, true] call CFUNC(doAnimation);
     } else {
-        [_target, "", 2, true] call EFUNC(common,doAnimation);  //@todo
+        [_target, "", 2, true] call CFUNC(doAnimation);  //@todo
     };
 };
 
@@ -50,7 +50,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 // reselect weapon and re-enable sprint
 _unit selectWeapon primaryWeapon _unit;
 
-[_unit, "forceWalk", "ACE_dragging", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", "ACE_dragging", false] call CFUNC(statusEffect_set);
 
 // prevent object from flipping inside buildings
 if (_inBuilding) then {
@@ -64,11 +64,11 @@ _unit setVariable [QGVAR(isCarrying), false, true];
 _unit setVariable [QGVAR(carriedObject), objNull, true];
 
 // make object accesable for other units
-[objNull, _target, true] call EFUNC(common,claim);
+[objNull, _target, true] call CFUNC(claim);
 
 if !(_target isKindOf "CAManBase") then {
-    ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
-    ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+    ["fixPosition", _target, _target] call CFUNC(targetEvent);
+    ["fixFloating", _target, _target] call CFUNC(targetEvent);
 };
 
 // recreate UAV crew

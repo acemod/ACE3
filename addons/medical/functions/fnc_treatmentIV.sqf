@@ -23,13 +23,13 @@ if (count _items == 0) exitWith {false};
 
 _removeItem = _items select 0;
 if (local _target) then {
-    ["treatmentIVLocal", [_target, _className]] call EFUNC(common,localEvent);
+    ["treatmentIVLocal", [_target, _className]] call CFUNC(localEvent);
 } else {
-    ["treatmentIVLocal", _target, [_target, _className]] call EFUNC(common,targetEvent);
+    ["treatmentIVLocal", _target, [_target, _className]] call CFUNC(targetEvent);
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);
-[_target, "activity", LSTRING(Activity_gaveIV), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_gaveIV), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+[_target, "activity", LSTRING(Activity_gaveIV), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_gaveIV), [[_caller, false, true] call CFUNC(getName)]] call FUNC(addToLog); // TODO expand message
 
 true

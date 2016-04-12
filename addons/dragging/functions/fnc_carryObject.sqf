@@ -27,8 +27,8 @@ private _direction = _target getVariable [QGVAR(carryDirection), 0];
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
 
-    [_unit, "AcinPercMstpSnonWnonDnon", 2, true] call EFUNC(common,doAnimation);
-    [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call EFUNC(common,doAnimation);
+    [_unit, "AcinPercMstpSnonWnonDnon", 2, true] call CFUNC(doAnimation);
+    [_target, "AinjPfalMstpSnonWnonDf_carried_dead", 2, true] call CFUNC(doAnimation);
 
     // attach person
     _target attachTo [_unit, _position, "LeftShoulder"];
@@ -44,7 +44,7 @@ if (_target isKindOf "CAManBase") then {
     _target attachTo [_unit, _position];
 
 };
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+["setDir", _target, [_target, _direction]] call CFUNC(targetEvent);
 
 _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
@@ -54,7 +54,7 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     _unit, "DefaultAction",
     {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
     {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
-] call EFUNC(common,addActionEventHandler)];
+] call CFUNC(addActionEventHandler)];
 
 // show mouse hint
 if (_target isKindOf "CAManBase") then {
@@ -70,7 +70,7 @@ if (_target isKindOf "CAManBase") then {
 GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
-private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+private _UAVCrew = _target call CFUNC(getVehicleUAVCrew);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

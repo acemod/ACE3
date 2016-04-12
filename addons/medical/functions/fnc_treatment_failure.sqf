@@ -36,7 +36,7 @@ if (vehicle _caller == _caller) then {
         case "ainvpknlmstpslaywpstdnon_medic": {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
     };
 
-    [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
+    [_caller, _lastAnim, 2] call CFUNC(doAnimation);
 };
 _caller setVariable [QGVAR(treatmentPrevAnimCaller), nil];
 

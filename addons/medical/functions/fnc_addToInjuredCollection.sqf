@@ -18,7 +18,7 @@ params ["_unit", ["_force", false]];
 if ([_unit] call FUNC(hasMedicalEnabled) || _force) then {
 
     if !(local _unit) exitWith {
-        ["addToInjuredCollection", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
+        ["addToInjuredCollection", _unit, [_unit, _force]] call CFUNC(targetEvent);
     };
 
     if ((_unit getVariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force) exitWith{};

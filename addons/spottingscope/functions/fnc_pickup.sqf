@@ -25,6 +25,6 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 [{
     params ["_spottingScope", "_unit"];
 
-    [_unit, "ACE_SpottingScope"] call EFUNC(common,addToInventory);
+    [_unit, "ACE_SpottingScope"] call CFUNC(addToInventory);
     deleteVehicle _spottingScope;
-}, [_spottingScope, _unit], 1, 0]call EFUNC(common,waitAndExecute);
+}, [_spottingScope, _unit], 1, 0]call CFUNC(waitAndExecute);

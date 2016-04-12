@@ -26,4 +26,4 @@ params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_vehic
     format [localize LSTRING(BasicRearmAction), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

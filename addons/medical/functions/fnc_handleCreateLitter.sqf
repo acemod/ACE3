@@ -29,7 +29,7 @@ _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
 _litterObject setPosATL _position;
 // Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
-[{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
+[{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call CFUNC(execNextFrame);
 
 _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {

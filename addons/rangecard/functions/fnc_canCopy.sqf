@@ -15,4 +15,4 @@
  */
 #include "script_component.hpp"
 
-((primaryWeapon _this) != "" && [_this] call EFUNC(common,isPlayer) && [_this, "ACE_RangeCard"] call EFUNC(common,hasItem))
+((primaryWeapon _this) != "" && [_this] call CFUNC(isPlayer) && [_this, "ACE_RangeCard"] call CFUNC(hasItem))

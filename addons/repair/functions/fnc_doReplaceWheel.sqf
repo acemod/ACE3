@@ -25,7 +25,7 @@ params ["_unit", "_vehicle", "_hitPoint", "", "", "", "_claimedObjects"];
 TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
 _claimedObjects params [["_wheel", objNull]];
-if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
+if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call CFUNC(canInteractWith))}) exitWith {
     ACE_LOGWARNING_1("Bad Claimed Wheel", _claimedObjects);
 };
 
@@ -44,9 +44,9 @@ if (_newHitPointDamage >= 1) exitWith {};
 deleteVehicle _wheel;
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _newHitPointDamage]] call EFUNC(common,targetEvent);
+["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _newHitPointDamage]] call CFUNC(targetEvent);
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {
-    [LSTRING(ReplacedWheel)] call EFUNC(common,displayTextStructured);
+    [LSTRING(ReplacedWheel)] call CFUNC(displayTextStructured);
 };

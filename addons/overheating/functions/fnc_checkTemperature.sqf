@@ -29,4 +29,4 @@ if (_action == "") then {
 _player playActionNow _action;
 
 // Waits a sec before displaying the temperature
-[FUNC(displayTemperature), [_player, _weapon], 1.0] call EFUNC(common,waitAndExecute);
+[FUNC(displayTemperature), [_player, _weapon], 1.0] call CFUNC(waitAndExecute);

@@ -58,4 +58,4 @@ REARM_HOLSTER_WEAPON
     format [localize LSTRING(TakeAction), getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],
     {true},
     ["isnotinside"]
-] call EFUNC(common,progressBar);
+] call CFUNC(progressBar);

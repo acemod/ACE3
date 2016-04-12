@@ -49,4 +49,4 @@
         GVAR(serverModulesRead) = true;
         publicVariable QGVAR(serverModulesRead);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CFUNC(addEventhandler);

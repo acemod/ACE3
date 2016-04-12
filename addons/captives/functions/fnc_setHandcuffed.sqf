@@ -25,12 +25,12 @@ if (!local _unit) exitWith {
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
     // It's to soon to call this function, delay it
-    if (EGVAR(common,settingsInitFinished)) then {
+    if (CGVAR(settingsInitFinished)) then {
         // Settings are already initialized, but the small wait isn't over
-        [DFUNC(setHandCuffed), _this, 0.05] call EFUNC(common,waitAndExecute);
+        [DFUNC(setHandCuffed), _this, 0.05] call CFUNC(waitAndExecute);
     } else {
         // Settings are not initialized yet
-        [DFUNC(setHandCuffed), _this] call EFUNC(common,runAfterSettingsInit);
+        [DFUNC(setHandCuffed), _this] call CFUNC(runAfterSettingsInit);
     };
 };
 
@@ -40,7 +40,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(Handcuffed), true] call CFUNC(statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -50,7 +50,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false]] call CFUNC(showHud);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -59,11 +59,11 @@ if (_state) then {
         if (!(_unit getVariable [QGVAR(isHandcuffed), false])) exitWith {};
 
         if ((vehicle _unit) == _unit) then {
-            [_unit] call EFUNC(common,fixLoweredRifleAnimation);
-            [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+            [_unit] call CFUNC(fixLoweredRifleAnimation);
+            [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call CFUNC(doAnimation);
         } else {
-            [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-            [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
+            [_unit, "ACE_HandcuffedFFV", 2] call CFUNC(doAnimation);
+            [_unit, "ACE_HandcuffedFFV", 1] call CFUNC(doAnimation);
         };
 
         //Adds an animation changed eh
@@ -79,7 +79,7 @@ if (_state) then {
             if (_unit == (vehicle _unit)) then {
                 if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
                     TRACE_1("Handcuff animation interrupted",_newAnimation);
-                    [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
+                    [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call CFUNC(doAnimation);
                 };
             } else {
                 _turretPath = [];
@@ -91,17 +91,17 @@ if (_state) then {
                 if (_turretPath isEqualTo []) exitWith {};
 
                 TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
-                [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-                [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
+                [_unit, "ACE_HandcuffedFFV", 2] call CFUNC(doAnimation);
+                [_unit, "ACE_HandcuffedFFV", 1] call CFUNC(doAnimation);
             };
         }];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 
-    }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
+    }, [_unit], 0.01] call CFUNC(waitAndExecute);
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
-    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(Handcuffed), false] call CFUNC(statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
@@ -111,7 +111,7 @@ if (_state) then {
 
     if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         //Break out of hands up animation loop
-        [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
+        [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call CFUNC(doAnimation);
     };
 
     if (_unit getVariable [QGVAR(CargoIndex), -1] != -1) then {
@@ -119,9 +119,9 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+        ["captive", []] call CFUNC(showHud); //same as showHud true;
     };
 };
 
 //Global Event after changes:
-["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call EFUNC(common,globalEvent);
+["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call CFUNC(globalEvent);

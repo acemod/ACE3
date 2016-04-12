@@ -28,7 +28,7 @@ _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 
 // remove action if all weapons have put their safety on
 if (_safedWeapons isEqualTo []) then {
-    [_unit, "DefaultAction", _unit getVariable [QGVAR(actionID), -1]] call EFUNC(common,removeActionEventHandler);
+    [_unit, "DefaultAction", _unit getVariable [QGVAR(actionID), -1]] call CFUNC(removeActionEventHandler);
     _unit setVariable [QGVAR(actionID), -1];
 };
 
@@ -71,4 +71,4 @@ if (inputAction "nextWeapon" > 0) then {
 
 // show info box
 _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-[localize LSTRING(TookOffSafety), _picture] call EFUNC(common,displayTextPicture);
+[localize LSTRING(TookOffSafety), _picture] call CFUNC(displayTextPicture);

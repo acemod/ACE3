@@ -170,12 +170,12 @@ if (_activated) then {
                             };
                         } forEach (curatoreditableobjects _logic);
                     };
-                },[_logic,_player]] call EFUNC(common,execNextFrame);
+                },[_logic,_player]] call CFUNC(execNextFrame);
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 // Added by ace_zeus
-                ["zeusUnitAssigned", [_logic,_player]] call EFUNC(common,globalEvent);
+                ["zeusUnitAssigned", [_logic,_player]] call CFUNC(globalEvent);
 
                 //--- Forced interface
                 //if (_forced) then {
@@ -244,7 +244,7 @@ if (_activated) then {
                     }
                 ];
             };
-        },[_logic]] call EFUNC(common,execNextFrame);
+        },[_logic]] call CFUNC(execNextFrame);
     };
 
     //--- Player

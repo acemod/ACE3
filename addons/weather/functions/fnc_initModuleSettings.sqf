@@ -23,17 +23,17 @@ params ["_logic", "_units", "_activated"];
 if !(_activated) exitWith {};
 
 // Control server side weather propagation
-[_logic, QGVAR(enableServerController), "enableServerController"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enableServerController), "enableServerController"] call CFUNC(readSettingFromModule);
 
 // Overrides the default weather (editor, mission settings) with ACE weather (map based)
-[_logic, QGVAR(useACEWeather), "useACEWeather"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useACEWeather), "useACEWeather"] call CFUNC(readSettingFromModule);
 
 // Control client side weather effects
-[_logic, QGVAR(syncRain), "syncRain"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(syncWind), "syncWind"] call EFUNC(common,readSettingFromModule); // Wind, Gusts, Waves
-[_logic, QGVAR(syncMisc), "syncMisc"] call EFUNC(common,readSettingFromModule); // Lightnings, Rainbow, Fog
+[_logic, QGVAR(syncRain), "syncRain"] call CFUNC(readSettingFromModule);
+[_logic, QGVAR(syncWind), "syncWind"] call CFUNC(readSettingFromModule); // Wind, Gusts, Waves
+[_logic, QGVAR(syncMisc), "syncMisc"] call CFUNC(readSettingFromModule); // Lightnings, Rainbow, Fog
 
 // Server weather update interval
-[_logic, QGVAR(serverUpdateInterval), "serverUpdateInterval"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(serverUpdateInterval), "serverUpdateInterval"] call CFUNC(readSettingFromModule);
 
 GVAR(serverUpdateInterval) = 1 max GVAR(serverUpdateInterval) min 600;

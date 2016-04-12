@@ -23,8 +23,8 @@ private _type = typeOf _seat;
 if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canSit)) != 1) exitWith {};
 
 // only run this after the settings are initialized
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSitActions), _this];
+if !(CGVAR(settingsInitFinished)) exitWith {
+    CGVAR(runAtSettingsInitialized) pushBack [FUNC(addSitActions), _this];
 };
 
 //If not enabled, don't add actions:

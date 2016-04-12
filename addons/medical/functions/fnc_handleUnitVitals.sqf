@@ -102,7 +102,7 @@ if (GVAR(level) >= 2) then {
         [_unit] call FUNC(setDead);
     };
 
-    if ([_unit] call EFUNC(common,isAwake)) then {
+    if ([_unit] call CFUNC(isAwake)) then {
         if (_bloodVolume < 60) then {
             if (random(1) > 0.9) then {
                 [_unit, true, 15 + random(20)] call FUNC(setUnconscious);

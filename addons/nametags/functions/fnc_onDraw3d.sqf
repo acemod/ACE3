@@ -59,7 +59,7 @@ switch (GVAR(showPlayerNames)) do {
     };
 };
 
-private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
+private _ambientBrightness = ((([] call CFUNC(ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
 private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
@@ -81,7 +81,7 @@ if (_enabledTagsCursor) then {
 
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
-        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+        {GVAR(showNamesForAI) || {[_target] call CFUNC(isPlayer)}} &&
         {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
@@ -109,7 +109,7 @@ if (_enabledTagsNearby) then {
         _nearMen = _nearMen select {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
-            {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+            {GVAR(showNamesForAI) || {[_x] call CFUNC(isPlayer)}} &&
             {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
             {!isObjectHidden _x}
         };
@@ -118,13 +118,13 @@ if (_enabledTagsNearby) then {
             _crewMen = (crew vehicle ACE_player) select {
                 _x != ACE_player &&
                 {(side group _x) == (side group ACE_player)} &&
-                {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+                {GVAR(showNamesForAI) || {[_x] call CFUNC(isPlayer)}} &&
                 {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
                 {!isObjectHidden _x}
             };
         };
         (_nearMen + _crewMen)
-    }, missionNamespace, QGVAR(nearMen), 0.5] call EFUNC(common,cachedCall);
+    }, missionNamespace, QGVAR(nearMen), 0.5] call CFUNC(cachedCall);
 
     {
         private _target = _x;

@@ -38,8 +38,8 @@ TRACE_1("params",_vehicle);
         };
         if ((_lock && {(locked _vehicle) != 2}) || {!_lock && {(locked _vehicle) != 0}}) then {
             TRACE_3("Setting Lock State",_lock,(typeOf _vehicle),_vehicle);
-            ["VehicleLock_SetVehicleLock", [_vehicle], [_vehicle, _lock]] call EFUNC(common,targetEvent);
+            ["VehicleLock_SetVehicleLock", [_vehicle], [_vehicle, _lock]] call CFUNC(targetEvent);
         };
     };
     //Delay call until mission start (so everyone has the eventHandler's installed)
-}, [_vehicle], 0.25] call EFUNC(common,waitAndExecute);
+}, [_vehicle], 0.25] call CFUNC(waitAndExecute);

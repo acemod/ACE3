@@ -36,7 +36,7 @@ if (vehicle _caller == _caller) then {
         case "ainvpknlmstpslaywpstdnon_medic": {_lastAnim = "AmovPknlMstpSrasWpstDnon"};
     };
 
-    [_caller, _lastAnim, 2] call EFUNC(common,doAnimation);
+    [_caller, _lastAnim, 2] call CFUNC(doAnimation);
 };
 _caller setVariable [QGVAR(treatmentPrevAnimCaller), nil];
 
@@ -95,4 +95,4 @@ if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
     [_target] call FUNC(addToInjuredCollection);
 };
 
-["medical_treatmentSuccess", [_caller, _target, _selectionName, _className]] call EFUNC(common,localEvent);
+["medical_treatmentSuccess", [_caller, _target, _selectionName, _className]] call CFUNC(localEvent);

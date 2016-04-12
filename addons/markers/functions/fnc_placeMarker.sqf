@@ -30,7 +30,7 @@ if (_closeNum == 1) then {
                 GETGVAR(currentMarkerPosition,[]),
                 GETGVAR(currentMarkerAngle,0)
             ]
-        ]] call EFUNC(common,globalEvent);
+        ]] call CFUNC(globalEvent);
 
-    }, []] call EFUNC(common,execNextFrame);
+    }, []] call CFUNC(execNextFrame);
 };

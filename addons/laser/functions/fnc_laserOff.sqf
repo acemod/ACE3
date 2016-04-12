@@ -13,4 +13,4 @@
 
 private ["_uuid"];
 _uuid = _this select 0;
-["laser_laserOff", [_uuid]] call EFUNC(common,globalEvent);
+["laser_laserOff", [_uuid]] call CFUNC(globalEvent);
