@@ -209,7 +209,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
-        GVAR(friesAttachmentPoint)[] = {1.04, 2.5, -0.34};
+        GVAR(friesAttachmentPoint)[] = {-1.04, 2.5, -0.34};
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {
