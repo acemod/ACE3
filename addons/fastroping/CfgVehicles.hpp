@@ -73,6 +73,10 @@ class CfgVehicles {
     class ACE_friesBase: Helicopter_Base_F {
         destrType = "";
         class Turrets {};
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
