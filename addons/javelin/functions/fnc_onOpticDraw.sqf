@@ -99,7 +99,10 @@ if (_range > 50 && {_range < 2500}) then {
 };
 
 if (isNull _newTarget) then {
-    _newTarget = cursorTarget;
+    private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorTarget, ace_player, cursorTarget, true, 1];
+    if (_intersectionsToCursorTarget isEqualTo []) then {
+        _newTarget = cursorTarget;
+    };
 };
 
 // Create constants
