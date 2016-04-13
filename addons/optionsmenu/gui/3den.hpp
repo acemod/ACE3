@@ -162,7 +162,7 @@ class GVAR(scalarCombo): ctrlControlsGroupNoScrollbars {
         class Value: ctrlCombo {
             idc = 3000;
             x = "(25+319) * pixelW";
-            w = "516 * pixelW";
+            w = "506 * pixelW";
             h = "25 * pixelH";
             onLbSelChanged = "_ctrlCheckbox = _this select 0; _ctrlGroup = ctrlParentControlsGroup _ctrlCheckbox; (_ctrlGroup controlsGroupCtrl 1000) cbSetChecked true;";
         };
