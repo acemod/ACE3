@@ -47,6 +47,7 @@ private _subCatagoriesSettings = [];
                 _xSubCatName = localize LSTRING(3den_Uncategorized);
             };
         };
+        if (_xSubCatName == "#hide") exitWith {};
         private _subCatIndex = _subCatagoriesNames find _xSubCatName;
         if (_subCatIndex == -1) then {
             _subCatIndex = _subCatagoriesNames pushBack _xSubCatName;
