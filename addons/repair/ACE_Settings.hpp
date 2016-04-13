@@ -77,4 +77,9 @@ class ACE_Settings {
         values[] = {"None", "ToolKit"};
         _values[] = {{}, {"ToolKit"}};
     };
+    class GVAR(autoShutOffEngineWhenStartingRepair) {
+        typeName = "BOOL";
+        value = 1;
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
+    };
 };

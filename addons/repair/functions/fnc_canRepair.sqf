@@ -25,7 +25,8 @@ private ["_config", "_engineerRequired", "_items", "_return", "_condition", "_ve
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
-if(isEngineOn _target) exitWith {false};
+
+// if(isEngineOn _target) exitWith {false}; // Ignore here so action shows, then exit and show warning when selected #3348
 
 _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     getNumber (_config >> "requiredEngineer");
