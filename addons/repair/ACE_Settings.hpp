@@ -79,7 +79,7 @@ class ACE_Settings {
     };
     class GVAR(autoShutOffEngineWhenStartingRepair) {
         typeName = "BOOL";
-        value = 1;
+        value = 0;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
 };
