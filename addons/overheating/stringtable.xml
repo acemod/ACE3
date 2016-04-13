@@ -79,6 +79,7 @@
             <Spanish>Desencasquillar el arma al recargar.</Spanish>
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
             <French>Des-enrayer l'arme au rechargement.</French>
+            <Italian>Disinceppa l'arma quando si ricarica</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -86,6 +87,7 @@
             <Spanish>Recargar el arma la desencasquilla.</Spanish>
             <Polish>Przeładowywanie usuwa zacięcie</Polish>
             <French>Recharger vide la chambre de l'arme</French>
+            <Italian>L'arma si disinceppa quando si ricarica</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -93,6 +95,7 @@
             <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
             <French>Chance de rater le des-enrayement</French>
+            <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -100,6 +103,7 @@
             <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
             <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
+            <Italian>Probabilità che si possa sbagliare a caso a disinceppare l'arma. Richiede di ripetere.</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -167,6 +171,7 @@
             <Spanish>Falló el desencasquillado</Spanish>
             <Polish>Porażka przy usuwaniu zacięcia</Polish>
             <French>Toujours enrayé !</French>
+            <Italian>Non si è disinceppata!</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>

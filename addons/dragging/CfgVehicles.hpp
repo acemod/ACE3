@@ -38,6 +38,7 @@ class CfgVehicles {
 
     // ammo boxes
     class ThingX;
+    class Items_base_F;
     class ReammoBox_F: ThingX {
         GVAR(canCarry) = 0;
         GVAR(carryPosition)[] = {0,1,1};
@@ -89,7 +90,33 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
+    
+    //Plastic and metal case
+    class PlasticCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
 
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+    class MetalCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+    
     // Barrier
     class RoadCone_F: ThingX {
         class EventHandlers {

@@ -642,6 +642,6 @@ class CfgVehicles {
     class Item_Base_F;
     
     class Item_acc_flashlight: Item_Base_F {
-		displayName="UTG Defender 126";
-	};
+        displayName="UTG Defender 126";
+    };
 };
