@@ -13,15 +13,15 @@
  * Tag created <BOOL>
  *
  * Example:
- * [positionASL, vectorDirAndUp, "black", object] call ace_tagging_fnc_createTag
+ * [positionASL, vectorDirAndUp, "z\ace\addons\tagging\UI\tags\black\0.paa", object] call ace_tagging_fnc_createTag
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object", "_unit"];
-TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_color,_object,_unit);
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit"];
+TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
     ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
@@ -34,7 +34,7 @@ _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers
-["tagCreated", [_tag, _color, _object, _unit]] call EFUNC(common,globalEvent);
+["tagCreated", [_tag, _texture, _object, _unit]] call EFUNC(common,globalEvent);
 
 if (isNull _object) exitWith {true};
 

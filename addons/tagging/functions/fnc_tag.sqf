@@ -10,7 +10,7 @@
  * Sucess <BOOL>
  *
  * Example:
- * success = [player, "blue"] call ace_tagging_fnc_tag
+ * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag
  *
  * Public: Yes
  */
