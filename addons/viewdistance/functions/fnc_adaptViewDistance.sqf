@@ -22,7 +22,7 @@ if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 
 private _vehicle = vehicle ACE_player;
 
-private _landVehicle = _vehicle isKindOf "LandVehicle" || _vehicle isKindOf "Ship_F";
+private _landVehicle = _vehicle isKindOf "LandVehicle" || {_vehicle isKindOf "Ship_F"};
 private _airVehicle = _vehicle isKindOf "Air";
 
 if (!_landVehicle && !_airVehicle) exitWith {
