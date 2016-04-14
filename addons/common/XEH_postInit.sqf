@@ -133,6 +133,7 @@ if (isServer) then {
 ["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
 
+["loadPersonEvent", FUNC(loadPersonLocal)] call FUNC(addEventhandler);
 ["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
 ["lockVehicle", {
