@@ -33,19 +33,10 @@ jQuery(document).ready(function(){
             jQuery(".js-expandToc").remove();
             jQuery(".toc-header").remove();
         }
-
     }
-
-    var $expandToc = jQuery(".js-expandToc");
-    $expandToc.on("click", window.app.toggleToc);
 
 });
 
 window.app = window.app || {};
-window.app.toggleToc = function() {
-    var $toc = jQuery("#toc");
-    $toc.slideToggle();
-    return false;
-};
 
 window.app.contentSearch.init();
