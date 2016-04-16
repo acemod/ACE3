@@ -24,6 +24,6 @@ if (!hasInterface) exitWith {};
     // Set the EH which waits for a vehicle change to automatically swap between On Foot/In Land Vehicle/In Air Vehicle
     // Also run when SettingsInitialized runs (not guaranteed)
     ["playerVehicleChanged",{
-        [false] call FUNC(adaptViewDistance)
+        [false] call FUNC(adaptViewDistance);
     }] call EFUNC(common,addEventHandler);
 }] call EFUNC(common,addEventHandler);
