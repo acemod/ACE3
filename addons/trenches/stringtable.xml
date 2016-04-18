@@ -7,6 +7,7 @@
             <Polish>Saperka</Polish>
             <Italian>Pala</Italian>
             <Spanish>Pala para trincheras</Spanish>
+            <French>Outil de tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -14,6 +15,7 @@
             <German>Mit Schanzzeug können Erdwälle oder Gräben ausgehoben werden. </German>
             <Italian>Pala</Italian>
             <Spanish>Pala para trincheras</Spanish>
+            <French>Outil de tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -21,6 +23,7 @@
             <Polish>Wnęka - mała</Polish>
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
+            <French>Envelope - petite</French>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -28,6 +31,7 @@
             <Polish>Mała jednoosobowa wnęka</Polish>
             <Italian>Piccola Trincea Personale</Italian>
             <Spanish>Trinchera personal pequeña</Spanish>
+            <French>Petite tranchée personelle</French>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -35,6 +39,7 @@
             <Polish>Kop małą wnękę</Polish>
             <Italian>Scava Trincea Piccola</Italian>
             <Spanish>Cavar trinchera pequeña</Spanish>
+            <French>Creuser une petite tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -42,6 +47,7 @@
             <Polish>Wnęka - duża</Polish>
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
+            <French>Enveloppe - grande</French>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -49,6 +55,7 @@
             <Polish>Duża jednoosobowa wnęka</Polish>
             <Italian>Grande Trincea Personale</Italian>
             <Spanish>Trinchera personal grande</Spanish>
+            <French>Grande tranchée personelle</French>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -56,6 +63,7 @@
             <Polish>Kop dużą wnękę</Polish>
             <Italian>Scava Trincea Grande</Italian>
             <Spanish>Cavar trinchera grande</Spanish>
+            <French>Creuser une grande tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -63,6 +71,7 @@
             <Polish>Potwierdź kopanie</Polish>
             <Italian>Conferma Scava</Italian>
             <Spanish>Confirmar cavado</Spanish>
+            <French>Confirmer la creusée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -70,13 +79,19 @@
             <Polish>Anuluj kopanie</Polish>
             <Italian>Cancella Scava</Italian>
             <Spanish>Cancelar cavado</Spanish>
+            <French>Annuler la creusée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
-            <English>+Ctrl rotate</English>
-            <German>+Strg drehen</German>
-            <Polish>+Ctrl obrót</Polish>
-            <Italian>+Ctrl ruota</Italian>
-            <Spanish>+Ctrl rotar</Spanish>
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_DiggingTrench">
             <English>Digging Trench</English>
@@ -84,6 +99,7 @@
             <Polish>Kopanie okopu</Polish>
             <Italian>Sto Scavando la Trincea</Italian>
             <Spanish>Cavando trinchera</Spanish>
+            <French>Creuse la tranchée</French>
         </Key>
     </Package>
 </Project>

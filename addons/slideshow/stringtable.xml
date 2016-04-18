@@ -87,7 +87,7 @@
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
             <German>Eine Liste von Bildern, die bei der Vorführung verwendet werden. (Durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa)).</German>
-            <French>Liste d'images qui seront utilisées dans des diaporama, séparation par virgule, avec le chemin d'accès complet et formaté correctement (ie. images\image.paa)</French>
+            <French>Liste d'images qui seront utilisées dans des diaporamas, séparation par virgule, avec le chemin d'accès complet et formaté correctement (ie. images\image.paa)</French>
             <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
             <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
             <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
@@ -110,7 +110,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
-            <French>Liste de nom qui seront utilisés pour des interactions, séparation par virgule, dans l'ordre des images</French>
+            <French>Liste de noms qui seront utilisés pour des interactions, séparation par virgule, dans l'ordre des images</French>
             <Polish>Lista nazw, które zostaną użyte do nazwania wpisów interakcji, oddzielone przecinkiem, w kolejności obrazów.</Polish>
             <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
             <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>

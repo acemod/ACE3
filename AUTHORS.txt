@@ -65,6 +65,7 @@ F3 Project <alanr@ferstaberinde.com>
 Falke75
 Ferenczi
 Ferenzi
+FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
 FreeZbe <freeseb@gmail.com>
@@ -74,6 +75,7 @@ Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 GieNkoV <gienkov.grzegorz@gmail.com>
 GitHawk <githawk@gmx.net>
 gpgpgpgp
+Grey-Soldierman <gungamer101@hotmail.com>
 Grzegorz
 Hamburger SV
 Harakhti <shadowdragonphd@gmail.com>
@@ -118,4 +120,3 @@ voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
 zGuba
-Grey-Soldierman <gungamer101@hotmail.com>

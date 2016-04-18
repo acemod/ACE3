@@ -19,6 +19,6 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_FILE(XEH_mainDislayLoad));
+        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
     };
 };

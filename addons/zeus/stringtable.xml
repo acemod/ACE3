@@ -214,6 +214,7 @@
             <Czech>Přiřadit Zdravotníka</Czech>
             <Spanish>Asignar médico</Spanish>
             <Italian>Assegna Medico</Italian>
+            <French>Assigner médecin</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
@@ -224,6 +225,7 @@
             <Czech>Přiřadit Zdravotnické Vozidlo</Czech>
             <Spanish>Asignar vehículo médico</Spanish>
             <Italian>Assegna Veicolo Medico</Italian>
+            <French>Assigner véhicule médical</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
@@ -234,6 +236,7 @@
             <Czech>Přiřadit Zdravotnické Zařízení</Czech>
             <Spanish>Asignar instalación médica</Spanish>
             <Italian>Assegna Struttura Medica</Italian>
+            <French>Assigner installation médicale</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -244,6 +247,7 @@
             <Italian>Aggiungi Ruota di Scorta</Italian>
             <German>Ersatzrad hinzufügen</German>
             <Spanish>Agregar rueda de auxilio</Spanish>
+            <French>Ajouter pièce de rechange</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
@@ -254,6 +258,7 @@
             <Italian>Aggiungi una ruota di scorta al veicolo</Italian>
             <German>Fügt dem Fahrzeug ein Ersatzrad hinzu</German>
             <Spanish>Agrega una rueda de auxilio al vehículo</Spanish>
+            <French>Ajoute une roue de secours au véhicule</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
@@ -264,6 +269,7 @@
             <Italian>Aggiungi Cingolo di Scorta</Italian>
             <German>Ersatzkette hinzufügen</German>
             <Spanish>Agregar oruga de repuesto</Spanish>
+            <French>Ajouter une chenille de secours</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
@@ -274,6 +280,7 @@
             <Italian>Aggiungi un cingolo di scorta al veicolo</Italian>
             <German>Fügt dem Fahrzeug eine Ersatzkette hinzu</German>
             <Spanish>Agrega una oruga de repuesto al vehículo</Spanish>
+            <French>Ajoute une chenille de reserve</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -308,6 +315,7 @@
             <Spanish>La unidad debe ser una estructura</Spanish>
             <Czech>Jednotka musí být budova</Czech>
             <Italian>Si può usare solo su strutture</Italian>
+            <French>L'unité doit être une structure</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -318,6 +326,7 @@
             <Spanish>La unidad debe ser un vehículo</Spanish>
             <Czech>Jednotka musí být vozidlo</Czech>
             <Italian>Si può usare solo su veicoli</Italian>
+            <French>L'unité doit être un véhicule</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
@@ -328,6 +337,7 @@
             <Italian>L'unità dev'essere un veicolo con spazio di carico</Italian>
             <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
             <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
+            <French>L'unité doit être un véhicule avec de l'espace de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
@@ -338,6 +348,7 @@
             <Italian>L'unità deve avere spazio di carico disponibile</Italian>
             <German>Einheit muss freie Ladekapazität haben</German>
             <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
+            <French>L'unité doit avoir de l'espace libre en cargaison</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -383,6 +394,7 @@
             <Spanish>Agregar objetos al director</Spanish>
             <Czech>Přidat objekty kurátorovi</Czech>
             <Italian>Aggiungi Oggetti al Curatore</Italian>
+            <French>Ajouter des objets au curateur (Zeus)</French>
             <German>Fügt Objekte zum Kurator hinzu</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
@@ -393,6 +405,7 @@
             <Spanish>Añadir cualquier objeto creado a todos los directores en la misión</Spanish>
             <Czech>Přidá jakékoliv spawnuté objekty všem kurátorům v misi</Czech>
             <Italian>Aggiungi ogni oggetto creato a tutti i Curatori in missione</Italian>
+            <French>Ajoute n'importe quel objet spawné à tous les curateurs de la mission</French>
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
         </Key>
     </Package>

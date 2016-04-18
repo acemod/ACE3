@@ -1,6 +1,8 @@
 
 #define MEDICAL_ACTION_DISTANCE 1.75
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -650,7 +652,10 @@ class CfgVehicles {
 
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         scopeCurator = 2;
         side = -1;
@@ -658,7 +663,7 @@ class CfgVehicles {
         icon = "";
         displayName = CSTRING(Bodybag_Display);
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,1.2,0};
+        EGVAR(dragging,dragPosition)[] = {0,1.2,0};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;

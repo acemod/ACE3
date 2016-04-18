@@ -28,7 +28,6 @@ GVAR(digPFH) = -1;
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
 _unit setVariable [QGVAR(isPlacing), false, true];
 
