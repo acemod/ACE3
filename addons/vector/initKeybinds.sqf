@@ -5,7 +5,7 @@
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(currentWeapon ACE_player == "ACE_Vector" && {cameraView == "GUNNER"}) exitWith {false};
+    if !((currentWeapon ACE_player in ["ACE_Vector", "ACE_VectorDay"]) && {cameraView == "GUNNER"}) exitWith {false};
 
     // prevent holding down
     if (GETGVAR(isDownStateKey1,false)) exitWith {false};
@@ -34,7 +34,7 @@
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(currentWeapon ACE_player == "ACE_Vector" && {cameraView == "GUNNER"}) exitWith {false};
+    if !((currentWeapon ACE_player in ["ACE_Vector", "ACE_VectorDay"]) && {cameraView == "GUNNER"}) exitWith {false};
 
     // prevent holding down
     if (GETGVAR(isDownStateKey2,false)) exitWith {false};
