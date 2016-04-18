@@ -9,5 +9,8 @@ class CfgMagazines {
         model = QUOTE(PATHTOF(models\dragon.p3d));
         ammo = "ace_missile_dragon";
         initSpeed = 100;
+        count = 1;
+        descriptionShort = "M222 Dragon HEAT Missile";
+        displayName = "M222 HEAT";
     };
 };

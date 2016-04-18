@@ -1,3 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
+    <Package name="dragon">
+        <Key ID="STR_ACE_M47Dragon_DisplayName">
+            <English>M47 Dragon</English>
+            <German>M47 Dragon</German>
+            <Russian>M47 Dragon</Russian>
+            <Polish>M47 Dragon</Polish>
+            <Spanish>M47 Dragon</Spanish>
+            <French>M47 Dragon</French>
+        </Key>
+        <Key ID="STR_ACE_M47Dragon_PickUp">
+            <English>Pick up M47 Dragon</English>
+            <German>M47 Dragon aufnehmen</German>
+            <Russian>Поднять M47 Dragon</Russian>
+            <Polish>Zabierz M47 Dragon</Polish>
+            <Spanish>Coger M47 Dragon</Spanish>
+            <French>Prendre M47 Dragon</French>
+        </Key>
+        <Key ID="STR_ACE_SpottingScope_PlaceDown">
+            <English>Place Spotting Scope</English>
+            <German>Teleskop aufstellen</German>
+            <Russian>Установить M47 Dragon</Russian>
+            <Polish>Ustaw M47 Dragon</Polish>
+            <Spanish>Colocar M47 Dragon</Spanish>
+            <French>Placer M47 Dragon</French>
+        </Key>
+    </Package>
 </Project>

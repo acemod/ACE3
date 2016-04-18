@@ -4,6 +4,50 @@ ADDON = false;
 
 TEST_TARGET_LINE_PFH = -1;
 
+DFUNC(sight_attach) = {
+
+};
+
+DFUNC(sight_detach) = {
+
+};
+
+DFUNC(deploy) = {
+    private ["_dlauncher"];
+    if ("ACE_M47_Dragon" in (weapons ACE_player)) then {
+        ACE_player removeWeapon "ACE_M47_Dragon";
+        
+        _dlauncher = "ACE_M47_Dragon_Static" createVehicle  position ACE_player;
+        
+        //_dlauncher setDir (getDir ACE_player + 180);
+        //_dlauncher setPosASL (getPosASL ACE_player vectorAdd (vectorDir ACE_player));
+        
+        [ACE_player, _dlauncher] call ace_dragging_fnc_startCarry;
+    };
+};
+
+DFUNC(pickup) = {
+    private ["_dlauncher","_unit"];
+    _dlauncher = _this select 0;
+    _unit = _this select 1;
+    if (_dlauncher getVariable ["dragonfired", false]) then {
+        hint "Dragon expended.";    
+    }else{
+    
+        _unit addWeapon "ACE_M47_Dragon";
+        if ("ACE_M47_Dragon" in (weapons _unit)) then {
+            deleteVehicle _dlauncher;
+        };
+    };    
+};
+
+
+["ace_m47_dragon_sight_att", FUNC(sight_attach)] call ace_common_fnc_addEventHandler;
+["ace_m47_dragon_sight_det", FUNC(sight_detach)] call ace_common_fnc_addEventHandler;
+
+_dragondeploy = ["ace_m47_dragon_deploy", "Deploy Dragon", "", FUNC(dragon_deploy), {"ACE_M47_Dragon" in (weapons ACE_player)}] call ace_interact_menu_fnc_createAction;
+[typeOf player, 1, ["ACE_SelfActions"], _dragondeploy] call ace_interact_menu_fnc_addActionToClass;
+
 DFUNC(getIn) = {
 	PARAMS_3(_launcher,_pos,_unit);
 	if (_unit == ACE_player) then {
@@ -18,21 +62,26 @@ DFUNC(getIn) = {
 				GVAR(dragonLauncher) selectWeapon "ACE_M47_Dragon_static";
 				reload GVAR(dragonLauncher);
                 
-                // TEST_TARGET_LINE_PFH = [{
-                    // _launcher = (vehicle player);
-                    // _pos1 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "konec rakety"));
-                    // _pos2 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "spice rakety"));
-                    // _oPos = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "look"));
-                    // _launcherVec = _pos1 vectorFromTo _pos2;
-                    // _dp1 = _oPos;
-                    // _dp2 = _oPos vectorAdd (_launcherVec vectorMultiply 800);
-                    // drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "OP", 0.5, 0.025, "TahomaB"];
-                    // drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [1, 0, 0, 1]];
-                    // _dp1 = _oPos;
-                    // _dp2 = _oPos vectorAdd ((_launcher weaponDirection (currentWeapon _launcher)) vectorMultiply 800);
-                    // drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "WD", 0.5, 0.025, "TahomaB"];
-                    // drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [0, 1, 0, 1]];
-                // }, 0, []] call cba_fnc_addPerFrameHandler;
+                //TEST_TARGET_LINE_PFH = [{
+                //     _launcher = (vehicle player);
+                //     _pos1 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "konec rakety"));
+                //     _pos2 = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "spice rakety"));
+                //     _oPos = ATLtoASL (_launcher modelToWorldVisual (_launcher selectionPosition "look"));
+                //     _launcherVec = _pos1 vectorFromTo _pos2;
+                //     _dp1 = _oPos;
+                //     _dp2 = _oPos vectorAdd (_launcherVec vectorMultiply 800);
+                //     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "OP", 0.5, 0.025, "TahomaB"];
+                //     drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [1, 0, 0, 1]];
+                //     _dp1 = _oPos;
+                //     _dp2 = _oPos vectorAdd ((_launcher weaponDirection (currentWeapon _launcher)) vectorMultiply 800);
+                //     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "WD", 0.5, 0.025, "TahomaB"];
+                //     drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [0, 1, 0, 1]];
+				//	 _dp1 = _pos1;
+                //     _dp2 = _pos2 vectorAdd (_launcherVec vectorMultiply 800);;
+                //    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _dp2, 0.75, 0.75, 0, "BD", 0.5, 0.025, "TahomaB"];
+                //     drawLine3D [ASLtoATL _dp1, ASLtoATL _dp2, [0, 1, 0, 1]];
+				//	 
+                //}, 0, []] call cba_fnc_addPerFrameHandler;
                 
 			};
 		} else {
@@ -50,13 +99,14 @@ DFUNC(getOut) = {
 		GVAR(dragonLauncher) animate ["rest_rotate", -0.35];
 		//GVAR(dragonLauncher) removeMagazines "Dragon_EP1";
 		GVAR(dragonLauncher) = nil;
-        [TEST_TARGET_LINE_PFH] call cba_fnc_removePerFrameHandler;
+        //[TEST_TARGET_LINE_PFH] call cba_fnc_removePerFrameHandler;
 	};
 };
 
 DFUNC(onFired) = {
-	// GVAR(dragonLauncher) animate ["missile_hide", 1];
+	GVAR(dragonLauncher) animate ["missile_hide", 1];
     _this call FUNC(guidance);
+    GVAR(dragonLauncher) setVariable ["dragonfired", true, true];
 };
 
 #define DRAGON_VELOCITY	100
@@ -97,14 +147,14 @@ DFUNC(guidance) = {
             
             _gunner = _this select 0;
             
-            diag_log "boossssssssp";
-            [] spawn {
-                sleep 2;
-                GVAR(dragonLauncher) removeWeapon "ACE_M47_Dragon_static";
-				GVAR(dragonLauncher) addMagazine "ace_m47_dragon";
-				GVAR(dragonLauncher) addWeapon "ACE_M47_Dragon_static";
-				GVAR(dragonLauncher) selectWeapon "ACE_M47_Dragon_static";
-            };
+            //diag_log "boossssssssp";
+            //[] spawn {
+            //    sleep 2;
+            //   GVAR(dragonLauncher) removeWeapon "ACE_M47_Dragon_static";
+			//	GVAR(dragonLauncher) addMagazine "ace_m47_dragon";
+			//	GVAR(dragonLauncher) addWeapon "ACE_M47_Dragon_static";
+			//	GVAR(dragonLauncher) selectWeapon "ACE_M47_Dragon_static";
+            //};
             
             _fnc = {
                 if(accTime == 0) exitWith {};
