@@ -13,13 +13,13 @@
  */
  #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_params,_pfhId);
-
 // Update the g-forces at constant mission time intervals (taking accTime into account)
 if ((ACE_time - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
 GVAR(lastUpdateTime) = ACE_time;
 
 if (isNull ACE_player || !(alive ACE_player)) exitWith {};
+
+BEGIN_COUNTER(everyInterval);
 
 private _newVel = velocity (vehicle ACE_player);
 private _accel = ((_newVel vectorDiff GVAR(oldVel)) vectorMultiply (1 / INTERVAL)) vectorAdd [0, 0, 9.8];
@@ -91,3 +91,5 @@ if !(ACE_player getVariable ["ACE_isUnconscious", false]) then {
 };
 
 GVAR(GForces_CC) ppEffectCommit INTERVAL;
+
+END_COUNTER(everyInterval);
