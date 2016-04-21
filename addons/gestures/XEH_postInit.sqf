@@ -10,10 +10,10 @@ GVAR(ReloadMutex) = true;
     _x params ["_currentName", "_key", ["_vanillaKey", false] ];
 
     // Don't add "ace_gestures_" prefix to BI gestures
-     private _signalName = if (_vanillaKey) then {
-         format ["BIgesture%1", _currentName];
+    private _signalName = if (_vanillaKey) then {
+        format ["BIgesture%1", _currentName];
     } else {
-         format [QGVAR(%1), _currentName];
+        format [QGVAR(%1), _currentName];
     };
 
     private _code = compile format [QUOTE('%1' call FUNC(playSignal)), _signalName];
