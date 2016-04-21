@@ -51,7 +51,6 @@ class CfgVehicles {
         icon = "iconObject_1x2";
         model = "\A3\Weapons_f\dummyweapon.p3d";
         scope = 1;
-        scopeCurator = 1;
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
@@ -82,7 +81,6 @@ class CfgVehicles {
         icon = "iconObject_1x2";
         model = "\A3\Structures_F\Items\Tools\MultiMeter_F.p3d";
         scope = 1;
-        scopeCurator = 1;
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
