@@ -133,6 +133,7 @@ if (isServer) then {
 ["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
 
+["loadPersonEvent", FUNC(loadPersonLocal)] call FUNC(addEventhandler);
 ["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
 ["lockVehicle", {
@@ -146,12 +147,15 @@ if (isServer) then {
 
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
+["engineOn", {(_this select 0) engineOn (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 ["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
 ["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
 ["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
 ["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
 ["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
+["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
+["setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
@@ -330,12 +334,6 @@ GVAR(OldVisibleMap) = false;
 GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
 GVAR(OldIsCamera) = false;
 
-// clean up playerChanged eventhandler from preinit and put it in the same PFH as the other events to reduce overhead and guarantee advantageous execution order
-if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
-    [GVAR(PreInit_playerChanged_PFHID)] call CBA_fnc_removePerFrameHandler;
-    GVAR(PreInit_playerChanged_PFHID) = nil;
-};
-
 // PFH to raise varios events
 [{
     BEGIN_COUNTER(stateChecker);
@@ -441,6 +439,11 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
 //////////////////////////////////////////////////
 // Add various canInteractWith conditions
 //////////////////////////////////////////////////
+
+["isNotDead", {
+    params ["_unit", "_target"];
+    alive _unit
+}] call FUNC(addCanInteractWithCondition);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 

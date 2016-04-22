@@ -25,7 +25,7 @@ private ["_vectorUp", "_vectorDir", "_origin"];
 if (vehicle _unit != _unit) exitWith {};
 
 //Start fast roping
-if (animationState _unit != "ACE_FastRoping") exitWith {
+if (getMass _dummy != 80) exitWith {
     //Fix for twitchyness
     _dummy setMass 80;
     _dummy setCenterOfMass [0, 0, -2];
@@ -38,7 +38,9 @@ if (animationState _unit != "ACE_FastRoping") exitWith {
 };
 
 //Check if rope broke and unit is falling
-if (isNull attachedTo _unit) exitWith {
+//Make sure this isn't executed before the unit is actually fastroping
+//Note: Stretching ropes does not change ropeLength
+if ((isNull attachedTo _unit) && {ropeLength _ropeTop > 0.5}) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 

@@ -22,8 +22,13 @@ _waitTime = 2;
 
 _vehicle animateDoor ["door_R", 1];
 _vehicle animateDoor ["door_L", 1];
+_vehicle animateDoor ["CargoRamp_Open", 1];
+_vehicle animateDoor ["Door_rear_source", 1];
+_vehicle animateDoor ["Door_6_source", 1];
 _vehicle animate ["dvere1_posunZ", 1];
 _vehicle animate ["dvere2_posunZ", 1];
+
+_vehicle setVariable [QGVAR(doorsLocked), true, true];
 
 _fries = _vehicle getVariable [QGVAR(FRIES), objNull];
 if !(isNull _fries) then {

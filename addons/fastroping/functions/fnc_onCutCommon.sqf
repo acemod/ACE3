@@ -24,16 +24,24 @@ if !(isNull _fries) then {
     [{
         _this animateDoor ["door_R", 0];
         _this animateDoor ["door_L", 0];
-        _vehicle animate ["dvere1_posunZ", 0];
-        _vehicle animate ["dvere2_posunZ", 0];
+        _this animateDoor ["CargoRamp_Open", 0];
+        _this animateDoor ["Door_rear_source", 0];
+        _this animateDoor ["Door_6_source", 0];
+        _this animate ["dvere1_posunZ", 0];
+        _this animate ["dvere2_posunZ", 0];
+        _this setVariable [QGVAR(doorsLocked), false, true];
     }, _vehicle, 2] call EFUNC(common,waitAndExecute);
 
     4
 } else {
     _vehicle animateDoor ["door_R", 0];
     _vehicle animateDoor ["door_L", 0];
+    _vehicle animateDoor ["CargoRamp_Open", 0];
+    _vehicle animateDoor ["Door_rear_source", 0];
+    _vehicle animateDoor ["Door_6_source", 0];
     _vehicle animate ["dvere1_posunZ", 0];
     _vehicle animate ["dvere2_posunZ", 0];
+    _vehicle setVariable [QGVAR(doorsLocked), false, true];
 
     2
 };

@@ -150,6 +150,7 @@
             <Spanish>Usar manejo de munición.</Spanish>
             <Polish>Aktywuj obsługę amunicji</Polish>
             <French>Utiliser la gestion des munitions</French>
+            <Italian>Utilizza la gestione delle munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -157,6 +158,7 @@
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
             <French>Enlever les chargeurs de mortier, requiert des obus individuels qui doivent être chargés par le tireur ou le servant. N'affect pas les mortiers IA.</French>
+            <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -164,6 +166,7 @@
             <Spanish>Extraer ronda</Spanish>
             <Polish>Wyładuj pocisk</Polish>
             <French>Enlever l'obus</French>
+            <Italian>Togli proiettile</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -171,6 +174,7 @@
             <Spanish>Cargar mortero</Spanish>
             <Polish>Załaduj moździerz</Polish>
             <French>Charger le mortier</French>
+            <Italian>Carica mortaio</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -178,6 +182,7 @@
             <Spanish>Descargando ronda</Spanish>
             <Polish>Rozładowywanie moździerza</Polish>
             <French>Déchargement de l'obus</French>
+            <Italian>Scarica proiettile</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -185,6 +190,7 @@
             <Spanish>Preparando ronda</Spanish>
             <Polish>Przygotowywanie pocisku</Polish>
             <French>Praparation de l'obus</French>
+            <Italian>Prepara il proiettile</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -192,6 +198,7 @@
             <Spanish>Cargar HE</Spanish>
             <Polish>Załaduj pocisk wybuchowy</Polish>
             <French>Charger HE</French>
+            <Italian>Carica proiettile esplosivo ad alto potenziale (HE)</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -199,6 +206,7 @@
             <Spanish>Cargar Humo</Spanish>
             <Polish>Załaduj pocisk dymny</Polish>
             <French>Charger Fumigène</French>
+            <Italian>Carica fumogeno</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -206,6 +214,7 @@
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
             <French>Charger Eclairante</French>
+            <Italian>Carica illuminante</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -213,6 +222,7 @@
             <Spanish>Cagar HE Guiada</Spanish>
             <Polish>Załaduj kierowany pocisk wybuchowy</Polish>
             <French>Charger HE guidé</French>
+            <Italian>Carica HE guidata</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -220,6 +230,7 @@
             <Spanish>Cargar HE Guiada por Laser</Spanish>
             <Polish>Załaduj laserowo napr. pocisk wybuchowy</Polish>
             <French>Charger HE guidé au laser</French>
+            <Italian>Carica HE a guida laser</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -227,6 +238,7 @@
             <Spanish>Ronda 82mm HE</Spanish>
             <Polish>Pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE</French>
+            <Italian>Proiettile da 82mm HE</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -234,6 +246,7 @@
             <Spanish>Ronda 82mm Humo</Spanish>
             <Polish>Pocisk dymny kal. 82mm</Polish>
             <French>Obus de 82mm fumigène</French>
+            <Italian>Proiettile Fumogeno da 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -241,6 +254,7 @@
             <Spanish>Ronda 82mm Iluminación</Spanish>
             <Polish>Pocisk oświetlający kal. 82mm</Polish>
             <French>Obus de 82mm éclairant</French>
+            <Italian>Proiettile illuminante da 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -248,6 +262,7 @@
             <Spanish>Ronda 82mm Guiada</Spanish>
             <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE guidé</French>
+            <Italian>Proiettile HE guidato</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -255,6 +270,7 @@
             <Spanish>Ronda 82mm Guiada por Laser</Spanish>
             <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
             <French>Obus de 82mm HE guidé au laser</French>
+            <Italian>Proiettile HE a guida laser</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -262,6 +278,7 @@
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
             <French>Utilisé dans le mortier Mk6</French>
+            <Italian>Usato nel mortaio Mk6</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -269,6 +286,7 @@
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
             <French>[ACE] Obus de 82mm HE</French>
+            <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -276,6 +294,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
             <French>[ACE] Obus de 82mm fumigène</French>
+            <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -283,6 +302,7 @@
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
             <French>[ACE] Obus de 82mm éclairants</French>
+            <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -290,6 +310,7 @@
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
             <French>[ACE] Obus de 82mm par défaut</French>
+            <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
         </Key>
     </Package>
 </Project>

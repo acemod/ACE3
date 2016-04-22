@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-#define PFH_STEPSIZE 0.1
+#define PFH_STEPSIZE 1
 
 params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
@@ -52,6 +52,9 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
+        if (isEngineOn _sink) exitWith {
+            _nozzle setVariable [QGVAR(isRefueling), false, true];
+        };
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -76,11 +79,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
-        if !(local _sink) then {
-            [[_sink, _fuelInSink], "{(_this select 0) setFuel (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
-        } else {
-            _sink setFuel _fuelInSink;
-        };
+        ["setFuel", _sink, [_sink, _fuelInSink]] call EFUNC(common,objectEvent);
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
         _unit setVariable [QGVAR(tempFuel), fuel _sink];

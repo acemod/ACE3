@@ -31,14 +31,14 @@ class CfgAmmo {
     class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(Explosive) = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0, 0, 0.038};
+        GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
     // class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {};
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
-        GVAR(defuseObjectPosition[]) = {-1.415, 0, 0.12};
+        GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
     };
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
@@ -66,7 +66,7 @@ class CfgAmmo {
     class DemoCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
         GVAR(Explosive) = "DemoCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.07, 0, 0.055};
+        GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
         hit = 500;
@@ -76,7 +76,7 @@ class CfgAmmo {
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(Explosive) = "SatchelCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.1, 0.1, 0.05};
+        GVAR(defuseObjectPosition)[] = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };

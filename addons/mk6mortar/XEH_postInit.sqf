@@ -15,6 +15,8 @@
     _static setMagazineTurretAmmo [_magazine, _ammoCount, [0]];
 }] call EFUNC(common,addEventHandler);
 
+["initMortar", {_this call FUNC(mortarInit);}] call EFUNC(common,addEventHandler);
+
 if (!hasInterface) exitWith {};
 
 ["playerVehicleChanged", {_this call FUNC(handlePlayerVehicleChanged);}] call EFUNC(common,addEventHandler);

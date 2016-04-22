@@ -48,11 +48,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         };
         deleteVehicle _nozzle;
 
-        if !(local _target) then {
-            [[_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]]], "{(_this select 0) setHitPointDamage (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
-        } else {
-            _target setHitPointDamage ["HitEngine", _target getVariable [QGVAR(engineHit), 0]];
-        };
+        ["setVanillaHitPointDamage", _target, [_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]] ] ] call EFUNC(common,objectEvent);
         _target setVariable [QGVAR(engineHit), nil, true];
     },
     "",
