@@ -9,13 +9,14 @@ class CfgVehicles {
         isGlobal = 1;
         icon = QUOTE(PATHTOF(UI\Icon_Module_UI_ca.paa));
         class Arguments {
-            // BASIC
             class allowSelectiveUI {
                 displayName = CSTRING(AllowSelectiveUI);
                 description = CSTRING(AllowSelectiveUI_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+
+            // BASIC
             class soldierVehicleWeaponInfo {
                 displayName = CSTRING(SoldierVehicleWeaponInfo);
                 typeName = "BOOL";

@@ -20,7 +20,7 @@ if (isArray (missionConfigFile >> "showHUD")) exitWith {};
 params [ ["_force", false, [true]] ];
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
-    [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured)
+    [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
 };
 
 private _shownHUD = shownHUD; // [hud, info, radar, compass, direction, menu, group, cursors]

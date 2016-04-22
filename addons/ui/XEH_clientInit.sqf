@@ -1,4 +1,3 @@
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 // Exit on Headless
@@ -24,7 +23,7 @@ if (!hasInterface) exitWith {};
 
         // Selective UI Basic
         if (_name in ELEMENTS_BASIC) then {
-            call FUNC(setElements);
+            [false] call FUNC(setElements);
         };
 
         // Selective UI Advanced
