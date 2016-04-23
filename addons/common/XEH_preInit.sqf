@@ -47,28 +47,11 @@ GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
 
 //////////////////////////////////////////////////
-// Set up PlayerChanged eventhandler for pre init
+// Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
 //////////////////////////////////////////////////
 
 ACE_player = objNull;
 uiNamespace setVariable ["ACE_player", objNull];
-
-// @todo check if this can be removed
-if (hasInterface) then {
-    // PFH to update the ACE_player variable
-    GVAR(PreInit_playerChanged_PFHID) = [{
-        if !(ACE_player isEqualTo (call FUNC(player))) then {
-            private _oldPlayer = ACE_player;
-
-            ACE_player = call FUNC(player);
-            uiNamespace setVariable ["ACE_player", ACE_player];
-
-            // Raise ACE event
-            ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
-        };
-    }, 0, []] call CBA_fnc_addPerFrameHandler;
-};
-
 
 //////////////////////////////////////////////////
 // Time handling

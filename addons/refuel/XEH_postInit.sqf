@@ -5,3 +5,7 @@
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];
 };
+
+[QGVAR(resetLocal), {
+    _this call FUNC(resetLocal);
+}] call EFUNC(common,addEventHandler);

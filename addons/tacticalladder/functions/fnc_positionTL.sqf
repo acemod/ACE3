@@ -50,9 +50,3 @@ _unit setVariable [QGVAR(Deploy), [
     {!isNull GVAR(ladder)},
     {[_this select 0, GVAR(ladder)] call FUNC(confirmTLdeploy)}
 ] call EFUNC(common,addActionEventHandler)];
-
-_unit setVariable [QGVAR(Cancel), [
-    _unit, "zoomtemp",
-    {!isNull GVAR(ladder)},
-    {[_this select 0, GVAR(ladder)] call FUNC(cancelTLdeploy)}
-] call EFUNC(common,addActionEventHandler)];

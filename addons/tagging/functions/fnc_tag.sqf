@@ -1,25 +1,35 @@
 /*
- * Author: BaerMitUmlaut and esteldunedain
- * If possible, create a tag on the first surface between Start and End positions
+ * Author: BaerMitUmlaut, esteldunedain
+ * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
  *
  * Arguments:
- * 0: Unit
- * 1: Start position ASL <ARRAY>
- * 2: End position ASL <ARRAY>
- * 3: The colour of the tag (valid colours are black, red, green and blue) <STRING>
+ * 0: Unit <OBJECT>
+ * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
  *
  * Return Value:
- * Sucess <BOOLEAN>
+ * Sucess <BOOL>
  *
  * Example:
- * [startPosASL, directiom "blue"] call ace_tagging_fnc_tagDirection
+ * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag
  *
- * Public: No
+ * Public: Yes
  */
 
 #include "script_component.hpp"
 
-params ["_unit", "_startPosASL", "_endPosASL", "_color"];
+params [
+    ["_unit", objNull, [objNull]],
+    ["_texture", "", [""]]
+];
+
+if (isNull _unit || {_texture == ""}) exitWith {
+    ACE_LOGERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+};
+
+private _startPosASL = eyePos _unit;
+private _cameraPosASL =  AGLToASL positionCameraToWorld [0, 0, 0];
+private _cameraDir = (AGLToASL positionCameraToWorld [0, 0, 1]) vectorDiff _cameraPosASL;
+private _endPosASL = _startPosASL vectorAdd (_cameraDir vectorMultiply 2.5);
 
 // Check for intersections below the unit
 private _intersections = lineIntersectsSurfaces [_startPosASL, _endPosASL, _unit, objNull, true, 1, "GEOM", "FIRE"];
@@ -79,8 +89,6 @@ _fnc_isOk = {
     true
 };
 
-#define TAG_SIZE 0.6
-
 if ( !([ 0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
     {!([ 0.5*TAG_SIZE,-0.5*TAG_SIZE] call _fnc_isOk) ||
     {!([-0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
@@ -102,6 +110,6 @@ _unit playActionNow "PutDown";
 
     // Tell the server to create the tag and handle its destruction
     ["createTag", _this] call EFUNC(common,serverEvent);
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _color, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
 
 true

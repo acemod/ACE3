@@ -25,7 +25,7 @@
             <Portuguese>Gestos</Portuguese>
             <Italian>Gesti</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureAdvance">
+        <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
             <German>Vordringen</German>
             <Spanish>Avanzar</Spanish>
@@ -37,7 +37,7 @@
             <Portuguese>Avançar</Portuguese>
             <Italian>Avanzare</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureGo">
+        <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
             <German>Los</German>
             <Spanish>Adelante</Spanish>
@@ -49,7 +49,7 @@
             <Portuguese>Mover-se</Portuguese>
             <Italian>Muoversi</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureFollow">
+        <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
             <German>Folgen</German>
             <Spanish>Seguirme</Spanish>
@@ -61,7 +61,7 @@
             <Portuguese>Seguir</Portuguese>
             <Italian>Seguire</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureUp">
+        <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
             <German>Aufstehen</German>
             <Spanish>Arriba</Spanish>
@@ -73,7 +73,7 @@
             <Portuguese>Acima</Portuguese>
             <Italian>Alzarsi</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureCeaseFire">
+        <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
             <German>Feuer einstellen</German>
             <Spanish>Alto el fuego</Spanish>
@@ -85,19 +85,18 @@
             <Portuguese>Cessar Fogo</Portuguese>
             <Italian>Cessare il Fuoco</Italian>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIGesturesPoint">
-            <English>Point</English>
-            <German>Zeigen</German>
-            <Spanish>Señalar</Spanish>
-            <Polish>Wskazać</Polish>
-            <Czech>Ukázat</Czech>
-            <French>Pointer</French>
-            <Russian>Показать направление</Russian>
-            <Hungarian>Mutat</Hungarian>
-            <Portuguese>Apontar</Portuguese>
-            <Italian>Puntare a</Italian>
+        <Key ID="STR_ACE_Gestures_Stop">
+            <English>Stop</English>
+            <French>Stop</French>
+            <German>Halt</German>
+            <Polish>Stop</Polish>
+            <Russian>Стоп</Russian>
+            <Portuguese>Parar</Portuguese>
+            <Czech>Stop</Czech>
+            <Italian>Stop</Italian>
+            <Spanish>Detenerse</Spanish>
         </Key>
-        <Key ID="STR_ACE_Gestures_BIgestureFreeze">
+        <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
             <German>Keine Bewegung</German>
             <Spanish>Alto</Spanish>
@@ -109,20 +108,7 @@
             <Portuguese>Alto</Portuguese>
             <Italian>Fermi</Italian>
         </Key>
-        <!-- STOP -->
-        <Key ID="STR_ACE_Gestures_stop">
-            <English>Stop</English>
-            <French>Stop</French>
-            <German>Halt</German>
-            <Polish>Stop</Polish>
-            <Russian>Стоп</Russian>
-            <Portuguese>Parar</Portuguese>
-            <Czech>Stop</Czech>
-            <Italian>Stop</Italian>
-            <Spanish>Detenerse</Spanish>
-        </Key>
-        <!-- COVER -->
-        <Key ID="STR_ACE_Gestures_cover">
+        <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
             <German>Deckung</German>
             <Spanish>Cubrirse</Spanish>
@@ -134,8 +120,7 @@
             <Portuguese>Proteger-se</Portuguese>
             <Italian>Copertura</Italian>
         </Key>
-        <!-- REGROUP -->
-        <Key ID="STR_ACE_Gestures_regroup">
+        <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>
             <French>Regroupement</French>
             <German>Sammeln</German>
@@ -146,8 +131,7 @@
             <Italian>Raggruppare</Italian>
             <Spanish>Reunirse</Spanish>
         </Key>
-        <!-- FORWARD -->
-        <Key ID="STR_ACE_Gestures_forward">
+        <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
             <French>En avant</French>
             <German>Vorwärts Bewegen</German>
@@ -158,8 +142,7 @@
             <Italian>Muovere avanti</Italian>
             <Spanish>Avanzar</Spanish>
         </Key>
-        <!-- ENGAGE -->
-        <Key ID="STR_ACE_Gestures_engage">
+        <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
             <German>Angriff</German>
             <French>Engager</French>
@@ -170,8 +153,7 @@
             <Italian>Ingaggiare</Italian>
             <Spanish>Atacar</Spanish>
         </Key>
-        <!-- POINT -->
-        <Key ID="STR_ACE_Gestures_point">
+        <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
             <French>Pointer</French>
             <German>Zeigen</German>
@@ -182,8 +164,7 @@
             <Italian>Puntare</Italian>
             <Spanish>Señalar</Spanish>
         </Key>
-        <!-- HOLD -->
-        <Key ID="STR_ACE_Gestures_hold">
+        <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
             <French>Tenir</French>
             <German>Anhalten</German>
@@ -194,8 +175,7 @@
             <Italian>Mantenere</Italian>
             <Spanish>Esperar</Spanish>
         </Key>
-        <!-- WARNING -->
-        <Key ID="STR_ACE_Gestures_warning">
+        <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
             <French>Attention</French>
             <German>Achtung</German>
@@ -206,31 +186,7 @@
             <Italian>Attenzione</Italian>
             <Spanish>Atención</Spanish>
         </Key>
-        <Key ID="STR_ACE_Gestures_Hi">
-            <English>Hi</English>
-            <German>Hallo</German>
-            <Spanish>Hola</Spanish>
-            <Polish>Witaj</Polish>
-            <Czech>Ahoj</Czech>
-            <French>Salut</French>
-            <Russian>Привет</Russian>
-            <Hungarian>Helló</Hungarian>
-            <Portuguese>Olá</Portuguese>
-            <Italian>Ciao</Italian>
-        </Key>
-        <Key ID="STR_ACE_Gestures_Attack">
-            <English>Attack</English>
-            <German>Angreifen</German>
-            <Spanish>Atacar</Spanish>
-            <Polish>Do ataku</Polish>
-            <Czech>Zaútočit</Czech>
-            <French>Attaquer</French>
-            <Russian>Атаковать</Russian>
-            <Hungarian>Támadás</Hungarian>
-            <Portuguese>Atacar</Portuguese>
-            <Italian>Attaccare</Italian>
-        </Key>
-        <Key ID="STR_ACE_Gestures_showOnInteractionMenu_displayName">
+        <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
             <German>Zeige Gesten im Interaktionsmenü</German>
             <Czech>Zobrazit posunky v interakčním menu</Czech>
@@ -239,7 +195,7 @@
             <Spanish>Mostrar gestos en el menú de interacción</Spanish>
             <French>Afficher les gestes au menu d'interaction.</French>
         </Key>
-        <Key ID="STR_ACE_Gestures_showOnInteractionMenu_description">
+        <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
             <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
             <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
@@ -248,7 +204,7 @@
             <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
             <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
         </Key>
-        <Key ID="STR_ACE_Gestures_justKeybinds">
+        <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
             <German>Nur Schnelltasten</German>
             <Czech>Pouze klávesové zkratky</Czech>
@@ -257,7 +213,7 @@
             <Spanish>Solo mediante teclas</Spanish>
             <French>Seulement les touches</French>
         </Key>
-        <Key ID="STR_ACE_Gestures_keysAndInteractionMenu">
+        <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
             <German>Schnelltasten+ Interaktionsmenü</German>
             <Czech>Klávesové zkratky + interakční menu</Czech>

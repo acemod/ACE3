@@ -194,10 +194,67 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    class Heli_Transport_02_base_F;
-    class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
+    class Helicopter_Base_H;
+    class Heli_Light_01_base_F: Helicopter_Base_H {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    class Heli_Light_02_base_F: Helicopter_Base_H {
+        GVAR(space) = 4;
+    };
+
+    class Helicopter_Base_F;
+    class Heli_light_03_base_F: Helicopter_Base_F {
+        GVAR(space) = 4;
+    };
+
+    class Heli_Transport_01_base_F: Helicopter_Base_H {
+        GVAR(space) = 8;
+    };
+
+    class Heli_Transport_02_base_F: Helicopter_Base_H {
+        GVAR(space) = 20;
+    };
+
+    class Heli_Transport_03_base_F: Helicopter_Base_H {
+        GVAR(space) = 40;
+    };
+
+    class Heli_Transport_04_base_F: Helicopter_Base_H {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    class O_Heli_Transport_04_box_F: Heli_Transport_04_base_F {
         GVAR(space) = 20;
         GVAR(hasCargo) = 1;
+    };
+
+    class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
+        GVAR(space) = 12;
+        GVAR(hasCargo) = 1;
+    };
+
+    class O_Heli_Transport_04_ammo_F: Heli_Transport_04_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+
+    class O_Heli_Transport_04_fuel_F: Heli_Transport_04_base_F {};
+
+    class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+
+    class Heli_Attack_01_base_F: Helicopter_Base_F {
+        GVAR(space) = 0;
+        GVAR(hasCargo) = 0;
+    };
+
+    class Heli_Attack_02_base_F: Helicopter_Base_F {
+        GVAR(space) = 4;
     };
 
     // jets
@@ -207,7 +264,6 @@ class CfgVehicles {
     };
 
     // autonomus
-    class Helicopter_Base_F;
     class UAV_01_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -256,6 +312,7 @@ class CfgVehicles {
 
     // Ammo boxes
     class ThingX;
+    class Items_base_F;
     class ReammoBox_F: ThingX {
         GVAR(size) = 2; // 1 = small, 2 = large
         GVAR(canLoad) = 1;
@@ -278,6 +335,23 @@ class CfgVehicles {
     class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
         GVAR(canLoad) = 0;
     };
+
+    //Plastic and metal case
+    class PlasticCase_01_base_F: Items_base_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    };
+    class Land_PlasticCase_01_large_F: PlasticCase_01_base_F {
+        GVAR(size) = 2; // 1 = small, 2 = large
+    };
+    class MetalCase_01_base_F: Items_base_F {
+        GVAR(size) = 1; // 1 = small, 2 = large
+        GVAR(canLoad) = 1;
+    };
+    class Land_MetalCase_01_large_F: MetalCase_01_base_F {
+        GVAR(size) = 2; // 1 = small, 2 = large
+    };
+
     // objects
     class RoadCone_F: ThingX {
         GVAR(size) = 1;
