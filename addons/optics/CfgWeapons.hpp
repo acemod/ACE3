@@ -228,6 +228,12 @@ class CfgWeapons {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
                     modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_reticle90.p3d)),QUOTE(PATHTOF(models\ace_optics_reticle90.p3d))};
+                    useModelOptics = 1;
+                    opticsZoomInit = 0.0116;
+                    opticsZoomMax = 0.0464;
+                    opticsZoomMin = 0.0116;
+                    discreteFOV[] = {0.0464, 0.0116};
+                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                 };
                 class Iron: Iron {};
@@ -275,9 +281,9 @@ class CfgWeapons {
                 class Snip: Snip {
                     modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_reticle90.p3d)),QUOTE(PATHTOF(models\ace_optics_reticle90.p3d))};
                     useModelOptics = 1;
-                    opticsZoomInit = 0.01234;
-                    opticsZoomMax = 0.04673;
-                    opticsZoomMin = 0.01234;
+                    opticsZoomInit = 0.0116;
+                    opticsZoomMax = 0.0464;
+                    opticsZoomMin = 0.0116;
                     discreteFOV[] = {};
                     opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
