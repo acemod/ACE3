@@ -10,7 +10,8 @@ class CfgMagazines {
         ammo = "ace_missile_dragon";
         initSpeed = 100;
         count = 1;
-        descriptionShort = "M222 Dragon HEAT Missile";
-        displayName = "M222 HEAT";
+        descriptionShort = "M222 HEAT Round for the M47 Dragon ATGM Missile";
+        displayName = "M47 Dragon M222 HEAT";
+        displayNameShort = "M222 HEAT";
     };
 };

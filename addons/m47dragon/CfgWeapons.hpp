@@ -9,6 +9,21 @@ class CfgWeapons {
         //modelOptics = QUOTE(PATHTOF(models\optics_m47));
         canlock = 0;
         weaponlocksystem = 0;
+        
+        modes[] = {"manual"};
+        class manual: Mode_SemiAuto
+		{
+			displayName = "M222 HEAT";
+            showToPlayer = 1;
+            
+            sounds[] = {"StandardSound"};
+            class StandardSound
+            {
+                begin1[] = {"A3\Sounds_F\weapons\Rockets\Titan_2",1.77828,1,1500};
+                soundBegin[] = {"begin1",1};
+                weaponSoundEffect = "DefaultRifle";
+            };          
+		};
     };
     
     class MissileLauncher;
@@ -19,7 +34,22 @@ class CfgWeapons {
         distanceZoomMax = 200;
         muzzlepos = = "spice rakety"; 
         canlock = 0;
-        weaponlocksystem = 0;        
+        weaponlocksystem = 0;     
+        modes[] = {"manual"};
+        class manual: Mode_SemiAuto
+		{
+			displayName = "M222 HEAT";
+            showToPlayer = 1;
+            
+            sounds[] = {"StandardSound"};
+            class StandardSound
+            {
+                begin1[] = {"A3\Sounds_F\weapons\Rockets\Titan_2",1.77828,1,1500};
+                soundBegin[] = {"begin1",1};
+                weaponSoundEffect = "DefaultRifle";
+            };          
+		};
+        
     };
     
     class launch_NLAW_F;
