@@ -39,7 +39,7 @@ class CfgWeapons {
     displayName = CSTRING(P90_Black_Name);
   };
   class SMG_03C_khaki: SMG_03C_black {
-    displayName = CSTINRG(P90_Khaki_Name);
+    displayName = CSTRING(P90_Khaki_Name);
   };
   class SMG_03C_camo: SMG_03C_black {
     displayName = CSTRING(P90_Camo_Name);
