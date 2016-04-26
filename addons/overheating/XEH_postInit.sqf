@@ -13,13 +13,12 @@ if (isServer) then {
 
 if !(hasInterface) exitWith {};
 
-GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
-GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
-GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
 {
+    if (!GVAR(enabled)) exitWith {false};
+
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -34,10 +33,20 @@ GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
 [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
 
 
-// Schedule cool down calculation of player weapons at (infrequent) regular intervals
-[] call FUNC(updateTemperatureThread);
 
 ["SettingsInitialized", {
+    if (!GVAR(enabled)) exitWith {};
+
+    GVAR(cacheWeaponData) = call CBA_fnc_createNamespace;
+    GVAR(cacheAmmoData) = call CBA_fnc_createNamespace;
+    GVAR(cacheSilencerData) = call CBA_fnc_createNamespace;
+
+    // Schedule cool down calculation of player weapons at (infrequent) regular intervals
+    [] call FUNC(updateTemperatureThread);
+
+    //Add Take EH (for reload)
+    ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+
     // Register fire event handler
     ["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
     // Only add eh to non local players if dispersion is enabled
