@@ -1,149 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-  <Package name="ace_compat_adr_90">
-    <Key ID="STR_ace_compat_adr_97_P90_TR_Black_Name">
-      <English>P90 TR (Black)</English>
-      <Czech>P90 TR (Černá)</Czech>
-      <French>P90 TR (Noir)</French>
-      <Spanish>P90 TR (Negro)</Spanish>
-      <Russian>P90 TR (Чёрный)</Russian>
-      <Polish>P90 TR (czarny)</Polish>
-      <German>P90 TR (Schwarz)</German>
-      <Italian>P90 TR (Nero)</Italian>
-      <Hungarian>P90 TR (Fekete)</Hungarian>
-      <Portuguese>P90 TR (Preto)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_P90_TR_Khaki_Name">
-      <English>P90 TR (Khaki)</English>
-      <Czech>P90 TR (Khaki)</Czech>
-      <French>P90 TR (Kaki)</French>
-      <Spanish>P90 TR (Caqui)</Spanish>
-      <Russian>P90 TR (Хаки)</Russian>
-      <Polish>P90 TR (khaki)</Polish>
-      <German>P90 TR (Khaki)</German>
-      <Italian>P90 TR (Khaki)</Italian>
-      <Hungarian>P90 TR (Khaki)</Hungarian>
-      <Portuguese>P90 TR (Caqui)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_P90_TR_Camo_Name">
-      <English>P90 TR (Camo)</English>
-      <Czech>P90 TR (Kamufláž)</Czech>
-      <French>P90 TR (Camo)</French>
-      <Spanish>P90 TR (Camuflaje)</Spanish>
-      <Russian>P90 TR (Камо)</Russian>
-      <Polish>P90 TR (kamuflaż)</Polish>
-      <German>P90 TR (Camo)</German>
-      <Italian>P90 TR (Camo)</Italian>
-      <Hungarian>P90 TR (Terepmintás)</Hungarian>
-      <Portuguese>P90 TR (Camuflagem)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_P90_Black_Name">
-      <English>P90 (Black)</English>
-      <Czech>P90 (Černá)</Czech>
-      <French>P90 (Noir)</French>
-      <Spanish>P90 (Negro)</Spanish>
-      <Russian>P90 (Чёрный)</Russian>
-      <Polish>P90 (czarny)</Polish>
-      <German>P90 (Schwarz)</German>
-      <Italian>P90 (Nero)</Italian>
-      <Hungarian>P90 (Fekete)</Hungarian>
-      <Portuguese>P90 (Preto)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_P90_Khaki_Name">
-      <English>P90 (Khaki)</English>
-      <Czech>P90 (Khaki)</Czech>
-      <French>P90 (Kaki)</French>
-      <Spanish>P90 (Caqui)</Spanish>
-      <Russian>P90 (Хаки)</Russian>
-      <Polish>P90 (khaki)</Polish>
-      <German>P90 (Khaki)</German>
-      <Italian>P90 (Khaki)</Italian>
-      <Hungarian>P90 (Khaki)</Hungarian>
-      <Portuguese>P90 (Caqui)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_P90_Camo_Name">
-      <English>P90 (Camo)</English>
-      <Czech>P90 (Kamufláž)</Czech>
-      <French>P90 (Camo)</French>
-      <Spanish>P90 (Camuflaje)</Spanish>
-      <Russian>P90 (Камо)</Russian>
-      <Polish>P90 (kamuflaż)</Polish>
-      <German>P90 (Camo)</German>
-      <Italian>P90 (Camo)</Italian>
-      <Hungarian>P90 (Terepmintás)</Hungarian>
-      <Portuguese>P90 (Camuflagem)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_TR_Black_Name">
-      <English>PS90 TR (Black)</English>
-      <Czech>PS90 TR (Černá)</Czech>
-      <French>PS90 TR (Noir)</French>
-      <Spanish>PS90 TR (Negro)</Spanish>
-      <Russian>PS90 TR (Чёрный)</Russian>
-      <Polish>PS90 TR (czarny)</Polish>
-      <German>PS90 TR (Schwarz)</German>
-      <Italian>PS90 TR (Nero)</Italian>
-      <Hungarian>PS90 TR (Fekete)</Hungarian>
-      <Portuguese>PS90 TR (Preto)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_TR_Khaki_Name">
-      <English>PS90 TR (Khaki)</English>
-      <Czech>PS90 TR (Khaki)</Czech>
-      <French>PS90 TR (Kaki)</French>
-      <Spanish>PS90 TR (Caqui)</Spanish>
-      <Russian>PS90 TR (Хаки)</Russian>
-      <Polish>PS90 TR (khaki)</Polish>
-      <German>PS90 TR (Khaki)</German>
-      <Italian>PS90 TR (Khaki)</Italian>
-      <Hungarian>PS90 TR (Khaki)</Hungarian>
-      <Portuguese>PS90 TR (Caqui)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_TR_Camo_Name">
-      <English>PS90 TR (Camo)</English>
-      <Czech>PS90 TR (Kamufláž)</Czech>
-      <French>PS90 TR (Camo)</French>
-      <Spanish>PS90 TR (Camuflaje)</Spanish>
-      <Russian>PS90 TR (Камо)</Russian>
-      <Polish>PS90 TR (kamuflaż)</Polish>
-      <German>PS90 TR (Camo)</German>
-      <Italian>PS90 TR (Camo)</Italian>
-      <Hungarian>PS90 TR (Terepmintás)</Hungarian>
-      <Portuguese>PS90 TR (Camuflagem)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_Black_Name">
-      <English>PS90 (Black)</English>
-      <Czech>PS90 (Černá)</Czech>
-      <French>PS90 (Noir)</French>
-      <Spanish>PS90 (Negro)</Spanish>
-      <Russian>PS90 (Чёрный)</Russian>
-      <Polish>PS90 (czarny)</Polish>
-      <German>PS90 (Schwarz)</German>
-      <Italian>PS90 (Nero)</Italian>
-      <Hungarian>PS90 (Fekete)</Hungarian>
-      <Portuguese>PS90 (Preto)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_Khaki_Name">
-      <English>PS90 (Khaki)</English>
-      <Czech>PS90 (Khaki)</Czech>
-      <French>PS90 (Kaki)</French>
-      <Spanish>PS90 (Caqui)</Spanish>
-      <Russian>PS90 (Хаки)</Russian>
-      <Polish>PS90 (khaki)</Polish>
-      <German>PS90 (Khaki)</German>
-      <Italian>PS90 (Khaki)</Italian>
-      <Hungarian>PS90 (Khaki)</Hungarian>
-      <Portuguese>PS90 (Caqui)</Portuguese>
-    </Key>
-    <Key ID="STR_ace_compat_adr_97_PS90_Camo_Name">
-      <English>PS90 (Camo)</English>
-      <Czech>PS90 (Kamufláž)</Czech>
-      <French>PS90 (Camo)</French>
-      <Spanish>PS90 (Camuflaje)</Spanish>
-      <Russian>PS90 (Камо)</Russian>
-      <Polish>PS90 (kamuflaż)</Polish>
-      <German>PS90 (Camo)</German>
-      <Italian>PS90 (Camo)</Italian>
-      <Hungarian>PS90 (Terepmintás)</Hungarian>
-      <Portuguese>PS90 (Camuflagem)</Portuguese>
-    </Key>
-  </Package>
+    <Package name="ace_compat_adr_90">
+        <Key ID="STR_ace_compat_adr_97_P90_TR_Black_Name">
+            <English>P90 TR (Black)</English>
+            <Czech>P90 TR (Černá)</Czech>
+            <French>P90 TR (Noir)</French>
+            <Spanish>P90 TR (Negro)</Spanish>
+            <Russian>P90 TR (Чёрный)</Russian>
+            <Polish>P90 TR (czarny)</Polish>
+            <German>P90 TR (Schwarz)</German>
+            <Italian>P90 TR (Nero)</Italian>
+            <Hungarian>P90 TR (Fekete)</Hungarian>
+            <Portuguese>P90 TR (Preto)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_TR_Khaki_Name">
+            <English>P90 TR (Khaki)</English>
+            <Czech>P90 TR (Khaki)</Czech>
+            <French>P90 TR (Kaki)</French>
+            <Spanish>P90 TR (Caqui)</Spanish>
+            <Russian>P90 TR (Хаки)</Russian>
+            <Polish>P90 TR (khaki)</Polish>
+            <German>P90 TR (Khaki)</German>
+            <Italian>P90 TR (Khaki)</Italian>
+            <Hungarian>P90 TR (Khaki)</Hungarian>
+            <Portuguese>P90 TR (Caqui)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_TR_Camo_Name">
+            <English>P90 TR (Camo)</English>
+            <Czech>P90 TR (Kamufláž)</Czech>
+            <French>P90 TR (Camo)</French>
+            <Spanish>P90 TR (Camuflaje)</Spanish>
+            <Russian>P90 TR (Камо)</Russian>
+            <Polish>P90 TR (kamuflaż)</Polish>
+            <German>P90 TR (Camo)</German>
+            <Italian>P90 TR (Camo)</Italian>
+            <Hungarian>P90 TR (Terepmintás)</Hungarian>
+            <Portuguese>P90 TR (Camuflagem)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_Black_Name">
+            <English>P90 (Black)</English>
+            <Czech>P90 (Černá)</Czech>
+            <French>P90 (Noir)</French>
+            <Spanish>P90 (Negro)</Spanish>
+            <Russian>P90 (Чёрный)</Russian>
+            <Polish>P90 (czarny)</Polish>
+            <German>P90 (Schwarz)</German>
+            <Italian>P90 (Nero)</Italian>
+            <Hungarian>P90 (Fekete)</Hungarian>
+            <Portuguese>P90 (Preto)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_Khaki_Name">
+            <English>P90 (Khaki)</English>
+            <Czech>P90 (Khaki)</Czech>
+            <French>P90 (Kaki)</French>
+            <Spanish>P90 (Caqui)</Spanish>
+            <Russian>P90 (Хаки)</Russian>
+            <Polish>P90 (khaki)</Polish>
+            <German>P90 (Khaki)</German>
+            <Italian>P90 (Khaki)</Italian>
+            <Hungarian>P90 (Khaki)</Hungarian>
+            <Portuguese>P90 (Caqui)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_Camo_Name">
+            <English>P90 (Camo)</English>
+            <Czech>P90 (Kamufláž)</Czech>
+            <French>P90 (Camo)</French>
+            <Spanish>P90 (Camuflaje)</Spanish>
+            <Russian>P90 (Камо)</Russian>
+            <Polish>P90 (kamuflaż)</Polish>
+            <German>P90 (Camo)</German>
+            <Italian>P90 (Camo)</Italian>
+            <Hungarian>P90 (Terepmintás)</Hungarian>
+            <Portuguese>P90 (Camuflagem)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_TR_Black_Name">
+            <English>PS90 TR (Black)</English>
+            <Czech>PS90 TR (Černá)</Czech>
+            <French>PS90 TR (Noir)</French>
+            <Spanish>PS90 TR (Negro)</Spanish>
+            <Russian>PS90 TR (Чёрный)</Russian>
+            <Polish>PS90 TR (czarny)</Polish>
+            <German>PS90 TR (Schwarz)</German>
+            <Italian>PS90 TR (Nero)</Italian>
+            <Hungarian>PS90 TR (Fekete)</Hungarian>
+            <Portuguese>PS90 TR (Preto)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_TR_Khaki_Name">
+            <English>PS90 TR (Khaki)</English>
+            <Czech>PS90 TR (Khaki)</Czech>
+            <French>PS90 TR (Kaki)</French>
+            <Spanish>PS90 TR (Caqui)</Spanish>
+            <Russian>PS90 TR (Хаки)</Russian>
+            <Polish>PS90 TR (khaki)</Polish>
+            <German>PS90 TR (Khaki)</German>
+            <Italian>PS90 TR (Khaki)</Italian>
+            <Hungarian>PS90 TR (Khaki)</Hungarian>
+            <Portuguese>PS90 TR (Caqui)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_TR_Camo_Name">
+            <English>PS90 TR (Camo)</English>
+            <Czech>PS90 TR (Kamufláž)</Czech>
+            <French>PS90 TR (Camo)</French>
+            <Spanish>PS90 TR (Camuflaje)</Spanish>
+            <Russian>PS90 TR (Камо)</Russian>
+            <Polish>PS90 TR (kamuflaż)</Polish>
+            <German>PS90 TR (Camo)</German>
+            <Italian>PS90 TR (Camo)</Italian>
+            <Hungarian>PS90 TR (Terepmintás)</Hungarian>
+            <Portuguese>PS90 TR (Camuflagem)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_Black_Name">
+            <English>PS90 (Black)</English>
+            <Czech>PS90 (Černá)</Czech>
+            <French>PS90 (Noir)</French>
+            <Spanish>PS90 (Negro)</Spanish>
+            <Russian>PS90 (Чёрный)</Russian>
+            <Polish>PS90 (czarny)</Polish>
+            <German>PS90 (Schwarz)</German>
+            <Italian>PS90 (Nero)</Italian>
+            <Hungarian>PS90 (Fekete)</Hungarian>
+            <Portuguese>PS90 (Preto)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_Khaki_Name">
+            <English>PS90 (Khaki)</English>
+            <Czech>PS90 (Khaki)</Czech>
+            <French>PS90 (Kaki)</French>
+            <Spanish>PS90 (Caqui)</Spanish>
+            <Russian>PS90 (Хаки)</Russian>
+            <Polish>PS90 (khaki)</Polish>
+            <German>PS90 (Khaki)</German>
+            <Italian>PS90 (Khaki)</Italian>
+            <Hungarian>PS90 (Khaki)</Hungarian>
+            <Portuguese>PS90 (Caqui)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_Camo_Name">
+            <English>PS90 (Camo)</English>
+            <Czech>PS90 (Kamufláž)</Czech>
+            <French>PS90 (Camo)</French>
+            <Spanish>PS90 (Camuflaje)</Spanish>
+            <Russian>PS90 (Камо)</Russian>
+            <Polish>PS90 (kamuflaż)</Polish>
+            <German>PS90 (Camo)</German>
+            <Italian>PS90 (Camo)</Italian>
+            <Hungarian>PS90 (Terepmintás)</Hungarian>
+            <Portuguese>PS90 (Camuflagem)</Portuguese>
+        </Key>
+    </Package>
 </Project>
