@@ -1,11 +1,7 @@
-class CfgAmmo
-{
-    class Default{};
-    class BulletCore: Default{};
-    class BulletBase: BulletCore{};
+class CfgAmmo {
+    class BulletBase;
     class GrenadeHand;
-    class ffaa_127x99_he: BulletBase
-    {
+    class ffaa_127x99_he: BulletBase {
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9256;
@@ -17,8 +13,7 @@ class CfgAmmo
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
     };
-    class ffaa_127x99_ap: BulletBase
-    {
+    class ffaa_127x99_ap: BulletBase {
         ACE_caliber = 12.954;
         ACE_bulletLength = 58.674;
         ACE_bulletMass = 41.9904;
@@ -30,8 +25,7 @@ class CfgAmmo
         ACE_muzzleVelocities[] = {900};
         ACE_barrelLengths[] = {736.6};
     };
-    class ffaa_5x28: BulletBase
-    {
+    class ffaa_5x28: BulletBase {
         ACE_caliber = 5.7;
         ACE_bulletLength = 23.012;
         ACE_bulletMass = 15;
@@ -43,8 +37,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={280, 300, 320};
         ACE_barrelLengths[]={254.0, 414.02, 508.0};
     };
-    class ffaa_granada_m_alhambra: GrenadeHand
-    {
+    class ffaa_granada_m_alhambra: GrenadeHand {
         ace_frag_metal = 296;
         ace_frag_charge = 180;
         ace_frag_gurney_c = 3500;
