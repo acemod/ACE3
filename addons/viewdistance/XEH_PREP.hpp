@@ -1,4 +1,3 @@
-
 PREP(adaptViewDistance);
 PREP(changeViewDistance);
 PREP(initModule);

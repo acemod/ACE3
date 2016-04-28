@@ -1316,5 +1316,10 @@
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Items exigés pour enlever/remplacer les roues</French>
         </Key>
+        <Key ID="STR_ACE_Repair_shutOffEngineWarning">
+            <English>Engine must be off to repair</English>
+            <German>Motor muss ausgeschaltet zu reparieren sein</German>
+            <Spanish>El motor necesita desactivado para la reparación</Spanish>
+        </Key>
     </Package>
 </Project>

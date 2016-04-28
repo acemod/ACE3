@@ -86,7 +86,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = "$STR_ACE_UNROLLWIRE";
                     distance = 5;
-                    condition = "true";
+                    condition = "alive _target";
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(dismount));
                     showDisabled = 0;
                     exceptions[] = {};
