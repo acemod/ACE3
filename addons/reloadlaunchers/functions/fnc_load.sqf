@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Reload a launcher
  *
  * Argument:
@@ -11,15 +10,13 @@
  *
  * Return value:
  * NONE
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_weapon", "_magazine"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_weapon = _this select 2;
-_magazine = _this select 3;
+params ["_unit", "_target", "_weapon", "_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
 private "_reloadTime";
 _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
