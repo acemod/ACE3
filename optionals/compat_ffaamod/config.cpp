@@ -7,7 +7,6 @@
 #include "CfgGlasses.hpp"
 #include "Extended_Eventhandlers.hpp"
 
-
 class CfgPatches {
     class ADDON {
         units[] = {};
