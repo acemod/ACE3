@@ -328,7 +328,7 @@ This is a step by step guide, follow the steps from 1 to 6 in order unless state
 For the following procedure to work revive needs to be enabled.
 
 - A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
-- A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
+- A unit in the revive state can't die from any source of damage, only the timer reaching 0 can kill it.
 - Each successful CPR will increase the time the unit can stay in the revive state.
 - To wake up a patient the use of a PAK is required.
 - Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
