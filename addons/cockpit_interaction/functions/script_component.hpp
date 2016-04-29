@@ -1,0 +1,1 @@
+#include "\z\ace\addons\cockpit_interaction\script_component.hpp"
