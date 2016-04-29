@@ -1320,6 +1320,7 @@
             <English>Engine must be off to repair</English>
             <German>Motor muss ausgeschaltet zu reparieren sein</German>
             <Spanish>El motor necesita desactivado para la reparación</Spanish>
+            <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
         </Key>
     </Package>
 </Project>

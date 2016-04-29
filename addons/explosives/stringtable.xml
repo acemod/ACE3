@@ -648,6 +648,7 @@
             <Spanish>Mina M6 SLAM (Ataque Inferior)</Spanish>
             <French>Mine M6 SLAM (par le bas)</French>
             <Italian>Mina M6 SLAM (base)</Italian>
+            <Czech>M6 SLAM (Útok zespoda)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -663,6 +664,7 @@
             <Spanish>Mina M6 SLAM (Ataque Lateral)</Spanish>
             <French>Mine M6 SLAM (de flanc)</French>
             <Italian>	STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName	M6 SLAM Mine (Bottom Attack)		Mine M6 SLAM (par le bas)	M6-SLAM-Mine (Bodenangriff)		Mina M6 SLAM (base)	Mina M6 SLAM (atak od dołu)			Mina M6 SLAM (Laterale)</Italian>
+            <Czech>M6 SLAM (Útok do strany)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -678,6 +680,7 @@
             <Spanish>IED Grande (Urbano, Placa de presión)</Spanish>
             <French>Grand EEI (Urbain, plaque de pression)</French>
             <Italian>IED grande (urbano, a pressione)</Italian>
+            <Czech>IED, Velké (Městské, Nášlapné)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -693,6 +696,7 @@
             <Spanish>IED Grande (Enterrado, Placa de presión)</Spanish>
             <French>Grand EEI (Enterré, plaque de pression)</French>
             <Italian>IED grande (interrato, a pressione)</Italian>
+            <Czech>IED, Velké (Zakopané, Nášlapné)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -708,6 +712,7 @@
             <Spanish>IED Pequeño (Urbano, Placa de presión)</Spanish>
             <French>Petit EEI (Urbain, plaque de pression)</French>
             <Italian>IED piccolo (urbano, a pressione)</Italian>
+            <Czech>IED, Malé (Městské, Nášlapné)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -723,6 +728,7 @@
             <Spanish>IED Pequeño (Enterrado, Placa de presión)</Spanish>
             <French>Petit EEI (Enterré, plaque de pression)</French>
             <Italian>IED piccolo (interrato, a pressione)</Italian>
+            <Czech>IED, Malé (Zakopané, Nášlapné)</Czech>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>
