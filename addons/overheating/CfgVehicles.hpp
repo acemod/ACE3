@@ -16,7 +16,7 @@ class CfgVehicles {
                 class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);
                     condition = QUOTE( 'ACE_SpareBarrel' in magazines _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
-                    statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(swapBarrel); );
+                    statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
                     icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
