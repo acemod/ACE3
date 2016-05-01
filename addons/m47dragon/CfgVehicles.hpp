@@ -1,6 +1,4 @@
-
 class MainTurret;
-class Thing;
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -35,34 +33,7 @@ class CfgVehicles {
             class ACE_MainActions: ACE_MainActions {};
         };
     };
-    
-    class AT_01_base_F : StaticATWeapon {};
-    
-    class B_AT_01_weapon_F;
-    
-    class ACE_M47_Dragon_M222 : Thing {
-        author = "ACE Team";
-
-        displayName = "M47 Dragon M222 Round";
-        
-        model = QUOTE(PATHTOF(models\ace_m47_magazine.p3d));
-        scope = 1;
-        side = -1;
-        icon = "";
-        nameSound = "";
-        destrType = "DestructNo";
-        mapSize = 0;
-        accuracy = 0;
-        armor = 5;
-        weight = 20;
-        airFriction2[] = {0.3, 0.3, 0.3};
-        airFriction1[] = {0.3, 0.3, 0.3};
-        airFriction0[] = {0.3, 0.3, 0.3};
-    };
-    
-    
-    
-    
+   
     class ACE_M47_Dragon_Static_Base : StaticATWeapon {
         features = "Balls";
         scope = 0;
@@ -93,14 +64,14 @@ class CfgVehicles {
                 gunnerOpticsModel = PATHTOF(models\optics_m47.p3d);
                 
                 minTurn=-45; maxTurn=+45; initTurn=0;
-                minElev=-10; maxElev=+40; initElev=0;
+                minElev=-20; maxElev=+20; initElev=0;
                 
                 weapons[] = {"ACE_M47_Dragon_Static"};
                 magazines[] = {};
                 
                 gunnerAction = "gunner_static_low01";
                 gunnergetInAction = "";
-                gunnergetOutAction = "";
+                gunnergetOutAction = "GetOutLow";
                 
                 gunnerOutOpticsModel = "\A3\weapons_f\reticle\optics_empty";
                 gunnerOpticsEffect[] = {"OpticsBlur2","OpticsCHAbera2"};

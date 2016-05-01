@@ -2,8 +2,7 @@
 
 class CfgAmmo {
     class MissileBase;
-    class ace_m47_dragon_base: MissileBase
-	{
+    class ace_m47_dragon_base: MissileBase {
 		model = QUOTE(PATHTOF(models\dragon.p3d));
 		irLock = 1;
 		manualControl = 1;
@@ -37,7 +36,7 @@ class CfgAmmo {
 		initTime = 0;
 		thrustTime = 0;
 		sideAirFriction = 0.5;
-        effectsMissile = "";
+        //effectsMissile = "";
         effectFlare = "";
         airFriction = 0.5;
         irLock = 0;

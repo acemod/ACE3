@@ -1,5 +1,5 @@
 class Extended_PreInit_EventHandlers {
-    class ADDON    {
+    class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
         clientInit = QUOTE(call COMPILE_FILE(XEH_preClientInit));
     };
@@ -22,7 +22,7 @@ class Extended_GetOut_Eventhandlers {
 
 class Extended_FiredBIS_EventHandlers {
 	class ACE_M47_Dragon_Static {
-		class GVAR(dragon_x) {
+		class ADDON {
 			firedBis = QUOTE(if (local (_this select 0)) then { _this call FUNC(onFired); });
 		};
 	};

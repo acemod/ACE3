@@ -11,3 +11,4 @@ The people responsible for merging changes to this component or answering potent
 - [jaynus](https://github.com/walterpearce)
 - [NouberNou](https://github.com/noubernou)
 - [Giallustio]
+- {zumorc]

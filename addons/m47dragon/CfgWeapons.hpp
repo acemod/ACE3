@@ -32,8 +32,10 @@ class CfgWeapons {
         magazines[] = {"ace_m47_dragon"};
         distanceZoomMin = 1500;
         distanceZoomMax = 200;
-        muzzlepos = = "spice rakety"; 
+        muzzlepos = "spice rakety"; 
         canlock = 0;
+        magazineReloadTime = 10;
+        autoreload = 0;
         weaponlocksystem = 0;     
         modes[] = {"manual"};
         class manual: Mode_SemiAuto

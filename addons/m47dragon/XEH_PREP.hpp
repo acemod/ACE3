@@ -1,3 +1,0 @@
-
-PREP(pickup);
-PREP(deploy);
