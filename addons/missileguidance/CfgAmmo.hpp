@@ -1,8 +1,3 @@
-enum {
-    ACE_LOBL = 1,
-    ACE_LOAL = 2
-};
-
 class CfgAmmo {
     class MissileBase;
 
