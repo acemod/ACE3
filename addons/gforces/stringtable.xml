@@ -5,11 +5,13 @@
             <English>Gforces Effects</English>
             <German>Gforces Effekte</German>
             <Spanish>Efectos Gforces</Spanish>
+            <Czech>G Force efekty</Czech>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
             <German>Nur Luftfahrzeug</German>
             <Spanish>Sólo Aeronave</Spanish>
+            <Czech>Pouze letadla</Czech>
         </Key>
     </Package>
 </Project>
