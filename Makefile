@@ -1,11 +1,12 @@
 BIN = bin
 RELEASE = release
 SRC = addons
+FLAGS = -w unquoted-string
 
 $(BIN)/ace_%.pbo: $(SRC)/%
 	@mkdir -p $(BIN)
 	@echo "  PBO  $@"
-	@armake build -f $< $@
+	@armake build ${FLAGS} -f $< $@
 
 all: $(patsubst $(SRC)/%, $(BIN)/ace_%.pbo, $(wildcard $(SRC)/*))
 

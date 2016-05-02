@@ -21,5 +21,5 @@ class CfgPatches {
 #include "CfgEden.hpp"
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
-#include "UI\RscTitles.hpp"
-#include "UI\triagecard.hpp"
+#include "ui\RscTitles.hpp"
+#include "ui\triagecard.hpp"
