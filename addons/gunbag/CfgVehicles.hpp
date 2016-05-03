@@ -19,22 +19,23 @@ class CfgVehicles {
             showDisabled = 0;
             priority = 1;
             icon = PATHTOF(ui\gunbag_icon_ca.paa);
-        };
-        class GVAR(WeaponoffGunbag) {
-          displayName = CSTRING(offGunbag);
-          condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 1);
-          statement = QUOTE([ARR_2(_player,_player)] call FUNC(offGunbag));
-          showDisabled = 0;
-          priority = 1;
-          icon = PATHTOF(ui\gunbag_icon_ca.paa);
-        };
-        class GVAR(StatusGunbag) {
-          displayName = CSTRING(Status);
-          condition = QUOTE([_player] call FUNC(isGunbag));
-          statement = QUOTE([_player] call FUNC(status));
-          showDisabled = 0;
-          priority = 2;
-          icon = PATHTOF(ui\gunbag_icon_ca.paa);
+          };
+          class GVAR(WeaponoffGunbag) {
+            displayName = CSTRING(offGunbag);
+            condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 1);
+            statement = QUOTE([ARR_2(_player,_player)] call FUNC(offGunbag));
+            showDisabled = 0;
+            priority = 1;
+            icon = PATHTOF(ui\gunbag_icon_ca.paa);
+          };
+          class GVAR(StatusGunbag) {
+            displayName = CSTRING(Status);
+            condition = QUOTE([_player] call FUNC(isGunbag));
+            statement = QUOTE([_player] call FUNC(status));
+            showDisabled = 0;
+            priority = 2;
+            icon = PATHTOF(ui\gunbag_icon_ca.paa);
+          };
         };
       };
     };
@@ -106,3 +107,5 @@ class CfgVehicles {
     GVAR(gunbagswitch) = QUOTE(DOUBLES(CLASSNAME,Tan));
   };
 };
+
+
