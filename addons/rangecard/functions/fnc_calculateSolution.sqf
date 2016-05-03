@@ -45,7 +45,13 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot", "_useABConfig"];
+params [
+    "_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity",
+    "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed",
+    "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel",
+    "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude",
+    "_directionOfFire", "_rangeCardSlot", "_useABConfig"
+];
 _windSpeed params ["_windSpeed1", "_windSpeed2"];
 
 if (_storeRangeCardData) then {
