@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="gunbag">
-        <Key ID="STR_ACE_Gunbag_DisplayName">
-            <English>Gunbag</English>
-            <German>Waffentasche</German>
-        </Key>
-        <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
-            <English>Gunbag (Tan)</English>
-            <German>Waffentasche (Tan)</German>
-        </Key>
-        <Key ID="STR_ACE_Gunbag_toGunbag">
-            <English>Put weapon into gunbag</English>
-            <German>Lege Waffe in Waffentasche</German>
-        </Key>
-        <Key ID="STR_ACE_Gunbag_offGunbag">
-            <English>Get weapon out of gunbag</English>
-            <German>Hole Waffe aus Waffentasche</German>
-        </Key>
-        <Key ID="STR_ACE_Gunbag_Status">
-            <English>Status Gunbag</English>
-            <German>Status Waffentasche</German>
-        </Key>
-        <Key ID="STR_ACE_Gunbag_empty">
-            <English>Gunbag Empty</English>
-            <German>Waffentasche leer</German>
-        </Key>
-    </Package>
+  <Package name="gunbag">
+    <Key ID="STR_ACE_Gunbag_DisplayName">
+      <English>Gunbag</English>
+      <German>Waffentasche</German>
+    </Key>
+    <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
+      <English>Gunbag (Tan)</English>
+      <German>Waffentasche (Tan)</German>
+    </Key>
+    <Key ID="STR_ACE_Gunbag_toGunbag">
+      <English>Put weapon into gunbag</English>
+      <German>Lege Waffe in Waffentasche</German>
+    </Key>
+    <Key ID="STR_ACE_Gunbag_offGunbag">
+      <English>Get weapon out of gunbag</English>
+      <German>Hole Waffe aus Waffentasche</German>
+    </Key>
+    <Key ID="STR_ACE_Gunbag_Status">
+      <English>Status Gunbag</English>
+      <German>Status Waffentasche</German>
+    </Key>
+    <Key ID="STR_ACE_Gunbag_empty">
+      <English>Gunbag Empty</English>
+      <German>Waffentasche leer</German>
+    </Key>
+  </Package>
 </Project>

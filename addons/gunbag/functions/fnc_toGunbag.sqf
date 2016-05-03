@@ -35,16 +35,16 @@ _items = _state select 0;
 
 
 if ((_magazine select 0) != "") then {
-	_unit addMagazine _magazine;
+  _unit addMagazine _magazine;
 };
 
 _unit removeWeapon _weapon;
 
 
 for "_loop" from 0 to (count _state) -1 do {
-	if (typeName (_state select _loop) == QUOTE(STRING)) then {
-		_items pushBack (_state select _loop);
-	};
+  if (typeName (_state select _loop) == QUOTE(STRING)) then {
+    _items pushBack (_state select _loop);
+  };
 };
 
 ([_target] call FUNC(switchBackpack)) setVariable [QGVAR(GunbagWeapon), [[_weapon], _items], true];
