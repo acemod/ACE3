@@ -295,7 +295,7 @@
             <French>Selectioner Bras Gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
             <Portuguese>Selecionar Braço Esquerdo</Portuguese>
-            <Czech>Vybrat Levou Ruku</Czech>
+            <Czech>Vybrat Levou ruku</Czech>
             <Italian>Seleziona Braccio Sinistro</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
@@ -306,7 +306,7 @@
             <French>Selectioner Bras Droit</French>
             <Polish>Wybierz prawą rękę</Polish>
             <Portuguese>Selecionar Braço Direito</Portuguese>
-            <Czech>Vybrat Pravou Ruku</Czech>
+            <Czech>Vybrat Pravou ruku</Czech>
             <Italian>Seleziona Braccio Destro</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
@@ -317,7 +317,7 @@
             <French>Selectioner Jambe Gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
             <Portuguese>Selecionar Perna Esquerda</Portuguese>
-            <Czech>Vybrat Levou Nohu</Czech>
+            <Czech>Vybrat Levou nohu</Czech>
             <Italian>Seleziona Gamba Sinistra</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
@@ -328,7 +328,7 @@
             <French>Selectioner Jambe Droite</French>
             <Polish>Wybierz prawą nogę</Polish>
             <Portuguese>Selecionar Perna Direita</Portuguese>
-            <Czech>Vybrat Pravou Nohu</Czech>
+            <Czech>Vybrat Pravou nohu</Czech>
             <Italian>Seleziona Gamba Destra</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
@@ -581,7 +581,7 @@
             <French>A Perdu Bcp de Sang</French>
             <Polish>Stracił dużo krwi</Polish>
             <Portuguese>Perdeu muito sangue</Portuguese>
-            <Czech>Ztratil hodně Krve</Czech>
+            <Czech>Ztratil hodně krve</Czech>
             <Italian>Perso molto Sangue</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">

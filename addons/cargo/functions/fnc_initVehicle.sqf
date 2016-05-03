@@ -20,6 +20,8 @@ TRACE_1("params", _vehicle);
 
 private _type = typeOf _vehicle;
 
+if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
+
 if (isServer) then {
     {
         if (isClass _x) then {
@@ -38,7 +40,6 @@ if (_type in GVAR(initializedVehicleClasses)) exitWith {};
 GVAR(initializedVehicleClasses) pushBack _type;
 
 if (!hasInterface) exitWith {};
-if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) exitWith {};
 
 TRACE_1("Adding unload cargo action to class", _type);
 
