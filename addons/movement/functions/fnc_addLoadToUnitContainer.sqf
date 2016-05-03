@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: The Container <OBEJCT>
+ * 1: The Container <OBJECT>
  * 2: The Virtual Load <NUMBER>
  *
  * Return Value:
@@ -23,7 +23,7 @@ if !(_container in [
 ]) exitWith {false};
 
 private _virtualLoad = (_container getVariable [QGVAR(vLoad), 0]) + _virtualLoadToAdd;
-_container setVariable [QGVAR(vLoad), _virtualLoad];
+_container setVariable [QGVAR(vLoad), _virtualLoad, true];
 
 // update
 _unit call FUNC(handleVirtualMass);
