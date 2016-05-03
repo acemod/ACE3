@@ -40,7 +40,7 @@ def check_config_style(filepath):
         checkForSemiColumn = False
 
         # Extra information so we know what line we find errors at
-        lineNumber = 0
+        lineNumber = 1
 
         indexOfCharacter = 0
         # Parse all characters in the content of this file to search for potential errors

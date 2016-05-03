@@ -16,11 +16,9 @@
 
 #include "script_component.hpp"
 
-private ["_return"];
-
 params ["_index"];
 
-_return = switch (_index) do {
+switch (_index) do {
     case 0: {0.00}; // Off
     case 1: {0.20}; // Very Low
     case 2: {0.40}; // Low
@@ -30,5 +28,3 @@ _return = switch (_index) do {
     case 6: {"fov"}; // FoV Based
     default {0.50}; // something broke if this returns
 };
-
-_return;

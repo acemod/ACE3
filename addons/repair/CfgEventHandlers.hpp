@@ -35,7 +35,7 @@ class Extended_InitPost_EventHandlers {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
             serverInit = QUOTE(_this call DFUNC(addSpareParts));
-            exclude[] = {QEGVAR(fastroping,helper)};
+            exclude[] = {QEGVAR(fastroping,helper), "ACE_friesBase"};
         };
     };
     class Plane {
