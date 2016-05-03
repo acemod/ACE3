@@ -110,16 +110,16 @@
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
-            <English>Name Tags</English>
-            <Polish>Ustawienia imion</Polish>
-            <Spanish>Etiquetas de nombre</Spanish>
-            <German>Zeige Spielernamen</German>
-            <Czech>Jmenovky</Czech>
-            <Portuguese>Etiquetas de nome</Portuguese>
-            <French>NameTags</French>
-            <Hungarian>Névcímkék</Hungarian>
-            <Russian>Имена игроков</Russian>
-            <Italian>Etichette Nomi</Italian>
+            <English>ACE Name Tags</English>
+            <Polish>ACE Ustawienia imion</Polish>
+            <Spanish>ACE Etiquetas de nombre</Spanish>
+            <German>ACE Zeige Spielernamen</German>
+            <Czech>ACE Jmenovky</Czech>
+            <Portuguese>ACE Etiquetas de nome</Portuguese>
+            <French>ACE NameTags</French>
+            <Hungarian>ACE Névcímkék</Hungarian>
+            <Russian>ACE Имена игроков</Russian>
+            <Italian>ACE Etichette Nomi</Italian>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
