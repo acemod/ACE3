@@ -26,8 +26,7 @@ REFUEL_HOLSTER_WEAPON
 
 private _endPosOffset = [0, 0, 0];
 if (isNull _nozzle) then { // func is called on fuel truck
-    _target setVariable [QGVAR(engineHit), _target getHitPointDamage "HitEngine", true];
-    ["setVanillaHitPointDamage", _target, [_target, ["HitEngine", 1]] ] call EFUNC(common,objectEvent);
+    [_target, "blockEngine", "ACE_Refuel", true] call EFUNC(common,statusEffect_set);
 
     _target setVariable [QGVAR(isConnected), true, true];
     _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hooks));
