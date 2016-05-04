@@ -22,4 +22,4 @@ private _mass = getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlots
   _mass = _mass + getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "mass");
 } foreach _items;
 
-_mass
+(_mass / 22)

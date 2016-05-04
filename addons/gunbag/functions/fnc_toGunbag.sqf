@@ -39,3 +39,7 @@ _unit removeWeapon _weapon;
 
 [_target, backpackContainer _target, [_weapon, _items] call FUNC(calculateMass)] call EFUNC(movement,addLoadToUnitContainer);
 _gunbag setVariable [QGVAR(GunbagWeapon), [[_weapon], _items], true];
+
+if(["ACE_Backpacks"] call EFUNC(common,isModLoaded)) then {
+  [_unit, _target, backpackContainer _target] call EFUNC(backpacks,backpackOpened);
+};

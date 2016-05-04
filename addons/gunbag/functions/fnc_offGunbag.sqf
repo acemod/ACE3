@@ -40,5 +40,9 @@ removeAllPrimaryWeaponItems _unit;
   _unit addWeaponItem [_weapon, _x];
 } forEach _items;
 
-[_target, backpackContainer _target, [_weapon, _items] call FUNC(calculateMass)] call EFUNC(movement,addLoadToUnitContainer);
+[_target, backpackContainer _target, -([_weapon, _items] call FUNC(calculateMass))] call EFUNC(movement,addLoadToUnitContainer);
 _gunbag setVariable [QGVAR(GunbagWeapon), [], true];
+
+if(["ACE_Backpacks"] call EFUNC(common,isModLoaded)) then {
+  [_unit, _target, backpackContainer _target] call EFUNC(backpacks,backpackOpened);
+};
