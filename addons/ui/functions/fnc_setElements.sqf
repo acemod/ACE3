@@ -23,15 +23,13 @@ if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
 };
 
-private _shownHUD = shownHUD; // [hud, info, radar, compass, direction, menu, group, cursors]
-
 ["ui", [
-    _shownHUD select 0,
+    true,
     GVAR(soldierVehicleWeaponInfo),
     GVAR(vehicleRadar),
     GVAR(vehicleCompass),
-    _shownHUD select 4,
+    true,
     GVAR(commandMenu),
     GVAR(groupBar),
-    _shownHUD select 7
+    true
 ]] call EFUNC(common,showHud);
