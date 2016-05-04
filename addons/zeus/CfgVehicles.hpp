@@ -167,7 +167,7 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    
+
     // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
         // curatorCanAttach = 1;
         // displayName = CSTRING(ModuleSetSupp_DisplayName);

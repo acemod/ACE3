@@ -577,7 +577,7 @@ class CfgVehicles {
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
     };
-    
+
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {

@@ -5,8 +5,8 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 // collect frag and other grenades separately
-GVAR(GrenadesAll)     = [];
-GVAR(GrenadesFrag)    = [];
+GVAR(GrenadesAll) = [];
+GVAR(GrenadesFrag) = [];
 GVAR(GrenadesNonFrag) = [];
 
 {

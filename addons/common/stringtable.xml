@@ -802,6 +802,7 @@
             <Italian>Non c'è spazio per scaricare</Italian>
             <Spanish>No hay espacio para descargar.</Spanish>
             <French>Pas de place pour décharger</French>
+            <Czech>Nedostatek místa k vyložení</Czech>
         </Key>
     </Package>
 </Project>

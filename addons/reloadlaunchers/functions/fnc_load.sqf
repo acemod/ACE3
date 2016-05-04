@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Reload a launcher
  *
  * Argument:
@@ -11,18 +10,19 @@
  *
  * Return value:
  * NONE
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_weapon", "_magazine"];
+params ["_unit", "_target", "_weapon", "_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
-_unit = _this select 0;
-_target = _this select 1;
-_weapon = _this select 2;
-_magazine = _this select 3;
-
-private "_reloadTime";
-_reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
+private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))) then {
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))
+} else {
+    2.5
+};
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);
