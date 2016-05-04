@@ -6,7 +6,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_UnJam {
                     displayName = CSTRING(UnjamWeapon);
-                    condition = QUOTE( [_player] call FUNC(canUnjam) );
+                    condition = QUOTE( GVAR(enabled) && {[_player] call FUNC(canUnjam)} );
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
@@ -15,7 +15,7 @@ class CfgVehicles {
                 };
                 class ACE_SwapBarrel {
                     displayName = CSTRING(SwapBarrel);
-                    condition = QUOTE( 'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1} );
+                    condition = QUOTE( GVAR(enabled) && {'ACE_SpareBarrel' in items _player && {getNumber (configFile >> 'CfgWeapons' >> currentWeapon _player >> 'ACE_Overheating_allowSwapBarrel') == 1}} );
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
@@ -23,7 +23,7 @@ class CfgVehicles {
                 };
                 class ACE_CheckTemperature {
                     displayName = CSTRING(CheckTemperatureShort);
-                    condition = "switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (secondaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}";
+                    condition = "ace_overheating_enabled && {switch (currentWeapon _player) do {case (''): {false}; case (primaryWeapon _player); case (secondaryWeapon _player); case (handgunWeapon _player): {true}; default {false}}}";
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [ARR_2(_player, currentWeapon _player)] call FUNC(CheckTemperature); );
                     showDisabled = 0;

@@ -263,5 +263,13 @@
             <Italian>Temperatura</Italian>
             <Russian>Температура</Russian>
         </Key>
+        <Key ID="STR_ACE_Overheating_enabled_displayName">
+            <English>Overheating Enabled</English>
+            <German>Überhitzen Aktiviert</German>
+            <Spanish>Activada Sobrecalentamiento</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_description">
+            <English>Master enable for the overheating/jamming module</English>
+        </Key>
     </Package>
 </Project>
