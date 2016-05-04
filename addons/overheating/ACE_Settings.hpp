@@ -38,4 +38,10 @@ class ACE_Settings {
         displayName = CSTRING(unJamFailChance_displayName);
         description = CSTRING(unJamFailChance_description);
     };
+    class GVAR(enabled) {
+        typeName = "BOOL";
+        value = 1;
+        displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
+    };
 };
