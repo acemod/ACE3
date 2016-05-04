@@ -4,7 +4,7 @@
 ["InitSettingsFromModules", {
     // TODO This is a basic and limited implementation that mimics some of the functionality from the A3 module framework, but not all of it.
     // We have to execute this in the postInit XEH because on object init, the parameters of the modules are not yet available. They are if we execute it at the start of postInit execution.
-    
+
     private _uniqueModulesHandled = [];
     {
         [_x] call {
@@ -28,8 +28,8 @@
             };
             if (_isSingular && {_logicType in _uniqueModulesHandled}) then { //ToDo: should this be an exit?
                 ACE_LOGWARNING_1("Module [%1] - More than 1 singular module placed", _logicType);
-            }; 
-            if (_isSingular) then {_uniqueModulesHandled pushBack _logicType;};           
+            };
+            if (_isSingular) then {_uniqueModulesHandled pushBack _logicType;};
 
             if (_isGlobal || isServer) then {
                 [_logic, (synchronizedObjects _logic), true] call _function;
@@ -44,7 +44,7 @@
             };
         };
     } forEach GVAR(moduleInitCollection);
-    
+
     if (isServer) then {
         GVAR(serverModulesRead) = true;
         publicVariable QGVAR(serverModulesRead);

@@ -35,10 +35,10 @@ GVAR(active) = true;
         74210 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     if (currentWeapon ACE_player == "ACE_Yardage450" && cameraView == "GUNNER") then {
         74210 cutRsc ["ACE_RscYardage450", "PLAIN", 1, false];
-        
+
         __ctrlLaser ctrlShow GVAR(lasing);
         if (GVAR(targetAcquired)) then {
             __ctrlTarget ctrlSetText "Target Acquired";
@@ -52,5 +52,5 @@ GVAR(active) = true;
     } else {
         74210 cutText ["", "PLAIN"];
     };
-    
+
 }, 0, []] call CBA_fnc_addPerFrameHandler;
