@@ -22,11 +22,11 @@ _result = -1;
 _gunbag = backpackContainer _target;
 
 if(count (_gunbag getVariable [QGVAR(GunbagWeapon),[]]) <= 0 && {primaryWeapon _unit != ""} && {getNumber (configFile >> "CfgWeapons" >> primaryWeapon _unit  >> QGVAR(allowGunbag)) == 1}) then {
-	_result = 0;
+  _result = 0;
 };
 
 if(count (_gunbag getVariable [QGVAR(GunbagWeapon),[]]) >= 1 && {primaryWeapon _unit == ""}) then {
-	_result = 1;
+  _result = 1;
 };
 
 _result

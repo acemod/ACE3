@@ -27,7 +27,7 @@ _state = _gunbag getVariable [QGVAR(GunbagWeapon),[]];
 */
 
 if (count _state <= 0) exitWith {
-	[localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
+  [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
 };
 
 _weapon = (_state select 0) select 0;
@@ -36,7 +36,7 @@ _items = (_state select 1);
 _unit addWeapon _weapon;
 
 {
-	_unit addWeaponItem [_weapon, _x];
+  _unit addWeaponItem [_weapon, _x];
 } forEach _items;
 
 ([_target] call FUNC(switchBackpack)) setVariable [QGVAR(GunbagWeapon), [], true];

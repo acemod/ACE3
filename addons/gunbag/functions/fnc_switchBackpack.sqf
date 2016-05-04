@@ -26,11 +26,11 @@ removeBackpack _unit;
 _unit addBackpack _altgunbag;
 
 {
-	_unit addItemToBackpack _x;
+  _unit addItemToBackpack _x;
 } forEach _items;
 
 if ([QUOTE(ACE_Backpacks)] call EFUNC(common,isModLoaded)) then {
-	[_unit, backpackContainer _unit] call EFUNC(backpacks,backpackOpened);
+  [_unit, backpackContainer _unit] call EFUNC(backpacks,backpackOpened);
 };
 
 (backpackContainer _unit)
