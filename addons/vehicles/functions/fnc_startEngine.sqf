@@ -1,23 +1,30 @@
-// by commy2
+/*
+ * Author: commy2
+ * Delays engine start of vehicle.
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Is Engine on <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [vehicle player, false] call ace_vehicle_fnc_startEngine
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_vehicle", "_isEngineOn"];
-
-_vehicle = _this select 0;
-_isEngineOn = _this select 1;
+params ["_vehicle", "_isEngineOn"];
 
 if (!_isEngineOn || {floor abs speed _vehicle > 0}) exitWith {};
 
 [{
-    private ["_vehicle", "_time", "_direction"];
+    params ["_args", "_idPFH"];
+    _args params ["_vehicle", "_time", "_direction"];
 
-    _vehicle = _this select 0 select 0;
-    _time = _this select 0 select 1;
-    _direction = _this select 0 select 2;
-
-    if (ACE_time > _time) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
-    };
+    if (ACE_time > _time) exitWith { [_idPFH] call CBA_fnc_removePerFrameHandler; };
 
     _vehicle setVelocity [0, 0, 0];
     _vehicle setVectorDirAndUp _direction;

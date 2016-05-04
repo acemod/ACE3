@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_weight"];
+params ["_unit"];
 
-_unit = _this select 0;
-
-_weight = loadAbs _unit * 0.1;
+private _weight = loadAbs _unit * 0.1;
 
 if (GVAR(useImperial)) then {
     _weight = format ["%1lb", (round (_weight * 100)) / 100];

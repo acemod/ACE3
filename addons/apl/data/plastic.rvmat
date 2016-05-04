@@ -1,0 +1,4 @@
+surfaceInfo="z\ace\addons\apl\data\plastic.bisurf";
+
+diffuse[]={0.5,0.5,1.0,1.000000};
+ambient[]={0.5,0.5,1.0,1.000000};

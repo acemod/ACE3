@@ -16,15 +16,15 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_newUnit,_oldUnit);
+params ["_newUnit","_oldUnit"];
 
 //set showHUD based on new unit status:
 if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_newUnit getVariable [QGVAR(isSurrendering), false]}) then {
     TRACE_1("Player Change (showHUD false)",_newUnit);
-    showHUD false;
+    ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
 } else {
     TRACE_1("Player Change (showHUD true)",_newUnit);
-    showHUD true;
+    ["captive", []] call EFUNC(common,showHud); //same as showHud true;
 };
 
 //If old player was escorting, stop

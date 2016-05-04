@@ -1,16 +1,24 @@
 /*
  * Author: marc_book, edited by commy2
- *
  * Checks if a unit is an engineer.
  *
  * Arguments:
- * 0: unit to be checked (object)
+ * 0: unit to be checked <OBJECT>
  *
  * Return Value:
- * Bool: is the unit an engineer?
+ * is the unit an engineer <BOOL>
+ *
+ * Example:
+ * [player] call ace_common_fnc_isEngineer
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
-_unit getVariable ["ACE_IsEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1]
+private _isEngineer = _unit getVariable ["ACE_isEngineer", getNumber (configFile >> "CfgVehicles" >> typeOf _unit >> "engineer") == 1];
+//Handle ace_repair modules setting this to a number
+if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0};
+
+_isEngineer

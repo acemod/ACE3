@@ -15,82 +15,69 @@
  */
 #include "script_component.hpp"
 
-//Start up a PFEH that scans all mines/explosives without defuseObjects attached and adds them
-//Handles Editor Placed / Zeus / Scripted
-if (isServer) then {
-    [{
-        private ["_explosive", "_helpers", "_defuseHelper"];
-        {
-            _explosive = _x;
-            _helpers = {
-                ((typeOf _x) == "ACE_DefuseObject") && {(_x getVariable [QGVAR(Explosive), objNull]) == _explosive}
-            } count (attachedObjects _explosive);
+//Event for setting explosive placement angle/pitch:
+[QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
 
-            if (_helpers == 0) then {
-                TRACE_3("Explosive without helper",_explosive,(getPosAsl _explosive),(typeOf _explosive));
-                _defuseHelper = createVehicle ["ACE_DefuseObject", (getPos _explosive), [], 0, "NONE"];
-                _defuseHelper attachTo [_explosive, [0,0,0], ""];
-                _defuseHelper setVariable [QGVAR(Explosive),_explosive,true];
-            };
-        } forEach allMines;
-    }, 5, []] call CBA_fnc_addPerFrameHandler;
+//When getting knocked out in medical, trigger deadman explosives:
+//Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
+if (isServer) then {
+    ["medical_onUnconscious", {
+        params ["_unit", "_isUnconscious"];
+        if (!_isUnconscious) exitWith {};
+        TRACE_1("Knocked Out, Doing Deadman", _unit);
+        [_unit] call FUNC(onIncapacitated);
+    }] call EFUNC(common,addEventHandler);
 };
 
-if !(hasInterface) exitWith {};
+if (!hasInterface) exitWith {};
+
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
-//Cancel placement if interact menu opened
+// In case we are a JIP client, ask the server for orientation of any previously
+// placed mine.
+if (isServer) then {
+    ["clientRequestsOrientations", {
+        params ["_logic"];
+        TRACE_1("clientRequestsOrientations received:",_logic);
+        // Filter the array before sending it
+        GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
+            _x params ["_explosive"];
+            (!isNull _explosive && {alive _explosive})
+        };
+        TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
+        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
+    }] call EFUNC(common,addEventHandler);
+} else {
+    ["serverSendsOrientations", {
+        params ["_explosivesOrientations"];
+        TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
+        {
+            _x params ["_explosive","_direction","_pitch"];
+            TRACE_3("orientation set:",_explosive,_direction,_pitch);
+            [_explosive, _direction, _pitch] call FUNC(setPosition);
+        } forEach _explosivesOrientations;
+        private _group = group GVAR(localLogic);
+        deleteVehicle GVAR(localLogic);
+        GVAR(localLogic) = nil;
+        deleteGroup _group;
+    }] call EFUNC(common,addEventHandler);
+
+    //  Create a logic to get the client ID
+    GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
+    ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
+};
+
 ["interactMenuOpened", {
-    if (GVAR(pfeh_running) && {!isNull (GVAR(Setup))}) then {
-        call FUNC(place_Cancel)
+    //Cancel placement if interact menu opened
+    if (GVAR(pfeh_running)) then {
+        GVAR(placeAction) = PLACE_CANCEL;
     };
+
+    //Show defuse actions on CfgAmmos (allMines):
+    _this call FUNC(interactEH);
+
 }] call EFUNC(common,addEventHandler);
-
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
-player addEventHandler ["Killed", {
-    private "_deadman";
-    call FUNC(place_Cancel);
-    _deadman = [(_this select 0), "DeadManSwitch"] call FUNC(getPlacedExplosives);
-    {
-        [(_this select 0), -1, _x, true] call FUNC(detonateExplosive);
-    } count _deadman;
-}];
-player addEventHandler ["Take", {
-    private ["_item", "_getter", "_giver", "_config", "_detonators"];
-    _item = _this select 2;
-    _getter = _this select 0;
-    _giver = _this select 1;
-
-    _config = ConfigFile >> "CfgWeapons" >> _item;
-    if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
-        private ["_clackerItems"];
-        _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-        _getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
-
-        _detonators = [_giver] call FUNC(getDetonators);
-        if (count _detonators == 0) then {
-            _giver setVariable [QGVAR(Clackers), nil, true];
-        };
-    };
-}];
-player addEventHandler ["Put", {
-    private ["_item", "_getter", "_giver", "_config"];
-    _item = _this select 2;
-    _getter = _this select 1;
-    _giver = _this select 0;
-
-    _config = ConfigFile >> "CfgWeapons" >> _item;
-    if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
-        private ["_clackerItems"];
-        _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-        _getter SetVariable [QGVAR(Clackers), (_getter getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
-
-        _detonators = [_giver] call FUNC(getDetonators);
-        if (count _detonators == 0) then {
-            _giver setVariable [QGVAR(Clackers), nil, true];
-        };
-    };
-}];

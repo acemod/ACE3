@@ -1,34 +1,30 @@
 /*
  * Author: commy2
- *
  * Remove a condition that gets checked by ace_common_fnc_canInteractWith.
  *
  * Arguments:
- * 0: The conditions id. (String)
+ * 0: The conditions id. <STRING>
  *
  * Return Value:
- * Unit can interact?
+ * None
  *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private "_conditionName";
+params ["_conditionName"];
 
-_conditionName = toLower (_this select 0);
+_conditionName = toLower _conditionName;
 
-private ["_conditions", "_conditionNames", "_conditionFuncs"];
+private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
+_conditions params ["_conditionNames", "_conditionFuncs"];
 
-_conditionNames = _conditions select 0;
-_conditionFuncs = _conditions select 1;
-
-private "_index";
-_index = _conditionNames find _conditionName;
+private _index = _conditionNames find _conditionName;
 
 if (_index == -1) exitWith {};
 
 _conditionNames deleteAt _index;
 _conditionFuncs deleteAt _index;
 
-GVAR(InteractionConditions) = [_conditionNames, _conditionFuncs];
+GVAR(InteractionConditions) = _conditions;

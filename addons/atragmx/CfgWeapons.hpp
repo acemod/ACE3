@@ -6,8 +6,8 @@ class CfgWeapons {
     class ACE_ATragMX: ACE_ItemCore {
         author = "Ruthberg";
         scope = 2;
-        displayName = "$STR_ACE_ATragMX_Name";
-        descriptionShort = "$STR_ACE_ATragMX_Description";
+        displayName = CSTRING(Name);
+        descriptionShort = CSTRING(Description);
         model = PATHTOF(data\tdsrecon.p3d);
         picture = PATHTOF(UI\ATRAG_Icon.paa);
         icon = "iconObject_circle";

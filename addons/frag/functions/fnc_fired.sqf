@@ -1,58 +1,55 @@
+/*
+ * Author: nou, jaynus, PabstMirror
+ * Called from the unified fired EH for all.
+ * If spall is not enabled (default), then cache and only track those that will actually trigger fragmentation.
+ *
+ * Arguments:
+ * None. Parameters inherited from EFUNC(common,firedEH)
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [clientFiredBIS-XEH] call ace_frag_fnc_fired
+ *
+ * Public: No
+ */
+// #define DEBUG_ENABLED_FRAG
 #include "script_component.hpp"
 
-private ["_enabled", "_gun", "_type", "_round", "_doFragTrack", "_doSpall", "_spallTrack", "_spallTrackID"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-if (!GVAR(enabled)) exitWith {};
+private _shouldAdd = GVAR(cacheRoundsTypesToTrack) getVariable _ammo;
+if (isNil "_shouldAdd") then {
+    TRACE_1("no cache for round",_ammo);
 
-_gun = _this select 0;
-_type = _this select 4;
-_round = _this select 6;
+    if (!EGVAR(common,settingsInitFinished)) exitWith {
+        //Just incase fired event happens before settings init, don't want to set cache wrong if spall setting changes
+        TRACE_1("Settings not init yet - exit without setting cache",_ammo);
+        _shouldAdd = false;
+    };
 
-_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
-if(_enabled < 1) exitWith {};
+    if (GVAR(SpallEnabled)) exitWith {
+        //Always want to run whenever spall is enabled?
+        _shouldAdd = true;
+        TRACE_2("SettingCache[spallEnabled]",_ammo,_shouldAdd);
+        GVAR(cacheRoundsTypesToTrack) setVariable [_ammo, _shouldAdd];
+    };
 
-if(_round in GVAR(blackList)) exitWith {
-    GVAR(blackList) = GVAR(blackList) - [_round];
+    //Read configs and test if it would actually cause a frag, using same logic as FUNC(pfhRound)
+    private _skip = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(skip));
+    private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
+    private _indirectRange = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
+    private _force = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(force));
+    private _fragPower = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))));
+
+    _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
+    TRACE_6("SettingCache[willFrag?]",_skip,_explosive,_indirectRange,_force,_fragPower,_shouldAdd);
+    GVAR(cacheRoundsTypesToTrack) setVariable [_ammo, _shouldAdd];
 };
 
-
-_doFragTrack = false;
-if(_gun == ACE_player) then {
-    _doFragTrack = true;
-} else {
-    if((gunner _gun) == ACE_player) then {
-        _doFragTrack = true;
-    } else {
-        if(local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}) then {
-            _doFragTrack = true;
-        };
-    };
-};
-_doSpall = false;
-if(_doSpall) then {
-    if(GVAR(spallIsTrackingCount) <= 0) then {
-        GVAR(spallHPData) = [];
-    };
-    if(GVAR(spallIsTrackingCount) > 5) then {
-        // ACE_player sideChat "LIMT!";
-        _doSpall = false;
-    } else {
-        GVAR(spallIsTrackingCount) = GVAR(spallIsTrackingCount) + 1;
-    };
-};
-// ACE_player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
-
-#ifdef DEBUG_MODE_FULL
-[ACE_player, _round, [1,0,0,1]] call FUNC(addTrack);
-#endif
-
-if(_doFragTrack && alive _round) then {
-    GVAR(trackedObjects) pushBack _round;
-    _spallTrack = [];
-    _spallTrackID = [];
-    [DFUNC(trackFragRound), 0, [_round, (getPosASL _round), (velocity _round), _type, ACE_time, _gun, _doSpall, _spallTrack, _spallTrackID]] call cba_fnc_addPerFrameHandler;
-    if(_doSpall) then {
-        [_round, 2, _spallTrack, _spallTrackID] call FUNC(spallTrack);
-    };
-    // ACE_player sideChat "WTF2";
+if (_shouldAdd) then {
+    TRACE_3("Running Frag Tracking",_unit,_ammo,_projectile);
+    [_unit, _ammo, _projectile] call FUNC(addPfhRound);
 };

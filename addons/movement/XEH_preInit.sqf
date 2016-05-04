@@ -2,9 +2,6 @@
 
 ADDON = false;
 
-PREP(getWeight);
-PREP(canClimb);
-PREP(climb);
-PREP(handleClimb);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

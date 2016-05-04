@@ -1,27 +1,27 @@
-/**
- * fn_setHearingCapability.sqf
- * @Descr: Handle set volume calls. Will use the lowest available volume setting.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Handle set volume calls. Will use the lowest available volume setting.
  *
- * @Arguments: [id STRING, settings NUMBER, add BOOL (Optional. True will add, false will remove. Default value is true)]
- * @Return: nil
- * @PublicAPI: true
+ * Arguments:
+ * 0: id <STRING>
+ * 1: settings <NUMBER>
+ * 2: add (default: true) <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: Yes
+ *
+ * Note: uses player
  */
-
 #include "script_component.hpp"
 
-private ["_add", "_exists", "_map", "_lowestVolume"];
+params ["_id", "_settings", ["_add", true]];
 
-PARAMS_2(_id,_settings);
+private _map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
 
-_add = true;
-if (count _this > 2) then {
-    _add = _this select 2;
-};
+private _exists = false;
 
-_map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
-
-_exists = false;
 {
     if (_id == _x select 0) exitWith {
         _exists = true;
@@ -41,10 +41,12 @@ if (!_exists && _add) then {
 missionNamespace setVariable [QGVAR(setHearingCapabilityMap), _map];
 
 // find lowest volume
-_lowestVolume = 1;
+private _lowestVolume = 1;
+
 {
     _lowestVolume = (_x select 1) min _lowestVolume;
-} forEach _map;
+    false
+} count _map;
 
 // in game sounds
 0 fadeSound _lowestVolume;

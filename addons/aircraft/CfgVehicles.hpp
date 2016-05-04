@@ -176,8 +176,8 @@ class CfgVehicles {
             };
             class CargoRamp_Open: DoorL1_Open {
                 userActionID = 52;
-                displayName = "$STR_ACE_Aircraft_OpenCargoRamp";
-                textToolTip = "$STR_ACE_Aircraft_OpenCargoRamp";
+                displayName = CSTRING(OpenCargoRamp);
+                textToolTip = CSTRING(OpenCargoRamp);
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" < 0.5 AND Alive(this)";
@@ -185,8 +185,8 @@ class CfgVehicles {
             };
             class CargoRamp_Close: DoorL1_Close {
                 userActionID = 55;
-                displayName = "$STR_ACE_Aircraft_CloseCargoRamp";
-                textToolTip = "$STR_ACE_Aircraft_CloseCargoRamp";
+                displayName = CSTRING(CloseCargoRamp);
+                textToolTip = CSTRING(CloseCargoRamp);
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" > 0.5 AND Alive(this)";

@@ -18,5 +18,5 @@ if(_depth <= 2) then {
     
     
     _testParams = [_pos, [_indirectHitRange, _indirectHit], [], [], -4, _depth, 0];
-    [DFUNC(findReflections), 0, _testParams] call cba_fnc_addPerFrameHandler;
+    [DFUNC(findReflections), 0, _testParams] call CBA_fnc_addPerFrameHandler;
 };

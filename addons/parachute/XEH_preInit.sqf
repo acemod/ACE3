@@ -17,10 +17,6 @@
 
 ADDON = false;
 
-PREP(doLanding);
-PREP(handleInfoDisplayChanged);
-PREP(hideAltimeter);
-PREP(onEachFrame);
-PREP(showAltimeter);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

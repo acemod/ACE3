@@ -1,40 +1,37 @@
 /*
- * Author: KoffeinFlummi
- * Sends a civilian crowd away with a chance of failure
+ * Author: KoffeinFlummi, commy2
+ * Sends a near civilian crowd away with a chance of failure.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
- * [target] call ace_interaction_fnc_sendAway
+ * [civillian] call ace_interaction_fnc_sendAway
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define DISTANCE 50
-#define RADIUS 10
+#define SEND_DISTANCE 50
+#define SEND_RADIUS 10
 
-PARAMS_1(_unit);
+params ["_unit"];
 
-private ["_chance", "_x"];
+_unit playActionNow "GestureGo";
 
-ACE_player playActionNow "GestureGo";
-
-if (count weapons ACE_player > 0) then {
-    _chance = 0.8;
-} else {
-    _chance = 0.5;
-};
+private "_chance";
+_chance = [0.5, 0.8] select (count weapons _unit > 0);
 
 {
-    if (count (weapons _unit) == 0 and random 1 < _chance) then {
-        [-2, {
-            (_this select 0) setUnitPos "AUTO";
-            (_this select 0) doMove [(getPos (_this select 0) select 0) + DISTANCE * (eyeDirection (_this select 1) select 0), (getPos (_this select 0) select 1) + DISTANCE * (eyeDirection (_this select 1) select 1), 0];
-        }, [_x, ACE_player]] call CBA_fnc_globalExecute;
+    if (count weapons _x == 0 && {random 1 < _chance}) then {
+        private "_position";
+        _position = getPosASL _unit vectorAdd (eyeDirection _unit vectorMultiply SEND_DISTANCE);
+        _position set [2, 0];
+
+        ["sendAway", [_x], [_x, _position]] call EFUNC(common,targetEvent);
     };
-} forEach (_unit nearEntities ["Civilian", RADIUS]);
+    false
+} count (_unit nearEntities ["Civilian", SEND_RADIUS]);

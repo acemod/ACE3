@@ -18,8 +18,12 @@
 
 private ["_settingIndex", "_inputText", "_setting", "_settingName", "_convertedValue"];
 
-_settingIndex =  lbCurSel 200;  //Index of left list
 _inputText = ctrlText 414;  //Index of right drop down
+
+_settingIndex = -1;
+if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
+    _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
+};
 
 switch (GVAR(optionMenu_openTab)) do {
     case (MENU_TAB_SERVER_VALUES): {
@@ -29,7 +33,10 @@ switch (GVAR(optionMenu_openTab)) do {
                 _settingName = _setting select 0;
 
                 _convertedValue = switch (toUpper (_setting select 1)) do {
-                case "STRING": {format ['"%1"', _inputText]};
+                case "STRING": {
+                    ctrlSetText [414, _inputText call FUNC(stringEscape)];
+                    format ['%1', _inputText call FUNC(stringEscape)];
+                };
                 case "ARRAY": {format [call compile "[%1]", _inputText]};
                 case "SCALAR": {parseNumber _inputText;};
                     default {throw "Error"};

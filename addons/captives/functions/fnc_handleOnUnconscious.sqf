@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_2_PVT(_this,_unit,_isUnconc);
+params ["_unit","_isUnconc"];
 
 if (!local _unit) exitWith {};
 

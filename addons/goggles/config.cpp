@@ -2,15 +2,15 @@
 
 #define COLOUR 8.0
 class CfgPatches {
-  class ADDON {
-    units[] = {};
-    weapons[] = {};
-    requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_common"};
-    author[] = {"Garth 'L-H' de Wet"};
-    authorUrl = "http://garth.snakebiteink.co.za/";
-    VERSION_CONFIG;
-  };
+    class ADDON {
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common"};
+        author[] = {"Garth 'L-H' de Wet"};
+        authorUrl = "http://garth.snakebiteink.co.za/";
+        VERSION_CONFIG;
+    };
 };
 
 #include "CfgEventHandlers.hpp"
@@ -165,10 +165,6 @@ class CfgGlasses {
         ACE_Resistance = 1;
     };
 
-    class AV_ESS_blk:None{
-        COMBAT_GOGGLES
-    };
-
     class G_Balaclava_blk;
 
     class G_Balaclava_combat:G_Balaclava_blk {
@@ -187,13 +183,13 @@ class CfgGlasses {
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_sport:G_Bandanna_blk {
+    class G_Bandanna_sport: G_Bandanna_shades {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_aviator:G_Bandanna_blk {
+    class G_Bandanna_aviator: G_Bandanna_shades {
         ACE_Color[] = {0,0,-1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;

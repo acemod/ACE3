@@ -3,12 +3,6 @@
 ADDON = false;
 LOG(MSG_INIT);
 
-PREP(blueForceTrackingModule);
-PREP(blueForceTrackingUpdate);
-PREP(determineMapLight);
-PREP(determineZoom);
-PREP(moduleMap);
-PREP(onDrawMap);
-PREP(updateMapEffects);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

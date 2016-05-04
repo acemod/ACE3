@@ -2,23 +2,7 @@
 
 ADDON = false;
 
-PREP(onListBoxSettingsChanged);
-PREP(onListBoxShowSelectionChanged);
-PREP(onSettingsMenuOpen);
-PREP(onSliderPosChanged);
-PREP(onServerSaveInputField);
-PREP(onServerSettingsMenuOpen);
-PREP(onServerListBoxShowSelectionChanged);
-PREP(resetSettings);
-PREP(serverResetSettings);
-PREP(settingsMenuUpdateKeyView);
-PREP(settingsMenuUpdateList);
-PREP(serverSettingsMenuUpdateKeyView);
-PREP(serverSettingsMenuUpdateList);
-PREP(updateSetting);
-PREP(exportSettings);
-PREP(toggleIncludeClientSettings);
-PREP(moduleAllowConfigExport);
+#include "XEH_PREP.hpp"
 
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
@@ -28,5 +12,7 @@ GVAR(ClientSettingsExportIncluded) = false;
 GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
 GVAR(serverSideValues) = [];
+GVAR(categories) = [];
+GVAR(currentCategorySelection) = 0;
 
 ADDON = true;

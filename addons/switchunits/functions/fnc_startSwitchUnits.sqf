@@ -9,18 +9,17 @@
  * None
  *
  * Example:
- * [_player] call FUNC(startSwitchUnits)
+ * [_player] call ace_switchunits_fnc_startSwitchUnits
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-PARAMS_1(_player);
+params ["_player"];
 
 if (GVAR(EnableSwitchUnits)) then {
-    private "_sides";
-    _sides = [];
+    private _sides = [];
 
     if(GVAR(SwitchToWest)) then {_sides pushBack west;};
     if(GVAR(SwitchToEast)) then {_sides pushBack east;};

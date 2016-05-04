@@ -6,15 +6,37 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["medical_propagateWound", FUNC(onPropagateWound)] call ace_common_fnc_addEventHandler;
-["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call ace_common_fnc_addEventHandler;
-["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call ace_common_fnc_addEventHandler;
+["medical_propagateWound", FUNC(onPropagateWound)] call EFUNC(common,addEventHandler);
+["medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call EFUNC(common,addEventHandler);
+["interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call EFUNC(common,addEventHandler);
+
+//Treatment EventHandlers:
+["actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call EFUNC(common,addEventHandler);
+["actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call EFUNC(common,addEventHandler);
+["addToInjuredCollection", DFUNC(addToInjuredCollection)] call EFUNC(common,addEventHandler);
+["addToMedicalLog", DFUNC(addToLog)] call EFUNC(common,addEventHandler);
+["addToTriageCard", DFUNC(addToTriageCard)] call EFUNC(common,addEventHandler);
+["setDead", DFUNC(setDead)] call EFUNC(common,addEventHandler);
+["setHitPointDamage", DFUNC(setHitPointDamage)] call EFUNC(common,addEventHandler);
+["setUnconscious", DFUNC(setUnconscious)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call EFUNC(common,addEventHandler);
+["treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_bandageLocal", DFUNC(treatmentBasic_bandageLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call EFUNC(common,addEventHandler);
+["treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call EFUNC(common,addEventHandler);
+["treatmentIVLocal", DFUNC(treatmentIVLocal)] call EFUNC(common,addEventHandler);
+["treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call EFUNC(common,addEventHandler);
+["actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call EFUNC(common,addEventHandler);
+
+//Handle Deleting Bodies on Server:
+if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(common,addEventHandler);}; 
 
 ["medical_onUnconscious", {
-    if (local (_this select 0)) then {
-        private ["_unit"];
-        _unit = _this select 0;
-        if (_this select 1) then {
+    params ["_unit", "_status"];
+    if (local _unit) then {
+        if (_status) then {
             _unit setVariable ["tf_globalVolume", 0.4];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
@@ -30,15 +52,15 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
             if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
-}] call ace_common_fnc_addEventHandler;
+}] call EFUNC(common,addEventHandler);
 
 
 // Initialize all effects
+if (hasInterface) then {
+
 _fnc_createEffect = {
-    private ["_type", "_layer", "_default", "_effect"];
-    _type = _this select 0;
-    _layer = _this select 1;
-    _default = _this select 2;
+    private "_effect";
+    params ["_type", "_layer", "_default"];
 
     _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;
@@ -92,7 +114,7 @@ GVAR(effectTimeBlood) = ACE_time;
 [{
     private["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
-    if (!(isNull (findDisplay 312)) or !(alive ACE_player)) exitWith {
+    if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
         GVAR(effectUnconsciousRB) ppEffectEnable false;
         GVAR(effectBlindingCC) ppEffectEnable false;
@@ -161,58 +183,68 @@ GVAR(lastHeartBeatSound) = ACE_time;
     if (GVAR(level) == 1) then {
         _heartRate = 60 + 40 * _pain;
     };
-    if (_heartRate <= 0) exitwith {};
-    _interval = 60 / (_heartRate min 50);
+    if (_heartRate <= 0) exitWith {};
+    _interval = 60 / (_heartRate min 40);
 
-    if (ACE_time > GVAR(lastHeartBeat) + _interval) then {
-        GVAR(lastHeartBeat) = ACE_time;
-
-        // Pain effect
-        _strength = (_pain - (ACE_player getvariable [QGVAR(painSuppress), 0])) max 0;
-        _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
+    if ((ACE_player getVariable ["ACE_isUnconscious", false])) then {
         if (GVAR(painEffectType) == 1) then {
-            GVAR(effectPainCC) ppEffectEnable false;
-            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
-                _strength = _strength * 0.15;
-                GVAR(effectPainCA) ppEffectEnable true;
-                GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
-                GVAR(effectPainCA) ppEffectCommit 0.01;
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                    GVAR(effectPainCA) ppEffectCommit 0.01;
-                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
-                    GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
-            } else {
-                GVAR(effectPainCA) ppEffectEnable false;
-            };
-        } else {
             GVAR(effectPainCA) ppEffectEnable false;
-            if (_pain > (ACE_player getvariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
-                _strength = _strength * 0.9;
-                GVAR(effectPainCC) ppEffectEnable true;
-                GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
-                GVAR(effectPainCC) ppEffectCommit 0.01;
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                    GVAR(effectPainCC) ppEffectCommit 0.01;
-                }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
-                [{
-                    GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
-                    GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
-            } else {
-                GVAR(effectPainCC) ppEffectEnable false;
+        } else {
+            GVAR(effectPainCC) ppEffectEnable false;
+        };
+    } else {
+        if ((ACE_time > GVAR(lastHeartBeat) + _interval)) then {
+            GVAR(lastHeartBeat) = ACE_time;
+
+            // Pain effect, no pain effect in zeus camera
+            if (isNull curatorCamera) then {
+                _strength = ((_pain - (ACE_player getVariable [QGVAR(painSuppress), 0])) max 0) min 1;
+                _strength = _strength * (ACE_player getVariable [QGVAR(painCoefficient), GVAR(painCoefficient)]);
+                if (GVAR(painEffectType) == 1) then {
+                    GVAR(effectPainCC) ppEffectEnable false;
+                    if (_pain > (ACE_player getVariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                        _strength = _strength * 0.15;
+                        GVAR(effectPainCA) ppEffectEnable true;
+                        GVAR(effectPainCA) ppEffectAdjust [_strength, _strength, false];
+                        GVAR(effectPainCA) ppEffectCommit 0.01;
+                        [{
+                            GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                            GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        [{
+                            GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                            GVAR(effectPainCA) ppEffectCommit 0.01;
+                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        [{
+                            GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
+                            GVAR(effectPainCA) ppEffectCommit (_this select 1);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                    } else {
+                        GVAR(effectPainCA) ppEffectEnable false;
+                    };
+                } else {
+                    GVAR(effectPainCA) ppEffectEnable false;
+                    if (_pain > (ACE_player getVariable [QGVAR(painSuppress), 0]) && {alive ACE_player}) then {
+                        _strength = _strength * 0.9;
+                        GVAR(effectPainCC) ppEffectEnable true;
+                        GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - _strength,1 - _strength,0,0,0,0.2,2]];
+                        GVAR(effectPainCC) ppEffectCommit 0.01;
+                        [{
+                            GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                            GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        [{
+                            GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                            GVAR(effectPainCC) ppEffectCommit 0.01;
+                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        [{
+                            GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
+                            GVAR(effectPainCC) ppEffectCommit (_this select 1);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                    } else {
+                        GVAR(effectPainCC) ppEffectEnable false;
+                    };
+                };
             };
         };
     };
@@ -234,31 +266,32 @@ GVAR(lastHeartBeatSound) = ACE_time;
     };
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;
-
-if (USE_WOUND_EVENT_SYNC) then {
-    // broadcast injuries to JIP clients in a MP session
-    if (isMultiplayer && hasInterface) then {
-        ["playerChanged", {
-            EXPLODE_2_PVT(_this,_newPlayer,_oldPlayer);
-            if (alive _newPlayer) then {
-                // We are only pulling the wounds for the units in the player group. Anything else will come when the unit interacts with them.
-                {
-                    [_x, _newPlayer] call FUNC(requestWoundSync);
-                }foreach units group _newPlayer;
-            };
-        }] call EFUNC(common,addEventhandler);
-    };
 };
 
-[
-    {(((_this select 0) getvariable [QGVAR(bloodVolume), 100]) < 65)},
-    {(((_this select 0) getvariable [QGVAR(pain), 0]) - ((_this select 0) getvariable [QGVAR(painSuppress), 0])) > 0.9},
-    {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
-    {((_this select 0) getvariable [QGVAR(inReviveState), false])},
-    {((_this select 0) getvariable [QGVAR(inCardiacArrest), false])},
-    {((_this select 0) getvariable ["ACE_isDead", false])},
-    {(((_this select 0) getvariable [QGVAR(airwayStatus), 100]) < 80)}
-] call FUNC(addUnconsciousCondition);
+["SettingsInitialized", {
+    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
+    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
+
+    if (GVAR(level) == 2) exitWith {
+        [
+            {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
+            {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
+            {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
+            {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+            {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
+            {((_this select 0) getVariable ["ACE_isDead", false])},
+            {(((_this select 0) getVariable [QGVAR(airwayStatus), 100]) < 80)}
+        ] call FUNC(addUnconsciousCondition);
+    };
+
+    [
+        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 40)},
+        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.6},
+        {(([_this select 0] call FUNC(getBloodLoss)) > 0.1)},
+        {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+        {((_this select 0) getVariable ["ACE_isDead", false])}
+    ] call FUNC(addUnconsciousCondition);
+}] call EFUNC(common,addEventHandler);
 
 // Prevent all types of interaction while unconscious
 // @todo: probably remove this when CBA keybind hold key works properly
@@ -269,12 +302,9 @@ if (USE_WOUND_EVENT_SYNC) then {
     [ACE_player] call FUNC(itemCheck);
 }] call EFUNC(common,addEventHandler);
 
-// Networked litter
-[QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
-
 if (hasInterface) then {
     ["PlayerJip", {
-        diag_log format["[ACE] JIP Medical init for player"];
+        ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call EFUNC(common,addEventHandler);
 };

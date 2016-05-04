@@ -12,9 +12,14 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_1_PVT(_this,_menuType);
+params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
+
+// Conditions: canInteract (these don't apply to zeus)
+if ((isNull curatorCamera) && {
+    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith))
+}) exitWith {false};
 
 while {dialog} do {
     closeDialog 0;
@@ -34,6 +39,7 @@ GVAR(ParsedTextCached) = [];
 
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
+                      (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
                       {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
 
@@ -46,7 +52,12 @@ for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
 GVAR(iconCtrls) resize GVAR(iconCount);
 
 if (GVAR(useCursorMenu)) then {
-    (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    // Don't close zeus interface if open
+    if (isNull curatorCamera) then {
+        (findDisplay 46) createDisplay QGVAR(cursorMenu); //"RscCinemaBorder";//
+    } else {
+        createDialog QGVAR(cursorMenu);
+    };
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
     (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
     // The dialog sets:
@@ -54,7 +65,7 @@ if (GVAR(useCursorMenu)) then {
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
     GVAR(cursorPos) = [0.5,0.5,0];
 
-    _ctrl = (findDisplay 91919) ctrlCreate ["RscStructuredText", 9922];
+    private _ctrl = (findDisplay 91919) ctrlCreate ["RscStructuredText", 9922];
     _ctrl ctrlSetPosition [safeZoneX, safeZoneY, safeZoneW, safeZoneH];
     _ctrl ctrlCommit 0;
 
@@ -64,8 +75,32 @@ if (GVAR(useCursorMenu)) then {
     setMousePosition [0.5, 0.5];
 };
 
-GVAR(selfMenuOffset) = ((positionCameraToWorld [0, 0, 2]) call EFUNC(common,positionToASL)) vectorDiff
-                       ((positionCameraToWorld [0, 0, 0]) call EFUNC(common,positionToASL));
+GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
+
+//Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
+if (GVAR(openedMenuType) == 0) then {
+    if (isNull curatorCamera) then {
+        if (vehicle ACE_player != ACE_player) then {
+            GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
+            GVAR(expanded) = true;
+            GVAR(expandedTime) = ACE_diagTime;
+            GVAR(lastPath) = +GVAR(menuDepthPath);
+            GVAR(startHoverTime) = -1000;
+        };
+    } else {
+        GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
+        GVAR(expanded) = true;
+        GVAR(expandedTime) = ACE_diagTime;
+        GVAR(lastPath) = +GVAR(menuDepthPath);
+        GVAR(startHoverTime) = -1000;
+    };
+} else {
+    GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
+    GVAR(expanded) = true;
+    GVAR(expandedTime) = ACE_diagTime;
+    GVAR(lastPath) = +GVAR(menuDepthPath);
+    GVAR(startHoverTime) = -1000;
+};
 
 ["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
 

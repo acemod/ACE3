@@ -3,42 +3,71 @@
  * Unload a person from a vehicle, local
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: unit to unload <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Unloader (player) <OBJECT><OPTIONAL>
  *
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
  *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
 
-private ["_vehicle", "_loaded", "_emptyPos"];
-PARAMS_1(_unit);
-_vehicle = vehicle _unit;
+params ["_unit", "_vehicle", ["_unloader", objNull]];
+TRACE_3("params",_unit,_vehicle,_unloader);
 
-if (_vehicle == _unit) exitwith {false;};
-if !(speed _vehicle <1 && (((getpos _vehicle) select 2) < 2)) exitwith {false;};
+//This covers testing vehicle stability and finding a safe position
+private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+TRACE_1("findUnloadPosition",_emptyPos);
 
-_emptyPos = ((getPos _vehicle) findEmptyPosition [0, 10, typeof _unit]);
-if (count _emptyPos == 0) exitwith {false};
-
-_unit setPos _emptyPos;
-unassignVehicle _unit;
-if (!alive _unit) then {
-    _unit action ["Eject", vehicle _unit];
+if (count _emptyPos != 3) exitwith {
+    ACE_LOGWARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
+        //display text saying there are no safe places to exit the vehicle
+        ["displayTextStructured", [_unloader], [localize LSTRING(NoRoomToUnload)]] call FUNC(targetEvent);
+    };
+    false
 };
+
+unassignVehicle _unit;
+[_unit] orderGetIn false;
+
+TRACE_1("Ejecting", alive _unit);
+
+_unit action ["Eject", vehicle _unit];
+
+[{
+    params ["_unit", "_emptyPos"];
+
+    _unit setPosASL AGLToASL _emptyPos;
+
+    if !([_unit] call FUNC(isAwake)) then {
+        TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
+
+        if (driver _unit == _unit) then {
+            private _anim = [_unit] call FUNC(getDeathAnim);
+
+            [_unit, _anim, 1, true] call FUNC(doAnimation);
+
+            [{
+                _unit = _this select 0;
+                _anim = _this select 1;
+                if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
+                    [_unit, _anim, 2, true] call FUNC(doAnimation);
+                };
+            }, [_unit, _anim], 0.5] call FUNC(waitAndExecute);
+        };
+    };
+}, [_unit, _emptyPos], 0.5] call FUNC(waitAndExecute);
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
-_loaded = _loaded - [_unit];
-_vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
+private _loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
+_loaded deleteAt (_loaded find _unit);
 
-if (!([_unit] call FUNC(isAwake))) then {
-    [_unit,([_unit] call FUNC(getDeathAnim)), 1, true] call FUNC(doAnimation);
-};
+_vehicle setvariable [QGVAR(loaded_persons), _loaded, true];
 
-true;
+true

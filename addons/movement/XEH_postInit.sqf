@@ -3,24 +3,10 @@
 
 if (!hasInterface) exitWith {};
 
-["inventoryDisplayLoaded", {
+["playerChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
+["playerInventoryChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
 
-    [{
-        private "_dialog";
-
-        _dialog = _this select 0;
-
-        if (isNull _dialog) exitWith {
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-
-        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player] call EFUNC(common,getName), localize "STR_ACE_Movement_Weight", [ACE_player] call FUNC(getWeight)];
-
-    }, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
-
-}] call EFUNC(common,addEventHandler);
-
-["ACE3 Movement", QGVAR(climb), localize "STR_ACE_Movement_Climb",
+["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -32,4 +18,4 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[47, [false, true, false]], false] call cba_fnc_addKeybind; //DIK_V + CTRL//STRG
+[47, [false, true, false]], false] call CBA_fnc_addKeybind; //DIK_V + CTRL//STRG

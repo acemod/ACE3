@@ -2,6 +2,6 @@
 
 ADDON = false;
 
-PREP(fallDown);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="WEP_JAVELIN">
-        <Key ID="STR_ACE_JAVELIN_LockTarget">
+    <Package name="Javelin">
+        <Key ID="STR_ACE_Javelin_LockTarget">
             <English>Lock Target (Hold)</English>
             <German>Ziel aufschalten</German>
             <Russian>Захватить цель (удерживать)</Russian>
@@ -13,7 +13,7 @@
             <Spanish>Fijar objetivo (Mantener)</Spanish>
             <Portuguese>Travar Alvo(Segurar)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_JAVELIN_CycleFireMode">
+        <Key ID="STR_ACE_Javelin_CycleFireMode">
             <English>Cycle Fire Mode</English>
             <German>Wechsle Feuermodus</German>
             <Russian>Переключение режимов огня</Russian>

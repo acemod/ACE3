@@ -3,10 +3,10 @@
  * Saves user data into profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_kestrel4500_fnc_store_user_data

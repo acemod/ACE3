@@ -21,7 +21,7 @@ def get_private_declare(content):
     priv_split = sorted(set(priv_split))
     priv_declared += priv_split;
     
-    srch = re.compile('PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*|IGNORE_PRIVATE_WARNING.*')
+    srch = re.compile('params \[.*\]|PARAMS_[0-9].*|EXPLODE_[0-9]_PVT.*|DEFAULT_PARAM.*|KEY_PARAM.*|IGNORE_PRIVATE_WARNING.*')
     priv_srch_declared = srch.findall(content)
     priv_srch_declared = sorted(set(priv_srch_declared))
     

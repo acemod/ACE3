@@ -1,37 +1,37 @@
 class ACE_Settings {
     class GVAR(enableServerController) {
-        displayName = "Weather propagation";
-        description = "Enables sever side weather propagation";
+        displayName = CSTRING(enableServerController_DisplayName);
+        description = CSTRING(enableServerController_Description);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(useACEWeather) {
-        displayName = "ACE Weather";
-        description = "Overrides the default weather (editor, mission settings) with ACE weather (map based)";
+        displayName = CSTRING(useACEWeather_DisplayName);
+        description = CSTRING(useACEWeather_Description);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(syncRain) {
-        displayName = "Sync Rain";
-        description = "Synchronizes rain";
+        displayName = CSTRING(syncRain_DisplayName);
+        description = CSTRING(syncRain_Description);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(syncWind) {
-        displayName = "Sync Wind";
-        description = "Synchronizes wind";
+        displayName = CSTRING(syncWind_DisplayName);
+        description = CSTRING(syncWind_Description);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(syncMisc) {
-        displayName = "Sync Misc";
-        description = "Synchronizes lightnings, rainbow, fog, ...";
+        displayName = CSTRING(syncMisc_DisplayName);
+        description = CSTRING(syncMisc_Description);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(serverUpdateInterval) {
-        displayName = "Update Interval";
-        description = "Defines the interval (seconds) between weather updates";
+        displayName = CSTRING(serverUpdateInterval_DisplayName);
+        description = CSTRING(serverUpdateInterval_Description);
         typeName = "SCALAR";
         value = 60;
     };

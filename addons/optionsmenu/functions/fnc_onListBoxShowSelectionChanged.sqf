@@ -26,7 +26,7 @@ _settingsMenu = uiNamespace getVariable 'ACE_settingsMenu';
 
 switch (GVAR(optionMenu_openTab)) do {
 case (MENU_TAB_OPTIONS): {
-    _localizedHeader = format ["%1: %2", (localize "STR_ACE_OptionsMenu_OpenConfigMenu"), (localize "STR_ACE_OptionsMenu_TabOptions")];
+    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabOptions))];
     ctrlSetText [13, _localizedHeader];
     lbClear 400;
 
@@ -39,7 +39,7 @@ case (MENU_TAB_OPTIONS): {
     (_settingsMenu displayCtrl 413) ctrlShow false;
   };
 case (MENU_TAB_COLORS): {
-    _localizedHeader = format ["%1: %2", (localize "STR_ACE_OptionsMenu_OpenConfigMenu"), (localize "STR_ACE_OptionsMenu_TabColors")];
+    _localizedHeader = format ["%1: %2", (localize LSTRING(OpenConfigMenu)), (localize LSTRING(TabColors))];
     ctrlSetText [13, _localizedHeader];
 
     lbClear 400;

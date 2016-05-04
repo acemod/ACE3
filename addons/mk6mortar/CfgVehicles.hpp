@@ -4,12 +4,12 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(rangetable) {
-                    displayName = "$STR_ACE_MK6MORTAR_rangetable_action";
+                    displayName = CSTRING(rangetable_action);
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
                     icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
-                    exceptions[] = {"notOnMap", "isNotInside"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
         };
@@ -23,14 +23,64 @@ class CfgVehicles {
     };
     class StaticMortar: StaticWeapon {
         class Turrets: Turrets {
-            class MainTurret: MainTurret {
-            };
+            class MainTurret: MainTurret {};
         };
+        class ACE_Actions;
     };
     class Mortar_01_base_F: StaticMortar {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 turretInfoType = "ACE_Mk6_RscWeaponRangeArtillery";
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
+        class ACE_Actions: ACE_Actions {
+            class GVAR(unloadMagazine) {
+                displayName = CSTRING(unloadMortar);
+                distance = 2;
+                condition = QUOTE(_this call FUNC(canUnloadMagazine));
+                statement = QUOTE([ARR_3(_target,_player,5)] call FUNC(unloadMagazineTimer));
+                icon = "";
+                selection = "usti hlavne";
+            };
+            class GVAR(LoadActions) {
+                displayName = CSTRING(loadMortar);
+                distance = 2;
+                condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                statement = "";
+                icon = "";
+                selection = "usti hlavne";
+                class GVAR(loadMagazine_HE_Guided) {
+                    displayName = CSTRING(loadMagazine_HE_Guided);
+                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_Guided')] call FUNC(loadMagazineTimer));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_HE_LaserGuided) {
+                    displayName = CSTRING(loadMagazine_HE_LaserGuided);
+                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_4(_target,_player,8,'ACE_1Rnd_82mm_Mo_HE_LaserGuided')] call FUNC(loadMagazineTimer));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_Illum) {
+                    displayName = CSTRING(loadMagazine_Illum);
+                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_4(_target,_player,5,'ACE_1Rnd_82mm_Mo_Illum')] call FUNC(loadMagazineTimer));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_Smoke) {
+                    displayName = CSTRING(loadMagazine_Smoke);
+                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_Smoke')] call FUNC(loadMagazineTimer));
+                    icon = "";
+                };
+                class GVAR(loadMagazine_HE) {
+                    displayName = CSTRING(loadMagazine_HE);
+                    condition = QUOTE([ARR_3(_target,_player,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(canLoadMagazine));
+                    statement = QUOTE([ARR_4(_target,_player,2.5,'ACE_1Rnd_82mm_Mo_HE')] call FUNC(loadMagazineTimer));
+                    icon = "";
+                };
             };
         };
         class ACE_SelfActions {
@@ -43,41 +93,78 @@ class CfgVehicles {
         };
     };
 
-    class Logic;
-    class Module_F: Logic {
-        class ModuleDescription {};
-    };
-    class GVAR(module): Module_F {
-        author = "$STR_ACE_Common_ACETeam";
+    class ACE_Module;
+    class GVAR(module): ACE_Module {
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
-        displayName = "$STR_ACE_mk6mortar_Module_DisplayName";
+        displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 0;
+        isSingular = 1;
         icon =  QUOTE(PATHTOF(UI\Icon_Module_mk6_ca.paa));
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
-                displayName = "$STR_ACE_mk6mortar_airResistanceEnabled_DisplayName";
-                description = "$STR_ACE_mk6mortar_airResistanceEnabled_Description";
+                displayName = CSTRING(airResistanceEnabled_DisplayName);
+                description = CSTRING(airResistanceEnabled_Description);
                 typeName = "BOOL";
-                defaultValue = 1;
+                defaultValue = 0;
             };
             class allowComputerRangefinder {
-                displayName = "$STR_ACE_mk6mortar_allowComputerRangefinder_DisplayName";
-                description = "$STR_ACE_mk6mortar_allowComputerRangefinder_Description";
+                displayName = CSTRING(allowComputerRangefinder_DisplayName);
+                description = CSTRING(allowComputerRangefinder_Description);
                 typeName = "BOOL";
                 defaultValue = 0;
             };
             class allowCompass {
-                displayName = "$STR_ACE_mk6mortar_allowCompass_DisplayName";
-                description = "$STR_ACE_mk6mortar_allowCompass_Description";
+                displayName = CSTRING(allowCompass_DisplayName);
+                description = CSTRING(allowCompass_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class useAmmoHandling {
+                displayName = CSTRING(useAmmoHandling_DisplayName);
+                description = CSTRING(useAmmoHandling_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
-        class ModuleDescription: ModuleDescription {
-            description = "$STR_ACE_mk6mortar_Module_Description";
+        class ModuleDescription {
+            description = CSTRING(Module_Description);
+        };
+    };
+
+    class Box_NATO_AmmoOrd_F;
+    class ACE_Box_82mm_Mo_HE: Box_NATO_AmmoOrd_F {
+        displayName = CSTRING(HEBox_DisplayName);
+        author = ECSTRING(common,ACETeam);
+        maximumLoad = 400;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,8);
+        };
+        class TransportItems {};
+        class TransportWeapons {};
+    };
+    class ACE_Box_82mm_Mo_Smoke: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(SmokeBox_DisplayName);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
+        };
+    };
+    class ACE_Box_82mm_Mo_Illum: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(IllumBox_DisplayName);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,8);
+        };
+    };
+    class ACE_Box_82mm_Mo_Combo: ACE_Box_82mm_Mo_HE {
+        displayName = CSTRING(ComboBox_DisplayName);
+        maximumLoad = 2400;
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,32);
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
+            MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Illum,8);
         };
     };
 };

@@ -1,0 +1,10 @@
+Density=1380;
+rough=0.1;
+dust=0;
+bulletPenetrability=150;
+soundEnviron=Empty;
+isWater=false;
+friction=0.7;
+restitution=0.3;
+impact = default_Mat;
+soundHit = plastic;

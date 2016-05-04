@@ -3,7 +3,7 @@
 class CfgPatches {
     class ADDON {
         units[] = {"ACE_Item_Vector"};
-        weapons[] = {"ACE_Vector"};
+        weapons[] = {"ACE_Vector", "ACE_VectorDay"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[] = {"Ghost","Hamburger SV","commy2","bux578"};

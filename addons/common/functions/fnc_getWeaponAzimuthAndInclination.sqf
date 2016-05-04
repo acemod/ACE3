@@ -1,25 +1,24 @@
 /*
  * Author: commy2
+ * Get local players weapon direction and slope.
  *
- * Get players weapon direction and slope
+ * Arguments:
+ * 0: Weapon name <STRING>
  *
- * Argument:
- * 0: Weapon name (String)
+ * Return Value:
+ * 0: Azimuth <NUMBER>
+ * 1: Inclination <NUMBER>
  *
- * Return value:
- * 0: Azimuth (Number)
- * 1: Inclination or 'slope' (Number)
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_direction", "_azimuth", "_inclination"];
+params ["_weapon"];
 
-PARAMS_1(_weapon);
+private _direction = ACE_player weaponDirection _weapon;
 
-_direction = ACE_player weaponDirection _weapon;
-
-_azimuth = (_direction select 0) atan2 (_direction select 1);
-_inclination = asin (_direction select 2);
+private _azimuth = (_direction select 0) atan2 (_direction select 1);
+private _inclination = asin (_direction select 2);
 
 if (_azimuth < 0) then {_azimuth = _azimuth + 360};
 

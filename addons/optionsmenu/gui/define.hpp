@@ -7,6 +7,9 @@ class ACE_gui_staticBase;
 class ACE_gui_listNBox;
 class ACE_gui_comboBoxBase;
 class RscXSliderH;
+class RscControlsGroupNoScrollbars;
+class RscHTML;
+class RscText;
 
 
 #ifndef ACE_DEFINE_H
@@ -89,6 +92,6 @@ class RscXSliderH;
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
-#define FontCSE       "PuristaMedium"
+#define FontCSE       "RobotoCondensed"
 
 #endif

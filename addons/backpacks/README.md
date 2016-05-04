@@ -1,7 +1,7 @@
-ace_lockbackpacks
+ace_backpacks
 =================
 
-Introduces the ability to lock one's backpack.
+Adds indication when someone else opens your backpack (sound effect and camera shake).
 
 
 ## Maintainers

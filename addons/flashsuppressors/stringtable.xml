@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="FlashSuppressors">
-        <Key ID="STR_ACE_muzzle_mzls_H">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_H">
             <English>Flash Suppressor (6.5 mm)</English>
             <Hungarian>Lángrejtő (6,5 mm)</Hungarian>
             <German>Mündungsfeuerdämpfer (6,5 mm)</German>
@@ -13,7 +13,7 @@
             <Russian>Пламегаситель (6,5 мм)</Russian>
             <Spanish>Bocacha (6,5 mm)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_B">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
             <Hungarian>Lángrejtő (7,62 mm)</Hungarian>
             <German>Mündungsfeuerdämpfer (7,62 mm)</German>
@@ -25,7 +25,7 @@
             <Russian>Пламегаситель (7,62 мм)</Russian>
             <Spanish>Bocacha (7,62 mm)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_L">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
             <Hungarian>Lángrejtő (5,56 mm)</Hungarian>
             <German>Mündungsfeuerdämpfer (5,56 mm)</German>
@@ -37,7 +37,7 @@
             <Russian>Пламегаситель (5,56 мм)</Russian>
             <Spanish>Bocacha (5,56 mm)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_smg_01">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
             <Hungarian>Lángrejtő (.45 ACP)</Hungarian>
             <German>Mündungsfeuerdämpfer (.45 ACP)</German>
@@ -49,7 +49,7 @@
             <Russian>Пламегаситель (.45 ACP)</Russian>
             <Spanish>Bocacha (.45 ACP)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_smg_02">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
             <Hungarian>Lángrejtő (9 mm)</Hungarian>
             <German>Mündungsfeuerdämpfer (9 mm)</German>
@@ -61,7 +61,7 @@
             <Russian>Пламегаситель (9 мм)</Russian>
             <Spanish>Bocacha (9 mm)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_338">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
             <Hungarian>Lángrejtő (.338)</Hungarian>
             <German>Mündungsfeuerdämpfer (.338)</German>
@@ -73,7 +73,7 @@
             <Russian>Пламегаситель (.338)</Russian>
             <Spanish>Bocacha (.338)</Spanish>
         </Key>
-        <Key ID="STR_ACE_muzzle_mzls_93mmg">
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
             <Hungarian>Lángrejtő (9,3 mm)</Hungarian>
             <German>Mündungsfeuerdämpfer (9,3 mm)</German>

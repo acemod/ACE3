@@ -7,7 +7,7 @@
  * 1: Selected Index <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [ColorLB, 5] call ace_markers_fnc_onLBSelChangedColor;
@@ -16,13 +16,13 @@
  */
 #include "script_component.hpp"
 
-private ["_data", "_config"];
+params ["_ctrl", "_index"];
+TRACE_2("params",_ctrl,_index);
 
-PARAMS_2(_ctrl,_index);
-_data = _ctrl lbValue _index;
+private _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerColor) = _index;
 
-_config = (configfile >> "CfgMarkerColors") select _data;
+private _config = (configFile >> "CfgMarkerColors") select _data;
 
-GVAR(currentMarkerColorConfigName) = (configName _config);
+GVAR(currentMarkerColorConfigName) = configName _config;

@@ -1,32 +1,44 @@
 class ACE_Settings {
     class GVAR(Enabled) {
-        displayName = "$STR_ACE_frag_EnableFrag";
-        description = "$STR_ACE_frag_EnableFrag_Desc";
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(EnableFrag);
+        description = CSTRING(EnableFrag_Desc);
         typeName = "BOOL";
         value = 1;
     };
     class GVAR(SpallEnabled) {
-        displayName = "$STR_ACE_frag_EnableSpall";
-        description = "$STR_ACE_frag_EnableSpall_Desc";
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(EnableSpall);
+        description = CSTRING(EnableSpall_Desc);
+        typeName = "BOOL";
+        value = 0;
+    };
+    class GVAR(ReflectionsEnabled) {
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(EnableReflections);
+        description = CSTRING(EnableReflections_Desc);
         typeName = "BOOL";
         value = 0;
     };
     class GVAR(maxTrack) {
-        displayName = "$STR_ACE_frag_MaxTrack";
-        description = "$STR_ACE_frag_MaxTrack_Desc";
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(MaxTrack);
+        description = CSTRING(MaxTrack_Desc);
         typeName = "SCALAR";
         value = 500;
     };
     class GVAR(MaxTrackPerFrame) {
-        displayName = "$STR_ACE_frag_MaxTrackPerFrame";
-        description = "$STR_ACE_frag_MaxTrackPerFrame_Desc";
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(MaxTrackPerFrame);
+        description = CSTRING(MaxTrackPerFrame_Desc);
         typeName = "SCALAR";
         value = 50;
     };
-    
+
     class GVAR(EnableDebugTrace) {
-        displayName = "$STR_ACE_frag_EnableDebugTrace";
-        description = "$STR_ACE_frag_EnableDebugTrace_Desc";
+        category = CSTRING(Module_DisplayName);
+        displayName = CSTRING(EnableDebugTrace);
+        description = CSTRING(EnableDebugTrace_Desc);
         typeName = "BOOL";
         value = 0;
     };

@@ -15,7 +15,10 @@
  * Public: No
  */
 #include "script_component.hpp"
-EXPLODE_2_PVT(_this,_explosive,_mag);
+
+params ["_explosive", "_mag"];
+TRACE_2("params",_explosive,_mag);
+
 createDialog "RscACE_SelectTimeUI";
 sliderSetRange [8845, 5, 900]; // 5seconds - 15minutes
 sliderSetPosition [8845, 30];
@@ -38,4 +41,4 @@ DFUNC(SetTimer) = {
 buttonSetAction [8860, QUOTE(call DFUNC(SetTimer);)];
 buttonSetAction [8855, QUOTE(closeDialog 0;)];
 
-ctrlSetText [8870, format[localize "STR_ACE_Explosives_TimerMenu",0, 30]];
+ctrlSetText [8870, format[localize LSTRING(TimerMenu),0, 30]];

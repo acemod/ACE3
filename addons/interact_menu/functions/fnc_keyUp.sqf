@@ -12,8 +12,7 @@
  */
 #include "script_component.hpp"
 
-private "_calledByClicking";
-_calledByClicking = _this select 1;
+params ["_menuType", "_calledByClicking"];
 
 // Exit if there's no menu opened
 if (GVAR(openedMenuType) < 0) exitWith {true};
@@ -25,9 +24,8 @@ if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
 if(GVAR(actionSelected)) then {
     this = GVAR(selectedTarget);
 
-    private ["_player","_target","_actionData"];
-    _player = ACE_Player;
-    _target = GVAR(selectedTarget);
+    private _player = ACE_Player;
+    private _target = GVAR(selectedTarget);
 
     // Clear the conditions caches
     ["clearConditionCaches", []] call EFUNC(common,localEvent);
@@ -36,7 +34,7 @@ if(GVAR(actionSelected)) then {
     if (!(GVAR(actionOnKeyRelease)) && !_calledByClicking) exitWith {};
 
     // Check the action conditions
-    _actionData = GVAR(selectedAction) select 0;
+    private _actionData = GVAR(selectedAction) select 0;
     if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
         // Call the statement
         [_target, _player, _actionData select 6] call (_actionData select 3);
@@ -46,6 +44,8 @@ if(GVAR(actionSelected)) then {
     };
 };
 
+["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
@@ -53,7 +53,5 @@ GVAR(openedMenuType) = -1;
 GVAR(expanded) = false;
 GVAR(lastPath) = [];
 GVAR(menuDepthPath) = [];
-
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
 
 true

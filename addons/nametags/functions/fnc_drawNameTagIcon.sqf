@@ -1,72 +1,81 @@
 /*
  * Author: commy2, esteldunedain
- *
  * Draw the nametag and rank icon.
  *
- * Argument:
+ * Arguments:
  * 0: Unit (Player) <OBJECT>
  * 1: Target <OBJECT>
- * 2: alpha (Number)
- * 4: Height offset (Number)
- * 5: Draw Type <NUMBER>
+ * 2: Alpha <NUMBER>
+ * 4: Height offset <NUMBER>
+ * 5: Draw name <BOOL>
+ * 5: Draw rank <BOOL>
+ * 6: Draw soundwave <BOOL>
  *
  * Return value:
- * None.
+ * None
+ *
+ * Example:
+ * [ACE_player, bob, 0.5, height, true, true, true] call ace_nametags_fnc_drawNameTagIcon
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-PARAMS_5(_player,_target,_alpha,_heightOffset,_iconType);
+TRACE_1("drawName:", _this);
 
-private ["_position", "_color", "_name", "_rank", "_size", "_icon", "_scale"];
+params ["", "_target", "", "_heightOffset"];
 
-if (_iconType == ICON_NONE) exitWith {}; //Don't waste time if not visable
+_fnc_parameters = {
+    params ["_player", "_target", "_alpha", "_heightOffset", "_drawName", "_drawRank", "_drawSoundwave"];
 
-//Set Icon:
-_icon = "";
-_size = 0;
-if ((_iconType == ICON_NAME_SPEAK) || (_iconType == ICON_SPEAK)) then {
-    _icon = QUOTE(PATHTOF(UI\soundwave)) + str (floor (random 10)) + ".paa";
-    _size = 1;
-    _alpha = _alpha max 0.6;//Boost alpha when speaking
-} else {
-    if (_iconType == ICON_NAME_RANK) then {
-        _icon = TEXTURES_RANKS select ((["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"] find (rank _target)) + 1);
+    //Set Icon:
+    private _icon = "";
+    private _size = 0;
+    if (_drawSoundwave) then {
+        _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor random 10];
         _size = 1;
+    } else {
+        if (_drawRank && {rank _target != ""}) then {
+            _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower rank _target];
+            _size = 1;
+        };
     };
+
+    //Set Text:
+    private _name = if (_drawName) then {
+        [_target, true, true] call EFUNC(common,getName)
+    } else {
+        ""
+    };
+
+    //Set Color:
+    private _color = [1, 1, 1, _alpha];
+    if ((group _target) != (group _player)) then {
+        _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
+        _color set [3, (_color select 3) * _alpha];
+    } else {
+        _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
+    };
+
+    private _scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);
+
+    [
+        _icon,
+        _color,
+        [],
+        (_size * _scale),
+        (_size * _scale),
+        0,
+        _name,
+        2,
+        (0.05 * _scale),
+        "RobotoCondensed"
+    ]
 };
 
-if (_alpha < 0) exitWith {}; //Don't waste time if not visable
+private _parameters = [_this, _fnc_parameters, _target, QGVAR(drawParameters), 0.1] call EFUNC(common,cachedCall);
+_parameters set [2, _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .3)])];
 
-//Set Text:
-_name = if (_iconType in [ICON_NAME, ICON_NAME_RANK, ICON_NAME_SPEAK]) then {
-    [_target, true] call EFUNC(common,getName)
-} else {
-    ""
-};
 
-//Set Color:
-if !(group _target == group _player) then {
-    _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
-    _color set [3, (_color select 3) * _alpha];
-} else {
-    _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
-};
-
-// Convert position to ASLW (expected by drawIcon3D) and add height offsets
-_position = _target modelToWorldVisual ((_target selectionPosition "pilot") vectorAdd [0,0,(_heightOffset + .35)]);
-
-_scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);
-
-drawIcon3D [
-_icon,
-_color,
-_position,
-(_size * _scale),
-(_size * _scale),
-0,
-_name,
-2,
-(0.05 * _scale),
-"PuristaMedium"
-];
+drawIcon3D _parameters;

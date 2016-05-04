@@ -1,12 +1,8 @@
 /*
-    Author: aeroson
-
-    Description:
-        Images, index in images and order of roles.
-        Defined number also implies order, lower number shows more on top of the list.
-*/
-
-#include "script_component.hpp"
+ * Author: aeroson
+ * Images, index in images and order of roles.
+ * Defined number also implies order, lower number shows more on top of the list.
+ */
 
 #define PILOT 0
 #define DRIVER 1
