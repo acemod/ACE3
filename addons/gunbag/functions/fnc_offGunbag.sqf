@@ -40,4 +40,5 @@ removeAllPrimaryWeaponItems _unit;
   _unit addWeaponItem [_weapon, _x];
 } forEach _items;
 
-([_target] call FUNC(switchBackpack)) setVariable [QGVAR(GunbagWeapon), [], true];
+[_target, backpackContainer _target, [_weapon, _items] call FUNC(calculateMass)] call EFUNC(movement,addLoadToUnitContainer);
+_gunbag setVariable [QGVAR(GunbagWeapon), [], true];

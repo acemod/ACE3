@@ -1,18 +1,45 @@
-
-class CBA_Extended_EventHandlers;
-
 class CfgVehicles {
-    class Man;
-    class CAManBase: Man {
-      class ACE_SelfActions {
-        class ACE_Equipment {
-          class GVAR(actions) {
-            displayName = CSTRING(displayname);
-            condition = QUOTE([_player] call FUNC(isGunbag));
-            showDisabled = 0;
-            priority = 0.1;
-            icon = PATHTOF(ui\gunbag_icon_ca.paa);
-            class GVAR(WeapontoGunbag) {
+  class Man;
+  class CAManBase: Man {
+    class ACE_Actions {
+      class ACE_MainActions {
+        class GVAR(WeapontoGunbag) {
+          displayName = CSTRING(toGunbag);
+          condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 0);
+          statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
+          showDisabled = 0;
+          priority = 1;
+          icon = PATHTOF(ui\gunbag_icon_ca.paa);
+        };
+        class GVAR(WeaponoffGunbag) {
+          displayName = CSTRING(offGunbag);
+          condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 1);
+          statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
+          showDisabled = 0;
+          priority = 1;
+          icon = PATHTOF(ui\gunbag_icon_ca.paa);
+        };
+        class GVAR(StatusGunbag) {
+          displayName = CSTRING(Status);
+          condition = QUOTE([_target] call FUNC(isGunbag));
+          statement = QUOTE([_target] call FUNC(status));
+          showDisabled = 0;
+          priority = 2;
+          icon = PATHTOF(ui\gunbag_icon_ca.paa);
+        };
+      };
+    };
+
+    class ACE_SelfActions {
+      class ACE_Equipment {
+        class GVAR(actions) {
+          displayName = CSTRING(displayname);
+          condition = QUOTE([_player] call FUNC(isGunbag));
+          showDisabled = 0;
+          priority = 0.1;
+          icon = PATHTOF(ui\gunbag_icon_ca.paa);
+
+          class GVAR(WeapontoGunbag) {
             displayName = CSTRING(toGunbag);
             condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);
             statement = QUOTE([ARR_2(_player,_player)] call FUNC(toGunbag));
@@ -41,36 +68,6 @@ class CfgVehicles {
     };
   };
 
-  class ACE_Actions {
-    class ACE_MainActions {
-      class GVAR(WeapontoGunbag) {
-        displayName = CSTRING(toGunbag);
-        condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 0);
-        statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
-        showDisabled = 0;
-        priority = 1;
-        icon = PATHTOF(ui\gunbag_icon_ca.paa);
-      };
-      class GVAR(WeaponoffGunbag) {
-        displayName = CSTRING(offGunbag);
-        condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 1);
-        statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
-        showDisabled = 0;
-        priority = 1;
-        icon = PATHTOF(ui\gunbag_icon_ca.paa);
-      };
-      class GVAR(StatusGunbag) {
-        displayName = CSTRING(Status);
-        condition = QUOTE([_target] call FUNC(isGunbag));
-        statement = QUOTE([_target] call FUNC(status));
-        showDisabled = 0;
-        priority = 2;
-        icon = PATHTOF(ui\gunbag_icon_ca.paa);
-      };
-    };
-  };
-
-
   class Bag_Base;
   class CLASSNAME: Bag_Base {
     _generalMacro = QUOTE(CLASSNAME);
@@ -83,29 +80,12 @@ class CfgVehicles {
     hiddenSelections[] = {QUOTE(Camo),QUOTE(insignia)};
     hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_co.paa)};
     maximumLoad = 80;
-    transportMaxMagazines = 2;
-    transportMaxWeapons = 1;
-    transportMaxBackpacks = 0;
-    GVAR(gunbagswitch) = QUOTE(DOUBLES(CLASSNAME,Full));
-
     mass = 11;
   };
+
   class DOUBLES(CLASSNAME,Tan): CLASSNAME {
     displayName = CSTRING(Displayname_Tan);
     picture = PATHTOF(ui\gunbag_tan_ca.paa);
     hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_tan_co.paa)};
-    GVAR(gunbagswitch) = QUOTE(TRIPLES(CLASSNAME,Tan,Full));
-  };
-  class DOUBLES(CLASSNAME,Full): CLASSNAME {
-    scope = 1;
-    mass = 311;
-    GVAR(gunbagswitch) = QUOTE(CLASSNAME);
-  };
-  class TRIPLES(CLASSNAME,Tan,Full): DOUBLES(CLASSNAME,Tan) {
-    scope = 1;
-    mass = 311;
-    GVAR(gunbagswitch) = QUOTE(DOUBLES(CLASSNAME,Tan));
   };
 };
-
-

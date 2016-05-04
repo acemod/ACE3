@@ -16,22 +16,19 @@
 
 params ["_unit", "_target"];
 
-
-
-private ["_weapon", "_magazine", "_items", "_gunbag", "_state"];
+private ["_weapon", "_magazine", "_items", "_gunbag", "_state", "_mass"];
 
 _gunbag = backpackContainer _target;
-
 _state = [_unit, primaryWeapon _unit] call EFUNC(common,getWeaponState);
 
 /*
 * example returnvalue _state
-* [["","","optic_Aco",""],["arifle_MX_GL_ACO_F","GL_3GL_F"],["30Rnd_65x39_caseless_mag","1Rnd_HE_Grenade_shell"],[30,1]]
+* ["","","optic_Aco","",["arifle_MX_GL_ACO_F","GL_3GL_F"],["30Rnd_65x39_caseless_mag","1Rnd_HE_Grenade_shell"],[30,1]]
 */
 
-_weapon = ((_state select 1) select 0);
-_magazine = [(_state select 2) select 0, (_state select 3) select 0];
-_items = _state select 0;
+_weapon = ((_state select 4) select 0);
+_magazine = [(_state select 5) select 0, (_state select 6) select 0];
+_items = [_state select 0, _state select 1, _state select 2, _state select 3];
 
 
 if ((_magazine select 0) != "") then {
@@ -40,11 +37,5 @@ if ((_magazine select 0) != "") then {
 
 _unit removeWeapon _weapon;
 
-
-for "_loop" from 0 to (count _state) -1 do {
-  if (typeName (_state select _loop) == QUOTE(STRING)) then {
-    _items pushBack (_state select _loop);
-  };
-};
-
-([_target] call FUNC(switchBackpack)) setVariable [QGVAR(GunbagWeapon), [[_weapon], _items], true];
+[_target, backpackContainer _target, [_weapon, _items] call FUNC(calculateMass)] call EFUNC(movement,addLoadToUnitContainer);
+_gunbag setVariable [QGVAR(GunbagWeapon), [[_weapon], _items], true];
