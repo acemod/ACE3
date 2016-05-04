@@ -18,8 +18,11 @@
 params ["_unit", "_target", "_weapon", "_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
 
-// private _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime"); //Not a good config value, use a constant for now:
-private _reloadTime = 2.5;
+private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))) then {
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))
+} else {
+    2.5
+};
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);
