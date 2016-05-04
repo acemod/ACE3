@@ -36,7 +36,7 @@ _fnc_parameters = {
         _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor random 10];
         _size = 1;
     } else {
-        if (_drawRank) then {
+        if (_drawRank && {rank _target != ""}) then {
             _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower rank _target];
             _size = 1;
         };

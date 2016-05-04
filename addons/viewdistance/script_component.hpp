@@ -15,3 +15,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define VD_ZOOM_NORMAL 1.00041
+#define VD_ZOOM_DIVISION 35
+#define VD_ZOOM_DIVISION_AIR 10

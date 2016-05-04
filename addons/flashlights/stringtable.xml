@@ -21,7 +21,7 @@
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
-            <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <French>Lampe de poche avec un filtre rouge. Pour éclairer une carte.</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -43,7 +43,7 @@
             <Czech>Bílá mini svítilna. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
-            <French>Mini lampe torche. Pour utilisation sur carte.</French>
+            <French>Lampe de poche (blanche). Pour éclairer une carte.</French>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -65,7 +65,7 @@
             <Czech>Svítilna s červeným filtrem. Pro nahlédnutí do mapy.</Czech>
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
-            <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <French>Lampe de poche avec un filtre rouge. Pour éclairer une carte.</French>
         </Key>
     </Package>
 </Project>

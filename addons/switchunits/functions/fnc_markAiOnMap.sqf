@@ -37,7 +37,7 @@ GVAR(AllMarkerNames) = [];
         // create markers
         {
             if (([_x] call FUNC(isValidAi) && (side group _x in _sides)) || (_x getVariable [QGVAR(IsPlayerControlled), false])) then {
-                
+
                 private _markerName = str _x;
 
                 private _marker = createMarkerLocal [_markerName, position _x];

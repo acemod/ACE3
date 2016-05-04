@@ -1,4 +1,4 @@
-#define COMPONENT rhsusf_c_weapons_comp
+#define COMPONENT compat_rhs_usf3
 
 #include "\z\ace\addons\main\script_mod.hpp"
 

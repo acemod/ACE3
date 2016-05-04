@@ -16,31 +16,30 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_player,_newVehicle);
-
-private["_tubeWeaponName" ,"_fireModes", "_lastFireMode"];
+params ["_player", "_newVehicle"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 
 // Run magazine handling initialization if enabled
-if (!EGVAR(common,settingsInitFinished)) then {
-    EGVAR(common,runAtSettingsInitialized) pushBack [{
-        if (GVAR(useAmmoHandling) && {!(_this getVariable [QGVAR(initialized),false]) && !(_this getVariable [QGVAR(exclude),false])}) then {
-            _this call FUNC(mortarInit);
+if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])) then {
+    // Make sure that mortar init is executed after settings init
+    [{
+        params ["_mortar"];
+        if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
+            //wait for proper turret locality change
+            [{
+                ["initMortar", [_this], [_this]] call EFUNC(common,globalEvent);
+            }, _mortar, 0.05] call EFUNC(common,waitAndExecute);
         };
-    }, _newVehicle];
-} else {
-    if (GVAR(useAmmoHandling) && {!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])}) then {
-        _newVehicle call FUNC(mortarInit);
-    };
+    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
 };
 
-_tubeWeaponName = (weapons _newVehicle) select 0;
-_fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
+private _tubeWeaponName = (weapons _newVehicle) select 0;
+private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
 //Restore last firemode:
-_lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
+private _lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
 if (_lastFireMode != -1) then {
     _player action ["SwitchWeapon", _newVehicle, _player, _lastFireMode];
 };

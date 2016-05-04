@@ -83,7 +83,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(30Rnd_556x45_mag_Tracer_DimDescription);
         picture = "\A3\weapons_f\data\ui\m_20stanag_red_ca.paa";
     };
-    
+
     class 20Rnd_762x51_Mag: CA_Magazine {
         initSpeed = 833;
     };
@@ -121,7 +121,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(20Rnd_762x51_mag_SDDescription);
         initSpeed = 325;
     };
-    
+
     class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_M118LR";
@@ -247,7 +247,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(10Rnd_338_API526_Mag_Description);
         initSpeed = 880;
     };
-    
+
     class 5Rnd_127x108_Mag;
     class ACE_5Rnd_127x99_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
@@ -273,8 +273,8 @@ class CfgMagazines {
         descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
         initSpeed = 860;
     };
-    
-    
+
+
     class 30Rnd_9x21_Mag: CA_Magazine {
         initSpeed = 450;
     };
@@ -286,27 +286,27 @@ class CfgMagazines {
         descriptionShort = CSTRING(30Rnd_9x19_mag_Description);
         initSpeed = 370;
     };
-    
+
     class 11Rnd_45ACP_Mag: CA_Magazine {
         initSpeed = 250;
     };
-    
+
     class 6Rnd_45ACP_Cylinder : 11Rnd_45ACP_Mag {
         initSpeed = 250;
     };
-    
+
     class 30Rnd_45ACP_Mag_SMG_01: 30Rnd_9x21_Mag {
         initSpeed = 250;
     };
-    
+
     class 9Rnd_45ACP_Mag: 30Rnd_45ACP_Mag_SMG_01 {
         initSpeed = 250;
     };
-    
+
     class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green: 30Rnd_45ACP_Mag_SMG_01 {
         initSpeed = 250;
     };
-    
+
     class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag {
         initSpeed = 450;
     };
@@ -318,7 +318,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(16Rnd_9x19_mag_Description);
         initSpeed = 370;
     };
-    
+
     class 10Rnd_762x54_Mag: 10Rnd_762x51_Mag {
         initSpeed = 800;
     };
@@ -331,15 +331,15 @@ class CfgMagazines {
         initSpeed = 800;
         tracersEvery = 1;
     };
-    
+
     class 150Rnd_762x54_Box: 150Rnd_762x51_Box {
         initSpeed = 750;
     };
-    
+
     class 150Rnd_93x64_Mag: CA_Magazine {
         initSpeed = 860;
     };
-    
+
     class 10Rnd_127x54_Mag: CA_Magazine {
         initSpeed = 300;
     };

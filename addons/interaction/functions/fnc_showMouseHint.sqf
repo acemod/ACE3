@@ -50,4 +50,7 @@ if (_scroll == "") exitWith {
 
 (_display displayCtrl 1002) ctrlSetText _scroll;
 
-["mouseHint", [false, true, true, true, true, true, true, false]] call EFUNC(common,showHud); //This is equivalent to the old showHud false
+// Enable action menu
+inGameUISetEventHandler ["PrevAction", "true"];
+inGameUISetEventHandler ["NextAction", "true"];
+inGameUISetEventHandler ["Action", "true"];

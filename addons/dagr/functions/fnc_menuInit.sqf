@@ -522,7 +522,7 @@ GVAR(menuRun) = true;
                     (__dsp displayCtrl __mainText) ctrlSetText "Connecting...";
                 };
                 if (ACE_time - GVAR(busyTimer) > 0.6) then {
-                    if (ACE_player hasWeapon "ACE_Vector") then {
+                    if (({_x isKindOf  ["ACE_Vector", configFile >> "CfgWeapons"]} count (weapons ACE_player)) > 0) then {
                         GVAR(displaySelection) = "VECTOR";
                         (__dsp displayCtrl __mainText) ctrlSetText "Vector Connected";
                         GVAR(vectorConnected) = true;

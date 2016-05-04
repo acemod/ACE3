@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -44,10 +46,13 @@ class CfgVehicles {
 
     class ThingX;
     class ACE_SandbagObject: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         author = ECSTRING(common,ACETeam);
-        XEH_ENABLED;
         scope = 2;
-        side = -1;
+        side = 3;
         model = PATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
         vehicleClass = "ACE_Logistics_Items";

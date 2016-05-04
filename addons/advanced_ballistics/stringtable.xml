@@ -92,7 +92,7 @@
             <German>Für Gruppenmitglieder aktiviert</German>
             <Czech>Povoleno pro členy skupiny</Czech>
             <Portuguese>Ativada para membros do grupo</Portuguese>
-            <French>Activer pour les membres groupés</French>
+            <French>Activer pour les membres du groupe</French>
             <Hungarian>Csoporttagoknak engedélyezve</Hungarian>
             <Russian>Включена для группы</Russian>
             <Italian>Abilita per Membri del Gruppo</Italian>
@@ -104,7 +104,7 @@
             <German>Aktiviert die erweiterte Ballistik für nicht lokale Gruppenmitglieder</German>
             <Czech>Aktivuje pokročilou balistiku pro nelokální členy skupiny</Czech>
             <Portuguese>Ativa balística avançada para membros de grupo não locais</Portuguese>
-            <French>Active la balistique avancée pour les membres groupés non locaux</French>
+            <French>Active la balistique avancée pour les membres du groupe non locaux</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát nem-helyi csoporttagoknak</Hungarian>
             <Russian>Включает продвинутую баллистику для нелокальных членов группы</Russian>
             <Italian>Abilita Balistica Avanzata per Membri non locali del Gruppo</Italian>
@@ -128,7 +128,7 @@
             <German>Aktiviert die erweiterte Ballistik für alle nicht lokalen Spieler (das Aktivieren dieser Funktion kann zur Beeinträchtigung des Spielerlebnisses im Multiplayer führen)</German>
             <Czech>Aktivuje pokročilou balistiku pro všechny nelokální hráče (aktivace této možnosti způsobuje pokles FPS během velké přestřelky v multiplayeru)</Czech>
             <Portuguese>Ativa balística avançada para todos os jogadores não locais (ativando isso pode degradar a performance durante troca de tiros intensas no multiplayer)</Portuguese>
-            <French>Active la balistique avancé pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
+            <French>Active la balistique avancée pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát az összes nem-helyi játékosnak (ez a funkció leronthatja a teljesítményt intenzív többjátékos tűzharcok alatt)</Hungarian>
             <Russian>Включает продвинутую баллистику для всех нелокальных игроков (включение этой опции может снизить производительность при массовых перестрелках в мультиплеере)</Russian>
             <Italian>Abilita Balistica Avanzata per tutti i giocatori non locali (abilitare questo parametro potrebbe degradare le prestazioni durante scontri intensi in multiplayer)</Italian>
@@ -140,7 +140,7 @@
             <German>Für Gruppenmitglieder immer aktiviert</German>
             <Czech>Vždy povoleno pro členy skupiny</Czech>
             <Portuguese>Sempre ativada para membros do grupo</Portuguese>
-            <French>Toujours activer pour les membres groupés</French>
+            <French>Toujours activer pour les membres du groupe</French>
             <Hungarian>Mindig engedélyezve csoporttagoknak</Hungarian>
             <Russian>Всегда включена для членов группы</Russian>
             <Italian>Sempre abilitato per Membri del Gruppo</Italian>
@@ -272,7 +272,7 @@
             <German>Legt das Intervall zwischen den Berechnungsschritten fest</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
             <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
-            <French>Défini un intervalle de calcul entre deux simulations</French>
+            <French>Définit un intervalle de calcul entre deux simulations</French>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
@@ -296,7 +296,7 @@
             <German>Gibt den Radius (in Metern) um den Spieler an, bei dem die erweiterte Ballistik auf Geschosse angewendet wird</German>
             <Czech>Určuje oblast kolem hráče (v metrech), kde je pokročilá balistika použita na projektil</Czech>
             <Portuguese>Define o raio ao redor do jogador (em metros) onde a balística avançada será aplicada aos projéteis</Portuguese>
-            <French>Défini le rayon autour du joueur (en mètres) d'application de la balistique avancée</French>
+            <French>Définit le rayon autour du joueur (en mètres) d'application de la balistique avancée</French>
             <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékek fejlett ballisztikát használnak</Hungarian>
             <Russian>Определяет радиус вокруг игрока (в метрах), в котором продвинутая баллистика применяется к снарядам</Russian>
             <Italian>Definisce il raggio attorno al giocatore (in metri) per cui la Balistica Avanzata è applicata ai proiettili</Italian>
@@ -307,7 +307,7 @@
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
             <Czech>Tento modul umožňuje aktivovat pokročilou balistiku, která vypočítává trajektorii kulky a bere do úvahy věci jako je teplota vzduchu, atmosférický tlak, vlhkost vzduchu, gravitaci, typ munice a zbraň, ze které je náboj vystřelen. To vše přispívá k velmi přesné balistice.</Czech>
             <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, força de Coriolis, a gravidade, o modelo da arma no qual o disparo é realizado e o tipo de munição. Tudo isso acrescenta-se a um balística muito precisa.</Portuguese>
-            <French>Ce module active la simulation de balistique avancée - ie les projectiles sont influencé par des varibles comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelles ils sont tirés.</French>
+            <French>Ce module active la simulation de balistique avancée - ie les projectiles sont influencés par des varibles comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelle ils sont tirés.</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
             <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>

@@ -1,7 +1,7 @@
 class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
-    
+
     class optic_LRPS : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
@@ -46,7 +46,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_AMS_base : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
@@ -61,7 +61,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_KHS_base : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
@@ -76,7 +76,7 @@ class CfgWeapons {
             };
         };
     };
-    
+
     class optic_KHS_old : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
