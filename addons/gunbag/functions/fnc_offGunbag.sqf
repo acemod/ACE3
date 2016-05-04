@@ -34,6 +34,7 @@ _weapon = (_state select 0) select 0;
 _items = (_state select 1);
 
 _unit addWeapon _weapon;
+removeAllPrimaryWeaponItems _unit;
 
 {
   _unit addWeaponItem [_weapon, _x];
