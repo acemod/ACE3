@@ -350,7 +350,7 @@ class CfgVehicles {
     class ACE_FlareTripMine: APERSTripMine {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_FlareTripMine_Wire_Ammo";
-        displayName = "Tripflare";
+        displayName = CSTRING(TripFlare_Name);
     };
 
     class IEDUrbanBig_F;

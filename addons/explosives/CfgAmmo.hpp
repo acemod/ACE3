@@ -42,19 +42,26 @@ class CfgAmmo {
     };
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        SoundSetExplosion[] = {};
+        defaultMagazine = "ACE_FlareTripMine_Mag"; //Mag that gets dropped after defuse
         hit = 0;
         indirectHit = 0;
         indirectHitRange = 0;
-        soundHit[] = {""}; // TODO: Add flare ignition sound or something
+        soundHit[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
         explosionEffects = "ACE_TripflareEffect";
         CraterEffects = "";
-        soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_2",3.1622777,1,50};
+        soundTrigger[] = {"",1,1};
         class CamShakeExplode {
             power = 0;
             duration = 0;
             frequency = 0;
             distance = 0;
         };
+    };
+    
+    class F_20mm_Red;
+    class ACE_TripFlare_FlareEffect: F_20mm_Red {
+        triggerTime = 0.1;
     };
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {

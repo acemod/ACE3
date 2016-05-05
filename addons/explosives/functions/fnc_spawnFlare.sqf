@@ -19,4 +19,6 @@
 params ["_posX","_posY","_posZ"];
 TRACE_3("Params",_posX,_posY,_posZ);
 
-"F_40mm_White" createVehicle [_posX,_posY,_posZ];
+private _flare = "ACE_TripFlare_FlareEffect" createVehicle [_posX,_posY,_posZ];
+
+TRACE_1("",_flare);
