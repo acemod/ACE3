@@ -16,9 +16,8 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable QGVAR(nozzle);
+private _nozzle = _unit getVariable QGVAR(nozzle);
 
 (_this call FUNC(canConnectNozzle)) && {_target == (_nozzle getVariable [QGVAR(source), objNull])}

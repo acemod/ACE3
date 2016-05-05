@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params ["_logic", "", "_activated"];
+params ["_logic", "", ["_activated", false, [false]]];
 
 if (!_activated) exitWith {};
 

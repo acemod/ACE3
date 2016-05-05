@@ -5,7 +5,7 @@
  * Arguments [Client] :
  * 0: eventName <STRING>
  * 1: arguments <ARRAY>
- * 2: ttl <SCALAR>
+ * 2: ttl <NUMBER>
  *
  * Return Value:
  * Boolean of success <BOOL>
@@ -17,7 +17,7 @@
 params ["_name", "_args", "_ttl"];
 
 if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR("Synced event key not found.");
+    ACE_LOGERROR_1("Synced event key [%1] not found (_handleSyncedEvent).", _name);
     false
 };
 

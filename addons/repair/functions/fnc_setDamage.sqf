@@ -23,23 +23,15 @@ TRACE_2("params",_vehicle,_damage);
 if !(local _vehicle) exitWith {};
 
 // save array with damage values of all hitpoints
-private ["_hitPoints", "_hitPointDamages"];
-
-_hitPoints = [_vehicle] call EFUNC(common,getHitpoints);
-
-_hitPointDamages = [];
-
-{
-    _hitPointDamages set [_forEachIndex, _vehicle getHitPointDamage _x];
-} forEach _hitPoints;
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // set damage of the vehicle
 _vehicle setDamage _damage;
 
 // restore original hitpoint damage values
 {
-    _vehicle setHitPointDamage [_x, _hitPointDamages select _forEachIndex];
-} forEach _hitPoints;
+    _vehicle setHitIndex [_forEachIndex, _x];
+} forEach _allHitPointDamages;
 
 // normalize hitpoints
 [_vehicle] call FUNC(normalizeHitPoints);

@@ -59,12 +59,12 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Select the to be played sound based upon damage amount.
     if (_pain > 0.5) then {
         if (random(1) > 0.5) then {
-            _sound = _availableSounds_A select (round(random((count _availableSounds_A) - 1)));
+            _sound = selectRandom _availableSounds_A;
         } else {
-            _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+            _sound = selectRandom _availableSounds_B;
         };
     } else {
-        _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+        _sound = selectRandom _availableSounds_B;
     };
     // Play the sound
     playSound3D [(getArray(configFile >> "CfgSounds" >> _sound >> "sound") select 0) + ".wss", objNull, false, getPos _unit, 15, 1, 25]; // +2db, 15 meters.

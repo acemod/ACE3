@@ -7,7 +7,7 @@
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  * 3: Treatment classname <STRING>
- *
+ * 4: Items Used <ARRAY>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -18,8 +18,11 @@
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
+TRACE_5("params",_caller,_target,_selectionName,_className,_items);
 
-[[_target, _className], QUOTE(DFUNC(treatmentAdvanced_medicationLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+private _part = [_selectionName] call FUNC(selectionNameToNumber);
+
+["treatmentAdvanced_medicationLocal", [_target], [_target, _className, _part]] call EFUNC(common,targetEvent);
 
 {
     if (_x != "") then {

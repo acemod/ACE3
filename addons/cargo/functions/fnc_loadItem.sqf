@@ -6,7 +6,6 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
- * 2: Show Hint <BOOL> (default: true)
  *
  * Return value:
  * Object loaded <BOOL>
@@ -19,18 +18,18 @@
 #include "script_component.hpp"
 
 params [["_item","",[objNull,""]], ["_vehicle",objNull,[objNull]]];
-private ["_loaded", "_space", "_itemSize"];
+TRACE_2("params",_item,_vehicle);
 
-if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {false};
+if !([_item, _vehicle] call FUNC(canLoadItemIn)) exitWith {TRACE_2("cannot load",_item,_vehicle); false};
 
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 _loaded pushBack _item;
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
 TRACE_1("added to loaded array",_loaded);
 
-_space = [_vehicle] call FUNC(getCargoSpaceLeft);
-_itemSize = [_item] call FUNC(getSizeItem);
+private _space = [_vehicle] call FUNC(getCargoSpaceLeft);
+private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _space - _itemSize, true];
 
 if (_item isEqualType objNull) then {

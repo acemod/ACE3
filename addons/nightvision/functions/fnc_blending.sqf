@@ -1,15 +1,9 @@
 /*
  * Author: commy2
- * Change the blending when the player fires??
+ * Change the blending when the player fires??. Called from the unified fired EH only for the local player and his vehicle.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * Nothing
@@ -21,17 +15,14 @@
  */
 #include "script_component.hpp"
 
-if (!hasInterface) exitWith {};
-
-params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 private "_player";
 _player = ACE_player;
 
 //If our vehicle didn't shoot, or we're not in NVG mode, exit
-if ((_vehicle != (vehicle _player)) || {(currentVisionMode _player) != 1}) exitWith {};
-//If we are mounted, and it wasn't our weapon system that fired, exit
-if (_player != _vehicle && {!(_weapon in (_vehicle weaponsTurret ([_player] call EFUNC(common,getTurretIndex))))}) exitWith {};
+if ((currentVisionMode _player) != 1) exitWith {};
 
 private["_darkness", "_nvgBrightnessCoef", "_silencer", "_visibleFire", "_visibleFireCoef", "_visibleFireTime", "_visibleFireTimeCoef"];
 

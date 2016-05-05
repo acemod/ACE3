@@ -8,8 +8,6 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
-
 if (isNil "ACE_maxWeightDrag") then {
     ACE_maxWeightDrag = 800;
 };

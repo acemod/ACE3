@@ -1,9 +1,9 @@
 /*
  * Author: KoffeinFlummi
- * Adjusts the direction of a shell.
+ * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.
  *
  * Arguments:
- * -> arguments of the FiredBIS EH
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
@@ -12,18 +12,14 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_weapon", "", "", "_ammo", "_magazine", "_projectile"];
-
-private _gunner = [_vehicle, _weapon] call EFUNC(common,getGunner);
-private _turret = _gunner call EFUNC(common,getTurretIndex);
-
-// Exit if the unit isn't a player
-if !([_gunner] call EFUNC(common,isPlayer)) exitWith {};
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
-private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 if !(_magazine in _FCSMagazines) exitWith {};
+
+private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 // GET ELEVATION OFFSET OF CURRENT MAGAZINE
 private _offset = 0;
@@ -36,7 +32,7 @@ private _offset = 0;
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
 
-// Remove the platform velocity 
+// Remove the platform velocity
 if (vectorMagnitude velocity _vehicle > 2) then {
     private _sumVelocity = (velocity _projectile) vectorDiff (velocity _vehicle);
 

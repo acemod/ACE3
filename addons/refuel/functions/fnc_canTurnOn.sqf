@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_nozzle"];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 if (isNull _unit  ||
     {isNull _nozzle} ||
@@ -27,4 +27,5 @@ if (isNull _unit  ||
 !(_nozzle getVariable [QGVAR(isRefueling), false]) &&
     {[_nozzle getVariable QGVAR(source)] call FUNC(getFuel) != 0} &&
     {!isNull (_nozzle getVariable [QGVAR(sink), objNull])} &&
-    {(fuel (_nozzle getVariable QGVAR(sink))) < 1}
+    {(fuel (_nozzle getVariable QGVAR(sink))) < 1} &&
+    {!(isEngineOn (_nozzle getVariable QGVAR(sink)))}

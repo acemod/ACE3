@@ -3,14 +3,14 @@
     <Package name="Interact_Menu">
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
             <English>Always display cursor for self interaction</English>
-            <German>Immer den Cursor für Selbst-Interaktionen anzeigen.</German>
+            <German>Immer den Mauszeiger für Selbst-Interaktionen anzeigen.</German>
             <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
             <Russian>Показывать курсор (взаимодействия с собой)</Russian>
             <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
             <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
             <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore per le interazioni su se stessi</Italian>
+            <Italian>Mostra sempre il cursore delle autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
@@ -21,7 +21,7 @@
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
             <Russian>Показывать курсор (взаимодействие)</Russian>
             <Czech>Zobrazit kurzor v menu pro interakci</Czech>
-            <German>Immer den Cursor für Fremd-Interaktionen anzeigen</German>
+            <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
         </Key>
@@ -87,6 +87,7 @@
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
+            <German>Zeus-Aktionen</German>
             <Polish>Akcje Zeusa</Polish>
             <Czech>Akce Zeuse</Czech>
             <Spanish>Acciones Zeus</Spanish>
@@ -94,6 +95,7 @@
             <Hungarian>Zeus cselekvések</Hungarian>
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
+            <Italian>Azioni Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -147,7 +149,7 @@
             <English>Keep cursor centered</English>
             <French>Garder le curseur au centre</French>
             <Russian>Центрировать курсор</Russian>
-            <German>Cursor zentriert halten</German>
+            <German>Mauszeiger zentriert halten</German>
             <Hungarian>Kurzor középen tartása</Hungarian>
             <Polish>Utrzymaj kursor wyśrodkowany</Polish>
             <Spanish>Mantener el cursor centrado</Spanish>
@@ -160,7 +162,7 @@
             <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
             <French>Garde le curseur au milieu et dispose le menu des options autour. Utile si la taille de l'écran est limitée.</French>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
-            <German>Hält den Cursor zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
+            <German>Hält den Mauszeiger zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
             <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
             <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
@@ -237,6 +239,7 @@
             <French>Arrière plan du menu d'interaction</French>
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
+            <Italian>Sfondo Menù Interazioni</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -248,6 +251,7 @@
             <French>Flouter l'arrière plan durant l'ouverture du menu d'interaction</French>
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
+            <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -259,6 +263,7 @@
             <French>Flouter l'écran</French>
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
+            <Italian>Sfoca schermo</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -270,9 +275,11 @@
             <French>Noir</French>
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
+            <Italian>Nero</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
+            <German>Zeige Aktionen für Gebäude</German>
             <Polish>Pokazuj akcje dla budynków</Polish>
             <Czech>Zobrazit akci pro budovy</Czech>
             <Spanish>Mostrar acciones para edificios</Spanish>
@@ -280,9 +287,11 @@
             <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
+            <Italian>Mostra azioni per edifici</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <German>Fügt Aktionen zum Türöffnen oder für eine Leiter zum Besteigen von Gebäuden hinzu. (Hinweis: Verschlechtert die Leistung wenn das Interaktionsmenü geöffnet wird. Insbesondere in Städten) </German>
             <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
             <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
             <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
@@ -290,26 +299,40 @@
             <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
+            <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
+            <German>Interaktionsmenü</German>
             <Polish>Menu interakcji</Polish>
             <Portuguese>Menu de interação</Portuguese>
             <Russian>Меню взаимодействия</Russian>
             <Czech>Menu interakce</Czech>
             <Spanish>Menú de interacción</Spanish>
+            <Italian>Menù Interazioni</Italian>
+            <French>Menu d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
+            <German>Interaktionsmenü Animationsgeschwindigkeit</German>
             <Polish>Szybkość animacji interakcji</Polish>
             <Russian>Скорость анимации меню взаимодействия</Russian>
             <Portuguese>Velocidade da animação de interação</Portuguese>
+            <Czech>Rychlost animace interakce</Czech>
+            <Italian>Velocità Animazioni Interazioni</Italian>
+            <Spanish>Velocidad de animación del menú de interacción</Spanish>
+            <French>Vitesse des animations du menu d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
+            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs. </German>
             <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
             <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
             <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, dimiuindo a necessidade de esperar para mostrar as ações</Portuguese>
+            <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
+            <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
+            <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
+            <French>Rendre le menu d'interaction plus rapide et reduire le temps nécessaire de survol d'une action pour afficher les sous-actions.</French>
         </Key>
     </Package>
 </Project>

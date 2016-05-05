@@ -39,7 +39,7 @@ private _fnc_parseConfigForDisplayNames = {
         } else {
             private _value = missionNamespace getVariable [_name, -1];
             if ((_value < 0) || {_value >= (count _values)}) then {
-                ACE_LOGWARNING_3("Setting [%1] out of bounds %2 (values[] count is %3)(", _name, _value, count _values);
+                ACE_LOGWARNING_3("Setting [%1] out of bounds %2 (values[] count is %3)", _name, _value, count _values);
             };
         };
     };

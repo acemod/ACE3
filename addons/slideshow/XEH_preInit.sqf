@@ -2,10 +2,7 @@
 
 ADDON = false;
 
-PREP(addSlideActions);
-PREP(autoTransition);
-PREP(createSlideshow);
-PREP(moduleInit);
+#include "XEH_PREP.hpp"
 
 GVAR(slideshows) = 0;
 

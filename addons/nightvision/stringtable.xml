@@ -138,24 +138,44 @@
             <German>Nachtsicht</German>
             <Russian>Ночное виденье</Russian>
             <Portuguese>Visão Noturna</Portuguese>
+            <Czech>Noční vidění</Czech>
+            <Polish>Noktowizja</Polish>
+            <Italian>Visione Notturna</Italian>
+            <Spanish>Visión Nocturna</Spanish>
+            <French>Vision nocturne</French>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
             <German>Einstellungen für Nachtsichtgeräte.</German>
             <Russian>Настройки ночного виденья</Russian>
             <Portuguese>Ajustes para visão noturna.</Portuguese>
+            <Czech>Nastavení nočního vidění</Czech>
+            <Polish>Ustawienia noktowizorów</Polish>
+            <Italian>Impostazioni per visione notturna.</Italian>
+            <Spanish>Parámetros para visión nocturna</Spanish>
+            <French>Réglage pour la vision nocturne</French>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
-            <German>Deakt. NVGs mit Visier</German>
+            <German>Deakt. NS mit Visier</German>
             <Russian>Убирать ПНВ при прицеливании</Russian>
             <Portuguese>Desabilitar visão noturna nas lunetas</Portuguese>
+            <Czech>Zakázat NVG v zaměřovači</Czech>
+            <Polish>Wył. NVG przy celowaniu</Polish>
+            <Italian>Disabilita NVG nei mirini</Italian>
+            <Spanish>Desactivar NVG en miras</Spanish>
+            <French>Desactiver les JVN dans les viseurs.</French>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
-            <German>Blockiert das Benutzen von Nachtsichtbrillen beim Benutzen des Visiers.</German>
+            <German>Blockiert die Nachtsichtbrillen beim Verwenden des Visiers.</German>
             <Russian>Блокирует использование головного ПНВ при прицеливании через прицел.</Russian>
             <Portuguese>Bloqueia o uso de visão noturna ao utilizar a mira.</Portuguese>
+            <Czech>Zabraňuje používání nokovizoru v režimu zaměřovače.</Czech>
+            <Polish>Uniemożliwia korzystanie z gogli noktowizyjnych przy celowaniu.</Polish>
+            <Italian>Blocca l'uso di visori notturni mentre miri con ottiche.</Italian>
+            <Spanish>Desactiva el uso de gafas visión nocturna cuando se utilizan miras normales.</Spanish>
+            <French>Bloque l'usage des JVN pendant la visée.</French>
         </Key>
     </Package>
 </Project>

@@ -2,10 +2,37 @@
 
 if (!hasInterface) exitWith {};
 
+// cache config
+// items in the inventory display can only be distinguished by their lb names and pictures
+// this can cause collisions (mainly weapons with attachments),
+// but if the item has the same name and picture it at least shouldn't change the filter anyway
+// luckily we don't need private items, so dummy and parent classes are out of the picture
+
+GVAR(ItemKeyNamespace) = [] call CBA_fnc_createNamespace;
+
+private _fnc_addToCache = {
+    private _displayName = getText (_this >> "displayName");
+    private _picture = getText (_this >> "picture");
+
+    // list box seems to delete the leading backslash
+    if (_picture select [0,1] == "\") then {
+        _picture = _picture select [1];
+    };
+
+    GVAR(ItemKeyNamespace) setVariable [format ["%1:%2", _displayName, _picture], _this];
+};
+
+private _allItems = [];
+
+_allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgWeapons"));
+_allItems append ("getNumber (_x >> 'scope') > 0" configClasses (configFile >> "CfgGlasses"));
+_allItems append ("getNumber (_x >> 'scope') == 2" configClasses (configFile >> "CfgMagazines"));
+_allItems append ("getNumber (_x >> 'scope') > 0 && {getNumber (_x >> 'isBackpack') == 1}" configClasses (configFile >> "CfgVehicles"));
+
+{_x call _fnc_addToCache; false} count _allItems;
+
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
-
-["inventoryDisplayLoaded", {_this call FUNC(inventoryDisplayLoaded)}] call EFUNC(common,addEventHandler);
 
 // add custom filters
 
@@ -18,7 +45,7 @@ GVAR(Grenades_ItemList) = [];
 } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 // make list case insensitive
-GVAR(Grenades_ItemList) = [GVAR(Grenades_ItemList), {toLower _this}] call EFUNC(common,map);
+GVAR(Grenades_ItemList) = GVAR(Grenades_ItemList) apply {toLower _x};
 
 // filter duplicates
 GVAR(Grenades_ItemList) = GVAR(Grenades_ItemList) arrayIntersect GVAR(Grenades_ItemList);
@@ -41,8 +68,11 @@ GVAR(Medical_ItemList) = [];
     ("true" configClasses (configFile >> QEGVAR(Medical,Actions) >> "Advanced"))
 );
 
+// remove all numbers from list
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) select {_x isEqualType ""};
+
 // make list case insensitive
-GVAR(Medical_ItemList) = [GVAR(Medical_ItemList), {if (_this isEqualType "") then {toLower _this}}] call EFUNC(common,map);
+GVAR(Medical_ItemList) = GVAR(Medical_ItemList) apply {toLower _x};
 
 // filter duplicates
 GVAR(Medical_ItemList) = GVAR(Medical_ItemList) arrayIntersect GVAR(Medical_ItemList);

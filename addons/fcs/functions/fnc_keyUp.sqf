@@ -17,20 +17,15 @@ params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound",
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
-call (updateRangeHUD);
-
 if (isNil "_distance") then {
-    _distance = call FUNC(getRange);
-
-    if (_distance == 0) then {
-        _distance = [
-            getNumber (_turretConfig >> QGVAR(DistanceInterval)),
-            getNumber (_turretConfig >> QGVAR(MaxDistance)),
-            getNumber (_turretConfig >> QGVAR(MinDistance))
-        ] call EFUNC(common,getTargetDistance); // maximum distance: 5000m, 5m precision
-    };
+    _distance = [
+        getNumber (_turretConfig >> QGVAR(DistanceInterval)),
+        getNumber (_turretConfig >> QGVAR(MaxDistance)),
+        getNumber (_turretConfig >> QGVAR(MinDistance))
+    ] call FUNC(getRange);
 };
 
+// MOVING TARGETS
 private _weapon = _vehicle currentWeaponTurret _turret;
 private _weaponDirection = _vehicle weaponDirection _weapon; // @todo doesn't work for sub turrets
 
@@ -44,7 +39,6 @@ if (_weaponDirection isEqualTo [0,0,0]) then {  // dummy value for non main turr
 
 private _angleTarget = asin (_weaponDirection select 2);
 
-// MOVING TARGETS
 private _movingAzimuth = 0;
 
 if (ACE_time - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) then {
@@ -60,13 +54,17 @@ if (ACE_time - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) the
     private _timeToLive     = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
     private _simulationStep = getNumber (configFile >> "CfgAmmo" >> _ammo >> "simulationStep");
     private _initSpeedCoef  = getNumber (configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
+    private _simulationType = getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
 
-    if (_initSpeedCoef < 0) then {
-        _initSpeed = _initSpeed * - _initSpeedCoef;
-    };
+    // More BIS fix
+    if (_simulationType == "shotBullet") then {
+        if (_initSpeedCoef < 0) then {
+            _initSpeed = _initSpeed * - _initSpeedCoef;
+        };
 
-    if (_initSpeedCoef > 0) then {
-        _initSpeed = _initSpeedCoef;
+        if (_initSpeedCoef > 0) then {
+            _initSpeed = _initSpeedCoef;
+        };
     };
 
     if (_simulationStep != 0) then {
@@ -109,60 +107,10 @@ if (_viewDiff != 0) then {
     _FCSAzimuth = (atan (_distance / _viewDiff) - (abs _viewDiff / _viewDiff) * 90) + _movingAzimuth;
 };
 
-// CALCULATE OFFSET
-private _FCSMagazines = [];
-private _FCSElevation = [];
-
-{
-    private _magazine = _x;
-    private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-
-    if !(getText (configFile >> "CfgAmmo" >> _ammo >> "simulation") == "shotMissile") then {
-        private _maxElev     = getNumber (_turretConfig >> "maxElev");
-        private _initSpeed   = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-        private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-
-        {
-            private ["_weapon", "_muzzles", "_weaponMagazines", "_muzzleMagazines"];
-            _weapon = _x;
-            _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
-            _weaponMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines");
-
-            {
-                if (_x != "this") then {
-                    _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
-                    _weaponMagazines append _muzzleMagazines;
-                };
-                false
-            } count _muzzles;
-
-            if (_magazine in _weaponMagazines) exitWith {
-                _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
-
-                if (_initSpeedCoef < 0) then {
-                    _initSpeed = _initSpeed * -_initSpeedCoef;
-                };
-
-                if (_initSpeedCoef > 0) then {
-                    _initSpeed = _initSpeedCoef;
-                };
-            };
-            false
-        } count (_vehicle weaponsTurret _turret);
-
-        private _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
-        _offset = parseNumber _offset;
-
-        _FCSMagazines pushBack _magazine;
-        _FCSElevation pushBack _offset;
-    };
-    false
-} count (_vehicle magazinesTurret _turret);
-
-[_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],     _distance] call EFUNC(common,setVariablePublic);
-[_vehicle, format ["%1_%2", QGVAR(Magazines), _turret], _FCSMagazines] call EFUNC(common,setVariablePublic);
-[_vehicle, format ["%1_%2", QGVAR(Elevation), _turret], _FCSElevation] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(Azimuth),   _turret],   _FCSAzimuth] call EFUNC(common,setVariablePublic);
+
+// CALCULATE SOLUTION
+[_vehicle,_turret,_distance,_angleTarget] call FUNC(calculateSolution);
 
 if (_playSound) then {
     playSound "ACE_Sound_Click";
@@ -170,12 +118,4 @@ if (_playSound) then {
 
 if (_showHint) then {
     [format ["%1: %2", localize LSTRING(ZeroedTo), _distance]] call EFUNC(common,displayTextStructured);
-};
-
-//Update the hud's distance display to the new value or "----" if out of range
-//(10m fudge because of EFUNC(common,getTargetDistance))
-if (_distance + 10 >= getNumber (_turretConfig >> QGVAR(MaxDistance))) then {
-    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText "----";
-} else {
-    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };

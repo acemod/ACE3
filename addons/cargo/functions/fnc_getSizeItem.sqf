@@ -16,22 +16,23 @@
 #include "script_component.hpp"
 
 params ["_item"];
-private ["_isVirtual","_itemClass","_config"];
+
 scopeName "return";
 
-_isVirtual = (_item isEqualType "");
-_itemClass = if (_isVirtual) then {_item} else {typeOf _item};
-_config = (configFile >> "CfgVehicles" >> _itemClass >> QGVAR(size));
+private _isVirtual = (_item isEqualType "");
+private _itemClass = if (_isVirtual) then {_item} else {typeOf _item};
+private _config = (configFile >> "CfgVehicles" >> _itemClass >> QGVAR(size));
 
 if (_isVirtual) then {
     if (isNumber _config) then {
         (getNumber _config) breakOut "return";
     };
 } else {
-    _config = (configFile >> "CfgVehicles" >> typeOf _item >> QGVAR(size));
-
+    if (!isNil {_item getVariable QGVAR(size)}) then {
+        (_item getVariable QGVAR(size)) breakOut "return";
+    };
     if (isNumber _config) then {
-        (_item getVariable [QGVAR(size), getNumber _config]) breakOut "return";
+        (getNumber _config) breakOut "return";
     };
 };
 

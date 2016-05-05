@@ -170,7 +170,7 @@ class CfgVehicles {
     // wheeled apcs
     class B_APC_Wheeled_01_base_F;
     class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
-        displayName = CSTRING(APC_Wheeled_cannon_Name);
+        displayName = CSTRING(APC_Wheeled_01_cannon_Name);
     };
 
     class O_APC_Wheeled_02_base_F;
@@ -636,12 +636,12 @@ class CfgVehicles {
     class Weapon_MMG_02_sand_F: Weapon_Base_F {
         displayName = CSTRING(MMG_02_sand);
     };*/
-    
+
     //attachments
-    
+
     class Item_Base_F;
-    
+
     class Item_acc_flashlight: Item_Base_F {
-		displayName="UTG Defender 126";
-	};
+        displayName="UTG Defender 126";
+    };
 };

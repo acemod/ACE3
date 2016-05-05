@@ -64,7 +64,7 @@ class ACE_RangeCard_Dialog {
     onLoad = "uiNamespace setVariable ['RangleCard_Display', (_this select 0)]";
     onUnload = QUOTE(_this call FUNC(onCloseDialog));
     objects[] = {};
-    
+
     class controls {
         class BACKGROUND {
             moving=1;

@@ -860,12 +860,12 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
                 helmetDown[] = {0,-0.07,0};
             };
         };
-    
+
     class Turrets: Turrets {
         class MainTurret: MainTurret {
             weapons[] = {"ACE_gatling_20mm_Comanche","missiles_DAGR","missiles_ASRAAM", "ACE_AIR_SAFETY"};
             magazines[] = {"ACE_500Rnd_20mm_shells_Comanche","4Rnd_AAA_missiles","24Rnd_PG_missiles"};
-            
+
             outGunnerMayFire = 1;
             commanding = -1;
             primaryGunner = 1;
@@ -888,13 +888,13 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
             minTurn = -120;
             maxTurn = 120;
             initTurn = 0;
-            
+
             class OpticsIn
             {
                 delete Narrow;
                 delete Medium;
                 delete Wide;
-                
+
                 class ACE_WideUnstabilized {
                     opticsDisplayName = "W NS";
                     initAngleX = 0;

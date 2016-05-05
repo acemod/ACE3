@@ -20,6 +20,7 @@
 
 private ["_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds", "_hasOverDosed", "_med", "_limit", "_decreaseAmount", "_viscosityAdjustment", "_medicationConfig", "_onOverDose"];
 params ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_viscosityChange", "_painReduce"];
+TRACE_8("params",_target,_className,_variable,_maxDosage,_timeInSystem,_incompatabileMeds,_viscosityChange,_painReduce);
 
 _foundEntry = false;
 _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];

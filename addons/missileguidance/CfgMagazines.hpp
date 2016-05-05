@@ -1,6 +1,6 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
-    
+
     class 6Rnd_ACE_Hydra70_DAGR : 12Rnd_PG_missiles {
         ammo = "ACE_Hydra70_DAGR";
         count = 12;
@@ -8,7 +8,7 @@ class CfgMagazines {
         displayNameShort = "6 Round DAGR";
         descriptionShort = "6 Round DAGR";
         weight = 36;
-        
+
     };
     class 12Rnd_ACE_Hydra70_DAGR : 6Rnd_ACE_Hydra70_DAGR {
         count = 12;
@@ -24,7 +24,7 @@ class CfgMagazines {
         descriptionShort = "24 Round DAGR";
         weight = 72;
     };
-    
+
     // Hellfires
     class 6Rnd_ACE_Hellfire_AGM114K : 12Rnd_PG_missiles {
         count = 12;
@@ -33,7 +33,7 @@ class CfgMagazines {
         displayNameShort = "6Rnd_ACE_Hellfire_AGM114K";
         descriptionShort = "6Rnd_ACE_Hellfire_AGM114K";
         weight = 36;
-        
+
     };
     class 12Rnd_ACE_Hellfire_AGM114K : 6Rnd_ACE_Hydra70_DAGR {
         count = 12;
@@ -49,5 +49,5 @@ class CfgMagazines {
         descriptionShort = "24Rnd_ACE_Hellfire_AGM114K";
         weight = 72;
     };
-   
+
 };

@@ -106,8 +106,8 @@ class CfgMagazines {
                 FuseTime = 0.5;
                 ammo = "ACE_IEDUrbanBig_Command_Ammo";
             };
-            class DeadmanSwitch:Command {};
-            class Cellphone:Command {};
+            class DeadmanSwitch: Command {};
+            class Cellphone: Command {};
             class PressurePlate {
                 displayName = CSTRING(PressurePlate);
                 digDistance = 0;
@@ -123,6 +123,8 @@ class CfgMagazines {
             class Command: Command {
                 ammo = "ACE_IEDLandBig_Command_Ammo";
             };
+            class DeadmanSwitch: Command {};
+            class Cellphone: Command {};
             class PressurePlate: PressurePlate {
                 ammo = "ACE_IEDLandBig_Range_Ammo";
             };
@@ -153,6 +155,8 @@ class CfgMagazines {
             class Command: Command {
                 ammo = "ACE_IEDLandSmall_Command_Ammo";
             };
+            class DeadmanSwitch: Command {};
+            class Cellphone: Command {};
             class PressurePlate: PressurePlate {
                 ammo = "ACE_IEDLandSmall_Range_Ammo";
             };

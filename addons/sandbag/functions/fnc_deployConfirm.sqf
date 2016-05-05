@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "ACE_Sandbag", false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
 
 // remove sandbag from inventory
 _unit removeItem "ACE_Sandbag_empty";
@@ -51,7 +51,6 @@ GVAR(deployPFH) = -1;
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
-[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
 // play animation
 _unit playActionNow "PutDown";

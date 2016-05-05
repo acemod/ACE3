@@ -204,6 +204,13 @@ class Medical {
             statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
             icon = PATHTOF(UI\icons\autoInjector.paa);
         };
+        class Adenosine: Morphine {
+            displayName = CSTRING(Inject_Atropine);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(treatment));
+            icon = PATHTOF(UI\icons\autoInjector.paa);
+        };
         class Atropine: Morphine {
             displayName = CSTRING(Inject_Atropine);
             condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
@@ -300,6 +307,13 @@ class Medical {
             condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside"};
             statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
+            icon = PATHTOF(UI\icons\autoInjector.paa);
+        };
+        class Adenosine: Morphine {
+            displayName = CSTRING(Inject_Atropine);
+            condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside"};
+            statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(treatment));
             icon = PATHTOF(UI\icons\autoInjector.paa);
         };
         class Atropine: Morphine {
@@ -399,6 +413,13 @@ class Medical {
             statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
             icon = PATHTOF(UI\icons\autoInjector.paa);
         };
+        class Adenosine: Morphine {
+            displayName = CSTRING(Inject_Atropine);
+            condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside"};
+            statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(treatment));
+            icon = PATHTOF(UI\icons\autoInjector.paa);
+        };
         class Atropine: Morphine {
             displayName = CSTRING(Inject_Atropine);
             condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(canTreatCached));
@@ -482,6 +503,13 @@ class Medical {
             condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreatCached));
             exceptions[] = {"isNotInside"};
             statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
+            icon = PATHTOF(UI\icons\autoInjector.paa);
+        };
+        class Adenosine: Morphine {
+            displayName = CSTRING(Inject_Atropine);
+            condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(canTreatCached));
+            exceptions[] = {"isNotInside"};
+            statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(treatment));
             icon = PATHTOF(UI\icons\autoInjector.paa);
         };
         class Atropine: Morphine {

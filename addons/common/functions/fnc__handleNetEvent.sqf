@@ -16,12 +16,9 @@ params ["_eventType", "_event"];
 
 if (_eventType == "ACEg") then {
     _event params ["_eventName", "_eventArgs"];
-    GVAR(events) params ["_eventNames"];
 
-    private _eventIndex = _eventNames find _eventName;
-
-    if (_eventIndex != -1) then {
-        private _events = (GVAR(events) select 1) select _eventIndex;
+    private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
+    if (!isNil "_eventFunctions") then {
 
         #ifdef DEBUG_EVENTS
             ACE_LOGINFO_1("* Net Event %1",_eventName);
@@ -35,7 +32,7 @@ if (_eventType == "ACEg") then {
                     ACE_LOGINFO_1("    ID: %1",_forEachIndex);
                 #endif
             };
-        } forEach _events;
+        } forEach _eventFunctions;
     };
 };
 

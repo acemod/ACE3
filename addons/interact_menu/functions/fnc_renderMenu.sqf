@@ -15,22 +15,20 @@
  */
 #include "script_component.hpp"
 
-private ["_menuInSelectedPath", "_path", "_menuDepth", "_x", "_offset", "_newPos", "_forEachIndex", "_player", "_pos", "_target", "_textSettings"];
-
 params ["_parentPath", "_action", "_sPos", "_angles"];
 _action params ["_actionData", "_activeChildren", "_actionObject"];
 _angles params ["_centerAngle", "_maxAngleSpan"];
 
-_menuDepth = (count GVAR(menuDepthPath));
+private _menuDepth = (count GVAR(menuDepthPath));
 
 //BEGIN_COUNTER(constructing_paths);
 
 // Store path to action
-_path = +_parentPath;
+private _path = +_parentPath;
 _path pushBack [_actionData select 0,_actionObject];
 
 // Check if the menu is on the selected path
-_menuInSelectedPath = true;
+private _menuInSelectedPath = true;
 {
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
         _menuInSelectedPath = false;
@@ -44,7 +42,7 @@ _menuInSelectedPath = true;
 //BEGIN_COUNTER(constructing_colors);
 
 //Get text color settings string
-_textSettings = GVAR(colorSelectedSettings);
+private _textSettings = GVAR(colorSelectedSettings);
 if(!_menuInSelectedPath) then {
     _textSettings = (GVAR(textSettingsMatrix) select (count _path)) select _menuDepth;
 };
@@ -68,13 +66,12 @@ if !(_menuInSelectedPath) exitWith {true};
 
 //BEGIN_COUNTER(children);
 
-private ["_numChildren","_angleSpan","_angle","_angleInterval","_scaleX", "_scaleY", "_offset", "_textSize"];
-_numChildren = count _activeChildren;
-_angleSpan = _maxAngleSpan min (55 * ((_numChildren) - 1));
+private _numChildren = count _activeChildren;
+private _angleSpan = _maxAngleSpan min (55 * ((_numChildren) - 1));
 if (_angleSpan >= 305) then {
     _angleSpan = 360;
 };
-_angleInterval = 55;
+private _angleInterval = 55;
 if (_angleSpan < 360) then {
     if (_numChildren > 1) then {
         _angleInterval = _angleSpan / (_numChildren - 1);
@@ -87,15 +84,15 @@ if (_numChildren == 1) then {
 };
 
 // Scale menu based on the amount of children
-_scaleX = 1;
-_scaleY = 1;
+private _scaleX = 1;
+private _scaleY = 1;
 
 if (GVAR(UseListMenu)) then {
-    _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
+    private _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
     _scaleX = _textSize * 0.17 * 1.1;
     _scaleY = 0.17 * 0.30 * 4/3;
 } else {
-    _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
+    private _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
     _scaleX = _textSize * 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
     _scaleY = _textSize * 0.17 * 4/3 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
 };
@@ -106,15 +103,13 @@ if (_menuInSelectedPath && {_menuDepth == count _path}) then {
     _scaleY = _scaleY * (0.3 + 0.7 * (((ACE_diagTime - GVAR(expandedTime)) * linearConversion [0, 2, GVAR(menuAnimationSpeed), 8, 16]) min 1));
 };
 
-_target = _actionObject;
-_player = ACE_player;
+private _target = _actionObject;
+private _player = ACE_player;
 
 //END_COUNTER(children);
-_angle = _centerAngle - _angleSpan / 2;
+private _angle = _centerAngle - _angleSpan / 2;
 {
-    //BEGIN_COUNTER(children);
-    private ["_offset","_newPos"];
-    _newPos =  if (GVAR(UseListMenu)) then {
+    private _newPos =  if (GVAR(UseListMenu)) then {
         [(_sPos select 0) + _scaleX,
          (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
     } else {
@@ -122,8 +117,6 @@ _angle = _centerAngle - _angleSpan / 2;
          (_sPos select 1) + _scaleY * (sin _angle)];
     };
 
-    //drawLine3D [_pos, _newPos, [1,0,0,0.8]];
-    //END_COUNTER(children);
     [_path, _x, _newPos, [_angle, 150]] call FUNC(renderMenu);
 
     _angle = _angle + _angleInterval;

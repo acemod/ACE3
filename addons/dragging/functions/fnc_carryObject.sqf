@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Carry an object.
  *
  * Arguments:
@@ -10,17 +9,20 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_carryObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // get attachTo offset and direction.
-private ["_position", "_direction", "_UAVCrew"];
 
-_position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
-_direction = _target getVariable [QGVAR(carryDirection), 0];
+private _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
+private _direction = _target getVariable [QGVAR(carryDirection), 0];
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
@@ -34,8 +36,7 @@ if (_target isKindOf "CAManBase") then {
 } else {
 
     // add height offset of model
-    private "_offset";
-    _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
+    private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
     _position = _position vectorAdd [0, 0, _offset];
 
@@ -56,16 +57,20 @@ _unit setVariable [QGVAR(ReleaseActionID), [
 ] call EFUNC(common,addActionEventHandler)];
 
 // show mouse hint
-[localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+if (_target isKindOf "CAManBase") then {
+    [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
+} else {
+    [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
+};
 
 // check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(carryObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
 
 // prevent UAVs from firing
-_UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if !(_UAVCrew isEqualTo []) then {
     {_target deleteVehicleCrew _x} count _UAVCrew;

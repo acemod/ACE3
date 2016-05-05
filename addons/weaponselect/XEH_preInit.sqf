@@ -2,19 +2,11 @@
 
 ADDON = false;
 
-PREP(displayGrenadeTypeAndNumber);
-PREP(fireSmokeLauncher);
-PREP(playChangeFiremodeSound);
-PREP(putWeaponAway);
-PREP(selectNextGrenade);
-PREP(selectWeaponMode);
-PREP(selectWeaponMuzzle);
-PREP(selectWeaponVehicle);
-PREP(throwGrenade);
+#include "XEH_PREP.hpp"
 
 // collect frag and other grenades separately
-GVAR(GrenadesAll)     = [];
-GVAR(GrenadesFrag)    = [];
+GVAR(GrenadesAll) = [];
+GVAR(GrenadesFrag) = [];
 GVAR(GrenadesNonFrag) = [];
 
 {

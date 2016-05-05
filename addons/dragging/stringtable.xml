@@ -34,7 +34,7 @@
             <Portuguese>Objeto muito pesado</Portuguese>
             <Italian>L'oggetto pesa troppo</Italian>
             <Russian>Предмет слишком тяжёлый</Russian>
-            <Czech>Moc težké</Czech>
+            <Czech>Předmět je moc těžký</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
@@ -56,6 +56,9 @@
             <Portuguese>Levantar/Abaixar</Portuguese>
             <Russian>Поднять/Опустить</Russian>
             <Czech>Zvýšit/Snížit</Czech>
+            <Italian>Alza/Abbassa</Italian>
+            <Spanish>Subir/Bajar</Spanish>
+            <French>Lever/Baisser</French>
         </Key>
     </Package>
 </Project>

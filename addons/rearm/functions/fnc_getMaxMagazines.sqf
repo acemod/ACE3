@@ -18,7 +18,7 @@
 #include "script_component.hpp"
 
 private ["_count", "_cfg"];
-params ["_target", "_turretPath", "_magazineClass"];
+params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]], ["_magazineClass", "", [""]]];
 
 if (isNull _target) exitWith {0};
 
