@@ -90,7 +90,7 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
-    
+
     //Plastic and metal case
     class PlasticCase_01_base_F: Items_base_F {
         class EventHandlers {
@@ -116,7 +116,7 @@ class CfgVehicles {
         GVAR(dragPosition[]) = {0,1.2,0};
         GVAR(dragDirection) = 0;
     };
-    
+
     // Barrier
     class RoadCone_F: ThingX {
         class EventHandlers {

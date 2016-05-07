@@ -13,4 +13,9 @@ class CfgWeapons {
         opticsZoomMin = 0.06621;
         weaponInfoType = "ACE_RscOptics_vector";
     };
+    class ACE_VectorDay: ACE_Vector {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(VectorDayName);
+        visionMode[] = {"Normal"};
+    };
 };

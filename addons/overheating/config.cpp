@@ -18,6 +18,8 @@ class CfgPatches {
 
 #include "CfgVehicles.hpp"
 
+#include "CfgMagazines.hpp"
+
 #include "CfgWeapons.hpp"
 
 #include "ACE_Settings.hpp"

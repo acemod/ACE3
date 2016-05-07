@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="UI">
+        <Key ID="STR_ACE_UI_Category">
+            <English>User Interface</English>
+            <Czech>Uživatelské rozhraní</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_ModuleName">
+            <English>User Interface</English>
+            <Czech>Uživatelské rozhraní</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_ModuleDescription">
+            <English>This module allows toggling visible user interface parts.</English>
+        </Key>
+        <Key ID="STR_ACE_UI_AllowSelectiveUI">
+            <English>Allow Selective UI</English>
+            <Czech>Povolit selektivní UI</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
+            <English>Allow client to modify their UI.</English>
+            <Czech>Povolit klientovi měnit jeho UI</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
+            <English>Soldier/Vehicle/Weapon Information</English>
+            <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleRadar">
+            <English>Vehicle Radar</English>
+            <Czech>Radar vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleCompass">
+            <English>Vehicle Compass</English>
+            <Czech>Kompas vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_CommandMenu">
+            <English>Command Menu</English>
+            <Czech>Menu rozkazů</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_GroupBar">
+            <English>Group Bar</English>
+            <Czech>Panel skupiny</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_WeaponName">
+            <English>Weapon Name</English>
+            <Czech>Název zbraně</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_WeaponNameBackground">
+            <English>Weapon Name Background</English>
+            <Czech>Název zbraně v pozadí</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_FiringMode">
+            <English>Firing Mode</English>
+            <Czech>Režim palby</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoType">
+            <English>Ammo Type</English>
+            <Czech>Typ munice</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoCount">
+            <English>Ammo Count</English>
+            <Czech>Počet munice</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_MagCount">
+            <English>Magazine Count</English>
+            <Czech>Počet zásobníků</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_ThrowableName">
+            <English>Throwable Type</English>
+            <Czech>Typ granátů apod.</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_ThrowableCount">
+            <English>Throwable Count</English>
+            <Czech>Počet granátů apod.</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_Zeroing">
+            <English>Zeroing</English>
+            <Czech>Náměr</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
+            <English>Weapon Lower Info Background</English>
+        </Key>
+        <Key ID="STR_ACE_UI_Stance">
+            <English>Stance</English>
+            <Czech>Postoj</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_StaminaBar">
+            <English>Stamina Bar</English>
+            <Czech>Panel výdrže</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleName">
+            <English>Vehicle Name</English>
+            <Czech>Název vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleNameBackground">
+            <English>Vehicle Name Background</English>
+            <Czech>Název vozidla v pozadí</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleFuelBar">
+            <English>Vehicle Fuel Bar</English>
+            <Czech>Ukazatel paliva</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleSpeed">
+            <English>Vehicle Speed</English>
+            <Czech>Rychlost vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleAltitude">
+            <English>Vehicle Altitude</English>
+            <Czech>Výška vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleDamage">
+            <English>Vehicle Damage</English>
+            <Czech>Poškození vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleInfoBackground">
+            <English>Vehicle Info Background</English>
+            <Czech>Info o vozidle v pozadí</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_VehicleGunnerWeapon">
+            <English>Vehicle Gunner Weapon</English>
+            <Czech>Střelcova zbraň ve vozidle</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
+            <English>Requires Soldier/Vehicle/Weapons Information.</English>
+            <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_Disallowed">
+            <English>Modifying User Interface is disabled.</English>
+            <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
+        </Key>
+    </Package>
+</Project>

@@ -54,5 +54,5 @@ private _lowestVolume = 1;
 0 fadeMusic _lowestVolume;
 
 // Set Radio mod variables.
-player setVariable ["tf_globalVolume", _lowestVolume];
+ACE_player setVariable ["tf_globalVolume", _lowestVolume];
 if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };

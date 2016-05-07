@@ -13,6 +13,18 @@
             <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar informação do vento</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Weather_WindInfoKey_hold">
+            <English>Show Wind Info (Toggle)</English>
+            <Polish>Pokaż inf. o wietrze (przełącz)</Polish>
+            <Russian>Показать информацию о ветре (перекл.)</Russian>
+            <French>Afficher information sur le vent (bascule)</French>
+            <Spanish>Mostrar información del viento (cambiar)</Spanish>
+            <Italian>Mostra informazioni sul vento (camb.)</Italian>
+            <German>Zeige Windinformationen (umsch.)</German>
+            <Hungarian>Széladatok mutatása (pecek)</Hungarian>
+            <Czech>Zobrazit údaje o větru (přep.)</Czech>
+            <Portuguese>Mostrar informação do vento (alternar)</Portuguese>
+        </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
             <Polish>Pogoda</Polish>

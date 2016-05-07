@@ -6,7 +6,7 @@ class CfgAmmo {
         smokeColor[] = {0, 0, 0, 0};
         timeToLive = 6;
     };
-    
+
     class ShellBase;
     class ACE_HuntIR_Propell: ShellBase {
         supersonicCrackNear[] = {"",0.316228,1,50};
