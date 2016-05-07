@@ -64,6 +64,7 @@
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
 ["forceWalk", {
     params ["_object", "_set"];
@@ -89,6 +90,11 @@
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
+}] call FUNC(addEventHandler);
+["blockEngine", {
+    params ["_vehicle", "_set"];
+    _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
+    _vehicle engineOn false;
 }] call FUNC(addEventHandler);
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
