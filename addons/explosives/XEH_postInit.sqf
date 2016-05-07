@@ -27,18 +27,7 @@ if (isServer) then {
         TRACE_1("Knocked Out, Doing Deadman", _unit);
         [_unit] call FUNC(onIncapacitated);
     }] call EFUNC(common,addEventHandler);
-};
 
-if (!hasInterface) exitWith {};
-
-GVAR(PlacedCount) = 0;
-GVAR(Setup) = objNull;
-GVAR(pfeh_running) = false;
-GVAR(CurrentSpeedDial) = 0;
-
-// In case we are a JIP client, ask the server for orientation of any previously
-// placed mine.
-if (isServer) then {
     ["clientRequestsOrientations", {
         params ["_logic"];
         TRACE_1("clientRequestsOrientations received:",_logic);
@@ -50,7 +39,18 @@ if (isServer) then {
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
         ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
     }] call EFUNC(common,addEventHandler);
-} else {
+};
+
+if (!hasInterface) exitWith {};
+
+GVAR(PlacedCount) = 0;
+GVAR(Setup) = objNull;
+GVAR(pfeh_running) = false;
+GVAR(CurrentSpeedDial) = 0;
+
+// In case we are a JIP client, ask the server for orientation of any previously
+// placed mine.
+if (didJIP) then {
     ["serverSendsOrientations", {
         params ["_explosivesOrientations"];
         TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
@@ -59,14 +59,12 @@ if (isServer) then {
             TRACE_3("orientation set:",_explosive,_direction,_pitch);
             [_explosive, _direction, _pitch] call FUNC(setPosition);
         } forEach _explosivesOrientations;
-        private _group = group GVAR(localLogic);
         deleteVehicle GVAR(localLogic);
         GVAR(localLogic) = nil;
-        deleteGroup _group;
     }] call EFUNC(common,addEventHandler);
 
     //  Create a logic to get the client ID
-    GVAR(localLogic) = (createGroup sideLogic) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
     ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
 };
