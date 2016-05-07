@@ -85,6 +85,7 @@ class CfgAmmo {
     class G_40mm_HE: GrenadeBase {
         // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
         GVAR(enabled) = 1;
+        GVAR(force) = 1;
 
         GVAR(classes)[] = {"ACE_frag_tiny_HD"};
         GVAR(metal) = 200;
@@ -109,6 +110,7 @@ class CfgAmmo {
     };
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
         GVAR(skip) = 1;
+        GVAR(force) = 0;
     };
     class ACE_G40mm_HE_VOG25P: G_40mm_HE {
         GVAR(skip) = 0;
