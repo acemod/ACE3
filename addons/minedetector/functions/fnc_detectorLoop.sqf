@@ -35,7 +35,7 @@ if !([_unit, _type] call FUNC(isDetectorEnabled)) exitwith {
 if (ACE_player == _unit && {currentWeapon _unit == _type}) then {
     private _detected = [_unit, _detectorConfig] call FUNC(getDetectedObject);
     _detected params ["_hasDetected", "_object", "_distance"];
-    if (_hasDetected && (ACE_time - _lastPlayed > 0.9)) then {
+    if (_hasDetected && {ACE_time - _lastPlayed > 0.9}) then {
         _args set [3, ACE_time];
         _detectorConfig params ["_type", "_radius", "_detectableTypes", "_sounds"];
         private _sound = _sounds select (_distance >= 1.2);

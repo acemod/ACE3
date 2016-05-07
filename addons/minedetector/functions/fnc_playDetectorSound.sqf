@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["example"] call ace_minedetector_fnc_playDetectorSound
+ * [player, "ace_buzz_1"] call ace_minedetector_fnc_playDetectorSound
  *
  * Public: No
  */
@@ -19,13 +19,17 @@
 
 params ["_unit", "_detectorSound"];
 
-if (isNull _unit) exitwith {}; // TODO log error - unit does not exist
+if (isNull _unit) exitwith {
+    ACE_LOGERROR_1("unit does not exist [%1]",_unit);
+};
 if (!alive _unit) exitwith {
-    // log error, unit is not alive
+    ACE_LOGERROR_1("unit is not alive [%1]",_unit);
 };
 
 private _helperObject = _unit getvariable [QGVAR(helperLogic), objNull];
 if !(isNull _helperObject) then {
     _helperObject attachto [_unit,[0,0,-3],""];
     [_helperObject, _unit] say3D _detectorSound;
+} else {
+    ACE_LOGERROR_1("helper does not exist [%1]",_helperObject);
 };
