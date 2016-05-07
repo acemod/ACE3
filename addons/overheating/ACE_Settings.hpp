@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(DisplayTextOnJam) {
+    class GVAR(displayTextOnJam) {
         typeName = "BOOL";
         isClientSettable = 1;
         value = 1;
