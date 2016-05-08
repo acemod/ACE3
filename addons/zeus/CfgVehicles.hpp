@@ -71,7 +71,7 @@ class CfgVehicles {
                     };
                 };
             };
-            class GVAR(autoAddObjects) {
+            class autoAddObjects {
                 displayName = CSTRING(AddObjectsToCurator);
                 description = CSTRING(AddObjectsToCurator_desc);
                 typeName = "BOOL";
