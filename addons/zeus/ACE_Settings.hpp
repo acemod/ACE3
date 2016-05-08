@@ -31,9 +31,9 @@ class ACE_Settings {
         values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(revealMines_partial), CSTRING(revealMines_full)};
     };
     class GVAR(autoAddObjects) {
+        typeName = "BOOL";
+        value = 0;
         displayName = CSTRING(AddObjectsToCurator);
         description = CSTRING(AddObjectsToCurator_desc);
-        value = 0;
-        typeName = "BOOL";
     };
 };
