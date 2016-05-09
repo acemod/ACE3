@@ -1,7 +1,9 @@
+VERSION = 3.5.1
 BIN = bin
 RELEASE = release
 SRC = addons
-FLAGS = -w unquoted-string
+CBA = ../CBA_A3
+FLAGS = -i $(CBA) -w unquoted-string
 
 $(BIN)/ace_%.pbo: $(SRC)/%
 	@mkdir -p $(BIN)
@@ -28,5 +30,5 @@ release: all
 	@cp *.cpp $(RELEASE)/@ace/
 	@cp logo_ace3_ca.paa README.md LICENSE $(RELEASE)/@ace/
 	@cp docs/* $(RELEASE)/@ace/
-	@echo "  ZIP  $(RELEASE)/@ace.zip"
-	@cd $(RELEASE); zip -r @ace.zip @ace &> /dev/null; cd ..
+	@echo "  ZIP  $(RELEASE)/ace3_$(VERSION).zip"
+	@cd $(RELEASE); zip -r ace3_$(VERSION).zip @ace &> /dev/null; cd ..
