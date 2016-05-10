@@ -51,7 +51,7 @@ if (_map in ["hindukush"]) then { _lat = 36; _altitude = 0; };
 if (_map in ["imrali", "imralispring"]) then { _lat = 40; _altitude = 0; };
 if (_map in ["intro"]) then { _lat = 40; _altitude = 0; };
 if (_map in ["isladuala3"]) then { _lat = -19; _altitude = 0; };
-if (_map in ["jacobi"]) then { _lat = -19; _altitude = 0; };
+if (_map in ["jacobi"]) then { _lat = 34; _altitude = 2000; };    //default elevationOffset     
 if (_map in ["kapaulio"]) then { _lat = 0; _altitude = 0; };
 if (_map in ["kholm"]) then { _lat = 36; _altitude = 0; };
 if (_map in ["koplic"]) then { _lat = 42; _altitude = 0; };
