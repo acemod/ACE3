@@ -331,31 +331,40 @@ switch (toLower _mode) do {
     };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_cachedUnits","_cachedGrps","_cachedSides","_s","_g","_grp","_u","_unit","_side"];
+        private ["_cachedUnits","_cachedGrps","_cachedSides","_sT","_gT","_uT","_s","_g","_u","_grp","_unit","_side"];
 
         // Cache existing group and side nodes and cull removed data
         _cachedUnits = [];
         _cachedGrps = [];
         _cachedSides = [];
-        for "_s" from 0 to ((_tree tvCount []) - 1) do {
-            for "_g" from 0 to ((_tree tvCount [_s]) - 1) do {
+        // Track deleted nodes to account for decrease in index
+        _sT = _tree tvCount [];
+        for [{_s = 0;}, {_s < _sT}, {_s = _s + 1}] do {
+            _gT = _tree tvCount [_s];
+
+            for [{_g = 0;}, {_g < _gT}, {_g = _g + 1}] do {
                 _grp = groupFromNetID (_tree tvData [_s,_g]);
 
                 if (_grp in GVAR(groupList)) then {
                     _cachedGrps pushBack _grp;
                     _cachedGrps pushBack _g;
 
-                    for "_u" from 0 to ((_tree tvCount [_s,_g])) do {
+                    _uT = _tree tvCount [_s,_g];
+                    for [{_u = 0;}, {_u < _uT}, {_u = _u + 1}] do {
                         _unit = objectFromNetId (_tree tvData [_s,_g,_u]);
 
                         if (_unit in GVAR(unitList)) then {
                             _cachedUnits pushBack _unit;
                         } else {
                             _tree tvDelete [_s,_g,_u];
+                            _u = _u - 1;
+                            _uT = _uT - 1;
                         };
                     };
                 } else {
                     _tree tvDelete [_s,_g];
+                    _g = _g - 1;
+                    _gT = _gT - 1;
                 };
             };
 
@@ -364,6 +373,8 @@ switch (toLower _mode) do {
                 _cachedSides pushBack _s;
             } else {
                 _tree tvDelete [_s];
+                _s = _s - 1;
+                _sT = _sT - 1;
             };
         };
 
