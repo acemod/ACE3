@@ -20,6 +20,7 @@ private _virtualLoad = 0;
 {
     _virtualLoad = _virtualLoad + (_x getVariable [QGVAR(vLoad), 0]);
 } forEach [
+    _unit,
     uniformContainer _unit,
     vestContainer _unit,
     backpackContainer _unit

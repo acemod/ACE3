@@ -17,6 +17,7 @@
 params [["_unit", objNull, [objNull]], ["_container", objNull, [objNull]], ["_virtualLoadToAdd", 0, [0]]];
 
 if !(_container in [
+    _unit,
     uniformContainer _unit,
     vestContainer _unit,
     backpackContainer _unit
