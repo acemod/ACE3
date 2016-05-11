@@ -26,24 +26,21 @@ As ACE is primarily a hobby project, project goals will never operate on a fixed
 
 Individual developers are free to continue working on the project at their own discretion and releases will otherwise operate as usual. Meaning that if features unrelated to the goal are complete, there will still be a minor version increment when the next release is made.
 
-Whenever a project goal is chosen:
-
-* A new issue will be made for the purpose of discussing and documenting the current goal's development in a centralized location.
-* A new branch originating from master will be made to develop collaboratively off of until the work is ready to be merged back in.
+Whenever a project goal is chosen a new issue will be made for the purpose of discussing and documenting the current goal's development in a centralized location.
 
 ## 3 Branching and releases
 
-We have a release scheduled every 2 weeks on a Tuesday. On the Friday before release, the project management will decide whether or not this scheduled release will continue. When continuing  with the release, the current `master branch` will be merged into the `release branch`. The release branch will not contain any direct commits and no other branches will be merged into this branch. The exception being `hotfixes`, which are branched off `Release` and merged back into `Release` and `Master`.
+ACE releases are generally scheduled for a Tuesday a week or two in advance. On the Friday before release, the project management will decide whether or not this scheduled release will continue. When continuing  with the release, the current `master` branch will be merged into the `release` branch. The `release` branch will not contain any direct commits and no other branches will be merged into this branch. The exception being hotfixes, which are branched off `release` and merged back into `release` and `master`.
 
-`Hotfixes` are fixes for critical bugs that prevent stable gameplay with the currently available version of ACE3.
+Hotfixes are fixes for critical bugs that prevent stable gameplay with the currently available version of ACE3.
 
-During this release process between the Friday and Tuesday, the day of release, work can continue on as normal on the `Master branch`. This includes new features, bug fixes that won't make it for release or other work. These will not be merged into the `Release branch` until the next release cycle, normally 2 weeks later.
+During this release process between the Friday and Tuesday, the day of release, work can continue on as normal on the `master` branch. This includes new features, bug fixes that won't make it for release or other work. These will not be merged into the `release` branch until the next release cycle.
 
 ### 3.1 Branching
 
-* New features, bug fixes that are not a hotfix or other work will always be branched off `master` or another branch but never a `hotfix` or the `Release branch`.
-* Hotfixes are always branched off the `Release branch`
-* The release branch is never merged or deleted. Only master or hotfixes are allowed to merge into the `Release branch`.
+* New features, bug fixes that are not a hotfix or other work will always be branched off `master` or another branch but never a `hotfix` or the `release` branch.
+* Hotfixes are always branched off the `release` branch
+* The `release` branch is never merged or deleted. Only `master` or hotfixes are allowed to merge into the `release` branch.
 
 ### 3.2 Diagram
 
