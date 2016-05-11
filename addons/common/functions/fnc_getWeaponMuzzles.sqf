@@ -18,7 +18,7 @@ private _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles")
 
 {
     if (_x == "this") then {
-        _muzzles set [_forEachIndex, _weapon];
+        _muzzles set [_forEachIndex, configName (configFile >> "CfgWeapons" >> _weapon)];
     };
 } forEach _muzzles;
 
