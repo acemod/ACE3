@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Branching and Release
-description:
+description: This page describes the ACE3 release and branching system
 group: development
 parent: wiki
 order: 5
