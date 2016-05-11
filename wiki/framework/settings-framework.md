@@ -16,7 +16,7 @@ Part of this settings framework are global settings and client settings. Both us
 
 Settings are entries in the config that get translated to `missionNamespace` global variables. An example settings entry looks like this:
 
-```c++
+```cpp
 class ACE_Settings {
     class ACE_module_sampleSetting {
         // Following 2 entries are redundant if isClientSettable = 0
@@ -77,7 +77,7 @@ ACE3 contains a lot of settings, for that reason tweaking everything to your lik
 
 Note that the format copied to your clipboard by this can also be used in the mission config (`description.ext`), as long as they are in the class `ACE_Settings`.
 
-```c++
+```cpp
 class ACE_Settings {
     // Add exported settings here
 };
@@ -90,7 +90,7 @@ class ACE_Settings {
 - You can use `ACE_common_forceAllSettings` to force settings in a mission, it will lock **all** the settings (which are not already forced) to the values they are set in either modules or server config
 
 Example of `ACE_common_forceAllSettings`:
-```c++
+```cpp
 class ACE_Settings {
     class ACE_common_forceAllSettings {
         value = 1;
@@ -124,7 +124,7 @@ They are read after all other configs but before modules. Mission Parameters are
 </div>
 
 #### Example **description.ext**:
-```c++
+```cpp
 class Params {
     class ace_medical_level { //This needs to match an ace_setting, this one is a "SCALAR"(number)
         title = "Medical Level"; // Name that is shown

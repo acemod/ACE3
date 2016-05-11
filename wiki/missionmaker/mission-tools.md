@@ -15,6 +15,7 @@ parent: wiki
 They can be found in the editor under: "Empty" >> "ACE Respawn"
 
 **Classnames:**
+
 - `ACE_Rallypoint_West`, `ACE_Rallypoint_West_Base`
 - `ACE_Rallypoint_East`, `ACE_Rallypoint_East_Base`
 - `ACE_Rallypoint_Independent`, `ACE_Rallypoint_Independent_Base`
@@ -23,7 +24,7 @@ Using the Interaction Menu on a rallypoint offers the ability to teleport from o
 
 If you want to change the texture of the flag use this line:
 
-```c++
+```js
 this setFlagTexture 'path\to\my\texture\my_awesome_clan_logo.paa';
 ```
 
@@ -38,7 +39,7 @@ All units synced to the ["Rallypoint System" module](./modules.html#1.14-rallypo
 
 To enable other units to move them add this to the unit's initialization code:
 
-```c++
+```js
 _unit setVariable ["ACE_canMoveRallypoint", true, true];
 ```
 
@@ -53,7 +54,7 @@ In its current form you're able to switch to infantry (vehicles, etc. are planne
 
 To enable a player to control AI add the following to its init line:
 
-```c++
+```js
 this setVariable ["ACE_CanSwitchUnits", true];
 ```
 Once this player spawns, all controllable AI will be marked on his map and he'll be able to click on the map to switch to this unit. The initial unit will be prone to damage, but has no equipment and can't run. So it would be wise to hide or move this unit far from other players.
@@ -67,6 +68,7 @@ The [module settings](./modules.html#1.16-switchunits-system) define which side 
 You will now learn how to set up everything for it to work properly.
 
 ### 3.1 The module explained
+
 Name | Explanation
 ---- | -----
 Objects | Name of the objects used as screens
@@ -82,7 +84,7 @@ Slide duration | 0 (0 = disabled, number is in seconds)
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an [issue](http://feedback.arma3.com/view.php?id=22310) to prevent errors.</p>
+    <p>Mission MUST be in a PBO format (not bare folder) when used on a dedicated server due to an <a href="http://feedback.arma3.com/view.php?id=22310">issue</a> to prevent errors.</p>
 </div>
 
 ### 3.2 Basic slideshow
@@ -116,7 +118,7 @@ Slide duration | 0
 - Place down 2 modules and fill them as follows:
 
 *Module 1*
-  
+
 Name | Written
 ---- | -----
 Objects | foo1
@@ -134,5 +136,26 @@ Controllers | bar2
 images | images\banana3.jpg,images\banana4.jpg
 Interaction names | banana3,banana4
 Slide duration | 0
-  
+
 - You now have two set of "screens" with a remote each.
+
+## 4. ACE Headless
+*Part of: ace_headless*
+
+Enables automatic passing of AI groups to (up to 3) Headless Clients using round-robin system, with automatic Headless Client recognition. Due to the fully event-based transferring (on unit spawn and on Headless Client connect and disconnect) the performance impact is minimal. It transfers *groups* of units and not each unit separately!
+
+The system works on the basis of unit spawning, when a unit is spawned it will schedule a rebalance after the specified delay (described below), after the delay rebalance runs on all groups. Groups already local to any Headless Client are skipped, also those blacklisted (described below) and in the same group as any player are skipped. All others applicable for a transfer are then transferred in round-robin fashion, equalizing the number of groups on each Headless Client (most effective with 3 Headless Clients). In an event when a Headless Clients disconnects during the mission (is kicked, loses connection or similar) all units on local to that Headless Client are automatically transferred to the server by Arma 3 and a full rebalance will be forced, meaning all units, including those already on other Headless Clients, are transferred again to equalize the load. Same happens when a Headless Client connects during the mission.
+
+Using the [mission module](./modules.html#1.8-headless) a mission maker can also define the minimal delay between transfers, in order to minimize the desync due to changes in locality of many units. Log can also be enabled to keep track of the transfers (it is counting groups and not units).
+
+The following init line can be used to prevent a group from transferring on a Headless Client (apply to every unit in the group to ensure it):
+
+```js
+this setVariable ["ace_headless_blacklist", true];
+```
+
+To execute custom code on Headless Client connect and disconnects, mission makers or other modders can use the `ACE_HeadlessClientJoined` event (triggered only on the server).
+
+Some Arma 3 features are incompatible, this is up to BI to add support (apply the above init line to units using the following features to ensure expected functionality):
+- Vanilla Support Modules will stop functioning
+- Triggers synchronized with waypoints will no longer be respected (waypoint will not change status based on the trigger condition)

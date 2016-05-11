@@ -8,15 +8,16 @@ order: 5
 ---
 
 
-## 1 Versioning
-
-For ACE3 we use a versioning strategy based on <a href="http://semver.org/">Semver</a>. This means our version numbering is structured `MAJOR.MINOR.PATCH.BUILD`.
+## 1. Versioning
+For ACE3 we use an versioning strategy based on [semver](http://semver.org). This means our version numbering has the following structure: **`MAJOR.MINOR.PATCH.BUILD`**
 
 Because this modification is for Arma and backwards compatibility is not always possible, our `MAJOR.MINOR.PATCH.BUILD` rules are slightly different. We increment the:
 
-    MAJOR version when we switch to a new arma version (i.e. Arma 4 or standalone expansion).
-    MINOR version when a release contains significant changes or new features.
-    PATCH version when a release only contains fixes and enhancements.
+```
+MAJOR version when we switch to a new arma version (i.e. Arma 4 or standalone expansion)
+MINOR version when we add new features or large amount of bug fixes
+PATCH version when a release contains only bug fixes.
+```
 
 ## 2 Project goals
 

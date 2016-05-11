@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Adding third party reload
 
-```c++
+```cpp
 class CfgWeapons {
     class MyLauncher {
         ace_reloadlaunchers_enabled = 1;  // Allow your buddies to reload your launcher (0-disabled, 1-enabled)

@@ -16,7 +16,7 @@ Object must have Extended Event Handler (XEH) enabled (this is not the case for 
 
 ## 2. Config Values
 
-```c++
+```cpp
 class CfgVehicles {
     class MyChair {
         ace_sitting_canSit = 1;  // Enable sitting

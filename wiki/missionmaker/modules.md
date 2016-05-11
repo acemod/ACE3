@@ -8,6 +8,7 @@ parent: wiki
 ---
 
 ## 1. ACE3
+
 ### 1.1 Advanced Ballistics
 *Part of: ace_advanced_ballistics*
 
@@ -17,19 +18,19 @@ This module allows enabling and configuring advanced ballistic simulations.
 
 Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
-Advanced Ballistics | Boolean | Enables advanced ballistics. | No
-Enabled For Snipers | Boolean | Enables advanced ballistics for non local snipers (when using high power optics). | Yes
-Enabled For Group Members | Boolean | Enables advanced ballistics for non local group members.| No
-Enabled For Everyone | Boolean | Enables advanced ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer). | No
-Disabled In FullAuto Mode | Boolean | Disables the advanced ballistics during full auto fire. | No
+Advanced Ballistics | Boolean | Enables Advanced Ballistics. | No
+Enabled For Snipers | Boolean | Enables Advanced Ballistics for non local snipers (when using high power optics). | Yes
+Enabled For Group Members | Boolean | Enables Advanced Ballistics for non local group members.| No
+Enabled For Everyone | Boolean | Enables Advanced Ballistics for all non local players (enabling this feature may degrade performance during heavy firefights in multiplayer). | No
+Disabled In FullAuto Mode | Boolean | Disables the Advanced Ballistics during full auto fire. | No
 Enable Ammo Temperature Simulation | Boolean | Muzzle velocity varies with ammo temperature. | Yes
 Enable Barrel Length Simulation | Boolean | Muzzle velocity varies with barrel length. | Yes
 Enable Bullet Trace Effect | Boolean | Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics). | Yes
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.00
-Simulation Radius | Number | Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles. | 3000
+Simulation Radius | Number | Defines the radius around the player (in meters) at which Advanced Ballistics are applied to projectiles. | 3000
 
 ### 1.2 Allow Config Export
-*Part of: ace_Optionmenu*
+*Part of: ace_optionmenu*
 
 This modules allows to export all current ACE3 settings from the ACE3 Option menu to the clipboard and RPT file.
 
@@ -120,7 +121,20 @@ Explode on defusal? | Boolean | Enables certain explosives to explode on defusal
 
 The "Friendly Fire Messages" module triggers a message when a player kills a friendly or civilian unit. This module isn't needed on servers with a low difficulty setting.
 
-### 1.8 Hearing
+### 1.8 Headless
+*Part of: ace_headless*
+
+Enables automatic passing of AI groups to (up to 3) Headless Clients using round-robin system, with automatic Headless Client recognition, event-based transferring (on unit spawn and on Headless Client connect and disconnect).
+
+**Settings:**
+
+Name | Type | Description | Default value
+---- | ---- | ---- | ---- |
+Enabled | Boolean | Enables transferring of AI to Headless Clients. | No
+Delay | Number | Minimal delay between transfers, in seconds. | 15
+Log | Boolean | Log transfer statistics and Headless Client (dis)connections to RPT. | No
+
+### 1.9 Hearing
 *Part of: ace_hearing*
 
 Placing this modules allows you to disable combat deafness usually triggered by loud explosions or heavy weapons in a players proximity.
@@ -133,7 +147,7 @@ Combat deafness | Boolean | Reduces the hearing ability as the player takes hear
 Disable ear ringing | Option | | Do Not Force
 Effect Zeus RC | Boolean | Allow zeus remote controlled units to be able to take hearing damage. | yes
 
-### 1.9 Interaction System
+### 1.10 Interaction System
 *Part of: ace_interaction*
 
 This module allows you to tweak if players should be able to use team management functions (e.g. "switch group", "become leader").
@@ -144,17 +158,17 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable Team Management | Boolean | Should players be allowed to use the Team Management Menu?. | Yes
 
-### 1.10 LSD Vehicles
-*part of ace_common*
+### 1.11 LSD Vehicles
+*Part of: ace_common*
 
 Any vehicle linked to this module will become a seizure inducing machine of doom, no, really.
 
-### 1.11 Make Unit Surrender
+### 1.12 Make Unit Surrender
 *Part of: ace_captives*
 
 Syncing units to that module sets them in the captive state with their arms behind their back. Useful for e.g. hostage rescue missions.
 
-### 1.12 Map
+### 1.13 Map
 *Part of: ace_map*
 
 ACE3 introduces a bit more realism for the vanilla Arma 3 map and how it behaves. Some of these settings can be toggled by this module.
@@ -169,7 +183,7 @@ Map shake? | Boolean | Make map shake when walking? | Yes
 Limit map zoom? | Boolean | Limit the amount of zoom available for the map? | No
 Show cursor coordinates? | Boolean | Show the grid coordinates on the mouse pointer? | No
 
-### 1.13 MicroDAGR Map Fill
+### 1.14 MicroDAGR Map Fill
 *Part of: ace_microdagr*
 
 Controls how much data is filled on the microDAGR items. Less data restricts the map view to show less on the minimap.
@@ -180,7 +194,7 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 MicroDAGR Map Fill | Option | How much map data is filled on MicroDAGR's. | "Full Satellite + Buildings"
 
-### 1.14 MK6 Settings
+### 1.15 MK6 Settings
 *Part of: ace_mk6mortar*
 
 ACE3 now includes the first iteration of getting a less arcady point and click mortar experience.
@@ -193,8 +207,9 @@ Name | Type | Description | Default value
 Air Resistance | Boolean | For Player Shots, Model Air Resistance and Wind Effects. | No
 Allow MK6 Computer | Boolean | Show the Computer and Rangefinder (these **NEED** to be removed if you enable air resistance). | No
 Allow MK6 Compass | Boolean | Show the MK6 Digital Compass. | Yes
+Use Ammunition Handling | Boolean | Removes magazines from mortars, requiring individual rounds to be loaded manually. Does not affect AI mortars. | No
 
-### 1.15 Name Tags
+### 1.16 Name Tags
 *Part of: ace_nametags*
 
 This module allows you to tweak the settings for player names tags.
@@ -209,8 +224,8 @@ Show name tags for AI? | Option | Show the name and rank tags for friendly AI un
 Show crew info? | Option | Show vehicle crew info, or by default allows players to choose it on their own. | Do Not Force
 Show for Vehicles? | Boolean | Show cursor NameTag for vehicle commander (only if client has name tags enabled). | No
 
-### 1.16 Pointing settings
-*Part of ace_finger*
+### 1.17 Pointing settings
+*Part of: ace_finger*
 
 This module allows you to tweak settings for finger pointing such as if it's enabled or the distance at which people can see you pointing at something.
 
@@ -221,7 +236,7 @@ Name | Type | Description | Default value
 Pointing enabled | Boolean |  | Yes
 Pointing Max Range | Number | Max range between players to show the pointing indicator (in meters) | 4
 
-### 1.17 Rallypoint System
+### 1.18 Rallypoint System
 *Part of: ace_respawn*
 
 This module enables Mission Makers to specifically enable units to move a rallypoint. Every unit that is synced with that module is able to move a rallypoint.
@@ -233,7 +248,7 @@ This module enables Mission Makers to specifically enable units to move a rallyp
 
 To enable JIP players to move rally points have a look at [ACE3 Rallypoints](./mission-tools.html#1.-ace-rallypoints).
 
-### 1.18 Respawn System
+### 1.19 Respawn System
 *Part of: ace_respawn*
 
 The "Respawn System" module enables players to respawn with the gear they had before dying and to remove bodies of players after a configurable interval (in seconds).
@@ -245,8 +260,8 @@ Name | Type | Description | Default value
 Save Gear? | Boolean | Respawn with the gear a player had just before his death. | No
 Remove bodies? | Boolean | Remove player bodies after disconnect? | Yes
 
-### 1.19 Sitting
-*part of ace_sitting*
+### 1.20 Sitting
+*Part of: ace_sitting*
 
 This module is used to turn sitting on.
 
@@ -256,8 +271,8 @@ Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Enable sitting | Boolean | | Yes
 
-### 1.20 Spectator
-*part of ace_spectator*
+### 1.21 Spectator
+*Part of: ace_spectator*
 
 **Settings:**
 
@@ -268,10 +283,10 @@ Side filter | Option | Method of filtering spectatable sides. | Player side
 Camera modes | Option | Camera modes that can be used. | All
 Vision modes | Option | Vision modes that can be used. | All
 
-### 1.21 SwitchUnits System
+### 1.22 SwitchUnits System
 *Part of: ace_switchunits*
 
-The [SwitchUnits System](./mission-tools.html#2.-ace-switchunits) enables players to control certain AI units on the map.
+The [SwitchUnits System](./mission-tools.html#ace-switchunits) enables players to control certain AI units on the map.
 
 **Settings:**
 
@@ -284,16 +299,16 @@ Switch To Civilian? | Boolean | Allow switching to civilian units? | No
 Enable Safe Zone? | Boolean | Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone. |   Yes
 Safe Zone Radius | Number | The safe zone around players from a different team (in meters). | 200
 
-### 1.22 Vehicle Lock
+### 1.23 Vehicle Lock
 *Part of: ace_vehiclelock*
 
-These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Classnames Wiki](http://ace3mod.com/wiki/missionmaker/classnames.html#vehicle-lock).
+These modules allow you to lock and unlock vehicles and their inventory using a key. Players don't receive a key automatically; for key names, see [Class names Wiki](http://ace3mod.com/wiki/missionmaker/class-names.html#vehicle-lock).
 
-#### 1.22.1 Vehicle Key Assign
+#### 1.23.1 Vehicle Key Assign
 Sync with vehicles and players. Will handout custom keys to players for every synced vehicle. Only valid for objects present at mission start.
 Example: `[bob, car1, true] call ACE_VehicleLock_fnc_addKeyForVehicle;` - will add a key to bob and program it to work only on car1
 
-#### 1.22.2.1 Vehicle Lock Setup
+#### 1.23.2.1 Vehicle Lock Setup
 Settings for lockpick strength and initial vehicle lock state. Removes ambiguous lock states.
 
 **Settings:**
@@ -304,11 +319,11 @@ Lock Vehicle Inventory? | Boolean | Locks the inventory of locked vehicles. | No
 Vehicle Starting Lock State | Option | Set lock state for all vehicles (removes ambiguous lock states). | "As Is"
 Default Lockpick Strength | Number | Default Time to lockpick (in seconds). | 10
 
-#### 1.22.2.2 Vehicle setVariables
+#### 1.23.2.2 Vehicle setVariables
 * `ACE_VehicleLock_lockSide` - SIDE: overrides a vehicle's side, allowing locking and unlocking using a different side's key. For example: Unlocking INDEP vehicles with a BLUFOR key.
 * `ACE_vehicleLock_lockpickStrength` - NUMBER: seconds, determines how long lockpicking with take, overrides the value set in the module for a specific vehicle of the mission maker's choice.
 
-### 1.23 View Distance Limiter
+### 1.24 View Distance Limiter
 *Part of: ace_viewdistance*
 
 This module allows disabling the ACE3 View Distance feature as well as setting a view distance limit.
@@ -320,7 +335,7 @@ Name | Type | Description | Default value
 Enable ACE viewdistance | Boolean | Enables ACE viewdistance. | Yes
 View Distance Limit | Number | Sets the limit for how high clients can raise their view distance (<= 10 000) | 10000
 
-### 1.24 Weather
+### 1.25 Weather
 *Part of: ace_weather*
 
 This module allows you to customize the weather settings.
@@ -341,32 +356,32 @@ Sync Wind | Boolean | Synchronizes wind. | Yes
 Sync Misc | Boolean | Synchronizes lightnings, rainbow, fog, ... | Yes
 Update Interval | Number | Defines the interval (seconds) between weather updates. | 60
 
-### 1.25 Wind Deflection
+### 1.26 Wind Deflection
 *Part of: ace_winddeflection*
 
-This module allows you to define when wind deflection is active.
+This module allows you to define when Wind Deflection is active.
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:
+    <p>Wind Deflection is compatible with Advanced Ballistics and allows the following combinations:</p>
     <ul>
-  <li>Only wind deflection</li>
-  <li>Only advanced ballistics</li>
-  <li>Combined wind deflection + advanced ballistics</li>
-</ul></p>
+        <li>Only Wind Deflection</li>
+        <li>Only Advanced Ballistics</li>
+        <li>Combined Wind Deflection + Advanced Ballistics</li>
+    </ul>
 </div>
 
 **Settings:**
 
 Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
-Wind Deflection | Boolean | Enables wind deflection. | Yes
-Vehicle Enabled | Boolean | Enables wind deflection for static/vehicle gunners. | Yes
+Wind Deflection | Boolean | Enables Wind Deflection. | Yes
+Vehicle Enabled | Boolean | Enables Wind Deflection for static/vehicle gunners. | Yes
 Simulation Interval | Number | Defines the interval between every calculation step. | 0.05
 Simulation Radius | Number | Defines the radius around the player (in meters) at which projectiles are wind deflected. | 3000
 
-### 1.26 Zeus Settings
-*part of: ace_zeus*
+### 1.27 Zeus Settings
+*Part of: ace_zeus*
 
 This module provides control over vanilla aspects of Zeus.
 
@@ -382,8 +397,9 @@ Reveal Mines | Option | Reveal mines to allies and place map markers. | "Disable
 
 
 ## 2. ACE Logistics
-### 2.1 Adds Spare Parts
-*part of ace_repair*
+
+### 2.1 Add Spare Parts
+*Part of: ace_repair*
 
 Add spare parts to one or multiple objects.
 
@@ -396,7 +412,7 @@ Part | Option | Spare part. | Spare wheel
 Amount | Number | Number of selected spare parts. | 1
 
 ### 2.2 Assign Engineer
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple units as engineer.
 
@@ -408,7 +424,7 @@ List | List | List of unit names that will be classified as engineer, separated 
 Is Engineer | Option | Select the engineering skill of the unit. | Engineer |
 
 ### 2.3 Assign Repair Facility
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple objects as repair facility.
 
@@ -420,7 +436,7 @@ List | List | List of objects that will be classified as repair facility, separa
 Is repair facility | Boolean | Is the object classified as a repair facility? | Yes
 
 ### 2.4 Assign Repair Vehicle
-*part of ace_repair*
+*Part of: ace_repair*
 
 Assign one or multiple vehicles as repair vehicle.
 
@@ -432,7 +448,7 @@ List | List | List of vehicles that will be classified as repair vehicles, separ
 Is repair vehicle | Boolean | Is the vehicle classified as a repair vehicle? | Yes
 
 ### 2.5 Cargo Settings
-*part of ace_cargo*
+*Part of: ace_cargo*
 
 Configure the cargo module settings
 
@@ -443,7 +459,7 @@ Name | Type | Description | Default value
 Enable Cargo | Boolean | Enable the load in cargo module. | Yes
 
 ### 2.6 Repair Settings
-*part of ace_repair*
+*Part of: ace_repair*
 
 This module allows to tweak all the repair settings used in ACE3.
 
@@ -466,7 +482,7 @@ Wheel repair requirements | Option | Items required to remove / replace wheels. 
 
 ### 3.1 Advanced Medical Settings
 
-This module allows you to change the default Advanced Medical Settings, when [2.1 Medical Settings](#2.1-medical-settings) is set to "Advanced".
+This module allows you to change the default Advanced Medical Settings, when [3.3 Medical Settings](#medical-settings) is set to "Advanced".
 
 **Settings:**
 
@@ -589,7 +605,7 @@ Follow Players | Boolean | Follow players. If set to false, loop will play sound
 Volume | Number | The volume of the sounds played. | 1
 
 ### 4.2 Slideshow
-*part of ace_slideshow*
+*Part of: ace_slideshow*
 
 This module is the core of `ace_slideshow` for more informations about slideshow check [the mission-tools section](./mission-tools.html)
 

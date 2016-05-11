@@ -11,7 +11,7 @@ parent: wiki
 
 ### 1.1 Barrel Switching
 
-```c++
+```cpp
 class CfgWeapons {
     class MyMG {
         ace_overheating_allowSwapBarrel = 1;  // Enable barrel swap (0-disabled, 1-enabled) - information below
@@ -67,7 +67,7 @@ When no reliable data exists for temperature versus jam chance except MRBS, the 
 
 ### 1.2 Custom Animations
 
-```c++
+```cpp
 class CfgWeapons {
     class MyMG {
         ace_clearJamAction = "GestureReload";  // Custom jam clearing action, default uses reload animation

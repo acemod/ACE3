@@ -57,4 +57,4 @@ extensions\
         somethingElse\ace_somethingElse.dll
 ```
 
-### 2.2 Creating a New Extension
+### 2.2 Creating a new Extension

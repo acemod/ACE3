@@ -88,7 +88,20 @@ Calls an event only on the local machine, useful for inter-module events.
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 3.2.2 Server Event
+#### 3.2.2 Target Event
+
+Calls an event only on the target machine or list of target machines.
+
+`ace_common_fnc_targetEvent`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Event name | String | Required
+1  | Target(s) | Object OR Number OR Array | Required
+2  | Arguments | Any | Required
+**R** | None | None | Return value
+
+#### 3.2.3 Server Event
 
 Calls an event only on the server machine (dedicated or self-hosted).
 
@@ -100,7 +113,7 @@ Calls an event only on the server machine (dedicated or self-hosted).
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 3.2.3 Global Event
+#### 3.2.4 Global Event
 
 Calls an event on all machines - the local machine, and the server machine.
 
@@ -155,7 +168,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ### 3.4 Example
 
-```c++
+```js
 // Event handler added on a target machine
 ["tapShoulder", ace_example_onTapShoulder] call ace_common_fnc_addEventHandler;
 

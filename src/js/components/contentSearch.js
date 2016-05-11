@@ -126,7 +126,7 @@ window.app.contentSearch = (function ($) {
     }
 
     function getSearchResults() {
-        return $.getJSON(searchJsonUrl)
+        return $.getJSON(searchJsonUrl);
     }
 
     function searchTermValid(searchTerm) {
@@ -211,7 +211,7 @@ window.app.contentSearch = (function ($) {
     function startLiveSearch() {
         var cachedSearchResults = app.storage.getItem(storageKeyName);
         if (!cachedSearchResults) {
-            getSearchResults().then(function (response) {
+            getSearchResults().done(function (response) {
                 app.storage.setItem(storageKeyName, response);
                 handleLiveSearchResult(response);
             });
@@ -286,7 +286,7 @@ window.app.contentSearch = (function ($) {
     function startContentSearch() {
         var cachedSearchResults = app.storage.getItem(storageKeyName);
         if (!cachedSearchResults) {
-            getSearchResults().then(function (response) {
+            getSearchResults().done(function (response) {
                 app.storage.setItem(storageKeyName, response);
                 handleContentSearchResult(response);
             });

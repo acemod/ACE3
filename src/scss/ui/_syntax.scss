@@ -6,6 +6,19 @@ code {
 }
 
 .highlight {
+    border: solid 1px #ddd;
+    background: #fff;
+    padding: 1em;
+    line-height: 23px;
+    margin-bottom: 30px;
+    white-space: pre;
+    overflow-x: auto;
+    @media #{$small-only} {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+    word-break: inherit;
+    word-wrap: inherit;
 
     background: #ffffff;
 
@@ -15,21 +28,6 @@ code {
         padding: 0;
     }
 
-    pre {
-        border: solid 1px #ddd;
-        background: #fff;
-        padding: 1em;
-        line-height: 23px;
-        margin-bottom: 30px;
-        white-space: pre;
-        overflow-x: auto;
-        @media #{$small-only} {
-            overflow-x: scroll;
-            -webkit-overflow-scrolling: touch;
-        }
-        word-break: inherit;
-        word-wrap: inherit;
-    }
 
     td {
         padding: 8px 15px;

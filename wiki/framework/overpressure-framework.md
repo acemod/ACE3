@@ -11,7 +11,7 @@ parent: wiki
 
 ### 1.1 Launchers
 
-```c++
+```cpp
 class CfgWeapons {
     class MyLauncher {
         ace_overpressure_angle = 60;  // Cone in which the damage is applied (in degrees from the back end of the launcher)
@@ -23,7 +23,7 @@ class CfgWeapons {
 
 ### 1.2 Cannons
 
-```c++
+```cpp
 class CfgWeapons {
     class MyBananaCannon {
         ace_overpressure_angle = 90;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)

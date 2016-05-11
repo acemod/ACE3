@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Adding scope adjustment support
 
-```c++
+```cpp
 class CfgWeapons {
     class InventoryOpticsItem_Base_F; // ItemInfo base class
 

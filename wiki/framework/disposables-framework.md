@@ -16,7 +16,7 @@ parent: wiki
 
 ### 1.1 CfgWeapons
 
-```c++
+```cpp
 class CfgWeapons {
     class Launcher_Base_F;
     class launch_banana: Launcher_Base_F {

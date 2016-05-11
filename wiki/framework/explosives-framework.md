@@ -16,7 +16,7 @@ parent: wiki
 
 ### 1.1 Setting the magazine
 
-```c++
+```cpp
 class CfgMagazines {
     class CA_Magazine;
     class banana_satchel_remote_mag: CA_Magazine {
@@ -40,7 +40,7 @@ class CfgMagazines {
 
 ### 1.2 Setting the ammo
 
-```c++
+```cpp
 class CfgAmmo {
     class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
@@ -48,19 +48,20 @@ class CfgAmmo {
         soundDeactivation[] = {"", 0, 0, 0};  // No sound on deactivation
         triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
+        ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12}; // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
     };
 };
 ```
 
 ### 1.3 Adding the place item
 
-```c++
+```cpp
 class CfgVehicles {
     class ACE_Explosives_Place;
     class banana_satchel_place: ACE_Explosives_Place {
         displayName = "Banana satchel";  // Name of the item
         model = "";  // Path to your model
-        ACE_offset[] = {0, 0, 0};  // Offset of the interaction point from the model in meters on the X,Y,Z axis.
+        ACE_offset[] = {0, 0, 0};  // Offset of the interaction point from the model in meters on the X,Y,Z axis. Try setting this to the place where it makes most sense (e.g. to buttons/switches/pins)
     };
 };
 ```
@@ -72,7 +73,7 @@ class CfgVehicles {
 
 _Pretty much the same as Explosives except that we inherit from_ `ATMine_Range_Mag` _instead of_ `CA_Magazine`.
 
-```c++
+```cpp
 class CfgMagazines {
     class ATMine_Range_Mag;
     class BananaMine_Range_Mag: ATMine_Range_Mag {
@@ -96,7 +97,7 @@ Directional mines inherit from `DirectionalBombBase`.
 
 ## 3. Adding your own detonators
 
-```c++
+```cpp
 class CfgWeapons {
     class ACE_ItemCore;  // ACE3 base item class
     class ACE_Clacker;  // Clacker base class

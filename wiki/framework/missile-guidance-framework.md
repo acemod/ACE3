@@ -48,7 +48,7 @@ In the simplest sense, the entire system provides the flight trajectory of the m
 
 ### 4.1 Enabling guidance on Ammo Types
 
-```c++
+```cpp
 class CfgAmmo {
     class MyMissile {
         manualControl = 0;  // Turn off vanilla crosshair guidance
@@ -82,7 +82,7 @@ class CfgAmmo {
 
 ### 4.2 Custom Seeker Types
 
-```c++
+```cpp
 class ace_missileguidance_attackProfiles {
     class MyAttackProfile {
         name = "";  // Name
@@ -96,7 +96,7 @@ class ace_missileguidance_attackProfiles {
 
 ### 4.3 Custom Attack Profiles
 
-```c++
+```cpp
 class ace_missileguidance_seekerTypes {
     class MySeekerType {
         name = "";  // Name

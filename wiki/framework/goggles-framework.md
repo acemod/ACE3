@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgGlasses {
     class MyGoggles {
         ace_color[] = {0, 0, -1};  // Post-proccess color

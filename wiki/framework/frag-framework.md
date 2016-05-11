@@ -18,7 +18,7 @@ The system for the end-developer is easy to use, and only requires minimal resea
 
 ## 2. Config Values
 
-```c++
+```cpp
 class CfgAmmo {
     class MyGrenade {
         ace_frag_enabled = 1;  // Enable fragmentation (0-disabled, 1-enabled)

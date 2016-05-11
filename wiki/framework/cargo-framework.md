@@ -11,7 +11,7 @@ parent: wiki
 
 ### 1.1 Preparing a vehicle for ACE3 cargo
 
-```c++
+```cpp
 class CfgVehicles {
     class yourVehicleBaseClass {
         ace_cargo_space = 4;  // Cargo space your vehicle has
@@ -22,7 +22,7 @@ class CfgVehicles {
 
 ### 1.2 Making an object loadable
 
-```c++
+```cpp
 class staticBananaLauncher {
     class yourVehicleBaseClass {
         ace_cargo_size = 4;  // Cargo space the object takes
@@ -60,6 +60,7 @@ Event Name | Description | Passed Parameter(s) | Locality
 ### 2.1 Disabling cargo for a mission object
 
 To disable cargo for a mission object use:
-```c++
+
+```cpp
 this setVariable ["ace_cargo_size", -1];
 ```

@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Config Values
 
-```c++
+```cpp
 class CfgWeapons {
     class MyLauncher {
         ace_javelin_enabled = 1;  // Enable Javelin-style locking (0-disabled, 1-enabled)

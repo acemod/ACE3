@@ -8,10 +8,11 @@ order: 2
 ---
 
 ## 1. CfgVehicles
+
 Entries found in the `CfgVehicles.hpp` files
 
 
-```c++
+```cpp
 ace_nightvision_grain
 ace_nightvision_blur
 ace_recoil_enablecamshake
@@ -29,10 +30,11 @@ ace_reserveParachute
 
 
 ## 2. CfgWeapons
+
 Entries found in the `CfgWeapons.hpp` files
 
 
-```c++
+```cpp
 ace_recoil_shakemultiplier
 ace_overpressure_angle
 ace_overpressure_range
@@ -71,9 +73,10 @@ ace_hearing_lowerVolume
 
 
 ## 3. CfgAmmo
+
 Entries found in the `CfgAmmo.hpp` files
 
-```c++
+```cpp
 ace_recoil_shakemultiplier
 ace_frag_skip
 ace_frag_force
@@ -100,9 +103,10 @@ ace_barrellengths
 
 
 ## 4. CfgGlasses
+
 Entries found in the `CfgGlasses.hpp` file
 
-```c++
+```cpp
 ace_color
 ace_tintamount
 ace_overlay
@@ -115,9 +119,10 @@ ace_dustpath
 
 
 ## 5. CfgMagazines
+
 Entries found in the `CfgMagazines.hpp` files
 
-```c++
+```cpp
 ace_isbelt
 ace_attachable
 ace_placeable
