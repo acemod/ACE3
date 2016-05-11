@@ -27,8 +27,11 @@ switch (toLower _mode) do {
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
 
+        // Initalize the unit tree
+        ["onUnitsUpdate",[(_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE]] call FUNC(handleInterface);
+
         // Keep unit list and tree up to date
-        [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
+        [FUNC(handleUnits), 9, _display] call CBA_fnc_addPerFrameHandler;
 
         // Handle 3D unit icons
         GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
