@@ -67,7 +67,7 @@ def main():
 
         with open(FILE_EXTRACTED, "a") as file:
             file.writelines([
-                "{% if include.component == \"" + folder+ "\" %}\n",
+                "{% if include.component == \"" + folder + "\" %}\n",
                 "{}\n".format(data),
                 "{% endif %}\n",
             ])
