@@ -29,4 +29,4 @@ This module applies configuration changes only and does not decrease game perfor
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="ballistics" %}

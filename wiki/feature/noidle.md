@@ -15,4 +15,4 @@ This removes idle animations.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="noidle" %}

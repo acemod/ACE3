@@ -20,4 +20,5 @@ ACE3 Wind Deflection can be disabled or modified via a module in the 2D editor.
 
 
 ## 3. Dependencies
-`ace_weather`
+
+{% include dependencies_list.md component="winddeflection" %}

@@ -23,4 +23,4 @@ Makes the inventory dialog bigger and increases the number of items that can be 
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="inventory" %}

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Switch Units
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -27,4 +27,4 @@ In its current form you're able to switch to infantry (vehicles, etc. are planne
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="switchunits" %}

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Interact Menu
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -13,6 +13,6 @@ This handles the interaction layer of ACE3.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="interact_menu" %}
 
 *Note: The Interact Menu module is required by most of the other modules. Do NOT remove it!*

@@ -41,4 +41,4 @@ Shortcut | Action
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="huntir" %}

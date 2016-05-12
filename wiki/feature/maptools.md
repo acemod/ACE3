@@ -36,4 +36,4 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="maptools" %}

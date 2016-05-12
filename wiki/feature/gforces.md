@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: G-Forces
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -13,4 +13,4 @@ Adds G-force induced tunnel vision and unconsciousness.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="gforces" %}

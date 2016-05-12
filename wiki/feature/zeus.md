@@ -14,4 +14,5 @@ ACE3 Zeus is enabled by default. This feature provides control over vanilla aspe
 ACE3 Zeus can be disabled or modified via a module in the 2D editor.
 
 ## 3. Dependencies
-`ace_common`, `ace_modules`
+
+{% include dependencies_list.md component="zeus" %}

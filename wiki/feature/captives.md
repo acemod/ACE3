@@ -45,4 +45,4 @@ Allows players to surrender. It renders the unit unable to move and with the han
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="captives" %}

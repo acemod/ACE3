@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Laser
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -13,4 +13,4 @@ Contains various functions necessary for the realistic portrayal of laser mechan
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="laser" %}

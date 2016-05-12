@@ -20,4 +20,4 @@ Also if no remotes are defined the "screen" object itself becomes the remote.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="slideshow" %}

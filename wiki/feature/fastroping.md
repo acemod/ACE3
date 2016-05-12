@@ -22,4 +22,4 @@ Not all helicopters are equipped with a FRIES by default and need to be synchron
 
 ## 4. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="fastroping" %}

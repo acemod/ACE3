@@ -13,4 +13,4 @@ The NLAW is shoulder fired and disposable, firing just once before being needed 
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="disposable" %}

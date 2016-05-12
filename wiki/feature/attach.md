@@ -32,4 +32,4 @@ Adds an attachable IR strobe, which is only visible using night vision devices a
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="attach" %}

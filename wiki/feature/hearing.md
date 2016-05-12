@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Hearing
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -13,7 +13,7 @@ parent: wiki
 Introduces hearing damage caused by nearby explosions and large-caliber weapons.
 
 ### 1.2 Earplugs
-Adds earplugs to mitigate that effect. Soldiers with high caliber weapons or 
+Adds earplugs to mitigate that effect. Soldiers with high caliber weapons or
 missile launchers will be equipped with those, but remember to put them in.
 
 ### 1.3 Helmets
@@ -31,4 +31,4 @@ Some types of helmets can mitigate hearing damage also (ie. crewman helmet, pilo
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="hearing" %}
