@@ -61,10 +61,16 @@ def main():
                         data += get_dependencies(line)
                         continue
 
+        data = "`, `".join(data)
+        data = "`{}`".format(data)
         print("{}: {}".format(folder,data))
 
         with open(FILE_EXTRACTED, "a") as file:
-            file.write("['{}', {}]\n".format(folder,data))
+            file.writelines([
+                "{% if include.component == \"" + folder+ "\" %}\n",
+                "{}\n".format(data),
+                "{% endif %}\n",
+            ])
 
     print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
 
