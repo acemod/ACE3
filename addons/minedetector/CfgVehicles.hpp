@@ -12,7 +12,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(activate) {
-                    displayName = "Activate Detector";
+                    displayName = CSTRING(ActivateDetector);
                     condition = QUOTE(call FUNC(canActivateDetector));
                     statement = QUOTE(call FUNC(activateDetector));
                     showDisabled = 0;
@@ -21,7 +21,7 @@ class CfgVehicles {
                     exceptions[] = {};
                 };
                 class GVAR(deactivate) {
-                    displayName = "Deactivate Detector";
+                    displayName = CSTRING(DeactivateDetector);
                     condition = QUOTE(call FUNC(canDeactivateDetector));
                     statement = QUOTE(call FUNC(deactivateDetector));
                     showDisabled = 0;

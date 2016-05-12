@@ -25,20 +25,28 @@ _detectorConfig params ["_type", "_radius", "_detectableTypes", "_sounds"];
 private _worldPosition = _unit modelToWorld (_unit selectionPosition "granat");
 private _direction = _unit weaponDirection "Put";
 
-_worldPosition params ["_posX", "_posY", "_posZ"];
-_direction params ["_dirX", "_dirY", "_dirZ"];
+private _detectorPointAGL = _worldPosition vectorAdd (_direction vectorMultiply __DR);
 
-private _dPnt = [_posX + __DR * _dirX, _posY + __DR * _dirY, _posZ + __DR * _dirZ];
+private _mines = nearestObjects [_detectorPointAGL, _detectableTypes, _radius];
 
-private _mines = nearestObjects [_dPnt, _detectableTypes, _radius];
-if (_mines isEqualTo []) exitwith {
-    [false, objNull, -1];
-};
+#ifdef DEBUG_MODE_FULL
+GVAR(debugDetector) = [_detectorPointAGL, _mines];
+#endif
 
-// guaranteed to have at least one element. Lets get the first
-private _mine = _mines select 0;
-private _distance = _dPnt distance _mine;
+private _isDetectable = false;
+private _mine = objNull;
+private _distance = -1;
 
-private _isDetectable = getNumber (configFile >> "CfgVehicles" >> typeOf _mine >> QGVAR(detectable));
+{
+    //Try all mines in range and use first detectable one:
+    if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> QGVAR(detectable))) == 1) exitWith {
+        _isDetectable = true;
+        _mine = _x;
+        _distance = _detectorPointAGL distance _x;
+    };
+    nil
+} count _mines;
 
-[(_isDetectable > 0), _mine, _distance];
+TRACE_3("return",_isDetectable, _mine, _distance);
+
+[_isDetectable, _mine, _distance];

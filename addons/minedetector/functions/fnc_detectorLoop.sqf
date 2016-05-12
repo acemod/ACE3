@@ -41,7 +41,7 @@ if (ACE_player == _unit && {currentWeapon _unit == _type}) then {
         case (_distance >= 0.75): {0.7};
         default {0.5};
     };
-    if (_hasDetected && (ACE_time - _lastPlayed > _distanceTiming)) then {
+    if (_hasDetected && {(ACE_time - _lastPlayed > _distanceTiming)}) then {
         _args set [3, ACE_time];
         _detectorConfig params ["_type", "_radius", "_detectableTypes", "_sounds"];
         private _sound = switch (true) do {
