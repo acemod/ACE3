@@ -83,7 +83,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             ];
             _unit setVariable [QGVAR(ReleaseActionID), _actionID];
         },
-        {REFUEL_UNHOLSTER_WEAPON},
+        "",
         localize LSTRING(TakeNozzleAction),
         {true},
         ["isnotinside"]
@@ -124,7 +124,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             ];
             _unit setVariable [QGVAR(ReleaseActionID), _actionID];
         },
-        {REFUEL_UNHOLSTER_WEAPON},
+        "",
         localize LSTRING(TakeNozzleAction),
         {true},
         ["isnotinside"]
