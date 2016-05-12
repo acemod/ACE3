@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(replaceATWeapon);
-PREP(takeLoadedATWeapon);
-PREP(updateInventoryDisplay);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

@@ -1,11 +1,13 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Fence;
-    class thingX;
-    class NonStrategic;
-
     class ACE_ConcertinaWireNoGeo: Fence {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         displayName = "";
         model = PATHTOF(data\ACE_ConcertinaWireNoGeo.p3d);
@@ -84,7 +86,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = "$STR_ACE_UNROLLWIRE";
                     distance = 5;
-                    condition = "true";
+                    condition = "alive _target";
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(dismount));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -94,8 +96,13 @@ class CfgVehicles {
             };
         };
     };
-    class ACE_ConcertinaWireCoil: thingX {
-        XEH_ENABLED;
+
+    class ThingX;
+    class ACE_ConcertinaWireCoil: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRECOIL;
         model = PATHTOF(data\ACE_ConcertinaWireCoil.p3d);
@@ -112,7 +119,7 @@ class CfgVehicles {
         accuracy = 1000;
         autocenter = 0;
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
+        EGVAR(dragging,dragPosition)[] = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
@@ -137,7 +144,10 @@ class CfgVehicles {
         };
     };
 
+    class NonStrategic;
     class Land_Razorwire_F: NonStrategic {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
 };

@@ -17,24 +17,24 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_execPersistentFnc","3.7.0","ace_common_fnc_globalEvent");
+
 GVAR(remoteFnc) = _this;
 
 params ["_arguments", "_function", "_unit", "_name"];
+TRACE_4("params", _arguments, _function, _unit, _name);
 
 _function = call compile _function;
-
-//["Remote", [_arguments, _this select 1, _name], {format ["%1 call %2 id: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
 
 // execute function on every currently connected machine
 [[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);
 
 // save persistent function for JIP
-private ["_persistentFunctions", "_index"];
-
-_persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
+private _persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
 
 // find index to overwrite function with the same name, add to end otherwise
-_index = count _persistentFunctions;
+private _index = count _persistentFunctions;
+
 {
     if (_x select 2 == _name) exitWith {
         _index = _forEachIndex;

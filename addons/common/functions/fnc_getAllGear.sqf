@@ -25,6 +25,7 @@
  * 16: Handgun Magazines <ARRAY>
  * 17: Assigned Items (map, compass, watch, etc.) <ARRAY>
  * 18: Binoculars <STRING>
+ * 19: Binocular Magazine (E.g. Laserbatteries) <STRING>
  *
  * Public: Yes
  *
@@ -44,6 +45,7 @@ if (isNull _unit) exitWith {[
     "", ["","","",""], [],
     "", ["","","",""], [],
     [],
+    "",
     ""
 ]};
 
@@ -57,5 +59,6 @@ if (isNull _unit) exitWith {[
     secondaryWeapon _unit, secondaryWeaponItems _unit, secondaryWeaponMagazine _unit,
     handgunWeapon _unit, handgunItems _unit, handgunMagazine _unit,
     assignedItems _unit,
-    binocular _unit
+    binocular _unit,
+    [_unit] call FUNC(binocularMagazine)
 ]

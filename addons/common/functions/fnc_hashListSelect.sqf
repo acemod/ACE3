@@ -12,18 +12,16 @@
  */
 #include "script_component.hpp"
 
-private ["_hash", "_keys", "_hashes", "_values"];
-
 params ["_hashList", "_index"];
 
 ERRORDATA(2);
-_hash = nil;
+private _hash = nil;
 try {
     if(VALIDHASH(_hashList)) then {
-        _keys = _hashList select 0;
-        _hashes = _hashList select 1;
+        _hashList params ["_keys", "_hashes"];
+
         if(_index < (count _hashes)) then {
-            _values = _hashes select _index;
+            private _values = _hashes select _index;
 
             _hash = [_keys, _values, 1];
         } else {

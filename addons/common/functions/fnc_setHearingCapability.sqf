@@ -18,11 +18,10 @@
 
 params ["_id", "_settings", ["_add", true]];
 
-private ["_map", "_exists", "_lowestVolume"];
+private _map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
 
-_map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
+private _exists = false;
 
-_exists = false;
 {
     if (_id == _x select 0) exitWith {
         _exists = true;
@@ -42,7 +41,8 @@ if (!_exists && _add) then {
 missionNamespace setVariable [QGVAR(setHearingCapabilityMap), _map];
 
 // find lowest volume
-_lowestVolume = 1;
+private _lowestVolume = 1;
+
 {
     _lowestVolume = (_x select 1) min _lowestVolume;
     false
@@ -54,5 +54,5 @@ _lowestVolume = 1;
 0 fadeMusic _lowestVolume;
 
 // Set Radio mod variables.
-player setVariable ["tf_globalVolume", _lowestVolume];
+ACE_player setVariable ["tf_globalVolume", _lowestVolume];
 if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };

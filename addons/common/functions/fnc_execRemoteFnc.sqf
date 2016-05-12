@@ -20,15 +20,16 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_execRemoteFnc","3.7.0","ace_common_fnc_globalEvent");
+
 GVAR(remoteFnc) = _this;
 
 params ["_arguments", "_function", ["_unit", 2]];
+TRACE_3("params", _arguments, _function, _unit);
 
 _function = call compile _function;
 
-//["Remote", [_arguments, _this select 1, _unit], {format ["%1 call %2 to: %3", _this select 0, _this select 1, _this select 2]}, false] call FUNC(log);
-
-if (typeName _unit == "SCALAR") exitWith {
+if (_unit isEqualType 0) exitWith {
     switch (_unit) do {
         case 0 : {
             _arguments call _function;

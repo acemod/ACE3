@@ -6,7 +6,7 @@ class CfgAmmo {
         smokeColor[] = {0, 0, 0, 0};
         timeToLive = 6;
     };
-    
+
     class ShellBase;
     class ACE_HuntIR_Propell: ShellBase {
         supersonicCrackNear[] = {"",0.316228,1,50};
@@ -33,13 +33,13 @@ class CfgAmmo {
         soundFakeFall2[] = {"",3.16228,1,1000};
         soundFakeFall3[] = {"",3.16228,1,1000};
         soundFakeFall[] = {};
-		hit = 0;
-		indirectHit = 0;
-		indirectHitRange = 0;
-		explosive = 1;
-		model = "\A3\weapons_f\empty";
-		airFriction = 0;
-		timeToLive = 1;
-		explosionTime = 0.001;
+        hit = 0;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        explosive = 1;
+        model = "\A3\weapons_f\empty";
+        airFriction = 0;
+        timeToLive = 1;
+        explosionTime = 0.001;
     };
 };

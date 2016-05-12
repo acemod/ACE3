@@ -1,6 +1,6 @@
 /*
  * Author: esteldunedain
- * Executes a code once with a given game ACE_time delay, using a PFH
+ * Executes a code once with a given game time delay, using a PFH
  *
  * Arguments:
  * 0: Code to execute <CODE>
@@ -13,7 +13,7 @@
  * Example:
  * [{(_this select 0) setVelocity [0,0,200];}, [player], 10] call ace_common_fnc_waitAndExecute
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

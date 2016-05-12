@@ -1,35 +1,39 @@
 /*
- * Author: Garth 'L-H' de Wet, Ruthberg
+ * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Cancels sandbag deployment
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
+ * 1: Key <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_sandbag_fnc_deployCancel
+ * [ACE_player] call ace_sandbag_fnc_deployCancel
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-if (isNull GVAR(placer)) exitWith {};
+params ["_unit", "_key"];
 
-[GVAR(deployPFH)] call cba_fnc_removePerFrameHandler;
+if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
-if (!isNull (GVAR(sandBag))) then {
-    deleteVehicle GVAR(sandBag);
-};
+// enable running again
+[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
 
-[GVAR(placer), "ACE_Sandbag", false] call EFUNC(Common,setForceWalkStatus);
+// delete placement dummy
+deleteVehicle GVAR(sandBag);
 
+// remove deployment pfh
+[GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
+GVAR(deployPFH) = -1;
+
+// remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
-[GVAR(placer), "DefaultAction", GVAR(placer) getVariable [QGVAR(Deploy),  -1]] call EFUNC(Common,removeActionEventHandler);
-[GVAR(placer), "zoomtemp",      GVAR(placer) getVariable [QGVAR(Cancel), -1]] call EFUNC(Common,removeActionEventHandler);
 
-GVAR(placer) addItem "ACE_Sandbag_empty";
+[_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
+[_unit, "zoomtemp",      _unit getVariable [QGVAR(Cancel), -1]] call EFUNC(common,removeActionEventHandler);
 
-GVAR(sandBag) = objNull;
-GVAR(placer) = objNull;
+_unit setVariable [QGVAR(isDeploying), false, true];

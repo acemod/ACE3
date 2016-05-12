@@ -9,7 +9,7 @@
  * 2: Magazine is a belt <BOOL>
  *
  * Return Value:
- * Array in format [ACE_time, isBullet, array of ammo counts] <ARRAY>
+ * Array in format [time, isBullet, array of ammo counts] <ARRAY>
  *
  * Example:
  * [10, [1,2,3,8], false] call ace_magazinerepack_fnc_simulateRepackEvents =

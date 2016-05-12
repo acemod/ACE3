@@ -16,8 +16,7 @@ from pygithub3 import Github
 
 
 TRANSLATIONISSUE = 367
-TRANSLATIONBODY = """**How to translate ACE3:**
-https://github.com/acemod/ACE3/blob/master/documentation/development/how-to-translate-ace3.md
+TRANSLATIONBODY = """**[ACE3 Translation Guide](http://ace3mod.com/wiki/development/how-to-translate-ace3.html)**
 
 {}
 """
@@ -25,9 +24,6 @@ https://github.com/acemod/ACE3/blob/master/documentation/development/how-to-tran
 REPOUSER = "acemod"
 REPONAME = "ACE3"
 REPOPATH = "{}/{}".format(REPOUSER,REPONAME)
-
-USERNAME = "ACE3 Travis"
-USEREMAIL = "travis@ace3mod.com"
 
 
 def update_translations(token):

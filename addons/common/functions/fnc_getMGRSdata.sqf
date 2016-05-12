@@ -18,42 +18,85 @@
 
 params [["_map", worldName]];
 
-private ["_long", "_lat", "_altitude", "_UTM", "_easting", "_northing", "_zone", "_band", "_GZD"];
+private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
+private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
+private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
-_long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
-_lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
-_altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
-
-if (_map in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["Altis", "Stratis"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["Takistan", "Zargabad", "Mountains_ACR"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { _lat = 35; _altitude = 100; };
+_map = toLower _map;
+if (_map in ["abbottabad", "abbottabad1"]) then { _lat = 34; _altitude = 1256; };
+if (_map in ["abramia"]) then { _lat = 60; _altitude = 0; };
+if (_map in ["af_kandahar_province"]) then { _lat = 42; _altitude = 0; };
+if (_map in ["altis"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["angel"]) then { _lat = 38; _altitude = 0; };
+if (_map in ["anim_helvantis_v2"]) then { _lat = 50; _altitude = 0; };
+if (_map in ["australia"]) then { _lat = -25; _altitude = 0; };
+if (_map in ["bootcamp_acr"]) then { _lat = 50; _altitude = 0; };
+if (_map in ["bornholm"]) then { _lat = 55; _altitude = 0; };
+if (_map in ["bozcaada"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["caribou"]) then { _lat = 68; _altitude = 0; };
+if (_map in ["chernarus", "chernarus_summer", "chernarus_winter"]) then { _lat = 50; _altitude = 0; };
+if (_map in ["clafghan"]) then { _lat = 34; _altitude = 640; };
+if (_map in ["dakrong"]) then { _lat = 17; _altitude = 0; };
+if (_map in ["desert_e"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["esseker"]) then { _lat = 43; _altitude = 2000; };
 if (_map in ["fallujah"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["fata", "Abbottabad"]) then { _lat = 30; _altitude = 1000; };
-if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
-if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
-if (_map in ["Bornholm"]) then { _lat = 55; _altitude = 0; };
-if (_map in ["Imrali"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["Caribou"]) then { _lat = 68; _altitude = 0; };
-if (_map in ["Namalsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["MCN_Aliabad"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["Clafghan"]) then { _lat = 34; _altitude = 640; };
-if (_map in ["Sangin", "hellskitchen"]) then { _lat = 32; _altitude = 0; };
-if (_map in ["Sara"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["fata"]) then { _lat = 33; _altitude = 1347; };
+if (_map in ["gorgona"]) then { _lat = 43; _altitude = 0; };
+if (_map in ["hellskitchen", "hellskitchens"]) then { _lat = 32; _altitude = 0; };
+if (_map in ["hindukush"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["imrali", "imralispring"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["intro"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["isladuala3"]) then { _lat = -19; _altitude = 0; };
+if (_map in ["jacobi"]) then { _lat = -19; _altitude = 0; };
+if (_map in ["kholm"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["kunduz"]) then { _lat = 37; _altitude = 0; };
+if (_map in ["lingor", "lingor3"]) then { _lat = -4; _altitude = 0; };
+if (_map in ["lost", "lostw"]) then { _lat = 60; _altitude = 0; };
+if (_map in ["mcn_aliabad"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["malvinas"]) then { _lat = -52; _altitude = 0; };
+if (_map in ["namalsk"]) then { _lat = 65; _altitude = 0; };
+if (_map in ["mef_alaska"]) then { _lat = 60; _altitude = 5; };
+if (_map in ["mountains_acr"]) then { _lat = 35; _altitude = 2000; };
+if (_map in ["napf", "napfwinter"]) then { _lat = 47; _altitude = 0; };
+if (_map in ["panthera3"]) then { _lat = 46; _altitude = 0; };
+if (_map in ["pja301"]) then { _lat = 42; _altitude = 0; };
+if (_map in ["pja305"]) then { _lat = 0; _altitude = 0; };
+if (_map in ["pja306"]) then { _lat = 35; _altitude = 300; };
+if (_map in ["pja307"]) then { _lat = 17; _altitude = 0; };
+if (_map in ["pja308"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["pja310"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["porquerolles"]) then { _lat = 43; _altitude = 0; };
+if (_map in ["porto"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["provingGrounds_pmc"]) then { _lat = 35; _altitude = 100; };
 if (_map in ["reshmaan"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["Thirsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["lingor"]) then { _lat = -4; _altitude = 0; };
-if (_map in ["Panthera3"]) then { _lat = 46; _altitude = 0; };
-if (_map in ["Kunduz"]) then { _lat = 37; _altitude = 400; };
+if (_map in ["sara", "sara_dbe1"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["saralite"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["sb3"]) then { _lat = 53; _altitude = 0; };
+if (_map in ["shapur_baf"]) then { _lat = 35; _altitude = 100; };
+if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
+if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
+if (_map in ["stratis"]) then { _lat = 40; _altitude = 0; };
+if (_map in ["sugarlake"]) then { _lat = 29; _altitude = 0; };
+if (_map in ["takistan"]) then { _lat = 35; _altitude = 2000; };
+if (_map in ["thirsk"]) then { _lat = 65; _altitude = 0; };
+if (_map in ["tilos"]) then { _lat = 36; _altitude = 0; };
+if (_map in ["utes"]) then { _lat = 50; _altitude = 0; };
+if (_map in ["vt5"]) then { _lat = 61; _altitude = 100; };
+if (_map in ["wake"]) then { _lat = 19; _altitude = 0; };
+if (_map in ["wintermap"]) then { _lat = 61; _altitude = 0; };
+if (_map in ["wintertown", "wintertowna3"]) then { _lat = 39; _altitude = 0; };
+if (_map in ["woodland_acr"]) then { _lat = 50; _altitude = 0; };
+if (_map in ["xcam_prototype"]) then { _lat = 35; _altitude = 0; };
+if (_map in ["zargabad"]) then { _lat = 35; _altitude = 2000; };
 
-_UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
-_easting = _UTM select 0;
-_northing = _UTM select 1;
-//_zone = _UTM select 2;
+private _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
+private _easting = _UTM select 0;
+private _northing = _UTM select 1;
+//private _zone = _UTM select 2;
 TRACE_4("",_UTM,_easting,_northing,_zone);
 
 /*
-_band = switch (true) do {
+private _band = switch (true) do {
     case (_lat<-72): {"C"};
     case (_lat<-64): {"D"};
     case (_lat<-56): {"E"};
@@ -77,8 +120,8 @@ _band = switch (true) do {
 };
 */
 
-_zone = 1 + (floor ((_long + 180) / 6));
-_band = "Z";
+private _zone = 1 + (floor ((_long + 180) / 6));
+private _band = "Z";
 
 if (_lat <= -80) then {
     _band = "A";
@@ -90,17 +133,17 @@ if (_lat <= -80) then {
 
 if (_map == "VR") then {_zone = 0; _band = "RV";};
 
-_GZD = format ["%1%2",_zone,_band];
+private _GZD = format ["%1%2",_zone,_band];
 TRACE_3("",_zone,_band,_GZD);
 
-private ["_set1", "_set2", "_set3", "_set4", "_set5", "_set6", "_metaE", "_metaN", "_letterE", "_letterN", "_grid100km"];
+private ["_metaE", "_metaN", "_letterE", "_letterN"];
 
-_set1 = [1,7,13,19,25,31,37,43,49,55];
-_set2 = [2,8,14,20,26,32,38,44,50,56];
-_set3 = [3,9,15,21,27,33,39,45,51,57];
-_set4 = [4,10,16,22,28,34,40,46,52,58];
-_set5 = [5,11,17,23,29,35,41,47,53,59];
-_set6 = [6,12,18,24,30,36,42,48,54,60];
+private _set1 = [1,7,13,19,25,31,37,43,49,55];
+private _set2 = [2,8,14,20,26,32,38,44,50,56];
+private _set3 = [3,9,15,21,27,33,39,45,51,57];
+private _set4 = [4,10,16,22,28,34,40,46,52,58];
+private _set5 = [5,11,17,23,29,35,41,47,53,59];
+private _set6 = [6,12,18,24,30,36,42,48,54,60];
 
 switch (true) do {
     case (_zone in _set1): {_metaE = 1; _metaN = 1;};
@@ -154,7 +197,7 @@ switch (true) do {
 };
 TRACE_1("",_letterN);
 
-_grid100km = _letterE + _letterN;
+private _grid100km = _letterE + _letterN;
 TRACE_1("",_grid100km);
 
 if (_map == worldName) then {

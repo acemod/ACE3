@@ -1,13 +1,13 @@
 /*
  * Author: esteldunedain
- * Mount unit actions inside passenger submenu
+ * Mount unit actions inside passenger submenu.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
- * Return value:
+ * Return Value:
  * Children actions <ARRAY>
  *
  * Example:
@@ -17,20 +17,23 @@
  */
 #include "script_component.hpp"
 
-EXPLODE_3_PVT(_this,_vehicle,_player,_parameters);
-EXPLODE_1_PVT(_parameters,_unit);
+params ["", "", "_parameters"];
+_parameters params ["_unit"];
 
-private ["_varName", "_actionTrees", "_actions"];
+private _namespace = EGVAR(interact_menu,ActNamespace);
+private _actionTrees = _namespace getVariable typeOf _unit;
+if (isNil "_actionTrees") then {
+    _actionTrees = [];
+};
 
-_varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
-_actionTrees = missionNamespace getVariable [_varName, []];
+private _actions = [];
 
-_actions = [];
 // Mount unit MainActions menu
-
 {
-	EXPLODE_2_PVT(_x,_actionData,_children);
-	_actions pushBack [_actionData, _children, _unit];
-} forEach ((_actionTrees select 0) select 1);
+    _x params ["_actionData", "_children"];
+
+    _actions pushBack [_actionData, _children, _unit];
+    false
+} count (_actionTrees select 0 select 1);
 
 _actions

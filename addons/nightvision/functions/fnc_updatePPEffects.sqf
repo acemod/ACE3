@@ -17,12 +17,20 @@
 
 if (!hasInterface) exitWith {};
 
+disableSerialization;
+
+params [["_display", displayNull]];
+
+if !(_display isEqualType displayNull) then {
+    _display = displayNull;
+};
+
 private ["_currentVehicle", "_grainSetting", "_blurSetting", "_radBlurSetting", "_config", "_hmd", "_cameraView", "_turret"];
 
 _currentVehicle = vehicle ACE_player;
 
 // If the Zeus display is on or the player has no nightvision
-if ((!isNull findDisplay 312) || ((currentVisionMode ACE_player) != 1)) exitWith {
+if (ctrlIDD _display == 312 || currentVisionMode ACE_player != 1) exitWith {
     GVAR(ppEffectFilmGrain) ppEffectEnable false;
     GVAR(ppEffectBlur) ppEffectEnable false;
     GVAR(ppEffectRadialBlur) ppEffectEnable false;

@@ -12,8 +12,6 @@
 
 ADDON = false;
 
-PREP(handleFired);
-PREP(updateTrajectoryPFH);
-PREP(initModuleSettings);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

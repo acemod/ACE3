@@ -18,23 +18,18 @@
 
 params ["_vehicle"];
 
-private ["_config", "_hitpoints", "_selections"];
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-
-_hitpoints = [];
-_selections = [];
+private _hitpoints = [];
+private _selections = [];
 
 // iterate through all parents
 while {isClass _config} do {
-    private "_class";
-    _class = _config >> "Reflectors";
+    private _class = _config >> "Reflectors";
 
     for "_i" from 0 to (count _class - 1) do {
-        private ["_entry", "_selection"];
-
-        _entry = _class select _i;
-        _selection = getText (_entry >> "hitpoint");
+        private _entry = _class select _i;
+        private _selection = getText (_entry >> "hitpoint");
 
         if (!(_selection in _selections) && {!isNil {_vehicle getHit _selection}}) then {
             _hitpoints pushBack configName _entry;

@@ -16,8 +16,7 @@
 
 params ["_unit", "_varName", "_value"];
 
-private "_respawnVariables";
-_respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
+private _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 
 if !(_varName in _respawnVariables) then {
     _respawnVariables pushBack _varName;

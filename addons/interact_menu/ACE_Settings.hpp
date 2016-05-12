@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(AlwaysUseCursorSelfInteraction) {
+    class GVAR(alwaysUseCursorSelfInteraction) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
@@ -14,14 +14,14 @@ class ACE_Settings {
         displayName = CSTRING(cursorKeepCentered);
         description = CSTRING(cursorKeepCenteredDescription);
     };
-    class GVAR(AlwaysUseCursorInteraction) {
+    class GVAR(alwaysUseCursorInteraction) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(AlwaysUseCursorInteraction);
     };
-    class GVAR(UseListMenu) {
+    class GVAR(useListMenu) {
         value = 0;
         typeName = "BOOL";
         isClientSettable = 1;
@@ -95,5 +95,14 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(addBuildingActions);
         description = CSTRING(addBuildingActionsDescription);
+    };
+    class GVAR(menuAnimationSpeed) {
+        value = 0;
+        typeName = "SCALAR";
+        isClientSettable = 1;
+        category = CSTRING(Category_InteractionMenu);
+        displayName = CSTRING(menuAnimationSpeed);
+        description = CSTRING(menuAnimationSpeed_Description);
+        values[] = {"$str_speed_normal", "2x", "3x"};
     };
 };

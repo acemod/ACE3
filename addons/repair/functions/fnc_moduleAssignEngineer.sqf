@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleAssignEngineer"
+ * [logic] call ace_repair_fnc_moduleAssignEngineer
  *
  * Public: No
  */
@@ -21,11 +21,9 @@ params ["_logic"];
 
 if (!isNull _logic) then {
     private ["_list", "_setting"];
-    _list = _logic getVariable ["EnableList",""];
-    _setting = _logic getVariable ["role",0];
+    _list = _logic getVariable ["EnableList", ""];
+    _setting = _logic getVariable ["role", 0];
 
     [_list, "ACE_IsEngineer", _setting, true] call EFUNC(common,assignObjectsInList);
     [synchronizedObjects _logic, "ACE_IsEngineer", _setting, true] call EFUNC(common,assignObjectsInList);
- };
-
-true
+};

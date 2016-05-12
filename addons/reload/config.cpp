@@ -20,6 +20,4 @@ class CfgPatches {
 
 #include "CfgActions.hpp"
 
-#include "RscInGameUI.hpp"
-
 #include "ACE_Settings.hpp"

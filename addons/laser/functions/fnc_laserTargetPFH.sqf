@@ -10,9 +10,9 @@ _shooter = _args select 1;
 _uuid = _args select 2;
 
 if(isNull _laserTarget || !alive _shooter) exitWith {
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
     REM(GVAR(VanillaLasers), _laserTarget);
-    
+
     // Remove laseron
     [_uuid] call FUNC(laserOff);
 };
@@ -28,4 +28,3 @@ drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (A
 } forEach DRAW_LINES;
 DRAW_LINES = [];
 #endif
-

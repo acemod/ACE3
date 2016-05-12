@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(handleFired);
-PREP(onDrawScope);
-PREP(onDrawScope2D);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

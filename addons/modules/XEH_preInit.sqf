@@ -2,7 +2,7 @@
 
 ADDON = false;
 
-PREP(moduleInit);
+#include "XEH_PREP.hpp"
 
 GVAR(moduleInitCollection) = [];
 

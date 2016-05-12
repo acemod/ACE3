@@ -17,9 +17,9 @@ params ["_unit"];
 if (isNull _unit || {!alive _unit}) exitWith {};
 
 if (_unit isKindOf "CAManBase") then {
-    _name = [name _unit, true] call FUNC(sanitizeString);
+    private _sanitizedName = [name _unit, true] call FUNC(sanitizeString);
+    private _rawName = [name _unit, false] call FUNC(sanitizeString);
 
-    //if (_name != _unit getVariable ["ACE_Name", ""]) then {
-    _unit setVariable ["ACE_Name", _name, true];
-    //};
+    _unit setVariable ["ACE_Name", _sanitizedName, true];
+    _unit setVariable ["ACE_NameRaw", _rawName, true];
 };

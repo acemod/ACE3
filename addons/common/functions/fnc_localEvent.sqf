@@ -15,14 +15,9 @@
 
 params ["_eventName", "_eventArgs"];
 
-GVAR(events) params ["_eventNames", "_eventArray"];
+private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
 
-private "_eventIndex";
-_eventIndex = _eventNames find _eventName;
-
-if (_eventIndex != -1) then {
-    private "_events";
-    _events = _eventArray select _eventIndex;
+if (!isNil "_eventFunctions") then {
 
     #ifdef DEBUG_EVENTS
         ACE_LOGINFO_1("* Local Event: %1",_eventName);
@@ -37,5 +32,5 @@ if (_eventIndex != -1) then {
                 ACE_LOGINFO_1("    ID: %1",_forEachIndex);
             #endif
         };
-    } forEach _events;
+    } forEach _eventFunctions;
 };

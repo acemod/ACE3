@@ -13,12 +13,11 @@
  */
 #include "script_component.hpp"
 
-private ["_parentPath","_actionName", "_i"];
-_parentPath = [];
-for [{_i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
+private _parentPath = [];
+for [{private _i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
     _parentPath pushBack (_this select _i);
 };
-_actionName = if (count _this > 0) then {
+private _actionName = if (count _this > 0) then {
     _this select ((count _this) - 1);
 } else {
     ""

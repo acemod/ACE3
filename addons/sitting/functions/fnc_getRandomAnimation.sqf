@@ -15,10 +15,8 @@
  */
 #include "script_component.hpp"
 
-private "_animations";
-
-// Animations Pool
-_animations = [
+// Select random animation from Animations Pool
+selectRandom [
     QGVAR(HubSittingChairA_idle1),
     QGVAR(HubSittingChairA_idle2),
     QGVAR(HubSittingChairA_idle3),
@@ -43,7 +41,4 @@ _animations = [
     QGVAR(HubSittingChairUC_idle2),
     QGVAR(HubSittingChairUC_idle3),
     QGVAR(HubSittingChairUC_move1)
-];
-
-// Select random animation
-(_animations select (floor (random (count _animations))))
+]
