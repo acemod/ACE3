@@ -50,16 +50,6 @@ if (ACE_player == _unit && {currentWeapon _unit == _type}) then {
             case (_distance >= 0.5): {_sounds select 1};
             default {_sounds select 0};
         };
-
-        if ((_distance >= 1.2)) then {
-            if (_distance >= 2) then {
-                _sounds select 2;
-            } else {
-                _sounds select 1;
-            };
-        } else {
-            _sounds select 0;
-        };
         [_unit, _sound, true] call FUNC(playDetectorSound);
     };
 };
