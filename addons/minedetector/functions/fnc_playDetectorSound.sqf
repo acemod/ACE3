@@ -25,6 +25,11 @@ if (!alive _unit) exitwith {
 };
 
 private _helperObject = _unit getvariable [QGVAR(helperLogic), objNull];
+if (!isNull _helperObject) then {
+    deleteVehicle _helperObject;
+};
+_helperObject = "ACE_LogicDummy" createVehicleLocal (getPos _unit);
+
 if !(isNull _helperObject) then {
     _helperObject attachto [_unit,[0,0,-3],""];
     [_helperObject, _unit] say3D _detectorSound;

@@ -5,7 +5,7 @@ class ACE_detector {
         class ACE_VMM3 {
             radius = 2.5;
             // sounds[] = {"ace_sweep_high", "ace_sweep_low"};
-            sounds[] = {"ace_buzz_2", "ace_buzz_1"};
+            sounds[] = {"ace_detector_1", "ace_detector_2", "ace_detector_3", "ace_detector_4"};
         };
         class ACE_VMH3: ACE_VMM3 {
         };
