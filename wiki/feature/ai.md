@@ -28,4 +28,4 @@ All changes of ACE3 AI are config based to ensure full compatibility with advanc
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="ai" %}
