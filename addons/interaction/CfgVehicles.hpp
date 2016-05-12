@@ -355,6 +355,32 @@ class CfgVehicles {
         };
     };
 
+    class Motorcycle: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 10;
+                condition = "true";
+                class ACE_Passengers {
+                    displayName = CSTRING(Passengers);
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+            };
+        };
+
+        class ACE_SelfActions {
+            class ACE_Passengers {
+                displayName = CSTRING(Passengers);
+                condition = "true";
+                statement = "";
+                insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+            };
+        };
+    };
+
     class Air;
     class Helicopter: Air {
         class ACE_Actions {
