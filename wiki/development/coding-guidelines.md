@@ -58,7 +58,7 @@ class ACE_Settings {
 All text that will be displayed to a user shall be defined in a `stingtable.xml` file for multi-language support.
 
 * There will not be any empty stringtable language values.
-* All stringtables will follow the format as specified by Tabler and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form .
+* All stringtables will follow the format as specified by Tabler and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form.
 
 
 ## 2. Macro Usage
@@ -109,6 +109,8 @@ These macros will call these functions with the appropriate wrappers and enable 
 `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the QUOTE() macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
 
 #### 2.2.1. setVariable, getVariable family macros
+
+These macros are allowed but are not enforced.
 
 | Macro  | Expands to |
 | -------|---------|
@@ -380,18 +382,18 @@ If a function returns error information, then that error information will be tes
 There shall be no unreachable code.
 
 ### 6.3. Function Parameters
-Parameters of functions must be retrieved through the usage of the param or params commands. If the function is part of the public API, parameters must be checked on allowed data types and values through the usage of the param and params commands.
+Parameters of functions must be retrieved through the usage of the `param` or `params` commands. If the function is part of the public API, parameters must be checked on allowed data types and values through the usage of the param and params commands.
 
 Usage of the CBA Macro `PARAM_x` or `BIS_fnc_Param` is deprecated and not allowed within the ACE project unless very specific reasons allow no other alternative.
 
 ### 6.4. Return Values
-Functions and code blocks that specific a return a value must have a meaningfull return value.
+Functions and code blocks that specific a return a value must have a meaningfull return value. If no meaningfull return value, the function should return nil.
 
 ### 6.5. Private Variables
-All private variables shall be declared in a private array.
+All private variables shall make use of the `private` keyword on initalization. When declaring a private variable before initalization, usage of the private array syntax is allowed. All private variables must be either initialized using the private key word, or declared using the private array syntax.
 
 ```js
-private ["_myVariable"];
+private _myVariable = "hello world";
 ```
 
 ### 6.6. Lines of Code
@@ -400,13 +402,47 @@ Any one function shall contain no more than 250 lines of code, excluding the fun
 ### 6.7. Variable declarations
 Declarations should be at the smallest feasible scope.
 
+
+Good:
+```sqf
+if (call FUNC(myCondition) then {
+   private _areAllAboveTen = true; // <- smallest feasable scope
+   
+   {
+      if (_x >= 10) then {
+         _areAllAboveTen = false;
+      };
+   } forEach _anArray;
+   
+   if (_areAllAboveTen) then {
+       hint "all values are above ten!";
+   };
+}
+```
+
+Bad:
+```sqf
+private _areAllAboveTen = true; // <- this is bad, because it can be initalized in the if statement
+if (call FUNC(myCondition) then {
+   {
+      if (_x >= 10) then {
+         _areAllAboveTen = false;
+      };
+   } forEach _anArray;
+   
+   if (_areAllAboveTen) then {
+       hint "all values are above ten!";
+   };
+}
+```
+
 ### 6.8. Variable initialization
 Private variables will not be introduced until they can be initialized with meaningful values.
 
 Good:
 
 ```js
-_myVariable = 0;
+private _myVariable = 0; // good because the value will be used
 {
     _x params ["_value", "_amount"];
     if (_value > 0) then {
@@ -418,7 +454,7 @@ _myVariable = 0;
 Bad:
 
 ```js
-_myvariable = 0;
+private _myvariable = 0; // Bad because it is initalized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
 } else {
@@ -429,7 +465,7 @@ if (_condition) then {
 Good:
 
 ```js
-_myvariable = [1, 2] select _condition;
+private _myvariable = [1, 2] select _condition;
 ```
 
 ### 6.9. Initialization expression in for loops
@@ -439,13 +475,12 @@ The initialization expression in a for loop will perform no actions other than t
 The increment expression in a for loop will perform no action other than to change a single loop parameter to the next value for the loop.
 
 ### 6.11. GetVariable
-When using getvariable, there should either be a default value  given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
+When using getvariable, there should either be a default value given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
 
 Bad:
-
 ```js
 _return = obj getvariable "varName";
-if (!isnil "_return") then {_return = 0 };
+if (isnil "_return") then {_return = 0 };
 ```
 
 Good:
@@ -458,11 +493,36 @@ Good:
 
 ```js
 _return = obj getvariable "varName";
-if (!isnil "_return") exitwith {};
+if (isnil "_return") exitwith {};
 ```
 
 ### 6.12. Global Variables
 Global variables should not be used to pass along information from one function to another. Use arguments instead.
+
+Bad:
+```sqf
+fnc_example = {
+    hint GVAR(myVariable);
+};
+
+----
+
+GVAR(myVariable) = "hello my variable";
+call fnc_example;
+```
+
+Good:
+```sqf
+fnc_example = {
+   params ["_content"];
+   hint _content;
+};
+
+----
+
+["hello my variable"] call fnc_example;
+```
+
 
 ### 6.13. Temporary Objects & Variables
 Unnecessary temporary objects or variables should be avoided.
@@ -498,10 +558,12 @@ This is a large open source project that will get many different maintainers in 
 * Document that change with the reasoning in the code.
 
 ### 7.2. Scheduled vs Unscheduled
-Avoid the usage of scheduled space as much as possible and stick in unscheduled. This is to provide a smooth expereince to the user by guaranteeing code to run when we want it. See Performance considerations, Spawn & ExecVm for more information.
+Avoid the usage of scheduled space as much as possible and stay in unscheduled. This is to provide a smooth experience to the user by guaranteeing code to run when we want it. See Performance considerations, Spawn & ExecVm for more information.
+
+This also helps avoid various bugs as a result of unguaranteed execution sequences when running multiple scripts.
 
 ### 7.3. Event driven
-All ACE3 components shall be implemented in an event driven fashion. This is done so that code only runs when it is required and allows for modularity through low coupling components.
+All ACE3 components shall be implemented in an event driven fashion. This is done to ensure code only runs when it is required and allows for modularity through low coupling components.
 
 Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality.
 
