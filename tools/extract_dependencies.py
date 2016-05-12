@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 # Author: Jonpas
+# Extracts dependencies to a file (defined in globals), which can be used by update_dependencies.py on gh-pages branch
 
 import os
 import sys
@@ -10,9 +11,9 @@ import re
 FILE_EXTRACTED = "temp\\dependencies.temp"
 ##########################
 
-def writeToFile(string):
-    with open(FILE_EXTRACTED, "a") as file:
-        file.write("{}\n".format(string))
+def get_dependencies(line):
+    dependencies = re.findall(r'"(.*?)"', line)
+    return dependencies
 
 
 def main():
@@ -34,19 +35,36 @@ def main():
 
     # Iterate through folders in the addons directory
     for folder in next(os.walk(addonspath))[1]:
-        writeToFile(folder)
-        print("Module: {}".format(folder))
-
-        # Open config.cpp file
+        # Open config.cpp file and extract dependencies
+        data = []
         with open(os.path.join(addonspath, folder, "config.cpp")) as file:
+            match = False
             for line in file:
-                # Extract dependencies
-                match = re.match(r"\s+requiredAddons\[]\ = {(.+)};", line)
-                if match:
-                    data = match.group(1).replace("\"", "`").replace(" ", "")
-                    writeToFile(data)
-                    print("- Dependencies: {}\n".format(data))
+                # One-line
+                if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
+                    data += get_dependencies(line)
+                    break
+                # Multi-line
+                else:
+                    if re.match(r"\s+requiredAddons\[\]\ = {", line):
+                        # First line
+                        match = True
+                        data += get_dependencies(line)
+                        continue
+                    elif match and re.match(r"\s+};", line):
+                        # Final line
+                        data += get_dependencies(line)
+                        match = False
+                        break
+                    elif match:
+                        # All lines between
+                        data += get_dependencies(line)
+                        continue
 
+        print("{}: {}".format(folder,data))
+
+        with open(FILE_EXTRACTED, "a") as file:
+            file.write("['{}', {}]\n".format(folder,data))
 
     print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies_from_file.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
 
