@@ -28,13 +28,11 @@ class Extended_InitPost_EventHandlers {
     class Tank {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
         };
     };
     class Motorcycle {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
         };
     };
     class Helicopter {
