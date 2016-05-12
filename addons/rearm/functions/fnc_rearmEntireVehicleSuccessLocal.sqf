@@ -17,7 +17,11 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_vehicle", objNull, [objNull]],
+    ["_turretPath", [], [[]]]
+];
 
 private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
 if (isNil "_magazines") exitWith {};
@@ -58,4 +62,5 @@ if (isNil "_magazines") exitWith {};
             _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
         };
     };
-} foreach _magazines;
+    false
+} count _magazines;

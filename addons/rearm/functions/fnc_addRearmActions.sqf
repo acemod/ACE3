@@ -15,7 +15,9 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]]];
+params [
+    ["_truck", objNull, [objNull]]
+];
 
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], 20];
 if (count _vehicles < 2) exitWith {false}; // Rearming needs at least 2 vehicles
@@ -63,8 +65,10 @@ private _vehicleActions = [];
                         };
                     };
                 };
-            } forEach _magazines;
-        } forEach REARM_TURRET_PATHS;
+                false
+            } count _magazines;
+            false
+        } count REARM_TURRET_PATHS;
     };
     if (_needToAdd && !(_vehicle getVariable [QGVAR(disabled), false])) then {
         private _icon = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Icon");
@@ -91,6 +95,7 @@ private _vehicleActions = [];
             _vehicleActions pushBack [_action, _actions, _truck];
         };
     };
-} forEach _vehicles;
+    false
+} count _vehicles;
 
 _vehicleActions

@@ -18,7 +18,9 @@
  */
 #include "script_component.hpp"
 
-params [["_args", [objNull, "", objNull], [[]], 3]];
+params [
+    ["_args", [objNull, "", objNull], [[]], 3]
+];
 _args params ["_unit", "_magazineClass", "_truck"];
 
 private _success = true;

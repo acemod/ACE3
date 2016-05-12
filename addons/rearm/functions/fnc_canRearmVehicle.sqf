@@ -16,7 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_vehicle", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
 !(isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||

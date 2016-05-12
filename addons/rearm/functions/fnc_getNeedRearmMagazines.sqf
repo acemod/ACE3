@@ -13,13 +13,16 @@
  * 2: Number of current magazines in turret path <NUMBER>
  *
  * Example:
- * [tank, "mag"] call ace_rearm_fnc_getNeedRearmMagazines
+ * [tank, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_getNeedRearmMagazines
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_magazineClass"];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_magazineClass", "", [""]]
+];
 
 private _return = [false, [], 0];
 {
@@ -38,6 +41,7 @@ private _return = [false, [], 0];
     };
 
     if (_return select 0) exitWith {};
-} forEach REARM_TURRET_PATHS;
+    false
+} count REARM_TURRET_PATHS;
 
 _return

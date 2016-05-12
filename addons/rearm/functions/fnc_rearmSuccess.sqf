@@ -21,7 +21,9 @@
  */
 #include "script_component.hpp"
 
-params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
+params [
+    ["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]
+];
 _args params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
 
 //hint format ["Vehicle: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _vehicle, _turretPath, _numMagazines, _magazineClass, _numRounds];

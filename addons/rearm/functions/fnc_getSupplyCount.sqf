@@ -15,7 +15,9 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]]];
+params [
+    ["_truck", objNull, [objNull]]
+];
 
 private _supply = _truck getVariable QGVAR(currentSupply);
 

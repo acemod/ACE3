@@ -17,7 +17,11 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_numRounds", -1, [0]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_magazineClass", "", [""]],
+    ["_numRounds", -1, [0]]
+];
 
 if (isNull _truck ||
     {_magazineClass isEqualTo ""}) exitWith {false};

@@ -16,7 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_turretPath", [], [[]]]
+];
 
 if (isNull _vehicle) exitWith {[]};
 

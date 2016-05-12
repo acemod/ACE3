@@ -19,7 +19,11 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", ["", objNull], [[]]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_unit", objNull, [objNull]],
+    ["_args", ["", objNull], [[]]]
+];
 _args params ["_magazineClass", "_vehicle"];
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];

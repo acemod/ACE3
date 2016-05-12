@@ -18,7 +18,10 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]]];
+_args params [
+    ["_truck", objNull, [objNull]],
+    ["_vehicle", objNull, [objNull]]
+];
 
 if (isServer) then {
     {
@@ -28,6 +31,7 @@ if (isServer) then {
         } else {
             [QGVAR(rearmEntireVehicleSuccessLocalEH), _turretOwnerID, [_truck, _vehicle, _x]] call EFUNC(common,targetEvent);
         };
+        false
     } count REARM_TURRET_PATHS;
 } else {
     [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call EFUNC(common,serverEvent);

@@ -16,7 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_cfgString", "", [""]], ["_turretPath", [], [[]]]];
+params [
+    ["_cfgString", "", [""]],
+    ["_turretPath", [], [[]]]
+];
 
 if (_cfgString == "") exitWith {[]};
 

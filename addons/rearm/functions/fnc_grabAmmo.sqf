@@ -16,10 +16,12 @@
  */
 #include "script_component.hpp"
 
-params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_dummy", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
 REARM_HOLSTER_WEAPON
-[_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 
 [
     5,
@@ -29,7 +31,7 @@ REARM_HOLSTER_WEAPON
         params ["_args"];
         _args params ["_dummy", "_unit"];
         [_dummy, _unit] call FUNC(pickUpAmmo);
-
+        [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
         _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
         if (_actionID != -1) then {
             _unit removeAction _actionID;

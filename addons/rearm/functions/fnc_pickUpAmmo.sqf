@@ -16,7 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_dummy", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _attachedDummy) exitWith {};

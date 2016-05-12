@@ -20,7 +20,10 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull, ""]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_vehicle", objNull, [objNull, ""]]
+];
 
 if (isNull _truck ||
     {typeName _vehicle == "OBJECT" && {isNull _vehicle}}) exitWith {};
@@ -32,11 +35,13 @@ if (typeName _vehicle == "OBJECT") then {
 if (typeName _vehicle == "STRING") then {
     _string = _vehicle;
 };
-if (_string == "") exitWith {[]};
+if (_string == "") exitWith {};
 {
     private _turretPath = _x;
     private _magazines = [_string, _turretPath] call FUNC(getConfigMagazines);
     {
         [_truck, _x] call FUNC(addMagazineToSupply);
-    } forEach _magazines;
-} forEach REARM_TURRET_PATHS;
+        false
+    } count _magazines;
+    false
+} count REARM_TURRET_PATHS;

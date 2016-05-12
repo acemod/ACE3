@@ -16,7 +16,10 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
 if (GVAR(supply) == 0) exitWith {};
 
@@ -57,7 +60,8 @@ if (GVAR(supply) == 1) then {
                     _numChars = _numChars max (count _line);
                     _text = format ["%1<br/>%2", _text, _line];
                     _supply = _supply + 0.5;
-                } forEach _magazines;
+                    false
+                } count _magazines;
             };
             if (_supply > 1.5) then {
                 ["displayTextStructured", [_unit], [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)]] call EFUNC(common,targetEvent);

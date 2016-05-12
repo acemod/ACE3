@@ -17,5 +17,9 @@
  */
 #include "script_component.hpp"
 
-params [["_vehicle", objNull, [objNull]], ["_disable", true, [true]]];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_disable", true, [true]]
+];
+
 _vehicle setVariable [QGVAR(disabled), _disable, true];

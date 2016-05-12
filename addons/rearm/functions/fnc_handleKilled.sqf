@@ -15,7 +15,9 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]]];
+params [
+    ["_unit", objNull, [objNull]]
+];
 
 if (!local _unit) exitWith {};
 

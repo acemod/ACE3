@@ -17,7 +17,11 @@
  */
 #include "script_component.hpp"
 
-params [["_truck", objNull, [objNull]], "", ["_vehicle", objNull, [objNull]]];
+params [
+    ["_truck", objNull, [objNull]],
+    "",
+    ["_vehicle", objNull, [objNull]]
+];
 
 [
     10,
