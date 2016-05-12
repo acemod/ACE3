@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 
 # Author: Jonpas
-# Extracts dependencies to a file (defined in globals), which can be used by update_dependencies.py on gh-pages branch
+# Extracts dependencies to a file (defined in globals) for use with Jekyll include statement.
+# Place generated file to "_includes/" folder on gh-pages branch and use the following line to add dependencies to a feature page:
+# {% include dependencies_list.md component="<component>" %}
 
 import os
 import sys
 import re
 
 ######## GLOBALS #########
-FILE_EXTRACTED = "temp\\dependencies.temp"
+FILE_EXTRACTED = "temp\\dependencies_list.md"
 ##########################
 
 def get_dependencies(line):
@@ -20,6 +22,7 @@ def main():
     print("""
     ####################################
     # Extract ACE3 Module Dependencies #
+    #       (for Jekyll include)       #
     ####################################
     """)
 
@@ -72,7 +75,7 @@ def main():
                 "{% endif %}\n",
             ])
 
-    print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
+    print("\nCopy 'temp\dependencies_list.md' to '_includes/' folder on 'gh-pages' branch.")
 
 
 if __name__ == "__main__":
