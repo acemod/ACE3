@@ -197,11 +197,8 @@ In order to stop the bleeding, all bleeding injuries on every body part requires
 </ul>
 
 Table legend:
- - **eff**: Bandage efficiency, _higher is better_.
- - **Chance**: Reopening chance when advanced wounds are enabled, _lower is better_.
- - **Min and Max delay**: Times in second before reopening can / will occurs, _higher is better_.
-
- _thanks to daishiknyte for the image_
+ - **Efficiency**: Bandage efficiency, _higher is better_.
+ - **Reopening chance**: Reopening chance when advanced wounds are enabled, _lower is better_.
 
 ##### 2.2.1.10 Tourniquet
 
