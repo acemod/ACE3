@@ -24,6 +24,8 @@ params [
     ["_nozzle", objNull, [objNull]]
 ];
 
+REFUEL_HOLSTER_WEAPON
+
 private _endPosOffset = [0, 0, 0];
 if (isNull _nozzle) then { // func is called on fuel truck
     _endPosOffset = getArray (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(hooks));
@@ -64,7 +66,6 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _target setVariable [QGVAR(ownedNozzle), _newNozzle, true];
 
             [_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
-            REFUEL_HOLSTER_WEAPON
             _unit setVariable [QGVAR(isRefueling), true];
             private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
             if (_actionID != -1) then {
@@ -82,7 +83,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             ];
             _unit setVariable [QGVAR(ReleaseActionID), _actionID];
         },
-        "",
+        {REFUEL_UNHOLSTER_WEAPON},
         localize LSTRING(TakeNozzleAction),
         {true},
         ["isnotinside"]
@@ -106,7 +107,6 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _unit setVariable [QGVAR(nozzle), _nozzle, true];
 
             [_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
-            REFUEL_HOLSTER_WEAPON
             _unit setVariable [QGVAR(isRefueling), true];
             private _actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
             if (_actionID != -1) then {
@@ -124,7 +124,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             ];
             _unit setVariable [QGVAR(ReleaseActionID), _actionID];
         },
-        "",
+        {REFUEL_UNHOLSTER_WEAPON},
         localize LSTRING(TakeNozzleAction),
         {true},
         ["isnotinside"]
