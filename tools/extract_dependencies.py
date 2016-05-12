@@ -66,7 +66,7 @@ def main():
         with open(FILE_EXTRACTED, "a") as file:
             file.write("['{}', {}]\n".format(folder,data))
 
-    print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies_from_file.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
+    print("\nCopy 'temp\dependencies.temp' and run 'update_dependencies.py' script in 'gh-pages' branch to put the extracted information to the wiki.")
 
 
 if __name__ == "__main__":
