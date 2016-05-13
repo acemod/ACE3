@@ -420,7 +420,7 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target <= 2600 && {alive _target} && {vectorMagnitude velocity _target < 3});
+                    condition = QUOTE(_target call FUNC(canPush));
                     statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
