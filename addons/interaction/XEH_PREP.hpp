@@ -32,6 +32,7 @@ PREP(handleScrollWheel);
 PREP(openDoor);
 
 // interaction with boats
+PREP(canPush);
 PREP(push);
 
 PREP(switchLamp);
