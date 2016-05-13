@@ -32,11 +32,9 @@ if (isNil "_adjustment") then {
     _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]; // [Windage, Elevation, Zero]
 };
 
-if (isNil QGVAR(Optics)) then {
-    GVAR(Optics) = ["", "", ""];
-};
+private _optics = _unit getVariable [QGVAR(Optics), ["", "", ""]];
 
-_optic = GVAR(Optics) select _weaponIndex;
+_optic = _optics select _weaponIndex;
 _opticConfig = configFile >> "CfgWeapons" >> _optic;
 _verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
 _horizontalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_HorizontalIncrement");
