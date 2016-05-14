@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit"]
+params ["_unit"];
 
 // If locality changed finish the local loop
 // @todo: reinitiate the loop elsewhere

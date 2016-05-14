@@ -389,18 +389,25 @@ GVAR(OldIsCamera) = false;
 
         // we don't want to trigger this just because your ammo counter decreased.
         _data = + GVAR(OldPlayerInventory);
-        if (!((_data select 0) isEqualTo [])) then { 
-            (_data param [0, []]) set [4, primaryWeaponMagazine ACE_player];
-            (_data param [0, []]) set [5, []];
+
+        private _weaponInfo = _data param [0, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, primaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
         };
-        if (!((_data select 1) isEqualTo [])) then { 
-            (_data param [1, []]) set [4, secondaryWeaponMagazine ACE_player];
-            (_data param [1, []]) set [5, []];
+
+        _weaponInfo = _data param [1, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, secondaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
         };
-        if (!((_data select 2) isEqualTo [])) then { 
-            (_data param [2, []]) set [4, handgunMagazine ACE_player];
-            (_data param [2, []]) set [5, []];
+
+        _weaponInfo = _data param [2, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, handgunMagazine ACE_player];
+            _weaponInfo deleteAt 5;
         };
+
         if !(_data isEqualTo GVAR(OldPlayerInventoryNoAmmo)) then {
             GVAR(OldPlayerInventoryNoAmmo) = _data;
             ["playerInventoryChanged", [ACE_player, GVAR(OldPlayerInventory)]] call FUNC(localEvent);
