@@ -29,7 +29,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerInventoryChanged", FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
 ["playerVisionModeChanged", {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onVisionModeChanged);
