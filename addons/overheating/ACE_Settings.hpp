@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(DisplayTextOnJam) {
+    class GVAR(displayTextOnJam) {
         typeName = "BOOL";
         isClientSettable = 1;
         value = 1;
@@ -37,5 +37,11 @@ class ACE_Settings {
         value = 0.1;
         displayName = CSTRING(unJamFailChance_displayName);
         description = CSTRING(unJamFailChance_description);
+    };
+    class GVAR(enabled) {
+        typeName = "BOOL";
+        value = 1;
+        displayName = CSTRING(enabled_displayName);
+        description = CSTRING(enabled_description);
     };
 };

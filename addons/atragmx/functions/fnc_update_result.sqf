@@ -33,24 +33,24 @@ switch (GVAR(currentScopeUnit)) do {
     case 0: {
         _elevationAbs = _elevationAbs / 3.38;
         _windageAbs = _windageAbs / 3.38;
-        
+
         _wind2 = _wind2 / 3.38;
-        
+
         _elevationRel = _elevationRel / 3.38;
         _windageRel = _windageRel / 3.38;
-        
+
         _elevationCur = _elevationCur / 3.38;
         _windageCur = _windageCur / 3.38;
     };
     case 2: {
         _elevationAbs = _elevationAbs * 1.047;
         _windageAbs = _windageAbs * 1.047;
-        
+
         _wind2 = _wind2 / 1.047;
-        
+
         _elevationRel = _elevationRel * 1.047;
         _windageRel = _windageRel * 1.047;
-        
+
         _elevationCur = _elevationCur * 1.047;
         _windageCur = _windageCur * 1.047;
     };
@@ -62,15 +62,15 @@ switch (GVAR(currentScopeUnit)) do {
         };
         _clickNumber = GVAR(workingMemory) select 8;
         _clickInterval = _clickSize / _clickNumber;
-        
+
         _elevationAbs = Round(_elevationAbs / _clickInterval);
         _windageAbs = Round(_windageAbs / _clickInterval);
-        
+
         _wind2 = Round(_wind2 / _clickInterval);
-        
+
         _elevationRel = Round(_elevationRel / _clickInterval);
         _windageRel = Round(_windageRel / _clickInterval);
-        
+
         _elevationCur = Round(_elevationCur / _clickInterval);
         _windageCur = Round(_windageCur / _clickInterval);
     };

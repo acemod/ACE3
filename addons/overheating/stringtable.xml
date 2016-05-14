@@ -251,6 +251,12 @@
             <Italian>Sto controllando la temperatura...</Italian>
             <Russian>Проверка температуры...</Russian>
         </Key>
+        <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
+            <English>Check spare barrels temperatures</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
+            <English>Checking spare barrels temperatures...</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
             <German>Temperatur</German>
@@ -262,6 +268,29 @@
             <Portuguese>Temperatura</Portuguese>
             <Italian>Temperatura</Italian>
             <Russian>Температура</Russian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelCool">
+            <English>Cool Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelWarm">
+            <English>Warm Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelHot">
+            <English>Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelVeryHot">
+            <English>Very Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
+            <English>Extremely Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_displayName">
+            <English>Overheating Enabled</English>
+            <German>Überhitzen Aktiviert</German>
+            <Spanish>Activada Sobrecalentamiento</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_description">
+            <English>Master enable for the overheating/jamming module</English>
         </Key>
     </Package>
 </Project>

@@ -202,4 +202,20 @@ class CfgAmmo {
         ace_frag_skip = 1;
         ace_frag_force = 0;
     };
+    
+    class G_40mm_HE;
+    class rhs_g_vog25: G_40mm_HE {};
+    class rhs_g_vg40tb: rhs_g_vog25 { //Thermobaric
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
+        ace_frag_force = 0;
+    };
+    class rhs_GDM40: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    
 };

@@ -298,9 +298,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // Item Event Handler
-["playerInventoryChanged", {
-    [ACE_player] call FUNC(itemCheck);
-}] call EFUNC(common,addEventHandler);
+["playerInventoryChanged", FUNC(itemCheck)] call EFUNC(common,addEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {

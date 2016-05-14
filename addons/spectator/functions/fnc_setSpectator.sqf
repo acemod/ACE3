@@ -92,7 +92,7 @@ if (_set) then {
         if (_this) then {
             _display displayAddEventHandler ["KeyDown", {
                 if (_this select 1 == 1) then {
-                    [false] call ace_spectator_fnc_setSpectator;
+                    [false] call FUNC(setSpectator);
                     true
                 };
             }];

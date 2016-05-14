@@ -1,3 +1,4 @@
+PREP(dev_debugAmmo);
 
 PREP(doSpall);
 PREP(fired);
