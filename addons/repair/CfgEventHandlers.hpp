@@ -31,6 +31,11 @@ class Extended_InitPost_EventHandlers {
             serverInit = QUOTE([ARR_3(_this select 0,1,'ACE_Track')] call DFUNC(addSpareParts));
         };
     };
+    class Motorcycle {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(addRepairActions));
+        };
+    };
     class Helicopter {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
