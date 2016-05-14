@@ -390,11 +390,24 @@ Usage of the CBA Macro `PARAM_x` or `BIS_fnc_Param` is deprecated and not allowe
 Functions and code blocks that specific a return a value must have a meaningfull return value. If no meaningfull return value, the function should return nil.
 
 ### 6.5. Private Variables
-All private variables shall make use of the `private` keyword on initalization. When declaring a private variable before initalization, usage of the private array syntax is allowed. All private variables must be either initialized using the private key word, or declared using the private array syntax.
+All private variables shall make use of the `private` keyword on initalization. When declaring a private variable before initalization, usage of the private array syntax is allowed. All private variables must be either initialized using the private key word, or declared using the private array syntax. Exceptions to this rule are variables obtained from an array. Note that this may only be down by making use of the `params` command family, as this ensures the variable is declared as private.
 
+Good:
 ```js
 private _myVariable = "hello world";
 ```
+
+Good:
+```js
+_myArray params ["_elementOne", "_elementTwo"];
+```
+
+Bad:
+```js
+_elementOne = _myArray select 0;
+_elementTwo = _myArray select 1;
+```
+
 
 ### 6.6. Lines of Code
 Any one function shall contain no more than 250 lines of code, excluding the function header and any includes.
@@ -404,8 +417,8 @@ Declarations should be at the smallest feasible scope.
 
 
 Good:
-```sqf
-if (call FUNC(myCondition) then {
+```js
+if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
    
    {
