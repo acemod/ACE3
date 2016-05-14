@@ -102,8 +102,8 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call 
     _damageReturn = _damageReturn min 0.89;
 };
 
-
-[_unit] call FUNC(addToInjuredCollection);
+// Start the loop that tracks the unit vitals
+[_unit] call FUNC(addVitalLoop);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     private _delayedUnconsicous = false;
