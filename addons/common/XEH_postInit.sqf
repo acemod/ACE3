@@ -333,7 +333,7 @@ enableCamShake true;
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon objNull;
-GVAR(OldPlayerInventory) = [objNull] call FUNC(getAllGear);
+GVAR(OldPlayerInventory) = [];
 GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
 GVAR(OldCameraView) = "";
 GVAR(OldVisibleMap) = false;
@@ -381,7 +381,7 @@ GVAR(OldIsCamera) = false;
     };
 
     // "playerInventoryChanged" event
-    _data = [ACE_player] call FUNC(getAllGear);
+    _data = getUnitLoadout ACE_player;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;

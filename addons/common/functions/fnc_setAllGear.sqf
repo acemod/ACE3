@@ -18,6 +18,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_setAllGear","3.7.0","setUnitLoadout");
+
 params ["_unit", "_allGear", ["_clearAttachments", false], ["_clearBackpack", false]];
 
 if (!local _unit) exitWith {

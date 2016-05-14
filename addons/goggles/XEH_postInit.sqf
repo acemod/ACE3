@@ -42,10 +42,10 @@ GVAR(surfaceCache) = "";
 GVAR(surfaceCacheIsDust) = false;
 
 // init GlassesChanged eventhandler
-GVAR(OldGlasses) = "#NULLSTRING";
+GVAR(OldGlasses) = "<null>";
 
 ["playerInventoryChanged", {
-    (_this select 1) params ["", "_currentGlasses"];
+    private _currentGlasses = (_this select 1) param [7, ""];
 
     if (GVAR(OldGlasses) != _currentGlasses) then {
         ["GlassesChanged", [ACE_player, _currentGlasses]] call EFUNC(common,localEvent);
