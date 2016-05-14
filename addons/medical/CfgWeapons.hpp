@@ -236,7 +236,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
         class ItemInfo: InventoryItem_Base_F {
-            mass = 7.4;
+            mass = 7;
         };
     };
 };
