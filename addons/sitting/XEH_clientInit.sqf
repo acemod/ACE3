@@ -3,11 +3,12 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
+GVAR(isEnabled) = false;
 ["SettingsInitialized", {
-    TRACE_1("SettingInit", GVAR(enable));
-
+    if ([[QUOTE(ADDON), QGVAR(enable)], ["acex_sitting", "acex_sitting_enable"], "3.7.0"] call EFUNC(common,deprecateComponent)) exitwith {};
     //If not enabled, then do not add CanInteractWith Condition or event handlers:
-    if (!GVAR(enable)) exitWith {};
+    if (!GVAR(enable) || GVAR(isEnabled)) exitWith {};
+    GVAR(isEnabled) = true;
 
     // Add interaction menu exception
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call EFUNC(common,addCanInteractWithCondition);
