@@ -25,7 +25,7 @@ class CfgVehicles {
         isGlobal = 1;
         isSingular = 1;
         isTriggerActivated = 0;
-        author = "SilentSpike";
+        author = ECSTRING(common,ACETeam);
         class Arguments {
             class zeusAscension {
                 displayName = CSTRING(ascension_DisplayName);
@@ -78,7 +78,7 @@ class CfgVehicles {
         };
     };
     class GVAR(moduleBase): Module_F {
-        author = "SilentSpike";
+        author = ECSTRING(common,ACETeam);
         category = "ACE";
         functionPriority = 1;
         isGlobal = 1;
@@ -167,7 +167,7 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    
+
     // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
         // curatorCanAttach = 1;
         // displayName = CSTRING(ModuleSetSupp_DisplayName);
