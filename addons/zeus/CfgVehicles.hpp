@@ -86,67 +86,6 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
     };
-    class GVAR(moduleCaptive): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleCaptive_DisplayName);
-        function = QFUNC(moduleCaptive);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
-        class ModuleDescription {
-            description = "Flips the capture state of the specified unit.";
-            sync[] = {};
-        };
-    };
-    class GVAR(moduleSurrender): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSurrender_DisplayName);
-        function = QFUNC(moduleSurrender);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
-        class ModuleDescription {
-            description = "Flips the surrender state of the specified unit.";
-            sync[] = {};
-        };
-    };
-    class GVAR(moduleUnconscious): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleUnconscious_DisplayName);
-        function = QFUNC(moduleUnconscious);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
-        class ModuleDescription {
-            description = "Flips the unconscious state of the specified unit.";
-            sync[] = {};
-        };
-    };
-    class GVAR(moduleSetMedic): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedic_DisplayName);
-        function = QFUNC(moduleSetMedic);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
-        class ModuleDescription {
-            description = "";
-            sync[] = {};
-        };
-    };
-    class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedicalVehicle_DisplayName);
-        function = QFUNC(moduleSetMedicalVehicle);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
-        class ModuleDescription {
-            description = "";
-            sync[] = {};
-        };
-    };
-    class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
-        curatorCanAttach = 1;
-        displayName = CSTRING(ModuleSetMedicalFacility_DisplayName);
-        function = QFUNC(moduleSetMedicalFacility);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
-        class ModuleDescription {
-            description = "";
-            sync[] = {};
-        };
-    };
-
     class GVAR(moduleAddSpareTrack): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
@@ -167,38 +106,72 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-
-    // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
-        // curatorCanAttach = 1;
-        // displayName = CSTRING(ModuleSetSupp_DisplayName);
-        // function = QFUNC(moduleSetSuppression);
-        // class ModuleDescription {
-            // description = "Set group of units to supressed.";
-            // sync[] = {};
-        // };
-    // };
-    // class GVAR(moduleDisableSuppression): GVAR(moduleBase) {
-        // curatorCanAttach = 1;
-        // displayName = CSTRING(ModuleDisableSupp_DisplayName);
-        // function = QFUNC(moduleDisableSuppression);
-        // class ModuleDescription {
-            // description = "Remove suppression for units in group";
-            // sync[] = {};
-        // };
-    // };
-    class GVAR(zeus_globalSetSkill): GVAR(moduleBase) {
-        author = ECSTRING(common,ACETeam);
-        category = "ACE";
-        scope = 1;
-        scopeCurator = 2;
-        isTriggerActivated = 0;
+    class GVAR(moduleCaptive): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleCaptive_DisplayName);
+        function = QFUNC(moduleCaptive);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
+        class ModuleDescription {
+            description = "Flips the capture state of the specified unit.";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedic): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedic_DisplayName);
+        function = QFUNC(moduleSetMedic);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalFacility): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalFacility_DisplayName);
+        function = QFUNC(moduleSetMedicalFacility);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleSetMedicalVehicle): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSetMedicalVehicle_DisplayName);
+        function = QFUNC(moduleSetMedicalVehicle);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        class ModuleDescription {
+            description = "";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         displayName = "Global Set AI Skill";
         // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
         // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
-        function = QFUNC(zeus_globalSetSkill);
-        curatorInfoType = QGVAR(RscDisplayAttributes_globalSetSkill);
-        curatorCost = 0;
+        curatorInfoType = QGVAR(RscGlobalSetSkill);
         class Arguments {};
         class Attributes {};//todo, make it a threden as well
+    };
+    class GVAR(moduleSurrender): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSurrender_DisplayName);
+        function = QFUNC(moduleSurrender);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
+        class ModuleDescription {
+            description = "Flips the surrender state of the specified unit.";
+            sync[] = {};
+        };
+    };
+    class GVAR(moduleUnconscious): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleUnconscious_DisplayName);
+        function = QFUNC(moduleUnconscious);
+        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        class ModuleDescription {
+            description = "Flips the unconscious state of the specified unit.";
+            sync[] = {};
+        };
     };
 };

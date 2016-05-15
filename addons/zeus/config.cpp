@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {QGVAR(zeus_globalSetSkill)};
+        units[] = {QGVAR(moduleGlobalSetSkill)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
@@ -42,4 +42,4 @@ class ACE_Curator {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
-#include "UI_RscAttributes.hpp"
+#include "ui\RscAttributes.hpp"

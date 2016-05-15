@@ -8,7 +8,7 @@ TRACE_1("params",_control);
 //Generic Init:
 private _display = ctrlparent _control;
 private _ctrlButtonOK = _display displayctrl 1; //IDC_OK
-private _logic = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objnull];
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
 TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
@@ -22,7 +22,7 @@ _fnc_sliderMove = {
     case (16186): {GVAR(aiSkill_weaponHandling)};
     case (16187): {GVAR(aiSkill_spotting)};
     };
-    _slider ctrlSetTooltip format ["%1 (was %2)", sliderPosition _slider, _curVal];
+    _slider ctrlSetTooltip format ["%1%3 (was %2%3)", round(sliderPosition _slider * 100), round(_curVal * 100), "%"];
 };
 
 //Specific on-load stuff:
@@ -50,18 +50,6 @@ _fnc_sliderMove = {
 
 (_display displayCtrl 16189) cbSetChecked GVAR(aiSkill_AUTOCOMBAT);
 
-
-
-private _fnc_onUnload = {
-    params [["_display", displayNull, [displayNull]]];
-    TRACE_1("_fnc_onUnload params",_display);
-
-    private _logic = missionnamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objnull];
-    if (isNull _logic) exitWith {};
-
-    _logic setVariable ["closed", true];
-};
-
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
     TRACE_1("_fnc_onConfirm params",_this);
@@ -78,8 +66,8 @@ private _fnc_onConfirm = {
     _logic setVariable ["aiSkill_spotting", sliderPosition (_display displayCtrl 16187), true];
     _logic setVariable ["aiSkill_COVER", cbChecked (_display displayCtrl 16188), true];
     _logic setVariable ["aiSkill_AUTOCOMBAT", cbChecked (_display displayCtrl 16189), true];
-    _logic setVariable ["set", true, true];
+
+    ["ServerUpdateAISettings", [_logic]] call EFUNC(common,serverEvent);
 };
 
-_display displayaddeventhandler ["unload", _fnc_onUnload];
 _ctrlButtonOK ctrladdeventhandler ["buttonclick", _fnc_onConfirm];
