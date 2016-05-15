@@ -1,5 +1,4 @@
-release/*
-bin/*
+@ace/*
 *.cache
 *.pbo
 texHeaders.bin
@@ -7,3 +6,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
+ace3_*.zip
