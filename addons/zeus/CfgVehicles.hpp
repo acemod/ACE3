@@ -116,6 +116,14 @@ class CfgVehicles {
             sync[] = {};
         };
     };
+    class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
+        displayName = "Global Set AI Skill";
+        // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
+        // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
+        curatorInfoType = QGVAR(RscGlobalSetSkill);
+        class Arguments {};
+        class Attributes {};//todo, make it a threden as well
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedic_DisplayName);
@@ -146,14 +154,6 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
-        displayName = "Global Set AI Skill";
-        // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
-        // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
-        curatorInfoType = QGVAR(RscGlobalSetSkill);
-        class Arguments {};
-        class Attributes {};//todo, make it a threden as well
-    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSurrender_DisplayName);
@@ -163,6 +163,11 @@ class CfgVehicles {
             description = "Flips the surrender state of the specified unit.";
             sync[] = {};
         };
+    };
+    class GVAR(moduleTeleportPlayers): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Teleport Players";
+        curatorInfoType = QGVAR(RscTeleportPlayers);
     };
     class GVAR(moduleUnconscious): GVAR(moduleBase) {
         curatorCanAttach = 1;

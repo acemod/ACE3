@@ -2,7 +2,10 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {QGVAR(moduleGlobalSetSkill)};
+        units[] = {
+            QGVAR(moduleGlobalSetSkill),
+            QGVAR(moduleTeleportPlayers)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};

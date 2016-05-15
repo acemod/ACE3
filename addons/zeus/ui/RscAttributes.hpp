@@ -113,6 +113,64 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
     };
 };
 
+
+class GVAR(RscTeleportPlayers): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class teleportPlayers: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_teleportPlayers));
+                    idc = 26422;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(8.5);
+                    class controls {
+                        class Title1: RscText {
+                            idc = -1;
+                            text = "Teleport Player";
+                            toolTip = "Teleport selected player to module position";
+                            x = 0;
+                            y = 0;
+                            w = W_PART(26);
+                            h = H_PART(1);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class Value1: RscListbox {
+                            idc = 16189;
+                            x = 0;
+                            y = H_PART(1.1);
+                            w = W_PART(26);
+                            h = H_PART(5.9);
+                        };
+                        class Title2: Title1 {
+                            idc = -1;
+                            text = "Teleport Group";
+                            toolTip = "Teleports all units in group";
+                            y = H_PART(7.1);
+                            w = W_PART(10);
+                        };
+                        class Value2: RscCheckBox {
+                            idc = 16188;
+                            x = W_PART(10.1);
+                            y = H_PART(7.1);
+                            w = W_PART(1);
+                            h = H_PART(1);
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+
 class GVAR(cargoAttribute): RscControlsGroupNoScrollbars {
     onSetFocus = QUOTE(_this call FUNC(ui_vehCargo));
     idc = 80085;
