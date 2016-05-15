@@ -28,7 +28,7 @@ extensions-win64: $(wildcard extensions/*/*)
 	cd extensions/build && CXX=$(eval $(which g++-w64-mingw-i686)) cmake .. && make
 
 clean:
-	rm -rf $(BIN) ace_*.zip
+	rm -rf $(BIN) ace3_*.zip
 
 release: all
 	@echo "  ZIP  ace3_$(VERSION).zip"
