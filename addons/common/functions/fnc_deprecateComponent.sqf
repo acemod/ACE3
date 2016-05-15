@@ -31,10 +31,33 @@ if (_isDeprecatedLoaded && {_isReplacementAvailable} && {!_isReplacementLoaded})
 };
 
 if (_isDeprecatedLoaded && {!_isReplacementLoaded}) then {
-    // Log deprecated component is loaded
-    private _message = format["Component %1 is deprecated. It is replaced by %2. Please disable %1 and make use of %2. The component (%1) will no longer be available from version %3 and later.", _oldComponentName, _newComponentName, _version];
-    systemChat format["ACE [WARNING] - %1", _message];
-    ACE_LOGWARNING(_message);
+    private _componentVersion = getText (configFile >> "CfgPatches" >> _oldComponentName >> "version");
+    ((_componentVersion splitString ".") apply {parseNumber _x}) params ["_componentMajor", "_componentMinor", "_componentPatch"];
+    ((_version splitString ".") apply {parseNumber _x}) params ["_major", "_minor", "_patch"];
+
+    switch (true) do {
+        case (_componentMajor >= _major && {_componentMinor >= _minor} && {_componentPatch >= _patch}): { // Removed from this version
+            private _message = format[
+                "Component %1 is deprecated. It has been replaced by %2. The component %1 is no longer usable on this version. ", _oldComponentName, _newComponentName, _version];
+            systemChat format["ACE [ERROR] - %1", _message];
+            ACE_LOGERROR(_message);
+        };
+        case (_componentMajor >= _major && {_componentMinor >= _minor-1}): { // Removed the next this version
+            private _message = format[
+                "Component %1 is deprecated. It is replaced by %2. Please disable %1 and make use of %2. "
+                + "The component (%1) will no longer be available from version %3 and later.", _oldComponentName, _newComponentName, _version];
+            systemChat format["ACE [WARNING] - %1", _message];
+            ACE_LOGWARNING(_message);
+        };
+        case (_componentMajor == _major && {_componentMinor >= _minor - 2}): { // we are in a version leading up to removal
+            private _message = format[
+                "Component %1 is deprecated. It is replaced by %2. Please disable %1 and make use of %2. "
+                + "The component (%1) will no longer be available from version %3 and later.", _oldComponentName, _newComponentName, _version];
+            ACE_LOGWARNING(_message);
+        };
+        default {
+        };
+    };
 };
 
 _isReplacementAvailable;
