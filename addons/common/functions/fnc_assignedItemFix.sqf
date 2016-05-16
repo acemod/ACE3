@@ -29,9 +29,9 @@ GVAR(AssignedItemsShownItems) = [
 ];
 
 ["playerInventoryChanged", {
-    params ["_unit", "_assignedItems"];
+    params ["_unit"];
 
-    _assignedItems = _assignedItems param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
+    private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
     GVAR(AssignedItemsShownItems) = [
         !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
