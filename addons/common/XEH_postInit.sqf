@@ -385,7 +385,7 @@ GVAR(OldIsCamera) = false;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
-        ["playerInventoryChanged", [ACE_player, _data]] call FUNC(localEvent);
+        ["playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear) ]] call FUNC(localEvent);
     };
 
     // "playerVisionModeChanged" event
