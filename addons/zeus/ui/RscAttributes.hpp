@@ -36,8 +36,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                     class controls {
                         class Title1: RscText {
                             idc = -1;
-                            text = "Skill: General";
-                            toolTip = "Global AI Set Skill: general,commanding,courage";
+                            text = "General Skill";
+                            toolTip = "Changes: general, commanding, courage";
                             x = 0;
                             y = 0;
                             w = W_PART(10);
@@ -53,8 +53,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         };
                         class Title2: Title1 {
                             idc = -1;
-                            text = "Skill: aimingAccuracy";
-                            toolTip = "Global AI Set Skill: aimingAccuracy";
+                            text = "Accuracy";
+                            toolTip = "Changes: aimingAccuracy";
                             y = H_PART(1.1);
                         };
                         class Value2: Value1 {
@@ -63,8 +63,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         };
                         class Title3: Title1 {
                             idc = -1;
-                            text = "Skill: weaponHandling";
-                            toolTip = "Global AI Set Skill: aimingShake,aimingSpeed,reloadSpeed";
+                            text = "Weapon Handling";
+                            toolTip = "Changes: aimingShake, aimingSpeed, reloadSpeed";
                             y = H_PART(2.2);
                         };
                         class Value3: Value1 {
@@ -73,8 +73,8 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         };
                         class Title4: Title1 {
                             idc = -1;
-                            text = "Skill: spotting";
-                            toolTip = "Global AI Set Skill: spotDistance,spotTime";
+                            text = "Spotting";
+                            toolTip = "Changes: spotDistance, spotTime";
                             y = H_PART(3.3);
                         };
                         class Value4: Value1 {
@@ -84,7 +84,7 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         class Title5: Title1 {
                             idc = -1;
                             text = "Seek Cover";
-                            toolTip = "Global AI Set Skill: AI Seek Cover";
+                            toolTip = "Will AI seek cover";
                             y = H_PART(4.4);
                         };
                         class Value5: RscCheckBox {
@@ -97,7 +97,7 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         class Title6: Title5 {
                             idc = -1;
                             text = "AUTOCOMBAT";
-                            toolTip = "Global AI Set Skill: Ai Switch To Combat Mode";
+                            toolTip = "Will AI automatically switch to combat mode";
                             y = H_PART(5.5);
                         };
                         class Value6: Value5 {

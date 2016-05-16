@@ -117,7 +117,7 @@ class CfgVehicles {
         };
     };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
-        displayName = "Global Set AI Skill";
+        displayName = "Global AI Skill";
         // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
         // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
         curatorInfoType = QGVAR(RscGlobalSetSkill);

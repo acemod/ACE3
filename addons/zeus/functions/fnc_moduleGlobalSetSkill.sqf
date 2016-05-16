@@ -1,27 +1,32 @@
 #include "script_component.hpp"
 
-params ["_logic"];
-TRACE_1("params",_logic);
+_this params ["_varName","_varValue"];
+_varValue params ["_general","_accuracy","_handling","_spotting","_cover","_combat"];
+TRACE_1("Params",_this);
 
-[QGVAR(aiSkill_set), true, false, true] call ace_common_fnc_setSetting;
-if (!GVAR(aiSkill_set)) exitWith {
-    TRACE_1("Setting must be forced off", GVAR(aiSkill_set));
-};
+TRACE_6("AI settings updated",GVAR(GlobalSkillAI));
+{
+    if (local _x) then {
+        _unit setSkill ["general", _general];
+        _unit setSkill ["commanding", _general];
+        _unit setSkill ["courage", _general];
+        _unit setSkill ["aimingAccuracy", _accuracy];
+        _unit setSkill ["aimingShake", _handling];
+        _unit setSkill ["aimingSpeed", _handling];
+        _unit setSkill ["reloadSpeed", _handling];
+        _unit setSkill ["spotDistance", _spotting];
+        _unit setSkill ["spotTime", _spotting];
 
-private _val = _logic getVariable ["aiSkill_general", -1];
-if (_val != -1) then { [QGVAR(aiSkill_general), _val, false, true] call ace_common_fnc_setSetting; };
-_val = _logic getVariable ["aiSkill_aimingAccuracy", -1];
-if (_val != -1) then { [QGVAR(aiSkill_aimingAccuracy), _val, false, true] call ace_common_fnc_setSetting; };
-_val = _logic getVariable ["aiSkill_weaponHandling", -1];
-if (_val != -1) then { [QGVAR(aiSkill_weaponHandling), _val, false, true] call ace_common_fnc_setSetting; };
-_val = _logic getVariable ["aiSkill_spotting", -1];
-if (_val != -1) then { [QGVAR(aiSkill_spotting), _val, false, true] call ace_common_fnc_setSetting; };
-_val = _logic getVariable ["aiSkill_COVER", -1];
-if (!(_val isEqualTo -1)) then { [QGVAR(aiSkill_COVER), _val, false, true] call ace_common_fnc_setSetting; };
-_val = _logic getVariable ["aiSkill_AUTOCOMBAT", -1];
-if (!(_val isEqualTo -1)) then { [QGVAR(aiSkill_AUTOCOMBAT), _val, false, true] call ace_common_fnc_setSetting; };
+        if (_cover) then {
+            _unit enableAI "COVER";
+        } else {
+            _unit disableAI "COVER";
+        };
 
-["UpdateAISettings", []] call ace_common_fnc_globalEvent;
-deleteVehicle _logic;
-
-TRACE_6("ai settings updated",GVAR(aiSkill_general),GVAR(aiSkill_aimingAccuracy),GVAR(aiSkill_weaponHandling),GVAR(aiSkill_spotting),GVAR(aiSkill_COVER),GVAR(aiSkill_AUTOCOMBAT));
+        if (_combat) then {
+            _unit enableAI "AUTOCOMBAT";
+        } else {
+            _unit disableAI "AUTOCOMBAT";
+        };
+    };
+} forEach allUnits;

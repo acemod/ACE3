@@ -35,11 +35,12 @@ private _fnc_onUnload = {
 
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
+    
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
-    if (isNull _logic) exitWith {diag_log text format ["[POTATO] - ERROR Logic [%1] is null on confirm", _logic];};
+    if (isNull _logic) exitWith {};
 
     private _lb = _display displayCtrl 16189;
 

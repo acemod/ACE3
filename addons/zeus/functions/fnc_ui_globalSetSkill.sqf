@@ -13,61 +13,49 @@ TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
-_fnc_sliderMove = {
+//Specific on-load stuff:
+private _fnc_sliderMove = {
     params ["_slider"];
-    private _idc = ctrlIDC _slider;
-    private _curVal = switch (_idc) do {
-    case (16184): {GVAR(aiSkill_general)};
-    case (16185): {GVAR(aiSkill_aimingAccuracy)};
-    case (16186): {GVAR(aiSkill_weaponHandling)};
-    case (16187): {GVAR(aiSkill_spotting)};
-    };
+    private _idc = ctrlIDC _slider; // IDCs ∈ [16184,16187]
+    private _curVal = GVAR(GlobalSkillAI) select (_idc - 16184); // [0,3]
     _slider ctrlSetTooltip format ["%1%3 (was %2%3)", round(sliderPosition _slider * 100), round(_curVal * 100), "%"];
 };
 
-//Specific on-load stuff:
-(_display displayCtrl 16184) sliderSetRange [0, 1];
-(_display displayCtrl 16184) sliderSetPosition (GVAR(aiSkill_general) max 0);
-(_display displayCtrl 16184) ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];
-(_display displayCtrl 16184) call _fnc_sliderMove;
+{
+    private _slider = _display displayCtrl _x;
+    _slider sliderSetRange [0, 1];
+    _slider sliderSetSpeed [0.01,0.1];
+    _slider sliderSetPosition (GVAR(GlobalSkillAI) select _forEachIndex);
+    _slider ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];
+    _slider call _fnc_sliderMove;
+} forEach [16184,16185,16186,16187];
 
-(_display displayCtrl 16185) sliderSetRange [0, 1];
-(_display displayCtrl 16185) sliderSetPosition (GVAR(aiSkill_aimingAccuracy) max 0);
-(_display displayCtrl 16185) ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];
-(_display displayCtrl 16185) call _fnc_sliderMove;
-
-(_display displayCtrl 16186) sliderSetRange [0, 1];
-(_display displayCtrl 16186) sliderSetPosition (GVAR(aiSkill_weaponHandling) max 0);
-(_display displayCtrl 16186) ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];
-(_display displayCtrl 16186) call _fnc_sliderMove;
-
-(_display displayCtrl 16187) sliderSetRange [0, 1];
-(_display displayCtrl 16187) sliderSetPosition (GVAR(aiSkill_spotting) max 0);
-(_display displayCtrl 16187) ctrlAddEventHandler ["SliderPosChanged", _fnc_sliderMove];
-(_display displayCtrl 16187) call _fnc_sliderMove;
-
-(_display displayCtrl 16188) cbSetChecked GVAR(aiSkill_COVER);
-
-(_display displayCtrl 16189) cbSetChecked GVAR(aiSkill_AUTOCOMBAT);
+(_display displayCtrl 16188) cbSetChecked (GVAR(GlobalSkillAI) select 4);
+(_display displayCtrl 16189) cbSetChecked (GVAR(GlobalSkillAI) select 5);
 
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
     TRACE_1("_fnc_onConfirm params",_this);
+
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target", objnull];
-    if (isNull _logic) exitWith {diag_log text format ["[POTATO] - ERROR Logic [%1] is null on confirm", _logic];};
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    if (isNull _logic) exitWith {};
 
-    TRACE_2("set",_logic, sliderPosition (_display displayCtrl 16184));
-    _logic setVariable ["aiSkill_general", sliderPosition (_display displayCtrl 16184), true];
-    _logic setVariable ["aiSkill_aimingAccuracy", sliderPosition (_display displayCtrl 16185), true];
-    _logic setVariable ["aiSkill_weaponHandling", sliderPosition (_display displayCtrl 16186), true];
-    _logic setVariable ["aiSkill_spotting", sliderPosition (_display displayCtrl 16187), true];
-    _logic setVariable ["aiSkill_COVER", cbChecked (_display displayCtrl 16188), true];
-    _logic setVariable ["aiSkill_AUTOCOMBAT", cbChecked (_display displayCtrl 16189), true];
+    GVAR(GlobalSkillAI) = [
+        sliderPosition (_display displayCtrl 16184), // General
+        sliderPosition (_display displayCtrl 16185), // Accuracy
+        sliderPosition (_display displayCtrl 16186), // Handling
+        sliderPosition (_display displayCtrl 16187), // Spotting
+        cbChecked (_display displayCtrl 16188), // Seek cover
+        cbChecked (_display displayCtrl 16189) // Autocombat
+    ];
+    publicVariable QGVAR(GlobalSkillAI); // Values should persist for future use
 
-    ["ServerUpdateAISettings", [_logic]] call EFUNC(common,serverEvent);
+    // PV EH won't run on local machine
+    [QGVAR(GlobalSkillAI),GVAR(GlobalSkillAI)] call FUNC(moduleGlobalSetSkill);
+    deleteVehicle _logic;
 };
 
 _ctrlButtonOK ctrladdeventhandler ["buttonclick", _fnc_onConfirm];

@@ -16,7 +16,6 @@ PREP(moduleSurrender);
 PREP(moduleTeleportPlayers);
 PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
-PREP(setSkillsLocal);
 PREP(ui_globalSetSkill);
 PREP(ui_teleportPlayers);
 PREP(ui_vehCargo);
