@@ -39,7 +39,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x54_Ball_Tracer_Green: B_762x51_Ball {
+    class rhs_B_762x54_Ball_Tracer_Green: rhs_B_762x54_Ball {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
