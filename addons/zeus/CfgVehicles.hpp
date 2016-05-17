@@ -118,11 +118,7 @@ class CfgVehicles {
     };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         displayName = "Global AI Skill";
-        // icon = "\a3\Modules_F_Curator\Data\iconEndMission_ca.paa";
-        // portrait = "\a3\Modules_F_Curator\Data\portraitEndMission_ca.paa";
         curatorInfoType = QGVAR(RscGlobalSetSkill);
-        class Arguments {};
-        class Attributes {};//todo, make it a threden as well
     };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;

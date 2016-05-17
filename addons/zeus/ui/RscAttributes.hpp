@@ -193,7 +193,7 @@ class GVAR(cargoAttribute): RscControlsGroupNoScrollbars {
             x = W_PART(10);
             y = 0;
             w = W_PART(16);
-            h = H_PART(2.5);
+            h = H_PART(3);
             colorBackground[] = {1,1,1,0.1};
         };
         class Cargo: RscListBox {
@@ -211,7 +211,17 @@ class RscDisplayAttributesVehicle: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
             class Controls: controls {
-                class Cargo: GVAR(cargoAttribute) { };
+                class ace_cargo: GVAR(cargoAttribute) { };
+            };
+        };
+    };
+};
+
+class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
+    class Controls: Controls {
+        class Content: Content {
+            class Controls: controls {
+                class ace_cargo: GVAR(cargoAttribute) { };
             };
         };
     };
