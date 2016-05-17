@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_Gunbag", "ACE_Gunbag_tan"};
+        units[] = {CLASSNAME, DOUBLES(CLASSNAME,Tan), ACE_Box_Misc};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction", "ace_movement"};

@@ -88,4 +88,12 @@ class CfgVehicles {
         picture = PATHTOF(ui\gunbag_tan_ca.paa);
         hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_tan_co.paa)};
     };
+
+    class Box_NATO_Support_F;
+    class ACE_Box_Misc: Box_NATO_Support_F {
+        class TransportBackpacks {
+            MACRO_ADDBACKPACK(CLASSNAME,3);
+            MACRO_ADDBACKPACK(DOUBLES(CLASSNAME,Tan),3);
+        };
+    };
 };
