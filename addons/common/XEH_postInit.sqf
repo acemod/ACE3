@@ -64,6 +64,7 @@
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
 ["forceWalk", {
     params ["_object", "_set"];
@@ -89,6 +90,11 @@
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
+}] call FUNC(addEventHandler);
+["blockEngine", {
+    params ["_vehicle", "_set"];
+    _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
+    _vehicle engineOn false;
 }] call FUNC(addEventHandler);
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
@@ -327,7 +333,7 @@ enableCamShake true;
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon objNull;
-GVAR(OldPlayerInventory) = [objNull] call FUNC(getAllGear);
+GVAR(OldPlayerInventory) = [];
 GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
 GVAR(OldCameraView) = "";
 GVAR(OldVisibleMap) = false;
@@ -375,11 +381,11 @@ GVAR(OldIsCamera) = false;
     };
 
     // "playerInventoryChanged" event
-    _data = [ACE_player] call FUNC(getAllGear);
+    _data = getUnitLoadout ACE_player;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
-        ["playerInventoryChanged", [ACE_player, _data]] call FUNC(localEvent);
+        ["playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear) ]] call FUNC(localEvent);
     };
 
     // "playerVisionModeChanged" event

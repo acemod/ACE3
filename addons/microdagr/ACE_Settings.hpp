@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(MapDataAvailable) {
+    class GVAR(mapDataAvailable) {
         displayName = CSTRING(MapDataAvailable_DisplayName);
         description = CSTRING(MapDataAvailable_Description);
         value = 2;

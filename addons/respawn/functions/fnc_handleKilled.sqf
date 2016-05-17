@@ -19,13 +19,9 @@
 params ["_unit"];
 
 // Saves the gear when the player! (and only him) is killed
-if (ACE_player == _unit) then {
-    GVAR(unitGear) = [];
-
-    if (GVAR(SavePreDeathGear)) then {
-        GVAR(unitGear) = [_unit] call EFUNC(common,getAllGear);
-        GVAR(unitGear) append [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit];
-    };
+if (ACE_player == _unit && {GVAR(SavePreDeathGear)}) then {
+    _unit setVariable [QGVAR(unitGear), getUnitLoadout _unit];
+    _unit setVariable [QGVAR(activeWeaponAndMuzzle), [currentWeapon _unit, currentMuzzle _unit, currentWeaponMode _unit]];
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {

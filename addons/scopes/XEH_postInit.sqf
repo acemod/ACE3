@@ -10,10 +10,7 @@
 if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
-["playerInventoryChanged", {
-    [ACE_player] call FUNC(inventoryCheck);
-}] call EFUNC(common,addEventhandler);
-
+["playerInventoryChanged", FUNC(inventoryCheck)] call EFUNC(common,addEventhandler);
 
 // Instantly hide knobs when scoping in
 ["cameraViewChanged", {

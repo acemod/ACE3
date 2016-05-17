@@ -18,7 +18,7 @@
 if (ctrlVisible 12000) then {
     false call FUNC(show_gun_ammo_data);
     true call FUNC(show_main_page);
-    
+
     if (_this == 1) then {
         call FUNC(update_zero_range);
         call FUNC(calculate_target_solution);

@@ -16,4 +16,14 @@ if (isServer) then {
 };
 
 // Should prevent unending spectator on mission end
-addMissionEventHandler ["Ended",{ [QGVAR(EndMission)] call FUNC(interrupt) }];
+if (isServer) then {
+    addMissionEventHandler ["Ended", {
+        [QGVAR(endMission), []] call EFUNC(common,globalEvent);
+    }];
+};
+
+[QGVAR(endMission), {
+    if (GVAR(isSet)) then {
+        [false] call FUNC(setSpectator);
+    };
+}] call EFUNC(common,addEventHandler);
