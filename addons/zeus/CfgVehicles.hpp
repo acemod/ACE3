@@ -120,6 +120,11 @@ class CfgVehicles {
         displayName = "Global AI Skill";
         curatorInfoType = QGVAR(RscGlobalSetSkill);
     };
+    class GVAR(moduleGroupSide): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = "Group Side";
+        curatorInfoType = QGVAR(RscGroupSide);
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedic_DisplayName);

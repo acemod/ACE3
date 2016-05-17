@@ -2,9 +2,11 @@ class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class RscText;
 class RscListbox;
+class RscCombo;
 class RscEdit;
 class RscXSliderH;
 class RscCheckBox;
+class RscActivePicture;
 
 class RscDisplayAttributes {
     class Controls {
@@ -113,6 +115,83 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
     };
 };
 
+class GVAR(RscGroupSide): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGroupSide)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGroupSide)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class GroupSide: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_groupSide));
+                    idc = 26422;
+                    x = 0;
+                    y = 0;
+                    w = W_PART(26);
+                    h = H_PART(2.5);
+                    class controls {
+                		class Title: RscText {
+                			idc = 31002;
+                			text = "$STR_disp_arcunit_side";
+                			x = 0;
+                			y = 0;
+                			w = W_PART(10);
+                			h = H_PART(2.5);
+                			colorBackground[] = {0,0,0,0.5};
+                		};
+                		class Background: RscText {
+                			idc = 31000;
+                			x = W_PART(10);
+                			y = 0;
+                			w = W_PART(16);
+                			h = H_PART(2.5);
+                			colorBackground[] = {1,1,1,0.1};
+                		};
+                		class BLUFOR: RscActivePicture {
+                			idc = 31200;
+                			text = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";
+                			x = W_PART(12.5);
+                			y = H_PART(0.25);
+                			w = W_PART(2);
+                			h = H_PART(2);
+                			tooltip = "$STR_WEST";
+                		};
+                		class OPFOR: BLUFOR {
+                			idc = 31201;
+                			text = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa";
+                			x = W_PART(15.5);
+                			y = H_PART(0.25);
+                			w = W_PART(2);
+                			h = H_PART(2);
+                			tooltip = "$STR_EAST";
+                		};
+                		class Independent: BLUFOR {
+                			idc = 31202;
+                			text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                			x = W_PART(18.5);
+                			y = H_PART(0.25);
+                			w = W_PART(2);
+                			h = H_PART(2);
+                			tooltip = "$STR_guerrila";
+                		};
+                		class Civilian: BLUFOR {
+                			idc = 31203;
+                			text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                			x = W_PART(21.5);
+                			y = H_PART(0.25);
+                			w = W_PART(2);
+                			h = H_PART(2);
+                			tooltip = "$STR_Civilian";
+                		};
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};
 
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
@@ -130,7 +209,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                     w = W_PART(26);
                     h = H_PART(8.5);
                     class controls {
-                        class Title1: RscText {
+                        class Title: RscText {
                             idc = -1;
                             text = "Teleport Player";
                             toolTip = "Teleport selected player to module position";
@@ -140,21 +219,21 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                             h = H_PART(1);
                             colorBackground[] = {0,0,0,0.5};
                         };
-                        class Value1: RscListbox {
+                        class Unit: RscListbox {
                             idc = 16189;
                             x = 0;
                             y = H_PART(1.1);
                             w = W_PART(26);
                             h = H_PART(5.9);
                         };
-                        class Title2: Title1 {
+                        class Label: Title {
                             idc = -1;
                             text = "Teleport Group";
                             toolTip = "Teleports all units in group";
                             y = H_PART(7.1);
                             w = W_PART(10);
                         };
-                        class Value2: RscCheckBox {
+                        class UseGroup: RscCheckBox {
                             idc = 16188;
                             x = W_PART(10.1);
                             y = H_PART(7.1);

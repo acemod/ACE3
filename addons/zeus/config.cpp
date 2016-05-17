@@ -4,6 +4,7 @@ class CfgPatches {
     class ADDON {
         units[] = {
             QGVAR(moduleGlobalSetSkill),
+            QGVAR(moduleGroupSide),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
