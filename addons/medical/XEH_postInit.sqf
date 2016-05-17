@@ -37,12 +37,13 @@ if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(commo
     params ["_unit", "_status"];
     if (local _unit) then {
         if (_status) then {
-            _unit setVariable ["tf_globalVolume", 0.4];
+            private _unconsciousVol = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), 0.4];
+            _unit setVariable ["tf_globalVolume", _unconsciousVol];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", true, true];
-            if (!isNil "acre_api_fnc_setGlobalVolume") then { [0.4^0.33] call acre_api_fnc_setGlobalVolume; };
+            if (!isNil "acre_api_fnc_setGlobalVolume") then { [_unconsciousVol^0.33] call acre_api_fnc_setGlobalVolume; };
         } else {
             _unit setVariable ["tf_globalVolume", 1];
             _unit setVariable ["tf_voiceVolume", 1, true];
