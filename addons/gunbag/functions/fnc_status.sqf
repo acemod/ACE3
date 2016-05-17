@@ -18,9 +18,9 @@ params ["_unit"];
 private _state = (backpackContainer _unit) getVariable [QGVAR(GunbagWeapon),[]];
 
 if (count _state <= 0) then {
-  [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
+    [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
 } else {
-  private _weapon = (_state select 0) select 0;
-  [getText (configFile >> "CfgWeapons" >> _weapon >> "displayname"),
-  getText (configFile >> "CfgWeapons" >> _weapon >> "picture")] call EFUNC(common,displayTextPicture);
+    private _weapon = (_state select 0) select 0;
+    [getText (configFile >> "CfgWeapons" >> _weapon >> "displayname"),
+    getText (configFile >> "CfgWeapons" >> _weapon >> "picture")] call EFUNC(common,displayTextPicture);
 };

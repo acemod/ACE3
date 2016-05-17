@@ -19,7 +19,7 @@ params ["_weapon","_items"];
 private _mass = getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass");
 
 {
-  _mass = _mass + getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "mass");
+    _mass = _mass + getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "mass");
 } foreach _items;
 
-(_mass / 22)
+_mass

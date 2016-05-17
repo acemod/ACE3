@@ -32,7 +32,7 @@ _items = [_state select 0, _state select 1, _state select 2, _state select 3];
 
 
 if ((_magazine select 0) != "") then {
-  _unit addMagazine _magazine;
+    _unit addMagazine _magazine;
 };
 
 _unit removeWeapon _weapon;
@@ -41,5 +41,5 @@ _unit removeWeapon _weapon;
 _gunbag setVariable [QGVAR(GunbagWeapon), [[_weapon], _items], true];
 
 if(["ACE_Backpacks"] call EFUNC(common,isModLoaded)) then {
-  [_unit, _target, backpackContainer _target] call EFUNC(backpacks,backpackOpened);
+    [_unit, _target, backpackContainer _target] call EFUNC(backpacks,backpackOpened);
 };
