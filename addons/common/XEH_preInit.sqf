@@ -46,6 +46,13 @@ if (isServer) then {
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
 
+//////////////////////////////////////////////////
+// Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
+//////////////////////////////////////////////////
+
+ACE_player = objNull;
+uiNamespace setVariable ["ACE_player", objNull];
+
 // Init toHex
 [0] call FUNC(toHex);
 
