@@ -107,6 +107,15 @@ private _fnc_onSelection = {
     _ctrl ctrlAddEventHandler ["buttonclick", _fnc_onSelection];
 } forEach IDCs;
 
+private _fnc_onUnload = {
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    if (isNull _logic) exitWith {};
+
+    if (_this select 1 == 2) then {
+        deleteVehicle _logic;
+    };
+};
+
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
@@ -123,4 +132,5 @@ private _fnc_onConfirm = {
     deleteVehicle _logic;
 };
 
+_display displayAddEventHandler ["unload", _fnc_onUnload];
 _ctrlButtonOK ctrlAddEventHandler ["buttonClick", _fnc_onConfirm];

@@ -49,15 +49,19 @@ private _fnc_sliderMove = {
 (_display displayCtrl 16188) cbSetChecked (GVAR(GlobalSkillAI) select 4);
 (_display displayCtrl 16189) cbSetChecked (GVAR(GlobalSkillAI) select 5);
 
+private _fnc_onUnload = {
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    if (isNull _logic) exitWith {};
+
+    deleteVehicle _logic;
+};
+
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
     TRACE_1("_fnc_onConfirm params",_this);
 
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
-
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
-    if (isNull _logic) exitWith {};
 
     GVAR(GlobalSkillAI) = [
         sliderPosition (_display displayCtrl 16184), // General
@@ -71,7 +75,7 @@ private _fnc_onConfirm = {
 
     // PV EH won't run on local machine
     [QGVAR(GlobalSkillAI),GVAR(GlobalSkillAI)] call FUNC(moduleGlobalSetSkill);
-    deleteVehicle _logic;
 };
 
-_ctrlButtonOK ctrladdeventhandler ["buttonclick", _fnc_onConfirm];
+_display displayAddEventHandler ["unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["buttonclick", _fnc_onConfirm];

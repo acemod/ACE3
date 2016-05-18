@@ -41,5 +41,3 @@ if (_group) then {
 		[_x, _attached] call BIS_fnc_moveToRespawnPosition;
     };
 } forEach _player;
-
-deleteVehicle _logic;
