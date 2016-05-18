@@ -386,6 +386,7 @@ GVAR(OldIsCamera) = false;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
+<<<<<<< HEAD
 
         // we don't want to trigger this just because your ammo counter decreased.
         _data = + GVAR(OldPlayerInventory);
@@ -410,7 +411,7 @@ GVAR(OldIsCamera) = false;
 
         if !(_data isEqualTo GVAR(OldPlayerInventoryNoAmmo)) then {
             GVAR(OldPlayerInventoryNoAmmo) = _data;
-            ["playerInventoryChanged", [ACE_player, GVAR(OldPlayerInventory)]] call FUNC(localEvent);
+            ["playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call FUNC(localEvent);
         };
     };
 
