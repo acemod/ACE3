@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(EveryoneCanDrawOnBriefing) {
+    class GVAR(everyoneCanDrawOnBriefing) {
         value = 1;
         typeName = "BOOL";
     };

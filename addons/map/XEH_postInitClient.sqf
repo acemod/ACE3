@@ -12,7 +12,7 @@ if (isServer) then {
                 deleteVehicle _x;
             };
         } forEach attachedObjects _disconnectedPlayer;
-        
+
         nil
     }];
 };

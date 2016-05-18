@@ -7,7 +7,7 @@ PFH executed while holding a vector key down.
 */
 #include "script_component.hpp"
 
-if (currentWeapon ACE_player != "ACE_Vector") exitWith {
+if (!((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapons"])) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 
     GVAR(currentMode) = "";

@@ -29,39 +29,17 @@ GVAR(AssignedItemsShownItems) = [
 ];
 
 ["playerInventoryChanged", {
-    params ["_unit", "_assignedItems"];
+    params ["_unit"];
 
-    _assignedItems = _assignedItems select 17;
+    private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
-    GVAR(AssignedItemsShownItems) = [true, true, true, true, true];
-
-    {
-        if !(_x in GVAR(AssignedItems)) then {
-            GVAR(AssignedItems) pushBack _x;
-            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType");
-        };
-
-        switch (GVAR(AssignedItemsInfo) select (GVAR(AssignedItems) find _x)) do {
-            case ("map"): {
-                GVAR(AssignedItemsShownItems) set [0, false];
-            };
-            case ("compass"): {
-                GVAR(AssignedItemsShownItems) set [1, false];
-            };
-            case ("watch"): {
-                GVAR(AssignedItemsShownItems) set [2, false];
-            };
-            case ("radio"): {
-                GVAR(AssignedItemsShownItems) set [3, false];
-            };
-            case ("gps"): {
-                GVAR(AssignedItemsShownItems) set [4, false];
-            };
-        };
-        false
-    } count _assignedItems;
-
-    //systemChat str GVAR(AssignedItemsShownItems);
+    GVAR(AssignedItemsShownItems) = [
+        !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
+        !((_assignedItems select 3) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
+        !((_assignedItems select 4) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
+        !((_assignedItems select 2) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
+        !((_assignedItems select 1) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
+    ];
 
     GVAR(AssignedItemsShownItems) params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];
 

@@ -47,7 +47,7 @@ GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
 
 //////////////////////////////////////////////////
-// Set up PlayerChanged eventhandler for pre init
+// Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
 //////////////////////////////////////////////////
 
 ACE_player = objNull;

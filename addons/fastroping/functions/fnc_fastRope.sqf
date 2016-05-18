@@ -24,7 +24,7 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 _usableRope = _deployedRopes select 0;
 _usableRopeIndex = 0;
 {
-    if !(_x select 6) exitWith {
+    if !(_x select 5) exitWith {
         _usableRope = _x;
         _usableRopeIndex = _forEachIndex;
     };
@@ -35,6 +35,6 @@ _deployedRopes set [_usableRopeIndex, _usableRope];
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 
 //Start server PFH asap
-[QGVAR(startFastRope), [_unit, _vehicle, _usableRope, _usableRopeIndex]] call EFUNC(common,serverEvent);
+[QGVAR(startFastRope), [_unit, _vehicle, _usableRope, _usableRopeIndex, false]] call EFUNC(common,serverEvent);
 moveOut _unit;
-[FUNC(fastRopeLocalPFH), 0, [_unit, _vehicle, _usableRope, _usableRopeIndex]] call CBA_fnc_addPerFrameHandler;
+[FUNC(fastRopeLocalPFH), 0, [_unit, _vehicle, _usableRope, _usableRopeIndex, ACE_diagTime]] call CBA_fnc_addPerFrameHandler;

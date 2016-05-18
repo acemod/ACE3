@@ -356,6 +356,7 @@
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
+            <Czech>Vystupte</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -711,6 +712,8 @@
             <Polish>Włącz</Polish>
             <Spanish>Encender</Spanish>
             <French>Allumer</French>
+            <Italian>Accendi</Italian>
+            <Czech>Zapnout</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -718,6 +721,8 @@
             <Polish>Wyłącz</Polish>
             <Spanish>Apagar</Spanish>
             <French>Eteindre</French>
+            <Italian>Spegni</Italian>
+            <Czech>Vypnout</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -758,7 +763,7 @@
             <Polish>%1 podał Ci magazynek %2.</Polish>
             <Russian>%1 передал вам магазин %2.</Russian>
             <Portuguese>%1 passou a você um carregador %2.</Portuguese>
-            <Czech>%1 ti podal %2 zásobník.</Czech>
+            <Czech>%1 ti podal zásobník %2.</Czech>
             <Italian>%1 ti ha passato un caricatore %2 .</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur %2.</French>

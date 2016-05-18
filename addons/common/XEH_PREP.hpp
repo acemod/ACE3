@@ -87,6 +87,7 @@ PREP(getWindDirection);
 PREP(getZoom);
 PREP(goKneeling);
 PREP(hadamardProduct);
+PREP(handleEngine);
 PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
 PREP(handleScrollWheel);

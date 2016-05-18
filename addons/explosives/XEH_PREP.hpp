@@ -6,6 +6,7 @@ PREP(addExplosiveActions);
 PREP(addToSpeedDial);
 PREP(addTransmitterActions);
 PREP(addTriggerActions);
+PREP(cancelPlacement);
 PREP(canDefuse);
 PREP(canDetonate);
 PREP(connectExplosive);

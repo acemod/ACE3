@@ -115,6 +115,7 @@
             <Spanish>Desactiva el efecto de zumbido cuando el jugador recibe daño auditivo.</Spanish>
             <Polish>Usuń szum w uszach przy chwilowej utracie słuchu.</Polish>
             <French>Enlève les acouphènes quand le joueur prend des dommages auditifs.</French>
+            <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>

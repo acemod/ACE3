@@ -6,12 +6,17 @@ class CfgVehicles {
     class LandVehicle;
     class StaticWeapon: LandVehicle {
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryPosition)[] = {0,1.2,0};
         GVAR(carryDirection) = 0;
 
         GVAR(canDrag) = 1;
-        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 0;
+    };
+
+    class StaticCannon: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
     };
 
     //remove actions from Taru Pods
@@ -23,23 +28,24 @@ class CfgVehicles {
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryPosition)[] = {0,1.2,0};
         GVAR(carryDirection) = 0;
 
         GVAR(canDrag) = 1;
-        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 0;
     };
 
     // ammo boxes
     class ThingX;
+    class Items_base_F;
     class ReammoBox_F: ThingX {
         GVAR(canCarry) = 0;
-        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryPosition)[] = {0,1,1};
         GVAR(carryDirection) = 0;
 
         GVAR(canDrag) = 0;
-        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 0;
     };
 
@@ -85,6 +91,32 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
+    //Plastic and metal case
+    class PlasticCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+    class MetalCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+
     // Barrier
     class RoadCone_F: ThingX {
         class EventHandlers {
@@ -92,40 +124,40 @@ class CfgVehicles {
         };
 
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryPosition)[] = {0,1,1};
         GVAR(carryDirection) = 0;
 
         GVAR(canDrag) = 1;
-        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 0;
     };
 
     class RoadBarrier_F: RoadCone_F {
-        GVAR(carryPosition[]) = {0,1,0.300671};
+        GVAR(carryPosition)[] = {0,1,0.300671};
     };
 
     class ACE_RepairItem_Base: ThingX {};
 
     class ACE_Track: ACE_RepairItem_Base {
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryPosition)[] = {0,1,1};
         GVAR(carryDirection) = 0;
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryPosition)[] = {0,1,1};
         GVAR(carryDirection) = 0;
     };
 
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         GVAR(canCarry) = 1;
-        GVAR(carryPosition[]) = {0,1.2,0};
+        GVAR(carryPosition)[] = {0,1.2,0};
         GVAR(carryDirection) = 180;
 
         GVAR(canDrag) = 1;
-        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragPosition)[] = {0,1.2,0};
         GVAR(dragDirection) = 180;
     };
 };

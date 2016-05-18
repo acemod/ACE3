@@ -24,7 +24,7 @@ _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
     #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
-    #endIf
+    #endif
 };
 
 _mapGrids = ceil(_mapSize / 50) + 1;

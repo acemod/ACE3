@@ -20,8 +20,11 @@
 params ["", "", "_parameters"];
 _parameters params ["_unit"];
 
-private _varName = format [QEGVAR(interact_menu,Act_%1), typeOf _unit];
-private _actionTrees = missionNamespace getVariable [_varName, []];
+private _namespace = EGVAR(interact_menu,ActNamespace);
+private _actionTrees = _namespace getVariable typeOf _unit;
+if (isNil "_actionTrees") then {
+    _actionTrees = [];
+};
 
 private _actions = [];
 

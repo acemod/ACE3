@@ -4,8 +4,8 @@ class ACE_Settings {
         typeName = "SCALAR";
         isClientSettable = 1;
         category = ECSTRING(interact_menu,Category_InteractionMenu);
-        displayName = CSTRING(showOnInteractionMenu_displayName);
-        description = CSTRING(showOnInteractionMenu_description);
-        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(justKeybinds), CSTRING(keysAndInteractionMenu)};
+        displayName = CSTRING(ShowOnInteractionMenu_displayName);
+        description = CSTRING(ShowOnInteractionMenu_description);
+        values[] = {"$STR_A3_OPTIONS_DISABLED", CSTRING(JustKeybinds), CSTRING(KeysAndInteractionMenu)};
     };
 };

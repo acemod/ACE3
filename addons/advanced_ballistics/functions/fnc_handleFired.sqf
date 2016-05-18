@@ -88,7 +88,7 @@ if (GVAR(ammoTemperatureEnabled) || GVAR(barrelLengthInfluenceEnabled)) then {
 
 _bulletTraceVisible = false;
 if (GVAR(bulletTraceEnabled) && cameraView == "GUNNER") then {
-    if (currentWeapon ACE_player in ["ACE_Vector", "Binocular", "Rangefinder", "Laserdesignator"]) then {
+    if (currentWeapon ACE_player == binocular ACE_player) then {
         _bulletTraceVisible = true;
     } else {
         if (currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
