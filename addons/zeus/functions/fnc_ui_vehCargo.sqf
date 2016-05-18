@@ -1,3 +1,20 @@
+/*
+ * Author: PabstMirror
+ * Initalises the ace_cargo attribute of the zeus vehicle attributes display
+ * (the display shown on double click)
+ *
+ * Arguments:
+ * 0: ace_cargo controls group <CONTROL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * onSetFocus = "_this call ace_zeus_fnc_ui_vehCargo"
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_control"];
@@ -9,7 +26,7 @@ TRACE_1("",_veh);
 private _loaded = _veh getVariable [QEGVAR(cargo,loaded), []];
 TRACE_1("",_loaded);
 
-lbClear ((ctrlParent _control) displayCtrl 80086);
+_control ctrlRemoveAllEventHandlers "setFocus";
 
 {
     ((ctrlParent _control) displayCtrl 80086) lbAdd (str _x);

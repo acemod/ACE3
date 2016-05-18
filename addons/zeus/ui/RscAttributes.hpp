@@ -38,15 +38,15 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                     class controls {
                         class Title1: RscText {
                             idc = -1;
-                            text = "General Skill";
-                            toolTip = "Changes: general, commanding, courage";
+                            text = CSTRING(ModuleGlobalSetSkill_general);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_general_desc);
                             x = 0;
                             y = 0;
                             w = W_PART(10);
                             h = H_PART(1);
                             colorBackground[] = {0,0,0,0.5};
                         };
-                        class Value1: RscXSliderH {
+                        class General: RscXSliderH {
                             idc = 16184;
                             x = W_PART(10.1);
                             y = 0;
@@ -55,41 +55,41 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         };
                         class Title2: Title1 {
                             idc = -1;
-                            text = "Accuracy";
-                            toolTip = "Changes: aimingAccuracy";
+                            text = CSTRING(ModuleGlobalSetSkill_accuracy);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_accuracy_desc);
                             y = H_PART(1.1);
                         };
-                        class Value2: Value1 {
+                        class Accuracy: General {
                             idc = 16185;
                             y = H_PART(1.1);
                         };
                         class Title3: Title1 {
                             idc = -1;
-                            text = "Weapon Handling";
-                            toolTip = "Changes: aimingShake, aimingSpeed, reloadSpeed";
+                            text = CSTRING(ModuleGlobalSetSkill_handling);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_handling_desc);
                             y = H_PART(2.2);
                         };
-                        class Value3: Value1 {
+                        class Handling: General {
                             idc = 16186;
                             y = H_PART(2.2);
                         };
                         class Title4: Title1 {
                             idc = -1;
-                            text = "Spotting";
-                            toolTip = "Changes: spotDistance, spotTime";
+                            text = CSTRING(ModuleGlobalSetSkill_spotting);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_spotting_desc);
                             y = H_PART(3.3);
                         };
-                        class Value4: Value1 {
+                        class Spotting: General {
                             idc = 16187;
                             y = H_PART(3.3);
                         };
                         class Title5: Title1 {
                             idc = -1;
-                            text = "Seek Cover";
-                            toolTip = "Will AI seek cover";
+                            text = CSTRING(ModuleGlobalSetSkill_cover);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_cover_desc);
                             y = H_PART(4.4);
                         };
-                        class Value5: RscCheckBox {
+                        class Cover: RscCheckBox {
                             idc = 16188;
                             x = W_PART(10.1);
                             y = H_PART(4.4);
@@ -98,11 +98,11 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
                         };
                         class Title6: Title5 {
                             idc = -1;
-                            text = "AUTOCOMBAT";
-                            toolTip = "Will AI automatically switch to combat mode";
+                            text = CSTRING(ModuleGlobalSetSkill_combat);
+                            toolTip = CSTRING(ModuleGlobalSetSkill_combat_desc);
                             y = H_PART(5.5);
                         };
-                        class Value6: Value5 {
+                        class Combat: Cover {
                             idc = 16189;
                             y = H_PART(5.5);
                         };
@@ -123,7 +123,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
         class Title: Title {};
         class Content: Content {
             class Controls {
-                class GroupSide: RscControlsGroupNoScrollbars {
+                class groupSide: RscControlsGroupNoScrollbars {
                     onSetFocus = QUOTE(_this call FUNC(ui_groupSide));
                     idc = 26422;
                     x = 0;
@@ -211,8 +211,8 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                     class controls {
                         class Title: RscText {
                             idc = -1;
-                            text = "Teleport Player";
-                            toolTip = "Teleport selected player to module position";
+                            text = CSTRING(ModuleTeleportPlayers_player);
+                            toolTip = CSTRING(ModuleTeleportPlayers_player_desc);
                             x = 0;
                             y = 0;
                             w = W_PART(26);
@@ -228,8 +228,8 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
                         };
                         class Label: Title {
                             idc = -1;
-                            text = "Teleport Group";
-                            toolTip = "Teleports all units in group";
+                            text = CSTRING(ModuleTeleportPlayers_group);
+                            toolTip = CSTRING(ModuleTeleportPlayers_group_desc);
                             y = H_PART(7.1);
                             w = W_PART(10);
                         };

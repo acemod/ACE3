@@ -1,3 +1,19 @@
+/*
+ * Author: SilentSpike
+ * Initalises the `group side` zeus module display
+ *
+ * Arguments:
+ * 0: groupSide controls group <CONTROL>
+ *
+ * Return Value:
+ * NONE <NIL>
+ *
+ * Example:
+ * onSetFocus = "_this call ace_zeus_fnc_ui_groupSide"
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 
@@ -27,6 +43,9 @@ private _fnc_errorAndClose = {
 };
 
 switch (false) do {
+    case !(isNull _unit): {
+        [LSTRING(NothingSelected)] call _fnc_errorAndClose;
+    };
     case (_unit isKindOf "CAManBase"): {
         [LSTRING(OnlyInfantry)] call _fnc_errorAndClose;
     };
@@ -34,7 +53,7 @@ switch (false) do {
         [LSTRING(OnlyAlive)] call _fnc_errorAndClose;
     };
     case (_side in [west,east,independent,civilian]): {
-        ["Unit must belong to an appropriate side"] call _fnc_errorAndClose;
+        [LSTRING(OnlySpecificSide)] call _fnc_errorAndClose;
     };
 };
 

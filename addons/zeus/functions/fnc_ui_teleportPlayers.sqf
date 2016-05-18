@@ -1,3 +1,19 @@
+/*
+ * Author: SilentSpike
+ * Initalises the `teleport players` zeus module display
+ *
+ * Arguments:
+ * 0: teleportPlayers controls group <CONTROL>
+ *
+ * Return Value:
+ * NONE <NIL>
+ *
+ * Example:
+ * onSetFocus = "_this call ace_zeus_fnc_ui_teleportPlayers"
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 disableSerialization;
@@ -21,7 +37,7 @@ private _listbox = _display displayCtrl 16189;
 } forEach allPlayers;
 
 _listbox lbSetCurSel 0;
-(_display displayCtrl 16188) cbSetChecked (_logic setVariable ["tpGroup",false]);
+(_display displayCtrl 16188) cbSetChecked (_logic getVariable ["tpGroup",false]);
 
 private _fnc_onUnload = {
     params ["_display"];
@@ -35,7 +51,7 @@ private _fnc_onUnload = {
 
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
-    
+
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 

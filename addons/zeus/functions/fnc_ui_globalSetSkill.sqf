@@ -1,3 +1,19 @@
+/*
+ * Author: PabstMirror
+ * Initalises the `global skill` zeus module display
+ *
+ * Arguments:
+ * 0: globalSetSkill controls group <CONTROL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * onSetFocus = "_this call ace_zeus_fnc_ui_globalSetSkill"
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 disableSerialization;

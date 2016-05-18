@@ -1,3 +1,21 @@
+/*
+ * Author: SilentSpike
+ * Zeus module function to teleport players on dialog confirmation
+ *
+ * Arguments:
+ * 0: Teleport to <OBJECT>
+ * 1: Player UID <STRING>
+ * 2: Teleport group <BOOL>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * [player, "5854854754", false] call ace_zeus_fnc_moduleTeleportPlayers
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_logic","_uid","_group"];

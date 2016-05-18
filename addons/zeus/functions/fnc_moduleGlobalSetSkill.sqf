@@ -1,3 +1,20 @@
+/*
+ * Author: SilentSpike
+ * PV event handler to update the AI skill on all machines when set by zeus module
+ *
+ * Arguments:
+ * 0: Variable name <STRING>
+ * 1: Variable new value <ANY>
+ *
+ * Return Value:
+ * None <NIL>
+ *
+ * Example:
+ * "ace_zeus_GlobalSkillAI" addPublicVariableEventHandler ace_zeus_fnc_moduleGlobalSetSkill
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 _this params ["_varName","_varValue"];
