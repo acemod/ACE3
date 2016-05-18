@@ -15,7 +15,7 @@
 
 {
     _x params ["_time", "_objects"];
-    if (ACE_time - _time >= GVAR(litterCleanUpDelay)) then {
+    if (CBA_missionTime - _time >= GVAR(litterCleanUpDelay)) then {
         {
             deleteVehicle _x;
         } forEach _objects;

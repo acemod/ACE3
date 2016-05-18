@@ -37,4 +37,4 @@ _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 //Start server PFH asap
 [QGVAR(startFastRope), [_unit, _vehicle, _usableRope, _usableRopeIndex, false]] call EFUNC(common,serverEvent);
 moveOut _unit;
-[FUNC(fastRopeLocalPFH), 0, [_unit, _vehicle, _usableRope, _usableRopeIndex, ACE_diagTime]] call CBA_fnc_addPerFrameHandler;
+[FUNC(fastRopeLocalPFH), 0, [_unit, _vehicle, _usableRope, _usableRopeIndex, diag_tickTime]] call CBA_fnc_addPerFrameHandler;

@@ -47,7 +47,7 @@ TRACE_3("loadCoolestSpareBarrel5",_coolestTemp,_coolestMag,_weaponTemp);
 _gunner setVariable [format [QGVAR(%1_temp), _weapon], _coolestTemp, true];
 
 // Heat up the coolest barrel to the former weapon temperature
-[GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, ACE_Time, _barrelMass]] call CBA_fnc_hashSet;
+[GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, CBA_missionTime, _barrelMass]] call CBA_fnc_hashSet;
 
 // Send an event so the machines of the assistant and gunner can show the hint
 ["showWeaponTemperature", [_assistant, _gunner], [_gunner, _weapon]] call EFUNC(common,targetEvent);
