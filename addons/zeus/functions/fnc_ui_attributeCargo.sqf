@@ -29,5 +29,5 @@ TRACE_1("",_loaded);
 _control ctrlRemoveAllEventHandlers "setFocus";
 
 {
-    ((ctrlParent _control) displayCtrl 80086) lbAdd (str _x);
+    (_control controlsGroupCtrl 80086) lbAdd (str _x);
 } forEach _loaded;

@@ -3,8 +3,11 @@
 class CfgPatches {
     class ADDON {
         units[] = {
+            QGVAR(moduleDefendArea),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
+            QGVAR(modulePatrolArea),
+            QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
             QGVAR(moduleTeleportPlayers)
         };

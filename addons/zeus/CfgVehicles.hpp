@@ -104,6 +104,11 @@ class CfgVehicles {
         function = QFUNC(moduleCaptive);
         icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
     };
+    class GVAR(moduleDefendArea): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleDefendArea_DisplayName);
+        curatorInfoType = QGVAR(RscDefendArea);
+    };
     class GVAR(moduleGlobalSetSkill): GVAR(moduleBase) {
         displayName = CSTRING(ModuleGlobalSetSkill_DisplayName);
         curatorInfoType = QGVAR(RscGlobalSetSkill);
@@ -112,6 +117,16 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
+    };
+    class GVAR(modulePatrolArea): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModulePatrolArea_DisplayName);
+        curatorInfoType = QGVAR(RscPatrolArea);
+    };
+    class GVAR(moduleSearchArea): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSearchArea_DisplayName);
+        curatorInfoType = QGVAR(RscSearchArea);
     };
     class GVAR(moduleSearchNearby): GVAR(moduleBase) {
         curatorCanAttach = 1;

@@ -181,6 +181,9 @@
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Apri Catturato</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
+            <English>Defend Area</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
         </Key>
@@ -223,6 +226,9 @@
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
+            <English>Patrol Area</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
             <Polish>Przełącz kapitulację</Polish>
@@ -261,6 +267,9 @@
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
             <Italian>Apri Incosciente</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
+            <English>Search Area</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
@@ -434,6 +443,18 @@
             <Spanish>Añadir cualquier objeto creado a todos los directores en la misión</Spanish>
             <Czech>Přidá jakékoliv spawnuté objekty všem kurátorům v misi</Czech>
             <Italian>Aggiungi ogni oggetto creato a tutti i Curatori in missione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeCargo">
+            <English>Cargo:</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadius">
+            <English>Task Radius</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
+            <English>Radius to perform the task within</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
+            <English>Invalid radius entered</English>
         </Key>
     </Package>
 </Project>

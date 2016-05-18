@@ -20,6 +20,53 @@ class RscDisplayAttributes {
     };
 };
 
+class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeRadius));
+    idc = 26466;
+    x = 0;
+    y = 0;
+    w = W_PART(26);
+    h = H_PART(1.2);
+    class controls {
+        class Title1: RscText {
+            idc = -1;
+            text = CSTRING(AttributeRadius);
+            toolTip = CSTRING(AttributeRadius_desc);
+            x = 0;
+            y = H_PART(0.1);
+            w = W_PART(10);
+            h = H_PART(1);
+            colorBackground[] = {0,0,0,0.5};
+        };
+        class Radius: RscEdit {
+            idc = 26467;
+            x = W_PART(10.1);
+            y = H_PART(0.1);
+            w = W_PART(15.8);
+            h = H_PART(1);
+            autocomplete = "";
+        };
+    };
+};
+
+class GVAR(RscDefendArea): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+            };
+        };
+        class ButtonOK: ButtonOK {
+            onSetFocus = QUOTE(_this call FUNC(ui_defendArea));
+        };
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscGlobalSetSkill)))] call FUNC(zeusAttributes));
@@ -193,6 +240,42 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
     };
 };
 
+class GVAR(RscPatrolArea): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscPatrolArea)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscPatrolArea)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+            };
+        };
+        class ButtonOK: ButtonOK {
+            onSetFocus = QUOTE(_this call FUNC(ui_patrolArea));
+        };
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscSearchArea): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscSearchArea)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscSearchArea)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+            };
+        };
+        class ButtonOK: ButtonOK {
+            onSetFocus = QUOTE(_this call FUNC(ui_searchArea));
+        };
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
@@ -250,9 +333,9 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
 };
 
 
-class GVAR(cargoAttribute): RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE(_this call FUNC(ui_vehCargo));
-    idc = 80085;
+class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
+    onSetFocus = QUOTE(_this call FUNC(ui_attributeCargo));
+    idc = -1;
     x = X_PART(7);
     y = Y_PART(10);
     w = W_PART(26);
@@ -260,7 +343,7 @@ class GVAR(cargoAttribute): RscControlsGroupNoScrollbars {
     class controls {
         class Title: RscText {
             idc = -1;
-            text = "Cargo:";
+            text = CSTRING(AttributeCargo);
             x = 0;
             y = 0;
             w = W_PART(10);
@@ -290,7 +373,7 @@ class RscDisplayAttributesVehicle: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
             class Controls: controls {
-                class ace_cargo: GVAR(cargoAttribute) { };
+                class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
     };
@@ -300,7 +383,7 @@ class RscDisplayAttributesVehicleEmpty: RscDisplayAttributes {
     class Controls: Controls {
         class Content: Content {
             class Controls: controls {
-                class ace_cargo: GVAR(cargoAttribute) { };
+                class ace_cargo: GVAR(AttributeCargo) { };
             };
         };
     };
