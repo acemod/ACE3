@@ -262,6 +262,9 @@
             <Russian>Без сознания (вкл./выкл.)</Russian>
             <Italian>Apri Incosciente</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
+            <English>Search Nearby Building</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
             <German>Sanitäter zuweisen.</German>
@@ -386,6 +389,9 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_BuildingTooFar">
+            <English>Nearest building is too far away</English>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>

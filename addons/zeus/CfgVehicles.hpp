@@ -113,6 +113,11 @@ class CfgVehicles {
         displayName = CSTRING(ModuleGroupSide_DisplayName);
         curatorInfoType = QGVAR(RscGroupSide);
     };
+    class GVAR(moduleSearchNearby): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSearchNearby_DisplayName);
+        function = QFUNC(moduleSearchNearby);
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedic_DisplayName);

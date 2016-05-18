@@ -5,6 +5,7 @@ class CfgPatches {
         units[] = {
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
+            QGVAR(moduleSearchNearby),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

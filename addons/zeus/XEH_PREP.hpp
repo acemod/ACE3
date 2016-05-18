@@ -10,6 +10,7 @@ PREP(moduleAddSpareWheel);
 PREP(moduleCaptive);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);
+PREP(moduleSearchNearby);
 PREP(moduleSetMedic);
 PREP(moduleSetMedicalVehicle);
 PREP(moduleSetMedicalFacility);
