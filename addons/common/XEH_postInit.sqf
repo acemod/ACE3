@@ -386,7 +386,6 @@ GVAR(OldIsCamera) = false;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
-<<<<<<< HEAD
 
         // we don't want to trigger this just because your ammo counter decreased.
         _data = + GVAR(OldPlayerInventory);
