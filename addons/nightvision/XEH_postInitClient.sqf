@@ -29,12 +29,18 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerVisionModeChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["zeusDisplayChanged",      {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["cameraViewChanged",       {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerInventoryChanged", FUNC(updatePPEffects)] call EFUNC(common,addEventHandler);
+["playerVisionModeChanged", {
+    _this call FUNC(updatePPEffects);
+    _this call FUNC(onVisionModeChanged);
+}] call EFUNC(common,addEventHandler);
+
+["cameraViewChanged", {
+    _this call FUNC(updatePPEffects);
+    _this call FUNC(onCameraViewChanged);
+}] call EFUNC(common,addEventHandler);
+["playerVehicleChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["playerTurretChanged", {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
 
 // Add keybinds
 ["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
@@ -49,7 +55,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[201, [false, false, true]], false] call cba_fnc_addKeybind; //PageUp + ALT
+[201, [false, false, true]], false] call CBA_fnc_addKeybind; //PageUp + ALT
 
 ["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
 {
@@ -63,4 +69,8 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     true
 },
 {false},
-[209, [false, false, true]], false] call cba_fnc_addKeybind; //PageDown + ALT
+[209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
+
+// Register fire event handler
+["firedPlayer", DFUNC(blending)] call EFUNC(common,addEventHandler);
+["firedPlayerVehicle", DFUNC(blending)] call EFUNC(common,addEventHandler);

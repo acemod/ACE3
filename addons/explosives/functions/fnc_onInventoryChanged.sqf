@@ -26,10 +26,10 @@ private ["_config", "_detonators"];
 if (_receiver != ace_player) exitWith {};
 
 _config = ConfigFile >> "CfgWeapons" >> _item;
-if (isClass _config && {getNumber(_config >> "ACE_Detonator") == 1}) then {
+if (isClass _config && {getNumber(_config >> QGVAR(Detonator)) == 1}) then {
     private ["_clackerItems"];
     _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-    _receiver SetVariable [QGVAR(Clackers), (_receiver getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
+    _receiver setVariable [QGVAR(Clackers), (_receiver getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
 
     _detonators = [_giver] call FUNC(getDetonators);
     if (count _detonators == 0) then {

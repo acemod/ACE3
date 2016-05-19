@@ -16,7 +16,7 @@
 
 if(!hasInterface) exitWith { false };
 
-params ["_litterClass", "_position", "_unit"];
+params ["_litterClass", "_position", "_direction"];
 private["_litterObject", "_maxLitterCount"];
 //IGNORE_PRIVATE_WARNING(_values);
 
@@ -44,22 +44,7 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
 GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
+    // Start the litter cleanup loop
     GVAR(litterPFHRunning) = true;
-    [{
-        {
-            _x params ["_time", "_objects"];
-            if (ACE_time - _time >= GVAR(litterCleanUpDelay)) then {
-                {
-                    deleteVehicle _x;
-                } forEach _objects;
-                GVAR(allCreatedLitter) set[_foreachIndex, objNull];
-            };
-        } forEach GVAR(allCreatedLitter);
-        GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
-
-        if ( (count GVAR(allCreatedLitter)) == 0) exitwith {
-            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-            GVAR(litterPFHRunning) = false;
-        };
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
+    call FUNC(litterCleanupLoop);
 };

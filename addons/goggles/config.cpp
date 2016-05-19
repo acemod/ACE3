@@ -183,13 +183,13 @@ class CfgGlasses {
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_sport:G_Bandanna_blk {
+    class G_Bandanna_sport: G_Bandanna_shades {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_aviator:G_Bandanna_blk {
+    class G_Bandanna_aviator: G_Bandanna_shades {
         ACE_Color[] = {0,0,-1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;

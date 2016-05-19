@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [some_display, log] call ace_medical_menu_updateActivityLog
+ * [some_display, log] call ace_medical_menu_fnc_updateActivityLog
  *
  * Public: No
  */
@@ -24,14 +24,14 @@ _logCtrl = _display displayCtrl 214;
 lbClear _logCtrl;
 
 {
-    _x params ["_message", "_moment", "_dummy", "_arguments"];
+    _x params ["_message", "_moment", "", "_arguments"];
 
     if (isLocalized _message) then {
         _message = localize _message;
     };
 
     {
-        if (typeName _x == "STRING" && {isLocalized _x}) then {
+        if (_x isEqualType "" && {isLocalized _x}) then {
             _arguments set [_foreachIndex, localize _x];
         };
     } forEach _arguments;

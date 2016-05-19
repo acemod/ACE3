@@ -22,12 +22,16 @@ params ["_mode",["_args",[]]];
 switch (toLower _mode) do {
     case "onload": {
         _args params ["_display"];
+        SETUVAR(GVAR(interface),_display);
 
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
 
+        // Initalize the unit tree
+        ["onUnitsUpdate",[(_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE]] call FUNC(handleInterface);
+
         // Keep unit list and tree up to date
-        [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
+        [FUNC(handleUnits), 9, _display] call CBA_fnc_addPerFrameHandler;
 
         // Handle 3D unit icons
         GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
@@ -45,37 +49,36 @@ switch (toLower _mode) do {
             };
         } forEach [
             [localize LSTRING(uiControls),""],
-            [localize LSTRING(uiToggleUnits),"1"],
-            [localize LSTRING(uiToggleHelp),"2"],
-            [localize LSTRING(uiToggleTools),"3"],
-            [localize LSTRING(uiToggleCompass),"4"],
-            [localize LSTRING(uiToggleIcons),"5"],
-            [localize LSTRING(uiToggleMap),"M"],
-            [localize LSTRING(uiToggleInterface),"Backspace"],
+            [localize LSTRING(uiToggleUnits),keyName 2],
+            [localize LSTRING(uiToggleHelp),keyName 3],
+            [localize LSTRING(uiToggleTools),keyName 4],
+            [localize LSTRING(uiToggleCompass),keyName 5],
+            [localize LSTRING(uiToggleIcons),keyName 6],
+            [localize LSTRING(uiToggleMap),keyName 50],
+            [localize LSTRING(uiToggleInterface),keyName 14],
             [localize LSTRING(freeCamControls),""],
-            [localize LSTRING(freeCamForward),"W"],
-            [localize LSTRING(freeCamBackward),"S"],
-            [localize LSTRING(freeCamLeft),"A"],
-            [localize LSTRING(freeCamRight),"D"],
-            [localize LSTRING(freeCamUp),"Q"],
-            [localize LSTRING(freeCamDown),"Z"],
+            [localize LSTRING(freeCamForward),keyName 17],
+            [localize LSTRING(freeCamBackward),keyName 31],
+            [localize LSTRING(freeCamLeft),keyName 30],
+            [localize LSTRING(freeCamRight),keyName 32],
+            [localize LSTRING(freeCamUp),keyName 16],
+            [localize LSTRING(freeCamDown),keyName 44],
             [localize LSTRING(freeCamPan),"RMB (Hold)"],
             [localize LSTRING(freeCamDolly),"LMB (Hold)"],
             [localize LSTRING(freeCamBoost),"Shift (Hold)"],
-            [localize LSTRING(freeCamFocus),"F"],
             [localize LSTRING(attributeControls),""],
-            [localize LSTRING(nextCam),"Up Arrow"],
-            [localize LSTRING(prevCam),"Down Arrow"],
-            [localize LSTRING(nextUnit),"Right Arrow"],
-            [localize LSTRING(prevUnit),"Left Arrow"],
-            [localize LSTRING(nextVis),"N"],
-            [localize LSTRING(prevVis),"Ctrl + N"],
+            [localize LSTRING(nextCam),keyName 200],
+            [localize LSTRING(prevCam),keyName 208],
+            [localize LSTRING(nextUnit),keyName 205],
+            [localize LSTRING(prevUnit),keyName 203],
+            [localize LSTRING(nextVis),keyName 49],
+            [localize LSTRING(prevVis),format["%1 + %2",keyName 29,keyname 49]],
             [localize LSTRING(adjZoom),"Scrollwheel"],
-            [localize LSTRING(adjSpeed),"Ctrl + Scrollwheel"],
-            [localize LSTRING(incZoom),"Num-/Num+"],
-            [localize LSTRING(incSpeed),"Ctrl + Num-/Num+"],
-            [localize LSTRING(reZoom),"Alt + Num-"],
-            [localize LSTRING(reSpeed),"Alt + Num+"]
+            [localize LSTRING(adjSpeed),format["%1 + Scrollwheel",keyName 29]],
+            [localize LSTRING(incZoom),format["%1/%2",keyName 74,keyName 78]],
+            [localize LSTRING(incSpeed),format["%1 + %2/%3",keyName 29,keyName 74,keyName 78]],
+            [localize LSTRING(reZoom),format["%1 + %2",keyName 56,keyName 74]],
+            [localize LSTRING(reSpeed),format["%1 + %2",keyName 56,keyName 78]]
         ];
 
         // Handle support for BI's respawn counter
@@ -126,7 +129,6 @@ switch (toLower _mode) do {
         GVAR(heldKeys) resize 255;
         GVAR(mouse) = [false,false];
         GVAR(mousePos) = [0.5,0.5];
-        GVAR(treeSel) = objNull;
     };
     // Mouse events
     case "onmousebuttondown": {
@@ -174,12 +176,15 @@ switch (toLower _mode) do {
             [QGVAR(zeus)] call FUNC(interrupt);
             ["zeus"] call FUNC(handleInterface);
         };
-        if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
+        if (_dik in (actionKeys "Chat")) exitWith {
             false
+        };
+        if (_dik in (actionKeys "PrevChannel" + actionKeys "NextChannel")) exitWith {
+            !(isServer || serverCommandAvailable "#kick")
         };
 
         // Handle held keys (prevent repeat calling)
-        if (GVAR(heldKeys) param [_dik,false]) exitwith {};
+        if (GVAR(heldKeys) param [_dik,false]) exitWith {};
         // Exclude movement/adjustment keys so that speed can be adjusted on fly
         if !(_dik in [16,17,30,31,32,44,74,78]) then {
             GVAR(heldKeys) set [_dik,true];
@@ -226,19 +231,11 @@ switch (toLower _mode) do {
             case 32: { // D
                 GVAR(camDolly) set [0, GVAR(camSpeed) * ([1, 2] select _shift)];
             };
-            case 33: { // F
-                private ["_sel","_vector"];
-                _sel = GVAR(treeSel);
-                if ((GVAR(camMode) == 0) && {!isNull _sel} && {_sel in GVAR(unitList)}) then {
-                    _vector = (positionCameraToWorld [0,0,0]) vectorDiff (positionCameraToWorld [0,0,25]);
-                    [nil,nil,nil,(getPosATL _sel) vectorAdd _vector] call FUNC(setCameraAttributes);
-                };
-            };
             case 44: { // Z
                 GVAR(camBoom) = -0.5 * GVAR(camSpeed) * ([1, 2] select _shift);
             };
             case 49: { // N
-                if (GVAR(camMode) == 0) then {
+                if (GVAR(camMode) != 1) then {
                     if (_ctrl) then {
                         [nil,nil,-1] call FUNC(cycleCamera);
                     } else {
@@ -250,7 +247,7 @@ switch (toLower _mode) do {
                 [_display,nil,nil,nil,true] call FUNC(toggleInterface);
             };
             case 57: { // Spacebar
-                // Freecam attachment here, if in external then set cam pos and attach
+                // Switch between unit and freecam here
             };
             case 74: { // Num -
                 if (_alt) exitWith { [nil,nil,nil,nil,nil,nil, 1.25] call FUNC(setCameraAttributes); };
@@ -261,7 +258,7 @@ switch (toLower _mode) do {
                 };
             };
             case 78: { // Num +
-                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 2.5] call FUNC(setCameraAttributes); };
+                if (_alt) exitWith { [nil,nil,nil,nil,nil,nil,nil, 1.5] call FUNC(setCameraAttributes); };
                 if (_ctrl) then {
                     [nil,nil,nil,nil,nil,nil,nil, GVAR(camSpeed) + 0.05] call FUNC(setCameraAttributes);
                 } else {
@@ -335,42 +332,42 @@ switch (toLower _mode) do {
             [_newMode,_newUnit] call FUNC(transitionCamera);
         };
     };
-    case "ontreeselchanged": {
-        _args params ["_tree","_sel"];
-
-        if (count _sel == 3) then {
-            GVAR(treeSel) = objectFromNetId (_tree tvData _sel);
-        } else {
-            GVAR(treeSel) = objNull;
-        };
-    };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_cachedUnits","_cachedGrps","_cachedSides","_s","_g","_grp","_u","_unit","_side"];
+        private ["_cachedUnits","_cachedGrps","_cachedSides","_sT","_gT","_uT","_s","_g","_u","_grp","_unit","_side"];
 
         // Cache existing group and side nodes and cull removed data
         _cachedUnits = [];
         _cachedGrps = [];
         _cachedSides = [];
-        for "_s" from 0 to ((_tree tvCount []) - 1) do {
-            for "_g" from 0 to ((_tree tvCount [_s]) - 1) do {
+        // Track deleted nodes to account for decrease in index
+        _sT = _tree tvCount [];
+        for [{_s = 0;}, {_s < _sT}, {_s = _s + 1}] do {
+            _gT = _tree tvCount [_s];
+
+            for [{_g = 0;}, {_g < _gT}, {_g = _g + 1}] do {
                 _grp = groupFromNetID (_tree tvData [_s,_g]);
 
                 if (_grp in GVAR(groupList)) then {
                     _cachedGrps pushBack _grp;
                     _cachedGrps pushBack _g;
 
-                    for "_u" from 0 to ((_tree tvCount [_s,_g])) do {
+                    _uT = _tree tvCount [_s,_g];
+                    for [{_u = 0;}, {_u < _uT}, {_u = _u + 1}] do {
                         _unit = objectFromNetId (_tree tvData [_s,_g,_u]);
 
                         if (_unit in GVAR(unitList)) then {
                             _cachedUnits pushBack _unit;
                         } else {
                             _tree tvDelete [_s,_g,_u];
+                            _u = _u - 1;
+                            _uT = _uT - 1;
                         };
                     };
                 } else {
                     _tree tvDelete [_s,_g];
+                    _g = _g - 1;
+                    _gT = _gT - 1;
                 };
             };
 
@@ -379,6 +376,8 @@ switch (toLower _mode) do {
                 _cachedSides pushBack _s;
             } else {
                 _tree tvDelete [_s];
+                _s = _s - 1;
+                _sT = _sT - 1;
             };
         };
 
@@ -470,13 +469,13 @@ switch (toLower _mode) do {
 
         // PFH to re-open display when menu closes
         [{
-            if !(isNull (findDisplay 49)) exitWith {};
+            if !(isNull (_this select 0)) exitWith {};
 
             // If still a spectator then re-enter the interface
             [QGVAR(escape),false] call FUNC(interrupt);
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
-        },0] call CBA_fnc_addPerFrameHandler;
+        },0,_dlg] call CBA_fnc_addPerFrameHandler;
     };
     case "zeus": {
         openCuratorInterface;

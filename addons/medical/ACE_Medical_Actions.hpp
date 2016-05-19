@@ -16,7 +16,6 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     // Advanced medical
@@ -28,7 +27,6 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -95,7 +93,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         enableInside = 1;
         icon = PATHTOF(UI\icons\bandage.paa);
     };
@@ -107,7 +104,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
     };
     class TriageCard {
@@ -118,9 +114,18 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
         icon = PATHTOF(UI\icons\triageCard.paa);
+    };
+    class Diagnose {
+        displayName = CSTRING(Actions_Diagnose);
+        distance = 5.0;
+        condition = QUOTE([ARR_4(_player, _target, 'body', 'Diagnose')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'body', 'Diagnose')] call DFUNC(treatment));
+        EXCEPTIONS
+        showDisabled = 0;
+        priority = 2;
+        icon = "";
     };
 
     // Advanced medical
@@ -132,7 +137,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
         icon = PATHTOF(UI\icons\bandage.paa);
     };
@@ -197,7 +201,6 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -210,7 +213,6 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -245,6 +247,13 @@ class ACE_ArmLeft {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = PATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Adenosine);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\autoInjector.paa);
     };
@@ -355,7 +364,6 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -368,7 +376,6 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -401,6 +408,14 @@ class ACE_ArmRight {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = PATHTOF(UI\icons\autoInjector.paa);
+    };
+
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Adenosine);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\autoInjector.paa);
     };
@@ -510,7 +525,6 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -524,7 +538,6 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -557,6 +570,13 @@ class ACE_LegLeft {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = PATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Atropine);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\autoInjector.paa);
     };
@@ -653,7 +673,6 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
 
@@ -667,7 +686,6 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = PATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
@@ -700,6 +718,13 @@ class ACE_LegRight {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = PATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Atropine);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(treatment));
         EXCEPTIONS
         icon = PATHTOF(UI\icons\autoInjector.paa);
     };

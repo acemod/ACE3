@@ -1,24 +1,23 @@
 /*
  * Author: Nou
- *
  * Execute a event only on specific clients.
  *
- * Argument:
- * 0: Event name (string)
- * 1: Event targets (object or array of objects)
- * 2: Event args (any)
+ * Arguments:
+ * 0: Event name (STRING)
+ * 1: Event targets <OBJECT, ARRAY>
+ * 2: Event args <ANY>
  *
  * Note: If local executor is in list of targets, event will execute with
  * network delay, and not immediatly.
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleNetEvent");
-
-PARAMS_3(_eventName,_eventTargets,_eventArgs);
+params ["_eventName", "_eventTargets", "_eventArgs"];
 
 #ifdef DEBUG_EVENTS
     ACE_LOGINFO_2("* Target Event: %1 - %2",_eventName,_eventTargets);
@@ -26,7 +25,8 @@ PARAMS_3(_eventName,_eventTargets,_eventArgs);
 #endif
 
 ACEc = [_eventName, _eventTargets, _eventArgs];
-if(!isServer) then {
+
+if (!isServer) then {
     publicVariableServer "ACEc";
 } else {
     ["ACEc", ACEc] call FUNC(_handleNetEvent);

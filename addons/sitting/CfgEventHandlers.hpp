@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -14,6 +21,15 @@ class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
             killed = QUOTE(_this call DFUNC(handleInterrupt));
+        };
+    };
+};
+
+// Need initPost or there are problems with setVariable
+class Extended_InitPost_EventHandlers {
+    class ThingX {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(addSitActions));
         };
     };
 };

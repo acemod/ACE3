@@ -22,13 +22,15 @@ source code of the individual modules.
 When publishing a derivative of this product you may not use a name that
 might create the impression that your version is an official release.
 
-Some folders of this project may contain a seperate LICENSE file. Should
+Some folders of this project may contain a separate LICENSE file. Should
 that be the case, everything in that folder and all subfolders is subject
 to that license instead.
 
+ - ARMA PUBLIC LICENSE (\addons\apl)
+ - CreativeCommons Attributions 3.0 (\addons\fastroping\data\sounds)
 
 ============================================================================
-                   Full Gnu General Public License Text
+                   Full GNU General Public License Text
 ============================================================================
 
 

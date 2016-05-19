@@ -27,6 +27,18 @@ if (isServer) then {
         TRACE_1("Knocked Out, Doing Deadman", _unit);
         [_unit] call FUNC(onIncapacitated);
     }] call EFUNC(common,addEventHandler);
+
+    ["clientRequestsOrientations", {
+        params ["_logic"];
+        TRACE_1("clientRequestsOrientations received:",_logic);
+        // Filter the array before sending it
+        GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
+            _x params ["_explosive"];
+            (!isNull _explosive && {alive _explosive})
+        };
+        TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
+        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
+    }] call EFUNC(common,addEventHandler);
 };
 
 if (!hasInterface) exitWith {};
@@ -36,6 +48,26 @@ GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;
 
+// In case we are a JIP client, ask the server for orientation of any previously
+// placed mine.
+if (didJIP) then {
+    ["serverSendsOrientations", {
+        params ["_explosivesOrientations"];
+        TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
+        {
+            _x params ["_explosive","_direction","_pitch"];
+            TRACE_3("orientation set:",_explosive,_direction,_pitch);
+            [_explosive, _direction, _pitch] call FUNC(setPosition);
+        } forEach _explosivesOrientations;
+        deleteVehicle GVAR(localLogic);
+        GVAR(localLogic) = nil;
+    }] call EFUNC(common,addEventHandler);
+
+    //  Create a logic to get the client ID
+    GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
+    TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
+    ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
+};
 
 ["interactMenuOpened", {
     //Cancel placement if interact menu opened
@@ -43,9 +75,7 @@ GVAR(CurrentSpeedDial) = 0;
         GVAR(placeAction) = PLACE_CANCEL;
     };
 
-    //Show defuse actions on cfgAmmos (allMines):
+    //Show defuse actions on CfgAmmos (allMines):
     _this call FUNC(interactEH);
 
 }] call EFUNC(common,addEventHandler);
-
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(common,addScrollWheelEventHandler);

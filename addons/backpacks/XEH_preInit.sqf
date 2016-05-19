@@ -2,8 +2,6 @@
 
 ADDON = false;
 
-PREP(backpackOpened);
-PREP(isBackpack);
-PREP(onOpenInventory);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

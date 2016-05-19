@@ -1,7 +1,7 @@
 ace_ui
 =======
 
-Changes the chat contrast on the map to allow easier reading.
+Removes vignette, changes the chat contrast on the map to allow easier reading and provides settings to hide or show different UI elements.
 
 
 ## Maintainers
@@ -9,3 +9,4 @@ Changes the chat contrast on the map to allow easier reading.
 The people responsible for merging changes to this component or answering potential questions.
 
 - [VKing](https://github.com/VKing6)
+- [Jonpas](https://github.com/jonpas)

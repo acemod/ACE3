@@ -1,24 +1,25 @@
 /*
  * Author: commy2
- *
  * Get the muzzles of a weapon.
  *
- * Argument:
- * 0: A weapon in cfgWeapons (String)
+ * Arguments:
+ * 0: Weapon <STRING>
  *
- * Return value:
- * All weapon muzzles (Array)
+ * Return Value:
+ * All weapon muzzles <ARRAY>
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_muzzles"];
+params [["_weapon", "", [""]]];
 
-PARAMS_1(_weapon);
+private _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
 
-_muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
-
-if ("this" in _muzzles) then {
-    _muzzles set [_muzzles find "this", _weapon];
-};
+{
+    if (_x == "this") then {
+        _muzzles set [_forEachIndex, configName (configFile >> "CfgWeapons" >> _weapon)];
+    };
+} forEach _muzzles;
 
 _muzzles

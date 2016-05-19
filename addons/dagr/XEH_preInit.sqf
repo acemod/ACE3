@@ -2,11 +2,6 @@
 
 ADDON = false;
 
-PREP(handleRangeFinderData);
-PREP(menuInit);
-PREP(outputData);
-PREP(outputVector);
-PREP(outputWP);
-PREP(toggleOverlay);
+#include "XEH_PREP.hpp"
 
 ADDON = true;

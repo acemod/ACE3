@@ -11,7 +11,7 @@ GVAR(pfeh_id) = -1;
     if (!GVAR(enabled)) exitWith {};
 
     [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call EFUNC(common,addEventHandler);
-    
+
     ["ACE3 Common",
     QGVAR(finger),
     [(localize LSTRING(keyComb)), (localize LSTRING(keyComb_description))],
@@ -19,5 +19,5 @@ GVAR(pfeh_id) = -1;
         _this call FUNC(keyPress);
     },
     {false},
-    [41, [true, false, false]], true] call cba_fnc_addKeybind; // Shift + Tilda (hold)
+    [41, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + Tilda (hold)
 }] call EFUNC(common,addEventHandler);

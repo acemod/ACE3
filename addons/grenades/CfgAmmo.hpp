@@ -1,3 +1,4 @@
+
 class CfgAmmo {
     class FlareCore;
     class FlareBase: FlareCore {

@@ -15,7 +15,7 @@
 
 params ["_unit"];
 
-if (!local _unit) exitwith {};
+if (!local _unit) exitWith {};
 
 private "_bodyStatus";
 

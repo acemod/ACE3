@@ -24,13 +24,11 @@ _player removeMagazines "ACE_FiredMissileDummy";
 
 if (isNull _display) exitWith {};
 
-private ["_launcher", "_control", "_config"];
-
-_launcher = secondaryWeapon _player;
+private _launcher = secondaryWeapon _player;
 
 if (_launcher == "" || {getText (configFile >> "CfgWeapons" >> _launcher >> "ACE_UsedTube") == ""}) then {
-    _control = _display displayCtrl 627;
-    _config = configFile >> "RscDisplayInventory" >> "controls" >> "SlotSecondaryMagazine";
+    private _control = _display displayCtrl 627;
+    private _config = configFile >> "RscDisplayInventory" >> "controls" >> "SlotSecondaryMagazine";
     _control ctrlSetPosition [getNumber (_config >> "x"), getNumber (_config >> "y"), getNumber (_config >> "w"), getNumber (_config >> "h")];
     _control ctrlCommit 0;
 
@@ -39,7 +37,7 @@ if (_launcher == "" || {getText (configFile >> "CfgWeapons" >> _launcher >> "ACE
     _control ctrlSetPosition [getNumber (_config >> "x"), getNumber (_config >> "y"), getNumber (_config >> "w"), getNumber (_config >> "h")];
     _control ctrlCommit 0;
 } else {
-    _control = _display displayCtrl 627;
+    private _control = _display displayCtrl 627;
     _control ctrlSetPosition [0, 0, 0, 0];
     _control ctrlCommit 0;
 

@@ -1,34 +1,44 @@
 /*
  * Author: commy2
- *
  * Compares version numbers of PBOs and DLLs.
  *
- * Argument:
- * None.
+ * Arguments:
+ * None
  *
- * Return value:
- * None.
+ * Return Value:
+ * None
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 ///////////////
 // check addons
 ///////////////
-private "_version";
-_version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
+private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
 ACE_LOGINFO_1("ACE is version %1.",_version);
 
-private "_addons";
-//_addons = activatedAddons; // broken with High-Command module, see #2134
-_addons = "true" configClasses (configFile >> "CfgPatches");//
-_addons = [_addons, {toLower configName _this}] call FUNC(map);//
-_addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
+//CBA Versioning check - close main display if using incompatible version
+private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
+private _cbaRequiredAr = (getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA")) select 1;
+ACE_LOGINFO_2("CBA is version %1 [min required %2]",_cbaVersionAr,_cbaRequiredAr);
+if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
+    private _errorMsg = format ["CBA Version [%1] is outdated [required %2]", _cbaVersionAr, _cbaRequiredAr];
+    ACE_LOGERROR(_errorMsg);
+    if (hasInterface) then {
+        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+    };
+};
+
+//private _addons = activatedAddons; // broken with High-Command module, see #2134
+private _addons = "true" configClasses (configFile >> "CfgPatches");//
+_addons = _addons apply {toLower configName _x};//
+_addons = _addons select {_x find "ace_" == 0};
 
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
-        private "_errorMsg";
-        _errorMsg = format ["File %1.pbo is outdated.", _x];
+        private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
         ACE_LOGERROR(_errorMsg);
 
@@ -36,15 +46,17 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
         };
     };
-} forEach _addons;
+    false
+} count _addons;
 
 ///////////////
 // check dlls
 ///////////////
 {
-    if (_x callExtension "version" == "") then {
-        private "_errorMsg";
-        _errorMsg = format ["Extension %1.dll not installed.", _x];
+    private _versionEx = _x callExtension "version";
+
+    if (_versionEx == "") then {
+        private _errorMsg = format ["Extension %1.dll not installed.", _x];
 
         ACE_LOGERROR(_errorMsg);
 
@@ -53,14 +65,18 @@ _addons = [_addons, {_this find "ace_" == 0}] call FUNC(filter);
         };
     } else {
         // Print the current extension version
-        ACE_LOGINFO_2("Extension version: %1: %2",_x,(_x callExtension "version"));
+        ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
     };
-} forEach getArray (configFile >> "ACE_Extensions" >> "extensions");
+    false
+} count getArray (configFile >> "ACE_Extensions" >> "extensions");
 
 ///////////////
 // check server version/addons
 ///////////////
 if (isMultiplayer) then {
+    // don't check optional addons
+    _addons = _addons select {getNumber (configFile >> "CfgPatches" >> _x >> "ACE_isOptional") != 1};
+
     if (isServer) then {
         // send servers version of ACE to all clients
         GVAR(ServerVersion) = _version;
@@ -72,13 +88,10 @@ if (isMultiplayer) then {
         [{
             if (isNil QGVAR(ServerVersion) || isNil QGVAR(ServerAddons)) exitWith {};
 
-            private ["_version","_addons"];
-            _version = (_this select 0) select 0;
-            _addons = (_this select 0) select 1;
+            (_this select 0) params ["_version", "_addons"];
 
             if (_version != GVAR(ServerVersion)) then {
-                private "_errorMsg";
-                _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
                 ACE_LOGERROR(_errorMsg);
 

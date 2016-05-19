@@ -55,7 +55,7 @@ if (((count _weaponConfig) < 1) || {(getNumber (_weaponConfig select 0)) != 1}) 
         _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
     };
 
-    [(_this select 1)] call cba_fnc_removePerFrameHandler;
+    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfehID) = -1;
 };
 
@@ -65,6 +65,10 @@ _newTarget = objNull;
 // Bail on fast movement
 if ((velocity ACE_player) distance [0,0,0] > 0.5 && {cameraView == "GUNNER"} && {cameraOn == ACE_player}) exitWith {    // keep it steady.
     ACE_player switchCamera "INTERNAL";
+    if (player != ACE_player) then {
+        TRACE_2("Zeus, manually reseting RC after switchCamera",player,ACE_player);
+        player remoteControl ACE_player;
+    };
 };
 
 // Refresh the firemode
@@ -94,8 +98,17 @@ if (_range > 50 && {_range < 2500}) then {
     };
 };
 
-if (isNull _newTarget) then {
-    _newTarget = cursorTarget;
+if ((isNull _newTarget) && {cursorObject isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorObject, ace_player, cursorObject, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorObject;
+        };
+};
+if ((isNull _newTarget) && {cursorTarget isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorTarget, ace_player, cursorTarget, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorTarget;
+        };
 };
 
 // Create constants

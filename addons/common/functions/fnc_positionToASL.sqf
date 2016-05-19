@@ -10,7 +10,7 @@
  * Return Value:
  * None
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

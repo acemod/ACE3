@@ -8,3 +8,22 @@
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
 }] call EFUNC(common,addEventHandler);
+
+// Create a radio channel for any spectators to text chat in
+if (isServer) then {
+    GVAR(channel) = radioChannelCreate [[0.729,0.149,0.098,1],"Spectator","Spectator (%UNIT_NAME)",[]];
+    publicVariable QGVAR(channel);
+};
+
+// Should prevent unending spectator on mission end
+if (isServer) then {
+    addMissionEventHandler ["Ended", {
+        [QGVAR(endMission), []] call EFUNC(common,globalEvent);
+    }];
+};
+
+[QGVAR(endMission), {
+    if (GVAR(isSet)) then {
+        [false] call FUNC(setSpectator);
+    };
+}] call EFUNC(common,addEventHandler);

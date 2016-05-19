@@ -31,4 +31,4 @@ namespace ace {
     };
 
     typedef transform_matrix_base<float> transform_matrix;
-};
+}

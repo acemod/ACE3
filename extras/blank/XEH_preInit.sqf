@@ -2,6 +2,6 @@
 
 ADDON = false;
 
-PREP(empty);
+#include "XEH_PREP.hpp"
 
 ADDON = true;
