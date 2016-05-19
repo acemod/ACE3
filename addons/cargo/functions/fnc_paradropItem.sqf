@@ -18,8 +18,7 @@
 
 params ["_item", "_vehicle"];
 
-private "_loaded";
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 if !(_item in _loaded) exitWith {false};
 
@@ -27,16 +26,14 @@ if !(_item in _loaded) exitWith {false};
 _loaded deleteAt (_loaded find _item);
 _vehicle setVariable [QGVAR(loaded), _loaded, true];
 
-private ["_cargoSpace", "_itemSize"];
+private _cargoSpace = [_vehicle] call FUNC(getCargoSpaceLeft);
+private _itemSize = [_item] call FUNC(getSizeItem);
 
-_cargoSpace = [_vehicle] call FUNC(getCargoSpaceLeft);
-_itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), _cargoSpace - _itemSize, true];
 
 detach _item;
 
-private "_position";
-_position = (vectorDir _vehicle vectorMultiply -15) vectorAdd getPosASL _vehicle;
+private _position = (vectorDir _vehicle vectorMultiply -15) vectorAdd getPosASL _vehicle;
 
 _item setPosASL _position;
 
@@ -48,16 +45,14 @@ _item setPosASL _position;
 
     if (isNull _item || {getPos _item select 2 < 1}) exitWith {};
 
-    private "_parachute";
-    _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
+    private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 
     _parachute attachTo [_item, [0,0,0]];//
     detach _parachute;//
 
     _item attachTo [_parachute, [0,0,-1]];
 
-    private "_light";
-    _light = "Chemlight_yellow" createVehicle [0,0,0];
+    private _light = "Chemlight_yellow" createVehicle [0,0,0];
     _light attachTo [_item, [0,0,0]];
 
 }, [_item], 0.7, 0] call EFUNC(common,waitAndExecute);
@@ -71,8 +66,7 @@ _item setPosASL _position;
     };
 
     if (getPos _item select 2 < 1) then {
-        private "_smoke";
-        _smoke = "SmokeshellYellow" createVehicle [0,0,0];
+        private _smoke = "SmokeshellYellow" createVehicle [0,0,0];
         _smoke attachTo [_item, [0,0,0]];
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
