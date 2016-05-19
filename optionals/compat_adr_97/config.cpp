@@ -6,7 +6,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"A3_Weapons_F_Mod"};
-    author[]={"Nic547"};
+        author[] = {"Nic547"};
         VERSION_CONFIG;
     };
 };
