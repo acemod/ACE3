@@ -67,7 +67,7 @@ private _fnc_onConfirm = {
     private _unit = effectiveCommander (attachedTo _logic);
     private _radius = GETVAR(_display,GVAR(radius),50);
 
-    [QGVAR(moduleDefendArea), _unit, [_unit,nil,_radius]] call EFUNC(common,targetEvent);
+    [QGVAR(moduleDefendArea), _unit, [_unit,getPosASL _logic,_radius]] call EFUNC(common,targetEvent);
     deleteVehicle _logic;
 };
 

@@ -48,3 +48,4 @@ switch (false) do {
 
 //Perform the module function:
 [QGVAR(moduleSearchNearby), _unit, [_unit]] call EFUNC(common,targetEvent);
+deleteVehicle _logic;
