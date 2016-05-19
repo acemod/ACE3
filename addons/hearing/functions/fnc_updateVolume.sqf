@@ -19,10 +19,7 @@
 if (!alive ACE_player) then {
     if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
     TRACE_1("dead - removing hearing effects",ACE_player);
-    1 fadeSound 1;
-    1 fadeSpeech 1;
-    ACE_player setVariable ["tf_globalVolume", 1];
-    if (!isNil "acre_api_fnc_setGlobalVolume") then {[1] call acre_api_fnc_setGlobalVolume;};
+    [QUOTE(ADDON), 1, true] call EFUNC(common,setHearingCapability);
 };
 
 (_this select 0) params ["_justUpdateVolume"];
