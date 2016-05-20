@@ -25,6 +25,7 @@ if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
 };
 
 // Get show/hide boolean from a set element if set via API
+// Inversion only needed if inverted, otherwise parameter can be used directly as it is the same
 if ([_idd, _elements, !_show] in GVAR(elementsSet)) then {
     _show = !_show;
 };
