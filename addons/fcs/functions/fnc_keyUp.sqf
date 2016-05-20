@@ -24,6 +24,8 @@ if (isNil "_distance") then {
         getNumber (_turretConfig >> QGVAR(MaxDistance)),
         getNumber (_turretConfig >> QGVAR(MinDistance))
     ] call FUNC(getRange);
+} else {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };
 
 // MOVING TARGETS
