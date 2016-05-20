@@ -14,6 +14,7 @@
 #include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
+TRACE_5("params",_vehicle,_turret,_distance,_showHint,_playSound);
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 

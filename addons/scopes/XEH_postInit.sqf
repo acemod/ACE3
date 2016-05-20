@@ -33,8 +33,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMinor), localize LSTRING(AdjustUpMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -46,8 +48,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMinor), localize LSTRING(AdjustDownMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -59,8 +63,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMinor), localize LSTRING(AdjustLeftMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -72,8 +78,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMinor), localize LSTRING(AdjustRightMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -85,8 +93,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMajor), localize LSTRING(AdjustUpMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -98,8 +108,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMajor), localize LSTRING(AdjustDownMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -111,8 +123,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMajor), localize LSTRING(AdjustLeftMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -124,8 +138,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMajor), localize LSTRING(AdjustRightMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
