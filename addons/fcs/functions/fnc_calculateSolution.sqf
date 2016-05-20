@@ -15,6 +15,7 @@
  */
 #include "script_component.hpp"
 params ["_vehicle","_turret","_distance","_angleTarget"];
+TRACE_4("params",_vehicle,_turret,_distance,_angleTarget);
 
 private _FCSMagazines = [];
 private _FCSElevation = [];
