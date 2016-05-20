@@ -35,7 +35,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -50,7 +50,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -65,7 +65,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -80,7 +80,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -95,7 +95,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -110,7 +110,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -125,7 +125,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
@@ -140,7 +140,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call FUNC(canAdjustScope))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     [ACE_player] call FUNC(inventoryCheck);
 
