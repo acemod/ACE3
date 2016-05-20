@@ -16,6 +16,12 @@
  */
 #include "script_component.hpp"
 
+if (!alive ACE_player) exitWith {
+    if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
+    TRACE_1("dead - removing hearing effects",ACE_player);
+    [QUOTE(ADDON), 1, true] call EFUNC(common,setHearingCapability);
+};
+
 (_this select 0) params ["_justUpdateVolume"];
 
 GVAR(deafnessDV) = (GVAR(deafnessDV) min 20) max 0;
@@ -54,9 +60,4 @@ if (ACE_player getVariable ["ACE_isUnconscious", false]) then {
     _volume = _volume min GVAR(UnconsciousnessVolume);
 };
 
-private _soundTransitionTime = if (_justUpdateVolume) then {0.1} else {1};
-
-_soundTransitionTime fadeSound _volume;
-_soundTransitionTime fadeSpeech _volume;
-ACE_player setVariable ["tf_globalVolume", _volume];
-if (!isNil "acre_api_fnc_setGlobalVolume") then {[_volume^(0.33)] call acre_api_fnc_setGlobalVolume;};
+[QUOTE(ADDON), _volume, true] call EFUNC(common,setHearingCapability);
