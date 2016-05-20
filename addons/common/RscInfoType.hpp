@@ -111,4 +111,8 @@ class RscInGameUI {
     class RscStaminaBar {
         onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStaminaBar"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable [ARR_2(QUOTE(QGVAR(dlgStaminaBar)),_this select 0)]);
     };
+
+    class RscStanceInfo {
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStanceInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Stance')])] call FUNC(localEvent););
+    };
 };

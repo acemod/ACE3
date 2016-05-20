@@ -75,7 +75,7 @@ class CfgVehicles {
                 displayName = CSTRING(AmmoCount);
                 description = CSTRING(RequiresSoldierVehicleWeaponInfo);
                 typeName = "BOOL";
-                defaultValue = 0;
+                defaultValue = 1;
             };
             class magCount {
                 displayName = CSTRING(MagCount);
