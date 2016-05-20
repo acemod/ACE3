@@ -85,7 +85,7 @@ class ACE_Settings {
         displayName = CSTRING(AmmoCount);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
-        value = 0;
+        value = 1;
         isClientSettable = 1;
     };
     class GVAR(magCount) {
@@ -122,7 +122,7 @@ class ACE_Settings {
     };
     class GVAR(weaponLowerInfoBackground) {
         category = CSTRING(Category);
-        displayName = CSTRING(WeaponLowerInfoBackground); //todo
+        displayName = CSTRING(WeaponLowerInfoBackground);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
         value = 1;

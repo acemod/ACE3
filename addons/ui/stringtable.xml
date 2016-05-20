@@ -127,5 +127,8 @@
             <English>Modifying User Interface is disabled.</English>
             <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
         </Key>
+        <Key ID="STR_ACE_UI_Disabled">
+            <English>Cannot modify a forced User Interface element.</English>
+        </Key>
     </Package>
 </Project>
