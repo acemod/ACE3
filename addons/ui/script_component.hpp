@@ -56,7 +56,7 @@ RscUnitInfo = 300
 + 1203 (Firing Mode Background)
 
 155 (Ammo Type)
-184 (Ammo Count) - disabled in config by ace_reload
+184 (Ammo Count) - disabled by default if ace_reload is loaded
 185 (Magazine Count)
 152 (Grenade/Flare Type)
 151 (Grenade/Flare Count)
