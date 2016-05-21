@@ -334,6 +334,7 @@ GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon objNull;
 GVAR(OldPlayerInventory) = [];
+GVAR(OldPlayerInventoryNoAmmo) = [];
 GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
 GVAR(OldCameraView) = "";
 GVAR(OldVisibleMap) = false;
@@ -385,7 +386,32 @@ GVAR(OldIsCamera) = false;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
-        ["playerInventoryChanged", [ACE_player, _data]] call FUNC(localEvent);
+
+        // we don't want to trigger this just because your ammo counter decreased.
+        _data = + GVAR(OldPlayerInventory);
+
+        private _weaponInfo = _data param [0, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, primaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        _weaponInfo = _data param [1, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, secondaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        _weaponInfo = _data param [2, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, handgunMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        if !(_data isEqualTo GVAR(OldPlayerInventoryNoAmmo)) then {
+            GVAR(OldPlayerInventoryNoAmmo) = _data;
+            ["playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call FUNC(localEvent);
+        };
     };
 
     // "playerVisionModeChanged" event
