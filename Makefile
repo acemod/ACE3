@@ -20,6 +20,22 @@ $(BIN)/optionals/ace_%.pbo: optionals/%
 all: $(patsubst addons/%, $(BIN)/addons/ace_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/ace_%.pbo, $(wildcard optionals/*))
 
+$(BIN)/keys/%.biprivatekey:
+	@mkdir -p $(BIN)/keys
+	@echo "  KEY  $@"
+	@armake keygen -f $(patsubst $(BIN)/keys/%.biprivatekey, $(BIN)/keys/%, $@)
+
+$(BIN)/addons/ace_%.pbo.ace_$(VERSION).bisign: $(BIN)/addons/ace_%.pbo $(BIN)/keys/ace_$(VERSION).biprivatekey
+	@echo "  SIG  $@"
+	@armake sign -f $(BIN)/keys/ace_$(VERSION).biprivatekey $<
+
+$(BIN)/optionals/ace_%.pbo.ace_$(VERSION).bisign: $(BIN)/optionals/ace_%.pbo $(BIN)/keys/ace_$(VERSION).biprivatekey
+	@echo "  SIG  $@"
+	@armake sign -f $(BIN)/keys/ace_$(VERSION).biprivatekey $<
+
+signatures: $(patsubst addons/%, $(BIN)/addons/ace_%.pbo.ace_$(VERSION).bisign, $(wildcard addons/*)) \
+		$(patsubst optionals/%, $(BIN)/optionals/ace_%.pbo.ace_$(VERSION).bisign, $(wildcard optionals/*))
+
 extensions: $(wildcard extensions/*/*)
 	cd extensions/build && cmake .. && make
 	find ./extensions/build/ \( -name "*.so" -o -name "*.dll" \) -exec cp {} ./ \;
@@ -30,7 +46,7 @@ extensions-win64: $(wildcard extensions/*/*)
 clean:
 	rm -rf $(BIN) ace3_*.zip
 
-release: all
+release: clean signatures
 	@echo "  ZIP  ace3_$(VERSION).zip"
 	@cp *.dll LICENSE README.md AUTHORS.txt logo_ace3_ca.paa mod.cpp meta.cpp $(BIN)
 	@zip -r ace3_$(VERSION).zip @ace &> /dev/null
