@@ -14,4 +14,6 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-((fullCrew [_vehicle, "turret", true] select {!(_x select 4)}) apply {_x select 3}) select {getNumber ([_vehicle, _x] call CBA_fnc_getTurret >> "isCopilot") != 1} // return
+fullCrew [_vehicle, "turret", true] select {!(_x select 4)} apply {_x select 3} select {
+    getNumber ([_vehicle, _x] call CBA_fnc_getTurret >> "isCopilot") != 1
+} // return
