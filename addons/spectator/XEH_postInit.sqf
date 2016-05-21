@@ -27,3 +27,5 @@ if (isServer) then {
         [false] call FUNC(setSpectator);
     };
 }] call EFUNC(common,addEventHandler);
+
+[QGVAR(stageSpectator), FUNC(stageSpectator)] call EFUNC(common,addEventHandler);

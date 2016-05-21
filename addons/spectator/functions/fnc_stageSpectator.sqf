@@ -27,7 +27,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
 if !(local _unit) exitWith {
-    [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
+    [QGVAR(stageSpectator), _unit, [_unit, _set]] call EFUNC(common,objectEvent);
 };
 
 // Prevent unit falling into water
