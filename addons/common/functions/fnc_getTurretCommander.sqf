@@ -14,4 +14,4 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-fullCrew [_vehicle, "commander", true] apply {_x select 3} param [0, []] // return
+(fullCrew [_vehicle, "commander", true] apply {_x select 3}) param [0, []] // return
