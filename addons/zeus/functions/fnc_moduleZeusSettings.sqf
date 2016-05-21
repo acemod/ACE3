@@ -24,3 +24,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(radioOrdnance), "radioOrdnance"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(revealMines), "revealMines"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(remoteWind), "remoteWind"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(autoAddObjects), "autoAddObjects"] call EFUNC(common,readSettingFromModule);

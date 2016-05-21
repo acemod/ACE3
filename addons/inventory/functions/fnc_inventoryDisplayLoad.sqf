@@ -28,7 +28,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
 [{
     disableSerialization;
     params ["_filter"];
-    
+
     // remove "All", so we can push it to the back later.
     // to keep localization we can keep the lbText (displayed name).
     private _index = lbSize _filter - 1;

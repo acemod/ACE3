@@ -116,8 +116,6 @@ if (GVAR(openedMenuType) >= 0) then {
 
 if(!_foundTarget && GVAR(actionSelected)) then {
     GVAR(actionSelected) = false;
-    GVAR(expanded) = false;
-    GVAR(lastPath) = [];
 };
 for "_i" from GVAR(iconCount) to (count GVAR(iconCtrls))-1 do {
     ctrlDelete (GVAR(iconCtrls) select _i);

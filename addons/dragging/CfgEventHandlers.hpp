@@ -55,3 +55,9 @@ class Extended_AnimChanged_EventHandlers {
         };
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMission {
+        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+    };
+};

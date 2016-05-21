@@ -142,6 +142,7 @@
             <Polish>Noktowizja</Polish>
             <Italian>Visione Notturna</Italian>
             <Spanish>Visión Nocturna</Spanish>
+            <French>Vision nocturne</French>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
@@ -152,6 +153,7 @@
             <Polish>Ustawienia noktowizorów</Polish>
             <Italian>Impostazioni per visione notturna.</Italian>
             <Spanish>Parámetros para visión nocturna</Spanish>
+            <French>Réglage pour la vision nocturne</French>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -162,6 +164,7 @@
             <Polish>Wył. NVG przy celowaniu</Polish>
             <Italian>Disabilita NVG nei mirini</Italian>
             <Spanish>Desactivar NVG en miras</Spanish>
+            <French>Desactiver les JVN dans les viseurs.</French>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
@@ -172,6 +175,7 @@
             <Polish>Uniemożliwia korzystanie z gogli noktowizyjnych przy celowaniu.</Polish>
             <Italian>Blocca l'uso di visori notturni mentre miri con ottiche.</Italian>
             <Spanish>Desactiva el uso de gafas visión nocturna cuando se utilizan miras normales.</Spanish>
+            <French>Bloque l'usage des JVN pendant la visée.</French>
         </Key>
     </Package>
 </Project>

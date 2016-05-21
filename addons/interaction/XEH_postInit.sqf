@@ -32,8 +32,6 @@ if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
 
-[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
-
 ["tapShoulder", {
     params ["_unit", "_shoulderNum"];
 

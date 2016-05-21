@@ -18,12 +18,11 @@ private ["_color", "_index", "_lastPos", "_lastSpd", "_max", "_positions", "_sta
         } else {
             _data2 = _positions select (_index + ACE_TRACE_DRAW_INC);
         };
-        
+
         _pos1 = _data1 select 0;
         _pos2 = _data2 select 0;
         _index = _index + ACE_TRACE_DRAW_INC;
-        
-        
+
         drawLine3D [_pos1, _pos2, _color];
         _lastPos = _pos2;
         _lastSpd = _data1 select 1;

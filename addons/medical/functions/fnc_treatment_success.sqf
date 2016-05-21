@@ -92,7 +92,7 @@ _args call FUNC(createLitter);
 
 //If we're not already tracking vitals, start:
 if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
-    [_target] call FUNC(addToInjuredCollection);
+    [_target] call FUNC(addVitalLoop);
 };
 
 ["medical_treatmentSuccess", [_caller, _target, _selectionName, _className]] call EFUNC(common,localEvent);

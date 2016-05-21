@@ -16,12 +16,13 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define REFUEL_INFINITE_FUEL -1
+#define REFUEL_INFINITE_FUEL -10
 #define REFUEL_ACTION_DISTANCE 7
 #define REFUEL_HOSE_LENGTH 12
 
 #define REFUEL_HOLSTER_WEAPON \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
+    _unit call EFUNC(common,fixLoweredRifleAnimation); \
     _unit action ["SwitchWeapon", _unit, _unit, 99];
 
 #define REFUEL_UNHOLSTER_WEAPON \

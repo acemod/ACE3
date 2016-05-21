@@ -32,3 +32,9 @@ class Extended_Put_EventHandlers {
         GVAR(takeHandler) = QUOTE([ARR_3(_this select 1, _this select 0, _this select 2)] call FUNC(onInventoryChanged));
     };
 };
+
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMission {
+        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+    };
+};

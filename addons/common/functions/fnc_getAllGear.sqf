@@ -33,7 +33,11 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_showDeprecated", true]];
+
+if (_showDeprecated) then {
+    ACE_DEPRECATED("ace_common_fnc_getAllGear","3.7.0","getUnitLoadout");
+};
 
 if (isNull _unit) exitWith {[
     "",

@@ -17,14 +17,6 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
-class Extended_InventoryOpened_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            clientInventoryOpened = QUOTE(_this call FUNC(onOpenInventory););
-        };
-    };
-};
-
 class Extended_InitPost_EventHandlers {
     class Car {
         class ADDON {

@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+["SettingsInitialized", {
+    // Hold on a little bit longer to ensure anims will work
+    [{
+        GVAR(captivityEnabled) = true;
+    }, [], 0.05] call EFUNC(common,waitAndExecute);
+}] call EFUNC(common,addEventHandler);
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
@@ -33,10 +39,3 @@ if (!hasInterface) exitWith {};
 ["isNotEscorting", {!(GETVAR(_this select 0,GVAR(isEscorting),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotHandcuffed", {!(GETVAR(_this select 0,GVAR(isHandcuffed),false))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotSurrendering", {!(GETVAR(_this select 0,GVAR(isSurrendering),false))}] call EFUNC(common,addCanInteractWithCondition);
-
-["SettingsInitialized", {
-    // Hold on a little bit longer to ensure anims will work
-    [{
-        GVAR(captivityEnabled) = true;
-    }, [], 0.05] call EFUNC(common,waitAndExecute);
-}] call EFUNC(common,addEventHandler);

@@ -3,6 +3,9 @@
 
 if (!hasInterface) exitWith {};
 
+["playerChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
+["playerInventoryChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
+
 ["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
 {
     // Conditions: canInteract

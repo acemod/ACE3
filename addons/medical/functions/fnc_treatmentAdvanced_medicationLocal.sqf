@@ -64,6 +64,7 @@ if (isNil _hrCallback) then {
 } else {
     _hrCallback = missionNamespace getVariable _hrCallback;
 };
+if (!(_hrCallback isEqualType {})) then {_hrCallback = {TRACE_1("callback was NOT code",_hrCallback)};};
 
 // Adjust the heart rate based upon config entry
 _heartRate = _target getVariable [QGVAR(heartRate), 70];

@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Reload a launcher
  *
  * Argument:
@@ -11,10 +10,13 @@
  *
  * Return value:
  * NONE
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_4(_unit,_target,_weapon,_magazine);
+params ["_unit","_target","_weapon","_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
 _target selectWeapon _weapon;
 

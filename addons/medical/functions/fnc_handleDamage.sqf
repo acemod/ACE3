@@ -77,6 +77,10 @@ _minLethalDamage = if (_typeIndex >= 0) then {
     0.01
 };
 
+if (!isNull _shooter) then {
+    _unit setvariable [QGVAR(lastDamageSource), _shooter, false];
+};
+
 private _vehicle = vehicle _unit;
 private _effectiveSelectionName = _selection;
 if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_shooter in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selection == ""}) then {
@@ -98,7 +102,8 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call 
     _damageReturn = _damageReturn min 0.89;
 };
 
-[_unit] call FUNC(addToInjuredCollection);
+// Start the loop that tracks the unit vitals
+[_unit] call FUNC(addVitalLoop);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     private _delayedUnconsicous = false;

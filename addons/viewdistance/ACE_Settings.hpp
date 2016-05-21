@@ -1,11 +1,13 @@
 class ACE_Settings {
     class GVAR(enabled) {
+        category = CSTRING(Module_DisplayName);
         typeName = "BOOL";
         value = 1;
         displayName = CSTRING(enabled_DisplayName);
         description = CSTRING(enabled_Description);
     };
     class GVAR(viewDistanceOnFoot) {
+        category = CSTRING(Module_DisplayName);
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index, NOT value // Can set it to client's actual viewdistance in the init function once ACE_Settings supports numbers (if ever).
@@ -14,6 +16,7 @@ class ACE_Settings {
         description = CSTRING(onFoot_Description);
     };
     class GVAR(viewDistanceLandVehicle) {
+        category = CSTRING(Module_DisplayName);
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index, NOT value
@@ -22,6 +25,7 @@ class ACE_Settings {
         description = CSTRING(landVehicle_Description);
     };
     class GVAR(viewDistanceAirVehicle) {
+        category = CSTRING(Module_DisplayName);
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index, NOT value
@@ -30,12 +34,14 @@ class ACE_Settings {
         description = CSTRING(airVehicle_Description);
     };
     class GVAR(limitViewDistance) {
+        category = CSTRING(Module_DisplayName);
         typeName = "SCALAR";
         value = 10000; // Value, NOT index. 10000 is the maximum in A3
         displayName = CSTRING(limit_DisplayName);
         description = CSTRING(limit_setting);
     };
     class GVAR(objectViewDistanceCoeff) {
+        category = CSTRING(Module_DisplayName);
         typeName = "SCALAR";
         isClientSettable = 1;
         value = 0; // index. Actual coefficient is given by functions/fnc_returnObjectCoeff.sqf

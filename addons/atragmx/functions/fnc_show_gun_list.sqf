@@ -21,6 +21,5 @@ GVAR(showGunList) = _this;
 
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 6002);
-    
     lbSetCurSel [6000, GVAR(currentGun)];
 };

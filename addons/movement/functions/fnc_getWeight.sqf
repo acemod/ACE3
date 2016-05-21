@@ -17,7 +17,18 @@
 
 params ["_unit"];
 
-private _weight = loadAbs _unit * 0.1;
+private _virtualLoad = 0;
+
+{
+    _virtualLoad = _virtualLoad + (_x getVariable [QGVAR(vLoad), 0]);
+} forEach [
+    _unit,
+    uniformContainer _unit,
+    vestContainer _unit,
+    backpackContainer _unit
+];
+
+private _weight = (loadAbs _unit + _virtualLoad) * 0.1;
 
 if (GVAR(useImperial)) then {
     _weight = format ["%1lb", (round (_weight * 100)) / 100];

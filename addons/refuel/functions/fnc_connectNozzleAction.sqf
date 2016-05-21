@@ -119,13 +119,18 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
                 };
             };
         };
-        [[_nozzle, _dirAndUp], "{(_this select 0) setVectorDirAndUp (_this select 1)}", 2] call EFUNC(common,execRemoteFnc);
+        ["setVectorDirAndUp", _nozzle, [_nozzle, _dirAndUp]] call EFUNC(common,objectEvent);
         _nozzle setVariable [QGVAR(sink), _target, true];
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _target setVariable [QGVAR(nozzle), _nozzle, true];
 
         _source = _nozzle getVariable QGVAR(source);
-        _source setVariable [QGVAR(fuelCounter), [_source] call FUNC(getFuel), true];
+        private _fuel = [_source] call FUNC(getFuel);
+        if (_fuel == REFUEL_INFINITE_FUEL) then {
+            _source setVariable [QGVAR(fuelCounter), 0, true];
+        } else {
+            _source setVariable [QGVAR(fuelCounter), _fuel, true];
+        };
 
         [_unit, _target, _nozzle, _endPosTestOffset] call FUNC(refuel);
     },
