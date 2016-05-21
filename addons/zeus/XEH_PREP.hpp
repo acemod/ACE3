@@ -19,6 +19,7 @@ PREP(moduleTeleportPlayers);
 PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
 PREP(ui_attributeCargo);
+//PREP(ui_attributePosition);
 PREP(ui_attributeRadius);
 PREP(ui_defendArea);
 PREP(ui_globalSetSkill);

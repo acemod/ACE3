@@ -66,9 +66,10 @@ private _fnc_onConfirm = {
 
     private _unit = effectiveCommander (attachedTo _logic);
     private _radius = GETVAR(_display,GVAR(radius),50);
+    private _position = GETVAR(_display,GVAR(position),getPos _logic);
     private _marker = QGVAR(ModuleSearchArea) + str(_unit);
 
-    createMarker [_marker, getPosASL _logic];
+    createMarker [_marker, _position];
     _marker setMarkerAlpha 0;
     _marker setMarkerShape "ELLIPSE";
     _marker setMarkerSize [_radius,_radius];

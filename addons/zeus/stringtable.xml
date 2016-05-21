@@ -447,6 +447,12 @@
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
         </Key>
+        <Key ID="STR_ACE_Zeus_AttributePosition">
+            <English>Task Position</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributePosition_desc">
+            <English>Select a position to perform the task at</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
         </Key>

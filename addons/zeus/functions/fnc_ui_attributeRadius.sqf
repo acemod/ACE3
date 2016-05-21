@@ -24,7 +24,7 @@ _control ctrlRemoveAllEventHandlers "setFocus";
 //Specific on-load stuff:
 private _edit = _control controlsGroupCtrl 26467;
 
-_edit ctrlSetText "50";
+_edit ctrlSetText "100";
 
 private _fnc_onKeyUp = {
     params ["_display"];
@@ -36,7 +36,6 @@ private _fnc_onKeyUp = {
     if (_radius == 0) then {
         _edit ctrlSetTooltip (localize LSTRING(AttributeRadiusInvalid));
         _edit ctrlSetTextColor [1,0,0,1];
-        SETVAR(_display,GVAR(radius),50);
     } else {
         _edit ctrlSetTooltip "";
         _edit ctrlSetTextColor [1,1,1,1];

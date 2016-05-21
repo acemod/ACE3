@@ -7,6 +7,7 @@ class RscEdit;
 class RscXSliderH;
 class RscCheckBox;
 class RscActivePicture;
+class RscMapControl;
 
 class RscDisplayAttributes {
     class Controls {
@@ -49,6 +50,34 @@ class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
     };
 };
 
+class GVAR(AttributePosition): RscControlsGroupNoScrollbars {
+    onSetFocus = QUOTE(_this call FUNC(ui_attributePosition));
+    idc = 26468;
+    x = 0;
+    y = 0;
+    w = W_PART(26);
+    h = H_PART(26);
+    class controls {
+        class Title1: RscText {
+            idc = -1;
+            text = CSTRING(AttributePosition);
+            toolTip = CSTRING(AttributePosition_desc);
+            x = 0;
+            y = 0;
+            w = W_PART(26);
+            h = H_PART(1);
+            colorBackground[] = {0,0,0,0.5};
+        };
+        class Position: RscMapControl {
+            idc = 26469;
+            x = W_PART(0.5);
+            y = H_PART(1.1);
+            w = W_PART(25);
+            h = H_PART(24.8);
+        };
+    };
+};
+
 class GVAR(RscDefendArea): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscDefendArea)))] call FUNC(zeusAttributes));
@@ -58,6 +87,7 @@ class GVAR(RscDefendArea): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
+                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
@@ -249,6 +279,7 @@ class GVAR(RscPatrolArea): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
+                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
@@ -267,6 +298,7 @@ class GVAR(RscSearchArea): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
+                //class position: GVAR(AttributePosition) {};
             };
         };
         class ButtonOK: ButtonOK {
