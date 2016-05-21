@@ -208,59 +208,59 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
                     w = W_PART(26);
                     h = H_PART(2.5);
                     class controls {
-                		class Title: RscText {
-                			idc = 31002;
-                			text = "$STR_disp_arcunit_side";
-                			x = 0;
-                			y = 0;
-                			w = W_PART(10);
-                			h = H_PART(2.5);
-                			colorBackground[] = {0,0,0,0.5};
-                		};
-                		class Background: RscText {
-                			idc = 31000;
-                			x = W_PART(10);
-                			y = 0;
-                			w = W_PART(16);
-                			h = H_PART(2.5);
-                			colorBackground[] = {1,1,1,0.1};
-                		};
-                		class BLUFOR: RscActivePicture {
-                			idc = 31200;
-                			text = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";
-                			x = W_PART(12.5);
-                			y = H_PART(0.25);
-                			w = W_PART(2);
-                			h = H_PART(2);
-                			tooltip = "$STR_WEST";
-                		};
-                		class OPFOR: BLUFOR {
-                			idc = 31201;
-                			text = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa";
-                			x = W_PART(15.5);
-                			y = H_PART(0.25);
-                			w = W_PART(2);
-                			h = H_PART(2);
-                			tooltip = "$STR_EAST";
-                		};
-                		class Independent: BLUFOR {
-                			idc = 31202;
-                			text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
-                			x = W_PART(18.5);
-                			y = H_PART(0.25);
-                			w = W_PART(2);
-                			h = H_PART(2);
-                			tooltip = "$STR_guerrila";
-                		};
-                		class Civilian: BLUFOR {
-                			idc = 31203;
-                			text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
-                			x = W_PART(21.5);
-                			y = H_PART(0.25);
-                			w = W_PART(2);
-                			h = H_PART(2);
-                			tooltip = "$STR_Civilian";
-                		};
+                        class Title: RscText {
+                            idc = 31002;
+                            text = "$STR_disp_arcunit_side";
+                            x = 0;
+                            y = 0;
+                            w = W_PART(10);
+                            h = H_PART(2.5);
+                            colorBackground[] = {0,0,0,0.5};
+                        };
+                        class Background: RscText {
+                            idc = 31000;
+                            x = W_PART(10);
+                            y = 0;
+                            w = W_PART(16);
+                            h = H_PART(2.5);
+                            colorBackground[] = {1,1,1,0.1};
+                        };
+                        class BLUFOR: RscActivePicture {
+                            idc = 31200;
+                            text = "\a3\Ui_f\data\Map\Markers\NATO\b_unknown.paa";
+                            x = W_PART(12.5);
+                            y = H_PART(0.25);
+                            w = W_PART(2);
+                            h = H_PART(2);
+                            tooltip = "$STR_WEST";
+                        };
+                        class OPFOR: BLUFOR {
+                            idc = 31201;
+                            text = "\a3\Ui_f\data\Map\Markers\NATO\o_unknown.paa";
+                            x = W_PART(15.5);
+                            y = H_PART(0.25);
+                            w = W_PART(2);
+                            h = H_PART(2);
+                            tooltip = "$STR_EAST";
+                        };
+                        class Independent: BLUFOR {
+                            idc = 31202;
+                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            x = W_PART(18.5);
+                            y = H_PART(0.25);
+                            w = W_PART(2);
+                            h = H_PART(2);
+                            tooltip = "$STR_guerrila";
+                        };
+                        class Civilian: BLUFOR {
+                            idc = 31203;
+                            text = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
+                            x = W_PART(21.5);
+                            y = H_PART(0.25);
+                            w = W_PART(2);
+                            h = H_PART(2);
+                            tooltip = "$STR_Civilian";
+                        };
                     };
                 };
             };
