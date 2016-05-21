@@ -345,7 +345,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Actions_FieldDressing">
             <English>Field Dressing</English>
-            <German>Verbandpäckchen</German>
+            <German>Bandage (Einfach)</German>
             <Spanish>Compresa de campaña</Spanish>
             <Russian>Бинтовая повязка</Russian>
             <Czech>Obinadlo</Czech>
@@ -789,7 +789,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
-            <German>Bandage (Standard)</German>
+            <German>Bandage (Einfach)</German>
             <Russian>Повязка (обычная)</Russian>
             <Spanish>Vendaje (Básico)</Spanish>
             <French>Bandage (Standard)</French>
@@ -1252,7 +1252,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen (Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
