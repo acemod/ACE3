@@ -47,6 +47,7 @@ clean:
 	rm -rf $(BIN) ace3_*.zip
 
 release: clean signatures
+	@rm $(BIN)/keys/*.biprivatekey
 	@echo "  ZIP  ace3_$(VERSION).zip"
 	@cp *.dll LICENSE README.md AUTHORS.txt logo_ace3_ca.paa mod.cpp meta.cpp $(BIN)
 	@zip -r ace3_$(VERSION).zip @ace &> /dev/null
