@@ -39,7 +39,7 @@ if (!alive _unit) exitWith {
     _unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
-    ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+    ["medical_onUnconscious", [_unit, false]] call CBA_fnc_globalEvent;
 
     TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , QGVAR(unconscious));
 
@@ -96,7 +96,7 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         };
         _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
 
-        ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+        ["medical_onUnconscious", [_unit, false]] call CBA_fnc_globalEvent;
         // EXIT PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };

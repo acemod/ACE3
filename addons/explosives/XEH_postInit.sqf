@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 //Event for setting explosive placement angle/pitch:
-[QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
+[QGVAR(place), {_this call FUNC(setPosition)}] call CBA_fnc_addEventHandler;
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
@@ -26,7 +26,7 @@ if (isServer) then {
         if (!_isUnconscious) exitWith {};
         TRACE_1("Knocked Out, Doing Deadman", _unit);
         [_unit] call FUNC(onIncapacitated);
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 
     ["clientRequestsOrientations", {
         params ["_logic"];
@@ -37,8 +37,8 @@ if (isServer) then {
             (!isNull _explosive && {alive _explosive})
         };
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", _logic, [GVAR(explosivesOrientations)]] call EFUNC(common,targetEvent);
-    }] call EFUNC(common,addEventHandler);
+        ["serverSendsOrientations", [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -61,12 +61,12 @@ if (didJIP) then {
         } forEach _explosivesOrientations;
         deleteVehicle GVAR(localLogic);
         GVAR(localLogic) = nil;
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 
     //  Create a logic to get the client ID
     GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
-    ["clientRequestsOrientations", [GVAR(localLogic)]] call EFUNC(common,serverEvent);
+    ["clientRequestsOrientations", [GVAR(localLogic)]] call CBA_fnc_serverEvent;
 };
 
 ["interactMenuOpened", {
@@ -78,4 +78,4 @@ if (didJIP) then {
     //Show defuse actions on CfgAmmos (allMines):
     _this call FUNC(interactEH);
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

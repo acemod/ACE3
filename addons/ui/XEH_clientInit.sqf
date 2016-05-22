@@ -15,7 +15,7 @@ if (!hasInterface) exitWith {};
         {
             [_x select 0, _x select 1, _x select 2, _force] call FUNC(setAdvancedElement);
         } forEach ELEMENTS_ADVANCED;
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 
     // On changing settings
     ["SettingChanged", {
@@ -35,6 +35,6 @@ if (!hasInterface) exitWith {};
                 TRACE_2("Setting Changed",_name,_elementName);
             };
         } forEach ELEMENTS_ADVANCED;
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

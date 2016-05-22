@@ -64,7 +64,7 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
 
-    ["spectatorStaged",[_set]] call EFUNC(common,localEvent);
+    ["spectatorStaged",[_set]] call CBA_fnc_localEvent;
 };
 
 //BandAid for #2677 - if player in unitList weird before being staged, weird things can happen

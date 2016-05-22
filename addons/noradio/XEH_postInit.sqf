@@ -21,4 +21,4 @@ if (!hasInterface) exitWith {};
     if (alive _oldPlayer) then {
         [_oldPlayer, "isPlayer"] call EFUNC(common,unmuteUnit);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;

@@ -48,4 +48,4 @@ GVAR(AssignedItemsShownItems) = [
     showWatch _showWatch;
     showRadio _showRadio;
     showGPS (_showGPS || {cameraOn == getConnectedUAV _unit});  //If player is activly controling a UAV, showGPS controls showing the map (m key)
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addEventHandler;

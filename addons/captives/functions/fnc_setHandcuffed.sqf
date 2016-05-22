@@ -124,4 +124,4 @@ if (_state) then {
 };
 
 //Global Event after changes:
-["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call EFUNC(common,globalEvent);
+["CaptiveStatusChanged", [_unit, _state, "SetHandcuffed"]] call CBA_fnc_globalEvent;

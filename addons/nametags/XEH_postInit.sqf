@@ -26,7 +26,7 @@ GVAR(showNamesTime) = -10;
 ["SettingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
 ["SettingChanged", {
@@ -34,4 +34,4 @@ GVAR(showNamesTime) = -10;
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

@@ -28,9 +28,9 @@ _target setVariable [QGVAR(owner), _unit, true];
 // lock target object
 if (_lockTarget) then {
     if (!isNull _unit) then {
-        ["lockVehicle", _target, _target] call FUNC(targetEvent);
+        ["lockVehicle", _target, _target] call CBA_fnc_targetEvent;
     } else {
-        ["unlockVehicle", _target, _target] call FUNC(targetEvent);
+        ["unlockVehicle", _target, _target] call CBA_fnc_targetEvent;
     };
 };
 

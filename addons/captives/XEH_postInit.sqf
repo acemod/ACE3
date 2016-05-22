@@ -5,7 +5,7 @@
     [{
         GVAR(captivityEnabled) = true;
     }, [], 0.05] call EFUNC(common,waitAndExecute);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
@@ -24,15 +24,15 @@ if (isServer) then {
     }];
 };
 
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
-["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
+["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
+["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
+["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
 
-["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
-["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
+["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
+["SetSurrendered", {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
+["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

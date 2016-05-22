@@ -39,7 +39,7 @@ if !(_set) exitWith {
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
+    ["setUnconscious", [_unit, _set, _minWaitingTime, _force], _unit] call CBA_fnc_targetEvent;
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
@@ -122,4 +122,4 @@ _startingTime = ACE_time;
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
-["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
+["medical_onUnconscious", [_unit, true]] call CBA_fnc_globalEvent;

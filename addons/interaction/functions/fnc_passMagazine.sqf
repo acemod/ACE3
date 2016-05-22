@@ -51,4 +51,4 @@ _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 
 _playerName = [_player] call EFUNC(common,getName);
 _magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
-["displayTextStructured", [_target], [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target]] call EFUNC(common,targetEvent);
+["displayTextStructured", [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;

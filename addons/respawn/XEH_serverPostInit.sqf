@@ -14,4 +14,4 @@
             false
         }];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

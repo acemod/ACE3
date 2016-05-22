@@ -60,7 +60,7 @@ if (isNil _name) then {
         createMarker [_respawnMarker, _rallypoint];
     };
 
-    ["rallypointMoved", [_rallypoint, _side]] call EFUNC(common,globalEvent);
+    ["rallypointMoved", [_rallypoint, _side]] call CBA_fnc_globalEvent;
 } else {
     deleteVehicle _rallypoint;
     ACE_LOGERROR("Multiple Rallypoints of same type.");

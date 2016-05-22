@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["AddCargoByClass", {_this call FUNC(addCargoItem)}] call EFUNC(common,addEventHandler);
+["AddCargoByClass", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 
 ["LoadCargo", {
     params ["_item", "_vehicle"];
@@ -13,13 +13,13 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
 
     if (_loaded) then {
         // Invoke listenable event
-        ["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["cargoLoaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 ["UnloadCargo", {
     params ["_item", "_vehicle", ["_unloader", objNull]];
@@ -34,19 +34,19 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
 
     if (_unloaded) then {
         // Invoke listenable event
-        ["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
 
     // TOOO maybe drag/carry the unloaded item?
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 ["ServerUnloadCargo", {
     params ["_item", "_emptyPosAGL"];
 
     _item hideObjectGlobal false;
     _item setPosASL (AGLtoASL _emptyPosAGL);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

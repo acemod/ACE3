@@ -35,5 +35,5 @@ GVAR(pfID) = -1;
                 GVAR(pfID) = -1;
             };
         };
-    }] call EFUNC(common,addEventHandler);
-}] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

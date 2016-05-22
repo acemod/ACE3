@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
-["overpressure", FUNC(overpressureDamage)] call EFUNC(common,addEventHandler);
+["overpressure", FUNC(overpressureDamage)] call CBA_fnc_addEventHandler;
 
 // Register fire event handler
-["firedPlayer", DFUNC(firedEHBB)] call EFUNC(common,addEventHandler);
-["firedPlayerVehicle", DFUNC(firedEHOP)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(firedEHBB)] call CBA_fnc_addEventHandler;
+["firedPlayerVehicle", DFUNC(firedEHOP)] call CBA_fnc_addEventHandler;

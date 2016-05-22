@@ -17,4 +17,4 @@
 
 params ["_unit", "_target"];
 
-["SetHandcuffed", [_target], [_target, false]] call EFUNC(common,targetEvent);
+["SetHandcuffed", [_target, false], [_target]] call CBA_fnc_targetEvent;

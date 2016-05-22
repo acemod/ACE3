@@ -8,4 +8,4 @@
             GVAR(categories) pushBack (_x select 8);
         };
     }forEach EGVAR(common,settings);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

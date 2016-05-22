@@ -24,7 +24,7 @@ if (!hasInterface) exitWith {};
     TRACE_3("setAmmoSync EH",_unit,_weapon,_ammo);
 
     _unit setAmmo [_weapon, _ammo];
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 // Listen for attempts to link ammo
 ["linkedAmmo", {
@@ -35,7 +35,7 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if it's the wrong type
     if (_magazineType != (_magazine select 0)) exitWith {
-        ["returnedAmmo", [_giver], [_giver,_receiver,_magazine]] call EFUNC(common,targetEvent);
+        ["returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     private _ammoCount = _receiver ammo currentWeapon _receiver;
@@ -43,17 +43,17 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if the belt is full or empty
     if ((_ammoCount == 0)  || _ammoMissing == 0) exitWith {
-        ["returnedAmmo", [_giver], [_giver,_receiver,_magazine]] call EFUNC(common,targetEvent);
+        ["returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     // Add the ammo
     private _ammoAdded = _ammoMissing min (_magazine select 1);
-    ["setAmmoSync", [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call EFUNC(common,globalEvent);
+    ["setAmmoSync", [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call CBA_fnc_globalEvent;
 
     if ((_magazine select 1) - _ammoAdded > 0) then {
-        ["returnedAmmo", [_giver], [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]]] call EFUNC(common,targetEvent);
+        ["returnedAmmo", [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 // Listen for returned magazines
 ["returnedAmmo", {
@@ -61,4 +61,4 @@ if (!hasInterface) exitWith {};
     TRACE_2("returnedAmmo EH",_receiver,_magazine);
 
     _receiver addMagazine _magazine;
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;

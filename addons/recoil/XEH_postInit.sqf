@@ -1,4 +1,4 @@
 #include "script_component.hpp"
 
 // Register fire event handler
-["firedPlayer", DFUNC(camShake)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(camShake)] call CBA_fnc_addEventHandler;

@@ -13,6 +13,6 @@ if (!hasInterface) exitWith {};
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call EFUNC(common,addCanInteractWithCondition);
 
     // Handle interruptions
-    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-}] call EFUNC(common,addEventHandler);
+    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

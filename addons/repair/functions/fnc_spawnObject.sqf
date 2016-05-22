@@ -28,7 +28,7 @@ _newObject setPosASL _position;
 
 _newObject setDamage _damage;
 
-["fixCollision", _newObject] call EFUNC(common,localEvent);
-["fixPosition", _newObject] call EFUNC(common,localEvent);
+["fixCollision", _newObject] call CBA_fnc_localEvent;
+["fixPosition", _newObject] call CBA_fnc_localEvent;
 
 _newObject

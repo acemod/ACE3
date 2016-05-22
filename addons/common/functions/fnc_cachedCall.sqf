@@ -46,7 +46,7 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < ACE_diagTime) then {
                 } forEach _cacheList;
                 // Empty the list
                 missionNamespace setVariable [_varName, []];
-            }] call FUNC(addEventhandler);
+            }] call CBA_fnc_addEventHandler;
         };
 
         // Add this cache to the list of the event

@@ -15,4 +15,4 @@ call FUNC(initWind);
     if (GVAR(enableServerController)) then {
         [FUNC(serverController), GVAR(serverUpdateInterval)] call CBA_fnc_addPerFrameHandler;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

@@ -31,8 +31,8 @@ private _hitPointsDamage = [];
 //if lamp is on turn it off
 private _eventName = ["lampTurnOn", "lampTurnOff"] select _isOn;
 if(local _lamp) then {
-    [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call EFUNC(common,localEvent);
+    [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call CBA_fnc_localEvent;
 } else {
-    [_eventName, [_lamp], [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG]] call EFUNC(common,targetEvent);
+    [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG], [_lamp]] call CBA_fnc_targetEvent;
 };
 _lamp setVariable ["ACE_lampOn", !_isOn, true];

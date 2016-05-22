@@ -3,8 +3,8 @@
 
 if (!hasInterface) exitWith {};
 
-["playerChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
-["playerInventoryChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
+["playerChanged", FUNC(handleVirtualMass)] call CBA_fnc_addEventHandler;
+["playerInventoryChanged", FUNC(handleVirtualMass)] call CBA_fnc_addEventHandler;
 
 ["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
 {

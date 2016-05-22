@@ -77,4 +77,4 @@ GVAR(drawing_controls) = [36732, 36733, 36734, 36735, 36736, 36737];
         // Cancel drawing
         call FUNC(cancelDrawing);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

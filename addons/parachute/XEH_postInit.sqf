@@ -38,9 +38,9 @@ GVAR(PFH) = false;
         GVAR(PFH) = true;
         [FUNC(onEachFrame), 0.1, []] call CALLSTACK(CBA_fnc_addPerFrameHandler);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // don't show speed and height when in expert mode
-["infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call EFUNC(common,addEventHandler);
+["infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call CBA_fnc_addEventHandler;
 
-["playerInventoryChanged", FUNC(storeParachute)] call EFUNC(common,addEventHandler);
+["playerInventoryChanged", FUNC(storeParachute)] call CBA_fnc_addEventHandler;

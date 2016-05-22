@@ -17,4 +17,4 @@ params ["_eventName"];
 // Only JIP machines on initialization send this off, requesting sync on events with the serverCommand
 if (isServer) exitWith {false};
 
-["SEH_s", [_eventName, ACE_player] ] call FUNC(serverEvent);
+["SEH_s", [_eventName, ACE_player] ] call CBA_fnc_serverEvent;

@@ -32,15 +32,15 @@ if (isNull _object) exitWith {};
         if (_effectNumber != -1) then {
             if (GVAR(statusEffect_isGlobal) select _forEachIndex) then {
                 TRACE_2("Sending Global Event", _object, _effectNumber);
-                [_x, [_object, _effectNumber]] call FUNC(globalEvent);
+                [_x, [_object, _effectNumber]] call CBA_fnc_globalEvent;
             } else {
                 if (local _object) then {
                     //If local, send directly to bypass network delay of targetEvent call
                     TRACE_2("Sending Target Local Event", _object, _effectNumber);
-                    [_x, [_object, _effectNumber]] call FUNC(localEvent);
+                    [_x, [_object, _effectNumber]] call CBA_fnc_localEvent;
                 } else {
                     TRACE_2("Sending Target Non-Local Event", _object, _effectNumber);
-                    [_x, [_object], [_object, _effectNumber]] call FUNC(targetEvent);
+                    [_x, [_object, _effectNumber], [_object]] call CBA_fnc_targetEvent;
                 };
             };
         };

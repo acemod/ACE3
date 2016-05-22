@@ -91,4 +91,4 @@ simulWeatherSync;
         END_COUNTER(weatherPFEH);
     }, 1, []] call CBA_fnc_addPerFrameHandler;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

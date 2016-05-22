@@ -14,7 +14,7 @@ GVAR(pendingReopen) = false;
             [GVAR(INTERACTION_TARGET)] call FUNC(openMenu);
         }, []] call EFUNC(common,execNextFrame);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
