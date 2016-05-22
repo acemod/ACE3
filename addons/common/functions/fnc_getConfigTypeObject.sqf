@@ -14,10 +14,4 @@
 
 ACE_DEPRECATED("ace_common_fnc_getConfigTypeObject","3.8.0","CBA_fnc_getObjectConfig");
 
-params ["_object"];
-
-if (isClass (configFile >> "CfgVehicles" >> _object)) exitWith {"CfgVehicles"};
-
-if (isClass (configFile >> "CfgAmmo" >> _object)) exitWith {"CfgAmmo"};
-
-""
+configName (configHierarchy (_item call CBA_fnc_getObjectConfig) param [1, configNull])
