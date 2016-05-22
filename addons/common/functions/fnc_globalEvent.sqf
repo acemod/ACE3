@@ -1,21 +1,5 @@
-/*
- * Author: Nou
- * Execute a global event on all clients, including self.
- *
- * Arguments:
- * 0: Event name <STRING>
- * 1: Event args <ANY>
- *
- * Return Value:
- * None
- *
- * Public: Yes
- */
 #include "script_component.hpp"
 
-params ["_eventName", "_eventArgs"];
+_this call CBA_fnc_globalEvent;
 
-ACEg = [_eventName, _eventArgs];
-publicVariable "ACEg";
-
-["ACEg", ACEg] call FUNC(_handleNetEvent);
+ACE_DEPRECATED("ace_common_fnc_globalEvent","3.8.0","CBA_fnc_globalEvent");

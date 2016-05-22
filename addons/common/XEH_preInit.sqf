@@ -5,10 +5,6 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-//ACE events global variables
-GVAR(eventsLocation) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(eventsLocation) setText QGVAR(eventsLocation);
-
 // backwards comp
 DFUNC(canUseWeapon) = {
     ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");

@@ -1,25 +1,5 @@
-/*
- * Author: Nou
- * Add an event handler.
- *
- * Arguments:
- * 0: Event name <STRING>
- * 1: Event code <CODE>
- *
- * Return Value:
- * Event handler ID number (for use with fnc_removeEventHandler) <NUMBER>
- *
- * Public: Yes
- */
 #include "script_component.hpp"
 
-params ["_eventName", "_eventCode"];
+_this call CBA_fnc_addEventHandler;
 
-private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
-
-if (isNil "_eventFunctions") then {
-    _eventFunctions = [];
-    GVAR(eventsLocation) setVariable [_eventName, _eventFunctions];
-};
-
-_eventFunctions pushBack _eventCode // Return event function count
+ACE_DEPRECATED("ace_common_fnc_addEventHandler","3.8.0","CBA_fnc_addEventHandler");
