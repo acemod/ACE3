@@ -19,7 +19,4 @@
 
 ACE_DEPRECATED("ace_common_fnc_waitAndExecute","3.8.0","CBA_fnc_waitAndExecute");
 
-params ["_func", "_params", "_delay"];
-
-GVAR(waitAndExecArray) pushBack [ACE_time + _delay, _func, _params];
-GVAR(waitAndExecArray) sort true;
+_this call CBA_fnc_waitAndExecute;

@@ -15,10 +15,4 @@
 
 ACE_DEPRECATED("ace_common_fnc_execNextFrame","3.8.0","CBA_fnc_execNextFrame");
 
-params ["_func", "_params"];
-
-if (diag_frameno != GVAR(nextFrameNo)) then {
-    GVAR(nextFrameBufferA) pushBack [_params, _func];
-} else {
-    GVAR(nextFrameBufferB) pushBack [_params, _func];
-};
+_this call CBA_fnc_execNextFrame;
