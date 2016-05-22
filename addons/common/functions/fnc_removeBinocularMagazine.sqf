@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_removeBinocularMagazine","3.8.0","CBA_fnc_removeBinocularMagazine");
+
 params [["_unit", objNull, [objNull]]];
 
 private _binocular = binocular _unit;
