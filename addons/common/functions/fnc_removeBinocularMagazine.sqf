@@ -17,13 +17,4 @@
 
 ACE_DEPRECATED("ace_common_fnc_removeBinocularMagazine","3.8.0","CBA_fnc_removeBinocularMagazine");
 
-params [["_unit", objNull, [objNull]]];
-
-private _binocular = binocular _unit;
-private _selectBinocular = currentWeapon _unit == _binocular;
-
-_unit addWeapon _binocular;
-
-if (_selectBinocular) then {
-    _unit selectWeapon _binocular;
-};
+_this call CBA_fnc_removeBinocularMagazine
