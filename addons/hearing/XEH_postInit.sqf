@@ -17,6 +17,10 @@ GVAR(volumeAttenuation) = 1;
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(EnableCombatDeafness)) exitWith {};
 
+    //Add XEH:
+    ["CAManBase", "FiredNear", FUNC(firedNear)] call CBA_fnc_addClassEventHandler;
+    ["CAManBase", "Explosion", FUNC(explosionNear)] call CBA_fnc_addClassEventHandler;
+    
     // Update hearing protection now:
     [] call FUNC(updateHearingProtection);
 

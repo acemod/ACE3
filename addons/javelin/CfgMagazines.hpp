@@ -10,7 +10,7 @@ class CfgMagazines {
     class Titan_AT: Titan_AA {
         ammo = "ACE_Javelin_FGM148"; //from misssileGuidance, was "M_Titan_AT"
     };
-    
+
     //Handheld Titan "AP" Magazine (SACLOS? "Anti-personal")
     // class Titan_AP: Titan_AA {
         //???

@@ -35,8 +35,8 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter;
-    class Helicopter_Base_F: Helicopter {
+    class Air;
+    class Helicopter: Air {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -68,9 +68,15 @@ class CfgVehicles {
             };
         };
     };
+
+    class Helicopter_Base_F;
     class ACE_friesBase: Helicopter_Base_F {
         destrType = "";
         class Turrets {};
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
@@ -203,7 +209,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
-        GVAR(friesAttachmentPoint)[] = {1.04, 2.5, -0.34};
+        GVAR(friesAttachmentPoint)[] = {-1.04, 2.5, -0.34};
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {

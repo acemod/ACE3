@@ -98,8 +98,17 @@ if (_range > 50 && {_range < 2500}) then {
     };
 };
 
-if (isNull _newTarget) then {
-    _newTarget = cursorTarget;
+if ((isNull _newTarget) && {cursorObject isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorObject, ace_player, cursorObject, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorObject;
+        };
+};
+if ((isNull _newTarget) && {cursorTarget isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorTarget, ace_player, cursorTarget, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorTarget;
+        };
 };
 
 // Create constants

@@ -1,37 +1,42 @@
 /*
- * Author: BaerMitUmlaut and esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
  *
  * Arguments:
  * 0: Position ASL <ARRAY>
  * 1: Vector dir and up <ARRAY>
- * 2: Colour of the tag (valid colours are black, red, green and blue) <STRING>
- * 3: Object it should be tied too <OBJECT>
+ * 2: Colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
+ * 3: Object it should be tied to <OBJECT>
+ * 4: Unit that created the tag <OBJECT>
  *
  * Return Value:
- * None
+ * Tag created <BOOL>
  *
  * Example:
- * [positionASL, vectorDirAndUp, "black", object] call ace_tagging_fnc_createTag
+ * [positionASL, vectorDirAndUp, "z\ace\addons\tagging\UI\tags\black\0.paa", object] call ace_tagging_fnc_createTag
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_tagPosASL", "_vectorDirAndUp", "_color", "_object"];
-TRACE_4("createTag:", _tagPosASL, _vectorDirAndUp, _color, _object);
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit"];
+TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
-if !((toLower _color) in ["black", "red", "green", "blue"]) exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag colour.", _color);
+if (_texture == "") exitWith {
+    ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
+    false
 };
 
 private _tag = "UserTexture1m_F" createVehicle [0,0,0];
-_tag setObjectTextureGlobal [0, '\z\ace\addons\tagging\UI\tags\' + _color + '\' + str (floor (random 3)) + '.paa'];
+_tag setObjectTextureGlobal [0, _texture];
 _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
-if (isNull _object) exitWith {};
+// Throw a global event for mision makers
+["tagCreated", [_tag, _texture, _object, _unit]] call EFUNC(common,globalEvent);
+
+if (isNull _object) exitWith {true};
 
 // If the tag is applied to an object, handle its destruction
 _object setVariable [QGVAR(testVar), true];
@@ -69,3 +74,5 @@ GVAR(tagsToTest) pushBack [_tag, _tagPosASL, _vectorDirAndUp];
 if (!GVAR(testingThread)) then {
     call FUNC(tagTestingThread);
 };
+
+true
