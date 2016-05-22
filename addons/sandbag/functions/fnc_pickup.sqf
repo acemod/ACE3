@@ -37,4 +37,4 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
     } count (_unit nearObjects ["ACE_SandbagObject", 5]);
 
     [_unit, "ACE_Sandbag_empty"] call EFUNC(common,addToInventory);
-}, [_unit, _sandbag], 1.5] call EFUNC(common,waitAndExecute);
+}, [_unit, _sandbag], 1.5] call CBA_fnc_waitAndExecute;

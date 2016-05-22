@@ -187,7 +187,7 @@ GVAR(TweakedAngle) = 0;
             _unit removeMagazine _magClassname;
             _unit playActionNow "PutDown";
             _unit setVariable [QGVAR(PlantingExplosive), true];
-            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
+            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
         };
     } else {

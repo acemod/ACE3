@@ -30,4 +30,4 @@ if (stance _unit == "STAND") then {
     deleteVehicle _tripod;
 
     [_unit, "ACE_Tripod"] call EFUNC(common,addToInventory);
-}, [_unit, _tripod], 1] call EFUNC(common,waitAndExecute);
+}, [_unit, _tripod], 1] call CBA_fnc_waitAndExecute;

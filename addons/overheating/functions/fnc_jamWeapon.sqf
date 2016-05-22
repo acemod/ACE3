@@ -37,7 +37,7 @@ if (_ammo > 0) then {
     [{
         params ["_unit", "_weapon", "_ammo"];
         _unit setAmmo [_weapon, _ammo];
-    }, [_unit, _weapon, _ammo]] call EFUNC(common,execNextFrame);
+    }, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
 };
 
 // only display the hint once, after you try to shoot an already jammed weapon

@@ -27,7 +27,7 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
     // It's to soon to call this function, delay it
     if (EGVAR(common,settingsInitFinished)) then {
         // Settings are already initialized, but the small wait isn't over
-        [DFUNC(setSurrendered), _this, 0.05] call EFUNC(common,waitAndExecute);
+        [DFUNC(setSurrendered), _this, 0.05] call CBA_fnc_waitAndExecute;
     } else {
         // Settings are not initialized yet
         [DFUNC(setSurrendered), _this] call EFUNC(common,runAfterSettingsInit);
@@ -73,7 +73,7 @@ if (_state) then {
             }];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
-    }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
+    }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);

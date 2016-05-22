@@ -45,7 +45,7 @@ if (hasInterface) then {
         _marker setMarkerTextLocal _date;
 
         _rallypoint setVariable [QGVAR(marker), _marker];
-    }, [_rallypoint, _respawnMarker, _side, _name], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_rallypoint, _respawnMarker, _side, _name], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 if (!isServer) exitWith {};

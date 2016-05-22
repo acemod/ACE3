@@ -71,7 +71,7 @@ GVAR(DustHandler) = [{
                 if (GVAR(DustHandler) == -1) then {
                     GVAR(PostProcessEyes) ppEffectEnable false
                 };
-            }, [], 2] call EFUNC(common,waitAndExecute);
+            }, [], 2] call CBA_fnc_waitAndExecute;
 
             [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
             GVAR(DustHandler) = -1;

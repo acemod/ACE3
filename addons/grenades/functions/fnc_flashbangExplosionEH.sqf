@@ -36,8 +36,8 @@ if (hasInterface) then {
         [{
             params ["_light"];
             deleteVehicle _light;
-        }, [_light], 0.2] call EFUNC(common,waitAndExecute);
-    }, [_light], 0.1] call EFUNC(common,waitAndExecute);
+        }, [_light], 0.2] call CBA_fnc_waitAndExecute;
+    }, [_light], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 // Affect local AI
@@ -67,7 +67,7 @@ _affected = _affected - [ACE_player];
             };
 
             _unit setSkill (skill _unit * 50);
-        }, [_x], 7 * _strength] call EFUNC(common,waitAndExecute);
+        }, [_x], 7 * _strength] call CBA_fnc_waitAndExecute;
     };
 } count _affected;
 
@@ -126,12 +126,12 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
             GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
             GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
-        }, [_strength], 7 * _strength] call EFUNC(common,waitAndExecute);
+        }, [_strength], 7 * _strength] call CBA_fnc_waitAndExecute;
 
         //FULLRECOVERY - end effect
         [{
             GVAR(flashbangPPEffectCC) ppEffectEnable false;
-        }, [], 17 * _strength] call EFUNC(common,waitAndExecute);
+        }, [], 17 * _strength] call CBA_fnc_waitAndExecute;
     };
 
     if (_strength > 0.2) then {

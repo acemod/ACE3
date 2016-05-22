@@ -97,7 +97,7 @@ if (_set) then {
                 };
             }];
         };
-    }, !_force] call EFUNC(common,execNextFrame);
+    }, !_force] call CBA_fnc_execNextFrame;
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
