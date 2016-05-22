@@ -15,7 +15,7 @@
 
 params ["_item"];
 
-private _cfgType = [_item] call FUNC(getConfigType);
+private _cfgType = [_item] call CBA_fnc_getItemConfig;
 
 if (_cfgType == "") exitWith {["", ""]};
 

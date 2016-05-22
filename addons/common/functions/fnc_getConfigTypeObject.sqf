@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_getConfigTypeObject","3.8.0","CBA_fnc_getObjectConfig");
+
 params ["_object"];
 
 if (isClass (configFile >> "CfgVehicles" >> _object)) exitWith {"CfgVehicles"};

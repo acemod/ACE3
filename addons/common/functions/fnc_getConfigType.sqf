@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_getConfigType","3.8.0","CBA_fnc_getItemConfig");
+
 params ["_item"];
 
 if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
