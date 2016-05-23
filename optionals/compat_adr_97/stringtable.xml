@@ -37,6 +37,18 @@
             <Hungarian>P90 TR (Terepmintás)</Hungarian>
             <Portuguese>P90 TR (Camuflagem)</Portuguese>
         </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_TR_Hex_Name">
+            <English>P90 TR (Hex)</English>
+            <Czech>P90 TR (Hex)</Czech>
+            <French>P90 TR (Hex)</French>
+            <Spanish>P90 TR (Hex)</Spanish>
+            <Russian>P90 TR (Гекс)</Russian>
+            <German>P90 TR (Hex)</German>
+            <Polish>P90 TR (hex)</Polish>
+            <Italian>P90 TR (Hex)</Italian>
+            <Hungarian>P90 TR (Hex)</Hungarian>
+            <Portuguese>P90 TR (Hex)</Portuguese>
+        </Key>
         <Key ID="STR_ace_compat_adr_97_P90_Black_Name">
             <English>P90 (Black)</English>
             <Czech>P90 (Černá)</Czech>
@@ -72,6 +84,18 @@
             <Italian>P90 (Camo)</Italian>
             <Hungarian>P90 (Terepmintás)</Hungarian>
             <Portuguese>P90 (Camuflagem)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_P90_Hex_Name">
+            <English>P90 (Hex)</English>
+            <Czech>P90 (Hex)</Czech>
+            <French>P90 (Hex)</French>
+            <Spanish>P90 (Hex)</Spanish>
+            <Russian>P90 (Гекс)</Russian>
+            <German>P90 (Hex)</German>
+            <Polish>P90 (hex)</Polish>
+            <Italian>P90 (Hex)</Italian>
+            <Hungarian>P90 (Hex)</Hungarian>
+            <Portuguese>P90 (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ace_compat_adr_97_PS90_TR_Black_Name">
             <English>PS90 TR (Black)</English>
@@ -109,6 +133,18 @@
             <Hungarian>PS90 TR (Terepmintás)</Hungarian>
             <Portuguese>PS90 TR (Camuflagem)</Portuguese>
         </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_TR_Hex_Name">
+            <English>PS90 TR (Hex)</English>
+            <Czech>PS90 TR (Hex)</Czech>
+            <French>PS90 TR (Hex)</French>
+            <Spanish>PS90 TR (Hex)</Spanish>
+            <Russian>PS90 TR (Гекс)</Russian>
+            <German>PS90 TR (Hex)</German>
+            <Polish>PS90 TR (hex)</Polish>
+            <Italian>PS90 TR (Hex)</Italian>
+            <Hungarian>PS90 TR (Hex)</Hungarian>
+            <Portuguese>PS90 TR (Hex)</Portuguese>
+        </Key>
         <Key ID="STR_ace_compat_adr_97_PS90_Black_Name">
             <English>PS90 (Black)</English>
             <Czech>PS90 (Černá)</Czech>
@@ -144,6 +180,18 @@
             <Italian>PS90 (Camo)</Italian>
             <Hungarian>PS90 (Terepmintás)</Hungarian>
             <Portuguese>PS90 (Camuflagem)</Portuguese>
+        </Key>
+        <Key ID="STR_ace_compat_adr_97_PS90_Hex_Name">
+            <English>PS90 (Hex)</English>
+            <Czech>PS90 (Hex)</Czech>
+            <French>PS90 (Hex)</French>
+            <Spanish>PS90 (Hex)</Spanish>
+            <Russian>PS90 (Гекс)</Russian>
+            <German>PS90 (Hex)</German>
+            <Polish>PS90 (hex)</Polish>
+            <Italian>PS90 (Hex)</Italian>
+            <Hungarian>PS90 (Hex)</Hungarian>
+            <Portuguese>PS90 (Hex)</Portuguese>
         </Key>
     </Package>
 </Project>
