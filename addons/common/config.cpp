@@ -12,6 +12,11 @@ class CfgPatches {
     };
 };
 
+// This class will be deprecated in version 3.8.0
+class ACE_newEvents {
+    playMoveNow = QGVAR(playMoveNow);
+};
+
 #include "CfgEventHandlers.hpp"
 
 #include "CfgLocationTypes.hpp"

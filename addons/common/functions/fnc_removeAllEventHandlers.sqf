@@ -2,6 +2,12 @@
 
 params ["_eventName"];
 
+private _newName = getText (configFile >> "ACE_newEvents" >> _eventName);
+if (_newName != "") then {
+    TRACE_2("Switching Names",_eventName,_newName);
+    _eventName = _newName;
+};
+
 CBA_events_eventNamespace setVariable [_eventName,nil];
 CBA_events_eventHashes setVariable [_eventName,nil];
 
