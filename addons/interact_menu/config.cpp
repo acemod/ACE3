@@ -29,9 +29,5 @@ class ACE_newEvents {
     playerChanged = "ace_playerChanged";
     interactMenuOpened = "ace_interactMenuOpened";
     clearConditionCaches = "ace_clearConditionCaches";
-    clearConditionCaches = "ace_clearConditionCaches";
     interactMenuClosed = "ace_interactMenuClosed";
-    clearConditionCaches = "ace_clearConditionCaches";
-    clearConditionCaches = "ace_clearConditionCaches";
-    interactMenuOpened = "ace_interactMenuOpened";
 };

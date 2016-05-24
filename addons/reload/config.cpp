@@ -25,8 +25,5 @@ class CfgPatches {
 class ACE_newEvents {
     setAmmoSync = "ace_setAmmoSync";
     returnedAmmo = "ace_returnedAmmo";
-    setAmmoSync = "ace_setAmmoSync";
-    returnedAmmo = "ace_returnedAmmo";
-    returnedAmmo = "ace_returnedAmmo";
     linkedAmmo = "ace_linkedAmmo";
 };

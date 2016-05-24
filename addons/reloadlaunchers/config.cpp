@@ -19,5 +19,4 @@ class CfgPatches {
 
 class ACE_newEvents {
     reloadLauncher = "ace_reloadLauncher";
-    reloadLauncher = "ace_reloadLauncher";
 };

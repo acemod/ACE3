@@ -20,5 +20,5 @@ class CfgPatches {
 #include "RscInGameUI.hpp"
 
 class ACE_newEvents {
-    RangerfinderData = "ace_rangerfinderData";
+    RangerfinderData = "ace_rangefinderData";
 };

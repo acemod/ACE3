@@ -18,6 +18,5 @@ class CfgPatches {
 
 class ACE_newEvents {
     createTag = "ace_createTag";
-    createTag = "ace_createTag";
     tagCreated = "ace_tagCreated";
 };

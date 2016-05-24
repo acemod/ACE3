@@ -30,4 +30,4 @@ GVAR(vectorConnected) = false;
 GVAR(noVectorData) = true;
 GVAR(vectorGrid) = "00000000";
 
-["ace_rangerfinderData", FUNC(handleRangeFinderData)] call CBA_fnc_addEventHandler;
+["ace_rangefinderData", FUNC(handleRangeFinderData)] call CBA_fnc_addEventHandler;

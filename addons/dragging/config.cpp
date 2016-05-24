@@ -25,11 +25,4 @@ class ACE_newEvents {
     fixFloating = "ace_fixFloating";
     fixPosition = "ace_fixPosition";
     fixCollision = "ace_fixCollision";
-    fixCollision = "ace_fixCollision";
-    fixFloating = "ace_fixFloating";
-    fixPosition = "ace_fixPosition";
-    fixCollision = "ace_fixCollision";
-    fixCollision = "ace_fixCollision";
-    setDir = "ace_setDir";
-    setDir = "ace_setDir";
 };

@@ -21,5 +21,4 @@ class ACE_newEvents {
     setFuel = "ace_setFuel";
     setVectorDirAndUp = "ace_setVectorDirAndUp";
     displayTextStructured = "ace_displayTextStructured";
-    displayTextStructured = "ace_displayTextStructured";
 };

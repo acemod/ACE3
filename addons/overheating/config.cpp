@@ -58,9 +58,6 @@ class ACE_newEvents {
     firedPlayer = "ace_firedPlayer";
     spareBarrelsLoadCoolest = "ace_spareBarrelsLoadCoolest";
     spareBarrelsSendTemperatureHint = "ace_spareBarrelsSendTemperatureHint";
-    spareBarrelsLoadCoolest = "ace_spareBarrelsLoadCoolest";
-    initiateSwapBarrelAssisted = "ace_initiateSwapBarrelAssisted";
     displayTextStructured = "ace_displayTextStructured";
-    showWeaponTemperature = "ace_showWeaponTemperature";
     weaponJammed = "ace_weaponJammed";
 };

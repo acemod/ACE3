@@ -27,11 +27,4 @@ class ACE_newEvents {
     MoveInCaptive = "ace_moveInCaptive";
     playerChanged = "ace_playerChanged";
     CaptiveStatusChanged = "ace_captiveStatusChanged";
-    CaptiveStatusChanged = "ace_captiveStatusChanged";
-    SetSurrendered = "ace_setSurrendered";
-    SetHandcuffed = "ace_setHandcuffed";
-    MoveOutCaptive = "ace_moveOutCaptive";
-    SetHandcuffed = "ace_setHandcuffed";
-    MoveInCaptive = "ace_moveInCaptive";
-    SetHandcuffed = "ace_setHandcuffed";
 };

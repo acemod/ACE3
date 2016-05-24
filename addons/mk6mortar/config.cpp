@@ -37,5 +37,4 @@ class ACE_newEvents {
     infoDisplayChanged = "ace_infoDisplayChanged";
     playerVehicleChanged = "ace_playerVehicleChanged";
     initMortar = "ace_initMortar";
-    initMortar = "ace_initMortar";
 };

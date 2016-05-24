@@ -23,6 +23,4 @@ class ACE_newEvents {
     playerChanged = "ace_playerChanged";
     rallypointMoved = "ace_rallypointMoved";
     killedByFriendly = "ace_killedByFriendly";
-    rallypointMoved = "ace_rallypointMoved";
-    rallypointMoved = "ace_rallypointMoved";
 };

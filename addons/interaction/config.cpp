@@ -25,9 +25,6 @@ class ACE_newEvents {
     sendAway = "ace_sendAway";
     setVelocity = "ace_setVelocity";
     displayTextStructured = "ace_displayTextStructured";
-    pardon = "ace_pardon";
-    displayTextStructured = "ace_displayTextStructured";
-    CBA_teamColorChanged = "ace_cBA_teamColorChanged";
-    getDown = "ace_getDown";
+    CBA_teamColorChanged = "ace_CBA_teamColorChanged";
     selectLeader = "ace_selectLeader";
 };

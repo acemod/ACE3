@@ -276,5 +276,4 @@ class ACE_newEvents {
     cameraViewChanged = "ace_cameraViewChanged";
     GlassesChanged = "ace_glassesChanged";
     GlassesCracked = "ace_glassesCracked";
-    GlassesCracked = "ace_glassesCracked";
 };

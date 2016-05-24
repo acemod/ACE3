@@ -22,7 +22,4 @@ class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
     VehicleLock_SetVehicleLock = "ace_vehicleLock_SetVehicleLock";
     VehicleLock_SetupCustomKey = "ace_vehicleLock_SetupCustomKey";
-    VehicleLock_SetVehicleLock = "ace_vehicleLock_SetVehicleLock";
-    VehicleLock_SetVehicleLock = "ace_vehicleLock_SetVehicleLock";
-    VehicleLock_SetupCustomKey = "ace_vehicleLock_SetupCustomKey";
 };

@@ -25,5 +25,4 @@ class ACE_newEvents {
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
     flashbangExplosion = "ace_flashbangExplosion";
-    flashbangExplosion = "ace_flashbangExplosion";
 };

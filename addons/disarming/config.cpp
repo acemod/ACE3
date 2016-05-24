@@ -21,6 +21,4 @@ class CfgPatches {
 class ACE_newEvents {
     DisarmDebugCallback = "ace_disarmDebugCallback";
     DisarmDropItems = "ace_disarmDropItems";
-    DisarmDropItems = "ace_disarmDropItems";
-    DisarmDebugCallback = "ace_disarmDebugCallback";
 };

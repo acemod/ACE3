@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_medical"};
         author[] = {$STR_ACE_Common_ACETeam, "Glowbal"};
-        authorUrl = "http://ace3mod.com"; 
+        authorUrl = "http://ace3mod.com";
         VERSION_CONFIG;
     };
 };

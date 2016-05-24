@@ -18,5 +18,4 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
-    SettingsInitialized = "ace_settingsInitialized";
 };

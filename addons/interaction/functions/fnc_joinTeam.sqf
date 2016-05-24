@@ -18,7 +18,7 @@
 
 params ["_unit", "_team"];
 
-["ace_cBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
+["ace_CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
 
 // display message
 if (_unit == ACE_player) then {

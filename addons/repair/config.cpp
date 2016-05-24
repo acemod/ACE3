@@ -24,18 +24,8 @@ class ACE_newEvents {
     setVehicleHitPointDamage = "ace_setVehicleHitPointDamage";
     setVehicleDamage = "ace_setVehicleDamage";
     fixPosition = "ace_fixPosition";
-    fixCollision = "ace_fixCollision";
-    displayTextStructured = "ace_displayTextStructured";
     displayTextStructured = "ace_displayTextStructured";
     engineOn = "ace_engineOn";
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
-    setVehicleHitPointDamage = "ace_setVehicleHitPointDamage";
-    setVehicleHitPointDamage = "ace_setVehicleHitPointDamage";
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
-    fixCollision = "ace_fixCollision";
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
     fixCollision = "ace_fixCollision";
     AddCargoByClass = "ace_addCargoByClass";
 };

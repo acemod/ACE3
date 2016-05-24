@@ -48,6 +48,4 @@ class ACE_newEvents {
     SetSurrendered = "ace_setSurrendered";
     SetHandcuffed = "ace_setHandcuffed";
     AddCargoByClass = "ace_addCargoByClass";
-    AddCargoByClass = "ace_addCargoByClass";
-    zeusUnitAssigned = "ace_zeusUnitAssigned";
 };

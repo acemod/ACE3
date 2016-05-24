@@ -30,10 +30,9 @@ class ACE_newEvents {
     playerChanged = "ace_playerChanged";
     SettingsInitialized = "ace_settingsInitialized";
     InitSettingsFromModules = "ace_initSettingsFromModules";
-    SEH_s = "ace_sEH_s";
-    SEH = "ace_sEH";
-    SEH_all = "ace_sEH_all";
-    SEH_all = "ace_sEH_all";
+    SEH_s = "ace_SEH_s";
+    SEH = "ace_SEH";
+    SEH_all = "ace_SEH_all";
     enableSimulationGlobal = "ace_enableSimulationGlobal";
     hideObjectGlobal = "ace_hideObjectGlobal";
     setVanillaHitPointDamage = "ace_setVanillaHitPointDamage";
@@ -53,24 +52,8 @@ class ACE_newEvents {
     fixFloating = "ace_fixFloating";
     fixCollision = "ace_fixCollision";
     setStatusEffect = "ace_setStatusEffect";
-    SEH_s = "ace_sEH_s";
-    SEH_s = "ace_sEH_s";
-    setSpeaker = "ace_setSpeaker";
-    displayTextStructured = "ace_displayTextStructured";
-    unloadPersonEvent = "ace_unloadPersonEvent";
-    hideObjectGlobal = "ace_hideObjectGlobal";
-    SEH = "ace_sEH";
     SettingChanged = "ace_settingChanged";
-    SettingChanged = "ace_settingChanged";
-    SEH_s = "ace_sEH_s";
-    setSpeaker = "ace_setSpeaker";
-    setSpeaker = "ace_setSpeaker";
-    setSpeaker = "ace_setSpeaker";
-    loadPersonEvent = "ace_loadPersonEvent";
-    hideObjectGlobal = "ace_hideObjectGlobal";
     HeadbugFixUsed = "ace_headbugFixUsed";
-    HeadbugFixUsed = "ace_headbugFixUsed";
-    blockDamage = "ace_blockDamage";
     blockDamage = "ace_blockDamage";
     firedNonPlayerVehicle = "ace_firedNonPlayerVehicle";
     firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
@@ -78,18 +61,8 @@ class ACE_newEvents {
     firedNonPlayer = "ace_firedNonPlayer";
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
-    switchMove = "ace_switchMove";
-    playMoveNow = "ace_playMoveNow";
-    playMoveNow = "ace_playMoveNow";
-    playMoveNow = "ace_playMoveNow";
-    playMoveNow = "ace_playMoveNow";
-    playMove = "ace_playMove";
-    playMove = "ace_playMove";
     unlockVehicle = "ace_unlockVehicle";
     lockVehicle = "ace_lockVehicle";
-    playerInventoryChanged = "ace_playerInventoryChanged";
-    SettingChanged = "ace_settingChanged";
-    playMoveNow = QGVAR(playMoveNow);
 };
 
 #include "CfgEventHandlers.hpp"
