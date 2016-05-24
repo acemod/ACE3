@@ -21,7 +21,7 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-["UnloadCargo", {
+["ace_unloadCargo", {
     params ["_item", "_vehicle", ["_unloader", objNull]];
     TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
 
@@ -44,7 +44,7 @@
     // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR("serverUnload"), {
+[QGVAR(serverUnload), {
     params ["_item", "_emptyPosAGL"];
 
     _item hideObjectGlobal false;
