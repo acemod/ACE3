@@ -19,7 +19,7 @@ class CfgWeapons {
     class SMG_03_TR_camo: SMG_03_TR_black {
         displayName = CSTRING(PS90_TR_Camo_Name);
     };
-    class SMG_03_TR_hex: SMG_03_TR_black {
+    class SMG_03_TR_hex: SMG_03_TR_BASE {
         displayName = CSTRING(PS90_TR_Hex_Name);
     };
     class SMG_03_black: SMG_03_TR_BASE {
