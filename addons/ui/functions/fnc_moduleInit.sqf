@@ -45,7 +45,13 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(weaponLowerInfoBackground), "weaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(stance), "stance"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(staminaBar), "staminaBar"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerWeaponName), "gunnerWeaponName"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerWeaponNameBackground), "gunnerWeaponNameBackground"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerFiringMode), "gunnerFiringMode"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerAmmoType), "gunnerAmmoType"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(gunnerAmmoCount), "gunnerAmmoCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerMagCount), "gunnerMagCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerWeaponLowerInfoBackground), "gunnerWeaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleName), "vehicleName"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleNameBackground), "vehicleNameBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleFuelBar), "vehicleFuelBar"] call EFUNC(common,readSettingFromModule);
@@ -53,6 +59,5 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(vehicleAltitude), "vehicleAltitude"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleDamage), "vehicleDamage"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleInfoBackground), "vehicleInfoBackground"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(vehicleGunnerWeapon), "vehicleGunnerWeapon"] call EFUNC(common,readSettingFromModule);
 
 ACE_LOGINFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));
