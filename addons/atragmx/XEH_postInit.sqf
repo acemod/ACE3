@@ -49,4 +49,4 @@ if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) ==
 [] call FUNC(init);
 [] call FUNC(restore_user_data);
 
-["ace_rangefinderData", {_this call FUNC(sord)}] call CBA_fnc_addEventHandler;
+[QEGVAR(vector,rangefinderData), {_this call FUNC(sord)}] call CBA_fnc_addEventHandler;

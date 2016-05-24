@@ -19,5 +19,5 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 
 class ACE_newEvents {
-    RangerfinderData = "ace_rangefinderData";
+    RangerfinderData = QEGVAR(vector,rangefinderData);
 };

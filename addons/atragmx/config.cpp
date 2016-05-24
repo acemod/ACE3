@@ -15,6 +15,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscTitles.hpp"
+
 class ACE_newEvents {
-    RangerfinderData = "ace_rangefinderData";
+    RangerfinderData = QEGVAR(vector,rangefinderData);
 };
