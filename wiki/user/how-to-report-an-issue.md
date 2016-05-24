@@ -21,33 +21,6 @@ Indicate if the issue appears on stable or development version. In case it is th
 
 ### Reporting the issue
 
-Head over to the <a href="{{ site.githubUrl }}/issues" target="_blank">ACE3 GitHub issue tracker</a> and press the <a href="{{ site.githubUrl }}/issues/new" target="_blank">"New issue"</a> button in the top right corner. Add a descriptive title and copy the following issue template in to the text area:
+Head over to the [ACE3 GitHub issue tracker]({{ site.githubUrl }}/issues){:target="_blank"} and press the  ["New Issue"]({{ site.githubUrl }}/issues/new){:target="_blank"} button in the top right corner. Fill out the issue template. Add a link ([gist](https://gist.github.com){:target="_blank"} or [pastebin](http://pastebin.com){:target="_blank"}) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3){:target="_blank"}.
 
-```
-ACE3 Version: 3.x.x
-(indicate if stable or dev, if dev indicate the commit the version is based on)
-
-**Mods:**
-* `@CBA_A3`
-* `@ace`
-
-**Placed ACE3 Modules:**
-* *Add the list of modules you have placed on the map. Use 'None' if the error occurs without using any modules.*
-
-**Description:**
-* Add a detailed description of the error. This makes it easier for us to fix the issue.*
-
-**Steps to reproduce:**
-* *Add the steps needed to reproduce the issue.*
-
-**Where did the issue occur?**
-* A possible answer might be "Multiplayer", "Editor" or "Singleplayer"*
-
-**RPT log file:**
-* Add a link (pastebin.com) to the client or server RPT file.*
-```
-
-A video of the issue might be helpful in resolving it faster.
-
-
-Github uses <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank">"Markdown"</a> to style the output. If you want to know more about it (e.g. how to <a href="https://help.github.com/articles/markdown-basics/#styling-text" target="_blank">turn text bold</a>, how to denote <a href="https://help.github.com/articles/markdown-basics/#inline-formats" target="_blank">code blocks</a> or <a href="https://help.github.com/articles/markdown-basics/#multiple-lines" target="_blank">inline code</a>) have a look at the <a href="https://help.github.com/articles/github-flavored-markdown/" target="_blank">GitHub markdown documentation</a>.
+A short video clip of the issue might be helpful in resolving it faster.
