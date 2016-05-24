@@ -24,9 +24,8 @@ params [
 ];
 
 // Verify element is bound
-private _elementInfo = ELEMENTS_ADVANCED select {_x select 3 == _element};
-if (_elementInfo isEqualTo []) exitWith {
-    ACE_LOGWARNING_1("Element setting name does not exist (Element: %1)",_element);
+if (!isClass (configFile >> "ACE_UI" >> _element)) exitWith {
+    ACE_LOGWARNING_1("Element '%1' does not exist",_element);
 };
 
 private _return = false;
@@ -35,12 +34,12 @@ if (_set) then {
     // Exit if element has been set from another component, print warning if after interface initialization
     if ([_element, _show] in GVAR(elementsSet) || {[_element, !_show] in GVAR(elementsSet)}) exitWith {
         if (GVAR(interfaceInitialized)) then {
-            ACE_LOGWARNING_2("Element already set (Element: %1, Elements Set: %2",_element,GVAR(elementsSet));
+            ACE_LOGWARNING_2("Element '%1' already set in %2",_element,GVAR(elementsSet));
         };
     };
 
     TRACE_3("Setting element",_element,_show,GVAR(elementsSet));
-    private _success = [_element, _show, true] call FUNC(setAdvancedElement);
+    private _success = [_element, _show, false, true] call FUNC(setAdvancedElement);
 
     if (_success) then {
         GVAR(elementsSet) pushBack [_element, _show];
@@ -48,7 +47,7 @@ if (_set) then {
     };
 } else {
     if ([_element, _show] in GVAR(elementsSet) || {[_element, !_show] in GVAR(elementsSet)}) then {
-        TRACE_3("Setting element",_element,_show,GVAR(elementsSet));
+        TRACE_3("Unsetting element",_element,_show,GVAR(elementsSet));
 
         private _index = GVAR(elementsSet) find [_element, _show];
         if (_index == -1) then {
@@ -56,7 +55,7 @@ if (_set) then {
         };
         GVAR(elementsSet) deleteAt _index;
 
-        [_element, _show, true] call FUNC(setAdvancedElement);
+        [_element, _show, false, true] call FUNC(setAdvancedElement);
         _return = true;
     };
 };

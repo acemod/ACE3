@@ -5,7 +5,8 @@
  * Arguments:
  * 0: Element Name <STRING>
  * 1: Show/Hide Element <BOOL>
- * 2: Force change even when disallowed <BOOL> (default: false)
+ * 2: Show Hint <BOOL>
+ * 3: Force change even when disallowed <BOOL> (default: false)
  *
  * Return Value:
  * Successfully Set <BOOL>
@@ -17,26 +18,46 @@
  */
 #include "script_component.hpp"
 
-params ["_element", "_show", ["_force", false, [true]] ];
+params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]] ];
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
     false
 };
 
-private _elementInfo = ELEMENTS_ADVANCED select {_x select 3 == _element};
-(_elementInfo select 0) params ["_idd", "_elements", "_selectiveType"];
+private _config = configFile >> "ACE_UI" >> _element;
 
-private _inVehicle = ACE_player != vehicle ACE_player;
-TRACE_2("Type",_inVehicle,_selectiveType);
+// Exit if main vehicle type condition not fitting
+if (!call compile (getText (_config >> "condition"))) exitWith {false};
 
-// Exit if selective type not applicable to current vehicle
-if (!_force && {(_inVehicle && {_selectiveType == 1}) || (!_inVehicle && {_selectiveType == 2})}) exitWith {false};
+private _idd = getNumber (_config >> "idd");
+private _elements = getArray (_config >> "elements");
 
-// Get show/hide boolean from a set element if set via API
-// Inversion only needed if inverted, otherwise parameter can be used directly as it is the same
-if ([_element, !_show] in GVAR(elementsSet)) then {
-    _show = !_show;
+// Get setting from config API
+{
+    private _condition = call compile (getText _x);
+    if !(_condition) exitWith {
+        TRACE_2("Condition False",_element,_x);
+        // Display and print info which component forced the element except for default vehicle check
+        if (_showHint) then {
+            [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+        };
+        _show = false;
+    };
+} forEach (configProperties [_config >> "conditions"]);
+
+// Get setting from scripted API
+if (!_force) then {
+    private _index = GVAR(elementsSet) find [_element, _show];
+    if (_index == -1) then {
+        _index = GVAR(elementsSet) find [_element, !_show];
+        if (_index != -1) then {
+            if (_showHint) then {
+                [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            };
+            _show = ((GVAR(elementsSet)) select _index) select 1;
+        };
+    };
 };
 
 _show = [1, 0] select _show;

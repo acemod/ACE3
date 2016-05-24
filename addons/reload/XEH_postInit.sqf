@@ -62,8 +62,3 @@ if (!hasInterface) exitWith {};
 
     _receiver addMagazine _magazine;
 }] call EFUNC(common,addEventhandler);
-
-// Hide ammo UI indicator
-["InterfaceInitialized", {
-    [true, QEGVAR(ui,ammoCount), false] call EFUNC(ui,setElementVisibility);
-}] call EFUNC(common,addEventhandler);

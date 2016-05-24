@@ -13,8 +13,9 @@ if (!hasInterface) exitWith {};
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
         private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
-            [_x select 3, missionNamespace getVariable (_x select 3), _force] call FUNC(setAdvancedElement);
-        } forEach ELEMENTS_ADVANCED;
+            private _name = configName _x;
+            [_name, missionNamespace getVariable (format [QGVAR(%1), _name]), false, _force] call FUNC(setAdvancedElement);
+        } forEach ("true" configClasses (configFile >> "ACE_UI"));
 
         // Execute local event for when it's safe to modify UI through this API
         // infoDisplayChanged can execute multiple times, make sure it only happens once
@@ -28,20 +29,10 @@ if (!hasInterface) exitWith {};
     ["SettingChanged", {
         params ["_name"];
 
-        // Selective UI Basic
         if (_name in ELEMENTS_BASIC) then {
             [false] call FUNC(setElements);
-        } else { // Selective UI Advanced
-            // Get show/hide boolean from mission namespace
-            private _show = missionNamespace getVariable _name;
-
-            // Get show/hide boolean from a set element if set via API
-            if ([_name, !_show] in GVAR(elementsSet)) exitWith {
-                [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            };
-
-            [_name, _show] call FUNC(setAdvancedElement);
-            TRACE_2("Setting Changed",_name,_show);
+        } else {
+            [_name select [7], missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
         };
     }] call EFUNC(common,addEventHandler);
 
