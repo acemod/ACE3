@@ -18,12 +18,13 @@ params ["_logic", "_units", "_activated"];
 
 if (!_activated) exitWith {};
 
+[_logic, QGVAR(allowSelectiveUI), "allowSelectiveUI"] call EFUNC(common,readSettingFromModule);
+
 // Basic
 if (isArray (missionConfigFile >> "showHUD")) then {
     // HUD visibility is hardcoded in mission config and showHUD command is overriden
     ACE_LOGINFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
 } else {
-    [_logic, QGVAR(allowSelectiveUI), "allowSelectiveUI"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(vehicleCompass), "vehicleCompass"] call EFUNC(common,readSettingFromModule);
@@ -44,6 +45,7 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(weaponLowerInfoBackground), "weaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(stance), "stance"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(staminaBar), "staminaBar"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerAmmoCount), "gunnerAmmoCount"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleName), "vehicleName"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleNameBackground), "vehicleNameBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleFuelBar), "vehicleFuelBar"] call EFUNC(common,readSettingFromModule);

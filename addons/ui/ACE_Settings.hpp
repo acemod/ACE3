@@ -149,6 +149,16 @@ class ACE_Settings {
         isClientSettable = 1;
     };
 
+    // Gunner
+    class GVAR(gunnerAmmoCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerAmmoCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+
     // Vehicle
     class GVAR(vehicleName) {
         category = CSTRING(Category);

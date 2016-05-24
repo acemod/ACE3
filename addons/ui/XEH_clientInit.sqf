@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
         private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
-            [_x select 0, _x select 1, missionNamespace getVariable (_x select 2), _force] call FUNC(setAdvancedElement);
+            [_x select 3, missionNamespace getVariable (_x select 3), _force] call FUNC(setAdvancedElement);
         } forEach ELEMENTS_ADVANCED;
 
         // Execute local event for when it's safe to modify UI through this API
@@ -31,25 +31,18 @@ if (!hasInterface) exitWith {};
         // Selective UI Basic
         if (_name in ELEMENTS_BASIC) then {
             [false] call FUNC(setElements);
-        };
-
-        // Selective UI Advanced
-        {
-            _x params ["_idd", "_elements", "_elementName"];
-
+        } else { // Selective UI Advanced
             // Get show/hide boolean from mission namespace
-            private _show = missionNamespace getVariable _elementName;
+            private _show = missionNamespace getVariable _name;
 
             // Get show/hide boolean from a set element if set via API
-            if ([_idd, _elements, !(missionNamespace getVariable _elementName)] in GVAR(elementsSet)) then {
+            if ([_name, !_show] in GVAR(elementsSet)) exitWith {
                 [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
             };
 
-            if (_name == _elementName) then {
-                [_idd, _elements, _show] call FUNC(setAdvancedElement);
-                TRACE_2("Setting Changed",_name,_elementName);
-            };
-        } forEach ELEMENTS_ADVANCED;
+            [_name, _show] call FUNC(setAdvancedElement);
+            TRACE_2("Setting Changed",_name,_show);
+        };
     }] call EFUNC(common,addEventHandler);
 
 }] call EFUNC(common,addEventHandler);

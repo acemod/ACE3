@@ -124,6 +124,14 @@ class CfgVehicles {
                 defaultValue = 1;
             };
 
+            // Gunner
+            class gunnerAmmoCount {
+                displayName = CSTRING(GunnerAmmoCount);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+
             // Vehicle
             class vehicleName {
                 displayName = CSTRING(VehicleName);

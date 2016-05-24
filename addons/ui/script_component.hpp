@@ -20,28 +20,29 @@
 // Elements
 #define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
 
-// IDD, IDC, Element (must be string to compare to changed setting name)
+// IDD, IDCs, Element (must be string to compare to changed setting name), Selective Type (0-both, 1-ground, 2-vehicle)
 #define ELEMENTS_ADVANCED [ \
-    [300, [118], QGVAR(weaponName)], \
-    [300, [1001, 1008], QGVAR(weaponNameBackground)], \
-    [300, [187, 1203], QGVAR(firingMode)], \
-    [300, [155], QGVAR(ammoType)], \
-    [300, [184], QGVAR(ammoCount)], \
-    [300, [185], QGVAR(magCount)], \
-    [300, [152], QGVAR(throwableName)], \
-    [300, [151], QGVAR(throwableCount)], \
-    [300, [1202], QGVAR(weaponLowerInfoBackground)], \
-    [300, [168], QGVAR(zeroing)], \
-    [305, [193], QGVAR(staminaBar)], \
-    [303, [188, 1201], QGVAR(stance)], \
-    [300, [120], QGVAR(vehicleName)], \
-    [300, [1000, 1013], QGVAR(vehicleNameBackground)], \
-    [300, [113, 1202], QGVAR(vehicleFuelBar)], \
-    [300, [121, 1004, 1006], QGVAR(vehicleSpeed)], \
-    [300, [122, 1005, 1014], QGVAR(vehicleAltitude)], \
-    [300, [111], QGVAR(vehicleDamage)], \
-    [300, [1200], QGVAR(vehicleInfoBackground)], \
-    [300, [150], QGVAR(vehicleGunnerWeapon)] \
+    [300, [118], 0, QGVAR(weaponName)], \
+    [300, [1001, 1008], 0, QGVAR(weaponNameBackground)], \
+    [300, [187, 1203], 0, QGVAR(firingMode)], \
+    [300, [155], 0, QGVAR(ammoType)], \
+    [300, [184], 1, QGVAR(ammoCount)], \
+    [300, [185], 0, QGVAR(magCount)], \
+    [300, [152], 0, QGVAR(throwableName)], \
+    [300, [151], 0, QGVAR(throwableCount)], \
+    [300, [1202], 0, QGVAR(weaponLowerInfoBackground)], \
+    [300, [168], 0, QGVAR(zeroing)], \
+    [305, [193], 1, QGVAR(staminaBar)], \
+    [303, [188, 1201], 1, QGVAR(stance)], \
+    [300, [184], 2, QGVAR(gunnerAmmoCount)], \
+    [300, [120], 2, QGVAR(vehicleName)], \
+    [300, [1000, 1013], 2, QGVAR(vehicleNameBackground)], \
+    [300, [113, 1202], 2, QGVAR(vehicleFuelBar)], \
+    [300, [121, 1004, 1006], 2, QGVAR(vehicleSpeed)], \
+    [300, [122, 1005, 1014], 2, QGVAR(vehicleAltitude)], \
+    [300, [111], 2, QGVAR(vehicleDamage)], \
+    [300, [1200], 2, QGVAR(vehicleInfoBackground)], \
+    [300, [150], 2, QGVAR(vehicleGunnerWeapon)] \
 ]
 
 
@@ -56,7 +57,7 @@ RscUnitInfo = 300
 + 1203 (Firing Mode Background)
 
 155 (Ammo Type)
-184 (Ammo Count) - disabled by default if ace_reload is loaded
+184 (Ammo Count / Gunner Ammo Count) - disabled by default if ace_reload is loaded
 185 (Magazine Count)
 152 (Grenade/Flare Type)
 151 (Grenade/Flare Count)

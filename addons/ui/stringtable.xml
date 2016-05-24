@@ -59,6 +59,8 @@
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
             <Czech>Počet munice</Czech>
+        </Key><Key ID="STR_ACE_UI_GunnerAmmoCount">
+            <English>Gunner Ammo Count</English>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
