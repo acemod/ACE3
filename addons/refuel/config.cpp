@@ -15,3 +15,11 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    medical_onUnconscious = "ace_medical_onUnconscious";
+    setFuel = "ace_setFuel";
+    setVectorDirAndUp = "ace_setVectorDirAndUp";
+    displayTextStructured = "ace_displayTextStructured";
+    displayTextStructured = "ace_displayTextStructured";
+};

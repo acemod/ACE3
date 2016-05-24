@@ -47,4 +47,4 @@ if (isNull _vehicle) then {
 if (isNull _vehicle) exitWith {ERROR("");};
 
 _unit setVariable [QGVAR(isEscorting), false, true];
-["MoveInCaptive", [_target, _vehicle], [_target]] call CBA_fnc_targetEvent;
+["ace_moveInCaptive", [_target, _vehicle], [_target]] call CBA_fnc_targetEvent;

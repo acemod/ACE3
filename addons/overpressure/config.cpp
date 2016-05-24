@@ -14,3 +14,11 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    firedPlayerVehicle = "ace_firedPlayerVehicle";
+    firedPlayer = "ace_firedPlayer";
+    overpressure = "ace_overpressure";
+    overpressure = "ace_overpressure";
+    overpressure = "ace_overpressure";
+};

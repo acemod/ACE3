@@ -6,7 +6,7 @@ if (["STMapGestures"] call EFUNC(common,isModLoaded)) exitWith {
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
     [{
         if (isNull (findDisplay 12)) exitWith {};

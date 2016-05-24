@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-["selectLeader", [group _unit, _unit], units group _unit] call CBA_fnc_targetEvent;
+["ace_selectLeader", [group _unit, _unit], units group _unit] call CBA_fnc_targetEvent;

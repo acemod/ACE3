@@ -18,3 +18,20 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgEden.hpp"
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+    medical_onUnconscious = "ace_medical_onUnconscious";
+    SetSurrendered = "ace_setSurrendered";
+    SetHandcuffed = "ace_setHandcuffed";
+    MoveOutCaptive = "ace_moveOutCaptive";
+    MoveInCaptive = "ace_moveInCaptive";
+    playerChanged = "ace_playerChanged";
+    CaptiveStatusChanged = "ace_captiveStatusChanged";
+    CaptiveStatusChanged = "ace_captiveStatusChanged";
+    SetSurrendered = "ace_setSurrendered";
+    SetHandcuffed = "ace_setHandcuffed";
+    MoveOutCaptive = "ace_moveOutCaptive";
+    SetHandcuffed = "ace_setHandcuffed";
+    MoveInCaptive = "ace_moveInCaptive";
+    SetHandcuffed = "ace_setHandcuffed";
+};

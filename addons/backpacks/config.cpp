@@ -13,3 +13,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class ACE_newEvents {
+    backpackOpened = "ace_backpackOpened";
+    backpackOpened = "ace_backpackOpened";
+};

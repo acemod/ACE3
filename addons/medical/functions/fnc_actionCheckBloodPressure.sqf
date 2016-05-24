@@ -16,7 +16,7 @@
 
 params ["_caller", "_target", "_selectionName"];
 if (local _target) then {
-    ["actionCheckBloodPressureLocal", [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
+    ["ace_actionCheckBloodPressureLocal", [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["actionCheckBloodPressureLocal", [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
+    ["ace_actionCheckBloodPressureLocal", [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
 };

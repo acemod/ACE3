@@ -42,7 +42,7 @@ if (_show) then {
         if (ACE_player distance _target > MAX_DISTANCE) exitwith {
             ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutText ["","PLAIN"];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
-            ["displayTextStructured", [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player], [ACE_player]] call CBA_fnc_targetEvent;
+            ["ace_displayTextStructured", [[LSTRING(DistanceToFar), [_target] call EFUNC(common,getName)], 1.75, ACE_player], [ACE_player]] call CBA_fnc_targetEvent;
         };
 
         disableSerialization;

@@ -3,9 +3,9 @@
 
 ACE_Modifier = 0;
 
-["pardon", {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
+["ace_pardon", {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
 
-["getDown", {
+["ace_getDown", {
     params ["_target"];
 
     _target setUnitPos "DOWN";

@@ -17,4 +17,4 @@
 
 params ["_unit", "_target"];
 
-["SetHandcuffed", [_target, false], [_target]] call CBA_fnc_targetEvent;
+["ace_setHandcuffed", [_target, false], [_target]] call CBA_fnc_targetEvent;

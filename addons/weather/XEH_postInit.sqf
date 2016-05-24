@@ -58,7 +58,7 @@ simulWeatherSync;
 
 
 
-["SettingsInitialized",{
+["ace_settingsInitialized",{
     TRACE_1("SettingsInitialized",GVAR(syncRain));
 
     //Create a 0 sec delay PFEH to update rain every frame:

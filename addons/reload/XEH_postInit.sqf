@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
 {false},
 [19, [false, true, false]], false] call CBA_fnc_addKeybind;
 
-["setAmmoSync", {
+["ace_setAmmoSync", {
     //To propagate the setAmmo change, do it on all clients
     params ["_unit", "_weapon", "_ammo"];
     TRACE_3("setAmmoSync EH",_unit,_weapon,_ammo);
@@ -35,7 +35,7 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if it's the wrong type
     if (_magazineType != (_magazine select 0)) exitWith {
-        ["returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+        ["ace_returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     private _ammoCount = _receiver ammo currentWeapon _receiver;
@@ -43,15 +43,15 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if the belt is full or empty
     if ((_ammoCount == 0)  || _ammoMissing == 0) exitWith {
-        ["returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+        ["ace_returnedAmmo", [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     // Add the ammo
     private _ammoAdded = _ammoMissing min (_magazine select 1);
-    ["setAmmoSync", [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call CBA_fnc_globalEvent;
+    ["ace_setAmmoSync", [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call CBA_fnc_globalEvent;
 
     if ((_magazine select 1) - _ammoAdded > 0) then {
-        ["returnedAmmo", [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
+        ["ace_returnedAmmo", [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;
 

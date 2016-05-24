@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
-["AddCargoByClass", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
+["ace_addCargoByClass", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 
-["LoadCargo", {
+["ace_loadCargo", {
     params ["_item", "_vehicle"];
     TRACE_2("LoadCargo EH",_item,_vehicle);
 
@@ -13,11 +13,11 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
+    ["ace_displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
 
     if (_loaded) then {
         // Invoke listenable event
-        ["cargoLoaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
+        ["ace_cargoLoaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -34,11 +34,11 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
+    ["ace_displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
 
     if (_unloaded) then {
         // Invoke listenable event
-        ["cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
+        ["ace_cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
 
     // TOOO maybe drag/carry the unloaded item?

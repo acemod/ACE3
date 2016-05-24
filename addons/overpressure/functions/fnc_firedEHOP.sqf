@@ -40,7 +40,7 @@ private _direction = vectorDir _projectile;
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
+["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL

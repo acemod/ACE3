@@ -18,7 +18,7 @@ params ["_unit", ["_force", false]];
 if !([_unit] call FUNC(hasMedicalEnabled) || _force) exitWith {};
 
 if !(local _unit) exitWith {
-    ["addVitalLoop", [_unit, _force], _unit] call CBA_fnc_targetEvent;
+    ["ace_addVitalLoop", [_unit, _force], _unit] call CBA_fnc_targetEvent;
 };
 
 // Quit if the unit already has a vital loop, or is dead, unless it's forced

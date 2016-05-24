@@ -17,3 +17,12 @@ class CfgPatches {
 #include "CfgVehicleClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+    playerChanged = "ace_playerChanged";
+    rallypointMoved = "ace_rallypointMoved";
+    killedByFriendly = "ace_killedByFriendly";
+    rallypointMoved = "ace_rallypointMoved";
+    rallypointMoved = "ace_rallypointMoved";
+};

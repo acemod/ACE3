@@ -6,7 +6,7 @@ GVAR(MenuPFHID) = -1;
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
-["medical_treatmentSuccess", {
+["ace_medical_treatmentSuccess", {
 
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
         GVAR(pendingReopen) = false;

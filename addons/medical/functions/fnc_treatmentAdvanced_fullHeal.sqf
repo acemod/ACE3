@@ -13,9 +13,9 @@
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 if (local _target) then {
-    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call CBA_fnc_localEvent;
+    ["ace_treatmentAdvanced_fullHealLocal", [_caller, _target]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentAdvanced_fullHealLocal", [_caller, _target], _target] call CBA_fnc_targetEvent;
+    ["ace_treatmentAdvanced_fullHealLocal", [_caller, _target], _target] call CBA_fnc_targetEvent;
 };
 
 true;

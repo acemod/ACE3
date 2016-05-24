@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // if not enabled, then bugger off.
     if !(GVAR(enabled)) exitWith {};
 

@@ -107,7 +107,7 @@ call FUNC(determineZoom);
         }] call CBA_fnc_addEventHandler;
 
         if (GVAR(mapGlow)) then {
-            ["visibleMapChanged", {
+            ["ace_visibleMapChanged", {
                 params ["_player", "_mapOn"];
                 if (_mapOn) then {
                     if (!alive _player && !isNull GVAR(glow)) then {

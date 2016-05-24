@@ -17,3 +17,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    RangerfinderData = "ace_rangerfinderData";
+};

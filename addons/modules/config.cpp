@@ -26,3 +26,6 @@ class CfgVehicles {
 };
 
 #include "CfgEventHandlers.hpp"
+class ACE_newEvents {
+    InitSettingsFromModules = "ace_initSettingsFromModules";
+};

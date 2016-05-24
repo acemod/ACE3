@@ -2,4 +2,4 @@
 
 if (!hasInterface) exitWith {};
 
-["interactMenuOpened", {_this call FUNC(interactEH)}] call CBA_fnc_addEventHandler;
+["ace_interactMenuOpened", {_this call FUNC(interactEH)}] call CBA_fnc_addEventHandler;

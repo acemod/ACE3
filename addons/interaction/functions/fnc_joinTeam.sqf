@@ -18,7 +18,7 @@
 
 params ["_unit", "_team"];
 
-["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
+["ace_cBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
 
 // display message
 if (_unit == ACE_player) then {
@@ -31,5 +31,5 @@ if (_unit == ACE_player) then {
         _message = format [localize LSTRING(JoinedTeam), _team];
     };
 
-    ["displayTextStructured", _message] call CBA_fnc_localEvent;
+    ["ace_displayTextStructured", _message] call CBA_fnc_localEvent;
 };

@@ -42,3 +42,9 @@ class CfgMineTriggers {
         mineTriggerRange = 1;
     };
 };
+
+class ACE_newEvents {
+    medical_onUnconscious = "ace_medical_onUnconscious";
+    clientRequestsOrientations = "ace_clientRequestsOrientations";
+    serverSendsOrientations = "ace_serverSendsOrientations";
+};

@@ -23,3 +23,15 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_break_line", "ace_parse_imagepath"};
 };
+
+class ACE_newEvents {
+    SettingChanged = "ace_settingChanged";
+    playerChanged = "ace_playerChanged";
+    interactMenuOpened = "ace_interactMenuOpened";
+    clearConditionCaches = "ace_clearConditionCaches";
+    clearConditionCaches = "ace_clearConditionCaches";
+    interactMenuClosed = "ace_interactMenuClosed";
+    clearConditionCaches = "ace_clearConditionCaches";
+    clearConditionCaches = "ace_clearConditionCaches";
+    interactMenuOpened = "ace_interactMenuOpened";
+};

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
         addMissionEventHandler ["HandleDisconnect", {
             [{

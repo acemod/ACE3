@@ -17,3 +17,17 @@ class CfgPatches {
 #include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_ZeusActions.hpp"
+
+class ACE_newEvents {
+    getDown = "ace_getDown";
+    pardon = "ace_pardon";
+    tapShoulder = "ace_tapShoulder";
+    sendAway = "ace_sendAway";
+    setVelocity = "ace_setVelocity";
+    displayTextStructured = "ace_displayTextStructured";
+    pardon = "ace_pardon";
+    displayTextStructured = "ace_displayTextStructured";
+    CBA_teamColorChanged = "ace_cBA_teamColorChanged";
+    getDown = "ace_getDown";
+    selectLeader = "ace_selectLeader";
+};

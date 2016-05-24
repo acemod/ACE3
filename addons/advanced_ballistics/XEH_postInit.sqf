@@ -24,7 +24,7 @@ if (!GVAR(extensionAvailable)) exitWith {
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 
@@ -32,8 +32,8 @@ if (!hasInterface) exitWith {};
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
-    ["firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
     //Add warnings for missing compat PBOs (only if AB is on)
     {

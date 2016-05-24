@@ -15,3 +15,9 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    createTag = "ace_createTag";
+    createTag = "ace_createTag";
+    tagCreated = "ace_tagCreated";
+};

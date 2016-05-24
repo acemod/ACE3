@@ -21,7 +21,7 @@
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
 if (isServer) then {
-    ["medical_onUnconscious", {
+    ["ace_medical_onUnconscious", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};
         TRACE_1("Knocked Out, Doing Deadman", _unit);
@@ -37,7 +37,7 @@ if (isServer) then {
             (!isNull _explosive && {alive _explosive})
         };
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["serverSendsOrientations", [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
+        ["ace_serverSendsOrientations", [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -66,7 +66,7 @@ if (didJIP) then {
     //  Create a logic to get the client ID
     GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
-    ["clientRequestsOrientations", [GVAR(localLogic)]] call CBA_fnc_serverEvent;
+    ["ace_clientRequestsOrientations", [GVAR(localLogic)]] call CBA_fnc_serverEvent;
 };
 
 ["interactMenuOpened", {

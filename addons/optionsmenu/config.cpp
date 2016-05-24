@@ -39,3 +39,7 @@ class CfgCommands {
         "http://ace3mod.com/version.html"
     };
 };
+
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+};

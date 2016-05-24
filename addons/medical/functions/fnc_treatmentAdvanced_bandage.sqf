@@ -27,9 +27,9 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
 };
 
 if (local _target) then {
-    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call CBA_fnc_localEvent;
+    ["ace_treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
+    ["ace_treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
 };
 
 /*    {

@@ -33,3 +33,8 @@ class CfgPatches {
 #include "CfgJointRails.hpp"
 
 #include "CfgPreloadTextures.hpp"
+
+class ACE_newEvents {
+    infoDisplayChanged = "ace_infoDisplayChanged";
+    firedPlayer = "ace_firedPlayer";
+};

@@ -4,7 +4,7 @@ GVAR(placer) = objNull;
 GVAR(deployPFH) = -1;
 
 // Deploy concertina wire if interact menu is opened
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     if (GVAR(deployPFH) != -1) then {
         GVAR(placer) setVariable [QGVAR(wireDeployed), true];
     };

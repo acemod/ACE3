@@ -1,4 +1,4 @@
 #include "script_component.hpp"
 
-["DisarmDropItems", FUNC(eventTargetStart)] call CBA_fnc_addEventHandler;
-["DisarmDebugCallback", FUNC(eventCallerFinish)] call CBA_fnc_addEventHandler;
+["ace_disarmDropItems", FUNC(eventTargetStart)] call CBA_fnc_addEventHandler;
+["ace_disarmDebugCallback", FUNC(eventCallerFinish)] call CBA_fnc_addEventHandler;

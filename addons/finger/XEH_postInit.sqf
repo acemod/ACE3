@@ -6,7 +6,7 @@ GVAR(lastFPTime) = -1;
 GVAR(fingersHash) = HASH_CREATE;
 GVAR(pfeh_id) = -1;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //If not enabled, dont't bother adding keybind or eventhandler
     if (!GVAR(enabled)) exitWith {};
 

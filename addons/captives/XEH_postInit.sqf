@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Hold on a little bit longer to ensure anims will work
     [{
         GVAR(captivityEnabled) = true;
@@ -24,15 +24,15 @@ if (isServer) then {
     }];
 };
 
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
-["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
-["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
+["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
+["ace_moveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
+["ace_moveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
 
-["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
-["SetSurrendered", {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
+["ace_setHandcuffed", {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
+["ace_setSurrendered", {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
+["ace_medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

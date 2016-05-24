@@ -16,3 +16,9 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+    SetHandcuffed = "ace_setHandcuffed";
+    medical_onUnconscious = "ace_medical_onUnconscious";
+};

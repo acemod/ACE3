@@ -19,3 +19,11 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "Effects.hpp"
+
+class ACE_newEvents {
+    firedNonPlayer = "ace_firedNonPlayer";
+    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
+    firedPlayer = "ace_firedPlayer";
+    flashbangExplosion = "ace_flashbangExplosion";
+    flashbangExplosion = "ace_flashbangExplosion";
+};

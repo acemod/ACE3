@@ -21,3 +21,7 @@ class CfgCameraShake {
     // What does this do, really? It seems like the engine no longer respects it.
     defaultCaliberCoefWeaponFire = 0;
 };
+
+class ACE_newEvents {
+    firedPlayer = "ace_firedPlayer";
+};

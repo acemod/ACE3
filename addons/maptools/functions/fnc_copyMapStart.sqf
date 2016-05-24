@@ -19,4 +19,4 @@
 
 params ["_player", "_target"];
 
-["drawing_requestMarkers", [_player], _target] call CBA_fnc_targetEvent;
+["ace_drawing_requestMarkers", [_player], _target] call CBA_fnc_targetEvent;

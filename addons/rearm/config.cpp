@@ -18,3 +18,8 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    playerVehicleChanged = "ace_playerVehicleChanged";
+    medical_onUnconscious = "ace_medical_onUnconscious";
+};

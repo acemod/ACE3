@@ -8,7 +8,7 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name"];
     if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
@@ -23,7 +23,7 @@ GVAR(ParsedTextCached) = [];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
-["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CBA_fnc_addEventHandler;
+["ace_interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CBA_fnc_addEventHandler;
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
@@ -54,7 +54,7 @@ GVAR(ParsedTextCached) = [];
 }] call CBA_fnc_addEventHandler;
 
 // disable firing while the interact menu is is is opened
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
+["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // background options
 ["interactMenuOpened", {

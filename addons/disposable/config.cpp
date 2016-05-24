@@ -16,3 +16,9 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    playerInventoryChanged = "ace_playerInventoryChanged";
+    firedNonPlayer = "ace_firedNonPlayer";
+    firedPlayer = "ace_firedPlayer";
+};

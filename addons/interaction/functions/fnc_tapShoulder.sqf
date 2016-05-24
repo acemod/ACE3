@@ -25,4 +25,4 @@ if (_unit == ACE_player) then {
 
 _unit playActionNow "PutDown";
 
-["tapShoulder", [_target, _shoulderNum], [_target]] call CBA_fnc_targetEvent;
+["ace_tapShoulder", [_target, _shoulderNum], [_target]] call CBA_fnc_targetEvent;

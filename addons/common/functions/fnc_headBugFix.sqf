@@ -17,8 +17,8 @@
 private _unit = ACE_player;
 private _anim = animationState _unit;
 
-["HeadbugFixUsed", [profileName, _anim]] call CBA_fnc_serverEvent;
-["HeadbugFixUsed", [profileName, _anim]] call CBA_fnc_localEvent;
+["ace_headbugFixUsed", [profileName, _anim]] call CBA_fnc_serverEvent;
+["ace_headbugFixUsed", [profileName, _anim]] call CBA_fnc_localEvent;
 
 if (_unit != vehicle _unit  || {!([_unit, objNull, ["isNotSitting"]] call FUNC(canInteractWith))}) exitWith {false};
 

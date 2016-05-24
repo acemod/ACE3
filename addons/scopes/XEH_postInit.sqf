@@ -10,10 +10,10 @@
 if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
-["playerInventoryChanged", FUNC(inventoryCheck)] call CBA_fnc_addEventHandler;
+["ace_playerInventoryChanged", FUNC(inventoryCheck)] call CBA_fnc_addEventHandler;
 
 // Instantly hide knobs when scoping in
-["cameraViewChanged", {
+["ace_cameraViewChanged", {
     EXPLODE_2_PVT(_this,_player,_newCameraView);
     if (_newCameraView == "GUNNER") then {
         private "_layer";
@@ -152,5 +152,5 @@ if (!hasInterface) exitWith {};
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
-["firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;

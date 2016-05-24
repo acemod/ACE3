@@ -15,4 +15,4 @@
 
 params ["", "_target"];
 
-["pardon", [_target], [_target]] call CBA_fnc_targetEvent;
+["ace_pardon", [_target], [_target]] call CBA_fnc_targetEvent;

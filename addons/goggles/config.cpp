@@ -268,3 +268,13 @@ class CfgCloudlets {
         destroyOnWaterSurface = 1;
     };
 };
+
+class ACE_newEvents {
+    playerInventoryChanged = "ace_playerInventoryChanged";
+    firedPlayer = "ace_firedPlayer";
+    activeCameraChanged = "ace_activeCameraChanged";
+    cameraViewChanged = "ace_cameraViewChanged";
+    GlassesChanged = "ace_glassesChanged";
+    GlassesCracked = "ace_glassesCracked";
+    GlassesCracked = "ace_glassesCracked";
+};

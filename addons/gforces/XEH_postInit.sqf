@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(pfID) = -1;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_1("SettingsInitialized eh",GVAR(enabledFor));
 
     if (GVAR(enabledFor) == 0) exitWith {}; //Module has no effect if enabledFor is "None"

@@ -102,6 +102,6 @@ if (GVAR(openedMenuType) == 0) then {
     GVAR(startHoverTime) = -1000;
 };
 
-["interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
+["ace_interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
 
 true

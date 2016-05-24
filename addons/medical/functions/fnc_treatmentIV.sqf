@@ -23,9 +23,9 @@ if (count _items == 0) exitWith {false};
 
 _removeItem = _items select 0;
 if (local _target) then {
-    ["treatmentIVLocal", [_target, _className]] call CBA_fnc_localEvent;
+    ["ace_treatmentIVLocal", [_target, _className]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentIVLocal", [_target, _className], _target] call CBA_fnc_targetEvent;
+    ["ace_treatmentIVLocal", [_target, _className], _target] call CBA_fnc_targetEvent;
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);

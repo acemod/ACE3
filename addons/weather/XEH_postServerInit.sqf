@@ -9,7 +9,7 @@ GVAR(rain_current_range) = -1+(random 2);
 // Wind
 call FUNC(initWind);
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_2("SettingsInitialized",GVAR(enableServerController),GVAR(serverUpdateInterval));
 
     if (GVAR(enableServerController)) then {

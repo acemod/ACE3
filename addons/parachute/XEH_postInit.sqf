@@ -33,7 +33,7 @@ if (!hasInterface) exitWith {};
 [24, [false, false, false]], false] call CBA_fnc_addKeybind;
 
 GVAR(PFH) = false;
-["playerVehicleChanged",{
+["ace_playerVehicleChanged",{
     if (!GVAR(PFH) && {(vehicle ACE_player) isKindOf "ParachuteBase"}) then {
         GVAR(PFH) = true;
         [FUNC(onEachFrame), 0.1, []] call CALLSTACK(CBA_fnc_addPerFrameHandler);
@@ -41,6 +41,6 @@ GVAR(PFH) = false;
 }] call CBA_fnc_addEventHandler;
 
 // don't show speed and height when in expert mode
-["infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call CBA_fnc_addEventHandler;
+["ace_infoDisplayChanged", {_this call FUNC(handleInfoDisplayChanged)}] call CBA_fnc_addEventHandler;
 
-["playerInventoryChanged", FUNC(storeParachute)] call CBA_fnc_addEventHandler;
+["ace_playerInventoryChanged", FUNC(storeParachute)] call CBA_fnc_addEventHandler;

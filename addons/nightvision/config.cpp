@@ -16,3 +16,12 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    playerVisionModeChanged = "ace_playerVisionModeChanged";
+    firedPlayerVehicle = "ace_firedPlayerVehicle";
+    firedPlayer = "ace_firedPlayer";
+    playerTurretChanged = "ace_playerTurretChanged";
+    playerVehicleChanged = "ace_playerVehicleChanged";
+    playerInventoryChanged = "ace_playerInventoryChanged";
+};

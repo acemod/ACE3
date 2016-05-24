@@ -18,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-["MoveOutCaptive", [_target], [_target]] call CBA_fnc_targetEvent;
+["ace_moveOutCaptive", [_target], [_target]] call CBA_fnc_targetEvent;

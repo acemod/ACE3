@@ -21,3 +21,12 @@ class CfgPatches {
 #include "CfgActions.hpp"
 
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    setAmmoSync = "ace_setAmmoSync";
+    returnedAmmo = "ace_returnedAmmo";
+    setAmmoSync = "ace_setAmmoSync";
+    returnedAmmo = "ace_returnedAmmo";
+    returnedAmmo = "ace_returnedAmmo";
+    linkedAmmo = "ace_linkedAmmo";
+};

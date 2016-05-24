@@ -17,3 +17,8 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgJointRails.hpp"
+
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+    SetHandcuffed = "ace_setHandcuffed";
+};

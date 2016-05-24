@@ -16,3 +16,7 @@ class CfgPatches {
 #include "RscTitles.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+    SettingsInitialized = "ace_settingsInitialized";
+};

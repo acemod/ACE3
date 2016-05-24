@@ -18,3 +18,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "RscInGameUI.hpp"
+
+class ACE_newEvents {
+    RangerfinderData = "ace_rangerfinderData";
+};

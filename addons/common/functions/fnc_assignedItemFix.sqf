@@ -28,7 +28,7 @@ GVAR(AssignedItemsShownItems) = [
     ACE_isGPSEnabled
 ];
 
-["playerInventoryChanged", {
+["ace_playerInventoryChanged", {
     params ["_unit"];
 
     private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]

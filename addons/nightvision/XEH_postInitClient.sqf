@@ -29,8 +29,8 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged", FUNC(updatePPEffects)] call CBA_fnc_addEventHandler;
-["playerVisionModeChanged", {
+["ace_playerInventoryChanged", FUNC(updatePPEffects)] call CBA_fnc_addEventHandler;
+["ace_playerVisionModeChanged", {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onVisionModeChanged);
 }] call CBA_fnc_addEventHandler;
@@ -39,8 +39,8 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     _this call FUNC(updatePPEffects);
     _this call FUNC(onCameraViewChanged);
 }] call CBA_fnc_addEventHandler;
-["playerVehicleChanged", {_this call FUNC(updatePPEffects)}] call CBA_fnc_addEventHandler;
-["playerTurretChanged", {_this call FUNC(updatePPEffects)}] call CBA_fnc_addEventHandler;
+["ace_playerVehicleChanged", {_this call FUNC(updatePPEffects)}] call CBA_fnc_addEventHandler;
+["ace_playerTurretChanged", {_this call FUNC(updatePPEffects)}] call CBA_fnc_addEventHandler;
 
 // Add keybinds
 ["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
@@ -72,5 +72,5 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
 
 // Register fire event handler
-["firedPlayer", DFUNC(blending)] call CBA_fnc_addEventHandler;
-["firedPlayerVehicle", DFUNC(blending)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", DFUNC(blending)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerVehicle", DFUNC(blending)] call CBA_fnc_addEventHandler;

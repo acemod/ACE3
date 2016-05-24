@@ -16,3 +16,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "Dialog.hpp"
 #include "RscTitles.hpp"
+
+class ACE_newEvents {
+    RangerfinderData = "ace_rangerfinderData";
+};

@@ -30,4 +30,4 @@ playSound "ACE_BarrelSwap";
 
 [3, [_assistant, _gunner, _weapon], {}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
 
-["initiateSwapBarrelAssisted", [_assistant, _gunner, _weapon], _gunner] call CBA_fnc_targetEvent;
+["ace_initiateSwapBarrelAssisted", [_assistant, _gunner, _weapon], _gunner] call CBA_fnc_targetEvent;

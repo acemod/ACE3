@@ -28,7 +28,7 @@ GVAR(camera) = objNull;
 };
 
 // save control for fired EH
-["infoDisplayChanged", {
+["ace_infoDisplayChanged", {
     if (!isNull ((_this select 0) displayCtrl 1713001)) then {
         uiNamespace setVariable [QGVAR(RscWeaponInfo2D), _this select 0];
     };
@@ -52,4 +52,4 @@ GVAR(camera) = objNull;
 }] call CBA_fnc_addEventHandler;
 
 // Register fire event handler
-["firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

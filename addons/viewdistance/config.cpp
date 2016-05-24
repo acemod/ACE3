@@ -15,3 +15,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    SettingsInitialized = "ace_settingsInitialized";
+};

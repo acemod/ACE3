@@ -18,3 +18,8 @@ class CfgPatches {
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    playerInventoryChanged = "ace_playerInventoryChanged";
+    playerChanged = "ace_playerChanged";
+};

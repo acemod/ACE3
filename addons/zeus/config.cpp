@@ -42,3 +42,12 @@ class ACE_Curator {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    zeusUnitAssigned = "ace_zeusUnitAssigned";
+    SetSurrendered = "ace_setSurrendered";
+    SetHandcuffed = "ace_setHandcuffed";
+    AddCargoByClass = "ace_addCargoByClass";
+    AddCargoByClass = "ace_addCargoByClass";
+    zeusUnitAssigned = "ace_zeusUnitAssigned";
+};

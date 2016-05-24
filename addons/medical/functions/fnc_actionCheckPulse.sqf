@@ -16,7 +16,7 @@
 
 params ["_caller","_target", "_selectionName"];
 if (local _target) then {
-    ["actionCheckPulseLocal", [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
+    ["ace_actionCheckPulseLocal", [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["actionCheckPulseLocal", [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
+    ["ace_actionCheckPulseLocal", [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
 };

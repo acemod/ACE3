@@ -14,3 +14,9 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscInGameUI.hpp"
+class ACE_newEvents {
+    laser_laserOff = "ace_laser_laserOff";
+    laser_laserOn = "ace_laser_laserOn";
+    laser_laserOn = "ace_laser_laserOn";
+    laser_laserOff = "ace_laser_laserOff";
+};

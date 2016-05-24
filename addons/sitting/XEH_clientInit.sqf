@@ -3,7 +3,7 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_1("SettingInit", GVAR(enable));
 
     //If not enabled, then do not add CanInteractWith Condition or event handlers:
@@ -13,6 +13,6 @@ if (!hasInterface) exitWith {};
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call EFUNC(common,addCanInteractWithCondition);
 
     // Handle interruptions
-    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
-    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+    ["ace_medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+    ["ace_setHandcuffed", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

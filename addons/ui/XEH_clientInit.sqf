@@ -3,7 +3,7 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Initial settings
     [true] call FUNC(setElements);
 
