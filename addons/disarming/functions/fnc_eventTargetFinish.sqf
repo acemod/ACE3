@@ -23,5 +23,5 @@ params ["_caller", "_target", "_errorMsg"];
 
 if (_errorMsg != "") then {
     ACE_LOGINFO_2("%1 - eventTargetFinish: %2",ACE_time,_this);
-    ["ace_disarmDebugCallback", [_caller, _target, _errorMsg], [_caller]] call CBA_fnc_targetEvent;
+    [QGVAR(debugCallback), [_caller, _target, _errorMsg], [_caller]] call CBA_fnc_targetEvent;
 };

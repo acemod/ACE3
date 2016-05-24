@@ -19,6 +19,6 @@ class CfgPatches {
 #include "gui_disarm.hpp"
 
 class ACE_newEvents {
-    DisarmDebugCallback = "ace_disarmDebugCallback";
-    DisarmDropItems = "ace_disarmDropItems";
+    DisarmDebugCallback = QGVAR(debugCallback);
+    DisarmDropItems = QGVAR(dropItems);
 };

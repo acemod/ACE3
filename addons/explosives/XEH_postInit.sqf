@@ -28,7 +28,7 @@ if (isServer) then {
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
 
-    ["clientRequestsOrientations", {
+    [QGVAR(clientRequestOrientations), {
         params ["_logic"];
         TRACE_1("clientRequestsOrientations received:",_logic);
         // Filter the array before sending it
@@ -37,7 +37,7 @@ if (isServer) then {
             (!isNull _explosive && {alive _explosive})
         };
         TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        ["ace_serverSendsOrientations", [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
+        [QGVAR(serverSendOrientations), [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -51,7 +51,7 @@ GVAR(CurrentSpeedDial) = 0;
 // In case we are a JIP client, ask the server for orientation of any previously
 // placed mine.
 if (didJIP) then {
-    ["serverSendsOrientations", {
+    [QGVAR(serverSendOrientations), {
         params ["_explosivesOrientations"];
         TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
         {
@@ -66,10 +66,10 @@ if (didJIP) then {
     //  Create a logic to get the client ID
     GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
     TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
-    ["ace_clientRequestsOrientations", [GVAR(localLogic)]] call CBA_fnc_serverEvent;
+    [QGVAR(clientRequestOrientations), [GVAR(localLogic)]] call CBA_fnc_serverEvent;
 };
 
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     //Cancel placement if interact menu opened
     if (GVAR(pfeh_running)) then {
         GVAR(placeAction) = PLACE_CANCEL;
