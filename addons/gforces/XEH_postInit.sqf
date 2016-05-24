@@ -19,7 +19,7 @@ GVAR(pfID) = -1;
         [] call FUNC(addPFEH);
         TRACE_1("adding temp PFEH [start in]",GVAR(pfID));
     };
-    ["playerVehicleChanged", {
+    ["ace_playerVehicleChanged", {
         params ["", "_vehicle"];
         TRACE_2("playerVehicleChanged",_vehicle,typeOf _vehicle);
         if (_vehicle isKindOf "Air") then {

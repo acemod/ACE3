@@ -15,7 +15,7 @@ GVAR(ParsedTextCached) = [];
     };
 }] call CBA_fnc_addEventHandler;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
@@ -41,7 +41,7 @@ GVAR(ParsedTextCached) = [];
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
-["medical_onUnconscious", {
+["ace_medical_onUnconscious", {
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
@@ -57,11 +57,11 @@ GVAR(ParsedTextCached) = [];
 ["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // background options
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
 }] call CBA_fnc_addEventHandler;
-["interactMenuClosed", {
+["ace_interactMenuClosed", {
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
 }] call CBA_fnc_addEventHandler;

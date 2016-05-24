@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["ace_flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
+["ace_flashbangExploded", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

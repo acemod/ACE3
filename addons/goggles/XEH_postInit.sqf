@@ -56,7 +56,7 @@ GVAR(OldGlasses) = "<null>";
 }] call CBA_fnc_addEventHandler;
 
 // add glasses eventhandlers
-["GlassesChanged", {
+["ace_glassesChanged", {
     params ["_unit", "_glasses"];
 
     SETGLASSES(_unit,GLASSESDEFAULT);
@@ -70,7 +70,7 @@ GVAR(OldGlasses) = "<null>";
     };
 }] call CBA_fnc_addEventHandler;
 
-["GlassesCracked", {
+["ace_glassesCracked", {
     params ["_unit"];
 
     _unit setVariable ["ACE_EyesDamaged", true];

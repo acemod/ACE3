@@ -28,6 +28,6 @@ class ACE_newEvents {
     SettingChanged = "ace_settingChanged";
     playerChanged = "ace_playerChanged";
     interactMenuOpened = "ace_interactMenuOpened";
-    clearConditionCaches = "ace_clearConditionCaches";
+    clearConditionCaches = QGVAR(clearConditionCaches);
     interactMenuClosed = "ace_interactMenuClosed";
 };

@@ -20,7 +20,7 @@ GVAR(volumeAttenuation) = 1;
     //Add XEH:
     ["CAManBase", "FiredNear", FUNC(firedNear)] call CBA_fnc_addClassEventHandler;
     ["CAManBase", "Explosion", FUNC(explosionNear)] call CBA_fnc_addClassEventHandler;
-    
+
     // Update hearing protection now:
     [] call FUNC(updateHearingProtection);
 
@@ -32,7 +32,7 @@ GVAR(volumeAttenuation) = 1;
     ["ace_playerTurretChanged", {_this call FUNC(updatePlayerVehAttenuation);}] call CBA_fnc_addEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
-    ["playerChanged", {
+    ["ace_playerChanged", {
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         ACE_player setVariable [QGVAR(deaf), false];
