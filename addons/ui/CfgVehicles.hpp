@@ -155,6 +155,24 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class gunnerLaunchableName {
+                displayName = CSTRING(gunnerLaunchableName);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class gunnerLaunchableCount {
+                displayName = CSTRING(gunnerLaunchableCount);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class gunnerZeroing {
+                displayName = CSTRING(GunnerZeroing);
+                description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class gunnerWeaponLowerInfoBackground {
                 displayName = CSTRING(GunnerWeaponLowerInfoBackground);
                 description = CSTRING(RequiresSoldierVehicleWeaponInfo);

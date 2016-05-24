@@ -105,6 +105,15 @@
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
         </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableName">
+            <English>Gunner Launchable Type</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableCount">
+            <English>Gunner Launchable Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerZeroing">
+            <English>Gunner Zeroing</English>
+        </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
         </Key>
@@ -137,7 +146,7 @@
             <Czech>Info o vozidle v pozadí</Czech>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
-            <English>Requires Soldier/Vehicle/Weapons Information.</English>
+            <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">

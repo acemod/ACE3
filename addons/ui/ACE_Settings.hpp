@@ -192,6 +192,30 @@ class ACE_Settings {
         value = 1;
         isClientSettable = 1;
     };
+    class GVAR(gunnerLaunchableName) {
+        category = CSTRING(Category);
+        displayName = CSTRING(gunnerLaunchableName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerLaunchableCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(gunnerLaunchableCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerZeroing) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerZeroing);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
     class GVAR(gunnerWeaponLowerInfoBackground) {
         category = CSTRING(Category);
         displayName = CSTRING(GunnerWeaponLowerInfoBackground);

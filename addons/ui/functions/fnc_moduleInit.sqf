@@ -51,6 +51,9 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(gunnerAmmoType), "gunnerAmmoType"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(gunnerAmmoCount), "gunnerAmmoCount"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(gunnerMagCount), "gunnerMagCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerLaunchableName), "gunnerLaunchableName"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerLaunchableCount), "gunnerLaunchableCount"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(gunnerZeroing), "gunnerZeroing"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(gunnerWeaponLowerInfoBackground), "gunnerWeaponLowerInfoBackground"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleName), "vehicleName"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleNameBackground), "vehicleNameBackground"] call EFUNC(common,readSettingFromModule);

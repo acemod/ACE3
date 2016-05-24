@@ -31,8 +31,8 @@
     [300, [185], 1, QGVAR(magCount)], \
     [300, [152], 1, QGVAR(throwableName)], \
     [300, [151], 1, QGVAR(throwableCount)], \
+    [300, [168], 1, QGVAR(zeroing)], \
     [300, [1202], 1, QGVAR(weaponLowerInfoBackground)], \
-    [300, [168], 0, QGVAR(zeroing)], \
     [305, [193], 1, QGVAR(staminaBar)], \
     [303, [188, 1201], 1, QGVAR(stance)], \
     [300, [118], 2, QGVAR(gunnerWeaponName)], \
@@ -41,6 +41,9 @@
     [300, [155], 2, QGVAR(gunnerAmmoType)], \
     [300, [184], 2, QGVAR(gunnerAmmoCount)], \
     [300, [185], 2, QGVAR(gunnerMagCount)], \
+    [300, [152], 2, QGVAR(gunnerLaunchableName)], \
+    [300, [151], 2, QGVAR(gunnerLaunchableCount)], \
+    [300, [168], 2, QGVAR(gunnerZeroing)], \
     [300, [1202], 2, QGVAR(gunnerWeaponLowerInfoBackground)], \
     [300, [120], 2, QGVAR(vehicleName)], \
     [300, [1000, 1013], 2, QGVAR(vehicleNameBackground)], \

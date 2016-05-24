@@ -21,6 +21,7 @@ params ["_element", "_show", ["_force", false, [true]] ];
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
     [LSTRING(Disallowed), 2] call EFUNC(common,displayTextStructured);
+    false
 };
 
 private _elementInfo = ELEMENTS_ADVANCED select {_x select 3 == _element};
@@ -30,7 +31,7 @@ private _inVehicle = ACE_player != vehicle ACE_player;
 TRACE_2("Type",_inVehicle,_selectiveType);
 
 // Exit if selective type not applicable to current vehicle
-if ((_inVehicle && {_selectiveType == 1}) || (!_inVehicle && {_selectiveType == 2})) exitWith {};
+if (!_force && {(_inVehicle && {_selectiveType == 1}) || (!_inVehicle && {_selectiveType == 2})}) exitWith {false};
 
 // Get show/hide boolean from a set element if set via API
 // Inversion only needed if inverted, otherwise parameter can be used directly as it is the same
