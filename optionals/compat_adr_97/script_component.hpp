@@ -1,4 +1,4 @@
-#define COMPONENT compat_adr_97
+#define COMPONENT Compat_ADR_97
 
 #include "\z\ace\addons\main\script_mod.hpp"
 
