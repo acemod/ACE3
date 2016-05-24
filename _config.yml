@@ -27,3 +27,9 @@ safe: true
 lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
+
+gems:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from

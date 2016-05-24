@@ -5,9 +5,11 @@ description: The wind deflection module simulates wind deflection of projectiles
 group: feature
 category: realism
 parent: wiki
+redirect_from: "/wiki/feature/windeflection.html"
 ---
 
 ## 1. Overview
+
 ACE3 Wind Deflection is enabled by default. This feature simulates the wind deflection of projectiles fired by players and is designed to work independently or in conjunction with the Advanced Ballistic feature.
 
 <div class="panel callout">
@@ -16,8 +18,10 @@ ACE3 Wind Deflection is enabled by default. This feature simulates the wind defl
 </div>
 
 ## 2. Usage
-ACE3 Wind Deflection can be disabled or modified via a module in the 2D editor.
+
+ACE3 Wind Deflection can be disabled or modified via a module or server settings.
 
 
 ## 3. Dependencies
+
 `ace_weather`
