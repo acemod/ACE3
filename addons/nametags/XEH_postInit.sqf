@@ -29,7 +29,7 @@ GVAR(showNamesTime) = -10;
 }] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name"];
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);

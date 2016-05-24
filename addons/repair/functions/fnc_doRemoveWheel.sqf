@@ -34,7 +34,7 @@ private _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(sp
 TRACE_2("new wheel created",_newWheel,damage _newWheel);
 
 // raise event to set the new hitpoint damage
-["ace_setWheelHitPointDamage", [_vehicle, _hitPoint, 1], _vehicle] call CBA_fnc_targetEvent;
+[QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, 1], _vehicle] call CBA_fnc_targetEvent;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {

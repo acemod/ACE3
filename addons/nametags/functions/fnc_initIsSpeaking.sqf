@@ -28,7 +28,7 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-["playerChanged", {
+["ace_playerChanged", {
     //When player changes, make sure to reset old unit's variable
     params ["", "_oldUnit"];
     if ((!isNull _oldUnit) && {_oldUnit getVariable [QGVAR(isSpeakingInGame), false]}) then {

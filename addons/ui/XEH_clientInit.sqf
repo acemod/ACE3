@@ -8,7 +8,7 @@ if (!hasInterface) exitWith {};
     [true] call FUNC(setElements);
 
     // On load and entering/exiting a vehicle
-    ["infoDisplayChanged", {
+    ["ace_infoDisplayChanged", {
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
         private _force = [true, false] select (GVAR(allowSelectiveUI));
@@ -18,7 +18,7 @@ if (!hasInterface) exitWith {};
     }] call CBA_fnc_addEventHandler;
 
     // On changing settings
-    ["SettingChanged", {
+    ["ace_settingChanged", {
         params ["_name"];
 
         // Selective UI Basic

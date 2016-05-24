@@ -20,9 +20,9 @@ class CfgPatches {
 #include "CfgEden.hpp"
 
 class ACE_newEvents {
-    setWheelHitPointDamage = "ace_setWheelHitPointDamage";
-    setVehicleHitPointDamage = "ace_setVehicleHitPointDamage";
-    setVehicleDamage = "ace_setVehicleDamage";
+    setWheelHitPointDamage = QGVAR(setWheelHitPointDamage);
+    setVehicleHitPointDamage = QGVAR(setVehicleHitPointDamage);
+    setVehicleDamage = QGVAR(setVehicleDamage);
     fixPosition = "ace_fixPosition";
     displayTextStructured = "ace_displayTextStructured";
     engineOn = "ace_engineOn";

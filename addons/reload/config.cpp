@@ -23,7 +23,7 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 
 class ACE_newEvents {
-    setAmmoSync = "ace_setAmmoSync";
+    setAmmoSync = QGVAR(syncAmmo);
     returnedAmmo = "ace_returnedAmmo";
     linkedAmmo = "ace_linkedAmmo";
 };

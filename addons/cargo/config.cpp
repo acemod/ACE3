@@ -23,7 +23,7 @@ class ACE_newEvents {
     displayTextStructured = "ace_displayTextStructured";
     cargoLoaded = "ace_cargoLoaded";
     AddCargoByClass = "ace_addCargoByClass";
-    ServerUnloadCargo = "ace_serverUnloadCargo";
+    ServerUnloadCargo = QGVAR(serverUnload);
     UnloadCargo = "ace_unloadCargo";
     hideObjectGlobal = "ace_hideObjectGlobal";
     cargoAddedByClass = "ace_cargoAddedByClass";

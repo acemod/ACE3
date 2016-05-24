@@ -44,7 +44,7 @@
     // TOOO maybe drag/carry the unloaded item?
 }] call CBA_fnc_addEventHandler;
 
-["ServerUnloadCargo", {
+[QGVAR("serverUnload"), {
     params ["_item", "_emptyPosAGL"];
 
     _item hideObjectGlobal false;
