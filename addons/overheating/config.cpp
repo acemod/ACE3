@@ -52,12 +52,12 @@ class CfgGesturesMale {
 };
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
-    initiateSwapBarrelAssisted = "ace_initiateSwapBarrelAssisted";
-    showWeaponTemperature = "ace_showWeaponTemperature";
+    initiateSwapBarrelAssisted = QGVAR(initiateSwapBarrelAssisted);
+    showWeaponTemperature = QGVAR(showWeaponTemperature);
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
-    spareBarrelsLoadCoolest = "ace_spareBarrelsLoadCoolest";
-    spareBarrelsSendTemperatureHint = "ace_spareBarrelsSendTemperatureHint";
+    spareBarrelsLoadCoolest = QGVAR(spareBarrelsLoadCoolest);
+    spareBarrelsSendTemperatureHint = QGVAR(spareBarrelsSendTemperatureHint);
     displayTextStructured = "ace_displayTextStructured";
     weaponJammed = "ace_weaponJammed";
 };
