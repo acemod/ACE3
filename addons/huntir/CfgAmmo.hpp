@@ -26,6 +26,7 @@ class CfgAmmo {
         soundHit6[] = {"",3.16228,1,2000};
         soundHit7[] = {"",3.16228,1,2000};
         soundHit8[] = {"",3.16228,1,2000};
+        SoundSetExplosion[] = {};
         multiSoundHit[] = {};
         class HitEffects {};
         soundFakeFall0[] = {"",3.16228,1,1000};
