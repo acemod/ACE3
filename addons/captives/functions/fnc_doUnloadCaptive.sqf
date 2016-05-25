@@ -18,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-["ace_moveOutCaptive", [_target], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(moveOutCaptive), [_target], [_target]] call CBA_fnc_targetEvent;

@@ -14,5 +14,5 @@ if (!hasInterface) exitWith {};
 
     // Handle interruptions
     ["ace_medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
-    ["ace_setHandcuffed", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+    [QEGVAR(captives,setHandcuffed), {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

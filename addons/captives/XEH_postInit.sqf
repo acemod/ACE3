@@ -25,11 +25,11 @@ if (isServer) then {
 };
 
 ["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
-["ace_moveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
-["ace_moveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
+[QGVAR(moveInCaptive), {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
+[QGVAR(moveOutCaptive), {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
 
-["ace_setHandcuffed", {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
-["ace_setSurrendered", {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
+[QGVAR(setHandcuffed), {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
+[QGVAR(setSurrendered), {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
 ["ace_medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;

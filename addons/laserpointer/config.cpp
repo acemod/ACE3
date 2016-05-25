@@ -20,5 +20,5 @@ class CfgPatches {
 
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
-    SetHandcuffed = "ace_setHandcuffed";
+    SetHandcuffed = QEGVAR(captives,setHandcuffed);
 };

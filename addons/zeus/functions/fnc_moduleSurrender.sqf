@@ -41,7 +41,7 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
                 } else {
                     _surrendering = GETVAR(_unit,EGVAR(captives,isSurrendering),false);
                     // Event initalized by ACE_Captives
-                    ["ace_setSurrendered", [_unit, !_surrendering], _unit] call CBA_fnc_targetEvent;
+                    [QEGVAR(captives,setSurrendered), [_unit, !_surrendering], _unit] call CBA_fnc_targetEvent;
                 };
             };
         };

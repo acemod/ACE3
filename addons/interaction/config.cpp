@@ -19,12 +19,14 @@ class CfgPatches {
 #include "ACE_ZeusActions.hpp"
 
 class ACE_newEvents {
-    getDown = "ace_getDown";
-    pardon = "ace_pardon";
-    tapShoulder = "ace_tapShoulder";
-    sendAway = "ace_sendAway";
+    getDown = QGVAR(getDown);
+    pardon = QGVAR(pardon);
+    tapShoulder = QGVAR(tapShoulder);
+    sendAway = QGVAR(sendAway);
     setVelocity = "ace_setVelocity";
     displayTextStructured = "ace_displayTextStructured";
     CBA_teamColorChanged = "ace_CBA_teamColorChanged";
     selectLeader = "ace_selectLeader";
+    lampTurnOff = QGVAR(lampTurnOff);
+    lampTurnOn = QGVAR(lampTurnOn);
 };

@@ -38,7 +38,7 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
             } else {
                 _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
                 // Event initalized by ACE_Captives
-                ["ace_setHandcuffed", [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
+                [QEGVAR(captives,setHandcuffed), [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
             };
         };
     };

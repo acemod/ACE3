@@ -3,27 +3,27 @@
 
 ACE_Modifier = 0;
 
-["ace_pardon", {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
+[QGVAR(pardon), {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
 
-["ace_getDown", {
+[QGVAR(getDown), {
     params ["_target"];
 
     _target setUnitPos "DOWN";
 }] call CBA_fnc_addEventHandler;
 
-["sendAway", {
+[QGVAR(sendAway), {
     params ["_unit", "_position"];
 
     _unit setUnitPos "AUTO";
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
-["lampTurnOn", {
+[QGVAR(lampTurnOn), {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
-["lampTurnOff", {
+[QGVAR(lampTurnOff), {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
@@ -32,7 +32,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
 
-["tapShoulder", {
+[QGVAR(tapShoulder), {
     params ["_unit", "_shoulderNum"];
 
     if (_unit == ACE_player) then {

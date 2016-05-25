@@ -15,4 +15,4 @@
 
 params ["", "_target"];
 
-["ace_pardon", [_target], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(pardon), [_target], [_target]] call CBA_fnc_targetEvent;
