@@ -1,32 +1,5 @@
 class CfgAmmo {
     
-    class FlareCore;
-    
-    class FlareBase: FlareCore {};
-    class F_20mm_White: FlareBase {};
-    
-    class ACE_FlashlightProxy_Old: F_20mm_White {
-        model = "\A3\Weapons_f\empty";
-        effectFlare = "FlareShell";
-        
-        triggerTime = 0;
-        intensity = 0.5;
-        flareSize = 1;
-        timeToLive = 10e10;
-        
-        lightColor[] = {1,1,1,1};
-        
-        grenadeBurningSound[] = {};
-        grenadeFireSound[] = {};
-        soundTrigger[] = {};
-        SmokeShellSoundHit1[] = {};
-        SmokeShellSoundHit2[] = {};
-        SmokeShellSoundHit3[] = {};
-        SmokeShellSoundLoop1[] = {};
-        SmokeShellSoundLoop2[] = {};
-    };
-    
-    
     class Chemlight_base;
     
     class ACE_FlashlightProxy_White: Chemlight_base {
