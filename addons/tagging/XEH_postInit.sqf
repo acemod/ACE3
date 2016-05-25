@@ -44,4 +44,4 @@ if (!isServer) exitWith {};
 GVAR(testingThread) = false;
 GVAR(tagsToTest) = [];
 
-["ace_createTag", DFUNC(createTag)] call CBA_fnc_addEventHandler;
+[QGVAR(createTag), DFUNC(createTag)] call CBA_fnc_addEventHandler;

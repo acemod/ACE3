@@ -17,6 +17,6 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 class ACE_newEvents {
-    createTag = "ace_createTag";
+    createTag = QGVAR(createTag);
     tagCreated = "ace_tagCreated";
 };

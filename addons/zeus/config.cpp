@@ -44,7 +44,7 @@ class ACE_Curator {
 #include "ACE_Settings.hpp"
 
 class ACE_newEvents {
-    zeusUnitAssigned = "ace_zeusUnitAssigned";
+    zeusUnitAssigned = QGVAR(zeusUnitAssigned);
     SetSurrendered = "ace_setSurrendered";
     SetHandcuffed = "ace_setHandcuffed";
     AddCargoByClass = "ace_addCargoByClass";

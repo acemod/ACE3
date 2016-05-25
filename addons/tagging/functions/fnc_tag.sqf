@@ -109,7 +109,7 @@ _unit playActionNow "PutDown";
     playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
-    ["ace_createTag", _this] call CBA_fnc_serverEvent;
+    [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
 }, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
 
 true

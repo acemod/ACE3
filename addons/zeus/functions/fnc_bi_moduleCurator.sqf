@@ -175,7 +175,7 @@ if (_activated) then {
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 // Added by ace_zeus
-                ["ace_zeusUnitAssigned", [_logic,_player]] call CBA_fnc_globalEvent;
+                [QGVAR(zeusUnitAssigned), [_logic,_player]] call CBA_fnc_globalEvent;
 
                 //--- Forced interface
                 //if (_forced) then {
