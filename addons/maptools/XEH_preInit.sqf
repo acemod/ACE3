@@ -10,10 +10,10 @@ if (isServer) then {
 };
 
 //Add Event Handlers:
-["ace_drawing_removeLineMarker", FUNC(removeLineMarker)] call CBA_fnc_addEventHandler;
-["ace_drawing_addLineMarker", FUNC(addLineMarker)] call CBA_fnc_addEventHandler;
+[QGVAR(removeLineMarker), FUNC(removeLineMarker)] call CBA_fnc_addEventHandler;
+[QGVAR(addLineMarker), FUNC(addLineMarker)] call CBA_fnc_addEventHandler;
 
-["ace_drawing_requestMarkers", FUNC(copyMapRemoteSend)] call CBA_fnc_addEventHandler;
-["ace_drawing_sendbackMarkers", FUNC(copyMapReceiveMarkers)] call CBA_fnc_addEventHandler;
+[QGVAR(requestMarkers), FUNC(copyMapRemoteSend)] call CBA_fnc_addEventHandler;
+[QGVAR(sendbackMarkers), FUNC(copyMapReceiveMarkers)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

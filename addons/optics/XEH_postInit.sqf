@@ -35,7 +35,7 @@ GVAR(camera) = objNull;
 }] call CBA_fnc_addEventHandler;
 
 // camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
-["activeCameraChanged", {
+["ace_activeCameraChanged", {
     if !(_this select 1) then {
         GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
         camDestroy GVAR(camera);

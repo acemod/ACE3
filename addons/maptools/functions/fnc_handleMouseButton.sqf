@@ -42,7 +42,7 @@ if (_dir != 1) then {
         // Already drawing -> Add tempLineMarker to permanent list
         if (GVAR(drawing_syncMarkers)) then {
             deleteMarkerLocal (GVAR(drawing_tempLineMarker) select 0);
-            ["ace_drawing_addLineMarker", GVAR(drawing_tempLineMarker)] call CBA_fnc_globalEvent;
+            [QGVAR(addLineMarker), GVAR(drawing_tempLineMarker)] call CBA_fnc_globalEvent;
             // Log who drew on the briefing screen
             [ACE_INFOFORMAT_1("Player %1 drew on the briefing screen", profileName)] call EFUNC(common,serverLog);
         } else {

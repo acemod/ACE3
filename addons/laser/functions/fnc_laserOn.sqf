@@ -19,5 +19,5 @@
 private ["_uuid", "_args"];
 _uuid = format["%1%2%3", floor ACE_diagTime, floor random 1000, floor random 10000];
 _args = [_uuid, _this];
-["ace_laser_laserOn", _args] call CBA_fnc_globalEvent;
+["ace_laserOn", _args] call CBA_fnc_globalEvent;
 _uuid;

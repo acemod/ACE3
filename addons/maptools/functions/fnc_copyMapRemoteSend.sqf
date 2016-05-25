@@ -14,4 +14,4 @@
 
 params ["_requester"];
 
-["ace_drawing_sendbackMarkers", [GVAR(drawing_lineMarkers)], _requester] call CBA_fnc_targetEvent;
+[QGVAR(sendbackMarkers), [GVAR(drawing_lineMarkers)], _requester] call CBA_fnc_targetEvent;

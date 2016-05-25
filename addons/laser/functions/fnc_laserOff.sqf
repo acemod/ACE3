@@ -13,4 +13,4 @@
 
 private ["_uuid"];
 _uuid = _this select 0;
-["ace_laser_laserOff", [_uuid]] call CBA_fnc_globalEvent;
+["ace_laserOff", [_uuid]] call CBA_fnc_globalEvent;

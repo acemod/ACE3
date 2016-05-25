@@ -72,7 +72,7 @@ call FUNC(determineZoom);
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 }, 0] call CBA_fnc_addPerFrameHandler;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
         [{
@@ -99,7 +99,7 @@ call FUNC(determineZoom);
         GVAR(flashlightInUse) = "";
         GVAR(glow) = objNull;
 
-        ["playerInventoryChanged", {
+        ["ace_playerInventoryChanged", {
             private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
@@ -135,7 +135,7 @@ call FUNC(determineZoom);
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["playerInventoryChanged", {
+["ace_playerInventoryChanged", {
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };

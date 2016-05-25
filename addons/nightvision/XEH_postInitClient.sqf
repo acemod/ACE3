@@ -35,7 +35,7 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     _this call FUNC(onVisionModeChanged);
 }] call CBA_fnc_addEventHandler;
 
-["cameraViewChanged", {
+["ace_cameraViewChanged", {
     _this call FUNC(updatePPEffects);
     _this call FUNC(onCameraViewChanged);
 }] call CBA_fnc_addEventHandler;
