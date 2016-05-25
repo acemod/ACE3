@@ -20,6 +20,6 @@ class CfgPatches {
 
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
-    VehicleLock_SetVehicleLock = "ace_vehicleLock_SetVehicleLock";
-    VehicleLock_SetupCustomKey = "ace_vehicleLock_SetupCustomKey";
+    VehicleLock_SetVehicleLock = QGVAR(setVehicleLock);
+    VehicleLock_SetupCustomKey = QGVAR(setupCustomKey);
 };

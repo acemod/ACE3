@@ -1,8 +1,8 @@
 #include "script_component.hpp"
 
 //Add Event Handlers
-["ace_vehicleLock_SetupCustomKey", {_this call FUNC(serverSetupCustomKeyEH)}] call CBA_fnc_addEventHandler;
-["ace_vehicleLock_SetVehicleLock", {_this call FUNC(setVehicleLockEH)}] call CBA_fnc_addEventHandler;
+[QGVAR(setupCustomKey), {_this call FUNC(serverSetupCustomKeyEH)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVehicleLock), {_this call FUNC(setVehicleLockEH)}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitwith {};
 

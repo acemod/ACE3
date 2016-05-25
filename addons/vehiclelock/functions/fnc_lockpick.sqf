@@ -55,7 +55,7 @@ switch (_funcType) do {
         [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition] call EFUNC(common,progressBar);
     };
     case "finishLockpick": {
-        ["ace_vehicleLock_SetVehicleLock", [_veh, false], [_veh]] call CBA_fnc_targetEvent;
+        [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;
     };
     default {
         ERROR("bad function type");
