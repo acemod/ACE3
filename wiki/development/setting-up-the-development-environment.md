@@ -19,8 +19,6 @@ If you just want to create a quick and dirty build, you can also directly downlo
 
 ## 2. Building ACE
 
-To create a complete build of ACE that you can use without the source files, run the `make.py` file in the `tools` folder. This will populate the `release` folder with binarized PBOs that you can redistribute. These handle like those of any other mod.
-
 ### 2.1 Windows
 
 On Windows, you can use the make.bat file for creating a simple build of all PBOs using the packaged version of armake.
