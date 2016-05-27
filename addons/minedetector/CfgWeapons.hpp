@@ -14,7 +14,7 @@ class CfgWeapons {
         descriptionShort = "";
         magazines[] = { };
         modes[] = { "Single" };
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             displayName = "";
             sounds[] = {};
             begin1[] = { "", 1.77828, 1, 1000 };
@@ -29,7 +29,7 @@ class CfgWeapons {
             midRangeProbab = 0.7;
             maxRange = 400;
             maxRangeProbab = 0.05;
-        };
+		};
 		class WeaponSlotsInfo: WeaponSlotsInfo {
 			holsterScale = 0;       
 		};
