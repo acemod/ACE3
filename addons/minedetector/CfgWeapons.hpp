@@ -2,8 +2,7 @@ class Mode_SemiAuto;
 
 class CfgWeapons {
     class Pistol;
-    class Pistol_Base_F: Pistol
-    {
+    class Pistol_Base_F: Pistol {
 		class WeaponSlotsInfo;
     };
     class ACE_VMM3: Pistol_Base_F {
@@ -31,10 +30,9 @@ class CfgWeapons {
             maxRange = 400;
             maxRangeProbab = 0.05;
         };
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
+		class WeaponSlotsInfo: WeaponSlotsInfo {
 			holsterScale = 0;       
-        };
+		};
     };
     class ACE_VMH3: ACE_VMM3 {
         scope = 2;
