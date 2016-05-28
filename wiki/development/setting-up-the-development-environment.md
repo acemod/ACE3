@@ -48,6 +48,18 @@ Other make targets include:
 
 File Patching allows you to change the files in an addon while the game is running, requiring only a restart of the mission. This makes it great for debugging, as it cuts down the time required between tests. Note that this only works with PBOs created using `$ make filepatching`.
 
+For file patching to work, you need a symbolic link from "[Arma 3 installation folder]/z/ace" to your ACE project folder. To do this on Windows and Linux respectively, run these commands:
+
+```sh
+$ # Windows
+$ mkdir "[Arma 3 installation folder]\z"
+$ mklink /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
+
+$ # Linux
+$ mkdir "[Arma 3 installation folder]/z"
+$ ln -s "[Arma 3 installation folder]/z/ace" "[location of the ACE3 project]"
+```
+
 ### 3.1 Disabling CBA Function Caching
 
 By default CBA caches a compiled version of functions to reduce mission load times. This interferes with file patching. There are three ways to disable function caching:
