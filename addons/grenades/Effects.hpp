@@ -48,3 +48,10 @@ class ACE_ChemlightEffect_HiWhite {
 		type = "ACE_ChemlightLight_HiWhite";
 	};
 };
+
+class ACE_ChemlightEffect_IR {
+	class Light1 {
+		simulation = "light";
+		type = "ACE_ChemlightLight_IR";
+	};
+};

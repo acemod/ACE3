@@ -6,14 +6,15 @@ class CfgLights {
 		color[] = {0.1,1,0.1,1};
 		diffuse[] = {0.1,1,0.1};
 		drawLight = 0;
-		intensity = 1000;
+		intensity = 4000;
 		position[] = {0,0,0};
 		
 		class Attenuation {
-			constant = 1;
+			constant = 0;
 			linear = 0;
-			quadratic = 600;
-			start = 0.15;
+			quadratic = 400;
+			hardLimitStart = 1.75;
+			hardLimitEnd = 3;
 		};
 	};
 
@@ -24,8 +25,9 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 600;
-			start = 0.15;
+			quadratic = 400;
+			hardLimitStart = 1.75;
+			hardLimitEnd = 3;
 		};
 	};
 	
@@ -36,20 +38,22 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 600;
-			start = 0.15;
+			quadratic = 400;
+			hardLimitStart = 1.75;
+			hardLimitEnd = 3;
 		};
 	};
 	
 	class ChemLight_Yellow: ChemLight_Green {
 		color[] = {1,1,0.1,1};
-		diffuse[] = {1,1,0.1,0.1};
+		diffuse[] = {1,1,0.1};
 		
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 600;
-			start = 0.15;
+			quadratic = 400;
+			hardLimitStart = 1.75;
+			hardLimitEnd = 3;
 		};
 	};
 	
@@ -61,46 +65,62 @@ class CfgLights {
 	class ACE_ChemlightLight_White: ChemLight_Green {
 		color[] = {1,1,1,1};
 		diffuse[] = {1,1,1};
-		intensity = 800;
 	};
 	
 	class ACE_ChemlightLight_HiRed: ChemLight_Red {
-		intensity = 4000;
+		intensity = 12000;
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 200;
-			start = 0.5;
+			quadratic = 50;
+			hardLimitStart = 2;
+			hardLimitEnd = 7;
 		};
 	};
 	
 	class ACE_ChemlightLight_HiYellow: ChemLight_Yellow {
-		intensity = 4000;
+		intensity = 12000;
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 200;
-			start = 0.5;
+			quadratic = 50;
+			hardLimitStart = 2;
+			hardLimitEnd = 7;
 		};
 	};
 	
 	class ACE_ChemlightLight_HiOrange: ACE_ChemlightLight_Orange {
-		intensity = 4000;
+		intensity = 12000;
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 200;
-			start = 0.5;
+			quadratic = 50;
+			hardLimitStart = 2;
+			hardLimitEnd = 7;
 		};
 	};
 	
 	class ACE_ChemlightLight_HiWhite: ACE_ChemlightLight_White {
-		intensity = 3500;
+		intensity = 12000;
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 200;
-			start = 0.5;
+			quadratic = 50;
+			hardLimitStart = 2;
+			hardLimitEnd = 7;
+		};
+	};
+	
+	class ACE_ChemlightLight_IR: ChemLight_Green {
+		color[] = {0,0,0,0};
+		diffuse[] = {0.001,0,0};
+		intensity = 12000;
+		class Attenuation {
+			constant = 0;
+			linear = 0;
+			quadratic = 100;
+			hardLimitStart = 4;
+			hardLimitEnd = 6;
 		};
 	};
 };

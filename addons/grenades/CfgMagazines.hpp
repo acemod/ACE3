@@ -139,4 +139,14 @@ class CfgMagazines {
 		displayNameShort = "White Hi Light";
 		picture = PATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);
 	};
+	/*
+	class ACE_Chemlight_IR: Chemlight_Green {
+		ACE_Attachable = "ACE_G_Chemlight_IR";
+		ammo = "ACE_G_Chemlight_IR";
+		displayName = "Chemlight (IR)";
+		descriptionShort = "Type: Light - Infrared<br />Rounds: 1<br />Used in: Hand";
+		displayNameShort = "IR Light";
+		//picture = PATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);	
+	};
+	*/
 };
