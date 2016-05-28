@@ -27,6 +27,9 @@ $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 all: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo, $(wildcard optionals/*))
 
+filepatching:
+	make FLAGS="-i $(CBA) -w unquoted-string -p"
+
 $(BIN)/keys/%.biprivatekey:
 	@mkdir -p $(BIN)/keys
 	@echo "  KEY  $@"
@@ -58,3 +61,5 @@ release: clean signatures
 	@echo "  ZIP  ace3_$(VERSION).zip"
 	@cp *.dll LICENSE README.md AUTHORS.txt logo_ace3_ca.paa mod.cpp meta.cpp $(BIN)
 	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
+
+.PHONY: release
