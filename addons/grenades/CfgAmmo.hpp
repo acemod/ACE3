@@ -116,13 +116,13 @@ class CfgAmmo {
 		timeToLive = 43200;
 	};
 	
-	class ACE_G_Chemlight_Orange: Chemlight_Blue {
+	class ACE_G_Chemlight_Orange: Chemlight_base {
 		timeToLive = 43200;
 		effectsSmoke = "ACE_ChemlightEffect_Orange";
 		model = "\A3\Weapons_f\chemlight\chemlight_yellow_lit";
 	};
 	
-	class ACE_G_Chemlight_White: Chemlight_Blue {
+	class ACE_G_Chemlight_White: Chemlight_base {
 		timeToLive = 28800;
 		effectsSmoke = "ACE_ChemlightEffect_White";
 		model = "\A3\Weapons_f\chemlight\chemlight_yellow_lit";
@@ -146,5 +146,11 @@ class CfgAmmo {
 	class ACE_G_Chemlight_HiWhite: ACE_G_Chemlight_White {
 		effectsSmoke = "ACE_ChemlightEffect_HiWhite";
 		timeToLive = 1800;
+	};
+	
+	class ACE_G_Chemlight_IR: Chemlight_base {
+		effectsSmoke = "ACE_ChemlightEffect_IR";
+		timeToLive = 28800;
+		model = "\A3\Weapons_f\chemlight\chemlight_blue_lit";		
 	};
 };
