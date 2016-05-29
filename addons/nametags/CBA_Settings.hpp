@@ -17,7 +17,7 @@ class CBA_Settings {
             displayName = CSTRING(ShowPlayerNames);
             tooltip = CSTRING(ShowPlayerNames_Desc);
             values[] = {0,1,2,3,4};
-            valueNames[] = {ECSTRING(common,Disabled),ECSTRING(common,Enabled),CSTRING(OnlyCursor),CSTRING(OnlyKeypress),CSTRING(OnlyCursorAndKeypress)};
+            labels[] = {ECSTRING(common,Disabled),ECSTRING(common,Enabled),CSTRING(OnlyCursor),CSTRING(OnlyKeypress),CSTRING(OnlyCursorAndKeypress)};
             defaultIndex = 1;
         };
         class GVAR(showPlayerRanks): CBA_Setting_Boolean_base {
@@ -28,7 +28,7 @@ class CBA_Settings {
             displayName = CSTRING(ShowSoundWaves);
             tooltip = CSTRING(ShowSoundWaves_Desc);
             values[] = {0,1,2};
-            valueNames[] = {ECSTRING(common,Disabled),CSTRING(NameTagSettings),CSTRING(AlwaysShowAll)};
+            labels[] = {ECSTRING(common,Disabled),CSTRING(NameTagSettings),CSTRING(AlwaysShowAll)};
             defaultIndex = 1;
         };
         class GVAR(showVehicleCrewInfo): CBA_Setting_Boolean_base {
@@ -60,7 +60,7 @@ class CBA_Settings {
             displayName = CSTRING(TagSize_Name);
             tooltip = CSTRING(TagSize_Description);
             values[] = {0,1,2,3,4};
-            valueNames[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
+            labels[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
             defaultIndex = 2;
         };
     };
