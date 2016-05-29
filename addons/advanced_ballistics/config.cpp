@@ -15,7 +15,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "RscTitles.hpp"
-#include "ACE_Settings.hpp"
+#include "CBA_Settings.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_advanced_ballistics"};
