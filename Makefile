@@ -22,13 +22,13 @@ $(BIN)/optionals/$(PREFIX)_%.pbo: optionals/%
 
 # Shortcut for building single addons (eg. "make <component>.pbo")
 %.pbo:
-	make $(patsubst %, $(BIN)/addons/$(PREFIX)_%, $@)
+	"$(MAKE)" $(MAKEFLAGS) $(patsubst %, $(BIN)/addons/$(PREFIX)_%, $@)
 
 all: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo, $(wildcard optionals/*))
 
 filepatching:
-	make FLAGS="-i $(CBA) -w unquoted-string -p"
+	"$(MAKE)" $(MAKEFLAGS) FLAGS="-i $(CBA) -w unquoted-string -p"
 
 $(BIN)/keys/%.biprivatekey:
 	@mkdir -p $(BIN)/keys
@@ -56,8 +56,9 @@ extensions-win64: $(wildcard extensions/*/*)
 clean:
 	rm -rf $(BIN) $(ZIP)_*.zip
 
-release: clean signatures
-	@rm $(BIN)/keys/*.biprivatekey
+release:
+	@"$(MAKE)" clean
+	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  ace3_$(VERSION).zip"
 	@cp *.dll LICENSE README.md AUTHORS.txt logo_ace3_ca.paa mod.cpp meta.cpp $(BIN)
 	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
