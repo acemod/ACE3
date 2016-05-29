@@ -42,19 +42,19 @@ class CBA_Settings {
         class GVAR(showCursorTagForVehicles): CBA_Setting_Boolean_base {
             displayName = "";
             defaultValue = 0;
-            // not for client
+            serverOnly = 1;
         };
         class GVAR(playerNamesViewDistance): CBA_Setting_Slider_base {
             displayName = "";
             min = 0;
             max = 15000;
             defaultValue = 5;
-            // not for client
+            serverOnly = 1;
         };
         class GVAR(playerNamesMaxAlpha): CBA_Setting_Slider_2_base {
             displayName = "";
             defaultValue = 0.8;
-            // not for client
+            serverOnly = 1;
         };
         class GVAR(tagSize): CBA_Setting_List_base {
             displayName = CSTRING(TagSize_Name);
