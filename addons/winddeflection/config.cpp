@@ -14,12 +14,12 @@ class CfgPatches {
 
 class CfgAddons {
     class PreloadAddons {
-       class ADDON {
-          list[] = {QUOTE(ADDON)};
-       };
+        class ADDON {
+            list[] = {QUOTE(ADDON)};
+        };
     };
 };
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "ACE_Settings.hpp"
+#include "CBA_Settings.hpp"
