@@ -71,6 +71,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class autoAddObjects {
+                displayName = CSTRING(AddObjectsToCurator);
+                description = CSTRING(AddObjectsToCurator_desc);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Settings_Description);
@@ -167,7 +173,7 @@ class CfgVehicles {
             sync[] = {};
         };
     };
-    
+
     // class GVAR(moduleSetSuppression): GVAR(moduleBase) {
         // curatorCanAttach = 1;
         // displayName = CSTRING(ModuleSetSupp_DisplayName);

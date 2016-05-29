@@ -76,3 +76,9 @@ class Extended_FiredBIS_EventHandlers {
         ADDON = QUOTE(_this call FUNC(firedEH));
     };
 };
+
+class Extended_Engine_EventHandlers {
+    class All {
+        ADDON = QUOTE(_this call FUNC(handleEngine));
+    };
+};

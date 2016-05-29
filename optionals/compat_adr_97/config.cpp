@@ -5,11 +5,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
-        author[] = {"commy2"};
-        authorUrl = "https://github.com/commy2/";
+        requiredAddons[] = {"A3_Weapons_F_Mod"};
+        author[] = {"Nic547"};
         VERSION_CONFIG;
     };
 };
 
-#include "CfgDifficulties.hpp"
+#include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"
