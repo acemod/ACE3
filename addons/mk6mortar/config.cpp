@@ -13,12 +13,13 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 
+#include "CBA_Settings.hpp"
 
 //UI Stuff:
 class RscText;

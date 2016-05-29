@@ -13,6 +13,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-#include "ACE_Settings.hpp"
+
+#include "CBA_Settings.hpp"
