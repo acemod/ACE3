@@ -2,7 +2,7 @@
 class CBA_Setting_Boolean_base;
 
 class CBA_Settings {
-    class DOUBLES(PREFIX,OptionsMenu) {
+    class GVARMAIN(OptionsMenu) {
         displayName = ECSTRING(OptionsMenu,CategoryLogistics); //@todo replace
 
         class GVAR(enable): CBA_Setting_Boolean_base {
