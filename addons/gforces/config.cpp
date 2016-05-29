@@ -13,7 +13,6 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #inlcude "CBA_Settings.hpp"
