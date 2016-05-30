@@ -9,7 +9,7 @@
  * Flashlight classnames (empty for none) <ARRAY>
  *
  * Example:
- * [unit] call ace_flashlights_fnc_getShieldComponents;
+ * [unit] call ace_chemlights_fnc_getShieldComponents;
  *
  * Public: No
  */

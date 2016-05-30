@@ -6,16 +6,16 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"commy2", "KoffeinFlummi"};
-        authorUrl = "https://github.com/commy2/";
+        author[] = {"voiper"};
+        authorUrl = "https://github.com/voiperr/";
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgAmmo.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
-
+#include "CfgAmmo.hpp"
+#include "CfgLights.hpp"
 #include "Effects.hpp"

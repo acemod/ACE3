@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, "Chemlight_Green", "ACE_Chemlight_Shield_Green"] call ace_flashlights_fnc_combineShield;
+ * [_player, "Chemlight_Green", "ACE_Chemlight_Shield_Green"] call ace_chemlights_fnc_combineShield;
  *
  * Public: No
  */

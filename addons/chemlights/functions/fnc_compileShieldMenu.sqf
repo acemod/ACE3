@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, _player, []] call ace_flashlights_fnc_compileShieldMenu;
+ * [_player, _player, []] call ace_chemlights_fnc_compileShieldMenu;
  *
  * Public: No
  */

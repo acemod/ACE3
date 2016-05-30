@@ -45,8 +45,9 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
     };
-    if (_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]) then {
-        playSound3D [QUOTE(PATHTO_R(sounds\chemlight_prepare.wav)), objNull, false, (eyePos ACE_player), 1, 1, 65];
+    //if chemlight, play chemlight prep sound
+    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && (_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"])) then {
+        playSound3D [QUOTE(PATHTOF2_SYS(ace,chemlights,sounds\chemlight_prepare.wav)), objNull, false, (eyePos _unit), 1, 1, 65];
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
