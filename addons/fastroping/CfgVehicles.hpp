@@ -22,7 +22,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_FRIES_DisplayName);
         icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
         category = "ACE";
-        function = QUOTE(FUNC(moduleEquipFRIES));
+        function = QFUNC(moduleEquipFRIES);
         functionPriority = 10;
         isGlobal = 0;
         isTriggerActivated = 0;
