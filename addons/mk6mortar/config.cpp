@@ -19,7 +19,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 //UI Stuff:
 class RscText;

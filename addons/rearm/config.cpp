@@ -12,7 +12,7 @@ class CfgPatches {
     };
 };
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 
 #include "CfgAmmo.hpp"

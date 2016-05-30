@@ -19,7 +19,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 class CfgMovesBasic {
     class ManActions {

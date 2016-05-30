@@ -15,4 +15,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 
 #include "RscDisplayInventory.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

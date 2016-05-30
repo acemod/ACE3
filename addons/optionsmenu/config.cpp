@@ -27,7 +27,7 @@ class CfgAddons {
 #include "gui\pauseMenu.hpp"
 
 #include "CfgVehicles.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_clipboard"};

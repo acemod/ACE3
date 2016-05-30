@@ -29,7 +29,7 @@ class RscButtonMenu;
 class RscEdit;
 #include "MapGpsUI.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 // REGULAR MAP
 class RscDisplayMainMap {

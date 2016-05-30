@@ -17,4 +17,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgActions.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

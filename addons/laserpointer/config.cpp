@@ -18,4 +18,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgJointRails.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

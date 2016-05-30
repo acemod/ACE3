@@ -22,4 +22,4 @@ class CfgAddons {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

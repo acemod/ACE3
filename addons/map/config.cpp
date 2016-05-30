@@ -20,7 +20,7 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgLights.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 class RscControlsGroup;
 class RscActiveText;

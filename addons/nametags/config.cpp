@@ -14,6 +14,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CBA_Settings.hpp"
+
 #include "CfgVehicles.hpp"
 
 #include <RscTitles.hpp>

@@ -18,4 +18,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 #include "ACE_GuidanceConfig.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

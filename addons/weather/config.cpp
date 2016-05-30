@@ -15,4 +15,4 @@ class CfgPatches {
 #include "CfgWorlds.hpp"
 #include "RscTitles.hpp"
 #include "CfgVehicles.hpp"
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

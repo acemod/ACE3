@@ -19,4 +19,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgEden.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"

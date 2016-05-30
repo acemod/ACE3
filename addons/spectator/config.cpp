@@ -16,7 +16,7 @@ class CfgPatches {
 
 #include "CfgVehicles.hpp"
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 #include "ui\interface.hpp"
 
 class CfgRespawnTemplates {

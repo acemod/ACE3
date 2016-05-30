@@ -239,7 +239,7 @@ class SniperCloud {
     ACE_Goggles_BulletCount = 1;
 };
 
-#include "CBA_Settings.hpp"
+//#include "CBA_Settings.hpp"
 
 class CfgCloudlets {
     class Default;
