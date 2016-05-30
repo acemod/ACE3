@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_unit", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_unit,_vehicle,_unloader);
@@ -58,10 +58,10 @@ _unit action ["Eject", vehicle _unit];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
                     [_unit, _anim, 2, true] call FUNC(doAnimation);
                 };
-            }, [_unit, _anim], 0.5] call FUNC(waitAndExecute);
+            }, [_unit, _anim], 0.5] call CBA_fnc_waitAndExecute;
         };
     };
-}, [_unit, _emptyPos], 0.5] call FUNC(waitAndExecute);
+}, [_unit, _emptyPos], 0.5] call CBA_fnc_waitAndExecute;
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 

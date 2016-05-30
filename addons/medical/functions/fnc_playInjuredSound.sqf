@@ -76,7 +76,7 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Clean up the lock
     [{
         (_this select 0) setVariable [QGVAR(playingInjuredSound),nil];
-    }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
+    }, [_unit], _delay, _delay] call CBA_fnc_waitAndExecute;
 };
 
 // Clean up in case there has not been played any sounds.

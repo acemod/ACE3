@@ -104,7 +104,7 @@ if (_show) then {
     if (_timeAlive >= 0) then {
         [{
             [_this select 0, false, "", [0,0,0], 0] call FUNC(displayIcon);
-        }, [_iconId], _timeAlive, _timeAlive] call FUNC(waitAndExecute);
+        }, [_iconId], _timeAlive, _timeAlive] call CBA_fnc_waitAndExecute;
     };
 
 } else {

@@ -14,6 +14,7 @@
 #include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
+TRACE_5("params",_vehicle,_turret,_distance,_showHint,_playSound);
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
@@ -23,6 +24,8 @@ if (isNil "_distance") then {
         getNumber (_turretConfig >> QGVAR(MaxDistance)),
         getNumber (_turretConfig >> QGVAR(MinDistance))
     ] call FUNC(getRange);
+} else {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };
 
 // MOVING TARGETS

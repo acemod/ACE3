@@ -37,7 +37,7 @@ _conditonCode = {
 _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
-    
+
     // Statement
     [] call FUNC(toggleOverlay);
     if (!GVAR(run)) then {

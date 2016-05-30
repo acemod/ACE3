@@ -4,7 +4,7 @@
     // Hold on a little bit longer to ensure anims will work
     [{
         GVAR(captivityEnabled) = true;
-    }, [], 0.05] call EFUNC(common,waitAndExecute);
+    }, [], 0.05] call CBA_fnc_waitAndExecute;
 }] call EFUNC(common,addEventHandler);
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached

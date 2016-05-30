@@ -42,13 +42,15 @@ GVAR(surfaceCache) = "";
 GVAR(surfaceCacheIsDust) = false;
 
 // init GlassesChanged eventhandler
-GVAR(OldGlasses) = "#NULLSTRING";
+GVAR(OldGlasses) = "<null>";
 
 ["playerInventoryChanged", {
-    (_this select 1) params ["", "_currentGlasses"];
+    params ["_unit"];
+
+    private _currentGlasses = goggles _unit;
 
     if (GVAR(OldGlasses) != _currentGlasses) then {
-        ["GlassesChanged", [ACE_player, _currentGlasses]] call EFUNC(common,localEvent);
+        ["GlassesChanged", [_unit, _currentGlasses]] call EFUNC(common,localEvent);
         GVAR(OldGlasses) = _currentGlasses;
     };
 }] call EFUNC(common,addEventHandler);
@@ -88,9 +90,9 @@ GVAR(OldGlasses) = "#NULLSTRING";
 
             _unit setVariable ["ACE_EyesDamaged", false];
 
-        }, _this, 5] call EFUNC(common,waitAndExecute);
+        }, _this, 5] call CBA_fnc_waitAndExecute;
 
-    }, _unit, 25] call EFUNC(common,waitAndExecute);
+    }, _unit, 25] call CBA_fnc_waitAndExecute;
 
 }] call EFUNC(common,addEventHandler);
 

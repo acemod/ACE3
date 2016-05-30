@@ -39,7 +39,7 @@ if (GVAR(showRangeCard)) then {
 };
 GVAR(showRangeCardSetup) call FUNC(show_range_card_setup);
 GVAR(showSolutionSetup) call FUNC(show_solution_setup);
-GVAR(showTargetData)  call FUNC(show_target_data);
+GVAR(showTargetData) call FUNC(show_target_data);
 GVAR(showTargetRangeAssist) call FUNC(show_target_range_assist);
 GVAR(showTargetSpeedAssist) call FUNC(show_target_speed_assist);
 GVAR(showTargetSpeedAssistTimer) call FUNC(show_target_speed_assist_timer);

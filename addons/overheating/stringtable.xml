@@ -32,6 +32,7 @@
             <Italian>Effetti Particelle Surriscaldamento</Italian>
             <Spanish>Efectos de partículas</Spanish>
             <French>Effet de surchauffe</French>
+            <Czech>Částicové efekty přehřívání</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -48,6 +49,7 @@
             <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
             <Spanish>Efectos de partículas para todos</Spanish>
             <French>Effets de surchauffe pour tout le monde.</French>
+            <Czech>Částicové efekty přehřívání pro všechny</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -80,6 +82,7 @@
             <Polish>Usuń zacięcie przy przeładowaniu</Polish>
             <French>Des-enrayer l'arme au rechargement.</French>
             <Italian>Disinceppa l'arma quando si ricarica</Italian>
+            <Czech>Uvolnit zbraň při přebití</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -88,6 +91,7 @@
             <Polish>Przeładowywanie usuwa zacięcie</Polish>
             <French>Recharger vide la chambre de l'arme</French>
             <Italian>L'arma si disinceppa quando si ricarica</Italian>
+            <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -96,6 +100,7 @@
             <Polish>Szansa na porażkę usuw. zacięcia</Polish>
             <French>Chance de rater le des-enrayement</French>
             <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
+            <Czech>Šance, že uvolnění zbraně selže</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -172,6 +177,7 @@
             <Polish>Porażka przy usuwaniu zacięcia</Polish>
             <French>Toujours enrayé !</French>
             <Italian>Non si è disinceppata!</Italian>
+            <Czech>Zbrań se nepodařilo uvolnit</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
@@ -190,7 +196,7 @@
             <German>Lauf wird gewechselt...</German>
             <Spanish>Cambiando el cañón...</Spanish>
             <Polish>Wymienianie lufy...</Polish>
-            <Czech>Vyměňuji hlaveň...</Czech>
+            <Czech>Měním hlaveň...</Czech>
             <French>Changement du canon...</French>
             <Russian>Смена ствола...</Russian>
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
@@ -216,7 +222,7 @@
             <Polish>Sprawdź temperaturę broni</Polish>
             <French>Vérifier la température de l'arme</French>
             <Hungarian>Fegyver hőmérsékletének ellenőrzése</Hungarian>
-            <Czech>Zjistit teplotu zbraně</Czech>
+            <Czech>Zkontrolovat teplotu zbraně</Czech>
             <Portuguese>Conferir temperatura da arma</Portuguese>
             <Italian>Controlla la temperatura della canna</Italian>
             <Russian>Проверить температуру оружия</Russian>
@@ -245,6 +251,12 @@
             <Italian>Sto controllando la temperatura...</Italian>
             <Russian>Проверка температуры...</Russian>
         </Key>
+        <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
+            <English>Check spare barrels temperatures</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
+            <English>Checking spare barrels temperatures...</English>
+        </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
             <German>Temperatur</German>
@@ -256,6 +268,29 @@
             <Portuguese>Temperatura</Portuguese>
             <Italian>Temperatura</Italian>
             <Russian>Температура</Russian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelCool">
+            <English>Cool Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelWarm">
+            <English>Warm Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelHot">
+            <English>Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelVeryHot">
+            <English>Very Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
+            <English>Extremely Hot Spare Barrel/s</English>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_displayName">
+            <English>Overheating Enabled</English>
+            <German>Überhitzen Aktiviert</German>
+            <Spanish>Activada Sobrecalentamiento</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_description">
+            <English>Master enable for the overheating/jamming module</English>
         </Key>
     </Package>
 </Project>

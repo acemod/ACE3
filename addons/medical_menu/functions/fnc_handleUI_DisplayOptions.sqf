@@ -44,7 +44,7 @@ if (_name isEqualTo "toggle") exitWith {
     closeDialog 0;
     [{
         [_this select 0] call FUNC(openMenu);
-    }, [_newTarget], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_newTarget], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 // Clean the dropdown options list from all actions

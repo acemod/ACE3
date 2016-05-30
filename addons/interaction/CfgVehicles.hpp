@@ -355,6 +355,32 @@ class CfgVehicles {
         };
     };
 
+    class Motorcycle: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 10;
+                condition = "true";
+                class ACE_Passengers {
+                    displayName = CSTRING(Passengers);
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+            };
+        };
+
+        class ACE_SelfActions {
+            class ACE_Passengers {
+                displayName = CSTRING(Passengers);
+                condition = "true";
+                statement = "";
+                insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+            };
+        };
+    };
+
     class Air;
     class Helicopter: Air {
         class ACE_Actions {
@@ -420,7 +446,7 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target <= 2600 && {alive _target} && {vectorMagnitude velocity _target < 3});
+                    condition = QUOTE(_target call FUNC(canPush));
                     statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
@@ -577,7 +603,7 @@ class CfgVehicles {
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
     };
-    
+
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {

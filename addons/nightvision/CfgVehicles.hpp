@@ -21,7 +21,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_ca.paa);
         category = "ACE";
-        function = QUOTE(FUNC(initModule));
+        function = QFUNC(initModule);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;

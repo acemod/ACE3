@@ -117,5 +117,5 @@ if (random(1) <= _reopeningChance) then {
             };
             // Otherwise something went wrong, we we don't reopen them..
        //};
-    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay] call EFUNC(common,waitAndExecute);
+    }, [_target, _impact, _part, _injuryIndex, +_injury], _delay] call CBA_fnc_waitAndExecute;
 };

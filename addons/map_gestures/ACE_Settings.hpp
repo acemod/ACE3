@@ -44,16 +44,16 @@ class ACE_Settings {
         typeName = "COLOR";
         value[] = {1, 0.88, 0, 0.7};
     };
-    class GVAR(GroupColorConfigurations) {
-        displayName = CSTRING(GroupColorConfigurations_displayName);
-        description = CSTRING(GroupColorConfigurations_description);
+    class GVAR(groupColorConfigurations) {
+        displayName = CSTRING(groupColorConfigurations_displayName);
+        description = CSTRING(groupColorConfigurations_description);
         category = CSTRING(mapGestures_category);
         typeName = "ARRAY";
         value[] = {};
     };
-    class GVAR(GroupColorConfigurationMapping) {
-        displayName = CSTRING(GroupColorConfigurationMapping_displayName);
-        description = CSTRING(GroupColorConfigurationMapping_description);
+    class GVAR(groupColorConfigurationMapping) {
+        displayName = CSTRING(groupColorConfigurationMapping_displayName);
+        description = CSTRING(groupColorConfigurationMapping_description);
         category = CSTRING(mapGestures_category);
         typeName = "ARRAY";
         value[] = {{}, {}};

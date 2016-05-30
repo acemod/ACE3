@@ -290,6 +290,10 @@ class CfgVehicles {
         MACRO_REPAIRVEHICLE
     };
 
+    class Motorcycle: LandVehicle {
+        MACRO_REPAIRVEHICLE
+    };
+
     class Air;
     class Helicopter: Air {
         MACRO_REPAIRVEHICLE

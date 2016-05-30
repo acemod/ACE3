@@ -36,9 +36,9 @@ params ["_unit"];
 if (isNull GVAR(trench)) exitWith {};
 
 deleteVehicle GVAR(trench);
-private _trench = createVehicle [GVAR(trenchType) select 0, [0, 0, 0], [], 0, "NONE"];
+private _trench = createVehicle [GVAR(trenchClass), [0, 0, 0], [], 0, "NONE"];
 
-GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
+GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);
 private _angle = (GVAR(digDirection) + getDir _unit);
 
@@ -66,49 +66,8 @@ for [{_ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
 };
 _basePos set [2, (_basePos select 2) + _minzoffset + _offset];
 private _vecDirAndUp = [_v1, _v3];
-
 GVAR(trench) = objNull;
 
-// Mark the unit as digging
-private _trenchId = GVAR(trenchId);
-_unit setVariable [QGVAR(isDiggingId), _trenchId, true];
-GVAR(trenchId) = GVAR(trenchId) + 1;
+_trench setVariable [QGVAR(placeData), [_basePos, _vecDirAndUp], true];
 
-// Create progress bar
-private _fnc_onFinish = {
-    (_this select 0) params ["_unit"];
-    _unit setVariable [QGVAR(isDiggingId), -1, true];
-};
-private _fnc_onFailure = {
-    (_this select 0) params ["_unit"];
-    _unit setVariable [QGVAR(isDiggingId), -1, true];
-};
-[12.5, [_unit], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench)] call EFUNC(common,progressBar);
-
-// Schedule progressive raising of the trench
-private _fnc_setPlacing = {
-    params ["_unit", "_trench", "_trenchId", "_pos", "_vecDirAndUp"];
-
-    // If the progress bar was cancelled, cancel elevation
-    // We use an uid to avoid any chance of an older trench being raised when a new one is built
-    if (_unit getVariable [QGVAR(isDiggingId), -1] != _trenchId) exitWith {};
-
-    _trench setPosASL _pos;
-    _trench setVectorDirAndUp _vecDirAndUp;
-};
-
-// For loops are for wimps
-[_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 1.0], _vecDirAndUp] call _fnc_setPlacing;
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.9], _vecDirAndUp], 3.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.8], _vecDirAndUp], 4.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.7], _vecDirAndUp], 5.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.6], _vecDirAndUp], 6.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.5], _vecDirAndUp], 7.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.4], _vecDirAndUp], 8.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.3], _vecDirAndUp], 9.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.2], _vecDirAndUp],10.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.1], _vecDirAndUp],11.0] call EFUNC(common,waitAndExecute);
-[_fnc_setPlacing, [_unit, _trench, _trenchId, _basePos vectorDiff [0, 0, 0.0], _vecDirAndUp],12.0] call EFUNC(common,waitAndExecute);
-
-// Play animation
-[_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
+[_trench, _unit] call FUNC(continueDiggingTrench);

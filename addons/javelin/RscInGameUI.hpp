@@ -15,7 +15,7 @@ class RscInGameUI {
         controls[] = { "ACE_javelin_elements_group", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
         onUnload = QUOTE(_this call FUNC(onOpticUnload));
-        
+
         class ACE_javelin_elements_group: RscControlsGroup
         {
             x = "SafezoneX";
@@ -44,7 +44,7 @@ class RscInGameUI {
                     w = 0;
                     h = 0;
                 };
-        
+
                 class ACE_javelin_Day_mode_off: RscPicture {
                     idc = 1001;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.03/4)*3*SafezoneH    - SafezoneX";
@@ -123,7 +123,7 @@ class RscInGameUI {
                             h = 0;
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        
+
                     };
                 };
                 class CA_Javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
@@ -191,7 +191,7 @@ class RscInGameUI {
                             h = "0.1895*SafezoneH";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        
+
                     };
                 };
 
@@ -253,12 +253,12 @@ class RscInGameUI {
         };
         class ACE_Targeting : RscControlsGroup {
             idc = 6999;
-            
+
             x = "SafezoneX";
             y = "SafezoneY";
             w = "SafezoneW";
             h = "SafezoneH";
-            
+
             enabled = 0;
             class Controls {
                 class ACE_TargetingConstrains: RscControlsGroup {
@@ -266,7 +266,7 @@ class RscInGameUI {
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
-                    
+
                     enabled = 0;
                     class VScrollbar {
                         autoScrollSpeed = -1;
@@ -315,7 +315,7 @@ class RscInGameUI {
                         };
                     };
                 };
-                
+
                 class ACE_TargetingGate : ACE_TargetingConstrains {
                     idc = 699200;
                     class Controls {
@@ -401,8 +401,8 @@ class RscInGameUI {
                         };
                     };
                 };
-            
-            
+
+
                 class ACE_TargetingLines: ACE_TargetingConstrains {
                     idc = 699300;
                     class Controls {

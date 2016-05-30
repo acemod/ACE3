@@ -9,7 +9,7 @@ class CfgWeapons {
         displayName = CSTRING(sandbagEmpty_displayName);
         model = QPATHTOF(data\ace_sandbag_m.p3d);
         picture = QPATHTOF(data\m_sandbag_ca.paa);
-        
+
         class ItemInfo: InventoryItem_Base_F {
             mass = 8;
         };
@@ -21,7 +21,7 @@ class CfgWeapons {
         displayName = CSTRING(sandbag_displayName);
         model = QPATHTOF(data\ace_sandbag_build.p3d);
         picture = QPATHTOF(data\m_sandbag_ca.paa);
-        
+
         class ItemInfo: InventoryItem_Base_F {
             mass = 160;
         };
