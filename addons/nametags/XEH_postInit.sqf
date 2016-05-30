@@ -8,8 +8,7 @@ if (!hasInterface) exitWith {};
 GVAR(showNamesTime) = -10;
 
 // Add keybinds
-["ACE3 Common", QGVAR(showNameTags), localize LSTRING(ShowNames),
-{
+["ACE3 Common", QGVAR(showNameTags), localize LSTRING(ShowNames), {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -18,20 +17,15 @@ GVAR(showNamesTime) = -10;
     if (call FUNC(canShow)) then{ call FUNC(doShow); };
     // Return false so it doesn't block other actions
     false
-},
-{false},
-[29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
+}, {false}, [29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
-// Wait until the colors are defined before starting to draw the nametags
-["SettingsInitialized", {
-    // Draw handle
-    call FUNC(updateSettings);
-}] call EFUNC(common,addEventHandler);
+call FUNC(updateSettings);
 
 // Change settings accordingly when they are changed
-["SettingChanged", {
-    params ["_name"];
-    if (_name == QGVAR(showPlayerNames)) then {
+["CBA_SettingChanged", {
+    params ["_setting"];
+
+    if (_setting == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

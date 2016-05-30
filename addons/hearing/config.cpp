@@ -22,4 +22,4 @@ class CfgPatches {
 
 #include "CfgAmmo.hpp"
 
-#include "ACE_Settings.hpp"
+//#include "CBA_Settings.hpp"

@@ -1,11 +1,9 @@
 #include "script_component.hpp"
 
-["SettingsInitialized", {
-    // Hold on a little bit longer to ensure anims will work
-    [{
-        GVAR(captivityEnabled) = true;
-    }, [], 0.05] call EFUNC(common,waitAndExecute);
-}] call EFUNC(common,addEventHandler);
+// Hold on a little bit longer to ensure anims will work
+[{
+    GVAR(captivityEnabled) = true;
+}, [], 0.05] call EFUNC(common,waitAndExecute);
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
