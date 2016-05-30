@@ -71,7 +71,7 @@ if (_lastFireMode != -1) then {
         _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
         if (isNull _display) exitWith {}; //It may be null for the first frame
 
-        _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
+        _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QPATHTOF(UI\ui_charges.paa)];
 
         //Hud should hidden in 3rd person
         _notGunnerView = cameraView != "GUNNER";

@@ -13,7 +13,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 priority = 4;
-                icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                icon = QPATHTOF(UI\icon_sandbag_ca.paa);
             };
         };
     };
@@ -53,14 +53,14 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         side = 3;
-        model = PATHTOF(data\ace_sandbag_build.p3d);
+        model = QPATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
         vehicleClass = "ACE_Logistics_Items";
         typicalCargo[] = {};
         armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
         mapSize = 0.4;
         nameSound = "Bunker";
-        icon = PATHTOF(UI\icon_sandbag_ca.paa);
+        icon = QPATHTOF(UI\icon_sandbag_ca.paa);
         accuracy = 1000;
         destrType = "DestructDefault";
 
@@ -90,7 +90,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
@@ -98,7 +98,7 @@ class CfgVehicles {
 
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
         scope = 1;
-        model = PATHTOF(data\ace_sandbag_nogeo.p3d);
+        model = QPATHTOF(data\ace_sandbag_nogeo.p3d);
     };
 
     class Box_NATO_Support_F;

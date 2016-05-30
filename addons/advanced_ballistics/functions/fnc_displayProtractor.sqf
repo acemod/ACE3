@@ -43,13 +43,13 @@ GVAR(Protractor) = true;
 
     __ctrl1 ctrlSetScale 1;
     __ctrl1 ctrlCommit 0;
-    __ctrl1 ctrlSetText QUOTE(PATHTOF(UI\protractor.paa));
+    __ctrl1 ctrlSetText QPATHTOF(UI\protractor.paa);
     __ctrl1 ctrlSetTextColor [1, 1, 1, 1];
 
     __ctrl2 ctrlSetScale 1;
     __ctrl2 ctrlSetPosition [SafeZoneX + 0.001, SafeZoneY - 0.001 - 0.1074 * (-0.86 max ((ACE_player weaponDirection currentWeapon ACE_player) select 2) min 0.86), 0.2, 0.2 * 4/3];
     __ctrl2 ctrlCommit 0;
-    __ctrl2 ctrlSetText QUOTE(PATHTOF(UI\protractor_marker.paa));
+    __ctrl2 ctrlSetText QPATHTOF(UI\protractor_marker.paa);
     __ctrl2 ctrlSetTextColor [1, 1, 1, 1];
 
 }, 0.1, []] call CBA_fnc_addPerFrameHandler;

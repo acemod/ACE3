@@ -9,7 +9,7 @@ class CfgVehicles {
         isGlobal = 1;
         isTriggerActivated = 0;
         isDisposable = 0;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Slideshow_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Slideshow_ca.paa);
         class Arguments {
             class Objects {
                 displayName = CSTRING(Objects_DisplayName);

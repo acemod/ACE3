@@ -34,7 +34,7 @@ class CfgVehicles {
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
-                    //icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
                 class GVAR(digEnvelopeBig) {
                     displayName = CSTRING(DigEnvelopeBig);
@@ -44,7 +44,7 @@ class CfgVehicles {
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
-                    //icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    //icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
@@ -55,7 +55,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeSmallName);
         descriptionShort = CSTRING(EnevlopeSmallDescription);
-        model = QUOTE(PATHTOEF(apl,ace_envelope_small4.p3d));
+        model = QPATHTOEF(apl,ace_envelope_small4.p3d);
         scope = 2;
         GVAR(diggingDuration) = 20;
         GVAR(removalDuration) = 12;
@@ -71,7 +71,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(EnvelopeBigName);
         descriptionShort = CSTRING(EnevlopeBigDescription);
-        model = QUOTE(PATHTOEF(apl,ace_envelope_big4.p3d));
+        model = QPATHTOEF(apl,ace_envelope_big4.p3d);
         scope = 2;
         GVAR(diggingDuration) = 25;
         GVAR(removalDuration) = 15;
@@ -87,12 +87,12 @@ class CfgVehicles {
     class ACE_envelope_small_NoGeo: ACE_envelope_small {
         scope = 1;
         //@todo: replace by a no geo model
-        model = QUOTE(PATHTOEF(apl,ace_envelope_small4_nogeo.p3d));
+        model = QPATHTOEF(apl,ace_envelope_small4_nogeo.p3d);
     };
     class ACE_envelope_big_NoGeo: ACE_envelope_big {
         scope = 1;
         //@todo: replace by a no geo model
-        model = QUOTE(PATHTOEF(apl,ace_envelope_big4_nogeo.p3d));
+        model = QPATHTOEF(apl,ace_envelope_big4_nogeo.p3d);
     };
 
     class Box_NATO_Support_F;

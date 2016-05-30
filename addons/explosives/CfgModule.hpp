@@ -7,7 +7,7 @@ class ACE_ModuleExplosive: ACE_Module {
     scope = 2;
     isGlobal = 1;
     isSingular = 1;
-    icon = PATHTOF(UI\Icon_Module_Explosives_ca.paa);
+    icon = QPATHTOF(UI\Icon_Module_Explosives_ca.paa);
     class Arguments {
         class RequireSpecialist {
             displayName = CSTRING(RequireSpecialist_DisplayName);

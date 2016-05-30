@@ -7,8 +7,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(DisplayName);
         descriptionShort = "";
-        model = PATHTOF(data\w_sniper_tripod.p3d);
-        picture = PATHTOF(UI\w_sniper_tripod_ca.paa);
+        model = QPATHTOF(data\w_sniper_tripod.p3d);
+        picture = QPATHTOF(UI\w_sniper_tripod_ca.paa);
 
         class ItemInfo: InventoryItem_Base_F {
             mass = 40;

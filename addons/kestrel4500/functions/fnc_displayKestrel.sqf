@@ -126,7 +126,7 @@ GVAR(Overlay) = true;
     };
 
     call FUNC(updateImpellerState);
-    __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(ImpellerState) % 7)];
+    __ctrlKestrel4500 ctrlSetText format [QPATHTOF(UI\Kestrel4500_%1.paa), floor(GVAR(ImpellerState) % 7)];
 
 }, 0.01, []] call CBA_fnc_addPerFrameHandler;
 

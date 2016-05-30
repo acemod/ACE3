@@ -18,7 +18,7 @@ class CfgVehicles {
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;
@@ -36,7 +36,7 @@ class CfgVehicles {
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;
@@ -54,7 +54,7 @@ class CfgVehicles {
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;
