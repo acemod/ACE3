@@ -12,12 +12,6 @@
  */
 #include "script_component.hpp"
 
-params ["_item"];
+ACE_DEPRECATED("ace_common_fnc_getConfigType","3.8.0","CBA_fnc_getItemConfig");
 
-if (isClass (configFile >> "CfgWeapons" >> _item)) exitWith {"CfgWeapons"};
-
-if (isClass (configFile >> "CfgMagazines" >> _item)) exitWith {"CfgMagazines"};
-
-if (isClass (configFile >> "CfgGlasses" >> _item)) exitWith {"CfgGlasses"};
-
-""
+configName (configHierarchy (_item call CBA_fnc_getItemConfig) param [1, configNull])
