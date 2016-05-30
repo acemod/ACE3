@@ -50,5 +50,5 @@ if (!hasInterface) exitWith {};
                 _huntir setVectorUp [0, 0, 1];
             };
         }, 0, [_huntir]] call CBA_fnc_addPerFrameHandler;
-    }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call EFUNC(common,waitAndExecute);
-}, [_projectile], 5, 0] call EFUNC(common,waitAndExecute);
+    }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call CBA_fnc_waitAndExecute;
+}, [_projectile], 5, 0] call CBA_fnc_waitAndExecute;

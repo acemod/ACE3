@@ -110,6 +110,6 @@ _unit playActionNow "PutDown";
 
     // Tell the server to create the tag and handle its destruction
     ["createTag", _this] call EFUNC(common,serverEvent);
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call CBA_fnc_waitAndExecute;
 
 true

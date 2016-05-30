@@ -12,7 +12,7 @@ GVAR(pendingReopen) = false;
         GVAR(pendingReopen) = false;
         [{
             [GVAR(INTERACTION_TARGET)] call FUNC(openMenu);
-        }, []] call EFUNC(common,execNextFrame);
+        }, []] call CBA_fnc_execNextFrame;
     };
 }] call EFUNC(common,addEventhandler);
 

@@ -90,9 +90,9 @@ GVAR(OldGlasses) = "<null>";
 
             _unit setVariable ["ACE_EyesDamaged", false];
 
-        }, _this, 5] call EFUNC(common,waitAndExecute);
+        }, _this, 5] call CBA_fnc_waitAndExecute;
 
-    }, _unit, 25] call EFUNC(common,waitAndExecute);
+    }, _unit, 25] call CBA_fnc_waitAndExecute;
 
 }] call EFUNC(common,addEventHandler);
 

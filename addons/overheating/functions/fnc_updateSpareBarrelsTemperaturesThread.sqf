@@ -37,4 +37,4 @@ TRACE_1("updateSpareBarrelsTemperaturesThread2",_pairs);
 } forEach _pairs;
 
 // Schedule for execution again after 10 seconds
-[DFUNC(updateSpareBarrelsTemperaturesThread), [], 10] call EFUNC(common,waitAndExecute);
+[DFUNC(updateSpareBarrelsTemperaturesThread), [], 10] call CBA_fnc_waitAndExecute;

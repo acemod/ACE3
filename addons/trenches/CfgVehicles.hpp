@@ -30,7 +30,7 @@ class CfgVehicles {
                     displayName = CSTRING(DigEnvelopeSmall);
                     condition = QUOTE(_player call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_small')])] call CBA_fnc_execNextFrame);
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;
@@ -40,7 +40,7 @@ class CfgVehicles {
                     displayName = CSTRING(DigEnvelopeBig);
                     condition = QUOTE(_player call FUNC(canDigTrench));
                     //wait a frame to handle "Do When releasing action menu key" option
-                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(placeTrench)},[ARR_2(_this select 0,'ACE_envelope_big')])] call CBA_fnc_execNextFrame);
                     exceptions[] = {};
                     showDisabled = 0;
                     priority = 4;

@@ -39,4 +39,4 @@ _amountDecreased = _amountDecreased + _decreaseRate;
 if (_amountDecreased >= 1 || (_usedMeds <= 0) || !alive _unit) exitWith {};
 
 // Schedule the loop to be executed again 1 sec later
-[DFUNC(medicationEffectLoop), [_unit, _variableName, _amountDecreased, _decreaseRate, _viscosityAdjustmentRate, _painReduceRate], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(medicationEffectLoop), [_unit, _variableName, _amountDecreased, _decreaseRate, _viscosityAdjustmentRate, _painReduceRate], 1] call CBA_fnc_waitAndExecute;

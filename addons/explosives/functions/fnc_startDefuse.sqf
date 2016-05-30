@@ -56,7 +56,7 @@ if (ACE_player != _unit) then {
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";
-        }, [_unit, _target], _defuseTime] call EFUNC(common,waitAndExecute);
+        }, [_unit, _target], _defuseTime] call CBA_fnc_waitAndExecute;
     };
 } else {
     _unit playActionNow _actionToPlay;

@@ -35,7 +35,7 @@ private _fixStatic = {
             1 preloadObject (_this select 0);
         }, {
             TRACE_1("preload done",_this);
-        }, [_vehType]] call EFUNC(common,waitUntilAndExecute);
+        }, [_vehType]] call CBA_fnc_waitUntilAndExecute;
     };
 };
 ["StaticWeapon", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
@@ -47,7 +47,7 @@ addMissionEventHandler ["Loaded",{
             1 preloadObject (_this select 0);
         }, {
             TRACE_1("preload done",_this);
-        }, [_x]] call EFUNC(common,waitUntilAndExecute);
+        }, [_x]] call CBA_fnc_waitUntilAndExecute;
     } forEach GVAR(fixedStatics);
 }];
 

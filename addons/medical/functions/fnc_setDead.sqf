@@ -59,7 +59,7 @@ if (isPLayer _unit) then {
 if (!_delaySetDamage) then {
     [_unit, 1] call FUNC(setStructuralDamage);
 } else {
-    [FUNC(setStructuralDamage), [_unit, 1]] call EFUNC(common,execNextFrame);
+    [FUNC(setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
 };
 
 true;

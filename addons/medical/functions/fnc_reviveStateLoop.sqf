@@ -53,4 +53,4 @@ if !(_unit getVariable [QGVAR(inReviveState), false]) exitwith {
 };
 
 // Schedule the loop to be executed again 1 sec later
-[DFUNC(reviveStateLoop), [_unit], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(reviveStateLoop), [_unit], 1] call CBA_fnc_waitAndExecute;
