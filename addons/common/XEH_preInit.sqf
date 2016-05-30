@@ -46,6 +46,8 @@ if (isServer) then {
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
 
+GVAR(setHearingCapabilityMap) = [];
+
 //////////////////////////////////////////////////
 // Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
 //////////////////////////////////////////////////

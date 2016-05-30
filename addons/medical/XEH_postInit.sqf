@@ -37,19 +37,15 @@ if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(commo
     params ["_unit", "_status"];
     if (local _unit) then {
         if (_status) then {
-            _unit setVariable ["tf_globalVolume", 0.4];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", true, true];
-            if (!isNil "acre_api_fnc_setGlobalVolume") then { [0.4^0.33] call acre_api_fnc_setGlobalVolume; };
         } else {
-            _unit setVariable ["tf_globalVolume", 1];
             _unit setVariable ["tf_voiceVolume", 1, true];
             _unit setVariable ["tf_unable_to_use_radio", false, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", false, true];
-            if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
 }] call EFUNC(common,addEventHandler);
@@ -143,11 +139,11 @@ GVAR(effectTimeBlood) = CBA_missionTime;
             [{
                 GVAR(effectBlindingCC) ppEffectAdjust [1,1,0, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
                 GVAR(effectBlindingCC) ppEffectCommit ((_this select 0) * 2);
-            }, [_strength], 0.01, 0] call EFUNC(common,waitAndExecute);
+            }, [_strength], 0.01, 0] call CBA_fnc_waitAndExecute;
 
             [{
                 GVAR(effectBlindingCC) ppEffectEnable false;
-            }, [], (_strength * 2) + 0.5, 0] call EFUNC(common,waitAndExecute);
+            }, [], (_strength * 2) + 0.5, 0] call CBA_fnc_waitAndExecute;
 
             GVAR(effectBlind) = false;
         };
@@ -210,15 +206,15 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CBA_fnc_waitAndExecute;
                     } else {
                         GVAR(effectPainCA) ppEffectEnable false;
                     };
@@ -232,15 +228,15 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CBA_fnc_waitAndExecute;
                     } else {
                         GVAR(effectPainCC) ppEffectEnable false;
                     };

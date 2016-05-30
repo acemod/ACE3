@@ -30,7 +30,7 @@ if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVa
             //wait for proper turret locality change
             [{
                 ["initMortar", [_this], [_this]] call EFUNC(common,globalEvent);
-            }, _mortar, 0.05] call EFUNC(common,waitAndExecute);
+            }, _mortar, 0.05] call CBA_fnc_waitAndExecute;
         };
     }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
 };

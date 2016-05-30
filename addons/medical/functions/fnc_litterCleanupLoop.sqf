@@ -30,4 +30,4 @@ if ( (count GVAR(allCreatedLitter)) == 0) exitWith {
 };
 
 // Schedule the loop to be executed again 30 sec later
-[DFUNC(litterCleanupLoop), [], 30] call EFUNC(common,waitAndExecute);
+[DFUNC(litterCleanupLoop), [], 30] call CBA_fnc_waitAndExecute;

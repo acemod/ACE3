@@ -170,7 +170,7 @@ if (_activated) then {
                             };
                         } forEach (curatoreditableobjects _logic);
                     };
-                },[_logic,_player]] call EFUNC(common,execNextFrame);
+                },[_logic,_player]] call CBA_fnc_execNextFrame;
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
@@ -244,7 +244,7 @@ if (_activated) then {
                     }
                 ];
             };
-        },[_logic]] call EFUNC(common,execNextFrame);
+        },[_logic]] call CBA_fnc_execNextFrame;
     };
 
     //--- Player
