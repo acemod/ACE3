@@ -89,11 +89,11 @@ private _refresh = {
 
 if (_show) then {
     if ({_x select 0 == _iconId} count _list == 0) then {
-        _list pushBack [_iconId, _icon, _color, ACE_time];
+        _list pushBack [_iconId, _icon, _color, CBA_missionTime];
     } else {
         {
             if (_x select 0 == _iconId) exitWith {
-                _list set [_forEachIndex, [_iconId, _icon, _color, ACE_time]];
+                _list set [_forEachIndex, [_iconId, _icon, _color, CBA_missionTime]];
             };
         } forEach _list;
     };

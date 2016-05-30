@@ -38,7 +38,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     };
 
     _unit setVariable [QGVAR(inReviveState), true, true];
-    _unit setVariable [QGVAR(reviveStartTime), ACE_time];
+    _unit setVariable [QGVAR(reviveStartTime), CBA_missionTime];
     [_unit, true] call FUNC(setUnconscious);
 
     // Run the loop that tracks the revive state

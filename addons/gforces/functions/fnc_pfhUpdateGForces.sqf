@@ -14,8 +14,8 @@
  #include "script_component.hpp"
 
 // Update the g-forces at constant mission time intervals (taking accTime into account)
-if ((ACE_time - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
-GVAR(lastUpdateTime) = ACE_time;
+if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
+GVAR(lastUpdateTime) = CBA_missionTime;
 
 if (isNull ACE_player || !(alive ACE_player)) exitWith {};
 

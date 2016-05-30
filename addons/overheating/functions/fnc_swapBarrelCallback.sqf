@@ -40,4 +40,4 @@ private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >
 ["spareBarrelsLoadCoolest", [_assistant, _gunner, _weapon, _temp, _barrelMass]] call EFUNC(common,serverEvent);
 
 // Store the update time
-_gunner setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
+_gunner setVariable [format [QGVAR(%1_time), _weapon], CBA_missionTime];

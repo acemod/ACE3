@@ -52,4 +52,4 @@ if (_target isKindOf "CAManBase") then {
 // prevents draging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
 
-[FUNC(startDragPFH), 0.2, [_unit, _target, ACE_time + 5]] call CBA_fnc_addPerFrameHandler;
+[FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;

@@ -104,7 +104,7 @@ GVAR(effectPainCC) = [
 
 // Initialize Other Variables
 GVAR(effectBlind) = false;
-GVAR(effectTimeBlood) = ACE_time;
+GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
@@ -151,8 +151,8 @@ GVAR(effectTimeBlood) = ACE_time;
 
     _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < ACE_time) then {
-        GVAR(effectTimeBlood) = ACE_time;
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < CBA_missionTime) then {
+        GVAR(effectTimeBlood) = CBA_missionTime;
         [600 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
@@ -168,8 +168,8 @@ GVAR(effectTimeBlood) = ACE_time;
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 
-GVAR(lastHeartBeat) = ACE_time;
-GVAR(lastHeartBeatSound) = ACE_time;
+GVAR(lastHeartBeat) = CBA_missionTime;
+GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
@@ -189,8 +189,8 @@ GVAR(lastHeartBeatSound) = ACE_time;
             GVAR(effectPainCC) ppEffectEnable false;
         };
     } else {
-        if ((ACE_time > GVAR(lastHeartBeat) + _interval)) then {
-            GVAR(lastHeartBeat) = ACE_time;
+        if ((CBA_missionTime > GVAR(lastHeartBeat) + _interval)) then {
+            GVAR(lastHeartBeat) = CBA_missionTime;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
@@ -247,8 +247,8 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
     if (GVAR(level) >= 2 && {_heartRate > 0}) then {
         _minTime = 60 / _heartRate;
-        if (ACE_time - GVAR(lastHeartBeatSound) > _minTime) then {
-            GVAR(lastHeartBeatSound) = ACE_time;
+        if (CBA_missionTime - GVAR(lastHeartBeatSound) > _minTime) then {
+            GVAR(lastHeartBeatSound) = CBA_missionTime;
             // Heart rate sound effect
             if (_heartRate < 60) then {
                 _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));

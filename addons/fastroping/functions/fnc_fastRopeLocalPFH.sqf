@@ -43,7 +43,7 @@ if (isNull attachedTo _unit) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
-if (ACE_diagTime > _timeToPlayRopeSound) then {
+if (diag_tickTime > _timeToPlayRopeSound) then {
     _arguments set [4, (_timeToPlayRopeSound + 1)];
     playSound QGVAR(Rope);
 };

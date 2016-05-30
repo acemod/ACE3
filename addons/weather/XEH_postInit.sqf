@@ -5,13 +5,13 @@ GVAR(temperatureShift) = 3 - random 6;
 GVAR(badWeatherShift) = (random 1) ^ 2 * 10;
 GVAR(humidityShift) = (5 - random 10) / 100;
 
-GVAR(wind_period_start_time) = ACE_time;
-GVAR(rain_period_start_time) = ACE_time;
+GVAR(wind_period_start_time) = CBA_missionTime;
+GVAR(rain_period_start_time) = CBA_missionTime;
 
 GVAR(ACE_rain) = rain;
 
-"ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = ACE_time; };
-"ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = ACE_time; };
+"ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = CBA_missionTime; };
+"ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = CBA_missionTime; };
 "ACE_MISC_PARAMS" addPublicVariableEventHandler {
     if (!isServer) then {
         TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
@@ -78,14 +78,14 @@ simulWeatherSync;
 
         [] call FUNC(updateWind); //Every 1 second
 
-        if (ACE_time >= GVAR(nextUpdateRain)) then {
+        if (CBA_missionTime >= GVAR(nextUpdateRain)) then {
             [] call FUNC(updateRain); //Every 2 seconds
-            GVAR(nextUpdateRain) = 2 + ACE_time;
+            GVAR(nextUpdateRain) = 2 + CBA_missionTime;
         };
-        if (ACE_time >= GVAR(nextUpdateTempAndHumidity)) then {
+        if (CBA_missionTime >= GVAR(nextUpdateTempAndHumidity)) then {
             [] call FUNC(updateTemperature); //Every 20 seconds
             [] call FUNC(updateHumidity); //Every 20 seconds
-            GVAR(nextUpdateTempAndHumidity) = 20 + ACE_time;
+            GVAR(nextUpdateTempAndHumidity) = 20 + CBA_missionTime;
         };
 
         END_COUNTER(weatherPFEH);

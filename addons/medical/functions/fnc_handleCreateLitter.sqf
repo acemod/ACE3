@@ -41,7 +41,7 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     } forEach (_oldLitter select 1);
 };
 
-GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
+GVAR(allCreatedLitter) pushBack [CBA_missionTime, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
     // Start the litter cleanup loop

@@ -113,7 +113,7 @@ if (_activated) then {
             if (_name == "") then {_name = localize "STR_A3_curator";};
 
             //--- Wait until mission starts
-            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO ACE_TIME, IT BREAKS THE MODULE
+            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO CBA_missionTime, IT BREAKS THE MODULE
 
             //--- Refresh addon list, so it's broadcasted to clients
             _addons = curatoraddons _logic;

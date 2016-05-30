@@ -34,7 +34,7 @@ if (!hasInterface) exitWith {};
         params ["_position"];
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
-        _huntir setVariable [QGVAR(startTime), ACE_time, true];
+        _huntir setVariable [QGVAR(startTime), CBA_missionTime, true];
         [{
             params ["_args", "_idPFH"];
             _args params ["_huntir"];
