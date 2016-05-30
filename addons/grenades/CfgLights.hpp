@@ -12,7 +12,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 400;
+			quadratic = 600;
 			hardLimitStart = 1.75;
 			hardLimitEnd = 3;
 		};
@@ -25,7 +25,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 400;
+			quadratic = 600;
 			hardLimitStart = 1.75;
 			hardLimitEnd = 3;
 		};
@@ -38,7 +38,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 400;
+			quadratic = 600;
 			hardLimitStart = 1.75;
 			hardLimitEnd = 3;
 		};
@@ -51,14 +51,14 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 400;
+			quadratic = 600;
 			hardLimitStart = 1.75;
 			hardLimitEnd = 3;
 		};
 	};
 	
 	class ACE_ChemlightLight_Orange: ChemLight_Green {
-		color[] = {1,0.4,0,1};
+		color[] = {1,0.64,0,1};
 		diffuse[] = {1,0.4,0};
 	};
 	
@@ -72,7 +72,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 50;
+			quadratic = 100;
 			hardLimitStart = 2;
 			hardLimitEnd = 7;
 		};
@@ -83,7 +83,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 50;
+			quadratic = 100;
 			hardLimitStart = 2;
 			hardLimitEnd = 7;
 		};
@@ -94,7 +94,7 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 50;
+			quadratic = 100;
 			hardLimitStart = 2;
 			hardLimitEnd = 7;
 		};
@@ -105,12 +105,12 @@ class CfgLights {
 		class Attenuation {
 			constant = 0;
 			linear = 0;
-			quadratic = 50;
+			quadratic = 100;
 			hardLimitStart = 2;
 			hardLimitEnd = 7;
 		};
 	};
-	
+	/*
 	class ACE_ChemlightLight_IR: ChemLight_Green {
 		color[] = {0,0,0,0};
 		diffuse[] = {0.001,0,0};
@@ -123,4 +123,5 @@ class CfgLights {
 			hardLimitEnd = 6;
 		};
 	};
+    */
 };

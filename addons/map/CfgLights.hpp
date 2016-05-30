@@ -32,4 +32,8 @@ class CfgLights {
     class ACE_FlashlightLight_Yellow: ACE_FlashlightLight_White {
         diffuse[] = {1,1,0.4};
     };
+    
+    class ACE_FlashlightLight_Orange: ACE_FlashlightLight_White {
+        diffuse[] = {1,0.64,0};
+    };
 };

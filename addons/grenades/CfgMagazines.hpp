@@ -79,13 +79,25 @@ class CfgMagazines {
     };
 	
 	class SmokeShell;
-	class Chemlight_Green: Smokeshell {};
-	class Chemlight_Blue: Chemlight_Green {};
-	class Chemlight_Red: Chemlight_Green {};
-	class Chemlight_Yellow: Chemlight_Green {};
+	class Chemlight_Green: Smokeshell {
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Green";
+    };
+    
+	class Chemlight_Blue: Chemlight_Green {
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Blue";
+    };
+    
+	class Chemlight_Red: Chemlight_Green {
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Red";
+    };
+    
+	class Chemlight_Yellow: Chemlight_Green {
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Yellow";
+    };
 	
-	class ACE_Chemlight_Orange: Chemlight_Blue {
+	class ACE_Chemlight_Orange: Chemlight_Green {
 		ACE_Attachable = "ACE_G_Chemlight_Orange";
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Orange";
 		ammo = "ACE_G_Chemlight_Orange";
 		displayName = "Chemlight (Orange)";
 		displayNameShort = "Orange Light";
@@ -94,8 +106,9 @@ class CfgMagazines {
 		picture = PATHTOF(UI\ace_chemlight_orange_x_ca.paa);
 	};
 	
-	class ACE_Chemlight_White: Chemlight_Blue {
+	class ACE_Chemlight_White: Chemlight_Green {
 		ACE_Attachable = "ACE_G_Chemlight_White";
+        ACE_ChemlightShieldType = "ACE_Chemlight_Shield_White";
 		ammo = "ACE_G_Chemlight_White";
 		displayName = "Chemlight (White)";
 		displayNameShort = "White Light";
@@ -106,6 +119,7 @@ class CfgMagazines {
 	
 	class ACE_Chemlight_HiRed: Chemlight_Red {
 		ACE_Attachable = "ACE_G_Chemlight_HiRed";
+        ACE_ChemlightShieldType = "";
 		ammo = "ACE_G_Chemlight_HiRed";
 		displayName = "Chemlight (Red Hi)";
 		descriptionShort = "Type: Light - Red Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
@@ -115,6 +129,7 @@ class CfgMagazines {
 	
 	class ACE_Chemlight_HiYellow: Chemlight_Yellow {
 		ACE_Attachable = "ACE_G_Chemlight_HiYellow";
+        ACE_ChemlightShieldType = "";
 		ammo = "ACE_G_Chemlight_HiYellow";
 		displayName = "Chemlight (Yellow Hi)";
 		descriptionShort = "Type: Light - Yellow Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
@@ -124,6 +139,7 @@ class CfgMagazines {
 	
 	class ACE_Chemlight_HiOrange: ACE_Chemlight_Orange {
 		ACE_Attachable = "ACE_G_Chemlight_HiOrange";
+        ACE_ChemlightShieldType = "";
 		ammo = "ACE_G_Chemlight_HiOrange";
 		displayName = "Chemlight (Orange Hi)";
 		descriptionShort = "Type: Light - Orange Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
@@ -133,6 +149,7 @@ class CfgMagazines {
 	
 	class ACE_Chemlight_HiWhite: ACE_Chemlight_White {
 		ACE_Attachable = "ACE_G_Chemlight_HiWhite";
+        ACE_ChemlightShieldType = "";
 		ammo = "ACE_G_Chemlight_HiWhite";
 		displayName = "Chemlight (White Hi)";
 		descriptionShort = "Type: Light - White Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";

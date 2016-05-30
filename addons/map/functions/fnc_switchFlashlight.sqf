@@ -19,7 +19,11 @@
 params ["_flashlight"];
 
 GVAR(flashlightInUse) = _flashlight;
+
 if (GVAR(mapGlow)) then {
     [GVAR(flashlightInUse)] call FUNC(flashlightGlow);
 };
-playSound "ACE_map_flashlightClick";
+
+if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "ACE_Flashlight" >> "ACE_flashlight_NoSound") < 1) then { 
+    playSound QGVAR(flashlightClick);
+};
