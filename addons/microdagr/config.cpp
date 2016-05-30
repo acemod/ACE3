@@ -13,7 +13,9 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+
+#include "CBA_Settings.hpp"
 #include "gui.hpp"
-#include "ACE_Settings.hpp"

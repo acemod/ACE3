@@ -12,7 +12,10 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
+#include "CfgEventHandlers.hpp"
+
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 
 class RscControlsGroup;
 class RscActiveText;
@@ -24,12 +27,9 @@ class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
-
 #include "MapGpsUI.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
 
+#include "CBA_Settings.hpp"
 
 // REGULAR MAP
 class RscDisplayMainMap {

@@ -12,6 +12,16 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
+
+#include "CfgMarkers.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgSounds.hpp"
+#include "CfgLights.hpp"
+
+#include "CBA_Settings.hpp"
+
 class RscControlsGroup;
 class RscActiveText;
 class RscPicture;
@@ -23,13 +33,6 @@ class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
 
-#include "ACE_Settings.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgMarkers.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgAmmo.hpp"
-#include "CfgSounds.hpp"
-#include "CfgLights.hpp"
 #include "Effects.hpp"
 
 class RscMapControl {

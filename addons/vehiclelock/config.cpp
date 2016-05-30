@@ -12,8 +12,10 @@ class CfgPatches {
   };
 };
 
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+#include "CBA_Settings.hpp"

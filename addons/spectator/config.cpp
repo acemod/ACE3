@@ -12,9 +12,11 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
+
 #include "CfgVehicles.hpp"
+
+#include "CBA_Settings.hpp"
 #include "ui\interface.hpp"
 
 class CfgRespawnTemplates {
