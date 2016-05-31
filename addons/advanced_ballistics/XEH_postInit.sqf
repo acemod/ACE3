@@ -5,7 +5,7 @@
 GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
-GVAR(ProtractorStart) = ACE_time;
+GVAR(ProtractorStart) = CBA_missionTime;
 GVAR(allBullets) = [];
 GVAR(currentGrid) = 0;
 

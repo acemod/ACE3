@@ -35,7 +35,7 @@ if !(isNull _fries) then {
     [{
         _this animate ["extendHookRight", 1];
         _this animate ["extendHookLeft", 1];
-    }, _fries, 2] call EFUNC(common,waitAndExecute);
+    }, _fries, 2] call CBA_fnc_waitAndExecute;
     _waitTime = 4;
 };
 

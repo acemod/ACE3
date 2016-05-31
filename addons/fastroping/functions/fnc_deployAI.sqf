@@ -64,7 +64,7 @@ _deployTime = 0;
 if (getText (_config >> QGVAR(onPrepare)) != "") then {
     _deployTime = [_vehicle] call (missionNamespace getVariable (getText (_config >> QGVAR(onPrepare))));
 };
-[{[_this] call FUNC(deployRopes)}, _vehicle, _deployTime] call EFUNC(common,waitAndExecute);
+[{[_this] call FUNC(deployRopes)}, _vehicle, _deployTime] call CBA_fnc_waitAndExecute;
 driver _vehicle disableAI "MOVE";
 
 DFUNC(deployAIRecursive) = {
@@ -80,8 +80,8 @@ DFUNC(deployAIRecursive) = {
                 params ["_vehicle"];
                 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
                 ({!(_x select 5)} count (_deployedRopes)) > 0
-            }, FUNC(deployAIRecursive), _this] call EFUNC(common,waitUntilAndExecute);
-        }, [_vehicle, _unitsToDeploy], 1] call EFUNC(common,waitAndExecute);
+            }, FUNC(deployAIRecursive), _this] call CBA_fnc_waitUntilAndExecute;
+        }, [_vehicle, _unitsToDeploy], 1] call CBA_fnc_waitAndExecute;
     } else {
         [{
             private _deployedRopes = _this getVariable [QGVAR(deployedRopes), []];
@@ -89,8 +89,8 @@ DFUNC(deployAIRecursive) = {
         }, {
             [_this] call FUNC(cutRopes);
             driver _this enableAI "MOVE";
-        }, _vehicle] call EFUNC(common,waitUntilAndExecute);
+        }, _vehicle] call CBA_fnc_waitUntilAndExecute;
     };
 };
 
-[FUNC(deployAIRecursive), [_vehicle, _unitsToDeploy], _deployTime + 4] call EFUNC(common,waitAndExecute);
+[FUNC(deployAIRecursive), [_vehicle, _unitsToDeploy], _deployTime + 4] call CBA_fnc_waitAndExecute;

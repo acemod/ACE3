@@ -64,7 +64,7 @@ if (_target isKindOf "CAManBase") then {
 };
 
 // check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
+[FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;

@@ -27,7 +27,7 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
     // It's to soon to call this function, delay it
     if (EGVAR(common,settingsInitFinished)) then {
         // Settings are already initialized, but the small wait isn't over
-        [DFUNC(setHandCuffed), _this, 0.05] call EFUNC(common,waitAndExecute);
+        [DFUNC(setHandCuffed), _this, 0.05] call CBA_fnc_waitAndExecute;
     } else {
         // Settings are not initialized yet
         [DFUNC(setHandCuffed), _this] call EFUNC(common,runAfterSettingsInit);
@@ -98,7 +98,7 @@ if (_state) then {
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 
-    }, [_unit], 0.01] call EFUNC(common,waitAndExecute);
+    }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);

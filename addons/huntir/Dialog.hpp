@@ -154,7 +154,7 @@ class ace_huntir_cam_dialog {
         w = __W;
         h = __H + 0.2;
         border = 0;
-        text = PATHTOF(UI\ace_huntir_monitor_on.paa);
+        text = QPATHTOF(UI\ace_huntir_monitor_on.paa);
     };
     class CAM_HEIGHT {
         type = CT_STATIC;
@@ -311,7 +311,7 @@ class ace_huntir_cam_dialog_off: ace_huntir_cam_dialog_inactive {
     class RIGHT_BORDER: RIGHT_BORDER {};
     class PRESS_HELP: PRESS_HELP {};
     class HELP_DIALOG: HELP_DIALOG {};
-    class CAM_BG: CAM_BG { text = PATHTOF(UI\ace_huntir_monitor_off.paa); };
+    class CAM_BG: CAM_BG { text = QPATHTOF(UI\ace_huntir_monitor_off.paa); };
 };
 //ACTIVE PARA CAMERA DIALOG
 class ace_huntir_help_dialog: ace_huntir_cam_dialog {

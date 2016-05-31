@@ -30,7 +30,7 @@ _display setVariable [QGVAR(versionTooltip), [_display] spawn {
         _ctrl ctrlCommit 0;
 
         // pls ignore
-        _ctrl ctrlSetText QUOTE(PATHTOF(data\icon_banana_ca.paa));
+        _ctrl ctrlSetText QPATHTOF(data\icon_banana_ca.paa);
 
         // animate with random speed
         _position set [1, 1 - safezoneY];

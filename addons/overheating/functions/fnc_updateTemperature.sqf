@@ -30,7 +30,8 @@ private _lastTime = _unit getVariable [_timeVarName, 0];
 private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
 // Calculate cooling
-_temperature = [_temperature, _barrelMass, ACE_time - _lastTime] call FUNC(calculateCooling);
+_temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);
+
 TRACE_1("cooledTo",_temperature);
 // Calculate heating
 // Steel Heat Capacity = 466 J/(Kg.K)
@@ -39,6 +40,6 @@ _temperature = _temperature + _heatIncrement / (_barrelMass * 466);
 // Publish the temperature variable
 [_unit, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 // Store the update time locally
-_unit setVariable [_timeVarName, ACE_time];
+_unit setVariable [_timeVarName, CBA_missionTime];
 
 _temperature

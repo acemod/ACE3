@@ -44,10 +44,10 @@ private _angleTarget = asin (_weaponDirection select 2);
 
 private _movingAzimuth = 0;
 
-if (ACE_time - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) then {
+if (CBA_missionTime - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) then {
     // calculate speed of target
     private _posTarget = (getPosASL _vehicle) vectorAdd (_weaponDirection vectorMultiply _distance);
-    private _velocityTarget = (_posTarget vectorDiff GVAR(position)) vectorMultiply (1 / (ACE_time - GVAR(time)));
+    private _velocityTarget = (_posTarget vectorDiff GVAR(position)) vectorMultiply (1 / (CBA_missionTime - GVAR(time)));
 
     // estimate time to target
     private _magazine       = _vehicle currentMagazineTurret _turret;

@@ -56,4 +56,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(Name)), QPATHTOF(UI\Kestrel4500.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);

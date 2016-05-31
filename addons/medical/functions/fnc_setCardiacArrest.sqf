@@ -35,9 +35,9 @@ _timeInCardiacArrest = 120 + round(random(600));
         [_idPFH] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(inCardiacArrest), nil,true];
     };
-    if (ACE_time - _startTime >= _timeInCardiacArrest) exitWith {
+    if (CBA_missionTime - _startTime >= _timeInCardiacArrest) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(inCardiacArrest), nil,true];
         [_unit] call FUNC(setDead);
     };
-}, 1, [_unit, ACE_time, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;
+}, 1, [_unit, CBA_missionTime, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;

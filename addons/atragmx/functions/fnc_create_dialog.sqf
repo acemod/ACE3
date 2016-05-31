@@ -56,7 +56,7 @@ GVAR(DialogPFH) = [{
     if (!GVAR(active)) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    __ctrlBackground ctrlSetText format [QUOTE(PATHTOF(UI\ATRAG_%1.paa)), ["N", "D"] select (call EFUNC(common,ambientBrightness))];
+    __ctrlBackground ctrlSetText format [QPATHTOF(UI\ATRAG_%1.paa), ["N", "D"] select (call EFUNC(common,ambientBrightness))];
 }, 60, []] call CBA_fnc_addPerFrameHandler;
 
 true

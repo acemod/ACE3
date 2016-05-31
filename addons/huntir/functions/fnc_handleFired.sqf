@@ -34,7 +34,7 @@ if (!hasInterface) exitWith {};
         params ["_position"];
         _huntir = createVehicle ["ACE_HuntIR", _position, [], 0, "FLY"];
         _huntir setPosATL _position;
-        _huntir setVariable [QGVAR(startTime), ACE_time, true];
+        _huntir setVariable [QGVAR(startTime), CBA_missionTime, true];
         [{
             params ["_args", "_idPFH"];
             _args params ["_huntir"];
@@ -50,5 +50,5 @@ if (!hasInterface) exitWith {};
                 _huntir setVectorUp [0, 0, 1];
             };
         }, 0, [_huntir]] call CBA_fnc_addPerFrameHandler;
-    }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call EFUNC(common,waitAndExecute);
-}, [_projectile], 5, 0] call EFUNC(common,waitAndExecute);
+    }, [getPosATL _projectile vectorAdd [0, 0, 50]], 2, 0] call CBA_fnc_waitAndExecute;
+}, [_projectile], 5, 0] call CBA_fnc_waitAndExecute;

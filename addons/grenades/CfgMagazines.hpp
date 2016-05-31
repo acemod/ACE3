@@ -59,8 +59,8 @@ class CfgMagazines {
         displayname = CSTRING(M84_Name);
         descriptionshort = CSTRING(M84_Description);
         displayNameShort = "M84";
-        model = PATHTOF(models\ACE_m84.p3d);
-        picture = PATHTOF(UI\ACE_m84_x_ca.paa);
+        model = QPATHTOF(models\ACE_m84.p3d);
+        picture = QPATHTOF(UI\ACE_m84_x_ca.paa);
         ammo = "ACE_G_M84";
         mass = 4;
     };

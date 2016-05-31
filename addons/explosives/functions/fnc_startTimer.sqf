@@ -25,4 +25,4 @@ TRACE_2("params",_explosive,_delay);
     if (!isNull _explosive) then {
         [_explosive, -1, [_explosive, 0]] call FUNC(detonateExplosive);
     };
-}, [_explosive], _delay] call EFUNC(common,waitAndExecute);
+}, [_explosive], _delay] call CBA_fnc_waitAndExecute;

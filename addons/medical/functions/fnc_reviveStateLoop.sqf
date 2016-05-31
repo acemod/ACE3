@@ -35,7 +35,7 @@ if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) the
 };
 
 // If the timer run out, let the unit die and exit the loop
-if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
+if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTime)}) exitwith {
     _unit setVariable [QGVAR(inReviveState), nil, true];
     _unit setVariable [QGVAR(reviveStartTime), nil];
     [_unit, true] call FUNC(setDead);
@@ -53,4 +53,4 @@ if !(_unit getVariable [QGVAR(inReviveState), false]) exitwith {
 };
 
 // Schedule the loop to be executed again 1 sec later
-[DFUNC(reviveStateLoop), [_unit], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(reviveStateLoop), [_unit], 1] call CBA_fnc_waitAndExecute;

@@ -32,7 +32,7 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = ACE_diagTime;
+GVAR(keyDownTime) = diag_tickTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
@@ -83,21 +83,21 @@ if (GVAR(openedMenuType) == 0) then {
         if (vehicle ACE_player != ACE_player) then {
             GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
             GVAR(expanded) = true;
-            GVAR(expandedTime) = ACE_diagTime;
+            GVAR(expandedTime) = diag_tickTime;
             GVAR(lastPath) = +GVAR(menuDepthPath);
             GVAR(startHoverTime) = -1000;
         };
     } else {
         GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
         GVAR(expanded) = true;
-        GVAR(expandedTime) = ACE_diagTime;
+        GVAR(expandedTime) = diag_tickTime;
         GVAR(lastPath) = +GVAR(menuDepthPath);
         GVAR(startHoverTime) = -1000;
     };
 } else {
     GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
     GVAR(expanded) = true;
-    GVAR(expandedTime) = ACE_diagTime;
+    GVAR(expandedTime) = diag_tickTime;
     GVAR(lastPath) = +GVAR(menuDepthPath);
     GVAR(startHoverTime) = -1000;
 };

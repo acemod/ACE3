@@ -103,7 +103,7 @@ if (GVAR(delayUnconCaptive) == 0) then {
         if (_unit getVariable ["ACE_isUnconscious", false]) then {
             [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
         };
-    },[_unit], GVAR(delayUnconCaptive)] call EFUNC(common,waitAndExecute);
+    },[_unit], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
 };
 
 _anim = [_unit] call EFUNC(common,getDeathAnim);
@@ -113,9 +113,9 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };
-}, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
+}, [_unit, _anim], 0.5, 0] call CBA_fnc_waitAndExecute;
 
-_startingTime = ACE_time;
+_startingTime = CBA_missionTime;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 

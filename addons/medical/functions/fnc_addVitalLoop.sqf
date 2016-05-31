@@ -27,4 +27,4 @@ if ((_unit getVariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force
 // Schedule the loop to be executed again 1 sec later
 // @todo: should the loop be started righ away instead?
 _unit setVariable [QGVAR(addedToUnitLoop), true, true];
-[DFUNC(vitalLoop), [_unit, ACE_time], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(vitalLoop), [_unit, CBA_missionTime], 1] call CBA_fnc_waitAndExecute;

@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
     [{
         _this call FUNC(treatment);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CBA_fnc_execNextFrame;
 };
 
 if !(_target isKindOf "CAManBase") exitWith {false};

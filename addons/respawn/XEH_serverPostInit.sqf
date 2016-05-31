@@ -10,7 +10,7 @@
                     deleteVehicle _unit;
                 };
             },
-            _this, 4] call EFUNC(common,waitAndExecute);
+            _this, 4] call CBA_fnc_waitAndExecute;
             false
         }];
     };

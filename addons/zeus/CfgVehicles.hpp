@@ -18,7 +18,7 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(Settings_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Settings_ca.paa);
         category = "ACE";
         function = QFUNC(moduleZeusSettings);
         functionPriority = 1;
@@ -96,7 +96,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleCaptive_DisplayName);
         function = QFUNC(moduleCaptive);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Captive_ca.paa);
         class ModuleDescription {
             description = "Flips the capture state of the specified unit.";
             sync[] = {};
@@ -106,7 +106,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSurrender_DisplayName);
         function = QFUNC(moduleSurrender);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Surrender_ca.paa);
         class ModuleDescription {
             description = "Flips the surrender state of the specified unit.";
             sync[] = {};
@@ -116,7 +116,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleUnconscious_DisplayName);
         function = QFUNC(moduleUnconscious);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
         class ModuleDescription {
             description = "Flips the unconscious state of the specified unit.";
             sync[] = {};
@@ -126,7 +126,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedic_DisplayName);
         function = QFUNC(moduleSetMedic);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
         class ModuleDescription {
             description = "";
             sync[] = {};
@@ -136,7 +136,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedicalVehicle_DisplayName);
         function = QFUNC(moduleSetMedicalVehicle);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
         class ModuleDescription {
             description = "";
             sync[] = {};
@@ -146,7 +146,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSetMedicalFacility_DisplayName);
         function = QFUNC(moduleSetMedicalFacility);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
         class ModuleDescription {
             description = "";
             sync[] = {};
@@ -157,7 +157,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleAddSpareTrack_DisplayName);
         function = QFUNC(moduleAddSpareTrack);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
         class ModuleDescription {
             description = CSTRING(ModuleAddSpareTrack_Description);
             sync[] = {};
@@ -167,7 +167,7 @@ class CfgVehicles {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
         function = QFUNC(moduleAddSpareWheel);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa));//@todo
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
         class ModuleDescription {
             description = CSTRING(ModuleAddSpareWheel_Description);
             sync[] = {};

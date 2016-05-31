@@ -21,8 +21,8 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(DisplayName);
         descriptionShort = "";
-        model = PATHTOF(data\ace_tacticalladder_pack.p3d);
-        picture = PATHTOF(UI\ace_tactical_ladder_pack_ca.paa);
+        model = QPATHTOF(data\ace_tacticalladder_pack.p3d);
+        picture = QPATHTOF(UI\ace_tactical_ladder_pack_ca.paa);
         maximumLoad = 0;
         mass = 50;
     };
@@ -42,7 +42,7 @@ class CfgVehicles {
 
         displayName = CSTRING(DisplayName);
         class DestructionEffects {};
-        model = PATHTOF(data\ace_tacticalladder.p3d);
+        model = QPATHTOF(data\ace_tacticalladder.p3d);
         animated = 1;
         autocenter = 0;
         featureSize = 12;
@@ -92,7 +92,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

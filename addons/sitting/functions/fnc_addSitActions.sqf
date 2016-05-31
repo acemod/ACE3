@@ -40,7 +40,7 @@ TRACE_1("Adding Sit Action",_type);
 private _sitAction = [
     QGVAR(Sit),
     localize LSTRING(Sit),
-    QUOTE(PATHTOF(UI\sit_ca.paa)),
+    QPATHTOF(UI\sit_ca.paa),
     {_this call FUNC(sit)},
     {_this call FUNC(canSit)},
     {},

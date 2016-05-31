@@ -7,7 +7,7 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(rangetable_name);
         descriptionShort = CSTRING(rangetable_description);
-        picture = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
+        picture = QPATHTOF(UI\icon_rangeTable.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 0.5;
         };
