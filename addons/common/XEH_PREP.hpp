@@ -24,6 +24,7 @@ PREP(debugModule);
 PREP(defineVariable);
 PREP(deviceKeyFindValidIndex);
 PREP(deviceKeyRegisterNew);
+PREP(deprecateComponent);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);

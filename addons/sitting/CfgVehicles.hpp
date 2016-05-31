@@ -8,7 +8,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(ModuleDisplayName);
         function = QFUNC(moduleInit);
-        scope = 2;
+        scope = 1;
         isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_Sitting_ca.paa);
