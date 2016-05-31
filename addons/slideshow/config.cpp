@@ -7,7 +7,6 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author[]= {"Jonpas", "DaC"};
-        authorUrl = "https://github.com/jonpas";
         VERSION_CONFIG;
     };
 };

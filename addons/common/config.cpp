@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main","ace_modules"};
-        author[] = {"KoffeinFlummi"};
-        authorUrl = "https://github.com/KoffeinFlummi/";
+        author = CSTRING(ACETeam);
+        authors[] = {"KoffeinFlummi"};
+        url = "http://ace3mod.com";
         VERSION_CONFIG_COMMON;
     };
 };

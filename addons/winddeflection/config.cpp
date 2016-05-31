@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_weather"};
-        author[] = {ECSTRING(common,ACETeam), "Glowbal", "Ruthberg"};
-        authorUrl = "http://ace3mod.com/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {ECSTRING(common,ACETeam), "Glowbal", "Ruthberg"};
+        url = "http://ace3mod.com";
         VERSION_CONFIG;
     };
 };

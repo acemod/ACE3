@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_Tripod"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"Rocko", "Scubaman3D", "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Rocko", "Scubaman3D", "Ruthberg"};
+        url = "http://ace3mod.com";
         VERSION_CONFIG;
     };
 };

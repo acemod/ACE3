@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_wirecutter"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"gpgpgpgp", "PabstMirror"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"gpgpgpgp", "PabstMirror"};
+        url = "http://ace3mod.com";
         VERSION_CONFIG;
     };
 };
