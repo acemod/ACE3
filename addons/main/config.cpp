@@ -569,7 +569,7 @@ class CfgPatches {
         };
         author = ECSTRING(common,ACETeam);
         authors[] = {ECSTRING(common,ACETeam)};
-        url = ECSTRING(main,URL);
+        url = CSTRING(URL);
         VERSION_CONFIG;
     };
 };
@@ -582,7 +582,7 @@ class CfgMods {
         hidePicture = "true";
         hideName = "true";
         actionName = "Website";
-        action = "http://ace3mod.com/";
+        action = CSTRING(URL);
         description = "Issue Tracker: https://github.com/acemod/ACE3/issues";
     };
 };
