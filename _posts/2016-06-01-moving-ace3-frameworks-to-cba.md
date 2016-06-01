@@ -2,7 +2,7 @@
 title: Moving ACE3 frameworks to CBA
 description: Status report on ACE3 version 3.5.0
 parent: posts
-image: /img/news/160302_FastRoping.jpg
+image: /img/news/160601_cbaPost.jpg
 author: Glowbal
 layout: post
 ---
