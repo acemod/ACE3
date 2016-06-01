@@ -9,7 +9,7 @@ class CfgPatches {
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal"};
         PBO_URL;
-        VERSION_CONFIG
+        VERSION_CONFIG;
     };
 };
 
