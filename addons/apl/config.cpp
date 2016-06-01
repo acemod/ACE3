@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main"};
         author = "Bohemia Interactive";
-        PBO_URL
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

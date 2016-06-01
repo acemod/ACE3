@@ -12,7 +12,7 @@
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 
 #define WEB_URL "http://ace3mod.com/"
-#define PBO_URL url = WEB_URL;
+#define PBO_URL url = WEB_URL
 
 // MINIMAL required version for the Mod. Components can specify others..
 #define REQUIRED_VERSION 1.56

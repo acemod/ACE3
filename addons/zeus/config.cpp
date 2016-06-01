@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"SilentSpike"};
-        PBO_URL
+        PBO_URL;
         VERSION_CONFIG;
     };
     // Use additional cfgPatches to contextually remove modules from zeus

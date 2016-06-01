@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"RH_m4_cfg"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
-        PBO_URL
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

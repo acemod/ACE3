@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_main","ace_modules"};
         author = CSTRING(ACETeam);
         authors[] = {"KoffeinFlummi"};
-        PBO_URL
+        PBO_URL;
         VERSION_CONFIG_COMMON;
     };
 };
