@@ -568,7 +568,6 @@ class CfgPatches {
             "cba_jr"
         };
         author = ECSTRING(common,ACETeam);
-        authors[] = {ECSTRING(common,ACETeam)};
         url = CSTRING(URL);
         VERSION_CONFIG;
     };
