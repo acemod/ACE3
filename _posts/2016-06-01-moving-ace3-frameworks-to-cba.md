@@ -1,6 +1,6 @@
 ---
 title: Moving ACE3 frameworks to CBA
-description: Status report on ACE3 version 3.5.0
+description: We are moving ACE3 functionality to CBA. Everyone can use those functions now without needing a dependency on ACE
 parent: posts
 image: /img/news/160601_cbaPost.jpg
 author: Glowbal
