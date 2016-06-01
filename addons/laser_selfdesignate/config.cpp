@@ -6,6 +6,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_laser"};
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

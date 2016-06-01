@@ -9,7 +9,7 @@ class CfgPatches {
         VERSION_CONFIG;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Garth 'LH' de Wet"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
     };
 };
 
