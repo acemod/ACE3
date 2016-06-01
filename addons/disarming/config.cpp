@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ACE_Interaction"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"PabstMirror"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

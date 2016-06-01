@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_ballistics"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"ACE2 Team"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_medical"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

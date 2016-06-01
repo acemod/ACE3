@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ACE_Interaction"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"commy2", "KoffeinFlummi"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

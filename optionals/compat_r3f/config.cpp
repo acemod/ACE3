@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"R3F_Armes", "R3F_Acc"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

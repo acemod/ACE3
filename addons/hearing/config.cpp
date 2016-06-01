@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_interaction", "A3_Characters_F", "A3_Characters_F_Kart"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"KoffeinFlummi", "esteldunedain", "HopeJ", "commy2", "Rocko", "Rommel", "Ruthberg"};
-        PBO_URL;
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
