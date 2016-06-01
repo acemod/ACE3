@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_MX2A"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_apl"};
-        author[] = {"Spooner", "tcp"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Spooner", "tcp"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

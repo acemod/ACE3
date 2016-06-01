@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"R3F_Armes", "R3F_Acc"};
-        author[]={"Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ruthberg"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

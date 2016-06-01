@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_refuel_fuelNozzle"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"GitHawk"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"GitHawk"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

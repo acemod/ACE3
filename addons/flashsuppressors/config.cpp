@@ -14,8 +14,9 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"commy2"};
-        authorUrl = "https://github.com/commy2";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"commy2"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

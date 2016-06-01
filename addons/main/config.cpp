@@ -567,8 +567,9 @@ class CfgPatches {
             "cba_xeh_a3",
             "cba_jr"
         };
-        author[] = {ECSTRING(common,ACETeam)};
-        authorUrl = "http://ace3mod.com/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {ECSTRING(common,ACETeam)};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

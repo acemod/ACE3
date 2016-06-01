@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_HuntIR_monitor"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Norrin", "Rocko", "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Norrin", "Rocko", "Ruthberg"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

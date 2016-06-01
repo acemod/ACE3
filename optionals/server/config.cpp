@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Glowbal"};
-        authorUrl = "https://github.com/Glowbal/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Glowbal"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

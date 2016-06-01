@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_DAGR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_weather"};
-        author[] = {"Rosuto", "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Rosuto", "Ruthberg"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };

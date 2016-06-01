@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_RangeCard"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Advanced_Ballistics"};
-        author = "Ruthberg";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ruthberg"};
+        PBO_URL;
         VERSION_CONFIG;
     };
 };
