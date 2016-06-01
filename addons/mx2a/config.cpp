@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_apl"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Spooner", "tcp"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

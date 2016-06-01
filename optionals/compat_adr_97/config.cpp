@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"A3_Weapons_F_Mod"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Nic547"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

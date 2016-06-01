@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_interact_menu"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"commy2", "KoffeinFlummi", "esteldunedain", "bux578", "dixon13"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

@@ -569,7 +569,7 @@ class CfgPatches {
         };
         author = ECSTRING(common,ACETeam);
         authors[] = {ECSTRING(common,ACETeam)};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"RKSL_PMII"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

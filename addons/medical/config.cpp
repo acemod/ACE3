@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_interaction", "ace_apl"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Glowbal", "KoffeinFlummi"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ACE_common", "ACE_weather"};
         author = ECSTRING(common,ACETeam);
         authors[] = {ECSTRING(common,ACETeam), "Ruthberg"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };

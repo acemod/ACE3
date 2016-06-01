@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ACE_Advanced_Ballistics"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
-        url = "http://ace3mod.com";
+        PBO_URL
         VERSION_CONFIG;
     };
 };
