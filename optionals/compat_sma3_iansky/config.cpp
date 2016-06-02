@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"iansky_opt"};
-        author[]={"Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ruthberg"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

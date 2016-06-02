@@ -19,7 +19,7 @@ class CfgVehicles {
                  statement = QUOTE([_player] call FUNC(cutParachute));
                  showDisabled = 0;
                  priority = 2.9;
-                 icon = QUOTE(PATHTOF(UI\cut_ca.paa));
+                 icon = QPATHTOF(UI\cut_ca.paa);
              };
          };
      };

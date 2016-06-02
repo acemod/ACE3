@@ -6,7 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"A3_Weapons_F_Mod"};
-        author[] = {"Nic547"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Nic547"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

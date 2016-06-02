@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_Vector", "ACE_VectorDay"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Ghost","Hamburger SV","commy2","bux578"};
-        authorUrl = "https://github.com/commy2/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ghost","Hamburger SV","commy2","bux578"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

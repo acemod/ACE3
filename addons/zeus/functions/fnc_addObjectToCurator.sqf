@@ -27,4 +27,4 @@ if (!(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {}
     {
         _x addCuratorEditableObjects [[_this], true];
     } forEach allCurators;
-}, _object] call EFUNC(common,execNextFrame);
+}, _object] call CBA_fnc_execNextFrame;

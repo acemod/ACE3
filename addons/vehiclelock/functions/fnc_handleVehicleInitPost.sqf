@@ -42,4 +42,4 @@ TRACE_1("params",_vehicle);
         };
     };
     //Delay call until mission start (so everyone has the eventHandler's installed)
-}, [_vehicle], 0.25] call EFUNC(common,waitAndExecute);
+}, [_vehicle], 0.25] call CBA_fnc_waitAndExecute;

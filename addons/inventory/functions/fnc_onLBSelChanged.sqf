@@ -24,4 +24,4 @@ GVAR(selectedFilterIndex) = _index;
     params ["_display"];
 
     [_display] call FUNC(forceItemListUpdate);
-}, [ctrlParent _filter]] call EFUNC(common,execNextFrame);
+}, [ctrlParent _filter]] call CBA_fnc_execNextFrame;

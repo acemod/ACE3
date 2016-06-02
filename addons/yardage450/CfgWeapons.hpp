@@ -5,9 +5,9 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DisplayName);
         descriptionShort = CSTRING(Description);
-        model = PATHTOF(data\ace_yardage_pro_450.p3d);
-        modelOptics = PATHTOF(data\bushnell_optic.p3d);
-        picture = PATHTOF(UI\w_bushnell_ca.paa);
+        model = QPATHTOF(data\ace_yardage_pro_450.p3d);
+        modelOptics = QPATHTOF(data\bushnell_optic.p3d);
+        picture = QPATHTOF(UI\w_bushnell_ca.paa);
         opticsZoomMin = 0.33333/4;
         opticsZoomMax = 0.33333/4;
         opticsZoomInit = 0.33333/4;

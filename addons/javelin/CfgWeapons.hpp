@@ -15,7 +15,7 @@ class CfgWeapons {
     class GVAR(Titan_Static) : missiles_titan_at {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = PATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
         magazines[] = {"1Rnd_GAT_missiles"};
@@ -31,7 +31,7 @@ class CfgWeapons {
     class launch_B_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = PATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
 
@@ -41,7 +41,7 @@ class CfgWeapons {
     class launch_I_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = PATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
 
@@ -51,7 +51,7 @@ class CfgWeapons {
     class launch_O_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = PATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
 
@@ -62,7 +62,7 @@ class CfgWeapons {
     class launch_Titan_short_F: launch_Titan_short_base {
         GVAR(enabled) = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
-        modelOptics = PATHTOF(data\reticle_titan.p3d);
+        modelOptics = QPATHTOF(data\reticle_titan.p3d);
 
         canLock = 0;
 

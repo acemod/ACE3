@@ -30,7 +30,7 @@ call FUNC(determineZoom);
     if (isNull findDisplay 12) exitWith {};
 
     GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = ACE_time;
+    GVAR(lastStillTime) = CBA_missionTime;
     GVAR(isShaking) = false;
 
     //map sizes are multiples of 1280
