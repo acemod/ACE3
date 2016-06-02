@@ -51,10 +51,18 @@ class CfgAmmo {
         model = "\A3\Weapons_f\chemlight\chemlight_yellow_lit";
     };
     
+    class ACE_G_Chemlight_Orange_Infinite: ACE_G_Chemlight_Orange {
+        timeToLive = 1e10;
+    };
+    
     class ACE_G_Chemlight_White: Chemlight_base {
         timeToLive = 28800;
         effectsSmoke = "ACE_ChemlightEffect_White";
         model = "\A3\Weapons_f\chemlight\chemlight_yellow_lit";
+    };
+    
+    class ACE_G_Chemlight_White_Infinite: ACE_G_Chemlight_White {
+        timeToLive = 1e10;
     };
     
     class ACE_G_Chemlight_HiRed: Chemlight_Red {
@@ -62,9 +70,17 @@ class CfgAmmo {
         timeToLive = 1800;
     };
     
+    class ACE_G_Chemlight_HiRed_Infinite: ACE_G_Chemlight_HiRed {
+        timeToLive = 1e10;
+    };
+    
     class ACE_G_Chemlight_HiYellow: Chemlight_Yellow {
         effectsSmoke = "ACE_ChemlightEffect_HiYellow";
         timeToLive = 1800;
+    };
+    
+    class ACE_G_Chemlight_HiYellow_Infinite: ACE_G_Chemlight_HiYellow {
+        timeToLive = 1e10;
     };
     
     class ACE_G_Chemlight_HiOrange: ACE_G_Chemlight_Orange {
@@ -72,15 +88,24 @@ class CfgAmmo {
         timeToLive = 1800;
     };
     
+    class ACE_G_Chemlight_HiOrange_Infinite: ACE_G_Chemlight_HiOrange {
+        timeToLive = 1e10;
+    };   
+    
     class ACE_G_Chemlight_HiWhite: ACE_G_Chemlight_White {
         effectsSmoke = "ACE_ChemlightEffect_HiWhite";
         timeToLive = 1800;
     };
-    /*
+    
+    class ACE_G_Chemlight_HiWhite_Infinite: ACE_G_Chemlight_HiWhite {
+        timeToLive = 1e10;
+    };
+
     class ACE_G_Chemlight_IR: Chemlight_base {
+        ACE_Chemlight_IR = "ACE_Chemlight_IR_Marker";
+        ACE_Chemlight_IR_X = "ACE_Chemlight_IR_X";
         effectsSmoke = "ACE_ChemlightEffect_IR";
         timeToLive = 28800;
         model = "\A3\Weapons_f\chemlight\chemlight_blue_lit";        
     };
-    */
 };

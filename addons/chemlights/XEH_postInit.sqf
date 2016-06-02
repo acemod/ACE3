@@ -1,10 +1,13 @@
 #include "script_component.hpp"
 
-//["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
+if (isServer) then {
+	[QGVAR(IRTimer), {_this call FUNC(IRTimer)}] call CBA_fnc_addEventHandler;
+};
 
 if (!hasInterface) exitWith {};
 
-// Register fire event handler
-["firedPlayer", DFUNC(throwChemlight)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(throwChemlight)] call EFUNC(common,addEventHandler);
-["firedNonPlayer", DFUNC(throwChemlight)] call EFUNC(common,addEventHandler);
+["firedPlayer", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
+["firedPlayerNonLocal", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
+["firedNonPlayer", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
+
+["interactMenuOpened", {_this call FUNC(interactEH)}] call EFUNC(common,addEventHandler);

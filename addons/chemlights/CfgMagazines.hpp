@@ -22,10 +22,11 @@ class CfgMagazines {
     class ACE_Chemlight_Orange: Chemlight_Green {
         ACE_Attachable = "ACE_G_Chemlight_Orange";
         ACE_ChemlightShieldType = "ACE_Chemlight_Shield_Orange";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_Orange";
-        displayName = "Chemlight (Orange)";
-        displayNameShort = "Orange Light";
-        descriptionShort = "Type: Light - Orange<br />Rounds: 1<br />Used in: Hand";
+        displayName = CSTRING(Orange_DisplayName);
+        displayNameShort = CSTRING(Orange_DisplayNameShort);
+        descriptionShort = CSTRING(Orange_DescriptionShort);
         model = "\A3\Weapons_f\chemlight\chemlight_yellow";
         picture = PATHTOF(UI\ace_chemlight_orange_x_ca.paa);
     };
@@ -33,10 +34,11 @@ class CfgMagazines {
     class ACE_Chemlight_White: Chemlight_Green {
         ACE_Attachable = "ACE_G_Chemlight_White";
         ACE_ChemlightShieldType = "ACE_Chemlight_Shield_White";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_White";
-        displayName = "Chemlight (White)";
-        displayNameShort = "White Light";
-        descriptionShort = "Type: Light - White<br />Rounds: 1<br />Used in: Hand";
+        displayName = CSTRING(White_DisplayName);
+        displayNameShort = CSTRING(White_DisplayNameShort);
+        descriptionShort = CSTRING(White_DescriptionShort);
         model = "\A3\Weapons_f\chemlight\chemlight_yellow";
         picture = PATHTOF(UI\ace_chemlight_white_x_ca.paa);
     };
@@ -44,50 +46,55 @@ class CfgMagazines {
     class ACE_Chemlight_HiRed: Chemlight_Red {
         ACE_Attachable = "ACE_G_Chemlight_HiRed";
         ACE_ChemlightShieldType = "";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_HiRed";
-        displayName = "Chemlight (Red Hi)";
-        descriptionShort = "Type: Light - Red Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
-        displayNameShort = "Red Hi Light";
+        displayName = CSTRING(HiRed_DisplayName);
+        displayNameShort = CSTRING(HiRed_DisplayNameShort);
+        descriptionShort = CSTRING(HiRed_DescriptionShort);
         picture = PATHTOF(UI\ace_chemlight_hired_x_ca.paa);
     };
     
     class ACE_Chemlight_HiYellow: Chemlight_Yellow {
         ACE_Attachable = "ACE_G_Chemlight_HiYellow";
         ACE_ChemlightShieldType = "";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_HiYellow";
-        displayName = "Chemlight (Yellow Hi)";
-        descriptionShort = "Type: Light - Yellow Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
-        displayNameShort = "Yellow Hi Light";
+        displayName = CSTRING(HiYellow_DisplayName);
+        displayNameShort = CSTRING(HiYellow_DisplayNameShort);
+        descriptionShort = CSTRING(HiYellow_DescriptionShort);
         picture = PATHTOF(UI\ace_chemlight_hiyellow_x_ca.paa);
     };
     
     class ACE_Chemlight_HiOrange: ACE_Chemlight_Orange {
         ACE_Attachable = "ACE_G_Chemlight_HiOrange";
         ACE_ChemlightShieldType = "";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_HiOrange";
-        displayName = "Chemlight (Orange Hi)";
-        descriptionShort = "Type: Light - Orange Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
-        displayNameShort = "Orange Hi Light";
+        displayName = CSTRING(HiOrange_DisplayName);
+        displayNameShort = CSTRING(HiOrange_DisplayNameShort);
+        descriptionShort = CSTRING(HiOrange_DescriptionShort);
         picture = PATHTOF(UI\ace_chemlight_hiorange_x_ca.paa);
     };
     
     class ACE_Chemlight_HiWhite: ACE_Chemlight_White {
         ACE_Attachable = "ACE_G_Chemlight_HiWhite";
         ACE_ChemlightShieldType = "";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_HiWhite";
-        displayName = "Chemlight (White Hi)";
-        descriptionShort = "Type: Light - White Hi (30 minute)<br />Rounds: 1<br />Used in: Hand";
-        displayNameShort = "White Hi Light";
+        displayName = CSTRING(HiWhite_DisplayName);
+        displayNameShort = CSTRING(HiWhite_DisplayNameShort);
+        descriptionShort = CSTRING(HiWhite_DescriptionShort);
         picture = PATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);
     };
-    /*
+    
     class ACE_Chemlight_IR: Chemlight_Green {
         ACE_Attachable = "ACE_G_Chemlight_IR";
+        ACE_ChemlightShieldType = "";
+        author = ECSTRING(common,ACETeam);
         ammo = "ACE_G_Chemlight_IR";
-        displayName = "Chemlight (IR)";
-        descriptionShort = "Type: Light - Infrared<br />Rounds: 1<br />Used in: Hand";
-        displayNameShort = "IR Light";
-        //picture = PATHTOF(UI\ace_chemlight_hiwhite_x_ca.paa);    
+        displayName = CSTRING(IR_DisplayName);
+        displayNameShort = CSTRING(IR_DisplayNameShort);
+        descriptionShort = CSTRING(IR_DescriptionShort);
+        picture = PATHTOF(UI\ace_chemlight_ir_x_ca.paa);    
     };
-    */
 };

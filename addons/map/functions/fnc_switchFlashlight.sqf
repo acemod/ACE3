@@ -1,9 +1,9 @@
 /*
  * Author: voioper
- * Switch flashlight.
+ * Switch flashlight on/off.
  *
  * Arguments:
- * 0: Flashlight classname ("" for off) <STRING>
+ * 0: New flashlight classname ("" for off) <STRING>
  *
  * Return value:
  * None
@@ -16,14 +16,18 @@
 
 #include "script_component.hpp"
 
-params ["_flashlight"];
-
-GVAR(flashlightInUse) = _flashlight;
+params ["_newFlashlight"];
+private _oldFlashlight = GVAR(flashlightInUse);
 
 if (GVAR(mapGlow)) then {
-    [GVAR(flashlightInUse)] call FUNC(flashlightGlow);
+    [_newFlashlight] call FUNC(flashlightGlow);
 };
 
-if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "ACE_Flashlight" >> "ACE_flashlight_NoSound") < 1) then { 
+if (
+    (getNumber (configFile >> "CfgWeapons" >> _newFlashlight >> "ItemInfo" >> "ACE_Flashlight" >> "ACE_Flashlight_Sound") > 0) ||
+    (getNumber (configFile >> "CfgWeapons" >> _oldFlashlight >> "ItemInfo" >> "ACE_Flashlight" >> "ACE_Flashlight_Sound") > 0)
+) then { 
     playSound QGVAR(flashlightClick);
 };
+
+GVAR(flashlightInUse) = _newFlashlight;

@@ -17,6 +17,7 @@ class CfgWeapons {
                 ACE_Flashlight_Colour = "red";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
                 ACE_Flashlight_Size = 1.75;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
@@ -33,6 +34,7 @@ class CfgWeapons {
                 ACE_Flashlight_Colour = "red";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
                 ACE_Flashlight_Size = 1.5;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
@@ -49,6 +51,7 @@ class CfgWeapons {
                 ACE_Flashlight_Colour = "white";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_white_ca.paa));
                 ACE_Flashlight_Size = 2.15;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };

@@ -41,14 +41,17 @@ _onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem = _itemVehClass createVehicle [0,0,0];
     _attachedItem attachTo [_unit, [-0.05, 0, 0.12], "rightshoulder"];
+    
+    //ace_chemlights IR handling
+    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && (_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]) && ([_attachedItem] call EFUNC(chemlights,isIRClass))) then {
+        [_attachedItem, _unit] call EFUNC(chemlights,attachIR);
+    };
+    
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
     };
-    //if chemlight, play chemlight prep sound
-    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && (_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"])) then {
-        playSound3D [QUOTE(PATHTOF2_SYS(ace,chemlights,sounds\chemlight_prepare.wav)), objNull, false, (eyePos _unit), 1, 1, 65];
-    };
+
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;

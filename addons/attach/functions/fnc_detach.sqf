@@ -59,6 +59,13 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
     // Delete attached item after 0.5 seconds
     [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call EFUNC(common,waitAndExecute);
 } else {
+
+    //ace_chemlights IR handling
+    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && (typeOf _attachedObject isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]) && ([_attachedObject] call EFUNC(chemlights,isIRClass))) then {
+        [objNull, _unit getVariable [QEGVAR(chemlights,IRAttach), objNull]] call EFUNC(chemlights,removeIR);
+        _unit setVariable [QEGVAR(chemlights,IRAttach), objNull];
+    };
+
     // Delete attached item
     deleteVehicle _attachedObject;
 };

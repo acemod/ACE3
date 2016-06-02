@@ -12,8 +12,8 @@
         constant = 0; \
         linear = 0; \
         quadratic = 20; \
-        hardLimitStart = 4; \
-        hardLimitEnd = 5; \
+        hardLimitStart = 3; \
+        hardLimitEnd = 4; \
     };
 
 class CfgLights {
@@ -84,18 +84,8 @@ class CfgLights {
         
         HI_ATTENUATION
     };
-    /*
+    
     class ACE_ChemlightLight_IR: ChemLight_Green {
-        color[] = {0,0,0,0};
-        diffuse[] = {0.001,0,0};
-        intensity = 12000;
-        class Attenuation {
-            constant = 0;
-            linear = 0;
-            quadratic = 100;
-            hardLimitStart = 4;
-            hardLimitEnd = 6;
-        };
+        intensity = 0;
     };
-    */
 };

@@ -6,7 +6,7 @@
  * 0: Unit to check <OBJECT>
  *
  * Return value:
- * Flashlight classnames (empty for none) <ARRAY>
+ * Chemlight classnames (empty for none) <ARRAY>
  *
  * Example:
  * [unit] call ace_chemlights_fnc_getShieldComponents;
