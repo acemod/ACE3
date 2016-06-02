@@ -1,7 +1,10 @@
 class Mode_SemiAuto;
 
 class CfgWeapons {
-    class Pistol_Base_F;
+    class Pistol;
+    class Pistol_Base_F: Pistol {
+		class WeaponSlotsInfo;
+    };
     class ACE_VMM3: Pistol_Base_F {
         scope = 2;
         author = ECSTRING(common,ACETeam);
@@ -11,7 +14,7 @@ class CfgWeapons {
         descriptionShort = "";
         magazines[] = { };
         modes[] = { "Single" };
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             displayName = "";
             sounds[] = {};
             begin1[] = { "", 1.77828, 1, 1000 };
@@ -26,7 +29,10 @@ class CfgWeapons {
             midRangeProbab = 0.7;
             maxRange = 400;
             maxRangeProbab = 0.05;
-        };
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			holsterScale = 0;       
+		};
     };
     class ACE_VMH3: ACE_VMM3 {
         scope = 2;
