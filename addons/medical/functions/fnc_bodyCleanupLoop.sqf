@@ -27,4 +27,4 @@ if (GVAR(bodiesToDelete) isEqualTo []) exitWith {
 };
 
 // Schedule the loop to be executed again 20 sec later
-[DFUNC(bodyCleanupLoop), [], 20] call EFUNC(common,waitAndExecute);
+[DFUNC(bodyCleanupLoop), [], 20] call CBA_fnc_waitAndExecute;

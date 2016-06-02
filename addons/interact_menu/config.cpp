@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"NouberNou", "esteldunedain"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"NouberNou", "esteldunedain"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

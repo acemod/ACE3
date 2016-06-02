@@ -73,6 +73,6 @@ if ((player in GVAR(unitList)) || {ACE_player in GVAR(unitList)}) then {
     if (!(isNull (findDisplay 12249))) then {//If display is open now, close it and restart
         ACE_LOGWARNING("Player in unitList, call ace_spectator_fnc_stageSpectator before ace_spectator_fnc_setSpectator");
         ["fixWeirdList", true] call FUNC(interrupt);
-        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call EFUNC(common,execNextFrame);
+        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call CBA_fnc_execNextFrame;
     };
 };

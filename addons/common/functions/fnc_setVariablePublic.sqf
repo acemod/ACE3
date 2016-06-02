@@ -50,4 +50,4 @@ TRACE_2("Starting Embargo", _varName, _delay);
     if (!(_value isEqualTo _curValue)) then {
         _this call FUNC(setVariablePublic);
     };
-}, _this, _delay] call FUNC(waitAndExecute);
+}, _this, _delay] call CBA_fnc_waitAndExecute;

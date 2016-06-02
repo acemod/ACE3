@@ -32,7 +32,7 @@ if (!isServer) exitWith {};
         TRACE_2("event",_x,local _x);
         ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
     } forEach _units;
-}, [_units], 0.05] call EFUNC(common,waitAndExecute);
+}, [_units], 0.05] call CBA_fnc_waitAndExecute;
 
 if (!isNull _logic) then {
     deleteVehicle _logic;

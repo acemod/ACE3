@@ -4,8 +4,7 @@
 if (!hasInterface) exitWith {};
 
 ["SettingsInitialized", {
-    TRACE_1("SettingInit", GVAR(enable));
-
+    if ([[QUOTE(ADDON), QGVAR(enable)], ["acex_sitting", "acex_sitting_enable"], "3.8.0"] call EFUNC(common,deprecateComponent)) exitwith {};
     //If not enabled, then do not add CanInteractWith Condition or event handlers:
     if (!GVAR(enable)) exitWith {};
 

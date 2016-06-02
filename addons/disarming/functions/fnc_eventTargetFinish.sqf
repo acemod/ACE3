@@ -22,6 +22,6 @@
 params ["_caller", "_target", "_errorMsg"];
 
 if (_errorMsg != "") then {
-    ACE_LOGINFO_2("%1 - eventTargetFinish: %2",ACE_time,_this);
+    ACE_LOGINFO_2("%1 - eventTargetFinish: %2",CBA_missionTime,_this);
     ["DisarmDebugCallback", [_caller], [_caller, _target, _errorMsg]] call EFUNC(common,targetEvent);
 };

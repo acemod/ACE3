@@ -17,7 +17,8 @@
  */
 #include "script_component.hpp"
 
-TRACE_1("Adding",_this);
+ACE_DEPRECATED("ace_common_fnc_waitUntilAndExecute","3.8.0","CBA_fnc_waitUntilAndExecute");
 
-GVAR(waitUntilAndExecArray) pushBack _this;
+_this call CBA_fnc_waitUntilAndExecute;
+
 nil

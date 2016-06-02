@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_DebugPotato"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};
-        author[] = {"PabstMirror"};
-        authorUrl = "https://github.com/PabstMirror/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"PabstMirror"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

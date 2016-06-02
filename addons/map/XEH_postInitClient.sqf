@@ -9,6 +9,7 @@ if (isServer) then {
         {
             if (_x isKindOf "ACE_FlashlightProxy_White") then {
                 // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
+                detach _x;
                 deleteVehicle _x;
             };
         } forEach attachedObjects _disconnectedPlayer;
@@ -29,7 +30,7 @@ call FUNC(determineZoom);
     if (isNull findDisplay 12) exitWith {};
 
     GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = ACE_time;
+    GVAR(lastStillTime) = CBA_missionTime;
     GVAR(isShaking) = false;
 
     //map sizes are multiples of 1280

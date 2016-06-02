@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_medical"};
-        author[] = {$STR_ACE_Common_ACETeam, "Glowbal"};
-        authorUrl = "http://ace3mod.com"; 
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Glowbal"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

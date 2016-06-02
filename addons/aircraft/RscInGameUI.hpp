@@ -145,7 +145,7 @@ class RscInGameUI
                     sizeEx = "0.038*SafezoneH";
                     shadow = 0;
                     font = "EtelkaMonospacePro";
-                    text = PATHTOF(data\Helo_LaserON.paa);
+                    text = QPATHTOF(data\Helo_LaserON.paa);
                     x = "20.45 *         (0.01875 * SafezoneH)";
                     y = "14.1 *         (0.025 * SafezoneH)";
                     w = "12.5 *         (0.01875 * SafezoneH)";
@@ -335,7 +335,7 @@ class RscInGameUI
                     shadow = 0;
                     align = "right";
                     font = "EtelkaMonospacePro";
-                    text = PATHTOF(data\Helo_LaserON.paa);
+                    text = QPATHTOF(data\Helo_LaserON.paa);
                     x = "20.45 *         (0.01875 * SafezoneH)";
                     y = "14.1 *         (0.025 * SafezoneH)";
                     w = "12.5 *         (0.01875 * SafezoneH)";
