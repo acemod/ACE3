@@ -23,13 +23,6 @@ DFUNC(selectWeaponMode) = {
 GVAR(syncedEvents) = HASH_CREATE;
 GVAR(showHudHash) = [] call FUNC(hashCreate);
 
-//GVARS for execNextFrame and waitAndExec and waitUntilAndExecute
-GVAR(waitAndExecArray) = [];
-GVAR(nextFrameNo) = diag_frameno;
-GVAR(nextFrameBufferA) = [];
-GVAR(nextFrameBufferB) = [];
-GVAR(waitUntilAndExecArray) = [];
-
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
 
