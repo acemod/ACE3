@@ -122,9 +122,17 @@ if (isServer) then {
 ["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
 ["setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
 
+// Request framework
+[QGVAR(requestCallback), FUNC(requestCallback)] call FUNC(addEventHandler);
+[QGVAR(receiveRequest), FUNC(receiveRequest)] call FUNC(addEventHandler);
+
+[QGVAR(systemChatGlobal), {systemChat _this}] call FUNC(addEventHandler);
+
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
     ["enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call FUNC(addEventHandler);
+    ["setOwner", {(_this select 0) setOwner (_this select 1)}] call FUNC(addEventHandler);
+    [QGVAR(serverLog), FUNC(serverLog)] call FUNC(addEventHandler);
 };
 
 

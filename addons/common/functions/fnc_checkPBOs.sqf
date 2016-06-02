@@ -61,7 +61,8 @@ if (!isServer) then {
                 _error = _error + "Newer version; ";
             };
 
-            //[_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
+            //[QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+
             ACE_LOGERROR(_error);
 
             if (_mode < 2) then {

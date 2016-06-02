@@ -25,5 +25,5 @@ if (ACE_player == _unit && {GVAR(SavePreDeathGear)}) then {
 };
 
 if (missionNamespace getVariable [QGVAR(showFriendlyFireMessage), false]) then {
-    [_this, QUOTE(DFUNC(showFriendlyFireMessage)), 2] call EFUNC(common,execRemoteFnc);
+    [QGVAR(showFriendlyFireMessageEvent), _this] call EFUNC(common,objectEvent);
 };

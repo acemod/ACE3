@@ -20,7 +20,7 @@ if (!isNil "_info") then {
     _info params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
     private _replyParams = [_info, _accepted];
-    [_replyParams, QFUNC(requestCallback), _caller, false] call FUNC(execRemoteFnc);
+    [QGVAR(requestCallback), _caller, _replyParams] call FUNC(objectEvent);
     _unit setVariable [_id, nil];
 };
 
