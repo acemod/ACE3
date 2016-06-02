@@ -220,9 +220,9 @@ Use the appropriate amount depending on the situation (heavy loss of blood, bloo
 Autoinjector | Effect
 ---------- | ---------- |
 Morphine | Decreases the blood viscosity, suppress pain
-Epinephrine | raises the heart rate of the patient
-Adenosine | Counters the effects of epinephrine
-Atropine | lowers the heart rate of the patient
+Epinephrine | Raises the heart rate of the patient
+Adenosine | Lowers the heart rate
+Atropine | Lowers the heart rate of the patient
 
 Note: Morphine stays much longer in the system compared to other medications.
 
