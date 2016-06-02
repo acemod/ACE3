@@ -14,11 +14,8 @@ class CfgPatches {
 };
 
 #include "CfgVehicles.hpp"
-
 #include "CfgMagazines.hpp"
-
 #include "CfgEventHandlers.hpp"
-
 #include "CfgActions.hpp"
-
 #include "ACE_Settings.hpp"
+#include "ACE_UI.hpp"

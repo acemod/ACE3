@@ -87,6 +87,36 @@
             <English>Stamina Bar</English>
             <Czech>Panel výdrže</Czech>
         </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponName">
+            <English>Gunner Weapon Name</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
+            <English>Gunner Weapon Name Background</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerFiringMode">
+            <English>Gunner Firing Mode</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerAmmoType">
+            <English>Gunner Ammo Type</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerAmmoCount">
+            <English>Gunner Ammo Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerMagCount">
+            <English>Gunner Magazine Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableName">
+            <English>Gunner Launchable Type</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableCount">
+            <English>Gunner Launchable Count</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerZeroing">
+            <English>Gunner Zeroing</English>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
+            <English>Gunner Weapon Lower Info Background</English>
+        </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
             <Czech>Název vozidla</Czech>
@@ -115,17 +145,16 @@
             <English>Vehicle Info Background</English>
             <Czech>Info o vozidle v pozadí</Czech>
         </Key>
-        <Key ID="STR_ACE_UI_VehicleGunnerWeapon">
-            <English>Vehicle Gunner Weapon</English>
-            <Czech>Střelcova zbraň ve vozidle</Czech>
-        </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
-            <English>Requires Soldier/Vehicle/Weapons Information.</English>
+            <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
             <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
+        </Key>
+        <Key ID="STR_ACE_UI_Disabled">
+            <English>Cannot modify a forced User Interface element.</English>
         </Key>
     </Package>
 </Project>
