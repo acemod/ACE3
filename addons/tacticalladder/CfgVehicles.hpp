@@ -5,13 +5,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_TacticalLadders {
-                displayName = CSTRING(Deploy);
-                condition = QUOTE(backpack _player == 'ACE_TacticalLadder_Pack');
-                statement = QUOTE([_player] call FUNC(deployTL));
-                exceptions[] = {};
-                showDisabled = 1;
-                priority = 4;
+            class ACE_Equipment {
+                class ACE_TacticalLadders {
+                    displayName = CSTRING(Deploy);
+                    condition = QUOTE(backpack _player == 'ACE_TacticalLadder_Pack');
+                    statement = QUOTE([_player] call FUNC(deployTL));
+                    exceptions[] = {};
+                    showDisabled = 1;
+                    priority = 4;
+                };
             };
         };
     };
