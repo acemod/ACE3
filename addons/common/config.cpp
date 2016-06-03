@@ -15,9 +15,12 @@ class CfgPatches {
 
 // This class will be deprecated in version 3.8.0
 class ACE_newEvents {
-    blockSprint = "ace_blockSprint";
-    forceWalk = "ace_forceWalk";
-    PlayerJip = "ace_playerJip";
+    forceWalk = QGVAR(forceWalk);
+    blockSprint = QGVAR(blockSprint);
+    setCaptive = QGVAR(setCaptive);
+    blockDamage = QGVAR(blockDamage);
+    blockEngine = QGVAR(blockEngine);
+
     useItem = "ace_useItem";
     displayTextPicture = "ace_displayTextPicture";
     displayTextStructured = "ace_displayTextStructured";
@@ -53,7 +56,7 @@ class ACE_newEvents {
     fixPosition = "ace_fixPosition";
     fixFloating = "ace_fixFloating";
     fixCollision = "ace_fixCollision";
-    setStatusEffect = "ace_setStatusEffect";
+    setStatusEffect = QGVAR(setStatusEffect);
     SettingChanged = "ace_settingChanged";
     HeadbugFixUsed = "ace_headbugFixUsed";
     blockDamage = "ace_blockDamage";
