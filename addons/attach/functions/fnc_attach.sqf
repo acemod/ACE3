@@ -40,7 +40,7 @@ _onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [-0.05, 0, 0.12], "rightshoulder"];
+    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
