@@ -1,7 +1,7 @@
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
- * Handles HuntIR projectiles. Called from the unified fired EH for all CAManBase.
+ * Handles HuntIR projectiles. Called from the unified fired EH for the local player.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)

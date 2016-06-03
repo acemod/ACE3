@@ -3,3 +3,5 @@
 
 ["ace_rallypointMoved", {_this call FUNC(updateRallypoint)}] call CBA_fnc_addEventHandler;
 ["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler; // hide enemy rallypoint markers
+
+[QGVAR(showFriendlyFireMessageEvent), DFUNC(showFriendlyFireMessage)] call CBA_fnc_addEventHandler;

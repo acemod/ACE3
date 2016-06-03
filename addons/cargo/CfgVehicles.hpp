@@ -314,15 +314,16 @@ class CfgVehicles {
         GVAR(space) = 20;
         GVAR(hasCargo) = 1;
     };
-    class Land_Pod_Heli_Transport_04_medevac_F: Pod_Heli_Transport_04_base_F {
-        GVAR(space) = 8;
-        GVAR(hasCargo) = 1;
-    };
     class Land_Pod_Heli_Transport_04_repair_F: Pod_Heli_Transport_04_base_F {
         GVAR(space) = 12;
         GVAR(hasCargo) = 1;
     };
-
+    class Pod_Heli_Transport_04_crewed_base_F;
+    class Land_Pod_Heli_Transport_04_medevac_F: Pod_Heli_Transport_04_crewed_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(size) = 2; // 1 = small, 2 = large

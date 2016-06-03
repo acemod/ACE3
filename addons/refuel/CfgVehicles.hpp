@@ -480,18 +480,22 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class Slingload_base_F;
-    class Slingload_01_Base_F: Slingload_base_F {
+    class ReammoBox_F: ThingX {
         class ACE_Actions {
-            class ACE_MainActions {
-                displayName = ECSTRING(interaction,MainAction);
-                selection = "";
-                distance = 10;
-                condition = "true";
-            };
+            class ACE_MainActions {};
         };
     };
+    class Slingload_base_F: ReammoBox_F {};
 
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
+    class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
+        transportFuel = 0; //3k
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
+        GVAR(fuelCargo) = 10000;
+    };
+
+    class Slingload_01_Base_F: Slingload_base_F {};
     class B_Slingload_01_Fuel_F: Slingload_01_Base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
@@ -506,13 +510,6 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
-    class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
-        transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
-        GVAR(fuelCargo) = 10000;
-    };
 
     class StorageBladder_base_F: NonStrategic {
         class ACE_Actions {

@@ -27,3 +27,5 @@ if (isServer) then {
         [false] call FUNC(setSpectator);
     };
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;

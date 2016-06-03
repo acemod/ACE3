@@ -27,3 +27,11 @@ if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
         };
     }] call CBA_fnc_addEventHandler;
 };
+
+if (isServer) then {
+    [QGVAR(switchLocality), {
+        params ["_unit", "_player"];
+        _unit setVariable [QGVAR(OriginalOwner), owner _unit, true];
+        _unit setOwner (owner _player);
+    }] call EFUNC(common,addEventHandler);
+};

@@ -143,22 +143,19 @@ class CfgVehicles {
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
+    };
+    class Slingload_base_F: ReammoBox_F {};
+    class Slingload_01_Base_F: Slingload_base_F {};
+
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
     class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
-    };
-
-    class Slingload_base_F;
-    class Slingload_01_Base_F: Slingload_base_F {
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = ECSTRING(interaction,MainAction);
-                selection = "";
-                distance = 10;
-                condition = "true";
-            };
-        };
     };
 
     class B_Slingload_01_Ammo_F: Slingload_01_Base_F {
@@ -168,7 +165,6 @@ class CfgVehicles {
 
 
     // Dummy Vehicles
-    class ThingX;
     class GVAR(defaultCarriedObject): ThingX {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};

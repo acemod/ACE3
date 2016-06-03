@@ -17,7 +17,7 @@
 
 private ["_var", "_unit", "_outputText", "_text"];
 
-#define MIN_ARRAY_SIZE 10
+#define MIN_ARRAY_SIZE 50
 
 _outputText = {
     diag_log text (_this select 0);
@@ -30,12 +30,20 @@ time = %1
 
 ------Performance------
 diag_fps = %2
-count ace_common_waitAndExecArray = %3
-count cba_common_perFrameHandlerArray = %4 (max %5)
-count diag_activeSQFScripts = %6
-count diag_activeSQSScripts = %7
-count diag_activeMissionFSMs = %8",
-time, diag_fps, count ace_common_waitAndExecArray, {!isNil "_x"} count cba_common_perFrameHandlerArray, count cba_common_perFrameHandlerArray, count diag_activeSQFScripts, count diag_activeSQSScripts,count diag_activeMissionFSMs];
+count cba_common_waitAndExecArray = %3
+count cba_common_waitUntilAndExecArray = %4
+count cba_common_perFrameHandlerArray = %5 (max %6)
+count diag_activeSQFScripts = %7
+count diag_activeSQSScripts = %8
+count diag_activeMissionFSMs = %9",
+time,
+diag_fps,
+count cba_common_waitAndExecArray,
+count cba_common_waitUntilAndExecArray,
+{!isNil "_x"} count cba_common_perFrameHandlerArray, count cba_common_perFrameHandlerArray,
+count diag_activeSQFScripts,
+count diag_activeSQSScripts,
+count diag_activeMissionFSMs];
 [_text] call _outputText;
 
 
