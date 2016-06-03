@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
         // Execute local event for when it's safe to modify UI through this API
         // infoDisplayChanged can execute multiple times, make sure it only happens once
         if (!GVAR(interfaceInitialized)) then {
-            [QGVAR(InterfaceInitialized), []] call CBA_fnc_localEvent
+            [QGVAR(InterfaceInitialized), []] call CBA_fnc_localEvent;
             GVAR(interfaceInitialized) = true;
         };
     }] call CBA_fnc_addEventHandler;
