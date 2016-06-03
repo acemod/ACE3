@@ -62,7 +62,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "green";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_green_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -77,7 +77,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "red";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_red_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -92,7 +92,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "blue";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_blue_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -107,7 +107,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "yellow";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_yellow_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -122,7 +122,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "orange";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_orange_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -137,7 +137,7 @@ class CfgWeapons {
             class ACE_FlashLight {
                 ACE_Flashlight_Colour = "white";
                 ACE_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_white_ca.paa));
-                ACE_Flashlight_Size = 1;
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };

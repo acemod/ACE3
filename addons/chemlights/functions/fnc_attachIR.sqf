@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [_unit, _projectile, _vehicle, [-0.05, 0, 0.12]] call ace_chemlights_fnc_attachIRUnit;
+ * [_unit, _projectile, _vehicle, [-0.05, 0, 0.12]] call ace_chemlights_fnc_attachIR;
  *
  * Public: No
  */

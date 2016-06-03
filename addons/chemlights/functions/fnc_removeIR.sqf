@@ -1,6 +1,6 @@
 /*
  * Author: voiper
- * Kill chemlight when its time expires.
+ * Kill chemlight and any dummy objects attached to it.
  *
  * Arguments:
  * 1: Chemlight object <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_chemlight, _light] call ace_chemlights_fnc_expireChemlight;
+ * [_chemlight, _lightMarker] call ace_chemlights_fnc_removeIR;
  *
  * Public: No
  */

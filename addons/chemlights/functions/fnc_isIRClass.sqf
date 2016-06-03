@@ -6,7 +6,7 @@
  * 1: Projectile or ammo classname <OBJECT> or <STRING>
  *
  * Return Value:
- * 1: True or false <BOOL>
+ * Is IR chemlight? <BOOL>
  *
  * Example:
  * ["Chemlight_blue"] call ace_chemlights_fnc_isIRClass;

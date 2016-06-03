@@ -6,10 +6,10 @@
  * 0: Unit to check <OBJECT>
  *
  * Return value:
- * Chemlight classnames (empty for none) <ARRAY>
+ * Shield classnames <ARRAY>
  *
  * Example:
- * [unit] call ace_chemlights_fnc_getShields;
+ * [ACE_player] call ace_chemlights_fnc_getShields;
  *
  * Public: No
  */
@@ -22,8 +22,8 @@ private _shields = [];
 private _items = items _unit;
 
 {
-    if ((_x isKindOf ["ACE_Chemlight_Shield_Green", configFile >> "CfgWeapons"]) && !(_x in _shields)) then {
-        _shields pushBack _x;
+    if (_x isKindOf ["ACE_Chemlight_Shield_Green", configFile >> "CfgWeapons"]) then {
+        _shields pushBackUnique _x;
     };
 } forEach _items;
 

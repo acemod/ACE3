@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_projectile, _ammoType] call ace_chemlights_fnc_createIRChemlight;
+ * [_projectile, _ammoType] call ace_chemlights_fnc_throwIR;
  *
  * Public: No
  */

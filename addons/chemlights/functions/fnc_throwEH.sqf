@@ -1,6 +1,6 @@
 /*
  * Author: commy2, voiper
- * Handle chemlight throws.
+ * Fired EH, for handling chemlight ThrowMuzzles.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_chemlights_fnc_throwChemlight
+ * [clientFiredBIS-XEH] call ace_chemlights_fnc_throwEH;
  *
  * Public: No
  */

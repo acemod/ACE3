@@ -1,6 +1,6 @@
 /*
  * Author: voiper
- * Play the chemlight snap and shake sound. Mostly used as an EFUNC.
+ * Play the chemlight snap and shake sound.
  *
  * Arguments:
  * 0: PositionASL to play the sound <ARRAY>
@@ -11,7 +11,7 @@
  * Example:
  * [eyePos ACE_player] call ace_chemlights_fnc_shakeSound;
  *
- * Public: No
+ * Public: Yes
  */
 
 #include "script_component.hpp"

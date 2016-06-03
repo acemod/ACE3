@@ -6,10 +6,10 @@
  * 0: Unit to check <OBJECT>
  *
  * Return value:
- * Chemlight classnames (empty for none) <ARRAY>
+ * List of carried chemlight classnames <ARRAY>
  *
  * Example:
- * [unit] call ace_chemlights_fnc_getShieldComponents;
+ * [ACE_player] call ace_chemlights_fnc_getShieldComponents;
  *
  * Public: No
  */
@@ -24,8 +24,8 @@ private _items = itemsWithMagazines _unit;
 if !("ACE_Chemlight_Shield" in _items) exitWith {_components};
 
 {
-    if ((_x isKindOf ["Chemlight_green", configFile >> "CfgMagazines"]) && (getText (configFile >> "CfgMagazines" >> _x >> "ACE_ChemlightShieldType") != "") && !(_x in _components)) then {
-        _components pushBack _x;
+    if ((_x isKindOf ["Chemlight_green", configFile >> "CfgMagazines"]) && {getText (configFile >> "CfgMagazines" >> _x >> "ACE_ChemlightShieldType") != ""}) then {
+        _components pushBackUnique _x;
     };
 } forEach _items;
 

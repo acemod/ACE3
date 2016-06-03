@@ -7,8 +7,8 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_Chemlights {
                     displayName = CSTRING(Action_Chemlights);
-                    icon = PATHTOF(UI\ace_chemlight_white_x_ca.paa);
-                    condition = QUOTE(count ([ACE_player] call FUNC(getShieldComponents)) > 0);
+                    icon = "\a3\ui_f\data\gui\cfg\Hints\chemlights_ca.paa";
+                    condition = QUOTE((count ([ACE_player] call FUNC(getShieldComponents)) > 0) || {count ([ACE_player] call FUNC(getShields)) > 0});
                     statement = "true";
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     insertChildren = QUOTE(_this call DFUNC(compileChemlightMenu));
@@ -27,7 +27,6 @@ class CfgVehicles {
         displayName = "ACE Chemlight IR Marker";
         mapSize = 0.2;
         icon = "iconObject_1x2";
-        //model = "\A3\Weapons_f\chemlight\chemlight_blue";
         scope = 2;
         type = 1;
         vehicleClass = "";

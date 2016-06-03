@@ -18,8 +18,7 @@
 
 #include "script_component.hpp"
 
-params ["", "_player"];
-
+params ["", "_player", "_args"];
 private ["_action", "_actions", "_cfg", "_displayName", "_chemlights", "_icon", "_statement", "_shieldClass", "_chemlightClass"];
 
 _actions = [];

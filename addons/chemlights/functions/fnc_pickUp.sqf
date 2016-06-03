@@ -1,9 +1,9 @@
 /*
  * Author: voiper
- * Pick up chemlight.
+ * Pick up a chemlight.
  *
  * Arguments:
- * 1: Player <OBJECT>
+ * 1: Unit <OBJECT>
  * 2: Chemlight <OBJECT>
  *
  * Return Value:
