@@ -20,7 +20,7 @@ _currentShooter = (vehicle ACE_player);
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
 if( (count _args) > 0) then {
     _lastTick = _args select 0;
-    if(ACE_diagTime - _lastTick > 1) then {
+    if(diag_tickTime - _lastTick > 1) then {
         [] call FUNC(onOpticLoad);
     };
 };
@@ -98,8 +98,17 @@ if (_range > 50 && {_range < 2500}) then {
     };
 };
 
-if (isNull _newTarget) then {
-    _newTarget = cursorTarget;
+if ((isNull _newTarget) && {cursorObject isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorObject, ace_player, cursorObject, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorObject;
+        };
+};
+if ((isNull _newTarget) && {cursorTarget isKindOf "AllVehicles"}) then {
+        private _intersectionsToCursorTarget = lineIntersectsSurfaces [(AGLtoASL positionCameraToWorld [0,0,0]), aimPos cursorTarget, ace_player, cursorTarget, true, 1];
+        if (_intersectionsToCursorTarget isEqualTo []) then {
+            _newTarget = cursorTarget;
+        };
 };
 
 // Create constants
@@ -184,12 +193,12 @@ if (isNull _newTarget) then {
         // Lock on after 3 seconds
         if(_currentTarget != _newTarget) then {
             TRACE_1("New Target, reseting locking", _newTarget);
-            _lockTime = ACE_diagTime;
+            _lockTime = diag_tickTime;
             _currentTarget = _newTarget;
 
             playSound "ACE_Javelin_Locking";
         } else {
-            if(ACE_diagTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
@@ -231,9 +240,9 @@ if (isNull _newTarget) then {
                 // Allow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
 
-                if(ACE_diagTime > _soundTime) then {
+                if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
-                    _soundTime = ACE_diagTime + 0.25;
+                    _soundTime = diag_tickTime + 0.25;
                 };
             } else {
                 __JavelinIGUITargeting ctrlShow true;
@@ -265,9 +274,9 @@ if (isNull _newTarget) then {
 
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
-                if(ACE_diagTime > _soundTime) then {
+                if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locking";
-                    _soundTime = ACE_diagTime + 0.25;
+                    _soundTime = diag_tickTime + 0.25;
                 };
                 // Disallow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
@@ -294,7 +303,7 @@ if (isNull _newTarget) then {
 //TRACE_2("", _newTarget, _currentTarget);
 
 // Save arguments for next run
-_args set[0, ACE_diagTime];
+_args set[0, diag_tickTime];
 _args set[1, _currentTarget];
 _args set[2, _runTime];
 _args set[3, _lockTime];

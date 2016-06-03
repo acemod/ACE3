@@ -50,7 +50,7 @@
 #define ST_TILE_PICTURE   144
 #define ST_WITH_RECT      160
 #define ST_LINE           176
-#define FontM             "PuristaMedium"
+#define FontM             "RobotoCondensed"
 #define __XA SafeZoneXAbs
 #define __X SafeZoneX
 #define __Y SafeZoneY
@@ -146,7 +146,7 @@ class ace_huntir_cam_dialog {
         style = 48;
         colorText[ ]={ 1,1,1,1 };
         colorBackground[ ]={ 0.4,0.4,0.4,1 };
-        font = "PuristaMedium";
+        font = "RobotoCondensed";
         sizeEx = 0.021;
         lineSpacing = 1;
         x = __X;
@@ -154,7 +154,7 @@ class ace_huntir_cam_dialog {
         w = __W;
         h = __H + 0.2;
         border = 0;
-        text = PATHTOF(UI\ace_huntir_monitor_on.paa);
+        text = QPATHTOF(UI\ace_huntir_monitor_on.paa);
     };
     class CAM_HEIGHT {
         type = CT_STATIC;
@@ -311,7 +311,7 @@ class ace_huntir_cam_dialog_off: ace_huntir_cam_dialog_inactive {
     class RIGHT_BORDER: RIGHT_BORDER {};
     class PRESS_HELP: PRESS_HELP {};
     class HELP_DIALOG: HELP_DIALOG {};
-    class CAM_BG: CAM_BG { text = PATHTOF(UI\ace_huntir_monitor_off.paa); };
+    class CAM_BG: CAM_BG { text = QPATHTOF(UI\ace_huntir_monitor_off.paa); };
 };
 //ACTIVE PARA CAMERA DIALOG
 class ace_huntir_help_dialog: ace_huntir_cam_dialog {

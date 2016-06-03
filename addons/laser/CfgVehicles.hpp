@@ -6,20 +6,20 @@ class CfgVehicles {
         model = "\A3\Weapons_F\empty.p3d";
         destrType = "DestructNo";
         simulation = "LaserTarget";
-        
+
         class EventHandlers {
             init = QUOTE(_this call FUNC(laser_init));
         };
     };
-    
+
     // Visual laserTarget override
     class ACE_LaserTarget_Visual : LaserTarget {
         simulation = "LaserTarget";
         model = "\A3\Weapons_f\laserTgt.p3d";
     };
-    
+
     // Vehicle lockable configurations
-    
+
     class AllVehicles;
     class Air: AllVehicles {
         class Turrets;

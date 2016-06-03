@@ -3,21 +3,8 @@
 
 if (!hasInterface) exitWith {};
 
-["inventoryDisplayLoaded", {
-
-    [{
-        disableSerialization;
-        params ["_dialog"];
-
-        if (isNull _dialog) exitWith {
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-
-        _dialog displayCtrl 111 ctrlSetText format ["%1 - %2 %3", [ACE_player, false, true] call EFUNC(common,getName), localize LSTRING(Weight), [ACE_player] call FUNC(getWeight)];
-
-    }, 0, _this select 0] call CBA_fnc_addPerFrameHandler;
-
-}] call EFUNC(common,addEventHandler);
+["playerChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
+["playerInventoryChanged", FUNC(handleVirtualMass)] call FUNC(addEventHandler);
 
 ["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
 {

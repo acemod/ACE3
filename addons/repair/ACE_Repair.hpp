@@ -12,7 +12,7 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
             claimObjects[] = {{"ACE_Wheel"}};
-            
+
             callbackSuccess = QUOTE(call FUNC(doReplaceWheel));
             callbackFailure = "";
             callbackProgress = "";

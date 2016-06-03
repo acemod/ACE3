@@ -92,6 +92,15 @@ while {_rangeToCheck < _maxDistance} do {
             private _point1ASL = (AGLtoASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.1];
             private _point2ASL = (AGLtoASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, (_radiusOfItem + 0.5)];
             private _testIntersections = lineIntersectsSurfaces [_point1ASL, _point2ASL];
+            if (((count _testIntersections) == 1) && {isNull ((_testIntersections select 0) select 2)}) then {
+                private _hitGroundASL = (_testIntersections select 0) select 0;
+                private _hitHeightOffset = ((AGLtoASL _roundAGL) select 2) - (_hitGroundASL select 2);
+                private _hit2dOffset = _roundAGL distance2D _hitGroundASL;
+                private _slope = _hitHeightOffset atan2 _hit2dOffset;
+                if (_slope < 25) then { //Ignore ground hit if slope is reasonable
+                    _testIntersections = [];
+                };
+            };
             if (!(_testIntersections isEqualTo [])) exitWith {
                 TRACE_2("collision low/high",_roundAGL,_testIntersections);
                 _roundPointIsValid = false;

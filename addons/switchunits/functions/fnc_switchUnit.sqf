@@ -25,7 +25,7 @@ private _leave = false;
 
 if (GVAR(EnableSafeZone)) then {
     private _allNearestPlayers = [position _unit, GVAR(SafeZoneRadius)] call FUNC(nearestPlayers);
-    private _nearestEnemyPlayers = [_allNearestPlayers, {((side GVAR(OriginalGroup)) getFriend (side _this) < 0.6) && !(_this getVariable [QGVAR(IsPlayerControlled), false])}] call EFUNC(common,filter);
+    private _nearestEnemyPlayers = _allNearestPlayers select {((side GVAR(OriginalGroup)) getFriend side _x < 0.6) && !(_x getVariable [QGVAR(IsPlayerControlled), false])};
 
     if (count _nearestEnemyPlayers > 0) exitWith {
         _leave = true;
@@ -40,14 +40,7 @@ if (_leave) exitWith {
 // should switch locality
 // This doesn't work anymore, because one's now able to switch to units from a different side
 //[_unit] joinSilent group player;
-[
-    [_unit, player],
-    QUOTE({
-        (_this select 0) setVariable [ARR_3(QUOTE(QGVAR(OriginalOwner)), owner (_this select 0), true)];
-        (_this select 0) setOwner owner (_this select 1)
-    }),
-    1
-] call EFUNC(common,execRemoteFnc);
+[QGVAR(switchLocality), [_unit, player]] call EFUNC(common,serverEvent);
 
 [{
     params ["_args", "_pfhId"];
@@ -79,12 +72,7 @@ if (_leave) exitWith {
         // set owner back to original owner
         private _oldOwner = _oldUnit getVariable[QGVAR(OriginalOwner), -1];
         if (_oldOwner > -1) then {
-            [
-                [_oldUnit, _oldOwner],
-                QUOTE({
-                    (_this select 0) setOwner (_this select 1)
-                }), 1
-            ] call EFUNC(common,execRemoteFnc);
+            ["setOwner", [_oldUnit, _oldOwner]] call EFUNC(common,serverEvent);
         };
 
         [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);

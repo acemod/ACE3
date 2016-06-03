@@ -36,7 +36,14 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     0;
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
-if (isEngineOn _target) exitWith {false};
+
+if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
+    ["engineOn", _target, [_target, false]] call EFUNC(common,objectEvent);
+};
+if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
+    ["displayTextStructured", [LSTRING(shutOffEngineWarning), 1.5, _caller]] call EFUNC(common,localEvent);
+    false
+};
 
 //Items can be an array of required items or a string to a ACE_Setting array
 _items = if (isArray (_config >> "items")) then {

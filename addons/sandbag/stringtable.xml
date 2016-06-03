@@ -146,16 +146,16 @@
             <Portuguese>Aqui não tem areia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
-            <English>+Ctrl rotate</English>
-            <German>+Strg drehen</German>
-            <Spanish>+Ctrl girar</Spanish>
-            <French>+Ctrl tourner</French>
-            <Italian>+Ctrl rotazione</Italian>
-            <Czech>+Ctrl otočit</Czech>
-            <Hungarian>+Ctrl forgatás</Hungarian>
-            <Polish>+Ctrl obrót</Polish>
-            <Portuguese>+Ctrl rotaciona</Portuguese>
-            <Russian>+Ctrl Bращать</Russian>
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
         </Key>
     </Package>
 </Project>

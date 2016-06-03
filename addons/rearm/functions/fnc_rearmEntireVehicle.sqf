@@ -16,8 +16,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-
-params ["_target", "_unit", "_vehicle"];  // _target is for future possible finite ammo, _unit placeholder
+params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_vehicle", objNull, [objNull]]]; // _target is for future possible finite ammo, _unit placeholder
 
 [
     10,

@@ -34,6 +34,6 @@ if (dialog || {isNull _interactionTarget}) exitWith {
 GVAR(INTERACTION_TARGET) = _interactionTarget;
 
 createDialog QGVAR(medicalMenu);
-GVAR(lastOpenedOn) = ACE_time;
+GVAR(lastOpenedOn) = CBA_missionTime;
 
 true

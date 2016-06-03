@@ -11,6 +11,7 @@
             <French>Paramètres du Zeus</French>
             <Hungarian>Zeus beállítások</Hungarian>
             <Russian>Настройки Зевса</Russian>
+            <Italian>Impostazioni Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
@@ -22,6 +23,7 @@
             <French>Fourni le contrôle des différents aspects de Zeus</French>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
+            <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -33,6 +35,7 @@
             <French>Message ascension</French>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
+            <Italian>Messaggi di Ascesa</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
@@ -44,6 +47,7 @@
             <French>Affiche un message en global quand un joueur est assigner comme Zeus</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
+            <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -55,6 +59,7 @@
             <French>Aigle Zeus</French>
             <Hungarian>Zeus sas</Hungarian>
             <Russian>Орел Зевса</Russian>
+            <Italian>Aquila Zeus</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_Description">
             <English>Spawn an eagle that follows the Zeus camera.</English>
@@ -66,6 +71,7 @@
             <French>Faire apparaitre un aigle qui suit la caméra Zeus</French>
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
+            <Italian>Crea un'aquila che segue la camera Zeus.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
@@ -77,6 +83,7 @@
             <French>Bruit de vent</French>
             <Hungarian>Szélhangok</Hungarian>
             <Russian>Звук ветра</Russian>
+            <Italian>Suoni del Vento</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_Description">
             <English>Play wind sounds when Zeus remote controls a unit.</English>
@@ -88,6 +95,7 @@
             <French>Joue des bruits de vent quand Zeus controle une unité</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
+            <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
             <English>Ordnance Warning</English>
@@ -99,6 +107,7 @@
             <French>Alerte d'équipement militaire</French>
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
+            <Italian>Allarme Esplosivi</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
             <English>Play a radio warning when Zeus uses ordnance.</English>
@@ -110,6 +119,7 @@
             <French>Joue un son radio quand le Zeus utilise du matériel militaire</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
+            <Italian>Esegui un messaggio radio quando Zeus usa esplosivi.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
             <English>Reveal Mines</English>
@@ -121,6 +131,7 @@
             <French>Révéler les mines</French>
             <Hungarian>Aknák feltárása</Hungarian>
             <Russian>Показывать мины</Russian>
+            <Italian>Rivela Mine</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
@@ -132,6 +143,7 @@
             <French>Révéler les mines et placer un marqueur sur la carte</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
+            <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
@@ -143,6 +155,7 @@
             <French>Révéler aux alliés</French>
             <Hungarian>Feltárás a szövetségeseknek</Hungarian>
             <Russian>Показывать союзникам</Russian>
+            <Italian>Rivela ad Alleati</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
             <English>Allies + Map Markers</English>
@@ -154,6 +167,7 @@
             <French>Alliés + marqueurs sur la carte</French>
             <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
             <Russian>Союзники + Маркеры на карте</Russian>
+            <Italian>Alleati + Marcatori Mappa</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
@@ -165,6 +179,7 @@
             <French>Basculer en captif</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
+            <Italian>Apri Catturato</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -176,6 +191,7 @@
             <French>Basculer en capitulation</French>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
+            <Italian>Apri Resa</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -187,6 +203,7 @@
             <French>Basculer en inconscient</French>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
+            <Italian>Apri Incosciente</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -196,6 +213,8 @@
             <Russian>Назначить медиком</Russian>
             <Czech>Přiřadit Zdravotníka</Czech>
             <Spanish>Asignar médico</Spanish>
+            <Italian>Assegna Medico</Italian>
+            <French>Assigner médecin</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
@@ -205,6 +224,8 @@
             <Russian>Назначить медицинским транспортом</Russian>
             <Czech>Přiřadit Zdravotnické Vozidlo</Czech>
             <Spanish>Asignar vehículo médico</Spanish>
+            <Italian>Assegna Veicolo Medico</Italian>
+            <French>Assigner véhicule médical</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
@@ -214,6 +235,8 @@
             <Russian>Назанчить медицинским сооружением</Russian>
             <Czech>Přiřadit Zdravotnické Zařízení</Czech>
             <Spanish>Asignar instalación médica</Spanish>
+            <Italian>Assegna Struttura Medica</Italian>
+            <French>Assigner installation médicale</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -221,6 +244,10 @@
             <Polish>Dodaj koło zapasowe</Polish>
             <Russian>Добавить запасное колесо</Russian>
             <Czech>Přidat rezervní kolo</Czech>
+            <Italian>Aggiungi Ruota di Scorta</Italian>
+            <German>Ersatzrad hinzufügen</German>
+            <Spanish>Agregar rueda de auxilio</Spanish>
+            <French>Ajouter pièce de rechange</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
             <English>Adds a Spare Wheel to the vehicle</English>
@@ -228,6 +255,10 @@
             <Polish>Dodaje koło zapasowe do pojazdu</Polish>
             <Russian>Добавляет запасное колесо в транспорт</Russian>
             <Czech>Přidá rezervní kolo do vozidla</Czech>
+            <Italian>Aggiungi una ruota di scorta al veicolo</Italian>
+            <German>Fügt dem Fahrzeug ein Ersatzrad hinzu</German>
+            <Spanish>Agrega una rueda de auxilio al vehículo</Spanish>
+            <French>Ajoute une roue de secours au véhicule</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
@@ -235,6 +266,10 @@
             <Polish>Dodaj zapasową gąsienicę</Polish>
             <Russian>Дабавить запасную гусеницу</Russian>
             <Czech>Přidat náhradní pás</Czech>
+            <Italian>Aggiungi Cingolo di Scorta</Italian>
+            <German>Ersatzkette hinzufügen</German>
+            <Spanish>Agregar oruga de repuesto</Spanish>
+            <French>Ajouter une chenille de secours</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
             <English>Adds a Spare Track to the vehicle</English>
@@ -242,6 +277,10 @@
             <Polish>Dodaje zapasową gąsienicę do pojazdu</Polish>
             <Russian>Добавляет запасную гусеницу в транспорт</Russian>
             <Czech>Přidá náhradní pás do vozidla</Czech>
+            <Italian>Aggiungi un cingolo di scorta al veicolo</Italian>
+            <German>Fügt dem Fahrzeug eine Ersatzkette hinzu</German>
+            <Spanish>Agrega una oruga de repuesto al vehículo</Spanish>
+            <French>Ajoute une chenille de reserve</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -275,6 +314,8 @@
             <Russian>Юнит должен быть строением</Russian>
             <Spanish>La unidad debe ser una estructura</Spanish>
             <Czech>Jednotka musí být budova</Czech>
+            <Italian>Si può usare solo su strutture</Italian>
+            <French>L'unité doit être une structure</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -284,6 +325,8 @@
             <Russian>Юнит должен быть транспортом</Russian>
             <Spanish>La unidad debe ser un vehículo</Spanish>
             <Czech>Jednotka musí být vozidlo</Czech>
+            <Italian>Si può usare solo su veicoli</Italian>
+            <French>L'unité doit être un véhicule</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
@@ -291,6 +334,10 @@
             <Polish>Jednostka musi być pojazdem z wolną przestrzenią cargo</Polish>
             <Russian>Юнит должен быть транспортом с грузовым отсеком</Russian>
             <Czech>Jednotka musí být vozidlo s úložným prostorem</Czech>
+            <Italian>L'unità dev'essere un veicolo con spazio di carico</Italian>
+            <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
+            <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
+            <French>L'unité doit être un véhicule avec de l'espace de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
@@ -298,6 +345,10 @@
             <Polish>Jednostka musi mieć wolną przestrzeń cargo</Polish>
             <Russian>Юнит должен иметь свободное место в грузовом отсеке</Russian>
             <Czech>Jednotka musí mít místo v úložném prostoru</Czech>
+            <Italian>L'unità deve avere spazio di carico disponibile</Italian>
+            <German>Einheit muss freie Ladekapazität haben</German>
+            <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
+            <French>L'unité doit avoir de l'espace libre en cargaison</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -309,6 +360,7 @@
             <French>L'unité ne doit pas être captive</French>
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
             <Russian>Юнит не должен быть пленным</Russian>
+            <Italian>L'unità non dev'essere un prigioniero</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -320,7 +372,7 @@
             <Polish>Nie ma nic pod kursorem</Polish>
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
-            <Italian>Nessuna selezione</Italian>
+            <Italian>Piazza su una unità</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
@@ -332,6 +384,7 @@
             <French>Requiert un addon qui n'est pas présent</French>
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
             <Russian>Требуется аддон, который отсутствует</Russian>
+            <Italian>Richiede un addon che non è presente</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -340,6 +393,9 @@
             <Russian>Добавить объекты куратору</Russian>
             <Spanish>Agregar objetos al director</Spanish>
             <Czech>Přidat objekty kurátorovi</Czech>
+            <Italian>Aggiungi Oggetti al Curatore</Italian>
+            <French>Ajouter des objets au curateur (Zeus)</French>
+            <German>Fügt Objekte zum Kurator hinzu</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
@@ -348,6 +404,9 @@
             <Russian>Добавляет любой отспавненный объект всем кураторам в миссии</Russian>
             <Spanish>Añadir cualquier objeto creado a todos los directores en la misión</Spanish>
             <Czech>Přidá jakékoliv spawnuté objekty všem kurátorům v misi</Czech>
+            <Italian>Aggiungi ogni oggetto creato a tutti i Curatori in missione</Italian>
+            <French>Ajoute n'importe quel objet spawné à tous les curateurs de la mission</French>
+            <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
         </Key>
     </Package>
 </Project>

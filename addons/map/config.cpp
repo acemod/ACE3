@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"KoffeinFlummi","Rocko","esteldunedain"};
-        authorUrl = "https://github.com/KoffeinFlummi/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"KoffeinFlummi","Rocko","esteldunedain"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -29,6 +30,8 @@ class RscEdit;
 #include "CfgVehicles.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgSounds.hpp"
+#include "CfgLights.hpp"
+#include "Effects.hpp"
 
 class RscMapControl {
     maxSatelliteAlpha = 0.5;

@@ -65,8 +65,8 @@ if (_activated) then {
                 _altitude = 1000;
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
-                _sounds = if (getnumber (_CfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
-                _sound = _sounds call bis_fnc_selectrandom;
+                _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
+                _sound = selectRandom _sounds;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
                 _shakeRadius = 300;
@@ -104,9 +104,9 @@ if (_activated) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
-                            if (ACE_time > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
+                            if (CBA_missionTime > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
                                 [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
-                                _x setVariable ["BIS_fnc_moduleProjectile_radio",ACE_time + _delay];
+                                _x setVariable ["BIS_fnc_moduleProjectile_radio",CBA_missionTime + _delay];
                             };
                         };
                     };

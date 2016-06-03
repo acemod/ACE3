@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+["SettingsInitialized", {
+    // Hold on a little bit longer to ensure anims will work
+    [{
+        GVAR(captivityEnabled) = true;
+    }, [], 0.05] call CBA_fnc_waitAndExecute;
+}] call EFUNC(common,addEventHandler);
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
@@ -18,7 +24,6 @@ if (isServer) then {
     }];
 };
 
-["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
 ["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
 ["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);

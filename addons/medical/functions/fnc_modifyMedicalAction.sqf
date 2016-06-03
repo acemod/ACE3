@@ -24,10 +24,10 @@ if (GVAR(level) < 2 || {!([_target] call FUNC(hasMedicalEnabled))}) exitWith {
     _pointDamage = (_target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
 
     if (_pointDamage >= 0.8) exitWith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
+        _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
     };
     if (_pointDamage > 0) exitWith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossYellow.paa))];
+        _actionData set [2, QPATHTOF(UI\icons\medical_crossYellow.paa)];
     };
 };
 
@@ -36,6 +36,6 @@ _openWounds = _target getVariable [QGVAR(openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_x4"];
     if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitWith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
+        _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
     };
 } forEach _openWounds;

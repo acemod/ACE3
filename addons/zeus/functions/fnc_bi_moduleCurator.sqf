@@ -57,8 +57,8 @@ if (_activated) then {
         if (_isAdmin) then {
             _letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
             _adminVar = "admin_";
-            for "_i" from 0 to 9 do {_adminVar = _adminVar + (_letters call bis_fnc_selectrandom);};
-            _logic setVariable ["adminVar",_adminVar,true];
+            for "_i" from 0 to 9 do {_adminVar = _adminVar + selectRandom _letters};
+            _logic setvariable ["adminVar",_adminVar,true];
         };
 
         //--- Get allowed addons
@@ -113,7 +113,7 @@ if (_activated) then {
             if (_name == "") then {_name = localize "STR_A3_curator";};
 
             //--- Wait until mission starts
-            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO ACE_TIME, IT BREAKS THE MODULE
+            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO CBA_missionTime, IT BREAKS THE MODULE
 
             //--- Refresh addon list, so it's broadcasted to clients
             _addons = curatoraddons _logic;
@@ -170,7 +170,7 @@ if (_activated) then {
                             };
                         } forEach (curatoreditableobjects _logic);
                     };
-                },[_logic,_player]] call EFUNC(common,execNextFrame);
+                },[_logic,_player]] call CBA_fnc_execNextFrame;
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
@@ -244,7 +244,7 @@ if (_activated) then {
                     }
                 ];
             };
-        },[_logic]] call EFUNC(common,execNextFrame);
+        },[_logic]] call CBA_fnc_execNextFrame;
     };
 
     //--- Player

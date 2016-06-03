@@ -6,6 +6,6 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         descriptionShort = CSTRING(AltimeterDescription);
         displayName = CSTRING(AltimeterDisplayName);
-        picture = PATHTOF(UI\watch_altimeter.paa);
+        picture = QPATHTOF(UI\watch_altimeter.paa);
     };
 };

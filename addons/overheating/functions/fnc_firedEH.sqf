@@ -1,15 +1,9 @@
 /*
  * Author: Commy2 and esteldunedain
- * Handle weapon fire
+ * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
  * Argument:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return value:
  * None
@@ -18,15 +12,13 @@
  */
 #include "script_component.hpp"
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+
 BEGIN_COUNTER(firedEH);
 
-params ["_unit", "_weapon", "_muzzle", "", "_ammo", "", "_projectile"];
-TRACE_5("params",_unit,_weapon,_muzzle,_ammo,_projectile);
-
-if (((!GVAR(overheatingDispersion)) && {_unit != ACE_player}) //If no dispersion, only run when local
-        || {!([_unit] call EFUNC(common,isPlayer))} //Ignore AI
-        || {(_unit distance ACE_player) > 3000} //Ignore far away shots
-        || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
+if ((_unit distance ACE_player) > 3000 //Ignore far away shots
+    || {(_muzzle != (primaryWeapon _unit)) && {_muzzle != (handgunWeapon _unit)}}) exitWith { // Only rifle or pistol muzzles (ignore grenades / GLs)
     END_COUNTER(firedEH);
 };
 
@@ -73,8 +65,8 @@ if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit dist
 };
 
 //Particle Effects:
-if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
-    _unit setVariable [QGVAR(lastDrop), ACE_time];
+if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
+    _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
@@ -102,7 +94,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1.5, 7.5, 37.5], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+_jamChance = _jamChance * ([[0.5, 1.5, 15, 150], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
 
 // increase jam chance on dusty grounds if prone (and at ground level)
 if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {

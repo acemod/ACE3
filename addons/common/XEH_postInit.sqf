@@ -3,49 +3,6 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-
-//////////////////////////////////////////////////
-// PFHs
-//////////////////////////////////////////////////
-
-//Singe PFEH to handle execNextFrame, waitAndExec and waitUntilAndExec:
-[{
-    BEGIN_COUNTER(waitAndExec);
-
-    //Handle the waitAndExec array:
-    while {!(GVAR(waitAndExecArray) isEqualTo []) && {GVAR(waitAndExecArray) select 0 select 0 <= ACE_Time}} do {
-        private _entry = GVAR(waitAndExecArray) deleteAt 0;
-        (_entry select 2) call (_entry select 1);
-    };
-
-    //Handle the execNextFrame array:
-    {
-        (_x select 0) call (_x select 1);
-        false
-    } count GVAR(nextFrameBufferA);
-
-    //Swap double-buffer:
-    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
-    GVAR(nextFrameBufferB) = [];
-    GVAR(nextFrameNo) = diag_frameno + 1;
-
-    //Handle the waitUntilAndExec array:
-    GVAR(waitUntilAndExecArray) = GVAR(waitUntilAndExecArray) select {
-        // if condition is satisifed call statement
-        if ((_x select 2) call (_x select 0)) then {
-            // make sure to delete the correct handle when multiple conditions are met in one frame
-            (_x select 2) call (_x select 1);
-            false
-        } else {
-            true
-        };
-        nil
-    };
-
-    END_COUNTER(waitAndExec);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
-
-
 //////////////////////////////////////////////////
 // Get Map Data
 //////////////////////////////////////////////////
@@ -66,6 +23,7 @@
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
 ["forceWalk", {
     params ["_object", "_set"];
@@ -91,6 +49,11 @@
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
+}] call FUNC(addEventHandler);
+["blockEngine", {
+    params ["_vehicle", "_set"];
+    _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
+    _vehicle engineOn false;
 }] call FUNC(addEventHandler);
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
@@ -135,6 +98,7 @@ if (isServer) then {
 ["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
 ["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
 
+["loadPersonEvent", FUNC(loadPersonLocal)] call FUNC(addEventhandler);
 ["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
 
 ["lockVehicle", {
@@ -148,13 +112,27 @@ if (isServer) then {
 
 ["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
 ["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
+["engineOn", {(_this select 0) engineOn (_this select 1)}] call FUNC(addEventhandler);
 ["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
 ["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
 ["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
+["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
+["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
+["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
+["setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call FUNC(addEventHandler);
+["setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call FUNC(addEventHandler);
+
+// Request framework
+[QGVAR(requestCallback), FUNC(requestCallback)] call FUNC(addEventHandler);
+[QGVAR(receiveRequest), FUNC(receiveRequest)] call FUNC(addEventHandler);
+
+[QGVAR(systemChatGlobal), {systemChat _this}] call FUNC(addEventHandler);
 
 if (isServer) then {
     ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
     ["enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call FUNC(addEventHandler);
+    ["setOwner", {(_this select 0) setOwner (_this select 1)}] call FUNC(addEventHandler);
+    [QGVAR(serverLog), FUNC(serverLog)] call FUNC(addEventHandler);
 };
 
 
@@ -292,31 +270,6 @@ if (!hasInterface) exitWith {};
 
 call FUNC(assignedItemFix);
 
-GVAR(ScrollWheelFrame) = diag_frameno;
-
-["mainDisplayLoaded", {
-    [{
-        call FUNC(handleScrollWheelInit);
-        call FUNC(handleModifierKeyInit);
-    }, [], 0.1] call FUNC(waitAndExecute); // needs delay, otherwise doesn't work without pressing "RESTART" in editor once. Tested in 1.52RC
-}] call FUNC(addEventHandler);
-
-// add PFH to execute event that fires when the main display (46) is created
-private _fnc_initMainDisplayCheck = {
-    [{
-        if !(isNull findDisplay 46) then {
-            // Raise ACE event locally
-            ["mainDisplayLoaded", [findDisplay 46]] call FUNC(localEvent);
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 0, []] call CBA_fnc_addPerFrameHandler;
-};
-
-call _fnc_initMainDisplayCheck;
-
-// repeat this every time a savegame is loaded
-addMissionEventHandler ["Loaded", _fnc_initMainDisplayCheck];
-
 // @todo remove?
 enableCamShake true;
 
@@ -343,33 +296,17 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-//CBA has events for zeus's display onLoad and onUnload (Need to delay a frame for display to be ready)
-private _zeusDisplayChangedFNC = {
-    [{
-        private _data = !(isNull findDisplay 312);
-        ["zeusDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
-    }, []] call FUNC(execNextFrame);
-};
-["CBA_curatorOpened", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-["CBA_curatorClosed", _zeusDisplayChangedFNC] call CBA_fnc_addEventHandler;
-
-
 // default variables
 GVAR(OldPlayerVehicle) = vehicle objNull;
 GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
 GVAR(OldPlayerWeapon) = currentWeapon objNull;
-GVAR(OldPlayerInventory) = [objNull] call FUNC(getAllGear);
+GVAR(OldPlayerInventory) = [];
+GVAR(OldPlayerInventoryNoAmmo) = [];
 GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
 GVAR(OldCameraView) = "";
 GVAR(OldVisibleMap) = false;
 GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
 GVAR(OldIsCamera) = false;
-
-// clean up playerChanged eventhandler from preinit and put it in the same PFH as the other events to reduce overhead and guarantee advantageous execution order
-if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
-    [GVAR(PreInit_playerChanged_PFHID)] call CBA_fnc_removePerFrameHandler;
-    GVAR(PreInit_playerChanged_PFHID) = nil;
-};
 
 // PFH to raise varios events
 [{
@@ -412,11 +349,36 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     };
 
     // "playerInventoryChanged" event
-    _data = [ACE_player] call FUNC(getAllGear);
+    _data = getUnitLoadout ACE_player;
     if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
         // Raise ACE event locally
         GVAR(OldPlayerInventory) = _data;
-        ["playerInventoryChanged", [ACE_player, _data]] call FUNC(localEvent);
+
+        // we don't want to trigger this just because your ammo counter decreased.
+        _data = + GVAR(OldPlayerInventory);
+
+        private _weaponInfo = _data param [0, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, primaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        _weaponInfo = _data param [1, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, secondaryWeaponMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        _weaponInfo = _data param [2, []];
+        if !(_weaponInfo isEqualTo []) then {
+            _weaponInfo set [4, handgunMagazine ACE_player];
+            _weaponInfo deleteAt 5;
+        };
+
+        if !(_data isEqualTo GVAR(OldPlayerInventoryNoAmmo)) then {
+            GVAR(OldPlayerInventoryNoAmmo) = _data;
+            ["playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call FUNC(localEvent);
+        };
     };
 
     // "playerVisionModeChanged" event
@@ -441,14 +403,6 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
         // Raise ACE event locally
         GVAR(OldVisibleMap) = _data;
         ["visibleMapChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "inventoryDisplayChanged" event
-    _data = !(isNull findDisplay 602);
-    if !(_data isEqualTo GVAR(OldInventoryDisplayIsOpen)) then {
-        // Raise ACE event locally
-        GVAR(OldInventoryDisplayIsOpen) = _data;
-        ["inventoryDisplayChanged", [ACE_player, _data]] call FUNC(localEvent);
     };
 
     // "activeCameraChanged" event
@@ -478,10 +432,17 @@ if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
     };
 }] call FUNC(addEventhandler);
 
+["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
+
 
 //////////////////////////////////////////////////
 // Add various canInteractWith conditions
 //////////////////////////////////////////////////
+
+["isNotDead", {
+    params ["_unit", "_target"];
+    alive _unit
+}] call FUNC(addCanInteractWithCondition);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 
