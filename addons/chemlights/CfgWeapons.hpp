@@ -101,7 +101,7 @@ class CfgWeapons {
         ACE_Chemlight = "Chemlight_yellow";
         displayName = CSTRING(Shield_Yellow_DisplayName);
         descriptionShort = CSTRING(Shield_Yellow_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_blue_x_ca.paa);
+        picture = PATHTOF(UI\ace_chemlight_shield_yellow_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
             class ACE_FlashLight {

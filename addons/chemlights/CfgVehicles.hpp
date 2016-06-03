@@ -8,7 +8,7 @@ class CfgVehicles {
                 class ACE_Chemlights {
                     displayName = CSTRING(Action_Chemlights);
                     icon = "\a3\ui_f\data\gui\cfg\Hints\chemlights_ca.paa";
-                    condition = QUOTE((count ([ACE_player] call FUNC(getShieldComponents)) > 0) || {count ([ACE_player] call FUNC(getShields)) > 0});
+                    condition = QUOTE((count ([ACE_player] call FUNC(getShieldComponents)) > 0) || (count ([ACE_player] call FUNC(getShields)) > 0));
                     statement = "true";
                     exceptions[] = {"isNotDragging", "notOnMap", "isNotInside", "isNotSitting"};
                     insertChildren = QUOTE(_this call DFUNC(compileChemlightMenu));
