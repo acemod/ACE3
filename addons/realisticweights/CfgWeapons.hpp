@@ -272,4 +272,54 @@ class CfgWeapons {
             mass = 20;
         };
     };
+
+
+// - Marksmen DLC DMRs --------------------------------------------------------
+
+    // - Noreen Bad News ------------------------------------------------------
+    class DMR_02_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_02_F: DMR_02_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 130;
+        };
+    };
+
+    // - SIG 556 --------------------------------------------------------------
+    class DMR_03_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_03_F: DMR_03_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 155;
+        };
+    };
+
+    // - M14 ------------------------------------------------------------------
+    class DMR_06_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_06_camo_F: DMR_06_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 92;
+        };
+    };
+
+
+// - Marksmen DLC MMGs --------------------------------------------------------
+
+    // - MG5 ------------------------------------------------------------------
+    class MMG_01_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 218;
+        };
+    };
+
+    // - LWMMG ----------------------------------------------------------------
+    class MMG_02_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 240;
+        };
+    };
 };
