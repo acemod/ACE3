@@ -140,10 +140,6 @@ if (isServer) then {
 // Set up remote execution
 //////////////////////////////////////////////////
 
-// ACE events
-"ACEg" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
-"ACEc" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
-
 // Synced ACE events
 // Handle JIP scenario
 if (!isServer) then {
