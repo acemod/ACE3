@@ -41,9 +41,9 @@ if ((_tourniquets select _part) > 0) exitWith {
 
 _removeItem = _items select 0;
 if (local _target) then {
-    ["ace_treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentTourniquetLocal", [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);

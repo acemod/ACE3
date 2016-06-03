@@ -18,7 +18,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_newEvents {
-    medical_onUnconscious = QEGVAR(medical,unconscious);
+    medical_onUnconscious = "ace_unconscious";
     setFuel = "ace_setFuel";
     setVectorDirAndUp = "ace_setVectorDirAndUp";
     displayTextStructured = "ace_displayTextStructured";

@@ -21,5 +21,5 @@ class CfgPatches {
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
     SetHandcuffed = QEGVAR(captives,setHandcuffed);
-    medical_onUnconscious = QEGVAR(medical,unconscious);
+    medical_onUnconscious = "ace_unconscious";
 };

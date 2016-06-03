@@ -6,8 +6,7 @@ GVAR(MenuPFHID) = -1;
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
-[QEGVAR(medical,treatmentSuccess), {
-
+["ace_treatmentSuccess", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
         GVAR(pendingReopen) = false;
         [{
@@ -15,7 +14,6 @@ GVAR(pendingReopen) = false;
         }, []] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addEventHandler;
-
 
 ["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
 {
@@ -37,4 +35,3 @@ GVAR(pendingReopen) = false;
     false
 },
 [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
-

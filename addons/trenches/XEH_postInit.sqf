@@ -21,6 +21,6 @@ GVAR(digDirection) = 0;
 ["ace_playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
-[QEGVAR(medical,unconscious), {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?

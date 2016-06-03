@@ -22,7 +22,7 @@
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
 if (isServer) then {
-    [QEGVAR(medical,unconscious), {
+    ["ace_unconscious", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};
         TRACE_1("Knocked Out, Doing Deadman", _unit);

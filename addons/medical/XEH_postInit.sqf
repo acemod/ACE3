@@ -9,29 +9,29 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["ace_interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call CBA_fnc_addEventHandler;
 
 //Treatment EventHandlers:
-["ace_actionCheckBloodPressureLocal", DFUNC(actionCheckBloodPressureLocal)] call CBA_fnc_addEventHandler;
-["ace_actionCheckPulseLocal", DFUNC(actionCheckPulseLocal)] call CBA_fnc_addEventHandler;
-["ace_addToInjuredCollection", DFUNC(addToInjuredCollection)] call CBA_fnc_addEventHandler;
-["ace_addToMedicalLog", DFUNC(addToLog)] call CBA_fnc_addEventHandler;
-["ace_addToTriageCard", DFUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
-["ace_setDead", DFUNC(setDead)] call CBA_fnc_addEventHandler;
-["ace_setHitPointDamage", DFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
-["ace_setUnconscious", DFUNC(setUnconscious)] call CBA_fnc_addEventHandler;
-["ace_treatmentAdvanced_bandageLocal", DFUNC(treatmentAdvanced_bandageLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentAdvanced_CPRLocal", DFUNC(treatmentAdvanced_CPRLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentAdvanced_fullHealLocal", DFUNC(treatmentAdvanced_fullHealLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentAdvanced_medicationLocal", DFUNC(treatmentAdvanced_medicationLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentBasic_bandageLocal", DFUNC(treatmentBasic_bandageLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentBasic_bloodbagLocal", DFUNC(treatmentBasic_bloodbagLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentBasic_morphineLocal", DFUNC(treatmentBasic_morphineLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentIVLocal", DFUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
-["ace_treatmentTourniquetLocal", DFUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
-["ace_actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
+[QGVAR(actionCheckBloodPressureLocal), DFUNC(actionCheckBloodPressureLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(actionCheckPulseLocal), DFUNC(actionCheckPulseLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(addVitalLoop), DFUNC(addVitalLoop)] call CBA_fnc_addEventHandler;
+[QGVAR(addToMedicalLog), DFUNC(addToLog)] call CBA_fnc_addEventHandler;
+[QGVAR(addToTriageCard), DFUNC(addToTriageCard)] call CBA_fnc_addEventHandler;
+[QGVAR(setDead), DFUNC(setDead)] call CBA_fnc_addEventHandler;
+[QGVAR(setHitPointDamage), DFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
+[QGVAR(setUnconscious), DFUNC(setUnconscious)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentAdvanced_bandageLocal), DFUNC(treatmentAdvanced_bandageLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentAdvanced_CPRLocal), DFUNC(treatmentAdvanced_CPRLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentAdvanced_fullHealLocal), DFUNC(treatmentAdvanced_fullHealLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentAdvanced_medicationLocal), DFUNC(treatmentAdvanced_medicationLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentBasic_bandageLocal), DFUNC(treatmentBasic_bandageLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentBasic_bloodbagLocal), DFUNC(treatmentBasic_bloodbagLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentBasic_morphineLocal), DFUNC(treatmentBasic_morphineLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentIVLocal), DFUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(treatmentTourniquetLocal), DFUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
 //Handle Deleting Bodies on Server:
-if (isServer) then {[QGVAR(playedInBodyBag), FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
+if (isServer) then {["ace_playedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
 
-[QGVAR(unconscious), {
+["ace_unconscious", {
     params ["_unit", "_status"];
     if (local _unit) then {
         if (_status) then {

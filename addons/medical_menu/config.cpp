@@ -19,7 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_newEvents {
-    medical_treatmentSuccess = QEGVAR(medical,treatmentSuccess);
-    Medical_onMenuOpen = QGVAR(opened);
-    displayTextStructured = "ace_displayTextStructured";
+    Medical_onMenuOpen = "ace_medicalMenuOpened";
 };

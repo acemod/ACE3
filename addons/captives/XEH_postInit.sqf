@@ -32,7 +32,7 @@ if (isServer) then {
 [QGVAR(setSurrendered), {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-[QEGVAR(medical,unconscious), {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
+["ace_unconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

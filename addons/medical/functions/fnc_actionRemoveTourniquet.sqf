@@ -44,7 +44,7 @@ TRACE_2("meds",_part,_delayedMedications);
     _x params ["", "", "_medPartNum"];
     if (_part == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        ["ace_treatmentAdvanced_medicationLocal", _x, [_target]] call CBA_fnc_targetEvent;
+        [QGVAR(treatmentAdvanced_medicationLocal), _x, [_target]] call CBA_fnc_targetEvent;
         _delayedMedications set [_forEachIndex, -1];
         _updatedArray = true;
     };

@@ -45,7 +45,7 @@ class CfgMineTriggers {
 };
 
 class ACE_newEvents {
-    medical_onUnconscious = QEGVAR(medical,unconscious);
+    medical_onUnconscious = "ace_unconscious";
     clientRequestsOrientations = QGVAR(clientRequestOrientations);
     serverSendsOrientations = QGVAR(serverSendOrientations);
 };

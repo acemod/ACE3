@@ -22,4 +22,4 @@ params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_time", 1, [0]], ["
 _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushBack [_value, _time, _callBack];
 _unit setVariable [QGVAR(heartRateAdjustments), _adjustment ];
-[QGVAR(addedHeartRateAdjustment), [_unit, _value, _time]] call CBA_fnc_localEvent;
+["ace_addedHeartRateAdjustment", [_unit, _value, _time]] call CBA_fnc_localEvent;

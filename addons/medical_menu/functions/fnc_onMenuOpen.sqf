@@ -87,4 +87,4 @@ GVAR(MenuPFHID) = [{
 
 }, 0, [_display]] call CBA_fnc_addPerFrameHandler;
 
-[QGVAR(opened), [ACE_player, _target]] call CBA_fnc_localEvent;
+["ace_medicalMenuOpened", [ACE_player, _target]] call CBA_fnc_localEvent;
