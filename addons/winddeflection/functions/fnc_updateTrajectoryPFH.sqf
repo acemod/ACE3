@@ -27,14 +27,14 @@
     _deleted = 0;
     _isWind = (vectorMagnitude ACE_wind > 0);
 
-    {
+    GVAR(trackedBullets) = GVAR(trackedBullets) select {
         _x params ["_bullet", "_airFriction"];
 
         _bulletVelocity = velocity _bullet;
         _bulletSpeed = vectorMagnitude _bulletVelocity;
 
         if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeed < 100}}) then {
-            GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
+            false
         } else {
             if (_isWind) then {
                 _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
@@ -49,8 +49,8 @@
                 _bulletVelocity = _bulletVelocity vectorAdd _accel;
             };
             _bullet setVelocity _bulletVelocity;
+            true
         };
-        nil
-    } count +GVAR(trackedBullets);
+    };
     // END_COUNTER(pfeh);
 }, GVAR(simulationInterval), [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

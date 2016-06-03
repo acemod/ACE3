@@ -14,7 +14,7 @@
 
 private _aceTimeSecond = floor CBA_missionTime;
 
-{
+GVAR(allBullets) = GVAR(allBullets) select {
     private ["_bulletVelocity", "_bulletPosition", "_bulletSpeed"];
     _x params["_bullet","_caliber","_bulletTraceVisible","_index"];
 
@@ -23,7 +23,7 @@ private _aceTimeSecond = floor CBA_missionTime;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
 
     if (!alive _bullet || _bulletSpeed < 100) then {
-        GVAR(allBullets) deleteAt (GVAR(allBullets) find _x);
+        false // ignore Bullet that not exist or is slower than
     } else {
         _bulletPosition = getPosASL _bullet;
 
@@ -32,9 +32,10 @@ private _aceTimeSecond = floor CBA_missionTime;
         };
 
         call compile ("ace_advanced_ballistics" callExtension format["simulate:%1:%2:%3:%4:%5:%6:%7", _index, _bulletVelocity, _bulletPosition, ACE_wind, ASLToATL(_bulletPosition) select 2, _aceTimeSecond, CBA_missionTime - _aceTimeSecond]);
+        
+        true // keep bullet in Array for next Frame
     };
-    nil
-} count +GVAR(allBullets);
+};
 
 if (GVAR(allBullets) isEqualTo []) then {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
