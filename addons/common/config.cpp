@@ -15,6 +15,7 @@ class CfgPatches {
 
 // This class will be deprecated in version 3.8.0
 class ACE_newEvents {
+    blockSprint = "ace_blockSprint";
     forceWalk = "ace_forceWalk";
     PlayerJip = "ace_playerJip";
     useItem = "ace_useItem";

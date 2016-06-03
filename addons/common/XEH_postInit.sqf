@@ -30,7 +30,7 @@
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
-["blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
+["ace_blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
