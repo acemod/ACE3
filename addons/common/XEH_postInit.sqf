@@ -189,10 +189,10 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up SettingsInitialized eventhandler
+// Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),

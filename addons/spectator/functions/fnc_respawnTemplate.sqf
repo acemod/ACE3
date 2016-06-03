@@ -23,7 +23,7 @@ private ["_vision","_pos"];
 
 // When all are dead with respawn type "None" the mission should end
 if ((_respawn == 0) && {{alive _x} count allPlayers <= 0}) exitWith {
-    ["BIS_fnc_endMission", ["endDeath", false]] call EFUNC(common,globalEvent);
+    ["BIS_fnc_endMission", ["endDeath", false]] call EFUNC(common,globalEvent); //???
 };
 
 // Some environment information can be used for the initial camera attributes

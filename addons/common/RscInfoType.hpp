@@ -113,6 +113,6 @@ class RscInGameUI {
     };
 
     class RscStanceInfo {
-        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStanceInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Stance')])] call FUNC(localEvent););
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscStanceInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Stance')])] call CBA_fnc_localEvent;);
     };
 };

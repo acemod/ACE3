@@ -33,5 +33,5 @@ if (isServer) then {
         params ["_unit", "_player"];
         _unit setVariable [QGVAR(OriginalOwner), owner _unit, true];
         _unit setOwner (owner _player);
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 };

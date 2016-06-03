@@ -264,7 +264,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 }, 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
     [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
