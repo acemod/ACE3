@@ -33,6 +33,7 @@
             <Spanish>Efectos de partículas</Spanish>
             <French>Effet de surchauffe</French>
             <Czech>Částicové efekty přehřívání</Czech>
+            <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -41,6 +42,7 @@
             <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Montrer les effets lorsque l'arme surchauffe.</French>
+            <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -50,6 +52,7 @@
             <Spanish>Efectos de partículas para todos</Spanish>
             <French>Effets de surchauffe pour tout le monde.</French>
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
+            <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -58,6 +61,7 @@
             <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
             <French>Montrer les effets de surchauffe des autres joueurs.</French>
+            <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -66,6 +70,7 @@
             <Italian>Dispersione Surriscaldamento</Italian>
             <Spanish>Dispersión</Spanish>
             <French>Disperssion dûe à la surchauffe</French>
+            <Portuguese>Disperção de superaquecimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -74,6 +79,7 @@
             <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applica per tutti i giocatori.</Italian>
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
             <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
+            <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -83,6 +89,7 @@
             <French>Des-enrayer l'arme au rechargement.</French>
             <Italian>Disinceppa l'arma quando si ricarica</Italian>
             <Czech>Uvolnit zbraň při přebití</Czech>
+            <Portuguese>Desemperrar arma no recarregamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -92,6 +99,7 @@
             <French>Recharger vide la chambre de l'arme</French>
             <Italian>L'arma si disinceppa quando si ricarica</Italian>
             <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
+            <Portuguese>Recarregar desemperra arma.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -101,6 +109,7 @@
             <French>Chance de rater le des-enrayement</French>
             <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
             <Czech>Šance, že uvolnění zbraně selže</Czech>
+            <Portuguese>Chance de falha de desemperramento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -109,6 +118,7 @@
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
             <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
             <Italian>Probabilità che si possa sbagliare a caso a disinceppare l'arma. Richiede di ripetere.</Italian>
+            <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -178,6 +188,7 @@
             <French>Toujours enrayé !</French>
             <Italian>Non si è disinceppata!</Italian>
             <Czech>Zbrań se nepodařilo uvolnit</Czech>
+            <Portuguese>Falha no desemperramento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>

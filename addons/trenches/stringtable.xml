@@ -9,6 +9,7 @@
             <Spanish>Pala para trincheras</Spanish>
             <French>Outil de tranchée</French>
             <Czech>Polní lopatka</Czech>
+            <Portuguese>Ferramenta de trincheira</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -18,6 +19,7 @@
             <Spanish>Pala para trincheras</Spanish>
             <French>Outil de tranchée</French>
             <Czech>Polní lopatky se používají k zákopovým a jiným pracem.</Czech>
+            <Portuguese>Ferramenta de trincheira</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -26,6 +28,7 @@
             <Italian>Fascia - Piccola</Italian>
             <Spanish>Trinchera pequeña</Spanish>
             <French>Envelope - petite</French>
+            <Portuguese>Trincheira - Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -35,6 +38,7 @@
             <Spanish>Trinchera personal pequeña</Spanish>
             <French>Petite tranchée personelle</French>
             <Czech>Malý zákop pro jednoho</Czech>
+            <Portuguese>Trincheira pessoal pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -44,6 +48,7 @@
             <Spanish>Cavar trinchera pequeña</Spanish>
             <French>Creuser une petite tranchée</French>
             <Czech>Vykopat malý zákop</Czech>
+            <Portuguese>Cavar trincheira pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -52,6 +57,7 @@
             <Italian>Fascia - Grande</Italian>
             <Spanish>Trinchera grande</Spanish>
             <French>Enveloppe - grande</French>
+            <Portuguese>Trincheira - Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -61,6 +67,7 @@
             <Spanish>Trinchera personal grande</Spanish>
             <French>Grande tranchée personelle</French>
             <Czech>Velký zákop pro jednoho</Czech>
+            <Portuguese>Trincheira pessoal grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -70,6 +77,7 @@
             <Spanish>Cavar trinchera grande</Spanish>
             <French>Creuser une grande tranchée</French>
             <Czech>Vykopat velký zákop</Czech>
+            <Portuguese>Cavar trincheira grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -79,6 +87,7 @@
             <Spanish>Confirmar cavado</Spanish>
             <French>Confirmer la creusée</French>
             <Czech>Potvrdit kopání</Czech>
+            <Portuguese>Confirmar excavação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -88,6 +97,7 @@
             <Spanish>Cancelar cavado</Spanish>
             <French>Annuler la creusée</French>
             <Czech>Zrušit kopání</Czech>
+            <Portuguese>Cancelar excavação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>Rotate</English>
@@ -109,6 +119,7 @@
             <Spanish>Cavando trinchera</Spanish>
             <French>Creuse la tranchée</French>
             <Czech>Vykopat zákop</Czech>
+            <Portuguese>Cavando trincheira</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>

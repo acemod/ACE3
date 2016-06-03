@@ -9,6 +9,7 @@
             <French>Tag noir</French>
             <Italian>Marca nero</Italian>
             <Czech>Označit černě</Czech>
+            <Portuguese>Marcar em preto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_TagRed">
             <English>Tag red</English>
@@ -18,6 +19,7 @@
             <French>Tag rouge</French>
             <Italian>Marca rosso</Italian>
             <Czech>Označit červeně</Czech>
+            <Portuguese>Marcar em vermelho</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_TagGreen">
             <English>Tag green</English>
@@ -27,6 +29,7 @@
             <French>Tag vert</French>
             <Italian>Marca verde</Italian>
             <Czech>Označit zeleně</Czech>
+            <Portuguese>Marcar em verde</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_TagBlue">
             <English>Tag blue</English>
@@ -36,6 +39,7 @@
             <French>Tag bleu</French>
             <Italian>Marca blu</Italian>
             <Czech>Označit modře</Czech>
+            <Portuguese>Marcar em azul</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -45,6 +49,7 @@
             <French>Peinture pulvérisée noire</French>
             <Italian>Bomboletta spray nera</Italian>
             <Czech>Černý sprej</Czech>
+            <Portuguese>Spray de tinta preta</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -54,6 +59,7 @@
             <French>Peinture pulvérisée rouge</French>
             <Italian>Bomboletta spray rossa</Italian>
             <Czech>Červený sprej</Czech>
+            <Portuguese>Spray de tinta vermelha</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -63,6 +69,7 @@
             <French>Peinture pulvérisée verte</French>
             <Italian>Bomboletta spray verde</Italian>
             <Czech>Zelený sprej</Czech>
+            <Portuguese>Spray de tinta verde</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -72,6 +79,7 @@
             <French>Peinture pulvérisée bleue</French>
             <Italian>Bomboletta spray blu</Italian>
             <Czech>Modrý sprej</Czech>
+            <Portuguese>Spray de tinta azul</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -81,6 +89,7 @@
             <French>Un spray de peinture pour taguer les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
+            <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
         </Key>
     </Package>
 </Project>
