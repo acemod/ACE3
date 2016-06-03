@@ -8,7 +8,7 @@
  * Return value:
  * None
  */
- 
+
 #include "script_component.hpp"
 
 private ["_uuid"];

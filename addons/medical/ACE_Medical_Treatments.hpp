@@ -1366,7 +1366,7 @@ class ACE_Medical_Advanced {
                 timeInSystem = 900;
                 maxDose = 4;
                 inCompatableMedication[] = {};
-                viscosityChange = 10;
+                viscosityChange = -10;
             };
             class Epinephrine {
                 painReduce = 0;

@@ -15,7 +15,7 @@
 
 #include "script_component.hpp"
 
-private ["_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectivenss", "_mostEffectiveInjury", "_impact", "_exit", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
+private ["_openWounds", "_config", "_effectiveness","_mostEffectiveInjury", "_mostEffectiveSpot", "_woundEffectiveness", "_mostEffectiveInjury", "_impact", "_exit", "_classID", "_effectivenessFound", "_className", "_hitPoints", "_hitSelections", "_point", "_woundTreatmentConfig"];
 params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
@@ -44,7 +44,7 @@ _exit = false;
     TRACE_2("OPENWOUND: ", _target, _x);
     // Only parse injuries that are for the selected bodypart.
     if (_partX == _part) then {
-        _woundEffectivenss = _effectiveness;
+        _woundEffectiveness = _effectiveness;
 
         // Select the classname from the wound classname storage
         _className = GVAR(woundClassNames) select _classID;
@@ -54,7 +54,7 @@ _exit = false;
             // Collect the effectiveness from the used bandage for this wound type
             _woundTreatmentConfig = (_config >> _className);
             if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
-                _woundEffectivenss = getNumber (_woundTreatmentConfig >> "effectiveness");
+                _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
         } else {
             ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
@@ -62,15 +62,15 @@ _exit = false;
 
         TRACE_2("Wound classes: ", _specificClass, _classID);
         if (_specificClass == _classID) exitWith {
-            _effectivenessFound = _woundEffectivenss;
+            _effectivenessFound = _woundEffectiveness;
             _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
             _exit = true;
         };
 
         // Check if this is the currently most effective found.
-        if (_woundEffectivenss * ((_x select 4) * (_x select 3)) > _effectivenessFound * ((_mostEffectiveInjury select 4) * (_mostEffectiveInjury select 3))) then {
-            _effectivenessFound = _woundEffectivenss;
+        if (_woundEffectiveness * ((_x select 4) * (_x select 3)) > _effectivenessFound * ((_mostEffectiveInjury select 4) * (_mostEffectiveInjury select 3))) then {
+            _effectivenessFound = _woundEffectiveness;
             _mostEffectiveSpot = _forEachIndex;
             _mostEffectiveInjury = _x;
         };

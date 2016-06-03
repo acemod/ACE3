@@ -51,4 +51,4 @@ if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not ac
     } forEach _syncedObjects;
 
     //Wait to add keys until various gear assigns have finished (~5 seconds)
-}, [_syncedObjects], 5, 1] call EFUNC(common,waitAndExecute);
+}, [_syncedObjects], 5, 1] call CBA_fnc_waitAndExecute;

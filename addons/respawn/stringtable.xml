@@ -260,6 +260,7 @@
             <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
             <Italian>Questo modulo ti consente di usare Punti di Raccolta in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; Respawn ACE</Italian>
             <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
+            <French>Ce module vous permet d'utiliser les "rally points" auxquels vous pouvez vous téléporter rapidement depuis un drapeau à la base. Il nécessite le placement d'objets spéciaux sur la carte - base et drapeau, disponibles dans la catégorie Vide -&gt; ACE Respawn.</French>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>

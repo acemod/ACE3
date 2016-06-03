@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 params ["_arguments", "_pfhHandle"];
-_arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex"];
+_arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_hasBeenAttached"];
 _rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook", "_occupied"];
 private ["_vectorUp", "_vectorDir", "_origin"];
 
@@ -25,7 +25,7 @@ private ["_vectorUp", "_vectorDir", "_origin"];
 if (vehicle _unit != _unit) exitWith {};
 
 //Start fast roping
-if (animationState _unit != "ACE_slidingLoop") exitWith {
+if (getMass _dummy != 80) exitWith {
     //Fix for twitchyness
     _dummy setMass 80;
     _dummy setCenterOfMass [0, 0, -2];
@@ -37,8 +37,15 @@ if (animationState _unit != "ACE_slidingLoop") exitWith {
     ropeUnwind [_ropeBottom, 6, 0.5];
 };
 
-//Check if rope broke and unit is falling
-if (isNull attachedTo _unit) exitWith {
+//Check if the player has been attached to the rope yet
+if (!_hasBeenAttached && {!(isNull attachedTo _unit)}) then {
+    _hasBeenAttached = true;
+    _arguments set [4, true];
+};
+
+//Exit when the unit has been detached and is falling (rope broke, heli flew too fast, etc.)
+//Make sure this isn't executed before the unit is actually fastroping
+if (_hasBeenAttached && {isNull attachedTo _unit}) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 

@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
@@ -10,7 +12,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'ACE_SpottingScope')] call FUNC(place));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\w_spottingscope_ca.paa);
+                    icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
         };
@@ -51,12 +53,15 @@ class CfgVehicles {
         };
     };
     class ACE_SpottingScopeObject: StaticATWeapon {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         side = 1;
         typicalCargo[] = {"Soldier"};
         displayName = CSTRING(DisplayName);
-        model = PATHTOF(data\ace_spottingscope.p3d);
+        model = QPATHTOF(data\ace_spottingscope.p3d);
         mapSize = 0.5;
         transportSoldier = 0;
         getInAction = "GetInLow";
@@ -73,7 +78,7 @@ class CfgVehicles {
                 weapons[] = {};
                 magazines[] = {};
                 gunnerOpticsColor[] = {1,1,1,1};
-                gunnerOpticsmodel = PATHTOF(data\m144_optic.p3d);
+                gunnerOpticsmodel = QPATHTOF(data\m144_optic.p3d);
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
@@ -107,7 +112,7 @@ class CfgVehicles {
             };
         };
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,1,0};
+        EGVAR(dragging,dragPosition)[] = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
@@ -121,7 +126,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_spottingscope_ca.paa);
+                    icon = QPATHTOF(UI\w_spottingscope_ca.paa);
                 };
             };
         };

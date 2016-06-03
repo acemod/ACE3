@@ -12,7 +12,7 @@ class RscTitles {
         class controls {
             class AltimeterImage: RscPicture {
                 idc = 1200;
-                text = PATHTOF(UI\watch_altimeter.paa);
+                text = QPATHTOF(UI\watch_altimeter.paa);
                 x = 0.118437 * safezoneW + safezoneX;
                 y = 0.621 * safezoneH + safezoneY;
                 w = 0.20625 * safezoneW;

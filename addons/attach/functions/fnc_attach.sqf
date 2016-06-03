@@ -51,7 +51,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
 
-    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];

@@ -18,8 +18,12 @@
 
 params ["_objectType", "_typeNum"];
 
-private _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
-private _actionTrees = missionNamespace getVariable [_varName, []];
+private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
+private _actionTrees = _namespace getVariable _objectType;
+if (isNil "_actionTrees") then {
+    _actionTrees = [];
+};
+
 private _parentNode = [_actionTrees, ["ACE_MainActions"]] call FUNC(findActionNode);
 
 if (isNil {_parentNode}) then {

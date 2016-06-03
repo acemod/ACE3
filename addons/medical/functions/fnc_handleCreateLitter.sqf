@@ -29,7 +29,7 @@ _litterObject = _litterClass createVehicleLocal _position;
 _litterObject setDir _direction;
 _litterObject setPosATL _position;
 // Move the litter next frame to get rid of HORRIBLE spacing, fixes #1112
-[{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call EFUNC(common,execNextFrame);
+[{ params ["_object", "_pos"]; _object setPosATL _pos; }, [_litterObject, _position]] call CBA_fnc_execNextFrame;
 
 _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QGVAR(litterSimulationDetail) >> "_values") select GVAR(litterSimulationDetail);
 if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
@@ -41,25 +41,10 @@ if((count GVAR(allCreatedLitter)) > _maxLitterCount ) then {
     } forEach (_oldLitter select 1);
 };
 
-GVAR(allCreatedLitter) pushBack [ACE_time, [_litterObject]];
+GVAR(allCreatedLitter) pushBack [CBA_missionTime, [_litterObject]];
 
 if(!GVAR(litterPFHRunning) && {GVAR(litterCleanUpDelay) > 0}) then {
+    // Start the litter cleanup loop
     GVAR(litterPFHRunning) = true;
-    [{
-        {
-            _x params ["_time", "_objects"];
-            if (ACE_time - _time >= GVAR(litterCleanUpDelay)) then {
-                {
-                    deleteVehicle _x;
-                } forEach _objects;
-                GVAR(allCreatedLitter) set[_forEachIndex, objNull];
-            };
-        } forEach GVAR(allCreatedLitter);
-        GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
-
-        if ( (count GVAR(allCreatedLitter)) == 0) exitWith {
-            [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-            GVAR(litterPFHRunning) = false;
-        };
-    }, 30, []] call CBA_fnc_addPerFrameHandler;
+    call FUNC(litterCleanupLoop);
 };

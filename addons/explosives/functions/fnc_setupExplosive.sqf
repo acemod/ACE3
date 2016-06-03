@@ -141,10 +141,10 @@ GVAR(TweakedAngle) = 0;
     //Don't allow placing in a bad position:
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
-    if (((inputAction "zoomTemp") > 0) || //Cancel on RMB, For some reason this works (when held) but AddActionEventHandler doesn't
-            {_unit != ACE_player} ||
-            {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
-            {!(_magClassname in (magazines _unit))}) then {
+    if (_unit != ACE_player ||
+        {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
+        {!(_magClassname in (magazines _unit))}
+    ) then {
         GVAR(placeAction) = PLACE_CANCEL;
     };
 
@@ -187,7 +187,7 @@ GVAR(TweakedAngle) = 0;
             _unit removeMagazine _magClassname;
             _unit playActionNow "PutDown";
             _unit setVariable [QGVAR(PlantingExplosive), true];
-            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
+            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
         };
     } else {

@@ -16,7 +16,7 @@ _closeCode = {
     if (GVAR(currentShowMode) == DISPLAY_MODE_CLOSED) exitWith {};
     [DISPLAY_MODE_CLOSED] call FUNC(openDisplay);
 };
-[(localize LSTRING(itemName)), QUOTE(PATHTOF(images\microDAGR_item.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(itemName)), QPATHTOF(images\microDAGR_item.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
 
 
 //Add Eventhandler:

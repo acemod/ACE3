@@ -34,7 +34,7 @@ if (!isServer) exitWith {false};
         if (_globalEventTTL isEqualType {}) then {
             _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
         } else {
-            _ttlReturn = call {_globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL}};
+            _ttlReturn = call {_globalEventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _globalEventTTL}};
         };
 
         if (_ttlReturn) then {
@@ -44,7 +44,7 @@ if (!isServer) exitWith {false};
             if (_eventTTL isEqualType {}) then {
                 _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
             } else {
-                _ttlReturn = call {_eventTTL < 1 || {ACE_diagTime < _time + _eventTTL}};
+                _ttlReturn = call {_eventTTL < 1 || {diag_tickTime < _time + _eventTTL}};
             };
         };
 

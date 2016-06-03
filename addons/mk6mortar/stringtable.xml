@@ -149,6 +149,8 @@
             <German>Aktiviere Munitionshandhabung</German>
             <Spanish>Usar manejo de munición.</Spanish>
             <Polish>Aktywuj obsługę amunicji</Polish>
+            <French>Utiliser la gestion des munitions</French>
+            <Italian>Utilizza la gestione delle munizioni</Italian>
             <Portuguese>Usar manejo de munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
@@ -156,6 +158,8 @@
             <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
             <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
+            <French>Enlever les chargeurs de mortier, requiert des obus individuels qui doivent être chargés par le tireur ou le servant. N'affect pas les mortiers IA.</French>
+            <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
@@ -163,6 +167,9 @@
             <German>Entferne Patrone</German>
             <Spanish>Extraer ronda</Spanish>
             <Polish>Wyładuj pocisk</Polish>
+            <French>Enlever l'obus</French>
+            <Italian>Togli proiettile</Italian>
+            <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
@@ -170,6 +177,9 @@
             <German>Lade Mörser</German>
             <Spanish>Cargar mortero</Spanish>
             <Polish>Załaduj moździerz</Polish>
+            <French>Charger le mortier</French>
+            <Italian>Carica mortaio</Italian>
+            <Czech>Nabít minomet</Czech>
             <Portuguese>Carregar morteiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
@@ -177,6 +187,8 @@
             <German>Mörser entladen</German>
             <Spanish>Descargando ronda</Spanish>
             <Polish>Rozładowywanie moździerza</Polish>
+            <French>Déchargement de l'obus</French>
+            <Italian>Scarica proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
@@ -184,6 +196,9 @@
             <German>Patrone vorbereiten</German>
             <Spanish>Preparando ronda</Spanish>
             <Polish>Przygotowywanie pocisku</Polish>
+            <French>Praparation de l'obus</French>
+            <Italian>Prepara il proiettile</Italian>
+            <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
@@ -191,6 +206,9 @@
             <German>Lade Sprengpatrone</German>
             <Spanish>Cargar HE</Spanish>
             <Polish>Załaduj pocisk wybuchowy</Polish>
+            <French>Charger HE</French>
+            <Italian>Carica proiettile esplosivo ad alto potenziale (HE)</Italian>
+            <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
@@ -198,6 +216,9 @@
             <German>Lade Nebelpatrone</German>
             <Spanish>Cargar Humo</Spanish>
             <Polish>Załaduj pocisk dymny</Polish>
+            <French>Charger Fumigène</French>
+            <Italian>Carica fumogeno</Italian>
+            <Czech>Nabít Dýmovnici</Czech>
             <Portuguese>Carregar Fumaça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
@@ -205,6 +226,9 @@
             <German>Lade Leuchtpatrone</German>
             <Spanish>Cargar Iluminación</Spanish>
             <Polish>Załaduj pocisk oświetlający</Polish>
+            <French>Charger Eclairante</French>
+            <Italian>Carica illuminante</Italian>
+            <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
@@ -212,6 +236,9 @@
             <German>Lade gelenkte Sprengpatrone</German>
             <Spanish>Cagar HE Guiada</Spanish>
             <Polish>Załaduj kierowany pocisk wybuchowy</Polish>
+            <French>Charger HE guidé</French>
+            <Italian>Carica HE guidata</Italian>
+            <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
@@ -219,6 +246,9 @@
             <German>Lade lasergelenkte Sprengpatrone</German>
             <Spanish>Cargar HE Guiada por Laser</Spanish>
             <Polish>Załaduj laserowo napr. pocisk wybuchowy</Polish>
+            <French>Charger HE guidé au laser</French>
+            <Italian>Carica HE a guida laser</Italian>
+            <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
@@ -226,6 +256,9 @@
             <German>82mm Sprengpatrone</German>
             <Spanish>Ronda 82mm HE</Spanish>
             <Polish>Pocisk wybuchowy kal. 82mm</Polish>
+            <French>Obus de 82mm HE</French>
+            <Italian>Proiettile da 82mm HE</Italian>
+            <Czech>82mm HE náboj</Czech>
             <Portuguese>Munição 82mm HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
@@ -233,6 +266,9 @@
             <German>82mm Nebelpatrone</German>
             <Spanish>Ronda 82mm Humo</Spanish>
             <Polish>Pocisk dymny kal. 82mm</Polish>
+            <French>Obus de 82mm fumigène</French>
+            <Italian>Proiettile Fumogeno da 82mm</Italian>
+            <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
@@ -240,6 +276,9 @@
             <German>82mm Leuchtpatrone</German>
             <Spanish>Ronda 82mm Iluminación</Spanish>
             <Polish>Pocisk oświetlający kal. 82mm</Polish>
+            <French>Obus de 82mm éclairant</French>
+            <Italian>Proiettile illuminante da 82mm</Italian>
+            <Czech>82mm Osvětlovací náboj</Czech>
             <Portuguese>Munição 82mm Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
@@ -247,6 +286,9 @@
             <German>82mm gelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada</Spanish>
             <Polish>Kierowany pocisk wybuchowy kal. 82mm</Polish>
+            <French>Obus de 82mm HE guidé</French>
+            <Italian>Proiettile HE guidato</Italian>
+            <Czech>82mm HE náboj (naváděný)</Czech>
             <Portuguese>Munição 82mm HE Guiada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
@@ -254,6 +296,9 @@
             <German>82mm lasergelenkte Sprengpatrone</German>
             <Spanish>Ronda 82mm Guiada por Laser</Spanish>
             <Polish>Laserowo napr. pocisk wybuchowy kal. 82mm</Polish>
+            <French>Obus de 82mm HE guidé au laser</French>
+            <Italian>Proiettile HE a guida laser</Italian>
+            <Czech>82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
@@ -261,6 +306,9 @@
             <German>Wird im Mk6 Mörser verwendet</German>
             <Spanish>Usada en el mortero Mk6</Spanish>
             <Polish>Używany w moździerzu Mk6</Polish>
+            <French>Utilisé dans le mortier Mk6</French>
+            <Italian>Usato nel mortaio Mk6</Italian>
+            <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
@@ -268,6 +316,9 @@
             <German>[ACE] 82mm Sprengpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm HE</Spanish>
             <Polish>[ACE] Skrzynka amunicji wybuchowej 82mm</Polish>
+            <French>[ACE] Obus de 82mm HE</French>
+            <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
+            <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
@@ -275,6 +326,9 @@
             <German>[ACE] 82mm Nebelpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Humo</Spanish>
             <Polish>[ACE] Skrzynka amunicji dymnej 82mm</Polish>
+            <French>[ACE] Obus de 82mm fumigène</French>
+            <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
+            <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
@@ -282,6 +336,9 @@
             <German>[ACE] 82mm Leuchtpatronenkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm Iluminacion</Spanish>
             <Polish>[ACE] Skrzynka amunicji oświetlającej 82mm</Polish>
+            <French>[ACE] Obus de 82mm éclairants</French>
+            <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
+            <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
@@ -289,6 +346,9 @@
             <German>[ACE] 82mm Standardkiste</German>
             <Spanish>[ACE] Caja de municiones 82mm por defecto</Spanish>
             <Polish>[ACE] Skrzynka amunicji standardowej 82mm</Polish>
+            <French>[ACE] Obus de 82mm par défaut</French>
+            <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
+            <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
         </Key>
     </Package>

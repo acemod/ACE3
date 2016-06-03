@@ -22,9 +22,6 @@
  */
 #include "script_component.hpp"
 
-// Only run if combat deafness is enabled
-if (!GVAR(EnableCombatDeafness)) exitWith {};
-
 params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 
 //Only run if firedNear object is player or player's vehicle:

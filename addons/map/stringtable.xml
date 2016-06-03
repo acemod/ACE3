@@ -45,6 +45,7 @@
             <Spanish>Resplandor de linterna en el mapa?</Spanish>
             <Czech>Nasvícení mapy pomocí baterky?</Czech>
             <Italian>Luce della torcia in mappa?</Italian>
+            <French>Lumière de la lampe de carte</French>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -360,6 +361,7 @@
             <Czech>Zvolit kanál po startu</Czech>
             <Italian>Imposta Canale all'Avvio</Italian>
             <Spanish>Setear canal al comenzar</Spanish>
+            <French>Définir le canal de départ</French>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -370,6 +372,7 @@
             <Czech>Nastavit kanál po startu mise</Czech>
             <Italian>Cambia il canale marker iniziale all'avvio di missione</Italian>
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
+            <French>Changer le marqueur du canal de départ au départ de la mission</French>
         </Key>
     </Package>
 </Project>

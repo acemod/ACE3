@@ -11,52 +11,52 @@ onSetup parameters:
     class Command {
         isAttachable = 1;
         displayName = CSTRING(clacker_displayName);
-        picture = PATHTOF(Data\UI\Clacker.paa);
+        picture = QPATHTOF(Data\UI\Clacker.paa);
         onPlace = QUOTE(_this call FUNC(AddClacker);false);
         requires[] = {"ACE_Clacker"};
     };
     class MK16_Transmitter: Command {
         isAttachable = 1;
         displayName = CSTRING(M152_displayName);
-        picture = PATHTOF(Data\UI\MK16_Reciever_ca.paa);
+        picture = QPATHTOF(Data\UI\MK16_Reciever_ca.paa);
         requires[] = {"ACE_M26_Clacker"};
     };
     class DeadManSwitch: Command {
         isAttachable = 1;
         displayName = CSTRING(DeadManSwitch_displayName);
-        picture = PATHTOF(Data\UI\DeadmanSwitch.paa);
+        picture = QPATHTOF(Data\UI\DeadmanSwitch.paa);
         requires[] = {"ACE_DeadManSwitch"};
     };
     class Cellphone: Command {
         isAttachable = 1;
         displayName = CSTRING(cellphone_displayName);
-        picture = PATHTOF(Data\UI\Cellphone_UI.paa);
+        picture = QPATHTOF(Data\UI\Cellphone_UI.paa);
         onPlace = QUOTE(_this call FUNC(addCellphoneIED);false);
         requires[] = {"ACE_Cellphone"};
     };
     class PressurePlate {
         isAttachable = 0;
         displayName = CSTRING(PressurePlate);
-        picture = PATHTOF(Data\UI\PressurePlate.paa);
+        picture = QPATHTOF(Data\UI\PressurePlate.paa);
         onPlace = QUOTE(false);
     };
     class IRSensor {
         isAttachable = 0;
         displayName = CSTRING(IRSensor);
-        picture = PATHTOF(Data\UI\PressurePlate.paa);
+        picture = QPATHTOF(Data\UI\PressurePlate.paa);
         onPlace = "false";
     };
     class Timer {
         isAttachable = 1;
         displayName = CSTRING(timerName);
-        picture = PATHTOF(data\UI\Timer.paa);
+        picture = QPATHTOF(data\UI\Timer.paa);
         onPlace = QUOTE([ARR_2(_this select 1,(_this select 3) select 0)] call FUNC(startTimer);false);
         onSetup = QUOTE(_this call FUNC(openTimerSetUI);true);
     };
     class Tripwire {
         isAttachable = 0;
         displayName = CSTRING(TripWire);
-        picture = PATHTOF(Data\UI\Tripwire.paa);
+        picture = QPATHTOF(Data\UI\Tripwire.paa);
         onPlace = "false";
     };
 };

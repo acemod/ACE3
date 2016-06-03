@@ -81,7 +81,7 @@ class CfgAmmo {
 
     class ACE_G_M84: SmokeShell {
         GVAR(flashbang) = 1;
-        model = PATHTOF(models\ACE_m84_thrown.p3d);
+        model = QPATHTOF(models\ACE_m84_thrown.p3d);
         dangerRadiusHit = -1;
         suppressionRadiusHit = 20;
         typicalSpeed = 22;

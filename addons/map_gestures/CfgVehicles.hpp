@@ -8,7 +8,7 @@ class CfgVehicles {
         isGlobal = 0;
         isSingular = 1;
         author = ECSTRING(common,ACETeam);
-        icon = PATHTOF(ui\icon_module_map_gestures_ca.paa);
+        icon = QPATHTOF(ui\icon_module_map_gestures_ca.paa);
         class Arguments {
             class enabled {
                 displayName = CSTRING(enabled_DisplayName);
@@ -49,7 +49,7 @@ class CfgVehicles {
         function = QFUNC(moduleGroupSettings);
         isGlobal = 0;
         author = ECSTRING(common,ACETeam);
-        icon = PATHTOF(ui\icon_module_map_gestures_ca.paa);
+        icon = QPATHTOF(ui\icon_module_map_gestures_ca.paa);
         class Arguments {
             class leadColor {
                 displayName = CSTRING(leadColor_displayName);

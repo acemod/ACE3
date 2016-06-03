@@ -130,13 +130,13 @@ if (_parachuteCheck) then {
 
 if (!local _unit) exitWith {
     TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _args, _startingTime, _minWaitingTime, _idPFH, _unit getVariable QGVAR(unconsciousArguments));
-    _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
+    _args set [3, _minWaitingTime - (CBA_missionTime - _startingTime)];
     _unit setVariable [QGVAR(unconsciousArguments), _args, true];
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-if ((ACE_time - _startingTime) >= _minWaitingTime) exitWith {
+if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setVariable ["ACE_isUnconscious", false, true];

@@ -20,7 +20,7 @@ params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
 if (isPlayer _target) then {
     // Pass request on to target locality for player accept/decline.
-    [[_caller, _target, _requestID, _requestMessage, _callBack], QFUNC(receiveRequest), _target, false] call FUNC(execRemoteFnc);
+    [QGVAR(receiveRequest), _target, [_caller, _target, _requestID, _requestMessage, _callBack]] call FUNC(objectEvent);
 } else {
     // accept it, since it's an AI.
     [_caller, _target, true] call compile _callBack;

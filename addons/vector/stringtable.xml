@@ -1,7 +1,19 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vector">
         <Key ID="STR_ACE_Vector_VectorName">
+            <English>Vector 21 Nite</English>
+            <German>Vector 21 Nite</German>
+            <Spanish>Vector 21 Nite</Spanish>
+            <French>Vector 21 Nite</French>
+            <Polish>Vector 21 Nite</Polish>
+            <Czech>Vector 21 Nite</Czech>
+            <Italian>Vector 21 Nite</Italian>
+            <Hungarian>Vector 21 Nite</Hungarian>
+            <Portuguese>Vector 21 Nite</Portuguese>
+            <Russian>Vector 21 Nite</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
             <German>Vector 21</German>
             <Spanish>Vector 21</Spanish>

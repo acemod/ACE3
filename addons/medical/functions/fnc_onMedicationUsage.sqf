@@ -77,22 +77,5 @@ if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
 _decreaseAmount = 1 / _timeInSystem;
 _viscosityAdjustment = _viscosityChange / _timeInSystem;
 
-[{
-    params ["_args", "_idPFH"];
-    _args params ["_target", "_timeInSystem", "_variable", "_amountDecreased","_decreaseAmount", "_viscosityAdjustment", "_painReduce"];
-    private "_usedMeds";
-    _usedMeds = _target getVariable [_variable, 0];
-    _usedMeds = _usedMeds - _decreaseAmount;
-    _target setVariable [_variable, _usedMeds];
-
-    _amountDecreased = _amountDecreased + _decreaseAmount;
-
-    // Restoring the viscosity while the medication is leaving the system
-    _target setVariable [QGVAR(peripheralResistance), ((_target getVariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment) max 0];
-    _target setVariable [QGVAR(painSuppress), ((_target getVariable [QGVAR(painSuppress), 0]) - _painReduce) max 0];
-
-    if (_amountDecreased >= 1 || (_usedMeds <= 0) || !alive _target) then {
-        [_idPFH] call CBA_fnc_removePerFrameHandler;
-    };
-    _args set [3, _amountDecreased];
-}, 1, [_target, _timeInSystem, _variable, 0, _decreaseAmount, _viscosityAdjustment, _painReduce / _timeInSystem] ] call CBA_fnc_addPerFrameHandler;
+// Run the loop that computes the effect of the medication over time
+[_target, _variable, 0, _decreaseAmount, _viscosityAdjustment, _painReduce / _timeInSystem] call FUNC(medicationEffectLoop);

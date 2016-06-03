@@ -16,11 +16,3 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE( call COMPILE_FILE(XEH_postInit) );
     };
 };
-
-class Extended_Take_EventHandlers {
-    class CAManBase {
-        class GVAR(UnjamReload) {
-            clientTake = QUOTE( _this call FUNC(handleTakeEH) );
-        };
-    };
-};

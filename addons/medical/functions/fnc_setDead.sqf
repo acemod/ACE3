@@ -38,44 +38,11 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     };
 
     _unit setVariable [QGVAR(inReviveState), true, true];
-    _unit setVariable [QGVAR(reviveStartTime), ACE_time];
+    _unit setVariable [QGVAR(reviveStartTime), CBA_missionTime];
     [_unit, true] call FUNC(setUnconscious);
 
-    [{
-        private "_startTime";
-        params ["_args", "_idPFH"];
-        _args params ["_unit"];
-        _startTime = _unit getVariable [QGVAR(reviveStartTime), 0];
-
-        //If we are in reivie state in a blown up vehicle, try to unload so that people can access the body
-        if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) then {
-            TRACE_2("Unloading", _unit, vehicle _unit);
-            [_unit] call EFUNC(common,unloadPerson);
-        };
-
-        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
-            _unit setVariable [QGVAR(inReviveState), nil, true];
-            _unit setVariable [QGVAR(reviveStartTime), nil];
-            [_unit, true] call FUNC(setDead);
-        };
-
-        if !(_unit getVariable [QGVAR(inReviveState), false]) exitwith {
-            // revived without dieing, so in case we have lifes, remove one.
-            if (GVAR(amountOfReviveLives) > 0) then {
-                _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
-                _unit setVariable [QGVAR(amountOfReviveLives), _lifesLeft - 1, true];
-            };
-
-            _unit setVariable [QGVAR(reviveStartTime), nil];
-            [_idPFH] call CBA_fnc_removePerFrameHandler;
-        };
-        if (GVAR(level) >= 2) then {
-            if (_unit getVariable [QGVAR(heartRate), 60] > 0) then {
-                _unit setVariable [QGVAR(heartRate), 0];
-            };
-        };
-    }, 1, [_unit] ] call CBA_fnc_addPerFrameHandler;
+    // Run the loop that tracks the revive state
+    [_unit ] call FUNC(reviveStateLoop);
     false;
 };
 
@@ -92,7 +59,7 @@ if (isPLayer _unit) then {
 if (!_delaySetDamage) then {
     [_unit, 1] call FUNC(setStructuralDamage);
 } else {
-    [FUNC(setStructuralDamage), [_unit, 1]] call EFUNC(common,execNextFrame);
+    [FUNC(setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
 };
 
 true;
