@@ -2,7 +2,7 @@
 class CfgWeapons {
     class GrenadeLauncher;
     class Throw: GrenadeLauncher {
-        muzzles[] += {"ACE_Chemlight_OrangeMuzzle","ACE_Chemlight_WhiteMuzzle","ACE_Chemlight_HiRedMuzzle","ACE_Chemlight_HiYellowMuzzle","ACE_Chemlight_HiOrangeMuzzle","ACE_Chemlight_HiWhiteMuzzle","ACE_Chemlight_HiRedMuzzle","ACE_Chemlight_IRMuzzle"};
+        muzzles[] += {"ACE_Chemlight_OrangeMuzzle","ACE_Chemlight_WhiteMuzzle","ACE_Chemlight_HiRedMuzzle","ACE_Chemlight_HiYellowMuzzle","ACE_Chemlight_HiOrangeMuzzle","ACE_Chemlight_HiWhiteMuzzle","ACE_Chemlight_IRMuzzle"};
 
         class ThrowMuzzle;
         

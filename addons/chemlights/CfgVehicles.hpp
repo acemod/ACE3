@@ -51,11 +51,11 @@ class CfgVehicles {
     };
     
     class ACE_Chemlight_IR_X: ThingX {
+        ACE_Pickup = "ACE_Chemlight_IR";
         author = ECSTRING(common,ACETeam);
         displayName = "ACE Chemlight IR Phys Dummy";
         mass = 1;
         model = "\A3\Weapons_f\chemlight\chemlight_blue";
-        //model = "\A3\Weapons_f\DummyItem.p3d";
         scope = 2;
         vehicleClass = "";
     };

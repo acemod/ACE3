@@ -9,10 +9,11 @@
  * Nothing
  *
  * Example:
- * [0] call ace_logistics_wirecutter_fnc_interactEH
+ * [0] call ace_chemlights_fnc_interactEH
  *
  * Public: Yes
  */
+
 #include "script_component.hpp"
 
 params ["_interactionType"];
@@ -20,48 +21,47 @@ params ["_interactionType"];
 //Ignore self-interaction menu or mounted vehicle interaction
 if ((_interactionType != 0) || {(vehicle ACE_player) != ACE_player}) exitWith {};
 
-TRACE_1("Starting wire-cut action PFEH",_interactionType);
-
 [{
-    private ["_fncStatement", "_attachedFence", "_fncCondition", "_helper", "_action"];
-    params ["_args", "_pfID"];
-    _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
+    params ["_args", "_eh"];
+    _args params ["_setPosition", "_addedHelpers", "_chemlightsHelped"];
+    private ["_statement", "_condition", "_attachedChemlight", "_helper", "_action", "_objects"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
         {deleteVehicle _x; nil} count _addedHelpers;
-        [_pfID] call CBA_fnc_removePerFrameHandler;
+        [_eh] call CBA_fnc_removePerFrameHandler;
     } else {
+
         // Prevent Rare Error when ending mission with interact key down:
-        if (isNull ace_player) exitWith {};
+        if (isNull ACE_player) exitWith {};
 
         //If player moved >5 meters from last pos, then rescan
-        if (((getPosASL ace_player) distance _setPosition) > 5) then {
+        if (((getPosASL ACE_player) distance _setPosition) > 5) then {
 
-            _fncStatement = {
-                params ["", "_player", "_attachedFence"];
-                [_player, _attachedFence] call FUNC(cutDownFence);
+            _statement = {
+                params ["", "_player", "_attachedChemlight"];
+                [_player, _attachedChemlight] call FUNC(pickUp);
             };
-            _fncCondition = {
-                params ["", "_player", "_attachedFence"];
-                if (!([_player, _attachedFence, []] call EFUNC(common,canInteractWith))) exitWith {false};
-                ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))})
+            
+            _condition = {
+                params ["", "_player", "_attachedChemlight"];
+                ([_player, _attachedChemlight, []] call EFUNC(common,canInteractWith)) && {!isNull _attachedChemlight} && {isNull attachedTo _attachedChemlight}
             };
 
+            _objects = (ACE_player nearObjects ["Chemlight_base", 1.75]);
+            _objects append (nearestObjects [ACE_player, ["ACE_Chemlight_IR_X"], 1.75]);
             {
-                if (!(_x in _fencesHelped)) then {
-                    if ([_x] call FUNC(isFence)) then {
-                        _fencesHelped pushBack _x;
-                        _helper = "ACE_LogicDummy" createVehicleLocal (getpos _x);
-                        _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QUOTE(PATHTOF(ui\wirecutter_ca.paa)), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5] call EFUNC(interact_menu,createAction);
-                        [_helper, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
-                        _helper setPosASL ((getPosASL _x) vectorAdd [0,0,1.25]);
-                        _addedHelpers pushBack _helper;
-                    };
+                if !(_x in _chemlightsHelped) then {
+                    _chemlightsHelped pushBack _x;
+                    _helper = "ACE_LogicDummy" createVehicleLocal [0,0,0];
+                    _helper setPosASL (getPosASL _x);
+                    _action = [QGVAR(helperChemlight), localize LSTRING(Action_PickUp), "\A3\ui_f\data\IGUI\Cfg\Actions\Obsolete\ui_action_takemine_ca.paa", _statement, _condition, {}, _x, {[0,0,0]}, 1.75] call EFUNC(interact_menu,createAction);
+                    [_helper, 0, [], _action] call EFUNC(interact_menu,addActionToObject);
+                    _addedHelpers pushBack _helper;
                 };
                 nil
-            } count nearestObjects [ace_player, [], 15];
+            } count _objects;
 
-            _args set [0, (getPosASL ace_player)];
+            _args set [0, (getPosASL ACE_player)];
         };
     };
-}, 0.1, [((getPosASL ace_player) vectorAdd [-100,0,0]), [], []]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [((getPosASL ACE_player) vectorAdd [-100,0,0]), [], []]] call CBA_fnc_addPerFrameHandler;

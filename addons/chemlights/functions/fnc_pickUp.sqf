@@ -18,13 +18,19 @@
 #include "script_component.hpp"
 
 params ["_unit", "_chemlight"];
-private ["_objects", "_dummy"];
+private ["_class", "_ammoType"];
 
-_objects = attachedObjects _chemlight;
+_class = typeOf _chemlight;
+_ammoType = if (_class isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]) then {
+    getText (configFile >> "CfgAmmo" >> _class >> "ACE_Pickup")
+} else {
+    getText (configFile >> "CfgVehicles" >> _class >> "ACE_Pickup")
+};
 
-if (count _objects > 0) then {
-    _dummy = _objects select 0;
-}:
+{
+    detach _x;
+    deleteVehicle _x;
+} forEach (attachedObjects _chemlight);
 
-[_projectile, _dummy] call FUNC(expireChemlight);
-[_unit, _dummy] call EFUNC(common,addToInventory);
+[_chemlight, objNull] call FUNC(removeIR);
+[_unit, _ammoType] call EFUNC(common,addToInventory);
