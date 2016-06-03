@@ -18,7 +18,7 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 class ACE_newEvents {
-    medical_onUnconscious = "ace_medical_onUnconscious";
+    medical_onUnconscious = QEGVAR(medical,unconscious);
     playerVehicleChanged = "ace_playerVehicleChanged";
     playerInventoryChanged = "ace_playerInventoryChanged";
     playerChanged = "ace_playerChanged";

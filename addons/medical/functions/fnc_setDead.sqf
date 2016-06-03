@@ -51,7 +51,7 @@ if (isPLayer _unit) then {
     _unit setVariable ["isDeadPlayer", true, true];
 };
 
-["ace_medical_onSetDead", [_unit]] call CBA_fnc_localEvent;
+[QGVAR(killed), [_unit]] call CBA_fnc_localEvent;
 
 //Delay a frame before killing the unit via scripted damage
 //to avoid triggering the "Killed" Event twice (and having the wrong killer)

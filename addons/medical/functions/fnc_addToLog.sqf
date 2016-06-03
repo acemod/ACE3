@@ -43,7 +43,7 @@ if (count _log >= 8) then {
 _log pushBack [_message, _moment, _type, _arguments];
 
 _unit setVariable [_logVarName, _log, true];
-["ace_medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call CBA_fnc_localEvent;
+[QGVAR(logEntryAdded), [_unit, _type, _message, _arguments]] call CBA_fnc_localEvent;
 
 _logs = _unit getVariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {

@@ -122,4 +122,4 @@ _startingTime = CBA_missionTime;
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
-["ace_medical_onUnconscious", [_unit, true]] call CBA_fnc_globalEvent;
+[QGVAR(unconscious), [_unit, true]] call CBA_fnc_globalEvent;

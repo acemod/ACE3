@@ -21,6 +21,6 @@ GVAR(currentAngle) = 0;
 ["ace_playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // handle falling unconscious
-["ace_medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,unconscious), {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 // @todo captivity?

@@ -41,7 +41,7 @@ GVAR(ParsedTextCached) = [];
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
-["ace_medical_onUnconscious", {
+[QEGVAR(medical,unconscious), {
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 

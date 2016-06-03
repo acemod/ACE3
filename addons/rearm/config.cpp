@@ -22,5 +22,5 @@ class CfgPatches {
 
 class ACE_newEvents {
     playerVehicleChanged = "ace_playerVehicleChanged";
-    medical_onUnconscious = "ace_medical_onUnconscious";
+    medical_onUnconscious = QEGVAR(medical,unconscious);
 };

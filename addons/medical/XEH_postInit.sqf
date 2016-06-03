@@ -6,8 +6,6 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-["ace_medical_propagateWound", FUNC(onPropagateWound)] call CBA_fnc_addEventHandler;
-["ace_medical_woundUpdateRequest", FUNC(onWoundUpdateRequest)] call CBA_fnc_addEventHandler;
 ["ace_interactMenuClosed", {[objNull, false] call FUNC(displayPatientInformation); }] call CBA_fnc_addEventHandler;
 
 //Treatment EventHandlers:
@@ -31,9 +29,9 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 ["ace_actionPlaceInBodyBag", FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
 //Handle Deleting Bodies on Server:
-if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;}; 
+if (isServer) then {[QGVAR(playedInBodyBag), FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
 
-["ace_medical_onUnconscious", {
+[QGVAR(unconscious), {
     params ["_unit", "_status"];
     if (local _unit) then {
         if (_status) then {

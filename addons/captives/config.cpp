@@ -22,7 +22,7 @@ class CfgPatches {
 
 class ACE_newEvents {
     SettingsInitialized = "ace_settingsInitialized";
-    medical_onUnconscious = "ace_medical_onUnconscious";
+    medical_onUnconscious = QEGVAR(medical,unconscious);
     SetSurrendered = QGVAR(setSurrendered);
     SetHandcuffed = QGVAR(setHandcuffed);
     MoveOutCaptive = QGVAR(moveOutCaptive);

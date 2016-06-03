@@ -26,9 +26,14 @@ class CfgPatches {
 #include "UI\triagecard.hpp"
 
 class ACE_newEvents {
-    medical_onUnconscious = "ace_medical_onUnconscious";
-    playerInventoryChanged = "ace_playerInventoryChanged";
-    placedInBodyBag = "ace_placedInBodyBag";
+    medical_onUnconscious = QGVAR(unconscious);
+    medical_treatmentSuccess = QGVAR(treatmentSuccess);
+    medical_onSetDead = QGVAR(killed);
+    Medical_onEnteredCardiacArrest = QGVAR(enteredCardiacArrest);
+    Medical_onItemAddedToTriageCard = QGVAR(itemAddedToTriageCard);
+    medical_onLogEntryAdded = QGVAR(logEntryAdded);
+    Medical_onHeartRateAdjustmentAdded = QGVAR(addedHeartRateAdjustment);
+    placedInBodyBag = QGVAR(playedInBodyBag);
     actionPlaceInBodyBag = "ace_actionPlaceInBodyBag";
     treatmentTourniquetLocal = "ace_treatmentTourniquetLocal";
     treatmentIVLocal = "ace_treatmentIVLocal";
@@ -47,18 +52,5 @@ class ACE_newEvents {
     addToInjuredCollection = "ace_addToInjuredCollection";
     actionCheckPulseLocal = "ace_actionCheckPulseLocal";
     actionCheckBloodPressureLocal = "ace_actionCheckBloodPressureLocal";
-    interactMenuClosed = "ace_interactMenuClosed";
-    medical_woundUpdateRequest = "ace_medical_woundUpdateRequest";
-    medical_propagateWound = "ace_medical_propagateWound";
-    useItem = "ace_useItem";
-    medical_treatmentSuccess = "ace_medical_treatmentSuccess";
-    displayTextStructured = "ace_displayTextStructured";
-    medical_onSetDead = "ace_medical_onSetDead";
-    Medical_onEnteredCardiacArrest = "ace_medical_onEnteredCardiacArrest";
-    hideObjectGlobal = "ace_hideObjectGlobal";
     addVitalLoop = "ace_addVitalLoop";
-    Medical_onItemAddedToTriageCard = "ace_medical_onItemAddedToTriageCard";
-    medical_onLogEntryAdded = "ace_medical_onLogEntryAdded";
-    Medical_onHeartRateAdjustmentAdded = "ace_medical_onHeartRateAdjustmentAdded";
-    unloadPersonEvent = "ace_unloadPersonEvent";
 };
