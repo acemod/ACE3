@@ -33,7 +33,7 @@ class CfgVehicles {
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(ACE_Item_SpottingScope,2);
+            MACRO_ADDITEM(ACE_SpottingScope,2);
         };
     };
 
@@ -116,7 +116,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         class ACE_Actions: ACE_Actions{
             class ACE_MainActions: ACE_MainActions {
-                selection = "osaveze";
+                selection = "main_turret";
                 class ACE_Pickup {
                     selection = "";
                     displayName = CSTRING(PickUp);
