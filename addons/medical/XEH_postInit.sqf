@@ -29,7 +29,7 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
 //Handle Deleting Bodies on Server:
-if (isServer) then {["ace_playedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
+if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
@@ -295,7 +295,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 ["ace_playerInventoryChanged", FUNC(itemCheck)] call CBA_fnc_addEventHandler;
 
 if (hasInterface) then {
-    ["PlayerJip", {
+    ["ace_playerJIP", {
         ACE_LOGINFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call CBA_fnc_addEventHandler;

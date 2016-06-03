@@ -89,7 +89,7 @@ if (isServer) then {
 
 
 // Event to log Fix Headbug output
-["HeadbugFixUsed", {
+[QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
     ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
@@ -129,8 +129,8 @@ if (isServer) then {
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    ["ace_hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
-    ["ace_enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(hideObjectGlobal), {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
@@ -143,16 +143,16 @@ if (isServer) then {
 // Synced ACE events
 // Handle JIP scenario
 if (!isServer) then {
-    ["PlayerJip", {
+    ["ace_playerJIP", {
         ACE_LOGINFO("JIP event synchronization initialized");
-        ["ace_SEH_all", [player]] call CBA_fnc_serverEvent;
+        [QGVAR(SEH_all), [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
-    ["ace_SEH_all", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
+    [QGVAR(SEH_all), FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-["ace_SEH", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
-["ace_SEH_s", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
+[QGVAR(SEH), FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+[QGVAR(SEH_s), FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
@@ -221,7 +221,7 @@ call FUNC(checkFiles);
         [] call FUNC(readSettingsFromParamsArray);
     };
     // Event so that ACE_Modules have their settings loaded:
-    ["ace_initSettingsFromModules", []] call CBA_fnc_localEvent;
+    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
 
     if (isServer) then {
         // Publish all settings data after all configs and modules are read
@@ -284,7 +284,7 @@ enableCamShake true;
 //////////////////////////////////////////////////
 
 // Set the name for the current player
-["playerChanged", {
+["ace_playerChanged", {
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
@@ -475,7 +475,7 @@ if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!isNull player && GVAR(settingsInitFinished)) then {
-            ["ace_playerJip", [player]] call CBA_fnc_localEvent;
+            ["ace_playerJIP", [player]] call CBA_fnc_localEvent;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;

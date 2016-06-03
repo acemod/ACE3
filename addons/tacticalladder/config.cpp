@@ -19,6 +19,4 @@ class CfgPatches {
 class ACE_newEvents {
     interactMenuOpened = "ace_interactMenuOpened";
     medical_onUnconscious = "ace_unconscious";
-    playerVehicleChanged = "ace_playerVehicleChanged";
-    playerChanged = "ace_playerChanged";
 };

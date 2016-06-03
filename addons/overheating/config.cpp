@@ -52,7 +52,6 @@ class CfgGesturesMale {
     };
 };
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
     initiateSwapBarrelAssisted = QGVAR(initiateSwapBarrelAssisted);
     showWeaponTemperature = QGVAR(showWeaponTemperature);
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";

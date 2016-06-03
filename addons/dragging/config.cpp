@@ -19,9 +19,6 @@ class CfgPatches {
 
 class ACE_newEvents {
     medical_onUnconscious = "ace_unconscious";
-    playerWeaponChanged = "ace_playerWeaponChanged";
-    playerVehicleChanged = "ace_playerVehicleChanged";
-    playerChanged = "ace_playerChanged";
     setDir = "ace_setDir";
     fixFloating = "ace_fixFloating";
     fixPosition = "ace_fixPosition";

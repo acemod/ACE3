@@ -18,5 +18,4 @@ class CfgPatches {
 
 class ACE_newEvents {
     firedPlayer = "ace_firedPlayer";
-    displayTextPicture = "ace_displayTextPicture";
 };

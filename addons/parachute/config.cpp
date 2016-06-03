@@ -19,7 +19,5 @@ class CfgPatches {
 #include "RscTitles.hpp"
 
 class ACE_newEvents {
-    playerVehicleChanged = "ace_playerVehicleChanged";
-    playerInventoryChanged = "ace_playerInventoryChanged";
     infoDisplayChanged = "ace_infoDisplayChanged";
 };

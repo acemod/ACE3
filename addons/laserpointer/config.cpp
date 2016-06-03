@@ -21,6 +21,5 @@ class CfgPatches {
 
 class ACE_newEvents {
     GunLightOff = "ace_gunLightOff";
-    SettingsInitialized = "ace_settingsInitialized";
     SetHandcuffed = QEGVAR(captives,setHandcuffed);
 };

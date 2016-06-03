@@ -14,20 +14,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
 #include "CfgVehicles.hpp"
-
 #include "CfgSounds.hpp"
-
 #include "CfgWeapons.hpp"
-
 #include "CfgAmmo.hpp"
-
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
-    playerInventoryChanged = "ace_playerInventoryChanged";
-    playerTurretChanged = "ace_playerTurretChanged";
-    playerVehicleChanged = "ace_playerVehicleChanged";
-};

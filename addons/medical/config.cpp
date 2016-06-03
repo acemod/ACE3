@@ -33,7 +33,7 @@ class ACE_newEvents {
     Medical_onItemAddedToTriageCard = "ace_itemAddedToTriageCard";
     medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
     Medical_onHeartRateAdjustmentAdded = "ace_addedHeartRateAdjustment";
-    placedInBodyBag = "ace_playedInBodyBag";
+    placedInBodyBag = "ace_placedInBodyBag";
     actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);
     treatmentTourniquetLocal = QGVAR(treatmentTourniquetLocal);
     treatmentIVLocal = QGVAR(treatmentIVLocal);

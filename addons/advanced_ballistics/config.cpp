@@ -23,7 +23,6 @@ class ACE_Extensions {
 };
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
 };

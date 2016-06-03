@@ -20,7 +20,3 @@ class CfgPatches {
 
 #include "RscChat.hpp"
 #include "RscVignette.hpp"
-
-class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
-};

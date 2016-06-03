@@ -21,9 +21,7 @@ class ACE_newEvents {
     blockDamage = QGVAR(blockDamage);
     blockEngine = QGVAR(blockEngine);
 
-    useItem = "ace_useItem";
-    displayTextPicture = "ace_displayTextPicture";
-    displayTextStructured = "ace_displayTextStructured";
+    PlayerJip = "ace_playerJIP";
     activeCameraChanged = "ace_activeCameraChanged";
     visibleMapChanged = "ace_visibleMapChanged";
     cameraViewChanged = "ace_cameraViewChanged";
@@ -34,12 +32,19 @@ class ACE_newEvents {
     playerVehicleChanged = "ace_playerVehicleChanged";
     playerChanged = "ace_playerChanged";
     SettingsInitialized = "ace_settingsInitialized";
-    InitSettingsFromModules = "ace_initSettingsFromModules";
-    SEH_s = "ace_SEH_s";
-    SEH = "ace_SEH";
-    SEH_all = "ace_SEH_all";
-    enableSimulationGlobal = "ace_enableSimulationGlobal";
-    hideObjectGlobal = "ace_hideObjectGlobal";
+
+    SEH_s = QGVAR(SEH_s);
+    SEH = QGVAR(SEH);
+    SEH_all = QGVAR(SEH_all);
+    setStatusEffect = QGVAR(setStatusEffect);
+    HeadbugFixUsed = QGVAR(headbugFixUsed);
+    InitSettingsFromModules = QGVAR(initSettingsFromModules);
+    enableSimulationGlobal = QGVAR(enableSimulationGlobal);
+    hideObjectGlobal = QGVAR(hideObjectGlobal);
+
+    useItem = "ace_useItem";
+    displayTextPicture = "ace_displayTextPicture";
+    displayTextStructured = "ace_displayTextStructured";
     setVanillaHitPointDamage = "ace_setVanillaHitPointDamage";
     setVectorDirAndUp = "ace_setVectorDirAndUp";
     switchMove = "ace_switchMove";
@@ -56,10 +61,7 @@ class ACE_newEvents {
     fixPosition = "ace_fixPosition";
     fixFloating = "ace_fixFloating";
     fixCollision = "ace_fixCollision";
-    setStatusEffect = QGVAR(setStatusEffect);
     SettingChanged = "ace_settingChanged";
-    HeadbugFixUsed = "ace_headbugFixUsed";
-    blockDamage = "ace_blockDamage";
     firedNonPlayerVehicle = "ace_firedNonPlayerVehicle";
     firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
     firedPlayerVehicle = "ace_firedPlayerVehicle";

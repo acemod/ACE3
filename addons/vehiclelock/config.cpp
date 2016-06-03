@@ -21,7 +21,6 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
     VehicleLock_SetVehicleLock = QGVAR(setVehicleLock);
     VehicleLock_SetupCustomKey = QGVAR(setupCustomKey);
 };

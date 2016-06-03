@@ -21,6 +21,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_newEvents {
-    playerVehicleChanged = "ace_playerVehicleChanged";
     medical_onUnconscious = "ace_unconscious";
 };

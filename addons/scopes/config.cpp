@@ -24,8 +24,6 @@ class CfgPatches {
 #include "RscTitles.hpp"
 
 class ACE_newEvents {
-    cameraViewChanged = "ace_cameraViewChanged";
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
-    playerInventoryChanged = "ace_playerInventoryChanged";
 };

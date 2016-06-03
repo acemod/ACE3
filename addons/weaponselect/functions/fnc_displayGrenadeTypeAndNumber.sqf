@@ -26,4 +26,4 @@ private _name = getText (configFile >> "CfgMagazines" >> _magazine >> "displayNa
 private _text = [format ["%1  x%2", _name, _numberofGrenades], _color] call EFUNC(common,stringToColoredText);
 private _picture = getText (configFile >> "CfgMagazines" >> _magazine >> "picture");
 
-["ace_displayTextPicture", [_text, _picture]] call CBA_fnc_localEvent;
+[_text, _picture] call EFUNC(common,displayTextPicture);

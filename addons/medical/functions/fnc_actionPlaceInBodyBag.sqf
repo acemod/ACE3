@@ -47,6 +47,6 @@ private _bodyBag = createVehicle ["ACE_bodyBagObject", _position, [], 0, ""];
 _bodyBag setPosASL _position;
 _bodyBag setDir _direction;
 
-["ace_playedInBodyBag", [_target, _bodyBag]] call CBA_fnc_globalEvent; //hide and delete body on server
+["ace_placedInBodyBag", [_target, _bodyBag]] call CBA_fnc_globalEvent; //hide and delete body on server
 
 _bodyBag

@@ -16,7 +16,6 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
     firedNonPlayerVehicle = "ace_firedNonPlayerVehicle";
     firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
     firedPlayerVehicle = "ace_firedPlayerVehicle";
