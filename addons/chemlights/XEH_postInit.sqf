@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-	[QGVAR(IRTimer), {_this call FUNC(IRTimer)}] call CBA_fnc_addEventHandler;
+    [QGVAR(IRTimer), {_this call FUNC(IRTimer)}] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
