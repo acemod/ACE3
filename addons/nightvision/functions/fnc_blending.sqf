@@ -21,6 +21,9 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 private "_player";
 _player = ACE_player;
 
+//exit if it's a thrown weapon
+if (_weapon == "Throw") exitWith {};
+
 //If our vehicle didn't shoot, or we're not in NVG mode, exit
 if ((currentVisionMode _player) != 1) exitWith {};
 
