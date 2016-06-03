@@ -31,7 +31,6 @@ GVAR(EffectsActive) = false;
 
 SETGLASSES(ace_player,GLASSESDEFAULT);
 
-GVAR(EyesDamageScript) = -1;
 GVAR(FrameEvent) = [false, [false, 20]];
 GVAR(PostProcessEyes_Enabled) = false;
 GVAR(DustHandler) = -1;
@@ -83,7 +82,7 @@ GVAR(OldGlasses) = "<null>";
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
         GVAR(PostProcessEyes) ppEffectCommit 5;
 
-        GVAR(EyesDamageScript) = [{
+        [{
             params ["_unit"];
 
             GVAR(PostProcessEyes) ppEffectEnable false;

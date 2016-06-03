@@ -16,9 +16,9 @@ class Cfg3DEN {
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";
-                    x = "48 * (pixelW * 1.25 * 4)";
-                    w = "82 * (pixelW * 1.25 * 4)";
-                    h = "5 * (pixelH * 1.25 * 4)";
+                    x = "48 * (pixelW * pixelGrid * 0.25)";
+                    w = "82 * (pixelW * pixelGrid * 0.25)";
+                    h = "5 * (pixelH * pixelGrid * 0.25)";
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};

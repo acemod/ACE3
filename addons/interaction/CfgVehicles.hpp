@@ -496,14 +496,6 @@ class CfgVehicles {
         };
     };
 
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
-                distance = 5;
-            };
-        };
-    };
-
     class StaticMGWeapon: StaticWeapon {};
     class HMG_01_base_F: StaticMGWeapon {};
 
@@ -551,6 +543,14 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions {};
+    };
+    class Slingload_base_F: ReammoBox_F {};
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                distance = 5;
+            };
+        };
     };
 
     class ACE_RepairItem_Base: ThingX {

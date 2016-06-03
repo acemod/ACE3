@@ -7,8 +7,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Garth 'L-H' de Wet"};
-        authorUrl = "http://garth.snakebiteink.co.za/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Garth 'L-H' de Wet"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

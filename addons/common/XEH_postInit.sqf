@@ -122,9 +122,17 @@ if (isServer) then {
 ["ace_setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 ["ace_setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 
+// Request framework
+[QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
+[QGVAR(receiveRequest), FUNC(receiveRequest)] call CBA_fnc_addEventHandler;
+
+[QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     ["ace_hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     ["ace_enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
 
 
@@ -177,10 +185,10 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up SettingsInitialized eventhandler
+// Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),
