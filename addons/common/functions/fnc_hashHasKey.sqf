@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-// diag_log text format["%1 HASH HAS KEY: %2", ACE_diagTime, _this];
+// diag_log text format["%1 HASH HAS KEY: %2", diag_tickTime, _this];
 
 params ["_hash", "_key"];
 

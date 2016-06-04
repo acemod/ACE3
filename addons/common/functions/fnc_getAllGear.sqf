@@ -64,5 +64,5 @@ if (isNull _unit) exitWith {[
     handgunWeapon _unit, handgunItems _unit, handgunMagazine _unit,
     assignedItems _unit,
     binocular _unit,
-    [_unit] call FUNC(binocularMagazine)
+    [_unit] call CBA_fnc_binocularMagazine
 ]

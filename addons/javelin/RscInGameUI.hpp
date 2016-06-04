@@ -306,7 +306,7 @@ class RscInGameUI {
                         };
                         class OpticsBorders: RscPicture {
                             idc = 699105;
-                            text = PATHTOF(data\javelin_ui_border_ca.paa);
+                            text = QPATHTOF(data\javelin_ui_border_ca.paa);
                             colorText[] = {0,0,0,1};
                             x = "((SafezoneW -(3.1/4)*SafezoneH)/2) - SafezoneX";
                             y = "0.15*SafezoneH-SafezoneY";

@@ -53,4 +53,4 @@ if (stance _unit == "STAND") then {
         };
     }, 0, [_tripod, _direction, _position]] call CBA_fnc_addPerFrameHandler;
 
-}, [_unit], 1] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call CBA_fnc_waitAndExecute;

@@ -17,6 +17,7 @@
 
 //Event for setting explosive placement angle/pitch:
 [QGVAR(place), {_this call FUNC(setPosition)}] call EFUNC(common,addEventHandler);
+[QGVAR(startDefuse), FUNC(startDefuse)] call EFUNC(common,addEventHandler);
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)

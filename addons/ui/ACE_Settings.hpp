@@ -45,7 +45,7 @@ class ACE_Settings {
     };
 
 // ADVANCED
-    // Upper Weapon Info
+    // Soldier
     class GVAR(weaponName) {
         category = CSTRING(Category);
         displayName = CSTRING(WeaponName);
@@ -70,8 +70,6 @@ class ACE_Settings {
         value = 1;
         isClientSettable = 1;
     };
-
-    // Lower Weapon Info
     class GVAR(ammoType) {
         category = CSTRING(Category);
         displayName = CSTRING(AmmoType);
@@ -85,7 +83,7 @@ class ACE_Settings {
         displayName = CSTRING(AmmoCount);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
-        value = 0;
+        value = 1;
         isClientSettable = 1;
     };
     class GVAR(magCount) {
@@ -122,14 +120,12 @@ class ACE_Settings {
     };
     class GVAR(weaponLowerInfoBackground) {
         category = CSTRING(Category);
-        displayName = CSTRING(WeaponLowerInfoBackground); //todo
+        displayName = CSTRING(WeaponLowerInfoBackground);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
         value = 1;
         isClientSettable = 1;
     };
-
-    // Stance
     class GVAR(stance) {
         category = CSTRING(Category);
         displayName = CSTRING(Stance);
@@ -138,11 +134,91 @@ class ACE_Settings {
         value = 1;
         isClientSettable = 1;
     };
-
-    // Stamina Bar
     class GVAR(staminaBar) {
         category = CSTRING(Category);
         displayName = CSTRING(StaminaBar);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+
+    // Gunner
+    class GVAR(gunnerWeaponName) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerWeaponName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerWeaponNameBackground) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerWeaponNameBackground);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerFiringMode) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerFiringMode);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerAmmoType) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerAmmoType);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerAmmoCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerAmmoCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerMagCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerMagCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerLaunchableName) {
+        category = CSTRING(Category);
+        displayName = CSTRING(gunnerLaunchableName);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerLaunchableCount) {
+        category = CSTRING(Category);
+        displayName = CSTRING(gunnerLaunchableCount);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerZeroing) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerZeroing);
+        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(gunnerWeaponLowerInfoBackground) {
+        category = CSTRING(Category);
+        displayName = CSTRING(GunnerWeaponLowerInfoBackground);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
         value = 1;
@@ -201,14 +277,6 @@ class ACE_Settings {
     class GVAR(vehicleInfoBackground) {
         category = CSTRING(Category);
         displayName = CSTRING(VehicleInfoBackground);
-        description = CSTRING(RequiresSoldierVehicleWeaponInfo);
-        typeName = "BOOL";
-        value = 1;
-        isClientSettable = 1;
-    };
-    class GVAR(vehicleGunnerWeapon) {
-        category = CSTRING(Category);
-        displayName = CSTRING(VehicleGunnerWeapon);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
         value = 1;

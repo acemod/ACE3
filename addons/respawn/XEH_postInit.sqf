@@ -3,3 +3,5 @@
 
 ["rallypointMoved", {_this call FUNC(updateRallypoint)}] call EFUNC(common,addEventhandler);
 ["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler); // hide enemy rallypoint markers
+
+[QGVAR(showFriendlyFireMessageEvent), DFUNC(showFriendlyFireMessage)] call EFUNC(common,addEventHandler);

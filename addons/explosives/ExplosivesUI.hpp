@@ -113,7 +113,7 @@ class Rsc_ACE_PhoneInterface {
     class controls {
         class RscPicture_1200: RscPicture {
             idc = 1200;
-            text = PATHTOF(Data\UI\Cellphone_Background.paa);
+            text = QPATHTOF(Data\UI\Cellphone_Background.paa);
             x = 0.231875 * safezoneW + safezoneX;
             y = 0.104 * safezoneH + safezoneY;
             w = 0.195937 * safezoneW;

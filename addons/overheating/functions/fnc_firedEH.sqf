@@ -65,8 +65,8 @@ if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit dist
 };
 
 //Particle Effects:
-if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
-    _unit setVariable [QGVAR(lastDrop), ACE_time];
+if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
+    _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));

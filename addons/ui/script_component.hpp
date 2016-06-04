@@ -17,51 +17,26 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 
-// Elements
+// Basic Elements
 #define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
-
-// IDD, IDC, Element (must be string to compare to changed setting name)
-#define ELEMENTS_ADVANCED [ \
-    [300, [118], QGVAR(weaponName)], \
-    [300, [1001, 1008], QGVAR(weaponNameBackground)], \
-    [300, [187, 1203], QGVAR(firingMode)], \
-    [300, [155], QGVAR(ammoType)], \
-    [300, [184], QGVAR(ammoCount)], \
-    [300, [185], QGVAR(magCount)], \
-    [300, [152], QGVAR(throwableName)], \
-    [300, [151], QGVAR(throwableCount)], \
-    [300, [1202], QGVAR(weaponLowerInfoBackground)], \
-    [300, [168], QGVAR(zeroing)], \
-    [305, [193], QGVAR(staminaBar)], \
-    [303, [188, 1201], QGVAR(stance)], \
-    [300, [120], QGVAR(vehicleName)], \
-    [300, [1000, 1013], QGVAR(vehicleNameBackground)], \
-    [300, [113, 1202], QGVAR(vehicleFuelBar)], \
-    [300, [121, 1004, 1006], QGVAR(vehicleSpeed)], \
-    [300, [122, 1005, 1014], QGVAR(vehicleAltitude)], \
-    [300, [111], QGVAR(vehicleDamage)], \
-    [300, [1200], QGVAR(vehicleInfoBackground)], \
-    [300, [150], QGVAR(vehicleGunnerWeapon)] \
-]
-
 
 /*
 RscUnitInfo = 300
 --------------------
-118 (Weapon Name)
-+ 1001 (Weapon Name Background 1/2)
-+ 1008 (Weapon Name Background 2/2)
+118 (Weapon Name / Gunner Weapon Name)
++ 1001 (Weapon Name Background 1/2 / Gunner Weapon Name Background 1/2)
++ 1008 (Weapon Name Background 2/2 / Gunner Weapon Name Background 2/2)
 
-187 (Firing Mode)
-+ 1203 (Firing Mode Background)
+187 (Firing Mode / Gunner Firing Mode)
++ 1203 (Firing Mode Background / Gunner Firing Mode Background)
 
-155 (Ammo Type)
-184 (Ammo Count) - disabled in config by ace_reload
-185 (Magazine Count)
-152 (Grenade/Flare Type)
-151 (Grenade/Flare Count)
-1202 (Lower Weapon Info Background)
-168 (Zeroing)
+155 (Ammo Type / Gunner Ammo Type)
+184 (Ammo Count / Gunner Ammo Count)
+185 (Magazine Count / Gunner Magazine Count)
+152 (Grenade/Flare Type / Launchable Type)
+151 (Grenade/Flare Count / Launchable Count)
+1202 (Lower Weapon Info Background / Gunner Lower Weapon Info Background)
+168 (Zeroing / Gunner Zeroing)
 
 
 120 (Vehicle Name)
@@ -79,8 +54,6 @@ RscUnitInfo = 300
 + 1014 (Vehicle Altitude Background)
 111 (Vehicle Damage)
 1200 (Vehicle Info Background)
-
-150 (Vehicle Gunner Weapon)
 
 
 RscStanceInfo = 303
