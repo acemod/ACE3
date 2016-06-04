@@ -145,14 +145,14 @@ if (isServer) then {
 if (!isServer) then {
     ["ace_playerJIP", {
         ACE_LOGINFO("JIP event synchronization initialized");
-        [QGVAR(SEH_all), [player]] call CBA_fnc_serverEvent;
+        ["SEH_all", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
-    [QGVAR(SEH_all), FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
+    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-[QGVAR(SEH), FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
-[QGVAR(SEH_s), FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
+["SEH", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+["SEH_s", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;

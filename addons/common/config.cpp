@@ -33,9 +33,6 @@ class ACE_newEvents {
     playerChanged = "ace_playerChanged";
     SettingsInitialized = "ace_settingsInitialized";
 
-    SEH_s = QGVAR(SEH_s);
-    SEH = QGVAR(SEH);
-    SEH_all = QGVAR(SEH_all);
     setStatusEffect = QGVAR(setStatusEffect);
     HeadbugFixUsed = QGVAR(headbugFixUsed);
     InitSettingsFromModules = QGVAR(initSettingsFromModules);
