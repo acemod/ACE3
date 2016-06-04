@@ -31,6 +31,6 @@ _delay = getNumber (_config >> "explosionTime");
 [{
     params ["_lightClass", "_attachTarget", "_offset"];
     private _light = _lightClass createVehicle [0,0,0];
-    _light attachTo [_attachTarget, _offset, "rightshoulder"];
+    _light attachTo [_attachTarget, _offset, "leftshoulder"];
     _attachTarget setVariable [QGVAR(IRAttach), _light, true];
 }, [_lightClass, _attachTarget, _offset], _delay] call CBA_fnc_waitAndExecute;
