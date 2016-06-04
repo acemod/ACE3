@@ -1322,6 +1322,7 @@
             <German>Motor muss ausgeschaltet zu reparieren sein</German>
             <Spanish>El motor necesita desactivado para la reparación</Spanish>
             <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
+            <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
         </Key>
     </Package>
 </Project>
