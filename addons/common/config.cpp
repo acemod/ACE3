@@ -72,9 +72,9 @@ class ACE_newEvents {
     setDir = QGVAR(setDir);
 
     // Events framework
-    SEH_s = ACEs;
-    SEH = ACEe;
-    SEH_all = ACEa;
+    SEH_s = "ACEs";
+    SEH = "ACEe";
+    SEH_all = "ACEa";
 };
 
 #include "CfgEventHandlers.hpp"
