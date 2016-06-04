@@ -81,7 +81,7 @@ GVAR(MenuPFHID) = [{
         closeDialog 314412;
         //If we failed because of distance check, show UI message:
         if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
-            ["ace_displayTextStructured", [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2, ACE_player]] call CBA_fnc_localEvent;
+            [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
         };
     };
 

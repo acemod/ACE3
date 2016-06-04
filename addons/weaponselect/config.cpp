@@ -15,7 +15,3 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    firedPlayer = "ace_firedPlayer";
-};

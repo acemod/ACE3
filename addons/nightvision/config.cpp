@@ -17,8 +17,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    firedPlayerVehicle = "ace_firedPlayerVehicle";
-    firedPlayer = "ace_firedPlayer";
-};

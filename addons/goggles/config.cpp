@@ -271,7 +271,6 @@ class CfgCloudlets {
 };
 
 class ACE_newEvents {
-    firedPlayer = "ace_firedPlayer";
     GlassesChanged = "ace_glassesChanged";
     GlassesCracked = "ace_glassesCracked";
 };

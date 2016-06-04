@@ -15,12 +15,14 @@ class CfgPatches {
 
 // This class will be deprecated in version 3.8.0
 class ACE_newEvents {
+    // Status effect events
     forceWalk = QGVAR(forceWalk);
     blockSprint = QGVAR(blockSprint);
     setCaptive = QGVAR(setCaptive);
     blockDamage = QGVAR(blockDamage);
     blockEngine = QGVAR(blockEngine);
 
+    // Public listenable events
     PlayerJip = "ace_playerJIP";
     activeCameraChanged = "ace_activeCameraChanged";
     visibleMapChanged = "ace_visibleMapChanged";
@@ -32,32 +34,6 @@ class ACE_newEvents {
     playerVehicleChanged = "ace_playerVehicleChanged";
     playerChanged = "ace_playerChanged";
     SettingsInitialized = "ace_settingsInitialized";
-
-    setStatusEffect = QGVAR(setStatusEffect);
-    HeadbugFixUsed = QGVAR(headbugFixUsed);
-    InitSettingsFromModules = QGVAR(initSettingsFromModules);
-    enableSimulationGlobal = QGVAR(enableSimulationGlobal);
-    hideObjectGlobal = QGVAR(hideObjectGlobal);
-
-    useItem = "ace_useItem";
-    displayTextPicture = "ace_displayTextPicture";
-    displayTextStructured = "ace_displayTextStructured";
-    setVanillaHitPointDamage = "ace_setVanillaHitPointDamage";
-    setVectorDirAndUp = "ace_setVectorDirAndUp";
-    switchMove = "ace_switchMove";
-    playMoveNow = "ace_playMoveNow";
-    playMove = "ace_playMove";
-    setVelocity = "ace_setVelocity";
-    selectLeader = "ace_selectLeader";
-    setSpeaker = "ace_setSpeaker";
-    engineOn = "ace_engineOn";
-    setFuel = "ace_setFuel";
-    setDir = "ace_setDir";
-    unloadPersonEvent = "ace_unloadPersonEvent";
-    loadPersonEvent = "ace_loadPersonEvent";
-    fixPosition = "ace_fixPosition";
-    fixFloating = "ace_fixFloating";
-    fixCollision = "ace_fixCollision";
     SettingChanged = "ace_settingChanged";
     firedNonPlayerVehicle = "ace_firedNonPlayerVehicle";
     firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
@@ -65,8 +41,35 @@ class ACE_newEvents {
     firedNonPlayer = "ace_firedNonPlayer";
     firedPlayerNonLocal = "ace_firedPlayerNonLocal";
     firedPlayer = "ace_firedPlayer";
-    unlockVehicle = "ace_unlockVehicle";
-    lockVehicle = "ace_lockVehicle";
+    unloadPersonEvent = "ace_unloadPersonEvent";
+    loadPersonEvent = "ace_loadPersonEvent";
+    useItem = "ace_useItem";
+    infoDisplayChanged = "ace_infoDisplayChanged";
+
+    // Internal callable events
+    setStatusEffect = QGVAR(setStatusEffect);
+    HeadbugFixUsed = QGVAR(headbugFixUsed);
+    InitSettingsFromModules = QGVAR(initSettingsFromModules);
+    enableSimulationGlobal = QGVAR(enableSimulationGlobal);
+    hideObjectGlobal = QGVAR(hideObjectGlobal);
+    fixPosition = QGVAR(fixPosition);
+    fixFloating = QGVAR(fixFloating);
+    fixCollision = QGVAR(fixCollision);
+    unlockVehicle = QGVAR(unlockVehicle);
+    lockVehicle = QGVAR(lockVehicle);
+    displayTextPicture = QGVAR(displayTextPicture);
+    displayTextStructured = QGVAR(displayTextStructured);
+    setVanillaHitPointDamage = QGVAR(setVanillaHitPointDamage);
+    setVectorDirAndUp = QGVAR(setVectorDirAndUp);
+    switchMove = QGVAR(switchMove);
+    playMoveNow = QGVAR(playMoveNow);
+    playMove = QGVAR(playMove);
+    setVelocity = QGVAR(setVelocity);
+    selectLeader = QGVAR(selectLeader);
+    setSpeaker = QGVAR(setSpeaker);
+    engineOn = QGVAR(engineOn);
+    setFuel = QGVAR(setFuel);
+    setDir = QGVAR(setDir);
 };
 
 #include "CfgEventHandlers.hpp"

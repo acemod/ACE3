@@ -14,16 +14,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
 #include "CfgSounds.hpp"
-
 #include "CfgVehicles.hpp"
-
 #include "CfgWeapons.hpp"
-
 #include "RscTitles.hpp"
-
-class ACE_newEvents {
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
-};

@@ -16,11 +16,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgMovesBasic.hpp"
-
-class ACE_newEvents {
-    medical_onUnconscious = "ace_unconscious";
-    setDir = "ace_setDir";
-    fixFloating = "ace_fixFloating";
-    fixPosition = "ace_fixPosition";
-    fixCollision = "ace_fixCollision";
-};

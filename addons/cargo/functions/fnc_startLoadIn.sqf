@@ -48,7 +48,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    ["ace_displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call CBA_fnc_localEvent;
+    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
 };
 
 _return

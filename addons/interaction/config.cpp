@@ -24,10 +24,6 @@ class ACE_newEvents {
     pardon = QGVAR(pardon);
     tapShoulder = QGVAR(tapShoulder);
     sendAway = QGVAR(sendAway);
-    setVelocity = "ace_setVelocity";
-    displayTextStructured = "ace_displayTextStructured";
-    CBA_teamColorChanged = "ace_CBA_teamColorChanged";
-    selectLeader = "ace_selectLeader";
     lampTurnOff = QGVAR(lampTurnOff);
     lampTurnOn = QGVAR(lampTurnOn);
 };

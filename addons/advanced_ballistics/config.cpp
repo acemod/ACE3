@@ -21,8 +21,3 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_advanced_ballistics"};
 };
-
-class ACE_newEvents {
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
-};

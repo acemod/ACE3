@@ -21,8 +21,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "Dialog.hpp"
 #include "RscTitles.hpp"
-
-class ACE_newEvents {
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
-};

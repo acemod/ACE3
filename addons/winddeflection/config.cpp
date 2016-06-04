@@ -24,10 +24,3 @@ class CfgAddons {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
-    firedPlayerVehicle = "ace_firedPlayerVehicle";
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
-};

@@ -38,10 +38,10 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
 if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
-    ["ace_engineOn", [_target, false], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,engineOn), [_target, false], _target] call CBA_fnc_targetEvent;
 };
 if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
-    ["ace_displayTextStructured", [LSTRING(shutOffEngineWarning), 1.5, _caller]] call CBA_fnc_localEvent;
+    [LSTRING(shutOffEngineWarning), 1.5, _caller] call EFUNC(common,displayTextStructured);
     false
 };
 
@@ -235,7 +235,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["ace_displayTextStructured", [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+    [QEGVAR(common,displayTextStructured), [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 true;

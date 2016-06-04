@@ -54,10 +54,7 @@ class CfgGesturesMale {
 class ACE_newEvents {
     initiateSwapBarrelAssisted = QGVAR(initiateSwapBarrelAssisted);
     showWeaponTemperature = QGVAR(showWeaponTemperature);
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
     spareBarrelsLoadCoolest = QGVAR(spareBarrelsLoadCoolest);
     spareBarrelsSendTemperatureHint = QGVAR(spareBarrelsSendTemperatureHint);
-    displayTextStructured = "ace_displayTextStructured";
     weaponJammed = "ace_weaponJammed";
 };

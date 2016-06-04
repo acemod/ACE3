@@ -19,7 +19,3 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
-
-class ACE_newEvents {
-    medical_onUnconscious = "ace_unconscious";
-};

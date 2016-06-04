@@ -75,7 +75,7 @@ if (isServer) then {
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name", "_value", "_force"];
 
     if (_force) then {
@@ -94,33 +94,33 @@ if (isServer) then {
     ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
-["ace_fixCollision", FUNC(fixCollision)] call CBA_fnc_addEventHandler;
-["ace_fixFloating", FUNC(fixFloating)] call CBA_fnc_addEventHandler;
-["ace_fixPosition", FUNC(fixPosition)] call CBA_fnc_addEventHandler;
+[QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
+[QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
+[QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
 ["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
 ["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
-["lockVehicle", {
+[QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
 }] call CBA_fnc_addEventHandler;
 
-["unlockVehicle", {
+[QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call CBA_fnc_addEventHandler;
 
-["ace_setDir", {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setFuel", {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_engineOn", {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_selectLeader", {(_this select 0) selectLeader (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVelocity", {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_playMove", {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_switchMove", {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setFuel), {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(engineOn), {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setSpeaker), {(_this select 0) setSpeaker (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(selectLeader), {(_this select 0) selectLeader (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVelocity), {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMove), {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMoveNow), {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -426,10 +426,10 @@ GVAR(OldIsCamera) = false;
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-["ace_displayTextStructured", {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
-["ace_displayTextPicture", {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
 
-["medical_onUnconscious", {
+["ace_unconscious", {
     params ["_unit", "_isUnconscious"];
 
     if (local _unit && {!_isUnconscious}) then {

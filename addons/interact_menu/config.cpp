@@ -26,7 +26,6 @@ class ACE_Extensions {
 };
 
 class ACE_newEvents {
-    SettingChanged = "ace_settingChanged";
     interactMenuOpened = "ace_interactMenuOpened";
     clearConditionCaches = QGVAR(clearConditionCaches);
     interactMenuClosed = "ace_interactMenuClosed";

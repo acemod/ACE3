@@ -43,4 +43,4 @@ if (alive _target) then {
     };
 };
 
-["ace_displayTextStructured", [_genericMessages, 3.0, _caller], [_caller]] call CBA_fnc_targetEvent;
+[QEGVAR(common,displayTextStructured), [_genericMessages, 3.0, _caller], [_caller]] call CBA_fnc_targetEvent;

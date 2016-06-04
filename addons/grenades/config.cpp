@@ -22,8 +22,5 @@ class CfgPatches {
 #include "Effects.hpp"
 
 class ACE_newEvents {
-    firedNonPlayer = "ace_firedNonPlayer";
-    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
-    firedPlayer = "ace_firedPlayer";
     flashbangExplosion = "ace_flashbangExploded";
 };

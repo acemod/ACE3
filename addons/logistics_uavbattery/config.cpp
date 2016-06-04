@@ -17,7 +17,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgSounds.hpp"
-
-class ACE_newEvents {
-    setFuel = "ace_setFuel";
-};

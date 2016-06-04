@@ -30,8 +30,8 @@ if !(_unit getVariable ["ACE_isUnconscious", false]) then {
 };
 
 // prevent collision damage
-["ace_fixCollision", _unit] call CBA_fnc_localEvent;
-["ace_fixCollision", _target, _target] call CBA_fnc_targetEvent;
+[QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
+[QEGVAR(common,fixCollision), _target, _target] call CBA_fnc_targetEvent;
 
 // release object
 detach _target;
@@ -62,8 +62,8 @@ _unit setVariable [QGVAR(draggedObject), objNull, true];
 [objNull, _target, true] call EFUNC(common,claim);
 
 if !(_target isKindOf "CAManBase") then {
-    ["ace_fixPosition", _target, _target] call CBA_fnc_targetEvent;
-    ["ace_fixFloating", _target, _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,fixPosition), _target, _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
 if (_unit getVariable ["ACE_isUnconscious", false]) then {

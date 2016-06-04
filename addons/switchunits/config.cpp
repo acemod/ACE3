@@ -16,7 +16,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
-
-class ACE_newEvents {
-    SettingChanged = "ace_settingChanged";
-};

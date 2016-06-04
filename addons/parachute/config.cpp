@@ -17,7 +17,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscTitles.hpp"
-
-class ACE_newEvents {
-    infoDisplayChanged = "ace_infoDisplayChanged";
-};

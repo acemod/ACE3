@@ -13,7 +13,7 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["ace_displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_loaded) then {
         // Invoke listenable event
@@ -34,7 +34,7 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["ace_displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call CBA_fnc_localEvent;
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_unloaded) then {
         // Invoke listenable event
