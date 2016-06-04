@@ -46,6 +46,7 @@
             <Polish>Detonuj wszystkie</Polish>
             <Italian>Detona Tutti</Italian>
             <French>Tout mettre à feu</French>
+            <Portuguese>Detonar Tudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>

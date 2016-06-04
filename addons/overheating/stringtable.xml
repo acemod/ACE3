@@ -264,9 +264,11 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
             <English>Check spare barrels temperatures</English>
+            <Portuguese>Verifica temperatura de canos reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
+            <Portuguese>Verificando temperatura de canos reservas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -282,26 +284,33 @@
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
+            <Portuguese>Cano/s reserva/s frio/s</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
+            <Portuguese>Cano/s reserva/s morno/s</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
+            <Portuguese>Cano/s reserva/s quente/s</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
+            <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
+            <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
             <German>Überhitzen Aktiviert</German>
             <Spanish>Activada Sobrecalentamiento</Spanish>
+            <Portuguese>Superaquecimento ativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
+            <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
         </Key>
     </Package>
 </Project>
