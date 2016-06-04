@@ -18,7 +18,7 @@ params ["_client"];
     private _eventEntry = HASH_GET(GVAR(syncedEvents),_x);
     _eventEntry params ["", "_eventLog"];
 
-    ["SEH_s", [_x, _eventLog], _client] call CBA_fnc_targetEvent;
+    ["ACEs", [_x, _eventLog], _client] call CBA_fnc_targetEvent;
     false
 } count (GVAR(syncedEvents) select 0);
 

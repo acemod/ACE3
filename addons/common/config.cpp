@@ -70,6 +70,11 @@ class ACE_newEvents {
     engineOn = QGVAR(engineOn);
     setFuel = QGVAR(setFuel);
     setDir = QGVAR(setDir);
+
+    // Events framework
+    SEH_s = ACEs;
+    SEH = ACEe;
+    SEH_all = ACEa;
 };
 
 #include "CfgEventHandlers.hpp"
