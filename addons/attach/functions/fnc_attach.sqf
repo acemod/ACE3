@@ -40,13 +40,14 @@ _onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [-0.05, 0, 0.12], "rightshoulder"];
+    _attachedItem attachTo [0.05, -0.09, 0.1], "leftshoulder"];
     
     //ace_chemlights IR handling
     if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && {_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]} && {[_attachedItem] call EFUNC(chemlights,isIRClass)}) then {
         [_unit, _attachedItem, _unit, [-0.05, 0, 0.12]] call EFUNC(chemlights,attachIR);
     };
     
+    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
@@ -58,7 +59,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
 
-    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+    [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
