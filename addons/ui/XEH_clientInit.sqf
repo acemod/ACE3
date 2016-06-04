@@ -32,7 +32,9 @@ if (!hasInterface) exitWith {};
         if (_name in ELEMENTS_BASIC) then {
             [false] call FUNC(setElements);
         } else {
-            [_name select [7], missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
+            if (isClass (configFile >> "ACE_UI" >> _name)) then {
+                [_name select [7], missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
+            };
         };
     }] call EFUNC(common,addEventHandler);
 
