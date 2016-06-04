@@ -16,12 +16,7 @@
 
 #include "script_component.hpp"
 
-params ["_input"];
-
-if !(typeName _input in ["OBJECT", "STRING"]) exitWith {
-    ERROR("Wrong input type");
-};
-
+params [["_input", "", ["", objNull]]];
 private _class = if (typeName _input == "OBJECT") then {typeOf _input} else {_input};
 
 ((getText (configFile >> "CfgAmmo" >> _class >> "ACE_Chemlight_IR")) != "")

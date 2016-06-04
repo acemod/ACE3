@@ -26,8 +26,6 @@ _config = (configFile >> "CfgAmmo" >> typeOf _projectile);
 _lightClass = getText (_config >> "ACE_Chemlight_IR");
 _delay = getNumber (_config >> "explosionTime");
 
-[eyePos _unit] call FUNC(shakeSound);
-
 [{
     params ["_lightClass", "_attachTarget", "_offset"];
     private _light = _lightClass createVehicle [0,0,0];

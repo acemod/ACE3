@@ -43,8 +43,11 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
     
     //ace_chemlights IR handling
-    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && {_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]} && {[_attachedItem] call EFUNC(chemlights,isIRClass)}) then {
-        [_unit, _attachedItem, _unit, [0.05, -0.09, 0.1]] call EFUNC(chemlights,attachIR);
+    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && {_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]}) then {
+        if ([_attachedItem] call EFUNC(chemlights,isIRClass)) then {
+            [_unit, _attachedItem, _unit, [0.05, -0.09, 0.1]] call EFUNC(chemlights,attachIR);
+        };
+        [eyePos _unit] call EFUNC(chemlights,shakeSound);
     };
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
