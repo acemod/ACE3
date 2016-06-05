@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="AdvancedThrowing">
+        <Key ID="STR_ACE_AdvancedThrowing_Category">
+            <English>Advanced Throwing</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Module_Description">
+            <English>Allows changing advanced throwing behaviour.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Enable_DisplayName">
+            <English>Enable Advanced Throwing</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Enable_Description">
+            <English>Enables advanced throwing system.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowThrowArc_DisplayName">
+            <English>Show Throw Arc</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowThrowArc_Description">
+            <English>Enables visualization of the throw arc (where throwable will fly).</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_DisplayName">
+            <English>Show Throwing Mouse Controls</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_Description">
+            <English>Enables visual cues for mouse controls when throwable is prepared.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Primed">
+            <English>Throwable Primed</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Prepare">
+            <English>Prepare/Change Throwable</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Throw">
+            <English>Throw</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_DropCooked">
+            <English>(x2) Drop Cooked</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ChangeMode">
+            <English>(Scroll) Change Mode</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Cook">
+            <English>(Click) Cook</English>
+        </Key>
+    </Package>
+</Project>
