@@ -292,7 +292,7 @@ class CfgWeapons {
     };
     class srifle_DMR_03_F: DMR_03_base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 155;
+            mass = 90;
         };
     };
 
