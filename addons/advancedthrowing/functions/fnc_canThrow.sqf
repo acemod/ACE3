@@ -17,8 +17,7 @@
 
 params ["_unit"];
 
-// Disable throwing from non FFV seats due to surface detection issues
-if (!GVAR(inHand) || {!(_unit call CBA_fnc_canUseWeapon)}) exitWith {false};
+if (!GVAR(inHand)) exitWith {false};
 
 if (vehicle _unit != _unit) exitWith {
     private _startPos = eyePos _unit;

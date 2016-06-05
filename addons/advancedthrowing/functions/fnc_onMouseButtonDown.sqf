@@ -23,11 +23,7 @@ params ["", "_key"];
 // "DefaultAction" doesn't get executed when in driver seat
 if (_key == 0) exitWith {
     if (!isNull GVAR(activeThrowable)) then {
-        if (ACE_player call CBA_fnc_canUseWeapon) then {
-            if !(weaponLowered ACE_player) then {
-                [ACE_player] call FUNC(throw);
-            };
-        } else {
+        if !(weaponLowered ACE_player) then {
             [ACE_player] call FUNC(throw);
         };
     };

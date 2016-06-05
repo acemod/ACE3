@@ -15,8 +15,9 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(enabled) || {call EFUNC(common,isFeatureCameraActive)}) exitWith {false};
-
 params ["_unit"];
 
-[_unit, objNull, ["isNotInside", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)
+GVAR(enabled) &&
+{!(call EFUNC(common,isFeatureCameraActive))} &&
+{[_unit, objNull, ["isNotInside", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)} &&
+{_unit call CBA_fnc_canUseWeapon} // Disable in non-FFV seats due to surface detection issues
