@@ -443,5 +443,23 @@
             <Italian>Logistica</Italian>
             <French>Logistique</French>
         </Key>
+        <Key ID="STR_ACE_OptionsMenu_3den_Uncategorized">
+            <English>General</English>
+            <Czech>Obecné</Czech>
+            <French>Général</French>
+            <German>Allgemein</German>
+            <Italian>Generale</Italian>
+            <Polish>Ogólne</Polish>
+            <Portuguese>Geral</Portuguese>
+            <Russian>Общие</Russian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_3den_clientSetting">
+            <English>Client Settings</English>
+            <German>Client-Einstellungen</German>
+            <Spanish>Configuración de Cliente</Spanish>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_3den_resetSettings">
+            <English>Reset All Settings</English>
+        </Key>
     </Package>
 </Project>

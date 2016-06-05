@@ -11,6 +11,23 @@ class RscControlsGroupNoScrollbars;
 class RscHTML;
 class RscText;
 
+class ctrlControlsGroupNoScrollbars;
+class ctrlStatic;
+class ctrlCheckboxBaseline;
+class ctrlCombo;
+class ctrlEdit;
+class ctrlToolbox;
+class ctrlStaticBackgroundDisable;
+class ctrlStaticBackgroundDisableTiles;
+class ctrlStaticBackground;
+class ctrlStaticFooter;
+class ctrlStaticTitle;
+class ctrlControlsGroup;
+class ctrlButtonOK;
+class ctrlButtonCancel;
+class ctrlCheckbox;
+class ctrlButton;
+class ctrlMenuStrip;
 
 #ifndef ACE_DEFINE_H
 #define ACE_DEFINE_H
