@@ -30,7 +30,7 @@ _unit playAction "ThrowGrenade";
     // Launch actual throwable
     private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high");
     private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
-    private _vup = [THROWSTYLE_NORMAL_VECTORUP, THROWSTYLE_HIGH_VECTORUP] select (GVAR(throwType) == "high");
+    private _vup = [[0, 1, 1], [1, 0, 0]] select (GVAR(throwType) == "high");
 
     if (GVAR(extendedDrop)) then {
         _direction = THROWSTYLE_EXTENDED_DIR;
