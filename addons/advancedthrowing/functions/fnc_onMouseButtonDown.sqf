@@ -22,10 +22,8 @@ params ["", "_key"];
 // Left mouse button
 // "DefaultAction" doesn't get executed when in driver seat
 if (_key == 0) exitWith {
-    if (!isNull GVAR(activeThrowable)) then {
-        if !(weaponLowered ACE_player) then {
-            [ACE_player] call FUNC(throw);
-        };
+    if (!isNull GVAR(activeThrowable) && !(weaponLowered ACE_player)) then {
+        [ACE_player] call FUNC(throw);
     };
 };
 

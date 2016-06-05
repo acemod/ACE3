@@ -43,9 +43,7 @@ if (GVAR(showMouseControls)) then {
 
 // Add throw action to suppress weapon firing (not possible to suppress mouseButtonDown event)
 _unit setVariable [QGVAR(throwAction), [
-    _unit, "DefaultAction",
-    {true},
-    {true}
+    _unit, "DefaultAction", {true}, {true}
 ] call EFUNC(common,addActionEventHandler)];
 
 // Draw throwable and throw arc if enabled

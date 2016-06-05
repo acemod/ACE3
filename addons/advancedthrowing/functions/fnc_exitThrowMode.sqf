@@ -20,7 +20,6 @@ if (!GVAR(inHand)) exitWith {};
 
 params ["_unit", "_reason"];
 
-TRACE_1("Exit Throw Mode",_reason);
 #ifdef DEBUG_MODE_FULL
     systemChat format ["Exit Throw Mode: %1", _reason];
 #endif
@@ -29,12 +28,12 @@ if (!GVAR(primed)) then {
     deleteVehicle GVAR(activeThrowable);
 };
 
-GVAR(activeThrowable) = objNull;
 GVAR(inHand) = false;
 GVAR(primed) = false;
-GVAR(dropCookedCounter) = 0;
-GVAR(extendedDrop) = false;
+GVAR(activeThrowable) = objNull;
 GVAR(throwType) = "normal";
+GVAR(extendedDrop) = false;
+GVAR(dropCookedCounter) = 0;
 
 // Remove controls hint (check if ever enabled is inside the function)
 call EFUNC(interaction,hideMouseHint);
