@@ -15,7 +15,6 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFatigue.hpp"
-//#include "CfgInventoryGlobalVariable.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
