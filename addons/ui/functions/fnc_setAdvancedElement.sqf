@@ -29,8 +29,8 @@ private _config = configFile >> "ACE_UI" >> _element;
 
 // Exit if main vehicle type condition not fitting
 private _location = getNumber (_config >> "location"); // (0-both, 1-ground, 2-vehicle)
-private _currentLocation = ACE_player == vehicle ACE_player;
-if ((_currentLocation && _location == 2) || (!_currentLocation && _location == 1)) exitWith {false};
+private _canUseWeapon = ACE_player call CBA_fnc_canUseWeapon;
+if ((_canUseWeapon && _location == 2) || (!_canUseWeapon && _location == 1)) exitWith {false};
 
 private _idd = getNumber (_config >> "idd");
 private _elements = getArray (_config >> "elements");
