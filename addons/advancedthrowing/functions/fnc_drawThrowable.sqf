@@ -60,12 +60,9 @@ if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player}) then {
     _leanCoef = 0;
 };
 
-private _cameraOffset = [_leanCoef, 0, 0.3];
-private _xAdjustBonus = [0, -0.075] select (GVAR(throwType) == "high");
-private _yAdjustBonus = [0, 0.1] select (GVAR(throwType) == "high");
-
-_cameraOffset = _cameraOffset vectorAdd CAMERA_ADJUST vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
-private _posFin = (eyePos ACE_player) vectorAdd (positionCameraToWorld _cameraOffset) vectorDiff (positionCameraToWorld [0, 0, 0]);
+private _eyePos = eyePos ACE_player;
+private _posCameraWorld = positionCameraToWorld [0, 0, 0];
+private _posFin = [0, 0, 0];
 
 // Orient it nicely, point towards player
 GVAR(activeThrowable) setDir ((getDir ACE_player) + 90);
@@ -75,20 +72,24 @@ private _pitch = [-30, -90] select (GVAR(throwType) == "high");
 
 
 if (GVAR(extendedDrop)) then {
-    _posFin = (eyePos ACE_player) vectorAdd (positionCameraToWorld [_leanCoef, 0, GVAR(extendedDropDistance)]) vectorDiff (positionCameraToWorld [0, 0, 0]);
-    private _posView = AGLtoASL (positionCameraToWorld [0, 0, 0]);
+    _posFin = _eyePos vectorAdd (positionCameraToWorld [_leanCoef, 0, GVAR(extendedDropDistance)]);
 
     // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
-    if (lineIntersects [_posView, _posFin]) then {
+    if (lineIntersects [AGLtoASL _posCameraWorld, _posFin vectorDiff _posCameraWorld]) then {
         GVAR(extendedDropDistance) = (GVAR(extendedDropDistance) - 0.10) max 0.2;
     };
-
-    GVAR(activeThrowable) setPosASL _posFin;
 } else {
     if (vehicle ACE_player == ACE_player) then {
-        GVAR(activeThrowable) setPosASL _posFin;
+        private _cameraOffset = [_leanCoef, 0, 0.3];
+        private _xAdjustBonus = [0, -0.075] select (GVAR(throwType) == "high");
+        private _yAdjustBonus = [0, 0.1] select (GVAR(throwType) == "high");
+
+        _cameraOffset = _cameraOffset vectorAdd [-0.05, -0.12, -0.03] vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
+        _posFin = _eyePos vectorAdd (positionCameraToWorld _cameraOffset);
     } else {
         //@todo make it work while moving properly
-        GVAR(activeThrowable) setPosASL _posFin;
+
     };
 };
+
+GVAR(activeThrowable) setPosASL (_posFin vectorDiff _posCameraWorld);

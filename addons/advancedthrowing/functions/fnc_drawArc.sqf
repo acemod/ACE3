@@ -22,13 +22,8 @@ if (!([ACE_player] call FUNC(canThrow))) exitWith {
 
 if (isNull GVAR(activeThrowable)) exitWith {};
 
-private _direction = THROWSTYLE_NORMAL_DIR;
-private _velocity = GVAR(throwSpeed);
-
-if (GVAR(throwType) == "high") then {
-    _direction = THROWSTYLE_HIGH_DIR;
-    _velocity = THROWSTYLE_HIGH_VEL;
-};
+private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high");
+private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
 
 if (GVAR(extendedDrop)) then {
     _direction = THROWSTYLE_EXTENDED_DIR;
