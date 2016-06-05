@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-// Disable drawing when intersecting with the vehicle, it looks ugly
+// Disable drawing when intersecting with the vehicle
 if (!([ACE_player] call FUNC(canThrow))) exitWith {
     drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_0_ca.paa", [1, 0, 0, 1], positionCameraToWorld [0, 0, 1], 2, 2, 0, "", 2];
 };
@@ -42,7 +42,7 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
     private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.9] vectorMultiply (_i * _i));
     private _cross = 0;
 
-    if (_newTrajASL distance (getPosASL ACE_player) <= 20) then {
+    if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
         if ((ASLToATL _newTrajASL) select 2 <= 0) then {
             _cross = 1
         } else {
@@ -52,8 +52,8 @@ for "_i" from 0.05 to 1.45 step 0.1 do {
             };
         };
 
-        private _iDim = linearConversion [20, 0, _newTrajASL distance (getPosASL ACE_player), 0.3, 2.5, true];
-        private _alpha = linearConversion [20, 0, _newTrajASL distance (getPosASL ACE_player), 0.05, 0.7, true];
+        private _iDim = linearConversion [20, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.3, 2.5, true];
+        private _alpha = linearConversion [20, 0, _newTrajASL distance (getPosASLVisual ACE_player), 0.05, 0.7, true];
         private _movePerc = linearConversion [3, 0, vectorMagnitude (velocity ACE_player), 0, 1, true];
         _alpha = _alpha * _movePerc;
 
