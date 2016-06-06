@@ -15,7 +15,7 @@
 disableSerialization;
 
 params ["_display"];
-//uinamespace setVariable [QGVAR(dlgSpottingScope), _display]; 
+uinamespace setVariable [QGVAR(dlgSpottingScope), _display]; 
 
 private _ctrlReticle = _display displayCtrl IDC_RETICLE;
 private _ctrlBody = _display displayCtrl IDC_BODY;

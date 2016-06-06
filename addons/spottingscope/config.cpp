@@ -2,7 +2,8 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ACE_Item_SpottingScope"};
+        name = CSTRING(component);
+        units[] = {"ACE_B_SpottingScope", "ACE_O_SpottingScope", "ACE_I_SpottingScope", "ACE_Item_SpottingScope"};
         weapons[] = {"ACE_SpottingScope"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_apl", "ace_interaction"};

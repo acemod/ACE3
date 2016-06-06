@@ -62,6 +62,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
+        author = ECSTRING(common,ACETeam);
         scope = 1;
         side = 1;
         typicalCargo[] = {"Soldier"};
@@ -71,6 +72,7 @@ class CfgVehicles {
         transportSoldier = 0;
         getInAction = "GetInLow";
         getOutAction = "GetOutLow";
+        editorSubcategory = "EdSubcat_Turrets";
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -121,6 +123,33 @@ class CfgVehicles {
                 opticsDisablePeripherialVision = 1;
             };
         };
+    };
+
+    class ACE_B_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_B_SpottingScope";
+        scope = 2;
+        side = 1;
+        faction = "BLU_F";
+        crew = "B_spotter_F";
+    };
+
+    class ACE_O_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_O_SpottingScope";
+        scope = 2;
+        side = 0;
+        faction = "OPF_F";
+        crew = "O_spotter_F";
+    };
+
+    class ACE_I_SpottingScope: ACE_SpottingScopeObject {
+        author = ECSTRING(common,ACETeam);
+        _generalMacro = "ACE_I_SpottingScope";
+        scope = 2;
+        side = 2;
+        faction = "IND_F";
+        crew = "I_spotter_F";
     };
 
     class Item_Base_F;
