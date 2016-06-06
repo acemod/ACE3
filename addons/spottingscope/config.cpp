@@ -17,3 +17,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgMoves.hpp"
+
+#include "RscInGameUI.hpp"

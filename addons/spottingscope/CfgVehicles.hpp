@@ -68,6 +68,8 @@ class CfgVehicles {
         getOutAction = "GetOutLow";
         class Turrets: Turrets {
             class MainTurret: MainTurret {
+                turretInfoType = QGVAR(RscUnitInfo_SpottingScope);
+
                 minTurn = -45;
                 maxTurn = 45;
                 initTurn = 0;
@@ -78,7 +80,7 @@ class CfgVehicles {
                 weapons[] = {};
                 magazines[] = {};
                 gunnerOpticsColor[] = {1,1,1,1};
-                gunnerOpticsmodel = QPATHTOF(data\m144_optic.p3d);
+                gunnerOpticsmodel = "\A3\Weapons_F\empty"; //QPATHTOF(data\m144_optic.p3d);
                 gunnerOpticsEffect[] = {"OpticsCHAbera1","OpticsBlur2"};
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
