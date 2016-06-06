@@ -22,6 +22,20 @@ if (!hasInterface) exitWith {};
     [_this select 1, "Player changed"] call FUNC(exitThrowMode);
 }] call EFUNC(common,addEventhandler);
 
+["interactMenuOpened", {
+    // Exit if advanced throwing is disabled (pick up only supports advanced throwing)
+    if (!GVAR(enabled)) exitWith {};
+
+    if (GVAR(inHand)) then {
+        [ACE_player, "Interact menu opened"] call FUNC(exitThrowMode);
+    } else {
+        // Show pick up actions on CfgAmmo's
+        _this call FUNC(interactEH);
+    };
+}] call EFUNC(common,addEventHandler);
+
+
+// Fired XEH
 [QGVAR(throwFiredXEH), {_this call FUNC(throwFiredXEH)}] call EFUNC(common,addEventHandler);
 
 

@@ -43,5 +43,8 @@
         <Key ID="STR_ACE_AdvancedThrowing_Cook">
             <English>(Click) Cook</English>
         </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_PickUp">
+            <English>Pick Up</English>
+        </Key>
     </Package>
 </Project>

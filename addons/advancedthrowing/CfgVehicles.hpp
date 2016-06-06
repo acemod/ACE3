@@ -1,3 +1,5 @@
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
     class GVAR(Module): ACE_Module {
@@ -30,6 +32,28 @@ class CfgVehicles {
         };
         class ModuleDescription {
             description = CSTRING(Module_Description);
+        };
+    };
+
+
+    class Items_base_F;
+    class GVAR(pickUpHelper): Items_base_F {
+        author = ECSTRING(common,Author);
+        displayName = "ACE Throwable Pick Up Helper";
+        model = "\a3\weapons_f\dummyweapon.p3d";
+        scope = 1;
+
+        class ACE_Actions {
+            class GVAR(pickUp) {
+                displayName = CSTRING(PickUp);
+                distance = 1;
+                condition = QUOTE(_player call FUNC(canPrepare));
+                statement = QUOTE(_this call FUNC(pickUp));
+            };
+        };
+
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
     };
 };
