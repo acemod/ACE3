@@ -17,20 +17,20 @@
 
 params ["_unit"];
 
+// Prime the throwable if it hasn't been cooking already
+// Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
+if (!GVAR(primed)) then {
+    [_unit] call FUNC(prime);
+};
+
 _unit playAction "ThrowGrenade";
 
 [{
     params ["_unit"];
 
-    // Prime the throwable if it hasn't been cooking already
-    if (!GVAR(primed)) then {
-        [_unit] call FUNC(prime);
-    };
-
     // Launch actual throwable
     private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high");
     private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
-    private _pitch = [-30, -90] select (GVAR(throwType) == "high");
 
     if (GVAR(extendedDrop)) then {
         _direction = THROWSTYLE_EXTENDED_DIR;
@@ -49,10 +49,6 @@ _unit playAction "ThrowGrenade";
 
     // Drop if unit dies during throw process
     if (alive _unit) then {
-        // This has to be set again for some reason
-        GVAR(activeThrowable) setDir ((getDirVisual ACE_player) + 90);
-        [GVAR(activeThrowable), _pitch, 0] call BIS_fnc_setPitchBank;
-
         GVAR(activeThrowable) setVelocity _newVelocity;
     };
 
