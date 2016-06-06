@@ -20,10 +20,14 @@ if (!GVAR(inHand)) exitWith {};
 params ["", "_key"];
 
 // Left mouse button
-// "DefaultAction" doesn't get executed when in driver seat
+// "DefaultAction" doesn't get executed when in driver seat or in FFV seat with weapon lowered
 if (_key == 0) exitWith {
-    if (!isNull GVAR(activeThrowable) && !(weaponLowered ACE_player)) then {
-        [ACE_player] call FUNC(throw);
+    if (!isNull GVAR(activeThrowable)) then {
+        // Look gets automatically pointed at weapon direction on first LMB press when in FFV seat, require weapon to be up if in vehicle
+        private _inVehicle = vehicle ACE_player != ACE_player;
+        if (!_inVehicle || {_inVehicle && {!weaponLowered ACE_player}}) then {
+            [ACE_player] call FUNC(throw);
+        };
     };
 };
 
