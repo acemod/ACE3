@@ -6,7 +6,8 @@ class RscText;
 class RscInGameUI {
     class RscUnitInfo;
     class GVAR(RscUnitInfo): RscUnitInfo {
-        controls[] = {"CA_FOVMode","ScriptedReticleHelper","Reticle","Body","trippleHeadLeft","trippleHeadRight"}; // don't change this order
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); {((_this select 0) displayCtrl _x) ctrlShow false} forEach [ARR_4(IDC_RETICLE,IDC_BODY,IDC_BLACK_LEFT,IDC_BLACK_RIGHT)]);
+        controls[] = {"CA_FOVMode","ScriptedReticleHelper","trippleHeadLeft","trippleHeadRight","Reticle","Body"}; // don't change this order
 
         class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
@@ -54,14 +55,14 @@ class RscInGameUI {
             idc = IDC_BLACK_LEFT;
             x = "safeZoneXAbs";
             Y = "safezoneY";
-            W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
+            W = "(-safeZoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
             H = "safeZoneH";
             colorBackground[] = {0,0,0,1};
         };
 
         class trippleHeadRight: trippleHeadLeft {
             idc = IDC_BLACK_RIGHT;
-            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
+            x = "safeZoneXAbs + safeZoneWAbs - (-safeZoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
         };   
     };
 };

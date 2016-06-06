@@ -15,23 +15,23 @@
 disableSerialization;
 
 params ["_display"];
-
 //uinamespace setVariable [QGVAR(dlgSpottingScope), _display]; 
+
+private _ctrlReticle = _display displayCtrl IDC_RETICLE;
+private _ctrlBody = _display displayCtrl IDC_BODY;
+private _ctrlBlackLeft = _display displayCtrl IDC_BLACK_LEFT;
+private _ctrlBlackRight = _display displayCtrl IDC_BLACK_RIGHT;
 
 // check if optics are used
 // hide all controls otherwise
 private _isUsingOptic = ctrlShown (_display displayCtrl 154);
 
-(_display displayCtrl IDC_BLACK_LEFT) ctrlShow _isUsingOptic;
-(_display displayCtrl IDC_BLACK_RIGHT) ctrlShow _isUsingOptic;
-
-// animate reticle
-private _ctrlReticle = _display displayCtrl IDC_RETICLE;
-private _ctrlBody = _display displayCtrl IDC_BODY;
-
 _ctrlReticle ctrlShow _isUsingOptic;
 _ctrlBody ctrlShow _isUsingOptic;
+_ctrlBlackLeft ctrlShow _isUsingOptic;
+_ctrlBlackRight ctrlShow _isUsingOptic;
 
+// animate reticle
 private _zoom = ([] call EFUNC(common,getZoom)) * MAGIC_SCOPE_NUMBER;
 
 _ctrlReticle ctrlSetPosition [
