@@ -22,6 +22,10 @@ GVAR(activeThrowable) = _helper getVariable [QGVAR(throwable), objNull];
 
 if (isNull GVAR(activeThrowable)) exitWith {};
 
-GVAR(primed) = true;
+// Change locality for manipulation (some commands require local object, such as setVelocity)
+if (!local GVAR(activeThrowable)) then {
+    ["setOwner", [GVAR(activeThrowable), clientOwner]] call EFUNC(common,serverEvent);
+};
 
+GVAR(primed) = true;
 _unit call FUNC(prepare)
