@@ -21,9 +21,16 @@
 #define IDC_BLACK_LEFT 10002
 #define IDC_BLACK_RIGHT 10003
 
-#define SIZEX 0.75/(getResolution select 5)
+#define MAGIC_SCOPE_NUMBER 0.0775
 
-#define POS_X QUOTE(safezoneX + 0.5 * safezoneW - 0.5 * SIZEX)
-#define POS_Y QUOTE(safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * 4/3)
-#define POS_W QUOTE(SIZEX)
-#define POS_H QUOTE(SIZEX * 4/3)
+#define POS_X_BASE(size) safezoneX + 0.5 * safezoneW - 0.5 * (size) * (getResolution select 5)
+#define POS_Y_BASE(size) safezoneY + 0.5 * safezoneH - 0.5 * (size) * (getResolution select 5) * 4/3
+#define POS_W_BASE(size) (size) * (getResolution select 5)
+#define POS_H_BASE(size) (size) * (getResolution select 5) * 4/3
+
+#define SIZEX 3.5
+
+#define POS_X QUOTE(POS_X_BASE(SIZEX))
+#define POS_Y QUOTE(POS_Y_BASE(SIZEX))
+#define POS_W QUOTE(POS_W_BASE(SIZEX))
+#define POS_H QUOTE(POS_H_BASE(SIZEX))

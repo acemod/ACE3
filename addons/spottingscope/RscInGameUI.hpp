@@ -5,9 +5,8 @@ class RscText;
 
 class RscInGameUI {
     class RscUnitInfo;
-    class GVAR(RscUnitInfo_SpottingScope): RscUnitInfo {
-        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); uinamespace setVariable [ARR_2(QUOTE(QUOTE(dlgSpottingScope)),_this select 0)]);
-        controls[] = {"CA_FOVMode","ScriptedReticleHelper","Body","Reticle","trippleHeadLeft","trippleHeadRight"}; // don't change this order
+    class GVAR(RscUnitInfo): RscUnitInfo {
+        controls[] = {"CA_FOVMode","ScriptedReticleHelper","Reticle","Body","trippleHeadLeft","trippleHeadRight"}; // don't change this order
 
         class CA_FOVMode: RscOpticsValue {  // idea by Taosenai. Apparently this can be used via isNil check to determine wheter the scope or the kolimator is used
             idc = 154;
@@ -31,7 +30,7 @@ class RscInGameUI {
             style = 48;
             size = 0;
             sizeEx = 1;
-            text = QPATHTOF(rsc\spotting_scope_body_co.paa);
+            text = QPATHTOF(rsc\spotting_scope_reticle_co.paa);
             colorText[] = {1,1,1,1};
             colorBackground[] = {0,0,0,0};
             x = POS_X;
@@ -42,7 +41,7 @@ class RscInGameUI {
 
         class Body: Reticle {
             idc = IDC_BODY;
-            text = QPATHTOF(rsc\spotting_scope_reticle_co.paa);
+            text = QPATHTOF(rsc\spotting_scope_body_co.paa);
             x = POS_X;
             y = POS_Y;
             w = POS_W;

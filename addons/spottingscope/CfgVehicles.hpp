@@ -66,9 +66,10 @@ class CfgVehicles {
         transportSoldier = 0;
         getInAction = "GetInLow";
         getOutAction = "GetOutLow";
+        opticsDisablePeripherialVision = 1;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                turretInfoType = QGVAR(RscUnitInfo_SpottingScope);
+                turretInfoType = QGVAR(RscUnitInfo);
 
                 minTurn = -45;
                 maxTurn = 45;
