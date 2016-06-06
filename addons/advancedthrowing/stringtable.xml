@@ -40,6 +40,9 @@
         <Key ID="STR_ACE_AdvancedThrowing_ChangeMode">
             <English>(Scroll) Change Mode</English>
         </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Extend">
+            <English>(Scroll) Extend</English>
+        </Key>
         <Key ID="STR_ACE_AdvancedThrowing_Cook">
             <English>(Click) Cook</English>
         </Key>

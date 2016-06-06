@@ -27,6 +27,9 @@ params ["", "_key", "_shift", "_ctrl", "_alt"];
 if (_ctrl && _key == 29) then {
     GVAR(extendedDrop) = [true, false] select GVAR(extendedDrop);
     GVAR(throwType) = "normal";
+
+    // Change controls hint for MMB
+    call FUNC(updateControlsHint);
 };
 
 // Exit if any of the action keys is pressed

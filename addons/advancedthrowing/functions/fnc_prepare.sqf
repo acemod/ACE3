@@ -32,14 +32,8 @@ if ((currentThrowable _unit) select 0 == "" && {!([_unit] call EFUNC(weaponselec
 
 GVAR(inHand) = true;
 
-// Add controls hint if enabled
-if (GVAR(showMouseControls)) then {
-    [
-        localize LSTRING(Throw),
-        format ["%1 / %2", localize ELSTRING(common,Cancel), localize LSTRING(DropCooked)],
-        format ["%1 / %2", localize LSTRING(ChangeMode), localize LSTRING(Cook)]
-    ] call EFUNC(interaction,showMouseHint);
-};
+// Add controls hint
+call FUNC(updateControlsHint);
 
 // Add throw action to suppress weapon firing (not possible to suppress mouseButtonDown event)
 _unit setVariable [QGVAR(throwAction), [

@@ -14,3 +14,4 @@ PREP(prepare);
 PREP(prime);
 PREP(throw);
 PREP(throwFiredXEH);
+PREP(updateControlsHint);

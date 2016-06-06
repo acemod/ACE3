@@ -41,3 +41,6 @@ deleteVehicle _activeThrowableOld;
     _throwableMag, // magazine
     GVAR(activeThrowable) // projectile
 ]] call EFUNC(common,globalEvent);
+
+// Change controls hint for RMB
+call FUNC(updateControlsHint);
