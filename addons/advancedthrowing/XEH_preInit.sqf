@@ -10,7 +10,6 @@ GVAR(primed) = false;
 GVAR(activeThrowable) = objNull;
 GVAR(throwType) = "normal";
 GVAR(extendedDrop) = false;
-GVAR(dropCookedCounter) = 0;
 
 // Defaults
 GVAR(extendedDropDistance) = 0.2;

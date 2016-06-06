@@ -29,13 +29,7 @@ if (_key == 0) exitWith {
 
 // Right mouse button
 if (_key == 1) exitWith {
-    if (GVAR(primed)) then {
-        GVAR(dropCookedCounter) = GVAR(dropCookedCounter) + 1;
-
-        if (GVAR(dropCookedCounter) >= 2) then {
-            [ACE_player, "Dropping cooked throwable"] call FUNC(exitThrowMode);
-        };
-    } else {
+    if (!GVAR(primed)) then {
         [ACE_player, "Storing throwable"] call FUNC(exitThrowMode);
     };
 };

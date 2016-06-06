@@ -17,15 +17,14 @@
 
 if (!GVAR(showMouseControls)) exitWith {};
 
-private _rmb = [localize ELSTRING(common,Cancel), localize LSTRING(DropCooked)] select (GVAR(primed));
-
 private _mmb = [localize LSTRING(ChangeMode), localize LSTRING(Extend)] select GVAR(extendedDrop);
+
 if (!GVAR(primed)) then {
-    [_mmb, localize LSTRING(Cook)] joinString " / ";
+    _mmb = [_mmb, localize LSTRING(Cook)] joinString " / ";
 };
 
 [
     localize LSTRING(Throw),
-    _rmb,
+    [localize ELSTRING(common,Cancel), ""] select (GVAR(primed)),
     _mmb
 ] call EFUNC(interaction,showMouseHint);

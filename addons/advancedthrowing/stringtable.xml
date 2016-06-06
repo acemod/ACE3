@@ -34,9 +34,6 @@
         <Key ID="STR_ACE_AdvancedThrowing_Throw">
             <English>Throw</English>
         </Key>
-        <Key ID="STR_ACE_AdvancedThrowing_DropCooked">
-            <English>(x2) Drop Cooked</English>
-        </Key>
         <Key ID="STR_ACE_AdvancedThrowing_ChangeMode">
             <English>(Scroll) Change Mode</English>
         </Key>
