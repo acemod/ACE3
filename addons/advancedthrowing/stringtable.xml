@@ -25,11 +25,17 @@
         <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
         </Key>
-        <Key ID="STR_ACE_AdvancedThrowing_Primed">
-            <English>Primed</English>
-        </Key>
         <Key ID="STR_ACE_AdvancedThrowing_Prepare">
             <English>Prepare/Change Throwable</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_dropModeHold">
+            <English>Throwable Drop Mode (Hold)</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_DropModeToggle">
+            <English>Throwable Drop Mode (Toggle)</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Primed">
+            <English>Primed</English>
         </Key>
         <Key ID="STR_ACE_AdvancedThrowing_Throw">
             <English>Throw</English>

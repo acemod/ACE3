@@ -19,18 +19,18 @@ if (!GVAR(inHand)) exitWith {};
 
 params ["", "_amount"];
 
-if (GVAR(extendedDrop)) then {
+if (GVAR(dropMode)) then {
     if (_amount < 0) then {
         // Move closer
-        GVAR(extendedDropDistance) = (GVAR(extendedDropDistance) - 0.1) max 0.2;
+        GVAR(dropDistance) = (GVAR(dropDistance) - 0.1) max 0.2;
     } else {
         // Move further
-        GVAR(extendedDropDistance) = (GVAR(extendedDropDistance) + 0.1) min 1;
+        GVAR(dropDistance) = (GVAR(dropDistance) + 0.1) min 1;
     };
 
     // Limit distance in vehicle
     if (vehicle ACE_player != ACE_player) then {
-        GVAR(extendedDropDistance) = GVAR(extendedDropDistance) min 0.5;
+        GVAR(dropDistance) = GVAR(dropDistance) min 0.5;
     };
 } else {
     if (_amount < 0) then {

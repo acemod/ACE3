@@ -17,7 +17,7 @@
 
 if (!GVAR(showMouseControls)) exitWith {};
 
-private _mmb = [localize LSTRING(ChangeMode), localize LSTRING(Extend)] select GVAR(extendedDrop);
+private _mmb = [localize LSTRING(ChangeMode), localize LSTRING(Extend)] select GVAR(dropMode);
 
 if (!GVAR(primed)) then {
     _mmb = [_mmb, localize LSTRING(Cook)] joinString " / ";

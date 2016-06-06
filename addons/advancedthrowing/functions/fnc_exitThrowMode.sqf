@@ -32,7 +32,7 @@ GVAR(inHand) = false;
 GVAR(primed) = false;
 GVAR(activeThrowable) = objNull;
 GVAR(throwType) = "normal";
-GVAR(extendedDrop) = false;
+GVAR(dropMode) = false;
 
 // Remove controls hint (check if ever enabled is inside the function)
 call EFUNC(interaction,hideMouseHint);

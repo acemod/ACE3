@@ -29,13 +29,9 @@ _unit playAction "ThrowGrenade";
     params ["_unit"];
 
     // Launch actual throwable
-    private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high");
+    private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high" || {GVAR(dropMode)});
     private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
-
-    if (GVAR(extendedDrop)) then {
-        _direction = THROWSTYLE_EXTENDED_DIR;
-        _velocity = THROWSTYLE_EXTENDED_VEL;
-    };
+    _velocity = [_velocity, THROWSTYLE_DROP_VEL] select GVAR(dropMode);
 
     private _p2 = (eyePos _unit) vectorAdd (positionCameraToWorld _direction) vectorDiff (positionCameraToWorld [0, 0, 0]);
     private _p1 = AGLtoASL (GVAR(activeThrowable) modelToWorldVisual [0, 0, 0]);

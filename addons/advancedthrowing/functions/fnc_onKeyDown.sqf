@@ -23,15 +23,6 @@ if (!GVAR(inHand)) exitWith {false};
 
 params ["", "_key", "_shift", "_ctrl", "_alt"];
 
-// Extend arm drop mode (only on foot) - check _key to prevent some key weirdness and allow nice changing while moving
-if (_ctrl && _key == 29) then {
-    GVAR(extendedDrop) = [true, false] select GVAR(extendedDrop);
-    GVAR(throwType) = "normal";
-
-    // Change controls hint for MMB
-    call FUNC(updateControlsHint);
-};
-
 // Exit if any of the action keys is pressed
 {
     if (_key in _x) exitWith {

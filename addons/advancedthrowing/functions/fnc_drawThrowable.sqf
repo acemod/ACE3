@@ -72,12 +72,12 @@ private _pitch = [-30, -90] select (GVAR(throwType) == "high");
 [GVAR(activeThrowable), _pitch, 0] call BIS_fnc_setPitchBank;
 
 
-if (GVAR(extendedDrop)) then {
-    _posFin = _posFin vectorAdd (positionCameraToWorld [_leanCoef, 0, GVAR(extendedDropDistance)]);
+if (GVAR(dropMode)) then {
+    _posFin = _posFin vectorAdd (positionCameraToWorld [_leanCoef, 0, GVAR(dropDistance)]);
 
     // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
     if (lineIntersects [AGLtoASL _posCameraWorld, _posFin vectorDiff _posCameraWorld]) then {
-        GVAR(extendedDropDistance) = (GVAR(extendedDropDistance) - 0.10) max 0.2;
+        GVAR(dropDistance) = (GVAR(dropDistance) - 0.10) max 0.2;
     };
 } else {
     private _xAdjustBonus = [0, -0.075] select (GVAR(throwType) == "high");
