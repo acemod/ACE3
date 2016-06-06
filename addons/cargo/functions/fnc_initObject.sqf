@@ -39,7 +39,7 @@ private _statement = {
     [_player, _target] call FUNC(startLoadIn);
 };
 private _text = localize LSTRING(loadObject);
-private _icon = QUOTE(PATHTOF(UI\Icon_load.paa));
+private _icon = QPATHTOF(UI\Icon_load.paa);
 
 private _action = [QGVAR(load), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);

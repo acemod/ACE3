@@ -37,19 +37,15 @@ if (isServer) then {["placedInBodyBag", FUNC(serverRemoveBody)] call EFUNC(commo
     params ["_unit", "_status"];
     if (local _unit) then {
         if (_status) then {
-            _unit setVariable ["tf_globalVolume", 0.4];
             _unit setVariable ["tf_voiceVolume", 0, true];
             _unit setVariable ["tf_unable_to_use_radio", true, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", true, true];
-            if (!isNil "acre_api_fnc_setGlobalVolume") then { [0.4^0.33] call acre_api_fnc_setGlobalVolume; };
         } else {
-            _unit setVariable ["tf_globalVolume", 1];
             _unit setVariable ["tf_voiceVolume", 1, true];
             _unit setVariable ["tf_unable_to_use_radio", false, true];
 
             _unit setVariable ["acre_sys_core_isDisabled", false, true];
-            if (!isNil "acre_api_fnc_setGlobalVolume") then { [1] call acre_api_fnc_setGlobalVolume; };
         };
     };
 }] call EFUNC(common,addEventHandler);
@@ -108,7 +104,7 @@ GVAR(effectPainCC) = [
 
 // Initialize Other Variables
 GVAR(effectBlind) = false;
-GVAR(effectTimeBlood) = ACE_time;
+GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
@@ -143,11 +139,11 @@ GVAR(effectTimeBlood) = ACE_time;
             [{
                 GVAR(effectBlindingCC) ppEffectAdjust [1,1,0, [1,1,1,0], [0,0,0,1], [0,0,0,0]];
                 GVAR(effectBlindingCC) ppEffectCommit ((_this select 0) * 2);
-            }, [_strength], 0.01, 0] call EFUNC(common,waitAndExecute);
+            }, [_strength], 0.01, 0] call CBA_fnc_waitAndExecute;
 
             [{
                 GVAR(effectBlindingCC) ppEffectEnable false;
-            }, [], (_strength * 2) + 0.5, 0] call EFUNC(common,waitAndExecute);
+            }, [], (_strength * 2) + 0.5, 0] call CBA_fnc_waitAndExecute;
 
             GVAR(effectBlind) = false;
         };
@@ -155,8 +151,8 @@ GVAR(effectTimeBlood) = ACE_time;
 
     _bleeding = [ACE_player] call FUNC(getBloodLoss);
     // Bleeding Indicator
-    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < ACE_time) then {
-        GVAR(effectTimeBlood) = ACE_time;
+    if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < CBA_missionTime) then {
+        GVAR(effectTimeBlood) = CBA_missionTime;
         [600 * _bleeding] call BIS_fnc_bloodEffect;
     };
 
@@ -172,8 +168,8 @@ GVAR(effectTimeBlood) = ACE_time;
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 
-GVAR(lastHeartBeat) = ACE_time;
-GVAR(lastHeartBeatSound) = ACE_time;
+GVAR(lastHeartBeat) = CBA_missionTime;
+GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
@@ -193,8 +189,8 @@ GVAR(lastHeartBeatSound) = ACE_time;
             GVAR(effectPainCC) ppEffectEnable false;
         };
     } else {
-        if ((ACE_time > GVAR(lastHeartBeat) + _interval)) then {
-            GVAR(lastHeartBeat) = ACE_time;
+        if ((CBA_missionTime > GVAR(lastHeartBeat) + _interval)) then {
+            GVAR(lastHeartBeat) = CBA_missionTime;
 
             // Pain effect, no pain effect in zeus camera
             if (isNull curatorCamera) then {
@@ -210,15 +206,15 @@ GVAR(lastHeartBeatSound) = ACE_time;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCA) ppEffectAdjust [(_this select 0), (_this select 0), false];
                             GVAR(effectPainCA) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CBA_fnc_waitAndExecute;
                     } else {
                         GVAR(effectPainCA) ppEffectEnable false;
                     };
@@ -232,15 +228,15 @@ GVAR(lastHeartBeatSound) = ACE_time;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.2], _interval * 0.05, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit 0.01;
-                        }, [_strength * 0.7], _interval * 0.3, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.7], _interval * 0.3, 0] call CBA_fnc_waitAndExecute;
                         [{
                             GVAR(effectPainCC) ppEffectAdjust [1,1,0, [1,1,1,1], [0,0,0,0], [1,1,1,1], [1 - (_this select 0),1 - (_this select 0),0,0,0,0.2,2]];
                             GVAR(effectPainCC) ppEffectCommit (_this select 1);
-                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call EFUNC(common,waitAndExecute);
+                        }, [_strength * 0.1, _interval * 0.55], _interval * 0.4, 0] call CBA_fnc_waitAndExecute;
                     } else {
                         GVAR(effectPainCC) ppEffectEnable false;
                     };
@@ -251,8 +247,8 @@ GVAR(lastHeartBeatSound) = ACE_time;
 
     if (GVAR(level) >= 2 && {_heartRate > 0}) then {
         _minTime = 60 / _heartRate;
-        if (ACE_time - GVAR(lastHeartBeatSound) > _minTime) then {
-            GVAR(lastHeartBeatSound) = ACE_time;
+        if (CBA_missionTime - GVAR(lastHeartBeatSound) > _minTime) then {
+            GVAR(lastHeartBeatSound) = CBA_missionTime;
             // Heart rate sound effect
             if (_heartRate < 60) then {
                 _sound = GVAR(heartBeatSounds_Normal) select (random((count GVAR(heartBeatSounds_Normal)) -1));
@@ -298,9 +294,7 @@ GVAR(lastHeartBeatSound) = ACE_time;
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // Item Event Handler
-["playerInventoryChanged", {
-    [ACE_player] call FUNC(itemCheck);
-}] call EFUNC(common,addEventHandler);
+["playerInventoryChanged", FUNC(itemCheck)] call EFUNC(common,addEventHandler);
 
 if (hasInterface) then {
     ["PlayerJip", {

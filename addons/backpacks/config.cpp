@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"bux","commy2"};
-        authorUrl = "https://github.com/commy2/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"bux","commy2"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

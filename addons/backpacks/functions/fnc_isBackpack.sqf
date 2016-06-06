@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-params [["_backpack", objNull, [objNull]]];
+params [["_backpack", objNull, [objNull, ""]]];
 
 if (_backpack isEqualType objNull) then {
     _backpack = typeOf _backpack;

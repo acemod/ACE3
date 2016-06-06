@@ -23,7 +23,7 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if (!HASH_HASKEY(GVAR(syncedEvents),_eventName)) exitWith {
-        ACE_LOGERROR("Request for synced event - key not found.");
+        ACE_LOGERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 

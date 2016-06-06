@@ -51,4 +51,4 @@ _position set [2, 0];
     ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
 
     [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
-}, [_rallypoint, _unit, _position], 5] call EFUNC(common,waitAndExecute);
+}, [_rallypoint, _unit, _position], 5] call CBA_fnc_waitAndExecute;

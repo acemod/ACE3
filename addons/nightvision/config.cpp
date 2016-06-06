@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_NVG_Gen1", "ACE_NVG_Gen2", /*"ACE_NVG_Gen3",*/ "ACE_NVG_Gen4", "ACE_NVG_Wide"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"commy2", "KoffeinFlummi", "PabstMirror"};
-        authorUrl = "https://github.com/commy2/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"commy2", "KoffeinFlummi", "PabstMirror"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

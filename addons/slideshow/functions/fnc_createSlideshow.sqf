@@ -80,5 +80,5 @@ if (_duration == 0) then {
     missionNamespace setVariable [_varString, 0];
 
     // Automatic transitions handler
-    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
+    [FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CBA_fnc_waitAndExecute;
 };

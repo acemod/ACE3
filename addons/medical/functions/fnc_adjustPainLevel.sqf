@@ -35,6 +35,6 @@ _pain = _pain max 0;
 _unit setVariable [QGVAR(pain), _pain];
 
 //Start up the vital watching (if not already running)
-[_unit] call FUNC(addToInjuredCollection);
+[_unit] call FUNC(addVitalLoop);
 
 _pain

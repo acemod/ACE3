@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Text <ANY>
- * 1: Size of the textbox (default: 1.5) <NUMBER>
- * 2: Target Unit. Will only display if target is the player controlled object (default: ACE_player) <OBJECT>
+ * 1: Size of the textbox <NUMBER> (default: 1.5)
+ * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> (default: ACE_player)
  * 3: Custom Width <NUMBER><OPTIONAL>
  *
  * Return Value:
@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params ["_text", ["_size", 1.5], ["_target", ACE_player], ["_width", 10]];
+params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]], ["_width", 10, [0]]];
 
 if (_target != ACE_player) exitWith {};
 

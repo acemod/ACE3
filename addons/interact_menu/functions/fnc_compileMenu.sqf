@@ -18,10 +18,10 @@ private _objectType = _target;
 if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
-private _actionsVarName = format [QGVAR(Act_%1), _objectType];
+private _namespace = GVAR(ActNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
+if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
 private _recurseFnc = {
     params ["_actionsCfg", "_parentDistance"];
@@ -104,7 +104,7 @@ private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions
 TRACE_1("Building ACE_Actions",_objectType);
 private _actions = [_actionsCfg, 0] call _recurseFnc;
 
-missionNamespace setVariable [_actionsVarName, _actions];
+_namespace setVariable [_objectType, _actions];
 
 /*
 [

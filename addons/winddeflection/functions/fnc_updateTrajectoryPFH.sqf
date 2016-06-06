@@ -22,8 +22,8 @@
 
     params ["_args"];
     _args params ["_lastTime"];
-    _deltaT = ACE_time - _lastTime;
-    _args set [0, ACE_time];
+    _deltaT = CBA_missionTime - _lastTime;
+    _args set [0, CBA_missionTime];
     _deleted = 0;
     _isWind = (vectorMagnitude ACE_wind > 0);
 
@@ -53,4 +53,4 @@
         nil
     } count +GVAR(trackedBullets);
     // END_COUNTER(pfeh);
-}, GVAR(simulationInterval), [ACE_time]] call CBA_fnc_addPerFrameHandler;
+}, GVAR(simulationInterval), [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

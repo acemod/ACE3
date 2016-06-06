@@ -15,3 +15,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define TAG_SIZE 0.6
