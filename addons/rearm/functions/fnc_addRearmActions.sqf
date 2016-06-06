@@ -2,10 +2,10 @@
  * Author: GitHawk
  * Show the resupplyable ammunition of all surrounding vehicles.
  *
- * Argument:
+ * Arguments:
  * 0: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * ChildActions <ARRAY>
  *
  * Example:

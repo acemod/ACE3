@@ -2,12 +2,12 @@
  * Author: Commy2, esteldunedain
  * Swap barrel callback
  *
- * Argument:
+ * Arguments:
  * 0: Unit initiating the action <OBJECT>
  * 1: Unit that has the weapon <OBJECT>
  * 2: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

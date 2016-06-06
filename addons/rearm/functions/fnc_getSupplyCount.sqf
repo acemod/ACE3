@@ -2,10 +2,10 @@
  * Author: GitHawk
  * Get the supply count.
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Supply count <NUMBER>
  *
  * Example:

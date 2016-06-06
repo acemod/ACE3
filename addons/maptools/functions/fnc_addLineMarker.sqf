@@ -8,7 +8,7 @@
  * 2: Marker end pos <ARRAY>
  * 3: Color index <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

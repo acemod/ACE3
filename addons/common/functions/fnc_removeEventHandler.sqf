@@ -2,7 +2,7 @@
  * Author: Nou
  * Remove an event handler.
  *
- * Argument:
+ * Arguments:
  * 0: Event name <STRING>
  * 1: Event code <NUMBER>
  *

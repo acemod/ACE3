@@ -2,11 +2,11 @@
  * Author: GitHawk
  * Check whether enough supply is left to take the magazine.
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  *
- * Return value:
+ * Return Value:
  * Enough supply <BOOL>
  *
  * Example:

@@ -4,7 +4,7 @@
  * Also gets longitude, latitude and altitude offset for the map.
  * Writes return values to GVAR(MGRS_data) if run on the current map.
  *
- * Argument:
+ * Arguments:
  * 0: Map name (default: worldName) <STRING>
  *
  * Return Value:

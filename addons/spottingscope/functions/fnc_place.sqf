@@ -6,7 +6,7 @@
  * 0: unit <OBJECT>
  * 1: scope class <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

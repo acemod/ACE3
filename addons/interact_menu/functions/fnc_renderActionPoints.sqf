@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Render all action points
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

@@ -11,7 +11,7 @@
  * handeled by: copyMapRemoteSend: triggers event "drawing_sendbackMarkers" on origin
  * handeled by: copyMapReceiveMarkers
  *
- * Return value:
+ * Return Value:
  * Return
  */
 

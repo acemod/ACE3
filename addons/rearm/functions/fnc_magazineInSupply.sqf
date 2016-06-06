@@ -2,11 +2,11 @@
  * Author: GitHawk
  * Returns true if the magazine is in the current supply
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
  *
- * Return value:
+ * Return Value:
  * Magazine in supply <BOOL>
  *
  * Example:
@@ -38,5 +38,5 @@ if (GVAR(supply) == 2) exitWith {
     _magazinePresent
 };
 
-// With infinite supply, the is always one left
+// With infinite supply, there is always one left
 true

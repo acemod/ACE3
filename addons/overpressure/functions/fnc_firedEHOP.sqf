@@ -5,7 +5,7 @@
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

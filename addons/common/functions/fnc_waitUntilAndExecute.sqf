@@ -2,12 +2,12 @@
  * Author: joko // Jonas
  * Executes a code once with after the Condition is True, using a PFH
  *
- * Argument:
+ * Arguments:
  * 0: Condition <CODE>
  * 1: Code to execute <CODE>
  * 2: Parameters to run the code with <ARRAY,ANY,NIL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

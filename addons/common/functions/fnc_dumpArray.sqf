@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Array to be dumped <ARRAY>
- * 1: Depth <NUMBER><OPTIONAL>
+ * 1: Depth <NUMBER>(optional)
  *
  * Return Value:
  * None

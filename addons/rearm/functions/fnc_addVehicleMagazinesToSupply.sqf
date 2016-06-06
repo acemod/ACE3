@@ -2,14 +2,14 @@
  * Author: GitHawk
  * Adds all magazines of a vehicle to the supply.
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Vehicle <OBJECT>
  * or
  * 0: Ammo Truck <OBJECT>
  * 1: Vehicle class <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -2,10 +2,10 @@
  * Author: Ruthberg
  * Inits the wind variables on mission start
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

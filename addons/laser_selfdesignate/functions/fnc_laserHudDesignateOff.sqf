@@ -2,7 +2,7 @@
  * Author: jaynus
  * Turns off passed laser self designation.
  *
- * Argument:
+ * Arguments:
  * 0: Shooter, player shooting the laser
  * 1: LaserUUID, the UUID of the laser returned by EFUNC(laser,laserOn)
  * 2: Local laser target, unused.

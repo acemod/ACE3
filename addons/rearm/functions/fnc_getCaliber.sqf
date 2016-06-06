@@ -2,10 +2,10 @@
  * Author: GitHawk
  * Get the caliber of the ammo in a magazine and return its parameters.
  *
- * Argument:
+ * Arguments:
  * 0: Magazine Classname <STRING>
  *
- * Return value:
+ * Return Value:
  * 0: Caliber information <ARRAY>
  *   0: Rounded caliber <NUMBER>
  *   1: Caliber index <NUMBER>

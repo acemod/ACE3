@@ -2,7 +2,7 @@
  * Author: Nou
  * Remove all events of a certain event type.
  *
- * Argument:
+ * Arguments:
  * 0: Event name <STRING>
  *
  * Return Value:

@@ -2,7 +2,7 @@
  * Author: Nou
  * Execute a event only on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Event name <STRING>
  * 1: Event args <ANY>
  *

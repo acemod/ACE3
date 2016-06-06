@@ -2,7 +2,7 @@
  * Author: commy2
  * Enable the object to be carried.
  *
- * Argument:
+ * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable carrying, false to disable <BOOL>
  * 2: Position offset for attachTo command <ARRAY> (default: [0,1,1])

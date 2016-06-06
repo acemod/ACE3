@@ -3,10 +3,10 @@
  *
  * Send Map markers to other player
  *
- * Argument:
+ * Arguments:
  * 0: Target player (Unit)
  *
- * Return value:
+ * Return Value:
  * Return
  */
 

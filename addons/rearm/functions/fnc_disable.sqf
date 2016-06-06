@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Disable <BOOL><OPTIONAL>
+ * 1: Disable <BOOL>(optional)
  *
  * Return Value:
  * None

@@ -2,12 +2,12 @@
  * Author: GitHawk
  * Adds magazines to the supply.
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
- * 2: Only partial <BOOL><OPTIONAL>
+ * 2: Only partial <BOOL>(optional)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

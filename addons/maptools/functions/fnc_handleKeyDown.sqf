@@ -9,7 +9,7 @@
  * 3: Ctrl Key (boolean)
  * 4: Alt Key (boolean)
  *
- * Return value:
+ * Return Value:
  * Boolean, true if event was handled
  */
 

@@ -9,7 +9,7 @@
  * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
  * 4: Seeker laser code. <number>
  *
- * Return value:
+ * Return Value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
  */
 

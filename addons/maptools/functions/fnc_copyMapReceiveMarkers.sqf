@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Array of markers to copy <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

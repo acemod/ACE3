@@ -9,7 +9,7 @@
  * 3: Magazine class <STRING>
  * 4: Config of trigger <STRING>
  * 5: Variables required for the trigger type <ARRAY>
- * 6: Explosive placeholder <OBJECT> <OPTIONAL>
+ * 6: Explosive placeholder <OBJECT> (optional)
  *
  * Return Value:
  * Placed explosive <OBJECT>

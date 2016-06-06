@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Explosives objects to detonate <OBJECT or ARRAY>
- * 1: Fuze delay (for each explosive; use negative number for random time up to value) <NUMBER> <OPTIONAL>
+ * 1: Fuze delay (for each explosive; use negative number for random time up to value) <NUMBER> (optional)
  *
  * Return Value:
  * None

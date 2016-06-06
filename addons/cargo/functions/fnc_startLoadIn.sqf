@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Load ProgressBar Started <BOOL>
  *
  * Example:

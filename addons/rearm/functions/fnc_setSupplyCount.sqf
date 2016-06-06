@@ -2,11 +2,11 @@
  * Author: GitHawk
  * Sets the supply count.
  *
- * Argument:
+ * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Supply Count <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

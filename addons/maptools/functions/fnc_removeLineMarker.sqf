@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Marker Name <STRING>
  *
- * Return value:
+ * Return Value:
  * Return
  */
 

@@ -3,11 +3,11 @@
  *
  * Handle mouse wheel.
  *
- * Argument:
+ * Arguments:
  * 0: Control
  * 1: Scroll Amount
  *
- * Return value:
+ * Return Value:
  * Boolean, true if event was handled
  */
 

@@ -2,12 +2,12 @@
  * Author: KoffeinFlummi, Ruthberg
  * Changes the adjustment for the current scope
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Turret and Direction <NUMBER>
  * 2: Major Step <BOOL>
  *
- * Return value:
+ * Return Value:
  * Did we adjust anything? <BOOL>
  *
  * Example:

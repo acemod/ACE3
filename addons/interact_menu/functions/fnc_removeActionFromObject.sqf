@@ -2,12 +2,12 @@
  * Author: commy2, NouberNou and esteldunedain
  * Removes an action from an object
  *
- * Argument:
+ * Arguments:
  * 0: Object the action is assigned to <OBJECT>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Full path of the action to remove <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

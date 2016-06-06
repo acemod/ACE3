@@ -2,10 +2,10 @@
  * Author: Commy2 and esteldunedain
  * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
- * Argument:
+ * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
