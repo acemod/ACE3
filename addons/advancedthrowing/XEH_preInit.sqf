@@ -14,5 +14,6 @@ GVAR(dropCookedCounter) = 0;
 
 // Defaults
 GVAR(extendedDropDistance) = 0.2;
+GVAR(lastTickTime) = 0;
 
 ADDON = true;

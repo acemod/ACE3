@@ -54,16 +54,18 @@ if (isNull GVAR(activeThrowable) || {(_throwableType != typeOf GVAR(activeThrowa
 
 
 // Set position
-private _leanCoef = ((ACE_player selectionPosition "head") select 0) - 0.15; // 0.15 counters the base offset
+private _posHeadRel = ACE_player selectionPosition "head";
+
+private _leanCoef = (_posHeadRel select 0) - 0.15; // 0.15 counters the base offset
 if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player}) then {
     _leanCoef = 0;
 };
 
 private _posCameraWorld = positionCameraToWorld [0, 0, 0];
-private _posFin = eyePos ACE_player;
+private _posFin = AGLToASL (ACE_player modelToWorldVisual (_posHeadRel vectorAdd [-0.03, 0.01, 0.15]));
 
 // Orient it nicely, point towards player
-GVAR(activeThrowable) setDir ((getDir ACE_player) + 90);
+GVAR(activeThrowable) setDir ((getDirVisual ACE_player) + 90);
 
 private _pitch = [-30, -90] select (GVAR(throwType) == "high");
 [GVAR(activeThrowable), _pitch, 0] call BIS_fnc_setPitchBank;
@@ -81,11 +83,13 @@ if (GVAR(extendedDrop)) then {
     private _yAdjustBonus = [0, 0.1] select (GVAR(throwType) == "high");
     private _cameraOffset = [_leanCoef, 0, 0.3] vectorAdd [-0.05, -0.12, -0.03] vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
 
-    if (vehicle ACE_player == ACE_player) then {
-        _posFin = _posFin vectorAdd (positionCameraToWorld _cameraOffset);
-    } else {
-        //@todo make it work while moving properly
-        _posFin = _posFin vectorAdd (positionCameraToWorld _cameraOffset);
+    _posFin = _posFin vectorAdd (positionCameraToWorld _cameraOffset);
+
+    if (vehicle ACE_player != ACE_player) then {
+        // Counteract vehicle velocity including acceleration
+        private _vectorDiff = (velocity (vehicle ACE_player)) vectorMultiply (time - GVAR(lastTickTime) + 0.01);
+        _posFin = _posFin vectorAdd _vectorDiff;
+        GVAR(lastTickTime) = time;
     };
 };
 
