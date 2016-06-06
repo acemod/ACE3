@@ -30,7 +30,7 @@ _unit playAction "ThrowGrenade";
     // Launch actual throwable
     private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high");
     private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
-    private _vup = [[0, 1, 1], [1, 0, 0]] select (GVAR(throwType) == "high");
+    private _pitch = [-30, -90] select (GVAR(throwType) == "high");
 
     if (GVAR(extendedDrop)) then {
         _direction = THROWSTYLE_EXTENDED_DIR;
@@ -49,7 +49,10 @@ _unit playAction "ThrowGrenade";
 
     // Drop if unit dies during throw process
     if (alive _unit) then {
-        GVAR(activeThrowable) setVectorUp _vup; // This was null at start sometimes
+        // This has to be set again for some reason
+        GVAR(activeThrowable) setDir ((getDirVisual ACE_player) + 90);
+        [GVAR(activeThrowable), _pitch, 0] call BIS_fnc_setPitchBank;
+
         GVAR(activeThrowable) setVelocity _newVelocity;
     };
 

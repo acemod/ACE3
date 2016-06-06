@@ -62,7 +62,8 @@ if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player}) then {
 };
 
 private _posCameraWorld = positionCameraToWorld [0, 0, 0];
-private _posFin = AGLToASL (ACE_player modelToWorldVisual (_posHeadRel vectorAdd [-0.03, 0.01, 0.15]));
+_posHeadRel = _posHeadRel vectorAdd [-0.03, 0.01, 0.15]; // Bring closer to eyePos value
+private _posFin = AGLToASL (ACE_player modelToWorldVisual _posHeadRel);
 
 // Orient it nicely, point towards player
 GVAR(activeThrowable) setDir ((getDirVisual ACE_player) + 90);
