@@ -25,9 +25,7 @@ if (GVAR(inHand)) exitWith {
 };
 
 // Try selecting next throwable if none currently selected
-if ((currentThrowable _unit) select 0 == "" && {!([_unit] call EFUNC(weaponselect,selectNextGrenade))}) exitWith {
-    [_unit, "No valid throwables"] call FUNC(exitThrowMode);
-};
+if ((currentThrowable _unit) isEqualTo [] && {!([_unit] call EFUNC(weaponselect,selectNextGrenade))}) exitWith {};
 
 
 GVAR(inHand) = true;

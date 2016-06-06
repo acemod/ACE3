@@ -32,7 +32,7 @@ if (GVAR(primed)) then {
 };
 
 // Inventory check
-if ((count _throwable < 1 && !GVAR(primed)) || {_throwableMag == ""}) exitWith {
+if (_throwable isEqualTo [] && {!GVAR(primed)}) exitWith {
     [ACE_player, "No valid throwables"] call FUNC(exitThrowMode);
 };
 
