@@ -33,7 +33,7 @@ if (_interactionType != 0 || {vehicle ACE_player != ACE_player}) exitWith {};
         // Prevent rare error when ending mission with interact key down
         if (isNull ace_player) exitWith {};
 
-        //If player moved >5 meters from last pos, then rescan
+        // Player moved >5 meters from last pos, rescan
         if ((getPosASL ace_player) distance _setPosition > 5) then {
             {
                 if ((_x distance ACE_player < 15) && {!(_x in _throwablesHelped)} && {!GVAR(inHand)}) then {
@@ -41,14 +41,9 @@ if (_interactionType != 0 || {vehicle ACE_player != ACE_player}) exitWith {};
 
                     private _config = configFile >> "CfgAmmo" >> typeOf _x;
 
-                    private _pickUpPosition = getArray (_config >> QGVAR(pickUpPosition));
-                    if (_pickUpPosition isEqualTo []) then {
-                        _pickUpPosition = [0, 0, 0];
-                    };
+                    TRACE_3("Made PickUp Helper",_x,typeOf _x);
 
-                    TRACE_3("Made PickUp Helper",_x,typeOf _x,_pickUpPosition);
-
-                    _pickUpHelper attachTo [_x, _pickUpPosition];
+                    _pickUpHelper attachTo [_x, [0, 0, 0]];
                     _pickUpHelper setVariable [QGVAR(throwable), _x];
                     _addedPickUpHelpers pushBack _pickUpHelper;
                     _throwablesHelped pushBack _x;
