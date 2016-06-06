@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Show Hint <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -15,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_showHint", false]];
 
 GVAR(primed) = true;
 
@@ -42,5 +43,13 @@ deleteVehicle _activeThrowableOld;
     GVAR(activeThrowable) // projectile
 ]] call EFUNC(common,globalEvent);
 
-// Change controls hint for RMB
-call FUNC(updateControlsHint);
+if (_showHint) then {
+    // Show primed hint
+    private _displayNameShort = getText (configFile >> "CfgMagazines" >> _throwableMag >> "displayNameShort");
+    private _picture = getText (configFile >> "CfgMagazines" >> _throwableMag >> "picture");
+
+    [[_displayNameShort, localize LSTRING(Primed)] joinString " ", _picture] call EFUNC(common,displayTextPicture);
+
+    // Change controls hint for RMB
+    call FUNC(updateControlsHint);
+};

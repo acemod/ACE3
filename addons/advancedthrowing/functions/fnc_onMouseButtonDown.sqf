@@ -42,6 +42,5 @@ if (_key == 1) exitWith {
 
 // Middle mouse button
 if (_key == 2 && {!GVAR(primed)}) exitWith {
-    [ACE_player] call FUNC(prime);
-    [LSTRING(Primed)] call EFUNC(common,displayTextStructured);
+    [ACE_player, true] call FUNC(prime);
 };
