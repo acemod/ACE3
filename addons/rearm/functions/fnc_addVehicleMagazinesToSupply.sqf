@@ -4,10 +4,7 @@
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
- * 1: Vehicle <OBJECT>
- * or
- * 0: Ammo Truck <OBJECT>
- * 1: Vehicle class <STRING>
+ * 1: Vehicle or Vehicle class <OBJECT/STRING>
  *
  * Return Value:
  * None
@@ -26,16 +23,12 @@ params [
 ];
 
 if (isNull _truck ||
-    {typeName _vehicle == "OBJECT" && {isNull _vehicle}}) exitWith {};
+    {_vehicle isEqualType objNull}) exitWith {};
 
-private _string = "";
-if (typeName _vehicle == "OBJECT") then {
-    _string = typeOf _vehicle;
+private _string = [_vehicle, typeOf _vehicle] select (_vehicle isEqualType objNull);
+if (_string == "") exitWith {
+    ACE_ERRORFORMAT("_string is empty in ace_rearm_fnc_addVehicleMagazinesToSupply");
 };
-if (typeName _vehicle == "STRING") then {
-    _string = _vehicle;
-};
-if (_string == "") exitWith {};
 {
     private _turretPath = _x;
     private _magazines = [_string, _turretPath] call FUNC(getConfigMagazines);
