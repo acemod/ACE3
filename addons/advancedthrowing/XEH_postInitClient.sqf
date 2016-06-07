@@ -58,9 +58,11 @@ if (!hasInterface) exitWith {};
     if (GVAR(inHand)) then {
         [ACE_player, "Interact menu opened"] call FUNC(exitThrowMode);
     } else {
-        // Show pick up actions on CfgAmmo's
-        if (GVAR(enablePickUp)) then {
-            _this call FUNC(interactEH);
+        params ["_interactionType"];
+        // Ignore self-interaction menu, when in vehicle and when pick up is disabled
+        if (GVAR(enablePickUp) && {_interactionType == 0} && {vehicle ACE_player == ACE_player}) then {
+            // Show pick up actions on CfgAmmo's
+            call FUNC(renderPickUpInteraction);
         };
     };
 }] call EFUNC(common,addEventHandler);
