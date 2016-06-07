@@ -22,6 +22,14 @@ GVAR(activeThrowable) = _helper getVariable [QGVAR(throwable), objNull];
 
 if (isNull GVAR(activeThrowable)) exitWith {};
 
+// Detach if attached (to vehicle for example or another player)
+if (!isNull (attachedTo GVAR(activeThrowable))) then {
+    detach GVAR(activeThrowable);
+
+    // Fix throw speed in some cases after detaching
+    GVAR(throwSpeed) = getNumber (configFile >> "CfgMagazines" >> typeOf GVAR(activeThrowable) >> "initSpeed");
+};
+
 // Change locality for manipulation (some commands require local object, such as setVelocity)
 if (!local GVAR(activeThrowable)) then {
     ["setOwner", [GVAR(activeThrowable), clientOwner]] call EFUNC(common,serverEvent);

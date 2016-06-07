@@ -25,6 +25,18 @@
         <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
         </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUp_DisplayName">
+            <English>Enable Throwables Pick Up</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUp_Description">
+            <English>Enables ability to pick up throwables from the ground.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUpAttached_DisplayName">
+            <English>Enable Attached Throwables Pick Up</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUpAttached_Description">
+            <English>Enables ability to pick up throwables from attached objects.</English>
+        </Key>
         <Key ID="STR_ACE_AdvancedThrowing_Prepare">
             <English>Prepare/Change Throwable</English>
         </Key>

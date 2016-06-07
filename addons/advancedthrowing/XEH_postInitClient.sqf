@@ -59,7 +59,9 @@ if (!hasInterface) exitWith {};
         [ACE_player, "Interact menu opened"] call FUNC(exitThrowMode);
     } else {
         // Show pick up actions on CfgAmmo's
-        _this call FUNC(interactEH);
+        if (GVAR(enablePickUp)) then {
+            _this call FUNC(interactEH);
+        };
     };
 }] call EFUNC(common,addEventHandler);
 

@@ -23,4 +23,20 @@ class ACE_Settings {
         value = 1;
         isClientSettable = 1;
     };
+    class GVAR(enablePickUp) {
+        category = CSTRING(Category);
+        displayName = CSTRING(EnablePickUp_DisplayName);
+        description = CSTRING(EnablePickUp_Description);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
+    class GVAR(enablePickUpAttached) {
+        category = CSTRING(Category);
+        displayName = CSTRING(EnablePickUpAttached_DisplayName);
+        description = CSTRING(EnablePickUpAttached_Description);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
 };
