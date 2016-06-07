@@ -23,7 +23,8 @@ GVAR(activeThrowable) = _helper getVariable [QGVAR(throwable), objNull];
 if (isNull GVAR(activeThrowable)) exitWith {};
 
 // Detach if attached (to vehicle for example or another player)
-if (!isNull (attachedTo GVAR(activeThrowable))) then {
+private _attachedTo = attachedTo GVAR(activeThrowable);
+if (!isNull _attachedTo) then {
     detach GVAR(activeThrowable);
 
     // Fix throw speed in some cases after detaching
@@ -34,6 +35,9 @@ if (!isNull (attachedTo GVAR(activeThrowable))) then {
 if (!local GVAR(activeThrowable)) then {
     ["setOwner", [GVAR(activeThrowable), clientOwner]] call EFUNC(common,serverEvent);
 };
+
+// Invoke listenable event
+["ace_throwablePickedUp", [GVAR(activeThrowable), _unit, _attachedTo]] call CBA_fnc_localEvent;
 
 GVAR(primed) = true;
 _unit call FUNC(prepare)

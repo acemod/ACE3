@@ -51,6 +51,9 @@ _unit playAction "ThrowGrenade";
     if (alive _unit) then {
         _activeThrowable setVelocity _newVelocity;
     };
+
+    // Invoke listenable event
+    ["ace_throwableThrown", [_unit, _activeThrowable]] call CBA_fnc_localEvent;
 }, [_unit, GVAR(activeThrowable), getPosASLVisual GVAR(activeThrowable), GVAR(throwType), GVAR(throwSpeed), GVAR(dropMode)], 0.3] call CBA_fnc_waitAndExecute;
 
 // Stop rendering arc and doing rendering magic while throw is happening

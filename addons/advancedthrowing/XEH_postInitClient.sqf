@@ -67,7 +67,7 @@ if (!hasInterface) exitWith {};
 
 
 // Fired XEH
-[QGVAR(throwFiredXEH), {_this call FUNC(throwFiredXEH)}] call EFUNC(common,addEventHandler);
+[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 
 // Display handlers

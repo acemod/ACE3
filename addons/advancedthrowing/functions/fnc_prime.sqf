@@ -41,7 +41,7 @@ deleteVehicle _activeThrowableOld;
     _throwableType, // ammo
     _throwableMag, // magazine
     GVAR(activeThrowable) // projectile
-]] call EFUNC(common,globalEvent);
+]] call CBA_fnc_globalEvent;
 
 if (_showHint) then {
     // Show primed hint
