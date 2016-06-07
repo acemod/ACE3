@@ -22,7 +22,7 @@ TRACE_2("params",_caller,_target);
 
 if (!local _target) exitWith {
     TRACE_1("running where local",local _target);
-    ["ace_actionPlaceInBodyBag", [_caller, _target], [_target]] call CBA_fnc_targetEvent;
+    [QGVAR(actionPlaceInBodyBag), [_caller, _target], [_target]] call CBA_fnc_targetEvent;
     objNull
 };
 

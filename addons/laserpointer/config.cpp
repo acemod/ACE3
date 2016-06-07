@@ -20,6 +20,6 @@ class CfgPatches {
 #include "CfgJointRails.hpp"
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
+    GunLightOff = "ace_gunLightOff";
     SetHandcuffed = QEGVAR(captives,setHandcuffed);
 };

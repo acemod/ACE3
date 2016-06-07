@@ -26,9 +26,3 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_fcs"};
 };
-
-class ACE_newEvents {
-    infoDisplayChanged = "ace_infoDisplayChanged";
-    firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
-    firedPlayerVehicle = "ace_firedPlayerVehicle";
-};

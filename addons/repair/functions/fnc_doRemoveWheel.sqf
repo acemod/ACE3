@@ -27,7 +27,7 @@ private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 if (_hitPointDamage >= 1) exitWith {};
 
 // don't die by spawning / moving the wheel
-["ace_fixCollision", _unit] call CBA_fnc_localEvent;
+[QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 
 // spawn wheel
 private _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);

@@ -1,7 +1,7 @@
 
 class RscInGameUI {
     class RscUnitInfo {
-        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])]         call CBA_fnc_localEvent;);
+        onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscUnitInfo"",'IGUI')] call (uinamespace getvariable 'BIS_fnc_initDisplay'); [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
     };
 
     class RscUnitInfoNoHUD {

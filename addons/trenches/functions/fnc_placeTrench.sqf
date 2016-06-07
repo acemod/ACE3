@@ -36,7 +36,7 @@ _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
 GVAR(trench) = _trench;
 
 // prevent collisions with trench
-["ace_enableSimulationGlobal", [_trench, false]] call CBA_fnc_serverEvent;
+[QEGVAR(common,enableSimulationGlobal), [_trench, false]] call CBA_fnc_serverEvent;
 
 GVAR(digDirection) = 0;
 

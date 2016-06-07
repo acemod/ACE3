@@ -19,7 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_newEvents {
-    medical_treatmentSuccess = "ace_medical_treatmentSuccess";
-    Medical_onMenuOpen = "ace_medical_onMenuOpen";
-    displayTextStructured = "ace_displayTextStructured";
+    Medical_onMenuOpen = "ace_medicalMenuOpened";
 };

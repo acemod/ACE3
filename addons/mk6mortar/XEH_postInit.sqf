@@ -19,5 +19,5 @@
 
 if (!hasInterface) exitWith {};
 
-["ace_playerVehicleChanged", {_this call FUNC(handlePlayerVehicleChanged);}] call CBA_fnc_addEventHandler;
-["ace_infoDisplayChanged", {_this call FUNC(turretDisplayLoaded);}] call CBA_fnc_addEventHandler;
+["ace_playerVehicleChanged", FUNC(handlePlayerVehicleChanged)] call CBA_fnc_addEventHandler;
+["ace_infoDisplayChanged", FUNC(turretDisplayLoaded)] call CBA_fnc_addEventHandler;

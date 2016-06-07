@@ -19,7 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
     SetHandcuffed = QEGVAR(captives,setHandcuffed);
-    medical_onUnconscious = "ace_medical_onUnconscious";
 };

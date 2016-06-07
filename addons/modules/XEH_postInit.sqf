@@ -1,7 +1,7 @@
 
 #include "script_component.hpp"
 
-["ace_initSettingsFromModules", {
+[QEGVAR(common,initSettingsFromModules), {
     // TODO This is a basic and limited implementation that mimics some of the functionality from the A3 module framework, but not all of it.
     // We have to execute this in the postInit XEH because on object init, the parameters of the modules are not yet available. They are if we execute it at the start of postInit execution.
 

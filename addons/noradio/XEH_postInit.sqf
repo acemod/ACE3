@@ -11,7 +11,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 // mutes/unmutes units when the player changes
-["playerChanged", {
+["ace_playerChanged", {
     params ["_newPlayer", "_oldPlayer"];
 
     // mute the new player

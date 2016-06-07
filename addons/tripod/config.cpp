@@ -18,8 +18,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 class ACE_newEvents {
-    medical_onUnconscious = "ace_medical_onUnconscious";
-    playerVehicleChanged = "ace_playerVehicleChanged";
-    playerChanged = "ace_playerChanged";
     interactMenuOpened = "ace_interactMenuOpened";
 };

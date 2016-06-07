@@ -47,5 +47,5 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    ["ace_displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call CBA_fnc_localEvent;
+    [[LSTRING(UnloadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
 };

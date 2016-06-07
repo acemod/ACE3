@@ -28,7 +28,7 @@ _newObject setPosASL _position;
 
 _newObject setDamage _damage;
 
-["ace_fixCollision", _newObject] call CBA_fnc_localEvent;
-["ace_fixPosition", _newObject] call CBA_fnc_localEvent;
+[QEGVAR(common,fixCollision), _newObject] call CBA_fnc_localEvent;
+[QEGVAR(common,fixPosition), _newObject] call CBA_fnc_localEvent;
 
 _newObject

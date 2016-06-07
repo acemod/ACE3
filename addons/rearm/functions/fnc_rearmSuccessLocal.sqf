@@ -40,7 +40,7 @@ if (_maxMagazines == 1) then {
     if (GVAR(level) == 1) then {
         // Fill magazine completely
         _target setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-        ["ace_displayTextStructured",
+        [QEGVAR(common,displayTextStructured),
         [
             [LSTRING(Hint_RearmedTriple), _rounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
@@ -50,7 +50,7 @@ if (_maxMagazines == 1) then {
     } else {
         // Fill only at most _numRounds
         _target setMagazineTurretAmmo [_magazineClass, ((_target magazineTurretAmmo [_magazineClass, _turretPath]) + _numRounds) min _rounds, _turretPath];
-        ["ace_displayTextStructured",
+        [QEGVAR(common,displayTextStructured),
         [
             [LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
@@ -77,7 +77,7 @@ if (_maxMagazines == 1) then {
                 } else {
                     _target setMagazineTurretAmmo [_magazineClass, _currentRounds + _numRounds, _turretPath];
                 };
-                ["ace_displayTextStructured",
+                [QEGVAR(common,displayTextStructured),
                 [
                     [LSTRING(Hint_RearmedTriple), _numRounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
@@ -91,7 +91,7 @@ if (_maxMagazines == 1) then {
                     _target addMagazineTurret [_magazineClass, _turretPath];
                     _target setMagazineTurretAmmo [_magazineClass, _currentRounds, _turretPath];
                 };
-                ["ace_displayTextStructured",
+                [QEGVAR(common,displayTextStructured),
                 [
                     [LSTRING(Hint_RearmedTriple), _rounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),

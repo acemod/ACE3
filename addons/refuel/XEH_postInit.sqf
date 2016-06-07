@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];

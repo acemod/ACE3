@@ -21,12 +21,9 @@ class CfgPatches {
 #include "CfgEden.hpp"
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
-    medical_onUnconscious = "ace_medical_onUnconscious";
     SetSurrendered = QGVAR(setSurrendered);
     SetHandcuffed = QGVAR(setHandcuffed);
     MoveOutCaptive = QGVAR(moveOutCaptive);
     MoveInCaptive = QGVAR(moveInCaptive);
-    playerChanged = "ace_playerChanged";
     CaptiveStatusChanged = "ace_captiveStatusChanged";
 };

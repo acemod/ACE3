@@ -32,4 +32,4 @@ private _speaker = _unit getVariable ["ACE_OriginalSpeaker", ""];
 
 if (_speaker == "") exitWith {};
 
-["ace_setSpeaker", [_unit, _speaker], _unit] call CBA_fnc_targetEvent;
+[QGVAR(setSpeaker), [_unit, _speaker], _unit] call CBA_fnc_targetEvent;

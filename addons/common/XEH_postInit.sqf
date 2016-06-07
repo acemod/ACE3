@@ -18,29 +18,29 @@
 //////////////////////////////////////////////////
 
 //Status Effect EHs:
-["ace_setStatusEffect", {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
+[QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
 ["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
-["ace_forceWalk", {
+[QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
 }] call CBA_fnc_addEventHandler;
-["blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
+[QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
-["setCaptive", {
+[QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
 }] call CBA_fnc_addEventHandler;
-["blockDamage", { //Name reversed from `allowDamage` because we want NOR logic
+[QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
         TRACE_2("blockDamage EH (using medical)",_object,_set);
@@ -50,7 +50,7 @@
        _object allowDamage (_set == 0);
     };
 }] call CBA_fnc_addEventHandler;
-["blockEngine", {
+[QGVAR(blockEngine), {
     params ["_vehicle", "_set"];
     _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
     _vehicle engineOn false;
@@ -75,7 +75,7 @@ if (isServer) then {
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name", "_value", "_force"];
 
     if (_force) then {
@@ -89,38 +89,38 @@ if (isServer) then {
 
 
 // Event to log Fix Headbug output
-["HeadbugFixUsed", {
+[QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
     ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
-["ace_fixCollision", FUNC(fixCollision)] call CBA_fnc_addEventHandler;
-["ace_fixFloating", FUNC(fixFloating)] call CBA_fnc_addEventHandler;
-["ace_fixPosition", FUNC(fixPosition)] call CBA_fnc_addEventHandler;
+[QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
+[QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
+[QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
 ["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
 ["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
-["lockVehicle", {
+[QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
 }] call CBA_fnc_addEventHandler;
 
-["unlockVehicle", {
+[QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call CBA_fnc_addEventHandler;
 
-["ace_setDir", {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setFuel", {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_engineOn", {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_selectLeader", {(_this select 0) selectLeader (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVelocity", {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_playMove", {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_switchMove", {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVectorDirAndUp", {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
-["ace_setVanillaHitPointDamage", {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setFuel), {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(engineOn), {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setSpeaker), {(_this select 0) setSpeaker (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(selectLeader), {(_this select 0) selectLeader (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVelocity), {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMove), {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMoveNow), {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
 
 // Request framework
 [QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
@@ -129,8 +129,8 @@ if (isServer) then {
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    ["ace_hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
-    ["ace_enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(hideObjectGlobal), {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
@@ -143,16 +143,16 @@ if (isServer) then {
 // Synced ACE events
 // Handle JIP scenario
 if (!isServer) then {
-    ["PlayerJip", {
+    ["ace_playerJIP", {
         ACE_LOGINFO("JIP event synchronization initialized");
-        ["ace_SEH_all", [player]] call CBA_fnc_serverEvent;
+        ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
-    ["ace_SEH_all", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
+    ["ACEa", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-["ace_SEH", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
-["ace_SEH_s", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEe", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEs", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
@@ -221,7 +221,7 @@ call FUNC(checkFiles);
         [] call FUNC(readSettingsFromParamsArray);
     };
     // Event so that ACE_Modules have their settings loaded:
-    ["ace_initSettingsFromModules", []] call CBA_fnc_localEvent;
+    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
 
     if (isServer) then {
         // Publish all settings data after all configs and modules are read
@@ -284,7 +284,7 @@ enableCamShake true;
 //////////////////////////////////////////////////
 
 // Set the name for the current player
-["playerChanged", {
+["ace_playerChanged", {
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
@@ -426,10 +426,10 @@ GVAR(OldIsCamera) = false;
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-["ace_displayTextStructured", {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
-["ace_displayTextPicture", {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
 
-["medical_onUnconscious", {
+["ace_unconscious", {
     params ["_unit", "_isUnconscious"];
 
     if (local _unit && {!_isUnconscious}) then {
@@ -475,7 +475,7 @@ if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!isNull player && GVAR(settingsInitFinished)) then {
-            ["ace_playerJip", [player]] call CBA_fnc_localEvent;
+            ["ace_playerJIP", [player]] call CBA_fnc_localEvent;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;

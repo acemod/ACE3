@@ -27,9 +27,9 @@ private _fuel = [_target] call FUNC(getFuel);
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_fuel", 0, [0]]];
         if (_fuel > 0 ) then {
-            ["ace_displayTextStructured", [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit], _unit] call CBA_fnc_targetEvent;
+            [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RemainingFuel), _fuel], 2, _unit], _unit] call CBA_fnc_targetEvent;
         } else {
-            ["ace_displayTextStructured", [LSTRING(Hint_Empty), 2, _unit], _unit] call CBA_fnc_targetEvent;
+            [QEGVAR(common,displayTextStructured), [LSTRING(Hint_Empty), 2, _unit], _unit] call CBA_fnc_targetEvent;
         };
         true
     },

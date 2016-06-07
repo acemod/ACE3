@@ -26,7 +26,7 @@ _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 // Check if there is a tourniquet on this bodypart
 if ((_tourniquets select _part) == 0) exitWith {
     _output = LSTRING(noTourniquetOnBodyPart);
-    ["ace_displayTextStructured", [_output, 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+    [QEGVAR(common,displayTextStructured), [_output, 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 // Removing the tourniquet
@@ -44,7 +44,7 @@ TRACE_2("meds",_part,_delayedMedications);
     _x params ["", "", "_medPartNum"];
     if (_part == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        ["ace_treatmentAdvanced_medicationLocal", _x, [_target]] call CBA_fnc_targetEvent;
+        [QGVAR(treatmentAdvanced_medicationLocal), _x, [_target]] call CBA_fnc_targetEvent;
         _delayedMedications set [_forEachIndex, -1];
         _updatedArray = true;
     };

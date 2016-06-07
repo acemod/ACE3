@@ -19,7 +19,7 @@
 params ["_caller", "_target", "_treatmentClassname"];
 
 if (local _target) then {
-    ["ace_treatmentBasic_bloodbagLocal", [_target, _treatmentClassname]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentBasic_bloodbagLocal", [_target, _treatmentClassname], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname], _target] call CBA_fnc_targetEvent;
 };

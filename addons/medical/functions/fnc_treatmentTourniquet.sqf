@@ -28,22 +28,22 @@ if (count _items == 0) exitWith {false};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part == 0 || _part == 1) exitWith {
-    // ["ace_displayTextStructured", ["You cannot apply a CAT on this body part!"], [_caller]] call CBA_fnc_targetEvent;
+    // [QEGVAR(common,displayTextStructured), ["You cannot apply a CAT on this body part!"], [_caller]] call CBA_fnc_targetEvent;
     false;
 };
 
 _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 if ((_tourniquets select _part) > 0) exitWith {
    _output = "There is already a tourniquet on this body part!"; // TODO localization
-   ["ace_displayTextStructured", [_output, 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+   [QEGVAR(common,displayTextStructured), [_output, 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
     false;
 };
 
 _removeItem = _items select 0;
 if (local _target) then {
-    ["ace_treatmentTourniquetLocal", [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentTourniquetLocal", [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);

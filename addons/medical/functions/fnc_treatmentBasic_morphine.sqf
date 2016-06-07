@@ -20,7 +20,7 @@
 params ["_caller", "_target"];
 
 if (local _target) then {
-    ["ace_treatmentBasic_morphineLocal", [_target]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentBasic_morphineLocal), [_target]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentBasic_morphineLocal", [_target], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentBasic_morphineLocal), [_target], _target] call CBA_fnc_targetEvent;
 };

@@ -13,9 +13,9 @@
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 if (local _target) then {
-    ["ace_treatmentAdvanced_fullHealLocal", [_caller, _target]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentAdvanced_fullHealLocal", [_caller, _target], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
 };
 
 true;

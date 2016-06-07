@@ -20,8 +20,6 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 
 class ACE_newEvents {
-    SettingsInitialized = "ace_settingsInitialized";
-    playerChanged = "ace_playerChanged";
     rallypointMoved = "ace_rallypointMoved";
     killedByFriendly = "ace_killedByFriendly";
 };

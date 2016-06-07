@@ -25,6 +25,6 @@ if (isNil "ACE_maxWeightCarry") then {
 ["ace_playerWeaponChanged", {_this call FUNC(handlePlayerWeaponChanged)}] call CBA_fnc_addEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
-["ace_medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?

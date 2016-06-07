@@ -164,7 +164,3 @@ class RscDisplayServerGetReady: RscDisplayGetReady {
         };
     };
 };
-
-class ACE_newEvents {
-    visibleMapChanged = "ace_visibleMapChanged";
-};

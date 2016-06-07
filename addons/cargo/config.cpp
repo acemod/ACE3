@@ -21,11 +21,9 @@ class CfgPatches {
 class ACE_newEvents {
     LoadCargo = "ace_loadCargo";
     cargoUnloaded = "ace_cargoUnloaded";
-    displayTextStructured = "ace_displayTextStructured";
     cargoLoaded = "ace_cargoLoaded";
     AddCargoByClass = "ace_addCargoByClass";
     ServerUnloadCargo = QGVAR(serverUnload);
     UnloadCargo = "ace_unloadCargo";
-    hideObjectGlobal = "ace_hideObjectGlobal";
     cargoAddedByClass = "ace_cargoAddedByClass";
 };

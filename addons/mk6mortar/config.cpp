@@ -35,7 +35,5 @@ class RscStructuredText;
 #include "RscRangeTable.hpp"
 
 class ACE_newEvents {
-    infoDisplayChanged = "ace_infoDisplayChanged";
-    playerVehicleChanged = "ace_playerVehicleChanged";
     initMortar = "ace_initMortar";
 };

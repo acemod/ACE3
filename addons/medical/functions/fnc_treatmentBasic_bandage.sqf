@@ -21,7 +21,7 @@ private ["_hitSelections", "_hitPoints", "_point", "_damage"];
 params ["_caller", "_target", "_selection", "_className"];
 
 if (local _target) then {
-    ["ace_treatmentBasic_bandageLocal", [_target, _selection]] call CBA_fnc_localEvent;
+    [QGVAR(treatmentBasic_bandageLocal), [_target, _selection]] call CBA_fnc_localEvent;
 } else {
-    ["ace_treatmentBasic_bandageLocal", [_target, _selection], _target] call CBA_fnc_targetEvent;
+    [QGVAR(treatmentBasic_bandageLocal), [_target, _selection], _target] call CBA_fnc_targetEvent;
 };
