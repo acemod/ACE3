@@ -8,7 +8,7 @@
  * 1: Player <OBJECT>
  *
  * Return Value:
- * ChildActiosn<ARRAY>
+ * ChildActions <ARRAY>
  *
  * Example:
  * [player, player] call ace_attach_fnc_getChildrenAttachActions

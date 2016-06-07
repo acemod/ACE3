@@ -5,13 +5,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"RH_m4_cfg"};
+        requiredAddons[] = {"A3_Weapons_F_Mod"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Ruthberg"};
+        authors[] = {"Nic547"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgAmmo.hpp"
+#include "CfgMagazines.hpp"

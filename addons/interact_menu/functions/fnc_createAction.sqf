@@ -9,12 +9,12 @@
  * 2: Icon <STRING>
  * 3: Statement <CODE>
  * 4: Condition <CODE>
- * 5: Insert children code <CODE> (Optional)
- * 6: Action parameters <ANY> (Optional)
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
- * 8: Distance <NUMBER> (Optional)
- * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
- * 10: Modifier function <CODE> (Optional)
+ * 5: Insert children code <CODE> (optional)
+ * 6: Action parameters <ANY> (optional)
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (optional)
+ * 8: Distance <NUMBER> (optional)
+ * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (optional)
+ * 10: Modifier function <CODE> (optional)
  *
  * Return Value:
  * Action <ARRAY>

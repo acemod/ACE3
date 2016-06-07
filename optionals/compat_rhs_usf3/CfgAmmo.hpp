@@ -2,7 +2,8 @@
 class CfgAmmo
 {
     class BulletBase;
-    class rhsusf_B_300winmag: BulletBase {
+    class B_762x54_Ball;
+    class rhsusf_B_300winmag: B_762x54_Ball {
         ACE_caliber=7.823;
         ACE_bulletLength=37.821;
         ACE_bulletMass=14.256;
