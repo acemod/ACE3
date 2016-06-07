@@ -25,16 +25,20 @@ if (!GVAR(primed)) then {
 
 _unit playAction "ThrowGrenade";
 
+// Pass position to reset later because animation may change it in certain stances
 [{
-    params ["_unit"];
+    params ["_unit", "_activeThrowable", "_posThrown", "_throwType", "_throwSpeed", "_dropMode"];
+
+    // Reset position in case animation changed it
+    _activeThrowable setPosASL _posThrown;
 
     // Launch actual throwable
-    private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high" || {GVAR(dropMode)});
-    private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
-    _velocity = [_velocity, THROWSTYLE_DROP_VEL] select GVAR(dropMode);
+    private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
+    private _velocity = [_throwSpeed, THROWSTYLE_HIGH_VEL] select (_throwType == "high");
+    _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
     private _p2 = (eyePos _unit) vectorAdd (positionCameraToWorld _direction) vectorDiff (positionCameraToWorld [0, 0, 0]);
-    private _p1 = AGLtoASL (GVAR(activeThrowable) modelToWorldVisual [0, 0, 0]);
+    private _p1 = AGLtoASL (_activeThrowable modelToWorldVisual [0, 0, 0]);
 
     private _newVelocity = (_p1 vectorFromTo _p2) vectorMultiply _velocity;
 
@@ -45,8 +49,9 @@ _unit playAction "ThrowGrenade";
 
     // Drop if unit dies during throw process
     if (alive _unit) then {
-        GVAR(activeThrowable) setVelocity _newVelocity;
+        _activeThrowable setVelocity _newVelocity;
     };
+}, [_unit, GVAR(activeThrowable), getPosASLVisual GVAR(activeThrowable), GVAR(throwType), GVAR(throwSpeed), GVAR(dropMode)], 0.3] call CBA_fnc_waitAndExecute;
 
-    [_unit, "Completed a throw fully"] call FUNC(exitThrowMode);
-}, _unit, 0.3] call CBA_fnc_waitAndExecute;
+// Stop rendering arc and doing rendering magic while throw is happening
+[_unit, "Completed a throw fully"] call FUNC(exitThrowMode);
