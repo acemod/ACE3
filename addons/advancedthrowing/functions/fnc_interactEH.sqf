@@ -33,7 +33,6 @@ if (_interactionType != 0 || {vehicle ACE_player != ACE_player}) exitWith {};
         if ((getPosASL ACE_player) distance _setPosition > 5 && {!GVAR(inHand)}) then {
             {
                 if (_x distance ACE_player > 5 || {_x in _throwablesHelped}) exitWith {};
-
                 if (!GVAR(enablePickUpAttached) && {!isNull (attachedTo _x)}) exitWith {};
 
                 private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal (getPos _x);

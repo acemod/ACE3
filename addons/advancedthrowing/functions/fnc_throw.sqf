@@ -34,7 +34,7 @@ _unit playAction "ThrowGrenade";
 
     // Launch actual throwable
     private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
-    private _velocity = [_throwSpeed, THROWSTYLE_HIGH_VEL] select (_throwType == "high");
+    private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF] select (_throwType == "high");
     _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
     private _p2 = (eyePos _unit) vectorAdd (positionCameraToWorld _direction) vectorDiff (positionCameraToWorld [0, 0, 0]);

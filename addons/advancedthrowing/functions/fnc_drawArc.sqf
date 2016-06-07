@@ -23,7 +23,7 @@ if (!([ACE_player] call FUNC(canThrow))) exitWith {
 if (isNull GVAR(activeThrowable)) exitWith {};
 
 private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high" || {GVAR(dropMode)});
-private _velocity = [GVAR(throwSpeed), THROWSTYLE_HIGH_VEL] select (GVAR(throwType) == "high");
+private _velocity = [GVAR(throwSpeed), GVAR(throwSpeed) / THROWSTYLE_HIGH_VEL_COEF] select (GVAR(throwType) == "high");
 _velocity = [_velocity, THROWSTYLE_DROP_VEL] select GVAR(dropMode);
 
 private _viewStart = AGLToASL (positionCameraToWorld [0, 0, 0]);
@@ -35,7 +35,7 @@ private _prevTrajASL = getPosASLVisual GVAR(activeThrowable);
 private _pathData = [];
 
 for "_i" from 0.05 to 1.45 step 0.1 do {
-    private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.9] vectorMultiply (_i * _i));
+    private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.12] vectorMultiply (_i * _i));
     private _cross = 0;
 
     if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
