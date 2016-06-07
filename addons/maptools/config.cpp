@@ -24,6 +24,7 @@ class RscButtonMenuCancel;
 class RscButtonMenu;
 class RscEdit;
 
+#include "ACE_Settings.hpp"
 #include "MapGpsUI.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"

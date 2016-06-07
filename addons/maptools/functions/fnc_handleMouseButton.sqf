@@ -46,7 +46,15 @@ if (_dir != 1) then {
         // Store data for dragging
         GVAR(mapTool_startPos) = + GVAR(mapTool_pos);
         GVAR(mapTool_startDragPos) = + _pos;
-        if (_altKey) then {
+
+        private _rotateKeyPressed = switch (GVAR(rotateModifierKey)) do {
+            case (1): {_altKey};
+            case (2): {_ctrlKey};
+            case (3): {_shiftKey};
+            default {false};
+        };
+
+        if (_rotateKeyPressed) then {
             // Store data for rotating
             GVAR(mapTool_startAngle) = + GVAR(mapTool_angle);
             GVAR(mapTool_startDragAngle) = (180 + ((GVAR(mapTool_startDragPos) select 0) - (GVAR(mapTool_startPos) select 0)) atan2 ((GVAR(mapTool_startDragPos) select 1) - (GVAR(mapTool_startPos) select 1)) mod 360);
