@@ -29,7 +29,7 @@ GVAR(ACE_rain) = rain;
 };
 
 GVAR(WindInfo) = false;
-["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
+["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKeyToggle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -39,7 +39,8 @@ GVAR(WindInfo) = false;
 },
 {false},
 [37, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + K)
-["ACE3 Common", QGVAR(WindInfoKey_hold), localize LSTRING(WindInfoKey_hold),
+
+["ACE3 Common", QGVAR(WindInfoKey_hold), localize LSTRING(WindInfoKeyHold),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
