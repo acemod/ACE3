@@ -84,6 +84,11 @@ _endPosTestOffset set [2, (_startingOffset select 2)];
 _attachedObject = _itemVehClass createVehicle (getPos _unit);
 _attachedObject attachTo [_attachToVehicle, _endPosTestOffset];
 
+//ace_chemlights IR handling
+if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && {_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]} && {[_attachedObject] call EFUNC(chemlights,isIRClass)}) then {
+    [_unit, _attachedObject, _attachToVehicle, _endPosTestOffset] call EFUNC(chemlights,attachIR);
+};
+
 //Remove Item from inventory
 _unit removeItem _itemClassname;
 

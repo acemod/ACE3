@@ -41,10 +41,19 @@ _onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem = _itemVehClass createVehicle [0,0,0];
     _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
+    
+    //ace_chemlights IR handling
+    if ((["ACE_chemlights"] call EFUNC(common,isModLoaded)) && {_itemVehClass isKindOf ["Chemlight_base", configFile >> "CfgAmmo"]}) then {
+        if ([_attachedItem] call EFUNC(chemlights,isIRClass)) then {
+            [_unit, _attachedItem, _unit, [0.05, -0.09, 0.1]] call EFUNC(chemlights,attachIR);
+        };
+        [eyePos _unit] call EFUNC(chemlights,shakeSound);
+    };
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
     };
+
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;
@@ -57,7 +66,6 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
 
     //Display to show virtual object:
-    private [];
     _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");
     if (_model == "") then {
         _model = getText (configFile >> "CfgVehicles" >> _itemVehClass >> "model");

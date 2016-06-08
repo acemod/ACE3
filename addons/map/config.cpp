@@ -28,6 +28,7 @@ class RscEdit;
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgSounds.hpp"
 #include "CfgLights.hpp"
