@@ -5,8 +5,8 @@ class CfgWeapons {
     class ACE_EarPlugs: ACE_ItemCore {
         displayName = CSTRING(EarPlugs_Name);
         descriptionShort = CSTRING(EarPlugs_Description);
-        model = QUOTE(PATHTOF(data\ace_earplugs.p3d));
-        picture = PATHTOF(UI\ACE_earplugs_x_ca.paa);
+        model = QPATHTOF(data\ace_earplugs.p3d);
+        picture = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;

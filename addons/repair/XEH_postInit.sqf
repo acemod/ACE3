@@ -5,3 +5,5 @@
 
 // wheels
 ["setWheelHitPointDamage", {(_this select 0) setHitPointDamage [_this select 1, _this select 2]}] call EFUNC(common,addEventHandler);
+
+[QGVAR(useItem), EFUNC(common,useItem)] call EFUNC(common,addEventHandler);

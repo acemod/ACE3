@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"SilentSpike"};
-        authorUrl = "https://github.com/SilentSpike";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"SilentSpike"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
     // Use additional cfgPatches to contextually remove modules from zeus

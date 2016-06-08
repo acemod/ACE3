@@ -20,9 +20,9 @@ class CfgVehicles {
     class ACE_moduleEquipFRIES: ACE_Module {
         scope = 2;
         displayName = CSTRING(Module_FRIES_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_FRIES_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_FRIES_ca.paa);
         category = "ACE";
-        function = QUOTE(FUNC(moduleEquipFRIES));
+        function = QFUNC(moduleEquipFRIES);
         functionPriority = 10;
         isGlobal = 0;
         isTriggerActivated = 0;
@@ -35,8 +35,8 @@ class CfgVehicles {
         };
     };
 
-    class Helicopter;
-    class Helicopter_Base_F: Helicopter {
+    class Air;
+    class Helicopter: Air {
         class ACE_SelfActions {
             class ACE_prepareFRIES {
                 displayName = CSTRING(Interaction_prepareFRIES);
@@ -68,14 +68,20 @@ class CfgVehicles {
             };
         };
     };
+
+    class Helicopter_Base_F;
     class ACE_friesBase: Helicopter_Base_F {
         destrType = "";
         class Turrets {};
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
     };
     class ACE_friesAnchorBar: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = QUOTE(PATHTOF(data\friesAnchorBar.p3d));
+        model = QPATHTOF(data\friesAnchorBar.p3d);
         animated = 1;
         class AnimationSources {
             class extendHookRight {
@@ -93,7 +99,7 @@ class CfgVehicles {
     class ACE_friesGantry: ACE_friesBase {
         author = "jokoho48";
         scope = 1;
-        model = QUOTE(PATHTOF(data\friesGantry.p3d));
+        model = QPATHTOF(data\friesGantry.p3d);
         animated = 1;
         class AnimationSources {
             class adjustWidth {
@@ -146,7 +152,7 @@ class CfgVehicles {
     class GVAR(helper): Helicopter_Base_F {
         author = "KoffeinFlummi";
         scope = 1;
-        model = PATHTOF(data\helper.p3d);
+        model = QPATHTOF(data\helper.p3d);
         class ACE_Actions {};
         class Turrets {};
     };
@@ -203,7 +209,7 @@ class CfgVehicles {
         GVAR(enabled) = 2;
         GVAR(ropeOrigins)[] = {"ropeOriginRight", "ropeOriginLeft"};
         GVAR(friesType) = "ACE_friesGantryReverse";
-        GVAR(friesAttachmentPoint)[] = {1.04, 2.5, -0.34};
+        GVAR(friesAttachmentPoint)[] = {-1.04, 2.5, -0.34};
         EQUIP_FRIES_ATTRIBUTE;
     };
     class Heli_light_03_unarmed_base_F: Heli_light_03_base_F {

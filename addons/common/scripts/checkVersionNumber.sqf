@@ -100,7 +100,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
+        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
     };
 
     _missingAddonServer = false;
@@ -117,7 +117,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
+        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
     };
 
     _oldVersionClient = false;
@@ -134,7 +134,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
+        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
     };
 
     _oldVersionServer = false;
@@ -151,7 +151,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [_error, "{systemChat _this}"] call FUNC(execRemoteFnc);
+        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
     };
 
     ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];

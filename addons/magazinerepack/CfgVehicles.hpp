@@ -8,7 +8,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 insertChildren = QUOTE(_this call FUNC(getMagazineChildren));
                 priority = -2;
-                icon = QUOTE(PATHTOF(UI\repack_ca.paa));
+                icon = QPATHTOF(UI\repack_ca.paa);
             };
         };
     };

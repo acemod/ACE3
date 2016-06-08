@@ -62,7 +62,7 @@ class ACE_Settings {
         displayName = CSTRING(MapShowCursorCoordinates_DisplayName);
         description = CSTRING(MapShowCursorCoordinates_Description);
     };
-    class GVAR(DefaultChannel) {
+    class GVAR(defaultChannel) {
         category = CSTRING(Module_DisplayName);
         value = -1;
         typeName = "SCALAR";

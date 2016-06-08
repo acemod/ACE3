@@ -32,5 +32,5 @@ if (_closeNum == 1) then {
             ]
         ]] call EFUNC(common,globalEvent);
 
-    }, []] call EFUNC(common,execNextFrame);
+    }, []] call CBA_fnc_execNextFrame;
 };

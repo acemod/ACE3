@@ -12,7 +12,7 @@ GVAR(pendingReopen) = false;
         GVAR(pendingReopen) = false;
         [{
             [GVAR(INTERACTION_TARGET)] call FUNC(openMenu);
-        }, []] call EFUNC(common,execNextFrame);
+        }, []] call CBA_fnc_execNextFrame;
     };
 }] call EFUNC(common,addEventhandler);
 
@@ -31,7 +31,7 @@ GVAR(pendingReopen) = false;
     false
 },
 {
-    if (ACE_time - GVAR(lastOpenedOn) > 0.5) exitWith {
+    if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
     false

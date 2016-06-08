@@ -10,6 +10,9 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * ["myEvent", {_this call x}, 0] call ace_common_fnc_addSyncedEventHandler
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -17,7 +20,7 @@
 params ["_name", "_handler", ["_ttl", 0]];
 
 if (HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR("Duplicate synced event creation.");
+    ACE_LOGERROR_1("Duplicate synced event [%1] creation.",_name);
     false
 };
 

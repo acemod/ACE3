@@ -32,7 +32,7 @@ if ((count _attachedList) == 0) exitWith {};
     //If it's a vehicle, also delete the attached
     if (!(_deadUnit isKindOf "CAManBase")) then {
         _xObject setPos ((getPos _deadUnit) vectorAdd [0, 0, -1000]);
-        [{deleteVehicle (_this select 0)}, [_xObject], 2] call EFUNC(common,waitAndExecute);
+        [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
     };
 } forEach _attachedList;
 

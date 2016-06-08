@@ -30,7 +30,7 @@ private _distance = 999;
 {
     _x params ["_intersectPosASL", "_surfaceNormal", "_intersectObject"];
     TRACE_3("Intersect",_intersectPosASL,_surfaceNormal,_intersectObject);
-    
+
     //Hit something solid that can reflect - (Static covers Building)  [Need to manually filter out _shoot for FFV shots]
     if ((isNull _intersectObject) || {(_intersectObject != _shooter) && {(_intersectObject isKindOf "Static") || {_intersectObject isKindOf "AllVehicles"}}}) exitWith {
         _distance = _posASL vectorDistance _intersectPosASL;

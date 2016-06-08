@@ -34,7 +34,7 @@ _actions = [];
         ] select (([driver _vehicle, gunner _vehicle, commander _vehicle] find _unit) + 1);
 
         if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
-            _icon = QUOTE(PATHTOEF(captives,UI\handcuff_ca.paa));
+            _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
         };
 
         _actions pushBack [

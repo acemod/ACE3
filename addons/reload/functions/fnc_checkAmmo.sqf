@@ -34,4 +34,4 @@ if (_unit == _target) then {
     _unit playActionNow "Gear";
 };
 
-[FUNC(displayAmmo), [_target], 1, 0.1] call EFUNC(common,waitAndExecute);
+[FUNC(displayAmmo), [_target], 1, 0.1] call CBA_fnc_waitAndExecute;

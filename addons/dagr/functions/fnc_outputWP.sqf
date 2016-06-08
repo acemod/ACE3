@@ -25,7 +25,7 @@
 #define __timeControl (__display displayCtrl 266859)
 #define __background (__display displayCtrl 266856)
 
-__background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
+__background ctrlSetText QPATHTOF(UI\dagr_wp.paa);
 
 if (GVAR(outputPFH) != -1) exitWith {};
 
