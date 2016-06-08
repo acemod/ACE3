@@ -1,5 +1,16 @@
 
 class CfgAmmo {
+    class Default;
+    class Grenade: Default {
+        soundImpactSoft1[] = {"",1,1,1};
+        soundImpactSoft2[] = {"",1,1,1};
+        soundImpactSoft3[] = {"",1,1,1};
+        soundImpactSoft4[] = {"",1,1,1};
+        soundImpactSoft5[] = {"",1,1,1};
+        soundImpactSoft6[] = {"",1,1,1};
+        soundImpactSoft7[] = {"",1,1,1};
+    };
+    
     class FlareCore;
     class FlareBase: FlareCore {
         intensity = 20000;

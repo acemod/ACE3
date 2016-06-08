@@ -27,8 +27,25 @@ if (isNull _projectile) then {
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
-// handle special grenades
+// handle special grenades and sounds
 if (local _unit) then {
+    // handle priming sound, if not IR grenade
+    if (_ammo isKindOf "GrenadeHand") then {
+        private _posASLProjectile = getPosASL _projectile;
+        
+        switch (true) do {
+            case (_ammo isKindOf "Chemlight_base"): {
+                playSound3D ["A3\sounds_f\weapons\Other\dry4.wss", objNull, false, _posASLProjectile, 3, 2, 10]
+            };
+            case (_ammo isKindOf "ACE_G_Handflare_White"): {
+                playSound3D ["A3\sounds_f\weapons\smokeshell\smoke_1.wss", objNull, false, _posASLProjectile, 0.4, 1, 10]
+            };
+            default {
+                playSound3D ["A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", objNull, false, _posASLProjectile, 1.5, 1, 10]
+            };
+        };
+    };
+
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
