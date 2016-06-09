@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Nightvision
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -25,4 +25,4 @@ Enables the user to manually adjust NVG brightness.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="nightvision" %}

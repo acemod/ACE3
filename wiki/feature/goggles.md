@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Goggles
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -20,4 +20,4 @@ Adds color tint to sunglasses and other eyewear. Causes raindrops to appear on t
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="goggles" %}

@@ -39,4 +39,4 @@ Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="aircraft" %}

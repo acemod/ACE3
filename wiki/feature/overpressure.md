@@ -14,4 +14,4 @@ Adds backblast to AT launchers and overpressure zones to tank cannons, don't sta
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="overpressure" %}

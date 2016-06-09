@@ -81,4 +81,4 @@ The mission creator has to use the framework to add specific magazines to the am
 
 ## 5. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="rearm" %}

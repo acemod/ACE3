@@ -21,4 +21,4 @@ This adds the option to drag or carry units or objects.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="dragging" %}

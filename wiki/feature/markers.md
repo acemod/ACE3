@@ -14,4 +14,4 @@ Expands the "Insert Marker" menu and allows to rotate map markers. Shows the cur
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="markers" %}

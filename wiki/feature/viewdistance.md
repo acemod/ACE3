@@ -16,4 +16,5 @@ ACE3 View Distance adds the ability to have different view distance settings whe
 - Scroll down to the `Client View Distance` settings.
 
 ## 3. Dependencies
-`ace_common`
+
+{% include dependencies_list.md component="viewdistance" %}

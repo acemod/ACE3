@@ -18,4 +18,4 @@ Allows players to point in a direction with their fingers, when they do so peopl
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="finger" %}

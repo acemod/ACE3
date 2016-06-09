@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Concertina Wire
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -20,4 +20,4 @@ A concertina wire is a type of barbed wire formed in large coils that can be exp
 
 ## 3. Dependencies
 
-`ace_apl` , `ace_interaction`
+{% include dependencies_list.md component="concertina_wire" %}

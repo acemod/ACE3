@@ -20,4 +20,4 @@ Adds a deployable spotting scope.
 
 ## 3. Dependencies
 
-`ace_apl` , `ace_interaction`
+{% include dependencies_list.md component="spottingscope" %}

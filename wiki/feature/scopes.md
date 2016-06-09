@@ -29,4 +29,4 @@ Please not that the following key combinations are ACE3 default key binds.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="scopes" %}

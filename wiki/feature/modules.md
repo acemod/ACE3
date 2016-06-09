@@ -12,4 +12,4 @@ This is taking care of module initialization **DO NOT REMOVE**.
 
 ## 2. Dependencies
 
-`ace_main`
+{% include dependencies_list.md component="modules" %}

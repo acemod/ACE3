@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Javelin
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -31,4 +31,4 @@ The Titan / Javelin now posses the ability to be used in top down attack or dire
 
 ## 3. Dependencies
 
-`ace_main`, `ace_common`, `ace_missileguidance`
+{% include dependencies_list.md component="javelin" %}

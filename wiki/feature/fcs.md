@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: FCS (Fire Control System)
-description: 
+description:
 category: equipment
 group: feature
 parent: wiki
@@ -10,7 +10,7 @@ parent: wiki
 ## 1. Overview
 
 ### 1.1 Fire control system
-Offers a custom fire control system for tanks and helicopters. It enables engaging stationary and moving targets. 
+Offers a custom fire control system for tanks and helicopters. It enables engaging stationary and moving targets.
 
 ### 1.2 Manual lasing targets
 Changes the default rangefinders, including those in vehicles, to require manual lasing.
@@ -33,4 +33,4 @@ Anti air cannons can now use airburst ammunition. It will explode on the FCS' ze
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="fcs" %}

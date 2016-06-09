@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: ATragMX
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -18,10 +18,10 @@ Short description of sub-feature 2.
 
 ## Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings, 
+Short overview of how to use the feature, e.g. menu options, key bindings,
 instructions. May not apply to all modules.
 
 
 ## Dependencies
 
-`ace_common`, `ace_weather`
+{% include dependencies_list.md component="atragmx" %}

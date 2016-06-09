@@ -23,4 +23,4 @@ Note that those sandbags are affected by physics, a rocket will send them flying
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="sandbag" %}

@@ -20,4 +20,4 @@ Adds a deployable ladder with adjustable height that you can transport on your b
 
 ## 3. Dependencies
 
-`ace_apl` , `ace_interaction`
+{% include dependencies_list.md component="tacticalladder" %}

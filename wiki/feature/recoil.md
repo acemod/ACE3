@@ -20,4 +20,4 @@ Firing in longer burst (> 3 rounds per burst) slightly reduces the accuracy. Fir
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="recoil" %}

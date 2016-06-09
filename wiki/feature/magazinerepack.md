@@ -22,4 +22,4 @@ Adds the ability to repack magazines of the same type.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="magazinerepack" %}

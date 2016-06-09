@@ -12,4 +12,4 @@ Adds the Defense Advanced GPS Receiver.
 
 ## 3. Dependencies
 
-`ace_weather`
+{% include dependencies_list.md component="dagr" %}

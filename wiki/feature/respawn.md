@@ -30,4 +30,4 @@ Adds rallypoints to all 3 sides to enable teleportation from base spawn to FOB's
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="respawn" %}

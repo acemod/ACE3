@@ -17,4 +17,4 @@ That module can be used to add ambient sounds around players, it let you choose 
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="missionmodules" %}

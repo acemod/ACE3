@@ -8,7 +8,7 @@ parent: wiki
 ---
 
 ## 1. Overview
-This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as picking locks of locked vehicles. It's disabled by default. 
+This feature adds the ability to lock and unlock vehicles and their inventory using a key, as well as picking locks of locked vehicles. It's disabled by default.
 
 ## 2. Usage
 Locking, unlocking and picking vehicle locks is possible via the ACE Interact menu.
@@ -19,4 +19,5 @@ Locking, unlocking and picking vehicle locks is possible via the ACE Interact me
 </div>
 
 ## 3. Dependencies
-`ace_interaction`
+
+{% include dependencies_list.md component="vehiclelock" %}

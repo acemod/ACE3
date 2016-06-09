@@ -33,11 +33,11 @@ Adds the ability to changes barrels on machine guns to compensate for those effe
 ### 2.3 Checking your barrel temperature
 - Press self interaction <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>.
 - Select `Equipment`.
-- Select `Check weapon temperature`. 
+- Select `Check weapon temperature`.
 
-**NOTE** When the bar is half full (yellow) it means the barrel is around 500°c. 
+**NOTE** When the bar is half full (yellow) it means the barrel is around 500°c.
 Your weapon will be even more prone to jams, and it'll get worse if you don't let the barrel cool down or swap it.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="overheating" %}

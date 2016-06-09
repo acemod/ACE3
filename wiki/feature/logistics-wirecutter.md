@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Logistics - Wirecutter
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -22,4 +22,4 @@ Adds an item `ACE_wirecutter` that allows cutting of fences in Arma 3 and AllInA
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="logistics_wirecutter" %}
