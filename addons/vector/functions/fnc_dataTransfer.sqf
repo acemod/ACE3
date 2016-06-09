@@ -22,4 +22,4 @@ _direction = call FUNC(getDirection);
 _azimuth = _direction select 0;
 _inclination = _direction select 1;
 //Send Data to connected GPS
-["RangerfinderData", [_distance, _azimuth, _inclination]] call EFUNC(common,localEvent);
+[QGVAR(rangefinderData), [_distance, _azimuth, _inclination]] call CBA_fnc_localEvent;

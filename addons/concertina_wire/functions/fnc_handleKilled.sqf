@@ -34,4 +34,4 @@ if (_distance > 14 || {_distance < 2}) exitWith {}; // Fix if shooting wire
 
 _vehicle = vehicle _killer;
 
-[QGVAR(vehicleDamage), [_vehicle], [_wire, _vehicle]] call EFUNC(common,targetEvent);
+[QGVAR(vehicleDamage), [_wire, _vehicle], [_vehicle]] call CBA_fnc_targetEvent;

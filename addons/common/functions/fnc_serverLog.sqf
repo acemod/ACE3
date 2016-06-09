@@ -20,5 +20,5 @@ params [["_msg", "", [""]]];
 if (isServer) then {
     diag_log text _msg;
 } else {
-    [QGVAR(serverLog), _this] call FUNC(serverEvent);
+    [QGVAR(serverLog), _this] call CBA_fnc_serverEvent;
 };

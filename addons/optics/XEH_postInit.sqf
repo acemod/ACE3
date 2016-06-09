@@ -28,14 +28,14 @@ GVAR(camera) = objNull;
 };
 
 // save control for fired EH
-["infoDisplayChanged", {
+["ace_infoDisplayChanged", {
     if (!isNull ((_this select 0) displayCtrl 1713001)) then {
         uiNamespace setVariable [QGVAR(RscWeaponInfo2D), _this select 0];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // camera has to be re-created every time another camera is created. Otherwise r2t is either black or transparent. @todo Add popular custom cameras to the event in ACE_common.
-["activeCameraChanged", {
+["ace_activeCameraChanged", {
     if !(_this select 1) then {
         GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
         camDestroy GVAR(camera);
@@ -49,7 +49,7 @@ GVAR(camera) = objNull;
         "ace_optics_rendertarget0" setPiPEffect [0];
         GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Register fire event handler
-["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

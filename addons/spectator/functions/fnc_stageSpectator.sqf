@@ -27,7 +27,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
 if !(local _unit) exitWith {
-    [QGVAR(stageSpectator), _unit, [_unit, _set]] call EFUNC(common,objectEvent);
+    [QGVAR(stageSpectator), [_unit, _set], _unit] call CBA_fnc_targetEvent;
 };
 
 // Prevent unit falling into water
@@ -64,7 +64,7 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
 
-    ["spectatorStaged",[_set]] call EFUNC(common,localEvent);
+    ["ace_spectatorStaged", [_set]] call CBA_fnc_localEvent;
 };
 
 //BandAid for #2677 - if player in unitList weird before being staged, weird things can happen

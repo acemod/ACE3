@@ -31,7 +31,7 @@ if (!GVAR(EnableTransmit) || !visibleMap) exitWith {
 {
     _ownerID = _x getVariable QGVAR(owner_id);
     if (isNil "_ownerID") then {
-        [EVENT_PLAYER_HAS_NO_OWNER_ID, [name _x]] call EFUNC(common,serverEvent);
+        [QGVAR(noOwnerID), [name _x]] call CBA_fnc_serverEvent;
     } else {
         _playerOwnerID = ACE_player getVariable QGVAR(owner_id);
         if (!isNil "_playerOwnerID" && _ownerID != _playerOwnerID) then {

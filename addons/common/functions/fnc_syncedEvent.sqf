@@ -23,4 +23,4 @@ if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
 
 private _eventData = [_name, _args, _ttl];
 
-["SEH", _eventData] call FUNC(globalEvent);
+["ACEe", _eventData] call CBA_fnc_globalEvent;

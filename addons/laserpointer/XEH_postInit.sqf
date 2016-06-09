@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 // fixes laser when being captured. Needed, because the selectionPosition of the right hand is used
-["SetHandcuffed", {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call EFUNC(common,addEventHandler);
+[QEGVAR(captives,setHandcuffed), {if (_this select 1) then {(_this select 0) action ["ace_gunLightOff", _this select 0]};}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -10,7 +10,7 @@ GVAR(nearUnits) = [];
 
 #include "initKeybinds.sqf"
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //If not enabled, dont't add draw eventhandler or PFEH (for performance)
     if (!GVAR(enabled)) exitWith {};
 
@@ -32,4 +32,4 @@ GVAR(nearUnits) = [];
     addMissionEventHandler ["Draw3D", {
         call FUNC(onDraw);
     }];
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

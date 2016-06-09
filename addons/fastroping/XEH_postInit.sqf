@@ -2,8 +2,8 @@
 
 [QGVAR(deployRopes), {
     _this call FUNC(deployRopes);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 [QGVAR(startFastRope), {
     [FUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

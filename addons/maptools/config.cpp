@@ -67,3 +67,10 @@ class RscDisplayServerGetReady: RscDisplayGetReady {
         };
     };
 };
+
+class ACE_newEvents {
+    drawing_sendbackMarkers = QGVAR(sendbackMarkers);
+    drawing_requestMarkers = QGVAR(requestMarkers);
+    drawing_addLineMarker = QGVAR(addLineMarker);
+    drawing_removeLineMarker = QGVAR(removeLineMarker);
+};

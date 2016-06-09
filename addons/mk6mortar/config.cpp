@@ -33,3 +33,7 @@ class RscStructuredText;
 
 #include "RscInGameUI.hpp"
 #include "RscRangeTable.hpp"
+
+class ACE_newEvents {
+    initMortar = "ace_initMortar";
+};

@@ -20,7 +20,7 @@
 params ["_caller", "_target"];
 
 if (local _target) then {
-    ["treatmentBasic_morphineLocal", [_target]] call EFUNC(common,localEvent);
+    [QGVAR(treatmentBasic_morphineLocal), [_target]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentBasic_morphineLocal", _target, [_target]] call EFUNC(common,targetEvent);
+    [QGVAR(treatmentBasic_morphineLocal), [_target], _target] call CBA_fnc_targetEvent;
 };

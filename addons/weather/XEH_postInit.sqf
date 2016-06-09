@@ -59,8 +59,8 @@ simulWeatherSync;
 
 
 
-["SettingsInitialized",{
-    TRACE_1("SettingsInitialized",GVAR(syncRain));
+["ace_settingsInitialized",{
+    TRACE_1("ace_settingsInitialized eh",GVAR(syncRain));
 
     //Create a 0 sec delay PFEH to update rain every frame:
     if (GVAR(syncRain)) then {
@@ -92,4 +92,4 @@ simulWeatherSync;
         END_COUNTER(weatherPFEH);
     }, 1, []] call CBA_fnc_addPerFrameHandler;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

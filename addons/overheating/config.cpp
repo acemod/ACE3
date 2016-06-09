@@ -51,3 +51,10 @@ class CfgGesturesMale {
         };
     };
 };
+class ACE_newEvents {
+    initiateSwapBarrelAssisted = QGVAR(initiateSwapBarrelAssisted);
+    showWeaponTemperature = QGVAR(showWeaponTemperature);
+    spareBarrelsLoadCoolest = QGVAR(spareBarrelsLoadCoolest);
+    spareBarrelsSendTemperatureHint = QGVAR(spareBarrelsSendTemperatureHint);
+    weaponJammed = "ace_weaponJammed";
+};

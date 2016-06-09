@@ -20,7 +20,7 @@ params ["_unit", "_item"];
 TRACE_2("params",_unit,_item);
 
 if ([_unit, _item] call EFUNC(common,hasItem)) exitWith {
-    [QGVAR(useItem), _unit, [_unit, _item]] call EFUNC(common,objectEvent);
+    ["ace_useItem", [_unit, _item], _unit] call CBA_fnc_targetEvent;
     [true, _unit];
 };
 

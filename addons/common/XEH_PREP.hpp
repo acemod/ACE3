@@ -236,7 +236,6 @@ PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
 PREP(globalEvent);
-PREP(_handleNetEvent);
 PREP(addEventHandler);
 PREP(objectEvent);
 PREP(targetEvent);

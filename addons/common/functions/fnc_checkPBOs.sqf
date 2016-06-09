@@ -61,7 +61,7 @@ if (!isServer) then {
                 _error = _error + "Newer version; ";
             };
 
-            //[QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+            //[QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
 
             ACE_LOGERROR(_error);
 

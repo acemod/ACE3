@@ -30,7 +30,7 @@ if (isServer) then {
     private _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
     _eventEntry params ["", "_eventLog"];
 
-    ["SEH_s", _client, [_eventName, _eventLog]] call FUNC(targetEvent);
+    ["ACEs", [_eventName, _eventLog], _client] call CBA_fnc_targetEvent;
 } else {
     params ["_eventName", "_eventLog"];
 

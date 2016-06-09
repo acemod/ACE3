@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Effect name (or "" or send all) <STRING>
+ * 1: Effect name (or "" to send all) <STRING>
  *
  * Return Value:
  * Nothing
@@ -30,18 +30,13 @@ if (isNull _object) exitWith {};
         //We only do anything if the effect has been defined at some point in the game for this unit
         TRACE_2("checking if event is nil",_x,_effectNumber);
         if (_effectNumber != -1) then {
+            private _eventName = format [QGVAR(%1), _x];
             if (GVAR(statusEffect_isGlobal) select _forEachIndex) then {
                 TRACE_2("Sending Global Event", _object, _effectNumber);
-                [_x, [_object, _effectNumber]] call FUNC(globalEvent);
+                [_eventName, [_object, _effectNumber]] call CBA_fnc_globalEvent;
             } else {
-                if (local _object) then {
-                    //If local, send directly to bypass network delay of targetEvent call
-                    TRACE_2("Sending Target Local Event", _object, _effectNumber);
-                    [_x, [_object, _effectNumber]] call FUNC(localEvent);
-                } else {
-                    TRACE_2("Sending Target Non-Local Event", _object, _effectNumber);
-                    [_x, [_object], [_object, _effectNumber]] call FUNC(targetEvent);
-                };
+                TRACE_2("Sending Target Event", _object, _effectNumber);
+                [_eventName, [_object, _effectNumber], _object] call CBA_fnc_targetEvent;
             };
         };
     };

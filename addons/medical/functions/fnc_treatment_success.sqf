@@ -95,4 +95,4 @@ if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
     [_target] call FUNC(addVitalLoop);
 };
 
-["medical_treatmentSuccess", [_caller, _target, _selectionName, _className]] call EFUNC(common,localEvent);
+["ace_treatmentSuccess", [_caller, _target, _selectionName, _className]] call CBA_fnc_localEvent;
