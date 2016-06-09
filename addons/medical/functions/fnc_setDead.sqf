@@ -20,7 +20,7 @@ params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
 if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
+    [QGVAR(setDead), [_unit, _force], _unit] call CBA_fnc_targetEvent;
     false;
 };
 
@@ -51,7 +51,7 @@ if (isPLayer _unit) then {
     _unit setVariable ["isDeadPlayer", true, true];
 };
 
-["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+["ace_killed", [_unit]] call CBA_fnc_localEvent;
 
 //Delay a frame before killing the unit via scripted damage
 //to avoid triggering the "Killed" Event twice (and having the wrong killer)

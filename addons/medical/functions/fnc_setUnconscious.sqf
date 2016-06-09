@@ -39,7 +39,7 @@ if !(_set) exitWith {
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    ["setUnconscious", _unit, [_unit, _set, _minWaitingTime, _force]] call EFUNC(common,targetEvent);
+    [QGVAR(setUnconscious), [_unit, _set, _minWaitingTime, _force], _unit] call CBA_fnc_targetEvent;
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
@@ -96,12 +96,12 @@ if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
 };
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 if (GVAR(delayUnconCaptive) == 0) then {
-    [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
 } else {
     [{
         params ["_unit"];
         if (_unit getVariable ["ACE_isUnconscious", false]) then {
-            [_unit, "setCaptive", QGVAR(unconscious), true] call EFUNC(common,statusEffect_set);
+            [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
         };
     },[_unit], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
 };
@@ -122,4 +122,4 @@ _startingTime = CBA_missionTime;
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
-["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
+["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;

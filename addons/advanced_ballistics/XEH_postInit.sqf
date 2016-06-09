@@ -24,7 +24,7 @@ if (!GVAR(extensionAvailable)) exitWith {
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 
@@ -32,8 +32,8 @@ if (!hasInterface) exitWith {};
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
-    ["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+    ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
     //Add warnings for missing compat PBOs (only if AB is on)
     {
@@ -50,7 +50,7 @@ if (!hasInterface) exitWith {};
         ["iansky_opt","ace_compat_sma3_iansky"],
         ["R3F_Armes","ace_compat_r3f"]
     ];
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 #ifdef DEBUG_MODE_FULL
     call FUNC(diagnoseWeapons);

@@ -24,3 +24,32 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "UI\RscTitles.hpp"
 #include "UI\triagecard.hpp"
+
+class ACE_newEvents {
+    medical_onUnconscious = "ace_unconscious";
+    medical_treatmentSuccess = "ace_treatmentSuccess";
+    medical_onSetDead = "ace_killed";
+    Medical_onEnteredCardiacArrest = "ace_enteredCardiacArrest";
+    Medical_onItemAddedToTriageCard = "ace_itemAddedToTriageCard";
+    medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
+    Medical_onHeartRateAdjustmentAdded = "ace_addedHeartRateAdjustment";
+    placedInBodyBag = "ace_placedInBodyBag";
+    actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);
+    treatmentTourniquetLocal = QGVAR(treatmentTourniquetLocal);
+    treatmentIVLocal = QGVAR(treatmentIVLocal);
+    treatmentBasic_morphineLocal = QGVAR(treatmentBasic_morphineLocal);
+    treatmentBasic_bloodbagLocal = QGVAR(treatmentBasic_bloodbagLocal);
+    treatmentBasic_bandageLocal = QGVAR(treatmentBasic_bandageLocal);
+    treatmentAdvanced_medicationLocal = QGVAR(treatmentAdvanced_medicationLocal);
+    treatmentAdvanced_fullHealLocal = QGVAR(treatmentAdvanced_fullHealLocal);
+    treatmentAdvanced_CPRLocal = QGVAR(treatmentAdvanced_CPRLocal);
+    treatmentAdvanced_bandageLocal = QGVAR(treatmentAdvanced_bandageLocal);
+    setUnconscious = QGVAR(setUnconscious);
+    setHitPointDamage = QGVAR(setHitPointDamage);
+    setDead = QGVAR(setDead);
+    addToTriageCard = QGVAR(addToTriageCard);
+    addToMedicalLog = QGVAR(addToMedicalLog);
+    actionCheckPulseLocal = QGVAR(actionCheckPulseLocal);
+    actionCheckBloodPressureLocal = QGVAR(actionCheckBloodPressureLocal);
+    addVitalLoop = QGVAR(addVitalLoop);
+};

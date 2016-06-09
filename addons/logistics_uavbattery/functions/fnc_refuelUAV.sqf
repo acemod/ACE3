@@ -24,7 +24,7 @@ _onFinish = {
     (_this select 0) params ["_caller", "_target"];
     _caller removeItem "ACE_UAVBattery";
     playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
-      ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
+      [QEGVAR(common,setFuel), [_target, 1], [_target]] call CBA_fnc_targetEvent; //setFuel is local
 };
 
 _onFailure = {

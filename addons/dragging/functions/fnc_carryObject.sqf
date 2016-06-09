@@ -44,7 +44,7 @@ if (_target isKindOf "CAManBase") then {
     _target attachTo [_unit, _position];
 
 };
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];

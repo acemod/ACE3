@@ -5,13 +5,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class GVAR(place) {
-                displayName = CSTRING(Placedown);
-                condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
-                statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
-                showDisabled = 0;
-                priority = 2;
-                icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
+            class ACE_Equipment {
+                class GVAR(place) {
+                    displayName = CSTRING(Placedown);
+                    condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
+                    statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
+                };
             };
         };
     };

@@ -42,7 +42,7 @@ GVAR(disarmTarget) = _target;
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
 
     TRACE_2("Debug: Droping %1 from %2",_data,GVAR(disarmTarget));
-    ["DisarmDropItems", [GVAR(disarmTarget)], [ACE_player, GVAR(disarmTarget), [_data]]] call EFUNC(common,targetEvent);
+    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data]], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
 
     false //not sure what this does
 }];

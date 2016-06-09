@@ -24,3 +24,8 @@ class CfgRespawnTemplates {
         onPlayerRespawn = QFUNC(respawnTemplate);
     };
 };
+
+class ACE_newEvents {
+    spectatorStaged = "ace_spectatorStaged";
+    spectatorSet = "ace_spectatorSet";
+};

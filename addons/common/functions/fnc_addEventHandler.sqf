@@ -1,25 +1,14 @@
-/*
- * Author: Nou
- * Add an event handler.
- *
- * Arguments:
- * 0: Event name <STRING>
- * 1: Event code <CODE>
- *
- * Return Value:
- * Event handler ID number (for use with fnc_removeEventHandler) <NUMBER>
- *
- * Public: Yes
- */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_eventName", "_eventCode"];
 
-private _eventFunctions = GVAR(eventsLocation) getVariable _eventName;
-
-if (isNil "_eventFunctions") then {
-    _eventFunctions = [];
-    GVAR(eventsLocation) setVariable [_eventName, _eventFunctions];
+private _newName = getText (configFile >> "ACE_newEvents" >> _eventName);
+if (_newName != "") then {
+    TRACE_2("Switching Names",_eventName,_newName);
+    _eventName = _newName;
 };
 
-_eventFunctions pushBack _eventCode // Return event function count
+[_eventName, _eventCode] call CBA_fnc_addEventHandler;
+
+ACE_DEPRECATED("ace_common_fnc_addEventHandler","3.8.0","CBA_fnc_addEventHandler");

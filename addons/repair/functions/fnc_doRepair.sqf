@@ -34,7 +34,7 @@ private _hitPointNewDamage = (_hitPointCurDamage - 0.5) max _postRepairDamageMin
 if (_hitPointNewDamage < _hitPointCurDamage) then {
     // raise event to set the new hitpoint damage
     TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
-    ["setVehicleHitPointDamage", _vehicle, [_vehicle, _hitPointIndex, _hitPointNewDamage]] call EFUNC(common,targetEvent);
+    [QGVAR(setVehicleHitPointDamage), [_vehicle, _hitPointIndex, _hitPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
     _hitPointCurDamage = _hitPointNewDamage;
 };
 
@@ -55,7 +55,7 @@ if (isArray _hitpointGroupConfig) then {
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
                     if (_subPointNewDamage < _subPointCurDamage) then {
                         TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
-                        ["setVehicleHitPointDamage", _vehicle, [_vehicle, _subHitIndex, _subPointNewDamage]] call EFUNC(common,targetEvent);
+                        [QGVAR(setVehicleHitPointDamage), [_vehicle, _subHitIndex, _subPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
                     };
                 };
             } forEach _subHitArray;

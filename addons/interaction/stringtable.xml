@@ -357,6 +357,7 @@
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
             <Czech>Vystupte</Czech>
+            <Portuguese>Saia</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -714,6 +715,7 @@
             <French>Allumer</French>
             <Italian>Accendi</Italian>
             <Czech>Zapnout</Czech>
+            <Portuguese>Ligar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -723,6 +725,7 @@
             <French>Eteindre</French>
             <Italian>Spegni</Italian>
             <Czech>Vypnout</Czech>
+            <Portuguese>Desligar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>

@@ -20,5 +20,5 @@ params [["_msg", "", [""]]];
 if (isServer) then {
     diag_log text _msg;
 } else {
-    [_this, QFUNC(serverLog), 1] call FUNC(execRemoteFnc);
+    [QGVAR(serverLog), _this] call CBA_fnc_serverEvent;
 };
