@@ -8,8 +8,8 @@ productionUrl: http://localhost:4000
 githubUrl: https://github.com/acemod/ACE3
 version:
   major: 3
-  minor: 4
-  patch: 2
+  minor: 5
+  patch: 1
   build: 0
 
 
@@ -27,3 +27,9 @@ safe: true
 lsi: false
 
 exclude: [src, .editorconfig, .gitignore, CNAME, Gemfile, Gemfile.lock, README.md]
+
+gems:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
