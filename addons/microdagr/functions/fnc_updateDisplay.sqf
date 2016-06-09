@@ -47,9 +47,9 @@ case (APP_MODE_INFODISPLAY): {
 
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (([ACE_player] call CBA_fnc_headDir) select 0)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -107,9 +107,9 @@ case (APP_MODE_INFODISPLAY): {
 case (APP_MODE_COMPASS): {
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([(floor (([ACE_player] call CBA_fnc_headDir) select 0)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 

@@ -38,7 +38,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
         (_display displayCtrl IDC_MODEDISPLAY_MODEPOSTIMECG) ctrlShow false;
         (_display displayCtrl IDC_MODEDISPLAY_MODEPOSTARGETCG) ctrlShow true;
         if (GVAR(currentWaypoint) == -2) then {
-            (_display displayCtrl IDC_MODEDISPLAY_TARGETICON) ctrlSetText "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa"
+            (_display displayCtrl IDC_MODEDISPLAY_TARGETICON) ctrlSetText QUOTE(PATHTOF(images\icon_menuLaser.paa));
         } else {
             (_display displayCtrl IDC_MODEDISPLAY_TARGETICON) ctrlSetText QPATHTOF(images\icon_menuMark.paa);
         };
