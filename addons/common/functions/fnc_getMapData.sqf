@@ -94,4 +94,4 @@ if (_map in ["stratis"]) exitWith { [40, 0] };
  if (_map in ["xcam_prototype"]) exitWith { [35, 0] };
  if (_map in ["zargabad"]) exitWith { [35, 2000] };
 
-[0, 0]
+[] //Return empty array if we have no specific data for the map

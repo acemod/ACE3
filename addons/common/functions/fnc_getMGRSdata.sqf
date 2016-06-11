@@ -23,8 +23,10 @@ private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
 private _mapData = _map call FUNC(getMapData);
-_lat = _mapData select 0;
-_alt = _mapData select 1;
+if (!(_mapData isEqualTo [])) then {
+    _lat = _mapData select 0;
+    _alt = _mapData select 1;
+};
 TRACE_2("Latitude and Altitude",_lat,_alt);
 
 private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
