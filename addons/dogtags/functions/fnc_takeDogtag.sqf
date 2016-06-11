@@ -20,5 +20,5 @@ if (_target getVariable [QGVAR(dogtagTaken), false]) then {
     [localize LSTRING(dogtagAlreadyTaken)] call EFUNC(common,displayText);
 } else {
     _target setVariable [QGVAR(dogtagTaken), true, true];
-    [QGVAR(getDogtagItem), [_player, _target]] call EFUNC(common,serverEvent);
+    [QGVAR(getDogtagItem), [_player, _target]] call CBA_fnc_serverEvent;
 };

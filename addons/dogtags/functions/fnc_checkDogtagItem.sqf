@@ -16,4 +16,4 @@
 
 params ["_player", "_target", "_item"];
 
-[QGVAR(sendDogtagData), [_player, _item]] call EFUNC(common,serverEvent);
+[QGVAR(sendDogtagData), [_player, _item]] call CBA_fnc_serverEvent;

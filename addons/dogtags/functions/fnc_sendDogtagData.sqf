@@ -27,4 +27,4 @@ if (_index >= 0) then {
     _nickname = _allDogtagNicknames select _index;
 };
 
-[QGVAR(showDogtag), [_target], [_nickname]] call EFUNC(common,targetEvent);
+[QGVAR(showDogtag), [_nickname], [_target]] call CBA_fnc_targetEvent;

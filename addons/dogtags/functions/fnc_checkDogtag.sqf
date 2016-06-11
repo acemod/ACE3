@@ -17,4 +17,4 @@ params ["_player", "_target"];
 
 private _doubleTags = !(_target getVariable [QGVAR(dogtagTaken), false]);
 private _nickname = [_target, false, true] call EFUNC(common,getName);
-[QGVAR(showDogtag), [_nickname, _doubleTags]] call EFUNC(common,localEvent);
+[QGVAR(showDogtag), [_nickname, _doubleTags]] call CBA_fnc_localEvent;

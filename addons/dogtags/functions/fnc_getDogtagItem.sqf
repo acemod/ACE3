@@ -34,7 +34,7 @@ missionNamespace setVariable [QGVAR(allDogtags), _allDogtags];
 missionNamespace setVariable [QGVAR(allDogtagNicknames), _allDogtagNicknames];
 
 if(isMultiplayer) then {
-    [QGVAR(addDogtagItem), [_target], [_item, _nickname]] call EFUNC(common,targetEvent);
+    [QGVAR(addDogtagItem), [_item, _nickname], [_target]] call CBA_fnc_targetEvent;
 } else {
-    [QGVAR(addDogtagItem), [_item, _nickname]] call EFUNC(common,localEvent);
+    [QGVAR(addDogtagItem), [_item, _nickname]] call CBA_fnc_localEvent;
 };
