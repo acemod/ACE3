@@ -36,7 +36,7 @@ if (!isNull _xObject) then {
         params ["_detachedLight"];
         TRACE_1("delayed delete",_detachedLight);
         deleteVehicle _detachedLight;
-    }, [_xObject], 2] call EFUNC(common,waitAndExecute);
+    }, [_xObject], 2] call CBA_fnc_waitAndExecute;
     (_attachedList select 0) set [0, objNull];
 };
 

@@ -176,6 +176,7 @@
             <Spanish>Hacer objeto cargable</Spanish>
             <French>Rendre l'objet chargeable</French>
             <Czech>Vytvořit objekt nakladatelným</Czech>
+            <Portuguese>Fazer objeto carregável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -185,6 +186,7 @@
             <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
             <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
             <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
+            <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -194,6 +196,7 @@
             <Spanish>Tamaño del objeto</Spanish>
             <French>Taille de l'objet</French>
             <Czech>Velikost objektu</Czech>
+            <Portuguese>Tamanho do objeto</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -11,7 +11,7 @@ class CfgVehicles {
                     statement = QUOTE( [ARR_2(_player, currentMuzzle _player)] call FUNC(clearJam); );
                     showDisabled = 0;
                     priority = 4;
-                    icon = QUOTE(PATHTOF(UI\unjam_ca.paa));
+                    icon = QPATHTOF(UI\unjam_ca.paa);
                 };
                 class GVAR(SwapBarrel) {
                     displayName = CSTRING(SwapBarrel);
@@ -19,7 +19,7 @@ class CfgVehicles {
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(swapBarrel); );
                     showDisabled = 0;
                     priority = 3;
-                    icon = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
+                    icon = QPATHTOF(UI\spare_barrel_ca.paa);
                 };
                 class GVAR(CheckTemperature) {
                     displayName = CSTRING(CheckTemperatureShort);
@@ -28,7 +28,7 @@ class CfgVehicles {
                     statement = QUOTE( [ARR_3(_player, _player, currentWeapon _player)] call FUNC(checkTemperature); );
                     showDisabled = 0;
                     priority = 2.9;
-                    icon = QUOTE(PATHTOF(UI\temp_ca.paa));
+                    icon = QPATHTOF(UI\temp_ca.paa);
                 };
                 class GVAR(CheckTemperatureSpareBarrels) {
                     displayName = CSTRING(CheckTemperatureSpareBarrelsShort);

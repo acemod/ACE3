@@ -20,7 +20,7 @@ params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
 if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    ["setDead", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
+    [QGVAR(setDead), [_unit, _force], _unit] call CBA_fnc_targetEvent;
     false;
 };
 
@@ -38,7 +38,7 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
     };
 
     _unit setVariable [QGVAR(inReviveState), true, true];
-    _unit setVariable [QGVAR(reviveStartTime), ACE_time];
+    _unit setVariable [QGVAR(reviveStartTime), CBA_missionTime];
     [_unit, true] call FUNC(setUnconscious);
 
     // Run the loop that tracks the revive state
@@ -51,7 +51,7 @@ if (isPLayer _unit) then {
     _unit setVariable ["isDeadPlayer", true, true];
 };
 
-["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+["ace_killed", [_unit]] call CBA_fnc_localEvent;
 
 //Delay a frame before killing the unit via scripted damage
 //to avoid triggering the "Killed" Event twice (and having the wrong killer)
@@ -59,7 +59,7 @@ if (isPLayer _unit) then {
 if (!_delaySetDamage) then {
     [_unit, 1] call FUNC(setStructuralDamage);
 } else {
-    [FUNC(setStructuralDamage), [_unit, 1]] call EFUNC(common,execNextFrame);
+    [FUNC(setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
 };
 
 true;

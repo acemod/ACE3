@@ -34,8 +34,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(bananaDisplayName);
         descriptionShort = CSTRING(bananaDescr);
-        model = PATHTOF(data\banana.p3d);
-        picture = PATHTOF(data\icon_banana_ca.paa);
+        model = QPATHTOF(data\banana.p3d);
+        picture = QPATHTOF(data\icon_banana_ca.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
         class ItemInfo: InventoryItem_Base_F {

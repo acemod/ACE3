@@ -9,25 +9,25 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(ACE_player,'black' call FUNC(getTexture))] call FUNC(tag));
                     showDisabled = 0;
                     priority = 3;
-                    icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlack.paa));
+                    icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
                 };
                 class ACE_TagRed: ACE_TagBlack {
                     displayName = CSTRING(TagRed);
                     condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'red' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QUOTE(PATHTOF(UI\icons\iconTaggingRed.paa));
+                    icon = QPATHTOF(UI\icons\iconTaggingRed.paa);
                 };
                 class ACE_TagGreen: ACE_TagBlack {
                     displayName = CSTRING(TagGreen);
                     condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'green' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QUOTE(PATHTOF(UI\icons\iconTaggingGreen.paa));
+                    icon = QPATHTOF(UI\icons\iconTaggingGreen.paa);
                 };
                 class ACE_TagBlue: ACE_TagBlack {
                     displayName = CSTRING(TagBlue);
                     condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && {[] call FUNC(checkTaggable)});
                     statement = QUOTE([ARR_2(ACE_player,'blue' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QUOTE(PATHTOF(UI\icons\iconTaggingBlue.paa));
+                    icon = QPATHTOF(UI\icons\iconTaggingBlue.paa);
                 };
             };
         };

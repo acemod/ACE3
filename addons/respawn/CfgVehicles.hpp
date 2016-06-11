@@ -10,7 +10,7 @@ class CfgVehicles {
         function = QFUNC(module);
         scope = 2;
         isGlobal = 0;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Respawn_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {
             class SavePreDeathGear {
@@ -40,7 +40,7 @@ class CfgVehicles {
         function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_FriendlyFire_ca.paa);
 
         class Arguments {};
         class ModuleDescription {
@@ -55,7 +55,7 @@ class CfgVehicles {
         function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Rallypoint_ca.paa);
 
         class Arguments {};
         class ModuleDescription {

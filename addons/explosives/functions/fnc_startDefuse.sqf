@@ -44,7 +44,7 @@ if (STANCE _unit == "Prone") then {
 if (ACE_player != _unit) then {
     // If the unit is a player, call the function on the player.
     if (isPlayer _unit) then {
-        [[_unit, _target], QFUNC(startDefuse), _unit] call EFUNC(common,execRemoteFnc);
+        [QGVAR(startDefuse), [_unit, _target], _unit] call CBA_fnc_targetEvent;
     } else {
         _unit playActionNow _actionToPlay;
         _unit disableAI "MOVE";
@@ -56,7 +56,7 @@ if (ACE_player != _unit) then {
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";
-        }, [_unit, _target], _defuseTime] call EFUNC(common,waitAndExecute);
+        }, [_unit, _target], _defuseTime] call CBA_fnc_waitAndExecute;
     };
 } else {
     _unit playActionNow _actionToPlay;

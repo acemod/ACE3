@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
         addMissionEventHandler ["HandleDisconnect", {
             [{
@@ -10,8 +10,8 @@
                     deleteVehicle _unit;
                 };
             },
-            _this, 4] call EFUNC(common,waitAndExecute);
+            _this, 4] call CBA_fnc_waitAndExecute;
             false
         }];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

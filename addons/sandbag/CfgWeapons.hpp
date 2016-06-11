@@ -7,8 +7,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(sandbagEmpty_displayName);
-        model = PATHTOF(data\ace_sandbag_m.p3d);
-        picture = PATHTOF(data\m_sandbag_ca.paa);
+        model = QPATHTOF(data\ace_sandbag_m.p3d);
+        picture = QPATHTOF(data\m_sandbag_ca.paa);
 
         class ItemInfo: InventoryItem_Base_F {
             mass = 8;
@@ -19,8 +19,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayName = CSTRING(sandbag_displayName);
-        model = PATHTOF(data\ace_sandbag_build.p3d);
-        picture = PATHTOF(data\m_sandbag_ca.paa);
+        model = QPATHTOF(data\ace_sandbag_build.p3d);
+        picture = QPATHTOF(data\m_sandbag_ca.paa);
 
         class ItemInfo: InventoryItem_Base_F {
             mass = 160;

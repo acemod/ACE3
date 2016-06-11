@@ -22,7 +22,7 @@ TRACE_5("params",_caller,_target,_selectionName,_className,_items);
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 
-["treatmentAdvanced_medicationLocal", [_target], [_target, _className, _part]] call EFUNC(common,targetEvent);
+[QGVAR(treatmentAdvanced_medicationLocal), [_target, _className, _part], [_target]] call CBA_fnc_targetEvent;
 
 {
     if (_x != "") then {

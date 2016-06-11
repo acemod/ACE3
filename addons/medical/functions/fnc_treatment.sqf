@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitwith {
     [{
         _this call FUNC(treatment);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CBA_fnc_execNextFrame;
 };
 
 if !(_target isKindOf "CAManBase") exitWith {false};
@@ -239,7 +239,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 true;

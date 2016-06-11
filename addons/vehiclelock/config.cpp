@@ -6,7 +6,9 @@ class CfgPatches {
     weapons[] = {};
     requiredVersion = REQUIRED_VERSION;
     requiredAddons[] = {"ace_interaction"};
-    author[] = {"PabstMirror"};
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
+    authors[] = {"PabstMirror"};
     authorUrl = "https://github.com/acemod/ACE3";
     VERSION_CONFIG;
   };
@@ -17,3 +19,8 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    VehicleLock_SetVehicleLock = QGVAR(setVehicleLock);
+    VehicleLock_SetupCustomKey = QGVAR(setupCustomKey);
+};

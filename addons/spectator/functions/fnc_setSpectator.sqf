@@ -97,7 +97,7 @@ if (_set) then {
                 };
             }];
         };
-    }, !_force] call EFUNC(common,execNextFrame);
+    }, !_force] call CBA_fnc_execNextFrame;
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -170,4 +170,4 @@ GVAR(interrupts) = [];
 // Mark spectator state for reference
 GVAR(isSet) = _set;
 
-["spectatorSet",[_set]] call EFUNC(common,localEvent);
+["ace_spectatorSet", [_set]] call CBA_fnc_localEvent;

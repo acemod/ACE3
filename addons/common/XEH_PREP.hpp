@@ -24,6 +24,7 @@ PREP(debugModule);
 PREP(defineVariable);
 PREP(deviceKeyFindValidIndex);
 PREP(deviceKeyRegisterNew);
+PREP(deprecateComponent);
 PREP(disableAI);
 PREP(disableUserInput);
 PREP(displayIcon);
@@ -235,7 +236,6 @@ PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
 PREP(globalEvent);
-PREP(_handleNetEvent);
 PREP(addEventHandler);
 PREP(objectEvent);
 PREP(targetEvent);
@@ -277,5 +277,3 @@ PREP(hashListCreateHash);
 PREP(hashListSelect);
 PREP(hashListSet);
 PREP(hashListPush);
-
-PREP(timePFH);

@@ -35,5 +35,5 @@ if (_ammoCount > 0) then {
         _unit addMagazineAmmoCargo [_currentMagazineClass, 1, _ammoCount];
         _unit setPosATL _pos;
     };
-    [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call EFUNC(common,globalEvent);
+    [QGVAR(removeMagazine), [_static, _currentMagazineClass]] call CBA_fnc_globalEvent;
 };

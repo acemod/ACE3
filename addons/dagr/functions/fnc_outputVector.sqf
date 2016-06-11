@@ -27,7 +27,7 @@ private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevati
 #define __timeControl (__display displayCtrl 266855)
 #define __background (__display displayCtrl 266856)
 
-__background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
+__background ctrlSetText QPATHTOF(UI\dagr_vector.paa);
 
 if (GVAR(noVectorData)) exitWith {};
 GVAR(LAZPOS) params ["_lazPosX", "_lazPosY", "_lazPosZ"];

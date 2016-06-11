@@ -29,6 +29,6 @@ private _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};
 
-["setSpeaker", [_unit, "ACE_NoVoice"]] call FUNC(globalEvent);
+[QGVAR(setSpeaker), [_unit, "ACE_NoVoice"]] call CBA_fnc_globalEvent;
 
 _unit setVariable ["ACE_OriginalSpeaker", _speaker, true];

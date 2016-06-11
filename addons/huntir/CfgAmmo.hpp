@@ -1,7 +1,7 @@
 class CfgAmmo {
     class FlareBase;
     class F_HuntIR: FlareBase {
-        model = PATHTOF(data\ace_m1070_armed.p3d);
+        model = QPATHTOF(data\ace_m1070_armed.p3d);
         lightColor[] = {0, 0, 0, 0};
         smokeColor[] = {0, 0, 0, 0};
         timeToLive = 6;
@@ -26,6 +26,7 @@ class CfgAmmo {
         soundHit6[] = {"",3.16228,1,2000};
         soundHit7[] = {"",3.16228,1,2000};
         soundHit8[] = {"",3.16228,1,2000};
+        SoundSetExplosion[] = {};
         multiSoundHit[] = {};
         class HitEffects {};
         soundFakeFall0[] = {"",3.16228,1,1000};

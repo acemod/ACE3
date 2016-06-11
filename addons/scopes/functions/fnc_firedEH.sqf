@@ -24,6 +24,7 @@ _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
 _zeroing = _adjustment select _weaponIndex;
+TRACE_1("Adjusting With",_zeroing);
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 

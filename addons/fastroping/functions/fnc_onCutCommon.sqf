@@ -30,7 +30,7 @@ if !(isNull _fries) then {
         _this animate ["dvere1_posunZ", 0];
         _this animate ["dvere2_posunZ", 0];
         _this setVariable [QGVAR(doorsLocked), false, true];
-    }, _vehicle, 2] call EFUNC(common,waitAndExecute);
+    }, _vehicle, 2] call CBA_fnc_waitAndExecute;
 
     4
 } else {

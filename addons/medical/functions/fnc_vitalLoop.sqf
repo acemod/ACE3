@@ -29,7 +29,7 @@ if (!local _unit) exitWith {
 };
 
 // Handle unit vitals
-[_unit, ACE_time - _lastTime] call FUNC(handleUnitVitals);
+[_unit, CBA_missionTime - _lastTime] call FUNC(handleUnitVitals);
 
 // Play injured sounds
 private _pain = _unit getVariable [QGVAR(pain), 0];
@@ -45,4 +45,4 @@ if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
 };
 
 // Schedule the loop to be executed again 1 sec later
-[DFUNC(vitalLoop), [_unit, ACE_time], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(vitalLoop), [_unit, CBA_missionTime], 1] call CBA_fnc_waitAndExecute;

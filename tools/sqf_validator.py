@@ -8,7 +8,7 @@ import sys
 import argparse
 
 def validKeyWordAfterCode(content, index):
-    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch"];
+    keyWords = ["for", "do", "count", "each", "forEach", "else", "and", "not", "isEqualTo", "in", "call", "spawn", "execVM", "catch", "param", "select", "apply"];
     for word in keyWords:
         try:
             subWord = content.index(word, index, index+len(word))
@@ -112,7 +112,7 @@ def check_sqf_syntax(filepath):
                         elif (c== '\t'):
                             print("ERROR: Tab detected at {0} Line number: {1}".format(filepath,lineNumber))
                             bad_count_file += 1
-                            
+
                         if (checkForSemiColumn):
                             if (c not in [' ', '\t', '\n', '/']): # keep reading until no white space or comments
                                 checkForSemiColumn = False

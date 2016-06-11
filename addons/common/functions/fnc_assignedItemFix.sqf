@@ -28,10 +28,10 @@ GVAR(AssignedItemsShownItems) = [
     ACE_isGPSEnabled
 ];
 
-["playerInventoryChanged", {
-    params ["_unit", "_assignedItems"];
+["ace_playerInventoryChanged", {
+    params ["_unit"];
 
-    _assignedItems = _assignedItems param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
+    private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
     GVAR(AssignedItemsShownItems) = [
         !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
@@ -48,4 +48,4 @@ GVAR(AssignedItemsShownItems) = [
     showWatch _showWatch;
     showRadio _showRadio;
     showGPS (_showGPS || {cameraOn == getConnectedUAV _unit});  //If player is activly controling a UAV, showGPS controls showing the map (m key)
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addEventHandler;

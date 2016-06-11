@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_EntrenchingTool"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"Grey", "esteldunedain"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Grey", "esteldunedain"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -15,3 +16,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    interactMenuOpened = "ace_interactMenuOpened";
+};
