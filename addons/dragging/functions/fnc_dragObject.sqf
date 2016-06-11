@@ -33,7 +33,7 @@ _position = _position vectorAdd [0, 0, _offset];
 // attach object
 TRACE_3("attaching",_position,_offset,_direction);
 _target attachTo [_unit, _position];
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);

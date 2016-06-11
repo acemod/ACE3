@@ -23,15 +23,15 @@ GVAR(showNamesTime) = -10;
 [29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
 // Wait until the colors are defined before starting to draw the nametags
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name"];
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

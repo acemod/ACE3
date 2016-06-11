@@ -20,12 +20,12 @@
 if (missionNamespace getVariable [QGVAR(EnableSwitchUnits), false]) then {
     [player] call FUNC(startSwitchUnits);
 } else {
-    ["SettingChanged", {
+    ["ace_settingChanged", {
         PARAMS_2(_name,_value);
         if ((_name == QGVAR(EnableSwitchUnits)) && {_value}) then {
             [player] call FUNC(startSwitchUnits);
         };
-    }] call EFUNC(common,addEventhandler);
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (isServer) then {
@@ -33,5 +33,5 @@ if (isServer) then {
         params ["_unit", "_player"];
         _unit setVariable [QGVAR(OriginalOwner), owner _unit, true];
         _unit setOwner (owner _player);
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 };

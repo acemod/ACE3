@@ -43,19 +43,19 @@ GVAR(surfaceCacheIsDust) = false;
 // init GlassesChanged eventhandler
 GVAR(OldGlasses) = "<null>";
 
-["playerInventoryChanged", {
+["ace_playerInventoryChanged", {
     params ["_unit"];
 
     private _currentGlasses = goggles _unit;
 
     if (GVAR(OldGlasses) != _currentGlasses) then {
-        ["GlassesChanged", [_unit, _currentGlasses]] call EFUNC(common,localEvent);
+        ["ace_glassesChanged", [_unit, _currentGlasses]] call CBA_fnc_localEvent;
         GVAR(OldGlasses) = _currentGlasses;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // add glasses eventhandlers
-["GlassesChanged", {
+["ace_glassesChanged", {
     params ["_unit", "_glasses"];
 
     SETGLASSES(_unit,GLASSESDEFAULT);
@@ -67,9 +67,9 @@ GVAR(OldGlasses) = "<null>";
     } else {
         call FUNC(removeGlassesEffect);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["GlassesCracked", {
+["ace_glassesCracked", {
     params ["_unit"];
 
     _unit setVariable ["ACE_EyesDamaged", true];
@@ -93,7 +93,7 @@ GVAR(OldGlasses) = "<null>";
 
     }, _unit, 25] call CBA_fnc_waitAndExecute;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // check goggles
 private _fnc_checkGoggles = {
@@ -110,8 +110,8 @@ private _fnc_checkGoggles = {
     };
 };
 
-["cameraViewChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
-["activeCameraChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
+["ace_cameraViewChanged", _fnc_checkGoggles] call CBA_fnc_addEventHandler;
+["ace_activeCameraChanged", _fnc_checkGoggles] call CBA_fnc_addEventHandler;
 
 // goggles effects main PFH
 [{
@@ -134,4 +134,4 @@ private _fnc_checkGoggles = {
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 // Register fire event handler
-["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

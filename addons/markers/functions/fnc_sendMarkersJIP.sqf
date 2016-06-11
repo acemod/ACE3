@@ -20,6 +20,6 @@ TRACE_1("params",_logic);
 
 [
     QGVAR(setMarkerJIP),
-    [_logic],
-    [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[])]
-] call EFUNC(common,targetEvent);
+    [GETGVAR(allMapMarkers,[]), GETGVAR(allMapMarkersProperties,[])],
+    [_logic]
+] call CBA_fnc_targetEvent;

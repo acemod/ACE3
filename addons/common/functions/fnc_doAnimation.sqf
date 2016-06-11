@@ -41,34 +41,34 @@ TRACE_2("",local _unit,vehicle _unit);
 switch (_priority) do {
     case 0: {
         if (_unit == vehicle _unit) then {
-            ["playMove", _unit, [_unit, _animation]] call FUNC(objectEvent);
+            [QGVAR(playMove), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
-            ["playMove", [_unit, _animation]] call FUNC(globalEvent);
+            [QGVAR(playMove), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
     };
     case 1: {
         if (_unit == vehicle _unit) then {
-            ["playMoveNow", _unit, [_unit, _animation]] call FUNC(objectEvent);
+            [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
-            ["playMoveNow", [_unit, _animation]] call FUNC(globalEvent);
+            [QGVAR(playMoveNow), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
     };
     case 2: {
         // try playMoveNow first
         if (_unit == vehicle _unit) then {
-            ["playMoveNow", _unit, [_unit, _animation]] call FUNC(objectEvent);
+            [QGVAR(playMoveNow), [_unit, _animation], _unit] call CBA_fnc_targetEvent;
         } else {
             // Execute on all machines. PlayMove and PlayMoveNow are bugged: They have no global effects when executed on remote machines inside vehicles.
-            ["playMoveNow", [_unit, _animation]] call FUNC(globalEvent);
+            [QGVAR(playMoveNow), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
 
         // if animation doesn't respond, do switchMove
         if (animationState _unit != _animation) then {
             TRACE_1("did not respond to playMoveNow",animationState _unit);
             // Execute on all machines. SwitchMove has local effects.
-            ["switchMove", [_unit, _animation]] call FUNC(globalEvent);
+            [QGVAR(switchMove), [_unit, _animation]] call CBA_fnc_globalEvent;
         };
     };
     default {};

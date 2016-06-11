@@ -32,7 +32,7 @@ private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F"],
 
 if (!isNull _vehicle) then {
     [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
-    ["loadPersonEvent", _unit, [_unit, _vehicle, _caller]] call FUNC(objectEvent);
+    ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
 };
 
 _vehicle

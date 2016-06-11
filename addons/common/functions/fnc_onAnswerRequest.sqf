@@ -20,7 +20,7 @@ if (!isNil "_info") then {
     _info params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
 
     private _replyParams = [_info, _accepted];
-    [QGVAR(requestCallback), _caller, _replyParams] call FUNC(objectEvent);
+    [QGVAR(requestCallback), _replyParams, _caller] call CBA_fnc_targetEvent;
     _unit setVariable [_id, nil];
 };
 

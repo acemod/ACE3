@@ -27,7 +27,7 @@ private _virtualLoad = 0;
 ];
 
 // get absolute vanilla load
-private _absLoad = loadAbs _unit / load _unit;
+private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
 
 // try to preserve other changes to the "LoadCoef" unitTrait
 private _loadCoef = _unit getVariable QGVAR(loadCoef);

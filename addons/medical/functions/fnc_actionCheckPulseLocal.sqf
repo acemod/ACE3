@@ -49,7 +49,7 @@ if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(
     _logOutPut = LSTRING(Check_Pulse_None);
 };
 
-["displayTextStructured", [_caller], [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [[_heartRateOutput, [_unit] call EFUNC(common,getName), round(_heartRate)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 
 if (_logOutPut != "") then {
     [_unit,"activity", LSTRING(Check_Pulse_Log),[[_caller] call EFUNC(common,getName),_logOutPut]] call FUNC(addToLog);

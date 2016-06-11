@@ -43,3 +43,8 @@ class CfgMineTriggers {
         mineTriggerRange = 1;
     };
 };
+
+class ACE_newEvents {
+    clientRequestsOrientations = QGVAR(clientRequestOrientations);
+    serverSendsOrientations = QGVAR(serverSendOrientations);
+};

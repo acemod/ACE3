@@ -27,7 +27,7 @@ _chance = [0.5, 0.8] select (count weapons _unit > 0);
 
 {
     if (count weapons _x == 0 && {random 1 < _chance}) then {
-        ["getDown", [_x], [_x]] call EFUNC(common,targetEvent);
+        [QGVAR(getDown), [_x], [_x]] call CBA_fnc_targetEvent;
     };
     false
 } count (_target nearEntities ["Civilian", SEND_RADIUS]);

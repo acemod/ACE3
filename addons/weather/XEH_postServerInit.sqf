@@ -9,10 +9,10 @@ GVAR(rain_current_range) = -1+(random 2);
 // Wind
 call FUNC(initWind);
 
-["SettingsInitialized", {
-    TRACE_2("SettingsInitialized",GVAR(enableServerController),GVAR(serverUpdateInterval));
+["ace_settingsInitialized", {
+    TRACE_2("ace_settingsInitialized eh",GVAR(enableServerController),GVAR(serverUpdateInterval));
 
     if (GVAR(enableServerController)) then {
         [FUNC(serverController), GVAR(serverUpdateInterval)] call CBA_fnc_addPerFrameHandler;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
