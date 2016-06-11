@@ -27,7 +27,7 @@ if (_map in ["abramia"]) exitWith { [60, 0] };
 if (_map in ["af_kandahar_province"]) exitWith { [42, 0] };
 if (_map in ["angel"]) exitWith { [38, 0] };
 if (_map in ["anim_helvantis_v2"]) exitWith { [50, 0] };
-if (_map in ["australia"]) exitWith { _lat = -25; _altitude = 0; };
+if (_map in ["australia"]) exitWith { [-25, 0] };
 if (_map in ["bootcamp_acr"]) exitWith { [50, 0] };
 if (_map in ["bornholm"]) exitWith { [55, 0] };
 if (_map in ["bozcaada"]) exitWith { [40, 0] };
@@ -48,17 +48,17 @@ if (_map in ["hellskitchen", "hellskitchens"]) exitWith { [32, 900] };    //Sang
 if (_map in ["hindukush"]) exitWith { [36, 0] };
 if (_map in ["imrali", "imralispring"]) exitWith { [40, 0] };
 if (_map in ["intro"]) exitWith { [40, 0] };
-if (_map in ["isladuala3"]) exitWith { _lat = -19; _altitude = 0; };
+if (_map in ["isladuala3"]) exitWith { [-19, 0] };
 if (_map in ["jacobi"]) exitWith { [34, 2000] };    //default elevationOffset
 if (_map in ["kapaulio"]) exitWith { [0, 0] };
 if (_map in ["kerama"]) exitWith { [26, 0] };    //Kerama Islands, Japan - default elevationOffset
 if (_map in ["kholm"]) exitWith { [36, 0] };
 if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
-if (_map in ["lingor", "lingor3"]) exitWith { _lat = -4; _altitude = 0; };
+if (_map in ["lingor", "lingor3"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
 if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
-if (_map in ["malvinas"]) exitWith { _lat = -52; _altitude = 0; };
+if (_map in ["malvinas"]) exitWith { [-52, 0] };
 if (_map in ["namalsk"]) exitWith { [65, 0] };
 if (_map in ["mef_alaska"]) exitWith { [60, 5] };
 if (_map in ["mountains_acr"]) exitWith { [35, 2000] };
