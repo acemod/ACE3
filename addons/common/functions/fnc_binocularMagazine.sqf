@@ -15,18 +15,6 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]]];
+ACE_DEPRECATED("ace_common_fnc_binocularMagazine","3.8.0","CBA_fnc_binocularMagazine");
 
-private _binocular = binocular _unit;
-
-scopeName "main";
-
-{
-    if ((_x select 0) isEqualTo _binocular) then {
-        // note: if there is no magazine, _x(4,0) will be nil, which skips the breakOut.
-        (_x select 4 select 0) breakOut "main";
-    };
-    false
-} count weaponsitems _unit;
-
-""
+_this call CBA_fnc_binocularMagazine

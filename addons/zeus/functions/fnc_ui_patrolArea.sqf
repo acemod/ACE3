@@ -68,7 +68,7 @@ private _fnc_onConfirm = {
     private _radius = GETVAR(_display,GVAR(radius),50);
     private _position = GETVAR(_display,GVAR(position),getPos _logic);
 
-    [QGVAR(modulePatrolArea), _unit, [_unit,_position,_radius,5]] call EFUNC(common,targetEvent);
+    [QGVAR(modulePatrolArea), [_unit,_position,_radius,5], _unit] call CBA_fnc_targetEvent;
     deleteVehicle _logic;
 };
 

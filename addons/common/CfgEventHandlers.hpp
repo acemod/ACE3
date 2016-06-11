@@ -33,7 +33,7 @@ class Extended_InitPost_EventHandlers {
     };
     class CAManBase {
         class GVAR(setName) {
-            init = QUOTE(if (local (_this select 0)) then {[ARR_2(FUNC(setName),_this)] call FUNC(execNextFrame)};);
+            init = QUOTE(if (local (_this select 0)) then {[ARR_2(FUNC(setName),_this)] call CBA_fnc_execNextFrame};);
         };
         class GVAR(muteUnit) {
             init = QUOTE(_this call FUNC(muteUnitHandleInitPost));

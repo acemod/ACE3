@@ -19,39 +19,36 @@
  */
 #include "script_component.hpp"
 
-private ["_structuredOutputText", "_picture", "_fullMags", "_partialMags", "_fullMagazineCount"];
-
 params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
 _args params ["_magazineClassname", "_lastAmmoCount"];
 
-_fullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count");
+private _fullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count");
 
-//Don't show anything if player can't interact:
+// Don't show anything if player can't interact
 if (!([ACE_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith))) exitWith {};
 
-_structuredOutputText = if (_errorCode == 0) then {
-    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackComplete))];
+// Count mags
+private _fullMags = 0;
+private _partialMags = 0;
+{
+    _x params ["_classname", "_count"];
+
+    if (_classname == _magazineClassname && {_count > 0}) then {
+        if (_count == _fullMagazineCount) then {
+            _fullMags = _fullMags + 1;
+        } else {
+            _partialMags = _partialMags + 1;
+        };
+    };
+} forEach (magazinesAmmoFull ACE_player);
+
+private _repackedMagsText = format [localize LSTRING(RepackedMagazinesCount), _fullMags, _partialMags];
+
+private _structuredOutputText = if (_errorCode == 0) then {
+    format ["<t align='center'>%1</t><br/>%2", localize LSTRING(RepackComplete), _repackedMagsText];
 } else {
-    format ["<t align='center'>%1</t><br/>", (localize LSTRING(RepackInterrupted))];
+    format ["<t align='center'>%1</t><br/>%2", localize LSTRING(RepackInterrupted), _repackedMagsText];
 };
 
-_picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
-_structuredOutputText = _structuredOutputText + format ["<img align='center' size='1.8' color='#ffffff' image='%1'/> <br/>", _picture];
-
-//EFUNC(common,displayTextStructured) doesn't have room for this, and I don't think it's nessacary, can fix in the future if wanted:
-
-// _fullMags = 0;
-// _partialMags = 0;
-// {
-    // EXPLODE_2_PVT(_x,_xClassname,_xCount);
-    // if ((_xClassname == _magazineClassname) && {_xCount > 0}) then {
-        // if (_xCount == _fullMagazineCount) then {
-            // _fullMags = _fullMags + 1;
-        // } else {
-            // _partialMags = _partialMags + 1;
-        // };
-    // };
-// } forEach (magazinesAmmoFull ACE_player);
-// _structuredOutputText = _structuredOutputText + format [("<t align='center'>" + (localize LSTRING(RepackedMagazinesCount)) + "</t>"), _fullMags, _partialMags];
-
-[parseText _structuredOutputText, 2] call EFUNC(common,displayTextStructured);
+private _picture = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "picture");
+[_structuredOutputText, _picture, nil, nil, 2.5] call EFUNC(common,displayTextPicture);

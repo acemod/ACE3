@@ -73,4 +73,4 @@ if (_countExtremelyHot > 0) then {
 };
 
 TRACE_1("_output",_output);
-["displayTextStructured", [_player], [_output, _size, _player]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [_output, _size, _player], [_player]] call CBA_fnc_targetEvent;

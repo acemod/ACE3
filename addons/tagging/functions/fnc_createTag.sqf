@@ -34,7 +34,7 @@ _tag setPosASL _tagPosASL;
 _tag setVectorDirAndUp _vectorDirAndUp;
 
 // Throw a global event for mision makers
-["tagCreated", [_tag, _texture, _object, _unit]] call EFUNC(common,globalEvent);
+["ace_tagCreated", [_tag, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 
 if (isNull _object) exitWith {true};
 

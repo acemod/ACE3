@@ -14,8 +14,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"SilentSpike"};
-        authorUrl = "https://github.com/SilentSpike";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"SilentSpike"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
     // Use additional cfgPatches to contextually remove modules from zeus
@@ -51,3 +52,10 @@ class ACE_Curator {
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
 #include "ui\RscAttributes.hpp"
+
+class ACE_newEvents {
+    zeusUnitAssigned = QGVAR(zeusUnitAssigned);
+    SetSurrendered = QEGVAR(captives,setSurrendered);
+    SetHandcuffed = QEGVAR(captives,setHandcuffed);
+    AddCargoByClass = "ace_addCargoByClass";
+};

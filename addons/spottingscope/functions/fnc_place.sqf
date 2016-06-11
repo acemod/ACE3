@@ -38,4 +38,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
         _spottingScope setVectorUp (surfaceNormal (position _spottingScope));
     };
     _unit reveal _spottingScope;
-}, [_unit], 1, 0] call EFUNC(common,waitAndExecute);
+}, [_unit], 1, 0] call CBA_fnc_waitAndExecute;

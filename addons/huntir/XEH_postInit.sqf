@@ -10,5 +10,4 @@ GVAR(ELEVAT) = 0.01;
 
 // Register fire event handler
 // Don't run for non players, as they are too dumb to launch huntirs anyway
-["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

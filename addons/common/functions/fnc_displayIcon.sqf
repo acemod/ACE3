@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
+ * ["myID", true, QPATHTOF(data\icon_group.paa), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
  *
  * Public: Yes
  */
@@ -89,11 +89,11 @@ private _refresh = {
 
 if (_show) then {
     if ({_x select 0 == _iconId} count _list == 0) then {
-        _list pushBack [_iconId, _icon, _color, ACE_time];
+        _list pushBack [_iconId, _icon, _color, CBA_missionTime];
     } else {
         {
             if (_x select 0 == _iconId) exitWith {
-                _list set [_forEachIndex, [_iconId, _icon, _color, ACE_time]];
+                _list set [_forEachIndex, [_iconId, _icon, _color, CBA_missionTime]];
             };
         } forEach _list;
     };
@@ -104,7 +104,7 @@ if (_show) then {
     if (_timeAlive >= 0) then {
         [{
             [_this select 0, false, "", [0,0,0], 0] call FUNC(displayIcon);
-        }, [_iconId], _timeAlive, _timeAlive] call FUNC(waitAndExecute);
+        }, [_iconId], _timeAlive, _timeAlive] call CBA_fnc_waitAndExecute;
     };
 
 } else {

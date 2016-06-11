@@ -74,7 +74,7 @@ private _fnc_onConfirm = {
     _marker setMarkerShape "ELLIPSE";
     _marker setMarkerSize [_radius,_radius];
 
-    [QGVAR(moduleSearchArea), _unit, [_unit,_marker]] call EFUNC(common,targetEvent);
+    [QGVAR(moduleSearchArea), [_unit,_marker], _unit] call CBA_fnc_targetEvent;
     deleteVehicle _logic;
 };
 

@@ -41,5 +41,5 @@ if (GVAR(tagsToTest) isEqualTo []) exitWith {
 };
 
 // Schedule for execution again after 5 seconds
-[DFUNC(tagTestingThread), [], 5] call EFUNC(common,waitAndExecute);
+[DFUNC(tagTestingThread), [], 5] call CBA_fnc_waitAndExecute;
 GVAR(testingThread) = true;

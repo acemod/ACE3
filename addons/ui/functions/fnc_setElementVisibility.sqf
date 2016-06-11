@@ -3,16 +3,15 @@
  * Setter for toggling advanced element visibility.
  *
  * Arguments:
- * 0: Set/Unset <BOOL> (default: true)
- * 1: Element IDD <NUMBER> (default: 0)
- * 2: Element IDCs <ARRAY> (default: [])
- * 3: Show/Hide Element OR Element ACE Settings Variable <BOOL/STRING> (default: false)
+ * 0: Set/Unset <BOOL>
+ * 1: Element Name <ARRAY/STRING>
+ * 2: Show/Hide Element <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [true, 300, [188], false] call ace_ui_fnc_setElementVisibility
+ * [true, "ace_ui_ammoCount", false] call ace_ui_fnc_setElementVisibility
  *
  * Public: Yes
  */
@@ -20,30 +19,43 @@
 
 params [
     ["_set", true, [true]],
-    ["_idd", 0, [0]],
-    ["_elements", [], [[]]],
-    ["_show", false, [true, ""]]
+    ["_element", "", [""]],
+    ["_show", false, [true]]
 ];
+
+// Verify element is bound
+if (!isClass (configFile >> "ACE_UI" >> _element)) exitWith {
+    ACE_LOGWARNING_1("Element '%1' does not exist",_element);
+};
 
 private _return = false;
 
 if (_set) then {
-    if ([_idd, _elements] in GVAR(elementsSet)) exitWith { TRACE_3("Element already set",_idd,_elements,GVAR(elementsSet)); };
+    // Exit if element has been set from another component, print warning if after interface initialization
+    if ([_element, _show] in GVAR(elementsSet) || {[_element, !_show] in GVAR(elementsSet)}) exitWith {
+        if (GVAR(interfaceInitialized)) then {
+            ACE_LOGWARNING_2("Element '%1' already set in %2",_element,GVAR(elementsSet));
+        };
+    };
 
-    TRACE_4("Setting element",_idd,_elements,_show,GVAR(elementsSet));
-    private _success = [_idd, _elements, _show] call FUNC(setAdvancedElement);
+    TRACE_3("Setting element",_element,_show,GVAR(elementsSet));
+    private _success = [_element, _show, false, true] call FUNC(setAdvancedElement);
 
     if (_success) then {
-        GVAR(elementsSet) pushBack [_idd, _elements];
+        GVAR(elementsSet) pushBack [_element, _show];
         _return = true;
     };
 } else {
-    if ([_idd, _elements] in GVAR(elementsSet)) then {
-        TRACE_4("Setting element",_idd,_elements,_show,GVAR(elementsSet));
-        [_idd, _elements, _show] call FUNC(setAdvancedElement);
+    if ([_element, _show] in GVAR(elementsSet) || {[_element, !_show] in GVAR(elementsSet)}) then {
+        TRACE_3("Unsetting element",_element,_show,GVAR(elementsSet));
 
-        private _index = GVAR(elementsSet) find [_idd, _elements];
+        private _index = GVAR(elementsSet) find [_element, _show];
+        if (_index == -1) then {
+            _index = GVAR(elementsSet) find [_element, !_show];
+        };
         GVAR(elementsSet) deleteAt _index;
+
+        [_element, _show, false, true] call FUNC(setAdvancedElement);
         _return = true;
     };
 };

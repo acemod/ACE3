@@ -6,7 +6,7 @@ if (["STMapGestures"] call EFUNC(common,isModLoaded)) exitWith {
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
     [{
         if (isNull (findDisplay 12)) exitWith {};
@@ -18,4 +18,4 @@ if (!hasInterface) exitWith {};
 
         [_pfhId] call CBA_fnc_removePerFrameHandler;
     }, 1, []] call CBA_fnc_addPerFrameHandler;
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

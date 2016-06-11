@@ -27,9 +27,9 @@ if !([_target] call FUNC(hasMedicalEnabled)) exitWith {
 };
 
 if (local _target) then {
-    ["treatmentAdvanced_bandageLocal", [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,localEvent);
+    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentAdvanced_bandageLocal", _target, [_target, _className, _selectionName, _specificSpot]] call EFUNC(common,targetEvent);
+    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
 };
 
 /*    {

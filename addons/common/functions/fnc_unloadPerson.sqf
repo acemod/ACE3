@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_unit"];
 
@@ -26,7 +26,7 @@ if (_vehicle == _unit) exitWith {false};
 if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 2}) exitWith {false};
 
 if (!isNull _vehicle) then {
-    ["unloadPersonEvent", [_unit], [_unit, _vehicle]] call EFUNC(common,targetEvent);
+    ["ace_unloadPersonEvent", [_unit, _vehicle], [_unit]] call CBA_fnc_targetEvent;
 };
 
 true

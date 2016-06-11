@@ -24,7 +24,7 @@ if(GVAR(pfehID) != -1) then {
 
 uiNameSpace setVariable [QGVAR(arguments), 
     [
-        ACE_diagTime,         // Last runtime
+        diag_tickTime,         // Last runtime
         objNull,   // currentTargetObject
         0,         // Run Time
         0,          // Lock Time

@@ -47,5 +47,5 @@ switch (false) do {
 };
 
 //Perform the module function:
-[QGVAR(moduleSearchNearby), _unit, [_unit]] call EFUNC(common,targetEvent);
+[QGVAR(moduleSearchNearby), [_unit], _unit] call CBA_fnc_targetEvent;
 deleteVehicle _logic;

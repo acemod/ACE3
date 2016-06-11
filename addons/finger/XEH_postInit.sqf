@@ -6,11 +6,11 @@ GVAR(lastFPTime) = -1;
 GVAR(fingersHash) = HASH_CREATE;
 GVAR(pfeh_id) = -1;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //If not enabled, dont't bother adding keybind or eventhandler
     if (!GVAR(enabled)) exitWith {};
 
-    [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call EFUNC(common,addEventHandler);
+    [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call CBA_fnc_addEventHandler;
 
     ["ACE3 Common",
     QGVAR(finger),
@@ -20,4 +20,4 @@ GVAR(pfeh_id) = -1;
     },
     {false},
     [41, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + Tilda (hold)
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

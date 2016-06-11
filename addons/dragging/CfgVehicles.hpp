@@ -19,12 +19,6 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    //remove actions from Taru Pods
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {
-        GVAR(canCarry) = 0;
-        GVAR(canDrag) = 0;
-    };
-
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
@@ -50,6 +44,11 @@ class CfgVehicles {
     };
 
     class Slingload_base_F: ReammoBox_F {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    //remove actions from Taru Pods
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };

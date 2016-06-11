@@ -25,7 +25,7 @@ _display displayAddEventHandler ["KeyDown", {
             };
 
             TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-            [{GVAR(ReloadMutex) = true;}, [], _duration] call EFUNC(common,waitAndExecute);
+            [{GVAR(ReloadMutex) = true;}, [], _duration] call CBA_fnc_waitAndExecute;
         };
     };
     false

@@ -10,10 +10,10 @@
 if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
-["playerInventoryChanged", FUNC(inventoryCheck)] call EFUNC(common,addEventhandler);
+["ace_playerInventoryChanged", FUNC(inventoryCheck)] call CBA_fnc_addEventHandler;
 
 // Instantly hide knobs when scoping in
-["cameraViewChanged", {
+["ace_cameraViewChanged", {
     EXPLODE_2_PVT(_this,_player,_newCameraView);
     if (_newCameraView == "GUNNER") then {
         private "_layer";
@@ -26,15 +26,17 @@ if (!hasInterface) exitWith {};
             GVAR(fadePFH) = nil;
         };
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 
 // Add keybinds
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMinor), localize LSTRING(AdjustUpMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -46,8 +48,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMinor), localize LSTRING(AdjustDownMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -59,8 +63,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMinor), localize LSTRING(AdjustLeftMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -72,8 +78,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMinor), localize LSTRING(AdjustRightMinor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -85,8 +93,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustUpMajor), localize LSTRING(AdjustUpMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -98,8 +108,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustDownMajor), localize LSTRING(AdjustDownMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -111,8 +123,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustLeftMajor), localize LSTRING(AdjustLeftMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -124,8 +138,10 @@ if (!hasInterface) exitWith {};
 ["ACE3 Scope Adjustment", QGVAR(AdjustRightMajor), localize LSTRING(AdjustRightMajor),
 {
     // Conditions: canInteract
-    if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
+
     [ACE_player] call FUNC(inventoryCheck);
 
     // Statement
@@ -136,5 +152,5 @@ if (!hasInterface) exitWith {};
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;

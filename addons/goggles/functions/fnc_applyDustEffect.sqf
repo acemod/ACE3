@@ -50,7 +50,7 @@ SETDUST(DBULLETS,0);
 GVAR(DustHandler) = -1;
 
 GVAR(DustHandler) = [{
-    if (ACE_diagTime >= GETDUSTT(DTIME) + 3) then {
+    if (diag_tickTime >= GETDUSTT(DTIME) + 3) then {
         SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
 
         private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
@@ -71,7 +71,7 @@ GVAR(DustHandler) = [{
                 if (GVAR(DustHandler) == -1) then {
                     GVAR(PostProcessEyes) ppEffectEnable false
                 };
-            }, [], 2] call EFUNC(common,waitAndExecute);
+            }, [], 2] call CBA_fnc_waitAndExecute;
 
             [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
             GVAR(DustHandler) = -1;

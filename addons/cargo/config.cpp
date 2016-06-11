@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"commy2", "Glowbal"};
-        authorUrl = "https://ace3mod.com/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"commy2", "Glowbal"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -16,3 +17,13 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "menu.hpp"
+
+class ACE_newEvents {
+    LoadCargo = "ace_loadCargo";
+    cargoUnloaded = "ace_cargoUnloaded";
+    cargoLoaded = "ace_cargoLoaded";
+    AddCargoByClass = "ace_addCargoByClass";
+    ServerUnloadCargo = QGVAR(serverUnload);
+    UnloadCargo = "ace_unloadCargo";
+    cargoAddedByClass = "ace_cargoAddedByClass";
+};

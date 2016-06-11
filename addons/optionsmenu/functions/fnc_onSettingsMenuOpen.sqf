@@ -43,7 +43,7 @@ private _clientSettableCategories = [""];
 } forEach EGVAR(common,settings);
 
 //Delay a frame
-[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call CBA_fnc_execNextFrame;
 
 disableSerialization;
 _menu = uiNamespace getVariable "ACE_settingsMenu";

@@ -18,10 +18,10 @@
 if (!isNil "ACE_RAIN_PARAMS") then {
     ACE_RAIN_PARAMS params ["_oldRain", "_newRain", "_period"];
 
-    private _periodPosition = (ACE_time - GVAR(rain_period_start_time)) min _period;
+    private _periodPosition = (CBA_missionTime - GVAR(rain_period_start_time)) min _period;
     private _periodPercent = (_periodPosition / _period) min 1;
 
-    GVAR(ACE_Rain) = linearConversion [GVAR(rain_period_start_time), (GVAR(rain_period_start_time) + _period), ACE_time, _oldRain, _newRain];
+    GVAR(ACE_Rain) = linearConversion [GVAR(rain_period_start_time), (GVAR(rain_period_start_time) + _period), CBA_missionTime, _oldRain, _newRain];
 
     TRACE_3("Update Rain",rain,ACE_RAIN_PARAMS,GVAR(ACE_Rain));
 };
