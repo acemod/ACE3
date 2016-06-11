@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgEden.hpp"
 #include "ACE_Medical_Treatments.hpp"
 #include "ACE_Settings.hpp"
+#include "UI\CfgInGameUI.hpp"
 #include "UI\RscTitles.hpp"
 #include "UI\triagecard.hpp"
 
