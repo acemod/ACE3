@@ -31,7 +31,9 @@ class CfgWeapons {
             maxRangeProbab = 0.05;
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            holsterScale = 0;       
+            holsterScale = 0;
+            class CowsSlot {};
+            class MuzzleSlot {};
         };
     };
     class ACE_VMH3: ACE_VMM3 {
