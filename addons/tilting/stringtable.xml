@@ -11,18 +11,24 @@
             <Russian>Отцепить трос</Russian>
             <German>Aufrichtseil entfernen</German>
         </Key>
-        <Key ID="STR_ACE_Tilting_FailedConnecting">
-            <English>Failed connecting cable</English>
-            <Russian>Не можем прицепить трос</Russian>
-        </Key>
-        <Key ID="STR_ACE_Tilting_FailedDisconnecting">
-            <English>Failed disconnecting cable</English>
-        </Key>
         <Key ID="STR_ACE_Tilting_Connecting">
             <English>Connecting tilting cable ...</English>
         </Key>
         <Key ID="STR_ACE_Tilting_Disconnecting">
             <English>Disconnecting tilting cable ...</English>
+        </Key>
+        <Key ID="STR_ACE_Tilting_FailedConnecting">
+            <English>Failed connecting tilting cable</English>
+            <Russian>Не можем прицепить трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tilting_FailedDisconnecting">
+            <English>Failed disconnecting tilting cable</English>
+        </Key>
+        <Key ID="STR_ACE_Tilting_SuccessConnecting">
+            <English>Successfully connected tilting cable</English>
+        </Key>
+        <Key ID="STR_ACE_Tilting_SuccessDisconnecting">
+            <English>Successfully disconnected tilting cable</English>
         </Key>
     </Package>
 </Project>

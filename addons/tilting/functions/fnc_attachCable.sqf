@@ -93,6 +93,8 @@ if (_stage == 0) then {
 
         _unit setVariable [QGVAR(stagedInfo), [_rope, _helper, _attachToVehicle, _endPosTestOffset]];
         _unit setVariable [QGVAR(stage), 1];
+
+        [LSTRING(SuccessConnecting), 2] call EFUNC(common,displayTextStructured);
     };
 
     if (_stage == 1) exitWith {
@@ -110,6 +112,8 @@ if (_stage == 0) then {
         _unit setVariable [QGVAR(selectedWeapon), nil];
 
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+
+        [LSTRING(SuccessConnecting), 2] call EFUNC(common,displayTextStructured);
     };
 }, {
     (_this select 0) params ["", "_unit", "_attachToVehicle"];

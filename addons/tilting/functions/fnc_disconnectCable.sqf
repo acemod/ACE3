@@ -17,6 +17,7 @@
 
 [2, _this, {
     [_this select 0] call FUNC(cancelConnect);
+    [LSTRING(SuccessDisconnecting), 2] call EFUNC(common,displayTextStructured);
 }, {
     [LSTRING(FailedDisconnecting)] call EFUNC(common,displayTextStructured);
 }, localize LSTRING(Disconnecting)] call EFUNC(common,progressBar);
