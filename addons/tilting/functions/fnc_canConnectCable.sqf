@@ -18,9 +18,9 @@
 
 params ["_target", "_unit"];
 
-!(_target distance _unit > ACTION_DISTANCE) &&
-{isNil {_target getVariable QGVAR(tiltUp)}} &&
-{!GVAR(pfhRunning)} &&
+(_target distance _unit < ACTION_DISTANCE) &&
+{isNil {_target getVariable QGVAR(up)}} &&
+{!(_unit getVariable [QGVAR(connecting), false])} &&
 {(vectorUp _target) select 2 < 0.7 ||
-    {_unit getVariable [QGVAR(tiltingStage), 0] == 1}
+    {_unit getVariable [QGVAR(stage), 0] == 1}
 }

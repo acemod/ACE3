@@ -16,9 +16,7 @@
 #include "script_component.hpp"
 
 [2, _this, {
-    (_this select 0) params ["_unit"];
-    [_unit] call FUNC(cancelConnect);
+    [_this select 0] call FUNC(cancelConnect);
 }, {
-    (_this select 0) params ["_unit"];
     [LSTRING(FailedDisconnecting)] call EFUNC(common,displayTextStructured);
 }, localize LSTRING(Disconnecting)] call EFUNC(common,progressBar);

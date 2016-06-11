@@ -18,6 +18,6 @@
 
 params ["_target", "_unit"];
 
-!(_target distance _unit > ACTION_DISTANCE) &&
-{_target getVariable [QGVAR(tiltUp), _unit] == _unit} &&
-{_unit getVariable [QGVAR(tiltingStage), 0] != 0}
+(_target distance _unit < ACTION_DISTANCE) &&
+{_target getVariable [QGVAR(up), objNull] == _unit} &&
+{_unit getVariable [QGVAR(stage), 0] != 0}

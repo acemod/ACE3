@@ -6,11 +6,6 @@
             <German>Aufrichtseil verbinden</German>
             <Russian>Прицепить трос</Russian>
         </Key>
-        <Key ID="STR_ACE_Tilting_ConnectCable">
-            <English>Connect cable</English>
-            <German>Seil verbinden</German>
-            <Russian>Прицепить трос</Russian>
-        </Key>
         <Key ID="STR_ACE_Tilting_Disconnect">
             <English>Disconnect tilting cable</English>
             <Russian>Отцепить трос</Russian>

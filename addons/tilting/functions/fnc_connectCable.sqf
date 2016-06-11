@@ -23,8 +23,8 @@ GVAR(placeAction) = PLACE_WAITING;
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 [
-    localize LSTRING(ConnectCable),
-    ["", localize ELSTRING(common,Cancel)] select (_unit getVariable [QGVAR(tiltingStage), 0] == 0)
+    localize LSTRING(Connect),
+    ["", localize ELSTRING(common,Cancel)] select (_unit getVariable [QGVAR(stage), 0] == 0)
 ] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE}] call EFUNC(common,addActionEventHandler)];
@@ -33,7 +33,7 @@ private _actionID = _unit addAction [
     {[_this select 1] call FUNC(cancelConnect)}
 ];
 
-GVAR(pfhRunning) = true;
+_unit setVariable [QGVAR(connecting), true];
 
 [{
     params ["_args", "_pfID"];
@@ -47,12 +47,13 @@ GVAR(pfhRunning) = true;
     private _lineInterection = lineIntersects [eyePos ACE_player, _virtualPosASL, ACE_player];
 
     // Don't allow placing in a bad position:
-    if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
+    if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {
+        GVAR(placeAction) = PLACE_WAITING;
+    };
 
-    if ((GVAR(placeAction) != PLACE_WAITING) || {_unit != ACE_player} || {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))}) then {
-
+    if (GVAR(placeAction) != PLACE_WAITING || {_unit != ACE_player} || {!([_unit, _attachToVehicle, []] call EFUNC(common,canInteractWith))}) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
-        GVAR(pfhRunning) = false;
+        _unit setVariable [QGVAR(connecting), false];
         call EFUNC(interaction,hideMouseHint);
 
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);

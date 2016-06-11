@@ -22,7 +22,7 @@ params ["_unit", "_attachToVehicle", "_startingPosition"];
 private _startingOffset = _attachToVehicle worldToModel _startingPosition;
 
 private _startDistanceFromCenter = vectorMagnitude _startingOffset;
-private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
+private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0, 0, 0]);
 
 private _closeInMax = _startDistanceFromCenter;
 private _closeInMin = 0;
@@ -61,7 +61,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
 _closeInDistance = (_closeInMax + _closeInMin) / 2;
 
 // Checks (too close to center or can't attach)
-if (((_startDistanceFromCenter - _closeInDistance) < 0.1)) exitWith {
+if ((_startDistanceFromCenter - _closeInDistance) < 0.1 || {!alive _attachToVehicle} || {_attachToVehicle distance _unit > 7}) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [LSTRING(FailedConnecting)] call EFUNC(common,displayTextStructured);
 };
@@ -72,54 +72,51 @@ _closeInDistance = _closeInDistance - 0.0085;
 _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
 _endPosTestOffset set [2, _startingOffset select 2];
 
-_attachToVehicle setVariable [QGVAR(tiltUp), _unit, true];
+private _stage = _unit getVariable [QGVAR(stage), 0];
 
-private _stage = (_unit getVariable [QGVAR(tiltingStage), 0]) + 1;
+if (_stage == 0) then {
+    _attachToVehicle setVariable [QGVAR(up), _unit, true];
+    _unit setVariable [QGVAR(selectedWeapon), currentWeapon _unit];
+    _unit call EFUNC(common,fixLoweredRifleAnimation);
+    _unit action ["SwitchWeapon", _unit, _unit, 99];
+};
 
 [2, [_stage, _unit, _attachToVehicle, _endPosTestOffset], {
     (_this select 0) params ["_stage", "_unit", "_attachToVehicle", "_endPosTestOffset"];
 
-    if (_stage == 1) exitWith {
-        _unit setVariable [QGVAR(selectedWeaponOnTilt), currentWeapon _unit];
-        _unit action ["SwitchWeapon", _unit, _unit, 99];
-
+    if (_stage == 0) exitWith {
         private _helper = "Sign_Sphere10cm_F" createVehicle position _unit;
-        _helper attachTo [_unit, [-0.02,-0.05,0], "righthandmiddle1"];
+        _helper attachTo [_unit, [-0.02, -0.05, 0], "righthandmiddle1"];
         [QEGVAR(common,hideObjectGlobal), [_helper, true]] call CBA_fnc_serverEvent;
 
         private _rope = ropeCreate [_attachToVehicle, _endPosTestOffset, _helper, [0, 0, 0], 10];
-        _unit setVariable [QGVAR(tiltRope), _rope];
 
-        _unit setVariable [QGVAR(tiltHelper), _helper];
-        _unit setVariable [QGVAR(tiltVehicle), _attachToVehicle];
-        _unit setVariable [QGVAR(tiltVehiclePos), _endPosTestOffset];
-        _unit setVariable [QGVAR(tiltingStage), 1];
+        _unit setVariable [QGVAR(stagedInfo), [_rope, _helper, _attachToVehicle, _endPosTestOffset]];
+        _unit setVariable [QGVAR(stage), 1];
     };
 
-    if (_stage == 2) exitWith {
-        _rope = _unit getVariable QGVAR(tiltRope);
-        ropeDestroy _rope;
-        _rope = ropeCreate [_attachToVehicle, _endPosTestOffset, (_unit getVariable QGVAR(tiltVehicle)), (_unit getVariable QGVAR(tiltVehiclePos)), 10];
-        _unit setVariable [QGVAR(tiltVehiclePos), nil];
+    if (_stage == 1) exitWith {
+        (_unit getVariable QGVAR(stagedInfo)) params ["_rope", "_helper", "_vehicle", "_vehiclePos"];
 
-        deleteVehicle (_unit getVariable QGVAR(tiltHelper));
-        _unit setVariable [QGVAR(tiltHelper), nil];
+        ropeDestroy _rope;
+        deleteVehicle _helper;
+        _rope = ropeCreate [_attachToVehicle, _endPosTestOffset, _vehicle, _vehiclePos, 10];
+
+        _unit setVariable [QGVAR(stagedInfo), [_rope, nil, _vehicle]];
+        _unit setVariable [QGVAR(stage), 2];
+
+        private _weaponSelect = _unit getVariable QGVAR(selectedWeapon);
+        _unit selectWeapon _weaponSelect;
+        _unit setVariable [QGVAR(selectedWeapon), nil];
 
         [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-
-        _unit setVariable [QGVAR(tiltRope), _rope];
-        _unit setVariable [QGVAR(tiltingStage), 2];
-
-        private _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnTilt);
-        _unit selectWeapon _weaponSelect;
-        _unit setVariable [QGVAR(selectedWeaponOnTilt), nil];
     };
 }, {
     (_this select 0) params ["", "_unit", "_attachToVehicle"];
 
     [LSTRING(FailedConnecting)] call EFUNC(common,displayTextStructured);
-    if (_stage != 2) then {
+    if (_stage != 1) then {
         [_unit] call FUNC(cancelConnect);
     };
-    _attachToVehicle setVariable [QGVAR(tiltUp), nil, true];
+    _attachToVehicle setVariable [QGVAR(up), nil, true];
 }, localize LSTRING(Connecting)] call EFUNC(common,progressBar);
