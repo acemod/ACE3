@@ -22,7 +22,10 @@ GVAR(placeAction) = PLACE_WAITING;
 
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
-[localize LSTRING(ConnectCable), localize ELSTRING(common,Cancel)] call EFUNC(interaction,showMouseHint);
+[
+    localize LSTRING(ConnectCable),
+    ["", localize ELSTRING(common,Cancel)] select (_unit getVariable [QGVAR(tiltingStage), 0] == 0)
+] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE}] call EFUNC(common,addActionEventHandler)];
 private _actionID = _unit addAction [

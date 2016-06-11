@@ -7,6 +7,7 @@
                     condition = QUOTE(_this call FUNC(canConnectCable)); \
                     statement = QUOTE(_this call FUNC(connectCable)); \
                     exceptions[] = {"isNotInside"}; \
+                    icon = QPATHTOF(UI\connect_ca.paa); \
                 }; \
                 class GVAR(disconnect) { \
                     displayName = CSTRING(Disconnect); \
@@ -14,6 +15,7 @@
                     condition = QUOTE(_this call FUNC(canDisconnectCable)); \
                     statement = QUOTE(_player call FUNC(disconnectCable)); \
                     exceptions[] = {"isNotInside"}; \
+                    icon = QPATHTOF(UI\disconnect_ca.paa); \
                 }; \
             }; \
         };
