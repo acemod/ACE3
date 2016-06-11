@@ -2,7 +2,15 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        units[] = {
+            QGVAR(moduleDefendArea),
+            QGVAR(moduleGlobalSetSkill),
+            QGVAR(moduleGroupSide),
+            QGVAR(modulePatrolArea),
+            QGVAR(moduleSearchArea),
+            QGVAR(moduleSearchNearby),
+            QGVAR(moduleTeleportPlayers)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
@@ -43,6 +51,7 @@ class ACE_Curator {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+#include "ui\RscAttributes.hpp"
 
 class ACE_newEvents {
     zeusUnitAssigned = QGVAR(zeusUnitAssigned);
