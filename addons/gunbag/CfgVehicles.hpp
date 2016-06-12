@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 class GVAR(WeapontoGunbag) {
                     displayName = CSTRING(toGunbag);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 0);
+                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 0});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
                     showDisabled = 0;
                     priority = 1;
@@ -13,7 +13,7 @@ class CfgVehicles {
                 };
                 class GVAR(WeaponoffGunbag) {
                     displayName = CSTRING(offGunbag);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canInteract) == 1);
+                    condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
                     showDisabled = 0;
                     priority = 1;
