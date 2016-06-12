@@ -34,7 +34,7 @@ createDialog QGVAR(ProgressBar_Dialog);
 
 //Adjust position based on user setting:
 private _ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBarTitle));
-_ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
+_ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
 
 (uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlSetPosition _ctrlPos;
 (uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlCommit 0;
@@ -46,7 +46,7 @@ _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / 
 [{
     (_this select 0) params ["_args", "_onFinish", "_onFail", "_condition", "_player", "_startTime", "_totalTime", "_exceptions"];
 
-    private _elapsedTime = ACE_time - _startTime;
+    private _elapsedTime = CBA_missionTime - _startTime;
     private _errorCode = -1;
 
     // this does not check: target fell unconscious, target died, target moved inside vehicle / left vehicle, target moved outside of players range, target moves at all.
@@ -82,13 +82,13 @@ _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / 
 
         if (_errorCode == 0) then {
             if (_onFinish isEqualType "") then {
-                [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+                [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call CBA_fnc_localEvent;
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFinish;
             };
         } else {
             if (_onFail isEqualType "") then {
-                [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+                [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call CBA_fnc_localEvent;
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFail;
             };
@@ -97,4 +97,4 @@ _ctrlPos set [1, ((0 + 29 * GVAR(SettingProgressBarLocation)) * ((((safezoneW / 
         //Update Progress Bar (ratio of elepased:total)
         (uiNamespace getVariable QGVAR(ctrlProgressBar)) progressSetPosition (_elapsedTime / _totalTime);
     };
-}, 0, [_args, _onFinish, _onFail, _condition, _player, ACE_time, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_args, _onFinish, _onFail, _condition, _player, CBA_missionTime, _totalTime, _exceptions]] call CBA_fnc_addPerFrameHandler;

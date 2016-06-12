@@ -1,21 +1,14 @@
-/*
- * Author: Nou
- * Execute a global event on all clients, including self.
- *
- * Arguments:
- * 0: Event name <STRING>
- * 1: Event args <ANY>
- *
- * Return Value:
- * None
- *
- * Public: Yes
- */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_eventName", "_eventArgs"];
 
-ACEg = [_eventName, _eventArgs];
-publicVariable "ACEg";
+private _newName = getText (configFile >> "ACE_newEvents" >> _eventName);
+if (_newName != "") then {
+    TRACE_2("Switching Names",_eventName,_newName);
+    _eventName = _newName;
+};
 
-["ACEg", ACEg] call FUNC(_handleNetEvent);
+[_eventName, _eventArgs] call CBA_fnc_globalEvent;
+
+ACE_DEPRECATED("ace_common_fnc_globalEvent","3.8.0","CBA_fnc_globalEvent");

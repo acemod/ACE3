@@ -8,7 +8,7 @@ class CfgVehicles {
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
-                    icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
+                    icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
@@ -102,7 +102,7 @@ class CfgVehicles {
         scope = 2;
         isGlobal = 0;
         isSingular = 1;
-        icon =  QUOTE(PATHTOF(UI\Icon_Module_mk6_ca.paa));
+        icon =  QPATHTOF(UI\Icon_Module_mk6_ca.paa);
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {

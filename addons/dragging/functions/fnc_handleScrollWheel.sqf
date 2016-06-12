@@ -42,6 +42,6 @@ _carriedItem attachTo [_unit];
 
 //reset the carry direction
 private _direction = _carriedItem getVariable [QGVAR(carryDirection), 0];
-["setDir", _carriedItem, [_carriedItem, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_carriedItem, _direction], _carriedItem] call CBA_fnc_targetEvent;
 
 true

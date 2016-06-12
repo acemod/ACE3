@@ -21,5 +21,5 @@ params ["_vehicle", "_fries"];
 if (isNull _vehicle) then {
     deleteVehicle _fries;
 } else {
-    [FUNC(checkVehicleThread), _this, 5] call EFUNC(common,waitAndExecute);
+    [FUNC(checkVehicleThread), _this, 5] call CBA_fnc_waitAndExecute;
 };

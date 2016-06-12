@@ -4,41 +4,45 @@
  *
  * Arguments:
  * 0: unit <OBJECT>
- * 1: Trench type <STRING>
+ * 1: Trench class <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ACE_player] call ace_trenches_fnc_placeTrench
+ * [ACE_player, "ACE_envelope_small"] call ace_trenches_fnc_placeTrench
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit","_trenchTypeName"];
+params ["_unit", "_trenchClass"];
 
-GVAR(trenchType) = missionNamespace getVariable _trenchTypeName;
+//Load trench data
+private _noGeoModel = getText (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(noGeoClass));
+if(_noGeoModel == "") then {_noGeoModel = _trenchClass;};
 
-TRACE_2("",_trenchTypeName,GVAR(trenchType));
+GVAR(trenchClass) = _trenchClass;
+GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClass >> QGVAR(placementData));
+TRACE_1("",GVAR(trenchPlacementData));
+
 // prevent the placing unit from running
 [_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private "_trench";
-_trench = createVehicle [GVAR(trenchType) select 1, [0, 0, 0], [], 0, "NONE"];
+_trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
 
 GVAR(trench) = _trench;
 
 // prevent collisions with trench
-["enableSimulationGlobal", [_trench, false]] call EFUNC(common,serverEvent);
+[QEGVAR(common,enableSimulationGlobal), [_trench, false]] call CBA_fnc_serverEvent;
 
 GVAR(digDirection) = 0;
 
 // pfh that runs while the dig is in progress
 GVAR(digPFH) = [{
     (_this select 0) params ["_unit", "_trench"];
-    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
 
     // Cancel if the helper object is gone
     if (isNull _trench) exitWith {
@@ -46,12 +50,12 @@ GVAR(digPFH) = [{
     };
 
     // Cancel if the place is no longer suitable
-    if !([_unit, GVAR(trenchType)] call FUNC(canDigTrench)) exitWith {
+    if !([_unit] call FUNC(canDigTrench)) exitWith {
         [_unit] call FUNC(placeCancel);
     };
 
     // Update trench position
-    GVAR(trenchType) params ["", "", "_dx", "_dy", "_offset"];
+    GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
     private _basePos = eyePos _unit vectorAdd ([sin getDir _unit, +cos getDir _unit, 0] vectorMultiply 1.0);
 
     private _angle = (GVAR(digDirection) + getDir _unit);

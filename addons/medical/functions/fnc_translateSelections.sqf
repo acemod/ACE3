@@ -46,7 +46,7 @@ if (_hitPointIndex isEqualTo true) exitWith {
     if (!isNil {_unit getHitPointDamage _returnHitPoint}) exitWith {
         _returnHitPoint;
     };
-    
+
     //Those VR fuckers have weird limb hitpoints
     private _hitPoints = switch (_selection) do {
         case ("hand_l"): {L_ARM_HITPOINTS};

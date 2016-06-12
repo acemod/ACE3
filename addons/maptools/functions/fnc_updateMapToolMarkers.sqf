@@ -35,10 +35,10 @@ if (!("ACE_MapTools" in items ACE_player)|| {GVAR(mapTool_Shown) == 0}) exitWith
 _rotatingTexture = "";
 _textureWidth = 0;
 if (GVAR(mapTool_Shown) == 1) then {
-    _rotatingTexture = QUOTE(PATHTOF(data\mapToolRotatingNormal.paa));
+    _rotatingTexture = QPATHTOF(data\mapToolRotatingNormal.paa);
     _textureWidth = TEXTURE_WIDTH_IN_M;
 } else {
-    _rotatingTexture = QUOTE(PATHTOF(data\mapToolRotatingSmall.paa));
+    _rotatingTexture = QPATHTOF(data\mapToolRotatingSmall.paa);
     _textureWidth = TEXTURE_WIDTH_IN_M / 2;
 };
 
@@ -51,7 +51,7 @@ _scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); //handle bad aspe
 _xPos = GVAR(mapTool_pos) select 0;
 _yPos = (GVAR(mapTool_pos) select 1) + _textureWidth * CENTER_OFFSET_Y_PERC;
 
-_theMap drawIcon [QUOTE(PATHTOF(data\mapToolFixed.paa)), [1,1,1,1], [_xPos,_yPos], _scaleX, _scaleY, 0, "", 0];
+_theMap drawIcon [QPATHTOF(data\mapToolFixed.paa), [1,1,1,1], [_xPos,_yPos], _scaleX, _scaleY, 0, "", 0];
 
 // Position and rotation of the rotating part
 _xPos = (GVAR(mapTool_pos) select 0) + sin(GVAR(mapTool_angle)) * _textureWidth * CENTER_OFFSET_Y_PERC;

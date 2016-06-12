@@ -243,8 +243,8 @@ class CfgVehicles {
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 
         class UserActions {
-            class openDoor;
-            class closeDoor_L: openDoor {
+            class openDoor_L;
+            class closeDoor_L: openDoor_L {
                 condition = QUOTE((this doorPhase 'LeftDoor' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
             };
         };

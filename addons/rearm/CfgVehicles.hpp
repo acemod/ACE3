@@ -8,7 +8,7 @@
                     condition = QUOTE(_this call FUNC(canRearm)); \
                     statement = QUOTE(_player call FUNC(rearm)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -24,7 +24,7 @@
                     exceptions[] = {"isNotInside"}; \
                     showDisabled = 0; \
                     priority = 2; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
                 class GVAR(StoreAmmo) { \
                     displayName = CSTRING(StoreAmmo); \
@@ -32,7 +32,7 @@
                     condition = QUOTE(_this call FUNC(canStoreAmmo)); \
                     statement = QUOTE(_this call FUNC(storeAmmo)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -44,7 +44,7 @@ class CfgVehicles {
     class ACE_moduleRearmSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RearmSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\icon_module_rearm.paa));
+        icon = QPATHTOF(ui\icon_module_rearm.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRearmSettings);
         functionPriority = 1;
@@ -143,22 +143,19 @@ class CfgVehicles {
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
+    class ThingX;
+    class ReammoBox_F: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
+    };
+    class Slingload_base_F: ReammoBox_F {};
+    class Slingload_01_Base_F: Slingload_base_F {};
+
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
     class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
-    };
-
-    class Slingload_base_F;
-    class Slingload_01_Base_F: Slingload_base_F {
-        class ACE_Actions {
-            class ACE_MainActions {
-                displayName = ECSTRING(interaction,MainAction);
-                selection = "";
-                distance = 10;
-                condition = "true";
-            };
-        };
     };
 
     class B_Slingload_01_Ammo_F: Slingload_01_Base_F {
@@ -168,7 +165,6 @@ class CfgVehicles {
 
 
     // Dummy Vehicles
-    class ThingX;
     class GVAR(defaultCarriedObject): ThingX {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
@@ -188,7 +184,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside"};
                 showDisabled = 0;
                 priority = 2;
-                icon = PATHTOF(ui\icon_rearm_interact.paa);
+                icon = QPATHTOF(ui\icon_rearm_interact.paa);
             };
         };
     };

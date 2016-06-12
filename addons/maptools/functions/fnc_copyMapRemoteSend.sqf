@@ -14,4 +14,4 @@
 
 params ["_requester"];
 
-["drawing_sendbackMarkers", _requester, [GVAR(drawing_lineMarkers)]] call EFUNC(common,targetEvent);
+[QGVAR(sendbackMarkers), [GVAR(drawing_lineMarkers)], _requester] call CBA_fnc_targetEvent;

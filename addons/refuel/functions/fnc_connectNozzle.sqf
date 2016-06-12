@@ -28,7 +28,7 @@ if (isNull _nozzle) exitWith {};
 
 GVAR(placeAction) = PLACE_WAITING;
 
-[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
 private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL;}];

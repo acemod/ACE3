@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_wirecutter"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"gpgpgpgp", "PabstMirror"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"gpgpgpgp", "PabstMirror"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -15,3 +16,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    interactMenuOpened = "ace_interactMenuOpened";
+};

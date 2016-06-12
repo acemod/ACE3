@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_MapTools"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"esteldunedain"};
-        authorUrl = "https://github.com/esteldunedain/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"esteldunedain"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -65,4 +66,11 @@ class RscDisplayServerGetReady: RscDisplayGetReady {
             #include "MapControls.hpp"
         };
     };
+};
+
+class ACE_newEvents {
+    drawing_sendbackMarkers = QGVAR(sendbackMarkers);
+    drawing_requestMarkers = QGVAR(requestMarkers);
+    drawing_addLineMarker = QGVAR(addLineMarker);
+    drawing_removeLineMarker = QGVAR(removeLineMarker);
 };

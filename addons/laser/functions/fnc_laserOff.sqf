@@ -8,9 +8,9 @@
  * Return value:
  * None
  */
- 
+
 #include "script_component.hpp"
 
 private ["_uuid"];
 _uuid = _this select 0;
-["laser_laserOff", [_uuid]] call EFUNC(common,globalEvent);
+["ace_laserOff", [_uuid]] call CBA_fnc_globalEvent;

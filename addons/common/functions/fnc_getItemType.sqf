@@ -15,9 +15,11 @@
 
 params ["_item"];
 
-private _cfgType = [_item] call FUNC(getConfigType);
+private _config = _item call CBA_fnc_getItemConfig;
 
-if (_cfgType == "") exitWith {["", ""]};
+if (isNull _config) exitWith {["", ""]};
+
+private _cfgType = configName ((configHierarchy _config) param [1, configNull]);
 
 if (_cfgType == "CfgGlasses") exitWith {["item", "glasses"]};
 

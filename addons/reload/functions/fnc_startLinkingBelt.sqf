@@ -46,7 +46,7 @@ private _onFinish = {
     (_this select 0) params ["_player", "_target", "_magazine"];
 
     // Raise event on remote unit
-    ["linkedAmmo", [_target], [_target, _player, _magazine]] call EFUNC(common,targetEvent);
+    [QGVAR(linkedAmmo), [_target, _player, _magazine], [_target]] call CBA_fnc_targetEvent;
 };
 
 private _onFailure = {

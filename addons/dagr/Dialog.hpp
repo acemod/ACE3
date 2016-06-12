@@ -156,7 +156,7 @@ class DAGR_Menu {
         idc = 266861;
         x = 0.175;
         y = -0.173;
-        text = QUOTE(PATHTOF(UI\dagr_menu.paa));
+        text = QPATHTOF(UI\dagr_menu.paa);
         sizeEx = 0.1;
     };
 

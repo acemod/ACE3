@@ -47,13 +47,13 @@ switch (GVAR(showPlayerNames)) do {
     };
     case 3: {
         // Player names Only Keypress
-        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
+        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
         _enabledTagsNearby = (_onKeyPressAlphaMax) > 0 || (GVAR(showSoundWaves) == 2);
         _enabledTagsCursor = false;
     };
     case 4: {
         // Player names Only Cursor and Keypress
-        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - ACE_time);
+        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
         _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
         _enabledTagsCursor = _onKeyPressAlphaMax > 0;
     };

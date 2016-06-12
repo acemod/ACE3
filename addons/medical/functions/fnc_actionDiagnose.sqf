@@ -43,4 +43,4 @@ if (alive _target) then {
     };
 };
 
-["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [_genericMessages, 3.0, _caller], [_caller]] call CBA_fnc_targetEvent;

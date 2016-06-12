@@ -36,7 +36,14 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     0;
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
-if (isEngineOn _target) exitWith {false};
+
+if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
+    [QEGVAR(common,engineOn), [_target, false], _target] call CBA_fnc_targetEvent;
+};
+if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
+    [LSTRING(shutOffEngineWarning), 1.5, _caller] call EFUNC(common,displayTextStructured);
+    false
+};
 
 //Items can be an array of required items or a string to a ACE_Setting array
 _items = if (isArray (_config >> "items")) then {
@@ -228,7 +235,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 true;

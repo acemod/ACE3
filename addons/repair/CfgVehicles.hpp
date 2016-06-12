@@ -22,7 +22,7 @@ class CfgVehicles {
     class ACE_moduleRepairSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(moduleName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRepairSettings);
         functionPriority = 1;
@@ -120,7 +120,7 @@ class CfgVehicles {
     class ACE_moduleAssignEngineerRoles: Module_F {
         scope = 2;
         displayName = CSTRING(AssignEngineerRole_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleAssignEngineer);
         functionPriority = 10;
@@ -164,7 +164,7 @@ class CfgVehicles {
     class ACE_moduleAssignRepairVehicle: Module_F {
         scope = 2;
         displayName = CSTRING(AssignRepairVehicle_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleAssignRepairVehicle);
         functionPriority = 10;
@@ -236,7 +236,7 @@ class CfgVehicles {
     class ACE_moduleAddSpareParts: Module_F {
         scope = 2;
         displayName = CSTRING(AddSpareParts_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\Icon_Module_Repair_ca.paa));
+        icon = QPATHTOF(ui\Icon_Module_Repair_ca.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleAddSpareParts);
         functionPriority = 10;
@@ -290,6 +290,10 @@ class CfgVehicles {
         MACRO_REPAIRVEHICLE
     };
 
+    class Motorcycle: LandVehicle {
+        MACRO_REPAIRVEHICLE
+    };
+
     class Air;
     class Helicopter: Air {
         MACRO_REPAIRVEHICLE
@@ -322,7 +326,7 @@ class CfgVehicles {
         EGVAR(cargo,canLoad) = 1;
         author = "Hawkins";
         scope = 2;
-        model = QUOTE(PATHTOF(data\ace_track.p3d));
+        model = QPATHTOF(data\ace_track.p3d);
         displayName = CSTRING(SpareTrack);
     };
 
@@ -331,9 +335,9 @@ class CfgVehicles {
         EGVAR(cargo,canLoad) = 1;
         author = "Hawkins";
         scope = 2;
-        model = QUOTE(PATHTOF(data\ace_wheel.p3d));
+        model = QPATHTOF(data\ace_wheel.p3d);
         displayName = CSTRING(SpareWheel);
-        picture = QUOTE(PATHTOF(ui\tire_ca.paa));
+        picture = QPATHTOF(ui\tire_ca.paa);
     };
 
     // disable vanilla repair

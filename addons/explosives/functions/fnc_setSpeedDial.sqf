@@ -14,8 +14,7 @@
  *
  * Public: No
  */
- #include "script_component.hpp"
- 
+#include "script_component.hpp"
 private ["_speedDial", "_amount"];
 
 _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
