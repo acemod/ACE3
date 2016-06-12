@@ -19,5 +19,5 @@
 private ["_uuid", "_args"];
 _uuid = format["%1%2%3", floor diag_tickTime, floor random 1000, floor random 10000];
 _args = [_uuid, _this];
-["laser_laserOn", _args] call EFUNC(common,globalEvent);
+["ace_laserOn", _args] call CBA_fnc_globalEvent;
 _uuid;

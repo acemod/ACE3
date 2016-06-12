@@ -100,7 +100,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
     _missingAddonServer = false;
@@ -117,7 +117,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
     _oldVersionClient = false;
@@ -134,7 +134,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
     _oldVersionServer = false;
@@ -151,7 +151,7 @@ if (!isServer) then {
         _error = _error call _fnc_cutComma;
 
         diag_log text _error;
-        [QGVAR(systemChatGlobal), _error] call FUNC(globalEvent);
+        [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
     };
 
     ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];

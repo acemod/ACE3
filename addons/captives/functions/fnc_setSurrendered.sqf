@@ -117,4 +117,4 @@ if (_state) then {
 };
 
 //Global Event after changes:
-["CaptiveStatusChanged", [_unit, _state, "SetSurrendered"]] call EFUNC(common,globalEvent);
+["ace_captiveStatusChanged", [_unit, _state, "SetSurrendered"]] call CBA_fnc_globalEvent;

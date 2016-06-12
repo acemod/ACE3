@@ -44,31 +44,24 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,Author);
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
-        mapSize = 0.2;
-        icon = "iconObject_1x2";
         model = "\A3\Weapons_f\dummyweapon.p3d";
         scope = 1;
-        vehicleClass = "Cargo";
+
         class ACE_Actions {
-            class ACE_MainActions {
-                selection = "";
+            class ACE_Defuse {
                 distance = 1;
-                condition = "true";
-                class ACE_Defuse {
-                    displayName = CSTRING(Defuse);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
-                    exceptions[] = {"isNotSwimming"};
-                    showDisabled = 0;
-                    icon = QPATHTOF(UI\Defuse_ca.paa);
-                    priority = 0.8;
-                };
+                displayName = CSTRING(Defuse);
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                exceptions[] = {"isNotSwimming"};
+                icon = QPATHTOF(UI\Defuse_ca.paa);
             };
         };
     };
+
     class ACE_Explosives_Place: Items_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};

@@ -18,3 +18,8 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgJointRails.hpp"
+
+class ACE_newEvents {
+    GunLightOff = "ace_gunLightOff";
+    SetHandcuffed = QEGVAR(captives,setHandcuffed);
+};

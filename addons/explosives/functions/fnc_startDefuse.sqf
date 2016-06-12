@@ -44,7 +44,7 @@ if (STANCE _unit == "Prone") then {
 if (ACE_player != _unit) then {
     // If the unit is a player, call the function on the player.
     if (isPlayer _unit) then {
-        [QGVAR(startDefuse), _unit, [_unit, _target]] call EFUNC(common,objectEvent);
+        [QGVAR(startDefuse), [_unit, _target], _unit] call CBA_fnc_targetEvent;
     } else {
         _unit playActionNow _actionToPlay;
         _unit disableAI "MOVE";

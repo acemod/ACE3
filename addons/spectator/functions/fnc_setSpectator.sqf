@@ -170,4 +170,4 @@ GVAR(interrupts) = [];
 // Mark spectator state for reference
 GVAR(isSet) = _set;
 
-["spectatorSet",[_set]] call EFUNC(common,localEvent);
+["ace_spectatorSet", [_set]] call CBA_fnc_localEvent;

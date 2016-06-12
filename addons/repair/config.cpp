@@ -19,3 +19,10 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgEden.hpp"
+
+class ACE_newEvents {
+    setWheelHitPointDamage = QGVAR(setWheelHitPointDamage);
+    setVehicleHitPointDamage = QGVAR(setVehicleHitPointDamage);
+    setVehicleDamage = QGVAR(setVehicleDamage);
+    AddCargoByClass = "ace_addCargoByClass";
+};

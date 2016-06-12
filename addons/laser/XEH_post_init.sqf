@@ -2,6 +2,6 @@
 
 #include "initKeybinds.sqf"
 
-["laser_laserOn", {_this call DFUNC(handleLaserOn)}] call EFUNC(common,addEventHandler);
-["laser_laserOff", {_this call DFUNC(handleLaserOff)}] call EFUNC(common,addEventHandler);
+["ace_laserOn", {_this call DFUNC(handleLaserOn)}] call CBA_fnc_addEventHandler;
+["ace_laserOff", {_this call DFUNC(handleLaserOff)}] call CBA_fnc_addEventHandler;
 

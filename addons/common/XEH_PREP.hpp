@@ -60,6 +60,7 @@ PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);
 PREP(getMapPosFromGrid);
@@ -236,7 +237,6 @@ PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
 PREP(globalEvent);
-PREP(_handleNetEvent);
 PREP(addEventHandler);
 PREP(objectEvent);
 PREP(targetEvent);

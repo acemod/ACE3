@@ -33,15 +33,15 @@ if (!alive _unit) exitWith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
-    [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
     _unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
-    ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+    ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
 
-    TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , QGVAR(unconscious));
+    TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , "ace_unconscious");
 
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
@@ -96,13 +96,13 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         };
         _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
 
-        ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+        ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
         // EXIT PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
+        [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:

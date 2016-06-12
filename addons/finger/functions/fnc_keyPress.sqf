@@ -55,7 +55,7 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
-[QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call EFUNC(common,targetEvent);
+[QGVAR(fingered), [ACE_player, _fingerPosPrecise], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
 ACE_player playActionNow "GestureGo";
 

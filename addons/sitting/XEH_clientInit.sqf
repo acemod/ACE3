@@ -3,7 +3,7 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if ([[QUOTE(ADDON), QGVAR(enable)], ["acex_sitting", "acex_sitting_enable"], "3.8.0"] call EFUNC(common,deprecateComponent)) exitwith {};
     //If not enabled, then do not add CanInteractWith Condition or event handlers:
     if (!GVAR(enable)) exitWith {};
@@ -12,6 +12,6 @@ if (!hasInterface) exitWith {};
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(isSitting)}}] call EFUNC(common,addCanInteractWithCondition);
 
     // Handle interruptions
-    ["medical_onUnconscious", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-    ["SetHandcuffed", {_this call DFUNC(handleInterrupt)}] call EFUNC(common,addEventhandler);
-}] call EFUNC(common,addEventHandler);
+    ["ace_unconscious", {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+    [QEGVAR(captives,setHandcuffed), {_this call DFUNC(handleInterrupt)}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

@@ -18,8 +18,7 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 disableSerialization;
 
 // check if compatible scope is used
-private "_display";
-_display = uiNamespace getVariable [QGVAR(RscWeaponInfo2D), displayNull];
+private _display = uiNamespace getVariable [QGVAR(RscWeaponInfo2D), displayNull];
 
 if (isNull _display) exitWith {};
 

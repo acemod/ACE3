@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (GVAR(RemoveDeadBodiesDisconnected)) then {
         addMissionEventHandler ["HandleDisconnect", {
             [{
@@ -14,4 +14,4 @@
             false
         }];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
