@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Disable drawing when intersecting with the vehicle
-if (!([ACE_player] call FUNC(canThrow))) exitWith {
+if !([ACE_player] call FUNC(canThrow)) exitWith {
     drawIcon3D ["\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_cancel_manualfire_ca.paa", [1, 0, 0, 1], positionCameraToWorld [0, 0, 1], 1, 1, 0, "", 1];
 };
 

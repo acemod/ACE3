@@ -34,9 +34,7 @@ _unit setVariable [QGVAR(inHand), true];
 call FUNC(updateControlsHint);
 
 // Add throw action to suppress weapon firing (not possible to suppress mouseButtonDown event)
-_unit setVariable [QGVAR(throwAction), [
-    _unit, "DefaultAction", {true}, {true}
-] call EFUNC(common,addActionEventHandler)];
+_unit setVariable [QGVAR(throwAction), [_unit, "DefaultAction", {true}, {true}] call EFUNC(common,addActionEventHandler)];
 
 // Draw throwable and throw arc if enabled
 GVAR(draw3DHandle) = addMissionEventHandler ["Draw3D", {

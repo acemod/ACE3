@@ -24,8 +24,8 @@ if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
     systemChat format ["Exit Throw Mode: %1", _reason];
 #endif
 
-if (!(_unit getVariable [QGVAR(dropMode), false])) then {
-    deleteVehicle (_unit setVariable [QGVAR(activeThrowable), objNull]);
+if !(_unit getVariable [QGVAR(primed), false]) then {
+    deleteVehicle (_unit getVariable [QGVAR(activeThrowable), objNull]);
 };
 
 _unit setVariable [QGVAR(inHand), false];

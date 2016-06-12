@@ -41,10 +41,10 @@ if (_throwable isEqualTo [] && {!_primed}) exitWith {
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
 
-if (!([ACE_player] call FUNC(canThrow)) && {!_primed}) exitWith {
+if !([ACE_player] call FUNC(canThrow) && {!_primed}) exitWith {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
-        ACE_player setVariable [QGVAR(activeThrowable), objNull];
+        //ACE_player setVariable [QGVAR(activeThrowable), objNull];
     };
 };
 
