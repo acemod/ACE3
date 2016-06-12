@@ -73,7 +73,7 @@ call FUNC(determineZoom);
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 }, 0] call CBA_fnc_addPerFrameHandler;
 
-["ace_settingsInitialized", {
+["SettingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
         [{
@@ -100,15 +100,15 @@ call FUNC(determineZoom);
         GVAR(flashlightInUse) = "";
         GVAR(glow) = objNull;
 
-        ["ace_playerInventoryChanged", {
+        ["playerInventoryChanged", {
             private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
             };
-        }] call CBA_fnc_addEventHandler;
+        }] call EFUNC(common,addEventHandler);
 
         if (GVAR(mapGlow)) then {
-            ["ace_visibleMapChanged", {
+            ["visibleMapChanged", {
                 params ["_player", "_mapOn"];
                 if (_mapOn) then {
                     if (!alive _player && !isNull GVAR(glow)) then {
@@ -128,15 +128,15 @@ call FUNC(determineZoom);
                         [""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call CBA_fnc_addEventHandler;
+            }] call EFUNC(common,addEventHandler);
         };
     };
-}] call CBA_fnc_addEventHandler;
+}] call EFUNC(common,addEventHandler);
 
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["ace_playerInventoryChanged", {
+["playerInventoryChanged", {
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };
@@ -145,4 +145,4 @@ GVAR(hasWatch) = true;
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
     } count (assignedItems ACE_player);
-}] call CBA_fnc_addEventHandler;
+}] call EFUNC(common,addEventHandler);

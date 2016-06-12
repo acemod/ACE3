@@ -1,20 +1,9 @@
 class CfgWeapons {
 
-    class ItemCore;
     class ACE_ItemCore;
     class InventoryItem_Base_F;
-    class InventoryFlashlightItem_Base_F;
 
-    class acc_flashlight: ItemCore {
-        class ItemInfo: InventoryFlashlightItem_Base_F {
-            class Flashlight {
-                ACE_Flashlight_Colour = "white";
-                ACE_Flashlight_Size = 2.75;
-            };
-        };
-    };
-
-    class ACE_Flashlight_MX991: ACE_ItemCore {
+    class ACE_Map_Flashlight_MX991: ACE_ItemCore {
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
         model = QPATHTOF(data\MX_991.p3d);
@@ -22,14 +11,16 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class FlashLight {
-                ACE_Flashlight_Colour = "red";
-                ACE_Flashlight_Size = 1.75;
+            class ACE_Map_Flashlight {
+                ACE_Map_Flashlight_Color = "red";
+                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
+                ACE_Map_Flashlight_Size = 1.75;
+                ACE_Map_Flashlight_Sound = 1;
             };
         };
     };
 
-    class ACE_Flashlight_KSF1: ACE_ItemCore {
+    class ACE_Map_Flashlight_KSF1: ACE_ItemCore {
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
         model = QPATHTOF(data\KSF_1.p3d);
@@ -37,14 +28,16 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class FlashLight {
-                ACE_Flashlight_Colour = "red";
-                ACE_Flashlight_Size = 1.5;
+            class ACE_Map_Flashlight {
+                ACE_Map_Flashlight_Colour = "red";
+                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
+                ACE_Map_Flashlight_Size = 1.5;
+                ACE_Map_Flashlight_Sound = 1;
             };
         };
     };
 
-    class ACE_Flashlight_XL50: ACE_ItemCore {
+    class ACE_Map_Flashlight_XL50: ACE_ItemCore {
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
         model = QPATHTOF(data\Maglight.p3d);
@@ -52,9 +45,11 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class FlashLight {
-                ACE_Flashlight_Colour = "white";
-                ACE_Flashlight_Size = 2.15;
+            class ACE_Map_Flashlight {
+                ACE_Map_Flashlight_Colour = "white";
+                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_white_ca.paa));
+                ACE_Map_Flashlight_Size = 2.15;
+                ACE_Map_Flashlight_Sound = 1;
             };
         };
     };

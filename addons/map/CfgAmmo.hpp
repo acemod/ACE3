@@ -51,4 +51,8 @@ class CfgAmmo {
     class ACE_FlashlightProxy_Yellow: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Yellow";
     };
+    
+    class ACE_FlashlightProxy_Orange: ACE_FlashlightProxy_White {
+        effectsSmoke = "ACE_FlashlightEffect_Orange";
+    };
 };

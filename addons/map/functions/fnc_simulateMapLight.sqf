@@ -51,16 +51,14 @@ if (_flashlight == "") then {
     //ambient shade fill
     _mapCtrl drawIcon [_fillTex, [1,1,1,_shadeAlpha], _mapCentre, _screenSize, _screenSize, 0, "", 0];
 } else {
-    private ["_mousePos", "_colour", "_size", "_flashTex", "_beamSize", "_viewPortRatioFixY", "_offsetX", "_offsetYDown", "_offsetYUp"];
+    private ["_mousePos", "_cfg", "_size", "_flashTex", "_beamSize", "_viewPortRatioFixY", "_offsetX", "_offsetYDown", "_offsetYUp"];
     //mouse pos
     _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    _colour = getText (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour");
-    if !(_colour in ["white", "red", "green", "blue", "yellow"]) then {_colour = "white"};
-    _size = getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Size");
-    _flashTex = format[QUOTE(PATHTOF_SYS(ace,flashlights,UI\Flashlight_Beam_%1_ca.paa)), _colour];
-    _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
+    _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> QGVAR(Flashlight));
+    _flashTex = getText (_cfg >> QGVAR(Flashlight_Beam));
+    _size = getNumber (_cfg >> QGVAR(Flashlight_Size));
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)
     if (_mapScale < 0.2) then {_beamSize = _beamSize / (_mapScale * (1 / 0.2))};
