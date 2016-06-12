@@ -1,13 +1,16 @@
 /*
  * Author: Ir0n1E
- * put weapon into gunbag
+ * Put weapon into gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [player, target] call ace_gunbag_fnc_toGunbag
  *
  * Public: No
  */

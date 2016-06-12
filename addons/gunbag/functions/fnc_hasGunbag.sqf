@@ -1,12 +1,15 @@
 /*
  * Author: Ir0n1E
- * switches gunbag full/empty for mass calculation
+ * Switches gunbag full/empty for mass calculation.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * (BOOL)
+ * Has Gunbag <BOOL>
+ *
+ * Example:
+ * [player] call ace_gunbag_fnc_hasGunbag
  *
  * Public: No
  */

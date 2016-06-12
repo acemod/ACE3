@@ -3,29 +3,29 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class ACE_MainActions {
-                class GVAR(WeapontoGunbag) {
-                    displayName = CSTRING(toGunbag);
+                class GVAR(weaponToGunbag) {
+                    displayName = CSTRING(ToGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 0});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
                     showDisabled = 0;
                     priority = 1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
-                class GVAR(WeaponoffGunbag) {
-                    displayName = CSTRING(offGunbag);
+                class GVAR(weaponOffGunbag) {
+                    displayName = CSTRING(OffGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
                     showDisabled = 0;
                     priority = 1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
-                class GVAR(StatusGunbag) {
+                class GVAR(statusGunbag) {
                     displayName = CSTRING(Status);
                     condition = QUOTE([_target] call FUNC(hasGunbag));
                     statement = QUOTE([_target] call FUNC(status));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
             };
         };
@@ -33,35 +33,35 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(actions) {
-                    displayName = CSTRING(displayname);
+                    displayName = CSTRING(Displayname);
                     condition = QUOTE([_player] call FUNC(hasGunbag));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
 
-                    class GVAR(WeapontoGunbag) {
-                        displayName = CSTRING(toGunbag);
+                    class GVAR(weaponToGunbag) {
+                        displayName = CSTRING(ToGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(toGunbag));
                         showDisabled = 0;
                         priority = 1;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
-                    class GVAR(WeaponoffGunbag) {
-                        displayName = CSTRING(offGunbag);
+                    class GVAR(weaponOffGunbag) {
+                        displayName = CSTRING(OffGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 1);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(offGunbag));
                         showDisabled = 0;
                         priority = 1;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
-                    class GVAR(StatusGunbag) {
+                    class GVAR(statusGunbag) {
                         displayName = CSTRING(Status);
                         condition = QUOTE([_player] call FUNC(hasGunbag));
                         statement = QUOTE([_player] call FUNC(status));
                         showDisabled = 0;
                         priority = 2;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
                 };
             };

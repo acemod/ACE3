@@ -1,13 +1,16 @@
 /*
  * Author: Ir0n1E
- * get weapon out of gunbag
+ * Get weapon out of gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [player, target] call ace_gunbag_fnc_toGunbag
  *
  * Public: No
  */

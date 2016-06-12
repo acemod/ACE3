@@ -1,6 +1,6 @@
 /*
  * Author: Ir0n1E
- * Check if client able to interact with gunbag
+ * Check if client able to interact with gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -8,6 +8,9 @@
  *
  * Return Value:
  * <NUMBER> -1: can't interact 0: empty gunbag 1: full gunbag
+ *
+ * Example:
+ * _canInteract = [player, target] call ace_gunbag_fnc_canInteract
  *
  * Public: No
  */

@@ -1,6 +1,6 @@
 /*
  * Author: Ir0n1E
- * calculate mass of weapon an items
+ * Calculate mass of weapon an items.
  *
  * Arguments:
  * 0: Weapon <STRING>
@@ -9,6 +9,9 @@
  *
  * Return Value:
  * Mass <NUMBER>
+ *
+ * Example:
+ * ["weapon", ["item1", "item2"], ["mag1", "mag2"]] call ace_gunbag_fnc_calculateMass
  *
  * Public: No
  */

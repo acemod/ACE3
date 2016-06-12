@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="gunbag">
+    <Package name="Gunbag">
         <Key ID="STR_ACE_Gunbag_DisplayName">
             <English>Gunbag</English>
             <German>Waffentasche</German>
@@ -9,11 +9,11 @@
             <English>Gunbag (Tan)</English>
             <German>Waffentasche (Tan)</German>
         </Key>
-        <Key ID="STR_ACE_Gunbag_toGunbag">
+        <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
             <German>Lege Waffe in Waffentasche</German>
         </Key>
-        <Key ID="STR_ACE_Gunbag_offGunbag">
+        <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
             <German>Hole Waffe aus Waffentasche</German>
         </Key>
@@ -21,7 +21,7 @@
             <English>Status Gunbag</English>
             <German>Status Waffentasche</German>
         </Key>
-            <Key ID="STR_ACE_Gunbag_empty">
+        <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
             <German>Waffentasche leer</German>
         </Key>
