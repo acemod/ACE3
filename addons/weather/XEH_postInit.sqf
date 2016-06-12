@@ -29,7 +29,7 @@ GVAR(ACE_rain) = rain;
 };
 
 GVAR(WindInfo) = false;
-["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKey),
+["ACE3 Common", QGVAR(WindInfoKey), localize LSTRING(WindInfoKeyToggle),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -39,7 +39,8 @@ GVAR(WindInfo) = false;
 },
 {false},
 [37, [true, false, false]], false, 0] call CBA_fnc_addKeybind; // (SHIFT + K)
-["ACE3 Common", QGVAR(WindInfoKey_hold), localize LSTRING(WindInfoKey_hold),
+
+["ACE3 Common", QGVAR(WindInfoKey_hold), localize LSTRING(WindInfoKeyHold),
 {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -58,8 +59,8 @@ simulWeatherSync;
 
 
 
-["SettingsInitialized",{
-    TRACE_1("SettingsInitialized",GVAR(syncRain));
+["ace_settingsInitialized",{
+    TRACE_1("ace_settingsInitialized eh",GVAR(syncRain));
 
     //Create a 0 sec delay PFEH to update rain every frame:
     if (GVAR(syncRain)) then {
@@ -91,4 +92,4 @@ simulWeatherSync;
         END_COUNTER(weatherPFEH);
     }, 1, []] call CBA_fnc_addPerFrameHandler;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

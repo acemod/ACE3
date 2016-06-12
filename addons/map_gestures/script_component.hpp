@@ -15,5 +15,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define EVENT_PLAYER_HAS_NO_OWNER_ID "PlayerNameHasNoOwnerID"

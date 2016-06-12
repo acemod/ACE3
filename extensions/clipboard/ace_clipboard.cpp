@@ -1,7 +1,7 @@
 /*
  * ace_clipboard.cpp
  *
- * Takes a string and copies it to the clipboard; bypasses arma 8k clippy limit.
+ * Takes a string and copies it to the clipboard; bypasses arma 8k clippy limit. Windows only.
  *
  * Takes:
  * Localized string as string
@@ -9,7 +9,10 @@
  * Returns:
  * None
  */
+
 #include "shared.hpp"
+
+#include <stdlib.h>
 #include <vector>
 #include <string>
 
@@ -30,61 +33,49 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
 
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
         EXTENSION_RETURN();
     }
 
-#ifdef _WIN32
+    #ifdef _WIN32
 
     if (!strcmp(function, "--COMPLETE--")) {
-        HGLOBAL hClipboardData = GlobalAlloc(GMEM_FIXED, gClipboardData.length() + 1);
-        if (!hClipboardData) {
-            result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
-            gClipboardData = "";
-            EXTENSION_RETURN();
-        }
-
-        char *pClipboardData = (char *)GlobalLock(hClipboardData);
-        if (!pClipboardData) {
-            result = "GlobalLock() failed, GetLastError=" + GetLastError();
-            gClipboardData = "";
-            EXTENSION_RETURN();
-        }
-        memcpy(pClipboardData, gClipboardData.c_str(), gClipboardData.length());
-        pClipboardData[gClipboardData.length() + 1] = 0x00;
-
-        GlobalUnlock(hClipboardData);
-
-        if (!OpenClipboard(NULL)) {
+        if (OpenClipboard(NULL) == 0) {
             result = "OpenClipboard() failed, GetLastError=" + GetLastError();
-        }
-        else {
-            if (!EmptyClipboard()) {
-                result = "OpenClipboard() failed, GetLastError=" + GetLastError();
-            }
-            else {
-                if (!SetClipboardData(CF_TEXT, hClipboardData)) {
-                    result = "SetClipboardData() failed, GetLastError=" + GetLastError();
+        } else {
+            if (EmptyClipboard() == 0) {
+                result = "EmptyClipboard() failed, GetLastError=" + GetLastError();
+            } else {
+                // GPTR = GMEM_FIXED + GMEM_ZEROINIT, returns a ptr, no need for GlobalLock/GlobalUnlock
+                char *pClipboardData = (char *)GlobalAlloc(GPTR, gClipboardData.length());
+
+                if (pClipboardData == NULL) {
+                    result = "GlobalAlloc() failed, GetLastError=" + GetLastError();
+                    EXTENSION_RETURN();
                 }
-                else {
-                    if (!CloseClipboard()) {
+                strncpy_s(pClipboardData, gClipboardData.length(), gClipboardData.c_str(), _TRUNCATE);
+
+                // if success, system owns the memory, if fail, free it from the heap
+                if (SetClipboardData(CF_TEXT, pClipboardData) == NULL) {
+                    result = "SetClipboardData() failed, GetLastError=" + GetLastError();
+                    GlobalFree(pClipboardData);
+                } else {
+                    if (CloseClipboard() == 0) {
                         result = "CloseClipboard() failed, GetLastError=" + GetLastError();
                     }
                 }
             }
         }
-
         gClipboardData = "";
     } else {
         gClipboardData = gClipboardData + cur_input;
     }
 
-    end:
-        if(result.length() > 1)
-            memcpy(output, result.c_str(), result.length()+1);
+    if (result.length() > 1) {
+        strncpy_s(output, outputSize, result.c_str(), _TRUNCATE);
+    }
 
     #endif
 
     EXTENSION_RETURN();
 }
-

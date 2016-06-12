@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
- * Handles the "setVehicleHitPointDamage" event
+ * Handles the "ace_repair_setVehicleHitPointDamage" event
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>

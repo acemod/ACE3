@@ -44,7 +44,7 @@ if (_newHitPointDamage >= 1) exitWith {};
 deleteVehicle _wheel;
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _newHitPointDamage]] call EFUNC(common,targetEvent);
+[QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, _newHitPointDamage], _vehicle] call CBA_fnc_targetEvent;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {

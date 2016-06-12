@@ -37,4 +37,4 @@ missionNamespace setVariable [_name, _value];
 GVAR(settings) pushBack _this;
 
 // Raise event locally
-["SettingChanged", [_name, _value]] call FUNC(localEvent);
+["ace_settingChanged", [_name, _value]] call CBA_fnc_localEvent;

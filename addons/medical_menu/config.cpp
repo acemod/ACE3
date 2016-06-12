@@ -17,3 +17,7 @@ class CfgPatches {
 #include "ui\menu.hpp"
 #include "ACE_Settings.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    Medical_onMenuOpen = "ace_medicalMenuOpened";
+};

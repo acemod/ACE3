@@ -18,7 +18,7 @@ private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 
 if (!local _unit) exitWith {
-    ["addToTriageCard", _unit, _this] call EFUNC(common,targetEvent);
+    [QGVAR(addToTriageCard), _this, _unit] call CBA_fnc_targetEvent;
 };
 
 _log = _unit getVariable [QGVAR(triageCard), []];
@@ -41,4 +41,4 @@ if (!_inList) then {
     _log pushBack [_newItem, 1, CBA_missionTime];
 };
 _unit setVariable [QGVAR(triageCard), _log, true];
-["Medical_onItemAddedToTriageCard", [_unit, _newItem, _amount]] call EFUNC(common,localEvent);
+["ace_itemAddedToTriageCard", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;

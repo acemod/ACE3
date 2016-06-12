@@ -19,7 +19,7 @@
 params ["_caller", "_target", "_treatmentClassname"];
 
 if (local _target) then {
-    ["treatmentBasic_bloodbagLocal", [_target, _treatmentClassname]] call EFUNC(common,localEvent);
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentBasic_bloodbagLocal", _target, [_target, _treatmentClassname]] call EFUNC(common,targetEvent);
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname], _target] call CBA_fnc_targetEvent;
 };

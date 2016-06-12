@@ -8,16 +8,16 @@ if (!hasInterface) exitWith {};
 
 #include "initKeybinds.sqf"
 
-["infoDisplayChanged", {
+["ace_infoDisplayChanged", {
     if (!isNull ((_this select 0) displayCtrl 1713151)) then {
         uiNamespace setVariable ["ACE_dlgRangefinder", _this select 0];
         ((_this select 0) displayCtrl 151) ctrlSetTextColor [0,0,0,0];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Register fire event handler
-["firedPlayerVehicle", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-["firedPlayerVehicleNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["ace_firedPlayerVehicle", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerVehicleNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
 
 // Register event for global updates
-[QGVAR(forceUpdate), {[ACE_player] call FUNC(onForceUpdate)}] call EFUNC(common,addEventHandler);
+[QGVAR(forceUpdate), {[ACE_player] call FUNC(onForceUpdate)}] call CBA_fnc_addEventHandler;

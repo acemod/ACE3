@@ -19,6 +19,6 @@ params ["_unit", "_originOfrequest"];
 if (local _unit && !(local _originOfrequest)) then {
     _openWounds = _unit getVariable [QGVAR(openWounds), []];
     {
-        ["medical_propagateWound", [_originOfrequest], [_unit, _x]] call EFUNC(common,targetEvent);
+        ["ace_medical_propagateWound", [_unit, _x], [_originOfrequest]] call CBA_fnc_targetEvent;
     } forEach _openWounds;
 };

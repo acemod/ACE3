@@ -8,8 +8,12 @@
  * 2: Amount Of Damage <NUMBER>
  * 3: Shooter <OBJECT>
  * 4: Projectile <STRING>
- * 5: Current damage to be returned <NUMBER>
- * 6: Type of Damage <STRING>
+ * 5: Hit part index of the hit point <NUMBER>
+ * 6: Current damage to be returned <NUMBER>
+ *
+ * //On 1.63 dev:
+ * 6: Shooter? <OBJECT>
+ * 7: Current damage to be returned <NUMBER>
  *
  * Return Value:
  * None
@@ -21,6 +25,11 @@
 
 private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "_newDamage"];
+
+//Temp fix for 1.63 handleDamage changes
+if (_newDamage isEqualType objNull) then {
+    _newDamage = _this select 7;
+};
 
 _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitWith {};
