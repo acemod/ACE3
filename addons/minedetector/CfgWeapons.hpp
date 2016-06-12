@@ -32,6 +32,7 @@ class CfgWeapons {
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             holsterScale = 0;
+            mass = 77;
             class CowsSlot {};
             class MuzzleSlot {};
         };
@@ -42,5 +43,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         model = QUOTE(PATHTOF(ace_wallon_vmh3.p3d));
         picture = QUOTE(PATHTOF(data\equip\w_vmh3_ca.paa));
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 55;
+        };
     };
 };
