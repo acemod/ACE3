@@ -15,32 +15,34 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(inHand)) exitWith {};
+if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {};
 
 params ["", "_amount"];
 
-if (GVAR(dropMode)) then {
+if (ACE_player getVariable [QGVAR(dropMode), false]) then {
+    private _dropDistance = ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT];
     if (_amount < 0) then {
         // Move closer
-        GVAR(dropDistance) = (GVAR(dropDistance) - 0.1) max 0.2;
+        ACE_player setVariable [QGVAR(dropDistance), (_dropDistance - 0.1) max DROP_DISTANCE_DEFAULT];
     } else {
         // Move further
-        GVAR(dropDistance) = (GVAR(dropDistance) + 0.1) min 1;
+        ACE_player setVariable [QGVAR(dropDistance), (_dropDistance + 0.1) min 1];
     };
 
     // Limit distance in vehicle
     if (vehicle ACE_player != ACE_player) then {
-        GVAR(dropDistance) = GVAR(dropDistance) min 0.5;
+        ACE_player setVariable [QGVAR(dropDistance), (ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]) min 0.5];
     };
 } else {
+    private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
     if (_amount < 0) then {
-        if (GVAR(throwType) == "high") then {
-            GVAR(throwType) = "normal";
+        if (_throwType == "high") then {
+            ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
         };
     } else {
-        if (GVAR(throwType) == "normal") then {
-            GVAR(throwType) = "high";
+        if (_throwType == "normal") then {
+            ACE_player setVariable [QGVAR(throwType), "high"];
         };
     };
-    TRACE_2("Change Throw Type",_amount,GVAR(throwType));
+    TRACE_2("Change Throw Type",_amount,ACE_player getVariable QGVAR(throwType));
 };

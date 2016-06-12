@@ -18,8 +18,8 @@
 params ["_unit"];
 
 // Select next throwable if one already in hand
-if (GVAR(inHand)) exitWith {
-    if (!GVAR(primed)) then {
+if (_unit getVariable [QGVAR(inHand), false]) exitWith {
+    if (!(_unit getVariable [QGVAR(primed), false])) then {
         [_unit] call EFUNC(weaponselect,selectNextGrenade);
     };
 };
@@ -28,7 +28,7 @@ if (GVAR(inHand)) exitWith {
 if ((currentThrowable _unit) isEqualTo [] && {!([_unit] call EFUNC(weaponselect,selectNextGrenade))}) exitWith {};
 
 
-GVAR(inHand) = true;
+_unit setVariable [QGVAR(inHand), true];
 
 // Add controls hint
 call FUNC(updateControlsHint);

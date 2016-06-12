@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(inHand)) exitWith {false};
+if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
 params ["", "_key", "_shift", "_ctrl", "_alt"];
 

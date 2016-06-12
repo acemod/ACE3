@@ -17,30 +17,32 @@ if (!hasInterface) exitWith {};
 
 ["ACE3 Weapons", QGVAR(dropModeToggle), localize LSTRING(DropModeToggle), {
     // Condition
-    if (!GVAR(inHand)) exitWith {false};
+    if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
     // Statement
-    GVAR(dropMode) = [true, false] select GVAR(dropMode);
-    GVAR(throwType) = "normal"; // Reset for consistency when opening
+    private _currentDropMode = ACE_player getVariable [QGVAR(dropMode), false];
+    ACE_player setVariable [QGVAR(dropMode), !_currentDropMode];
+
+    ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT]; // Reset for consistency when opening
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
 }, {false}, [34, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + G
 
 ["ACE3 Weapons", QGVAR(dropModeHold), localize LSTRING(DropModeHold), {
     // Condition
-    if (!GVAR(inHand)) exitWith {false};
+    if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
     // Statement
-    GVAR(dropMode) = true;
-    GVAR(throwType) = "normal"; // Reset for consistency when opening
+    ACE_player setVariable [QGVAR(dropMode), true];
+    ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT]; // Reset for consistency when opening
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
 }, {
     // Condition
-    if (!GVAR(inHand)) exitWith {false};
+    if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
     // Statement
-    GVAR(dropMode) = false;
+    ACE_player setVariable [QGVAR(dropMode), false];
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
 }, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // Empty
@@ -55,7 +57,7 @@ if (!hasInterface) exitWith {};
     // Exit if advanced throwing is disabled (pick up only supports advanced throwing)
     if (!GVAR(enabled)) exitWith {};
 
-    if (GVAR(inHand)) then {
+    if (ACE_player getVariable [QGVAR(inHand), false]) then {
         [ACE_player, "Interact menu opened"] call FUNC(exitThrowMode);
     } else {
         params ["_interactionType"];

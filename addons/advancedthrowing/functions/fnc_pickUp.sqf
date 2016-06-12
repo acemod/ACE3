@@ -18,26 +18,29 @@
 
 params ["_helper", "_unit"];
 
-GVAR(activeThrowable) = _helper getVariable [QGVAR(throwable), objNull];
+_activeThrowable = _helper getVariable [QGVAR(throwable), objNull];
 
-if (isNull GVAR(activeThrowable)) exitWith {};
+if (isNull _activeThrowable) exitWith {};
 
 // Detach if attached (to vehicle for example or another player)
-private _attachedTo = attachedTo GVAR(activeThrowable);
+private _attachedTo = attachedTo _activeThrowable;
 if (!isNull _attachedTo) then {
-    detach GVAR(activeThrowable);
+    detach _activeThrowable;
 
     // Fix throw speed in some cases after detaching
-    GVAR(throwSpeed) = getNumber (configFile >> "CfgMagazines" >> typeOf GVAR(activeThrowable) >> "initSpeed");
+    private _throwSpeed = getNumber (configFile >> "CfgMagazines" >> typeOf _activeThrowable >> "initSpeed");
+    _unit setVariable [QGVAR(throwSpeed), _throwSpeed];
 };
 
 // Change locality for manipulation (some commands require local object, such as setVelocity)
-if (!local GVAR(activeThrowable)) then {
-    ["setOwner", [GVAR(activeThrowable), clientOwner]] call EFUNC(common,serverEvent);
+if (!local _activeThrowable) then {
+    ["setOwner", [_activeThrowable, clientOwner]] call EFUNC(common,serverEvent);
 };
 
 // Invoke listenable event
-["ace_throwablePickedUp", [GVAR(activeThrowable), _unit, _attachedTo]] call CBA_fnc_localEvent;
+["ace_throwablePickedUp", [_activeThrowable, _unit, _attachedTo]] call CBA_fnc_localEvent;
 
-GVAR(primed) = true;
-_unit call FUNC(prepare)
+_unit setVariable [QGVAR(primed), true];
+_unit setVariable [QGVAR(activeThrowable), _activeThrowable];
+
+_unit call FUNC(prepare);

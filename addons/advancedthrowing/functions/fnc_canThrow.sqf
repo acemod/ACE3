@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (!GVAR(inHand)) exitWith {false};
+if !(_unit getVariable [QGVAR(inHand), false]) exitWith {false};
 
 if (vehicle _unit != _unit) exitWith {
     private _startPos = eyePos _unit;

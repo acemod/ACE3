@@ -16,23 +16,25 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(inHand)) exitWith {};
-
 params ["_unit", "_reason"];
+
+if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
 
 #ifdef DEBUG_MODE_FULL
     systemChat format ["Exit Throw Mode: %1", _reason];
 #endif
 
-if (!GVAR(primed)) then {
-    deleteVehicle GVAR(activeThrowable);
+if (!(_unit getVariable [QGVAR(dropMode), false])) then {
+    deleteVehicle (_unit setVariable [QGVAR(activeThrowable), objNull]);
 };
 
-GVAR(inHand) = false;
-GVAR(primed) = false;
-GVAR(activeThrowable) = objNull;
-GVAR(throwType) = "normal";
-GVAR(dropMode) = false;
+_unit setVariable [QGVAR(inHand), false];
+_unit setVariable [QGVAR(primed), false];
+_unit setVariable [QGVAR(activeThrowable), objNull];
+_unit setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
+_unit setVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
+_unit setVariable [QGVAR(dropMode), false];
+_unit setVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT];
 
 // Remove controls hint (check if ever enabled is inside the function)
 call EFUNC(interaction,hideMouseHint);

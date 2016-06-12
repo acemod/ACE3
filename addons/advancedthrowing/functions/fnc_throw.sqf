@@ -19,7 +19,7 @@ params ["_unit"];
 
 // Prime the throwable if it hasn't been cooking already
 // Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
-if (!GVAR(primed)) then {
+if (!(_unit getVariable [QGVAR(primed), false])) then {
     [_unit] call FUNC(prime);
 };
 
@@ -54,7 +54,14 @@ _unit playAction "ThrowGrenade";
 
     // Invoke listenable event
     ["ace_throwableThrown", [_unit, _activeThrowable]] call CBA_fnc_localEvent;
-}, [_unit, GVAR(activeThrowable), getPosASLVisual GVAR(activeThrowable), GVAR(throwType), GVAR(throwSpeed), GVAR(dropMode)], 0.3] call CBA_fnc_waitAndExecute;
+}, [
+    _unit,
+    _unit getVariable [QGVAR(activeThrowable), objNull],
+    getPosASLVisual (_unit getVariable [QGVAR(activeThrowable), objNull]),
+    _unit getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT],
+    _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
+    _unit getVariable [QGVAR(dropMode), false]
+], 0.3] call CBA_fnc_waitAndExecute;
 
 // Stop rendering arc and doing rendering magic while throw is happening
 [_unit, "Completed a throw fully"] call FUNC(exitThrowMode);

@@ -20,17 +20,23 @@ if (!([ACE_player] call FUNC(canThrow))) exitWith {
     drawIcon3D ["\a3\ui_f\data\igui\cfg\actions\obsolete\ui_action_cancel_manualfire_ca.paa", [1, 0, 0, 1], positionCameraToWorld [0, 0, 1], 1, 1, 0, "", 1];
 };
 
-if (isNull GVAR(activeThrowable)) exitWith {};
+private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNull];
 
-private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (GVAR(throwType) == "high" || {GVAR(dropMode)});
-private _velocity = [GVAR(throwSpeed), GVAR(throwSpeed) / THROWSTYLE_HIGH_VEL_COEF] select (GVAR(throwType) == "high");
-_velocity = [_velocity, THROWSTYLE_DROP_VEL] select GVAR(dropMode);
+if (isNull _activeThrowable) exitWith {};
+
+private _dropMode = ACE_player getVariable [QGVAR(dropMode), false];
+private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
+private _throwSpeed = ACE_player getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
+
+private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
+private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF] select (_throwType == "high");
+_velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
 private _viewStart = AGLToASL (positionCameraToWorld [0, 0, 0]);
 private _viewEnd = AGLToASL (positionCameraToWorld _direction);
 
 private _initialVelocity = (vectorNormalized (_viewEnd vectorDiff _viewStart)) vectorMultiply (_velocity / 1.8);
-private _prevTrajASL = getPosASLVisual GVAR(activeThrowable);
+private _prevTrajASL = getPosASLVisual _activeThrowable;
 
 private _pathData = [];
 

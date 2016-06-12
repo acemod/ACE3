@@ -15,14 +15,14 @@
  */
 #include "script_component.hpp"
 
-if (!GVAR(inHand)) exitWith {};
+if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {};
 
 params ["", "_key"];
 
 // Left mouse button
 // "DefaultAction" doesn't get executed when in driver seat or in FFV seat with weapon lowered
 if (_key == 0) exitWith {
-    if (!isNull GVAR(activeThrowable)) then {
+    if (!isNull (ACE_player getVariable [QGVAR(activeThrowable), objNull])) then {
         // Look gets automatically pointed at weapon direction on first LMB press when in FFV seat, require weapon to be up if in vehicle
         private _inVehicle = vehicle ACE_player != ACE_player;
         if (!_inVehicle || {_inVehicle && {!weaponLowered ACE_player}}) then {
@@ -31,14 +31,16 @@ if (_key == 0) exitWith {
     };
 };
 
+private _primed = ACE_player getVariable [QGVAR(primed), false];
+
 // Right mouse button
 if (_key == 1) exitWith {
-    if (!GVAR(primed)) then {
+    if (!_primed) then {
         [ACE_player, "Storing throwable"] call FUNC(exitThrowMode);
     };
 };
 
 // Middle mouse button
-if (_key == 2 && {!GVAR(primed)}) exitWith {
+if (_key == 2 && {!_primed}) exitWith {
     [ACE_player, true] call FUNC(prime);
 };

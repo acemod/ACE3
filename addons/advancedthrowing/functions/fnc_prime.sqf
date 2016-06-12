@@ -18,7 +18,7 @@
 
 params ["_unit", ["_showHint", false]];
 
-GVAR(primed) = true;
+_unit setVariable [QGVAR(primed), true];
 
 // Remove item before cooking to prevent weaponselect showing more throwables than there actually are in inventory
 private _throwableMag = (currentThrowable _unit) select 0;
@@ -28,8 +28,9 @@ private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag 
 private _muzzle = _throwableMag call FUNC(getMuzzle);
 
 // Create actual throwable globally
-private _activeThrowableOld = GVAR(activeThrowable);
-GVAR(activeThrowable) = createVehicle [_throwableType, _activeThrowableOld, [], 0, "CAN_COLLIDE"];
+private _activeThrowableOld =  _unit getVariable [QGVAR(activeThrowable), objNull];
+private _activeThrowable = createVehicle [_throwableType, _activeThrowableOld, [], 0, "CAN_COLLIDE"];
+_unit setVariable [QGVAR(activeThrowable), _activeThrowable];
 deleteVehicle _activeThrowableOld;
 
 // Throw Fired XEH
@@ -40,7 +41,7 @@ deleteVehicle _activeThrowableOld;
     _muzzle, // mode
     _throwableType, // ammo
     _throwableMag, // magazine
-    GVAR(activeThrowable) // projectile
+    _activeThrowable // projectile
 ]] call CBA_fnc_globalEvent;
 
 if (_showHint) then {
