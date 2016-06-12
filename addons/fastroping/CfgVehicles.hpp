@@ -155,6 +155,7 @@ class CfgVehicles {
         model = QPATHTOF(data\helper.p3d);
         class ACE_Actions {};
         class Turrets {};
+        class TransportItems {};
     };
 
     class Helicopter_Base_H;

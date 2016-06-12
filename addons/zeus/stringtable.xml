@@ -181,6 +181,54 @@
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Apri Catturato</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
+            <English>Defend Area</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
+            <English>Global AI Skill</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
+            <English>General Skill</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
+            <English>Changes: general, commanding, courage</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
+            <English>Accuracy</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
+            <English>Changes: aimingAccuracy</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
+            <English>Weapon Handling</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
+            <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
+            <English>Spotting</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
+            <English>Changes: spotDistance, spotTime</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
+            <English>Seek Cover</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
+            <English>Should AI seek cover</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
+            <English>Auto Combat</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
+            <English>Should AI automatically switch to combat mode</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
+            <English>Group Side</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
+            <English>Patrol Area</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
             <Polish>Przełącz kapitulację</Polish>
@@ -193,6 +241,21 @@
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
             <Italian>Apri Resa</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
+            <English>Teleport Players</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
+            <English>Player</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
+            <English>Teleport selected player to module position</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
+            <English>Teleport Group</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
+            <English>Teleports all units in group</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
             <Polish>Przełącz nieprzytomność</Polish>
@@ -204,6 +267,12 @@
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
             <Italian>Apri Incosciente</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
+            <English>Search Area</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
+            <English>Search Nearby Building</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -249,17 +318,6 @@
             <Spanish>Agregar rueda de auxilio</Spanish>
             <French>Ajouter pièce de rechange</French>
         </Key>
-        <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_Description">
-            <English>Adds a Spare Wheel to the vehicle</English>
-            <Portuguese>Adiciona uma roda sobressalente ao veículo</Portuguese>
-            <Polish>Dodaje koło zapasowe do pojazdu</Polish>
-            <Russian>Добавляет запасное колесо в транспорт</Russian>
-            <Czech>Přidá rezervní kolo do vozidla</Czech>
-            <Italian>Aggiungi una ruota di scorta al veicolo</Italian>
-            <German>Fügt dem Fahrzeug ein Ersatzrad hinzu</German>
-            <Spanish>Agrega una rueda de auxilio al vehículo</Spanish>
-            <French>Ajoute une roue de secours au véhicule</French>
-        </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
             <Portuguese>Adicionar esteira sobressalente</Portuguese>
@@ -270,17 +328,6 @@
             <German>Ersatzkette hinzufügen</German>
             <Spanish>Agregar oruga de repuesto</Spanish>
             <French>Ajouter une chenille de secours</French>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_Description">
-            <English>Adds a Spare Track to the vehicle</English>
-            <Portuguese>Adiciona uma esteira sobressalente ao veículo</Portuguese>
-            <Polish>Dodaje zapasową gąsienicę do pojazdu</Polish>
-            <Russian>Добавляет запасную гусеницу в транспорт</Russian>
-            <Czech>Přidá náhradní pás do vozidla</Czech>
-            <Italian>Aggiungi un cingolo di scorta al veicolo</Italian>
-            <German>Fügt dem Fahrzeug eine Ersatzkette hinzu</German>
-            <Spanish>Agrega una oruga de repuesto al vehículo</Spanish>
-            <French>Ajoute une chenille de reserve</French>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -362,6 +409,12 @@
             <Russian>Юнит не должен быть пленным</Russian>
             <Italian>L'unità non dev'essere un prigioniero</Italian>
         </Key>
+        <Key ID="STR_ACE_Zeus_OnlySpecificSide">
+            <English>Unit must belong to an appropriate side</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_BuildingTooFar">
+            <English>Nearest building is too far away</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
             <French>Rien sous le curseur</French>
@@ -407,6 +460,24 @@
             <Italian>Aggiungi ogni oggetto creato a tutti i Curatori in missione</Italian>
             <French>Ajoute n'importe quel objet spawné à tous les curateurs de la mission</French>
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeCargo">
+            <English>Cargo:</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributePosition">
+            <English>Task Position</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributePosition_desc">
+            <English>Select a position to perform the task at</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadius">
+            <English>Task Radius</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
+            <English>Radius to perform the task within</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
+            <English>Invalid radius entered</English>
         </Key>
     </Package>
 </Project>

@@ -60,6 +60,7 @@ PREP(getFirstTerrainIntersection);
 PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);
 PREP(getMapPosFromGrid);
