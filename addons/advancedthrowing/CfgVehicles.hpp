@@ -9,23 +9,35 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 1;
-        //icon = PATHTOF(UI\Icon_Module_AdvancedThrowing_ca.paa);//@todo
+        icon = QPATHTOF(UI\Icon_Module_AdvancedThrowing_ca.paa);
         class Arguments {
-            class Enabled {
-                displayName = CSTRING(EnableThrowingSystem_DisplayName);
-                description = CSTRING(EnableThrowingSystem_Description);
+            class enabled {
+                displayName = CSTRING(Enable_DisplayName);
+                description = CSTRING(Enable_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class ShowThrowArc {
+            class showThrowArc {
                 displayName = CSTRING(ShowThrowArc_DisplayName);
                 description = CSTRING(ShowThrowArc_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class ShowMouseControls {
+            class showMouseControls {
                 displayName = CSTRING(ShowMouseControls_DisplayName);
                 description = CSTRING(ShowMouseControls_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class enablePickUp {
+                displayName = CSTRING(EnablePickUp_DisplayName);
+                description = CSTRING(EnablePickUp_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
+            class enablePickUpAttached {
+                displayName = CSTRING(EnablePickUpAttached_DisplayName);
+                description = CSTRING(EnablePickUpAttached_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
