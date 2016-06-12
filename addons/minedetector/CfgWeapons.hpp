@@ -9,9 +9,9 @@ class CfgWeapons {
         scope = 2;
         author = ECSTRING(common,ACETeam);
         displayName = "VMM3";
+        descriptionShort = CSTRING(VMM3_Description);
         model = QUOTE(PATHTOF(ace_wallon_vmm3.p3d));
         picture = QUOTE(PATHTOF(data\equip\w_vmm3_ca.paa));
-        descriptionShort = "";
         magazines[] = { };
         modes[] = { "Single" };
         class Single: Mode_SemiAuto {
@@ -39,6 +39,7 @@ class CfgWeapons {
     class ACE_VMH3: ACE_VMM3 {
         scope = 2;
         displayName = "VMH3";
+        author = ECSTRING(common,ACETeam);
         model = QUOTE(PATHTOF(ace_wallon_vmh3.p3d));
         picture = QUOTE(PATHTOF(data\equip\w_vmh3_ca.paa));
     };
