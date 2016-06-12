@@ -49,11 +49,11 @@ if (!hasInterface) exitWith {};
 
 
 // Event handlers
-["playerChanged", {
+["ace_playerChanged", {
     [_this select 1, "Player changed"] call FUNC(exitThrowMode);
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventhandler;
 
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     // Exit if advanced throwing is disabled (pick up only supports advanced throwing)
     if (!GVAR(enabled)) exitWith {};
 
@@ -67,7 +67,7 @@ if (!hasInterface) exitWith {};
             call FUNC(renderPickUpInteraction);
         };
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 
 // Fired XEH
