@@ -10,17 +10,19 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_unit"];
 
-private _state = (backpackContainer _unit) getVariable [QGVAR(GunbagWeapon),[]];
+private _state = (backpackContainer _unit) getVariable [QGVAR(gunbagWeapon), []];
 
-if (count _state <= 0) then {
+if (_state isEqualTo []) then {
     [localize LSTRING(empty)] call EFUNC(common,displayTextStructured);
 } else {
-    private _weapon = (_state select 0) select 0;
-    [getText (configFile >> "CfgWeapons" >> _weapon >> "displayname"),
-    getText (configFile >> "CfgWeapons" >> _weapon >> "picture")] call EFUNC(common,displayTextPicture);
+    _state params ["_weapon"];
+
+    [
+        getText (configFile >> "CfgWeapons" >> _weapon >> "displayname"),
+        getText (configFile >> "CfgWeapons" >> _weapon >> "picture")
+    ] call EFUNC(common,displayTextPicture);
 };

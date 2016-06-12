@@ -1,6 +1,9 @@
+
 PREP(toGunbag);
+PREP(toGunbagCallback);
 PREP(offGunbag);
+PREP(offGunbagCallback);
 PREP(status);
 PREP(canInteract);
 PREP(calculateMass);
-PREP(isGunbag);
+PREP(hasGunbag);

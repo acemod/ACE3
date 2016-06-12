@@ -11,21 +11,18 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-params ["_unit","_target"];
+params ["_unit", "_target"];
 
-private ["_result","_gunbag"];
+private _result = -1;
+private _gunbag = backpackContainer _target;
 
-_result = -1;
-_gunbag = backpackContainer _target;
-
-if(count (_gunbag getVariable [QGVAR(GunbagWeapon),[]]) <= 0 && {primaryWeapon _unit != ""} && {getNumber (configFile >> "CfgWeapons" >> primaryWeapon _unit  >> QGVAR(allowGunbag)) == 1}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {primaryWeapon _unit != ""} && {getNumber (configFile >> "CfgWeapons" >> primaryWeapon _unit  >> QGVAR(allowGunbag)) == 1}) then {
     _result = 0;
 };
 
-if(count (_gunbag getVariable [QGVAR(GunbagWeapon),[]]) >= 1 && {primaryWeapon _unit == ""}) then {
+if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {primaryWeapon _unit == ""}) then {
     _result = 1;
 };
 

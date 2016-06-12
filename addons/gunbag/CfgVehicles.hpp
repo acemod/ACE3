@@ -21,7 +21,7 @@ class CfgVehicles {
                 };
                 class GVAR(StatusGunbag) {
                     displayName = CSTRING(Status);
-                    condition = QUOTE([_target] call FUNC(isGunbag));
+                    condition = QUOTE([_target] call FUNC(hasGunbag));
                     statement = QUOTE([_target] call FUNC(status));
                     showDisabled = 0;
                     priority = 2;
@@ -34,7 +34,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class GVAR(actions) {
                     displayName = CSTRING(displayname);
-                    condition = QUOTE([_player] call FUNC(isGunbag));
+                    condition = QUOTE([_player] call FUNC(hasGunbag));
                     showDisabled = 0;
                     priority = 0.1;
                     icon = PATHTOF(ui\gunbag_icon_ca.paa);
@@ -57,7 +57,7 @@ class CfgVehicles {
                     };
                     class GVAR(StatusGunbag) {
                         displayName = CSTRING(Status);
-                        condition = QUOTE([_player] call FUNC(isGunbag));
+                        condition = QUOTE([_player] call FUNC(hasGunbag));
                         statement = QUOTE([_player] call FUNC(status));
                         showDisabled = 0;
                         priority = 2;
@@ -84,6 +84,8 @@ class CfgVehicles {
     };
 
     class DOUBLES(CLASSNAME,Tan): CLASSNAME {
+        _generalMacro = QUOTE(DOUBLES(CLASSNAME,Tan));
+        author = "Ir0n1E";
         displayName = CSTRING(Displayname_Tan);
         picture = PATHTOF(ui\gunbag_tan_ca.paa);
         hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_tan_co.paa)};
