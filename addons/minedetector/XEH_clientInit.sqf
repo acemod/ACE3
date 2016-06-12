@@ -8,7 +8,7 @@
     private _helperObject = "ACE_LogicDummy" createVehicleLocal (getPos _unit);
     _unit setvariable [QGVAR(helperLogic), _helperObject];
 
-    [FUNC(detectorLoop), 0.01, [_unit, _type, _config, ACE_time, _helperObject]] call CBA_fnc_addPerFrameHandler;
+    [FUNC(detectorLoop), 0.01, [_unit, _type, _config, CBA_missionTime, _helperObject]] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(detectorDisabled), {
