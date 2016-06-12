@@ -18,8 +18,8 @@
             <German>Hole Waffe aus Waffentasche</German>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
-            <English>Status Gunbag</English>
-            <German>Status Waffentasche</German>
+            <English>Status</English>
+            <German>Status</German>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
