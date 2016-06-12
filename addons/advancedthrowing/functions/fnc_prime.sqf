@@ -28,7 +28,7 @@ private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag 
 private _muzzle = _throwableMag call FUNC(getMuzzle);
 
 // Create actual throwable globally
-private _activeThrowableOld =  _unit getVariable [QGVAR(activeThrowable), objNull];
+private _activeThrowableOld = _unit getVariable [QGVAR(activeThrowable), objNull];
 private _activeThrowable = createVehicle [_throwableType, _activeThrowableOld, [], 0, "CAN_COLLIDE"];
 _unit setVariable [QGVAR(activeThrowable), _activeThrowable];
 deleteVehicle _activeThrowableOld;
