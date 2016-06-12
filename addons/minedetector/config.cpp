@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_VMH3","ACE_VMM3"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_explosives"};
-        author[] = {"Grey", "Glowbal", "Rocko"};
-        authorUrl = "";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Grey", "Glowbal", "Rocko"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
