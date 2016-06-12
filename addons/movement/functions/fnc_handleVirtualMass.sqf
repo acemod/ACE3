@@ -14,6 +14,8 @@
 
 params ["_unit"];
 
+if (isNull _unit) exitWith {};
+
 // add sum of virtual loads
 private _virtualLoad = 0;
 
