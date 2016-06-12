@@ -3,7 +3,7 @@ class CfgWeapons {
     class ACE_ItemCore;
     class InventoryItem_Base_F;
 
-    class ACE_Map_Flashlight_MX991: ACE_ItemCore {
+    class ACE_Flashlight_MX991: ACE_ItemCore {
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
         model = QPATHTOF(data\MX_991.p3d);
@@ -20,7 +20,7 @@ class CfgWeapons {
         };
     };
 
-    class ACE_Map_Flashlight_KSF1: ACE_ItemCore {
+    class ACE_Flashlight_KSF1: ACE_ItemCore {
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
         model = QPATHTOF(data\KSF_1.p3d);
@@ -37,7 +37,7 @@ class CfgWeapons {
         };
     };
 
-    class ACE_Map_Flashlight_XL50: ACE_ItemCore {
+    class ACE_Flashlight_XL50: ACE_ItemCore {
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
         model = QPATHTOF(data\Maglight.p3d);
