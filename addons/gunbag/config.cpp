@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {CLASSNAME, DOUBLES(CLASSNAME,Tan)};
+        units[] = {QUOTE(ADDON), QGVAR(Tan)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction", "ace_movement"};

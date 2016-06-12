@@ -16,5 +16,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define CLASSNAME ACE_Gunbag
 #define PROGRESSBAR_TIME 5

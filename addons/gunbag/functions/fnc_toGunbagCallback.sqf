@@ -43,6 +43,6 @@ _unit removeWeapon _weapon;
 _gunbag setVariable [QGVAR(gunbagWeapon), [_weapon, _items, _magazines], true];
 
 // play sound
-if (!isNil "ACE_Backpacks") then {
+if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
     [_target, _gunbag] call EFUNC(backpacks,backpackOpened);
 };

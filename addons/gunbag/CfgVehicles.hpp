@@ -69,33 +69,33 @@ class CfgVehicles {
     };
 
     class Bag_Base;
-    class CLASSNAME: Bag_Base {
-        _generalMacro = QUOTE(CLASSNAME);
+    class ADDON: Bag_Base {
+        _generalMacro = QUOTE(ADDON);
         author = "Ir0n1E";
         scope = 2;
         displayName = CSTRING(Displayname);
-        model = PATHTOF(data\gunbag.p3d);
-        picture = PATHTOF(ui\gunbag_ca.paa);
-        icon = PATHTOF(ui\gunbag_icon_ca.paa);
-        hiddenSelections[] = {QUOTE(Camo),QUOTE(insignia)};
-        hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_co.paa)};
+        model = QPATHTOF(data\ace_gunbag.p3d);
+        picture = QPATHTOF(ui\gunbag_ca.paa);
+        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+        hiddenSelections[] = {"Camo", "insignia"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\gunbag_co.paa)};
         maximumLoad = 80;
         mass = 11;
     };
 
-    class DOUBLES(CLASSNAME,Tan): CLASSNAME {
-        _generalMacro = QUOTE(DOUBLES(CLASSNAME,Tan));
+    class GVAR(Tan): ADDON {
+        _generalMacro = QGVAR(Tan);
         author = "Ir0n1E";
         displayName = CSTRING(Displayname_Tan);
-        picture = PATHTOF(ui\gunbag_tan_ca.paa);
-        hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_tan_co.paa)};
+        picture = QPATHTOF(ui\gunbag_tan_ca.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\gunbag_tan_co.paa)};
     };
 
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportBackpacks {
-            MACRO_ADDBACKPACK(CLASSNAME,3);
-            MACRO_ADDBACKPACK(DOUBLES(CLASSNAME,Tan),3);
+            MACRO_ADDBACKPACK(ADDON,3);
+            MACRO_ADDBACKPACK(GVAR(Tan),3);
         };
     };
 };

@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-backpackContainer _unit isKindOf QUOTE(CLASSNAME)
+(backpackContainer _unit) isKindOf QUOTE(ADDON)
