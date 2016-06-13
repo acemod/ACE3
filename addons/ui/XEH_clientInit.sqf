@@ -5,10 +5,11 @@ if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
     // Initial settings
-    [true] call FUNC(setElements);
+    [true, false] call FUNC(setElements);
 
     // On load and entering/exiting a vehicle
     ["ace_infoDisplayChanged", {
+        systemChat format ["hint %1", time];
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
         private _force = [true, false] select (GVAR(allowSelectiveUI));
@@ -30,7 +31,7 @@ if (!hasInterface) exitWith {};
         params ["_name"];
 
         if (_name in ELEMENTS_BASIC) then {
-            [false] call FUNC(setElements);
+            [false, true] call FUNC(setElements);
         } else {
             if (isClass (configFile >> "ACE_UI" >> _name select [7])) then {
                 [_name select [7], missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);

@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: Force change even when disallowed <BOOL> (default: false)
+ * 1: Show Hint <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -15,9 +16,13 @@
  */
 #include "script_component.hpp"
 
-if (isArray (missionConfigFile >> "showHUD")) exitWith {};
+params ["_force", ["_showHint", false]];
 
-params [ ["_force", false, [true]] ];
+if (isArray (missionConfigFile >> "showHUD")) exitWith {
+    if (_showHint) then {
+        [LSTRING(Disabled)] call EFUNC(common,displayTextStructured);
+    };
+};
 
 ["ui", [
     true,
