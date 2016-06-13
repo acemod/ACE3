@@ -1,13 +1,16 @@
 /*
  * Author: Ir0n1E
- * put weapon into gunbag
+ * Put weapon into gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [player, target] call ace_gunbag_fnc_toGunbagCallback
  *
  * Public: No
  */
@@ -40,6 +43,6 @@ _unit removeWeapon _weapon;
 _gunbag setVariable [QGVAR(gunbagWeapon), [_weapon, _items, _magazines], true];
 
 // play sound
-if (!isNil "ACE_Backpacks") then {
+if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
     [_target, _gunbag] call EFUNC(backpacks,backpackOpened);
 };

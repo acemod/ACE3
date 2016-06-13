@@ -2,11 +2,13 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {CLASSNAME, DOUBLES(CLASSNAME,Tan)};
+        units[] = {QUOTE(ADDON), QGVAR(Tan)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction", "ace_movement"};
-        author[] = {"Ir0n1E"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ir0n1E"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
