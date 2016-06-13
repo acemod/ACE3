@@ -3,8 +3,7 @@
  * Sets basic visible elements of the UI using showHUD setter.
  *
  * Arguments:
- * 0: Force change even when disallowed <BOOL> (default: false)
- * 1: Show Hint <BOOL> (default: false)
+ * 0: Show Hint <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -16,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params ["_force", ["_showHint", false]];
+params [["_showHint", false]];
 
 if (isArray (missionConfigFile >> "showHUD")) exitWith {
     if (_showHint) then {
