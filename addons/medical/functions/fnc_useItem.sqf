@@ -16,7 +16,6 @@
 
 #include "script_component.hpp"
 
-private ["_return","_crew"];
 params ["_medic", "_patient", "_item"];
 
 if (isNil QGVAR(setting_allowSharedEquipment)) then {
@@ -41,9 +40,9 @@ if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
     [true, _medic];
 };
 
-_return = [false, objNull];
+private _return = [false, objNull];
 if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) then {
-    _crew = crew vehicle _medic;
+    private _crew = crew vehicle _medic;
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
             _return = [true, _x];
