@@ -156,6 +156,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
 
     // Blood Volume Effect
     _blood = (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
+    // TODO scale up to 200%
     if (_blood > 0.99) then {
         GVAR(effectBloodVolumeCC) ppEffectEnable false;
     } else {
@@ -266,25 +267,15 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
     // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
     [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
 
-    if (GVAR(level) == 2) exitWith {
-        [
-            {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
-            {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
-            {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
-            {((_this select 0) getVariable [QGVAR(inReviveState), false])},
-            {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
-            {((_this select 0) getVariable ["ACE_isDead", false])},
-            {(((_this select 0) getVariable [QGVAR(airwayStatus), 100]) < 80)}
-        ] call FUNC(addUnconsciousCondition);
-    };
-
     [
-        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 40)},
-        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.6},
-        {(([_this select 0] call FUNC(getBloodLoss)) > 0.1)},
+        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
+        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
+        {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
         {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+        {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
         {((_this select 0) getVariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
+
 }] call CBA_fnc_addEventHandler;
 
 // Prevent all types of interaction while unconscious

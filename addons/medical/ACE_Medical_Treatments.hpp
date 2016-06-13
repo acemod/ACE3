@@ -16,7 +16,8 @@ class ACE_Medical_Actions {
             patientStateCondition = 0;
             itemConsumed = 1;
 
-            callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
+            //callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
+            callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";
 
@@ -67,7 +68,8 @@ class ACE_Medical_Actions {
             requiredMedic = 1;
             treatmentTime = 20;
             items[] = {"ACE_bloodIV"};
-            callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
+            // callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
+            callbackSuccess = QUOTE(DFUNC(treatmentIV));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
@@ -689,6 +691,12 @@ class ACE_Medical_Advanced {
             // packing bandage is average treatment, higher reopen change, longer reopening delay
             // elastic bandage is higher treatment, higher reopen change, shorter reopen delay
             // quickclot is lower treatment, lower reopen change, longer reopening delay
+            class Bandage { // basic bandage
+                effectiveness = 5;
+                reopeningChance = 0;
+                reopeningMinDelay = 0;
+                reopeningMaxDelay = 0;
+            };
 
             class FieldDressing {
                 // How effect is the bandage for treating one wounds type injury
@@ -1231,7 +1239,7 @@ class ACE_Medical_Advanced {
                 };
             };
         };
-        
+
         class Medication {
             // How much does the pain get reduced?
             painReduce = 0;

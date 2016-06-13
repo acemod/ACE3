@@ -28,8 +28,6 @@ if (GVAR(level) == 0) exitWith {};
 
 private _pain = ((_unit getVariable [QGVAR(pain), 0]) + _addedPain) max 0;
 
-if (GVAR(level) == 1) then {_pain = _pain min 1;}; //for basic, cap at 1
-
 _unit setVariable [QGVAR(pain), _pain];
 
 //Start up the vital watching (if not already running)
