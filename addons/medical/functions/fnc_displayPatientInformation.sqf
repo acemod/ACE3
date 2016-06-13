@@ -24,10 +24,6 @@ params ["_target", ["_show", true], ["_selectionN", 0]];
 GVAR(currentSelectedSelectionN) = [0, _selectionN] select (IS_SCALAR(_selectionN));
 GVAR(displayPatientInformationTarget) = [ObjNull, _target] select _show;
 
-if (USE_WOUND_EVENT_SYNC) then {
-    [_target, ACE_player] call FUNC(requestWoundSync);
-};
-
 if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 

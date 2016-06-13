@@ -15,8 +15,6 @@ class ACE_Medical_Actions {
             condition = "";
             patientStateCondition = 0;
             itemConsumed = 1;
-
-            //callbackSuccess = QUOTE(DFUNC(treatmentBasic_bandage));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_bandage));
             callbackFailure = "";
             callbackProgress = "";

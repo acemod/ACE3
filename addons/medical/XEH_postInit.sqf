@@ -21,7 +21,6 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 [QGVAR(treatmentAdvanced_CPRLocal), DFUNC(treatmentAdvanced_CPRLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentAdvanced_fullHealLocal), DFUNC(treatmentAdvanced_fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentAdvanced_medicationLocal), DFUNC(treatmentAdvanced_medicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentBasic_bandageLocal), DFUNC(treatmentBasic_bandageLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentBasic_bloodbagLocal), DFUNC(treatmentBasic_bloodbagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentBasic_morphineLocal), DFUNC(treatmentBasic_morphineLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentIVLocal), DFUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
