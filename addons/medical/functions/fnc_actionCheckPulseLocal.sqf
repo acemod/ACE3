@@ -14,15 +14,14 @@
 
 #include "script_component.hpp"
 
-private ["_heartRateOutput", "_heartRate", "_logOutPut"];
 params ["_caller", "_unit", "_selectionName"];
 
-_heartRate = _unit getVariable [QGVAR(heartRate), 80];
+private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
 if (!alive _unit) then {
     _heartRate = 0;
 };
-_heartRateOutput = LSTRING(Check_Pulse_Output_5);
-_logOutPut = LSTRING(Check_Pulse_None);
+private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
+private _logOutPut = LSTRING(Check_Pulse_None);
 
 if (_heartRate > 1.0) then {
     if ([_caller] call FUNC(isMedic)) then {
