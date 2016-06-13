@@ -17,6 +17,7 @@
  */
 
 #include "script_component.hpp"
+
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
 [_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
