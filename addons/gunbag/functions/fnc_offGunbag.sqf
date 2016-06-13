@@ -23,7 +23,7 @@ private _gunbag = backpackContainer _target;
 _unit call EFUNC(common,goKneeling);
 
 // play sound
-if (!isNil "ACE_Backpacks") then {
+if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
     [_target, _gunbag] call EFUNC(backpacks,backpackOpened);
 };
 
