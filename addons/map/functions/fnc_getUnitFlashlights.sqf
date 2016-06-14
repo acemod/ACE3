@@ -21,7 +21,7 @@ params ["_unit"];
 private _flashlights = [];
 
 {
-    if ((isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> QGVAR(flashlight) >> QGVAR(Flashlight_Color))) then {
+    if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> QGVAR(flashlight) >> QGVAR(Flashlight_Color))) then {
         _flashlights pushBackUnique _x;
     };
 } forEach (items _unit);
