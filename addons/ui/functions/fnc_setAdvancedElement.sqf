@@ -43,6 +43,7 @@ private _elements = getArray (_config >> "elements");
         // Display and print info which component forced the element except for default vehicle check
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'",_element,configName _x);
         };
         _show = false;
     };
@@ -56,6 +57,7 @@ if (!_force) then {
         if (_index != -1) then {
             if (_showHint) then {
                 [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+                ACE_LOGINFO_1("Attempted modification of a forced User Interface element '%1'",_element);
             };
             _show = ((GVAR(elementsSet)) select _index) select 1;
         };
