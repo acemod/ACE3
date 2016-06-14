@@ -21,7 +21,7 @@ private _scanVectorV = _scanVector select [1, 2]; //[y, z]
 private _detectedAircraft = [];
 
 {
-    if ((getPosATL _x) select 2 > 10) then {
+    if (_x != _aircraft && {(getPosATL _x) select 2 > 10}) then {
         private _dirToTarget = (getPosASL _x) vectorDiff (getPosASL _aircraft);
 
         private _diffRadH = (_dirToTarget select [0, 2]) vectorDotProduct _scanVectorH;
