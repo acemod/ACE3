@@ -10,10 +10,10 @@
 if (!hasInterface) exitWith {};
 
 // Check inventory when it changes
-["playerInventoryChanged", FUNC(inventoryCheck)] call EFUNC(common,addEventhandler);
+["ace_playerInventoryChanged", FUNC(inventoryCheck)] call CBA_fnc_addEventHandler;
 
 // Instantly hide knobs when scoping in
-["cameraViewChanged", {
+["ace_cameraViewChanged", {
     EXPLODE_2_PVT(_this,_player,_newCameraView);
     if (_newCameraView == "GUNNER") then {
         private "_layer";
@@ -26,7 +26,7 @@ if (!hasInterface) exitWith {};
             GVAR(fadePFH) = nil;
         };
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 
 // Add keybinds
@@ -152,5 +152,5 @@ if (!hasInterface) exitWith {};
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;

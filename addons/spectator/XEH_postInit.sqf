@@ -4,10 +4,10 @@
 // Add interaction menu exception
 ["isNotSpectating", {!(GETVAR((_this select 0),GVAR(isStaged),false))}] call EFUNC(common,addCanInteractWithCondition);
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Create a radio channel for any spectators to text chat in
 if (isServer) then {
@@ -18,7 +18,7 @@ if (isServer) then {
 // Should prevent unending spectator on mission end
 if (isServer) then {
     addMissionEventHandler ["Ended", {
-        [QGVAR(endMission), []] call EFUNC(common,globalEvent);
+        [QGVAR(endMission), []] call CBA_fnc_globalEvent;
     }];
 };
 
@@ -26,6 +26,6 @@ if (isServer) then {
     if (GVAR(isSet)) then {
         [false] call FUNC(setSpectator);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-[QGVAR(stageSpectator), FUNC(stageSpectator)] call EFUNC(common,addEventHandler);
+[QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;

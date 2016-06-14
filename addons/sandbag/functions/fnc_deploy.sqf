@@ -27,7 +27,7 @@ _sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 GVAR(sandBag) = _sandBag;
 
 // prevent collisions with sandbag
-["enableSimulationGlobal", [_sandBag, false]] call EFUNC(common,serverEvent);
+[QEGVAR(common,enableSimulationGlobal), [_sandBag, false]] call CBA_fnc_serverEvent;
 
 GVAR(deployDirection) = 0;
 

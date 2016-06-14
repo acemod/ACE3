@@ -15,11 +15,10 @@
 #include "script_component.hpp"
 params ["_vehicle", "_player", "_parameters"];
 
-private ["_actions", "_unit"];
-_actions = [];
+private _actions = [];
 
 {
-    _unit = _x;
+    private _unit = _x;
     if (_unit != _player && {(alive _unit) && {_unit getVariable ["ACE_isUnconscious", false]}}) then {
         _actions pushBack
             [

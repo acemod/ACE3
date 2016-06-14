@@ -15,22 +15,20 @@
 
 #include "script_component.hpp"
 
-private ["_part", "_tourniquets", "_output"];
 params ["_caller", "_target", "_selectionName"];
 TRACE_3("params",_caller,_target,_selectionName);
 
 // grab the required data
-_part = [_selectionName] call FUNC(selectionNameToNumber);
-_tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+private _part = [_selectionName] call FUNC(selectionNameToNumber);
+private _tourniquets = _target getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
 if ((_tourniquets select _part) == 0) exitWith {
-    _output = LSTRING(noTourniquetOnBodyPart);
-    ["displayTextStructured", [_caller], [_output, 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [LSTRING(noTourniquetOnBodyPart), 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 // Removing the tourniquet
-_tourniquets set[_part, 0];
+_tourniquets set [_part, 0];
 _target setVariable [QGVAR(tourniquets), _tourniquets, true];
 
 // Adding the tourniquet item to the caller
@@ -44,11 +42,12 @@ TRACE_2("meds",_part,_delayedMedications);
     _x params ["", "", "_medPartNum"];
     if (_part == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        ["treatmentAdvanced_medicationLocal", [_target], _x] call EFUNC(common,targetEvent);
+        [QGVAR(treatmentAdvanced_medicationLocal), _x, [_target]] call CBA_fnc_targetEvent;
         _delayedMedications set [_forEachIndex, -1];
         _updatedArray = true;
     };
 } forEach _delayedMedications;
+
 if (_updatedArray) then {
     _delayedMedications = _delayedMedications - [-1];
     _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];

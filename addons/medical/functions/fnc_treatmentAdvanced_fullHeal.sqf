@@ -13,9 +13,9 @@
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
 if (local _target) then {
-    ["treatmentAdvanced_fullHealLocal", [_caller, _target]] call EFUNC(common,localEvent);
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentAdvanced_fullHealLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
 };
 
 true;

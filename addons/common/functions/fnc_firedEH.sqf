@@ -26,12 +26,12 @@ TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile
 if (_unit isKindOf "CAManBase") then {
     // The unit it on foot
     if (_unit == ACE_player) then {
-        ["firedPlayer", _this] call FUNC(localEvent);
+        ["ace_firedPlayer", _this] call CBA_fnc_localEvent;
     } else {
         if ([_unit] call EFUNC(common,isPlayer)) then {
-            ["firedPlayerNonLocal", _this] call FUNC(localEvent);
+            ["ace_firedPlayerNonLocal", _this] call CBA_fnc_localEvent;
         } else {
-            ["firedNonPlayer", _this] call FUNC(localEvent);
+            ["ace_firedNonPlayer", _this] call CBA_fnc_localEvent;
         };
     };
 } else {
@@ -55,12 +55,12 @@ if (_unit isKindOf "CAManBase") then {
     };
 
     if (_gunner == ACE_player) then {
-        ["firedPlayerVehicle", _this] call FUNC(localEvent);
+        ["ace_firedPlayerVehicle", _this] call CBA_fnc_localEvent;
     } else {
         if ([_gunner] call EFUNC(common,isPlayer)) then {
-            ["firedPlayerVehicleNonLocal", _this] call FUNC(localEvent);
+            ["ace_firedPlayerVehicleNonLocal", _this] call CBA_fnc_localEvent;
         } else {
-            ["firedNonPlayerVehicle", _this] call FUNC(localEvent);
+            ["ace_firedNonPlayerVehicle", _this] call CBA_fnc_localEvent;
         };
     };
 };

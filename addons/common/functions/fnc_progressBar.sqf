@@ -82,13 +82,13 @@ _ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / 
 
         if (_errorCode == 0) then {
             if (_onFinish isEqualType "") then {
-                [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+                [_onFinish, [_args, _elapsedTime, _totalTime, _errorCode]] call CBA_fnc_localEvent;
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFinish;
             };
         } else {
             if (_onFail isEqualType "") then {
-                [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call FUNC(localEvent);
+                [_onFail, [_args, _elapsedTime, _totalTime, _errorCode]] call CBA_fnc_localEvent;
             } else {
                 [_args, _elapsedTime, _totalTime, _errorCode] call _onFail;
             };

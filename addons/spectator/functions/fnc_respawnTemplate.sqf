@@ -21,11 +21,6 @@
 params [["_unit",objNull,[objNull]], ["_killer",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
 private ["_vision","_pos"];
 
-// When all are dead with respawn type "None" the mission should end
-if ((_respawn == 0) && {{alive _x} count allPlayers <= 0}) exitWith {
-    ["BIS_fnc_endMission", ["endDeath", false]] call EFUNC(common,globalEvent);
-};
-
 // Some environment information can be used for the initial camera attributes
 if (isNull _killer) then {_killer = _unit};
 _vision = [-2,-1] select (sunOrMoon < 1);

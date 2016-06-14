@@ -33,4 +33,4 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
 if (!_force && !GVAR(addSpareParts)) exitWith {};
 
 // Load
-["AddCargoByClass", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);
+["ace_addCargoByClass", [_part, _vehicle, _amount]] call CBA_fnc_localEvent;

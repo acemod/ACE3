@@ -24,13 +24,13 @@ _activated = _this select 2;
 if (_activated) then {
 
     //--- Terminate when not created on the server
-    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitWith {
+    if (!isserver && local _logic && isnull (getassignedcuratorunit _logic)) exitwith {
         [format ["%1 is trying to create curator logic ModuleCurator_F",profilename],"bis_fnc_error",false] call bis_fnc_mp;
         deletevehicle _logic;
     };
 
     //--- Get curator owner
-    _ownerVar = _logic getVariable ["owner",""];
+    _ownerVar = _logic getvariable ["owner",""];
     _ownerUID = parsenumber _ownerVar;
     if (cheatsenabled) then {
         _ownerVarArray = toarray _ownerVar;
@@ -47,7 +47,7 @@ if (_activated) then {
     _isAdmin = _ownerVar == "#adminLogged" || _ownerVar == "#adminVoted";
 
     //--- Wipe out the variable so clients can't access it
-    _logic setVariable ["owner",nil];
+    _logic setvariable ["owner",nil];
 
     //--- Server
     if (isserver) then {
@@ -62,13 +62,13 @@ if (_activated) then {
         };
 
         //--- Get allowed addons
-        _addonsType = _logic getVariable ["Addons",0];
+        _addonsType = _logic getvariable ["Addons",2];
         _addons = [];
         switch _addonsType do {
 
             //--- All (including unofficial ones)
             case 3: {
-                _cfgPatches = configFile >> "Cfgpatches";
+                _cfgPatches = configfile >> "cfgpatches";
                 for "_i" from 0 to (count _cfgPatches - 1) do {
                     _class = _cfgPatches select _i;
                     if (isclass _class) then {_addons set [count _addons,configname _class];};
@@ -85,8 +85,8 @@ if (_activated) then {
             case 1: {
                 _addonsList = [];
                 {
-                    _addonsList = _addonsList + (unitaddons typeOf _x);
-                } forEach (entities "all");
+                    _addonsList = _addonsList + (unitaddons typeof _x);
+                } foreach (entities "all");
                 removeallcuratoraddons _logic;
                 _logic addcuratoraddons _addonsList;
             };
@@ -108,8 +108,8 @@ if (_activated) then {
 
             if (_adminVar != "") then {_ownerVar = _adminVar;};
 
-            _forced = _logic getVariable ["forced",0] > 0;
-            _name = _logic getVariable ["name",""];
+            _forced = _logic getvariable ["forced",0] > 0;
+            _name = _logic getvariable ["name",""];
             if (_name == "") then {_name = localize "STR_A3_curator";};
 
             //--- Wait until mission starts
@@ -124,43 +124,42 @@ if (_activated) then {
                 //--- Wait for player to become Zeus
                 switch true do {
                     case (_ownerUID > 0): {
-                        waitUntil {
+                        waituntil {
                             sleep 0.01;
                             {getplayeruid _x == _ownerVar} count playableunits > 0 || isnull _logic
                         };
                     };
                     default {
-                        waitUntil {isplayer (missionnamespace getVariable [_ownerVar,objnull]) || isnull _logic};
+                        waituntil {isplayer (missionnamespace getvariable [_ownerVar,objnull]) || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitWith {};
+                if (isnull _logic) exitwith {};
 
                 //--- Assign
                 _player = objnull;
                 switch true do {
                     case (_ownerUID > 0): {
                         {
-                            if (getplayeruid _x == _ownerVar) exitWith {_player = _x;};
-                        } forEach playableunits;
+                            if (getplayeruid _x == _ownerVar) exitwith {_player = _x;};
+                        } foreach playableunits;
                     };
                     default {
-                        _player = missionnamespace getVariable [_ownerVar,objnull];
+                        _player = missionnamespace getvariable [_ownerVar,objnull];
                     };
                 };
 
-                waitUntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
-                waitUntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isnull _logic};
-                if (isnull _logic) exitWith {};
+                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
+                waituntil {_player assignCurator _logic; getassignedcuratorunit _logic == _player || isnull _logic};
+                if (isnull _logic) exitwith {};
 
                 //--- Add radio channels
                 {
                     _x radiochanneladd [_player];
-                } forEach (_logic getVariable ["channels",[]]);
+                } foreach (_logic getvariable ["channels",[]]);
 
-                // Added by ace_zeus to delay ascension message at mission start
-                [{
-                    _logic = _this select 0;
-                    _player = _this select 1;
+                // Added by ace_zeus to delay ascension message code
+                private _msgCode = {
+                    params ["_logic","_player"];
 
                     //--- Sent notification to all assigned players
                     if ((_logic getVariable ["showNotification",true]) && GVAR(zeusAscension)) then {
@@ -170,61 +169,48 @@ if (_activated) then {
                             };
                         } forEach (curatoreditableobjects _logic);
                     };
-                },[_logic,_player]] call CBA_fnc_execNextFrame;
+                };
+
+                // Added by ace_zeus to hide ascension messages
+                if !(EGVAR(common,settingsInitFinished)) then {
+                    EGVAR(common,runAtSettingsInitialized) pushBack [_msgCode, [_logic,_player]];
+                } else {
+                    [_logic,_player] call _msgCode;
+                };
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 // Added by ace_zeus
-                ["zeusUnitAssigned", [_logic,_player]] call EFUNC(common,globalEvent);
-
-                //--- Forced interface
-                //if (_forced) then {
-                //  [[true,true],"bis_fnc_forceCuratorInterface",_player] call bis_fnc_mp;
-                //};
+                [QGVAR(zeusUnitAssigned), [_logic,_player]] call CBA_fnc_globalEvent;
 
                 //--- Wait for player to stop being Zeus
                 switch true do {
                     case (_ownerUID > 0): {
-                        waitUntil {
+                        waituntil {
                             sleep 0.01;
                             {getplayeruid _x == _ownerVar} count playableunits == 0 || isnull _logic
                         };
                     };
                     default {
-                        waitUntil {_player != missionnamespace getVariable [_ownerVar,objnull] || isnull _logic};
+                        waituntil {_player != missionnamespace getvariable [_ownerVar,objnull] || isnull _logic};
                     };
                 };
-                if (isnull _logic) exitWith {};
+                if (isnull _logic) exitwith {};
 
                 //--- Add radio channels
                 {
                     _x radiochannelremove [_player];
-                } forEach (_logic getVariable ["channels",[]]);
+                } foreach (_logic getvariable ["channels",[]]);
 
                 //--- Unassign
-                waitUntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
-                if (isnull _logic) exitWith {};
+                waituntil {unassigncurator _logic; isnull (getassignedcuratorunit _logic) || isnull _logic};
+                if (isnull _logic) exitwith {};
             };
         };
 
-        //--- Activated all future addons
-        _addons = [];
-        {
-            if (typeOf _x == "ModuleCuratorAddAddons_F") then {
-                _paramAddons = call compile ("[" + (_x getVariable ["addons",""]) + "]");
-                {
-                    if !(_x in _addons) then {_addons set [count _addons,_x];};
-                    {
-                        if !(_x in _addons) then {_addons set [count _addons,_x];};
-                    } forEach (unitaddons _x);
-                } forEach _paramAddons;
-            };
-        } forEach (synchronizedobjects _logic);
-        _addons call bis_fnc_activateaddons;
-
         // Added by ace_zeus to delay bird code
-        [{
-            _logic = _this select 0;
+        private _birdCode = {
+            params ["_logic"];
 
             if (GVAR(zeusBird)) then {
                 //--- Create bird
@@ -244,16 +230,38 @@ if (_activated) then {
                     }
                 ];
             };
-        },[_logic]] call CBA_fnc_execNextFrame;
+        };
+
+        // Added by ace_zeus to hide camera bird
+        if !(EGVAR(common,settingsInitFinished)) then {
+            EGVAR(common,runAtSettingsInitialized) pushBack [_birdCode, [_logic]];
+        } else {
+            [_logic] call _birdCode;
+        };
+
+        //--- Activated all future addons
+        _addons = [];
+        {
+            if (typeof _x == "ModuleCuratorAddAddons_F") then {
+                _paramAddons = call compile ("[" + (_x getvariable ["addons",""]) + "]");
+                {
+                    if !(_x in _addons) then {_addons set [count _addons,_x];};
+                    {
+                        if !(_x in _addons) then {_addons set [count _addons,_x];};
+                    } foreach (unitaddons _x);
+                } foreach _paramAddons;
+            };
+        } foreach (synchronizedobjects _logic);
+        _addons call bis_fnc_activateaddons;
     };
 
     //--- Player
     if (hasinterface) then {
-        waitUntil {local player};
+        waituntil {local player};
         _serverCommand = if (_ownerVar == "#adminLogged") then {"#shutdown"} else {"#kick"};
 
         //--- Black effect until the interface is open
-        _forced = _logic getVariable ["forced",0] > 0;
+        _forced = _logic getvariable ["forced",0] > 0;
         if (_forced) then {
             _isCurator = switch true do {
                 case (_ownerUID > 0): {
@@ -263,7 +271,7 @@ if (_activated) then {
                     isserver || servercommandavailable _serverCommand
                 };
                 default {
-                    player == missionnamespace getVariable [_ownerVar,objnull]
+                    player == missionnamespace getvariable [_ownerVar,objnull]
                 };
             };
             if (_isCurator) then {
@@ -274,11 +282,11 @@ if (_activated) then {
 
         //--- Check if player is server admin
         if (_isAdmin) then {
-            _adminVar = _logic getVariable ["adminVar",""];
-            _logic setVariable ["adminVar",nil];
+            _adminVar = _logic getvariable ["adminVar",""];
+            _logic setvariable ["adminVar",nil];
             if (isserver) then {
                 //--- Host
-                missionnamespace setVariable [_adminVar,player];
+                missionnamespace setvariable [_adminVar,player];
             } else {
                 //--- Client
                 [_logic,_adminVar,_serverCommand] spawn {
@@ -288,13 +296,13 @@ if (_activated) then {
                     _adminVar = _this select 1;
                     _serverCommand = _this select 2;
                     while {true} do {
-                        waitUntil {sleep 0.1; servercommandavailable _serverCommand};
-                        missionnamespace setVariable [_adminVar,player];
+                        waituntil {sleep 0.1; servercommandavailable _serverCommand};
+                        missionnamespace setvariable [_adminVar,player];
                         publicvariable _adminVar;
                         _respawn = player addeventhandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
 
-                        waitUntil {sleep 0.1; !servercommandavailable _serverCommand};
-                        missionnamespace setVariable [_adminVar,objnull];
+                        waituntil {sleep 0.1; !servercommandavailable _serverCommand};
+                        missionnamespace setvariable [_adminVar,objnull];
                         publicvariable _adminVar;
                         player removeeventhandler ["respawn",_respawn];
                     };
@@ -305,7 +313,7 @@ if (_activated) then {
         [_logic] spawn {
             _logic = _this select 0;
             sleep 1;
-            waitUntil {alive player};
+            waituntil {alive player};
 
             //--- Show warning when Zeus key is not assigned
             if (count (actionkeys "curatorInterface") == 0) then {
@@ -319,7 +327,7 @@ if (_activated) then {
 
             //--- Show hint about pinging for players
             if (
-                isNil {profilenamespace getVariable "bis_fnc_curatorPinged_done"}
+                isnil {profilenamespace getvariable "bis_fnc_curatorPinged_done"}
                 &&
                 {isTutHintsEnabled}
                 &&

@@ -40,7 +40,7 @@ if (_leave) exitWith {
 // should switch locality
 // This doesn't work anymore, because one's now able to switch to units from a different side
 //[_unit] joinSilent group player;
-[QGVAR(switchLocality), [_unit, player]] call EFUNC(common,serverEvent);
+[QGVAR(switchLocality), [_unit, player]] call CBA_fnc_serverEvent;
 
 [{
     params ["_args", "_pfhId"];
@@ -72,7 +72,7 @@ if (_leave) exitWith {
         // set owner back to original owner
         private _oldOwner = _oldUnit getVariable[QGVAR(OriginalOwner), -1];
         if (_oldOwner > -1) then {
-            ["setOwner", [_oldUnit, _oldOwner]] call EFUNC(common,serverEvent);
+            ["ace_setOwner", [_oldUnit, _oldOwner]] call CBA_fnc_serverEvent;
         };
 
         [localize LSTRING(SwitchedUnit)] call EFUNC(common,displayTextStructured);

@@ -32,7 +32,7 @@ if !(["ace_cargo"] call EFUNC(common,isModLoaded) && ["ace_repair"] call EFUNC(c
             if (getNumber (configFile >> "CfgVehicles" >> "ACE_Track" >> QEGVAR(cargo,size)) > [_mouseOverUnit] call EFUNC(cargo,getCargoSpaceLeft)) then {
                 [LSTRING(OnlyEnoughCargoSpace)] call EFUNC(common,displayTextStructured);
             } else {
-                ["AddCargoByClass", ["ACE_Track", _mouseOverUnit, 1, true]] call EFUNC(common,localEvent);
+                ["ace_addCargoByClass", ["ACE_Track", _mouseOverUnit, 1, true]] call CBA_fnc_localEvent;
             };
         };
     };

@@ -20,7 +20,7 @@ _closeCode = {
 
 
 //Add Eventhandler:
-["RangerfinderData", {_this call FUNC(recieveRangefinderData)}] call EFUNC(common,addEventHandler);
+[QEGVAR(vector,rangefinderData), {_this call FUNC(recieveRangefinderData)}] call CBA_fnc_addEventHandler;
 
 //Global Variables to default:
 GVAR(gpsPositionASL) = [0,0,0];
