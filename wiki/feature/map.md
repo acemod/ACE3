@@ -31,4 +31,4 @@ The Blufor tracker marks the position of your faction's group leaders on the map
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="map" %}

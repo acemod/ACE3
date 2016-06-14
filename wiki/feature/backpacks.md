@@ -14,4 +14,4 @@ A zipper sound is played when someone opens your backpack.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="backpacks" %}

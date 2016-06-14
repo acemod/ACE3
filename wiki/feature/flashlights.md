@@ -30,4 +30,4 @@ When using those flashlights you will have a slight glow around you making this 
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="flashlights" %}

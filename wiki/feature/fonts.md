@@ -14,4 +14,4 @@ This module adds a font that will be used in the future, characters with equal w
 
 ## 3. Dependencies
 
-`ace_main`
+{% include dependencies_list.md component="fonts" %}

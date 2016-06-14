@@ -13,4 +13,4 @@ Adds the MX-2A thermal imaging device.
 
 ## 3. Dependencies
 
-`ace_apl`
+{% include dependencies_list.md component="mx2a" %}

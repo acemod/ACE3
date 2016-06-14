@@ -194,7 +194,7 @@ Basic (FieldDressing) | highest | low | highest | medium | low | high | low | me
 Bandage (packing) | highest | highest | highest | medium | lowest | low | highest | low
 Bandage (elastic) | highest | low | highest | highest | highest | highest | medium | highest
 QuikClot | high | lowest | high | high | high | high | high | medium
- 
+
 ##### 2.2.1.10 Tourniquet
 
 - Can only be applied on limbs.
@@ -395,4 +395,5 @@ Paramedic:
  - 2 × Saline IV (500ml)
 
 ## 4. Dependencies
-`ace_interaction`, `ace_modules`, `ace_apl`
+
+{% include dependencies_list.md component="medical" %}

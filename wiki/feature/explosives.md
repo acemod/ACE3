@@ -38,4 +38,4 @@ Enables attaching explosives to vehicles.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="explosives" %}

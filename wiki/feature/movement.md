@@ -38,4 +38,4 @@ The player can now use the sights of rifles and pistols in all prone stances.
 
 ## Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="movement" %}

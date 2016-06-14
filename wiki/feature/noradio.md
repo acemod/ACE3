@@ -15,4 +15,4 @@ Does not mute AI callouts.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="noradio" %}

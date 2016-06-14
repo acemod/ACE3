@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Reload
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -19,4 +19,4 @@ Hides the actual round count of magazines and removes the icon when the current 
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="reload" %}

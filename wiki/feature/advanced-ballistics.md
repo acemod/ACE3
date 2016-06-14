@@ -101,3 +101,7 @@ It is probably best to modify an example that's close to the bullet you are tryi
     Example, when shooting with the M4 barrel (`368.3`mm).
     The length is between the 5th and 6th barrelLengths (`360.68, 391.16`).
     So the muzzle velocity will be between 5th and 6th muzzleVelocities (`866, 878`).
+
+## 5. Dependencies
+
+{% include dependencies_list.md component="advanced_ballistics" %}

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Grenades
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -29,4 +29,4 @@ Adds the M84 stun grenade. The stun effect will also affect AI.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="grenades" %}

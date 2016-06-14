@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Weapon Select
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -25,7 +25,7 @@ Changes the grenade selection key bindings to help prevent accidents.
 
 ### 2.1 Weapons
 
-- Press <kbd>0</kbd> to holster and unholster a weapon. 
+- Press <kbd>0</kbd> to holster and unholster a weapon.
 - When a weapon is holstered, the weapon fire button will not pull the weapon out. This can be used as an additional level of safety or as a role-playing feature.
 
 Quick weapon selection is not bound by default, but can be bound in the controls menu under `ACE3 Weapons`.
@@ -34,4 +34,4 @@ Quick vehicle weapon selection is not bound by default, but can be bound in the 
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="weaponselect" %}

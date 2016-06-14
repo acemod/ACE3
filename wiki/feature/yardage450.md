@@ -21,4 +21,4 @@ Adds the Bushnell Yardage Pro Sport 450 Laser Rangefinder.
 
 ## 3. Dependencies
 
-`ace_apl` , `ace_laser`
+{% include dependencies_list.md component="yardage450" %}

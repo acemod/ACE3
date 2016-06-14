@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Vehicles
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -48,4 +48,4 @@ MBT main guns and mortars can no longer lock on enemies. The AT rounds of both n
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="vehicles" %}

@@ -12,4 +12,4 @@ Adds the medical menu, this is entirely optional and can be limited to vehicles 
 
 ## 3. Dependencies
 
-`ace_medical`
+{% include dependencies_list.md component="medical_menu" %}

@@ -20,4 +20,4 @@ You can now use the safety mode of any weapon. Switching weapon modes takes the 
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="safemode" %}

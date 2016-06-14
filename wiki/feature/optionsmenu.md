@@ -23,6 +23,6 @@ Adds the options menu used by other components.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="optionsmenu" %}
 
 *Note: The Options Menu module is utilized by many other modules. Disabling it is not recommended.*

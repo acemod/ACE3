@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: UI
-description: 
+description:
 group: feature
 category: general
 parent: wiki
@@ -13,4 +13,4 @@ Changes the chat contrast on the map to allow easier reading.
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="ui" %}

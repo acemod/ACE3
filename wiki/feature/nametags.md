@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Nametags
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -17,4 +17,4 @@ A soundwave effect is shown when someone is speaking using either the vanilla VO
 
 ## 2. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="nametags" %}

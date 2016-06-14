@@ -14,4 +14,4 @@ Changes the names of vehicles, magazines, weapons, grenades, explosive charges a
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="realisticnames" %}

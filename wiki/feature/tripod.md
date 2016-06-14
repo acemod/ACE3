@@ -23,4 +23,4 @@ To adjust or pick up the tripod just interact with it <kbd>⊞&nbsp;Win</kbd> an
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="tripod" %}

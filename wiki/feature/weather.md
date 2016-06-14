@@ -17,4 +17,5 @@ ACE3 Weather simulates realistic weather effects, according to the geographical 
 - The arrow representing wind info is based on [Beaufort scale](http://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale)
 
 ## 3. Dependencies
-`ace_common`, `ace_modules`
+
+{% include dependencies_list.md component="weather" %

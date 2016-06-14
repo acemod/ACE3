@@ -33,4 +33,4 @@ Smoothens the parachute landing animation.
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="parachute" %}
