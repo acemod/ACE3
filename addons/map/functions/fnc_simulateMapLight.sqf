@@ -57,8 +57,9 @@ if (_flashlight == "") then {
 
     //flashlight settings
     _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> QGVAR(Flashlight));
-    _flashTex = getText (_cfg >> QGVAR(Flashlight_Beam));
     _size = getNumber (_cfg >> QGVAR(Flashlight_Size));
+    _flashTex = getText (_cfg >> QGVAR(Flashlight_Beam));
+    _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)
     if (_mapScale < 0.2) then {_beamSize = _beamSize / (_mapScale * (1 / 0.2))};
