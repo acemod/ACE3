@@ -59,6 +59,12 @@ if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then 
     // Delete attached item after 0.5 seconds
     [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call CBA_fnc_waitAndExecute;
 } else {
+    //handle any objects that may be attached to the object
+    {
+        detach _x;
+        deleteVehicle _x;
+    } forEach (attachedObjects _attachedObject);
+    
     // Delete attached item
     deleteVehicle _attachedObject;
 };
