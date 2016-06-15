@@ -34,8 +34,7 @@ _lastDir params ["_dirH", "_dirV"];
 
     To simulate this we divide the base of the pyramid into
     rectangular areas that the beam went through between
-    now and the last call of the PFH. If we have an L
-    shaped area, we simply complete it to a rectangle.
+    now and the last call of the PFH.
 */
 
 // First check if the cone was changed and we're outside of the cone
@@ -53,28 +52,42 @@ if (_dirV < (_angleV / -2)) then {
 };
 
 // 24 movement steps per second (60 deg horizontal)
-private _steps = 1 max round ((CBA_time - _lastTick) * 24);
+private _steps = round ((CBA_time - _lastTick) * 24);
 private _newDirH = _dirH;
 private _newDirV = _dirV;
 
+// If the antenna has not moved yet, scan the last sector again
+if (_steps == 0) then {
+    _steps == 1;
+    _dirH = [_dirH - 2.5, _dirH + 2.5] select _moveRight;
+    _newDirH = [_newDirH - 2.5, _newDirH + 2.5] select _moveRight;
+};
+
+private _detectedAircraft = [];
+
 while {_steps > 0} do {
+    // Go one line lower when reaching the end of the cone
+    if (_newDirH <= _angleH) then {
+        _moveRight = !_moveRight;
+        _newDirV = _newDirV - 2.5;
+
+        // If bottom of cone is reached go back to the top
+        if (_newDirV < (_angleV / -2)) then {
+            _newDirV = _angleV / 2;
+        };
+    };
+
     while {_steps > 0 && {_newDirH < _angleH}} do {
         // Beam has an angle of 2.5 deg
         _newDirH = [_newDirH + 2.5, _newDirH - 2.5] select _moveRight;
         _steps = _steps - 1;
     };
 
-    // If we still have steps to take, switch direction, go one line lower
-    if (_steps > 0) then {
-        _moveRight = !_moveRight;
-        _newDirV = _newDirV - 2.5;
-
-        // If bottom of cone is reached, scan and back to the top.
-        if (_newDirV < (_angleV / -2)) then {
-            // scan here
-            _newDirV = _angleV / 2;
-        };
-    };
+    _detectedAircraft append (
+        [_vehicle, [_dirH, _newDirH], [_dirV, _dirV + 2.5]] call FUNC(scan)
+    ); 
 };
 
-// scan here
+_args set [1, [_newDirH, _newDirV]];
+_args set [2, CBA_time];
+_args set [3, _moveRight];
