@@ -43,8 +43,8 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Empty_DisplayName);
         descriptionShort = CSTRING(Shield_Empty_DescriptionShort);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
-        picture = PATHTOF(UI\ace_chemlight_shield_x_ca.paa);
-        scope = 2;
+        picture = QPATHTOF(UI\ace_chemlight_shield_x_ca.paa);
+        scope = 1;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
         };
@@ -56,14 +56,14 @@ class CfgWeapons {
         displayName = CSTRING(Shield_Green_DisplayName);
         descriptionShort = CSTRING(Shield_Empty_DescriptionShort);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
-        picture = PATHTOF(UI\ace_chemlight_shield_green_x_ca.paa);
-        scope = 2;
+        picture = QPATHTOF(UI\ace_chemlight_shield_green_x_ca.paa);
+        scope = 1;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "green";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_green_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "green";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_green_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -72,13 +72,13 @@ class CfgWeapons {
         ACE_Chemlight = "Chemlight_red";
         displayName = CSTRING(Shield_Red_DisplayName);
         descriptionShort = CSTRING(Shield_Green_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_red_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_shield_red_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "red";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_red_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "red";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_red_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -87,13 +87,13 @@ class CfgWeapons {
         ACE_Chemlight = "Chemlight_blue";
         displayName = CSTRING(Shield_Blue_DisplayName);
         descriptionShort = CSTRING(Shield_Blue_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_blue_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_shield_blue_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "blue";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_blue_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "blue";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_blue_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -102,13 +102,13 @@ class CfgWeapons {
         ACE_Chemlight = "Chemlight_yellow";
         displayName = CSTRING(Shield_Yellow_DisplayName);
         descriptionShort = CSTRING(Shield_Yellow_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_yellow_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_shield_yellow_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "yellow";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_yellow_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "yellow";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_yellow_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -117,13 +117,13 @@ class CfgWeapons {
         ACE_Chemlight = "ACE_Chemlight_Orange";
         displayName = CSTRING(Shield_Orange_DisplayName);
         descriptionShort = CSTRING(Shield_Orange_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_orange_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_shield_orange_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "orange";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_orange_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "orange";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_orange_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };
@@ -132,13 +132,13 @@ class CfgWeapons {
         ACE_Chemlight = "ACE_Chemlight_White";
         displayName = CSTRING(Shield_White_DisplayName);
         descriptionShort = CSTRING(Shield_White_DescriptionShort);
-        picture = PATHTOF(UI\ace_chemlight_shield_white_x_ca.paa);
+        picture = QPATHTOF(UI\ace_chemlight_shield_white_x_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "white";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\chemlight_shield_beam_white_ca.paa));
-                ACE_Map_Flashlight_Size = 0.8;
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = QPATHTOF(UI\chemlight_shield_beam_white_ca.paa);
+                ACE_Flashlight_Size = 0.8;
             };
         };
     };

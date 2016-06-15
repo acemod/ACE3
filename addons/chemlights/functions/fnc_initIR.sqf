@@ -17,12 +17,11 @@
 #include "script_component.hpp"
 
 params ["_dummy"];
-private ["_chemlightClass", "_config", "_delay", "_lifeTime"];
 
-_chemlightClass = getText (configFile >> "CfgVehicles" >> typeOf _dummy >> "ACE_Attachable");
-_config = configFile >> "CfgAmmo" >> _chemlightClass;
-_delay = getNumber (_config >> "explosionTime");
-_lifeTime = getNumber (_config >> "timeToLive");
+private _chemlightClass = getText (configFile >> "CfgVehicles" >> typeOf _dummy >> "ACE_Attachable");
+private _config = configFile >> "CfgAmmo" >> _chemlightClass;
+private _delay = getNumber (_config >> "explosionTime");
+private _lifeTime = getNumber (_config >> "timeToLive");
 
 [{
     params ["_dummy", "_lifeTime"];

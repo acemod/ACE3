@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params [["_input", "", ["", objNull]]];
+
 private _class = if (typeName _input == "OBJECT") then {typeOf _input} else {_input};
 
-((getText (configFile >> "CfgAmmo" >> _class >> "ACE_Chemlight_IR")) != "")
+isText (configFile >> "CfgAmmo" >> _class >> "ACE_Chemlight_IR")

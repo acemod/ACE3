@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class ACE_Chemlight_IR_Dummy {
         class ADDON {
-            init = QUOTE(if (isServer) then {_this call FUNC(initIR)});
+            serverInit = QUOTE(_this call FUNC(initIR));
         };
     };
 };

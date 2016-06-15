@@ -19,22 +19,21 @@
 #include "script_component.hpp"
 
 params ["", "_player", "_args"];
-private ["_action", "_actions", "_config", "_displayName", "_chemlights", "_icon", "_statement", "_shieldClass"];
 
-_actions = [];
-_chemlights = [_player] call FUNC(getShieldComponents);
+private _actions = [];
+private _chemlights = [_player] call FUNC(getShieldComponents);
 
 //add all carried chemlight menus
 {
-    _config = (configFile >> "CfgMagazines" >> _x);
-    _icon = getText (_config >> "picture");
-    _shieldClass = getText (_config >> "ACE_Chemlight_Shield");
-    _displayName = getText (configFile >> "CfgWeapons" >> _shieldClass >> "displayName");
+    private _config = (configFile >> "CfgMagazines" >> _x);
+    private _icon = getText (_config >> "picture");
+    private _shieldClass = getText (_config >> "ACE_Chemlight_Shield");
+    private _displayName = getText (configFile >> "CfgWeapons" >> _shieldClass >> "displayName");
     
     _displayName = format [localize LSTRING(Action_Prepare), _displayName];
-    _statement = {_this call FUNC(prepShield)};
+    private _statement = {_this call FUNC(prepShield)};
 
-    _action = [_x, _displayName, _icon, _statement, {true}, {}, [_x, _shieldClass]] call EFUNC(interact_menu,createAction);
+    private _action = [_x, _displayName, _icon, _statement, {true}, {}, [_x, _shieldClass]] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _player];
 } forEach _chemlights;
 

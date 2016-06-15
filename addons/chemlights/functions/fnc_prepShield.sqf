@@ -20,12 +20,11 @@
 
 params ["_target", "_unit", "_args"];
 _args params ["_chemlight", "_shieldClass"];
-private ["_cfg", "_displayName", "_picture", "_text"];
 
-_cfg = (configFile >> "CfgWeapons" >> _shieldClass);
-_displayName = getText (_cfg >> "displayName");
-_picture = getText (_cfg >> "picture");
-_text = format [localize LSTRING(Action_Prepare_Done), _displayName];
+private _cfg = (configFile >> "CfgWeapons" >> _shieldClass);
+private _displayName = getText (_cfg >> "displayName");
+private _picture = getText (_cfg >> "picture");
+private _text = format [localize LSTRING(Action_Prepare_Done), _displayName];
 
 //we don't need to check for space, because it's always 2g -> 1g
 _unit removeItem _chemlight;

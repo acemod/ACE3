@@ -18,15 +18,14 @@
 #include "script_component.hpp"
 
 params ["_projectile", "_ammo"];
-private ["_config", "_classX", "_pos", "_velocity", "_vector", "_vehX"];
 
-_config = configFile >> "CfgAmmo" >> _ammo;
-_classX = getText (_config >> "ACE_Chemlight_IR");
-_pos = getPosATL _projectile;
-_velocity = velocity _projectile;
+private _config = configFile >> "CfgAmmo" >> _ammo;
+private _dummyClass = getText (_config >> "ACE_Chemlight_IR");
+private _pos = getPosATL _projectile;
+private _velocity = velocity _projectile;
 
 deleteVehicle _projectile;
-_vehX = _classX createVehicle _pos;
-_vehX setPosATL _pos;
-[_vehX, 90, 0] call BIS_fnc_setPitchBank;
-_vehX setVelocity _velocity;
+private _dummy = _dummyClass createVehicle _pos;
+_dummy setPosATL _pos;
+[_dummy, 90, 0] call BIS_fnc_setPitchBank;
+_dummy setVelocity _velocity;

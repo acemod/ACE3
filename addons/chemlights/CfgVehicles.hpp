@@ -28,7 +28,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         displayName = "ACE Chemlight IR Marker";
         mapSize = 0.2;
-        scope = 2;
+        scope = 1;
         type = 1;
         vehicleClass = "";
         simulation = "nvmarker";
@@ -56,7 +56,7 @@ class CfgVehicles {
         displayName = "ACE Chemlight IR Phys Dummy";
         mass = 0.75;
         model = "\A3\Weapons_f\chemlight\chemlight_blue";
-        scope = 2;
+        scope = 1;
         vehicleClass = "";
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
