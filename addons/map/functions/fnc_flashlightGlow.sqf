@@ -26,8 +26,8 @@ if (!isNull _light) then {
 };
 
 if (_flashlight != "") then {
-    _color = getText (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> QGVAR(Flashlight) >> QGVAR(Flashlight_Color));
-    if !(_color in ["white", "red", "green", "blue", "yellow"]) then {_color = "white"};
+    _color = getText (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "Flashlight" >> "ACE_Flashlight_Colour");
+    if !(_color in ["white", "red", "green", "blue", "yellow", "orange"]) then {_color = "white"};
     _class = format["ACE_FlashlightProxy_%1", _color];
 
     _light = _class createVehicle [0,0,0];

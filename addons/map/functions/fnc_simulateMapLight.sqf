@@ -56,9 +56,9 @@ if (_flashlight == "") then {
     _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> QGVAR(Flashlight));
-    _size = getNumber (_cfg >> QGVAR(Flashlight_Size));
-    _flashTex = getText (_cfg >> QGVAR(Flashlight_Beam));
+    _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "Flashlight");
+    _size = getNumber (_cfg >> "ACE_Flashlight_Size");
+    _flashTex = getText (_cfg >> "ACE_Flashlight_Beam");
     _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
 
     //after 5x zoom, it's simulated to be fixed (it actually gets bigger relative to zoom)

@@ -11,11 +11,11 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "red";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
-                ACE_Map_Flashlight_Size = 1.75;
-                ACE_Map_Flashlight_Sound = 1;
+            class Flashlight {
+                ACE_Flashlight_Colour = "red";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
+                ACE_Flashlight_Size = 1.75;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
@@ -28,10 +28,10 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "red";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_red_ca.paa));
-                ACE_Map_Flashlight_Size = 1.5;
+            class Flashlight {
+                ACE_Flashlight_Colour = "red";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
+                ACE_Flashlight_Size = 1.5;
                 ACE_Map_Flashlight_Sound = 1;
             };
         };
@@ -45,11 +45,11 @@ class CfgWeapons {
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
-            class ACE_Map_Flashlight {
-                ACE_Map_Flashlight_Color = "white";
-                ACE_Map_Flashlight_Beam = QUOTE(PATHTOF(UI\Flashlight_beam_white_ca.paa));
-                ACE_Map_Flashlight_Size = 2.15;
-                ACE_Map_Flashlight_Sound = 1;
+            class Flashlight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_white_ca.paa);
+                ACE_Flashlight_Size = 2.15;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
