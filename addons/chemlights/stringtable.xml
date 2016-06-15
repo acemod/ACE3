@@ -56,7 +56,7 @@
             <English>Red Hi Light</English>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
-            <English>Type: Light - Red Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
         </Key>
         
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
@@ -66,7 +66,7 @@
             <English>Yellow Hi Light</English>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
-            <English>Type: Light - Yellow Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
         </Key>
         
         <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
@@ -76,7 +76,7 @@
             <English>Orange Hi Light</English>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
-            <English>Type: Light - Orange Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
         </Key>
         
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
@@ -86,7 +86,7 @@
             <English>White Hi Light</English>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
-            <English>Type: Light - White Hi (30 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
         </Key>
         
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
