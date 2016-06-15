@@ -6,7 +6,7 @@ class CfgWeapons {
         displayname = CSTRING(SpareBarrelName);
         descriptionshort = CSTRING(SpareBarrelDescription);
         //model = "";
-        picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
+        picture = QPATHTOF(UI\spare_barrel_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 30;

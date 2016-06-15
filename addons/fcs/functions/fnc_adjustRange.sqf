@@ -22,6 +22,7 @@ private _min = getNumber (_turretConfig >> QGVAR(MinDistance));
 private _max = getNumber (_turretConfig >> QGVAR(MaxDistance));
 
 private _distance = _vehicle getVariable [format ["%1_%2", QGVAR(Distance), _turret], _min];
+TRACE_4("",_distance,_delta,_min,_max);
 
 _distance = _distance + _delta;
 _distance = _distance min _max;

@@ -16,8 +16,6 @@
 #include "script_component.hpp"
 #define MAX_DISTANCE 10
 
-private "_target";
-
 params ["_display"];
 
 if (isNil "_display") exitWith {};
@@ -34,7 +32,7 @@ if (isNil QGVAR(LatestDisplayOptionMenu)) then {
     };
 };
 
-_target = GVAR(INTERACTION_TARGET);
+private _target = GVAR(INTERACTION_TARGET);
 if (isNil QGVAR(INTERACTION_TARGET_PREVIOUS)) then {
     GVAR(INTERACTION_TARGET_PREVIOUS) = _target;
 };
@@ -81,10 +79,10 @@ GVAR(MenuPFHID) = [{
         closeDialog 314412;
         //If we failed because of distance check, show UI message:
         if ((ACE_player distance GVAR(INTERACTION_TARGET)) > GVAR(maxRange)) then {
-            ["displayTextStructured", [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2, ACE_player]] call EFUNC(common,localEvent);
+            [[ELSTRING(medical,DistanceToFar), [GVAR(INTERACTION_TARGET)] call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
         };
     };
 
 }, 0, [_display]] call CBA_fnc_addPerFrameHandler;
 
-["Medical_onMenuOpen", [ACE_player, _target]] call EFUNC(common,localEvent);
+["ace_medicalMenuOpened", [ACE_player, _target]] call CBA_fnc_localEvent;

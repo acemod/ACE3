@@ -29,7 +29,7 @@ if ((count _emptyPosAGL) != 3) exitWith {
     TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {_unloader == ACE_player}) then {
         //display text saying there are no safe places to exit the vehicle
-        ["displayTextStructured", [localize ELSTRING(common,NoRoomToUnload)]] call EFUNC(common,localEvent);
+        [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
     };
     false
 };
@@ -50,8 +50,9 @@ _vehicle setVariable [QGVAR(space), (_space + _itemSize), true];
 
 if (_item isEqualType objNull) then {
     detach _item;
-    _item setPosASL (AGLtoASL _emptyPosAGL);
-    ["hideObjectGlobal", [_item, false]] call EFUNC(common,serverEvent);
+    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
+    // do both on server to ensure they are executed in the correct order
+    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);

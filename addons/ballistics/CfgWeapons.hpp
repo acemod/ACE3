@@ -14,100 +14,83 @@ class CfgWeapons {
     class MMG_02_base_F;
     class Rifle_Base_F;
     class Rifle_Long_Base_F;
-    class WeaponSlotsInfo;
     class MuzzleSlot;
-    
+
     /* Long Rifles */
-    
+
     class GM6_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
-    
+
     class LRR_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00020; // radians. Equal to 0.70 MOA.
         };
     };
-    
+
     class DMR_06_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
-        
+
         class FullAuto: Mode_FullAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
-    
+
     class DMR_05_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
-        
+
         class FullAuto: Mode_FullAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
-    
+
     class DMR_04_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
-    
+
     class DMR_03_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.00032; // radians. Equal to 1.10 MOA.
         };
-        
+
         class FullAuto: Mode_FullAuto {
             dispersion = 0.00032; // radians. Equal to 1.10 MOA.
         };
     };
-    
+
     class DMR_02_base_F: Rifle_Long_Base_F {
         class Single: Mode_SemiAuto {
             dispersion = 0.000262; // radians. Equal to 0.90 MOA.
         };
     };
-    
+
     class DMR_01_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
         class Single: Mode_SemiAuto {
             dispersion = 0.0004; // radians. Equal to 1.375 MOA.
         };
     };
-    
+
     class EBR_base_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
         class Single: Mode_SemiAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
-        
+
         class FullAuto: Mode_FullAuto {
             dispersion = 0.00029; // radians. Equal to 1.00 MOA.
         };
     };
-    
+
     /* MX */
-    
-    class arifle_MX_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
-    };
+
+    class arifle_MX_Base_F: Rifle_Base_F {};
     class arifle_MX_SW_F: arifle_MX_Base_F {
         magazines[] = {
             "100Rnd_65x39_caseless_mag_Tracer",
@@ -120,13 +103,6 @@ class CfgWeapons {
         initSpeed = -1.0;
         ACE_barrelTwist=228.6;
         ACE_barrelLength=406.4;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                // Shit is broken again
-                //compatibleItems[] += {"ACE_muzzle_mzls_H"};
-                compatibleItems[] = {"muzzle_snds_H","muzzle_snds_H_SW","ACE_muzzle_mzls_H"};
-            };
-        };
     };
     class arifle_MXM_F: arifle_MX_Base_F {
         magazines[] = {
@@ -150,13 +126,7 @@ class CfgWeapons {
 
 
     /* Katiba */
-    class arifle_katiba_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
-    };
+    class arifle_katiba_Base_F: Rifle_Base_F {};
 
 
     /* Other */
@@ -167,42 +137,16 @@ class CfgWeapons {
             "ACE_200Rnd_65x39_cased_Box_Tracer_Dim"
         };
         initSpeed = -0.9763;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};
-            };
-        };
         ACE_barrelTwist=177.8;
         ACE_barrelLength=317.5;
     };
     class LMG_Zafir_F: Rifle_Long_Base_F {
         initSpeed = -1.0;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_B"};
-            };
-        };
         ACE_barrelTwist=304.8;
         ACE_barrelLength=459.74;
     };
-
-
-    /* Assault Rifles */
-    class Tavor_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
-        };
-    };
-    class mk20_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_L"};
-            };
-        };
-    };
-
+    class Tavor_base_F: Rifle_Base_F {};
+    class mk20_base_F: Rifle_Base_F {};
 
     /* SMGs */
     class SDAR_base_F: Rifle_Base_F {
@@ -214,98 +158,48 @@ class CfgWeapons {
         class Burst: Mode_Burst {
             dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
-        
+
         class FullAuto: Mode_FullAuto {
             dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
     };
-    class pdw2000_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-    class SMG_01_Base: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-    class SMG_02_base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-    
+    class pdw2000_base_F: Rifle_Base_F {};
+    class SMG_01_Base: Rifle_Base_F {};
+    class SMG_02_base_F: Rifle_Base_F {};
+
     /* Pistols */
 
     class Pistol;
-    class Pistol_Base_F: Pistol {
-        class WeaponSlotsInfo;
-    };
+    class Pistol_Base_F: Pistol {};
 
     class hgun_P07_F: Pistol_Base_F {
         initSpeed = -0.9778;
         ACE_barrelTwist=254.0;
         ACE_barrelLength=101.6;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
     };
 
     class hgun_Rook40_F: Pistol_Base_F {
         initSpeed = -1.0;
         ACE_barrelTwist=254.0;
         ACE_barrelLength=111.76;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
     };
 
     class hgun_ACPC2_F: Pistol_Base_F {
         initSpeed = -1.0;
         ACE_barrelTwist=406.4;
         ACE_barrelLength=127.0;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
     };
 
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {
         initSpeed = -0.96;
         ACE_barrelTwist=406.4;
         ACE_barrelLength=114.3;
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
     };
 
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {
         initSpeed = -0.92;
         ACE_barrelTwist=406.4;
         ACE_barrelLength=76.2;
-        /*
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-        */
     };
     class hgun_PDW2000_F: pdw2000_base_F {
         initSpeed = -1.157;
@@ -391,6 +285,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -411,6 +307,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -426,6 +324,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -441,6 +341,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -462,6 +364,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -477,6 +381,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -492,6 +398,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -617,7 +525,7 @@ class CfgWeapons {
         ACE_barrelTwist=234.95;
         ACE_barrelLength=609.6;
     };
-    
+
     class HMG_127 : LMG_RCWS {
     };
     class HMG_01: HMG_127 {
@@ -627,7 +535,7 @@ class CfgWeapons {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=1143.0;
     };
-    
+
     /* Silencers */
 
     class ItemCore;

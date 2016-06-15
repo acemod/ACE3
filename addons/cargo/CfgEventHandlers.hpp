@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -20,27 +27,7 @@ class Extended_Killed_EventHandlers {
 
 //Need initPost or we have problems with setVariable with 'ACE_Cargo'
 class Extended_InitPost_EventHandlers {
-    class StaticWeapon {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject));
-        };
-    };
-    class ReammoBox_F {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject));
-        };
-    };
-    class Cargo_base_F {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
-        };
-    };
-    class CargoNet_01_box_F {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
-        };
-    };
-    class Land_CargoBox_V1_F {
+    class ThingX {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
@@ -50,27 +37,17 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
     };
-    class RoadCone_F {
+    class PlasticCase_01_base_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject); _this call DFUNC(initVehicle));
         };
     };
-    class Car {
+    class LandVehicle {
         class ADDON {
             init = QUOTE(_this call DFUNC(initVehicle));
         };
     };
-    class Tank {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initVehicle));
-        };
-    };
-    class Helicopter {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initVehicle));
-        };
-    };
-    class Plane {
+    class Air {
         class ADDON {
             init = QUOTE(_this call DFUNC(initVehicle));
         };
@@ -80,17 +57,12 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(_this call DFUNC(initVehicle));
         };
     };
-    class ACE_RepairItem_Base {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject));
-        };
-    };
-    class ACE_bodyBagObject {
-        class ADDON {
-            init = QUOTE(_this call DFUNC(initObject));
-        };
-    };
     class ACE_ConcertinaWireCoil {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
+    class Land_PortableLight_single_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(initObject));
         };

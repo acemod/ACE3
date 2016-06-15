@@ -1,4 +1,10 @@
 
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -13,6 +19,12 @@ class Extended_PostInit_EventHandlers {
     };
 };
 
+class Extended_DisplayLoad_EventHandlers {
+    class RscDisplayMission {
+        ADDON = QUOTE(_this call COMPILE_FILE(XEH_missionDisplayLoad));
+    };
+};
+
 class Extended_InitPost_EventHandlers {
     class All {
         class GVAR(executePersistent) {
@@ -21,7 +33,7 @@ class Extended_InitPost_EventHandlers {
     };
     class CAManBase {
         class GVAR(setName) {
-            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(setName)};);
+            init = QUOTE(if (local (_this select 0)) then {[ARR_2(FUNC(setName),_this)] call CBA_fnc_execNextFrame};);
         };
         class GVAR(muteUnit) {
             init = QUOTE(_this call FUNC(muteUnitHandleInitPost));
@@ -62,5 +74,11 @@ class Extended_Local_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class All {
         ADDON = QUOTE(_this call FUNC(firedEH));
+    };
+};
+
+class Extended_Engine_EventHandlers {
+    class All {
+        ADDON = QUOTE(_this call FUNC(handleEngine));
     };
 };

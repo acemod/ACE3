@@ -13,10 +13,6 @@ if(count _this > 2) then {
 if(_depth <= 2) then {
     _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
     _indirectHit = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHit");
-    
-    
-    
-    
     _testParams = [_pos, [_indirectHitRange, _indirectHit], [], [], -4, _depth, 0];
     [DFUNC(findReflections), 0, _testParams] call CBA_fnc_addPerFrameHandler;
 };

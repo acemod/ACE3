@@ -6,8 +6,9 @@ class CfgPatches {
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};
-        author[] = {"commy2", "KoffeinFlummi"};
-        authorUrl = "https://github.com/commy2/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"commy2", "KoffeinFlummi"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -17,3 +18,12 @@ class CfgPatches {
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "CfgEden.hpp"
+
+class ACE_newEvents {
+    SetSurrendered = QGVAR(setSurrendered);
+    SetHandcuffed = QGVAR(setHandcuffed);
+    MoveOutCaptive = QGVAR(moveOutCaptive);
+    MoveInCaptive = QGVAR(moveInCaptive);
+    CaptiveStatusChanged = "ace_captiveStatusChanged";
+};

@@ -19,34 +19,34 @@ class Rsctitles {
             colorBackground[] = {1,1,1,1};
             colorPicture[] = {1,1,1,1};
             colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOF(ui\body_background.paa));
+            text = QPATHTOF(ui\body_background.paa);
         };
         class bodyImgHead: bodyImgBackground {
             idc = 50;
             colorBackground[] = {1,1,1,1};
             colorPicture[] = {1,1,1,1};
             colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOF(ui\body_head.paa));
+            text = QPATHTOF(ui\body_head.paa);
         };
         class bodyImgTorso: bodyImgHead {
             idc = 51;
-            text = QUOTE(PATHTOF(ui\body_torso.paa));
+            text = QPATHTOF(ui\body_torso.paa);
         };
         class bodyImgArms_l: bodyImgHead {
             idc = 52;
-            text = QUOTE(PATHTOF(ui\body_arm_left.paa));
+            text = QPATHTOF(ui\body_arm_left.paa);
         };
         class bodyImgArms_r: bodyImgHead {
             idc = 53;
-            text = QUOTE(PATHTOF(ui\body_arm_right.paa));
+            text = QPATHTOF(ui\body_arm_right.paa);
         };
         class bodyImgLegs_l: bodyImgHead {
             idc = 54;
-            text = QUOTE(PATHTOF(ui\body_leg_left.paa));
+            text = QPATHTOF(ui\body_leg_left.paa);
         };
         class bodyImgLegs_r: bodyImgHead {
             idc = 55;
-            text = QUOTE(PATHTOF(ui\body_leg_right.paa));
+            text = QPATHTOF(ui\body_leg_right.paa);
         };
         class InjuryListLabel {
             idc = 199;
@@ -57,7 +57,7 @@ class Rsctitles {
             h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(Injuries);
@@ -103,11 +103,27 @@ class Rsctitles {
             h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             style = 0x00 + 0x100; // ST_LEFT + ST_SHADOW
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {0,0,0,0.9};
             text = "";
         };
     };
   };
+
+    // disables blood texture overlay
+    class RscHealthTextures {
+        class controls {
+            class Flame_1;
+            class Blood_1: Flame_1 {
+                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_lower_ca.paa";
+            };
+            class Blood_2: Flame_1 {
+                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_middle_ca.paa";
+            };
+            class Blood_3: Flame_1 {
+                text = ""; //"A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_upper_ca.paa";
+            };
+        };
+    };
 };

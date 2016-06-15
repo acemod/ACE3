@@ -30,7 +30,7 @@ createDialog "ace_huntir_cam_dialog_off";
     createDialog "ace_huntir_cam_dialog_inactive";
     uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18881];
     [{
-        GVAR(startTime) = ACE_time;
+        GVAR(startTime) = CBA_missionTime;
         GVAR(done) = false;
         GVAR(connectionDelay) = 5;
         GVAR(state) = "searching";
@@ -44,7 +44,7 @@ createDialog "ace_huntir_cam_dialog_off";
             };
 
             private ["_elapsedTime", "_nearestHuntIRs"];
-            _elapsedTime = ACE_time - GVAR(startTime);
+            _elapsedTime = CBA_missionTime - GVAR(startTime);
             _nearestHuntIRs = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
 
             if ((!dialog) || GVAR(done)) exitWith {
@@ -90,9 +90,9 @@ createDialog "ace_huntir_cam_dialog_off";
                         GVAR(done) = true;
                         closedialog 0;
                         HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
-                    }, [], 3, 0] call EFUNC(common,waitAndExecute);
+                    }, [], 3, 0] call CBA_fnc_waitAndExecute;
                 };
             };
         }, __TYPE_WRITER_DELAY, []] call CBA_fnc_addPerFrameHandler;
-    }, [], 0.5, 0] call EFUNC(common,waitAndExecute);
-}, [], 1, 0] call EFUNC(common,waitAndExecute);
+    }, [], 0.5, 0] call CBA_fnc_waitAndExecute;
+}, [], 1, 0] call CBA_fnc_waitAndExecute;

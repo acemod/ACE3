@@ -14,6 +14,7 @@
 #include "script_component.hpp"
 
 params ["_vehicle", "_turret", "_distance", ["_showHint", false], ["_playSound", true]];
+TRACE_5("params",_vehicle,_turret,_distance,_showHint,_playSound);
 
 private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
@@ -23,6 +24,8 @@ if (isNil "_distance") then {
         getNumber (_turretConfig >> QGVAR(MaxDistance)),
         getNumber (_turretConfig >> QGVAR(MinDistance))
     ] call FUNC(getRange);
+} else {
+    ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151) ctrlSetText ([_distance, 4, 0] call CBA_fnc_formatNumber);
 };
 
 // MOVING TARGETS
@@ -41,10 +44,10 @@ private _angleTarget = asin (_weaponDirection select 2);
 
 private _movingAzimuth = 0;
 
-if (ACE_time - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) then {
+if (CBA_missionTime - GVAR(time) > 1 && GVAR(time) != -1 && isNil {_this select 2}) then {
     // calculate speed of target
     private _posTarget = (getPosASL _vehicle) vectorAdd (_weaponDirection vectorMultiply _distance);
-    private _velocityTarget = (_posTarget vectorDiff GVAR(position)) vectorMultiply (1 / (ACE_time - GVAR(time)));
+    private _velocityTarget = (_posTarget vectorDiff GVAR(position)) vectorMultiply (1 / (CBA_missionTime - GVAR(time)));
 
     // estimate time to target
     private _magazine       = _vehicle currentMagazineTurret _turret;

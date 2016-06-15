@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MicroDAGR">
         <Key ID="STR_ACE_MicroDAGR_itemName">
@@ -311,6 +311,7 @@
             <French>MicroDAGR - Remplissage de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
+            <Italian>Riempimento Mappa MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -322,6 +323,7 @@
             <French>MicroDAGR - Remplissage de la carte</French>
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
+            <Italian>Riempimento Mappa MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">
             <English>How much map data is filled on MicroDAGR's</English>
@@ -330,9 +332,10 @@
             <German>Wie viel Daten auf einem MicroDAGR zu sehen sind</German>
             <Czech>Kolik informací je načteno do MicroDAGR?</Czech>
             <Portuguese>Quanta informação é preenchida no mapa do MicroDAGR</Portuguese>
-            <French>Combien d'information apparaisse sur la carte du MicroDAGR</French>
+            <French>Combien d'informations apparaissent sur la carte du MicroDAGR</French>
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
+            <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
             <English>Full Satellite + Buildings</English>
@@ -344,6 +347,7 @@
             <French>Satellite + Batiments</French>
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
+            <Italian>Satellite Completo + Edifici</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_OnlyRoads">
             <English>Topographical + Roads</English>
@@ -355,28 +359,31 @@
             <French>Topographie + Routes</French>
             <Hungarian>Topográfia + utak</Hungarian>
             <Russian>Топография + Дороги</Russian>
+            <Italian>Topografico + Strade</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
             <Polish>Żadna (wyłącza ekran mapy)</Polish>
-            <Spanish>Nada (No se puede el mapa)</Spanish>
+            <Spanish>Nada (No se puede usar vista del mapa)</Spanish>
             <German>Keine (kann keine Kartenansicht verwenden)</German>
             <Czech>Žádný (Nelze použít zobrazení mapy)</Czech>
             <Portuguese>Nada (Não pode usar a tela de mapa)</Portuguese>
             <French>Rien (La vue carte n'est pas possible)</French>
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
+            <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
-            <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.&lt;br /&gt;Source: microDAGR.pbo</English>
-            <Polish>Moduł ten pozwala kontrolować jak duża ilość informacji jest załadowana do przedmiotów MicroDAGR. Mniejsza ilość danych ogranicza widok mapy pokazując mniej rzeczy na minimapie.&lt;br /&gt;Źródło: microDAGR.pbo</Polish>
-            <Spanish>Controla la cantidad de información disponible en el microDAGR. Menos datos limitan la vista del mapa a mostrar menos en el minimapa.&lt;br /&gt;Fuente: microDAGR.pbo</Spanish>
-            <German>Steuert wie viel Daten auf dem microDAGR zu sehen ist. Weniger Daten schränken die Kartenansicht ein, um mehr auf der Minimap zu sehen.&lt;br /&gt;Quelle: microDAGR.pbo</German>
-            <Czech>Tento modul umožňuje kontrolovat, kolik informací je obsaženo v MicroDAGR. Menší množství dat omezené zobrazením mapy ukazují méně věcí na minimapě.&lt;br /&gt;Zdroj: microDAGR.pbo</Czech>
-            <Portuguese>Controla quantos dados são preenchidos nos itens microDAGR. Menos dados restringe a visualização de mapa para mostrar menos informações no minimapa&lt;br/&gt;Fonte: MicroDAGR.pbo</Portuguese>
-            <French>Contrôle le nombre d'information disponible sur la carte du MicroDAGR. &lt;br/&gt;Source: microDAGR.pbo</French>
-            <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön. &lt;br /&gt;Forrás: microDAGR.pbo</Hungarian>
-            <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.&lt;br /&gt;Источник: microDAGR.pbo</Russian>
+            <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
+            <Polish>Moduł ten pozwala kontrolować jak duża ilość informacji jest załadowana do przedmiotów MicroDAGR. Mniejsza ilość danych ogranicza widok mapy pokazując mniej rzeczy na minimapie.</Polish>
+            <Spanish>Controla la cantidad de información disponible en el microDAGR. Menos datos limitan la vista del mapa a mostrar menos en el minimapa.</Spanish>
+            <German>Steuert wie viel Daten auf dem microDAGR zu sehen ist. Weniger Daten schränken die Kartenansicht ein, um mehr auf der Minimap zu sehen.</German>
+            <Czech>Tento modul umožňuje kontrolovat, kolik informací je obsaženo v MicroDAGR. Menší množství dat omezené zobrazením mapy ukazují méně věcí na minimapě.</Czech>
+            <Portuguese>Controla quantos dados são preenchidos nos itens microDAGR. Menos dados restringe a visualização de mapa para mostrar menos informações no minimapa.</Portuguese>
+            <French>Contrôle le nombre d'informations disponibles sur la carte du MicroDAGR.</French>
+            <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
+            <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.</Russian>
+            <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
         </Key>
     </Package>
 </Project>

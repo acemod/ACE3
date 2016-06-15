@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
         <Key ID="STR_ACE_Tripod_DisplayName">
@@ -6,7 +6,7 @@
             <German>Scharfschützendreibein</German>
             <Russian>Снайперский штатив</Russian>
             <Polish>Trójnóg snajperski</Polish>
-            <Spanish>SSWT Kit</Spanish>
+            <Spanish>Equipo SSWT</Spanish>
             <French>Kit SSWT</French>
             <Czech>SSWT souprava</Czech>
             <Italian>SSWT Kit</Italian>
@@ -18,7 +18,7 @@
             <German>Scharfschützendreibein aufstellen</German>
             <Russian>Установить снайперский штатив</Russian>
             <Polish>Postaw trójnóg snajperski</Polish>
-            <Spanish>Place SSWT Kit</Spanish>
+            <Spanish>Colocar equipo SSWT</Spanish>
             <French>Placer le kit SSWT</French>
             <Czech>Rozlož souprava SSWT</Czech>
             <Italian>Place SSWT Kit</Italian>
@@ -35,6 +35,7 @@
             <French>Prendre le kit SSWT</French>
             <Hungarian>SSWT készlet felvétele</Hungarian>
             <Russian>Подобрать снайперский штатив</Russian>
+            <Italian>Prendi Kit SSWT</Italian>
         </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
@@ -46,6 +47,7 @@
             <French>Régler le kit SSWT</French>
             <Hungarian>SSWT készlet állítása</Hungarian>
             <Russian>Выровнять снайперский штатив</Russian>
+            <Italian>Aggiusta Kit SSWT</Italian>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
@@ -57,17 +59,19 @@
             <French>Terminé</French>
             <Hungarian>Kész</Hungarian>
             <Russian>Готово</Russian>
+            <Italian>Fatto</Italian>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>adjust</English>
             <Polish>regulacja</Polish>
-            <Spanish>ajuste</Spanish>
+            <Spanish>Ajustar</Spanish>
             <Czech>regulace</Czech>
             <German>anpassen</German>
             <Portuguese>ajuste</Portuguese>
             <French>régler</French>
             <Hungarian>szabályzás</Hungarian>
             <Russian>подстройка</Russian>
+            <Italian>aggiusta</Italian>
         </Key>
     </Package>
 </Project>

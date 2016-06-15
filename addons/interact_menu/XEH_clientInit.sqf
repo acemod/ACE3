@@ -8,33 +8,22 @@ GVAR(cachedBuildingActionPairs) = [];
 
 GVAR(ParsedTextCached) = [];
 
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name"];
     if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
         [] call FUNC(setupTextColors);
     };
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     //Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
     addMissionEventHandler ["Draw3D", DFUNC(render)];
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
-["interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call EFUNC(common,addEventHandler);
-
-// This spawn is probably worth keeping, as pfh don't work natively on the briefing screen and IDK how reliable the hack we implemented for them is.
-// The thread dies as soon as the mission start, so it's not really compiting for scheduler space.
-[] spawn {
-    // Wait until the map display is detected
-    waitUntil {(!isNull findDisplay 12)};
-
-    // Install the render EH on the map screen
-    ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", DFUNC(render)];
-};
-
+["ace_interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CBA_fnc_addEventHandler;
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
@@ -52,7 +41,7 @@ GVAR(ParsedTextCached) = [];
 
 
 // Listens for the falling unconscious event, just in case the menu needs to be closed
-["medical_onUnconscious", {
+["ace_unconscious", {
     // If no menu is open just quit
     if (GVAR(openedMenuType) < 0) exitWith {};
 
@@ -62,17 +51,17 @@ GVAR(ParsedTextCached) = [];
 
     GVAR(actionSelected) = false;
     [GVAR(openedMenuType), false] call FUNC(keyUp);
-}] call EFUNC(common,addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 // disable firing while the interact menu is is is opened
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventHandler);
+["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // background options
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
-}] call EFUNC(common,addEventHandler);
-["interactMenuClosed", {
+}] call CBA_fnc_addEventHandler;
+["ace_interactMenuClosed", {
     if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
     if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;

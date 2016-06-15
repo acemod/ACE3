@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Gunbag">
+        <Key ID="STR_ACE_Gunbag_DisplayName">
+            <English>Gunbag</English>
+            <German>Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
+            <English>Gunbag (Tan)</English>
+            <German>Waffentasche (Tan)</German>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_ToGunbag">
+            <English>Put weapon into gunbag</English>
+            <German>Lege Waffe in Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_OffGunbag">
+            <English>Get weapon out of gunbag</English>
+            <German>Hole Waffe aus Waffentasche</German>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_Status">
+            <English>Status</English>
+            <German>Status</German>
+        </Key>
+        <Key ID="STR_ACE_Gunbag_Empty">
+            <English>Gunbag Empty</English>
+            <German>Waffentasche leer</German>
+        </Key>
+    </Package>
+</Project>

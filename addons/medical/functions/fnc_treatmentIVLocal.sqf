@@ -15,16 +15,15 @@
 
 #include "script_component.hpp"
 
-private ["_config", "_volumeAdded", "_typeOf", "_varName", "_bloodVolume"];
 params ["_target", "_treatmentClassname"];
 
-_bloodVolume = _target getVariable [QGVAR(bloodVolume), 100];
+private _bloodVolume = _target getVariable [QGVAR(bloodVolume), 100];
 if (_bloodVolume >= 100) exitWith {};
 
 // Find the proper attributes for the used IV
-_config = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "IV");
-_volumeAdded = getNumber (_config >> "volume");
-_typeOf = getText (_config >> "type");
+private _config = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "IV");
+private _volumeAdded = getNumber (_config >> "volume");
+private _typeOf = getText (_config >> "type");
 
 if (isClass (_config >> _treatmentClassname)) then {
     _config = (_config >> _treatmentClassname);
@@ -34,7 +33,7 @@ if (isClass (_config >> _treatmentClassname)) then {
     ERROR("IV Treatment Classname not found");
 };
 
-_varName = format["ACE_Medical_IVVolume_%1",_typeOf];
+private _varName = format["ACE_Medical_IVVolume_%1",_typeOf];
 _target setVariable [_varName, (_target getVariable [_varName, 0]) + _volumeAdded, true];
 
 if !(_varName in GVAR(IVBags)) then {

@@ -65,8 +65,8 @@ if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit dist
 };
 
 //Particle Effects:
-if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
-    _unit setVariable [QGVAR(lastDrop), ACE_time];
+if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
+    _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
@@ -94,7 +94,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
 // Only compute jamming for the local player
 if (_unit != ACE_player) exitWith {END_COUNTER(firedEH);};
 
-_jamChance = _jamChance * ([[0.5, 1.5, 7.5, 37.5], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
+_jamChance = _jamChance * ([[0.5, 1.5, 15, 150], 3 * _scaledTemperature] call EFUNC(common,interpolateFromArray));
 
 // increase jam chance on dusty grounds if prone (and at ground level)
 if ((stance _unit == "PRONE") && {((getPosATL _unit) select 2) < 1}) then {

@@ -39,7 +39,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x54_Ball_Tracer_Green: B_762x51_Ball {
+    class rhs_B_762x54_Ball_Tracer_Green: rhs_B_762x54_Ball {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -112,11 +112,35 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={298, 330, 350};
         ACE_barrelLengths[]={96.52, 127.0, 228.6};
     };
+    class rhs_B_545x39_7U1_Ball: rhs_B_545x39_Ball {
+        // @todo: Provide accurate coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        // ammoTempMuzzleVelocityShifts scaled down from normal
+        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73};
+        ACE_muzzleVelocities[] = {};
+        ACE_barrelLengths[] = {};
+    };
+    class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball {
+        // @todo: Provide accurate coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        // ammoTempMuzzleVelocityShifts scaled down from normal
+        ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73}; //Just Scaled Down Normal?
+        ACE_muzzleVelocities[] = {};
+        ACE_barrelLengths[] = {};
+    };
+    class rhs_B_9x39_SP5: rhs_B_762x39_Ball {
+        // @todo: Provide accurate coefficients for this subsonic ammo
+        // In the meantime, prevent it inheriting from its supersonic parent
+        ACE_ammoTempMuzzleVelocityShifts[]={};
+        ACE_muzzleVelocities[]={};
+        ACE_barrelLengths[]={};
+    };
+
     class SubmunitionBase;
     class rhs_ammo_127x108mm_x5: SubmunitionBase {
         ACE_rearm_caliber=13;
     };
-    
+
     class GrenadeHand;
     class rhs_ammo_rgd5: GrenadeHand {
         ace_frag_enabled = 1;
@@ -153,7 +177,7 @@ class CfgAmmo {
     class rhs_ammo_fakels: rhs_ammo_fakel {};
     class rhs_ammo_zarya2: rhs_ammo_fakels {};
     class rhs_ammo_plamyam: rhs_ammo_fakels {};
-	
+
     class RocketBase;
     class R_PG32V_F: RocketBase {};
     class rhs_rpg26_rocket: R_PG32V_F {};
@@ -178,4 +202,20 @@ class CfgAmmo {
         ace_frag_skip = 1;
         ace_frag_force = 0;
     };
+    
+    class G_40mm_HE;
+    class rhs_g_vog25: G_40mm_HE {};
+    class rhs_g_vg40tb: rhs_g_vog25 { //Thermobaric
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
+        ace_frag_force = 0;
+    };
+    class rhs_GDM40: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    
 };

@@ -18,7 +18,7 @@
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exitWith {
     [{
         _this call FUNC(dismount);
-    }, _this] call EFUNC(common,execNextFrame);
+    }, _this] call CBA_fnc_execNextFrame;
 };
 params ["_wire", "_unit"];
 

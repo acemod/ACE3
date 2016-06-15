@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-["AddCargoByClass", {_this call FUNC(addCargoItem)}] call EFUNC(common,addEventHandler);
+["ace_addCargoByClass", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
 
-["LoadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
+["ace_loadCargo", {
+    params ["_item", "_vehicle"];
     TRACE_2("LoadCargo EH",_item,_vehicle);
 
     private _loaded = [_item, _vehicle] call FUNC(loadItem);
@@ -13,18 +13,18 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_loaded) then {
         // Invoke listenable event
-        ["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["ace_cargoLoaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["UnloadCargo", {
-    (_this select 0) params ["_item","_vehicle", ["_unloader", objNull]];
+["ace_unloadCargo", {
+    params ["_item", "_vehicle", ["_unloader", objNull]];
     TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
-    
+
     private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
 
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
@@ -34,12 +34,19 @@
     private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
     private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_unloaded) then {
         // Invoke listenable event
-        ["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["ace_cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
 
     // TOOO maybe drag/carry the unloaded item?
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(serverUnload), {
+    params ["_item", "_emptyPosAGL"];
+
+    _item hideObjectGlobal false;
+    _item setPosASL (AGLtoASL _emptyPosAGL);
+}] call CBA_fnc_addEventHandler;

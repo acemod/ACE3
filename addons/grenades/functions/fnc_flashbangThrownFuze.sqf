@@ -21,8 +21,5 @@ TRACE_1("params",_projectile);
 if (alive _projectile) then {
     playSound3D ["A3\Sounds_F\weapons\Explosion\explosion_mine_1.wss", _projectile, false, getPosASL _projectile, 5, 1.2, 400];
 
-    private _affected = _projectile nearEntities ["CAManBase", 20];
-    TRACE_2("people hit",_affected,getPosASL _projectile);
-
-    ["flashbangExplosion", _affected, [getPosASL _projectile]] call EFUNC(common,targetEvent);
+    ["ace_flashbangExploded", [getPosASL _projectile]] call CBA_fnc_globalEvent;
 };

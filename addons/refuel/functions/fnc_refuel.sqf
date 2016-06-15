@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-#define PFH_STEPSIZE 0.1
+#define PFH_STEPSIZE 1
 
 params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
@@ -52,6 +52,9 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     private _finished = false;
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
+        if (isEngineOn _sink) exitWith {
+            _nozzle setVariable [QGVAR(isRefueling), false, true];
+        };
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -59,8 +62,10 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
             _fuelInSource = _fuelInSource - _rate;
+        } else {
+            _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _rate, true];
         };
-        if (_fuelInSource < 0 && {_fuelInSource > -1}) then {
+        if (_fuelInSource < 0 && {_fuelInSource > REFUEL_INFINITE_FUEL}) then {
             _fuelInSource = 0;
             _finished = true;
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
@@ -74,11 +79,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
-        if !(local _sink) then {
-            [[_sink, _fuelInSink], "{(_this select 0) setFuel (_this select 1)}", _sink] call EFUNC(common,execRemoteFnc);
-        } else {
-            _sink setFuel _fuelInSink;
-        };
+        [QEGVAR(common,setFuel), [_sink, _fuelInSink], _sink] call CBA_fnc_targetEvent;
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
         _unit setVariable [QGVAR(tempFuel), fuel _sink];

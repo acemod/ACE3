@@ -14,7 +14,7 @@ class GVAR(triageCard) {
             w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "19 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             style = ST_LEFT + ST_SHADOW;
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.0, 0.0, 0.0, 1};
             colorBackground[] = {1,1,1,1};
@@ -26,15 +26,15 @@ class GVAR(triageCard) {
             y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "5 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {1,1,0,1};
             colorBackground[] = {0,0,0,0};
-            text = QUOTE(PATHTOF(ui\triage_card_corner_l.paa));
+            text = QPATHTOF(ui\triage_card_corner_l.paa);
         };
         class cornor_top_r: cornor_top_l {
             x = "20 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(ui\triage_card_corner_r.paa));
+            text = QPATHTOF(ui\triage_card_corner_r.paa);
         };
 
         class TriageCardLabel {
@@ -46,7 +46,7 @@ class GVAR(triageCard) {
             h = "0.7 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
             style = 0x02 + 0x100; // ST_LEFT + ST_SHADOW
-            font = "PuristaMedium";
+            font = "RobotoCondensed";
             colorText[] = {0,0,0,1};
             colorBackground[] = {0,0,0,0};
             text = CSTRING(Actions_TriageCard);

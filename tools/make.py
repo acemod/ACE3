@@ -73,7 +73,7 @@ dssignfile = ""
 prefix = "ace"
 pbo_name_prefix = "ace_"
 signature_blacklist = ["ace_server.pbo"]
-importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa"]
+importantFiles = ["mod.cpp", "README.md", "docs\\README_DE.md", "docs\\README_PL.md", "AUTHORS.txt", "LICENSE", "logo_ace3_ca.paa", "meta.cpp"]
 versionFiles = ["README.md", "docs\\README_DE.md", "docs\\README_PL.md", "mod.cpp"]
 
 ciBuild = False # Used for CI builds
@@ -712,11 +712,9 @@ def version_stamp_pboprefix(module,commitID):
         f.close()
 
         if configtext:
-            patchestext = re.search(r"version.*?=.*?$", configtext, re.DOTALL)
-            if patchestext:
+            if re.search(r"version=(.*?)$", configtext, re.DOTALL):
                 if configtext:
-                    patchestext = re.search(r"(version.*?=)(.*?)$", configtext, re.DOTALL).group(1)
-                    configtext = re.sub(r"version(.*?)=(.*?)$", "version = {}\n".format(commitID), configtext, flags=re.DOTALL)
+                    configtext = re.sub(r"version=(.*?)$", "version={}\n".format(commitID), configtext, flags=re.DOTALL)
                     f = open(configpath, "w")
                     f.write(configtext)
                     f.close()
@@ -995,17 +993,16 @@ See the make.cfg file for additional build options.
         print ("No cache found.")
         cache = {}
 
-    # Check the ace build version (from main) with cached version - Forces a full rebuild when version changes
-    aceVersion = get_project_version()
+    # Check the build version (from main) with cached version - forces a full rebuild when version changes
+    project_version = get_project_version()
     cacheVersion = "None";
     if 'cacheVersion' in cache:
         cacheVersion = cache['cacheVersion']
 
-    if (aceVersion != cacheVersion):
+    if (project_version != cacheVersion):
         cache = {}
-        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, aceVersion))
-        cache['cacheVersion'] = aceVersion
-
+        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, project_version))
+        cache['cacheVersion'] = project_version
 
     if not os.path.isdir(os.path.join(release_dir, project, "addons")):
         try:
@@ -1030,6 +1027,9 @@ See the make.cfg file for additional build options.
         # Set version
         set_version_in_files();
         print("Version in files has been changed, make sure you commit and push the updates!")
+
+    amountOfBuildsFailed = 0
+    namesOfBuildsFailed = []
 
     try:
         # Temporarily copy optionals_root for building. They will be removed later.
@@ -1114,9 +1114,6 @@ See the make.cfg file for additional build options.
                     except:
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
-
-        amountOfBuildsFailed = 0
-        namesOfBuildsFailed = []
 
         # For each module, prep files and then build.
         print_blue("\nBuilding...")

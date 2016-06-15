@@ -6,10 +6,75 @@ class CfgPatches {
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main","ace_modules"};
-        author[] = {"KoffeinFlummi"};
-        authorUrl = "https://github.com/KoffeinFlummi/";
-        VERSION_CONFIG;
+        author = CSTRING(ACETeam);
+        authors[] = {"KoffeinFlummi"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG_COMMON;
     };
+};
+
+// This class will be deprecated in version 3.8.0
+class ACE_newEvents {
+    // Status effect events
+    forceWalk = QGVAR(forceWalk);
+    blockSprint = QGVAR(blockSprint);
+    setCaptive = QGVAR(setCaptive);
+    blockDamage = QGVAR(blockDamage);
+    blockEngine = QGVAR(blockEngine);
+
+    // Public listenable events
+    PlayerJip = "ace_playerJIP";
+    activeCameraChanged = "ace_activeCameraChanged";
+    visibleMapChanged = "ace_visibleMapChanged";
+    cameraViewChanged = "ace_cameraViewChanged";
+    playerVisionModeChanged = "ace_playerVisionModeChanged";
+    playerInventoryChanged = "ace_playerInventoryChanged";
+    playerWeaponChanged = "ace_playerWeaponChanged";
+    playerTurretChanged = "ace_playerTurretChanged";
+    playerVehicleChanged = "ace_playerVehicleChanged";
+    playerChanged = "ace_playerChanged";
+    SettingsInitialized = "ace_settingsInitialized";
+    SettingChanged = "ace_settingChanged";
+    firedNonPlayerVehicle = "ace_firedNonPlayerVehicle";
+    firedPlayerVehicleNonLocal = "ace_firedPlayerVehicleNonLocal";
+    firedPlayerVehicle = "ace_firedPlayerVehicle";
+    firedNonPlayer = "ace_firedNonPlayer";
+    firedPlayerNonLocal = "ace_firedPlayerNonLocal";
+    firedPlayer = "ace_firedPlayer";
+    unloadPersonEvent = "ace_unloadPersonEvent";
+    loadPersonEvent = "ace_loadPersonEvent";
+    useItem = "ace_useItem";
+    infoDisplayChanged = "ace_infoDisplayChanged";
+
+    // Internal callable events
+    setStatusEffect = QGVAR(setStatusEffect);
+    HeadbugFixUsed = QGVAR(headbugFixUsed);
+    InitSettingsFromModules = QGVAR(initSettingsFromModules);
+    enableSimulationGlobal = QGVAR(enableSimulationGlobal);
+    hideObjectGlobal = QGVAR(hideObjectGlobal);
+    fixPosition = QGVAR(fixPosition);
+    fixFloating = QGVAR(fixFloating);
+    fixCollision = QGVAR(fixCollision);
+    unlockVehicle = QGVAR(unlockVehicle);
+    lockVehicle = QGVAR(lockVehicle);
+    displayTextPicture = QGVAR(displayTextPicture);
+    displayTextStructured = QGVAR(displayTextStructured);
+    setVanillaHitPointDamage = QGVAR(setVanillaHitPointDamage);
+    setVectorDirAndUp = QGVAR(setVectorDirAndUp);
+    switchMove = QGVAR(switchMove);
+    playMoveNow = QGVAR(playMoveNow);
+    playMove = QGVAR(playMove);
+    setVelocity = QGVAR(setVelocity);
+    selectLeader = QGVAR(selectLeader);
+    setSpeaker = QGVAR(setSpeaker);
+    engineOn = QGVAR(engineOn);
+    setFuel = QGVAR(setFuel);
+    setDir = QGVAR(setDir);
+
+    // Events framework
+    SEH_s = "ACEs";
+    SEH = "ACEe";
+    SEH_all = "ACEa";
 };
 
 #include "CfgEventHandlers.hpp"
@@ -24,6 +89,7 @@ class CfgPatches {
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
 #include "CfgUnitInsignia.hpp"
+#include "CfgEden.hpp"
 
 class ACE_Rsc_Display_Base {
     idd = -1;
@@ -79,19 +145,11 @@ class CfgUIGrids {
                 displayName = "ACE Hint";
                 description = "Textual in game feedback to the player.";
                 preview = "\a3\Ui_f\data\GUI\Cfg\UIGrids\grid_hint_ca.paa";
-                saveToProfile[] = {0,1};                
+                saveToProfile[] = {0,1};
             };
         };
     };
 };
-
-/*
-// check dll
-class RscStandardDisplay;
-class RscDisplayMain: RscStandardDisplay {
-    onLoad = QUOTE([ARR_4(""onLoad"",_this,""RscDisplayMain"",'GUI')] call  (uinamespace getVariable 'BIS_fnc_initDisplay'); [ARR_5('header','tail',{0},{},_this select 0)] call COMPILE_FILE(functions\fnc_errorMessage));
-};
-*/
 
 class ACE_Extensions {
     extensions[] = {};

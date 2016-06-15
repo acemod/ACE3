@@ -62,7 +62,7 @@ _finalOwner = nil;
                 };
             };
         };
-        
+
         //Handle Weird Data Return
         if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
             _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);

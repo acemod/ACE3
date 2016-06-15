@@ -7,8 +7,9 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         VERSION_CONFIG;
-        author[] = {"Garth 'LH' de Wet"};
-        authorUrl = "http://garth.snakebiteink.co.za/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Garth 'LH' de Wet"};
+        url = ECSTRING(main,URL);
     };
 };
 

@@ -3,7 +3,7 @@
  * Adds a status effect that will be handled.
  *
  * Arguments:
- * 0: Status Effect Name, this should match a corisponding event name <STRING>
+ * 0: Status Effect Name, this should match a corresponding event name <STRING>
  * 1: Send event globaly <BOOL>
  * 2: Common Effect Reaons to pre-seed durring init <ARRAY>
  *
@@ -30,8 +30,6 @@ GVAR(statusEffect_isGlobal) pushBack _isGlobal;
 //We add reasons at any time, but more efficenet to add all common ones at one time during init
 if (isServer && {!(_commonReasonsArray isEqualTo [])}) then {
     //Switch case to lower:
-    {
-        _commonReasonsArray set [_forEachIndex, toLower _x];
-    } forEach _commonReasonsArray;
+    _commonReasonsArray = _commonReasonsArray apply { toLower _x };
     missionNamespace setVariable [(format [QGVAR(statusEffects_%1), _name]), _commonReasonsArray, true];
 };

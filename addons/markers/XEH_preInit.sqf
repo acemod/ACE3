@@ -2,17 +2,7 @@
 
 ADDON = false;
 
-PREP(getEnabledChannels);
-PREP(initInsertMarker);
-PREP(mapDrawEH);
-PREP(onLBSelChangedChannel);
-PREP(onLBSelChangedColor);
-PREP(onLBSelChangedShape);
-PREP(onSliderPosChangedAngle);
-PREP(placeMarker);
-PREP(sendMarkersJIP);
-PREP(setMarkerJIP);
-PREP(setMarkerNetwork);
+#include "XEH_PREP.hpp"
 
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
@@ -60,6 +50,6 @@ if (isNil QGVAR(MarkerColorsCache)) then {
 };
 
 //Server Sync JIP markers:
-[QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call EFUNC(common,addEventHandler);
+[QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

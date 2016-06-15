@@ -12,7 +12,10 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-// TODO replace by event system
-[[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_fullHealLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target]] call CBA_fnc_localEvent;
+} else {
+    [QGVAR(treatmentAdvanced_fullHealLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
+};
 
 true;

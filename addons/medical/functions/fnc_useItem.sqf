@@ -16,7 +16,6 @@
 
 #include "script_component.hpp"
 
-private ["_return","_crew"];
 params ["_medic", "_patient", "_item"];
 
 if (isNil QGVAR(setting_allowSharedEquipment)) then {
@@ -24,22 +23,34 @@ if (isNil QGVAR(setting_allowSharedEquipment)) then {
 };
 
 if (GVAR(setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
-    [[_patient, _item], QUOTE(EFUNC(common,useItem)), _patient] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    if (local _patient) then {
+        ["ace_useItem", [_patient, _item]] call CBA_fnc_localEvent;
+    } else {
+        ["ace_useItem", [_patient, _item], _patient] call CBA_fnc_targetEvent;
+    };
     [true, _patient];
 };
 
 if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
-    [[_medic, _item], QUOTE(EFUNC(common,useItem)), _medic] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    if (local _medic) then {
+        ["ace_useItem", [_medic, _item]] call CBA_fnc_localEvent;
+    } else {
+        ["ace_useItem", [_medic, _item], _medic] call CBA_fnc_targetEvent;
+    };
     [true, _medic];
 };
 
-_return = [false, objNull];
+private _return = [false, objNull];
 if ([vehicle _medic] call FUNC(isMedicalVehicle) && {vehicle _medic != _medic}) then {
-    _crew = crew vehicle _medic;
+    private _crew = crew vehicle _medic;
     {
         if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
             _return = [true, _x];
-            [[_x, _item], QUOTE(EFUNC(common,useItem)), _x] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+            if (local _x) then {
+                ["ace_useItem", [_x, _item]] call CBA_fnc_localEvent;
+            } else {
+                ["ace_useItem", [_x, _item], _x] call CBA_fnc_targetEvent;
+            };
         };
     } forEach _crew;
 };

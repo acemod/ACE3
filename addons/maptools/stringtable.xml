@@ -121,18 +121,6 @@
             <Czech>Schovat GPS na mapě</Czech>
             <Russian>Скрыть GPS на карте</Russian>
         </Key>
-        <Key ID="STR_ACE_MapTools_CopyMap">
-            <English>Copy Map</English>
-            <German>Karte kopieren</German>
-            <Spanish>Copiar mapa</Spanish>
-            <Russian>Скопировать карту</Russian>
-            <Polish>Kopiuj oznaczenia mapy</Polish>
-            <French>Copier la carte</French>
-            <Czech>Zkopírovat mapu</Czech>
-            <Italian>Copiare Carta</Italian>
-            <Hungarian>Térkép másolása</Hungarian>
-            <Portuguese>Copiar Mapa</Portuguese>
-        </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
             <German>Drehung: %1°</German>
@@ -144,6 +132,12 @@
             <Russian>Направление: %1°</Russian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
+            <English>Rotate Map Tools Key</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
+            <English>Modifier key to allow rotating map tools</English>
         </Key>
     </Package>
 </Project>

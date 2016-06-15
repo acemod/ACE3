@@ -3,28 +3,36 @@
 
 ACE_Modifier = 0;
 
-["pardon", {(_this select 0) addRating -rating (_this select 0)}] call EFUNC(common,addEventHandler);
+[QGVAR(pardon), {(_this select 0) addRating -rating (_this select 0)}] call CBA_fnc_addEventHandler;
 
-["getDown", {
+[QGVAR(getDown), {
     params ["_target"];
 
     _target setUnitPos "DOWN";
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["sendAway", {
+[QGVAR(sendAway), {
     params ["_unit", "_position"];
 
     _unit setUnitPos "AUTO";
     _unit doMove _position;
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lampTurnOn), {
+    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
+    {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lampTurnOff), {
+    params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
+    {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
+}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
 
-[{_this call FUNC(handleScrollWheel)}] call EFUNC(common,addScrollWheelEventHandler);
-
-["tapShoulder", {
+[QGVAR(tapShoulder), {
     params ["_unit", "_shoulderNum"];
 
     if (_unit == ACE_player) then {
@@ -32,7 +40,7 @@ GVAR(isOpeningDoor) = false;
         private _message = parseText format ([["%1 &gt;", localize LSTRING(YouWereTappedRight)], ["&lt; %1", localize LSTRING(YouWereTappedLeft)]] select (_shoulderNum == 1));
         [_message] call EFUNC(common,displayTextStructured);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // add keybinds
 ["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor), {
@@ -61,7 +69,7 @@ GVAR(isOpeningDoor) = false;
 
     //Tap whichever shoulder is closest
     private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
-    
+
     // Statement
     [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);
     true

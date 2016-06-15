@@ -78,8 +78,8 @@ if (isServer && {_broadcastChanges}) then {
     publicVariable _name;
 
     // Raise event globally, this publicizes eventual changes in _force status so clients can update it locally
-    ["SettingChanged", [_name, _value, _force]] call FUNC(globalEvent);
+    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_globalEvent;
 } else {
     // Raise event locally
-    ["SettingChanged", [_name, _value, _force]] call FUNC(localEvent);
+    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_localEvent;
 };

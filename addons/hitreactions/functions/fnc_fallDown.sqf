@@ -31,7 +31,7 @@ if (_unit == ACE_player) then {
 };
 
 // play scream sound
-if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
+if (!isNil QEFUNC(medical,playInjuredSound)) then {
     [_unit] call EFUNC(medical,playInjuredSound);
 };
 

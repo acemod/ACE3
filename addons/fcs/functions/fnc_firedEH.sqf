@@ -16,9 +16,10 @@
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
-private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 if !(_magazine in _FCSMagazines) exitWith {};
+
+private _FCSElevation = _vehicle getVariable format ["%1_%2", QGVAR(Elevation), _turret];
 
 // GET ELEVATION OFFSET OF CURRENT MAGAZINE
 private _offset = 0;

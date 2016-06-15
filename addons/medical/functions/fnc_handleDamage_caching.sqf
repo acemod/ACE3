@@ -58,6 +58,7 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
         } else {
             _newDamage = _newDamage * 0.5;
         };
+        if (_newDamage < 0.075) then {_newDamage = 0;}; //Filter minor falling damage to non-leg hitpoints
     } else {
         if (_selectionName == "") then {
             _selectionName = selectRandom ["leg_l", "leg_r"];

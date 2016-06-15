@@ -37,12 +37,18 @@ private _return = false;
 if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     private _size = [_object] call FUNC(getSizeItem);
 
-    [5 * _size, [_object,_vehicle], "LoadCargo", {}, localize LSTRING(LoadingItem)] call EFUNC(common,progressBar);
+    [
+        5 * _size,
+        [_object,_vehicle],
+        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
+        {},
+        localize LSTRING(LoadingItem)
+    ] call EFUNC(common,progressBar);
     _return = true;
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    ["displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
 };
 
 _return

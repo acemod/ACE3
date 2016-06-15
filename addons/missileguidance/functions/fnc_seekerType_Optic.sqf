@@ -27,7 +27,7 @@ _angleOkay = [_projectile, _foundTargetPos, _angleFov] call FUNC(checkSeekerAngl
 
 _losOkay = false;
 if(_angleOkay) then {
-    _losOkay = [_projectile, _target] call FUNC(checkSeekerLos);
+    _losOkay = [_projectile, _target] call FUNC(checkSeekerLos); //Note: Func does not exist?  probably FUNC(checkLos)??
 };
 TRACE_2("", _angleOkay, _losOkay);
 
