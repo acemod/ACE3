@@ -24,8 +24,8 @@ if (GVAR(mapGlow)) then {
 };
 
 if (
-    (getNumber (configFile >> "CfgWeapons" >> _newFlashlight >> "ItemInfo" >> QGVAR(Flashlight) >> QGVAR(Flashlight_Sound)) > 0) ||
-    {getNumber (configFile >> "CfgWeapons" >> _oldFlashlight >> "ItemInfo" >> QGVAR(Flashlight) >> QGVAR(Flashlight_Sound)) > 0}
+    (getNumber (configFile >> "CfgWeapons" >> _newFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0) ||
+    {getNumber (configFile >> "CfgWeapons" >> _oldFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0}
 ) then { 
     playSound QGVAR(flashlightClick);
 };

@@ -18,4 +18,12 @@
 
 params ["_unit"];
 
-(items _unit) select {isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "Flashlight" >> "ACE_Flashlight_Colour")}
+private _flashlights = [];
+
+{
+    if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) then {
+        _flashlights pushBackUnique _x;
+    };
+} forEach (items _unit);
+
+_flashlights

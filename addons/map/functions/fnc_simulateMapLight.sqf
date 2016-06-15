@@ -56,7 +56,7 @@ if (_flashlight == "") then {
     _mousePos = GVAR(mousePos);
 
     //flashlight settings
-    _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "Flashlight");
+    _cfg = (configFile >> "CfgWeapons" >> _flashlight >> "ItemInfo" >> "FlashLight");
     _size = getNumber (_cfg >> "ACE_Flashlight_Size");
     _flashTex = getText (_cfg >> "ACE_Flashlight_Beam");
     _beamSize = (safeZoneW/safeZoneWAbs) * _screenSize / _size;
