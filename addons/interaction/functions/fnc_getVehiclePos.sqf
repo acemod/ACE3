@@ -9,7 +9,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * call ace_interaction_fnc_getWeaponPos
+ * call ace_interaction_fnc_getVehiclePos
  *
  * Public: No
  */
@@ -17,16 +17,20 @@
 // IGNORE_PRIVATE_WARNING(_target);
 
 private _bb = boundingBoxReal _target;
-_bb params ["_p1",""];
+(_bb select 0) params ["_bbX", "_bbY", "_bbZ"];
+
+//Helicopter's rotors distort the bounding box, assume a max of 3 meters width for the body
+if (_target isKindOf "Helicopter") then {_bbX = (_bbx min 3) max -3;};
+
 private _relPos = _target worldToModelVisual ASLToAGL EGVAR(interact_menu,cameraPosASL);
 #ifdef DEBUG_MODE_FULL
     _relPos = _target worldToModelVisual ASLToAGL eyePos ACE_player;
 #endif
 _relPos params ["_dx", "_dy", "_dz"];
 
-private _ndx = (abs _dx) / ((abs (_p1 select 0)) - 1);
-private _ndy = (abs _dy) / ((abs (_p1 select 1)) - 1);
-private _ndz = (abs _dz) / ((abs (_p1 select 2)) - 1);
+private _ndx = (abs _dx) / ((abs (_bbx)) - 1);
+private _ndy = (abs _dy) / ((abs (_bbY)) - 1);
+private _ndz = (abs _dz) / ((abs (_bbZ)) - 1);
 
 private "_pos";
 if (_ndx > _ndy) then {
@@ -46,7 +50,9 @@ if (_ndx > _ndy) then {
         _pos = _relPos vectorMultiply ((1 / _ndz) min 0.8);
     };
 };
-TRACE_3("",_bb,_relPos, _pos);
+//Set max height at player's eye level (prevent very high interactin point on choppers)
+_pos set [2, (_pos select 2) min _dz];
+TRACE_4("",_bb,_bbX,_relPos, _pos);
 _pos
 
 ///////////////////
