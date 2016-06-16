@@ -2,13 +2,8 @@
 class CfgAmmo {
     class Default;
     class Grenade: Default {
-        soundImpactSoft1[] = {"",1,1,1};
-        soundImpactSoft2[] = {"",1,1,1};
-        soundImpactSoft3[] = {"",1,1,1};
-        soundImpactSoft4[] = {"",1,1,1};
-        soundImpactSoft5[] = {"",1,1,1};
-        soundImpactSoft6[] = {"",1,1,1};
-        soundImpactSoft7[] = {"",1,1,1};
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
+        impactGroundSoft[] = {};
     };
     
     class FlareCore;
@@ -62,6 +57,7 @@ class CfgAmmo {
     class ACE_G_Handflare_White: SmokeShell {
         GVAR(flare) = 1;
         GVAR(color)[] = {0.5,0.5,0.5,0.5};
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\smokeshell\smoke_1.wss", 0.4, 1, 10};
         model = "\A3\weapons_f\ammo\flare_white";
         dangerRadiusHit = -1;
         suppressionRadiusHit = -1;
@@ -110,6 +106,7 @@ class CfgAmmo {
     };
     
     class Chemlight_base: SmokeShell {
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\Other\dry4.wss", 3, 2, 10};
         soundImpactHard1[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.8,65};
         soundImpactHard2[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.9,65};
         soundImpactHard3[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.6,65};
