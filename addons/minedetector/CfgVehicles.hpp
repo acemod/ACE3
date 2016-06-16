@@ -42,7 +42,7 @@ class CfgVehicles {
     class MineBase: Static {
         GVAR(detectable) = 1;
     };
-    
+
     // Zeus placed mines
     class ModuleEmpty_F;
     class ModuleMine_F: ModuleEmpty_F {
