@@ -4,7 +4,7 @@ class CfgAmmo {
     class Chemlight_base;
     
     class Chemlight_Blue: Chemlight_base {
-        timeToLive = 28800;
+        timeToLive = 1500;
     };
     
     class Chemlight_Red: Chemlight_base {
