@@ -54,6 +54,9 @@ private _distance = -1;
             _distance = _detectorPointAGL distance _x;
         };
     };
+
+    if (!isNull _mine) exitWith {};
+
 } forEach _nearestObjects;
 
 TRACE_3("return",_isDetectable,_mine,_distance);
