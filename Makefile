@@ -8,7 +8,7 @@ PREFIX = ace
 BIN = @ace
 ZIP = ace3
 CBA = tools/cba
-FLAGS = -i $(CBA) -w unquoted-string
+FLAGS = -i $(CBA) -w unquoted-string -w redefinition-wo-undef
 
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
 	@mkdir -p $(BIN)/addons
