@@ -225,6 +225,15 @@ class CfgVehicles {
         class TransportItems {
             MACRO_ADDITEM(ACE_Chemlight_Shield,12);
         };
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_Chemlight_Orange,20);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
+        };
     };
     
     class ACE_Box_Chemlights: NATO_Box_Base {
@@ -239,18 +248,21 @@ class CfgVehicles {
         model = "\A3\weapons_F\AmmoBoxes\WpnsBox_large_F";
         
         class TransportItems {
-            MACRO_ADDITEM(Chemlight_red,20);
-            MACRO_ADDITEM(Chemlight_blue,20);
-            MACRO_ADDITEM(Chemlight_green,20);
-            MACRO_ADDITEM(Chemlight_yellow,20);
-            MACRO_ADDITEM(ACE_Chemlight_Orange,20);
-            MACRO_ADDITEM(ACE_Chemlight_White,20);
-            MACRO_ADDITEM(ACE_Chemlight_HiRed,10);
-            MACRO_ADDITEM(ACE_Chemlight_HiYellow,10);
-            MACRO_ADDITEM(ACE_Chemlight_HiOrange,10);
-            MACRO_ADDITEM(ACE_Chemlight_HiWhite,10);
-            MACRO_ADDITEM(ACE_Chemlight_IR,20);
             MACRO_ADDITEM(ACE_Chemlight_Shield,20);
+        };
+        
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(Chemlight_red,20);
+            MACRO_ADDMAGAZINE(Chemlight_blue,20);
+            MACRO_ADDMAGAZINE(Chemlight_green,20);
+            MACRO_ADDMAGAZINE(Chemlight_yellow,20);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_Orange,20);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_White,20);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiRed,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiYellow,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiOrange,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_HiWhite,10);
+            MACRO_ADDMAGAZINE(ACE_Chemlight_IR,20);
         };
         
         class AnimationSources {
