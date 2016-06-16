@@ -18,4 +18,4 @@
 
 params ["_unit", "_detectorType"];
 
-alive _unit && {(_unit getvariable [format[QGVAR(enable_%1), _detectorType], false])};
+alive _unit && {(_unit getVariable [format[QGVAR(enable_%1), _detectorType], false])};

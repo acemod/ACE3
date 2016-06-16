@@ -6,14 +6,14 @@
     private _config = [_type] call FUNC(getDetectorConfig);
 
     private _helperObject = "ACE_LogicDummy" createVehicleLocal (getPos _unit);
-    _unit setvariable [QGVAR(helperLogic), _helperObject];
+    _unit setVariable [QGVAR(helperLogic), _helperObject];
 
     [FUNC(detectorLoop), 0.01, [_unit, _type, _config, CBA_missionTime, _helperObject]] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(detectorDisabled), {
     params ["_unit", "_type"];
-    private _helperObject = _unit getvariable [QGVAR(helperLogic), objNull];
+    private _helperObject = _unit getVariable [QGVAR(helperLogic), objNull];
     if !(isNull _helperObject) then {
         deleteVehicle _helperObject;
     };
