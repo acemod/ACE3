@@ -19,6 +19,6 @@
 
 params ["_unit", "_detectorType"];
 
-_unit setvariable [format[QGVAR(enable_%1), _detectorType], false];
+_unit setVariable [format[QGVAR(enable_%1), _detectorType], false];
 
 [QGVAR(detectorDisabled), [_unit, _detectorType]] call CBA_fnc_localEvent;
