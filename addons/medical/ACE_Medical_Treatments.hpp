@@ -312,10 +312,11 @@ class ACE_Medical_Actions {
             itemConsumed = QGVAR(consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medicOther";
+            animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
+            animationCaller = "AinvPknlMstpSlayWrflDnon_medicOther";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
+            animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
+            animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
                 {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
                 {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -1231,7 +1232,7 @@ class ACE_Medical_Advanced {
                 };
             };
         };
-        
+
         class Medication {
             // How much does the pain get reduced?
             painReduce = 0;
