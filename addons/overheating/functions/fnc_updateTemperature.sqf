@@ -2,12 +2,12 @@
  * Author: esteldunedain
  * Update temperature of a weapon.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Heat increment (J) <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Current temperature <NUMBER>
  *
  * Example:

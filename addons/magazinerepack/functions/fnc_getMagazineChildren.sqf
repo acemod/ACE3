@@ -2,11 +2,11 @@
  * Author: PabstMirror, commy2, esteldunedain, Ruthberg
  * Gets magazine children for interaciton menu.
  *
- * Argument:
+ * Arguments:
  * 0: Target <OBJECT>
  * 1: Player <OBJECT>
  *
- * Return value:
+ * Return Value:
  * ChildActions <ARRAY>
  *
  * Example:

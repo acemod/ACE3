@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Start linking the belt
  *
- * Argument:
+ * Arguments:
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  */
 #include "script_component.hpp"

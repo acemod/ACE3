@@ -2,10 +2,10 @@
  * Author: esteldunedain
  * Calculate cooldown of all the stored spare barrels.
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

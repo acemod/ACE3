@@ -2,11 +2,11 @@
  * Author: commy2
  * Start the dragging process.
  *
- * Argument:
+ * Arguments:
  * 0: Unit that should do the dragging <OBJECT>
  * 1: Object to drag <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

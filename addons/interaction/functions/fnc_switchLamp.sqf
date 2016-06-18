@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Lamp <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -3,7 +3,7 @@
  * Calculate and apply backblast damage to potentially affected local units
  * Handles the "overpressure" event.
  *
- * Argument:
+ * Arguments:
  * 0: Unit that fired <OBJECT>
  * 1: Pos ASL of the projectile <ARRAY>
  * 2: Direction of the projectile (reversed for launcher backblast) <ARRAY>
@@ -11,7 +11,7 @@
  * 4: Magazine <STRING>
  * 5: Ammo <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

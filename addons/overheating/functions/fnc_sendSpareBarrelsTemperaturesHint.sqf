@@ -3,11 +3,11 @@
  * Collect the temperature of all the spare barrels a unit has and send a hint
  * to a client. Runs on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Target unit of the hint <OBJECT>
  * 1: Unit that has the spare barrels <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  *

@@ -6,7 +6,7 @@
  * 0: x Position (in meters) <NUMBER>
  * 1: y Position (in meters) <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Boolean
  */
 #include "script_component.hpp"

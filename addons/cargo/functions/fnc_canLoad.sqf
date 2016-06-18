@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Object to load <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can load <BOOL>
  *
  * Example:
