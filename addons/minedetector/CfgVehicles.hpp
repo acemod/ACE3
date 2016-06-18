@@ -17,7 +17,7 @@ class CfgVehicles {
                     statement = QUOTE(call FUNC(activateDetector));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = ""; // TODO add icon
+                    icon = QPATHTOF(ui\icon_mineDetectorOn.paa);
                     exceptions[] = {};
                 };
                 class GVAR(deactivate) {
@@ -26,7 +26,7 @@ class CfgVehicles {
                     statement = QUOTE(call FUNC(deactivateDetector));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = ""; // TODO add icon
+                    icon = QPATHTOF(ui\icon_mineDetectorOff.paa);
                     exceptions[] = {};
                 };
             };
