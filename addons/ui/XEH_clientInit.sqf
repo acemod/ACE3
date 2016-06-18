@@ -5,7 +5,7 @@ if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
     // Initial settings
-    [true] call FUNC(setElements);
+    [false] call FUNC(setElements);
 
     // On load and entering/exiting a vehicle
     ["ace_infoDisplayChanged", {
@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
         params ["_name"];
 
         if (_name in ELEMENTS_BASIC) then {
-            [false] call FUNC(setElements);
+            [true] call FUNC(setElements);
         } else {
             if (isClass (configFile >> "ACE_UI" >> _name select [7])) then {
                 [_name select [7], missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
