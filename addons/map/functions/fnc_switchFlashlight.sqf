@@ -3,31 +3,37 @@
  * Switch flashlight on/off.
  *
  * Arguments:
- * 0: New flashlight classname ("" for off) <STRING>
+ * 0: Unit <OBJECT>
+ * 1: New flashlight classname ("" for off) <STRING>
  *
  * Return value:
  * None
  *
  * Example:
- * ["ACE_Flashlight_MX991"] call ace_map_fnc_switchFlashlight;
+ * [ACE_player, "ACE_Flashlight_MX991"] call ace_map_fnc_switchFlashlight;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_newFlashlight"];
-private _oldFlashlight = GVAR(flashlightInUse);
+params ["_unit", "_newFlashlight"];
+
+private _unitLight = _unit getVariable [QGVAR(flashlight), ["", objNull]];
+_unitLight params ["_flashlight", "_glow"];
 
 if (GVAR(mapGlow)) then {
-    [_newFlashlight] call FUNC(flashlightGlow);
+    // we don't want to set the PVAR twice in a row, so tell this func not to set it
+    _glow = [_unit, _newFlashlight, false] call FUNC(flashlightGlow);
 };
 
+private _config = (configFile >> "CfgWeapons");
+
 if (
-    (getNumber (configFile >> "CfgWeapons" >> _newFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0) ||
-    {getNumber (configFile >> "CfgWeapons" >> _oldFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0}
-) then { 
+    (getNumber (_config >> _newFlashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0) ||
+    {getNumber (_config >> _flashlight >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Sound") > 0}
+) then {
     playSound QGVAR(flashlightClick);
 };
 
-GVAR(flashlightInUse) = _newFlashlight;
+_unit setVariable [QGVAR(flashlight), [_newFlashlight, _glow], true];
