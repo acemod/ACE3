@@ -3,13 +3,13 @@
  * Insert an ACE action to an object, under a certain config path
  * Note: This function is NOT global.
  *
- * Argument:
+ * Arguments:
  * 0: Object the action should be assigned to <OBJECT>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  *
- * Return value:
+ * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:

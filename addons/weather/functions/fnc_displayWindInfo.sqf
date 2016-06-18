@@ -2,10 +2,10 @@
  * Author: Ruthberg
  * Displays a wind info (colored arrow) in the top left corner of the screen
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

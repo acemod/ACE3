@@ -2,10 +2,10 @@
  * Author: ACE2 Team, Ruthberg
  * Updates rain based on ACE_RAIN_PARAMS
  *
- * Argument:
+ * Arguments:
  * Nothing
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Example:

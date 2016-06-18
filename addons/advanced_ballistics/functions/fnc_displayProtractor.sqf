@@ -3,10 +3,10 @@
  *
  * Displays a protractor in the top left corner of the screen
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

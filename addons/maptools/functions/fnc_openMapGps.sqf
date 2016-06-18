@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Open GPS? <BOOL>
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Public: No

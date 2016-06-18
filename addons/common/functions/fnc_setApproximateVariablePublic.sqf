@@ -2,13 +2,13 @@
  * Author: esteldunedain
  * Publish a variable if it's different enough from the previously published value.
  *
- * Argument:
+ * Arguments:
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
  * 3: Absolute tolerance <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Nothing.
  *
  * Example:

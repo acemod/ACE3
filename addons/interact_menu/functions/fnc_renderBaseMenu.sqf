@@ -2,12 +2,12 @@
  * Author: NouberNou and esteldunedain
  * Render the interaction menu for a base action
  *
- * Argument:
+ * Arguments:
  * 0: Object <OBJECT>
  * 1: Action node <ARRAY>
  * 2: 3D position or 2D position <ARRAY> (Optional)
  *
- * Return value:
+ * Return Value:
  * Was the menu rendered <BOOL>
  *
  * Public: No

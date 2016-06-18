@@ -2,11 +2,11 @@
  * Author: jaynus
  * Handler function for laser network code.
  *
- * Argument:
+ * Arguments:
  * 0: Emitter
  * 1: Owner
  * 
- * Return value:
+ * Return Value:
  *    [position, direction]
  */
 //#define DEBUG_MODE_FULL

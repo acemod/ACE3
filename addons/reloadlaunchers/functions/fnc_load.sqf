@@ -2,13 +2,13 @@
  * Author: commy2
  * Reload a launcher
  *
- * Argument:
+ * Arguments:
  * 0: Unit with magazine (Object)
  * 1: Unit with launcher (Object)
  * 2: weapon name (String)
  * 3: missile name (String)
  *
- * Return value:
+ * Return Value:
  * NONE
  *
  * Public: No

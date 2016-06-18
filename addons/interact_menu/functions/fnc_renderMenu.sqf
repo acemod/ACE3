@@ -2,13 +2,13 @@
  * Author: NouberNou and esteldunedain
  * Render an interaction menu and it's children recursively
  *
- * Argument:
+ * Arguments:
  * 0: Parent path <ARRAY>
  * 1: Action data <ARRAY>
  * 2: 2D position <ARRAY>
  * 3: Angle range available for rendering <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

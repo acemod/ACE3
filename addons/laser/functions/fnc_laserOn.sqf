@@ -10,7 +10,7 @@
  * 4: Laser code <number>
  * 5: Beam divergence (in mils off beam center).
  *
- * Return value:
+ * Return Value:
  * String, UUID for sending to laserOff function.
  */
 

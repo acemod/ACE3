@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Handle mouse movement over the map tool.
  *
- * Argument:
+ * Arguments:
  * 0: Map Control
  * 1: Mouse position on screen coordinates
  *
- * Return value:
+ * Return Value:
  * Boolean, true if event was handled
  */
 

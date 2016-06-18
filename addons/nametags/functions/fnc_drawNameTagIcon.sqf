@@ -11,7 +11,7 @@
  * 5: Draw rank <BOOL>
  * 6: Draw soundwave <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
