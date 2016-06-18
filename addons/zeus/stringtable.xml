@@ -8,7 +8,7 @@
             <Czech>Nastavení Zeuse</Czech>
             <German>Zeus-Einstellungen</German>
             <Portuguese>Ajustes do Zeus</Portuguese>
-            <French>Paramètres du Zeus</French>
+            <French>Paramètres de Zeus</French>
             <Hungarian>Zeus beállítások</Hungarian>
             <Russian>Настройки Зевса</Russian>
             <Italian>Impostazioni Zeus</Italian>
@@ -32,7 +32,7 @@
             <Czech>Zpráva o novém Zeusovi</Czech>
             <German>Aufstiegsnachrichten</German>
             <Portuguese>Mensagens de ascensão</Portuguese>
-            <French>Message ascension</French>
+            <French>Message d'ascension</French>
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
             <Italian>Messaggi di Ascesa</Italian>
@@ -44,7 +44,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
-            <French>Affiche un message en global quand un joueur est assigner comme Zeus</French>
+            <French>Affiche un message global quand un joueur est assigné en tant que Zeus</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
@@ -183,51 +183,67 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
             <English>Defend Area</English>
+            <French>Défendre la zone</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
+            <French>Compétence global de l'IA</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
+            <French>Compétence générale</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
+            <French>Change: general, commanding, courage</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
+            <French>Précision</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
+            <French>Change: aimingAccuracy</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
+            <French>Maniement d'armes</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
+            <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
+            <French>repérage</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
+            <French>Change: spotDistance, spotTime</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
+            <French>Chercher couverture</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
+            <French>L'IA devrait elle chercher couverture</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
+            <French>Combat automatique</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
+            <French>L'IA devrait elle passer automatiquement en mode combat</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
+            <French>Côté du groupe</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
+            <French>Zone de patrouille</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -243,18 +259,23 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
+            <French>Téléporter joueurs</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
+            <French>Joueur</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
+            <French>Téléporter le joueur sélectionné à la position du module</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
+            <French>Téléporter le groupe</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
+            <French>Téléporte toutes les unités du groupe</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -270,9 +291,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
+            <French>Chercher la zone</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
+            <French>Chercher le bâtiment proche</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -411,13 +434,15 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
+            <French>L'unité doit appartenir à un côté approprié</French>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
+            <French>Le bâtiment le plus proche est trop loin</French>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
-            <French>Rien sous le curseur</French>
+            <French>Placez sur une unité</French>
             <German>Es wurde nichts ausgewählt</German>
             <Spanish>Nada bajo el ratón</Spanish>
             <Portuguese>Coloque em uma unidade</Portuguese>
@@ -463,21 +488,27 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
+            <French>Cargo:</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
+            <French>Position de la tâche</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
+            <French>Sélectionne une position où accomplir la tâche</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
+            <French>Rayon de la tâche</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
+            <French>Rayon dans lequel la tâche prend place</French>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
+            <French>rayon invalide entré</French>
         </Key>
     </Package>
 </Project>

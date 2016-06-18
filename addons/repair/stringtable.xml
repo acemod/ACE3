@@ -1323,6 +1323,7 @@
             <Spanish>El motor necesita desactivado para la reparación</Spanish>
             <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
+            <French>Le moteur doit être éteins pour réparer</French>
         </Key>
     </Package>
 </Project>

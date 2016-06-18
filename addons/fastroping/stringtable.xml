@@ -65,7 +65,7 @@
             <English>Equip helicopter with FRIES</English>
             <German>Rüste Helicopter mit FRIES aus</German>
             <Polish>Wyposaż helikopter w FRIES</Polish>
-            <French>Equiper l'hélicoptère avec le FRIED</French>
+            <French>Equiper l'hélicoptère avec le FRIES</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
             <Italian>Equipaggia l'elicottero con FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
@@ -86,6 +86,7 @@
             <German>EINHEITEN ABSEILEN LASSEN</German>
             <Italian>SCENDI DALLE CORDE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
+            <French>LAISSER LES UNITES UTILISER LA CORDE </French>
         </Key>
     </Package>
 </Project>

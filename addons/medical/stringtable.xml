@@ -2912,6 +2912,7 @@
             <Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
             <Portuguese>Localização melhora treinamento</Portuguese>
+            <French>Locations boost l'entraînement de médecin</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -2921,6 +2922,7 @@
             <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
             <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
+            <French>Boost le rang médical dans les véhicules ou bâtiments médicaux [non entraînés deviennent médecins, médecins deviennent docteurs]</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -4165,6 +4167,7 @@
             <Italian>Ritarda il cessate il fuoco dell'IA quando il giocatore è svenuto per motivi medici.</Italian>
             <Czech>Prodleva zastavení palby pro AI, pokud je hráč v bezvědomí ze zdravotních důvodů.</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
+            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
@@ -4174,6 +4177,7 @@
             <Italian>Ritarda il cessate il fuoco dell'IA quando si è svenuti</Italian>
             <Czech>Prodleva zastavení palby AI na bezvědomé</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência</Portuguese>
+            <French>Délai de cessez le feu de l'IA pour la perte de conscience</French>
         </Key>
     </Package>
 </Project>
