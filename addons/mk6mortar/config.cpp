@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Box_82mm_Mo_HE","ACE_Box_82mm_Mo_Smoke",
             "ACE_Box_82mm_Mo_Illum","ACE_Box_82mm_Mo_Combo"};
         weapons[] = {"ACE_RangeTable_82mm","ace_mortar_82mm"};

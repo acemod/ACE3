@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_microDAGR_Item"};
         weapons[] = {"ACE_microDAGR"};
         requiredVersion = REQUIRED_VERSION;
