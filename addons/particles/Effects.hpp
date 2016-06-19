@@ -1,3 +1,4 @@
+// - Smoke hand grenades ------------------------------------------------------
 class SmokeShellWhiteEffect {
     class SmokeShell {
         type = "ACE_SmokeBaseLarge";
@@ -6,7 +7,27 @@ class SmokeShellWhiteEffect {
         type = "ACE_SmokeBaseSmall";
     };
 };
+EFFECT_HANDGRENADE(Red);
+EFFECT_HANDGRENADE(Green);
+EFFECT_HANDGRENADE(Yellow);
+EFFECT_HANDGRENADE(Purple);
+EFFECT_HANDGRENADE(Orange);
+EFFECT_HANDGRENADE(Blue);
 
+// - 40mm smoke grenades ------------------------------------------------------
+class ACE_40mmSmokeShellWhiteEffect: SmokeShellWhiteEffect {
+    class SmokeShell: SmokeShell {
+        type = "ACE_SmokeBase40mm";
+    };
+};
+EFFECT_40MM(Red);
+EFFECT_40MM(Green);
+EFFECT_40MM(Yellow);
+EFFECT_40MM(Purple);
+EFFECT_40MM(Orange);
+EFFECT_40MM(Blue);
+
+// - 120mm/155mm artillery smoke ----------------------------------------------
 class ACE_ArtillerySmoke {
     class SmokeShell {
         type = "ACE_SmokeBaseArtilleryLarge";
@@ -24,42 +45,19 @@ class ACE_ArtillerySmoke {
     };
 };
 
-class ACE_SmokeAfterWater {
+// - Smoke on water surface ---------------------------------------------------
+class ACE_SmokeAfterWaterWhite {
     class SmokeAfterWater {
-        type = "ACE_SmokeAfterWater";
+        type = "ACE_SmokeAfterWaterWhite";
         simulation = "particles";
         position[] = {0, 0, 0};
         intensity = 1;
         interval = 1;
     };
 };
-class ACE_SmokeAfterWaterRed: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterRed";
-    };
-};
-class ACE_SmokeAfterWaterGreen: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterGreen";
-    };
-};
-class ACE_SmokeAfterWaterYellow: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterYellow";
-    };
-};
-class ACE_SmokeAfterWaterPurple: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterPurple";
-    };
-};
-class ACE_SmokeAfterWaterOrange: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterOrange";
-    };
-};
-class ACE_SmokeAfterWaterBlue: ACE_SmokeAfterWater {
-    class SmokeAfterWater: SmokeAfterWater {
-        type = "ACE_SmokeAfterWaterBlue";
-    };
-};
+EFFECT_AFTER_WATER(Red);
+EFFECT_AFTER_WATER(Green);
+EFFECT_AFTER_WATER(Yellow);
+EFFECT_AFTER_WATER(Purple);
+EFFECT_AFTER_WATER(Orange);
+EFFECT_AFTER_WATER(Blue);

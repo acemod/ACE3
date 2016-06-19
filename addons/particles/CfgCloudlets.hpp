@@ -1,7 +1,7 @@
 class CfgCloudlets {
     class Default;
 
-    // - Surface smoke --------------------------------------------------------
+    // - Smoke hand grenades --------------------------------------------------
     class ACE_SmokeBaseLarge: Default {
         colorCoef[] = {"colorR", "colorG", "colorB", "colorA"};
         sizeCoef = 1;
@@ -29,7 +29,6 @@ class CfgCloudlets {
         destroyOnWaterSurface = 1;
         destroyOnWaterSurfaceOffset = -0.6;
         positionVar[] = {0, 0, 0};
-        moveVelocityVar[] = {0.25, 0.25, 0.25};
         colorVar[] = {0, 0, 0, 0};
         color[] = {
             {0.5, 0.5, 0.5, 1},
@@ -39,10 +38,11 @@ class CfgCloudlets {
             {0.5, 0.5, 0.5, 0.1},
             {0.5, 0.5, 0.5, 0}
         };
-        size[] = {0.05, 7, 15, 20};
+        size[] = {0.05, 4, 12, 16};
         sizeVar = 0.5;
         weight = 1.2777;
         moveVelocity[] = {0, 0, 0};
+        moveVelocityVar[] = {0.25, 0.25, 0.25};
         rotationVelocity = 0;
         rotationVelocityVar = 20;
         volume = 1;
@@ -51,11 +51,23 @@ class CfgCloudlets {
         beforeDestroyScript = "";
         blockAIVisibility = 1;
     };
+    class ACE_SmokeBaseMedium: ACE_SmokeBaseLarge {
+        size[] = {0.05, 3, 9, 12};
+        moveVelocityVar[] = {0.20, 0.20, 0.20};
+    };
     class ACE_SmokeBaseSmall: ACE_SmokeBaseLarge {
-        size[] = {0.05, 5, 7.5, 10};
+        size[] = {0.05, 2, 6, 8};
+        moveVelocityVar[] = {0.15, 0.15, 0.15};
     };
 
-    // - Artillery smoke ------------------------------------------------------
+    // - 40mm smoke grenades --------------------------------------------------
+    class ACE_SmokeBase40mm: ACE_SmokeBaseLarge {
+        lifeTime = 15;
+        size[] = {0.05, 2.5, 7.5, 10};
+        moveVelocityVar[] = {0.10, 0.10, 0.10};
+    };
+
+    // - Artillery smoke submunition ------------------------------------------
     class ACE_SmokeBaseArtilleryLarge: ACE_SmokeBaseLarge {
         lifeTime = 45;
     };
@@ -64,62 +76,41 @@ class CfgCloudlets {
     };
 
     // - Smoke on water surface -----------------------------------------------
-    class ACE_SmokeAfterWater: ACE_SmokeBaseLarge {
+    class ACE_SmokeAfterWaterWhite: ACE_SmokeBaseLarge {
         interval = 0.05;
-        size[] = {0.05, 2, 5};
+        size[] = {0.05, 2, 6};
         sizeVar = 1;
         lifeTime = 10;
         color[] = {
-            {0.5, 0.5, 0.5, 0.07},
+            {0.5, 0.5, 0.5, 0.1},
             {0.5, 0.5, 0.5, 0}
         };
         moveVelocityVar[] = {0, 0, 0};
         colorCoef[] = {1, 1, 1, 1};
     };
-    class ACE_SmokeAfterWaterRed: ACE_SmokeAfterWater {
-        colorCoef[] = {0.9528, 0.0438, 0.0410, 1};
+    class ACE_SmokeAfterWaterRed: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_RED;
     };
-    class ACE_SmokeAfterWaterGreen: ACE_SmokeAfterWater {
-        colorCoef[] = {0.0328, 0.1626, 0.1023, 1};
+    class ACE_SmokeAfterWaterGreen: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_GREEN;
     };
-    class ACE_SmokeAfterWaterYellow: ACE_SmokeAfterWater {
-        colorCoef[] = {0.9610, 0.4505, 0.0109, 1};
+    class ACE_SmokeAfterWaterYellow: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_YELLOW;
     };
-    class ACE_SmokeAfterWaterPurple: ACE_SmokeAfterWater {
-        colorCoef[] = {0.4622, 0.0578, 0.3154, 1};
+    class ACE_SmokeAfterWaterPurple: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_PURPLE;
     };
-    class ACE_SmokeAfterWaterBlue: ACE_SmokeAfterWater {
-        colorCoef[] = {0.0355, 0.1863, 1.0000, 1};
+    class ACE_SmokeAfterWaterBlue: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_BLUE;
     };
-    class ACE_SmokeAfterWaterOrange: ACE_SmokeAfterWater {
-        colorCoef[] = {0.9132, 0.1763, 0.0070, 1};
+    class ACE_SmokeAfterWaterOrange: ACE_SmokeAfterWaterWhite {
+        colorCoef[] = SMOKE_COLOR_ORANGE;
     };
-    class SmokeShellWhiteUW;
-    class SmokeShellWhite2UW: SmokeShellWhiteUW {
-        postEffects = "ACE_SmokeAfterWater";
-    };
-    class SmokeShellRedUW;
-    class SmokeShellRed2UW: SmokeShellRedUW {
-        postEffects = "ACE_SmokeAfterWaterRed";
-    };
-    class SmokeShellGreenUW;
-    class SmokeShellGreen2UW: SmokeShellGreenUW {
-        postEffects = "ACE_SmokeAfterWaterGreen";
-    };
-    class SmokeShellYellowUW;
-    class SmokeShellYellow2UW: SmokeShellYellowUW {
-        postEffects = "ACE_SmokeAfterWaterYellow";
-    };
-    class SmokeShellPurpleUW;
-    class SmokeShellPurple2UW: SmokeShellPurpleUW {
-        postEffects = "ACE_SmokeAfterWaterPurple";
-    };
-    class SmokeShellBlueUW;
-    class SmokeShellBlue2UW: SmokeShellBlueUW {
-        postEffects = "ACE_SmokeAfterWaterBlue";
-    };
-    class SmokeShellOrangeUW;
-    class SmokeShellOrange2UW: SmokeShellOrangeUW {
-        postEffects = "ACE_SmokeAfterWaterOrange";
-    };
+    CLOUDLET_UNDERWATER(White);
+    CLOUDLET_UNDERWATER(Red);
+    CLOUDLET_UNDERWATER(Green);
+    CLOUDLET_UNDERWATER(Yellow);
+    CLOUDLET_UNDERWATER(Purple);
+    CLOUDLET_UNDERWATER(Orange);
+    CLOUDLET_UNDERWATER(Blue);
 };
