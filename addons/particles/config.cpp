@@ -7,7 +7,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {""};
+        authors[] = {"BaerMitUmlaut"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
