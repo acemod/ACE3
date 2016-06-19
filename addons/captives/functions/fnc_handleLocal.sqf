@@ -25,28 +25,7 @@ if (_local) then {
     if (_unit getVariable [QGVAR(handcuffAnimEHID), -1] != -1) exitWith {};
 
     // Otherwise, restart the AnimChanged EH in the new machine
-    _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-        params ["_unit", "_newAnimation"];
-        TRACE_2("AnimChanged",_unit,_newAnimation);
-        if (_unit == (vehicle _unit)) then {
-            if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-                TRACE_1("Handcuff animation interrupted",_newAnimation);
-                [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
-            };
-        } else {
-            _turretPath = [];
-            {
-                _x params ["_xUnit", "", "", "_xTurretPath"];
-                if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
-            } forEach (fullCrew (vehicle _unit));
-            TRACE_1("turret Path",_turretPath);
-            if (_turretPath isEqualTo []) exitWith {};
-
-            TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
-            [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-            [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
-        };
-    }];
+    _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChanged)];
     TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
     _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 } else {
@@ -55,7 +34,7 @@ if (_local) then {
     if (_animChangedEHID == -1) exitWith {};
 
     // If the unit had a AnimChanged EH in the old machine then remove it
-    TRACE_1("removing animChanged EH",_animChangedEHID);
+    TRACE_1("Removing animChanged EH",_animChangedEHID);
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
 };

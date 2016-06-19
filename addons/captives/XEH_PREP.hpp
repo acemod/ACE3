@@ -14,6 +14,7 @@ PREP(doLoadCaptive);
 PREP(doRemoveHandcuffs);
 PREP(doUnloadCaptive);
 PREP(findEmptyNonFFVCargoSeat);
+PREP(handleAnimChangedHandcuffed);
 PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleLocal);
