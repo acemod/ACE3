@@ -5,198 +5,240 @@
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
+            <French>Interface utilisateur</French>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
             <Czech>Uživatelské rozhraní</Czech>
             <Portuguese>Interface do usuário</Portuguese>
+            <French>Interface utilisateur</French>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
             <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
+            <French>Ce module permet le basculement de parties visibles de l'interface utlisateur</French>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
             <Czech>Povolit selektivní UI</Czech>
             <Portuguese>Permitir IU Selecionável</Portuguese>
+            <French>Permettre l'IU selective</French>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
             <Czech>Povolit klientovi měnit jeho UI</Czech>
             <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
+            <French>Permet aux clients de modifier leur IU</French>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
             <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
+            <French>Soldat/Véhicule/Arme/Informations</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleRadar">
             <English>Vehicle Radar</English>
             <Czech>Radar vozidla</Czech>
             <Portuguese>Radar de Veículo</Portuguese>
+            <French>Radar de véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleCompass">
             <English>Vehicle Compass</English>
             <Czech>Kompas vozidla</Czech>
             <Portuguese>Bússola de Veículo</Portuguese>
+            <French>Compas de véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_CommandMenu">
             <English>Command Menu</English>
             <Czech>Menu rozkazů</Czech>
             <Portuguese>Menu de Comando</Portuguese>
+            <French>Menu de commandement</French>
         </Key>
         <Key ID="STR_ACE_UI_GroupBar">
             <English>Group Bar</English>
             <Czech>Panel skupiny</Czech>
             <Portuguese>Barra de Grupo</Portuguese>
+            <French>Barre de groupe</French>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>
             <Portuguese>Nome do Armamento</Portuguese>
+            <French>Nom de l''arme</French>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
             <Czech>Název zbraně v pozadí</Czech>
             <Portuguese>Fundo do Nome do Armamento</Portuguese>
+            <French>Arrière-plan du nom de l'arme</French>
         </Key>
         <Key ID="STR_ACE_UI_FiringMode">
             <English>Firing Mode</English>
             <Czech>Režim palby</Czech>
             <Portuguese>Modo de Disparo</Portuguese>
+            <French>Mode de tir</French>
         </Key>
         <Key ID="STR_ACE_UI_AmmoType">
             <English>Ammo Type</English>
             <Czech>Typ munice</Czech>
             <Portuguese>Tipo de Munição</Portuguese>
+            <French>Type de munitions</French>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
             <Czech>Počet munice</Czech>
             <Portuguese>Quantidade de Munição</Portuguese>
+            <French>Nombre de munitions</French>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
             <Czech>Počet zásobníků</Czech>
             <Portuguese>Quantidade de Carregadores</Portuguese>
+            <French>Nombre de chargeurs</French>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
             <Czech>Typ granátů apod.</Czech>
             <Portuguese>Tipo de Arremessável</Portuguese>
+            <French>Type d'objets de lancer</French>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableCount">
             <English>Throwable Count</English>
             <Czech>Počet granátů apod.</Czech>
             <Portuguese>Quantidade de Arremessável</Portuguese>
+            <French>Nombre d'objets de lancer</French>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>
             <Czech>Náměr</Czech>
             <Portuguese>Zerar a mira</Portuguese>
+            <French>Mise à zéro</French>
         </Key>
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
+            <French>Arrière-plan des informations inférieures de l'arme</French>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
             <Czech>Postoj</Czech>
             <Portuguese>Postura</Portuguese>
+            <French>Posture</French>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
             <Czech>Panel výdrže</Czech>
             <Portuguese>Barra de Energia</Portuguese>
+            <French>Barre d'endurance</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
             <Portuguese>Nome da arma do fuzileiro</Portuguese>
+            <French>Nom de l'arme du tireur</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
             <Portuguese>Fundo do nome da arma do fuzileiro</Portuguese>
+            <French>Arrière-plan du nom de l'arme (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
             <Portuguese>Modo de disparo do fuzileiro</Portuguese>
+            <French>Mode de tir (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
             <Portuguese>Tipo de Munição do fuzileiro</Portuguese>
+            <French>Type de munitions (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
             <Portuguese>Quantidade de Munição do fuzileiro</Portuguese>
+            <French>Nombre de munitions (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
             <Portuguese>Quantidade de Carregadores do fuzileiro</Portuguese>
+            <French>Nombre de chargeurs (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
             <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
+            <French>Type d'objets jetable ( tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
             <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
+            <French>Nombre d'objets jetable (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
             <Portuguese>Zerar a mira do fuzileiro</Portuguese>
+            <French>Mise à zéro ( tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
             <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
+            <French>Arrière-plan des informations inférieures (tireur)</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
             <Czech>Název vozidla</Czech>
             <Portuguese>Nome do Veículo</Portuguese>
+            <French>Nom du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
             <Czech>Název vozidla v pozadí</Czech>
             <Portuguese>Fundo do Nome do Veículo</Portuguese>
+            <French>Arrière-plan du nom du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleFuelBar">
             <English>Vehicle Fuel Bar</English>
             <Czech>Ukazatel paliva</Czech>
             <Portuguese>Barra de Combustível do Veículo</Portuguese>
+            <French>Barre d'éssence du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
             <Czech>Rychlost vozidla</Czech>
             <Portuguese>Velocidade do Veículo</Portuguese>
+            <French>Vitesse du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleAltitude">
             <English>Vehicle Altitude</English>
             <Czech>Výška vozidla</Czech>
             <Portuguese>Altitude do Veículo</Portuguese>
+            <French>Altitude du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleDamage">
             <English>Vehicle Damage</English>
             <Czech>Poškození vozidla</Czech>
             <Portuguese>Dano do Veículo</Portuguese>
+            <French>Dégats du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_VehicleInfoBackground">
             <English>Vehicle Info Background</English>
             <Czech>Info o vozidle v pozadí</Czech>
             <Portuguese>Fundo das informações do veículo</Portuguese>
+            <French>Arrière-plan des informations du véhicule</French>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
             <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
             <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
+            <French>Requiert les informations de soldat/Vehicule/Arme.</French>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
             <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
             <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
+            <French>Modifications de l'interface utilisateur désactivé.</French>
         </Key>
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
             <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
+            <French>Impossible de modifier un élément de l'interface utilisateur forcé</French>
         </Key>
     </Package>
 </Project>

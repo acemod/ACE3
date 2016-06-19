@@ -30,7 +30,7 @@
             <German>Zünden</German>
             <Spanish>Detonar</Spanish>
             <Polish>Detonuj</Polish>
-            <French>Mise à feu</French>
+            <French>Détoner</French>
             <Czech>Odpálit</Czech>
             <Italian>Detona</Italian>
             <Hungarian>Robbantás</Hungarian>
@@ -45,7 +45,7 @@
             <Czech>Odpálit VŠE</Czech>
             <Polish>Detonuj wszystkie</Polish>
             <Italian>Detona Tutti</Italian>
-            <French>Tout mettre à feu</French>
+            <French>Tout détoner</French>
             <Portuguese>Detonar Tudo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
@@ -460,7 +460,7 @@
             <Polish>Brak dostępnych zapalników dla %1</Polish>
             <Spanish>No hay detonadores disponibles para %1</Spanish>
             <German>Keine Auslöser für %1 vorhanden</German>
-            <French>Pas de mise à feu disponible pour %1</French>
+            <French>Pas de détonateur disponible pour %1</French>
             <Czech>Žádný detonátor k dispozici pro %1</Czech>
             <Italian>Nessun attivatore disponibile per %1</Italian>
             <Hungarian>Nincs elérhető gyújtóeszköz ide: %1</Hungarian>
@@ -506,7 +506,7 @@
         <Key ID="STR_ACE_Explosives_DeadManSwitch_displayName">
             <English>Dead Man's Switch</English>
             <German>Totmannschalter</German>
-            <French>Mise à feu par relâchement de pression</French>
+            <French>Détonateur par relâchement de pression</French>
             <Czech>Spínač mrtvého muže</Czech>
             <Polish>Czuwak</Polish>
             <Spanish>Detonador de hombre muerto</Spanish>
@@ -518,7 +518,7 @@
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
             <German>Zündet Sprengladungen wenn losgelassen.</German>
-            <French>Déclenche la mise à feu d'un explosif lorsqu'il est relaché.</French>
+            <French>Utilisé pour déclencher des explosifs à distance quand relaché.</French>
             <Czech>Používaný k vzdálenému odpálení, při uvolnění odpálí výbušniny</Czech>
             <Polish>Używany w celu zdalnej detonacji ładunków, kiedy jego operator zostanie zabity.</Polish>
             <Spanish>Utilizado para detonar explosivos remotamente al soltarlo.</Spanish>

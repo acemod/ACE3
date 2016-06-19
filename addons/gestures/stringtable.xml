@@ -6,7 +6,7 @@
             <German>ACE Gesten</German>
             <Polish>ACE Gesty</Polish>
             <Czech>ACE Posunky</Czech>
-            <French>ACE Signaux</French>
+            <French>ACE Gestes</French>
             <Hungarian>ACE Kézjelek</Hungarian>
             <Italian>ACE Gesti</Italian>
             <Portuguese>ACE Gestos</Portuguese>
@@ -19,7 +19,7 @@
             <Spanish>Gestos</Spanish>
             <Polish>Gesty</Polish>
             <Czech>Posunky</Czech>
-            <French>Signaux</French>
+            <French>Gestes</French>
             <Russian>Жесты</Russian>
             <Hungarian>Kézjelek</Hungarian>
             <Portuguese>Gestos</Portuguese>
@@ -79,7 +79,7 @@
             <Spanish>Alto el fuego</Spanish>
             <Polish>Wstrzymać ogień</Polish>
             <Czech>Zastavit palbu</Czech>
-            <French>Halte au feu</French>
+            <French>Cesser le feu</French>
             <Russian>Прекратить огонь</Russian>
             <Hungarian>Tüzet szüntess</Hungarian>
             <Portuguese>Cessar Fogo</Portuguese>
@@ -114,7 +114,7 @@
             <Spanish>Cubrirse</Spanish>
             <Polish>Do osłony</Polish>
             <Czech>Krýt se</Czech>
-            <French>A couvert</French>
+            <French>À couvert</French>
             <Russian>Укрыться</Russian>
             <Hungarian>Fedezékbe</Hungarian>
             <Portuguese>Proteger-se</Portuguese>
@@ -193,7 +193,7 @@
             <Polish>Pokaż gesty w menu interakcji</Polish>
             <Italian>Mostra Gesti su Menù Interazione</Italian>
             <Spanish>Mostrar gestos en el menú de interacción</Spanish>
-            <French>Afficher les gestes au menu d'interaction.</French>
+            <French>Afficher les gestes dans le menu d'interaction.</French>
             <Portuguese>Mostrar gestos no menu de interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
