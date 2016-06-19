@@ -42,7 +42,7 @@
             <Polish>Hełmy</Polish>
             <Italian>Copricapi</Italian>
             <Spanish>Cascos</Spanish>
-            <French>Equipement de tête</French>
+            <French> Couvre-chefs</French>
             <Portuguese>Capacetes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
@@ -92,7 +92,7 @@
             <Polish>Medyczne</Polish>
             <Italian>Medico</Italian>
             <Spanish>Médico</Spanish>
-            <French>Médicale</French>
+            <French>Médical</French>
             <Portuguese>Médico</Portuguese>
         </Key>
     </Package>

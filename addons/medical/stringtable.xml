@@ -77,7 +77,7 @@
             <Spanish>Inyectar Epinefrina</Spanish>
             <Polish>Wstrzyknij adrenalinę</Polish>
             <Czech>Aplikovat adrenalin</Czech>
-            <French>Injecter de l'épinéphrine</French>
+            <French>Injecter épinéphrine</French>
             <Russian>Ввести адреналин</Russian>
             <Hungarian>Epinefrin beadása</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
@@ -90,7 +90,7 @@
             <Polish>Wstrzyknij morfinę</Polish>
             <Czech>Aplikovat morfin</Czech>
             <Russian>Ввести морфин</Russian>
-            <French>Injecter de la morphine</French>
+            <French>Injecter morphine</French>
             <Hungarian>Morfium beadása</Hungarian>
             <Portuguese>Injetar Morfina</Portuguese>
             <Italian>Inietta morfina</Italian>
@@ -102,7 +102,7 @@
             <Polish>Przetocz krew</Polish>
             <Czech>Transfúze krve</Czech>
             <Russian>Перелить кровь</Russian>
-            <French>Transfusion</French>
+            <French>Transfuser du sang</French>
             <Hungarian>Infúzió (vér)</Hungarian>
             <Portuguese>Transfundir Sangue</Portuguese>
             <Italian>Trasfusione di sangue</Italian>
@@ -149,7 +149,7 @@
             <Spanish>Venda</Spanish>
             <Polish>Bandażuj</Polish>
             <Czech>Obvázat</Czech>
-            <French>Pansement</French>
+            <French>Panser</French>
             <Italian>Benda</Italian>
             <Hungarian>Kötözés</Hungarian>
             <Portuguese>Atadura</Portuguese>
@@ -162,7 +162,7 @@
             <Polish>Bandażuj głowę</Polish>
             <Czech>Obvázat hlavu</Czech>
             <Russian>Перевязать голову</Russian>
-            <French>Pansement Tête</French>
+            <French>Panser Tête</French>
             <Hungarian>Fej kötözése</Hungarian>
             <Portuguese>Atar Cabeça</Portuguese>
             <Italian>Benda la testa</Italian>
@@ -174,7 +174,7 @@
             <Polish>Bandażuj tors</Polish>
             <Czech>Obvázat hruď</Czech>
             <Russian>Перевязать торс</Russian>
-            <French>Pansement Torse</French>
+            <French>Panser Torse</French>
             <Hungarian>Testtörzs kötözése</Hungarian>
             <Portuguese>Atar Tronco</Portuguese>
             <Italian>Benda il torso</Italian>
@@ -186,7 +186,7 @@
             <Polish>Bandażuj lewe ramię</Polish>
             <Czech>Obvázat levou ruku</Czech>
             <Russian>Перевязать левую руку</Russian>
-            <French>Pansement Bras Gauche</French>
+            <French>Panser Bras Gauche</French>
             <Hungarian>Bal kar kötözése</Hungarian>
             <Portuguese>Atar Braço Esquerdo</Portuguese>
             <Italian>Benda il braccio sinistro</Italian>
@@ -198,7 +198,7 @@
             <Polish>Bandażuj prawe ramię</Polish>
             <Czech>Obvázat pravou ruku</Czech>
             <Russian>Перевязать правую руку</Russian>
-            <French>Pansement Bras Droit</French>
+            <French>Panser Bras Droit</French>
             <Hungarian>Jobb kar kötözése</Hungarian>
             <Portuguese>Atar Braço Direito</Portuguese>
             <Italian>Benda il braccio destro</Italian>
@@ -210,7 +210,7 @@
             <Polish>Bandażuj lewą nogę</Polish>
             <Czech>Obvázat levou nohu</Czech>
             <Russian>Перевязать левую ногу</Russian>
-            <French>Pansement Jambe Gauche</French>
+            <French>Panser Jambe Gauche</French>
             <Hungarian>Bal láb kötözése</Hungarian>
             <Portuguese>Atar Perna Esquerda</Portuguese>
             <Italian>Benda la gamba sinistra</Italian>
@@ -222,7 +222,7 @@
             <Polish>Bandażuj prawą nogę</Polish>
             <Czech>Obvázat pravou nohu</Czech>
             <Russian>Перевязать правую ногу</Russian>
-            <French>Pansement Jambe Droite</French>
+            <French>Panser Jambe Droite</French>
             <Hungarian>Jobb láb kötözése</Hungarian>
             <Portuguese>Atar Perna Direita</Portuguese>
             <Italian>Benda la gamba destra</Italian>
