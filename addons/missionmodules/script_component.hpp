@@ -1,4 +1,5 @@
-#define COMPONENT missionModules
+#define COMPONENT missionmodules
+#define COMPONENT_BEAUTIFIED Mission Modules
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

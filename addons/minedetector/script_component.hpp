@@ -1,4 +1,5 @@
 #define COMPONENT minedetector
+#define COMPONENT_BEAUTIFIED Mine Detector
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_MINEDETECTOR

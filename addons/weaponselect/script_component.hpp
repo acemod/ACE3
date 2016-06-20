@@ -1,4 +1,5 @@
 #define COMPONENT weaponselect
+#define COMPONENT_BEAUTIFIED Weapon Select
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
