@@ -307,8 +307,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -333,8 +334,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -386,8 +388,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -413,7 +416,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -439,8 +442,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
 
                 class ACE_Push {
@@ -475,7 +479,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 selection = "gunnerview";
-                distance = 2;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);

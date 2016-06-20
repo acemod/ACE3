@@ -90,9 +90,8 @@ if (_activeActionTree isEqualTo []) exitWith {false};
 
 BEGIN_COUNTER(fnc_renderMenus);
 
-// IGNORE_PRIVATE_WARNING(_cameraPosASL,_cameraDir);
 if (count _pos > 2) then {
-    _sPos pushBack (((AGLtoASL _pos) vectorDiff _cameraPosASL) vectorDotProduct _cameraDir);
+    _sPos pushBack (((AGLtoASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
 } else {
     _sPos pushBack 0;
 };
