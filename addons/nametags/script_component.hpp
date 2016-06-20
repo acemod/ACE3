@@ -1,5 +1,5 @@
 #define COMPONENT nametags
-#define COMPONENT_BEAUTIFIED Nametags
+#define COMPONENT_BEAUTIFIED Name Tags
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
