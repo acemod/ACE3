@@ -19,13 +19,14 @@ private _dogTagData = _target getVariable QGVAR(dogtagData);
 if (!isNil "_dogTagData") exitWith {_dogTagData};
 
 // Create dog tag data once for the unit: nickname, code (eg. 135-13-900) and blood type
+private _targetName = [_target, false, true] call EFUNC(common,getName);
+
 private _dogTagData = [
-    [_target, false, true] call EFUNC(common,getName),
+    _targetName,
     str(floor random 9) + str(floor random 9) + str(floor random 9) + "-" +
         str(floor random 9) + str(floor random 9) + "-" +
         str(floor random 9) + str(floor random 9) + str(floor random 9),
-    selectRandom ["O POS", "O NEG", "A POS", "A NEG", "B POS", "B NEG",
-        "AB POS", "AB NEG"]
+    _targetName call FUNC(bloodType)
 ];
 // Store it
 _target setVariable [QGVAR(dogtagData), _dogTagData, true];
