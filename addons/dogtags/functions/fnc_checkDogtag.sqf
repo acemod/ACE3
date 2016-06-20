@@ -15,7 +15,7 @@
 
 params ["_player", "_target"];
 
-private _doubleTags = !(_target getVariable [QGVAR(dogtagTaken), false]);
+private _doubleTags = (_target getVariable [QGVAR(dogtagTaken), objNull]) != _target;
 private _dogTagData = [_target] call FUNC(getDogTagData);
 
 [QGVAR(showDogtag), [_dogTagData, _doubleTags]] call CBA_fnc_localEvent;
