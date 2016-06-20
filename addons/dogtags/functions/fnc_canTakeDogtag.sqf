@@ -17,4 +17,4 @@ params ["_player", "_target"];
 
 if (isNull _target) exitWith {false};
 
-!alive _target || _target getVariable ["ACE_isUnconscious", false]
+(!alive _target) || {_target getVariable ["ACE_isUnconscious", false]}

@@ -16,9 +16,9 @@
 
 params ["_player", "_target"];
 
-if (_target getVariable [QGVAR(dogtagTaken), false]) then {
+if ((_target getVariable [QGVAR(dogtagTaken), objNull]) == _target) then {
     [localize LSTRING(dogtagAlreadyTaken)] call EFUNC(common,displayText);
 } else {
-    _target setVariable [QGVAR(dogtagTaken), true, true];
+    _target setVariable [QGVAR(dogtagTaken), _target, true];
     [QGVAR(getDogtagItem), [_player, _target]] call CBA_fnc_serverEvent;
 };
