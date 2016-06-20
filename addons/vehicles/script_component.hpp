@@ -1,4 +1,5 @@
 #define COMPONENT vehicles
+#define COMPONENT_BEAUTIFIED Vehicles
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

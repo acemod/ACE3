@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_MapTools"};
         requiredVersion = REQUIRED_VERSION;

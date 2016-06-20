@@ -1,4 +1,5 @@
 #define COMPONENT mx2a
+#define COMPONENT_BEAUTIFIED MX-2A
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

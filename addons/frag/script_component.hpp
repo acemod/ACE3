@@ -1,4 +1,5 @@
 #define COMPONENT frag
+#define COMPONENT_BEAUTIFIED Frag
 #include "\z\ace\addons\main\script_mod.hpp"
 
 //#define DEBUG_ENABLED_FRAG

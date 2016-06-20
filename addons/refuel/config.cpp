@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_refuel_fuelNozzle"};
         requiredVersion = REQUIRED_VERSION;

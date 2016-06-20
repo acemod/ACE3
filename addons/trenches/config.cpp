@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_envelope_small","ACE_envelope_big"};
         weapons[] = {"ACE_EntrenchingTool"};
         requiredVersion = REQUIRED_VERSION;

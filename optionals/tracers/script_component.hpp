@@ -1,4 +1,5 @@
 #define COMPONENT tracers
+#define COMPONENT_BEAUTIFIED Tracers
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_SYS_TRACERS

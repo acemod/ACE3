@@ -1,4 +1,5 @@
 #define COMPONENT maptools
+#define COMPONENT_BEAUTIFIED Map Tools
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
