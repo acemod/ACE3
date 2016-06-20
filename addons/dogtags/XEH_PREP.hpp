@@ -1,5 +1,6 @@
 PREP(addDogtagActions);
 PREP(addDogtagItem);
+PREP(bloodType);
 PREP(canCheckDogtag);
 PREP(canTakeDogtag);
 PREP(checkDogtag);
