@@ -34,15 +34,15 @@ class RscTitles {
                 y = safeZoneY + 0.25 * safezoneH;
                 w = (5.9 * (((safezoneW / safezoneH) min 1.2) / 40));
                 h = (3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
-                font = "EtelkaMonospacePro";
+                font = "RobotoCondensed";
                 class Attributes {
-                    font = "EtelkaMonospacePro";
-                    color = "#FFFFFF";
-                    align = "center";
+                    font = "RobotoCondensed";
+                    color = "#EEEEEE";
+                    align = "left";
                     valign = "middle";
-                    shadow = 1;
+                    shadow = 2;
                     shadowColor = "#3f4345";
-                    size = "0.85";
+                    size = "0.80";
                 };
             };
         };
@@ -58,13 +58,13 @@ class RscTitles {
             };
             class nickname: nickname {
                 class Attributes: Attributes {
-                    font = "EtelkaMonospacePro";
-                    color = "#FFFFFF";
-                    align = "center";
+                    font = "RobotoCondensed";
+                    color = "#EEEEEE";
+                    align = "left";
                     valign = "middle";
-                    shadow = 1;
+                    shadow = 2;
                     shadowColor = "#3f4345";
-                    size = "0.85";
+                    size = "0.80";
                 };
             };
         };

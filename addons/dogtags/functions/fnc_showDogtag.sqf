@@ -27,4 +27,4 @@ private _display = uiNamespace getvariable [QGVAR(tag), displayNull];
 if(isNull _display) exitWith {};
 
 private _control = _display displayCtrl 1001;
-_control ctrlSetText _nickname;
+_control ctrlSetStructuredText parseText format ["%1<br/>%2<br/>%3", toUpper _nickName, "135-13-9001", "O POS"];
