@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Item class <STRING>
- * 1: Nickname on dogtag <STRING>
+ * 1: Dogtag data <ARRAY>
  *
  * Return Value:
  * None
@@ -13,11 +13,12 @@
  */
 #include "script_component.hpp"
 
-params ["_item", "_nickname"];
+params ["_item", "_dogtagData"];
 
 if (_item == "") exitWith {};
 
 [ace_player, _item] call CBA_fnc_addItem;
 
-private _displayText = format [localize LSTRING(takeDogtagSuccess), _nickname];
+_dogtagData params ["_nickName"];
+private _displayText = format [localize LSTRING(takeDogtagSuccess), _nickName];
 [_displayText] call EFUNC(common,displayText);

@@ -15,26 +15,22 @@
 
 if(!isServer) exitWith {};
 
-params ["_target", "_unit"];
-TRACE_2("getDogtagItem",_target,_unit);
+params ["_player", "_target"];
+TRACE_2("getDogtagItem",_player,_target);
 
 private _allDogtags = missionNamespace getVariable [QGVAR(allDogtags), []];
-private _allDogtagNicknames = missionNamespace getVariable [QGVAR(allDogtagNicknames), []];
+private _allDogtagDatas = missionNamespace getVariable [QGVAR(allDogtagDatas), []];
 
 private _nextID = count _allDogtags + 1;
 
 if (_nextID > 999) exitWith {};
 
-private _nickname = [_unit, false, true] call EFUNC(common,getName);
+private _dogTagData = [_target] call FUNC(getDogTagData);
 private _item = format ["ACE_dogtag_%1", _nextID];
 _allDogtags pushBack _item;
-_allDogtagNicknames pushBack _nickname;
+_allDogtagDatas pushBack _dogTagData;
 
 missionNamespace setVariable [QGVAR(allDogtags), _allDogtags];
-missionNamespace setVariable [QGVAR(allDogtagNicknames), _allDogtagNicknames];
+missionNamespace setVariable [QGVAR(allDogtagDatas), _allDogtagDatas];
 
-if(isMultiplayer) then {
-    [QGVAR(addDogtagItem), [_item, _nickname], [_target]] call CBA_fnc_targetEvent;
-} else {
-    [QGVAR(addDogtagItem), [_item, _nickname]] call CBA_fnc_localEvent;
-};
+[QGVAR(addDogtagItem), [_item, _dogTagData], [_player]] call CBA_fnc_targetEvent;

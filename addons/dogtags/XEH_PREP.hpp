@@ -4,6 +4,7 @@ PREP(canCheckDogtag);
 PREP(canTakeDogtag);
 PREP(checkDogtag);
 PREP(checkDogtagItem);
+PREP(getDogtagData);
 PREP(getDogtagItem);
 PREP(sendDogtagData);
 PREP(showDogtag);

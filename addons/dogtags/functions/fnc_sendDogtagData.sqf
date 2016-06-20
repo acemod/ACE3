@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Server: returns to client nickname on given dogtag
+ * Server: returns to client data on given dogtag
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -19,12 +19,12 @@ params ["_target", "_item"];
 TRACE_2("sendDogtagData",_target,_item);
 
 private _allDogtags = missionNameSpace getVariable [QGVAR(allDogtags), []];
-private _allDogtagNicknames = missionNameSpace getVariable [QGVAR(allDogtagNicknames), []];
+private _allDogtagDatas = missionNameSpace getVariable [QGVAR(allDogtagDatas), []];
 
-private _nickname = "";
+private _dogtagData = [];
 private _index = _allDogtags find _item;
 if (_index >= 0) then {
-    _nickname = _allDogtagNicknames select _index;
+    _dogtagData = _allDogtagDatas select _index;
 };
 
-[QGVAR(showDogtag), [_nickname], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(showDogtag), [_dogtagData], [_target]] call CBA_fnc_targetEvent;
