@@ -20,12 +20,11 @@ if (!isNil "_dogTagData") exitWith {_dogTagData};
 
 // Create dog tag data once for the unit: nickname, code (eg. 135-13-900) and blood type
 private ["_bloodTypeIndex", "_code"];
-//hint getplayeruid _target;
-if ((typename getplayeruid _target) == "SCALAR") then {
-    _bloodTypeIndex = (getplayeruid _target) mod 8;
-    _code = (str getplayeruid _target) select [0, 3] + "-" +
-            (str getplayeruid _target) select [3, 2] + "-" +
-            (str getplayeruid _target) select [5, 3];
+if !(getplayeruid _target in ["", "_SP_AI_", "_SP_PLAYER_"]) then {
+    _bloodTypeIndex = (parseNumber ((getPlayerUID _target) select [0, 5])) mod 8;
+    _code = (getplayeruid _target) select [0, 3] + "-" +
+            (getplayeruid _target) select [3, 2] + "-" +
+            (getplayeruid _target) select [5, 3];
 } else {
     _bloodTypeIndex = floor random 8;
     _code = str(floor random 9) + str(floor random 9) + str(floor random 9) + "-" +
