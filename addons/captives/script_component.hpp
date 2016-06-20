@@ -1,4 +1,5 @@
 #define COMPONENT captives
+#define COMPONENT_BEAUTIFIED Captives
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

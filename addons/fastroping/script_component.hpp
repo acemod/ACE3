@@ -1,4 +1,5 @@
 #define COMPONENT fastroping
+#define COMPONENT_BEAUTIFIED Fastroping
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

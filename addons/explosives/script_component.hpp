@@ -1,4 +1,5 @@
 #define COMPONENT explosives
+#define COMPONENT_BEAUTIFIED Explosives
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
