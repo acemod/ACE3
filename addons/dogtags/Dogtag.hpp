@@ -31,7 +31,7 @@ class RscTitles {
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0};
                 x = ((safezoneX + safezoneW) - (8.4 * (((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 * (((safezoneW / safezoneH) min 1.2) / 40));
-                y = safeZoneY + 0.25 * safezoneH;
+                y = safeZoneY + 0.24 * safezoneH;
                 w = (5.9 * (((safezoneW / safezoneH) min 1.2) / 40));
                 h = (3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
                 font = "RobotoCondensed";
