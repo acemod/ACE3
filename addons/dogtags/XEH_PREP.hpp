@@ -1,0 +1,10 @@
+PREP(addDogtagActions);
+PREP(addDogtagItem);
+PREP(canCheckDogtag);
+PREP(canTakeDogtag);
+PREP(checkDogtag);
+PREP(checkDogtagItem);
+PREP(getDogtagItem);
+PREP(sendDogtagData);
+PREP(showDogtag);
+PREP(takeDogtag);
