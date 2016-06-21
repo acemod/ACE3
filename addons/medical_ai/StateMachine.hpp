@@ -1,5 +1,5 @@
 class ACE_Medical_AI_StateMachine {
-    list = "allUnits select {!isPlayer _x}";
+    list = "allUnits select {(!isPlayer _x) && {local _x}}";
 
     class Initial {
         class Injured {
@@ -46,6 +46,10 @@ class ACE_Medical_AI_StateMachine {
             targetState = "Initial";
             condition = QUOTE(!(call FUNC(isInjured)));
         };
+        class Injured {
+            targetState = "Injured";
+            condition = QUOTE(!(call FUNC(isSafe)));
+        };
     };
 
     class HealUnit {
@@ -53,7 +57,7 @@ class ACE_Medical_AI_StateMachine {
 
         class Initial {
             targetState = "Initial";
-            condition = QUOTE(!(call FUNC(wasRequestedAsMedic)));
+            condition = QUOTE(!(call FUNC(wasRequestedAsMedic || {call FUNC(isSafe)})));
         };
     };
 };

@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- *
+ * Makes the unit heal itself.
  *
  * Arguments:
  * None
