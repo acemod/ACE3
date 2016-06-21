@@ -28,18 +28,18 @@ GVAR(volumeAttenuation) = 1;
     [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 
     // Update veh attunation when player veh changes
-    ["ace_playerVehicleChanged", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addEventHandler;
-    ["ace_playerTurretChanged", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addEventHandler;
+    ["vehicle", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
+    ["turret", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
-    ["ace_playerChanged", {
+    ["unit", {
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         ACE_player setVariable [QGVAR(deaf), false];
         GVAR(time3) = 0;
         [] call FUNC(updateHearingProtection);
-    }] call CBA_fnc_addEventHandler;
+    }] call CBA_fnc_addPlayerEventHandler;
 
     // Update protection on possible helmet change
-    ["ace_playerInventoryChanged", {[] call FUNC(updateHearingProtection);}] call CBA_fnc_addEventHandler;
+    ["loadout", FUNC(updateHearingProtection)] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;
