@@ -17,7 +17,7 @@
 params ["_args", "_idPFH"];
 _args params ["_unit", "_type", "_detectorConfig", "_lastPlayed"];
 
-if !([_unit, _type] call FUNC(hasDetectorType)) exitWith {
+if !([_unit, _type] call FUNC(hasDetector)) exitWith {
     // disable detector type
     [_unit, _type] call FUNC(disableDetector);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
