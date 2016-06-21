@@ -18,4 +18,4 @@ ACE3 Weather simulates realistic weather effects, according to the geographical 
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="weather" %
+{% include dependencies_list.md component="weather" %}
