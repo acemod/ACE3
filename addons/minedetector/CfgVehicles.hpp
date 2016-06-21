@@ -39,7 +39,7 @@ class CfgVehicles {
 
     // Editor placed mines
     class Static;
-    class MineBase: Static {
+    class MineGeneric: Static {
         GVAR(detectable) = 1;
     };
 
