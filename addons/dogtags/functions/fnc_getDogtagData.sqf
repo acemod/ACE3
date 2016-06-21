@@ -23,9 +23,7 @@ private _targetName = [_target, false, true] call EFUNC(common,getName);
 
 private _dogTagData = [
     _targetName,
-    str(floor random 10) + str(floor random 10) + str(floor random 10) + "-" +
-        str(floor random 10) + str(floor random 10) + "-" +
-        str(floor random 10) + str(floor random 10) + str(floor random 10),
+    _targetName call FUNC(ssn),
     _targetName call FUNC(bloodType)
 ];
 // Store it

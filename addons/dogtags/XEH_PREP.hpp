@@ -9,4 +9,5 @@ PREP(getDogtagData);
 PREP(getDogtagItem);
 PREP(sendDogtagData);
 PREP(showDogtag);
+PREP(ssn);
 PREP(takeDogtag);
