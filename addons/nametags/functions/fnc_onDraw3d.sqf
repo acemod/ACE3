@@ -24,11 +24,11 @@ if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) ex
 
 // Determine flags from current settings
 private _drawName = true;
-private _drawRank = GVAR(showPlayerRanks);
+private _drawRank = GVAR(ShowRanks);
 private _enabledTagsNearby = false;
 private _enabledTagsCursor = false;
 private _onKeyPressAlphaMax = 1;
-switch (GVAR(showPlayerNames)) do {
+switch (GVAR(ShowNameTags)) do {
     case 0: {
         // Player names Disabled
         _drawName = false;
@@ -60,7 +60,7 @@ switch (GVAR(showPlayerNames)) do {
 };
 
 private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _maxDistance = _ambientBrightness * GVAR(ViewDistance);
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 private _camPosASL = AGLtoASL _camPosAGL;
