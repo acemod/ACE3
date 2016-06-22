@@ -348,7 +348,7 @@ GVAR(OldIsCamera) = false;
     BEGIN_COUNTER(stateChecker);
 
     // "activeCameraChanged" event
-    _data = call FUNC(isfeatureCameraActive);
+    private _data = call FUNC(isfeatureCameraActive);
     if !(_data isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _data;
