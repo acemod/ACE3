@@ -32,11 +32,12 @@ if (_map in ["bootcamp_acr"]) exitWith { [50, 0] };
 if (_map in ["bornholm"]) exitWith { [55, 0] };
 if (_map in ["bozcaada"]) exitWith { [40, 0] };
 if (_map in ["caribou"]) exitWith { [68, 0] };
+if (_map in ["cartercity"]) exitWith { [43, 130] };    //Pecher, based on Grozny (1995 - 1996) elevation 130m (Wikipedia)
 if (_map in ["catalina"]) exitWith { [33, 0] };
 if (_map in ["chernarus", "chernarus_summer", "chernarus_winter"]) exitWith { [50, 0] };
 if (_map in ["chernobylzone", "chernobylzonea2"]) exitWith { [51, 0] };
 if (_map in ["clafghan"]) exitWith { [34, 640] };
-if (_map in ["dakrong"]) exitWith { [17, 0] };    //Unsung Mod
+if (_map in ["dakrong"]) exitWith { [16, 0] };    //Unsung Mod
 if (_map in ["desert_e"]) exitWith { [40, 800] };
 if (_map in ["dya"]) exitWith { [34, 110] };    //Diyala Iraq - default elevationOffset
 if (_map in ["esseker"]) exitWith { [43, 2000] };
@@ -53,16 +54,18 @@ if (_map in ["jacobi"]) exitWith { [34, 2000] };    //default elevationOffset
 if (_map in ["kapaulio"]) exitWith { [0, 0] };
 if (_map in ["kerama"]) exitWith { [26, 0] };    //Kerama Islands, Japan - default elevationOffset
 if (_map in ["kholm"]) exitWith { [36, 0] };
+if (_map in ["kidal"]) exitWith { [18, 0] };    //Kidal, Mali - default elevationOffset
 if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
-if (_map in ["lingor", "lingor3"]) exitWith { [-4, 0] };
+if (_map in ["lingor3"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
-if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
 if (_map in ["malvinas"]) exitWith { [-52, 0] };
-if (_map in ["namalsk"]) exitWith { [65, 0] };
+if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
 if (_map in ["mef_alaska"]) exitWith { [60, 5] };
 if (_map in ["mountains_acr"]) exitWith { [35, 2000] };
+if (_map in ["namalsk"]) exitWith { [65, 0] };
 if (_map in ["napf", "napfwinter"]) exitWith { [47, 0] };
+if (_map in ["newyork_lumnuon"]) exitWith { [41, 5] };    //Governer´s Island, New York - default elevationOffset
 if (_map in ["panthera3"]) exitWith { [46, 0] };
 if (_map in ["pianosa_aut"]) exitWith { [43, 0] };    //Pianosa, Italy - default elevationOffset
 if (_map in ["pja305"]) exitWith { [0, 0] };    //G.O.S N'Ziwasogo
@@ -75,12 +78,13 @@ if (_map in ["porquerolles"]) exitWith { [43, 0] };
 if (_map in ["porto"]) exitWith { [40, 0] };
 if (_map in ["provinggrounds_pmc"]) exitWith { [35, 100] };
 if (_map in ["reshmaan"]) exitWith { [35, 2000] };
+if (_map in ["rungsat"]) exitWith { [10, 0] };    //Unsung Mod
 if (_map in ["sara", "sara_dbe1"]) exitWith { [40, 0] };
 if (_map in ["saralite"]) exitWith { [40, 0] };
 if (_map in ["sb3"]) exitWith { [53, 25] };    //TrpUebPl Einfelde Nord (Munster North Training Area, Germany) - default elevationOffset
-if (_map in ["shapur_baf"]) exitWith { [35, 100] };
 if (_map in ["sfp_sturko"]) exitWith { [56, 0] };
 if (_map in ["sfp_wamako"]) exitWith { [14, 0] };
+if (_map in ["shapur_baf"]) exitWith { [35, 100] };
 if (_map in ["sugarlake"]) exitWith { [29, 0] };
 if (_map in ["takistan"]) exitWith { [35, 2000] };
 if (_map in ["thirsk"]) exitWith { [65, 0] };
