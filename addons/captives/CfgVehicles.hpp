@@ -10,7 +10,7 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
                 statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
                 exceptions[] = {};
-                icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
+                icon = QPATHTOF(UI\handcuff_ca.paa);
             };
 
             class ACE_MainActions {
@@ -21,7 +21,7 @@ class CfgVehicles {
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
                     exceptions[] = {};
-                    icon = QUOTE(PATHTOF(UI\handcuff_ca.paa));
+                    icon = QPATHTOF(UI\handcuff_ca.paa);
                 };
                 class ACE_EscortCaptive {
                     displayName = CSTRING(EscortCaptive);
@@ -30,7 +30,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doEscortCaptive));
                     exceptions[] = {};
                     showDisabled = 0;
-                    icon = QUOTE(PATHTOF(UI\captive_ca.paa));
+                    icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.3;
                 };
                 class ACE_StopEscorting {
@@ -40,7 +40,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
                     exceptions[] = {"isNotEscorting"};
                     showDisabled = 0;
-                    icon = QUOTE(PATHTOF(UI\captive_ca.paa));
+                    icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.3;
                 };
                 class ACE_LoadCaptive {
@@ -50,7 +50,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
                     exceptions[] = {"isNotEscorting"};
                     showDisabled = 0;
-                    icon = QUOTE(PATHTOF(UI\captive_ca.paa));
+                    icon = QPATHTOF(UI\captive_ca.paa);
                     priority = 2.2;
                 };
                 class GVAR(UnloadCaptive) {
@@ -79,7 +79,7 @@ class CfgVehicles {
                 exceptions[] = {};
                 showDisabled = 0;
                 priority = 0;
-                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
+                icon = QPATHTOF(UI\Surrender_ca.paa);
             };
             class ACE_StopSurrenderingSelf {
                 displayName = CSTRING(StopSurrendering);
@@ -88,7 +88,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSurrendering"};
                 showDisabled = 0;
                 priority = 0;
-                icon = QUOTE(PATHTOF(UI\Surrender_ca.paa));
+                icon = QPATHTOF(UI\Surrender_ca.paa);
             };
         };
     };
@@ -154,7 +154,7 @@ class CfgVehicles {
         scope = 2;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Make_Unit_Surrender_ca.paa);
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
@@ -170,7 +170,7 @@ class CfgVehicles {
         scope = 2;  //show in editor
         isGlobal = 0; //run on server
         isTriggerActivated  = 1; //Wait for triggers
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Make_Unit_Handcuffed_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Make_Unit_Handcuffed_ca.paa);
         functionPriority = 0;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
@@ -186,7 +186,7 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSettings_DisplayName);
         function = QFUNC(moduleSettings);
         scope = 2;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_settings_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_settings_ca.paa);
         isGlobal = 1;
         isSingular = 1;
         class Arguments {

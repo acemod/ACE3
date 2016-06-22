@@ -5,7 +5,7 @@ class CfgMagazines {
         scope = 1;
         scopeArsenal = 1;
         displayName = CSTRING(PreloadedMissileDummy);
-        picture = PATHTOEF(common,UI\blank_CO.paa);
+        picture = QPATHTOEF(common,UI\blank_CO.paa);
         weaponPoolAvailable = 0;
         mass = 0;
     };

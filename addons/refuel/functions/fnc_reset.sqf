@@ -17,9 +17,7 @@
 
 params [["_target", objNull, [objNull]]];
 
-["setVanillaHitPointDamage", _target, [_target, ["HitEngine", _target getVariable [QGVAR(engineHit), 0]] ] ] call EFUNC(common,objectEvent);
-
-_target setVariable [QGVAR(engineHit), nil, true];
+[_target, "blockEngine", "ACE_Refuel", false] call EFUNC(common,statusEffect_set);
 _target setVariable [QGVAR(isConnected), false, true];
 
 private _nozzle = _target getVariable [QGVAR(ownedNozzle), nil];
@@ -35,7 +33,7 @@ if !(isNil "_nozzle") then {
     };
 
     {
-        [QGVAR(resetLocal), _x, [_x, _nozzle]] call EFUNC(common,objectEvent);
+        [QGVAR(resetLocal), [_x, _nozzle], _x] call CBA_fnc_targetEvent;
     } count allPlayers;
     deleteVehicle _nozzle;
 };

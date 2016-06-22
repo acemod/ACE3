@@ -65,7 +65,7 @@
             <Czech>Povolit náklad</Czech>
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
-            <French>Activer la cargaison</French>
+            <French>Activer la mise en cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -76,7 +76,7 @@
             <Spanish>Habilitar la carga en el módulo de carga</Spanish>
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
-            <French>Activer le chargement dans le module de cargaison.</French>
+            <French>Active le chargement de cargaison dans un vehicule</French>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -87,7 +87,7 @@
             <Czech>Nastavení nákladu</Czech>
             <Spanish>Ajustes de carga</Spanish>
             <Italian>Impostazioni Cargo</Italian>
-            <French>Réglages de cargaison</French>
+            <French>Paramètres de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -98,7 +98,7 @@
             <Spanish>Configure los ajustes del módulo de carga</Spanish>
             <Czech>Konfigurace nákladního modulu</Czech>
             <Italian>Configura le impostazioni del modulo cargo</Italian>
-            <French>Configurer les réglages du module de cargaison</French>
+            <French>Configure les paramètres du module de cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -175,6 +175,8 @@
             <Italian>Rendi oggetto caricabile</Italian>
             <Spanish>Hacer objeto cargable</Spanish>
             <French>Rendre l'objet chargeable</French>
+            <Czech>Vytvořit objekt nakladatelným</Czech>
+            <Portuguese>Fazer objeto carregável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -183,6 +185,8 @@
             <Italian>Imposta l'oggetto sincronizzato come caricabile dal sistema cargo</Italian>
             <Spanish>Sincronizar un objecto para hacerlo cargable.</Spanish>
             <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
+            <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
+            <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -191,6 +195,8 @@
             <Italian>Dimensioni dell'oggetto</Italian>
             <Spanish>Tamaño del objeto</Spanish>
             <French>Taille de l'objet</French>
+            <Czech>Velikost objektu</Czech>
+            <Portuguese>Tamanho do objeto</Portuguese>
         </Key>
     </Package>
 </Project>

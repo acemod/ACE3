@@ -1,4 +1,5 @@
 #define COMPONENT refuel
+#define COMPONENT_BEAUTIFIED Refuel
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
@@ -22,6 +23,7 @@
 
 #define REFUEL_HOLSTER_WEAPON \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
+    _unit call EFUNC(common,fixLoweredRifleAnimation); \
     _unit action ["SwitchWeapon", _unit, _unit, 99];
 
 #define REFUEL_UNHOLSTER_WEAPON \

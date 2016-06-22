@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The Map <CONTROL>
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Public: No
@@ -18,40 +18,28 @@
 
 params ["_theMap"];
 
-private ["_rotatingTexture", "_textureWidth", "_scaleX", "_scaleY", "_xPos", "_yPos"];
+if ((GVAR(mapTool_Shown) == 0) || {!("ACE_MapTools" in items ACE_player)}) exitWith {};
 
-// Show/Hide draw buttons
-if ([] call FUNC(canDraw)) then {
-    { ((findDisplay 12) displayCtrl _x) ctrlShow true; } forEach GVAR(drawing_controls);
-} else {
-    { ((findDisplay 12) displayCtrl _x) ctrlShow false; } forEach GVAR(drawing_controls);
-    if (GVAR(drawing_isDrawing)) then {
-        call FUNC(cancelDrawing);
-    };
-};
-
-if (!("ACE_MapTools" in items ACE_player)|| {GVAR(mapTool_Shown) == 0}) exitWith {};
-
-_rotatingTexture = "";
-_textureWidth = 0;
+private _rotatingTexture = "";
+private _textureWidth = 0;
 if (GVAR(mapTool_Shown) == 1) then {
-    _rotatingTexture = QUOTE(PATHTOF(data\mapToolRotatingNormal.paa));
+    _rotatingTexture = QPATHTOF(data\mapToolRotatingNormal.paa);
     _textureWidth = TEXTURE_WIDTH_IN_M;
 } else {
-    _rotatingTexture = QUOTE(PATHTOF(data\mapToolRotatingSmall.paa));
+    _rotatingTexture = QPATHTOF(data\mapToolRotatingSmall.paa);
     _textureWidth = TEXTURE_WIDTH_IN_M / 2;
 };
 
 // Update scale of both parts
 getResolution params ["_resWidth", "_resHeight", "", "", "_aspectRatio"];
-_scaleX = 32 * _textureWidth * CONSTANT_SCALE * (call FUNC(calculateMapScale));
-_scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); //handle bad aspect ratios
+private _scaleX = 32 * _textureWidth * CONSTANT_SCALE * (call FUNC(calculateMapScale));
+private _scaleY = _scaleX * ((_resWidth / _resHeight) / _aspectRatio); //handle bad aspect ratios
 
 // Position of the fixed part
-_xPos = GVAR(mapTool_pos) select 0;
-_yPos = (GVAR(mapTool_pos) select 1) + _textureWidth * CENTER_OFFSET_Y_PERC;
+private _xPos = GVAR(mapTool_pos) select 0;
+private _yPos = (GVAR(mapTool_pos) select 1) + _textureWidth * CENTER_OFFSET_Y_PERC;
 
-_theMap drawIcon [QUOTE(PATHTOF(data\mapToolFixed.paa)), [1,1,1,1], [_xPos,_yPos], _scaleX, _scaleY, 0, "", 0];
+_theMap drawIcon [QPATHTOF(data\mapToolFixed.paa), [1,1,1,1], [_xPos,_yPos], _scaleX, _scaleY, 0, "", 0];
 
 // Position and rotation of the rotating part
 _xPos = (GVAR(mapTool_pos) select 0) + sin(GVAR(mapTool_angle)) * _textureWidth * CENTER_OFFSET_Y_PERC;

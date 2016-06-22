@@ -3,8 +3,10 @@
 
 if (!hasInterface) exitWith {};
 
-["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb),
-{
+["ace_playerChanged", FUNC(handleVirtualMass)] call CBA_fnc_addEventHandler;
+["ace_playerInventoryChanged", FUNC(handleVirtualMass)] call CBA_fnc_addEventHandler;
+
+["ACE3 Movement", QGVAR(climb), localize LSTRING(Climb), {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific

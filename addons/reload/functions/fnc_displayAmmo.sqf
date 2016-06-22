@@ -2,10 +2,10 @@
  * Author: commy2 and esteldunedain
  * Display the ammo of the currently loaded magazine of the target or count rifle grenades.
  *
- * Argument:
+ * Arguments:
  * 0: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Nothing
  */
 #include "script_component.hpp"

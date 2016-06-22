@@ -3,11 +3,11 @@
  * Return action point from path
  * Note: This function is NOT global.
  *
- * Argument:
+ * Arguments:
  * 0: List of Action Tree <ARRAY>
  * 1: Path <ARRAY>
  *
- * Return value:
+ * Return Value:
  * Action node <ARRAY> or <NIL> if not found 
  *
  * Example:

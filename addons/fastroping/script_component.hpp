@@ -1,5 +1,11 @@
 #define COMPONENT fastroping
+#define COMPONENT_BEAUTIFIED Fastroping
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define CBA_DEBUG_SYNCHRONOUS
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_FASTROPING
     #define DEBUG_MODE_FULL

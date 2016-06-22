@@ -17,8 +17,8 @@ class CfgWeapons {
     class ACE_Flashlight_MX991: ACE_ItemCore {
         displayName = CSTRING(MX991_DisplayName);
         descriptionShort = CSTRING(MX991_Description);
-        model = QUOTE(PATHTOF(data\MX_991.p3d));
-        picture = PATHTOF(UI\mx991_ca.paa);
+        model = QPATHTOF(data\MX_991.p3d);
+        picture = QPATHTOF(UI\mx991_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
@@ -32,8 +32,8 @@ class CfgWeapons {
     class ACE_Flashlight_KSF1: ACE_ItemCore {
         displayName = CSTRING(KSF1_DisplayName);
         descriptionShort = CSTRING(KSF1_Description);
-        model = QUOTE(PATHTOF(data\KSF_1.p3d));
-        picture = PATHTOF(UI\ksf1_ca.paa);
+        model = QPATHTOF(data\KSF_1.p3d);
+        picture = QPATHTOF(UI\ksf1_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;
@@ -47,8 +47,8 @@ class CfgWeapons {
     class ACE_Flashlight_XL50: ACE_ItemCore {
         displayName = CSTRING(XL50_DisplayName);
         descriptionShort = CSTRING(XL50_Description);
-        model = QUOTE(PATHTOF(data\Maglight.p3d));
-        picture = PATHTOF(UI\xl50_ca.paa);
+        model = QPATHTOF(data\Maglight.p3d);
+        picture = QPATHTOF(UI\xl50_ca.paa);
         scope = 2;
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;

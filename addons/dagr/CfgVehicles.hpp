@@ -9,7 +9,7 @@ class CfgVehicles {
                     statement = QUOTE(call FUNC(menuInit));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = QUOTE(PATHTOF(UI\DAGR_Icon.paa));
+                    icon = QPATHTOF(UI\DAGR_Icon.paa);
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     class GVAR(toggle) {
                         displayName = CSTRING(ToggleDAGR);
@@ -17,7 +17,7 @@ class CfgVehicles {
                         statement = QUOTE(call FUNC(toggleOverlay));
                         showDisabled = 0;
                         priority = 0.2;
-                        icon = QUOTE(PATHTOF(UI\DAGR_Icon.paa));
+                        icon = QPATHTOF(UI\DAGR_Icon.paa);
                         exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     };
                 };

@@ -9,7 +9,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
         class Crew;
         class ACE_FastRoping: Crew {
-            file = QUOTE(PATHTOF(anim\fastroping.rtm));
+            file = QPATHTOF(anim\fastroping.rtm);
             interpolateTo[] = {"Unconscious", 1};
             disableWeapons = 1;
             disableWeaponsLong = 1;

@@ -6,6 +6,8 @@
 */
 
 #include "shared.hpp"
+
+#include <stdlib.h>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -31,13 +33,13 @@ std::vector<std::string> parseExtensionInput(const std::string& input)
 
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
     }
-    else 
+    else
     {
         std::string returnValue = "";
         std::vector<std::string> arguments = parseExtensionInput(function);
-        if (arguments.size() > 0) 
+        if (arguments.size() > 0)
         {
             try {
                 std::string command = arguments.at(0);
@@ -82,8 +84,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
                 returnValue = debugreturn.str();
             }
         }
-        strncpy(output, returnValue.c_str(), outputSize);
-        output[outputSize - 1] = '\0';
+
+        strncpy_s(output, outputSize, returnValue.c_str(), _TRUNCATE);
     }
 }
-

@@ -21,7 +21,7 @@ if (!local _object) exitWith {};
 if (_object isKindOf "CAManBase") exitWith {};
 
 //We need to manually set allowDamage to true for setHitIndex to function
-["blockDamage", [_object, 0]] call FUNC(localEvent);
+[QGVAR(blockDamage), [_object, 0]] call CBA_fnc_localEvent;
 
 // save and restore hitpoints, see below why
 private _hitPointDamages = getAllHitPointsDamage _object;
@@ -41,4 +41,4 @@ _object setDamage damage _object;
 //manually re-enable allowDamage to previous setting (ref statusEffect_funcs)
 private _effectVarName = format [QGVAR(effect_%1), "blockDamage"];
 private _effectNumber = _object getVariable [_effectVarName, 0];
-["blockDamage", [_object, _effectNumber]] call FUNC(localEvent);
+[QGVAR(blockDamage), [_object, _effectNumber]] call CBA_fnc_localEvent;

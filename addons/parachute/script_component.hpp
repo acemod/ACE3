@@ -1,4 +1,5 @@
 #define COMPONENT parachute
+#define COMPONENT_BEAUTIFIED Parachute
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

@@ -2,10 +2,10 @@
  * Author: ACE2 Team, Ruthberg
  * Calculate current wind locally from the data broadcasted by the server
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Wind <ARRAY>
  *
  * Example:
@@ -20,7 +20,7 @@ if (isNil "ACE_WIND_PARAMS") exitWith { [0, 0, 0] };
 ACE_WIND_PARAMS params ["_dir", "_dirChange", "_spd", "_spdChange", "_period"];
 //Wind _dir is the "source" of the wind [eg: "northerly wind": _dir = 0 -> wind = [0,-1,0];]
 
-private _periodPosition = (ACE_time - GVAR(wind_period_start_time)) min _period;
+private _periodPosition = (CBA_missionTime - GVAR(wind_period_start_time)) min _period;
 private _periodPercent = _periodPosition / _period;
 
 _spd = _spd + _spdChange * _periodPercent;

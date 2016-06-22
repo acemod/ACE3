@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
  *
- * Argument:
+ * Arguments:
  * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
  *
- * Return value:
+ * Return Value:
  * true <BOOL>
  *
  * Public: No
@@ -28,7 +28,7 @@ if(GVAR(actionSelected)) then {
     private _target = GVAR(selectedTarget);
 
     // Clear the conditions caches
-    ["clearConditionCaches", []] call EFUNC(common,localEvent);
+    [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
 
     // exit scope if selecting an action on key release is disabled
     if (!(GVAR(actionOnKeyRelease)) && !_calledByClicking) exitWith {};
@@ -40,11 +40,11 @@ if(GVAR(actionSelected)) then {
         [_target, _player, _actionData select 6] call (_actionData select 3);
 
         // Clear the conditions caches again if the action was performed
-        ["clearConditionCaches", []] call EFUNC(common,localEvent);
+        [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
     };
 };
 
-["interactMenuClosed", [GVAR(openedMenuType)]] call EFUNC(common,localEvent);
+["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;

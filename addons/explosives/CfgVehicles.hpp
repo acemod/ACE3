@@ -12,7 +12,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
                 priority = 4;
-                icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
                 //Sub-menu items
                 class ACE_Place {
@@ -22,7 +22,7 @@ class CfgVehicles {
                     insertChildren = QUOTE([_player] call FUNC(addExplosiveActions););
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 1;
-                    icon = PATHTOF(UI\Place_Explosive_ca.paa);
+                    icon = QPATHTOF(UI\Place_Explosive_ca.paa);
                     priority = 1;
                 };
                 class ACE_Cellphone {
@@ -31,7 +31,7 @@ class CfgVehicles {
                     statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
-                    icon = PATHTOF(Data\UI\Cellphone_UI.paa);
+                    icon = QPATHTOF(Data\UI\Cellphone_UI.paa);
                     priority = 0.8;
                 };
             };
@@ -44,45 +44,36 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
-        mapSize = 0.2;
-        icon = "iconObject_1x2";
         model = "\A3\Weapons_f\dummyweapon.p3d";
-        scope = 2;
-        scopeCurator = 1;
-        vehicleClass = "Cargo";
+        scope = 1;
+
         class ACE_Actions {
-            class ACE_MainActions {
-                selection = "";
+            class ACE_Defuse {
                 distance = 1;
-                condition = "true";
-                class ACE_Defuse {
-                    displayName = CSTRING(Defuse);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
-                    exceptions[] = {"isNotSwimming"};
-                    showDisabled = 0;
-                    icon = PATHTOF(UI\Defuse_ca.paa);
-                    priority = 0.8;
-                };
+                displayName = CSTRING(Defuse);
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                exceptions[] = {"isNotSwimming"};
+                icon = QPATHTOF(UI\Defuse_ca.paa);
             };
         };
     };
+
     class ACE_Explosives_Place: Items_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_Explosives_Place";
         displayName = "Multi-meter";
         mapSize = 0.2;
         icon = "iconObject_1x2";
         model = "\A3\Structures_F\Items\Tools\MultiMeter_F.p3d";
-        scope = 2;
-        scopeCurator = 1;
+        scope = 1;
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
@@ -98,7 +89,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                     priority = 5;
-                    icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+                    icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 };
                 class ACE_PickUp {
                     selection = "";

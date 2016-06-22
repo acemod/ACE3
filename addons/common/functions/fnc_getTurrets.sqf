@@ -8,11 +8,13 @@
  * Return Value:
  * Turret Indecies <ARRAY>
  *
- * Public: Yes
+ * Public: No
  *
  * Note: It's advised to use allTurrets [_vehicle, true] instead whenever possible
  */
 #include "script_component.hpp"
+
+ACE_DEPRECATED("ace_common_fnc_getTurrets","3.7.0","allTurrets [_vehicle, true]");
 
 params ["_type"];
 

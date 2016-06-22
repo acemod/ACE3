@@ -28,7 +28,7 @@ if (!isNil QGVAR(MouseMoveHandlerID)) then {
 };
 GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
     // Don't transmit any data if we're using the map tools
-    if (!GVAR(EnableTransmit) || EGVAR(maptools,drawing_isDrawing) || EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)) exitWith {};
+    if (!GVAR(EnableTransmit) || EGVAR(maptools,mapTool_isDragging) || EGVAR(maptools,mapTool_isRotating)) exitWith {};
 
     params ["_control", "_posX", "_posY"];
 

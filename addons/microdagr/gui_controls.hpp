@@ -10,7 +10,7 @@ class controlsBackground {
     };
     class StatusBarBS: RscPicture {
         idc = -1;
-        text = QUOTE(PATHTOF(images\microDAGR_topBar.paa));
+        text = QPATHTOF(images\microDAGR_topBar.paa);
         x = X_PART(0);
         y = Y_PART(0);
         w = W_PART(25);
@@ -18,7 +18,7 @@ class controlsBackground {
     };
     class RangefinderConnectedIcon: RscPicture {
         idc = IDC_RANGEFINDERCONNECTEDICON;
-        text = "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa";
+        text = QUOTE(PATHTOF(images\icon_menuLaser.paa));
         x = X_PART(6.35);
         y = Y_PART(0.1);
         w = W_PART(2.7);
@@ -187,7 +187,7 @@ class controls {
             };
             class selfIcon: RscPicture {
                 idc = -1;
-                text = QUOTE(PATHTOF(images\icon_self.paa));
+                text = QPATHTOF(images\icon_self.paa);
                 x = W_PART(0.5);
                 y = H_PART(2);
                 w = W_PART(4);
@@ -242,7 +242,7 @@ class controls {
             };
             class CompasIcon: RscPicture {
                 idc = -1;
-                text = QUOTE(PATHTOF(images\icon_infoCompass.paa));
+                text = QPATHTOF(images\icon_infoCompass.paa);
                 x = W_PART(0.5);
                 y = H_PART(8.5);
                 w = W_PART(2);
@@ -284,7 +284,7 @@ class controls {
                 class controls {
                     class TimeIcon: RscPicture {
                         idc = -1;
-                        text = QUOTE(PATHTOF(images\icon_infoClock.paa));
+                        text = QPATHTOF(images\icon_infoClock.paa);
                         x = W_PART(0.5);
                         y = H_PART(3.5);
                         w = W_PART(2);
@@ -315,7 +315,7 @@ class controls {
                 class controls {
                     class TargetIcon: RscPicture {
                         idc = IDC_MODEDISPLAY_TARGETICON;
-                        text = QUOTE(PATHTOF(images\icon_menuMark.paa));
+                        text = QPATHTOF(images\icon_menuMark.paa);
                         x = W_PART(0.5);
                         y = H_PART(0.5);
                         w = W_PART(2);
@@ -440,7 +440,7 @@ class controls {
     class mapTrackButton: GVAR(RscActiveTextPicture) {
         onbuttonclick = QUOTE(['autotrack'] call FUNC(modeMapButtons));
         idc = IDC_MODEMAP_MAPTRACKBUTTON;
-        text = QUOTE(PATHTOF(images\icon_mapTrack.paa));
+        text = QPATHTOF(images\icon_mapTrack.paa);
         x = X_PART(11);
         y = Y_PART(18.75);
         w = W_PART(3);
@@ -449,14 +449,14 @@ class controls {
     class mapZoomIn: mapTrackButton {
         onbuttonclick = QUOTE(['zoomin'] call FUNC(modeMapButtons));
         idc = IDC_MODEMAP_MAPZOOMIN;
-        text = QUOTE(PATHTOF(images\icon_mapPlus.paa));
+        text = QPATHTOF(images\icon_mapPlus.paa);
         color[] = {1,1,1,0.4};
         x = X_PART(4);
     };
     class mapZoomOut: mapTrackButton {
         onbuttonclick = QUOTE(['zoomout'] call FUNC(modeMapButtons));
         idc = IDC_MODEMAP_MAPZOOMOUT;
-        text = QUOTE(PATHTOF(images\icon_mapMinus.paa));
+        text = QPATHTOF(images\icon_mapMinus.paa);
         color[] = {1,1,1,0.4};
         x = X_PART(18);
     };
@@ -472,7 +472,7 @@ class controls {
         class Controls {
             class ButtonTL: GVAR(RscActiveTextPicture) {
                 idc = -1;
-                text = QUOTE(PATHTOF(images\icon_menuMark.paa));
+                text = QPATHTOF(images\icon_menuMark.paa);
                 x = W_PART(3);
                 y = H_PART(1.5);
                 w = W_PART(8);
@@ -480,19 +480,19 @@ class controls {
                 onbuttonclick = QUOTE([4] call FUNC(saveCurrentAndSetNewMode));
             };
             class ButtonTR: ButtonTL {
-                text = QUOTE(PATHTOF(images\icon_menuWaypoints.paa));
+                text = QPATHTOF(images\icon_menuWaypoints.paa);
                 x = W_PART(14);
                 y = H_PART(1.5);
                 onbuttonclick = QUOTE([5] call FUNC(saveCurrentAndSetNewMode));
             };
             class ButtonBL: ButtonTL {
-                text = "\A3\ui_f\data\igui\rscingameui\rscoptics\laser_designator_iconLaserOn.paa";
+                text = QUOTE(PATHTOF(images\icon_menuLaser.paa));
                 x = W_PART(3);
                 y = H_PART(10.5);
                 onbuttonclick = QUOTE(_this call FUNC(appMenuButtonConnectRangefinder));
             };
             class ButtonBR: ButtonTL {
-                text = QUOTE(PATHTOF(images\icon_menuSettings.paa));
+                text = QPATHTOF(images\icon_menuSettings.paa);
                 x = W_PART(14);
                 y = H_PART(10.5);
                 onbuttonclick = QUOTE([6] call FUNC(saveCurrentAndSetNewMode));
@@ -555,7 +555,7 @@ class controls {
             };
             class DeleteButton: GVAR(RscActiveTextPicture) {
                 idc = -1;
-                text = QUOTE(PATHTOF(images\icon_deleteButton.paa));
+                text = QPATHTOF(images\icon_deleteButton.paa);
                 x = W_PART(20);
                 y = H_PART(2.75);
                 w = W_PART(2);
@@ -717,7 +717,7 @@ class controls {
 
     class ButtonBG0: RscPicture {
         idc = IDC_BUTTONBG0;
-        text = QUOTE(PATHTOF(images\button_pushedDown.paa));
+        text = QPATHTOF(images\button_pushedDown.paa);
         x = X_PART(0 * (25/3));
         y = Y_PART(21);
         w = W_PART((25/3));
@@ -733,7 +733,7 @@ class controls {
     };
     class ButtonIcon0: GVAR(RscActiveTextPicture) {
         idc = -1;
-        text = QUOTE(PATHTOF(images\icon_info.paa));
+        text = QPATHTOF(images\icon_info.paa);
         x = X_PART(0 * (25/3));
         y = Y_PART(21);
         w = W_PART((25/3));
@@ -741,19 +741,19 @@ class controls {
         onbuttonclick = QUOTE([APP_MODE_INFODISPLAY] call FUNC(saveCurrentAndSetNewMode));
     };
     class ButtonIcon1: ButtonIcon0 {
-        text = QUOTE(PATHTOF(images\icon_compass.paa));
+        text = QPATHTOF(images\icon_compass.paa);
         x = X_PART(1 * (25/3));
         onbuttonclick = QUOTE([APP_MODE_COMPASS] call FUNC(saveCurrentAndSetNewMode));
     };
     class ButtonIcon2: ButtonIcon0 {
-        text = QUOTE(PATHTOF(images\icon_map.paa));
+        text = QPATHTOF(images\icon_map.paa);
         x = X_PART(2 * (25/3));
         onbuttonclick = QUOTE([APP_MODE_MAP] call FUNC(saveCurrentAndSetNewMode));
     };
     //At the end: The Big Shell overlay
     class MicroDagrShell: RscPicture {
         idc = IDC_MICRODAGRSHELL;
-        text = QUOTE(PATHTOF(images\microDAGR_shellPicture.paa));
+        text = QPATHTOF(images\microDAGR_shellPicture.paa);
         x = X_PART(-14.77);
         y = Y_PART(-5.875);
         w = W_PART(53.62);

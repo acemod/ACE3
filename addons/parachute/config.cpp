@@ -1,14 +1,16 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ACE_Parachute {
+    class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_NonSteerableParachute"};
         weapons[] = {"ACE_Altimeter"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         VERSION_CONFIG;
-        author[] = {"Garth 'LH' de Wet"};
-        authorUrl = "http://garth.snakebiteink.co.za/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Garth 'LH' de Wet"};
+        url = ECSTRING(main,URL);
     };
 };
 

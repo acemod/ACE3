@@ -6,7 +6,7 @@
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Object unloaded <BOOL>
  *
  * Example:
@@ -29,7 +29,7 @@ if ((count _emptyPosAGL) != 3) exitWith {
     TRACE_4("Could not find unload pos",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {_unloader == ACE_player}) then {
         //display text saying there are no safe places to exit the vehicle
-        ["displayTextStructured", [localize ELSTRING(common,NoRoomToUnload)]] call EFUNC(common,localEvent);
+        [localize ELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
     };
     false
 };
@@ -52,7 +52,7 @@ if (_item isEqualType objNull) then {
     detach _item;
     // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
     // do both on server to ensure they are executed in the correct order
-    ["ServerUnloadCargo", [_item, _emptyPosAGL]] call EFUNC(common,serverEvent);
+    [QGVAR(serverUnload), [_item, _emptyPosAGL]] call CBA_fnc_serverEvent;
 } else {
     private _newItem = createVehicle [_item, _emptyPosAGL, [], 0, ""];
     _newItem setPosASL (AGLtoASL _emptyPosAGL);

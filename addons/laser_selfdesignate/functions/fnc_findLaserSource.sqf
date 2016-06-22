@@ -2,7 +2,7 @@
  * Author: jaynus
  * Handler function for laser network code.
  *
- * Argument:
+ * Arguments:
  * 0: Emitter <OBJECT>
  *
  * Return Value:

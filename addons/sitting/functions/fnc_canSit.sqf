@@ -19,5 +19,5 @@ params ["_seat"];
 
 // Sitting enabled, is seat object, not occupied and standing up (or not on a big slope)
 GVAR(enable) &&
-{isNil {_seat getVariable QGVAR(seatOccupied)}} &&
+{!(_seat call EFUNC(common,owned))} &&
 {round (vectorUp _seat select 0) == 0 && {round (vectorUp _seat select 1) == 0} && {round (vectorUp _seat select 2) == 1}}

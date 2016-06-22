@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Winter", "Jonpas", "Arkhir"};
-        authorUrl = "https://github.com/Winter259";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Winter", "Jonpas", "Arkhir"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

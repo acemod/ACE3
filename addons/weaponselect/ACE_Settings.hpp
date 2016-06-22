@@ -1,6 +1,6 @@
 
 class ACE_Settings {
-    class GVAR(DisplayText) {
+    class GVAR(displayText) {
         typeName = "BOOL";
         isClientSettable = 1;
         value = 1;

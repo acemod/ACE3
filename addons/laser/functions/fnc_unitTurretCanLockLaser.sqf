@@ -2,10 +2,10 @@
  * Author: jaynus
  * Checks if the turret occupied by the given unit can lock a laser designator and select laser code.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Has designator? <BOOL>
  */
 #include "script_component.hpp"

@@ -3,11 +3,14 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.5.1-blue.svg?style=flat-square" alt="ACE3 Version">
+    <a href="https://github.com/acemod/ACE3/releases/latest">
+        <img src="https://img.shields.io/badge/Version-3.6.0-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
+    </a>
+    <a href="https://github.com/acemod/ACE3/releases">
+        <img src="https://img.shields.io/github/downloads/acemod/ACE3/total.svg?style=flat-square&label=Downloads" alt="ACE3 Downloads">
     </a>
     <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
         <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat-square" alt="BIF Thread">

@@ -26,3 +26,15 @@ GVAR(curSelMarkerShape) = _index;
 private _config = (configFile >> "CfgMarkers") select _data;
 
 GVAR(currentMarkerConfigName) = configName _config;
+
+//Set map display to same shape:
+private _bisShapeLB = switch (false) do {
+    case (isNull findDisplay 12): {(findDisplay 12) displayCtrl 1091};
+    case (isNull findDisplay 52): {(findDisplay 52) displayCtrl 1091};
+    case (isNull findDisplay 53): {(findDisplay 53) displayCtrl 1091};
+    case (isNull findDisplay 37): {(findDisplay 37) displayCtrl 1091};
+    default {controlNull};
+};
+if (_ctrl != _bisShapeLB) then { //Don't set what we got a EH from
+    _bisShapeLB lbSetCurSel GVAR(curSelMarkerShape);
+};

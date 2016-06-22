@@ -25,22 +25,6 @@ class Extended_Init_EventHandlers {
     };
 };
 
-class Extended_FiredNear_EventHandlers {
-    class AllVehicles {
-        class GVAR(FiredNear) {
-            clientFiredNear = QUOTE(_this call FUNC(firedNear););
-        };
-    };
-};
-
-class Extended_Explosion_EventHandlers {
-    class CAManBase {
-        class GVAR(ExplosionNear) {
-            clientExplosion = QUOTE(_this call FUNC(explosionNear););
-        };
-    };
-};
-
 class Extended_Respawn_EventHandlers {
     class CAManBase {
         class ADDON {

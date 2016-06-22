@@ -27,7 +27,7 @@ _config = configFile >> "CfgGlasses" >> goggles _unit;
 if ((_this select 1) call FUNC(GetExplosionIndex) < getNumber (_config >> "ACE_Resistance")) exitWith {true};
 
 if !([_unit] call FUNC(isGogglesVisible)) exitWith {
-    ["GlassesCracked", [_unit]] call EFUNC(common,localEvent);
+    ["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
     true
 };
 
@@ -46,5 +46,5 @@ if (getText (_config >> "ACE_OverlayCracked") != "") then {
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText getText (_config >> "ACE_OverlayCracked");
 };
 
-["GlassesCracked", [_unit]] call EFUNC(common,localEvent);
+["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
 true

@@ -55,6 +55,9 @@
             <Spanish>Inyectar Adenosina</Spanish>
             <Polish>Wstrzyknij adenozynę</Polish>
             <French>Injecter de l'adénosine</French>
+            <Italian>Inietta andenosina</Italian>
+            <Czech>Aplikovat adenosine</Czech>
+            <Portuguese>Injetar Adenosina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -74,7 +77,7 @@
             <Spanish>Inyectar Epinefrina</Spanish>
             <Polish>Wstrzyknij adrenalinę</Polish>
             <Czech>Aplikovat adrenalin</Czech>
-            <French>Injecter de l'épinéphrine</French>
+            <French>Injecter épinéphrine</French>
             <Russian>Ввести адреналин</Russian>
             <Hungarian>Epinefrin beadása</Hungarian>
             <Portuguese>Injetar Epinefrina</Portuguese>
@@ -87,7 +90,7 @@
             <Polish>Wstrzyknij morfinę</Polish>
             <Czech>Aplikovat morfin</Czech>
             <Russian>Ввести морфин</Russian>
-            <French>Injecter de la morphine</French>
+            <French>Injecter morphine</French>
             <Hungarian>Morfium beadása</Hungarian>
             <Portuguese>Injetar Morfina</Portuguese>
             <Italian>Inietta morfina</Italian>
@@ -99,7 +102,7 @@
             <Polish>Przetocz krew</Polish>
             <Czech>Transfúze krve</Czech>
             <Russian>Перелить кровь</Russian>
-            <French>Transfusion</French>
+            <French>Transfuser du sang</French>
             <Hungarian>Infúzió (vér)</Hungarian>
             <Portuguese>Transfundir Sangue</Portuguese>
             <Italian>Trasfusione di sangue</Italian>
@@ -146,7 +149,7 @@
             <Spanish>Venda</Spanish>
             <Polish>Bandażuj</Polish>
             <Czech>Obvázat</Czech>
-            <French>Pansement</French>
+            <French>Panser</French>
             <Italian>Benda</Italian>
             <Hungarian>Kötözés</Hungarian>
             <Portuguese>Atadura</Portuguese>
@@ -159,7 +162,7 @@
             <Polish>Bandażuj głowę</Polish>
             <Czech>Obvázat hlavu</Czech>
             <Russian>Перевязать голову</Russian>
-            <French>Pansement Tête</French>
+            <French>Panser Tête</French>
             <Hungarian>Fej kötözése</Hungarian>
             <Portuguese>Atar Cabeça</Portuguese>
             <Italian>Benda la testa</Italian>
@@ -171,7 +174,7 @@
             <Polish>Bandażuj tors</Polish>
             <Czech>Obvázat hruď</Czech>
             <Russian>Перевязать торс</Russian>
-            <French>Pansement Torse</French>
+            <French>Panser Torse</French>
             <Hungarian>Testtörzs kötözése</Hungarian>
             <Portuguese>Atar Tronco</Portuguese>
             <Italian>Benda il torso</Italian>
@@ -183,7 +186,7 @@
             <Polish>Bandażuj lewe ramię</Polish>
             <Czech>Obvázat levou ruku</Czech>
             <Russian>Перевязать левую руку</Russian>
-            <French>Pansement Bras Gauche</French>
+            <French>Panser Bras Gauche</French>
             <Hungarian>Bal kar kötözése</Hungarian>
             <Portuguese>Atar Braço Esquerdo</Portuguese>
             <Italian>Benda il braccio sinistro</Italian>
@@ -195,7 +198,7 @@
             <Polish>Bandażuj prawe ramię</Polish>
             <Czech>Obvázat pravou ruku</Czech>
             <Russian>Перевязать правую руку</Russian>
-            <French>Pansement Bras Droit</French>
+            <French>Panser Bras Droit</French>
             <Hungarian>Jobb kar kötözése</Hungarian>
             <Portuguese>Atar Braço Direito</Portuguese>
             <Italian>Benda il braccio destro</Italian>
@@ -207,7 +210,7 @@
             <Polish>Bandażuj lewą nogę</Polish>
             <Czech>Obvázat levou nohu</Czech>
             <Russian>Перевязать левую ногу</Russian>
-            <French>Pansement Jambe Gauche</French>
+            <French>Panser Jambe Gauche</French>
             <Hungarian>Bal láb kötözése</Hungarian>
             <Portuguese>Atar Perna Esquerda</Portuguese>
             <Italian>Benda la gamba sinistra</Italian>
@@ -219,7 +222,7 @@
             <Polish>Bandażuj prawą nogę</Polish>
             <Czech>Obvázat pravou nohu</Czech>
             <Russian>Перевязать правую ногу</Russian>
-            <French>Pansement Jambe Droite</French>
+            <French>Panser Jambe Droite</French>
             <Hungarian>Jobb láb kötözése</Hungarian>
             <Portuguese>Atar Perna Direita</Portuguese>
             <Italian>Benda la gamba destra</Italian>
@@ -254,6 +257,9 @@
             <Spanish>Inyectando Adenosina...</Spanish>
             <Polish>Wstrzykiwanie adenozyny...</Polish>
             <French>Injection d'adénosine...</French>
+            <Italian>Inietto l'andenosina</Italian>
+            <Czech>Aplikuji adenosine...</Czech>
+            <Portuguese>Injetando Adenosina...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -341,7 +347,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Actions_FieldDressing">
             <English>Field Dressing</English>
-            <German>Verbandpäckchen</German>
+            <German>Wundverband</German>
             <Spanish>Compresa de campaña</Spanish>
             <Russian>Бинтовая повязка</Russian>
             <Czech>Obinadlo</Czech>
@@ -361,14 +367,14 @@
             <Italian>Bendaggio compressivo</Italian>
             <French>Bandage gauze</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
-            <Czech>Tlakový obvaz</Czech>
+            <Czech>Obvaz Tlakový</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_ElasticBandage">
             <English>Elastic Bandage</English>
             <German>Elastischer Verband</German>
             <Spanish>Vendaje elástico</Spanish>
             <Russian>Давящая повязка</Russian>
-            <Czech>Elastické obinadlo</Czech>
+            <Czech>Obavaz Elastický</Czech>
             <Polish>Bandaż elastyczny</Polish>
             <French>Pansement élastique</French>
             <Hungarian>Rögzitő kötszer</Hungarian>
@@ -785,7 +791,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
-            <German>Bandage (Standard)</German>
+            <German>Bandage (Einfach)</German>
             <Russian>Повязка (обычная)</Russian>
             <Spanish>Vendaje (Básico)</Spanish>
             <French>Bandage (Standard)</French>
@@ -829,7 +835,7 @@
             <Hungarian>Nyomókötszer</Hungarian>
             <Italian>Bendaggio compressivo</Italian>
             <Portuguese>Bandagem de Compressão</Portuguese>
-            <Czech>Tlakový obvaz</Czech>
+            <Czech>Obvaz (Tlakový)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -862,7 +868,7 @@
             <Spanish>Vendaje (Elástico)</Spanish>
             <French>Bandage (Élastique)</French>
             <Polish>Bandaż (elastyczny)</Polish>
-            <Czech>Obvaz (elastický)</Czech>
+            <Czech>Obvaz (Elastický)</Czech>
             <Hungarian>Rögzító kötszer</Hungarian>
             <Italian>Benda (elastica)</Italian>
             <Portuguese>Bandagem (Elástica)</Portuguese>
@@ -934,7 +940,7 @@
             <Spanish>Morfina auto-inyectable</Spanish>
             <French>Auto-injecteur de Morphine</French>
             <Polish>Autostrzykawka z morfiną</Polish>
-            <Czech>Autoinjektor morfin</Czech>
+            <Czech>Auto-morfin</Czech>
             <Hungarian>Morfium autoinjektor</Hungarian>
             <Italian>Autoiniettore di morfina</Italian>
             <Portuguese>Auto-injetor de morfina</Portuguese>
@@ -969,6 +975,9 @@
             <Spanish>Asenosina auto-inyectable</Spanish>
             <Polish>Autostrzykawka z adenozyną</Polish>
             <French>Auto-injécteur d'adénosine</French>
+            <Italian>Autoiniettore di adenosina</Italian>
+            <Czech>Auto-adenosine</Czech>
+            <Portuguese>Auto-injetor de Adenosina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -976,6 +985,9 @@
             <Spanish>Utilizada para contrarrestar los effectos de la Epinefrina</Spanish>
             <Polish>Adenozyna. Stosowana do zwalczania efektów działania adrenaliny.</Polish>
             <French>Utilisé pour contrer les effets de l'adrénaline</French>
+            <Italian>Usato per contrastare l'effetto dell'epinefrina</Italian>
+            <Czech>Slouží jako protiváha Adrenalinu</Czech>
+            <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -983,6 +995,9 @@
             <Spanish>Medicamento usado para contrarrestar los efectos de la Epinefrina.</Spanish>
             <Polish>Organiczny związek chemiczny z grupy nukleozydów. Skuteczna w leczeniu częstoskurczu komorowego. Działa rozszerzająco na naczynia krwionośne.</Polish>
             <French>Un composé utilisé pour contrer les effets de l'adrénaline</French>
+            <Italian>Medicamento usato per contrastare l'effetto dell'epinefrina</Italian>
+            <Czech>Droga používaná k tlumení efektu Adrenalinu</Czech>
+            <Portuguese>Uma droga usada para combater os efeitos da Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -991,7 +1006,7 @@
             <French>Auto-injecteur d'Atropine</French>
             <Polish>Autostrzykawka AtroPen</Polish>
             <German>Atropin-Autoinjektor</German>
-            <Czech>Autoinjektor atropin</Czech>
+            <Czech>Auto-atropine</Czech>
             <Hungarian>Atropin autoinjektor</Hungarian>
             <Italian>Autoiniettore di atropina</Italian>
             <Portuguese>Auto-injetor de Atropina</Portuguese>
@@ -1027,7 +1042,7 @@
             <French>Auto-injecteur d'épinéphrine</French>
             <Polish>Autostrzykawka EpiPen</Polish>
             <German>Epiniphrin-Autoinjektor</German>
-            <Czech>Autoinjektor adrenalin</Czech>
+            <Czech>Auto-adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
             <Italian>Autoiniettore di adrenalina</Italian>
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
@@ -1242,7 +1257,7 @@
             <Spanish>Vendaje básico (QuickClot)</Spanish>
             <French>Bandage basique (Hémostatique)</French>
             <Polish>Opatrunek QuikClot ACS</Polish>
-            <German>Verbandpäckchen (Gerinnungsmittel)</German>
+            <German>Verbandpäckchen (QuikClot)</German>
             <Hungarian>Általános zárókötszer (QuikClot)</Hungarian>
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
@@ -1282,7 +1297,7 @@
             <Hungarian>Elsősegélycsomag</Hungarian>
             <Italian>Pronto soccorso personale</Italian>
             <Portuguese>Kit De Primeiros Socorros Pessoal</Portuguese>
-            <Czech>Osobní lékárnička</Czech>
+            <Czech>Osobní lékárnička (PAK)</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Short">
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
@@ -1317,7 +1332,7 @@
             <Spanish>Usar equipo de primeros auxilios</Spanish>
             <Hungarian>Elsősegélycsomag használata</Hungarian>
             <Portuguese>Usar o kit de primeiros socorros</Portuguese>
-            <Czech>Použít osobní lékárničku</Czech>
+            <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
@@ -1426,7 +1441,7 @@
             <Hungarian>Vérnyomás megmérése...</Hungarian>
             <Italian>Controllando la pressione sanguigna..</Italian>
             <Portuguese>Aferindo Pressão Arterial...</Portuguese>
-            <Czech>Kontroluji krevní tlak...</Czech>
+            <Czech>Měřím krevní tlak...</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1437,7 +1452,7 @@
             <Polish>%1 sprawdził ciśnienie krwi: %2</Polish>
             <Spanish>%1 verificada la presión arterial: %2</Spanish>
             <Hungarian>%1 ellenőrizte a vérnyomást: %2</Hungarian>
-            <Czech>%1 zkontrolován krevní tlak: %2</Czech>
+            <Czech>%1 zkontroloval krevní tlak: %2</Czech>
             <Portuguese>%1 verificou pressão arterial: %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Checked_Medic">
@@ -1462,7 +1477,7 @@
             <Polish>Wyczuwasz ciśnienie krwi o wartości %2/%3</Polish>
             <German>Der Blutdruck liegt bei %2/%3</German>
             <Portuguese>A Pressão Arterial é de %2/%3</Portuguese>
-            <Czech>Našel jsi krevní tlak u %2/%3</Czech>
+            <Czech>Naměřil si krevní tlak u %2/%3</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
@@ -1474,7 +1489,7 @@
             <Hungarian>A vérnyomás alacsony</Hungarian>
             <Italian>La pressione sanguigna è bassa</Italian>
             <Portuguese>Pressão Arterial baixa</Portuguese>
-            <Czech>Naměřil jsi nízký krevní tlak</Czech>
+            <Czech>Naměřil si nízký krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -1486,7 +1501,7 @@
             <Hungarian>A vérnyomás normális</Hungarian>
             <Italian>La pressione sanguigna è normale</Italian>
             <Portuguese>Pressão Arterial normal</Portuguese>
-            <Czech>Naměřil jsi normální krevní tlak</Czech>
+            <Czech>Naměřil si normální krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -1498,7 +1513,7 @@
             <Hungarian>A vérnyomás magas</Hungarian>
             <Italian>La pressione sanguigna è alta</Italian>
             <Portuguese>Pressão Arterial Alta</Portuguese>
-            <Czech>Naměřil jsi vysoký krevní tlak</Czech>
+            <Czech>Naměřil si vysoký krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -1510,7 +1525,7 @@
             <Hungarian>Nem észlelhető vérnyomás</Hungarian>
             <Italian>La pressione sanguigna è assente</Italian>
             <Portuguese>Sem Pressão Arterial</Portuguese>
-            <Czech>Nenaměřil jsi žádný krevní tlak</Czech>
+            <Czech>Nenaměřil si žádný krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
@@ -1522,7 +1537,7 @@
             <Hungarian>Nem sikerült a vérnyomás megmérése</Hungarian>
             <Italian>Manca strumento per misurare pressione sanguigna</Italian>
             <Portuguese>Você falhou em aferir a Pressão Arterial</Portuguese>
-            <Czech>Nedokázal jsi změřit krevní tlak</Czech>
+            <Czech>Nedokázal si změřit krevní tlak</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
@@ -1582,7 +1597,7 @@
             <Hungarian>Pulzus</Hungarian>
             <Italian>Polso</Italian>
             <Portuguese>Pulso</Portuguese>
-            <Czech>Tep</Czech>
+            <Czech>Puls</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Content">
             <English>Checking Heart Rate...</English>
@@ -1606,7 +1621,7 @@
             <Hungarian>A %1 ellenőrizve</Hungarian>
             <Italian>Hai diagnosticato %1</Italian>
             <Portuguese>Você aferiu o paciente %1</Portuguese>
-            <Czech>Zkontroloval jsi %1</Czech>
+            <Czech>Zkontroloval si %1</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
@@ -1690,7 +1705,7 @@
             <Hungarian>A szívverés-szám alacsony</Hungarian>
             <Italian>Hai riscontrato un debole battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca baixa</Portuguese>
-            <Czech>Nahmatal jsi slabý srdeční tep</Czech>
+            <Czech>Nahmatal si slabý srdeční puls</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -1702,7 +1717,7 @@
             <Hungarian>A szívverés-szám magas</Hungarian>
             <Italian>Hai riscontrato un forte battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca normal</Portuguese>
-            <Czech>Nahmatal jsi silný srdeční tep</Czech>
+            <Czech>Nahmatal si silný srdeční puls</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -1714,7 +1729,7 @@
             <Hungarian>A szívverés-szám normális</Hungarian>
             <Italian>Hai riscontrato un normale battito cardiaco</Italian>
             <Portuguese>Freqüência Cardíaca alta</Portuguese>
-            <Czech>Nahmatal jsi normální srdeční tep</Czech>
+            <Czech>Nahmatal si normální srdeční puls</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -1726,7 +1741,7 @@
             <Hungarian>Nem észlelhető szívverés</Hungarian>
             <Italian>Hai riscontrato una assenza di battito cardiaco</Italian>
             <Portuguese>Sem Freqüência Cardíaca</Portuguese>
-            <Czech>Nenašel jsi </Czech>
+            <Czech>Žádný puls</Czech>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response">
             <English>Response</English>
@@ -2167,7 +2182,7 @@
             <Spanish>Gravemente herido</Spanish>
             <French>Lourdement blessé</French>
             <Hungarian>Erősen sérült</Hungarian>
-            <Czech>Těžce zraněn</Czech>
+            <Czech>Těžce raněn</Czech>
             <Portuguese>Gravemente ferido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
@@ -2179,7 +2194,7 @@
             <Spanish>Levemente herido</Spanish>
             <French>Légèrement blessé</French>
             <Hungarian>Enyhén sérült</Hungarian>
-            <Czech>Lehce zraněn</Czech>
+            <Czech>Lehce raněn</Czech>
             <Portuguese>Levemente ferido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
@@ -2191,7 +2206,7 @@
             <Spanish>Muy levemente herido</Spanish>
             <French>Très légèrement blessé</French>
             <Hungarian>Nagyon enyhén sérült</Hungarian>
-            <Czech>Velmi lehce zraněn</Czech>
+            <Czech>Velmi lehce raněn</Czech>
             <Portuguese>Muito levemente ferido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
@@ -2896,6 +2911,8 @@
             <German>Örtliche Trainingssteigerung</German>
             <Spanish>Ubicación mejora entrenamiento.</Spanish>
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
+            <Portuguese>Localização melhora treinamento</Portuguese>
+            <French>Locations boost l'entraînement de médecin</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -2904,6 +2921,8 @@
             <German>Steigert die medizinische Einstufung eines Soldaten in Sanitätsfarhzeugen oder in der Nähe von Sanitätseinrichtungen [untrainiert wird zu Sanitäter, Sanitäter zu Doktor]</German>
             <Spanish>Mejora el entrenamiento médico dentro de vehículos médicos o cerca de instalaciones médicas (no entrenados se convierten en médicos, médicos se convierten en doctores)</Spanish>
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
+            <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
+            <French>Boost le rang médical dans les véhicules ou bâtiments médicaux [non entraînés deviennent médecins, médecins deviennent docteurs]</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -3199,6 +3218,9 @@
             <Polish>Podstawowe ustawienia medyczne</Polish>
             <Spanish>Ajustes médicos básicos [ACE]</Spanish>
             <French>Réglages du système médical basic [ACE]</French>
+            <Italian>Impostazioni Mediche Di Base [ACE]</Italian>
+            <Czech>Základní zdravotnické nastavení [ACE]</Czech>
+            <Portuguese>Ajustes médicos básicos [ACE]</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3314,6 +3336,9 @@
             <Spanish>Permitir Epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Autoriser l'adrénaline</French>
+            <Italian>Permette epinefrina</Italian>
+            <Czech>Povolit adrenalin</Czech>
+            <Portuguese>Permitir Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
@@ -3321,6 +3346,9 @@
             <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
             <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
+            <Italian>Chi può usare l'epinefrina per la cura completa? (solo per sistema medico di base)</Italian>
+            <Czech>Kdo může použít adrenalin k úplnému vyléčení? (Pouze základní zdravotní systém)</Czech>
+            <Portuguese>Quem pode usar Epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3328,7 +3356,7 @@
             <Polish>Ustawienie apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
-            <Czech>Povolit osobní lékárničky</Czech>
+            <Czech>Povolit osobní lékárničky (PAK)</Czech>
             <Portuguese>Permitir Kit de Primeiros Socorros</Portuguese>
             <French>Permettre le kit de premier secours</French>
             <Hungarian>Elsősegélycsomag engedélyezése</Hungarian>
@@ -3412,6 +3440,9 @@
             <Spanish>Ubicaciones epinefrina</Spanish>
             <Polish>Ograniczenia adrenaliny</Polish>
             <French>Position des adrénalines</French>
+            <Italian>Ubicazione epinefrina</Italian>
+            <Czech>Oblast k použití adrenalinu</Czech>
+            <Portuguese>Localizações de Epinefrina</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
@@ -3419,6 +3450,9 @@
             <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
             <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
             <French>Où peuvent être utilisées les adrénalines ? (Médical basique)</French>
+            <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
+            <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
+            <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3426,7 +3460,7 @@
             <Polish>Ograniczenie apteczek osobistych</Polish>
             <Spanish>Ubicaciones del EPA</Spanish>
             <German>Orte für Erste-Hilfe-Set</German>
-            <Czech>Lokace osobní lékárničky</Czech>
+            <Czech>Oblast k použití PAK</Czech>
             <Portuguese>Localizações do KPS</Portuguese>
             <French>Lieu d'utilisation du KPS</French>
             <Hungarian>Elsősegélycsomag helyek</Hungarian>
@@ -3438,7 +3472,7 @@
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
             <Spanish>¿Dónde se puede utilizar el equipo de primeros auxilios?</Spanish>
             <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
-            <Czech>Kde může být použita osobní lékárnička?</Czech>
+            <Czech>Kde může být použita osobní lékárnička (PAK)?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
             <French>Où le Kit de Premier Secour peut être utilisé</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
@@ -3447,7 +3481,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
             <German>Bedingungen für d. Erste-Hilfe-Set</German>
-            <Czech>Podmínka osobní lékárničky</Czech>
+            <Czech>Podmínky pro použití osobní lékárničky</Czech>
             <Spanish>Condición EPA</Spanish>
             <French>Condition d'utilisation du KPS</French>
             <Polish>Warunek apteczek</Polish>
@@ -3459,7 +3493,7 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the PAK be used?</English>
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
-            <Czech>Kde může být použita osobní lékárnička?</Czech>
+            <Czech>Kdy může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
             <French>Quand peut être utilisé le Kit de Premier Secours</French>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
@@ -3474,7 +3508,7 @@
             <Polish>Wszędzie</Polish>
             <Spanish>Donde sea</Spanish>
             <German>Überall</German>
-            <Czech>Kdekoli</Czech>
+            <Czech>Kdekoliv</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
             <French>PArtout</French>
             <Hungarian>Akárhol</Hungarian>
@@ -3664,6 +3698,8 @@
             <Spanish>Configure las opciones de tratamiento del sistema médico básico de ACE</Spanish>
             <Polish>Skonfiguruj ustawienia leczenia podstawowego systemu medycznego ACE</Polish>
             <French>Configure les réglages de traitement dans ACE médical basique</French>
+            <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
+            <Portuguese>Configura as opções de tratamento do sistema médico básico do ACE</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
@@ -4113,6 +4149,8 @@
             <German>Sanitätsausbildung</German>
             <Spanish>Entrenamiento médico</Spanish>
             <French>Entraînement médical</French>
+            <Czech>Lékařský výcvik</Czech>
+            <Portuguese>Treino médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -4121,16 +4159,25 @@
             <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
             <French>Définit si le véhicule est un véhicule médical ou non.</French>
+            <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
             <German>Verzögert das Ende des KI-Beschusses auf einen Spieler, wenn dieser aus medizinischen Gründen bewustlos wird.</German>
+            <Italian>Ritarda il cessate il fuoco dell'IA quando il giocatore è svenuto per motivi medici.</Italian>
+            <Czech>Prodleva zastavení palby pro AI, pokud je hráč v bezvědomí ze zdravotních důvodů.</Czech>
+            <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
+            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
             <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Italian>Ritarda il cessate il fuoco dell'IA quando si è svenuti</Italian>
+            <Czech>Prodleva zastavení palby AI na bezvědomé</Czech>
+            <Portuguese>Atraso durante cessar fogo da AI durante inconsciência</Portuguese>
+            <French>Délai de cessez le feu de l'IA pour la perte de conscience</French>
         </Key>
     </Package>
 </Project>

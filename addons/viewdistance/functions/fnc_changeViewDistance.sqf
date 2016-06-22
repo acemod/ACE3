@@ -16,20 +16,18 @@
  */
 #include "script_component.hpp"
 
-private ["_text", "_new_view_distance", "_view_distance_limit", "_object_view_distance_coeff"];
+params ["_indexRequested", "_showPrompt"];
 
-params ["_index_requested", "_show_prompt"];
+private _newViewDistance = [_indexRequested] call FUNC(returnValue); // changes the setting index into an actual view distance value
+private _objectViewDistanceCoeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
+private _viewDistanceLimit = GVAR(limitViewDistance); // Grab the limit
 
-_new_view_distance = [_index_requested] call FUNC(returnValue); // changes the setting index into an actual view distance value
-_object_view_distance_coeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
-_view_distance_limit = GVAR(limitViewDistance); // Grab the limit
+TRACE_3("Limit",_newViewDistance,_viewDistanceLimit,_showPrompt);
+setViewDistance (_newViewDistance min _viewDistanceLimit);
 
-TRACE_2("Limit",_new_view_distance,_view_distance_limit);
-setViewDistance (_new_view_distance min _view_distance_limit);
-
-if (typeName _object_view_distance_coeff == "SCALAR") then {
-    if (_object_view_distance_coeff > 0) then {
-        setObjectViewDistance (_object_view_distance_coeff * viewDistance);
+if (_objectViewDistanceCoeff isEqualType 0) then {
+    if (_objectViewDistanceCoeff > 0) then {
+        setObjectViewDistance (_objectViewDistanceCoeff * viewDistance);
     } else {
         // Restore correct view distance when changing from FoV Based to Off
         // Restoring directly inside PFH's self-exit resulted in the need of selecting another option to take effect
@@ -42,18 +40,18 @@ if (typeName _object_view_distance_coeff == "SCALAR") then {
     };
 };
 
-if (_show_prompt) then {
+if (_showPrompt) then {
     if (GVAR(objectViewDistanceCoeff) > 0) then {
+        private _text = "";
         // FoV Based or %
         if (GVAR(objectViewDistanceCoeff) == 6) then {
             _text = format ["<t align='center'>%1 %2<br/>Min. %3<br/>Max. %4</t>", localize LSTRING(objectinfotext), localize LSTRING(object_fovBased), GVAR(fovBasedPFHminimalViewDistance), viewDistance];
         } else {
-            _text = if (_new_view_distance <= _view_distance_limit) then {
-                        format ["<t align='center'>%1 %2m", localize LSTRING(infotext), viewDistance];
-                    } else {
-                        format ["<t align='center'>%1 %2m", localize LSTRING(invalid), viewDistance];
-                    };
-            _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", localize LSTRING(objectinfotext), _object_view_distance_coeff * 100, "%"];
+            _text = [
+                format ["<t align='center'>%1 %2m", localize LSTRING(invalid), viewDistance],
+                format ["<t align='center'>%1 %2m", localize LSTRING(infotext), viewDistance]
+            ] select (_newViewDistance <= _viewDistanceLimit);
+            _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", localize LSTRING(objectinfotext), _objectViewDistanceCoeff * 100, "%"];
         };
         [parseText _text, 2] call EFUNC(common,displayTextStructured);
     };

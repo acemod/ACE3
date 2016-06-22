@@ -321,7 +321,7 @@
             <Czech>Rychlost animace interakce</Czech>
             <Italian>Velocità Animazioni Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
-            <French>Vitesse des animations du menu d'interaction</French>
+            <French>Vitesse de l'aniamtion d'interaction</French>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -332,7 +332,7 @@
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
-            <French>Rendre le menu d'interaction plus rapide et reduire le temps nécessaire de survol d'une action pour afficher les sous-actions.</French>
+            <French>Rend les animations de menu plus rapide et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
         </Key>
     </Package>
 </Project>

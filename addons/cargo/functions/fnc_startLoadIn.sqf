@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 1: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Load ProgressBar Started <BOOL>
  *
  * Example:
@@ -40,7 +40,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
     [
         5 * _size,
         [_object,_vehicle],
-        {["LoadCargo", _this select 0] call EFUNC(common,localEvent)},
+        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
         {},
         localize LSTRING(LoadingItem)
     ] call EFUNC(common,progressBar);
@@ -48,7 +48,7 @@ if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
 } else {
     private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
 
-    ["displayTextStructured", [[LSTRING(LoadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
 };
 
 _return

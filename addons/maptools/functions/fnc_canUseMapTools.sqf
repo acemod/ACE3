@@ -5,7 +5,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * <BOOL>
  *
  * Public: No

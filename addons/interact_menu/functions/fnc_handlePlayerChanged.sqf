@@ -2,11 +2,11 @@
  * Author: commy2
  * Disables firing while the menu is opened. Called from playerChanged eh.
  *
- * Argument:
+ * Arguments:
  * 0: New unit to add the addAction eh <OBJECT>
  * 1: Old unit to remove the addAction eh <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  */
 #include "script_component.hpp"

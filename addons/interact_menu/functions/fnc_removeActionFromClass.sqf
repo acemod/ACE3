@@ -2,12 +2,12 @@
  * Author: esteldunedain
  * Removes an action from a class
  *
- * Argument:
+ * Arguments:
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Full path of the new action <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

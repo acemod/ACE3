@@ -50,6 +50,6 @@ if (isNil QGVAR(MarkerColorsCache)) then {
 };
 
 //Server Sync JIP markers:
-[QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call EFUNC(common,addEventHandler);
+[QGVAR(sendMarkersJIP), FUNC(sendMarkersJIP)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

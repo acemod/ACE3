@@ -1,4 +1,5 @@
 #define COMPONENT scopes
+#define COMPONENT_BEAUTIFIED Scopes
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

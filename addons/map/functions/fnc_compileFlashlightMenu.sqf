@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -30,7 +30,7 @@ _flashlights = [_player] call FUNC(getUnitFlashlights);
     _cfg = (configFile >> "CfgWeapons" >> _x);
     _displayName = getText (_cfg >> "displayName");
     _icon = getText (_cfg >> "picture");
-    
+
     _statement = if (GVAR(flashlightInUse) == _x) then {
         _displayName = format [localize LSTRING(turnLightOff), _displayName];
         {[""] call FUNC(switchFlashlight)}

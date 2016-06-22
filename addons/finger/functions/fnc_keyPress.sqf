@@ -25,9 +25,9 @@ if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "Stat
 //Check camera view (not in GUNNER)
 if !(cameraView in ["INTERNAL", "EXTERNAL"]) exitWith {false};
 //Exit if run recently (run every 1 seconds)
-if (ACE_diagTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
+if (diag_tickTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
 
-GVAR(lastFPTime) = ACE_diagTime;
+GVAR(lastFPTime) = diag_tickTime;
 
 _fingerPosPrecise = positionCameraToWorld [0, 0, FP_DISTANCE];
 _playerEyePos = eyePos ACE_player;
@@ -55,7 +55,7 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
-[QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call EFUNC(common,targetEvent);
+[QGVAR(fingered), [ACE_player, _fingerPosPrecise], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
 ACE_player playActionNow "GestureGo";
 

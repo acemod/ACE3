@@ -765,6 +765,7 @@
             <German>Reaktivpanzerung</German>
             <Spanish>ERA</Spanish>
             <French>ERA</French>
+            <Portuguese>ERA</Portuguese>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -1315,6 +1316,14 @@
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Items exigés pour enlever/remplacer les roues</French>
+        </Key>
+        <Key ID="STR_ACE_Repair_shutOffEngineWarning">
+            <English>Engine must be off to repair</English>
+            <German>Motor muss ausgeschaltet zu reparieren sein</German>
+            <Spanish>El motor necesita desactivado para la reparación</Spanish>
+            <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
+            <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
+            <French>Le moteur doit être éteins pour réparer</French>
         </Key>
     </Package>
 </Project>

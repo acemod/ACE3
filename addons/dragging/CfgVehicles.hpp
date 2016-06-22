@@ -19,12 +19,6 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    //remove actions from Taru Pods
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {
-        GVAR(canCarry) = 0;
-        GVAR(canDrag) = 0;
-    };
-
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
@@ -38,6 +32,7 @@ class CfgVehicles {
 
     // ammo boxes
     class ThingX;
+    class Items_base_F;
     class ReammoBox_F: ThingX {
         GVAR(canCarry) = 0;
         GVAR(carryPosition)[] = {0,1,1};
@@ -49,6 +44,11 @@ class CfgVehicles {
     };
 
     class Slingload_base_F: ReammoBox_F {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+    //remove actions from Taru Pods
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
@@ -88,6 +88,32 @@ class CfgVehicles {
     class Box_IND_AmmoVeh_F: IND_Box_Base {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
+    };
+
+    //Plastic and metal case
+    class PlasticCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
+    };
+    class MetalCase_01_base_F: Items_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.2,0};
+        GVAR(dragDirection) = 0;
     };
 
     // Barrier

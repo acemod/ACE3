@@ -2,10 +2,10 @@
  * Author: Ruthberg
  * Inits the wind variables on mission start
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -19,7 +19,7 @@ private _month = date select 1;
 private _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
 
 ACE_wind = [0, 0, 0];
- 
+
 GVAR(wind_direction_reference) = random 360;
 private _sum = 0;
 for "_i" from 0 to 7 do {

@@ -321,7 +321,7 @@
             <Polish>Noc</Polish>
             <Portuguese>Visão Norturna</Portuguese>
             <Russian>Ночное</Russian>
-            <Czech>Noc</Czech>
+            <Czech>Noční</Czech>
             <Spanish>Nocturna</Spanish>
             <Italian>Notturno</Italian>
             <French>Nuit</French>
@@ -332,7 +332,7 @@
             <Polish>Termo</Polish>
             <Portuguese>Térmica</Portuguese>
             <Russian>Тепловизор</Russian>
-            <Czech>Termál</Czech>
+            <Czech>Termální</Czech>
             <Spanish>Térmica</Spanish>
             <Italian>Termico</Italian>
             <French>Thermique</French>
@@ -424,6 +424,7 @@
             <Spanish>Cámara panorámica</Spanish>
             <Czech>Otáčet kameru</Czech>
             <Italian>Camera Panoramica</Italian>
+            <French>Tourner la caméra</French>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDolly">
             <English>Dolly Camera</English>
@@ -434,6 +435,7 @@
             <Spanish>Cámara dolly</Spanish>
             <Czech>Posouvat kameru</Czech>
             <Italian>Camera dolly</Italian>
+            <French>Bouger la caméra</French>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>

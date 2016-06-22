@@ -48,7 +48,7 @@ _position set [2, 0];
 
     _rallypoint setVariable [QGVAR(markerDate), [dayTime, "HH:MM"] call BIS_fnc_timeToString, true];
 
-    ["rallypointMoved", [_rallypoint, _side, _position]] call EFUNC(common,globalEvent);
+    ["ace_rallypointMoved", [_rallypoint, _side, _position]] call CBA_fnc_globalEvent;
 
     [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
-}, [_rallypoint, _unit, _position], 5] call EFUNC(common,waitAndExecute);
+}, [_rallypoint, _unit, _position], 5] call CBA_fnc_waitAndExecute;

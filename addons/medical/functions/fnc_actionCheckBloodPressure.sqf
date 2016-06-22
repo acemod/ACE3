@@ -16,7 +16,7 @@
 
 params ["_caller", "_target", "_selectionName"];
 if (local _target) then {
-    ["actionCheckBloodPressureLocal", [_caller, _target, _selectionName]] call EFUNC(common,localEvent);
+    [QGVAR(actionCheckBloodPressureLocal), [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
 } else {
-    ["actionCheckBloodPressureLocal", _target, [_caller, _target, _selectionName]] call EFUNC(common,targetEvent);
+    [QGVAR(actionCheckBloodPressureLocal), [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
 };
