@@ -54,7 +54,7 @@ GVAR(ParsedTextCached) = [];
 }] call CBA_fnc_addEventHandler;
 
 // disable firing while the interact menu is is is opened
-["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 
 // background options
 ["ace_interactMenuOpened", {
