@@ -108,7 +108,7 @@ call FUNC(determineZoom);
         }] call CBA_fnc_addPlayerEventHandler;
 
         if (GVAR(mapGlow)) then {
-            ["ace_visibleMapChanged", {
+            ["visibleMap", {
                 params ["_player", "_mapOn"];
                 if (_mapOn) then {
                     if (!alive _player && !isNull GVAR(glow)) then {
@@ -128,7 +128,7 @@ call FUNC(determineZoom);
                         [""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call CBA_fnc_addEventHandler;
+            }] call CBA_fnc_addPlayerEventHandler;
         };
     };
 }] call CBA_fnc_addEventHandler;

@@ -284,7 +284,7 @@ enableCamShake true;
 //////////////////////////////////////////////////
 
 // Set the name for the current player
-["ace_playerChanged", {
+["unit", {
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
@@ -294,7 +294,7 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [_oldPlayer] call FUNC(setName);
     };
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
@@ -328,19 +328,18 @@ enableCamShake true;
 }] call CBA_fnc_addPlayerEventHandler;
 
 // "playerVisionModeChanged" event
-["visionmode", {
+["visionMode", {
     ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
 // "cameraViewChanged" event
-["cameraview", {
+["cameraView", {
     ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
-["visiblemap", {
+["visibleMap", {
     ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
-
 
 GVAR(OldIsCamera) = false;
 
