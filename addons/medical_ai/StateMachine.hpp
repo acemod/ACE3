@@ -41,6 +41,7 @@ class ACE_Medical_AI_StateMachine {
 
     class HealSelf {
         onState = QUOTE(call FUNC(healSelf));
+        onStateLeaving = QUOTE(_this setVariable [QGVAR(treatmentOverAt), nil]);
 
         class Initial {
             targetState = "Initial";
