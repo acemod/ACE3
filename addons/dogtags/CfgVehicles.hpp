@@ -9,14 +9,14 @@ class CfgVehicles {
                     statement = "";
                     showDisabled = 0;
                     priority = 3;
-                    icon = ""; //@todo
+                    icon = QPATHTOF(data\dogtag_icon_ca.paa);
                     class ACE_CheckDogtag {
                         displayName = CSTRING(checkDogtag);
                         condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckDogtag));
                         statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkDogtag));
                         showDisabled = 0;
                         priority = 3;
-                        icon = ""; //@todo
+                        icon = QPATHTOF(data\dogtag_icon_ca.paa);
                     };
                     class ACE_TakeDogtag {
                         displayName = CSTRING(takeDogtag);
@@ -24,7 +24,7 @@ class CfgVehicles {
                         statement = QUOTE([ARR_2(_player,_target)] call FUNC(takeDogtag));
                         showDisabled = 0;
                         priority = 3;
-                        icon = ""; //@todo
+                        icon = QPATHTOF(data\dogtag_icon_ca.paa);
                     };
                 };
             };
