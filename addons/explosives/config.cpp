@@ -46,6 +46,6 @@ class CfgMineTriggers {
 };
 
 class ACE_newEvents {
-    clientRequestsOrientations = QGVAR(requestOrientations);
-    serverSendsOrientations = QGVAR(sendOrientations);
+    clientRequestsOrientations = QGVAR(sendOrientations);
+    serverSendsOrientations = QGVAR(orientationsSent);
 };
