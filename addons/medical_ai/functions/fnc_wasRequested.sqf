@@ -12,5 +12,5 @@
  */
 #include "script_component.hpp"
 
-private _healQueue = _assignedMedic getVariable [QGVAR(healQueue), []];
+private _healQueue = _this getVariable [QGVAR(healQueue), []];
 !(_healQueue isEqualTo [])

@@ -41,32 +41,45 @@ class GVAR(stateMachine) {
 
     class HealSelf {
         onState = QUOTE(call FUNC(healSelf));
-        onStateLeaving = QUOTE(_this setVariable [QGVAR(treatmentOverAt), nil]);
+        onStateLeaving = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),nil)]);
 
         class Initial {
             // Go back to initial state when done healing
             targetState = "Initial";
-            condition = QUOTE(!(call FUNC(isInjured)));
+            condition = QUOTE( \
+                !(call FUNC(isInjured)) \
+                && {_this getVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),CBA_missionTime)] <= CBA_missionTime} \
+            );
         };
         class Injured {
             // Stop treating when it's no more safe
             targetState = "Injured";
-            condition = QUOTE(!(call FUNC(isSafe)));
+            condition = QUOTE( \
+                !(call FUNC(isSafe)) \
+                && {_this getVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),CBA_missionTime)] <= CBA_missionTime} \
+            );
         };
     };
 
     class HealUnit {
         onState = QUOTE(call FUNC(healUnit));
+        onStateLeaving = QUOTE(_this setVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),nil)]);
 
         class Initial {
             // Go back to initial state when done healing or it's no more safe to treat
             targetState = "Initial";
-            condition = QUOTE(!(call FUNC(wasRequestedAsMedic || {call FUNC(isSafe)})));
+            condition = QUOTE( \
+                !((call FUNC(wasRequested)) && {call FUNC(isSafe)}) \
+                && {_this getVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),CBA_missionTime)] <= CBA_missionTime} \
+            );
         };
         class Injured {
             // Treating yourself has priority
             targetState = "Injured";
-            condition = QUOTE(!(call FUNC(isInjured)));
+            condition = QUOTE( \
+                (call FUNC(isInjured)) \
+                && {_this getVariable [ARR_2(QUOTE(QGVAR(treatmentOverAt)),CBA_missionTime)] <= CBA_missionTime} \
+            );
         };
     };
 };
