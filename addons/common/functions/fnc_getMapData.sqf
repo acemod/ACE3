@@ -23,6 +23,7 @@ if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
 
 if (_map in ["abbottabad"]) exitWith { [34, 1256] };    //Abbottabad elevation 1256m (Wikipedia)
+if (_map in ["abel"]) exitWith { [39, 0] };    //CWR2 Malden
 if (_map in ["abramia"]) exitWith { [60, 0] };
 if (_map in ["af_kandahar_province"]) exitWith { [42, 0] };
 if (_map in ["angel"]) exitWith { [38, 0] };
@@ -31,6 +32,7 @@ if (_map in ["australia"]) exitWith { [-25, 0] };
 if (_map in ["bootcamp_acr"]) exitWith { [50, 0] };
 if (_map in ["bornholm"]) exitWith { [55, 0] };
 if (_map in ["bozcaada"]) exitWith { [40, 0] };
+if (_map in ["cain"]) exitWith { [40, 0] };    //CWR2 Kolgujev
 if (_map in ["caribou"]) exitWith { [68, 0] };
 if (_map in ["cartercity"]) exitWith { [43, 130] };    //Pecher, based on Grozny (1995 - 1996) elevation 130m (Wikipedia)
 if (_map in ["catalina"]) exitWith { [33, 0] };
@@ -39,7 +41,9 @@ if (_map in ["chernobylzone", "chernobylzonea2"]) exitWith { [51, 0] };
 if (_map in ["clafghan"]) exitWith { [34, 640] };
 if (_map in ["dakrong"]) exitWith { [16, 0] };    //Unsung Mod
 if (_map in ["desert_e"]) exitWith { [40, 800] };
+if (_map in ["desert_island"]) exitWith { [40, 0] };    //CWR2 Desert Island   
 if (_map in ["dya"]) exitWith { [34, 110] };    //Diyala Iraq - default elevationOffset
+if (_map in ["eden"]) exitWith { [45, 0] };    //CWR2 Everon
 if (_map in ["esseker"]) exitWith { [43, 2000] };
 if (_map in ["evergreen"]) exitWith { [41, 0] };    //Burgazada, Turkey - default elevationOffset
 if (_map in ["fallujah"]) exitWith { [33, 0] };
@@ -66,6 +70,7 @@ if (_map in ["mountains_acr"]) exitWith { [35, 2000] };
 if (_map in ["namalsk"]) exitWith { [65, 0] };
 if (_map in ["napf", "napfwinter"]) exitWith { [47, 0] };
 if (_map in ["newyork_lumnuon"]) exitWith { [41, 5] };    //Governer´s Island, New York - default elevationOffset
+if (_map in ["noe"]) exitWith { [45, 0] };    //CWR2 Nogova
 if (_map in ["panthera3"]) exitWith { [46, 0] };
 if (_map in ["pianosa_aut"]) exitWith { [43, 0] };    //Pianosa, Italy - default elevationOffset
 if (_map in ["pja305"]) exitWith { [0, 0] };    //G.O.S N'Ziwasogo
