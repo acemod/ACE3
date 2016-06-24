@@ -29,16 +29,16 @@ if (isServer) then {
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
 
-    [QGVAR(clientRequestOrientations), {
+    [QGVAR(requestOrientations), {
         params ["_logic"];
-        TRACE_1("clientRequestsOrientations received:",_logic);
+        TRACE_1("requestOrientations received:",_logic);
         // Filter the array before sending it
         GVAR(explosivesOrientations) = GVAR(explosivesOrientations) select {
             _x params ["_explosive"];
             (!isNull _explosive && {alive _explosive})
         };
-        TRACE_1("serverSendsOrientations sent:",GVAR(explosivesOrientations));
-        [QGVAR(serverSendOrientations), [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
+        TRACE_1("sendOrientations sent:",GVAR(explosivesOrientations));
+        [QGVAR(sendOrientations), [GVAR(explosivesOrientations)], _logic] call CBA_fnc_targetEvent;
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -52,9 +52,9 @@ GVAR(CurrentSpeedDial) = 0;
 // In case we are a JIP client, ask the server for orientation of any previously
 // placed mine.
 if (didJIP) then {
-    [QGVAR(serverSendOrientations), {
+    [QGVAR(sendOrientations), {
         params ["_explosivesOrientations"];
-        TRACE_1("serverSendsOrientations received:",_explosivesOrientations);
+        TRACE_1("sendOrientations received:",_explosivesOrientations);
         {
             _x params ["_explosive","_direction","_pitch"];
             TRACE_3("orientation set:",_explosive,_direction,_pitch);
@@ -66,8 +66,8 @@ if (didJIP) then {
 
     //  Create a logic to get the client ID
     GVAR(localLogic) = ([sideLogic] call CBA_fnc_getSharedGroup) createUnit ["Logic", [0,0,0], [], 0, "NONE"];
-    TRACE_1("clientRequestsOrientations sent:",GVAR(localLogic));
-    [QGVAR(clientRequestOrientations), [GVAR(localLogic)]] call CBA_fnc_serverEvent;
+    TRACE_1("requestOrientations sent:",GVAR(localLogic));
+    [QGVAR(requestOrientations), [GVAR(localLogic)]] call CBA_fnc_serverEvent;
 };
 
 ["ace_interactMenuOpened", {

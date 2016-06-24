@@ -29,12 +29,12 @@ class CfgPatches {
 
 class ACE_newEvents {
     medical_onUnconscious = "ace_unconscious";
-    medical_treatmentSuccess = "ace_treatmentSuccess";
+    medical_treatmentSuccess = "ace_treatmentSucceded";
     medical_onSetDead = "ace_killed";
-    Medical_onEnteredCardiacArrest = "ace_enteredCardiacArrest";
-    Medical_onItemAddedToTriageCard = "ace_itemAddedToTriageCard";
+    Medical_onEnteredCardiacArrest = "ace_cardiacArrestEntered";
+    Medical_onItemAddedToTriageCard = "ace_triageCardItemAdded";
     medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
-    Medical_onHeartRateAdjustmentAdded = "ace_addedHeartRateAdjustment";
+    Medical_onHeartRateAdjustmentAdded = "ace_heartRateAdjustmentAdded";
     placedInBodyBag = "ace_placedInBodyBag";
     actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);
     treatmentTourniquetLocal = QGVAR(treatmentTourniquetLocal);
