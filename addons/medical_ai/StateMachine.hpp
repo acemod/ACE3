@@ -1,4 +1,4 @@
-class ACE_Medical_AI_StateMachine {
+class GVAR(stateMachine) {
     list = "allUnits select {(!isPlayer _x) && {local _x}}";
 
     class Initial {
@@ -44,10 +44,12 @@ class ACE_Medical_AI_StateMachine {
         onStateLeaving = QUOTE(_this setVariable [QGVAR(treatmentOverAt), nil]);
 
         class Initial {
+            // Go back to initial state when done healing
             targetState = "Initial";
             condition = QUOTE(!(call FUNC(isInjured)));
         };
         class Injured {
+            // Stop treating when it's no more safe
             targetState = "Injured";
             condition = QUOTE(!(call FUNC(isSafe)));
         };
@@ -57,8 +59,14 @@ class ACE_Medical_AI_StateMachine {
         onState = QUOTE(call FUNC(healUnit));
 
         class Initial {
+            // Go back to initial state when done healing or it's no more safe to treat
             targetState = "Initial";
             condition = QUOTE(!(call FUNC(wasRequestedAsMedic || {call FUNC(isSafe)})));
+        };
+        class Injured {
+            // Treating yourself has priority
+            targetState = "Injured";
+            condition = QUOTE(!(call FUNC(isInjured)));
         };
     };
 };

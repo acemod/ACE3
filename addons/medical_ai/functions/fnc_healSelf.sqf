@@ -19,12 +19,26 @@ if ((_this getVariable [QGVAR(treatmentOverAt), CBA_missionTime]) >= CBA_mission
 
 private _needsBandaging   = ([_this] call EFUNC(medical,getBloodLoss)) > 0;
 private _needsMorphine    = (_this getVariable [QEGVAR(medical,pain), 0]) > 0.5;
-private _needsEpinephrine = (_this getVariable [QEGVAR(medical,heartRate), 70]) < 40;
+// Advanced only?
+// private _needsEpinephrine = (_this getVariable [QEGVAR(medical,heartRate), 70]) < 40;
 
 switch (true) do {
     case _needsBandaging: {
-        private _selection = "";
+        // Find injured body part and bandage it
+        private _bodyPartStatus = _this getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]];
+        private _partIndex = {
+            if (_x > 0) exitWith {_forEachIndex};
+        } forEach _bodyPartStatus;
+        private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
         [_this, _selection] call EFUNC(medical,treatmentBasic_bandageLocal);
+        
+        // Play animation
+        [_this, true, true] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
+    };
+    case _needsMorphine: {
+        [_this] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, false, true] call FUNC(playTreatmentAnim);
+        _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
     };
 };
