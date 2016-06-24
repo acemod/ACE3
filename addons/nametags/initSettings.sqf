@@ -1,9 +1,9 @@
 
 [
-    QGVAR(ShowNameTags),
+    QGVAR(showNameTags),
     "LIST",
     [LSTRING(ShowNameTags), LSTRING(ShowNameTags_Desc)],
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [
         nil,
         [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(OnlyCursor), LSTRING(OnlyKeypress), LSTRING(OnlyCursorAndKeypress)],
@@ -16,23 +16,23 @@
     QGVAR(defaultNametagColor),
     "COLOR",
     LSTRING(DefaultNametagColor),
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [0.77, 0.51, 0.08, 1]
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(ShowRanks),
+    QGVAR(showRanks),
     "CHECKBOX",
     LSTRING(ShowRanks),
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     true
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(showVehicleCrewInfo),
+    QGVAR(ShowCrewInfo),
     "CHECKBOX",
-    LSTRING(ShowVehicleCrewInfo),
-    LSTRING(Module_DisplayName),
+    LSTRING(ShowCrewInfo),
+    LSTRING(SettingsCategory),
     true
 ] call CBA_Settings_fnc_init;
 
@@ -40,7 +40,7 @@
     QGVAR(showNamesForAI),
     "CHECKBOX",
     LSTRING(ShowNamesForAI),
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     false
 ] call CBA_Settings_fnc_init;
 
@@ -48,7 +48,7 @@
     QGVAR(showSoundWaves),
     "LIST",
     [LSTRING(ShowSoundWaves), LSTRING(ShowSoundWaves_Desc)],
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [
         nil,
         [ELSTRING(common,Disabled), LSTRING(NameTagSettings), LSTRING(AlwaysShowAll)],
@@ -60,7 +60,7 @@
     QGVAR(tagSize),
     "LIST",
     [LSTRING(TagSize_Name), LSTRING(TagSize_Description)],
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [
         nil,
         ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"],
@@ -72,27 +72,27 @@
     QGVAR(showCursorTagForVehicles),
     "CHECKBOX",
     nil,
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     false,
     nil,
     true
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(ViewDistance),
+    QGVAR(viewDistance),
     "SLIDER",
     nil,
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [0, 50, 5, 0],
     nil,
     true
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(playerNamesMaxAlpha),
+    QGVAR(namesMaxAlpha),
     "SLIDER",
     nil,
-    LSTRING(Module_DisplayName),
+    LSTRING(SettingsCategory),
     [0.00, 1.00, 0.80, 2],
     nil,
     true
