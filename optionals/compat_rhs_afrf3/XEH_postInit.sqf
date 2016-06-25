@@ -10,5 +10,16 @@ private _russianRankIcons = [
     QPATHTOEF(nametags,UI\icons_russia\colonel_gs.paa)
 ];
 
-["rhs_faction_msv", _russianRankIcons] call EFUNC(nametags,setFactionRankIcons);
-["rhs_faction_vdv", _russianRankIcons] call EFUNC(nametags,setFactionRankIcons);
+{
+    [_x, _russianRankIcons] call EFUNC(nametags,setFactionRankIcons);
+} forEach [
+    "rhs_faction_msv",
+    "rhs_faction_vdv",
+    "rhs_faction_vmf",
+    "rhs_faction_vv",
+    "rhs_faction_tv",
+    "rhs_faction_vpvo",
+    "rhs_faction_vvs",
+    "rhs_faction_vvs_c",
+    "rhs_faction_rva"
+];
