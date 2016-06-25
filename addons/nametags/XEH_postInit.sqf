@@ -5,6 +5,10 @@
 
 if (!hasInterface) exitWith {};
 
+if (isNil QGVAR(factionRanks)) then {
+    GVAR(factionRanks) = [] call CBA_fnc_createNamespace;
+};
+
 GVAR(showNamesTime) = -10;
 
 // Add keybinds
