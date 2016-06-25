@@ -4,9 +4,14 @@ class CfgWeapons
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
+    class GM6_base_F;
     class launch_O_Titan_F;
     class UGL_F;
-
+    
+    class rhs_weap_M107_Base_F: GM6_base_F {
+        ACE_barrelTwist = 381.0;
+        ACE_barrelLength = 736.6;
+    };
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 609.6;
