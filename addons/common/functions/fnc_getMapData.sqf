@@ -61,7 +61,7 @@ if (_map in ["kholm"]) exitWith { [36, 0] };
 if (_map in ["kidal"]) exitWith { [18, 0] };    //Kidal, Mali - default elevationOffset
 if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
-if (_map in ["lingor3"]) exitWith { [-4, 0] };
+if (_map in ["lingor", "lingor3"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
 if (_map in ["malvinas"]) exitWith { [-52, 0] };
 if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
