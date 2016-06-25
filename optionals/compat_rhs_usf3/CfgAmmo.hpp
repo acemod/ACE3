@@ -4,10 +4,10 @@ class CfgAmmo
     class BulletBase;
     class B_127x99_Ball;
     class rhsusf_ammo_127x99_M33_Ball : B_127x99_Ball {
-         timeToLive=10;
+        timeToLive=10;
         airFriction=-0.00057503;
         typicalSpeed=900;
-        tracerScale = 1.3; //1.2;
+        tracerScale = 1.3;
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=41.9256;
@@ -23,7 +23,7 @@ class CfgAmmo
         timeToLive=10;
         airFriction=-0.00057503;
         typicalSpeed=900;
-        tracerScale = 1.3;//
+        tracerScale = 1.3;
         hit=25;
         caliber=4.0;
         ACE_caliber=12.954;
