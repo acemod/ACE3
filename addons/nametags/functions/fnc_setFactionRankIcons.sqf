@@ -18,7 +18,7 @@
  *     "\A3\Ui_f\data\GUI\Cfg\Ranks\captain_gs.paa",
  *     "\A3\Ui_f\data\GUI\Cfg\Ranks\major_gs.paa",
  *     "\A3\Ui_f\data\GUI\Cfg\Ranks\colonel_gs.paa"
- * ] call ace_nametags_fnc_setFactionRankIcons
+ * ]] call ace_nametags_fnc_setFactionRankIcons
  *
  * Public: Yes
  */
