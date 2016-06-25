@@ -113,6 +113,29 @@ private _fnc_renderSelfActions = {
     } count _classActions;
 };
 
+private _fnc_renderSubActions = {
+    params ["_target", "_basePath"];
+    TRACE_2("_fnc_renderSubActions",_target,_basePath);
+    // Set object actions for collectActiveActionTree
+    GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
+
+    // Iterate through base level class actions and render them if appropiate
+    private _namespace = GVAR(ActNamespace);
+    private _classActions = _namespace getVariable typeOf _target;
+
+    _pos = [0.5, 0.5];
+
+    {
+        _action = _x;
+        private _path = _action select 0 select 0;
+        if (_path isEqualTo _basePath) then {
+            TRACE_2("_fnc_renderSubActions",_path,_basePath);
+            [_target, _action, _pos] call FUNC(renderBaseMenu);
+        };
+        nil
+    } count _classActions;
+};
+
 private _fnc_renderZeusActions = {
     {
         private _action = _x;
@@ -128,12 +151,16 @@ GVAR(collectedActionPoints) resize 0;
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
         if (vehicle ACE_player == ACE_player) then {
-            if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
-                // Once every 0.2 secs, collect nearby objects active and visible action points and render them
-                call _fnc_renderNearbyActions;
+            if (!GVAR(modeX) || (GVAR(modeXAction) isEqualTo [])) then {
+                if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
+                    // Once every 0.2 secs, collect nearby objects active and visible action points and render them
+                    call _fnc_renderNearbyActions;
+                } else {
+                    // The rest of the frames just draw the same action points rendered the last frame
+                    call _fnc_renderLastFrameActions;
+                };
             } else {
-                // The rest of the frames just draw the same action points rendered the last frame
-                call _fnc_renderLastFrameActions;
+                GVAR(modeXAction) call _fnc_renderSubActions;
             };
         } else {
             // Render vehicle self actions when in vehicle

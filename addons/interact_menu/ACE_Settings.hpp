@@ -21,6 +21,13 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(AlwaysUseCursorInteraction);
     };
+    class GVAR(modeX) {
+        value = 1;
+        typeName = "BOOL";
+        isClientSettable = 1;
+        category = CSTRING(Category_InteractionMenu);
+        displayName = "Mode X";
+    };
     class GVAR(useListMenu) {
         value = 0;
         typeName = "BOOL";

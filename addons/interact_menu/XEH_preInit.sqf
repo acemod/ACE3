@@ -17,10 +17,27 @@ DFUNC(handleMouseMovement) = {
     };
 };
 DFUNC(handleMouseButtonDown) = {
+    if (GVAR(openedMenuType) == 0 && GVAR(modeX)) exitWith {
+        if (GVAR(modeXAction) isEqualTo [] && GVAR(actionSelected)) then {
+            GVAR(modeXAction) = [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
+            GVAR(cursorPos) = [0.5, 0.5, 0];
+            setMousePosition [0.50, 0.5];
+            GVAR(menuDepthPath) = +GVAR(lastPath);
+            GVAR(expanded) = true;
+            GVAR(expandedTime) = diag_tickTime-1000;
+            GVAR(startHoverTime) = -1000;
+        } else {
+            if !(GVAR(actionOnKeyRelease)) then {
+                [GVAR(openedMenuType),true] call FUNC(keyUp);
+            };
+        };
+    };
+
     if !(GVAR(actionOnKeyRelease)) then {
         [GVAR(openedMenuType),true] call FUNC(keyUp);
     };
 };
+GVAR(modeXAction) = [];
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;

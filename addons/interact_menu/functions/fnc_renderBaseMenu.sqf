@@ -34,8 +34,10 @@ private _pos = if((count _this) > 2) then {
 
 // For non-self actions, exit if the action is too far away or ocluded
 private _distanceToBasePoint = 0; //This will be 0 for self/zeus/in-vehicle (used later to check sub action distance)
-if ((GVAR(openedMenuType) == 0) && {vehicle ACE_player == ACE_player} && {isNull curatorCamera} &&
+if (GVAR(openedMenuType) == 0 && {vehicle ACE_player == ACE_player} && {isNull curatorCamera} &&
     {
+        if (GVAR(modeX) && {!(GVAR(modeXAction) isEqualTo [])}) exitWith {false};
+
         private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
         _distanceToBasePoint = _headPos distance _pos;
 
