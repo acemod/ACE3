@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventhandlers.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgWorlds.hpp"
 #include "RscTitles.hpp"
 #include "CfgVehicles.hpp"
