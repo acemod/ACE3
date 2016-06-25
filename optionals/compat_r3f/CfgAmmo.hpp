@@ -47,7 +47,7 @@ class CfgAmmo {
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={900};
-        ACE_barrelLengths[]={736.6};
+        ACE_barrelLengths[]={700};
     };
     class R3F_127x99_PEI: R3F_127x99_Ball {
         ACE_caliber=12.954;
@@ -59,7 +59,7 @@ class CfgAmmo {
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
         ACE_muzzleVelocities[]={900};
-        ACE_barrelLengths[]={736.6};
+        ACE_barrelLengths[]={700};
     };
     class R3F_127x99_Ball2: BulletBase {
         ACE_caliber=12.954;
