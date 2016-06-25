@@ -23,8 +23,8 @@ class ACE_newEvents {
     LoadCargo = "ace_loadCargo";
     cargoUnloaded = "ace_cargoUnloaded";
     cargoLoaded = "ace_cargoLoaded";
-    AddCargoByClass = "ace_addCargoByClass";
+    AddCargoByClass = "ace_addCargo";
     ServerUnloadCargo = QGVAR(serverUnload);
     UnloadCargo = "ace_unloadCargo";
-    cargoAddedByClass = "ace_cargoAddedByClass";
+    cargoAddedByClass = "ace_cargoAdded";
 };
