@@ -22,9 +22,9 @@ if (alive _target && {(_target getVariable [QGVAR(inCardiacArrest), false] || _t
     [_target, "activity_view", LSTRING(Activity_cpr), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
     if (local _target) then {
-        ["treatmentAdvanced_CPRLocal", [_caller, _target]] call EFUNC(common,localEvent);
+        [QGVAR(treatmentAdvanced_CPRLocal), [_caller, _target]] call CBA_fnc_localEvent;
     } else {
-        ["treatmentAdvanced_CPRLocal", _target, [_caller, _target]] call EFUNC(common,targetEvent);
+        [QGVAR(treatmentAdvanced_CPRLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
     };
 };
 true;

@@ -28,7 +28,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
 [{
     disableSerialization;
     params ["_filter"];
-    
+
     // remove "All", so we can push it to the back later.
     // to keep localization we can keep the lbText (displayed name).
     private _index = lbSize _filter - 1;
@@ -53,7 +53,7 @@ _filter ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChanged)}];
     // readd "All" filter to last position and select it
     _index = _filter lbAdd _nameAll;
     _filter lbSetCurSel _index;
-}, [_filter]] call EFUNC(common,execNextFrame);
+}, [_filter]] call CBA_fnc_execNextFrame;
 
 // monitor changes that can happen and force our update
 private _dummyControl = _display ctrlCreate ["RscMapControl", -1];

@@ -19,7 +19,7 @@ params ["_unit"];
 
 //Cache the results as this function could be called rapidly
 (_unit getVariable [QGVAR(cacheInFacility), [-9, false]]) params ["_expireTime", "_lastResult"];
-if (ACE_time < _expireTime) exitWith {_lastResult};
+if (CBA_missionTime < _expireTime) exitWith {_lastResult};
 
 private _eyePos = eyePos _unit;
 private _isInBuilding = false;
@@ -58,6 +58,6 @@ if (!_isInBuilding) then {
 };
 
 //Save the results (with a 1 second expiry)
-_unit setVariable [QGVAR(cacheInFacility), [ACE_time + 1, _isInBuilding]];
+_unit setVariable [QGVAR(cacheInFacility), [CBA_missionTime + 1, _isInBuilding]];
 
 _isInBuilding;

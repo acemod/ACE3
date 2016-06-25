@@ -29,7 +29,7 @@ private _distance = [
 if !(!GVAR(enabled) && FUNC(canUseFCS)) exitWith {};
 
 GVAR(Enabled) = true;
-GVAR(time) = ACE_time;
+GVAR(time) = CBA_missionTime;
 
 
 private _weaponDirection = _vehicle weaponDirection (_vehicle currentWeaponTurret _turret);  // @todo doesn't work for sub turrets

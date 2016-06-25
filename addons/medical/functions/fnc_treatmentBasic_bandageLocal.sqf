@@ -18,14 +18,14 @@
 
 params ["_target", "_selectionName"];
 
-_damageBodyParts = _target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+private _damageBodyParts = _target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 
 // Ensure it is a valid bodypart
-_part = [_selectionName] call FUNC(selectionNameToNumber);
+private _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitwith {false};
 
 if ((_damageBodyParts select _part) > 0) then {
-    _damageOnPart = (_damageBodyParts select _part);
+    private _damageOnPart = (_damageBodyParts select _part);
     // Temp quick fix to change in behaviour of basic medical bandaging
     if (_damageOnPart - BANDAGEHEAL > 0) then {
         _damageOnPart = _damageOnPart - (_damageOnPart * BANDAGEHEAL);

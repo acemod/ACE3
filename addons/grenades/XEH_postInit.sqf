@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
+["ace_flashbangExploded", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -25,6 +25,6 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
-["firedNonPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

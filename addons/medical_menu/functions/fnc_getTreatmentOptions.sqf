@@ -19,19 +19,16 @@
 
 params ["_player", "_target", "_name"];
 
-private ["_actions", "_collectedActions", "_bodyPart"];
-
 if (!([ACE_player, _target, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {[]};
 
-_actions = if (EGVAR(medical,level) == 2) then {
+private _actions = if (EGVAR(medical,level) == 2) then {
     GVAR(actionsAdvanced);
 } else {
     GVAR(actionsBasic);
 };
 
-_collectedActions = [];
-
-_bodyPart = EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart);
+private _collectedActions = [];
+private _bodyPart = EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart);
 {
     _x params ["", "_currentCategory", "_currentCondition"];
     if (_name == _currentCategory && {call _currentCondition}) then {
@@ -40,4 +37,4 @@ _bodyPart = EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart);
     nil
 } count _actions;
 
-_collectedActions // return
+_collectedActions;

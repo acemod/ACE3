@@ -3,47 +3,6 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-
-//////////////////////////////////////////////////
-// PFHs
-//////////////////////////////////////////////////
-
-//Singe PFEH to handle execNextFrame, waitAndExec and waitUntilAndExec:
-[{
-    BEGIN_COUNTER(waitAndExec);
-
-    //Handle the waitAndExec array:
-    while {!(GVAR(waitAndExecArray) isEqualTo []) && {GVAR(waitAndExecArray) select 0 select 0 <= ACE_Time}} do {
-        private _entry = GVAR(waitAndExecArray) deleteAt 0;
-        (_entry select 2) call (_entry select 1);
-    };
-
-    //Handle the execNextFrame array:
-    {
-        (_x select 0) call (_x select 1);
-        false
-    } count GVAR(nextFrameBufferA);
-
-    //Swap double-buffer:
-    GVAR(nextFrameBufferA) = GVAR(nextFrameBufferB);
-    GVAR(nextFrameBufferB) = [];
-    GVAR(nextFrameNo) = diag_frameno + 1;
-
-    //Handle the waitUntilAndExec array:
-    {
-        // if condition is satisifed call statement
-        if ((_x select 2) call (_x select 0)) then {
-            // make sure to delete the correct handle when multiple conditions are met in one frame
-            GVAR(waitUntilAndExecArray) deleteAt (GVAR(waitUntilAndExecArray) find _x);
-            (_x select 2) call (_x select 1);
-        };
-        nil
-    } count +GVAR(waitUntilAndExecArray);
-
-    END_COUNTER(waitAndExec);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
-
-
 //////////////////////////////////////////////////
 // Get Map Data
 //////////////////////////////////////////////////
@@ -59,28 +18,29 @@
 //////////////////////////////////////////////////
 
 //Status Effect EHs:
-["setStatusEffect", {_this call FUNC(statusEffect_set)}] call FUNC(addEventHandler);
+[QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
 ["forceWalk", false, ["ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_dragging"]] call FUNC(statusEffect_addType);
 ["blockSprint", false, []] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), QEGVAR(medical,unconscious)]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
 
-["forceWalk", {
+[QGVAR(forceWalk), {
     params ["_object", "_set"];
     TRACE_2("forceWalk EH",_object,_set);
     _object forceWalk (_set > 0);
-}] call FUNC(addEventHandler);
-["blockSprint", { //Name reversed from `allowSprint` because we want NOR logic
+}] call CBA_fnc_addEventHandler;
+[QGVAR(blockSprint), { //Name reversed from `allowSprint` because we want NOR logic
     params ["_object", "_set"];
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
-}] call FUNC(addEventHandler);
-["setCaptive", {
+}] call CBA_fnc_addEventHandler;
+[QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);
     _object setCaptive (_set > 0);
-}] call FUNC(addEventHandler);
-["blockDamage", { //Name reversed from `allowDamage` because we want NOR logic
+}] call CBA_fnc_addEventHandler;
+[QGVAR(blockDamage), { //Name reversed from `allowDamage` because we want NOR logic
     params ["_object", "_set"];
     if ((_object isKindOf "CAManBase") && {(["ace_medical"] call FUNC(isModLoaded))}) then {
         TRACE_2("blockDamage EH (using medical)",_object,_set);
@@ -89,7 +49,12 @@
         TRACE_2("blockDamage EH (using allowDamage)",_object,_set);
        _object allowDamage (_set == 0);
     };
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addEventHandler;
+[QGVAR(blockEngine), {
+    params ["_vehicle", "_set"];
+    _vehicle setVariable [QGVAR(blockEngine), _set > 0, true];
+    _vehicle engineOn false;
+}] call CBA_fnc_addEventHandler;
 
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
@@ -110,7 +75,7 @@ if (isServer) then {
 };
 
 // Listens for global "SettingChanged" events, to update the force status locally
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name", "_value", "_force"];
 
     if (_force) then {
@@ -120,42 +85,54 @@ if (isServer) then {
 
         _settingData set [6, _force];
     };
-}] call FUNC(addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
 
 // Event to log Fix Headbug output
-["HeadbugFixUsed", {
+[QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
     ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["fixCollision", FUNC(fixCollision)] call FUNC(addEventhandler);
-["fixFloating", FUNC(fixFloating)] call FUNC(addEventhandler);
-["fixPosition", FUNC(fixPosition)] call FUNC(addEventhandler);
+[QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
+[QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
+[QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
-["unloadPersonEvent", FUNC(unloadPersonLocal)] call FUNC(addEventhandler);
+["ace_loadPersonEvent", FUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
+["ace_unloadPersonEvent", FUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
 
-["lockVehicle", {
+[QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
-}] call FUNC(addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
-["unlockVehicle", {
+[QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
-}] call FUNC(addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
-["setDir", {(_this select 0) setDir (_this select 1)}] call FUNC(addEventhandler);
-["setFuel", {(_this select 0) setFuel (_this select 1)}] call FUNC(addEventhandler);
-["setSpeaker", {(_this select 0) setSpeaker (_this select 1)}] call FUNC(addEventhandler);
-["selectLeader", {(_this select 0) selectLeader (_this select 1)}] call FUNC(addEventHandler);
-["setVelocity", {(_this select 0) setVelocity (_this select 1)}] call FUNC(addEventHandler);
-["playMove", {(_this select 0) playMove (_this select 1)}] call FUNC(addEventHandler);
-["playMoveNow", {(_this select 0) playMoveNow (_this select 1)}] call FUNC(addEventHandler);
-["switchMove", {(_this select 0) switchMove (_this select 1)}] call FUNC(addEventHandler);
+[QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setFuel), {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(engineOn), {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setSpeaker), {(_this select 0) setSpeaker (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(selectLeader), {(_this select 0) selectLeader (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVelocity), {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMove), {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playMoveNow), {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+
+// Request framework
+[QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
+[QGVAR(receiveRequest), FUNC(receiveRequest)] call CBA_fnc_addEventHandler;
+
+[QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    ["hideObjectGlobal", {(_this select 0) hideObjectGlobal (_this select 1)}] call FUNC(addEventHandler);
-    ["enableSimulationGlobal", {(_this select 0) enableSimulationGlobal (_this select 1)}] call FUNC(addEventHandler);
+    [QGVAR(hideObjectGlobal), {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
 
 
@@ -163,23 +140,19 @@ if (isServer) then {
 // Set up remote execution
 //////////////////////////////////////////////////
 
-// ACE events
-"ACEg" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
-"ACEc" addPublicVariableEventHandler {_this call FUNC(_handleNetEvent)};
-
 // Synced ACE events
 // Handle JIP scenario
 if (!isServer) then {
-    ["PlayerJip", {
+    ["ace_playerJIP", {
         ACE_LOGINFO("JIP event synchronization initialized");
-        ["SEH_all", [player]] call FUNC(serverEvent);
-    }] call FUNC(addEventHandler);
+        ["ACEa", [player]] call CBA_fnc_serverEvent;
+    }] call CBA_fnc_addEventHandler;
 } else {
-    ["SEH_all", FUNC(_handleRequestAllSyncedEvents)] call FUNC(addEventHandler);
+    ["ACEa", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-["SEH", FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
-["SEH_s", FUNC(_handleRequestSyncedEvent)] call FUNC(addEventHandler);
+["ACEe", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEs", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
@@ -212,16 +185,16 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up SettingsInitialized eventhandler
+// Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     [
         GVAR(checkPBOsAction),
         GVAR(checkPBOsCheckAll),
         GVAR(checkPBOsWhitelist)
     ] call FUNC(checkPBOs)
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Create a pfh to wait until all postinits are ready and settings are initialized
 [{
@@ -248,7 +221,7 @@ call FUNC(checkFiles);
         [] call FUNC(readSettingsFromParamsArray);
     };
     // Event so that ACE_Modules have their settings loaded:
-    ["InitSettingsFromModules", []] call FUNC(localEvent);
+    [QGVAR(initSettingsFromModules), []] call CBA_fnc_localEvent;
 
     if (isServer) then {
         // Publish all settings data after all configs and modules are read
@@ -264,7 +237,7 @@ call FUNC(checkFiles);
     ACE_LOGINFO("Settings initialized.");
 
     //Event that settings are safe to use:
-    ["SettingsInitialized", []] call FUNC(localEvent);
+    ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
 
     //Set init finished and run all delayed functions:
     GVAR(settingsInitFinished) = true;
@@ -297,12 +270,21 @@ call FUNC(assignedItemFix);
 enableCamShake true;
 
 
+//FUNC(showHud) needs to be refreshed if it was set during mission init
+["ace_infoDisplayChanged", {
+    GVAR(showHudHash) params ["", "_masks"];
+    if (!(_masks isEqualTo [])) then {
+        [] call FUNC(showHud);
+    };
+}] call CBA_fnc_addEventHandler;
+
+
 //////////////////////////////////////////////////
 // Eventhandler to set player names
 //////////////////////////////////////////////////
 
 // Set the name for the current player
-["playerChanged", {
+["unit", {
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
@@ -312,135 +294,96 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [_oldPlayer] call FUNC(setName);
     };
-}] call FUNC(addEventhandler);
+}] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-// default variables
-GVAR(OldPlayerVehicle) = vehicle objNull;
-GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
-GVAR(OldPlayerWeapon) = currentWeapon objNull;
-GVAR(OldPlayerInventory) = [objNull] call FUNC(getAllGear);
-GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
-GVAR(OldCameraView) = "";
-GVAR(OldVisibleMap) = false;
-GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
+// "playerChanged" event
+["unit", {
+    ACE_player = (_this select 0);
+    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerVehicleChanged" event
+["vehicle", {
+    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerTurretChanged" event
+["turret", {
+    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerWeaponChanged" event
+["weapon", {
+    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerInventoryChanged" event
+["loadout", {
+    ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerVisionModeChanged" event
+["visionMode", {
+    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "cameraViewChanged" event
+["cameraView", {
+    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+["visibleMap", {
+    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
 GVAR(OldIsCamera) = false;
 
-// clean up playerChanged eventhandler from preinit and put it in the same PFH as the other events to reduce overhead and guarantee advantageous execution order
-if (!isNil QGVAR(PreInit_playerChanged_PFHID)) then {
-    [GVAR(PreInit_playerChanged_PFHID)] call CBA_fnc_removePerFrameHandler;
-    GVAR(PreInit_playerChanged_PFHID) = nil;
-};
-
-// PFH to raise varios events
 [{
     BEGIN_COUNTER(stateChecker);
 
-    // "playerChanged" event
-    private _data = call FUNC(player);
-    if !(_data isEqualTo ACE_player) then {
-        private _oldPlayer = ACE_player;
-
-        ACE_player = _data;
-        uiNamespace setVariable ["ACE_player", _data];
-
-        // Raise ACE event locally
-        ["playerChanged", [ACE_player, _oldPlayer]] call FUNC(localEvent);
-    };
-
-    // "playerVehicleChanged" event
-    _data = vehicle ACE_player;
-    if !(_data isEqualTo GVAR(OldPlayerVehicle)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerVehicle) = _data;
-        ["playerVehicleChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "playerTurretChanged" event
-    _data = [ACE_player] call FUNC(getTurretIndex);
-    if !(_data isEqualTo GVAR(OldPlayerTurret)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerTurret) = _data;
-        ["playerTurretChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "playerWeaponChanged" event
-    _data = currentWeapon ACE_player;
-    if (_data != GVAR(OldPlayerWeapon)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerWeapon) = _data;
-        ["playerWeaponChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "playerInventoryChanged" event
-    _data = [ACE_player] call FUNC(getAllGear);
-    if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerInventory) = _data;
-        ["playerInventoryChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "playerVisionModeChanged" event
-    _data = currentVisionMode ACE_player;
-    if !(_data isEqualTo GVAR(OldPlayerVisionMode)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerVisionMode) = _data;
-        ["playerVisionModeChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "cameraViewChanged" event
-    _data = cameraView;
-    if !(_data isEqualTo GVAR(OldCameraView)) then {
-        // Raise ACE event locally
-        GVAR(OldCameraView) = _data;
-        ["cameraViewChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
-    // "visibleMapChanged" event
-    _data = visibleMap;
-    if (!_data isEqualTo GVAR(OldVisibleMap)) then {
-        // Raise ACE event locally
-        GVAR(OldVisibleMap) = _data;
-        ["visibleMapChanged", [ACE_player, _data]] call FUNC(localEvent);
-    };
-
     // "activeCameraChanged" event
-    _data = call FUNC(isfeatureCameraActive);
+    private _data = call FUNC(isfeatureCameraActive);
     if !(_data isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _data;
-        ["activeCameraChanged", [ACE_player, _data]] call FUNC(localEvent);
+        ["ace_activeCameraChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
     };
 
     END_COUNTER(stateChecker);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 
 //////////////////////////////////////////////////
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-["displayTextStructured", {_this call FUNC(displayTextStructured)}] call FUNC(addEventhandler);
-["displayTextPicture", {_this call FUNC(displayTextPicture)}] call FUNC(addEventhandler);
+[QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
 
-["medical_onUnconscious", {
+["ace_unconscious", {
     params ["_unit", "_isUnconscious"];
 
     if (local _unit && {!_isUnconscious}) then {
         [_unit, false, QFUNC(loadPerson), west /* dummy side */] call FUNC(switchToGroupSide);
     };
-}] call FUNC(addEventhandler);
+}] call CBA_fnc_addEventHandler;
 
-["useItem", DFUNC(useItem)] call FUNC(addEventHandler);
+["ace_useItem", DFUNC(useItem)] call CBA_fnc_addEventHandler;
 
 
 //////////////////////////////////////////////////
 // Add various canInteractWith conditions
 //////////////////////////////////////////////////
+
+["isNotDead", {
+    params ["_unit", "_target"];
+    alive _unit
+}] call FUNC(addCanInteractWithCondition);
 
 ["notOnMap", {!visibleMap}] call FUNC(addCanInteractWithCondition);
 
@@ -468,7 +411,7 @@ if (didJip) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!isNull player && GVAR(settingsInitFinished)) then {
-            ["PlayerJip", [player]] call FUNC(localEvent);
+            ["ace_playerJIP", [player]] call CBA_fnc_localEvent;
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, []] call CBA_fnc_addPerFrameHandler;

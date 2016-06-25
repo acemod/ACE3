@@ -2,11 +2,11 @@
  * Author: jaynus
  * Returns whether the seeker object can see the target position with lineIntersect
  *
- * Argument:
+ * Arguments:
  * 0: Seeker [Object]
  * 1: Target [Object]
  * 
- * Return value:
+ * Return Value:
  *    Boolean
  */
 #include "script_component.hpp"

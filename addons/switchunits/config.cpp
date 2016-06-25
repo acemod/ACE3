@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"bux578"};
-        authorUrl = "https://github.com/bux578/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"bux578"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

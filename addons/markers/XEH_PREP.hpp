@@ -1,6 +1,7 @@
 
 PREP(getEnabledChannels);
 PREP(initInsertMarker);
+PREP(mapDisplayInitEH);
 PREP(mapDrawEH);
 PREP(onLBSelChangedChannel);
 PREP(onLBSelChangedColor);

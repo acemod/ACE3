@@ -68,7 +68,7 @@
             <German>Für Scharfschützen aktiviert</German>
             <Czech>Povoleno pro odstřelovače</Czech>
             <Portuguese>Ativar para caçadores</Portuguese>
-            <French>Activer pour les snipers</French>
+            <French>Activé pour les snipers</French>
             <Hungarian>Mesterlövészeknek engedélyezve</Hungarian>
             <Russian>Включена для снайперов</Russian>
             <Italian>Abilita per Tiratori Scelti</Italian>
@@ -92,7 +92,7 @@
             <German>Für Gruppenmitglieder aktiviert</German>
             <Czech>Povoleno pro členy skupiny</Czech>
             <Portuguese>Ativada para membros do grupo</Portuguese>
-            <French>Activer pour les membres du groupe</French>
+            <French>Activé pour les membres groupés</French>
             <Hungarian>Csoporttagoknak engedélyezve</Hungarian>
             <Russian>Включена для группы</Russian>
             <Italian>Abilita per Membri del Gruppo</Italian>
@@ -116,7 +116,7 @@
             <German>Für jeden aktiviert</German>
             <Czech>Povoleno pro všechny</Czech>
             <Portuguese>Ativada para todos</Portuguese>
-            <French>Activer pour tout le monde</French>
+            <French>Activé pour tout le monde</French>
             <Hungarian>Mindenkinek engedélyezve</Hungarian>
             <Russian>Включена для всех</Russian>
             <Italian>Abilita per tutti</Italian>
@@ -164,7 +164,7 @@
             <German>Beim vollautomatischen Feuern deaktiviert</German>
             <Czech>Zakázáno v automatickém režimu střelby</Czech>
             <Portuguese>Desabilitar no modo automático</Portuguese>
-            <French>Désactiver en mode rafale libre</French>
+            <French>Désactiver en mode automatique</French>
             <Hungarian>Automata módban letiltva</Hungarian>
             <Russian>Выкл. для автомат. режима</Russian>
             <Italian>Disabilita in modalità di fuoco automatico</Italian>
@@ -176,7 +176,7 @@
             <German>Deaktiviert die erweiterte Ballistik beim vollautomatischen Feuern</German>
             <Czech>Zákáže pokročilou balistiku během střelby v režimu automat</Czech>
             <Portuguese>Desabilitar a balística avançada durante fogo automático</Portuguese>
-            <French>Désactive la balistique avancée pour les tirs en rafale libre</French>
+            <French>Désactive la balistique avancée pour les tirs en automatique</French>
             <Hungarian>Letiltja a fejlett ballisztikát automata tüzelés folyamán</Hungarian>
             <Russian>Выключает продвинутую баллистику при стрельбе в полностью автоматическом режиме</Russian>
             <Italian>Disabilita Balistica Avanzata durante fuoco automatico</Italian>
@@ -188,7 +188,7 @@
             <German>Simulation der Munitionstemperatur aktivieren</German>
             <Czech>Povolit simulaci teploty munice</Czech>
             <Portuguese>Ativar simulação de temperatura de munição</Portuguese>
-            <French>Activer la simulation de la température</French>
+            <French>Active la simulation de la température</French>
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
@@ -236,7 +236,7 @@
             <German>Geschossspureffekt aktivieren</German>
             <Czech>Povolit efekt trasírek</Czech>
             <Portuguese>Ativa efeito traçante de projétil</Portuguese>
-            <French>Activer l'effet traçante</French>
+            <French>Activer l'effet balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
             <Italian>Abilita effetto di tracciatura dei proiettili</Italian>
@@ -307,7 +307,7 @@
             <Polish>Moduł ten pozwala aktywować zaawansowaną balistykę biorącą przy obliczeniach trajektorii lotu pocisku pod uwagę takie rzeczy jak temperatura powietrza, ciśnienie atmosferyczne, wilgotność powietrza, siły Coriolisa i Eotvosa, grawitację a także broń z jakiej wykonywany jest strzał oraz rodzaj amunicji. Wszystko to sprowadza się na bardzo dokładne odwzorowanie balistyki.</Polish>
             <Czech>Tento modul umožňuje aktivovat pokročilou balistiku, která vypočítává trajektorii kulky a bere do úvahy věci jako je teplota vzduchu, atmosférický tlak, vlhkost vzduchu, gravitaci, typ munice a zbraň, ze které je náboj vystřelen. To vše přispívá k velmi přesné balistice.</Czech>
             <Portuguese>Este módulo permite que você ative cálculos de balística avançada, fazendo a trajetória do projétil levar em consideração coisas como temperatura do ar, pressão atmosférica, umidade, força de Coriolis, a gravidade, o modelo da arma no qual o disparo é realizado e o tipo de munição. Tudo isso acrescenta-se a um balística muito precisa.</Portuguese>
-            <French>Ce module active la simulation de balistique avancée - ie les projectiles sont influencés par des varibles comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelle ils sont tirés.</French>
+            <French>Ce module active la simulation de balistique avancée - les projectiles sont influencés par des variables comme le vent, la température, la pression atmosphérique, l'humidité, la gravité, le type de munition et l'arme avec laquelles ils sont tirés.</French>
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
             <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>

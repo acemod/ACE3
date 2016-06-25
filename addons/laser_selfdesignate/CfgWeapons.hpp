@@ -6,6 +6,6 @@ class CfgWeapons {
     };
 
     class missiles_DAGR: RocketPods {
-        canLock = 1;
+        //canLock = 1;
     };
 };

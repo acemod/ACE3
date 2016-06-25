@@ -7,7 +7,7 @@
  * 1: Set as loadable (default: true) <BOOL><SCALAR>
  * 2: Size. (default: 1) <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

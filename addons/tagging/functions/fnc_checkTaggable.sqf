@@ -1,5 +1,5 @@
 /*
- * Author: BaerMitUmlaut and esteldunedain
+ * Author: BaerMitUmlaut, esteldunedain
  * Checks if there is a taggable surface within 2.5m in front of the player.
  *
  * Arguments:

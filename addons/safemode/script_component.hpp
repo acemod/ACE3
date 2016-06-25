@@ -1,4 +1,5 @@
 #define COMPONENT safemode
+#define COMPONENT_BEAUTIFIED Safe Mode
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

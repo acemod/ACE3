@@ -47,7 +47,7 @@ class CfgWeapons {
     };
     class ACE_NVG_Wide: NVGoggles {
         author = ECSTRING(common,ACETeam);
-        modelOptics = QUOTE(PATHTOF(models\ACE_nvg_wide_optics));
+        modelOptics = QPATHTOF(models\ACE_nvg_wide_optics);
         displayName = CSTRING(NVG_FullScreen);
         ACE_NightVision_grain = 0.75;
         ACE_NightVision_blur = 0.055;

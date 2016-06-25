@@ -10,7 +10,7 @@ class CfgVehicles {
                     statement = QUOTE([ACE_player] call FUNC(adjustZero));
                     showDisabled = 0;
                     priority = 0.2;
-                    //icon = QUOTE(PATHTOF(UI\...)); // TODO
+                    //icon = QPATHTOF(UI\...); // TODO
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };

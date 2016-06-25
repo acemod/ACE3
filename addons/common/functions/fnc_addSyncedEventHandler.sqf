@@ -10,6 +10,9 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * ["myEvent", {_this call x}, 0] call ace_common_fnc_addSyncedEventHandler
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -17,11 +20,11 @@
 params ["_name", "_handler", ["_ttl", 0]];
 
 if (HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR("Duplicate synced event creation.");
+    ACE_LOGERROR_1("Duplicate synced event [%1] creation.",_name);
     false
 };
 
-private _eventId = [_name, FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
+private _eventId = [_name, FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
 private _data = [_handler, [], _ttl, _eventId];
 
 HASH_SET(GVAR(syncedEvents),_name,_data);

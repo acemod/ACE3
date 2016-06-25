@@ -45,7 +45,7 @@ if (_actionID == -1) then {
     private _addAction = call compile format [
         "[
             '',
-            {if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)},
+            {[{if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)}, _this] call CBA_fnc_directCall},
             nil,
             -1,
             false,

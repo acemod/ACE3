@@ -16,7 +16,7 @@ for [{_i=0}, {_i< (count _seekerTypesCfg) }, {_i=_i+1}] do {
     _testProfile = _seekerTypesCfg select _i;
     _testName = configName _testProfile;
     TRACE_3("", _testName, _testProfile, _seekerTypesCfg);
-    
+
     if( _testName == _seekerTypeName) exitWith {
         _seekerType = _seekerTypesCfg select _i;
     };

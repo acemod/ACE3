@@ -2,10 +2,10 @@
  * Author: Ruthberg
  * Displays a wind info (colored arrow) in the top left corner of the screen
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -78,10 +78,10 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     TRACE_3("update display",_beaufortNumber,_windDir,_windSpeed);
     __ctrl ctrlSetTextColor _windColor;
     if (_beaufortNumber > 0) then {
-        __ctrl ctrlSetText QUOTE(PATHTOF(UI\wind_arrow_ca.paa));
+        __ctrl ctrlSetText QPATHTOF(UI\wind_arrow_ca.paa);
         __ctrl ctrlSetAngle [_windDir, 0.5, 0.5];
     } else {
-        __ctrl ctrlSetText QUOTE(PATHTOF(UI\wind_noneCircle_ca.paa));
+        __ctrl ctrlSetText QPATHTOF(UI\wind_noneCircle_ca.paa);
     };
     __ctrl ctrlCommit 0;
 
@@ -94,7 +94,7 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
 
     for "_index" from 0 to (_beaufortNumber - 1) do {
         private _ball = __dsp ctrlCreate ["RscPicture", _index];
-        _ball ctrlSetText QUOTE(PATHTOF(UI\wind_dot_ca.paa));
+        _ball ctrlSetText QPATHTOF(UI\wind_dot_ca.paa);
         _ball ctrlSetTextColor [1,1,1,1];
         private _ballCenterX = _centerX - (_ballWidth / 2) + ((sin _windDir) * 0.013333) * (_index - 4.9) + ((cos _windDir) * 0.0125);
         private _ballCenterY = _centerY - (_ballHeight / 2) - ((1 * cos _windDir) * 4/3*0.013333) * (_index - 4.9) + ((sin _windDir) * 0.0125);

@@ -23,14 +23,14 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if (!HASH_HASKEY(GVAR(syncedEvents),_eventName)) exitWith {
-        ACE_LOGERROR("Request for synced event - key not found.");
+        ACE_LOGERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 
     private _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
     _eventEntry params ["", "_eventLog"];
 
-    ["SEH_s", _client, [_eventName, _eventLog]] call FUNC(targetEvent);
+    ["ACEs", [_eventName, _eventLog], _client] call CBA_fnc_targetEvent;
 } else {
     params ["_eventName", "_eventLog"];
 

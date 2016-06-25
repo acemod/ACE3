@@ -29,22 +29,16 @@ GVAR(ppEffectMuzzleFlash) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [
 GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
 
 // Setup the event handlers
-["playerInventoryChanged",  {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerVisionModeChanged", {
-    _this call FUNC(updatePPEffects);
-    _this call FUNC(onVisionModeChanged);
-}] call EFUNC(common,addEventHandler);
-
-["cameraViewChanged",       {
-    _this call FUNC(updatePPEffects);
-    _this call FUNC(onCameraViewChanged);
-}] call EFUNC(common,addEventHandler);
-["playerVehicleChanged",    {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
-["playerTurretChanged",     {_this call FUNC(updatePPEffects)}] call EFUNC(common,addEventHandler);
+["loadout", FUNC(updatePPEffects)] call CBA_fnc_addPlayerEventHandler;
+["visionMode", FUNC(updatePPEffects)] call CBA_fnc_addPlayerEventHandler;
+["visionMode", FUNC(onVisionModeChanged)] call CBA_fnc_addPlayerEventHandler;
+["cameraView", FUNC(updatePPEffects)] call CBA_fnc_addPlayerEventHandler;
+["cameraView", FUNC(onCameraViewChanged)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", FUNC(updatePPEffects)] call CBA_fnc_addPlayerEventHandler;
+["turret", FUNC(updatePPEffects)] call CBA_fnc_addPlayerEventHandler;
 
 // Add keybinds
-["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness),
-{
+["ACE3 Equipment", QGVAR(IncreaseNVGBrightness), localize LSTRING(IncreaseNVGBrightness), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -53,12 +47,9 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     // Statement
     [ACE_player, 1] call FUNC(changeNVGBrightness);
     true
-},
-{false},
-[201, [false, false, true]], false] call CBA_fnc_addKeybind; //PageUp + ALT
+}, {false}, [201, [false, false, true]], false] call CBA_fnc_addKeybind; //PageUp + ALT
 
-["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness),
-{
+["ACE3 Equipment", QGVAR(DecreaseNVGBrightness), localize LSTRING(DecreaseNVGBrightness), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -67,10 +58,8 @@ GVAR(ppEffectMuzzleFlash) ppEffectCommit 0;
     // Statement
     [ACE_player, -1] call FUNC(changeNVGBrightness);
     true
-},
-{false},
-[209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
+}, {false}, [209, [false, false, true]], false] call CBA_fnc_addKeybind; //PageDown + ALT
 
 // Register fire event handler
-["firedPlayer", DFUNC(blending)] call EFUNC(common,addEventHandler);
-["firedPlayerVehicle", DFUNC(blending)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(blending)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerVehicle", DFUNC(blending)] call CBA_fnc_addEventHandler;

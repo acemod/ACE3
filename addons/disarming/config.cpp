@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_DebugPotato"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_Interaction"};
-        author[] = {"PabstMirror"};
-        authorUrl = "https://github.com/PabstMirror/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"PabstMirror"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -17,3 +19,8 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "gui_disarm.hpp"
+
+class ACE_newEvents {
+    DisarmDebugCallback = QGVAR(debugCallback);
+    DisarmDropItems = QGVAR(dropItems);
+};

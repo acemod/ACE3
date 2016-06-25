@@ -3,13 +3,13 @@
  * Insert an ACE action to a class, under a certain path
  * Note: This function is NOT global.
  *
- * Argument:
+ * Arguments:
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  *
- * Return value:
+ * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:
@@ -30,10 +30,11 @@ if (_typeNum == 0) then {
     [_objectType] call FUNC(compileMenuSelfAction);
 };
 
-private _varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
-private _actionTrees = missionNamespace getVariable [_varName, []];
-if((count _actionTrees) == 0) then {
-    missionNamespace setVariable [_varName, _actionTrees];
+private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
+private _actionTrees = _namespace getVariable _objectType;
+if (isNil "_actionTrees") then {
+    _actionTrees = [];
+    _namespace setVariable [_objectType, _actionTrees];
 };
 
 if (_parentPath isEqualTo ["ACE_MainActions"]) then {

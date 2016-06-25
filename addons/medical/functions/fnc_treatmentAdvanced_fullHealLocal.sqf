@@ -10,7 +10,6 @@
 
 #include "script_component.hpp"
 
-private "_allUsedMedication";
 params ["_caller", "_target"];
 
 if (alive _target) exitWith {
@@ -60,7 +59,7 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(painSuppress), 0, true];
 
     // medication
-    _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
+    private _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
        _target setVariable [_x select 0, nil];
     } forEach _allUsedMedication;

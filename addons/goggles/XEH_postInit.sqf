@@ -31,7 +31,6 @@ GVAR(EffectsActive) = false;
 
 SETGLASSES(ace_player,GLASSESDEFAULT);
 
-GVAR(EyesDamageScript) = -1;
 GVAR(FrameEvent) = [false, [false, 20]];
 GVAR(PostProcessEyes_Enabled) = false;
 GVAR(DustHandler) = -1;
@@ -42,19 +41,21 @@ GVAR(surfaceCache) = "";
 GVAR(surfaceCacheIsDust) = false;
 
 // init GlassesChanged eventhandler
-GVAR(OldGlasses) = "#NULLSTRING";
+GVAR(OldGlasses) = "<null>";
 
-["playerInventoryChanged", {
-    (_this select 1) params ["", "_currentGlasses"];
+["loadout", {
+    params ["_unit"];
+
+    private _currentGlasses = goggles _unit;
 
     if (GVAR(OldGlasses) != _currentGlasses) then {
-        ["GlassesChanged", [ACE_player, _currentGlasses]] call EFUNC(common,localEvent);
+        ["ace_glassesChanged", [_unit, _currentGlasses]] call CBA_fnc_localEvent;
         GVAR(OldGlasses) = _currentGlasses;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;
 
 // add glasses eventhandlers
-["GlassesChanged", {
+["ace_glassesChanged", {
     params ["_unit", "_glasses"];
 
     SETGLASSES(_unit,GLASSESDEFAULT);
@@ -66,9 +67,9 @@ GVAR(OldGlasses) = "#NULLSTRING";
     } else {
         call FUNC(removeGlassesEffect);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["GlassesCracked", {
+["ace_glassesCracked", {
     params ["_unit"];
 
     _unit setVariable ["ACE_EyesDamaged", true];
@@ -81,18 +82,18 @@ GVAR(OldGlasses) = "#NULLSTRING";
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
         GVAR(PostProcessEyes) ppEffectCommit 5;
 
-        GVAR(EyesDamageScript) = [{
+        [{
             params ["_unit"];
 
             GVAR(PostProcessEyes) ppEffectEnable false;
 
             _unit setVariable ["ACE_EyesDamaged", false];
 
-        }, _this, 5] call EFUNC(common,waitAndExecute);
+        }, _this, 5] call CBA_fnc_waitAndExecute;
 
-    }, _unit, 25] call EFUNC(common,waitAndExecute);
+    }, _unit, 25] call CBA_fnc_waitAndExecute;
 
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // check goggles
 private _fnc_checkGoggles = {
@@ -109,8 +110,8 @@ private _fnc_checkGoggles = {
     };
 };
 
-["cameraViewChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
-["activeCameraChanged", _fnc_checkGoggles] call EFUNC(common,addEventHandler);
+["cameraView", _fnc_checkGoggles] call CBA_fnc_addPlayerEventHandler;
+["ace_activeCameraChanged", _fnc_checkGoggles] call CBA_fnc_addEventHandler;
 
 // goggles effects main PFH
 [{
@@ -133,4 +134,4 @@ private _fnc_checkGoggles = {
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 // Register fire event handler
-["firedPlayer", DFUNC(handleFired)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;

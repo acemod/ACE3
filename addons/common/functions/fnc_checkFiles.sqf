@@ -19,6 +19,18 @@ private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "version
 
 ACE_LOGINFO_1("ACE is version %1.",_version);
 
+//CBA Versioning check - close main display if using incompatible version
+private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
+private _cbaRequiredAr = (getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA")) select 1;
+ACE_LOGINFO_2("CBA is version %1 [min required %2]",_cbaVersionAr,_cbaRequiredAr);
+if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
+    private _errorMsg = format ["CBA Version [%1] is outdated [required %2]", _cbaVersionAr, _cbaRequiredAr];
+    ACE_LOGERROR(_errorMsg);
+    if (hasInterface) then {
+        ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+    };
+};
+
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
 private _addons = "true" configClasses (configFile >> "CfgPatches");//
 _addons = _addons apply {toLower configName _x};//

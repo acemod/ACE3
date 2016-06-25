@@ -17,7 +17,7 @@ class RscTitles {
             class ACE_Scopes_Zeroing_BG : RscPicture {
                 idc = 11;
                 type = 0;
-                text = PATHTOF(UI\scopes_bg.paa);
+                text = QPATHTOF(UI\scopes_bg.paa);
                 style = 48 + 0x800;
                 scale = 1;
                 sizeEx = 1;

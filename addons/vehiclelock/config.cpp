@@ -1,15 +1,18 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-  class ADDON {
-    units[] = {};
-    weapons[] = {};
-    requiredVersion = REQUIRED_VERSION;
-    requiredAddons[] = {"ace_interaction"};
-    author[] = {"PabstMirror"};
-    authorUrl = "https://github.com/acemod/ACE3";
-    VERSION_CONFIG;
-  };
+    class ADDON {
+        name = COMPONENT_NAME;
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_interaction"};
+        author = ECSTRING(common,ACETeam);
+        url = ECSTRING(main,URL);
+        authors[] = {"PabstMirror"};
+        authorUrl = "https://github.com/acemod/ACE3";
+        VERSION_CONFIG;
+    };
 };
 
 #include "ACE_Settings.hpp"
@@ -17,3 +20,8 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+class ACE_newEvents {
+    VehicleLock_SetVehicleLock = QGVAR(setVehicleLock);
+    VehicleLock_SetupCustomKey = QGVAR(setupCustomKey);
+};

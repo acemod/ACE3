@@ -17,6 +17,6 @@
     "a3\ui_f\data\IGUI\Cfg\Actions\getindriver_ca.paa", \
     "a3\ui_f\data\IGUI\Cfg\Actions\getincommander_ca.paa", \
     "a3\ui_f\data\IGUI\Cfg\Actions\getingunner_ca.paa", \
-    QUOTE(PATHTOF(UI\icon_position_ffv.paa)), \
+    QPATHTOF(UI\icon_position_ffv.paa), \
     "a3\ui_f\data\IGUI\Cfg\Actions\getincargo_ca.paa" \
 ]

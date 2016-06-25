@@ -26,7 +26,7 @@ _effects set [BROKEN, _broken];
 
 SETGLASSES(_unit,_effects);
 
-if (stance _unit != "PRONE") then {
+if ((stance _unit != "PRONE") && {primaryWeapon _unit != ""} && {currentWeapon _unit == primaryWeapon _unit}) then {
     _unit playActionNow "gestureWipeFace";
 };
 
@@ -34,7 +34,7 @@ if (stance _unit != "PRONE") then {
     if (cameraView == "INTERNAL") then {
         addCamShake [5, 1.75, 2];
     };
-}, [], 0.3] call EFUNC(common,waitAndExecute);
+}, [], 0.3] call CBA_fnc_waitAndExecute;
 
 call FUNC(removeDirtEffect);
 call FUNC(removeRainEffect);

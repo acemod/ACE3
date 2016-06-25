@@ -1,5 +1,6 @@
 class ACE_Settings {
     class GVAR(level) {
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
         displayName = CSTRING(RearmSettings_level_DisplayName);
         description = CSTRING(RearmSettings_level_Description);
         value = 0;
