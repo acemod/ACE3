@@ -5,6 +5,16 @@
 
 if (!hasInterface) exitWith {};
 
+["OPF_F", [
+    QPATHTOF(UI\icons_russia\private_gs.paa),
+    QPATHTOF(UI\icons_russia\corporal_gs.paa),
+    QPATHTOF(UI\icons_russia\sergeant_gs.paa),
+    QPATHTOF(UI\icons_russia\lieutenant_gs.paa),
+    QPATHTOF(UI\icons_russia\captain_gs.paa),
+    QPATHTOF(UI\icons_russia\major_gs.paa),
+    QPATHTOF(UI\icons_russia\colonel_gs.paa)
+]] call FUNC(setFactionRankIcons);
+
 GVAR(showNamesTime) = -10;
 
 // Add keybinds
