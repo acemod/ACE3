@@ -3,11 +3,11 @@
 
 if (!hasInterface) exitWith {};
 
-["ace_playerInventoryChanged", {
+["loadout", {
     params ["_unit"];
     [_unit] call FUNC(takeLoadedATWeapon);
     [_unit] call FUNC(updateInventoryDisplay);
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;
 
 // Register fire event handler
 // Only for the local player and for AI. Non-local players will handle it themselves

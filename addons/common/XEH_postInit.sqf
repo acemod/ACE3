@@ -284,7 +284,7 @@ enableCamShake true;
 //////////////////////////////////////////////////
 
 // Set the name for the current player
-["ace_playerChanged", {
+["unit", {
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
@@ -294,124 +294,60 @@ enableCamShake true;
     if (alive _oldPlayer) then {
         [_oldPlayer] call FUNC(setName);
     };
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;
 
 
 //////////////////////////////////////////////////
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-// default variables
-GVAR(OldPlayerVehicle) = vehicle objNull;
-GVAR(OldPlayerTurret) = [objNull] call FUNC(getTurretIndex);
-GVAR(OldPlayerWeapon) = currentWeapon objNull;
-GVAR(OldPlayerInventory) = [];
-GVAR(OldPlayerInventoryNoAmmo) = [];
-GVAR(OldPlayerVisionMode) = currentVisionMode objNull;
-GVAR(OldCameraView) = "";
-GVAR(OldVisibleMap) = false;
-GVAR(OldInventoryDisplayIsOpen) = nil; //@todo check this
+// "playerChanged" event
+["unit", {
+    ACE_player = (_this select 0);
+    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerVehicleChanged" event
+["vehicle", {
+    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerTurretChanged" event
+["turret", {
+    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerWeaponChanged" event
+["weapon", {
+    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerInventoryChanged" event
+["loadout", {
+    ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "playerVisionModeChanged" event
+["visionMode", {
+    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+// "cameraViewChanged" event
+["cameraView", {
+    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
+["visibleMap", {
+    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addPlayerEventHandler;
+
 GVAR(OldIsCamera) = false;
 
-// PFH to raise varios events
 [{
     BEGIN_COUNTER(stateChecker);
 
-    // "playerChanged" event
-    private _data = call FUNC(player);
-    if !(_data isEqualTo ACE_player) then {
-        private _oldPlayer = ACE_player;
-
-        ACE_player = _data;
-        uiNamespace setVariable ["ACE_player", _data];
-
-        // Raise ACE event locally
-        ["ace_playerChanged", [ACE_player, _oldPlayer]] call CBA_fnc_localEvent;
-    };
-
-    // "playerVehicleChanged" event
-    _data = vehicle ACE_player;
-    if !(_data isEqualTo GVAR(OldPlayerVehicle)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerVehicle) = _data;
-        ["ace_playerVehicleChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    // "playerTurretChanged" event
-    _data = [ACE_player] call FUNC(getTurretIndex);
-    if !(_data isEqualTo GVAR(OldPlayerTurret)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerTurret) = _data;
-        ["ace_playerTurretChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    // "playerWeaponChanged" event
-    _data = currentWeapon ACE_player;
-    if (_data != GVAR(OldPlayerWeapon)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerWeapon) = _data;
-        ["ace_playerWeaponChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    // "playerInventoryChanged" event
-    _data = getUnitLoadout ACE_player;
-    if !(_data isEqualTo GVAR(OldPlayerInventory)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerInventory) = _data;
-
-        // we don't want to trigger this just because your ammo counter decreased.
-        _data = + GVAR(OldPlayerInventory);
-
-        private _weaponInfo = _data param [0, []];
-        if !(_weaponInfo isEqualTo []) then {
-            _weaponInfo set [4, primaryWeaponMagazine ACE_player];
-            _weaponInfo deleteAt 5;
-        };
-
-        _weaponInfo = _data param [1, []];
-        if !(_weaponInfo isEqualTo []) then {
-            _weaponInfo set [4, secondaryWeaponMagazine ACE_player];
-            _weaponInfo deleteAt 5;
-        };
-
-        _weaponInfo = _data param [2, []];
-        if !(_weaponInfo isEqualTo []) then {
-            _weaponInfo set [4, handgunMagazine ACE_player];
-            _weaponInfo deleteAt 5;
-        };
-
-        if !(_data isEqualTo GVAR(OldPlayerInventoryNoAmmo)) then {
-            GVAR(OldPlayerInventoryNoAmmo) = _data;
-            ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
-        };
-    };
-
-    // "playerVisionModeChanged" event
-    _data = currentVisionMode ACE_player;
-    if !(_data isEqualTo GVAR(OldPlayerVisionMode)) then {
-        // Raise ACE event locally
-        GVAR(OldPlayerVisionMode) = _data;
-        ["ace_playerVisionModeChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    // "cameraViewChanged" event
-    _data = cameraView;
-    if !(_data isEqualTo GVAR(OldCameraView)) then {
-        // Raise ACE event locally
-        GVAR(OldCameraView) = _data;
-        ["ace_cameraViewChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
-    // "visibleMapChanged" event
-    _data = visibleMap;
-    if (!_data isEqualTo GVAR(OldVisibleMap)) then {
-        // Raise ACE event locally
-        GVAR(OldVisibleMap) = _data;
-        ["ace_visibleMapChanged", [ACE_player, _data]] call CBA_fnc_localEvent;
-    };
-
     // "activeCameraChanged" event
-    _data = call FUNC(isfeatureCameraActive);
+    private _data = call FUNC(isfeatureCameraActive);
     if !(_data isEqualTo GVAR(OldIsCamera)) then {
         // Raise ACE event locally
         GVAR(OldIsCamera) = _data;
@@ -419,7 +355,7 @@ GVAR(OldIsCamera) = false;
     };
 
     END_COUNTER(stateChecker);
-}, 0, []] call CBA_fnc_addPerFrameHandler;
+}, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 
 //////////////////////////////////////////////////

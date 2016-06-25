@@ -297,7 +297,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // Item Event Handler
-["ace_playerInventoryChanged", FUNC(itemCheck)] call CBA_fnc_addEventHandler;
+["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;
 
 if (hasInterface) then {
     ["ace_playerJIP", {
