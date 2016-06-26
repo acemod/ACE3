@@ -17,25 +17,8 @@ class CfgVehicles {
 
     class ACE_Module;
     class GVAR(ModuleSettings): ACE_Module {
-        scope = 2;
+        author = ECSTRING(common,ACETeam);
         displayName = CSTRING(Module_DisplayName);
-        icon = QPATHTOF(UI\Icon_Module_ca.paa);
-        category = "ACE";
-        function = QFUNC(initModule);
-        functionPriority = 1;
-        isGlobal = 1;
-        isTriggerActivated = 0;
-        author = "BaerMitUmlaut";
-        class Arguments {
-            class disableNVGsWithSights {
-                displayName = CSTRING(DisableNVGsWithSights_DisplayName);
-                description = CSTRING(DisableNVGsWithSights_Description);
-                typeName = "BOOL";
-                defaultValue = 1;
-            };
-        };
-        class ModuleDescription {
-            description = CSTRING(Module_Description);
-        };
+        scope = 1;
     };
 };
