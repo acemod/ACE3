@@ -64,7 +64,7 @@ GVAR(currentOptions) pushBack [_this, _sPos, _path];
 // Exit without rendering children if it isn't
 if !(_menuInSelectedPath) exitWith {true};
 
-if (GVAR(openedMenuType) == 0 && GVAR(modeX) && GVAR(modeXAction) isEqualTo []) exitWith {true};
+if (GVAR(useDetachedCursorMenu) && GVAR(dettachedMenuBasePath) isEqualTo []) exitWith {true};
 
 //BEGIN_COUNTER(children);
 

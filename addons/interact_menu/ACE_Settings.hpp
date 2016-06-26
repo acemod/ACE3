@@ -21,12 +21,12 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(AlwaysUseCursorInteraction);
     };
-    class GVAR(modeX) {
+    class GVAR(detachedCursorMenu) {
         value = 1;
         typeName = "BOOL";
         isClientSettable = 1;
         category = CSTRING(Category_InteractionMenu);
-        displayName = "Mode X";
+        displayName = "Use detached cursor menus for actions (Requires Always use Cursor for Interaction)";
     };
     class GVAR(useListMenu) {
         value = 0;

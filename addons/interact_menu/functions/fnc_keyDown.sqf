@@ -37,12 +37,23 @@ GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
+// Decide if cursor menu shoud be used
 GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
                       {(_menuType == 1) && {(isWeaponDeployed ACE_player) || GVAR(AlwaysUseCursorSelfInteraction) || {cameraView == "GUNNER"}}} ||
                       {(_menuType == 0) && GVAR(AlwaysUseCursorInteraction)};
 
+// Decide if detached menus should be used
+GVAR(useDetachedCursorMenu) = GVAR(detachedCursorMenu) &&
+                    {_menuType == 0} &&
+                    {GVAR(AlwaysUseCursorInteraction)} &&
+                    {vehicle ACE_player == ACE_player} &&
+                    {!visibleMap} &&
+                    {isNull curatorCamera};
+GVAR(dettachedMenuBasePath) = [];
+
+player globalChat str GVAR(useDettachedCursorMenu);
 // Delete existing controls in case there's any left
 GVAR(iconCount) = 0;
 for "_i" from 0 to (count GVAR(iconCtrls))-1 do {
@@ -77,7 +88,7 @@ if (GVAR(useCursorMenu)) then {
 
 GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
 
-//Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
+// Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
         if (vehicle ACE_player != ACE_player) then {
@@ -101,8 +112,6 @@ if (GVAR(openedMenuType) == 0) then {
     GVAR(lastPath) = +GVAR(menuDepthPath);
     GVAR(startHoverTime) = -1000;
 };
-
-GVAR(modeXAction) = [];
 
 ["ace_interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
 

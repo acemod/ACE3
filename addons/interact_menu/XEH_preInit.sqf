@@ -17,9 +17,9 @@ DFUNC(handleMouseMovement) = {
     };
 };
 DFUNC(handleMouseButtonDown) = {
-    if (GVAR(openedMenuType) == 0 && GVAR(modeX)) exitWith {
-        if (GVAR(modeXAction) isEqualTo [] && GVAR(actionSelected)) then {
-            GVAR(modeXAction) = [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
+    if (GVAR(useDetachedCursorMenu)) then {
+        if (GVAR(dettachedMenuBasePath) isEqualTo [] && GVAR(actionSelected)) then {
+            GVAR(dettachedMenuBasePath) = +GVAR(lastPath); [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
             GVAR(cursorPos) = [0.5, 0.5, 0];
             setMousePosition [0.50, 0.5];
             GVAR(menuDepthPath) = +GVAR(lastPath);
@@ -31,13 +31,14 @@ DFUNC(handleMouseButtonDown) = {
                 [GVAR(openedMenuType),true] call FUNC(keyUp);
             };
         };
-    };
-
-    if !(GVAR(actionOnKeyRelease)) then {
-        [GVAR(openedMenuType),true] call FUNC(keyUp);
+    } else {
+        if !(GVAR(actionOnKeyRelease)) then {
+            [GVAR(openedMenuType),true] call FUNC(keyUp);
+        };
     };
 };
-GVAR(modeXAction) = [];
+GVAR(useDetachedCursorMenu) = false;
+GVAR(dettachedMenuBasePath) = [];
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;

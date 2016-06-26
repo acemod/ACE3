@@ -82,6 +82,7 @@ private _fnc_renderNearbyActions = {
 private _fnc_renderLastFrameActions = {
     {
         _x params ["_target", "_action", "_objectActionList"];
+        //TRACE_3("_fnc_renderLastFrameActions",_target,_action,_objectActionList);
 
         GVAR(objectActionList) = _objectActionList;
         [_target, _action] call FUNC(renderBaseMenu);
@@ -113,9 +114,11 @@ private _fnc_renderSelfActions = {
     } count _classActions;
 };
 
-private _fnc_renderSubActions = {
-    params ["_target", "_basePath"];
-    TRACE_2("_fnc_renderSubActions",_target,_basePath);
+private _fnc_renderDettachedAction = {
+    params ["_baseAction"];
+    _baseAction params ["_detachedActionName", "_target"];
+    player globalChat str _baseAction;
+    TRACE_2("_fnc_renderDettachedAction",_target,_detachedActionName);
     // Set object actions for collectActiveActionTree
     GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];
 
@@ -123,13 +126,13 @@ private _fnc_renderSubActions = {
     private _namespace = GVAR(ActNamespace);
     private _classActions = _namespace getVariable typeOf _target;
 
-    _pos = [0.5, 0.5];
+    private _pos = [0.5, 0.5];
 
     {
         _action = _x;
-        private _path = _action select 0 select 0;
-        if (_path isEqualTo _basePath) then {
-            TRACE_2("_fnc_renderSubActions",_path,_basePath);
+        private _actionName = _action select 0 select 0;
+        if (_actionName isEqualTo _detachedActionName) then {
+            TRACE_2("_fnc_renderDettachedAction",_actionBaseName,_detachedActionName);
             [_target, _action, _pos] call FUNC(renderBaseMenu);
         };
         nil
@@ -151,7 +154,7 @@ GVAR(collectedActionPoints) resize 0;
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
         if (vehicle ACE_player == ACE_player) then {
-            if (!GVAR(modeX) || (GVAR(modeXAction) isEqualTo [])) then {
+            if (!GVAR(useDetachedCursorMenu) || (GVAR(dettachedMenuBasePath) isEqualTo [])) then {
                 if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
                     // Once every 0.2 secs, collect nearby objects active and visible action points and render them
                     call _fnc_renderNearbyActions;
@@ -160,7 +163,7 @@ if (GVAR(openedMenuType) == 0) then {
                     call _fnc_renderLastFrameActions;
                 };
             } else {
-                GVAR(modeXAction) call _fnc_renderSubActions;
+                GVAR(dettachedMenuBasePath) call _fnc_renderDettachedAction;
             };
         } else {
             // Render vehicle self actions when in vehicle
