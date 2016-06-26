@@ -4,15 +4,11 @@ class CfgAmmo
     class BulletBase;
     class B_127x99_Ball;
     class rhsusf_ammo_127x99_M33_Ball : B_127x99_Ball {
-        timeToLive=10;
-        airFriction=-0.00057503;
-        typicalSpeed=900;
-        tracerScale = 1.3;
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
-        ACE_bulletMass=41.9256;
+        ACE_bulletMass=42.83;   //661gr - Barret technical data
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.670};
+        ACE_ballisticCoefficients[]={0.620};    //Barret technical data
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
@@ -20,15 +16,9 @@ class CfgAmmo
         ACE_barrelLengths[]={736.6};
     };
     class rhsusf_ammo_127x99_mk211 : rhsusf_ammo_127x99_M33_Ball {
-        timeToLive=10;
-        airFriction=-0.00057503;
-        typicalSpeed=900;
-        tracerScale = 1.3;
-        hit=25;
-        caliber=4.0;
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
-        ACE_bulletMass=41.9904;
+        ACE_bulletMass=43;    //Nammo AS technical data
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.670};
         ACE_velocityBoundaries[]={};
