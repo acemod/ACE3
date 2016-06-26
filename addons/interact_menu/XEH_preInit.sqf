@@ -17,16 +17,25 @@ DFUNC(handleMouseMovement) = {
     };
 };
 DFUNC(handleMouseButtonDown) = {
+    params ["", "_button"];
+
     if (GVAR(useDetachedCursorMenu)) then {
-        if (GVAR(dettachedMenuBasePath) isEqualTo [] && GVAR(actionSelected)) then {
-            GVAR(dettachedMenuBasePath) = +GVAR(lastPath); [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
-            GVAR(cursorPos) = [0.5, 0.5, 0];
-            setMousePosition [0.50, 0.5];
-            GVAR(menuDepthPath) = +GVAR(lastPath);
-            GVAR(expanded) = true;
-            GVAR(expandedTime) = diag_tickTime-1000;
-            GVAR(startHoverTime) = -1000;
+        if (GVAR(dettachedMenuBasePath) isEqualTo []) then {
+            if (_button == 0 && GVAR(actionSelected)) then {
+                // Detach the menu to render the selected action
+                GVAR(dettachedMenuBasePath) = +GVAR(lastPath); [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
+                GVAR(cursorPos) = [0.5, 0.5, 0];
+                setMousePosition [0.50, 0.5];
+                GVAR(menuDepthPath) = +GVAR(lastPath);
+                GVAR(expanded) = true;
+                GVAR(expandedTime) = diag_tickTime-1000;
+                GVAR(startHoverTime) = -1000;
+            };
         } else {
+            if (_button == 1) exitWith {
+                // Close the detached menu
+                GVAR(dettachedMenuBasePath) = [];
+            };
             // Only terminate the menu if an action with an statement was clicked
             if (GVAR(actionSelected)) then {
                 private _actionData = GVAR(selectedAction) select 0;
