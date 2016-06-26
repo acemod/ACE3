@@ -37,7 +37,12 @@ _fnc_parameters = {
         _size = 1;
     } else {
         if (_drawRank && {rank _target != ""}) then {
-            _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower rank _target];
+            _icon = GVAR(factionRanks) getVariable faction _target;
+            if (!isNil "_icon") then {
+                _icon = _icon param [ALL_RANKS find rank _target, ""];
+            } else {
+                _icon = format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target];
+            };
             _size = 1;
         };
     };
