@@ -1,7 +1,7 @@
 // by commy2
 #include "script_component.hpp"
 
-["ace_rallypointMoved", {_this call FUNC(updateRallypoint)}] call CBA_fnc_addEventHandler;
-["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler; // hide enemy rallypoint markers
+["ace_rallypointMoved", FUNC(updateRallypoint)] call CBA_fnc_addEventHandler;
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler; // hide enemy rallypoint markers
 
-[QGVAR(showFriendlyFireMessageEvent), DFUNC(showFriendlyFireMessage)] call CBA_fnc_addEventHandler;
+[QGVAR(showFriendlyFireMessageEvent), FUNC(showFriendlyFireMessage)] call CBA_fnc_addEventHandler;

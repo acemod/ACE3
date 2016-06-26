@@ -15,9 +15,9 @@ GVAR(deployDirection) = 0;
 ["ace_interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call CBA_fnc_addEventHandler;
 
 // Cancel deploy on player change. This does work when returning to lobby, but not when hard disconnecting.
-["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
-["ace_playerInventoryChanged", {_this call FUNC(handlePlayerInventoryChanged)}] call CBA_fnc_addEventHandler;
-["ace_playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
+["unit", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
+["loadout", {_this call FUNC(handlePlayerInventoryChanged)}] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
