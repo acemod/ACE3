@@ -53,7 +53,6 @@ GVAR(useDetachedCursorMenu) = GVAR(detachedCursorMenu) &&
                     {isNull curatorCamera};
 GVAR(dettachedMenuBasePath) = [];
 
-player globalChat str GVAR(useDettachedCursorMenu);
 // Delete existing controls in case there's any left
 GVAR(iconCount) = 0;
 for "_i" from 0 to (count GVAR(iconCtrls))-1 do {

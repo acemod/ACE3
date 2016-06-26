@@ -117,7 +117,7 @@ private _fnc_renderSelfActions = {
 private _fnc_renderDettachedAction = {
     params ["_baseAction"];
     _baseAction params ["_detachedActionName", "_target"];
-    player globalChat str _baseAction;
+
     TRACE_2("_fnc_renderDettachedAction",_target,_detachedActionName);
     // Set object actions for collectActiveActionTree
     GVAR(objectActionList) = _target getVariable [QGVAR(actions), []];

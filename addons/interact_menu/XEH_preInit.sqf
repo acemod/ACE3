@@ -39,7 +39,6 @@ DFUNC(handleMouseButtonDown) = {
             // Only terminate the menu if an action with an statement was clicked
             if (GVAR(actionSelected)) then {
                 private _actionData = GVAR(selectedAction) select 0;
-                player globalChat str (_actionData select 3);
                 if !(_actionData select 3 isEqualTo {}) then {
                     if !(GVAR(actionOnKeyRelease)) then {
                         [GVAR(openedMenuType),true] call FUNC(keyUp);
