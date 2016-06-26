@@ -23,9 +23,11 @@ DFUNC(handleMouseButtonDown) = {
         if (GVAR(dettachedMenuBasePath) isEqualTo []) then {
             if (_button == 0 && GVAR(actionSelected)) then {
                 // Detach the menu to render the selected action
-                GVAR(dettachedMenuBasePath) = +GVAR(lastPath); [(GVAR(lastPath) select 0 select 1), (GVAR(lastPath) select 0 select 0), []];
-                GVAR(cursorPos) = [0.5, 0.5, 0];
+                GVAR(dettachedMenuBasePath) = +GVAR(lastPath);
                 setMousePosition [0.50, 0.5];
+                // handleMouseMovement is launched after handleMouseButtonDown and it returns the former mouse position
+                // GVAR(cursorPos) needs to be overriden manually after that
+                [{GVAR(cursorPos) = [0.5, 0.5, 0]}, []] call CBA_fnc_execNextFrame;
                 GVAR(menuDepthPath) = +GVAR(lastPath);
                 GVAR(expanded) = true;
                 GVAR(expandedTime) = diag_tickTime-1000;
