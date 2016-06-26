@@ -35,8 +35,8 @@ if (hasInterface) then {
         GVAR(storedSpareBarrels) = [] call CBA_fnc_hashCreate;
 
         // Install event handlers for spare barrels
-        [QGVAR(spareBarrelsSendTemperatureHint), FUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;
-        [QGVAR(spareBarrelsLoadCoolest), FUNC(loadCoolestSpareBarrel)] call CBA_fnc_addEventHandler;
+        [QGVAR(sendSpareBarrelTemperatureHint), FUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;
+        [QGVAR(loadCoolestSpareBarrel), FUNC(loadCoolestSpareBarrel)] call CBA_fnc_addEventHandler;
 
         // Schedule cool down calculation of stored spare barrels
         [] call FUNC(updateSpareBarrelsTemperaturesThread);
@@ -60,7 +60,7 @@ if (hasInterface) then {
 
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);
-    
+
     // Install event handler to display temp when a barrel was swapped
     [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
     // Install event handler to initiate an assisted barrel swap

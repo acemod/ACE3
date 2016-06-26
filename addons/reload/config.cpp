@@ -23,6 +23,6 @@ class CfgPatches {
 
 class ACE_newEvents {
     setAmmoSync = QGVAR(syncAmmo);
-    returnedAmmo = QGVAR(returnedAmmo);
-    linkedAmmo = QGVAR(linkedAmmo);
+    returnedAmmo = QGVAR(ammoReturned);
+    linkedAmmo = QGVAR(ammoLinked);
 };
