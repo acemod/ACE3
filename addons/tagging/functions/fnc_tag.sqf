@@ -72,6 +72,11 @@ if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) t
 // Check if its a valid surface: big enough, reasonably plane
 private _v1 = vectorNormalized (_surfaceNormal vectorMultiply -1);
 private _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+// If the surface is not horizontal (>20º), create vup _v2 pointing upward instead of away
+if (abs (_v1 select 2) < 0.94) then {
+    private _v3Temp = _v1 vectorCrossProduct [0, 0, 1];
+    _v2 = _v3Temp vectorCrossProduct _v1;
+};
 private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
