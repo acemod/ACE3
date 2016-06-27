@@ -37,4 +37,4 @@
     if (!isNil "_weaponSelect") then { \
         _unit selectWeapon _weaponSelect; \
         _unit setVariable [QGVAR(selectedWeaponOnRearm), nil]; \
-    }; \
+    };
