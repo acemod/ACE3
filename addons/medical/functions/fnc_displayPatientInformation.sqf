@@ -129,7 +129,7 @@ if (_show) then {
                 };
             } foreach _bandagedwounds;
         } else {
-            private _damaged = [true, true, true, true, true, true];
+            _damaged = [true, true, true, true, true, true];
             {
                 private _hitPoint = [_target, _x, true] call FUNC(translateSelections);
                 _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _hitPoint];
