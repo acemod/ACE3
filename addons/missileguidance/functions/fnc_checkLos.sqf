@@ -14,6 +14,8 @@ private["_seeker", "_seekerPos", "_target", "_targetPos", "_return", "_vectorTo"
 _seeker = _this select 0;
 _target = _this select 1;
 
+if ((isNil "_seeker") || {isNil "_target"}) exitWith {false};
+
 _targetPos = getPosASL _target;
 _seekerPos = getPosASL _seeker;
 _return = true;
