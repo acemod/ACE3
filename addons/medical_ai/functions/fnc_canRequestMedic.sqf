@@ -16,7 +16,7 @@
 //   we ignore this here. We need to "notice" the medic that he should
 //   treat other units, or else he won't do anything on his own.
 
-if ([_this] call EFUNC(medical,isMedic)) exitWith {false};
+if ([_this] call EFUNC(medical,isMedic) || {vehicle _this != _this}) exitWith {false};
 
 {
     if ([_x] call EFUNC(medical,isMedic)) exitWith {

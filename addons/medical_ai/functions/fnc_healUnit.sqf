@@ -27,6 +27,8 @@ if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exi
     _healQueue deleteAt 0;
     _this getVariable [QGVAR(healQueue), _healQueue];
     _this forceSpeed -1;
+    // return to formation instead of going where the injured unit was if it healed itself in the mean time
+    _this moveTo getPosATL _this;
 
     #ifdef DEBUG_MODE_FULL
         systemChat systemChat format ["%1 finished healing %2", _this, _target];

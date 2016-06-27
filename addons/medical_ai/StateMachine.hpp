@@ -1,5 +1,6 @@
 class GVAR(stateMachine) {
     list = "allUnits select {(!isPlayer _x) && {local _x}}";
+    skipNull = 1;
 
     class Initial {
         class Injured {
