@@ -976,7 +976,7 @@ class ACE_Medical_Advanced {
                     reopeningMaxDelay = 150;
                 };
                 class AbrasionMinor: Abrasion {
-                    effectiveness = 43;
+                    effectiveness = 4;
                 };
                 class AbrasionMedium: Abrasion {
                     effectiveness = 3;
@@ -1119,7 +1119,7 @@ class ACE_Medical_Advanced {
                 };
                 class AbrasionLarge: Abrasion {
                     effectiveness = 0.7;
-                    reopeningChance = 5;
+                    reopeningChance = 0.5;
                 };
 
                 class Avulsions: Abrasion {
