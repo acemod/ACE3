@@ -33,5 +33,8 @@
 
 #define REARM_UNHOLSTER_WEAPON \
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
-    _unit selectWeapon _weaponSelect; \
-    _unit setVariable [QGVAR(selectedWeaponOnRearm), nil];
+    TRACE_2("REARM_UNHOLSTER_WEAPON",_unit,_weaponSelect); \
+    if (!isNil "_weaponSelect") then { \
+        _unit selectWeapon _weaponSelect; \
+        _unit setVariable [QGVAR(selectedWeaponOnRearm), nil]; \
+    }; \
