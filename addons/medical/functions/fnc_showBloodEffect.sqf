@@ -72,7 +72,7 @@ if (_bloodRemaining < 25) exitWith {
     [{
         (_this select 0) ctrlSetFade 1;
         (_this select 0) ctrlCommit 0.8;
-    }, _fxBloodControls, 0.7] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 0.7] call CBA_fnc_waitAndExecute;
 };
 
 if (_bloodRemaining < 40) exitWith {
@@ -85,11 +85,11 @@ if (_bloodRemaining < 40) exitWith {
         (_this select 0) ctrlSetFade 1;
         (_this select 1) ctrlSetFade 1;
         (_this select 1) ctrlCommit 1;
-    }, _fxBloodControls, 0.7] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 0.7] call CBA_fnc_waitAndExecute;
 
     [{
         (_this select 0) ctrlCommit 0.8;
-    }, _fxBloodControls, 1.2] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 1.2] call CBA_fnc_waitAndExecute;
 };
 
 if (_bloodRemaining < 55) exitWith {
@@ -103,11 +103,11 @@ if (_bloodRemaining < 55) exitWith {
         (_this select 1) ctrlSetFade 1;
         (_this select 2) ctrlSetFade 1;
         (_this select 1) ctrlCommit 1;
-    }, _fxBloodControls, 0.7] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 0.7] call CBA_fnc_waitAndExecute;
 
     [{
         (_this select 0) ctrlCommit 0.8;
-    }, _fxBloodControls, 1.2] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 1.2] call CBA_fnc_waitAndExecute;
 };
 
 if (_bloodRemaining < 70) exitWith {
@@ -123,15 +123,15 @@ if (_bloodRemaining < 70) exitWith {
         (_this select 1) ctrlSetFade 1;
         (_this select 2) ctrlSetFade 1;
         (_this select 2) ctrlCommit 1.5;
-    }, _fxBloodControls, 0.7] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 0.7] call CBA_fnc_waitAndExecute;
 
     [{
         (_this select 1) ctrlCommit 1;
-    }, _fxBloodControls, 1.7] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 1.7] call CBA_fnc_waitAndExecute;
 
     [{
         (_this select 0) ctrlCommit 0.8;
-    }, _fxBloodControls, 2.2] call EFUNC(common,waitAndExecute);
+    }, _fxBloodControls, 2.2] call CBA_fnc_waitAndExecute;
 };
 
 //default
@@ -147,12 +147,12 @@ _bloodCtrl3 ctrlCommit 0.2;
     (_this select 1) ctrlSetFade 1;
     (_this select 2) ctrlSetFade 1;
     (_this select 2) ctrlCommit 1.5;
-}, _fxBloodControls, 0.7] call EFUNC(common,waitAndExecute);
+}, _fxBloodControls, 0.7] call CBA_fnc_waitAndExecute;
 
 [{
     (_this select 1) ctrlCommit 1;
-}, _fxBloodControls, 1.7] call EFUNC(common,waitAndExecute);
+}, _fxBloodControls, 1.7] call CBA_fnc_waitAndExecute;
 
 [{
     (_this select 0) ctrlCommit 0.8;
-}, _fxBloodControls, 2.2] call EFUNC(common,waitAndExecute);
+}, _fxBloodControls, 2.2] call CBA_fnc_waitAndExecute;
