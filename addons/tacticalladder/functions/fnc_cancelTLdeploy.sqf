@@ -31,7 +31,7 @@ GVAR(ladder) animate ["rotate", 0];
 
 {
     GVAR(ladder) animate [_x, 0];
-} count __ANIMS;
+} forEach __ANIMS;
 
 // remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);
