@@ -12,6 +12,7 @@
             <Hungarian>Cselekvések</Hungarian>
             <Italian>Interazioni</Italian>
             <Portuguese>Interaçãoes</Portuguese>
+            <Dutch>Interacties</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -24,6 +25,7 @@
             <Hungarian>Testtörzs</Hungarian>
             <Italian>Torso</Italian>
             <Portuguese>Torso</Portuguese>
+            <Dutch>Torso</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -36,6 +38,7 @@
             <Hungarian>Fej</Hungarian>
             <Italian>Testa</Italian>
             <Portuguese>Cabeça</Portuguese>
+            <Dutch>Hoofd</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
@@ -48,6 +51,7 @@
             <Hungarian>Bal kar</Hungarian>
             <Italian>Braccio sinistro</Italian>
             <Portuguese>Braço Esquerdo</Portuguese>
+            <Dutch>Linker Arm</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -60,6 +64,7 @@
             <Hungarian>Jobb kar</Hungarian>
             <Italian>Braccio destro</Italian>
             <Portuguese>Braço Direito</Portuguese>
+            <Dutch>Rechter Arm</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -72,6 +77,7 @@
             <Hungarian>Bal láb</Hungarian>
             <Italian>Gamba sinistra</Italian>
             <Portuguese>Perna Esquerda</Portuguese>
+            <Dutch>Linker Been</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -84,6 +90,7 @@
             <Hungarian>Jobb láb</Hungarian>
             <Italian>Gamba destra</Italian>
             <Portuguese>Perna Direita</Portuguese>
+            <Dutch>Rechter Been</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -96,6 +103,7 @@
             <Hungarian>Fegyver</Hungarian>
             <Italian>Arma</Italian>
             <Portuguese>Arma</Portuguese>
+            <Dutch>Wapen</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -108,6 +116,7 @@
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
             <Italian>Menù interazione</Italian>
+            <Dutch>Interactie Menu</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
@@ -120,6 +129,7 @@
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
             <Italian>Menù interazione (individuale)</Italian>
+            <Dutch>Inter Menu (Zelf)</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenDoor">
             <English>Open / Close Door</English>
@@ -132,6 +142,7 @@
             <Hungarian>Ajtó nyitása / zárása</Hungarian>
             <Portuguese>Abrir / Fechar Porta</Portuguese>
             <Italian>Apri / Chiudi la porta</Italian>
+            <Dutch>Open / Sluit Deur</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LockDoor">
             <English>Lock Door</English>
@@ -144,6 +155,7 @@
             <Hungarian>Ajtó bezárása</Hungarian>
             <Polish>Zablokuj drzwi</Polish>
             <Czech>Zamknout dveře</Czech>
+            <Dutch>Vergrendel Deur</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockDoor">
             <English>Unlock Door</English>
@@ -156,6 +168,7 @@
             <Hungarian>Zár kinyitása</Hungarian>
             <Polish>Odblokuj drzwi</Polish>
             <Czech>Odemknout dveře</Czech>
+            <Dutch>Ontgrendel Deur</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LockedDoor">
             <English>Locked Door</English>
@@ -168,6 +181,7 @@
             <Hungarian>Zárt ajtó</Hungarian>
             <Polish>Zablokowano drzwi</Polish>
             <Czech>Zamčené dveře</Czech>
+            <Dutch>Vergrendelde Deur</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockedDoor">
             <English>Unlocked Door</English>
@@ -180,6 +194,7 @@
             <Hungarian>Nyitott ajtó</Hungarian>
             <Polish>Odblokowano drzwi</Polish>
             <Czech>Odemčené dveře</Czech>
+            <Dutch>Ontgrendelde Deur</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinGroup">
             <English>Join group</English>
@@ -192,6 +207,7 @@
             <Hungarian>Csatlakozás a csoporthoz</Hungarian>
             <Portuguese>Unir-se ao grupo</Portuguese>
             <Italian>Unisciti alla squadra</Italian>
+            <Dutch>Neem deel aan groep</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveGroup">
             <English>Leave Group</English>
@@ -204,6 +220,7 @@
             <Hungarian>Csoport elhagyása</Hungarian>
             <Portuguese>Deixar grupo</Portuguese>
             <Italian>Lascia la squadra</Italian>
+            <Dutch>Verlaat groep</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_BecomeLeader">
             <English>Become Leader</English>
@@ -216,6 +233,7 @@
             <Hungarian>Vezetés átvétele</Hungarian>
             <Portuguese>Tornar-se Líder</Portuguese>
             <Italian>Prendi il comando</Italian>
+            <Dutch>Wordt leider</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -228,6 +246,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
+            <Dutch>DANS!</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_StopDancing">
             <English>Stop Dancing</English>
@@ -240,6 +259,7 @@
             <Hungarian>Tánc abbahagyása</Hungarian>
             <Portuguese>Parar de dançar</Portuguese>
             <Italian>Smetti di ballare</Italian>
+            <Dutch>Stop met dansen</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Back">
             <English>&lt;&lt; Back</English>
@@ -252,6 +272,7 @@
             <Hungarian>&lt;&lt; Vissza</Hungarian>
             <Portuguese>&lt;&lt; Voltar</Portuguese>
             <Italian>&lt;&lt; Indietro</Italian>
+            <Dutch>&lt;&lt; Terug</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
@@ -264,6 +285,7 @@
             <Hungarian>Fegyvert hátra</Hungarian>
             <Portuguese>Colocar arma nas costas</Portuguese>
             <Italian>Metti l'arma in spalla</Italian>
+            <Dutch>Stop wapen op rug</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TapShoulder">
             <English>Tap Shoulder</English>
@@ -276,6 +298,7 @@
             <Hungarian>Vállveregetés</Hungarian>
             <Portuguese>Tocar ombro</Portuguese>
             <Italian>Dai un colpetto</Italian>
+            <Dutch>Tik Schouder aan</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedRight">
             <English>You were tapped on the RIGHT shoulder</English>
@@ -288,6 +311,7 @@
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
+            <Dutch>Je bent op de RECHTER schouder getikt</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
@@ -300,6 +324,7 @@
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
+            <Dutch>Je bent op de LINKER schouder getikt</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_CancelSelection">
             <English>Cancel</English>
@@ -312,6 +337,7 @@
             <Russian>Отменить</Russian>
             <Portuguese>Cancelar</Portuguese>
             <Hungarian>Mégse</Hungarian>
+            <Dutch>Annuleer</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_MakeSelection">
             <English>Select</English>
@@ -324,6 +350,7 @@
             <Russian>Выбрать</Russian>
             <Portuguese>Selecionar</Portuguese>
             <Hungarian>Kiválaszt</Hungarian>
+            <Dutch>Selecteer</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_SendAway">
             <English>Go Away!</English>
@@ -336,6 +363,7 @@
             <Hungarian>Tűnés!</Hungarian>
             <Portuguese>Vá Embora!</Portuguese>
             <Italian>Via di qui!</Italian>
+            <Dutch>Ga weg!</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_GetDown">
             <English>Get Down!</English>
@@ -348,6 +376,7 @@
             <Russian>Ложись!</Russian>
             <Portuguese>Abaixe-se!</Portuguese>
             <Italian>A terra!</Italian>
+            <Dutch>Ga neer!</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
@@ -356,6 +385,7 @@
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
+            <Dutch>Eruit</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -368,6 +398,7 @@
             <Portuguese>Gerenciamento de Equipe</Portuguese>
             <Italian>Organizzazione Squadra</Italian>
             <Hungarian>Csapat kezelése</Hungarian>
+            <Dutch>Team management</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -380,6 +411,7 @@
             <Portuguese>Vermelha</Portuguese>
             <Italian>Rosso</Italian>
             <Hungarian>Piros</Hungarian>
+            <Dutch>Rood</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamGREEN">
             <English>Green</English>
@@ -392,6 +424,7 @@
             <Portuguese>Verde</Portuguese>
             <Italian>Verde</Italian>
             <Hungarian>Zöld</Hungarian>
+            <Dutch>Groen</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamBLUE">
             <English>Blue</English>
@@ -404,6 +437,7 @@
             <Portuguese>Azul</Portuguese>
             <Italian>Blu</Italian>
             <Hungarian>Kék</Hungarian>
+            <Dutch>Blauw</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamYELLOW">
             <English>Yellow</English>
@@ -416,6 +450,7 @@
             <Portuguese>Amarela</Portuguese>
             <Italian>Giallo</Italian>
             <Hungarian>Sárga</Hungarian>
+            <Dutch>Geel</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
@@ -428,6 +463,7 @@
             <Russian>Назначить в Красную группу</Russian>
             <French>Assigner à rouge</French>
             <Italian>Assegna al team rosso</Italian>
+            <Dutch>Wijs Rood toe</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -440,6 +476,7 @@
             <Russian>Назначить в Зеленую группу</Russian>
             <French>Assigner à vert</French>
             <Italian>Assegna al team verde</Italian>
+            <Dutch>Wijs Groen toe</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -452,6 +489,7 @@
             <Russian>Назначить в Синюю группу</Russian>
             <French>Assigner à bleu</French>
             <Italian>Assegna al team blu</Italian>
+            <Dutch>Wijs Blauw toe</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -464,6 +502,7 @@
             <Russian>Назначить в Желтую группу</Russian>
             <French>Assigner à jaune</French>
             <Italian>Assegna al team giallo</Italian>
+            <Dutch>Wijs Geel toe</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -476,6 +515,7 @@
             <Russian>Присоединиться к Красной группе</Russian>
             <French>Rejoindre rouge</French>
             <Italian>Unirsi al team rosso</Italian>
+            <Dutch>Sluit aan bij Rood</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -488,6 +528,7 @@
             <Russian>Присоединиться к Зеленой группе</Russian>
             <French>Rejoindre vert</French>
             <Italian>Unirsi al team verde</Italian>
+            <Dutch>Sluit aan bij Groen</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -500,6 +541,7 @@
             <Russian>Присоединиться к Синей группе</Russian>
             <French>Rejoindre bleu</French>
             <Italian>Unirsi al team blu</Italian>
+            <Dutch>Sluit aan bij Blauw</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -512,6 +554,7 @@
             <Russian>Присоединиться к Жёлтой группе</Russian>
             <French>Rejoindre jaune</French>
             <Italian>Unirsi al team giallo</Italian>
+            <Dutch>Sluit aan bij Geel</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -524,6 +567,7 @@
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
+            <Dutch>Je hebt je aangesloten bij Team %1</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
             <English>Leave Team</English>
@@ -536,6 +580,7 @@
             <Portuguese>Deixar Equipe</Portuguese>
             <Italian>Lascia il team</Italian>
             <Hungarian>Csapat elhagyása</Hungarian>
+            <Dutch>Verlaat Team</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
             <English>You left the Team</English>
@@ -548,6 +593,7 @@
             <Portuguese>Você deixou a Equipe</Portuguese>
             <Italian>Hai lasciato il team</Italian>
             <Hungarian>Elhagytad a csapatot</Hungarian>
+            <Dutch>Je hebt het team verlaten</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Pardon">
             <English>Pardon</English>
@@ -560,6 +606,7 @@
             <Portuguese>Perdão</Portuguese>
             <Italian>Perdona</Italian>
             <Hungarian>Megbocsátás</Hungarian>
+            <Dutch>Schenk vergiffenis</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_ScrollHint">
             <English>Scroll</English>
@@ -572,6 +619,7 @@
             <Italian>Scorri</Italian>
             <Hungarian>Görgetés</Hungarian>
             <Czech>Posunout</Czech>
+            <Dutch>Scroll</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -584,6 +632,7 @@
             <Italian>Tasto modifica</Italian>
             <Hungarian>Módosító billentyű</Hungarian>
             <Czech>Modifikátor</Czech>
+            <Dutch>Aanpassingstoets</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_NotInRange">
             <English>Not in Range</English>
@@ -596,6 +645,7 @@
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
             <Italian>Fuori limite</Italian>
+            <Dutch>Niet binnen bereik</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -608,6 +658,7 @@
             <Russian>Снаряжение</Russian>
             <Italian>Equipaggiamento</Italian>
             <Portuguese>Equipamento</Portuguese>
+            <Dutch>Materieel</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -620,6 +671,7 @@
             <Russian>Толкать</Russian>
             <Portuguese>Empurrar</Portuguese>
             <Italian>Spingere</Italian>
+            <Dutch>Duw</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -632,6 +684,7 @@
             <Hungarian>Cselekvés</Hungarian>
             <Italian>Interagire</Italian>
             <Portuguese>Interagir</Portuguese>
+            <Dutch>Interactie</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -644,6 +697,7 @@
             <Hungarian>Utasok</Hungarian>
             <Italian>Passeggeri</Italian>
             <Portuguese>Passageiros</Portuguese>
+            <Dutch>Passagiers</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
@@ -656,6 +710,7 @@
             <Russian>Открыть</Russian>
             <Italian>Apri</Italian>
             <German>Öffnen</German>
+            <Dutch>Open</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -668,6 +723,7 @@
             <Hungarian>Interakciós rendszer</Hungarian>
             <Portuguese>Sistema de interação</Portuguese>
             <Italian>Sistema Interazioni</Italian>
+            <Dutch>Interactie systeem</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -680,6 +736,7 @@
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
             <Italian>Abilità Management Squadra</Italian>
+            <Dutch>Activeer Team Management</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -692,6 +749,7 @@
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
+            <Dutch>Moeten spelers toegestaan zijn om het Team Management Menu te gebruiken? Standaard: Ja</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -704,6 +762,7 @@
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
             <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
+            <Dutch>Team management voegt de optie voor kleurtoewijzing voor teamleden toe, de optie voor teambevel nemen, en de optie om aan te sluiten bij andere teams.</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
@@ -714,6 +773,7 @@
             <Italian>Accendi</Italian>
             <Czech>Zapnout</Czech>
             <Portuguese>Ligar</Portuguese>
+            <Dutch>Aanzetten</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -724,6 +784,7 @@
             <Italian>Spegni</Italian>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligar</Portuguese>
+            <Dutch>Uitzetten</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -735,6 +796,7 @@
             <Italian>Passa caricatore</Italian>
             <Spanish>Pasar cargador</Spanish>
             <French>Passer un chargeur</French>
+            <Dutch>Reik magazijn aan</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -746,6 +808,7 @@
             <Italian>Caricatore Primario</Italian>
             <Spanish>Cargador primario</Spanish>
             <French>Chargeur de l'arme principale</French>
+            <Dutch>Primair magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -757,6 +820,7 @@
             <Italian>Caricatore Pistola</Italian>
             <Spanish>Cargador de pistola</Spanish>
             <French>Chargeur de pistolet</French>
+            <Dutch>Pistool magazijn</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -768,6 +832,7 @@
             <Italian>%1 ti ha passato un caricatore %2 .</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur de %2.</French>
+            <Dutch>%1 heeft een %2 magazijn aangereikt</Dutch>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -779,6 +844,7 @@
             <Italian>Mostra interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
+            <Dutch>Toon "Reik magazijn aan" interactie</Dutch>
         </Key>
     </Package>
 </Project>
