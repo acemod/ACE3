@@ -41,6 +41,18 @@ class CfgAmmo
         ACE_barrelLengths[]={508.0, 609.6, 660.4};
     };
     class B_556x45_Ball;
+    class rhs_ammo_556x45_M855A1_Ball: B_556x45_Ball {
+        ACE_caliber=5.69;
+        ACE_bulletLength=23.012;
+        ACE_bulletMass=4.0176;
+        ACE_ammoTempMuzzleVelocityShifts[]={-27.20, -26.44, -23.76, -21.00, -17.54, -13.10, -7.95, -1.62, 6.24, 15.48, 27.75};
+        ACE_ballisticCoefficients[]={0.151};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ASM";
+        ACE_dragModel=7;
+        ACE_muzzleVelocities[]={723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
+        ACE_barrelLengths[]={210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
+    };
     class rhs_ammo_556x45_Mk318_Ball: B_556x45_Ball {
         ACE_caliber=5.69;
         ACE_bulletLength=23.012;
