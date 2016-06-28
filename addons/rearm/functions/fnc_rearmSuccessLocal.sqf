@@ -24,6 +24,10 @@
 private ["_rounds", "_currentRounds", "_maxMagazines", "_currentMagazines", "_dummy", "_weaponSelect"];
 params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
+TRACE_6("params",_target,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
+
+//ToDo: Cleanup with CBA_fnc_ownerEvent in CBA 2.4.2
+if (!(_target turretLocal _turretPath)) exitWith {TRACE_1("not local turret",_turretPath);};
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5\nUnit: %6", _target, _turretPath, _numMagazines, _magazineClass, _numRounds, _unit];
 
