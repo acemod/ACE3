@@ -11,6 +11,7 @@
             <Spanish>ACE Logística</Spanish>
             <Italian>Logistica ACE</Italian>
             <French>ACE Logistique</French>
+            <Dutch>ACE Logistiek</Dutch>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>http://ace3mod.com/</English>
@@ -22,6 +23,7 @@
             <Spanish>http://ace3mod.com/</Spanish>
             <Italian>http://ace3mod.com/</Italian>
             <French>http://ace3mod.com/</French>
+            <Dutch>http://ace3mod.com/</Dutch>
         </Key>
     </Package>
 </Project>
