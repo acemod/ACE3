@@ -114,7 +114,7 @@ if (_mode == 1) then {
         _vDir = getDir _vehicle;
         _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]);
         // TODO: Needs to be placed in safe distance to wire, so we do not constantly re-spawn new wires
-    }, [_vehicle, _wire], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_vehicle, _wire], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 //TODO: Create broken geoless wire (two version)

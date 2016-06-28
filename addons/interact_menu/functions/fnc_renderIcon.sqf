@@ -2,13 +2,13 @@
  * Author: NouberNou and esteldunedain
  * Render a single interaction icon
  *
- * Argument:
+ * Arguments:
  * 0: Text <STRING>
  * 1: Icon <STRING>
  * 2: 2d position <ARRAY>
  * 3: Text Settings <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

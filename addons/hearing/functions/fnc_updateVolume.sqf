@@ -33,8 +33,8 @@ if (!_justUpdateVolume) then {
     if (GVAR(deafnessDV) - GVAR(deafnessPrior) > 1 ||
         GVAR(deafnessDV) > 10) then {
 
-        if (ACE_time - GVAR(time3) < 3) exitWith {};
-        GVAR(time3) = ACE_time;
+        if (CBA_missionTime - GVAR(time3) < 3) exitWith {};
+        GVAR(time3) = CBA_missionTime;
 
         if (GVAR(deafnessDV) > 19.75) then {
             playSound (["ACE_Combat_Deafness_Heavy", "ACE_Combat_Deafness_Heavy_NoRing"] select GVAR(DisableEarRinging));

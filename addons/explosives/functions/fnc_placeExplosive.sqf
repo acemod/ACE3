@@ -95,6 +95,6 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
 _pitch = getNumber (_magazineTrigger >> "pitch");
 
 //Globaly set the position and angle:
-[QGVAR(place), [_explosive, _dir, _pitch, _unit]] call EFUNC(common,globalEvent);
+[QGVAR(place), [_explosive, _dir, _pitch, _unit]] call CBA_fnc_globalEvent;
 
 _explosive

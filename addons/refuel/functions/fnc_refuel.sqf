@@ -79,7 +79,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         };
         _unit setVariable [QGVAR(tempFuel), _fuelInSink];
 
-        ["setFuel", _sink, [_sink, _fuelInSink]] call EFUNC(common,objectEvent);
+        [QEGVAR(common,setFuel), [_sink, _fuelInSink], _sink] call CBA_fnc_targetEvent;
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
         _unit setVariable [QGVAR(tempFuel), fuel _sink];

@@ -42,7 +42,7 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         [{
             TRACE_1("Opening Player Inventory", _this);
             ACE_player action ["Gear", objNull]
-        }, []] call EFUNC(common,execNextFrame);
+        }, []] call CBA_fnc_execNextFrame;
     },
-    []] call EFUNC(common,waitUntilAndExecute);
+    []] call CBA_fnc_waitUntilAndExecute;
 };

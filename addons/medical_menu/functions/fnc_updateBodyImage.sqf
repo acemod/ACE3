@@ -22,11 +22,9 @@ params ["_selectionBloodLoss", "_damaged", "_display"];
 // Handle the body image coloring
 private _availableSelections = [50, 51, 52, 53, 54, 55];
 {
-    private ["_red", "_green", "_blue"];
-
-    _red = 1;
-    _green = 1;
-    _blue = 1;
+    private _red = 1;
+    private _green = 1;
+    private _blue = 1;
 
     if (_x > 0) then {
         if (_damaged select _forEachIndex) then {

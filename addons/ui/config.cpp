@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"VKing", "Jonpas"};
-        authorUrl = "http://ace3mod.com/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"VKing", "Jonpas"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -15,6 +17,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+#include "ACE_UI.hpp"
 
 #include "RscChat.hpp"
 #include "RscVignette.hpp"

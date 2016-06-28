@@ -30,9 +30,9 @@ if (!isServer) exitWith {};
     params ["_units"];
     {
         TRACE_2("event",_x,local _x);
-        ["SetSurrendered", [_x], [_x, true]] call EFUNC(common,targetEvent);
+        [QGVAR(setSurrendered), [_x, true], [_x]] call CBA_fnc_targetEvent;
     } forEach _units;
-}, [_units], 0.05] call EFUNC(common,waitAndExecute);
+}, [_units], 0.05] call CBA_fnc_waitAndExecute;
 
 if (!isNull _logic) then {
     deleteVehicle _logic;

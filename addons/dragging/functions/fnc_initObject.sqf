@@ -2,7 +2,7 @@
  * Author: commy2
  * Initialize variables for drag or carryable objects. Called from init EH.
  *
- * Argument:
+ * Arguments:
  * 0: Any object <OBJECT>
  *
  * Return Value:

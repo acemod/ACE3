@@ -14,13 +14,12 @@
 
 #include "script_component.hpp"
 
-private "_reviveStartTime";
 params ["_caller","_target"];
 
 if (_target getVariable [QGVAR(inReviveState), false]) then {
-    _reviveStartTime = _target getVariable [QGVAR(reviveStartTime),0];
+    private _reviveStartTime = _target getVariable [QGVAR(reviveStartTime),0];
     if (_reviveStartTime > 0) then {
-        _target setVariable [QGVAR(reviveStartTime), (_reviveStartTime + random(20)) min ACE_time];
+        _target setVariable [QGVAR(reviveStartTime), (_reviveStartTime + random(20)) min CBA_missionTime];
     };
 };
 

@@ -26,4 +26,4 @@ for "_i" from 1 to _amount do {
 };
 
 // Invoke listenable event
-["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
+["ace_cargoAdded", [_itemClass, _vehicle, _amount]] call CBA_fnc_globalEvent;

@@ -2,12 +2,12 @@
  * Author: Commy2, esteldunedain
  * Swap barrel callback
  *
- * Argument:
+ * Arguments:
  * 0: Unit initiating the action <OBJECT>
  * 1: Unit that has the weapon <OBJECT>
  * 2: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -27,6 +27,9 @@ if (_assistant isEqualTo _gunner) then {
     playSound "ACE_BarrelSwap";
 };
 
+// don't consume the barrel, but rotate through them.
+[localize LSTRING(SwappedBarrel), QPATHTOF(UI\spare_barrel_ca.paa)] call EFUNC(common,displayTextPicture);
+
 private _temp = _gunner getVariable [format [QGVAR(%1_temp), _weapon], 0];
 private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
@@ -34,7 +37,7 @@ private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >
 // store the removed barrel with the former weapon temperature. The server
 // also updates the current weapon temperature to match that of the new
 // loaded barrel.
-["spareBarrelsLoadCoolest", [_assistant, _gunner, _weapon, _temp, _barrelMass]] call EFUNC(common,serverEvent);
+[QGVAR(loadCoolestSpareBarrel), [_assistant, _gunner, _weapon, _temp, _barrelMass]] call CBA_fnc_serverEvent;
 
 // Store the update time
-_gunner setVariable [format [QGVAR(%1_time), _weapon], ACE_time];
+_gunner setVariable [format [QGVAR(%1_time), _weapon], CBA_missionTime];

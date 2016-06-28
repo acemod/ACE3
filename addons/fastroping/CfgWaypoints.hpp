@@ -4,8 +4,8 @@ class CfgWaypoints {
         class Fastrope {
             displayName = CSTRING(Waypoint_Fastrope);
             displayNameDebug = "Fastrope";
-            file = QUOTE(PATHTOF(functions\fnc_deployAIWaypoint.sqf));
-            icon = QUOTE(PATHTOF(UI\Icon_Waypoint.paa));
+            file = QPATHTOF(functions\fnc_deployAIWaypoint.sqf);
+            icon = QPATHTOF(UI\Icon_Waypoint.paa);
         };
     };
 };

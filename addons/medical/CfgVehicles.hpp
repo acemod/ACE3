@@ -14,7 +14,7 @@ class CfgVehicles {
     class ACE_moduleMedicalSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(MedicalSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleMedicalSettings));
         functionPriority = 1;
@@ -156,9 +156,9 @@ class CfgVehicles {
     class ACE_moduleBasicMedicalSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(BasicMedicalSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleBasicMedicalSettings));
+        function = QFUNC(moduleBasicMedicalSettings);
         functionPriority = 10;
         isGlobal = 2;
         isSingular = 1;
@@ -198,9 +198,9 @@ class CfgVehicles {
     class ACE_moduleAdvancedMedicalSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(AdvancedMedicalSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAdvancedMedicalSettings));
+        function = QFUNC(moduleAdvancedMedicalSettings);
         functionPriority = 10;
         isGlobal = 2;
         isSingular = 1;
@@ -320,7 +320,7 @@ class CfgVehicles {
     class ACE_moduleReviveSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(ReviveSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
         function = QUOTE(DFUNC(moduleReviveSettings));
         functionPriority = 1;
@@ -364,9 +364,9 @@ class CfgVehicles {
     class ACE_moduleAssignMedicRoles: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicRoles_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicRoles));
+        function = QFUNC(moduleAssignMedicRoles);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -411,9 +411,9 @@ class CfgVehicles {
     class ACE_moduleAssignMedicVehicle: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicVehicle_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicalVehicle));
+        function = QFUNC(moduleAssignMedicalVehicle);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -455,9 +455,9 @@ class CfgVehicles {
     class ACE_moduleAssignMedicalFacility: Module_F {
         scope = 2;
         displayName = CSTRING(AssignMedicalFacility_Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
-        function = QUOTE(FUNC(moduleAssignMedicalFacility));
+        function = QFUNC(moduleAssignMedicalFacility);
         functionPriority = 10;
         isGlobal = 2;
         isTriggerActivated = 0;
@@ -534,7 +534,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside"};
                     condition = QUOTE((vehicle _target != _target && vehicle _target == vehicle _player) || GVAR(menuTypeStyle) == 1);
                     statement = QUOTE([ARR_3(_target, true, 0)] call DFUNC(displayPatientInformation));
-                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    icon = QPATHTOF(UI\icons\medical_cross.paa);
 
                     #undef EXCEPTIONS
                     #undef ACTION_CONDITION
@@ -549,7 +549,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionLoadUnit));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    icon = QPATHTOF(UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
                 };
                 class GVAR(UnLoadPatient) {
@@ -559,7 +559,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player, _target)] call DFUNC(actionUnloadUnit));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\icons\medical_cross.paa);
+                    icon = QPATHTOF(UI\icons\medical_cross.paa);
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
                 };
             };
@@ -659,7 +659,7 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
         side = -1;
-        model = QUOTE(PATHTOEF(apl,bodybag.p3d));
+        model = QPATHTOEF(apl,bodybag.p3d);
         icon = "";
         displayName = CSTRING(Bodybag_Display);
         EGVAR(dragging,canDrag) = 1;
@@ -686,40 +686,40 @@ class CfgVehicles {
         scopeCurator = 0;
         displayName = " ";
         destrType = "DestructNo";
-        model = QUOTE(PATHTOF(data\littergeneric.p3d));
+        model = QPATHTOF(data\littergeneric.p3d);
     };
     class ACE_MedicalLitter_clean: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_clean.p3d));
+        model = QPATHTOF(data\littergeneric_clean.p3d);
     };
     class ACE_MedicalLitter_bandage1: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_bandages1.p3d));
+        model = QPATHTOF(data\littergeneric_bandages1.p3d);
     };
     class ACE_MedicalLitter_bandage2: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_bandages2.p3d));
+        model = QPATHTOF(data\littergeneric_bandages2.p3d);
     };
     class ACE_MedicalLitter_bandage3: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_bandages3.p3d));
+        model = QPATHTOF(data\littergeneric_bandages3.p3d);
     };
     class ACE_MedicalLitter_packingBandage: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_packingBandage.p3d));
+        model = QPATHTOF(data\littergeneric_packingBandage.p3d);
     };
     class ACE_MedicalLitter_gloves: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_gloves.p3d));
+        model = QPATHTOF(data\littergeneric_gloves.p3d);
     };
     class ACE_MedicalLitter_adenosine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_adenosine.p3d));
+        model = QPATHTOF(data\littergeneric_adenosine.p3d);
     };
     class ACE_MedicalLitter_atropine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_atropine.p3d));
+        model = QPATHTOF(data\littergeneric_atropine.p3d);
     };
     class ACE_MedicalLitter_epinephrine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_epinephrine.p3d));
+        model = QPATHTOF(data\littergeneric_epinephrine.p3d);
     };
     class ACE_MedicalLitter_morphine: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_morphine.p3d));
+        model = QPATHTOF(data\littergeneric_morphine.p3d);
     };
     class ACE_MedicalLitter_QuickClot: ACE_MedicalLitterBase {
-        model = QUOTE(PATHTOF(data\littergeneric_Quikclot.p3d));
+        model = QPATHTOF(data\littergeneric_Quikclot.p3d);
     };
     class Item_Base_F;
     class ACE_fieldDressingItem: Item_Base_F {
@@ -880,7 +880,7 @@ class CfgVehicles {
         scopeCurator = 2;
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
-        model = PATHTOF(data\ace_medcrate.p3d);
+        model = QPATHTOF(data\ace_medcrate.p3d);
         author = ECSTRING(common,ACETeam);
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);

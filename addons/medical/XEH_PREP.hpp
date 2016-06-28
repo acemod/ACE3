@@ -73,6 +73,7 @@ PREP(setDead);
 PREP(setHitPointDamage);
 PREP(setStructuralDamage);
 PREP(setUnconscious);
+PREP(showBloodEffect);
 PREP(translateSelections);
 PREP(treatment);
 PREP(treatment_failure);

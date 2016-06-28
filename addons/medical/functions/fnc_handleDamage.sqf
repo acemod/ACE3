@@ -120,11 +120,11 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         if (_delayedUnconsicous) then {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit], 0.7] call EFUNC(common,waitAndExecute);
+            }, [_unit], 0.7] call CBA_fnc_waitAndExecute;
         } else {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit]] call EFUNC(common,execNextFrame);
+            }, [_unit]] call CBA_fnc_execNextFrame;
         };
         0.89;
     };

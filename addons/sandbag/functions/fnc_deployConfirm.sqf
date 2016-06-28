@@ -41,7 +41,7 @@ _unit removeItem "ACE_Sandbag_empty";
     _sandBag setDir _direction;
 
     GVAR(sandBag) = objNull;
-}, [_unit], 1] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call CBA_fnc_waitAndExecute;
 
 // remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;

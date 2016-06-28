@@ -2,12 +2,12 @@
  * Author: joko // Jonas
  * Executes a code once with after the Condition is True, using a PFH
  *
- * Argument:
+ * Arguments:
  * 0: Condition <CODE>
  * 1: Code to execute <CODE>
  * 2: Parameters to run the code with <ARRAY,ANY,NIL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -17,7 +17,8 @@
  */
 #include "script_component.hpp"
 
-TRACE_1("Adding",_this);
+ACE_DEPRECATED("ace_common_fnc_waitUntilAndExecute","3.8.0","CBA_fnc_waitUntilAndExecute");
 
-GVAR(waitUntilAndExecArray) pushBack _this;
+_this call CBA_fnc_waitUntilAndExecute;
+
 nil

@@ -2,12 +2,12 @@
  * Author: esteldunedain, Commy2
  * Make a unit start swapping the barrel of another unit
  *
- * Argument:
+ * Arguments:
  * 0: Unit initiating the action <OBJECT>
  * 1: Unit that has the weapon <OBJECT>
  * 2: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -30,4 +30,4 @@ playSound "ACE_BarrelSwap";
 
 [3, [_assistant, _gunner, _weapon], {}, {}, (localize LSTRING(SwappingBarrel))] call EFUNC(common,progressBar);
 
-["initiateSwapBarrelAssisted", _gunner, [_assistant, _gunner, _weapon]] call EFUNC(common,objectEvent);
+[QGVAR(initiateSwapBarrelAssisted), [_assistant, _gunner, _weapon], _gunner] call CBA_fnc_targetEvent;

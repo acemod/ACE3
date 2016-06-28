@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
-        <Key ID="STR_ACE_Weather_WindInfoKey">
+        <Key ID="STR_ACE_Weather_WindInfoKeyHold">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
             <Russian>Показать информацию о ветре</Russian>
@@ -13,7 +13,7 @@
             <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar informação do vento</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Weather_WindInfoKey_hold">
+        <Key ID="STR_ACE_Weather_WindInfoKeyToggle">
             <English>Show Wind Info (Toggle)</English>
             <Polish>Pokaż inf. o wietrze (przełącz)</Polish>
             <Russian>Показать информацию о ветре (перекл.)</Russian>

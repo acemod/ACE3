@@ -1,4 +1,5 @@
 #define COMPONENT nametags
+#define COMPONENT_BEAUTIFIED Name Tags
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
@@ -21,3 +22,5 @@
 #define ICON_NAME_RANK 2
 #define ICON_NAME_SPEAK 3
 #define ICON_SPEAK 4
+
+#define ALL_RANKS ["PRIVATE", "CORPORAL", "SERGEANT", "LIEUTENANT", "CAPTAIN", "MAJOR", "COLONEL"]

@@ -29,7 +29,7 @@ if (isServer) then {
         _internalData = HASH_GET(GVAR(syncedEvents),_name);
 
         _internalData params ["", "_eventLog"];
-        _eventLog pushBack [ACE_diagTime, _args, _ttl];
+        _eventLog pushBack [diag_tickTime, _args, _ttl];
     };
 };
 

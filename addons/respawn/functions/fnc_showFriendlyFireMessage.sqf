@@ -22,5 +22,5 @@ if (_unit != _killer && {side group _unit in [side group ACE_player, civilian]} 
     systemChat format ["%1 was killed by %2", [_unit, false, true] call EFUNC(common,getName), [_killer, false, true] call EFUNC(common,getName)];
 
     // Raise ACE globalEvent
-    ["killedByFriendly", [_unit, _killer]] call EFUNC(common,globalEvent);
+    ["ace_killedByFriendly", [_unit, _killer]] call CBA_fnc_globalEvent;
 };

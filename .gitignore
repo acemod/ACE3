@@ -1,4 +1,6 @@
 @ace/*
+release/*
+tools/temp
 *.cache
 *.pbo
 texHeaders.bin

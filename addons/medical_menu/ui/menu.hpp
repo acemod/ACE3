@@ -51,7 +51,7 @@ class GVAR(medicalMenu) {
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "3.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            text = QUOTE(PATHTOF(data\background_img.paa));
+            text = QPATHTOF(data\background_img.paa);
             colorText[] = {1, 1, 1, 0.0};
         };
         class CatagoryLeft: HeaderName {
@@ -94,42 +94,42 @@ class GVAR(medicalMenu) {
             colorBackground[] = {0,0,0,1};
             colorPicture[] = {1,1,1,1};
             colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOF(data\icons\triage_card_small.paa));
+            text = QPATHTOF(data\icons\triage_card_small.paa);
         };
         class iconImg2: iconImg1 {
             idc = 112;
             x = "3 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\examine_patient_small.paa));
+            text = QPATHTOF(data\icons\examine_patient_small.paa);
         };
         class iconImg3: iconImg1 {
             idc = 113;
             x = "4.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\bandage_fracture_small.paa));
+            text = QPATHTOF(data\icons\bandage_fracture_small.paa);
         };
         class iconImg4: iconImg1 {
             idc = 114;
             x = "6 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\medication_small.paa));
+            text = QPATHTOF(data\icons\medication_small.paa);
         };
         class iconImg5: iconImg1 {
             idc = 115;
             x = "7.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\airway_management_small.paa));
+            text = QPATHTOF(data\icons\airway_management_small.paa);
         };
         class iconImg6: iconImg1 {
             idc = 116;
             x = "9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\advanced_treatment_small.paa));
+            text = QPATHTOF(data\icons\advanced_treatment_small.paa);
         };
         class iconImg7: iconImg1 {
             idc = 117;
             x = "10.5 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\icon_carry.paa));
+            text = QPATHTOF(data\icons\icon_carry.paa);
         };
         class iconImg8: iconImg1 {
             idc = 118;
             x = "12 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(data\icons\toggle_self_small.paa));
+            text = QPATHTOF(data\icons\toggle_self_small.paa);
         };
 
 
@@ -274,7 +274,7 @@ class GVAR(medicalMenu) {
             colorBackground[] = {1,1,1,1};
             colorPicture[] = {1,1,1,1};
             colorText[] = {1,1,1,1};
-            text = QUOTE(PATHTOEF(medical,ui\body_background.paa));
+            text = QPATHTOEF(medical,ui\body_background.paa);
         };
         class bodyImgHead: bodyImgBackground {
             idc = 50;
@@ -286,28 +286,28 @@ class GVAR(medicalMenu) {
             colorBackground[] = {1,1,1,1};
             colorPicture[] = {1,1,1,0.75};
             colorText[] = {1,1,1,0.75};
-            text = QUOTE(PATHTOEF(medical,ui\body_head.paa));
+            text = QPATHTOEF(medical,ui\body_head.paa);
         };
 
         class bodyImgTorso: bodyImgHead {
             idc = 51;
-            text = QUOTE(PATHTOEF(medical,ui\body_torso.paa));
+            text = QPATHTOEF(medical,ui\body_torso.paa);
         };
         class bodyImgArms_l: bodyImgHead {
             idc = 52;
-            text = QUOTE(PATHTOEF(medical,ui\body_arm_left.paa));
+            text = QPATHTOEF(medical,ui\body_arm_left.paa);
         };
         class bodyImgArms_r: bodyImgHead {
             idc = 53;
-            text = QUOTE(PATHTOEF(medical,ui\body_arm_right.paa));
+            text = QPATHTOEF(medical,ui\body_arm_right.paa);
         };
         class bodyImgLegs_l: bodyImgHead {
             idc = 54;
-            text = QUOTE(PATHTOEF(medical,ui\body_leg_left.paa));
+            text = QPATHTOEF(medical,ui\body_leg_left.paa);
         };
         class bodyImgLegs_r: bodyImgHead {
             idc = 55;
-            text = QUOTE(PATHTOEF(medical,ui\body_leg_right.paa));
+            text = QPATHTOEF(medical,ui\body_leg_right.paa);
         };
 
 

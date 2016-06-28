@@ -1,4 +1,5 @@
 #define COMPONENT common
+#define COMPONENT_BEAUTIFIED Common
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

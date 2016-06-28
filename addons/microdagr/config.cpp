@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_microDAGR_Item"};
         weapons[] = {"ACE_microDAGR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"PabstMirror"};
-        authorUrl = "https://github.com/PabstMirror/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"PabstMirror"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -17,3 +19,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
 #include "ACE_Settings.hpp"
+
+class ACE_newEvents {
+    RangerfinderData = QEGVAR(vector,rangefinderData);
+};

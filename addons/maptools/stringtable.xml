@@ -53,7 +53,7 @@
             <English>Show Normal Map Tool</English>
             <German>Zeige Kartenwerkzeug (normal)</German>
             <Spanish>Mostrar herr. de mapa normal</Spanish>
-            <French>Montrer outils normaux</French>
+            <French>Montrer les outils de cartographie (normaux)</French>
             <Italian>Visualizza Strumenti Cartografici standard</Italian>
             <Portuguese>Mostrar Ferramenta de Mapa Padrão</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (normál méret)</Hungarian>
@@ -65,7 +65,7 @@
             <English>Show Small Map Tool</English>
             <German>Zeige Kartenwerkzeug (klein)</German>
             <Spanish>Mostrar herr. de mapa pequeñas</Spanish>
-            <French>Montrer petits outils</French>
+            <French>Montrer les outils de cartographie (petits)</French>
             <Italian>Visualizza Strumenti Cartografici piccoli</Italian>
             <Portuguese>Mostrar Ferramenta de Mapa Pequena</Portuguese>
             <Hungarian>Térképészeti eszköz megjelenítése (kicsinyített)</Hungarian>
@@ -77,7 +77,7 @@
             <English>Align Map Tool to North</English>
             <German>Kartenwerkzeug nach Norden ausrichten</German>
             <Spanish>Alinear herr. de mapa al norte</Spanish>
-            <French>Aligner au nord</French>
+            <French>Aligner les outils sur le nord</French>
             <Italian>Allinea gli Strumenti Cartografici con il Nord</Italian>
             <Portuguese>Alinhar Ferramenta de Mapa com o Norte</Portuguese>
             <Hungarian>Térképészeti eszköz Északhoz állítása</Hungarian>
@@ -89,7 +89,7 @@
             <English>Align Map Tool to Compass</English>
             <German>Kartenwerkzeug am Kompass ausrichten</German>
             <Spanish>Alinear herr. de mapa a la brújula</Spanish>
-            <French>Aligner sur la boussole</French>
+            <French>Aligner les outils sur la boussole</French>
             <Italian>Allinea gli Strumenti Cartografici con la bussola</Italian>
             <Portuguese>Alinhar Ferramenta de Mapa com a Bússola</Portuguese>
             <Hungarian>Térképészeti eszköz iránytűhöz állítása</Hungarian>
@@ -121,22 +121,10 @@
             <Czech>Schovat GPS na mapě</Czech>
             <Russian>Скрыть GPS на карте</Russian>
         </Key>
-        <Key ID="STR_ACE_MapTools_CopyMap">
-            <English>Copy Map</English>
-            <German>Karte kopieren</German>
-            <Spanish>Copiar mapa</Spanish>
-            <Russian>Скопировать карту</Russian>
-            <Polish>Kopiuj oznaczenia mapy</Polish>
-            <French>Copier la carte</French>
-            <Czech>Zkopírovat mapu</Czech>
-            <Italian>Copiare Carta</Italian>
-            <Hungarian>Térkép másolása</Hungarian>
-            <Portuguese>Copiar Mapa</Portuguese>
-        </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
             <German>Drehung: %1°</German>
-            <French>Direction: %1°</French>
+            <French>Direction : %1°</French>
             <Czech>Směr: %1°</Czech>
             <Polish>Kierunek: %1°</Polish>
             <Spanish>Dirección: %1°</Spanish>
@@ -144,6 +132,14 @@
             <Russian>Направление: %1°</Russian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
+            <English>Rotate Map Tools Key</English>
+            <French>Touche de rotation des outils de naviguation</French>
+        </Key>
+        <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
+            <English>Modifier key to allow rotating map tools</English>
+            <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
         </Key>
     </Package>
 </Project>

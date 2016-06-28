@@ -12,7 +12,7 @@ GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_1("settingInit",GVAR(EnableCombatDeafness));
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(EnableCombatDeafness)) exitWith {};
@@ -20,7 +20,7 @@ GVAR(volumeAttenuation) = 1;
     //Add XEH:
     ["CAManBase", "FiredNear", FUNC(firedNear)] call CBA_fnc_addClassEventHandler;
     ["CAManBase", "Explosion", FUNC(explosionNear)] call CBA_fnc_addClassEventHandler;
-    
+
     // Update hearing protection now:
     [] call FUNC(updateHearingProtection);
 
@@ -28,18 +28,18 @@ GVAR(volumeAttenuation) = 1;
     [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 
     // Update veh attunation when player veh changes
-    ["playerVehicleChanged", {_this call FUNC(updatePlayerVehAttenuation);}] call EFUNC(common,addEventHandler);
-    ["playerTurretChanged", {_this call FUNC(updatePlayerVehAttenuation);}] call EFUNC(common,addEventHandler);
+    ["vehicle", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
+    ["turret", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
-    ["playerChanged", {
+    ["unit", {
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         ACE_player setVariable [QGVAR(deaf), false];
         GVAR(time3) = 0;
         [] call FUNC(updateHearingProtection);
-    }] call EFUNC(common,addEventhandler);
+    }] call CBA_fnc_addPlayerEventHandler;
 
     // Update protection on possible helmet change
-    ["playerInventoryChanged", {[] call FUNC(updateHearingProtection);}] call EFUNC(common,addEventhandler);
-}] call EFUNC(common,addEventHandler);
+    ["loadout", FUNC(updateHearingProtection)] call CBA_fnc_addPlayerEventHandler;
+}] call CBA_fnc_addEventHandler;

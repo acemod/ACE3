@@ -19,7 +19,7 @@ if (hasInterface) then {
     [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
 };
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_1("SettingsInitialized eh", GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
@@ -35,8 +35,8 @@ if (hasInterface) then {
         GVAR(storedSpareBarrels) = [] call CBA_fnc_hashCreate;
 
         // Install event handlers for spare barrels
-        ["spareBarrelsSendTemperatureHint", FUNC(sendSpareBarrelsTemperaturesHint)] call EFUNC(common,addEventHandler);
-        ["spareBarrelsLoadCoolest", FUNC(loadCoolestSpareBarrel)] call EFUNC(common,addEventHandler);
+        [QGVAR(sendSpareBarrelTemperatureHint), FUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;
+        [QGVAR(loadCoolestSpareBarrel), FUNC(loadCoolestSpareBarrel)] call CBA_fnc_addEventHandler;
 
         // Schedule cool down calculation of stored spare barrels
         [] call FUNC(updateSpareBarrelsTemperaturesThread);
@@ -52,18 +52,18 @@ if (hasInterface) then {
     ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
 
     // Register fire event handler
-    ["firedPlayer", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     // Only add eh to non local players if dispersion is enabled
     if (GVAR(overheatingDispersion)) then {
-        ["firedPlayerNonLocal", DFUNC(firedEH)] call EFUNC(common,addEventHandler);
+        ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
     [] call FUNC(updateTemperatureThread);
-    
-    // Install event handler to display temp when a barrel was swapped
-    ["showWeaponTemperature", DFUNC(displayTemperature)] call EFUNC(common,addEventHandler);
-    // Install event handler to initiate an assisted barrel swap
-    ["initiateSwapBarrelAssisted", DFUNC(swapBarrel)] call EFUNC(common,addEventHandler);
 
-}] call EFUNC(common,addEventHandler);
+    // Install event handler to display temp when a barrel was swapped
+    [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
+    // Install event handler to initiate an assisted barrel swap
+    [QGVAR(initiateSwapBarrelAssisted), DFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
+
+}] call CBA_fnc_addEventHandler;

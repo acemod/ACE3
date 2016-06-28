@@ -1,4 +1,5 @@
 #define COMPONENT weather
+#define COMPONENT_BEAUTIFIED Weather
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

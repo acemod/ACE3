@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MineDetector">
+        <Key ID="STR_ACE_MineDetector_VMM3_Description">
+            <English>Metal detector</English>
+            <French>Détecteur de métaux</French>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_ActivateDetector">
+            <English>Activate Detector</English>
+            <French>Activer le détecteur</French>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_DeactivateDetector">
+            <English>Deactivate Detector</English>
+            <French>Désactiver le détecteur</French>
+        </Key>
+    </Package>
+</Project>

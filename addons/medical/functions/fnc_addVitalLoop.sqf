@@ -18,7 +18,7 @@ params ["_unit", ["_force", false]];
 if !([_unit] call FUNC(hasMedicalEnabled) || _force) exitWith {};
 
 if !(local _unit) exitWith {
-    ["addVitalLoop", _unit, [_unit, _force]] call EFUNC(common,targetEvent);
+    [QGVAR(addVitalLoop), [_unit, _force], _unit] call CBA_fnc_targetEvent;
 };
 
 // Quit if the unit already has a vital loop, or is dead, unless it's forced
@@ -27,4 +27,4 @@ if ((_unit getVariable[QGVAR(addedToUnitLoop),false] || !alive _unit) && !_force
 // Schedule the loop to be executed again 1 sec later
 // @todo: should the loop be started righ away instead?
 _unit setVariable [QGVAR(addedToUnitLoop), true, true];
-[DFUNC(vitalLoop), [_unit, ACE_time], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(vitalLoop), [_unit, CBA_missionTime], 1] call CBA_fnc_waitAndExecute;

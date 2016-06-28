@@ -7,7 +7,7 @@ class CfgVehicles {
         function = FUNC(module);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_SwitchUnits_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_SwitchUnits_ca.paa);
         class Arguments {
             class SwitchToWest {
                 displayName = CSTRING(SwitchToWest_DisplayName);

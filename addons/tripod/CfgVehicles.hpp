@@ -5,13 +5,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class GVAR(place) {
-                displayName = CSTRING(Placedown);
-                condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
-                statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
-                showDisabled = 0;
-                priority = 2;
-                icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+            class ACE_Equipment {
+                class GVAR(place) {
+                    displayName = CSTRING(Placedown);
+                    condition = QUOTE([ARR_2(_player,'ACE_Tripod')] call EFUNC(common,hasItem));
+                    statement = QUOTE([ARR_2(_player,'ACE_Tripod')] call FUNC(place));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
+                };
             };
         };
     };
@@ -46,7 +48,7 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         scope = 2;
         displayName = CSTRING(DisplayName);
-        model = PATHTOF(data\sniper_tripod.p3d);
+        model = QPATHTOF(data\sniper_tripod.p3d);
 
         class AnimationSources {
             class slide_down_tripod {
@@ -76,7 +78,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
 
                 class ACE_Adjust {
@@ -85,11 +87,11 @@ class CfgVehicles {
                     distance = 5;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(adjust)}, [ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = QPATHTOF(UI\w_sniper_tripod_ca.paa);
                 };
             };
         };

@@ -8,7 +8,7 @@
  * 2: Target distance
  * 3: Azimuth offset
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

@@ -1,4 +1,5 @@
 #define COMPONENT switchunits
+#define COMPONENT_BEAUTIFIED Switch Units
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

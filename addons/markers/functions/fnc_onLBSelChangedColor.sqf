@@ -26,3 +26,15 @@ GVAR(curSelMarkerColor) = _index;
 private _config = (configFile >> "CfgMarkerColors") select _data;
 
 GVAR(currentMarkerColorConfigName) = configName _config;
+
+//Set map display to same color:
+private _bisColorLB = switch (false) do {
+    case (isNull findDisplay 12): {(findDisplay 12) displayCtrl 1090};
+    case (isNull findDisplay 52): {(findDisplay 52) displayCtrl 1090};
+    case (isNull findDisplay 53): {(findDisplay 53) displayCtrl 1090};
+    case (isNull findDisplay 37): {(findDisplay 37) displayCtrl 1090};
+    default {controlNull};
+};
+if (_ctrl != _bisColorLB) then { //Don't set what we got a EH from
+    _bisColorLB lbSetCurSel GVAR(curSelMarkerColor);
+};
