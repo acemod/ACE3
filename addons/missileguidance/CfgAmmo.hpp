@@ -6,9 +6,9 @@ class CfgAmmo {
         proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
 
         // Reenable this settings when ACE laser targeting and missile guidance is reenabled
-        laserLock = 1;		        //laserLock = 1;
-        airLock = 0;		        //airLock = 0;
-        weaponLockSystem = "4 + 16";		        //irLock = 0;
+        laserLock = 1; //laserLock = 1;
+        airLock = 0; //airLock = 0;
+        weaponLockSystem = "4 + 16"; //irLock = 0;
         //weaponLockSystem = "4 + 16";
         //fuseDistance = 2;
         //timeToLive = 60;
