@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+if !(alive _this) exitWith {false};
+
 private _bloodLoss = [_this] call EFUNC(medical,getBloodLoss);
 private _pain      = _this getVariable [QEGVAR(medical,pain), 0];
 // Advanced only?

@@ -36,7 +36,7 @@ if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exi
 };
 
 // Move to target...
-if (_this distance _target > 1.5) exitWith {
+if (_this distance _target > 2) exitWith {
     // This is necessary to force the unit to move ._.
     _this forceSpeed 0;
     _this forceSpeed -1;
