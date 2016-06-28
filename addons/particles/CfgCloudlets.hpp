@@ -19,15 +19,15 @@ class CfgCloudlets {
         particleType = "Billboard";
         timerPeriod = 1;
         lifeTime = 30;
-        lifeTimeVar = 2;
+        lifeTimeVar = 1;
         animationSpeed[] = {1};
         animationSpeedCoef = 1;
         randomDirectionPeriod = 1;
         randomDirectionPeriodVar = 0;
-        randomDirectionIntensity = 0.2;
+        randomDirectionIntensity = 0.08;
         randomDirectionIntensityVar = 0;
         destroyOnWaterSurface = 1;
-        destroyOnWaterSurfaceOffset = -0.6;
+        destroyOnWaterSurfaceOffset = -8;
         positionVar[] = {0, 0, 0};
         colorVar[] = {0, 0, 0, 0};
         color[] = {
@@ -40,9 +40,9 @@ class CfgCloudlets {
         };
         size[] = {0.05, 4, 12, 16};
         sizeVar = 0.5;
-        weight = 1.2777;
+        weight = 1.275;
         moveVelocity[] = {0, 0, 0};
-        moveVelocityVar[] = {0.25, 0.25, 0.25};
+        moveVelocityVar[] = {0.1, 0.1, 0.1};
         rotationVelocity = 0;
         rotationVelocityVar = 20;
         volume = 1;
@@ -52,19 +52,19 @@ class CfgCloudlets {
         blockAIVisibility = 1;
     };
     class ACE_SmokeBaseMedium: ACE_SmokeBaseLarge {
+        destroyOnWaterSurfaceOffset = -6;
         size[] = {0.05, 3, 9, 12};
-        moveVelocityVar[] = {0.20, 0.20, 0.20};
     };
     class ACE_SmokeBaseSmall: ACE_SmokeBaseLarge {
+        destroyOnWaterSurfaceOffset = -4;
         size[] = {0.05, 2, 6, 8};
-        moveVelocityVar[] = {0.15, 0.15, 0.15};
     };
 
     // - 40mm smoke grenades --------------------------------------------------
     class ACE_SmokeBase40mm: ACE_SmokeBaseLarge {
+        destroyOnWaterSurfaceOffset = -5;
         lifeTime = 15;
         size[] = {0.05, 2.5, 7.5, 10};
-        moveVelocityVar[] = {0.10, 0.10, 0.10};
     };
 
     // - Artillery smoke submunition ------------------------------------------
@@ -78,6 +78,7 @@ class CfgCloudlets {
     // - Smoke on water surface -----------------------------------------------
     class ACE_SmokeAfterWaterWhite: ACE_SmokeBaseLarge {
         interval = 0.05;
+        destroyOnWaterSurfaceOffset = -3;
         size[] = {0.05, 2, 6};
         sizeVar = 1;
         lifeTime = 10;
