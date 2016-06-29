@@ -20,7 +20,7 @@ class CfgAmmo
         ACE_bulletLength=58.674;
         ACE_bulletMass=43;    //Nammo AS technical data
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
-        ACE_ballisticCoefficients[]={0.670};
+        ACE_ballisticCoefficients[]={0.670};    // ?
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=1;
@@ -113,6 +113,42 @@ class CfgAmmo
         ACE_muzzleVelocities[]={875, 910, 930};
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
+    class rhs_ammo_46x30_FMJ : rhs_ammo_556x45_M855A1_Ball {
+        ACE_caliber=4.65;
+        ACE_bulletLength=18.5;
+        ACE_bulletMass=2.6;
+        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[]={0.171};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ICAO";
+        ACE_dragModel=1;
+        ACE_muzzleVelocities[]={620};
+        ACE_barrelLengths[]={180};
+    };
+    class rhs_ammo_46x30_JHP : rhs_ammo_46x30_FMJ {
+        ACE_caliber=4.65;
+        ACE_bulletLength=18.5;
+        ACE_bulletMass=2.0;
+        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[]={0.112};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ICAO";
+        ACE_dragModel=1;
+        ACE_muzzleVelocities[]={690};
+        ACE_barrelLengths[]={180};
+    };
+    class rhs_ammo_46x30_AP : rhs_ammo_46x30_FMJ {
+        ACE_caliber=4.65;
+        ACE_bulletLength=18.5;
+        ACE_bulletMass=2.0;
+        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
+        ACE_ballisticCoefficients[]={0.141};
+        ACE_velocityBoundaries[]={};
+        ACE_standardAtmosphere="ICAO";
+        ACE_dragModel=1;
+        ACE_muzzleVelocities[]={680};
+        ACE_barrelLengths[]={180};
+    };        
     class rhs_ammo_45ACP_MHP: BulletBase {
         ACE_caliber=11.481;
         ACE_bulletLength=17.272;
