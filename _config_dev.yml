@@ -8,8 +8,8 @@ productionUrl: http://localhost:4000
 githubUrl: https://github.com/acemod/ACE3
 version:
   major: 3
-  minor: 5
-  patch: 1
+  minor: 6
+  patch: 0
   build: 0
 
 
