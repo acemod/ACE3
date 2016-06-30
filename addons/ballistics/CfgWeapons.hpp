@@ -1,7 +1,3 @@
-
-class Single;
-class Burst;
-class FullAuto;
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
@@ -90,7 +86,10 @@ class CfgWeapons {
 
     /* MX */
 
-    class arifle_MX_Base_F: Rifle_Base_F {};
+    class arifle_MX_Base_F: Rifle_Base_F {
+        class Single: Mode_SemiAuto {};
+        class FullAuto: Mode_FullAuto {};
+    };
     class arifle_MX_SW_F: arifle_MX_Base_F {
         magazines[] = {
             "100Rnd_65x39_caseless_mag_Tracer",
