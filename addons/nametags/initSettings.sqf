@@ -9,6 +9,7 @@
         [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(OnlyCursor), LSTRING(OnlyKeypress), LSTRING(OnlyCursorAndKeypress)],
         1
     ],
+    false,
     FUNC(updateSettings)
 ] call CBA_Settings_fnc_init;
 
@@ -74,7 +75,6 @@
     nil,
     LSTRING(SettingsCategory),
     false,
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -84,7 +84,6 @@
     nil,
     LSTRING(SettingsCategory),
     [0, 50, 5, 0],
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -94,6 +93,5 @@
     nil,
     LSTRING(SettingsCategory),
     [0.00, 1.00, 0.80, 2],
-    nil,
     true
 ] call CBA_Settings_fnc_init;
