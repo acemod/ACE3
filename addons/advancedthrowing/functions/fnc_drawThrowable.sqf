@@ -56,6 +56,10 @@ if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
 };
 
+// Exit in case of explosion in hand
+if (isNull _activeThrowable) exitWith {
+    [ACE_player, "No active throwable (explosion in hand)"] call FUNC(exitThrowMode);
+};
 
 // Set position
 private _posHeadRel = ACE_player selectionPosition "head";

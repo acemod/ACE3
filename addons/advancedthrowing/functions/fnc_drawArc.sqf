@@ -22,6 +22,7 @@ if !([ACE_player] call FUNC(canThrow)) exitWith {
 
 private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNull];
 
+// Exit during switches and similar where object can be null for a very short amount of time
 if (isNull _activeThrowable) exitWith {};
 
 private _dropMode = ACE_player getVariable [QGVAR(dropMode), false];
