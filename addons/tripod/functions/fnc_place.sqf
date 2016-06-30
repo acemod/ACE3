@@ -6,7 +6,7 @@
  * 0: unit <OBJECT>
  * 1: tripod class <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

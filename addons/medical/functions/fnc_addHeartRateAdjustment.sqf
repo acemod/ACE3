@@ -22,4 +22,4 @@ private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushBack [_value, _time, _callBack];
 _unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
 
-["ace_addedHeartRateAdjustment", [_unit, _value, _time]] call CBA_fnc_localEvent;
+["ace_heartRateAdjustmentAdded", [_unit, _value, _time]] call CBA_fnc_localEvent;

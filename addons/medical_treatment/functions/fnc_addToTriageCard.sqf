@@ -38,5 +38,6 @@ private _amount = 1;
 if (!_inList) then {
     _log pushBack [_newItem, 1, CBA_missionTime];
 };
+
 _unit setVariable [QEGVAR(medical,triageCard), _log, true];
-["ace_itemAddedToTriageCard", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;
+["ace_triageCardItemAdded", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;

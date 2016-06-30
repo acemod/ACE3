@@ -1,12 +1,15 @@
 /*
  * Author: Ir0n1E
- * check gunbag status full/empty
+ * Check gunbag status full/empty.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [player] call ace_gunbag_fnc_status
  *
  * Public: No
  */

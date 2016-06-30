@@ -55,3 +55,11 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
+
+class Extended_Local_EventHandlers {
+    class CAManBase {
+        class ADDON {
+            local = QUOTE(call FUNC(handleLocal));
+        };
+    };
+};

@@ -1,4 +1,5 @@
 #define COMPONENT optionsmenu
+#define COMPONENT_BEAUTIFIED Options Menu
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE

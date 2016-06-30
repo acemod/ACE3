@@ -21,10 +21,9 @@ class CfgPatches {
 
 // TODO validate and check
 class ACE_newEvents {
-    medical_treatmentSuccess = "ace_treatmentSuccess";
-    Medical_onItemAddedToTriageCard = "ace_itemAddedToTriageCard";
+    medical_treatmentSuccess = "ace_treatmentSucceded";
+    Medical_onItemAddedToTriageCard = "ace_triageCardItemAdded";
     medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
-    Medical_onHeartRateAdjustmentAdded = "ace_addedHeartRateAdjustment";
     placedInBodyBag = "ace_placedInBodyBag";
 
     actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);

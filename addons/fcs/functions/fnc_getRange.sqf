@@ -2,13 +2,13 @@
  * Author: commy2
  * Read laser distance measurement from engine.
  *
- * Argument:
+ * Arguments:
  * 0: Measurement Accuracy (default: 1) <NUMBER>
  * 1: Maximum measure distance (default: 5000) <NUMBER>
  * 2: Minimum measure distance (default: 0) <NUMBER>
  * 3: Blank display on range error (default: false) <BOOL>
  *
- * Return value:
+ * Return Value:
  * Measured distance <NUMBER>
  *
  * Public: No

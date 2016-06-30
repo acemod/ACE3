@@ -1,4 +1,5 @@
 #define COMPONENT gunbag
+#define COMPONENT_BEAUTIFIED Gunbag
 #include "\z\ace\addons\main\script_mod.hpp"
 
 //#define DEBUG_ENABLED_GUNBAG
@@ -16,5 +17,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define CLASSNAME ACE_Gunbag
 #define PROGRESSBAR_TIME 5

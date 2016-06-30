@@ -20,7 +20,7 @@
             <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
             <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
             <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
+            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de lignes.</French>
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
@@ -42,7 +42,7 @@
             <Polish>Hełmy</Polish>
             <Italian>Copricapi</Italian>
             <Spanish>Cascos</Spanish>
-            <French>Equipement de tête</French>
+            <French> Couvre-chefs</French>
             <Portuguese>Capacetes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
@@ -72,7 +72,7 @@
             <Polish>Kamizelki</Polish>
             <Italian>Vests</Italian>
             <Spanish>Chalecos</Spanish>
-            <French>Gilets</French>
+            <French>Vestes</French>
             <Portuguese>Coletes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">

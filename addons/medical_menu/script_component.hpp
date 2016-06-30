@@ -1,4 +1,5 @@
 #define COMPONENT medical_menu
+#define COMPONENT_BEAUTIFIED Medical Menu
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

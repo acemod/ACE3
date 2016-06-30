@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_SpareBarrel"};
         requiredVersion = REQUIRED_VERSION;
@@ -54,7 +55,7 @@ class CfgGesturesMale {
 class ACE_newEvents {
     initiateSwapBarrelAssisted = QGVAR(initiateSwapBarrelAssisted);
     showWeaponTemperature = QGVAR(showWeaponTemperature);
-    spareBarrelsLoadCoolest = QGVAR(spareBarrelsLoadCoolest);
-    spareBarrelsSendTemperatureHint = QGVAR(spareBarrelsSendTemperatureHint);
+    loadCoolestSpareBarrel = QGVAR(loadCoolestSpareBarrel);
+    sendSpareBarrelTemperatureHint = QGVAR(sendSpareBarrelTemperatureHint);
     weaponJammed = "ace_weaponJammed";
 };

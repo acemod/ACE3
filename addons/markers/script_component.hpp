@@ -1,4 +1,5 @@
 #define COMPONENT markers
+#define COMPONENT_BEAUTIFIED Markers
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

@@ -39,10 +39,10 @@ private _elements = getArray (_config >> "elements");
 {
     private _condition = call compile (getText _x);
     if !(_condition) exitWith {
-        TRACE_2("Condition False",_element,_x);
         // Display and print info which component forced the element except for default vehicle check
         if (_showHint) then {
             [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'",_element,configName _x);
         };
         _show = false;
     };
@@ -50,15 +50,15 @@ private _elements = getArray (_config >> "elements");
 
 // Get setting from scripted API
 if (!_force) then {
-    private _index = GVAR(elementsSet) find [_element, _show];
-    if (_index == -1) then {
-        _index = GVAR(elementsSet) find [_element, !_show];
-        if (_index != -1) then {
-            if (_showHint) then {
-                [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
-            };
-            _show = ((GVAR(elementsSet)) select _index) select 1;
+    private _setElement = [_element] call FUNC(findSetElement);
+    _setElement params ["_indexSet", "_sourceSet", "_showSet"];
+
+    if (_indexSet != -1) then {
+        if (_showHint) then {
+            [LSTRING(Disabled), 2] call EFUNC(common,displayTextStructured);
+            ACE_LOGINFO_2("Attempted modification of a forced User Interface element '%1' by '%2'",_element,_sourceSet);
         };
+        _show = _showSet;
     };
 };
 

@@ -7,6 +7,7 @@
             <Spanish>Efectos Gforces</Spanish>
             <Czech>G Force efekty</Czech>
             <Portuguese>Efeitos de ForçaG</Portuguese>
+            <French>Effets de force gravitationnelle</French>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -14,6 +15,7 @@
             <Spanish>Sólo Aeronave</Spanish>
             <Czech>Pouze letadla</Czech>
             <Portuguese>Somente Aeronave</Portuguese>
+            <French>Avions seulement</French>
         </Key>
     </Package>
 </Project>

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Flashlight classname ("" for off) <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

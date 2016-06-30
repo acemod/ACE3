@@ -1,4 +1,5 @@
 #define COMPONENT javelin
+#define COMPONENT_BEAUTIFIED Javelin
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

@@ -1,18 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tripod">
-        <Key ID="STR_ACE_SpottingScope_Component">
-            <English>Advanced Combat Environment 3 - Spotting Scope</English>
-            <German>Advanced Combat Environment 3 - Teleskop</German>
-            <Russian>Advanced Combat Environment 3 - Зрительная труба</Russian>
-            <Polish>Advanced Combat Environment 3 - Teleskop</Polish>
-            <Spanish>Advanced Combat Environment 3 - Telescopio</Spanish>
-            <French>Advanced Combat Environment 3 - Téléscope de visée</French>
-            <Czech>Advanced Combat Environment 3 - Zaměřovací dalekohled</Czech>
-            <Italian>Advanced Combat Environment 3 - Spotting Scope</Italian>
-            <Hungarian>Advanced Combat Environment 3 - Megfigyelő távcső</Hungarian>
-            <Portuguese>Advanced Combat Environment 3 - Luneta de observador</Portuguese>
-        </Key>
         <Key ID="STR_ACE_SpottingScope_DisplayName">
             <English>Spotting Scope</English>
             <German>Teleskop</German>

@@ -2,10 +2,10 @@
  * Author: ACE2 Team
  * Updates GVAR(currentHumidity)
  *
- * Argument:
+ * Arguments:
  * Nothing
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Example:

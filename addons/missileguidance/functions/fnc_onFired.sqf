@@ -70,6 +70,12 @@ if(isNil "_target") then {
     };
 };
 
+//ToDo: Add correct configs for new apex titans (in ace_javelin)
+if ((isNil "_target") && {(_weapon == "launch_B_Titan_short_tna_F") || {_weapon == "launch_O_Titan_short_ghex_F"}}) then {
+    ACE_LOGWARNING_1("APEX Launcher [%1] not supported - Wait for ACE 3.6.1",_weapon);
+    if (!isNull cursorObject) then {_target = cursorObject;}; //Attempt to give some kind of target or it will
+};
+
 TRACE_4("Beginning ACE guidance system",_target,_ammo,_seekerType,_attackProfile);
 _args = [_this,
             [_shooter,

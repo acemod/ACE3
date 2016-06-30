@@ -2,11 +2,11 @@
  * Author: commy2 and esteldunedain
  * Count the ammo of the currently loaded magazine or count rifle grenades. Play animation and display message.
  *
- * Argument:
+ * Arguments:
  * 0: Player <OBJECT>
  * 1: Target. Optional, if not suplied the player counts his personal or static weapon ammo <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Nothing
  */
 #include "script_component.hpp"

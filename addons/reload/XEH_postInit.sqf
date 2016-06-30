@@ -27,7 +27,7 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_addEventHandler;
 
 // Listen for attempts to link ammo
-[QGVAR(linkedAmmo), {
+[QGVAR(ammoLinked), {
     params ["_receiver", "_giver", "_magazine"];
 
     private _magazineType = currentMagazine _receiver;
@@ -35,7 +35,7 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if it's the wrong type
     if (_magazineType != (_magazine select 0)) exitWith {
-        [QGVAR(returnedAmmo), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+        [QGVAR(ammoReturned), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     private _ammoCount = _receiver ammo currentWeapon _receiver;
@@ -43,7 +43,7 @@ if (!hasInterface) exitWith {};
 
     // Return the magazine if the belt is full or empty
     if ((_ammoCount == 0)  || _ammoMissing == 0) exitWith {
-        [QGVAR(returnedAmmo), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
+        [QGVAR(ammoReturned), [_giver,_receiver,_magazine], [_giver]] call CBA_fnc_targetEvent;
     };
 
     // Add the ammo
@@ -51,14 +51,14 @@ if (!hasInterface) exitWith {};
     [QGVAR(syncAmmo), [_receiver, currentWeapon _receiver, _ammoCount + _ammoAdded]] call CBA_fnc_globalEvent;
 
     if ((_magazine select 1) - _ammoAdded > 0) then {
-        [QGVAR(returnedAmmo), [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
+        [QGVAR(ammoReturned), [_giver, _receiver, [_magazineType, (_magazine select 1) - _ammoAdded]], [_giver]] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;
 
 // Listen for returned magazines
-[QGVAR(returnedAmmo), {
+[QGVAR(ammoReturned), {
     params ["_receiver", "", "_magazine"];
-    TRACE_2("returnedAmmo EH",_receiver,_magazine);
+    TRACE_2("ammoReturned EH",_receiver,_magazine);
 
     _receiver addMagazine _magazine;
 }] call CBA_fnc_addEventHandler;

@@ -6,7 +6,7 @@
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Object unloaded <BOOL>
  *
  * Example:

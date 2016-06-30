@@ -2,11 +2,11 @@
  * Author: commy2
  * Return all magazine types from reloaders inventory that are compatible with given weapon.
  *
- * Argument:
+ * Arguments:
  * 0: Unit to to the reload (Object)
  * 1: A launcher (String)
  *
- * Return value:
+ * Return Value:
  * Reloable magazines (Array)
  *
  * Public: No

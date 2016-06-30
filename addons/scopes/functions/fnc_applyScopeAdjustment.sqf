@@ -2,13 +2,13 @@
  * Author: KoffeinFlummi, Ruthberg
  * Applies the adjustment for the current scope
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Absolute elevation <NUMBER>
  * 2: Absolute windage <NUMBER>
  * 3: Absolute zero reference <NUMBER>
  *
- * Return value:
+ * Return Value:
  * True <BOOL>
  *
  * Example:

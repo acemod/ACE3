@@ -1,4 +1,3 @@
-
 class ACE_Medical_Advanced {
     // Defines all the possible injury types for advanced medical
     class Injuries {

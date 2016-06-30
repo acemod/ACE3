@@ -5,7 +5,7 @@
             <English>Take Prisoner</English>
             <German>Gefangen nehmen</German>
             <Spanish>Tomar prisionero</Spanish>
-            <French>Prendre prisonnier</French>
+            <French>Prendre le prisonnier</French>
             <Polish>Aresztuj</Polish>
             <Czech>Zajmout osobu</Czech>
             <Italian>Arresta il prigioniero</Italian>
@@ -190,7 +190,7 @@
             <Czech>Spoutat jednotku</Czech>
             <Italian>Metti manette all'unità</Italian>
             <Spanish>Hacer que la unidad esté esposada</Spanish>
-            <French>Rend une unité captive</French>
+            <French>Rendre une unité captive</French>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
