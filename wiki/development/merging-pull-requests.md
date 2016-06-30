@@ -31,4 +31,4 @@ Non-trivial pull requests remain open for a minimum of 48 hours, to give all oth
 
 
 #### New Addons / Other Changes
-If a pull request adds a new addon, or changes something else, like the README, everyone has 72 hours to comment on the changes. After that, one of the [project leads](/team.html#ace3_project_lead) will merge it.
+If a pull request adds a new addon, or changes something else, like the README, everyone has 72 hours to comment on the changes. After that, one of the project leads will merge it.
