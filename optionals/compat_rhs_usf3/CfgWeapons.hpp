@@ -156,7 +156,6 @@ class CfgWeapons {
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
-        ACE_Overheating_dispersion = 0.75;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
         ACE_barrelTwist = 285.75;
