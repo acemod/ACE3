@@ -5,6 +5,7 @@
     LSTRING(enabled_displayName),
     ELSTRING(Common,ACEKeybindCategoryCommon),
     false,
+    true,
     {
         if (!hasInterface) exitWith {};
 
@@ -20,8 +21,7 @@
                 GVAR(incomingFingerEHId) = nil;
             };
         };
-    },
-    true
+    }
 ] call CBA_Settings_fnc_init;
 
 [
@@ -30,7 +30,6 @@
     [LSTRING(maxRange_displayName), LSTRING(maxRange_description)],
     ELSTRING(Common,ACEKeybindCategoryCommon),
     [0, 10, 4, 0],
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
