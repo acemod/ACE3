@@ -5,8 +5,8 @@
     [LSTRING(EnableFrag), LSTRING(EnableFrag_Desc)],
     LSTRING(SettingsCategory),
     true,
-    FUNC(toggleSetting),
-    true
+    true,
+    FUNC(toggleSetting)
 ] call CBA_Settings_fnc_init;
 
 [
@@ -15,7 +15,6 @@
     [LSTRING(EnableSpall), LSTRING(EnableSpall_Desc)],
     LSTRING(SettingsCategory),
     false,
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -25,7 +24,6 @@
     [LSTRING(EnableReflections), LSTRING(EnableReflections_Desc)],
     LSTRING(SettingsCategory),
     false,
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -35,7 +33,6 @@
     [LSTRING(MaxTrack), LSTRING(MaxTrack_Desc)],
     LSTRING(SettingsCategory),
     [0, 1000, 500, 0],
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -45,7 +42,6 @@
     [LSTRING(MaxTrackPerFrame), LSTRING(MaxTrackPerFrame_Desc)],
     LSTRING(SettingsCategory),
     [0, 100, 50, 0],
-    nil,
     true
 ] call CBA_Settings_fnc_init;
 
@@ -55,6 +51,5 @@
     [LSTRING(EnableDebugTrace), LSTRING(EnableDebugTrace_Desc)],
     LSTRING(SettingsCategory),
     false,
-    nil,
     true
 ] call CBA_Settings_fnc_init;
