@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_medicalSupplyCrate", "ACE_medicalSupplyCrate_advanced", "ACE_fieldDressingItem", "ACE_packingBandageItem", "ACE_elasticBandageItem", "ACE_tourniquetItem", "ACE_morphineItem", "ACE_atropineItem", "ACE_epinephrineItem", "ACE_plasmaIVItem", "ACE_bloodIVItem", "ACE_salineIVItem", "ACE_quikclotItem", "ACE_personalAidKitItem", "ACE_surgicalKitItem", "ACE_bodyBagItem", "ACE_bodyBagObject"};
         weapons[] = {"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_tourniquet", "ACE_morphine", "ACE_atropine", "ACE_epinephrine", "ACE_plasmaIV", "ACE_plasmaIV_500", "ACE_plasmaIV_250", "ACE_bloodIV", "ACE_bloodIV_500", "ACE_bloodIV_250", "ACE_salineIV", "ACE_salineIV_500", "ACE_salineIV_250", "ACE_quikclot", "ACE_personalAidKit", "ACE_surgicalKit", "ACE_bodyBag"};
         requiredVersion = REQUIRED_VERSION;
@@ -28,12 +29,12 @@ class CfgPatches {
 
 class ACE_newEvents {
     medical_onUnconscious = "ace_unconscious";
-    medical_treatmentSuccess = "ace_treatmentSuccess";
+    medical_treatmentSuccess = "ace_treatmentSucceded";
     medical_onSetDead = "ace_killed";
-    Medical_onEnteredCardiacArrest = "ace_enteredCardiacArrest";
-    Medical_onItemAddedToTriageCard = "ace_itemAddedToTriageCard";
+    Medical_onEnteredCardiacArrest = "ace_cardiacArrestEntered";
+    Medical_onItemAddedToTriageCard = "ace_triageCardItemAdded";
     medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
-    Medical_onHeartRateAdjustmentAdded = "ace_addedHeartRateAdjustment";
+    Medical_onHeartRateAdjustmentAdded = "ace_heartRateAdjustmentAdded";
     placedInBodyBag = "ace_placedInBodyBag";
     actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);
     treatmentTourniquetLocal = QGVAR(treatmentTourniquetLocal);

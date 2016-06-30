@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Item_ATragMX"};
         weapons[] = {"ACE_ATragMX"};
         requiredVersion = REQUIRED_VERSION;

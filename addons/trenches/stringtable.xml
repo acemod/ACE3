@@ -125,16 +125,19 @@
             <English>Continue Digging Trench</English>
             <Polish>Wzów kopanie wnęki</Polish>
             <Portuguese>Continuar cavando trincheira</Portuguese>
+            <French>Continuer à creuser la tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
             <Polish>Usuń wnękę</Polish>
             <Portuguese>Remover trincheira</Portuguese>
+            <French>Retirer la tranchée</French>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
             <Polish>Usuwanie wnęki</Polish>
             <Portuguese>Removendo tricnheira</Portuguese>
+            <French>Retirement de la tranchée</French>
         </Key>
     </Package>
 </Project>

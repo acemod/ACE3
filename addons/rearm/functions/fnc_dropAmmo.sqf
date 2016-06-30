@@ -20,6 +20,8 @@
 private ["_dummy", "_actionID"];
 params [["_unit", objNull, [objNull]], ["_delete", false, [false]], ["_unholster", true, [true]]];
 
+if (isNull _unit) exitWith {};
+
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _dummy) then {
     detach _dummy;

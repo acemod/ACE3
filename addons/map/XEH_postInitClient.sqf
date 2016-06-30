@@ -100,15 +100,15 @@ call FUNC(determineZoom);
         GVAR(flashlightInUse) = "";
         GVAR(glow) = objNull;
 
-        ["ace_playerInventoryChanged", {
+        ["loadout", {
             private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
             };
-        }] call CBA_fnc_addEventHandler;
+        }] call CBA_fnc_addPlayerEventHandler;
 
         if (GVAR(mapGlow)) then {
-            ["ace_visibleMapChanged", {
+            ["visibleMap", {
                 params ["_player", "_mapOn"];
                 if (_mapOn) then {
                     if (!alive _player && !isNull GVAR(glow)) then {
@@ -128,7 +128,7 @@ call FUNC(determineZoom);
                         [""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call CBA_fnc_addEventHandler;
+            }] call CBA_fnc_addPlayerEventHandler;
         };
     };
 }] call CBA_fnc_addEventHandler;
@@ -136,7 +136,7 @@ call FUNC(determineZoom);
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["ace_playerInventoryChanged", {
+["loadout", {
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };
@@ -145,4 +145,4 @@ GVAR(hasWatch) = true;
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
     } count (assignedItems ACE_player);
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;

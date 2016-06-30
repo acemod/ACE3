@@ -64,13 +64,7 @@ if (_state) then {
                 TRACE_1("removing animChanged EH",_animChangedEHID);
                 _unit removeEventHandler ["AnimChanged", _animChangedEHID];
             };
-            _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-                params ["_unit", "_newAnimation"];
-                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-                    TRACE_1("Surrender animation interrupted",_newAnimation);
-                    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
-                };
-            }];
+            _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;

@@ -1,4 +1,5 @@
 #define COMPONENT APL
+#define COMPONENT_BEAUTIFIED APL
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

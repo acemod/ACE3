@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_acc_pointer_red","ACE_acc_pointer_green","ACE_acc_pointer_green_IR"};
         requiredVersion = REQUIRED_VERSION;

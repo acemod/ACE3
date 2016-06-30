@@ -2,10 +2,10 @@
  * Author: Ruthberg
  * Gather weather parameters and broadcast them to the clients
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

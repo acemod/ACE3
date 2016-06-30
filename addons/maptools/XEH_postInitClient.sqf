@@ -22,7 +22,7 @@ GVAR(mapTool_isRotating) = false;
     ((findDisplay 12) displayCtrl 51) ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapToolMarkers);}];
 }, []] call CBA_fnc_waitUntilAndExecute;
 
-["ace_visibleMapChanged", {
+["visibleMap", {
     params ["", "_mapOn"];
     if (_mapOn) then {
         // Show GPS if required
@@ -31,4 +31,4 @@ GVAR(mapTool_isRotating) = false;
         // Hide GPS
         [false] call FUNC(openMapGps);
     };
-}] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addPlayerEventHandler;

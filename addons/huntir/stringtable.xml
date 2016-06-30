@@ -9,7 +9,7 @@
             <Russian>Ящик с HuntIR</Russian>
             <Italian>HuntIR Transport Box</Italian>
             <Polish>Skrzynia HuntIR</Polish>
-            <French>HuntIR Transport Box</French>
+            <French>Boite de transport HuntIR</French>
             <Hungarian>HuntIR Transport Box</Hungarian>
             <Portuguese>Caixa de transporte do HuntIR</Portuguese>
         </Key>
@@ -45,7 +45,7 @@
             <Russian>Включить HuntIR монитор</Russian>
             <Italian>Activate HuntIR monitor</Italian>
             <Polish>Włącz odbiornik HuntIR</Polish>
-            <French>Allumer écran HuntIR</French>
+            <French>Allumer l'écran du HuntIR</French>
             <Hungarian>HuntIR monitor aktiválása</Hungarian>
             <Portuguese>Ativar monitor do HuntIR</Portuguese>
         </Key>
@@ -57,7 +57,7 @@
             <Russian>Камера:</Russian>
             <Italian>Camera:</Italian>
             <Polish>Kamera:</Polish>
-            <French>Caméra:</French>
+            <French>Caméra :</French>
             <Hungarian>Kamera:</Hungarian>
             <Portuguese>Câmera:</Portuguese>
         </Key>
@@ -69,7 +69,7 @@
             <Russian>Высота:</Russian>
             <Italian>Altitude:</Italian>
             <Polish>Wysokość:</Polish>
-            <French>Altitude:</French>
+            <French>Altitude :</French>
             <Hungarian>Magasság:</Hungarian>
             <Portuguese>Altitude:</Portuguese>
         </Key>
@@ -81,7 +81,7 @@
             <Russian>Время записи:</Russian>
             <Italian>Recording Time:</Italian>
             <Polish>Czas nagrywania:</Polish>
-            <French>Temps d'enregistrement:</French>
+            <French>Temps d'enregistrement :</French>
             <Hungarian>Felvételi idő:</Hungarian>
             <Portuguese>Tempo de gravação:</Portuguese>
         </Key>
@@ -93,7 +93,7 @@
             <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
             <Italian>Press ESC to quit camera</Italian>
             <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
-            <French>Appuyer sur ESC pour quitter camera</French>
+            <French>Appuyer sur ESC pour quitter la camera</French>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
             <Portuguese>Pressione ESC para sair da câmera</Portuguese>
         </Key>
@@ -117,7 +117,7 @@
             <Russian>A/D - Приближение</Russian>
             <Italian>A/D - Cycle zoom</Italian>
             <Polish>A/D - powiększenie</Polish>
-            <French>A/D - Changement zoom</French>
+            <French>Q/D - Changement de zoom</French>
             <Hungarian>A/D - Nagyítás</Hungarian>
             <Portuguese>A/D - Troca zoom</Portuguese>
         </Key>
@@ -129,7 +129,7 @@
             <Russian>W/S - Выбрать камеру</Russian>
             <Italian>W/S - Select camera</Italian>
             <Polish>W/S - wybór kamery</Polish>
-            <French>W/S - Sélectionner caméra</French>
+            <French>Z/S - Sélectionner la caméra</French>
             <Hungarian>W/S - Kamera váltás</Hungarian>
             <Portuguese>W/S - Seleciona câmera</Portuguese>
         </Key>
@@ -141,7 +141,7 @@
             <Russian>Влево/Вправо - Вращать камеру</Russian>
             <Italian>Left/Right - Rotate camera</Italian>
             <Polish>Lewo/Prawo - obrót kamery w poziomie</Polish>
-            <French>Gauche/Droite - Rotation caméra</French>
+            <French>Gauche/Droite - Rotation de la caméra</French>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
             <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
         </Key>
@@ -153,7 +153,7 @@
             <Russian>Вверх/Вниз - Поднять/Опустить камеру</Russian>
             <Italian>Up/Down - Elevate/lower camera</Italian>
             <Polish>Góra/Dół - obrót kamery w pionie</Polish>
-            <French>Haut/Bas - Monter/descendre caméra</French>
+            <French>Haut/Bas - Monter/descendre la caméra</French>
             <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
             <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
         </Key>
@@ -177,7 +177,7 @@
             <Russian>R - Сбросить настройки камеры</Russian>
             <Italian>R - Reset camera</Italian>
             <Polish>R - resetuj kamerę</Polish>
-            <French>R - Reset caméra</French>
+            <French>R - Reset de la caméra</French>
             <Hungarian>R - Kamera visszaállítása</Hungarian>
             <Portuguese>R - Redefine a câmera</Portuguese>
         </Key>

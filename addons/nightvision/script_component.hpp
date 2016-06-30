@@ -1,4 +1,5 @@
 #define COMPONENT nightvision
+#define COMPONENT_BEAUTIFIED Night Vision
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

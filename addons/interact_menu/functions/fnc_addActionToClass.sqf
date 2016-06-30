@@ -3,13 +3,13 @@
  * Insert an ACE action to a class, under a certain path
  * Note: This function is NOT global.
  *
- * Argument:
+ * Arguments:
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  *
- * Return value:
+ * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:

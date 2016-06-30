@@ -39,4 +39,4 @@ if (!_inList) then {
     _log pushBack [_newItem, 1, CBA_missionTime];
 };
 _unit setVariable [QGVAR(triageCard), _log, true];
-["ace_itemAddedToTriageCard", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;
+["ace_triageCardItemAdded", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;

@@ -1,13 +1,16 @@
 /*
  * Author: Ir0n1E
- * get weapon out of gunbag
+ * Get weapon out of gunbag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [player, target] call ace_gunbag_fnc_offGunbagCallback
  *
  * Public: No
  */
@@ -43,6 +46,6 @@ private _mass = [_weapon, _items, _magazines] call FUNC(calculateMass);
 _gunbag setVariable [QGVAR(gunbagWeapon), [], true];
 
 // play sound
-if (!isNil "ACE_Backpacks") then {
+if (["ace_backpacks"] call EFUNC(common,isModLoaded)) then {
     [_target, _gunbag] call EFUNC(backpacks,backpackOpened);
 };

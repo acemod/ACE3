@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Compile the action menu from config for an object's class
  *
- * Argument:
+ * Arguments:
  * 0: Object or class name <OBJECT> or <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

@@ -1,5 +1,12 @@
 #include "script_component.hpp"
 
+["ace_settingsInitialized",{
+    // Only add an InitPost EH if setting is enabled (and apply retroactively)
+    if (isServer && GVAR(autoAddObjects)) then {
+        ["AllVehicles", "InitPost", FUNC(addObjectToCurator), true, [], true] call CBA_fnc_addClassEventHandler;
+    };
+}] call CBA_fnc_addEventHandler;
+
 // Global skill module PVs values for persistence, just listen for the PV
 QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
 

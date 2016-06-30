@@ -44,7 +44,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = ECSTRING(common,Author);
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
         model = "\A3\Weapons_f\dummyweapon.p3d";
@@ -67,7 +67,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_Explosives_Place";
         displayName = "Multi-meter";
         mapSize = 0.2;

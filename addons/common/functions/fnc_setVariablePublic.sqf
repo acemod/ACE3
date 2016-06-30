@@ -2,13 +2,13 @@
  * Author: commy2 and CAA-Picard and joko and PabstMirror
  * Publish a variable, but wait a certain amount of time before allowing it to be published it again.
  *
- * Argument:
+ * Arguments:
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
  * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
- * Return value:
+ * Return Value:
  * Nothing.
  *
  * Example:

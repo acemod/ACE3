@@ -3,29 +3,29 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Actions {
             class ACE_MainActions {
-                class GVAR(WeapontoGunbag) {
-                    displayName = CSTRING(toGunbag);
+                class GVAR(weaponTo) {
+                    displayName = CSTRING(ToGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 0});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(toGunbag));
                     showDisabled = 0;
                     priority = 1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
-                class GVAR(WeaponoffGunbag) {
-                    displayName = CSTRING(offGunbag);
+                class GVAR(weaponOff) {
+                    displayName = CSTRING(OffGunbag);
                     condition = QUOTE(([_target] call FUNC(hasGunbag)) && {[ARR_2(_player,_target)] call FUNC(canInteract) == 1});
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(offGunbag));
                     showDisabled = 0;
                     priority = 1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
-                class GVAR(StatusGunbag) {
+                class GVAR(status) {
                     displayName = CSTRING(Status);
                     condition = QUOTE([_target] call FUNC(hasGunbag));
                     statement = QUOTE([_target] call FUNC(status));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                 };
             };
         };
@@ -33,35 +33,35 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class GVAR(actions) {
-                    displayName = CSTRING(displayname);
+                    displayName = CSTRING(Displayname);
                     condition = QUOTE([_player] call FUNC(hasGunbag));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                    icon = QPATHTOF(ui\gunbag_icon_ca.paa);
 
-                    class GVAR(WeapontoGunbag) {
-                        displayName = CSTRING(toGunbag);
+                    class GVAR(weaponTo) {
+                        displayName = CSTRING(ToGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 0);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(toGunbag));
                         showDisabled = 0;
                         priority = 1;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
-                    class GVAR(WeaponoffGunbag) {
-                        displayName = CSTRING(offGunbag);
+                    class GVAR(weaponOff) {
+                        displayName = CSTRING(OffGunbag);
                         condition = QUOTE([ARR_2(_player,_player)] call FUNC(canInteract) == 1);
                         statement = QUOTE([ARR_2(_player,_player)] call FUNC(offGunbag));
                         showDisabled = 0;
                         priority = 1;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
-                    class GVAR(StatusGunbag) {
+                    class GVAR(status) {
                         displayName = CSTRING(Status);
                         condition = QUOTE([_player] call FUNC(hasGunbag));
                         statement = QUOTE([_player] call FUNC(status));
                         showDisabled = 0;
                         priority = 2;
-                        icon = PATHTOF(ui\gunbag_icon_ca.paa);
+                        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
                     };
                 };
             };
@@ -69,33 +69,33 @@ class CfgVehicles {
     };
 
     class Bag_Base;
-    class CLASSNAME: Bag_Base {
-        _generalMacro = QUOTE(CLASSNAME);
+    class ADDON: Bag_Base {
+        _generalMacro = QUOTE(ADDON);
         author = "Ir0n1E";
         scope = 2;
         displayName = CSTRING(Displayname);
-        model = PATHTOF(data\gunbag.p3d);
-        picture = PATHTOF(ui\gunbag_ca.paa);
-        icon = PATHTOF(ui\gunbag_icon_ca.paa);
-        hiddenSelections[] = {QUOTE(Camo),QUOTE(insignia)};
-        hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_co.paa)};
+        model = QPATHTOF(data\ace_gunbag.p3d);
+        picture = QPATHTOF(ui\gunbag_ca.paa);
+        icon = QPATHTOF(ui\gunbag_icon_ca.paa);
+        hiddenSelections[] = {"Camo", "insignia"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\gunbag_co.paa)};
         maximumLoad = 80;
         mass = 11;
     };
 
-    class DOUBLES(CLASSNAME,Tan): CLASSNAME {
-        _generalMacro = QUOTE(DOUBLES(CLASSNAME,Tan));
+    class GVAR(Tan): ADDON {
+        _generalMacro = QGVAR(Tan);
         author = "Ir0n1E";
         displayName = CSTRING(Displayname_Tan);
-        picture = PATHTOF(ui\gunbag_tan_ca.paa);
-        hiddenSelectionsTextures[] = {PATHTOF(data\gunbag_tan_co.paa)};
+        picture = QPATHTOF(ui\gunbag_tan_ca.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\gunbag_tan_co.paa)};
     };
 
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportBackpacks {
-            MACRO_ADDBACKPACK(CLASSNAME,3);
-            MACRO_ADDBACKPACK(DOUBLES(CLASSNAME,Tan),3);
+            MACRO_ADDBACKPACK(ADDON,3);
+            MACRO_ADDBACKPACK(GVAR(Tan),3);
         };
     };
 };

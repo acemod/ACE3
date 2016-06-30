@@ -2,10 +2,10 @@
  * Author: KoffeinFlummi, esteldunedain
  * Adjusts the flight path of the bullet according to the zeroing. Called from the unified fired EH only for local and non-local players on foot.
  *
- * Argument:
+ * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

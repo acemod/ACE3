@@ -1,4 +1,5 @@
 #define COMPONENT refuel
+#define COMPONENT_BEAUTIFIED Refuel
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

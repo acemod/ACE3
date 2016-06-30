@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -24,6 +25,6 @@ class ACE_newEvents {
     pardon = QGVAR(pardon);
     tapShoulder = QGVAR(tapShoulder);
     sendAway = QGVAR(sendAway);
-    lampTurnOff = QGVAR(lampTurnOff);
-    lampTurnOn = QGVAR(lampTurnOn);
+    lampTurnOff = QGVAR(setLampOff);
+    lampTurnOn = QGVAR(setLampOn);
 };
