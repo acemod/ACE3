@@ -3,7 +3,7 @@ class CfgAmmo
 {
     class BulletBase;
     class B_127x99_Ball;
-    class rhsusf_ammo_127x99_M33_Ball : B_127x99_Ball {
+    class rhsusf_ammo_127x99_M33_Ball: B_127x99_Ball {
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=42.83;   //661gr - Barret technical data
@@ -15,7 +15,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={900};
         ACE_barrelLengths[]={736.6};
     };
-    class rhsusf_ammo_127x99_mk211 : rhsusf_ammo_127x99_M33_Ball {
+    class rhsusf_ammo_127x99_mk211: rhsusf_ammo_127x99_M33_Ball {
         ACE_caliber=12.954;
         ACE_bulletLength=58.674;
         ACE_bulletMass=43;    //Nammo AS technical data
@@ -113,7 +113,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={875, 910, 930};
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
-    class rhs_ammo_46x30_FMJ : rhs_ammo_556x45_M855A1_Ball {
+    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball {
         ACE_caliber=4.65;
         ACE_bulletLength=21;
         ACE_bulletMass=2.6;
@@ -125,7 +125,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={620};
         ACE_barrelLengths[]={180};
     };
-    class rhs_ammo_46x30_JHP : rhs_ammo_46x30_FMJ {
+    class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ {
         ACE_caliber=4.65;
         ACE_bulletLength=17.4;
         ACE_bulletMass=2.0;
@@ -137,7 +137,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={690};
         ACE_barrelLengths[]={180};
     };
-    class rhs_ammo_46x30_AP : rhs_ammo_46x30_FMJ {
+    class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ {
         ACE_caliber=4.65;
         ACE_bulletLength=20.3;
         ACE_bulletMass=2.0;
@@ -161,7 +161,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={230, 250, 285};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class rhs_ammo_9x19_FMJ : BulletBase {
+    class rhs_ammo_9x19_FMJ: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -173,7 +173,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={340, 370, 400};
         ACE_barrelLengths[]={101.6, 127.0, 228.6};
     };
-    class rhs_ammo_9x19_JHP : BulletBase {
+    class rhs_ammo_9x19_JHP: BulletBase {
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
