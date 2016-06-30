@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Handle mouse buttons.
  *
- * Argument:
+ * Arguments:
  * 0: 1 if mouse down down, 0 if mouse button up (Number)
  * 1: Parameters of the mouse button event
  *
- * Return value:
+ * Return Value:
  * Boolean, true if event was handled
  */
 #include "script_component.hpp"

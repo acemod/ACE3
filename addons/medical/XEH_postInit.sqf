@@ -151,11 +151,16 @@ GVAR(effectTimeBlood) = CBA_missionTime;
     // Bleeding Indicator
     if (_bleeding > 0 and GVAR(effectTimeBlood) + 3.5 < CBA_missionTime) then {
         GVAR(effectTimeBlood) = CBA_missionTime;
-        [600 * _bleeding] call BIS_fnc_bloodEffect;
+        [600 * _bleeding] call FUNC(showBloodEffect);
     };
 
     // Blood Volume Effect
-    _blood = (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
+    _blood = if (GVAR(level) < 2) then {
+        (ACE_player getVariable [QGVAR(bloodVolume), 100]) / 100;
+    } else {
+        (((ACE_player getVariable [QGVAR(bloodVolume), 100]) - 60) max 0) / 40;
+    };
+
     if (_blood > 0.99) then {
         GVAR(effectBloodVolumeCC) ppEffectEnable false;
     } else {
@@ -292,7 +297,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 ["isNotUnconscious", {!((_this select 0) getVariable ["ACE_isUnconscious", false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // Item Event Handler
-["ace_playerInventoryChanged", FUNC(itemCheck)] call CBA_fnc_addEventHandler;
+["loadout", FUNC(itemCheck)] call CBA_fnc_addPlayerEventHandler;
 
 if (hasInterface) then {
     ["ace_playerJIP", {

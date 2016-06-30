@@ -20,8 +20,7 @@
 params ["_target", "_player", "_selectionN", "_actionData"];
 
 if (GVAR(level) < 2 || {!([_target] call FUNC(hasMedicalEnabled))}) exitWith {
-    private ["_pointDamage"];
-    _pointDamage = (_target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
+    private _pointDamage = (_target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
 
     if (_pointDamage >= 0.8) exitWith {
         _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
@@ -31,8 +30,7 @@ if (GVAR(level) < 2 || {!([_target] call FUNC(hasMedicalEnabled))}) exitWith {
     };
 };
 
-private ["_openWounds", "_amountOf"];
-_openWounds = _target getVariable [QGVAR(openWounds), []];
+private _openWounds = _target getVariable [QGVAR(openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_x4"];
     if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitWith {

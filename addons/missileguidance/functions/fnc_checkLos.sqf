@@ -2,17 +2,19 @@
  * Author: jaynus
  * Returns whether the seeker object can see the target position with lineIntersect
  *
- * Argument:
+ * Arguments:
  * 0: Seeker [Object]
  * 1: Target [Object]
  * 
- * Return value:
+ * Return Value:
  *    Boolean
  */
 #include "script_component.hpp"
 private["_seeker", "_seekerPos", "_target", "_targetPos", "_return", "_vectorTo", "_searchPos"];
 _seeker = _this select 0;
 _target = _this select 1;
+
+if ((isNil "_seeker") || {isNil "_target"}) exitWith {false};
 
 _targetPos = getPosASL _target;
 _seekerPos = getPosASL _seeker;

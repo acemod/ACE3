@@ -21,16 +21,16 @@
 private ["_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxDelay", "_config", "_woundTreatmentConfig", "_bandagedWounds", "_exist", "_injuryId", "_existingInjury", "_delay", "_openWounds", "_selectedInjury", "_bandagedInjury"];
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
-_classID = _injury select 1;
-_className = GVAR(woundClassNames) select _classID;
+private _classID = _injury select 1;
+private _className = GVAR(woundClassNames) select _classID;
 
 // default, just in case..
-_reopeningChance = 0.1;
-_reopeningMinDelay = 120;
-_reopeningMaxDelay = 200;
+private _reopeningChance = 0.1;
+private _reopeningMinDelay = 120;
+private _reopeningMaxDelay = 200;
 
 // Get the default values for the used bandage
-_config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
+private _config = (ConfigFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Bandaging");
 if (isClass (_config >> _bandage)) then {
     _config = (_config >> _bandage);
     _reopeningChance = getNumber (_config >> "reopeningChance");
@@ -41,7 +41,7 @@ if (isClass (_config >> _bandage)) then {
 };
 
 if (isClass (_config >> _className)) then {
-    _woundTreatmentConfig = (_config >> _className);
+    private _woundTreatmentConfig = (_config >> _className);
     if (isNumber (_woundTreatmentConfig >> "reopeningChance")) then {
         _reopeningChance = getNumber (_woundTreatmentConfig >> "reopeningChance");
     };
@@ -56,10 +56,10 @@ if (isClass (_config >> _className)) then {
 };
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
-_bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
-_injuryType = _injury select 1;
-_exist = false;
-_bandagedInjury = [];
+private _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
+private _injuryType = _injury select 1;
+private _exist = false;
+private _bandagedInjury = [];
 {
     if ((_x select 1) == _injuryType && (_x select 2) == (_injury select 2)) exitwith {
         _exist = true;
@@ -85,19 +85,18 @@ if (random(1) <= _reopeningChance) then {
     _delay = _reopeningMinDelay + random(_reopeningMaxDelay - _reopeningMinDelay);
     TRACE_1("Will open",_delay);
     [{
-        private ["_bandage", "_openWounds", "_selectedInjury","_bandagedWounds","_exist"];
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
         TRACE_5("params",_target,_impact,_part,_injuryIndex,_injury);
 
         //if (alive _target) then {
-            _openWounds = _target getVariable [QGVAR(openWounds), []];
-            if ((count _openWounds)-1 < _injuryIndex) exitwith {};
-            _selectedInjury = _openWounds select _injuryIndex;
+            private _openWounds = _target getVariable [QGVAR(openWounds), []];
+            if ((count _openWounds) - 1 < _injuryIndex) exitwith {};
+            private _selectedInjury = _openWounds select _injuryIndex;
             if (_selectedInjury select 1 == _injury select 1 && (_selectedInjury select 2) == (_injury select 2)) then { // matching the IDs
 
-                _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
-                _exist = false;
-                _injuryId = _injury select 1;
+                private _bandagedWounds = _target getVariable [QGVAR(bandagedWounds), []];
+                private _exist = false;
+                private _injuryId = _injury select 1;
                 {
                     if ((_x select 1) == _injuryId && (_x select 2) == (_injury select 2)) exitwith {
                         _exist = true;

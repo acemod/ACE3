@@ -35,4 +35,4 @@ private _animation = switch (currentWeapon _player) do {
 // Set variables to nil
 _player setVariable [QGVAR(isSitting), nil];
 if (isNull _seat) exitWith {};
-_seat setVariable [QGVAR(seatOccupied), nil, true];
+[objNull, _seat] call EFUNC(common,claim);

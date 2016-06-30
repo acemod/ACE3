@@ -25,7 +25,7 @@ if !(isNull _dummy) exitWith {};
 //_target attachTo [_unit, [0,0.7,0], "pelvis"];
 _target attachTo [_unit, [0,1,0], "pelvis"];
 {
-    [[_target, [[-1,0,0],[0,0,1]]], QFUNC(makeDummy), _x] call EFUNC(common,execRemoteFnc);
+    [QGVAR(makeDummyEH), [_dummy, [[-1,0,0],[0,0,1]]], _x] call CBA_fnc_targetEvent;
 } count (position _unit nearObjects ["CAManBase", 100]);
 _unit setVariable [QGVAR(dummy), _target];
 //_unit setVariable [QEGVAR(dragging,isCarrying), true, true];  // breaks things, since it hides interact menu on _target

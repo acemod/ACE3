@@ -1,4 +1,5 @@
 #define COMPONENT flashlights
+#define COMPONENT_BEAUTIFIED Flashlights
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

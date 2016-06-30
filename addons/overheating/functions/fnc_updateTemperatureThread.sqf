@@ -2,10 +2,10 @@
  * Author: esteldunedain
  * Update cooldown calculation of all player weapons at regular intervals.
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -14,20 +14,18 @@
 
 #include "script_component.hpp"
 
-private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 
 if (!local _unit) exitWith {
     [QGVAR(addToTriageCard), _this, _unit] call CBA_fnc_targetEvent;
 };
 
-_log = _unit getVariable [QGVAR(triageCard), []];
-_inList = false;
-_amount = 1;
+private _log = _unit getVariable [QGVAR(triageCard), []];
+private _inList = false;
+private _amount = 1;
 {
     if ((_x select 0) == _newItem) exitWith {
-        private "_info";
-        _info = _log select _forEachIndex;
+        private _info = _log select _forEachIndex;
         _info set [1,(_info select 1) + 1];
         _info set [2, CBA_missionTime];
         _log set [_forEachIndex, _info];
@@ -41,4 +39,4 @@ if (!_inList) then {
     _log pushBack [_newItem, 1, CBA_missionTime];
 };
 _unit setVariable [QGVAR(triageCard), _log, true];
-["ace_itemAddedToTriageCard", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;
+["ace_triageCardItemAdded", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;

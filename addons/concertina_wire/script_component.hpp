@@ -1,4 +1,5 @@
 #define COMPONENT concertina_wire
+#define COMPONENT_BEAUTIFIED Concertina Wire
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

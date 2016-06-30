@@ -1,4 +1,5 @@
 #define COMPONENT map_gestures
+#define COMPONENT_BEAUTIFIED Map Gestures
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

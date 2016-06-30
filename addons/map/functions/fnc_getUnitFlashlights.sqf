@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit to check <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Flashlight classnames (empty for none) <ARRAY>
  *
  * Example:

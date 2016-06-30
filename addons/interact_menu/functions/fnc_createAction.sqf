@@ -3,7 +3,7 @@
  * Creates an isolated ACE action
  * Note: This function is NOT global.
  *
- * Argument:
+ * Arguments:
  * 0: Action name <STRING>
  * 1: Name of the action shown in the menu <STRING>
  * 2: Icon <STRING>
@@ -16,7 +16,7 @@
  * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
  * 10: Modifier function <CODE> (Optional)
  *
- * Return value:
+ * Return Value:
  * Action <ARRAY>
  *
  * Example:

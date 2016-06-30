@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The Map <CONTROL>
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Public: No

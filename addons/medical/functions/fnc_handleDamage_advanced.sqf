@@ -23,7 +23,6 @@
 
 #include "script_component.hpp"
 
-private ["_typeOfProjectile", "_part", "_damageBodyParts", "_hitPoints"];
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "_newDamage"];
 
 //Temp fix for 1.63 handleDamage changes
@@ -31,17 +30,17 @@ if (_newDamage isEqualType objNull) then {
     _newDamage = _this select 7;
 };
 
-_part = [_selectionName] call FUNC(selectionNameToNumber);
+private _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitWith {};
 
-_hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
+private _hitPoints = ["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"];
 // Sorting out the damage
-_damageBodyParts = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+private _damageBodyParts = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 
 _damageBodyParts set [_part, (_damageBodyParts select _part) + _newDamage];
 _unit setVariable [QGVAR(bodyPartStatus), _damageBodyParts, true];
 
-_typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
+private _typeOfDamage = [_typeOfProjectile] call FUNC(getTypeOfDamage);
 
 [_unit, _selectionName, _newDamage, _typeOfProjectile, _typeOfDamage] call FUNC(handleDamage_assignWounds);
 

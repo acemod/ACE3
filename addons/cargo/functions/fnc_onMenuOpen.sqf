@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Display <DISPLAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

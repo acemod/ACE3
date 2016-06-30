@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Render all action points
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
@@ -16,8 +16,8 @@ GVAR(currentOptions) = [];
 
 private _player = ACE_player;
 
-private _cameraPosASL = AGLtoASL (positionCameraToWorld [0, 0, 0]);
-private _cameraDir = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff _cameraPosASL;
+GVAR(cameraPosASL) = AGLtoASL (positionCameraToWorld [0, 0, 0]);
+GVAR(cameraDir) = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff GVAR(cameraPosASL);
 
 private _fnc_renderNearbyActions = {
     // Render all nearby interaction menus
@@ -32,7 +32,7 @@ private _fnc_renderNearbyActions = {
         private _target = _x;
 
         // Quick oclussion test. Skip objects more than 1 m behind the camera plane
-        private _lambda = ((getPosASL _x) vectorDiff _cameraPosASL) vectorDotProduct _cameraDir;
+        private _lambda = ((getPosASL _x) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir);
         if ((_lambda > -1) && {!isObjectHidden _target}) then {
             private _numInteractions = 0;
             // Prevent interacting with yourself or your own vehicle

@@ -126,7 +126,7 @@
             <Spanish>Cañón de repuesto</Spanish>
             <Polish>Zapasowa lufa</Polish>
             <Czech>Náhradní hlaveň</Czech>
-            <French>Deuxième canon</French>
+            <French>Canon de rechange</French>
             <Russian>Запасной ствол</Russian>
             <Hungarian>Tartalék cső</Hungarian>
             <Portuguese>Cano Reserva</Portuguese>
@@ -265,10 +265,12 @@
         <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
             <English>Check spare barrels temperatures</English>
             <Portuguese>Verifica temperatura de canos reservas</Portuguese>
+            <French>Vérifier la température des canons de rechange</French>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
+            <French>Vérification de la température des canons de rechange...</French>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -285,32 +287,39 @@
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
+            <French>Canon(s) de rechange froid</French>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
+            <French>Canon(s) de rechange tiède</French>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
+            <French>Canon(s) de rechange chaud</French>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
+            <French>Canon(s) de rechange très chaud</French>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
+            <French>Canon(s) de rechange extrêmement chaud</French>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
             <German>Überhitzen Aktiviert</German>
             <Spanish>Activada Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
+            <French>Surchauffe activée</French>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
+            <French>Activateur maître pour le module de surchauffe / enrayement</French>
         </Key>
     </Package>
 </Project>

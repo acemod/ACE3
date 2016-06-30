@@ -24,6 +24,7 @@
 private ["_dummy", "_weaponSelect", "_turretOwnerID"];
 params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
+TRACE_6("params",_target,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _target, _turretPath, _numMagazines, _magazineClass, _numRounds];
 
@@ -31,14 +32,18 @@ if (local _unit) then {
     [_unit, true, true] call FUNC(dropAmmo);
 };
 
+//ToDo: Cleanup with CBA_fnc_ownerEvent in CBA 2.4.2
+[QGVAR(rearmSuccessLocalEH), _this] call CBA_fnc_globalEvent;
+
+/* 
 if (isServer) then {
     _turretOwnerID = _target turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
-        [_this, QFUNC(rearmSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+        [QGVAR(rearmSuccessLocalEH), _this, _vehicle] call CBA_fnc_targetEvent;
     } else {
-        EGVAR(common,remoteFnc) = [_this, QFUNC(rearmSuccessLocal), 0];
-        _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+        [QGVAR(rearmSuccessLocalEH), _this, _turretOwnerID] call CBA_fnc_targetEvent;
     };
 } else {
-    [_this, QFUNC(rearmSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [QGVAR(rearmSuccessLocalEH), _this] call CBA_fnc_serverEvent;
 };
+ */

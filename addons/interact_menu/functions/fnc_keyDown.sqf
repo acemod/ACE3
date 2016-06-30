@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Handle interactions key down
  *
- * Argument:
+ * Arguments:
  * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
  *
- * Return value:
+ * Return Value:
  * true <BOOL>
  *
  * Public: No

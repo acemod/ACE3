@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  * 3: Parameters <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
