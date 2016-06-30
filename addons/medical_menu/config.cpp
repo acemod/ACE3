@@ -6,19 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_medical_treatment"};
+        requiredAddons[] = {"ace_medical", "ace_medical_ui", "ace_medical_treatment"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Glowbal"};
+        authors[] = {""};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
-#include "ui\menu.hpp"
-#include "ACE_Settings.hpp"
-#include "CfgVehicles.hpp"
-
-class ACE_newEvents {
-    Medical_onMenuOpen = "ace_medicalMenuOpened";
-};

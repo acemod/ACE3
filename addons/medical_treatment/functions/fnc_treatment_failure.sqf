@@ -58,7 +58,7 @@ if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "")
 
 // Record specific callback
 private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (EGVAR(medical,level) >= 2) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 

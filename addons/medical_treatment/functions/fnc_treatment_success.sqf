@@ -53,7 +53,7 @@ if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "")
 
 // Record specific callback
 private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (EGVAR(medical,level) >= 2) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 
@@ -67,10 +67,10 @@ if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT co
 
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;
-private _partNumber = ([_selectionName] call EFUNC(medical,selectionNameToNumber)) max 0;
+private _partNumber = ([_selectionName] call FUNC(selectionNameToNumber)) max 0;
 
 // Add all bleeding from wounds on selection
-private _openWounds = _target getvariable [QEGVAR(medical,openWounds), []];
+private _openWounds = _target getvariable [QGVAR(openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
     if (_selectionX == _partNumber) then {
@@ -84,8 +84,8 @@ _args pushBack _bloodLossOnSelection;
 _args call FUNC(createLitter);
 
 //If we're not already tracking vitals, start:
-if (!(_target getVariable [QEGVAR(medical,addedToUnitLoop),false])) then {
-    [_target] call EFUNC(medical,addVitalLoop);
+if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
+    [_target] call FUNC(addVitalLoop);
 };
 
-["ace_treatmentSuccess", [_caller, _target, _selectionName, _className]] call CBA_fnc_localEvent;
+["ace_treatmentSucceded", [_caller, _target, _selectionName, _className]] call CBA_fnc_localEvent;

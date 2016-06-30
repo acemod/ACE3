@@ -26,7 +26,7 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 if !(_target isKindOf "CAManBase") exitWith {false};
 
 private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
-if (EGVAR(medical,level) >= 2) then {
+if (GVAR(level) >= 2) then {
     _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
 };
 
@@ -45,7 +45,7 @@ private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     0;
 };
 
-if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitwith {false};
+if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
 
 private _allowedSelections = getArray (_config >> "allowedSelections");
 if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
@@ -77,7 +77,7 @@ private _patientStateCondition = if (isText(_config >> "patientStateCondition"))
 } else {
     getNumber(_config >> "patientStateCondition")
 };
-if (_patientStateCondition == 1 && {!([_target] call EFUNC(medical,isInStableCondition))}) exitwith {false};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
 
 // Check allowed locations
 private _locations = getArray (_config >> "treatmentLocations");
@@ -85,8 +85,8 @@ private _locations = getArray (_config >> "treatmentLocations");
 if ("All" in _locations) then {
     _return = true;
 } else {
-    private _medFacility = {([_caller] call EFUNC(medical,isInMedicalFacility)) || ([_target] call EFUNC(medical,isInMedicalFacility))};
-    private _medVeh = {([_caller] call EFUNC(medical,isInMedicalVehicle)) || ([_target] call EFUNC(medical,isInMedicalVehicle))};
+    private _medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
+    private _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isInMedicalVehicle))};
 
     {
         if (_x == "field") exitwith {_return = true;};

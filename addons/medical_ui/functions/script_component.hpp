@@ -1,0 +1,1 @@
+#include "\z\ace\addons\medical_ui\script_component.hpp"

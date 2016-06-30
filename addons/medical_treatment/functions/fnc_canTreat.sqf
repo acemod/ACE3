@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 
 if !(_target isKindOf "CAManBase") exitWith { false };
 
-private _config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select (EGVAR(medical,level)>=2)) >> _className);
+private _config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
 
 if !(isClass _config) exitwith {false};
 
@@ -39,7 +39,7 @@ private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     };
     0;
 };
-if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitwith { false };
+if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith { false };
 
 private _items = getArray (_config >> "items");
 if (count _items > 0 && {!([_caller, _target, _items] call FUNC(hasItems))}) exitwith { false };
@@ -68,13 +68,13 @@ private _patientStateCondition = if (isText(_config >> "patientStateCondition"))
 } else {
     getNumber(_config >> "patientStateCondition")
 };
-if (_patientStateCondition == 1 && {!([_target] call EFUNC(medical,isInStableCondition))}) exitwith {false};
+if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
 
 private _locations = getArray (_config >> "treatmentLocations");
 if ("All" in _locations) exitwith { true };
 
-private _medFacility = {([_caller] call EFUNC(medical,isInMedicalFacility)) || ([_target] call EFUNC(medical,isInMedicalFacility))};
-private _medVeh = {([_caller] call EFUNC(medical,isInMedicalVehicle)) || ([_target] call EFUNC(medical,isInMedicalVehicle))};
+private _medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
+private _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isInMedicalVehicle))};
 
 {
     if (_x == "field") exitwith {_return = true;};

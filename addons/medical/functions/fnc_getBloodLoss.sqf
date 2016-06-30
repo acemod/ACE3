@@ -13,8 +13,6 @@
 
 #include "script_component.hpp"
 
-#define BLOODLOSSRATE_BASIC 0.2
-
 // TODO Only use this calculation if medium or higher, otherwise use vanilla calculations (for basic medical).
 params ["_unit"];
 

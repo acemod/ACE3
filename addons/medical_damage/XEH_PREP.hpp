@@ -1,0 +1,13 @@
+PREP(airwayHandler);
+PREP(damageCache);
+PREP(damageOrchestration);
+PREP(fracturesHandler);
+PREP(getTypeOfDamage);
+PREP(handleDamage);
+PREP(getTypeOfDamage);
+PREP(internalInjuriesHandler);
+PREP(setDamage);
+PREP(translateSelections);
+PREP(woundsHandler);
+PREP(woundsHandlerSqf);
+PREP(install);

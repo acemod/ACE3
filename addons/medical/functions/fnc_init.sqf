@@ -14,24 +14,18 @@
 
 params ["_unit"];
 
-// basic
 _unit setVariable [QGVAR(pain), 0, true];
-_unit setVariable [QGVAR(morphine), 0, true];
 _unit setVariable [QGVAR(bloodVolume), 100, true];
-_unit setVariable ["ACE_isUnconscious", false, true];
+_unit setVariable ["ACE_isUnconscious", false, true]; // TODO this is done based on state
 
-// advanced
 // tourniquets
 _unit setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
-
-//Delayed Medications (from tourniquets)
-_unit setVariable [QGVAR(occludedMedications), nil, true];
+_unit setVariable [QGVAR(occludedMedications), nil, true]; //Delayed Medications (from tourniquets)
 
 // wounds and injuries
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(internalWounds), [], true];
-_unit setVariable [QGVAR(lastUniqueWoundID), 1, true];
 
 // vitals
 _unit setVariable [QGVAR(heartRate), 80];
@@ -43,8 +37,9 @@ _unit setVariable [QGVAR(peripheralResistance), 100];
 _unit setVariable [QGVAR(fractures), [], true];
 
 // triage card and logs
-_unit setVariable [QGVAR(triageLevel), 0, true];
-_unit setVariable [QGVAR(triageCard), [], true];
+// TODO move to treatment
+//_unit setVariable [QGVAR(triageLevel), 0, true];
+//_unit setVariable [QGVAR(triageCard), [], true];
 
 // IVs
 _unit setVariable [QGVAR(salineIVVolume), 0, true];
@@ -60,8 +55,8 @@ _unit setVariable [QGVAR(airwayOccluded), false];
 _unit setVariable [QGVAR(airwayCollapsed), false];
 
 // generic medical admin
-_unit setVariable [QGVAR(addedToUnitLoop), false, true];
-_unit setVariable [QGVAR(inCardiacArrest), false, true];
+_unit setVariable [QGVAR(addedToUnitLoop), false, true]; // TODO this is replaced by unit state
+_unit setVariable [QGVAR(inCardiacArrest), false, true]; // TODO this is no longer present
 _unit setVariable [QGVAR(hasLostBlood), 0, true];
 _unit setVariable [QGVAR(isBleeding), false, true];
 _unit setVariable [QGVAR(hasPain), false, true];
@@ -77,12 +72,14 @@ _allUsedMedication = _unit getVariable [QGVAR(allUsedMedication), []];
 } forEach _allUsedMedication;
 _unit setVariable [QGVAR(allUsedMedication), [], true];
 
+// TODO move to treatment
 _logs = _unit getVariable [QGVAR(allLogs), []];
 {
     _unit setVariable [_x, nil];
 } forEach _logs;
 _unit setVariable [QGVAR(allLogs), [], true];
 
+// TODO move to treatment
 // items
 [{
     _this call FUNC(itemCheck);
