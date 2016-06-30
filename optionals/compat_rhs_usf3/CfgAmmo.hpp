@@ -113,7 +113,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={875, 910, 930};
         ACE_barrelLengths[]={330.2, 406.4, 508.0};
     };
-    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball {
+    class rhs_ammo_46x30_FMJ: rhs_ammo_556x45_M855A1_Ball {    //RUAG Ammotec
         ACE_caliber=4.65;
         ACE_bulletLength=21;
         ACE_bulletMass=2.6;
@@ -125,7 +125,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={620};
         ACE_barrelLengths[]={180};
     };
-    class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ {
+    class rhs_ammo_46x30_JHP: rhs_ammo_46x30_FMJ {    //RUAG Ammotec
         ACE_caliber=4.65;
         ACE_bulletLength=17.4;
         ACE_bulletMass=2.0;
@@ -137,7 +137,7 @@ class CfgAmmo
         ACE_muzzleVelocities[]={690};
         ACE_barrelLengths[]={180};
     };
-    class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ {
+    class rhs_ammo_46x30_AP: rhs_ammo_46x30_FMJ {    //RUAG Ammotec
         ACE_caliber=4.65;
         ACE_bulletLength=20.3;
         ACE_bulletMass=2.0;
