@@ -34,7 +34,7 @@ class CfgWeapons {
                 "rhs_mag_M715_green",
                 "rhs_mag_M716_yellow",
 
-                //bis compatibility
+                // bis compatibility
                 "1Rnd_HE_Grenade_shell",
                 "UGL_FlareWhite_F",
                 "UGL_FlareGreen_F",
@@ -62,7 +62,7 @@ class CfgWeapons {
                 "3Rnd_SmokeBlue_Grenade_shell",
                 "3Rnd_SmokeOrange_Grenade_shell",
 
-                //ACE3 Compatibility
+                // ACE3 Compatibility
                 "ACE_HuntIR_M203"
             };
         };
@@ -80,7 +80,7 @@ class CfgWeapons {
                 "rhs_mag_M715_green",
                 "rhs_mag_M716_yellow",
 
-                //bis compatibility
+                // bis compatibility
                 "1Rnd_HE_Grenade_shell",
                 "UGL_FlareWhite_F",
                 "UGL_FlareGreen_F",
@@ -108,7 +108,7 @@ class CfgWeapons {
                 "3Rnd_SmokeBlue_Grenade_shell",
                 "3Rnd_SmokeOrange_Grenade_shell",
 
-                //ACE3 Compatibility
+                // ACE3 Compatibility
                 "ACE_HuntIR_M203"
             };
         };
@@ -131,18 +131,18 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 508.0;
     };
-    class rhs_weap_lmg_minimi_railed;    //Rifle_Base_F - scope = private;
+    class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
-        ACE_barrelLength = 414;    //16.3" FN America
+        ACE_barrelLength = 414; // 16.3" FN America
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
-        ACE_barrelLength = 520.7;    //20.5" FN America
+        ACE_barrelLength = 520.7; // 20.5" FN America
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
-    class rhs_weap_m240_base;    //Rifle_Long_Base_F
+    class rhs_weap_m240_base; // Rifle_Long_Base_F
     class rhs_weap_m240B: rhs_weap_m240_base {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 629.92;
@@ -176,7 +176,7 @@ class CfgWeapons {
         ACE_barrelTwist = 160.0;
         ACE_barrelLength = 180.0;     
     };
-    //RHS pistols
+    // RHS pistols
     class hgun_ACPC2_F;
     class rhsusf_weap_m1911a1: hgun_ACPC2_F {
         ACE_barrelTwist = 406.4;
@@ -191,7 +191,7 @@ class CfgWeapons {
         ACE_barrelTwist = 248.92;
         ACE_barrelLength = 124.46;
     };
-    //RHS sniper scopes
+    // RHS sniper scopes
     class rhsusf_acc_sniper_base;
     class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
@@ -217,7 +217,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
     };
-    //RHS lauchers
+    // RHS lauchers
     class rhs_weap_fgm148: launch_O_Titan_F {
         ace_javelin_enabled = 1;
         weaponInfoType = "ACE_RscOptics_javelin";
