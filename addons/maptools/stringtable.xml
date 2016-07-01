@@ -143,5 +143,11 @@
             <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
         </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
+            <English>Draw straight lines with maptools</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_description">
+            <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
+        </Key>
     </Package>
 </Project>
