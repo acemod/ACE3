@@ -5,15 +5,15 @@ class ACE_Medical_StateMachine {
         onStateLeaving = "";
         class Injury {
             targetState = "Injured";
-            events[] = {'TakenInjury'};
+            events[] = {"TakenInjury"};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
-            events[] = {'InjuryCritical', 'CriticalVitals'};
+            events[] = {"InjuryCritical", "CriticalVitals"};
         };
         class FatalInjuryOrVitals {
             targetState = "Dead";
-            events[] = {'FatalVitals', 'InjuryFatal'};
+            events[] = {"FatalVitals", "InjuryFatal"};
         };
     };
     class Injured {
@@ -23,19 +23,19 @@ class ACE_Medical_StateMachine {
 
         class FullHeal {
             targetState = "Default";
-            events[] = {'FullHeal'};
+            events[] = {"FullHeal"};
         };
         class LastWoundTreated {
             targetState = "Default";
-            events[] = {'LastWoundTreated'};
+            events[] = {"LastWoundTreated"};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
-            events[] = {'InjuryCritical', 'CriticalVitals'};
+            events[] = {"InjuryCritical", "CriticalVitals"};
         };
         class FatalInjuryOrVitals {
             targetState = "Dead";
-            events[] = {'FatalVitals', 'InjuryFatal'};
+            events[] = {"FatalVitals", "InjuryFatal"};
         };
     };
     class Unconscious {
@@ -45,16 +45,16 @@ class ACE_Medical_StateMachine {
         class WakeUpFromKnockDown {
             targetState = "Injured";
             condition = QUOTE(_unit call FUNC(hasStableVitals));
-            events[] = {'MinUnconsciousTimer'};
+            events[] = {"MinUnconsciousTimer"};
         };
         class WakeUpStable {
             targetState = "Injured";
             condition = "unitUnconsciousTimer >= MinUnconsciousTimer";
-            events[] = {'VitalsWentStable'};
+            events[] = {"VitalsWentStable"};
         };
         class FatalTransitions {
             targetState = "Dead";
-            events[] = {'InjuryFatal', 'FatalVitals', 'UnconsciousTimerRanOut'};
+            events[] = {"InjuryFatal", "FatalVitals", "UnconsciousTimerRanOut"};
         };
     };
     class Dead {
@@ -66,24 +66,24 @@ class ACE_Medical_StateMachine {
         onStateLeaving = QUOTE(DFUNC(leavingRevive)); // leave unconscious animation & state
         class FullHeal {
             targetState = "Default";
-            events[] = {'fullyHealed'};
+            events[] = {"fullyHealed"};
             onTransition = "";
         };
         class Revived {
             targetState = "Injured";
-            events[] = {'Revived'};
+            events[] = {"Revived"};
             onTransition = "";
         };
         class TimerRanOut {
             targetState = "Dead";
             condition = "timerValue >= maxReviveTime";
-            events[] = {'ReviveTimer'};
+            events[] = {"ReviveTimer"};
             onTransition = "";
         };
         class FatalTransitions {
             targetState = "Dead";
             condition = "killOnFatalDamageInRevive && inReviveState >= 10";
-            events[] = {'FatalInjury'};
+            events[] = {"FatalInjury"};
         };
     };
 };

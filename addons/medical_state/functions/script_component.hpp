@@ -1,1 +1,0 @@
-#include "\z\ace\addons\medical_state\script_component.hpp"

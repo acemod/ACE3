@@ -1,6 +1,7 @@
 
 PREP(addStateHandler);
 PREP(adjustPainLevel);
+PREP(createStateMachine);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
@@ -18,3 +19,5 @@ PREP(parseConfigForInjuries);
 PREP(selectionNameToNumber);
 PREP(setHitPointDamage);
 PREP(setStructuralDamage);
+PREP(stateEvent);
+PREP(stateMachine);

@@ -5,9 +5,10 @@ params ["_stateMachineConfig"];
 private _getCode = {
     params ["_config", "_attribute"];
     private _value = getText (_config >> _attribute);
-    if (_value == "") {_value = "true"};
+    if (_value == "") then {_value = "true"};
     compile _value;
 };
+private _stateMachine = call CBA_fnc_createNamespace;
 
 private _states = [];
 {
@@ -21,7 +22,7 @@ private _states = [];
     {
         private _transitionName = configName _x;
         private _targetState = getText (_x >> "targetState");
-        private _events = getArray (_x >> "events");
+        private _events = getArray (_x >> "events") apply { toLower _x};
         private _condition = [_x, "condition"] call _getCode;
         private _onTransition = [_x, "onTransition"] call _getCode;
 
@@ -40,14 +41,12 @@ private _getState = {
     _state;
 };
 
+_stateMachine setvariable [QGVAR(allStates), _states];
+
 // Now we have collected all the states, link them in transitions so we do not have to look them up on state transitions
 {
-    _x params ["", "", "", "", "_transitions"];
-    {
-        _x params ["", "", "", "", "_targetState"];
-        private _state = [_targetState] call _getState;
-        _x set [4, _state];
-    } forEach _transitions;
+    _x params ["_stateName"];
+    _stateMachine setvariable [_stateName, _x];
 } forEach _states;
 
-_states;
+_stateMachine;

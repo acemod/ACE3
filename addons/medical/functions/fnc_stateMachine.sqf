@@ -2,7 +2,7 @@
 
 // Delay between state runs
 #define DELAY 10
-#define DEFAULT_STATE [0, "Default", {}, {}, {}, []];
+#define DEFAULT_STATE [0, "Default", {}, {}, {}, []]
 
 GVAR(monitoredUnitsList) = [];
 GVAR(monitoredUnitsListIsSorted) = false;
@@ -20,7 +20,7 @@ GVAR(monitoredUnitsListIsSorted) = false;
     {
        _x params ["_unit"];
 
-       if (!isNull _unit && alive _unit) {
+       if (!isNull _unit && alive _unit) then {
            private _unitState = _unit getvariable [QGVAR(state), [CBA_missionTime, DEFAULT_STATE]];
            _unitState params ["_lastTime", "_state"];
 
