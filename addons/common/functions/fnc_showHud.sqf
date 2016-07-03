@@ -33,7 +33,7 @@ if (!hasInterface) exitWith {[-1]};
 params [["_reason", "", [""]], ["_mask", [], [[]], [0,8,9]]];
 
 if ((count _mask) == 8) then {
-    ACE_LOGWARNING_1("ace_common_fnc_showHud - mask now takes 9 arguements in 1.62 [called with %1]",_this);
+    ACE_LOGWARNING_1("ace_common_fnc_showHud - mask now takes 9 arguments in 1.62 [called with %1]",_this);
     _mask pushBack true;
 };
 
