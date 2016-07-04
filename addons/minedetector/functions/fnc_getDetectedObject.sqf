@@ -21,8 +21,12 @@ params ["_unit", "_detectorConfig"];
 _detectorConfig params ["", "_radius"];
 
 private _worldPosition = _unit modelToWorld (_unit selectionPosition "granat");
-private _direction = _unit weaponDirection "Put";
-private _detectorPointAGL = _worldPosition vectorAdd (_direction vectorMultiply __DR);
+private _ref = (_unit weaponDirection currentWeapon _unit) call EFUNC(common,createOrthonormalReference);
+_ref params ["_v1", "_v2", "_v3"];
+private _detectorPointAGL = _worldPosition vectorAdd
+                                (_v1 vectorMultiply ( 0.9 * __DR)) vectorAdd
+                                (_v2 vectorMultiply (-0.2 * __DR)) vectorAdd
+                                (_v3 vectorMultiply ( 0.4 * __DR));
 
 private _nearestObjects = nearestObjects [_detectorPointAGL, [], _radius];
 
