@@ -84,6 +84,7 @@
 #define TYPE_BACKPACK 901
 
 #ifdef DISABLE_COMPILE_CACHE
+    #undef PREP
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
 #else
     #undef PREP
