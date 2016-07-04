@@ -18,5 +18,4 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgVehicles.hpp"
-#include "CfgSounds.hpp"
 #include "ACE_detector.hpp"

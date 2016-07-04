@@ -1,27 +1,30 @@
 #include "script_component.hpp"
 
+// Create a dictionary to store detector configs
+GVAR(detectorConfigs) = call CBA_fnc_createNamespace;
+
+// Create a dictionary of detectable classnames
+GVAR(detectableClasses) = call CBA_fnc_createNamespace;
+{
+    if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
+        GVAR(detectableClasses) setVariable [configName _x, true];
+    };
+} forEach (configProperties [configFile >> "CfgVehicles", "isClass _x", true]);
+{
+    if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
+        GVAR(detectableClasses) setVariable [configName _x, true];
+    };
+} forEach (configProperties [configFile >> "CfgAmmo", "isClass _x", true]);
+
 
 [QGVAR(detectorEnabled), {
     params ["_unit", "_type"];
     private _config = [_type] call FUNC(getDetectorConfig);
 
-    private _helperObject = "ACE_LogicDummy" createVehicleLocal (getPos _unit);
-    _unit setVariable [QGVAR(helperLogic), _helperObject];
-
-    [FUNC(detectorLoop), 0.01, [_unit, _type, _config, CBA_missionTime, _helperObject]] call CBA_fnc_addPerFrameHandler;
+    [FUNC(detectorLoop), 0.05, [_unit, _type, _config, CBA_missionTime - 0.25]] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(detectorDisabled), {
-    params ["_unit", "_type"];
-    private _helperObject = _unit getVariable [QGVAR(helperLogic), objNull];
-    if !(isNull _helperObject) then {
-        deleteVehicle _helperObject;
-    };
-}] call CBA_fnc_addEventHandler;
-
-
-
-//Shows detector and mine posistions in 3d when debug is on
+// Shows detector and mine posistions in 3d when debug is on
 #ifdef DEBUG_MODE_FULL
 GVAR(debugDetector) = [];
 addMissionEventHandler ["Draw3D", {

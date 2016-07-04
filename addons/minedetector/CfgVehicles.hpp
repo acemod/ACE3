@@ -15,8 +15,6 @@ class CfgVehicles {
                     displayName = CSTRING(ActivateDetector);
                     condition = QUOTE(call FUNC(canActivateDetector));
                     statement = QUOTE(call FUNC(activateDetector));
-                    showDisabled = 0;
-                    priority = 0.1;
                     icon = QPATHTOF(ui\icon_mineDetectorOn.paa);
                     exceptions[] = {};
                 };
@@ -24,8 +22,6 @@ class CfgVehicles {
                     displayName = CSTRING(DeactivateDetector);
                     condition = QUOTE(call FUNC(canDeactivateDetector));
                     statement = QUOTE(call FUNC(deactivateDetector));
-                    showDisabled = 0;
-                    priority = 0.1;
                     icon = QPATHTOF(ui\icon_mineDetectorOff.paa);
                     exceptions[] = {};
                 };
