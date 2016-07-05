@@ -52,7 +52,7 @@
 #define MACRO_CONNECT_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
-            class GVAR(Refuel_Connect) { \
+            class GVAR(Connect) { \
                 displayName = CSTRING(Connect); \
                 distance = REFUEL_ACTION_DISTANCE; \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
@@ -311,18 +311,16 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 80;
     };
 
-    class Van_01_fuel_base_F: Van_01_base_F {};
-    class C_Van_01_fuel_F: Van_01_fuel_base_F {
-        transportFuel = 0; //1k
+    class Van_01_fuel_base_F: Van_01_base_F {
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
+    class C_Van_01_fuel_F: Van_01_fuel_base_F {
+        transportFuel = 0; //1k
+    };
     class I_G_Van_01_fuel_F: Van_01_fuel_base_F {
         transportFuel = 0; //1k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
-        GVAR(fuelCargo) = 2000;
     };
     
     class Tank_F: Tank {
