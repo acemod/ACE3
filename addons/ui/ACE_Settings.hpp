@@ -43,6 +43,13 @@ class ACE_Settings {
         value = 0;
         isClientSettable = 1;
     };
+    class GVAR(squadRadar) {
+        category = CSTRING(Category);
+        displayName = CSTRING(SquadRadar);
+        typeName = "BOOL";
+        value = 1;
+        isClientSettable = 1;
+    };
 
 // ADVANCED
     // Soldier
