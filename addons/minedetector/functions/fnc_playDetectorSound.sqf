@@ -27,7 +27,7 @@ if (!alive _unit) exitWith {
 };
 
 if (_unit getVariable [QGVAR(isUsingHeadphones), false]) then {
-    _unit say2D _soundClass;
+    playSound _soundClass;
 } else {
     private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));
     [_soundClass, _posASL, 5, 15] call EFUNC(common,playConfigSound3D);
