@@ -35,9 +35,12 @@ if !([_unit, _type] call FUNC(isDetectorEnabled)) exitWith {
 if (ACE_player != _unit || {currentWeapon _unit != _type}) exitWith {};
 
 private _detected = [[_unit, _detectorConfig], FUNC(getDetectedObject), _unit, QGVAR(detectedObjects), 0.15] call EFUNC(common,cachedCall);
-_detected params ["_hasDetected", "", "_distance"];
+_detected params ["_hasDetected", "_mine", "_distance"];
 
 if (!_hasDetected) exitWith {};
+
+// Launch a local event stating which mine was detected for mission purposes
+[QGVAR(mineDetected), [_unit, _mine, _distance]] call CBA_fnc_localEvent;
 
 private _distanceTiming = switch (true) do {
     case (_distance >= 2): {1};
