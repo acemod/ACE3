@@ -381,7 +381,7 @@ GVAR(OldIsCamera) = false;
 //////////////////////////////////////////////////
 
 ["isNotDead", {
-    params ["_unit", "_target"];
+    params ["_unit"];
     alive _unit
 }] call FUNC(addCanInteractWithCondition);
 
@@ -399,6 +399,7 @@ GVAR(OldIsCamera) = false;
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
+["isNotReloading", {!GVAR(isReloading)}] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
