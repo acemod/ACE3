@@ -4,8 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Sound file name <STRING>
- * 2: Sound pitch <NUMBER>
+ * 1: Sound class <STRING>
  *
  * Return Value:
  * None
@@ -18,7 +17,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_sound", "_pitch"];
+params ["_unit", "_soundClass"];
 
 if (isNull _unit) exitWith {
     ACE_LOGERROR_1("unit does not exist [%1]",_unit);
@@ -27,6 +26,9 @@ if (!alive _unit) exitWith {
     ACE_LOGERROR_1("unit is not alive [%1]",_unit);
 };
 
-private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));
-
-playSound3D [_sound, objNull, false, _posASL, 5, _pitch, 15];
+if (_unit getVariable [QGVAR(isUsingHeadphones), false]) then {
+    _unit say2D _soundClass;
+} else {
+    private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));
+    [_soundClass, _posASL, 5, 15] call EFUNC(common,playConfigSound3D);
+};

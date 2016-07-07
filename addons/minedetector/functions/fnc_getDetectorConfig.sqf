@@ -25,8 +25,7 @@ if (isNil "_detectorConfig") then {
         _detectorConfig = [
             _detectorType,
             getNumber (_cfgEntry >> "radius"),
-            getText (_cfgEntry >> "sound"),
-            getArray (_cfgEntry >> "pitchs")
+            getArray (_cfgEntry >> "sounds")
         ];
     } else {
         _detectorConfig = [];

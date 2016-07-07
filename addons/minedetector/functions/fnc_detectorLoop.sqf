@@ -49,11 +49,12 @@ private _distanceTiming = switch (true) do {
 if (CBA_missionTime - _lastPlayed < _distanceTiming) exitWith {};
 
 _args set [3, CBA_missionTime];
-_detectorConfig params ["", "", "_sound", "_pitchs"];
-private _pitch = switch (true) do {
-    case (_distance >= 2): {_pitchs select 3};
-    case (_distance >= 1.25): {_pitchs select 2};
-    case (_distance >= 0.5): {_pitchs select 1};
-    default {_pitchs select 0};
+_detectorConfig params ["", "", "_soundClasses"];
+private _soundClass = switch (true) do {
+    case (_distance >= 2): {_soundClasses select 3};
+    case (_distance >= 1.25): {_soundClasses select 2};
+    case (_distance >= 0.5): {_soundClasses select 1};
+    default {_soundClasses select 0};
 };
-[_unit, _sound, _pitch] call FUNC(playDetectorSound);
+
+[_unit, _soundClass] call FUNC(playDetectorSound);
