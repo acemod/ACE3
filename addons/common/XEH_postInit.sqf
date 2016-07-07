@@ -399,7 +399,56 @@ GVAR(OldIsCamera) = false;
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
+
+//////////////////////////////////////////////////
+// Set up reload mutex
+//////////////////////////////////////////////////
+
+GVAR(isReloading) = false;
+
 ["isNotReloading", {!GVAR(isReloading)}] call FUNC(addCanInteractWithCondition);
+
+#define AK_OFFSET_SHIFT_LEFT 704643072
+#define AK_OFFSET_CTRL_LEFT 486539264
+#define AK_OFFSET_ALT_LEFT 939524096
+#define AK_OFFSET_SHIFT_RIGHT 905969664
+#define AK_OFFSET_CTRL_RIGHT -1660944384
+#define AK_OFFSET_ALT_RIGHT -1207959552
+
+["keyDown", {
+    params ["", "_key"];
+
+    if ({(_x - _key) in [
+        0,
+        AK_OFFSET_SHIFT_LEFT, AK_OFFSET_SHIFT_RIGHT,
+        AK_OFFSET_CTRL_LEFT, AK_OFFSET_CTRL_RIGHT,
+        AK_OFFSET_ALT_LEFT, AK_OFFSET_ALT_RIGHT
+    ]} count actionKeys "ReloadMagazine" > 0 && {alive ACE_player}) then {
+        private _weapon = currentWeapon ACE_player;
+
+        if (_weapon != "") then {
+            GVAR(isReloading) = true;
+
+            private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
+            private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
+            private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+
+            if (_duration != 0) then {
+                _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
+            } else {
+                _duration = 3;
+            };
+
+            TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+            [{
+                GVAR(isReloading) = false;
+            }, [], _duration] call CBA_fnc_waitAndExecute;
+        };
+    };
+
+    false
+}] call CBA_fnc_addDisplayHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
