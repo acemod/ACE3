@@ -1,875 +1,807 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-	<Package name="Common">
-		<Key ID="STR_ACE_Common_ACETeam">
-			<English>ACE-Team</English>
-			<German>ACE-Team</German>
-			<Spanish>ACE-Team</Spanish>
-			<Polish>ACE-Team</Polish>
-			<Czech>ACE-Team</Czech>
-			<French>ACE-Team</French>
-			<Russian>Команда ACE</Russian>
-			<Portuguese>ACE-Team</Portuguese>
-			<Hungarian>ACE-Team</Hungarian>
-			<Italian>ACE-Team</Italian>
-			<Japanese>ACE-Team</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Save">
-			<English>Save</English>
-			<German>Speichern</German>
-			<Spanish>Guardar</Spanish>
-			<Polish>Zapisz</Polish>
-			<Czech>Uložit</Czech>
-			<French>Sauvegarder</French>
-			<Russian>Сохранить</Russian>
-			<Portuguese>Salvar</Portuguese>
-			<Hungarian>Mentés</Hungarian>
-			<Italian>Salva</Italian>
-			<Japanese>保存</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Cancel">
-			<English>Cancel</English>
-			<German>Abbrechen</German>
-			<Spanish>Cancelar</Spanish>
-			<Polish>Anuluj</Polish>
-			<Czech>Zrušit</Czech>
-			<French>Annuler</French>
-			<Russian>Отмена</Russian>
-			<Portuguese>Cancelar</Portuguese>
-			<Hungarian>Mégse</Hungarian>
-			<Italian>Annulla</Italian>
-			<Japanese>中止</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Options">
-			<English>ACE Options</English>
-			<German>ACE-Optionen</German>
-			<Spanish>Opciones ACE</Spanish>
-			<Polish>Ustawienia ACE</Polish>
-			<Czech>ACE Nastavení</Czech>
-			<French>Options ACE</French>
-			<Russian>ACE Настройки</Russian>
-			<Portuguese>Opções do ACE</Portuguese>
-			<Hungarian>ACE Beállítások</Hungarian>
-			<Italian>Opzioni ACE</Italian>
-			<Japanese>ACE オプション</Japanese>
-		</Key>
-		<!-- These are cardinal directions, in case you didn't guess. -->
-		<Key ID="STR_ACE_Common_N">
-			<English>N</English>
-			<German>N</German>
-			<Spanish>N</Spanish>
-			<Polish>N</Polish>
-			<Czech>S</Czech>
-			<French>N</French>
-			<Russian>С</Russian>
-			<Portuguese>N</Portuguese>
-			<Hungarian>É</Hungarian>
-			<Italian>N</Italian>
-			<Japanese>北</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NNE">
-			<English>NNE</English>
-			<German>NNO</German>
-			<Spanish>NNE</Spanish>
-			<Polish>NNE</Polish>
-			<Czech>SSV</Czech>
-			<French>NNE</French>
-			<Russian>ССВ</Russian>
-			<Portuguese>NNE</Portuguese>
-			<Hungarian>ÉÉK</Hungarian>
-			<Italian>NNE</Italian>
-			<Japanese>北北東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NE">
-			<English>NE</English>
-			<German>NO</German>
-			<Spanish>NE</Spanish>
-			<Polish>NE</Polish>
-			<Czech>SV</Czech>
-			<French>NE</French>
-			<Russian>СВ</Russian>
-			<Portuguese>NE</Portuguese>
-			<Hungarian>ÉK</Hungarian>
-			<Italian>NE</Italian>
-			<Japanese>北東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ENE">
-			<English>ENE</English>
-			<German>ONO</German>
-			<Spanish>ENE</Spanish>
-			<Polish>ENE</Polish>
-			<Czech>VSV</Czech>
-			<French>ENE</French>
-			<Russian>ВСВ</Russian>
-			<Portuguese>LNE</Portuguese>
-			<Hungarian>KÉK</Hungarian>
-			<Italian>ENE</Italian>
-			<Japanese>東北東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_E">
-			<English>E</English>
-			<German>O</German>
-			<Spanish>E</Spanish>
-			<Polish>E</Polish>
-			<Czech>V</Czech>
-			<French>E</French>
-			<Russian>В</Russian>
-			<Portuguese>L</Portuguese>
-			<Hungarian>K</Hungarian>
-			<Italian>E</Italian>
-			<Japanese>東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ESE">
-			<English>ESE</English>
-			<German>OSO</German>
-			<Spanish>ESE</Spanish>
-			<Polish>ESE</Polish>
-			<Czech>VJV</Czech>
-			<French>ESE</French>
-			<Russian>ВЮВ</Russian>
-			<Portuguese>LSE</Portuguese>
-			<Hungarian>KDK</Hungarian>
-			<Italian>ESE</Italian>
-			<Japanese>東南東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SE">
-			<English>SE</English>
-			<German>SO</German>
-			<Spanish>SE</Spanish>
-			<Polish>SE</Polish>
-			<Czech>JV</Czech>
-			<French>SE</French>
-			<Russian>ЮВ</Russian>
-			<Portuguese>SE</Portuguese>
-			<Hungarian>DK</Hungarian>
-			<Italian>SE</Italian>
-			<Japanese>南東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SSE">
-			<English>SSE</English>
-			<German>SSO</German>
-			<Spanish>SSE</Spanish>
-			<Polish>SSE</Polish>
-			<Czech>JJV</Czech>
-			<French>SSE</French>
-			<Russian>ЮЮВ</Russian>
-			<Portuguese>SSE</Portuguese>
-			<Hungarian>DDK</Hungarian>
-			<Italian>SSE</Italian>
-			<Japanese>南南東</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_S">
-			<English>S</English>
-			<German>S</German>
-			<Spanish>S</Spanish>
-			<Polish>S</Polish>
-			<Czech>J</Czech>
-			<French>S</French>
-			<Russian>Ю</Russian>
-			<Portuguese>S</Portuguese>
-			<Hungarian>D</Hungarian>
-			<Italian>S</Italian>
-			<Japanese>南</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SSW">
-			<English>SSW</English>
-			<German>SSW</German>
-			<Spanish>SSO</Spanish>
-			<Polish>SSW</Polish>
-			<Czech>JJZ</Czech>
-			<French>SSO</French>
-			<Russian>ЮЮЗ</Russian>
-			<Portuguese>SSO</Portuguese>
-			<Hungarian>DDNy</Hungarian>
-			<Italian>SSO</Italian>
-			<Japanese>南南西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SW">
-			<English>SW</English>
-			<German>SW</German>
-			<Spanish>SO</Spanish>
-			<Polish>SW</Polish>
-			<Czech>JZ</Czech>
-			<French>SO</French>
-			<Russian>ЮЗ</Russian>
-			<Portuguese>SO</Portuguese>
-			<Hungarian>DNy</Hungarian>
-			<Italian>SO</Italian>
-			<Japanese>南西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_WSW">
-			<English>WSW</English>
-			<German>WSW</German>
-			<Spanish>OSO</Spanish>
-			<Polish>WSW</Polish>
-			<Czech>ZJZ</Czech>
-			<French>OSO</French>
-			<Russian>ЗЮЗ</Russian>
-			<Portuguese>OSO</Portuguese>
-			<Hungarian>NyDNy</Hungarian>
-			<Italian>OSO</Italian>
-			<Japanese>西南西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_W">
-			<English>W</English>
-			<German>W</German>
-			<Spanish>O</Spanish>
-			<Polish>W</Polish>
-			<Czech>Z</Czech>
-			<French>O</French>
-			<Russian>З</Russian>
-			<Portuguese>O</Portuguese>
-			<Hungarian>Ny</Hungarian>
-			<Italian>O</Italian>
-			<Japanese>西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_WNW">
-			<English>WNW</English>
-			<German>WNW</German>
-			<Spanish>ONO</Spanish>
-			<Polish>WNW</Polish>
-			<Czech>ZSZ</Czech>
-			<French>ONO</French>
-			<Russian>ЗСЗ</Russian>
-			<Portuguese>ONO</Portuguese>
-			<Hungarian>NyÉNy</Hungarian>
-			<Italian>ONO</Italian>
-			<Japanese>西北西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NW">
-			<English>NW</English>
-			<German>NW</German>
-			<Spanish>NO</Spanish>
-			<Polish>NW</Polish>
-			<Czech>SZ</Czech>
-			<French>NO</French>
-			<Russian>СЗ</Russian>
-			<Portuguese>NO</Portuguese>
-			<Hungarian>ÉNy</Hungarian>
-			<Italian>NO</Italian>
-			<Japanese>北西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NNW">
-			<English>NNW</English>
-			<German>NNW</German>
-			<Spanish>NNO</Spanish>
-			<Polish>NNW</Polish>
-			<Czech>SSZ</Czech>
-			<French>NNO</French>
-			<Russian>ССЗ</Russian>
-			<Portuguese>NNO</Portuguese>
-			<Hungarian>ÉÉNy</Hungarian>
-			<Italian>NNO</Italian>
-			<Japanese>北北西</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ActionAborted">
-			<English>Action cancelled.</English>
-			<German>Aktion abgebrochen.</German>
-			<Spanish>Acción cancelada.</Spanish>
-			<Polish>Przerwano czynność</Polish>
-			<Czech>Akce přerušena.</Czech>
-			<French>Action annulée.</French>
-			<Russian>Действие отменено.</Russian>
-			<Portuguese>Ação cancelada.</Portuguese>
-			<Hungarian>Művelet megszakítva.</Hungarian>
-			<Italian>Azione cancellata.</Italian>
-			<Japanese>動作を中止した。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_MiscItems">
-			<English>[ACE] Miscellaneous Items</English>
-			<German>[ACE] Verschiedenes</German>
-			<Spanish>[ACE] Objetos varios</Spanish>
-			<Polish>[ACE] Różne przedmioty</Polish>
-			<Czech>[ACE] Ostatní předměty</Czech>
-			<French>[ACE] Objets divers</French>
-			<Russian>[ACE] Различные предметы</Russian>
-			<Portuguese>[ACE] Itens diversos</Portuguese>
-			<Hungarian>[ACE] Egyéb tárgyak</Hungarian>
-			<Italian>[ACE] Oggetti vari</Italian>
-			<Japanese>[ACE] Miscellaneous Items</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_EnableNumberHotkeys">
-			<English>Disable Command Menu</English>
-			<German>Befehlsmenü ausschalten</German>
-			<Spanish>Desactivar menú de mando</Spanish>
-			<Polish>Wyłącz menu dowodzenia</Polish>
-			<Czech>Vypnout velící menu</Czech>
-			<French>Désactiver menu commande</French>
-			<Russian>Выключить командное меню</Russian>
-			<Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
-			<Italian>Disabilita menù di comando</Italian>
-			<Portuguese>Desabilitar menu de comando</Portuguese>
-			<Japanese>指揮メニューを無効化</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Unknown">
-			<English>Unknown</English>
-			<German>Unbekannt</German>
-			<Spanish>Desconocido</Spanish>
-			<Polish>Nieznany</Polish>
-			<Czech>Neznámý</Czech>
-			<Russian>Неизвестно</Russian>
-			<Hungarian>Ismeretlen</Hungarian>
-			<Italian>Sconosciuto</Italian>
-			<French>Inconnu</French>
-			<Portuguese>Desconhecido</Portuguese>
-			<Japanese>不明</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NoVoice">
-			<English>No Voice</English>
-			<German>Keine Stimme</German>
-			<Spanish>Sin voz</Spanish>
-			<Polish>Brak głosu</Polish>
-			<Czech>Žádný hlas</Czech>
-			<Russian>Без голоса</Russian>
-			<Hungarian>Nincs hang</Hungarian>
-			<Italian>Senza voce</Italian>
-			<French>Pas de voix</French>
-			<Portuguese>Sem voz</Portuguese>
-			<Japanese>音声なし</Japanese>
-		</Key>
-		<Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
-			<English>Accept Requests</English>
-			<German>Anfrage akzeptieren</German>
-			<Spanish>Aceptar peticiones</Spanish>
-			<Polish>Akceptuj prośby</Polish>
-			<Czech>Přijmout žádost</Czech>
-			<French>Accepter requête</French>
-			<Russian>Принять запросы</Russian>
-			<Hungarian>Kérések elfogadása</Hungarian>
-			<Portuguese>Aceitar Pedido</Portuguese>
-			<Italian>Accetta la richiesta</Italian>
-			<Japanese>要求を受け入れ</Japanese>
-		</Key>
-		<Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
-			<English>Decline Requests</English>
-			<German>Anfrage ablehnen</German>
-			<Spanish>Rechazar peticiones</Spanish>
-			<Polish>Ignoruj prośby</Polish>
-			<Czech>Zamítnout žádost</Czech>
-			<Russian>Отклонить запросы</Russian>
-			<French>Rejeter requête</French>
-			<Hungarian>Kérések elutasítása</Hungarian>
-			<Portuguese>Rejeitar pedido</Portuguese>
-			<Italian>Rifiuta la richiesta</Italian>
-			<Japanese>要求を拒否</Japanese>
-		</Key>
-		<Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
-			<English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-			<German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
-			<Spanish>Acepta peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
-			<Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
-			<Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-			<Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
-			<Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-			<French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
-			<Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
-			<Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
-			<Japanese>他プレイヤからの要求を許可します。他プレイヤは装備を共有し、使うなど特定の動作を行えます。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
-			<English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
-			<German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
-			<Spanish>Rechazar peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
-			<Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
-			<Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
-			<Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
-			<Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
-			<French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
-			<Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
-			<Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
-			<Japanese>他プレイヤからの要求を拒否します。他プレイヤは装備を共有し、使うなど特定の動作をできません。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingFeedbackIconsName">
-			<English>Feedback icons</English>
-			<German>Rückmeldungssymbole</German>
-			<Spanish>Iconos de respuesta</Spanish>
-			<Italian>Icone informative</Italian>
-			<Russian>Иконки состояний</Russian>
-			<Polish>Ikony pomocnicze</Polish>
-			<French>Icones d'information</French>
-			<Czech>Pomocné ikony</Czech>
-			<Hungarian>Visszajelző ikonok</Hungarian>
-			<Portuguese>Ícones de Feedback</Portuguese>
-			<Japanese>フィードバック アイコン</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
-			<English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
-			<German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten dar.</German>
-			<Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
-			<Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
-			<Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
-			<Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
-			<French>Sélection de la position ou la désactivation des icones de feedback. Ces icones vous apportent des informations complémentaires sur votre status et sur les actions en cours.</French>
-			<Czech>Nastavuje pozici nebo vypíná pomocné ikony. Tyto ikony ukazují extra informace ke stavu postavy a vykonávaných činností.</Czech>
-			<Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
-			<Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
-			<Japanese>画面上に表示するフィードバック アイコンの位置や無効化を選択できます。このアイコンは自キャラクター状態や動作の状況をフィードバックするために表示されています。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingProgressbarLocationName">
-			<English>Progress bar location</English>
-			<German>Position der Fortschrittsanzeige</German>
-			<Spanish>Ubicación de la barra de progreso</Spanish>
-			<Italian>Posizione della barra di avanzamento</Italian>
-			<Russian>Положение прогресс-бара</Russian>
-			<Polish>Lokalizacja paska postępu</Polish>
-			<French>Position de la barre de progression</French>
-			<Czech>Pozice ukazetele průběhu činnosti</Czech>
-			<Hungarian>Állapotjelző sáv helyzete</Hungarian>
-			<Portuguese>Local da barra de progresso</Portuguese>
-			<Japanese>プログレス バーの位置</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
-			<English>Set the desired location of the progress bar on your screen.</English>
-			<German>Setze die gewünschte Position der Fortschrittsanzeige fest.</German>
-			<Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
-			<Italian>Modifica la posizione della barra di avanzamernto sullo schermo</Italian>
-			<Russian>Установите желаемое положение строки состояния на экране.</Russian>
-			<Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
-			<French>Appliquer la position de la barre de progression sur l'écran</French>
-			<Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
-			<Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
-			<Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
-			<Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingDisplayTextColorName">
-			<English>Hint Background color</English>
-			<German>Hintergrundfarbe der Hinweise</German>
-			<Spanish>Color de fondo de las notificaciones</Spanish>
-			<Italian>Colore di sfondo dei suggerimenti</Italian>
-			<Russian>Цвет фона всплывающих подсказок</Russian>
-			<Polish>Kolor tła powiadomień</Polish>
-			<French>Notification: couleur de l'arrière plan</French>
-			<Czech>Barva pozadí nápovědy</Czech>
-			<Hungarian>Súgó háttérszíne</Hungarian>
-			<Portuguese>Cor do fundo da hint</Portuguese>
-			<Japanese>ヒントの背景色</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
-			<English>The color of the background from the ACE hints.</English>
-			<German>Die Hintergrundfarbe der ACE-Hinweise.</German>
-			<Spanish>El color de fondo de las notificaciones del ACE</Spanish>
-			<Italian>Il colore di sfondo dei suggerimenti di ACE.</Italian>
-			<Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
-			<Polish>Kolor tła dla powiadomień ACE</Polish>
-			<French>Notification ACE: couleur de l'arrière plan</French>
-			<Czech>Barva pozadí ACE nápovědy.</Czech>
-			<Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
-			<Portuguese>A cor de fundo das hints do ACE.</Portuguese>
-			<Japanese>ACE によるヒントの背景色を指定します。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
-			<English>Hint text font color</English>
-			<German>Textfarbe der Hinweise</German>
-			<Spanish>Color del texto de las notificaciones</Spanish>
-			<Italian>Il colore del testo dei suggerimenti</Italian>
-			<Russian>Цвет шрифта всплывающих подсказок</Russian>
-			<Polish>Kolor tekstu powiadomień</Polish>
-			<French>Notification: couleur du texte</French>
-			<Czech>Barva fontu nápovědy.</Czech>
-			<Hungarian>Súgószöveg betűinek színe</Hungarian>
-			<Portuguese>Cor do do texto da hint</Portuguese>
-			<Japanese>ヒント文章の色</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
-			<English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
-			<German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standartfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
-			<Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
-			<Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
-			<Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
-			<Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
-			<French>Notification ACE: couleur du texte. C'est la couleur par défaut de tout texte affiché dans les notifications ACE, si aucune couleur n'est spécifiée pour les notifications</French>
-			<Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
-			<Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
-			<Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
-			<Japanese>CE によるヒントの文章へ、色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_bananaDisplayName">
-			<English>Banana</English>
-			<German>Banane</German>
-			<Spanish>Banana</Spanish>
-			<Czech>Banán</Czech>
-			<Italian>Banana</Italian>
-			<Russian>Банан</Russian>
-			<Polish>Banan</Polish>
-			<French>Banane</French>
-			<Hungarian>Banán</Hungarian>
-			<Portuguese>Banana</Portuguese>
-			<Japanese>甘蕉</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_bananaDescr">
-			<English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
-			<German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
-			<Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
-			<Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
-			<Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotta da un gran numero di grandi piante erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
-			<Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
-			<Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
-			<Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
-			<French>Une banane est un fruit qui, d'un point de vue botanique, fait partie du groupe des baies. Produite par plusieurs sortes de grandes plantes à fleurs herbacées du type Musa.</French>
-			<Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
-			<Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_DisplayName">
-			<English>Check PBOs</English>
-			<Polish>Sprawdzaj PBO</Polish>
-			<Spanish>Comprobar PBOs</Spanish>
-			<German>Überprüfe PBOs</German>
-			<Czech>Zkontrolovat soubory PBO</Czech>
-			<Portuguese>Verificar PBOs</Portuguese>
-			<French>Vérifier les PBOs</French>
-			<Hungarian>PBO-k ellenőrzése</Hungarian>
-			<Russian>Проверка аддонов</Russian>
-			<Italian>Controlla PBO</Italian>
-			<Japanese>PBO を検査</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Description">
-			<English>Check addon integrity with server and do selected action if an addon is missing.</English>
-			<Polish>Sprawdzaj spójność addonów z serwerem i wykonuj stosowną akcję jeżeli zostanie wykryty brak addonu.</Polish>
-			<Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
-			<German>Dieses Modul überprüft, ob jeder Spieler die richtigen PBO-Dateien mitgeladen hat.</German>
-			<Czech>Zjistit addon který je v souladu se serverem</Czech>
-			<Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
-			<Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
-			<French>Ce module contrôle si les PBOs de chaque joueur sont corrects</French>
-			<Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
-			<Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
-			<English>Action</English>
-			<Polish>Akcja</Polish>
-			<Spanish>Acción</Spanish>
-			<German>Aktion</German>
-			<Czech>Akce</Czech>
-			<Portuguese>Ação</Portuguese>
-			<French>Action</French>
-			<Hungarian>Cselekvés</Hungarian>
-			<Russian>Действие</Russian>
-			<Italian>Azione</Italian>
-			<Japanese>動作</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Action_Description">
-			<English>What to do with people who do not have the right PBOs?</English>
-			<Polish>Co zrobić z graczami, którzy nie mają właściwych PBO?</Polish>
-			<Spanish>¿Qué hacer con la gente que no tiene correctamente los PBOs?</Spanish>
-			<German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
-			<Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
-			<Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
-			<French>Que faire avec les personnes n'ayant pas les bons PBO ?</French>
-			<Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
-			<Russian>Что делать с игроками с неправильными аддонами?</Russian>
-			<Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
-			<Japanese>プレイヤーが正しい PBO を持っていない場合は？</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
-			<English>Warn once</English>
-			<Polish>Ostrzeż raz</Polish>
-			<Spanish>Avisar una vez</Spanish>
-			<German>Einmal verwarnen</German>
-			<Czech>Upozornit jednou</Czech>
-			<Portuguese>Avisar uma vez</Portuguese>
-			<French>Avertir une fois</French>
-			<Hungarian>Egyszeri figyelmeztetés</Hungarian>
-			<Russian>Предупредить один раз</Russian>
-			<Italian>Avverti una volta</Italian>
-			<Japanese>一度の警告</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
-			<English>Warn (permanent)</English>
-			<Polish>Ostrzeżenie (permanentne)</Polish>
-			<Spanish>Avisar (permanente)</Spanish>
-			<German>Verwarnen (permanent)</German>
-			<Czech>Upozornit (permanentně)</Czech>
-			<Portuguese>Avisar (permanente)</Portuguese>
-			<French>Avertir (permanent)</French>
-			<Hungarian>Figyelmeztetés (tartós)</Hungarian>
-			<Russian>Предупреждать (постоянно)</Russian>
-			<Italian>Avverti (permanente)</Italian>
-			<Japanese>警告 (永久的)</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
-			<English>Kick</English>
-			<Polish>Kick</Polish>
-			<Spanish>Expulsar</Spanish>
-			<German>Kicken</German>
-			<Czech>Vyhodit</Czech>
-			<Portuguese>Chutar</Portuguese>
-			<French>Ejecter</French>
-			<Hungarian>Kirúgás</Hungarian>
-			<Russian>Кикнуть</Russian>
-			<Italian>Kick</Italian>
-			<Japanese>排除</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
-			<English>Check all addons</English>
-			<Polish>Sprawdź wsz. addony</Polish>
-			<Spanish>Comprobar todos los addons</Spanish>
-			<German>Alle Addons überprüfen</German>
-			<Czech>Zkontrolovat všechny addony</Czech>
-			<Portuguese>Verificar todos addons</Portuguese>
-			<French>Vérifier tous les addons</French>
-			<Hungarian>Összes bővítmény ellenőrzése</Hungarian>
-			<Russian>Проверять все аддоны</Russian>
-			<Italian>Controlla tutti gli addon</Italian>
-			<Japanese>全アドオンを検査</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
-			<English>Check all addons instead of only those of ACE?</English>
-			<Polish>Sprawdzaj wszystkie addony czy tylko te z ACE?</Polish>
-			<Spanish>Comprobar todos los addons en vez de solo los del ACE</Spanish>
-			<German>Alle Addons anstatt nur ACE überprüfen?</German>
-			<Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
-			<Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
-			<French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE</French>
-			<Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
-			<Russian>Проверять все аддоны, а не только ACE?</Russian>
-			<Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
-			<Japanese>ACE MOD の代わりに全アドオンを検査しますか？</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
-			<English>Whitelist</English>
-			<Polish>Biała lista</Polish>
-			<Spanish>Lista blanca</Spanish>
-			<German>Whitelist</German>
-			<Czech>Seznam povolených</Czech>
-			<Portuguese>Lista branca</Portuguese>
-			<French>Liste blanche</French>
-			<Hungarian>Fehérlista</Hungarian>
-			<Russian>Вайтлист доп. аддонов</Russian>
-			<Italian>Lista Bianca</Italian>
-			<Japanese>許可制</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
-			<English>What addons are allowed regardless?</English>
-			<Polish>Jakie addony są dozwolone?</Polish>
-			<Spanish>Qué addons están permitidos igualmente</Spanish>
-			<German>Welche Addons werden dennoch erlaubt?</German>
-			<Czech>Jaké addony jsou povoleny?</Czech>
-			<Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
-			<French>Quels addons sont tolérés ?</French>
-			<Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
-			<Russian>Какие аддоны дополнительно разрешены?</Russian>
-			<Italian>Quali addon sono permessi in ogni caso?</Italian>
-			<Japanese>どのようなアドオンを許可しますか？</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
-			<English>LSD Vehicles</English>
-			<Polish>Pojazdy LSD</Polish>
-			<Spanish>Vehículos LSD</Spanish>
-			<German>LSD-Fahrzeuge</German>
-			<Czech>LSD vozidla</Czech>
-			<Portuguese>Veículos LSD</Portuguese>
-			<French>LSD - Véhicules</French>
-			<Hungarian>LSD járművek</Hungarian>
-			<Russian>Транспорт под LSD</Russian>
-			<Italian>Veicoli LSD</Italian>
-			<Japanese>LSD 車両</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_LSDVehicles_Description">
-			<English>Adds LSD effect to synchronized vehicle</English>
-			<Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
-			<Spanish>Añade el efecto LSD al vehículo sincronizado</Spanish>
-			<German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
-			<Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
-			<Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
-			<French>Ajoute l'effet LSD aux véhicules synchronisés</French>
-			<Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
-			<Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
-			<Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
-			<Japanese>同期されたオブジェクトに LSD の効果を追加します</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_toggleHandheldDevice">
-			<English>Toggle Handheld Device</English>
-			<Spanish>Seleccionar dispositivo de mano</Spanish>
-			<German>Handheld aufrufen</German>
-			<Portuguese>Ativa dispositivo de mão</Portuguese>
-			<Polish>Przełącz urządzenie podręczne</Polish>
-			<Czech>Přepnout ruční zařízení</Czech>
-			<French>Allumer l'ordinateur de poche</French>
-			<Hungarian>Kézi eszköz kapcsolása</Hungarian>
-			<Russian>Включить портативное устройство</Russian>
-			<Italian>Apri dispositivo palmare</Italian>
-			<Japanese>デバイスを常に表示</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_closeHandheldDevice">
-			<English>Close Handheld Device</English>
-			<Spanish>Cerrar dispositivo de mano</Spanish>
-			<German>Handheld schließen</German>
-			<Portuguese>Fecha dispositivo de mão</Portuguese>
-			<Polish>Zamknij urządzenie podręczne</Polish>
-			<Czech>Zavřít ruční zařízení</Czech>
-			<French>Fermer l'ordinateur de poche</French>
-			<Hungarian>Kézi eszköz bezárása</Hungarian>
-			<Russian>Закрыть портативное устройство</Russian>
-			<Italian>Chiudi dispositivo palmare</Italian>
-			<Japanese>デバイスを閉じる</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_cycleHandheldDevices">
-			<English>Cycle Handheld Devices</English>
-			<Spanish>Cambiar dispositivos de mano</Spanish>
-			<German>Handheld wechseln</German>
-			<Portuguese>Troca dispositivos de mão</Portuguese>
-			<Polish>Następne urządzenie podręczne</Polish>
-			<Czech>Procházet ruční zařízení</Czech>
-			<French>Changer (cycle) d'ordinateur de poche</French>
-			<Hungarian>Kézi eszköz váltása</Hungarian>
-			<Russian>Следующее портативное устройство</Russian>
-			<Italian>Cicla tra dispositivi palmari</Italian>
-			<Japanese>表示するデバイスを変える</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Disabled">
-			<English>Disabled</English>
-			<Czech>Zakázáno</Czech>
-			<French>Désactiver</French>
-			<German>Deaktiviert</German>
-			<Italian>Disattivato</Italian>
-			<Polish>Wyłączone</Polish>
-			<Portuguese>Desativado</Portuguese>
-			<Russian>Откл.</Russian>
-			<Spanish>Desactivado</Spanish>
-			<Japanese>無効化</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Enabled">
-			<English>Enabled</English>
-			<Czech>Povoleno</Czech>
-			<French>Activer</French>
-			<German>Aktiviert</German>
-			<Italian>Attivato</Italian>
-			<Polish>Włączone</Polish>
-			<Portuguese>Ativado</Portuguese>
-			<Russian>Вкл.</Russian>
-			<Spanish>Activado</Spanish>
-			<Japanese>有効化</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_Yes">
-			<English>Yes</English>
-			<German>Ja</German>
-			<Spanish>Si</Spanish>
-			<Polish>Tak</Polish>
-			<Czech>Ano</Czech>
-			<French>Oui</French>
-			<Russian>Да</Russian>
-			<Hungarian>Igen</Hungarian>
-			<Portuguese>Sim</Portuguese>
-			<Italian>Si</Italian>
-			<Japanese>はい</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_No">
-			<English>No</English>
-			<German>Nein</German>
-			<Spanish>No</Spanish>
-			<Polish>Nie</Polish>
-			<Czech>Ne</Czech>
-			<French>Non</French>
-			<Russian>Нет</Russian>
-			<Hungarian>Nem</Hungarian>
-			<Portuguese>Não</Portuguese>
-			<Italian>No</Italian>
-			<Japanese>いいえ</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_VehiclesOnly">
-			<English>Vehicles only</English>
-			<German>Nur Fahrzeuge</German>
-			<Polish>Tylko pojazdy</Polish>
-			<Portuguese>Somente veículos</Portuguese>
-			<Russian>Только в транспорте</Russian>
-			<Czech>Pouze vozidla</Czech>
-			<Spanish>Solo vehículos</Spanish>
-			<Italian>Solo veicoli</Italian>
-			<French>Vehicules seulement</French>
-			<Japanese>車両のみ</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_DoNotForce">
-			<English>Do Not Force</English>
-			<German>Nicht erzwingen</German>
-			<Polish>Nie wymuszaj</Polish>
-			<Spanish>No forzar</Spanish>
-			<Czech>Nevynucovat</Czech>
-			<Portuguese>Não forçar</Portuguese>
-			<Russian>Не обязывать</Russian>
-			<Italian>Non forzare</Italian>
-			<French>Ne pas forcer</French>
-			<Japanese>強制しない</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
-			<English>ACE3 Equipment</English>
-			<German>ACE-Ausrüstung</German>
-			<Polish>ACE3 Wyposażenie</Polish>
-			<Portuguese>Equipamentos ACE3</Portuguese>
-			<Russian>ACE3 Снаряжение</Russian>
-			<Czech>ACE3 Vybavení</Czech>
-			<Spanish>ACE3 Equipo</Spanish>
-			<Italian>Equipaggiamento ACE3</Italian>
-			<French>Equipement ACE3</French>
-			<Japanese>ACE3 装備</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
-			<English>ACE3 Common</English>
-			<German>ACE3 Allgemein</German>
-			<Polish>ACE3 Ogólne</Polish>
-			<Portuguese>Comum ACE3</Portuguese>
-			<Russian>ACE3 Общие</Russian>
-			<Spanish>ACE3 Común</Spanish>
-			<Czech>ACE3 Obecné</Czech>
-			<Italian>Comune ACE3</Italian>
-			<French>Commun ACE3</French>
-			<Japanese>ACE3 全般</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
-			<English>ACE3 Weapons</English>
-			<German>ACE3 Waffen</German>
-			<Polish>ACE3 Broń</Polish>
-			<Portuguese>Armamento ACE3</Portuguese>
-			<Russian>ACE3 Оружие</Russian>
-			<Czech>ACE3 Zbraně</Czech>
-			<Spanish>ACE3 Armas</Spanish>
-			<Italian>Armi ACE3</Italian>
-			<French>Armes ACE3</French>
-			<Japanese>ACE3 武器</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
-			<English>ACE3 Movement</English>
-			<German>ACE3 Bewegung</German>
-			<Polish>ACE3 Ruch</Polish>
-			<Portuguese>Movimento ACE3</Portuguese>
-			<Russian>ACE3 Перемещение</Russian>
-			<Spanish>ACE3 Movimiento</Spanish>
-			<Czech>ACE3 Pohyb</Czech>
-			<Italian>Movimento ACE3</Italian>
-			<French>Mouvement ACE3</French>
-			<Japanese>ACE3 移動</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
-			<English>ACE3 Scope Adjustment</English>
-			<German>ACE3 Visiereinstellung</German>
-			<Polish>ACE3 Regulacja optyki</Polish>
-			<Portuguese>Ajuste de luneta ACE3</Portuguese>
-			<Russian>ACE3 Прицелы</Russian>
-			<Czech>ACE3 Nastavení optiky</Czech>
-			<Spanish>ACE3 Ajuste de miras</Spanish>
-			<Italian>Regolazione Ottiche ACE3</Italian>
-			<French>Ajustement de la lunette ACE3</French>
-			<Japanese>ACE3 スコープ調節</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
-			<English>ACE3 Vehicles</English>
-			<German>ACE3 Fahrzeuge</German>
-			<Polish>ACE3 Pojazdy</Polish>
-			<Portuguese>Veículos ACE3</Portuguese>
-			<Russian>ACE3 Транспорт</Russian>
-			<Czech>ACE3 Vozidla</Czech>
-			<Spanish>ACE3 Vehículos</Spanish>
-			<Italian>Veicoli ACE3</Italian>
-			<French>Vehicules ACE3</French>
-			<Japanese>ACE3 車両</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Common_NoRoomToUnload">
-			<English>No Room to unload</English>
-			<German>Kein Platz zum Entladen</German>
-			<Polish>Brak miejsca na rozładunek</Polish>
-			<Italian>Non c'è spazio per scaricare</Italian>
-			<Spanish>No hay espacio para descargar.</Spanish>
-			<French>Pas de place pour décharger</French>
-			<Japanese>降ろすための空間がありません</Japanese>
-		</Key>
-	</Package>
+    <Package name="Common">
+        <Key ID="STR_ACE_Common_ACETeam">
+            <English>ACE-Team</English>
+            <German>ACE-Team</German>
+            <Spanish>ACE-Team</Spanish>
+            <Polish>ACE-Team</Polish>
+            <Czech>ACE-Team</Czech>
+            <French>ACE-Team</French>
+            <Russian>Команда ACE</Russian>
+            <Portuguese>ACE-Team</Portuguese>
+            <Hungarian>ACE-Team</Hungarian>
+            <Italian>ACE-Team</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_Save">
+            <English>Save</English>
+            <German>Speichern</German>
+            <Spanish>Guardar</Spanish>
+            <Polish>Zapisz</Polish>
+            <Czech>Uložit</Czech>
+            <French>Sauvegarder</French>
+            <Russian>Сохранить</Russian>
+            <Portuguese>Salvar</Portuguese>
+            <Hungarian>Mentés</Hungarian>
+            <Italian>Salva</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_Cancel">
+            <English>Cancel</English>
+            <German>Abbrechen</German>
+            <Spanish>Cancelar</Spanish>
+            <Polish>Anuluj</Polish>
+            <Czech>Zrušit</Czech>
+            <French>Annuler</French>
+            <Russian>Отмена</Russian>
+            <Portuguese>Cancelar</Portuguese>
+            <Hungarian>Mégse</Hungarian>
+            <Italian>Annulla</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_Options">
+            <English>ACE Options</English>
+            <German>ACE-Optionen</German>
+            <Spanish>Opciones ACE</Spanish>
+            <Polish>Ustawienia ACE</Polish>
+            <Czech>ACE Nastavení</Czech>
+            <French>Options ACE</French>
+            <Russian>ACE Настройки</Russian>
+            <Portuguese>Opções do ACE</Portuguese>
+            <Hungarian>ACE Beállítások</Hungarian>
+            <Italian>Opzioni ACE</Italian>
+        </Key>
+        <!-- These are cardinal directions, in case you didn't guess. -->
+        <Key ID="STR_ACE_Common_N">
+            <English>N</English>
+            <German>N</German>
+            <Spanish>N</Spanish>
+            <Polish>N</Polish>
+            <Czech>S</Czech>
+            <French>N</French>
+            <Russian>С</Russian>
+            <Portuguese>N</Portuguese>
+            <Hungarian>É</Hungarian>
+            <Italian>N</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_NNE">
+            <English>NNE</English>
+            <German>NNO</German>
+            <Spanish>NNE</Spanish>
+            <Polish>NNE</Polish>
+            <Czech>SSV</Czech>
+            <French>NNE</French>
+            <Russian>ССВ</Russian>
+            <Portuguese>NNE</Portuguese>
+            <Hungarian>ÉÉK</Hungarian>
+            <Italian>NNE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_NE">
+            <English>NE</English>
+            <German>NO</German>
+            <Spanish>NE</Spanish>
+            <Polish>NE</Polish>
+            <Czech>SV</Czech>
+            <French>NE</French>
+            <Russian>СВ</Russian>
+            <Portuguese>NE</Portuguese>
+            <Hungarian>ÉK</Hungarian>
+            <Italian>NE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_ENE">
+            <English>ENE</English>
+            <German>ONO</German>
+            <Spanish>ENE</Spanish>
+            <Polish>ENE</Polish>
+            <Czech>VSV</Czech>
+            <French>ENE</French>
+            <Russian>ВСВ</Russian>
+            <Portuguese>LNE</Portuguese>
+            <Hungarian>KÉK</Hungarian>
+            <Italian>ENE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_E">
+            <English>E</English>
+            <German>O</German>
+            <Spanish>E</Spanish>
+            <Polish>E</Polish>
+            <Czech>V</Czech>
+            <French>E</French>
+            <Russian>В</Russian>
+            <Portuguese>L</Portuguese>
+            <Hungarian>K</Hungarian>
+            <Italian>E</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_ESE">
+            <English>ESE</English>
+            <German>OSO</German>
+            <Spanish>ESE</Spanish>
+            <Polish>ESE</Polish>
+            <Czech>VJV</Czech>
+            <French>ESE</French>
+            <Russian>ВЮВ</Russian>
+            <Portuguese>LSE</Portuguese>
+            <Hungarian>KDK</Hungarian>
+            <Italian>ESE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_SE">
+            <English>SE</English>
+            <German>SO</German>
+            <Spanish>SE</Spanish>
+            <Polish>SE</Polish>
+            <Czech>JV</Czech>
+            <French>SE</French>
+            <Russian>ЮВ</Russian>
+            <Portuguese>SE</Portuguese>
+            <Hungarian>DK</Hungarian>
+            <Italian>SE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_SSE">
+            <English>SSE</English>
+            <German>SSO</German>
+            <Spanish>SSE</Spanish>
+            <Polish>SSE</Polish>
+            <Czech>JJV</Czech>
+            <French>SSE</French>
+            <Russian>ЮЮВ</Russian>
+            <Portuguese>SSE</Portuguese>
+            <Hungarian>DDK</Hungarian>
+            <Italian>SSE</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_S">
+            <English>S</English>
+            <German>S</German>
+            <Spanish>S</Spanish>
+            <Polish>S</Polish>
+            <Czech>J</Czech>
+            <French>S</French>
+            <Russian>Ю</Russian>
+            <Portuguese>S</Portuguese>
+            <Hungarian>D</Hungarian>
+            <Italian>S</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_SSW">
+            <English>SSW</English>
+            <German>SSW</German>
+            <Spanish>SSO</Spanish>
+            <Polish>SSW</Polish>
+            <Czech>JJZ</Czech>
+            <French>SSO</French>
+            <Russian>ЮЮЗ</Russian>
+            <Portuguese>SSO</Portuguese>
+            <Hungarian>DDNy</Hungarian>
+            <Italian>SSO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_SW">
+            <English>SW</English>
+            <German>SW</German>
+            <Spanish>SO</Spanish>
+            <Polish>SW</Polish>
+            <Czech>JZ</Czech>
+            <French>SO</French>
+            <Russian>ЮЗ</Russian>
+            <Portuguese>SO</Portuguese>
+            <Hungarian>DNy</Hungarian>
+            <Italian>SO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_WSW">
+            <English>WSW</English>
+            <German>WSW</German>
+            <Spanish>OSO</Spanish>
+            <Polish>WSW</Polish>
+            <Czech>ZJZ</Czech>
+            <French>OSO</French>
+            <Russian>ЗЮЗ</Russian>
+            <Portuguese>OSO</Portuguese>
+            <Hungarian>NyDNy</Hungarian>
+            <Italian>OSO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_W">
+            <English>W</English>
+            <German>W</German>
+            <Spanish>O</Spanish>
+            <Polish>W</Polish>
+            <Czech>Z</Czech>
+            <French>O</French>
+            <Russian>З</Russian>
+            <Portuguese>O</Portuguese>
+            <Hungarian>Ny</Hungarian>
+            <Italian>O</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_WNW">
+            <English>WNW</English>
+            <German>WNW</German>
+            <Spanish>ONO</Spanish>
+            <Polish>WNW</Polish>
+            <Czech>ZSZ</Czech>
+            <French>ONO</French>
+            <Russian>ЗСЗ</Russian>
+            <Portuguese>ONO</Portuguese>
+            <Hungarian>NyÉNy</Hungarian>
+            <Italian>ONO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_NW">
+            <English>NW</English>
+            <German>NW</German>
+            <Spanish>NO</Spanish>
+            <Polish>NW</Polish>
+            <Czech>SZ</Czech>
+            <French>NO</French>
+            <Russian>СЗ</Russian>
+            <Portuguese>NO</Portuguese>
+            <Hungarian>ÉNy</Hungarian>
+            <Italian>NO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_NNW">
+            <English>NNW</English>
+            <German>NNW</German>
+            <Spanish>NNO</Spanish>
+            <Polish>NNW</Polish>
+            <Czech>SSZ</Czech>
+            <French>NNO</French>
+            <Russian>ССЗ</Russian>
+            <Portuguese>NNO</Portuguese>
+            <Hungarian>ÉÉNy</Hungarian>
+            <Italian>NNO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_ActionAborted">
+            <English>Action cancelled.</English>
+            <German>Aktion abgebrochen.</German>
+            <Spanish>Acción cancelada.</Spanish>
+            <Polish>Przerwano czynność</Polish>
+            <Czech>Akce přerušena.</Czech>
+            <French>Action annulée.</French>
+            <Russian>Действие отменено.</Russian>
+            <Portuguese>Ação cancelada.</Portuguese>
+            <Hungarian>Művelet megszakítva.</Hungarian>
+            <Italian>Azione cancellata.</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_MiscItems">
+            <English>[ACE] Miscellaneous Items</English>
+            <German>[ACE] Verschiedenes</German>
+            <Spanish>[ACE] Objetos varios</Spanish>
+            <Polish>[ACE] Różne przedmioty</Polish>
+            <Czech>[ACE] Ostatní předměty</Czech>
+            <French>[ACE] Objets divers</French>
+            <Russian>[ACE] Различные предметы</Russian>
+            <Portuguese>[ACE] Itens diversos</Portuguese>
+            <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
+            <Italian>[ACE] Oggetti vari</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_EnableNumberHotkeys">
+            <English>Disable Command Menu</English>
+            <German>Befehlsmenü ausschalten</German>
+            <Spanish>Desactivar menú de mando</Spanish>
+            <Polish>Wyłącz menu dowodzenia</Polish>
+            <Czech>Vypnout velící menu</Czech>
+            <French>Désactiver menu commande</French>
+            <Russian>Выключить командное меню</Russian>
+            <Hungarian>Parancsnoki menü kikapcsolása</Hungarian>
+            <Italian>Disabilita menù di comando</Italian>
+            <Portuguese>Desabilitar menu de comando</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_Unknown">
+            <English>Unknown</English>
+            <German>Unbekannt</German>
+            <Spanish>Desconocido</Spanish>
+            <Polish>Nieznany</Polish>
+            <Czech>Neznámý</Czech>
+            <Russian>Неизвестно</Russian>
+            <Hungarian>Ismeretlen</Hungarian>
+            <Italian>Sconosciuto</Italian>
+            <French>Inconnu</French>
+            <Portuguese>Desconhecido</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_NoVoice">
+            <English>No Voice</English>
+            <German>Keine Stimme</German>
+            <Spanish>Sin voz</Spanish>
+            <Polish>Brak głosu</Polish>
+            <Czech>Žádný hlas</Czech>
+            <Russian>Без голоса</Russian>
+            <Hungarian>Nincs hang</Hungarian>
+            <Italian>Senza voce</Italian>
+            <French>Pas de voix</French>
+            <Portuguese>Sem voz</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
+            <English>Accept Requests</English>
+            <German>Anfrage akzeptieren</German>
+            <Spanish>Aceptar peticiones</Spanish>
+            <Polish>Akceptuj prośby</Polish>
+            <Czech>Přijmout žádost</Czech>
+            <French>Accepter requête</French>
+            <Russian>Принять запросы</Russian>
+            <Hungarian>Kérések elfogadása</Hungarian>
+            <Portuguese>Aceitar Pedido</Portuguese>
+            <Italian>Accetta la richiesta</Italian>
+        </Key>
+        <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
+            <English>Decline Requests</English>
+            <German>Anfrage ablehnen</German>
+            <Spanish>Rechazar peticiones</Spanish>
+            <Polish>Ignoruj prośby</Polish>
+            <Czech>Zamítnout žádost</Czech>
+            <Russian>Отклонить запросы</Russian>
+            <French>Rejeter requête</French>
+            <Hungarian>Kérések elutasítása</Hungarian>
+            <Portuguese>Rejeitar pedido</Portuguese>
+            <Italian>Rifiuta la richiesta</Italian>
+        </Key>
+        <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
+            <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+            <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
+            <Spanish>Acepta peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
+            <Polish>Akceptuj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
+            <Italian>Accetta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
+            <Czech>Přijimutí žádosti poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
+            <Russian>Принять запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
+            <French>Accepter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
+            <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
+            <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
+            <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
+            <German>Anfragen werden von anderen Mitspielen gestellt. Diese können Anfragen u.a. zum Teilen/Verwenden von Ausrüstungsgegenständen, oder auch zum Ausführen von Handlungen sein. </German>
+            <Spanish>Rechazar peticiones de otros jugadores. Pueden ser solicitudes para usar / compartir equipamiento, realizar ciertas acciones.</Spanish>
+            <Polish>Ignoruj prośby wysłane przez innych graczy. Akceptacji wymagają między innymi akcje używania / współdzielenia wyposażenia, wykonywania określonych czynności.</Polish>
+            <Italian>Rifiuta le richieste degli altri giocatori. Queste possono riguardare l'uso o la condivisione dell'equipaggiamento, o di determinate azioni.</Italian>
+            <Czech>Zamítnutí žádostii poslané jinými hráči. Mohou to být žádosti k použítí/sdílení vybavení nebo k vykonání určité činnosti.</Czech>
+            <Russian>Отклонить запросы, отправленные другими игроками. Например, запросы на использование/совместное использование снаряжения, выполнение определенных действий</Russian>
+            <French>Rejeter les requêtes d'autres joueurs. Comme l'utilisation / l'échange d'équipement, la réalisation d'actions.</French>
+            <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
+            <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
+            <English>Feedback icons</English>
+            <German>Rückmeldungssymbole</German>
+            <Spanish>Iconos de respuesta</Spanish>
+            <Italian>Icone informative</Italian>
+            <Russian>Иконки состояний</Russian>
+            <Polish>Ikony pomocnicze</Polish>
+            <French>Icones d'information</French>
+            <Czech>Pomocné ikony</Czech>
+            <Hungarian>Visszajelző ikonok</Hungarian>
+            <Portuguese>Ícones de Feedback</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
+            <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
+            <German>Wähle die Position der Rückmeldungssymbole, oder deaktiviere sie. Diese Symbole stellen eine zusätzliche Rückmeldung über die Lage und Handlungen deines Soldaten dar.</German>
+            <Spanish>Seleccionar la posición de o desactivar los íconos de respuesta en la pantalla. Estos iconos se mostrarán para proporcionar información adicional sobre el estado de su personaje y las acciones a realizar.</Spanish>
+            <Italian>Seleziona la posizione o disabilita le icone informative sul tuo schermo. Queste saranno mostrate per fornire informazioni aggiuntive sullo stato o sulle azioni del giocatore.</Italian>
+            <Russian>Выберите положение или или отключите отображение иконок состояний на Вашем экране. Эти иконки предоставят дополнительную информацию о состоянии персонажа и выполняемых действиях.</Russian>
+            <Polish>Ustaw pozycję lub wyłącz całkowicie ikony pomocnicze na ekranie. Te ikony dostarczają dodatkowych informacji na temat statusu Twojej postaci i wykonywanych przez nią akcji.</Polish>
+            <French>Sélection de la position ou la désactivation des icones de feedback. Ces icones vous apportent des informations complémentaires sur votre status et sur les actions en cours.</French>
+            <Czech>Nastavuje pozici nebo vypíná pomocné ikony. Tyto ikony ukazují extra informace ke stavu postavy a vykonávaných činností.</Czech>
+            <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
+            <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
+            <English>Progress bar location</English>
+            <German>Position der Fortschrittsanzeige</German>
+            <Spanish>Ubicación de la barra de progreso</Spanish>
+            <Italian>Posizione della barra di avanzamento</Italian>
+            <Russian>Положение прогресс-бара</Russian>
+            <Polish>Lokalizacja paska postępu</Polish>
+            <French>Position de la barre de progression</French>
+            <Czech>Pozice ukazetele průběhu činnosti</Czech>
+            <Hungarian>Állapotjelző sáv helyzete</Hungarian>
+            <Portuguese>Local da barra de progresso</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
+            <English>Set the desired location of the progress bar on your screen.</English>
+            <German>Setze die gewünschte Position der Fortschrittsanzeige fest.</German>
+            <Spanish>Seleccionar la ubicación deseada de la barra de progreso en tu pantalla</Spanish>
+            <Italian>Modifica la posizione della barra di avanzamernto sullo schermo</Italian>
+            <Russian>Установите желаемое положение строки состояния на экране.</Russian>
+            <Polish>Ustaw pożądaną lokalizację paska postępu na ekranie</Polish>
+            <French>Appliquer la position de la barre de progression sur l'écran</French>
+            <Czech>Nastavuje pozici ukazetele průběhu činnosti na vaší obrazovce.</Czech>
+            <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
+            <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
+            <English>Hint Background color</English>
+            <German>Hintergrundfarbe der Hinweise</German>
+            <Spanish>Color de fondo de las notificaciones</Spanish>
+            <Italian>Colore di sfondo dei suggerimenti</Italian>
+            <Russian>Цвет фона всплывающих подсказок</Russian>
+            <Polish>Kolor tła powiadomień</Polish>
+            <French>Notification: couleur de l'arrière plan</French>
+            <Czech>Barva pozadí nápovědy</Czech>
+            <Hungarian>Súgó háttérszíne</Hungarian>
+            <Portuguese>Cor do fundo da hint</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
+            <English>The color of the background from the ACE hints.</English>
+            <German>Die Hintergrundfarbe der ACE-Hinweise.</German>
+            <Spanish>El color de fondo de las notificaciones del ACE</Spanish>
+            <Italian>Il colore di sfondo dei suggerimenti di ACE.</Italian>
+            <Russian>Цвет фона всплывающих подсказок АСЕ.</Russian>
+            <Polish>Kolor tła dla powiadomień ACE</Polish>
+            <French>Notification ACE: couleur de l'arrière plan</French>
+            <Czech>Barva pozadí ACE nápovědy.</Czech>
+            <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
+            <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
+            <English>Hint text font color</English>
+            <German>Textfarbe der Hinweise</German>
+            <Spanish>Color del texto de las notificaciones</Spanish>
+            <Italian>Il colore del testo dei suggerimenti</Italian>
+            <Russian>Цвет шрифта всплывающих подсказок</Russian>
+            <Polish>Kolor tekstu powiadomień</Polish>
+            <French>Notification: couleur du texte</French>
+            <Czech>Barva fontu nápovědy.</Czech>
+            <Hungarian>Súgószöveg betűinek színe</Hungarian>
+            <Portuguese>Cor do do texto da hint</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
+            <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
+            <German>Wähle die Textfarbe für ACE-Hinweise. Die gewählte Farbe wird als Standartfarbe der Hinweise angezeigt, wenn der Hinweis selbst keine spezifische Farbe hat. </German>
+            <Spanish>El color del texto de las notificaciones del ACE. Este es el color predeterminado para todo el texto que se muestra a través del sistema de notificaciones del ACE, si el texto de notificación no tiene otro color especificado.</Spanish>
+            <Italian>Il colore del testo dei suggerimenti di ACE. Questo è il colore predefinito per tutto il testo mostrato dal sistema di suggerimenti di ACE quando il colore del testo non ha altro colore specificato.</Italian>
+            <Russian>Цвет шрифта текста всплывающих подсказок АСЕ. Этот цвет является стандартным для всего текста, транслирующегося через систему подсказок АСЕ, если не установлено другого цвета для текста подсказок.</Russian>
+            <Polish>Kolor tekstu dla powiadomień ACE. Ten kolor jest domyślnym dla wszystkich tekstów wyświetlanych poprzez System Powiadomień ACE, jeżeli dla powiadomienia nie określono innego koloru.</Polish>
+            <French>Notification ACE: couleur du texte. C'est la couleur par défaut de tout texte affiché dans les notifications ACE, si aucune couleur n'est spécifiée pour les notifications</French>
+            <Czech>Barva fontu ACE nápověd. Toto je standardní barva pro všechen text zobrazovaný ACE nápovědami, pokud nemá nápověda žádnou specifikanou barvu.</Czech>
+            <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
+            <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_bananaDisplayName">
+            <English>Banana</English>
+            <German>Banane</German>
+            <Spanish>Banana</Spanish>
+            <Czech>Banán</Czech>
+            <Italian>Banana</Italian>
+            <Russian>Банан</Russian>
+            <Polish>Banan</Polish>
+            <French>Banane</French>
+            <Hungarian>Banán</Hungarian>
+            <Portuguese>Banana</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_bananaDescr">
+            <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
+            <German>Die Bananen (Musa) sind eine Pflanzengattung in der Familie der Bananengewächse (Musaceae) innerhalb der Einkeimblättrigen Pflanzen (Monokotyledonen).</German>
+            <Spanish>Una banana es una fruta comestible, botanicamente una baya, producida por varios tipos de grandes plantas herbáceas del género Musa.</Spanish>
+            <Czech>Banán je protáhlé ovoce a plod banánovníku (epigeická bobule).</Czech>
+            <Italian>Una banana è un frutto commestibile, nello specifico una bacca cuoiosa, prodotta da un gran numero di grandi piante erbacee dotate di fiori, della famiglia delle Musaceae.</Italian>
+            <Russian>Банан - это съедобный фрукт, ягода с ботанической точки зрения, произрастающий на нескольких видах травянистых растениях рода Банан (Musa).</Russian>
+            <Hungarian>A banán egy ehető gyümölcs, technikai szempontból bogyótermés, melyet több fürtvirágzatú növény termel a Musa rendszertani nemzetségben.</Hungarian>
+            <Polish>Rodzaj roślin z rodziny bananowatych, obejmujący około 80 gatunków.&lt;br /&gt;Przedstawiciele są typowymi przedstawicielami flory międzyzwrotnikowej Azji, Afryki i Australii.&lt;br /&gt;Część gatunków dostarcza jadalnych owoców. Słowo banan pochodzi prawdopodobnie od arabskiego słowa banan, co oznacza palec, lub afrykańskiego języka wolof, w którym rośliny te określa się mianem banaana.</Polish>
+            <French>Une banane est un fruit qui, d'un point de vue botanique, fait partie du groupe des baies. Produite par plusieurs sortes de grandes plantes à fleurs herbacées du type Musa.</French>
+            <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
+            <English>Check PBOs</English>
+            <Polish>Sprawdzaj PBO</Polish>
+            <Spanish>Comprobar PBOs</Spanish>
+            <German>Überprüfe PBOs</German>
+            <Czech>Zkontrolovat soubory PBO</Czech>
+            <Portuguese>Verificar PBOs</Portuguese>
+            <French>Vérifier les PBOs</French>
+            <Hungarian>PBO-k ellenőrzése</Hungarian>
+            <Russian>Проверка аддонов</Russian>
+            <Italian>Controlla PBO</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Description">
+            <English>Check addon integrity with server and do selected action if an addon is missing.</English>
+            <Polish>Sprawdzaj spójność addonów z serwerem i wykonuj stosowną akcję jeżeli zostanie wykryty brak addonu.</Polish>
+            <Spanish>Este módulo verifica la integridad de los addons con los que iniciamos el simulador</Spanish>
+            <German>Dieses Modul überprüft, ob jeder Spieler die richtigen PBO-Dateien mitgeladen hat.</German>
+            <Czech>Zjistit addon který je v souladu se serverem</Czech>
+            <Portuguese>Este módulo verifica a integridade dos addons quando iniciamos a simulação</Portuguese>
+            <Russian>Выполняет проверку версий аддонов ACE у подключаемых игроков</Russian>
+            <French>Ce module contrôle si les PBOs de chaque joueur sont corrects</French>
+            <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
+            <English>Action</English>
+            <Polish>Akcja</Polish>
+            <Spanish>Acción</Spanish>
+            <German>Aktion</German>
+            <Czech>Akce</Czech>
+            <Portuguese>Ação</Portuguese>
+            <French>Action</French>
+            <Hungarian>Cselekvés</Hungarian>
+            <Russian>Действие</Russian>
+            <Italian>Azione</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
+            <English>What to do with people who do not have the right PBOs?</English>
+            <Polish>Co zrobić z graczami, którzy nie mają właściwych PBO?</Polish>
+            <Spanish>¿Qué hacer con la gente que no tiene correctamente los PBOs?</Spanish>
+            <German>Was soll mit Leuten geschehen, die nicht die richtigen PBO-Dateien geladen haben?</German>
+            <Czech>Co udělat s lidmi, co nemají správné addony?</Czech>
+            <Portuguese>O que fazer com pessoas que não tem os PBOs corretos?</Portuguese>
+            <French>Que faire avec les personnes n'ayant pas les bons PBO ?</French>
+            <Hungarian>Mi legyen azokkal a személyekkel, akiknek nincsenek meg a helyes PBO-k?</Hungarian>
+            <Russian>Что делать с игроками с неправильными аддонами?</Russian>
+            <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
+            <English>Warn once</English>
+            <Polish>Ostrzeż raz</Polish>
+            <Spanish>Avisar una vez</Spanish>
+            <German>Einmal verwarnen</German>
+            <Czech>Upozornit jednou</Czech>
+            <Portuguese>Avisar uma vez</Portuguese>
+            <French>Avertir une fois</French>
+            <Hungarian>Egyszeri figyelmeztetés</Hungarian>
+            <Russian>Предупредить один раз</Russian>
+            <Italian>Avverti una volta</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
+            <English>Warn (permanent)</English>
+            <Polish>Ostrzeżenie (permanentne)</Polish>
+            <Spanish>Avisar (permanente)</Spanish>
+            <German>Verwarnen (permanent)</German>
+            <Czech>Upozornit (permanentně)</Czech>
+            <Portuguese>Avisar (permanente)</Portuguese>
+            <French>Avertir (permanent)</French>
+            <Hungarian>Figyelmeztetés (tartós)</Hungarian>
+            <Russian>Предупреждать (постоянно)</Russian>
+            <Italian>Avverti (permanente)</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
+            <English>Kick</English>
+            <Polish>Kick</Polish>
+            <Spanish>Expulsar</Spanish>
+            <German>Kicken</German>
+            <Czech>Vyhodit</Czech>
+            <Portuguese>Chutar</Portuguese>
+            <French>Ejecter</French>
+            <Hungarian>Kirúgás</Hungarian>
+            <Russian>Кикнуть</Russian>
+            <Italian>Kick</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
+            <English>Check all addons</English>
+            <Polish>Sprawdź wsz. addony</Polish>
+            <Spanish>Comprobar todos los addons</Spanish>
+            <German>Alle Addons überprüfen</German>
+            <Czech>Zkontrolovat všechny addony</Czech>
+            <Portuguese>Verificar todos addons</Portuguese>
+            <French>Vérifier tous les addons</French>
+            <Hungarian>Összes bővítmény ellenőrzése</Hungarian>
+            <Russian>Проверять все аддоны</Russian>
+            <Italian>Controlla tutti gli addon</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
+            <English>Check all addons instead of only those of ACE?</English>
+            <Polish>Sprawdzaj wszystkie addony czy tylko te z ACE?</Polish>
+            <Spanish>Comprobar todos los addons en vez de solo los del ACE</Spanish>
+            <German>Alle Addons anstatt nur ACE überprüfen?</German>
+            <Czech>Zkontrolovat všechny addony namísto jen těch od ACE?</Czech>
+            <Portuguese>Verificar todos addons invés de só os do ACE?</Portuguese>
+            <French>Vérifie tous les addons, même ceux qui ne sont pas liés à ACE</French>
+            <Hungarian>Az összes bővítmény ellenőrzése, csak az ACE helyett?</Hungarian>
+            <Russian>Проверять все аддоны, а не только ACE?</Russian>
+            <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
+            <English>Whitelist</English>
+            <Polish>Biała lista</Polish>
+            <Spanish>Lista blanca</Spanish>
+            <German>Whitelist</German>
+            <Czech>Seznam povolených</Czech>
+            <Portuguese>Lista branca</Portuguese>
+            <French>Liste blanche</French>
+            <Hungarian>Fehérlista</Hungarian>
+            <Russian>Вайтлист доп. аддонов</Russian>
+            <Italian>Lista Bianca</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
+            <English>What addons are allowed regardless?</English>
+            <Polish>Jakie addony są dozwolone?</Polish>
+            <Spanish>Qué addons están permitidos igualmente</Spanish>
+            <German>Welche Addons werden dennoch erlaubt?</German>
+            <Czech>Jaké addony jsou povoleny?</Czech>
+            <Portuguese>Quais addons são permitidos de qualquer maneira?</Portuguese>
+            <French>Quels addons sont tolérés ?</French>
+            <Hungarian>Milyen bővítmények vannak feltétlenül engedélyezve?</Hungarian>
+            <Russian>Какие аддоны дополнительно разрешены?</Russian>
+            <Italian>Quali addon sono permessi in ogni caso?</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
+            <English>LSD Vehicles</English>
+            <Polish>Pojazdy LSD</Polish>
+            <Spanish>Vehículos LSD</Spanish>
+            <German>LSD-Fahrzeuge</German>
+            <Czech>LSD vozidla</Czech>
+            <Portuguese>Veículos LSD</Portuguese>
+            <French>LSD - Véhicules</French>
+            <Hungarian>LSD járművek</Hungarian>
+            <Russian>Транспорт под LSD</Russian>
+            <Italian>Veicoli LSD</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_LSDVehicles_Description">
+            <English>Adds LSD effect to synchronized vehicle</English>
+            <Polish>Dodaje efekt LSD pod zsynchronizowany pojazd</Polish>
+            <Spanish>Añade el efecto LSD al vehículo sincronizado</Spanish>
+            <German>Fügt einen LSD-Effekt zum synchronisierten Fahrzeug hinzu</German>
+            <Czech>Přidá LSD efekt pro synchronizované vozidla</Czech>
+            <Portuguese>Adiciona efeito LSD ao veículo sincronizado</Portuguese>
+            <French>Ajoute l'effet LSD aux véhicules synchronisés</French>
+            <Hungarian>LSD-effekt hozzáadása a szinkronizált járművekhez</Hungarian>
+            <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
+            <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_toggleHandheldDevice">
+            <English>Toggle Handheld Device</English>
+            <Spanish>Seleccionar dispositivo de mano</Spanish>
+            <German>Handheld aufrufen</German>
+            <Portuguese>Ativa dispositivo de mão</Portuguese>
+            <Polish>Przełącz urządzenie podręczne</Polish>
+            <Czech>Přepnout ruční zařízení</Czech>
+            <French>Allumer l'ordinateur de poche</French>
+            <Hungarian>Kézi eszköz kapcsolása</Hungarian>
+            <Russian>Включить портативное устройство</Russian>
+            <Italian>Apri dispositivo palmare</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_closeHandheldDevice">
+            <English>Close Handheld Device</English>
+            <Spanish>Cerrar dispositivo de mano</Spanish>
+            <German>Handheld schließen</German>
+            <Portuguese>Fecha dispositivo de mão</Portuguese>
+            <Polish>Zamknij urządzenie podręczne</Polish>
+            <Czech>Zavřít ruční zařízení</Czech>
+            <French>Fermer l'ordinateur de poche</French>
+            <Hungarian>Kézi eszköz bezárása</Hungarian>
+            <Russian>Закрыть портативное устройство</Russian>
+            <Italian>Chiudi dispositivo palmare</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_cycleHandheldDevices">
+            <English>Cycle Handheld Devices</English>
+            <Spanish>Cambiar dispositivos de mano</Spanish>
+            <German>Handheld wechseln</German>
+            <Portuguese>Troca dispositivos de mão</Portuguese>
+            <Polish>Następne urządzenie podręczne</Polish>
+            <Czech>Procházet ruční zařízení</Czech>
+            <French>Changer (cycle) d'ordinateur de poche</French>
+            <Hungarian>Kézi eszköz váltása</Hungarian>
+            <Russian>Следующее портативное устройство</Russian>
+            <Italian>Cicla tra dispositivi palmari</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_Disabled">
+            <English>Disabled</English>
+            <Czech>Zakázáno</Czech>
+            <French>Désactiver</French>
+            <German>Deaktiviert</German>
+            <Italian>Disattivato</Italian>
+            <Polish>Wyłączone</Polish>
+            <Portuguese>Desativado</Portuguese>
+            <Russian>Откл.</Russian>
+            <Spanish>Desactivado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_Enabled">
+            <English>Enabled</English>
+            <Czech>Povoleno</Czech>
+            <French>Activer</French>
+            <German>Aktiviert</German>
+            <Italian>Attivato</Italian>
+            <Polish>Włączone</Polish>
+            <Portuguese>Ativado</Portuguese>
+            <Russian>Вкл.</Russian>
+            <Spanish>Activado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_Yes">
+            <English>Yes</English>
+            <German>Ja</German>
+            <Spanish>Si</Spanish>
+            <Polish>Tak</Polish>
+            <Czech>Ano</Czech>
+            <French>Oui</French>
+            <Russian>Да</Russian>
+            <Hungarian>Igen</Hungarian>
+            <Portuguese>Sim</Portuguese>
+            <Italian>Si</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_No">
+            <English>No</English>
+            <German>Nein</German>
+            <Spanish>No</Spanish>
+            <Polish>Nie</Polish>
+            <Czech>Ne</Czech>
+            <French>Non</French>
+            <Russian>Нет</Russian>
+            <Hungarian>Nem</Hungarian>
+            <Portuguese>Não</Portuguese>
+            <Italian>No</Italian>
+        </Key>
+        <Key ID="STR_ACE_Common_VehiclesOnly">
+            <English>Vehicles only</English>
+            <German>Nur Fahrzeuge</German>
+            <Polish>Tylko pojazdy</Polish>
+            <Portuguese>Somente veículos</Portuguese>
+            <Russian>Только в транспорте</Russian>
+            <Czech>Pouze vozidla</Czech>
+            <Spanish>Solo vehículos</Spanish>
+            <Italian>Solo veicoli</Italian>
+            <French>Vehicules seulement</French>
+        </Key>
+        <Key ID="STR_ACE_Common_DoNotForce">
+            <English>Do Not Force</English>
+            <German>Nicht erzwingen</German>
+            <Polish>Nie wymuszaj</Polish>
+            <Spanish>No forzar</Spanish>
+            <Czech>Nevynucovat</Czech>
+            <Portuguese>Não forçar</Portuguese>
+            <Russian>Не обязывать</Russian>
+            <Italian>Non forzare</Italian>
+            <French>Ne pas forcer</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
+            <English>ACE3 Equipment</English>
+            <German>ACE-Ausrüstung</German>
+            <Polish>ACE3 Wyposażenie</Polish>
+            <Portuguese>Equipamentos ACE3</Portuguese>
+            <Russian>ACE3 Снаряжение</Russian>
+            <Czech>ACE3 Vybavení</Czech>
+            <Spanish>ACE3 Equipo</Spanish>
+            <Italian>Equipaggiamento ACE3</Italian>
+            <French>Equipement ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
+            <English>ACE3 Common</English>
+            <German>ACE3 Allgemein</German>
+            <Polish>ACE3 Ogólne</Polish>
+            <Portuguese>Comum ACE3</Portuguese>
+            <Russian>ACE3 Общие</Russian>
+            <Spanish>ACE3 Común</Spanish>
+            <Czech>ACE3 Obecné</Czech>
+            <Italian>Comune ACE3</Italian>
+            <French>Commun ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
+            <English>ACE3 Weapons</English>
+            <German>ACE3 Waffen</German>
+            <Polish>ACE3 Broń</Polish>
+            <Portuguese>Armamento ACE3</Portuguese>
+            <Russian>ACE3 Оружие</Russian>
+            <Czech>ACE3 Zbraně</Czech>
+            <Spanish>ACE3 Armas</Spanish>
+            <Italian>Armi ACE3</Italian>
+            <French>Armes ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
+            <English>ACE3 Movement</English>
+            <German>ACE3 Bewegung</German>
+            <Polish>ACE3 Ruch</Polish>
+            <Portuguese>Movimento ACE3</Portuguese>
+            <Russian>ACE3 Перемещение</Russian>
+            <Spanish>ACE3 Movimiento</Spanish>
+            <Czech>ACE3 Pohyb</Czech>
+            <Italian>Movimento ACE3</Italian>
+            <French>Mouvement ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
+            <English>ACE3 Scope Adjustment</English>
+            <German>ACE3 Visiereinstellung</German>
+            <Polish>ACE3 Regulacja optyki</Polish>
+            <Portuguese>Ajuste de luneta ACE3</Portuguese>
+            <Russian>ACE3 Прицелы</Russian>
+            <Czech>ACE3 Nastavení optiky</Czech>
+            <Spanish>ACE3 Ajuste de miras</Spanish>
+            <Italian>Regolazione Ottiche ACE3</Italian>
+            <French>Ajustement de la lunette ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
+            <English>ACE3 Vehicles</English>
+            <German>ACE3 Fahrzeuge</German>
+            <Polish>ACE3 Pojazdy</Polish>
+            <Portuguese>Veículos ACE3</Portuguese>
+            <Russian>ACE3 Транспорт</Russian>
+            <Czech>ACE3 Vozidla</Czech>
+            <Spanish>ACE3 Vehículos</Spanish>
+            <Italian>Veicoli ACE3</Italian>
+            <French>Vehicules ACE3</French>
+        </Key>
+        <Key ID="STR_ACE_Common_NoRoomToUnload">
+            <English>No Room to unload</English>
+            <German>Kein Platz zum Entladen</German>
+            <Polish>Brak miejsca na rozładunek</Polish>
+            <Italian>Non c'è spazio per scaricare</Italian>
+            <Spanish>No hay espacio para descargar.</Spanish>
+            <French>Pas de place pour décharger</French>
+        </Key>
+    </Package>
 </Project>

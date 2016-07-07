@@ -1,101 +1,92 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-	<Package name="Inventory">
-		<Key ID="STR_ACE_Inventory_SettingName">
-			<English>Make Inventory Display Bigger</English>
-			<German>Erhöhe die angezeigte Inventargröße</German>
-			<Spanish>Hacer la pantalla de inventario mas grande</Spanish>
-			<Russian>Изменить размер окна инвентаря</Russian>
-			<Czech>Zvětšit zobrazení inventáře</Czech>
-			<Polish>Powiększ UI ekwipunku</Polish>
-			<French>Agrandir la taille d'affichage de l'inventaire</French>
-			<Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
-			<Italian>Ingrandisci il menù inventario</Italian>
-			<Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
-			<Japanese>インベントリ表示を大きくする</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_SettingDescription">
-			<English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
-			<German>Im Regelfall wird die Inventargröße durch die Größe der Nutzeroberfläche bestimmt. Diese Einstellung erlaubt es, das Inventar unter Ausschluss der Schriftgröße zu vergrößern. Dadurch können mehr Gegenstände angezeigt werden.</German>
-			<Spanish>Normalmente la pantalla de inventario se escala por el tamaño de la interfaz de usuario. Esto permite ampliar el tamaño de la interfaz de usuario de inventario, pero no aumenta el tamaño de fuente, permitiendo mostrar más filas.</Spanish>
-			<Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
-			<Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
-			<Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
-			<French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
-			<Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
-			<Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
-			<Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
-			<Japanese>通常のインベントリは UI の大きさによって表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Backpacks">
-			<English>Backpacks</English>
-			<German>Rucksäcke</German>
-			<Czech>Batohy</Czech>
-			<Polish>Plecaki</Polish>
-			<Italian>Zaini</Italian>
-			<Spanish>Mochilas</Spanish>
-			<French>Sacs à dos</French>
-			<Japanese>バックパック</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Headgear">
-			<English>Headgear</English>
-			<German>Kopfbedeckungen</German>
-			<Czech>Pokrývka hlavy</Czech>
-			<Polish>Hełmy</Polish>
-			<Italian>Copricapi</Italian>
-			<Spanish>Cascos</Spanish>
-			<French>Equipement de tête</French>
-			<Japanese>ヘッドギア</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Glasses">
-			<English>Glasses</English>
-			<German>Brillen</German>
-			<Czech>Brýle</Czech>
-			<Polish>Gogle</Polish>
-			<Italian>Occhiali</Italian>
-			<Spanish>Gafas</Spanish>
-			<French>Lunettes</French>
-			<Japanese>メガネ</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Uniforms">
-			<English>Uniforms</English>
-			<German>Uniformen</German>
-			<Czech>Uniformy</Czech>
-			<Polish>Uniformy</Polish>
-			<Italian>Uniformi</Italian>
-			<Spanish>Uniformes</Spanish>
-			<French>Uniformes</French>
-			<Japanese>戦闘服</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Vests">
-			<English>Vests</English>
-			<German>Westen</German>
-			<Czech>Vesty</Czech>
-			<Polish>Kamizelki</Polish>
-			<Italian>Vests</Italian>
-			<Spanish>Chalecos</Spanish>
-			<French>Gilets</French>
-			<Japanese>ベスト</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Grenades">
-			<English>Grenades</English>
-			<German>Granaten</German>
-			<Czech>Granáty</Czech>
-			<Polish>Granaty</Polish>
-			<Italian>Granate</Italian>
-			<Spanish>Granadas</Spanish>
-			<French>Grenades</French>
-			<Japanese>手榴弾</Japanese>
-		</Key>
-		<Key ID="STR_ACE_Inventory_Medical">
-			<English>Medical</English>
-			<German>Sanitätsmaterial</German>
-			<Czech>Lékařské vybavení</Czech>
-			<Polish>Medyczne</Polish>
-			<Italian>Medico</Italian>
-			<Spanish>Médico</Spanish>
-			<French>Médical</French>
-			<Japanese>医療</Japanese>
-		</Key>
-	</Package>
+    <Package name="Inventory">
+        <Key ID="STR_ACE_Inventory_SettingName">
+            <English>Make Inventory Display Bigger</English>
+            <German>Erhöhe die angezeigte Inventargröße</German>
+            <Spanish>Hacer la pantalla de inventario mas grande</Spanish>
+            <Russian>Изменить размер окна инвентаря</Russian>
+            <Czech>Zvětšit zobrazení inventáře</Czech>
+            <Polish>Powiększ UI ekwipunku</Polish>
+            <French>Agrandir la taille d'affichage de l'inventaire</French>
+            <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
+            <Italian>Ingrandisci il menù inventario</Italian>
+            <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Inventory_SettingDescription">
+            <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
+            <German>Im Regelfall wird die Inventargröße durch die Größe der Nutzeroberfläche bestimmt. Diese Einstellung erlaubt es, das Inventar unter Ausschluss der Schriftgröße zu vergrößern. Dadurch können mehr Gegenstände angezeigt werden.</German>
+            <Spanish>Normalmente la pantalla de inventario se escala por el tamaño de la interfaz de usuario. Esto permite ampliar el tamaño de la interfaz de usuario de inventario, pero no aumenta el tamaño de fuente, permitiendo mostrar más filas.</Spanish>
+            <Russian>Обычно, размер окна инвентаря зависит от размеров пользовательского интерфейса. Эта настройка позволяет увеличить размер окна инвентаря, не увеличивая размеры шрифтов, так что отображется большее количество строк.</Russian>
+            <Czech>Normálně se velikost invetáře škáluje s velikostí UI. Toto nastavení dovoluje škálování velikost inventáře ale nežvětšuje velikost fontu. To dovoluje zobrazení více řad v inventáři.</Czech>
+            <Polish>Ekwipunek skalowany jest poprzez rozmiar UI. Ta opcja pozwala powiększyć rozmiar UI ekwipunku, lecz nie zwiększa rozmiaru fontu pozwalając na wyświetlanie większej ilości wierszy.</Polish>
+            <French>L'inventaire est normalement affiché en fonction de la taille de l'UI. Cette option permet d'agrandir l'affichage de l'inventaire, mais n'a aucun effet sur la taille des polices permettant d'afficher plus de ligne</French>
+            <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
+            <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
+            <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Backpacks">
+            <English>Backpacks</English>
+            <German>Rucksäcke</German>
+            <Czech>Batohy</Czech>
+            <Polish>Plecaki</Polish>
+            <Italian>Zaini</Italian>
+            <Spanish>Mochilas</Spanish>
+            <French>Sacs à dos</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Headgear">
+            <English>Headgear</English>
+            <German>Kopfbedeckungen</German>
+            <Czech>Pokrývka hlavy</Czech>
+            <Polish>Hełmy</Polish>
+            <Italian>Copricapi</Italian>
+            <Spanish>Cascos</Spanish>
+            <French>Equipement de tête</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Glasses">
+            <English>Glasses</English>
+            <German>Brillen</German>
+            <Czech>Brýle</Czech>
+            <Polish>Gogle</Polish>
+            <Italian>Occhiali</Italian>
+            <Spanish>Gafas</Spanish>
+            <French>Lunettes</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Uniforms">
+            <English>Uniforms</English>
+            <German>Uniformen</German>
+            <Czech>Uniformy</Czech>
+            <Polish>Uniformy</Polish>
+            <Italian>Uniformi</Italian>
+            <Spanish>Uniformes</Spanish>
+            <French>Uniformes</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Vests">
+            <English>Vests</English>
+            <German>Westen</German>
+            <Czech>Vesty</Czech>
+            <Polish>Kamizelki</Polish>
+            <Italian>Vests</Italian>
+            <Spanish>Chalecos</Spanish>
+            <French>Gilets</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Grenades">
+            <English>Grenades</English>
+            <German>Granaten</German>
+            <Czech>Granáty</Czech>
+            <Polish>Granaty</Polish>
+            <Italian>Granate</Italian>
+            <Spanish>Granadas</Spanish>
+            <French>Grenades</French>
+        </Key>
+        <Key ID="STR_ACE_Inventory_Medical">
+            <English>Medical</English>
+            <German>Sanitätsmaterial</German>
+            <Czech>Lékařské vybavení</Czech>
+            <Polish>Medyczne</Polish>
+            <Italian>Medico</Italian>
+            <Spanish>Médico</Spanish>
+            <French>Médical</French>
+        </Key>
+    </Package>
 </Project>

@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-	<Package name="gforces">
-		<Key ID="STR_ACE_gforces_enabledFor_displayName">
-			<English>Gforces Effects</English>
-			<German>Gforces Effekte</German>
-			<Spanish>Efectos Gforces</Spanish>
-			<Japanese>G による効果</Japanese>
-		</Key>
-		<Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
-			<English>Only Aircraft</English>
-			<German>Nur Luftfahrzeug</German>
-			<Spanish>Sólo Aeronave</Spanish>
-			<Japanese>航空機のみ</Japanese>
-		</Key>
-	</Package>
+    <Package name="gforces">
+        <Key ID="STR_ACE_gforces_enabledFor_displayName">
+            <English>Gforces Effects</English>
+            <German>Gforces Effekte</German>
+            <Spanish>Efectos Gforces</Spanish>
+        </Key>
+        <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
+            <English>Only Aircraft</English>
+            <German>Nur Luftfahrzeug</German>
+            <Spanish>Sólo Aeronave</Spanish>
+        </Key>
+    </Package>
 </Project>
