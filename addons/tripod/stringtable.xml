@@ -1,77 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="tripod">
-        <Key ID="STR_ACE_Tripod_DisplayName">
-            <English>SSWT Kit</English>
-            <German>Scharfschützendreibein</German>
-            <Russian>Снайперский штатив</Russian>
-            <Polish>Trójnóg snajperski</Polish>
-            <Spanish>Equipo SSWT</Spanish>
-            <French>Kit SSWT</French>
-            <Czech>SSWT souprava</Czech>
-            <Italian>SSWT Kit</Italian>
-            <Hungarian>SSWT Készlet</Hungarian>
-            <Portuguese>Kit SSWT</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Tripod_PlaceDown">
-            <English>Place SSWT Kit</English>
-            <German>Scharfschützendreibein aufstellen</German>
-            <Russian>Установить снайперский штатив</Russian>
-            <Polish>Postaw trójnóg snajperski</Polish>
-            <Spanish>Colocar equipo SSWT</Spanish>
-            <French>Placer le kit SSWT</French>
-            <Czech>Rozlož souprava SSWT</Czech>
-            <Italian>Place SSWT Kit</Italian>
-            <Hungarian>SSWT készlet elhelyezése</Hungarian>
-            <Portuguese>Colocar kit SSWT</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Tripod_PickUp">
-            <English>Pick up SSWT Kit</English>
-            <Polish>Podnieś trójnóg snajperski</Polish>
-            <Spanish>Coger equipo SSWT</Spanish>
-            <Czech>Zvednout SSWT soupravu</Czech>
-            <German>Scharfschützendreibein einpacken</German>
-            <Portuguese>Pegar kit SSWT</Portuguese>
-            <French>Prendre le kit SSWT</French>
-            <Hungarian>SSWT készlet felvétele</Hungarian>
-            <Russian>Подобрать снайперский штатив</Russian>
-            <Italian>Prendi Kit SSWT</Italian>
-        </Key>
-        <Key ID="STR_ACE_Tripod_Adjust">
-            <English>Adjust SSWT Kit</English>
-            <Polish>Reguluj trójnóg snajperski</Polish>
-            <Spanish>Ajustar equipo SSWT</Spanish>
-            <Czech>Regulovat SSWT soupravu</Czech>
-            <German>Scharfschützendreibein anpassen</German>
-            <Portuguese>Ajustar kit SSWT</Portuguese>
-            <French>Régler le kit SSWT</French>
-            <Hungarian>SSWT készlet állítása</Hungarian>
-            <Russian>Выровнять снайперский штатив</Russian>
-            <Italian>Aggiusta Kit SSWT</Italian>
-        </Key>
-        <Key ID="STR_ACE_Tripod_Done">
-            <English>Done</English>
-            <Polish>Gotowe</Polish>
-            <Spanish>Hecho</Spanish>
-            <Czech>Hotovo</Czech>
-            <German>Fertig</German>
-            <Portuguese>Feito</Portuguese>
-            <French>Terminé</French>
-            <Hungarian>Kész</Hungarian>
-            <Russian>Готово</Russian>
-            <Italian>Fatto</Italian>
-        </Key>
-        <Key ID="STR_ACE_Tripod_ScrollAction">
-            <English>adjust</English>
-            <Polish>regulacja</Polish>
-            <Spanish>Ajustar</Spanish>
-            <Czech>regulace</Czech>
-            <German>anpassen</German>
-            <Portuguese>ajuste</Portuguese>
-            <French>régler</French>
-            <Hungarian>szabályzás</Hungarian>
-            <Russian>подстройка</Russian>
-            <Italian>aggiusta</Italian>
-        </Key>
-    </Package>
+	<Package name="tripod">
+		<Key ID="STR_ACE_Tripod_DisplayName">
+			<English>SSWT Kit</English>
+			<German>Scharfschützendreibein</German>
+			<Russian>Снайперский штатив</Russian>
+			<Polish>Trójnóg snajperski</Polish>
+			<Spanish>Equipo SSWT</Spanish>
+			<French>Kit SSWT</French>
+			<Czech>SSWT souprava</Czech>
+			<Italian>SSWT Kit</Italian>
+			<Hungarian>SSWT Készlet</Hungarian>
+			<Portuguese>Kit SSWT</Portuguese>
+			<Japanese>SSWT キット</Japanese>
+		</Key>
+		<Key ID="STR_ACE_Tripod_PlaceDown">
+			<English>Place SSWT Kit</English>
+			<German>Scharfschützendreibein aufstellen</German>
+			<Russian>Установить снайперский штатив</Russian>
+			<Polish>Postaw trójnóg snajperski</Polish>
+			<Spanish>Colocar equipo SSWT</Spanish>
+			<French>Placer le kit SSWT</French>
+			<Czech>Rozlož souprava SSWT</Czech>
+			<Italian>Place SSWT Kit</Italian>
+			<Hungarian>SSWT készlet elhelyezése</Hungarian>
+			<Portuguese>Colocar kit SSWT</Portuguese>
+			<Japanese>SSWT キットを置く</Japanese>
+		</Key>
+		<Key ID="STR_ACE_Tripod_PickUp">
+			<English>Pick up SSWT Kit</English>
+			<Polish>Podnieś trójnóg snajperski</Polish>
+			<Spanish>Coger equipo SSWT</Spanish>
+			<Czech>Zvednout SSWT soupravu</Czech>
+			<German>Scharfschützendreibein einpacken</German>
+			<Portuguese>Pegar kit SSWT</Portuguese>
+			<French>Prendre le kit SSWT</French>
+			<Hungarian>SSWT készlet felvétele</Hungarian>
+			<Russian>Подобрать снайперский штатив</Russian>
+			<Italian>Prendi Kit SSWT</Italian>
+			<Japanese>SSWT キットを拾う</Japanese>
+		</Key>
+		<Key ID="STR_ACE_Tripod_Adjust">
+			<English>Adjust SSWT Kit</English>
+			<Polish>Reguluj trójnóg snajperski</Polish>
+			<Spanish>Ajustar equipo SSWT</Spanish>
+			<Czech>Regulovat SSWT soupravu</Czech>
+			<German>Scharfschützendreibein anpassen</German>
+			<Portuguese>Ajustar kit SSWT</Portuguese>
+			<French>Régler le kit SSWT</French>
+			<Hungarian>SSWT készlet állítása</Hungarian>
+			<Russian>Выровнять снайперский штатив</Russian>
+			<Italian>Aggiusta Kit SSWT</Italian>
+			<Japanese>SSWT キットを調節</Japanese>
+		</Key>
+		<Key ID="STR_ACE_Tripod_Done">
+			<English>Done</English>
+			<Polish>Gotowe</Polish>
+			<Spanish>Hecho</Spanish>
+			<Czech>Hotovo</Czech>
+			<German>Fertig</German>
+			<Portuguese>Feito</Portuguese>
+			<French>Terminé</French>
+			<Hungarian>Kész</Hungarian>
+			<Russian>Готово</Russian>
+			<Italian>Fatto</Italian>
+			<Japanese>完了</Japanese>
+		</Key>
+		<Key ID="STR_ACE_Tripod_ScrollAction">
+			<English>adjust</English>
+			<Polish>regulacja</Polish>
+			<Spanish>Ajustar</Spanish>
+			<Czech>regulace</Czech>
+			<German>anpassen</German>
+			<Portuguese>ajuste</Portuguese>
+			<French>régler</French>
+			<Hungarian>szabályzás</Hungarian>
+			<Russian>подстройка</Russian>
+			<Italian>aggiusta</Italian>
+			<Japanese>調節</Japanese>
+		</Key>
+	</Package>
 </Project>
