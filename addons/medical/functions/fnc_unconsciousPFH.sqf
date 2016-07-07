@@ -36,7 +36,7 @@ if (!alive _unit) exitWith {
     [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
-    _unit setUnconscious false;
+    //_unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
@@ -139,6 +139,7 @@ if (!local _unit) exitWith {
 if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
-        _unit setVariable ["ACE_isUnconscious", false, true];
+        //_unit setVariable ["ACE_isUnconscious", false, true];
+        [_unit, "MinUnconsciousTimer", []] call FUNC(stateEvent);
     };
 };

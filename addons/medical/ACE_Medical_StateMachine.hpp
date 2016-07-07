@@ -1,8 +1,6 @@
 class ACE_Medical_StateMachine {
     class Default {
         onState = QUOTE(DFUNC(handleStateDefault));
-        onStateEntered = "";
-        onStateLeaving = "";
         class Injury {
             targetState = "Injured";
             events[] = {"TakenInjury"};
@@ -18,9 +16,6 @@ class ACE_Medical_StateMachine {
     };
     class Injured {
         onState = QUOTE(DFUNC(handleStateInjured));
-        onStateEntered = "";
-        onStateLeaving = "";
-
         class FullHeal {
             targetState = "Default";
             events[] = {"FullHeal"};
@@ -40,8 +35,8 @@ class ACE_Medical_StateMachine {
     };
     class Unconscious {
         onState = QUOTE(DFUNC(handleStateUnconscious));
-        onStateEntered = QUOTE(DFUNC(enteredUnconscious)); // set unconscious animation & state
-        onStateLeaving = QUOTE(DFUNC(leavingUnconscious)); // leave unconscious animation & state
+        onStateEntered = QUOTE(DFUNC(enteredUnconsciousState));
+        onStateLeaving = "_unit setVariable ['ACE_isUnconscious', false, true];";
         class WakeUpFromKnockDown {
             targetState = "Injured";
             condition = QUOTE(_unit call FUNC(hasStableVitals));
@@ -67,18 +62,14 @@ class ACE_Medical_StateMachine {
         class FullHeal {
             targetState = "Default";
             events[] = {"fullyHealed"};
-            onTransition = "";
         };
         class Revived {
             targetState = "Injured";
             events[] = {"Revived"};
-            onTransition = "";
         };
         class TimerRanOut {
             targetState = "Dead";
-            condition = "";
-            events[] = {"ReviveTimer"};
-            onTransition = "";
+            events[] = {"ReviveTimer", "NoLives"};
         };
         class FatalTransitions {
             targetState = "Dead";
