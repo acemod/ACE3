@@ -408,22 +408,8 @@ GVAR(isReloading) = false;
 
 ["isNotReloading", {!GVAR(isReloading)}] call FUNC(addCanInteractWithCondition);
 
-#define AK_OFFSET_SHIFT_LEFT 704643072
-#define AK_OFFSET_CTRL_LEFT 486539264
-#define AK_OFFSET_ALT_LEFT 939524096
-#define AK_OFFSET_SHIFT_RIGHT 905969664
-#define AK_OFFSET_CTRL_RIGHT -1660944384
-#define AK_OFFSET_ALT_RIGHT -1207959552
-
 ["keyDown", {
-    params ["", "_key"];
-
-    if ({(_x - _key) in [
-        0,
-        AK_OFFSET_SHIFT_LEFT, AK_OFFSET_SHIFT_RIGHT,
-        AK_OFFSET_CTRL_LEFT, AK_OFFSET_CTRL_RIGHT,
-        AK_OFFSET_ALT_LEFT, AK_OFFSET_ALT_RIGHT
-    ]} count actionKeys "ReloadMagazine" > 0 && {alive ACE_player}) then {
+    if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
