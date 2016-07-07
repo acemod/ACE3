@@ -1,6 +1,6 @@
 class ACE_Medical_StateMachine {
     class Default {
-        onState = QUOTE(DFUNC(handleDefaultState));
+        onState = QUOTE(DFUNC(handleStateDefault));
         onStateEntered = "";
         onStateLeaving = "";
         class Injury {
@@ -17,7 +17,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Injured {
-        onState = QUOTE(DFUNC(handleInjuredState));
+        onState = QUOTE(DFUNC(handleStateInjured));
         onStateEntered = "";
         onStateLeaving = "";
 
@@ -39,7 +39,7 @@ class ACE_Medical_StateMachine {
         };
     };
     class Unconscious {
-        onState = QUOTE(DFUNC(handleUnconciousState));
+        onState = QUOTE(DFUNC(handleStateUnconscious));
         onStateEntered = QUOTE(DFUNC(enteredUnconscious)); // set unconscious animation & state
         onStateLeaving = QUOTE(DFUNC(leavingUnconscious)); // leave unconscious animation & state
         class WakeUpFromKnockDown {
@@ -61,7 +61,7 @@ class ACE_Medical_StateMachine {
         onStateEntered = "(_this select 0) setDamage 1"; // killing a unit also exits the state machine for this unit
     };
     class Revive {
-        onState = QUOTE(DFUNC(handleReviveState));
+        onState = QUOTE(DFUNC(handleStateRevive));
         onStateEntered = QUOTE(DFUNC(enteredRevive)); // set unconscious animation & state
         onStateLeaving = QUOTE(DFUNC(leavingRevive)); // leave unconscious animation & state
         class FullHeal {

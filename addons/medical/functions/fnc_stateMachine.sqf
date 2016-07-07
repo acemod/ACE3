@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 // Delay between state runs
-#define DELAY 10
+#define DELAY 1
 #define DEFAULT_STATE [0, "Default", {}, {}, {}, []]
 
 GVAR(monitoredUnitsList) = [];
@@ -30,7 +30,7 @@ GVAR(monitoredUnitsListIsSorted) = false;
 
            _unit setvariable [QGVAR(state), _unitState];
 
-           [_unit, _name] call _handler;
+           [_unit, _name, _lastTime] call _handler;
        } else {
            _delete = true;
            GVAR(monitoredUnitsList) set [_forEachIndex, objNull];
