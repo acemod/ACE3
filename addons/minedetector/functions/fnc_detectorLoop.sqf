@@ -17,6 +17,12 @@
 params ["_args", "_idPFH"];
 _args params ["_unit", "_type", "_detectorConfig", "_lastPlayed"];
 
+// If locality switched just turn off the detector
+if !(local _unit)  exitWith {
+    [QGVAR(disableDetector), [_unit, _type], _unit] call CBA_fnc_targetEvent;
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
+};
+
 if !([_unit, _type] call FUNC(hasDetector)) exitWith {
     // disable detector type
     [_unit, _type] call FUNC(disableDetector);
@@ -32,7 +38,10 @@ if !([_unit, _type] call FUNC(isDetectorEnabled)) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
-if (ACE_player != _unit || {currentWeapon _unit != _type}) exitWith {};
+if (currentWeapon _unit != _type) exitWith {
+    [_unit, _type] call FUNC(disableDetector);
+    [_idPFH] call CBA_fnc_removePerFrameHandler;
+};
 
 private _detected = [[_unit, _detectorConfig], FUNC(getDetectedObject), _unit, QGVAR(detectedObjects), 0.15] call EFUNC(common,cachedCall);
 _detected params ["_hasDetected", "_mine", "_distance"];

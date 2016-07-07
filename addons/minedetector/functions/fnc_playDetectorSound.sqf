@@ -26,7 +26,7 @@ if (!alive _unit) exitWith {
     ACE_LOGERROR_1("unit is not alive [%1]",_unit);
 };
 
-if (_unit getVariable [QGVAR(isUsingHeadphones), false]) then {
+if (_unit getVariable [QGVAR(isUsingHeadphones), false] && {_unit == ACE_player}) then {
     playSound _soundClass;
 } else {
     private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));

@@ -16,13 +16,8 @@ GVAR(detectableClasses) = call CBA_fnc_createNamespace;
     };
 } forEach (configProperties [configFile >> "CfgAmmo", "isClass _x", true]);
 
-
-[QGVAR(detectorEnabled), {
-    params ["_unit", "_type"];
-    private _config = [_type] call FUNC(getDetectorConfig);
-
-    [FUNC(detectorLoop), 0.05, [_unit, _type, _config, CBA_missionTime - 0.25]] call CBA_fnc_addPerFrameHandler;
-}] call CBA_fnc_addEventHandler;
+[QGVAR(enableDetector), FUNC(enableDetector)] call CBA_fnc_addEventHandler;
+[QGVAR(disableDetector), FUNC(disableDetector)] call CBA_fnc_addEventHandler;
 
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DEBUG_MODE_FULL
