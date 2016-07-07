@@ -11,7 +11,7 @@ if (_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)
         false;
     };
 
-    private _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
+    private _lifesLeft = _unit getVariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
     if (GVAR(amountOfReviveLives) > 0 && _lifesLeft == 0) exitWith {
         [_unit, "NoLives", []] call FUNC(stateEvent);
     };

@@ -23,7 +23,7 @@ diag_log format["ace_medical_stateEvent: %1", _this];
 
 _event = toLower _event;
 
-private _unitState = _unit getvariable [QGVAR(state), [CBA_missionTime, GVAR(STATE_MACHINE) getVariable "Default"]];
+private _unitState = _unit getVariable [QGVAR(state), [CBA_missionTime, GVAR(STATE_MACHINE) getVariable "Default"]];
 _unitState params ["_lastTime", "_state"];
 _state params ["_name", "_handler", "_onEntry", "_onExit", "_transitions"];
 

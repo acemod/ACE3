@@ -18,7 +18,7 @@
 params ["_unit", "_local"];
 if (_local) then {
     // If the unit had a loop tracking its vitals, restart it locally
-    if (_unit getVariable[QGVAR(addedToUnitLoop),false]) then {
+    if (_unit getVariable [QGVAR(addedToUnitLoop),false]) then {
         [_unit, true] call FUNC(addVitalLoop);
     };
 

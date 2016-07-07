@@ -34,7 +34,7 @@ if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTim
 if !(_unit getVariable [QGVAR(inReviveState), false]) exitWith {
     // Revived without dieing, so in case we have lifes, remove one.
     if (GVAR(amountOfReviveLives) > 0) then {
-        _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
+        _lifesLeft = _unit getVariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
         _unit setVariable [QGVAR(amountOfReviveLives), _lifesLeft - 1, true];
     };
     _unit setVariable [QGVAR(reviveStartTime), nil];
