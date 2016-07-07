@@ -35,7 +35,7 @@ GVAR(monitoredUnitsListIsSorted) = false;
            _delete = true;
            GVAR(monitoredUnitsList) set [_forEachIndex, objNull];
        };
-       if (_exit) exitwith {};
+       if (_exit) exitWith {};
     } forEach GVAR(monitoredUnitsList);
 
    if (_delete) then {

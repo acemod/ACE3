@@ -1,12 +1,31 @@
-
+/*
+ * Author: Glowbal
+ * PFH logic for unconscious state
+ *
+ * Arguments:
+ * 0: PFEH - Args
+ *      0: The unit that will be put in an unconscious state <OBJECT>
+ *      1: unitPos (stance) <STRING>
+ *      2: Starting Time <NUMBER>
+ *      3: Minimum Waiting Time <NUMBER>
+ *      4: Has Moved Out <BOOL>
+ *      5: Parachute Check <BOOL>
+ * 1: PFEH ID <NUMBER>
+ *
+ * ReturnValue:
+ * None
+ *
+ * Public: yes
+ */
 #include "script_component.hpp"
 
-params ["_unit", "_args"];
-_args params ["_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
+private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];
+params ["_args", "_idPFH"];
+_args params ["_unit", "_originalPos", "_startingTime", "_minWaitingTime", "_hasMovedOut", "_parachuteCheck"];
 
-TRACE_6("ACE_DEBUG_Unconscious_handling",_unit, _originalPos, _startingTime, _minWaitingTime, _hasMovedOut, _parachuteCheck);
+TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _originalPos, _startingTime, _minWaitingTime, _hasMovedOut, _parachuteCheck);
 
-if (!alive _unit) exitWith { // TODO on exit unconscious
+if (!alive _unit) exitWith {
     if ("ACE_FakePrimaryWeapon" in (weapons _unit)) then {
         TRACE_1("Removing fake weapon [on death]",_unit);
         _unit removeWeapon "ACE_FakePrimaryWeapon";
@@ -17,12 +36,13 @@ if (!alive _unit) exitWith { // TODO on exit unconscious
     [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
-    //_unit setUnconscious false;
+    _unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
 
     TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , "ace_unconscious");
+
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
@@ -76,12 +96,10 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         };
         _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
 
-        // Now we can leave our unconsicous state
         ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
         // EXIT PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
-
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
         [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);

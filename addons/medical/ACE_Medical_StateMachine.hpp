@@ -76,13 +76,13 @@ class ACE_Medical_StateMachine {
         };
         class TimerRanOut {
             targetState = "Dead";
-            condition = "timerValue >= maxReviveTime";
+            condition = "";
             events[] = {"ReviveTimer"};
             onTransition = "";
         };
         class FatalTransitions {
             targetState = "Dead";
-            condition = "killOnFatalDamageInRevive && inReviveState >= 10";
+            condition = QGVAR(killOnFatalDamageInRevive);
             events[] = {"FatalInjury"};
         };
     };
