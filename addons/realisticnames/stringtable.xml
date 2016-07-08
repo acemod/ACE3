@@ -1946,60 +1946,60 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_blue">
             <English>Jeep Wrangler (Blue)</English>
-            <Czech>Jeep Wrangler (Blau)</Czech>
-            <French>Jeep Wrangler (Azul)</French>
-            <Spanish>Jeep Wrangler (Niebieski)</Spanish>
-            <Russian>Jeep Wrangler (Modrý)</Russian>
-            <Polish>Jeep Wrangler (Bleue)</Polish>
-            <German>Jeep Wrangler (Синий)</German>
+            <German>Jeep Wrangler (Blau)</German>
+            <Spanish>Jeep Wrangler (Azul)</Spanish>
+            <Polish>Jeep Wrangler (Niebieski)</Polish>
+            <Czech>Jeep Wrangler (Modrý)</Czech>
+            <French>Jeep Wrangler (Bleue)</French>
+            <Russian>Jeep Wrangler (Синий)</Russian>
             <Italian>Jeep Wrangler (Azul)</Italian>
             <Hungarian>Jeep Wrangler (Kék)</Hungarian>
             <Portuguese>Jeep Wrangler (Blu)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_green">
             <English>Jeep Wrangler (Green)</English>
-            <Czech>Jeep Wrangler (Grün)</Czech>
-            <French>Jeep Wrangler (Verde)</French>
-            <Spanish>Jeep Wrangler (Zielony)</Spanish>
-            <Russian>Jeep Wrangler (Zelený)</Russian>
-            <Polish>Jeep Wrangler (Verte)</Polish>
-            <German>Jeep Wrangler (Зелёный)</German>
+            <German>Jeep Wrangler (Grün)</German>
+            <Spanish>Jeep Wrangler (Verde)</Spanish>
+            <Polish>Jeep Wrangler (Zielony)</Polish>
+            <Czech>Jeep Wrangler (Zelený)</Czech>
+            <French>Jeep Wrangler (Verte)</French>
+            <Russian>Jeep Wrangler (Зелёный)</Russian>
             <Italian>Jeep Wrangler (Verde)</Italian>
             <Hungarian>Jeep Wrangler (Zöld)</Hungarian>
             <Portuguese>Jeep Wrangler (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_orange">
             <English>Jeep Wrangler (Orange)</English>
-            <Czech>Jeep Wrangler (Orange)</Czech>
-            <French>Jeep Wrangler (Naranja)</French>
-            <Spanish>Jeep Wrangler (Pomarańczowy)</Spanish>
-            <Russian>Jeep Wrangler (Oranžový)</Russian>
-            <Polish>Jeep Wrangler (Orange)</Polish>
-            <German>Jeep Wrangler (Оранжевый)</German>
+            <German>Jeep Wrangler (Orange)</German>
+            <Spanish>Jeep Wrangler (Naranja)</Spanish>
+            <Polish>Jeep Wrangler (Pomarańczowy)</Polish>
+            <Czech>Jeep Wrangler (Oranžový)</Czech>
+            <French>Jeep Wrangler (Orange)</French>
+            <Russian>Jeep Wrangler (Оранжевый)</Russian>
             <Italian>Jeep Wrangler (Laranja)</Italian>
             <Hungarian>Jeep Wrangler (Narancssárga)</Hungarian>
             <Portuguese>Jeep Wrangler (Arancione)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_red">
             <English>Jeep Wrangler (Red)</English>
-            <Czech>Jeep Wrangler (Rot)</Czech>
-            <French>Jeep Wrangler (Rojo)</French>
-            <Spanish>Jeep Wrangler (Czerwony)</Spanish>
-            <Russian>Jeep Wrangler (Červený)</Russian>
-            <Polish>Jeep Wrangler (Rouge)</Polish>
-            <German>Jeep Wrangler (Красный)</German>
+            <German>Jeep Wrangler (Rot)</German>
+            <Spanish>Jeep Wrangler (Rojo)</Spanish>
+            <Polish>Jeep Wrangler (Czerwony)</Polish>
+            <Czech>Jeep Wrangler (Červený)</Czech>
+            <French>Jeep Wrangler (Rouge)</French>
+            <Russian>Jeep Wrangler (Красный)</Russian>
             <Italian>Jeep Wrangler (Vermelha)</Italian>
             <Hungarian>Jeep Wrangler (Piros)</Hungarian>
             <Portuguese>Jeep Wrangler (Rosso)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_white">
             <English>Jeep Wrangler (White)</English>
-            <Czech>Jeep Wrangler (Weiss)</Czech>
-            <French>Jeep Wrangler (Blanco)</French>
-            <Spanish>Jeep Wrangler (Biały)</Spanish>
-            <Russian>Jeep Wrangler (Bílý)</Russian>
-            <Polish>Jeep Wrangler (Blanche)</Polish>
-            <German>Jeep Wrangler (Белый)</German>
+            <German>Jeep Wrangler (Weiß)</German>
+            <Spanish>Jeep Wrangler (Blanco)</Spanish>
+            <Polish>Jeep Wrangler (Biały)</Polish>
+            <Czech>Jeep Wrangler (Bílý)</Czech>
+            <French>Jeep Wrangler (Blanche)</French>
+            <Russian>Jeep Wrangler (Белый)</Russian>
             <Italian>Jeep Wrangler (Branca)</Italian>
             <Hungarian>Jeep Wrangler (Fehér)</Hungarian>
             <Portuguese>Jeep Wrangler (Bianco)</Portuguese>
@@ -2162,147 +2162,147 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_blk">
             <English>HK416A5 10" (Black)</English>
-            <German>HK416A5 10" (Černá)</German>
-            <Spanish>HK416A5 10" (Noir)</Spanish>
-            <Polish>HK416A5 10" (Negro)</Polish>
-            <Czech>HK416A5 10" (Чёрный)</Czech>
-            <French>HK416A5 10" (Czarny)</French>
-            <Russian>HK416A5 10" (Schwarz)</Russian>
-            <Portuguese>HK416A5 10" (Nero)</Portuguese>
+            <Czech>HK416A5 10" (Černá)</Czech>
+            <French>HK416A5 10" (Noir)</French>
+            <Spanish>HK416A5 10" (Negro)</Spanish>
+            <Russian>HK416A5 10" (Чёрный)</Russian>
+            <Polish>HK416A5 10" (Czarny)</Polish>
+            <German>HK416A5 10" (Schwarz)</German>
+            <Italian>HK416A5 10" (Nero)</Italian>
             <Hungarian>HK416A5 10" (Fekete)</Hungarian>
-            <Italian>HK416A5 10" (Preto)</Italian>
+            <Portuguese>HK416A5 10" (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_khk">
             <English>HK416A5 10" (Khaki)</English>
+            <Czech>HK416A5 10" (Khaki)</Czech>
+            <French>HK416A5 10" (Kaki)</French>
+            <Spanish>HK416A5 10" (Caqui)</Spanish>
+            <Russian>HK416A5 10" (Хаки)</Russian>
+            <Polish>HK416A5 10" (Khaki)</Polish>
             <German>HK416A5 10" (Khaki)</German>
-            <Spanish>HK416A5 10" (Kaki)</Spanish>
-            <Polish>HK416A5 10" (Caqui)</Polish>
-            <Czech>HK416A5 10" (Хаки)</Czech>
-            <French>HK416A5 10" (Khaki)</French>
-            <Russian>HK416A5 10" (Khaki)</Russian>
-            <Portuguese>HK416A5 10" (Khaki)</Portuguese>
+            <Italian>HK416A5 10" (Khaki)</Italian>
             <Hungarian>HK416A5 10" (Khaki)</Hungarian>
-            <Italian>HK416A5 10" (Caqui)</Italian>
+            <Portuguese>HK416A5 10" (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_snd">
             <English>HK416A5 10" (Sand)</English>
-            <German>HK416A5 10" (Písková)</German>
-            <Spanish>HK416A5 10" (Beige)</Spanish>
-            <Polish>HK416A5 10" (Arena)</Polish>
-            <Czech>HK416A5 10" (Песочный)</Czech>
-            <French>HK416A5 10" (Sand)</French>
-            <Russian>HK416A5 10" (piaskowy)</Russian>
-            <Portuguese>HK416A5 10" (Sabbia)</Portuguese>
+            <Czech>HK416A5 10" (Písková)</Czech>
+            <French>HK416A5 10" (Beige)</French>
+            <Spanish>HK416A5 10" (Arena)</Spanish>
+            <Russian>HK416A5 10" (Песочный)</Russian>
+            <German>HK416A5 10" (Sand)</German>
+            <Polish>HK416A5 10" (Piaskowy)</Polish>
+            <Italian>HK416A5 10" (Sabbia)</Italian>
             <Hungarian>HK416A5 10" (Homok)</Hungarian>
-            <Italian>HK416A5 10" (Deserto)</Italian>
+            <Portuguese>HK416A5 10" (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_blk">
             <English>HK416A5 10" GL (Black)</English>
-            <German>HK416A5 10" GL (Černá)</German>
-            <Spanish>HK416A5 10" GL (Noir)</Spanish>
-            <Polish>HK416A5 10" GL (Negro)</Polish>
-            <Czech>HK416A5 10" GL (Чёрный)</Czech>
-            <French>HK416A5 10" GL (Czarny)</French>
-            <Russian>HK416A5 10" GL (Schwarz)</Russian>
-            <Portuguese>HK416A5 10" GL (Nero)</Portuguese>
+            <Czech>HK416A5 10" GL (Černá)</Czech>
+            <French>HK416A5 10" GL (Noir)</French>
+            <Spanish>HK416A5 10" GL (Negro)</Spanish>
+            <Russian>HK416A5 10" GL (Чёрный)</Russian>
+            <Polish>HK416A5 10" GL (Czarny)</Polish>
+            <German>HK416A5 10" GL (Schwarz)</German>
+            <Italian>HK416A5 10" GL (Nero)</Italian>
             <Hungarian>HK416A5 10" GL (Fekete)</Hungarian>
-            <Italian>HK416A5 10" GL (Preto)</Italian>
+            <Portuguese>HK416A5 10" GL (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_khk">
             <English>HK416A5 10" GL (Khaki)</English>
+            <Czech>HK416A5 10" GL (Khaki)</Czech>
+            <French>HK416A5 10" GL (Kaki)</French>
+            <Spanish>HK416A5 10" GL (Caqui)</Spanish>
+            <Russian>HK416A5 10" GL (Хаки)</Russian>
+            <Polish>HK416A5 10" GL (Khaki)</Polish>
             <German>HK416A5 10" GL (Khaki)</German>
-            <Spanish>HK416A5 10" GL (Kaki)</Spanish>
-            <Polish>HK416A5 10" GL (Caqui)</Polish>
-            <Czech>HK416A5 10" GL (Хаки)</Czech>
-            <French>HK416A5 10" GL (Khaki)</French>
-            <Russian>HK416A5 10" GL (Khaki)</Russian>
-            <Portuguese>HK416A5 10" GL (Khaki)</Portuguese>
+            <Italian>HK416A5 10" GL (Khaki)</Italian>
             <Hungarian>HK416A5 10" GL (Khaki)</Hungarian>
-            <Italian>HK416A5 10" GL (Caqui)</Italian>
+            <Portuguese>HK416A5 10" GL (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_snd">
             <English>HK416A5 10" GL (Sand)</English>
-            <German>HK416A5 10" GL (Písková)</German>
-            <Spanish>HK416A5 10" GL (Beige)</Spanish>
-            <Polish>HK416A5 10" GL (Arena)</Polish>
-            <Czech>HK416A5 10" GL (Песочный)</Czech>
-            <French>HK416A5 10" GL (Sand)</French>
-            <Russian>HK416A5 10" GL (piaskowy)</Russian>
-            <Portuguese>HK416A5 10" GL (Sabbia)</Portuguese>
+            <Czech>HK416A5 10" GL (Písková)</Czech>
+            <French>HK416A5 10" GL (Beige)</French>
+            <Spanish>HK416A5 10" GL (Arena)</Spanish>
+            <Russian>HK416A5 10" GL (Песочный)</Russian>
+            <German>HK416A5 10" GL (Sand)</German>
+            <Polish>HK416A5 10" GL (Piaskowy)</Polish>
+            <Italian>HK416A5 10" GL (Sabbia)</Italian>
             <Hungarian>HK416A5 10" GL (Homok)</Hungarian>
-            <Italian>HK416A5 10" GL (Deserto)</Italian>
+            <Portuguese>HK416A5 10" GL (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_blk">
             <English>HK416A5 14.5" (Black)</English>
-            <German>HK416A5 14.5" (Černá)</German>
-            <Spanish>HK416A5 14.5" (Noir)</Spanish>
-            <Polish>HK416A5 14.5" (Negro)</Polish>
-            <Czech>HK416A5 14.5" (Чёрный)</Czech>
-            <French>HK416A5 14.5" (Czarny)</French>
-            <Russian>HK416A5 14.5" (Schwarz)</Russian>
-            <Portuguese>HK416A5 14.5" (Nero)</Portuguese>
+            <Czech>HK416A5 14.5" (Černá)</Czech>
+            <French>HK416A5 14.5" (Noir)</French>
+            <Spanish>HK416A5 14.5" (Negro)</Spanish>
+            <Russian>HK416A5 14.5" (Чёрный)</Russian>
+            <Polish>HK416A5 14.5" (Czarny)</Polish>
+            <German>HK416A5 14.5" (Schwarz)</German>
+            <Italian>HK416A5 14.5" (Nero)</Italian>
             <Hungarian>HK416A5 14.5" (Fekete)</Hungarian>
-            <Italian>HK416A5 14.5" (Preto)</Italian>
+            <Portuguese>HK416A5 14.5" (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_khk">
             <English>HK416A5 14.5" (Khaki)</English>
+            <Czech>HK416A5 14.5" (Khaki)</Czech>
+            <French>HK416A5 14.5" (Kaki)</French>
+            <Spanish>HK416A5 14.5" (Caqui)</Spanish>
+            <Russian>HK416A5 14.5" (Хаки)</Russian>
+            <Polish>HK416A5 14.5" (Khaki)</Polish>
             <German>HK416A5 14.5" (Khaki)</German>
-            <Spanish>HK416A5 14.5" (Kaki)</Spanish>
-            <Polish>HK416A5 14.5" (Caqui)</Polish>
-            <Czech>HK416A5 14.5" (Хаки)</Czech>
-            <French>HK416A5 14.5" (Khaki)</French>
-            <Russian>HK416A5 14.5" (Khaki)</Russian>
-            <Portuguese>HK416A5 14.5" (Khaki)</Portuguese>
+            <Italian>HK416A5 14.5" (Khaki)</Italian>
             <Hungarian>HK416A5 14.5" (Khaki)</Hungarian>
-            <Italian>HK416A5 14.5" (Caqui)</Italian>
+            <Portuguese>HK416A5 14.5" (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_snd">
             <English>HK416A5 14.5" (Sand)</English>
-            <German>HK416A5 14.5" (Písková)</German>
-            <Spanish>HK416A5 14.5" (Beige)</Spanish>
-            <Polish>HK416A5 14.5" (Arena)</Polish>
-            <Czech>HK416A5 14.5" (Песочный)</Czech>
-            <French>HK416A5 14.5" (Sand)</French>
-            <Russian>HK416A5 14.5" (piaskowy)</Russian>
-            <Portuguese>HK416A5 14.5" (Sabbia)</Portuguese>
+            <Czech>HK416A5 14.5" (Písková)</Czech>
+            <French>HK416A5 14.5" (Beige)</French>
+            <Spanish>HK416A5 14.5" (Arena)</Spanish>
+            <Russian>HK416A5 14.5" (Песочный)</Russian>
+            <German>HK416A5 14.5" (Sand)</German>
+            <Polish>HK416A5 14.5" (Piaskowy)</Polish>
+            <Italian>HK416A5 14.5" (Sabbia)</Italian>
             <Hungarian>HK416A5 14.5" (Homok)</Hungarian>
-            <Italian>HK416A5 14.5" (Deserto)</Italian>
+            <Portuguese>HK416A5 14.5" (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_blk">
             <English>HK417A2 20" (Black)</English>
-            <German>HK417A2 20" (Černá)</German>
-            <Spanish>HK417A2 20" (Noir)</Spanish>
-            <Polish>HK417A2 20" (Negro)</Polish>
-            <Czech>HK417A2 20" (Чёрный)</Czech>
-            <French>HK417A2 20" (Czarny)</French>
-            <Russian>HK417A2 20" (Schwarz)</Russian>
-            <Portuguese>HK417A2 20" (Nero)</Portuguese>
+            <Czech>HK417A2 20" (Černá)</Czech>
+            <French>HK417A2 20" (Noir)</French>
+            <Spanish>HK417A2 20" (Negro)</Spanish>
+            <Russian>HK417A2 20" (Чёрный)</Russian>
+            <Polish>HK417A2 20" (Czarny)</Polish>
+            <German>HK417A2 20" (Schwarz)</German>
+            <Italian>HK417A2 20" (Nero)</Italian>
             <Hungarian>HK417A2 20" (Fekete)</Hungarian>
-            <Italian>HK417A2 20" (Preto)</Italian>
+            <Portuguese>HK417A2 20" (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_khk">
             <English>HK417A2 20" (Khaki)</English>
+            <Czech>HK417A2 20" (Khaki)</Czech>
+            <French>HK417A2 20" (Kaki)</French>
+            <Spanish>HK417A2 20" (Caqui)</Spanish>
+            <Russian>HK417A2 20" (Хаки)</Russian>
+            <Polish>HK417A2 20" (Khaki)</Polish>
             <German>HK417A2 20" (Khaki)</German>
-            <Spanish>HK417A2 20" (Kaki)</Spanish>
-            <Polish>HK417A2 20" (Caqui)</Polish>
-            <Czech>HK417A2 20" (Хаки)</Czech>
-            <French>HK417A2 20" (Khaki)</French>
-            <Russian>HK417A2 20" (Khaki)</Russian>
-            <Portuguese>HK417A2 20" (Khaki)</Portuguese>
+            <Italian>HK417A2 20" (Khaki)</Italian>
             <Hungarian>HK417A2 20" (Khaki)</Hungarian>
-            <Italian>HK417A2 20" (Caqui)</Italian>
+            <Portuguese>HK417A2 20" (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_snd">
             <English>HK417A2 20" (Sand)</English>
-            <German>HK417A2 20" (Písková)</German>
-            <Spanish>HK417A2 20" (Beige)</Spanish>
-            <Polish>HK417A2 20" (Arena)</Polish>
-            <Czech>HK417A2 20" (Песочный)</Czech>
-            <French>HK417A2 20" (Sand)</French>
-            <Russian>HK417A2 20" (piaskowy)</Russian>
-            <Portuguese>HK417A2 20" (Sabbia)</Portuguese>
+            <Czech>HK417A2 20" (Písková)</Czech>
+            <French>HK417A2 20" (Beige)</French>
+            <Spanish>HK417A2 20" (Arena)</Spanish>
+            <Russian>HK417A2 20" (Песочный)</Russian>
+            <German>HK417A2 20" (Sand)</German>
+            <Polish>HK417A2 20" (Piaskowy)</Polish>
+            <Italian>HK417A2 20" (Sabbia)</Italian>
             <Hungarian>HK417A2 20" (Homok)</Hungarian>
-            <Italian>HK417A2 20" (Deserto)</Italian>
+            <Portuguese>HK417A2 20" (Deserto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_ghex">
             <English>RPG-32 (Green Hex)</English>
@@ -2318,15 +2318,15 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_khk">
             <English>P99 (Khaki)</English>
+            <Czech>P99 (Khaki)</Czech>
+            <French>P99 (Kaki)</French>
+            <Spanish>P99 (Caqui)</Spanish>
+            <Russian>P99 (Хаки)</Russian>
+            <Polish>P99 (Khaki)</Polish>
             <German>P99 (Khaki)</German>
-            <Spanish>P99 (Kaki)</Spanish>
-            <Polish>P99 (Caqui)</Polish>
-            <Czech>P99 (Хаки)</Czech>
-            <French>P99 (Khaki)</French>
-            <Russian>P99 (Khaki)</Russian>
-            <Portuguese>P99 (Khaki)</Portuguese>
+            <Italian>P99 (Khaki)</Italian>
             <Hungarian>P99 (Khaki)</Hungarian>
-            <Italian>P99 (Caqui)</Italian>
+            <Portuguese>P99 (Caqui)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
