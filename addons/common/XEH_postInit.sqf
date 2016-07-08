@@ -413,8 +413,6 @@ GVAR(isReloading) = false;
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
-            GVAR(isReloading) = true;
-
             private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
             private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
@@ -427,9 +425,17 @@ GVAR(isReloading) = false;
             };
 
             TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-            [{
-                GVAR(isReloading) = false;
-            }, [], _duration] call CBA_fnc_waitAndExecute;
+            GVAR(reloadingETA) = CBA_missionTime + _duration;
+
+            if (!GVAR(isReloading)) then {
+                GVAR(isReloading) = true;
+
+                [{
+                    CBA_missionTime > GVAR(reloadingETA)
+                },{
+                    GVAR(isReloading) = false;
+                }] call CBA_fnc_waitUntilAndExecute;
+            };
         };
     };
 
