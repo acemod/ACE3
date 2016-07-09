@@ -58,5 +58,5 @@ class ACE_newEvents {
     zeusUnitAssigned = QGVAR(zeusUnitAssigned);
     SetSurrendered = QEGVAR(captives,setSurrendered);
     SetHandcuffed = QEGVAR(captives,setHandcuffed);
-    AddCargoByClass = "ace_addCargoByClass";
+    AddCargoByClass = "ace_addCargo";
 };

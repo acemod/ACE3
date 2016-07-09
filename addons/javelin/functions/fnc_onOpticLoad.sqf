@@ -2,13 +2,15 @@
 #include "script_component.hpp"
 TRACE_1("enter", _this);
 
-#define __LOCKONTIMERANDOM 2    // Deviation in lock on time
+#define __LOCKONTIMERANDOM 1    // Deviation in lock on time
 
 if((count _this) > 0) then {
     uiNameSpace setVariable ['ACE_RscOptics_javelin',_this select 0];
 };
 
-ACE_player setVariable ["ace_missileguidance_target",nil, false];
+private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
+TRACE_2("shooter",_currentShooter,typeOf _currentShooter);
+_currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
 __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 __JavelinIGUINFOV ctrlSetTextColor __ColorGray;

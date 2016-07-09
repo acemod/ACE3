@@ -286,7 +286,7 @@ class CfgVehicles {
     class B_Soldier_03_f; class B_engineer_F:B_Soldier_03_f {MACRO_ADDMINEKIT};
     class B_Soldier_diver_base_F; class B_diver_exp_F:B_Soldier_diver_base_F {MACRO_ADDMINEKIT};
     class B_Soldier_recon_base; class B_recon_exp_F:B_Soldier_recon_base {MACRO_ADDMINEKIT};
-    class B_CTRG_soldier_engineer_exp_F:B_Soldier_base_F {MACRO_ADDMINEKIT};
+    class B_Soldier_02_f; class B_CTRG_soldier_engineer_exp_F:B_Soldier_02_f {MACRO_ADDMINEKIT};
     class I_G_Soldier_base_F; class I_G_engineer_F:I_G_Soldier_base_F {MACRO_ADDMINEKIT};
     class I_G_Soldier_exp_F:I_G_Soldier_base_F {MACRO_ADDMINEKIT};
     class B_G_engineer_F:I_G_engineer_F {MACRO_ADDMINEKIT};
