@@ -14,6 +14,7 @@ This guide will explain how to get ACEX up and running.
 ## 2. Prerequisites
 
 - Download [CBA](https://github.com/CBATeam/CBA_A3/releases/latest).
+- Download [ACE3]({{site.ace.githubUrl}}/releases/latest).
 - Download [ACEX]({{site.acex.githubUrl}}/releases/latest).
 
 ## 3. Install ACEX
