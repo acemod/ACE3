@@ -17,7 +17,7 @@
 
 TRACE_1("params",_this);
 
-if (!GVAR(ReloadMutex)) exitWith {false};
+if (EGVAR(common,isReloading)) exitWith {false};
 if (GVAR(showOnInteractionMenu) == 0) exitWith {false};
 if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 

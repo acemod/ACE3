@@ -5,7 +5,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ADDON {
                 displayName = CSTRING(Gestures);
-                condition = QUOTE((canStand _target) && GVAR(ReloadMutex) && {GVAR(showOnInteractionMenu) == 2});
+                condition = QUOTE((canStand _target) && {GVAR(showOnInteractionMenu) == 2});
                 statement = "";
                 showDisabled = 1;
                 priority = 3.5;
