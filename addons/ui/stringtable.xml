@@ -1,101 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="UI">
-        <Key ID="STR_ACE_UI_Category">
-            <English>User Interface</English>
-        </Key>
-        <Key ID="STR_ACE_UI_ModuleName">
-            <English>User Interface</English>
-        </Key>
-        <Key ID="STR_ACE_UI_ModuleDescription">
-            <English>This module allows toggling visible user interface parts.</English>
-        </Key>
-        <Key ID="STR_ACE_UI_AllowSelectiveUI">
-            <English>Allow Selective UI</English>
-        </Key>
-        <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
-            <English>Allow client to modify their UI.</English>
-        </Key>
-        <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
-            <English>Soldier/Vehicle/Weapon Information</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleRadar">
-            <English>Vehicle Radar</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleCompass">
-            <English>Vehicle Compass</English>
-        </Key>
-        <Key ID="STR_ACE_UI_CommandMenu">
-            <English>Command Menu</English>
-        </Key>
-        <Key ID="STR_ACE_UI_GroupBar">
-            <English>Group Bar</English>
-        </Key>
-        <Key ID="STR_ACE_UI_WeaponName">
-            <English>Weapon Name</English>
-        </Key>
-        <Key ID="STR_ACE_UI_WeaponNameBackground">
-            <English>Weapon Name Background</English>
-        </Key>
-        <Key ID="STR_ACE_UI_FiringMode">
-            <English>Firing Mode</English>
-        </Key>
-        <Key ID="STR_ACE_UI_AmmoType">
-            <English>Ammo Type</English>
-        </Key>
-        <Key ID="STR_ACE_UI_AmmoCount">
-            <English>Ammo Count</English>
-        </Key>
-        <Key ID="STR_ACE_UI_MagCount">
-            <English>Magazine Count</English>
-        </Key>
-        <Key ID="STR_ACE_UI_ThrowableName">
-            <English>Throwable Type</English>
-        </Key>
-        <Key ID="STR_ACE_UI_ThrowableCount">
-            <English>Throwable Count</English>
-        </Key>
-        <Key ID="STR_ACE_UI_Zeroing">
-            <English>Zeroing</English>
-        </Key>
-        <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
-            <English>Weapon Lower Info Background</English>
-        </Key>
-        <Key ID="STR_ACE_UI_Stance">
-            <English>Stance</English>
-        </Key>
-        <Key ID="STR_ACE_UI_StaminaBar">
-            <English>Stamina Bar</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleName">
-            <English>Vehicle Name</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleNameBackground">
-            <English>Vehicle Name Background</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleFuelBar">
-            <English>Vehicle Fuel Bar</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleSpeed">
-            <English>Vehicle Speed</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleAltitude">
-            <English>Vehicle Altitude</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleDamage">
-            <English>Vehicle Damage</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleInfoBackground">
-            <English>Vehicle Info Background</English>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleGunnerWeapon">
-            <English>Vehicle Gunner Weapon</English>
-        </Key>
-        <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
-            <English>Requires Soldier/Vehicle/Weapons Information.</English>
-        </Key>
-        <Key ID="STR_ACE_UI_Disallowed">
-            <English>Modifying User Interface is disabled.</English>
-        </Key>
-    </Package>
+	<Package name="UI">
+		<Key ID="STR_ACE_UI_Category">
+			<English>User Interface</English>
+			<Japanese>ユーザ インタフェイス</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_ModuleName">
+			<English>User Interface</English>
+			<Japanese>ユーザ インタフェイス</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_ModuleDescription">
+			<English>This module allows toggling visible user interface parts.</English>
+			<Japanese>モジュールではユーザ インタフェイスの一部をトグル表示できます。</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_AllowSelectiveUI">
+			<English>Allow Selective UI</English>
+			<Japanese>選択できるユーザ インタフェイスを有効化します</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
+			<English>Allow client to modify their UI.</English>
+			<Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
+			<English>Soldier/Vehicle/Weapon Information</English>
+			<Japanese>兵士/車両/武器の情報</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleRadar">
+			<English>Vehicle Radar</English>
+			<Japanese>車両のレーダ</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleCompass">
+			<English>Vehicle Compass</English>
+			<Japanese>車両の方位磁計</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_CommandMenu">
+			<English>Command Menu</English>
+			<Japanese>指揮メニュー</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_GroupBar">
+			<English>Group Bar</English>
+			<Japanese>グループ バー</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_WeaponName">
+			<English>Weapon Name</English>
+			<Japanese>武器名</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_WeaponNameBackground">
+			<English>Weapon Name Background</English>
+			<Japanese>武器名の背景</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_FiringMode">
+			<English>Firing Mode</English>
+			<Japanese>射撃モード</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_AmmoType">
+			<English>Ammo Type</English>
+			<Japanese>弾種</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_AmmoCount">
+			<English>Ammo Count</English>
+			<Japanese>弾薬数</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_MagCount">
+			<English>Magazine Count</English>
+			<Japanese>弾倉装填数</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_ThrowableName">
+			<English>Throwable Type</English>
+			<Japanese>投げる種類</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_ThrowableCount">
+			<English>Throwable Count</English>
+			<Japanese>投げられる数</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_Zeroing">
+			<English>Zeroing</English>
+			<Japanese>ゼロイン</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
+			<English>Weapon Lower Info Background</English>
+			<Japanese>Weapon Lower Info Background</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_Stance">
+			<English>Stance</English>
+			<Japanese>姿勢</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_StaminaBar">
+			<English>Stamina Bar</English>
+			<Japanese>体力バー</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleName">
+			<English>Vehicle Name</English>
+			<Japanese>車両名</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleNameBackground">
+			<English>Vehicle Name Background</English>
+			<Japanese>車両名の背景</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleFuelBar">
+			<English>Vehicle Fuel Bar</English>
+			<Japanese>車両の給油計</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleSpeed">
+			<English>Vehicle Speed</English>
+			<Japanese>車両の速度計</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleAltitude">
+			<English>Vehicle Altitude</English>
+			<Japanese>車両の高度計</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleDamage">
+			<English>Vehicle Damage</English>
+			<Japanese>車両の損傷表示</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleInfoBackground">
+			<English>Vehicle Info Background</English>
+			<Japanese>車両状態の背景</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_VehicleGunnerWeapon">
+			<English>Vehicle Gunner Weapon</English>
+			<Japanese>武装</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
+			<English>Requires Soldier/Vehicle/Weapons Information.</English>
+			<Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
+		</Key>
+		<Key ID="STR_ACE_UI_Disallowed">
+			<English>Modifying User Interface is disabled.</English>
+			<Japanese>変更されたユーザ インタフェイスを無効化します。</Japanese>
+		</Key>
+	</Package>
 </Project>
