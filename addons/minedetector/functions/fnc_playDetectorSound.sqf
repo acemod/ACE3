@@ -30,5 +30,5 @@ if (_unit getVariable [QGVAR(isUsingHeadphones), false] && {_unit == ACE_player}
     playSound _soundClass;
 } else {
     private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));
-    [_soundClass, _posASL, 5, 15] call EFUNC(common,playConfigSound3D);
+    [_soundClass, _posASL, 3, 15] call EFUNC(common,playConfigSound3D);
 };
