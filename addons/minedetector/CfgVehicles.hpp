@@ -15,7 +15,7 @@ class CfgVehicles {
                     displayName = CSTRING(MetalDetector);
                     condition = QUOTE([ACE_player] call FUNC(hasDetector));
                     statement = "";
-                    icon = "" //TODO
+                    icon = QPATHTOF(ui\icon_mineDetector.paa);
                     exceptions[] = {};
                     class GVAR(activate) {
                         displayName = CSTRING(ActivateDetector);
@@ -35,14 +35,14 @@ class CfgVehicles {
                         displayName = CSTRING(ConnectHeadphones);
                         condition = QUOTE(call FUNC(canConnectHeadphones));
                         statement = QUOTE([ARR_2(ACE_player, true)] call FUNC(connectHeadphones));
-                        icon = "" //TODO
+                        icon = ""; //TODO
                         exceptions[] = {};
                     };
                     class GVAR(disconnectHeadphones) {
                         displayName = CSTRING(DisconnectHeadphones);
                         condition = QUOTE(call FUNC(canDisconnectHeadphones));
                         statement = QUOTE([ARR_2(ACE_player, false)] call FUNC(connectHeadphones));
-                        icon = "" //TODO
+                        icon = ""; //TODO
                         exceptions[] = {};
                     };
                 };
