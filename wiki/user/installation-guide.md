@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Installation Guide
+title: ACE3 Installation Guide
 description: Step-by-step guide for installing ACE3
 group: user
 order: 0

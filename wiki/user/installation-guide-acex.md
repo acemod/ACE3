@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: Installation Guide
+title: ACEX Installation Guide
 description: Step-by-step guide for installing ACEX
 group: user
 order: 1
