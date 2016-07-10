@@ -62,4 +62,6 @@ GVAR(lastTimeSearchedActions) = -1000;
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
 
+#include "initSettings.sqf"
+
 ADDON = true;
