@@ -25,5 +25,12 @@ if (GVAR(ExplodeOnDefuse) && {(random 1.0) < (getNumber (ConfigFile >> "CfgAmmo"
     [QGVAR(explodeOnDefuse), [_explosive, _unit]] call CBA_fnc_globalEvent;
 };
 
-_unit action ["Deactivate", _unit, _explosive];
 [QGVAR(defuse), [_explosive, _unit]] call CBA_fnc_globalEvent;
+
+if (!(_explosive isKindOf "UnderwaterMine_Range_Ammo")) then {
+    _unit action ["Deactivate", _unit, _explosive];
+} else {
+    // Underwater naval mines don't seem to respond to the deactivate action
+    // For now, lets just delete them
+    deleteVehicle _explosive;
+};
