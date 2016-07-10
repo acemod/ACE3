@@ -25,5 +25,14 @@
             <Portuguese>Limpar Óculos</Portuguese>
             <Italian>Pulisci gli occhiali</Italian>
         </Key>
+        <Key ID="STR_ACE_Goggles_effects_displayName">
+            <English>Goggle Effects</English>
+        </Key>
+        <Key ID="STR_ACE_Goggles_effects_tintOnly">
+            <English>Tint</English>
+        </Key>
+        <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
+            <English>Tint + Effects</English>
+        </Key>
     </Package>
 </Project>

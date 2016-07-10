@@ -381,7 +381,7 @@ GVAR(OldIsCamera) = false;
 //////////////////////////////////////////////////
 
 ["isNotDead", {
-    params ["_unit", "_target"];
+    params ["_unit"];
     alive _unit
 }] call FUNC(addCanInteractWithCondition);
 
@@ -399,6 +399,48 @@ GVAR(OldIsCamera) = false;
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
+
+//////////////////////////////////////////////////
+// Set up reload mutex
+//////////////////////////////////////////////////
+
+GVAR(isReloading) = false;
+
+["isNotReloading", {!GVAR(isReloading)}] call FUNC(addCanInteractWithCondition);
+
+["keyDown", {
+    if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
+        private _weapon = currentWeapon ACE_player;
+
+        if (_weapon != "") then {
+            private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
+            private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
+            private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+
+            if (_duration != 0) then {
+                _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
+            } else {
+                _duration = 3;
+            };
+
+            TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+            GVAR(reloadingETA) = CBA_missionTime + _duration;
+
+            if (!GVAR(isReloading)) then {
+                GVAR(isReloading) = true;
+
+                [{
+                    CBA_missionTime > GVAR(reloadingETA)
+                },{
+                    GVAR(isReloading) = false;
+                }] call CBA_fnc_waitUntilAndExecute;
+            };
+        };
+    };
+
+    false
+}] call CBA_fnc_addDisplayHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
