@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Enables the mine detector
+ * Get the distance to the nearest detectable object
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -15,17 +15,18 @@
  * Public: No
  */
 
-#define __DR 1.3
-
 #include "script_component.hpp"
 
 params ["_unit", "_detectorConfig"];
-_detectorConfig params ["_type", "_radius", "_detectableTypes", "_sounds"];
+_detectorConfig params ["", "_radius"];
 
 private _worldPosition = _unit modelToWorld (_unit selectionPosition "granat");
-private _direction = _unit weaponDirection "Put";
-
-private _detectorPointAGL = _worldPosition vectorAdd (_direction vectorMultiply __DR);
+private _ref = (_unit weaponDirection currentWeapon _unit) call EFUNC(common,createOrthonormalReference);
+_ref params ["_v1", "_v2", "_v3"];
+private _detectorPointAGL = _worldPosition vectorAdd
+                                (_v1 vectorMultiply ( 0.9 * __DR)) vectorAdd
+                                (_v2 vectorMultiply (-0.2 * __DR)) vectorAdd
+                                (_v3 vectorMultiply ( 0.4 * __DR));
 
 private _nearestObjects = nearestObjects [_detectorPointAGL, [], _radius];
 
@@ -38,27 +39,19 @@ private _mine = objNull;
 private _distance = -1;
 
 {
-    private _object = _x;
+    private _objectType = typeOf _x;
 
-    if ({_object isKindOf _x} count _detectableTypes > 0) then {
-        //Try all unprepared mines in range and use first detectable one:
-        if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> QGVAR(detectable))) == 1) exitWith {
-            _isDetectable = true;
-            _mine = _x;
-            _distance = _detectorPointAGL distance _x;
-        };
-        //Try all prepared mines in range and use first detectable one:
-        if ((getNumber (configFile >> "CfgAmmo" >> (typeOf _x) >> QGVAR(detectable))) == 1) exitWith {
-            _isDetectable = true;
-            _mine = _x;
-            _distance = _detectorPointAGL distance _x;
-        };
+    _isDetectable = GVAR(detectableClasses) getVariable _objectType;
+    if (isNil "_isDetectable") then {
+        _isDetectable = false;
     };
 
-    if (!isNull _mine) exitWith {};
-
+    // If a nun-null object was detected exit the search
+    if (_isDetectable && {!isNull _x}) exitWith {
+        _distance = _detectorPointAGL distance _x;
+        _mine = _x;
+        TRACE_3("return", _isDetectable, _mine, _distance);
+    };
 } forEach _nearestObjects;
-
-TRACE_3("return",_isDetectable,_mine,_distance);
 
 [_isDetectable, _mine, _distance];

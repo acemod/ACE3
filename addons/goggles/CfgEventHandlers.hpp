@@ -24,11 +24,3 @@ class Extended_Killed_EventHandlers {
         };
     };
 };
-
-class Extended_Explosion_EventHandlers {
-    class CAManBase {
-        class ADDON {
-            clientExplosion = QUOTE(if (local (_this select 0)) then {_this call FUNC(handleExplosion)});
-        };
-    };
-};
