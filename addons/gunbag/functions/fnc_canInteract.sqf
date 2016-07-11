@@ -20,12 +20,13 @@ params ["_unit", "_target"];
 
 private _result = -1;
 private _gunbag = backpackContainer _target;
+private _weapon = primaryWeapon _unit;
 
-if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {primaryWeapon _unit != ""} && {getNumber (configFile >> "CfgWeapons" >> primaryWeapon _unit  >> QGVAR(allowGunbag)) == 1}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {_weapon != ""} && {!(_weapon call FUNC(isMachineGun))}) then {
     _result = 0;
 };
 
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {primaryWeapon _unit == ""}) then {
+if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon == ""}) then {
     _result = 1;
 };
 
