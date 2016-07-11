@@ -16,3 +16,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define __DR 1.3
