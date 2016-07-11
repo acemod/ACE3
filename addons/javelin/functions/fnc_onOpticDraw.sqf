@@ -11,7 +11,7 @@ private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX",
 private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
 private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
 
-_currentShooter = (vehicle ACE_player);
+_currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5

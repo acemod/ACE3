@@ -25,5 +25,5 @@ class ACE_newEvents {
     setWheelHitPointDamage = QGVAR(setWheelHitPointDamage);
     setVehicleHitPointDamage = QGVAR(setVehicleHitPointDamage);
     setVehicleDamage = QGVAR(setVehicleDamage);
-    AddCargoByClass = "ace_addCargoByClass";
+    AddCargoByClass = "ace_addCargo";
 };
