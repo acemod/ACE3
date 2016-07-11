@@ -16,4 +16,5 @@
 
 #include "script_component.hpp"
 
-([ACE_player] call FUNC(hasDetector)) && !([ACE_player, currentWeapon ACE_player] call FUNC(isDetectorEnabled));
+([ACE_player] call FUNC(hasDetector)) &&
+!([ACE_player, currentWeapon ACE_player] call FUNC(isDetectorEnabled));
