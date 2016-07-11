@@ -127,6 +127,7 @@ PREP(numberToString);
 PREP(onAnswerRequest);
 PREP(owned);
 PREP(parseList);
+PREP(playConfigSound3D);
 PREP(player);
 PREP(playerSide);
 PREP(positionToASL);
