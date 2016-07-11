@@ -43,7 +43,6 @@ if (!local _unit) exitWith {
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
-_unit setUnconscious true;
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
