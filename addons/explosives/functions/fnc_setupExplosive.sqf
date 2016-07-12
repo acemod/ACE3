@@ -185,7 +185,7 @@ GVAR(TweakedAngle) = 0;
             _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
 
             _unit removeMagazine _magClassname;
-            _unit playActionNow "PutDown";
+            [_unit, "PutDown"] call EFUNC(common,doGesture);
             _unit setVariable [QGVAR(PlantingExplosive), true];
             [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
