@@ -29,28 +29,11 @@ class CfgPatches {
 
 class ACE_newEvents {
     medical_onUnconscious = "ace_unconscious";
-    medical_treatmentSuccess = "ace_treatmentSucceded";
     medical_onSetDead = "ace_killed";
     Medical_onEnteredCardiacArrest = "ace_cardiacArrestEntered";
-    Medical_onItemAddedToTriageCard = "ace_triageCardItemAdded";
-    medical_onLogEntryAdded = "ace_medicalLogEntryAdded";
     Medical_onHeartRateAdjustmentAdded = "ace_heartRateAdjustmentAdded";
-    placedInBodyBag = "ace_placedInBodyBag";
-    actionPlaceInBodyBag = QGVAR(actionPlaceInBodyBag);
-    treatmentTourniquetLocal = QGVAR(treatmentTourniquetLocal);
-    treatmentIVLocal = QGVAR(treatmentIVLocal);
-    treatmentBasic_morphineLocal = QGVAR(treatmentBasic_morphineLocal);
-    treatmentBasic_bloodbagLocal = QGVAR(treatmentBasic_bloodbagLocal);
-    treatmentAdvanced_medicationLocal = QGVAR(treatmentAdvanced_medicationLocal);
-    treatmentAdvanced_fullHealLocal = QGVAR(treatmentAdvanced_fullHealLocal);
-    treatmentAdvanced_CPRLocal = QGVAR(treatmentAdvanced_CPRLocal);
-    treatmentAdvanced_bandageLocal = QGVAR(treatmentAdvanced_bandageLocal);
     setUnconscious = QGVAR(setUnconscious);
     setHitPointDamage = QGVAR(setHitPointDamage);
     setDead = QGVAR(setDead);
-    addToTriageCard = QGVAR(addToTriageCard);
-    addToMedicalLog = QGVAR(addToMedicalLog);
-    actionCheckPulseLocal = QGVAR(actionCheckPulseLocal);
-    actionCheckBloodPressureLocal = QGVAR(actionCheckBloodPressureLocal);
     addVitalLoop = QGVAR(addVitalLoop);
 };

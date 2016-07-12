@@ -1,0 +1,2 @@
+class ACE_Settings {
+};
