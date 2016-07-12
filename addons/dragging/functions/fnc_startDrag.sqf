@@ -40,7 +40,7 @@ _unit selectWeapon primaryWeapon _unit;
 
 // can't play action that depends on weapon if it was added the same frame
 [{
-	[_this, "grabDrag"] call EFUNC(common,doGesture);
+    [_this, "grabDrag"] call EFUNC(common,doGesture);
 }, _unit] call CBA_fnc_execNextFrame;
 
 // move a bit closer and adjust direction when trying to pick up a person

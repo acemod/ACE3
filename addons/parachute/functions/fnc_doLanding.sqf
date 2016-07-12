@@ -24,7 +24,7 @@ GVAR(PFH) = false;
 _unit setVariable [QGVAR(chuteIsCut), false, true];
 
 [{
-	(_this select 0) params ["_time", "_unit"];
+    (_this select 0) params ["_time", "_unit"];
 
     if (CBA_missionTime > _time + 1) then {
         [_unit, "Crouch"] call EFUNC(common,doGesture);
