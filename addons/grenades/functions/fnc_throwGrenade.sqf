@@ -27,8 +27,15 @@ if (isNull _projectile) then {
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
-// handle special grenades
+// handle special grenades and sounds
 if (local _unit) then {
+    // handle priming sound, if present
+    private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
+    if !(_soundConfig isEqualTo []) then {
+        _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
+        playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
+    };
+
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
