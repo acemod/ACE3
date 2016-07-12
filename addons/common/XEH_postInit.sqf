@@ -410,10 +410,13 @@ GVAR(isReloading) = false;
 
 ["keyDown", {
     if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
+        //Ignore mounted (except ffv)
+        if (!(player call CBA_fnc_canUseWeapon)) exitWith {};
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
             private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
             private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
             private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
