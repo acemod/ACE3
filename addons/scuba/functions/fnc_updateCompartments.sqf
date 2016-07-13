@@ -10,14 +10,13 @@
  */
 #include "script_component.hpp"
 
-private _compartments = ACE_player getVariable [QGVAR(compartments), [0,0,0,0,0,0,0,0]];
+private _compartments = ACE_player getVariable [QGVAR(compartments), [0.745,0.745,0.745,0.745,0.745,0.745,0.745,0.745]];
 
 {
     private _pBegin = _x;
-    private _pGas = ACE_player getVariable QGVAR(inertGasPressure);
+    private _pGas = ACE_player getVariable QGVAR(nitrogenPressure);
     private _tExposure = 1/60;
-    private _gasType = ACE_player getVariable QGVAR(inertGasType);
-    private _tHalftime = (GVAR(inertGasHalftimes) select (GVAR(inertGasTypes) find _gasType)) select (_forEachIndex * 2);
+    private _tHalftime = GVAR(halftimes) select (_forEachIndex * 2);
     
     // Bühlmann algorithm
     private _pComp = _pBegin + (_pGas - _pBegin) * (1 - 2 ^ (-1 * _tExposure / _tHalftime));

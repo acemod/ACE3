@@ -13,8 +13,8 @@
 private _maxPAmbtol = 0;
 
 {
-    private _a = GVAR(interGasAValues) select (_forEachIndex * 2);
-    private _b = GVAR(interGasBValues) select (_forEachIndex * 2);
+    private _a = GVAR(aValues) select (_forEachIndex * 2);
+    private _b = GVAR(aValues) select (_forEachIndex * 2);
 
     private _pAmbtol = (_x - _a) * _b;
     _maxPAmbtol = _maxPAmbTol max _pAmbtol;
