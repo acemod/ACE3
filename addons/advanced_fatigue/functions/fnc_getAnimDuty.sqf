@@ -17,10 +17,9 @@
 
 #include "script_component.hpp"
 params ["_unit", "_animName"];
-private ["_duty", "_animPrefix"];
 
-_duty = 1;
-_animPrefix = _animName select [0, 4];
+private _duty = 1;
+private _animPrefix = _animName select [0, 4];
 if ((_animPrefix == "Aidl") || {_animPrefix == "Amov"}) then {
     switch (stance _unit) do {
         case ("CROUCH"): {

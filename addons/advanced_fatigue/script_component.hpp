@@ -16,11 +16,18 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define VO2MAX 52
-#define VO2MAXPOWER 291.616
-#define PEAKPOWER 1195.6256
-#define REE 81.89
-// We do not simulate respiration, so instead we set the oxygen percentage to a constant
+#define VO2MAX 55
+#define ANTPERCENT 0.8
+
+#define SIM_BODYMASS 70
+#define JOULES_PER_ML_O2 20.9
+#define VO2MAXPOWER (VO2MAX * SIM_BODYMASS * 0.23 * JOULES_PER_ML_O2 / 60)
+#define VO2MAX_STRENGTH 4.1
+#define PEAKPOWER (VO2MAX_STRENGTH * VO2MAXPOWER)
+#define REE ((0.5617 * SIM_BODYMASS + 42.57) * 0.23)
 #define OXYGEN 0.9
-// The value of WATTSPERATP has been adjusted to fit the graphs
-#define WATTSPERATP 10
+#define WATTSPERATP 7
+
+#define AE1_MAXRESERVE 4000000
+#define AE2_MAXRESERVE   84000
+#define AN_MAXRESERVE     2300

@@ -17,7 +17,10 @@
  */
 
 #include "script_component.hpp"
-params ["_unit", "_fatigue", ["_overexhausted", false]];
+params ["_unit", "_fatigue", "_overexhausted"];
+
+systemChat str _fatigue;
+systemChat str vectorMagnitude velocity _unit;
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
