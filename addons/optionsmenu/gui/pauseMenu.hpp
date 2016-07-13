@@ -104,7 +104,8 @@ class RscDisplayMain: RscStandardDisplay {
     class controls {
         class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
             action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";
-            y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
+            x = "safezoneX";
+            y = "safezoneY";
             idc = 80085;
         };
 
