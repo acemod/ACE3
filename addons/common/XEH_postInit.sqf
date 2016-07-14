@@ -118,6 +118,8 @@ if (isServer) then {
 [QGVAR(setVelocity), {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(playMove), {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(playMoveNow), {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playAction), {(_this select 0) playAction (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -406,14 +408,15 @@ GVAR(OldIsCamera) = false;
 
 GVAR(isReloading) = false;
 
-["isNotReloading", {!GVAR(isReloading)}] call FUNC(addCanInteractWithCondition);
-
 ["keyDown", {
     if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
+        //Ignore mounted (except ffv)
+        if (!(player call CBA_fnc_canUseWeapon)) exitWith {};
         private _weapon = currentWeapon ACE_player;
 
         if (_weapon != "") then {
             private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
             private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
             private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
