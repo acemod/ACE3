@@ -513,7 +513,11 @@ class CfgVehicles {
     class Weapon_SMG_02_F: Weapon_Base_F {
         displayName = CSTRING(SMG_02_Name);
     };
-
+    
+    class Weapon_SMG_05_F: Weapon_Base_F {
+        displayName = CSTRING(SMG_05);
+    };
+    
     class Weapon_hgun_PDW2000_F: Weapon_Base_F {
         displayName = CSTRING(hgun_PDW2000_Name);
     };
