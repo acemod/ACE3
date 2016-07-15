@@ -5,13 +5,29 @@
             <English>Metal detector</English>
             <French>Détecteur de métaux</French>
         </Key>
+        <Key ID="STR_ACE_MineDetector_MetalDetector">
+            <English>Metal detector</English>
+            <French>Détecteur de métaux</French>
+        </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
-            <English>Activate Detector</English>
-            <French>Activer le détecteur</French>
+            <English>Activate</English>
+            <French>Activer</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
-            <English>Deactivate Detector</English>
-            <French>Désactiver le détecteur</French>
+            <English>Deactivate</English>
+            <French>Désactiver</French>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
+            <English>Connect Headphones</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
+            <English>Disconnect Headphones</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
+            <English>Headphones Connected</English>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
+            <English>Headphones Disconnected</English>
         </Key>
     </Package>
 </Project>

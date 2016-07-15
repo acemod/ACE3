@@ -5,7 +5,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ADDON {
                 displayName = CSTRING(Gestures);
-                condition = QUOTE((canStand _target) && GVAR(ReloadMutex) && {GVAR(showOnInteractionMenu) == 2});
+                condition = QUOTE((canStand _target) && {GVAR(showOnInteractionMenu) == 2});
                 statement = "";
                 showDisabled = 1;
                 priority = 3.5;
@@ -14,42 +14,42 @@ class CfgVehicles {
                 class GVAR(Advance) {
                     displayName = CSTRING(Advance);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow 'gestureAdvance';);
+                    statement = QUOTE([ARR_2(_target,'gestureAdvance')] call EFUNC(common,doGesture););
                     showDisabled = 1;
                     priority = 1.9;
                 };
                 class GVAR(Go) {
                     displayName = CSTRING(Go);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow ([ARR_2('gestureGo','gestureGoB')] select floor random 2););
+                    statement = QUOTE([ARR_2(_target,selectRandom [ARR_2('gestureGo','gestureGoB')])] call EFUNC(common,doGesture););
                     showDisabled = 1;
                     priority = 1.8;
                 };
                 class GVAR(Follow) {
                     displayName = CSTRING(Follow);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow 'gestureFollow';);
+                    statement = QUOTE([ARR_2(_target,'gestureFollow')] call EFUNC(common,doGesture););
                     showDisabled = 1;
                     priority = 1.7;
                 };
                 class GVAR(Up) {
                     displayName = CSTRING(Up);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow 'gestureUp';);
+                    statement = QUOTE([ARR_2(_target,'gestureUp')] call EFUNC(common,doGesture););
                     showDisabled = 1;
                     priority = 1.5;
                 };
                 class GVAR(CeaseFire) {
                     displayName = CSTRING(CeaseFire);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow 'gestureCeaseFire';);
+                    statement = QUOTE([ARR_2(_target,'gestureCeaseFire')] call EFUNC(common,doGesture););
                     showDisabled = 1;
                     priority = 1.3;
                 };
                 class GVAR(Stop) {
                     displayName = CSTRING(Stop);
                     condition = QUOTE(true);
-                    statement = QUOTE(_target playActionNow 'gestureFreeze';); // BI animation - is actualls "stop" in all stances but prone
+                    statement = QUOTE([ARR_2(_target,'gestureFreeze')] call EFUNC(common,doGesture);); // BI animation - is actualls "stop" in all stances but prone
                     showDisabled = 1;
                     priority = 1.2;
                 };

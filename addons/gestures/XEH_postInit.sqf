@@ -2,9 +2,6 @@
 
 if (!hasInterface) exitWith {};
 
-// reload mutex, you can't play signal while reloading
-GVAR(ReloadMutex) = true;
-
 // Add keybinds
 {
     _x params ["_currentName", "_key", ["_vanillaKey", false] ];

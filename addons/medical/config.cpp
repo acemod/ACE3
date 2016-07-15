@@ -41,7 +41,6 @@ class ACE_newEvents {
     treatmentIVLocal = QGVAR(treatmentIVLocal);
     treatmentBasic_morphineLocal = QGVAR(treatmentBasic_morphineLocal);
     treatmentBasic_bloodbagLocal = QGVAR(treatmentBasic_bloodbagLocal);
-    treatmentBasic_bandageLocal = QGVAR(treatmentBasic_bandageLocal);
     treatmentAdvanced_medicationLocal = QGVAR(treatmentAdvanced_medicationLocal);
     treatmentAdvanced_fullHealLocal = QGVAR(treatmentAdvanced_fullHealLocal);
     treatmentAdvanced_CPRLocal = QGVAR(treatmentAdvanced_CPRLocal);

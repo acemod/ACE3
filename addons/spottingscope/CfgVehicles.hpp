@@ -70,8 +70,8 @@ class CfgVehicles {
         model = QPATHTOF(data\ace_spottingscope.p3d);
         mapSize = 0.5;
         transportSoldier = 0;
-        getInAction = "GetInLow";
-        getOutAction = "GetOutLow";
+        getInAction = "PlayerProne";
+        getOutAction = "PlayerProne";
         editorSubcategory = "EdSubcat_Turrets";
 
         class Turrets: Turrets {
@@ -115,8 +115,8 @@ class CfgVehicles {
                 gunnerOutOpticsShowCursor = 0;
                 gunnerOpticsShowCursor = 0;
                 gunnerAction = "ACE_SpottingScope";
-                gunnerGetInAction = "GetInLow";
-                gunnerGetOutAction = "GetOutLow";
+                gunnerGetInAction = "PlayerProne";
+                gunnerGetOutAction = "PlayerProne";
                 gunnerForceOptics = 0;
                 ejectDeadGunner = 0;
                 turretInfoType = QGVAR(RscUnitInfo);

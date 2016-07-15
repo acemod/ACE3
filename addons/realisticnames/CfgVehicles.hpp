@@ -513,7 +513,11 @@ class CfgVehicles {
     class Weapon_SMG_02_F: Weapon_Base_F {
         displayName = CSTRING(SMG_02_Name);
     };
-
+    
+    class Weapon_SMG_05_F: Weapon_Base_F {
+        displayName = CSTRING(SMG_05);
+    };
+    
     class Weapon_hgun_PDW2000_F: Weapon_Base_F {
         displayName = CSTRING(hgun_PDW2000_Name);
     };
@@ -643,5 +647,40 @@ class CfgVehicles {
 
     class Item_acc_flashlight: Item_Base_F {
         displayName="UTG Defender 126";
+    };
+
+    // APEX/Tanoa
+
+    // Jeep Wrangler
+    class Offroad_02_unarmed_base_F;
+    class C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
+        displayName = CSTRING(C_Offroad_02_unarmed);
+    };
+    class C_Offroad_02_unarmed_F_black: C_Offroad_02_unarmed_F {
+        displayName = CSTRING(C_Offroad_02_unarmed_black);
+    };
+    class C_Offroad_02_unarmed_F_blue: C_Offroad_02_unarmed_F {
+        displayName = CSTRING(C_Offroad_02_unarmed_blue);
+    };
+    class C_Offroad_02_unarmed_F_green: C_Offroad_02_unarmed_F {
+        displayName = CSTRING(C_Offroad_02_unarmed_green);
+    };
+    class C_Offroad_02_unarmed_F_orange: C_Offroad_02_unarmed_F {
+        displayName = CSTRING(C_Offroad_02_unarmed_orange);
+    };
+
+    // Cessna
+    class Plane_Civil_01_base_F;
+    class C_Plane_Civil_01_F: Plane_Civil_01_base_F {
+        displayName = CSTRING(C_Plane_Civil_01);
+    };
+    class C_Plane_Civil_01_racing_F: Plane_Civil_01_base_F {
+        displayName = CSTRING(C_Plane_Civil_01_racing);
+    };
+
+    // Burraq
+    class UAV_04_base_F;
+    class O_T_UAV_04_CAS_F: UAV_04_base_F {
+        displayName = CSTRING(O_T_UAV_04_CAS);
     };
 };

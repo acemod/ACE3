@@ -50,4 +50,4 @@ _gunner setVariable [format [QGVAR(%1_temp), _weapon], _coolestTemp, true];
 [GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, CBA_missionTime, _barrelMass]] call CBA_fnc_hashSet;
 
 // Send an event so the machines of the assistant and gunner can show the hint
-[QGVAR(showWeaponTemperature), _gunner], [_gunner, _weapon], [_assistant] call CBA_fnc_targetEvent;
+[QGVAR(showWeaponTemperature), [_gunner, _weapon], [_assistant, _gunner]] call CBA_fnc_targetEvent;
