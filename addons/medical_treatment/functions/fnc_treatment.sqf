@@ -25,9 +25,9 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 
 if !(_target isKindOf "CAManBase") exitWith {false};
 
-private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
+private _config = (configFile >> "ACE_Medical_Treatments" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
-    _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
+    _config = (configFile >> "ACE_Medical_Treatments" >> "Advanced" >> _className);
 };
 
 if !(isClass _config) exitwith {false};

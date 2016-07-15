@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 
 if !(_target isKindOf "CAManBase") exitWith { false };
 
-private _config = (ConfigFile >> "ACE_Medical_Actions" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
+private _config = (ConfigFile >> "ACE_Medical_Treatments" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
 
 if !(isClass _config) exitwith {false};
 

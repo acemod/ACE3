@@ -57,9 +57,9 @@ if ((_weaponSelect params [["_previousWeapon", ""]]) && {(_previousWeapon != "")
 } forEach _usersOfItems;
 
 // Record specific callback
-private _config = (configFile >> "ACE_Medical_Actions" >> "Basic" >> _className);
+private _config = (configFile >> "ACE_Medical_Treatments" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
-    _config = (configFile >> "ACE_Medical_Actions" >> "Advanced" >> _className);
+    _config = (configFile >> "ACE_Medical_Treatments" >> "Advanced" >> _className);
 };
 
 private _callback = getText (_config >> "callbackFailure");
