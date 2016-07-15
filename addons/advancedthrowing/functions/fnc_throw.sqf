@@ -23,7 +23,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     [_unit] call FUNC(prime);
 };
 
-_unit playAction "ThrowGrenade";
+[_unit, "ThrowGrenade"] call EFUNC(common,doGesture);
 
 // Pass position to reset later because animation may change it in certain stances
 [{
