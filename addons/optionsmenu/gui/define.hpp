@@ -12,6 +12,11 @@ class RscHTML;
 class RscText;
 
 
+class RscControlsGroupNoHScrollbars;
+class RscPicture;
+class RscButtonMenu;
+
+
 #ifndef ACE_DEFINE_H
 #define ACE_DEFINE_H
 

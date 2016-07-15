@@ -19,6 +19,14 @@
 
 params ["_unit", "_detectorType"];
 
-_unit setVariable [format[QGVAR(enable_%1), _detectorType], false];
+if !(local _unit) then {
+    [QGVAR(disableDetector), [_unit, _detectorType], _unit] call CBA_fnc_targetEvent;
+};
+
+_unit setVariable [format[QGVAR(enable_%1), _detectorType], false, true];
+
+if (_unit == ACE_player && {alive _unit}) then {
+    playSound "ACE_Sound_Click";
+};
 
 [QGVAR(detectorDisabled), [_unit, _detectorType]] call CBA_fnc_localEvent;

@@ -52,21 +52,13 @@
 #define MACRO_CONNECT_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
-            class GVAR(Refuel) { \
-                displayName = CSTRING(Refuel); \
+            class GVAR(Connect) { \
+                displayName = CSTRING(Connect); \
                 distance = REFUEL_ACTION_DISTANCE; \
-                condition = "true"; \
-                statement = ""; \
-                showDisabled = 0; \
-                priority = 2; \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
+                exceptions[] = {"isNotInside"}; \
             }; \
         }; \
     };
@@ -76,6 +68,7 @@
         class ACE_MainActions { \
             displayName = CSTRING(Refuel); \
             distance = REFUEL_ACTION_DISTANCE; \
+            position = "[0,-0.025,0.125]"; \
             condition = "true"; \
             statement = ""; \
             showDisabled = 0; \
@@ -319,12 +312,17 @@ class CfgVehicles {
     };
 
     class Van_01_fuel_base_F: Van_01_base_F {
-        transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
     };
-
+    class C_Van_01_fuel_F: Van_01_fuel_base_F {
+        transportFuel = 0; //1k
+    };
+    class I_G_Van_01_fuel_F: Van_01_fuel_base_F {
+        transportFuel = 0; //1k
+    };
+    
     class Tank_F: Tank {
         GVAR(fuelCapacity) = 1200;
     };

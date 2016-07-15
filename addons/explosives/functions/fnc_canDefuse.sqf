@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 0: Target <OBJECT>
+ * 0: Target (ACE_DefuseObject) <OBJECT>
  *
  * Return Value:
  * Able to defuse <BOOL>
@@ -19,15 +19,16 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private ["_isSpecialist"];
-
-if (isNull(_target getVariable [QGVAR(Explosive),objNull])) exitWith {
+private _explosive = _target getVariable [QGVAR(Explosive), objNull];
+if (isNull _explosive) exitWith {
     deleteVehicle _target;
     false
 };
 if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (items _unit))}) exitWith {false};
-_isSpecialist = [_unit] call EFUNC(Common,isEOD);
 
-if (GVAR(RequireSpecialist) && {!_isSpecialist}) exitWith {false};
+if (GVAR(RequireSpecialist) && {!([_unit] call EFUNC(Common,isEOD))}) exitWith {false};
+
+//Handle the naval mines (which doens't get turned into items when defused):
+if ((_explosive isKindOf "UnderwaterMine_Range_Ammo") && {!mineActive _explosive}) exitWith {false};
 
 true

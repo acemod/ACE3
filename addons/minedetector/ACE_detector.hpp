@@ -1,6 +1,4 @@
 class ACE_detector {
-    class detectableObjects {
-    };
     class detectors {
         class ACE_VMM3 {
             radius = 2.5;

@@ -1,5 +1,11 @@
 
 class CfgAmmo {
+    class Default;
+    class Grenade: Default {
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\grenades\Grenade_PullPin.wss", 1.5, 1, 10};
+        impactGroundSoft[] = {};
+    };
+    
     class FlareCore;
     class FlareBase: FlareCore {
         intensity = 20000;
@@ -51,6 +57,7 @@ class CfgAmmo {
     class ACE_G_Handflare_White: SmokeShell {
         GVAR(flare) = 1;
         GVAR(color)[] = {0.5,0.5,0.5,0.5};
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\smokeshell\smoke_1.wss", 0.4, 1, 10};
         model = "\A3\weapons_f\ammo\flare_white";
         dangerRadiusHit = -1;
         suppressionRadiusHit = -1;
@@ -96,5 +103,25 @@ class CfgAmmo {
         smokeColor[] = {0,0,0,0};
         effectsSmoke = "ACE_M84FlashbangEffect";
         whistleDist = 0;
+    };
+    
+    class Chemlight_base: SmokeShell {
+        GVAR(pullPinSound)[] = {"A3\sounds_f\weapons\Other\dry4.wss", 3, 2, 10};
+        soundImpactHard1[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.8,65};
+        soundImpactHard2[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.9,65};
+        soundImpactHard3[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.6,65};
+        soundImpactHard4[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,2,65};
+        soundImpactHard5[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.5,65};
+        soundImpactHard6[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,1.7,65};
+        soundImpactHard7[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,2.1,65};
+        soundImpactIron1[] = {"A3\sounds_f\characters\footsteps\concrete_run_1",1,2.1,95};
+        soundImpactIron2[] = {"A3\sounds_f\characters\footsteps\steel_run_4",1,1.75,95};
+        soundImpactIron3[] = {"A3\sounds_f\characters\footsteps\steel_run_4",1,1.6,95};
+        soundImpactIron4[] = {"A3\sounds_f\characters\footsteps\steel_run_2",1,2,95};
+        soundImpactIron5[] = {"A3\sounds_f\characters\footsteps\steel_run_2",1,2.1,95};
+        soundImpactWoodExt1[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_1",1,1.1,75};
+        soundImpactWoodExt2[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_1",1,1.15,75};
+        soundImpactWoodExt3[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_2",1,1.1,75};
+        soundImpactWoodExt4[] = {"A3\sounds_f\characters\footsteps\wood_run_ext_2",1,1.15,75};
     };
 };

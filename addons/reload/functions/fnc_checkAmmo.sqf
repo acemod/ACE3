@@ -31,7 +31,7 @@ if (count _this > 1) then {
 };
 
 if (_unit == _target) then {
-    _unit playActionNow "Gear";
+    [_unit, "Gear", 1] call EFUNC(common,doGesture);
 };
 
 [FUNC(displayAmmo), [_target], 1, 0.1] call CBA_fnc_waitAndExecute;

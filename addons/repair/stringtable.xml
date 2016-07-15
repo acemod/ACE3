@@ -248,16 +248,16 @@
             <French>Ajouter des pièces de rechage aux véhicules ? (à besoin du système de cargaison)</French>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
-            <English>Repair &gt;&gt;</English>
-            <German>Reparieren &gt;&gt;</German>
-            <Spanish>Reparación &gt;&gt;</Spanish>
-            <French>Réparer &gt;&gt;</French>
-            <Polish>Napraw &gt;&gt;</Polish>
-            <Czech>Opravit &gt;&gt;</Czech>
-            <Portuguese>Reparar &gt;&gt;</Portuguese>
-            <Italian>Ripara &gt;&gt;</Italian>
-            <Hungarian>Szerelés &gt;&gt;</Hungarian>
-            <Russian>Ремонт &gt;&gt;</Russian>
+            <English>Repair</English>
+            <German>Reparieren</German>
+            <Spanish>Reparación</Spanish>
+            <French>Réparer</French>
+            <Polish>Napraw</Polish>
+            <Czech>Opravit</Czech>
+            <Portuguese>Reparar</Portuguese>
+            <Italian>Ripara</Italian>
+            <Hungarian>Szerelés</Hungarian>
+            <Russian>Ремонт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>

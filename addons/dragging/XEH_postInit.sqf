@@ -28,3 +28,30 @@ if (isNil "ACE_maxWeightCarry") then {
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?
+
+//Add Keybind:
+["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)),
+{
+    if (!alive ACE_player) exitWith {false};
+    if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    
+    // If we are drag/carrying something right now then just drop it:
+    if (ACE_player getVariable [QGVAR(isDragging), false]) exitWith {
+        [ACE_player, ACE_player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
+        false
+    };
+    if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
+        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry);
+        false
+    };
+
+    private _cursor = cursorObject;
+    if ((isNull _cursor) || {(_cursor distance ACE_player) > 2.6}) exitWith {false};
+    if (!([ACE_player, _cursor] call FUNC(canDrag))) exitWith {false};
+
+    [ACE_player, _cursor] call FUNC(startDrag);
+    false
+},
+{false},
+[-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
+

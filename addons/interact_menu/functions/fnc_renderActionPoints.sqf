@@ -159,7 +159,7 @@ if (count GVAR(collectedActionPoints) > 1) then {
             private _delta = vectorNormalized ((GVAR(collectedActionPoints) select _i select 1) vectorDiff (GVAR(collectedActionPoints) select _j select 1));
 
             // If _i is inside a cone with 20º half angle with origin on _j
-            if (_delta select 2 > 0.94) exitWith {
+            if ((_delta select 2 > 0.94) && {((GVAR(collectedActionPoints) select _i select 1) distance2d (GVAR(collectedActionPoints) select _j select 1)) < 0.1}) exitWith {
                 GVAR(collectedActionPoints) deleteAt _i;
             };
         };
