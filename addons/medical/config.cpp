@@ -14,8 +14,12 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgSounds.hpp"
-
 #include "ACE_Medical_Injuries.hpp"
 #include "ACE_Medical_StateMachine.hpp"
+
+#include "CfgEden.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgSounds.hpp"
+#include "CfgFactionClasses.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
