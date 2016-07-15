@@ -24,7 +24,7 @@ if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) the
 };
 
 // Revive timer ran out
-if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTime)}) exitWith
+if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTime)}) exitWith {
     [_unit, "ReviveTimer", []] call FUNC(stateEvent);
     _unit setVariable [QGVAR(inReviveState), nil, true];
     _unit setVariable [QGVAR(reviveStartTime), nil];
