@@ -12,14 +12,14 @@
  */
 #include "script_component.hpp"
 params["_unit"];
-private ["_canCheckTemperature","_weaponBarrelClass"];
+
 //Get the classname of the spare barrel for the weapon
-_weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(barrelClassname));
+private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(barrelClassname));
 //If the weapon has no defined classname then use the ACE one
 if(_weaponBarrelClass == "") then {
     _weaponBarrelClass = "ACE_SpareBarrel";
 };
 //Check if the player has the barrel and the weapon can have its barrel swapped
-_canCheckTemperature = GVAR(enabled) && {_weaponBarrelClass in magazines _player};
+private _canCheckTemperature = GVAR(enabled) && {_weaponBarrelClass in magazines _player};
 
 _canCheckTemperature;
