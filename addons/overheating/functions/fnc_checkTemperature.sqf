@@ -28,7 +28,7 @@ if (_assistant isEqualTo _gunner) then {
         _action = "Gear";
     };
 };
-_assistant playActionNow _action;
+[_assistant, _action] call EFUNC(common,doGesture);
 
 // Waits a sec before displaying the temperature
 [FUNC(displayTemperature), [_gunner, _weapon], 1.0] call CBA_fnc_waitAndExecute;

@@ -1,4 +1,5 @@
 
+PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
@@ -32,6 +33,7 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(doGesture);
 PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);

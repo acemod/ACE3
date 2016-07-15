@@ -27,7 +27,7 @@ TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificV
 
 private ["_ammo", "_explosive", "_attachedTo", "_magazineTrigger", "_pitch", "_digDistance", "_canDigDown", "_soundEnviron", "_surfaceType"];
 
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _attachedTo = objNull;
 if (!isNull _setupPlaceholderObject) then {

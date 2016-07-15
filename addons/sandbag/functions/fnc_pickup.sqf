@@ -18,7 +18,7 @@
 
 params ["_unit", "_sandbag"];
 
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _unit setVariable [QGVAR(isUsingSandbag), true];
 

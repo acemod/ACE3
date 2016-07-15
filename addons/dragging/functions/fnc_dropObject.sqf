@@ -26,7 +26,7 @@ private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 if !(_unit getVariable ["ACE_isUnconscious", false]) then {
     // play release animation
-    _unit playAction "released";
+    [_unit, "released"] call EFUNC(common,doGesture);
 };
 
 // prevent collision damage

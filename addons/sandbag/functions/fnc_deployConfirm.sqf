@@ -53,6 +53,6 @@ call EFUNC(interaction,hideMouseHint);
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
 
 // play animation
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _unit setVariable [QGVAR(isDeploying), false, true];
