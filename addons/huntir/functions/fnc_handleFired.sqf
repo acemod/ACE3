@@ -1,7 +1,7 @@
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
- * Handles HuntIR projectiles. Called from the unified fired EH for the local player.
+ * Handles HuntIR projectiles. Called from the ammo fired EH for the local player.
  *
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
@@ -15,10 +15,6 @@
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
-
-if (_ammo != "F_HuntIR") exitWith {};
-
-if (!hasInterface) exitWith {};
 
 [{
     params ["_projectile"];
