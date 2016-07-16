@@ -23,4 +23,4 @@ if(_weaponBarrelClass == "") then {
     _weaponBarrelClass = "ACE_SpareBarrel";
 };
 //If the player has the spare barrel then it can be swapped
-if (_weaponBarrelClass in magazines _unit) exitWith{true};
+(_weaponBarrelClass in magazines _unit)
