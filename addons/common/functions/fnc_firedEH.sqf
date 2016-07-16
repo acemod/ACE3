@@ -26,12 +26,27 @@ TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile
 if (_unit isKindOf "CAManBase") then {
     // The unit it on foot
     if (_unit == ACE_player) then {
+
         ["ace_firedPlayer", _this] call CBA_fnc_localEvent;
+        {
+            [_x, _this] call CBA_fnc_localEvent;
+        } forEach ([GVAR(ammoFiredEvents_ForPlayer) getVariable _ammo] param [0, []]);
+
     } else {
         if ([_unit] call EFUNC(common,isPlayer)) then {
+
             ["ace_firedPlayerNonLocal", _this] call CBA_fnc_localEvent;
+            {
+                [_x, _this] call CBA_fnc_localEvent;
+            } forEach ([GVAR(ammoFiredEvents_ForPlayerNonLocal) getVariable _ammo] param [0, []]);
+
         } else {
+
             ["ace_firedNonPlayer", _this] call CBA_fnc_localEvent;
+            {
+                [_x, _this] call CBA_fnc_localEvent;
+            } forEach ([GVAR(ammoFiredEvents_ForNonPlayer) getVariable _ammo] param [0, []]);
+
         };
     };
 } else {
@@ -55,12 +70,27 @@ if (_unit isKindOf "CAManBase") then {
     };
 
     if (_gunner == ACE_player) then {
+
         ["ace_firedPlayerVehicle", _this] call CBA_fnc_localEvent;
+        {
+            [_x, _this] call CBA_fnc_localEvent;
+        } forEach ([GVAR(ammoFiredEvents_ForPlayerVehicle) getVariable _ammo] param [0, []]);
+
     } else {
         if ([_gunner] call EFUNC(common,isPlayer)) then {
+
             ["ace_firedPlayerVehicleNonLocal", _this] call CBA_fnc_localEvent;
+            {
+                [_x, _this] call CBA_fnc_localEvent;
+            } forEach ([GVAR(ammoFiredEvents_ForPlayerVehicleNonLocal) getVariable _ammo] param [0, []]);
+
         } else {
+
             ["ace_firedNonPlayerVehicle", _this] call CBA_fnc_localEvent;
+            {
+                [_x, _this] call CBA_fnc_localEvent;
+            } forEach ([GVAR(ammoFiredEvents_ForNonPlayerVehicle) getVariable _ammo] param [0, []]);
+
         };
     };
 };

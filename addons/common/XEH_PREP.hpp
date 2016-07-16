@@ -137,6 +137,7 @@ PREP(progressBar);
 PREP(readSettingFromModule);
 PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
+PREP(registerAmmoFiredEvent);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
 PREP(requestCallback);
