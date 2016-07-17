@@ -17,17 +17,6 @@
 
 //#define ENABLE_PP_EFFECT
 
-#define PRONE_ROLLING_ANIMS [\
-    "amovppnemstpsnonwnondnon_amovppnemevasnonwnondl",\
-    "amovppnemstpsnonwnondnon_amovppnemevasnonwnondr",\
-    "amovppnemstpsraswrfldnon_amovppnemevaslowwrfldl",\
-    "amovppnemstpsraswrfldnon_amovppnemevaslowwrfldr",\
-    "amovppnemstpsraswpstdnon_amovppnemevaslowwpstdl",\
-    "amovppnemstpsraswpstdnon_amovppnemevaslowwpstdr",\
-    "amovppnemstpsoptwbindnon_amovppnemevasoptwbindl",\
-    "amovppnemstpsoptwbindnon_amovppnemevasoptwbindr"\
-]
-
 params [["_unit", objNull, [objNull]], ["_intensity", 0, [0]]];
 
 if (_unit getVariable [QGVAR(isBurning), false]) exitWith {};

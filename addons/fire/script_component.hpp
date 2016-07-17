@@ -16,3 +16,14 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define PRONE_ROLLING_ANIMS [\
+    "amovppnemstpsnonwnondnon_amovppnemevasnonwnondl",\
+    "amovppnemstpsnonwnondnon_amovppnemevasnonwnondr",\
+    "amovppnemstpsraswrfldnon_amovppnemevaslowwrfldl",\
+    "amovppnemstpsraswrfldnon_amovppnemevaslowwrfldr",\
+    "amovppnemstpsraswpstdnon_amovppnemevaslowwpstdl",\
+    "amovppnemstpsraswpstdnon_amovppnemevaslowwpstdr",\
+    "amovppnemstpsoptwbindnon_amovppnemevasoptwbindl",\
+    "amovppnemstpsoptwbindnon_amovppnemevasoptwbindr"\
+]
