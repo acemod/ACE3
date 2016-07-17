@@ -49,7 +49,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 // Code to handle flares being fired
 [QGVAR(flareFired), {
     //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-    private _ammoConfig = configFile >> "CfgAmmo" >> _ammo
+    private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
     private _fuzeTime = getNumber (_ammoConfig >> "explosionTime");
     private _timeToLive = getNumber (_config >> "timeToLive");
     private _color = getArray (_config >> QGVAR(color));

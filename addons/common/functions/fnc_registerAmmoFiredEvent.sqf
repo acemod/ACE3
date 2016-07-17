@@ -19,6 +19,7 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_eventName", "_condition", "_fireForPlayer", "_fireForPlayerNonLocal", "_fireForNonPlayer", "_fireForPlayerVehicle", "_fireForPlayerVehicleNonLocal", "_fireForNonPlayerVehicle"];
@@ -38,17 +39,19 @@ private _fnc_addEvent = {
 private _cfgAmmo = configFile >> "CfgAmmo";
 for "_i" from 0 to (count _cfgAmmo) - 1 do {
     private _ammoConfig = _cfgAmmo select _i;
-    private _ammo = configName _ammoConfig;
+    if (isClass _ammoConfig) then {
+        private _ammo = configName _ammoConfig;
 
-    // The condition code receives the following as parameter:
-    // 0: Name of the ammo <STRING>
-    // 1: Config of the ammo <CONFIG>
-    if ([_ammo, _ammoConfig] call _condition) then {
-        [GVAR(ammoFiredEvents_ForPlayer), _fireForPlayer] call _fnc_addEvent;
-        [GVAR(ammoFiredEvents_ForPlayerNonLocal), _fireForPlayerNonLocal] call _fnc_addEvent;
-        [GVAR(ammoFiredEvents_ForNonPlayer), _fireForNonPlayer] call _fnc_addEvent;
-        [GVAR(ammoFiredEvents_ForPlayerVehicle), _fireForPlayerVehicle] call _fnc_addEvent;
-        [GVAR(ammoFiredEvents_ForPlayerVehicleNonLocal), _fireForPlayerVehicleNonLocal] call _fnc_addEvent;
-        [GVAR(ammoFiredEvents_ForNonPlayerVehicle), _fireForNonPlayerVehicle] call _fnc_addEvent;
+        // The condition code receives the following as parameter:
+        // 0: Name of the ammo <STRING>
+        // 1: Config of the ammo <CONFIG>
+        if ([_ammo, _ammoConfig] call _condition) then {
+            [GVAR(ammoFiredEvents_ForPlayer), _fireForPlayer] call _fnc_addEvent;
+            [GVAR(ammoFiredEvents_ForPlayerNonLocal), _fireForPlayerNonLocal] call _fnc_addEvent;
+            [GVAR(ammoFiredEvents_ForNonPlayer), _fireForNonPlayer] call _fnc_addEvent;
+            [GVAR(ammoFiredEvents_ForPlayerVehicle), _fireForPlayerVehicle] call _fnc_addEvent;
+            [GVAR(ammoFiredEvents_ForPlayerVehicleNonLocal), _fireForPlayerVehicleNonLocal] call _fnc_addEvent;
+            [GVAR(ammoFiredEvents_ForNonPlayerVehicle), _fireForNonPlayerVehicle] call _fnc_addEvent;
+        };
     };
 };
