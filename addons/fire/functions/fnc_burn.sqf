@@ -22,6 +22,9 @@ params [["_unit", objNull, [objNull]], ["_intensity", 0, [0]]];
 if (_unit getVariable [QGVAR(isBurning), false]) exitWith {};
 _unit setVariable [QGVAR(isBurning), true];
 
+// delete old burning value
+_unit setVariable [QGVAR(value), nil];
+
 [QGVAR(burn), [_unit, _intensity]] call CBA_fnc_remoteEvent;
 
 [{
@@ -135,7 +138,7 @@ _unit setVariable [QGVAR(isBurning), true];
         };
     };
 
-    [_unit, _fnc_FlameEffect, 3] call _fnc_FlameEffect; // recursive function
+    [_unit, _fnc_FlameEffect, 8] call _fnc_FlameEffect; // recursive function
     #endif
 
     // update for next cycle, only on local machine
@@ -145,7 +148,7 @@ _unit setVariable [QGVAR(isBurning), true];
 
         // player is trying to put out fire by rolling on the ground
         if (animationState _unit in PRONE_ROLLING_ANIMS) then {
-            _intensity = _intensity - 0.2;
+            _intensity = _intensity - 0.2 * (CBA_missionTime - _time);
         };
 
         // stop burning in water
@@ -160,14 +163,11 @@ _unit setVariable [QGVAR(isBurning), true];
     };
 
     _time = CBA_missionTime;
-}, 1, [_unit, _intensity], {
+}, 3, [_unit, _intensity], {
     // ----- start
-    (_this getVariable "params") params ["_unit", "_intensity"];
+    (_this getVariable "params") params ["_unit", "_startingIntensity"];
 
-    if (local _unit) then {
-        _unit setVariable [QGVAR(value), _intensity, true];
-    };
-
+    _intensity = _startingIntensity;
     _time = CBA_missionTime;
 
     // init effects
@@ -208,4 +208,4 @@ _unit setVariable [QGVAR(isBurning), true];
 
     // ----- exit condition
     isNull _unit || {_intensity < 1}
-}, ["_intensity", "_effects", "_time"]] call CBA_fnc_createPerFrameHandlerLogic;
+}, ["_intensity", "_effects", "_time"]] call CBA_fnc_createPerFrameHandlerObject;
