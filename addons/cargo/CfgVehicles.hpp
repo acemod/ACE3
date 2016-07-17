@@ -408,12 +408,12 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
-        
+
         GVAR(space) = 2;
         GVAR(hasCargo) = 2;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
-        
+
         maximumLoad = 2000;
         transportMaxBackpacks = 12;
         transportMaxMagazines = 64;
@@ -423,12 +423,11 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
-        
         GVAR(space) = 3;
         GVAR(hasCargo) = 3;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
-        
+
         maximumLoad = 2000;
         transportMaxBackpacks = 12;
         transportMaxMagazines = 64;

@@ -141,7 +141,6 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
-        
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 270;
@@ -154,7 +153,6 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
-
         GVAR(canCarry) = 1;
         GVAR(carryPosition[]) = {0,1,1};
         GVAR(carryDirection) = 270;
@@ -163,8 +161,6 @@ class CfgVehicles {
         GVAR(dragPosition[]) = {0,1.5,0};
         GVAR(dragDirection) = 90;
     };
-
-    
 
     class ACE_RepairItem_Base: ThingX {};
 
