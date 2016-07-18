@@ -1,26 +1,34 @@
 /*
  * Author: KoffeinFlummi, commy2
- * Start fire in engine block of a car.
+ * Makes object catch fire.
  *
  * Arguments:
- * 0: Vehicle <Object>
+ * 0: Vehicle <OBJECT>
+ * 1: Intensity of fire <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, 4] call ace_cookoff_fnc_burn
+ * [player, 4] call ace_fire_fnc_burn
  *
  * Public: No
  */
 #include "script_component.hpp"
 
+#define PFH_SLEEP 3
+#define FIRE_DPS 0.02
+#define PROPAGATE_RADIUS 2
 //#define ENABLE_PP_EFFECT
 
-params [["_unit", objNull, [objNull]], ["_intensity", 0, [0]]];
+params [["_unit", objNull, [objNull]], ["_intensity", 2, [0]]];
 
-if (_unit getVariable [QGVAR(isBurning), false]) exitWith {};
+if (_unit call FUNC(isBurning)) exitWith {};
 _unit setVariable [QGVAR(isBurning), true];
+
+if (_unit call FUNC(isPlant)) then {
+    GVAR(burningPlants) pushBackUnique _unit;
+};
 
 // delete old burning value
 _unit setVariable [QGVAR(value), nil];
@@ -141,14 +149,36 @@ _unit setVariable [QGVAR(value), nil];
     [_unit, _fnc_FlameEffect, 8] call _fnc_FlameEffect; // recursive function
     #endif
 
+    // propagate fire
+    {
+        if (local _x) then {
+            [_x, 2] call FUNC(burn);
+        };
+    } forEach (
+        nearestTerrainObjects [_unit, ["SMALL TREE", "BUSH"], PROPAGATE_RADIUS, false] +
+        nearestObjects [_unit, ["Man"], PROPAGATE_RADIUS]
+    );
+
     // update for next cycle, only on local machine
     if (local _unit) then {
+        private _timeStep = CBA_missionTime - _time;
+
+        // add damage
+        private _damage = damage _unit + FIRE_DPS * _timeStep;
+        private _damages = getAllHitPointsDamage _unit param [2, []] apply {_x + FIRE_DPS * _timeStep};
+
+        _unit setDamage _damage;
+
+        {
+            _unit setHitIndex [_forEachIndex, _x];
+        } forEach _damages;
+
         // timer
-        _intensity = _intensity - (0.02 + rain / 10) * (CBA_missionTime - _time);
+        _intensity = _intensity - (0.02 + rain / 10) * _timeStep;
 
         // player is trying to put out fire by rolling on the ground
         if (animationState _unit in PRONE_ROLLING_ANIMS) then {
-            _intensity = _intensity - 0.2 * (CBA_missionTime - _time);
+            _intensity = _intensity - 0.2 * _timeStep;
         };
 
         // stop burning in water
@@ -163,7 +193,7 @@ _unit setVariable [QGVAR(value), nil];
     };
 
     _time = CBA_missionTime;
-}, 3, [_unit, _intensity], {
+}, PFH_SLEEP, [_unit, _intensity], {
     // ----- start
     (_this getVariable "params") params ["_unit", "_startingIntensity"];
 
@@ -200,6 +230,10 @@ _unit setVariable [QGVAR(value), nil];
 
     {deleteVehicle _x} forEach _effects;
     _unit setVariable [QGVAR(isBurning), false];
+
+    if (_unit call FUNC(isPlant)) then {
+        GVAR(burningPlants) deleteAt (GVAR(burningPlants) find _unit);
+    };
 }, {
     // ----- run condition
     true
