@@ -298,7 +298,7 @@ Comments within the code should be used when they are describing a complex and c
 
 Good:
 
-```js
+```sqf
 // find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
@@ -312,28 +312,28 @@ _highestLoss = -1;
 
 Good:
 
-```js
+```sqf
 // Check if the unit is an engineer
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```js
+```sqf
 // Get the engineer skill and check if it is above 1
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```js
+```sqf
 // Get the variable myValue from the object
 _myValue = _obj getvariable [QGVAR(myValue), 0];
 ```
 
 Bad:
 
-```js
+```sqf
 // Loop through all units to increase the myvalue variable
 {
     _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
@@ -341,22 +341,22 @@ Bad:
 ```
 
 ### 5.5. Brackets around code
-When making use of brackets “( )”, use as view as possible, unless doing so decreases readability of the code. Avoid statements such as:
+When making use of brackets “( )”, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
 
-```js
+```sqf
 if (!(_value)) then { };
 ```
 
 However the following is allowed:
 
-```js
+```sqf
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements should always be wrapped around brackets.
 Example:
 
-```js
+```sqf
 if (!_value) then {};
 if (_value) then {};
 ```
@@ -393,17 +393,20 @@ Functions and code blocks that specific a return a value must have a meaningfull
 All private variables shall make use of the `private` keyword on initalization. When declaring a private variable before initalization, usage of the private array syntax is allowed. All private variables must be either initialized using the private key word, or declared using the private array syntax. Exceptions to this rule are variables obtained from an array. Note that this may only be down by making use of the `params` command family, as this ensures the variable is declared as private.
 
 Good:
-```js
+
+```sqf
 private _myVariable = "hello world";
 ```
 
 Good:
-```js
+
+```sqf
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 Bad:
-```js
+
+```sqf
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
 ```
@@ -415,9 +418,9 @@ Any one function shall contain no more than 250 lines of code, excluding the fun
 ### 6.7. Variable declarations
 Declarations should be at the smallest feasible scope.
 
-
 Good:
-```js
+
+```sqf
 if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
    
@@ -434,6 +437,7 @@ if (call FUNC(myCondition)) then {
 ```
 
 Bad:
+
 ```sqf
 private _areAllAboveTen = true; // <- this is bad, because it can be initalized in the if statement
 if (call FUNC(myCondition) then {
@@ -454,7 +458,7 @@ Private variables will not be introduced until they can be initialized with mean
 
 Good:
 
-```js
+```sqf
 private _myVariable = 0; // good because the value will be used
 {
     _x params ["_value", "_amount"];
@@ -466,7 +470,7 @@ private _myVariable = 0; // good because the value will be used
 
 Bad:
 
-```js
+```sqf
 private _myvariable = 0; // Bad because it is initalized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
@@ -477,7 +481,7 @@ if (_condition) then {
 
 Good:
 
-```js
+```sqf
 private _myvariable = [1, 2] select _condition;
 ```
 
@@ -491,20 +495,21 @@ The increment expression in a for loop will perform no action other than to chan
 When using getvariable, there should either be a default value given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
 
 Bad:
-```js
+
+```sqf
 _return = obj getvariable "varName";
 if (isnil "_return") then {_return = 0 };
 ```
 
 Good:
 
-```js
+```sqf
 _return = obj getvariable ["varName", 0];
 ```
 
 Good:
 
-```js
+```sqf
 _return = obj getvariable "varName";
 if (isnil "_return") exitwith {};
 ```
@@ -513,26 +518,28 @@ if (isnil "_return") exitwith {};
 Global variables should not be used to pass along information from one function to another. Use arguments instead.
 
 Bad:
+
 ```sqf
 fnc_example = {
     hint GVAR(myVariable);
 };
+```
 
-----
-
+```sqf
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 Good:
+
 ```sqf
 fnc_example = {
    params ["_content"];
    hint _content;
 };
+```
 
-----
-
+```sqf
 ["hello my variable"] call fnc_example;
 ```
 
@@ -548,7 +555,7 @@ All global variables that are intended to be used as a constant shall be written
 
 Good:
 
-```js
+```sqf
 ACE_Common_CATEGORY_NAME = 1;
 GVAR(CATEGORY_NAME) = 1
 ```
@@ -607,7 +614,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```js
+```sqf
 _hash = HASHCREATE;
 HASH_SET(_hash, "key", "value");
 if(HASH_HASKEY(_hash, "key")) then {
@@ -633,7 +640,7 @@ A description of the above macros is below.
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
-```js
+```sqf
 _defaultKeys = ["key1","key2","key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
@@ -682,19 +689,19 @@ When adding new elements to an array, pushback shall be used instead of the bina
 
 Good:
 
-```js
+```sqf
 _a pushback _value;
 ```
 
 Also good:
 
-```js
+```sqf
 _a append [1,2,3];
 ```
 
 Bad:
 
-```js
+```sqf
 _a set [ count _a, _value];
 _a = a + _[value];
 ```
@@ -716,14 +723,25 @@ ExecVM and spawn are to be avoided wherever possible.
 When checking if an array is empty, you can use both count or isEqualTo.
 
 ### 8.6. For Loops
-`for "_y" from # to # step # do { ... }` should be used instead of: `for [{ ... },{ ... },{ ... }] do { ... };` whenever possible.
+
+```sqf
+for "_y" from # to # step # do { ... }
+```
+
+should be used instead of
+
+```sqf
+for [{ ... },{ ... },{ ... }] do { ... };
+```
+
+whenever possible.
 
 ### 8.7. While Loops
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinited while loops are not allowed.
 
 Good:
 
-```js
+```sqf
 _original = _obj getvariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
     _original = [_original, _weaponClass] call FUNC(getNewValue);
@@ -732,7 +750,7 @@ while {_original < _weaponThreshold} do {
 
 Bad:
 
-```js
+```sqf
 while {true} do {
     // anything
 };
@@ -741,7 +759,7 @@ while {true} do {
 ### 8.8. waitUntil
 The waitUntil command shall not be used. Instead, make use of a per frame handler:
 
-```js
+```sqf
 [{
     params ["_args", "_id"];
     _args params ["_unit"];
