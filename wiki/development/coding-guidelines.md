@@ -158,7 +158,7 @@ The `PREP` macro allows for CBA function caching, which drastically speeds up lo
 ### 3.1. Headers
 Every function should have a header of the following format as the start of their function file:
 
-```cpp
+```js
 /*
  * Author: [Name of Author(s)]
  * [Description]
@@ -237,7 +237,7 @@ class Something : Or {
 
 When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
 
-```cpp
+```js
 if (alive player) then {
     player setDamage 1;
 } else {
@@ -262,7 +262,7 @@ Ever new scope should be on a new indent. This will make the code easier to unde
 
 Good example:
 
-```cpp
+```js
 call {
     call {
         if (/* condition */) then {
@@ -274,7 +274,7 @@ call {
 
 Bad Example:
 
-```cpp
+```js
 call {
         call {
         if (/* condition */) then {
@@ -289,7 +289,7 @@ Inline comments should use `//`. Usage of `/* */` is allowed for larger comment 
 
 Example:
 
-```cpp
+```js
 //// Comment   // < incorrect
 // Comment     // < correct
 /* Comment */  // < correct
@@ -302,7 +302,7 @@ Comments within the code should be used when they are describing a complex and c
 
 Good:
 
-```sqf
+```js
 // find the object with the most blood loss
 _highestObj = objNull;
 _highestLoss = -1;
@@ -316,28 +316,28 @@ _highestLoss = -1;
 
 Good:
 
-```sqf
+```js
 // Check if the unit is an engineer
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```sqf
+```js
 // Get the engineer skill and check if it is above 1
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
 
-```sqf
+```js
 // Get the variable myValue from the object
 _myValue = _obj getvariable [QGVAR(myValue), 0];
 ```
 
 Bad:
 
-```sqf
+```js
 // Loop through all units to increase the myvalue variable
 {
     _x setvariable [QGVAR(myValue), (_x getvariable [QGVAR(myValue), 0]) + 1];
@@ -347,20 +347,20 @@ Bad:
 ### 5.5. Brackets around code
 When making use of brackets “( )”, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
 
-```sqf
+```js
 if (!(_value)) then { };
 ```
 
 However the following is allowed:
 
-```sqf
+```js
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements should always be wrapped around brackets.
 Example:
 
-```sqf
+```js
 if (!_value) then {};
 if (_value) then {};
 ```
@@ -398,19 +398,19 @@ All private variables shall make use of the `private` keyword on initalization. 
 
 Good:
 
-```sqf
+```js
 private _myVariable = "hello world";
 ```
 
 Good:
 
-```sqf
+```js
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 Bad:
 
-```sqf
+```js
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
 ```
@@ -424,7 +424,7 @@ Declarations should be at the smallest feasible scope.
 
 Good:
 
-```sqf
+```js
 if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
    
@@ -442,7 +442,7 @@ if (call FUNC(myCondition)) then {
 
 Bad:
 
-```sqf
+```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initalized in the if statement
 if (call FUNC(myCondition) then {
    {
@@ -462,7 +462,7 @@ Private variables will not be introduced until they can be initialized with mean
 
 Good:
 
-```sqf
+```js
 private _myVariable = 0; // good because the value will be used
 {
     _x params ["_value", "_amount"];
@@ -474,7 +474,7 @@ private _myVariable = 0; // good because the value will be used
 
 Bad:
 
-```sqf
+```js
 private _myvariable = 0; // Bad because it is initalized with a zero, but this value does not mean anything
 if (_condition) then {
     _myVariable = 1;
@@ -485,7 +485,7 @@ if (_condition) then {
 
 Good:
 
-```sqf
+```js
 private _myvariable = [1, 2] select _condition;
 ```
 
@@ -500,20 +500,20 @@ When using getvariable, there should either be a default value given in the stat
 
 Bad:
 
-```sqf
+```js
 _return = obj getvariable "varName";
 if (isnil "_return") then {_return = 0 };
 ```
 
 Good:
 
-```sqf
+```js
 _return = obj getvariable ["varName", 0];
 ```
 
 Good:
 
-```sqf
+```js
 _return = obj getvariable "varName";
 if (isnil "_return") exitwith {};
 ```
@@ -523,27 +523,27 @@ Global variables should not be used to pass along information from one function 
 
 Bad:
 
-```sqf
+```js
 fnc_example = {
     hint GVAR(myVariable);
 };
 ```
 
-```sqf
+```js
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 Good:
 
-```sqf
+```js
 fnc_example = {
    params ["_content"];
    hint _content;
 };
 ```
 
-```sqf
+```js
 ["hello my variable"] call fnc_example;
 ```
 
@@ -559,7 +559,7 @@ All global variables that are intended to be used as a constant shall be written
 
 Good:
 
-```sqf
+```js
 ACE_Common_CATEGORY_NAME = 1;
 GVAR(CATEGORY_NAME) = 1
 ```
@@ -618,7 +618,7 @@ Hashes are a variable type that store key value pairs. They are not implemented 
 
 The following example is a simple usage using our macros which will be explained further below.
 
-```sqf
+```js
 _hash = HASHCREATE;
 HASH_SET(_hash, "key", "value");
 if(HASH_HASKEY(_hash, "key")) then {
@@ -644,7 +644,7 @@ A description of the above macros is below.
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
 
-```sqf
+```js
 _defaultKeys = ["key1","key2","key3"];
 // create a new hashlist using the above keys as default
 _hashList = HASHLIST_CREATELIST(_defaultKeys);
@@ -693,19 +693,19 @@ When adding new elements to an array, pushback shall be used instead of the bina
 
 Good:
 
-```sqf
+```js
 _a pushback _value;
 ```
 
 Also good:
 
-```sqf
+```js
 _a append [1,2,3];
 ```
 
 Bad:
 
-```sqf
+```js
 _a set [ count _a, _value];
 _a = a + _[value];
 ```
@@ -728,13 +728,13 @@ When checking if an array is empty, you can use both count or isEqualTo.
 
 ### 8.6. For Loops
 
-```sqf
+```js
 for "_y" from # to # step # do { ... }
 ```
 
 should be used instead of
 
-```sqf
+```js
 for [{ ... },{ ... },{ ... }] do { ... };
 ```
 
@@ -745,7 +745,7 @@ While is only allowed when used to perform a unknown finite amount of steps with
 
 Good:
 
-```sqf
+```js
 _original = _obj getvariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
     _original = [_original, _weaponClass] call FUNC(getNewValue);
@@ -754,7 +754,7 @@ while {_original < _weaponThreshold} do {
 
 Bad:
 
-```sqf
+```js
 while {true} do {
     // anything
 };
@@ -763,7 +763,7 @@ while {true} do {
 ### 8.8. waitUntil
 The waitUntil command shall not be used. Instead, make use of a per frame handler:
 
-```sqf
+```js
 [{
     params ["_args", "_id"];
     _args params ["_unit"];
