@@ -20,7 +20,7 @@ private _unitPosATL = getposATL _unit;
 if ((positionCameraToWorld [0,0,0]) vectorDistance _unitPosATL > 100 && {random 1 < 0.9}) exitWith {};
 
 private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
-private _casingType = _cartridge + "_stay";
+private _casingType = "ACE_casings_" + _cartridge;
 
 private _ejectDir = (_unit weaponDirection currentWeapon _unit) vectorCrossProduct [0, 0, 1];
 private _posATL = _unitPosATL vectorAdd

@@ -40,7 +40,7 @@
             false
         };
 
-        private _casing = _cartridge + "_stay";
+        private _casing = "ACE_casings_" + _cartridge;
         if !(isClass (configFile >> "CfgVehicles" >> _casing)) exitWith {
             false
         };
