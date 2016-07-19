@@ -45,7 +45,11 @@ All functions shall be put in their own .sqf file.
 #### 1.2.4. Config elements
 Config files will be split up into different header files, each with the name of the config and be included in the `config.cpp` of the component.
 Example:
-    #include "ACE_Settings.hpp"
+
+```cpp
+#include "ACE_Settings.hpp"
+```
+
 And in `ACE_Settings.hpp`:
 
 ```cpp
