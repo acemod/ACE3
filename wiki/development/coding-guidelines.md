@@ -45,7 +45,11 @@ All functions shall be put in their own .sqf file.
 #### 1.2.4. Config elements
 Config files will be split up into different header files, each with the name of the config and be included in the `config.cpp` of the component.
 Example:
-    #include "ACE_Settings.hpp"
+
+```cpp
+#include "ACE_Settings.hpp"
+```
+
 And in `ACE_Settings.hpp`:
 
 ```cpp
@@ -154,7 +158,7 @@ The `PREP` macro allows for CBA function caching, which drastically speeds up lo
 ### 3.1. Headers
 Every function should have a header of the following format as the start of their function file:
 
-```cpp
+```js
 /*
  * Author: [Name of Author(s)]
  * [Description]
@@ -233,7 +237,7 @@ class Something : Or {
 
 When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
 
-```cpp
+```js
 if (alive player) then {
     player setDamage 1;
 } else {
@@ -258,7 +262,7 @@ Ever new scope should be on a new indent. This will make the code easier to unde
 
 Good example:
 
-```cpp
+```js
 call {
     call {
         if (/* condition */) then {
@@ -270,7 +274,7 @@ call {
 
 Bad Example:
 
-```cpp
+```js
 call {
         call {
         if (/* condition */) then {
@@ -285,7 +289,7 @@ Inline comments should use `//`. Usage of `/* */` is allowed for larger comment 
 
 Example:
 
-```cpp
+```js
 //// Comment   // < incorrect
 // Comment     // < correct
 /* Comment */  // < correct
@@ -341,7 +345,7 @@ Bad:
 ```
 
 ### 5.5. Brackets around code
-When making use of brackets “( )”, use as view as possible, unless doing so decreases readability of the code. Avoid statements such as:
+When making use of brackets “( )”, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
 
 ```js
 if (!(_value)) then { };
@@ -393,16 +397,19 @@ Functions and code blocks that specific a return a value must have a meaningfull
 All private variables shall make use of the `private` keyword on initalization. When declaring a private variable before initalization, usage of the private array syntax is allowed. All private variables must be either initialized using the private key word, or declared using the private array syntax. Exceptions to this rule are variables obtained from an array. Note that this may only be down by making use of the `params` command family, as this ensures the variable is declared as private.
 
 Good:
+
 ```js
 private _myVariable = "hello world";
 ```
 
 Good:
+
 ```js
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 Bad:
+
 ```js
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
@@ -415,8 +422,8 @@ Any one function shall contain no more than 250 lines of code, excluding the fun
 ### 6.7. Variable declarations
 Declarations should be at the smallest feasible scope.
 
-
 Good:
+
 ```js
 if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
@@ -434,7 +441,8 @@ if (call FUNC(myCondition)) then {
 ```
 
 Bad:
-```sqf
+
+```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initalized in the if statement
 if (call FUNC(myCondition) then {
    {
@@ -491,6 +499,7 @@ The increment expression in a for loop will perform no action other than to chan
 When using getvariable, there should either be a default value given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
 
 Bad:
+
 ```js
 _return = obj getvariable "varName";
 if (isnil "_return") then {_return = 0 };
@@ -513,26 +522,28 @@ if (isnil "_return") exitwith {};
 Global variables should not be used to pass along information from one function to another. Use arguments instead.
 
 Bad:
-```sqf
+
+```js
 fnc_example = {
     hint GVAR(myVariable);
 };
+```
 
-----
-
+```js
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 Good:
-```sqf
+
+```js
 fnc_example = {
    params ["_content"];
    hint _content;
 };
+```
 
-----
-
+```js
 ["hello my variable"] call fnc_example;
 ```
 
@@ -716,7 +727,18 @@ ExecVM and spawn are to be avoided wherever possible.
 When checking if an array is empty, you can use both count or isEqualTo.
 
 ### 8.6. For Loops
-`for "_y" from # to # step # do { ... }` should be used instead of: `for [{ ... },{ ... },{ ... }] do { ... };` whenever possible.
+
+```js
+for "_y" from # to # step # do { ... }
+```
+
+should be used instead of
+
+```js
+for [{ ... },{ ... },{ ... }] do { ... };
+```
+
+whenever possible.
 
 ### 8.7. While Loops
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinited while loops are not allowed.
