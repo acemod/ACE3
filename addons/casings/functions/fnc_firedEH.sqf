@@ -14,6 +14,8 @@
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 
+BEGIN_COUNTER(fnc_fireEH);
+
 private _unitPosATL = getposATL _unit;
 
 // Make far away units 10 times less likely to create casings
@@ -29,13 +31,27 @@ private _posATL = _unitPosATL vectorAdd
 _posATL set [2, (_unitPosATL select 2) + 0.01];
 
 [{
+    BEGIN_COUNTER(fnc_fireEH_create);
+
     params ["_casingType", "_posATL"];
-    private _casing = _casingType createVehicleLocal _posATL;
+
+    // Check if we can reuse the existing casing
+    private _casing = GVAR(casings) select GVAR(currentIndex);
+    if (typeOf _casing != _casingType) then {
+        // Delete former casing (nothing happens if it's an objNull)
+        deleteVehicle _casing;
+        // Create a new casing of the correct type
+        // By creating it at [0,0,0] instead of _posATL the time is reduced
+        // from around 1.08 ms to 0.08 ms. This is most likely because the
+        // engine doesn't create the object exactly where it is told to, but
+        // instead looks for a suitable position. Creating at origin prevents
+        // that from happening.
+        _casing = _casingType createVehicleLocal [0,0,0];
+    };
+
     _casing setposATL _posATL;
     _casing setdir (random 360);
 
-    // Delete former casing (nothing happens if it's an objNull)
-    deleteVehicle (GVAR(casings) select GVAR(currentIndex));
     // Store newly created casing
     GVAR(casings) set [GVAR(currentIndex), _casing];
     // Update storage index
@@ -43,4 +59,7 @@ _posATL set [2, (_unitPosATL select 2) + 0.01];
 
     TRACE_3("", _casing, _posATL, GVAR(currentIndex));
 
+    END_COUNTER(fnc_fireEH_create);
 }, [_casingType, _posATL], 0.4] call CBA_fnc_waitAndExecute;
+
+END_COUNTER(fnc_fireEH);
