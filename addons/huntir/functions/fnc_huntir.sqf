@@ -20,15 +20,15 @@ if ((ACE_player call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 };
 
 HUNTIR_BACKGROUND_LAYER_ID cutText ["", "BLACK", 0];
-createDialog "ace_huntir_cam_dialog_off";
+createDialog QGVAR(cam_dialog_off);
 
 [{
     if (!dialog) exitWith {
         HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN", 0];
     };
     closeDialog 0;
-    createDialog "ace_huntir_cam_dialog_inactive";
-    uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18881];
+    createDialog QGVAR(cam_dialog_inactive);
+    uiNameSpace setVariable [QGVAR(monitor), findDisplay 18881];
     [{
         GVAR(startTime) = CBA_missionTime;
         GVAR(done) = false;
@@ -39,7 +39,7 @@ createDialog "ace_huntir_cam_dialog_off";
         GVAR(messageConnecting) = toArray "Connecting.....";
         [{
             //Close monitor if we no longer have item:
-            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
                 closeDialog 0;
             };
 

@@ -37,7 +37,7 @@
  * 8: Spin drift (MOA) <NUMBER>
  *
  * Example:
- * call ace_atragmx_calculate_solution
+ * call ace_atragmx_fnc_calculate_solution
  *
  * Public: No
  */
