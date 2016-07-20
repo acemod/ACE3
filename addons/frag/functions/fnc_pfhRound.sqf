@@ -1,18 +1,6 @@
 #include "script_component.hpp"
-private ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
-_round = _this select 0;
-_lastPos = _this select 1;
-_lastVel = _this select 2;
-_type = _this select 3;
-_firedFrame = _this select 4;
-_doSpall = _this select 6;
-_spallTrack = _this select 7;
-_foundObjectHPIds = _this select 8;
-_skip = _this select 9;
-_explosive = _this select 10;
-_indirectRange = _this select 11;
-_force = _this select 12;
-_fragPower = _this select 13;
+
+params ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 
 if(_round in GVAR(blackList)) exitWith {
     false
@@ -22,6 +10,8 @@ if (!alive _round) exitWith {
     if((diag_frameno - _firedFrame) > 1) then { //skip if deleted within a single frame
         if(_skip == 0) then {
             if((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1} ) then {
+                // shotbullet, shotShell don't seem to explode when touching water, so don't create frags
+                if (((_lastPos select 2) < 0) && {(toLower getText (configFile >> "CfgAmmo" >> _type >> "simulation")) in ["shotbullet", "shotshell"]}) exitWith {};
                 [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent;
             };
         };
