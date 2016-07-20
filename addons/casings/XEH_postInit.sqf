@@ -34,7 +34,7 @@
         if (_simulation in ["shotTimeBomb", "shotPipeBomb", "shotMine", "shotIlluminating", "shotSmoke", "shotRocket", "shotMissile"]) exitWith {
             false
         };
-
+        // Only ammo from hand-held weapons seem to have the cartridge entry
         private _cartridge = getText (_ammoConfig >> "cartridge");
         if (_cartridge == "") exitWith {
             false
@@ -46,7 +46,7 @@
         };
 
         private _casingModel = getText (configFile >> "CfgVehicles" >> cartridge >> "model");
-        if (_casingModel == "\A3\weapons_f\empty") exitWith {
+        if (_casingModel in ["\A3\weapons_f\empty", ""]) exitWith {
             false
         };
 
