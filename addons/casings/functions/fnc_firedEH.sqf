@@ -24,10 +24,12 @@ if ((positionCameraToWorld [0,0,0]) vectorDistance _unitPosATL > 100 && {random 
 private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
 private _casingType = "ACE_casings_" + _cartridge;
 
-private _ejectDir = (_unit weaponDirection currentWeapon _unit) vectorCrossProduct [0, 0, 1];
+private _weapDir = _unit weaponDirection currentWeapon _unit;
+private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
 private _posATL = _unitPosATL vectorAdd
-                  (_ejectDir vectorMultiply 1.2) vectorAdd
-                  [random 1.0, random 1.0, 0];
+                  (_weapDir vectorMultiply (-0.5 + random 1.0 + random 1.0)) vectorAdd
+                  (_ejectDir vectorMultiply (0.2 + random 1.0 + random 1.0));
+
 _posATL set [2, (_unitPosATL select 2) + 0.01];
 
 [{
