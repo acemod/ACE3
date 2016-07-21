@@ -45,11 +45,13 @@ All functions shall be put in their own `.sqf` file.
 Config files shall be split up into different header files, each with the name of the config and be included in the `config.cpp` of the component.
 
 Example:
+
 ```cpp
 #include "ACE_Settings.hpp"
 ```
 
 And in `ACE_Settings.hpp`:
+
 ```cpp
 class ACE_Settings {
     // Content
@@ -124,8 +126,7 @@ These macros are allowed but are not enforced.
 Note that you need the strings in module stringtable.xml in the correct format
 `STR_ACE_<module>_<string>`
 
-Example:
-`STR_Balls_Banana`
+Example: `STR_Balls_Banana`
 
 Script strings (still require `localize` to localize the string):
 
@@ -198,6 +199,7 @@ Braces `{ }` which enclose a code block will have the first bracket placed behin
 - Closing brace in own line, same level of indentation as keyword
 
 **Yes:**
+
 ```cpp
 class Something: Or {
     class Other {
@@ -207,6 +209,7 @@ class Something: Or {
 ```
 
 **No:**
+
 ```cpp
 class Something : Or
 {
@@ -218,6 +221,7 @@ class Something : Or
 ```
 
 **Also no:**
+
 ```cpp
 class Something : Or {
     class Other {
@@ -227,6 +231,7 @@ class Something : Or {
 ```
 
 When using `if`/`else`, it is encouraged to put `else` on the same line as the closing brace to save space:
+
 ```js
 if (alive player) then {
     player setDamage 1;
@@ -236,6 +241,7 @@ if (alive player) then {
 ```
 
 In cases where there are a lot of one-liner classes, it is allowed to use something like this to save space:
+
 ```cpp
 class One {foo = 1;};
 class Two {foo = 2;};
@@ -249,6 +255,7 @@ Putting the opening brace in its own line wastes a lot of space, and keeping the
 Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
 
 Good:
+
 ```js
 call {
     call {
@@ -260,6 +267,7 @@ call {
 ```
 
 Bad:
+
 ```js
 call {
         call {
@@ -287,6 +295,7 @@ All code should be documented by comments that describe what is being done. This
 Comments within the code should be used when they are describing a complex and critical section of code or if the subject code does something a certain way because of a specific reason. Unnecessary comments in the code are not allowed.
 
 Good:
+
 ```js
 // find the object with the most blood loss
 _highestObj = objNull;
@@ -300,24 +309,28 @@ _highestLoss = -1;
 ```
 
 Good:
+
 ```js
 // Check if the unit is an engineer
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
+
 ```js
 // Get the engineer skill and check if it is above 1
 (_obj getvariable [QGVAR(engineerSkill), 0] >= 1);
 ```
 
 Bad:
+
 ```js
 // Get the variable myValue from the object
 _myValue = _obj getvariable [QGVAR(myValue), 0];
 ```
 
 Bad:
+
 ```js
 // Loop through all units to increase the myvalue variable
 {
@@ -327,16 +340,19 @@ Bad:
 
 ### 5.5. Brackets around code
 When making use of brackets `( )`, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
+
 ```js
 if (!(_value)) then { };
 ```
 
 However the following is allowed:
+
 ```js
 _value = (_array select 0) select 1;
 ```
 
 Any conditions in statements should always be wrapped around brackets.
+
 ```js
 if (!_value) then {};
 if (_value) then {};
@@ -374,16 +390,19 @@ Functions and code blocks that specific a return a value must have a meaningful 
 All private variables shall make use of the `private` keyword on initialization. When declaring a private variable before initialization, usage of the private array syntax is allowed. All private variables must be either initialized using the private keyword, or declared using the private array syntax. Exceptions to this rule are variables obtained from an array. Note that this may only be down by making use of the `params` command family, as this ensures the variable is declared as private.
 
 Good:
+
 ```js
 private _myVariable = "hello world";
 ```
 
 Good:
+
 ```js
 _myArray params ["_elementOne", "_elementTwo"];
 ```
 
 Bad:
+
 ```js
 _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
@@ -396,6 +415,7 @@ Any one function shall contain no more than 250 lines of code, excluding the fun
 Declarations should be at the smallest feasible scope.
 
 Good:
+
 ```js
 if (call FUNC(myCondition)) then {
    private _areAllAboveTen = true; // <- smallest feasable scope
@@ -413,6 +433,7 @@ if (call FUNC(myCondition)) then {
 ```
 
 Bad:
+
 ```js
 private _areAllAboveTen = true; // <- this is bad, because it can be initialized in the if statement
 if (call FUNC(myCondition)) then {
@@ -432,6 +453,7 @@ if (call FUNC(myCondition)) then {
 Private variables will not be introduced until they can be initialized with meaningful values.
 
 Good:
+
 ```js
 private _myVariable = 0; // good because the value will be used
 {
@@ -443,6 +465,7 @@ private _myVariable = 0; // good because the value will be used
 ```
 
 Bad:
+
 ```js
 private _myvariable = 0; // Bad because it is initialized with a zero, but this value does not mean anything
 if (_condition) then {
@@ -453,6 +476,7 @@ if (_condition) then {
 ```
 
 Good:
+
 ```js
 private _myvariable = [1, 2] select _condition;
 ```
@@ -467,17 +491,20 @@ The increment expression in a `for` loop will perform no action other than to ch
 When using `getVariable`, there should either be a default value given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
 
 Bad:
+
 ```js
 _return = obj getvariable "varName";
 if (isnil "_return") then {_return = 0 };
 ```
 
 Good:
+
 ```js
 _return = obj getvariable ["varName", 0];
 ```
 
 Good:
+
 ```js
 _return = obj getvariable "varName";
 if (isnil "_return") exitwith {};
@@ -487,23 +514,27 @@ if (isnil "_return") exitwith {};
 Global variables should not be used to pass along information from one function to another. Use arguments instead.
 
 Bad:
+
 ```js
 fnc_example = {
     hint GVAR(myVariable);
 };
 ```
+
 ```js
 GVAR(myVariable) = "hello my variable";
 call fnc_example;
 ```
 
 Good:
+
 ```js
 fnc_example = {
    params ["_content"];
    hint _content;
 };
 ```
+
 ```js
 ["hello my variable"] call fnc_example;
 ```
@@ -628,16 +659,19 @@ Hashes and hashlists are implemented with SQF arrays, and as such they are passe
 When adding new elements to an array, `pushBack` shall be used instead of the binary addition or `set`. When adding multiple elements to an array `append` may be used instead.
 
 Good:
+
 ```js
 _a pushBack _value;
 ```
 
 Also good:
+
 ```js
 _a append [1,2,3];
 ```
 
 Bad:
+
 ```js
 _a set [ count _a, _value];
 _a = a + _[value];
@@ -664,16 +698,20 @@ When checking if an array is empty `isEqualTo` shall be used.
 ```js
 for "_y" from # to # step # do { ... }
 ```
+
 should be used instead of
+
 ```js
 for [{ ... },{ ... },{ ... }] do { ... };
 ```
+
 whenever possible.
 
 ### 8.7. `while` Loops
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinite `while` loops are not allowed.
 
 Good:
+
 ```js
 _original = _obj getvariable [QGVAR(value), 0];
 while {_original < _weaponThreshold} do {
@@ -682,6 +720,7 @@ while {_original < _weaponThreshold} do {
 ```
 
 Bad:
+
 ```js
 while {true} do {
     // anything
