@@ -33,7 +33,7 @@ _For ACE this is done automatically through the usage of the `PREP` macro._
 ### 1.2. Files & Config
 
 #### 1.2.1. SQF files
-Files containing SQF scripts will always have a file name extension of `.sqf`.
+Files containing SQF scripts shall have a file name extension of `.sqf`.
 
 #### 1.2.2. Header files
 All header files shall have the file name extension of `.hpp`.
@@ -61,14 +61,14 @@ class ACE_Settings {
 ### 1.3. Stringtable
 All text that will be displayed to a user shall be defined in a `stingtable.xml` file for multi-language support.
 
-- There will not be any empty stringtable language values.
-- All stringtables will follow the format as specified by [Tabler](https://github.com/bux578/tabler) and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form.
+- There shall be no empty stringtable language values.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler) and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form.
 
 
 ## 2. Macro Usage
 
 ### 2.1. Module/PBO specific Macro Usage
-The family of `GVAR` macro's define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
+The family of `GVAR` macros define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
 | Macros |  Expands to |
 | -------|---------|
@@ -90,7 +90,7 @@ There also exists the `FUNC` family of Macros:
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
 
-The `FUNC` and `EFUNC` macros should NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
+The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
 
@@ -145,7 +145,7 @@ Config Strings (require `$` as first character):
 
 
 ## 3. Functions
-Functions should be created in the `functions\` subdirectory, named `fnc_functionName.sqf` They should then be indexed via the `PREP(functionName)` macro in the `XEH_preInit.sqf` file.
+Functions shall be created in the `functions\` subdirectory, named `fnc_functionName.sqf` They shall then be indexed via the `PREP(functionName)` macro in the `XEH_preInit.sqf` file.
 
 The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
 
@@ -186,8 +186,8 @@ This ensures every function starts of in an uniform way and enforces function do
 All Global Variables are defined in the `XEH_preInit.sqf` file of the component they will be used in with an initial default value.
 
 Exceptions:
-- Dynamically generated global variables
-- Variables that do not origin from he ACE project, such as BI global variables or third party such as CBA
+- Dynamically generated global variables.
+- Variables that do not origin from the ACE3 project, such as BI global variables or third party such as CBA.
 
 
 ## 5. Code Style
@@ -290,9 +290,9 @@ Example:
 ```
 
 ### 5.4. Comments in code
-All code should be documented by comments that describe what is being done. This can be done through the function header and/or inline comments.
+All code shall be documented by comments that describe what is being done. This can be done through the function header and/or inline comments.
 
-Comments within the code should be used when they are describing a complex and critical section of code or if the subject code does something a certain way because of a specific reason. Unnecessary comments in the code are not allowed.
+Comments within the code shall be used when they are describing a complex and critical section of code or if the subject code does something a certain way because of a specific reason. Unnecessary comments in the code are not allowed.
 
 Good:
 
@@ -351,7 +351,7 @@ However the following is allowed:
 _value = (_array select 0) select 1;
 ```
 
-Any conditions in statements should always be wrapped around brackets.
+Any conditions in statements shall always be wrapped around brackets.
 
 ```js
 if (!_value) then {};
@@ -387,7 +387,7 @@ Usage of the CBA Macro `PARAM_x` or `BIS_fnc_param` is deprecated and not allowe
 Functions and code blocks that specific a return a value must have a meaningful return value. If no meaningful return value, the function should return nil.
 
 ### 6.5. Private Variables
-All private variables shall make use of the `private` keyword on initialization. When declaring a private variable before initialization, usage of the private array syntax is allowed. All private variables must be either initialized using the private keyword, or declared using the private array syntax. Exceptions to this rule are variables obtained from an array. Note that this may only be down by making use of the `params` command family, as this ensures the variable is declared as private.
+All private variables shall make use of the `private` keyword on initialization. When declaring a private variable before initialization, usage of the `private ARRAY` syntax is allowed. All private variables must be either initialized using the `private` keyword, or declared using the `private ARRAY` syntax. Exceptions to this rule are variables obtained from an array, which shall be done with usage of the `params` command family, which ensures the variable is declared as private.
 
 Good:
 
@@ -482,13 +482,13 @@ private _myvariable = [1, 2] select _condition;
 ```
 
 ### 6.9. Initialization expression in `for` loops
-The initialization expression in a `for` loop will perform no actions other than to initialize the value of a single `for` loop parameter.
+The initialization expression in a `for` loop shall perform no actions other than to initialize the value of a single `for` loop parameter.
 
 ### 6.10. Increment expression in `for` loops
-The increment expression in a `for` loop will perform no action other than to change a single loop parameter to the next value for the loop.
+The increment expression in a `for` loop shall perform no action other than to change a single loop parameter to the next value for the loop.
 
 ### 6.11. `getVariable`
-When using `getVariable`, there should either be a default value given in the statement or the return value should be checked for correct data type as well as return value. A default value may not be given after a nil check.
+When using `getVariable`, there shall either be a default value given in the statement or the return value shall be checked for correct data type as well as return value. A default value may not be given after a `nil` check.
 
 Bad:
 
@@ -549,21 +549,21 @@ Code that is not used (commented out) shall be deleted.
 There shall be no constant global variables, constants shall be put in a `#define`.
 
 ### 6.16. Logging
-Functions should whenever possible and logical, make use of logging functionality through the logging and debugging macros from CBA and ACE.
+Functions shall whenever possible and logical, make use of logging functionality through the logging and debugging macros from CBA and ACE3.
 
 ### 6.17. Constant Private Variables
-Constant private variables that are used more as once should be put in a `#define`.
+Constant private variables that are used more as once shall be put in a `#define`.
 
 ### 6.18. Code used more than once
-Any piece of code that could/is used more than once, should be put in a function and it's separate `.sqf` file, unless this code is less as 5 lines and used only in a per frame handler.
+Any piece of code that could/is used more than once, shall be put in a function and it's separate `.sqf` file, unless this code is less as 5 lines and used only in a [per-frame handler](#waituntil).
 
 
 ## 7. Design considerations
 
 ### 7.1. Readability vs Performance
-This is a large open source project that will get many different maintainers in it's lifespan. When writing code, keep in mind that other developers also need to be able to understand your code. Balancing readability and performance of code is a non black and white subject. The rule of thumb is:
+This is a large open source project that will get many different maintainers in its lifespan. When writing code, keep in mind that other developers also need to be able to understand your code. Balancing readability and performance of code is a non black and white subject. The rule of thumb is:
 
-- When improving performance of code that sacrifices readability (or visa-versa), first see if the design of the implementation is done in the best possible way.
+- When improving performance of code that sacrifices readability (or visa-versa), first see if the design of the implementation is done in the best way possible.
 - Document that change with the reasoning in the code.
 
 ### 7.2. Scheduled vs Unscheduled
@@ -574,7 +574,7 @@ This also helps avoid various bugs as a result of unguaranteed execution sequenc
 ### 7.3. Event driven
 All ACE3 components shall be implemented in an event driven fashion. This is done to ensure code only runs when it is required and allows for modularity through low coupling components.
 
-Event handlers in ACE3 are implemented through CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
+Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System) and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events) pages.
 
@@ -610,7 +610,7 @@ A description of the above macros is below.
 
 #### 7.4.1. Hashlists
 
-A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate it's usage.
+A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate its usage.
 
 ```js
 _defaultKeys = ["key1", "key2", "key3"];
@@ -699,7 +699,7 @@ When checking if an array is empty `isEqualTo` shall be used.
 for "_y" from # to # step # do { ... }
 ```
 
-should be used instead of
+shall be used instead of
 
 ```js
 for [{ ... },{ ... },{ ... }] do { ... };
