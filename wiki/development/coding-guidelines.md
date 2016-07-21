@@ -62,7 +62,7 @@ class ACE_Settings {
 All text that will be displayed to a user shall be defined in a `stingtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
-- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler) and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html) form.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler){:target="_blank"} and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html){:target="_blank"} form.
 
 
 ## 2. Macro Usage
@@ -106,7 +106,7 @@ These macros will call these functions with the appropriate wrappers and enable 
 
 ### 2.2. General Purpose Macros
 
-[CBA script_macros_common.hpp](https://github.com/CBATeam/CBA_A3/blob/master/addons/main/script_macros_common.hpp)
+[CBA script_macros_common.hpp](https://github.com/CBATeam/CBA_A3/blob/master/addons/main/script_macros_common.hpp){:target="_blank"}
 
 `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the `QUOTE()` macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
 
@@ -367,7 +367,7 @@ Magic numbers are any of the following:
 - Distinctive unique values that are unlikely to be mistaken for other meanings
 - Unique values with unexplained meaning or multiple occurrences which could (preferably) be replaced with named constants
 
-[Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29)
+[Source](http://en.wikipedia.org/wiki/Magic_number_%28programming%29){:target="_blank"}
 
 
 ## 6. Code Standards
@@ -576,7 +576,7 @@ All ACE3 components shall be implemented in an event driven fashion. This is don
 
 Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
-More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System) and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events) pages.
+More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
 
 ### 7.4. Hashes
 
