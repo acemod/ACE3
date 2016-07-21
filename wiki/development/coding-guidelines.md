@@ -70,25 +70,27 @@ All text that will be displayed to a user shall be defined in a `stingtable.xml`
 ### 2.1. Module/PBO specific Macro Usage
 The family of `GVAR` macros define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
-| Macros |  Expands to |
+| Macros | Expands to |
 | -------|---------|
 |`GVAR(face)` | `ace_balls_face` |
 |`QGVAR(face)` | `"ace_balls_face"` |
-|`EGVAR(balls,face)` | `ace_balls_face` |
+|`QQGVAR(face)` | `""ace_balls_face""` used inside `QUOTE` macros where double quotation is required.  |
 |`EGVAR(leg,face)` | `ace_leg_face` |
 |`QEGVAR(leg,face)` | `"ace_leg_face"` |
+|`QQEGVAR(leg,face)` | `""ace_leg_face""` used inside `QUOTE` macros where double quotation is required. |
 
 There also exists the `FUNC` family of Macros:
 
-| Macros  |  Expands to |
+| Macros | Expands to |
 | -------|---------|
 |`FUNC(face)` | `ace_balls_fnc_face` or the call trace wrapper for that function. |
-|`EFUNC(balls,face)` | `ace_balls_fnc_face` or the call trace wrapper for that function. |
-|`EFUNC(leg,face) `| `ace_leg_fnc_face` or the call trace wrapper for that function. |
+|`EFUNC(leg,face)` | `ace_leg_fnc_face` or the call trace wrapper for that function. |
 |`DFUNC(face)` | `ace_balls_fnc_face` and will ALWAYS be the function global variable. |
 |`DEFUNC(leg,face)` | `ace_leg_fnc_face` and will ALWAYS be the function global variable. |
 |`QFUNC(face)` | `"ace_balls_fnc_face"` |
 |`QEFUNC(leg,face)` | `"ace_leg_fnc_face"` |
+|`QQFUNC(face)` | `""ace_balls_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
+|`QQEFUNC(leg,face)` | `""ace_leg_fnc_face""` used inside `QUOTE` macros where double quotation is required.  |
 
 The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the intention is to get the function name or assumed to be the function variable due to call tracing (see below). If you need to 100% always be sure that you are getting the function name or variable use the `DFUNC` or `DEFUNC` macros. For example `QUOTE(FUNC(face)) == "ace_balls_fnc_face"` would be an illegal use of `FUNC` inside `QUOTE`.
 
@@ -97,7 +99,7 @@ Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for i
 #### 2.1.1. `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
-| Macro  | example |
+| Macro  | Example |
 | -------|---------|
 |`CALLSTACK(functionName)` | `[] call CALLSTACK(cba_fnc_someFunction)` |
 |`CALLSTACK_NAMED(function,functionName)` | `[] call CALLSTACK_NAMED(_anonymousFunction,'My anonymous function!')`|
@@ -113,7 +115,7 @@ These macros will call these functions with the appropriate wrappers and enable 
 #### 2.2.1. `setVariable`, `getVariable` family macros
 These macros are allowed but are not enforced.
 
-| Macro  | Expands to |
+| Macro | Expands to |
 | -------|---------|
 |`GETVAR(player,MyVarName,false)` | `player getVariable ["MyVarName", false]` |
 |`GETMVAR(MyVarName,objNull)` | `missionNamespace getVariable ["MyVarName", objNull]` |
@@ -123,25 +125,35 @@ These macros are allowed but are not enforced.
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 
 #### 2.2.2. STRING family macros
-Note that you need the strings in module stringtable.xml in the correct format
+Note that you need the strings in module `stringtable.xml` in the correct format:
 `STR_ACE_<module>_<string>`
 
 Example: `STR_Balls_Banana`
 
 Script strings (still require `localize` to localize the string):
 
-| Macro  |  Expands to |
+| Macro | Expands to |
 | -------|---------|
 |`LSTRING(banana)` | `"STR_ACE_balls_banana"` |
-|`ELSTRING(balls,banana)` | `"STR_ACE_balls_banana"` |
+|`ELSTRING(leg,banana)` | `"STR_ACE_leg_banana"` |
 
 
 Config Strings (require `$` as first character):
 
-| Macro  |  Expands to |
+| Macro | Expands to |
 | -------|---------|
 |`CSTRING(banana)` | `"$STR_ACE_balls_banana"` |
-|`ECSTRING(balls,banana)` | `"$STR_ACE_balls_banana"` |
+|`ECSTRING(leg,banana)` | `"$STR_ACE_leg_banana"` |
+
+### 2.2.3. Path family macros
+The family of path macros define global paths to files for use within a module. Please use these to reference files in the ACE3 project. The macro family expands as follows, for the example of the module 'balls':
+
+| Macro | Expands to |
+| -------|---------|
+|`PATHTOF(data\banana.p3d)` | `\z\ace\addons\balls\data\banana.p3d` |
+|`QPATHTOF(data\banana.p3d)` | `"\z\ace\addons\balls\data\banana.p3d"` |
+|`PATHTOEF(leg,data\banana.p3d)` | `\z\ace\addons\leg\data\banana.p3d` |
+|`QPATHTOEF(leg,data\banana.p3d)` | `"\z\ace\addons\leg\data\banana.p3d"` |
 
 
 ## 3. Functions
