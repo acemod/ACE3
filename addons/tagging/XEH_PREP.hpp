@@ -1,5 +1,7 @@
+PREP(addCustomTag);
+PREP(addTagActions);
 PREP(checkTaggable);
 PREP(createTag);
-PREP(getTexture);
 PREP(tag);
+PREP(tagRandom);
 PREP(tagTestingThread);

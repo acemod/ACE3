@@ -2,36 +2,16 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_Equipment {
-                class ACE_TagBlack {
-                    displayName = CSTRING(TagBlack);
-                    condition = QUOTE(('ACE_SpraypaintBlack' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'black' call FUNC(getTexture))] call FUNC(tag));
-                    showDisabled = 0;
-                    priority = 3;
-                    icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
-                };
-                class ACE_TagRed: ACE_TagBlack {
-                    displayName = CSTRING(TagRed);
-                    condition = QUOTE(('ACE_SpraypaintRed' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'red' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingRed.paa);
-                };
-                class ACE_TagGreen: ACE_TagBlack {
-                    displayName = CSTRING(TagGreen);
-                    condition = QUOTE(('ACE_SpraypaintGreen' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'green' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingGreen.paa);
-                };
-                class ACE_TagBlue: ACE_TagBlack {
-                    displayName = CSTRING(TagBlue);
-                    condition = QUOTE(('ACE_SpraypaintBlue' in items ACE_player) && {[] call FUNC(checkTaggable)});
-                    statement = QUOTE([ARR_2(ACE_player,'blue' call FUNC(getTexture))] call FUNC(tag));
-                    icon = QPATHTOF(UI\icons\iconTaggingBlue.paa);
-                };
+            class ACE_Tags {
+                displayName = CSTRING(Tag);
+                condition = QUOTE(_player call FUNC(checkTaggable));
+                statement = QUOTE(_player call FUNC(tagRandom));
+                icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
+                insertChildren = QUOTE(_player call FUNC(addTagActions));
             };
         };
     };
+
 
     class Item_Base_F;
     class ACE_Item_SpraypaintBlack: Item_Base_F {
