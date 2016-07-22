@@ -51,19 +51,19 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
         if (isEngineOn _sink) exitWith {
-            _nozzle setVariable [QGVAR(lastTickMissionTime), nil, true];
+            _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
         private _fuelInSource = [_source] call FUNC(getFuel);
         if (_fuelInSource == 0) exitWith {
             [LSTRING(Hint_SourceEmpty), 2, _unit] call EFUNC(common,displayTextStructured);
-            _nozzle setVariable [QGVAR(lastTickMissionTime), nil, true];
+            _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
             _nozzle setVariable [QGVAR(isRefueling), false, true];
         };
 
         // Calculate rate using mission time to take time acceleration and pause into account
         private _rateTime = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
-        _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime, true];
+        _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
 
         if !(_fuelInSource == REFUEL_INFINITE_FUEL) then {
             _fuelInSource = _fuelInSource - _rateTime;
@@ -91,7 +91,7 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
     };
 
     if (_finished) exitWith {
-        _nozzle setVariable [QGVAR(lastTickMissionTime), nil, true];
+        _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };
 }, 1, [
