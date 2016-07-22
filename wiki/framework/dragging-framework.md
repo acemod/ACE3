@@ -33,7 +33,7 @@ class CfgVehicles {
     <p>The following functions are NOT public and are likely to change in the future!</p>
 </div>
 
-You will **not** be able to carry / drag objects that are too heavy, the mass is also affected by what is inside the object. To bypass this empty the object and/or use `setMass`.
+You will **not** be able to carry / drag objects that are too heavy, the mass is also affected by what is inside the object. To bypass this empty the object. You can change the weight limits by setting `ACE_maxWeightDrag` (default 800) and `ACE_maxWeightCarry` (default 600).
 
 ### 2.1 Enabling / disabling dragging
 
