@@ -55,9 +55,10 @@ Event Name | Description | Passed Parameter(s) | Locality
 `UnloadCargo` | Unload object from vehicle. | `[_object, _vehicle]` | Local
 `AddCargoByClass` | Adds a cargo item to the vehicle. | `[_itemClass, _vehicle, _amount, _showHint]` | Local
 
-## 2. Scripting
 
-### 2.1 Disabling cargo for a mission object
+## 3. Scripting
+
+### 3.1 Disabling cargo for a mission object
 
 To disable cargo for a mission object use:
 
