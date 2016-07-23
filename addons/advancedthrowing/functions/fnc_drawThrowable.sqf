@@ -65,7 +65,8 @@ if (isNull _activeThrowable) exitWith {
 private _posHeadRel = ACE_player selectionPosition "head";
 
 private _leanCoef = (_posHeadRel select 0) - 0.15; // 0.15 counters the base offset
-if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player}) then {
+// Don't take leaning into account when weapon is lowered due to jiggling when walking side-ways (bandaid)
+if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player} || {weaponLowered ACE_player}) then {
     _leanCoef = 0;
 };
 
