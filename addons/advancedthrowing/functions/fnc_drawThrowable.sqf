@@ -1,5 +1,5 @@
 /*
- * Author: Dslyecxi, Jonpas
+ * Author: Dslyecxi, Jonpas, SilentSpike
  * Handles drawing the currently selected or cooked throwable.
  *
  * Arguments:
@@ -24,14 +24,28 @@ private _throwableMag = _throwable select 0;
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNull];
 
+// Some throwables have different classname for magazine and ammo
+// Primed magazine may be different, read speed before checking primed magazine!
+private _throwSpeed = getNumber (configFile >> "CfgMagazines" >> _throwableMag >> "initSpeed");
+
+// Reduce power of throw over shoulder and to sides
+private _unitDirVisual = getDirVisual ACE_player;
+private _cameraDir = getCameraViewDirection ACE_player;
+_cameraDir = (_cameraDir select 0) atan2 (_cameraDir select 1);
+
+private _phi = abs (_cameraDir - _unitDirVisual) % 360;
+_phi = [_phi, 360 - _phi] select (_phi > 180);
+
+private _power = linearConversion [0, 180, _phi - 30, 1, 0.3, true];
+ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
+
+#ifdef DEBUG_MODE_FULL
+hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3", _phi, _power, _throwSpeed * _power];
+#endif
+
 // Handle cooking last throwable in inventory
 if (_primed) then {
     _throwableMag = typeOf _activeThrowable;
-} else {
-    // Some throwables have different classname for magazine and ammo
-    // Check only CfgMagazines one for correct value only when not primed to assure correct magazine is used
-    _throwSpeed = getNumber (configFile >> "CfgMagazines" >> _throwableMag >> "initSpeed");
-    ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed];
 };
 
 // Inventory check
@@ -77,7 +91,7 @@ private _posFin = AGLToASL (ACE_player modelToWorldVisual _posHeadRel);
 private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
 
 // Orient it nicely, point towards player
-_activeThrowable setDir ((getDirVisual ACE_player) + 90);
+_activeThrowable setDir (_unitDirVisual + 90);
 
 private _pitch = [-30, -90] select (_throwType == "high");
 [_activeThrowable, _pitch, 0] call BIS_fnc_setPitchBank;

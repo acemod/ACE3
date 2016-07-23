@@ -26,10 +26,6 @@ if (isNull _activeThrowable) exitWith {};
 private _attachedTo = attachedTo _activeThrowable;
 if (!isNull _attachedTo) then {
     detach _activeThrowable;
-
-    // Fix throw speed in some cases after detaching
-    private _throwSpeed = getNumber (configFile >> "CfgMagazines" >> typeOf _activeThrowable >> "initSpeed");
-    _unit setVariable [QGVAR(throwSpeed), _throwSpeed];
 };
 
 // Change locality for manipulation (some commands require local object, such as setVelocity)
