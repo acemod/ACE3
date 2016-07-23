@@ -51,4 +51,4 @@ _identifier = [_identifier] call EFUNC(common,stringRemoveWhiteSpace);
 _requiredItem = toLower _requiredItem;
 
 // Add
-[QGVAR(addCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon]] call CBA_fnc_globalEventJIP;
+[QGVAR(applyCustomTag), [_identifier, _displayName, _requiredItem, _textures, _icon]] call CBA_fnc_globalEventJIP;

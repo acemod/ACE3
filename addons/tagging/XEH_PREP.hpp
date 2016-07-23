@@ -1,6 +1,8 @@
 PREP(addCustomTag);
 PREP(addTagActions);
+PREP(applyCustomTag);
 PREP(checkTaggable);
+PREP(compileConfigTags);
 PREP(createTag);
 PREP(tag);
 PREP(tagRandom);
