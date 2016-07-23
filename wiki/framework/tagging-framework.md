@@ -9,7 +9,7 @@ parent: wiki
 
 <div class="panel callout">
     <h5>Note:</h5>
-    <p>This is just a guide to add tags using the framework, this is not a guide to make your own spray objects.</p>
+    <p>This is just a guide to add tags using the framework. This is not a guide to make your own spray objects.</p>
 </div>
 
 ## 1. Config Values
@@ -19,10 +19,10 @@ parent: wiki
 ```cpp
 class ACE_Tags {
     class yourTagClass {
-        displayName = "My Tag";  // Name of your tag as it displays in interaction menu
-        requiredItem = "ACE_SpraypaintBlack";  // Required item to have in inventory to be able to spray your tag (eg. `"ACE_SpraypaintBlack"`, `"ACE_SpraypaintRed"`, `"ACE_SpraypaintGreen"`, `"ACE_SpraypaintBlue"` or any custom item from `CfgWeapons`)
+        displayName = "My Tag";  // Name of your tag being displayed in the interaction menu
+        requiredItem = "ACE_SpraypaintBlack";  // Required item to have in the inventory to be able to spray your tag (eg. `"ACE_SpraypaintBlack"`, `"ACE_SpraypaintRed"`, `"ACE_SpraypaintGreen"`, `"ACE_SpraypaintBlue"` or any custom item from `CfgWeapons`)
         textures[] = {"path\to\texture1.paa", "path\to\texture2.paa"};  // List of texture variations (one is randomly selected when tagging)
-        icon = "path\to\icon.paa";  // Icon as it displays in interaction menu
+        icon = "path\to\icon.paa";  // Icon being displayed in the interaction menu
     };
 };
 ```
@@ -50,7 +50,7 @@ class ACE_Tags {
    | Arguments | Explanation
 ---| --------- | -----------
 0  | `"ace_victoryRed"` | Unique identifier (similar to class name)
-1  | `"Victory Red"` | Display name as it displays in interaction menu
-2  | `"ACE_SpraypaintRed"` | Required item to have in inventory to be able to spray your tag
+1  | `"Victory Red"` | Name of your tag being displayed in the interaction menu
+2  | `"ACE_SpraypaintRed"` | Required item to have in the inventory to be able to spray your tag
 3  | `["tagTexture1.paa", "tagTexture2.paa"]` | List of texture variants (one is randomly selected when tagging)
-4  | `"icon.paa"` | Icon as it displays in interaction menu
+4  | `"icon.paa"` | Icon being displayed in the interaction menu
