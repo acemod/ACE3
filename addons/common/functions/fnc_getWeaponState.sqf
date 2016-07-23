@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: unit <OBJECT>
- * 1: weapon <STRING>
+ * 1: weapon (optional, default: units current weapon) <STRING>
  *
  * Return Value:
  * 0: Attachements <ARRAY>
@@ -16,21 +16,19 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon"];
+params [["_unit", objNull, [objNull]], ["_weapon", nil, [""]]];
+
+if (isNil "_weapon") then {
+    _weapon = currentWeapon _unit;
+};
+
+private _attachments = [_unit weaponAccessories _weapon] param [0, ["","","",""]];
 
 private _muzzles = _weapon call FUNC(getWeaponMuzzles);
 
-private _weaponInfo = [["","","",""], primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find _weapon) max 0);
-
 // get loaded magazines and ammo
-private _magazines = [];
-private _ammo = [];
-
-{
-    _magazines pushBack "";
-    _ammo pushBack 0;
-    false
-} count _muzzles;
+private _magazines = _muzzles apply {""};
+private _ammo = _muzzles apply {0};
 
 {
     if (_x select 2) then {
@@ -44,6 +42,4 @@ private _ammo = [];
     false
 } count magazinesAmmoFull _unit;
 
-_weaponInfo append [_muzzles, _magazines, _ammo]; 
-
-_weaponInfo
+[_attachments, _muzzles, _magazines, _ammo]; 

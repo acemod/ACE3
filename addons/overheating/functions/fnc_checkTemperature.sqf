@@ -3,8 +3,9 @@
  * Make the player check the temperature of his weapon
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Weapon <STRING>
+ * 0: Unit checking <OBJECT>
+ * 1: Unit that has the weapon <OBJECT>
+ * 2: Weapon <STRING>
  *
  * Return Value:
  * None
@@ -16,17 +17,18 @@
  */
 #include "script_component.hpp"
 
-params ["_player", "_weapon"];
-TRACE_2("params",_player,_weapon);
+params ["_assistant", "_gunner", "_weapon"];
+TRACE_3("params",_assistant,_gunner,_weapon);
 
 // Play animation and report temperature
-private _action = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_checkTemperatureAction");
-
-if (_action == "") then {
-    _action = "Gear";
+private _action = "PutDown";
+if (_assistant isEqualTo _gunner) then {
+    _action = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_checkTemperatureAction");
+    if (_action == "") then {
+        _action = "Gear";
+    };
 };
-
-_player playActionNow _action;
+[_assistant, _action] call EFUNC(common,doGesture);
 
 // Waits a sec before displaying the temperature
-[FUNC(displayTemperature), [_player, _weapon], 1.0] call EFUNC(common,waitAndExecute);
+[FUNC(displayTemperature), [_gunner, _weapon], 1.0] call CBA_fnc_waitAndExecute;

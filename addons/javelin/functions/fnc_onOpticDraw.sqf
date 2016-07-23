@@ -11,7 +11,7 @@ private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX",
 private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
 private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
 
-_currentShooter = (vehicle ACE_player);
+_currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
 
 #define __OffsetX ((ctrlPosition __JavelinIGUITargetingLineV) select 0) - 0.5
 #define __OffsetY ((ctrlPosition __JavelinIGUITargetingLineH) select 1) - 0.5
@@ -20,7 +20,7 @@ _currentShooter = (vehicle ACE_player);
 _args = uiNamespace getVariable[QGVAR(arguments), [] ];
 if( (count _args) > 0) then {
     _lastTick = _args select 0;
-    if(ACE_diagTime - _lastTick > 1) then {
+    if(diag_tickTime - _lastTick > 1) then {
         [] call FUNC(onOpticLoad);
     };
 };
@@ -193,12 +193,12 @@ if (isNull _newTarget) then {
         // Lock on after 3 seconds
         if(_currentTarget != _newTarget) then {
             TRACE_1("New Target, reseting locking", _newTarget);
-            _lockTime = ACE_diagTime;
+            _lockTime = diag_tickTime;
             _currentTarget = _newTarget;
 
             playSound "ACE_Javelin_Locking";
         } else {
-            if(ACE_diagTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
+            if(diag_tickTime - _lockTime > __LOCKONTIME + _randomLockInterval) then {
                 TRACE_2("LOCKED!", _currentTarget, _lockTime);
 
                 __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
@@ -240,9 +240,9 @@ if (isNull _newTarget) then {
                 // Allow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
 
-                if(ACE_diagTime > _soundTime) then {
+                if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locked";
-                    _soundTime = ACE_diagTime + 0.25;
+                    _soundTime = diag_tickTime + 0.25;
                 };
             } else {
                 __JavelinIGUITargeting ctrlShow true;
@@ -274,9 +274,9 @@ if (isNull _newTarget) then {
 
                 {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
 
-                if(ACE_diagTime > _soundTime) then {
+                if(diag_tickTime > _soundTime) then {
                     playSound "ACE_Javelin_Locking";
-                    _soundTime = ACE_diagTime + 0.25;
+                    _soundTime = diag_tickTime + 0.25;
                 };
                 // Disallow fire
                 _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
@@ -303,7 +303,7 @@ if (isNull _newTarget) then {
 //TRACE_2("", _newTarget, _currentTarget);
 
 // Save arguments for next run
-_args set[0, ACE_diagTime];
+_args set[0, diag_tickTime];
 _args set[1, _currentTarget];
 _args set[2, _runTime];
 _args set[3, _lockTime];

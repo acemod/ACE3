@@ -5,7 +5,7 @@ class CfgVehicles {
     class ACE_moduleMedicalMenuSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(module_DisplayName);
-        icon = QUOTE(PATHTOEF(medical,UI\Icon_Module_Medical_ca.paa));
+        icon = QPATHTOEF(medical,UI\Icon_Module_Medical_ca.paa);
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
@@ -50,7 +50,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotInside"};
                 condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                 statement = QUOTE([_target] call DFUNC(openMenu));
-                icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
+                icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
             };
         };
 
@@ -63,7 +63,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotInside"};
                     condition = QUOTE([ARR_2(ACE_player,_target)] call FUNC(canOpenMenu));
                     statement = QUOTE([_target] call DFUNC(openMenu));
-                    icon = PATHTOEF(medical,UI\icons\medical_cross.paa);
+                    icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
                 };
             };
         };

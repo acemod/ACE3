@@ -1,4 +1,5 @@
 #define COMPONENT grenades
+#define COMPONENT_BEAUTIFIED Grenades
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

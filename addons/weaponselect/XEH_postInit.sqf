@@ -198,4 +198,4 @@ if (!hasInterface) exitWith {};
 
 
 // Register fire event handler
-["firedPlayer", DFUNC(throwGrenade)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

@@ -5,7 +5,7 @@
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -40,7 +40,7 @@ private _direction = vectorDir _projectile;
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
+["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL

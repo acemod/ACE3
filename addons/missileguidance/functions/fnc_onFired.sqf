@@ -89,7 +89,7 @@ _args = [_this,
                 getNumber ( _config >> "seekerAccuracy" ),
                 getNumber ( _config >> "seekerMaxRange" )
             ],
-            [ ACE_diagTime, [], [] ]
+            [ diag_tickTime, [], [] ]
         ];
 
 // Hand off to the guiding unit. We just use local player so local PFH fires for now

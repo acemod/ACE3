@@ -5,7 +5,7 @@
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>
             <Russian>Индикатор пальца для показывающего</Russian>
-            <French>Afficher un indicateur de pointage pour soi-même</French>
+            <French>Afficher un indicateur de pointage à soi-même</French>
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
             <Portuguese>Mostrar indicador para si mesmo</Portuguese>
@@ -41,7 +41,7 @@
             <English>Color of the pointing indicator circle</English>
             <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
-            <French>Couleur de l'indicateur de pointage</French>
+            <French>Couleur du cercle de l'indicateur de pointage</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
             <Portuguese>Cor do círculo de indicação</Portuguese>
@@ -64,7 +64,7 @@
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
             <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
-            <French>Montre du doigt et affiche un marqueur virtuel de la direction pointée aux uinités proches. Peut être maintenu</French>
+            <French>Montre, et affiche un marqueur virtuel là ou vous regardez aux unités proches. Peut être maintenu.</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
@@ -76,7 +76,7 @@
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
             <German>Zeigen Einstellungen</German>
-            <French>Options "Montrer du doigt"</French>
+            <French>Options de pointage</French>
             <Polish>Ustawienia wskazywania palcem</Polish>
             <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
@@ -88,7 +88,7 @@
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
             <German>Zeigen aktiviert</German>
-            <French>"Montrer du doigt" activé</French>
+            <French>Pointage activé</French>
             <Polish>Aktywuj wskazywanie</Polish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
             <Portuguese>Apontamento ativado</Portuguese>
@@ -100,7 +100,7 @@
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
             <German>Maximale Zeigerreichweite</German>
-            <French>Distance maximale du pointage</French>
+            <French>Distance maximale de pointage</French>
             <Polish>Maks. zasięg wskazywania</Polish>
             <Hungarian>Ujj maximum hatótávja</Hungarian>
             <Portuguese>Distância máxima do apontamento</Portuguese>

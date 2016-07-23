@@ -30,4 +30,4 @@ GVAR(vectorConnected) = false;
 GVAR(noVectorData) = true;
 GVAR(vectorGrid) = "00000000";
 
-["RangerfinderData", FUNC(handleRangeFinderData)] call EFUNC(common,addEventHandler);
+[QEGVAR(vector,rangefinderData), FUNC(handleRangeFinderData)] call CBA_fnc_addEventHandler;

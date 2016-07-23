@@ -5,7 +5,7 @@
  * Arguments:
  * 0: tripod <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

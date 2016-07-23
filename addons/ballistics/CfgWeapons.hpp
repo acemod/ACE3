@@ -1,7 +1,3 @@
-
-class Single;
-class Burst;
-class FullAuto;
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
@@ -90,7 +86,10 @@ class CfgWeapons {
 
     /* MX */
 
-    class arifle_MX_Base_F: Rifle_Base_F {};
+    class arifle_MX_Base_F: Rifle_Base_F {
+        class Single: Mode_SemiAuto {};
+        class FullAuto: Mode_FullAuto {};
+    };
     class arifle_MX_SW_F: arifle_MX_Base_F {
         magazines[] = {
             "100Rnd_65x39_caseless_mag_Tracer",
@@ -285,6 +284,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -305,6 +306,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -320,6 +323,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -335,6 +340,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -356,6 +363,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -371,6 +380,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -386,6 +397,8 @@ class CfgWeapons {
             "30Rnd_556x45_Stanag_Tracer_Red",
             "30Rnd_556x45_Stanag_Tracer_Green",
             "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_green",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",

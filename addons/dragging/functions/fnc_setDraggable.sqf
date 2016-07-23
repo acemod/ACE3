@@ -2,13 +2,13 @@
  * Author: commy2
  * Enable the object to be dragged.
  *
- * Argument:
+ * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable dragging, false to disable <BOOL>
  * 2: Position offset for attachTo command (Array, optinal; default: [0,0,0])
  * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -44,7 +44,9 @@ if (_type in _initializedClasses) exitWith {};
 _initializedClasses pushBack _type;
 GVAR(initializedClasses) = _initializedClasses;
 
-private _dragAction = [QGVAR(drag), localize LSTRING(Drag), "", {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
+private _icon = [QUOTE(PATHTOF(UI\icons\box_drag.paa)), QUOTE(PATHTOF(UI\icons\person_drag.paa))] select (_object isKindOf "Man");
+
+private _dragAction = [QGVAR(drag), localize LSTRING(Drag), _icon, {[_player, _target] call FUNC(startDrag)}, {[_player, _target] call FUNC(canDrag)}] call EFUNC(interact_menu,createAction);
 private _dropAction = [QGVAR(drop), localize LSTRING(Drop), "", {[_player, _target] call FUNC(dropObject)}, {[_player, _target] call FUNC(canDrop)}] call EFUNC(interact_menu,createAction);
 
 [_type, 0, ["ACE_MainActions"], _dragAction] call EFUNC(interact_menu,addActionToClass);

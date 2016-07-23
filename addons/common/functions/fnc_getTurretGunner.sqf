@@ -14,19 +14,4 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-private _turrets = allTurrets [_vehicle, true];
-
-private _turret = [];
-
-{
-    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-
-    _config = [_config, _x] call FUNC(getTurretConfigPath);
-
-    if (getNumber (_config >> "primaryGunner") == 1) exitWith {
-        _turret = _x;
-    };
-    false
-} count _turrets;
-
-_turret
+fullCrew [_vehicle, "gunner", true] apply {_x select 3} param [0, []] // return

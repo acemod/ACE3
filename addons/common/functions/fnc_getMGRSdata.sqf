@@ -4,7 +4,7 @@
  * Also gets longitude, latitude and altitude offset for the map.
  * Writes return values to GVAR(MGRS_data) if run on the current map.
  *
- * Argument:
+ * Arguments:
  * 0: Map name (default: worldName) <STRING>
  *
  * Return Value:
@@ -22,41 +22,14 @@ private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
 private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
-_map = toLower _map;
-if (_map in ["chernarus", "chernarus_summer", "chernarus_winter", "bootcamp_acr", "woodland_acr", "utes"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["altis", "stratis"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["takistan", "zargabad", "mountains_acr"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["shapur_baf", "provingGrounds_pmc"]) then { _lat = 35; _altitude = 100; };
-if (_map in ["fallujah"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["fata"]) then { _lat = 33; _altitude = 1347; };
-if (_map in ["abbottabad"]) then { _lat = 34; _altitude = 1256; };
-if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
-if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
-if (_map in ["bornholm"]) then { _lat = 55; _altitude = 0; };
-if (_map in ["bozcaada", "imrali", "imralispring"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["caribou"]) then { _lat = 68; _altitude = 0; };
-if (_map in ["namalsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["mcn_aliabad"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["clafghan"]) then { _lat = 34; _altitude = 640; };
-if (_map in ["sangin", "hellskitchen"]) then { _lat = 32; _altitude = 0; };
-if (_map in ["sara", "sara_dbe1", "saralite", "intro", "desert_e", "porto"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["reshmaan"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["thirsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["lingor", "lingor3"]) then { _lat = -4; _altitude = 0; };
-if (_map in ["panthera3"]) then { _lat = 46; _altitude = 0; };
-if (_map in ["kunduz"]) then { _lat = 37; _altitude = 0; };
-if (_map in ["angel"]) then { _lat = 38; _altitude = 0; };
-if (_map in ["porquerolles"]) then { _lat = 43; _altitude = 0; };
-if (_map in ["napf"]) then { _lat = 47; _altitude = 0; };
-if (_map in ["mef_alaska"]) then { _lat = 60; _altitude = 5; };
-if (_map in ["australia"]) then { _lat = -25; _altitude = 0; };
-if (_map in ["pja301"]) then { _lat = 42; _altitude = 0; };
-if (_map in ["pja305"]) then { _lat = 0; _altitude = 0; };
-if (_map in ["pja306"]) then { _lat = 35; _altitude = 300; };
-if (_map in ["pja307"]) then { _lat = 17; _altitude = 0; };
-if (_map in ["pja308", "pja310"]) then { _lat = 36; _altitude = 0; };
+private _mapData = _map call FUNC(getMapData);
+if (!(_mapData isEqualTo [])) then {
+    _lat = _mapData select 0;
+    _alt = _mapData select 1;
+};
+TRACE_2("Latitude and Altitude",_lat,_alt);
 
-private _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
+private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;
 private _northing = _UTM select 1;
 //private _zone = _UTM select 2;

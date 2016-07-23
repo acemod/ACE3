@@ -49,6 +49,6 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhe
     if (!isNull _explosive) then {
         _explosive setDamage 1;
     };
-}, [_item select 0], (_item select 1)] call EFUNC(common,waitAndExecute);
+}, [_item select 0], (_item select 1)] call CBA_fnc_waitAndExecute;
 
 _result

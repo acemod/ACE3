@@ -1,6 +1,6 @@
 /*
  * Author: commy2, PabstMirror
- * Handles the "medical_onUnconscious" event
+ * Handles the "ace_unconscious" event
  *
  * Arguments:
  * 0: Unit <OBJECT>

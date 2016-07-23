@@ -41,7 +41,7 @@ _unit removeItem "ACE_Sandbag_empty";
     _sandBag setDir _direction;
 
     GVAR(sandBag) = objNull;
-}, [_unit], 1] call EFUNC(common,waitAndExecute);
+}, [_unit], 1] call CBA_fnc_waitAndExecute;
 
 // remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
@@ -53,6 +53,6 @@ call EFUNC(interaction,hideMouseHint);
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);
 
 // play animation
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _unit setVariable [QGVAR(isDeploying), false, true];

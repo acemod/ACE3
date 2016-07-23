@@ -32,25 +32,25 @@ if (GVAR(useMil)) then {
     _digit1 = floor (_number / 100);
     _digit2 = floor (_number / 10) - _digit1 * 10;
     _digit3 = _number mod 10;
-    _digit4 = QUOTE(PATHTOF(rsc\vector_degree.paa));
+    _digit4 = QPATHTOF(rsc\vector_degree.paa);
 
     if (_isNegative) then {
 
         if (_digit1 == 0) then {
             if (_digit2 == 0) then {
                 _digit1 = "";
-                _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                _digit2 = QPATHTOF(rsc\vector_minus.paa);
+                _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
             } else {
-                _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-                _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
-                _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                _digit1 = QPATHTOF(rsc\vector_minus.paa);
+                _digit2 = format [QPATHTOF(rsc\vector_%1.paa), _digit2];
+                _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
             };
         } else {
-            _digit1 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-            _digit2 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-            _digit3 = QUOTE(PATHTOF(rsc\vector_minus.paa));
-            _digit4 = QUOTE(PATHTOF(rsc\vector_minus.paa));
+            _digit1 = QPATHTOF(rsc\vector_minus.paa);
+            _digit2 = QPATHTOF(rsc\vector_minus.paa);
+            _digit3 = QPATHTOF(rsc\vector_minus.paa);
+            _digit4 = QPATHTOF(rsc\vector_minus.paa);
         };
 
     } else {
@@ -59,16 +59,16 @@ if (GVAR(useMil)) then {
             if (_digit2 == 0) then {
                 _digit1 = "";
                 _digit2 = "";
-                _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
             } else {
                 _digit1 = "";
-                _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
-                _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+                _digit2 = format [QPATHTOF(rsc\vector_%1.paa), _digit2];
+                _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
             };
         } else {
-            _digit1 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit1];
-            _digit2 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit2];
-            _digit3 = format [QUOTE(PATHTOF(rsc\vector_%1.paa)), _digit3];
+            _digit1 = format [QPATHTOF(rsc\vector_%1.paa), _digit1];
+            _digit2 = format [QPATHTOF(rsc\vector_%1.paa), _digit2];
+            _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
         };
 
     };

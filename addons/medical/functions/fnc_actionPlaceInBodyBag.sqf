@@ -22,7 +22,7 @@ TRACE_2("params",_caller,_target);
 
 if (!local _target) exitWith {
     TRACE_1("running where local",local _target);
-    ["actionPlaceInBodyBag", [_target], [_caller, _target]] call EFUNC(common,targetEvent);
+    [QGVAR(actionPlaceInBodyBag), [_caller, _target], [_target]] call CBA_fnc_targetEvent;
     objNull
 };
 
@@ -47,6 +47,6 @@ private _bodyBag = createVehicle ["ACE_bodyBagObject", _position, [], 0, ""];
 _bodyBag setPosASL _position;
 _bodyBag setDir _direction;
 
-["placedInBodyBag", [_target, _bodyBag]] call EFUNC(common,globalEvent); //hide and delete body on server
+["ace_placedInBodyBag", [_target, _bodyBag]] call CBA_fnc_globalEvent; //hide and delete body on server
 
 _bodyBag

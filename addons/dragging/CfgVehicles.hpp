@@ -19,12 +19,6 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    //remove actions from Taru Pods
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {
-        GVAR(canCarry) = 0;
-        GVAR(canDrag) = 0;
-    };
-
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
@@ -53,6 +47,11 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
+    //remove actions from Taru Pods
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
 
     class EAST_Box_Base: ReammoBox_F {
         GVAR(canCarry) = 1;
@@ -68,6 +67,33 @@ class CfgVehicles {
     };*/
     class NATO_Box_Base: ReammoBox_F {
         GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_Syndicate_Ammo_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_IED_Exp_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_Syndicate_Wps_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_Syndicate_WpsLaunch_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+
+    class Box_NATO_Equip_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryDirection) = 270;
+        GVAR(canDrag) = 1;
+    };
+    class Box_NATO_Uniforms_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryDirection) = 270;
         GVAR(canDrag) = 1;
     };
 

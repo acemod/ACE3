@@ -29,4 +29,4 @@ if (isText (_config >> QGVAR(onPrepare))) then {
 
 [{
     _this setVariable [QGVAR(deploymentStage), 2, true];
-}, _vehicle, _waitTime] call EFUNC(common,waitAndExecute);
+}, _vehicle, _waitTime] call CBA_fnc_waitAndExecute;
