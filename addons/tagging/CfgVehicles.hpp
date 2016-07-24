@@ -7,7 +7,7 @@ class CfgVehicles {
         function = QFUNC(moduleInit);
         scope = 2;
         isGlobal = 1;
-        //icon = QPATHTOF(UI\Icon_Module_Tagging_ca.paa);//@todo
+        icon = QPATHTOF(UI\Icon_Module_Tagging_ca.paa);
         class Arguments {
             class quickTag {
                 displayName = CSTRING(QuickTag);
