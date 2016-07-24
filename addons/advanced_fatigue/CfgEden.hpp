@@ -46,7 +46,7 @@ class Cfg3DEN {
                         control = QGVAR(slider);
                         displayName = CSTRING(PerformanceFactor);
                         tooltip = CSTRING(PerformanceFactor_EdenDescription);
-                        expression = QUOTE(_this setVariable [ARR_2(QQGVAR(performanceFactor),_value)]);
+                        expression = QUOTE(_this setVariable [ARR_3(QQGVAR(performanceFactor),_value,true)]);
                         typeName = "NUMBER";
                         condition = "objectControllable";
                         defaultValue = 1;

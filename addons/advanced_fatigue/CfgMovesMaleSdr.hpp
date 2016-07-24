@@ -1,4 +1,5 @@
-class CfgMovesMaleSdr {
+class CfgMovesBasic;
+class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
         // Jog speed adjustment: 12km/h
         class AmovPercMstpSlowWrflDnon;
