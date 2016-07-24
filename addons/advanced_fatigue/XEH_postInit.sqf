@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
-["playerChanged", {
+["ace_playerChanged", {
     params ["_newUnit", "_oldUnit"];
 
     if !(isNull _oldUnit) then {
@@ -14,7 +14,7 @@ if (!hasInterface) exitWith {};
     GVAR(animHandler) = _newUnit addEventHandler ["AnimChanged", {
         GVAR(animDuty) = _this call FUNC(getAnimDuty);
     }];
-}] call ace_common_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;
 
 GVAR(ppeBlackout) = ppEffectCreate ["ColorCorrections", 4220];
 GVAR(ppeBlackout) ppEffectEnable true;
@@ -24,5 +24,7 @@ GVAR(ppeBlackout) ppEffectCommit 0.4;
 
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath) = 0;
+
+GVAR(isSwimming) = false;
 
 [FUNC(pfhMain), 1, []] call CBA_fnc_addPerFrameHandler;
