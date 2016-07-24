@@ -1,11 +1,52 @@
 class CfgVehicles {
+    class ACE_Module;
+    class ACE_ModuleTagging: ACE_Module {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = CSTRING(Tagging);
+        function = QFUNC(moduleInit);
+        scope = 2;
+        isGlobal = 1;
+        //icon = QPATHTOF(UI\Icon_Module_Tagging_ca.paa);//@todo
+        class Arguments {
+            class quickTag {
+                displayName = CSTRING(QuickTag);
+                description = CSTRING(QuickTagDesc);
+                typeName = "NUMBER";
+                class values {
+                    class disabled {
+                        name = ECSTRING(Common,Disabled);
+                        value = 0;
+                    };
+                    class lastUsed {
+                        name = CSTRING(LastUsed);
+                        value = 1;
+                        default = 1;
+                    };
+                    class randomX {
+                        name = CSTRING(RandomX);
+                        value = 2;
+                    };
+                    class random {
+                        name = CSTRING(Random);
+                        value = 3;
+                    };
+                };
+            };
+        };
+        class ModuleDescription {
+            description = CSTRING(ModuleDescription);
+        };
+    };
+
+
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
             class ACE_Tags {
                 displayName = CSTRING(Tag);
                 condition = QUOTE(_player call FUNC(checkTaggable));
-                statement = QUOTE(_player call FUNC(tagRandom));
+                statement = QUOTE(_player call FUNC(quickTag));
                 icon = QPATHTOF(UI\icons\iconTaggingBlack.paa);
                 insertChildren = QUOTE(_player call FUNC(addTagActions));
             };

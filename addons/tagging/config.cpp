@@ -8,16 +8,17 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"BaerMitUmlaut","esteldunedain"};
+        authors[] = {"BaerMitUmlaut", "esteldunedain", "Jonpas"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "ACE_Settings.hpp"
+#include "ACE_Tags.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "ACE_Tags.hpp"
 
 class ACE_newEvents {
     createTag = QGVAR(createTag);

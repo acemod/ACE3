@@ -1,6 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
+        <Key ID="STR_ACE_Tagging_Tagging">
+            <English>Tagging</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_ModuleDesc">
+            <English>Configure how the tagging system will operate by default.</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_QuickTag">
+            <English>Quick Tag</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_QuickTagDesc">
+            <English>Action performed on main tag interaction point.</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_LastUsed">
+            <English>Last Used</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_RandomX">
+            <English>Random X</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Random">
+            <English>Random</English>
+        </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
@@ -12,7 +33,7 @@
             <Portuguese>Marcar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
-            <English>X Black</English>
+            <English>X black</English>
             <German>Schwarz X</German>
             <Spanish>X en negro</Spanish>
             <Polish>X na czarno</Polish>

@@ -27,15 +27,16 @@ private _actions = [];
             _displayName,
             _icon,
             {
-                (_this select 2) params ["_unit", "_textures"];
+                (_this select 2) params ["_unit", "_class", "_textures"];
                 [_unit, selectRandom _textures] call FUNC(tag);
+                _unit setVariable [QGVAR(lastUsedTag), _class];
             },
             {
-                (_this select 2) params ["_unit", "", "_requiredItem"];
+                (_this select 2) params ["_unit", "", "", "_requiredItem"];
                 _requiredItem in ((items _unit) apply {toLower _x})
             },
             {},
-            [_unit, _textures, _requiredItem]
+            [_unit, _class, _textures, _requiredItem]
         ] call EFUNC(interact_menu,createAction),
         [],
         _unit
