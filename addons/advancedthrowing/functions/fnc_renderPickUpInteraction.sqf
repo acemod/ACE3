@@ -32,7 +32,7 @@
                 if (_x in _throwablesHelped) exitWith {};
 
                 TRACE_2("Making PickUp Helper",_x,typeOf _x);
-                private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal (getPosASL _x);
+                private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal [0, 0, 0];
 
                 _pickUpHelper attachTo [_x, [0, 0, 0]];
                 _pickUpHelper setVariable [QGVAR(throwable), _x];
