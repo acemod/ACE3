@@ -1,4 +1,5 @@
 #define COMPONENT advanced_fatigue
+#define COMPONENT_BEAUTIFIED Advanced Fatigue
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
