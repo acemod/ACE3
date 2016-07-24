@@ -16,12 +16,13 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 
-systemChat str _fatigue;
-systemChat str vectorMagnitude velocity _unit;
+#ifdef DEBUG_MODE_FULL
+    systemChat str _fatigue;
+    systemChat str vectorMagnitude velocity _unit;
+#endif
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;

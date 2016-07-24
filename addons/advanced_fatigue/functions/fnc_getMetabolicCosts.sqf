@@ -15,11 +15,10 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 params ["_unit", "_velocity"];
 
-private _gearMass = ((loadAbs _unit) * 0.1 * 1 / 2.2046) * GVAR(loadFactor);
+private _gearMass = ((loadAbs _unit) * 0.1 / 2.2046) * GVAR(loadFactor);
 private _terrainFactor = 1;
 private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
 private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);

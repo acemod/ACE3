@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Advanced Fatigue
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
@@ -17,15 +17,11 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define VO2MAX 55
 #define ANTPERCENT 0.8
-
 #define SIM_BODYMASS 70
 #define JOULES_PER_ML_O2 20.9
-#define VO2MAXPOWER (VO2MAX * SIM_BODYMASS * 0.23 * JOULES_PER_ML_O2 / 60)
 #define VO2MAX_STRENGTH 4.1
-#define PEAKPOWER (VO2MAX_STRENGTH * VO2MAXPOWER)
-#define REE ((0.5617 * SIM_BODYMASS + 42.57) * 0.23)
+#define REE 18.83 //((0.5617 * SIM_BODYMASS + 42.57) * 0.23)
 #define OXYGEN 0.9
 #define WATTSPERATP 7
 
