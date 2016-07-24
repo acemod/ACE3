@@ -18,6 +18,7 @@
 params ["_unit"];
 
 GVAR(enabled) &&
+{_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
 {!(call EFUNC(common,isFeatureCameraActive))} &&
-{[_unit, objNull, ["isNotInside", "isNotSitting", "isNotOnLadder"]] call EFUNC(common,canInteractWith)} &&
+{[_unit, objNull, ["isNotInside", "isNotSitting"/*, "isNotOnLadder"*/]] call EFUNC(common,canInteractWith)} && // Ladder needs positioning fixes on throw
 {_unit call CBA_fnc_canUseWeapon} // Disable in non-FFV seats due to surface detection issues
