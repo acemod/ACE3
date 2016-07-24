@@ -7,11 +7,6 @@
  *
  * Return Value:
  * None
- *
- * Example:
- * [] call ace_advanced_fatigue_fnc_pfhMain
- *
- * Public: No
  */
 
 #include "script_component.hpp"
@@ -20,16 +15,16 @@ if (isNull ACE_player) exitWith {}; // Map intros
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
-if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1}) then {
+if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGround ACE_player || {underwater ACE_player}}) then {
     _currentWork = [ACE_player, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
-private _ae1Reserve   = ACE_player getVariable [QGVAR(ae1Reserve), AE1_MAXRESERVE];
-private _ae2Reserve   = ACE_player getVariable [QGVAR(ae2Reserve), AE2_MAXRESERVE];
-private _anReserve    = ACE_player getVariable [QGVAR(anReserve), AN_MAXRESERVE];
-private _anFatigue    = ACE_player getVariable [QGVAR(anFatigue), 0];
-private _muscleDamage = ACE_player getVariable [QGVAR(muscleDamage), 0];
+private _ae1Reserve      = ACE_player getVariable [QGVAR(ae1Reserve), AE1_MAXRESERVE];
+private _ae2Reserve      = ACE_player getVariable [QGVAR(ae2Reserve), AE2_MAXRESERVE];
+private _anReserve       = ACE_player getVariable [QGVAR(anReserve), AN_MAXRESERVE];
+private _anFatigue       = ACE_player getVariable [QGVAR(anFatigue), 0];
+private _muscleDamage    = ACE_player getVariable [QGVAR(muscleDamage), 0];
 
 private _ae1PathwayPower = ACE_player getVariable [QGVAR(ae1PathwayPower), 0];
 private _ae2PathwayPower = ACE_player getVariable [QGVAR(ae2PathwayPower), 0];
@@ -66,15 +61,16 @@ _anReserve  =  _anReserve -  _anPower / WATTSPERATP;
 _anFatigue  = _anFatigue + _anPower * (0.057 / PEAKPOWER) * 1.1;
 
 // Aerobic ATP reserve recovery
-_ae1Reserve = ((_ae1Reserve + OXYGEN * 6.60 * (_ae1PathwayPower - _ae1Power) / _ae1PathwayPower) min AE1_MAXRESERVE) max 0;
-_ae2Reserve = ((_ae2Reserve + OXYGEN * 5.83 * (_ae2PathwayPower - _ae2Power) / _ae2PathwayPower) min AE2_MAXRESERVE) max 0;
+_ae1Reserve = ((_ae1Reserve + OXYGEN * 6.60 * (_ae1PathwayPower - _ae1Power) / _ae1PathwayPower * GVAR(recoveryFactor)) min AE1_MAXRESERVE) max 0;
+_ae2Reserve = ((_ae2Reserve + OXYGEN * 5.83 * (_ae2PathwayPower - _ae2Power) / _ae2PathwayPower * GVAR(recoveryFactor)) min AE2_MAXRESERVE) max 0;
 // Anaerobic ATP reserver and fatigue recovery
-_anReserve = ((_anReserve + (_ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power) / VO2MAXPOWER * 56.7 * _anFatigue ^ 2) min AN_MAXRESERVE) max 0;
-_anFatigue = ((_anFatigue - (_ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power) * (0.057 / PEAKPOWER) * _anFatigue ^ 2) min 1) max 0;
+_anReserve = ((_anReserve + (_ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power) / VO2MAXPOWER * 56.7 * _anFatigue ^ 2 * GVAR(recoveryFactor)) min AN_MAXRESERVE) max 0;
+_anFatigue = ((_anFatigue - (_ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued - _ae1Power - _ae2Power) * (0.057 / PEAKPOWER) * _anFatigue ^ 2 * GVAR(recoveryFactor)) min 1) max 0;
 
 private _aeReservePercentage = (_ae1Reserve / AE1_MAXRESERVE + _ae2Reserve / AE2_MAXRESERVE) / 2;
 private _anReservePercentage = _anReserve / AN_MAXRESERVE;
-[ACE_player, 1 - (_anReservePercentage min _aeReservePercentage), _anReserve == 0] call FUNC(handleEffects);
+private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
+[ACE_player, _perceivedFatigue, _currentSpeed, _anReserve == 0] call FUNC(handleEffects);
 
 ACE_player setVariable [QGVAR(ae1Reserve), _ae1Reserve];
 ACE_player setVariable [QGVAR(ae2Reserve), _ae2Reserve];

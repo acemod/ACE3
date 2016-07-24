@@ -5,26 +5,27 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Fatigue <NUMBER>
- * 2: Overexhausted <BOOL>
+ * 2: Speed <NUMBER>
+ * 3: Overexhausted <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_player, true] call ace_advanced_fatigue_fnc_handleEffects
+ * [_player, 0.5, 3.3, true] call ace_advanced_fatigue_fnc_handleEffects
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-params ["_unit", "_fatigue", "_overexhausted"];
+params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 
 systemChat str _fatigue;
 systemChat str vectorMagnitude velocity _unit;
 
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
-if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)}) then {
+if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
     switch (true) do {
         case (_fatigue < 0.6): {
             playSound (QGVAR(breathLow) + str(floor random 6));
@@ -55,6 +56,10 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 };
 
 // - Physical effects ---------------------------------------------------------
+if (GVAR(isSwimming)) exitWith {
+    _unit setAnimSpeedCoef (1 - _fatigue / 3);
+};
+
 if (_overexhausted) then {
     _unit forceWalk true;
 } else {
@@ -70,14 +75,15 @@ if (_overexhausted) then {
         };
     };
 };
+
 switch (stance _unit) do {
     case ("CROUCH"): {
-        _unit setCustomAimCoef (1 + _fatigue * _fatigue * 0.1);
+        _unit setCustomAimCoef (1.0 + _fatigue ^ 2 * 0.1);
     };
     case ("PRONE"): {
-        _unit setCustomAimCoef (1 + _fatigue * _fatigue * 2);
+        _unit setCustomAimCoef (1.0 + _fatigue ^ 2 * 2.0);
     };
     default {
-        _unit setCustomAimCoef (1.5 + _fatigue * _fatigue * 3);
+        _unit setCustomAimCoef (1.5 + _fatigue ^ 2 * 3.0);
     };
 };
