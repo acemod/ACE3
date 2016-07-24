@@ -14,7 +14,7 @@
  * Public: no
  */
 
-//This needs to be a script file, so it will be re-compiled each use.
-//Avoid complex preProcessor includes and just call the prepared function.
+// This is called from a CfgCloudlet's beforeDestroyScript config.
+// It will be re-compiled each use, so avoid complex preProcessor includes and just call the prepared function.
  
 _this call ace_explosives_fnc_spawnFlare;
