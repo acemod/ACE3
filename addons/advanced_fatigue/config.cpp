@@ -12,6 +12,7 @@ class CfgPatches {
     };
 };
 
+#include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMovesMaleSdr.hpp"
 #include "CfgSounds.hpp"
