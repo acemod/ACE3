@@ -117,7 +117,10 @@
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
 
-#define ACE_LOGERROR(message) ACE_LOG(COMPONENT,"ERROR",message)
+#define ACE_LOG_FILELINENUMBERS(module,level,message) diag_log text ACE_LOGFORMAT_FILELINENUMBERS(module,level,message)
+#define ACE_LOGFORMAT_FILELINENUMBERS(module,level,message) FORMAT_4(QUOTE([ACE] (module) %1: %2 File: %3 Line: %4),level,message,__FILE__,__LINE__)
+
+#define ACE_LOGERROR(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"ERROR",message)
 #define ACE_LOGERROR_1(message,arg1) ACE_LOGERROR(FORMAT_1(message,arg1))
 #define ACE_LOGERROR_2(message,arg1,arg2) ACE_LOGERROR(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGERROR_3(message,arg1,arg2,arg3) ACE_LOGERROR(FORMAT_3(message,arg1,arg2,arg3))
@@ -127,7 +130,7 @@
 #define ACE_LOGERROR_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGERROR(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGERROR_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGERROR(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT(COMPONENT,"ERROR",message)
+#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"ERROR",message)
 #define ACE_ERRORFORMAT_1(message,arg1) ACE_ERRORFORMAT(FORMAT_1(message,arg1))
 #define ACE_ERRORFORMAT_2(message,arg1,arg2) ACE_ERRORFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_ERRORFORMAT_3(message,arg1,arg2,arg3) ACE_ERRORFORMAT(FORMAT_3(message,arg1,arg2,arg3))
@@ -137,7 +140,7 @@
 #define ACE_ERRORFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_ERRORFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_ERRORFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_ERRORFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_LOGWARNING(message) ACE_LOG(COMPONENT,"WARNING",message)
+#define ACE_LOGWARNING(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"WARNING",message)
 #define ACE_LOGWARNING_1(message,arg1) ACE_LOGWARNING(FORMAT_1(message,arg1))
 #define ACE_LOGWARNING_2(message,arg1,arg2) ACE_LOGWARNING(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGWARNING_3(message,arg1,arg2,arg3) ACE_LOGWARNING(FORMAT_3(message,arg1,arg2,arg3))
@@ -147,7 +150,7 @@
 #define ACE_LOGWARNING_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGWARNING(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGWARNING_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGWARNING(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"WARNING",message)
+#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"WARNING",message)
 #define ACE_WARNINGFORMAT_1(message,arg1) ACE_WARNINGFORMAT(FORMAT_1(message,arg1))
 #define ACE_WARNINGFORMAT_2(message,arg1,arg2) ACE_WARNINGFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_WARNINGFORMAT_3(message,arg1,arg2,arg3) ACE_WARNINGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
@@ -177,7 +180,7 @@
 #define ACE_INFOFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_INFOFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_INFOFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_INFOFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_LOGDEBUG(message) ACE_LOG(COMPONENT,"DEBUG",message)
+#define ACE_LOGDEBUG(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"DEBUG",message)
 #define ACE_LOGDEBUG_1(message,arg1) ACE_LOGDEBUG(FORMAT_1(message,arg1))
 #define ACE_LOGDEBUG_2(message,arg1,arg2) ACE_LOGDEBUG(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGDEBUG_3(message,arg1,arg2,arg3) ACE_LOGDEBUG(FORMAT_3(message,arg1,arg2,arg3))
@@ -187,7 +190,7 @@
 #define ACE_LOGDEBUG_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGDEBUG(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGDEBUG_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGDEBUG(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"DEBUG",message)
+#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"DEBUG",message)
 #define ACE_DEBUGFORMAT_1(message,arg1) ACE_DEBUGFORMAT(FORMAT_1(message,arg1))
 #define ACE_DEBUGFORMAT_2(message,arg1,arg2) ACE_DEBUGFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_DEBUGFORMAT_3(message,arg1,arg2,arg3) ACE_DEBUGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
