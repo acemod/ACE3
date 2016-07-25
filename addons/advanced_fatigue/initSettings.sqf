@@ -1,4 +1,13 @@
 [
+    QGVAR(enabled),
+    "CHECKBOX",
+    [LSTRING(Enabled), LSTRING(Enabled_Description)],
+    "ACE3 Advanced Fatigue",
+    true,
+    true
+] call CBA_Settings_fnc_init;
+
+[
     QGVAR(performanceFactor),
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],

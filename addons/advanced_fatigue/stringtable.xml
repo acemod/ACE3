@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
@@ -36,6 +36,14 @@
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain enhances stamina loss. Higher means higher stamina loss.</English>
             <German>Beeinflusst wie stark Steigungen den Ausdauerverbrauch erhöhen. Ein höherer Wert erhöht den Ausdauerverbrauch.</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
+            <English>Enabled</English>
+            <German>Aktiv</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
+            <English>Enables/disables Advanced Fatigue.</English>
+            <German>Aktiviert/deaktiviert Advanced Fatigue.</German>
         </Key>
     </Package>
 </Project>

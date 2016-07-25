@@ -1,5 +1,5 @@
 #include "script_component.hpp"
-if (!hasInterface) exitWith {};
+if (!hasInterface || {!GVAR(enabled)}) exitWith {};
 
 GVAR(ppeBlackout) = ppEffectCreate ["ColorCorrections", 4220];
 GVAR(ppeBlackout) ppEffectEnable true;
