@@ -22,4 +22,8 @@ GVAR(objects) = [];
 GVAR(objectTypes) = [];
 GVAR(arguments) = [];
 
+GVAR(replacedBisArtyWrapper) = true;
+
+#include "initSettings.sqf"
+
 ADDON = true;

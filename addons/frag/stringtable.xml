@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_ACE_Frag_Module_DisplayName">
-            <English>Fragmentation Simulation</English>
-            <Polish>Symulacja fragmentacji</Polish>
-            <Spanish>Simulación de fragmentación</Spanish>
-            <German>Splittersimulation</German>
-            <Czech>Simulace fragmentů</Czech>
-            <Portuguese>Simulação de fragmentação</Portuguese>
-            <French>Simulation de la fragmentation</French>
-            <Hungarian>Repesz-szimuláció</Hungarian>
-            <Russian>Симуляция осколков</Russian>
-            <Italian>Simulazione Frammentazione</Italian>
+        <Key ID="STR_ACE_Frag_SettingsCategory">
+            <English>ACE Fragmentation Simulation</English>
+            <Polish>ACE Symulacja fragmentacji</Polish>
+            <Spanish>ACE Simulación de fragmentación</Spanish>
+            <German>ACE Splittersimulation</German>
+            <Czech>ACE Simulace fragmentů</Czech>
+            <Portuguese>ACE Simulação de fragmentação</Portuguese>
+            <French>ACE Simulation de la fragmentation</French>
+            <Hungarian>ACE Repesz-szimuláció</Hungarian>
+            <Russian>ACE Симуляция осколков</Russian>
+            <Italian>ACE Simulazione Frammentazione</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>

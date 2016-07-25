@@ -14,6 +14,7 @@ PREP(spallHP);
 PREP(startTracing);
 PREP(stopTracing);
 PREP(trackTrace);
+PREP(toggleSetting);
 
 // New tracking mechanisms
 PREP(masterPFH);
@@ -22,7 +23,6 @@ PREP(addPfhRound);
 PREP(removePfhRound); // THIS SHOULD ABE USED SPARINGLY
 
 // Explosive Reflection
-GVAR(replacedBisArtyWrapper) = true;
 PREP(findReflections);
 PREP(doExplosions);
 PREP(doReflections);
