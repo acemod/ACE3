@@ -62,16 +62,16 @@ if (GVAR(isSwimming)) exitWith {
 };
 
 if (_overexhausted) then {
-    _unit forceWalk true;
+    [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 } else {
     if (isForcedWalk _unit && {_fatigue < 0.7}) then {
-        _unit forceWalk false;
+        [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     } else {
         if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
-            _unit allowSprint false;
+            [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         } else {
             if ((!isSprintAllowed _unit) && {_fatigue < 0.6}) then {
-                _unit allowSprint true;
+                [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             };
         };
     };
