@@ -30,7 +30,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
     } else {
         //Sanity check to make sure we don't enable unconsious AI
         if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {
-            ERROR("Enabling AI for unconsious unit");
+            ACE_LOGERROR("Enabling AI for unconsious unit");
         };
 
         _unit enableAI "MOVE";

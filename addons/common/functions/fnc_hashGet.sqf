@@ -13,6 +13,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(hashGet),"3.8.0","CBA_fnc_hashGet");
+
 params ["_hash", "_key"];
 
 ERRORDATA(2);
