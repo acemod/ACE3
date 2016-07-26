@@ -49,7 +49,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
                 ["_endPosOffset", [0, 0, 0], [[]], 3]
             ];
 
-            private _newNozzle = "ACE_refuel_fuelNozzle" createVehicle position _unit;
+            private _newNozzle = QGVAR(fuelNozzle) createVehicle position _unit;
             _newNozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             _unit setVariable [QGVAR(nozzle), _newNozzle, true];
 

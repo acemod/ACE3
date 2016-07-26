@@ -7,7 +7,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Explosives {
                 displayName = CSTRING(Menu);
-                condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
+                condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(PlantingExplosive),false)]));
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;

@@ -40,7 +40,7 @@
  * 8: Spin drift (MOA) <NUMBER>
  *
  * Example:
- * call ace_rangecard_calculate_range_card_data
+ * call ace_rangecard_fnc_calculateSolution
  *
  * Public: No
  */
