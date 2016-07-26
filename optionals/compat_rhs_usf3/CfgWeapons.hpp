@@ -196,30 +196,54 @@ class CfgWeapons {
         ACE_barrelLength = 124.46;
     };
     // RHS sniper scopes
-    class rhsusf_acc_sniper_base;
-    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+    class ItemCore;
+    class InventoryOpticsItem_Base_F;
+    class rhsusf_acc_sniper_base: ItemCore {
         ACE_ScopeAdjust_Vertical[] = {-4, 30};
         ACE_ScopeAdjust_Horizontal[] = {-6, 6};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class pso1_scope {
+                        discreteDistance[] = {100};
+                        discreteDistanceInitIndex = 0;
+                };
+            };
+        };
     };
+    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {};
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
-        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class pso1_scope {
+                        discreteDistance[] = {100};
+                        discreteDistanceInitIndex = 0;
+                };
+            };
+        };
     };
+    class rhsusf_acc_LEUPOLDMK4_2_d : rhsusf_acc_LEUPOLDMK4_2 {};
     class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2 {
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
-        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class pso1_scope {
+                        discreteDistance[] = {100};
+                        discreteDistanceInitIndex = 0;
+                };
+            };
+        };
     };
+    class rhsusf_acc_premier_low : rhsusf_acc_premier {};
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
-        ACE_ScopeAdjust_Vertical[] = {-4, 30};
-        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
-        ACE_ScopeAdjust_VerticalIncrement = 0.1;
-        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class pso1_nvg {
+                        discreteDistance[] = {100};
+                        discreteDistanceInitIndex = 0;
+                };
+            };
+        };
     };
     // RHS lauchers
     class rhs_weap_fgm148: launch_O_Titan_F {
