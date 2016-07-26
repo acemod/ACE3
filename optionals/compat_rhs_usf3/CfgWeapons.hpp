@@ -206,8 +206,8 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
-                        discreteDistance[] = {100};
-                        discreteDistanceInitIndex = 0;
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -217,8 +217,8 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
-                        discreteDistance[] = {100};
-                        discreteDistanceInitIndex = 0;
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -228,8 +228,8 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
-                        discreteDistance[] = {100};
-                        discreteDistanceInitIndex = 0;
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
                 };
             };
         };
@@ -239,8 +239,8 @@ class CfgWeapons {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_nvg {
-                        discreteDistance[] = {100};
-                        discreteDistanceInitIndex = 0;
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
                 };
             };
         };
