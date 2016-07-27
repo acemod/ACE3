@@ -3,6 +3,14 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+//
+GVAR(ammoFiredEvents_ForPlayer) = call CBA_fnc_createNamespace;
+GVAR(ammoFiredEvents_ForPlayerNonLocal) = call CBA_fnc_createNamespace;
+GVAR(ammoFiredEvents_ForNonPlayer) = call CBA_fnc_createNamespace;
+GVAR(ammoFiredEvents_ForPlayerVehicle) = call CBA_fnc_createNamespace;
+GVAR(ammoFiredEvents_ForPlayerVehicleNonLocal) = call CBA_fnc_createNamespace;
+GVAR(ammoFiredEvents_ForNonPlayerVehicle) = call CBA_fnc_createNamespace;
+
 //////////////////////////////////////////////////
 // Get Map Data
 //////////////////////////////////////////////////

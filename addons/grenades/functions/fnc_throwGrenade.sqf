@@ -35,21 +35,6 @@ if (local _unit) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
         playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
     };
-
-    if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
-        private _fuzeTime = getNumber (_config >> "explosionTime");
-
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
-    };
-};
-
-if (getNumber (_config >> QGVAR(flare)) == 1) then {
-    private _fuzeTime = getNumber (_config >> "explosionTime");
-    private _timeToLive = getNumber (_config >> "timeToLive");
-    private _color = getArray (_config >> QGVAR(color));
-    private _intensity = _color deleteAt 3;
-
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call CBA_fnc_waitAndExecute;
 };
 
 // handle throw modes
