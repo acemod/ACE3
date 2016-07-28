@@ -86,7 +86,6 @@ class ACE_newEvents {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 
-#include "CfgActions.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
 #include "CfgUnitInsignia.hpp"
