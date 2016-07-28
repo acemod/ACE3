@@ -19,7 +19,7 @@ class CfgWeapons {
     class rhs_weap_m24sws : rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
-    }
+    };
     class arifle_MX_Base_F;
     class rhs_weap_m4_Base: arifle_MX_Base_F {
         ACE_barrelTwist = 177.8;
