@@ -51,8 +51,8 @@ When hit, units start to lose blood depending on the severity of their wounds. O
 
 It's pretty straightforward compared to advanced, you only have two types of wounds.
 
-- Yellow: you need one bandage to heal it.
-- Red: you need two bandages to heal it.
+- Yellow: Small - medium sized wound, a single bandage is usually enough.
+- Red: Large wound, 2 or more bandages are usually needed.
 
 ##### 2.1.1.2 Bandages
 
@@ -80,6 +80,7 @@ Autoinjector | Effect
 Morphine | Removes pain
 Epinephrine | Wakes up the patient
 Atropine | Serves no use in basic
+Adenosine | Serves no use in basic
 
 #### 2.1.2 Treating the patient
 
@@ -121,8 +122,8 @@ Atropine | Serves no use in basic
 For the following procedure to work revive need to be enabled.
 
 - A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
-- A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
-- Each successful CPR (full bar) will increase the time the unit can stay in the revive state before dying.
+- A unit in the revive state can't die from any source of damage, only the timer reaching 0 can kill it.
+- Each successful CPR will increase the time the unit can stay in the revive state.
 - To wake up a patient treat all of his wounds, make sure he isn't in pain and then use epinephrine.
 - Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 
@@ -188,12 +189,16 @@ In order to stop the bleeding, all bleeding injuries on every body part requires
 
 ##### 2.2.1.9 Bandages effectiveness
 
-Bandage | Abrasions | Avulsions | Contusions | Crush wounds | Cut wounds | Lacerations | Velocity wounds | Puncture wounds|
----------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ------- |
-Basic (FieldDressing) | highest | low | highest | medium | low | high | low | medium
-Bandage (packing) | highest | highest | highest | medium | lowest | low | highest | low
-Bandage (elastic) | highest | low | highest | highest | highest | highest | medium | highest
-QuikClot | high | lowest | high | high | high | high | high | medium
+(Click the image for a better view)
+
+<ul class="clearing-thumbs small-block-grid-1" data-clearing>
+    <li><a href="{{ site.baseurl }}/img/wiki/feature/medical1.jpg"><img class="th" data-caption="Bandages table" src="{{ site.baseurl }}/img/wiki/feature/medical1.jpg"></a></li>
+
+</ul>
+
+Table legend:
+ - **Efficiency**: Bandage efficiency, _higher is better_.
+ - **Reopening chance**: Reopening chance when advanced wounds are enabled, _lower is better_.
 
 ##### 2.2.1.10 Tourniquet
 
@@ -214,9 +219,12 @@ Use the appropriate amount depending on the situation (heavy loss of blood, bloo
 
 Autoinjector | Effect
 ---------- | ---------- |
-Morphine | lower the blood pressure and heart rate of the patient, also suppress pain
-Epinephrine | raise the heart rate of the patient
-Atropine | lower the heart rate of the patient
+Morphine | Decreases the blood viscosity, suppress pain
+Epinephrine | Raises the heart rate of the patient
+Adenosine | Lowers the heart rate
+Atropine | Lowers the heart rate of the patient
+
+Note: Morphine stays much longer in the system compared to other medications.
 
 ##### 2.2.1.13 Surgical kit
 
@@ -310,17 +318,15 @@ This is a step by step guide, follow the steps from 1 to 6 in order unless state
 #### 2.2.4 Additional informations
 
 - As an infantryman you can use a tourniquet to stop a limb from bleeding, note that this is supposed to be a temporary solution and leaving the tourniquet more than 5 minutes will induce pain.
-- Epinephrine should **NEVER** be used in case of cardiac arrest, it will only make the patient harder to treat afterwards or might outright kill him (remember epinephrine raises the blood pressure, a blood pressure too high is deadly).
 - Pain is only suppressed and not removed by default.
 - You don't have to take epinephrine after you take morphine, just wait until your pulse stabilizes by itself (Provided that you are in a stable condition).
-- Giving too much morphine to a patient (more than one every 10 minutes) will put him in cardiac arrest because of a blood pressure / heart rate too low.
 
 #### 2.2.5 Revive (Advanced Medical)
 For the following procedure to work revive needs to be enabled.
 
 - A unit in the revive state will be unconscious and will stay unconscious until it is either woken up or the revive timer runs out.
-- A unit in the revive state can't die from any source of damage, only the timer ending can kill it.
-- Each successful CPR (full bar) will increase the time the unit can stay in the revive state before dying.
+- A unit in the revive state can't die from any source of damage, only the timer reaching 0 can kill it.
+- Each successful CPR will increase the time the unit can stay in the revive state.
 - To wake up a patient the use of a PAK is required.
 - Each successful revive removes a life from the unit, once the lives run out the next time the unit will take fatal damage it will not enter the revive state and will die.
 - Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
