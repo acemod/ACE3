@@ -40,14 +40,14 @@ if (_reason != "") then {
     _reason = toLower _reason;
     if (_mask isEqualTo []) then {
         TRACE_2("Setting", _reason, _mask);
-        [GVAR(showHudHash), _reason] call FUNC(hashRem);
+        [GVAR(showHudHash), _reason] call CBA_fnc_hashRem;
     } else {
         TRACE_2("Removing", _reason, _mask);
-        [GVAR(showHudHash), _reason, _mask] call FUNC(hashSet);
+        [GVAR(showHudHash), _reason, _mask] call CBA_fnc_hashSet;
     };
 };
 
-GVAR(showHudHash) params ["_reasons", "_masks"];
+GVAR(showHudHash) params ["", "_reasons", "_masks"];
 private _resultMask = [];
 
 for "_index" from 0 to 7 do {

@@ -274,8 +274,8 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "_masks"];
-    if (!(_masks isEqualTo [])) then {
+    GVAR(showHudHash) params ["", "", "_masks"];
+    if !(_masks isEqualTo []) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
