@@ -19,7 +19,7 @@
 
 params ["_name", "_handler", ["_ttl", 0]];
 
-if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+if ([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
     ACE_LOGERROR_1("Duplicate synced event [%1] creation.",_name);
     false
 };
