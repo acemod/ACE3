@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Missile Guidance
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -9,7 +9,7 @@ parent: wiki
 
 ## 1. Overview
 
-Adds the AMG framework, for more information about it refer to the [AMG framework documentation] ({{site.productionUrl}}/wiki/framework/advanced-missile-guidance.html)
+Adds the AMG framework, for more information about it refer to the [AMG framework documentation] ({{site.baseUrl}}/wiki/framework/advanced-missile-guidance.html)
 
 ## 2. Usage
 
@@ -18,12 +18,12 @@ Adds the AMG framework, for more information about it refer to the [AMG framewor
 - `TOP` for top down mode.
 - `DIR` for direct mode.
 
-### 2.2 Locking 
-- Fully zoom in by using <kbd>NUMPAD +</kbd> 
+### 2.2 Locking
+- Fully zoom in by using <kbd>NUMPAD +</kbd>
 - Switch to thermals by pressing <kbd>N</kbd> the `FLTR` LED should light up.
 - Aim at the target and hold <kbd>Tab&nbsp;↹</kbd> a crosshair will appear and the `SEEK` LED will light up.
 - Fire!
 
 ## 3. Dependencies
 
-`ace_laser`
+{% include dependencies_list.md component="missileguidance" %}

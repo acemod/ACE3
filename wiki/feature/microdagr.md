@@ -181,4 +181,4 @@ Note that the results of the measure you took won't change until you do an other
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="microdagr" %}

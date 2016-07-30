@@ -62,4 +62,4 @@ You can reset the fuel truck and its nozzle by calling `ace_refuel_fnc_reset` wi
 
 ## 4. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="refuel" %}

@@ -29,4 +29,4 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 
 ## 3. Dependencies
 
-`ACE_Advanced_Ballistics`
+{% include dependencies_list.md component="rangecard" %}

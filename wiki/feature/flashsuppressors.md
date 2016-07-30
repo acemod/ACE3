@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Flash Suppressors
-description: 
+description:
 group: feature
 category: equipment
 parent: wiki
@@ -15,4 +15,4 @@ Flash suppressors are devices that reduce the muzzle flash while firing by cooli
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="flashsuppressors" %}

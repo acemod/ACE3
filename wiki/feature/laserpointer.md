@@ -21,4 +21,4 @@ ACE3 adds a visible laser attachment for weapons. This feature is compatible wit
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="laserpointer" %}

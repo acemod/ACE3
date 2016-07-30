@@ -20,4 +20,4 @@ Add the ability to reload someone else's launcher.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="reloadlaunchers" %}

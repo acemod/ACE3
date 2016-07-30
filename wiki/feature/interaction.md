@@ -32,15 +32,15 @@ Some of the zeus actions are also available (while in zeus) in the interaction m
  - Open the interaction menu.
  - Select `Groups`.
  - From here you can select the speed / formation / behavior of all the units of the group(s).
- 
+
 - Waypoints
  - Select a waypoint by clicking on it, same as above press and hold <kbd>Ctrl</kbd> to select multiple.
  - Open the interaction menu.
  - Select `Waypoints`.
- - From here you can modify the speed / formation / behavior of the units / groups that are moving to that waypoint. 
- 
+ - From here you can modify the speed / formation / behavior of the units / groups that are moving to that waypoint.
+
 ## 3. Dependencies
 
-`ace_interact_menu`
+{% include dependencies_list.md component="interaction" %}
 
 *Note: The Interaction module is required by most of the other modules. Do NOT remove it!*

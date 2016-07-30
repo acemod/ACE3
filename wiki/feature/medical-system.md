@@ -401,4 +401,5 @@ Paramedic:
  - 2 × Saline IV (500ml)
 
 ## 4. Dependencies
-`ace_interaction`, `ace_modules`, `ace_apl`
+
+{% include dependencies_list.md component="medical" %}

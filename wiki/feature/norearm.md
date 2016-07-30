@@ -13,4 +13,4 @@ Hides the rearm action for players (on cars / boxes / corpses / ground)
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="norearm" %}

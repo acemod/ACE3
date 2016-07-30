@@ -52,4 +52,4 @@ You need the proper mortar magazines in your inventory.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="mk6mortar" %}

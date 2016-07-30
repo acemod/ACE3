@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Sitting
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -19,4 +19,5 @@ Please note that to be able to use this function the sitting module need to be p
 - To stand up press the self interaction key <kbd>⊞&nbsp;Win</kbd> (ACE3 default) and select `Stand Up`.
 
 ## 3. Dependencies
-`ace_interaction`
+
+{% include dependencies_list.md component="sitting" %}

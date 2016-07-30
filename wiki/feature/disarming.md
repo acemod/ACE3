@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Disarming
-description: 
+description:
 group: feature
 category: interaction
 parent: wiki
@@ -21,4 +21,4 @@ You can search the inventory and disarm captured or unconscious units.
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="disarming" %}

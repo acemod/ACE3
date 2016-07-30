@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Scheduler And Our Practices
-description: 
+description: Explanation for certain ACE3 practices and rules regarding scheduled and unscheduled execution in Arma.
 group: development
 parent: wiki
 order: 8
@@ -10,87 +10,102 @@ order: 8
 ## 1. Terminology
 
 ### 1.1 Frame
-A single rendered frame of Arma 3.
+A single rendered frame of Arma 3 or a single simulation frame for dedicated servers and headless clients.
 
-### 1.2 Scheduled Space
+### 1.2 Scheduled Environment
+Functions and scripts run in the scheduled environment when they are executed by one of the following:
 
-This refers to execution would is ruled by the Arma 3 default script scheduling engine. This would include:
+* `spawn`
+* `execVM`
+* `call` from a function running in *scheduled* environment
+* functions (not commands) executed with `remoteExec`
+* scripts called from `addAction`
+* CfgFunctions postInit
 
-* spawn
-* execVM 
+They can be suspended by `waitUntil`, `sleep` or `uiSleep`. To check if a function runs in the scheduled environment you can use `canSuspend`.
 
-### 1.3 Unscheduled Space
-This refers to execution which is linear; what this means is that the code will run to completion prior to executing the current frame. It must complete, but is guaranteed to run within a given frame.
+### 1.3 Unscheduled Environment
+Code running in the unscheduled environment uses linear execution, that means it will always run from start to finish within one frame, without any pauses. The following will always be executed in the unscheduled environment:
 
-* perFrameHandler
-* Extended_EventHandlers
-* addEventHandler
+* Event Handlers
+* CBA Per Frame Handlers (PFHs)
+* CBA Extended Event Handlers (XEHs)
+* functions called with `CBA_fnc_directCall`
+* `call` from a function running in *unscheduled* environment
+* functions and commands executed with `remoteExecCall`
 
 
 ## 2. What is the scheduler and why do I care?
+The Arma 3 script scheduler basically gives a fair-share execution to all running scripts, FSMs, and SQS files running on any given client or server at any given time. See the [Biki article](https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations){:target="_blank"} for a in-depth explanation of this. What this basically means though, is that all scripts get a fair share; this also means scheduled execution is drastically affected by other mods that use scheduled execution. For example, if 2 different spawn's are running in a tight loop of `while {true} do {...};`, they will both get exactly 50% of the scheduling time.
 
-BIKI Article: [https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations](https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations)
+With the way mission makers and mod makers generally use `spawn`/`execVM`, this means you're actually getting drastically less execution time in the scheduled environment than you might think. This leads to visible delay issues all the way up to massive delay on execution. You can easily test and prove this by looping spawns and watching the execution times extend.
 
-The Arma 3 script scheduler basically gives a fair-share execution to all running scripts, FSMs, and SQS files running on any given client or server at any given time. See the BIKI article for a in-depth explanation of this. What this basically means though, is that all scripts get a fair share; this also means scheduled execution is drastically affected by other poorly written mods. For example, if 2 different spawn's are running in a tight loop of `do { foo } while (true);`, they will both get exactly 50% of the scheduling time. 
+### What does this all mean?
+It means we need to live outside of the spawn execution as much as possible. There are 2 places that the majority of our functionality should stem from, which means that as long as we strictly always perform calls between functions, we are executing within the same frame. If our execution is either stemming from the Per Frame Handlers, or any default Extended Event Handlers, than we can guarantee execution within a single frame. *ANY OTHER CIRCUMSTANCE IS NOT GUARANTEED.*
 
-With the way mission makers and mod makers generally use spawn/execVM, this means you're actually getting drastically less execution time in the scheduled environment than you might think. This leads to visible delay issues all the way up to massive delay on execution. You can easily test and prove this by looping spawns and watching the execution times extend. 
+The scheduler will also actually halt your script mid-execution, usually at the end of a given control block, and pause you to yield to other scripts. This can lead to drastically incorrect results when performing calculations and unexpected behaviours. For example, try the following code. Even though it doesn't seem logical, it will show a hint.
 
-What does this all mean? It means we need to live outside of the spawn execution as much as possible. There are 2 places that the majority of our functionality should stem from, which means that as long as we strictly always perform calls between functions, we are executing within the same frame. If our execution is either stemming from the perFrameHandlers, or any default Extended_EventHandlers, than we can guarantee execution within a single frame. *ANY OTHER CIRCUMSTANCE IS NOT GUARANTEED.*
+```cpp
+myVar = true;
+0 spawn {
+    while {true} do {
+        if (myVar) then {
+            if (!myVar) then {
+                hint "hi";
+            };
+        };
+    };
+};
+0 spawn {
+    while {true} do {
+        myVar = !myVar;
+    };
+};
+```
 
-The scheduler will also actually halt your script mid-execution, usually at the end of a given control block, and pause you to yield to other scripts. This can lead to drastically incorrect results when performing calculations. Again, this is the reason we want all our given code to run to completion in a single given frame.
 
 ## 3 Design Patterns
-
-Because we are attempting to always run to completion; execution occurs from 2 places. Either PFH handles or event handlers; in both cases, we wish our code to run to completion. This takes a change in mind set for design to ensure your executing that way. In a nutshell though, this all distills down to the fact that you will always call other chunks of code; nothing will ever be spawned off. The only circumstance this really becomes a problem is for waiting or delay. If designed correctly, though, you can avoid those circumstances. 
-
-Rules of thumb for component design:
-
-* If you need to wait for a value, don't wait, use a CBA event! This means everything should be designed and written with an event-driven model in mind.
-* If you have to wait, use a PFH delay/diag_tickTime check.
+Because we are attempting to always run to completion, execution occurs from 2 places: PFHs and event handlers. In both cases, we wish our code to run to completion. This takes a change in mind set for design to ensure you're executing that way. In a nutshell though, this all distills down to the fact that you will always call other chunks of code; nothing will ever be spawned off. The only circumstance this really becomes a problem is for waiting or delay, however, thanks to some rather new CBA functions we can circumvent this issue.
 
 
-### 3.1 PFH-Design Pattern
-
-Line Notes:
- 
-* PerFrameHandlers should be self-removing. If a PFH is no longer needed, it is responsible for removing itself.
-
+### 3.1 Rules of thumb for unscheduled code design:
+* If you want to run code regularily in a loop, use a PFH. Make sure that PFH gets removed once it's no more needed. Not every PFH needs to run with a delay of 0 (so every frame), but everything that's directly seen by the user (visual feedback etc.) should run instantly.
+* If you want to run code on certain conditions, check if it triggers an event. If it does, make an event handler for it instead of constantly checking that condition.
+* If you run multiple functions on a condition you defined, consider creating a custom CBA event and add those functions as event handlers.
+* If there is no event available, you can use `CBA_fnc_waitUntilAndExecute`, which is the unscheduled equivalent for the `waitUntil` command - it even is "frame perfect" too!
+* If you need to wait a certain time, use `CBA_fnc_waitAndExecute`, which will execute your code unscheduled after a given time.
 
 
 ### 3.2 ACE3 General Rules
+These rules follow from the rules of thumb above:
 
-* Always use call whenever possible. We should be calling functions chains exclusive and not be relying on spawn/execVM ever. Consider spawn/execVM banned without good reason. All code should be a chain of execution which is traceable, and not triggered between seperate threads.
-* waitUntil and sleep are banned. If you need to use them, use scheduled delay execution instead.  **Reasoning: Sleep/waitUntil surrender about 5x the scheduler time than even normal execution does.**
-* If we need a spawn or exec, we should utilize the perFrame scheduler. Spawn/execVM are subject to the Arma 3 scheduler and as such, cannot be relied upon. In order to give our players a consistent gameplay experience, we need to have total control over how and when all of our code runs.
-* PFH should be utilized at all possible times when the player can see the result of whatever the code is. This applies to missile guidance, bullets, wind, optics, interactive UI, HUD's, and rendering. We should only consider scheduled execution if the code is running out of the visual range of the player. 
+* Always use `call` whenever possible. You should be calling functions chains exclusive and not be relying on `spawn`/`execVM` ever. All code should be a chain of execution which is traceable, and not triggered between separate threads.
+* `waitUntil` and `sleep` are banned. If you need to use them, use `CBA_fnc_waitUntilAndExecute` and `CBA_fnc_waitAndExecute` instead.
+* If you need to run code regularily, you should utilize a PFH. `spawn`/`execVM` are subject to the Arma 3 scheduler and as such, cannot be relied upon. In order to give your players a consistent gameplay experience, you need to have total control over how and when all of your code runs.
+* PFHs with a delay of 0 should be utilized at all possible times when the player can see the result of whatever the code is. This applies to missile guidance, bullets, wind, optics, interactive UI, HUDs, rendering and so on. Only if something is not directly visible for the player a larger delay can be used.
 
 
 ### 3.3 Code Examples
 
-#### 3.3.1 Generic PFH functions
-See: [https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html](https://dev.withsix.com/docs/cba/files/common/fnc_addPerFrameHandler-sqf.html) for more details. 
+#### 3.3.1 Per Frame Handler
+See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf) for more details.
 
 ```cpp
-[{ code } , delayTime, [ARGS] ] call CBA_fnc_addPerFrameHandler;
+[{code} , delay, [params]] call CBA_fnc_addPerFrameHandler;
 ```
 
 
-#### 3.3.2 PFH Wait
+#### 3.3.2 WaitAndExecute
+See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf) for more details.
 
 ```cpp
-DFUNC(myDelayedFunction) = {
-    // Our argument array is passed in a PFH as select 0
-    _args = _this select 0;
-    
-    // Print our arguments
-    diag_log text format["I received: %1", (_args select 0)];
-    
-    // Delete this PFH, so it is only executed once
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-};
+[{delayed code}, [params], delay] call CBA_fnc_waitAndExecute;
+```
 
-// This runs the PFH once every 5 seconds, with the variable array ["balls"] being passed in
-// This executes FUNC(myDelayedFunction), that could also be a { code } block.
-// Parameter 2 is the delay (in seconds) for a PFH. This is "execute every N seconds", 0 will be every frame.
-[FUNC(myDelayedFunction), 5, ["balls"] ] call CBA_fnc_addPerFrameHandler;
+
+#### 3.3.3 WaitUntilAndExecute
+See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf) for more details.
+
+```cpp
+[{condition}, {code}, [params]] call CBA_fnc_waitUntilAndExecute;
 ```

@@ -20,4 +20,4 @@ All pistol and sub machine gun magazines now have adjusted capacities to match t
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="smallarms" %}

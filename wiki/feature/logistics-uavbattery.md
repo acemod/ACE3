@@ -21,4 +21,4 @@ Adds an item `ACE_UAVBattery` that allows refuelling / recharging of the "Darter
 
 ## 3. Dependencies
 
-`ace_interaction`
+{% include dependencies_list.md component="logistics_uavbattery" %}

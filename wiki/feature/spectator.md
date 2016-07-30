@@ -429,4 +429,4 @@ The map overlay will show the current position of the free camera and all specta
 
 ## 3. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="spectator" %}

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Hit Reactions
-description: 
+description:
 group: feature
 category: realism
 parent: wiki
@@ -15,4 +15,4 @@ Note that the shot needs to inflict a certain amount of damage to make the unit 
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="hitreactions" %}

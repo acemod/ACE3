@@ -9,39 +9,74 @@ parent: wiki
 
 ## 1. Event Handlers
 
-Event handlers in ACE3 are implemented through our event system. They should be used to trigger or allow triggering of specific functionality. The functions are listed and described below with a brief explanation.
+Event handlers in ACE3 are implemented through CBA's Event System. They should be used to trigger or allow triggering of specific functionality.
 
 
 ## 2. Events List
+ACE3 uses many events internally, this is not a complete list; but it should list most publicly usable events.
 
-**Note:** This list is combined from other framework pages, where events are documented separately for each module. Each event listed here has information about its source or owner, which is a link to its framework page where it is documented in better detail.
+### 2.1 Fired Event Handlers (ace_common)
 
-### 2.1 Listenable
+Different events for what type of unit has fired.
+E.G.: If you only need to do action when player's weapon fires, this will be faster than adding an XEH for everything.
+The vehicle events will also have the following local variables available `_gunner (OBJECT), _turret (ARRAY)`.
 
-Event Name | Source | Passed Parameter(s) | Locality
----------- | ------ | ------------------- | --------
-`GlassesChanged` | [goggles](http://ace3mod.com/wiki/framework/goggles-framework.html) | `[_glassesClass]` | Local
-`GlassesCracked` | [goggles](http://ace3mod.com/wiki/framework/goggles-framework.html) | `[_unit]` | Local
-`ace_missileguidance_handoff` | [missile-guidance](http://ace3mod.com/wiki/framework/missile-guidance-framework.html) | `[_target, _args]` | Global
-`overpressure` | [overpressure](http://ace3mod.com/wiki/framework/overpressure-framework.html) | `[_firer, _position, _direction, _weapon]` | Target
-`reloadLauncher` | [reloadlaunchers](http://ace3mod.com/wiki/framework/reloadlaunchers-framework.html) | `[_unit, _target, _weapon, _magazine]` | Target
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_firedPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player fires
+|`ace_firedPlayerNonLocal` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player fires
+|`ace_firedNonPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI fires
+|`ace_firedPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player turret fires
+|`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires
+|`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires
 
-### 2.2 Callable
+### 2.2 Medical (ace_medical)
 
-Event Name | Owner | Passed Parameter(s) | Locality
----------- | ----- | ------------------- | --------
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed
+|`ace_placedInBodyBag` | [_target, _bodyBag] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted)
+|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className] | Local | Listen | Treatment action is completed (local on the _caller)
 
+### 2.3 Interaction Menu (ace_interact_menu)
+MenuType: 0 = Interaction, 1 = Self Interaction
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
+|`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
+
+### 2.4 Logistics (ace_cargo)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle
+|`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
+|`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
+
+### 2.5 Captives (ace_captives)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered")] | Global | Listen | Unit's captivity state changed
+|`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
+|`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
+
+### 2.6 Settings (ace_common)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready
+|`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed
 
 
 ## 3. Usage
-
+Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System)
 ### 3.1 Adding / Removing Events
 
 #### 3.1.1 Add Event
 
-Adds an event handler with the event name and returns the event handler ID.
-
-`ace_common_fnc_addEventHandler`
+`CBA_fnc_addEventHandler` - Adds an event handler with the event name and returns the event handler ID.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -51,9 +86,7 @@ Adds an event handler with the event name and returns the event handler ID.
 
 #### 3.1.2 Remove Event
 
-Removes a specific event handler of the given event name, using the ID returned from `ace_common_fnc_addEventHandler`.
-
-`ace_common_fnc_removeEventHandler`
+`CBA_fnc_removeEventHandler` - Removes a specific event handler of the given event name, using the ID returned from `CBA_fnc_addEventHandler`.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -61,26 +94,11 @@ Removes a specific event handler of the given event name, using the ID returned 
 1  | Event ID | Number | Required
 **R** | None | None | Return value
 
-
-#### 3.1.3 Remove All Events
-
-Removes all event handlers of the given event name.
-
-`ace_common_fnc_removeAllEventHandlers`
-
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-**R** | None | None | Return value
-
-
 ### 3.2 Calling Events
 
 #### 3.2.1 Local Event
 
-Calls an event only on the local machine, useful for inter-module events.
-
-`ace_common_fnc_localEvent`
+`CBA_fnc_localEvent` - Calls an event only on the local machine, useful for inter-module events.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -90,22 +108,18 @@ Calls an event only on the local machine, useful for inter-module events.
 
 #### 3.2.2 Target Event
 
-Calls an event only on the target machine or list of target machines.
-
-`ace_common_fnc_targetEvent`
+`CBA_fnc_targetEvent` - Calls an event only on the target machine or list of target machines.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
 0  | Event name | String | Required
-1  | Target(s) | Object OR Number OR Array | Required
-2  | Arguments | Any | Required
+1  | Arguments | Any | Required
+2  | Target(s) | Object OR Number OR Array | Required
 **R** | None | None | Return value
 
 #### 3.2.3 Server Event
 
-Calls an event only on the server machine (dedicated or self-hosted).
-
-`ace_common_fnc_serverEvent`
+`CBA_fnc_serverEvent` - Calls an event only on the server machine (dedicated or self-hosted).
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -115,9 +129,7 @@ Calls an event only on the server machine (dedicated or self-hosted).
 
 #### 3.2.4 Global Event
 
-Calls an event on all machines - the local machine, and the server machine.
-
-`ace_common_fnc_globalEvent`
+`CBA_fnc_globalEvent` - Calls an event on all machines - the local machine, and the server machine.
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -170,8 +182,8 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 ```js
 // Event handler added on a target machine
-["tapShoulder", ace_example_onTapShoulder] call ace_common_fnc_addEventHandler;
+["ace_interact_tapShoulder", ace_example_fnc_onTapShoulder] call CBA_fnc_addEventHandler;
 
 // Event called on another machine (tapping above target machine)
-["tapShoulder", [target], [arguments]] call ace_common_fnc_targetEvent;
+["ace_interact_tapShoulder", [arguments], [target]] call CBA_fnc_targetEvent;
 ```

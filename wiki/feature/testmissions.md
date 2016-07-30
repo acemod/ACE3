@@ -13,4 +13,4 @@ Adds an ACE3 Test Missions
 
 ## 2. Dependencies
 
-`ace_common`
+{% include dependencies_list.md component="testmissions" %}

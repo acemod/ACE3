@@ -104,11 +104,11 @@ ACE_launch_NLAW_Used_F | used NLAW | Weapon |
 
 class name | in game name | type   |
 ---------- | --------- | ---------
+ACE_Cellphone | Cellphone |  ACE_ItemCore |
 ACE_Clacker| M57 Firing Device |  ACE_ItemCore |
 ACE_M26_Clacker| M26 Firing Device |  ACE_ItemCore |
 ACE_DefusalKit | Defusal Kit |  ACE_ItemCore |
 ACE_DeadManSwitch | Dead Man's Switch |  ACE_ItemCore |
-ACE_Cellphone | Cellphone |  ACE_ItemCore |
 
 ## Flashlights
 `added in 3.3.0`
@@ -129,6 +129,14 @@ ACE_HandFlare_Red | M127A1 Hand Held Signal (Red | Grenade |
 ACE_HandFlare_Green | M127A1 Hand Held Signal (Green) | Grenade |
 ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
+
+## Grenades
+`added in 3.6.0.0`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_gunbag | Gunbag | Backpack |
+ACE_gunbag_Tan | Gunbag | Backpack |
 
 ## Hearing
 `added in 3.0.0.3`
@@ -184,7 +192,7 @@ ACE_MapTools | Map Tools | ACE_ItemCore |
 
 class name | in game name | type   |
 ---------- | --------- | ---------
-ACE_atropine | Atropin autoinjector | ACE_ItemCore |
+ACE_atropine | Atropin auto injector | ACE_ItemCore |
 ACE_fieldDressing | Bandage (Basic) | ACE_ItemCore |
 ACE_elasticBandage | Bandage (Elastic) | ACE_ItemCore |
 ACE_quikclot | Basic Field Dressing (QuikClot) | ACE_ItemCore |
@@ -193,8 +201,8 @@ ACE_bloodIV_500 | Blood IV (500ml) | ACE_ItemCore |
 ACE_bloodIV_250 | Blood IV (250ml) | ACE_ItemCore |
 ACE_bodyBag | Bodybag | ACE_ItemCore |
 ACE_bodyBagObject | Bodybag (packed) | |
-ACE_epinephrine | Epinephrine autoinjector | ACE_ItemCore |
-ACE_morphine | Morphine autoinjector | ACE_ItemCore |
+ACE_epinephrine | Epinephrine auto injector | ACE_ItemCore |
+ACE_morphine | Morphine auto injector | ACE_ItemCore |
 ACE_packingBandage | Packing Bandage | ACE_ItemCore |
 ACE_personalAidKit | Personal Aid Kit | ACE_ItemCore |
 ACE_plasmaIV | Plasma IV (1000ml) | ACE_ItemCore |
@@ -212,6 +220,14 @@ ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
 class name | in game name | type   |
 ---------- | --------- | ---------
 ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
+
+## Mine Detector
+`added in 3.6.0.0`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_VMH3 | VMH3 | Pistol_Base_F |
+ACE_VMM3 | VMM3 | Pistol_Base_F |
 
 ## MK6 Mortar
 `added in 3.0.0.3`
@@ -238,11 +254,11 @@ ACE_MX2A | MX-2A | Binocular |
 
 class name | in game name | type   |
 ---------- | --------- | ---------
-ACE_NVG_Gen1 | NV Goggles (Gen1) | Nvgs |
-ACE_NVG_Gen2 | NV Goggles (Gen2) | Nvgs |
-ACE_NVG_Gen3 | NV Goggles (Gen3) | Nvgs |
-ACE_NVG_Gen4 | NV Goggles (Gen4) | Nvgs |
-ACE_NVG_Wide | NV Goggles (Wide) | Nvgs |
+ACE_NVG_Gen1 | NV Goggles (Gen1) | NVG |
+ACE_NVG_Gen2 | NV Goggles (Gen2) | NVG |
+ACE_NVG_Gen3 | NV Goggles (Gen3) | NVG |
+ACE_NVG_Gen4 | NV Goggles (Gen4) | NVG |
+ACE_NVG_Wide | NV Goggles (Wide) | NVG |
 
 
 ## Optics
@@ -304,18 +320,6 @@ ACE_Rallypoint_West_Base | Rallypoint West (Base) | FlagCarrier |
 ACE_Rallypoint_East_Base | Rallypoint East (Base) | FlagCarrier |
 ACE_Rallypoint_Independent_Base | Rallypoint Independent (Base) | FlagCarrier |
 
-## Vehicle Lock
-`added in 3.0.0.3`
-
-class name | in game name | type   |
----------- | --------- | ---------
-ACE_key_master | Vehicle Key: Master | ACE_ItemCore |
-ACE_key_lockpick | Lockpick | ACE_ItemCore |
-ACE_key_west | Vehicle Key: West | ACE_ItemCore |
-ACE_key_east | Vehicle Key: East | ACE_ItemCore |
-ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
-ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
-
 ## Sandbag
 `added in 3.1.1`
 
@@ -340,6 +344,23 @@ class name | in game name | type |
 ACE_TacticalLadder_Pack | Telescopic Ladder | Backpack |
 ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
+## Tagging
+`added in 3.5.0`
+
+class name | in game name | type |
+---------- | --------- | ---------
+ACE_SpraypaintBlack | Spraypaint Black | ACE_ItemCore |
+ACE_SpraypaintBlue | Spraypaint Blue | ACE_ItemCore |
+ACE_SpraypaintGreen | Spraypaint Green | ACE_ItemCore |
+ACE_SpraypaintRed | Spraypaint Red | ACE_ItemCore |
+
+## Trenches
+`added in 3.5.0`
+
+class name | in game name | type |
+---------- | --------- | ---------
+ACE_EntrenchingTool | Entrenching Tool | ACE_ItemCore |
+
 ## Tripod
 `added in 3.1.1`
 
@@ -348,6 +369,17 @@ class name | in game name | type |
 ACE_Tripod | SSWT Kit | ACE_ItemCore |
 ACE_TripodObject | SSWT Kit (placed) | ThingX |
 
+## Vehicle Lock
+`added in 3.0.0.3`
+
+class name | in game name | type   |
+---------- | --------- | ---------
+ACE_key_master | Vehicle Key: Master | ACE_ItemCore |
+ACE_key_lockpick | Lockpick | ACE_ItemCore |
+ACE_key_west | Vehicle Key: West | ACE_ItemCore |
+ACE_key_east | Vehicle Key: East | ACE_ItemCore |
+ACE_key_indp | Vehicle Key: Independent | ACE_ItemCore |
+ACE_key_civ | Vehicle Key: Civilian | ACE_ItemCore |
 
 ## Vector
 `added in 3.0.0.3`
@@ -355,6 +387,7 @@ ACE_TripodObject | SSWT Kit (placed) | ThingX |
 class name | in game name | type   |
 --------- | --------- | ---------
 ACE_Vector | Vector 21 | Binoculars |
+ACE_VectorDay | Vector 21 (Day) | Binoculars |
 
 
 ## Yardage 450
