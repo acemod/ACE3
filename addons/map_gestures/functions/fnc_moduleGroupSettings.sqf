@@ -31,15 +31,15 @@ if (!([_color] call FUNC(isValidColorArray))) exitWith {ERROR("color is not a va
 
 // If we already have color configurations from another source, use those, otherwise use default.
 _configurations = if (isNil QGVAR(GroupColorConfigurations)) then { [] } else { +GVAR(GroupColorConfigurations) };
-_configurationGroupMappings = if(isNil QGVAR(GroupColorConfigurationMapping)) then { HASH_CREATE } else { +GVAR(GroupColorConfigurationMapping) };
+_configurationGroupMappings = if(isNil QGVAR(GroupColorConfigurationMapping)) then { [] call CBA_fnc_hashCreate } else { +GVAR(GroupColorConfigurationMapping) };
 
 // Save custom color configuration and keep the index of the entry.
 _configurationIndex = _configurations pushBack [_leadColor, _color];
 
 // Add all synchronized groups and reference custom configuration for them
 {
-    HASH_SET(_configurationGroupMappings,groupID (group _x),_configurationIndex);
-} count _units;
+    [_configurationGroupMappings, groupID group _x, _configurationIndex] call CBA_fnc_hashSet;
+} forEach _units;
 
 [QGVAR(GroupColorConfigurations), _configurations, false, true] call EFUNC(common,setSetting);
 [QGVAR(GroupColorConfigurationMapping), _configurationGroupMappings, false, true] call EFUNC(common,setSetting);
