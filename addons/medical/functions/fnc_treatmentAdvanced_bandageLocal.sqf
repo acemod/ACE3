@@ -57,7 +57,10 @@ private _exit = false;
                 _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
         } else {
-            ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+            //Basic medical bandage just has a base level config (same effectivenes for all wound types)
+            if (_bandage != "Bandage") then {
+                ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+            };
         };
 
         TRACE_2("Wound classes: ", _specificClass, _classID);
