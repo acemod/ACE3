@@ -19,12 +19,22 @@ class asdg_MuzzleSlot_9MM_SMG: asdg_MuzzleSlot { // for 9x19mm universal mount S
         ACE_muzzle_mzls_smg_02 = 1;
     };
 };
+class asdg_MuzzleSlot_9MM: asdg_MuzzleSlot { // for 9x19mm universal mount pistol suppressors
+    class compatibleItems {
+        ACE_muzzle_mzls_smg_02 = 1;
+    };
+};
 class asdg_MuzzleSlot_556: asdg_MuzzleSlot { // for 5.56x45 universal mount suppressors
     class compatibleItems {
         ACE_muzzle_mzls_L = 1;
     };
 };
 class asdg_MuzzleSlot_45ACP_SMG: asdg_MuzzleSlot { // for .45ACP universal mount SMG suppressors
+    class compatibleItems {
+        ACE_muzzle_mzls_smg_01 = 1;
+    };
+};
+class asdg_MuzzleSlot_45ACP: asdg_MuzzleSlot { // for .45ACP universal mount pistol suppressors
     class compatibleItems {
         ACE_muzzle_mzls_smg_01 = 1;
     };
@@ -149,56 +159,6 @@ class CfgWeapons {
             };
         };
     };
-
-    /* Pistols */
-
-    class Pistol;
-    class Pistol_Base_F: Pistol {
-        class WeaponSlotsInfo;
-    };
-
-    class hgun_P07_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-    class hgun_Rook40_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_02"};
-            };
-        };
-    };
-
-    class hgun_ACPC2_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
-    class hgun_Pistol_heavy_01_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };
-
-    /*class hgun_Pistol_heavy_02_F: Pistol_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot {
-                linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
-                compatibleItems[] += {"ACE_muzzle_mzls_smg_01"};
-            };
-        };
-    };*/
 
 
     /* Flashsuppressors */
