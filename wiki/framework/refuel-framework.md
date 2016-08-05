@@ -26,15 +26,15 @@ class CfgVehicles {
 
 ### 1.2. Setting Refuel Station/Vehicle
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>This method is not public API and is likely to change in the future!</p>
-</div>
-
 - Remove `transportFuel` setting from the object (e.g. `transportFuel = 0`)
 - Add cargo fuel capacity: `ace_refuel_fuelCargo = 1000;`
 - Add [XEH support](https://github.com/CBATeam/CBA_A3/wiki/Extended-Event-Handlers-(new)#compatibility-without-dependance) (only necessary for non-vehicle objects)
 - Inherit from another refuel vehicle (preferred) or add interaction menu actions
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Adding interaction menu actions is not public API and is likely to change in the future!</p>
+</div>
 
 Example:
 ```cpp
