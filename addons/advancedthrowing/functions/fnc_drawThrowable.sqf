@@ -65,7 +65,7 @@ if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
     };
-    _activeThrowable = _throwableType createVehicleLocal (getPosWorld ACE_player);
+    _activeThrowable = _throwableType createVehicleLocal [0, 0, 0];
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
 };
