@@ -696,16 +696,33 @@ When adding multiple elements to an array, the binary addition may be used for t
 ### 8.2. `createVehicle`
 `createVehicle` array shall be used.
 
-### 8.3. Unscheduled vs Scheduled
+### 8.3. `createVehicle(Local)` position
+`createVehicle(Local)` shall be used with `[0, 0, 0]` where possible due to performance (using any other position performs search for empty space to prevent collisions).
+
+This code requires ~1.00ms:
+
+```js
+_vehicle = _type createVehicleLocal _posATL;
+_vehicle setposATL _posATL;
+```
+
+While this one requires ~0.08ms:
+
+```js
+_vehicle = _type createVehicleLocal [0, 0, 0];
+_vehicle setposATL _posATL;
+```
+
+### 8.4. Unscheduled vs Scheduled
 All code that has a visible effect for the user or requires time specific guaranteed execution shall be written in unscheduled space.
 
-### 8.4. Avoid `spawn` & `execVM`
+### 8.5. Avoid `spawn` & `execVM`
 `execVM` and `spawn` are to be avoided wherever possible.
 
-### 8.5. Empty Arrays
+### 8.6. Empty Arrays
 When checking if an array is empty `isEqualTo` shall be used.
 
-### 8.6. `for` Loops
+### 8.7. `for` Loops
 
 ```js
 for "_y" from # to # step # do { ... }
@@ -719,7 +736,7 @@ for [{ ... },{ ... },{ ... }] do { ... };
 
 whenever possible.
 
-### 8.7. `while` Loops
+### 8.8. `while` Loops
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinite `while` loops are not allowed.
 
 Good:
@@ -739,7 +756,7 @@ while {true} do {
 };
 ```
 
-### 8.8. `waitUntil`
+### 8.9. `waitUntil`
 The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
 
 ```js
