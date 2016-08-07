@@ -697,16 +697,17 @@ When adding multiple elements to an array, the binary addition may be used for t
 `createVehicle` array shall be used.
 
 ### 8.3. `createVehicle(Local)` position
-`createVehicle(Local)` shall be used with `[0, 0, 0]` where possible due to performance (using any other position performs search for empty space to prevent collisions).
+`createVehicle(Local)` used with a non-`[0, 0, 0]` position performs search for empty space to prevent collisions on spawn.
+Where possible `[0, 0, 0]` position shall be used, except on `#` objects (e.g. `#lightsource`, `#soundsource`) where empty position search is not performed.
 
-This code requires ~1.00ms:
+This code requires ~1.00ms and will be higher with more objects near wanted position:
 
 ```js
 _vehicle = _type createVehicleLocal _posATL;
 _vehicle setposATL _posATL;
 ```
 
-While this one requires ~0.08ms:
+While this one requires ~0.04ms:
 
 ```js
 _vehicle = _type createVehicleLocal [0, 0, 0];
