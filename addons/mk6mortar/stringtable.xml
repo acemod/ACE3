@@ -152,6 +152,7 @@
             <French>Utiliser la gestion des munitions</French>
             <Italian>Utilizza la gestione delle munizioni</Italian>
             <Portuguese>Usar manejo de munição</Portuguese>
+            <Russian>Использовать манипуляции с боеприпасами</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -161,6 +162,7 @@
             <French>Enlever les chargeurs de mortier, requiert des obus individuels qui doivent être chargés par le tireur ou le servant. N'affect pas les mortiers IA.</French>
             <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
+            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -171,6 +173,7 @@
             <Italian>Togli proiettile</Italian>
             <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
+            <Russian>Извлечь снаряд</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -181,6 +184,7 @@
             <Italian>Carica mortaio</Italian>
             <Czech>Nabít minomet</Czech>
             <Portuguese>Carregar morteiro</Portuguese>
+            <Russian>Зарядить миномет</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -190,6 +194,7 @@
             <French>Déchargement de l'obus</French>
             <Italian>Scarica proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
+            <Russian>Извлечение снаряда</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -200,6 +205,7 @@
             <Italian>Prepara il proiettile</Italian>
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
+            <Russian>Подготовка снаряда</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -210,6 +216,7 @@
             <Italian>Carica proiettile esplosivo ad alto potenziale (HE)</Italian>
             <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
+            <Russian>Зарядить фугасный</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -220,6 +227,7 @@
             <Italian>Carica fumogeno</Italian>
             <Czech>Nabít Dýmovnici</Czech>
             <Portuguese>Carregar Fumaça</Portuguese>
+            <Russian>Зарядить дымовой</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -230,6 +238,7 @@
             <Italian>Carica illuminante</Italian>
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
+            <Russian>Зарядить осветительный</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -240,6 +249,7 @@
             <Italian>Carica HE guidata</Italian>
             <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
+            <Russian>Зарядить фугасный управляемый</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -250,6 +260,7 @@
             <Italian>Carica HE a guida laser</Italian>
             <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
+            <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -260,6 +271,7 @@
             <Italian>Proiettile da 82mm HE</Italian>
             <Czech>82mm HE náboj</Czech>
             <Portuguese>Munição 82mm HE</Portuguese>
+            <Russian>Фугасный снаряд 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -270,6 +282,7 @@
             <Italian>Proiettile Fumogeno da 82mm</Italian>
             <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
+            <Russian>Дымовой снаряд 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -280,6 +293,7 @@
             <Italian>Proiettile illuminante da 82mm</Italian>
             <Czech>82mm Osvětlovací náboj</Czech>
             <Portuguese>Munição 82mm Iluminação</Portuguese>
+            <Russian>Осветительный снаряд 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -290,6 +304,7 @@
             <Italian>Proiettile HE guidato</Italian>
             <Czech>82mm HE náboj (naváděný)</Czech>
             <Portuguese>Munição 82mm HE Guiada</Portuguese>
+            <Russian>Фугасный снаряд управляемый 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -300,6 +315,7 @@
             <Italian>Proiettile HE a guida laser</Italian>
             <Czech>82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
+            <Russian>Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -310,6 +326,7 @@
             <Italian>Usato nel mortaio Mk6</Italian>
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
+            <Russian>Использовался в миномете Mk6</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -320,6 +337,7 @@
             <Italian>[ACE] Scatola proiettili espolisvi ad alto potenziale (HE) da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
+            <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -330,6 +348,7 @@
             <Italian>[ACE] Scatola fumogeni da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
+            <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -340,6 +359,7 @@
             <Italian>[ACE] Scatola illuminanti da 82mm</Italian>
             <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
+            <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -350,6 +370,7 @@
             <Italian>[ACE] Scatola proiettili 82mm standard</Italian>
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
+            <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
         </Key>
     </Package>
 </Project>
