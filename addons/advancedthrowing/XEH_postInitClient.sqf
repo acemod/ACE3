@@ -49,9 +49,9 @@ if (!hasInterface) exitWith {};
 
 
 // Event handlers
-["ace_playerChanged", {
+["unit", {
     [_this select 1, "Player changed"] call FUNC(exitThrowMode);
-}] call CBA_fnc_addEventhandler;
+}] call CBA_fnc_addPlayerEventhandler;
 
 ["ace_interactMenuOpened", {
     // Exit if advanced throwing is disabled (pick up only supports advanced throwing)
