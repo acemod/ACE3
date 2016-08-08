@@ -18,20 +18,15 @@
 
 params ["_msg", ["_level", 2, [0]]];
 
-private ["_defaultLoglevel", "_defaultLogDisplayLevel"];
-
-_defaultLoglevel = [GVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL] select isNil QGVAR(LOGLEVEL);
+private _defaultLoglevel = missionNamespace getVariable [QGVAR(LOGLEVEL), DEFAULT_LOGGING_LEVEL];
 
 if (_defaultLoglevel < 0) exitWith {false};
 
-_defaultLogDisplayLevel = [GVAR(LOGDISPLAY_LEVEL), DEFAULT_TEXT_DISPLAY] select isNil QGVAR(LOGDISPLAY_LEVEL);
+private _defaultLogDisplayLevel = [GVAR(LOGDISPLAY_LEVEL), DEFAULT_TEXT_DISPLAY] select isNil QGVAR(LOGDISPLAY_LEVEL);
 
 if (_level <= _defaultLoglevel) then {
-    private ["_prefix", "_message"];
-
-    _prefix = ["Unknown", "Error", "Warn", "Debug", "Info"] select ([0, 1, 2, 3] find _level + 1);
-
-    _message = format ["[ACE %1] %2", _prefix, _msg];
+    private _prefix = ["Unknown", "Error", "Warn", "Debug", "Info"] select ([0, 1, 2, 3] find _level + 1);
+    private _message = format ["[ACE %1] %2", _prefix, _msg];
 
     if (_level <= _defaultLogDisplayLevel) then {
         systemChat _message;

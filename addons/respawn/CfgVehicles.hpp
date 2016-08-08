@@ -1,4 +1,6 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class ACE_Module;
     class ACE_ModuleRespawn: ACE_Module {
@@ -8,7 +10,7 @@ class CfgVehicles {
         function = QFUNC(module);
         scope = 2;
         isGlobal = 0;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Respawn_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {
             class SavePreDeathGear {
@@ -38,7 +40,7 @@ class CfgVehicles {
         function = QFUNC(moduleFriendlyFire);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_FriendlyFire_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_FriendlyFire_ca.paa);
 
         class Arguments {};
         class ModuleDescription {
@@ -53,7 +55,7 @@ class CfgVehicles {
         function = QFUNC(moduleRallypoint);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Rallypoint_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Rallypoint_ca.paa);
 
         class Arguments {};
         class ModuleDescription {
@@ -78,20 +80,25 @@ class CfgVehicles {
     // rallypoints
     class FlagCarrier;
     class Flag_NATO_F: FlagCarrier {
+        class EventHandlers;
         class ACE_Actions;
     };
 
     class Flag_CSAT_F: FlagCarrier {
+        class EventHandlers;
         class ACE_Actions;
     };
 
     class Flag_AAF_F: FlagCarrier {
+        class EventHandlers;
         class ACE_Actions;
     };
 
     // static
     class ACE_Rallypoint_West_Base: Flag_NATO_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointWestBase);
@@ -111,7 +118,9 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_East_Base: Flag_CSAT_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointEastBase);
@@ -131,7 +140,9 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_Independent_Base: Flag_AAF_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointIndependentBase);
@@ -152,7 +163,9 @@ class CfgVehicles {
 
     // moveable
     class ACE_Rallypoint_West: Flag_NATO_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointWest);
@@ -172,7 +185,9 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_East: Flag_CSAT_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointEast);
@@ -192,7 +207,9 @@ class CfgVehicles {
     };
 
     class ACE_Rallypoint_Independent: Flag_AAF_F {
-        XEH_ENABLED;
+        class EventHandlers: EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
 
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(RallypointIndependent);

@@ -1,7 +1,11 @@
 #define COMPONENT interact_menu
+#define COMPONENT_BEAUTIFIED Interact Menu
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define CBA_DEBUG_SYNCHRONOUS
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_INTERACT_MENU
     #define DEBUG_MODE_FULL
@@ -12,5 +16,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define ENABLE_PERFORMANCE_COUNTERS

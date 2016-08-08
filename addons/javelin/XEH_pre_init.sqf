@@ -1,15 +1,10 @@
 #include "script_component.hpp"
 
-PREP(lockKeyDown);
-PREP(lockKeyUp);
+ADDON = false;
 
-PREP(cycleFireMode);
-PREP(showFireMode);
-
-PREP(onFired);
-PREP(onOpticLoad);
-PREP(onOpticDraw);
-PREP(onOpticUnload);
+#include "XEH_PREP.hpp"
 
 GVAR(isLockKeyDown) = false;
 GVAR(pfehID) = -1;
+
+ADDON = true;

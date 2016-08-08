@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        name = COMPONENT_NAME;
+        units[] = {"ACE_ModuleMine_SLAMBottomMine", "ACE_ModuleExplosive_IEDUrbanBig_Range", "ACE_ModuleExplosive_IEDLandBig_Range", "ACE_ModuleExplosive_IEDUrbanSmall_Range", "ACE_ModuleExplosive_IEDLandSmall_Range"};
         weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"Garth 'L-H' de Wet"};
-        authorUrl = "http://garth.snakebiteink.co.za/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Garth 'L-H' de Wet"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -37,8 +39,13 @@ class CfgActions {
 
 class CfgMineTriggers {
     class RangeTrigger;
-    class MagneticTrigger: RangeTrigger {
+    class ACE_MagneticTrigger: RangeTrigger {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
+};
+
+class ACE_newEvents {
+    clientRequestsOrientations = QGVAR(sendOrientations);
+    serverSendsOrientations = QGVAR(orientationsSent);
 };

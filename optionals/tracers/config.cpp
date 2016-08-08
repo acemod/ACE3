@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_ballistics"};
-        author[] = {"ACE2 Team"};
-        authorUrl = "https://www.ace3mod.com";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"ACE2 Team"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

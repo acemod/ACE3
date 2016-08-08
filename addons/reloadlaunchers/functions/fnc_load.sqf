@@ -1,28 +1,28 @@
 /*
  * Author: commy2
- *
  * Reload a launcher
  *
- * Argument:
+ * Arguments:
  * 0: Unit with magazine (Object)
  * 1: Unit with launcher (Object)
  * 2: weapon name (String)
  * 3: missile name (String)
  *
- * Return value:
+ * Return Value:
  * NONE
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_weapon", "_magazine"];
+params ["_unit", "_target", "_weapon", "_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
-_unit = _this select 0;
-_target = _this select 1;
-_weapon = _this select 2;
-_magazine = _this select 3;
-
-private "_reloadTime";
-_reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime");
+private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))) then {
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))
+} else {
+    2.5
+};
 
 // do animation
 [_unit] call EFUNC(common,goKneeling);
@@ -32,7 +32,7 @@ private ["_onSuccess", "_onFailure", "_condition"];
 
 _onSuccess =  {
     (_this select 0 select 0) removeMagazine (_this select 0 select 3);
-    ["reloadLauncher", _this select 0 select 1, _this select 0] call DEFUNC(common,targetEvent);
+    [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
 
     [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
 };

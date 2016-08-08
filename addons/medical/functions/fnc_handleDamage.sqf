@@ -26,8 +26,6 @@ if !(local _unit) exitWith {
     nil
 };
 
-private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
-
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
 if (_projectile isEqualType objNull) then {
     _projectile = typeOf _projectile;
@@ -62,28 +60,34 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
 };
 
 // Get return damage
-_damageReturn = _damage;
+private _damageReturn = _damage;
 
-_newDamage = _this call FUNC(handleDamage_caching);
+private _newDamage = _this call FUNC(handleDamage_caching);
 // handleDamage_caching may have modified the projectile string
-_typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+private _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
 TRACE_3("ACE_DEBUG: HandleDamage caching new damage",_selection,_newDamage,_unit);
 
-_typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
-_minLethalDamage = if (_typeIndex >= 0) then {
+private _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+private _minLethalDamage = if (_typeIndex >= 0) then {
     GVAR(minLethalDamages) select _typeIndex
 } else {
     0.01
 };
 
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _shooter} && {_projectile == ""} && {_selection == ""}) then {
+if (!isNull _shooter) then {
+    _unit setvariable [QGVAR(lastDamageSource), _shooter, false];
+};
+
+private _vehicle = vehicle _unit;
+private _effectiveSelectionName = _selection;
+if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_shooter in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selection == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selection = GVAR(SELECTIONS) select (floor(random(count GVAR(SELECTIONS))));
+        _effectiveSelectionName = _this select 1; //pull random selection from HDC
     };
 };
 
-if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
+if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call FUNC(selectionNameToNumber), _newDamage] call FUNC(determineIfFatal)}) then {
     if ((_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)])) exitwith {
         _damageReturn = 0.9;
     };
@@ -96,16 +100,12 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_selection] call FUNC(selectio
     _damageReturn = _damageReturn min 0.89;
 };
 
-[_unit] call FUNC(addToInjuredCollection);
+// Start the loop that tracks the unit vitals
+[_unit] call FUNC(addVitalLoop);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
-    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
-        [_unit] call EFUNC(common,unloadPerson);
-    };
-
-    private "_delayedUnconsicous";
-    _delayedUnconsicous = false;
-    if (vehicle _unit != _unit and {damage (vehicle _unit) >= 1}) then {
+    private _delayedUnconsicous = false;
+    if (_vehicle != _unit and {damage _vehicle >= 1}) then {
         [_unit] call EFUNC(common,unloadPerson);
         _delayedUnconsicous = true;
     };
@@ -118,11 +118,11 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         if (_delayedUnconsicous) then {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit], 0.7, 0] call EFUNC(common,waitAndExecute);
+            }, [_unit], 0.7] call CBA_fnc_waitAndExecute;
         } else {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit]] call EFUNC(common,execNextFrame);
+            }, [_unit]] call CBA_fnc_execNextFrame;
         };
         0.89;
     };

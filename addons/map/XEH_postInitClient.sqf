@@ -9,10 +9,11 @@ if (isServer) then {
         {
             if (_x isKindOf "ACE_FlashlightProxy_White") then {
                 // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
+                detach _x;
                 deleteVehicle _x;
             };
         } forEach attachedObjects _disconnectedPlayer;
-        
+
         nil
     }];
 };
@@ -29,7 +30,7 @@ call FUNC(determineZoom);
     if (isNull findDisplay 12) exitWith {};
 
     GVAR(lastStillPosition) = ((findDisplay 12) displayCtrl 51) ctrlMapScreenToWorld [0.5, 0.5];
-    GVAR(lastStillTime) = ACE_time;
+    GVAR(lastStillTime) = CBA_missionTime;
     GVAR(isShaking) = false;
 
     //map sizes are multiples of 1280
@@ -72,7 +73,7 @@ call FUNC(determineZoom);
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 }, 0] call CBA_fnc_addPerFrameHandler;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
         [{
@@ -99,15 +100,15 @@ call FUNC(determineZoom);
         GVAR(flashlightInUse) = "";
         GVAR(glow) = objNull;
 
-        ["playerInventoryChanged", {
+        ["loadout", {
             private _flashlights = [ACE_player] call FUNC(getUnitFlashlights);
             if ((GVAR(flashlightInUse) != "") && !(GVAR(flashlightInUse) in _flashlights)) then {
                 GVAR(flashlightInUse) = "";
             };
-        }] call EFUNC(common,addEventHandler);
+        }] call CBA_fnc_addPlayerEventHandler;
 
         if (GVAR(mapGlow)) then {
-            ["visibleMapChanged", {
+            ["visibleMap", {
                 params ["_player", "_mapOn"];
                 if (_mapOn) then {
                     if (!alive _player && !isNull GVAR(glow)) then {
@@ -127,15 +128,15 @@ call FUNC(determineZoom);
                         [""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call EFUNC(common,addEventHandler);
+            }] call CBA_fnc_addPlayerEventHandler;
         };
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["playerInventoryChanged", {
+["loadout", {
     if (isNull (_this select 0)) exitWith {
         GVAR(hasWatch) = true;
     };
@@ -144,4 +145,4 @@ GVAR(hasWatch) = true;
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
     } count (assignedItems ACE_player);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;

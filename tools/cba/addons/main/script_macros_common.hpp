@@ -621,9 +621,6 @@ Author:
 
 #define LSTR(var1) TRIPLES(ADDON,STR,var1)
 
-#define CACHE_DIS_SYS(var1,var2) (isNumber(var1 >> "CfgSettings" >> "CBA" >> "caching" >> QUOTE(var2)) && getNumber(var1 >> "CfgSettings" >> "CBA" >> "caching" >> QUOTE(var2)) != 1)
-#define CACHE_DIS(var1) (!isNil "CBA_RECOMPILE" || CACHE_DIS_SYS(configFile,var1) || CACHE_DIS_SYS(missionConfigFile,var1))
-
 #ifndef DEBUG_SETTINGS
     #define DEBUG_SETTINGS [false, true, false]
 #endif
@@ -635,6 +632,9 @@ Author:
 #define CFGSETTINGS CFGSETTINGSS(PREFIX,COMPONENT)
 #define PATHTO(var1) PATHTO_SYS(PREFIX,COMPONENT_F,var1)
 #define PATHTOF(var1) PATHTOF_SYS(PREFIX,COMPONENT,var1)
+#define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
+#define QPATHTOF(var1) QUOTE(PATHTOF(var1))
+#define QPATHTOEF(var1,var2) QUOTE(PATHTOEF(var1,var2))
 
 #define COMPILE_FILE(var1) COMPILE_FILE_SYS(PREFIX,COMPONENT_F,var1)
 #define COMPILE_FILE_CFG(var1) COMPILE_FILE_CFG_SYS(PREFIX,COMPONENT_F,var1)
@@ -677,6 +677,8 @@ Author:
 #define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
 #define QGVAR(var1) QUOTE(GVAR(var1))
 #define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
+#define QQGVAR(var1) QUOTE(QGVAR(var1))
+#define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 
 /* -------------------------------------------
 Macro: GVARMAIN()
@@ -696,6 +698,7 @@ Author:
 ------------------------------------------- */
 #define GVARMAIN(var1) GVARMAINS(PREFIX,var1)
 #define QGVARMAIN(var1) QUOTE(GVARMAIN(var1))
+#define QQGVARMAIN(var1) QUOTE(QGVARMAIN(var1))
 // TODO: What's this?
 #define SETTINGS DOUBLES(PREFIX,settings)
 #define CREATELOGIC CREATELOGICS(PREFIX,COMPONENT)
@@ -722,6 +725,14 @@ Author:
 #define FUNCMAIN(var1) TRIPLES(PREFIX,fnc,var1)
 #define FUNC_INNER(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 #define EFUNC(var1,var2) FUNC_INNER(var1,var2)
+#define QFUNC(var1) QUOTE(FUNC(var1))
+#define QFUNCMAIN(var1) QUOTE(FUNCMAIN(var1))
+#define QFUNC_INNER(var1,var2) QUOTE(FUNC_INNER(var1,var2))
+#define QEFUNC(var1,var2) QUOTE(EFUNC(var1,var2))
+#define QQFUNC(var1) QUOTE(QFUNC(var1))
+#define QQFUNCMAIN(var1) QUOTE(QFUNCMAIN(var1))
+#define QQFUNC_INNER(var1,var2) QUOTE(QFUNC_INNER(var1,var2))
+#define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
     #define PRELOAD_ADDONS class CfgAddons \
@@ -829,21 +840,21 @@ Parameters:
 Author:
     Spooner
 ------------------------------------------- */
-#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then { false } else { (typeName (VAR)) == TYPE })
-#define IS_ARRAY(VAR)    IS_META_SYS(VAR,"ARRAY")
-#define IS_BOOL(VAR)     IS_META_SYS(VAR,"BOOL")
-#define IS_CODE(VAR)     IS_META_SYS(VAR,"CODE")
-#define IS_CONFIG(VAR)   IS_META_SYS(VAR,"CONFIG")
-#define IS_CONTROL(VAR)  IS_META_SYS(VAR,"CONTROL")
-#define IS_DISPLAY(VAR)  IS_META_SYS(VAR,"DISPLAY")
-#define IS_GROUP(VAR)    IS_META_SYS(VAR,"GROUP")
-#define IS_OBJECT(VAR)   IS_META_SYS(VAR,"OBJECT")
-#define IS_SCALAR(VAR)   IS_META_SYS(VAR,"SCALAR")
-#define IS_SCRIPT(VAR)   IS_META_SYS(VAR,"SCRIPT")
-#define IS_SIDE(VAR)     IS_META_SYS(VAR,"SIDE")
+#define IS_META_SYS(VAR,TYPE) (if (isNil {VAR}) then { false } else { (VAR) isEqualType TYPE })
+#define IS_ARRAY(VAR)    IS_META_SYS(VAR,[])
+#define IS_BOOL(VAR)     IS_META_SYS(VAR,false)
+#define IS_CODE(VAR)     IS_META_SYS(VAR,{})
+#define IS_CONFIG(VAR)   IS_META_SYS(VAR,configNull)
+#define IS_CONTROL(VAR)  IS_META_SYS(VAR,controlNull)
+#define IS_DISPLAY(VAR)  IS_META_SYS(VAR,displayNull)
+#define IS_GROUP(VAR)    IS_META_SYS(VAR,grpNull)
+#define IS_OBJECT(VAR)   IS_META_SYS(VAR,objNull)
+#define IS_SCALAR(VAR)   IS_META_SYS(VAR,0)
+#define IS_SCRIPT(VAR)   IS_META_SYS(VAR,scriptNull)
+#define IS_SIDE(VAR)     IS_META_SYS(VAR,west)
 #define IS_STRING(VAR)   IS_META_SYS(VAR,"STRING")
-#define IS_TEXT(VAR)     IS_META_SYS(VAR,"TEXT")
-#define IS_LOCATION(VAR) IS_META_SYS(VAR,"LOCATION")
+#define IS_TEXT(VAR)     IS_META_SYS(VAR,text "")
+#define IS_LOCATION(VAR) IS_META_SYS(VAR,locationNull)
 
 #define IS_BOOLEAN(VAR)  IS_BOOL(VAR)
 #define IS_FUNCTION(VAR) IS_CODE(VAR)
@@ -1262,6 +1273,39 @@ Author:
     };
 
 /* -------------------------------------------
+Macro: TEST_DEFINED_AND_OP()
+    Tests that A and B are defined and (A OPERATOR B) is true.
+    If the test fails, an error is raised with the given MESSAGE.
+
+Parameters:
+    A - First value [Any]
+    OPERATOR - Binary operator to use [Operator]
+    B - Second value [Any]
+    MESSSAGE - Message to display [String]
+
+Example:
+    (begin example)
+        TEST_OP(_fish,>,5,"Too few fish!");
+    (end)
+
+Author:
+    Killswitch, PabstMirror
+------------------------------------------- */
+#define TEST_DEFINED_AND_OP(A,OPERATOR,B,MESSAGE) \
+    if (isNil #A) then { \
+        TEST_FAIL('(A is not defined) ' + (MESSAGE)); \
+    } else { \
+        if (isNil #B) then { \
+            TEST_FAIL('(B is not defined) ' + (MESSAGE)); \
+        } else { \
+            if ((A) OPERATOR (B)) then { \
+                TEST_SUCCESS('(A OPERATOR B) ' + (MESSAGE)) \
+            } else { \
+                TEST_FAIL('(A OPERATOR B) ' + (MESSAGE)) \
+    }; }; };
+
+
+/* -------------------------------------------
 Macro: TEST_DEFINED()
     Tests that a VARIABLE is defined.
 
@@ -1408,8 +1452,9 @@ Author:
 }
 
 // XEH Specific
-#define XEH_DISABLED class EventHandlers {}; SLX_XEH_DISABLED = 1
-#define XEH_ENABLED class EventHandlers { EXTENDED_EVENTHANDLERS }; delete SLX_XEH_DISABLED
+#define XEH_CLASS CBA_Extended_EventHandlers
+#define XEH_DISABLED class EventHandlers { class XEH_CLASS {}; }; SLX_XEH_DISABLED = 1
+#define XEH_ENABLED class EventHandlers { class XEH_CLASS { EXTENDED_EVENTHANDLERS }; }; SLX_XEH_DISABLED = 0
 
 // TODO: These are actually outdated; _Once ?
 #define XEH_PRE_INIT QUOTE(call COMPILE_FILE(XEH_PreInit_Once))
@@ -1419,3 +1464,5 @@ Author:
 #define XEH_POST_INIT QUOTE(call COMPILE_FILE(XEH_PostInit_Once))
 #define XEH_POST_CINIT QUOTE(call COMPILE_FILE(XEH_PostClientInit_Once))
 #define XEH_POST_SINIT QUOTE(call COMPILE_FILE(XEH_PostServerInit_Once))
+
+#define IS_LINUX (productVersion select 2 <= 154)

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Flashlight classname ("" for off) <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -22,4 +22,4 @@ GVAR(flashlightInUse) = _flashlight;
 if (GVAR(mapGlow)) then {
     [GVAR(flashlightInUse)] call FUNC(flashlightGlow);
 };
-playSound "ACE_map_flashlightClick";
+playSound QGVAR(flashlightClick);

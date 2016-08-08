@@ -2,12 +2,22 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {};
+        name = COMPONENT_NAME;
+        units[] = {
+            QGVAR(moduleDefendArea),
+            QGVAR(moduleGlobalSetSkill),
+            QGVAR(moduleGroupSide),
+            QGVAR(modulePatrolArea),
+            QGVAR(moduleSearchArea),
+            QGVAR(moduleSearchNearby),
+            QGVAR(moduleTeleportPlayers)
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"SilentSpike"};
-        authorUrl = "https://github.com/SilentSpike";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"SilentSpike"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
     // Use additional cfgPatches to contextually remove modules from zeus
@@ -36,9 +46,17 @@ class CfgPatches {
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
-    GVAR(cargoAndRepair[]) = {"ace_cargo", "ace_repair"};
+    GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
 };
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
+#include "ui\RscAttributes.hpp"
+
+class ACE_newEvents {
+    zeusUnitAssigned = QGVAR(zeusUnitAssigned);
+    SetSurrendered = QEGVAR(captives,setSurrendered);
+    SetHandcuffed = QEGVAR(captives,setHandcuffed);
+    AddCargoByClass = "ace_addCargo";
+};

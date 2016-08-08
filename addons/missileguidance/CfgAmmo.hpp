@@ -5,41 +5,50 @@ enum {
 
 class CfgAmmo {
     class MissileBase;
-    
+
     class M_PG_AT: MissileBase {
         model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
         proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
 
-        irLock = 0;
-        laserLock = 0;
-        airLock = 0;
-        weaponLockSystem = "2 + 16";
+        // Reenable this settings when ACE laser targeting and missile guidance is reenabled
+        //laserLock = 1;
+        //airLock = 0;
+        //irLock = 0;
+        //weaponLockSystem = "4 + 16";
+        //fuseDistance = 2;
+        //timeToLive = 60;
+        // Turn off arma crosshair-guidance
+        //manualControl = 0;
+        // ACE uses these values
+        //trackOversteer = 1;
+        //trackLead = 0;
 
         maxSpeed = 720;
         maxControlRange = 5000;
         maneuvrability = 8;
-        timeToLive = 60;
+
         simulationStep = 0.01;
         airFriction = 0.1;
         sideAirFriction = 0.16;
         initTime = 0.002;
         thrustTime = 1.07;
         thrust = 530;
-        fuseDistance = 2;
 
         effectsMissileInit = "MissileDAR1";
         effectsMissile = "missile2";
         whistleDist = 4;
         muzzleEffect = "";
+    };
 
-        // Turn off arma crosshair-guidance
-        manualControl = 0;
+    class ACE_Hydra70_DAGR: M_PG_AT {
+        displayName = CSTRING(Hydra70_DAGR);
+        displayNameShort = CSTRING(Hydra70_DAGR_Short);
 
-        // ACE uses these values
-        trackOversteer = 1;
-        trackLead = 0;
+        description = CSTRING(Hydra70_DAGR_Desc);
+        descriptionShort = CSTRING(Hydra70_DAGR_Desc);
 
-        // Begin ACE guidance Configs
+        EGVAR(rearm,caliber) = 70;
+
         class ADDON {
             enabled = 1;
 
@@ -67,20 +76,7 @@ class CfgAmmo {
             attackProfiles[] = { "LIN", "DIR", "MID", "HI" };
         };
     };
-    
-    class ACE_Hydra70_DAGR: M_PG_AT {
-        displayName = CSTRING(Hydra70_DAGR);
-        displayNameShort = CSTRING(Hydra70_DAGR_Short);
 
-        description = CSTRING(Hydra70_DAGR_Desc);
-        descriptionShort = CSTRING(Hydra70_DAGR_Desc);
-        
-        EGVAR(rearm,caliber) = 70;
-        
-        //Explicity add guidance config
-        class ADDON: ADDON {};
-    };
-    
     class ACE_Hellfire_AGM114K: ACE_Hydra70_DAGR {
         displayName = CSTRING(Hellfire_AGM114K);
         displayNameShort = CSTRING(Hellfire_AGM114K_Short);
@@ -96,7 +92,7 @@ class CfgAmmo {
         indirectHit = 71;
         indirectHitRange = 4.5;
         effectsMissile = "missile2";
-        
+
         //Explicity add guidance config
         class ADDON: ADDON {};
     };

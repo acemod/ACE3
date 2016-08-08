@@ -11,7 +11,7 @@
             <German>Kleine Korrektur nach oben</German>
             <Hungarian>Enyhe állítás fel</Hungarian>
             <Portuguese>Pequeno ajuste para cima</Portuguese>
-            <Czech>Korekce mírně nahoru</Czech>
+            <Czech>Korekce nahoru (mírně)</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustDownMinor">
             <English>Minor adjustment down</English>
@@ -23,7 +23,7 @@
             <German>Kleine Korrektur nach unten</German>
             <Hungarian>Enyhe állítás le</Hungarian>
             <Portuguese>Pequeno ajuste para baixo</Portuguese>
-            <Czech>Korekce mírně dolů</Czech>
+            <Czech>Korekce dolů (mírně)</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustRightMinor">
             <English>Minor adjustment right</English>
@@ -35,7 +35,7 @@
             <German>Kleine Korrektur nach rechts</German>
             <Hungarian>Enyhe állítás jobbra</Hungarian>
             <Portuguese>Pequeno ajuste para direita</Portuguese>
-            <Czech>Korekce mírně doprava</Czech>
+            <Czech>Korekce doprava (mírně)</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustLeftMinor">
             <English>Minor adjustment left</English>
@@ -47,7 +47,7 @@
             <German>Kleine Korrektur nach links</German>
             <Hungarian>Enyhe állítás balra</Hungarian>
             <Portuguese>Pequeno ajuste para esquerda</Portuguese>
-            <Czech>Korekce mírně doleva</Czech>
+            <Czech>Korekce doleva (mírně)</Czech>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMajor">
             <English>Major adjustment up</English>
@@ -67,7 +67,7 @@
             <Russian>Большая корректировка ВНИЗ</Russian>
             <Spanish>Ajuste mayor abajo</Spanish>
             <Italian>Regola l'alzata in basso</Italian>
-            <French>Hausse ---</French>
+            <French>Hausse - - -</French>
             <German>Große Korrektur nach unten</German>
             <Hungarian>Nagy állítás le</Hungarian>
             <Portuguese>Ajuste grande para baixo</Portuguese>
@@ -91,7 +91,7 @@
             <Russian>Большая корректировка ВЛЕВО</Russian>
             <Spanish>Ajuste mayor izquierda</Spanish>
             <Italian>Regola il tiro a sinistra</Italian>
-            <French>Dérive ---</French>
+            <French>Dérive - - -</French>
             <German>Große Korrektur nach links</German>
             <Hungarian>Nagy állítás balra</Hungarian>
             <Portuguese>Ajuste grande para esquerda</Portuguese>

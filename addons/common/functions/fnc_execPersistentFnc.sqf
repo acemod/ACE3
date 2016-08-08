@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED("ace_common_fnc_execPersistentFnc","3.7.0","ace_common_fnc_globalEvent");
+
 GVAR(remoteFnc) = _this;
 
 params ["_arguments", "_function", "_unit", "_name"];
@@ -28,12 +30,11 @@ _function = call compile _function;
 [[_arguments, _unit], _this select 1, 2] call FUNC(execRemoteFnc);
 
 // save persistent function for JIP
-private ["_persistentFunctions", "_index"];
-
-_persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
+private _persistentFunctions = _unit getVariable ["ACE_PersistentFunctions", []];
 
 // find index to overwrite function with the same name, add to end otherwise
-_index = count _persistentFunctions;
+private _index = count _persistentFunctions;
+
 {
     if (_x select 2 == _name) exitWith {
         _index = _forEachIndex;

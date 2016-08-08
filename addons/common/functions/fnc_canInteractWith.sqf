@@ -16,22 +16,19 @@
 
 params ["_unit", "_target", ["_exceptions", []]];
 
-_exceptions = [_exceptions, {toLower _this}] call FUNC(map);
+_exceptions = _exceptions apply {toLower _x};
 
-private "_owner";
-_owner = _target getVariable [QGVAR(owner), objNull];
+private _owner = _target getVariable [QGVAR(owner), objNull];
 
 // exit if the target is not free to interact
 if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
-private ["_conditions", "_canInteract"];
-
-_conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-
+private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 _conditions params ["_conditionNames", "_conditionFuncs"];
 
-_canInteract = true;
+private _canInteract = true;
+
 {
     if (!(_x in _exceptions) && {!([_unit, _target] call (_conditionFuncs select _forEachIndex))}) exitWith {
         _canInteract = false;

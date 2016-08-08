@@ -1,15 +1,9 @@
 /*
  * Author: bux, commy2
- * Replace the disposable launcher with the used dummy.
+ * Replace the disposable launcher with the used dummy. Called from the unified fired EH.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * Nothing
@@ -21,18 +15,16 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon", "", "", "", "", "_projectile"];
-TRACE_3("params",_unit,_weapon,_projectile);
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-if ((!local _unit) || {_weapon != (secondaryWeapon _unit)})  exitWith {};
+if (!local _unit || {_weapon != secondaryWeapon _unit})  exitWith {};
 
-private ["_replacementTube", "_items"];
-_replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
+private _replacementTube = getText (configFile >> "CfgWeapons" >> _weapon >> "ACE_UsedTube");
 if (_replacementTube == "") exitWith {}; //If no replacement defined just exit
 
-
 //Save array of items attached to launcher
-_items = secondaryWeaponItems _unit;
+private _items = secondaryWeaponItems _unit;
 //Replace the orginal weapon with the 'usedTube' weapon
 _unit addWeapon _replacementTube;
 //Makes sure the used tube is still equiped
@@ -55,12 +47,10 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
             [_idPFH] call CBA_fnc_removePerFrameHandler;
 
             //If (tube is dropped) OR (is dead) OR (is player) just exit
-            if (((secondaryWeapon _unit) != _tube) || {!alive _unit} || {([_unit] call EFUNC(common,isPlayer))}) exitWith {};
+            if (secondaryWeapon _unit != _tube || {!alive _unit} || {[_unit] call EFUNC(common,isPlayer)}) exitWith {};
 
-            private ["_items", "_container"];
-
-            // _items = secondaryWeaponItems _unit;
-            _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
+            //private  _items = secondaryWeaponItems _unit;
+            private _container = createVehicle ["GroundWeaponHolder", position _unit, [], 0, "CAN_COLLIDE"];
             _container setPosAsl (getPosAsl _unit);
             _container addWeaponCargoGlobal [_tube, 1];
 

@@ -1,0 +1,9 @@
+PREP(calculateMapScale);
+PREP(canUseMapGPS);
+PREP(canUseMapTools);
+PREP(handleMouseButton);
+PREP(handleMouseMove);
+PREP(isInsideMapTool);
+PREP(openMapGps);
+PREP(openMapGpsUpdate);
+PREP(updateMapToolMarkers);

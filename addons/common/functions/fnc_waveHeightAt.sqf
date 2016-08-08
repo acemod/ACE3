@@ -1,6 +1,5 @@
 /*
  * Author: jaynus
- *
  * Gets the wave height at a specific location. Uses a logic, so may be performance iffy
  *
  * Arguments:

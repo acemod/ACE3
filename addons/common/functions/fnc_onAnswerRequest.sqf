@@ -14,18 +14,13 @@
 
 params ["_unit", "_id", "_accepted"];
 
-private ["_requestID", "_info", "_callBack", "_caller", "_replyParams", "_requestMessage", "_target"];
-
-_info = _unit getVariable _id;
+private _info = _unit getVariable _id;
 
 if (!isNil "_info") then {
-    _caller = _info select 0;
-    _target = _info select 1;
-    _requestID = _info select 2;
-    _requestMessage = _info select 3;
-    _callBack = _info select 4;
-    _replyParams = [_info, _accepted];
-    [_replyParams, QFUNC(requestCallback), _caller, false] call FUNC(execRemoteFnc);
+    _info params ["_caller", "_target", "_requestID", "_requestMessage", "_callBack"];
+
+    private _replyParams = [_info, _accepted];
+    [QGVAR(requestCallback), _replyParams, _caller] call CBA_fnc_targetEvent;
     _unit setVariable [_id, nil];
 };
 

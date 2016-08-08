@@ -12,7 +12,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 private _vehicle = vehicle _unit;
 

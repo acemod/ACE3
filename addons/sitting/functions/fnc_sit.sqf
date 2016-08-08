@@ -16,15 +16,13 @@
  */
 #include "script_component.hpp"
 
-private ["_actionID", "_configFile", "_sitDirection", "_sitPosition", "_seatPosOrig"];
-
 params ["_seat", "_player"];
 
 // Overwrite weird position, because Arma decides to set it differently based on current animation/stance...
 _player switchMove "amovpknlmstpsraswrfldnon";
 
 // Add scroll-wheel action to release object
-_actionID = _player addAction [
+private _actionID = _player addAction [
     format ["<t color='#FFFF00'>%1</t>", localize LSTRING(Stand)],
     QUOTE((_this select 0) call FUNC(stand)),
     nil,
@@ -36,9 +34,9 @@ _actionID = _player addAction [
 ];
 
 // Read config
-_configFile = configFile >> "CfgVehicles" >> typeOf _seat;
-_sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDirection));
-_sitPosition = getArray (_configFile >> QGVAR(sitPosition));
+private _configFile = configFile >> "CfgVehicles" >> typeOf _seat;
+private _sitDirection = (getDir _seat) + getNumber (_configFile >> QGVAR(sitDirection));
+private _sitPosition = getArray (_configFile >> QGVAR(sitPosition));
 
 // Get random animation and perform it (before moving player to ensure correct placement)
 [_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
@@ -51,11 +49,11 @@ _player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
 
 // Set variables, save seat object on player
 _player setVariable [QGVAR(isSitting), [_seat, _actionID]];
-_seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
+[_player, _seat] call EFUNC(common,claim); // To prevent multiple people sitting on one seat
 
 
 // Add automatical stand PFH in case of interruptions
-_seatPosOrig = getPosASL _seat;
+private _seatPosOrig = getPosASL _seat;
 [{
     params ["_args", "_pfhId"];
     _args params ["_player", "_seat", "_seatPosOrig"];

@@ -25,6 +25,18 @@
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Dragging_DragKeybind">
+            <English>Drag/Release Object</English>
+            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Spanish>Arrastrar/Soltar Objeto</Spanish>
+            <Polish>Ciągnij/Puść Obiekt</Polish>
+            <Czech>Táhnout/Položit Objekt</Czech>
+            <French>Trainer/Lâcher Objets</French>
+            <German>Objekt ziehen/loslassen</German>
+            <Portuguese>Arrastar/Soltar Objeto</Portuguese>
+            <Italian>Trascina/Lascia Oggetto</Italian>
+            <Hungarian>Húzás/Elengedés Objektum</Hungarian>
+        </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
             <German>Gegenstand ist zu schwer</German>
@@ -34,7 +46,7 @@
             <Portuguese>Objeto muito pesado</Portuguese>
             <Italian>L'oggetto pesa troppo</Italian>
             <Russian>Предмет слишком тяжёлый</Russian>
-            <Czech>Moc težké</Czech>
+            <Czech>Předmět je moc těžký</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
@@ -56,6 +68,9 @@
             <Portuguese>Levantar/Abaixar</Portuguese>
             <Russian>Поднять/Опустить</Russian>
             <Czech>Zvýšit/Snížit</Czech>
+            <Italian>Alza/Abbassa</Italian>
+            <Spanish>Subir/Bajar</Spanish>
+            <French>Lever/Baisser</French>
         </Key>
     </Package>
 </Project>

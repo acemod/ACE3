@@ -1,5 +1,5 @@
 class ACE_Settings {
-    class GVAR(DisplayTextOnRepair) {
+    class GVAR(displayTextOnRepair) {
         displayName = CSTRING(SettingDisplayTextName);
         description = CSTRING(SettingDisplayTextDesc);
         typeName = "BOOL";
@@ -7,7 +7,7 @@ class ACE_Settings {
         value = 1;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
-    class GVAR(engineerSetting_Repair) {
+    class GVAR(engineerSetting_repair) {
         displayName = CSTRING(enginerSetting_Repair_name);
         description = CSTRING(enginerSetting_Repair_description);
         typeName = "SCALAR";
@@ -15,7 +15,7 @@ class ACE_Settings {
         values[] = {CSTRING(engineerSetting_anyone), CSTRING(engineerSetting_EngineerOnly), CSTRING(engineerSetting_RepairSpecialistOnly)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
-    class GVAR(engineerSetting_Wheel) {
+    class GVAR(engineerSetting_wheel) {
         displayName = CSTRING(enginerSetting_Wheel_name);
         description = CSTRING(enginerSetting_Wheel_description);
         typeName = "SCALAR";
@@ -30,18 +30,18 @@ class ACE_Settings {
         value = 0.6;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
-    class GVAR(repairDamageThreshold_Engineer) {
+    class GVAR(repairDamageThreshold_engineer) {
         displayName = CSTRING(repairDamageThreshold_Engineer_name);
         description = CSTRING(repairDamageThreshold_Engineer_description);
         typeName = "SCALAR";
         value = 0.4;
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
-    class GVAR(consumeItem_ToolKit) {
+    class GVAR(consumeItem_toolKit) {
         displayName = CSTRING(consumeItem_ToolKit_name);
         description = CSTRING(consumeItem_ToolKit_description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
         category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
@@ -76,5 +76,10 @@ class ACE_Settings {
         value = 0;
         values[] = {"None", "ToolKit"};
         _values[] = {{}, {"ToolKit"}};
+    };
+    class GVAR(autoShutOffEngineWhenStartingRepair) {
+        typeName = "BOOL";
+        value = 0;
+        category = ECSTRING(OptionsMenu,CategoryLogistics);
     };
 };

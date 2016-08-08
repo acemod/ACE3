@@ -9,7 +9,7 @@
                 exceptions[] = {}; \
                 showDisabled = 0; \
                 priority = 0; \
-                icon = PATHTOF(UI\attach_ca.paa); \
+                icon = QPATHTOF(UI\attach_ca.paa); \
                 distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
@@ -19,7 +19,7 @@
                 exceptions[] = {}; \
                 showDisabled = 0; \
                 priority = 0.1; \
-                icon = PATHTOF(UI\detach_ca.paa); \
+                icon = QPATHTOF(UI\detach_ca.paa); \
                 distance = 4.5; \
             }; \
         }; \
@@ -60,8 +60,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
-                    icon = PATHTOF(UI\attach_ca.paa);
-                    // hotkey = "T";
+                    icon = QPATHTOF(UI\attach_ca.paa);
                 };
                 class GVAR(Detach) {
                     displayName = CSTRING(Detach);
@@ -70,8 +69,7 @@ class CfgVehicles {
                     exceptions[] = {"isNotDragging"};
                     showDisabled = 0;
                     priority = 5;
-                    icon = PATHTOF(UI\detach_ca.paa);
-                    hotkey = "T";
+                    icon = QPATHTOF(UI\detach_ca.paa);
                 };
             };
         };

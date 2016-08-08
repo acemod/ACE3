@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
- * 1: Max range to seach from unit (meters) <SCALAR>
+ * 1: Max range to seach from unit (meters) <NUMBER>
  * 2: Array of arrays of classnames <ARRAY>
  *
  * Return Value:

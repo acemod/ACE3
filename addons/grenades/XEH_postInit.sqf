@@ -2,7 +2,7 @@
 
 #include "script_component.hpp"
 
-["flashbangExplosion", {_this call FUNC(flashbangExplosionEH)}] call EFUNC(common,addEventHandler);
+["ace_flashbangExploded", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -15,10 +15,16 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if (!([ACE_player] call EFUNC(common,canUseWeapon))) exitWith {false};
+    if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
 
     // Statement
     [] call FUNC(nextMode);
 },
 {false},
 [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
+
+
+// Register fire event handler
+["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Handle the animaion for a Unit for Dragging Module
  *
  * Arguments:
@@ -17,35 +16,41 @@
 */
 #include "script_component.hpp"
 
-private ["_unit", "_anim"];
+params ["_unit", "_anim"];
+_thisArgs params ["_realUnit"];
+TRACE_4("params",_unit,_anim,_realUnit,_thisID);
 
-_unit = _this select 0;
-_anim = _this select 1;
+if (_unit != _realUnit) exitWith {
+    TRACE_2("respawn (unit changed) - remove EH",_unit,_realUnit);
+    _unit removeEventHandler ["AnimChanged", _thisID];
+};
 
 if (_unit getVariable [QGVAR(isDragging), false]) then {
 
     // drop dragged object when not in valid animation
     if !(_anim in DRAG_ANIMATIONS) then {
-        private "_draggedObject";
-        _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
+        private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
         if (!isNull _draggedObject) then {
+            TRACE_2("stop drag",_unit,_draggedObject);
             [_unit, _draggedObject] call FUNC(dropObject);
         };
     };
+} else {
 
-};
+    if (_unit getVariable [QGVAR(isCarrying), false]) then {
 
-if (_unit getVariable [QGVAR(isCarrying), false]) then {
+        // drop carried object when not standing; also some exceptions when picking up crate
+        if (stance _unit != "STAND" && {_anim != "amovpercmstpsnonwnondnon"}) then {
+            private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
-    // drop carried object when not standing; also some exceptions when picking up crate
-    if (stance _unit != "STAND" && {_anim != "amovpercmstpsnonwnondnon"}) then {
-        private "_carriedObject";
-        _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
-
-        if (!isNull _carriedObject) then {
-            [_unit, _carriedObject] call FUNC(dropObject_carry);
+            if (!isNull _carriedObject) then {
+                TRACE_2("stop carry",_unit,_carriedObject);
+                [_unit, _carriedObject] call FUNC(dropObject_carry);
+            };
         };
+    } else {
+        TRACE_1("not drag/carry - remove EH",_unit);
+        _unit removeEventHandler ["AnimChanged", _thisID];
     };
-
 };

@@ -11,14 +11,15 @@
  * Example:
  * [fuelTruck] call ace_refuel_fnc_getFuel
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_fuel"];
-params ["_target"];
+params [["_target", objNull, [objNull]]];
 
-_fuel = _target getVariable QGVAR(currentFuelCargo);
+if (isNull _target) exitWith {0};
+
+private _fuel = _target getVariable QGVAR(currentFuelCargo);
 
 if (isNil "_fuel") then {
     _fuel = getNumber (configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(fuelCargo));

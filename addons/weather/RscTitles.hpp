@@ -1,17 +1,13 @@
-class RscTitles
-{
-    class RscWindIntuitive
-    {
+class RscTitles {
+    class RscWindIntuitive {
         idd=-1;
         onLoad="with uiNameSpace do { RscWindIntuitive = _this select 0 };";
         movingEnable=0;
         duration=60;
         fadeIn="false";
         fadeOut="false";
-        class controls
-        {
-            class RscWindIntuitive
-            {
+        class controls {
+            class RscWindIntuitive {
                 idc=132948;
                 type=0;
                 style=48;

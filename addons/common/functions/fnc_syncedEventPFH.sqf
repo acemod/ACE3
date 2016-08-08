@@ -19,26 +19,22 @@ if (!isServer) exitWith {false};
 // @TODO: This should be iteration limited to prevent FPS lag
 
 {
-    private ["_name", "_data", "_newEventLog"];
+    private _name = _x;
 
-    _name = _x;
-
-    _data = HASH_GET(GVAR(syncedEvents),_name);
+    private _data = HASH_GET(GVAR(syncedEvents),_name);
     _data params ["_eventTime", "_eventLog", "_globalEventTTL"];
 
-    _newEventLog = [];
+    private _newEventLog = [];
 
     // @TODO: This should be iteration limited to prevent FPS lag
     {
-        private ["_eventEntry", "_ttlReturn"];
-
-        _eventEntry = _x;
-        _ttlReturn = true;
+        private _eventEntry = _x;
+        private _ttlReturn = true;
 
         if (_globalEventTTL isEqualType {}) then {
             _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
         } else {
-            _ttlReturn = call {_globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL}};
+            _ttlReturn = call {_globalEventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _globalEventTTL}};
         };
 
         if (_ttlReturn) then {
@@ -48,7 +44,7 @@ if (!isServer) exitWith {false};
             if (_eventTTL isEqualType {}) then {
                 _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
             } else {
-                _ttlReturn = call {_eventTTL < 1 || {ACE_diagTime < _time + _eventTTL}};
+                _ttlReturn = call {_eventTTL < 1 || {diag_tickTime < _time + _eventTTL}};
             };
         };
 

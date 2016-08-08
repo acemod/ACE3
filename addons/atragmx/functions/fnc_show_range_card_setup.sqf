@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_show_range_card_setup
+ * call ace_atragmx_fnc_show_range_card_setup
  *
  * Public: No
  */
@@ -21,7 +21,7 @@ GVAR(showRangeCardSetup) = _this;
 
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 10006);
-    
+
     ctrlSetText [10003, Str(Round(GVAR(rangeCardStartRange)))];
     ctrlSetText [10004, Str(Round(GVAR(rangeCardEndRange)))];
     ctrlSetText [10005, Str(Round(GVAR(rangeCardIncrement)))];

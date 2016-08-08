@@ -1,6 +1,5 @@
 /*
  * Author: zGuba 2011
- *
  * Function helper for framing objects on screen.
  *
  * Arguments:
@@ -26,14 +25,12 @@
 
 params ["_object", "_margins", "_offsets"];
 
-private ["_minX", "_minY", "_maxX", "_maxY", "_bounds", "_boundsCorners"];
+private _minX = 10;
+private _minY = 10;
+private _maxX = -10;
+private _maxY = -10;
 
-_minX = 10;
-_minY = 10;
-_maxX = -10;
-_maxY = -10;
-
-_bounds = boundingBox _object;
+private _bounds = boundingBox _object;
 _margins params ["_marginsX", "_marginsY", "_marginsZ"];
 _offsets params ["_offsetsX", "_offsetsY", "_offsetsZ"];
 
@@ -49,22 +46,23 @@ _boundsMaxX = _boundsMaxX + _marginsX + _offsetsX;
 _boundsMaxY = _boundsMaxY + _marginsY + _offsetsY;
 _boundsMaxZ = _boundsMaxZ + _marginsZ + _offsetsZ;
 
-_boundsCorners = [
-    [_boundsMinX,_boundsMinY,_boundsMinZ],
-    [_boundsMinX,_boundsMinY,_boundsMaxZ],
-    [_boundsMinX,_boundsMaxY,_boundsMinZ],
-    [_boundsMinX,_boundsMaxY,_boundsMaxZ],
-    [_boundsMaxX,_boundsMinY,_boundsMinZ],
-    [_boundsMaxX,_boundsMinY,_boundsMaxZ],
-    [_boundsMaxX,_boundsMaxY,_boundsMinZ],
-    [_boundsMaxX,_boundsMaxY,_boundsMaxZ]
+private _boundsCorners = [
+    [_boundsMinX, _boundsMinY, _boundsMinZ],
+    [_boundsMinX, _boundsMinY, _boundsMaxZ],
+    [_boundsMinX, _boundsMaxY, _boundsMinZ],
+    [_boundsMinX, _boundsMaxY, _boundsMaxZ],
+    [_boundsMaxX, _boundsMinY, _boundsMinZ],
+    [_boundsMaxX, _boundsMinY, _boundsMaxZ],
+    [_boundsMaxX, _boundsMaxY, _boundsMinZ],
+    [_boundsMaxX, _boundsMaxY, _boundsMaxZ]
 ];
 
 {
-    private "_ppos";
-    _ppos = worldToScreen (_object modelToWorld _x);
+    private _ppos = worldToScreen (_object modelToWorld _x);
+
     if (count _ppos >= 2) then {
         _ppos params ["_pposX", "_pposY"];
+
         if (_pposX < _minX) then {_minX = _pposX};
         if (_pposX > _maxX) then {_maxX = _pposX};
         if (_pposY < _minY) then {_minY = _pposY};
@@ -73,4 +71,4 @@ _boundsCorners = [
     false
 } count _boundsCorners;
 
-[_minX,_minY,_maxX,_maxY]
+[_minX, _minY, _maxX, _maxY]

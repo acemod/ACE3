@@ -15,37 +15,30 @@
  */
 #include "script_component.hpp"
 
-private["_drawColor", "_fovCorrection", "_iconSize", "_timeLeftToShow", "_cameraOffset"];
-
-if (!alive ACE_player) then {GVAR(fingersHash) = HASH_CREATE;};
+if (!alive ACE_player) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = HASH_CREATE;};
-//make sure player is dismounted or in a static weapon:
-if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = HASH_CREATE;};
+if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
+// Make sure player is dismounted or in a static weapon:
+if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 
-_cameraOffset = worldToScreen (positionCameraToWorld [1000, 0, 10000]);
-_fovCorrection = 0;
-if (count _cameraOffset > 0) then {_fovCorrection = (_cameraOffset select 0) - 0.5;};
-_iconSize = BASE_SIZE * _fovCorrection;
+private _iconSize = BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
-{
-    _data = HASH_GET(GVAR(fingersHash), _x);
-    _data params ["_lastTime", "_pos", "_name"];
-    _timeLeftToShow = _lastTime + FP_TIMEOUT - ACE_diagTime;
+[+GVAR(fingersHash), {
+    _value params ["_lastTime", "_pos", "_name"];
+    private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {
-        HASH_REM(GVAR(fingersHash), _x);
+        [GVAR(fingersHash), _key] call CBA_fnc_hashRem;
     } else {
-        _drawColor = + GVAR(indicatorColor);
-        //Fade out:
-        if (_timeLeftToShow < 0.5) then {
-            _drawColor set [3, ((_drawColor select 3) * (_timeLeftToShow / 0.5))];
-        };
+        private _drawColor = + GVAR(indicatorColor);
+        // Fade out:
+        _drawColor set [3, ((_drawColor select 3) * ((_timeLeftToShow min 0.5) / 0.5))];
 
-        drawIcon3D [QUOTE(PATHTOF(UI\fp_icon2.paa)), _drawColor, _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "PuristaMedium"];
+        drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLtoAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
     };
-} count (GVAR(fingersHash) select 0);
+}] call CBA_fnc_hashEachPair;
 
-if ((count (GVAR(fingersHash) select 0)) == 0) then {
+if ((GVAR(fingersHash) select 1) isEqualTo []) then {
+    TRACE_1("Ending PFEH", GVAR(pfeh_id));
     [GVAR(pfeh_id)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfeh_id) = -1;
 };

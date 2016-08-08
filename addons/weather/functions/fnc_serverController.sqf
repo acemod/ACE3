@@ -1,17 +1,19 @@
 /*
  * Author: Ruthberg
- *
  * Gather weather parameters and broadcast them to the clients
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_weather_fnc_serverController
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-if (!GVAR(enableServerController)) exitWith {};
 
 if (GVAR(useACEWeather)) then {
     // Use location based real world weather data
@@ -23,7 +25,9 @@ if (GVAR(useACEWeather)) then {
         publicVariable "ACE_RAIN_PARAMS";
     };
     if (GVAR(syncWind)) then {
-        ACE_WIND_PARAMS = [wind call CBA_fnc_vectDir, 0, vectorMagnitude wind, 0, GVAR(serverUpdateInterval)];
+        //Wind _dir is the "source" of the wind [eg: "northerly wind": _dir = 0 -> wind = [0,-1,0];]
+        private _windDir = ((((wind select 0) atan2 (wind select 1)) + 180) % 360);
+        ACE_WIND_PARAMS = [_windDir, 0, vectorMagnitude wind, 0, GVAR(serverUpdateInterval)];
         publicVariable "ACE_WIND_PARAMS";
     };
     if (GVAR(syncMisc)) then {

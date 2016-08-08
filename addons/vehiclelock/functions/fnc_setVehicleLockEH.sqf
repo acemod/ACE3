@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Sets a vehicle lock state because of a "VehicleLock_SetVehicleLock" event
+ * Sets a vehicle lock state because of a "ace_vehiclelock_setVehicleLock" event
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

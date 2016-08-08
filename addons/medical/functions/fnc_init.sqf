@@ -24,6 +24,9 @@ _unit setVariable ["ACE_isUnconscious", false, true];
 // tourniquets
 _unit setVariable [QGVAR(tourniquets), [0,0,0,0,0,0], true];
 
+//Delayed Medications (from tourniquets)
+_unit setVariable [QGVAR(occludedMedications), nil, true];
+
 // wounds and injuries
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
@@ -83,4 +86,4 @@ _unit setVariable [QGVAR(allLogs), [], true];
 // items
 [{
     _this call FUNC(itemCheck);
-}, [_unit], 0.5, 0.1] call EFUNC(common,waitAndExecute);
+}, [_unit], 0.5, 0.1] call CBA_fnc_waitAndExecute;

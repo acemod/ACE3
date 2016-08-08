@@ -18,9 +18,7 @@
 
 params [["_searchOffsetOrName", 0]];
 
-private ["_validIndex", "_realIndex"];
-
-_validIndex = -1;
+private _validIndex = -1;
 
 if (_searchOffsetOrName isEqualType "") then {
     {
@@ -33,7 +31,7 @@ if (_searchOffsetOrName isEqualType "") then {
         _baseIndex = [GVAR(deviceKeyCurrentIndex) + _searchOffsetOrName, 0] select (GVAR(deviceKeyCurrentIndex) == -1);
 
         for "_offset" from _baseIndex to (count GVAR(deviceKeyHandlingArray) - 1 + _baseIndex) do {
-            _realIndex = _offset % (count GVAR(deviceKeyHandlingArray));
+            private _realIndex = _offset % (count GVAR(deviceKeyHandlingArray));
 
             if ([] call ((GVAR(deviceKeyHandlingArray) select _realIndex) select 2)) exitWith {
                 _validIndex = _realIndex;

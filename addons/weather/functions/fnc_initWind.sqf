@@ -1,35 +1,38 @@
 /*
  * Author: Ruthberg
- *
  * Inits the wind variables on mission start
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_weather_fnc_initWind
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_sum", "_rand", "_csum", "_index", "_month", "_windDirectionProbabilities"];
-_month = date select 1;
-_windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
+private _month = date select 1;
+private _windDirectionProbabilities = GVAR(WindDirectionProbabilities) select (_month - 1);
 
 ACE_wind = [0, 0, 0];
- 
+
 GVAR(wind_direction_reference) = random 360;
-_sum = 0;
+private _sum = 0;
 for "_i" from 0 to 7 do {
     _sum = _sum + (_windDirectionProbabilities select _i);
 };
-_rand = random _sum;
-_csum = [0, 0, 0, 0, 0, 0, 0, 0];
+private _rand = random _sum;
+private _csum = [0, 0, 0, 0, 0, 0, 0, 0];
 for "_i" from 0 to 7 do {
     for "_j" from 0 to _i do {
         _csum set [_i, (_csum select _i) + (_windDirectionProbabilities select _j)];
     };
 };
-_index = 0;
+private _index = 0;
 for "_i" from 0 to 7 do {
     if (_rand > (_csum select _i)) then {
         _index = _index + 1;

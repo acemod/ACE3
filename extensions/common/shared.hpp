@@ -1,5 +1,9 @@
 #pragma once
 
+//_USE_MATH_DEFINES + cmath needs to be first or M_PI won't be defined in VS2015
+#define _USE_MATH_DEFINES
+#include <cmath>
+
 #include "targetver.h"
 #include <assert.h>
 #include <stdio.h>
@@ -11,7 +15,6 @@
 #include <map>
 #include <unordered_map>
 #include <memory>
-#include <cmath>
 #include <cstdint>
 #include <streambuf>
 #include "ace_version.hpp"

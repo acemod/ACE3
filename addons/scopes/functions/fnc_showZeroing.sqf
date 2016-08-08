@@ -45,13 +45,13 @@ _vertical ctrlSetText (str _elevation);
 _horizontal ctrlSetText (str _windage);
 
 // Set the time when to hide the knobs
-GVAR(timeToHide) = ACE_diagTime + 3.0;
+GVAR(timeToHide) = diag_tickTime + 3.0;
 
 if !(isNil QGVAR(fadePFH)) exitWith {};
 
 // Launch a PFH to wait and fade out the knobs
 GVAR(fadePFH) = [{
-    if (ACE_diagTime >= GVAR(timeToHide)) exitWith {
+    if (diag_tickTime >= GVAR(timeToHide)) exitWith {
         private "_layer";
         params ["", "_pfhId"];
         _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;

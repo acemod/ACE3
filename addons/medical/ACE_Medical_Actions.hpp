@@ -6,7 +6,7 @@ class ACE_Head {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,0,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
     class Bandage {
         displayName = CSTRING(Bandage);
@@ -16,8 +16,7 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     // Advanced medical
     class FieldDressing {
@@ -28,29 +27,28 @@ class ACE_Head {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'head', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
         condition = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'head', 'ElasticBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class QuikClot: fieldDressing {
         displayName = CSTRING(Actions_QuikClot);
         condition = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'head', 'QuikClot')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class CheckPulse: fieldDressing {
         displayName = CSTRING(Actions_CheckPulse);
@@ -85,7 +83,7 @@ class ACE_Torso {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,1,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
     class Bandage {
         displayName = CSTRING(Bandage);
@@ -95,9 +93,8 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
         enableInside = 1;
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PlaceInBodyBag {
         displayName = CSTRING(PlaceInBodyBag);
@@ -107,7 +104,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
     };
     class TriageCard {
@@ -118,9 +114,8 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
-        icon = PATHTOF(UI\icons\triageCard.paa);
+        icon = QPATHTOF(UI\icons\triageCard.paa);
     };
     class Diagnose {
         displayName = CSTRING(Actions_Diagnose);
@@ -130,7 +125,6 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         icon = "";
     };
 
@@ -143,37 +137,36 @@ class ACE_Torso {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
         enableInside = 1;
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
         condition = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'ElasticBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class QuikClot: fieldDressing {
         displayName = CSTRING(Actions_QuikClot);
         condition = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'QuikClot')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class SurgicalKit: fieldDressing {
         displayName = CSTRING(Use_SurgicalKit);
         condition = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'body', 'SurgicalKit')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\surgicalKit.paa);
+        icon = QPATHTOF(UI\icons\surgicalKit.paa);
     };
     class PersonalAidKit: fieldDressing {
         displayName = CSTRING(Use_Aid_Kit);
@@ -197,7 +190,7 @@ class ACE_ArmLeft {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,2,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
@@ -208,8 +201,7 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
 
     // Advanced medical
@@ -221,64 +213,70 @@ class ACE_ArmLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'ElasticBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class QuikClot: fieldDressing {
         displayName = CSTRING(Actions_QuikClot);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'QuikClot')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class Tourniquet: fieldDressing {
         displayName = CSTRING(Actions_Tourniquet);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Tourniquet')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\tourniquet.paa);
+        icon = QPATHTOF(UI\icons\tourniquet.paa);
     };
     class Morphine: fieldDressing {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Morphine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Adenosine);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Adenosine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Atropine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Epinephrine: Morphine {
         displayName = CSTRING(Inject_Epinephrine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'Epinephrine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class BloodIV: fieldDressing {
         displayName = CSTRING(Actions_Blood4_1000);
         condition = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_l', 'BloodIV')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\iv.paa);
+        icon = QPATHTOF(UI\icons\iv.paa);
     };
     class BloodIV_500: BloodIV {
         displayName = CSTRING(Actions_Blood4_500);
@@ -355,7 +353,7 @@ class ACE_ArmRight {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,3,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
@@ -366,8 +364,7 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
 
     // Advanced medical
@@ -379,15 +376,14 @@ class ACE_ArmRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
@@ -406,14 +402,22 @@ class ACE_ArmRight {
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Tourniquet')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\tourniquet.paa);
+        icon = QPATHTOF(UI\icons\tourniquet.paa);
     };
     class Morphine: fieldDressing {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Morphine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
+    };
+
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Adenosine);
+        condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'Adenosine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
@@ -432,7 +436,7 @@ class ACE_ArmRight {
         condition = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'hand_r', 'BloodIV')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\iv.paa);
+        icon = QPATHTOF(UI\icons\iv.paa);
     };
     class BloodIV_500: BloodIV {
         displayName = CSTRING(Actions_Blood4_500);
@@ -510,7 +514,7 @@ class ACE_LegLeft {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,4,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
@@ -521,8 +525,7 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
 
 
@@ -535,15 +538,14 @@ class ACE_LegLeft {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
@@ -562,21 +564,28 @@ class ACE_LegLeft {
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Tourniquet')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\tourniquet.paa);
+        icon = QPATHTOF(UI\icons\tourniquet.paa);
     };
     class Morphine: fieldDressing {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Morphine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Atropine);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Adenosine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'Atropine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Epinephrine: Morphine {
         displayName = CSTRING(Inject_Epinephrine);
@@ -589,7 +598,7 @@ class ACE_LegLeft {
         condition = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_l', 'BloodIV')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\iv.paa);
+        icon = QPATHTOF(UI\icons\iv.paa);
     };
     class BloodIV_500: BloodIV {
         displayName = CSTRING(Actions_Blood4_500);
@@ -653,7 +662,7 @@ class ACE_LegRight {
     ACTION_CONDITION
     modifierFunction = QUOTE([ARR_4(_target,_player,5,_this select 3)] call FUNC(modifyMedicalAction));
     EXCEPTIONS
-    icon = PATHTOF(UI\icons\medical_cross.paa);
+    icon = QPATHTOF(UI\icons\medical_cross.paa);
     distance = MEDICAL_ACTION_DISTANCE;
 
     class Bandage {
@@ -664,8 +673,7 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 1;
         priority = 2;
-        hotkey = "B";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
 
 
@@ -678,15 +686,14 @@ class ACE_LegRight {
         EXCEPTIONS
         showDisabled = 0;
         priority = 2;
-        hotkey = "";
-        icon = PATHTOF(UI\icons\bandage.paa);
+        icon = QPATHTOF(UI\icons\bandage.paa);
     };
     class PackingBandage: fieldDressing {
         displayName = CSTRING(Actions_PackingBandage);
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'PackingBandage')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\packingBandage.paa);
+        icon = QPATHTOF(UI\icons\packingBandage.paa);
     };
     class ElasticBandage: fieldDressing {
         displayName = CSTRING(Actions_ElasticBandage);
@@ -705,14 +712,21 @@ class ACE_LegRight {
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Tourniquet')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\tourniquet.paa);
+        icon = QPATHTOF(UI\icons\tourniquet.paa);
     };
     class Morphine: fieldDressing {
         displayName = CSTRING(Inject_Morphine);
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Morphine')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\autoInjector.paa);
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
+    };
+    class Adenosine: Morphine {
+        displayName = CSTRING(Inject_Atropine);
+        condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(canTreatCached));
+        statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'Adenosine')] call DFUNC(treatment));
+        EXCEPTIONS
+        icon = QPATHTOF(UI\icons\autoInjector.paa);
     };
     class Atropine: Morphine {
         displayName = CSTRING(Inject_Atropine);
@@ -731,7 +745,7 @@ class ACE_LegRight {
         condition = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(canTreatCached));
         statement = QUOTE([ARR_4(_player, _target, 'leg_r', 'BloodIV')] call DFUNC(treatment));
         EXCEPTIONS
-        icon = PATHTOF(UI\icons\iv.paa);
+        icon = QPATHTOF(UI\icons\iv.paa);
     };
     class BloodIV_500: BloodIV {
         displayName = CSTRING(Actions_Blood4_500);

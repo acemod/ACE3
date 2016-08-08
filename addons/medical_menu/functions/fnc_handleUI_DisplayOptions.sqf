@@ -44,7 +44,7 @@ if (_name isEqualTo "toggle") exitWith {
     closeDialog 0;
     [{
         [_this select 0] call FUNC(openMenu);
-    }, [_newTarget], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_newTarget], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 // Clean the dropdown options list from all actions
@@ -77,7 +77,7 @@ if (_name isEqualTo "triage") exitWith {
                 _message = localize _message;
             };
         };
-        _triageCardTexts pushBack format["%1x - %2 (%3m)", _amount, _message, round((ACE_gameTime - _time) / 60)];
+        _triageCardTexts pushBack format["%1x - %2 (%3m)", _amount, _message, round((CBA_missionTime - _time) / 60)];
         nil;
     } count _log;
 

@@ -19,9 +19,9 @@ _requestID = ("ace_recieveRequest_f_id_"+_requestID);
 _target setVariable [_requestID, _this];
 
 if (isLocalized _requestMessage) then {
-    _requestMessage = format [localize _requestMessage, [_caller] call FUNC(getName)];
+    _requestMessage = format [localize _requestMessage, [_caller, false, true] call FUNC(getName)];
 } else {
-    _requestMessage = format [_requestMessage, [_caller] call FUNC(getName)];
+    _requestMessage = format [_requestMessage, [_caller, false, true] call FUNC(getName)];
 };
 
 hint format ["%1", _requestMessage]; // @todo ?
@@ -45,18 +45,17 @@ GVAR(RECIEVE_REQUEST_ADD_ACTION_DECLINE) = _target addAction ["Decline", compile
 
 GVAR(RECIEVE_REQUEST_ID_KEY_BINDING) = _requestID;
 
-GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [ACE_time, _target, _requestID] spawn { // @todo
+GVAR(RECIEVE_REQUEST_TIME_OUT_SCRIPT) = [CBA_missionTime, _target, _requestID] spawn { // @todo
     params ["_time", "_target", "_requestID"];
 
     _time = _time + 40;
 
-    private "_id";
-    _id = _target getVariable _requestID;
+    private _id = _target getVariable _requestID;
 
     waitUntil {
         _id = _target getVariable _requestID;
 
-        (ACE_time > _time || isNil "_id")
+        (CBA_missionTime > _time || isNil "_id")
     };
 
     _target setVariable [_requestID, nil];

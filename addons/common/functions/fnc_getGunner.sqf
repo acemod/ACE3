@@ -13,14 +13,13 @@
  */
 #include "script_component.hpp"
 
-params ["_vehicle", "_weapon"];
+params [["_vehicle", objNull, [objNull]], ["_weapon", "", [""]]];
 
 // on foot
 if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
 // inside vehicle
-private "_gunner";
-_gunner = objNull;
+private _gunner = objNull;
 
 {
     if (_weapon in (_vehicle weaponsTurret _x)) exitWith {
@@ -31,7 +30,7 @@ _gunner = objNull;
 
 // ensure that at least the pilot is returned if there is no gunner
 if (isManualFire _vehicle && {isNull _gunner}) then {
-    _gunner = driver _vehicle;
+    _gunner = effectiveCommander _vehicle;
 };
 
 _gunner

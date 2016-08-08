@@ -8,7 +8,7 @@ class CfgVehicles {
         class NewTurret {
             GVAR(Enabled) = 0;
             GVAR(MinDistance) = 200;
-            GVAR(MaxDistance) = 9990;
+            GVAR(MaxDistance) = 5500;
             GVAR(DistanceInterval) = 5;
             class Turrets;
         };
@@ -26,7 +26,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = CSTRING(ResetFCS);
-                condition = QUOTE(call FUNC(canResetFCS));
+                condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
@@ -39,7 +39,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ResetFCS {
                 displayName = CSTRING(ResetFCS);
-                condition = QUOTE(call FUNC(canResetFCS));
+                condition = QUOTE(_player call FUNC(canResetFCS));
                 statement = QUOTE([ARR_2(vehicle _player,[_player] call DEFUNC(common,getTurretIndex))] call DFUNC(reset););
                 showDisabled = 0;
                 priority = 1;
@@ -86,9 +86,14 @@ class CfgVehicles {
     class MRAP_01_base_F: Car_F {};
 
     class MRAP_01_gmg_base_F: MRAP_01_base_F {
-        /*class Turrets: Turrets {
-            class MainTurret: MainTurret {};
-        };*/
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MaxDistance) = 2000;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
     };
 
     class MRAP_01_hmg_base_F: MRAP_01_gmg_base_F {
@@ -104,9 +109,14 @@ class CfgVehicles {
     class MRAP_02_base_F: Car_F {};
 
     class MRAP_02_hmg_base_F: MRAP_02_base_F {
-        /*class Turrets: Turrets {
-            class MainTurret: MainTurret {};
-        };*/
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MaxDistance) = 2000;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
     };
 
     class MRAP_02_gmg_base_F: MRAP_02_hmg_base_F {
@@ -120,16 +130,24 @@ class CfgVehicles {
     };
 
     class MRAP_03_base_F: Car_F {
-        /*class Turrets: Turrets {
-            class CommanderTurret: MainTurret {};
-        };*/
+        class Turrets: Turrets {
+            class CommanderTurret: MainTurret {
+                GVAR(Enabled) = 0;
+            };
+        };
     };
 
     class MRAP_03_hmg_base_F: MRAP_03_base_F {
-        /*class Turrets: Turrets {
-            class MainTurret: MainTurret {};
-            class CommanderTurret: CommanderTurret {};
-        };*/
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MaxDistance) = 2000;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;};
+            class CommanderTurret: CommanderTurret {
+                GVAR(Enabled) = 0;
+            };
+        };
     };
 
     class MRAP_03_gmg_base_F: MRAP_03_hmg_base_F {
@@ -162,13 +180,16 @@ class CfgVehicles {
     };
 
     class APC_Wheeled_02_base_F: Wheeled_APC_F {
-        /*class Turrets: Turrets {
+        class Turrets: Turrets {
             class MainTurret: MainTurret {
-                class Turrets;
+                GVAR(Enabled) = 1;
+                GVAR(MaxDistance) = 2000;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
             };
 
-            class CommanderOptics: CommanderOptics {};
-        };*/
+            // class CommanderOptics: CommanderOptics {};
+        };
     };
 
     class APC_Wheeled_03_base_F: Wheeled_APC_F {
@@ -210,7 +231,10 @@ class CfgVehicles {
     class B_APC_Tracked_01_rcws_F: B_APC_Tracked_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                GVAR(Enabled) = 0;
+                GVAR(Enabled) = 1;
+                GVAR(MaxDistance) = 2000;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
             };
             class CommanderOptics: CommanderOptics {};
         };
@@ -294,14 +318,36 @@ class CfgVehicles {
 
     class B_MBT_01_cannon_F: B_MBT_01_base_F {};
 
+    class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
+            };
+        };
+    };
+
     class MBT_01_arty_base_F: MBT_01_base_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 GVAR(Enabled) = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        GVAR(MaxDistance) = 2000;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -321,9 +367,13 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -333,9 +383,14 @@ class CfgVehicles {
             class MainTurret: MainTurret {
                 GVAR(Enabled) = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
+                class Turrets: Turrets {
+                    class CommanderOptics: CommanderOptics {
+                        GVAR(Enabled) = 1;
+                        GVAR(MaxDistance) = 2000;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
+                    };
+                };
             };
         };
     };
@@ -346,22 +401,11 @@ class CfgVehicles {
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;
 
-                /*class Turrets: Turrets {
-                    class CommanderOptics: CommanderOptics {};
-                };*/
-            };
-        };
-    };
-
-    class B_MBT_01_TUSK_F: B_MBT_01_cannon_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;
-
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
                         GVAR(Enabled) = 1;
+                        discreteDistance[] = {};
+                        discreteDistanceInitIndex = 0;
                     };
                 };
             };
@@ -369,7 +413,7 @@ class CfgVehicles {
     };
 
     // SHIPS
-    /*class Ship: AllVehicles {
+    class Ship: AllVehicles {
         class Turrets {
             class MainTurret;
         };
@@ -381,17 +425,20 @@ class CfgVehicles {
 
     class Boat_Armed_01_base_F: Boat_F {
         class Turrets: Turrets {
-            class FrontTurret;
-            class RearTurret: FrontTurret {};
+            class FrontTurret: NewTurret {
+                GVAR(enabled) = 1;
+                GVAR(minDistance) = 100;
+                GVAR(maxDistance) = 2000;
+                GVAR(distanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+            class RearTurret: FrontTurret {
+                discreteDistance[] = {100,200,300,400,600,800,1000,1200};  // Originally inherited from FrontTurret
+                discreteDistanceInitIndex = 4;
+            };
         };
-    };*/
-
-    /*class Boat_Armed_01_minigun_base_F: Boat_Armed_01_base_F {
-        class Turrets: Turrets {
-            class FrontTurret: FrontTurret {};
-            class RearTurret: RearTurret {};
-        };
-    };*/
+    };
 
     // AIR VEHICLES
     class Air: AllVehicles {};
@@ -519,8 +566,24 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 GVAR(Enabled) = 1;
-                GVAR(MinDistance) = 100;
-                GVAR(MaxDistance) = 1500;
+                GVAR(MinDistance) = 200;
+                GVAR(MaxDistance) = 2000;
+                GVAR(DistanceInterval) = 5;
+                discreteDistance[] = {};
+                discreteDistanceInitIndex = 0;
+            };
+        };
+    };
+
+    class StaticGrenadeLauncher: StaticWeapon {};
+    class GMG_TriPod: StaticGrenadeLauncher {};
+
+    class GMG_01_base_F: GMG_TriPod {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                GVAR(Enabled) = 1;
+                GVAR(MinDistance) = 200;
+                GVAR(MaxDistance) = 2000;
                 GVAR(DistanceInterval) = 5;
                 discreteDistance[] = {};
                 discreteDistanceInitIndex = 0;

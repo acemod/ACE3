@@ -19,7 +19,7 @@
 #define ICON_TEXT_ALIGN "left"
 #define ICON_ANGLE 0
 #define ICON_SHADOW 1
-#define TEXT_FONT "PuristaBold"
+#define TEXT_FONT "RobotoCondensedBold"
 #define TEXT_ICON_RENDER_SIZE 20
 #define TEXT_SIZE 0.030
 #define TEXT_SHADOW 0
@@ -46,8 +46,8 @@ params ["_mapHandle"];
             _grpName = groupID _group;
 
             // If color settings for the group exist, then use those, otherwise fall back to the default colors
-            _color = if (HASH_HASKEY(GVAR(GroupColorConfigurationMapping),_grpName)) then {
-                (GVAR(GroupColorConfigurations) select (HASH_GET(GVAR(GroupColorConfigurationMapping),_grpName))) select (_x != leader _group)
+            _color = if ([GVAR(GroupColorConfigurationMapping), _grpName] call CBA_fnc_hashHasKey) then {
+                (GVAR(GroupColorConfigurations) select ([GVAR(GroupColorConfigurationMapping), _grpName] call CBA_fnc_hashGet)) select (_x != leader _group)
             } else {
                 if (_x == leader _group) then {GVAR(defaultLeadColor)} else {GVAR(defaultColor)};
             };
