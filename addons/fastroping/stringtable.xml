@@ -21,7 +21,7 @@
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Exstraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
-            <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам</Russian>
+            <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
@@ -95,7 +95,7 @@
             <Italian>SCENDI DALLE CORDE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
             <French>LAISSER LES UNITES UTILISER LA CORDE </French>
-            <Russian>ПОЗВОЛИТЬ ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
+            <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
         </Key>
     </Package>
 </Project>
