@@ -4,8 +4,8 @@ class RscStructuredText;
 class RscTitles {
     class GVAR(singleTag) {
         idd = -1;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(tag)),_this select 0)]);
-        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(tag)),nil)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),_this select 0)]);
+        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),nil)]);
         movingEnable = false;
         duration = 5;
         fadeIn = 0.2;
@@ -49,8 +49,8 @@ class RscTitles {
     };
     class GVAR(doubleTag): GVAR(singleTag) {
         idd = -1;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(tag)),_this select 0)]);
-        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(tag)),nil)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),_this select 0)]);
+        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(tag),nil)]);
 
         class controls: controls {
             class background: background {
