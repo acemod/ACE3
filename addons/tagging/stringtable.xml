@@ -1,45 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
-        <Key ID="STR_ACE_Tagging_TagBlack">
-            <English>Tag black</English>
-            <German>Schwarz markieren</German>
-            <Spanish>Marcar en negro</Spanish>
-            <Polish>Oznakuj na czarno</Polish>
-            <French>Tag noir</French>
-            <Italian>Marca nero</Italian>
-            <Czech>Označit černě</Czech>
-            <Portuguese>Marcar em preto</Portuguese>
+        <Key ID="STR_ACE_Tagging_Tagging">
+            <English>Tagging</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagRed">
-            <English>Tag red</English>
-            <German>Rot markieren</German>
-            <Spanish>Marcar en rojo</Spanish>
-            <Polish>Oznakuj na czerwono</Polish>
-            <French>Tag rouge</French>
-            <Italian>Marca rosso</Italian>
-            <Czech>Označit červeně</Czech>
-            <Portuguese>Marcar em vermelho</Portuguese>
+        <Key ID="STR_ACE_Tagging_ModuleDesc">
+            <English>Configure how the tagging system will operate by default.</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagGreen">
-            <English>Tag green</English>
-            <German>Grün markieren</German>
-            <Spanish>Marcar en verde</Spanish>
-            <Polish>Oznakuj na zielono</Polish>
-            <French>Tag vert</French>
-            <Italian>Marca verde</Italian>
-            <Czech>Označit zeleně</Czech>
-            <Portuguese>Marcar em verde</Portuguese>
+        <Key ID="STR_ACE_Tagging_QuickTag">
+            <English>Quick Tag</English>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagBlue">
-            <English>Tag blue</English>
-            <German>Blau markieren</German>
-            <Spanish>Marcar en azul</Spanish>
-            <Polish>Oznakuj na niebiesko</Polish>
-            <French>Tag bleu</French>
-            <Italian>Marca blu</Italian>
-            <Czech>Označit modře</Czech>
-            <Portuguese>Marcar em azul</Portuguese>
+        <Key ID="STR_ACE_Tagging_QuickTagDesc">
+            <English>Action performed on main tag interaction point.</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_LastUsed">
+            <English>Last Used</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_RandomX">
+            <English>Random X</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Random">
+            <English>Random</English>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Tag">
+            <English>Tag</English>
+            <German>Markieren</German>
+            <Spanish>Marcar</Spanish>
+            <Polish>Oznakuj</Polish>
+            <French>Tag</French>
+            <Italian>Marca</Italian>
+            <Czech>Označit</Czech>
+            <Portuguese>Marcar</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XBlack">
+            <English>X black</English>
+            <German>Schwarz X</German>
+            <Spanish>X en negro</Spanish>
+            <Polish>X na czarno</Polish>
+            <French>X noir</French>
+            <Italian>X nero</Italian>
+            <Czech>X černě</Czech>
+            <Portuguese>X em preto</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XRed">
+            <English>X red</English>
+            <German>Rot X</German>
+            <Spanish>X en rojo</Spanish>
+            <Polish>X na czerwono</Polish>
+            <French>X rouge</French>
+            <Italian>X rosso</Italian>
+            <Czech>X červeně</Czech>
+            <Portuguese>X em vermelho</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XGreen">
+            <English>X green</English>
+            <German>Grün X</German>
+            <Spanish>X en verde</Spanish>
+            <Polish>X na zielono</Polish>
+            <French>X vert</French>
+            <Italian>X verde</Italian>
+            <Czech>X zeleně</Czech>
+            <Portuguese>X em verde</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XBlue">
+            <English>X blue</English>
+            <German>Blau X</German>
+            <Spanish>X en azul</Spanish>
+            <Polish>X na niebiesko</Polish>
+            <French>X bleu</French>
+            <Italian>X blu</Italian>
+            <Czech>X modře</Czech>
+            <Portuguese>X em azul</Portuguese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>

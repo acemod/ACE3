@@ -35,15 +35,15 @@ private _processedCfgAmmos = [];
         
             _warn = false;
 
-            _fragTypes = getArray (_ammoConfig >> "ACE_frag_CLASSES");
+            _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
             if(_fragTypes isEqualTo []) then {_warn = true;};
-            _c = getNumber(_ammoConfig >> "ACE_frag_CHARGE");
+            _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
             if(_c == 0) then {_warn = true;};
-            _m = getNumber(_ammoConfig >> "ACE_frag_METAL");
+            _m = getNumber(_ammoConfig >> QGVAR(METAL));
             if(_m == 0) then {_warn = true;};
-            _k = getNumber(_ammoConfig >> "ACE_frag_GURNEY_K");
+            _k = getNumber(_ammoConfig >> QGVAR(GURNEY_K));
             if(_k == 0) then {_warn = true;};
-            _gC = getNumber(_ammoConfig >> "ACE_frag_GURNEY_C");
+            _gC = getNumber(_ammoConfig >> QGVAR(GURNEY_C));
             if(_gC == 0) then { _warn = true;};
 
             if(_debugMissing && _warn) then {
@@ -51,7 +51,7 @@ private _processedCfgAmmos = [];
                 diag_log text format [" - _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5",_c,_m,_k,_gC,_fragTypes];
             };
         } else {
-            if (_debugNonFrag && {isArray (_ammoConfig >> "ACE_frag_CLASSES")}) then {
+            if (_debugNonFrag && {isArray (_ammoConfig >> QGVAR(CLASSES))}) then {
                 diag_log text format ["Ammo [%1] from Mag [%2] has frag configs but will NOT frag:",_ammo,configName _x];
                 diag_log text format ["- skip=%1,explosive=%2,indirectHitRange=%3,force=%4,fragPower=%5",_skip,_explosive,_indirectRange,_force,_fragPower];
             };

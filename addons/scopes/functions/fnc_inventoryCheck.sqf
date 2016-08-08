@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_newOptics", "_adjustment"];
-
 params ["_player"];
 
-_adjustment = ACE_player getVariable QGVAR(Adjustment);
+private _adjustment = ACE_player getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
     // [Windage, Elevation, Zero]
     _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
@@ -30,7 +28,7 @@ if (isNil "_adjustment") then {
 if (isNil QGVAR(Optics)) then {
     GVAR(Optics) = ["", "", ""];
 };
-_newOptics = [_player] call FUNC(getOptics);
+private _newOptics = [_player] call FUNC(getOptics);
 
 {
     if (_newOptics select _forEachIndex != _x) then {
