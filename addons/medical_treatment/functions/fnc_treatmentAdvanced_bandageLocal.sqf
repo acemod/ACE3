@@ -158,7 +158,7 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
     } forEach _currentWounds;
 
     // ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
-    private _bodyStatus = _target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+    private _bodyStatus = _target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]];
 
     // Any body part that has no wounds is healed to full health
     if (_headWounds == 0) then {
@@ -180,9 +180,9 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
         _bodyStatus set [5, 0];
     };
 
-    _target setVariable [QGVAR(bodyPartStatus), _bodyStatus, true];
+    _target setVariable [QEGVAR(medical,bodyPartStatus), _bodyStatus, true];
 
-    [_target] call FUNC(handleDamage_advancedSetDamage);
+    [_target] call EFUNC(medical_damage,setDamage);
 };
 
 true;
