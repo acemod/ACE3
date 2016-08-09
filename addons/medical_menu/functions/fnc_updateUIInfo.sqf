@@ -153,6 +153,6 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
 [_display, _target getVariable [QEGVAR(medical,logFile_activity_view), []]] call FUNC(updateActivityLog);
 [_display, _target getVariable [QEGVAR(medical,logFile_quick_view), []]] call FUNC(updateQuickViewLog);
 
-private _triageStatus = [_target] call EFUNC(medical,getTriageStatus);
+private _triageStatus = [_target] call EFUNC(medical_treatment,getTriageStatus);
 (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);
 (_display displayCtrl 2000) ctrlSetBackgroundColor (_triageStatus select 2);

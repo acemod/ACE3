@@ -85,8 +85,8 @@ private _locations = getArray (_config >> "treatmentLocations");
 if ("All" in _locations) then {
     _return = true;
 } else {
-    private _medFacility = {([_caller] call FUNC(isInMedicalFacility)) || ([_target] call FUNC(isInMedicalFacility))};
-    private _medVeh = {([_caller] call FUNC(isInMedicalVehicle)) || ([_target] call FUNC(isInMedicalVehicle))};
+    private _medFacility = {([_caller] call EFUNC(medical,isInMedicalFacility)) || ([_target] call EFUNC(medical,isInMedicalFacility))};
+    private _medVeh = {([_caller] call EFUNC(medical,isInMedicalVehicle)) || ([_target] call EFUNC(medical,isInMedicalVehicle))};
 
     {
         if (_x == "field") exitwith {_return = true;};
