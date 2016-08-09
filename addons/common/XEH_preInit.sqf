@@ -16,8 +16,8 @@ DFUNC(selectWeaponMode) = {
     _this call CBA_fnc_selectWeapon;
 };
 
-GVAR(syncedEvents) = HASH_CREATE;
-GVAR(showHudHash) = [] call FUNC(hashCreate);
+GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
+GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];
