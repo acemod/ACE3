@@ -5,5 +5,5 @@ ACE_LOGINFO("Laser Emitter Dump");
 
 {
     ACE_LOGINFO_1("  %1", _x);
-    ACE_LOGINFO_1("    %1",HASH_GET(GVAR(laserEmitters),_x));
-} forEach GVAR(laserEmitters) select 0;
+    ACE_LOGINFO_1("    %1",[ARR_2(GVAR(laserEmitters),_x)] call CBA_fnc_hashGet);
+} forEach (GVAR(laserEmitters) select 1);

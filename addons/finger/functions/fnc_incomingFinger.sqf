@@ -28,8 +28,9 @@ private _fingerPos = if (_sourceUnit == ACE_player) then {
 TRACE_3("incoming finger:", _sourceUnit, _fingerPosPrecise, _fingerPos);
 
 private _data = [diag_tickTime, _fingerPos, ([_sourceUnit, false, true] call EFUNC(common,getName))];
-HASH_SET(GVAR(fingersHash), _sourceUnit, _data);
+[GVAR(fingersHash), _sourceUnit, _data] call CBA_fnc_hashSet;
 
 if (GVAR(pfeh_id) == -1) then {
     GVAR(pfeh_id) = [DFUNC(perFrameEH), 0, []] call CBA_fnc_addPerFrameHandler;
+    TRACE_1("Started PFEH", GVAR(pfeh_id));
 };
