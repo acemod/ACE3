@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Server: creates new dogtag item and send it to client
+ * Server: creates new dogtag item and send it to client.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -8,6 +8,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player, unit] call ace_dogtags_fnc_getDogtagItem
  *
  * Public: No
  */
