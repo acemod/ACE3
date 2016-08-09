@@ -59,3 +59,5 @@ if (!hasInterface) exitWith {};
 
     _receiver addMagazine _magazine;
 }] call CBA_fnc_addEventHandler;
+
+["loadout", {call FUNC(onInventoryChanged)}] call CBA_fnc_addPlayerEventHandler;
