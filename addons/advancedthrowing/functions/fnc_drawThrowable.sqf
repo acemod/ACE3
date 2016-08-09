@@ -102,12 +102,12 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
 
     // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
     if (lineIntersects [AGLtoASL _posCameraWorld, _posFin vectorDiff _posCameraWorld]) then {
-        ACE_player setVariable [QGVAR(dropDistance), (ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT] - 0.1) max DROP_DISTANCE_DEFAULT]
+        ACE_player setVariable [QGVAR(dropDistance), ((ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]) - 0.1) max DROP_DISTANCE_DEFAULT];
     };
 } else {
     private _xAdjustBonus = [0, -0.075] select (_throwType == "high");
     private _yAdjustBonus = [0, 0.1] select (_throwType == "high");
-    private _cameraOffset = [_leanCoef, 0, 0.3] vectorAdd [-0.05, -0.12, -0.03] vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
+    private _cameraOffset = [_leanCoef, 0, 0.3] vectorAdd [-0.1, -0.15, -0.03] vectorAdd [_xAdjustBonus, _yAdjustBonus, 0];
 
     _posFin = _posFin vectorAdd (positionCameraToWorld _cameraOffset);
 

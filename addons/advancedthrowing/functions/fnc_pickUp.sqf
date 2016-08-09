@@ -30,7 +30,7 @@ if (!isNull _attachedTo) then {
 
 // Change locality for manipulation (some commands require local object, such as setVelocity)
 if (!local _activeThrowable) then {
-    ["setOwner", [_activeThrowable, clientOwner]] call EFUNC(common,serverEvent);
+    ["ace_setOwner", [_activeThrowable, clientOwner]] call CBA_fnc_serverEvent;
 };
 
 // Invoke listenable event

@@ -30,7 +30,7 @@ private _throwType = ACE_player getVariable [QGVAR(throwType), THROW_TYPE_DEFAUL
 private _throwSpeed = ACE_player getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 
 private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
-private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF] select (_throwType == "high");
+private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.25] select (_throwType == "high");
 _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
 private _viewStart = AGLToASL (positionCameraToWorld [0, 0, 0]);
