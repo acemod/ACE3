@@ -273,8 +273,3 @@ PREP(hashSet);
 PREP(hashGet);
 PREP(hashHasKey);
 PREP(hashRem);
-PREP(hashListCreateList);
-PREP(hashListCreateHash);
-PREP(hashListSelect);
-PREP(hashListSet);
-PREP(hashListPush);
