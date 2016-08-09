@@ -11,7 +11,7 @@ class Cfg3DEN {
                         expression = QUOTE(if (_value) then {[ARR_3(objNull,[_this],true)] call FUNC(moduleHandcuffed)});
                         typeName = "BOOL";
                         condition = "objectBrain";
-                        defaultValue = false;
+                        defaultValue = "(false)";
                     };
                     class ace_isSurrendered {
                         property = QUOTE(ace_isSurrendered);
@@ -21,7 +21,7 @@ class Cfg3DEN {
                         expression = QUOTE(if (_value) then {[ARR_3(objNull,[_this],true)] call FUNC(moduleSurrender)});
                         typeName = "BOOL";
                         condition = "objectBrain";
-                        defaultValue = false;
+                        defaultValue = "(false)";
                     };
                 };
             };

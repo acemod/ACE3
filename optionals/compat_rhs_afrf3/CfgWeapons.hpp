@@ -6,7 +6,7 @@ class CfgWeapons {
         ACE_barrelLength = 111.76;
     };
     class Pistol_Base_F;
-    class rhs_weap_makarov_pmm: rhs_weap_pya {
+    class rhs_weap_makarov_pm: rhs_weap_pya {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 93.472;
     };

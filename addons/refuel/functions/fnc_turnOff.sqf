@@ -24,6 +24,7 @@ params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
+        _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
         [LSTRING(Hint_Stopped), 1.5, _unit] call EFUNC(common,displayTextStructured);
     },

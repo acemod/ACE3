@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_change_gun
+ * call ace_atragmx_fnc_change_gun
  *
  * Public: No
  */

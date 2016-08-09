@@ -37,8 +37,8 @@ if (_isPIP) then {
         GVAR(camera) camSetTarget ACE_player;
         GVAR(camera) camCommit 1;
 
-        "ace_optics_rendertarget0" setPiPEffect [0];
-        GVAR(camera) cameraEffect ["INTERNAL", "BACK", "ace_optics_rendertarget0"];
+        QGVAR(rendertarget0) setPiPEffect [0];
+        GVAR(camera) cameraEffect ["INTERNAL", "BACK", QGVAR(rendertarget0)];
 
         TRACE_2("created new pip camera",GVAR(camera),isNull GVAR(camera));
 

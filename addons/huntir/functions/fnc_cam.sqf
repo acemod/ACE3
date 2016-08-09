@@ -29,9 +29,9 @@ GVAR(ELEVAT) = 0.01;
 HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 
 closedialog 0;
-createDialog "ace_huntir_cam_dialog";
-uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18880];
-(uiNameSpace getVariable "ace_huntir_monitor") displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+createDialog QGVAR(cam_dialog);
+uiNameSpace setVariable [QGVAR(monitor), findDisplay 18880];
+(uiNameSpace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 
@@ -65,7 +65,7 @@ GVAR(no_cams) sort true;
 } forEach GVAR(no_cams);
 [{
     //Close monitor if we no longer have the item:
-    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
         closeDialog 0;
     };
 

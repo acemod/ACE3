@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(hashSet),"3.8.0","CBA_fnc_hashSet");
+
 // diag_log text format["%1 HASH SET: %2", diag_tickTime, _this];
 
 params ["_hash", "_key", "_val"];
