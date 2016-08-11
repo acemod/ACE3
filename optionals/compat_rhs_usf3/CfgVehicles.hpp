@@ -11,6 +11,80 @@
     }; \
 }
 
+#define MACRO_REARM_TRUCK_ACTIONS \
+        class ACE_Actions: ACE_Actions { \
+            class ACE_MainActions: ACE_MainActions { \
+                class EGVAR(rearm,TakeAmmo) { \
+                    displayName = ECSTRING(rearm,TakeAmmo); \
+                    distance = 7; \
+                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
+                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
+                    exceptions[] = {"isNotInside"}; \
+                    showDisabled = 0; \
+                    priority = 2; \
+                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                }; \
+                class EGVAR(rearm,StoreAmmo) { \
+                    displayName = ECSTRING(rearm,StoreAmmo); \
+                    distance = 7; \
+                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
+                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                }; \
+            }; \
+        };
+
+#define MACRO_REFUEL_ACTIONS \
+    class ACE_Actions: ACE_Actions { \
+        class ACE_MainActions: ACE_MainActions { \
+            class EGVAR(refuel,Refuel) { \
+                displayName = ECSTRING(refuel,Refuel); \
+                distance = 7; \
+                condition = "true"; \
+                statement = ""; \
+                showDisabled = 0; \
+                priority = 2; \
+                icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                class EGVAR(refuel,TakeNozzle) { \
+                    displayName = ECSTRING(refuel,TakeNozzle); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canTakeNozzle)); \
+                    statement = QUOTE([ARR_3(_player,_target,objNull)] call EFUNC(refuel,TakeNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,CheckFuelCounter) { \
+                    displayName = ECSTRING(refuel,CheckFuelCounter); \
+                    condition = "true"; \
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,readFuelCounter)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,CheckFuel) { \
+                    displayName = ECSTRING(refuel,CheckFuel); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canCheckFuel)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,checkFuel)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,Connect) { \
+                    displayName = ECSTRING(refuel,Connect); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canConnectNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,connectNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,Return) { \
+                    displayName = ECSTRING(refuel,Return); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canReturnNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,returnNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+            }; \
+        }; \
+    };
+
 class CfgVehicles {
     class LandVehicle;
     class Tank: LandVehicle {
@@ -196,6 +270,53 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 219;
     };
 
+    class rhsusf_M977A4_usarmy_wd;
+    class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+
+    class rhsusf_M977A4_BKIT_usarmy_wd;
+    class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+
+    class rhsusf_M977A4_BKIT_M2_usarmy_wd;
+    class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+
+    class rhsusf_M978A4_usarmy_wd: rhsusf_M977A4_usarmy_wd {
+        transportFuel = 0;
+        MACRO_REFUEL_ACTIONS
+        EGVAR(refuel,hooks)[] = {{-0.44,-4.87,0}, {0.5,-4.87,0}};
+        EGVAR(refuel,fuelCargo) = 10000;
+    };
+
+    class rhsusf_M978A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {
+        transportFuel = 0;
+        MACRO_REFUEL_ACTIONS
+        EGVAR(refuel,hooks)[] = {{-0.44,-4.87,0}, {0.5,-4.87,0}};
+        EGVAR(refuel,fuelCargo) = 10000;
+    };
+
+    class rhsusf_M977A4_REPAIR_usarmy_wd: rhsusf_M977A4_usarmy_wd {
+        transportRepair = 0;
+        EGVAR(repair,canRepair) = 1;
+    };
+
+    class rhsusf_M977A4_REPAIR_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
+        transportRepair = 0;
+        EGVAR(repair,canRepair) = 1;
+    };
+
+    class rhsusf_M977A4_REPAIR_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
+        transportRepair = 0;
+        EGVAR(repair,canRepair) = 1;
+    };
+
     class APC_Tracked_02_base_F: Tank_F {};
     class rhsusf_m113_tank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
@@ -204,6 +325,12 @@ class CfgVehicles {
                 ace_fcs_Enabled = 0;
             };
         };
+    };
+
+    class rhsusf_m113_usarmy;
+    class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class APC_Tracked_03_base_F;
