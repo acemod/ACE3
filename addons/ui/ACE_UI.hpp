@@ -1,7 +1,3 @@
-#define ANYWHERE 0
-#define GROUND_ONLY 1
-#define VEHICLE_ONLY 2
-
 class ACE_UI {
     class weaponName {
         idd = 300;
