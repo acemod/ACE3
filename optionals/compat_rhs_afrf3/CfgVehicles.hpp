@@ -9,7 +9,7 @@
                     exceptions[] = {"isNotInside"}; \
                     showDisabled = 0; \
                     priority = 2; \
-                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
                 }; \
                 class EGVAR(rearm,StoreAmmo) { \
                     displayName = ECSTRING(rearm,StoreAmmo); \
@@ -17,7 +17,7 @@
                     condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
                     statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
                 }; \
             }; \
         };
@@ -32,41 +32,41 @@
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
-                icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 class EGVAR(refuel,TakeNozzle) { \
                     displayName = ECSTRING(refuel,TakeNozzle); \
                     condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canTakeNozzle)); \
                     statement = QUOTE([ARR_3(_player,_target,objNull)] call EFUNC(refuel,TakeNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
                 class EGVAR(refuel,CheckFuelCounter) { \
                     displayName = ECSTRING(refuel,CheckFuelCounter); \
                     condition = "true"; \
                     statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,readFuelCounter)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
                 class EGVAR(refuel,CheckFuel) { \
                     displayName = ECSTRING(refuel,CheckFuel); \
                     condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canCheckFuel)); \
                     statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,checkFuel)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
                 class EGVAR(refuel,Connect) { \
                     displayName = ECSTRING(refuel,Connect); \
                     condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canConnectNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,connectNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
                 class EGVAR(refuel,Return) { \
                     displayName = ECSTRING(refuel,Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canReturnNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,returnNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOEF(refuel,ui\icon_refuel_interact.paa); \
                 }; \
             }; \
         }; \
