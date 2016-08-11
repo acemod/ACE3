@@ -1,3 +1,77 @@
+#define MACRO_REARM_TRUCK_ACTIONS \
+        class ACE_Actions: ACE_Actions { \
+            class ACE_MainActions: ACE_MainActions { \
+                class EGVAR(rearm,TakeAmmo) { \
+                    displayName = ECSTRING(rearm,TakeAmmo); \
+                    distance = 7; \
+                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
+                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
+                    exceptions[] = {"isNotInside"}; \
+                    showDisabled = 0; \
+                    priority = 2; \
+                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                }; \
+                class EGVAR(rearm,StoreAmmo) { \
+                    displayName = ECSTRING(rearm,StoreAmmo); \
+                    distance = 7; \
+                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
+                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(rearm,ui\icon_rearm_interact.paa); \
+                }; \
+            }; \
+        };
+
+#define MACRO_REFUEL_ACTIONS \
+    class ACE_Actions: ACE_Actions { \
+        class ACE_MainActions: ACE_MainActions { \
+            class EGVAR(refuel,Refuel) { \
+                displayName = ECSTRING(refuel,Refuel); \
+                distance = 7; \
+                condition = "true"; \
+                statement = ""; \
+                showDisabled = 0; \
+                priority = 2; \
+                icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                class EGVAR(refuel,TakeNozzle) { \
+                    displayName = ECSTRING(refuel,TakeNozzle); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canTakeNozzle)); \
+                    statement = QUOTE([ARR_3(_player,_target,objNull)] call EFUNC(refuel,TakeNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,CheckFuelCounter) { \
+                    displayName = ECSTRING(refuel,CheckFuelCounter); \
+                    condition = "true"; \
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,readFuelCounter)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,CheckFuel) { \
+                    displayName = ECSTRING(refuel,CheckFuel); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canCheckFuel)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,checkFuel)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,Connect) { \
+                    displayName = ECSTRING(refuel,Connect); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canConnectNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,connectNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+                class EGVAR(refuel,Return) { \
+                    displayName = ECSTRING(refuel,Return); \
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(refuel,canReturnNozzle)); \
+                    statement = QUOTE([ARR_2(_player,_target)] call DEFUNC(refuel,returnNozzle)); \
+                    exceptions[] = {"isNotInside"}; \
+                    icon = PATHTOEF(refuel,ui\icon_refuel_interact.paa); \
+                }; \
+            }; \
+        }; \
+    };
+
 class CfgVehicles {
     class LandVehicle;
     class Tank: LandVehicle {
@@ -280,8 +354,27 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 360;
     };
 
+    class RHS_Ural_Support_MSV_Base_01;
+    class RHS_Ural_Fuel_MSV_01 : RHS_Ural_Support_MSV_Base_01 {
+        transportFuel = 0;
+        MACRO_REFUEL_ACTIONS
+        EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
+        EGVAR(refuel,fuelCargo) = 10000;
+    };
+
     class rhs_truck : Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
+    };
+
+    class rhs_gaz66_vmf;
+    class rhs_gaz66_repair_base: rhs_gaz66_vmf {
+        transportRepair = 0;
+        EGVAR(repair,canRepair) = 1;
+    };
+
+    class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
     };
 
     class MRAP_02_base_F;
