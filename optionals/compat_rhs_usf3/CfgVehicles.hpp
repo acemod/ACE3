@@ -87,8 +87,20 @@
 
 class CfgVehicles {
     class LandVehicle;
+    class Car: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
+    };
+    class Car_F: Car {};
+    class Truck_F: Car_F {};
+    class rhs_truck: Truck_F {};
+
     class Tank: LandVehicle {
         class NewTurret;
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
     };
     class Tank_F: Tank {
         class Turrets {
@@ -265,24 +277,25 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 302;
     };
 
-    class Truck_01_base_F;
+    class Truck_01_base_F: Truck_F {};
     class rhsusf_fmtv_base: Truck_01_base_F {
         EGVAR(refuel,fuelCapacity) = 219;
     };
 
-    class rhsusf_M977A4_usarmy_wd;
+    class rhsusf_HEMTT_A4_base: Truck_01_base_F {};
+    class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class rhsusf_M977A4_BKIT_usarmy_wd;
+    class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
 
-    class rhsusf_M977A4_BKIT_M2_usarmy_wd;
+    class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
@@ -327,7 +340,8 @@ class CfgVehicles {
         };
     };
 
-    class rhsusf_m113_usarmy;
+    class rhsusf_m113tank_base: APC_Tracked_02_base_F {};
+    class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
