@@ -14,7 +14,6 @@
 
 #include "script_component.hpp"
 
-private "_genericMessages";
 params ["_caller", "_target"];
 
 private _genericMessages = [LSTRING(diagnoseMessage), [_target] call EFUNC(common,getName)];

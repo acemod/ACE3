@@ -14,6 +14,5 @@
  * Public: No
  */
 #include "script_component.hpp"
-private["_unit"];
-_unit = _this select 0;
+private _unit = _this select 0;
 (vehicle _unit isKindOf 'ParachuteBase' && !(_unit getVariable [QGVAR(chuteIsCut),false]) && (_unit getVariable [QGVAR(hasReserve),false]))

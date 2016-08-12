@@ -146,8 +146,7 @@ if (GVAR(level) >= 2) then {
     if (_syncValues) then {
         TRACE_3("ACE_DEBUG_IVBAGS_SYNC",GVAR(IVBags),_syncValues,_unit);
         {
-            private "_value";
-            _value = _unit getVariable _x;
+            private _value = _unit getVariable _x;
             if !(isNil "_value") then {
                 _unit setVariable [_x,(_unit getVariable [_x, 0]), true];
             };

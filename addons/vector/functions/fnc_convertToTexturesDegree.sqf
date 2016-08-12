@@ -6,9 +6,7 @@ converts azimuth into array of textures for the vectors scripted info control
 
 #include "script_component.hpp"
 
-private "_number";
-
-_number = _this select 0;
+private _number = _this select 0;
 
 if (GVAR(useMil)) then {
 
@@ -21,8 +19,7 @@ if (GVAR(useMil)) then {
 
     _number = round _number;
 
-    private "_isNegative";
-    _isNegative = _number < 0;
+    private _isNegative = _number < 0;
 
     _number = abs _number;
     if (_number == 360) then {_number = 0};

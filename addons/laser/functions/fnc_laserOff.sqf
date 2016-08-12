@@ -11,6 +11,5 @@
 
 #include "script_component.hpp"
 
-private ["_uuid"];
-_uuid = _this select 0;
+private _uuid = _this select 0;
 ["ace_laserOff", [_uuid]] call CBA_fnc_globalEvent;

@@ -1,13 +1,12 @@
 #include "script_component.hpp"
-private["_checkPos", "_i", "_largest", "_largestSpot", "_list", "_outliers", "_remainingSpots", "_samplePos", "_spot", "_spots", "_testPos"];
-_list = _this select 0;
-_checkPos = _this select 1;
-_spots = [];
-_outliers = [];
-_spot = [];
-_testPos = (_list select 0) select 0;
+
+params ["_list", "_checkPos"];
+private _spots = [];
+private _outliers = [];
+private _spot = [];
+private _testPos = (_list select 0) select 0;
 {
-    _samplePos = _x select 0;
+    private _samplePos = _x select 0;
     if(!lineIntersects [_samplePos, _checkPos] && {!terrainIntersectASL [_samplePos, _checkPos]}) then {
         if(_samplePos distance _testPos < 2) then {
             _spot pushBack _samplePos;
@@ -20,12 +19,12 @@ _spots pushBack _spot;
 
 if(count _outliers > 0) then {
     for "_i" from 1 to 3 do {
-        _remainingSpots = _outliers;
+        private _remainingSpots = _outliers;
         _outliers = [];
         _spot = [];
         _testPos = (_remainingSpots select 0);
         {
-            _samplePos = _x;
+            private _samplePos = _x;
             if(!lineIntersects [_samplePos, _checkPos] && {!terrainIntersectASL [_samplePos, _checkPos]}) then {
                 if(_samplePos distance _testPos < 2) then {
                     _spot pushBack _samplePos;
@@ -37,8 +36,8 @@ if(count _outliers > 0) then {
         _spots pushBack _spot;
     };
 };
-_largest = 0;
-_largestSpot = [];
+private _largest = 0;
+private _largestSpot = [];
 {
     if((count _x) > _largest) then {
         _largest = (count _x);

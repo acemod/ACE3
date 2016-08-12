@@ -54,8 +54,7 @@ if (count (assignedItems _unit) > 0) then {
 // Assigned Items
 {
     if (!(_x in _listedItemClasses)) then {
-        private "_item";
-        _item = configFile >> "CfgMagazines" >> _x;
+        private _item = configFile >> "CfgMagazines" >> _x;
         if (isNil "_item" || str _item == "") then {  //str _item ?
             _item = configFile >> "CfgWeapons" >> _x;
         };
