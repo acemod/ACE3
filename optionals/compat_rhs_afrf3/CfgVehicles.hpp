@@ -86,7 +86,11 @@ class CfgVehicles {
             };
         };
     };
-    class Car;
+    class Car: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
+    };
     class Car_F: Car {
         class ViewPilot;
         class NewTurret;
@@ -348,14 +352,16 @@ class CfgVehicles {
         ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
         ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint"}}};
     };
-
-    class Truck_F;
-    class RHS_Ural_BaseTurret : Truck_F {
+        
+    class Truck_F: Car_F {};
+    class RHS_Ural_BaseTurret: Truck_F {
         EGVAR(refuel,fuelCapacity) = 360;
     };
 
-    class RHS_Ural_Support_MSV_Base_01;
-    class RHS_Ural_Fuel_MSV_01 : RHS_Ural_Support_MSV_Base_01 {
+    class RHS_Ural_Base: RHS_Ural_BaseTurret {};
+    class RHS_Ural_MSV_Base: RHS_Ural_Base {};
+    class RHS_Ural_Support_MSV_Base_01: RHS_Ural_MSV_Base {};
+    class RHS_Ural_Fuel_MSV_01: RHS_Ural_Support_MSV_Base_01 {
         transportFuel = 0;
         MACRO_REFUEL_ACTIONS
         EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
@@ -366,7 +372,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 210;
     };
 
-    class rhs_gaz66_vmf;
+    class rhs_gaz66_vmf: rhs_truck {};
     class rhs_gaz66_repair_base: rhs_gaz66_vmf {
         transportRepair = 0;
         EGVAR(repair,canRepair) = 1;
