@@ -184,6 +184,7 @@
         <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
             <English>Defend Area</English>
             <French>Défendre la zone</French>
+            <Czech>Bránit oblast</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -196,22 +197,27 @@
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
             <French>Change: general, commanding, courage</French>
+            <Czech>Upravuje: general, commanding, courage</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
             <French>Précision</French>
+            <Czech>Přesnost</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
             <French>Change: aimingAccuracy</French>
+            <Czech>Upravuje: aimingAccuracy</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
             <French>Maniement d'armes</French>
+            <Czech>Zacházení se zbraní</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
             <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
+            <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -220,14 +226,17 @@
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
             <French>Change: spotDistance, spotTime</French>
+            <Czech>Upravuje: spotDistance, spotTime</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
             <French>Chercher couverture</French>
+            <Czech>Vyhledávat krytí</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
             <French>L'IA devrait elle chercher couverture</French>
+            <Czech>AI se bude snažit vyhledávat krytí</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
@@ -244,6 +253,7 @@
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
             <French>Zone de patrouille</French>
+            <Czech>Oblast hlídkování</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -260,22 +270,27 @@
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
             <French>Téléporter joueurs</French>
+            <Czech>Teleportovat hráče</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
             <French>Joueur</French>
+            <Czech>Hráč</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
             <French>Téléporter le joueur sélectionné à la position du module</French>
+            <Czech>Teleportovat vybraného hráče na pozici modulu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
             <French>Téléporter le groupe</French>
+            <Czech>Teleportovat skupinu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
             <French>Téléporte toutes les unités du groupe</French>
+            <Czech>Teleportovat všechny jednotky ve skupině</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -292,10 +307,12 @@
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
             <French>Chercher la zone</French>
+            <Czech>Prohledat oblast</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
             <French>Chercher le bâtiment proche</French>
+            <Czech>Prohledat nejbližší budovu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -303,7 +320,7 @@
             <Polish>Przydziel medyka</Polish>
             <Portuguese>Definir médico</Portuguese>
             <Russian>Назначить медиком</Russian>
-            <Czech>Přiřadit Zdravotníka</Czech>
+            <Czech>Určit zdravotníka</Czech>
             <Spanish>Asignar médico</Spanish>
             <Italian>Assegna Medico</Italian>
             <French>Assigner médecin</French>
@@ -314,7 +331,7 @@
             <Polish>Przydziel pojazd medyczny</Polish>
             <Portuguese>Definir veículo médico</Portuguese>
             <Russian>Назначить медицинским транспортом</Russian>
-            <Czech>Přiřadit Zdravotnické Vozidlo</Czech>
+            <Czech>Určit zdravotnické vozidlo</Czech>
             <Spanish>Asignar vehículo médico</Spanish>
             <Italian>Assegna Veicolo Medico</Italian>
             <French>Assigner véhicule médical</French>
@@ -325,7 +342,7 @@
             <Polish>Przydziel budynek medyczny</Polish>
             <Portuguese>Definir instalação médica</Portuguese>
             <Russian>Назанчить медицинским сооружением</Russian>
-            <Czech>Přiřadit Zdravotnické Zařízení</Czech>
+            <Czech>Určit zdravotnické zařízení</Czech>
             <Spanish>Asignar instalación médica</Spanish>
             <Italian>Assegna Struttura Medica</Italian>
             <French>Assigner installation médicale</French>
@@ -435,10 +452,12 @@
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
             <French>L'unité doit appartenir à un côté approprié</French>
+            <Czech>Jednotka musí patřit k příslušné straně</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
             <French>Le bâtiment le plus proche est trop loin</French>
+            <Czech>Nejbližší budova je příliš daleko</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -489,10 +508,12 @@
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
             <French>Cargo:</French>
+            <Czech>Náklad:</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
             <French>Position de la tâche</French>
+            <Czech>Pozice úkolu</Czech>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
