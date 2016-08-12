@@ -58,9 +58,9 @@ What this means is that at any the 4 points after the Mod Config it is possible 
 
 ## 3. How do I use them?
 
-In the 'how do they work' chapter an example of settings was shown. This is the same for any settings config. The only difference is the location. For ACE3 modules, the settings are placed in the class `ACE_Settings`. The same goes for the mission config.
+In the '[how do they work](#how-do-they-work)' chapter an example of settings was shown. This is the same for any settings config. The only difference is the location. For ACE3 modules, the settings are placed in the class `ACE_Settings`. The same goes for the mission config.
 
-The server config setting entries are done through our optional `ace_server.pbo`, which can be found in the optionals folder of `@ace`. It also contains a `userconfig` folder, which inside contains the file `ace\serverconfig.hpp`. This is the location where ACE3 settings are placed. There is no need for a sub-class.
+The server config setting entries are done through our optional `ace_server.pbo`, which can be found in the optionals folder of `@ace`. It also contains a `userconfig` folder, which inside contains the file `ace\serverconfig.hpp`. This is the location where ACE3 settings are placed. There is no need for a sub-class. Once the settings file is updated everything should be copied to the `Arma 3\userconfig` folder. When loaded `ace_server.pbo` will try to read the settings from the following path `Arma 3\userconfig\ace\serverconfig.hpp`.
 
 ### 3.1 Exporting the settings
 
@@ -90,6 +90,7 @@ class ACE_Settings {
 - You can use `ACE_common_forceAllSettings` to force settings in a mission, it will lock **all** the settings (which are not already forced) to the values they are set in either modules or server config
 
 Example of `ACE_common_forceAllSettings`:
+
 ```cpp
 class ACE_Settings {
     class ACE_common_forceAllSettings {
