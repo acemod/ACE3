@@ -43,6 +43,7 @@
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Montrer les effets lorsque l'arme surchauffe.</French>
             <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -62,6 +63,7 @@
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
             <French>Montrer les effets de surchauffe des autres joueurs.</French>
             <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -71,6 +73,7 @@
             <Spanish>Dispersión</Spanish>
             <French>Disperssion dûe à la surchauffe</French>
             <Portuguese>Disperção de superaquecimento</Portuguese>
+            <Czech>Důsledky přehřátí zbraně</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -80,6 +83,7 @@
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
             <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
             <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
+            <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -266,11 +270,13 @@
             <English>Check spare barrels temperatures</English>
             <Portuguese>Verifica temperatura de canos reservas</Portuguese>
             <French>Vérifier la température des canons de rechange</French>
+            <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
             <French>Vérification de la température des canons de rechange...</French>
+            <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -288,26 +294,31 @@
             <English>Cool Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid</French>
+            <Czech>Studená náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède</French>
+            <Czech>Teplá náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud</French>
+            <Czech>Horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud</French>
+            <Czech>Velmi horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud</French>
+            <Czech>Extrémně horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -315,6 +326,7 @@
             <Spanish>Activada Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
             <French>Surchauffe activée</French>
+            <Czech>Přehřívání povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
