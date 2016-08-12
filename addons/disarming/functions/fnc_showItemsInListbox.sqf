@@ -26,9 +26,9 @@ params ["_listBoxCtrl", "_itemsCountArray"];
     private _count = (_itemsCountArray select 1) select _forEachIndex;
 
     if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
-		private "_configPath";
-		private _displayName = "";
-		private _picture = "";
+        private "_configPath";
+        private _displayName = "";
+        private _picture = "";
         switch (true) do {
             case (isClass (configFile >> "CfgWeapons" >> _classname)): {
                 _configPath = (configFile >> "CfgWeapons");

@@ -50,7 +50,7 @@ if !(isNil QGVAR(fadePFH)) exitWith {};
 // Launch a PFH to wait and fade out the knobs
 GVAR(fadePFH) = [{
     if (diag_tickTime >= GVAR(timeToHide)) exitWith {
-		private _pfhId = _this select 1;
+        private _pfhId = _this select 1;
         private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
         _layer cutFadeOut 2;
 

@@ -31,7 +31,7 @@ _data = [];
 private _isAir = _type isKindOf "Air";
 
 private _fnc_addTurretUnit = {
-	params ["_config", "_path"];
+    params ["_config", "_path"];
     private _role = CARGO;
 
     private _simulationEmpty = 0;
@@ -74,7 +74,7 @@ private _fnc_addTurretUnit = {
 
 
 private _fnc_addTurret = {
-	params ["_config", "_path"];
+    params ["_config", "_path"];
 
     _config = _config >> "Turrets";
     private _count = count _config;

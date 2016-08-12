@@ -25,7 +25,7 @@ GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
 GVAR(serverSideValues) = [];
 {
-	_x params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue"];
+    _x params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue"];
 
     // Exclude client side options if they are not included for the export
     if (!(_isClientSetable) || GVAR(ClientSettingsExportIncluded)) then {
