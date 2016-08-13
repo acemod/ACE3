@@ -3,7 +3,7 @@
 TRACE_1("enter", _this);
 
 //TRACE_1("enter", _this);
-private _args = _this select 0;
+params ["_args"];
 _args params ["_laserTarget", "_shooter", "_uuid"];
 
 if(isNull _laserTarget || !alive _shooter) exitWith {

@@ -4,8 +4,8 @@
 private ["_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
 
 BEGIN_COUNTER(fnc_findReflections);
-private _params = _this select 0;
-_params params ["_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_rand"];
+params ["_args"];
+_args params ["_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_rand"];
 
 private _split = 15;
 private _radi = (360/_split*_depth);

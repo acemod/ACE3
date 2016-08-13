@@ -25,9 +25,8 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 if (isServer) then {
     {
         if (isClass _x) then {
-            private ["_cargoClassname", "_cargoCount"];
-            _cargoClassname = getText (_x >> "type");
-            _cargoCount = getNumber (_x >> "amount");
+            private _cargoClassname = getText (_x >> "type");
+            private _cargoCount = getNumber (_x >> "amount");
             TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
             ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
         };

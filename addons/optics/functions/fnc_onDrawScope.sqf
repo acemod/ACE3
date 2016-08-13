@@ -3,7 +3,7 @@
 
 disableSerialization;
 
-private _display = _this select 0;
+params ["_display"];
 
 private _control = _display displayCtrl 1713154;
 

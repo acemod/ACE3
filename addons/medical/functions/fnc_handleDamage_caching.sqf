@@ -77,7 +77,6 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
 
     // handle the cached damages 3 frames later
     [{
-        private ["_args", "_params"];
         params ["_args", "_idPFH"];
         _args params ["_unit", "_frameno"];
         if (diag_frameno >= _frameno + 2) then {

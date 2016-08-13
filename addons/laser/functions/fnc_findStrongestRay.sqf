@@ -4,9 +4,9 @@ params ["_list", "_checkPos"];
 private _spots = [];
 private _outliers = [];
 private _spot = [];
-private _testPos = (_list select 0) select 0;
+(_list select 0) params ["_testPos"];
 {
-    private _samplePos = _x select 0;
+    _x params ["_samplePos"];
     if(!lineIntersects [_samplePos, _checkPos] && {!terrainIntersectASL [_samplePos, _checkPos]}) then {
         if(_samplePos distance _testPos < 2) then {
             _spot pushBack _samplePos;
@@ -39,8 +39,8 @@ if(count _outliers > 0) then {
 private _largest = 0;
 private _largestSpot = [];
 {
-    if((count _x) > _largest) then {
-        _largest = (count _x);
+    if(count _x > _largest) then {
+        _largest = count _x;
         _largestSpot = _x;
     };
 } forEach _spots;

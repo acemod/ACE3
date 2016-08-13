@@ -1,8 +1,8 @@
 //fnc_doExplosions.sqf
 #include "script_component.hpp"
 
-private _params = _this select 0;
-_params ["_explosions", "_index"];
+params ["_args"];
+_args params ["_explosions", "_index"];
 
 for "_i" from _index to ((_index+2) min (count _explosions)) do {
     private _exp = _explosions select _i;

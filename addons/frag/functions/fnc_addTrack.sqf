@@ -5,7 +5,7 @@ if (GVAR(autoTrace)) then {
 };
 
 // setAccTime 0.05;
-private _index = (count GVAR(traces));
+private _index = count GVAR(traces);
 params ["_origin", "_obj"];
 private _color = [1,0,0,1];
 if((count _this) > 2) then {

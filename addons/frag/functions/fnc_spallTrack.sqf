@@ -17,7 +17,7 @@ if (count _intersectsWith > 0) then {
     {
         if(!(_x in _foundObjects)) then {
             // diag_log text format["Adding HP: %1", _x];
-            private _index = (count GVAR(spallHPData));
+            private _index = count GVAR(spallHPData);
             private _hpId = _x addEventHandler ["hitPart", compile format["[%1, _this] call " + QFUNC(spallHP), _index]];
             _foundObjects set[(count _foundObjects), _x];
             _foundObjectHPIds set[(count _foundObjectHPIds), _hpId];

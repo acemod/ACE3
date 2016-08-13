@@ -16,20 +16,18 @@
  */
 #include "script_component.hpp"
 
-private ["_weapon", "_listedItemClasses", "_actions", "_allGear"];
-
 params ["_player", "_unit"];
 
-_weapon = currentWeapon _player;
+private _weapon = currentWeapon _player;
 if (_weapon == primaryWeapon _player && {_weapon != ""}) then {
     [_player, "AmovPercMstpSlowWrflDnon", 0] call EFUNC(common,doAnimation);
 };
 
-_listedItemClasses = [];
+private _listedItemClasses = [];
 
-_actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
+private _actions = [localize LSTRING(FriskMenuHeader), ""] call ACE_Interaction_fnc_prepareSelectMenu;
 
-_allGear = [];
+private _allGear = [];
 
 if ((handgunWeapon _unit) != "") then {
     _allGear pushBack (handgunWeapon _unit);

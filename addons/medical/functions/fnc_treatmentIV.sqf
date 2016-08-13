@@ -18,9 +18,9 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (count _items == 0) exitWith {false};
+if (_items isEqualTo []) exitWith {false};
 
-private _removeItem = _items select 0;
+_items params ["_removeItem"];
 if (local _target) then {
     [QGVAR(treatmentIVLocal), [_target, _className]] call CBA_fnc_localEvent;
 } else {

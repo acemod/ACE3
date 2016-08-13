@@ -18,7 +18,7 @@
 
 disableSerialization;
 
-private _display = _this select 0;
+params ["_display"];
 
 // @todo, all weapon types
 private _optic = (primaryWeaponItems ACE_player) select 2;

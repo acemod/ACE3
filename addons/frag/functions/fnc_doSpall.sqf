@@ -2,12 +2,11 @@
 #include "script_component.hpp"
 // ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";
 
-private _hitData = _this select 0;
+params ["_hitData"];
 private _initialData = GVAR(spallHPData) select (_hitData select 0);
 private _hpData = (_hitData select 1) select (_this select 1);
 
-
-private _object = _hpData select 0;
+_hpData params ["_object"];
 _object removeEventHandler ["hitPart", _initialData select 0];
 private _foundObjects = _initialData select 7;
 private _index = _foundObjects find _object;
@@ -22,7 +21,7 @@ private _explosive = getNumber(configFile >> "CfgAmmo" >> _roundType >> "explosi
 private _idh = getNumber(configFile >> "CfgAmmo" >> _roundType >> "indirectHitRange");
 
 private _alive = true;
-if(!alive _round && (_initialData select 6) == 1) then {
+if(!alive _round && (_initialData select 6) isEqualTo 1) then {
     _alive = false;
 };
 
