@@ -20,7 +20,9 @@ params ["_vehicle"];
 if (_vehicle getVariable [QGVAR(isEngineSmoking), false]) exitWith {};
 _vehicle setVariable [QGVAR(isEngineSmoking), true];
 
-[QGVAR(engineFire), _vehicle] call CBA_fnc_remoteEvent;
+if (local _vehicle) then {
+    [QGVAR(engineFire), _vehicle] call CBA_fnc_remoteEvent;
+};
 
 private _position = [
     0,
