@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgCloudlets.hpp"
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
