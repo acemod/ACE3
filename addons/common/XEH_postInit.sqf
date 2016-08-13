@@ -160,14 +160,6 @@ if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// @todo deprecated
-QGVAR(remoteFnc) addPublicVariableEventHandler {
-    (_this select 1) call FUNC(execRemoteFnc);
-};
-
-// @todo figure out what this does.
-[missionNamespace] call FUNC(executePersistent);
-
 
 //////////////////////////////////////////////////
 // Check files, previous installed version etc.
@@ -274,8 +266,8 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "_masks"];
-    if (!(_masks isEqualTo [])) then {
+    GVAR(showHudHash) params ["", "", "_masks"];
+    if !(_masks isEqualTo []) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -326,7 +318,37 @@ enableCamShake true;
 
 // "playerInventoryChanged" event
 ["loadout", {
-    ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
+    private _fnc_getAllGear = {
+        if (isNull _this) exitWith {[
+            "",
+            "",
+            "", [],
+            "", [],
+            "", [],
+            "", ["","","",""], [],
+            "", ["","","",""], [],
+            "", ["","","",""], [],
+            [],
+            "",
+            ""
+        ]};
+
+        [
+            headgear _this,
+            goggles _this,
+            uniform _this, uniformItems _this,
+            vest _this, vestItems _this,
+            backpack _this, backpackItems _this,
+            primaryWeapon _this, primaryWeaponItems _this, primaryWeaponMagazine _this,
+            secondaryWeapon _this, secondaryWeaponItems _this, secondaryWeaponMagazine _this,
+            handgunWeapon _this, handgunItems _this, handgunMagazine _this,
+            assignedItems _this,
+            binocular _this,
+            _this call CBA_fnc_binocularMagazine
+        ]
+    };
+
+    ["ace_playerInventoryChanged", [ACE_player, ACE_player call _fnc_getAllGear]] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
 // "playerVisionModeChanged" event

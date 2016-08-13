@@ -9,6 +9,9 @@
  * Return Value:
  * True if dogtag can be checked <BOOL>
  *
+ * Example:
+ * _canCheck = [player, unit] call ace_dogtags_fnc_canCheckDogtag
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -804,6 +804,7 @@
             <French>Pas de place pour décharger</French>
             <Czech>Nedostatek místa k vyložení</Czech>
             <Portuguese>Sem espaço para descarregar</Portuguese>
+            <Russian>Нет места для выгрузки</Russian>
         </Key>
     </Package>
 </Project>

@@ -162,6 +162,33 @@ class CfgVehicles {
         GVAR(carryPosition)[] = {0,1,0.300671};
     };
 
+    // Misc crates
+    class Constructions_base_F;
+    class Land_WoodenBox_F: Constructions_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.4,0};
+        GVAR(dragDirection) = 0;
+    };
+    class Land_WoodenCrate_01_F: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.5,0};
+        GVAR(dragDirection) = 90;
+    };
+
     class ACE_RepairItem_Base: ThingX {};
 
     class ACE_Track: ACE_RepairItem_Base {

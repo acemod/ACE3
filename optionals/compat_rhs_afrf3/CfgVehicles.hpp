@@ -31,13 +31,13 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 300;
         class Turrets: Turrets {
             class CommanderOptics: NewTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
             class GPMGTurret1: NewTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -45,10 +45,10 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 460;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
             class Com_BMP1: NewTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -59,7 +59,7 @@ class CfgVehicles {
             class MainTurret: MainTurret {
                 class Turrets: Turrets {
                     class CommanderOptics : CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
@@ -69,15 +69,15 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 460;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
             class GPMGTurret1: NewTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -85,10 +85,10 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 300;
         class Turrets: Turrets {
             class MainTurret: MainTurret  {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
             class CommanderOptics: CommanderOptics {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -96,11 +96,11 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 400;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics
                     {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
@@ -114,7 +114,7 @@ class CfgVehicles {
                 };
             };
             class GPMGTurret1: NewTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -127,7 +127,7 @@ class CfgVehicles {
             };
             class GPMGTurret1: GPMGTurret1 {};
             class GPMGTurret2: GPMGTurret1 {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
             };
         };
     };
@@ -135,13 +135,13 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1200;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                     class CommanderMG: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
@@ -164,10 +164,10 @@ class CfgVehicles {
     class rhs_t90_tv: rhs_t72bd_tv {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
@@ -177,13 +177,13 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1200;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                ace_fcs_Enabled = 0;
+                EGVAR(fcs,enabled) = 0;
                 class Turrets: Turrets {
                     class CommanderOptics: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                     class CommanderMG: CommanderOptics {
-                        ace_fcs_Enabled = 0;
+                        EGVAR(fcs,enabled) = 0;
                     };
                 };
             };
@@ -294,9 +294,20 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 78;
     };
 
-    class APC_Tracked_02_base_F;
+    class APC_Tracked_02_base_F: Tank_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {};
+        };
+    };
+
     class rhs_zsutank_base : APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 515;
+
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class rhs_btr60_base : rhs_btr_base {

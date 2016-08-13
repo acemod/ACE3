@@ -7,7 +7,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Explosives {
                 displayName = CSTRING(Menu);
-                condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
+                condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(PlantingExplosive),false)]));
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
@@ -58,6 +58,13 @@ class CfgVehicles {
                 statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
                 exceptions[] = {"isNotSwimming"};
                 icon = QPATHTOF(UI\Defuse_ca.paa);
+            };
+        };
+    };    
+    class ACE_DefuseObject_Large: ACE_DefuseObject {
+        class ACE_Actions: ACE_Actions {
+            class ACE_Defuse: ACE_Defuse {
+                distance = 1.5;
             };
         };
     };
@@ -337,6 +344,13 @@ class CfgVehicles {
         ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
         // TODO: Find a way to place the mine laying down instead of standing up
+    };
+
+    class APERSTripMine: MineBase {};
+    class ACE_FlareTripMine: APERSTripMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_FlareTripMine_Wire_Ammo";
+        displayName = CSTRING(TripFlare_Name);
     };
 
     class IEDUrbanBig_F;
