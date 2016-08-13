@@ -117,6 +117,7 @@
             <French>Enlève les acouphènes quand le joueur prend des dommages auditifs.</French>
             <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
+            <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
