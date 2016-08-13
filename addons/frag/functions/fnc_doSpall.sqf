@@ -76,13 +76,13 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
             if(_explosive > 0) then {
                 // ACE_player sideChat format["EXPLOSIVE!"];
                 _warn = false;
-                _c = getNumber(configFile >> "CfgAmmo" >> _roundType >> "ACE_frag_CHARGE");
+                _c = getNumber(configFile >> "CfgAmmo" >> _roundType >> QGVAR(CHARGE));
                 if(_c == 0) then { _c = 1; _warn = true;};
-                _m = getNumber(configFile >> "CfgAmmo" >> _roundType >> "ACE_frag_METAL");
+                _m = getNumber(configFile >> "CfgAmmo" >> _roundType >> QGVAR(METAL));
                 if(_m == 0) then { _m = 2; _warn = true;};
-                _k = getNumber(configFile >> "CfgAmmo" >> _roundType >> "ACE_frag_GURNEY_K");
+                _k = getNumber(configFile >> "CfgAmmo" >> _roundType >> QGVAR(GURNEY_K));
                 if(_k == 0) then { _k = 1/2; _warn = true;};
-                _gC = getNumber(configFile >> "CfgAmmo" >> _roundType >> "ACE_frag_GURNEY_C");
+                _gC = getNumber(configFile >> "CfgAmmo" >> _roundType >> QGVAR(GURNEY_C));
                 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
                 if(_warn) then {
@@ -94,10 +94,10 @@ if(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) then {
             };
 
             _fragTypes = [
-                "ACE_frag_spall_small", "ACE_frag_spall_small", "ACE_frag_spall_small",
-                "ACE_frag_spall_small","ACE_frag_spall_medium","ACE_frag_spall_medium","ACE_frag_spall_medium",
-                "ACE_frag_spall_medium", "ACE_frag_spall_large", "ACE_frag_spall_large", "ACE_frag_spall_huge",
-                "ACE_frag_spall_huge"
+                QGVAR(spall_small), QGVAR(spall_small), QGVAR(spall_small),
+                QGVAR(spall_small),QGVAR(spall_medium),QGVAR(spall_medium),QGVAR(spall_medium),
+                QGVAR(spall_medium), QGVAR(spall_large), QGVAR(spall_large), QGVAR(spall_huge),
+                QGVAR(spall_huge)
 
             ];
 

@@ -9,6 +9,9 @@
  * Return Value:
  * Children actions <ARRAY>
  *
+ * Example:
+ * _childrenActions = [unit, player] call ace_dogtags_fnc_addDogtagActions
+ *
  * Public: No
  */
 #include "script_component.hpp"

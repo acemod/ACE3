@@ -16,22 +16,19 @@
 
 params ["_name", "_args", "_ttl"];
 
-if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
+if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
     ACE_LOGERROR_1("Synced event key [%1] not found (_handleSyncedEvent).", _name);
     false
 };
 
-private _internalData = HASH_GET(GVAR(syncedEvents),_name);
+private _internalData = [GVAR(syncedEvents), _name] call CBA_fnc_hashGet;
+_internalData params ["_eventCode", "_eventLog"];
 
 if (isServer) then {
     // Server needs to internally log it for synchronization
     if (_ttl > -1) then {
-        _internalData = HASH_GET(GVAR(syncedEvents),_name);
-
-        _internalData params ["", "_eventLog"];
         _eventLog pushBack [diag_tickTime, _args, _ttl];
     };
 };
 
-_internalData params ["_eventCode"];
 _args call _eventCode;

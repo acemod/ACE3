@@ -22,4 +22,4 @@ GVAR(flashlightInUse) = _flashlight;
 if (GVAR(mapGlow)) then {
     [GVAR(flashlightInUse)] call FUNC(flashlightGlow);
 };
-playSound "ACE_map_flashlightClick";
+playSound QGVAR(flashlightClick);

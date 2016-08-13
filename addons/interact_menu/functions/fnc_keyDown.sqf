@@ -104,4 +104,22 @@ if (GVAR(openedMenuType) == 0) then {
 
 ["ace_interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
 
+//Remove the old "DefaultAction" action event handler if it already exists
+GVAR(blockDefaultActions) params [["_player", objNull], ["_ehid", -1]];
+TRACE_2("blockDefaultActions",_player,_ehid);
+if (!isNull _player) then {
+    [_player, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+    GVAR(blockDefaultActions) = [];
+};
+//Add the "DefaultAction" action event handler
+if (alive ACE_player) then {
+    private _ehid = [ACE_player, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
+        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
+            [GVAR(openedMenuType),true] call FUNC(keyUp);
+        };
+    }] call EFUNC(common,addActionEventHandler);
+    TRACE_2("Added",ACE_player,_ehid);
+    GVAR(blockDefaultActions) = [ACE_player, _ehid];
+};
+
 true

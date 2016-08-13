@@ -4,30 +4,38 @@
         <Key ID="STR_ACE_MineDetector_VMM3_Description">
             <English>Metal detector</English>
             <French>Détecteur de métaux</French>
+            <Russian>Детектор металла</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
             <French>Détecteur de métaux</French>
+            <Russian>Детектор металла</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
             <French>Activer</French>
+            <Russian>Включить</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
             <French>Désactiver</French>
+            <Russian>Выключить</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
+            <Russian>Подключить наушники</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
+            <Russian>Отключить наушники</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
+            <Russian>Наушники подключены</Russian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
+            <Russian>Наушники отключены</Russian>
         </Key>
     </Package>
 </Project>

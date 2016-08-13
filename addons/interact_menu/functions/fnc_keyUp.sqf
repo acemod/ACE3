@@ -46,6 +46,14 @@ if(GVAR(actionSelected)) then {
 
 ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
 
+//Remove the "DefaultAction" action event handler
+GVAR(blockDefaultActions) params [["_player", objNull], ["_ehid", -1]];
+TRACE_2("blockDefaultActions",_player,_ehid);
+if (!isNull _player) then {
+    [_player, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+    GVAR(blockDefaultActions) = [];
+};
+
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;
 GVAR(openedMenuType) = -1;
