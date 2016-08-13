@@ -403,6 +403,36 @@ class CfgVehicles {
             };
         };
     };
+    class Constructions_base_F;
+    class Land_WoodenBox_F: Constructions_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        GVAR(space) = 2;
+        GVAR(hasCargo) = 2;
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
+
+        maximumLoad = 2000;
+        transportMaxBackpacks = 12;
+        transportMaxMagazines = 64;
+        transportMaxWeapons = 12;
+    };
+    class Land_WoodenCrate_01_F: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(space) = 3;
+        GVAR(hasCargo) = 3;
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
+
+        maximumLoad = 2000;
+        transportMaxBackpacks = 12;
+        transportMaxMagazines = 64;
+        transportMaxWeapons = 12;
+    };
 
     class Cargo_base_F: ThingX {
         GVAR(space) = 4;
