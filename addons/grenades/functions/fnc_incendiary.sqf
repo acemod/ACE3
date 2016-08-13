@@ -168,6 +168,8 @@ if ("ace_cookoff" call EFUNC(common,isModLoaded)) then {
 
     if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
         _vehicle setHit [_engineSelection, 1];
-        _vehicle call EFUNC(cookoff,engineFire);
+        if (EGVAR(cookoff,enable)) then {
+            _vehicle call EFUNC(cookoff,engineFire);
+        };
     };
 };
