@@ -6,7 +6,7 @@
 // cookoff and burning engine
 ["Tank", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
-        if (GVAR(enableCookoff)) then {
+        if (GVAR(enable)) then {
             ["tank", _this] call FUNC(handleDamage);
         };
     }];
@@ -14,7 +14,7 @@
 
 ["Wheeled_APC_F", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
-        if (GVAR(enableCookoff)) then {
+        if (GVAR(enable)) then {
             ["tank", _this] call FUNC(handleDamage);
         };
     }];
@@ -22,7 +22,7 @@
 
 ["Car", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
-        if (GVAR(enableCookoff)) then {
+        if (GVAR(enable)) then {
             ["car", _this] call FUNC(handleDamage);
         };
     }];
@@ -30,14 +30,14 @@
 
 // secondary explosions
 ["AllVehicles", "killed", {
-    if (GVAR(enableCookoff)) then {
+    if (GVAR(enable)) then {
         (_this select 0) call FUNC(secondaryExplosions);
     };
 }, nil, ["Man"]] call CBA_fnc_addClassEventHandler;
 
 // blow off turret effect
 ["Tank", "killed", {
-    if (GVAR(enableCookoff)) then {
+    if (GVAR(enable)) then {
         (_this select 0) call FUNC(blowOffTurret);
     };
 }] call CBA_fnc_addClassEventHandler;
