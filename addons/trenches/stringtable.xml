@@ -138,6 +138,7 @@
             <Portuguese>Continuar cavando trincheira</Portuguese>
             <French>Continuer à creuser la tranchée</French>
             <Russian>Продолжить копание окопа</Russian>
+            <Czech>Pokračovat v kopání</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -145,6 +146,7 @@
             <Portuguese>Remover trincheira</Portuguese>
             <French>Retirer la tranchée</French>
             <Russian>Убрать окоп</Russian>
+            <Czech>Odstranit zákop</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -152,6 +154,7 @@
             <Portuguese>Removendo tricnheira</Portuguese>
             <French>Retirement de la tranchée</French>
             <Russian>Убирание окопа</Russian>
+            <Czech>Odstraňuji zákop</Czech>
         </Key>
     </Package>
 </Project>
