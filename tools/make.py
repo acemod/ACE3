@@ -678,16 +678,24 @@ def get_commit_ID():
     # Get latest commit ID
     global make_root
     curDir = os.getcwd()
+
     try:
         gitpath = os.path.join(os.path.dirname(make_root), ".git")
         assert os.path.exists(gitpath)
-        os.chdir(make_root)
+        os.chdir(gitpath)
 
-        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
-        commit_id = str(commit_id, "utf-8")[:8]
+        # Try to get commit ID from git file
+        commit_id = ""
+        with open("HEAD", "r") as head_file:
+            branch = head_file.readline().split("/")[-1].strip()
+            if branch != "":
+                with open(os.path.join(gitpath,"refs","heads",branch), "r") as ref_file:
+                    commit_id = ref_file.readline().strip()[:8]
+
+        assert commit_id != ""
     except:
         print_error("FAILED TO DETERMINE COMMIT ID.")
-        print_yellow("Verify that \GIT\BIN or \GIT\CMD is in your system path or user path.")
+        print_yellow("Verify that this is a Git repository.")
         commit_id = "NOGIT"
         raise
     finally:
