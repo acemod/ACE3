@@ -678,28 +678,39 @@ def get_commit_ID():
     # Get latest commit ID
     global make_root
     curDir = os.getcwd()
+    commit_id = ""
 
     try:
+        # Verify if Git repository
         gitpath = os.path.join(os.path.dirname(make_root), ".git")
         assert os.path.exists(gitpath)
-        os.chdir(gitpath)
 
-        # Try to get commit ID from git file
-        commit_id = ""
-        with open("HEAD", "r") as head_file:
-            branch = head_file.readline().split("/")[-1].strip()
-            if branch != "":
-                with open(os.path.join(gitpath,"refs","heads",branch), "r") as ref_file:
-                    commit_id = ref_file.readline().strip()[:8]
+        # Try to get commit ID through Git client
+        os.chdir(make_root)
+        commit_id = subprocess.check_output(["git", "rev-parse", "HEAD"])
+        commit_id = str(commit_id, "utf-8")[:8]
+    except FileNotFoundError:
+        # Try to get commit ID from git files (subprocess failed - eg. no Git client)
+        head_path = os.path.join(gitpath, "HEAD")
+        if os.path.exists(head_path):
+            with open(head_path, "r") as head_file:
+                branch = head_file.readline().split("/")[-1].strip()
+                ref_path = os.path.join(gitpath, "refs", "heads", branch)
+                if os.path.exists(ref_path):
+                    with open(ref_path, "r") as ref_file:
+                        commit_id = ref_file.readline().strip()[:8]
 
-        assert commit_id != ""
+        if commit_id == "":
+            raise
     except:
-        print_error("FAILED TO DETERMINE COMMIT ID.")
-        print_yellow("Verify that this is a Git repository.")
-        commit_id = "NOGIT"
-        raise
+        # All other exceptions (eg. AssertionException)
+        if commit_id == "":
+            raise
     finally:
         pass
+        if commit_id == "":
+            print_error("Failed to determine commit ID - folder is not a Git repository.")
+            commit_id = "NOGIT"
         os.chdir(curDir)
 
     print_yellow("COMMIT ID set to {}".format(commit_id))
