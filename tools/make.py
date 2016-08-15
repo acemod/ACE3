@@ -694,8 +694,8 @@ def get_commit_ID():
         head_path = os.path.join(gitpath, "HEAD")
         if os.path.exists(head_path):
             with open(head_path, "r") as head_file:
-                branch = head_file.readline().split("/")[-1].strip()
-                ref_path = os.path.join(gitpath, "refs", "heads", branch)
+                branch_path = head_file.readline().split(": ")[-1].strip()
+                ref_path = os.path.join(gitpath, branch_path)
                 if os.path.exists(ref_path):
                     with open(ref_path, "r") as ref_file:
                         commit_id = ref_file.readline().strip()[:8]
