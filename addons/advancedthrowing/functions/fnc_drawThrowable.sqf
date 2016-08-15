@@ -20,9 +20,24 @@ if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_play
 };
 
 private _throwable = currentThrowable ACE_player;
-private _throwableMag = _throwable select 0;
+private _throwableMag = _throwable param [0, "#none"];
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNull];
+
+// Get correct throw power for primed grenade
+if (_primed) then {
+    private _ammoType = typeOf _activeThrowable;
+    _throwableMag = GVAR(ammoMagLookup) getVariable _ammoType;
+    if (isNil "_throwableMag") then {
+        // What we're trying to throw must not be a normal throwable because it is not in our lookup hash (e.g. 40mm smoke) 
+        // Just use HandGrenade as it has a average initSpeed value
+        _throwableMag = "HandGrenade";
+    };
+};
+// Inventory check
+if (_throwable isEqualTo [] && {!_primed}) exitWith {
+    [ACE_player, "No valid throwables"] call FUNC(exitThrowMode);
+};
 
 // Some throwables have different classname for magazine and ammo
 // Primed magazine may be different, read speed before checking primed magazine!
@@ -40,18 +55,8 @@ private _power = linearConversion [0, 180, _phi - 30, 1, 0.3, true];
 ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 #ifdef DEBUG_MODE_FULL
-hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3", _phi, _power, _throwSpeed * _power];
+hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3\nThrowMag: %4", _phi, _power, _throwSpeed * _power, _throwableMag];
 #endif
-
-// Handle cooking last throwable in inventory
-if (_primed) then {
-    _throwableMag = typeOf _activeThrowable;
-};
-
-// Inventory check
-if (_throwable isEqualTo [] && {!_primed}) exitWith {
-    [ACE_player, "No valid throwables"] call FUNC(exitThrowMode);
-};
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
 

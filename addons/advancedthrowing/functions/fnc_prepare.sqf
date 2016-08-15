@@ -16,16 +16,21 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_1("params",_unit);
 
 // Select next throwable if one already in hand
 if (_unit getVariable [QGVAR(inHand), false]) exitWith {
+    TRACE_1("inHand",_unit);
     if (!(_unit getVariable [QGVAR(primed), false])) then {
+        TRACE_1("not primed",_unit);
         [_unit] call EFUNC(weaponselect,selectNextGrenade);
     };
 };
 
 // Try selecting next throwable if none currently selected
-if ((currentThrowable _unit) isEqualTo [] && {!([_unit] call EFUNC(weaponselect,selectNextGrenade))}) exitWith {};
+if ((isNull (_unit getVariable [QGVAR(activeThrowable), objNull])) && {(currentThrowable _unit) isEqualTo []} && {!([_unit] call EFUNC(weaponselect,selectNextGrenade))}) exitWith {
+    TRACE_1("no throwables",_unit);
+};
 
 
 _unit setVariable [QGVAR(inHand), true];

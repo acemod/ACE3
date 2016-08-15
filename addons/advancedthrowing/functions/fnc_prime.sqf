@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit", ["_showHint", false]];
+TRACE_2("params",_unit,_showHint);
 
 _unit setVariable [QGVAR(primed), true];
 

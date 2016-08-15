@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_1("params",_unit);
 
 // Prime the throwable if it hasn't been cooking already
 // Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
@@ -28,6 +29,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
 // Pass position to reset later because animation may change it in certain stances
 [{
     params ["_unit", "_activeThrowable", "_posThrown", "_throwType", "_throwSpeed", "_dropMode"];
+    TRACE_6("delayParams",_unit,_activeThrowable,_posThrown,_throwType,_throwSpeed,_dropMode);
 
     // Reset position in case animation changed it
     _activeThrowable setPosASL _posThrown;

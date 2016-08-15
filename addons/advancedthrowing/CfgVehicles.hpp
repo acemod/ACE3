@@ -50,7 +50,7 @@ class CfgVehicles {
 
     class Items_base_F;
     class GVAR(pickUpHelper): Items_base_F {
-        author = ECSTRING(common,Author);
+        author = ECSTRING(common,ACETeam);
         displayName = "ACE Throwable Pick Up Helper";
         model = "\a3\weapons_f\dummyweapon.p3d";
         scope = 1;
