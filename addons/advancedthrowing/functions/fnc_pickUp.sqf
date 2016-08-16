@@ -26,6 +26,15 @@ if (isNull _activeThrowable) exitWith {TRACE_2("throwable is null",_helper,_acti
 // Detach if attached (to vehicle for example or another player)
 private _attachedTo = attachedTo _activeThrowable;
 if (!isNull _attachedTo) then {
+    private _attachedList = _attachedTo getVariable [QEGVAR(attach,attached), []];
+    {
+        _x params ["_xObject"];
+        if (_activeThrowable == _xObject) exitWith {
+            TRACE_2("removing from ace_attach",_attachedTo,_attachedList);
+            _attachedList deleteAt _forEachIndex;
+            _attachedTo setVariable [QEGVAR(attach,attached), _attachedList, true];
+        };
+    } forEach _attachedList;
     detach _activeThrowable;
 };
 
