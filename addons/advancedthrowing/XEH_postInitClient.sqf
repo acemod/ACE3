@@ -3,6 +3,7 @@
 // Exit on HC
 if (!hasInterface) exitWith {};
 
+// Ammo/Magazines look-up hash for correctness of initSpeed
 GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 {
     {
