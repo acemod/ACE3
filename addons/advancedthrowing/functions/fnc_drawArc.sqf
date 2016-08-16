@@ -42,7 +42,7 @@ private _prevTrajASL = getPosASLVisual _activeThrowable;
 private _pathData = [];
 
 for "_i" from 0.05 to 1.45 step 0.1 do {
-    private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.12] vectorMultiply (_i * _i));
+    private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -6] vectorMultiply (_i * _i));
     private _cross = 0;
 
     if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
@@ -79,4 +79,7 @@ reverse _pathData;
 {
     _x params ["_col", "_newTrajAGL", "_iDim"];
     drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", _col, _newTrajAGL, _iDim, _iDim, 0, "", 2];
+    #ifdef DEBUG_MODE_FULL
+        drawIcon3D ["", _col, _newTrajAGL, _iDim, _iDim, 0, str (ACE_player distance _newTrajAGL), 2, 0.05, "RobotoCondensed"];
+    #endif
 } forEach _pathData;
