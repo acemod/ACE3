@@ -3,6 +3,15 @@
 // Exit on HC
 if (!hasInterface) exitWith {};
 
+GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
+{
+    {
+        private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+        GVAR(ammoMagLookup) setVariable [_ammo, _x];
+    } count (getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines"));
+    nil
+} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {

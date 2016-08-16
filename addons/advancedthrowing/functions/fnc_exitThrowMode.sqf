@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit", "_reason"];
+TRACE_2("params",_unit,_reason);
 
 if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
 
