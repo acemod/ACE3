@@ -88,3 +88,19 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 ["KeyDown", {_this call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
 ["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
 ["MouseZChanged", {_this call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
+
+#ifdef DRAW_THROW_PATH
+GVAR(predictedPath) = [];
+GVAR(flightPath) = [];
+
+addMissionEventHandler ["Draw3D", { // Blue is predicted before throw, red is real
+    {
+        _x params ["", "_newTrajAGL"];
+        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [0,0,1,1], _newTrajAGL, 1, 1, 0, "", 2];
+    } forEach GVAR(predictedPath);
+    {
+        _newTrajAGL = _x;
+        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _newTrajAGL, 1, 1, 0, "", 2];
+    } forEach GVAR(flightPath)
+}];
+#endif

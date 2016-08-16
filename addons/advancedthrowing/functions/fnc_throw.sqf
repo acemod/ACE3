@@ -36,7 +36,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
 
     // Launch actual throwable
     private _direction = [THROWSTYLE_NORMAL_DIR, THROWSTYLE_HIGH_DIR] select (_throwType == "high" || {_dropMode});
-    private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF] select (_throwType == "high");
+    private _velocity = [_throwSpeed, _throwSpeed / THROWSTYLE_HIGH_VEL_COEF / 1.25] select (_throwType == "high");
     _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 
     private _p2 = (eyePos _unit) vectorAdd (positionCameraToWorld _direction) vectorDiff (positionCameraToWorld [0, 0, 0]);
@@ -66,6 +66,18 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     _unit getVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT],
     _unit getVariable [QGVAR(dropMode), false]
 ], 0.3] call CBA_fnc_waitAndExecute;
+
+#ifdef DRAW_THROW_PATH
+GVAR(predictedPath) = call FUNC(drawArc); // save the current throw arc
+GVAR(flightPath) = [];
+[_unit getVariable QGVAR(activeThrowable)] spawn {
+    params ["_grenade"];
+    while {!isNull _grenade} do {
+        GVAR(flightPath) pushBack ASLtoAGL getPosASL _grenade;
+        sleep 0.05;
+    };
+};
+#endif
 
 // Stop rendering arc and doing rendering magic while throw is happening
 [_unit, "Completed a throw fully"] call FUNC(exitThrowMode);

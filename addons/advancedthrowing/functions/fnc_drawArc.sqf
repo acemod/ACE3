@@ -6,7 +6,7 @@
  * None
  *
  * Return Value:
- * None
+ * Flight path (just for debug) <ARRAY>
  *
  * Example:
  * call ace_advancedthrowing_fnc_drawArc
@@ -36,13 +36,13 @@ _velocity = [_velocity, THROWSTYLE_DROP_VEL] select _dropMode;
 private _viewStart = AGLToASL (positionCameraToWorld [0, 0, 0]);
 private _viewEnd = AGLToASL (positionCameraToWorld _direction);
 
-private _initialVelocity = (vectorNormalized (_viewEnd vectorDiff _viewStart)) vectorMultiply (_velocity / 1.8);
+private _initialVelocity = (vectorNormalized (_viewEnd vectorDiff _viewStart)) vectorMultiply (_velocity);
 private _prevTrajASL = getPosASLVisual _activeThrowable;
 
 private _pathData = [];
 
 for "_i" from 0.05 to 1.45 step 0.1 do {
-    private _newTrajASL = _prevTrajASL vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -6] vectorMultiply (_i * _i));
+    private _newTrajASL = (getPosASLVisual _activeThrowable) vectorAdd (_initialVelocity vectorMultiply _i) vectorAdd ([0, 0, -4.9] vectorMultiply (_i * _i));
     private _cross = 0;
 
     if (_newTrajASL distance (getPosASLVisual ACE_player) <= 20) then {
@@ -83,3 +83,5 @@ reverse _pathData;
         drawIcon3D ["", _col, _newTrajAGL, _iDim, _iDim, 0, str (ACE_player distance _newTrajAGL), 2, 0.05, "RobotoCondensed"];
     #endif
 } forEach _pathData;
+
+_pathData
