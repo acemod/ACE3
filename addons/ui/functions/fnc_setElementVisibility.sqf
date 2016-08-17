@@ -9,10 +9,10 @@
  * 3: Show/Hide Element <BOOL> (default: false)
  *
  * Return Value:
- * None
+ * Successfully Modified <BOOL>
  *
  * Example:
- * ["ace_reload", true, "ammoCount", false] call ace_ui_fnc_setElementVisibility
+ * _successfullyModified = ["ace_reload", true, "ammoCount", false] call ace_ui_fnc_setElementVisibility
  *
  * Public: Yes
  */

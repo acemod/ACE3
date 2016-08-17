@@ -12,7 +12,7 @@
  * Successfully Set <BOOL>
  *
  * Example:
- * ["ammoCount", true, false] call ace_ui_fnc_setAdvancedElement
+ * _successfullySet = ["ammoCount", true, false] call ace_ui_fnc_setAdvancedElement
  *
  * Public: No
  */
