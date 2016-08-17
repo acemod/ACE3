@@ -69,6 +69,12 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready
 |`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed
 
+### 2.7 Tagging (ace_tagging)
+
+| Event Key | Parameters | Locality | Type | Description |
+|----------|---------|---------|---------|---------|---------|
+|`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created
+
 
 ## 3. Usage
 Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System)
