@@ -42,4 +42,4 @@
 
         GVAR(configCache) setVariable [_class, [_idd, _elements, _location, _conditions]];
     };
-} forEach (configProperties [configFile >> "ACE_UI"]);
+} forEach ("true" configClasses (configFile >> "ACE_UI"));
