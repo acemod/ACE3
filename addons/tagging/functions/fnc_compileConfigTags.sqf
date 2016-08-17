@@ -48,4 +48,4 @@
         GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon];
         GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
     };
-} forEach (configProperties [configFile >> "ACE_Tags"]);
+} forEach ("true" configClasses (configFile >> "ACE_Tags"));
