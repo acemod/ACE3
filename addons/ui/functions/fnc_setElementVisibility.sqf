@@ -3,47 +3,64 @@
  * Setter for toggling advanced element visibility.
  *
  * Arguments:
- * 0: Set/Unset <BOOL> (default: true)
- * 1: Element IDD <NUMBER> (default: 0)
- * 2: Element IDCs <ARRAY> (default: [])
- * 3: Show/Hide Element OR Element ACE Settings Variable <BOOL/STRING> (default: false)
+ * 0: Source <STRING>
+ * 1: Set/Unset <BOOL>
+ * 2: Element Name <STRING>
+ * 3: Show/Hide Element <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [true, 300, [188], false] call ace_ui_fnc_setElementVisibility
+ * ["ace_reload", true, "ace_ui_ammoCount", false] call ace_ui_fnc_setElementVisibility
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params [
+    ["_source", "", [""]],
     ["_set", true, [true]],
-    ["_idd", 0, [0]],
-    ["_elements", [], [[]]],
-    ["_show", false, [true, ""]]
+    ["_element", "", [""]],
+    ["_show", false, [true]]
 ];
+
+// Verify element is bound
+if (!isClass (configFile >> "ACE_UI" >> _element)) exitWith {
+    ACE_LOGWARNING_1("Element '%1' does not exist",_element);
+};
+
+if (_source == "" || {_element == ""}) exitWith {
+    ACE_LOGWARNING("Source or Element may not be empty strings!");
+};
 
 private _return = false;
 
-if (_set) then {
-    if ([_idd, _elements] in GVAR(elementsSet)) exitWith { TRACE_3("Element already set",_idd,_elements,GVAR(elementsSet)); };
+private _setElement = [_element] call FUNC(findSetElement);
+_setElement params ["_indexSet", "_sourceSet"];
 
-    TRACE_4("Setting element",_idd,_elements,_show,GVAR(elementsSet));
-    private _success = [_idd, _elements, _show] call FUNC(setAdvancedElement);
+if (_set) then {
+    // Exit if element has been set from another component, print warning if after interface initialization
+    if (_indexSet != -1) exitWith {
+        if (GVAR(interfaceInitialized)) then {
+            ACE_LOGWARNING_2("Element '%1' already set by %2",_element,_sourceSet);
+        };
+    };
+
+    TRACE_4("Setting element",_source,_element,_show,GVAR(elementsSet));
+    private _success = [_element, _show, false, true] call FUNC(setAdvancedElement);
 
     if (_success) then {
-        GVAR(elementsSet) pushBack [_idd, _elements];
+        GVAR(elementsSet) pushBack [_source, _element, _show];
         _return = true;
     };
 } else {
-    if ([_idd, _elements] in GVAR(elementsSet)) then {
-        TRACE_4("Setting element",_idd,_elements,_show,GVAR(elementsSet));
-        [_idd, _elements, _show] call FUNC(setAdvancedElement);
+    if (_indexSet != -1) then {
+        TRACE_4("Unsetting element",_sourceSet,_element,_show,GVAR(elementsSet));
 
-        private _index = GVAR(elementsSet) find [_idd, _elements];
-        GVAR(elementsSet) deleteAt _index;
+        GVAR(elementsSet) deleteAt _indexSet;
+
+        [_element, _show, false, true] call FUNC(setAdvancedElement);
         _return = true;
     };
 };

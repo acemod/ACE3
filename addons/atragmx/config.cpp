@@ -2,11 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Item_ATragMX"};
         weapons[] = {"ACE_ATragMX"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ACE_common", "ACE_weather"};
-        author = "Ruthberg";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Ruthberg"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -15,3 +18,7 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscTitles.hpp"
+
+class ACE_newEvents {
+    RangerfinderData = QEGVAR(vector,rangefinderData);
+};

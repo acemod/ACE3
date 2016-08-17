@@ -2,12 +2,12 @@
  * Author: Commy2
  * Make a unit start swapping it's barrel
  *
- * Argument:
+ * Arguments:
  * 0: Unit initiating the action <OBJECT>
  * 1: Unit that has the weapon <OBJECT>
  * 2: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -26,7 +26,7 @@ if (stance _gunner != "PRONE") then {
 };
 
 // Barrel dismount gesture
-_gunner playActionNow QGVAR(GestureDismountMuzzle);
+[_gunner, QGVAR(GestureDismountMuzzle)] call EFUNC(common,doGesture);
 playSound "ACE_BarrelSwap";
 
 private _duration = 3.0;

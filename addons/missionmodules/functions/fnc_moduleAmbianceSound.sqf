@@ -74,7 +74,7 @@ if (_activated && local _logic) then {
             [_pfhHandle] call CBA_fnc_removePerFrameHandler;
         };
 
-        if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
+        if (CBA_missionTime - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
 
             // Find all players in session.
             _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
@@ -109,11 +109,11 @@ if (_activated && local _logic) then {
                 // If no unit is to close to this position, we will play the sound.
                 if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
                     playSound3D [selectRandom _ambianceSounds, objNull,  false, _newPos, _volume, 1, 1000];
-                    _args set [8, ACE_time];
+                    _args set [8, CBA_missionTime];
                 };
             };
         };
-    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, ACE_time] ] call CBA_fnc_addPerFrameHandler;
+    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, CBA_missionTime] ] call CBA_fnc_addPerFrameHandler;
 };
 
 true;

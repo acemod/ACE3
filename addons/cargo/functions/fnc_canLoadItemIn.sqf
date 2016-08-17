@@ -6,7 +6,7 @@
  * 0: Item <OBJECT or STRING>
  * 1: Holder Object (Vehicle) <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can load in <BOOL>
  *
  * Example:

@@ -40,14 +40,29 @@ private _checkPos4end = _checkPos4beg vectorAdd (_dir vectorMultiply 1.3);
 private _checkPos5beg = _pos vectorAdd [-0.2 * (_dir select 1), -0.2 * -(_dir select 0), 1.5];
 private _checkPos5end = _checkPos5beg vectorAdd (_dir vectorMultiply 1.3);
 
-/*
-drawLine3D [ASLToATL _checkPos0beg, ASLToATL _checkPos0end, [0,1,0,1]];
-drawLine3D [ASLToATL _checkPos1beg, ASLToATL _checkPos1end, [1,0,0,1]];
-drawLine3D [ASLToATL _checkPos2beg, ASLToATL _checkPos2end, [1,0.5,0.5,1]];
-drawLine3D [ASLToATL _checkPos3beg, ASLToATL _checkPos3end, [1,0.5,0.5,1]];
-drawLine3D [ASLToATL _checkPos4beg, ASLToATL _checkPos4end, [1,0.5,0.5,1]];
-drawLine3D [ASLToATL _checkPos5beg, ASLToATL _checkPos5end, [1,0.5,0.5,1]];
-*/
+#ifdef DEBUG_MODE_FULL
+    [{
+        params ["_args", "_idPFH"];
+
+        if (diag_tickTime > (_args select 0) + 5) exitWith {
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
+        };
+
+        drawLine3D [ASLToATL (_args select 1), ASLToATL (_args select 2), [0,1,0,1]];
+        drawLine3D [ASLToATL (_args select 3), ASLToATL (_args select 4), [1,0,0,1]];
+        drawLine3D [ASLToATL (_args select 5), ASLToATL (_args select 6), [1,0.5,0.5,1]];
+        drawLine3D [ASLToATL (_args select 7), ASLToATL (_args select 8), [1,0.5,0.5,1]];
+        drawLine3D [ASLToATL (_args select 9), ASLToATL (_args select 10), [1,0.5,0.5,1]];
+        drawLine3D [ASLToATL (_args select 11), ASLToATL (_args select 12), [1,0.5,0.5,1]];
+    }, 0, [ diag_tickTime,
+            _checkPos0beg, _checkPos0end,
+            _checkPos1beg, _checkPos1end,
+            _checkPos2beg, _checkPos2end,
+            _checkPos3beg, _checkPos3end,
+            _checkPos4beg, _checkPos4end,
+            _checkPos5beg, _checkPos5end
+    ]] call CBA_fnc_addPerFrameHandler;
+#endif
 
       lineIntersects [_checkPos0beg, _checkPos0end]
 && {!(lineIntersects [_checkPos1beg, _checkPos1end])}

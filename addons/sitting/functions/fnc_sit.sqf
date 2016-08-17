@@ -49,7 +49,7 @@ _player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
 
 // Set variables, save seat object on player
 _player setVariable [QGVAR(isSitting), [_seat, _actionID]];
-_seat setVariable [QGVAR(seatOccupied), true, true]; // To prevent multiple people sitting on one seat
+[_player, _seat] call EFUNC(common,claim); // To prevent multiple people sitting on one seat
 
 
 // Add automatical stand PFH in case of interruptions

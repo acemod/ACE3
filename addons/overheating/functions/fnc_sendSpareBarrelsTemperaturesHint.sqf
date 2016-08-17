@@ -3,11 +3,11 @@
  * Collect the temperature of all the spare barrels a unit has and send a hint
  * to a client. Runs on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Target unit of the hint <OBJECT>
  * 1: Unit that has the spare barrels <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  *
@@ -73,4 +73,4 @@ if (_countExtremelyHot > 0) then {
 };
 
 TRACE_1("_output",_output);
-["displayTextStructured", [_player], [_output, _size, _player]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [_output, _size, _player], [_player]] call CBA_fnc_targetEvent;

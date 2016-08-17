@@ -30,11 +30,11 @@ class GVAR(triageCard) {
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {1,1,0,1};
             colorBackground[] = {0,0,0,0};
-            text = QUOTE(PATHTOF(ui\triage_card_corner_l.paa));
+            text = QPATHTOF(ui\triage_card_corner_l.paa);
         };
         class cornor_top_r: cornor_top_l {
             x = "20 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            text = QUOTE(PATHTOF(ui\triage_card_corner_r.paa));
+            text = QPATHTOF(ui\triage_card_corner_r.paa);
         };
 
         class TriageCardLabel {
@@ -113,7 +113,7 @@ class GVAR(triageCard) {
             animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.9)";
-            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3('ACE_medical_triageLevel',0,true)];);
+            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3(QQGVAR(triageLevel),0,true)];);
         };
         class selectTriageStatusMinor: selectTriageStatus {
             idc = 2003;
@@ -131,7 +131,7 @@ class GVAR(triageCard) {
             animTextureFocused = "#(argb,8,8,3)color(0,0.5,0,0.9)";
             animTexturePressed = "#(argb,8,8,3)color(0,0.5,0,0.9)";
             animTextureDefault = "#(argb,8,8,3)color(0,0.5,0,0.9)";
-            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3('ACE_medical_triageLevel',1,true)];);
+            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3(QQGVAR(triageLevel),1,true)];);
         };
         class selectTriageStatusDelayed: selectTriageStatus {
             idc = 2004;
@@ -149,7 +149,7 @@ class GVAR(triageCard) {
             animTextureFocused = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
             animTexturePressed = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
             animTextureDefault = "#(argb,8,8,3)color(0.77,0.51,0.08,0.9)";
-            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3('ACE_medical_triageLevel',2,true)];);
+            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3(QQGVAR(triageLevel),2,true)];);
         };
         class selectTriageStatusImmediate: selectTriageStatus {
             idc = 2005;
@@ -167,7 +167,7 @@ class GVAR(triageCard) {
             animTextureFocused = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
             animTexturePressed = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
             animTextureDefault = "#(argb,8,8,3)color(1,0.2,0.2,0.9)";
-            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3('ACE_medical_triageLevel', 3, true)];);
+            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3(QQGVAR(triageLevel), 3, true)];);
         };
         class selectTriageStatusDeceased: selectTriageStatus {
             idc = 2006;
@@ -185,7 +185,7 @@ class GVAR(triageCard) {
             animTextureFocused = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTexturePressed = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTextureDefault = "#(argb,8,8,3)color(0,0,0,0.9)";
-            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3('ACE_medical_triageLevel', 4, true)];);
+            action = QUOTE([false] call FUNC(dropDownTriageCard); (GVAR(TriageCardTarget)) setVariable [ARR_3(QQGVAR(triageLevel), 4, true)];);
         };
     };
 };

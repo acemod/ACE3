@@ -4,7 +4,7 @@ if (!hasInterface) exitWith {};
 
 GVAR(pfID) = -1;
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     TRACE_1("SettingsInitialized eh",GVAR(enabledFor));
 
     if (GVAR(enabledFor) == 0) exitWith {}; //Module has no effect if enabledFor is "None"
@@ -19,7 +19,7 @@ GVAR(pfID) = -1;
         [] call FUNC(addPFEH);
         TRACE_1("adding temp PFEH [start in]",GVAR(pfID));
     };
-    ["playerVehicleChanged", {
+    ["vehicle", {
         params ["", "_vehicle"];
         TRACE_2("playerVehicleChanged",_vehicle,typeOf _vehicle);
         if (_vehicle isKindOf "Air") then {
@@ -35,5 +35,5 @@ GVAR(pfID) = -1;
                 GVAR(pfID) = -1;
             };
         };
-    }] call EFUNC(common,addEventHandler);
-}] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addPlayerEventHandler;
+}] call CBA_fnc_addEventHandler;

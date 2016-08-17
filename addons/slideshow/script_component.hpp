@@ -1,4 +1,5 @@
 #define COMPONENT slideshow
+#define COMPONENT_BEAUTIFIED Slideshow
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

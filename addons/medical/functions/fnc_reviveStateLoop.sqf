@@ -21,13 +21,6 @@ if (!local _unit) exitWith {};
 
 private _startTime = _unit getVariable [QGVAR(reviveStartTime), 0];
 
-// Remove heartbeat
-if (GVAR(level) >= 2) then {
-    if (_unit getVariable [QGVAR(heartRate), 60] > 0) then {
-        _unit setVariable [QGVAR(heartRate), 0];
-    };
-};
-
 // If we are in revive state in a blown up vehicle, try to unload so that people can access the body
 if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) then {
     TRACE_2("Unloading", _unit, vehicle _unit);
@@ -35,7 +28,7 @@ if ((alive _unit) && {(vehicle _unit) != _unit} && {!alive (vehicle _unit)}) the
 };
 
 // If the timer run out, let the unit die and exit the loop
-if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
+if (GVAR(maxReviveTime) > 0 && {CBA_missionTime - _startTime > GVAR(maxReviveTime)}) exitwith {
     _unit setVariable [QGVAR(inReviveState), nil, true];
     _unit setVariable [QGVAR(reviveStartTime), nil];
     [_unit, true] call FUNC(setDead);
@@ -52,5 +45,12 @@ if !(_unit getVariable [QGVAR(inReviveState), false]) exitwith {
     _unit setVariable [QGVAR(reviveStartTime), nil];
 };
 
+// Remove heartbeat
+if (GVAR(level) >= 2) then {
+    if (_unit getVariable [QGVAR(heartRate), 60] > 0) then {
+        _unit setVariable [QGVAR(heartRate), 0];
+    };
+};
+
 // Schedule the loop to be executed again 1 sec later
-[DFUNC(reviveStateLoop), [_unit], 1] call EFUNC(common,waitAndExecute);
+[DFUNC(reviveStateLoop), [_unit], 1] call CBA_fnc_waitAndExecute;

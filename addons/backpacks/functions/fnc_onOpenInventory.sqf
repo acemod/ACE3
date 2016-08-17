@@ -24,7 +24,7 @@ private _target = objectParent _backpack;
 if (isNull _target) exitWith {false};
 
 // raise event on target unit
-["backpackOpened", _target, [_target, _backpack]] call EFUNC(common,targetEvent);
+["ace_backpackOpened", [_target, _backpack], _target] call CBA_fnc_targetEvent;
 
 // return false to open inventory as usual
 false

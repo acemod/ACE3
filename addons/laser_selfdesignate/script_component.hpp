@@ -1,4 +1,5 @@
 #define COMPONENT laser_selfdesignate
+#define COMPONENT_BEAUTIFIED Laser Selfdesignate
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

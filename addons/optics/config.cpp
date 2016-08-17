@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {
             "ACE_optic_Hamr_2D",
@@ -18,8 +19,9 @@ class CfgPatches {
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Taosenai","KoffeinFlummi","commy2"};
-        authorUrl = "http://www.ryanschultz.org/tmr/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Taosenai","KoffeinFlummi","commy2"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

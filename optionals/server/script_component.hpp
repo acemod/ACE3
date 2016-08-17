@@ -1,4 +1,5 @@
 #define COMPONENT server
+#define COMPONENT_BEAUTIFIED Server
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_SERVER

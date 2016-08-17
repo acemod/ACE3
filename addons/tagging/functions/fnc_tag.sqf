@@ -72,6 +72,11 @@ if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) t
 // Check if its a valid surface: big enough, reasonably plane
 private _v1 = vectorNormalized (_surfaceNormal vectorMultiply -1);
 private _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+// If the surface is not horizontal (>20º), create vup _v2 pointing upward instead of away
+if (abs (_v1 select 2) < 0.94) then {
+    private _v3Temp = _v1 vectorCrossProduct [0, 0, 1];
+    _v2 = _v3Temp vectorCrossProduct _v1;
+};
 private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
@@ -100,7 +105,7 @@ if ( !([ 0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
 private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
 // Everything ok, make the unit create the tag
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 [{
     params ["", "", "", "", "_unit"];
@@ -109,7 +114,7 @@ _unit playActionNow "PutDown";
     playSound3D [QUOTE(PATHTO_R(sounds\spray.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
 
     // Tell the server to create the tag and handle its destruction
-    ["createTag", _this] call EFUNC(common,serverEvent);
-}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call EFUNC(common,waitAndExecute);
+    [QGVAR(createTag), _this] call CBA_fnc_serverEvent;
+}, [_touchingPoint vectorAdd (_surfaceNormal vectorMultiply 0.06), _vectorDirAndUp, _texture, _object, _unit], 0.6] call CBA_fnc_waitAndExecute;
 
 true

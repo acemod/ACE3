@@ -1,13 +1,15 @@
 /*
  * Author: Glowbal
- * Removes white spaces from string
+ * Removes whitespace from a string.
  *
  * Arguments:
- * 0: stringA <STRING>
- * 1: stringB <STRING>
+ * 0: String <STRING>
  *
  * Return Value:
- * copy of string <STRING>
+ * String Without Whitespace <STRING>
+ *
+ * Example:
+ * _stringWithoutWhitespace = ["String with whitespace"] call ace_common_fnc_stringRemoveWhiteSpace
  *
  * Public: Yes
  */

@@ -20,11 +20,38 @@ if (isNil "ACE_maxWeightCarry") then {
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["playerVehicleChanged", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["playerWeaponChanged", {_this call FUNC(handlePlayerWeaponChanged)}] call EFUNC(common,addEventhandler);
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
+["weapon", FUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
-["medical_onUnconscious", {_this call FUNC(handleUnconscious)}] call EFUNC(common,addEventhandler);
+["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
 
 //@todo Captivity?
+
+//Add Keybind:
+["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)),
+{
+    if (!alive ACE_player) exitWith {false};
+    if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    
+    // If we are drag/carrying something right now then just drop it:
+    if (ACE_player getVariable [QGVAR(isDragging), false]) exitWith {
+        [ACE_player, ACE_player getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject);
+        false
+    };
+    if (ACE_player getVariable [QGVAR(isCarrying), false]) exitWith {
+        [ACE_player, ACE_player getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry);
+        false
+    };
+
+    private _cursor = cursorObject;
+    if ((isNull _cursor) || {(_cursor distance ACE_player) > 2.6}) exitWith {false};
+    if (!([ACE_player, _cursor] call FUNC(canDrag))) exitWith {false};
+
+    [ACE_player, _cursor] call FUNC(startDrag);
+    false
+},
+{false},
+[-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
+

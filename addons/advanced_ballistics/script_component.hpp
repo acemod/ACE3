@@ -1,4 +1,5 @@
 #define COMPONENT advanced_ballistics
+#define COMPONENT_BEAUTIFIED Advanced Ballistics
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

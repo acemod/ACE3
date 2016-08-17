@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_reset_relative_click_memory
+ * call ace_atragmx_fnc_reset_relative_click_memory
  *
  * Public: No
  */

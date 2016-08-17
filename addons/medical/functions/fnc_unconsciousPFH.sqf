@@ -33,15 +33,14 @@ if (!alive _unit) exitWith {
     if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
         [_unit, false, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
     };
-    [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
-    _unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
-    ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+    ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
 
-    TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , QGVAR(unconscious));
+    TRACE_3("ACE_DEBUG_Unconscious_Exit",_unit, (!alive _unit) , "ace_unconscious");
 
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
@@ -96,13 +95,13 @@ if !(_unit getVariable ["ACE_isUnconscious",false]) exitWith {
         };
         _unit setVariable [QGVAR(vehicleAwakeAnim), nil];
 
-        ["medical_onUnconscious", [_unit, false]] call EFUNC(common,globalEvent);
+        ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
         // EXIT PFH
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
     if (!_hasMovedOut) then {
         // Reset the unit back to the previous captive state.
-        [_unit, "setCaptive", QGVAR(unconscious), false] call EFUNC(common,statusEffect_set);
+        [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
 
         // Swhich the unit back to its original group
         //Unconscious units shouldn't be put in another group #527:
@@ -130,13 +129,13 @@ if (_parachuteCheck) then {
 
 if (!local _unit) exitWith {
     TRACE_6("ACE_DEBUG_Unconscious_PFH",_unit, _args, _startingTime, _minWaitingTime, _idPFH, _unit getVariable QGVAR(unconsciousArguments));
-    _args set [3, _minWaitingTime - (ACE_time - _startingTime)];
+    _args set [3, _minWaitingTime - (CBA_missionTime - _startingTime)];
     _unit setVariable [QGVAR(unconsciousArguments), _args, true];
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
-if ((ACE_time - _startingTime) >= _minWaitingTime) exitWith {
+if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         _unit setVariable ["ACE_isUnconscious", false, true];

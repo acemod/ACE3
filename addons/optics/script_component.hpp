@@ -1,4 +1,5 @@
 #define COMPONENT optics
+#define COMPONENT_BEAUTIFIED Optics
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: UUID (from laserOn) <string>
  *
- * Return value:
+ * Return Value:
  * None
  */
 
@@ -13,4 +13,4 @@
 
 private ["_uuid"];
 _uuid = _this select 0;
-["laser_laserOff", [_uuid]] call EFUNC(common,globalEvent);
+["ace_laserOff", [_uuid]] call CBA_fnc_globalEvent;

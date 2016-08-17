@@ -6,28 +6,28 @@ class CfgWeapons {
         author = "jokoho48";
         displayname = CSTRING(spraypaintBlack);
         descriptionShort = CSTRING(descSpraypaint);
-        picture = QUOTE(PATHTOF(UI\items\itemSpraypaintBlack.paa));
-        model = QUOTE(PATHTOF(data\SprayCan.p3d));
+        picture = QPATHTOF(UI\items\itemSpraypaintBlack.paa);
+        model = QPATHTOF(data\SprayCan.p3d);
         scope = 2;
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {QUOTE(PATHTOF(data\spraycanBlack_co.paa))};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanBlack_co.paa)};
         class ItemInfo: InventoryItem_Base_F {
             mass = 10;
         };
     };
     class ACE_SpraypaintRed : ACE_SpraypaintBlack {
         displayname = CSTRING(spraypaintRed);
-        picture = QUOTE(PATHTOF(UI\items\itemSpraypaintRed.paa));
-        hiddenSelectionsTextures[] = {QUOTE(PATHTOF(data\spraycanRed_co.paa))};
+        picture = QPATHTOF(UI\items\itemSpraypaintRed.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanRed_co.paa)};
     };
     class ACE_SpraypaintGreen : ACE_SpraypaintBlack {
         displayname = CSTRING(spraypaintGreen);
-        picture = QUOTE(PATHTOF(UI\items\itemSpraypaintGreen.paa));
-        hiddenSelectionsTextures[] = {QUOTE(PATHTOF(data\spraycanGreen_co.paa))};
+        picture = QPATHTOF(UI\items\itemSpraypaintGreen.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanGreen_co.paa)};
     };
     class ACE_SpraypaintBlue : ACE_SpraypaintBlack {
         displayname = CSTRING(spraypaintBlue);
-        picture = QUOTE(PATHTOF(UI\items\itemSpraypaintBlue.paa));
-        hiddenSelectionsTextures[] = {QUOTE(PATHTOF(data\spraycanBlue_co.paa))};
+        picture = QPATHTOF(UI\items\itemSpraypaintBlue.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanBlue_co.paa)};
     };
 };

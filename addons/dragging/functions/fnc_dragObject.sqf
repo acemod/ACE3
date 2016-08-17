@@ -33,7 +33,7 @@ _position = _position vectorAdd [0, 0, _offset];
 // attach object
 TRACE_3("attaching",_position,_offset,_direction);
 _target attachTo [_unit, _position];
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
@@ -49,11 +49,14 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
 ] call EFUNC(common,addActionEventHandler)];
 
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+
 // show mouse hint
 [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 
 // check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
+[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;

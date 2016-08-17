@@ -9,7 +9,7 @@
 if(!isServer) exitWith { };
 
 BEGIN_COUNTER(frago);
-// _startTime = ACE_diagTime;
+// _startTime = diag_tickTime;
 
 private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
 
@@ -23,16 +23,16 @@ if((count _this) > 5) then {
 };
 
 _fragTypes = [
-            "ACE_frag_tiny", "ACE_frag_tiny", "ACE_frag_tiny",
-            "ACE_frag_tiny_HD", "ACE_frag_tiny_HD", "ACE_frag_tiny_HD",
-            "ACE_frag_small","ACE_frag_small","ACE_frag_small","ACE_frag_small",
-            "ACE_frag_small_HD","ACE_frag_small_HD","ACE_frag_small_HD","ACE_frag_small_HD",
-            "ACE_frag_medium_HD", "ACE_frag_medium_HD", "ACE_frag_medium_HD", "ACE_frag_medium_HD", "ACE_frag_medium_HD"
+            QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),
+            QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),
+            QGVAR(small),QGVAR(small),QGVAR(small),QGVAR(small),
+            QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),
+            QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)
         ];
 
 _warn = false;
-if(isArray (configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_CLASSES")) then {
-    _fragTypes = getArray (configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_CLASSES");
+if(isArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES))) then {
+    _fragTypes = getArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES));
 } else {
     _warn = true;
 };
@@ -58,13 +58,13 @@ _fragRange = 20*_indirectHitRange*4;
 // _gC = 2320; // Gurney constant of tritonal in /ms
 
 
-_c = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_CHARGE");
+_c = getNumber(configFile >> "CfgAmmo" >> _shellType >> QGVAR(CHARGE));
 if(_c == 0) then { _c = 1; _warn = true;};
-_m = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_METAL");
+_m = getNumber(configFile >> "CfgAmmo" >> _shellType >> QGVAR(METAL));
 if(_m == 0) then { _m = 2; _warn = true;};
-_k = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_GURNEY_K");
+_k = getNumber(configFile >> "CfgAmmo" >> _shellType >> QGVAR(GURNEY_K));
 if(_k == 0) then { _k = 1/2; _warn = true;};
-_gC = getNumber(configFile >> "CfgAmmo" >> _shellType >> "ACE_frag_GURNEY_C");
+_gC = getNumber(configFile >> "CfgAmmo" >> _shellType >> QGVAR(GURNEY_C));
 if(_gC == 0) then { _gC = 2440; _warn = true;};
 
 if(_warn) then {
@@ -214,5 +214,5 @@ if(_isArmed && (count _objects) > 0) then {
     // ACE_player sideChat format["total frags: %1", GVAR(TOTALFRAGS)];
     // ACE_player sideChat format["tracks: %1", (count GVAR(trackedObjects))];
 // #endif
-// _endTime = ACE_diagTime;
+// _endTime = diag_tickTime;
 END_COUNTER(frago);

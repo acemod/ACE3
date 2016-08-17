@@ -86,4 +86,4 @@ _unit setVariable [QGVAR(allLogs), [], true];
 // items
 [{
     _this call FUNC(itemCheck);
-}, [_unit], 0.5, 0.1] call EFUNC(common,waitAndExecute);
+}, [_unit], 0.5, 0.1] call CBA_fnc_waitAndExecute;

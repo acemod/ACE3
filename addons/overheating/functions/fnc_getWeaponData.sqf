@@ -2,10 +2,10 @@
  * Author: PabstMirror and esteldunedain
  * Get weapon data with caching
  *
- * Argument:
+ * Arguments:
  * 0: weapon type <STRING>
  *
- * Return value:
+ * Return Value:
  * 0: dispresion <NUMBER>
  * 1: slowdownFactor <NUMBER>
  * 2: jamChance <NUMBER>

@@ -5,7 +5,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -37,7 +37,7 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     [
         5 * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
-        {["UnloadCargo", _this select 0] call EFUNC(common,localEvent)},
+        {["ace_unloadCargo", _this select 0] call CBA_fnc_localEvent},
         {},
         localize LSTRING(UnloadingItem),
         {true},
@@ -47,5 +47,5 @@ if ([_item, GVAR(interactionVehicle), ACE_player] call FUNC(canUnloadItem)) then
     private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
     private _displayName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
 
-    ["displayTextStructured", [[LSTRING(UnloadingFailed), _displayName], 3.0]] call EFUNC(common,localEvent);
+    [[LSTRING(UnloadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
 };

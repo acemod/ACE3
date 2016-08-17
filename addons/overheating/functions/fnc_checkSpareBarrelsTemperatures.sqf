@@ -29,7 +29,7 @@ if (!([_player, objNull, ["isNotInside", "isNotSitting"]] call EFUNC(common,canI
         params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
         _args params ["_player"];
         // Time has enlapsed, ask the server to send the hint
-        ['spareBarrelsSendTemperatureHint', [_player, _player]] call EFUNC(common,serverEvent);
+        [QGVAR(sendSpareBarrelTemperatureHint), [_player, _player]] call CBA_fnc_serverEvent;
     },
     {},
     (localize LSTRING(CheckingSpareBarrelsTemperatures)),

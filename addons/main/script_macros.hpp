@@ -9,21 +9,23 @@
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
+#undef QFUNC
+#undef QEFUNC
 #define QFUNC(var1) QUOTE(DFUNC(var1))
 #define QEFUNC(var1,var2) QUOTE(DEFUNC(var1,var2))
-
-#define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
 
 #define GETVAR_SYS(var1,var2) getVariable [ARR_2(QUOTE(var1),var2)]
 #define SETVAR_SYS(var1,var2) setVariable [ARR_2(QUOTE(var1),var2)]
 #define SETPVAR_SYS(var1,var2) setVariable [ARR_3(QUOTE(var1),var2,true)]
 
+#undef GETVAR
 #define GETVAR(var1,var2,var3) var1 GETVAR_SYS(var2,var3)
 #define GETMVAR(var1,var2) missionNamespace GETVAR_SYS(var1,var2)
 #define GETUVAR(var1,var2) uiNamespace GETVAR_SYS(var1,var2)
 #define GETPRVAR(var1,var2) profileNamespace GETVAR_SYS(var1,var2)
 #define GETPAVAR(var1,var2) parsingNamespace GETVAR_SYS(var1,var2)
 
+#undef SETVAR
 #define SETVAR(var1,var2,var3) var1 SETVAR_SYS(var2,var3)
 #define SETPVAR(var1,var2,var3) var1 SETPVAR_SYS(var2,var3)
 #define SETMVAR(var1,var2) missionNamespace SETVAR_SYS(var1,var2)
@@ -82,27 +84,14 @@
 #define TYPE_BACKPACK 901
 
 #ifdef DISABLE_COMPILE_CACHE
-    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf))
+    #undef PREP
+    #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
 #else
-    #define PREP(fncName) [QUOTE(PATHTOF(functions\DOUBLES(fnc,fncName).sqf)), QFUNC(fncName)] call CBA_fnc_compileFunction
+    #undef PREP
+    #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
 
-#define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QUOTE(PATHTOF(folder\__PREP__.sqf))
-
-#define HASH_CREATE                    ([] call EFUNC(common,hashCreate))
-#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
-#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
-#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
-#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
-
-#define HASHLIST_CREATELIST(keys)                ([keys] call EFUNC(common,hashListCreateList))
-#define HASHLIST_CREATEHASH(hashList)            ([hashList] call EFUNC(common,hashListCreateHash))
-#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
-#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
-#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
-
-// Time functions for accuracy per frame
-#define ACE_tickTime (ACE_time + (diag_tickTime - ACE_diagTime))
+#define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
 #define ACE_isHC (!hasInterface && !isDedicated)
 
@@ -116,7 +105,10 @@
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)
 
-#define ACE_LOGERROR(message) ACE_LOG(COMPONENT,"ERROR",message)
+#define ACE_LOG_FILELINENUMBERS(module,level,message) diag_log text ACE_LOGFORMAT_FILELINENUMBERS(module,level,message)
+#define ACE_LOGFORMAT_FILELINENUMBERS(module,level,message) FORMAT_4(QUOTE([ACE] (module) %1: %2 File: %3 Line: %4),level,message,__FILE__,__LINE__)
+
+#define ACE_LOGERROR(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"ERROR",message)
 #define ACE_LOGERROR_1(message,arg1) ACE_LOGERROR(FORMAT_1(message,arg1))
 #define ACE_LOGERROR_2(message,arg1,arg2) ACE_LOGERROR(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGERROR_3(message,arg1,arg2,arg3) ACE_LOGERROR(FORMAT_3(message,arg1,arg2,arg3))
@@ -126,7 +118,7 @@
 #define ACE_LOGERROR_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGERROR(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGERROR_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGERROR(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT(COMPONENT,"ERROR",message)
+#define ACE_ERRORFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"ERROR",message)
 #define ACE_ERRORFORMAT_1(message,arg1) ACE_ERRORFORMAT(FORMAT_1(message,arg1))
 #define ACE_ERRORFORMAT_2(message,arg1,arg2) ACE_ERRORFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_ERRORFORMAT_3(message,arg1,arg2,arg3) ACE_ERRORFORMAT(FORMAT_3(message,arg1,arg2,arg3))
@@ -136,7 +128,7 @@
 #define ACE_ERRORFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_ERRORFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_ERRORFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_ERRORFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_LOGWARNING(message) ACE_LOG(COMPONENT,"WARNING",message)
+#define ACE_LOGWARNING(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"WARNING",message)
 #define ACE_LOGWARNING_1(message,arg1) ACE_LOGWARNING(FORMAT_1(message,arg1))
 #define ACE_LOGWARNING_2(message,arg1,arg2) ACE_LOGWARNING(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGWARNING_3(message,arg1,arg2,arg3) ACE_LOGWARNING(FORMAT_3(message,arg1,arg2,arg3))
@@ -146,7 +138,7 @@
 #define ACE_LOGWARNING_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGWARNING(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGWARNING_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGWARNING(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"WARNING",message)
+#define ACE_WARNINGFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"WARNING",message)
 #define ACE_WARNINGFORMAT_1(message,arg1) ACE_WARNINGFORMAT(FORMAT_1(message,arg1))
 #define ACE_WARNINGFORMAT_2(message,arg1,arg2) ACE_WARNINGFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_WARNINGFORMAT_3(message,arg1,arg2,arg3) ACE_WARNINGFORMAT(FORMAT_3(message,arg1,arg2,arg3))
@@ -176,7 +168,7 @@
 #define ACE_INFOFORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_INFOFORMAT(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_INFOFORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_INFOFORMAT(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_LOGDEBUG(message) ACE_LOG(COMPONENT,"DEBUG",message)
+#define ACE_LOGDEBUG(message) ACE_LOG_FILELINENUMBERS(COMPONENT,"DEBUG",message)
 #define ACE_LOGDEBUG_1(message,arg1) ACE_LOGDEBUG(FORMAT_1(message,arg1))
 #define ACE_LOGDEBUG_2(message,arg1,arg2) ACE_LOGDEBUG(FORMAT_2(message,arg1,arg2))
 #define ACE_LOGDEBUG_3(message,arg1,arg2,arg3) ACE_LOGDEBUG(FORMAT_3(message,arg1,arg2,arg3))
@@ -186,7 +178,7 @@
 #define ACE_LOGDEBUG_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7) ACE_LOGDEBUG(FORMAT_7(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7))
 #define ACE_LOGDEBUG_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8) ACE_LOGDEBUG(FORMAT_8(message,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8))
 
-#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT(COMPONENT,"DEBUG",message)
+#define ACE_DEBUGFORMAT(message) ACE_LOGFORMAT_FILELINENUMBERS(COMPONENT,"DEBUG",message)
 #define ACE_DEBUGFORMAT_1(message,arg1) ACE_DEBUGFORMAT(FORMAT_1(message,arg1))
 #define ACE_DEBUGFORMAT_2(message,arg1,arg2) ACE_DEBUGFORMAT(FORMAT_2(message,arg1,arg2))
 #define ACE_DEBUGFORMAT_3(message,arg1,arg2,arg3) ACE_DEBUGFORMAT(FORMAT_3(message,arg1,arg2,arg3))

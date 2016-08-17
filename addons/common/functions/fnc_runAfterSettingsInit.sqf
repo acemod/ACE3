@@ -2,11 +2,11 @@
  * Author: PabstMirror
  * Executes code after setting are initilized.
  *
- * Argument:
+ * Arguments:
  * 0: Code to execute <CODE>
  * 1: Parameters to run the code with <ANY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

@@ -28,24 +28,26 @@
 */
 #define BLOOD_CHANGE_PER_SECOND        0.0595
 
+#define EMPTY_IV_BAG_VALUE 0
+#define IV_VOLUME (_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) + IV_CHANGE_PER_SECOND
+
 private ["_bloodVolume", "_bloodVolumeChange", "_ivVolume"];
 params ["_unit"];
 
-_bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
-_bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
+private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
+private _bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
-if (_bloodVolume < 100.0) then {
+if (_bloodVolume < 100) then {
     {
-        if ((_unit getVariable [_x, 0]) > 0) then {
+        if ((_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) > EMPTY_IV_BAG_VALUE) then {
             _bloodVolumeChange = _bloodVolumeChange + BLOOD_CHANGE_PER_SECOND;
-            _ivVolume = (_unit getVariable [_x, 0]) + IV_CHANGE_PER_SECOND;
-            _unit setVariable [_x,_ivVolume];
+            _unit setVariable [_x, IV_VOLUME];
         };
     } forEach GVAR(IVBags);
 } else {
     {
-        if ((_unit getVariable [_x, 0]) > 0) then {
-            _unit setVariable [_x, 0]; // lets get rid of exessive IV volume
+        if ((_unit getVariable [_x, EMPTY_IV_BAG_VALUE]) > EMPTY_IV_BAG_VALUE) then {
+            _unit setVariable [_x, EMPTY_IV_BAG_VALUE]; // lets get rid of exessive IV volume
         };
     } forEach GVAR(IVBags);
 };

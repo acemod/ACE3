@@ -44,7 +44,7 @@ if (_target isKindOf "CAManBase") then {
     _target attachTo [_unit, _position];
 
 };
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
@@ -56,6 +56,9 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
 ] call EFUNC(common,addActionEventHandler)];
 
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+
 // show mouse hint
 if (_target isKindOf "CAManBase") then {
     [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
@@ -64,7 +67,7 @@ if (_target isKindOf "CAManBase") then {
 };
 
 // check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target, ACE_time]] call CBA_fnc_addPerFrameHandler;
+[FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;

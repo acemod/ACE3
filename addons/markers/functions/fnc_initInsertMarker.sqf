@@ -238,4 +238,4 @@
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
     _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-}, _this] call EFUNC(common,execNextFrame);
+}, _this] call CBA_fnc_execNextFrame;

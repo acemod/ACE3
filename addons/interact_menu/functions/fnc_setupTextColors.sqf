@@ -2,10 +2,10 @@
  * Author: PabstMirror
  * Builds color strings needed for displaying interaction text
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

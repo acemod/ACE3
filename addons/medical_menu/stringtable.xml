@@ -127,7 +127,7 @@
             <German>STATUS</German>
             <Russian>СОСТОЯНИЕ</Russian>
             <Spanish>ESTADO</Spanish>
-            <French>ÉTATS</French>
+            <French>ÉTAT</French>
             <Polish>STATUS</Polish>
             <Portuguese>ESTADO</Portuguese>
             <Czech>STAV</Czech>
@@ -138,7 +138,7 @@
             <German>ÜBERSICHT</German>
             <Russian>ОБЩАЯ ИНФОРМАЦИЯ</Russian>
             <Spanish>DESCRIPCIÓN</Spanish>
-            <French>DESCRIPTION</French>
+            <French>APERÇU</French>
             <Polish>OPIS</Polish>
             <Portuguese>VISÃO GERAL</Portuguese>
             <Czech>PŘEHLED</Czech>
@@ -149,7 +149,7 @@
             <German>AKTIVITÄTSVERLAUF</German>
             <Russian>ПРОВЕДЕННЫЕ МАНИПУЛЯЦИИ</Russian>
             <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
-            <French>REGISTRE DES SOINS</French>
+            <French>REGISTRE D'ACTIVITÉ</French>
             <Polish>LOGI AKTYWNOŚCI</Polish>
             <Portuguese>REGISTRO DE ATIVIDADE</Portuguese>
             <Czech>PROTOKOL</Czech>
@@ -214,7 +214,7 @@
             <English>Airway Management</English>
             <Russian>Дыхательные пути</Russian>
             <Spanish>Vías Aéreas</Spanish>
-            <French>Gestion Des Voie REspiratoire</French>
+            <French>Gestion des voies respiratoires</French>
             <Polish>Drogi oddechowe</Polish>
             <Portuguese>Vias aéreas</Portuguese>
             <Czech>Dýchací systém</Czech>
@@ -226,7 +226,7 @@
             <German>Erweiterte Behandlungen</German>
             <Russian>Специальная медпомощь</Russian>
             <Spanish>Tratamientos Avanzados</Spanish>
-            <French>Traitement Avancé</French>
+            <French>Traitements Avancés</French>
             <Polish>Zaawansowane zabiegi</Polish>
             <Portuguese>Tratamentos avançados</Portuguese>
             <Czech>Pokročilé ošetření</Czech>
@@ -237,7 +237,7 @@
             <German>Ziehen/Tragen</German>
             <Russian>Тащить/нести</Russian>
             <Spanish>Arrastrar/Cargar</Spanish>
-            <French>Glisser/Porter</French>
+            <French>Traîner/Porter</French>
             <Polish>Ciągnij/Nieś</Polish>
             <Portuguese>Arrastar/Carregar</Portuguese>
             <Czech>Táhnout/Nést</Czech>
@@ -247,7 +247,7 @@
             <English>Toggle (Self)</English>
             <German>Umschalter (Selbst)</German>
             <Russian>Лечить себя/другого раненого</Russian>
-            <French>Activer (sois)</French>
+            <French>Basculer (soi)</French>
             <Polish>Przełącz (na siebie)</Polish>
             <Spanish>Alternar</Spanish>
             <Portuguese>Alternar (Si mesmo)</Portuguese>
@@ -259,7 +259,7 @@
             <German>Setze Status auf der Triagekarte</German>
             <Russian>Сортировка</Russian>
             <Spanish>Seleccionar estado de Triage</Spanish>
-            <French>Selectioner l'état de Triage</French>
+            <French>Selectioner l'état de triage</French>
             <Polish>Wybierz priorytet</Polish>
             <Portuguese>Selecionar estado de triagem</Portuguese>
             <Czech>Vybrat prioritu</Czech>
@@ -512,7 +512,7 @@
             <German>Normale Atmung</German>
             <Russian>Дыхание в норме</Russian>
             <Spanish>Respiración normal</Spanish>
-            <French>Respiration Normale</French>
+            <French>Respiration normale</French>
             <Polish>Normalny oddech</Polish>
             <Portuguese>Respiração normal</Portuguese>
             <Czech>Normální dýchání</Czech>
@@ -523,7 +523,7 @@
             <German>Keine Atmung</German>
             <Russian>Дыхания нет</Russian>
             <Spanish>No respira</Spanish>
-            <French>Apnée</French>
+            <French>Aucune respiration</French>
             <Polish>Brak oddechu</Polish>
             <Portuguese>Sem respiração</Portuguese>
             <Czech>Nedýchá</Czech>
@@ -534,7 +534,7 @@
             <German>Schwere Atmung</German>
             <Russian>Дыхание затруднено</Russian>
             <Spanish>Dificultad para respirar</Spanish>
-            <French>Difficultée Respiratoire</French>
+            <French>Respiration difficile</French>
             <Polish>Trudności z oddychaniem</Polish>
             <Portuguese>Dificuldade para respirar</Portuguese>
             <Czech>Potíže s dýcháním</Czech>
@@ -545,7 +545,7 @@
             <German>Beinahe keine Atmung</German>
             <Russian>Дыхания почти нет</Russian>
             <Spanish>Casi sin respirar</Spanish>
-            <French>Respiration Faible</French>
+            <French>Respiration faible</French>
             <Polish>Prawie brak oddechu</Polish>
             <Portuguese>Quase sem respiração</Portuguese>
             <Czech>Téměř nedýchá</Czech>

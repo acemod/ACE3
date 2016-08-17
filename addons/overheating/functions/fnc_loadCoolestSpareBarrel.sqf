@@ -3,14 +3,14 @@
  * Collect the temperature of all the spare barrels a unit has and load the
  * coolest on the unit weapon. Runs on the server.
  *
- * Argument:
+ * Arguments:
  * 0: Unit that has the spare barrels <OBJECT>
  * 1: Unit that has the weapon <OBJECT>
  * 2: Weapon <STRING>
  * 3: Weapon temp before switching <NUMBER>
  * 4: Mass of the removed barrel <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  *
@@ -47,7 +47,7 @@ TRACE_3("loadCoolestSpareBarrel5",_coolestTemp,_coolestMag,_weaponTemp);
 _gunner setVariable [format [QGVAR(%1_temp), _weapon], _coolestTemp, true];
 
 // Heat up the coolest barrel to the former weapon temperature
-[GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, ACE_Time, _barrelMass]] call CBA_fnc_hashSet;
+[GVAR(storedSpareBarrels), _coolestMag, [_weaponTemp, CBA_missionTime, _barrelMass]] call CBA_fnc_hashSet;
 
 // Send an event so the machines of the assistant and gunner can show the hint
-["showWeaponTemperature", [_assistant, _gunner], [_gunner, _weapon]] call EFUNC(common,targetEvent);
+[QGVAR(showWeaponTemperature), [_gunner, _weapon], [_assistant, _gunner]] call CBA_fnc_targetEvent;
