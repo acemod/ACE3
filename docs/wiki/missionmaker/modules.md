@@ -474,7 +474,6 @@ This module allows to tweak all the rearm settings used in ACE3.
 Name | Type | Description | Default value
 ---- | ---- | ---- | ---- |
 Rearm Amount | Option | How fast should a vehicle be rearmed? | Entire Vehicle
-Ammunition supply | Option | How much ammunition does an ammo truck carry? | Unlimited ammo supply
 
 ### 2.8 Refuel Settings
 *Part of: ace_refuel*
