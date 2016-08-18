@@ -48,6 +48,7 @@ private _condition = {
 };
 private _statement = {
     GVAR(interactionVehicle) = _target;
+    GVAR(interactionParadrop) = false;
     createDialog QGVAR(menu);
 };
 private _text = localize LSTRING(openMenu);
@@ -55,3 +56,19 @@ private _icon = "";
 
 private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+
+if (_vehicle isKindOf "Air") then {
+    private _condition = {
+        GVAR(enable) && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+    };
+    private _statement = {
+        GVAR(interactionVehicle) = _target;
+        GVAR(interactionParadrop) = true;
+        createDialog QGVAR(menu);
+    };
+    private _text = localize LSTRING(openMenu);
+    private _icon = "";
+
+    private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
+    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass); // self action
+};
