@@ -10,6 +10,7 @@
             <French>Outil de tranchée</French>
             <Czech>Polní lopatka</Czech>
             <Portuguese>Ferramenta de trincheira</Portuguese>
+            <Russian>Саперная лопата</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EntrenchingToolDescription">
             <English>Entrenching Tool</English>
@@ -20,6 +21,7 @@
             <French>Outil de tranchée</French>
             <Czech>Polní lopatky se používají k zákopovým a jiným pracem.</Czech>
             <Portuguese>Ferramenta de trincheira</Portuguese>
+            <Russian>Саперная лопата</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeSmallName">
             <English>Envelope - Small</English>
@@ -29,6 +31,7 @@
             <Spanish>Trinchera pequeña</Spanish>
             <French>Envelope - petite</French>
             <Portuguese>Trincheira - Pequena</Portuguese>
+            <Russian>Окоп - Малый</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeSmallDescription">
             <English>Small Personal Trench</English>
@@ -39,6 +42,7 @@
             <French>Petite tranchée personelle</French>
             <Czech>Malý zákop pro jednoho</Czech>
             <Portuguese>Trincheira pessoal pequena</Portuguese>
+            <Russian>Малый персональный окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeSmall">
             <English>Dig Small Trench</English>
@@ -49,6 +53,7 @@
             <French>Creuser une petite tranchée</French>
             <Czech>Vykopat malý zákop</Czech>
             <Portuguese>Cavar trincheira pequena</Portuguese>
+            <Russian>Вырыть малый окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnvelopeBigName">
             <English>Envelope - Big</English>
@@ -58,6 +63,7 @@
             <Spanish>Trinchera grande</Spanish>
             <French>Enveloppe - grande</French>
             <Portuguese>Trincheira - Grande</Portuguese>
+            <Russian>Окоп - Большой</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_EnevlopeBigDescription">
             <English>Large Personal Trench</English>
@@ -68,6 +74,7 @@
             <French>Grande tranchée personelle</French>
             <Czech>Velký zákop pro jednoho</Czech>
             <Portuguese>Trincheira pessoal grande</Portuguese>
+            <Russian>Большой персональный окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_DigEnvelopeBig">
             <English>Dig Big Trench</English>
@@ -78,6 +85,7 @@
             <French>Creuser une grande tranchée</French>
             <Czech>Vykopat velký zákop</Czech>
             <Portuguese>Cavar trincheira grande</Portuguese>
+            <Russian>Вырыть большой окоп</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_ConfirmDig">
             <English>Confirm Dig</English>
@@ -88,6 +96,7 @@
             <French>Confirmer la creusée</French>
             <Czech>Potvrdit kopání</Czech>
             <Portuguese>Confirmar excavação</Portuguese>
+            <Russian>Копать</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_CancelDig">
             <English>Cancel Dig</English>
@@ -98,6 +107,7 @@
             <French>Annuler la creusée</French>
             <Czech>Zrušit kopání</Czech>
             <Portuguese>Cancelar excavação</Portuguese>
+            <Russian>Отменить копание</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_ScrollAction">
             <English>Rotate</English>
@@ -120,24 +130,31 @@
             <French>Creuse la tranchée</French>
             <Czech>Vykopat zákop</Czech>
             <Portuguese>Cavando trincheira</Portuguese>
+            <Russian>Копание окопа</Russian>
         </Key>
         <Key ID="STR_ACE_Trenches_ContinueDiggingTrench">
             <English>Continue Digging Trench</English>
             <Polish>Wzów kopanie wnęki</Polish>
             <Portuguese>Continuar cavando trincheira</Portuguese>
             <French>Continuer à creuser la tranchée</French>
+            <Russian>Продолжить копание окопа</Russian>
+            <Czech>Pokračovat v kopání</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
             <Polish>Usuń wnękę</Polish>
             <Portuguese>Remover trincheira</Portuguese>
             <French>Retirer la tranchée</French>
+            <Russian>Убрать окоп</Russian>
+            <Czech>Odstranit zákop</Czech>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
             <Polish>Usuwanie wnęki</Polish>
             <Portuguese>Removendo tricnheira</Portuguese>
             <French>Retirement de la tranchée</French>
+            <Russian>Убирание окопа</Russian>
+            <Czech>Odstraňuji zákop</Czech>
         </Key>
     </Package>
 </Project>

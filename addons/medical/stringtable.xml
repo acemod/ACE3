@@ -58,6 +58,7 @@
             <Italian>Inietta andenosina</Italian>
             <Czech>Aplikovat adenosine</Czech>
             <Portuguese>Injetar Adenosina</Portuguese>
+            <Russian>Ввести аденозин</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -260,6 +261,7 @@
             <Italian>Inietto l'andenosina</Italian>
             <Czech>Aplikuji adenosine...</Czech>
             <Portuguese>Injetando Adenosina...</Portuguese>
+            <Russian>Введение аденозина...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -978,6 +980,7 @@
             <Italian>Autoiniettore di adenosina</Italian>
             <Czech>Auto-adenosine</Czech>
             <Portuguese>Auto-injetor de Adenosina</Portuguese>
+            <Russian>Аденозин в пневмошприце</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -988,6 +991,7 @@
             <Italian>Usato per contrastare l'effetto dell'epinefrina</Italian>
             <Czech>Slouží jako protiváha Adrenalinu</Czech>
             <Portuguese>Usado para combater os efeitos da Epinefrina</Portuguese>
+            <Russian>Используется для купирования эффектов адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -998,6 +1002,7 @@
             <Italian>Medicamento usato per contrastare l'effetto dell'epinefrina</Italian>
             <Czech>Droga používaná k tlumení efektu Adrenalinu</Czech>
             <Portuguese>Uma droga usada para combater os efeitos da Epinefrina</Portuguese>
+            <Russian>Препарат используется для купирования эффектов адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -2913,6 +2918,7 @@
             <Polish>Miejsca zwiększają wyszkolenie</Polish>
             <Portuguese>Localização melhora treinamento</Portuguese>
             <French>Locations boost l'entraînement de médecin</French>
+            <Russian>Места ускоренного обучения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -2923,6 +2929,7 @@
             <Polish>Zwiększa poziom wyszkolenia medyków wewnątrz pojazdów medycznych lub w pobliżu budynków medycznych [niedoświadczony zostaje medykiem, medyk zostaje doktorem]</Polish>
             <Portuguese>Aumenta a classificação do médico dentro de veículos médicos ou perto de instalações médicas [sem treinamento vira médico, médico vira doutor]</Portuguese>
             <French>Boost le rang médical dans les véhicules ou bâtiments médicaux [non entraînés deviennent médecins, médecins deviennent docteurs]</French>
+            <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -3221,6 +3228,7 @@
             <Italian>Impostazioni Mediche Di Base [ACE]</Italian>
             <Czech>Základní zdravotnické nastavení [ACE]</Czech>
             <Portuguese>Ajustes médicos básicos [ACE]</Portuguese>
+            <Russian>Настройки базовой медицины [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -3339,6 +3347,7 @@
             <Italian>Permette epinefrina</Italian>
             <Czech>Povolit adrenalin</Czech>
             <Portuguese>Permitir Epinefrina</Portuguese>
+            <Russian>Разрешить Адреналин</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
@@ -3349,6 +3358,7 @@
             <Italian>Chi può usare l'epinefrina per la cura completa? (solo per sistema medico di base)</Italian>
             <Czech>Kdo může použít adrenalin k úplnému vyléčení? (Pouze základní zdravotní systém)</Czech>
             <Portuguese>Quem pode usar Epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
+            <Russian>Кому разрешено использовать адреналин для полного излечения? (Только для базовой медицины)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -3443,6 +3453,7 @@
             <Italian>Ubicazione epinefrina</Italian>
             <Czech>Oblast k použití adrenalinu</Czech>
             <Portuguese>Localizações de Epinefrina</Portuguese>
+            <Russian>Место использования адреналина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
@@ -3453,6 +3464,7 @@
             <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
             <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
             <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
+            <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -3700,10 +3712,11 @@
             <French>Configure les réglages de traitement dans ACE médical basique</French>
             <Italian>Configura le impostazioni trattamenti per ACE Medical di base</Italian>
             <Portuguese>Configura as opções de tratamento do sistema médico básico do ACE</Portuguese>
+            <Russian>Настройка лечения в базовой медицинской системе ACE</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
-            <Russian>Настройка лечения в медицинской системе ACE</Russian>
+            <Russian>Настройка лечения в усложненной медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
             <Spanish>Configure las opciones de tratamiento del sistema médico avanzado de ACE</Spanish>
             <German>Behandlungseinstellungen vom ACE-Medizin konfigurieren</German>
@@ -4151,6 +4164,7 @@
             <French>Entraînement médical</French>
             <Czech>Lékařský výcvik</Czech>
             <Portuguese>Treino médico</Portuguese>
+            <Russian>Медицинская подготовка</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -4160,6 +4174,7 @@
             <Spanish>Es un vehículo médico?</Spanish>
             <French>Définit si le véhicule est un véhicule médical ou non.</French>
             <Portuguese>Se o objeto será ou não um veículo médico</Portuguese>
+            <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
@@ -4168,6 +4183,7 @@
             <Czech>Prodleva zastavení palby pro AI, pokud je hráč v bezvědomí ze zdravotních důvodů.</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
             <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
+            <Russian>Задержка прекращения огня ботами, когда игрок теряет сознание по медицинским причинам.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
@@ -4178,6 +4194,7 @@
             <Czech>Prodleva zastavení palby AI na bezvědomé</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência</Portuguese>
             <French>Délai de cessez le feu de l'IA pour la perte de conscience</French>
+            <Russian>Задержка прекращения огня ботами при потере сознания</Russian>
         </Key>
     </Package>
 </Project>

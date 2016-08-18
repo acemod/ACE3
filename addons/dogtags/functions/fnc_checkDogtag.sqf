@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Checks unit dogtag
+ * Checks unit dogtag.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -8,6 +8,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player, unit] call ace_dogtags_fnc_checkDogtag
  *
  * Public: No
  */

@@ -12,4 +12,6 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(hashCreate),"3.8.0","CBA_fnc_hashCreate");
+
 [[],[]]

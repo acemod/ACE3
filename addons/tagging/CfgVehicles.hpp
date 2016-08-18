@@ -35,7 +35,7 @@ class CfgVehicles {
             };
         };
         class ModuleDescription {
-            description = CSTRING(ModuleDescription);
+            description = CSTRING(ModuleDesc);
         };
     };
 
