@@ -32,7 +32,7 @@ _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
 private _canUseWeapon = ACE_player call CBA_fnc_canUseWeapon;
-if ((_canUseWeapon && _location == 2) || {!_canUseWeapon && _location == 1}) exitWith {false};
+if ((_canUseWeapon && {_location == 2}) || {!_canUseWeapon && {_location == 1}}) exitWith {false};
 
 // Get setting from config API
 {
