@@ -149,14 +149,14 @@ _condition = {
     true
 };
 _statement = {
-    params ["_target", "_player", "_params", "_params"];
+    params ["_target", "_player", "_params"];
     diag_log format ["_statement [%1, %2, %3]", _target, _player, _params];
 
     // Run on hover:
     ["ace_common_displayTextStructured", ["someone is thinking of giving you items", 1.5, _target], [_target]] call CBA_fnc_targetEvent;
 };
 _insertChildren = {
-    params ["_target", "_player", "_params", "_params"];
+    params ["_target", "_player", "_params"];
     diag_log format ["_insertChildren [%1, %2, %3]", _target, _player, _params];
 
     // Add children to this action
