@@ -139,10 +139,10 @@ _action = ["Open RDF","Radio Direction Finder","pabst\RDF.jpg",_statement,_condi
 ### 2.5 Advanced Example
 
 This adds an interaction to a unit that allows passing items that the player is carrying.
+
 - The child actions are generated dynamically based on the items in the player's inventory.
 - The parent action's display name is modified based on the item count.
 - When hovering on the action, a hint text is sent to the target.
-
 
 ```cpp
 _condition = {
