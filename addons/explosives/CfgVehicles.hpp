@@ -346,6 +346,13 @@ class CfgVehicles {
         // TODO: Find a way to place the mine laying down instead of standing up
     };
 
+    class APERSTripMine: MineBase {};
+    class ACE_FlareTripMine: APERSTripMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_FlareTripMine_Wire_Ammo";
+        displayName = CSTRING(TripFlare_Name);
+    };
+
     class IEDUrbanBig_F;
     class ACE_IEDUrbanBig_Range: IEDUrbanBig_F {
         author = ECSTRING(common,aceteam);

@@ -136,10 +136,12 @@
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
             <French>Touche de rotation des outils de naviguation</French>
+            <Russian>Клавиша поворота инструментов карты</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
             <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
+            <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
         </Key>
     </Package>
 </Project>

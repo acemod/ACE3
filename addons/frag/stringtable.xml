@@ -69,6 +69,7 @@
             <Spanish>Activar simulación de reflexiones</Spanish>
             <French>Simulation de la réflection des explosions.</French>
             <Portuguese>Simulação de reflexo de explosão</Portuguese>
+            <Russian>Cимуляция отражения взрывов ACE</Russian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
@@ -78,6 +79,7 @@
             <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
             <French>Activer la simulation de la réfléction des explosions ACE.</French>
             <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
+            <Russian>Включить симуляцию отражения взрывов ACE</Russian>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
