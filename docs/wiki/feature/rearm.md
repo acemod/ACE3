@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Rearm
-description: Adds the option to rearm vehicles
+description: Adds custom rearm system.
 group: feature
 category: interaction
 parent: wiki
@@ -9,7 +9,8 @@ parent: wiki
 
 ## 1. Overview
 
-This adds the option to rearm vehicles. The module settings allow you to configure `ace_rearm` for both casual gaming and simulation game modes. Both the rearm speed and the availability of ammunition supply can be configured.
+This adds the option to rearm vehicles. The module settings allow you to configure ACE3 Rearm for both casual gaming and simulation game modes. Both the rearm speed and the availability of ammunition supply can be configured.
+
 
 ## 2. Rearming
 
@@ -37,25 +38,8 @@ It's the same process as with setting `Entire Magazine`, but most magazines will
 The caliber of the weapon will be rounded to the nearest number and the number of rounds is calculated using the table above.
 To fully rearm 2000 rounds of 7.62mm machine gun, you need five ammo boxes.
 
-## 3. Limiting the ammunition supply
-With ACE3 3.6.0 ammunition supply can be limited on ammo trucks.
 
-### 3.1 Rearming with setting `Unlimited ammo supply`
-All ammo trucks have an unlimited ammunition supply by default. You can rearm as many vehicles as often as you like.
-
-### 3.2 Rearming with setting `Limited ammo supply based on caliber`
-On this setting all ammo trucks have a limited ammunition supply. The supply consumption is based on "caliber points". With 1000 points worth of ammunition supply, you can rearm four magazines of 250mm caliber (i.e. bombs) or eight magazines of 120mm caliber (i.e. tank rounds) or 125 magazines of 7.62mm caliber.
-
-### 3.3 Rearming with setting `Only specific Magazines`
-On this setting, the mission creator has to use the framework to add specific magazines to the ammo truck(s). This allows you to create munition specific ammo trucks i.e. one ammo truck for missiles and one for bombs.
-
-### 3.4 Checking the ammunition supply
-- Interact with the fuel truck <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
-- Select `Check remaining ammunition`.
-
-Depending on the module setting, you will be shown a hint containing either the remaining supply points or the remaining magazines with their remaining number of rounds.
-
-## 4. FAQ
+## 3. FAQ
 
 ### Can I drop the ammo box?
 Yes, using the action menu.
