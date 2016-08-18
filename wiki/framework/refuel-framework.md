@@ -9,10 +9,12 @@ parent: wiki
 
 ## 1. Config Values
 
+### 1.1. Setting Vehicle Fuel Capacity
+
 ```cpp
 class CfgVehicles {
     class MyFuturisticMBT {
-        ace_refuel_fuelCapacity = 3000; // set to correct path static model
+        ace_refuel_fuelCapacity = 3000;  // Fuel capacity in liters
     };
 };
 ```
@@ -21,6 +23,82 @@ class CfgVehicles {
     <h5>Note:</h5>
     <p>ace_refuel_fuelCapacity is only needed if you aren't inheriting from any of BI base classes or if your vehicle has a different fuel tank size.</p>
 </div>
+
+### 1.2. Setting Refuel Station/Vehicle
+
+- Remove `transportFuel` setting from the object (e.g. `transportFuel = 0`)
+- Add cargo fuel capacity: `ace_refuel_fuelCargo = 1000;`
+- Add [XEH support](https://github.com/CBATeam/CBA_A3/wiki/Extended-Event-Handlers-(new)#compatibility-without-dependance) (only necessary for non-vehicle objects)
+- Inherit from another refuel vehicle (preferred) or add interaction menu actions
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Adding interaction menu actions is not public API and is likely to change in the future!</p>
+</div>
+
+Example:
+```cpp
+class CfgVehicles {
+    class ThingX;
+    class MyRefuelStation: ThingX {
+        // Add XEH support (only necessary for non-vehicle objects)
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        // Add interaction menu actions
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = "$STR_ace_interaction_MainAction";
+                selection = "";
+                distance = 10;
+                condition = "true";
+                class ace_refuel_Refuel {
+                    displayName = "$STR_ace_refuel_Refuel";
+                    distance = 7;
+                    condition = "true";
+                    statement = "";
+                    exceptions[] = {"isNotInside"};
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    class ace_refuel_TakeNozzle {
+                        displayName = "$STR_ace_refuel_TakeNozzle";
+                        condition = "[_player, _target] call ace_refuel_fnc_canTakeNozzle";
+                        statement = "[_player, _target, objNull] call ace_refuel_fnc_TakeNozzle";
+                        icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    };
+                    class ace_refuel_CheckFuelCounter {
+                        displayName = "$STR_ace_refuel_CheckFuelCounter";
+                        condition = "true";
+                        statement = "[_player, _target] call ace_refuel_fnc_readFuelCounter";
+                        icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    };
+                    class ace_refuel_CheckFuel {
+                        displayName = "$STR_ace_refuel_CheckFuel";
+                        condition = "[_player, _target] call ace_refuel_fnc_canCheckFuel";
+                        statement = "[_player, _target] call ace_refuel_fnc_checkFuel";
+                        icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    };
+                    class ace_refuel_Connect {
+                        displayName = "$STR_ace_refuel_Connect";
+                        condition = "[_player, _target] call ace_refuel_fnc_canConnectNozzle";
+                        statement = "[_player, _target] call ace_refuel_fnc_connectNozzle";
+                        icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    };
+                    class ace_refuel_Return {
+                        displayName = "$STR_ace_refuel_Return";
+                        condition = "[_player, _target] call ace_refuel_fnc_canReturnNozzle";
+                        statement = "[_player, _target] call ace_refuel_fnc_returnNozzle";
+                        icon = "\z\ace\addons\refuel\ui\icon_refuel_interact.paa";
+                    };
+                };
+            };
+        };
+    };
+};
+```
+
 
 ## 2. Functions
 
