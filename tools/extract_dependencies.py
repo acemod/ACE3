@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 
 # Author: Jonpas
-# Extracts dependencies to a file (defined in globals) for use with Jekyll include statement.
-# Place generated file to "_includes/" folder on gh-pages branch and use the following line to add dependencies to a feature page:
+# Extracts dependencies to "docs/_includes/dependencies_list.md" for use with Jekyll include statement.
+# Use the following line to add dependencies to a feature page:
 # {% include dependencies_list.md component="<component>" %}
 
 import os
 import sys
 import re
 
-######## GLOBALS #########
-FILE_EXTRACTED = "temp\\dependencies_list.md"
-##########################
 
 def get_dependencies(line):
     dependencies = re.findall(r'"(.*?)"', line)
@@ -29,15 +26,22 @@ def main():
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     addonspath = os.path.join(projectpath, "addons")
+    includepath = os.path.join(projectpath, "docs", "_includes")
+    dependenciespath = os.path.join(includepath, "dependencies_list.md")
 
     # Prepare directory and file
-    if not os.path.exists("temp"):
-        os.makedirs("temp")
+    if not os.path.exists(includepath):
+        print("Jekyll documentation not found!")
+        sys.exit(0)
 
-    open(FILE_EXTRACTED, "w").close()
+    open(dependenciespath, "w").close()
 
     # Iterate through folders in the addons directory
     for folder in next(os.walk(addonspath))[1]:
+        # Ignore "main" component
+        if folder == "main":
+            continue
+
         # Open config.cpp file and extract dependencies
         data = []
         with open(os.path.join(addonspath, folder, "config.cpp")) as file:
@@ -68,14 +72,12 @@ def main():
         data = "`{}`".format(data)
         print("{}: {}".format(folder,data))
 
-        with open(FILE_EXTRACTED, "a") as file:
+        with open(dependenciespath, "a") as file:
             file.writelines([
                 "{% if include.component == \"" + folder + "\" %}\n",
                 "{}\n".format(data),
-                "{% endif %}\n",
+                "{% endif %}\n\n",
             ])
-
-    print("\nCopy 'temp\dependencies_list.md' to '_includes/' folder on 'gh-pages' branch.")
 
 
 if __name__ == "__main__":
