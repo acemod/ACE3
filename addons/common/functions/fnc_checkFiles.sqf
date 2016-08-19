@@ -52,7 +52,9 @@ _addons = _addons select {_x find "ace_" == 0};
 ///////////////
 // check dlls
 ///////////////
-if (productVersion select 6 == "Windows") then {
+if !(toLower (productVersion select 6) in ["linux", "osx"]) then {
+    ACE_LOGINFO_2(operating system does not support DLL file format);
+} else {
     {
         private _versionEx = _x callExtension "version";
 
