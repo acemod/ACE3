@@ -11,7 +11,7 @@ parent: wiki
 
 Advanced Throwing adds an alternate way of throwing grenades and other throwable items. It solves the issues vanilla Arma throwing has, such as hard to effectively throw through a window even when you are standing right next to it, hard to judge distance and similar. Additionally, it adds other features, such as cooking, picking up already thrown grenades, different throw modes, distance and flight arc indicators, which vanilla lacks. It is also entirely optional (can be disabled through settings) and configurable.
 
-### 1.1. Throwing Modes
+### 1.1 Throwing Modes
 
 There are 3 throwing modes in Advanced Throwing, normal, high and drop. Normal mode is similar in power to vanilla throwing, high mode lobs the grenade higher, for example for throwing over walls, drop mode drops the grenade at your feet or slightly away, for example for dropping smoke or chemlights. Drop mods are indicated by both the throw arc indicator and the actual representation of the grenade in the world.
 
@@ -21,11 +21,11 @@ After cooking a grenade any mode can be used to throw it further or it can simpl
 
 Grenade will be thrown where you are currently looking at, free-look (including TrackIR) is fully supported. However, the further to the side and back you are looking, the lower the throw power will be.
 
-### 1.2. Rethrowing
+### 1.2 Rethrowing
 
 Advanced Throwing allows you to pick up grenades that have already been thrown. You have to be very close to it to effectively pick it up. Useful for rethrowing smoke grenades or repositioning chemlights. Frag grenades can also be thrown back, for example out of the house, however doing so is extremely risky.
 
-### 1.3. Settings
+### 1.3 Settings
 
 Various settings can be set according to your likeness. Next to global toggle to disable Advanced Throwing there are settings to hide the throw arc indicating approximate throw distance and the arc it will fly through and hide mouse controls. Additionally for server administrators and mission makers, picking up grenades can be entirely disabled, as well as a setting to enable picking up attached items such as chemlights attached to vehicles or other player's shoulder.
 
@@ -34,7 +34,7 @@ Various settings can be set according to your likeness. Next to global toggle to
 
 Make sure to use different keybinds for Advanced Throwing or unbind vanilla throwing keybinds to prevent incidents.
 
-### 2.1. Throwing
+### 2.1 Throwing
 - You need a throwable item.
 - Press <kbd>⇧&nbsp;Shift</kbd>+<kbd>G</kbd> (ACE3 default) to prepare the item.
 - Press the keybind again to select next throwable item in the inventory.
@@ -43,12 +43,12 @@ Make sure to use different keybinds for Advanced Throwing or unbind vanilla thro
 - Press <kbd>RMB</kbd> to cancel throw.
 - Throw will also be cancelled when opening any interface, reloading, switching weapons and aiming.
 
-### 2.2. Changing Mode
+### 2.2 Changing Mode
 - Use <kbd>Scroll Wheel</kbd> to change between **normal** and **high** modes.
 - Press <kbd>Ctrl</kbd>+<kbd>G</kbd> (ACE3 default) to change to **drop** mode.
 - Use <kbd>Scroll Wheel</kbd> to extend or contract drop distance.
 
-### 2.3. Picking Up
+### 2.3 Picking Up
 - Approach a throwable item on the ground.
 - Interact with the item <kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Pick Up`.
