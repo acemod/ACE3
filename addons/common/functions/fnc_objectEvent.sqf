@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_eventName", "_eventTarget", "_eventArgs"];
+params ["_eventName", "_eventTargets", "_eventArgs"];
 
 private _newName = getText (configFile >> "ACE_newEvents" >> _eventName);
 if (_newName != "") then {
