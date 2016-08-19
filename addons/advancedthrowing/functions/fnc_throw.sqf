@@ -67,6 +67,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     _unit getVariable [QGVAR(dropMode), false]
 ], 0.3] call CBA_fnc_waitAndExecute;
 
+
 #ifdef DRAW_THROW_PATH
 GVAR(predictedPath) = call FUNC(drawArc); // save the current throw arc
 GVAR(flightPath) = [];
@@ -78,6 +79,7 @@ GVAR(flightPath) = [];
     };
 };
 #endif
+
 
 // Stop rendering arc and doing rendering magic while throw is happening
 [_unit, "Completed a throw fully"] call FUNC(exitThrowMode);

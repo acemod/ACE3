@@ -18,7 +18,13 @@
 params ["_unit"];
 
 GVAR(enabled) &&
+
+#ifndef DEBUG_MODE_FULL
 {_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
+#else
+{true} &&
+#endif
+
 {!(call EFUNC(common,isFeatureCameraActive))} &&
 {!EGVAR(common,isReloading)} &&
 {[_unit, objNull, ["isNotInside", "isNotSitting"/*, "isNotOnLadder"*/]] call EFUNC(common,canInteractWith)} && // Ladder needs positioning fixes on throw
