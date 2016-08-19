@@ -105,7 +105,7 @@ private _pitch = [-30, -90] select (_throwType == "high");
 if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld [_leanCoef, 0, ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]]));
 
-    // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is glass in a window
+    // Even vanilla throwables go through glass, only "GEOM" LOD will stop it but that will also stop it when there is no glass in a window
     if (lineIntersects [_posCameraWorld, _posFin vectorDiff _posCameraWorld]) then {
         ACE_player setVariable [QGVAR(dropDistance), ((ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]) - 0.1) max DROP_DISTANCE_DEFAULT];
     };
