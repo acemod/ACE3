@@ -8,7 +8,7 @@
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
- * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
+ * 4: Use Inheritance <BOOL> (default: false)
  *
  * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
