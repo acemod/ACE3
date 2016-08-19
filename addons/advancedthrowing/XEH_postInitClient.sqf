@@ -89,6 +89,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 ["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
 ["MouseZChanged", {_this call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
 
+
 #ifdef DRAW_THROW_PATH
 GVAR(predictedPath) = [];
 GVAR(flightPath) = [];
