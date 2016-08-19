@@ -15,7 +15,7 @@ Event handlers in ACE3 are implemented through CBA's Event System. They should b
 ## 2. Events List
 ACE3 uses many events internally, this is not a complete list; but it should list most publicly usable events.
 
-### 2.1 Fired Event Handlers (ace_common)
+### 2.1. Fired Event Handlers (`ace_common`)
 
 Different events for what type of unit has fired.
 E.G.: If you only need to do action when player's weapon fires, this will be faster than adding an XEH for everything.
@@ -30,7 +30,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires
 |`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires
 
-### 2.2 Medical (ace_medical)
+### 2.2. Medical (`ace_medical`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -38,7 +38,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_placedInBodyBag` | [_target, _bodyBag] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className] | Local | Listen | Treatment action is completed (local on the _caller)
 
-### 2.3 Interaction Menu (ace_interact_menu)
+### 2.3. Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
@@ -46,7 +46,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 
-### 2.4 Logistics (ace_cargo)
+### 2.4. Logistics (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -54,7 +54,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
 |`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
 
-### 2.5 Captives (ace_captives)
+### 2.5. Captives (`ace_captives`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -62,14 +62,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
 
-### 2.6 Settings (ace_common)
+### 2.6. Settings (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready
 |`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed
 
-### 2.7 Tagging (ace_tagging)
+### 2.7. Tagging (`ace_tagging`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -77,10 +77,11 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 
 ## 3. Usage
-Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System)
-### 3.1 Adding / Removing Events
+Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
-#### 3.1.1 Add Event
+### 3.1. Adding / Removing Events
+
+#### 3.1.1. Add Event
 
 `CBA_fnc_addEventHandler` - Adds an event handler with the event name and returns the event handler ID.
 
@@ -90,7 +91,7 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 1  | Code block | Code | Required
 **R** | Event ID | Number | Return value
 
-#### 3.1.2 Remove Event
+#### 3.1.2. Remove Event
 
 `CBA_fnc_removeEventHandler` - Removes a specific event handler of the given event name, using the ID returned from `CBA_fnc_addEventHandler`.
 
@@ -100,9 +101,9 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 1  | Event ID | Number | Required
 **R** | None | None | Return value
 
-### 3.2 Calling Events
+### 3.2. Calling Events
 
-#### 3.2.1 Local Event
+#### 3.2.1. Local Event
 
 `CBA_fnc_localEvent` - Calls an event only on the local machine, useful for inter-module events.
 
@@ -112,7 +113,7 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 3.2.2 Target Event
+#### 3.2.2. Target Event
 
 `CBA_fnc_targetEvent` - Calls an event only on the target machine or list of target machines.
 
@@ -123,7 +124,7 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 2  | Target(s) | Object OR Number OR Array | Required
 **R** | None | None | Return value
 
-#### 3.2.3 Server Event
+#### 3.2.3. Server Event
 
 `CBA_fnc_serverEvent` - Calls an event only on the server machine (dedicated or self-hosted).
 
@@ -133,7 +134,7 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 1  | Arguments | Any | Required
 **R** | None | None | Return value
 
-#### 3.2.4 Global Event
+#### 3.2.4. Global Event
 
 `CBA_fnc_globalEvent` - Calls an event on all machines - the local machine, and the server machine.
 
@@ -144,9 +145,9 @@ Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Cust
 **R** | None | None | Return value
 
 
-### 3.3 Synchronized Events
+### 3.3. Synchronized Events
 
-#### 3.3.1 Add Synchronized Event
+#### 3.3.1. Add Synchronized Event
 
 Adds a globally synchronized event handler which will expire events after the provided time-to-live, or the code returns true.
 
@@ -159,7 +160,7 @@ Adds a globally synchronized event handler which will expire events after the pr
 2  | Time to live | Number OR Code | Optional (default: `0`)
 **R** | Event ID | Number | Return value
 
-#### 3.3.2 Remove Synchronized Event
+#### 3.3.2. Remove Synchronized Event
 
 Removes a specific event handler of the given event name, using the ID returned from `ace_common_fnc_addSyncedEventHandler`.
 
@@ -170,7 +171,7 @@ Removes a specific event handler of the given event name, using the ID returned 
 0  | Event name | String | Required
 **R** | None | None | Return value
 
-#### 3.3.3 Call Synchronized Event
+#### 3.3.3. Call Synchronized Event
 
 Calls a globally synchronized event, which will also be run on JIP players unless it has expired. Event will expire after the provided time-to-live, or the code returns true.
 
@@ -184,7 +185,7 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 **R** | Event ID | Number | Return value
 
 
-### 3.4 Example
+### 3.4. Example
 
 ```js
 // Event handler added on a target machine
