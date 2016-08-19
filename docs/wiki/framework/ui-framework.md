@@ -25,7 +25,7 @@ class ACE_UI {
 };
 ```
 
-### 1.2. Setting an existing element
+### 1.2 Setting an existing element
 
 ```cpp
 class ACE_UI {

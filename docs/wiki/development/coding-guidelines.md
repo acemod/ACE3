@@ -9,39 +9,39 @@ order: 1
 
 ## 1. Naming Conventions
 
-### 1.1. Variable Names
+### 1.1 Variable Names
 
-#### 1.1.1. Global Variable naming
+#### 1.1.1 Global Variable naming
 All global variables must start with the ACE prefix followed by the component, separated by underscores. Global variables may not contain the `fnc_` prefix if the value is not callable code.
 
 Example: `ace_component_myVariableName`
 
 _For ACE this is done automatically through the usage of the `GVAR` macro family._
 
-#### 1.1.2. Private Variable naming
+#### 1.1.2 Private Variable naming
 To make code as readable as possible, try to use self explanatory variable names and avoid using single character variable names.
 
 Example: `_velocity` instead of `_v`
 
-#### 1.1.3. Function naming
+#### 1.1.3 Function naming
 All functions shall use ACE and the component name as a prefix, as well as the `fnc_` prefix behind the component name.
 
 Example: `PREFIX_COMPONENT_fnc_functionName`
 
 _For ACE this is done automatically through the usage of the `PREP` macro._
 
-### 1.2. Files & Config
+### 1.2 Files & Config
 
-#### 1.2.1. SQF files
+#### 1.2.1 SQF files
 Files containing SQF scripts shall have a file name extension of `.sqf`.
 
-#### 1.2.2. Header files
+#### 1.2.2 Header files
 All header files shall have the file name extension of `.hpp`.
 
-#### 1.2.3. Own SQF File
+#### 1.2.3 Own SQF File
 All functions shall be put in their own `.sqf` file.
 
-#### 1.2.4. Config elements
+#### 1.2.4 Config elements
 Config files shall be split up into different header files, each with the name of the config and be included in the `config.cpp` of the component.
 
 Example:
@@ -58,7 +58,7 @@ class ACE_Settings {
 };
 ```
 
-### 1.3. Stringtable
+### 1.3 Stringtable
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
@@ -67,7 +67,7 @@ All text that shall be displayed to a user shall be defined in a `stringtable.xm
 
 ## 2. Macro Usage
 
-### 2.1. Module/PBO specific Macro Usage
+### 2.1 Module/PBO specific Macro Usage
 The family of `GVAR` macros define global variable strings or constants for use within a module. Please use these to make sure we follow naming conventions across all modules and also prevent duplicate/overwriting between variables in different modules. The macro family expands as follows, for the example of the module 'balls':
 
 | Macros | Expands to |
@@ -96,7 +96,7 @@ The `FUNC` and `EFUNC` macros shall NOT be used inside `QUOTE` macros if the int
 
 Using `FUNC` or `EFUNC` inside a `QUOTE` macro is fine if the intention is for it to be executed as a function.
 
-#### 2.1.1. `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
+#### 2.1.1 `FUNC` Macros, Call Tracing, and Non-ACE3/Anonymous Functions
 ACE3 implements a basic call tracing system that can dump the call stack on errors or wherever you want. To do this the `FUNC` macros in debug mode will expand out to include metadata about the call including line numbers and files. This functionality is automatic with the use of calls via `FUNC` and `EFUNC`, but any calls to other functions need to use the following macros:
 
 | Macro  | Example |
@@ -106,13 +106,13 @@ ACE3 implements a basic call tracing system that can dump the call stack on erro
 
 These macros will call these functions with the appropriate wrappers and enable call logging into them (but to no further calls inside obviously).
 
-### 2.2. General Purpose Macros
+### 2.2 General Purpose Macros
 
 [CBA script_macros_common.hpp](https://github.com/CBATeam/CBA_A3/blob/master/addons/main/script_macros_common.hpp){:target="_blank"}
 
 `QUOTE()` is utilized within configuration files for bypassing the quote issues in configuration macros. So, all code segments inside a given config should utilize wrapping in the `QUOTE()` macro instead of direct strings. This allows us to use our macros inside the string segments, such as `QUOTE(_this call FUNC(balls))`
 
-#### 2.2.1. `setVariable`, `getVariable` family macros
+#### 2.2.1 `setVariable`, `getVariable` family macros
 These macros are allowed but are not enforced.
 
 | Macro | Expands to |
@@ -124,7 +124,7 @@ These macros are allowed but are not enforced.
 |`SETMVAR(MyVarName,player)` | `missionNamespace setVariable ["MyVarName", player]` |
 |`SETUVAR(MyVarName,_control)` | `uiNamespace setVariable ["MyVarName", _control]` |
 
-#### 2.2.2. STRING family macros
+#### 2.2.2 STRING family macros
 Note that you need the strings in module `stringtable.xml` in the correct format:
 `STR_ACE_<module>_<string>`
 
@@ -145,7 +145,7 @@ Config Strings (require `$` as first character):
 |`CSTRING(banana)` | `"$STR_ACE_balls_banana"` |
 |`ECSTRING(leg,banana)` | `"$STR_ACE_leg_banana"` |
 
-### 2.2.3. Path family macros
+### 2.2.3 Path family macros
 The family of path macros define global paths to files for use within a module. Please use these to reference files in the ACE3 project. The macro family expands as follows, for the example of the module 'balls':
 
 | Macro | Expands to |
@@ -161,7 +161,7 @@ Functions shall be created in the `functions\` subdirectory, named `fnc_function
 
 The `PREP` macro allows for CBA function caching, which drastically speeds up load times. **Beware though that function caching is enabled by default and as such to disable it you need to `#define DISABLE_COMPILE_CACHE` above your `#include "script_components.hpp"` include!**
 
-### 3.1. Headers
+### 3.1 Headers
 Every function should have a header of the following format as the start of their function file:
 
 ```js
@@ -185,12 +185,12 @@ Every function should have a header of the following format as the start of thei
 
 This is not the case for inline functions or functions not containing their own file.
 
-### 3.2. Includes
+### 3.2 Includes
 Every function includes the `script_component.hpp` file just below the function header. Any additional includes or defines must be below this include.
 
 All scripts written must be below this include and any potential additional includes or defines.
 
-#### 3.2.1. Reasoning
+#### 3.2.1 Reasoning
 This ensures every function starts of in an uniform way and enforces function documentation.
 
 
@@ -204,7 +204,7 @@ Exceptions:
 
 ## 5. Code Style
 
-### 5.1. Braces placement
+### 5.1 Braces placement
 Braces `{ }` which enclose a code block will have the first bracket placed behind the statement in case of `if`, `switch` statements or `while`, `waitUntil` & `for` loops. The second brace will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
@@ -260,10 +260,10 @@ class Two {foo = 2;};
 class Three {foo = 3;};
 ```
 
-#### 5.1.1. Reasoning
+#### 5.1.1 Reasoning
 Putting the opening brace in its own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
-### 5.2. Indents
+### 5.2 Indents
 Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
 
 Good:
@@ -290,7 +290,7 @@ call {
 };
 ```
 
-### 5.3. Inline comments
+### 5.3 Inline comments
 Inline comments should use `//`. Usage of `/* */` is allowed for larger comment blocks.
 
 Example:
@@ -301,7 +301,7 @@ Example:
 /* Comment */  // < correct
 ```
 
-### 5.4. Comments in code
+### 5.4 Comments in code
 All code shall be documented by comments that describe what is being done. This can be done through the function header and/or inline comments.
 
 Comments within the code shall be used when they are describing a complex and critical section of code or if the subject code does something a certain way because of a specific reason. Unnecessary comments in the code are not allowed.
@@ -350,7 +350,7 @@ Bad:
 } forEach _units;
 ```
 
-### 5.5. Brackets around code
+### 5.5 Brackets around code
 When making use of brackets `( )`, use as few as possible, unless doing so decreases readability of the code. Avoid statements such as:
 
 ```js
@@ -370,7 +370,7 @@ if (!_value) then {};
 if (_value) then {};
 ```
 
-### 5.6. Magic Numbers
+### 5.6 Magic Numbers
 There shall be no magic numbers. Any magic number shall be put in a define either on top of the `.sqf` file (below the header), or in the `script_component.hpp` file in the root directory of the component (recommended) in case it is used in multiple locations.
 
 Magic numbers are any of the following:
@@ -384,21 +384,21 @@ Magic numbers are any of the following:
 
 ## 6. Code Standards
 
-### 6.1. Error testing
+### 6.1 Error testing
 If a function returns error information, then that error information will be tested.
 
-### 6.2. Unreachable Code
+### 6.2 Unreachable Code
 There shall be no unreachable code.
 
-### 6.3. Function Parameters
+### 6.3 Function Parameters
 Parameters of functions must be retrieved through the usage of the `param` or `params` commands. If the function is part of the public API, parameters must be checked on allowed data types and values through the usage of the `param` and `params` commands.
 
 Usage of the CBA Macro `PARAM_x` or `BIS_fnc_param` is deprecated and not allowed within the ACE project.
 
-### 6.4. Return Values
+### 6.4 Return Values
 Functions and code blocks that specific a return a value must have a meaningful return value. If no meaningful return value, the function should return nil.
 
-### 6.5. Private Variables
+### 6.5 Private Variables
 All private variables shall make use of the `private` keyword on initialization. When declaring a private variable before initialization, usage of the `private ARRAY` syntax is allowed. All private variables must be either initialized using the `private` keyword, or declared using the `private ARRAY` syntax. Exceptions to this rule are variables obtained from an array, which shall be done with usage of the `params` command family, which ensures the variable is declared as private.
 
 Good:
@@ -420,10 +420,10 @@ _elementOne = _myArray select 0;
 _elementTwo = _myArray select 1;
 ```
 
-### 6.6. Lines of Code
+### 6.6 Lines of Code
 Any one function shall contain no more than 250 lines of code, excluding the function header and any includes.
 
-### 6.7. Variable declarations
+### 6.7 Variable declarations
 Declarations should be at the smallest feasible scope.
 
 Good:
@@ -461,7 +461,7 @@ if (call FUNC(myCondition)) then {
 };
 ```
 
-### 6.8. Variable initialization
+### 6.8 Variable initialization
 Private variables will not be introduced until they can be initialized with meaningful values.
 
 Good:
@@ -493,7 +493,7 @@ Good:
 private _myvariable = [1, 2] select _condition;
 ```
 
-### 6.9. Initialization expression in `for` loops
+### 6.9 Initialization expression in `for` loops
 The initialization expression in a `for` loop shall perform no actions other than to initialize the value of a single `for` loop parameter.
 
 ### 6.10. Increment expression in `for` loops
@@ -572,25 +572,25 @@ Any piece of code that could/is used more than once, shall be put in a function 
 
 ## 7. Design considerations
 
-### 7.1. Readability vs Performance
+### 7.1 Readability vs Performance
 This is a large open source project that will get many different maintainers in its lifespan. When writing code, keep in mind that other developers also need to be able to understand your code. Balancing readability and performance of code is a non black and white subject. The rule of thumb is:
 
 - When improving performance of code that sacrifices readability (or visa-versa), first see if the design of the implementation is done in the best way possible.
 - Document that change with the reasoning in the code.
 
-### 7.2. Scheduled vs Unscheduled
+### 7.2 Scheduled vs Unscheduled
 Avoid the usage of scheduled space as much as possible and stay in unscheduled. This is to provide a smooth experience to the user by guaranteeing code to run when we want it. See [Performance considerations, `spawn` & `execVM`](#avoid-spawn--execvm) for more information.
 
 This also helps avoid various bugs as a result of unguaranteed execution sequences when running multiple scripts.
 
-### 7.3. Event driven
+### 7.3 Event driven
 All ACE3 components shall be implemented in an event driven fashion. This is done to ensure code only runs when it is required and allows for modularity through low coupling components.
 
 Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
 
-### 7.4. Hashes
+### 7.4 Hashes
 
 When a key value pair is required, make use of the hash implementation from ACE3.
 
@@ -620,7 +620,7 @@ A description of the above macros is below.
 |`HASH_HASKEY(hash,key)` | Will return true/false if that key exists in the hash. |
 |`HASH_REM(hash,key)` | Will remove that hash key. |
 
-#### 7.4.1. Hashlists
+#### 7.4.1 Hashlists
 
 A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate its usage.
 
@@ -661,13 +661,13 @@ As you can see above working with hashlists are fairly simple, a more in depth e
 |`HASHLIST_SELECT(hashlist, index)` | Returns the hash at that index in the list. |
 |`HASHLIST_SET(hashlist, index, hash)` | Sets a specific index to that hash. |
 
-##### 7.4.1.1. A note on pass by reference and hashes
+##### 7.4.1.1 A note on pass by reference and hashes
 
 Hashes and hashlists are implemented with SQF arrays, and as such they are passed by reference to other functions. Remember to make copies (using the `+` operator) if you intend for the hash or hashlist to be modified with out the need for changing the original value.
 
 ## 8. Performance Considerations
 
-### 8.1. Adding Elements to Arrays
+### 8.1 Adding Elements to Arrays
 When adding new elements to an array, `pushBack` shall be used instead of the binary addition or `set`. When adding multiple elements to an array `append` may be used instead.
 
 Good:
@@ -693,10 +693,10 @@ When adding an new element to a dynamic location in an array or when the index i
 
 When adding multiple elements to an array, the binary addition may be used for the entire addition.
 
-### 8.2. `createVehicle`
+### 8.2 `createVehicle`
 `createVehicle` array shall be used.
 
-### 8.3. `createVehicle(Local)` position
+### 8.3 `createVehicle(Local)` position
 `createVehicle(Local)` used with a non-`[0, 0, 0]` position performs search for empty space to prevent collisions on spawn.
 Where possible `[0, 0, 0]` position shall be used, except on `#` objects (e.g. `#lightsource`, `#soundsource`) where empty position search is not performed.
 
@@ -714,16 +714,16 @@ _vehicle = _type createVehicleLocal [0, 0, 0];
 _vehicle setposATL _posATL;
 ```
 
-### 8.4. Unscheduled vs Scheduled
+### 8.4 Unscheduled vs Scheduled
 All code that has a visible effect for the user or requires time specific guaranteed execution shall be written in unscheduled space.
 
-### 8.5. Avoid `spawn` & `execVM`
+### 8.5 Avoid `spawn` & `execVM`
 `execVM` and `spawn` are to be avoided wherever possible.
 
-### 8.6. Empty Arrays
+### 8.6 Empty Arrays
 When checking if an array is empty `isEqualTo` shall be used.
 
-### 8.7. `for` Loops
+### 8.7 `for` Loops
 
 ```js
 for "_y" from # to # step # do { ... }
@@ -737,7 +737,7 @@ for [{ ... },{ ... },{ ... }] do { ... };
 
 whenever possible.
 
-### 8.8. `while` Loops
+### 8.8 `while` Loops
 While is only allowed when used to perform a unknown finite amount of steps with unknown or variable increments. Infinite `while` loops are not allowed.
 
 Good:
@@ -757,7 +757,7 @@ while {true} do {
 };
 ```
 
-### 8.9. `waitUntil`
+### 8.9 `waitUntil`
 The `waitUntil` command shall not be used. Instead, make use of a per-frame handler:
 
 ```js
