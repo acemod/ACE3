@@ -34,7 +34,7 @@ def main():
         print("Jekyll documentation not found!")
         sys.exit(0)
 
-    open(dependenciespath, "w").close()
+    open(dependenciespath, "w", newline="\n").close()
 
     # Iterate through folders in the addons directory
     for folder in next(os.walk(addonspath))[1]:
@@ -72,7 +72,7 @@ def main():
         data = "`{}`".format(data)
         print("{}: {}".format(folder,data))
 
-        with open(dependenciespath, "a") as file:
+        with open(dependenciespath, "a", newline="\n") as file:
             file.writelines([
                 "{% if include.component == \"" + folder + "\" %}\n",
                 "{}\n".format(data),
