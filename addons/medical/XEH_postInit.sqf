@@ -27,8 +27,11 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 [QGVAR(treatmentTourniquetLocal), DFUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
-//Handle Deleting Bodies on Server:
-if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
+//Handle Deleting Bodies and creating litter on Server:
+if (isServer) then {
+    ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
+    [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+};
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
@@ -267,9 +270,6 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 };
 
 ["ace_settingsInitialized", {
-    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
-    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
-
     [
         {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
         {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
