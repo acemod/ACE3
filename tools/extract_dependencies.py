@@ -16,12 +16,13 @@ def get_dependencies(line):
 
 
 def main():
-    print("""
-    ####################################
-    # Extract ACE3 Module Dependencies #
-    #       (for Jekyll include)       #
-    ####################################
-    """)
+    if "--markdown" not in sys.argv:
+        print("""
+        ####################################
+        # Extract ACE3 Module Dependencies #
+        #       (for Jekyll include)       #
+        ####################################
+        """)
 
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
@@ -44,40 +45,48 @@ def main():
 
         # Open config.cpp file and extract dependencies
         data = []
-        with open(os.path.join(addonspath, folder, "config.cpp")) as file:
-            match = False
-            for line in file:
-                # One-line
-                if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
-                    data += get_dependencies(line)
-                    break
-                # Multi-line
-                else:
-                    if re.match(r"\s+requiredAddons\[\]\ = {", line):
-                        # First line
-                        match = True
+        configfile = os.path.join(addonspath, folder, "config.cpp")
+        if os.path.exists(configfile):
+            with open(os.path.join(addonspath, folder, "config.cpp")) as file:
+                match = False
+                for line in file:
+                    # One-line
+                    if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
                         data += get_dependencies(line)
-                        continue
-                    elif match and re.match(r"\s+};", line):
-                        # Final line
-                        data += get_dependencies(line)
-                        match = False
                         break
-                    elif match:
-                        # All lines between
-                        data += get_dependencies(line)
-                        continue
+                    # Multi-line
+                    else:
+                        if re.match(r"\s+requiredAddons\[\]\ = {", line):
+                            # First line
+                            match = True
+                            data += get_dependencies(line)
+                            continue
+                        elif match and re.match(r"\s+};", line):
+                            # Final line
+                            data += get_dependencies(line)
+                            match = False
+                            break
+                        elif match:
+                            # All lines between
+                            data += get_dependencies(line)
+                            continue
 
         data = "`, `".join(data)
         data = "`{}`".format(data)
-        print("{}: {}".format(folder,data))
+
+        jekyll_statement = "".join([
+            "{% if include.component == \"" + folder + "\" %}\n",
+            "{}\n".format(data),
+            "{% endif %}\n"
+        ])
 
         with open(dependenciespath, "a", newline="\n") as file:
-            file.writelines([
-                "{% if include.component == \"" + folder + "\" %}\n",
-                "{}\n".format(data),
-                "{% endif %}\n\n",
-            ])
+            file.writelines([jekyll_statement, "\n"])
+
+        if "--markdown" not in sys.argv:
+            print("{}: {}".format(folder,data))
+        else:
+            print(jekyll_statement)
 
 
 if __name__ == "__main__":
