@@ -668,7 +668,7 @@ class CfgVehicles {
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
         hiddenSelections[] = {"camo"};
-        hiddenSelectionsTextures[] = {"z\ace\addons\apl\data\bodybag_co.paa"};
+        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
