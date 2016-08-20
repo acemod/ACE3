@@ -67,7 +67,7 @@ if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT co
 
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;
-private _partNumber = ([_selectionName] call FUNC(selectionNameToNumber)) max 0;
+private _partNumber = ([_selectionName] call EFUNC(medical,selectionNameToNumber)) max 0;
 
 // Add all bleeding from wounds on selection
 private _openWounds = _target getvariable [QGVAR(openWounds), []];

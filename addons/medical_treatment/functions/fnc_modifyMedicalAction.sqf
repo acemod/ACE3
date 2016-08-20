@@ -28,7 +28,7 @@ private _bloodLossOnSelection = 0;
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-if (_bloodLossOnSelection >=1 ) then {
+if (_bloodLossOnSelection >= 0.15) then {
     _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed.paa)];
 } else {
     if (_bloodLossOnSelection > 0 ) then {

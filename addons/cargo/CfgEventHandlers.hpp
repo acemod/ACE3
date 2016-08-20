@@ -67,4 +67,9 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(_this call DFUNC(initObject));
         };
     };
+    class StaticWeapon {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(initObject));
+        };
+    };
 };

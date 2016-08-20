@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_parse_input
+ * call ace_atragmx_fnc_parse_input
  *
  * Public: No
  */

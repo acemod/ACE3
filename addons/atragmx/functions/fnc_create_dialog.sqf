@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_create_dialog
+ * call ace_atragmx_fnc_create_dialog
  *
  * Public: No
  */

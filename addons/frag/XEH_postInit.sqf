@@ -15,10 +15,8 @@ if(isServer) then {
 
     // Register fire event handler
     ["ace_firedPlayer", DFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", DFUNC(fired)] call CBA_fnc_addEventHandler;
     ["ace_firedNonPlayer", DFUNC(fired)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerVehicleNonLocal", DFUNC(fired)] call CBA_fnc_addEventHandler;
     ["ace_firedNonPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
 
     [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;

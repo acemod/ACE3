@@ -130,7 +130,7 @@ class CfgVehicles {
     };
 
     class ThingX;
-    class ACE_refuel_fuelNozzle: ThingX {
+    class GVAR(fuelNozzle): ThingX {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
