@@ -15,17 +15,18 @@
 
 {
     _x params ["_time", "_objects"];
-    if (CBA_missionTime - _time >= GVAR(litterCleanUpDelay)) then {
-        {
-            deleteVehicle _x;
-        } forEach _objects;
-        GVAR(allCreatedLitter) set[_forEachIndex, objNull];
-    };
+    //Older elements are always at the begining of the array:
+    if ((CBA_missionTime - _time) < GVAR(litterCleanUpDelay)) exitWith {};
+    TRACE_2("deleting",_time,_objects);
+    {
+        deleteVehicle _x;
+    } forEach _objects;
+    GVAR(allCreatedLitter) set [_forEachIndex, objNull];
 } forEach GVAR(allCreatedLitter);
 GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
 
 // If no more litter remaining, exit the loop
-if ( (count GVAR(allCreatedLitter)) == 0) exitWith {
+if (GVAR(allCreatedLitter) isEqualTo []) exitWith {
     GVAR(litterPFHRunning) = false;
 };
 

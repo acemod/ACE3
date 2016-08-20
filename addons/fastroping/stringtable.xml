@@ -10,6 +10,7 @@
             <Italian>Equipaggia la FRIES</Italian>
             <Czech>Vybavit FRIES</Czech>
             <Portuguese>Equipar FRIES</Portuguese>
+            <Russian>Десантирование по канатам</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
@@ -20,6 +21,7 @@
             <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Exstraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
+            <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
@@ -30,6 +32,7 @@
             <Italian>Prepara le corde</Italian>
             <Czech>Připravit systém slaňování</Czech>
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
+            <Russian>Подготовить канаты</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -40,6 +43,7 @@
             <Italian>Srotola le corde</Italian>
             <Czech>Připravit lana</Czech>
             <Portuguese>Jogar cordas</Portuguese>
+            <Russian>Зацепить канаты</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -50,6 +54,7 @@
             <Italian>Scendi sulla corda</Italian>
             <Czech>SLANIT</Czech>
             <Portuguese>Descida rápida</Portuguese>
+            <Russian>Спуститься по канату</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -60,6 +65,7 @@
             <Italian>Taglia le corde</Italian>
             <Czech>Odříznout lano</Czech>
             <Portuguese>Cortar cordas</Portuguese>
+            <Russian>Обрезать канаты</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
@@ -70,6 +76,7 @@
             <Italian>Equipaggia l'elicottero con FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
             <Portuguese>Equipar helicóptero com FRIES</Portuguese>
+            <Russian>Снарядить вертолет канатами для спуска</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
@@ -80,6 +87,7 @@
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
             <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
+            <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
         </Key>
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
@@ -87,6 +95,7 @@
             <Italian>SCENDI DALLE CORDE</Italian>
             <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
             <French>LAISSER LES UNITES UTILISER LA CORDE </French>
+            <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
         </Key>
     </Package>
 </Project>

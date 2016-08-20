@@ -13,7 +13,7 @@ class CfgAmmo {
     class ACE_GBU12 : Bo_GBU12_LGB {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
         GVAR(gurney_c) = 2320;
@@ -31,7 +31,7 @@ class CfgAmmo {
         GVAR(skip) = 0;
         GVAR(force) = 1;
         // This is a good high-drag frag type for grenades.
-        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(classes)[] = {QGVAR(tiny_HD)};
         /*
         These values are based on the M67 Grenade, should be tweaked for
         individual grenades.
@@ -53,7 +53,7 @@ class CfgAmmo {
         // Source: http://fas.org/man/dod-101/sys/missile/hydra-70.htm
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 3850;
         GVAR(charge) = 1040;
         GVAR(gurney_c) = 2700;
@@ -75,7 +75,7 @@ class CfgAmmo {
     class Bo_Mk82: BombCore {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
         GVAR(metal) = 140000;
         GVAR(charge) = 87000;
         GVAR(gurney_c) = 2320;
@@ -87,7 +87,7 @@ class CfgAmmo {
         GVAR(enabled) = 1;
         GVAR(force) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(classes)[] = {QGVAR(tiny_HD)};
         GVAR(metal) = 200;
         GVAR(charge) = 32;
         GVAR(gurney_c) = 2700;
@@ -97,7 +97,7 @@ class CfgAmmo {
         // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_tiny_HD"};
+        GVAR(classes)[] = {QGVAR(tiny_HD)};
         GVAR(metal) = 200;
         GVAR(charge) = 45;
         GVAR(gurney_c) = 2830;
@@ -124,7 +124,7 @@ class CfgAmmo {
         // Source: http://www.globalsecurity.org/military/systems/munitions/m795.htm
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
         GVAR(metal) = 36000;
         GVAR(charge) = 9979;
         GVAR(gurney_c) = 2440;
@@ -134,7 +134,7 @@ class CfgAmmo {
         // Source: http://www.arsenal-bg.com/defense_police/mortar_bombs_82mm.htm
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 3200;
         GVAR(charge) = 420;
         GVAR(gurney_c) = 2440;
@@ -143,7 +143,7 @@ class CfgAmmo {
     class ModuleOrdnanceMortar_F_Ammo: Sh_82mm_AMOS {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 800;
         GVAR(charge) = 4200;
         GVAR(gurney_c) = 2320;
@@ -152,7 +152,7 @@ class CfgAmmo {
     class Sh_105mm_HEAT_MP : Sh_125mm_HEAT {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 11400;
         GVAR(charge) = 7100;
         GVAR(gurney_c) = 2800;
@@ -161,7 +161,7 @@ class CfgAmmo {
     class Sh_120mm_HE : ShellBase {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 23000;
         GVAR(charge) = 3148;
         GVAR(gurney_c) = 2830;
@@ -170,7 +170,7 @@ class CfgAmmo {
     class Sh_125mm_HE: Sh_120mm_HE {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 16000;
         GVAR(charge) = 3200;
         GVAR(gurney_c) = 2440;
@@ -179,7 +179,7 @@ class CfgAmmo {
     class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_large", "ACE_frag_large", "ACE_frag_large_HD", "ACE_frag_large", "ACE_frag_huge", "ACE_frag_huge_HD", "ACE_frag_huge"};
+        GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
         GVAR(metal) = 1950;
         GVAR(charge) = 15800;
         GVAR(gurney_c) = 2320;
@@ -206,7 +206,7 @@ class CfgAmmo {
         // Source: http://fas.org/man/dod-101/sys/smart/agm-65.htm
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 56250;
         GVAR(charge) = 39000;
         GVAR(gurney_c) = 2700;
@@ -216,7 +216,7 @@ class CfgAmmo {
         // Source: http://www.designation-systems.net/dusrm/m-114.html
         GVAR(enabled) = 1;
 
-        GVAR(classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+        GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
         GVAR(metal) = 8000;
         GVAR(charge) = 2400;
         GVAR(gurney_c) = 2700;
@@ -225,7 +225,7 @@ class CfgAmmo {
 
     /*
     class B_762x51_Ball;
-    class ACE_frag_base: B_762x51_Ball { ////TODO: B_762x45_Ball no longer exists, is this a valid replacement?
+    class GVAR(base): B_762x51_Ball { ////TODO: B_762x45_Ball no longer exists, is this a valid replacement?
         model = "\A3\Weapons_f\ammo\shell";
         timeToLive = 12;
         typicalSpeed = 800;
@@ -382,47 +382,47 @@ class CfgAmmo {
     */
 
     class B_65x39_Caseless;
-    class ACE_frag_base: B_65x39_Caseless {
+    class GVAR(base): B_65x39_Caseless {
         timeToLive = 12;
         typicalSpeed = 1500;
         deflecting = 65;
     };
 
-    class ACE_frag_tiny: ACE_frag_base {
+    class GVAR(tiny): GVAR(base) {
         hit = 6;
         airFriction = BASE_DRAG;
         caliber = 0.75;
     };
 
-    class ACE_frag_tiny_HD: ACE_frag_base {
+    class GVAR(tiny_HD): GVAR(base) {
         hit = 6;
         airFriction = BASE_DRAG_HD;
         caliber = 0.75;
     };
 
-    class ACE_frag_small: ACE_frag_base {
+    class GVAR(small): GVAR(base) {
         hit = 12;
         airFriction = BASE_DRAG*0.9;
     };
 
-    class ACE_frag_small_HD: ACE_frag_base {
+    class GVAR(small_HD): GVAR(base) {
         hit = 12;
         airFriction = BASE_DRAG_HD*0.9;
     };
 
-    class ACE_frag_medium: ACE_frag_base {
+    class GVAR(medium): GVAR(base) {
         hit = 14;
         airFriction = BASE_DRAG*0.75;
         caliber = 1.2;
     };
 
-    class ACE_frag_medium_HD: ACE_frag_base {
+    class GVAR(medium_HD): GVAR(base) {
         hit = 14;
         airFriction = BASE_DRAG_HD*0.75;
         caliber = 1.2;
     };
 
-    class ACE_frag_large: ACE_frag_base {
+    class GVAR(large): GVAR(base) {
         hit = 28;
         indirectHit = 2;
         indirectHitRange = 0.25;
@@ -432,7 +432,7 @@ class CfgAmmo {
 
     };
 
-    class ACE_frag_large_HD: ACE_frag_large {
+    class GVAR(large_HD): GVAR(large) {
         hit =  28;
         indirectHit = 2;
         indirectHitRange = 0.25;
@@ -442,7 +442,7 @@ class CfgAmmo {
 
     };
 
-    class ACE_frag_huge: ACE_frag_large {
+    class GVAR(huge): GVAR(large) {
         hit = 40;
         indirectHit = 4;
         indirectHitRange = 0.5;
@@ -450,7 +450,7 @@ class CfgAmmo {
         caliber = 2.8;
     };
 
-    class ACE_frag_huge_HD: ACE_frag_large {
+    class GVAR(huge_HD): GVAR(large) {
         hit = 40;
         indirectHit = 4;
         indirectHitRange = 0.5;
@@ -458,19 +458,19 @@ class CfgAmmo {
         caliber = 2.8;
     };
 
-    class ACE_frag_spall_small: ACE_frag_small {
+    class GVAR(spall_small): GVAR(small) {
         timeToLive = 0.1;
     };
 
-    class ACE_frag_spall_medium: ACE_frag_medium {
+    class GVAR(spall_medium): GVAR(medium) {
         timeToLive = 0.15;
     };
 
-    class ACE_frag_spall_large: ACE_frag_large {
+    class GVAR(spall_large): GVAR(large) {
         timeToLive = 0.25;
     };
 
-    class ACE_frag_spall_huge: ACE_frag_huge {
+    class GVAR(spall_huge): GVAR(huge) {
         timeToLive = 0.3;
     };
 

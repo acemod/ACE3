@@ -1,0 +1,33 @@
+---
+layout: null
+title: Sitemap
+sitemap:
+  exclude: "yes"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ site.productionUrl }}/</loc>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% for curPage in site.pages | sort: "group" %}
+    {% unless curPage.sitemap.exclude == "yes" %}
+    <url>
+        <loc>{{ site.productionUrl}}{{ curPage.url }}</loc>
+        <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    {% endunless %}
+    {% endfor %}
+    {% for post in site.posts %}
+    <url>
+        <loc>{{site.productionUrl}}{{ post.url }}</loc>
+        <lastmod>{{post.date | date: "%Y-%m-%d"}}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    {% endfor %}
+</urlset>

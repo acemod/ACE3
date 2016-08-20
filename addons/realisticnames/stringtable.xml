@@ -534,7 +534,7 @@
             <German>T100 Black Eagle</German>
             <Spanish>T100 Black Eagle</Spanish>
             <Polish>T100 Black Eagle</Polish>
-            <Czech>T100 Black Eagle</Czech>
+            <Czech>Black Eagle</Czech>
             <French>T100 Black Eagle</French>
             <Russian>T100 Чёрный Орел</Russian>
             <Portuguese>T100 Black Eagle</Portuguese>
@@ -1742,7 +1742,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
-            <Czech>ASP-1 Kir (Tan)</Czech>
+            <Czech>ASP-1 Kir (Žlutohnědá)</Czech>
             <French>ASP-1 Kir (Tan)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
             <Russian>ASP-1 Kir (Бронзовый)</Russian>
@@ -1790,7 +1790,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
-            <Czech>Cyrus (Tan)</Czech>
+            <Czech>Cyrus (Žlutohnědá)</Czech>
             <French>Cyrus (Tan)</French>
             <Spanish>Cyrus (Tan)</Spanish>
             <Russian>Cyrus (Бронза)</Russian>
@@ -1862,7 +1862,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
-            <Czech>HK121 (Tan)</Czech>
+            <Czech>HK121 (Žlutohnědá)</Czech>
             <French>HK121 (Tan)</French>
             <Spanish>HK121 (Tan)</Spanish>
             <Russian>HK121 (Бронза)</Russian>
@@ -1934,7 +1934,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_black">
             <English>Jeep Wrangler (Black)</English>
-            <Czech>Jeep Wrangler (Černá)</Czech>
+            <Czech>Jeep Wrangler (Černý)</Czech>
             <French>Jeep Wrangler (Noir)</French>
             <Spanish>Jeep Wrangler (Negro)</Spanish>
             <Russian>Jeep Wrangler (Чёрный)</Russian>
@@ -2018,7 +2018,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01_racing">
             <English>Cessna TTx (Racing)</English>
-            <Czech>Cessna TTx (Racing)</Czech>
+            <Czech>Cessna TTx (Závodní)</Czech>
             <French>Cessna TTx (Racing)</French>
             <Spanish>Cessna TTx (Racing)</Spanish>
             <Russian>Cessna TTx (Racing)</Russian>
@@ -2139,7 +2139,7 @@
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
             <German>M200 Intervention (Tropisch)</German>
-            <Czech>M200 Intervention (Obratník)</Czech>
+            <Czech>M200 Intervention (Tropická kamufláž)</Czech>
             <Polish>M200 Intervention (zwrotnik)</Polish>
             <French>M200 Intervention (Tropique)</French>
             <Hungarian>M200 Intervention (Tropikus)</Hungarian>

@@ -9,28 +9,14 @@
  * Return Value:
  * sortedArray (ARRAY)
  *
- * Public: Yes
+ * Public: No
  */
 #include "script_component.hpp"
 
-params ["_list", ["_ascending", true]];
+ACE_DEPRECATED(QFUNC(insertionSort),"3.8.0","sort");
+
+params [["_list", [], [[]]], ["_ascending", true, [false]]];
 
 _list = + _list; // copy array to not alter the original one
-
-for "_i" from 1 to (count _list - 1) do {
-    private _tmp = _list select _i;
-    _j = _i;
-
-    while {_j >= 1 && {_tmp < _list select (_j - 1)}} do {
-        _list set [_j, _list select (_j - 1)];
-        _j = _j - 1;
-    };
-
-    _list set [_j, _tmp];
-};
-
-if (!_ascending) then {
-    reverse _list;
-};
-
+_list sort _ascending;
 _list
