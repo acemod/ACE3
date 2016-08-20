@@ -123,7 +123,7 @@
 {% endif %}
 
 {% if include.component == "hearing" %}
-`ace_interaction`, `A3_Characters_F`, `A3_Characters_F_Kart`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "hitreactions" %}
@@ -134,12 +134,12 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "interaction" %}
-`ace_interact_menu`
-{% endif %}
-
 {% if include.component == "interact_menu" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "interaction" %}
+`ace_interact_menu`
 {% endif %}
 
 {% if include.component == "inventory" %}
@@ -158,12 +158,12 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "laserpointer" %}
-`ace_common`
-{% endif %}
-
 {% if include.component == "laser_selfdesignate" %}
 `ace_laser`
+{% endif %}
+
+{% if include.component == "laserpointer" %}
+`ace_common`
 {% endif %}
 
 {% if include.component == "logistics_uavbattery" %}
@@ -182,12 +182,12 @@
 `ace_interaction`
 {% endif %}
 
-{% if include.component == "maptools" %}
-`ace_interaction`
-{% endif %}
-
 {% if include.component == "map_gestures" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "maptools" %}
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "markers" %}
