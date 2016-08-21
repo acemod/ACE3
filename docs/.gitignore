@@ -12,6 +12,8 @@ Thumbs.db
 .rbenv-version
 .rvmrc
 
+npm-debug.log
+
 addons
 CNAME
 
