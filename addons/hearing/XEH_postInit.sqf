@@ -11,15 +11,12 @@ GVAR(playerVehAttenuation) = 1;
 GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
+GVAR(lastPlayerVehicle) = objNull;
 
 ["ace_settingsInitialized", {
     TRACE_1("settingInit",GVAR(EnableCombatDeafness));
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(EnableCombatDeafness)) exitWith {};
-
-    //Add XEH:
-    ["CAManBase", "FiredNear", FUNC(firedNear)] call CBA_fnc_addClassEventHandler;
-    ["CAManBase", "Explosion", FUNC(explosionNear)] call CBA_fnc_addClassEventHandler;
 
     // Update hearing protection now:
     [] call FUNC(updateHearingProtection);
@@ -28,11 +25,31 @@ GVAR(volumeAttenuation) = 1;
     [FUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
 
     // Update veh attunation when player veh changes
-    ["vehicle", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", {
+        _this call FUNC(updatePlayerVehAttenuation);
+        
+        params ["", "_vehicle"];
+        if (!isNull GVAR(lastPlayerVehicle)) then {
+            [GVAR(lastPlayerVehicle), QUOTE(ADDON), "FiredNear", {}] call EFUNC(common,setUniqueEventHandler);
+            [GVAR(lastPlayerVehicle), QUOTE(ADDON), "Explosion", {}] call EFUNC(common,setUniqueEventHandler);
+        };
+        if ((!isNull _vehicle) && {ace_player != _vehicle}) then {
+            [_vehicle, QUOTE(ADDON), "FiredNear", FUNC(firedNear)] call EFUNC(common,setUniqueEventHandler);
+            [_vehicle, QUOTE(ADDON), "Explosion", FUNC(explosionNear)] call EFUNC(common,setUniqueEventHandler);
+            GVAR(lastPlayerVehicle) = _vehicle;
+        };
+    }] call CBA_fnc_addPlayerEventHandler;
+
     ["turret", FUNC(updatePlayerVehAttenuation)] call CBA_fnc_addPlayerEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
     ["unit", {
+        params ["_player", "_oldPlayer"];
+        [_oldPlayer, QUOTE(ADDON), "FiredNear", {}] call EFUNC(common,setUniqueEventHandler);
+        [_oldPlayer, QUOTE(ADDON), "Explosion", {}] call EFUNC(common,setUniqueEventHandler);
+        [_player, QUOTE(ADDON), "FiredNear", FUNC(firedNear)] call EFUNC(common,setUniqueEventHandler);
+        [_player, QUOTE(ADDON), "Explosion", FUNC(explosionNear)] call EFUNC(common,setUniqueEventHandler);
+
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         ACE_player setVariable [QGVAR(deaf), false];
