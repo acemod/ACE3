@@ -31,11 +31,9 @@ GVAR(lastPlayerVehicle) = objNull;
         params ["", "_vehicle"];
         if (!isNull GVAR(lastPlayerVehicle)) then {
             [GVAR(lastPlayerVehicle), QUOTE(ADDON), "FiredNear", {}] call EFUNC(common,setUniqueEventHandler);
-            [GVAR(lastPlayerVehicle), QUOTE(ADDON), "Explosion", {}] call EFUNC(common,setUniqueEventHandler);
         };
         if ((!isNull _vehicle) && {ace_player != _vehicle}) then {
             [_vehicle, QUOTE(ADDON), "FiredNear", FUNC(firedNear)] call EFUNC(common,setUniqueEventHandler);
-            [_vehicle, QUOTE(ADDON), "Explosion", FUNC(explosionNear)] call EFUNC(common,setUniqueEventHandler);
             GVAR(lastPlayerVehicle) = _vehicle;
         };
     }] call CBA_fnc_addPlayerEventHandler;
