@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))} || {}) exitWith {
+if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))}) exitWith {
     [ACE_player, "In dialog or no throwable in hand or cannot prepare throwable"] call FUNC(exitThrowMode);
 };
 
