@@ -15,14 +15,26 @@
  */
 #include "script_component.hpp"
 
-if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))}) exitWith {
+if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))} || {}) exitWith {
     [ACE_player, "In dialog or no throwable in hand or cannot prepare throwable"] call FUNC(exitThrowMode);
 };
 
-private _throwable = currentThrowable ACE_player;
-private _throwableMag = _throwable param [0, "#none"];
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 private _activeThrowable = ACE_player getVariable [QGVAR(activeThrowable), objNull];
+
+// Exit if throwable died primed in hand
+if (isNull _activeThrowable && {_primed}) exitWith {
+    [ACE_player, "Throwable died primed in hand"] call FUNC(exitThrowMode);
+};
+
+private _throwable = currentThrowable ACE_player;
+
+// Inventory check
+if (_throwable isEqualTo [] && {!_primed}) exitWith {
+    [ACE_player, "No valid throwables"] call FUNC(exitThrowMode);
+};
+
+private _throwableMag = _throwable param [0, "#none"];
 
 // Get correct throw power for primed grenade
 if (_primed) then {
@@ -33,10 +45,6 @@ if (_primed) then {
         // Just use HandGrenade as it has an average initSpeed value
         _throwableMag = "HandGrenade";
     };
-};
-// Inventory check
-if (_throwable isEqualTo [] && {!_primed}) exitWith {
-    [ACE_player, "No valid throwables"] call FUNC(exitThrowMode);
 };
 
 // Some throwables have different classname for magazine and ammo
