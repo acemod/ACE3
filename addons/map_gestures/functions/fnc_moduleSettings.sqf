@@ -40,4 +40,4 @@ if (_defaultColor != "") then {
     [QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);
 };
 
-ACE_LOGINFO("Map Gestures Module Initialized.");
+INFO("Map Gestures Module Initialized.");

@@ -22,4 +22,4 @@ if (!_activated) exitWith {};
 
 [_logic, QGVAR(quickTag), "quickTag"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Tagging Module Initialized.");
+INFO("Tagging Module Initialized.");

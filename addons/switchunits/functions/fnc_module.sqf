@@ -35,4 +35,4 @@ GVAR(Module) = true;
 
 [QGVAR(EnableSwitchUnits), true, false, true] call EFUNC(common,setSetting);
 
-ACE_LOGINFO("SwitchUnits Module Initialized.");
+INFO("SwitchUnits Module Initialized.");

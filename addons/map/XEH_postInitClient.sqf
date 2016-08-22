@@ -8,7 +8,7 @@ if (isServer) then {
         if ((!GVAR(mapGlow)) || {isNull _disconnectedPlayer}) exitWith {};
         {
             if (_x isKindOf "ACE_FlashlightProxy_White") then {
-                // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
+                // INFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
                 detach _x;
                 deleteVehicle _x;
             };
@@ -82,9 +82,9 @@ call FUNC(determineZoom);
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // ACE_LOGINFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1", currentChannel);
             } else {
-                ACE_LOGERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };

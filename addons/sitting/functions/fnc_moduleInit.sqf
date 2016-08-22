@@ -22,4 +22,4 @@ if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Sitting Module Initialized.");
+INFO("Sitting Module Initialized.");

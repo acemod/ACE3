@@ -51,7 +51,7 @@ if (_activated && local _logic) then {
             if (isClass (configFile >> "CfgSounds" >> _x)) then {
                 _ambianceSounds pushBack ((getArray(configFile >> "CfgSounds" >> _x >> "sound") select 0));
             } else {
-                ACE_LOGERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
+                ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
             };
         };
 

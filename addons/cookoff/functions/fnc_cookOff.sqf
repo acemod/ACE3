@@ -29,7 +29,7 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
     private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
 
     if (_positions isEqualTo []) then {
-        ACE_LOGWARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
+        WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
         _positions pushBack "#noselection";
     };
 
