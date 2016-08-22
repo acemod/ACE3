@@ -15,6 +15,7 @@ class CfgVehicles {
             class MainTurret;
         };
     };
+    class Air;
     class Helicopter : Air {
         class Turrets;
     };
@@ -24,13 +25,12 @@ class CfgVehicles {
             class MainTurret;
         };
     };
-    class Helicopter_Base_H: Helicopter_Base_F {};
+    class Helicopter_Base_H;
 
     class StaticWeapon;
     class StaticATWeapon : StaticWeapon {
         class Eventhandlers;
     };
-
     // Clases a modificar
     class ffaa_ea_hercules_base : Plane_Base_F {
         class Eventhandlers : Eventhandlers {

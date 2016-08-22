@@ -53,8 +53,8 @@ class Extended_firedBIS_Eventhandlers {
         ffaa_et_tigre_fired="_this call BIS_Effects_EH_Fired;src2=_this execvm ""\ffaa_et_tigre\script\tigre_spike.sqf"";";
     };
 };
-class Extended_GetInMan_EventHandlers {
+class Extended_GetIn_EventHandlers {
     class ffaa_UAVStation {
-        ffaa_et_searcher_GetInMan="_this execvm ""\ffaa_et_searcher\script\UAVStation.sqf"";";
+        ffaa_et_searcher_GetIn="_this execvm ""\ffaa_et_searcher\script\UAVStation.sqf"";";
     };
 };
