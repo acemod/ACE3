@@ -2,6 +2,10 @@
 `ace_ballistics`, `ace_weather`
 {% endif %}
 
+{% if include.component == "advancedthrowing" %}
+`ace_common`, `ace_weaponselect`
+{% endif %}
+
 {% if include.component == "ai" %}
 `ace_common`
 {% endif %}
