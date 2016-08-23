@@ -3,9 +3,25 @@
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOff), FUNC(cookOff)] call CBA_fnc_addEventHandler;
 
+GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
+
 // cookoff and burning engine
 ["Tank", "init", {
-    (_this select 0) addEventHandler ["HandleDamage", {
+    params ["_vehicle"];
+    private _typeOf = typeOf _vehicle;
+    if (isNil {GVAR(cacheTankDuplicates) getVariable _typeOf}) then {
+        private _hitpoints = (getAllHitPointsDamage _vehicle param [0, []]) apply {toLower _x};
+        private _duplicateHitpoints = [];
+        {
+            if ((_x != "") && {_x in (_hitpoints select [0,_forEachIndex])}) then {
+                _duplicateHitpoints pushBack _forEachIndex;
+            };
+        } forEach _hitpoints;
+        TRACE_2("dupes",_typeOf,_duplicateHitpoints);
+        GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
+    };
+
+    _vehicle addEventHandler ["HandleDamage", {
         if (GVAR(enable)) then {
             ["tank", _this] call FUNC(handleDamage);
         };
