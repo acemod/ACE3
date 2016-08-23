@@ -5,31 +5,43 @@
             <English>Gunbag</English>
             <German>Waffentasche</German>
             <French>Housse d'arme</French>
+            <Russian>Чехол</Russian>
+            <Czech>Pouzdro na zbraň</Czech>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
             <German>Waffentasche (Tan)</German>
             <French>Housse d'arme (marron clair)</French>
+            <Russian>Чехол (желтовато-коричневый)</Russian>
+            <Czech>Pouzdro na zbraň (Žlutohnědá)</Czech>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
             <German>Lege Waffe in Waffentasche</German>
             <French>Placer l'arme dans la housse d'arme</French>
+            <Russian>Зачехлить оружие</Russian>
+            <Czech>Vložit zbraň do pouzdra</Czech>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
             <German>Hole Waffe aus Waffentasche</German>
             <French>Sortir l'arme hors de la housse</French>
+            <Russian>Расчехлить оружие</Russian>
+            <Czech>Vytáhnout zbraň z pouzdra</Czech>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
             <German>Status</German>
             <French>Status</French>
+            <Russian>Статус</Russian>
+            <Czech>Status</Czech>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
             <German>Waffentasche leer</German>
             <French>Housse d'arme vide</French>
+            <Russian>Чехол пуст</Russian>
+            <Czech>Prázdné pouzdro na zbraň</Czech>
         </Key>
     </Package>
 </Project>

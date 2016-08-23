@@ -27,7 +27,7 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     };
 
     if (GVAR(BFT_ShowPlayerNames)) then {
-        _playersToDrawMarkers = allPlayers select {side _x == _playerSide};
+        _playersToDrawMarkers = allPlayers select {side _x == _playerSide && {!(_x getVariable [QGVAR(hideBlueForceMarker), false])}};
 
         {
             private _markerType = [_x] call EFUNC(common,getMarkerType);
@@ -47,6 +47,8 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
             } count units _x > 0;
         };
     };
+
+    _groupsToDrawMarkers = _groupsToDrawMarkers select {!(_x getVariable [QGVAR(hideBlueForceMarker), false])};
 
     {
         private _markerType = [_x] call EFUNC(common,getMarkerType);

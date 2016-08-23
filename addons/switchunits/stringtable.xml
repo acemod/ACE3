@@ -22,6 +22,7 @@
             <Spanish>Intentando cambiar</Spanish>
             <French>Essaye de basculer</French>
             <Portuguese>Tentando trocar</Portuguese>
+            <Russian>Попытка переключения</Russian>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>

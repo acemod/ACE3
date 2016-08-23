@@ -146,27 +146,6 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
     __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
 };
 
-FUNC(disableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH < 0 && difficulty > 0) then {
-        _firedEH = [ACE_player, "DefaultAction", {true}, {
-            _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
-            if(!isNil "_canFire") exitWith { false };
-            true
-        }] call EFUNC(common,addActionEventHandler);
-    };
-    _firedEH
-};
-FUNC(enableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH > 0 && difficulty > 0) then {
-        [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
-    };
-    -1
-};
-
 if (isNull _newTarget) then {
     // No targets found
     _currentTarget = objNull;

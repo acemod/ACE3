@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="AdvancedThrowing">
+        <Key ID="STR_ACE_AdvancedThrowing_Category">
+            <English>Advanced Throwing</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Module_Description">
+            <English>Allows changing advanced throwing behaviour.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Enable_DisplayName">
+            <English>Enable Advanced Throwing</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Enable_Description">
+            <English>Enables advanced throwing system.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowThrowArc_DisplayName">
+            <English>Show Throw Arc</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowThrowArc_Description">
+            <English>Enables visualization of the throw arc (where throwable will fly).</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_DisplayName">
+            <English>Show Throwing Mouse Controls</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ShowMouseControls_Description">
+            <English>Enables visual cues for mouse controls when throwable is prepared.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUp_DisplayName">
+            <English>Enable Throwables Pick Up</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUp_Description">
+            <English>Enables ability to pick up throwables from the ground.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUpAttached_DisplayName">
+            <English>Enable Attached Throwables Pick Up</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_EnablePickUpAttached_Description">
+            <English>Enables ability to pick up throwables from attached objects.</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Prepare">
+            <English>Prepare/Change Throwable</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_dropModeHold">
+            <English>Throwable Drop Mode (Hold)</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_DropModeToggle">
+            <English>Throwable Drop Mode (Toggle)</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Primed">
+            <English>Primed</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Throw">
+            <English>Throw</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_ChangeMode">
+            <English>(Scroll) Change Mode</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Extend">
+            <English>(Scroll) Extend</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_Cook">
+            <English>(Click) Cook</English>
+        </Key>
+        <Key ID="STR_ACE_AdvancedThrowing_PickUp">
+            <English>Pick Up</English>
+        </Key>
+    </Package>
+</Project>

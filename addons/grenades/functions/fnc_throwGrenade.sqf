@@ -49,7 +49,14 @@ if (getNumber (_config >> QGVAR(flare)) == 1) then {
     private _color = getArray (_config >> QGVAR(color));
     private _intensity = _color deleteAt 3;
 
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call CBA_fnc_waitAndExecute;
+    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+};
+
+if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
+    private _fuzeTime = getNumber (_config >> "explosionTime");
+    private _timeToLive = getNumber (_config >> "timeToLive");
+
+    [FUNC(incendiary), [_projectile, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
 };
 
 // handle throw modes

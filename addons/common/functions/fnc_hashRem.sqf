@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(hashRem),"3.8.0","CBA_fnc_hashRem");
+
 params ["_hash", "_key"];
 
 ERRORDATA(2);

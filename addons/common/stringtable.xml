@@ -247,7 +247,7 @@
             <German>Aktion abgebrochen.</German>
             <Spanish>Acción cancelada.</Spanish>
             <Polish>Przerwano czynność</Polish>
-            <Czech>Akce přerušena.</Czech>
+            <Czech>Akce přerušena</Czech>
             <French>Action annulée.</French>
             <Russian>Действие отменено.</Russian>
             <Portuguese>Ação cancelada.</Portuguese>
@@ -804,6 +804,7 @@
             <French>Pas de place pour décharger</French>
             <Czech>Nedostatek místa k vyložení</Czech>
             <Portuguese>Sem espaço para descarregar</Portuguese>
+            <Russian>Нет места для выгрузки</Russian>
         </Key>
     </Package>
 </Project>
