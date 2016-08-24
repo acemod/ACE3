@@ -57,9 +57,14 @@ private _icon = "";
 private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
 
+// Add the paradrop self interaction for planes and helicopters
 if (_vehicle isKindOf "Air") then {
     private _condition = {
-        GVAR(enable) && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+        GVAR(enable) && {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
+            private _turretPath = _player call CBA_fnc_turretPath;
+            (_player == (driver _target)) || // pilot
+            {(getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1} || // coPilot
+            {_turretPath in (getArray (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(loadmasterTurrets)))}} // loadMaster turret from config
     };
     private _statement = {
         GVAR(interactionVehicle) = _target;
@@ -70,5 +75,5 @@ if (_vehicle isKindOf "Air") then {
     private _icon = "";
 
     private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass); // self action
+    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass); // self action on the vehicle
 };

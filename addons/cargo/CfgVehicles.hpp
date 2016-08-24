@@ -222,6 +222,8 @@ class CfgVehicles {
     };
 
     class Heli_Transport_04_base_F: Helicopter_Base_H {
+        // note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
+        GVAR(loadmasterTurrets)[] = {{1}};
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };

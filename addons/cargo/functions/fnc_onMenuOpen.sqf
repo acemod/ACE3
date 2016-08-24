@@ -22,7 +22,7 @@ params ["_display"];
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
 if (GVAR(interactionParadrop)) then {
-    (_display displayCtrl 12) ctrlSetText "Paradrop";
+    (_display displayCtrl 12) ctrlSetText (localize LSTRING(paradropButton));
 };
 
 [{

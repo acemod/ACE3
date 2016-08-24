@@ -44,7 +44,7 @@ if (GVAR(interactionParadrop)) exitWith {
             params ["_args", "", "", "_errorCode"]; // show warning if we failed because of flight conditions
             if (_errorCode == 3) then {
                 _args params ["_item", "_target", "_player"];
-                ["Unlevel Flight"] call EFUNC(common,displayTextStructured);
+                [localize LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
             };
         },
         localize LSTRING(UnloadingItem),
