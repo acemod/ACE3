@@ -1,23 +1,5 @@
 #include "script_component.hpp"
 
-//Delete map glow lights from disconnecting players #2810
-if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect",{
-        params ["_disconnectedPlayer"];
-
-        if ((!GVAR(mapGlow)) || {isNull _disconnectedPlayer}) exitWith {};
-        {
-            if (_x isKindOf "ACE_FlashlightProxy_White") then {
-                // ACE_LOGINFO_2("Deleting leftover light [%1:%2] from DC player [%3]", _x, typeOf _x, _disconnectedPlayer);
-                detach _x;
-                deleteVehicle _x;
-            };
-        } forEach attachedObjects _disconnectedPlayer;
-
-        nil
-    }];
-};
-
 // Exit on Headless as well
 if (!hasInterface) exitWith {};
 
@@ -98,10 +80,10 @@ call FUNC(determineZoom);
     if (GVAR(mapIllumination)) then {
         ["loadout", {
             params ["_player", ""];
-            private _flashlightItems = [_player] call FUNC(getUnitFlashlights);
             private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
             _unitLight params ["_flashlight", "_glow"];
-            if (!(_flashlight isEqualTo "") && {!(_flashlight in _flashlightItems)}) then {
+            if ((_flashlight != "") && {!(_flashlight in ([_player] call FUNC(getUnitFlashlights)))}) then {
+                // remove the current glow if the unit suddenly lost it's flashlight
                 if (!isNull _glow) then {
                     _glow = [_player, "", false] call FUNC(flashlightGlow);
                 };
@@ -110,7 +92,7 @@ call FUNC(determineZoom);
         }] call CBA_fnc_addPlayerEventHandler;
 
         if (GVAR(mapGlow)) then {
-            ["ace_visibleMapChanged", {
+            ["visibleMap", {
                 params ["_player", "_mapOn"];
                 private _unitLight = _player getVariable [QGVAR(flashlight), ["", objNull]];
                 _unitLight params ["_flashlight", "_glow"];
@@ -125,7 +107,7 @@ call FUNC(determineZoom);
                         [_player, ""] call FUNC(flashlightGlow);
                     };
                 };
-            }] call CBA_fnc_addEventHandler;
+            }] call CBA_fnc_addPlayerEventHandler;
         };
     };
 }] call CBA_fnc_addEventHandler;
