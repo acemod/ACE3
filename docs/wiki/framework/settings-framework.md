@@ -75,6 +75,10 @@ ACE3 contains a lot of settings, for that reason tweaking everything to your lik
 - Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
 - Paste the settings in your `serverconfig.hpp` file and you're done.
 
+Please note that in the `serverconfig.hpp` file there is no need for adding the `ACE_Settings` class.
+
+#### Using the exported settings in the mission description.ext
+
 Note that the format copied to your clipboard by this can also be used in the mission config (`description.ext`), as long as they are in the class `ACE_Settings`.
 
 ```cpp
