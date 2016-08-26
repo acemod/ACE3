@@ -207,7 +207,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
-            <German>Schieflage Flug</German>
+            <German>Schieflage</German>
         </Key>
     </Package>
 </Project>
