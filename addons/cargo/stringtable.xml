@@ -202,12 +202,12 @@
             <Russian>Размер объекта</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
-            <English>Paradrop</English>
-            <German>Abspringen</German>
+            <English>Airdrop</English>
+            <German>Türlast</German>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
-            <German>Ungleiche Flug</German>
+            <German>Schieflage Flug</German>
         </Key>
     </Package>
 </Project>
