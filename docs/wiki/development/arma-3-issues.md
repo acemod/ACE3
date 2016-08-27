@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Arma 3 Issues
-description: Keeping track of Arma 3 issues that need to be fixed. If you want to support us and help raise Bohemia's awareness of those issues, please upvote them. 
+description: Keeping track of Arma 3 issues that need to be fixed. If you want to support us and help raise Bohemia's awareness of those issues, please upvote them.
 group: development
 parent: wiki
 order: 6
@@ -12,20 +12,20 @@ Keeping track of Arma 3 issues that need to be fixed. If you want to support us 
 
 **Open:**
 
-* [bux578: 0020997: MineDetector equipable in Launcher slot](http://feedback.arma3.com/view.php?id=20997)
-* [bux578: 0021176: Zeus / Curator Add Remote Controlled Event](http://feedback.arma3.com/view.php?id=21176)
-* [bux578: 0021469: Add script commands "addPrimaryWeaponMagazine" and "addSecondaryWeaponMagazine"](http://feedback.arma3.com/view.php?id=21469)
-* [bux578: 0022000: Add/Alter script command to add perfectly configured weapons to cargo](http://feedback.arma3.com/view.php?id=22000)
-* [commy2: 0021443: Unexpected behavior of += array in configs](http://feedback.arma3.com/view.php?id=21443)
-* [commy2: 0022671: setVariable is not always JIP persistent](http://feedback.arma3.com/view.php?id=22671)
-* [CorruptedHeart: 0022318: Can no longer use "MenuBack" shortcut in AddAction](http://feedback.arma3.com/view.php?id=22318)
-* [James2464: 0023725: All Environment Rocks Should Have PhysX LODs](http://feedback.arma3.com/view.php?id=23725)
-* [Jaynus: 0023679: Display event handler return values for mouse buttons should be respected](http://feedback.arma3.com/view.php?id=23679)
-* [Heisenberg: 0023741: Switching between optic modes of a sniper scope (AMS, DMS, MOS) will result in a blurred vision](http://feedback.arma3.com/view.php?id=23741)
-* [AgentRev: 0022310: setObjectTextureGlobal causing "Cannot load texture" errors when used with valid mission files](http://feedback.arma3.com/view.php?id=22310)
+* [bux578: T79355: MineDetector equipable in Launcher slot](https://feedback.bistudio.com/T79355)
+* [bux578: T79534: Zeus / Curator Add Remote Controlled Event](https://feedback.bistudio.com/T79534)
+* [bux578: T79827: Add script commands "addPrimaryWeaponMagazine" and "addSecondaryWeaponMagazine"](https://feedback.bistudio.com/T79827)
+* [bux578: T80358: Add/Alter script command to add perfectly configured weapons to cargo](https://feedback.bistudio.com/T80358)
+* [commy2: T79801: Unexpected behavior of += array in configs](https://feedback.bistudio.com/T79801)
+* [commy2: T81029: setVariable is not always JIP persistent](https://feedback.bistudio.com/T81029)
+* [CorruptedHeart: T80676: Can no longer use "MenuBack" shortcut in AddAction](https://feedback.bistudio.com/T80676)
+* [James2464: T82092: All Environment Rocks Should Have PhysX LODs](https://feedback.bistudio.com/T82092)
+* [Jaynus: T82046: Display event handler return values for mouse buttons should be respected](https://feedback.bistudio.com/T82046)
+* [Heisenberg: T82108: Switching between optic modes of a sniper scope (AMS, DMS, MOS) will result in a blurred vision](https://feedback.bistudio.com/T82108)
+* [AgentRev: T80668: setObjectTextureGlobal causing "Cannot load texture" errors when used with valid mission files](https://feedback.bistudio.com/T80668)
 
 **Resolved:**
 
-* <del>[Nou: 0020761: Memory points rfemur, lfemur, and other leg memory points returned incorrectly with SQF command selectionPosition](http://feedback.arma3.com/view.php?id=20761)</del>
-* <del>[commy2: 0023136: isLightOn doesn't recognize destroyed light bulbs for streetlamps](http://feedback.arma3.com/view.php?id=23136)</del>
-* <del>[commy2: 0025404: splitString scripting command causes game crash] (http://feedback.arma3.com/view.php?id=25404)</del>
+* <del>[Nou: T79119: Memory points rfemur, lfemur, and other leg memory points returned incorrectly with SQF command selectionPosition](https://feedback.bistudio.com/T79119)</del>
+* <del>[commy2: T81503: isLightOn doesn't recognize destroyed light bulbs for streetlamps](https://feedback.bistudio.com/T81503)</del>
+* <del>[commy2: T83771: splitString scripting command causes game crash](https://feedback.bistudio.com/T83771)</del>
