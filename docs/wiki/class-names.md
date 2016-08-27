@@ -2,9 +2,10 @@
 layout: wiki
 title: Class names
 description: A list of all the class names in ACE3.
-group: missionmaker
+group: wiki
 order: 11
-parent: wiki
+parent:
+redirect_from: "/wiki/missionmaker/class-names.html"
 ---
 
 Everything is ordered alphabetically.
