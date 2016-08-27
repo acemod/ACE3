@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 # Author: Jonpas
-# Extracts dependencies to "docs/_includes/dependencies_list.md" for use with Jekyll include statement.
-# Use the following line to add dependencies to a feature page:
-# {% include dependencies_list.md component="<component>" %}
+# Extracts dependencies to "docs/_includes/dependencies_list.md" and "docs/_includes/dependenciesx_list.md" for use with Jekyll include statement.
+# Use the following line to add dependencies to an ACE3 feature page: {% include dependencies_list.md component="<component>" %}
+# Use the following line to add dependencies to an ACEX feature page: {% include dependenciesx_list.md component="<component>" %}
+
 
 import os
 import sys
@@ -18,41 +19,67 @@ def get_dependencies(line):
 def main():
     if "--markdown" not in sys.argv:
         print("""
-        ####################################
-        # Extract ACE3 Module Dependencies #
-        #       (for Jekyll include)       #
-        ####################################
+        #############################################
+        # Extract ACE3 and ACEX Module Dependencies #
+        #           (for Jekyll include)            #
+        #############################################
         """)
 
-    scriptpath = os.path.realpath(__file__)
-    projectpath = os.path.dirname(os.path.dirname(scriptpath))
-    addonspath = os.path.join(projectpath, "addons")
-    includepath = os.path.join(projectpath, "docs", "_includes")
-    dependenciespath = os.path.join(includepath, "dependencies_list.md")
 
-    # Prepare directory and file
-    if not os.path.exists(includepath):
+    # Mod paths
+    script_path = os.path.realpath(__file__)
+    project_path = os.path.dirname(os.path.dirname(script_path))
+    addons_path = os.path.join(project_path, "addons")
+
+    if "--acex" in sys.argv:
+        projectx_path = sys.argv[sys.argv.index("--acex") + 1]
+        addonsx_path = os.path.join(projectx_path, "addons")
+
+    # Documentation paths
+    include_path = os.path.join(project_path, "docs", "_includes")
+    dependencies_path = os.path.join(include_path, "dependencies_list.md")
+    dependenciesx_path = os.path.join(include_path, "dependenciesx_list.md")
+
+
+    # Prepare files and paths list
+    if not os.path.exists(include_path):
         print("Jekyll documentation not found!")
         sys.exit(0)
 
-    open(dependenciespath, "w", newline="\n").close()
+    open(dependencies_path, "w", newline="\n").close()
+    addons = next(os.walk(addons_path))[1]
+    dependencies_path_current = dependencies_path
+    addons_path_current = addons_path
 
-    # Iterate through folders in the addons directory
-    for folder in next(os.walk(addonspath))[1]:
+    if "--acex" in sys.argv:
+        open(dependenciesx_path, "w", newline="\n").close()
+        addons.append(".")
+        addons += next(os.walk(addonsx_path))[1]
+
+    # Iterate through folders in the addons directories
+    for folder in addons:
         # Ignore "main" component
         if folder == "main":
             continue
 
+        # Change to ACEX list on "." separator
+        if folder == ".":
+            dependencies_path_current = dependenciesx_path
+            addons_path_current = addonsx_path
+            continue
+
         # Open config.cpp file and extract dependencies
         data = []
-        configfile = os.path.join(addonspath, folder, "config.cpp")
+        configfile = os.path.join(addons_path_current, folder, "config.cpp")
+
         if os.path.exists(configfile):
-            with open(os.path.join(addonspath, folder, "config.cpp")) as file:
+            with open(os.path.join(addons_path_current, folder, "config.cpp")) as file:
                 match = False
                 for line in file:
                     # One-line
                     if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
                         data += get_dependencies(line)
+                        print(get_dependencies(line))
                         break
                     # Multi-line
                     else:
@@ -80,7 +107,7 @@ def main():
             "{% endif %}\n"
         ])
 
-        with open(dependenciespath, "a", newline="\n") as file:
+        with open(dependencies_path_current, "a", newline="\n") as file:
             file.writelines([jekyll_statement, "\n"])
 
         if "--markdown" not in sys.argv:

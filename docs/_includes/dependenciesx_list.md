@@ -1,3 +1,12 @@
 {% if include.component == "headless" %}
-`ace_common`, `acex_main`
+`acex_main`
 {% endif %}
+
+{% if include.component == "sitting" %}
+`acex_main`, `ace_interaction`
+{% endif %}
+
+{% if include.component == "viewrestriction" %}
+`acex_main`
+{% endif %}
+
