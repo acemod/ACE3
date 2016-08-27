@@ -5,6 +5,11 @@ description: Precise system for throwing grenades and other throwable items.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 7
+  patch: 0
 ---
 
 ## 1. Overview
