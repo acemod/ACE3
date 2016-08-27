@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Class names
-description: A list of all the class names in ACE3
+description: A list of all the class names in ACE3.
 group: missionmaker
 order: 11
 parent: wiki
