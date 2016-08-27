@@ -5,6 +5,11 @@ description: Explains how to set-up refueling of objects with the ACE3 refuel sy
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 4
+  patch: 0
 ---
 
 ## 1. Config Values

@@ -5,6 +5,11 @@ description: Explains how to set-up goggles with ACE3 goggles system.
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Config Values

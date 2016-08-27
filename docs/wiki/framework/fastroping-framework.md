@@ -5,6 +5,11 @@ description: Explains the config values and functions used for making a helicopt
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 5
+  patch: 0
 ---
 
 If you want to prepare a helicopter from your addon for fast roping, there's a few ways to do that.

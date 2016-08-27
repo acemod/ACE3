@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Interaction Menu Framework
-description: Explains how to add items to ACE's Interaction Menu
+description: Explains how to add items to ACE's Interaction Menu.
 group: framework
 order: 0
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Types of actions

@@ -5,6 +5,11 @@ description: The ACE3 Advanced Missile Guidance Framework provides a setup of co
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

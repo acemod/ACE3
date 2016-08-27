@@ -5,7 +5,17 @@ description: Explains how to set-up sitting objects (eg. chairs) with ACE3 sitti
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 2
+  patch: 0
 ---
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ACE3 Sitting has been deprecated in favour of ACEX Sitting and will be removed in a future version.</p>
+</div>
 
 ## 1. Requirements
 
