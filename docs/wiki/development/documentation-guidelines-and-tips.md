@@ -6,7 +6,7 @@ parent: wiki
 order: 19
 ---
 
-# 1. Documentation Guidelines
+## 1. Documentation Guidelines
 
 - A line between each entry like above.
     - This is especially necessary for the kramdown markup syntax. Kramdown needs a line break between each block level element (paragraphs, lists, codeblocks, etc ...)
@@ -18,12 +18,12 @@ order: 19
 - Capitals at the start of a sentence and `.`at the end.
 - Verify everything in game
 
-## 1.1 Tips
+### 1.1 Tips
 
 - Use [http://dillinger.io/](http://dillinger.io/) to keep your sanity
 - [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-## 1.2 Feature Template
+### 1.2 Feature Template
 
 ```
 ---
@@ -72,7 +72,7 @@ Short description of sub-feature 2.
 Information about other guides and pages about this feature.
 ```
 
-## 1.3 Framework Template
+### 1.3 Framework Template
 
 ```
 ---
