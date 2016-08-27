@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Disposable
-description: Makes NLAW disposable and allows addons to do the same
+description: Makes NLAW disposable.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

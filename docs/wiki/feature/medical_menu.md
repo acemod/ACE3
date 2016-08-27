@@ -5,6 +5,11 @@ description: Adds the medical menu.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 3
+  patch: 0
 ---
 
 ## 1. Overview

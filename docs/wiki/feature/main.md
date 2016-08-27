@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Main
-description: main module
+description: Main module.
 group: feature
 category: general
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

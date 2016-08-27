@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Hit Reactions
-description:
+description: Reactions when getting shot.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

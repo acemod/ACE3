@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Finger
-description: Finger pointing
+description: Finger pointing.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 2
+  patch: 0
 ---
 
 ## 1. Overview

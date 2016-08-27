@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Inventory
-description:
+description: Options to increase size of the inventory dialog.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

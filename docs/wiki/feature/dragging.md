@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Dragging
-description: Adds the option to drag and carry units and objects
+description: Adds the option to drag and carry units and objects.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview
