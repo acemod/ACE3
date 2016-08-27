@@ -5,6 +5,11 @@ description: Adds a can of spray paint which allows you to tag buildings, walls 
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 5
+  patch: 0
 ---
 
 ## 1. Overview

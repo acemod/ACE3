@@ -5,6 +5,11 @@ description: Explains how to use tagging framework to add custom tags.
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 7
+  patch: 0
 ---
 
 <div class="panel callout">
