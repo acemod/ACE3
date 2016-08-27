@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
- * 3: Parameters <ARRAY>
+ * 2: Parameters <ARRAY>
  *
  * Return value:
  * None
