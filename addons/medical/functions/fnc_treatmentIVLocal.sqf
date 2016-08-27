@@ -33,6 +33,6 @@ if (isClass (_config >> _treatmentClassname)) then {
     ERROR("IV Treatment Classname not found");
 };
 
-private _bloodBags = _target getVariable [QGVAR(bloodbags), []];
+private _bloodBags = _target getVariable [QGVAR(ivBags), []];
 _bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _typeOf]
-_target setVariable [QGVAR(bloodBags), _bloodBags, true];
+_target setVariable [QGVAR(ivBags), _bloodBags, true];

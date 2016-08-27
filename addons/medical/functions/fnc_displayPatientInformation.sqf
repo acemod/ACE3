@@ -68,7 +68,7 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
-        private _bloodBags = _unit getVariable [QGVAR(bloodbags), []];
+        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
         {
             _x params ["_bagVolumeRemaining"];
             _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;

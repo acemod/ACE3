@@ -26,9 +26,9 @@ params ["_unit", "_syncValues"];
 private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
 private _bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
-if (!isNil {_unit getVariable QGVAR(bloodbags)}) then {
+if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
     if (_bloodVolume < 100) then {
-        private _bloodBags = _unit getVariable [QGVAR(bloodbags), []];
+        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
         _bloodBags = _bloodBags apply {
             _x params ["_bagVolumeRemaining"];
             private _bagChange = IV_CHANGE_PER_SECOND min _bagVolumeRemaining; // absolute value of the change in miliLiters
@@ -42,12 +42,12 @@ if (!isNil {_unit getVariable QGVAR(bloodbags)}) then {
         };
         _bloodBags = _bloodBags - [[]]; // remove empty bags
         if (_bloodBags isEqualTo []) then {
-            _unit setVariable [QGVAR(bloodBags), nil, true]; // no bags left - clear variable (always globaly sync this)
+            _unit setVariable [QGVAR(ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
         } else {
-            _unit setVariable [QGVAR(bloodBags), _bloodBags, _syncValues];
+            _unit setVariable [QGVAR(ivBags), _bloodBags, _syncValues];
         };
     } else {
-        _unit setVariable [QGVAR(bloodBags), nil, true]; // blood volume = 100% - clear variable (always globaly sync this)
+        _unit setVariable [QGVAR(ivBags), nil, true]; // blood volume = 100% - clear variable (always globaly sync this)
     };
 };
 
