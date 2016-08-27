@@ -42,6 +42,10 @@
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "chemlights" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "common" %}
 `ace_main`, `ace_modules`
 {% endif %}
