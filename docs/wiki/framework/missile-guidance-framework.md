@@ -1,7 +1,7 @@
 ---
 layout: wiki
-title: Advanced Missile Guidance Framework
-description: The ACE3 Advanced Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for mod makers to integrate with the missile guidance and targeting mechanisms of ACE3.
+title: Missile Guidance Framework
+description: The ACE3 Missile Guidance Framework provides a setup of configuration settings, functions and a execution framework for mod makers to integrate with the missile guidance and targeting mechanisms of ACE3.
 group: framework
 order: 5
 parent: wiki
