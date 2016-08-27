@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Movement
-description: Movement improvements
+description: Movement improvements.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

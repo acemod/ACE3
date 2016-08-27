@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Refuel
-description: Adds the option to refuel vehicles
+description: Adds the option to refuel vehicles.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 4
+  patch: 0
 ---
 
 ## 1. Overview

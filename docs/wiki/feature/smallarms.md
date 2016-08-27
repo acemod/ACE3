@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Small Arms
-description: Various improvements to small arms
+description: Various improvements to small arms.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

@@ -5,6 +5,11 @@ description: Adds a deployable ladder with adjustable height that you can transp
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 1
+  patch: 0
 ---
 
 ## 1. Overview

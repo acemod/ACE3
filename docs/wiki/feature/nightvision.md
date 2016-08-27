@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Nightvision
-description:
+description: Different types of NVGs with different levels of quality.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

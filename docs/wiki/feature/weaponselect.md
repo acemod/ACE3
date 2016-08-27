@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Weapon Select
-description:
+description: Ability to quickly select weapons using the number keys.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

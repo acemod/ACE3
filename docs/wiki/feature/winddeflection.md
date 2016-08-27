@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Wind Deflection
-description: The wind deflection module simulates wind deflection of projectiles
+description: The wind deflection module simulates wind deflection of projectiles.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 redirect_from: "/wiki/feature/windeflection.html"
 ---
 

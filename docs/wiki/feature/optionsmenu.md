@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Options Menu
-description: ACE3 options menu
+description: ACE3 options menu.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

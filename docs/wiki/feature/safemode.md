@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Safe Mode
-description: Introduce safe mode
+description: Ability to use safe mode on small arms.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

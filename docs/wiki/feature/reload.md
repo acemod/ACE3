@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Reload
-description:
+description: Hides default reload indicator, making it necessary to manually check the magazine.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview
