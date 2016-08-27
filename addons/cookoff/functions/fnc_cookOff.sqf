@@ -111,6 +111,12 @@ _vehicle setVariable [QGVAR(isCookingOff), true];
 
         [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
 
+        {
+            if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
+                _x action ["Eject", _vehicle];
+            };
+        } forEach crew _vehicle;
+
         [{
             params ["_vehicle", "_effects"];
 

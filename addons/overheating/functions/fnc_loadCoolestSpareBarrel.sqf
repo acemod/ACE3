@@ -20,9 +20,13 @@
 
 params ["_assistant", "_gunner", "_weapon", "_weaponTemp", "_barrelMass"];
 TRACE_5("loadCoolestSpareBarrel1",_assistant,_gunner,_weapon,_weaponTemp,_barrelMass);
-
+private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(barrelClassname));
+//If the weapon has no defined classname then use the ACE one
+if(_weaponBarrelClass == "") then {
+    _weaponBarrelClass = "ACE_SpareBarrel";
+};
 // Find all spare barrel the player has
-private _allBarrels = [_assistant, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
+private _allBarrels = [_assistant, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
 TRACE_1("_allBarrels",_allBarrels);
 if ((count _allBarrels) < 1) exitWith {};
 

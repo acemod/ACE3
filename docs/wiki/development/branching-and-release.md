@@ -19,7 +19,7 @@ MINOR version when we add new features or large amount of bug fixes
 PATCH version when a release contains only bug fixes.
 ```
 
-## 2 Project goals
+## 2. Project goals
 
 Following the release of ACE 3.4.1, we have adopted a system involving collaborative project goals. Following `MINOR` releases the ACE development team will decide on a goal to work towards for the next minor increment (whether that be developing a new feature, overhauling an existing feature or simply enhancing a certain area of the project).
 
@@ -29,7 +29,7 @@ Individual developers are free to continue working on the project at their own d
 
 Whenever a project goal is chosen a new issue will be made for the purpose of discussing and documenting the current goal's development in a centralized location.
 
-## 3 Branching and releases
+## 3. Branching and releases
 
 ACE releases are generally scheduled for a Tuesday a week or two in advance. On the Friday before release, the project management will decide whether or not this scheduled release will continue. When continuing  with the release, the current `master` branch will be merged into the `release` branch. The `release` branch will not contain any direct commits and no other branches will be merged into this branch. The exception being hotfixes, which are branched off `release` and merged back into `release` and `master`.
 

@@ -56,5 +56,7 @@ Function to connect an editor-placed explosive to a unit's detonator. Can be use
 [triggerman, IED_4, "ACE_DeadManSwitch"] call ace_explosives_fnc_connectExplosive
 ```
 
-## 2. Interaction
-*to be done*
+## 2. Interaction Menu
+Mission makers can add ace interaction menu actions via scripts.
+Check out the [full guide in framework section](http://ace3mod.com/wiki/framework/interactionMenu-framework.html)
+

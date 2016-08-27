@@ -159,8 +159,6 @@ class ACE_Settings {
         value = 3;
         values[] = {"Off", "Low", "Medium", "High", "Ultra"};
         _values[] = { 0, 50, 100, 1000, 5000 };
-
-        isClientSettable = 1;
     };
     class GVAR(litterCleanUpDelay) {
         category = CSTRING(Category_Medical);

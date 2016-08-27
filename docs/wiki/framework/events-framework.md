@@ -15,7 +15,7 @@ Event handlers in ACE3 are implemented through CBA's Event System. They should b
 ## 2. Events List
 ACE3 uses many events internally, this is not a complete list; but it should list most publicly usable events.
 
-### 2.1 Fired Event Handlers (ace_common)
+### 2.1 Fired Event Handlers (`ace_common`)
 
 Different events for what type of unit has fired.
 E.G.: If you only need to do action when player's weapon fires, this will be faster than adding an XEH for everything.
@@ -30,7 +30,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires
 |`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires
 
-### 2.2 Medical (ace_medical)
+### 2.2 Medical (`ace_medical`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -38,7 +38,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_placedInBodyBag` | [_target, _bodyBag] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted)
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className] | Local | Listen | Treatment action is completed (local on the _caller)
 
-### 2.3 Interaction Menu (ace_interact_menu)
+### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
@@ -46,7 +46,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 
-### 2.4 Logistics (ace_cargo)
+### 2.4 Logistics (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -54,7 +54,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
 |`ace_cargoUnloaded` | [_item, _vehicle] | Global | Listen | Cargo has been Unloaded from vehicle
 
-### 2.5 Captives (ace_captives)
+### 2.5 Captives (`ace_captives`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -62,14 +62,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
 |`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
 
-### 2.6 Settings (ace_common)
+### 2.6 Settings (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready
 |`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed
 
-### 2.7 Tagging (ace_tagging)
+### 2.7 Tagging (`ace_tagging`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
@@ -77,7 +77,8 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 
 ## 3. Usage
-Also Reference [CBA's Documentation](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System)
+Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
+
 ### 3.1 Adding / Removing Events
 
 #### 3.1.1 Add Event
