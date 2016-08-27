@@ -27,3 +27,11 @@
 
 #define EMPTY_SOUND {"A3\Sounds_F\dummysound.wss",1,1}
 #define NAMESPACE_NULL locationNull
+
+#define PRELOAD_CLASS(class) \
+    LOG_1("Starting preload for ""%1""",class);\
+    [{\
+        1 preloadObject _this;\
+    }, {\
+        LOG_1("Preload done for ""%1""",_this);\
+    }, class] call CBA_fnc_waitUntilAndExecute
