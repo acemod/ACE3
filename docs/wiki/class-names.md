@@ -10,7 +10,7 @@ redirect_from: "/wiki/missionmaker/class-names.html"
 
 Everything is ordered alphabetically.
 
-You know an in-game name but want the Class Name? <kbd>CTRL</kbd> + <kbd>F</kbd>
+You know an in-game name but want the class name? <kbd>CTRL</kbd> + <kbd>F</kbd>
 
 ## AtragMX
 `Added in 3.0.0`
