@@ -42,22 +42,26 @@ if (_this distance _target > 2) exitWith {
     _this forceSpeed -1;
     _this doMove getPosATL _target;
 };
+
 // ...and make sure medic and target don't move
 _this forceSpeed 0;
 _target forceSpeed 0;
 
-private _needsBandaging   = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
-private _needsMorphine    = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
+private _needsBandaging = ([_target] call EFUNC(medical,getBloodLoss)) > 0;
+private _needsMorphine  = (_target getVariable [QEGVAR(medical,pain), 0]) > 0.2;
 
 switch (true) do {
     case _needsBandaging: {
-        // Find injured body part and bandage it
-        private _bodyPartStatus = _target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]];
+        // Select first wound and bandage it
+        private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
         private _partIndex = {
-            if (_x > 0) exitWith {_forEachIndex};
-        } forEach _bodyPartStatus;
+            _x params ["", "", "_index", "_amount", "_percentage"];
+            if (_amount * _percentage > 0) exitWith {
+                _index
+            };
+        } forEach _openWounds;
         private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_target, _selection] call EFUNC(medical,treatmentBasic_bandageLocal);
+        [_target, "Bandage", _selection] call EFUNC(medical,treatmentAdvanced_bandageLocal);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
