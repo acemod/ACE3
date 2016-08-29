@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- * Handles the ammo display on reload and and adds empty magazines.
+ * Handles the ammo display on reload and adds empty magazines.
  *
  * Arguments:
  * 0: Unit <OBJECT>
