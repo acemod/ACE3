@@ -37,11 +37,12 @@ if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exi
 
 // Move to target...
 if (_this distance _target > 2) exitWith {
-    // This is necessary to force the unit to move ._.
-    _this forceSpeed 0;
-    _this forceSpeed -1;
-    _this doMove getPosATL _target;
+    if !(_this getVariable [QGVAR(movingToInjured), false]) then {
+        _this setVariable [QGVAR(movingToInjured), true];
+        _this doMove getPosATL _target;
+    };
 };
+_this setVariable [QGVAR(movingToInjured), false];
 
 // ...and make sure medic and target don't move
 _this forceSpeed 0;
