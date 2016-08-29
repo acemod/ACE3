@@ -33,7 +33,7 @@ switch (true) do {
         [_this, _selection] call EFUNC(medical,treatmentBasic_bandageLocal);
 
         #ifdef DEBUG_MODE_FULL
-            systemChat systemChat format ["%1 is bandaging selection %2", _this, _selection];
+            systemChat format ["%1 is bandaging selection %2", _this, _selection];
         #endif
 
         // Play animation
@@ -46,7 +46,7 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
         #ifdef DEBUG_MODE_FULL
-            systemChat systemChat format ["%1 is giving himself morphine", _this];
+            systemChat format ["%1 is giving himself morphine", _this];
         #endif
     };
 };

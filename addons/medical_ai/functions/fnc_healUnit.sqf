@@ -31,7 +31,7 @@ if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exi
     _this moveTo getPosATL _this;
 
     #ifdef DEBUG_MODE_FULL
-        systemChat systemChat format ["%1 finished healing %2", _this, _target];
+        systemChat format ["%1 finished healing %2", _this, _target];
     #endif
 };
 
@@ -60,7 +60,7 @@ switch (true) do {
         [_target, _selection] call EFUNC(medical,treatmentBasic_bandageLocal);
 
         #ifdef DEBUG_MODE_FULL
-            systemChat systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
+            systemChat format ["%1 is bandaging selection %2 on %3", _this, _selection, _target];
         #endif
 
         // Play animation
@@ -73,7 +73,7 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
         #ifdef DEBUG_MODE_FULL
-            systemChat systemChat format ["%1 is giving %2 morphine", _this, _target];
+            systemChat format ["%1 is giving %2 morphine", _this, _target];
         #endif
     };
 };

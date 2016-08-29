@@ -18,5 +18,5 @@ _healQueue pushBack _this;
 _assignedMedic setVariable [QGVAR(healQueue), _healQueue];
 
 #ifdef DEBUG_MODE_FULL
-    systemChat systemChat format ["%1 requested %2 for medical treatment", _this, _assignedMedic];
+    systemChat format ["%1 requested %2 for medical treatment", _this, _assignedMedic];
 #endif
