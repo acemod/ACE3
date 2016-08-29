@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+// Player will have to do this manually of course
+if (isPlayer _this) exitWith {};
 // Can't heal self when unconscious
 if (_this getVariable ["ACE_isUnconscious", false]) exitWith {};
 // Check if we're still treating
