@@ -33,6 +33,7 @@ description: Description of the feature.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
 version:
   major: 3
   minor: 0
@@ -81,6 +82,7 @@ title: Component Framework
 description: Description of the framework.
 group: framework
 parent: wiki
+mod: ace
 version:
   major: 3
   minor: 0
