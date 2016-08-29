@@ -12,4 +12,4 @@
  */
 #include "script_component.hpp"
 
-(getSuppression _this == 0) && {CBA_missionTime - (_this getVariable [QGVAR(lastFired), -60]) > 60}
+(getSuppression _this == 0) && {CBA_missionTime - (_this getVariable [QGVAR(lastFired), -30]) > 30}
