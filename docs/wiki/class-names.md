@@ -134,7 +134,7 @@ ACE_HandFlare_Yellow | M127A1 Hand Held Signal (Yellow) | Grenade |
 ACE_M84 | M84 Stun Grenade | Grenade |
 
 ### Gun Bag
-`Added in 3.6.0.0`
+`Added in 3.6.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
@@ -225,7 +225,7 @@ Class Name | In-Game Name | Type   |
 ACE_microDAGR | MicroDAGR GPS | ACE_ItemCore |
 
 ### Mine Detector
-`Added in 3.6.0.0`
+`Added in 3.6.0`
 
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
