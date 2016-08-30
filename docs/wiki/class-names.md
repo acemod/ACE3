@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Class Names
-description: A list of all the Class Names in ACE3 and ACEX.
+description: List of class names present in ACE3 and ACEX which mission makers, modders and scripters can use.
 group: wiki
 order: 11
 parent:
