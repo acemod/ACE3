@@ -3,7 +3,7 @@ layout: wiki
 title: ACE3 Installation Guide
 description: Step-by-step guide for installing ACE3
 group: user
-order: 0
+order: 1
 parent: wiki
 ---
 
