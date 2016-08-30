@@ -5,6 +5,11 @@ description: Explains how to set-up fragmentation system for explosives using AC
 group: framework
 parent: wiki
 order: 7
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

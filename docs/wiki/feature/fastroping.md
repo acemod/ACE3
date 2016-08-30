@@ -5,6 +5,11 @@ description: System for adding fast roping capabilities to helicopters.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 5
+  patch: 0
 ---
 
 ## 1. Overview

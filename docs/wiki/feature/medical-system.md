@@ -6,6 +6,11 @@ group: feature
 order: 4
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 **Disclaimer:** With the documentation for the medical system being extremely long it's highly advised to use the table of contents at the top right corner of the page.
 

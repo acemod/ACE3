@@ -5,6 +5,11 @@ description: Explains how to set-up custom disposable launchers with the ACE3 di
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 <div class="panel callout">

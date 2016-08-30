@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Overpressure
-description: backblast and overpressure
+description: Backblast and overpressure.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

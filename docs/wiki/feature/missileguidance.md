@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Missile Guidance
-description:
+description: Various modes for different missiles.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

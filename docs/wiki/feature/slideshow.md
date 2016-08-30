@@ -1,9 +1,15 @@
 ---
 layout: wiki
 title: Slideshow
+description: Ability to have automatic or controllable slide-shows.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 2
+  patch: 0
 ---
 
 ## 1. Overview

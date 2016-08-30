@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Weather
-description: The Weather module overrides the mission/editor weather setting with a synchronized realistic weather simulation
+description: The Weather module overrides the mission/editor weather setting with a synchronized realistic weather simulation.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

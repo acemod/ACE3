@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Kestrel 4500
-description:
+description: Kestrel 4500 Pocket Weather Tracker.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## Overview

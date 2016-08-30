@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: MicroDAGR
-description: A GPS device and much more
+description: A GPS device and much more.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 For an easier time reading don't forget that you can view all chapters on the right side of the page by clicking on Show/hide under table of content.

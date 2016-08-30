@@ -5,6 +5,11 @@ description: Weapon temperature and jamming, barrel swapping.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

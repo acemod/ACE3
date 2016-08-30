@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Flash Suppressors
-description:
+description: Makes flash suppressors from game files able to be used.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

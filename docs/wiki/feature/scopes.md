@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Scopes
-description: Scope adjustment
+description: Scope adjustment.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

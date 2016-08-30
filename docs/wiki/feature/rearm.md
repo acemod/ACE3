@@ -5,6 +5,11 @@ description: Adds custom rearm system.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 4
+  patch: 0
 ---
 
 ## 1. Overview

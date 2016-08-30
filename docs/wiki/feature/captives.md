@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Captives
-description: System for taking and handling captives
+description: System for taking and handling captives.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

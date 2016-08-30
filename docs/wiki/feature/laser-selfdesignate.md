@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Laser Self-Designate
-description:
+description: Allows gunners to lase their own targets.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

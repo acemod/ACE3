@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: MX-2A
-description: Movement improvements
+description: MX-2A thermal imaging device.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 1
+  patch: 0
 ---
 
 ## 1. Overview

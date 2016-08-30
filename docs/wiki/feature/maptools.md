@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Map Tools
-description: Map tools, a roamer and pens
+description: Map tools, a roamer and pens.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Flashlights
-description: Adds handheld flashlights
+description: Adds handheld flashlights.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 3
+  patch: 0
 ---
 
 ## 1. Overview

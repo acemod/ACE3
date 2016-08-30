@@ -5,6 +5,11 @@ description: Explains how to set-up rearming of objects with the ACE3 rearm syst
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 5
+  patch: 0
 ---
 
 ## 1. Config Values

@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Attach
-description: Allow players to attach items to vehicles or themselves
+description: Allow players to attach items to vehicles or themselves.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Events Framework
-description: Explains how to use ACE3 event handlers used to trigger or allow triggering of specific functionality and lists all documented events.
+description: Explains how to use CBA event handlers with ACE3 events used to trigger or allow triggering of specific functionality and lists all documented events.
 group: framework
 order: 5
 parent: wiki

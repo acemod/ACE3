@@ -6,47 +6,7 @@ parent: wiki
 order: 19
 ---
 
-# Documentation guidelines
-
-## Example entry
-```
----
-layout: wiki
-title: Mission Modules
-group: feature
-parent: wiki
----
-
-## 1. Overview
-
-### 1.1 Sub-feature 1
-Short description of sub-feature 1.
-
-### 1.2 Sub-feature 2
-Short description of sub-feature 2.
-
-## 2. Usage
-
-### 2.1 thing n°1
-
-- Step 1.
-- Step 2.
-- Step 3.
-
-### 2.2 thing n°2
-
-- Step 1.
-- Step 2.
-- Step 3.
-
-## 3. Dependencies
-
-`ace_something`
-
-## 4. Guides
-```
-
-# Guidelines
+# 1. Documentation Guidelines
 
 - A line between each entry like above.
     - This is especially necessary for the kramdown markup syntax. Kramdown needs a line break between each block level element (paragraphs, lists, codeblocks, etc ...)
@@ -58,7 +18,84 @@ Short description of sub-feature 2.
 - Capitals at the start of a sentence and `.`at the end.
 - Verify everything in game
 
-# Tips
+## 1.1 Tips
 
 - Use [http://dillinger.io/](http://dillinger.io/) to keep your sanity
 - [Markdown cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## 1.2 Feature Template
+
+```
+---
+layout: wiki
+title: Component
+description: Description of the feature.
+group: feature
+category: interaction
+parent: wiki
+version:
+  major: 3
+  minor: 0
+  patch: 0
+---
+
+## 1. Overview
+
+### 1.1 Sub-feature 1
+
+Short description of sub-feature 1.
+
+### 1.2 Sub-feature 2
+
+Short description of sub-feature 2.
+
+## 2. Usage
+
+### 2.1 Thing n°1
+
+- Step 1.
+- Step 2.
+- Step 3.
+
+### 2.2 Thing n°2
+
+- Step 1.
+- Step 2.
+- Step 3.
+
+## 3. Dependencies
+
+{% include dependencies_list.md component="ace_something" %}
+
+## 4. Guides
+
+Information about other guides and pages about this feature.
+```
+
+## 1.3 Framework Template
+
+```
+---
+layout: wiki
+title: Component Framework
+description: Description of the framework.
+group: framework
+parent: wiki
+version:
+  major: 3
+  minor: 0
+  patch: 0
+---
+
+## 1. Config Values
+
+Config API.
+
+## 2. Events
+
+Table of public events.
+
+## 3. Scripting
+
+Public functions.
+```

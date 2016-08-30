@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Aircraft
-description: Aircraft overhaul
+description: Aircraft overhaul.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

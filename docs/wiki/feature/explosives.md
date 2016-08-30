@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Explosives
-description: Adds numerous improvements to using and handling explosives
+description: Adds numerous improvements to using and handling explosives.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

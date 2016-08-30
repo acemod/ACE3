@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: APL
-description: assets under APL license
+description: Assets under APL license.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

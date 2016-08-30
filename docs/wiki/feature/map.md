@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Map
-description: Map improvements
+description: Map improvements.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

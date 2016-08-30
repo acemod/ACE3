@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Reload Launchers
-description:
+description: Ability to reload someone else's launcher.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

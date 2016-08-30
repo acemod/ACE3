@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Goggles
-description:
+description: Various effects for different goggles and ambient effects like dirt thrown up by explosions.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

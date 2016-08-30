@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: G-Forces
-description:
+description: G-force induced tunnel vision and unconsciousness.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

@@ -5,6 +5,11 @@ description: Selective User Interface framework and other tweaks.
 group: feature
 category: general
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 1
+  patch: 0
 ---
 
 ## 1. Overview

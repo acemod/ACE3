@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Respawn
-description: Same gear on respawn, FF message, rallypoints
+description: Same gear on respawn, friendly fire message, rally points.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

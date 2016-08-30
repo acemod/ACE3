@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: FCS (Fire Control System)
-description:
+description: Fire control system for armoured vehicles and helicopters.
 category: equipment
 group: feature
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

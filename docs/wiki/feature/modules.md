@@ -1,9 +1,15 @@
 ---
 layout: wiki
 title: Modules
+description: Framework for module handling.
 group: feature
 category: general
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview
