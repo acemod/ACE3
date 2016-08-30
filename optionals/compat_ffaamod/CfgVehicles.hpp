@@ -25,8 +25,10 @@ class CfgVehicles {
             class MainTurret;
         };
     };
-    class Helicopter_Base_H;
-
+    class Helicopter_Base_H: Helicopter_Base_F {
+        class Eventhandlers;
+    };
+    
     class StaticWeapon;
     class StaticATWeapon : StaticWeapon {
         class Eventhandlers;
@@ -57,9 +59,9 @@ class CfgVehicles {
         };
     };
     class ffaa_et_ch47_base : Helicopter_Base_H {
-        class Eventhandlers : Eventhandlers {
+        /*class Eventhandlers : Eventhandlers {
             delete init;
-        };
+        };*/
     };
     class ffaa_famet_cougar_base : Helicopter_Base_H {
         class Eventhandlers : Eventhandlers {
