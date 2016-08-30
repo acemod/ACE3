@@ -14,7 +14,7 @@ params ["_newUnit", "_oldUnit"];
 
 if !(isNull _oldUnit) then {
     _oldUnit enableStamina true;
-    _oldUnit removeEventHandler ["AnimChanged", GVAR(animHandler)];
+    _oldUnit removeEventHandler ["AnimChanged", _oldUnit getVariable [QGVAR(animHandler), -1]];
 
     _oldUnit setVariable [QGVAR(ae1Reserve), GVAR(ae1Reserve)];
     _oldUnit setVariable [QGVAR(ae2Reserve), GVAR(ae2Reserve)];
@@ -24,15 +24,25 @@ if !(isNull _oldUnit) then {
 };
 
 _newUnit enableStamina false;
-GVAR(animHandler) = _newUnit addEventHandler ["AnimChanged", {
-    GVAR(animDuty) = _this call FUNC(getAnimDuty);
-}];
+
+// Don't add a new EH if the unit respawned
+if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
+    private _animHandler = _newUnit addEventHandler ["AnimChanged", {
+        GVAR(animDuty) = _this call FUNC(getAnimDuty);
+    }];
+    _newUnit setVariable [QGVAR(animHandler), _animHandler];
+};
 
 GVAR(ae1Reserve)      = _newUnit getVariable [QGVAR(ae1Reserve), AE1_MAXRESERVE];
 GVAR(ae2Reserve)      = _newUnit getVariable [QGVAR(ae2Reserve), AE2_MAXRESERVE];
 GVAR(anReserve)       = _newUnit getVariable [QGVAR(anReserve), AN_MAXRESERVE];
 GVAR(anFatigue)       = _newUnit getVariable [QGVAR(anFatigue), 0];
 GVAR(muscleDamage)    = _newUnit getVariable [QGVAR(muscleDamage), 0];
+
+// Clean variables for respawning units
+{
+    _newUnit setVariable [_x, nil];
+} forEach [QGVAR(ae1Reserve), QGVAR(ae2Reserve), QGVAR(anReserve), QGVAR(anFatigue), QGVAR(muscleDamage)];
 
 GVAR(VO2Max)          = 35 + 20 * (_newUnit getVariable [QGVAR(performanceFactor), GVAR(performanceFactor)]);
 GVAR(VO2MaxPower)     = GVAR(VO2Max) * SIM_BODYMASS * 0.23 * JOULES_PER_ML_O2 / 60;
