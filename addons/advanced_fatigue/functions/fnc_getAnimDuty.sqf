@@ -35,12 +35,14 @@ if (_animType in ["idl", "mov"]) then {
         };
     };
 
-    if (_animName select [13, 3] == "ras") then {
-        // low ready jog
-        _duty = _duty * 1.2;
-        if (_animName select [9, 3] == "tac") then {
-            // high ready jog/walk
-            _duty = _duty * 1.5;
+    if (currentWeapon _unit != handgunWeapon _unit) then {
+        if (_animName select [13, 3] == "ras") then {
+            // low ready jog
+            _duty = _duty * 1.2;
+            if (_animName select [9, 3] == "tac") then {
+                // high ready jog/walk
+                _duty = _duty * 1.5;
+            };
         };
     };
 } else {
