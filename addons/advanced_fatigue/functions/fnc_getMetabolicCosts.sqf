@@ -18,7 +18,17 @@
 #include "script_component.hpp"
 params ["_unit", "_velocity"];
 
-private _gearMass = ((loadAbs _unit) * 0.1 / 2.2046) * GVAR(loadFactor);
+private _virtualLoad = 0;
+{
+    _virtualLoad = _virtualLoad + (_x getVariable [QEGVAR(movement,vLoad), 0]);
+} forEach [
+    _unit,
+    uniformContainer _unit,
+    vestContainer _unit,
+    backpackContainer _unit
+];
+
+private _gearMass = ((loadAbs _unit + _virtualLoad) * 0.1 / 2.2046) * GVAR(loadFactor);
 private _terrainFactor = 1;
 private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
 private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
