@@ -8,6 +8,21 @@
 ] call CBA_Settings_fnc_init;
 
 [
+    QGVAR(enableStaminaBar),
+    "CHECKBOX",
+    [LSTRING(EnableStaminaBar), LSTRING(EnableStaminaBar_Description)],
+    "ACE3 Advanced Fatigue",
+    true,
+    true, {
+        if (!_this) then {
+            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+            _staminaBarContainer ctrlSetFade 1;
+            _staminaBarContainer ctrlCommit 0;
+        };
+    }
+] call CBA_Settings_fnc_init;
+
+[
     QGVAR(performanceFactor),
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],

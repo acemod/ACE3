@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
@@ -44,6 +44,14 @@
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
             <German>Aktiviert/deaktiviert Advanced Fatigue.</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
+            <English>Show stamina bar</English>
+            <German>Zeige Staminaleiste</German>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
+            <English>Shows the stamina bar.</English>
+            <German>Zeigt die Staminaleeiste an.</German>
         </Key>
     </Package>
 </Project>

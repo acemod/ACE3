@@ -57,3 +57,7 @@ private _anReservePercentage = GVAR(anReserve) / AN_MAXRESERVE;
 private _perceivedFatigue = 1 - (_anReservePercentage min _aeReservePercentage);
 
 [ACE_player, _perceivedFatigue, _currentSpeed, GVAR(anReserve) == 0] call FUNC(handleEffects);
+
+if (GVAR(enableStaminaBar)) then {
+    [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
+};
