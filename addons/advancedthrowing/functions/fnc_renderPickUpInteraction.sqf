@@ -24,9 +24,10 @@
     if (EGVAR(interact_menu,keyDown) && {!isNull ACE_player}) then {
         // Rescan when player moved >5 meters from last pos, nearObjects is costly
         if ((getPosASL ACE_player) distance _setPosition > 5) then {
-             // IR throwbles inherit from GrenadeCore, others from GrenadeHand
-            _nearThrowables = ACE_player nearObjects ["GrenadeHand", 10];
-            _nearThrowables append (ACE_player nearObjects ["GrenadeCore", 10]);
+             // IR throwbles inherit from GrenadeCore, others from GrenadeHand, IR Chemlights are special snowflakes
+            _nearThrowables = ACE_player nearObjects ["GrenadeHand", PICK_UP_DISTANCE];
+            _nearThrowables append (ACE_player nearObjects ["GrenadeCore", PICK_UP_DISTANCE]);
+            _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
                 if (_x in _throwablesHelped) exitWith {};
