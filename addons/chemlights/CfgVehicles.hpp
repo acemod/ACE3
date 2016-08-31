@@ -179,7 +179,7 @@ class CfgVehicles {
         };
     };
     
-    class O_supplyCrate_F: ReammoBox_F {
+    class O_supplyCrate_F: B_supplyCrate_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_Chemlight_Shield,12);
         };
@@ -197,7 +197,7 @@ class CfgVehicles {
         };
     };
     
-    class I_supplyCrate_F: ReammoBox_F {
+    class I_supplyCrate_F: B_supplyCrate_F {
         class TransportItems {
             MACRO_ADDITEM(ACE_Chemlight_Shield,12);
         };
