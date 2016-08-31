@@ -9,6 +9,12 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class AmovPercMrunSlowWrflDfl: AmovPercMrunSlowWrflDf {
             speed = 0.634570;
         };
+        class AmovPercMrunSlowWrflDl: AmovPercMrunSlowWrflDfl {
+            speed = 0.691626;
+        };
+        class AmovPercMrunSlowWrflDr: AmovPercMrunSlowWrflDfl {
+            speed = 0.727404;
+        };
 
         // Jog + raised weapon speed adjustment: 13km/h
         class AmovPercMstpSrasWrflDnon;
