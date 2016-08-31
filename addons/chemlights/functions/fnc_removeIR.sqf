@@ -3,8 +3,8 @@
  * Kill chemlight and any dummy objects attached to it.
  *
  * Arguments:
- * 1: Chemlight object <OBJECT>
- * 2: Light marker vehicle <OBJECT>
+ * 0: Chemlight object <OBJECT>
+ * 1: Light marker vehicle <OBJECT>
  *
  * Return Value:
  * None

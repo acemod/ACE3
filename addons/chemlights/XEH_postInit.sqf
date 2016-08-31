@@ -2,6 +2,6 @@
 
 if (!hasInterface) exitWith {};
 
-["firedPlayer", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
-["firedPlayerNonLocal", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
-["firedNonPlayer", DFUNC(throwEH)] call EFUNC(common,addEventHandler);
+["ace_firedPlayer", DFUNC(throwEH)] call CBA_fnc_addEventHandler;
+// ["ace_firedPlayerNonLocal", DFUNC(throwEH)] call CBA_fnc_addEventHandler;
+// ["ace_firedNonPlayer", DFUNC(throwEH)] call CBA_fnc_addEventHandler;

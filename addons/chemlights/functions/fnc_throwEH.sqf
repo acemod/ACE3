@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
 
 if ((_weapon != "Throw") || {!(_ammo isKindOf ["Chemlight_base", configFile >> "CfgAmmo"])}) exitWith {};
 
@@ -27,6 +27,11 @@ if (isNull _projectile) then {
 
 if (local _unit) then {
     if ([_ammo] call FUNC(isIRClass)) then {
-        [{_this call FUNC(throwIR)}, [_projectile, _ammo]] call CBA_fnc_execNextFrame;
+        // Handle advancedThrowing:
+        if ((ace_player getVariable [QEGVAR(advancedThrowing,activeThrowable), objNull]) == _projectile) then {
+            [_projectile, _ammo, true] call FUNC(throwIR); // direct call if we are priming with adv throw
+        } else {
+            [{_this call FUNC(throwIR)}, [_projectile, _ammo]] call CBA_fnc_execNextFrame;
+        };
     };
 };
