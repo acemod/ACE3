@@ -11,35 +11,32 @@ if(!isServer) exitWith { };
 BEGIN_COUNTER(frago);
 // _startTime = diag_tickTime;
 
-private ["_startTime", "_round", "_lastPos", "_lastVel", "_shellType", "_gun", "_fragTypes", "_warn", "_atlPos", "_isArmed", "_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
+private ["_fuseDist", "_indirectHitRange", "_fragRange", "_c", "_m", "_k", "_gC", "_fragPower", "_fragPowerRandom", "_manObjects", "_objects", "_crew", "_fragCount", "_fragArcs", "_doRandom", "_boundingBox", "_targetPos", "_distance", "_add", "_bbX", "_bbY", "_bbZ", "_cubic", "_targetVel", "_baseVec", "_dir", "_currentCount", "_count", "_vecVar", "_vec", "_fp", "_vel", "_fragType", "_fragObj", "_randomCount", "_sectorSize", "_sectorOffset", "_i", "_randomDir", "_endTime", "_target"];
 
-_round = _this select 0;
-_lastPos = _this select 1;
-_lastVel = _this select 2;
-_shellType = _this select 3;
-_gun = nil;
+params ["_round", "_lastPos", "_lastVel", "_shellType"];
+private _gun = nil;
 if((count _this) > 5) then {
     _gun = _this select 5;
 };
 
-_fragTypes = [
-            QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),
-            QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),
-            QGVAR(small),QGVAR(small),QGVAR(small),QGVAR(small),
-            QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),
-            QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)
-        ];
+private _fragTypes = [
+    QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),
+    QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),
+    QGVAR(small),QGVAR(small),QGVAR(small),QGVAR(small),
+    QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),QGVAR(small_HD),
+    QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)
+];
 
-_warn = false;
+private _warn = false;
 if(isArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES))) then {
     _fragTypes = getArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES));
 } else {
     _warn = true;
 };
 
-_atlPos = ASLtoATL _lastPos;
+private _atlPos = ASLtoATL _lastPos;
 
-_isArmed = true;
+private _isArmed = true;
 if(!isNil "_gun") then {
     _fuseDist = getNumber(configFile >> "CfgAmmo" >> _shellType >> "fuseDistance");
     _isArmed = ((getPosASL _gun) distance _lastPos > _fuseDist);

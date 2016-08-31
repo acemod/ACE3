@@ -196,14 +196,13 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_processText"];
 // Find localized string
-_hitPointClassname = if ((typeName _hitPoint) == "STRING") then {
+_hitPointClassname = if (_hitPoint isEqualType "") then {
     _hitPoint
 } else {
     ((getAllHitPointsDamage _target) select 0) select _hitPoint
 };
-_processText = getText (_config >> "displayNameProgress");
+private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
 ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
 

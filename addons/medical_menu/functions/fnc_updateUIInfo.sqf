@@ -47,8 +47,7 @@ if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
 
 _totalIvVolume = 0;
 {
-    private "_value";
-    _value = _target getVariable _x;
+    private _value = _target getVariable _x;
     if (!isNil "_value") then {
         _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
     };

@@ -23,8 +23,7 @@ private _display = uiNamespace getVariable [QGVAR(RscWeaponInfo2D), displayNull]
 if (isNull _display) exitWith {};
 
 // Reduce the reticle movement as the player drops into lower, supported stances.
-private "_recoilCoef";
-_recoilCoef = switch (true) do {
+private _recoilCoef = switch (true) do {
     case (isWeaponDeployed _unit): {0.1};
     case (isWeaponRested _unit): {0.4};
     default {1};
@@ -47,8 +46,7 @@ private ["_sizeX", "_sizeY"];
 _sizeX = (0.75+_recoilScope)/(getResolution select 5);
 _sizeY = _sizeX*(4/3);
 
-private "_positionReticle";
-_positionReticle = [
+private _positionReticle = [
     safezoneX+0.5*safezoneW-0.5*(_sizeX+_reticleShiftX),
     safezoneY+0.5*safezoneH-0.5*(_sizeY+_reticleShiftY),
     _sizeX,
@@ -58,8 +56,7 @@ _positionReticle = [
 (_display displayCtrl 1713001) ctrlSetPosition _positionReticle;
 (_display displayCtrl 1713002) ctrlSetPosition _positionReticle;
 
-private "_positionBody";
-_positionBody = [
+private _positionBody = [
     safezoneX+0.5*safezoneW-0.5*(2*_sizeX+_scopeShiftX),
     safezoneY+0.5*safezoneH-0.5*(2*_sizeY+_scopeShiftY),
     2*_sizeX,

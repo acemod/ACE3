@@ -30,8 +30,7 @@ TRACE_1("",GVAR(trenchPlacementData));
 [_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
 
 // create the trench
-private "_trench";
-_trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
+private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
 
 GVAR(trench) = _trench;
 

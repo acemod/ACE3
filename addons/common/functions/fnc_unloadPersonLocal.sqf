@@ -53,8 +53,7 @@ _unit action ["Eject", vehicle _unit];
             [_unit, _anim, 1, true] call FUNC(doAnimation);
 
             [{
-                _unit = _this select 0;
-                _anim = _this select 1;
+                params ["_unit", "_anim"];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
                     [_unit, _anim, 2, true] call FUNC(doAnimation);
                 };

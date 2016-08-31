@@ -14,7 +14,6 @@
 
 #include "script_component.hpp"
 
-private "_vehicle";
 params ["_caller", "_target"];
 
 if ([_target] call EFUNC(common,isAwake)) exitWith {
@@ -27,4 +26,4 @@ if ([_target] call FUNC(isBeingDragged)) then {
     [_caller, _target] call EFUNC(dragging,dropObject);
 };
 
-_vehicle = [_caller, _target] call EFUNC(common,loadPerson);
+private _vehicle = [_caller, _target] call EFUNC(common,loadPerson);

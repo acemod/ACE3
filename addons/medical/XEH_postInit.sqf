@@ -55,10 +55,9 @@ if (isServer) then {
 if (hasInterface) then {
 
 _fnc_createEffect = {
-    private "_effect";
     params ["_type", "_layer", "_default"];
 
-    _effect = ppEffectCreate [_type, _layer];
+    private _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;
     _effect ppEffectAdjust _default;
     _effect ppEffectCommit 0;

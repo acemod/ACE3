@@ -103,8 +103,7 @@ switch (_this) do {
     case 6: { // Backlight
     };
     case 7: { // Exit
-        private ["_exit"];
-        _exit = true;
+        private _exit = true;
         if (GVAR(referenceHeadingMenu) == 1) then {
             GVAR(referenceHeadingMenu) = 0;
             _exit = false;
