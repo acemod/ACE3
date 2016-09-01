@@ -30,29 +30,29 @@
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
-                if (_x in _throwablesHelped) exitWith {};
+                if (!(_x in _throwablesHelped) && {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}) then {
+                    TRACE_2("Making PickUp Helper",_x,typeOf _x);
+                    private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal [0, 0, 0];
 
-                TRACE_2("Making PickUp Helper",_x,typeOf _x);
-                private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal [0, 0, 0];
+                    _pickUpHelper attachTo [_x, [0, 0, 0]];
+                    _pickUpHelper setVariable [QGVAR(throwable), _x];
 
-                _pickUpHelper attachTo [_x, [0, 0, 0]];
-                _pickUpHelper setVariable [QGVAR(throwable), _x];
-
-                _addedPickUpHelpers pushBack _pickUpHelper;
-                _throwablesHelped pushBack _x;
-                true
+                    _addedPickUpHelpers pushBack _pickUpHelper;
+                    _throwablesHelped pushBack _x;
+                };
+                nil
             } count _nearThrowables;
 
             _args set [0, getPosASL ACE_player];
             _args set [3, _nearThrowables];
         };
 
+        // Make sure helper is on correct location as it will not automatically move
+        // attachTo is not supported with CfgAmmo, it is only used to get location
         {
-            if (!GVAR(enablePickUpAttached) && {!isNull (attachedTo _x)}) exitWith {};
-
             // Only handling with attachTo works nicely
             _x attachTo [_x getVariable [QGVAR(throwable), objNull], [0, 0, 0]];
-            true
+            nil
         } count _addedPickUpHelpers;
     } else {
         TRACE_1("Cleaning Pick Up Helpers",count _addedPickUpHelpers);
