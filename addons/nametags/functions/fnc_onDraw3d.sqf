@@ -138,10 +138,9 @@ if (_enabledTagsNearby) then {
                 // Target outside of screen
                 _screenPos = [1000, 1000];
             };
-            _screenPos pushBack 0;
 
             // Distance from center / half of screen width
-            private _centerOffsetFactor = 1 - ((vectorMagnitude (_screenPos vectorDiff [0.5, 0.5, 0])) / (safezoneW / 3));
+            private _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
 
             private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
             private _alphaMax = _onKeyPressAlphaMax;
