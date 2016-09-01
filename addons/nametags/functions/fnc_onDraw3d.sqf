@@ -132,7 +132,16 @@ if (_enabledTagsNearby) then {
         if !(isNull _target) then {
             private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
             private _distance = vectorMagnitude _relPos;
-            private _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
+
+            private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
+            if (_screenPos isEqualTo []) then {
+                // Target outside of screen
+                _screenPos = [1000, 1000];
+            };
+            _screenPos pushBack 0;
+
+            // Distance from center / half of screen width
+            private _centerOffsetFactor = 1 - ((vectorMagnitude (_screenPos vectorDiff [0.5, 0.5, 0])) / (safezoneW / 3));
 
             private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
             private _alphaMax = _onKeyPressAlphaMax;
@@ -146,7 +155,7 @@ if (_enabledTagsNearby) then {
             // - decreases when _distance > _maxDistance
             // - increases when the unit is speaking
             // - it's clamped by the value of _onKeyPressAlphaMax unless soundwaves are forced on and the unit is talking
-            private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _alphaMax;
+            private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha) * _centerOffsetFactor) min _alphaMax;
 
             if (_alpha > 0) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
