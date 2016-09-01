@@ -41,6 +41,15 @@ if (!isNull _attachedTo) then {
 // Change locality for manipulation (some commands require local object, such as setVelocity)
 if (!local _activeThrowable) then {
     ["ace_setOwner", [_activeThrowable, CBA_clientID]] call CBA_fnc_serverEvent;
+
+    // Mark when it's safe to exit throw mode (locality change has delay)
+    _unit setVariable [QGVAR(localityChanged), false];
+    [{
+        // Becomes local or times out
+        local (_this select 0) || {(_this select 1) + 5 < CBA_missionTime}
+    }, {
+        (_this select 2) setVariable [QGVAR(localityChanged), true];
+    }, [_activeThrowable, CBA_missionTime, _unit]] call CBA_fnc_waitUntilAndExecute;
 };
 
 // Invoke listenable event
