@@ -88,6 +88,11 @@ if (isNull _activeThrowable) exitWith {
     [ACE_player, "No active throwable (explosion in hand)"] call FUNC(exitThrowMode);
 };
 
+// Exit if locality changed (someone took the throwable from hand)
+if (!local _activeThrowable && {ACE_player getVariable [QGVAR(localityChanged), true]}) exitWith {
+    [ACE_player, "Throwable locality changed"] call FUNC(exitThrowMode);
+};
+
 // Set position
 private _posHeadRel = ACE_player selectionPosition "head";
 

@@ -79,7 +79,8 @@ reverse _pathData;
 {
     _x params ["_col", "_newTrajAGL", "_iDim"];
     drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", _col, _newTrajAGL, _iDim, _iDim, 0, "", 2];
-    #ifdef DEBUG_MODE_FULL
+
+    #ifdef DRAW_THROW_PATH
         drawIcon3D ["", _col, _newTrajAGL, _iDim, _iDim, 0, str (ACE_player distance _newTrajAGL), 2, 0.05, "RobotoCondensed"];
     #endif
 } forEach _pathData;
