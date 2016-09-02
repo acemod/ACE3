@@ -1,17 +1,20 @@
 #include "script_component.hpp"
 if (!hasInterface || {!GVAR(enabled)}) exitWith {};
 
+// - Post process effect ------------------------------------------------------
 GVAR(ppeBlackout) = ppEffectCreate ["ColorCorrections", 4220];
 GVAR(ppeBlackout) ppEffectEnable true;
 GVAR(ppeBlackout) ppEffectForceInNVG true;
 GVAR(ppeBlackout) ppEffectAdjust [1,1,0,[0,0,0,1],[0,0,0,0],[1,1,1,1],[10,10,0,0,0,0.1,0.5]];
 GVAR(ppeBlackout) ppEffectCommit 0.4;
 
+// - GVAR updating and initialization -----------------------------------------
 if !(isNull ACE_player) then {
     [ACE_player, objNull] call FUNC(handlePlayerChanged);
 };
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 
+// - Duty factors -------------------------------------------------------------
 [QEGVAR(medical,pain), {
     1 + (((_this getVariable [QEGVAR(medical,pain), 0]) min 1) / 10)
 }] call FUNC(addDutyFactor);
@@ -29,4 +32,5 @@ if !(isNull ACE_player) then {
     (((missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]) - 35) / 10) max 2 min 1
 }] call FUNC(addDutyFactor);
 
+// - Add main PFH -------------------------------------------------------------
 [FUNC(pfhMain), 1, []] call CBA_fnc_addPerFrameHandler;
