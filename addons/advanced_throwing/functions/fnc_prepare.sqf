@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [unit] call ace_advancedthrowing_fnc_prepare
+ * [unit] call ace_advanced_throwing_fnc_prepare
  *
  * Public: No
  */

@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_advancedthrowing_fnc_updateControlsHint
+ * call ace_advanced_throwing_fnc_updateControlsHint
  *
  * Public: No
  */

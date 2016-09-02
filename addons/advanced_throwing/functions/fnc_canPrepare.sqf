@@ -9,7 +9,7 @@
  * Can Prepare <BOOL>
  *
  * Example:
- * [unit] call ace_advancedthrowing_fnc_canPrepare
+ * [unit] call ace_advanced_throwing_fnc_canPrepare
  *
  * Public: No
  */

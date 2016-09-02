@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * call ace_advancedthrowing_fnc_renderPickUpInteraction
+ * call ace_advanced_throwing_fnc_renderPickUpInteraction
  *
  * Public: No
  */

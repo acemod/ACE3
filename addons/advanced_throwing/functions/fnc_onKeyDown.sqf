@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [control, 5, false, true, false] call ace_advancedthrowing_fnc_onKeyDown
+ * [control, 5, false, true, false] call ace_advanced_throwing_fnc_onKeyDown
  *
  * Public: No
  */

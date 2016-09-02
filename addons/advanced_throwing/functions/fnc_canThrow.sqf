@@ -9,7 +9,7 @@
  * Can Throw <BOOL>
  *
  * Example:
- * [unit] call ace_advancedthrowing_fnc_canThrow
+ * [unit] call ace_advanced_throwing_fnc_canThrow
  *
  * Public: No
  */

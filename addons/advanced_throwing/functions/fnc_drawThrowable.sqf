@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_advancedthrowing_fnc_drawThrowable
+ * call ace_advanced_throwing_fnc_drawThrowable
  *
  * Public: No
  */
