@@ -13,8 +13,10 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMovesMaleSdr.hpp"
 #include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"
 #include "Dialog.hpp"
