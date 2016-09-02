@@ -1,4 +1,4 @@
-#define COMPONENT advancedthrowing
+#define COMPONENT advanced_throwing
 #define COMPONENT_BEAUTIFIED Advanced Throwing
 #include "\z\ace\addons\main\script_mod.hpp"
 
@@ -8,12 +8,12 @@
 // #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#ifdef DEBUG_ENABLED_ADVANCEDTHROWING
+#ifdef DEBUG_ENABLED_ADVANCED_THROWING
     #define DEBUG_MODE_FULL
 #endif
 
-#ifdef DEBUG_SETTINGS_ADVANCEDTHROWING
-    #define DEBUG_SETTINGS DEBUG_SETTINGS_ADVANCEDTHROWING
+#ifdef DEBUG_SETTINGS_ADVANCED_THROWING
+    #define DEBUG_SETTINGS DEBUG_SETTINGS_ADVANCED_THROWING
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"

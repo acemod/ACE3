@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [unit, "reason"] call ace_advancedthrowing_fnc_exitThrowMode
+ * [unit, "reason"] call ace_advanced_throwing_fnc_exitThrowMode
  *
  * Public: No
  */

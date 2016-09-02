@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [helper, player] call ace_advancedthrowing_fnc_pickUp
+ * [helper, player] call ace_advanced_throwing_fnc_pickUp
  *
  * Public: No
  */

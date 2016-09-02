@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * "magazine" call ace_advancedthrowing_fnc_getMuzzle
+ * "magazine" call ace_advanced_throwing_fnc_getMuzzle
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [logic, [unit1, unit2], true] call ace_advancedthrowing_fnc_moduleInit
+ * [logic, [unit1, unit2], true] call ace_advanced_throwing_fnc_moduleInit
  *
  * Public:
  * No

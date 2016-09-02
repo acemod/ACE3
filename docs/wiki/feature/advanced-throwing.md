@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 7
   patch: 0
+redirect_from: "/wiki/feature/advancedthrowing.html"
 ---
 
 ## 1. Overview
@@ -62,4 +63,4 @@ Make sure to use different keybinds for Advanced Throwing or unbind vanilla thro
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="advancedthrowing" %}
+{% include dependencies_list.md component="advanced_throwing" %}

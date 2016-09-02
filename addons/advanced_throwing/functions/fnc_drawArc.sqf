@@ -9,7 +9,7 @@
  * Flight path (just for debug) <ARRAY>
  *
  * Example:
- * call ace_advancedthrowing_fnc_drawArc
+ * call ace_advanced_throwing_fnc_drawArc
  *
  * Public: No
  */

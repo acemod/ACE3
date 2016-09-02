@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [unit, "weapon", "muzle", "mode", "ammo", "magazine", projectile] call ace_advancedthrowing_fnc_throwFiredXEH
+ * [unit, "weapon", "muzle", "mode", "ammo", "magazine", projectile] call ace_advanced_throwing_fnc_throwFiredXEH
  *
  * Public: No
  */
