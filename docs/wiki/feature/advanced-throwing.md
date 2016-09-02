@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 7
   patch: 0
+redirect_from: "/wiki/feature/advancedthrowing.html"
 ---
 
 ## 1. Overview
