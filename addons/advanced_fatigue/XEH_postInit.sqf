@@ -12,4 +12,21 @@ if !(isNull ACE_player) then {
 };
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 
+[QEGVAR(medical,pain), {
+    1 + (((_this getVariable [QEGVAR(medical,pain), 0]) min 1) / 10)
+}] call FUNC(addDutyFactor);
+[QEGVAR(medical,bloodVolume), {
+    2 - (((_this getVariable [QEGVAR(medical,bloodVolume), 100]) min 100) / 100)
+}] call FUNC(addDutyFactor);
+[QEGVAR(dragging,isCarrying), {
+    if (_this getVariable [QEGVAR(dragging,isCarrying), false]) then {
+        3
+    } else {
+        1
+    };
+}] call FUNC(addDutyFactor);
+[QEGVAR(weather,temperature), {
+    (((missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]) - 35) / 10) max 2 min 1
+}] call FUNC(addDutyFactor);
+
 [FUNC(pfhMain), 1, []] call CBA_fnc_addPerFrameHandler;

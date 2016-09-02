@@ -53,8 +53,4 @@ if (_animType in ["idl", "mov"]) then {
     };
 };
 
-if (_unit getVariable ["ace_dragging_isCarrying", false]) then {
-    _duty = _duty * 3;
-};
-
 _duty

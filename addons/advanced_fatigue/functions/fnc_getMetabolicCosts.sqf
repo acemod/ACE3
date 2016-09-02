@@ -34,6 +34,14 @@ private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
 private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
 private _duty = GVAR(animDuty);
 
+{
+    if (_x isEqualType 0) then {
+        _duty = _duty * _x;
+    } else {
+        _duty = _duty * (_unit call _x);
+    };
+} forEach (GVAR(dutyList) select 1);
+
 if (GVAR(isSwimming)) then {
     _terrainGradient = 0;
 };

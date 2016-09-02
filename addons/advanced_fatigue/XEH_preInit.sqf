@@ -6,5 +6,6 @@ ADDON = false;
 #include "initSettings.sqf"
 
 GVAR(staminaBarWidth) = 10 * (((safezoneW / safezoneH) min 1.2) / 40);
+GVAR(dutyList) = [[], []];
 
 ADDON = true;
