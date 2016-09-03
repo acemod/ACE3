@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="BFT_Devices">
+        <Key ID="STR_ACE_BFT_Devices_MicroDAGR_itemName">
+            <English>MicroDAGR GPS</English>
+            <German>MicroDAGR GPS</German>
+            <Spanish>GPS MicroDAGR</Spanish>
+            <Russian>MicroDAGR GPS</Russian>
+            <Czech>MicroDAGR GPS</Czech>
+            <Polish>MicroDAGR GPS</Polish>
+            <French>MicroDAGR GPS</French>
+            <Hungarian>MicroDAGR GPS</Hungarian>
+            <Italian>MicroDAGR GPS</Italian>
+            <Portuguese>GPS MicroDAGR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_MicroDAGR_itemDescription">
+            <English>MicroDAGR advanced GPS receiver</English>
+            <German>MicroDAGR - Fortgeschrittener GPS-Empfänger</German>
+            <Spanish>Receptor avanzado GPS MicroDAGR</Spanish>
+            <Russian>Многофункциональный GPS-приёмник.</Russian>
+            <Polish>Zaawansowany odbiornik GPS MicroDAGR</Polish>
+            <French>Récepteur GPS MicroDAGR</French>
+            <Czech>MicroDAGR pokročílá GPS příjímač</Czech>
+            <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
+            <Italian>MicroDAGR ricevitore GPS avanzato</Italian>
+            <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_b">
+            <English>[ACE] BFT Items (NATO)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_o">
+            <English>[ACE] BFT Items (CSAT)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_Box_i">
+            <English>[ACE] BFT Items (AAF)</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemName">
+            <English>Helmet Camera</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_HelmetCam_itemDescription">
+            <English>HD helmet mounted camera</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfPrimaryKey_Name">
+            <English>Toggle Primary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfPrimaryKey_ToolTip">
+            <English>Open BFT device in small overlay mode if available</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfSecondaryKey_Name">
+            <English>Toggle Secondary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfSecondaryKey_ToolTip">
+            <English>Open BFT device in interactable mode</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTertiaryKey_Name">
+            <English>Toggle Tertiary Interface</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTertiaryKey_ToolTip">
+            <English>Open private BFT device when in a vehicle with its own BFT device, or to open Tablet while also carrying a MicroDAGR</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomInKey_Name">
+            <English>Zoom In</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomInKey_ToolTip">
+            <English>Zoom In on map while BFT device is in small overlay mode</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomOutKey_Name">
+            <English>Zoom Out</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfZoomOutKey_ToolTip">
+            <English>Zoom Out on map while BFT device is in small overlay mode</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTogglePositionKey_Name">
+            <English>Toggle Interface Position</English>
+        </Key>
+        <Key ID="STR_ACE_BFT_Devices_IfTogglePositionKey_ToolTip">
+            <English>Toggle overlay mode interface position from left to right or reset interactive mode interface position to default</English>
+        </Key>
+    </Package>
+</Project>
