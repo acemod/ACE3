@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_pos1", "_pos2", "_designator", "_seeker"]
+params ["_pos1", "_pos2", "_designator", "_seeker"];
 
 private _spacing = 100;
 if((count _this) > 4) then {
