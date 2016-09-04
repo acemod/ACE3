@@ -6,7 +6,7 @@ converts azimuth into array of textures for the vectors scripted info control
 
 #include "script_component.hpp"
 
-prams ["_number"];
+params ["_number"];
 
 if (GVAR(useMil)) then {
 
