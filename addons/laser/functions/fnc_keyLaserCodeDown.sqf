@@ -1,6 +1,6 @@
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-private["_oldLaserCode", "_laserCode"];
+private ["_oldLaserCode", "_laserCode"];
 
 _oldLaserCode = ACE_player getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 if(_oldLaserCode > ACE_DEFAULT_LASER_CODE) then {

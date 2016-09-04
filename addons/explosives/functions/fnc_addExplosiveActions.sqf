@@ -36,9 +36,11 @@ _itemCount = [];
 _children = [];
 
 {
-    private "_name";
-    _name = if(isText(_x >> "displayNameShort") && {getText(_x >> "displayNameShort") != ""}) then
-        {getText (_x >> "displayNameShort")}else{getText(_x >> "displayName")};
+    private _name = getText (_x >> "displayNameShort");
+    if (_name isEqualTo "") then {
+        _name = getText (_x >> "displayName");
+    };
+
     _children pushBack
         [
             [

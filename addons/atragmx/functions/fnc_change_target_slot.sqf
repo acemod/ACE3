@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_target"];
-_target = 0 max _this min 3;
+private _target = 0 max _this min 3;
 
 call FUNC(parse_input);
 

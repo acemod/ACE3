@@ -41,8 +41,7 @@ if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not ac
     };
 
     {
-        private "_unit";
-        _unit = _x;
+        private _unit = _x;
         if (_unit isKindOf "CAManBase") then {
             {
                 [_unit, _x, true] call FUNC(addKeyForVehicle);

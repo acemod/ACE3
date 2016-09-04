@@ -26,7 +26,7 @@
 
 if (!GVAR(enabled) || !visibleMap) exitWith {};
 
-private["_color", "_drawPosVariableName", "_group", "_grpName", "_pos", "_unitUID"];
+private ["_color", "_drawPosVariableName", "_group", "_grpName", "_pos", "_unitUID"];
 
 params ["_mapHandle"];
 

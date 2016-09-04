@@ -24,7 +24,7 @@
 params ["_vehicle", "_unit", "_magClassname"];
 TRACE_3("params",_vehicle,_unit,_magClassname);
 
-private["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
+private ["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
 
 //Get setup object vehicle and model:
 _setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
@@ -62,7 +62,7 @@ GVAR(TweakedAngle) = 0;
     params ["_args", "_pfID"];
     _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable"];
 
-    private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
+    private ["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
 
     _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
     _basePosASL = (eyePos _unit);

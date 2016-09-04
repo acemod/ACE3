@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_index"];
-_index = lbCurSel 6000;
+private _index = lbCurSel 6000;
 
 if (_index == -1) exitWith {};
 

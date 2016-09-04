@@ -20,12 +20,10 @@
 
 params ["_theMap", "_mouseButton", "_xPos", "_yPos"];
 
-private ["_worldPos"];
-
 //Only handle LMB
 if (_mouseButton != 0) exitWith {};
 
-_worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];
+private _worldPos = _theMap ctrlMapScreenToWorld [_xPos, _yPos];
 _worldPos pushBack (getTerrainHeightASL _worldPos);
 
 GVAR(newWaypointPosition) = _worldPos;
