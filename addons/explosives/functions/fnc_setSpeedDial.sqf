@@ -18,9 +18,9 @@
 
 private _speedDial = ace_player getVariable [QGVAR(SpeedDial), []];
 if (_speedDial isEqualTo []) exitWith {};
-private _amount = if((_this select 0))then{1}else{-1};
+private _amount = [-1, 1] select (_this select 0);
 
 GVAR(CurrentSpeedDial) = (GVAR(CurrentSpeedDial) + _amount + count _speedDial) mod (count _speedDial);
 
-ctrlSetText [1400,(_speedDial select GVAR(CurrentSpeedDial)) select 1];
-ctrlSetText [1401,(_speedDial select GVAR(CurrentSpeedDial)) select 0];
+ctrlSetText [1400, (_speedDial select GVAR(CurrentSpeedDial)) select 1];
+ctrlSetText [1401, (_speedDial select GVAR(CurrentSpeedDial)) select 0];

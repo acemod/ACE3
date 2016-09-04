@@ -30,7 +30,7 @@ __background ctrlSetText QPATHTOF(UI\dagr_wp.paa);
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
+    private ["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
 
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {

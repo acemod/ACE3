@@ -107,7 +107,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
-    private["_bleeding", "_blood"];
+    private ["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
@@ -177,7 +177,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
-    private["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
+    private ["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
     _pain = ACE_player getVariable [QGVAR(pain), 0];
     if (GVAR(level) == 1) then {

@@ -43,12 +43,12 @@ _scopeShiftY = _recoilCoef * linearConversion [0, 1, random 1, SCOPE_SHIFT_Y_MIN
 // Create and commit recoil effect
 private ["_sizeX", "_sizeY"];
 
-_sizeX = (0.75+_recoilScope)/(getResolution select 5);
+_sizeX = (0.75 + _recoilScope)/(getResolution select 5);
 _sizeY = _sizeX*(4/3);
 
 private _positionReticle = [
-    safezoneX+0.5*safezoneW-0.5*(_sizeX+_reticleShiftX),
-    safezoneY+0.5*safezoneH-0.5*(_sizeY+_reticleShiftY),
+    safezoneX + 0.5 * safezoneW - 0.5*(_sizeX + _reticleShiftX),
+    safezoneY + 0.5 * safezoneH - 0.5*(_sizeY + _reticleShiftY),
     _sizeX,
     _sizeY
 ];
@@ -57,10 +57,10 @@ private _positionReticle = [
 (_display displayCtrl 1713002) ctrlSetPosition _positionReticle;
 
 private _positionBody = [
-    safezoneX+0.5*safezoneW-0.5*(2*_sizeX+_scopeShiftX),
-    safezoneY+0.5*safezoneH-0.5*(2*_sizeY+_scopeShiftY),
-    2*_sizeX,
-    2*_sizeY
+    safezoneX + 0.5 * safezoneW - 0.5*(2 * _sizeX + _scopeShiftX),
+    safezoneY + 0.5 * safezoneH - 0.5*(2 * _sizeY + _scopeShiftY),
+    2 * _sizeX,
+    2 * _sizeY
 ];
 
 (_display displayCtrl 1713005) ctrlSetPosition _positionBody;
@@ -76,8 +76,8 @@ _sizeX = 0.75/(getResolution select 5);
 _sizeY = _sizeX*(4/3);
 
 _positionReticle = [
-    safezoneX+0.5*safezoneW-0.5*_sizeX,
-    safezoneY+0.5*safezoneH-0.5*_sizeY,
+    safezoneX + 0.5 * safezoneW - 0.5 * _sizeX,
+    safezoneY + 0.5 * safezoneH - 0.5 * _sizeY,
     _sizeX,
     _sizeY
 ];
@@ -86,10 +86,10 @@ _positionReticle = [
 (_display displayCtrl 1713002) ctrlSetPosition _positionReticle;
 
 _positionBody = [
-    safezoneX+0.5*safezoneW-0.5*2*_sizeX,
-    safezoneY+0.5*safezoneH-0.5*2*_sizeY,
-    2*_sizeX,
-    2*_sizeY
+    safezoneX + 0.5 * safezoneW - 0.5 * 2 * _sizeX,
+    safezoneY + 0.5 * safezoneH - 0.5 * 2 * _sizeY,
+    2 * _sizeX,
+    2 * _sizeY
 ];
 
 (_display displayCtrl 1713005) ctrlSetPosition _positionBody;

@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-params["_muzzleVelocityShiftTable", "_temperature"];
+params ["_muzzleVelocityShiftTable", "_temperature"];
 
 // Check if muzzleVelocityShiftTable is Less Than 11 Entrys
 if ((count _muzzleVelocityShiftTable) < 11) exitWith {0};

@@ -11,7 +11,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params["_unit","_weapon"];
+params ["_unit","_weapon"];
 
 //Check if weapon can have its barrel swapped. If not exit out of function
 if( !GVAR(enabled) && (getNumber (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(allowSwapBarrel))) != 1) exitWith{false};

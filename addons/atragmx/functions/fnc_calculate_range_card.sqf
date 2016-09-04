@@ -17,17 +17,18 @@
 
 [] call FUNC(parse_input);
 
-private _scopeBaseAngle = (GVAR(workingMemory) select 3);
-
-private _bulletMass = GVAR(workingMemory) select 12;
-private _bulletDiameter = GVAR(workingMemory) select 13;
-private _boreHeight = GVAR(workingMemory) select 5;
-private _airFriction = GVAR(workingMemory) select 4;
-private _barrelTwist = GVAR(workingMemory) select 14;
-private _muzzleVelocity = GVAR(workingMemory) select 1;
-private _bc = GVAR(workingMemory) select 15;
-private _dragModel = GVAR(workingMemory) select 16;
-private _atmosphereModel = GVAR(workingMemory) select 17;
+GVAR(workingMemory) params ["",
+    "_muzzleVelocity", "",
+    "_scopeBaseAngle",
+    "_airFriction",
+    "_boreHeight", "", "", "", "", "", "",
+    "_bulletMass",
+    "_bulletDiameter",
+    "_barrelTwist",
+    "_bc",
+    "_dragModel",
+    "_atmosphereModel"
+];
 
 private _twistDirection = 0;
 if (_barrelTwist > 0) then {

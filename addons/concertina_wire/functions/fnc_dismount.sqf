@@ -23,10 +23,9 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 params ["_wire", "_unit"];
 
 private _config = (configFile >> "CfgVehicles" >> typeOf _unit);
-private _delay = if (getNumber(_config >> "engineer") == 1 || getNumber(_config >> "canDeactivateMines") == 1) then {60} else {120};
+private _delay = [120, 60] select (getNumber (_config >> "engineer") == 1 || {getNumber (_config >> "canDeactivateMines") == 1});
 
 // TODO: Animation?
-
 [
     _delay,
     [_wire],

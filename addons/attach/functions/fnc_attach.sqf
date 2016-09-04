@@ -68,7 +68,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModel _model;
 
     [{
-        private["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
+        private ["_angle", "_dir", "_screenPos", "_realDistance", "_up", "_virtualPos", "_virtualPosASL", "_lineInterection"];
         params ["_args","_idPFH"];
         _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAtachText","_actionID"];
 

@@ -43,7 +43,7 @@ if(!isNil "_gun") then {
 };
 
 _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _shellType >> "indirecthitrange");
-_fragRange = 20*_indirectHitRange*4;
+_fragRange = 20 * _indirectHitRange * 4;
 // _c = 185; // grams of comp-b
 // _m = 210; // grams of fragmentating metal
 // _k = 3/5; // spherical K factor
@@ -69,9 +69,9 @@ if(_warn) then {
 };
 
 _fragPower = (((_m/_c)+_k)^-(1/2))*_gC;
-_fragPower = _fragPower*0.8; // Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
+_fragPower = _fragPower * 0.8; // Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
 
-_fragPowerRandom = _fragPower*0.5;
+_fragPowerRandom = _fragPower * 0.5;
 if((_atlPos select 2) < 0.5) then {
     _lastPos set[2, (_lastPos select 2)+0.5];
 };
@@ -120,7 +120,7 @@ if(_isArmed && (count _objects) > 0) then {
                 _bbX = (abs((_boundingBox select 0) select 0))+((_boundingBox select 1) select 0);
                 _bbY = (abs((_boundingBox select 0) select 1))+((_boundingBox select 1) select 1);
                 _bbZ = (abs((_boundingBox select 0) select 2))+((_boundingBox select 1) select 2);
-                _cubic = _bbX*_bbY*_bbZ;
+                _cubic = _bbX * _bbY * _bbZ;
                 if(_cubic > 1) then {
                     _doRandom = true;
 
@@ -178,7 +178,7 @@ if(_isArmed && (count _objects) > 0) then {
         if(_fragCount > MAX_FRAG_COUNT) exitWith {};
     } forEach _objects;
     if(_fragCount > MAX_FRAG_COUNT) exitWith {};
-    _randomCount = ((ceil((MAX_FRAG_COUNT-_fragCount)*0.1)) max 0)+20;
+    _randomCount = ((ceil((MAX_FRAG_COUNT - _fragCount)*0.1)) max 0)+20;
     _sectorSize = 360 / (_randomCount max 1);
     // _doRandom = false;
     if(_doRandom) then {

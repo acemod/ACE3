@@ -11,7 +11,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params["_unit"];
+params ["_unit"];
 
 //Get the classname of the spare barrel for the weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> currentWeapon _player >> QGVAR(barrelClassname));

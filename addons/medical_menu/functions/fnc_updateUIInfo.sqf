@@ -18,7 +18,7 @@
 
 params ["_target", "_display"];
 
-private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
+private ["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
 
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 

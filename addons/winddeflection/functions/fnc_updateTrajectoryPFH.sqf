@@ -18,7 +18,7 @@
 
 [{
     // BEGIN_COUNTER(pfeh);
-    private["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_trueSpeed", "_trueVelocity"];
+    private ["_accel", "_accelRef", "_bulletSpeed", "_bulletVelocity", "_deleted", "_deltaT", "_drag", "_dragRef", "_isWind", "_trueSpeed", "_trueVelocity"];
 
     params ["_args"];
     _args params ["_lastTime"];

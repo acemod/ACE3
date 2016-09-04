@@ -13,8 +13,8 @@ if( !isPlayer _shooter && { GVAR(enabled) < 2 } ) exitWith { false };
 // Bail on not missile
 if(! (_ammo isKindOf "MissileBase") ) exitWith { false };
 
-private["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
-private["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
+private ["_config", "_configs", "_enabled", "_target", "_seekerType", "_attackProfile"];
+private ["_args", "_canUseLock", "_guidingUnit", "_launchPos", "_lockMode", "_targetPos", "_vanillaTarget"];
 
 //Verify ammo has explicity added guidance config (ignore inheritances)
 _configs = configProperties [(configFile >> "CfgAmmo" >> _ammo), QUOTE(configName _x == QUOTE(QUOTE(ADDON))), false];
