@@ -177,6 +177,7 @@
             <French>Rendre l'objet chargeable</French>
             <Czech>Vytvořit objekt nakladatelným</Czech>
             <Portuguese>Fazer objeto carregável</Portuguese>
+            <Russian>Сделать объект загружаемым</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -187,6 +188,7 @@
             <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
             <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
             <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
+            <Russian>Делает синхронизированный объект загружаемым для модуля перевозки грузов.</Russian>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -197,6 +199,15 @@
             <French>Taille de l'objet</French>
             <Czech>Velikost objektu</Czech>
             <Portuguese>Tamanho do objeto</Portuguese>
+            <Russian>Размер объекта</Russian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropButton">
+            <English>Airdrop</English>
+            <German>Türlast</German>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
+            <English>Unlevel Flight</English>
+            <German>Schieflage</German>
         </Key>
     </Package>
 </Project>

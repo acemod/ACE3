@@ -766,6 +766,7 @@
             <Spanish>ERA</Spanish>
             <French>ERA</French>
             <Portuguese>ERA</Portuguese>
+            <Russian>ДЗ</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -1324,6 +1325,7 @@
             <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
             <French>Le moteur doit être éteins pour réparer</French>
+            <Russian>Двигатель должен быть выключен для ремонта</Russian>
         </Key>
     </Package>
 </Project>

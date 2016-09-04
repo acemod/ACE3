@@ -1,18 +1,7 @@
 class CfgWeapons {
 
-    class ItemCore;
     class ACE_ItemCore;
     class InventoryItem_Base_F;
-    class InventoryFlashlightItem_Base_F;
-
-    class acc_flashlight: ItemCore {
-        class ItemInfo: InventoryFlashlightItem_Base_F {
-            class Flashlight {
-                ACE_Flashlight_Colour = "white";
-                ACE_Flashlight_Size = 2.75;
-            };
-        };
-    };
 
     class ACE_Flashlight_MX991: ACE_ItemCore {
         displayName = CSTRING(MX991_DisplayName);
@@ -24,7 +13,9 @@ class CfgWeapons {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "red";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
                 ACE_Flashlight_Size = 1.75;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
@@ -39,7 +30,9 @@ class CfgWeapons {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "red";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_red_ca.paa);
                 ACE_Flashlight_Size = 1.5;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };
@@ -54,7 +47,9 @@ class CfgWeapons {
             mass = 1;
             class FlashLight {
                 ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = QPATHTOF(UI\Flashlight_beam_white_ca.paa);
                 ACE_Flashlight_Size = 2.15;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };

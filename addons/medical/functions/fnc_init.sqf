@@ -47,9 +47,7 @@ _unit setVariable [QGVAR(triageLevel), 0, true];
 _unit setVariable [QGVAR(triageCard), [], true];
 
 // IVs
-_unit setVariable [QGVAR(salineIVVolume), 0, true];
-_unit setVariable [QGVAR(plasmaIVVolume), 0, true];
-_unit setVariable [QGVAR(bloodIVVolume), 0, true];
+_unit setVariable [QGVAR(ivBags), nil, true];
 
 // damage storage
 _unit setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
