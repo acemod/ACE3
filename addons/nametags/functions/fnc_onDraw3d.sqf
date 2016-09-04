@@ -134,13 +134,13 @@ if (_enabledTagsNearby) then {
             private _distance = vectorMagnitude _relPos;
 
             private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
-            if (_screenPos isEqualTo []) then {
+            private _centerOffsetFactor = if !(_screenPos isEqualTo []) then {
+                // Distance from center / half of screen width
+                1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3))
+            } else {
                 // Target outside of screen
-                _screenPos = [1000, 1000];
+                0
             };
-
-            // Distance from center / half of screen width
-            private _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
 
             private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
             private _alphaMax = _onKeyPressAlphaMax;
