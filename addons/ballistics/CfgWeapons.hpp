@@ -127,6 +127,21 @@ class CfgWeapons {
     /* Katiba */
     class arifle_katiba_Base_F: Rifle_Base_F {};
 
+    /* SPAR */
+    class arifle_SPAR_01_base_F: Rifle_Base_F {
+        magazines[] = {
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_green",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+        };
+    };
 
     /* Other */
     class LMG_Mk200_F: Rifle_Long_Base_F {
