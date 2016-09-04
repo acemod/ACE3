@@ -12,10 +12,12 @@
     ```
     cd <ACE3_directory>/docs
     ```
+
 - Install `bundler` gem
     ```
     gem install bundler
     ```
+
 - Install required gems through `bundler`
     ```
     bundle install
@@ -27,28 +29,34 @@
     ```
     cd <ACE3_directory>/docs
     ```
+
 - Install `make` and `gcc`
     ```
     sudo apt-get make gcc
     ```
+
 - Install `ruby 2.0`, `rbuy2.0-dev` and `ruby-switch`
     ```
     sudo apt-add-repository ppa:brightbox/ruby-ng
     sudo apt update
     sudo apt install ruby2.0 ruby2.0-dev ruby-switch
     ```
+
 - Set Ruby version
     ```
     sudo ruby-switch --set ruby2.0
     ```
+
 - Install `bundler`
     ```
     sudo gem install bundler
     ```
+
 - Install required gems through bundler
     ```
     bundle install
     ```
+
 - In case of sticky folder error during `bundle install`, execute the following to fix permissions
     ```
     find ~/.bundle/cache -type d -exec chmod 0755 {} +
@@ -71,11 +79,13 @@
     ```
     cd <ACE3_directory>/docs/src
     ```
+
 - Install Node packages
     ```
     npm install
     ```
     _On Bash on Ubuntu on Windows also install `nodejs-legacy` in case of errors._
+
 - Update files
     ```
     grunt
