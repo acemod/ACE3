@@ -3,7 +3,6 @@ class Cfg3DEN {
         class Slider;
         class GVAR(slider): Slider {
             attributeLoad = " \
-                diag_log (""attributeLoad: "" + str _this); \
                 params [""_ctrlGroup""]; \
                 private _slider = _ctrlGroup controlsGroupCtrl 100; \
                 private _edit = _ctrlGroup controlsGroupCtrl 101; \
@@ -11,12 +10,10 @@ class Cfg3DEN {
                 _edit ctrlSetText ([_value, 1, 1] call CBA_fnc_formatNumber); \
             ";
             attributeSave = " \
-                diag_log (""attributeSave: "" + str _this); \
                 params [""_ctrlGroup""]; \
                 sliderPosition (_ctrlGroup controlsGroupCtrl 100); \
             ";
             onLoad = " \
-                diag_log (""onLoad: "" + str _this); \
                 params [""_ctrlGroup""]; \
                 private _slider = _ctrlGroup controlsGroupCtrl 100; \
                 private _edit = _ctrlGroup controlsGroupCtrl 101; \
