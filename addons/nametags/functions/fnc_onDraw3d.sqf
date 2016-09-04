@@ -57,6 +57,11 @@ switch (GVAR(showPlayerNames)) do {
         _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
         _enabledTagsCursor = _onKeyPressAlphaMax > 0;
     };
+    case 5: {
+        // Fade on border
+        _enabledTagsNearby = true;
+        _enabledTagsCursor = false;
+    };
 };
 
 private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
@@ -133,13 +138,16 @@ if (_enabledTagsNearby) then {
             private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
             private _distance = vectorMagnitude _relPos;
 
-            private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
-            private _centerOffsetFactor = if !(_screenPos isEqualTo []) then {
-                // Distance from center / half of screen width
-                1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3))
-            } else {
-                // Target outside of screen
-                0
+            // Fade on border
+            private _centerOffsetFactor = 1;
+            if (GVAR(showPlayerNames) == 5) then {
+                private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
+                if !(_screenPos isEqualTo []) then {
+                    // Distance from center / half of screen width
+                    _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
+                } else {
+                    _centerOffsetFactor = 0;
+                };
             };
 
             private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
