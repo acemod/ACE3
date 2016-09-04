@@ -28,6 +28,10 @@ class CfgVehicles {
                         name = CSTRING(ForceShow);
                         value = 1;
                     };
+                    class ForceShowFadeOnBorder {
+                        name = CSTRING(FadeOnBorder);
+                        value = 5;
+                    };
                     class ForceShowOnlyCursor {
                         name = CSTRING(ForceShowOnlyCursor);
                         value = 2;
