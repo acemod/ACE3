@@ -206,6 +206,10 @@
 `ace_interaction`, `ace_apl`
 {% endif %}
 
+{% if include.component == "medical_ai" %}
+`ace_medical`
+{% endif %}
+
 {% if include.component == "medical_menu" %}
 `ace_medical`
 {% endif %}
