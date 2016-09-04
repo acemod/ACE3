@@ -294,6 +294,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "realisticweights" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "rearm" %}
 `ace_interaction`
 {% endif %}
