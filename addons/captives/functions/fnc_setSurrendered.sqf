@@ -45,7 +45,6 @@ if (_state) then {
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
-    call EFUNC(common,endRadioTransmission);
     //TFAR disallow radio usage
     _unit setVariable ["tf_unable_to_use_radio", true];
     //ACRE disallow radio usage
