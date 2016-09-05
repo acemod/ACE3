@@ -4,6 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Pick Up <BOOL> (default: false)
  *
  * Return Value:
  * Can Prepare <BOOL>
@@ -15,12 +16,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", ["_pickUp", false]];
 
 GVAR(enabled) &&
 
 #ifndef DEBUG_MODE_FULL
-{_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
+{_pickUp || {_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2}} && // Prevent throwing in quick succession
 #else
 {true} &&
 #endif

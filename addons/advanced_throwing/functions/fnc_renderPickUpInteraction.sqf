@@ -22,11 +22,12 @@
 
     // isNull is necessarry to prevent rare error when ending mission with interact key down
     if (EGVAR(interact_menu,keyDown) && {!isNull ACE_player}) then {
-        // Rescan when player moved >5 meters from last pos, nearObjects is costly
+        // Rescan when player moved >5 meters from last pos, nearObjects can be costly with a lot of objects around
         if ((getPosASL ACE_player) distance _setPosition > 5) then {
-             // IR throwbles inherit from GrenadeCore, others from GrenadeHand, IR Chemlights are special snowflakes
+             // Grenades inherit from GrenadeHand, IR throwbles from IRStrobeBase, IR Chemlights are special snowflakes
+             // nearEntities does not see throwables
             _nearThrowables = ACE_player nearObjects ["GrenadeHand", PICK_UP_DISTANCE];
-            _nearThrowables append (ACE_player nearObjects ["GrenadeCore", PICK_UP_DISTANCE]);
+            _nearThrowables append (ACE_player nearObjects ["IRStrobeBase", PICK_UP_DISTANCE]);
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
