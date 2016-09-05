@@ -18,12 +18,17 @@
 
 params ["_unit", ["_pickUp", false]];
 
+// Don't delay when picking up
+if (_pickUp) then {
+    _unit setVariable [QGVAR(lastThrownTime), -1];
+};
+
 GVAR(enabled) &&
 
-#ifndef DEBUG_MODE_FULL
-{_pickUp || {_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2}} && // Prevent throwing in quick succession
-#else
+#ifdef ALLOW_QUICK_THROW
 {true} &&
+#else
+{_unit getVariable [QGVAR(lastThrownTime), CBA_missionTime - 3] < CBA_missionTime - 2} && // Prevent throwing in quick succession
 #endif
 
 {!(call EFUNC(common,isFeatureCameraActive))} &&
