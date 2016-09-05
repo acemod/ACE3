@@ -31,7 +31,10 @@
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
-                if (!(_x in _throwablesHelped) && {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}) then {
+                if (!(_x in _throwablesHelped) &&
+                    {!(_x isKindOf "SmokeShellArty")} && {!(_x isKindOf "G_40mm_Smoke")} && // All smokes inherit from "GrenadeHand" >> "SmokeShell"
+                    {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}
+                ) then {
                     TRACE_2("Making PickUp Helper",_x,typeOf _x);
                     private _pickUpHelper = QGVAR(pickUpHelper) createVehicleLocal [0, 0, 0];
 
