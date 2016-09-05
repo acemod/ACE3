@@ -57,7 +57,7 @@ private _debugCode = {
 [{diag_frameno > (_this select 0)}, _debugCode, [_checkAtFrame, _unit, _startDmg, _damageToAdd, _partNumber]] call CBA_fnc_waitUntilAndExecute;
 #endif
 
-private _return = [_unit, _selection, (_currentDamage + _damageToAdd), _unit, _typeOfDamage, _hitpointIndex] call FUNC(handleDamage);
+private _return = [_unit, _selection, (_currentDamage + _damageToAdd), _unit, _typeOfDamage, _hitpointIndex, objNull] call FUNC(handleDamage);
 TRACE_1("handleDamage called",_return);
 
 _return
