@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
-#Author: PabstMirror
+# Author: PabstMirror
 
-#Uploads ace relases to workshop
-#Will slice up compats to their own folders
-
+# Uploads ace relases to workshop
+# Will slice up compats to their own folders
 
 import sys
 
@@ -62,7 +61,10 @@ def buildCompatFolder(folderName, copyFileNames):
     return compatRelease_dir
 
 def publishFolder(folder,modID,changeNotes):
-    cmd = [publisherTool_path, "update", "/id:{}".format(modID), "/changeNote:'{}'".format(changeNotes), "/path:{}".format(folder)]
+    cmd = [publisherTool_path, "update", "/id:{}".format(modID), "/changeNoteFile:{}".format(changeNotes), "/path:{}".format(folder)]
+
+    print ("running: {}".format(cmd))
+
     print("")
     print("Publishing folder {} to workshop ID {}".format(folder,modID))
     print("")
@@ -72,43 +74,49 @@ def publishFolder(folder,modID,changeNotes):
     ret = subprocess.call(cmd)
     if ret != 0:
         print("publisher faild with code {}".format(ret))
-        raise Exception("Publisher","Publisher shit the bed")
+        raise Exception("Publisher","Publisher had problems")
 
 
 #GLOBALS
 release_dir = "P:\\z\\ace\\release"
 project = "@ace"
 publisherTool_path = find_bi_tools()
+changelog_path = os.path.join(release_dir,"changelog.txt")
 ace_release_dir = os.path.join(release_dir, project)
 ace_optionals_dir = os.path.join(ace_release_dir, "optionals")
-do_publish = True #False will let you just build dirs and test without running publisher
+
+do_publish = True
+# do_publish = False #will let you just build dirs and test without running publisher
 
 
 def main(argv):
     if not os.path.exists(ace_release_dir):
-        raise Exception("No ACE Build","ACE not built")
+        raise Exception("ace_release_dir not found","ACE not built or in wrong path")
     if not os.path.exists(ace_optionals_dir):
-        raise Exception("No Optionals","ACE not built")
+        raise Exception("ace_optionals_dir not found","ACE not built or in wrong path")
     if not os.path.exists(publisherTool_path):
-        raise Exception("No Publisher","Arma Tools not found")
+        raise Exception("publisherTool_path not found","Arma Tools not found")
+    if not os.path.exists(changelog_path):
+        raise Exception("changelog_path not found","Requires changelog.txt be present in the release dir")
+
+    if do_publish:
+        repl = input("\nThis will publish to steam, are you positive release dir has correct files? (y/n): ")
+        if repl.lower() != "y":
+            return 0
 
 
-    #Simple changenotes
-    changeNotes = "Rebuilt for latest ace release"
+    #ACE Main - http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
+    # publishFolder(ace_release_dir, "463939057", changelog_path)
 
 
-    #ACE Main
-    # publishFolder(ace_release_dir, "?", changeNotes)
-
-
-    #RHS Compats
+    #RHS Compats - http://steamcommunity.com/sharedfiles/filedetails/?id=758436163
     folder = buildCompatFolder("@ace_rhs_compat", ["ace_compat_rhs_afrf3.*", "ace_compat_rhs_usf3.*"])
-    # publishFolder(folder, "??", changeNotes)
+    publishFolder(folder, "758436163", changelog_path)
 
 
-    #ADR97 (p90)
-    folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])
-    publishFolder(folder, "731517232", changeNotes)
+    #ADR97 (p90)- ToDo
+    # folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])
+    # publishFolder(folder, "???", changelog_path)
 
 
 
