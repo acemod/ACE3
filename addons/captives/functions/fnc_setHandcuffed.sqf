@@ -41,7 +41,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
-    call FUNC(endRadioTransmission);
+    call EFUNC(common,endRadioTransmission);
     //TFAR disallow radio usage
     _unit setVariable ["tf_unable_to_use_radio", true];
     //ACRE disallow radio usage
