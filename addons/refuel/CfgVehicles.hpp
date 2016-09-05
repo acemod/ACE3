@@ -31,13 +31,6 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
