@@ -142,6 +142,18 @@ class CfgWeapons {
             "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
         };
     };
+    class arifle_SPAR_03_base_F: Rifle_Base_F {
+        magazines[] = {
+            "20Rnd_762x51_Mag",
+            "ACE_20Rnd_762x51_Mag_Tracer",
+            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
+            "ACE_20Rnd_762x51_M993_AP_Mag",
+            "ACE_20Rnd_762x51_Mag_SD"
+        };
+    };
 
     /* Other */
     class LMG_Mk200_F: Rifle_Long_Base_F {
