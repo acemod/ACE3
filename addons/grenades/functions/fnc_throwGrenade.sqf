@@ -61,6 +61,7 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
 
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
+if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
