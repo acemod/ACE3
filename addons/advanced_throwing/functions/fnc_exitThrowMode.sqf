@@ -28,6 +28,8 @@ if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
 private _activeThrowable = _unit getVariable [QGVAR(activeThrowable), objNull];
 if !(_unit getVariable [QGVAR(primed), false]) then {
     deleteVehicle _activeThrowable;
+    // Set muzzle ammo to original
+    _unit setAmmo (_unit getVariable [QGVAR(activeMuzzle), ["", 0]]);
 } else {
     // Fix floating for throwables without proper physics (eg. IR Grenade)
     _activeThrowable setVelocity [0, 0, -0.1];
@@ -36,6 +38,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
 _unit setVariable [QGVAR(inHand), false];
 _unit setVariable [QGVAR(primed), false];
 _unit setVariable [QGVAR(activeThrowable), objNull];
+_unit setVariable [QGVAR(activeMuzzle), ["", 0]];
 _unit setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
 _unit setVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 _unit setVariable [QGVAR(dropMode), false];
