@@ -15,7 +15,8 @@
  */
 #include "script_component.hpp"
 
-// Assume default wind values
+// Set default values
+
 // Source: https://weatherspark.com/averages/32194/Lemnos-Limnos-North-Aegean-Islands-Greece
 GVAR(WindSpeedMax) = [[8.8, 5.5], [8.8, 5], [8.6, 4.8], [7.6, 3.4], [7.0, 3.0], [7.1, 3.0], [7.5, 3.1], [8.0, 3.2], [7.6, 3.5], [7.8, 4.6], [7.9, 5.0], [8.2, 5.5]];
 GVAR(WindSpeedMean) = [4.8, 4.9, 4.6, 4.1, 3.5, 3.5, 4.3, 4.4, 4.1, 4.5, 4.5, 5.0];
@@ -35,19 +36,24 @@ GVAR(WindDirectionProbabilities) = [
     [0.06, 0.37, 0.05, 0.03, 0.18, 0.04, 0.02, 0.02]  // December
 ];
 
-// Check if the wind data is defined in the map config
-if (isArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMean")) then {
+GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
+GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
+GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
+
+GVAR(currentTemperature) = 20;
+GVAR(currentHumidity) = 0.5;
+
+// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
+private _nonInheritedArrays = configProperties [configFile >> "CfgWorlds" >> worldName, "isArray _x", false];
+// And check if any custom non-inherited weather is defined through config and use that if so
+if ((configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+    GVAR(TempDay)   = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay");
+    GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempNight");
+    GVAR(Humidity)  = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_Humidity");
     GVAR(WindSpeedMin)               = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMin");
     GVAR(WindSpeedMean)              = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMean");
     GVAR(WindSpeedMax)               = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindSpeedMax");
     GVAR(WindDirectionProbabilities) = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_WindDirectionProbabilities");
-};
-
-// Check if the weather data is defined in the map config
-if (isArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay")) exitWith {
-    GVAR(TempDay)   = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempDay");
-    GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_TempNight");
-    GVAR(Humidity)  = getArray (configFile >> "CfgWorlds" >> worldName >> "ACE_Humidity");
 };
 
 // Check if the map is among the most popular
@@ -215,11 +221,3 @@ if (worldName in ["Kunduz"]) exitWith {
         [0.04, 0.02, 0.05, 0.14, 0.19, 0.07, 0.10, 0.07]  // December
     ];
 };
-
-// Assume default values
-GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
-GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
-GVAR(Humidity) = [82, 80, 78, 70, 71, 72, 70, 73, 78, 80, 83, 82];
-
-GVAR(currentTemperature) = 20;
-GVAR(currentHumidity) = 0.5;
