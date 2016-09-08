@@ -31,6 +31,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     // Set muzzle ammo to original
     _unit setAmmo (_unit getVariable [QGVAR(activeMuzzle), ["", 0]]);
 } else {
+    _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
     // Fix floating for throwables without proper physics (eg. IR Grenade)
     _activeThrowable setVelocity [0, 0, -0.1];
 };

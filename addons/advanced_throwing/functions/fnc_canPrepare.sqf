@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Pick Up <BOOL> (default: false)
+ * 1: Ignore Last Thrown Time <BOOL> (default: false)
  *
  * Return Value:
  * Can Prepare <BOOL>
@@ -16,10 +16,10 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", ["_pickUp", false]];
+params ["_unit", ["_ignoreLastThrownTime", false]];
 
 // Don't delay when picking up
-if (_pickUp) then {
+if (_ignoreLastThrownTime) then {
     _unit setVariable [QGVAR(lastThrownTime), -1];
 };
 

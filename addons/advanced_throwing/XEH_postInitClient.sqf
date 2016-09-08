@@ -83,6 +83,13 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 // Fired XEH
 [QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
+// Set last thrown time on Vanilla Throwing and Advanced Throwing
+["ace_firedPlayer", {
+    if (_weapon == "Throw") then {
+        _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
+    };
+}] call CBA_fnc_addEventHandler;
+
 
 // Display handlers
 ["KeyDown", {_this call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;

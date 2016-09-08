@@ -54,8 +54,6 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
         _activeThrowable setVelocity _newVelocity;
     };
 
-    _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
-
     // Invoke listenable event
     ["ace_throwableThrown", [_unit, _activeThrowable]] call CBA_fnc_localEvent;
 }, [
