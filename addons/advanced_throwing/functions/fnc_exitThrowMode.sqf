@@ -25,8 +25,12 @@ if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
     systemChat format ["Exit Throw Mode: %1", _reason];
 #endif
 
+private _activeThrowable = _unit getVariable [QGVAR(activeThrowable), objNull];
 if !(_unit getVariable [QGVAR(primed), false]) then {
-    deleteVehicle (_unit getVariable [QGVAR(activeThrowable), objNull]);
+    deleteVehicle _activeThrowable;
+} else {
+    // Fix floating for throwables without proper physics (eg. IR Grenade)
+    _activeThrowable setVelocity [0, 0, -0.1];
 };
 
 _unit setVariable [QGVAR(inHand), false];
