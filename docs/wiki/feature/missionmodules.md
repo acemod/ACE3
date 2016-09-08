@@ -14,11 +14,7 @@ version:
 
 ## 1. Overview
 
-Add modules that can be used by mission makers.
-
-### 1.1 Ambient sounds
-
-That module can be used to add ambient sounds around players, it let you choose the sounds and some parameters (distance, volume interval).
+Add modules that can be used by mission makers, such as ambient sounds.
 
 ## 2. Dependencies
 
