@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player] call FUNC(canPrepare))}) exitWith {
+if (dialog || {!(ACE_player getVariable [QGVAR(inHand), false])} || {!([ACE_player, true] call FUNC(canPrepare))}) exitWith {
     [ACE_player, "In dialog or no throwable in hand or cannot prepare throwable"] call FUNC(exitThrowMode);
 };
 
@@ -71,16 +71,25 @@ private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag 
 if (!([ACE_player] call FUNC(canThrow)) && {!_primed}) exitWith {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
+        // Restore muzzle ammo to original
+        ACE_player setAmmo (ACE_player getVariable [QGVAR(activeMuzzle), ["", 0]]);
     };
 };
 
 if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {!_primed}}) then {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
+        // Restore muzzle ammo to original
+        ACE_player setAmmo (ACE_player getVariable [QGVAR(activeMuzzle), ["", 0]]);
     };
     _activeThrowable = _throwableType createVehicleLocal [0, 0, 0];
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
+
+    // Set muzzle ammo to 0 to block vanilla throwing, save to variable for later restoration
+    private _muzzle = _throwableType call FUNC(getMuzzle);
+    ACE_player setVariable [QGVAR(activeMuzzle), [_muzzle, ACE_player ammo _muzzle]];
+    ACE_player setAmmo [_muzzle, 0];
 };
 
 // Exit in case of explosion in hand
