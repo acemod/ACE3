@@ -202,6 +202,7 @@ In order to stop the bleeding, all bleeding injuries on every body part requires
 </ul>
 
 Table legend:
+
  - **Efficiency**: Bandage efficiency, _higher is better_.
  - **Reopening chance**: Reopening chance when advanced wounds are enabled, _lower is better_.
 
@@ -281,6 +282,7 @@ This is a step by step guide, follow the steps from 1 to 6 in order unless state
 
 - Keeping the patient's vitals stable is your first priority.
 - If advanced wounds are enabled make sure from time to time that they didn't reopen.
+- If a limb has a wound with a high bleeding rate (or multiple) such as a large avulsion or large cut; use a tourniquet immediately on it, otherwise the patient might loose large amounts of blood while you try to treat it.
 
 
 **Step 1:** Is the patient responsive?
