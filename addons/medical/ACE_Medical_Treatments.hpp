@@ -713,8 +713,8 @@ class ACE_Medical_Advanced {
                 };
                 class AbrasionMinor: Abrasion {
                     effectiveness = 2;
-					reopeningChance = 0.3;
-					reopeningMaxDelay = 1080;
+                    reopeningChance = 0.3;
+                    reopeningMaxDelay = 1080;
                 };
                 class AbrasionMedium: Abrasion {
                     effectiveness = 1;
@@ -1201,8 +1201,8 @@ class ACE_Medical_Advanced {
                     reopeningMaxDelay = 2100;
                 };
             };
-			
-			class PackingBandage: fieldDressing {
+            
+            class PackingBandage: fieldDressing {
                 class Abrasion {
                     effectiveness = 3;
                     reopeningChance = 0.6;
@@ -1366,7 +1366,7 @@ class ACE_Medical_Advanced {
                     reopeningChance = 0.2;
                     reopeningMaxDelay = 480;
                 };
-            };			
+            };
         };
 
         class Medication {
