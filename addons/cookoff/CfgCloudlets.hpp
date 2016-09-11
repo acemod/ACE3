@@ -52,3 +52,30 @@ class CfgCloudlets {
         destroyOnWaterSurfaceOffset = 0;
     };
 };
+
+class ExploAmmoExplosion {
+	class ExploAmmoFlash {
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "ExploAmmoFlash";
+		intensity = 1;
+		interval = 1;
+		lifeTime = 1;
+	};
+	class LightExplosion {
+		simulation = "light";
+		type = "SparksLight";
+		position[] = {0,0,0};
+		intensity = 1;
+		interval = 1;
+		lifeTime = 0.15;
+	};
+	class ExploAmmoSmoke {
+		position[] = {0,0,0};
+		simulation = "particles";
+		type = "AutoCannonFired";
+		intensity = 1.5;
+		interval = 1.5;
+		lifeTime = 1.5;
+	};
+};
