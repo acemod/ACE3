@@ -44,17 +44,23 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     }];
 }, nil, ["Wheeled_APC_F"], true] call CBA_fnc_addClassEventHandler;
 
+["ReammoBox_F", "init", {
+    (_this select 0) addEventHandler ["HandleDamage", {
+        if (GVAR(enable)) then {
+            ["box", _this] call FUNC(handleDamage);
+        };
+    }];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 // secondary explosions
 ["AllVehicles", "killed", {
-    if ((_this select 0) isKindOf "StaticWeapon") exitWith {};
-        
     if (GVAR(enable)) then {
         (_this select 0) call FUNC(secondaryExplosions);
         if (GVAR(enableAmmoCookoff)) then {
             [(_this select 0), magazinesAmmo (_this select 0)] call FUNC(detonateAmmunition);
         };
     };
-}, nil, ["Man"]] call CBA_fnc_addClassEventHandler;
+}, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
 
 // blow off turret effect
 ["Tank", "killed", {
