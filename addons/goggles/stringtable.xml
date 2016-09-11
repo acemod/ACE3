@@ -27,12 +27,15 @@
         </Key>
         <Key ID="STR_ACE_Goggles_effects_displayName">
             <English>Goggle Effects</English>
+            <Polish>Efekty gogli</Polish>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
+            <Polish>Winieta</Polish>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
+            <Polish>Winieta + Efekty</Polish>
         </Key>
     </Package>
 </Project>
