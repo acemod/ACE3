@@ -184,66 +184,82 @@
         <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
             <English>Defend Area</English>
             <French>Défendre la zone</French>
+            <Polish>Osłaniaj obszar</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
             <French>Compétence global de l'IA</French>
+            <Polish>Globalne umiejętności AI</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
             <French>Compétence générale</French>
+            <Polish>Ogólne umiejętności</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
             <French>Change: general, commanding, courage</French>
+            <Polish>Zmienia: ogólne, dowodzenie, odwaga</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
             <French>Précision</French>
+            <Polish>Precyzja</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
             <French>Change: aimingAccuracy</French>
+            <Polish>Zmienia: precyzję celowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
             <French>Maniement d'armes</French>
+            <Polish>Obsługa broni</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
             <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
+            <Polish>Zmienia: drżenie broni, szybkość celowania, szybkość przeładowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
             <French>repérage</French>
+            <Polish>Rozpoznanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
             <French>Change: spotDistance, spotTime</French>
+            <Polish>Zmienia: zasięg rozpoznawania, czas rozpoznawania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
             <French>Chercher couverture</French>
+            <Polish>Szukaj osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
             <French>L'IA devrait elle chercher couverture</French>
+            <Polish>Czy AI powinno szukać osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
             <French>Combat automatique</French>
+            <Polish>Auto walka</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
             <French>L'IA devrait elle passer automatiquement en mode combat</French>
+            <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
             <French>Côté du groupe</French>
+            <Polish>Strona grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
             <French>Zone de patrouille</French>
+            <Polish>Patrol obszaru</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -260,22 +276,27 @@
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
             <French>Téléporter joueurs</French>
+            <Polish>Teleportuj graczy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
             <French>Joueur</French>
+            <Polish>Gracz</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
             <French>Téléporter le joueur sélectionné à la position du module</French>
+            <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
             <French>Téléporter le groupe</French>
+            <Polish>Teleport grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
             <French>Téléporte toutes les unités du groupe</French>
+            <Polish>Teleportuje wszystkie jednostki w grupie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -292,10 +313,12 @@
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
             <French>Chercher la zone</French>
+            <Polish>Przeszukaj teren</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
             <French>Chercher le bâtiment proche</French>
+            <Polish>Przeszukaj najbliższy budynek</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -435,10 +458,12 @@
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
             <French>L'unité doit appartenir à un côté approprié</French>
+            <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
             <French>Le bâtiment le plus proche est trop loin</French>
+            <Polish>Najbliższy budynek jest zbyt daleko</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -489,26 +514,32 @@
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
             <French>Cargo:</French>
+            <Polish>Ładunek:</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
             <French>Position de la tâche</French>
+            <Polish>Pozycja zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
             <French>Sélectionne une position où accomplir la tâche</French>
+            <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
             <French>Rayon de la tâche</French>
+            <Polish>Obszar zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
             <French>Rayon dans lequel la tâche prend place</French>
+            <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
             <French>rayon invalide entré</French>
+            <Polish>Wpisano nieprawidłowy promień</Polish>
         </Key>
     </Package>
 </Project>
