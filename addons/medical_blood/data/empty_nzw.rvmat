@@ -1,0 +1,4 @@
+renderFlags[] = {"NoZWrite"};
+class StageTI {
+	texture = "z\ace\addons\medical_blood\data\splat_ti_ca.paa";
+};
