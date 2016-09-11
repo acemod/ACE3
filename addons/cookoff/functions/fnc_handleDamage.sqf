@@ -58,12 +58,12 @@ if (_simulationType == "car") exitWith {
 
 if (_simulationType == "tank") exitWith {
     // determine ammo storage location
-    private _ammoLocationHitpoint = getText (_vehicle  call CBA_fnc_getObjectConfig >> QGVAR(ammoLocation));
+    private _ammoLocationHitpoint = getText (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(ammoLocation));
 
     if (_hitIndex in (GVAR(cacheTankDuplicates) getVariable (typeOf _vehicle))) then {
         _hitpoint = "#subturret";
     };
-    
+
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
         if (_damage > 0.5 && {random 1 < 0.7}) then {
@@ -77,6 +77,25 @@ if (_simulationType == "tank") exitWith {
 
     // prevent destruction, let cook-off handle it if necessary
     if (_hitpoint in ["hithull", "hitfuel", "#structural"]) then {
+        _damage min 0.89
+    } else {
+        _damage
+    };
+};
+
+if (_simulationType == "box") exitWith {
+    if (_hitpoint == "#structural" && {IS_EXPLOSIVE_AMMO(_ammo)}) then {
+        // High chance of cook-off when hit by an explosive
+        if (_damage > 0.5 && {random 1 < 0.7}) then {
+            _vehicle call FUNC(cookOffBox);
+        } else {
+            _hitpoint = "#death";
+            _damage = 1;
+        };
+    };
+
+    if (_hitpoint == "#structural") then {
+        // prevent destruction, let cook-off handle it if necessary
         _damage min 0.89
     } else {
         _damage
