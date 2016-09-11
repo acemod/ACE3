@@ -13,5 +13,11 @@
             <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
             <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
         </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
+            <English>Enable Ammunition cook off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
+            <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
+        </Key>
     </Package>
 </Project>
