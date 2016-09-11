@@ -85,12 +85,9 @@ if (_simulationType == "tank") exitWith {
 
 if (_simulationType == "box") exitWith {
     if (_hitpoint == "#structural" && {IS_EXPLOSIVE_AMMO(_ammo)}) then {
-        // High chance of cook-off when hit by an explosive
-        if (_damage > 0.5 && {random 1 < 0.7}) then {
+        // Always catch fire when hit by an explosive
+        if (_damage > 0.5) then {
             _vehicle call FUNC(cookOffBox);
-        } else {
-            _hitpoint = "#death";
-            _damage = 1;
         };
     };
 

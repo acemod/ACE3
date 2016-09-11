@@ -2,6 +2,7 @@
 
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOff), FUNC(cookOff)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
 GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
@@ -54,7 +55,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 ["ReammoBox_F", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
-        if (GVAR(enable)) then {
+        if (GVAR(enableAmmobox)) then {
             ["box", _this] call FUNC(handleDamage);
         };
     }];

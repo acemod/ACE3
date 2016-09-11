@@ -6,6 +6,12 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
+    class GVAR(enableAmmobox) {
+        displayName = CSTRING(enableBoxCookoff_name);
+        description = CSTRING(enableBoxCookoff_tooltip);
+        value = 1;
+        typeName = "BOOL";
+    };
     class GVAR(enableAmmoCookoff) {
         displayName = CSTRING(enableAmmoCookoff_name);
         description = CSTRING(enableAmmoCookoff_tooltip);

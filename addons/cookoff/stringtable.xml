@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_enable_name">
@@ -30,6 +30,12 @@
             <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸（タレット）</Japanese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enable_name">
+            <English>Enable ammo box cook off</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enable_tooltip">
+            <English>Enables cooking off of ammo boxes.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
