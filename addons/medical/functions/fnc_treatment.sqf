@@ -163,7 +163,12 @@ if (currentWeapon _caller == secondaryWeapon _caller) then {
     _caller selectWeapon (primaryWeapon _caller);
 };
 
-private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
+private _wpn = switch (true) do {
+    case ((currentWeapon _caller) == ""): {"non"};
+    case ((currentWeapon _caller) == (primaryWeapon _caller)): {"rfl"};
+    case ((currentWeapon _caller) == (handgunWeapon _caller)): {"pst"};
+    default {"non"};
+};
 private _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
