@@ -19,7 +19,7 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private["_actionToPlay", "_defuseTime", "_isEOD"];
+private ["_actionToPlay", "_defuseTime", "_isEOD"];
 
 _target = attachedTo (_target);
 

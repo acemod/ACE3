@@ -85,6 +85,18 @@
             <Italian>Granata Stordente M84</Italian>
             <Portuguese>M84 granada de atordoamento</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Grenades_M84_NameShort">
+            <English>M84</English>
+            <German>M84</German>
+            <Spanish>M84</Spanish>
+            <French>M84</French>
+            <Polish>M84</Polish>
+            <Czech>M84</Czech>
+            <Russian>M84</Russian>
+            <Hungarian>M84</Hungarian>
+            <Italian>M84</Italian>
+            <Portuguese>M84</Portuguese>
+        </Key>
         <Key ID="STR_ACE_Grenades_M84_Description">
             <English>Also known as flashbang. Causes immediate flash blindness, deafness, tinnitus, and inner ear disturbance.</English>
             <German>Verursacht temporäre Blind- und Taubheit.</German>
@@ -240,6 +252,21 @@
             <Portuguese>M127A1 (Amarelo)</Portuguese>
             <Russian>M127A1 (Жёлтые)</Russian>
             <Spanish>M127A1 (Amarilla)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Incendiary_Name">
+            <English>AN-M14 Incendiary Grenade</English>
+            <German>AN-M14 Brandsatz</German>
+            <Russian>AN-M14 Зажигательная граната</Russian>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
+            <English>AN-M14</English>
+            <German>AN-M14</German>
+            <Russian>AN-M14</Russian>
+        </Key>
+        <Key ID="STR_ACE_Grenades_Incendiary_Description">
+            <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
+            <German>Brandsatzgranate. Verwendet um Waffen, Munition und andere Ausrüstung zu zerstören.</German>
+            <Russian>Зажигательная граната используется для уничтожения оружия, боеприпасов и прочего оборудования.</Russian>
         </Key>
     </Package>
 </Project>

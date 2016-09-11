@@ -1,0 +1,30 @@
+---
+layout: compress
+---
+
+{% include _header.html %}
+
+<main>
+    <div class="row">
+        <div class="medium-8 columns">
+            <a href="{{site.baseUrl}}/news.html" class="button tiny"><i class="fa fa-chevron-left"></i>&nbsp;Back</a><br/>
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                <header>
+                    <h1 itemprop="headline name">{{ page.title }}</h1>
+
+                    <div class="meta">
+                        <time itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d'}}">{{ page.date | date: "%Y-%m-%d"}}</time>
+                        by <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+                    </div>
+                </header>
+                <div itemprop="articleBody">
+                    {{ content }}
+                </div>
+            </article>
+        </div>
+        <div class="medium-4 columns">
+        </div>
+    </div>
+</main>
+
+{% include _footer.html %}

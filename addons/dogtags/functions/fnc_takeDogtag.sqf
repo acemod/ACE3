@@ -1,7 +1,7 @@
 /*
  * Author: SzwedzikPL
- * If dogtag is not already taken triggers event on server
- * If dogtag already taken displays info about it
+ * If dogtag is not already taken triggers event on server.
+ * If dogtag already taken displays info about it.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -9,6 +9,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player, unit] call ace_dogtags_fnc_takeDogtag
  *
  * Public: No
  */

@@ -222,6 +222,8 @@ class CfgVehicles {
     };
 
     class Heli_Transport_04_base_F: Helicopter_Base_H {
+        // note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
+        GVAR(loadmasterTurrets)[] = {{1}};
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
@@ -263,6 +265,16 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
+    class VTOL_Base_F;
+    class VTOL_01_base_F: VTOL_Base_F {
+        GVAR(space) = 4;
+        GVAR(hasCargo) = 1;
+    };
+    class VTOL_02_base_F: VTOL_Base_F {
+        GVAR(space) = 4;
+        GVAR(hasCargo) = 1;
+    };
+    
     // autonomus
     class UAV_01_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
@@ -402,6 +414,36 @@ class CfgVehicles {
                 selection = "";
             };
         };
+    };
+    class Constructions_base_F;
+    class Land_WoodenBox_F: Constructions_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
+        GVAR(space) = 2;
+        GVAR(hasCargo) = 2;
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
+
+        maximumLoad = 2000;
+        transportMaxBackpacks = 12;
+        transportMaxMagazines = 64;
+        transportMaxWeapons = 12;
+    };
+    class Land_WoodenCrate_01_F: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(space) = 3;
+        GVAR(hasCargo) = 3;
+        GVAR(size) = 3;
+        GVAR(canLoad) = 1;
+
+        maximumLoad = 2000;
+        transportMaxBackpacks = 12;
+        transportMaxMagazines = 64;
+        transportMaxWeapons = 12;
     };
 
     class Cargo_base_F: ThingX {

@@ -1,45 +1,88 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
-        <Key ID="STR_ACE_Tagging_TagBlack">
-            <English>Tag black</English>
-            <German>Schwarz markieren</German>
-            <Spanish>Marcar en negro</Spanish>
-            <Polish>Oznakuj na czarno</Polish>
-            <French>Tag noir</French>
-            <Italian>Marca nero</Italian>
-            <Czech>Označit černě</Czech>
-            <Portuguese>Marcar em preto</Portuguese>
+        <Key ID="STR_ACE_Tagging_Tagging">
+            <English>Tagging</English>
+            <Russian>Маркировка</Russian>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagRed">
-            <English>Tag red</English>
-            <German>Rot markieren</German>
-            <Spanish>Marcar en rojo</Spanish>
-            <Polish>Oznakuj na czerwono</Polish>
-            <French>Tag rouge</French>
-            <Italian>Marca rosso</Italian>
-            <Czech>Označit červeně</Czech>
-            <Portuguese>Marcar em vermelho</Portuguese>
+        <Key ID="STR_ACE_Tagging_ModuleDesc">
+            <English>Configure how the tagging system will operate by default.</English>
+            <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagGreen">
-            <English>Tag green</English>
-            <German>Grün markieren</German>
-            <Spanish>Marcar en verde</Spanish>
-            <Polish>Oznakuj na zielono</Polish>
-            <French>Tag vert</French>
-            <Italian>Marca verde</Italian>
-            <Czech>Označit zeleně</Czech>
-            <Portuguese>Marcar em verde</Portuguese>
+        <Key ID="STR_ACE_Tagging_QuickTag">
+            <English>Quick Tag</English>
+            <Russian>Быстрый маркер</Russian>
         </Key>
-        <Key ID="STR_ACE_Tagging_TagBlue">
-            <English>Tag blue</English>
-            <German>Blau markieren</German>
-            <Spanish>Marcar en azul</Spanish>
-            <Polish>Oznakuj na niebiesko</Polish>
-            <French>Tag bleu</French>
-            <Italian>Marca blu</Italian>
-            <Czech>Označit modře</Czech>
-            <Portuguese>Marcar em azul</Portuguese>
+        <Key ID="STR_ACE_Tagging_QuickTagDesc">
+            <English>Action performed on main tag interaction point.</English>
+            <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_LastUsed">
+            <English>Last Used</English>
+            <Russian>Повторить последний</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_RandomX">
+            <English>Random X</English>
+            <Russian>Случайный Х</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Random">
+            <English>Random</English>
+            <Russian>Случайный</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Tag">
+            <English>Tag</English>
+            <German>Markieren</German>
+            <Spanish>Marcar</Spanish>
+            <Polish>Oznakuj</Polish>
+            <French>Tag</French>
+            <Italian>Marca</Italian>
+            <Czech>Označit</Czech>
+            <Portuguese>Marcar</Portuguese>
+            <Russian>Маркер</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XBlack">
+            <English>X black</English>
+            <German>Schwarz X</German>
+            <Spanish>X en negro</Spanish>
+            <Polish>X na czarno</Polish>
+            <French>X noir</French>
+            <Italian>X nero</Italian>
+            <Czech>X černě</Czech>
+            <Portuguese>X em preto</Portuguese>
+            <Russian>Черный Х</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XRed">
+            <English>X red</English>
+            <German>Rot X</German>
+            <Spanish>X en rojo</Spanish>
+            <Polish>X na czerwono</Polish>
+            <French>X rouge</French>
+            <Italian>X rosso</Italian>
+            <Czech>X červeně</Czech>
+            <Portuguese>X em vermelho</Portuguese>
+            <Russian>Красный Х</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XGreen">
+            <English>X green</English>
+            <German>Grün X</German>
+            <Spanish>X en verde</Spanish>
+            <Polish>X na zielono</Polish>
+            <French>X vert</French>
+            <Italian>X verde</Italian>
+            <Czech>X zeleně</Czech>
+            <Portuguese>X em verde</Portuguese>
+            <Russian>Зеленый Х</Russian>
+        </Key>
+        <Key ID="STR_ACE_Tagging_XBlue">
+            <English>X blue</English>
+            <German>Blau X</German>
+            <Spanish>X en azul</Spanish>
+            <Polish>X na niebiesko</Polish>
+            <French>X bleu</French>
+            <Italian>X blu</Italian>
+            <Czech>X modře</Czech>
+            <Portuguese>X em azul</Portuguese>
+            <Russian>Синий Х</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -50,6 +93,7 @@
             <Italian>Bomboletta spray nera</Italian>
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
+            <Russian>Черный спрей</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -60,6 +104,7 @@
             <Italian>Bomboletta spray rossa</Italian>
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
+            <Russian>Красный спрей</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -70,6 +115,7 @@
             <Italian>Bomboletta spray verde</Italian>
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
+            <Russian>Зеленый спрей</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -80,6 +126,7 @@
             <Italian>Bomboletta spray blu</Italian>
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
+            <Russian>Синий спрей</Russian>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -90,6 +137,7 @@
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
+            <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
         </Key>
     </Package>
 </Project>

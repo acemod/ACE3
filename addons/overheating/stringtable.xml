@@ -34,6 +34,7 @@
             <French>Effet de surchauffe</French>
             <Czech>Částicové efekty přehřívání</Czech>
             <Portuguese>Efeito de parícula de superaquecimento</Portuguese>
+            <Russian>Эффект частиц при перегреве</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffects_description">
             <English>Show particle effects when weapon overheats</English>
@@ -43,6 +44,8 @@
             <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
             <French>Montrer les effets lorsque l'arme surchauffe.</French>
             <Portuguese>Mostra efeitos de párticula quando a arma superaquece</Portuguese>
+            <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
             <English>Overheating Particle Effects for everyone</English>
@@ -53,6 +56,7 @@
             <French>Effets de surchauffe pour tout le monde.</French>
             <Czech>Částicové efekty přehřívání pro všechny</Czech>
             <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
+            <Russian>Эффект частиц при перегреве для всех</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
             <English>Show particle effects when other players weapon overheats</English>
@@ -62,6 +66,8 @@
             <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
             <French>Montrer les effets de surchauffe des autres joueurs.</French>
             <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
+            <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
             <English>Overheating Dispersion</English>
@@ -71,6 +77,8 @@
             <Spanish>Dispersión</Spanish>
             <French>Disperssion dûe à la surchauffe</French>
             <Portuguese>Disperção de superaquecimento</Portuguese>
+            <Russian>Разброс при перегреве</Russian>
+            <Czech>Důsledky přehřátí zbraně</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
             <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
@@ -80,6 +88,8 @@
             <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
             <French>Les armes en surchauffe seront moins précises et auront une vitesse en sortie de bouche plus faible. S'applique pour tous les joueurs.</French>
             <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
+            <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
+            <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_displayName">
             <English>Unjam weapon on reload</English>
@@ -90,6 +100,7 @@
             <Italian>Disinceppa l'arma quando si ricarica</Italian>
             <Czech>Uvolnit zbraň při přebití</Czech>
             <Portuguese>Desemperrar arma no recarregamento</Portuguese>
+            <Russian>Исправлять клин при перезарядке</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamOnreload_description">
             <English>Reloading clears a weapon jam.</English>
@@ -100,6 +111,7 @@
             <Italian>L'arma si disinceppa quando si ricarica</Italian>
             <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
             <Portuguese>Recarregar desemperra arma.</Portuguese>
+            <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
             <English>Chance of unjam failing</English>
@@ -110,6 +122,7 @@
             <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
             <Czech>Šance, že uvolnění zbraně selže</Czech>
             <Portuguese>Chance de falha de desemperramento</Portuguese>
+            <Russian>Шанс неудачи при устранении клина</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_unJamFailChance_description">
             <English>Probability that an unjam action might fail, requiring to be repeated.</English>
@@ -119,6 +132,8 @@
             <French>Probabilité qu'une action de des-enrayement échoue, nécessitant de recommencer.</French>
             <Italian>Probabilità che si possa sbagliare a caso a disinceppare l'arma. Richiede di ripetere.</Italian>
             <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
+            <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
+            <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat. </Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_SpareBarrelName">
             <English>Spare barrel</English>
@@ -163,7 +178,7 @@
             <Polish>Usuń zacięcie</Polish>
             <Czech>Uvolnit zbraň</Czech>
             <French>Désenrayer l'arme</French>
-            <Russian>Исправить клин оружия.</Russian>
+            <Russian>Исправить клин оружия</Russian>
             <Hungarian>Akadás elhárítása</Hungarian>
             <Portuguese>Destravar arma</Portuguese>
             <Italian>Ripulisci l'arma</Italian>
@@ -189,6 +204,7 @@
             <Italian>Non si è disinceppata!</Italian>
             <Czech>Zbrań se nepodařilo uvolnit</Czech>
             <Portuguese>Falha no desemperramento</Portuguese>
+            <Russian>Не удалось исправить клин</Russian>
         </Key>
         <Key ID="STR_ACE_Overheating_SwapBarrel">
             <English>Swap barrel</English>
@@ -266,11 +282,15 @@
             <English>Check spare barrels temperatures</English>
             <Portuguese>Verifica temperatura de canos reservas</Portuguese>
             <French>Vérifier la température des canons de rechange</French>
+            <Russian>Проверить температуру запасных стволов</Russian>
+            <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
             <Portuguese>Verificando temperatura de canos reservas</Portuguese>
             <French>Vérification de la température des canons de rechange...</French>
+            <Russian>Проверка температуры запасных стволов...</Russian>
+            <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -288,26 +308,36 @@
             <English>Cool Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s frio/s</Portuguese>
             <French>Canon(s) de rechange froid</French>
+            <Russian>Прохладные</Russian>
+            <Czech>Studená náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s morno/s</Portuguese>
             <French>Canon(s) de rechange tiède</French>
+            <Russian>Теплые</Russian>
+            <Czech>Teplá náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s quente/s</Portuguese>
             <French>Canon(s) de rechange chaud</French>
+            <Russian>Горячие</Russian>
+            <Czech>Horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
             <French>Canon(s) de rechange très chaud</French>
+            <Russian>Очень горячие</Russian>
+            <Czech>Velmi horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
             <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
             <French>Canon(s) de rechange extrêmement chaud</French>
+            <Russian>Запредельно горячие</Russian>
+            <Czech>Extrémně horká náhrandí hlaveň</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -315,11 +345,14 @@
             <Spanish>Activada Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
             <French>Surchauffe activée</French>
+            <Russian>Перегрев включен</Russian>
+            <Czech>Přehřívání povoleno</Czech>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
             <French>Activateur maître pour le module de surchauffe / enrayement</French>
+            <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
         </Key>
     </Package>
 </Project>

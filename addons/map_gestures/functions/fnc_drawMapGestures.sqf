@@ -26,7 +26,7 @@
 
 if (!GVAR(enabled) || !visibleMap) exitWith {};
 
-private["_color", "_drawPosVariableName", "_group", "_grpName", "_pos", "_unitUID"];
+private ["_color", "_drawPosVariableName", "_group", "_grpName", "_pos", "_unitUID"];
 
 params ["_mapHandle"];
 
@@ -46,8 +46,8 @@ params ["_mapHandle"];
             _grpName = groupID _group;
 
             // If color settings for the group exist, then use those, otherwise fall back to the default colors
-            _color = if (HASH_HASKEY(GVAR(GroupColorConfigurationMapping),_grpName)) then {
-                (GVAR(GroupColorConfigurations) select (HASH_GET(GVAR(GroupColorConfigurationMapping),_grpName))) select (_x != leader _group)
+            _color = if ([GVAR(GroupColorConfigurationMapping), _grpName] call CBA_fnc_hashHasKey) then {
+                (GVAR(GroupColorConfigurations) select ([GVAR(GroupColorConfigurationMapping), _grpName] call CBA_fnc_hashGet)) select (_x != leader _group)
             } else {
                 if (_x == leader _group) then {GVAR(defaultLeadColor)} else {GVAR(defaultColor)};
             };

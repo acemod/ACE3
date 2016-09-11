@@ -16,8 +16,7 @@ GVAR(nearUnits) = [];
 
     // @todo. Maybe move to common?
     [{
-        private "_nearUnits";
-        _nearUnits = [];
+        private _nearUnits = [];
         {
             _nearUnits append crew _x;
             if (count _nearUnits > 10) exitWith {

@@ -21,6 +21,10 @@ params ["_display"];
 
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
+if (GVAR(interactionParadrop)) then {
+    (_display displayCtrl 12) ctrlSetText (localize LSTRING(paradropButton));
+};
+
 [{
     disableSerialization;
     private _display = uiNamespace getVariable QGVAR(menuDisplay);
@@ -28,7 +32,7 @@ uiNamespace setVariable [QGVAR(menuDisplay), _display];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull GVAR(interactionVehicle) || {ACE_player distance GVAR(interactionVehicle) >= 10}) exitWith {
+    if (isNull GVAR(interactionVehicle) || {(ACE_player distance GVAR(interactionVehicle) >= 10) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
         closeDialog 0;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };

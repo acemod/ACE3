@@ -7,10 +7,8 @@ Shows or hides the 1-P text line.
 */
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 if (_this select 0) then {
     (_dlgVector displayCtrl 1321) ctrlSetText QPATHTOF(rsc\vector_1.paa);

@@ -18,7 +18,7 @@
 private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"];
 private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"];
 private ["_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
-private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"];
+private ["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"];
 
 _pos = _this select 0;
 _dir = vectorNormalized (_this select 1);
@@ -76,7 +76,7 @@ _finalOwner = nil;
             } forEach (_res select 2);
         };
     };
-} forEach (GVAR(laserEmitters) select 1);
+} forEach (GVAR(laserEmitters) select 2);
 
 if((count _spots) > 0) then {
     _bucketPos = nil;
@@ -123,7 +123,7 @@ if((count _spots) > 0) then {
     } forEach _buckets;
 
     _finalBucket = _finalBuckets select _largestIndex;
-    _owners = HASH_CREATE;
+    _owners = [] call CBA_fnc_hashCreate;
 
     if(count _finalBucket > 0) then {
         _avgX = 0;
@@ -135,11 +135,11 @@ if((count _spots) > 0) then {
             _avgY = _avgY + ((_x select 0) select 1);
             _avgZ = _avgZ + ((_x select 0) select 2);
             _owner = _x select 1;
-            if(HASH_HASKEY(_owners, _owner)) then {
-                _count = HASH_GET(_owners, _owner);
-                HASH_SET(_owners, _owner, _count+1);
+            if ([_owners, _owner] call CBA_fnc_hashHasKey) then {
+                private _count = [_owners, _owner] call CBA_fnc_hashGet;
+                [_owners, _owner, _count + 1] call CBA_fnc_hashSet;
             } else {
-                HASH_SET(_owners, _owner, 1);
+                [_owners, _owner, 1] call CBA_fnc_hashSet;
             };
         } forEach _finalBucket;
         _count = count _finalBucket;

@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Adds dogtag item to unit (triggered by server)
+ * Adds dogtag item to unit (triggered by server).
  *
  * Arguments:
  * 0: Item class <STRING>
@@ -8,6 +8,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["itemClass", ["name", "610-27-5955", "A POS"]] call ace_dogtags_fnc_addDogtagItem
  *
  * Public: No
  */

@@ -1,4 +1,5 @@
 #define COMPONENT dogtags
+#define COMPONENT_BEAUTIFIED Dogtags
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

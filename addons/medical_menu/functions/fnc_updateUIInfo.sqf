@@ -18,7 +18,7 @@
 
 params ["_target", "_display"];
 
-private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
+private ["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
 
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
@@ -47,8 +47,7 @@ if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
 
 _totalIvVolume = 0;
 {
-    private "_value";
-    _value = _target getVariable _x;
+    private _value = _target getVariable _x;
     if (!isNil "_value") then {
         _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
     };

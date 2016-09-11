@@ -17,9 +17,7 @@
 
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
 
@@ -100,11 +98,8 @@ if (_activated) then {
         //--- Handle ownership
         [_logic,_ownerVar,_ownerUID,_adminVar] spawn {
             scriptname "BIS_fnc_moduleCurator: Owner";
-
-            _logic = _this select 0;
-            _ownerVar = _this select 1;
-            _ownerUID = _this select 2;
-            _adminVar = _this select 3;
+            
+            params ["_logic", "_ownerVar", "_ownerUID", "_adminVar"];
 
             if (_adminVar != "") then {_ownerVar = _adminVar;};
 

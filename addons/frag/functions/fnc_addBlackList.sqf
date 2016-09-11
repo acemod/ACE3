@@ -1,4 +1,3 @@
 #include "script_component.hpp"
-private ["_round"];
-_round = _this select 0;
+params ["_round"];
 GVAR(blackList) set [(count GVAR(blackList)), _round];
