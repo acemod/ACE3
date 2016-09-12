@@ -63,7 +63,7 @@ private _power = linearConversion [0, 180, _phi - 30, 1, 0.3, true];
 ACE_player setVariable [QGVAR(throwSpeed), _throwSpeed * _power];
 
 #ifdef DEBUG_MODE_FULL
-hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3\nThrowMag: %4", _phi, _power, _throwSpeed * _power, _throwableMag];
+hintSilent format ["Heading: %1\nPower: %2\nSpeed: %3\nThrowMag: %4\nMuzzle: %5", _phi, _power, _throwSpeed * _power, _throwableMag, ACE_player getVariable [QGVAR(activeMuzzle), ""]];
 #endif
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
@@ -71,25 +71,25 @@ private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag 
 if (!([ACE_player] call FUNC(canThrow)) && {!_primed}) exitWith {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
-        // Restore muzzle ammo to original
-        ACE_player setAmmo (ACE_player getVariable [QGVAR(activeMuzzle), ["", 0]]);
+        // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
+        ACE_player setAmmo [ACE_player getVariable [QGVAR(activeMuzzle), ""], 1];
     };
 };
 
 if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {!_primed}}) then {
     if (!isNull _activeThrowable) then {
         deleteVehicle _activeThrowable;
-        // Restore muzzle ammo to original
-        ACE_player setAmmo (ACE_player getVariable [QGVAR(activeMuzzle), ["", 0]]);
+        // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
+        ACE_player setAmmo [ACE_player getVariable [QGVAR(activeMuzzle), ""], 1];
     };
     _activeThrowable = _throwableType createVehicleLocal [0, 0, 0];
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
 
-    // Set muzzle ammo to 0 to block vanilla throwing, save to variable for later restoration
-    private _muzzle = _throwableType call FUNC(getMuzzle);
-    ACE_player setVariable [QGVAR(activeMuzzle), [_muzzle, ACE_player ammo _muzzle]];
+    // Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1)
+    private _muzzle = _throwableMag call FUNC(getMuzzle);
     ACE_player setAmmo [_muzzle, 0];
+    ACE_player setVariable [QGVAR(activeMuzzle), _muzzle];
 };
 
 // Exit in case of explosion in hand
