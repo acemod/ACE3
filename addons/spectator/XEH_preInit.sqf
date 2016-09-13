@@ -39,4 +39,6 @@ GVAR(unitBlacklist) = [];
 GVAR(unitWhitelist) = [];
 GVAR(groupList) = [];
 
+#include "initSettings.sqf"
+
 ADDON = true;
