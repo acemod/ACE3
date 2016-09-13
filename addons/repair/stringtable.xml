@@ -1326,6 +1326,7 @@
             <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
             <French>Le moteur doit être éteins pour réparer</French>
             <Russian>Двигатель должен быть выключен для ремонта</Russian>
+            <Polish>Silnik musi być wyłączony w celu naprawy</Polish>
         </Key>
     </Package>
 </Project>
