@@ -1,5 +1,5 @@
 ---
-title: Mission maker documentation
+title: ACEX Framework documentation
 layout: default
 group: subNav
 order: 1
@@ -9,14 +9,16 @@ parent: wiki
 
     <div class="row">
         <div class="large-4 medium-4 columns">
-            <h1>Mission Maker</h1>
-            <p>Want to make a mission using ACE3? Here you'll find everything you need to know.</p>
+            <h1>Frameworks</h1>
+            <p>Public API implemented by ACEX which mission makers, modders and scripters can use.</p>
+
         </div>
         <div class="large-8 medium-8 columns">
             <nav>
                 <ul>
-                    {% assign pages_list = site.pages | sort: "order" %}
-                    {% assign group = 'missionmaker' %}
+                    {% assign pages_list = site.pages | sort: "title" %}
+                    {% assign mod = 'acex' %}
+                    {% assign group = 'framework' %}
                     {% include pages_list %}
                 </ul>
             </nav>

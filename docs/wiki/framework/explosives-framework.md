@@ -127,3 +127,46 @@ Name | Use
 `IRSensor` | Explode after movement is detected in front of the mine.
 `Timer` | Explode after timer drop to 0.
 `Tripwire` | Explode when something touch the tripwire.
+
+
+## 5. Scripting
+
+### 5.1 Scripted Explosion
+
+`ace_explosives_fnc_scriptedExplosion`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Explosive objects | Array | Required
+1  | Delay before detonation | Number | Optional (default: `0`, randomized up to given number if negative)
+**R** | None | None | Return value
+
+#### 5.1.1 Example
+
+`[[charge1, charge2], -3] call ace_explosives_fnc_scriptedExplosion;`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  | `[charge1, charge2]` | Explosive objects to detonate
+1  | `-3` | Randomized delay, up to 3 seconds
+
+### 5.2 Connect Explosive
+
+`ace_explosives_fnc_connectExplosive`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Unit to connect to | Object | Required
+1  | Explosive object to connect to | Object | Required
+2  | Detonator type class name (must be present on unit) | String | Required
+**R** | None | None | Return value
+
+#### 5.2.1 Example
+
+`[player, claymore1, "ACE_Clacker"] call ace_explosives_fnc_connectExplosive;`
+
+   | Arguments | Explanation
+---| --------- | -----------
+0  | `player` | Unit explosive will connect to
+1  | `claymore1` | Explosive object that will be connected
+2  | `"ACE_Clacker"` | Detonator type class name
