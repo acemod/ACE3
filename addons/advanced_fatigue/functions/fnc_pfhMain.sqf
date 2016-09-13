@@ -9,7 +9,7 @@
  * None
  */
 #include "script_component.hpp"
-if (isNull ACE_player) exitWith {}; // Map intros
+if (!alive ACE_player) exitWith {}; // Dead people don't breath, Will also handle null (Map intros)
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;

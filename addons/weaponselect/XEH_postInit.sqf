@@ -72,6 +72,8 @@ if (!hasInterface) exitWith {};
 ["ACE3 Weapons", QGVAR(SelectGrenadeFrag), localize LSTRING(SelectGrenadeFrag), {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Don't change mode or show hint if advanced throwing is active
+    if (ACE_player getVariable [QEGVAR(advanced_throwing,inHand), false]) exitWith {false};
 
     // Statement
     [ACE_player, 1] call FUNC(selectNextGrenade);
@@ -83,6 +85,8 @@ if (!hasInterface) exitWith {};
 ["ACE3 Weapons", QGVAR(SelectGrenadeOther), localize LSTRING(SelectGrenadeOther), {
     // Conditions: canInteract
     if !([ACE_player, ACE_player, ["isNotInside", "isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    // Don't change mode or show hint if advanced throwing is active
+    if (ACE_player getVariable [QEGVAR(advanced_throwing,inHand), false]) exitWith {false};
 
     // Statement
     [ACE_player, 2] call FUNC(selectNextGrenade);
