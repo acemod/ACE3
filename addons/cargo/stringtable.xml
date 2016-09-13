@@ -204,10 +204,12 @@
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
             <German>Türlast</German>
+            <Polish>Zrzut zaopatrzenia</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
             <German>Schieflage</German>
+            <Polish>Nierówny lot</Polish>
         </Key>
     </Package>
 </Project>
