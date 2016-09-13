@@ -290,10 +290,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "particles" %}
-`ace_common`
-{% endif %}
-
 {% if include.component == "rangecard" %}
 `ACE_Advanced_Ballistics`
 {% endif %}

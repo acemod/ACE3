@@ -26,7 +26,10 @@ private _throwableMag = (currentThrowable _unit) select 0;
 _unit removeItem _throwableMag;
 
 private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
-private _muzzle = _throwableMag call FUNC(getMuzzle);
+private _muzzle = _unit getVariable [QGVAR(activeMuzzle), ""];
+
+// Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1), removeItem above resets it
+_unit setAmmo [_muzzle, 0];
 
 // Create actual throwable globally
 private _activeThrowableOld = _unit getVariable [QGVAR(activeThrowable), objNull];

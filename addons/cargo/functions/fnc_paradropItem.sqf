@@ -31,7 +31,7 @@ private _cargoSpace = [_vehicle] call FUNC(getCargoSpaceLeft);
 private _itemSize = [_item] call FUNC(getSizeItem);
 _vehicle setVariable [QGVAR(space), (_cargoSpace + _itemSize), true];
 
-(boundingBoxReal q2) params ["_bb1", "_bb2"];
+(boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
 private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 3; // 3 meters behind max bounding box
 TRACE_1("",_distBehind);
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -1];
