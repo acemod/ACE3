@@ -186,96 +186,112 @@
             <French>Défendre la zone</French>
             <Russian>Защитить зону</Russian>
             <Czech>Bránit oblast</Czech>
+            <Polish>Osłaniaj obszar</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
             <French>Compétence global de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
+            <Polish>Globalne umiejętności AI</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
             <French>Compétence générale</French>
             <Russian>Общий уровень</Russian>
             <Czech>Primární zkušenosti</Czech>
+            <Polish>Ogólne umiejętności</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
             <French>Change: general, commanding, courage</French>
             <Russian>Изменяет: general, commanding, courage</Russian>
             <Czech>Upravuje: general, commanding, courage</Czech>
+            <Polish>Zmienia: ogólne, dowodzenie, odwaga</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
             <French>Précision</French>
             <Russian>Меткость</Russian>
             <Czech>Přesnost</Czech>
+            <Polish>Precyzja</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
             <French>Change: aimingAccuracy</French>
             <Russian>Изменяет: aimingAccuracy</Russian>
             <Czech>Upravuje: aimingAccuracy</Czech>
+            <Polish>Zmienia: precyzję celowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
             <French>Maniement d'armes</French>
             <Russian>Владение оружием</Russian>
             <Czech>Zacházení se zbraní</Czech>
+            <Polish>Obsługa broni</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
             <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
+            <Polish>Zmienia: drżenie broni, szybkość celowania, szybkość przeładowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
             <French>repérage</French>
             <Russian>Обнаружение</Russian>
             <Czech>Vnímavost</Czech>
+            <Polish>Rozpoznanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
             <French>Change: spotDistance, spotTime</French>
             <Russian>Изменяет: spotDistance, spotTime</Russian>
             <Czech>Upravuje: spotDistance, spotTime</Czech>
+            <Polish>Zmienia: zasięg rozpoznawania, czas rozpoznawania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
             <French>Chercher couverture</French>
             <Russian>Поиск укрытий</Russian>
             <Czech>Vyhledávat krytí</Czech>
+            <Polish>Szukaj osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
             <French>L'IA devrait elle chercher couverture</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
+            <Polish>Czy AI powinno szukać osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
             <French>Combat automatique</French>
             <Russian>Авто режим боя</Russian>
             <Czech>Automatický režim boje</Czech>
+            <Polish>Auto walka</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
             <French>L'IA devrait elle passer automatiquement en mode combat</French>
             <Russian>Должны ли боты автоматически переходить в режим боя</Russian>
             <Czech>AI se automaticky přepne do bojového režimu</Czech>
+            <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
             <French>Côté du groupe</French>
             <Russian>Сторона группы</Russian>
             <Czech>Strana skupiny</Czech>
+            <Polish>Strona grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
             <French>Zone de patrouille</French>
             <Russian>Патрулировать зону</Russian>
             <Czech>Oblast hlídkování</Czech>
+            <Polish>Patrol obszaru</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -294,30 +310,35 @@
             <French>Téléporter joueurs</French>
             <Russian>Телепортиваровать игроков</Russian>
             <Czech>Teleportovat hráče</Czech>
+            <Polish>Teleportuj graczy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
             <French>Joueur</French>
             <Russian>Игрока</Russian>
             <Czech>Hráč</Czech>
+            <Polish>Gracz</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
             <French>Téléporter le joueur sélectionné à la position du module</French>
             <Russian>Телепортирует выбранного игрока к местоположению модуля</Russian>
             <Czech>Teleportuje vybraného hráče na pozici modulu</Czech>
+            <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
             <French>Téléporter le groupe</French>
             <Russian>Телепортировать Группу</Russian>
             <Czech>Teleportovat skupinu</Czech>
+            <Polish>Teleport grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
             <French>Téléporte toutes les unités du groupe</French>
             <Russian>Телепортирует всех юнитов в группе</Russian>
             <Czech>Teleportuje všechny jednotky ve skupině</Czech>
+            <Polish>Teleportuje wszystkie jednostki w grupie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -336,12 +357,14 @@
             <French>Chercher la zone</French>
             <Russian>Обыскать зону</Russian>
             <Czech>Prohledat oblast</Czech>
+            <Polish>Przeszukaj teren</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
             <French>Chercher le bâtiment proche</French>
             <Russian>Обыскать ближайшие здания</Russian>
             <Czech>Prohledat nejbližší budovu</Czech>
+            <Polish>Przeszukaj najbliższy budynek</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -483,12 +506,14 @@
             <French>L'unité doit appartenir à un côté approprié</French>
             <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
             <Czech>Jednotka musí patřit k příslušné straně</Czech>
+            <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
             <French>Le bâtiment le plus proche est trop loin</French>
             <Russian>Ближайшие здания слишком далеко</Russian>
             <Czech>Nejbližší budova je příliš daleko</Czech>
+            <Polish>Najbliższy budynek jest zbyt daleko</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -541,33 +566,39 @@
             <French>Cargo:</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
+            <Polish>Ładunek:</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
             <French>Position de la tâche</French>
             <Russian>Местоположение задания</Russian>
             <Czech>Pozice úkolu</Czech>
+            <Polish>Pozycja zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
             <French>Sélectionne une position où accomplir la tâche</French>
             <Russian>Выбрать местоположение для выполнения задания</Russian>
+            <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
             <French>Rayon de la tâche</French>
             <Russian>Радиус задания</Russian>
+            <Polish>Obszar zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
             <French>Rayon dans lequel la tâche prend place</French>
             <Russian>Радиус выполнения задания</Russian>
+            <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
             <French>rayon invalide entré</French>
             <Russian>Введен неправильный радиус</Russian>
             <Czech>Vložen neplatný parametr</Czech>
+            <Polish>Wpisano nieprawidłowy promień</Polish>
         </Key>
     </Package>
 </Project>
