@@ -106,7 +106,7 @@ def main(argv):
 
 
     #ACE Main - http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
-    # publishFolder(ace_release_dir, "463939057", changelog_path)
+    publishFolder(ace_release_dir, "463939057", changelog_path)
 
 
     #RHS Compats - http://steamcommunity.com/sharedfiles/filedetails/?id=758436163
