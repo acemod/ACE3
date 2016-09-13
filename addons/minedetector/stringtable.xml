@@ -6,44 +6,52 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Polish>Wykrywacz metali</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Polish>Wykrywacz metali</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
             <French>Activer</French>
             <Russian>Включить</Russian>
             <Czech>Aktivovat</Czech>
+            <Polish>Aktywuj</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
             <French>Désactiver</French>
             <Russian>Выключить</Russian>
             <Czech>Deaktivovat</Czech>
+            <Polish>Deaktywuj</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
             <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
+            <Polish>Podłącz słuchawki</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
             <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
+            <Polish>Odłącz słuchawki</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
             <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
+            <Polish>Słuchawki podpięte</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
+            <Polish>Słuchawki odpięte</Polish>
         </Key>
     </Package>
 </Project>
