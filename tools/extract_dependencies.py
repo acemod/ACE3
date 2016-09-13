@@ -79,7 +79,6 @@ def main():
                     # One-line
                     if not match and re.match(r"\s+requiredAddons\[\]\ = {.+?};", line):
                         data += get_dependencies(line)
-                        print(get_dependencies(line))
                         break
                     # Multi-line
                     else:
