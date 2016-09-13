@@ -284,6 +284,7 @@
             <French>Vérifier la température des canons de rechange</French>
             <Russian>Проверить температуру запасных стволов</Russian>
             <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
+            <Polish>Sprawdź temperaturę zapasowych luf</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
@@ -291,6 +292,7 @@
             <French>Vérification de la température des canons de rechange...</French>
             <Russian>Проверка температуры запасных стволов...</Russian>
             <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
+            <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -310,6 +312,7 @@
             <French>Canon(s) de rechange froid</French>
             <Russian>Прохладные</Russian>
             <Czech>Studená náhrandí hlaveň</Czech>
+            <Polish>Zimne zapasowe lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
@@ -317,6 +320,7 @@
             <French>Canon(s) de rechange tiède</French>
             <Russian>Теплые</Russian>
             <Czech>Teplá náhrandí hlaveň</Czech>
+            <Polish>Ciepłe zapasowe lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
@@ -324,6 +328,7 @@
             <French>Canon(s) de rechange chaud</French>
             <Russian>Горячие</Russian>
             <Czech>Horká náhrandí hlaveň</Czech>
+            <Polish>Gorące zapasowe lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
@@ -331,6 +336,7 @@
             <French>Canon(s) de rechange très chaud</French>
             <Russian>Очень горячие</Russian>
             <Czech>Velmi horká náhrandí hlaveň</Czech>
+            <Polish>Bardzo gorące zapasowe lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
@@ -338,6 +344,7 @@
             <French>Canon(s) de rechange extrêmement chaud</French>
             <Russian>Запредельно горячие</Russian>
             <Czech>Extrémně horká náhrandí hlaveň</Czech>
+            <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -347,12 +354,14 @@
             <French>Surchauffe activée</French>
             <Russian>Перегрев включен</Russian>
             <Czech>Přehřívání povoleno</Czech>
+            <Polish>Przegrzewanie włączone</Polish>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
             <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
             <French>Activateur maître pour le module de surchauffe / enrayement</French>
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
+            <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
         </Key>
     </Package>
 </Project>
