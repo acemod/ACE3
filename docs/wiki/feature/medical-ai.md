@@ -12,9 +12,14 @@ version:
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Medical AI is currently only able to deal with the basic medical system! Read further for more details.</p>
+</div>
+
 ## 1. Overview
 
-ACE Medical AI makes AI units heal themselves and each other when ACE Medical is enabled. They will do this automatically when they consider themselves *fairly safe*, as in they're not suppressed and haven't fired a shot since a few seconds. Medical AI is currently only able to deal with the basic medical system.
+ACE Medical AI makes AI units heal themselves and each other when ACE Medical is enabled. They will do this automatically when they consider themselves *fairly safe*, as in they're not suppressed and haven't fired a shot since a few seconds.
 
 
 ## 2. Usage
