@@ -16,7 +16,7 @@ version:
 ACE provides four settings to tweak Advanced Fatigue. Adjust these factors depending on how hard you want your experience to be.
 
 - **Performance factor:** This influences the overall performance of players, malnourished or super soldiers, everything is possible.
-- **Recovery factor:** Do you like looking at the landscape or think breaks are boring? Whatever the case, this influences the lenght of your stamina breaks.
+- **Recovery factor:** Do you like looking at the landscape or think breaks are boring? Whatever the case, this influences the length of your stamina breaks.
 - **Load factor:** If you believe a Javelin is the perfect companion for your .50 BMG sniper rifle you probably should tweak this setting.
 - **Terrain factor**: Not everyone is used to mountainous terrain. Tweak this until you feel more at home.
 
