@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit","_newSide"];
+params ["_unit", "_newSide", "_logic"];
 private _side = side _unit;
 
 // Nothing to do here
@@ -43,3 +43,5 @@ if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFro
     (units _unit) joinSilent _newGroup;
     deleteGroup _oldGroup;
 };
+
+deleteVehicle _logic;
