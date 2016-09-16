@@ -318,7 +318,7 @@ class CfgVehicles {
         mapSize = 0.7;
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
-        destrType = "DesturctNo";
+        destrType = "DestructBuilding";
     };
 
     class ACE_Track: ACE_RepairItem_Base {

@@ -53,4 +53,16 @@ class CfgVehicles {
     class O_MBT_02_cannon_F: O_MBT_02_base_F {
         GVAR(turret)[] = {QGVAR(Turret_MBT_02),{0,-1,0}};
     };
+
+    class MRAP_01_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-4,2};
+    };
+
+    class MRAP_02_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-4,2};
+    };
+
+    class MRAP_03_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-4,2};
+    };
 };
