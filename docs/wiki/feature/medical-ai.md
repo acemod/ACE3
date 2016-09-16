@@ -35,4 +35,4 @@ AI units will also heal themselves in singleplayer. If the player is in control 
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="ace_medical_ai" %}
+{% include dependencies_list.md component="medical_ai" %}
