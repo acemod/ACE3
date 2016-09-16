@@ -96,4 +96,4 @@ Another factor that comes into play here is pathway fatigue - the pathways thems
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="ace_advanced_fatigue" %}
+{% include dependencies_list.md component="advanced_fatigue" %}
