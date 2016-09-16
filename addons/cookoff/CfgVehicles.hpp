@@ -55,14 +55,18 @@ class CfgVehicles {
     };
 
     class MRAP_01_base_F: Car_F {
-        GVAR(engineSmokeOffset)[] = {0,-4,2};
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
     };
 
     class MRAP_02_base_F: Car_F {
-        GVAR(engineSmokeOffset)[] = {0,-4,2};
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
     };
 
     class MRAP_03_base_F: Car_F {
-        GVAR(engineSmokeOffset)[] = {0,-4,2};
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
+    };
+
+    class Quadbike_01_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,1,0};
     };
 };

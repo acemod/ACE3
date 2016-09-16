@@ -27,13 +27,13 @@ if (local _vehicle) then {
 private _offset = getArray (_vehicle call CBA_fnc_getObjectConfig >> QGVAR(engineSmokeOffset));
 
 if (_offset isEqualTo []) then {
-    _offset = [0,-2,2];
+    _offset = [0,0,0];
 };
 
 private _position = [
     0,
-    (boundingBoxReal _vehicle select 1 select 1),
-    (boundingBoxReal _vehicle select 0 select 2)
+    (boundingBoxReal _vehicle select 1 select 1) - 2,
+    (boundingBoxReal _vehicle select 0 select 2) + 2
 ] vectorAdd _offset;
 
 private _smoke = "#particlesource" createVehicleLocal [0,0,0];
