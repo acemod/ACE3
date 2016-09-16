@@ -128,7 +128,7 @@ private _fnc_onConfirm = {
     private _unit = effectiveCommander (attachedTo _logic);
     private _side = [west,east,independent,civilian] select (GETVAR(_display,newSide,GETVAR(_display,oldSide,0)));
 
-    [_unit, _side, _logic] call FUNC(moduleGroupSide);
+    [_unit, _side] call FUNC(moduleGroupSide);
     deleteVehicle _logic;
 };
 
