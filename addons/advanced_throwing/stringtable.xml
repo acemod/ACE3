@@ -4,86 +4,107 @@
         <Key ID="STR_ACE_Advanced_Throwing_Category">
             <English>Advanced Throwing</English>
             <Russian>Улучшенный бросок гранат</Russian>
+            <French>Lancé amélioré</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
+            <French>Permet de changer la configuration du lancé amélioré.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
             <Russian>Включить улучшенный бросок</Russian>
+            <French>Active le lancé amélioré</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
             <Russian>Включает систему улучшенного броска.</Russian>
+            <French>Active le système de lancé amélioré.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
             <Russian>Показать траекторию броска</Russian>
+            <French>Afficher l'arc de lancé</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
             <Russian>Включает визуализацию траектории броска (как полетит граната).</Russian>
+            <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
             <Russian>Показывать управление мышью</Russian>
+            <French>Afficher les contrôles à la souris du lancé</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
             <Russian>Включает отображение подсказок по управлению мышью, когда граната подготовлена.</Russian>
+            <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
             <Russian>Включить подбор гранат</Russian>
+            <French>Active la récupération des objets lancés</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
             <English>Enables ability to pick up throwables from the ground.</English>
             <Russian>Включает возможность подбирать гранаты с земли.</Russian>
+            <French>Active la capacité de récupérer les objets lancés sur le sol.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
             <Russian>Включить подбор прикрепленных гранат</Russian>
+            <French>Active le ramassage d'objets lançables attachés</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
             <Russian>Включает возможность подбирать гранаты, прикрепленные к объектам.</Russian>
+            <French>Active la capacité à ramasser les objets lançables attaché à d'autres objets.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
             <Russian>Подготовить/заменить гранату</Russian>
+            <French>Préparer/changer d'objet</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
             <English>Throwable Drop Mode (Hold)</English>
             <Russian>Режим броска гранаты (удерживать)</Russian>
+            <French>Mode de lancé de l'objet (Tenir)</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
             <Russian>Режим броска гранаты (переключить)</Russian>
+            <French>Mode de lancé de l'objet (Basculer)</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
             <Russian>Подготовлена</Russian>
+            <French>Amorcer</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
             <Russian>Бросить</Russian>
+            <French>Lancer</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
             <Russian>(Скролл) Изменить режим</Russian>
+            <French>(Molette souris) Changer de mode</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
             <Russian>(Скролл) Увеличить</Russian>
+            <French>(Molette souris) Etendre</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
             <Russian>(Клик) Подготовить</Russian>
+            <French>(Click) Dégoupiller</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
             <Russian>Подобрать</Russian>
+            <French>Ramasser</French>
         </Key>
     </Package>
 </Project>
