@@ -169,6 +169,7 @@ private _config = _vehicle call CBA_fnc_getObjectConfig;
 private _fnc_isWheelHitPoint = {
     params ["_selectionName"];
 
+    // wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
     _selectionName select [0, 6] == "wheel_" && {
         _selectionName select [count _selectionName - 9] == "_steering"
     } // return
@@ -177,7 +178,6 @@ private _fnc_isWheelHitPoint = {
 {
     private _wheelSelection = getText (_config >> "HitPoints" >> _x >> "name");
 
-    // wheels must use a selection named "wheel_X_Y_steering"
     if (_wheelSelection call _fnc_isWheelHitPoint) then {
         private _wheelPosition = _vehicle modelToWorld (_vehicle selectionPosition _wheelSelection);
 
