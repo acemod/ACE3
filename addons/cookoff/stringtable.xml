@@ -6,12 +6,14 @@
             <German>Cook-off ermöglichen</German>
             <Czech>Povolit explozi munice</Czech>
             <Russian>Включить воспламенение</Russian>
+            <Japanese>誘爆を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
             <English>Enables cook off and related vehicle destruction effects.</English>
             <German>Ermöglicht Cook-off und zugehörige Fahrzeug-Zerstörungseffekte.</German>
             <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
             <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
+            <Japanese>誘爆を有効化し、車両が誘爆によって破壊されていきます。</Japanese>
         </Key>
     </Package>
 </Project>
