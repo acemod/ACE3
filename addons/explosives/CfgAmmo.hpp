@@ -31,14 +31,37 @@ class CfgAmmo {
     class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(Explosive) = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0, 0, 0.038};
+        GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
     // class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {};
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
-        GVAR(defuseObjectPosition[]) = {-1.415, 0, 0.12};
+        GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
+    };
+
+    class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        SoundSetExplosion[] = {};
+        defaultMagazine = "ACE_FlareTripMine_Mag"; //Mag that gets dropped after defuse
+        hit = 0;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        soundHit[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
+        explosionEffects = "ACE_TripflareEffect";
+        CraterEffects = "";
+        soundTrigger[] = {"",1,1};
+        class CamShakeExplode {
+            power = 0;
+            duration = 0;
+            frequency = 0;
+            distance = 0;
+        };
+    };
+    
+    class F_20mm_Red;
+    class ACE_TripFlare_FlareEffect: F_20mm_Red {
+        triggerTime = 0.1;
     };
 
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
@@ -66,7 +89,7 @@ class CfgAmmo {
     class DemoCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
         GVAR(Explosive) = "DemoCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.07, 0, 0.055};
+        GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
         hit = 500;
@@ -76,7 +99,7 @@ class CfgAmmo {
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(Explosive) = "SatchelCharge_Remote_Ammo_Scripted";
-        GVAR(defuseObjectPosition[]) = {0.1, 0.1, 0.05};
+        GVAR(defuseObjectPosition)[] = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };

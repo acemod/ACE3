@@ -7,12 +7,12 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Explosives {
                 displayName = CSTRING(Menu);
-                condition = QUOTE(!(_player getVariable [ARR_2('ace_explosives_PlantingExplosive',false)]));
+                condition = QUOTE(!(_player getVariable [ARR_2(QQGVAR(PlantingExplosive),false)]));
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
                 priority = 4;
-                icon = PATHTOF(UI\Explosives_Menu_ca.paa);
+                icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
                 //Sub-menu items
                 class ACE_Place {
@@ -22,7 +22,7 @@ class CfgVehicles {
                     insertChildren = QUOTE([_player] call FUNC(addExplosiveActions););
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 1;
-                    icon = PATHTOF(UI\Place_Explosive_ca.paa);
+                    icon = QPATHTOF(UI\Place_Explosive_ca.paa);
                     priority = 1;
                 };
                 class ACE_Cellphone {
@@ -31,7 +31,7 @@ class CfgVehicles {
                     statement = "closeDialog 0;createDialog 'Rsc_ACE_PhoneInterface';";
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                     showDisabled = 0;
-                    icon = PATHTOF(Data\UI\Cellphone_UI.paa);
+                    icon = QPATHTOF(Data\UI\Cellphone_UI.paa);
                     priority = 0.8;
                 };
             };
@@ -44,68 +44,63 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_DefuseObject";
         displayName = "ACE Defuse Helper";
-        mapSize = 0.2;
-        icon = "iconObject_1x2";
         model = "\A3\Weapons_f\dummyweapon.p3d";
-        scope = 2;
-        scopeCurator = 1;
-        vehicleClass = "Cargo";
+        scope = 1;
+
         class ACE_Actions {
-            class ACE_MainActions {
-                selection = "";
+            class ACE_Defuse {
                 distance = 1;
-                condition = "true";
-                class ACE_Defuse {
-                    displayName = CSTRING(Defuse);
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
-                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
-                    exceptions[] = {"isNotSwimming"};
-                    showDisabled = 0;
-                    icon = PATHTOF(UI\Defuse_ca.paa);
-                    priority = 0.8;
-                    distance = 1;
-                };
+                displayName = CSTRING(Defuse);
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                exceptions[] = {"isNotSwimming"};
+                icon = QPATHTOF(UI\Defuse_ca.paa);
+            };
+        };
+    };    
+    class ACE_DefuseObject_Large: ACE_DefuseObject {
+        class ACE_Actions: ACE_Actions {
+            class ACE_Defuse: ACE_Defuse {
+                distance = 1.5;
             };
         };
     };
+
     class ACE_Explosives_Place: Items_base_F {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        author = "ACE";
+        author = ECSTRING(common,aceteam);
         _generalMacro = "ACE_Explosives_Place";
         displayName = "Multi-meter";
         mapSize = 0.2;
         icon = "iconObject_1x2";
         model = "\A3\Structures_F\Items\Tools\MultiMeter_F.p3d";
-        scope = 2;
-        scopeCurator = 1;
+        scope = 1;
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
-                distance = 1;
+                distance = 1.5;
                 condition = "true";
                 class ACE_SetTrigger {
                     selection = "";
                     displayName = CSTRING(TriggerMenu);
-                    distance = 1;
                     condition = "true";
                     statement = "";
                     insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                     priority = 5;
-                    icon = QUOTE(PATHTOF(UI\Explosives_Menu_ca.paa));
+                    icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
                 };
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(Pickup);
-                    distance = 1;
                     condition = "true";
                     statement = QUOTE([ARR_2(_player,_target getVariable QUOTE(QGVAR(class)))] call EFUNC(common,addToInventory);deleteVehicle _target;);
                     showDisabled = 0;
@@ -291,38 +286,41 @@ class CfgVehicles {
 
     // Add ACE_Clacker and ACE_DefusalKit to every explosive unit.
     #define MACRO_ADDMINEKIT \
-    items[] = {"FirstAidKit", "ACE_Clacker", "ACE_DefusalKit"}; \
-    respawnitems[] = {"FirstAidKit", "ACE_Clacker", "ACE_DefusalKit"};
+    items[] = {"FirstAidKit","ACE_Clacker","ACE_DefusalKit"}; \
+    respawnitems[] = {"FirstAidKit","ACE_Clacker","ACE_DefusalKit"};
 
-    class B_Soldier_base_F; class B_soldier_exp_F:B_Soldier_base_F {MACRO_ADDMINEKIT};
-    class B_Soldier_03_f; class B_engineer_F:B_Soldier_03_f {MACRO_ADDMINEKIT};
-    class B_Soldier_diver_base_F; class B_diver_exp_F:B_Soldier_diver_base_F {MACRO_ADDMINEKIT};
-    class B_Soldier_recon_base; class B_recon_exp_F:B_Soldier_recon_base {MACRO_ADDMINEKIT};
-    class B_CTRG_soldier_engineer_exp_F:B_Soldier_base_F {MACRO_ADDMINEKIT};
-    class I_G_Soldier_base_F; class I_G_engineer_F:I_G_Soldier_base_F {MACRO_ADDMINEKIT};
-    class I_G_Soldier_exp_F:I_G_Soldier_base_F {MACRO_ADDMINEKIT};
-    class B_G_engineer_F:I_G_engineer_F {MACRO_ADDMINEKIT};
-    class O_G_engineer_F:I_G_engineer_F {MACRO_ADDMINEKIT};
-    class B_G_Soldier_exp_F:I_G_Soldier_exp_F {MACRO_ADDMINEKIT};
-    class O_G_Soldier_exp_F:I_G_Soldier_exp_F {MACRO_ADDMINEKIT};
-    class I_Soldier_02_F; class I_Soldier_exp_F:I_Soldier_02_F {MACRO_ADDMINEKIT};
-    class I_Soldier_base_F; class I_engineer_F:I_Soldier_base_F {MACRO_ADDMINEKIT};
-    class I_Soldier_diver_base_F; class I_diver_exp_F:I_Soldier_diver_base_F {MACRO_ADDMINEKIT};
-    class O_Soldier_base_F; class O_soldier_exp_F:O_Soldier_base_F {MACRO_ADDMINEKIT};
-    class O_engineer_F:O_Soldier_base_F {MACRO_ADDMINEKIT};
-    class O_Soldier_diver_base_F; class O_diver_exp_F:O_Soldier_diver_base_F {MACRO_ADDMINEKIT};
-    class O_Soldier_recon_base; class O_recon_exp_F:O_Soldier_recon_base {MACRO_ADDMINEKIT};
-    class O_Soldier_Urban_base; class O_soldierU_exp_F:O_Soldier_Urban_base {MACRO_ADDMINEKIT};
-    class O_engineer_U_F:O_Soldier_Urban_base {MACRO_ADDMINEKIT};
-    class B_Protagonist_VR_F:B_Soldier_base_F {MACRO_ADDMINEKIT};
-    class O_Protagonist_VR_F:O_Soldier_base_F {MACRO_ADDMINEKIT};
-    class I_Protagonist_VR_F:I_Soldier_base_F {MACRO_ADDMINEKIT};
-    class B_Soldier_F; class b_soldier_universal_f:B_Soldier_F {MACRO_ADDMINEKIT};
-    class B_G_Soldier_F; class b_g_soldier_universal_f:B_G_Soldier_F {MACRO_ADDMINEKIT};
-    class O_Soldier_F; class o_soldier_universal_f:O_Soldier_F {MACRO_ADDMINEKIT};
-    class O_G_Soldier_F; class o_g_soldier_universal_f:O_G_Soldier_F {MACRO_ADDMINEKIT};
-    class I_soldier_F; class i_soldier_universal_f:I_soldier_F {MACRO_ADDMINEKIT};
-    class I_G_Soldier_F; class i_g_soldier_universal_f:I_G_Soldier_F {MACRO_ADDMINEKIT};
+    class B_Soldier_base_F; class B_soldier_exp_F: B_Soldier_base_F {MACRO_ADDMINEKIT};
+    class B_Soldier_03_f; class B_engineer_F: B_Soldier_03_f {MACRO_ADDMINEKIT};
+    class B_Soldier_diver_base_F; class B_diver_exp_F: B_Soldier_diver_base_F {MACRO_ADDMINEKIT};
+    class B_Soldier_recon_base; class B_recon_exp_F: B_Soldier_recon_base {MACRO_ADDMINEKIT};
+    class B_Soldier_02_f; class B_CTRG_soldier_engineer_exp_F: B_Soldier_02_f {MACRO_ADDMINEKIT};
+    class I_G_Soldier_base_F; class I_G_engineer_F: I_G_Soldier_base_F {MACRO_ADDMINEKIT};
+    class I_G_Soldier_exp_F: I_G_Soldier_base_F {MACRO_ADDMINEKIT};
+    class B_G_engineer_F: I_G_engineer_F {MACRO_ADDMINEKIT};
+    class O_G_engineer_F: I_G_engineer_F {MACRO_ADDMINEKIT};
+    class B_G_Soldier_exp_F: I_G_Soldier_exp_F {MACRO_ADDMINEKIT};
+    class O_G_Soldier_exp_F: I_G_Soldier_exp_F {MACRO_ADDMINEKIT};
+    class I_Soldier_02_F; class I_Soldier_exp_F: I_Soldier_02_F {MACRO_ADDMINEKIT};
+    class I_Soldier_base_F; class I_engineer_F: I_Soldier_base_F {MACRO_ADDMINEKIT};
+    class I_Soldier_diver_base_F; class I_diver_exp_F: I_Soldier_diver_base_F {MACRO_ADDMINEKIT};
+    class O_Soldier_base_F; class O_soldier_exp_F: O_Soldier_base_F {MACRO_ADDMINEKIT};
+    class O_engineer_F: O_Soldier_base_F {MACRO_ADDMINEKIT};
+    class O_Soldier_diver_base_F; class O_diver_exp_F: O_Soldier_diver_base_F {MACRO_ADDMINEKIT};
+    class O_Soldier_recon_base; class O_recon_exp_F: O_Soldier_recon_base {MACRO_ADDMINEKIT};
+    class O_Soldier_Urban_base; class O_soldierU_exp_F: O_Soldier_Urban_base {MACRO_ADDMINEKIT};
+    class O_engineer_U_F: O_Soldier_Urban_base {MACRO_ADDMINEKIT};
+    class B_Protagonist_VR_F: B_Soldier_base_F {MACRO_ADDMINEKIT};
+    class O_Protagonist_VR_F: O_Soldier_base_F {MACRO_ADDMINEKIT};
+    class I_Protagonist_VR_F: I_Soldier_base_F {MACRO_ADDMINEKIT};
+    class B_Soldier_F; class b_soldier_universal_f: B_Soldier_F {MACRO_ADDMINEKIT};
+    class B_G_Soldier_F; class b_g_soldier_universal_f: B_G_Soldier_F {MACRO_ADDMINEKIT};
+    class O_Soldier_F; class o_soldier_universal_f: O_Soldier_F {MACRO_ADDMINEKIT};
+    class O_G_Soldier_F; class o_g_soldier_universal_f: O_G_Soldier_F {MACRO_ADDMINEKIT};
+    class I_soldier_F; class i_soldier_universal_f: I_soldier_F {MACRO_ADDMINEKIT};
+    class I_G_Soldier_F; class i_g_soldier_universal_f: I_G_Soldier_F {MACRO_ADDMINEKIT};
+    class B_CTRG_Soldier_F; class B_CTRG_Soldier_Exp_tna_F: B_CTRG_Soldier_F {MACRO_ADDMINEKIT};
+    class O_V_Soldier_base_F; class O_V_Soldier_Exp_hex_F: O_V_Soldier_base_F {MACRO_ADDMINEKIT};
+    class O_V_Soldier_Exp_ghex_F: O_V_Soldier_Exp_hex_F {MACRO_ADDMINEKIT};
 
     // Add ACE_Clacker to snipers and spotters for setting off Claymores
     #define MACRO_ADDCLAYMOREKIT \
@@ -338,6 +336,10 @@ class CfgVehicles {
     class O_Soldier_sniper_base_F;
     class O_sniper_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
     class O_spotter_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
+    class B_ghillie_base_F: B_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
+    class O_ghillie_base_F: O_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
+    class I_ghillie_base_F: I_Soldier_sniper_base_F {MACRO_ADDCLAYMOREKIT};
+    class O_T_Spotter_F: O_spotter_F {MACRO_ADDCLAYMOREKIT};
 
     // Editor placed mines
     class MineBase;
@@ -349,6 +351,13 @@ class CfgVehicles {
         ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
         // TODO: Find a way to place the mine laying down instead of standing up
+    };
+
+    class APERSTripMine: MineBase {};
+    class ACE_FlareTripMine: APERSTripMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_FlareTripMine_Wire_Ammo";
+        displayName = CSTRING(TripFlare_Name);
     };
 
     class IEDUrbanBig_F;

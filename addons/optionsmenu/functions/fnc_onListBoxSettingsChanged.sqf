@@ -16,12 +16,10 @@
 
 #include "script_component.hpp"
 
-private ["_settingIndex", "_rightDropDownIndex"];
-
-_rightDropDownIndex = lbCurSel 400;  //Index of right drop down
+private _rightDropDownIndex = lbCurSel 400;  //Index of right drop down
 if (_rightDropDownIndex < 0) then {_rightDropDownIndex = 0;};
 
-_settingIndex = -1;
+private _settingIndex = -1;
 if (((lnbCurSelRow 200) >= 0) && {(lnbCurSelRow 200) < ((lnbSize 200) select 0)}) then {
     _settingIndex =  lnbValue [200, [(lnbCurSelRow 200), 0]];
 };

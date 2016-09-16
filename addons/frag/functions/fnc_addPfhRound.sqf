@@ -51,11 +51,11 @@ if(GVAR(autoTrace)) then {
 // We should do an {!(_round in GVAR(objects))}
 // But we leave that out here for optimization. So this cannot be a framework function
 // Otherwise, it should only be added once and from the FiredEH
-if(_doFragTrack && alive _round) then {
+if(_doFragTrack && {alive _round}) then {
     _spallTrack = [];
     _spallTrackID = [];
 
-    private["_args"];
+    private ["_args"];
     _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
     (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
     (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),

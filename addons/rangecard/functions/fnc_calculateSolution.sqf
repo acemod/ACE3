@@ -40,38 +40,19 @@
  * 8: Spin drift (MOA) <NUMBER>
  *
  * Example:
- * call ace_rangecard_calculate_range_card_data
+ * call ace_rangecard_fnc_calculateSolution
  *
  * Public: No
  */
 #include "script_component.hpp"
-
-private ["_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed1", "_windSpeed2", "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_drag", "_bc", "_dragModel", "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude", "_directionOfFire", "_rangeCardSlot", "_useABConfig"];
-_scopeBaseAngle     = _this select 0;
-_bulletMass         = _this select 1;
-_boreHeight         = _this select 2;
-_airFriction        = _this select 3;
-_muzzleVelocity     = _this select 4;
-_temperature        = _this select 5;
-_barometricPressure = _this select 6;
-_relativeHumidity   = _this select 7;
-_simSteps           = _this select 8;
-_windSpeed1          = (_this select 9) select 0;
-_windSpeed2          = (_this select 9) select 1;
-_windDirection      = _this select 10;
-_inclinationAngle   = _this select 11;
-_targetSpeed        = _this select 12;
-_targetRange        = _this select 13;
-_bc                 = _this select 14;
-_dragModel          = _this select 15;
-_atmosphereModel    = _this select 16;
-_storeRangeCardData = _this select 17;
-_stabilityFactor    = _this select 18;
-_twistDirection     = _this select 19;
-_latitude           = _this select 20;
-_directionOfFire    = _this select 21;
-_rangeCardSlot      = _this select 22;
-_useABConfig        = _this select 23;
+params [
+    "_scopeBaseAngle", "_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity",
+    "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps", "_windSpeed",
+    "_windDirection", "_inclinationAngle", "_targetSpeed", "_targetRange", "_bc", "_dragModel",
+    "_atmosphereModel", "_storeRangeCardData", "_stabilityFactor", "_twistDirection", "_latitude",
+    "_directionOfFire", "_rangeCardSlot", "_useABConfig"
+];
+_windSpeed params ["_windSpeed1", "_windSpeed2"];
 
 if (_storeRangeCardData) then {
     GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
@@ -138,19 +119,19 @@ _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
-    
+
     _speedTotal = _speedTotal + _bulletSpeed;
     _stepsTotal = _stepsTotal + 1;
     _speedAverage = (_speedTotal / _stepsTotal);
-    
+
     if (_speedAverage > 450 && _bulletSpeed < _speedOfSound) exitWith {};
     if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
-    
+
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
     _trueSpeed = vectorMagnitude _trueVelocity;
-    
+
     if (_useABConfig) then {
-        _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
+        private _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
             parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
         } else {
             ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation))

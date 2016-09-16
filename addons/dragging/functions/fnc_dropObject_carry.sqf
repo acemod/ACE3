@@ -25,8 +25,8 @@ TRACE_2("params",_unit,_target);
 private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 
 // prevent collision damage
-["fixCollision", _unit] call EFUNC(common,localEvent);
-["fixCollision", _target, _target] call EFUNC(common,targetEvent);
+[QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
+[QEGVAR(common,fixCollision), _target, _target] call CBA_fnc_targetEvent;
 
 // release object
 detach _target;
@@ -67,8 +67,8 @@ _unit setVariable [QGVAR(carriedObject), objNull, true];
 [objNull, _target, true] call EFUNC(common,claim);
 
 if !(_target isKindOf "CAManBase") then {
-    ["fixPosition", _target, _target] call EFUNC(common,targetEvent);
-    ["fixFloating", _target, _target] call EFUNC(common,targetEvent);
+    [QEGVAR(common,fixPosition), _target, _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
 // recreate UAV crew

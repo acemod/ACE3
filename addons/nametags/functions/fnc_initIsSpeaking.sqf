@@ -28,14 +28,13 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-["playerChanged", {
+["unit", {
     //When player changes, make sure to reset old unit's variable
     params ["", "_oldUnit"];
     if ((!isNull _oldUnit) && {_oldUnit getVariable [QGVAR(isSpeakingInGame), false]}) then {
         _oldUnit setVariable [QGVAR(isSpeakingInGame), false, true];
     };
-}] call EFUNC(common,addEventHandler);
-
+}] call CBA_fnc_addPlayerEventHandler;
 
 if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
     ACE_LOGINFO("ACRE Detected.");

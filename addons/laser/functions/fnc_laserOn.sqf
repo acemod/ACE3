@@ -10,14 +10,13 @@
  * 4: Laser code <number>
  * 5: Beam divergence (in mils off beam center).
  *
- * Return value:
+ * Return Value:
  * String, UUID for sending to laserOff function.
  */
 
 #include "script_component.hpp"
 
-private ["_uuid", "_args"];
-_uuid = format["%1%2%3", floor ACE_diagTime, floor random 1000, floor random 10000];
-_args = [_uuid, _this];
-["laser_laserOn", _args] call EFUNC(common,globalEvent);
+private _uuid = format["%1%2%3", floor diag_tickTime, floor random 1000, floor random 10000];
+private _args = [_uuid, _this];
+["ace_laserOn", _args] call CBA_fnc_globalEvent;
 _uuid;

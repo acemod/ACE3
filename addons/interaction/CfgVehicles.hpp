@@ -11,7 +11,7 @@ class CfgVehicles {
         scope = 2;
         isGlobal = 1;
         isSingular = 1;
-        icon = PATHTOF(UI\Icon_Module_Interaction_ca.paa);
+        icon = QPATHTOF(UI\Icon_Module_Interaction_ca.paa);
         class Arguments {
             class EnableTeamManagement {
                 displayName = CSTRING(EnableTeamManagement_DisplayName);
@@ -68,14 +68,14 @@ class CfgVehicles {
                     statement = "";
                     showDisabled = 0;
                     priority = 3.2;
-                    icon = PATHTOF(UI\team\team_management_ca.paa);
+                    icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_red_ca.paa);
+                        icon = QPATHTOF(UI\team\team_red_ca.paa);
                         priority = 2.4;
                     };
                     class ACE_AssignTeamGreen {
@@ -83,7 +83,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_green_ca.paa);
+                        icon = QPATHTOF(UI\team\team_green_ca.paa);
                         priority = 2.3;
                     };
                     class ACE_AssignTeamBlue {
@@ -91,7 +91,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_blue_ca.paa);
+                        icon = QPATHTOF(UI\team\team_blue_ca.paa);
                         priority = 2.2;
                     };
                     class ACE_AssignTeamYellow {
@@ -99,7 +99,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
                         statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_yellow_ca.paa);
+                        icon = QPATHTOF(UI\team\team_yellow_ca.paa);
                         priority = 2.1;
                     };
                     class ACE_UnassignTeam {
@@ -107,7 +107,7 @@ class CfgVehicles {
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
                         statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
                         showDisabled = 1;
-                        icon = PATHTOF(UI\team\team_white_ca.paa);
+                        icon = QPATHTOF(UI\team\team_white_ca.paa);
                         priority = 2.5;
                     };
                 };
@@ -118,7 +118,7 @@ class CfgVehicles {
                     statement = QUOTE([_player] joinSilent group _target);
                     showDisabled = 0;
                     priority = 2.6;
-                    icon = PATHTOF(UI\team\team_management_ca.paa);
+                    icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
                 class ACE_GetDown {
                     displayName = CSTRING(GetDown);
@@ -223,7 +223,7 @@ class CfgVehicles {
                 statement = "";
                 showDisabled = 1;
                 priority = 3.2;
-                icon = PATHTOF(UI\team\team_management_ca.paa);
+                icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
@@ -232,7 +232,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.4;
-                    icon = PATHTOF(UI\team\team_red_ca.paa);
+                    icon = QPATHTOF(UI\team\team_red_ca.paa);
                 };
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
@@ -241,7 +241,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.3;
-                    icon = PATHTOF(UI\team\team_green_ca.paa);
+                    icon = QPATHTOF(UI\team\team_green_ca.paa);
                 };
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
@@ -250,7 +250,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.2;
-                    icon = PATHTOF(UI\team\team_blue_ca.paa);
+                    icon = QPATHTOF(UI\team\team_blue_ca.paa);
                 };
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
@@ -259,7 +259,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.1;
-                    icon = PATHTOF(UI\team\team_yellow_ca.paa);
+                    icon = QPATHTOF(UI\team\team_yellow_ca.paa);
                 };
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
@@ -268,7 +268,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
                     showDisabled = 1;
                     priority = 2.5;
-                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
@@ -277,7 +277,7 @@ class CfgVehicles {
                     statement = QUOTE(_this call DFUNC(doBecomeLeader));
                     showDisabled = 1;
                     priority = 1.0;
-                    icon = PATHTOF(UI\team\team_white_ca.paa);
+                    icon = QPATHTOF(UI\team\team_white_ca.paa);
                 };
                 class ACE_LeaveGroup {
                     displayName = CSTRING(LeaveGroup);
@@ -286,7 +286,7 @@ class CfgVehicles {
                     statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
                     priority = 1.2;
-                    icon = PATHTOF(UI\team\team_management_ca.paa);
+                    icon = QPATHTOF(UI\team\team_management_ca.paa);
                 };
             };
 
@@ -307,8 +307,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -330,6 +331,33 @@ class CfgVehicles {
     };
 
     class Tank: LandVehicle {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
+                selection = "";
+                distance = 4;
+                condition = "true";
+                class ACE_Passengers {
+                    displayName = CSTRING(Passengers);
+                    condition = "true";
+                    statement = "";
+                    insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+                };
+            };
+        };
+
+        class ACE_SelfActions {
+            class ACE_Passengers {
+                displayName = CSTRING(Passengers);
+                condition = "true";
+                statement = "";
+                insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
+            };
+        };
+    };
+
+    class Motorcycle: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
@@ -357,11 +385,13 @@ class CfgVehicles {
 
     class Air;
     class Helicopter: Air {
+        GVAR(bodyWidth) = 3;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -386,8 +416,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -408,19 +439,30 @@ class CfgVehicles {
         };
     };
 
+    class VTOL_Base_F;
+    class VTOL_01_base_F: VTOL_Base_F {
+        GVAR(bodyWidth) = 4;
+        GVAR(bodyLength) = 10;
+    };
+    class VTOL_02_base_F: VTOL_Base_F {
+        GVAR(bodyWidth) = 3;
+        GVAR(bodyLength) = 7;
+    };
+
     class Ship;
     class Ship_F: Ship {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
 
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(getMass _target <= 2600 && {alive _target} && {vectorMagnitude velocity _target < 3});
+                    condition = QUOTE(_target call FUNC(canPush));
                     statement = QUOTE(_this call FUNC(push));
                     showDisabled = 0;
                     priority = -1;
@@ -449,7 +491,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 selection = "gunnerview";
-                distance = 2;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -466,14 +508,6 @@ class CfgVehicles {
                 condition = "true";
                 statement = "";
                 insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
-            };
-        };
-    };
-
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {
-        class ACE_Actions: ACE_Actions {
-            class ACE_MainActions: ACE_MainActions {
-                distance = 5;
             };
         };
     };
@@ -526,6 +560,14 @@ class CfgVehicles {
 
         class ACE_SelfActions {};
     };
+    class Slingload_base_F: ReammoBox_F {};
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                distance = 5;
+            };
+        };
+    };
 
     class ACE_RepairItem_Base: ThingX {
         class ACE_Actions {
@@ -577,7 +619,7 @@ class CfgVehicles {
     class Land_PortableLight_double_off_F: Land_PortableLight_double_F {
         scope = 1;
     };
-    
+
     class RoadCone_F: ThingX {
         class ACE_Actions {
             class ACE_MainActions {

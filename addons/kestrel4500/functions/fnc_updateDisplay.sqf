@@ -18,9 +18,7 @@
 #define __ctrlCenterLine3 (__dsp displayCtrl 74602)
 #define __ctrlCenterLine4 (__dsp displayCtrl 74603)
 
-private ["_outputData"];
-
-_outputData = [] call FUNC(generateOutputData);
+private _outputData = [] call FUNC(generateOutputData);
 
 {
     ctrlSetText [_x , _outputData select _forEachIndex];

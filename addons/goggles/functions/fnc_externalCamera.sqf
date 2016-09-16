@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Handle the ThreeDen Editor Camera
-if ((!isNil {is3DEN}) && {is3DEN}) exitWith {true};
+if (is3DEN) exitWith {true};
 
 if (GVAR(showInThirdPerson)) then {
     cameraView in ["GROUP"] || EFUNC(common,isFeatureCameraActive) 

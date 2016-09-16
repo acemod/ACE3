@@ -33,12 +33,12 @@ switch (_this) do {
                 case 2: { // Auto set
                     GVAR(RefHeading) = (getDir ACE_player) % 360;
                     GVAR(referenceHeadingMenu) = 0;
-                    GVAR(headingSetDisplayTimer) = ACE_diagTime;
+                    GVAR(headingSetDisplayTimer) = diag_tickTime;
                 };
                 case 3: { // Manual set
                     GVAR(RefHeading) = GVAR(TmpHeading);
                     GVAR(referenceHeadingMenu) = 0;
-                    GVAR(headingSetDisplayTimer) = ACE_diagTime;
+                    GVAR(headingSetDisplayTimer) = diag_tickTime;
                 };
             };
         };
@@ -73,13 +73,13 @@ switch (_this) do {
             GVAR(MinAvgMax) = !GVAR(MinAvgMax);
         } else {
             if (GVAR(referenceHeadingMenu) == 3) then {
-                if (ACE_diagTime - GVAR(manualSetCooldown) < 0.2) then {
+                if (diag_tickTime - GVAR(manualSetCooldown) < 0.2) then {
                     GVAR(TmpHeading) = GVAR(TmpHeading) - 10;
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) - 1;
                 };
                 GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
-                GVAR(manualSetCooldown) = ACE_diagTime;
+                GVAR(manualSetCooldown) = diag_tickTime;
             };
         };
     };
@@ -88,13 +88,13 @@ switch (_this) do {
             GVAR(MinAvgMax) = !GVAR(MinAvgMax);
         } else {
             if (GVAR(referenceHeadingMenu) == 3) then {
-                if (ACE_diagTime - GVAR(manualSetCooldown) < 0.2) then {
+                if (diag_tickTime - GVAR(manualSetCooldown) < 0.2) then {
                     GVAR(TmpHeading) = GVAR(TmpHeading) + 10;
                 } else {
                     GVAR(TmpHeading) = GVAR(TmpHeading) + 1;
                 };
                 GVAR(TmpHeading) = (GVAR(TmpHeading) + 360) % 360;
-                GVAR(manualSetCooldown) = ACE_diagTime;
+                GVAR(manualSetCooldown) = diag_tickTime;
             };
         };
     };
@@ -103,8 +103,7 @@ switch (_this) do {
     case 6: { // Backlight
     };
     case 7: { // Exit
-        private ["_exit"];
-        _exit = true;
+        private _exit = true;
         if (GVAR(referenceHeadingMenu) == 1) then {
             GVAR(referenceHeadingMenu) = 0;
             _exit = false;

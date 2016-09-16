@@ -5,7 +5,7 @@
  * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -25,7 +25,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_backblastAngle","_backblastRange","_backblastDamage"];
+_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
 TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
 
 if (_backblastDamage <= 0) exitWith {};
@@ -37,7 +37,7 @@ private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["overpressure", _affected, [_unit, _position, _direction, _weapon, _magazine, _ammo]] call EFUNC(common,targetEvent);
+["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Damage to the firer
 private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FUNC(getDistance));

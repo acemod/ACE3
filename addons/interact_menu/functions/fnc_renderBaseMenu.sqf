@@ -2,12 +2,12 @@
  * Author: NouberNou and esteldunedain
  * Render the interaction menu for a base action
  *
- * Argument:
+ * Arguments:
  * 0: Object <OBJECT>
  * 1: Action node <ARRAY>
  * 2: 3D position or 2D position <ARRAY> (Optional)
  *
- * Return value:
+ * Return Value:
  * Was the menu rendered <BOOL>
  *
  * Public: No
@@ -68,7 +68,7 @@ private _uid = format [QGVAR(ATCache_%1), _actionName];
 private _activeActionTree = [
                         [_object, _baseActionNode, [], _distanceToBasePoint],
                         DFUNC(collectActiveActionTree),
-                        _object, _uid, 1.0, "interactMenuClosed"
+                        _object, _uid, 1.0, "ace_interactMenuClosed"
                     ] call EFUNC(common,cachedCall);
 
 END_COUNTER(fnc_collectActiveActionTree)
@@ -90,9 +90,8 @@ if (_activeActionTree isEqualTo []) exitWith {false};
 
 BEGIN_COUNTER(fnc_renderMenus);
 
-// IGNORE_PRIVATE_WARNING(_cameraPosASL,_cameraDir);
 if (count _pos > 2) then {
-    _sPos pushBack (((AGLtoASL _pos) vectorDiff _cameraPosASL) vectorDotProduct _cameraDir);
+    _sPos pushBack (((AGLtoASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
 } else {
     _sPos pushBack 0;
 };

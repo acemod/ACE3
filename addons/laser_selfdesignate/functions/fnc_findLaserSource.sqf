@@ -2,7 +2,7 @@
  * Author: jaynus
  * Handler function for laser network code.
  *
- * Argument:
+ * Arguments:
  * 0: Emitter <OBJECT>
  *
  * Return Value:
@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-private["_gunnerInfo", "_turretInfo"];
+private ["_gunnerInfo", "_turretInfo"];
 params ["_emmiter"];
 
 _gunnerInfo = [_emmiter, (currentWeapon _emmiter)] call CBA_fnc_getFirer;

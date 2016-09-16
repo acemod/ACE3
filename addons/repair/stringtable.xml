@@ -248,16 +248,16 @@
             <French>Ajouter des pièces de rechage aux véhicules ? (à besoin du système de cargaison)</French>
         </Key>
         <Key ID="STR_ACE_Repair_Repair">
-            <English>Repair &gt;&gt;</English>
-            <German>Reparieren &gt;&gt;</German>
-            <Spanish>Reparación &gt;&gt;</Spanish>
-            <French>Réparer &gt;&gt;</French>
-            <Polish>Napraw &gt;&gt;</Polish>
-            <Czech>Opravit &gt;&gt;</Czech>
-            <Portuguese>Reparar &gt;&gt;</Portuguese>
-            <Italian>Ripara &gt;&gt;</Italian>
-            <Hungarian>Szerelés &gt;&gt;</Hungarian>
-            <Russian>Ремонт &gt;&gt;</Russian>
+            <English>Repair</English>
+            <German>Reparieren</German>
+            <Spanish>Reparación</Spanish>
+            <French>Réparer</French>
+            <Polish>Napraw</Polish>
+            <Czech>Opravit</Czech>
+            <Portuguese>Reparar</Portuguese>
+            <Italian>Ripara</Italian>
+            <Hungarian>Szerelés</Hungarian>
+            <Russian>Ремонт</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_SettingDisplayTextName">
             <English>Display text on repair</English>
@@ -765,6 +765,8 @@
             <German>Reaktivpanzerung</German>
             <Spanish>ERA</Spanish>
             <French>ERA</French>
+            <Portuguese>ERA</Portuguese>
+            <Russian>ДЗ</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_moduleName">
             <English>Repair Settings</English>
@@ -1315,6 +1317,15 @@
             <Czech>Položka vyžaduje odstraněná/vyměněná kola</Czech>
             <Italian>Oggetti richiesti per riparare/rimuovere ruote</Italian>
             <French>Items exigés pour enlever/remplacer les roues</French>
+        </Key>
+        <Key ID="STR_ACE_Repair_shutOffEngineWarning">
+            <English>Engine must be off to repair</English>
+            <German>Motor muss ausgeschaltet zu reparieren sein</German>
+            <Spanish>El motor necesita desactivado para la reparación</Spanish>
+            <Czech>Pro opravu je zapotřebí vypnout motor</Czech>
+            <Portuguese>O motor deve estar desligado para manutenção</Portuguese>
+            <French>Le moteur doit être éteins pour réparer</French>
+            <Russian>Двигатель должен быть выключен для ремонта</Russian>
         </Key>
     </Package>
 </Project>

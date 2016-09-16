@@ -3,17 +3,17 @@
  * Returns whether the target position is within the maximum angle FOV of the provided seeker 
  * objects current direction.
  *
- * Argument:
+ * Arguments:
  * 0: Seeker [Object]
  * 1: Target [Position]
  * 2: Max Angle [Degrees]
  * 
- * Return value:
+ * Return Value:
  *    Boolean
  */
 
 #include "script_component.hpp"
-private["_seeker", "_targetPos", "_seekerMaxAngle", "_sensorPos", "_testPointVector", "_testDotProduct"];
+private ["_seeker", "_targetPos", "_seekerMaxAngle", "_sensorPos", "_testPointVector", "_testDotProduct"];
 
 _seeker = _this select 0;
 _targetPos = _this select 1;

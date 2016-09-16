@@ -8,7 +8,7 @@ class CfgVehicles {
                     condition = QUOTE(_this call FUNC(rangeTableCanUse));
                     statement = QUOTE(_this call FUNC(rangeTableOpen));
                     priority = 0;
-                    icon = QUOTE(PATHTOF(UI\icon_rangeTable.paa));
+                    icon = QPATHTOF(UI\icon_rangeTable.paa);
                     exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                 };
             };
@@ -102,7 +102,7 @@ class CfgVehicles {
         scope = 2;
         isGlobal = 0;
         isSingular = 1;
-        icon =  QUOTE(PATHTOF(UI\Icon_Module_mk6_ca.paa));
+        icon =  QPATHTOF(UI\Icon_Module_mk6_ca.paa);
         functionPriority = 0;
         class Arguments {
             class airResistanceEnabled {
@@ -139,8 +139,7 @@ class CfgVehicles {
     class ACE_Box_82mm_Mo_HE: Box_NATO_AmmoOrd_F {
         displayName = CSTRING(HEBox_DisplayName);
         author = ECSTRING(common,ACETeam);
-        transportMaxWeapons = 4;
-        transportMaxMagazines = 8;
+        maximumLoad = 400;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,8);
         };
@@ -161,7 +160,7 @@ class CfgVehicles {
     };
     class ACE_Box_82mm_Mo_Combo: ACE_Box_82mm_Mo_HE {
         displayName = CSTRING(ComboBox_DisplayName);
-        transportMaxMagazines = 48;
+        maximumLoad = 2400;
         class TransportMagazines {
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,32);
             MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);

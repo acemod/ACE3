@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 #include "common.hpp";
 
-private["_roleImages", "_player", "_vehicle", "_type", "_config", "_text", "_data", "_isAir", "_turretUnits", "_turretRoles", "_index", "_roleType", "_unit", "_toShow"];
+private ["_roleImages", "_player", "_vehicle", "_type", "_config", "_text", "_data", "_isAir", "_turretUnits", "_turretRoles", "_index", "_roleType", "_unit", "_toShow"];
 
 _player = ACE_player;
 _vehicle = vehicle _player;
@@ -35,16 +35,16 @@ _turretRoles = _data apply {_x select 1};
 _roleType = CARGO;
 _toShow = [];
 {
-    switch (_x) do {                
+    switch (_x) do {
         case commander _vehicle: {
             _roleType = COMMANDER;
         };
         case gunner _vehicle: {
             _roleType = GUNNER;
-        };                  
-        case driver _vehicle: {  
+        };
+        case driver _vehicle: {
             _roleType = if(_isAir) then { PILOT } else { DRIVER };
-        };                  
+        };
         default {
             _index = _turretUnits find _x;
             if(_index !=-1 ) then {
@@ -61,7 +61,7 @@ _toShow = [
     _toShow,
     [],
     {
-        _x select 1 
+        _x select 1
     },
     "ASCEND",
     {
@@ -71,7 +71,7 @@ _toShow = [
 ] call BIS_fnc_sortBy;
 
 _roleImages = ROLE_IMAGES;
-{   
+{
     _unit = _x select 0;
     _roleType = _x select 1;
     _text = _text + format["<t size='1.5' shadow='true'>%1</t> <t size='1.3'><img image='%2'></t><br/>", [_unit] call EFUNC(common,getName), _roleImages select _roleType];

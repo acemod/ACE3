@@ -9,16 +9,14 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_calculate_target_range_assist
+ * call ace_atragmx_fnc_calculate_target_range_assist
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_targetSize", "_imageSize", "_angle", "_estRange"];
-
-_angle = parseNumber(ctrlText 7012);
-_targetSize = parseNumber(ctrlText 7010);
+private _angle = parseNumber(ctrlText 7012);
+private _targetSize = parseNumber(ctrlText 7010);
 if (GVAR(rangeAssistUseTargetHeight)) then {
     _targetSize = _targetSize * cos(_angle);
 };
@@ -33,7 +31,7 @@ switch (GVAR(rangeAssistTargetSizeUnit)) do {
         _targetSize = _targetSize * 0.01;
     };
 };
-_imageSize = parseNumber(ctrlText 7011);
+private _imageSize = parseNumber(ctrlText 7011);
 switch (GVAR(rangeAssistImageSizeUnit)) do {
     case 0: {
         _imageSize = _imageSize / 6400 * 360;
@@ -45,7 +43,7 @@ switch (GVAR(rangeAssistImageSizeUnit)) do {
         _imageSize = _imageSize / 60 / 1.047;
     };
 };
-_estRange = parseNumber(ctrlText 7013);
+private _estRange = parseNumber(ctrlText 7013);
 if (GVAR(currentUnit) == 1) then {
     _estRange = _estRange / 1.0936133;
 };

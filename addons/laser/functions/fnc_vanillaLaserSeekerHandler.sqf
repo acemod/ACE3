@@ -2,17 +2,17 @@
  * Author: jaynus
  * Handler function for laser network code.
  *
- * Argument:
+ * Arguments:
  * 0: Emitter
  * 1: Owner
  * 
- * Return value:
+ * Return Value:
  *    [position, direction]
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-private["_emmiter", "_owner", "_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
+private ["_emmiter", "_owner", "_gunnerInfo", "_turretInfo", "_povPos", "_povDir"];
 
 _emmiter = _this select 0;
 _owner = _this select 1;

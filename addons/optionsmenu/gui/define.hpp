@@ -12,6 +12,11 @@ class RscHTML;
 class RscText;
 
 
+class RscControlsGroupNoHScrollbars;
+class RscPicture;
+class RscButtonMenu;
+
+
 #ifndef ACE_DEFINE_H
 #define ACE_DEFINE_H
 
@@ -92,6 +97,5 @@ class RscText;
 // Listbox styles
 #define LB_TEXTURES       0x10
 #define LB_MULTI          0x20
-#define FontCSE       "RobotoCondensed"
 
 #endif

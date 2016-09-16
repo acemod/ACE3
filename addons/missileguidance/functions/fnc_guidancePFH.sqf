@@ -3,11 +3,11 @@
 
 #define TIMESTEP_FACTOR 0.01
 
-private["_launchParams", "_targetLaunchParams", "_flightParams", "_seekerParams", "_stateParams"];
-private["_lastRunTime", "_runtimeDelta", "_adjustTime", "_args", "_seekerTargetPos", "_projectilePos"];
-private["_profileAdjustedTargetPos", "_incDeflection", "_minDeflection", "_maxDeflection"];
-private["_targetVector", "_adjustVector", "_finalAdjustVector", "_changeVector", "_pitch", "_yaw", "_roll"];
-private["_PS", "_distanceToTarget", "_targetRelativeVector", "_vectorTo"];
+private ["_launchParams", "_targetLaunchParams", "_flightParams", "_seekerParams", "_stateParams"];
+private ["_lastRunTime", "_runtimeDelta", "_adjustTime", "_args", "_seekerTargetPos", "_projectilePos"];
+private ["_profileAdjustedTargetPos", "_incDeflection", "_minDeflection", "_maxDeflection"];
+private ["_targetVector", "_adjustVector", "_finalAdjustVector", "_changeVector", "_pitch", "_yaw", "_roll"];
+private ["_PS", "_distanceToTarget", "_targetRelativeVector", "_vectorTo"];
 
 _args = _this select 0;
 EXPLODE_7_PVT((_args select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
@@ -24,7 +24,7 @@ _seekerParams = _args select 3;
 _stateParams = _args select 4;
 
 _lastRunTime = _stateParams select 0;
-_runtimeDelta = ACE_diagTime - _lastRunTime;
+_runtimeDelta = diag_tickTime - _lastRunTime;
 _adjustTime = 1;
 
 if(accTime > 0) then {
@@ -100,7 +100,7 @@ _PS setDropInterval 3.0;
 hintSilent format["d: %1", _distanceToTarget];
 #endif
 
-_stateParams set[0, ACE_diagTime];
+_stateParams set[0, diag_tickTime];
 
 _args set[4, _stateParams];
 _this set[0, _args];

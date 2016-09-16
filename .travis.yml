@@ -12,12 +12,13 @@ before_script:
   fi
 script:
 - python3 tools/sqf_validator.py
+- python3 tools/config_style_checker.py
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
     python3 tools/deploy.py;
   fi
 env:
   global:
-  - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
+  - secure: cdxkn5cAx+s1C9Ne5m+odEhde1uuSg6XGMDgepN4DwSAJwtMnUv3ZmDebd5YJC1raZJdep+n09Cj0GoTNICQRkco50DxHKHYNad41wetY0tn0cs9gmPYzyFE5q4vuWiQ47dlGhQQ7IJDyX0nU++gG5E50/PhlZfebdedGSprN/4=
 notifications:
   slack:
     rooms:

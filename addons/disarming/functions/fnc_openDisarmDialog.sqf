@@ -17,7 +17,6 @@
  */
 #include "script_component.hpp"
 params ["_caller", "_target"];
-private "_display";
 #define DEFUALTPATH "\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa"
 //Sanity Checks
 if (_caller != ACE_player) exitWith {ERROR("Player isn't caller?");};
@@ -28,7 +27,7 @@ disableSerialization;
 
 createDialog QGVAR(remoteInventory);
 
-_display = uiNamespace getVariable ["ACE_remoteInventory", displayNull];
+private _display = uiNamespace getVariable ["ACE_remoteInventory", displayNull];
 if (isNull _display) exitWith {ERROR("Display is Null");};
 
 GVAR(disarmTarget) = _target;
@@ -42,7 +41,7 @@ GVAR(disarmTarget) = _target;
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
 
     TRACE_2("Debug: Droping %1 from %2",_data,GVAR(disarmTarget));
-    ["DisarmDropItems", [GVAR(disarmTarget)], [ACE_player, GVAR(disarmTarget), [_data]]] call EFUNC(common,targetEvent);
+    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data]], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
 
     false //not sure what this does
 }];

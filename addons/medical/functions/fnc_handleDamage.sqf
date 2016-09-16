@@ -9,6 +9,7 @@
  * 3: Shooter <OBJECT>
  * 4: Projectile <OBJECT/STRING>
  * 5: HitPointIndex (-1 for structural) <NUMBER>
+ * 6: Shooter <OBJECT>
  *
  * Return Value:
  * Damage To Be Inflicted <NUMBER>
@@ -25,8 +26,6 @@ if !(local _unit) exitWith {
     TRACE_2("ACE_DEBUG: HandleDamage on remote unit!",_unit, isServer);
     nil
 };
-
-private ["_damageReturn",  "_typeOfDamage", "_minLethalDamage", "_newDamage", "_typeIndex", "_preventDeath"];
 
 // bug, assumed fixed, @todo excessive testing, if nothing happens remove
 if (_projectile isEqualType objNull) then {
@@ -62,16 +61,16 @@ if !(_unit getVariable [QGVAR(allowDamage), true]) exitWith {
 };
 
 // Get return damage
-_damageReturn = _damage;
+private _damageReturn = _damage;
 
-_newDamage = _this call FUNC(handleDamage_caching);
+private _newDamage = _this call FUNC(handleDamage_caching);
 // handleDamage_caching may have modified the projectile string
-_typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
+private _typeOfDamage = [_projectile] call FUNC(getTypeOfDamage);
 
 TRACE_3("ACE_DEBUG: HandleDamage caching new damage",_selection,_newDamage,_unit);
 
-_typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
-_minLethalDamage = if (_typeIndex >= 0) then {
+private _typeIndex = (GVAR(allAvailableDamageTypes) find _typeOfDamage);
+private _minLethalDamage = if (_typeIndex >= 0) then {
     GVAR(minLethalDamages) select _typeIndex
 } else {
     0.01
@@ -102,8 +101,8 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call 
     _damageReturn = _damageReturn min 0.89;
 };
 
-
-[_unit] call FUNC(addToInjuredCollection);
+// Start the loop that tracks the unit vitals
+[_unit] call FUNC(addVitalLoop);
 
 if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitWith {
     private _delayedUnconsicous = false;
@@ -120,11 +119,11 @@ if (_unit getVariable [QGVAR(preventInstaDeath), GVAR(preventInstaDeath)]) exitW
         if (_delayedUnconsicous) then {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit], 0.7] call EFUNC(common,waitAndExecute);
+            }, [_unit], 0.7] call CBA_fnc_waitAndExecute;
         } else {
             [{
                 [_this select 0, true] call FUNC(setUnconscious);
-            }, [_unit]] call EFUNC(common,execNextFrame);
+            }, [_unit]] call CBA_fnc_execNextFrame;
         };
         0.89;
     };

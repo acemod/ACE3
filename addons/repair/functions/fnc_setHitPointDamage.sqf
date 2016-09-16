@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
- * Handles the "setVehicleHitPointDamage" event
+ * Handles the ace_repair_setVehicleHitPointDamage event
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
@@ -21,7 +21,7 @@
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
-private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
+private ["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
 
 // can't execute all commands if the vehicle isn't local. exit here.
 if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};

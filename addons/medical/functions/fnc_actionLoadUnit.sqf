@@ -14,11 +14,10 @@
 
 #include "script_component.hpp"
 
-private "_vehicle";
 params ["_caller", "_target"];
 
 if ([_target] call EFUNC(common,isAwake)) exitWith {
-    ["displayTextStructured", [_caller], [[LSTRING(CanNotLoaded), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [[LSTRING(CanNotLoaded), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 if ([_target] call FUNC(isBeingCarried)) then {
     [_caller, _target] call EFUNC(dragging,dropObject_carry);
@@ -27,4 +26,4 @@ if ([_target] call FUNC(isBeingDragged)) then {
     [_caller, _target] call EFUNC(dragging,dropObject);
 };
 
-_vehicle = [_caller, _target] call EFUNC(common,loadPerson);
+private _vehicle = [_caller, _target] call EFUNC(common,loadPerson);

@@ -18,7 +18,7 @@ TRACE_1("enter", _this);
 #define FCS_UPDATE_DELAY 1
 
 FUNC(laserHudDesignatePFH) = {
-    private["_strongestResultPos", "_args", "_localLaserTarget", "_laserResultPosition", "_laserResult", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turretInfo", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
+    private ["_strongestResultPos", "_args", "_localLaserTarget", "_laserResultPosition", "_laserResult", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turretInfo", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
     params ["_args"];
     _args params ["_shooter", "_localLaserTarget"];
     _vehicle = vehicle _shooter;
@@ -32,7 +32,7 @@ FUNC(laserHudDesignatePFH) = {
     };
 
     if( (count _args) < 4) then {
-        _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
+        _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
     };
     _forceUpdateTime = _args select 3;
 
@@ -57,9 +57,9 @@ FUNC(laserHudDesignatePFH) = {
     };
     */
 
-    if(ACE_diagTime > _forceUpdateTime) then {
+    if(diag_tickTime > _forceUpdateTime) then {
         ["ace_fcs_forceUpdate", []] call ace_common_fnc_localEvent;
-         _args set[3, ACE_diagTime + FCS_UPDATE_DELAY];
+         _args set[3, diag_tickTime + FCS_UPDATE_DELAY];
     };
 
     _this set[0, _args];

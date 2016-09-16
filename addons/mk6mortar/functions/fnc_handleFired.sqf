@@ -70,8 +70,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
-    _deltaT = ACE_time - _time;
-    _args set[2, ACE_time];
+    _deltaT = CBA_missionTime - _time;
+    _args set[2, CBA_missionTime];
 
     _bulletVelocity = velocity _shell;
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -85,4 +85,4 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 
     _shell setVelocity _bulletVelocity;
 
-}, 0, [_projectile, MK6_82mm_AIR_FRICTION, ACE_time, _relativeDensity]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_projectile, MK6_82mm_AIR_FRICTION, CBA_missionTime, _relativeDensity]] call CBA_fnc_addPerFrameHandler;

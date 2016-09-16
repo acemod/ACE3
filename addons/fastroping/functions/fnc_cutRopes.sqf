@@ -32,8 +32,11 @@ _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
         };
     };
 
-    [QGVAR(ropeDetach), [_hook, _ropeTop]] call EFUNC(common,serverEvent);
-    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy, _hook], 60] call EFUNC(common,waitAndExecute);
+    //Destroy rope
+    //Only delete the hook first so the rope falls down.
+    //Note: ropeDetach was used here before, but the command seems a bit broken.
+    deleteVehicle _hook;
+    [{{deleteVehicle _x} count _this}, [_ropeTop, _ropeBottom, _dummy], 60] call CBA_fnc_waitAndExecute;
 } count _deployedRopes;
 
 _vehicle setVariable [QGVAR(deployedRopes), [], true];
@@ -47,4 +50,4 @@ if (isText (_config >> QGVAR(onCut))) then {
 
 [{
     _this setVariable [QGVAR(deploymentStage), 0, true];
-}, _vehicle, _waitTime] call EFUNC(common,waitAndExecute);
+}, _vehicle, _waitTime] call CBA_fnc_waitAndExecute;

@@ -2,10 +2,10 @@
  * Author: Commy2 and esteldunedain
  * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
- * Argument:
+ * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
@@ -65,8 +65,8 @@ if (_unit != ACE_player && (!GVAR(showParticleEffectsForEveryone) || {_unit dist
 };
 
 //Particle Effects:
-if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
-    _unit setVariable [QGVAR(lastDrop), ACE_time];
+if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(lastDrop), -1000]) + 0.40)) && {_scaledTemperature > 0.1}}) then {
+    _unit setVariable [QGVAR(lastDrop), CBA_missionTime];
 
     private _direction = (_unit weaponDirection _weapon) vectorMultiply 0.25;
     private _position = (position _projectile) vectorAdd (_direction vectorMultiply (4*(random 0.30)));
@@ -77,7 +77,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
     if (_intensity > 0) then {
         drop [
         "\A3\data_f\ParticleEffects\Universal\Refract", "", "Billboard", 10, 2, _position, _direction, 0, 1.2, 1.0,
-        0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3*_intensity],[0.2,0.2,0.2,0.05*_intensity]], [0,1], 0.1, 0.05, "", "", ""];
+        0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3 * _intensity],[0.2,0.2,0.2,0.05 * _intensity]], [0,1], 0.1, 0.05, "", "", ""];
     };
     // Smoke SFX, beginning at temp 150°C
     private _intensity = linearConversion [0.15, 1, _scaledTemperature, 0, 1, true];
@@ -85,7 +85,7 @@ if (GVAR(showParticleEffects) && {(ACE_time > ((_unit getVariable [QGVAR(lastDro
     if (_intensity > 0) then {
         drop [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16], "", "Billboard", 10, 1.2, _position,
-        [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5*_intensity],[0.2,0.2,0.2,0.15*_intensity]],
+        [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5 * _intensity],[0.2,0.2,0.2,0.15 * _intensity]],
         [0,1], 1, 0.04, "", "", ""];
     };
 };

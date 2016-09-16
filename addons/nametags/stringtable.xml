@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -395,6 +395,10 @@
             <Hungarian>Szöveg és ikon méretének skálázása</Hungarian>
             <Russian>Масштабирование размера текста и иконок</Russian>
             <Italian>Proporzione Dimensioni Testo ed Icone</Italian>
+        </Key>
+        <Key ID="STR_ACE_NameTags_FadeOnBorder">
+            <English>Fade on screen border</English>
+            <German>Am Bildschirmrand ausblenden</German>
         </Key>
     </Package>
 </Project>

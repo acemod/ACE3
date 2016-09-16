@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"Jonpas"};
-        authorUrl = "https://github.com/jonpas";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Jonpas"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -16,3 +18,7 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
+
+class ACE_newEvents {
+    SetHandcuffed = QEGVAR(captives,setHandcuffed);
+};

@@ -7,7 +7,7 @@
  * 1: Object <OBJECT>
  * 2: Unloader (player) <OPTIONAL><OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can be unloaded <BOOL>
  *
  * Example:

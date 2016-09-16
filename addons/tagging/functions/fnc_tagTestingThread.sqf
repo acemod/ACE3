@@ -16,8 +16,8 @@
 
 #include "script_component.hpp"
 
-_fnc_isLeaning = {
-    params ["_tag", "_tagPosASL", "_vectorDirAndUp"];
+GVAR(tagsToTest) = GVAR(tagsToTest) select {
+    _x params ["_tag", "_tagPosASL", "_vectorDirAndUp"];
 
     _vectorDirAndUp params ["_v1", "_v2"];
 
@@ -34,7 +34,6 @@ _fnc_isLeaning = {
     };
     true
 };
-GVAR(tagsToTest) = [GVAR(tagsToTest), _fnc_isLeaning] call EFUNC(common,filter);
 
 // If there's no more tag
 if (GVAR(tagsToTest) isEqualTo []) exitWith {
@@ -42,5 +41,5 @@ if (GVAR(tagsToTest) isEqualTo []) exitWith {
 };
 
 // Schedule for execution again after 5 seconds
-[DFUNC(tagTestingThread), [], 5] call EFUNC(common,waitAndExecute);
+[DFUNC(tagTestingThread), [], 5] call CBA_fnc_waitAndExecute;
 GVAR(testingThread) = true;

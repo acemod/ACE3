@@ -1,4 +1,5 @@
 #define COMPONENT map_gestures
+#define COMPONENT_BEAUTIFIED Map Gestures
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
@@ -15,5 +16,3 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define EVENT_PLAYER_HAS_NO_OWNER_ID "PlayerNameHasNoOwnerID"

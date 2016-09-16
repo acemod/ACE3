@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
+private ["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
@@ -36,7 +36,14 @@ _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     0;
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
-if (isEngineOn _target) exitWith {false};
+
+if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
+    [QEGVAR(common,engineOn), [_target, false], _target] call CBA_fnc_targetEvent;
+};
+if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
+    [LSTRING(shutOffEngineWarning), 1.5, _caller] call EFUNC(common,displayTextStructured);
+    false
+};
 
 //Items can be an array of required items or a string to a ACE_Setting array
 _items = if (isArray (_config >> "items")) then {
@@ -189,14 +196,13 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_processText"];
 // Find localized string
-_hitPointClassname = if ((typeName _hitPoint) == "STRING") then {
+_hitPointClassname = if (_hitPoint isEqualType "") then {
     _hitPoint
 } else {
     ((getAllHitPointsDamage _target) select 0) select _hitPoint
 };
-_processText = getText (_config >> "displayNameProgress");
+private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
 ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
 
@@ -228,7 +234,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 true;

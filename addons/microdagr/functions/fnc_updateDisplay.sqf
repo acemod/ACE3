@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
  *
@@ -47,9 +47,9 @@ case (APP_MODE_INFODISPLAY): {
 
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODEDISPLAY_HEADINGNUM) ctrlSetText _compassAngleText;
 
@@ -89,7 +89,7 @@ case (APP_MODE_INFODISPLAY): {
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+                    ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
@@ -107,9 +107,9 @@ case (APP_MODE_INFODISPLAY): {
 case (APP_MODE_COMPASS): {
         //Heading:
         _compassAngleText = if (GVAR(settingUseMils)) then {
-            [(floor ((6400 / 360) * (getDir ACE_player))), 4, 0] call CBA_fnc_formatNumber;
+            [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
-            ([(floor (getDir ACE_player)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+            ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
         };
         (_display displayCtrl IDC_MODECOMPASS_HEADING) ctrlSetText _compassAngleText;
 
@@ -145,7 +145,7 @@ case (APP_MODE_COMPASS): {
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
                 } else {
-                    ([(floor (_bearing)), 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
+                    ([_bearing, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
                 };
                 _2dDistanceKm = ((getPosASL ACE_player) distance2D _targetPosLocationASL) / 1000;
                 _rangeText = format ["%1km", ([_2dDistanceKm, 1, 1] call CBA_fnc_formatNumber)];
@@ -171,7 +171,7 @@ case (APP_MODE_WAYPOINTS): {
 
         _currentIndex = (_currentIndex max 0) min (count _waypoints);
         _wpListBox lbSetCurSel _currentIndex;
-             
+
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
     };
@@ -193,7 +193,7 @@ case (APP_MODE_SETUP): {
         } else {
             _settingListBox lbSetTextRight [1, (localize LSTRING(settingOff))];
         };
-           
+
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
     };

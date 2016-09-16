@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 params ["_vehicle"];
 TRACE_2("params", _vehicle,typeOf _vehicle);
 
-private["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint", "_hitPointsAddedAmount", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_icon", "_initializedClasses", "_name", "_position", "_positionsConfig", "_processedHitPoints", "_selection", "_statement", "_target", "_type"];
+private ["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint", "_hitPointsAddedAmount", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_icon", "_initializedClasses", "_name", "_position", "_positionsConfig", "_processedHitPoints", "_selection", "_statement", "_target", "_type"];
 
 _type = typeOf _vehicle;
 
@@ -132,9 +132,9 @@ _processedHitpoints = [];
             // Tracks should always be unique
             if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
             if (_hitpoint == "HitLTrack") then {
-                _position = [-1.75, 0, -1.75];
+                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             } else {
-                _position = [1.75, 0, -1.75];
+                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             };
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};

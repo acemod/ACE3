@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="CookOff">
+        <Key ID="STR_ACE_CookOff_enable_name">
+            <English>Enable cook off</English>
+            <German>Cook-off ermöglichen</German>
+            <Czech>Povolit explozi munice</Czech>
+            <Russian>Включить воспламенение</Russian>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enable_tooltip">
+            <English>Enables cook off and related vehicle destruction effects.</English>
+            <German>Ermöglicht Cook-off und zugehörige Fahrzeug-Zerstörungseffekte.</German>
+            <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
+            <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
+        </Key>
+    </Package>
+</Project>

@@ -26,14 +26,9 @@ class Extended_DisplayLoad_EventHandlers {
 };
 
 class Extended_InitPost_EventHandlers {
-    class All {
-        class GVAR(executePersistent) {
-            init = QUOTE([_this select 0] call FUNC(executePersistent));
-        };
-    };
     class CAManBase {
         class GVAR(setName) {
-            init = QUOTE(if (local (_this select 0)) then {_this call FUNC(setName)};);
+            init = QUOTE(if (local (_this select 0)) then {[ARR_2(FUNC(setName),_this)] call CBA_fnc_execNextFrame};);
         };
         class GVAR(muteUnit) {
             init = QUOTE(_this call FUNC(muteUnitHandleInitPost));
@@ -74,5 +69,11 @@ class Extended_Local_EventHandlers {
 class Extended_FiredBIS_EventHandlers {
     class All {
         ADDON = QUOTE(_this call FUNC(firedEH));
+    };
+};
+
+class Extended_Engine_EventHandlers {
+    class All {
+        ADDON = QUOTE(_this call FUNC(handleEngine));
     };
 };

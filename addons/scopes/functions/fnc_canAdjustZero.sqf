@@ -2,10 +2,10 @@
  * Author: KoffeinFlummi, Ruthberg
  * Changes the adjustment for the current scope
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can we update the zero reference? <BOOL>
  *
  * Example:

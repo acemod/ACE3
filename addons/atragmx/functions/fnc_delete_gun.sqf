@@ -9,14 +9,13 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_delete_gun
+ * call ace_atragmx_fnc_delete_gun
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_index"];
-_index = lbCurSel 6000;
+private _index = lbCurSel 6000;
 
 if (_index == -1) exitWith {};
 

@@ -14,7 +14,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayname = CSTRING(M127A1_White_Name);
-        descriptionshort = CSTRING(M127A1_White_Description);
+        descriptionShort = CSTRING(M127A1_White_Description);
         displayNameShort = CSTRING(M127A1_White_NameShort);
         model = "\A3\weapons_f\ammo\flare_white";
         picture = "\A3\Weapons_F\Data\UI\gear_flare_white_ca.paa";
@@ -25,7 +25,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayname = CSTRING(M127A1_Red_Name);
-        descriptionshort = CSTRING(M127A1_Red_Description);
+        descriptionShort = CSTRING(M127A1_Red_Description);
         displayNameShort = CSTRING(M127A1_Red_NameShort);
         model = "\A3\weapons_f\ammo\flare_red";
         picture = "\A3\Weapons_F\Data\UI\gear_flare_red_ca.paa";
@@ -36,7 +36,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayname = CSTRING(M127A1_Green_Name);
-        descriptionshort = CSTRING(M127A1_Green_Description);
+        descriptionShort = CSTRING(M127A1_Green_Description);
         displayNameShort = CSTRING(M127A1_Green_NameShort);
         model = "\A3\weapons_f\ammo\flare_green";
         picture = "\A3\Weapons_F\Data\UI\gear_flare_green_ca.paa";
@@ -47,7 +47,7 @@ class CfgMagazines {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         displayname = CSTRING(M127A1_Yellow_Name);
-        descriptionshort = CSTRING(M127A1_Yellow_Description);
+        descriptionShort = CSTRING(M127A1_Yellow_Description);
         displayNameShort = CSTRING(M127A1_Yellow_NameShort);
         model = "\A3\weapons_f\ammo\flare_yellow";
         picture = "\A3\Weapons_F\Data\UI\gear_flare_yellow_ca.paa";
@@ -57,11 +57,23 @@ class CfgMagazines {
     class ACE_M84: HandGrenade {
         author = ECSTRING(common,ACETeam);
         displayname = CSTRING(M84_Name);
-        descriptionshort = CSTRING(M84_Description);
-        displayNameShort = "M84";
-        model = PATHTOF(models\ACE_m84.p3d);
-        picture = PATHTOF(UI\ACE_m84_x_ca.paa);
+        descriptionShort = CSTRING(M84_Description);
+        displayNameShort = CSTRING(M84_NameShort);
+        model = QPATHTOF(models\ACE_m84.p3d);
+        picture = QPATHTOF(UI\ACE_m84_x_ca.paa);
         ammo = "ACE_G_M84";
+        mass = 4;
+    };
+
+    class SmokeShell;
+    class ACE_M14: SmokeShell {
+        author = ECSTRING(common,ACETeam);
+        displayname = CSTRING(Incendiary_Name);
+        descriptionShort = CSTRING(Incendiary_Description);
+        displayNameShort = CSTRING(Incendiary_NameShort);
+        model = QPATHTOF(models\ace_anm14th3.p3d);
+        picture = QPATHTOF(UI\ace_anm14th3_x_ca.paa);
+        ammo = "ACE_G_M14";
         mass = 4;
     };
 

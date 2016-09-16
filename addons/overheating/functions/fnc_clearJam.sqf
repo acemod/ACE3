@@ -32,7 +32,7 @@ if (_weapon in _jammedWeapons) then {
             _clearJamAction = getText (configFile >> "CfgWeapons" >> _weapon >> "reloadAction");
         };
 
-        _unit playActionNow _clearJamAction;
+        [_unit, _clearJamAction, 1] call EFUNC(common,doGesture);
         if (_weapon == primaryWeapon _unit) then {
             playSound QGVAR(fixing_rifle);
         } else {
@@ -55,14 +55,14 @@ if (_weapon in _jammedWeapons) then {
         if (GVAR(DisplayTextOnJam)) then {
             [{
                 [localize LSTRING(WeaponUnjammed)] call EFUNC(common,displayTextStructured);
-            }, [], _delay] call EFUNC(common,waitAndExecute);
+            }, [], _delay] call CBA_fnc_waitAndExecute;
         };
     } else {
         // Failure
         if (GVAR(DisplayTextOnJam)) then {
             [{
                 [localize LSTRING(WeaponUnjamFailed)] call EFUNC(common,displayTextStructured);
-            }, [], _delay] call EFUNC(common,waitAndExecute);
+            }, [], _delay] call CBA_fnc_waitAndExecute;
         };
     };
 };

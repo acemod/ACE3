@@ -24,6 +24,10 @@
 private ["_rounds", "_currentRounds", "_maxMagazines", "_currentMagazines", "_dummy", "_weaponSelect"];
 params [["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]];
 _args params ["_target", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
+TRACE_6("params",_target,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
+
+//ToDo: Cleanup with CBA_fnc_ownerEvent in CBA 2.4.2
+if (!(_target turretLocal _turretPath)) exitWith {TRACE_1("not local turret",_turretPath);};
 
 //hint format ["Target: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5\nUnit: %6", _target, _turretPath, _numMagazines, _magazineClass, _numRounds, _unit];
 
@@ -40,15 +44,23 @@ if (_maxMagazines == 1) then {
     if (GVAR(level) == 1) then {
         // Fill magazine completely
         _target setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-        ["displayTextStructured", [_unit], [[LSTRING(Hint_RearmedTriple), _rounds,
+        [QEGVAR(common,displayTextStructured),
+        [
+            [LSTRING(Hint_RearmedTriple), _rounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit]] call EFUNC(common,targetEvent);
+            getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit
+        ],
+        [_unit]] call CBA_fnc_targetEvent;
     } else {
         // Fill only at most _numRounds
         _target setMagazineTurretAmmo [_magazineClass, ((_target magazineTurretAmmo [_magazineClass, _turretPath]) + _numRounds) min _rounds, _turretPath];
-        ["displayTextStructured", [_unit], [[LSTRING(Hint_RearmedTriple), _numRounds,
+        [QEGVAR(common,displayTextStructured),
+        [
+            [LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit]] call EFUNC(common,targetEvent);
+            getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit
+        ],
+        [_unit]] call CBA_fnc_targetEvent;
     };
 } else {
     for "_idx" from 1 to (_maxMagazines+1) do {
@@ -69,9 +81,13 @@ if (_maxMagazines == 1) then {
                 } else {
                     _target setMagazineTurretAmmo [_magazineClass, _currentRounds + _numRounds, _turretPath];
                 };
-                ["displayTextStructured", [_unit], [[LSTRING(Hint_RearmedTriple), _numRounds,
+                [QEGVAR(common,displayTextStructured),
+                [
+                    [LSTRING(Hint_RearmedTriple), _numRounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit]] call EFUNC(common,targetEvent);
+                    getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit
+                ],
+                [_unit]] call CBA_fnc_targetEvent;
             } else {
                 // Fill current magazine completely and fill next magazine partially
                 _target setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
@@ -79,9 +95,13 @@ if (_maxMagazines == 1) then {
                     _target addMagazineTurret [_magazineClass, _turretPath];
                     _target setMagazineTurretAmmo [_magazineClass, _currentRounds, _turretPath];
                 };
-                ["displayTextStructured", [_unit], [[LSTRING(Hint_RearmedTriple), _rounds,
+                [QEGVAR(common,displayTextStructured),
+                [
+                    [LSTRING(Hint_RearmedTriple), _rounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit]] call EFUNC(common,targetEvent);
+                    getText(configFile >> "CfgVehicles" >> (typeOf _target) >> "displayName")], 3, _unit
+                ],
+                [_unit]] call CBA_fnc_targetEvent;
             };
         };
         _target removeMagazineTurret [_magazineClass, _turretPath];

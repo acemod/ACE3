@@ -36,16 +36,18 @@ _itemCount = [];
 _children = [];
 
 {
-    private "_name";
-    _name = if(isText(_x >> "displayNameShort") && {getText(_x >> "displayNameShort") != ""}) then
-        {getText (_x >> "displayNameShort")}else{getText(_x >> "displayName")};
+    private _name = getText (_x >> "displayNameShort");
+    if (_name isEqualTo "") then {
+        _name = getText (_x >> "displayName");
+    };
+
     _children pushBack
         [
             [
                 format ["Explosive_%1", _forEachIndex],
                 format [_name + " (%1)", _itemCount select _forEachIndex],
                 getText(_x >> "picture"),
-                {[{_this call FUNC(setupExplosive)}, _this] call EFUNC(common,execNextFrame)},
+                {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame},
                 {true},
                 {},
                 (configName _x)

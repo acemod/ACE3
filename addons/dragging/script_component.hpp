@@ -1,4 +1,5 @@
 #define COMPONENT dragging
+#define COMPONENT_BEAUTIFIED Dragging
 #include "\z\ace\addons\main\script_mod.hpp"
 
 //#define DEBUG_ENABLED_DRAGGING
