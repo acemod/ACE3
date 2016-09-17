@@ -58,8 +58,10 @@ if (_amountOfMagazines > 0) exitWith {
             private _velVec = _vectorAmmo apply {_x * _speed};
             _projectile setVectorDir _velVec;
             _projectile setVelocity _velVec;
+            [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack);
+        } else {
+            _projectile setDamage 1;
         };
-        [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack);
 
         _projectile;
     };
@@ -78,16 +80,14 @@ if (_amountOfMagazines > 0) exitWith {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
-        [_vehicle, _ammo, _speed, random 1 < 0.6] call _spawnProjectile;
+        [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
     };
-
     if (toLower _simType == "shotgrenade") then {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2.5, 1, 1450];
 
         [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
     };
-
     if (toLower _simType == "shotrocket" || {toLower _simType == "shotmissile"}) then {
         if (random(1) >= 0.9) then {
             private _sound = selectRandom [QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
@@ -98,6 +98,12 @@ if (_amountOfMagazines > 0) exitWith {
             "ACE_ammoExplosionLarge" createvehicle (_vehicle modelToWorld _effect2pos);
         };
     };
+    if (toLower _simType in ["shotdirectionalbomb", "shotilluminating", "shotmine"]) then {
+        if (random(1) >= 0.5) then {
+            [_vehicle, _ammo, 0, false] call _spawnProjectile;
+        };
+    };
+
     [FUNC(detonateAmmunition), [_vehicle, _magazines], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 };
 [FUNC(detonateAmmunition), [_vehicle, _magazines], random 3] call CBA_fnc_waitAndExecute;

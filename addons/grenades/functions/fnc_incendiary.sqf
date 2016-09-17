@@ -146,8 +146,15 @@ if (isServer) then {
         //systemChat format ["burn: %1", _x];
 
         // --- destroy nearby static weapons and ammo boxes
-        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ReammoBox_F"} || {_x isKindOf "ACE_RepairItem_Base"}) then {
+        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
             _x setDamage 1;
+        };
+        if (_x isKindOf "ReammoBox_F") then {
+            if ("ace_cookoff" call EFUNC(common,isModLoaded) && {EGVAR(cookoff,enable)}) then {
+                _x call EFUNC(cookoff,cookOffBox);
+            } else {
+                _x setDamage 1;
+            };
         };
 
         // --- delete nearby ground weapon holders
