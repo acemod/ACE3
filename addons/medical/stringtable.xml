@@ -3486,7 +3486,7 @@
             <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kde může být použita osobní lékárnička (PAK)?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <French>Où le Kit de Premier Secour peut être utilisé</French>
+            <French>Où le Kit de Premier Secour peut être utilisé ?</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
         </Key>
@@ -3507,7 +3507,7 @@
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kdy může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
-            <French>Quand peut être utilisé le Kit de Premier Secours</French>
+            <French>Quand peut être utilisé le Kit de Premier Secours ?</French>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
@@ -3522,7 +3522,7 @@
             <German>Überall</German>
             <Czech>Kdekoliv</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
-            <French>PArtout</French>
+            <French>Partout</French>
             <Hungarian>Akárhol</Hungarian>
             <Italian>Ovunque</Italian>
         </Key>
@@ -3818,7 +3818,7 @@
             <German>Aktiviert das Sanitätssystem für Spieler und KI.</German>
             <Czech>Poskytuje zdravotní systém pro hráče a AI.</Czech>
             <Portuguese>Proporciona um sistema médico para jogadores e IA.</Portuguese>
-            <French>Fourni un sytème médical pour les joueurs et les IAs</French>
+            <French>Fourni un sytème médical pour les joueurs et les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
             <Italian>Fornisce un sistema medico sia per giocatori che IA</Italian>
         </Key>
@@ -3854,7 +3854,7 @@
             <German>Aufzählung von Einheiten, die als Sanitäter gelten. Werden durch Kommata getrennt.</German>
             <Czech>Seznam osob které budou klasifikovány jako zdravotník, oddělené čárkami.</Czech>
             <Portuguese>Lista dos nomes das unidades que se classificam como médicos, separados por vírgulas.</Portuguese>
-            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule</French>
+            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule.</French>
             <Hungarian>Azon egységek nevei, melyek orvosként vannak meghatározva, vesszővel elválasztva.</Hungarian>
             <Italian>Lista di nomi unità che verranno classificati come medici, separati da virgole.</Italian>
         </Key>
@@ -4022,7 +4022,7 @@
             <German>Setze medizinische Einrichtung [ACE]</German>
             <Czech>Určit zdravotnické zařízení [ACE]</Czech>
             <Portuguese>Definir instalação médica [ACE]</Portuguese>
-            <French>Définir comme équipement médical [ACE]</French>
+            <French>Définir comme installation médical [ACE]</French>
             <Hungarian>Orvosi létesítmény beállítása [ACE]</Hungarian>
             <Italian>Imposta Struttura Medica [ACE]</Italian>
         </Key>
@@ -4034,7 +4034,7 @@
             <German>Ist eine medizinische Einrichtung</German>
             <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
-            <French>Est un équipement médical</French>
+            <French>Est une installation médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>E' Struttura Medica</Italian>
         </Key>
@@ -4046,7 +4046,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung</German>
             <Czech>Registruje objekt jako zdravotnické zařízení</Czech>
             <Portuguese>Registra um objeto como instalacão médica</Portuguese>
-            <French>Enregistrer un objet comme un équipement médical</French>
+            <French>Enregistrer un objet comme une installation médical</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
             <Italian>Registra un oggetto come struttura medica</Italian>
         </Key>
@@ -4058,7 +4058,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung. Hier werden weitere, tiefgreifende Behandlungen ermöglicht. Kann Fahrzeugen oder Gebäuden zugewiesen werden.</German>
             <Czech>Definuje objekt jako zdravotnické zařízení. To umožňuje více pokročilé léčení. Může být použito na budovy nebo na vozidla.</Czech>
             <Portuguese>Define um objeto como instalação médica. Isso permite tratamentos mais avançados. Pode ser utilizado em edifícios e veículos.</Portuguese>
-            <French>Définir un objet comme équipement médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
+            <French>Définir un objet comme installation médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
             <Hungarian>Egy objektumot orvosi létesítményként határoz meg. Ez fejlett ellátási lehetőségeket engedélyez. Használható járműveken és épületeken.</Hungarian>
             <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
         </Key>
@@ -4182,7 +4182,7 @@
             <Italian>Ritarda il cessate il fuoco dell'IA quando il giocatore è svenuto per motivi medici.</Italian>
             <Czech>Prodleva zastavení palby pro AI, pokud je hráč v bezvědomí ze zdravotních důvodů.</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
-            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
+            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales.</French>
             <Russian>Задержка прекращения огня ботами, когда игрок теряет сознание по медицинским причинам.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">

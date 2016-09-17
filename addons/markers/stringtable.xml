@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
             <German>Drehung: %1°</German>
-            <French>Direction: %1°</French>
+            <French>Direction : %1°</French>
             <Czech>Směr: %1°</Czech>
             <Polish>Kierunek: %1°</Polish>
             <Spanish>Dirección: %1°</Spanish>

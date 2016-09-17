@@ -29,21 +29,25 @@
             <English>Connect Headphones</English>
             <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
+            <French>Connecter les écouteurs</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
             <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
+            <French>Déconnecter les écouteurs</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
             <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
+            <French>Écouteurs connectés</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
+            <French>Écouteurs déconnectés</French>
         </Key>
     </Package>
 </Project>
