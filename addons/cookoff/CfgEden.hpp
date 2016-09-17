@@ -6,7 +6,7 @@ class Cfg3DEN {
                 class Attributes {
                     class GVAR(enable) {
                         property = QGVAR(enable);
-                        control = "CheckboxInverted";
+                        control = "Checkbox";
                         displayName = CSTRING(enable_name);
                         tooltip = CSTRING(enable_tooltip);
                         expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
