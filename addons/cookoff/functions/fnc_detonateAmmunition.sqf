@@ -20,6 +20,7 @@ params ["_vehicle", "_magazines"];
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore
+if (underwater _vehicle) exitWith {};
 
 private _magazineIndex = floor random(count _magazines);
 private _magazine = _magazines select _magazineIndex;
