@@ -63,10 +63,11 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 // secondary explosions
 ["AllVehicles", "killed", {
-    if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
-        (_this select 0) call FUNC(secondaryExplosions);
-        if (GVAR(enableAmmoCookoff)) then {
-            [(_this select 0), magazinesAmmo (_this select 0)] call FUNC(detonateAmmunition);
+    params ["_vehicle"];
+    if (_vehicle getVariable [QGVAR(enable),GVAR(enable)]) then {
+        _vehicle call FUNC(secondaryExplosions);
+        if (_vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
+            [_vehicle, magazinesAmmo _vehicle] call FUNC(detonateAmmunition);
         };
     };
 }, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
@@ -74,7 +75,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 // blow off turret effect
 ["Tank", "killed", {
     if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
-        if (random (1) < 0.25) then {
+        if (random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };
     };

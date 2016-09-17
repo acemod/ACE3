@@ -59,15 +59,18 @@ if (_amountOfMagazines > 0) exitWith {
             _projectile setVectorDir _velVec;
             _projectile setVelocity _velVec;
         };
+        [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack);
+
         _projectile;
     };
+
+    private _speed = random (_speedOfAmmo / 10) max 1;
 
     if (toLower _simType == "shotbullet") then {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\light_crack_close.wss)), QUOTE(PATHTO_R(sounds\light_crack_close_filtered.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1250];
 
-        if (random(1) >= 0.3) then {
-            private _speed = (((_speedOfAmmo * 0.5) + (random (_speedOfAmmo / 2))) min _speedOfAmmo);
+        if (random(1) >= 0.4) then {
             [_vehicle, _ammo, _speed, true] call _spawnProjectile;
         };
     };
@@ -75,16 +78,14 @@ if (_amountOfMagazines > 0) exitWith {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
-        private _speed = (((_speedOfAmmo * 0.5) + (random (_speedOfAmmo / 2))) min _speedOfAmmo);
-        [_vehicle, _ammo, _speed, random 1 >= 0.4] call _spawnProjectile;
+        [_vehicle, _ammo, _speed, random 1 < 0.6] call _spawnProjectile;
     };
 
     if (toLower _simType == "shotgrenade") then {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2.5, 1, 1450];
 
-        private _speed = (((_speedOfAmmo * 0.5) + (random (_speedOfAmmo / 2))) min _speedOfAmmo);
-        [_vehicle, _ammo, _speed, random 1 >= 0.5] call _spawnProjectile;
+        [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
     };
 
     if (toLower _simType == "shotrocket" || {toLower _simType == "shotmissile"}) then {
@@ -92,8 +93,7 @@ if (_amountOfMagazines > 0) exitWith {
             private _sound = selectRandom [QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
             playSound3D [_sound, objNull, false, (getPosASL _vehicle), 3, 1, 1600];
 
-            private _speed = (((_speedOfAmmo * 0.5) + (random (_speedOfAmmo / 2))) min _speedOfAmmo);
-            [_vehicle, _ammo, _speed, random 1 >= 0.7] call _spawnProjectile;
+            [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
         } else {
             "ACE_ammoExplosionLarge" createvehicle (_vehicle modelToWorld _effect2pos);
         };

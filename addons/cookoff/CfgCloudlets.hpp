@@ -53,7 +53,7 @@ class CfgCloudlets {
     };
 };
 
-class ExploAmmoExplosion {
+class GVAR(ExploAmmoExplosion) {
     class ExploAmmoFlash {
         position[] = {0,0,0};
         simulation = "particles";
