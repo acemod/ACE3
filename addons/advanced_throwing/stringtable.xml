@@ -99,7 +99,7 @@
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
             <Russian>(Клик) Подготовить</Russian>
-            <French>(Click) Dégoupiller</French>
+            <French>(Clique) Dégoupiller</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>

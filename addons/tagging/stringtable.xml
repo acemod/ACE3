@@ -4,37 +4,44 @@
         <Key ID="STR_ACE_Tagging_Tagging">
             <English>Tagging</English>
             <Russian>Маркировка</Russian>
+            <French>Marquage</French>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
+            <French>Configure le fonctionnement par défaut du système de marquage.</French>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
+            <French>Marquage rapide</French>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
+            <French>Action réalisé au point de marquage principal.</French>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
+            <French>Dernier utilisé</French>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
+            <French>Aléatoire X</French>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
             <Russian>Случайный</Russian>
+            <French>Aléatoire</French>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
             <Polish>Oznakuj</Polish>
-            <French>Tag</French>
+            <French>Marque</French>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
@@ -133,7 +140,7 @@
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Un spray de peinture pour taguer les murs.</French>
+            <French>Un spray de peinture pour marquer les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>

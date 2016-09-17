@@ -6,36 +6,42 @@
             <Polish>Nieśmiertelnik</Polish>
             <Russian>Жетон</Russian>
             <Czech>Identifikační známka</Czech>
+            <French>Plaque d'identification</French>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
             <Polish>Sprawdź nieśmiertelnik</Polish>
             <Russian>Проверить жетон</Russian>
             <Czech>Zkontrolovat známku</Czech>
+            <French>Vérifier les plaques d'identification</French>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
             <Polish>Sprawdź</Polish>
             <Russian>Проверить</Russian>
             <Czech>Zkontroluj</Czech>
+            <French>Vérifier</French>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
             <Polish>Zabierz</Polish>
             <Russian>Взять</Russian>
             <Czech>Vezmi</Czech>
+            <French>Prendre</French>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
+            <French>Plaque d'identification pris sur %1...</French>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
+            <French>Quelqu'un d'autre a déjâ pris les plaques d'identification...</French>
         </Key>
     </Package>
 </Project>
