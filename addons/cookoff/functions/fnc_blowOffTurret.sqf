@@ -30,4 +30,7 @@
 
     _turret setVectorUp [random 1, random 1, 1];
     _turret setVelocity [random 7, random 7, 8 + random 5];
+
+    // add turret to all curators that already own the wreck
+    [QGVAR(addTurretToEditable), [_vehicle, _turret]] call CBA_fnc_serverEvent;
 }, _this, 1] call CBA_fnc_waitAndExecute;
