@@ -3,7 +3,7 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_level_DisplayName);
         description = CSTRING(MedicalSettings_level_Description);
-        value = 1;
+        value = 2;
         typeName = "SCALAR";
         values[] = {"Disabled", "Basic", "Advanced"};
     };
@@ -11,7 +11,7 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_medicSetting_DisplayName);
         description = CSTRING(MedicalSettings_medicSetting_Description);
-        value = 1;
+        value = 0;
         typeName = "SCALAR";
         values[] = {"Disabled", "Normal", "Advanced"};
     };
@@ -98,7 +98,7 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);
         description = CSTRING(MedicalSettings_enableUnconsciousnessAI_Description);
-        value = 1;
+        value = 0;
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
@@ -141,7 +141,7 @@ class ACE_Settings {
     class GVAR(allowDeadBodyMovement) {
         category = CSTRING(Category_Medical);
         typeName = "BOOL";
-        value = 0;
+        value = 1;
     };
     class GVAR(allowLitterCreation) {
         category = CSTRING(Category_Medical);
@@ -188,7 +188,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_medicSetting_SurgicalKit_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(consumeItem_PAK) {
@@ -228,7 +228,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
         typeName = "SCALAR";
-        value = 2;
+        value = 0;
         values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useCondition_PAK) {
@@ -259,14 +259,14 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);
         typeName = "BOOL";
-        value = 0;
+        value = ;
     };
     class GVAR(painIsOnlySuppressed) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);
         typeName = "BOOL";
-        value = 1;
+        value = 0;
     };
     class GVAR(painEffectType) {
         category = CSTRING(Category_Medical);
