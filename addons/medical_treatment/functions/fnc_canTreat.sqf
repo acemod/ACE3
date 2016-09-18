@@ -12,7 +12,7 @@
  * Can Treat <BOOL>
  *
  * Example:
- * [player, cursorTarget, "Head", "SurgicalKit"] call ace_medical_fnc_canTreat
+ * [player, cursorTarget, "Head", "SurgicalKit"] call ace_medical_treatment_fnc_canTreat
  *
  * Public: Yes
  */
@@ -23,7 +23,7 @@ params ["_caller", "_target", "_selectionName", "_className"];
 
 if !(_target isKindOf "CAManBase") exitWith { false };
 
-private _config = (ConfigFile >> "ACE_Medical_Treatment" >> (["Basic", "Advanced"] select (GVAR(level)>=2)) >> _className);
+private _config = (configFile >> "ACE_Medical_Treatment_Actions" >> (["Basic", "Advanced"] select (EGVAR(medical,level)>=2)) >> _className);
 
 if !(isClass _config) exitwith {false};
 
@@ -35,10 +35,11 @@ private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
 } else {
     // Check for required class
     if (isText (_config >> "requiredMedic")) exitwith {
-        missionNamespace getVariable [(getText (_config >> "requiredMedic")), 0]
+        missionNamespace getVariable [getText (_config >> "requiredMedic"), 0];
     };
     0;
 };
+
 if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitwith { false };
 
 private _items = getArray (_config >> "items");
@@ -61,7 +62,9 @@ if (getText (_config >> "condition") != "") then {
         _return = [_caller, _target, _selectionName, _className] call _condition;
     };
 };
-if (!_return) exitwith { false };
+if (!_return) exitwith {
+    false;
+};
 
 private _patientStateCondition = if (isText(_config >> "patientStateCondition")) then {
     missionNamespace getVariable [getText(_config >> "patientStateCondition"), 0]

@@ -17,7 +17,7 @@ params ["_unit"];
 
 while {({_x == "FirstAidKit"} count items _unit) > 0} do {
     _unit removeItem "FirstAidKit";
-    if (GVAR(level) >= 2) then {
+    if (EGVAR(medical,level) >= 2) then {
         _unit addItem "ACE_fieldDressing";
         _unit addItem "ACE_packingBandage";
         _unit addItem "ACE_morphine";
@@ -31,7 +31,7 @@ while {({_x == "FirstAidKit"} count items _unit) > 0} do {
 
 while {({_x == "Medikit"} count items _unit) > 0} do {
     _unit removeItem "Medikit";
-    if (GVAR(level) >= 2) then {
+    if (EGVAR(medical,level) >= 2) then {
         _unit addItemToBackpack "ACE_fieldDressing";
         _unit addItemToBackpack "ACE_packingBandage";
         _unit addItemToBackpack "ACE_packingBandage";

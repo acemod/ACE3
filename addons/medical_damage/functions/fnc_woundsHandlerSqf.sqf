@@ -21,8 +21,9 @@ private ["_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPoss
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
+systemChat format["input: %1", _this];
 // Convert the selectionName to a number and ensure it is a valid selection.
-_bodyPartn = [_selectionName] call EFUNC(medical,selectionNameToNumber);
+_bodyPartn = EGVAR(medical,HITPOINTS) find _selectionName; //[_selectionName] call EFUNC(medical,selectionNameToNumber);
 if (_bodyPartn < 0) exitWith {};
 
 if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};

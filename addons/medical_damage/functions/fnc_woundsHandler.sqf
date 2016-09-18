@@ -20,6 +20,8 @@
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: woundshandler",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
+systemChat format["input: %1", _this];
+
 if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
 
 // Administration for open wounds and ids

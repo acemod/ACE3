@@ -214,7 +214,7 @@ class ACE_Medical_Injuries {
     class fractures {
         class Femur {
             name = CSTRING(Wounds_Femur);
-            selections[] = {"Head", "Torso"};
+            selections[] = {"Head", "Body"};
             pain = 0.2;
             causes[] = {"Bullet", "VehicleCrash", "Backblast", "Explosive", "Shell", "Grenade"};
             minDamage = 0.5;
