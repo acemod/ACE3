@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+#define DAMAGE_STRUCTURAL QGVAR(newDamage$#structural)
+
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex"];
 //diag_log _this;
 
@@ -49,7 +51,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     private _damageHead = (_unit getVariable [QGVAR(newDamage$HitHead), 0]) max _damageFace max _damageNeck;
 
     // --- Body
-    private _damageStructural = _unit getVariable [QGVAR(newDamage$#structural), 0];
+    private _damageStructural = _unit getVariable [DAMAGE_STRUCTURAL, 0];
     private _damagePelvis = _unit getVariable [QGVAR(newDamage$HitPelvis), 0];
     private _damageAbdomen = _unit getVariable [QGVAR(newDamage$HitAbdomen), 0];
     private _damageDiaphragm = _unit getVariable [QGVAR(newDamage$HitDiaphragm), 0];

@@ -33,10 +33,6 @@ if (isClass (_config >> _treatmentClassname)) then {
     ERROR("IV Treatment Classname not found");
 };
 
-private _varName = format["ACE_Medical_IVVolume_%1",_typeOf];
-_target setVariable [_varName, (_target getVariable [_varName, 0]) + _volumeAdded, true];
-
-if !(_varName in EGVAR(medical,IVBags)) then {
-    EGVAR(medical,IVBags) pushBack _varName;
-    publicVariable QEGVAR(medical,IVBags)
-};
+private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
+_bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _typeOf]
+_target setVariable [QEGVAR(medical,ivBags), _bloodBags, true];

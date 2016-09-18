@@ -36,9 +36,7 @@ if (alive _target) exitWith {
     _target setVariable [QEGVAR(medical,fractures), []];
 
     // IVs
-    _target setVariable [QEGVAR(medical,salineIVVolume), 0];
-    _target setVariable [QEGVAR(medical,plasmaIVVolume), 0];
-    _target setVariable [QEGVAR(medical,bloodIVVolume), 0];
+    _target setVariable [QEGVAR(medical,ivBags), nil, true];
 
     // damage storage
     _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
@@ -67,6 +65,6 @@ if (alive _target) exitWith {
     // Resetting damage
     _target setDamage 0;
 
-    [_target, "activity", ELSTRING(medical,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
-    [_target, "activity_view", ELSTRING(medical,Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+    [_target, "activity", LSTRING(Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+    [_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 };

@@ -18,7 +18,3 @@
 params ["_caller", "_target","_className"];
 
 [_target, false] call EFUNC(medical,setUnconscious);
-
-if (_target getVariable [QEGVAR(medical,inReviveState), false]) then {
-    _target setVariable [QEGVAR(medical,inReviveState), nil, true];
-};
