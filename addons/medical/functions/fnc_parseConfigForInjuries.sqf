@@ -162,7 +162,10 @@ private _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific"
 {
     _x params ["_classID", "_selections", "_bloodLoss", "_pain", "_damage", "_causesArray", "_classDisplayName"];
     _damage params ["_minDamage", "_maxDamage"];
+
     private _className = GVAR(woundClassNames) select _forEachIndex;
+    if (_classDisplayName == "") then {_classDisplayName = _className; }; // fall back
+
     private _allowedSelections = "";
     {
         _allowedSelections = _allowedSelections + _x;

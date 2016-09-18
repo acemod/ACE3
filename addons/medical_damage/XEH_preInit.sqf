@@ -4,7 +4,7 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-[QGVAR(woundReceived), {
+[QEGVAR(medical_engine,woundReceived), {
     params ["_unit", "_woundedHitPoint", "_receivedDamage", "", "_ammo"];
 
     private _selectionName = EGVAR(medical,SELECTIONS) param [EGVAR(medical,HITPOINTS) find _woundedHitPoint]; // @todo
