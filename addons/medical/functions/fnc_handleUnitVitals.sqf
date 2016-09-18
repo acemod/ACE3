@@ -50,7 +50,11 @@ if (_bloodVolume < 100) then {
 };
 
 TRACE_3("ACE_DEBUG",[_unit] call FUNC(getBloodLoss),_unit getVariable QGVAR(isBleeding),_unit);
-if (([_unit] call FUNC(getBloodLoss)) > 0) then {
+private _bloodLoss = [_unit] call FUNC(getBloodLoss);
+if (_bloodLoss > 0) then {
+    _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
+
+    [_unit, "TakenInjury"] call FUNC(stateEvent);
     if !(_unit getVariable [QGVAR(isBleeding), false]) then {
         _unit setVariable [QGVAR(isBleeding), true, true];
     };

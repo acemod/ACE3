@@ -15,8 +15,8 @@
  */
 #include "script_component.hpp"
 
-private _configBasic = (configFile >> "ACE_Medical_Treatments" >> "Basic");
-private _configAdvanced = (configFile >> "ACE_Medical_Treatments" >> "Advanced");
+private _configBasic = (configFile >> "ACE_Medical_Treatment_Actions" >> "Basic");
+private _configAdvanced = (configFile >> "ACE_Medical_Treatment_Actions" >> "Advanced");
 
 private _fnc_compileActionsLevel = {
     params ["_config"];
@@ -29,6 +29,7 @@ private _fnc_compileActionsLevel = {
             private _condition = format[QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,canTreatCached)), configName _x];
             private _statement = format[QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,treatment)), configName _x];
             _actions pushBack [_displayName, _category, compile _condition, compile _statement];
+            diag_log format["ACTION: %1", [_displayName, _category, compile _condition, compile _statement]];
         };
         nil
     } count ("true" configClasses _config);

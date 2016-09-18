@@ -21,3 +21,12 @@ PREP(setHitPointDamage);
 PREP(setStructuralDamage);
 PREP(stateEvent);
 PREP(stateMachine);
+
+// PREP(hasMedicalEnabled);
+
+PREP(handleStateDefault);
+PREP(handleStateInjured);
+PREP(handleStateUnconscious);
+PREP(handleUnitVitals);
+PREP(handleMedications);
+// PREP(handleStateRevive);

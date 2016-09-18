@@ -50,3 +50,5 @@ PREP(treatment_failure);
 PREP(treatment_success);
 PREP(useItem);
 PREP(useItems);
+
+PREP(checkItems);

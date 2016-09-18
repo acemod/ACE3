@@ -5,9 +5,16 @@ params ["_stateMachineConfig"];
 private _getCode = {
     params ["_config", "_attribute"];
     private _value = getText (_config >> _attribute);
-    if (_value == "") then {_value = "true"};
-    compile _value;
+    if (isNil {missionNamespace getVariable _value}) exitWith {
+        if (_value == "") then {_value = "true"};
+        systemChat format ["getCode (%1) is returning nil: %3", _attribute, missionnamespace getVariable _value, _value];
+        diag_log format ["getCode (%1) is returning nil: %3", _attribute, missionnamespace getVariable _value, _value];
+
+        compile _value;
+    };
+    missionNamespace getVariable _value;
 };
+
 private _stateMachine = call CBA_fnc_createNamespace;
 
 private _states = [];

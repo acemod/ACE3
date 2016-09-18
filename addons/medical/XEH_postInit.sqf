@@ -5,13 +5,13 @@ GVAR(heartBeatSounds_Fast) = ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "A
 GVAR(heartBeatSounds_Normal) = ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"];
 GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 
-
+call FUNC(stateMachine);
 
 //Handle Deleting Bodies and creating litter on Server:
 if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
 };
-    [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+[QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_status"];

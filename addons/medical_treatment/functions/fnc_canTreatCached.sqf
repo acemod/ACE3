@@ -6,7 +6,7 @@
  * 0: The caller <OBJECT>
  * 1: The target <OBJECT>
  * 2: Selection name <STRING>
- * 3: ACE_Medical_Treatments Classname <STRING>
+ * 3: ACE_Medical_Treatment Classname <STRING>
  *
  * ReturnValue:
  * Can Treat <BOOL>

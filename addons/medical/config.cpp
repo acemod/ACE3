@@ -8,12 +8,13 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {""};
+        authors[] = {"Glowbal", "KoffeinFlummi"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "ACE_Medical_Injuries.hpp"
 #include "ACE_Medical_StateMachine.hpp"
 

@@ -77,8 +77,7 @@ _logs = _unit getVariable [QGVAR(allLogs), []];
 } forEach _logs;
 _unit setVariable [QGVAR(allLogs), [], true];
 
-// TODO move to treatment
-// items
 [{
-    _this call FUNC(itemCheck);
+    params ["_unit"];
+    [QGVAR(initialized), [_unit]] call CBA_fnc_localEvent;
 }, [_unit], 0.5, 0.1] call CBA_fnc_waitAndExecute;

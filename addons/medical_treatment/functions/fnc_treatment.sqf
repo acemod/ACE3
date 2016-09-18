@@ -25,9 +25,9 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened),false]) exit
 
 if !(_target isKindOf "CAManBase") exitWith {false};
 
-private _config = (configFile >> "ACE_Medical_Treatments" >> "Basic" >> _className);
+private _config = (configFile >> "ACE_Medical_Treatment" >> "Basic" >> _className);
 if (GVAR(level) >= 2) then {
-    _config = (configFile >> "ACE_Medical_Treatments" >> "Advanced" >> _className);
+    _config = (configFile >> "ACE_Medical_Treatment" >> "Advanced" >> _className);
 };
 
 if !(isClass _config) exitwith {false};
@@ -45,7 +45,7 @@ private _medicRequired = if (isNumber (_config >> "requiredMedic")) then {
     0;
 };
 
-if !([_caller, _medicRequired] call FUNC(isMedic)) exitwith {false};
+if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitwith {false};
 
 private _allowedSelections = getArray (_config >> "allowedSelections");
 if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitwith {false};
@@ -77,7 +77,7 @@ private _patientStateCondition = if (isText(_config >> "patientStateCondition"))
 } else {
     getNumber(_config >> "patientStateCondition")
 };
-if (_patientStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+if (_patientStateCondition == 1 && {!([_target] call EFUNC(medical,isInStableCondition))}) exitwith {false};
 
 // Check allowed locations
 private _locations = getArray (_config >> "treatmentLocations");
@@ -136,7 +136,7 @@ if (isNil _callbackProgress) then {
 
 // Patient Animation
 private _patientAnim = getText (_config >> "animationPatient");
-if (_target getVariable ["ACE_isUnconscious", false] && GVAR(allowUnconsciousAnimationOnTreatment)) then {
+if (_target getVariable ["ACE_isUnconscious", false] && EGVAR(medical,allowUnconsciousAnimationOnTreatment)) then {
     if !(animationState _target in (getArray (_config >> "animationPatientUnconsciousExcludeOn"))) then {
         _patientAnim = getText (_config >> "animationPatientUnconscious");
     };

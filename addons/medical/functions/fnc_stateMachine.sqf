@@ -21,11 +21,12 @@ GVAR(monitoredUnitsListIsSorted) = false;
        _x params ["_unit"];
 
        if (!isNull _unit && alive _unit) then {
-           private _unitState = _unit getVariable [QGVAR(state), [CBA_missionTime, DEFAULT_STATE]];
+           private _unitState = _unit getVariable [QGVAR(state), [-1, DEFAULT_STATE]];
            _unitState params ["_lastTime", "_state"];
 
-           if ((_lastTime + DELAY) > CBA_missionTime) exitWith {_exit = true;};
+           if (CBA_missionTime - _lastTime < DELAY) exitWith { _exit = true; };
            _state params ["_name", "_handler", "_onEntry", "_onExit", "_transitions"];
+
            _unitState set [0, CBA_missionTime];
 
            _unit setvariable [QGVAR(state), _unitState];
