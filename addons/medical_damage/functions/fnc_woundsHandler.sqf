@@ -20,6 +20,8 @@
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: woundshandler",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
+if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
+
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable[QEGVAR(medical,openWounds), []];
 private _woundID = _unit getVariable[QEGVAR(medical,lastUniqueWoundID), 1];

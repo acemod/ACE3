@@ -19,6 +19,5 @@
 
 private "_bodyPartn";
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call EFUNC(medical,selectionNameToNumber);
-
+// _bodyPartn = [_selectionName] call EFUNC(medical,selectionNameToNumber);
 // TODO implement internal injuries

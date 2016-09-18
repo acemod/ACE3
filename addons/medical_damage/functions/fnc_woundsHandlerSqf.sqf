@@ -25,6 +25,8 @@ TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD Called",_unit, _selectionName, _damag
 _bodyPartn = [_selectionName] call EFUNC(medical,selectionNameToNumber);
 if (_bodyPartn < 0) exitWith {};
 
+if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
+
 // Get the injury type information. Format: [typeDamage thresholds, selectionSpecific, woundTypes]
 _injuryTypeInfo = missionNamespace getVariable [format[QGVAR(woundInjuryType_%1), _typeOfDamage],[[], false, []]];
 
