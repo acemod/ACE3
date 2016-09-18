@@ -651,6 +651,7 @@
             <Italian>Mina M6 SLAM (base)</Italian>
             <Czech>M6 SLAM (Útok zespoda)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Inferior)</Portuguese>
+            <Russian>Мина M6 SLAM (направлена вверх)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_SLAMSideAttack_DisplayName">
             <English>M6 SLAM Mine (Side Attack)</English>
@@ -668,6 +669,7 @@
             <Italian>	STR_ACE_Explosives_Module_SLAMBottomAttack_DisplayName	M6 SLAM Mine (Bottom Attack)		Mine M6 SLAM (par le bas)	M6-SLAM-Mine (Bodenangriff)		Mina M6 SLAM (base)	Mina M6 SLAM (atak od dołu)			Mina M6 SLAM (Laterale)</Italian>
             <Czech>M6 SLAM (Útok do strany)</Czech>
             <Portuguese>Mina M6 SLAM (Ataque Lateral)</Portuguese>
+            <Russian>Мина M6 SLAM (направлена вбок)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanBig_Range_DisplayName">
             <English>Large IED (Urban, Pressure Plate)</English>
@@ -685,6 +687,7 @@
             <Italian>IED grande (urbano, a pressione)</Italian>
             <Czech>IED, Velké (Městské, Nášlapné)</Czech>
             <Portuguese>IED Grande (Urbano, Placa de pressão)</Portuguese>
+            <Russian>Большое СВУ (городское, нажимного действия)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandBig_Range_DisplayName">
             <English>Large IED (Dug-in, Pressure Plate)</English>
@@ -702,6 +705,7 @@
             <Italian>IED grande (interrato, a pressione)</Italian>
             <Czech>IED, Velké (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Grande (Enterrado, Placa de pressão)</Portuguese>
+            <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDUrbanSmall_Range_DisplayName">
             <English>Small IED (Urban, Pressure Plate)</English>
@@ -719,6 +723,7 @@
             <Italian>IED piccolo (urbano, a pressione)</Italian>
             <Czech>IED, Malé (Městské, Nášlapné)</Czech>
             <Portuguese>IED Pequeno(Urbano, Placa de pressão)</Portuguese>
+            <Russian>Малое СВУ (городское, нажимного действия)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_Module_IEDLandSmall_Range_DisplayName">
             <English>Small IED (Dug-in, Pressure Plate)</English>
@@ -736,6 +741,7 @@
             <Italian>IED piccolo (interrato, a pressione)</Italian>
             <Czech>IED, Malé (Zakopané, Nášlapné)</Czech>
             <Portuguese>IED Pequeno (Enterrado, Placa de pressão)</Portuguese>
+            <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_connectInventoryExplosiveToDeadman">
             <English>Connect to %1</English>
@@ -748,6 +754,14 @@
             <Hungarian>Csatlakozás %1</Hungarian>
             <Italian>Collega a  %1</Italian>
             <Portuguese>Conectar à %1</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name">
+            <English>Tripwire Flare</English>
+            <Russian>Сигнальная растяжка</Russian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Description">
+            <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
+            <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сгнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
         </Key>
     </Package>
 </Project>

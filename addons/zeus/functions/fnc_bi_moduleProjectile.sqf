@@ -18,18 +18,13 @@
 #include "script_component.hpp"
 
 _fnc_scriptNameParentTemp = if !(isNil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
-private ['_fnc_scriptNameParent'];
-_fnc_scriptNameParent = _fnc_scriptNameParentTemp;
+private _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
 
-private ['_fnc_scriptName'];
-_fnc_scriptName = 'BIS_fnc_moduleProjectile';
+private _fnc_scriptName = 'BIS_fnc_moduleProjectile';
 scriptname _fnc_scriptName;
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if ({local _x} count (objectcurators _logic) > 0) then {
     //--- Reveal the circle to curators

@@ -52,23 +52,27 @@ _addons = _addons select {_x find "ace_" == 0};
 ///////////////
 // check dlls
 ///////////////
-{
-    private _versionEx = _x callExtension "version";
+if (toLower (productVersion select 6) in ["linux", "osx"]) then {
+    ACE_LOGINFO_2("Operating system does not support DLL file format");
+} else {
+    {
+        private _versionEx = _x callExtension "version";
 
-    if (_versionEx == "") then {
-        private _errorMsg = format ["Extension %1.dll not installed.", _x];
+        if (_versionEx == "") then {
+            private _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-        ACE_LOGERROR(_errorMsg);
+            ACE_LOGERROR(_errorMsg);
 
-        if (hasInterface) then {
-            ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+            if (hasInterface) then {
+                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+            };
+        } else {
+            // Print the current extension version
+            ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
         };
-    } else {
-        // Print the current extension version
-        ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
-    };
-    false
-} count getArray (configFile >> "ACE_Extensions" >> "extensions");
+        false
+    } count getArray (configFile >> "ACE_Extensions" >> "extensions");
+};
 
 ///////////////
 // check server version/addons

@@ -295,6 +295,14 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
+// It is possible that CBA_fnc_addPlayerEventHandler has allready been called and run
+// We will NOT get any events for the initial state, so manually set ACE_player
+if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then {
+    // INFO("CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player"); //ToDo CBA 3.1
+    diag_log text "[ACE-Common - CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player";
+    ACE_player = cba_events_oldUnit;
+};
+
 // "playerChanged" event
 ["unit", {
     ACE_player = (_this select 0);

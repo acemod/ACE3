@@ -20,7 +20,7 @@ params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitWith {
-    ERROR("running surrender on remote unit");
+    WARNING("running surrender on remote unit");
 };
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
@@ -35,12 +35,12 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
 };
 
 if ((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _state) exitWith {
-    ERROR("Surrender: current state same as new");
+    WARNING("Surrender: current state same as new");
 };
 
 if (_state) then {
-    if ((vehicle _unit) != _unit) exitWith {ERROR("Cannot surrender while mounted");};
-    if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {ERROR("Cannot surrender while handcuffed");};
+    if ((vehicle _unit) != _unit) exitWith {WARNING("Cannot surrender while mounted");};
+    if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {WARNING("Cannot surrender while handcuffed");};
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
 

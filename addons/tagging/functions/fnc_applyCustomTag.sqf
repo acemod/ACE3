@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * ["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["path\to\texture1.paa", "path\to\texture2.paa"], "path\to\icon.paa"] call ace_tagging_fnc_addCustomTagLocal
+ * ["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["path\to\texture1.paa", "path\to\texture2.paa"], "path\to\icon.paa"] call ace_tagging_fnc_applyCustomTag
  *
  * Public: No
  */
@@ -22,12 +22,10 @@
 params ["_identifier", "_displayName", "_requiredItem"];
 
 // Add only if tag not already added (compare identifiers)
-if (GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo [])  then {
-    GVAR(cachedTags) pushBack _this;
-    if !(_requiredItem in GVAR(cachedRequiredItems)) then {
-        GVAR(cachedRequiredItems) pushBack _requiredItem;
-    };
-    TRACE_1("Added custom script tag",_this);
-} else {
+if !(GVAR(cachedTags) select {_x select 0 == _identifier} isEqualTo []) exitWith {
     ACE_LOGINFO_2("Tag with selected identifier already exists: %1 (%2)",_identifier,_displayName)
 };
+
+GVAR(cachedTags) pushBack _this;
+GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
+TRACE_1("Added custom script tag",_this);

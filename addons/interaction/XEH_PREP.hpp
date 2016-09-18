@@ -3,6 +3,7 @@
 PREP(addPassengerActions);
 PREP(addPassengersActions);
 PREP(getVehiclePos);
+PREP(getVehiclePosComplex);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
 

@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Advanced_Throwing">
+        <Key ID="STR_ACE_Advanced_Throwing_Category">
+            <English>Advanced Throwing</English>
+            <Russian>Улучшенный бросок гранат</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
+            <English>Allows changing advanced throwing behaviour.</English>
+            <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
+            <English>Enable Advanced Throwing</English>
+            <Russian>Включить улучшенный бросок</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
+            <English>Enables advanced throwing system.</English>
+            <Russian>Включает систему улучшенного броска.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
+            <English>Show Throw Arc</English>
+            <Russian>Показать траекторию броска</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
+            <English>Enables visualization of the throw arc (where throwable will fly).</English>
+            <Russian>Включает визуализацию траектории броска (как полетит граната).</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
+            <English>Show Throwing Mouse Controls</English>
+            <Russian>Показывать управление мышью</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
+            <English>Enables visual cues for mouse controls when throwable is prepared.</English>
+            <Russian>Включает отображение подсказок по управлению мышью, когда граната подготовлена.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
+            <English>Enable Throwables Pick Up</English>
+            <Russian>Включить подбор гранат</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
+            <English>Enables ability to pick up throwables from the ground.</English>
+            <Russian>Включает возможность подбирать гранаты с земли.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
+            <English>Enable Attached Throwables Pick Up</English>
+            <Russian>Включить подбор прикрепленных гранат</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
+            <English>Enables ability to pick up throwables from attached objects.</English>
+            <Russian>Включает возможность подбирать гранаты, прикрепленные к объектам.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Prepare">
+            <English>Prepare/Change Throwable</English>
+            <Russian>Подготовить/заменить гранату</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
+            <English>Throwable Drop Mode (Hold)</English>
+            <Russian>Режим броска гранаты (удерживать)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
+            <English>Throwable Drop Mode (Toggle)</English>
+            <Russian>Режим броска гранаты (переключить)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Primed">
+            <English>Primed</English>
+            <Russian>Подготовлена</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Throw">
+            <English>Throw</English>
+            <Russian>Бросить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
+            <English>(Scroll) Change Mode</English>
+            <Russian>(Скролл) Изменить режим</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Extend">
+            <English>(Scroll) Extend</English>
+            <Russian>(Скролл) Увеличить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_Cook">
+            <English>(Click) Cook</English>
+            <Russian>(Клик) Подготовить</Russian>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Throwing_PickUp">
+            <English>Pick Up</English>
+            <Russian>Подобрать</Russian>
+        </Key>
+    </Package>
+</Project>

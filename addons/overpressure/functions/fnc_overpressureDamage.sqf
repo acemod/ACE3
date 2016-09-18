@@ -30,7 +30,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
+_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {

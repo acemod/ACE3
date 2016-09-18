@@ -24,26 +24,26 @@ TRACE_1("Params",_this);
 TRACE_6("AI settings updated",GVAR(GlobalSkillAI));
 {
     if (local _x) then {
-        _unit setSkill ["general", _general];
-        _unit setSkill ["commanding", _general];
-        _unit setSkill ["courage", _general];
-        _unit setSkill ["aimingAccuracy", _accuracy];
-        _unit setSkill ["aimingShake", _handling];
-        _unit setSkill ["aimingSpeed", _handling];
-        _unit setSkill ["reloadSpeed", _handling];
-        _unit setSkill ["spotDistance", _spotting];
-        _unit setSkill ["spotTime", _spotting];
+        _x setSkill ["general", _general];
+        _x setSkill ["commanding", _general];
+        _x setSkill ["courage", _general];
+        _x setSkill ["aimingAccuracy", _accuracy];
+        _x setSkill ["aimingShake", _handling];
+        _x setSkill ["aimingSpeed", _handling];
+        _x setSkill ["reloadSpeed", _handling];
+        _x setSkill ["spotDistance", _spotting];
+        _x setSkill ["spotTime", _spotting];
 
         if (_cover) then {
-            _unit enableAI "COVER";
+            _x enableAI "COVER";
         } else {
-            _unit disableAI "COVER";
+            _x disableAI "COVER";
         };
 
         if (_combat) then {
-            _unit enableAI "AUTOCOMBAT";
+            _x enableAI "AUTOCOMBAT";
         } else {
-            _unit disableAI "AUTOCOMBAT";
+            _x disableAI "AUTOCOMBAT";
         };
     };
 } forEach allUnits;

@@ -91,7 +91,7 @@ private _keybinds = actionKeysNamesArray _action apply {
                     _alt = true;
                 };
                 default {
-                    // @todo handle double keys? ("C+R")
+                    // @todo handle double keys? ("C + R")
                     // currently only reports last key
                     // not usable by keyDown by default
                     _key = _keyTable find _x;

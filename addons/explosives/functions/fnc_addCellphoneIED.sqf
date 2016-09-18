@@ -21,7 +21,7 @@
 params ["_unit", "_explosive", "_magazineClass", "_extra"];
 TRACE_4("params",_unit,_explosive,_magazineClass,_extra);
 
-private["_config", "_detonators", "_hasRequired", "_requiredItems", "_code", "_count", "_codeSet"];
+private ["_config", "_detonators", "_hasRequired", "_requiredItems", "_code", "_count", "_codeSet"];
 
 // Config is the last item in the list of passed in items.
 _config = (_this select 3) select (count (_this select 3) - 1);

@@ -1,25 +1,18 @@
 //fnc_findReflections.sqf
 #include "script_component.hpp"
 
-private ["_split", "_radi", "_params", "_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_indirectHitRange", "_indirectHit", "_distanceCount", "_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_rand", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
+private ["_lastPos", "_test", "_vec", "_testPos", "_buckets", "_excludes", "_bucketIndex", "_bucketPos", "_bucketList", "_c", "_index", "_blist", "_avgX", "_avgY", "_avgZ", "_bpos", "_distance", "_hitFactor", "_hit", "_range", "_refExp", "_i", "_x", "_res", "_forEachIndex", "_explosions", "_can", "_dirvec", "_zAng"];
 
 BEGIN_COUNTER(fnc_findReflections);
-_params = _this select 0;
-_pos = _params select 0;
-_explosiveInfo = _params select 1;
-_los = _params select 2;
-_nlos = _params select 3;
-_zIndex = _params select 4;
-_depth = _params select 5;
-_rand = _params select 6;
+params ["_args"];
+_args params ["_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_rand"];
 
-_split = 15;
-_radi = (360/_split*_depth);
+private _split = 15;
+private _radi = (360/_split*_depth);
 
 // player sideChat format["p: %1", _explosiveInfo];
-_indirectHitRange = _explosiveInfo select 0;
-_indirectHit = _explosiveInfo select 1;
-_distanceCount = (floor _indirectHitRange*4) min 100;
+_explosiveInfo params ["_indirectHitRange", "_indirectHit"];
+private _distanceCount = (floor _indirectHitRange*4) min 100;
 
 if(_zIndex < 5) then {
     _lastPos = _pos;
