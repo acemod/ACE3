@@ -11,15 +11,17 @@ class CfgVehicles {
     class ThingX;
     class GVAR(Turret_MBT_01): ThingX {
         author = ECSTRING(common,ACETeam);
-        _generalMacro = QGVAR(TurretDummy);
+        _generalMacro = QGVAR(Turret_MBT_01);
         scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
         model = "\A3\Structures_F\Wrecks\Wreck_Slammer_turret_F.p3d";
         icon = "\A3\armor_f_gamma\MBT_01\Data\ui\map_slammer_mk4_ca.paa";
     };
     class GVAR(Turret_MBT_02): ThingX {
         author = ECSTRING(common,ACETeam);
-        _generalMacro = QGVAR(TurretDummy);
+        _generalMacro = QGVAR(Turret_MBT_02);
         scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
         model = "\A3\Structures_F\Wrecks\Wreck_T72_turret_F.p3d";
         icon = "\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
     };
