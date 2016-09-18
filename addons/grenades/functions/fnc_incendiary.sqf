@@ -34,6 +34,8 @@
 
 params ["_projectile", "_timeToLive"];
 
+if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
+
 private _position = position _projectile;
 
 // --- fire
