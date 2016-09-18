@@ -258,10 +258,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "nocrosshair" %}
-`ace_common`
-{% endif %}
-
 {% if include.component == "noidle" %}
 `ace_common`
 {% endif %}
