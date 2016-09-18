@@ -29,9 +29,9 @@
 #define NAMESPACE_NULL locationNull
 
 #define PRELOAD_CLASS(class) \
-    LOG_1("Starting preload for ""%1""",class);\
+    diag_log format["Starting preload for ""%1""",class];\
     [{\
         1 preloadObject _this;\
     }, {\
-        LOG_1("Preload done for ""%1""",_this);\
+        diag_log format ["Preload done for ""%1""",_this];\
     }, class] call CBA_fnc_waitUntilAndExecute
