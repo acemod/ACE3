@@ -155,7 +155,7 @@ private _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific"
         _amountThresholds,
         _selectionSpecificType
     ];
-    diag_log format["Extension result: %1", _extensionRes];
+    TRACE_1("",_extensionRes);
 } forEach _allFoundDamageTypes;
 
 // Extension loading
@@ -179,9 +179,11 @@ private _selectionSpecific = getNumber(_damageTypesConfig >> "selectionSpecific"
         };
     } forEach _causesArray;
 
-    diag_log format["Adding to extension injury type: %1 ", format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName]];
-    private _extensionRes = "ace_medical" callExtension format["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
-    diag_log format["Extension result: %1", _extensionRes];
+    private _extensionArgs = format ["addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9", _classID, _className, _allowedSelections, _bloodLoss, _pain, _minDamage, _maxDamage, _causes, _classDisplayName];
+    TRACE_1("",_extensionArgs);
+
+    private _extensionRes = "ace_medical" callExtension _extensionArgs;
+    TRACE_1("",_extensionRes);
 
 } forEach _allWoundClasses;
 
