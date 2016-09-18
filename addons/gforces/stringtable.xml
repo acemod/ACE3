@@ -9,6 +9,7 @@
             <Portuguese>Efeitos de ForçaG</Portuguese>
             <French>Effets de force gravitationnelle</French>
             <Russian>Эффекты перегрузок</Russian>
+            <Polish>Efekty przeciążeń</Polish>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -18,6 +19,7 @@
             <Portuguese>Somente Aeronave</Portuguese>
             <French>Avions seulement</French>
             <Russian>Только для летательных аппаратов</Russian>
+            <Polish>Tylko samoloty</Polish>
         </Key>
     </Package>
 </Project>
