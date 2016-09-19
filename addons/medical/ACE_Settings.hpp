@@ -143,30 +143,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(allowLitterCreation) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_allowLitterCreation_DisplayName);
-        description = CSTRING(MedicalSettings_allowLitterCreation_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
-    class GVAR(litterSimulationDetail) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(litterSimulationDetail);
-        description = CSTRING(litterSimulationDetail_Desc);
-        typeName = "SCALAR";
-
-        value = 3;
-        values[] = {"Off", "Low", "Medium", "High", "Ultra"};
-        _values[] = { 0, 50, 100, 1000, 5000 };
-    };
-    class GVAR(litterCleanUpDelay) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_litterCleanUpDelay_DisplayName);
-        description = CSTRING(MedicalSettings_litterCleanUpDelay_Description);
-        typeName = "SCALAR";
-        value = 0;
-    };
     class GVAR(medicSetting_basicEpi) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_DisplayName);

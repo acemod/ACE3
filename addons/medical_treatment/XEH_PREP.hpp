@@ -1,3 +1,4 @@
+
 PREP(actionCheckBloodPressure);
 PREP(actionCheckBloodPressureLocal);
 PREP(actionCheckPulse);
@@ -52,3 +53,8 @@ PREP(useItem);
 PREP(useItems);
 
 PREP(checkItems);
+
+// litter
+PREP(litterCreate);
+PREP(litterHandleCreate);
+PREP(litterCleanupLoop);

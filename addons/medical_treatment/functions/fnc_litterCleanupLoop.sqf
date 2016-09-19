@@ -10,25 +10,28 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 {
     _x params ["_time", "_objects"];
-    //Older elements are always at the begining of the array:
-    if ((CBA_missionTime - _time) < GVAR(litterCleanUpDelay)) exitWith {};
+
+    // Older elements are always at the begining of the array
+    if (CBA_missionTime - _time < GVAR(litterCleanUpDelay)) exitWith {};
+
     TRACE_2("deleting",_time,_objects);
     {
         deleteVehicle _x;
     } forEach _objects;
+
     GVAR(allCreatedLitter) set [_forEachIndex, objNull];
 } forEach GVAR(allCreatedLitter);
+
 GVAR(allCreatedLitter) = GVAR(allCreatedLitter) - [objNull];
 
-// If no more litter remaining, exit the loop
+// If no more litter remain, exit the loop
 if (GVAR(allCreatedLitter) isEqualTo []) exitWith {
     GVAR(litterPFHRunning) = false;
 };
 
 // Schedule the loop to be executed again 30 sec later
-[DFUNC(litterCleanupLoop), [], 30] call CBA_fnc_waitAndExecute;
+[FUNC(litterCleanupLoop), [], 30] call CBA_fnc_waitAndExecute;

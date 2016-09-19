@@ -25,30 +25,6 @@
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_litterSimulationDetail">
-            <English>Litter Simulation Detail</English>
-            <Polish>Detale zużytych medykamentów</Polish>
-            <Spanish>Detalle de simulación de basura</Spanish>
-            <Russian>Количество мусора от медицины</Russian>
-            <Italian>Dettagli Simulazione Rifiuti</Italian>
-            <French>Niveau de simulation des détritus</French>
-            <German>Abfall-Detaillevel</German>
-            <Hungarian>Hulladékszimuláció részletessége</Hungarian>
-            <Portuguese>Detalhe da simulação de sujeira</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
-        </Key>
-        <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
-            <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
-            <Polish>Opcja ta ustawia liczbę zużytych medykamentów, jakie pojawiają się lokalnie wokół gracza. Ich zbyt duża ilość może spowodować spadki FPS, dlatego jest to ustawienie tylko po stronie klienta.</Polish>
-            <Spanish>Detalle simulación de basura establece el número de artículos de basura que se generan a nivel local en el cliente. Las cantidades excesivas en áreas locales podrían causar caída de rendimiento, así que esto es un ajuste de cliente únicamente.</Spanish>
-            <Russian>Устанавливает количество мусора, который появляется после использования мед. препаратов. Большое количество мусора может уменьшить производительность, поэтому данная настройка локальна для клиента.</Russian>
-            <Italian>Il numero di rifiuti che verranno creati localmente. La creazione di troppi rifiuti in aree locali potrebbe causare lag e calo di FPS. Questo è un settaggio lato client.</Italian>
-            <French>Le niveau de simulation des détritus règle la quantité de déchets qui vont être créés localement chez le client. Des quantitées excessive chez certains clients peuvent causer des chutes de FPS, c'est donc une option client uniquement.</French>
-            <German>Die Einstellung für das Abfall-Detaillevel stellt die Menge des lokal angezeigten medizinischen Abfalls ein. Zuviel Abfall kann FPS-Einbrüche erzeugen, weswegen diese Einstellung nur clientseitig ist.</German>
-            <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
-            <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
-            <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
-        </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
             <German>Adenosin injizieren</German>
@@ -2546,54 +2522,6 @@
             <French>Désactiver les infirmiers</French>
             <Hungarian>Orvosok letiltása</Hungarian>
             <Italian>Disabilita medici</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
-            <English>Enable Litter</English>
-            <Russian>Включить мусор</Russian>
-            <Polish>Aktywuj odpadki</Polish>
-            <Spanish>Activar restos médicos</Spanish>
-            <German>Abfälle aktivieren</German>
-            <Czech>Povolit odpadky</Czech>
-            <Portuguese>Ativar lixo médico</Portuguese>
-            <French>Activer les détritus</French>
-            <Hungarian>Szemét engedélyezése</Hungarian>
-            <Italian>Abilita Barella</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
-            <English>Enable litter being created upon treatment</English>
-            <Russian>Включить появление мусора после лечения</Russian>
-            <Polish>Twórz odpadki medyczne podczas leczenia</Polish>
-            <Spanish>Activar los restos médicos que se crean en el tratamiento</Spanish>
-            <German>Aktiviere Abfälle, wenn eine Behandlung durchgeführt wurde</German>
-            <Czech>Vytváří odpad zdravotnického materiálu pří léčení</Czech>
-            <Portuguese>Ativar lixo ser criado após tratamento</Portuguese>
-            <French>Activer la création de détrimus au début des traitements</French>
-            <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
-            <Italian>Abilita la creazione della barella dopo trattamento</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
-            <English>Life time of litter objects</English>
-            <Russian>Время удаления мусора</Russian>
-            <Polish>Długość życia odpadków</Polish>
-            <Spanish>Tiempo de vida de los restos médicos</Spanish>
-            <German>Dauer des angezeigten Abfalls</German>
-            <Czech>Životnost pro odpadky</Czech>
-            <Portuguese>Tempo de vida dos objetos do lixo</Portuguese>
-            <French>Durée d'affichage des détritus</French>
-            <Hungarian>Szemétobjektumok élettartama</Hungarian>
-            <Italian>Tempo di vita delle barelle</Italian>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
-            <English>How long should litter objects stay? In seconds. -1 is forever.</English>
-            <Russian>Как долго мусор будет оставаться на земле? В секундах. -1 означает бесконечное время.</Russian>
-            <Polish>Ile czasu musi upłynąć, aby odpadki zaczęły znikać? W sekundach. -1 dla nieskończoności.</Polish>
-            <Spanish>¿Por cuánto tiempo deben permanecer los restos médicos? En segundos. -1 es para siempre.</Spanish>
-            <German>Wie lange sollen Abfälle am Boden liegen (in Sekunden)? -1 ist für immer.</German>
-            <Czech>Za jak dlouho začnou odpadky mizet? V sekundách. -1 navždy.</Czech>
-            <Portuguese>Quanto tempo os objetos do lixo devem ficar? Em segundos. -1 é para sempre.</Portuguese>
-            <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
-            <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
-            <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>

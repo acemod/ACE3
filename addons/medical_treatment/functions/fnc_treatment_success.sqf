@@ -81,7 +81,7 @@ TRACE_1("advanced",_bloodLossOnSelection);
 
 _args call _callback;
 _args pushBack _bloodLossOnSelection;
-_args call FUNC(createLitter);
+_args call FUNC(litterCreate);
 
 //If we're not already tracking vitals, start:
 if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
