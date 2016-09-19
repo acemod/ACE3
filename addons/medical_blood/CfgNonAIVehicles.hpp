@@ -10,9 +10,9 @@ class CfgNonAIVehicles {
         timeToLive = 1;
         disappearAtContact = 1;
         maxSpeed = 7000;
-        XEH_DISABLED;
         weight = 1;
         gravityFactor = 1;
+        canBeShot = 0;
         airFriction2[] = {0,0,0};
         airFriction1[] = {0,0,0};
         airFriction0[] = {0,0,0};
