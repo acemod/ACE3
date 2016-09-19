@@ -27,7 +27,7 @@ params ["_unit", "_dir", "_damage"];
 private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
 private _offset = OFFSET + _distanceBetweenDrops;
 private _pos = _unit getPos [_offset, _dir];
-["ACE_Blooddrop_2", _pos, _dir] call FUNC(createBlood);
+["blooddrop_2", _pos, _dir] call FUNC(createBlood);
 
 private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
 if (_dropAmount > 1) then {
@@ -36,6 +36,6 @@ if (_dropAmount > 1) then {
 
     for "_i" from 2 to _dropAmount do {
         _pos = _pos getPos [_offset, _dir];
-        ["ACE_Blooddrop_1", _pos, _dir] call FUNC(createBlood);
+        ["blooddrop_1", _pos, _dir] call FUNC(createBlood);
     };
 };
