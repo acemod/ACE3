@@ -3772,7 +3772,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
-            <Polish>Czy pojazdy ma być pojazdem medycznym?</Polish>
+            <Polish>Czy pojazd ma być pojazdem medycznym?</Polish>
             <Italian>L'oggetto in questione sarà un veicolo medico o meno.</Italian>
             <German>Legt fest, ob das Objekt ein Sanitätsfahrzeug ist.</German>
             <Spanish>Es un vehículo médico?</Spanish>
@@ -3788,12 +3788,13 @@
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
             <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
             <Russian>Задержка прекращения огня ботами, когда игрок теряет сознание по медицинским причинам.</Russian>
+            <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
             <German>Verzögert Ende des KI-Beschusses bei medizinischer Bewustlosigkeit</German>
             <Spanish>Demora antes de volverse neutral al caer inconsciente</Spanish>
-            <Polish>Opóźnij status captive u nieprzytomnych osób</Polish>
+            <Polish>Opóźnij wstrzymanie ognia AI dla nieprzytomnych osób</Polish>
             <Italian>Ritarda il cessate il fuoco dell'IA quando si è svenuti</Italian>
             <Czech>Prodleva zastavení palby AI na bezvědomé</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência</Portuguese>

@@ -214,6 +214,10 @@
 `ace_medical`
 {% endif %}
 
+{% if include.component == "medical_blood" %}
+`ace_main`
+{% endif %}
+
 {% if include.component == "medical_menu" %}
 `ace_medical`
 {% endif %}
@@ -467,6 +471,10 @@
 {% endif %}
 
 {% if include.component == "noactionmenu" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "nocrosshair" %}
 `ace_common`
 {% endif %}
 

@@ -4,36 +4,43 @@
         <Key ID="STR_ACE_Tagging_Tagging">
             <English>Tagging</English>
             <Russian>Маркировка</Russian>
+            <Polish>Tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
+            <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
+            <Polish>Szybkie tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
+            <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
+            <Polish>Ostatnio użyte</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
+            <Polish>Losowy X</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
             <Russian>Случайный</Russian>
+            <Polish>Losowy</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Oznakuj</Polish>
+            <Polish>Taguj</Polish>
             <French>Tag</French>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>
