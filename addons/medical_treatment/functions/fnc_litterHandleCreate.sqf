@@ -45,7 +45,7 @@ _litterObject setPosASL _position;
     _object setPosASL _position;
 }, [_litterObject, _position]] call CBA_fnc_execNextFrame;
 
-private _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QEGVAR(medical,litterSimulationDetail) >> "_values") select GVAR(medical,litterSimulationDetail);
+private _maxLitterCount = getArray (configFile >> "ACE_Settings" >> QEGVAR(medical,litterSimulationDetail) >> "_values") select EGVAR(medical,litterSimulationDetail);
 
 if (count GVAR(allCreatedLitter) > _maxLitterCount) then {
     // gank the first litter object, and spawn ours.
