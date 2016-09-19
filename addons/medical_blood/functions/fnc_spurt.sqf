@@ -35,7 +35,7 @@ if (_dropAmount > 1) then {
     private _cos = _cosDir * _distanceBetweenDrops;
 
     for "_i" from 2 to _dropAmount do {
-        _pos = _bloodPos getPos [_offset, _dir];
-        ["ACE_Blooddrop_1", _bloodPos, _dir] call FUNC(createBlood);
+        _pos = _pos getPos [_offset, _dir];
+        ["ACE_Blooddrop_1", _pos, _dir] call FUNC(createBlood);
     };
 };

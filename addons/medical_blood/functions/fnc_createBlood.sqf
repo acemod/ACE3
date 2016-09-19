@@ -25,8 +25,8 @@ if (_p3dFile == "") exitWith {};
 if ((_p3dFile select [0,1]) == "\") then {_p3dFile = _p3dFile select [1];};
 
 private _object = createSimpleObject [_p3dFile, [0,0,0]];
+_object setDir random 360;
 _object setPos _pos;
-_object setDir (random 360);
 
 [QGVAR(bloodDropCreated), [_object]] call CBA_fnc_serverEvent;
 
