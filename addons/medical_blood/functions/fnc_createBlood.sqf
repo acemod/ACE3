@@ -28,10 +28,6 @@ private _object = createSimpleObject [_p3dFile, [0,0,0]];
 _object setPos _pos;
 _object setDir (random 360);
 
-if (!isServer) then {
-    [QGVAR(bloodDropCreated), [_object]] call CBA_fnc_serverEvent;
-} else {
-    [QGVAR(bloodDropCreated), [_object]] call CBA_fnc_localEvent;
-};
+[QGVAR(bloodDropCreated), [_object]] call CBA_fnc_serverEvent;
 
 _object;
