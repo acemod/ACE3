@@ -31,9 +31,6 @@ private _pos = _unit getPos [_offset, _dir];
 
 private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
 if (_dropAmount > 1) then {
-    private _sin = _sinDir * _distanceBetweenDrops;
-    private _cos = _cosDir * _distanceBetweenDrops;
-
     for "_i" from 2 to _dropAmount do {
         _pos = _pos getPos [_offset, _dir];
         ["blooddrop_1", _pos, _dir] call FUNC(createBlood);
