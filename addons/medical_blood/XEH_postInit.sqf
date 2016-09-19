@@ -13,15 +13,12 @@ if (isServer) then {
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop"];
         GVAR(bloodDrops) pushBack _bloodDrop;
-        if (count GVAR(bloodDrops) >= 500) then {
+        if (count GVAR(bloodDrops) >= MAX_BLOOD_OBJECTS) then {
             private _deletedBloodDrop = GVAR(bloodDrops) deleteAt 0;
             deleteVehicle _deletedBloodDrop;
         };
 
-        [{
-            params ["_bloodDrop"];
-            deleteVehicle _bloodDrop;
-        }, [_bloodDrop], 900] call CBA_fnc_waitAndExecute;
+        [{deleteVehicle _this}, _bloodDrop, BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 };
 
