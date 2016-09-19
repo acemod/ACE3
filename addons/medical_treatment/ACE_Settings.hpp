@@ -1,13 +1,13 @@
 class ACE_Settings {
     class EGVAR(medical,allowLitterCreation) {
-        category = CSTRING(Category_Medical);
+        category = ECSTRING(medical,Category_Medical);
         displayName = CSTRING(allowLitterCreation);
         description = CSTRING(allowLitterCreation_Description);
         typeName = "BOOL";
         value = 1;
     };
     class EGVAR(medical,litterSimulationDetail) {
-        category = CSTRING(Category_Medical);
+        category = ECSTRING(medical,Category_Medical);
         displayName = CSTRING(litterSimulationDetail);
         description = CSTRING(litterSimulationDetail_Description);
         typeName = "SCALAR";
@@ -17,7 +17,7 @@ class ACE_Settings {
         _values[] = { 0, 50, 100, 1000, 5000 };
     };
     class EGVAR(medical,litterCleanUpDelay) {
-        category = CSTRING(Category_Medical);
+        category = ECSTRING(medical,Category_Medical);
         displayName = CSTRING(litterCleanUpDelay);
         description = CSTRING(litterCleanUpDelay_Description);
         typeName = "SCALAR";
