@@ -17,6 +17,7 @@ GVAR(models) = [] call CBA_fnc_createNamespace;
 
     GVAR(models) setVariable [_name, _model];
 } forEach [
+    // higher number means bigger model
     ["blooddrop_1", QPATHTOF(data\drop_1.p3d)],
     ["blooddrop_2", QPATHTOF(data\drop_2.p3d)],
     ["blooddrop_3", QPATHTOF(data\drop_3.p3d)],
