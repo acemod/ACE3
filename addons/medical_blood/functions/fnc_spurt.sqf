@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [UNIT, random 360, 1] call ace_medical_blood_fnc_spawnBlood
+ * [UNIT, random 360, 1] call ace_medical_blood_fnc_spurt
  *
  * Public: No
  */
