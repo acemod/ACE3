@@ -21,8 +21,8 @@ if (isNull _causedBy) exitWith { // won't be able to calculate the direction pro
 };
 
 // Calculate bulletDirection
-private _unitPos = getPosATL _unit;
-private _causedByPos = getPosATL _causedBy;
+private _unitPos = getPosASL _unit;
+private _causedByPos = getPosASL _causedBy;
 
 private _bulletDir = ((_unitPos select 0) - (_causedByPos select 0)) atan2 ((_unitPos select 1) - (_causedByPos select 1));
 
