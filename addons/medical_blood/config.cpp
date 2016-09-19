@@ -15,6 +15,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "CfgNonAIVehicles.hpp"
 #include "CfgVehicles.hpp"
 #include "state_machine.hpp"
