@@ -11,7 +11,6 @@ call FUNC(stateMachine);
 if (isServer) then {
     ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
 };
-[QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
