@@ -214,6 +214,10 @@
 `ace_medical`
 {% endif %}
 
+{% if include.component == "medical_blood" %}
+`ace_main`
+{% endif %}
+
 {% if include.component == "medical_menu" %}
 `ace_medical`
 {% endif %}
