@@ -3,5 +3,5 @@
 PREP(hit);
 PREP(isBleeding);
 PREP(onBleeding);
-PREP(spawnBlood);
+PREP(createBlood);
 PREP(spurt);

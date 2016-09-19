@@ -33,7 +33,7 @@ private _cosDir = cos _dir;
 _pos params ["_x", "_y"];
 
 private _bloodPos = [_x + (_sinDir * _offSet), _y + (_cosDir * _offSet), 0];
-["ACE_Blooddrop_2", _bloodPos, _dir] call FUNC(spawnBlood);
+["ACE_Blooddrop_2", _bloodPos, _dir] call FUNC(createBlood);
 
 if (ceil (MAXIMUM_DROPS * _damage) > 1) then {
     private _sin = _sinDir * _distanceBetweenDrops;
@@ -42,6 +42,6 @@ if (ceil (MAXIMUM_DROPS * _damage) > 1) then {
     for "_i" from 2 to _c do {
         _bloodPos params ["_x", "_y"];
         _bloodPos = [_x + _sin, _y + _cos, 0];
-        ["ACE_Blooddrop_1", _bloodPos, _dir] call FUNC(spawnBlood);
+        ["ACE_Blooddrop_1", _bloodPos, _dir] call FUNC(createBlood);
     };
 };

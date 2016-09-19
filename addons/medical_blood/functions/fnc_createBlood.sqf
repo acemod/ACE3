@@ -10,7 +10,7 @@
  * Created blood drop <OBJECT>
  *
  * Example:
- * ["ACE_Blooddrop_2", getPos player] call ace_medical_blood_fnc_spawnBlood
+ * ["ACE_Blooddrop_2", getPos player] call ace_medical_blood_fnc_createBlood
  *
  * Public: No
  */

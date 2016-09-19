@@ -30,5 +30,5 @@ if (((CBA_missionTime - _lastTime) + _bloodLoss) >= (8 + random(2))) then {
     _position set [2, 0];
 
     private _bloodDrop = ["ACE_Blooddrop_1", "ACE_Blooddrop_2", "ACE_Blooddrop_3", "ACE_Blooddrop_4"] select (floor (_bloodLoss max 3));
-    [_bloodDrop, _position, getDir _unit] call FUNC(spawnBlood);
+    [_bloodDrop, _position, getDir _unit] call FUNC(createBlood);
 };
