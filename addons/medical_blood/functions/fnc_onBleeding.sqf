@@ -22,11 +22,15 @@ if (GVAR(enabledFor) == 1 && {!isPlayer _unit || {_unit == ACE_player}}) exitWit
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
 private _bloodLoss = (if (GVAR(useAceMedical)) then {([_unit] call EFUNC(medical,getBloodLoss)) * 2.5} else {getDammage _unit * 2}) min 6;
 
-if (((CBA_missionTime - _lastTime) + _bloodLoss) >= (8 + random(2))) then {
+if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
     _unit setVariable [QGVAR(lastTime), CBA_missionTime];
 
-    private _position = getPosATL _unit;
-    _position = _position apply {if (random 1 >= 0.5) then {_x -(random(0.2))} else {_x + (random(0.2))}};
+    private _position = getPosASL _unit;
+    _position = _position vectorAdd [
+        random 0.4 - 0.2,
+        random 0.4 - 0.2,
+        0
+    ];
     _position set [2, 0];
 
     private _bloodDrop = ["ACE_Blooddrop_1", "ACE_Blooddrop_2", "ACE_Blooddrop_3", "ACE_Blooddrop_4"] select (floor (_bloodLoss max 3));

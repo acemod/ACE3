@@ -24,24 +24,18 @@
 
 params ["_unit", "_dir", "_damage"];
 
-private _pos = getPosATL _unit;
 private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
-private _offSet = OFFSET + _distanceBetweenDrops;
-private _sinDir = sin _dir;
-private _cosDir = cos _dir;
+private _offset = OFFSET + _distanceBetweenDrops;
+private _pos = _unit getPos [_offset, _dir];
+["ACE_Blooddrop_2", _pos, _dir] call FUNC(createBlood);
 
-_pos params ["_x", "_y"];
-
-private _bloodPos = [_x + (_sinDir * _offSet), _y + (_cosDir * _offSet), 0];
-["ACE_Blooddrop_2", _bloodPos, _dir] call FUNC(createBlood);
-
-if (ceil (MAXIMUM_DROPS * _damage) > 1) then {
+private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
+if (_dropAmount > 1) then {
     private _sin = _sinDir * _distanceBetweenDrops;
     private _cos = _cosDir * _distanceBetweenDrops;
 
-    for "_i" from 2 to _c do {
-        _bloodPos params ["_x", "_y"];
-        _bloodPos = [_x + _sin, _y + _cos, 0];
+    for "_i" from 2 to _dropAmount do {
+        _pos = _bloodPos getPos [_offset, _dir];
         ["ACE_Blooddrop_1", _bloodPos, _dir] call FUNC(createBlood);
     };
 };
