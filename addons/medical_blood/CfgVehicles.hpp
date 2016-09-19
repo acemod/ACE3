@@ -13,9 +13,9 @@ class CfgVehicles {
         side = -1;
         shadow = 0;
         scope = 1;
-        VehicleClass = "";
+        vehicleClass = "";
         displayName = "";
-        model = QPATHTOF(drop_1.p3d);
+        model = QPATHTOF(data\drop_1.p3d);
         accuracy = 0;
         camouflage = 0;
         destrType = "DestructNo";
@@ -37,12 +37,12 @@ class CfgVehicles {
         /* Simulation Seagull Additions */
     };
     class ACE_Blooddrop_2: ACE_Blooddrop_1 {
-        model = QPATHTOF(drop_2.p3d);
+        model = QPATHTOF(data\drop_2.p3d);
     };
     class ACE_Blooddrop_3: ACE_Blooddrop_1 {
-        model = QPATHTOF(drop_3.p3d);
+        model = QPATHTOF(data\drop_3.p3d);
     };
     class ACE_Blooddrop_4: ACE_Blooddrop_1 {
-        model = QPATHTOF(drop_4.p3d);
+        model = QPATHTOF(data\drop_4.p3d);
     };
 };

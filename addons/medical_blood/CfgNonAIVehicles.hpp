@@ -4,7 +4,7 @@ class CfgNonAIVehicles {
         scope = 1;
         vehicleClass = "";
         displayName = "";
-        model = QPATHTOF(splat_1.p3d);
+        model = QPATHTOF(data\splat_1.p3d);
         submerged = 0;
         submergeSpeed = 0;
         timeToLive = 1;
@@ -18,6 +18,6 @@ class CfgNonAIVehicles {
         airFriction0[] = {0,0,0};
     };
     class ACE_Bloodsplat_2: ACE_Bloodsplat_1 {
-        model = QPATHTOF(splat_2.p3d);
+        model = QPATHTOF(data\splat_2.p3d);
     };
 };
