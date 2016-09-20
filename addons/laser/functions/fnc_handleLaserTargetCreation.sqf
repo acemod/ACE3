@@ -3,10 +3,18 @@
  * Associates a newly created laser target to it's owner
  *
  * Argument:
- * 0: _targetObject <OBJECT>
+ * 0: Vanilla Laser (base type LaserTarget) <OBJECT>
  *
  * Return value:
  * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [laserTarget player] call ace_laser_fnc_handleLaserTargetCreation;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,5 +1,24 @@
-#include "script_component.hpp"
+/*
+ * Author: Nou
+ * Shoots multiple rays in a dispersion pattern
+ *
+ * Arguments:
+ * 0: Origin position ASL <ARRAY>
+ * 1: Direction (normalized) <ARRAY>
+ * 1: Divergence (mils) <OPTIONAL><NUMBER>
+ * 1: Count <OPTIONAL><NUMBER>
+ * 2: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ *
+ * Return value:
+ * <ARRAY> [_longestReturn, _shortestReturn, _resultPositions]
+ *
+ * Example:
+ * [getPosASL player, [0,1,0]] call ace_laser_fnc_shootCone;
+ *
+ * Public: No
+ */
 //#define DEBUG_MODE_FULL
+#include "script_component.hpp"
 
 params ["_pos", "_vec", ["_divergence", 0.3], ["_count", 3], ["_ignoreObj1", objNull]];
 

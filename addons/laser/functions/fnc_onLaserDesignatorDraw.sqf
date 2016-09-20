@@ -1,4 +1,18 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: Nou
+ * Update distance when rangefinder laser is on
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_laser_fnc_onLaserDesignatorDraw
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private _laserCode = ACE_player getVariable[QGVAR(code), ACE_DEFAULT_LASER_CODE];

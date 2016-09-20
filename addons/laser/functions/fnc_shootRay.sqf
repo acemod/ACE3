@@ -1,3 +1,21 @@
+/*
+ * Author: Nou, PabstMirror
+ * Shoots a ray from a source to a direction and finds first intersction and distance
+ *
+ * Arguments:
+ * 0: Origin position ASL <ARRAY>
+ * 1: Direction (normalized) <ARRAY>
+ * 2: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 2: Ignore 2 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ *
+ * Return value:
+ * <ARRAY> [posASL, distance] - pos will be nil if no intersection
+ *
+ * Example:
+ * [getPosASL player, [0,1,0], player] call ace_laser_fnc_shootRay;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 BEGIN_COUNTER(shootRay);
@@ -9,16 +27,16 @@ private _distance = 0;
 private _resultPos = nil;
 
 private _farPoint = _posASL vectorAdd (_dir vectorMultiply 10000);
-private _return = lineIntersectsSurfaces [_posASL, _farPoint, _ignoreVehicle1, _ignoreVehicle2];
+private _intersects = lineIntersectsSurfaces [_posASL, _farPoint, _ignoreVehicle1, _ignoreVehicle2];
 
-if (!(_return isEqualTo [])) then {
-    (_return select 0) params ["_intersectPosASL", "", "_intersectObject"];
-     // Move back slightly to prevents issues with it going below terrain
+if (!(_intersects isEqualTo [])) then {
+    (_intersects select 0) params ["_intersectPosASL", "", "_intersectObject"];
+    // Move back slightly to prevents issues with it going below terrain
     _distance = (_posASL vectorDistance _intersectPosASL) - 0.005;
     _resultPos = _posASL vectorAdd (_dir vectorMultiply _distance);
 };
 
-// TRACE_2("ray result:", _resultPos, _distance);
+TRACE_3("", _resultPos, _distance, _intersects);
 
 #ifdef DEBUG_MODE_FULL
 if !(isNil "_resultPos") then {

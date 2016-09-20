@@ -3,12 +3,16 @@
  * Turn a laser designator off.
  *
  * Arguments:
- * 0: UUID (from laserOn) <string>
+ * 0: UUID (from laserOn) <STRING>
  *
- * Return Value:
+ * Return value:
  * None
+ *
+ * Example:
+ * ["yourLaserUID"] call ace_laser_fnc_laserOff;
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_uuid"];

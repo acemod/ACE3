@@ -1,8 +1,7 @@
 
 PREP(addLaserTarget);
 PREP(dev_drawVisibleLaserTargets);
-PREP(findLaserSourceGeneric);
-PREP(findLaserSourceMan);
+PREP(findLaserSource);
 PREP(handleLaserTargetCreation);
 PREP(keyLaserCodeChange);
 PREP(laserOff);
@@ -14,4 +13,3 @@ PREP(rotateVectLineGetMap);
 PREP(seekerFindLaserSpot);
 PREP(shootCone);
 PREP(shootRay);
-PREP(unitTurretCanLockLaser);

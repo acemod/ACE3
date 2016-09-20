@@ -1,16 +1,23 @@
 /*
  * Author: Nou
- * Turn a laser designator on.
+ * Searches for a laser spot given a seekers params.
+ * Provides the interface for Missile Guidance
  *
  * Arguments:
- * 0: Position of seeker (ASL) <position>
- * 1: Direction vector (will be normalized) <vector>
- * 2: Seeker FOV in degrees <number>
- * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
- * 4: Seeker laser code. <number>
+ * 0: Position of seeker (ASL) <ARRAY>
+ * 1: Direction vector (will be normalized) <ARRAY>
+ * 2: Seeker FOV in degrees <NUMBER>
+ * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
+ * 4: Seeker laser code. <NUMBER>
+ * 5: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
  * Return Value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
+ *
+ * Example:
+ * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot;
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -25,6 +32,7 @@ private _spots = [];
 private _finalPos = nil;
 private _finalOwner = objNull;
 
+// Go through all lasers in GVAR(laserEmitters)
 {
     _x params ["_obj", "_owner", "_laserMethod", "_emitterWavelength", "_laserCode", "_divergence"];
     TRACE_6("laser",_obj,_owner,_laserMethod,_emitterWavelength,_laserCode,_divergence);
@@ -41,7 +49,7 @@ private _finalOwner = objNull;
             } else {
 
                 if (IS_ARRAY(_laserMethod)) then {
-                    if (count _laserMethod == 2) then {
+                    if (count _laserMethod == 2) then { // [modelPosition, weaponName] for _obj
                         _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), _obj weaponDirection (_laserMethod select 1)];
                     } else {
                         if (count _laserMethod == 3) then {
@@ -58,6 +66,7 @@ private _finalOwner = objNull;
         _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
 
         if (GVAR(enableDispersion)) then {
+        // if (true) then {
             // Shoot a cone with dispersion
             private _res = [_laserPos, _laserDir, _divergence, 3, _ignoreObj1] call FUNC(shootCone);
             {

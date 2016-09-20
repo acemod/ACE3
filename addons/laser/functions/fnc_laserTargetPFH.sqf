@@ -3,10 +3,16 @@
  * Maintains the tracked lasers, deleting any laser that is turned off
  *
  * Argument:
- * None
+ * PFEH Args
  *
  * Return value:
  * None
+ *
+ * Example:
+ * [[], 1]] call ace_laser_fnc_laserTargetPFH;
+ *
+ * Public: No
+ */
  */
 #include "script_component.hpp"
 
@@ -27,16 +33,6 @@ GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
         true
     };
 };
-
-#ifdef DEBUG_MODE_FULL
-{
-    _x params ["_targetObject", "_owner", "_laserUuid"];
-
-    // Iconize the location of the actual laserTarget
-    private _pos = getPosASL _targetObject;
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLtoAGL _pos), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-} forEach GVAR(trackedLaserTargets);
-#endif
 
 if (GVAR(trackedLaserTargets) isEqualTo []) then {
     TRACE_1("ending pfeh",count GVAR(trackedLaserTargets));
