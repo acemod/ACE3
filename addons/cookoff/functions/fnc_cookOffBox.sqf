@@ -37,31 +37,21 @@ _box setVariable [QGVAR(isCookingOff), true];
         _effects pushBack _sound;
     };
 
-    // These functions are smart and do all the cooking off work
-    if (local _box) then {
-        _box call FUNC(secondaryExplosions);
-        if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
-            [_box, magazinesAmmo _box] call FUNC(detonateAmmunition);
-        };
-    };
-
     [{
         params ["_box", "_effects"];
 
-        // This shit is busy being on fire, magazines aren't accessible/usable
+        // These functions are smart and do all the cooking off work
         if (local _box) then {
+            _box call FUNC(secondaryExplosions);
+            if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
+                [_box, magazinesAmmo _box] call FUNC(detonateAmmunition);
+            };
+
+            // This shit is busy being on fire, magazines aren't accessible/usable
             clearMagazineCargoGlobal _box;
         };
 
-        private _light = "#lightpoint" createVehicleLocal [0,0,0];
-        _light setLightBrightness 0.7;
-        _light setLightAmbient [1,0.4,0.15];
-        _light setLightColor [1,0.4,0.15];
-        _light lightAttachObject [_box, [0,0,0]];
-
-        _effects pushBack _light;
-
-        // Light the fire
+        // Light the fire (also handles lighting)
         private _fire = "#particlesource" createVehicleLocal [0,0,0];
         _fire setParticleClass "AmmoBulletCore";
         _fire attachTo [_box, [0,0,0]];
@@ -78,6 +68,6 @@ _box setVariable [QGVAR(isCookingOff), true];
             if (local _box) then {
                 _box setDamage 1;
             };
-        }, [_box, _effects], 60] call CBA_fnc_waitAndExecute; // Give signifcant time for ammo cookoff to occur (perhaps keep the box alive until all cooked off?)
+        }, [_box, _effects], 45 + random 75] call CBA_fnc_waitAndExecute; // Give signifcant time for ammo cookoff to occur (perhaps keep the box alive until all cooked off?)
     }, [_box, _effects], 3 + random 15] call CBA_fnc_waitAndExecute;
 }, _box, 0.5 + random 5] call CBA_fnc_waitAndExecute;
