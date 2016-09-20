@@ -34,6 +34,11 @@ params [["_name", "", [""]],["_code", {}, [{}]], ["_mods", [], [[]]]];
 TRACE_3("params",_name,_code,_mods);
 
 if (!hasInterface) exitWith {};
+
+if (canSuspend) exitWith { // Ensure atomic - (fix `disableSerialization` error when called from init.sqf)
+    [FUNC(watchVariable), _this] call CBA_fnc_directCall;
+};
+
 if (isNull (findDisplay 46)) exitWith {
     TRACE_1("waiting for main display to be ready",isNull (findDisplay 46));
     [{!isNull (findDisplay 46)}, {_this call FUNC(watchVariable);}, _this] call CBA_fnc_waitUntilAndExecute;
