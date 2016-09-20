@@ -1,25 +1,38 @@
 class CfgVehicles {
     class All;
-
     class LaserTarget: All {
         // @TODO: Changing the model and simulation hides it, but THEN IT DOESNT SPAWN WTF!?
-        model = "\A3\Weapons_F\empty.p3d";
-        destrType = "DestructNo";
-        simulation = "LaserTarget";
+        // model = "\A3\Weapons_F\empty.p3d";
 
         class EventHandlers {
-            init = QUOTE(_this call FUNC(laser_init));
+            class ADDON {
+                init = QUOTE(_this call FUNC(handleLaserTargetCreation));
+            };
         };
     };
 
-    // Visual laserTarget override
-    class ACE_LaserTarget_Visual : LaserTarget {
-        simulation = "LaserTarget";
-        model = "\A3\Weapons_f\laserTgt.p3d";
+    class LandVehicle;
+    class Car: LandVehicle {
+        class NewTurret;
     };
+    class Car_F: Car {
+        class Turrets {
+            class MainTurret: NewTurret {};
+        };
+    };
+    class MRAP_03_base_F: Car_F {
+        class Turrets: Turrets {
+            class CommanderTurret: MainTurret {
+                primaryGunner = 1;
+            };
+        };
+    };
+
 
     // Vehicle lockable configurations
 
+
+    /* Disabled for now on comanche
     class AllVehicles;
     class Air: AllVehicles {
         class Turrets;
@@ -39,7 +52,9 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 GVAR(CanLockLaser) = 1;      // Enable laser locking selection
+
             };
         };
     };
+    */
 };

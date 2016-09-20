@@ -16,7 +16,13 @@
 
 #include "script_component.hpp"
 
+params [["_emitter", objNull, [objNull]],["_owner", objNull, [objNull]],["_method", "", ["", {}, []]],["_wavelength", 0, [0]],["_code", 0, [0]],["_beam", 0, [0]]];
+
 private _uuid = format["%1%2%3", floor diag_tickTime, floor random 1000, floor random 10000];
 private _args = [_uuid, _this];
+
+TRACE_2("Sending Global Laser On Event",_uuid,_this);
+
 ["ace_laserOn", _args] call CBA_fnc_globalEvent;
+
 _uuid;

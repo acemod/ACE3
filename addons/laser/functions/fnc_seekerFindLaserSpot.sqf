@@ -9,99 +9,96 @@
  * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <array>
  * 4: Seeker laser code. <number>
  *
- * Return value:
+ * Return Value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
  */
 
 #include "script_component.hpp"
 
-private ["_pos", "_seekerWavelengths", "_seekerCode", "_spots", "_buckets", "_excludes", "_bucketIndex", "_finalPos", "_owner", "_obj", "_x", "_method"];
-private ["_emitterWavelength", "_laserCode", "_divergence", "_laser", "_res", "_bucketPos", "_bucketList", "_c", "_forEachIndex", "_index"];
-private ["_testPos", "_finalBuckets", "_largest", "_largestIndex", "_finalBucket", "_owners", "_avgX", "_avgY", "_avgZ", "_count", "_maxOwner", "_maxOwnerIndex", "_finalOwner"];
-private["_dir", "_seekerCos", "_seekerFov", "_testDotProduct", "_testPoint", "_testPointVector"];
+params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
-_pos = _this select 0;
-_dir = vectorNormalized (_this select 1);
-_seekerFov = _this select 2;
-_seekerWavelengths = _this select 3;
-_seekerCode = _this select 4;
+_dir = vectorNormalized _dir;
+_seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
+private _seekerCos = cos _seekerFov;
 
+private _spots = [];
+private _finalPos = nil;
+private _finalOwner = objNull;
 
-_seekerCos = cos _seekerFov;
-
-_spots = [];
-_buckets = [];
-_excludes = [];
-_bucketIndex = 0;
-_finalPos = nil;
-_finalOwner = nil;
-
-TRACE_1("",(GVAR(laserEmitters) select 1));
 {
-    _obj = _x select 0;
-    _owner = _x select 1;
-    _method = _x select 2;
-    _emitterWavelength = _x select 3;
-    _laserCode = _x select 4;
-    _divergence = _x select 5;
-    if(alive _obj && {_emitterWavelength >= (_seekerWavelengths select 0)} && {_emitterWavelength <= (_seekerWavelengths select 1)} && {_laserCode == _seekerCode}) then {
-        _laser = [];
-        if(IS_CODE(_method)) then {
-            _laser = _x call _method;
+    _x params ["_obj", "_owner", "_laserMethod", "_emitterWavelength", "_laserCode", "_divergence"];
+    TRACE_6("laser",_obj,_owner,_laserMethod,_emitterWavelength,_laserCode,_divergence);
+
+    if (alive _obj && {_emitterWavelength >= _seekerWavelengthMin} && {_emitterWavelength <= _seekerWavelengthMax} && {_laserCode == _seekerCode}) then {
+
+        private _laser = [];
+        // Find laser pos and dir of the laser depending on type
+        if (IS_STRING(_laserMethod)) then {
+            _laser = _x call (missionNamespace getVariable [_laserMethod, []]);
         } else {
-            if(IS_STRING(_method)) then {
-                _laser = _x call (missionNamespace getVariable [_method, {}]);
+            if (IS_CODE(_laserMethod)) then {
+                _laser = _x call _laserMethod;
             } else {
-                if(IS_ARRAY(_method)) then {
-                    if(count _method == 2) then {
-                        _laser = [AGLtoASL (_obj modelToWorldVisual (_method select 0)), _obj weaponDirection (_method select 1)];
+
+                if (IS_ARRAY(_laserMethod)) then {
+                    if (count _laserMethod == 2) then {
+                        _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), _obj weaponDirection (_laserMethod select 1)];
                     } else {
-                        if(count _method == 3) then {
-                            _laser = [AGLtoASL (_obj modelToWorldVisual (_method select 0)), (AGLtoASL (_obj modelToWorldVisual (_method select 1))) vectorFromTo (AGLtoASL (_obj modelToWorldVisual (_method select 2)))];
+                        if (count _laserMethod == 3) then {
+                            _laser = [AGLtoASL (_obj modelToWorldVisual (_laserMethod select 0)), (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 1))) vectorFromTo (AGLtoASL (_obj modelToWorldVisual (_laserMethod select 2)))];
                         };
                     };
                 };
             };
         };
 
-        //Handle Weird Data Return
-        TRACE_1("_laser", _laser);
-        if (_laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]]) then {
-            if (GVAR(enableDispersion)) then {
-                _res = [_laserPos, _laserDir, _divergence] call FUNC(shootCone);
-                {
-                    _testPoint = _x select 0;
-                    _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
-                    _testDotProduct = _dir vectorDotProduct _testPointVector;
-                    if(_testDotProduct > _seekerCos) then {
-                        _spots pushBack [_testPoint, _owner];
-                    };
-                } forEach (_res select 2);
-            } else {
-                _res = [_laserPos, _laserDir] call FUNC(shootRay);
-                _testPoint = _res select 0;
-                if !(isNil "_testPoint") then {
-                    _testPointVector = vectorNormalized (_testPoint vectorDiff _pos);
-                    _testDotProduct = _dir vectorDotProduct _testPointVector;
-                    hint format ["_testDotProduct %1", _testDotProduct];
-                    if(_testDotProduct > _seekerCos) then {
-                        _spots pushBack [_testPoint, _owner];
-                    };
+        TRACE_1("",_laser);
+        //Handle Weird Data Return - skips over this laser in the for loop
+        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return",_laser);};
+        _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
+
+        if (GVAR(enableDispersion)) then {
+            // Shoot a cone with dispersion
+            private _res = [_laserPos, _laserDir, _divergence, 3, _ignoreObj1] call FUNC(shootCone);
+            {
+                _testPoint = _x select 0;
+                _testPointVector = vectorNormalized (_testPoint vectorDiff _posASL);
+                private _testDotProduct = _dir vectorDotProduct _testPointVector;
+                if (_testDotProduct > _seekerCos) then {
+                    _spots pushBack [_testPoint, _owner];
+                };
+            } forEach (_res select 2);
+        } else {
+            // Shoot a perfect ray from source to target
+            ([_laserPos, _laserDir, _ignoreObj1] call FUNC(shootRay)) params ["_resultPos", "_distance"];
+            TRACE_2("spot",_resultPos,_distance);
+            if (_distance > 0) then {
+                private _testPointVector = _posASL vectorFromTo _resultPos;
+                private _testDotProduct = _dir vectorDotProduct _testPointVector;
+                if (_testDotProduct > _seekerCos) then {
+                    _spots pushBack [_resultPos, _owner];
                 };
             };
         };
     };
-} forEach (GVAR(laserEmitters) select 1);
+} forEach (GVAR(laserEmitters) select 2); // Go through all values in hash
 
-if((count _spots) > 0) then {
-    _bucketPos = nil;
-    _bucketList = nil;
-    _c = 0;
+TRACE_2("",count _spots, _spots);
+
+if ((count _spots) > 0) then {
+    private _bucketList = nil;
+    private _bucketPos = nil;
+    private _c = 0;
+    private _buckets = [];
+    private _excludes = [];
+    private _bucketIndex = 0;
+
+    // Put close points together into buckets
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
         scopeName "mainSearch";
         {
-            if(!(_forEachIndex in _excludes)) then {
-                _index = _buckets pushBack [_x, [_x]];
+            if (!(_forEachIndex in _excludes)) then {
+                private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x select 0;
                 _bucketList = (_buckets select _index) select 1;
@@ -109,9 +106,9 @@ if((count _spots) > 0) then {
             };
         } forEach _spots;
         {
-            if(!(_forEachIndex in _excludes)) then {
-                _testPos = (_x select 0);
-                if(_testPos vectorDistanceSqr _bucketPos <= 100) then {
+            if (!(_forEachIndex in _excludes)) then {
+                private _testPos = (_x select 0);
+                if ((_testPos vectorDistanceSqr _bucketPos) <= 100) then {
                     _bucketList pushBack _x;
                     _excludes pushBack _forEachIndex;
                 };
@@ -119,55 +116,60 @@ if((count _spots) > 0) then {
         } forEach _spots;
         _c = _c + 1;
     };
-    _finalBuckets = [];
-    _largest = -1;
-    _largestIndex = 0;
+
+    TRACE_1("",_buckets);
+
+    private _finalBuckets = [];
+    private _largest = -1;
+    private _largestIndex = 0;
     {
-        _index = _finalBuckets pushBack [];
+        // find bucket with largest number of points we can see
+        private _index = _finalBuckets pushBack [];
         _bucketList = _finalBuckets select _index;
         {
-            _testPos = (_x select 0);
-            if(!terrainIntersectASL [_pos, _testPos] && {!lineIntersects [_pos, _testPos]}) then {
+            private _testPos = (_x select 0) vectorAdd [0,0,0.05];
+            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1];
+            if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };
         } forEach (_x select 1);
-        if((count _bucketList) > _largest) then {
+        if ((count _bucketList) > _largest) then {
             _largest = (count _bucketList);
             _largestIndex = _index;
         };
     } forEach _buckets;
 
-    _finalBucket = _finalBuckets select _largestIndex;
-    _owners = HASH_CREATE;
+    private _finalBucket = _finalBuckets select _largestIndex;
+    private _ownersHash = [] call CBA_fnc_hashCreate;
 
-    if(count _finalBucket > 0) then {
-        _avgX = 0;
-        _avgY = 0;
-        _avgZ = 0;
+    TRACE_2("",_finalBucket,_finalBuckets);
+
+    if (count _finalBucket > 0) then {
+        // merge all points in the best bucket into an average point and find effective owner
+        _finalPos = [0,0,0];
         {
-            //player sideChat format["x: %1", _x];
-            _avgX = _avgX + ((_x select 0) select 0);
-            _avgY = _avgY + ((_x select 0) select 1);
-            _avgZ = _avgZ + ((_x select 0) select 2);
-            _owner = _x select 1;
-            if(HASH_HASKEY(_owners, _owner)) then {
-                _count = HASH_GET(_owners, _owner);
-                HASH_SET(_owners, _owner, _count+1);
+            _x params ["_xPos", "_owner"];
+            _finalPos = _finalPos vectorAdd _xPos;
+            if ([_ownersHash, _owner] call CBA_fnc_hashHasKey) then {
+                private _count = [_ownersHash, _owner] call CBA_fnc_hashGet;
+                [_ownersHash, _owner, _count + 1] call CBA_fnc_hashSet;
             } else {
-                HASH_SET(_owners, _owner, 1);
+                [_ownersHash, _owner, 1] call CBA_fnc_hashSet;
             };
         } forEach _finalBucket;
-        _count = count _finalBucket;
-        _finalPos = [_avgX/_count, _avgY/_count, _avgZ/_count];
-        _maxOwner = -1;
-        _maxOwnerIndex = 0;
-        {
-            if((_owners select 1) select _forEachIndex > _maxOwner) then {
-                _maxOwner = (_owners select 1) select _forEachIndex;
-                _maxOwnerIndex = _forEachIndex;
+
+        _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
+
+        private _maxOwnerCount = -1;
+
+        [_ownersHash, {
+            if (_value > _maxOwnerCount) then {
+                _finalOwner = _key;
             };
-        } forEach (_owners select 0);
-        _finalOwner = (_owners select 0) select _maxOwnerIndex;
+        }] call CBA_fnc_hashEachPair;
     };
 };
-[_finalPos, _owner];
+
+TRACE_2("return",_finalPos,_finalOwner);
+if (isNil "_finalPos") exitWith {[nil, _finalOwner]};
+[_finalPos, _finalOwner];
