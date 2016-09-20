@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 params ["_simulationType", "_thisHandleDamage"];
-_thisHandleDamage params ["_vehicle", "", "_damage", "", "_ammo", "_hitIndex"];
+_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter"];
 
 // it's already dead, who cares?
 if (damage _vehicle >= 1) exitWith {};
@@ -84,14 +84,32 @@ if (_simulationType == "tank") exitWith {
 };
 
 if (_simulationType == "box") exitWith {
-    if (_hitpoint == "#structural" && {IS_EXPLOSIVE_AMMO(_ammo)}) then {
-        // Always catch fire when hit by an explosive
-        if (_damage > 0.5) then {
+    if (_hitpoint == "#structural" && _damage > 0.5) then {
+        // Almost always catch fire when hit by an explosive
+        if (IS_EXPLOSIVE_AMMO(_ammo)) then {
             _vehicle call FUNC(cookOffBox);
-        };
-    };
+        } else {
+            // Need magazine to check for tracers
+            private _mag = "";
+            if (_source == _shooter) then {
+                _mag = currentMagazine _source;
+            } else {
+                _mag = _source currentMagazineTurret ([_shooter] call CBA_fnc_turretPath);
+            };
+            private _magCfg = configFile >> "CfgMagazines" >> _mag;
 
-    if (_hitpoint == "#structural") then {
+            // Magazine could have changed during flight time (just ignore if so)
+            if (getText (_magCfg >> "ammo") == _ammo) then {
+                // If magazine's tracer density is high enough then low chance for cook off
+                private _tracers = getNumber (_magCfg >> "tracersEvery");
+                if (_tracers >= 1 && {_tracers <= 4}) then {
+                    if (random 1 < _oldDamage*0.05) then {
+                        _vehicle call FUNC(cookOffBox);
+                    };
+                };
+            };
+        };
+
         // prevent destruction, let cook-off handle it if necessary
         _damage min 0.89
     } else {
