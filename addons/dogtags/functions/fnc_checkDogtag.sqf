@@ -22,7 +22,7 @@ params ["_player", "_target"];
 _player call EFUNC(common,goKneeling);
 
 // sound
-private _position = AGLToASL (_target modelToWorld (_target selectionPosition "Spine1"));
+private _position = AGLToASL (_target modelToWorld (_target selectionPosition "neck"));
 
 playSound3D [
     selectRandom RUSTLING_SOUNDS,
