@@ -1,12 +1,6 @@
 #include "script_component.hpp"
 if (!hasInterface) exitWith {};
 
-// Debugging:
-// [QGVAR(ae1Reserve), {GVAR(ae1Reserve)}, [true, 0, AE1_MAXRESERVE]] call EFUNC(common,watchVariable);
-// [QGVAR(ae2Reserve), {GVAR(ae2Reserve)}, [true, 0, AE2_MAXRESERVE]] call EFUNC(common,watchVariable);
-// [QGVAR(anReserve), {GVAR(anReserve)}, [true, 0, AN_MAXRESERVE]] call EFUNC(common,watchVariable);
-// [QGVAR(anFatigue), {GVAR(anFatigue)}, [true, 0, 1]] call EFUNC(common,watchVariable);
-
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
