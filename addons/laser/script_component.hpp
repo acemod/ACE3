@@ -17,6 +17,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+
 #define __LaserDesignatorIGUI (uiNamespace getVariable ["ACE_RscOptics_LaserDesignator", nil])
 #define __LaserDesignatorIGUI_LaserCode (__LaserDesignatorIGUI displayCtrl 123001)
 #define __LaserDesignatorIGUI_ACE_Distance (__LaserDesignatorIGUI displayCtrl 123002)
