@@ -31,6 +31,12 @@ private _muzzle = _unit getVariable [QGVAR(activeMuzzle), ""];
 // Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1), removeItem above resets it
 _unit setAmmo [_muzzle, 0];
 
+// Handle weird scripted grenades (RHS) which could cause unexpected behaviour
+private _nonInheritedCfg = configProperties [configFile >> "CfgAmmo" >> _throwableType, 'configName _x == QGVAR(replaceWith)', false];
+if ((count _nonInheritedCfg) == 1) then {
+    _throwableType = getText (_nonInheritedCfg select 0);
+};
+
 // Create actual throwable globally
 private _activeThrowableOld = _unit getVariable [QGVAR(activeThrowable), objNull];
 private _activeThrowable = createVehicle [_throwableType, _activeThrowableOld, [], 0, "CAN_COLLIDE"];
