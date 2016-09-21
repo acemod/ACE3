@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="pike">
+        <Key ID="STR_ACE_pike_magazine_displayName">
+            <English>40mm Pike</English>
+        </Key>
+    </Package>
+</Project>
