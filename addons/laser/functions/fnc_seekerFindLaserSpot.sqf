@@ -19,7 +19,7 @@
  *
  * Public: No
  */
-
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
@@ -27,6 +27,8 @@ params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
 private _seekerCos = cos _seekerFov;
+
+TRACE_5("",_posASL,_dir,_seekerFov,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;
@@ -68,7 +70,7 @@ private _finalOwner = objNull;
         if (GVAR(enableDispersion)) then {
         // if (true) then {
             // Shoot a cone with dispersion
-            private _res = [_laserPos, _laserDir, _divergence, 3, _ignoreObj1] call FUNC(shootCone);
+            private _res = [_laserPos, _laserDir, _divergence, 3, _obj] call FUNC(shootCone);
             {
                 _testPoint = _x select 0;
                 _testPointVector = vectorNormalized (_testPoint vectorDiff _posASL);
@@ -79,7 +81,7 @@ private _finalOwner = objNull;
             } forEach (_res select 2);
         } else {
             // Shoot a perfect ray from source to target
-            ([_laserPos, _laserDir, _ignoreObj1] call FUNC(shootRay)) params ["_resultPos", "_distance"];
+            ([_laserPos, _laserDir, _obj] call FUNC(shootRay)) params ["_resultPos", "_distance"];
             TRACE_2("spot",_resultPos,_distance);
             if (_distance > 0) then {
                 private _testPointVector = _posASL vectorFromTo _resultPos;

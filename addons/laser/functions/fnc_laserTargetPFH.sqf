@@ -13,7 +13,6 @@
  *
  * Public: No
  */
- */
 #include "script_component.hpp"
 
 params ["", "_pfhuid"];
@@ -21,9 +20,9 @@ params ["", "_pfhuid"];
 GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
     _x params ["_targetObject", "_owner", "_laserUuid"];
     if ((isNull _targetObject) ||
-        {!(alive _targetObject)} ||
-        {isNull _owner} ||
-        {!(alive _owner)}) then {
+            {!(alive _targetObject)} ||
+            {isNull _owner} ||
+            {!(alive _owner)}) then {
 
         // Turn off the laser in ace_laser
         [_laserUuid] call FUNC(laserOff);

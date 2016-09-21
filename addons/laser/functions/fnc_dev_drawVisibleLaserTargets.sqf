@@ -18,7 +18,7 @@
         private _rayPos = _resultsRay select 0;
         if (isNil "_rayPos") exitWith {systemChat format ["nil ray - %1 - %2", _resultsLaser, _resultRay];  x3 = _resultsLaser; };
         private _diff = _rayPos vectorDistance (getPosASL _targetObject);
-        if (_diff < 5) exitWith {};
+        // if (_diff < 5) exitWith {};
         drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLtoAGL _rayPos), 2, 2, 0, format ["Diff %1",_diff], 0.5, 0.025, "TahomaB"];
     };
 }] call CBA_fnc_hashEachPair;
@@ -28,7 +28,7 @@
 private _playerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
 private _viewDir = (_playerPosASL) vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
 
-private _results = [_playerPosASL, _viewDir, 30, [1550,1550], 1111, ace_player] call FUNC(seekerFindLaserSpot);
+private _results = [_playerPosASL, _viewDir, 30, [1550,1550], 1111, vehicle ace_player] call FUNC(seekerFindLaserSpot);
 private _resultPos = _results select 0;
 if (!isNil "_resultPos") then {
     // Draw lock results
@@ -38,7 +38,7 @@ if (!isNil "_resultPos") then {
 private _playerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
 private _viewDir = (_playerPosASL) vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
 
-private _results = [_playerPosASL, _viewDir, 30, [1550,1550], 1112, ace_player] call FUNC(seekerFindLaserSpot);
+private _results = [_playerPosASL, _viewDir, 30, [1550,1550], 1112, vehicle ace_player] call FUNC(seekerFindLaserSpot);
 private _resultPos = _results select 0;
 if (!isNil "_resultPos") then {
     // Draw lock results

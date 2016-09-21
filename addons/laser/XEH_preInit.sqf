@@ -14,7 +14,3 @@ GVAR(trackedLaserTargets) = [];
 GVAR(pfehID) = -1;
 
 ADDON = true;
-
-recomp = {
-#include "XEH_PREP.hpp"
-};
