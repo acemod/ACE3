@@ -25,17 +25,6 @@ private _actionPathTexts = [
 ];
 private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm", "LKnee", "RKnee"];
 
-// - Create base nodes --------------------------------------------------------
-{
-    private _action = [_x, _actionPathTexts select _forEachIndex, QPATHTOEF(medical,UI\icons\medical_cross.paa), {
-        [_target, true, _this] call EFUNC(medical,displayPatientInformation);
-    }, {true}, {}, _forEachIndex, _actionPathPositions select _forEachIndex, 2, [false, true, false, false, false], {
-        [_target, _player, _this select 2, _this select 3] call EFUNC(medical_treatment,modifyMedicalAction);
-    }] call EFUNC(interact_menu,createAction);
-    ["CAManBase", 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
-    ["CAManBase", 1, ["ACE_SelfActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
-} forEach _actionPaths;
-
 // - Create treatment actions -------------------------------------------------
 {
     private _config = _x;
@@ -67,7 +56,7 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
             _actionName, _displayName, _icon, _statement, _condition, {}, configName _config, [0, 0, 0], 2, [false, true, false, false, false]
         ] call EFUNC(interact_menu,createAction);
         diag_log formatText ["ACTIONS LOL: %1", [_actionName, _displayName, _icon, _statement, _condition]];
-        ["CAManBase", 0, ["ACE_MainActions", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
-        ["CAManBase", 1, ["ACE_SelfActions", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
+        ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
+        ["CAManBase", 1, ["ACE_SelfActions", "Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
     } forEach _allowedSelections;
 } forEach configProperties [_actionsConfig, "isClass _x"];
