@@ -328,7 +328,7 @@ class CfgVehicles {
         displayName = CSTRING(SpareTrack);
         icon = "iconObject_2x1";
         mapSize = 0.5;
-        selectionDamage = "damage1";
+        selectionDamage = "zbytek";
 
         class Damage {
             tex[] = {};
@@ -350,7 +350,7 @@ class CfgVehicles {
         picture = QPATHTOF(ui\tire_ca.paa);
         icon = "iconObject_circle";
         mapSize = 0.7;
-        selectionDamage = "damage1";
+        selectionDamage = "zbytek";
 
         class Damage {
             tex[] = {};
