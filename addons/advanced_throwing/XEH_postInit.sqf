@@ -66,7 +66,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
     [_this select 1, "Player changed"] call FUNC(exitThrowMode);
 }] call CBA_fnc_addPlayerEventhandler;
 
-["visiblemap", {
+["visibleMap", {
     if (visibleMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
         [ACE_player, "Opened Map"] call FUNC(exitThrowMode);
     };
