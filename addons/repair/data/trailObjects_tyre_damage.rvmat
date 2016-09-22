@@ -24,12 +24,12 @@ class Stage1 {
 };
 
 class Stage2 {
-    texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+    texture = "a3\data_f\destruct\destr_rubber_half_dt.paa";
     uvSource = "tex";
     class uvTransform {
-        aside[] = {1,0,0};
-        up[] = {0,1,0};
-        dir[] = {0,0,1};
+        aside[] = {5,0,0};
+        up[] = {0,5,0};
+        dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
@@ -38,10 +38,10 @@ class Stage3 {
     texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
     uvSource = "tex";
     class uvTransform {
-        aside[] = {1,0,0};
-        up[] = {0,1,0};
-        dir[] = {0,0,1};
-        pos[] = {0,0,0};
+        aside[] = {3,0,0};
+        up[] = {0,3,0};
+        dir[] = {0,0,0};
+        pos[] = {0.1,0.23,0};
     };
 };
 
