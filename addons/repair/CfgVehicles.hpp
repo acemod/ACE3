@@ -314,8 +314,6 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
-        icon = "iconObject_circle";
-        mapSize = 0.7;
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo"; // scripted delayed destruction
@@ -328,6 +326,18 @@ class CfgVehicles {
         scope = 2;
         model = QPATHTOF(data\ace_track.p3d);
         displayName = CSTRING(SpareTrack);
+        icon = "iconObject_2x1";
+        mapSize = 0.5;
+        selectionDamage = "damage1";
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\trailObjects_steel.rvmat),
+                QPATHTO_R(data\trailObjects_steel_damage.rvmat),
+                QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
+            };
+        };
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -338,6 +348,21 @@ class CfgVehicles {
         model = QPATHTOF(data\ace_wheel.p3d);
         displayName = CSTRING(SpareWheel);
         picture = QPATHTOF(ui\tire_ca.paa);
+        icon = "iconObject_circle";
+        mapSize = 0.7;
+        selectionDamage = "damage1";
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\trailObjects_tyre.rvmat),
+                QPATHTO_R(data\trailObjects_tyre_damage.rvmat),
+                QPATHTO_R(data\trailObjects_tyre_destruct.rvmat),
+                QPATHTO_R(data\trailObjects_steel.rvmat),
+                QPATHTO_R(data\trailObjects_steel_damage.rvmat),
+                QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
+            };
+        };
     };
 
     // disable vanilla repair
