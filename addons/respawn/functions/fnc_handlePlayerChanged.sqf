@@ -17,8 +17,7 @@
 
 params ["_newUnit"];
 
-private "_side";
-_side = side group _newUnit;
+private _side = side group _newUnit;
 
 ((GETMVAR(ACE_Rallypoint_West,             objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
 ((GETMVAR(ACE_Rallypoint_West_Base,        objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));

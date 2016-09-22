@@ -5,6 +5,11 @@ description: Explains how to set-up headgear with ACE3 hearing system.
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Config Values

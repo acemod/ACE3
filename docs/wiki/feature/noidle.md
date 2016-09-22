@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: No Idle
-description: Disables idle animations
+description: Disable idle animations.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

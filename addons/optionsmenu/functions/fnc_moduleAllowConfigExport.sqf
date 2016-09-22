@@ -13,8 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_logic"];
-_logic = _this select 0;
+params ["_logic"];
 
 if (isMultiplayer) exitWith {};
 

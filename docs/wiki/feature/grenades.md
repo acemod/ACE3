@@ -1,11 +1,21 @@
 ---
 layout: wiki
 title: Grenades
-description:
+description: Different throwing modes for grenades, a flashbang and hand flares.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Check out the <a href="{{ site.baseurl }}/wiki/feature/advanced-throwing.html">Advanced Throwing</a> page for the new alternative system introduced in version 3.7.0.</p>
+</div>
 
 ## 1. Overview
 

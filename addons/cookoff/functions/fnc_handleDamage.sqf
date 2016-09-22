@@ -60,13 +60,17 @@ if (_simulationType == "tank") exitWith {
     // determine ammo storage location
     private _ammoLocationHitpoint = getText (_vehicle  call CBA_fnc_getObjectConfig >> QGVAR(ammoLocation));
 
+    if (_hitIndex in (GVAR(cacheTankDuplicates) getVariable (typeOf _vehicle))) then {
+        _hitpoint = "#subturret";
+    };
+    
     // ammo was hit, high chance for cook-off
     if (_hitpoint == _ammoLocationHitpoint) then {
         if (_damage > 0.5 && {random 1 < 0.7}) then {
             _vehicle call FUNC(cookOff);
         };
     } else {
-        if (_hitpoint in ["hitbody", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.3}) then {
+        if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.3}) then {
             _vehicle call FUNC(cookOff);
         };
     };

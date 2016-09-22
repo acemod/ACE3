@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: ATragMX
-description:
+description: Handheld ballistics calculator.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## Overview

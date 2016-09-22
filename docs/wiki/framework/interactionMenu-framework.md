@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Interaction Menu Framework
-description: Explains how to add items to ACE's Interaction Menu
+description: Explains how to add items to ACE's Interaction Menu.
 group: framework
 order: 0
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Types of actions
@@ -97,8 +102,10 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
+ * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
  */
 ```
+By default this function will not use inheritance, so actions will only be added to the specific class.
 
 ### 2.3 fnc_addActionToObject
 
@@ -134,6 +141,18 @@ _statement = {
 };
 _action = ["Open RDF","Radio Direction Finder","pabst\RDF.jpg",_statement,_condition] call ace_interact_menu_fnc_createAction;
 [(typeOf _unit), 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+```
+
+Using `addActionToClass` inheritance:
+
+```cpp
+// Adds action to check fuel levels for all land vehicles
+_action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
+["LandVehicle", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+// Adds action to check external fuel levels on tanks.  Will be a sub action of the previous action.
+_action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1", 5]},{true}] call ace_interact_menu_fnc_createAction;
+["Tank_F", 0, ["ACE_MainActions", "CheckFuel"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ```
 
 ### 2.5 Advanced Example

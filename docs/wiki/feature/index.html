@@ -1,5 +1,5 @@
 ---
-title: Feature documentation
+title: ACE3 Feature documentation
 layout: default
 group: subNav
 order: 1
@@ -9,8 +9,8 @@ parent: wiki
 
     <div class="row">
         <div class="large-12 columns">
-            <h1>Features</h1>
-            <p>Overviews and details on feature usage and implementations.</p>
+            <h1>ACE3 Features</h1>
+            <p>Overviews and details of ACE3 features, their usage and implementations.</p>
         </div>
     </div>
     <div class="row">
@@ -19,6 +19,7 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'general' %}
                     {% include feature_list %}
@@ -30,6 +31,7 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'interaction' %}
                     {% include feature_list %}
@@ -41,6 +43,7 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'realism' %}
                     {% include feature_list %}
@@ -52,6 +55,7 @@ parent: wiki
             <nav>
                 <ul>
                     {% assign feature_list = site.pages | sort: "title" %}
+                    {% assign mod = 'ace' %}
                     {% assign group = 'feature' %}
                     {% assign category = 'equipment' %}
                     {% include feature_list %}

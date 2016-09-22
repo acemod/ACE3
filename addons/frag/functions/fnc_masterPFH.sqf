@@ -15,12 +15,12 @@
 
 if (!GVAR(enabled)) exitWith {};
 
-private["_gcIndex", "_iter"];
+private ["_gcIndex", "_iter"];
 _gcIndex = [];
 
 _iter = 0;
 while { (count GVAR(objects)) > 0 &&  { _iter < (GVAR(MaxTrackPerFrame) min (count GVAR(objects))) } } do {
-    private["_object", "_args"];
+    private ["_object", "_args"];
     if(GVAR(lastIterationIndex) >= (count GVAR(objects))) then {
         GVAR(lastIterationIndex) = 0;
     };
@@ -38,7 +38,7 @@ while { (count GVAR(objects)) > 0 &&  { _iter < (GVAR(MaxTrackPerFrame) min (cou
 };
 
 // clean up dead object references
-private["_deletionCount", "_deleteIndex"];
+private ["_deletionCount", "_deleteIndex"];
 _deletionCount = 0;
 {
     TRACE_1("GC Projectile", _x);

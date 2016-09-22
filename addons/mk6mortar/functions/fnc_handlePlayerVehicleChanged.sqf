@@ -45,7 +45,7 @@ if (_lastFireMode != -1) then {
 };
 
 [{
-    private["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
+    private ["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
     PARAMS_2(_args,_pfID);
     EXPLODE_2_PVT(_args,_mortarVeh,_fireModes);
 

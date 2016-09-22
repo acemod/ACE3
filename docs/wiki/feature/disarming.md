@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Disarming
-description:
+description: Ability to make units drop items/weapons/magazines.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

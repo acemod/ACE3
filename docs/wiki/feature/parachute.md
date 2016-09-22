@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Parachute
-description: Add an altimeter and a non-steerable parachute
+description: Add an altimeter and a non-steerable parachute.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

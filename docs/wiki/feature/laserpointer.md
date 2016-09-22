@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Laser Pointer
-description: Switching laser modes, daylight lasers
+description: Switching laser modes, daylight lasers.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

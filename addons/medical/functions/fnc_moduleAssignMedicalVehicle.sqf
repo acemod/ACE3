@@ -17,9 +17,8 @@
 params ["_logic"];
 
 if (!isNull _logic) then {
-    private ["_list", "_setting"];
-    _list = _logic getVariable ["EnableList", ""];
-    _setting = _logic getVariable ["enabled", 0];
+    private _list = _logic getVariable ["EnableList", ""];
+    private _setting = _logic getVariable ["enabled", 0];
 
     [_list, QGVAR(medicClass), _setting, true] call EFUNC(common,assignObjectsInList);
     [synchronizedObjects _logic, QGVAR(medicClass), _setting, true, true] call EFUNC(common,assignObjectsInList);

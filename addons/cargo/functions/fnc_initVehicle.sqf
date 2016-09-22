@@ -25,9 +25,8 @@ if (getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) != 1) ex
 if (isServer) then {
     {
         if (isClass _x) then {
-            private ["_cargoClassname", "_cargoCount"];
-            _cargoClassname = getText (_x >> "type");
-            _cargoCount = getNumber (_x >> "amount");
+            private _cargoClassname = getText (_x >> "type");
+            private _cargoCount = getNumber (_x >> "amount");
             TRACE_3("adding ACE_Cargo", (configName _x), _cargoClassname, _cargoCount);
             ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
         };
@@ -48,6 +47,7 @@ private _condition = {
 };
 private _statement = {
     GVAR(interactionVehicle) = _target;
+    GVAR(interactionParadrop) = false;
     createDialog QGVAR(menu);
 };
 private _text = localize LSTRING(openMenu);
@@ -55,3 +55,24 @@ private _icon = "";
 
 private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+
+// Add the paradrop self interaction for planes and helicopters
+if (_vehicle isKindOf "Air") then {
+    private _condition = {
+        GVAR(enable) && {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
+            private _turretPath = _player call CBA_fnc_turretPath;
+            (_player == (driver _target)) || // pilot
+            {(getNumber (([_target, _turretPath] call CBA_fnc_getTurret) >> "isCopilot")) == 1} || // coPilot
+            {_turretPath in (getArray (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(loadmasterTurrets)))}} // loadMaster turret from config
+    };
+    private _statement = {
+        GVAR(interactionVehicle) = _target;
+        GVAR(interactionParadrop) = true;
+        createDialog QGVAR(menu);
+    };
+    private _text = localize LSTRING(openMenu);
+    private _icon = "";
+
+    private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
+    [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass); // self action on the vehicle
+};

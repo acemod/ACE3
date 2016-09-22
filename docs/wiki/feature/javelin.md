@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Javelin
-description:
+description: Javelin AT launcher and locking.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

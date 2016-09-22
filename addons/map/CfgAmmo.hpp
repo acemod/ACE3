@@ -1,39 +1,34 @@
 class CfgAmmo {
     
-    class Chemlight_base;
+    class Grenade;
     
-    class ACE_FlashlightProxy_White: Chemlight_base {
-        model = "\A3\Weapons_f\empty";
+    class ACE_FlashlightProxy_White: Grenade {
         effectsSmoke = "ACE_FlashlightEffect_White";
         explosionTime = 0.01;
+        grenadeBurningSound[] = {};
+        grenadeFireSound[] = {};
+        hit = 0;
+        model = "\A3\Weapons_f\empty.p3d";
+        simulation = "shotSmokeX";
+        smokeColor[] = {1,1,1,1};
         timeToLive = 1e10;
         
-        soundImpactHard1[] = {"",1,1};
-        soundImpactHard2[] = {"",1,1};
-        soundImpactHard3[] = {"",1,1};
-        soundImpactHard4[] = {"",1,1};
-        soundImpactHard5[] = {"",1,1};
-        soundImpactHard6[] = {"",1,1};
-        soundImpactHard7[] = {"",1,1};
-        soundImpactIron1[] = {"",1,1};
-        soundImpactIron2[] = {"",1,1};
-        soundImpactIron3[] = {"",1,1};
-        soundImpactIron4[] = {"",1,1};
-        soundImpactIron5[] = {"",1,1};
-        soundImpactSoft1[] = {"",1,1};
-        soundImpactSoft2[] = {"",1,1};
-        soundImpactSoft3[] = {"",1,1};
-        soundImpactSoft4[] = {"",1,1};
-        soundImpactSoft5[] = {"",1,1};
-        soundImpactSoft6[] = {"",1,1};
-        soundImpactSoft7[] = {"",1,1};
-        soundImpactWater1[] = {"",1,1};
-        soundImpactWater2[] = {"",1,1};
-        soundImpactWater3[] = {"",1,1};
-        soundImpactWoodExt1[] = {"",1,1};
-        soundImpactWoodExt2[] = {"",1,1};
-        soundImpactWoodExt3[] = {"",1,1};
-        soundImpactWoodExt4[] = {"",1,1};
+        impactArmor[] = {};
+        impactConcrete[] = {};
+        impactDefault[] = {};
+        impactGlass[] = {};
+        impactGlassArmored[] = {};
+        impactGroundHard[] = {};
+        impactGroundSoft[] = {};
+        impactIron[] = {};
+        impactMan[] = {};
+        impactMetal[] = {};
+        impactMetalPlate[] = {};
+        impactMetalPlastic[] = {};
+        impactRubber[] = {};
+        impactTyre[] = {};
+        impactWater[] = {};
+        impactWood[] = {};
     };
     
     class ACE_FlashlightProxy_Red: ACE_FlashlightProxy_White {
@@ -50,5 +45,9 @@ class CfgAmmo {
     
     class ACE_FlashlightProxy_Yellow: ACE_FlashlightProxy_White {
         effectsSmoke = "ACE_FlashlightEffect_Yellow";
+    };
+    
+    class ACE_FlashlightProxy_Orange: ACE_FlashlightProxy_White {
+        effectsSmoke = "ACE_FlashlightEffect_Orange";
     };
 };

@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Rangecard
-description: Adds a range card for your weapons
+description: Adds a range card for your weapons.
 group: feature
 category: equipment
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 1
+  patch: 0
 ---
 
 ## 1. Overview

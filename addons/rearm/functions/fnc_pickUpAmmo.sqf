@@ -16,7 +16,6 @@
  */
 #include "script_component.hpp"
 
-private ["_magazineClass"];
 params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];

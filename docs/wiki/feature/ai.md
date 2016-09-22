@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: AI (Artificial Intelligence)
-description: Config based changes to AI to ensure compatibility with advanced AI modifications
+description: Config based changes to AI to ensure compatibility with advanced AI modifications.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

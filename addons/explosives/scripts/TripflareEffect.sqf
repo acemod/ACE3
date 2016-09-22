@@ -16,5 +16,5 @@
 
 // This is called from a CfgCloudlet's beforeDestroyScript config.
 // It will be re-compiled each use, so avoid complex preProcessor includes and just call the prepared function.
- 
-_this call ace_explosives_fnc_spawnFlare;
+
+[ace_explosives_fnc_spawnFlare, _this] call CBA_fnc_directCall;

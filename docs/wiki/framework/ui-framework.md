@@ -5,6 +5,11 @@ description: Explains how to use the selective user interface framework to add c
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 6
+  patch: 0
 ---
 
 Only advanced elements can be modified using Selective User Interface framework, basic elements can only be changed using `showHUD` SQF command.

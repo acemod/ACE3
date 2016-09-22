@@ -17,7 +17,7 @@ This page describes how you can setup your development environment for ACE3, all
 - A properly setup P-drive
 - Run Arma 3 and Arma 3 Tools directly from steam once to install registry entries (and again after every update)
 - Python 3.x, available [here](http://www.python.org)
-- The following Mikero's Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePBO, DeOgg, Rapify, MakePBO, PBOProject
+- The following Mikero's Tools (available [here](https://dev.withsix.com/projects/mikero-pbodll/files)): DePbo, DeRap, DeOgg, Rapify, MakePbo, pboProject
 - A properly setup PATH variable (containing Python, the Mikero's Tools and git)
 
 

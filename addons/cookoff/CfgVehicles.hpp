@@ -11,15 +11,19 @@ class CfgVehicles {
     class ThingX;
     class GVAR(Turret_MBT_01): ThingX {
         author = ECSTRING(common,ACETeam);
-        _generalMacro = QGVAR(TurretDummy);
+        _generalMacro = QGVAR(Turret_MBT_01);
         scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
         model = "\A3\Structures_F\Wrecks\Wreck_Slammer_turret_F.p3d";
+        icon = "\A3\armor_f_gamma\MBT_01\Data\ui\map_slammer_mk4_ca.paa";
     };
     class GVAR(Turret_MBT_02): ThingX {
         author = ECSTRING(common,ACETeam);
-        _generalMacro = QGVAR(TurretDummy);
+        _generalMacro = QGVAR(Turret_MBT_02);
         scope = 1;
+        displayName = CSTRING(generic_turret_wreck);
         model = "\A3\Structures_F\Wrecks\Wreck_T72_turret_F.p3d";
+        icon = "\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
     };
 
     class Tank;
@@ -52,5 +56,21 @@ class CfgVehicles {
     class O_MBT_02_base_F;
     class O_MBT_02_cannon_F: O_MBT_02_base_F {
         GVAR(turret)[] = {QGVAR(Turret_MBT_02),{0,-1,0}};
+    };
+
+    class MRAP_01_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
+    };
+
+    class MRAP_02_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
+    };
+
+    class MRAP_03_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,-2,0};
+    };
+
+    class Quadbike_01_base_F: Car_F {
+        GVAR(engineSmokeOffset)[] = {0,1,0};
     };
 };

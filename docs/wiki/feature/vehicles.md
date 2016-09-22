@@ -1,10 +1,15 @@
 ---
 layout: wiki
 title: Vehicles
-description:
+description: Various tweaks to vehicles and vehicle weapons.
 group: feature
 category: realism
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

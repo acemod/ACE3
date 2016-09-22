@@ -5,6 +5,11 @@ description: ACE3 contains an extensive settings framework that allows you to tw
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ACE3 contains an extensive settings framework that allows you to tweak the modification without having to mess around with deleting PBOs. These settings are all handled server side and broadcasted to the clients connecting to that server. This ensures that everyone playing on the server will have a uniform experience.
@@ -74,6 +79,10 @@ ACE3 contains a lot of settings, for that reason tweaking everything to your lik
 - You are now in the dialog that allows you to adjust all settings from ACE3. Tweak this to your liking.
 - Once you are done tweaking, press the `Export` button and all settings will be copied to your clipboard.
 - Paste the settings in your `serverconfig.hpp` file and you're done.
+
+Please note that in the `serverconfig.hpp` file there is no need for adding the `ACE_Settings` class.
+
+#### Using the exported settings in the mission description.ext
 
 Note that the format copied to your clipboard by this can also be used in the mission config (`description.ext`), as long as they are in the class `ACE_Settings`.
 

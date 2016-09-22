@@ -22,10 +22,8 @@ TRACE_1("params",_unit);
 
 if (!local _unit) exitWith {};
 
-private ["_attachedList"];
-
-_attachedList = _unit getVariable [QGVAR(attached), []];
-if ((count _attachedList) == 0) exitWith {};
+private _attachedList = _unit getVariable [QGVAR(attached), []];
+if (_attachedList isEqualTo []) exitWith {};
 
 (_attachedList select 0) params ["_xObject", "_xItemName"];
 if (isNull _xObject) then {

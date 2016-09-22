@@ -5,6 +5,11 @@ description: Explains how to set-up the cargo framework for custom objects and v
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 3
+  patch: 0
 ---
 
 ## 1. Config Values

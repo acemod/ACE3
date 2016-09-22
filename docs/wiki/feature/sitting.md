@@ -1,11 +1,21 @@
 ---
 layout: wiki
 title: Sitting
-description:
+description: Ability to sit on chairs.
 group: feature
 category: interaction
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 2
+  patch: 0
 ---
+
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>ACE3 Sitting has been deprecated in favour of ACEX Sitting and will be removed in a future version.</p>
+</div>
 
 ## 1. Overview
 Adds the ability to sit on chairs.

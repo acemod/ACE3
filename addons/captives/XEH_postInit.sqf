@@ -13,8 +13,7 @@
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_disconnectedPlayer"];
-        private "_escortedUnit";
-        _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
+        private _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
         if ((!isNull _escortedUnit) && {(attachedTo _escortedUnit) == _disconnectedPlayer}) then {
             detach _escortedUnit;
         };

@@ -3,7 +3,7 @@ layout: wiki
 title: ACEX Installation Guide
 description: Step-by-step guide for installing ACEX
 group: user
-order: 1
+order: 2
 parent: wiki
 ---
 

@@ -5,6 +5,11 @@ description: Explains how to set-up launchers with ACE3 reload launchers system.
 group: framework
 order: 5
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Adding third party reload

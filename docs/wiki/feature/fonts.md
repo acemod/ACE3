@@ -5,6 +5,11 @@ description: Custom fonts including fixed-width font.
 group: feature
 category: general
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview

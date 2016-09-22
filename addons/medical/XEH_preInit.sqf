@@ -5,7 +5,6 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 GVAR(injuredUnitCollection) = [];
-GVAR(IVBags) = [];
 
 private _versionEx = "ace_medical" callExtension "version";
 DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {

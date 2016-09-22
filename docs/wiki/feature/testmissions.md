@@ -1,10 +1,16 @@
 ---
 layout: wiki
 title: Test Missions
-description: Adds an ACE3 Test Missions
+description: Adds ACE3 Test Missions.
 group: feature
 category: general
 parent: wiki
+mod: ace
+version:
+  major: 3
+  minor: 6
+  patch: 0
+  removed: true
 ---
 
 ## 1. Overview

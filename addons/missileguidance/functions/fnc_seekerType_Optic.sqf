@@ -2,8 +2,8 @@
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_targets", "_foundTargetPos", "_launchParams", "_seekerParams", "_targetLaunchParams"];
-private["_angleFov", "_angleOkay", "_losOkay", "_seekerTargetPos", "_sensorPos", "_target"];
+private ["_targets", "_foundTargetPos", "_launchParams", "_seekerParams", "_targetLaunchParams"];
+private ["_angleFov", "_angleOkay", "_losOkay", "_seekerTargetPos", "_sensorPos", "_target"];
 
 _seekerTargetPos = _this select 0;
 
@@ -36,7 +36,7 @@ if(!_angleOkay || !_losOkay) then {
     _foundTargetPos = _sensorPos vectorAdd ((velocity _projectile) vectorMultiply 5);
 } else {
     TRACE_2("", _target, _foundTargetPos);
-    private["_projectileSpeed", "_distanceToTarget", "_eta", "_adjustDistance"];
+    private ["_projectileSpeed", "_distanceToTarget", "_eta", "_adjustDistance"];
     // @TODO: Configurable lead for seekers
     _projectileSpeed = (vectorMagnitude velocity _projectile);
     _distanceToTarget = (getPosASL _projectile) vectorDistance _foundTargetPos; 

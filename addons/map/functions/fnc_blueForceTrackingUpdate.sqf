@@ -2,8 +2,6 @@
 #include "script_component.hpp"
 // BEGIN_COUNTER(blueForceTrackingUpdate);
 
-private ["_groupsToDrawMarkers", "_playersToDrawMarkers", "_playerSide", "_anyPlayers", "_colour", "_marker"];
-
 // Delete last set of markers (always)
 {
     deleteMarkerLocal _x;
@@ -13,8 +11,8 @@ GVAR(BFT_markers) = [];
 
 if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
 
-    _groupsToDrawMarkers = [];
-    _playerSide = call EFUNC(common,playerSide);
+    private _groupsToDrawMarkers = [];
+    private _playerSide = call EFUNC(common,playerSide);
 
     _groupsToDrawMarkers = allGroups select {side _x == _playerSide};
 
@@ -27,7 +25,7 @@ if (GVAR(BFT_Enabled) and {(!isNil "ACE_player") and {alive ACE_player}}) then {
     };
 
     if (GVAR(BFT_ShowPlayerNames)) then {
-        _playersToDrawMarkers = allPlayers select {side _x == _playerSide && {!(_x getVariable [QGVAR(hideBlueForceMarker), false])}};
+        private _playersToDrawMarkers = allPlayers select {side _x == _playerSide && {!(_x getVariable [QGVAR(hideBlueForceMarker), false])}};
 
         {
             private _markerType = [_x] call EFUNC(common,getMarkerType);

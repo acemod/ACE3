@@ -3,7 +3,7 @@ layout: wiki
 title: Information Center
 description: Downloaded ACE3 and have no idea where to start? This page serves as a document to help new players get started with things or get an answer to some of your questions.
 group: user
-order: 2
+order: 3
 parent: wiki
 ---
 
