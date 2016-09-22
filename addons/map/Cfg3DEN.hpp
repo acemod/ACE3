@@ -9,7 +9,8 @@ class Cfg3DEN {
                         control = "Checkbox";
                         displayName = CSTRING(disableBFT);
                         tooltip = CSTRING(disableBFT_description);
-                        expression = QUOTE(if (_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
+                        // groups are kaputt. have to delay setVariable public for it to work.
+                        expression = QUOTE(if (_value) then {[ARR_2({(_this select 0) setVariable [ARR_3('%s',_this select 1,true)];},[ARR_2(_this,_value)])] call CBA_fnc_execNextFrame};);
                         typeName = "BOOL";
                         defaultValue = "(false)"; // fix pbo project preprocessing bug
                     };
