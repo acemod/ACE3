@@ -22,7 +22,7 @@
  * Example:
  * ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

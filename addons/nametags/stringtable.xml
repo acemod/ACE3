@@ -396,5 +396,10 @@
             <Russian>Масштабирование размера текста и иконок</Russian>
             <Italian>Proporzione Dimensioni Testo ed Icone</Italian>
         </Key>
+        <Key ID="STR_ACE_NameTags_FadeOnBorder">
+            <English>Fade on screen border</English>
+            <German>Am Bildschirmrand ausblenden</German>
+            <Polish>Ukryj na brzegach ekranu</Polish>
+        </Key>
     </Package>
 </Project>

@@ -23,7 +23,7 @@ if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
-private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), 100]) + ([_unit] call FUNC(getBloodVolumeChange));
+private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), 100]) + ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
 _bloodVolume = _bloodVolume max 0;
 
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
@@ -140,17 +140,5 @@ if (GVAR(level) >= 2) then {
         if (_heartRate > 200 || (_heartRate < 20)) then {
             [_unit] call FUNC(setCardiacArrest);
         };
-    };
-
-    // syncing any remaining values
-    if (_syncValues) then {
-        TRACE_3("ACE_DEBUG_IVBAGS_SYNC",GVAR(IVBags),_syncValues,_unit);
-        {
-            private "_value";
-            _value = _unit getVariable _x;
-            if !(isNil "_value") then {
-                _unit setVariable [_x,(_unit getVariable [_x, 0]), true];
-            };
-        } forEach GVAR(IVBags);
     };
 };

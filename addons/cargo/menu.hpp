@@ -68,7 +68,7 @@ class GVAR(menu) {
             colorSelectBackground2[] = {0.3, 0.3, 0.3, 1.0};
         };
         class btnCancel: ACE_gui_buttonBase {
-            text = "Cancel";
+            text = "$STR_DISP_CANCEL";
             idc = 11;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "14.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";

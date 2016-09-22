@@ -356,6 +356,8 @@
             <German>Aussteigen!</German>
             <Spanish>Sal del vehículo!</Spanish>
             <French>Sortez !</French>
+            <Russian>Выходи</Russian>
+            <Czech>Vystupte</Czech>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -714,6 +716,7 @@
             <Italian>Accendi</Italian>
             <Czech>Zapnout</Czech>
             <Portuguese>Ligar</Portuguese>
+            <Russian>Включить</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -724,6 +727,7 @@
             <Italian>Spegni</Italian>
             <Czech>Vypnout</Czech>
             <Portuguese>Desligar</Portuguese>
+            <Russian>Выключить</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>

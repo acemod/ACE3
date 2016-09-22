@@ -1,3 +1,11 @@
+// BWC for CBA's DEBUG_SYNCHRONOUS - https://github.com/CBATeam/CBA_A3/pull/466/
+#ifdef CBA_DEBUG_SYNCHRONOUS
+    // For New CBA:
+    #define DEBUG_SYNCHRONOUS
+    // For Old CBA:
+    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
+#endif
+
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
@@ -93,26 +101,9 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
-#define HASH_CREATE                    ([] call EFUNC(common,hashCreate))
-#define HASH_SET(hash, key, val)    ([hash, key, val, __FILE__, __LINE__] call EFUNC(common,hashSet))
-#define HASH_GET(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashGet))
-#define HASH_REM(hash, key)            ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashRem))
-#define HASH_HASKEY(hash, key)        ([hash, key, __FILE__, __LINE__] call EFUNC(common,hashHasKey))
-
-#define HASHLIST_CREATELIST(keys)                ([keys] call EFUNC(common,hashListCreateList))
-#define HASHLIST_CREATEHASH(hashList)            ([hashList] call EFUNC(common,hashListCreateHash))
-#define HASHLIST_SELECT(hashList, index)        ([hashList, index, __FILE__, __LINE__] call EFUNC(common,hashListSelect))
-#define HASHLIST_SET(hashList, index, value)    ([hashList, index, value, __FILE__, __LINE__] call EFUNC(common,hashListSet))
-#define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
-
 #define ACE_isHC (!hasInterface && !isDedicated)
 
 #define IDC_STAMINA_BAR 193
-
-//By default CBA's TRACE/LOG/WARNING spawn a buffer, which can cause messages to be logged out of order:
-#ifdef CBA_DEBUG_SYNCHRONOUS
-    #define CBA_fnc_log { params ["_file","_lineNum","_message"]; diag_log [diag_frameNo, diag_tickTime, time,  _file + ":"+str(_lineNum + 1), _message]; }
-#endif
 
 #define ACE_LOG(module,level,message) diag_log text ACE_LOGFORMAT(module,level,message)
 #define ACE_LOGFORMAT(module,level,message) FORMAT_2(QUOTE([ACE] (module) %1: %2),level,message)

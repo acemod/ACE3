@@ -26,8 +26,7 @@ if ((_i mod 4) == 0) then {
 };
 ctrlSetText [1400,format["Calling%1",_arr select (_i - 4)]];
 
-private "_explosive";
-_explosive = [_code] call FUNC(getSpeedDialExplosive);
+private _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
 if (_i >= (count _arr + 2)) then {
     [_pfID] call CALLSTACK(CBA_fnc_removePerFrameHandler);

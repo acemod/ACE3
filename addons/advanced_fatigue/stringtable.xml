@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Advanced_Fatigue">
+        <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
+            <English>Performance Factor</English>
+            <German>Leistungsfaktor</German>
+            <Polish>Współczynnik wydolności</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
+            <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
+            <German>Beinflusst die Leistungsfähigkeit aller Spieler ohne eigenen Leistungsfaktor. Ein höherer Wert bedeutet bessere Leistung.</German>
+            <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
+            <English>Influences the overall performance of this unit. Higher means better.</English>
+            <German>Beinflusst die Leistungsfähigkeit dieser Einheit. Ein höherer Wert bedeutet bessere Leistung.</German>
+            <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
+            <English>Recovery Factor</English>
+            <German>Erholungsfaktor</German>
+            <Polish>Współczynnik regeneracji</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
+            <English>Changes how fast the player recovers when resting. Higher is faster.</English>
+            <German>Ändert, wie schnell ein Spieler Ausdauer regeneriert. Ein höherer Wert bedeutet eine schnellere Regeneration.</German>
+            <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor">
+            <English>Load Factor</English>
+            <German>Gewichtsfaktor</German>
+            <Polish>Współczynnik masy ekwipunku</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
+            <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
+            <German>Erhöht oder verringert, wie viel Einfluss das Ausrüstungsgewicht auf die Leistung hat. Null heißt, dass es keinen Einfluss hat.</German>
+            <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor">
+            <English>Terrain Gradient Factor</English>
+            <German>Terrainsteigungsfaktor</German>
+            <Polish>Współczynnik terenu</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
+            <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
+            <German>Beeinflusst, wie stark Steigungen den Ausdauerverbrauch erhöhen. Ein höherer Wert erhöht den Ausdauerverbrauch.</German>
+            <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
+            <English>Enabled</English>
+            <German>Aktiv</German>
+            <Polish>Włączone</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
+            <English>Enables/disables Advanced Fatigue.</English>
+            <German>Aktiviert/deaktiviert Advanced Fatigue.</German>
+            <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
+            <English>Show stamina bar</English>
+            <German>Zeige Ausdauerleiste</German>
+            <Polish>Pokaż pasek wytrzymałości</Polish>
+        </Key>
+        <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
+            <English>Shows the stamina bar.</English>
+            <German>Zeigt die Ausdauerleiste an.</German>
+            <Polish>Pokazuje pasek wytrzymałości.</Polish>
+        </Key>
+    </Package>
+</Project>

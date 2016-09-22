@@ -15,7 +15,7 @@
         }; \
     };
 
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 
 class CfgVehicles {
     class ACE_Module;
@@ -311,14 +311,14 @@ class CfgVehicles {
     class ThingX;
     class ACE_RepairItem_Base: ThingX {
         class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
 
         icon = "iconObject_circle";
         mapSize = 0.7;
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
-        destrType = "DesturctNo";
+        destrType = "DesturctNo"; // scripted delayed destruction
     };
 
     class ACE_Track: ACE_RepairItem_Base {

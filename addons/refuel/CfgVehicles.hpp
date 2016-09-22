@@ -31,13 +31,6 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
@@ -77,7 +70,7 @@
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(TakeNozzle)); \
+                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(takeNozzle)); \
                 exceptions[] = {"isNotInside"}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
@@ -322,7 +315,7 @@ class CfgVehicles {
     class I_G_Van_01_fuel_F: Van_01_fuel_base_F {
         transportFuel = 0; //1k
     };
-    
+
     class Tank_F: Tank {
         GVAR(fuelCapacity) = 1200;
     };

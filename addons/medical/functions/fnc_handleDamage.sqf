@@ -9,6 +9,7 @@
  * 3: Shooter <OBJECT>
  * 4: Projectile <OBJECT/STRING>
  * 5: HitPointIndex (-1 for structural) <NUMBER>
+ * 6: Shooter <OBJECT>
  *
  * Return Value:
  * Damage To Be Inflicted <NUMBER>

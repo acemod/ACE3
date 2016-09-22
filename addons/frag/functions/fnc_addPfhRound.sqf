@@ -55,7 +55,7 @@ if(_doFragTrack && {alive _round}) then {
     _spallTrack = [];
     _spallTrackID = [];
 
-    private["_args"];
+    private ["_args"];
     _args = [_round, (getPosASL _round), (velocity _round), _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
     (getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip))),
     (getNumber (configFile >> "CfgAmmo" >> _type >> "explosive")),
