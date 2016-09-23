@@ -5,9 +5,9 @@
  * Arguments:
  * 0: Origin position ASL <ARRAY>
  * 1: Direction (normalized) <ARRAY>
- * 1: Divergence (mils) <OPTIONAL><NUMBER>
- * 1: Count <OPTIONAL><NUMBER>
- * 2: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 2: Divergence (mils) <OPTIONAL><NUMBER>
+ * 3: Count at each divergence level <OPTIONAL><NUMBER>
+ * 4: Ignore vehicle 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
  * Return value:
  * <ARRAY> [_longestReturn, _shortestReturn, _resultPositions]
@@ -19,6 +19,8 @@
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
+
+BEGIN_COUNTER(shootCone);
 
 params ["_pos", "_vec", ["_divergence", 0.3], ["_count", 3], ["_ignoreObj1", objNull]];
 
@@ -33,47 +35,37 @@ private _cp = _vec vectorCrossProduct _v;
 
 private _vecRotateMap = [_cp, _p1, _p2] call FUNC(rotateVectLineGetMap);
 
+// Check first with a perfect ray to the center
 private _result = [_pos, _vec, _ignoreObj1] call FUNC(shootRay);
 private _resultPos = _result select 0;
 
 if (!isNil "_resultPos") then {
     private _distance = _result select 1;
-    if (_distance < _shortestReturn) then {
-        _shortestReturn = _distance;
-    };
-    if (_distance > _longestReturn) then {
-        _longestReturn = _distance;
-    };
+    if (_distance < _shortestReturn) then { _shortestReturn = _distance; };
+    if (_distance > _longestReturn) then { _longestReturn = _distance; };
     _resultPositions pushBack _result;
-#ifdef DEBUG_MODE_FULL
-    drawLine3D [ASLtoAGL _pos, ASLtoAGL _resultPos, [1,0,0,1]];
-#endif
 };
 
-
 private _pos2 = _pos vectorAdd (_vec vectorMultiply 1000);
+// Try at 3 radius (full, half, quarter of specified divergence)
 {
-    for "_i" from 0 to ceil(_count*_x) do {
-        private _radOffset = random 360;
+    private _radOffset = random 360;
+    for "_i" from 1 to ceil(_count*_x) do { // Will always do at least 1
         private _offset = [_vecRotateMap, (((360/_count)*_i)+_radOffset) mod 360] call FUNC(rotateVectLine);
         private _offsetPos = _pos2 vectorAdd (_offset vectorMultiply (_divergence*_x));
+ 
         private _offsetVector = _pos vectorFromTo _offsetPos;
         _result = [_pos, _offsetVector, _ignoreObj1] call FUNC(shootRay);
         _resultPos = _result select 0;
         if (!isNil "_resultPos") then {
             private _distance = _result select 1;
-            if (_distance < _shortestReturn) then {
-                _shortestReturn = _distance;
-            };
-            if (_distance > _longestReturn) then {
-                _longestReturn = _distance;
-            };
+            if (_distance < _shortestReturn) then { _shortestReturn = _distance; };
+            if (_distance > _longestReturn) then { _longestReturn = _distance; };
             _resultPositions pushBack _result;
-#ifdef DEBUG_MODE_FULL
-            drawLine3D [ASLtoAGL _pos, ASLtoAGL _resultPos, [1,0,0,1]];
-#endif
         };
     };
 } forEach [1,0.5,0.25];
+
+END_COUNTER(shootCone);
 
 [_longestReturn, _shortestReturn, _resultPositions];

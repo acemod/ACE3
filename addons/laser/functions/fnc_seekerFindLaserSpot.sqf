@@ -22,6 +22,8 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
+BEGIN_COUNTER(seekerFindLaserSpot);
+
 params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
@@ -67,20 +69,19 @@ private _finalOwner = objNull;
         if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return",_laser);};
         _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
 
-        if (GVAR(enableDispersion)) then {
-        // if (true) then {
+        if (GVAR(dispersionCount) > 0) then {
             // Shoot a cone with dispersion
-            private _res = [_laserPos, _laserDir, _divergence, 3, _obj] call FUNC(shootCone);
+            ([_laserPos, _laserDir, _divergence, GVAR(dispersionCount), _obj] call FUNC(shootCone)) params ["", "", "_resultPositions"];
             {
                 _testPoint = _x select 0;
-                _testPointVector = vectorNormalized (_testPoint vectorDiff _posASL);
+                private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
                 if (_testDotProduct > _seekerCos) then {
                     _spots pushBack [_testPoint, _owner];
                 };
-            } forEach (_res select 2);
+            } forEach _resultPositions;
         } else {
-            // Shoot a perfect ray from source to target
+            // Shoot a single perfect ray from source to target (note, increased chance to "miss" on weird objects like bushes / rocks)
             ([_laserPos, _laserDir, _obj] call FUNC(shootRay)) params ["_resultPos", "_distance"];
             TRACE_2("spot",_resultPos,_distance);
             if (_distance > 0) then {
@@ -180,6 +181,8 @@ if ((count _spots) > 0) then {
         }] call CBA_fnc_hashEachPair;
     };
 };
+
+END_COUNTER(seekerFindLaserSpot);
 
 TRACE_2("return",_finalPos,_finalOwner);
 if (isNil "_finalPos") exitWith {[nil, _finalOwner]};

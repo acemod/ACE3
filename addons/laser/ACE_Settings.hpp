@@ -1,7 +1,7 @@
 class ACE_Settings {
-    class GVAR(enableDispersion) {
-        value = 0;
-        typeName = "BOOL";
-        displayName = CSTRING(enableDispersion);
+    class GVAR(dispersionCount) {
+        value = 2;
+        typeName = "SCALAR";
+        displayName = CSTRING(dispersionCount_displayName);
     };
 };

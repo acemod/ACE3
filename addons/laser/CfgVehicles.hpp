@@ -11,6 +11,8 @@ class CfgVehicles {
         };
     };
 
+    // laserTarget fails if the turret does not have "primaryGunner" config
+    // This only effects the indfor strider who's commander is not the primaryGunner
     class LandVehicle;
     class Car: LandVehicle {
         class NewTurret;
@@ -27,34 +29,4 @@ class CfgVehicles {
             };
         };
     };
-
-
-    // Vehicle lockable configurations
-
-
-    /* Disabled for now on comanche
-    class AllVehicles;
-    class Air: AllVehicles {
-        class Turrets;
-    };
-
-    class Helicopter: Air {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-
-    class Helicopter_Base_F: Helicopter {};
-
-    class Heli_Attack_01_base_F: Helicopter_Base_F {};
-
-    class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                GVAR(CanLockLaser) = 1;      // Enable laser locking selection
-
-            };
-        };
-    };
-    */
 };
