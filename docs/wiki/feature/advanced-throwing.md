@@ -36,7 +36,7 @@ Color | Meaning
 White | Flight path
 Green | Collision with ground surface
 Red | Collision with object
-Yellow | Possible collision
+Yellow | Possible collision (_added in ACE3 v3.8.0_)
 
 Possible collisions are collisions that might happen, but there is also a chance that the grenade will not collide with that object. It is impossible to predict in many cases due to different object configurations.
 
