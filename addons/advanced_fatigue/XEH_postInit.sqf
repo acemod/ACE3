@@ -38,7 +38,7 @@ if (!hasInterface) exitWith {};
     };
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
-    [FUNC(pfhMain), [], 1] call CBA_fnc_waitAndExecute;
+    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingChanged", {

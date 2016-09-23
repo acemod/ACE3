@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- * Main perFrameHandler that updates fatigue values.
+ * Main looping function that updates fatigue values.
  *
  * Arguments:
  * None
@@ -10,7 +10,7 @@
  */
 #include "script_component.hpp"
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
-    [FUNC(pfhMain), [], 1] call CBA_fnc_waitAndExecute;
+    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 };
 
 private _currentWork = REE;
@@ -64,4 +64,4 @@ if (GVAR(enableStaminaBar)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 
-[FUNC(pfhMain), [], 1] call CBA_fnc_waitAndExecute;
+[FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
