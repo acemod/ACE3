@@ -313,6 +313,11 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
+        class ACE_Actions {
+            class ACE_MainActions {
+                modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
+            };
+        };
 
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
