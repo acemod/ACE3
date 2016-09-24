@@ -374,5 +374,13 @@
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
             <French>Change le canal de communication par défaut au début de la mission.</French>
         </Key>
+        <Key ID="STR_ACE_Map_disableBFT">
+            <English>Disable BFT</English>
+            <German>BFT deaktivieren</German>
+        </Key>
+        <Key ID="STR_ACE_Map_disableBFT_description">
+            <English>Always disable Blue Force Tracking for this group.</English>
+            <German>Blue Force Tracking für diese Gruppe immer deaktivieren.</German>
+        </Key>
     </Package>
 </Project>
