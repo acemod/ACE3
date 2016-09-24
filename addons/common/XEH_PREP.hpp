@@ -85,7 +85,6 @@ PREP(hadamardProduct);
 PREP(handleEngine);
 PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
-PREP(handleScrollWheel);
 PREP(hasItem);
 PREP(hasMagazine);
 PREP(headBugFix);
@@ -248,12 +247,10 @@ PREP(_handleRequestAllSyncedEvents);
 // other eventhandlers
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addScrollWheelEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeScrollWheelEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
 
 // hashes
