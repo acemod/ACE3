@@ -38,7 +38,6 @@ PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(errorMessage);
-PREP(execNextFrame);
 PREP(findUnloadPosition);
 PREP(firedEH);
 PREP(fixCollision);
