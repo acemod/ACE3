@@ -252,10 +252,3 @@ PREP(addMapMarkerCreatedEventHandler);
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
-
-// hashes
-PREP(hashCreate);
-PREP(hashSet);
-PREP(hashGet);
-PREP(hashHasKey);
-PREP(hashRem);
