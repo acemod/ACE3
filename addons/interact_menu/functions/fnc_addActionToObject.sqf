@@ -38,4 +38,4 @@ if (_parentPath isEqualTo ["ACE_MainActions"]) then {
 _actionList pushBack [_action, +_parentPath];
 
 // Return the full path
-(+ _parentPath) pushBack (_action select 0)
+(_parentPath + [_action select 0])

@@ -38,6 +38,9 @@ if (param [4, false, [false]]) exitwith {
     ', _index];
     TRACE_2("Added inheritable action",_objectType,_index);
     [_objectType, "init", _initEH, true, [], true] call CBA_fnc_addClassEventHandler;
+
+    // Return the full path
+    (_parentPath + [_action select 0])
 };
 
 // Ensure the config menu was compiled first
@@ -68,4 +71,4 @@ if (isNil {_parentNode}) exitWith {
 (_parentNode select 1) pushBack [_action,[]];
 
 // Return the full path
-(+ _parentPath) pushBack (_action select 0)
+(_parentPath + [_action select 0])
