@@ -88,7 +88,6 @@ PREP(hasItem);
 PREP(hasMagazine);
 PREP(headBugFix);
 PREP(hideUnit);
-PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(isAwake);
