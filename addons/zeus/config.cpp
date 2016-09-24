@@ -53,10 +53,3 @@ class ACE_Curator {
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
 #include "ui\RscAttributes.hpp"
-
-class ACE_newEvents {
-    zeusUnitAssigned = QGVAR(zeusUnitAssigned);
-    SetSurrendered = QEGVAR(captives,setSurrendered);
-    SetHandcuffed = QEGVAR(captives,setHandcuffed);
-    AddCargoByClass = "ace_addCargo";
-};
