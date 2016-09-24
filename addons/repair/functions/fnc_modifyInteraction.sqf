@@ -22,7 +22,7 @@ params ["_target", "_player", "_args", "_actionData"];
 TRACE_4("params",_target,_player,_args,_actionData);
 
 // Interaction dots numbered 0..8, white to red. 
-// Convert damage to number (rounding up), using 0.8 as max
+// Convert damage to number (rounding up), so that even slight damage can bee seen
 
-private _fileName = format [QPATHTOF(ui\damage_%1_ca.paa), ceil (linearConversion [0, 0.8, damage _target, 0, 8, true])];
+private _fileName = format [QPATHTOF(ui\damage_%1_ca.paa), ceil (linearConversion [0, 1, damage _target, 0, 8, true])];
 _actionData set [2, _fileName];
