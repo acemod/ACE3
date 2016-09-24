@@ -214,15 +214,6 @@ PREP(showUser);
 PREP(dumpPerformanceCounters);
 PREP(dumpArray);
 
-PREP(globalEvent);
-PREP(addEventHandler);
-PREP(objectEvent);
-PREP(targetEvent);
-PREP(serverEvent);
-PREP(localEvent);
-PREP(removeEventHandler);
-PREP(removeAlLEventHandlers);
-
 // Synchronized Events
 PREP(syncedEventPFH);
 PREP(addSyncedEventHandler);
