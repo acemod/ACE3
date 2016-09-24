@@ -18,7 +18,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
-
-class ACE_newEvents {
-    SetHandcuffed = QEGVAR(captives,setHandcuffed);
-};

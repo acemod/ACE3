@@ -38,7 +38,6 @@ PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(errorMessage);
-PREP(execNextFrame);
 PREP(findUnloadPosition);
 PREP(firedEH);
 PREP(fixCollision);
@@ -85,12 +84,10 @@ PREP(hadamardProduct);
 PREP(handleEngine);
 PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
-PREP(handleScrollWheel);
 PREP(hasItem);
 PREP(hasMagazine);
 PREP(headBugFix);
 PREP(hideUnit);
-PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(isAwake);
@@ -173,8 +170,6 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(watchVariable);
-PREP(waitAndExecute);
-PREP(waitUntilAndExecute);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
@@ -184,14 +179,12 @@ PREP(translateToModelSpace);
 PREP(worldToScreenBounds);
 
 // config items
-PREP(getConfigType);
 PREP(getItemType);
 PREP(getWeaponType);
 PREP(getWeaponModes);
 PREP(getWeaponMuzzles);
 
 // config objects
-PREP(getConfigTypeObject);
 PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getSelectionsWithoutHitPoints);
@@ -212,10 +205,6 @@ PREP(getTurretsFFV);
 PREP(getTurretsOther);
 PREP(hasHatch);
 
-// missing inventory commands
-PREP(binocularMagazine);
-PREP(removeBinocularMagazine);
-
 // ACE_Debug
 PREP(getChildren);
 PREP(getDisplayConfigName);
@@ -224,15 +213,6 @@ PREP(showUser);
 
 PREP(dumpPerformanceCounters);
 PREP(dumpArray);
-
-PREP(globalEvent);
-PREP(addEventHandler);
-PREP(objectEvent);
-PREP(targetEvent);
-PREP(serverEvent);
-PREP(localEvent);
-PREP(removeEventHandler);
-PREP(removeAlLEventHandlers);
 
 // Synchronized Events
 PREP(syncedEventPFH);
@@ -248,17 +228,8 @@ PREP(_handleRequestAllSyncedEvents);
 // other eventhandlers
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addScrollWheelEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeScrollWheelEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
-
-// hashes
-PREP(hashCreate);
-PREP(hashSet);
-PREP(hashGet);
-PREP(hashHasKey);
-PREP(hashRem);
