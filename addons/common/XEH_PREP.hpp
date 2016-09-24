@@ -170,8 +170,6 @@ PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
 PREP(watchVariable);
-PREP(waitAndExecute);
-PREP(waitUntilAndExecute);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
