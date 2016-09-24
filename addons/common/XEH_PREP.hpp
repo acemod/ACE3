@@ -207,10 +207,6 @@ PREP(getTurretsFFV);
 PREP(getTurretsOther);
 PREP(hasHatch);
 
-// missing inventory commands
-PREP(binocularMagazine);
-PREP(removeBinocularMagazine);
-
 // ACE_Debug
 PREP(getChildren);
 PREP(getDisplayConfigName);
