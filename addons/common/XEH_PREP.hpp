@@ -181,14 +181,12 @@ PREP(translateToModelSpace);
 PREP(worldToScreenBounds);
 
 // config items
-PREP(getConfigType);
 PREP(getItemType);
 PREP(getWeaponType);
 PREP(getWeaponModes);
 PREP(getWeaponMuzzles);
 
 // config objects
-PREP(getConfigTypeObject);
 PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getSelectionsWithoutHitPoints);
