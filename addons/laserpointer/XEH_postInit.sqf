@@ -18,13 +18,7 @@ GVAR(nearUnits) = [];
     [{
         // handle RHS / bugged vehicle slots
         private _camPosAGL = positionCameraToWorld [0,0,0];
-
-        if !((_camPosAGL select 0) isEqualType 0) exitWith {
-            if (isNil QGVAR(errorPCTWLogged)) then {
-                GVAR(errorPCTWLogged) = true;
-                WARNING(format [ARR_3("PCTW reported NaN on %1 %2",str typeOf vehicle ACE_player,ACE_player call CBA_fnc_turretPath)]);
-            };
-        };
+        if !((_camPosAGL select 0) isEqualType 0) exitWith {};
 
         private _nearUnits = [];
         {

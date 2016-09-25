@@ -68,14 +68,7 @@ private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 
 private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
-
-// handle RHS / bugged vehicle slots
-if !((_camPosAGL select 0) isEqualType 0) exitWith {
-    if (isNil QGVAR(errorPCTWLogged)) then {
-        GVAR(errorPCTWLogged) = true;
-        WARNING(format [ARR_3("PCTW reported NaN on %1 %2",str typeOf vehicle ACE_player,ACE_player call CBA_fnc_turretPath)]);
-    };
-};
+if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
 
 private _camPosASL = AGLtoASL _camPosAGL;
 private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
