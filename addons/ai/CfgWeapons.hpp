@@ -22,6 +22,7 @@ class CfgWeapons {
     };
 
     class Rifle_Base_F: Rifle {};
+    class Rifle_Short_Base_F: Rifle_Base_F {};
     class Rifle_Long_Base_F: Rifle_Base_F {};
 
     // MX
@@ -470,7 +471,7 @@ class CfgWeapons {
     };
 
     // PD2000
-    class pdw2000_base_F: Rifle_Base_F {
+    class pdw2000_base_F: Rifle_Short_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
 
@@ -484,7 +485,7 @@ class CfgWeapons {
     };
 
     // Vector
-    class SMG_01_Base: Rifle_Base_F {
+    class SMG_01_Base: Rifle_Short_Base_F {
         aiDispersionCoefY = 18.0;
         aiDispersionCoefX = 12.0;
 

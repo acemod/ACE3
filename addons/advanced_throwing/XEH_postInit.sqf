@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Fired XEH
+[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
+
 // Exit on HC
 if (!hasInterface) exitWith {};
 
@@ -63,6 +66,13 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
     [_this select 1, "Player changed"] call FUNC(exitThrowMode);
 }] call CBA_fnc_addPlayerEventhandler;
 
+["visibleMap", {
+    if (visibleMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
+        [ACE_player, "Opened Map"] call FUNC(exitThrowMode);
+    };
+}] call CBA_fnc_addPlayerEventhandler;
+
+
 ["ace_interactMenuOpened", {
     // Exit if advanced throwing is disabled (pick up only supports advanced throwing)
     if (!GVAR(enabled)) exitWith {};
@@ -79,9 +89,6 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
     };
 }] call CBA_fnc_addEventHandler;
 
-
-// Fired XEH
-[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Set last thrown time on Vanilla Throwing and Advanced Throwing
 ["ace_firedPlayer", {

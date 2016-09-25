@@ -19,7 +19,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "GUI_VirtualAmmo.hpp"
-
-class ACE_newEvents {
-    interactMenuOpened = "ace_interactMenuOpened";
-};
