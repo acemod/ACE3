@@ -16,13 +16,23 @@ GVAR(nearUnits) = [];
 
     // @todo. Maybe move to common?
     [{
+        // handle RHS / bugged vehicle slots
+        private _camPosAGL = positionCameraToWorld [0,0,0];
+
+        if !((_camPosAGL select 0) isEqualType 0) exitWith {
+            if (isNil QGVAR(errorPCTWLogged)) then {
+                GVAR(errorPCTWLogged) = true;
+                WARNING(format [ARR_3("PCTW reported NaN on %1 %2",str typeOf vehicle ACE_player,ACE_player call CBA_fnc_turretPath)]);
+            };
+        };
+
         private _nearUnits = [];
         {
             _nearUnits append crew _x;
             if (count _nearUnits > 10) exitWith {
                 _nearUnits resize 10;
             };
-        } forEach nearestObjects [positionCameraToWorld [0,0,0], ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
+        } forEach nearestObjects [_camPosAGL, ["AllVehicles"], 50]; // when moving this, search also for units inside vehicles. currently breaks the laser in FFV
 
         GVAR(nearUnits) = _nearUnits;
 
