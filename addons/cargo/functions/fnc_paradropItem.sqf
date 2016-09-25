@@ -49,7 +49,7 @@ private _itemObject = if (_item isEqualType objNull) then {
     _newItem
 };
 
-_newItem setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply 10));
+_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply 10));
 
 // open parachute and ir light effect
 [{
