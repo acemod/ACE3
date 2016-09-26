@@ -5,18 +5,12 @@ description: Ability to sit on chairs.
 group: feature
 category: interaction
 parent: wiki
-mod: ace
+mod: acex
 version:
   major: 3
-  minor: 8
+  minor: 0
   patch: 0
-  removed: true
 ---
-
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>ACE3 Sitting has been replaced by <a href="{{ site.baseurl }}/wiki/featurex/sitting.html">ACEX Sitting</a>.</p>
-</div>
 
 ## 1. Overview
 Adds the ability to sit on chairs.
