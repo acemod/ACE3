@@ -3,9 +3,9 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
-// #define ENABLE_PERFORMANCE_COUNTERS
+#define DISABLE_COMPILE_CACHE
+#define CBA_DEBUG_SYNCHRONOUS
+//#define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MEDICAL_ENGINE
     #define DEBUG_MODE_FULL
@@ -16,12 +16,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#define DISABLE_VANILLA_SCREAMS
-#define DISABLE_VANILLA_MOANS
-#define DISABLE_VANILLA_HEARTBEAT
-#define DISABLE_VANILLA_BLOOD_TEXTURES
-#define DISABLE_VANILLA_DAMAGE_EFFECTS
 
 #include "script_macros_medical.hpp"
 
@@ -35,3 +29,16 @@
     }, {\
         diag_log format ["Preload done for ""%1""",_this];\
     }, class] call CBA_fnc_waitUntilAndExecute
+
+#define DISABLE_VANILLA_SCREAMS
+#define DISABLE_VANILLA_MOANS
+#define DISABLE_VANILLA_HEARTBEAT
+#define DISABLE_VANILLA_BLOOD_TEXTURES
+#define DISABLE_VANILLA_DAMAGE_EFFECTS
+
+#define PRIORITY_HEAD       3
+#define PRIORITY_BODY       4
+#define PRIORITY_LEFT_ARM   (1 + random 1)
+#define PRIORITY_RIGHT_ARM  (1 + random 1)
+#define PRIORITY_LEFT_LEG   (1 + random 1)
+#define PRIORITY_RIGHT_LEG  (1 + random 1)
