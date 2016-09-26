@@ -12,6 +12,8 @@
  */
 #include "script_component.hpp"
 
+#define HIT_STRUCTURAL #structural
+
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex"];
 //diag_log _this;
 
@@ -38,7 +40,7 @@ if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDa
 
 // Add injury
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
-    private _damageStructural = _unit getVariable [QGVAR($#structural), 0];
+    private _damageStructural = _unit getVariable [QGVAR($HIT_STRUCTURAL), 0];
 
     // --- Head
     private _damageFace = _unit getVariable [QGVAR($HitFace), 0];
