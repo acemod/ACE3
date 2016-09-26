@@ -15,7 +15,6 @@ class CfgPatches {
 };
 
 #include "ACE_Settings.hpp"
-#include "ACE_Medical_Injuries.hpp"
 #include "ACE_Medical_StateMachine.hpp"
 
 #include "CfgEden.hpp"

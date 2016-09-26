@@ -14,4 +14,6 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Medical_Injuries.hpp"
+
 #include "CfgEventHandlers.hpp"

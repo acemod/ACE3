@@ -4,6 +4,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+call FUNC(parseConfigForInjuries);
+
 [QEGVAR(medical_engine,woundReceived), {
     params ["_unit", "_woundedHitPoint", "_receivedDamage", "", "_ammo"];
 

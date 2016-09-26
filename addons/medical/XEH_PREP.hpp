@@ -15,7 +15,6 @@ PREP(isInMedicalVehicle);
 PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
-PREP(parseConfigForInjuries);
 PREP(selectionNameToNumber);
 PREP(setHitPointDamage);
 PREP(setStructuralDamage);
