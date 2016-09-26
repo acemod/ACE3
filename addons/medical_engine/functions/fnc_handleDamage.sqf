@@ -39,7 +39,7 @@ _damage = _damage min 0.99;
 // These control blood material visuals.
 // If damage is in dummy hitpoints, "hands" and "legs", don't change anything
 if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {
-    TRACE_2("hd exited (hardcoded)",_hitPoint,_oldDamage);
+    TRACE_2("hd exited (hardcoded)",_hitPoint,_oldDamage); // @todo, this no longer works, as 'depends' hitpoints are calculated after each hd call
     _oldDamage
 };
 
