@@ -23,13 +23,13 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_selection", "", [""]], ["_damage", 1, [0]]];
+params [["_unit", objNull, [objNull]], ["_selection", "", [""]], ["_damage", true, [false]]];
 
 if (!local _unit) exitWith {
     ACE_LOGERROR("Unit not local or null");
 };
 
-_damage = _damage min 0.99;
+_damage = [0, 0.99] select _damage;
 
 switch (toLower _selection) do {
     case ("head"): {

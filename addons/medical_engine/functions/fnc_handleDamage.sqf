@@ -32,16 +32,9 @@ if (_hitPointIndex < 0) then {
 private _newDamage = _damage - _oldDamage;
 _unit setVariable [format [QGVAR($%1), _hitPoint], _newDamage];
 
-// Never kill the unit by the critical hit points of the engine.
-// Because Arma now uses TOH 'depends' system, every hitpoint can cause this
-_damage = _damage min 0.99;
-
 // These control blood material visuals.
 // If damage is in dummy hitpoints, "hands" and "legs", don't change anything
-if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {
-    TRACE_2("hd exited (hardcoded)",_hitPoint,_oldDamage); // @todo, this no longer works, as 'depends' hitpoints are calculated after each hd call
-    _oldDamage
-};
+if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDamage};
 
 // Add injury
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
@@ -115,5 +108,4 @@ if (_hitPoint isEqualTo "#structural" && {getOxygenRemaining _unit <= 0.5} && {_
     [QGVAR(woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
 };
 
-TRACE_2("hd exited",_hitPoint,_damage);
-_damage
+0
