@@ -12,6 +12,7 @@
             <Hungarian>Drótvágó</Hungarian>
             <Italian>Trancia</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
+            <Japanese>ワイヤーカッター</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -24,6 +25,7 @@
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
             <Italian>Trancia da ferro</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
+            <Japanese>ワイヤーカッター</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
@@ -36,6 +38,7 @@
             <Italian>Taglia</Italian>
             <Hungarian>Drótkerítés átvágása</Hungarian>
             <Russian>Разрезать забор</Russian>
+            <Japanese>フェンスを切断する</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
@@ -48,6 +51,7 @@
             <Italian>Sto tagliando...</Italian>
             <Hungarian>Drótok elvágása...</Hungarian>
             <Russian>Разрезаем забор / провода...</Russian>
+            <Japanese>フェンス/ワイヤを切断中・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
@@ -60,6 +64,7 @@
             <Italian>Fatto!</Italian>
             <Hungarian>Drótkerítés átvágva</Hungarian>
             <Russian>Забор разрезан</Russian>
+            <Japanese>フェンスを切断した</Japanese>
         </Key>
     </Package>
 </Project>
