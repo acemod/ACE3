@@ -21,6 +21,7 @@ if (GVAR(enabledFor) == 1 && {!isPlayer _unit || {_unit == ACE_player}}) exitWit
 
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
 private _bloodLoss = (if (GVAR(useAceMedical)) then {([_unit] call EFUNC(medical,getBloodLoss)) * 2.5} else {getDammage _unit * 2}) min 6;
+TRACE_1("",_bloodLoss);
 
 if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
     _unit setVariable [QGVAR(lastTime), CBA_missionTime];
@@ -33,6 +34,6 @@ if ((CBA_missionTime - _lastTime) + _bloodLoss >= 8 + random 2) then {
     ];
     _position set [2, 0];
 
-    private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss max 3);
+    private _bloodDrop = ["blooddrop_1", "blooddrop_2", "blooddrop_3", "blooddrop_4"] select floor (_bloodLoss min 3);
     [_bloodDrop, _position, getDir _unit] call FUNC(createBlood);
 };
