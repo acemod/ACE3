@@ -6,44 +6,52 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Japanese>地雷探知機</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Japanese>地雷探知機</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
             <French>Activer</French>
             <Russian>Включить</Russian>
             <Czech>Aktivovat</Czech>
+            <Japanese>起動</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
             <French>Désactiver</French>
             <Russian>Выключить</Russian>
             <Czech>Deaktivovat</Czech>
+            <Japanese>停止</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
             <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
+            <Japanese>ヘッドホンへつなぐ</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
             <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
+            <Japanese>ヘッドホンからはずす</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
             <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
+            <Japanese>ヘッドホンへ接続された</Japanese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
+            <Japanese>ヘッドホンから外された</Japanese>
         </Key>
     </Package>
 </Project>
