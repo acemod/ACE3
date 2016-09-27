@@ -19,7 +19,7 @@ if ("ace_medical" callExtension "version" != "") then {
     private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
     [_unit, _woundedHitPoint, _receivedDamage, _ammo, _typeOfDamage] call FUNC(woundsHandlerActive); // TODO also support the sqf variant
 
-    ///[_unit, EGVAR(medical,STATE_MACHINE)] call EFUNC(medical,addStateHandler); // @todo disable for now
+    [_unit, EGVAR(medical,STATE_MACHINE)] call EFUNC(medical,addStateHandler);
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

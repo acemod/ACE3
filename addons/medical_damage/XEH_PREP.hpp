@@ -1,8 +1,9 @@
-PREP(airwayHandler);
-PREP(fracturesHandler);
-PREP(getTypeOfDamage);
-PREP(internalInjuriesHandler);
 
 PREP(parseConfigForInjuries);
+PREP(getTypeOfDamage);
+
+PREP(airwayHandler);
+PREP(fracturesHandler);
+PREP(internalInjuriesHandler);
 PREP(woundsHandler);
 PREP(woundsHandlerSQF);
