@@ -12,6 +12,7 @@
             <Russian>Высотомер</Russian>
             <Italian>Altimetro</Italian>
             <Portuguese>Altímetro</Portuguese>
+            <Japanese>高度計</Japanese>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
@@ -24,6 +25,7 @@
             <Russian>Часы с высотомером</Russian>
             <Italian>Controlla l'altimetro</Italian>
             <Portuguese>Relógio Altímetro</Portuguese>
+            <Japanese>時計型高度計</Japanese>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
@@ -36,6 +38,7 @@
             <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
             <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
             <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
+            <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -48,6 +51,7 @@
             <Russian>Неуправляемый парашют</Russian>
             <Italian>Paracadute non manovrabile</Italian>
             <Portuguese>Para-querdas não controlável</Portuguese>
+            <Japanese>非操作型パラシュート</Japanese>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
@@ -60,6 +64,7 @@
             <Czech>Odžíznout padák</Czech>
             <Spanish>Cortar paracaídas</Spanish>
             <Italian>Taglia Paracadute</Italian>
+            <Japanese>パラシュートを切断</Japanese>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -72,6 +77,7 @@
             <Czech>Záložní padák</Czech>
             <Spanish>Paracaídas de reserva</Spanish>
             <Italian>Paracadute di Riserva</Italian>
+            <Japanese>予備パラシュート</Japanese>
         </Key>
     </Package>
 </Project>
