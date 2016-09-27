@@ -16,14 +16,13 @@
 
 params ["_unit", "_causedBy", "_damage"];
 
+if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
+
 if (isNull _causedBy) exitWith { // won't be able to calculate the direction properly, so instead we pick something at random
     [QGVAR(spurt), [_unit, random 360, _damage]] call CBA_fnc_serverEvent;
 };
 
 // Calculate bulletDirection
-private _unitPos = getPosASL _unit;
-private _causedByPos = getPosASL _causedBy;
-
-private _bulletDir = ((_unitPos select 0) - (_causedByPos select 0)) atan2 ((_unitPos select 1) - (_causedByPos select 1));
+private _bulletDir = _unit getDir _causedBy;
 
 [QGVAR(spurt), [_unit, _bulletDir, _damage]] call CBA_fnc_serverEvent;
