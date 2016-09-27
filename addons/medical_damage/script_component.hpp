@@ -20,3 +20,5 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 #define GET_STRING(config,default) (if (isText (config)) then {getText (config)} else {default})
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
+
+#define ALL_BODY_PARTS ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"]

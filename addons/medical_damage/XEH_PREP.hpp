@@ -5,4 +5,4 @@ PREP(internalInjuriesHandler);
 
 PREP(parseConfigForInjuries);
 PREP(woundsHandler);
-PREP(woundsHandlerSqf);
+PREP(woundsHandlerSQF);

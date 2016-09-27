@@ -55,7 +55,7 @@
         armor = 1;\
         material = -1;\
         name = "head";\
-        passThrough = 1;\
+        passThrough = 0;\
         radius = 1;\
         explosionShielding = 1;\
         visual = "";\

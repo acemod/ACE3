@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, commy2
  * Handling of the open wounds & injuries upon the handleDamage eventhandler.
  *
  * Arguments:
@@ -16,31 +16,37 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
-TRACE_6("ACE_DEBUG: woundshandler",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
+params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
+TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
 
-systemChat format["input: %1", _this];
+///// DELETE THIS AFTER EXTENSION HAS BEEN UPDATED
+_bodyPart = EGVAR(medical,SELECTIONS) select (ALL_BODY_PARTS find _bodyPart);
+/////
 
-if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
+if (_typeOfDamage isEqualTo "") then {
+    _typeOfDamage = "unknown";
+};
 
 // Administration for open wounds and ids
-private _openWounds = _unit getVariable[QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable[QEGVAR(medical,lastUniqueWoundID), 1];
+private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
+private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];
 
-private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
-diag_log format["Extension _extensionOutput: %1", _extensionOutput];
+private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _bodyPart, _damage, _typeOfDamage, _woundID];
+TRACE_1("",_extensionOutput);
 
+// these are default values and modified by _extensionOutput
 private _painToAdd = 0;
 private _woundsCreated = [];
 
 call compile _extensionOutput;
+
 {
-    _x params ["", "_toAddClassID", "_bodyPartNToAdd"];
+    _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd"];
+
     _foundIndex = -1;
     {
-        _x params ["", "_compareId", "_comparyBodyPartN"];
         // Check if we have an id of the given class on the given bodypart already
-        if (_compareId == _toAddClassID && {_comparyBodyPartN2 == _bodyPartNToAdd}) exitWith {
+        if ((_woundClassIDToAdd isEqualTo (_x select 1)) && {_bodyPartNToAdd isEqualTo (_x select 2)}) exitWith {
             _foundIndex = _forEachIndex;
         };
     } forEach _openWounds;
@@ -66,4 +72,4 @@ if (count _woundsCreated > 0) then {
 private _painLevel = _unit getVariable [QEGVAR(medical,pain), 0];
 _unit setVariable [QEGVAR(medical,pain), _painLevel + _painToAdd];
 
-TRACE_6("ACE_DEBUG: woundsHandler",_unit, _painLevel, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_6("exit",_unit, _painLevel, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
