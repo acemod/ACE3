@@ -45,7 +45,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class Medical {
-                displayName = CSTRING(Actions_Medical);
+                displayName = ECSTRING(medical,Actions_Medical);
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = QUOTE([ARR_3(_target, true, 0)] call EFUNC(medical,displayPatientInformation));
