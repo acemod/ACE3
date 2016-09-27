@@ -83,13 +83,13 @@ private _classID = 0;
     private _displayName = GET_STRING(_entry >> "name",_className); // @todo, don't translate in config
 
     // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
-    if ("Minor" call _fnc_parseSubClassWounds || "Medium" call _fnc_parseSubClassWounds || "Large" call _fnc_parseSubClassWounds) exitWith {}; // continue to the next one
-
-    // There were no subclasses, so we will add this one instead.
-    if (count _selections > 0 && count _causes > 0) then {
-        GVAR(woundClassNames) pushBack _className;
-        GVAR(woundsData) pushBack [_classID, _selections, _bleedingRate, _pain, [_minDamage, _maxDamage], _causes, _displayName];
-        _classID = _classID + 1;
+    if !("Minor" call _fnc_parseSubClassWounds || "Medium" call _fnc_parseSubClassWounds || "Large" call _fnc_parseSubClassWounds) then {
+        // There were no subclasses, so we will add this one instead.
+        if (count _selections > 0 && {count _causes > 0}) then {
+            GVAR(woundClassNames) pushBack _className;
+            GVAR(woundsData) pushBack [_classID, _selections, _bleedingRate, _pain, [_minDamage, _maxDamage], _causes, _displayName];
+            _classID = _classID + 1;
+        };
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];
 
@@ -132,10 +132,10 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
 
     // extension loading
     private _minDamageThresholds = (_thresholds apply {str (_x select 0)}) joinString ":";
-    private _amountThresholds =    (_thresholds apply {str (_x select 1)}) joinString ":";
+    private _amountThresholds = (_thresholds apply {str (_x select 1)}) joinString ":";
 
     // load in the damage types into the medical extension
-    private _extensionRes = "ace_medical" callExtension format [
+    private _extensionArgs = format [
         "addDamageType,%1,%2,%3,%4,%5",
         _className,
         GVAR(lethalDamages) select _forEachIndex,
@@ -143,10 +143,13 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
         _amountThresholds,
         _selectionSpecific
     ];
+    TRACE_1("",_extensionArgs);
+
+    private _extensionRes = "ace_medical" callExtension _extensionArgs;
     TRACE_1("",_extensionRes);
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
 
-// Extension loading
+// extension loading
 {
     _x params ["_classID", "_selections", "_bleedingRate", "_pain", "_damageExtrema", "_causes", "_displayName"];
     _damageExtrema params ["_minDamage", "_maxDamage"];
