@@ -21,6 +21,7 @@
 #define TIME_OUT 1
 
 params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]]];
+TRACE_3("",_unit,_type,_severity);
 
 if (!local _unit) exitWith {
     ACE_LOGERROR("Unit not local or null");

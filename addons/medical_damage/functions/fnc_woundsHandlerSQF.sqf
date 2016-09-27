@@ -136,4 +136,6 @@ if (count _woundsCreated > 0) then {
 private _painLevel = _unit getVariable [QGVAR(pain), 0];
 _unit setVariable [QGVAR(pain), _painLevel + _painToAdd];
 
+[_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
+
 TRACE_6("exit",_unit, _painLevel, _painToAdd, _unit getVariable QGVAR(pain), _unit getVariable QGVAR(openWounds),_woundsCreated);
