@@ -1735,7 +1735,7 @@
             <Hungarian>[ACE] Lőszeres láda</Hungarian>
             <Russian>[ACE] Ящик с боеприпасами</Russian>
             <Italian>[ACE] Cassa munizioni</Italian>
-            <Japanese>[ACE] Ammo Supply Crate</Japanese>
+            <Japanese>[ACE] 弾薬物資箱</Japanese>
         </Key>
     </Package>
 </Project>
