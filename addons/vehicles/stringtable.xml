@@ -12,6 +12,7 @@
             <Hungarian>Sebességkorlátozó bekapcsolva</Hungarian>
             <Portuguese>Limitador de Velocidade Ativo</Portuguese>
             <Italian>Limitatore Attivo</Italian>
+            <Japanese>速度制限を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -24,6 +25,7 @@
             <Hungarian>Sebességkorlátozó kikapcsolva</Hungarian>
             <Portuguese>Limitador de Velocidade Desativado</Portuguese>
             <Italian>Limitatore Non Attivo</Italian>
+            <Japanese>速度制限を無効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimiter">
             <English>Speed Limiter</English>
@@ -36,6 +38,7 @@
             <Hungarian>Sebességkorlátozó</Hungarian>
             <Portuguese>Limitador de Velocidade</Portuguese>
             <Italian>Limitatore di Velocità</Italian>
+            <Japanese>速度制限</Japanese>
         </Key>
     </Package>
 </Project>
