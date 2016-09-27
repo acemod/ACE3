@@ -6,6 +6,12 @@ GVAR(MenuPFHID) = -1;
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
+["ace_settingsInitialized", {
+    if (EGVAR(medical,level) > 0 && {EGVAR(medical,menuTypeStyle) == 0}) then {
+        [] call FUNC(collectActions3D);
+    };
+}] call CBA_fnc_addEventHandler;
+
 ["ace_treatmentSucceded", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
         GVAR(pendingReopen) = false;
@@ -15,8 +21,7 @@ GVAR(pendingReopen) = false;
     };
 }] call CBA_fnc_addEventHandler;
 
-["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey),
-{
+["ACE3 Common", QGVAR(displayMenuKeyPressed), localize LSTRING(DisplayMenuKey), {
     private _target = cursorTarget;
     if (!((_target isKindOf "CAManBase") && {[ACE_player, _target] call FUNC(canOpenMenu)})) then {_target = ACE_player};
 
@@ -27,11 +32,9 @@ GVAR(pendingReopen) = false;
     // Statement
     [_target] call FUNC(openMenu);
     false
-},
-{
+}, {
     if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
     false
-},
-[35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+}, [35, [false, false, false]], false, 0] call CBA_fnc_addKeybind;

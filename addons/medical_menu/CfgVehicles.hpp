@@ -44,6 +44,15 @@ class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
+            class Medical {
+                displayName = CSTRING(Actions_Medical);
+                runOnHover = 1;
+                exceptions[] = {"isNotInside", "isNotSitting"};
+                statement = QUOTE([ARR_3(_target, true, 0)] call EFUNC(medical,displayPatientInformation));
+                condition = "true";
+                icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
+                #include "InteractionBodyParts.hpp"
+            };
             class Medical_Menu {
                 displayName = CSTRING(OpenMenu);
                 runOnHover = 0;
@@ -55,6 +64,7 @@ class CfgVehicles {
         };
 
         class ACE_Actions {
+            #include "InteractionBodyParts.hpp"
             // Create a consolidates medical menu for treatment while boarded
             class ACE_MainActions {
                 class Medical_Menu {
