@@ -13,7 +13,7 @@ version:
 redirect_from: "/wiki/feature/sitting.html"
 ---
 
-_Sitting has been moved from ACE3 (in v3.8.0) and moved into ACEX._
+_Sitting has been moved from ACE3 (in v3.8.0) to ACEX._
 
 ## 1. Overview
 Adds the ability to sit on chairs.
