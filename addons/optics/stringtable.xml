@@ -12,6 +12,7 @@
             <Russian>RCO (2D)</Russian>
             <Spanish>RCO (2D)</Spanish>
             <Hungarian>RCO (2D)</Hungarian>
+            <Japanese>RCO (2D)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_hamr_pip">
             <English>RCO (PIP)</English>
@@ -24,6 +25,7 @@
             <Russian>RCO (PIP)</Russian>
             <Spanish>RCO (PIP)</Spanish>
             <Hungarian>RCO (PIP)</Hungarian>
+            <Japanese>RCO (PIP)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_arco">
             <English>ARCO (2D)</English>
@@ -36,6 +38,7 @@
             <Russian>ARCO (2D)</Russian>
             <Spanish>ARCO (2D)</Spanish>
             <Hungarian>ARCO (2D)</Hungarian>
+            <Japanese>ARCO (2D)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
@@ -48,6 +51,7 @@
             <Russian>ARCO (PIP)</Russian>
             <Spanish>ARCO (PIP)</Spanish>
             <Hungarian>ARCO (PIP)</Hungarian>
+            <Japanese>ARCO (PIP)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_valdada">
             <English>MRCO (2D)</English>
@@ -60,6 +64,7 @@
             <Russian>MRCO (2D)</Russian>
             <Spanish>MRCO (2D)</Spanish>
             <Hungarian>MRCO (2D)</Hungarian>
+            <Japanese>MRCO (2D)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_valdada_pip">
             <English>MRCO (PIP)</English>
@@ -72,6 +77,7 @@
             <Russian>MRCO (PIP)</Russian>
             <Spanish>MRCO (PIP)</Spanish>
             <Hungarian>MRCO (PIP)</Hungarian>
+            <Japanese>MRCO (PIP)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_sos">
             <English>MOS (2D)</English>
@@ -84,6 +90,7 @@
             <Russian>MOS (2D)</Russian>
             <Spanish>MOS (2D)</Spanish>
             <Hungarian>MOS (2D)</Hungarian>
+            <Japanese>MOS (2D)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_sos_pip">
             <English>MOS (PIP)</English>
@@ -96,6 +103,7 @@
             <Russian>MOS (PIP)</Russian>
             <Spanish>MOS (PIP)</Spanish>
             <Hungarian>MOS (PIP)</Hungarian>
+            <Japanese>MOS (PIP)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
@@ -108,6 +116,7 @@
             <Russian>LRPS (2D)</Russian>
             <Spanish>MPLD (2D)</Spanish>
             <Hungarian>LRPS (2D)</Hungarian>
+            <Japanese>LRPS (2D)</Japanese>
         </Key>
         <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
@@ -120,6 +129,7 @@
             <Russian>LRPS (PIP)</Russian>
             <Spanish>MPLD (PIP)</Spanish>
             <Hungarian>LRPS (PIP)</Hungarian>
+            <Japanese>LRPS (PIP)</Japanese>
         </Key>
     </Package>
 </Project>
