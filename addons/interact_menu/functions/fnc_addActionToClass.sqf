@@ -22,6 +22,7 @@
 
 if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", [], [[]]], ["_action", [], [[]], 11]]) exitWith {
     ERROR("Bad Params");
+    []
 };
 TRACE_4("params",_objectType,_typeNum,_parentPath,_action);
 
@@ -65,6 +66,7 @@ private _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
 if (isNil {_parentNode}) exitWith {
     ERROR("Failed to add action");
     ACE_LOGERROR_4("action (%1) to parent %2 on object %3 [%4]",(_action select 0),_parentPath,_objectType,_typeNum);
+    []
 };
 
 // Add action node as children of the correct node of action tree
