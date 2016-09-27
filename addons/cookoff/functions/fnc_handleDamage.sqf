@@ -70,7 +70,7 @@ if (_simulationType == "tank") exitWith {
             _vehicle call FUNC(cookOff);
         };
     } else {
-        if (_hitpoint in ["hitbody", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.3}) then {
+        if (_hitpoint in ["hithull", "hitturret", "#structural"] && {_newDamage > 0.6 + random 0.3}) then {
             _vehicle call FUNC(cookOff);
         };
     };

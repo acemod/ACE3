@@ -31,16 +31,19 @@
             <English>Goggle Effects</English>
             <Russian>Эффект очков</Russian>
             <Japanese>ゴーグルによる効果</Japanese>
+            <Polish>Efekty gogli</Polish>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
             <Russian>Тонировка</Russian>
             <Japanese>色彩のみ</Japanese>
+            <Polish>Winieta</Polish>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
             <Japanese>色彩 + 効果</Japanese>
+            <Polish>Winieta + Efekty</Polish>
         </Key>
     </Package>
 </Project>

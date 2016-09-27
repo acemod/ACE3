@@ -5,42 +5,49 @@
             <English>Tagging</English>
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
+            <Polish>Tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
+            <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
             <Japanese>クイック タグ</Japanese>
+            <Polish>Szybkie tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
             <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
+            <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
             <Japanese>最後の使用</Japanese>
+            <Polish>Ostatnio użyte</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
             <Japanese>無作為な X印</Japanese>
+            <Polish>Losowy X</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
             <Russian>Случайный</Russian>
             <Japanese>無作為</Japanese>
+            <Polish>Losowy</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Oznakuj</Polish>
+            <Polish>Taguj</Polish>
             <French>Tag</French>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>

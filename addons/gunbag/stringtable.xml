@@ -8,6 +8,7 @@
             <Russian>Чехол</Russian>
             <Czech>Pouzdro na zbraň</Czech>
             <Japanese>ガンバッグ</Japanese>
+            <Polish>Torba na broń</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -16,6 +17,7 @@
             <Russian>Чехол (желтовато-коричневый)</Russian>
             <Czech>Pouzdro na zbraň (Žlutohnědá)</Czech>
             <Japanese>ガンバッグ (タン)</Japanese>
+            <Polish>Torba na broń (jasnobrązowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -24,6 +26,7 @@
             <Russian>Зачехлить оружие</Russian>
             <Czech>Vložit zbraň do pouzdra</Czech>
             <Japanese>ガンバッグへ武器を入れる</Japanese>
+            <Polish>Włóż broń do torby</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -32,6 +35,7 @@
             <Russian>Расчехлить оружие</Russian>
             <Czech>Vytáhnout zbraň z pouzdra</Czech>
             <Japanese>ガンバッグから武器を出す</Japanese>
+            <Polish>Wyciągnij broń z torby</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -40,6 +44,7 @@
             <Russian>Статус</Russian>
             <Czech>Status</Czech>
             <Japanese>中身</Japanese>
+            <Polish>Status</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -48,6 +53,7 @@
             <Russian>Чехол пуст</Russian>
             <Czech>Prázdné pouzdro na zbraň</Czech>
             <Japanese>ガンバッグは空</Japanese>
+            <Polish>Torba jest pusta</Polish>
         </Key>
     </Package>
 </Project>

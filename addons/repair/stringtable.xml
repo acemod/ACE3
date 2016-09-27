@@ -1444,6 +1444,7 @@
             <French>Le moteur doit être éteins pour réparer</French>
             <Russian>Двигатель должен быть выключен для ремонта</Russian>
             <Japanese>修理のためにエンジンを停止させる必要があります。</Japanese>
+            <Polish>Silnik musi być wyłączony w celu naprawy</Polish>
         </Key>
     </Package>
 </Project>

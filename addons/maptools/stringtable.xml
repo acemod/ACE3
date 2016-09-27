@@ -149,12 +149,14 @@
             <French>Touche de rotation des outils de naviguation</French>
             <Russian>Клавиша поворота инструментов карты</Russian>
             <Japanese>マップ ツールの回転キー</Japanese>
+            <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
             <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
             <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
+            <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
         </Key>
     </Package>
 </Project>

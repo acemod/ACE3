@@ -223,11 +223,13 @@
             <English>Airdrop</English>
             <German>Türlast</German>
             <Japanese>空中投下</Japanese>
+            <Polish>Zrzut zaopatrzenia</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
             <German>Schieflage</German>
             <Japanese>機体が水平ではありません</Japanese>
+            <Polish>Nierówny lot</Polish>
         </Key>
     </Package>
 </Project>

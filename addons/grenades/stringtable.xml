@@ -279,18 +279,21 @@
             <German>AN-M14 Brandsatz</German>
             <Russian>AN-M14 Зажигательная граната</Russian>
             <Japanese>AN-M14 焼夷手榴弾</Japanese>
+            <Polish>Granat zapalający AN-M14</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
             <German>AN-M14</German>
             <Russian>AN-M14</Russian>
             <Japanese>AN-M14</Japanese>
+            <Polish>AN-M14</Polish>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
             <German>Brandsatzgranate. Verwendet um Waffen, Munition und andere Ausrüstung zu zerstören.</German>
             <Russian>Зажигательная граната используется для уничтожения оружия, боеприпасов и прочего оборудования.</Russian>
             <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊するために使われます。</Japanese>
+            <Polish>Granat zapalający, używany do niszczenia broni, amunicji i innego sprzętu.</Polish>
         </Key>
     </Package>
 </Project>

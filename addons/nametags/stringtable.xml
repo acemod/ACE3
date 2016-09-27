@@ -433,6 +433,7 @@
             <English>Fade on screen border</English>
             <German>Am Bildschirmrand ausblenden</German>
             <Japanese>画面端では非表示</Japanese>
+            <Polish>Ukryj na brzegach ekranu</Polish>
         </Key>
     </Package>
 </Project>
