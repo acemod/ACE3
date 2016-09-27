@@ -286,7 +286,7 @@
             <Portuguese>[ACE] Itens diversos</Portuguese>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
-            <Japanese>[ACE] Miscellaneous Items</Japanese>
+            <Japanese>[ACE] その他のアイテム</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
