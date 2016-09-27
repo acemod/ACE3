@@ -20,16 +20,24 @@ params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
 
 // restore all gear
 if (!isNil "_allGear") then {
-    // Handle Unique ACRE radios
     {
         private _container = _allGear select _x;
         if (!(_container isEqualTo [])) then {
             _container params ["","_itemsArray"];
             {
                 _x params ["_itemClassname"];
+
+                // Handle Unique ACRE radios
                 if ((getNumber (configFile >> "CfgWeapons" >> _itemClassname >> "acre_isUnique")) > 0) then {
                     private _newBase = getText (configFile >> "CfgWeapons" >> _itemClassname >> "acre_baseClass");
-                    INFO_2("replacing ACRE radio [%1] with base [%2]",_itemClassname,_newBase);
+                    ACE_LOGINFO_2("replacing ACRE radio [%1] with base [%2]",_itemClassname,_newBase);
+                    _x set [0, _newBase];
+                };
+
+                // Handle Unique TFAR radios
+                if ((getNumber (configFile >> "CfgWeapons" >> _itemClassname >> "tf_radio")) > 0) then {
+                    private _newBase = getText (configFile >> "CfgWeapons" >> _itemClassname >> "tf_parent");
+                    ACE_LOGINFO_2("replacing TFAR radio [%1] with base [%2]",_itemClassname,_newBase);
                     _x set [0, _newBase];
                 };
             } forEach _itemsArray;
