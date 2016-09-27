@@ -80,7 +80,7 @@ private _classID = 0;
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
-    private _displayName = GET_STRING(_entry >> "name",_className);
+    private _displayName = GET_STRING(_entry >> "name",_className); // @todo, don't translate in config
 
     // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
     if ("Minor" call _fnc_parseSubClassWounds || "Medium" call _fnc_parseSubClassWounds || "Large" call _fnc_parseSubClassWounds) exitWith {}; // continue to the next one
