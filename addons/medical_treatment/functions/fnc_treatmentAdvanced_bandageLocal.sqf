@@ -50,7 +50,7 @@ private _exit = false;
         private _woundEffectiveness = _effectiveness;
 
         // Select the classname from the wound classname storage
-        private _className = EGVAR(medical,woundClassNames) select _classID;
+        private _className = EGVAR(medical_damage,woundClassNames) select _classID;
 
         // Check if this wound type has attributes specified for the used bandage
         if (isClass (_config >> _className)) then {

@@ -22,7 +22,7 @@ private ["_className", "_reopeningChance", "_reopeningMinDelay", "_reopeningMaxD
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
 private _classID = _injury select 1;
-private _className = EGVAR(medical,woundClassNames) select _classID;
+private _className = EGVAR(medical_damage,woundClassNames) select _classID;
 
 // default, just in case..
 private _reopeningChance = 0.1;
