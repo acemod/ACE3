@@ -12,6 +12,7 @@
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
             <Italian>Mostra sempre il cursore delle autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
+            <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
             <English>Always display cursor for interaction</English>
@@ -24,6 +25,7 @@
             <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
+            <Japanese>インタラクションへ常にカーソルを表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_UseListMenu">
             <English>Display interaction menus as lists</English>
@@ -36,6 +38,7 @@
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
             <Portuguese>Mostrar menu de interação como listas</Portuguese>
+            <Japanese>表示されるインタラクション メニューを一覧表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_InteractKey">
             <English>Interact Key</English>
@@ -48,6 +51,7 @@
             <Hungarian>Cselekvő gomb</Hungarian>
             <Italian>Tasto interazione</Italian>
             <Portuguese>Tecla de Interação</Portuguese>
+            <Japanese>インタラクション キー</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
             <English>Self Interaction Key</English>
@@ -60,6 +64,7 @@
             <Hungarian>Saját cselekvő gomb</Hungarian>
             <Italian>Tasto interazione su se stessi</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
+            <Japanese>セルフ インタラクション キー</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
             <English>Self Actions</English>
@@ -72,6 +77,7 @@
             <Hungarian>Saját cselekvések</Hungarian>
             <Italian>Interazioni su se stessi</Italian>
             <Portuguese>Ações Pessoais</Portuguese>
+            <Japanese>自分への動作</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
             <English>Vehicle Actions</English>
@@ -84,6 +90,7 @@
             <Hungarian>Járműves cselekvések</Hungarian>
             <Italian>Interazioni con veicoli</Italian>
             <Portuguese>Ações de Veículos</Portuguese>
+            <Japanese>車両への動作</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
             <English>Zeus Actions</English>
@@ -96,6 +103,7 @@
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
             <Italian>Azioni Zeus</Italian>
+            <Japanese>Zeus への動作</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
             <English>Interaction - Text Max</English>
@@ -108,6 +116,7 @@
             <Spanish>Interacción - Texto al max.</Spanish>
             <Hungarian>Cselekvés - Szöveg max.</Hungarian>
             <Portuguese>Interação - Max. de Texto</Portuguese>
+            <Japanese>インタラクション - 文字の色</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
             <English>Interaction - Text Min</English>
@@ -120,6 +129,7 @@
             <Spanish>Interacción - Texto al min.</Spanish>
             <Hungarian>Cselekvés - Szöveg min.</Hungarian>
             <Portuguese>Interação - Min. de Texto</Portuguese>
+            <Japanese>インタラクション - 文字の背景色</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
@@ -132,6 +142,7 @@
             <Spanish>Interacción - Sombras al max.</Spanish>
             <Hungarian>Cselekvés - Árnyék max.</Hungarian>
             <Portuguese>Interação - Max. de Sombra</Portuguese>
+            <Japanese>インタラクション - 文字への影の色</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
@@ -144,6 +155,7 @@
             <Spanish>Interacción - Sombras al min.</Spanish>
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
             <Portuguese>Interação - Min. de Sombra</Portuguese>
+            <Japanese>インタラクション - 文字への影の最低色</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
             <English>Keep cursor centered</English>
@@ -156,6 +168,7 @@
             <Czech>Udržuj kurzor na středu</Czech>
             <Portuguese>Manter o cursor centralizado</Portuguese>
             <Italian>Mantieni il cursore centrato</Italian>
+            <Japanese>常にカーソルを中央にする</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
@@ -168,6 +181,7 @@
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
             <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
             <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
+            <Japanese>常にカーソルを中央へ表示させ、オプション メニューが移動します。画面の大きさが制限されている時に使いやすくなります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
             <English>Do action when releasing menu key</English>
@@ -180,6 +194,7 @@
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
+            <Japanese>メニュー キーを離したときに動作を実行します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_textSize">
             <English>Interaction Text Size</English>
@@ -192,6 +207,7 @@
             <Portuguese>Tamanho do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
             <Italian>Dimensione del testo d'interazione</Italian>
+            <Japanese>インタラクション文字の大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSetting">
             <English>Interaction Text Shadow</English>
@@ -204,6 +220,7 @@
             <Portuguese>Sombra do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
             <Italian>Ombra del testo d'interazione</Italian>
+            <Japanese>インタラクション文字へ影</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
             <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
@@ -216,6 +233,7 @@
             <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
             <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
             <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
+            <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_shadowOutline">
             <English>Outline</English>
@@ -228,6 +246,7 @@
             <Portuguese>Contorno</Portuguese>
             <Hungarian>Körvonal</Hungarian>
             <Italian>Contorno</Italian>
+            <Japanese>縁取り</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_background">
             <English>Interaction menu background</English>
@@ -240,6 +259,7 @@
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
             <Italian>Sfondo Menù Interazioni</Italian>
+            <Japanese>インタラクション メニューの背景</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
             <English>Blur the background while the interaction menu is open.</English>
@@ -252,6 +272,7 @@
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
+            <Japanese>インタラクション メニューを開いたとき、背景にボケを与えます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
             <English>Blur screen</English>
@@ -264,6 +285,7 @@
             <Hungarian>Kép elmosása</Hungarian>
             <Russian>Размытый</Russian>
             <Italian>Sfoca schermo</Italian>
+            <Japanese>ボケ画面</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
             <English>Black</English>
@@ -276,6 +298,7 @@
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
             <Italian>Nero</Italian>
+            <Japanese>ブラック</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
             <English>Show actions for buildings</English>
@@ -288,6 +311,7 @@
             <Portuguese>Mostrar ações para edifícios</Portuguese>
             <Russian>Показывать действия для зданий</Russian>
             <Italian>Mostra azioni per edifici</Italian>
+            <Japanese>建物へ動作を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
             <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
@@ -300,6 +324,7 @@
             <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
             <Italian>Aggiunge azioni interattive per l'apertura delle porte e piazzamento scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
+            <Japanese>建物にあるドアの開閉やラダーの昇降といった動作をインタラクションへ追加します。(街などでインタラクション メニューを開くとパフォーマンスが低下します)</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
             <English>Interaction Menu</English>
@@ -311,6 +336,7 @@
             <Spanish>Menú de interacción</Spanish>
             <Italian>Menù Interazioni</Italian>
             <French>Menu d'interaction</French>
+            <Japanese>インタラクション メニュー</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
@@ -322,6 +348,7 @@
             <Italian>Velocità Animazioni Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
             <French>Vitesse de l'aniamtion d'interaction</French>
+            <Japanese>インタラクションのアニメーション速度</Japanese>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
@@ -333,6 +360,7 @@
             <Italian>Rende le animazioni Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
             <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations de menu plus rapide et réduit le temps nécessaire à l'affichage des sous menus d'action</French>
+            <Japanese>サブ動作が表示されるホバーをした時に、表示されるメニューのアニメーション速度を早くしたり遅くしたりできます</Japanese>
         </Key>
     </Package>
 </Project>
