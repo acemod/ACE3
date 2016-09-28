@@ -12,6 +12,7 @@
             <Hungarian>MicroDAGR GPS</Hungarian>
             <Italian>GPS MicroDAGR</Italian>
             <Portuguese>GPS MicroDAGR</Portuguese>
+            <Japanese>MicroDAGR GPS</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_itemDescription">
             <English>MicroDAGR advanced GPS receiver</English>
@@ -24,6 +25,7 @@
             <Hungarian>MicroDAGR fejlett GPS vevőegység</Hungarian>
             <Italian>Ricevitore GPS avanzato MicroDAGR</Italian>
             <Portuguese>Recepitor GPS avançado MicroDAGR</Portuguese>
+            <Japanese>MicroDAGR は改良された GPS 受信機です</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingUseMils">
             <English>Angular Unit:</English>
@@ -36,6 +38,7 @@
             <Hungarian>Szögmértékegység:</Hungarian>
             <Italian>Unità angolare:</Italian>
             <Portuguese>Unidade Angular:</Portuguese>
+            <Japanese>角度の種類：</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingMils">
             <English>Mils</English>
@@ -48,6 +51,7 @@
             <Hungarian>Mil</Hungarian>
             <Italian>Mils</Italian>
             <Portuguese>Mils:</Portuguese>
+            <Japanese>ミリ ラジアン</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingShowWP">
             <English>Show Waypoints On Map:</English>
@@ -60,6 +64,7 @@
             <Hungarian>Útvonalpontok mutatása a térképen:</Hungarian>
             <Italian>Mostra waypoint sulla mappa:</Italian>
             <Portuguese>Mostrar Waypoints no mapa:</Portuguese>
+            <Japanese>地図へｳｪｲﾎﾟｲﾝﾄを表示：</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingDegrees">
             <English>Degrees</English>
@@ -72,6 +77,7 @@
             <Hungarian>Fok</Hungarian>
             <Italian>Gradi</Italian>
             <Portuguese>Graus</Portuguese>
+            <Japanese>角度</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOn">
             <English>On</English>
@@ -84,6 +90,7 @@
             <Russian>Вкл.</Russian>
             <Spanish>Encendido</Spanish>
             <Hungarian>Be</Hungarian>
+            <Japanese>有効</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_settingOff">
             <English>Off</English>
@@ -96,6 +103,7 @@
             <Russian>Выкл.</Russian>
             <Spanish>Apagado</Spanish>
             <Hungarian>Ki</Hungarian>
+            <Japanese>無効</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterCords">
             <English>Enter Grid Cords:</English>
@@ -108,6 +116,7 @@
             <Hungarian>Add meg a rácskoordinátákat:</Hungarian>
             <Italian>Introduci griglia coordinate:</Italian>
             <Portuguese>Digite as Ccords. do Grid</Portuguese>
+            <Japanese>座標を入力：</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_wpEnterName">
             <English>Name of [%1]</English>
@@ -120,6 +129,7 @@
             <Hungarian>[%1] neve</Hungarian>
             <Italian>Nome di [%1]</Italian>
             <Portuguese>Nome do [%1]</Portuguese>
+            <Japanese>[%1] の名前</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlMGRS">
             <English>MGRS-New</English>
@@ -132,6 +142,7 @@
             <Hungarian>MGRS-új</Hungarian>
             <Italian>Nuovo MGRS</Italian>
             <Portuguese>MGRS-Novo</Portuguese>
+            <Japanese>MGRS-New</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlWGD">
             <English>WGD</English>
@@ -144,6 +155,7 @@
             <Hungarian>WGD</Hungarian>
             <Italian>WGD</Italian>
             <Portuguese>WGD</Portuguese>
+            <Japanese>WGD</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_controlRange">
             <English>Range:</English>
@@ -156,6 +168,7 @@
             <Hungarian>Távolság:</Hungarian>
             <Italian>Distanza:</Italian>
             <Portuguese>Distância:</Portuguese>
+            <Japanese>距離：</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_compasDirection">
             <English>Compass Direction</English>
@@ -168,6 +181,7 @@
             <Hungarian>Irányszög</Hungarian>
             <Italian>Azimut</Italian>
             <Portuguese>Direção na bússula</Portuguese>
+            <Japanese>方位磁石での方位</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuMark">
             <English>Mark</English>
@@ -180,6 +194,7 @@
             <Hungarian>Jelölés</Hungarian>
             <Italian>Marca</Italian>
             <Portuguese>Marca</Portuguese>
+            <Japanese>マーク</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuWaypoints">
             <English>Waypoints</English>
@@ -192,6 +207,7 @@
             <Hungarian>Útvonalpontok</Hungarian>
             <Italian>waypoints</Italian>
             <Portuguese>Waypoints</Portuguese>
+            <Japanese>ｳｪｲﾎﾟｲﾝﾄ</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuConnectTo">
             <English>Connect To</English>
@@ -204,6 +220,7 @@
             <Hungarian>Csatlakozás</Hungarian>
             <Italian>Collega a </Italian>
             <Portuguese>Conectar à</Portuguese>
+            <Japanese>次に接続</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_menuSettings">
             <English>Settings</English>
@@ -216,6 +233,7 @@
             <Hungarian>Beállítások</Hungarian>
             <Italian>Impostaizoni</Italian>
             <Portuguese>Opções</Portuguese>
+            <Japanese>設定</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsSet">
             <English>SetWP</English>
@@ -228,6 +246,7 @@
             <Hungarian>UP Beállítása</Hungarian>
             <Italian>Definisci WayPoints</Italian>
             <Portuguese>Definir WP</Portuguese>
+            <Japanese>ウェイポイント設定</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsAdd">
             <English>Add</English>
@@ -240,6 +259,7 @@
             <Hungarian>Hozzáadás</Hungarian>
             <Italian>Aggiungi</Italian>
             <Portuguese>Adicionar</Portuguese>
+            <Japanese>追加</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_waypointsDelete">
             <English>Delete</English>
@@ -252,6 +272,7 @@
             <Russian>Удалить</Russian>
             <Spanish>Borrar</Spanish>
             <Hungarian>Törlés</Hungarian>
+            <Japanese>削除</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_toggleUnit">
             <English>Toggle MicroDAGR Display Mode</English>
@@ -264,6 +285,7 @@
             <Hungarian>MicroDAGR kijelzési mód váltása</Hungarian>
             <Italian>Alterna modalità display MicroDAGR</Italian>
             <Portuguese>Alternar Modo de Display do MicroDAGR</Portuguese>
+            <Japanese>MicroDAGR の表示モード</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_show">
             <English>Show MicoDAGR</English>
@@ -276,6 +298,7 @@
             <Hungarian>MicroDAGR mutatása</Hungarian>
             <Italian>Mostra MicroDAGR</Italian>
             <Portuguese>Mostrar MicroDAGR</Portuguese>
+            <Japanese>MicoDAGR を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_configure">
             <English>Configure MicroDAGR</English>
@@ -288,6 +311,7 @@
             <Hungarian>MicroDAGR konfigurálása</Hungarian>
             <Italian>ConfiguraMicroDAGR</Italian>
             <Portuguese>Configurar MicroDAGR</Portuguese>
+            <Japanese>MicroDAGR を設定</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_closeUnit">
             <English>Close MicroDAGR</English>
@@ -300,6 +324,7 @@
             <Hungarian>MicroDAGR elrejtése</Hungarian>
             <Italian>Chiudi MicroDAGR</Italian>
             <Portuguese>Fechar MicroDAGR</Portuguese>
+            <Japanese>MicroDAGR を閉じる</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -312,6 +337,7 @@
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <Italian>Riempimento Mappa MicroDAGR</Italian>
+            <Japanese>MicroDAGR での地図情報</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_DisplayName">
             <English>MicroDAGR Map Fill</English>
@@ -324,6 +350,7 @@
             <Hungarian>MicroDAGR térképkitöltés</Hungarian>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <Italian>Riempimento Mappa MicroDAGR</Italian>
+            <Japanese>MicroDAGR での地図情報</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapDataAvailable_Description">
             <English>How much map data is filled on MicroDAGR's</English>
@@ -336,6 +363,7 @@
             <Hungarian>Mennyi térképadatot tartalmaz a MicroDAGR</Hungarian>
             <Russian>Сколько данных должно отображаться на карте MicroDAGR</Russian>
             <Italian>Quanti dati sono trasferiti nella mappa del MicroDAGR</Italian>
+            <Japanese>MicroDAGR で表示する地図情報を決定します</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_Full">
             <English>Full Satellite + Buildings</English>
@@ -348,6 +376,7 @@
             <Hungarian>Teljes műholdas + épületek</Hungarian>
             <Russian>Спутник + Здания</Russian>
             <Italian>Satellite Completo + Edifici</Italian>
+            <Japanese>完全な衛星画像と建物</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_OnlyRoads">
             <English>Topographical + Roads</English>
@@ -360,6 +389,7 @@
             <Hungarian>Topográfia + utak</Hungarian>
             <Russian>Топография + Дороги</Russian>
             <Italian>Topografico + Strade</Italian>
+            <Japanese>地形と道路</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_MapFill_None">
             <English>None (Cannot use map view)</English>
@@ -372,6 +402,7 @@
             <Hungarian>Semmi (nem használható a térképnézet)</Hungarian>
             <Russian>Не показывать (запрещает использовать режим карты)</Russian>
             <Italian>Nessuno (Non puoi usare la vista mappa)</Italian>
+            <Japanese>なし（地図表示を使えません）</Japanese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_Module_Description">
             <English>Controls how much data is filled on the microDAGR items.  Less data restricts the map view to show less on the minimap.</English>
@@ -384,6 +415,7 @@
             <Hungarian>Meghatárroza a MicroDAGR objektumok térképének tartalmát. A kevesebb adat korlátozza a térképnézeti módot az eszközön.</Hungarian>
             <Russian>Контролирует, сколько данных должно отображаться на карте устройств MicroDAGR. Ограничивает объем отображаемых данных на миникарте.</Russian>
             <Italian>Controlla quanti dati sono presenti negli oggetti MicroDAGR. Meno dati costringono la vista mappa a mostrare meno informazioni nella minimappa.</Italian>
+            <Japanese>アイテム上で表示されるデータ量を決定します。設定を減らすと地図上での情報が少なくなります。</Japanese>
         </Key>
     </Package>
 </Project>

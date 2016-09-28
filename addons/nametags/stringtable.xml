@@ -12,6 +12,7 @@
             <Russian>Показать имена</Russian>
             <Italian>Mostra i nomi</Italian>
             <Portuguese>Mostrar nomes</Portuguese>
+            <Japanese>名前の表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames">
             <English>Show player names</English>
@@ -24,6 +25,7 @@
             <Portuguese>Mostrar nomes de jogadores</Portuguese>
             <Italian>Mostra i nomi dei giocatori</Italian>
             <Russian>Показывать имена игроков (включить имена)</Russian>
+            <Japanese>プレイヤ名を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnCursor">
             <English>Show player name only on cursor (requires player names)</English>
@@ -36,6 +38,7 @@
             <Portuguese>Mostrar nome de jogador somente no cursor (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok nevének mutatása csak a kurzoron (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показать имена игроков только под курсором (при включенных именах)</Russian>
+            <Japanese>カーソルを合わせた時だけプレイヤ名を表示 (プレイヤ名が必要</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNamesOnlyOnKeyPress">
             <English>Show player name only on keypress (requires player names)</English>
@@ -48,6 +51,7 @@
             <Russian>Показать имена игроков только по нажатию клавиши (при включенных именах)</Russian>
             <Italian>Mostra i nomi solo se si preme il tasto (insieme ai nomi)</Italian>
             <Portuguese>Mostrar nomes somente ao pressionar teclar (requer nome de jogadores)</Portuguese>
+            <Japanese>キーを押した時だけプレイヤ名を表示 (プレイヤ名が必要)</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerRanks">
             <English>Show player ranks (requires player names)</English>
@@ -60,6 +64,7 @@
             <Portuguese>Mostrar patente de jogadores (requer nome de jogadores)</Portuguese>
             <Hungarian>Játékosok rendfokozatának mutatása (a nevek mutatása szükséges)</Hungarian>
             <Russian>Показывать звания игроков (при вкл. именах)</Russian>
+            <Japanese>プレイヤの階級を表示 (プレイヤ名が必要)</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowVehicleCrewInfo">
             <English>Show vehicle crew info</English>
@@ -72,6 +77,7 @@
             <Hungarian>Jármű-legénység adatainak mutatása</Hungarian>
             <Portuguese>Mostrar tripulantes</Portuguese>
             <Italian>Mostra l'elenco del personale a bordo</Italian>
+            <Japanese>車両の乗員を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowNamesForAI">
             <English>Show name tags for AI units</English>
@@ -84,6 +90,7 @@
             <Hungarian>Névcímkék mutatása MI-egységeknél</Hungarian>
             <Italian>Mostra i nomi delle le unità AI</Italian>
             <Portuguese>Mostrar nomes para unidades de IA</Portuguese>
+            <Japanese>AI ユニットの名札を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves">
             <English>Show SoundWaves (requires player names)</English>
@@ -96,6 +103,7 @@
             <Hungarian>"Hanghullámok" mutatása (a nevek mutatása szükséges)</Hungarian>
             <Italian>Mostra movimento audio (insieme ai nomi)</Italian>
             <Portuguese>Mostrar onda sonora (requer nome de jogadores)</Portuguese>
+            <Japanese>音波形を表示 (プレイヤ名が必要)</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
             <English>Default Nametag Color (Non Group Members)</English>
@@ -108,6 +116,7 @@
             <Hungarian>Alap névcímke-szín (csoporton kívüli személyek)</Hungarian>
             <Italian>Colore dei nomi non appartenenti al gruppo</Italian>
             <Portuguese>Cor padrão do nome (unidades fora do grupo)</Portuguese>
+            <Japanese>標準の名札の色（グループ メンバ以外)</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_DisplayName">
             <English>Name Tags</English>
@@ -120,6 +129,7 @@
             <Hungarian>Névcímkék</Hungarian>
             <Russian>Имена игроков</Russian>
             <Italian>Etichette Nomi</Italian>
+            <Japanese>名札</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_DisplayName">
             <English>Player Names View Dist.</English>
@@ -132,6 +142,7 @@
             <Hungarian>Játékosok nevének látótávja</Hungarian>
             <Russian>Дистанция отображения имен</Russian>
             <Italian>Distanza Visiva Etichette Nomi</Italian>
+            <Japanese>プレイヤ名が見える範囲</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
@@ -144,6 +155,7 @@
             <Hungarian>Méterben megadott érték a játékosok nevének mutatására. Alapértelmezett: 5</Hungarian>
             <Russian>Дистанция в метрах, на которой отображаются имена игроков. По-умолчанию: 5</Russian>
             <Italian>Distanza in metri a cui sono visibili i nomi giocatori. Default: 5</Italian>
+            <Japanese>プレイヤの周り何メートルまで名札を表示できます。標準：5</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_DisplayName">
             <English>Show name tags for AI?</English>
@@ -156,6 +168,7 @@
             <Hungarian>Névcímkék megjelenítése AI-nál?</Hungarian>
             <Russian>Показывать имена ботов?</Russian>
             <Italian>Mostra etichette nomi per IA?</Italian>
+            <Japanese>AI の名札も表示しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showNamesForAI_Description">
             <English>Show the name and rank tags for friendly AI units? Default: Do not force</English>
@@ -168,6 +181,7 @@
             <Hungarian>Mutassa-e a szövetséges AI egységek nevét és rangját? Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать имена и звания дружественных ботов? По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra etichette nomi ed etichette gradi per unità IA alleate? Default: Non forzare</Italian>
+            <Japanese>友軍の AI にも名前と階級を表示しますか？標準：強制しない</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceHide">
             <English>Force Hide</English>
@@ -180,6 +194,7 @@
             <Hungarian>Erőltetett rejtett</Hungarian>
             <Russian>Обязательно: Скрывать</Russian>
             <Italian>Forza Nascosto</Italian>
+            <Japanese>強制で非表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShow">
             <English>Force Show</English>
@@ -192,6 +207,7 @@
             <Hungarian>Erőltetett látható</Hungarian>
             <Russian>Обязательно: Показывать</Russian>
             <Italian>Forza Mostra</Italian>
+            <Japanese>強制で表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_DisplayName">
             <English>Show crew info?</English>
@@ -204,6 +220,7 @@
             <Hungarian>Legénységi adatok megjelenítése?</Hungarian>
             <Russian>Показывать экипаж?</Russian>
             <Italian>Mostra informazioni equipaggio?</Italian>
+            <Japanese>乗員の情報を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showVehicleCrewInfo_Description">
             <English>Show vehicle crew info, or by default allows players to choose it on their own. Default: Do Not Force</English>
@@ -216,6 +233,7 @@
             <Hungarian>A legénységi adatok mutatása, alapértelmezett esetben a játékos által kiválasztható. Alapértelmezett: Nincs felülbírálás</Hungarian>
             <Russian>Показывать информацию об экипаже техники, или по-умолчанию, позволяет игрокам выбрать свою настройку. По-умолчанию: Не обязывать</Russian>
             <Italian>Mostra informazioni sull'equipaggio del veicolo, oppure consenti di default di lasciare che siano i giocatori a scegliere. Default: Non Forzare</Italian>
+            <Japanese>車両の乗員を表示します。標準ではプレイヤ各々が選べられます。標準：強制しない</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_DisplayName">
             <English>Show for Vehicles</English>
@@ -228,6 +246,7 @@
             <Hungarian>Mutatás járműveknél</Hungarian>
             <Russian>Показывать для техники</Russian>
             <Italian>Mostra per Veicoli</Italian>
+            <Japanese>車両への表示</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_showCursorTagForVehicles_Description">
             <English>Show cursor NameTag for vehicle commander (only if client has name tags enabled) Default: No</English>
@@ -239,6 +258,7 @@
             <Russian>Показывать имя командира техники (только, если клиент включил отображение имен). По-умолчанию: Нет</Russian>
             <French>Afficher les étiquettes de nom pour les commandants de véhicule (uniquement si l'affichage est activé pour le client). Défaut: non</French>
             <Italian>Mostra il nome sul cursore per il comandante del veicolo (solo se il client ha le Etichette Nomi attive) Default: No</Italian>
+            <Japanese>車長の名札をカーソルを当てて表示します (クライアント側で名札を有効化する必要があります) 標準：無効</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_Module_Description">
             <English>This module allows you to customize settings and range of Name Tags.</English>
@@ -251,6 +271,7 @@
             <Hungarian>Ez a modul lehetővé teszi a névcímkék beállításainak testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <Italian>Questo modulo ti consente di personalizzare le impostazioni ed il raggio delle Etichette Nomi</Italian>
+            <Japanese>このモジュールは名札の表示範囲と設定を変更できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursor">
             <English>Only on Cursor</English>
@@ -263,6 +284,7 @@
             <Hungarian>Csak kurzorra</Hungarian>
             <Russian>Только под курсором</Russian>
             <Italian>Solo su Cursore</Italian>
+            <Japanese>カーソルでのみ</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyKeypress">
             <English>Only on Keypress</English>
@@ -275,6 +297,7 @@
             <Hungarian>Csak gombnyomásra</Hungarian>
             <Russian>Только по нажатию клавиши</Russian>
             <Italian>Solo quando Premi Tasto</Italian>
+            <Japanese>キー押下のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_OnlyCursorAndKeypress">
             <English>Only on Cursor and Keypress</English>
@@ -287,6 +310,7 @@
             <Hungarian>Csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Под курсором или по нажатию клавиши</Russian>
             <Italian>Solo su Cursore e quando Premi Tasto</Italian>
+            <Japanese>カーソルとキー押下のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursor">
             <English>Force Show Only on Cursor</English>
@@ -299,6 +323,7 @@
             <Hungarian>Erőltetett látható, csak kurzorra</Hungarian>
             <Russian>Обязательно: Только под курсором</Russian>
             <Italian>Forza Mostra solo su Cursore</Italian>
+            <Japanese>カーソルでのみに強制する</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyKeypress">
             <English>Force Show Only on Keypress</English>
@@ -311,6 +336,7 @@
             <Hungarian>Erőltetett látható, csak gombnyomásra</Hungarian>
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo quando Premi Tasto</Italian>
+            <Japanese>キー押下のみに強制する</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ForceShowOnlyCursorAndKeypress">
             <English>Force Show Only on Cursor and Keypress</English>
@@ -323,6 +349,7 @@
             <Hungarian>Erőltetett látható, csak kurzorra és gombnyomásra</Hungarian>
             <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
             <Italian>Forza Mostra solo su Cursore e quando Premi Tasto</Italian>
+            <Japanese>カーソルとキー押下のみに強制する</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_NameTagSettings">
             <English>Use Nametag settings</English>
@@ -335,6 +362,7 @@
             <Hungarian>Névcímkék beállításának használata</Hungarian>
             <Russian>Так же, как имена</Russian>
             <Italian>Usa impostazioni Etichette Nomi</Italian>
+            <Japanese>名札の設定</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_AlwaysShowAll">
             <English>Always Show All</English>
@@ -347,6 +375,7 @@
             <Hungarian>Mindig minden mutatása</Hungarian>
             <Russian>Всегда показывать</Russian>
             <Italian>Mostra Sempre Tutto</Italian>
+            <Japanese>常に表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowPlayerNames_Desc">
             <English>Show player names and set their activation. Default: Enabled</English>
@@ -359,6 +388,7 @@
             <Hungarian>Mutassa a játékosok nevét és kezelje az aktivációjukat. Alapértelmezett: Engedélyezve</Hungarian>
             <Russian>Показывать имена игроков и установить их активацию. По-умолчанию: Включено</Russian>
             <Italian>Mostra nomi giocatori ed imposta la loro attivazione. Default: Abilitato</Italian>
+            <Japanese>プレイヤ名の表示と設定を有効化します。標準：有効</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_ShowSoundWaves_Desc">
             <English>Effect of sound waves above the heads of speaking players after holding the PTT key. This option works with TFAR and ACRE2.</English>
@@ -371,6 +401,7 @@
             <Hungarian>Hanghullám-effekt a beszélő játékosok feje felett a PTT-gomb lenyomásakor. Ez a beállítás TFAR és ACRE2 alatt működik.</Hungarian>
             <Russian>Эффект звуковой волны над головами говорящих игроков при удерживании кнопки push-to-talk. Эта опация работает также с рациями TFAR и ACRE2.</Russian>
             <Italian>Effetto delle onde sonore sopra la testa dei giocatori parlanti quando premono il tasto PTT. Questa opzione funziona con TFAR ed ACRE2</Italian>
+            <Japanese>プレイヤーが PTT キーを押している間は、音波形を表示します。このオプションは TFAR と ACRE2 で動作します。</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Name">
             <English>Nametags Size</English>
@@ -383,6 +414,7 @@
             <Hungarian>Névcímkék mérete</Hungarian>
             <Russian>Размер имен игроков</Russian>
             <Italian>Dimensione Etichette Nome</Italian>
+            <Japanese>名札の大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_TagSize_Description">
             <English>Text and Icon Size Scaling</English>
@@ -395,10 +427,12 @@
             <Hungarian>Szöveg és ikon méretének skálázása</Hungarian>
             <Russian>Масштабирование размера текста и иконок</Russian>
             <Italian>Proporzione Dimensioni Testo ed Icone</Italian>
+            <Japanese>文字とアイコンの大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_NameTags_FadeOnBorder">
             <English>Fade on screen border</English>
             <German>Am Bildschirmrand ausblenden</German>
+            <Japanese>画面端では非表示</Japanese>
             <Polish>Ukryj na brzegach ekranu</Polish>
         </Key>
     </Package>

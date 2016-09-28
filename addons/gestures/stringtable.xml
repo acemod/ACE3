@@ -12,6 +12,7 @@
             <Portuguese>ACE Gestos</Portuguese>
             <Russian>ACE Жесты</Russian>
             <Spanish>ACE Gestos</Spanish>
+            <Japanese>ACE ジェスチャー</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -24,6 +25,7 @@
             <Hungarian>Kézjelek</Hungarian>
             <Portuguese>Gestos</Portuguese>
             <Italian>Gesti</Italian>
+            <Japanese>ジェスチャー</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -36,6 +38,7 @@
             <Hungarian>Előre</Hungarian>
             <Portuguese>Avançar</Portuguese>
             <Italian>Avanzare</Italian>
+            <Japanese>警戒</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
@@ -48,6 +51,7 @@
             <Hungarian>Mozgás</Hungarian>
             <Portuguese>Mover-se</Portuguese>
             <Italian>Muoversi</Italian>
+            <Japanese>進め</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -60,6 +64,7 @@
             <Hungarian>Utánam</Hungarian>
             <Portuguese>Seguir</Portuguese>
             <Italian>Seguire</Italian>
+            <Japanese>ついて来い</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -72,6 +77,7 @@
             <Hungarian>Fel</Hungarian>
             <Portuguese>Acima</Portuguese>
             <Italian>Alzarsi</Italian>
+            <Japanese>立ち上がれ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -84,6 +90,7 @@
             <Hungarian>Tüzet szüntess</Hungarian>
             <Portuguese>Cessar Fogo</Portuguese>
             <Italian>Cessare il Fuoco</Italian>
+            <Japanese>撃つな</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -95,6 +102,7 @@
             <Czech>Stop</Czech>
             <Italian>Stop</Italian>
             <Spanish>Detenerse</Spanish>
+            <Japanese>止まれ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -107,6 +115,7 @@
             <Hungarian>Állj</Hungarian>
             <Portuguese>Alto</Portuguese>
             <Italian>Fermi</Italian>
+            <Japanese>動くな</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -119,6 +128,7 @@
             <Hungarian>Fedezékbe</Hungarian>
             <Portuguese>Proteger-se</Portuguese>
             <Italian>Copertura</Italian>
+            <Japanese>隠れろ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>
@@ -130,6 +140,7 @@
             <Czech>Přeskupit</Czech>
             <Italian>Raggruppare</Italian>
             <Spanish>Reunirse</Spanish>
+            <Japanese>集合</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -141,6 +152,7 @@
             <Czech>Kupředu</Czech>
             <Italian>Muovere avanti</Italian>
             <Spanish>Avanzar</Spanish>
+            <Japanese>前に進め</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -152,6 +164,7 @@
             <Czech>Útok</Czech>
             <Italian>Ingaggiare</Italian>
             <Spanish>Atacar</Spanish>
+            <Japanese>交戦しろ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -163,6 +176,7 @@
             <Czech>Ukázat</Czech>
             <Italian>Puntare</Italian>
             <Spanish>Señalar</Spanish>
+            <Japanese>指示</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -174,6 +188,7 @@
             <Czech>Čekej</Czech>
             <Italian>Mantenere</Italian>
             <Spanish>Esperar</Spanish>
+            <Japanese>そこにいろ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -185,6 +200,7 @@
             <Czech>Pozor</Czech>
             <Italian>Attenzione</Italian>
             <Spanish>Atención</Spanish>
+            <Japanese>注意</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
@@ -196,6 +212,7 @@
             <French>Afficher les gestes dans le menu d'interaction.</French>
             <Portuguese>Mostrar gestos no menu de interação</Portuguese>
             <Russian>Показать жесты в меню взаимодействия</Russian>
+            <Japanese>インタラクション メニュー上でジェスチャーを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -207,6 +224,7 @@
             <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
             <Portuguese>Mostra gestos no menu de interação, ou utilize um dos atalhos de teclado ou desative completamente</Portuguese>
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
+            <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -218,6 +236,7 @@
             <French>Seulement les touches</French>
             <Portuguese>Somente atalhos de teclado</Portuguese>
             <Russian>Только горячие клавиши</Russian>
+            <Japanese>キー操作のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -229,6 +248,7 @@
             <French>Touches + menu d'interaction</French>
             <Portuguese>Atalhos + Menu de Interação</Portuguese>
             <Russian>Клавиши + Меню взаимодействия</Russian>
+            <Japanese>キー操作とインタラクション メニュ</Japanese>
         </Key>
     </Package>
 </Project>

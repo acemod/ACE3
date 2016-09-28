@@ -12,6 +12,7 @@
             <French>Activer les détritus</French>
             <Hungarian>Szemét engedélyezése</Hungarian>
             <Italian>Abilita Barella</Italian>
+            <Japanese>医療廃棄物の表示を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
@@ -24,6 +25,7 @@
             <French>Activer la création de détrimus au début des traitements</French>
             <Hungarian>Engedélyezi a szemét keletkezését ellátáskor</Hungarian>
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
+            <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -36,6 +38,7 @@
             <Hungarian>Hulladékszimuláció részletessége</Hungarian>
             <Portuguese>Detalhe da simulação de sujeira</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
+            <Japanese>医療廃棄物を再現する詳細度</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterSimulationDetail_Description">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -48,6 +51,7 @@
             <Hungarian>A hulladékszimuláció részletessége megszabja a kliens által megjelenített hulladékobjektumok mennyiségét. Súlyos mennyiségek izolált területeken alacsony FPS-t okozhatnak, így ez egy kliensoldali beállítás.</Hungarian>
             <Portuguese>O nível de detalhe de sujeira determina o número de itens que irão aparecer no cliente. Quantidades excessivas em áreas locais podem aumentar o lag do FPS, então esta é uma opção somente para o cliente.</Portuguese>
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
+            <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterCleanUpDelay">
             <English>Life time of litter objects</English>
@@ -60,6 +64,7 @@
             <French>Durée d'affichage des détritus</French>
             <Hungarian>Szemétobjektumok élettartama</Hungarian>
             <Italian>Tempo di vita delle barelle</Italian>
+            <Japanese>医療廃棄物の作成限界数を設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
@@ -72,6 +77,7 @@
             <French>Combien de temps doivent rester affiché les détritus? En secondes. -1 pour tout le temps</French>
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
+            <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
         </Key>
     </Package>
 </Project>
