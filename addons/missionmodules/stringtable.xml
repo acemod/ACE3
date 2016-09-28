@@ -12,6 +12,7 @@
             <Hungarian>ACE küldetési modulok</Hungarian>
             <Russian>Модули миссий ACE</Russian>
             <Italian>Moduli Missione ACE</Italian>
+            <Japanese>ACE ミッション モジュール</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds [ACE]</English>
@@ -24,6 +25,7 @@
             <Hungarian>Ambiens hangok [ACE]</Hungarian>
             <Russian>Звук окружения [ACE]</Russian>
             <Italian>Souni Ambientali [ACE]</Italian>
+            <Japanese>環境音 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -36,6 +38,7 @@
             <Hungarian>Hangok</Hungarian>
             <Russian>Звуки</Russian>
             <Italian>Suoni</Italian>
+            <Japanese>効果音</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -47,6 +50,7 @@
             <Russian>Имена классов звуков окружения, которые должны проигрываться. Разделенные ','</Russian>
             <French>ClassNames des sons d'ambiances. Séparation par ","</French>
             <Italian>Nomi classi dei suoni ambientali da eseguire. Separati da ','</Italian>
+            <Japanese>再生する環境音のクラスネームを記載。','で複数指定できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
@@ -59,6 +63,7 @@
             <Hungarian>Minimális távolság</Hungarian>
             <Russian>Минимальная дистанция</Russian>
             <Italian>Distanza Minimale</Italian>
+            <Japanese>最低距離</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -71,6 +76,7 @@
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a minimum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает минимальное расстояние между игроками и источниками звука</Russian>
             <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file suono eseguito</Italian>
+            <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最低距離を設定します</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -83,6 +89,7 @@
             <Hungarian>Maximális távolság</Hungarian>
             <Russian>Максимальная дистанция</Russian>
             <Italian>Distanza Massima</Italian>
+            <Japanese>最大距離</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -95,6 +102,7 @@
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a maximum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает максимальное расстояние между игроками и источниками звука</Russian>
             <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file suono eseguito</Italian>
+            <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最大距離を設定します</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
@@ -107,6 +115,7 @@
             <Hungarian>Minimum késleltetés</Hungarian>
             <Russian>Минимальная задержка</Russian>
             <Italian>Pausa Minima</Italian>
+            <Japanese>最低遅延</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -119,6 +128,7 @@
             <Hungarian>Minimum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Минимальная задержка между воспроизведением звуков</Russian>
             <Italian>Pausa Minima tra suoni eseguiti</Italian>
+            <Japanese>再生されるまでの最低遅延</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
@@ -131,6 +141,7 @@
             <Hungarian>Maximum késleltetés</Hungarian>
             <Russian>Максимальная задержка</Russian>
             <Italian>Pausa Massima</Italian>
+            <Japanese>最大遅延</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -143,6 +154,7 @@
             <Hungarian>Maximum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Максимальная задержка между воспроизведением звуков</Russian>
             <Italian>Pausa Massima tra suoni eseguiti</Italian>
+            <Japanese>再生されるまでの最大遅延</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
@@ -155,6 +167,7 @@
             <Hungarian>Játékosok követése</Hungarian>
             <Russian>Следовать за игроками</Russian>
             <Italian>Segui Giocatori</Italian>
+            <Japanese>プレイヤーを追随</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
@@ -167,6 +180,7 @@
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
             <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
             <Italian>Segui Giocatori. Se impostato su falso, il ciclo eseguirà i suoni solo vicino ad una posizione logica.</Italian>
+            <Japanese>プレイヤーを追随します。False に設定するとロジックの近くで延々と再生します。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -179,6 +193,7 @@
             <Hungarian>Hangerő</Hungarian>
             <Russian>Громкость</Russian>
             <Italian>Volume</Italian>
+            <Japanese>音量</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>
@@ -191,6 +206,7 @@
             <Hungarian>A lejátszott hangok hangereje</Hungarian>
             <Russian>Громкость воспроизводимых звуков</Russian>
             <Italian>Il volume dei suoni eseguiti</Italian>
+            <Japanese>再生される音の大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
@@ -203,6 +219,7 @@
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
             <Russian>Циклически воспроизводимые звуки окружения (синх. между игроками)</Russian>
             <Italian>Ciclo Suoni Ambientali (sincronizzato in MP)</Italian>
+            <Japanese>環境音の繰り返し (MP 間で同期させます)</Japanese>
         </Key>
     </Package>
 </Project>

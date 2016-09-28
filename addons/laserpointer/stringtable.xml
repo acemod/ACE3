@@ -12,6 +12,7 @@
             <Spanish>Puntero láser (rojo)</Spanish>
             <Italian>Puntatore laser (rosso)</Italian>
             <Portuguese>Laser (vermelho)</Portuguese>
+            <Japanese>レーザ ポインタ (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_green">
             <English>Laser Pointer (green)</English>
@@ -24,6 +25,7 @@
             <Spanish>Puntero láser (verde)</Spanish>
             <Italian>Puntatore laser (verde)</Italian>
             <Portuguese>Laser (verde)</Portuguese>
+            <Japanese>レーザ ポインタ (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Description">
             <English>Emits visible light. </English>
@@ -36,6 +38,7 @@
             <Spanish>Emite luz visible.</Spanish>
             <Italian>Emette luce visibile.</Italian>
             <Portuguese>Emite luz visível. </Portuguese>
+            <Japanese>可視光をだします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_useLaser">
             <English>&lt;t color='#9cf953'&gt;Use: &lt;/t&gt;Turn Laser ON/OFF</English>
@@ -48,6 +51,7 @@
             <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
             <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;Encender/Apagar láser</Spanish>
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
+            <Japanese>&amp;lt;t color='#9cf953'&amp;gt;つかう: &amp;lt;/t&amp;gt;レーザの起動/停止</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Laser">
             <English>Laser</English>
@@ -60,6 +64,7 @@
             <Hungarian>Lézer</Hungarian>
             <Czech>Laser</Czech>
             <Portuguese>Laser</Portuguese>
+            <Japanese>レーザ</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_IRLaser">
             <English>IR Laser</English>
@@ -72,6 +77,7 @@
             <Hungarian>Infravörös Lézer</Hungarian>
             <Czech>IR Laser</Czech>
             <Portuguese>Laser IV</Portuguese>
+            <Japanese>赤外線レーザ</Japanese>
         </Key>
         <Key ID="STR_ACE_Laserpointer_switchLaserLight">
             <English>Switch Laser / IR Laser</English>
@@ -84,6 +90,7 @@
             <Hungarian>Lézer / Infravörös Lézer váltása</Hungarian>
             <Czech>Přepnout Laser / Infračervený Laser</Czech>
             <Portuguese>Alternar entre Laser / Laser IV</Portuguese>
+            <Japanese>レーザ/赤外線レーザを切り替える</Japanese>
         </Key>
     </Package>
 </Project>

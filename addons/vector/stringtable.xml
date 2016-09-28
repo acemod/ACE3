@@ -12,6 +12,7 @@
             <Hungarian>Vector 21 Nite</Hungarian>
             <Portuguese>Vector 21 Nite</Portuguese>
             <Russian>Vector 21 Nite</Russian>
+            <Japanese>ベクター 21 ナイト</Japanese>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
@@ -24,6 +25,7 @@
             <Hungarian>Vector 21</Hungarian>
             <Portuguese>Vector 21</Portuguese>
             <Russian>Vector 21</Russian>
+            <Japanese>ベクター 21</Japanese>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -36,6 +38,7 @@
             <Hungarian>Távolságmérő</Hungarian>
             <Portuguese>Medidor de Distância</Portuguese>
             <Russian>Дальномер</Russian>
+            <Japanese>測距機器</Japanese>
         </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
             <English>Vector - Azimuth Key</English>
@@ -48,6 +51,7 @@
             <Portuguese>Vector - Tecla de Azimute</Portuguese>
             <Hungarian>Vector - Irányszög gomb</Hungarian>
             <Russian>Vector – Азимут</Russian>
+            <Japanese>ベクター - 方位角キー</Japanese>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -60,6 +64,7 @@
             <Portuguese>Vector - Tecla de Distância</Portuguese>
             <Hungarian>Vector - Távolság gomb</Hungarian>
             <Russian>Vector – Расстояние</Russian>
+            <Japanese>ベクター - 距離キー</Japanese>
         </Key>
     </Package>
 </Project>
