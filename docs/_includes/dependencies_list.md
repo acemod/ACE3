@@ -346,10 +346,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "sitting" %}
-`ace_interaction`
-{% endif %}
-
 {% if include.component == "slideshow" %}
 `ace_common`
 {% endif %}
