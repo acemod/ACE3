@@ -5,23 +5,21 @@ description: Ability to sit on chairs.
 group: feature
 category: interaction
 parent: wiki
-mod: ace
+mod: acex
 version:
   major: 3
-  minor: 2
+  minor: 0
   patch: 0
+redirect_from: "/wiki/feature/sitting.html"
 ---
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>ACE3 Sitting has been deprecated in favour of ACEX Sitting and will be removed in a future version.</p>
-</div>
+_Sitting has been moved from ACE3 (in v3.8.0) to ACEX._
 
 ## 1. Overview
 Adds the ability to sit on chairs.
 
 ## 2. Usage
-Please note that to be able to use this function the sitting module need to be placed down (or set to 1 in the server config)
+Please note that to be able to use this function the sitting module need to be placed down (or set to 1 in the server config).
 
 ### 2.1 How to sit / stand up
 - Look at the chair and press the interaction key <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
@@ -30,4 +28,4 @@ Please note that to be able to use this function the sitting module need to be p
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="sitting" %}
+{% include dependenciesx_list.md component="sitting" %}
