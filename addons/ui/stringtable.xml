@@ -90,6 +90,9 @@
             <Japanese>指揮メニュー</Japanese>
             <Polish>Pasek grupy</Polish>
         </Key>
+        <Key ID="STR_ACE_UI_SquadRadar">
+            <English>Squad Radar</English>
+        </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
             <Czech>Název zbraně</Czech>
