@@ -90,6 +90,22 @@ private _wpn = ["non", "rfl", "lnr", "pst"] param [["", primaryWeapon _caller, s
 
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
 
+// this one is missing
+if (_callerAnim == "AinvPknlMstpSlayWlnrDnon_medic") then {
+    _callerAnim = "AinvPknlMstpSlayWlnrDnon_medicOther";
+};
+
+private _animDuration = GVAR(animDurations) getVariable _callerAnim;
+
+// these animations have transitions that take a bit longer...
+if (weaponLowered _caller) then {
+    _animDuration = _animDuration + 0.5;
+};
+
+if (binocular _caller != "" && {binocular _caller == currentWeapon _caller}) then {
+    _animDuration = _animDuration + 1.0;
+};
+
 if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     private _endInAnim = "AmovP[pos]MstpS[stn]W[wpn]Dnon";
 
@@ -145,8 +161,6 @@ TRACE_1("",_treatmentTime);
 ] call EFUNC(common,progressBar);
 
 // speed up animation depending on treatment time
-private _animDuration = GVAR(animDurations) getVariable _callerAnim;
-
 if (!isNil "_animDuration") then {
     _caller setAnimSpeedCoef (_animDuration / _treatmentTime);
     TRACE_2("",_animDuration,_treatmentTime);
