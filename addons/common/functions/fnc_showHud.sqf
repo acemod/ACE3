@@ -15,6 +15,7 @@
  * - menu: Boolean - show commanding menu (hides HC related menus)
  * - group: Boolean - show group info bar (hides squad leader info bar)
  * - cursors: Boolean - show HUD weapon cursors (connected with scripted HUD)
+ * - squadRadar: Boolean - show HUD squad radar (since 1.62)
  *
  * Return Value:
  * Resulting ShowHud Array <ARRAY>
@@ -29,7 +30,12 @@
 
 if (!hasInterface) exitWith {[-1]};
 
-params [["_reason", "", [""]], ["_mask", [], [[]], [0,8]]];
+params [["_reason", "", [""]], ["_mask", [], [[]], [0,8,9]]];
+
+if ((count _mask) == 8) then {
+    ACE_LOGWARNING_1("ace_common_fnc_showHud - mask now takes 9 arguments in 1.62 [called with %1]",_this);
+    _mask pushBack true;
+};
 
 if (isArray (missionConfigFile >> "showHUD")) then {
     //(showHud = 0;) is fine - the array is the problem
@@ -50,7 +56,7 @@ if (_reason != "") then {
 GVAR(showHudHash) params ["", "_reasons", "_masks"];
 private _resultMask = [];
 
-for "_index" from 0 to 7 do {
+for "_index" from 0 to 8 do {
     private _set = true; //Default to true
     {
         if (!(_x select _index)) exitWith {
