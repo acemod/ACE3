@@ -1,4 +1,5 @@
 #define COMPONENT dogtags
+#define COMPONENT_BEAUTIFIED Dogtags
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
@@ -15,3 +16,12 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define DOGTAG_SHOW_DELAY 1
+
+#define RUSTLING_SOUNDS [\
+    "a3\sounds_f\characters\ingame\AinvPknlMstpSlayWpstDnon_medic.wss",\
+    "a3\sounds_f\characters\ingame\AinvPknlMstpSlayWrflDnon_medic.wss",\
+    "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWpstDnon_medic.wss",\
+    "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWrflDnon_medic.wss"\
+]

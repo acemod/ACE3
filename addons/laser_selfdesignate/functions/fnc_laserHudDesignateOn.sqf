@@ -18,7 +18,7 @@ TRACE_1("enter", _this);
 #define FCS_UPDATE_DELAY 1
 
 FUNC(laserHudDesignatePFH) = {
-    private["_strongestResultPos", "_args", "_localLaserTarget", "_laserResultPosition", "_laserResult", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turretInfo", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
+    private ["_strongestResultPos", "_args", "_localLaserTarget", "_laserResultPosition", "_laserResult", "_shooter", "_vehicle", "_weapon", "_gunnerInfo", "_turretInfo", "_pov", "_gunBeg", "_gunEnd", "_povPos", "_povDir", "_result", "_resultPositions", "_firstResult", "_forceUpdateTime"];
     params ["_args"];
     _args params ["_shooter", "_localLaserTarget"];
     _vehicle = vehicle _shooter;

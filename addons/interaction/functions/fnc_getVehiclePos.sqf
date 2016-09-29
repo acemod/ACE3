@@ -19,9 +19,6 @@
 private _bb = boundingBoxReal _target;
 (_bb select 0) params ["_bbX", "_bbY", "_bbZ"];
 
-//Helicopter's rotors distort the bounding box, assume a max of 3 meters width for the body
-if (_target isKindOf "Helicopter") then {_bbX = (_bbx min 3) max -3;};
-
 private _relPos = _target worldToModelVisual ASLToAGL EGVAR(interact_menu,cameraPosASL);
 #ifdef DEBUG_MODE_FULL
     _relPos = _target worldToModelVisual ASLToAGL eyePos ACE_player;

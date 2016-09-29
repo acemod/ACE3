@@ -46,8 +46,6 @@
 
     if (!_failure) then {
         GVAR(cachedTags) pushBack [_class, _displayName, _requiredItem, _textures, _icon];
-        if !(_requiredItem in GVAR(cachedRequiredItems)) then {
-            GVAR(cachedRequiredItems) pushBack _requiredItem;
-        };
+        GVAR(cachedRequiredItems) pushBackUnique _requiredItem;
     };
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));

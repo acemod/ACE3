@@ -5,19 +5,8 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
-// backwards comp
-DFUNC(canUseWeapon) = {
-    ACE_DEPRECATED("ace_common_fnc_canUseWeapon","3.7.0","CBA_fnc_canUseWeapon");
-    _this call CBA_fnc_canUseWeapon;
-};
-
-DFUNC(selectWeaponMode) = {
-    ACE_DEPRECATED("ace_common_fnc_selectWeaponMode","3.7.0","CBA_fnc_selectWeapon");
-    _this call CBA_fnc_selectWeapon;
-};
-
-GVAR(syncedEvents) = HASH_CREATE;
-GVAR(showHudHash) = [] call FUNC(hashCreate);
+GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
+GVAR(showHudHash) = [] call CBA_fnc_hashCreate;
 
 GVAR(settingsInitFinished) = false;
 GVAR(runAtSettingsInitialized) = [];

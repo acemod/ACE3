@@ -19,7 +19,12 @@
 
 
 // Basic Elements
-#define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
+#define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar), QGVAR(squadRadar)]
+
+// Locations
+#define ANYWHERE 0
+#define GROUND_ONLY 1
+#define VEHICLE_ONLY 2
 
 /*
 RscUnitInfo = 300

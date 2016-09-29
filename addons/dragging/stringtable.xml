@@ -12,6 +12,7 @@
             <Portuguese>Arrastar</Portuguese>
             <Italian>Trascina</Italian>
             <Hungarian>Húzás</Hungarian>
+            <Japanese>引きずる</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -24,6 +25,7 @@
             <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
+            <Japanese>はなす</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -36,6 +38,7 @@
             <Portuguese>Arrastar/Soltar Objeto</Portuguese>
             <Italian>Trascina/Lascia Oggetto</Italian>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
+            <Japanese>オブジェクトを引きずる/はなす</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -48,6 +51,7 @@
             <Russian>Предмет слишком тяжёлый</Russian>
             <Czech>Předmět je moc těžký</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
+            <Japanese>アイテムが重すぎる</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -60,6 +64,7 @@
             <Hungarian>Felvevés</Hungarian>
             <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
+            <Japanese>運ぶ</Japanese>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
@@ -71,6 +76,7 @@
             <Italian>Alza/Abbassa</Italian>
             <Spanish>Subir/Bajar</Spanish>
             <French>Lever/Baisser</French>
+            <Japanese>上げる/下げる</Japanese>
         </Key>
     </Package>
 </Project>

@@ -68,12 +68,11 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
+        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
         {
-            private _value = _target getVariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-            };
-        } foreach GVAR(IVBags);
+            _x params ["_bagVolumeRemaining"];
+            _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
+        } foreach _bloodBags;
 
         if (_totalIvVolume >= 1) then {
             _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];

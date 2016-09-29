@@ -160,14 +160,6 @@ if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
-// @todo deprecated
-QGVAR(remoteFnc) addPublicVariableEventHandler {
-    (_this select 1) call FUNC(execRemoteFnc);
-};
-
-// @todo figure out what this does.
-[missionNamespace] call FUNC(executePersistent);
-
 
 //////////////////////////////////////////////////
 // Check files, previous installed version etc.
@@ -274,8 +266,8 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "_masks"];
-    if (!(_masks isEqualTo [])) then {
+    GVAR(showHudHash) params ["", "", "_masks"];
+    if !(_masks isEqualTo []) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -303,44 +295,17 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
+// It is possible that CBA_fnc_addPlayerEventHandler has allready been called and run
+// We will NOT get any events for the initial state, so manually set ACE_player
+if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then {
+    // INFO("CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player"); //ToDo CBA 3.1
+    diag_log text "[ACE-Common - CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player";
+    ACE_player = cba_events_oldUnit;
+};
+
 // "playerChanged" event
 ["unit", {
     ACE_player = (_this select 0);
-    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVehicleChanged" event
-["vehicle", {
-    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerTurretChanged" event
-["turret", {
-    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerWeaponChanged" event
-["weapon", {
-    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerInventoryChanged" event
-["loadout", {
-    ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVisionModeChanged" event
-["visionMode", {
-    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "cameraViewChanged" event
-["cameraView", {
-    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-["visibleMap", {
-    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;

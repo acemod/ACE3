@@ -12,6 +12,7 @@
             <Italian>Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák</Hungarian>
             <Portuguese>Saco de Areia</Portuguese>
+            <Japanese>土のう</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -24,6 +25,7 @@
             <Italian>Sacco di Sabbia (Vuoto)</Italian>
             <Hungarian>Homokzsák (üres)</Hungarian>
             <Portuguese>Saco de Areia (vazio)</Portuguese>
+            <Japanese>土のう (空)</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
@@ -36,6 +38,7 @@
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
             <Portuguese>Não pode contruir aqui</Portuguese>
+            <Japanese>ここでは作れない</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -48,6 +51,7 @@
             <Italian>Prendi Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák felvétele</Hungarian>
             <Portuguese>Pegar saco de areia</Portuguese>
+            <Japanese>土のうを拾う</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -60,6 +64,7 @@
             <Italian>Trasporta Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák cipelése</Hungarian>
             <Portuguese>Carregar saco de areia</Portuguese>
+            <Japanese>土のうを運ぶ</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -72,6 +77,7 @@
             <Italian>Fine Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
             <Portuguese>Parar de carregar</Portuguese>
+            <Japanese>下ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -84,6 +90,7 @@
             <Italian>Lascia Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák eldobása</Hungarian>
             <Portuguese>Derrubar saco de areia</Portuguese>
+            <Japanese>土のうを落とす</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -96,6 +103,7 @@
             <Italian>Conferma Posizionamento</Italian>
             <Hungarian>Lerak</Hungarian>
             <Portuguese>Confirmar implantação</Portuguese>
+            <Japanese>ここで作る</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -108,6 +116,7 @@
             <Italian>Cancella Posizionamento</Italian>
             <Hungarian>Visszavonás</Hungarian>
             <Portuguese>Cancelar implantação</Portuguese>
+            <Japanese>作るのをやめる</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -120,6 +129,7 @@
             <Italian>Posiziona Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák lerakása</Hungarian>
             <Portuguese>Implantar saco de areia</Portuguese>
+            <Japanese>土のうを設置</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -132,6 +142,7 @@
             <Italian>Contenitore Sacchi di Sabbia</Italian>
             <Hungarian>Homokzsákos láda</Hungarian>
             <Portuguese>Caixa de saco de areia</Portuguese>
+            <Japanese>土のう入れ</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -144,6 +155,7 @@
             <Italian>Qui non cè Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
             <Portuguese>Aqui não tem areia</Portuguese>
+            <Japanese>ここに土は無い</Japanese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>
@@ -156,6 +168,7 @@
             <Polish>Obrót</Polish>
             <Portuguese>Rotaciona</Portuguese>
             <Russian>Bращать</Russian>
+            <Japanese>回転</Japanese>
         </Key>
     </Package>
 </Project>

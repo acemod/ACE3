@@ -20,6 +20,8 @@
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: HandleDamage Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
+if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
+
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable[QGVAR(openWounds), []];
 private _woundID = _unit getVariable[QGVAR(lastUniqueWoundID), 1];
@@ -36,7 +38,7 @@ call compile _extensionOutput;
     {
         _x params ["", "_compareId", "_comparyBodyPartN"];
         // Check if we have an id of the given class on the given bodypart already
-        if (_compareId == _toAddClassID && {_comparyBodyPartN2 == _bodyPartNToAdd}) exitWith {
+        if (_compareId == _toAddClassID && {_comparyBodyPartN == _bodyPartNToAdd}) exitWith {
             _foundIndex = _forEachIndex;
         };
     } forEach _openWounds;

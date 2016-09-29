@@ -31,5 +31,6 @@ if (isArray (missionConfigFile >> "showHUD")) exitWith {
     true,
     GVAR(commandMenu),
     GVAR(groupBar),
-    true
+    true,
+    GVAR(squadRadar)
 ]] call EFUNC(common,showHud);

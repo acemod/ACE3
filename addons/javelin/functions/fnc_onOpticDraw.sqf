@@ -5,11 +5,11 @@ TRACE_1("enter", _this);
 #define __TRACKINTERVAL 0    // how frequent the check should be.
 #define __LOCKONTIME 3    // Lock on won't occur sooner
 
-private["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
-private["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
-private["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"];
-private["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
-private["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
+private ["_apos", "_aposX", "_aposY", "_args", "_boundsInput", "_bpos", "_canFire", "_constraintBottom"];
+private ["_constraintLeft", "_constraintRight", "_constraintTop", "_currentTarget", "_fireDisabledEH"];
+private ["_firedEH", "_fov", "_lastTick", "_lockTime", "_maxX", "_maxY", "_minX", "_minY", "_newTarget"];
+private ["_offsetX", "_offsetY", "_pos", "_randomLockInterval", "_randomPosWithinBounds", "_range"];
+private ["_runTime", "_soundTime", "_targetArray", "_zamerny", "_currentShooter"];
 
 _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
 
@@ -35,7 +35,7 @@ _soundTime = _args select 4;
 _randomLockInterval = _args select 5;
 _fireDisabledEH = _args select 6;
 
-private["_ammo", "_magazineConfig", "_weaponConfig"];
+private ["_ammo", "_magazineConfig", "_weaponConfig"];
 _weaponConfig = configProperties [configFile >> "CfgWeapons" >> (currentWeapon _currentShooter), QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
 _magazineConfig = if ((currentMagazine _currentShooter) != "") then {
     _ammo = getText (configFile >> "CfgMagazines" >> (currentMagazine _currentShooter) >> "ammo");
@@ -123,7 +123,7 @@ _offsetY = __OffsetY;
 __JavelinIGUITargeting ctrlShow true;
 __JavelinIGUITargetingConstrains ctrlShow true;
 
-_zamerny = if (_currentTarget isKindOf "CAManBase") then {_currentTarget selectionPosition "body"} else {_currentTarget selectionPosition "zamerny"};
+_zamerny = _currentTarget selectionPosition (["zamerny", "body"] select (_currentTarget isKindOf "CAManBase"));
 _randomPosWithinBounds = [(_zamerny select 0) + 1 - (random 2.0),(_zamerny select 1) + 1 - (random 2.0),(_zamerny select 2) + 0.5 - (random 1.0)];
 
 _apos = worldToScreen (_currentTarget modelToWorld _randomPosWithinBounds);
@@ -144,27 +144,6 @@ if((call CBA_fnc_getFoV) select 1 > 9) then {
 } else {
     __JavelinIGUINFOV ctrlSetTextColor __ColorGray;
     __JavelinIGUIWFOV ctrlSetTextColor __ColorGreen;
-};
-
-FUNC(disableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH < 0 && difficulty > 0) then {
-        _firedEH = [ACE_player, "DefaultAction", {true}, {
-            _canFire = (_this select 1) getVariable["ace_missileguidance_target", nil];
-            if(!isNil "_canFire") exitWith { false };
-            true
-        }] call EFUNC(common,addActionEventHandler);
-    };
-    _firedEH
-};
-FUNC(enableFire) = {
-    _firedEH = _this select 0;
-
-    if(_firedEH > 0 && difficulty > 0) then {
-        [ACE_player, "DefaultAction", _firedEH] call EFUNC(common,removeActionEventHandler);
-    };
-    -1
 };
 
 if (isNull _newTarget) then {
@@ -223,17 +202,17 @@ if (isNull _newTarget) then {
 
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025 * (3 / 4) * SafezoneH);
+                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025 * SafezoneH);
 
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
 
-                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX,_minY];
-                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX,_minY];
-                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX,_maxY];
-                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX,_maxY];
+                __JavelinIGUITargetingGateTL ctrlSetPosition [_minX, _minY];
+                __JavelinIGUITargetingGateTR ctrlSetPosition [_maxX, _minY];
+                __JavelinIGUITargetingGateBL ctrlSetPosition [_minX, _maxY];
+                __JavelinIGUITargetingGateBR ctrlSetPosition [_maxX, _maxY];
 
-                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL,__JavelinIGUITargetingGateTR,__JavelinIGUITargetingGateBL,__JavelinIGUITargetingGateBR];
+                {_x ctrlCommit __TRACKINTERVAL} forEach [__JavelinIGUITargetingGateTL, __JavelinIGUITargetingGateTR, __JavelinIGUITargetingGateBL, __JavelinIGUITargetingGateBR];
 
                 _currentShooter setVariable["ace_missileguidance_target", _currentTarget, false];
 
@@ -262,8 +241,8 @@ if (isNull _newTarget) then {
 
                 _minX = ((_bpos select 0) + _offsetX) max _constraintLeft;
                 _minY = ((_bpos select 1) + _offsetY) max _constraintTop;
-                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025*(3/4)*SafezoneH);
-                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025*SafezoneH);
+                _maxX = ((_bpos select 2) + _offsetX) min (_constraintRight - 0.025 * (3 / 4) * SafezoneH);
+                _maxY = ((_bpos select 3) + _offsetY) min (_constraintBottom - 0.025 * SafezoneH);
 
                 TRACE_4("", _boundsInput, _bpos, _minX, _minY);
 
@@ -293,7 +272,7 @@ if (isNull _newTarget) then {
         __JavelinIGUITargetingLines ctrlShow false;
         __JavelinIGUITargetingConstraints ctrlShow false;
 
-        _currentShooter setVariable ["ace_missileguidance_target",nil, false];
+        _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
         // Disallow fire
         _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);

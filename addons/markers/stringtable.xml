@@ -12,6 +12,7 @@
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção %1</Portuguese>
+            <Japanese>方位：%1°</Japanese>
         </Key>
     </Package>
 </Project>

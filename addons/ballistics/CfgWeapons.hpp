@@ -9,7 +9,8 @@ class CfgWeapons {
     class MMG_01_base_F;
     class MMG_02_base_F;
     class Rifle_Base_F;
-    class Rifle_Long_Base_F;
+    class Rifle_Short_Base_F: Rifle_Base_F {};
+    class Rifle_Long_Base_F: Rifle_Base_F {};
     class MuzzleSlot;
 
     /* Long Rifles */
@@ -127,6 +128,33 @@ class CfgWeapons {
     /* Katiba */
     class arifle_katiba_Base_F: Rifle_Base_F {};
 
+    /* SPAR */
+    class arifle_SPAR_01_base_F: Rifle_Base_F {
+        magazines[] = {
+            "30Rnd_556x45_Stanag",
+            "30Rnd_556x45_Stanag_green",
+            "30Rnd_556x45_Stanag_red",
+            "30Rnd_556x45_Stanag_Tracer_Red",
+            "30Rnd_556x45_Stanag_Tracer_Green",
+            "30Rnd_556x45_Stanag_Tracer_Yellow",
+            "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+        };
+    };
+    class arifle_SPAR_03_base_F: Rifle_Base_F {
+        magazines[] = {
+            "20Rnd_762x51_Mag",
+            "ACE_20Rnd_762x51_Mag_Tracer",
+            "ACE_20Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_20Rnd_762x51_M118LR_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
+            "ACE_20Rnd_762x51_M993_AP_Mag",
+            "ACE_20Rnd_762x51_Mag_SD"
+        };
+    };
 
     /* Other */
     class LMG_Mk200_F: Rifle_Long_Base_F {
@@ -162,8 +190,8 @@ class CfgWeapons {
             dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
     };
-    class pdw2000_base_F: Rifle_Base_F {};
-    class SMG_01_Base: Rifle_Base_F {};
+    class pdw2000_base_F: Rifle_Short_Base_F {};
+    class SMG_01_Base: Rifle_Short_Base_F {};
     class SMG_02_base_F: Rifle_Base_F {};
 
     /* Pistols */
