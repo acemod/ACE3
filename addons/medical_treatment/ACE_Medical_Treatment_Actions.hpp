@@ -87,7 +87,7 @@ class GVAR(Actions) {
             category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 20;
+            treatmentTime = 15;
             items[] = {"ACE_bodyBag"};
             condition = "!alive _target";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
@@ -244,7 +244,7 @@ class GVAR(Actions) {
             category = "advanced";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
-            treatmentTime = 7;
+            treatmentTime = 12;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};

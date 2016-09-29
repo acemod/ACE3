@@ -27,6 +27,9 @@ if !([_caller, _target, _selectionName, _className] call FUNC(canTreat)) exitWit
 
 private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
 
+// handle items
+private _items = getArray (_config >> "items");
+
 private _consumeItems = 0;
 
 if (isNumber (_config >> "itemConsumed")) then {
