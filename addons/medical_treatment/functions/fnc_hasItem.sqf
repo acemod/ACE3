@@ -8,11 +8,10 @@
  * 2: Item <STRING>
  *
  * ReturnValue:
- * <NIL>
+ * Has the items <BOOL>
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_medic", "_patient", "_item"];
@@ -20,6 +19,7 @@ params ["_medic", "_patient", "_item"];
 if (isNil QEGVAR(medical,setting_allowSharedEquipment)) then {
     EGVAR(medical,setting_allowSharedEquipment) = true;
 };
+
 if (EGVAR(medical,setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
     true
 };
@@ -29,13 +29,13 @@ if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
 };
 
 private _return = false;
-if ((vehicle _medic != _medic) && {[vehicle _medic] call EFUNC(medical,isMedicalVehicle)}) then {
-    private _crew = crew vehicle _medic;
+
+if (vehicle _medic != _medic && {vehicle _medic call EFUNC(medical,isMedicalVehicle)}) then {
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {([_x, _item] call EFUNC(common,hasItem))}) exitWith {
+        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
             _return = true;
         };
-    } forEach _crew;
+    } forEach crew vehicle _medic;
 };
 
 _return
