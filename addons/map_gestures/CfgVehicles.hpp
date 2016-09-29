@@ -47,7 +47,7 @@ class CfgVehicles {
         category = "ACE";
         displayName = CSTRING(moduleGroupSettings_displayName);
         function = QFUNC(moduleGroupSettings);
-        isGlobal = 0;
+        isGlobal = 2;
         author = ECSTRING(common,ACETeam);
         icon = QPATHTOF(ui\icon_module_map_gestures_ca.paa);
         class Arguments {
