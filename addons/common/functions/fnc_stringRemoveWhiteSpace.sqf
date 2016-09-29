@@ -17,6 +17,6 @@
 
 params ["_string"];
 
-ACE_DEPRECATED(QFUNC(stringRemoveWhiteSpace),"3.9.0","CBA_fnc_removeWhitespace");
+ACE_DEPRECATED(QFUNC(stringRemoveWhiteSpace),"3.10.0","CBA_fnc_removeWhitespace");
 
 (_string splitString " ") joinString ""
