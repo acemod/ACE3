@@ -42,6 +42,7 @@ class GVAR(Actions) {
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class Epinephrine: Bandage {
             displayName = ECSTRING(medical,Inject_Epinephrine);
@@ -56,6 +57,7 @@ class GVAR(Actions) {
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class BloodIV: Bandage {
             displayName = ECSTRING(medical,Transfuse_Blood);
@@ -214,6 +216,7 @@ class GVAR(Actions) {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class Adenosine: Morphine {
             displayName = ECSTRING(medical,Inject_Adenosine);

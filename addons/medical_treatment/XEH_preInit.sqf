@@ -26,7 +26,8 @@ GVAR(animDurations) = [] call CBA_fnc_createNamespace;
     ["AinvPpneMstpSlayWrflDnon_medicOther", 9],
     ["AinvPknlMstpSlayWlnrDnon_medicOther", 9],
     ["AinvPknlMstpSlayWpstDnon_medicOther", 10],
-    ["AinvPpneMstpSlayWpstDnon_medicOther", 8.5]
+    ["AinvPpneMstpSlayWpstDnon_medicOther", 8.5],
+    ["AinvPknlMstpSnonWnonDnon_medic1", 10]
 ];
 
 ADDON = true;

@@ -149,6 +149,27 @@ if (isNumber (_config >> "treatmentTime")) then {
 };
 TRACE_1("",_treatmentTime);
 
+// speed up animation depending on treatment time
+if (!isNil "_animDuration") then {
+    _caller setAnimSpeedCoef (_animDuration / _treatmentTime);
+    TRACE_2("",_animDuration,_treatmentTime);
+};
+
+// play sound
+if (isArray (_config >> "sounds")) then {
+    selectRandom getArray (_config >> "sounds") params ["_file", ["_volume", 1], ["_pitch", 1], ["_distance", 0]];
+    TRACE_4("playSound3D",_file,_volume,_pitch,_distance);
+    playSound3D [
+        _file,
+        objNull,
+        false,
+        getPosASL _caller,
+        _volume,
+        _pitch,
+        _distance
+    ];
+};
+
 // start treatment
 [
     _treatmentTime,
@@ -159,12 +180,6 @@ TRACE_1("",_treatmentTime);
     _callbackProgress,
     ["isnotinside"]
 ] call EFUNC(common,progressBar);
-
-// speed up animation depending on treatment time
-if (!isNil "_animDuration") then {
-    _caller setAnimSpeedCoef (_animDuration / _treatmentTime);
-    TRACE_2("",_animDuration,_treatmentTime);
-};
 
 // display icon
 private _iconDisplayed = getText (_config >> "actionIconPath");
