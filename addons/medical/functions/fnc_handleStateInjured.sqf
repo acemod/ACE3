@@ -20,5 +20,5 @@ if (!local _unit) exitWith {
 
 private _pain = _unit getVariable [QGVAR(pain), 0];
 if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
-    [_unit, _pain] call FUNC(playInjuredSound);
+    [_unit, _pain] call EFUNC(medical_engine,playInjuredSound);
 };

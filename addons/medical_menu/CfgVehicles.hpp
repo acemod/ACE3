@@ -48,7 +48,7 @@ class CfgVehicles {
                 displayName = ECSTRING(medical,Actions_Medical);
                 runOnHover = 1;
                 exceptions[] = {"isNotInside", "isNotSitting"};
-                statement = QUOTE([ARR_3(_target, true, 0)] call EFUNC(medical,displayPatientInformation));
+                statement = QUOTE([ARR_3(_target, true, 0)] call EFUNC(medical_treatment,displayPatientInformation));
                 condition = "true";
                 icon = QPATHTOEF(medical,UI\icons\medical_cross.paa);
                 #include "InteractionBodyParts.hpp"
