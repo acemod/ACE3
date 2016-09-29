@@ -100,6 +100,9 @@ private _animDuration = GVAR(animDurations) getVariable _callerAnim;
 // these animations have transitions that take a bit longer...
 if (weaponLowered _caller) then {
     _animDuration = _animDuration + 0.5;
+
+    // fix problems with lowered weapon transitions by raising the weapon first
+    _caller action ["WeaponInHand", _caller];
 };
 
 if (binocular _caller != "" && {binocular _caller == currentWeapon _caller}) then {
