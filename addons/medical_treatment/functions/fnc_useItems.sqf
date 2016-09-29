@@ -8,29 +8,36 @@
  * 2: Items <ARRAY<STRING>>
  *
  * ReturnValue:
- * None
+ * 0: success <BOOL>
+ * 1: Unit <OBJECT>
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_medic", "_patient", "_items"];
 
 private _itemsUsedBy = [];
+
 {
     // handle a one of type use item
     if (_x isEqualType []) then {
         {
             private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
+
+            if (_itemUsedInfo select 0) exitWith {
+                _itemsUsedBy pushBack [_itemUsedInfo select 1, _x];
+            };
         } forEach _x;
     };
 
     // handle required item
     if (_x isEqualType "") then {
         private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
+
+        if (_itemUsedInfo select 0) exitWith {
+            _itemsUsedBy pushBack [_itemUsedInfo select 1, _x];
+        };
     };
 } forEach _items;
 

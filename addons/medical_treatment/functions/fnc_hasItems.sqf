@@ -12,20 +12,22 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_medic", "_patient", "_items"];
 
 private _return = true;
+
 {
-    //
-    if (_x isEqualType [] && {({[_medic, _patient, _x] call FUNC(hasItem)}count _x == 0)}) exitwith {
+    // handle a one of type use item
+    if (_x isEqualType [] && {{[_medic, _patient, _x] call FUNC(hasItem)} count _x == 0}) exitWith {
         _return = false;
     };
-    if (_x isEqualType "" && {!([_medic, _patient, _x] call FUNC(hasItem))}) exitwith {
+
+    // handle required item
+    if (_x isEqualType "" && {!([_medic, _patient, _x] call FUNC(hasItem))}) exitWith {
         _return = false;
     };
-}foreach _items;
+} forEach _items;
 
 _return

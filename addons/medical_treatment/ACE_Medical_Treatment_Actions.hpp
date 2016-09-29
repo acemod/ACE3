@@ -1,5 +1,5 @@
 
-class ACE_Medical_Treatment_Actions {
+class GVAR(Actions) {
     class Basic {
         class Bandage {
             displayName = ECSTRING(medical,Bandage);
@@ -22,7 +22,7 @@ class ACE_Medical_Treatment_Actions {
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
             animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
-            animationCaller = "AinvPknlMstpSlayWrflDnon_medicOther";
+            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerSelfProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
@@ -37,11 +37,12 @@ class ACE_Medical_Treatment_Actions {
             allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
             allowSelfTreatment = 1;
             category = "medication";
-            treatmentTime = 2;
+            treatmentTime = 8;
             items[] = {"ACE_morphine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_morphine));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class Epinephrine: Bandage {
             displayName = ECSTRING(medical,Inject_Epinephrine);
@@ -50,12 +51,13 @@ class ACE_Medical_Treatment_Actions {
             allowSelfTreatment = 1;
             category = "medication";
             requiredMedic = QEGVAR(medical,medicSetting_basicEpi);
-            treatmentTime = 3;
+            treatmentTime = 8;
             items[] = {"ACE_epinephrine"};
             callbackSuccess = QUOTE(DFUNC(treatmentBasic_epipen));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class BloodIV: Bandage {
             displayName = ECSTRING(medical,Transfuse_Blood);
@@ -64,7 +66,7 @@ class ACE_Medical_Treatment_Actions {
             allowSelfTreatment = 0;
             category = "advanced";
             requiredMedic = 1;
-            treatmentTime = 20;
+            treatmentTime = 12;
             items[] = {"ACE_bloodIV"};
             // callbackSuccess = QUOTE(DFUNC(treatmentBasic_bloodbag));
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
@@ -85,9 +87,9 @@ class ACE_Medical_Treatment_Actions {
             category = "advanced";
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
-            treatmentTime = 4;
+            treatmentTime = 15;
             items[] = {"ACE_bodyBag"};
-            condition = "!alive (_this select 1);";
+            condition = "!alive _target";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
@@ -123,13 +125,13 @@ class ACE_Medical_Treatment_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = QUOTE(!([(_this select 1)] call ace_common_fnc_isAwake) && EGVAR(medical,enableRevive)>0);
+            condition = QUOTE(!(_target call EFUNC(common,isAwake)) && EGVAR(medical,enableRevive) > 0);
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
+            callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
@@ -201,7 +203,7 @@ class ACE_Medical_Treatment_Actions {
             items[] = {"ACE_tourniquet"};
             treatmentTime = 4;
             callbackSuccess = QUOTE(DFUNC(treatmentTourniquet));
-            condition = QUOTE(!([ARR_2(_this select 1, _this select 2)] call EFUNC(medical,hasTourniquetAppliedTo)));
+            condition = QUOTE(!([ARR_2(_target,_selectionName)] call EFUNC(medical,hasTourniquetAppliedTo)));
             litter[] = {};
         };
         class Morphine: fieldDressing {
@@ -214,6 +216,7 @@ class ACE_Medical_Treatment_Actions {
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_medication));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
+            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
         };
         class Adenosine: Morphine {
             displayName = ECSTRING(medical,Inject_Adenosine);
@@ -241,7 +244,7 @@ class ACE_Medical_Treatment_Actions {
             category = "advanced";
             items[] = {"ACE_bloodIV"};
             requiredMedic = 1;
-            treatmentTime = 7;
+            treatmentTime = 12;
             callbackSuccess = QUOTE(DFUNC(treatmentIV));
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
@@ -291,7 +294,7 @@ class ACE_Medical_Treatment_Actions {
             allowSelfTreatment = 0;
             requiredMedic = QEGVAR(medical,medicSetting_SurgicalKit);
             patientStateCondition = QEGVAR(medical,useCondition_SurgicalKit);
-            treatmentTime = "(count ((_this select 1) getVariable ['ACE_Medical_bandagedWounds', []]) * 5)";
+            treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
             callbackSuccess = "";
             callbackProgress = QUOTE(DFUNC(treatmentAdvanced_surgicalKit_onProgress));
             itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
@@ -307,12 +310,12 @@ class ACE_Medical_Treatment_Actions {
             allowSelfTreatment = 0;
             requiredMedic = QEGVAR(medical,medicSetting_PAK);
             patientStateCondition = QEGVAR(medical,useCondition_PAK);
-            treatmentTime = QUOTE((_this select 1) call FUNC(treatmentAdvanced_fullHealTreatmentTime));
+            treatmentTime = QUOTE(_target call FUNC(treatmentAdvanced_fullHealTreatmentTime));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_fullHeal));
             itemConsumed = QEGVAR(medical,consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medicOther";
+            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
@@ -356,7 +359,7 @@ class ACE_Medical_Treatment_Actions {
             items[] = {};
             treatmentTime = 2.5;
             callbackSuccess = QUOTE(DFUNC(actionRemoveTourniquet));
-            condition = QUOTE([ARR_2(_this select 1, _this select 2)] call EFUNC(medical,hasTourniquetAppliedTo));
+            condition = QUOTE([ARR_2(_target,_selectionName)] call EFUNC(medical,hasTourniquetAppliedTo));
             displayNameProgress = ECSTRING(medical,RemovingTourniquet);
             litter[] = {};
         };
@@ -370,13 +373,13 @@ class ACE_Medical_Treatment_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
-            condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
+            condition = QUOTE(!(_target call EFUNC(common,isAwake)));
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
             callbackFailure = "";
-            callbackProgress = "!([((_this select 0) select 1)] call ace_common_fnc_isAwake)";
+            callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";
             animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medic";
             animationCallerSelf = "";
             animationCallerSelfProne = "";
@@ -392,7 +395,7 @@ class ACE_Medical_Treatment_Actions {
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {"ACE_bodyBag"};
-            condition = "!alive (_this select 1);";
+            condition = "!alive _target";
             callbackSuccess = QUOTE(DFUNC(actionPlaceInBodyBag));
             callbackFailure = "";
             callbackProgress = "";
