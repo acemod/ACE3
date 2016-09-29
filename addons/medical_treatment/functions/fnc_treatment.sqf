@@ -13,7 +13,6 @@
  *
  * Public: Yes
  */
-#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className"];
