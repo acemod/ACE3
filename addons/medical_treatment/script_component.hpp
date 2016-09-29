@@ -16,3 +16,5 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define CUR_LEVEL (["Basic", "Advanced"] select (EGVAR(medical,level) >= 2))
