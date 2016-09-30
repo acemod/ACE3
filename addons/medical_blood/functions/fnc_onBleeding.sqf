@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (GVAR(enabledFor) == 1 && {!isPlayer _unit || {_unit == ACE_player}}) exitWith {};
+if (((vehicle _unit) != _unit) && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
 
 private _lastTime = _unit getVariable [QGVAR(lastTime), -10];
 private _bloodLoss = (if (GVAR(useAceMedical)) then {([_unit] call EFUNC(medical,getBloodLoss)) * 2.5} else {getDammage _unit * 2}) min 6;
