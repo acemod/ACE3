@@ -35,6 +35,10 @@
     TRACE_2("blockSprint EH",_object,_set);
     _object allowSprint (_set == 0);
 }] call CBA_fnc_addEventHandler;
+[QGVAR(setAnimSpeedCoef), {
+    params ["_object", "_set"];
+    _object setAnimSpeedCoef _set;
+}] call CBA_fnc_addEventHandler;
 [QGVAR(setCaptive), {
     params ["_object", "_set"];
     TRACE_2("setCaptive EH",_object,_set);

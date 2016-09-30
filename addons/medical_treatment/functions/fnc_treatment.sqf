@@ -156,7 +156,7 @@ TRACE_1("",_treatmentTime);
 
 // speed up animation depending on treatment time
 if (!isNil "_animDuration") then {
-    _caller setAnimSpeedCoef (_animDuration / _treatmentTime);
+    [QGVAR(setAnimSpeedCoef), [_caller, _animDuration / _treatmentTime]] call CBA_fnc_globalEvent;
     TRACE_2("",_animDuration,_treatmentTime);
 };
 

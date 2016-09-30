@@ -31,7 +31,7 @@ if (!isNil "_endInAnim") then {
 };
 
 // reset sped up animations
-_caller setAnimSpeedCoef 1;
+[QGVAR(setAnimSpeedCoef), [_caller, 1]] call CBA_fnc_globalEvent;
 
 {
     _x params ["_unit", "_item"];
