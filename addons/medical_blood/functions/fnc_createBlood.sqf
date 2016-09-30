@@ -19,6 +19,7 @@
 #include "script_component.hpp"
 
 params ["_type", "_pos"];
+TRACE_2("creating blood",_type,_pos);
 
 private _model = GVAR(models) getVariable _type;
 

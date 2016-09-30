@@ -75,7 +75,7 @@
 {% endif %}
 
 {% if include.component == "dogtags" %}
-`ace_common`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "dragging" %}
@@ -344,10 +344,6 @@
 
 {% if include.component == "scopes" %}
 `ace_common`
-{% endif %}
-
-{% if include.component == "sitting" %}
-`ace_interaction`
 {% endif %}
 
 {% if include.component == "slideshow" %}

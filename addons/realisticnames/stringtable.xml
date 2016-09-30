@@ -12,6 +12,7 @@
             <Portuguese>XM312</Portuguese>
             <Hungarian>XM312</Hungarian>
             <Italian>XM312A</Italian>
+            <Japanese>XM312</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_A_Name">
             <English>XM312A</English>
@@ -24,6 +25,7 @@
             <Portuguese>XM312A</Portuguese>
             <Hungarian>XM312A</Hungarian>
             <Italian>XM312A</Italian>
+            <Japanese>XM312A</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HMG_01_high_Name">
             <English>XM312 (High)</English>
@@ -36,6 +38,7 @@
             <Portuguese>XM312 (Alta)</Portuguese>
             <Hungarian>XM312 (Magasított)</Hungarian>
             <Italian>XM312 (Alta)</Italian>
+            <Japanese>XM312 (高)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_Name">
             <English>XM307</English>
@@ -48,6 +51,7 @@
             <Portuguese>XM307</Portuguese>
             <Hungarian>XM307</Hungarian>
             <Italian>XM307</Italian>
+            <Japanese>XM307</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_A_Name">
             <English>XM307A</English>
@@ -60,6 +64,7 @@
             <Portuguese>XM307A</Portuguese>
             <Hungarian>XM307A</Hungarian>
             <Italian>XM307A</Italian>
+            <Japanese>XM307A</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_GMG_01_high_Name">
             <English>XM307 (High)</English>
@@ -72,6 +77,7 @@
             <Portuguese>XM307 (Alta)</Portuguese>
             <Hungarian>XM307 (Magasított)</Hungarian>
             <Italian>XM307 (Alta)</Italian>
+            <Japanese>XM307 (高)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AT_Name">
             <English>Mini-Spike Launcher (AT)</English>
@@ -84,6 +90,7 @@
             <Portuguese>Lança-mísseis Mini-Spike (AC)</Portuguese>
             <Hungarian>Mini-Spike rakétarendszer (Tankelhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AC)</Italian>
+            <Japanese>ミニスパイク ランチャー (対戦)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_static_AA_Name">
             <English>Mini-Spike Launcher (AA)</English>
@@ -96,6 +103,7 @@
             <Portuguese>Lança-mísseis Mini-Spike (AA)</Portuguese>
             <Hungarian>Mini-Spike rakétarendszer (Repülő-elhárító)</Hungarian>
             <Italian>Lanciatore Mini-Spike (AA)</Italian>
+            <Japanese>ミニスパイク ランチャー (対空)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_Name">
             <English>YABHON-R3</English>
@@ -108,6 +116,7 @@
             <Portuguese>YABHON-R3</Portuguese>
             <Hungarian>YABHON-R3</Hungarian>
             <Italian>YABHON-R3</Italian>
+            <Japanese>YABHON-R3</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_UAV_02_CAS_Name">
             <English>YABHON-R3 (CAS)</English>
@@ -120,6 +129,7 @@
             <Hungarian>YABHON-R3 (Légitámogató)</Hungarian>
             <Italian>YABHON-R3 (CAS)</Italian>
             <Portuguese>YABHON-R3 (CAS)</Portuguese>
+            <Japanese>YABHON-R3 (対地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_Name">
             <English>M-ATV</English>
@@ -132,6 +142,7 @@
             <Portuguese>M-ATV</Portuguese>
             <Hungarian>M-ATV</Hungarian>
             <Italian>M-ATV</Italian>
+            <Japanese>M-ATV</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_hmg_Name">
             <English>M-ATV (HMG)</English>
@@ -144,6 +155,7 @@
             <Portuguese>M-ATV (HMG)</Portuguese>
             <Hungarian>M-ATV (nehézgéppuska)</Hungarian>
             <Italian>M-ATV (HMG)</Italian>
+            <Japanese>M-ATV (HMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_01_gmg_Name">
             <English>M-ATV (GMG)</English>
@@ -156,6 +168,7 @@
             <Portuguese>M-ATV (GMG)</Portuguese>
             <Hungarian>M-ATV (gránátgéppuska)</Hungarian>
             <Italian>M-ATV (GMG)</Italian>
+            <Japanese>M-ATV (GMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_cannon_Name">
             <English>Merkava Mk IV M</English>
@@ -168,6 +181,7 @@
             <Portuguese>Merkava Mk IV M</Portuguese>
             <Hungarian>Merkava Mk IV M</Hungarian>
             <Italian>Merkava Mk IV M</Italian>
+            <Japanese>メルカバ Mk IV M</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_TUSK_Name">
             <English>Merkava Mk IV LIC</English>
@@ -180,6 +194,7 @@
             <Portuguese>Merkava Mk IV LIC</Portuguese>
             <Hungarian>Merkava Mk IV LIC</Hungarian>
             <Italian>Merkava Mk IV LIC</Italian>
+            <Japanese>メルカバ Mk IV LIC</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_arty_Name">
             <English>Sholef</English>
@@ -192,6 +207,7 @@
             <Portuguese>Sholef</Portuguese>
             <Hungarian>Sholef</Hungarian>
             <Italian>Sholef</Italian>
+            <Japanese>ショルフ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_01_mlrs_Name">
             <English>Seara</English>
@@ -204,6 +220,7 @@
             <Portuguese>Seara</Portuguese>
             <Hungarian>Seara</Hungarian>
             <Italian>Seara</Italian>
+            <Japanese>シアラ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_rcws_Name">
             <English>Namer</English>
@@ -216,6 +233,7 @@
             <Portuguese>Namer</Portuguese>
             <Hungarian>Namer</Hungarian>
             <Italian>Namer</Italian>
+            <Japanese>ネイマー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_AA_Name">
             <English>Bardelas</English>
@@ -228,6 +246,7 @@
             <Portuguese>Bardelas</Portuguese>
             <Hungarian>Bardelas</Hungarian>
             <Italian>Bardelas</Italian>
+            <Japanese>バーラデラス</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_01_cannon_Name">
             <English>Badger IFV</English>
@@ -240,6 +259,7 @@
             <Portuguese>Badger IFV</Portuguese>
             <Hungarian>Badger IFV</Hungarian>
             <Italian>Badger IFV</Italian>
+            <Japanese>バッジ IFV</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_01_CRV_Name">
             <English>Nemmera</English>
@@ -252,6 +272,7 @@
             <Portuguese>Nemmera</Portuguese>
             <Hungarian>Nemmera</Hungarian>
             <Italian>Nemmera</Italian>
+            <Japanese>ネマラ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_transport_Name">
             <English>HEMTT Transport</English>
@@ -264,6 +285,7 @@
             <Portuguese>HEMTT Transporte</Portuguese>
             <Hungarian>HEMTT szállítójármű</Hungarian>
             <Italian>HEMTT da trasporto</Italian>
+            <Japanese>HEMTT 輸送型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_covered_Name">
             <English>HEMTT Transport (covered)</English>
@@ -276,6 +298,7 @@
             <Portuguese>HEMTT Transporte (coberto)</Portuguese>
             <Hungarian>HEMTT szállítójármű (ponyvás)</Hungarian>
             <Italian>HEMTT da trasporto (coperto)</Italian>
+            <Japanese>HEMTT 輸送型 (幌)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_mover_Name">
             <English>HEMTT</English>
@@ -288,6 +311,7 @@
             <Portuguese>HEMTT</Portuguese>
             <Hungarian>HEMTT</Hungarian>
             <Italian>HEMTT</Italian>
+            <Japanese>HEMTT</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
@@ -300,6 +324,7 @@
             <Portuguese>HEMTT Contêiner</Portuguese>
             <Hungarian>HEMTT (konténer)</Hungarian>
             <Italian>HEMTT portacontainer </Italian>
+            <Japanese>HEMTT コンテナ型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_medical_Name">
             <English>HEMTT Medical</English>
@@ -312,6 +337,7 @@
             <Portuguese>HEMTT Médico</Portuguese>
             <Hungarian>HEMTT (egészségügyi)</Hungarian>
             <Italian>HEMTT Medico</Italian>
+            <Japanese>HEMTT 救急車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_ammo_Name">
             <English>HEMTT Ammo</English>
@@ -324,6 +350,7 @@
             <Portuguese>HEMTT Munições</Portuguese>
             <Hungarian>HEMTT (lőszerszállító)</Hungarian>
             <Italian>HEMTT di rifornimento munizioni</Italian>
+            <Japanese>HEMTT 弾薬給弾型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_fuel_Name">
             <English>HEMTT Fuel</English>
@@ -336,6 +363,7 @@
             <Portuguese>HEMTT Combustível</Portuguese>
             <Hungarian>HEMTT (üzemanyag-szállító)</Hungarian>
             <Italian>HEMTT di rifornimento carburante</Italian>
+            <Japanese>HEMTT 燃料給油車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_01_Repair_Name">
             <English>HEMTT Repair</English>
@@ -348,6 +376,7 @@
             <Portuguese>HEMTT Reparador</Portuguese>
             <Hungarian>HEMTT (szerelő-jármű)</Hungarian>
             <Italian>HEMTT Riparatore</Italian>
+            <Japanese>HEMTT 修理型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_Name">
             <English>Fennek</English>
@@ -360,6 +389,7 @@
             <Portuguese>Fennek</Portuguese>
             <Hungarian>Fennek</Hungarian>
             <Italian>Fennek</Italian>
+            <Japanese>フェネック</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_hmg_Name">
             <English>Fennek (HMG)</English>
@@ -372,6 +402,7 @@
             <Portuguese>Fennek (HMG)</Portuguese>
             <Hungarian>Fennek (nehézgéppuska)</Hungarian>
             <Italian>Fennek (HMG)</Italian>
+            <Japanese>フェネック (HMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_03_gmg_Name">
             <English>Fennek (GMG)</English>
@@ -384,6 +415,7 @@
             <Portuguese>Fennek (GMG)</Portuguese>
             <Hungarian>Fennek (gránátgéppuska)</Hungarian>
             <Italian>Fennek (GMG)</Italian>
+            <Japanese>フェネック (GMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_03_cannon_Name">
             <English>Leopard 2SG</English>
@@ -396,6 +428,7 @@
             <Portuguese>Leopard 2SG</Portuguese>
             <Hungarian>Leopard 2SG</Hungarian>
             <Italian>Leopard 2SG</Italian>
+            <Japanese>レオパルド 2SG</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_tracked_03_cannon_Name">
             <English>FV510 Warrior</English>
@@ -408,6 +441,7 @@
             <Portuguese>FV510 Warrior</Portuguese>
             <Hungarian>FV510 Warrior</Hungarian>
             <Italian>FV510 Warrior</Italian>
+            <Japanese>FV510 ウォーリアー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_03_cannon_Name">
             <English>Pandur II</English>
@@ -420,6 +454,7 @@
             <Portuguese>Pandur II</Portuguese>
             <Hungarian>Pandur II</Hungarian>
             <Italian>Pandur II</Italian>
+            <Japanese>パンデュール II</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
@@ -432,6 +467,7 @@
             <Portuguese>KamAZ Transporte</Portuguese>
             <Hungarian>KamAZ szállítójármű</Hungarian>
             <Italian>KamAZ da trasporto</Italian>
+            <Japanese>KamAZ 輸送型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
@@ -444,6 +480,7 @@
             <Portuguese>KamAZ Transporte (coberto)</Portuguese>
             <Hungarian>KamAZ szállítójármű (ponyvás)</Hungarian>
             <Italian>KamAZ da trasporto (coperto)</Italian>
+            <Japanese>KamAZ 輸送型 (幌)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
@@ -456,6 +493,7 @@
             <Portuguese>KamAZ Munições</Portuguese>
             <Hungarian>KamAZ (lőszerszállító)</Hungarian>
             <Italian>KamAZ  di rifornimento munizioni</Italian>
+            <Japanese>KamAZ 弾薬給弾型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
@@ -468,6 +506,7 @@
             <Portuguese>KamAZ Combustível</Portuguese>
             <Hungarian>KamAZ (üzemanyag-szállító)</Hungarian>
             <Italian>KamAZ  di rifornimento carburante</Italian>
+            <Japanese>KamzAZ 燃料給油車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
@@ -480,6 +519,7 @@
             <Portuguese>KamAZ Reparador</Portuguese>
             <Hungarian>KamAZ (szerelő-jármű)</Hungarian>
             <Italian>KamAZ  riparatore</Italian>
+            <Japanese>KamzAZ 修理型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
@@ -492,6 +532,7 @@
             <Portuguese>KamAZ Médico</Portuguese>
             <Hungarian>KamAZ (egészségügyi)</Hungarian>
             <Italian>KamAZ Medico</Italian>
+            <Japanese>KamAZ 救急車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_Name">
             <English>Punisher</English>
@@ -504,6 +545,7 @@
             <Portuguese>Punisher</Portuguese>
             <Hungarian>Punisher</Hungarian>
             <Italian>Punisher</Italian>
+            <Japanese>パニッシャー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_hmg_Name">
             <English>Punisher (HMG)</English>
@@ -516,6 +558,7 @@
             <Portuguese>Punisher (HMG)</Portuguese>
             <Hungarian>Punisher (nehézgéppuska)</Hungarian>
             <Italian>Punisher (HMG)</Italian>
+            <Japanese>パニッシャー (HMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MRAP_02_gmg_Name">
             <English>Punisher (GMG)</English>
@@ -528,6 +571,7 @@
             <Portuguese>Punisher (GMG)</Portuguese>
             <Hungarian>Punisher (gránátgéppuska)</Hungarian>
             <Italian>Punisher (GMG)</Italian>
+            <Japanese>パニッシャー (GMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_cannon_Name">
             <English>T100 Black Eagle</English>
@@ -540,6 +584,7 @@
             <Portuguese>T100 Black Eagle</Portuguese>
             <Hungarian>T100 Fekete Sas</Hungarian>
             <Italian>T100 Black Eagle</Italian>
+            <Japanese>T100 ブラック イーグル</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MBT_02_arty_Name">
             <English>2S9 Sochor</English>
@@ -552,6 +597,7 @@
             <Portuguese>2S9 Sochor</Portuguese>
             <Hungarian>2S9 Sochor</Hungarian>
             <Italian>2S9 Sochor</Italian>
+            <Japanese>2S9 ソーカー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_cannon_Name">
             <English>BM-2T Stalker</English>
@@ -564,6 +610,7 @@
             <Portuguese>BM-2T Stalker</Portuguese>
             <Hungarian>BM-2T Stalker</Hungarian>
             <Italian>BM-2T Stalker</Italian>
+            <Japanese>BM-2T ストーカー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Tracked_02_AA_Name">
             <English>ZSU-35 Tigris</English>
@@ -576,6 +623,7 @@
             <Portuguese>ZSU-35 Tigris</Portuguese>
             <Hungarian>ZSU-35 Tigris</Hungarian>
             <Italian>ZSU-35 Tigris</Italian>
+            <Japanese>ZSU-35 </Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APC_Wheeled_02_rcws_Name">
             <English>Otokar ARMA</English>
@@ -588,6 +636,7 @@
             <Portuguese>Otokar ARMA</Portuguese>
             <Hungarian>Otokar ARMA</Hungarian>
             <Italian>Otokar ARMA</Italian>
+            <Japanese>ティグリスOtokar アルマ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_transport_Name">
             <English>Typhoon Transport</English>
@@ -600,6 +649,7 @@
             <Portuguese>Typhoon Transporte</Portuguese>
             <Hungarian>Typhoon szállítójármű</Hungarian>
             <Italian>Typhoon da trasporto</Italian>
+            <Japanese>Typhoon 輸送型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_covered_Name">
             <English>Typhoon Transport (covered)</English>
@@ -612,6 +662,7 @@
             <Portuguese>Typhoon Transporte (coberto)</Portuguese>
             <Hungarian>Typhoon szállítójármű (ponyvás)</Hungarian>
             <Italian>Typhoon da trasporto (coperto)</Italian>
+            <Japanese>Typhoon 輸送型 (幌)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_device_Name">
             <English>Typhoon Device</English>
@@ -624,6 +675,7 @@
             <Portuguese>Typhoon Dispositivo</Portuguese>
             <Hungarian>Typhoon (eszköz)</Hungarian>
             <Italian>Typhoon per dispositivo</Italian>
+            <Japanese>Typhoon デバイス型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_ammo_Name">
             <English>Typhoon Ammo</English>
@@ -636,6 +688,7 @@
             <Portuguese>Typhoon Munições</Portuguese>
             <Hungarian>Typhoon (lőszerszállító)</Hungarian>
             <Italian>Typhoon di rifornimento munizioni</Italian>
+            <Japanese>Typhoon 弾薬給弾型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_fuel_Name">
             <English>Typhoon Fuel</English>
@@ -648,6 +701,7 @@
             <Portuguese>Typhoon Combustível</Portuguese>
             <Hungarian>Typhoon (üzemanyag-szállító)</Hungarian>
             <Italian>Typhoon di rifornimento carburante</Italian>
+            <Japanese>Typhoon 燃料給油車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_repair_Name">
             <English>Typhoon Repair</English>
@@ -660,6 +714,7 @@
             <Portuguese>Typhoon Reparador</Portuguese>
             <Hungarian>Typhoon (szerelő-jármű)</Hungarian>
             <Italian>Typhoon riparatore</Italian>
+            <Japanese>Typhoon 修理型</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_medical_Name">
             <English>Typhoon Medical</English>
@@ -672,6 +727,7 @@
             <Portuguese>Typhoon Médico</Portuguese>
             <Hungarian>Typhoon (egészségügyi)</Hungarian>
             <Italian>Typhoon medico</Italian>
+            <Japanese>Typhoon 救急車</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Attack_01_Name">
             <English>RAH-66 Comanche</English>
@@ -684,6 +740,7 @@
             <Portuguese>RAH-66 Comanche</Portuguese>
             <Hungarian>RAH-66 Comanche</Hungarian>
             <Italian>RAH-66 Comanche</Italian>
+            <Japanese>RAH-66 コマンチ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_Name">
             <English>MH-6 Little Bird</English>
@@ -696,6 +753,7 @@
             <Portuguese>MH-6 Little Bird</Portuguese>
             <Hungarian>MH-6 Little Bird</Hungarian>
             <Italian>MH-6 Little Bird</Italian>
+            <Japanese>MH-6 リトル バード</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_armed_Name">
             <English>AH-6 Little Bird</English>
@@ -708,6 +766,7 @@
             <Portuguese>AH-6 Little Bird</Portuguese>
             <Hungarian>AH-6 Little Bird</Hungarian>
             <Italian>AH-6 Little Bird</Italian>
+            <Japanese>AH-6 リトル バード</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_Name">
             <English>CH-47I Chinook</English>
@@ -720,6 +779,7 @@
             <Portuguese>CH-47I Chinook</Portuguese>
             <Hungarian>CH-47I Chinook</Hungarian>
             <Italian>CH-47I Chinook</Italian>
+            <Japanese>CH-47I チヌーク</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_03_unarmed_Name">
             <English>CH-47I Chinook (unarmed)</English>
@@ -732,6 +792,7 @@
             <Hungarian>CH-47I Chinook (fegyvertelen)</Hungarian>
             <Italian>CH-47I Chinook (disarmato)</Italian>
             <Portuguese>CH-47I Chinook (desarmado)</Portuguese>
+            <Japanese>CH-47I チヌーク (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_01_Name">
             <English>A-10D Thunderbolt II</English>
@@ -744,6 +805,7 @@
             <Portuguese>A-10D Thunderbolt II</Portuguese>
             <Hungarian>A-10D Thunderbolt II</Hungarian>
             <Italian>A-10D Thunderbolt II</Italian>
+            <Japanese>A-10D サンダーボルト II</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_Name">
             <English>AW159 Wildcat</English>
@@ -756,6 +818,7 @@
             <Portuguese>AW159 Wildcat</Portuguese>
             <Hungarian>AW159 Wildcat</Hungarian>
             <Italian>AW159 Wildcat</Italian>
+            <Japanese>AW159 ワイルドキャット</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_light_03_unarmed_Name">
             <English>AW159 Wildcat (unarmed)</English>
@@ -768,6 +831,7 @@
             <Portuguese>AW159 Wildcat (desarmado)</Portuguese>
             <Hungarian>AW159 Wildcat (fegyvertelen)</Hungarian>
             <Italian>AW159 Wildcat (disarmato)</Italian>
+            <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Transport_02_Name">
             <English>AW101 Merlin</English>
@@ -780,6 +844,7 @@
             <Portuguese>AW101 Merlin</Portuguese>
             <Hungarian>AW101 Merlin</Hungarian>
             <Italian>AW101 Merlin</Italian>
+            <Japanese>AW101 マーリン</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name">
             <English>L-159 ALCA (CAS)</English>
@@ -792,6 +857,7 @@
             <Portuguese>L-159 ALCA (CAS)</Portuguese>
             <Hungarian>L-159 ALCA (Légitámogató)</Hungarian>
             <Italian>L-159 ALCA (CAS)</Italian>
+            <Japanese>L-159 アルカ (対地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_AA_Name">
             <English>L-159 ALCA (AA)</English>
@@ -804,6 +870,7 @@
             <Portuguese>L-159 ALCA (ВВ)</Portuguese>
             <Hungarian>L-159 ALCA (Repülő-elhárító)</Hungarian>
             <Italian>L-159 ALCA (AA)</Italian>
+            <Japanese>L-159 アルカ (対空）</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_Name">
             <English>Ka-60 Kasatka</English>
@@ -816,6 +883,7 @@
             <Portuguese>Ka-60 Kasatka</Portuguese>
             <Hungarian>Ka-60 Kasatka</Hungarian>
             <Italian>Ka-60 Kasatka</Italian>
+            <Japanese>Ka-60 カサートカ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_v2_Name">
             <English>Ka-60 Kasatka (Black &amp; White)</English>
@@ -827,6 +895,7 @@
             <Portuguese>Ka-60 Kasatka (preto e branco)</Portuguese>
             <Russian>Ka-60 Касатка (белый и черный)</Russian>
             <Spanish>Ka-60 Kasatka (blanco y negro)</Spanish>
+            <Japanese>Ka-60 カサートカ (黒&amp;白）</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_02_unarmed_Name">
             <English>Ka-60 Kasatka (unarmed)</English>
@@ -839,6 +908,7 @@
             <Portuguese>Ka-60 Kasatka (desarmado)</Portuguese>
             <Hungarian>Ka-60 Kasatka (fegyvertelen)</Hungarian>
             <Italian>Ka-60 Kasatka (disarmato)</Italian>
+            <Japanese>Ka-60 カサートカ (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_CAS_02_Name">
             <English>Yak-130</English>
@@ -851,6 +921,7 @@
             <Portuguese>Yak-130</Portuguese>
             <Hungarian>Jak-130</Hungarian>
             <Italian>Yak-130</Italian>
+            <Japanese>Yak-130 ミトン</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_civil_Name">
             <English>MD 500</English>
@@ -863,6 +934,7 @@
             <Portuguese>MD 500</Portuguese>
             <Hungarian>MD 500</Hungarian>
             <Italian>MD 500</Italian>
+            <Japanese>MD 500</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SLAM_Name">
             <English>M4A1 SLAM</English>
@@ -875,6 +947,7 @@
             <Portuguese>M4A1 SLAM</Portuguese>
             <Hungarian>M4A1 SLAM</Hungarian>
             <Italian>M4A1 SLAM</Italian>
+            <Japanese>M4A1 SLAM</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Claymore_Name">
             <English>M18A1 Claymore</English>
@@ -887,6 +960,7 @@
             <Portuguese>M18A1 Claymore</Portuguese>
             <Hungarian>M18A1 Claymore akna</Hungarian>
             <Italian>M18A1 Claymore Mina antiuomo</Italian>
+            <Japanese>M18A1 クレイモア</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SatchelCharge_Name">
             <English>M183 Demolition Charge Assembly</English>
@@ -899,6 +973,7 @@
             <Portuguese>M183 Sacola de Demolição</Portuguese>
             <Hungarian>M183 romboló töltet</Hungarian>
             <Italian>M183 Demolition Charge Assembly</Italian>
+            <Japanese>M183 梱包爆薬</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -911,6 +986,7 @@
             <Portuguese>M112 Carga de Demolição</Portuguese>
             <Hungarian>M112 romboló tömb</Hungarian>
             <Italian>M112 Demolition Block</Italian>
+            <Japanese>M113 爆薬ブロック</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -923,6 +999,7 @@
             <Portuguese>M67 Granada de fragmentação</Portuguese>
             <Hungarian>M67 repeszgránát</Hungarian>
             <Italian>M67 Granata a frammentazione</Italian>
+            <Japanese>M67 破片手榴弾</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShell_Name">
             <English>M83 Smoke Grenade (White)</English>
@@ -935,6 +1012,7 @@
             <Portuguese>M83 Granada de fumaça (Branca)</Portuguese>
             <Hungarian>M83 füstgránát (Fehér)</Hungarian>
             <Italian>M83 Granata fumogena (Bianco)</Italian>
+            <Japanese>M18 煙幕手榴弾 (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellBlue_Name">
             <English>M18 Smoke Grenade (Blue)</English>
@@ -947,6 +1025,7 @@
             <Portuguese>M18 Granada de fumaça (Azul)</Portuguese>
             <Hungarian>M18 füstgránát (Kék)</Hungarian>
             <Italian>M18 Granata fumogena (Blu)</Italian>
+            <Japanese>M18 煙幕手榴弾 (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellGreen_Name">
             <English>M18 Smoke Grenade (Green)</English>
@@ -959,6 +1038,7 @@
             <Portuguese>M18 Granada de fumaça (Verde)</Portuguese>
             <Hungarian>M18 füstgránát (Zöld)</Hungarian>
             <Italian>M18 Granata fumogena (Verde)</Italian>
+            <Japanese>M18 煙幕手榴弾 (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellOrange_Name">
             <English>M18 Smoke Grenade (Orange)</English>
@@ -971,6 +1051,7 @@
             <Portuguese>M18 Granada de fumaça (Laranja)</Portuguese>
             <Hungarian>M18 füstgránát (Narancssárga)</Hungarian>
             <Italian>M18 Granata fumogena (Arancione)</Italian>
+            <Japanese>M18 煙幕手榴弾 (橙)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellPurple_Name">
             <English>M18 Smoke Grenade (Purple)</English>
@@ -983,6 +1064,7 @@
             <Portuguese>M18 Granada de fumaça (Roxa)</Portuguese>
             <Hungarian>M18 füstgránát (Lila)</Hungarian>
             <Italian>M18 Granata fumogena (Viola)</Italian>
+            <Japanese>M18 煙幕手榴弾 (紫)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellRed_Name">
             <English>M18 Smoke Grenade (Red)</English>
@@ -995,6 +1077,7 @@
             <Portuguese>M18 Granada de fumaça (Vermelha)</Portuguese>
             <Hungarian>M18 füstgránát (Piros)</Hungarian>
             <Italian>M18 Granata fumogena (Rosso)</Italian>
+            <Japanese>M18 煙幕手榴弾 (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SmokeShellYellow_Name">
             <English>M18 Smoke Grenade (Yellow)</English>
@@ -1007,6 +1090,7 @@
             <Portuguese>M18 Granada de fumaça (Amarela)</Portuguese>
             <Hungarian>M18 füstgránát (Sárga)</Hungarian>
             <Italian>M18 Granata fumogena (Giallo)</Italian>
+            <Japanese>M18 煙幕手榴弾 (黄)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_ATMine_Name">
             <English>M15 Anti-Tank Mine</English>
@@ -1019,6 +1103,7 @@
             <Portuguese>M15 Mina anticarro</Portuguese>
             <Hungarian>M15 harckocsiakna</Hungarian>
             <Italian>M15 Mine anticarro</Italian>
+            <Japanese>M15 対戦車地雷</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSMine_Name">
             <English>VS-50 Anti-Personnel Mine</English>
@@ -1031,6 +1116,7 @@
             <Portuguese>VS-50 Mina antipessoal</Portuguese>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
             <Italian>VS-50 Mine antiuomo</Italian>
+            <Japanese>VS-50 対人地雷</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSBoundingMine_Name">
             <English>M26 Anti-Personnel Bounding Mine</English>
@@ -1043,6 +1129,7 @@
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Hungarian>M26 gyalogsági ugróakna</Hungarian>
             <Italian>M26 Mine saltanti antiuomo</Italian>
+            <Japanese>M26 対人跳躍地雷</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
@@ -1055,6 +1142,7 @@
             <Portuguese>PMR-3 Mina antipessoal (armadilha)</Portuguese>
             <Hungarian>PMR-3 botlódrótos gyalogsági akna</Hungarian>
             <Italian>PMR-3 Mine antiuomo</Italian>
+            <Japanese>PMR-3 仕掛け型対人地雷</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_Name">
             <English>P99</English>
@@ -1067,6 +1155,7 @@
             <Russian>P99</Russian>
             <Portuguese>P99</Portuguese>
             <Italian>P99</Italian>
+            <Japanese>P99</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Rook40_Name">
             <English>MP-443 Grach</English>
@@ -1079,6 +1168,7 @@
             <Russian>МР-443 "Грач"</Russian>
             <Portuguese>MP-443 Grach</Portuguese>
             <Italian>MP-443 Grach</Italian>
+            <Japanese>MP-433 グラッチ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -1091,6 +1181,7 @@
             <Russian>Custom Covert II</Russian>
             <Portuguese>Custom Covert II</Portuguese>
             <Italian>ACP-C2</Italian>
+            <Japanese>カスタム コンバート II</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_Name">
             <English>FNX-45 Tactical</English>
@@ -1103,6 +1194,7 @@
             <Russian>FNX-45 Tactical</Russian>
             <Portuguese>FNX-45 Tactical</Portuguese>
             <Italian>FNX-45 Tactical</Italian>
+            <Japanese>FNX-45 タクティカル</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_02_Name">
             <English>Chiappa Rhino 60DS</English>
@@ -1115,6 +1207,7 @@
             <Russian>Chiappa Rhino 60DS</Russian>
             <Portuguese>Chiappa Rhino 60DS</Portuguese>
             <Italian>Chiappa Rhino 6DS</Italian>
+            <Japanese>チアッパ ライノ 60DS</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_Signal_Name">
             <English>Taurus Judge</English>
@@ -1127,6 +1220,7 @@
             <Russian>Taurus Judge</Russian>
             <Portuguese>Taurus Judge</Portuguese>
             <Italian>Taurus Judge</Italian>
+            <Japanese>タウルス ジャッジ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_NLAW_Name">
             <English>NLAW</English>
@@ -1139,6 +1233,7 @@
             <Russian>NLAW</Russian>
             <Portuguese>NLAW</Portuguese>
             <Italian>NLAW</Italian>
+            <Japanese>NLAW</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_Name">
             <English>RPG-32</English>
@@ -1151,6 +1246,7 @@
             <Russian>РПГ-32</Russian>
             <Portuguese>RPG-32</Portuguese>
             <Italian>RPG-32</Italian>
+            <Japanese>RPG-32</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_Name">
             <English>Mini-Spike (AA)</English>
@@ -1163,6 +1259,7 @@
             <Russian>Mini-Spike (AA)</Russian>
             <Portuguese>Mini-Spike (AA)</Portuguese>
             <Italian>Mini-Spike (AA)</Italian>
+            <Japanese>ミニスパイク (対空)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_Titan_short_Name">
             <English>Mini-Spike (AT)</English>
@@ -1175,6 +1272,7 @@
             <Russian>Mini-Spike (AT)</Russian>
             <Portuguese>Mini-Spike (AT)</Portuguese>
             <Italian>Mini-Spike (AT)</Italian>
+            <Japanese>ミニスパイク (対地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Name">
             <English>MX</English>
@@ -1187,6 +1285,7 @@
             <Russian>MX</Russian>
             <Portuguese>MX</Portuguese>
             <Italian>MX</Italian>
+            <Japanese>MX</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_Black_Name">
             <English>MX (Black)</English>
@@ -1199,6 +1298,7 @@
             <Russian>MX (Чёрный)</Russian>
             <Portuguese>MX (Preto)</Portuguese>
             <Italian>MX (Nero)</Italian>
+            <Japanese>MX (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Name">
             <English>MXC</English>
@@ -1211,6 +1311,7 @@
             <Russian>MXC</Russian>
             <Portuguese>MXC</Portuguese>
             <Italian>MXC</Italian>
+            <Japanese>MXC</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXC_Black_Name">
             <English>MXC (Black)</English>
@@ -1223,6 +1324,7 @@
             <Russian>MXC (Чёрный)</Russian>
             <Portuguese>MXC (Preto)</Portuguese>
             <Italian>MXC (Nero)</Italian>
+            <Japanese>MXC (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Name">
             <English>MX 3GL</English>
@@ -1235,6 +1337,7 @@
             <Russian>MX 3GL</Russian>
             <Portuguese>MX 3GL</Portuguese>
             <Italian>MX 3GL</Italian>
+            <Japanese>MX 3GL</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_GL_Black_Name">
             <English>MX 3GL (Black)</English>
@@ -1247,6 +1350,7 @@
             <Russian>MX 3GL (Чёрный)</Russian>
             <Portuguese>MX 3GL (Preto)</Portuguese>
             <Italian>MX 3GL (Nero)</Italian>
+            <Japanese>MX 3GL (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Name">
             <English>MX LSW</English>
@@ -1259,6 +1363,7 @@
             <Russian>MX LSW</Russian>
             <Portuguese>MX LSW</Portuguese>
             <Italian>MX LSW</Italian>
+            <Japanese>MX LSW</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MX_SW_Black_Name">
             <English>MX LSW (Black)</English>
@@ -1271,6 +1376,7 @@
             <Russian>MX LSW (Чёрный)</Russian>
             <Portuguese>MX LSW (Preto)</Portuguese>
             <Italian>MX LSW (Nero)</Italian>
+            <Japanese>MX LSW (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Name">
             <English>MXM</English>
@@ -1283,6 +1389,7 @@
             <Russian>MXM</Russian>
             <Portuguese>MXM</Portuguese>
             <Italian>MXM</Italian>
+            <Japanese>MXM</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_MXM_Black_Name">
             <English>MXM (Black)</English>
@@ -1295,6 +1402,7 @@
             <Russian>MXM (Чёрный)</Russian>
             <Portuguese>MXM (Preto)</Portuguese>
             <Italian>MXM (Nero)</Italian>
+            <Japanese>MXM (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_Name">
             <English>KH2002 Sama</English>
@@ -1307,6 +1415,7 @@
             <Russian>KH2002 Сама</Russian>
             <Portuguese>KT2002 Sama</Portuguese>
             <Italian>KT2002 Katiba</Italian>
+            <Japanese>KH2002 サマ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_C_Name">
             <English>KH2002C Sama</English>
@@ -1319,6 +1428,7 @@
             <Russian>KH2002C Сама</Russian>
             <Portuguese>KT2002C Sama</Portuguese>
             <Italian>KT2002C Katiba</Italian>
+            <Japanese>KH2002C サマ</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Katiba_GL_Name">
             <English>KH2002 Sama KGL</English>
@@ -1331,6 +1441,7 @@
             <Russian>KH2002 Сама KGL</Russian>
             <Portuguese>KT2002 Sama KGL</Portuguese>
             <Italian>KT2002 Katiba KGL</Italian>
+            <Japanese>KH2002 サマ KGL</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_Name">
             <English>F2000 (Camo)</English>
@@ -1343,6 +1454,7 @@
             <Russian>F2000 (Камо)</Russian>
             <Portuguese>F2000 (Camo)</Portuguese>
             <Italian>F2000 (Camo)</Italian>
+            <Japanese>F2000 (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_plain_Name">
             <English>F2000</English>
@@ -1355,6 +1467,7 @@
             <Russian>F2000</Russian>
             <Portuguese>F2000</Portuguese>
             <Italian>F2000</Italian>
+            <Japanese>F2000</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_Name">
             <English>F2000 Tactical (Camo)</English>
@@ -1367,6 +1480,7 @@
             <Russian>F2000 Tactical (Камо)</Russian>
             <Portuguese>F2000 Tactical (Camo)</Portuguese>
             <Italian>F2000 Tactical (Camo)</Italian>
+            <Japanese>F2000 タクティカル (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20C_plain_Name">
             <English>F2000 Tactical</English>
@@ -1379,6 +1493,7 @@
             <Russian>F2000 Tactical</Russian>
             <Portuguese>F2000 Tactical</Portuguese>
             <Italian>F2000 Tactical</Italian>
+            <Japanese>F2000 タクティカル</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_Name">
             <English>F2000 EGLM (Camo)</English>
@@ -1391,6 +1506,7 @@
             <Russian>F2000 EGLM (Камо)</Russian>
             <Portuguese>F2000 EGLM (Camo)</Portuguese>
             <Italian>F2000 EGLM (Camo)</Italian>
+            <Japanese>F2000 EGLM (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_Mk20_GL_plain_Name">
             <English>F2000 EGLM</English>
@@ -1403,6 +1519,7 @@
             <Russian>F2000 EGLM</Russian>
             <Portuguese>F2000 EGLM</Portuguese>
             <Italian>F2000 EGLM</Italian>
+            <Japanese>F2000 EGLM</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_Name">
             <English>TAR-21</English>
@@ -1415,6 +1532,7 @@
             <Russian>TAR-21</Russian>
             <Portuguese>TAR-21</Portuguese>
             <Italian>TAR-21</Italian>
+            <Japanese>TAR-21</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG20_Name">
             <English>CTAR-21</English>
@@ -1427,6 +1545,7 @@
             <Russian>CTAR-21</Russian>
             <Portuguese>CTAR-21</Portuguese>
             <Italian>CTAR-21</Italian>
+            <Japanese>CTAR-21</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_TRG21_GL_Name">
             <English>TAR-21 EGLM</English>
@@ -1439,6 +1558,7 @@
             <Russian>TAR-21 EGLM</Russian>
             <Portuguese>TAR-21 EGLM</Portuguese>
             <Italian>TAR-21 EGLM</Italian>
+            <Japanese>TAR-21 EGLM</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_01_Name">
             <English>Vector SMG</English>
@@ -1451,6 +1571,7 @@
             <Russian>Vector SMG</Russian>
             <Portuguese>Vector SMG</Portuguese>
             <Italian>Vector SMG</Italian>
+            <Japanese>ベクター SMG</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_02_Name">
             <English>Scorpion Evo 3 A1</English>
@@ -1463,6 +1584,7 @@
             <Russian>Scorpion Evo 3 A1</Russian>
             <Portuguese>Scorpion Evo 3 A1</Portuguese>
             <Italian>Scorpion Evo 3 A1</Italian>
+            <Japanese>スコーピオン エボ 3 A1</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_PDW2000_Name">
             <English>CPW</English>
@@ -1475,6 +1597,7 @@
             <Russian>CPW</Russian>
             <Portuguese>CPW</Portuguese>
             <Italian>CPW</Italian>
+            <Japanese>CPW</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SDAR_Name">
             <English>RFB SDAR</English>
@@ -1487,6 +1610,7 @@
             <Russian>RFB SDAR</Russian>
             <Portuguese>RFB SDAR</Portuguese>
             <Italian>RFB SDAR</Italian>
+            <Japanese>RFB SDAR</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Mk200_Name">
             <English>Stoner 99 LMG</English>
@@ -1499,6 +1623,7 @@
             <Russian>Stoner 99 LMG</Russian>
             <Portuguese>Stoner 99 LMG</Portuguese>
             <Italian>Stoner 99 LMG</Italian>
+            <Japanese>ストーナー 99 LMG</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_Zafir_Name">
             <English>Negev NG7</English>
@@ -1511,6 +1636,7 @@
             <Russian>Negev NG7</Russian>
             <Portuguese>Negev NG7</Portuguese>
             <Italian>Negev NG7</Italian>
+            <Japanese>ネゲフ NG7</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_EBR_Name">
             <English>Mk14 Mod 1 EBR</English>
@@ -1523,6 +1649,7 @@
             <Russian>Mk14 Mod 1 EBR</Russian>
             <Portuguese>Mk14 Mod 1 EBR</Portuguese>
             <Italian>Mk14 Mod 1 EBR</Italian>
+            <Japanese>Mk14 Mod 1 EBR</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_Name">
             <English>GM6 Lynx</English>
@@ -1535,6 +1662,7 @@
             <Russian>GM6 Lynx</Russian>
             <Portuguese>GM6 Lynx</Portuguese>
             <Italian>GM6 Lynx</Italian>
+            <Japanese>GM6 リンクス</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_camo_Name">
             <English>GM6 Lynx (Camo)</English>
@@ -1547,6 +1675,7 @@
             <Russian>GM6 Lynx (Камо)</Russian>
             <Portuguese>GM6 Lynx (Camo)</Portuguese>
             <Italian>GM6 Lynx (Camo)</Italian>
+            <Japanese>GM6 リンクス (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_Name">
             <English>M200 Intervention</English>
@@ -1559,6 +1688,7 @@
             <Russian>M200 Intervention</Russian>
             <Portuguese>M200 Intervention</Portuguese>
             <Italian>M200 Intervention</Italian>
+            <Japanese>M200 インターベンション</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_camo_Name">
             <English>M200 Intervention (Camo)</English>
@@ -1571,6 +1701,7 @@
             <Russian>M200 Intervention (Камо)</Russian>
             <Portuguese>M200 Intervention (Camo)</Portuguese>
             <Italian>M200 Intervention (Camo)</Italian>
+            <Japanese>M200 インターベンション (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>
@@ -1583,6 +1714,7 @@
             <Russian>VS-121</Russian>
             <Portuguese>VS-121</Portuguese>
             <Italian>VS-121</Italian>
+            <Japanese>VS-121</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_02">
             <English>Noreen "Bad News" ULR</English>
@@ -1595,6 +1727,7 @@
             <Polish>Noreen "Bad News" ULR</Polish>
             <Hungarian>Noreen "Bad News"ULR</Hungarian>
             <Portuguese>Noreen "Bad News" ULR</Portuguese>
+            <Japanese>ノレーン "バッド ニュース" ULR</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02">
             <English>Noreen "Bad News" ULR (Black)</English>
@@ -1607,6 +1740,7 @@
             <Italian>Noreen "Bad News" ULR (Nero)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Fekete)</Hungarian>
             <Portuguese>Noreen "Bad News" ULR (Preto)</Portuguese>
+            <Japanese>ノレーン "バッド ニュース" ULR (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_camo">
             <English>Noreen "Bad News" ULR (Camo)</English>
@@ -1619,6 +1753,7 @@
             <Italian>Noreen "Bad News" ULR (Camo)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Terepmintás)</Hungarian>
             <Portuguese>Noreen "Bad News" ULR (Camuflagem)</Portuguese>
+            <Japanese>ノレーン "バッド ニュース" ULR (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_02_sniper">
             <English>Noreen "Bad News" ULR (Sand)</English>
@@ -1631,6 +1766,7 @@
             <Italian>Noreen "Bad News" ULR (Sabbia)</Italian>
             <Hungarian>Noreen "Bad News"ULR (Homok)</Hungarian>
             <Portuguese>Noreen "Bad News" ULR (Deserto)</Portuguese>
+            <Japanese>ノレーン "バッド ニュース" ULR (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_03">
             <English>SIG 556</English>
@@ -1643,6 +1779,7 @@
             <Italian>SIG 556</Italian>
             <Hungarian>SIG 556</Hungarian>
             <Portuguese>SIG 556</Portuguese>
+            <Japanese>SIG 556</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03">
             <English>SIG 556 (Black)</English>
@@ -1655,6 +1792,7 @@
             <Italian>SIG 556 (Nero)</Italian>
             <Hungarian>SIG 556 (Fekete)</Hungarian>
             <Portuguese>SIG 556 (Preto)</Portuguese>
+            <Japanese>SIG 556 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_khaki">
             <English>SIG 556 (Khaki)</English>
@@ -1667,6 +1805,7 @@
             <Italian>SIG 556 (Khaki)</Italian>
             <Hungarian>SIG 556 (Khaki)</Hungarian>
             <Portuguese>SIG 556 (Caqui)</Portuguese>
+            <Japanese>SIG 556 (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_tan">
             <English>SIG 556 (Sand)</English>
@@ -1679,6 +1818,7 @@
             <Italian>SIG 556 (Sabbia)</Italian>
             <Hungarian>SIG 556 (Homok)</Hungarian>
             <Portuguese>SIG 556 (Deserto)</Portuguese>
+            <Japanese>SIG 556 (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_multicam">
             <English>SIG 556 (Camo)</English>
@@ -1691,6 +1831,7 @@
             <Italian>SIG 556 (Camo)</Italian>
             <Hungarian>SIG 556 (Terepmintás)</Hungarian>
             <Portuguese>SIG 556 (Camuflagem)</Portuguese>
+            <Japanese>SIG 556 (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_woodland">
             <English>SIG 556 (Woodland)</English>
@@ -1703,6 +1844,7 @@
             <Italian>SIG 556 (Woodland)</Italian>
             <Hungarian>SIG 556 (Erdőmintás)</Hungarian>
             <Portuguese>SIG 556 (Floresta)</Portuguese>
+            <Japanese>SIG 556 (森林)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_03_spotter">
             <English>SIG 556 (provisional) spotter</English>
@@ -1715,6 +1857,7 @@
             <Italian>SIG 556 (provisional) spotter</Italian>
             <Hungarian>SIG 556 (Ellátmányi) Megfigyelő</Hungarian>
             <Portuguese>SIG 556 (provisional) observador</Portuguese>
+            <Japanese>SIG 556 (仮) スポッター</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_04">
             <English>ASP-1 Kir</English>
@@ -1727,6 +1870,7 @@
             <Polish>ASP-1 Kir</Polish>
             <Hungarian>ASP-1 Kir</Hungarian>
             <Portuguese>ASP-1 Kir</Portuguese>
+            <Japanese>ASP-1 Kir</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04">
             <English>ASP-1 Kir (Black)</English>
@@ -1739,6 +1883,7 @@
             <Italian>ASP-1 Kir (Nero)</Italian>
             <Hungarian>ASP-1 Kir (Fekete)</Hungarian>
             <Portuguese>ASP-1 Kir (Preto)</Portuguese>
+            <Japanese>ASP-1 Kir (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
@@ -1751,6 +1896,7 @@
             <Italian>ASP-1 Kir (Tan)</Italian>
             <Hungarian>ASP-1 Kir (Cserszín)</Hungarian>
             <Portuguese>ASP-1 Kir (Deserto)</Portuguese>
+            <Japanese>ASP-1 Kir (黄褐)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_05">
             <English>Cyrus</English>
@@ -1763,6 +1909,7 @@
             <Polish>Cyrus</Polish>
             <Hungarian>Cyrus</Hungarian>
             <Portuguese>Cyrus</Portuguese>
+            <Japanese>サイラス</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_blk">
             <English>Cyrus (Black)</English>
@@ -1775,6 +1922,7 @@
             <Italian>Cyrus (Nero)</Italian>
             <Hungarian>Cyrus (Fekete)</Hungarian>
             <Portuguese>Cyrus (Preto)</Portuguese>
+            <Japanese>サイラス (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_hex">
             <English>Cyrus (Hex)</English>
@@ -1787,6 +1935,7 @@
             <Italian>Cyrus (Hex)</Italian>
             <Hungarian>Cyrus (Hex)</Hungarian>
             <Portuguese>Cyrus (Hex)</Portuguese>
+            <Japanese>サイラス (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_05_tan">
             <English>Cyrus (Tan)</English>
@@ -1799,6 +1948,7 @@
             <Italian>Cyrus (Tan)</Italian>
             <Hungarian>Cyrus (Cserszín)</Hungarian>
             <Portuguese>Cyrus (Deserto)</Portuguese>
+            <Japanese>サイラス (黄褐)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DMR_06">
             <English>M14</English>
@@ -1811,6 +1961,7 @@
             <Italian>M14</Italian>
             <Hungarian>M14</Hungarian>
             <Portuguese>M14</Portuguese>
+            <Japanese>M14</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_camo">
             <English>M14 (Camo)</English>
@@ -1823,6 +1974,7 @@
             <Italian>M14 (Camo)</Italian>
             <Hungarian>M14 (Terepmintás)</Hungarian>
             <Portuguese>M14 (Camuflagem)</Portuguese>
+            <Japanese>M14 (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_06_olive">
             <English>M14 (Olive)</English>
@@ -1835,6 +1987,7 @@
             <Italian>M14 (Olive)</Italian>
             <Hungarian>M14 (Olíva)</Hungarian>
             <Portuguese>M14 (Oliva)</Portuguese>
+            <Japanese>M14 (オリーブド ラブ)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01">
             <English>HK121</English>
@@ -1847,6 +2000,7 @@
             <Polish>HK121</Polish>
             <Hungarian>HK121</Hungarian>
             <Portuguese>HK121</Portuguese>
+            <Japanese>HK 121</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_hex">
             <English>HK121 (Hex)</English>
@@ -1859,6 +2013,7 @@
             <Italian>HK121 (Hex)</Italian>
             <Hungarian>HK121 (Hex)</Hungarian>
             <Portuguese>HK121 (Hex)</Portuguese>
+            <Japanese>HK 121 (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_01_tan">
             <English>HK121 (Tan)</English>
@@ -1871,6 +2026,7 @@
             <Italian>HK121 (Tan)</Italian>
             <Hungarian>HK121 (Cserszín)</Hungarian>
             <Portuguese>HK121 (Deserto)</Portuguese>
+            <Japanese>HK 121 (黄褐)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02">
             <English>LWMMG</English>
@@ -1883,6 +2039,7 @@
             <Italian>LWMMG</Italian>
             <Hungarian>LWMMG</Hungarian>
             <Portuguese>LWMMG</Portuguese>
+            <Japanese>LWMMG</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_camo">
             <English>LWMMG (MTP)</English>
@@ -1895,6 +2052,7 @@
             <Italian>LWMMG (MTP)</Italian>
             <Hungarian>LWMMG (MTP)</Hungarian>
             <Portuguese>LWMMG (MTP)</Portuguese>
+            <Japanese>LWMMG (マルチカモ)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_black">
             <English>LWMMG (Black)</English>
@@ -1907,6 +2065,7 @@
             <Italian>LWMMG (Nero)</Italian>
             <Hungarian>LWMMG (Fekete)</Hungarian>
             <Portuguese>LWMMG (Preto)</Portuguese>
+            <Japanese>LWMMG (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_MMG_02_sand">
             <English>LWMMG (Sand)</English>
@@ -1919,6 +2078,7 @@
             <Italian>LWMMG (Sabbia)</Italian>
             <Hungarian>LWMMG (Homok)</Hungarian>
             <Portuguese>LWMMG (Deserto)</Portuguese>
+            <Japanese>LWMMG (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed">
             <English>Jeep Wrangler</English>
@@ -1931,6 +2091,7 @@
             <Italian>Jeep Wrangler</Italian>
             <Hungarian>Jeep Wrangler</Hungarian>
             <Portuguese>Jeep Wrangler</Portuguese>
+            <Japanese>ジープ ラングラー</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_black">
             <English>Jeep Wrangler (Black)</English>
@@ -1943,6 +2104,7 @@
             <Italian>Jeep Wrangler (Nero)</Italian>
             <Hungarian>Jeep Wrangler (Fekete)</Hungarian>
             <Portuguese>Jeep Wrangler (Preto)</Portuguese>
+            <Japanese>ジープ ラングラー (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_blue">
             <English>Jeep Wrangler (Blue)</English>
@@ -1955,6 +2117,7 @@
             <Italian>Jeep Wrangler (Azul)</Italian>
             <Hungarian>Jeep Wrangler (Kék)</Hungarian>
             <Portuguese>Jeep Wrangler (Blu)</Portuguese>
+            <Japanese>ジープ ラングラー (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_green">
             <English>Jeep Wrangler (Green)</English>
@@ -1967,6 +2130,7 @@
             <Italian>Jeep Wrangler (Verde)</Italian>
             <Hungarian>Jeep Wrangler (Zöld)</Hungarian>
             <Portuguese>Jeep Wrangler (Verde)</Portuguese>
+            <Japanese>ジープ ラングラー (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_orange">
             <English>Jeep Wrangler (Orange)</English>
@@ -1979,6 +2143,7 @@
             <Italian>Jeep Wrangler (Laranja)</Italian>
             <Hungarian>Jeep Wrangler (Narancssárga)</Hungarian>
             <Portuguese>Jeep Wrangler (Arancione)</Portuguese>
+            <Japanese>ジープ ラングラー (橙)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_red">
             <English>Jeep Wrangler (Red)</English>
@@ -1991,6 +2156,7 @@
             <Italian>Jeep Wrangler (Vermelha)</Italian>
             <Hungarian>Jeep Wrangler (Piros)</Hungarian>
             <Portuguese>Jeep Wrangler (Rosso)</Portuguese>
+            <Japanese>ジープ ラングラー (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Offroad_02_unarmed_white">
             <English>Jeep Wrangler (White)</English>
@@ -2003,6 +2169,7 @@
             <Italian>Jeep Wrangler (Branca)</Italian>
             <Hungarian>Jeep Wrangler (Fehér)</Hungarian>
             <Portuguese>Jeep Wrangler (Bianco)</Portuguese>
+            <Japanese>ジープ ラングラー (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01">
             <English>Cessna TTx</English>
@@ -2015,6 +2182,7 @@
             <Italian>Cessna TTx</Italian>
             <Hungarian>Cessna TTx</Hungarian>
             <Portuguese>Cessna TTx</Portuguese>
+            <Japanese>セスナ TTx</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_C_Plane_Civil_01_racing">
             <English>Cessna TTx (Racing)</English>
@@ -2027,6 +2195,7 @@
             <Italian>Cessna TTx (Racing)</Italian>
             <Hungarian>Cessna TTx (Racing)</Hungarian>
             <Portuguese>Cessna TTx (Racing)</Portuguese>
+            <Japanese>セスナ TTx (レース仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_O_T_UAV_04_CAS">
             <English>Burraq UCAV</English>
@@ -2039,6 +2208,7 @@
             <Italian>Burraq UCAV</Italian>
             <Hungarian>Burraq UCAV</Hungarian>
             <Portuguese>Burraq UCAV</Portuguese>
+            <Japanese>ブラーク UCAV</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -2051,6 +2221,7 @@
             <Italian>QBZ-95-1 (Nero)</Italian>
             <Hungarian>QBZ-95-1 (Fekete)</Hungarian>
             <Portuguese>QBZ-95-1 (Preto)</Portuguese>
+            <Japanese>QBZ-95-1 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_blk">
             <English>QBZ-95-1 GL (Black)</English>
@@ -2063,6 +2234,7 @@
             <Italian>QBZ-95-1 GL (Nero)</Italian>
             <Hungarian>QBZ-95-1 GL (Fekete)</Hungarian>
             <Portuguese>QBZ-95-1 GL (Preto)</Portuguese>
+            <Japanese>QBZ-95-1 GL (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_blk">
             <English>QBZ-95-1 LSW (Black)</English>
@@ -2075,6 +2247,7 @@
             <Italian>QBZ-95-1 LSW (Nero)</Italian>
             <Hungarian>QBZ-95-1 LSW (Fekete)</Hungarian>
             <Portuguese>QBZ-95-1 LSW (Preto)</Portuguese>
+            <Japanese>QBZ-95-1 LSW (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_blk">
             <English>QBU-88 (Black)</English>
@@ -2087,6 +2260,7 @@
             <Italian>QBU-88 (Nero)</Italian>
             <Hungarian>QBU-88 (Fekete)</Hungarian>
             <Portuguese>QBU-88 (Preto)</Portuguese>
+            <Japanese>QBU-88 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_ghex">
             <English>QBU-88 (Green Hex)</English>
@@ -2099,6 +2273,7 @@
             <Portuguese>QBU-88 (Verde Hex)</Portuguese>
             <Hungarian>QBU-88 (Zöld Hex)</Hungarian>
             <Italian>QBU-88 (Hex Verde)</Italian>
+            <Japanese>QBU-88 (緑蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_hex">
             <English>QBU-88 (Hex)</English>
@@ -2111,6 +2286,7 @@
             <Portuguese>QBU-88 (Hex)</Portuguese>
             <Hungarian>QBU-88 (Hex)</Hungarian>
             <Italian>QBU-88 (Hex)</Italian>
+            <Japanese>QBU-88 (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_GM6_ghex">
             <English>GM6 Lynx (Green Hex)</English>
@@ -2123,6 +2299,7 @@
             <Portuguese>GM6 Lynx (Verde Hex)</Portuguese>
             <Hungarian>GM6 Lynx (Zöld Hex)</Hungarian>
             <Italian>GM6 Lynx (Hex Verde)</Italian>
+            <Japanese>GM6 リンクス (緑蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LMG_03">
             <English>M249 SPW</English>
@@ -2135,6 +2312,7 @@
             <Portuguese>M249 SPW</Portuguese>
             <Hungarian>M249 SPW</Hungarian>
             <Italian>M249 SPW</Italian>
+            <Japanese>M249 SPW</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_LRR_tna">
             <English>M200 Intervention (Tropic)</English>
@@ -2147,6 +2325,7 @@
             <Russian>M200 Intervention (тропик)</Russian>
             <Portuguese>M200 Intervention (Trópico)</Portuguese>
             <Italian>M200 Intervention (Tropico)</Italian>
+            <Japanese>M200 インターベンション (熱帯)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_SMG_05">
             <English>MP5K</English>
@@ -2159,6 +2338,7 @@
             <Portuguese>MP5K</Portuguese>
             <Hungarian>MP5K</Hungarian>
             <Italian>MP5K</Italian>
+            <Japanese>MP5K</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_blk">
             <English>HK416A5 10" (Black)</English>
@@ -2171,6 +2351,7 @@
             <Italian>HK416A5 10" (Nero)</Italian>
             <Hungarian>HK416A5 10" (Fekete)</Hungarian>
             <Portuguese>HK416A5 10" (Preto)</Portuguese>
+            <Japanese>HK416A5 10" (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_khk">
             <English>HK416A5 10" (Khaki)</English>
@@ -2183,6 +2364,7 @@
             <Italian>HK416A5 10" (Khaki)</Italian>
             <Hungarian>HK416A5 10" (Khaki)</Hungarian>
             <Portuguese>HK416A5 10" (Caqui)</Portuguese>
+            <Japanese>HK416A5 10" (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_snd">
             <English>HK416A5 10" (Sand)</English>
@@ -2195,6 +2377,7 @@
             <Italian>HK416A5 10" (Sabbia)</Italian>
             <Hungarian>HK416A5 10" (Homok)</Hungarian>
             <Portuguese>HK416A5 10" (Deserto)</Portuguese>
+            <Japanese>HK416A5 10" (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_blk">
             <English>HK416A5 10" GL (Black)</English>
@@ -2207,6 +2390,7 @@
             <Italian>HK416A5 10" GL (Nero)</Italian>
             <Hungarian>HK416A5 10" GL (Fekete)</Hungarian>
             <Portuguese>HK416A5 10" GL (Preto)</Portuguese>
+            <Japanese>HK416A5 10" GL (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_khk">
             <English>HK416A5 10" GL (Khaki)</English>
@@ -2219,6 +2403,7 @@
             <Italian>HK416A5 10" GL (Khaki)</Italian>
             <Hungarian>HK416A5 10" GL (Khaki)</Hungarian>
             <Portuguese>HK416A5 10" GL (Caqui)</Portuguese>
+            <Japanese>HK416A5 10" GL (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_01_GL_snd">
             <English>HK416A5 10" GL (Sand)</English>
@@ -2231,6 +2416,7 @@
             <Italian>HK416A5 10" GL (Sabbia)</Italian>
             <Hungarian>HK416A5 10" GL (Homok)</Hungarian>
             <Portuguese>HK416A5 10" GL (Deserto)</Portuguese>
+            <Japanese>HK416A5 10" GL (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_blk">
             <English>HK416A5 14.5" (Black)</English>
@@ -2243,6 +2429,7 @@
             <Italian>HK416A5 14.5" (Nero)</Italian>
             <Hungarian>HK416A5 14.5" (Fekete)</Hungarian>
             <Portuguese>HK416A5 14.5" (Preto)</Portuguese>
+            <Japanese>HK416A5 14.5" (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_khk">
             <English>HK416A5 14.5" (Khaki)</English>
@@ -2255,6 +2442,7 @@
             <Italian>HK416A5 14.5" (Khaki)</Italian>
             <Hungarian>HK416A5 14.5" (Khaki)</Hungarian>
             <Portuguese>HK416A5 14.5" (Caqui)</Portuguese>
+            <Japanese>HK416A5 14.5" (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_02_snd">
             <English>HK416A5 14.5" (Sand)</English>
@@ -2267,6 +2455,7 @@
             <Italian>HK416A5 14.5" (Sabbia)</Italian>
             <Hungarian>HK416A5 14.5" (Homok)</Hungarian>
             <Portuguese>HK416A5 14.5" (Deserto)</Portuguese>
+            <Japanese>HK416A5 14.5" (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_blk">
             <English>HK417A2 20" (Black)</English>
@@ -2279,6 +2468,7 @@
             <Italian>HK417A2 20" (Nero)</Italian>
             <Hungarian>HK417A2 20" (Fekete)</Hungarian>
             <Portuguese>HK417A2 20" (Preto)</Portuguese>
+            <Japanese>HK417A2 20" (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_khk">
             <English>HK417A2 20" (Khaki)</English>
@@ -2291,6 +2481,7 @@
             <Italian>HK417A2 20" (Khaki)</Italian>
             <Hungarian>HK417A2 20" (Khaki)</Hungarian>
             <Portuguese>HK417A2 20" (Caqui)</Portuguese>
+            <Japanese>HK417A2 20" (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_SPAR_03_snd">
             <English>HK417A2 20" (Sand)</English>
@@ -2303,6 +2494,7 @@
             <Italian>HK417A2 20" (Sabbia)</Italian>
             <Hungarian>HK417A2 20" (Homok)</Hungarian>
             <Portuguese>HK417A2 20" (Deserto)</Portuguese>
+            <Japanese>HK417A2 20'' (砂地)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_launch_RPG32_ghex">
             <English>RPG-32 (Green Hex)</English>
@@ -2315,6 +2507,7 @@
             <Portuguese>RPG-32 (Verde Hex)</Portuguese>
             <Hungarian>RPG-32 (Zöld Hex)</Hungarian>
             <Italian>RPG-32 (Hex Verde)</Italian>
+            <Japanese>RPG-32 (緑蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_P07_khk">
             <English>P99 (Khaki)</English>
@@ -2327,6 +2520,7 @@
             <Italian>P99 (Khaki)</Italian>
             <Hungarian>P99 (Khaki)</Hungarian>
             <Portuguese>P99 (Caqui)</Portuguese>
+            <Japanese>P99 (カーキ)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_01">
             <English>Makarov PM</English>
@@ -2339,6 +2533,7 @@
             <Portuguese>Makarov PM</Portuguese>
             <Hungarian>Makarov PM</Hungarian>
             <Italian>Makarov PM</Italian>
+            <Japanese>マカロフ PM</Japanese>
         </Key>
     </Package>
 </Project>

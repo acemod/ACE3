@@ -11,6 +11,7 @@
             <Spanish>Cargar</Spanish>
             <Italian>Carica</Italian>
             <French>Charger</French>
+            <Japanese>積み込む</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -22,6 +23,7 @@
             <Spanish>Descargar</Spanish>
             <Italian>Scarica</Italian>
             <French>Décharger</French>
+            <Japanese>下ろす</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -33,6 +35,7 @@
             <Spanish>Carga</Spanish>
             <Italian>Cargo</Italian>
             <French>Cargaison</French>
+            <Japanese>カーゴ</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -44,6 +47,7 @@
             <Spanish>Menu de carga</Spanish>
             <Italian>Menù Cargo</Italian>
             <French>Menu de cargaison</French>
+            <Japanese>カーゴ メニュー</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -55,6 +59,7 @@
             <Spanish>Espacio de carga restante: %1</Spanish>
             <Italian>Spazio cargo rimanente: %1</Italian>
             <French>Espace de cargaison restant : %1</French>
+            <Japanese>カーゴの空き容量は: %1</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -66,6 +71,7 @@
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
             <French>Activer la mise en cargaison</French>
+            <Japanese>カーゴを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -77,6 +83,7 @@
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
             <French>Active le chargement de cargaison dans un vehicule</French>
+            <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -88,6 +95,7 @@
             <Spanish>Ajustes de carga</Spanish>
             <Italian>Impostazioni Cargo</Italian>
             <French>Paramètres de cargaison</French>
+            <Japanese>カーゴ設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -99,6 +107,7 @@
             <Czech>Konfigurace nákladního modulu</Czech>
             <Italian>Configura le impostazioni del modulo cargo</Italian>
             <French>Configure les paramètres du module de cargaison</French>
+            <Japanese>カーゴ モジュールの設定を構成</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -111,6 +120,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
+            <Japanese>%1&amp;lt;br/&amp;gt; は &amp;lt;br/&amp;gt;%2 へ積み込まれた</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -123,6 +133,7 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
+            <Japanese>&amp;lt;br/&amp;gt;%2 から &amp;lt;br/&amp;gt;%1 が下ろされた</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
@@ -134,6 +145,7 @@
             <Italian>Caricando</Italian>
             <Spanish>Cargando</Spanish>
             <French>Chargement de la cargaison</French>
+            <Japanese>カーゴへ積み込んでいる</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -145,6 +157,7 @@
             <Italian>Scaricando</Italian>
             <Spanish>Descargando</Spanish>
             <French>Déchargement de la cargaison</French>
+            <Japanese>カーゴから下ろしている</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -156,6 +169,7 @@
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
+            <Japanese>%1&amp;lt;br/&amp;gt;は積み込めなかった</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -167,6 +181,7 @@
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
+            <Japanese>%1&amp;lt;br/&amp;gt;は下ろせなかった</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
@@ -178,6 +193,7 @@
             <Czech>Vytvořit objekt nakladatelným</Czech>
             <Portuguese>Fazer objeto carregável</Portuguese>
             <Russian>Сделать объект загружаемым</Russian>
+            <Japanese>オブジェクトを積載可能に</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -189,6 +205,7 @@
             <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
             <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
             <Russian>Делает синхронизированный объект загружаемым для модуля перевозки грузов.</Russian>
+            <Japanese>オブジェクトを同期させると、カーゴ システムによる積載が可能になります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -200,15 +217,18 @@
             <Czech>Velikost objektu</Czech>
             <Portuguese>Tamanho do objeto</Portuguese>
             <Russian>Размер объекта</Russian>
+            <Japanese>オブジェクトの大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
             <German>Türlast</German>
+            <Japanese>空中投下</Japanese>
             <Polish>Zrzut zaopatrzenia</Polish>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
             <German>Schieflage</German>
+            <Japanese>機体が水平ではありません</Japanese>
             <Polish>Nierówny lot</Polish>
         </Key>
     </Package>

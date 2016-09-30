@@ -6,6 +6,7 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Japanese>地雷探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
@@ -13,6 +14,7 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
+            <Japanese>地雷探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
@@ -20,6 +22,7 @@
             <French>Activer</French>
             <Russian>Включить</Russian>
             <Czech>Aktivovat</Czech>
+            <Japanese>起動</Japanese>
             <Polish>Aktywuj</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
@@ -27,30 +30,35 @@
             <French>Désactiver</French>
             <Russian>Выключить</Russian>
             <Czech>Deaktivovat</Czech>
+            <Japanese>停止</Japanese>
             <Polish>Deaktywuj</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
             <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
+            <Japanese>ヘッドホンへつなぐ</Japanese>
             <Polish>Podłącz słuchawki</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
             <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
+            <Japanese>ヘッドホンからはずす</Japanese>
             <Polish>Odłącz słuchawki</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
             <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
+            <Japanese>ヘッドホンへ接続された</Japanese>
             <Polish>Słuchawki podpięte</Polish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
+            <Japanese>ヘッドホンから外された</Japanese>
             <Polish>Słuchawki odpięte</Polish>
         </Key>
     </Package>

@@ -4,36 +4,43 @@
         <Key ID="STR_ACE_Tagging_Tagging">
             <English>Tagging</English>
             <Russian>Маркировка</Russian>
+            <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
+            <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
+            <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
+            <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
+            <Japanese>最後の使用</Japanese>
             <Polish>Ostatnio użyte</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
+            <Japanese>無作為な X印</Japanese>
             <Polish>Losowy X</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
             <Russian>Случайный</Russian>
+            <Japanese>無作為</Japanese>
             <Polish>Losowy</Polish>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
@@ -46,6 +53,7 @@
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
+            <Japanese>タグ</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -57,6 +65,7 @@
             <Czech>X černě</Czech>
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
+            <Japanese>黒の X印</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_XRed">
             <English>X red</English>
@@ -68,6 +77,7 @@
             <Czech>X červeně</Czech>
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
+            <Japanese>赤の X印</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_XGreen">
             <English>X green</English>
@@ -79,6 +89,7 @@
             <Czech>X zeleně</Czech>
             <Portuguese>X em verde</Portuguese>
             <Russian>Зеленый Х</Russian>
+            <Japanese>緑の X印</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlue">
             <English>X blue</English>
@@ -90,6 +101,7 @@
             <Czech>X modře</Czech>
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
+            <Japanese>青の X印</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -101,6 +113,7 @@
             <Czech>Černý sprej</Czech>
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
+            <Japanese>黒のスプレー缶</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -112,6 +125,7 @@
             <Czech>Červený sprej</Czech>
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
+            <Japanese>赤のスプレー缶</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -123,6 +137,7 @@
             <Czech>Zelený sprej</Czech>
             <Portuguese>Spray de tinta verde</Portuguese>
             <Russian>Зеленый спрей</Russian>
+            <Japanese>緑のスプレー缶</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -134,6 +149,7 @@
             <Czech>Modrý sprej</Czech>
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
+            <Japanese>青のスプレー缶</Japanese>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -145,6 +161,7 @@
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
+            <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
         </Key>
     </Package>
 </Project>
