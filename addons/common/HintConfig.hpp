@@ -2,8 +2,24 @@
 
 class RscStructuredText;
 class RscMapControl;
+class ctrlStructuredText;
+
+class GVAR(debug_structuredText): ctrlStructuredText {
+    sizeEx = "16 * pixelH";
+    size = "16 * pixelH";
+};
 
 class RscTitles {
+    class GVAR(watchVariableUI) {
+        idd = -1;
+        onLoad = QUOTE(with uiNameSpace do {GVAR(watchVariableUI) = _this select 0};);
+        movingEnable = 0;
+        duration = 999999;
+        fadeIn = "false";
+        fadeOut = "false";
+        class controls {};
+    };
+
     class ACE_RscHint {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_ctrlHint', (_this select 0) displayCtrl 1];";

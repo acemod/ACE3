@@ -12,6 +12,7 @@
             <Portuguese>Avançado Missile Guidance</Portuguese>
             <Hungarian>Fejlett rakétairányító</Hungarian>
             <Russian>Продвинутое наведение ракет</Russian>
+            <Japanese>高度なミサイルの誘導</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -24,6 +25,7 @@
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
             <Portuguese>Orientação avançada de mísseis ou OAM, fornece vários aprimoramentos para travamento de mísseis e disparos. Também é um sistema requerido para disparar armas que utilizem mísseis.</Portuguese>
             <Czech>Pokočilé navádění raket (AMG) poskytuje několik vylepšení pro lepší zaměření a následnou střelbu. Je to prvek vyžadovaný u typu zbraní jako jsou rakety.</Czech>
+            <Japanese>高度なミサイルの誘導、または AMG はミサイルの捕捉と発射に複数の強化をあたえます。これはミサイルの種類によって、枠組みを必要とします。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR">
             <English>Hydra-70 DAGR Missile</English>
@@ -36,6 +38,7 @@
             <Portuguese>Míssil Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR rakéta</Hungarian>
             <Russian>Hydra-70 DAGR</Russian>
+            <Japanese>Hydra-70 DAGR ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Short">
             <English>DAGR</English>
@@ -48,6 +51,7 @@
             <Portuguese>DAGR</Portuguese>
             <Hungarian>DAGR</Hungarian>
             <Russian>DAGR</Russian>
+            <Japanese>DAGR</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_Desc">
             <English>Hydra-70 DAGR Laser Guided Missile</English>
@@ -60,6 +64,7 @@
             <Portuguese>Míssil guiado a laser Hydra-70 DAGR </Portuguese>
             <Hungarian>Hydra-70 DAGR lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hydra-70 DAGR</Russian>
+            <Japanese>Hydra-70 DAGR レーザ誘導ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -72,6 +77,7 @@
             <Portuguese>Míssil Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K rakéta</Hungarian>
             <Russian>Hellfire II AGM-114K</Russian>
+            <Japanese>Hellfire II AGM-114K ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_Short">
             <English>AGM-114K</English>
@@ -84,6 +90,7 @@
             <Portuguese>AGM-114K</Portuguese>
             <Hungarian>AGM-114K</Hungarian>
             <Russian>AGM-114K</Russian>
+            <Japanese>AGM-114K</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K_desc">
             <English>Hellfire II AGM-114K Laser Guided Missile</English>
@@ -96,6 +103,7 @@
             <Portuguese>Míssil guiado a laser Hellfire II AGM-114K</Portuguese>
             <Hungarian>Hellfire II AGM-114K lézer-irányított rakéta</Hungarian>
             <Russian>Управляемая ракета лазерного наведения Hellfire II AGM-114K</Russian>
+            <Japanese>Hellfire II AGM-114K レーザ誘導ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Off">
             <English>Off</English>
@@ -108,6 +116,7 @@
             <Hungarian>Ki</Hungarian>
             <Russian>Выкл.</Russian>
             <Italian>Spento</Italian>
+            <Japanese>無効</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerOnly">
             <English>Player Only</English>
@@ -120,6 +129,7 @@
             <Hungarian>Csak játékosok</Hungarian>
             <Russian>Только игрок</Russian>
             <Italian>Solo Giocatore</Italian>
+            <Japanese>プレイヤーのみ</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_PlayerAndAi">
             <English>Player and AI</English>
@@ -132,6 +142,7 @@
             <Hungarian>Játékosok és AI</Hungarian>
             <Russian>Игрок и боты</Russian>
             <Italian>Giocatore ed IA</Italian>
+            <Japanese>プレイヤーと AI</Japanese>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Italian>Telescopic Ladder</Italian>
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
+            <Japanese>タクティカル ラダー</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -24,6 +25,7 @@
             <Italian>Deploy ladder</Italian>
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
+            <Japanese>ラダーを設置</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -36,6 +38,7 @@
             <Italian>Drop ladder</Italian>
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
+            <Japanese>ラダーを落とす</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend</English>
@@ -47,6 +50,7 @@
             <Italian>Estendi, +Ctrl ruota</Italian>
             <Spanish>Extender</Spanish>
             <French>Déployer</French>
+            <Japanese>伸ばす</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -58,6 +62,7 @@
             <Spanish>+Ctrl inclinar</Spanish>
             <French>+Ctrl incliner</French>
             <Italian>+Ctrl per inclinare</Italian>
+            <Japanese>+Ctrl で傾ける</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -70,6 +75,7 @@
             <Italian>Position ladder</Italian>
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
+            <Japanese>ラダーの位置</Japanese>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -82,6 +88,7 @@
             <Italian>Pickup ladder</Italian>
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
+            <Japanese>ラダーを拾う</Japanese>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Hungarian>MX-2A</Hungarian>
             <Russian>MX-2A</Russian>
             <Italian>MX-2A</Italian>
+            <Japanese>MX-2A</Japanese>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
@@ -24,6 +25,7 @@
             <Hungarian>Hőleképező készülék</Hungarian>
             <Russian>Тепловизионный прибор</Russian>
             <Italian>Dispositivo di visione termica</Italian>
+            <Japanese>サーマル画像表示双眼鏡</Japanese>
         </Key>
     </Package>
 </Project>

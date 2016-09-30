@@ -7,6 +7,8 @@
             <French>Housse d'arme</French>
             <Russian>Чехол</Russian>
             <Czech>Pouzdro na zbraň</Czech>
+            <Japanese>ガンバッグ</Japanese>
+            <Polish>Torba na broń</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_DisplayName_Tan">
             <English>Gunbag (Tan)</English>
@@ -14,6 +16,8 @@
             <French>Housse d'arme (marron clair)</French>
             <Russian>Чехол (желтовато-коричневый)</Russian>
             <Czech>Pouzdro na zbraň (Žlutohnědá)</Czech>
+            <Japanese>ガンバッグ (タン)</Japanese>
+            <Polish>Torba na broń (jasnobrązowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_ToGunbag">
             <English>Put weapon into gunbag</English>
@@ -21,6 +25,8 @@
             <French>Placer l'arme dans la housse d'arme</French>
             <Russian>Зачехлить оружие</Russian>
             <Czech>Vložit zbraň do pouzdra</Czech>
+            <Japanese>ガンバッグへ武器を入れる</Japanese>
+            <Polish>Włóż broń do torby</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_OffGunbag">
             <English>Get weapon out of gunbag</English>
@@ -28,6 +34,8 @@
             <French>Sortir l'arme hors de la housse</French>
             <Russian>Расчехлить оружие</Russian>
             <Czech>Vytáhnout zbraň z pouzdra</Czech>
+            <Japanese>ガンバッグから武器を出す</Japanese>
+            <Polish>Wyciągnij broń z torby</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Status">
             <English>Status</English>
@@ -35,6 +43,8 @@
             <French>Status</French>
             <Russian>Статус</Russian>
             <Czech>Status</Czech>
+            <Japanese>中身</Japanese>
+            <Polish>Status</Polish>
         </Key>
         <Key ID="STR_ACE_Gunbag_Empty">
             <English>Gunbag Empty</English>
@@ -42,6 +52,8 @@
             <French>Housse d'arme vide</French>
             <Russian>Чехол пуст</Russian>
             <Czech>Prázdné pouzdro na zbraň</Czech>
+            <Japanese>ガンバッグは空</Japanese>
+            <Polish>Torba jest pusta</Polish>
         </Key>
     </Package>
 </Project>

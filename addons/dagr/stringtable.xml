@@ -11,6 +11,7 @@
             <Czech>DAGR</Czech>
             <Italian>DAGR</Italian>
             <French>DAGR</French>
+            <Japanese>DAGR</Japanese>
         </Key>
         <Key ID="STR_ACE_DAGR_ConfigureDAGR">
             <English>Configure DAGR</English>
@@ -22,6 +23,7 @@
             <Czech>Konfigurovat DAGR</Czech>
             <Italian>Configura DAGR</Italian>
             <French>Configurer le DAGR</French>
+            <Japanese>DAGR を設定</Japanese>
         </Key>
         <Key ID="STR_ACE_DAGR_ToggleDAGR">
             <English>Toggle DAGR</English>
@@ -33,6 +35,7 @@
             <Czech>Přepnout DAGR</Czech>
             <Italian>Apri DAGR</Italian>
             <French>Activer/Desactiver le DAGR</French>
+            <Japanese>DAGR を常に表示</Japanese>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
@@ -44,6 +47,7 @@
             <Czech>Defense Advanced GPS Receiver</Czech>
             <Italian>Defense Advanced GPS Receiver</Italian>
             <French>Defense Advanced GPS Receiver</French>
+            <Japanese>アドバンスド DAGR の受信を定義します</Japanese>
         </Key>
     </Package>
 </Project>

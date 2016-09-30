@@ -244,7 +244,7 @@ ACE_1Rnd_82mm_Mo_Illum | 82mm Illumination Round | Magazine |
 ACE_1Rnd_82mm_Mo_HE_Guided | 82mm Guided HE Round | Magazine |
 ACE_1Rnd_82mm_Mo_HE_LaserGuided | 82mm Laser Guided HE Round | Magazine |
 
-### M2XA
+### MX2A
 `Added in 3.1.1`
 
 Class Name | In-Game Name | Type   |

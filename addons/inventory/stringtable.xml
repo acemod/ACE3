@@ -12,6 +12,7 @@
             <Hungarian>Legyen a felszerelés menüje nagyobb</Hungarian>
             <Italian>Ingrandisci il menù inventario</Italian>
             <Portuguese>Aumentar o Tamanho da Tela do Inventário</Portuguese>
+            <Japanese>インベントリ表示を大きくする</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_SettingDescription">
             <English>Normally inventory display is scaled by UI size. This allows scaling the Inventory UI size up, but doesn't increase font size allowing more rows displayed.</English>
@@ -24,6 +25,7 @@
             <Hungarian>Alaphelyzetben a kezelőfelület mérete skálázza a felszerelési menüt. Ez az opció engedélyezi a menü felskálázását, de megtartja a betűméreteket, így növelve a láthatóságot.</Hungarian>
             <Italian>Normalmente il menù inventario è scalato in base alle dimensioni interfaccia. Questa opzione di permette di ingrandirlo ulteriormente ma senza aumentare la dimensione del testo.</Italian>
             <Portuguese>Normalmente o tamanho da tela do inventário é ditada pelo tamanho da UI. Isso permite aumentar o tamanho da tela de inventário, mas não aumenta o tamanho da fonte, permitindo que mais linhas sejam visualizadas.</Portuguese>
+            <Japanese>通常のインベントリは UI の大きさによって表示されます。これはインベントリ UI を大きくできますが、文字は大きくできません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Backpacks">
             <English>Backpacks</English>
@@ -35,6 +37,7 @@
             <French>Sacs à dos</French>
             <Portuguese>Mochilas</Portuguese>
             <Russian>Рюкзаки</Russian>
+            <Japanese>バックパック</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Headgear">
             <English>Headgear</English>
@@ -46,6 +49,7 @@
             <French> Couvre-chefs</French>
             <Portuguese>Capacetes</Portuguese>
             <Russian>Головные уборы</Russian>
+            <Japanese>ヘッドギア</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Glasses">
             <English>Glasses</English>
@@ -57,6 +61,7 @@
             <French>Lunettes</French>
             <Portuguese>Óculos</Portuguese>
             <Russian>Очки</Russian>
+            <Japanese>メガネ</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Uniforms">
             <English>Uniforms</English>
@@ -68,6 +73,7 @@
             <French>Uniformes</French>
             <Portuguese>Uniformes</Portuguese>
             <Russian>Униформа</Russian>
+            <Japanese>戦闘服</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Vests">
             <English>Vests</English>
@@ -79,6 +85,7 @@
             <French>Vestes</French>
             <Portuguese>Coletes</Portuguese>
             <Russian>Жилеты</Russian>
+            <Japanese>ベスト</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Grenades">
             <English>Grenades</English>
@@ -90,6 +97,7 @@
             <French>Grenades</French>
             <Portuguese>Granadas</Portuguese>
             <Russian>Гранаты</Russian>
+            <Japanese>手榴弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Inventory_Medical">
             <English>Medical</English>
@@ -101,6 +109,7 @@
             <French>Médical</French>
             <Portuguese>Médico</Portuguese>
             <Russian>Медицина</Russian>
+            <Japanese>医療</Japanese>
         </Key>
     </Package>
 </Project>
