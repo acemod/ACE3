@@ -12,6 +12,7 @@
             <Hungarian>Kilövö betöltése</Hungarian>
             <Italian>Carica lanciamissili</Italian>
             <Portuguese>Recarregar lançador</Portuguese>
+            <Japanese>ランチャーを装填</Japanese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -24,6 +25,7 @@
             <Hungarian>Kilövő betöltés alatt...</Hungarian>
             <Italian>Carico il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
+            <Japanese>ランチャーを装填している・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
@@ -36,6 +38,7 @@
             <Hungarian>Kilövő betöltve</Hungarian>
             <Italian>Lanciamissili caricato</Italian>
             <Portuguese>Lançador Carregado</Portuguese>
+            <Japanese>ランチャーの装填完了</Japanese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
@@ -48,6 +51,7 @@
             <Hungarian>%1 betöltése</Hungarian>
             <Italian>Caricato %1</Italian>
             <Portuguese>Recarregar %1</Portuguese>
+            <Japanese>%1 へ装填</Japanese>
         </Key>
     </Package>
 </Project>

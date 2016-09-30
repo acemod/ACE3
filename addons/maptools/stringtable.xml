@@ -12,6 +12,7 @@
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
+            <Japanese>マップ ツール</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
@@ -24,6 +25,7 @@
             <Portuguese>As Ferramentas de Mapa permitem que você meça distâncias e ângulos no mapa.</Portuguese>
             <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
             <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
+            <Japanese>マップ ツールは地図上で距離や角度を測れます。</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -36,6 +38,7 @@
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
+            <Japanese>マップ ツール</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsHide">
             <English>Hide Map Tool</English>
@@ -48,6 +51,7 @@
             <Polish>Ukryj narzędzia nawigacyjne</Polish>
             <Czech>Schovat pomůcky k mapě</Czech>
             <Russian>Скрыть инструменты</Russian>
+            <Japanese>マップ ツールを隠す</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowNormal">
             <English>Show Normal Map Tool</English>
@@ -60,6 +64,7 @@
             <Polish>Pokaż normalne narzędzia nawigacyjne</Polish>
             <Czech>Zobrazit pomůcku k mapě (Velkou)</Czech>
             <Russian>Показать инструменты (средн. размер)</Russian>
+            <Japanese>マップ ツールを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsShowSmall">
             <English>Show Small Map Tool</English>
@@ -72,6 +77,7 @@
             <Polish>Pokaż pomniejszone narzędzia nawigacyjne</Polish>
             <Czech>Zobrazit pomůcku k mapě (Malou)</Czech>
             <Russian>Показать инструменты (малый размер)</Russian>
+            <Japanese>小さいマップ ツールを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignNorth">
             <English>Align Map Tool to North</English>
@@ -84,6 +90,7 @@
             <Polish>Wyrównaj linijkę do północy</Polish>
             <Czech>Srovnat pomůcku k mapě na sever</Czech>
             <Russian>Выровнять инструменты на север</Russian>
+            <Japanese>マップ ツールを北に合わせる</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapToolsAlignCompass">
             <English>Align Map Tool to Compass</English>
@@ -96,6 +103,7 @@
             <Polish>Wyrównaj linijkę do kompasu</Polish>
             <Czech>Srovnat pomůcku k mapě ke kompasu</Czech>
             <Russian>Выровнять инструменты по компасу</Russian>
+            <Japanese>マップ ツールを方位磁石に合わせる</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsShow">
             <English>Show GPS on Map</English>
@@ -108,6 +116,7 @@
             <Polish>Pokaż GPS na mapie</Polish>
             <Czech>Zobrazit GPS na mapě</Czech>
             <Russian>Показать GPS на карте</Russian>
+            <Japanese>地図上に GPS を表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -120,6 +129,7 @@
             <Polish>Ukryj GPS na mapie</Polish>
             <Czech>Schovat GPS na mapě</Czech>
             <Russian>Скрыть GPS на карте</Russian>
+            <Japanese>地図上から GPS を隠す</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_MarkerDirection">
             <English>Direction: %1°</English>
@@ -132,17 +142,20 @@
             <Russian>Направление: %1°</Russian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
+            <Japanese>方位：%1°</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_displayName">
             <English>Rotate Map Tools Key</English>
             <French>Touche de rotation des outils de naviguation</French>
             <Russian>Клавиша поворота инструментов карты</Russian>
+            <Japanese>マップ ツールの回転キー</Japanese>
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
             <French>Touche modificatrice permettant la rotation des outils de naviguation </French>
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
+            <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
         </Key>
     </Package>

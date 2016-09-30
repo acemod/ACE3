@@ -12,6 +12,7 @@
             <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
             <Italian>Dispiegamento in 5 secondi...</Italian>
             <Portuguese>Será posicionado em 5 segundos...</Portuguese>
+            <Japanese>設置まであと 5 秒・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
@@ -24,6 +25,7 @@
             <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
             <Italian>Rallypoint dispiegato</Italian>
             <Portuguese>Rallypoints posicionado</Portuguese>
+            <Japanese>ラリーポイントを設置した</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToBase">
             <English>Teleport to Base</English>
@@ -36,6 +38,7 @@
             <Portuguese>Teletransportar para a Base</Portuguese>
             <Hungarian>Bázisra teleportálás</Hungarian>
             <Italian>Teleporta alla base</Italian>
+            <Japanese>ベースへ移動</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
@@ -48,6 +51,7 @@
             <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
             <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
             <Italian>Teleporta al rallypoint</Italian>
+            <Japanese>ラリーポイントへ移動</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
@@ -60,6 +64,7 @@
             <Hungarian>Bázisra teleportálva</Hungarian>
             <Italian>Teleportato alla base</Italian>
             <Portuguese>Teletransportado para a Base</Portuguese>
+            <Japanese>ベースへ移動した</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
@@ -72,6 +77,7 @@
             <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
             <Italian>Teleportato al rallypoint</Italian>
             <Portuguese>Teletransportado para o Rallypoints</Portuguese>
+            <Japanese>ラリーポイントへ移動した</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWestBase">
             <English>Rallypoint West (Base)</English>
@@ -84,6 +90,7 @@
             <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
             <Czech>Rallypoint Západ (Základna)</Czech>
             <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
+            <Japanese>ラリーポイント ウエスト (ベース)</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEastBase">
             <English>Rallypoint East (Base)</English>
@@ -96,6 +103,7 @@
             <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
             <Czech>Ralllypoint Východ (Základna)</Czech>
             <Portuguese>Ponto de encontro Lest (Base)</Portuguese>
+            <Japanese>ラリーポイント イースト (ベース)</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
             <English>Rallypoint Independent (Base)</English>
@@ -108,6 +116,7 @@
             <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
             <Czech>Rallypoint Nezávislý (Základna)</Czech>
             <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
+            <Japanese>ラリーポイント インデペンデント (ベース)</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointWest">
             <English>Rallypoint West</English>
@@ -120,6 +129,7 @@
             <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
             <Czech>Rallypoint Západ</Czech>
             <Portuguese>Ponto de encontro Oeste</Portuguese>
+            <Japanese>ラリーポイント ウエスト</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointEast">
             <English>Rallypoint East</English>
@@ -132,6 +142,7 @@
             <Hungarian>Gyülekezőpont, Kelet</Hungarian>
             <Czech>Rallypoint Východ</Czech>
             <Portuguese>Ponto de encontro Leste</Portuguese>
+            <Japanese>ラリーポイント イースト</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RallypointIndependent">
             <English>Rallypoint Independent</English>
@@ -144,6 +155,7 @@
             <Hungarian>Gyülekezőpont, Független</Hungarian>
             <Czech>Rallypoint Nezávislý</Czech>
             <Portuguese>Ponto de encontro Independente</Portuguese>
+            <Japanese>ラリーポイント インデペンデント</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_DisplayName">
             <English>Respawn System</English>
@@ -156,6 +168,7 @@
             <Hungarian>Respawn-rendszer</Hungarian>
             <Russian>Возрождение</Russian>
             <Italian>Sistema Respawn</Italian>
+            <Japanese>リスポン システム</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
             <English>Save Gear?</English>
@@ -168,6 +181,7 @@
             <Hungarian>Felszerelés elmentése?</Hungarian>
             <Russian>Сохранять снаряжение?</Russian>
             <Italian>Salva Equipaggiamento?</Italian>
+            <Japanese>装備を保存？</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
             <English>Respawn with the gear a soldier had just before his death?</English>
@@ -180,6 +194,7 @@
             <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
             <Russian>Возрождать солдата с тем же снаряжением, которое было на нем при смерти?</Russian>
             <Italian>Respawna con l'equipaggiamento che il soldato aveva appena prima di morire?</Italian>
+            <Japanese>ユニットが死ぬ前に持っていた装備でリスポンしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
             <English>Remove bodies?</English>
@@ -192,6 +207,7 @@
             <Hungarian>Holttestek eltávolítása?</Hungarian>
             <Russian>Удалять трупы?</Russian>
             <Italian>Rimuovi corpi?</Italian>
+            <Japanese>死体を削除？</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
             <English>Remove player bodies after disconnect?</English>
@@ -204,6 +220,7 @@
             <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
             <Russian>Удалять трупы игроков после дисконнекта?</Russian>
             <Italian>Rimuovi i corpi dei giocatori quando si disconnettono?</Italian>
+            <Japanese>切断後はプレイヤーの死体を削除しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Module_Description">
             <English>This module enables you to configure ACE functionality specific to respawns.</English>
@@ -215,6 +232,7 @@
             <French>Ce module permet de régler les options de Respawn</French>
             <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
             <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
+            <Japanese>あなたが設定した ACE 機能をリスポンへ設定できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
             <English>Friendly Fire Messages</English>
@@ -227,6 +245,7 @@
             <Hungarian>Baráti tűz üzenetek</Hungarian>
             <Russian>Сообщения об огне по своим</Russian>
             <Italian>Messaggi Fuoco Amico</Italian>
+            <Japanese>友軍誤射の表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
             <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
@@ -238,6 +257,7 @@
             <French>Ce module permet l'affiche de message dans le chat lors d'un tir fraticide et indique qui a tué qui.</French>
             <Italian>Usando questo modulo nella tua missione farà in modo che ogni uccisione per fuoco amico venga mostrata in forma di messaggio in chat.</Italian>
             <Spanish>El usar este módulo, todas las muertes por fuego amigo serán indicadas en el chat.</Spanish>
+            <Japanese>もし友軍誤射による死者が出た場合は、チャットにてその旨を表示します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
             <English>Rallypoint System</English>
@@ -250,6 +270,7 @@
             <Hungarian>Gyülekezőpont-rendszer</Hungarian>
             <Russian>Система точек сбора</Russian>
             <Italian>Sistema Punto di Raccolta</Italian>
+            <Japanese>ラリーポイント システム</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
             <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
@@ -261,6 +282,7 @@
             <Italian>Questo modulo ti consente di usare Punti di Raccolta in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; Respawn ACE</Italian>
             <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
             <French>Ce module vous permet d'utiliser les "rally points" auxquels vous pouvez vous téléporter rapidement depuis un drapeau à la base. Il nécessite le placement d'objets spéciaux sur la carte - base et drapeau, disponibles dans la catégorie Vide -&gt; ACE Respawn.</French>
+            <Japanese>ミッションでベースから素早く移動できるラリーポイントを使えるようにします。ゲーム内に専用オブジェクトとなるベースとフラッグを設置している必要があります。両オブジェクトは Empty 下の ACE リスポンから設置できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
             <English>Move Rallypoint</English>
@@ -273,6 +295,7 @@
             <Hungarian>Gyülekezőpont mozgatása</Hungarian>
             <Russian>Двигать точку сбора</Russian>
             <Italian>Sposta Punto di Raccolta</Italian>
+            <Japanese>ラリーポイントを移動</Japanese>
         </Key>
         <Key ID="STR_ACE_Respawn_EditorCategory">
             <English>ACE Respawn</English>
@@ -285,6 +308,7 @@
             <Hungarian>ACE Respawn</Hungarian>
             <Russian>ACE Возрождение</Russian>
             <Italian>Respawn ACE</Italian>
+            <Japanese>ACE リスポン</Japanese>
         </Key>
     </Package>
 </Project>

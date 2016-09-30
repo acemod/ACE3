@@ -36,7 +36,7 @@ if (_activated && local _logic) then {
     _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
 
     {
-        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
+        _x = [_x] call CBA_fnc_removeWhitespace;
 
         if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
             // CfgSounds accepts a leading backslash, but a double backslash

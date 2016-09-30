@@ -12,6 +12,7 @@
             <French>Cache-flamme (6,5 mm)</French>
             <Russian>Пламегаситель (6,5 мм)</Russian>
             <Spanish>Bocacha (6,5 mm)</Spanish>
+            <Japanese>消炎器 (6.5 mm)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
@@ -24,6 +25,7 @@
             <French>Cache-flamme (7,62 mm)</French>
             <Russian>Пламегаситель (7,62 мм)</Russian>
             <Spanish>Bocacha (7,62 mm)</Spanish>
+            <Japanese>消炎器 (7.62 mm)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
@@ -36,6 +38,7 @@
             <French>Cache-flamme (5,56 mm)</French>
             <Russian>Пламегаситель (5,56 мм)</Russian>
             <Spanish>Bocacha (5,56 mm)</Spanish>
+            <Japanese>消炎器 (5.56 mm)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
@@ -48,6 +51,7 @@
             <French>Cache-flamme (.45 ACP)</French>
             <Russian>Пламегаситель (.45 ACP)</Russian>
             <Spanish>Bocacha (.45 ACP)</Spanish>
+            <Japanese>消炎器 (.45 ACP)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
@@ -60,6 +64,7 @@
             <French>Cache-flamme (9 mm)</French>
             <Russian>Пламегаситель (9 мм)</Russian>
             <Spanish>Bocacha (9 mm)</Spanish>
+            <Japanese>消炎器 (9 mm)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
@@ -72,6 +77,7 @@
             <French>Cache-flamme (.338)</French>
             <Russian>Пламегаситель (.338)</Russian>
             <Spanish>Bocacha (.338)</Spanish>
+            <Japanese>消炎器 (.338)</Japanese>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
@@ -84,6 +90,7 @@
             <French>Cache-flamme (9,3 mm)</French>
             <Russian>Пламегаситель (9,3 мм)</Russian>
             <Spanish>Bocacha (9,3 mm)</Spanish>
+            <Japanese>消炎器 (9.3 mm)</Japanese>
         </Key>
     </Package>
 </Project>

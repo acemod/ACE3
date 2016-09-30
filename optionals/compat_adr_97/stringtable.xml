@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Compat_ADR_97">
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Black_Name">
@@ -12,6 +12,7 @@
             <Italian>P90 TR (Nero)</Italian>
             <Hungarian>P90 TR (Fekete)</Hungarian>
             <Portuguese>P90 TR (Preto)</Portuguese>
+            <Japanese>P90 TR (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Khaki_Name">
             <English>P90 TR (Khaki)</English>
@@ -24,6 +25,7 @@
             <Italian>P90 TR (Khaki)</Italian>
             <Hungarian>P90 TR (Khaki)</Hungarian>
             <Portuguese>P90 TR (Caqui)</Portuguese>
+            <Japanese>P90 TR (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Camo_Name">
             <English>P90 TR (Camo)</English>
@@ -36,6 +38,7 @@
             <Italian>P90 TR (Camo)</Italian>
             <Hungarian>P90 TR (Terepmintás)</Hungarian>
             <Portuguese>P90 TR (Camuflagem)</Portuguese>
+            <Japanese>P90 TR (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_TR_Hex_Name">
             <English>P90 TR (Hex)</English>
@@ -48,6 +51,7 @@
             <Italian>P90 TR (Hex)</Italian>
             <Hungarian>P90 TR (Hex)</Hungarian>
             <Portuguese>P90 TR (Hex)</Portuguese>
+            <Japanese>P90 TR (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Black_Name">
             <English>P90 (Black)</English>
@@ -60,6 +64,7 @@
             <Italian>P90 (Nero)</Italian>
             <Hungarian>P90 (Fekete)</Hungarian>
             <Portuguese>P90 (Preto)</Portuguese>
+            <Japanese>P90 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Khaki_Name">
             <English>P90 (Khaki)</English>
@@ -72,6 +77,7 @@
             <Italian>P90 (Khaki)</Italian>
             <Hungarian>P90 (Khaki)</Hungarian>
             <Portuguese>P90 (Caqui)</Portuguese>
+            <Japanese>P90 (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Camo_Name">
             <English>P90 (Camo)</English>
@@ -84,6 +90,7 @@
             <Italian>P90 (Camo)</Italian>
             <Hungarian>P90 (Terepmintás)</Hungarian>
             <Portuguese>P90 (Camuflagem)</Portuguese>
+            <Japanese>P90 (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Hex_Name">
             <English>P90 (Hex)</English>
@@ -96,6 +103,7 @@
             <Italian>P90 (Hex)</Italian>
             <Hungarian>P90 (Hex)</Hungarian>
             <Portuguese>P90 (Hex)</Portuguese>
+            <Japanese>P90 (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Black_Name">
             <English>PS90 TR (Black)</English>
@@ -108,6 +116,7 @@
             <Italian>PS90 TR (Nero)</Italian>
             <Hungarian>PS90 TR (Fekete)</Hungarian>
             <Portuguese>PS90 TR (Preto)</Portuguese>
+            <Japanese>PS90 TR (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Khaki_Name">
             <English>PS90 TR (Khaki)</English>
@@ -120,6 +129,7 @@
             <Italian>PS90 TR (Khaki)</Italian>
             <Hungarian>PS90 TR (Khaki)</Hungarian>
             <Portuguese>PS90 TR (Caqui)</Portuguese>
+            <Japanese>PS90 TR (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Camo_Name">
             <English>PS90 TR (Camo)</English>
@@ -132,6 +142,7 @@
             <Italian>PS90 TR (Camo)</Italian>
             <Hungarian>PS90 TR (Terepmintás)</Hungarian>
             <Portuguese>PS90 TR (Camuflagem)</Portuguese>
+            <Japanese>PS90 TR (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_TR_Hex_Name">
             <English>PS90 TR (Hex)</English>
@@ -144,6 +155,7 @@
             <Italian>PS90 TR (Hex)</Italian>
             <Hungarian>PS90 TR (Hex)</Hungarian>
             <Portuguese>PS90 TR (Hex)</Portuguese>
+            <Japanese>PS90 TR (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Black_Name">
             <English>PS90 (Black)</English>
@@ -156,6 +168,7 @@
             <Italian>PS90 (Nero)</Italian>
             <Hungarian>PS90 (Fekete)</Hungarian>
             <Portuguese>PS90 (Preto)</Portuguese>
+            <Japanese>PS90 (黒)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Khaki_Name">
             <English>PS90 (Khaki)</English>
@@ -168,6 +181,7 @@
             <Italian>PS90 (Khaki)</Italian>
             <Hungarian>PS90 (Khaki)</Hungarian>
             <Portuguese>PS90 (Caqui)</Portuguese>
+            <Japanese>PS90 (土埃)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Camo_Name">
             <English>PS90 (Camo)</English>
@@ -180,6 +194,7 @@
             <Italian>PS90 (Camo)</Italian>
             <Hungarian>PS90 (Terepmintás)</Hungarian>
             <Portuguese>PS90 (Camuflagem)</Portuguese>
+            <Japanese>PS90 (迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_PS90_Hex_Name">
             <English>PS90 (Hex)</English>
@@ -192,6 +207,7 @@
             <Italian>PS90 (Hex)</Italian>
             <Hungarian>PS90 (Hex)</Hungarian>
             <Portuguese>PS90 (Hex)</Portuguese>
+            <Japanese>PS90 (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Mag_Name">
             <English>5.7mm 50Rnd Mag</English>
@@ -204,6 +220,7 @@
             <Portuguese>Carregador de 50 projéteis de 5.7mm</Portuguese>
             <Italian>Caricatore 5.7mm 50Rnd</Italian>
             <Russian>Магазин из 50-ти 5,7 мм</Russian>
+            <Japanese>5.7mm 50 発入り弾倉</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_ADR_97_P90_Mag_DescriptionShort">
             <English>Caliber: 5.7mm&lt;br /&gt;Rounds: 50&lt;br /&gt;Used in: P90</English>
@@ -216,6 +233,7 @@
             <Czech>Ráže: 5.7mm&lt;br /&gt;Nábojů: 50&lt;br /&gt;Použití u: P90</Czech>
             <Portuguese>Calibre: 5.7mm&lt;br /&gt;Cartuchos: 50&lt;br /&gt;Usado em: P90</Portuguese>
             <Hungarian>Kaliber: 5,7mm&lt;br /&gt;Lövedékek: 50&lt;br /&gt;Használható: P90</Hungarian>
+            <Japanese>口径: 5.7mm&lt;br /&gt;装弾数: 50&lt;br /&gt;次で使用: P90</Japanese>
         </Key>
     </Package>
 </Project>

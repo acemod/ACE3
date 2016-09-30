@@ -12,6 +12,7 @@
             <Hungarian>Távolsági kártya</Hungarian>
             <Russian>Таблица поправок</Russian>
             <Italian>Tavola Balistica</Italian>
+            <Japanese>射表</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -24,6 +25,7 @@
             <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
             <Russian>Шаг 50 МЕТРОВ - MRAD/MRAD (сетка/маховички)</Russian>
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
+            <Japanese>50 メートル増やす -- MRAD/MRAD (照準線/砲塔)</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -36,6 +38,7 @@
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
+            <Japanese>射表を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -48,6 +51,7 @@
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
+            <Japanese>複製された射表を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -60,6 +64,7 @@
             <Hungarian>Távolsági kártya kinyitása</Hungarian>
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
+            <Japanese>射表を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -72,6 +77,7 @@
             <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
+            <Japanese>複製された射表を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -84,6 +90,7 @@
             <Hungarian>Távolsági kártya másolása</Hungarian>
             <Russian>Скопировать таблицу поправок</Russian>
             <Italian>Copia Tavola Balistica</Italian>
+            <Japanese>射表を複製する</Japanese>
         </Key>
     </Package>
 </Project>

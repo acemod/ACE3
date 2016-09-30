@@ -3,14 +3,17 @@
     <Package name="Chemlights">
         <Key ID="STR_ACE_Chemlights_Action_Chemlights">
             <English>Chemlights</English>
+            <Japanese>ケミライト</Japanese>
             <Polish>Świetliki</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare">
             <English>Prepare %1</English>
+            <Japanese>%1 をつかう</Japanese>
             <Polish>Przygotuj %1</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
+            <Japanese>%1&amp;lt;br/&amp;gt; をつかった</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Inventory_Full">
@@ -24,150 +27,186 @@
             <Italian>Non hai più spazio</Italian>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
+            <Japanese>インベントリに空きがありません</Japanese>
         </Key>
         <Key ID="STR_ACE_Chemlights_Box_DisplayName">
             <English>[ACE] Chemlights</English>
+            <Japanese>[ACE] ケミライト</Japanese>
             <Polish>[ACE] Świetliki</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
             <English>Chemlight (Orange)</English>
+            <Japanese>ケミライト (オレンジ)</Japanese>
             <Polish>Świetlik (pomarańczowy)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
             <English>Orange Light</English>
+            <Japanese>オレンジ色</Japanese>
             <Polish>Pomarańczowe światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - オレンジ&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - pomarańczowe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayName">
             <English>Chemlight (White)</English>
+            <Japanese>ケミライト (白)</Japanese>
             <Polish>Świetlik (biały)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
             <English>White Light</English>
+            <Japanese>白色</Japanese>
             <Polish>Białe światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 白&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - białe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayName">
             <English>Chemlight (Hi Red)</English>
+            <Japanese>ケミライト (高輝度 赤)</Japanese>
             <Polish>Świetlik (jaskrawy czerwony)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
+            <Japanese>高輝度の赤色</Japanese>
             <Polish>Jaskrawe czerwone światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
+            <Japanese>ケミライト (高輝度 黄)</Japanese>
             <Polish>Świetlik (jaskrawy żółty)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
+            <Japanese>高輝度の黄色</Japanese>
             <Polish>Jaskrawe żółte światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
             <English>Chemlight (Hi Orange)</English>
+            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
             <Polish>Świetlik (jaskrawy pomarańczowy)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DisplayNameShort">
             <English>Orange Hi Light</English>
+            <Japanese>高輝度のオレンジ</Japanese>
             <Polish>Jaskrawe pomarańczowe światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
             <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
+            <Japanese>ケミライト (高輝度 白)</Japanese>
             <Polish>Świetlik (jaskrawy biały)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
             <English>White Hi Light</English>
+            <Japanese>高輝度の白色</Japanese>
             <Polish>Jaskrawe białe światło</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
             <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 白 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
+            <Japanese>ケミライト (IR)</Japanese>
             <Polish>Świetlik (podczerwony)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayNameShort">
             <English>IR Light</English>
+            <Japanese>赤外線光</Japanese>
             <Polish>Światło podczerwone</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 赤外線&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - podczerwone&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DisplayName">
             <English>Chemlight Shield (Empty)</English>
+            <Japanese>ケミライト シールド (空)</Japanese>
             <Polish>Osłona na świetlik (pusta)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Empty_DescriptionShort">
             <English>Shield for chemlights. Combine with chemlight to prepare reading light.</English>
+            <Japanese>ケミライトを入れられます。シールドとケミライトを組み合わせることで、照明にもなりえます。</Japanese>
             <Polish>Osłona na świetliki. Połącz ją ze świetlikiem by stworzyć lampkę do czytania.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
             <English>Chemlight Shield (Green)</English>
+            <Japanese>ケミライト シールド (緑)</Japanese>
             <Polish>Osłona na świetlik (zielona)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Green_DescriptionShort">
             <English>Green reading light.</English>
+            <Japanese>緑色の照明。</Japanese>
             <Polish>Zielona lampka.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
             <English>Chemlight Shield (Red)</English>
+            <Japanese>ケミライト シールド (赤)</Japanese>
             <Polish>Osłona na świetlik (czerwona)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Red_DescriptionShort">
             <English>Red reading light.</English>
+            <Japanese>赤色の照明。</Japanese>
             <Polish>Czerwona lampka.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
             <English>Chemlight Shield (Blue)</English>
+            <Japanese>ケミライト シールド (青)</Japanese>
             <Polish>Osłona na świetlik (niebieska)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Blue_DescriptionShort">
             <English>Blue reading light.</English>
+            <Japanese>青色の照明。</Japanese>
             <Polish>Niebieska lampka.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
             <English>Chemlight Shield (Yellow)</English>
+            <Japanese>ケミライト シールド (黄)</Japanese>
             <Polish>Osłona na świetlik (żółta)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Yellow_DescriptionShort">
             <English>Yellow reading light.</English>
+            <Japanese>黄色の照明。</Japanese>
             <Polish>Żółta lampka.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
             <English>Chemlight Shield (Orange)</English>
+            <Japanese>ケミライト シールド (オレンジ)</Japanese>
             <Polish>Osłona na świetlik (pomarańczowa)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_Orange_DescriptionShort">
             <English>Orange reading light.</English>
+            <Japanese>オレンジの照明。</Japanese>
             <Polish>Pomarańczowa lampka.</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
             <English>Chemlight Shield (White)</English>
+            <Japanese>ケミライト シールド (白)</Japanese>
             <Polish>Osłona na świetlik (biała)</Polish>
         </Key>
         <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
             <English>White reading light.</English>
-            <Polish>Biała lampka.</Polish>
+            <Japanese>白の照明。</Japanese>
         </Key>
     </Package>
 </Project>

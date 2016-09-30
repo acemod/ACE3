@@ -11,6 +11,7 @@
             <Italian>Impostazioni Riarmo</Italian>
             <Spanish>Parámetros de rearme</Spanish>
             <French>Options de réarmement</French>
+            <Japanese>再武装設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
             <English>This module allows you to tweak rearm system settings.</English>
@@ -22,6 +23,7 @@
             <Italian>Questo modulo ti consente di cambiare le impostazioni del sistema Riarmo.</Italian>
             <Spanish>Este módulo permite cambiar los parámetros de rearme.</Spanish>
             <French>Ce module autorise l'amélioration du système de réarmement.</French>
+            <Japanese>再武装システムの設定を微調整します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
             <English>Rearm Amount</English>
@@ -33,6 +35,7 @@
             <Italian>Ammontare Riarmo</Italian>
             <Spanish>Velocidad de rearme</Spanish>
             <French>Quantité à réarmer</French>
+            <Japanese>再武装の度合い</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
             <English>How fast should a vehicle be rearmed?</English>
@@ -44,6 +47,7 @@
             <Italian>Quanto velocemente dovrebbe essere riarmato un veicolo?</Italian>
             <Spanish>Cuán rápido es el proceso de rearme?</Spanish>
             <French>A quelle vitesse devrait être réarmé un véhicule ?</French>
+            <Japanese>車両を再武装する速さを設定しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
             <English>Entire Vehicle</English>
@@ -55,6 +59,7 @@
             <Italian>Tutto il Veicolo</Italian>
             <Spanish>Vehículo completo</Spanish>
             <French>Véhicule entier</French>
+            <Japanese>対象の車両</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazine">
             <English>Entire Magazine</English>
@@ -66,6 +71,7 @@
             <Italian>Tutto il Caricatore</Italian>
             <Spanish>Cargador completo</Spanish>
             <French>Chargeur entier</French>
+            <Japanese>対象の弾薬</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_caliber">
             <English>Amount based on caliber</English>
@@ -77,6 +83,7 @@
             <Italian>Ammontare basato sul calibro</Italian>
             <Spanish>Cantidad basada en el calibre</Spanish>
             <French>Quantité basée sur le calibre</French>
+            <Japanese>口径に基づいた度合い</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
@@ -88,6 +95,7 @@
             <Italian>Riarma</Italian>
             <Spanish>Rearmar</Spanish>
             <French>Réarmer</French>
+            <Japanese>再武装</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmAction">
             <English>Rearming %1 with %2...</English>
@@ -99,6 +107,7 @@
             <Italian>Sto Riarmando %1 con %2...</Italian>
             <Spanish>Rearmando %1 con %2...</Spanish>
             <French>Réarmement de %1 avec %2...</French>
+            <Japanese>%2により%1を再武装する。</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_BasicRearmAction">
             <English>Rearming %1...</English>
@@ -110,6 +119,7 @@
             <Italian>Riarmando %1...</Italian>
             <Spanish>Rearmando %1...</Spanish>
             <French>Réarmement de %1...</French>
+            <Japanese>%1を再武装中・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAction">
             <English>Taking %1 for %2...</English>
@@ -121,6 +131,7 @@
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
             <French>Prend %1 pour %2...</French>
+            <Japanese>%2のために%1を取得しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAmmo">
             <English>Take ammo</English>
@@ -132,6 +143,7 @@
             <Italian>Prendi munizioni</Italian>
             <Spanish>Tomar munición</Spanish>
             <French>Prendre la munition</French>
+            <Japanese>弾薬をとる</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_PickUpAmmo">
             <English>Pick up ammo</English>
@@ -143,6 +155,7 @@
             <Italian>Raccogli munizioni</Italian>
             <Spanish>Levantar munición</Spanish>
             <French>Ramasser la munition</French>
+            <Japanese>弾薬を拾う</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmo">
             <English>Store ammo</English>
@@ -154,6 +167,7 @@
             <Italian>Riponi munizioni</Italian>
             <Spanish>Guardar munición</Spanish>
             <French>Stocker la munition</French>
+            <Japanese>弾薬を戻す</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_StoreAmmoAction">
             <English>Storing %1 in %2...</English>
@@ -165,6 +179,7 @@
             <Italian>Sto riponendo %1 in %2...</Italian>
             <Spanish>Guardando %1 en %2...</Spanish>
             <French>Stocke %1 dans %2...</French>
+            <Japanese>%2へ%1を戻しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_GrabAction">
             <English>Picking up ammo...</English>
@@ -175,6 +190,7 @@
             <Italian>Sto raccogliendo le munizioni...</Italian>
             <Spanish>Levantando munición...</Spanish>
             <French>Ramassage des munitions...</French>
+            <Japanese>弾薬を拾っている・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
             <English>Rearmed %1 rounds of %2 on %3</English>
@@ -186,6 +202,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3</French>
+            <Japanese>%3にある%2の%1弾頭を再武装した</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
             <English>Smoke Screen</English>
@@ -197,6 +214,7 @@
             <Portuguese>Cortina de fumaça</Portuguese>
             <Russian>Дым. завеса</Russian>
             <Spanish>Pantalla de humo</Spanish>
+            <Japanese>煙幕弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_60Rnd_CMFlareMagazine">
             <English>Flares</English>
@@ -208,6 +226,7 @@
             <Portuguese>Sinalizadores</Portuguese>
             <Russian>ЛТЦ</Russian>
             <Spanish>Bengalas</Spanish>
+            <Japanese>フレア</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
             <English>30mm HEI</English>
@@ -219,6 +238,7 @@
             <Italian>30mm HEI</Italian>
             <Spanish>30mm HEI</Spanish>
             <French>30mm HEI</French>
+            <Japanese>30mm 焼夷りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_500Rnd_Cannon_30mm_Plane_CAS_02_F">
             <English>30mm HEI-T</English>
@@ -230,6 +250,7 @@
             <Italian>30mm HEI-T</Italian>
             <Spanish>30mm HEI-T</Spanish>
             <French>30mm HEI-T</French>
+            <Japanese>30mm 焼夷曳光りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_04_F">
             <English>AIM-9 Sidewinder</English>
@@ -241,6 +262,7 @@
             <Italian>AIM-9 Sidewinder</Italian>
             <Spanish>AIM-9 Sidewinder</Spanish>
             <French>AIM-9 Sidewinder</French>
+            <Japanese>AIM-9 サイドワインダー</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_03_F">
             <English>Wympel R-73</English>
@@ -252,6 +274,7 @@
             <Italian>Wympel R-73</Italian>
             <Spanish>Wympel R-73</Spanish>
             <French>Wympel R-73</French>
+            <Japanese>ヴィンペル R-73</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_6Rnd_Missile_AGM_02_F">
             <English>AGM-65 Maverick</English>
@@ -263,6 +286,7 @@
             <Italian>AGM-65 Maverick</Italian>
             <Spanish>AGM-65 Maverick</Spanish>
             <French>AGM-65 Maverick</French>
+            <Japanese>AGM-65 マーベリック</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Missile_AGM_01_F">
             <English>Kh-25MTP</English>
@@ -274,6 +298,7 @@
             <Italian>Kh-25MTP</Italian>
             <Spanish>Kh-25MTP</Spanish>
             <French>Kh-25MTP</French>
+            <Japanese>Kh-25MTP</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_HE_F">
             <English>Hydra 70 HE</English>
@@ -285,6 +310,7 @@
             <Italian>Hydra 70 HE</Italian>
             <Spanish>Hydra 70 HE</Spanish>
             <French>Hydra 70 HE</French>
+            <Japanese>ハイドラ 70 りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_HE_F">
             <English>S-8 HE</English>
@@ -296,6 +322,7 @@
             <Italian>S-8 HE</Italian>
             <Spanish>S-8 HE</Spanish>
             <French>S-8 HE</French>
+            <Japanese>S-8 りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_AP_F">
             <English>Hydra 70 AP</English>
@@ -307,6 +334,7 @@
             <Italian>Hydra 70 AP</Italian>
             <Spanish>Hydra 70 AP</Spanish>
             <French>Hydra 70 AP</French>
+            <Japanese>ハイドラ 70 徹甲弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_AP_F">
             <English>S-8 AP</English>
@@ -318,6 +346,7 @@
             <Italian>S-8 AP</Italian>
             <Spanish>S-8 AP</Spanish>
             <French>S-8 AP</French>
+            <Japanese>S-8 徹甲弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
             <English>GBU-12</English>
@@ -329,6 +358,7 @@
             <Italian>GBU-12</Italian>
             <Spanish>GBU-12</Spanish>
             <French>GBU-12</French>
+            <Japanese>GBU-12</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
             <English>FAB-250M-54</English>
@@ -340,6 +370,7 @@
             <Italian>FAB-250M-54</Italian>
             <Spanish>FAB-250M-54</Spanish>
             <French>FAB-250M-54</French>
+            <Japanese>FAB-250M-54</Japanese>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Italian>Aggangia il bersagio</Italian>
             <Spanish>Fijar objetivo (Mantener)</Spanish>
             <Portuguese>Travar Alvo(Segurar)</Portuguese>
+            <Japanese>目標を捕捉 (押しっぱ)</Japanese>
         </Key>
         <Key ID="STR_ACE_Javelin_CycleFireMode">
             <English>Cycle Fire Mode</English>
@@ -24,6 +25,7 @@
             <Italian>Alterna le modalità di fuoco</Italian>
             <Spanish>Cambiar modo de disparo</Spanish>
             <Portuguese>Alterar Modo de Disparo</Portuguese>
+            <Japanese>発射モード切り替え</Japanese>
         </Key>
     </Package>
 </Project>

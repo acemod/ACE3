@@ -12,6 +12,7 @@
             <Portuguese>Mostrar peso em libras</Portuguese>
             <Hungarian>Súly megjelenítése fontban.</Hungarian>
             <Russian>Показывать вес в фунтах</Russian>
+            <Japanese>ポンドで重量を表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Movement_Weight">
             <English>Weight:</English>
@@ -24,6 +25,7 @@
             <Portuguese>Peso:</Portuguese>
             <Hungarian>Súly:</Hungarian>
             <Russian>Вес:</Russian>
+            <Japanese>重量：</Japanese>
         </Key>
         <Key ID="STR_ACE_Movement_Climb">
             <English>Climb</English>
@@ -36,6 +38,7 @@
             <Hungarian>Mászás</Hungarian>
             <Italian>Arrampicati</Italian>
             <Portuguese>Subir</Portuguese>
+            <Japanese>登る</Japanese>
         </Key>
         <Key ID="STR_ACE_Movement_CanNotClimb">
             <English>Can't climb here</English>
@@ -48,6 +51,7 @@
             <Hungarian>Itt nem tudsz mászni</Hungarian>
             <Italian>Non puoi arrampicarti qui</Italian>
             <Portuguese>Não se pode subir aqui</Portuguese>
+            <Japanese>ここは登れない</Japanese>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Hungarian>Zeus beállítások</Hungarian>
             <Russian>Настройки Зевса</Russian>
             <Italian>Impostazioni Zeus</Italian>
+            <Japanese>Zeus 設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_Settings_Description">
             <English>Provides control over various aspects of Zeus.</English>
@@ -24,6 +25,7 @@
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
+            <Japanese>Zeus のさまざまな側面を強化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_DisplayName">
             <English>Ascension Messages</English>
@@ -36,6 +38,7 @@
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
             <Italian>Messaggi di Ascesa</Italian>
+            <Japanese>転生表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ascension_Description">
             <English>Display global popup messages when a player is assigned as Zeus.</English>
@@ -48,6 +51,7 @@
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
+            <Japanese>プレイヤーが Zeus になるとき、全体へポップアップ表示をおこないます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_DisplayName">
             <English>Zeus Eagle</English>
@@ -60,6 +64,7 @@
             <Hungarian>Zeus sas</Hungarian>
             <Russian>Орел Зевса</Russian>
             <Italian>Aquila Zeus</Italian>
+            <Japanese>Zeus イーグル</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_bird_Description">
             <English>Spawn an eagle that follows the Zeus camera.</English>
@@ -72,6 +77,7 @@
             <Hungarian>Lerak egy sast, ami követi a Zeus kamerát.</Hungarian>
             <Russian>Спавнит орла, который следует за камерой Зевса.</Russian>
             <Italian>Crea un'aquila che segue la camera Zeus.</Italian>
+            <Japanese>Zeus カメラを追うイーグルを出現します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_DisplayName">
             <English>Wind Sounds</English>
@@ -84,6 +90,7 @@
             <Hungarian>Szélhangok</Hungarian>
             <Russian>Звук ветра</Russian>
             <Italian>Suoni del Vento</Italian>
+            <Japanese>風の音</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_remoteWind_Description">
             <English>Play wind sounds when Zeus remote controls a unit.</English>
@@ -96,6 +103,7 @@
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
             <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
+            <Japanese>ユニットが Zeus 遠隔操作になったとき、風の音がします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_DisplayName">
             <English>Ordnance Warning</English>
@@ -108,6 +116,7 @@
             <Hungarian>Tüzérségi figyelmeztetés</Hungarian>
             <Russian>Предупреждение об арте</Russian>
             <Italian>Allarme Esplosivi</Italian>
+            <Japanese>砲撃の警告</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_radioOrdnance_Description">
             <English>Play a radio warning when Zeus uses ordnance.</English>
@@ -120,6 +129,7 @@
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
             <Italian>Esegui un messaggio radio quando Zeus usa esplosivi.</Italian>
+            <Japanese>Zeus が砲撃をつかうときに、無線で警告を流します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_DisplayName">
             <English>Reveal Mines</English>
@@ -132,6 +142,7 @@
             <Hungarian>Aknák feltárása</Hungarian>
             <Russian>Показывать мины</Russian>
             <Italian>Rivela Mine</Italian>
+            <Japanese>地雷の表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_Description">
             <English>Reveal mines to allies and place map markers.</English>
@@ -144,6 +155,7 @@
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
             <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
+            <Japanese>友軍に地雷と地図へ設置マーカーを表示します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_partial">
             <English>Reveal to Allies</English>
@@ -156,6 +168,7 @@
             <Hungarian>Feltárás a szövetségeseknek</Hungarian>
             <Russian>Показывать союзникам</Russian>
             <Italian>Rivela ad Alleati</Italian>
+            <Japanese>友軍へ表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_revealMines_full">
             <English>Allies + Map Markers</English>
@@ -168,6 +181,7 @@
             <Hungarian>Szövetségesek + térkép jelölők</Hungarian>
             <Russian>Союзники + Маркеры на карте</Russian>
             <Italian>Alleati + Marcatori Mappa</Italian>
+            <Japanese>友軍と地図マーカー</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleCaptive_DisplayName">
             <English>Toggle Captive</English>
@@ -180,12 +194,14 @@
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
             <Italian>Apri Catturato</Italian>
+            <Japanese>捕虜としてトグル</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleDefendArea_DisplayName">
             <English>Defend Area</English>
             <French>Défendre la zone</French>
             <Russian>Защитить зону</Russian>
             <Czech>Bránit oblast</Czech>
+            <Japanese>防衛範囲</Japanese>
             <Polish>Osłaniaj obszar</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
@@ -193,6 +209,7 @@
             <French>Compétence global de l'IA</French>
             <Russian>Мастерство ботов</Russian>
             <Czech>Globální zkušenosti AI</Czech>
+            <Japanese>総合的な AI スキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
@@ -200,6 +217,7 @@
             <French>Compétence générale</French>
             <Russian>Общий уровень</Russian>
             <Czech>Primární zkušenosti</Czech>
+            <Japanese>総合スキル</Japanese>
             <Polish>Ogólne umiejętności</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
@@ -207,6 +225,7 @@
             <French>Change: general, commanding, courage</French>
             <Russian>Изменяет: general, commanding, courage</Russian>
             <Czech>Upravuje: general, commanding, courage</Czech>
+            <Japanese>変更：general, commanding, courage</Japanese>
             <Polish>Zmienia: ogólne, dowodzenie, odwaga</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
@@ -214,6 +233,7 @@
             <French>Précision</French>
             <Russian>Меткость</Russian>
             <Czech>Přesnost</Czech>
+            <Japanese>精度</Japanese>
             <Polish>Precyzja</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
@@ -221,6 +241,7 @@
             <French>Change: aimingAccuracy</French>
             <Russian>Изменяет: aimingAccuracy</Russian>
             <Czech>Upravuje: aimingAccuracy</Czech>
+            <Japanese>変更：aimingAccuracy</Japanese>
             <Polish>Zmienia: precyzję celowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
@@ -228,6 +249,7 @@
             <French>Maniement d'armes</French>
             <Russian>Владение оружием</Russian>
             <Czech>Zacházení se zbraní</Czech>
+            <Japanese>武器の扱い</Japanese>
             <Polish>Obsługa broni</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
@@ -235,6 +257,7 @@
             <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
+            <Japanese>変更：aimingShake, aimingSpeed, reloadSpeed</Japanese>
             <Polish>Zmienia: drżenie broni, szybkość celowania, szybkość przeładowania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
@@ -242,6 +265,7 @@
             <French>repérage</French>
             <Russian>Обнаружение</Russian>
             <Czech>Vnímavost</Czech>
+            <Japanese>索敵</Japanese>
             <Polish>Rozpoznanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
@@ -249,6 +273,7 @@
             <French>Change: spotDistance, spotTime</French>
             <Russian>Изменяет: spotDistance, spotTime</Russian>
             <Czech>Upravuje: spotDistance, spotTime</Czech>
+            <Japanese>変更：spotDistance, spotTime</Japanese>
             <Polish>Zmienia: zasięg rozpoznawania, czas rozpoznawania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
@@ -256,6 +281,7 @@
             <French>Chercher couverture</French>
             <Russian>Поиск укрытий</Russian>
             <Czech>Vyhledávat krytí</Czech>
+            <Japanese>遮蔽</Japanese>
             <Polish>Szukaj osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
@@ -263,6 +289,7 @@
             <French>L'IA devrait elle chercher couverture</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
+            <Japanese>AI は遮蔽を取るようになります</Japanese>
             <Polish>Czy AI powinno szukać osłon</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
@@ -270,6 +297,7 @@
             <French>Combat automatique</French>
             <Russian>Авто режим боя</Russian>
             <Czech>Automatický režim boje</Czech>
+            <Japanese>自動戦闘</Japanese>
             <Polish>Auto walka</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
@@ -277,6 +305,7 @@
             <French>L'IA devrait elle passer automatiquement en mode combat</French>
             <Russian>Должны ли боты автоматически переходить в режим боя</Russian>
             <Czech>AI se automaticky přepne do bojového režimu</Czech>
+            <Japanese>AI は自動的に戦闘状態へ切り替えます</Japanese>
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
@@ -284,6 +313,7 @@
             <French>Côté du groupe</French>
             <Russian>Сторона группы</Russian>
             <Czech>Strana skupiny</Czech>
+            <Japanese>グループ側</Japanese>
             <Polish>Strona grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
@@ -291,6 +321,7 @@
             <French>Zone de patrouille</French>
             <Russian>Патрулировать зону</Russian>
             <Czech>Oblast hlídkování</Czech>
+            <Japanese>哨戒範囲</Japanese>
             <Polish>Patrol obszaru</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
@@ -304,12 +335,14 @@
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
             <Italian>Apri Resa</Italian>
+            <Japanese>捕虜としてトグル</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
             <French>Téléporter joueurs</French>
             <Russian>Телепортиваровать игроков</Russian>
             <Czech>Teleportovat hráče</Czech>
+            <Japanese>プレイヤーを移動</Japanese>
             <Polish>Teleportuj graczy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
@@ -317,6 +350,7 @@
             <French>Joueur</French>
             <Russian>Игрока</Russian>
             <Czech>Hráč</Czech>
+            <Japanese>プレイヤー</Japanese>
             <Polish>Gracz</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
@@ -324,6 +358,7 @@
             <French>Téléporter le joueur sélectionné à la position du module</French>
             <Russian>Телепортирует выбранного игрока к местоположению модуля</Russian>
             <Czech>Teleportuje vybraného hráče na pozici modulu</Czech>
+            <Japanese>選択したプレイヤーをプレイヤーをモジュール位置へ移動します</Japanese>
             <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
@@ -331,6 +366,7 @@
             <French>Téléporter le groupe</French>
             <Russian>Телепортировать Группу</Russian>
             <Czech>Teleportovat skupinu</Czech>
+            <Japanese>グループを移動</Japanese>
             <Polish>Teleport grupy</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
@@ -338,6 +374,7 @@
             <French>Téléporte toutes les unités du groupe</French>
             <Russian>Телепортирует всех юнитов в группе</Russian>
             <Czech>Teleportuje všechny jednotky ve skupině</Czech>
+            <Japanese>グループ内の全ユニットを移動させます</Japanese>
             <Polish>Teleportuje wszystkie jednostki w grupie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
@@ -351,12 +388,14 @@
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
             <Italian>Apri Incosciente</Italian>
+            <Japanese>気絶をトグル</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchArea_DisplayName">
             <English>Search Area</English>
             <French>Chercher la zone</French>
             <Russian>Обыскать зону</Russian>
             <Czech>Prohledat oblast</Czech>
+            <Japanese>捜索範囲</Japanese>
             <Polish>Przeszukaj teren</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
@@ -364,6 +403,7 @@
             <French>Chercher le bâtiment proche</French>
             <Russian>Обыскать ближайшие здания</Russian>
             <Czech>Prohledat nejbližší budovu</Czech>
+            <Japanese>近くの建物を創作します</Japanese>
             <Polish>Przeszukaj najbliższy budynek</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
@@ -376,6 +416,7 @@
             <Spanish>Asignar médico</Spanish>
             <Italian>Assegna Medico</Italian>
             <French>Assigner médecin</French>
+            <Japanese>衛生兵に割り当て</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalVehicle_DisplayName">
             <English>Assign Medical Vehicle</English>
@@ -387,6 +428,7 @@
             <Spanish>Asignar vehículo médico</Spanish>
             <Italian>Assegna Veicolo Medico</Italian>
             <French>Assigner véhicule médical</French>
+            <Japanese>医療車両として割り当て</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedicalFacility_DisplayName">
             <English>Assign Medical Facility</English>
@@ -398,6 +440,7 @@
             <Spanish>Asignar instalación médica</Spanish>
             <Italian>Assegna Struttura Medica</Italian>
             <French>Assigner installation médicale</French>
+            <Japanese>医療施設として割り当て</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -409,6 +452,7 @@
             <German>Ersatzrad hinzufügen</German>
             <Spanish>Agregar rueda de auxilio</Spanish>
             <French>Ajouter pièce de rechange</French>
+            <Japanese>予備タイヤを追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareTrack_DisplayName">
             <English>Add Spare Track</English>
@@ -420,6 +464,7 @@
             <German>Ersatzkette hinzufügen</German>
             <Spanish>Agregar oruga de repuesto</Spanish>
             <French>Ajouter une chenille de secours</French>
+            <Japanese>車両へ予備タイヤを追加します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyAlive">
             <English>Unit must be alive</English>
@@ -432,6 +477,7 @@
             <Hungarian>Csak élő egységeken használni</Hungarian>
             <Italian>Si può fare solo su persone vive</Italian>
             <Portuguese>Usar somente em unidades vivas</Portuguese>
+            <Japanese>ユニットを生存させます</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyInfantry">
             <English>Unit must be infantry</English>
@@ -444,6 +490,7 @@
             <Hungarian>Csak járműben kívül lévő egységeken használni</Hungarian>
             <Italian>Si può usare solo su fanteria a piedi</Italian>
             <Portuguese>Usar somente em infantaria desmontada</Portuguese>
+            <Japanese>ユニットを歩兵にさせます</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyStructures">
             <English>Unit must be a structure</English>
@@ -455,6 +502,7 @@
             <Czech>Jednotka musí být budova</Czech>
             <Italian>Si può usare solo su strutture</Italian>
             <French>L'unité doit être une structure</French>
+            <Japanese>ユニットを構造物とします</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehicles">
             <English>Unit must be a vehicle</English>
@@ -466,6 +514,7 @@
             <Czech>Jednotka musí být vozidlo</Czech>
             <Italian>Si può usare solo su veicoli</Italian>
             <French>L'unité doit être un véhicule</French>
+            <Japanese>ユニットを車両とします</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyVehiclesWithCargo">
             <English>Unit must be a vehicle with cargo space</English>
@@ -477,6 +526,7 @@
             <German>Einheit muss ein Fahrzeug mit Ladekapazität sein</German>
             <Spanish>La unidad debe ser un vehículo con espacio de carga</Spanish>
             <French>L'unité doit être un véhicule avec de l'espace de cargaison</French>
+            <Japanese>ユニットをカーゴ スペースがある車両にします</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyEnoughCargoSpace">
             <English>Unit must have cargo space left</English>
@@ -488,6 +538,7 @@
             <German>Einheit muss freie Ladekapazität haben</German>
             <Spanish>La unidad debe tener espacio de carga disponible</Spanish>
             <French>L'unité doit avoir de l'espace libre en cargaison</French>
+            <Japanese>ユニットへカーゴ スペースを与えます</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyNonCaptive">
             <English>Unit must not be captive</English>
@@ -500,12 +551,14 @@
             <Hungarian>Csak elfogatlan egységeken használni</Hungarian>
             <Russian>Юнит не должен быть пленным</Russian>
             <Italian>L'unità non dev'essere un prigioniero</Italian>
+            <Japanese>ユニットを捕虜にさせません</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_OnlySpecificSide">
             <English>Unit must belong to an appropriate side</English>
             <French>L'unité doit appartenir à un côté approprié</French>
             <Russian>Юнит должен принадлежать соответствующей стороне</Russian>
             <Czech>Jednotka musí patřit k příslušné straně</Czech>
+            <Japanese>ユニットを適切な陣営にします</Japanese>
             <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
@@ -513,6 +566,7 @@
             <French>Le bâtiment le plus proche est trop loin</French>
             <Russian>Ближайшие здания слишком далеко</Russian>
             <Czech>Nejbližší budova je příliš daleko</Czech>
+            <Japanese>近くに建物がありません。</Japanese>
             <Polish>Najbliższy budynek jest zbyt daleko</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
@@ -526,6 +580,7 @@
             <Russian>Ничего не выделено</Russian>
             <Hungarian>Semmi sincs az egér alatt</Hungarian>
             <Italian>Piazza su una unità</Italian>
+            <Japanese>ユニットの上に設置</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
@@ -538,6 +593,7 @@
             <Hungarian>Egy jelenleg hiányzó bővítményt igényel</Hungarian>
             <Russian>Требуется аддон, который отсутствует</Russian>
             <Italian>Richiede un addon che non è presente</Italian>
+            <Japanese>要求されたアドオンは存在していません</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator">
             <English>Add Objects to Curator</English>
@@ -549,6 +605,7 @@
             <Italian>Aggiungi Oggetti al Curatore</Italian>
             <French>Ajouter des objets au curateur (Zeus)</French>
             <German>Fügt Objekte zum Kurator hinzu</German>
+            <Japanese>キュレーターにオブジェクトを追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AddObjectsToCurator_desc">
             <English>Adds any spawned object to all curators in the mission</English>
@@ -560,12 +617,14 @@
             <Italian>Aggiungi ogni oggetto creato a tutti i Curatori in missione</Italian>
             <French>Ajoute n'importe quel objet spawné à tous les curateurs de la mission</French>
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
+            <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
             <French>Cargo:</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
+            <Japanese>カーゴ：</Japanese>
             <Polish>Ładunek:</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
@@ -573,24 +632,28 @@
             <French>Position de la tâche</French>
             <Russian>Местоположение задания</Russian>
             <Czech>Pozice úkolu</Czech>
+            <Japanese>タスクの位置</Japanese>
             <Polish>Pozycja zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
             <French>Sélectionne une position où accomplir la tâche</French>
             <Russian>Выбрать местоположение для выполнения задания</Russian>
+            <Japanese>次の選択位置をタスクとして実行</Japanese>
             <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
             <French>Rayon de la tâche</French>
             <Russian>Радиус задания</Russian>
+            <Japanese>タスク範囲</Japanese>
             <Polish>Obszar zadania</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
             <French>Rayon dans lequel la tâche prend place</French>
             <Russian>Радиус выполнения задания</Russian>
+            <Japanese>次の範囲をタスクとして実行</Japanese>
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
@@ -598,6 +661,7 @@
             <French>rayon invalide entré</French>
             <Russian>Введен неправильный радиус</Russian>
             <Czech>Vložen neplatný parametr</Czech>
+            <Japanese>無効な半径が入力されました</Japanese>
             <Polish>Wpisano nieprawidłowy promień</Polish>
         </Key>
     </Package>

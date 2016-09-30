@@ -49,7 +49,7 @@ private _itemObject = if (_item isEqualType objNull) then {
     _newItem
 };
 
-_newItem setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply 10));
+_itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply 10));
 
 // open parachute and ir light effect
 [{
@@ -57,13 +57,16 @@ _newItem setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vectorDi
 
     if (isNull _item || {getPos _item select 2 < 1}) exitWith {};
 
-    private _itemPosASL = getPosASL _item;
-    private _itemVelocity = velocity _item;
     private _parachute = createVehicle ["B_Parachute_02_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 
-    _item attachTo [_parachute, [0,0,0.2]];
-    _parachute setPosASL _itemPosASL;
-    _parachute setVelocity _itemVelocity;
+    // cannot use setPos on parachutes without them closing down
+    _parachute attachTo [_item, [0,0,0]];
+    detach _parachute;
+
+    private _velocity = velocity _item;
+
+    _item attachTo [_parachute, [0,0,-1]];
+    _parachute setVelocity _velocity;
 
     private _light = "Chemlight_yellow" createVehicle [0,0,0];
     _light attachTo [_item, [0,0,0]];

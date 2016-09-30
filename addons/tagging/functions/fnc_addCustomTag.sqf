@@ -47,7 +47,7 @@ if (_textures isEqualTo []) exitWith {
     ERROR_1("Failed adding custom tag: %1 - missing textures",_identifier);
 };
 
-_identifier = [_identifier] call EFUNC(common,stringRemoveWhiteSpace);
+_identifier = [_identifier] call CBA_fnc_removeWhitespace;
 _requiredItem = toLower _requiredItem;
 
 // Add

@@ -25,8 +25,17 @@ if (isServer) then {
 ["ace_settingsInitialized", {
     TRACE_1("settingsInitialized", GVAR(enabledFor));
     if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
+    if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
 
-    [configFile >> QGVAR(stateMachine)] call CBA_statemachine_fnc_createFromConfig;
+    private _listcode = if (GVAR(enabledFor) == 1) then {
+        {[ACE_player] select {[_x] call FUNC(isBleeding)}} // ace_player is only possible local player
+    } else {
+        {allUnits select {(local _x) && {[_x] call FUNC(isBleeding)}}}; // filter all local bleeding units
+    };
+    
+    private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
+    [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
+
 
     ["CAManBase", "hit", {
         params ["_unit"];

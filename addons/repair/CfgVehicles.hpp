@@ -313,9 +313,12 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
+        class ACE_Actions {
+            class ACE_MainActions {
+                modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
+            };
+        };
 
-        icon = "iconObject_circle";
-        mapSize = 0.7;
         accuracy = 0.2;
         vehicleClass = "ACE_Logistics_Items";
         destrType = "DesturctNo"; // scripted delayed destruction
@@ -328,6 +331,25 @@ class CfgVehicles {
         scope = 2;
         model = QPATHTOF(data\ace_track.p3d);
         displayName = CSTRING(SpareTrack);
+        icon = "iconObject_2x1";
+        mapSize = 0.5;
+
+        // damage handling
+        armor = 0.6;
+        armorStructural = 1;
+        minTotalDamageThreshold = 0.01;
+        explosionShielding = 1;
+        replaceDamagedLimit = 0.9;
+        selectionDamage = "mat_track";
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\trailObjects_steel.rvmat),
+                QPATHTO_R(data\trailObjects_steel_damage.rvmat),
+                QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
+            };
+        };
     };
 
     class ACE_Wheel: ACE_RepairItem_Base {
@@ -338,6 +360,41 @@ class CfgVehicles {
         model = QPATHTOF(data\ace_wheel.p3d);
         displayName = CSTRING(SpareWheel);
         picture = QPATHTOF(ui\tire_ca.paa);
+        icon = "iconObject_circle";
+        mapSize = 0.7;
+
+        // damage handling
+        armor = 0.05;
+        armorStructural = 1;
+        minTotalDamageThreshold = 0.01;
+        explosionShielding = 1;
+        replaceDamagedLimit = 0.9;
+        selectionDamage = "mat_tyre"; //"mat_rim"
+
+        // necessary because only one "selectionDamage" (== "visual") is allowed for simple damage objects
+        // can not take damage individually though, because of limitations of the thingX simulation type
+        class HitPoints {
+            class HitBody {
+                armor = 0.6;
+                material = -1;
+                name = "zbytek";
+                visual = "mat_rim";
+                passThrough = 1;
+                explosionShielding = 1;
+            };
+        };
+
+        class Damage {
+            tex[] = {};
+            mat[] = {
+                QPATHTO_R(data\trailObjects_tyre.rvmat),
+                QPATHTO_R(data\trailObjects_tyre_damage.rvmat),
+                QPATHTO_R(data\trailObjects_tyre_damage.rvmat),
+                QPATHTO_R(data\trailObjects_steel.rvmat),
+                QPATHTO_R(data\trailObjects_steel_damage.rvmat),
+                QPATHTO_R(data\trailObjects_steel_destruct.rvmat)
+            };
+        };
     };
 
     // disable vanilla repair

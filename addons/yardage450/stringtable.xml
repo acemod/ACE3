@@ -12,6 +12,7 @@
             <Russian>Yardage 450</Russian>
             <Italian>Yardage 450</Italian>
             <French>Yardage 450</French>
+            <Japanese>ヤードエイジ 450</Japanese>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
@@ -24,6 +25,7 @@
             <Russian>Лазерный дальномер</Russian>
             <Italian>Distanziometro Laser</Italian>
             <French>Télémètre laser</French>
+            <Japanese>レーザー測距機</Japanese>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -36,6 +38,7 @@
             <Russian>Yardage 450 - Кнопка питания</Russian>
             <Italian>Yardage 450 - Bottone Accensione</Italian>
             <French>Yardage 450 - bouton d'alimentation</French>
+            <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
         </Key>
     </Package>
 </Project>
