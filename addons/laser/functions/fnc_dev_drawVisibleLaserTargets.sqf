@@ -8,7 +8,6 @@
 
 #include "script_component.hpp"
 
-
 // Try searching for lasers from a given vehicle position [BLUE]:
 private _seekerVehicle = vehicle ace_player;
 private _testSeekerPosASL = AGLtoASL (_seekerVehicle modelToWorldVisual [0,0,1]);

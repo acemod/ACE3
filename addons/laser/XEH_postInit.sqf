@@ -18,6 +18,6 @@
 }] call CBA_fnc_addEventHandler;
 
 // Shows detector and mine posistions in 3d when debug is on
-// #ifdef DRAW_LASER_INFO
+#ifdef DRAW_LASER_INFO
 addMissionEventHandler ["Draw3D", {_this call FUNC(dev_drawVisibleLaserTargets)}];
-// #endif
+#endif
