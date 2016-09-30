@@ -39,7 +39,7 @@ switch (toLower _selection) do {
         _unit setHitPointDamage ["HitBody", _damage];
     };
     case ("arms"): {
-        _unit setHitPointDamage ["HitHands", _damage + (_unit getVariable [QGVAR(painSway), 0])];
+        _unit setHitPointDamage ["HitHands", _damage + ([0, PAIN_MAX_DAMAGE] select (_unit getVariable [QGVAR(isInPain), false]))];
     };
     case ("legs"): {
         _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QGVAR(isLimping), false]))];

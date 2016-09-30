@@ -22,8 +22,6 @@ if (!local _unit) exitWith {
     ACE_LOGERROR("Unit not local or null");
 };
 
-private _damage = [0, LIMPING_MIN_DAMAGE] select _isLimping;
-
-_unit setHitPointDamage ["HitLegs", _damage];
-
 _unit setVariable [QGVAR(isLimping), _isLimping, true];
+
+[_unit, "Legs", _unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD + LIMPING_MIN_DAMAGE || _unit getHitPointDamage "HitLegs" <= DAMAGED_MIN_THRESHOLD] call FUNC(damageBodyPart);
