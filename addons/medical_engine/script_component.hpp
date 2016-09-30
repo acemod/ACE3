@@ -42,3 +42,8 @@
 #define PRIORITY_RIGHT_ARM  (1 + random 1)
 #define PRIORITY_LEFT_LEG   (1 + random 1)
 #define PRIORITY_RIGHT_LEG  (1 + random 1)
+
+// don't change, these reflect hard coded engine behaviour
+#define DAMAGED_MIN_THRESHOLD 0.495
+#define PAIN_MAX_DAMAGE 0.345
+#define LIMPING_MIN_DAMAGE 0.5

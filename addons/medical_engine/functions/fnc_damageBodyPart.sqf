@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Selection, can be "Head", "Body", "Arms" or "Legs" <STRING>
- * 2: Damage (optional, default: 1) <BOOLEAN>
+ * 2: Damage (optional, default: true) <BOOLEAN>
  *
  * Return Value:
  * None
@@ -29,7 +29,7 @@ if (!local _unit) exitWith {
     ACE_LOGERROR("Unit not local or null");
 };
 
-_damage = [0, 0.99] select _damage;
+_damage = [0, 0.495] select _damage;
 
 switch (toLower _selection) do {
     case ("head"): {
@@ -39,9 +39,9 @@ switch (toLower _selection) do {
         _unit setHitPointDamage ["HitBody", _damage];
     };
     case ("arms"): {
-        _unit setHitPointDamage ["HitHands", _damage];
+        _unit setHitPointDamage ["HitHands", _damage + (_unit getVariable [QGVAR(painSway), 0])];
     };
     case ("legs"): {
-        _unit setHitPointDamage ["HitLegs", _damage];
+        _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QGVAR(isLimping), false]))];
     };
 };
