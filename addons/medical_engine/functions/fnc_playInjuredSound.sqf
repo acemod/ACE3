@@ -18,7 +18,8 @@
  */
 #include "script_component.hpp"
 
-#define TIME_OUT 1
+#define TIME_OUT_HIT 1
+#define TIME_OUT_MOAN 5
 
 params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]]];
 TRACE_3("",_unit,_type,_severity);
@@ -27,9 +28,11 @@ if (!local _unit) exitWith {
     ACE_LOGERROR("Unit not local or null");
 };
 
+private _timeOut = [TIME_OUT_HIT, TIME_OUT_MOAN] select (_type == "moan");
+
 // Handle timeout
 if (_unit getVariable [QGVAR(soundTimeout), -1] > CBA_missionTime) exitWith {};
-_unit setVariable [QGVAR(soundTimeout), CBA_missionTime + TIME_OUT];
+_unit setVariable [QGVAR(soundTimeout), CBA_missionTime + _timeOut];
 
 // Get sounds
 private _soundsNamespace = NAMESPACE_NULL;

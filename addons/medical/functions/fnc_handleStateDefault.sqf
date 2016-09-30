@@ -22,5 +22,5 @@ systemChat format["handling state default for unit: %1", _this];
 
 private _pain = _unit getVariable [QGVAR(pain), 0];
 if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
-    [_unit, _pain] call EFUNC(medical_engine,playInjuredSound);
+    [_unit, "moan", PAIN_TO_MOAN(_pain)] call EFUNC(medical_engine,playInjuredSound);
 };
