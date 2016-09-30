@@ -30,6 +30,9 @@ GVAR(mapTool_isRotating) = false;
     } else {
         // Hide GPS
         [false] call FUNC(openMapGps);
+
+        // Handle closing map in middle of line drawing (it's never created)
+        GVAR(freedrawing) = false;
     };
 }] call CBA_fnc_addPlayerEventHandler;
 

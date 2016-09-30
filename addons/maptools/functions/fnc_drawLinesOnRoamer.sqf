@@ -97,9 +97,9 @@ switch (true) do {
         private _distanceToRoamerLine = ([_posTopRight, _posBottomRight, _currentMousePos] call _fnc_Distance);
         _currentMousePos = _currentMousePos vectorAdd ([_distanceToRoamerLine, (GVAR(mapTool_angle) + 90) ,0] call CBA_fnc_polar2vect);
         if (GVAR(freeDrawingData) isEqualTo []) then { // We start drawing on the line
-            GVAR(freeDrawingData) = ["top", _currentMousePos, _currentMousePos];
+            GVAR(freeDrawingData) = ["right", _currentMousePos, _currentMousePos];
         } else {
-            if ((GVAR(freeDrawingData) select 0) == "top") then { // We are already drawing on this line, find best spot
+            if ((GVAR(freeDrawingData) select 0) == "right") then { // We are already drawing on this line, find best spot
                 if ((_currentMousePos distance2d _posTopRight) < ((GVAR(freeDrawingData) select 1) distance2d _posTopRight)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
@@ -115,9 +115,9 @@ switch (true) do {
         private _distanceToRoamerLine = ([_posBottomLeft, _posBottomRight, _currentMousePos] call _fnc_Distance);
         _currentMousePos = _currentMousePos vectorAdd ([_distanceToRoamerLine, (GVAR(mapTool_angle) + 180) ,0] call CBA_fnc_polar2vect);
         if (GVAR(freeDrawingData) isEqualTo []) then { // We start drawing on the line
-            GVAR(freeDrawingData) = ["top", _currentMousePos, _currentMousePos];
+            GVAR(freeDrawingData) = ["bottom", _currentMousePos, _currentMousePos];
         } else {
-            if ((GVAR(freeDrawingData) select 0) == "top") then { // We are already drawing on this line, find best spot
+            if ((GVAR(freeDrawingData) select 0) == "bottom") then { // We are already drawing on this line, find best spot
                 if ((_currentMousePos distance2d _posBottomLeft) < ((GVAR(freeDrawingData) select 1) distance2d _posBottomLeft)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
