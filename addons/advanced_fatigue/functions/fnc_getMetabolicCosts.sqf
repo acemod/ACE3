@@ -16,7 +16,7 @@
  * Public: No
  */
 #include "script_component.hpp"
-params ["_unit", "_velocity"];
+params ["_unit", "_speed"];
 
 private _virtualLoad = 0;
 {
@@ -32,6 +32,14 @@ private _gearMass = ((loadAbs _unit + _virtualLoad) * 0.1 / 2.2046) * GVAR(loadF
 private _terrainFactor = 1;
 private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
 private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
+private _terrainAltitude = getPosASL _unit;
+private _terrainAltitudeDelta = getTerrainHeightASL _terrainAltitude - getTerrainHeightASL (_terrainAltitude vectorDiff vectorNormalized velocity _unit);
+private _terrainAltitudeFactor = 2 * abs _terrainAltitudeDelta min 1;
+
+if (_terrainAltitudeDelta < -0.1) then {
+    _terrainAltitudeFactor = _terrainAltitudeFactor / 4;
+};
+
 private _duty = GVAR(animDuty);
 
 {
@@ -46,16 +54,16 @@ if (GVAR(isSwimming)) then {
     _terrainGradient = 0;
 };
 
-if (_velocity > 2) then {
+if (_speed > 2) then {
     (
         2.10 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.90 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.90 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient * _terrainAltitudeFactor)
     ) * 0.23 * _duty
 } else {
     (
         1.05 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient * _terrainAltitudeFactor)
     ) * 0.23 * _duty
 };
