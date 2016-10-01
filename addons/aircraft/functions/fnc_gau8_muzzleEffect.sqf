@@ -22,7 +22,7 @@ private ["_weapon", "_projectile", "_i", "_no"];
 _weapon =  param [1];
 _projectile = param [6];
 
-if (_weapon != "Gatling_30mm_Plane_CAS_01_F") exitWith {};
+if (_weapon != "ACE_Gatling_30mm_Plane_CAS_01_F") exitWith {};
 
 _no = 8 + random 1;
 

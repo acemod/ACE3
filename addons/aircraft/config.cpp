@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"KoffeinFlummi","Crusty","commy2","jaynus","Kimi","Alexus","Zabuza","Sargken"};
+        authors[] = {"KoffeinFlummi","Crusty","commy2","jaynus","Kimi","Alexus","Zabuza","sargken"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -58,7 +58,7 @@ class ACE_Gau8ShellImpact {
 	class SmallSmoke1
 	{
 		simulation = "particles";
-		type = "Gau8ShellSmkCldlt";
+		type = "ACE_Gau8ShellSmkCldlt";
 		position[] = {0,0,0};
 		intensity = 1;
 		interval = 1;
@@ -67,7 +67,7 @@ class ACE_Gau8ShellImpact {
 	class MedDust1
 	{
 		simulation = "particles";
-		type = "Gau8ShellDstCldlt";
+		type = "ACE_Gau8ShellDstCldlt";
 		position[] = {0,0,0};
 		intensity = 1;
 		interval = 1;
@@ -76,7 +76,7 @@ class ACE_Gau8ShellImpact {
 	class BigDirt1
 	{
 		simulation = "particles";
-		type = "Gau8ShellDrtCldlt";
+		type = "ACE_Gau8ShellDrtCldlt";
 		position[] = {0,0,0};
 		intensity = 1;
 		interval = 1;
