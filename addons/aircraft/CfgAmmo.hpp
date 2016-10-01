@@ -52,23 +52,23 @@ class CfgAmmo {
 
     // GAU-8 Mix ammo (AP&HE)
     class ACE_GAU8_30mm_Mix_Plane_CAS_01_F: Gatling_30mm_HE_Plane_CAS_01_F {
-		laserLock = 1;
-		hit = 300;
-		indirectHit = 100;
-		indirectHitRange = 3.5;
-		caliber = 4.1700001;
-		airFriction = -0.00036000001;
-		explosive = 0.34999999;
+        laserLock = 1;
+        hit = 300;
+        indirectHit = 100;
+        indirectHitRange = 3.5;
+        caliber = 4.1700001;
+        airFriction = -0.00036000001;
+        explosive = 0.34999999;
         soundHit1[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-		soundHit2[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-		soundHit3[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-		soundHit4[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-		multiSoundHit[] = {"soundHit1",0.25,"soundHit2",0.25,"soundHit3",0.25,"soundHit4",0.25};
-		SoundSetExplosion[] = {"ACE_GAU8_30mm_Exp_SoundSet"};
-		explosionSoundEffect = "DefaultExplosion";
-		explosionEffects = "ACE_Gau8ShellImpact";
-		muzzleEffect = ""; //replaced with Fired EH couse this not support fncs from preinit
-		craterEffects = "HEShellCrater";
+        soundHit2[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit3[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit4[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        multiSoundHit[] = {"soundHit1",0.25,"soundHit2",0.25,"soundHit3",0.25,"soundHit4",0.25};
+        SoundSetExplosion[] = {"ACE_GAU8_30mm_Exp_SoundSet"};
+        explosionSoundEffect = "DefaultExplosion";
+        explosionEffects = "ACE_Gau8ShellImpact";
+        muzzleEffect = ""; //replaced with Fired EH couse this not support fncs from preinit
+        craterEffects = "HEShellCrater";
     };
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber
