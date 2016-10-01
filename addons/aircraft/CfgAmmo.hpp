@@ -59,10 +59,10 @@ class CfgAmmo {
         caliber = 4.1700001;
         airFriction = -0.00036000001;
         explosive = 0.34999999;
-        soundHit1[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-        soundHit2[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-        soundHit3[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
-        soundHit4[] = {PATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit1[] = {QPATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit2[] = {QPATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit3[] = {QPATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
+        soundHit4[] = {QPATHTOF(sounds\ammo\GAU8_Hit1),3.1622779,1,2000};
         multiSoundHit[] = {"soundHit1",0.25,"soundHit2",0.25,"soundHit3",0.25,"soundHit4",0.25};
         SoundSetExplosion[] = {"ACE_GAU8_30mm_Exp_SoundSet"};
         explosionSoundEffect = "DefaultExplosion";

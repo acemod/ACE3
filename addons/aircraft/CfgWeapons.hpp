@@ -121,7 +121,7 @@ class CfgWeapons {
 
     class Gatling_30mm_Plane_CAS_01_F: CannonCore {
         displayName = "GAU-8";
-        magazines[] = {"ACE_1174Rnd_GAU8_30mm_Plane_CAS_01_F"};
+        magazines[] = {"ACE_1174Rnd_GAU8_30mm_Plane_CAS_01_F", "1000Rnd_Gatling_30mm_Plane_CAS_01_F"};
         canLock = 2;
         dispersion = 0.0060000001;
         modes[] = {"burstLO","burstHI","close","short","medium","far"};

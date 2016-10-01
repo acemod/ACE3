@@ -1,6 +1,6 @@
 /*
  * Author: Alexus, Zabuza, SzwedzikPL, Sargken
- * GAU-8 muzzle effect
+ * GAU-8 muzzle effect.
  *
  * Argument:
  * 0: Unit <OBJECT>
@@ -13,18 +13,19 @@
  * Return value:
  * None
  *
+ * Example:
+ * QUOTE(_this call FUNC(gau8_muzzleEffect));
+ *
  * Public: No
  */
 #include "script_component.hpp"
-
-private ["_weapon", "_projectile", "_i", "_no"];
-
-_weapon =  param [1];
-_projectile = param [6];
+private _weapon = _this select 1;
+private _projectile = _this select 6;
 
 if (_weapon != "ACE_Gatling_30mm_Plane_CAS_01_F") exitWith {};
 
-_no = 8 + random 1;
+private _no = 8 + random 1;
+private _i;
 
 for "_i" from 1 to _no do {
     drop [
