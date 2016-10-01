@@ -105,18 +105,23 @@ def main(argv):
             return 0
 
 
+            
     #ACE Main - http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
-    publishFolder(ace_release_dir, "463939057", changelog_path)
+    # publishFolder(ace_release_dir, "463939057", changelog_path)
 
+    
+    
+    #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
+    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
+    publishFolder(folder, "773125288", changelog_path)
+    
+    #RHS Compat Commies - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
+    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
+    publishFolder(folder, "773131200", changelog_path)
 
-    #RHS Compats - http://steamcommunity.com/sharedfiles/filedetails/?id=758436163
-    folder = buildCompatFolder("@ace_rhs_compat", ["ace_compat_rhs_afrf3.*", "ace_compat_rhs_usf3.*"])
-    publishFolder(folder, "758436163", changelog_path)
-
-
-    #ADR97 (p90)- ToDo
-    # folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])
-    # publishFolder(folder, "???", changelog_path)
+    #ADR97 (p90)- http://steamcommunity.com/sharedfiles/filedetails/?id=773136286
+    folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])
+    publishFolder(folder, "773136286", changelog_path)
 
 
 
