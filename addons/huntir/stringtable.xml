@@ -12,6 +12,7 @@
             <French>Boite de transport HuntIR</French>
             <Hungarian>HuntIR Transport Box</Hungarian>
             <Portuguese>Caixa de transporte do HuntIR</Portuguese>
+            <Japanese>HuntIR 輸送箱</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_magazine_displayName">
             <English>HuntIR Round</English>
@@ -24,6 +25,7 @@
             <French>Munition HuntIR</French>
             <Hungarian>HuntIR lövedék</Hungarian>
             <Portuguese>Cartucho HuntIR</Portuguese>
+            <Japanese>HuntIR 弾頭</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_monitor_displayName">
             <English>HuntIR monitor</English>
@@ -36,6 +38,7 @@
             <French>Ecran HuntIR</French>
             <Hungarian>HuntIR monitor</Hungarian>
             <Portuguese>Monitor HuntIR</Portuguese>
+            <Japanese>HuntIR モニタ</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_activateMonitor">
             <English>Activate HuntIR monitor</English>
@@ -48,6 +51,7 @@
             <French>Allumer l'écran du HuntIR</French>
             <Hungarian>HuntIR monitor aktiválása</Hungarian>
             <Portuguese>Ativar monitor do HuntIR</Portuguese>
+            <Japanese>HuntIR を起動する</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_CAM">
             <English>Camera:</English>
@@ -60,6 +64,7 @@
             <French>Caméra :</French>
             <Hungarian>Kamera:</Hungarian>
             <Portuguese>Câmera:</Portuguese>
+            <Japanese>カメラ:</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_ALT">
             <English>Altitude:</English>
@@ -72,6 +77,7 @@
             <French>Altitude :</French>
             <Hungarian>Magasság:</Hungarian>
             <Portuguese>Altitude:</Portuguese>
+            <Japanese>高度:</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_TIME">
             <English>Recording Time:</English>
@@ -84,6 +90,7 @@
             <French>Temps d'enregistrement :</French>
             <Hungarian>Felvételi idő:</Hungarian>
             <Portuguese>Tempo de gravação:</Portuguese>
+            <Japanese>録画時間:</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_ESC">
             <English>Press ESC to quit camera</English>
@@ -96,6 +103,7 @@
             <French>Appuyer sur ESC pour quitter la camera</French>
             <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
             <Portuguese>Pressione ESC para sair da câmera</Portuguese>
+            <Japanese>ESC を押しカメラを抜ける</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP">
             <English>Help</English>
@@ -108,6 +116,7 @@
             <French>Aide</French>
             <Hungarian>Súgó</Hungarian>
             <Portuguese>Ajuda</Portuguese>
+            <Japanese>ヘルプ</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_ZOOM">
             <English>A/D - Cycle zoom</English>
@@ -120,6 +129,7 @@
             <French>Q/D - Changement de zoom</French>
             <Hungarian>A/D - Nagyítás</Hungarian>
             <Portuguese>A/D - Troca zoom</Portuguese>
+            <Japanese>A/D - 倍率の変更</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_CAM">
             <English>W/S - Select camera</English>
@@ -132,6 +142,7 @@
             <French>Z/S - Sélectionner la caméra</French>
             <Hungarian>W/S - Kamera váltás</Hungarian>
             <Portuguese>W/S - Seleciona câmera</Portuguese>
+            <Japanese>W/S - カメラを選択</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_ROT">
             <English>Left/Right - Rotate camera</English>
@@ -144,6 +155,7 @@
             <French>Gauche/Droite - Rotation de la caméra</French>
             <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
             <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
+            <Japanese>Left/Right - カメラを開店</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_ELV">
             <English>Up/Down - Elevate/lower camera</English>
@@ -156,6 +168,7 @@
             <French>Haut/Bas - Monter/descendre la caméra</French>
             <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
             <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
+            <Japanese>Up/Down - カメラ角度を変更</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_MOD">
             <English>N - Cycle IT modes</English>
@@ -168,6 +181,7 @@
             <French>N - Changement de modes IT</French>
             <Hungarian>N - Hőkép módok</Hungarian>
             <Portuguese>N - Troca modo IT</Portuguese>
+            <Japanese>N - IT モードを変更</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_RES">
             <English>R - Reset camera</English>
@@ -180,6 +194,7 @@
             <French>R - Reset de la caméra</French>
             <Hungarian>R - Kamera visszaállítása</Hungarian>
             <Portuguese>R - Redefine a câmera</Portuguese>
+            <Japanese>R - カメラを初期化</Japanese>
         </Key>
         <Key ID="STR_ACE_HUNTIR_HELP_EXIT">
             <English>Esc - Exit help</English>
@@ -192,6 +207,7 @@
             <French>Esc - Sortir de l'aide</French>
             <Hungarian>Exit - Kilépés a súgóból</Hungarian>
             <Portuguese>Esc - Sai do Ajuda</Portuguese>
+            <Japanese>Esc - ヘルプを出る</Japanese>
         </Key>
     </Package>
 </Project>

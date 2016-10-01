@@ -12,6 +12,7 @@
             <Hungarian>Füldugó</Hungarian>
             <Portuguese>Protetor auricular</Portuguese>
             <Italian>Tappi auricolari</Italian>
+            <Japanese>耳栓</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
@@ -24,6 +25,7 @@
             <Hungarian>Erősebb hanghatásoktól védő füldugó, megakadályozza a nagy hanggal járó fegyverzettől való halláskárosodást.</Hungarian>
             <Portuguese>Protetor para ouvidos permitem que o usuário esteja próximo a ruídos sem danificar sua audição.</Portuguese>
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
+            <Japanese>着けることにより、近くの大きな銃声から聴覚を保護します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_On">
             <English>Earplugs in</English>
@@ -36,6 +38,7 @@
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
             <Italian>Indossa i tappi auricolari</Italian>
+            <Japanese>耳栓を着ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Off">
             <English>Earplugs out</English>
@@ -48,6 +51,7 @@
             <Hungarian>Füldugó kivéve</Hungarian>
             <Portuguese>Protetores retirados</Portuguese>
             <Italian>Levati i tappi auricolari</Italian>
+            <Japanese>耳栓を外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
@@ -60,6 +64,7 @@
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
             <Italian>Indossa i tappi auricolari</Italian>
+            <Japanese>耳栓を着けた</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
             <English>Earplugs out</English>
@@ -72,6 +77,7 @@
             <Hungarian>Füldugó kivéve</Hungarian>
             <Portuguese>Protetores retirados</Portuguese>
             <Italian>Levati i tappi auricolari</Italian>
+            <Japanese>耳栓を外した</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
             <English>You have no earplugs</English>
@@ -84,6 +90,7 @@
             <Hungarian>Nincsen füldugód</Hungarian>
             <Portuguese>Você não possui protetores auriculares</Portuguese>
             <Italian>Non hai i tappi auricolari</Italian>
+            <Japanese>耳栓を持っていません</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_Inventory_Full">
             <English>No inventory space</English>
@@ -96,6 +103,7 @@
             <Portuguese>Não há espaço no inventário</Portuguese>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>Нет места в инвентаре</Russian>
+            <Japanese>インベントリに空きがありません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
@@ -108,6 +116,7 @@
             <Hungarian>Fülcsengés letiltása</Hungarian>
             <Italian>Disabilita i fischi nelle orecchie</Italian>
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
+            <Japanese>耳鳴りを無効化する</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
             <English>Remove tinnitus effect when the player takes hearing damage</English>
@@ -118,6 +127,7 @@
             <Italian>Quando il giocatore riceve danni all'udito, non fa sentire i fischi nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
+            <Japanese>プレイヤーの聴覚が損傷をしたら耳鳴りの効果を削除します</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -130,6 +140,7 @@
             <Hungarian>Hallás</Hungarian>
             <Russian>Слух</Russian>
             <Italian>Udito</Italian>
+            <Japanese>聴覚</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_DisplayName">
             <English>Enable Combat Deafness</English>
@@ -142,6 +153,7 @@
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
             <Russian>Оглушение</Russian>
             <Italian>Sordità da combattimento</Italian>
+            <Japanese>戦闘による難聴を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -153,6 +165,7 @@
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
             <Italian>Riduci l'abilità uditiva quando il giocatore riceve danno uditivo</Italian>
             <French>Réduire l'audition lorsque le joueur prend des dommages auditifs.</French>
+            <Japanese>音による損傷をうけ、聴覚が減る可能性があります</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
@@ -165,6 +178,7 @@
             <French>Ce module active / désactivé la surdité au combat. Si active, des joueurs peuvent devenir sourds sans protection d'oreille, si une arme est utilisée ou une explosion a lieu à proximité</French>
             <Spanish>Controles de sordera de combate y zumbido en los oídos. Al activarlo, los jugadores pueden ser ensordecidos cuando un arma se dispara cerca o una explosión tiene lugar sin protección auditiva</Spanish>
             <Italian>Controlla la sordità da combattimento e fischio alle orecchie. Quando attivato, i giocatori possono essere assordati quando un'arma spara vicino o avviene un'esplosione senza protezione uditiva</Italian>
+            <Japanese>戦闘による難聴や、耳鳴りを設定します。有効になった場合、聴覚を保護していないと近傍の銃声や爆発音により、難聴になります。</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
@@ -176,6 +190,7 @@
             <Czech>Vliv na Zeus RC</Czech>
             <Italian>Effetto Zeus RC</Italian>
             <French>Effet sur le CàD du Zeus</French>
+            <Japanese>Zeus RC への効果</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
@@ -187,6 +202,7 @@
             <Czech>Aktivovat efekt ztráty sluchu pro vzdáleně ovládané jednotky.</Czech>
             <Italian>Consenti alle unità controllate in remoto da Zeus di ricevere danni all'udito.</Italian>
             <French>Permet aux unités controlées à distance de subir des traumatismes sonores.</French>
+            <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
@@ -198,6 +214,7 @@
             <Italian>Aggiungi Tappi per Orecchie alle unità</Italian>
             <Spanish>Agregar tapones de oida a la unidad</Spanish>
             <French>Ajouter des bouchons anti-bruits aux unités</French>
+            <Japanese>ユニットへ耳栓を追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
@@ -209,6 +226,7 @@
             <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi rumorose. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
             <French>Ajoute l'objet "Ace_EarPlugs" à toutes les unités ayant des armes bruyantes. Peut être désactivé par des loadouts personalisés.</French>
+            <Japanese>全ユニットへ`ACE_EarPlugs`アイテムをもたせます。これは変更された武装で無効化できます。</Japanese>
         </Key>
     </Package>
 </Project>

@@ -12,6 +12,7 @@
             <Portuguese>O VANT está cheio</Portuguese>
             <Italian>Il drone è pieno</Italian>
             <Russian>БПЛА полностью заряжен</Russian>
+            <Japanese>ドローンは充電完了</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
@@ -24,6 +25,7 @@
             <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
             <Italian>Hai bisogno di una Batteria UAV</Italian>
             <Russian>Требуется аккумулятор для БПЛА</Russian>
+            <Japanese>UAV バッテリが必要です</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
@@ -36,6 +38,7 @@
             <Portuguese>Recarregar</Portuguese>
             <Italian>Ricarica</Italian>
             <Russian>Зарядить</Russian>
+            <Japanese>充電</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
@@ -48,6 +51,7 @@
             <Portuguese>Bateria para VANT</Portuguese>
             <Italian>Batteria UAV</Italian>
             <Russian>Аккумулятор БПЛА</Russian>
+            <Japanese>UAV バッテリ</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
@@ -60,6 +64,7 @@
             <Portuguese>Usada para reabastecer o VANT</Portuguese>
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
+            <Japanese>運んでいる UAV を充電に使う</Japanese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>
@@ -72,6 +77,7 @@
             <Portuguese>Recarregando...</Portuguese>
             <Italian>In ricarica...</Italian>
             <Russian>Заряжается...</Russian>
+            <Japanese>充電中</Japanese>
         </Key>
     </Package>
 </Project>

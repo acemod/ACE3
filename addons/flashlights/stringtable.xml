@@ -11,6 +11,7 @@
             <Spanish>Fulton MX-991</Spanish>
             <Italian>Fulton MX-991</Italian>
             <French>Fulton MX-991</French>
+            <Japanese>Fulton MX-991</Japanese>
         </Key>
         <Key ID="STR_ACE_Flashlights_MX991_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -22,6 +23,7 @@
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_DisplayName">
             <English>Maglite XL50</English>
@@ -33,6 +35,7 @@
             <Spanish>Maglite XL50</Spanish>
             <Italian>Maglite XL50</Italian>
             <French>Maglite XL50</French>
+            <Japanese>Maglite XL50</Japanese>
         </Key>
         <Key ID="STR_ACE_Flashlights_XL50_Description">
             <English>White mini flashlight. For use on map.</English>
@@ -44,6 +47,7 @@
             <Spanish>Mini linterna blanca. Para su uso en el mapa.</Spanish>
             <Italian>Mini-torcia bianca. Da usare in mappa.</Italian>
             <French>Mini lampe torche blanche. Pour utilisation sur carte.</French>
+            <Japanese>白色光の小さなフラッシュライト。地図上でつかいます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_DisplayName">
             <English>KSF-1</English>
@@ -55,6 +59,7 @@
             <Spanish>KSF-1</Spanish>
             <Italian>KSF-1</Italian>
             <French>KSF-1</French>
+            <Japanese>KSF-1</Japanese>
         </Key>
         <Key ID="STR_ACE_Flashlights_KSF1_Description">
             <English>Flashlight with red filter. For use on map.</English>
@@ -66,6 +71,7 @@
             <Spanish>Linterna con filtro rojo. Para su uso en el mapa.</Spanish>
             <Italian>Torcia con filtro rosso. Da usare in mappa.</Italian>
             <French>Lampe torche avec un filtre rouge. Pour utilisation sur carte.</French>
+            <Japanese>赤色フィルタ付きのフラッシュライト。地図上でつかいます。</Japanese>
         </Key>
     </Package>
 </Project>

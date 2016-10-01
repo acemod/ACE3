@@ -12,6 +12,7 @@
             <Portuguese>Opções do ACE</Portuguese>
             <Hungarian>ACE Beállítások</Hungarian>
             <Italian>Opzioni ACE</Italian>
+            <Japanese>ACE オプション</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_FixAnimation">
             <English>Fix Animation</English>
@@ -24,6 +25,7 @@
             <Hungarian>Animációk kijavítása</Hungarian>
             <Italian>Fixa l'animazione</Italian>
             <Portuguese>Arrumar  Animação</Portuguese>
+            <Japanese>アニメーションを修正</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
@@ -36,6 +38,7 @@
             <Hungarian>Minden visszaállítása</Hungarian>
             <Italian>Resetta tutto</Italian>
             <Portuguese>Resetar Tudo</Portuguese>
+            <Japanese>すべて初期化</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabColors">
             <English>Colors</English>
@@ -48,6 +51,7 @@
             <Hungarian>Színek</Hungarian>
             <Italian>Colori</Italian>
             <Portuguese>Cores</Portuguese>
+            <Japanese>色</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabOptions">
             <English>Options</English>
@@ -60,6 +64,7 @@
             <Portuguese>Opções</Portuguese>
             <Hungarian>Beállítások</Hungarian>
             <Italian>Opzioni</Italian>
+            <Japanese>オプション</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabValues">
             <English>Values</English>
@@ -72,6 +77,7 @@
             <Hungarian>Értékek</Hungarian>
             <Italian>Valori</Italian>
             <Portuguese>Valores</Portuguese>
+            <Japanese>値</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Setting">
             <English>Setting:</English>
@@ -84,6 +90,7 @@
             <Hungarian>Opció:</Hungarian>
             <Italian>Parametri:</Italian>
             <Portuguese>Opção:</Portuguese>
+            <Japanese>設定：</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Export">
             <English>Export</English>
@@ -96,6 +103,7 @@
             <Hungarian>Exportálás</Hungarian>
             <Italian>Esporta</Italian>
             <Portuguese>Exportar</Portuguese>
+            <Japanese>出力</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_OpenExport">
             <English>Open Export Menu</English>
@@ -108,6 +116,7 @@
             <Hungarian>Exportálási menü megnyitása</Hungarian>
             <Italian>Apri menù esportazione</Italian>
             <Portuguese>Abrir menu de exportação</Portuguese>
+            <Japanese>出力メニューを開く</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
@@ -120,6 +129,7 @@
             <Hungarian>String bevitel.</Hungarian>
             <Italian>Stringa di unput.</Italian>
             <Portuguese>Input de String</Portuguese>
+            <Japanese>文字列の入力</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_arrayType">
             <English>Array. Seperate elements by using ,.</English>
@@ -132,6 +142,7 @@
             <Hungarian>Array. Válasszad el az elemeket vesszővel.</Hungarian>
             <Italian>Array. Separa gli elementi usando ,.</Italian>
             <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
+            <Japanese>アライ。,を使うことで区別できます。</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
@@ -144,6 +155,7 @@
             <Hungarian>Szám</Hungarian>
             <Italian>Numero</Italian>
             <Portuguese>Número</Portuguese>
+            <Japanese>数</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_unknownType">
             <English>Uknown input type</English>
@@ -156,6 +168,7 @@
             <Hungarian>Ismeretlen beviteli típus</Hungarian>
             <Italian>Input inserito sconosciuto</Italian>
             <Portuguese>Tipo desonhecido de input</Portuguese>
+            <Japanese>不明な入力です</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_SaveInput">
             <English>Save input</English>
@@ -168,6 +181,7 @@
             <Hungarian>Bevitel elmentése</Hungarian>
             <Italian>Salva input</Italian>
             <Portuguese>Salvar input</Portuguese>
+            <Japanese>入力を保存</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
@@ -180,6 +194,7 @@
             <Hungarian>Kliens-beállítások melléklése</Hungarian>
             <Italian>Includi i parametri del client</Italian>
             <Portuguese>Incluir opções do cliente</Portuguese>
+            <Japanese>クライアント設定を含む</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_exClientSettings">
             <English>Exclude Client Settings</English>
@@ -192,6 +207,7 @@
             <Hungarian>Kliens-beállítások elhagyása</Hungarian>
             <Italian>Escludi i parametri del client</Italian>
             <Portuguese>Excluir opções do cliente</Portuguese>
+            <Japanese>クライアント設定を実行する</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_settingsExported">
             <English>Settings exported to clipboard</English>
@@ -204,6 +220,7 @@
             <Hungarian>Beállítások exportálva a vágólapba</Hungarian>
             <Italian>Parametri esportati alla clipboard</Italian>
             <Portuguese>Opções exportadas para o clipboard.</Portuguese>
+            <Japanese>クリップボードに設定を出力する</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
@@ -216,6 +233,7 @@
             <Hungarian>Beállításmenü kezelőfelületének skálázása</Hungarian>
             <Portuguese>Escalar o menu de opções</Portuguese>
             <Italian>Proporzioni della interfaccia utente</Italian>
+            <Japanese>オプション メニューにあるユーザ インタフェイスの大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
@@ -228,6 +246,7 @@
             <Hungarian>Konfiguráció-exportálás engedélyezése [ACE]</Hungarian>
             <Russian>Разрешить экспорт настроек [ACE]</Russian>
             <Italian>Consenti Esportazione del Config [ACE]</Italian>
+            <Japanese>設定の出力を許可 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -240,6 +259,7 @@
             <Hungarian>Engedélyezés</Hungarian>
             <Russian>Разрешить</Russian>
             <Italian>Consenti</Italian>
+            <Japanese>許可</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -252,6 +272,7 @@
             <Hungarian>Az összes beállítás szerver-konfigurációba való exportálásának engedélyezése.</Hungarian>
             <Russian>Разрешить экспорт всех настроек в формате серверного конфига.</Russian>
             <Italian>Consenti esportazione di tutti i parametri ad config formato per server.</Italian>
+            <Japanese>全ての設定をサーバ用設定の形式へと出力できるようにします。</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -264,6 +285,7 @@
             <Hungarian>Engedélyezéskor hozzáférést kapsz a beállítások módosításához és exportálásához egyjátékos módban. Exportáláskor a formázott konfiguráció a vágólapra kerül.</Hungarian>
             <Russian>Когда разршен, у вас появляется доступ к модификации настроек и экспорту их в одинночном режиме. Нажатие на кнопку Экспорт поместит форматированные настройки в буфер обмена.</Russian>
             <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
+            <Japanese>許可の場合、あなたは設定の変更と出力をシングルプレイで可能です。出力をクリックすると、サーバ用設定の形式となっている設定がクリップボードに保存されます。</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -276,6 +298,7 @@
             <Hungarian>Elrejtés</Hungarian>
             <Russian>Скрыть</Russian>
             <Italian>Nascondi</Italian>
+            <Japanese>非表示</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -288,6 +311,7 @@
             <Hungarian>Jobb felül, lefele</Hungarian>
             <Russian>Справа — сверху вниз</Russian>
             <Italian>In Alto a Destra, verso il Basso</Italian>
+            <Japanese>右上、下側</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -300,6 +324,7 @@
             <Hungarian>Jobb felül, balra</Hungarian>
             <Russian>Сверху — справа налево</Russian>
             <Italian>In Alto a Destra, verso Sinistra</Italian>
+            <Japanese>右上、左詰</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -312,6 +337,7 @@
             <Hungarian>Bal felül, lefele</Hungarian>
             <Russian>Слева - сверху вниз</Russian>
             <Italian>In Alto a Sinistra, verso il Basso</Italian>
+            <Japanese>左上、下側</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -324,6 +350,7 @@
             <Hungarian>Bal felül, jobbra</Hungarian>
             <Russian>Сверху — слева направо</Russian>
             <Italian>In Alto a Sinistra, verso Destra</Italian>
+            <Japanese>右上、右詰</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -336,6 +363,7 @@
             <Hungarian>Fent</Hungarian>
             <Russian>Сверху</Russian>
             <Italian>Alto</Italian>
+            <Japanese>上側</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -348,6 +376,7 @@
             <Hungarian>Alul</Hungarian>
             <Russian>Снизу</Russian>
             <Italian>Basso</Italian>
+            <Japanese>下側</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
@@ -360,6 +389,7 @@
             <Hungarian>Debug a vágólapra</Hungarian>
             <Russian>Отладка в буфер обмена</Russian>
             <Italian>Debug su Blocco Note</Italian>
+            <Japanese>クリップボードへデバッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -372,6 +402,7 @@
             <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
             <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
+            <Japanese>デバッグ情報の RPT とクリップボードに送ります。</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -384,6 +415,7 @@
             <Czech>Fix Headbug</Czech>
             <Spanish>Corregir error de cabeza (headbug)</Spanish>
             <Italian>Sistema Headbug</Italian>
+            <Japanese>ヘッドバグ修正</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -396,6 +428,7 @@
             <Czech>Resetovat aktuální animaci.</Czech>
             <Spanish>Restablece tu estado de animación.</Spanish>
             <Italian>Resetta il tuo stato animazione</Italian>
+            <Japanese>現在のアニメーションの状況を初期化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -408,6 +441,7 @@
             <Hungarian>ACE hírek</Hungarian>
             <Russian>Новости ACE</Russian>
             <Italian>News ACE</Italian>
+            <Japanese>ACE からのお知らせ</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -420,6 +454,7 @@
             <Russian>Показывать новости в Главном Меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
             <Italian>Mostra News nel Menù Princinpale</Italian>
+            <Japanese>メイン メニュにお知らせを表示します</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
@@ -431,6 +466,7 @@
             <Spanish>Todas las categorías</Spanish>
             <Italian>Tutte le Categorie</Italian>
             <French>Toutes les catégories</French>
+            <Japanese>全カテゴリ</Japanese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -442,6 +478,7 @@
             <Spanish>Logística</Spanish>
             <Italian>Logistica</Italian>
             <French>Logistique</French>
+            <Japanese>ロジスティクス</Japanese>
         </Key>
     </Package>
 </Project>

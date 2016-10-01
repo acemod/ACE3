@@ -12,6 +12,7 @@
             <Hungarian>Lézeres Megjelölő Be</Hungarian>
             <Italian>Designatore laser acceso</Italian>
             <Portuguese>Designador Laser Ligado</Portuguese>
+            <Japanese>レーザー指示を起動</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_SelfDesignate_DesignatorOff">
             <English>Laser Designator Off</English>
@@ -24,6 +25,7 @@
             <Hungarian>Lézeres Megjelölő Ki</Hungarian>
             <Italian>Designatore laser spento</Italian>
             <Portuguese>Designador Laser Desligado</Portuguese>
+            <Japanese>レーザー指示を停止</Japanese>
         </Key>
     </Package>
 </Project>

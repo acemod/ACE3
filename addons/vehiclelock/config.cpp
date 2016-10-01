@@ -20,8 +20,3 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-class ACE_newEvents {
-    VehicleLock_SetVehicleLock = QGVAR(setVehicleLock);
-    VehicleLock_SetupCustomKey = QGVAR(setupCustomKey);
-};
