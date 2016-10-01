@@ -365,6 +365,8 @@ class CfgVehicles {
     class Plane_CAS_01_base_F;
     class RHS_A10: Plane_CAS_01_base_F {
         EGVAR(refuel,fuelCapacity) = 6223;
+        weapons[] = {"Gatling_30mm_Plane_CAS_01_F","rhs_weap_SidewinderLauncher","rhs_weap_agm65","rhs_weap_FFARLauncher","rhs_weap_gbu12","CMFlareLauncher"};
+        magazines[] = {"rhs_mag_agm65","rhs_mag_agm65","rhs_mag_Sidewinder_2","rhs_mag_gbu12_4","rhs_mag_ANALQ131","rhs_mag_FFAR_14","ACE_1174Rnd_GAU8_30mm_Plane_CAS_01_F","240Rnd_CMFlare_Chaff_Magazine"};
     };
 
     class Plane_Base_F;
