@@ -26,7 +26,7 @@
 params [["_unit", objNull, [objNull]], ["_selection", "", [""]], ["_damage", true, [false]]];
 
 if (!local _unit) exitWith {
-    ACE_LOGERROR("Unit not local or null");
+    ERROR("Unit not local or null");
 };
 
 _damage = [0, 0.495] select _damage;

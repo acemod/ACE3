@@ -25,7 +25,7 @@ params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, 
 TRACE_3("",_unit,_type,_severity);
 
 if (!local _unit) exitWith {
-    ACE_LOGERROR("Unit not local or null");
+    ERROR("Unit not local or null");
 };
 
 private _timeOut = [TIME_OUT_HIT, TIME_OUT_MOAN] select (_type == "moan");
@@ -60,7 +60,7 @@ if (isNil "_sounds") then {
 };
 
 if (isNil "_sounds") exitWith {
-    ACE_LOGERROR("No sounds for speaker and no default found");
+    ERROR("No sounds for speaker and no default found");
 };
 
 // Get correct sound of the speaker
@@ -68,7 +68,7 @@ _sounds = _sounds param [_severity, []];
 (selectRandom _sounds) params ["_sound", ["_volume", 1], ["_frequency", 1], ["_distance", 80]];
 
 if (isNil "_sound") exitWith {
-    ACE_LOGERROR("No sound for this speaker");
+    ERROR("No sound for this speaker");
 };
 
 // Delete leading slash.

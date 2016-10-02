@@ -19,7 +19,7 @@
 params [["_unit", objNull, [objNull]], ["_damage", 0, [0]]];
 
 if (!local _unit) exitWith {
-    ACE_LOGERROR("Unit not local or null");
+    ERROR("Unit not local or null");
 };
 
 private _hitPointDamages = getAllHitPointsDamage _unit param [2, []];

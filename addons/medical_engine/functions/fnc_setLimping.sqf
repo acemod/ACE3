@@ -19,7 +19,7 @@
 params [["_unit", objNull, [objNull]], ["_isLimping", true, [false]]];
 
 if (!local _unit) exitWith {
-    ACE_LOGERROR("Unit not local or null");
+    ERROR("Unit not local or null");
 };
 
 _unit setVariable [QGVAR(isLimping), _isLimping, true];

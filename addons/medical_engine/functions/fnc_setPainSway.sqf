@@ -19,7 +19,7 @@
 params [["_unit", objNull, [objNull]], ["_isInPain", true, [false]]];
 
 if (!local _unit) exitWith {
-    ACE_LOGERROR("Unit not local or null");
+    ERROR("Unit not local or null");
 };
 
 _unit setVariable [GVAR(isInPain), _isInPain, true];

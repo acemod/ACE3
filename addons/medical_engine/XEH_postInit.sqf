@@ -8,7 +8,7 @@
     reverse _allHitPoints;
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        ACE_LOGERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
+        ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
     } else {
         // Calling this function inside curly brackets allows the usage of
         // "exitWith", which would be broken with "HandleDamage" otherwise.
