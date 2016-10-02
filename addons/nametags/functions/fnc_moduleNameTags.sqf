@@ -33,4 +33,4 @@ if ((_logic getVariable "showVehicleCrewInfo") != -1) then {
     [_logic, QGVAR(showVehicleCrewInfo),  "showVehicleCrewInfo"         ] call EFUNC(common,readSettingFromModule);
 };
 
-ACE_LOGINFO("Nametags Module Initialized.");
+INFO("Nametags Module Initialized.");

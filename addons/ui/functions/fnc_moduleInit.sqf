@@ -23,7 +23,7 @@ if (!_activated) exitWith {};
 // Basic
 if (isArray (missionConfigFile >> "showHUD")) then {
     // HUD visibility is hardcoded in mission config and showHUD command is overriden
-    ACE_LOGINFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
+    INFO("User Interface Module Failed to Initialize Basic settings - showHUD overriden in mission config!");
 } else {
     [_logic, QGVAR(soldierVehicleWeaponInfo), "soldierVehicleWeaponInfo"] call EFUNC(common,readSettingFromModule);
     [_logic, QGVAR(vehicleRadar), "vehicleRadar"] call EFUNC(common,readSettingFromModule);
@@ -63,4 +63,4 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 [_logic, QGVAR(vehicleDamage), "vehicleDamage"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(vehicleInfoBackground), "vehicleInfoBackground"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));
+INFO_1("User Interface Module Initialized. Allow client modifications: %1",GVAR(allowSelectiveUI));

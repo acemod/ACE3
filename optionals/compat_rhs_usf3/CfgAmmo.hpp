@@ -271,4 +271,7 @@ class CfgAmmo {
         ace_frag_skip = 0;
         ace_frag_force = 1;
     };
+    class rhs_ammo_smaw_SR: RocketBase {
+        ACE_caliber = 9;
+    };
 };
