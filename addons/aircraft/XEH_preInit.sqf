@@ -2,6 +2,4 @@
 
 ADDON = false;
 
-PREP(gau8_muzzleEffect);
-
 ADDON = true;

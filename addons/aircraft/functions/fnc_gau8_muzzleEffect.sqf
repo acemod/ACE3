@@ -19,10 +19,11 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 private _weapon = _this select 1;
 private _projectile = _this select 6;
 
-if (_weapon != "ACE_Gatling_30mm_Plane_CAS_01_F") exitWith {};
+if (_weapon != "Gatling_30mm_Plane_CAS_01_F") exitWith {};
 
 private _no = 8 + random 1;
 

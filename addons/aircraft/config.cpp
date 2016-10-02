@@ -17,6 +17,19 @@ class CfgPatches {
     };
 };
 
+
+class CfgFunctions {
+    class ADDON {
+        class ADDON {
+            class gau8_muzzleEffect {
+                file = QPATHTOF(functions\fnc_gau8_muzzleEffect.sqf);
+            };
+        };
+    };
+};
+
+
+
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
 #include "CfgEventHandlers.hpp"
