@@ -44,11 +44,12 @@ _roamerPosY + (-sin GVAR(mapTool_angle)) * DIST_LEFT_TO_CENTER_PERC * _roamerWid
 0];
 
 private _fnc_Distance = { // Get distance point _p is from a line made from _a to _b (uses 3d array commands, but z should be 0)
+    // Ref: https://en.wikipedia.org/wiki/Distance_from_a_point_to_a_line#Vector_formulation
     params ["_a", "_b", "_p"];
-    _n = _b vectorDiff _a;
-    _pa = _a vectorDiff _p;
-    _c = _n vectorMultiply ((_pa vectorDotProduct _n) / (_n vectorDotProduct _n));
-    _d = _pa vectorDiff _c;
+    private _n = _b vectorDiff _a;
+    private _pa = _a vectorDiff _p;
+    private _c = _n vectorMultiply ((_pa vectorDotProduct _n) / (_n vectorDotProduct _n));
+    private _d = _pa vectorDiff _c;
     sqrt (_d vectorDotProduct _d);
 };
 
