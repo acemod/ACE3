@@ -1,0 +1,151 @@
+class CfgCloudlets {
+    class ACE_Gau8DefaultCldlt {
+        angle = 0;
+        animationName = "";
+        animationSpeed[] = {1};
+        animationSpeedCoef = 1;
+        beforeDestroyScript = "";
+        circleRadius = 0;
+        circleVelocity[]  =  {0,0,0};
+        colorCoef[]  =  {1,1,1,1};
+        colorVar[] = {0,0,0,0};
+        lifeTimeVar = 0;
+        MoveVelocityVarConst[] = {0,0,0};
+        onTimerScript = "";
+        particleFSFrameCount = 1;
+        particleFSIndex = 0;
+        particleFSLoop = 1;
+        particleFSNtieth = 16;
+        particleShape = "\A3\data_f\ParticleEffects\Universal\Universal";
+        particleType = "Billboard";
+        position[] = {0,0,0};
+        positionVar[] = {0,0,0};
+        positionVarConst[] = {0,0,0};
+        randomDirectionIntensity = 0;
+        randomDirectionIntensityVar = 0;
+        randomDirectionPeriod = 0;
+        randomDirectionPeriodVar = 0;
+        rotationVelocity = 0;
+        rotationVelocityVar = 0;
+        sizeCoef = 1;
+        timerPeriod = 1;
+    };
+    class ACE_Gau8ShellExplCldlt: ACE_Gau8DefaultCldlt {
+        angleVar = 1;
+        color[] = {{1,1,1,-6},{1,1,1,0}};
+        interval = 0.029999999;
+        lifeTime = 0.5;
+        moveVelocity[] = {0,1,0};
+        MoveVelocityVar[] = {0.2,0.5,0.2};
+        particleFSFrameCount = 32;
+        particleFSLoop = 0;
+        positionVar[] = {0.40000001,0.1,0.40000001};
+        randomDirectionIntensity = 0.2;
+        randomDirectionPeriod = 0.2;
+        rotationVelocityVar = 90;
+        rubbing = 0.1;
+        size[] = {"0.0125 * intensity + 4","0.0125 * intensity + 1"};
+        sizeVar = 0.5;
+        volume = 7.9000001;
+        weight = 10;
+    };
+    class ACE_Gau8ShellSprksCldlt: ACE_Gau8DefaultCldlt {
+        angleVar = 360;
+        animationSpeed[] = {1000};
+        color[] = {{1,1,1,-50}};
+        interval = 0.003;
+        lifeTime = 4;
+        lifeTimeVar = 1;
+        moveVelocity[] = {0,5,0};
+        MoveVelocityVar[] = {4,2,4};
+        particleFSFrameCount = 2;
+        particleFSIndex = 13;
+        particleFSLoop = 0;
+        positionVar[] = {2,0.5,2};
+        rotationVelocity = 1;
+        rotationVelocityVar = 2;
+        rubbing = 0;
+        size[] = {0.5,0.40000001,0.40000001,0.40000001,0.40000001,0.30000001,0.30000001,0.30000001,0.2,0.1};
+        sizeVar = 0;
+        timerPeriod = 0;
+        volume = 8;
+        weight = 24;
+    };
+    class ACE_Gau8ShellSmkCldlt: ACE_Gau8DefaultCldlt {
+        angleVar = 360;
+        animationSpeed[] = {1.5,0.5,0.25,0.25};
+        circleRadius = 2;
+        circleVelocity[] = {0.30000001,0,0.30000001};
+        color[] = {{0.5,0.5,0.5,0.40000001},{0.5,0.5,0.5,0.22},{0.60000002,0.60000002,0.60000002,0.090000004},{0.80000001,0.80000001,0.80000001,0.0099999998}};
+        colorVar[] = {0,0,0,0.30000001};
+        interval = 0.0070000002;
+        lifeTime = 6;
+        lifeTimeVar = 1.5;
+        moveVelocity[] = {0,12,0};
+        MoveVelocityVar[] = {0.5,12,0.5};
+        particleFSFrameCount = 48;
+        particleFSIndex = 7;
+        positionVar[] = {0.2,0.2,0.2};
+        randomDirectionIntensity = 0.1;
+        randomDirectionIntensityVar = 0.050000001;
+        randomDirectionPeriod = 0.2;
+        randomDirectionperiodVar = 0.2;
+        rotationVelocity = 1;
+        rotationVelocityVar = 120;
+        rubbing = 0.5;
+        size[] = {6,20};
+        sizeVar = 0.30000001;
+        volume = 1;
+        weight = 3;
+    };
+    class ACE_Gau8ShellDstCldlt: ACE_Gau8DefaultCldlt {
+        angleVar = 0;
+        animationSpeed[] = {1000};
+        circleRadius = 5;
+        circleVelocity[] = {1,1,1};
+        color[] = {
+            {0.079999998,0.067000002,0.052000001,0},
+            {0.60000002,0.5,0.40000001,0.5},
+            {0.60000002,0.5,0.40000001,0.40000001},
+            {0.60000002,0.5,0.40000001,0.30000001},
+            {0.60000002,0.5,0.40000001,0.15000001},
+            {0.60000002,0.5,0.40000001,0}
+        };
+        interval = 0.029999999;
+        lifeTime = 30;
+        lifeTimeVar = 5;
+        moveVelocity[] = {0,1,0};
+        MoveVelocityVar[] = {0.1,1,0.1};
+        particleFSFrameCount = 13;
+        particleFSIndex = 12;
+        particleFSLoop = 0;
+        positionVar[] = {2,1,2};
+        rotationVelocity = 1;
+        rotationVelocityVar = 20;
+        rubbing = 0.0099999998;
+        size[] = {18,22};
+        sizeVar = 0.30000001;
+        volume = 0.039999999;
+        weight = 0.052999999;
+    };
+    class ACE_Gau8ShellDrtCldlt: ACE_Gau8DefaultCldlt {
+        angleVar = 1;
+        animationSpeed[] = {1000};
+        color[] = {{0.60000002,0.60000002,1,1},{0.60000002,0.60000002,1,0}};
+        interval = "0.01 * interval + 0.01";
+        lifeTime = 5;
+        lifeTimeVar = 1.5;
+        moveVelocity[] = {0,"0.1 * intensity + 10",0};
+        MoveVelocityVar[] = {2,4,2};
+        particleFSFrameCount = 9;
+        particleFSIndex = 12;
+        particleFSLoop = 0;
+        rotationVelocity = 1;
+        rubbing = 0;
+        size[] = {6,12};
+        sizeVar = 0.2;
+        timerPeriod = 0.1;
+        volume = 0.1;
+        weight = 24;
+    };
+};
