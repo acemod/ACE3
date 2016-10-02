@@ -1,5 +1,5 @@
 
-PREP(hit);
+PREP(handleWoundReceived);
 PREP(isBleeding);
 PREP(onBleeding);
 PREP(createBlood);
