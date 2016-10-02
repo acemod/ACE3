@@ -23,7 +23,7 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if !([GVAR(syncedEvents), _eventName] call CBA_fnc_hashHasKey) exitWith {
-        ACE_LOGERROR_1("Request for synced event - key [%1] not found.", _eventName);
+        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 
@@ -42,7 +42,7 @@ if (isServer) then {
         false
     } count _eventLog;
 
-    ACE_LOGINFO_1("[%1] synchronized",_eventName);
+    INFO_1("[%1] synchronized",_eventName);
 };
 
 true

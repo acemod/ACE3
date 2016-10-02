@@ -25,7 +25,7 @@ if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
         // Note: BIS_fnc_guiMessage causes a CTD with call, so spawn is used instead.
         ["deployAI was called with an invalid or non-existant vehicle.", QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
     };
-    ACE_LOGERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
+    ERROR('FUNC(deployAI): deployAI was called with an invalid or non-existant vehicle.');
 };
 
 _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
@@ -34,14 +34,14 @@ if (_configEnabled == 0) exitWith {
     if (hasInterface) then {
         [format ["You cannot fast rope from a ""%1"" helicopter.", getText (_config >> "DisplayName")], QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
     };
-    ACE_LOGERROR_1('FUNC(deployAI): You cannot fast rope from a "%1" helicopter.',getText (_config >> "DisplayName"));
+    ERROR_1('FUNC(deployAI): You cannot fast rope from a "%1" helicopter.',getText (_config >> "DisplayName"));
 };
 
 if (_configEnabled == 2 && {isNull (_vehicle getVariable [QGVAR(FRIES), objNull])}) exitWith {
     if (hasInterface) then {
         [format ["""%1"" requires a FRIES for fastroping, but has not been equipped with one.", getText (_config >> "DisplayName")], QFUNC(deployAI)] spawn BIS_fnc_guiMessage;
     };
-    ACE_LOGERROR_1('FUNC(deployAI): "%1" requires a FRIES for fastroping but has not been equipped with one.',getText (_config >> "DisplayName"));
+    ERROR_1('FUNC(deployAI): "%1" requires a FRIES for fastroping but has not been equipped with one.',getText (_config >> "DisplayName"));
 };
 
 _unitsToDeploy = crew _vehicle;
@@ -52,7 +52,7 @@ if (_deploySpecial) then {
 };
 
 if (_unitsToDeploy isEqualTo []) exitWith {
-    ACE_LOGWARNING_1('FUNC(deployAI): Found no units to deploy in "%1".',getText (_config >> "DisplayName"));
+    WARNING_1('FUNC(deployAI): Found no units to deploy in "%1".',getText (_config >> "DisplayName"));
 };
 
 if (_createDeploymentGroup) then {

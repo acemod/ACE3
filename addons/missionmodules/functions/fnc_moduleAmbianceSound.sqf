@@ -53,7 +53,7 @@ if (_activated && local _logic) then {
                 if ((_soundPath select [0, 1]) == "\") then {_soundPath = _soundPath select [1];};
                 _ambianceSounds pushBack _soundPath;
             } else {
-                ACE_LOGERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
+                ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
             };
         };
 
