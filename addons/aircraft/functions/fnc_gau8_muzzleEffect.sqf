@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * QUOTE(_this call FUNC(gau8_muzzleEffect));
+ * [unit, "weapon", "muzzle", "ammo", "magazine", projectile] call ace_aircraft_fnc_gau8_muzzleEffect;
  *
  * Public: No
  */
@@ -25,7 +25,6 @@ private _projectile = _this select 6;
 if (_weapon != "ACE_Gatling_30mm_Plane_CAS_01_F") exitWith {};
 
 private _no = 8 + random 1;
-private _i;
 
 for "_i" from 1 to _no do {
     drop [
