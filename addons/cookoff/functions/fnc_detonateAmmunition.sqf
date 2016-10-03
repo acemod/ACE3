@@ -81,12 +81,14 @@ if (_amountOfMagazines > 0) exitWith {
         private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
         playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
 
-        [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+        if (random 1 < 0.15) then {
+            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+        };
     };
     if (toLower _simType == "shotgrenade") then {
-        private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
-        playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2.5, 1, 1450];
-
+        if (random 1 < 0.9) then {
+            _speed = 0;
+        };
         [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
     };
     if (toLower _simType == "shotrocket" || {toLower _simType == "shotmissile"}) then {
