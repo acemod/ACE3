@@ -32,7 +32,6 @@ class CfgFunctions {
 
 #include "CfgAmmo.hpp"
 #include "CfgCloudlets.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgLights.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgSoundSets.hpp"

@@ -25,7 +25,7 @@ private _projectile = _this select 6;
 
 if (_weapon != "Gatling_30mm_Plane_CAS_01_F") exitWith {};
 
-for "_i" from 1 to 8 + random 1 do {
+for "_i" from 1 to 8 do {
     drop [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 8], "", "Billboard", 1, 10, [0, 0, 0],
         [-1.5+random 2.5,1+_i,-1.5 + random 2.5], 1, 1, 0.80, 0.08, [_i,10,13 + random 1],

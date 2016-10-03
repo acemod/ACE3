@@ -67,11 +67,7 @@ class CfgAmmo {
         SoundSetExplosion[] = {"ACE_GAU8_30mm_Exp_SoundSet"};
         explosionSoundEffect = "DefaultExplosion";
         explosionEffects = "ACE_Gau8ShellImpact";
-        // muzzleEffect = ""; //replaced with Fired EH couse this not support fncs from preinit
-        
-        
         muzzleEffect = "ace_aircraft_fnc_gau8_muzzleEffect";
-        
         craterEffects = "HEShellCrater";
     };
 
