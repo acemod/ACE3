@@ -89,4 +89,26 @@ class CfgMagazines {
         ammo = "F_40mm_Red";
         initSpeed = 120;
     };
+    
+    class UGL_FlareWhite_F;
+    class ACE_40mm_flare_white: UGL_FlareWhite_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_white";  
+        displayName = CSTRING(40mm_flare_white);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+    class UGL_FlareRed_F;
+    class ACE_40mm_flare_red: UGL_FlareRed_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_red";  
+        displayName = CSTRING(40mm_flare_red);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
+    class UGL_FlareGreen_F;
+    class ACE_40mm_flare_green: UGL_FlareGreen_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_40mm_Flare_green";  
+        displayName = CSTRING(40mm_flare_green);
+        descriptionShort = CSTRING(parachute_flare_description);
+    };
 };

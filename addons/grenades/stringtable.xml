@@ -373,5 +373,17 @@
             <Chinesesimp>燃烧手榴弹是用来摧毁武器，弹药以及其他装备的好帮手。</Chinesesimp>
             <Chinese>燃燒手榴彈是用來摧毀武器，彈藥以及其他裝備的好幫手</Chinese>
         </Key>
+        <Key ID="STR_ACE_Grenades_parachute_flare_description">
+            <English>Type: Star Parachute Flare</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_white">
+            <English>M583 Illumination Flare (White)</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_red">
+            <English>M662 Illumination Flare (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_Grenades_40mm_flare_green">
+            <English>M661 Illumination Flare (Green)</English>
+        </Key>
     </Package>
 </Project>
