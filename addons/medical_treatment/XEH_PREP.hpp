@@ -27,11 +27,17 @@ PREP(isBeingDragged);
 PREP(medicationEffectLoop);
 PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
+
+// treaments
 PREP(treatment);
+PREP(treatment_success);
+PREP(treatment_failure);
+
+PREP(treatmentBandage);
+PREP(treatmentBandageLocal);
+
 PREP(treatmentAdvanced_CPR);
 PREP(treatmentAdvanced_CPRLocal);
-PREP(treatmentAdvanced_bandage);
-PREP(treatmentAdvanced_bandageLocal);
 PREP(treatmentAdvanced_fullHeal);
 PREP(treatmentAdvanced_fullHealLocal);
 PREP(treatmentAdvanced_fullHealTreatmentTime);
@@ -47,8 +53,6 @@ PREP(treatmentIV);
 PREP(treatmentIVLocal);
 PREP(treatmentTourniquet);
 PREP(treatmentTourniquetLocal);
-PREP(treatment_failure);
-PREP(treatment_success);
 PREP(useItem);
 PREP(useItems);
 

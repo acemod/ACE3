@@ -1,11 +1,11 @@
 
 #include "script_component.hpp"
 
-[QEGVAR(medical,initialized), {
-    params ["_unit"];
-    _unit call FUNC(checkItems);
-}] call CBA_fnc_addEventHandler;
+[QEGVAR(medical,initialized), FUNC(checkItems)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     [QGVAR(createLitterServer), FUNC(litterHandleCreate)] call CBA_fnc_addEventHandler;
 };
+
+// treatment events
+[QGVAR(treatmentBandageLocal), FUNC(treatmentBandageLocal)] call CBA_fnc_addEventHandler;

@@ -15,7 +15,7 @@ class GVAR(Actions) {
             condition = "";
             patientStateCondition = 0;
             itemConsumed = 1;
-            callbackSuccess = QFUNC(treatmentAdvanced_bandage);
+            callbackSuccess = QFUNC(treatmentBandage);
             callbackFailure = "";
             callbackProgress = "";
 
@@ -152,7 +152,7 @@ class GVAR(Actions) {
             condition = "";
             patientStateCondition = 0;
             // Callbacks
-            callbackSuccess = QFUNC(treatmentAdvanced_bandage);
+            callbackSuccess = QFUNC(treatmentBandage);
             callbackFailure = "";
             callbackProgress = "";
             itemConsumed = 1;

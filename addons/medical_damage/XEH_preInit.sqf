@@ -8,7 +8,7 @@ call FUNC(parseConfigForInjuries);
 
 // decide which woundsHandler to use by whether the extension is present or not
 if ("ace_medical" callExtension "version" != "") then {
-    DFUNC(woundsHandlerActive) = FUNC(woundsHandler);
+    DFUNC(woundsHandlerActive) = FUNC(woundsHandlerSQF); //FUNC(woundsHandler);
 } else {
     DFUNC(woundsHandlerActive) = FUNC(woundsHandlerSQF);
 };

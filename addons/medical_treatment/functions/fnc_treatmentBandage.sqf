@@ -15,7 +15,6 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
@@ -23,16 +22,12 @@ params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_s
 [_target, "activity", ELSTRING(medical,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 [_target, "activity_view", ELSTRING(medical,Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
-if (local _target) then {
-    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot]] call CBA_fnc_localEvent;
-} else {
-    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
-};
+[QGVAR(treatmentBandageLocal), [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
 
-/*    {
+/*{
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
     };
-}forEach _items;*/
+} forEach _items;*/
 
-true;
+true

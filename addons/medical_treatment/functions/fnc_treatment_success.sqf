@@ -53,7 +53,7 @@ private _bloodLossOnSelection = 0;
 private _partNumber = ([_selectionName] call EFUNC(medical,selectionNameToNumber)) max 0;
 
 // Add all bleeding from wounds on selection
-private _openWounds = _target getvariable [QGVAR(openWounds), []];
+private _openWounds = _target getvariable [QEGVAR(medical,openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
     if (_selectionX == _partNumber) then {

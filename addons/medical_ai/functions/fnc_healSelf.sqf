@@ -33,7 +33,7 @@ switch (true) do {
             };
         } forEach _openWounds;
         private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
-        [_this, "Bandage", _selection] call EFUNC(medical_treatment,treatmentAdvanced_bandageLocal);
+        [_this, "Bandage", _selection] call EFUNC(medical_treatment,treatmentBandageLocal);
 
         #ifdef DEBUG_MODE_FULL
             systemChat format ["%1 is bandaging selection %2", _this, _selection];
