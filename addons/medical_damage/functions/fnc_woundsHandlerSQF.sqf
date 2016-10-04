@@ -20,7 +20,7 @@ params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
-private _bodyPartN = ALL_BODY_PARTS find _bodyPart;
+private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
 if (_bodyPartN < 0) exitWith {};
 
 if (_typeOfDamage isEqualTo "") then {

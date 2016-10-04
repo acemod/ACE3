@@ -34,7 +34,7 @@ class GVAR(Actions) {
         class Morphine: Bandage {
             displayName = ECSTRING(medical,Inject_Morphine);
             displayNameProgress = ECSTRING(medical,Injecting_Morphine);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 1;
             category = "medication";
             treatmentTime = 8;
@@ -56,7 +56,7 @@ class GVAR(Actions) {
         class BloodIV: Bandage {
             displayName = ECSTRING(medical,Transfuse_Blood);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 0;
             category = "advanced";
             requiredMedic = 1;
@@ -82,7 +82,7 @@ class GVAR(Actions) {
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 15;
-            items[] = {"ACE_bodyBag"};
+            items[] = {"ACE_BodyBag"};
             condition = "!alive _target";
             callbackSuccess = QFUNC(actionPlaceInBodyBag);
             callbackFailure = "";
@@ -97,7 +97,7 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_Diagnosing);
             category = "examine";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"head", "body"};
+            allowedSelections[] = {"Head", "Body"};
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
@@ -114,7 +114,7 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_PerformingCPR);
             category = "advanced";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"body"};
+            allowedSelections[] = {"Body"};
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
@@ -193,7 +193,7 @@ class GVAR(Actions) {
         class Tourniquet: fieldDressing {
             displayName = ECSTRING(medical,Apply_Tourniquet);
             displayNameProgress = ECSTRING(medical,Applying_Tourniquet);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 4;
             callbackSuccess = QFUNC(treatmentTourniquet);
@@ -203,7 +203,7 @@ class GVAR(Actions) {
         class Morphine: fieldDressing {
             displayName = ECSTRING(medical,Inject_Morphine);
             displayNameProgress = ECSTRING(medical,Injecting_Morphine);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             category = "medication";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
@@ -233,7 +233,7 @@ class GVAR(Actions) {
         class BloodIV: fieldDressing {
             displayName = ECSTRING(medical,Actions_Blood4_1000);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 0;
             category = "advanced";
             items[] = {"ACE_bloodIV"};
@@ -362,7 +362,7 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_PerformingCPR);
             category = "advanced";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"body"};
+            allowedSelections[] = {"Body"};
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
@@ -388,7 +388,7 @@ class GVAR(Actions) {
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
-            items[] = {"ACE_bodyBag"};
+            items[] = {"ACE_BodyBag"};
             condition = "!alive _target";
             callbackSuccess = QFUNC(actionPlaceInBodyBag);
             callbackFailure = "";

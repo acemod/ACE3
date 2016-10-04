@@ -21,8 +21,10 @@ params ["_caller", "_target", "_selectionName", "_className"];
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exitWith {
     [DFUNC(treatment), _this] call CBA_fnc_execNextFrame;
 };
+TRACE_1("banana",_this);
 
 if !([_caller, _target, _selectionName, _className] call FUNC(canTreat)) exitWith {false};
+TRACE_1("can treat",_this);
 
 private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
 

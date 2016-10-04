@@ -21,7 +21,7 @@
 #define GET_STRING(config,default) (if (isText (config)) then {getText (config)} else {default})
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 
-#define ALL_BODY_PARTS ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"]
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 
 // scale received pain to 0-2 level to select type of scream
 // below 0.25: 0, from 0.25 to 0.5: 1, more than 0.5: 2

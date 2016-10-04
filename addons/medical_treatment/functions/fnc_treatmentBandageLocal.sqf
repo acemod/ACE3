@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Treatment classname <STRING>
- *
+ * 2: Body part <STRING>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -14,11 +14,11 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
+params ["_target", "_bandage", "_bodyPart", ["_specificClass", -1]];
 
 // Ensure it is a valid bodypart
-private _part = [_selectionName] call EFUNC(medical,selectionNameToNumber);
-if (_part < 0) exitWith {false};
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+if (_partIndex < 0) exitWith {false};
 
 // Get the open wounds for this unit
 private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
@@ -42,10 +42,10 @@ private _effectivenessFound = -1;
 private _mostEffectiveInjury = _openWounds select 0;
 private _exit = false;
 {
-    _x params ["", "_classID", "_partX"];
+    _x params ["", "_classID", "_partIndexN"];
     TRACE_2("OPENWOUND: ", _target, _x);
     // Only parse injuries that are for the selected bodypart.
-    if (_partX == _part) then {
+    if (_partIndexN == _partIndex) then {
         private _woundEffectiveness = _effectiveness;
 
         // Select the classname from the wound classname storage
@@ -96,7 +96,7 @@ _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {EGVAR(medical,level) >= 2} && {EGVAR(medical,enableAdvancedWounds)}) then {
-    [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
+    [_target, _impact, _partIndex, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
 // If all wounds to a body part have been bandaged, reset damage to that body part to zero
@@ -156,7 +156,7 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
         };
     } forEach _currentWounds;
 
-    // ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
+    // ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"]
     private _bodyStatus = _target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]];
 
     // Any body part that has no wounds is healed to full health

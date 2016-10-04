@@ -16,6 +16,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
+
 // scale received pain to 0-2 level to select type of scream
 // below 0.33: 0, from 0.34 to 0.66: 1, more than 0.67: 2
 #define PAIN_TO_MOAN(pain) (floor (3 * pain) min 2)

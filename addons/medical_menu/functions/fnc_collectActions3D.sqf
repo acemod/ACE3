@@ -15,8 +15,7 @@
  */
 #include "script_component.hpp"
 
-private _actionsConfig = [nil, configFile >> "ACE_Medical_Treatment_Actions" >> "Basic", configFile >> "ACE_Medical_Treatment_Actions" >> "Advanced"] select EGVAR(medical,level);
-private _allAllowedSelections = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
+private _actionsConfig = [nil, configFile >> QEGVAR(medical_treatment,actions) >> "Basic", configFile >> QEGVAR(medical_treatment,actions) >> "Advanced"] select EGVAR(medical,level);
 private _actionPaths = ["ACE_Head", "ACE_Torso", "ACE_ArmLeft", "ACE_ArmRight", "ACE_LegLeft", "ACE_LegRight"];
 private _actionPathTexts = [
     localize ELSTRING(interaction,Head), localize ELSTRING(interaction,Torso),
@@ -38,25 +37,24 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
         default {""};
     };
 
-    private _allowedSelections = getArray (_config >> "allowedSelections");
-    _allowedSelections = _allowedSelections apply {toLower _x};
+    private _allowedBodyParts = getArray (_config >> "allowedSelections") apply {toLower _x};
 
-    if (_allowedSelections isEqualTo ["all"]) then {
-        _allowedSelections = _allAllowedSelections;
+    if (_allowedBodyParts isEqualTo ["all"]) then {
+        _allowedBodyParts = ALL_BODY_PARTS apply {toLower _x};
     };
 
     {
-        private _selection = _x;
-        private _actionPath = _actionPaths select (_allAllowedSelections find _selection);
+        private _bodyPart = _x;
+        private _actionPath = _actionPaths select (ALL_BODY_PARTS find toLower _bodyPart);
 
         private _statement = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,treatment)};
         private _condition = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,canTreatCached)};
 
         private _action = [
-            _actionName, _displayName, _icon, _statement, _condition, {}, [_selection, configName _config], [0, 0, 0], 2, [false, true, false, false, false]
+            _actionName, _displayName, _icon, _statement, _condition, {}, [_bodyPart, configName _config], [0, 0, 0], 2, [false, true, false, false, false]
         ] call EFUNC(interact_menu,createAction);
         diag_log formatText ["ACTIONS LOL: %1", [_actionName, _displayName, _icon, _statement, _condition]];
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         ["CAManBase", 1, ["ACE_SelfActions", "Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
-    } forEach _allowedSelections;
+    } forEach _allowedBodyParts;
 } forEach configProperties [_actionsConfig, "isClass _x"];

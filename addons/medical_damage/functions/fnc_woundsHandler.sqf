@@ -19,10 +19,6 @@
 params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
 
-///// DELETE THIS AFTER EXTENSION HAS BEEN UPDATED
-_bodyPart = EGVAR(medical,SELECTIONS) select (ALL_BODY_PARTS find _bodyPart);
-/////
-
 if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
 };

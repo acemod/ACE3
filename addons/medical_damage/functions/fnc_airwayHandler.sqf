@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit That Was Hit <OBJECT>
- * 1: Name Of Hit Selection <STRING>
+ * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Shooter or source of the damage <OBJECT>
  * 4: Type of the damage done <STRING>
@@ -14,14 +14,13 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private "_bodyPartn";
-params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call EFUNC(medical,selectionNameToNumber);
+params ["_unit", "_bodyPart", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
 
-if (_bodyPartn > 1) exitWith {};
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+
+if (_partIndex > 1) exitWith {};
 
 if (_amountOfDamage > 0.5) then {
     if (random(1) >= 0.8) then {

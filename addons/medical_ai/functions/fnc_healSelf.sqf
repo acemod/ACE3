@@ -32,7 +32,7 @@ switch (true) do {
                 _index
             };
         } forEach _openWounds;
-        private _selection = ["head","body","hand_l","hand_r","leg_l","leg_r"] select _partIndex;
+        private _selection = ALL_BODY_PARTS select _partIndex;
         [_this, "Bandage", _selection] call EFUNC(medical_treatment,treatmentBandageLocal);
 
         #ifdef DEBUG_MODE_FULL
