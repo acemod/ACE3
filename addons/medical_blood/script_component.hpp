@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Medical Blood
 #include "\z\ace\addons\main\script_mod.hpp"
 
-#define DEBUG_ENABLED_MEDICAL_BLOOD
+// #define DEBUG_ENABLED_MEDICAL_BLOOD
 #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 

@@ -15,20 +15,6 @@
 #include "script_component.hpp"
 
 params ["_target", "_bandage", "_selectionName", ["_specificClass", -1]];
-TRACE_1("bandage",_this);
-
-
-
-
-
-
-
-
-
-
-
-
-if (true) exitWith {};
 
 // Ensure it is a valid bodypart
 private _part = [_selectionName] call EFUNC(medical,selectionNameToNumber);

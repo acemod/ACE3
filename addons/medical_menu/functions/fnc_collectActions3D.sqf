@@ -49,11 +49,11 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
         private _selection = _x;
         private _actionPath = _actionPaths select (_allAllowedSelections find _selection);
 
-        private _statement = {[_player, _target, _selection, _this select 2] call EFUNC(medical_treatment,treatment)};
-        private _condition = {[_player, _target, _selection, _this select 2] call EFUNC(medical_treatment,canTreatCached)};
+        private _statement = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,treatment)};
+        private _condition = {[_player, _target, _this select 2 select 0, _this select 2 select 1] call EFUNC(medical_treatment,canTreatCached)};
 
         private _action = [
-            _actionName, _displayName, _icon, _statement, _condition, {}, configName _config, [0, 0, 0], 2, [false, true, false, false, false]
+            _actionName, _displayName, _icon, _statement, _condition, {}, [_selection, configName _config], [0, 0, 0], 2, [false, true, false, false, false]
         ] call EFUNC(interact_menu,createAction);
         diag_log formatText ["ACTIONS LOL: %1", [_actionName, _displayName, _icon, _statement, _condition]];
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
