@@ -9,7 +9,7 @@
  * The animtaion <STRING>
  *
  * Example:
- * player call ace_medical_engine_fnc_getUnitAwakeAnim
+ * player call ace_common_fnc_getAwakeAnim
  *
  * Public: no
  */

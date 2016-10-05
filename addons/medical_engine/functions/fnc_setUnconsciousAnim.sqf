@@ -38,7 +38,7 @@ if (_isUnconscious) then {
 } else {
     // reset animation inside vehicles
     if (vehicle _unit != _unit) then {
-        private _awakeAnim = _unit call FUNC(getUnitAwakeAnim);
+        private _awakeAnim = _unit call EFUNC(common,getAwakeAnim);
         [_unit, _awakeAnim, 2] call EFUNC(common,doAnimation);
     } else {
         // and on foot
