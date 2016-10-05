@@ -12,23 +12,25 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_target", "_className", "_partNumber"];
 TRACE_3("params",_target,_className,_partNumber);
 
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
-if ((_tourniquets select _partNumber) > 0) exitWith {
+
+if (_tourniquets select _partNumber > 0) exitWith {
     TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
     private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+
     _delayedMedications pushBack _this;
     _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+
     true
 };
 
 // We have added a new dose of this medication to our system, so let's increase it
-private _varName = format[QGVAR(%1_inSystem), _className];
+private _varName = format [QGVAR(%1_inSystem), _className];
 private _currentInSystem = _target getVariable [_varName, 0];
 _target setVariable [_varName, _currentInSystem + 1];
 
@@ -44,6 +46,7 @@ private _viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
 private _hrCallback = getText (_medicationConfig >> "hrCallback");
 
 private _inCompatableMedication = [];
+
 if (isClass (_medicationConfig >> _className)) then {
     _medicationConfig = (_medicationConfig >> _className);
     if (isNumber (_medicationConfig >> "painReduce")) then { _painReduce = getNumber (_medicationConfig >> "painReduce");};
@@ -56,15 +59,20 @@ if (isClass (_medicationConfig >> _className)) then {
     if (isNumber (_medicationConfig >> "viscosityChange")) then { _viscosityChange = getNumber (_medicationConfig >> "viscosityChange"); };
     if (isText (_medicationConfig >> "hrCallback")) then { _hrCallback = getText (_medicationConfig >> "hrCallback"); };
 };
+
 if (isNil _hrCallback) then {
     _hrCallback = compile _hrCallback;
 } else {
     _hrCallback = missionNamespace getVariable _hrCallback;
 };
-if (!(_hrCallback isEqualType {})) then {_hrCallback = {TRACE_1("callback was NOT code",_hrCallback)};};
+
+if !(_hrCallback isEqualType {}) then {
+    _hrCallback = {TRACE_1("callback was NOT code",_hrCallback)};
+};
 
 // Adjust the heart rate based upon config entry
 private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 70];
+
 if (alive _target) then {
     if (_heartRate > 0) then {
         if (_heartRate <= 45) then {

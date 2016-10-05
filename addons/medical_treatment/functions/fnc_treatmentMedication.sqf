@@ -6,7 +6,7 @@
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
  * 2: Body part <STRING>
- * 3: Treatment classname <STRING>
+ * 3: Treatment class name <STRING>
  * 4: Items Used <ARRAY>
  *
  * Return Value:
@@ -21,7 +21,7 @@ TRACE_5("params",_caller,_target,_bodyPart,_className,_items);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
-[QGVAR(treatmentAdvanced_medicationLocal), [_target, _className, _partIndex], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(treatmentMedicationLocal), [_target, _className, _partIndex], [_target]] call CBA_fnc_targetEvent;
 
 {
     if (_x != "") then {
