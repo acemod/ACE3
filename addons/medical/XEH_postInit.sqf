@@ -14,6 +14,7 @@ if (isServer) then {
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
+
     if (local _unit) then {
         if (_status) then {
             _unit setVariable ["tf_voiceVolume", 0, true];

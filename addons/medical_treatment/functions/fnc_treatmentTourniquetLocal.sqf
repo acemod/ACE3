@@ -5,6 +5,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Item used classname <STRING>
+ * 2: Body part <STRING>
  *
  * Return Value:
  * None
@@ -13,14 +14,16 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_tourniquetItem", "_selectionName"];
+params ["_target", "_tourniquetItem", "_bodyPart"];
 
 //If we're not already tracking vitals, start:
 [_target] call EFUNC(medical,addVitalLoop);
 
-private _part = [_selectionName] call EFUNC(medical,selectionNameToNumber);
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
 // Place a tourniquet on the bodypart
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
-_tourniquets set [_part, CBA_missionTime];
+
+_tourniquets set [_partIndex, CBA_missionTime];
+
 _target setVariable [QEGVAR(medical,tourniquets), _tourniquets, true];

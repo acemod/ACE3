@@ -5,8 +5,8 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: Selection Name <STRING>
- * 3: Treatment classname <STRING>
+ * 2: Body part <STRING>
+ * 3: Treatment class name <STRING>
  *
  * Return Value:
  * None
@@ -15,6 +15,6 @@
  */
 #include "script_component.hpp"
 
-params ["_caller", "_target","_className"];
+params ["_caller", "_target"];
 
 [_target, false] call EFUNC(medical,setUnconscious);

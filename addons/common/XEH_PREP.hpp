@@ -45,6 +45,7 @@ PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
+PREP(getAwakeAnim);
 PREP(getDeathAnim);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);

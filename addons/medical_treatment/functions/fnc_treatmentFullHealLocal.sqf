@@ -1,19 +1,21 @@
-/**
- * fn_healLocal.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Handles full heal of a patient.
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ * Arguments:
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
+ *
+ * Return Value:
+ * Succesful treatment started <BOOL>
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target"];
 
 if (alive _target) exitWith {
-
     _target setVariable [QEGVAR(medical,pain), 0, true];
     _target setVariable [QEGVAR(medical,morphine), 0, true];
     _target setVariable [QEGVAR(medical,bloodVolume), 100, true];
@@ -58,6 +60,7 @@ if (alive _target) exitWith {
 
     // medication
     private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedication), []];
+
     {
        _target setVariable [_x select 0, nil];
     } forEach _allUsedMedication;

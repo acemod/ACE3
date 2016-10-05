@@ -18,6 +18,7 @@
 params ["_target", "_treatmentClassname"];
 
 private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), 100];
+
 if (_bloodVolume >= 100) exitWith {};
 
 // Find the proper attributes for the used IV

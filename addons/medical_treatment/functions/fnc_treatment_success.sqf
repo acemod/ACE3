@@ -5,7 +5,7 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
+ * 2: Body part <STRING>
  * 3: Treatment classname <STRING>
  * 4: Items available <ARRAY<STRING>>
  *
@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params ["_caller", "_target", "_selectionName", "_className", "_items", "_usersOfItems"];
+_args params ["_caller", "_target", "_bodyPart", "_className", "_items", "_usersOfItems"];
 
 // switch to end anim immediately
 private _endInAnim = _caller getVariable QGVAR(endInAnim);
@@ -50,10 +50,10 @@ if !(_callback isEqualType {}) then {
 
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;
-private _partNumber = ([_selectionName] call EFUNC(medical,selectionNameToNumber)) max 0;
+private _partNumber = (ALL_BODY_PARTS find toLower _bodyPart) max 0;
 
 // Add all bleeding from wounds on selection
-private _openWounds = _target getvariable [QGVAR(openWounds), []];
+private _openWounds = _target getvariable [QEGVAR(medical,openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
     if (_selectionX == _partNumber) then {
@@ -71,4 +71,4 @@ if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
     [_target] call FUNC(addVitalLoop);
 };
 
-["ace_treatmentSucceded", [_caller, _target, _selectionName, _className]] call CBA_fnc_localEvent;
+["ace_treatmentSucceded", [_caller, _target, _bodyPart, _className]] call CBA_fnc_localEvent;

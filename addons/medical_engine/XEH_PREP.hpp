@@ -5,3 +5,4 @@ PREP(damageBodyPart);
 PREP(setLimping);
 PREP(setPainSway);
 PREP(setStructuralDamage);
+PREP(setUnconsciousAnim);

@@ -20,7 +20,7 @@ params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
 
 // Convert the selectionName to a number and ensure it is a valid selection.
-private _bodyPartN = ALL_BODY_PARTS find _bodyPart;
+private _bodyPartN = ALL_BODY_PARTS find toLower _bodyPart;
 if (_bodyPartN < 0) exitWith {};
 
 if (_typeOfDamage isEqualTo "") then {
@@ -69,7 +69,7 @@ private _allPossibleInjuries = [];
 if (_highestPossibleSpot < 0) exitWith {};
 
 // Administration for open wounds and ids
-private _openWounds = _unit getVariable [QGVAR(openWounds), []];
+private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
 private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];
 
 private _painToAdd = 0;
@@ -126,16 +126,17 @@ private _woundsCreated = [];
     };
 } forEach _thresholds;
 
-_unit setVariable [QGVAR(openWounds), _openWounds, true];
+_unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
 // Only update if new wounds have been created
 if (count _woundsCreated > 0) then {
     _unit setVariable [QGVAR(lastUniqueWoundID), _woundID, true];
 };
 
-private _painLevel = _unit getVariable [QGVAR(pain), 0];
-_unit setVariable [QGVAR(pain), _painLevel + _painToAdd];
+// TODO use medical add pain function instead
+private _painLevel = _unit getVariable [QEGVAR(medical,pain), 0];
+_unit setVariable [QEGVAR(medical,pain), _painLevel + _painToAdd];
 
 [_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
 
-TRACE_6("exit",_unit, _painLevel, _painToAdd, _unit getVariable QGVAR(pain), _unit getVariable QGVAR(openWounds),_woundsCreated);
+TRACE_6("exit",_unit, _painLevel, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

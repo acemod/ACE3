@@ -15,7 +15,6 @@ PREP(isInMedicalVehicle);
 PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
-PREP(selectionNameToNumber);
 PREP(setHitPointDamage);
 PREP(setStructuralDamage);
 PREP(stateEvent);
@@ -29,3 +28,5 @@ PREP(handleStateUnconscious);
 PREP(handleUnitVitals);
 PREP(handleMedications);
 // PREP(handleStateRevive);
+
+PREP(setUnconscious);

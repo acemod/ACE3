@@ -15,8 +15,8 @@
  */
 #include "script_component.hpp"
 
-private _configBasic = (configFile >> "ACE_Medical_Treatment_Actions" >> "Basic");
-private _configAdvanced = (configFile >> "ACE_Medical_Treatment_Actions" >> "Advanced");
+private _configBasic = (configFile >> QEGVAR(medical_treatment,actions) >> "Basic");
+private _configAdvanced = (configFile >> QEGVAR(medical_treatment,actions) >> "Advanced");
 
 private _fnc_compileActionsLevel = {
     params ["_config"];
@@ -26,8 +26,8 @@ private _fnc_compileActionsLevel = {
         if (isClass _x) then {
             private _displayName = getText (_x >> "displayName");
             private _category = getText (_x >> "category");
-            private _condition = format[QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,canTreatCached)), configName _x];
-            private _statement = format[QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), EGVAR(medical,SELECTIONS) select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,treatment)), configName _x];
+            private _condition = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %2 select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,canTreatCached)), configName _x, ALL_BODY_PARTS];
+            private _statement = format [QUOTE([ARR_4(ACE_player, GVAR(INTERACTION_TARGET), %2 select GVAR(selectedBodyPart), '%1')] call DEFUNC(medical_treatment,treatment)), configName _x, ALL_BODY_PARTS];
             _actions pushBack [_displayName, _category, compile _condition, compile _statement];
             diag_log format["ACTION: %1", [_displayName, _category, compile _condition, compile _statement]];
         };

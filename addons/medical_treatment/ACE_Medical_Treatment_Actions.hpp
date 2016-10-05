@@ -15,7 +15,7 @@ class GVAR(Actions) {
             condition = "";
             patientStateCondition = 0;
             itemConsumed = 1;
-            callbackSuccess = QFUNC(treatmentAdvanced_bandage);
+            callbackSuccess = QFUNC(treatmentBandage);
             callbackFailure = "";
             callbackProgress = "";
 
@@ -34,12 +34,12 @@ class GVAR(Actions) {
         class Morphine: Bandage {
             displayName = ECSTRING(medical,Inject_Morphine);
             displayNameProgress = ECSTRING(medical,Injecting_Morphine);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 1;
             category = "medication";
             treatmentTime = 8;
             items[] = {"ACE_morphine"};
-            callbackSuccess = QFUNC(treatmentBasic_morphine);
+            callbackSuccess = QFUNC(treatmentMorphine);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
             sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -49,21 +49,21 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Injecting_Epinephrine);
             requiredMedic = QEGVAR(medical,medicSetting_basicEpi);
             items[] = {"ACE_epinephrine"};
-            callbackSuccess = QFUNC(treatmentBasic_epipen);
+            callbackSuccess = QFUNC(treatmentEpipen);
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
         };
         class BloodIV: Bandage {
             displayName = ECSTRING(medical,Transfuse_Blood);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 0;
             category = "advanced";
             requiredMedic = 1;
             treatmentTime = 12;
             items[] = {"ACE_bloodIV"};
-            // callbackSuccess = QFUNC(treatmentBasic_bloodbag);
-            callbackSuccess = QFUNC(treatmentIV);
+            callbackSuccess = QFUNC(treatmentBloodbag);
+            // callbackSuccess = QFUNC(treatmentIV);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
@@ -82,7 +82,7 @@ class GVAR(Actions) {
             treatmentLocations[] = {"All"};
             requiredMedic = 0;
             treatmentTime = 15;
-            items[] = {"ACE_bodyBag"};
+            items[] = {"ACE_BodyBag"};
             condition = "!alive _target";
             callbackSuccess = QFUNC(actionPlaceInBodyBag);
             callbackFailure = "";
@@ -97,7 +97,7 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_Diagnosing);
             category = "examine";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"head", "body"};
+            allowedSelections[] = {"Head", "Body"};
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
@@ -114,13 +114,13 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_PerformingCPR);
             category = "advanced";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"body"};
+            allowedSelections[] = {"Body"};
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
             condition = QUOTE(!(_target call EFUNC(common,isAwake)) && EGVAR(medical,enableRevive) > 0);
-            callbackSuccess = QFUNC(treatmentAdvanced_CPR);
+            callbackSuccess = QFUNC(treatmentCPR);
             callbackFailure = "";
             callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";
@@ -152,7 +152,7 @@ class GVAR(Actions) {
             condition = "";
             patientStateCondition = 0;
             // Callbacks
-            callbackSuccess = QFUNC(treatmentAdvanced_bandage);
+            callbackSuccess = QFUNC(treatmentBandage);
             callbackFailure = "";
             callbackProgress = "";
             itemConsumed = 1;
@@ -193,7 +193,7 @@ class GVAR(Actions) {
         class Tourniquet: fieldDressing {
             displayName = ECSTRING(medical,Apply_Tourniquet);
             displayNameProgress = ECSTRING(medical,Applying_Tourniquet);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             items[] = {"ACE_tourniquet"};
             treatmentTime = 4;
             callbackSuccess = QFUNC(treatmentTourniquet);
@@ -203,11 +203,11 @@ class GVAR(Actions) {
         class Morphine: fieldDressing {
             displayName = ECSTRING(medical,Inject_Morphine);
             displayNameProgress = ECSTRING(medical,Injecting_Morphine);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             category = "medication";
             items[] = {"ACE_morphine"};
             treatmentTime = 3;
-            callbackSuccess = QFUNC(treatmentAdvanced_medication);
+            callbackSuccess = QFUNC(treatmentMedication);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
             sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -233,7 +233,7 @@ class GVAR(Actions) {
         class BloodIV: fieldDressing {
             displayName = ECSTRING(medical,Actions_Blood4_1000);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
-            allowedSelections[] = {"hand_l", "hand_r", "leg_l", "leg_r"};
+            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 0;
             category = "advanced";
             items[] = {"ACE_bloodIV"};
@@ -290,7 +290,7 @@ class GVAR(Actions) {
             patientStateCondition = QEGVAR(medical,useCondition_SurgicalKit);
             treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
             callbackSuccess = "";
-            callbackProgress = QFUNC(treatmentAdvanced_surgicalKit_onProgress);
+            callbackProgress = QFUNC(treatmentSurgicalKit_onProgress);
             itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
@@ -304,8 +304,8 @@ class GVAR(Actions) {
             allowSelfTreatment = 0;
             requiredMedic = QEGVAR(medical,medicSetting_PAK);
             patientStateCondition = QEGVAR(medical,useCondition_PAK);
-            treatmentTime = QUOTE(_target call FUNC(treatmentAdvanced_fullHealTreatmentTime));
-            callbackSuccess = QFUNC(treatmentAdvanced_fullHeal);
+            treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
+            callbackSuccess = QFUNC(treatmentFullHeal);
             itemConsumed = QEGVAR(medical,consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -362,13 +362,13 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Actions_PerformingCPR);
             category = "advanced";
             treatmentLocations[] = {"All"};
-            allowedSelections[] = {"body"};
+            allowedSelections[] = {"Body"};
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
             items[] = {};
             condition = QUOTE(!(_target call EFUNC(common,isAwake)));
-            callbackSuccess = QFUNC(treatmentAdvanced_CPR);
+            callbackSuccess = QFUNC(treatmentCPR);
             callbackFailure = "";
             callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";
@@ -388,7 +388,7 @@ class GVAR(Actions) {
             allowSelfTreatment = 0;
             requiredMedic = 0;
             treatmentTime = 15;
-            items[] = {"ACE_bodyBag"};
+            items[] = {"ACE_BodyBag"};
             condition = "!alive _target";
             callbackSuccess = QFUNC(actionPlaceInBodyBag);
             callbackFailure = "";
