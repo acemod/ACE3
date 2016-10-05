@@ -35,22 +35,6 @@ if (_isUnconscious) then {
         private _unconAnim = _unit call EFUNC(common,getDeathAnim);
         [_unit, _unconAnim] call EFUNC(common,doAnimation);
     };
-
-    private _id = _unit addEventHandler ["AnimChanged", {
-        params ["_unit", "_anim"];
-
-        if (!local _unit || {lifeState _unit != "INCAPACITATED"}) exitWith {
-            private _id = _unit getVariable QGVAR(unconAnimEHID);
-            _unit removeEventHandler ["AnimChanged", _id];
-        };
-
-        private _unconAnim = "unconscious";
-
-        _unit playMove _unconAnim; // this one is handled weird in doAnimation. @todo, clean up
-        //[_unit, _unconAnim, 0, true] call EFUNC(common,doAnimation);
-    }];
-
-    _unit setVariable [QGVAR(unconAnimEHID), _id];
 } else {
     // reset animation inside vehicles
     if (vehicle _unit != _unit) then {

@@ -18,6 +18,7 @@ class CfgPatches {
 
 #include "CfgActions.hpp"
 #include "CfgMoves.hpp"
+#include "CfgExtendedAnimation.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgInGameUI.hpp"
