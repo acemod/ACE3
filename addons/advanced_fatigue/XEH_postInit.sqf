@@ -31,11 +31,13 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
-        [QEGVAR(weather,temperature), { // 35->1, 45->2
-            linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
-        }] call FUNC(addDutyFactor);
-    };
+    [QGVAR(hotAndCold), {
+        private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call EFUNC(advanced_fatigue,calculateBodyTemperature);
+        ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
+        private _shiver = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyShiver);
+        private _heatStress = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyHeatStress);
+        linearConversion [0, 1000, (_heatStress + _shiver), 1, 2, true];
+    }] call FUNC(addDutyFactor);
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
