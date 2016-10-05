@@ -28,27 +28,26 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
 
 params ["_unit", ["_set", true], ["_minUnconsciousTime", DEFAULT_DELAY], ["_force", false]];
 
-if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious2", false])) exitWith {systemChat "exit"};
+if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
 
 if !(_set) exitWith {
-    _unit setVariable ["ACE_isUnconscious2", false, true];
+    _unit setVariable ["ACE_isUnconscious", false, true];
 
     if (_unit getVariable [QGVAR(inReviveState), false]) then {
         _unit setVariable [QGVAR(inReviveState), nil, true];
     };
 
     [_unit, false] call EFUNC(medical_engine,setUnconsciousAnim);
-    systemChat str 123;
 };
-/*
+
 if (isNull _unit || {!(_unit isKindOf "CAManBase")}) exitWith {};
 
 if (!local _unit) exitWith {
     [QGVAR(setUnconscious), [_unit, _set, _minUnconsciousTime, _force], _unit] call CBA_fnc_targetEvent;
 };
-*/
-_unit setVariable ["ACE_isUnconscious2", true, true];
-/*
+
+_unit setVariable ["ACE_isUnconscious", true, true];
+
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
 
@@ -74,33 +73,33 @@ if (_isDead) exitWith {};
 // So the AI does not get stuck, we are moving the unit to a temp group on its own.
 // Unconscious units shouldn't be put in another group #527:
 if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-    [_unit, true, "ACE_isUnconscious2", side group _unit] call EFUNC(common,switchToGroupSide);
+    [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 };
 
 // Delay Unconscious so the AI dont instant stop shooting on the unit #3121
 [{
     params ["_unit"];
 
-    if (_unit getVariable ["ACE_isUnconscious2", false]) then {
+    if (_unit getVariable ["ACE_isUnconscious", false]) then {
         [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
     };
 }, _unit, 3] call CBA_fnc_waitAndExecute;
-*/
+
 [_unit, true] call EFUNC(medical_engine,setUnconsciousAnim);
-/*
+
 [_unit, "Unconscious", []] call FUNC(stateEvent);
 
 ["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;
-*/
-// auto wake up
+
+// auto wake up, testing @todo
 [{
     params ["_unit", "_time"];
-systemChat str 0;
-    !(_unit getVariable ["ACE_isUnconscious2", false]) || {CBA_missionTime > _time}
+
+    !(_unit getVariable ["ACE_isUnconscious", false]) || {CBA_missionTime > _time}
 }, {
     params ["_unit"];
-systemChat str 1;
-    if (_unit getVariable ["ACE_isUnconscious2", false]) then {
+
+    if (_unit getVariable ["ACE_isUnconscious", false]) then {
         [_unit, false] call FUNC(setUnconscious);
     };
 }, [_unit, CBA_missionTime + _minUnconsciousTime]] call CBA_fnc_waitUntilAndExecute;
