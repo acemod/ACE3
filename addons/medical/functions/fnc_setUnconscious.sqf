@@ -38,6 +38,8 @@ if !(_set) exitWith {
     };
 
     [_unit, false] call EFUNC(medical_engine,setUnconsciousAnim);
+
+    ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
 };
 
 if (isNull _unit || {!(_unit isKindOf "CAManBase")}) exitWith {};

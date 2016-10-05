@@ -30,8 +30,7 @@ if (isNil "ACE_maxWeightCarry") then {
 //@todo Captivity?
 
 //Add Keybind:
-["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)),
-{
+["ACE3 Common", QGVAR(drag), (localize LSTRING(DragKeybind)), {
     if (!alive ACE_player) exitWith {false};
     if !([ACE_player, objNull, ["isNotDragging", "isNotCarrying"]] call EFUNC(common,canInteractWith)) exitWith {false};
     
@@ -51,7 +50,6 @@ if (isNil "ACE_maxWeightCarry") then {
 
     [ACE_player, _cursor] call FUNC(startDrag);
     false
-},
-{false},
-[-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
-
+}, {
+    false
+}, [-1, [false, false, false]]] call CBA_fnc_addKeybind; // UNBOUND
