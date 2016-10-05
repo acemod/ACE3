@@ -111,10 +111,7 @@ class CfgVehicles {
             };
         };
     };
-    class AllVehicles;
-    class Air: AllVehicles {
-        class Turrets;
-    };
+    class Air;
     class Helicopter: Air {
         class Turrets {
             class MainTurret;
