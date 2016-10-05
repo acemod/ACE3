@@ -25,14 +25,18 @@ private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
 if (count _openWounds == 0) exitWith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
-private _config = (configFile >> "ace_medical_treatment" >> "Bandaging");
+private _config = configFile >> "ace_medical_treatment" >> "Bandaging";
 private _effectiveness = getNumber (_config >> "effectiveness");
+
 if (isClass (_config >> _bandage)) then {
-    systemchat "using class: " + _bandage;
+    systemchat ("using class: " + _bandage);
     _config = (_config >> _bandage);
-    if (isNumber (_config >> "effectiveness")) then { _effectiveness = getNumber (_config >> "effectiveness");};
+
+    if (isNumber (_config >> "effectiveness")) then {
+        _effectiveness = getNumber (_config >> "effectiveness");
+    };
 } else {
-    systemChat format["No bandage avialable"];
+    systemChat "No bandage avialable";
 };
 
 // Figure out which injury for this bodypart is the best choice to bandage
@@ -41,9 +45,11 @@ private _mostEffectiveSpot = 0;
 private _effectivenessFound = -1;
 private _mostEffectiveInjury = _openWounds select 0;
 private _exit = false;
+
 {
     _x params ["", "_classID", "_partIndexN"];
     TRACE_2("OPENWOUND: ", _target, _x);
+
     // Only parse injuries that are for the selected bodypart.
     if (_partIndexN == _partIndex) then {
         private _woundEffectiveness = _effectiveness;
@@ -54,7 +60,8 @@ private _exit = false;
         // Check if this wound type has attributes specified for the used bandage
         if (isClass (_config >> _className)) then {
             // Collect the effectiveness from the used bandage for this wound type
-            private _woundTreatmentConfig = (_config >> _className);
+            private _woundTreatmentConfig = _config >> _className;
+
             if (isNumber (_woundTreatmentConfig >> "effectiveness")) then {
                 _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
@@ -80,6 +87,7 @@ private _exit = false;
             _mostEffectiveInjury = _x;
         };
     };
+
     if (_exit) exitWith {};
 } forEach _openWounds;
 
@@ -88,8 +96,8 @@ if (_effectivenessFound == -1) exitWith {}; // Seems everything is patched up on
 
 // TODO refactor this part
 // Find the impact this bandage has and reduce the amount this injury is present
-private _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) then {_effectivenessFound} else { (_mostEffectiveInjury select 3) };
-_mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
+private _impact = if (_mostEffectiveInjury select 3 >= _effectivenessFound) then {_effectivenessFound} else { _mostEffectiveInjury select 3 };
+_mostEffectiveInjury set [3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
@@ -117,13 +125,13 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
 
     // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
     {
-        _x params ["", "", "_bodyPart", "_numOpenWounds", "_bloodLoss"];
+        _x params ["", "", "_partIndex", "_numOpenWounds", "_bloodLoss"];
 
         // Use switch/case for early termination if wounded limb is found before all six are checked.
         // Number of wounds multiplied by blood loss will return zero for a fully
         // bandaged body part, not incrementing the wound counter; or it will return
         // some other number which will increment the wound counter.
-        switch (_bodyPart) do {
+        switch (_partIndex) do {
             // Head
             case 0: {
                 _headWounds = _headWounds + (_numOpenWounds * _bloodLoss);
@@ -184,4 +192,4 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
     [_target] call EFUNC(medical_damage,setDamage);
 };
 
-true;
+true

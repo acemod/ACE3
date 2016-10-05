@@ -35,6 +35,12 @@ PREP(treatment_failure);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
+PREP(treatmentMorphine);
+PREP(treatmentMorphineLocal);
+PREP(treatmentEpipen);
+//PREP(treatmentEpipenLocal);
+PREP(treatmentBloodbag);
+PREP(treatmentBloodbagLocal);
 
 PREP(treatmentAdvanced_CPR);
 PREP(treatmentAdvanced_CPRLocal);
@@ -44,11 +50,6 @@ PREP(treatmentAdvanced_fullHealTreatmentTime);
 PREP(treatmentAdvanced_medication);
 PREP(treatmentAdvanced_medicationLocal);
 PREP(treatmentAdvanced_surgicalKit_onProgress);
-PREP(treatmentBasic_bloodbag);
-PREP(treatmentBasic_bloodbagLocal);
-PREP(treatmentBasic_epipen);
-PREP(treatmentBasic_morphine);
-PREP(treatmentBasic_morphineLocal);
 PREP(treatmentIV);
 PREP(treatmentIVLocal);
 PREP(treatmentTourniquet);

@@ -39,7 +39,7 @@ class GVAR(Actions) {
             category = "medication";
             treatmentTime = 8;
             items[] = {"ACE_morphine"};
-            callbackSuccess = QFUNC(treatmentBasic_morphine);
+            callbackSuccess = QFUNC(treatmentMorphine);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
             sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -49,7 +49,7 @@ class GVAR(Actions) {
             displayNameProgress = ECSTRING(medical,Injecting_Epinephrine);
             requiredMedic = QEGVAR(medical,medicSetting_basicEpi);
             items[] = {"ACE_epinephrine"};
-            callbackSuccess = QFUNC(treatmentBasic_epipen);
+            callbackSuccess = QFUNC(treatmentEpipen);
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
         };
@@ -62,8 +62,8 @@ class GVAR(Actions) {
             requiredMedic = 1;
             treatmentTime = 12;
             items[] = {"ACE_bloodIV"};
-            // callbackSuccess = QFUNC(treatmentBasic_bloodbag);
-            callbackSuccess = QFUNC(treatmentIV);
+            callbackSuccess = QFUNC(treatmentBloodbag);
+            // callbackSuccess = QFUNC(treatmentIV);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };

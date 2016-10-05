@@ -44,9 +44,9 @@ if (isNumber (_config >> "requiredMedic")) then {
 if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitWith {false};
 
 // check selection
-private _allowedSelections = getArray (_config >> "allowedSelections");
+private _allowedSelections = getArray (_config >> "allowedSelections") apply {toLower _x};
 
-if !("All" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitWith {false};
+if !("all" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitWith {false};
 
 // check item
 private _items = getArray (_config >> "items");
@@ -88,9 +88,9 @@ if (isNumber (_config >> "patientStateCondition")) then {
 if (_patientStateCondition == 1 && {!([_target] call EFUNC(medical,isInStableCondition))}) exitWith {false};
 
 // check allowed locations
-private _locations = getArray (_config >> "treatmentLocations");
+private _locations = getArray (_config >> "treatmentLocations") apply {toLower _x};
 
-if ("All" in _locations) then {
+if ("all" in _locations) then {
     _locations = true;
 } else {
     private _medFacility = {([_caller] call EFUNC(medical,isInMedicalFacility)) || ([_target] call EFUNC(medical,isInMedicalFacility))};

@@ -16,4 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
+
 #define CUR_LEVEL (["Basic", "Advanced"] select (EGVAR(medical,level) >= 2))
