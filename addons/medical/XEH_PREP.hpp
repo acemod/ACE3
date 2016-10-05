@@ -28,3 +28,5 @@ PREP(handleStateUnconscious);
 PREP(handleUnitVitals);
 PREP(handleMedications);
 // PREP(handleStateRevive);
+
+PREP(setUnconscious);

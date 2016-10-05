@@ -26,7 +26,7 @@ if (_local) then {
         private _arguments = (_unit getVariable [QGVAR(unconsciousArguments), []]);
         _arguments set [2, CBA_missionTime];
 
-        [DFUNC(unconsciousPFH), 0.1, _arguments ] call CBA_fnc_addPerFrameHandler;
+        //[DFUNC(unconsciousPFH), 0.1, _arguments ] call CBA_fnc_addPerFrameHandler;
 
         _unit setVariable [QGVAR(unconsciousArguments), nil, true];
     };
