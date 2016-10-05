@@ -120,7 +120,7 @@ class GVAR(Actions) {
             treatmentTime = 15;
             items[] = {};
             condition = QUOTE(!(_target call EFUNC(common,isAwake)) && EGVAR(medical,enableRevive) > 0);
-            callbackSuccess = QFUNC(treatmentAdvanced_CPR);
+            callbackSuccess = QFUNC(treatmentCPR);
             callbackFailure = "";
             callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";
@@ -290,7 +290,7 @@ class GVAR(Actions) {
             patientStateCondition = QEGVAR(medical,useCondition_SurgicalKit);
             treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
             callbackSuccess = "";
-            callbackProgress = QFUNC(treatmentAdvanced_surgicalKit_onProgress);
+            callbackProgress = QFUNC(treatmentSurgicalKit_onProgress);
             itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
@@ -304,8 +304,8 @@ class GVAR(Actions) {
             allowSelfTreatment = 0;
             requiredMedic = QEGVAR(medical,medicSetting_PAK);
             patientStateCondition = QEGVAR(medical,useCondition_PAK);
-            treatmentTime = QUOTE(_target call FUNC(treatmentAdvanced_fullHealTreatmentTime));
-            callbackSuccess = QFUNC(treatmentAdvanced_fullHeal);
+            treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
+            callbackSuccess = QFUNC(treatmentFullHeal);
             itemConsumed = QEGVAR(medical,consumeItem_PAK);
             animationPatient = "";
             animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -368,7 +368,7 @@ class GVAR(Actions) {
             treatmentTime = 15;
             items[] = {};
             condition = QUOTE(!(_target call EFUNC(common,isAwake)));
-            callbackSuccess = QFUNC(treatmentAdvanced_CPR);
+            callbackSuccess = QFUNC(treatmentCPR);
             callbackFailure = "";
             callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
             animationPatient = "";

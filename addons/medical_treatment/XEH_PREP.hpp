@@ -41,15 +41,16 @@ PREP(treatmentEpipen);
 //PREP(treatmentEpipenLocal);
 PREP(treatmentBloodbag);
 PREP(treatmentBloodbagLocal);
+PREP(treatmentCPR);
+PREP(treatmentCPRLocal);
+PREP(treatmentFullHeal);
+PREP(treatmentFullHealLocal);
+PREP(treatmentFullHealTreatmentTime);
 
-PREP(treatmentAdvanced_CPR);
-PREP(treatmentAdvanced_CPRLocal);
-PREP(treatmentAdvanced_fullHeal);
-PREP(treatmentAdvanced_fullHealLocal);
-PREP(treatmentAdvanced_fullHealTreatmentTime);
+PREP(treatmentSurgicalKit_onProgress);
+
 PREP(treatmentAdvanced_medication);
 PREP(treatmentAdvanced_medicationLocal);
-PREP(treatmentAdvanced_surgicalKit_onProgress);
 PREP(treatmentIV);
 PREP(treatmentIVLocal);
 PREP(treatmentTourniquet);
