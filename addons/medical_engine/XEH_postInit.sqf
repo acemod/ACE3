@@ -41,3 +41,13 @@
     ];
 }] call CBA_fnc_waitUntilAndExecute;
 #endif
+
+// this handles moving units into vehicles via load functions or zeus
+// needed, because the vanilla INCAPACITATED state does not handle vehicles
+["CAManBase", "GetInMan", {
+    params ["_unit"];
+
+    if (lifeState _unit == "INCAPACITATED") then {
+        [_unit, true] call FUNC(setUnconsciousAnim);
+    };
+}] call CBA_fnc_addClassEventHandler;
