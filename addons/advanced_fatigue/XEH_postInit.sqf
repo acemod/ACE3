@@ -31,13 +31,22 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
+
     [QGVAR(hotAndCold), {
+        ACE_player getVariable [QGVAR(hotAndColdDuty), 1];
+    }] call FUNC(addDutyFactor);
+
+    DFUNC(updateHotAndCold) = {
         private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call EFUNC(advanced_fatigue,calculateBodyTemperature);
         ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
         private _shiver = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyShiver);
         private _heatStress = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyHeatStress);
-        linearConversion [0, 1000, (_heatStress + _shiver), 1, 2, true];
-    }] call FUNC(addDutyFactor);
+        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 1000, (_heatStress + _shiver), 1, 2, true]];
+
+        [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
+    };
+ 
+    [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
