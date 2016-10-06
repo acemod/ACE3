@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-private _actionsConfig = [nil, configFile >> QEGVAR(medical_treatment,actions) >> "Basic", configFile >> QEGVAR(medical_treatment,actions) >> "Advanced"] select EGVAR(medical,level);
+private _actionsConfig = configFile >> QEGVAR(medical_treatment,actions) >> CUR_LEVEL;
 private _actionPaths = ["ACE_Head", "ACE_Torso", "ACE_ArmLeft", "ACE_ArmRight", "ACE_LegLeft", "ACE_LegRight"];
 private _actionPathTexts = [
     localize ELSTRING(interaction,Head), localize ELSTRING(interaction,Torso),

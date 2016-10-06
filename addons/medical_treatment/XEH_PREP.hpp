@@ -21,7 +21,6 @@ PREP(handleBandageOpening);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(medicationEffectLoop);
-PREP(modifyMedicalAction);
 PREP(onMedicationUsage);
 
 // treaments

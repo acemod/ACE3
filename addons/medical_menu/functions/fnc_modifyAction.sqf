@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The Patient Unit <OBJECT>
  * 1: The Diagnosing Unit <OBJECT>
- * 2: Selection Number <NUMBER>
+ * 2: Body part index <NUMBER>
  * 3: The action to modify <OBJECT>
  *
  * ReturnValue:
@@ -14,16 +14,17 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-params ["_target", "_player", "_partNumber", "_actionData"];
+params ["_target", "_player", "_partIndex", "_actionData"];
 
 private _bloodLossOnSelection = 0;
+
 // Add all bleeding from wounds on selection
 {
-    _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
-    if (_selectionX == _partNumber) then {
+    _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];
+
+    if (_bodyPartN == _partIndex) then {
         _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
@@ -31,7 +32,7 @@ private _bloodLossOnSelection = 0;
 if (_bloodLossOnSelection >= 0.15) then {
     _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed.paa)];
 } else {
-    if (_bloodLossOnSelection > 0 ) then {
+    if (_bloodLossOnSelection > 0) then {
         _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow.paa)];
     };
 };
