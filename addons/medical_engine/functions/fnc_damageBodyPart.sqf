@@ -29,7 +29,7 @@ if (!local _unit) exitWith {
     ERROR("Unit not local or null");
 };
 
-_damage = [0, 0.495] select _damage;
+_damage = [0, DAMAGED_MIN_THRESHOLD] select _damage;
 
 switch (toLower _selection) do {
     case ("head"): {
@@ -39,7 +39,7 @@ switch (toLower _selection) do {
         _unit setHitPointDamage ["HitBody", _damage];
     };
     case ("arms"): {
-        _unit setHitPointDamage ["HitHands", _damage + ([0, PAIN_MAX_DAMAGE] select (_unit getVariable [QGVAR(isInPain), false]))];
+        _unit setHitPointDamage ["HitHands", _damage];
     };
     case ("legs"): {
         _unit setHitPointDamage ["HitLegs", _damage + ([0, LIMPING_MIN_DAMAGE] select (_unit getVariable [QGVAR(isLimping), false]))];

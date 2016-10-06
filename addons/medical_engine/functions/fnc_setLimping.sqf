@@ -24,4 +24,16 @@ if (!local _unit) exitWith {
 
 _unit setVariable [QGVAR(isLimping), _isLimping, true];
 
-[_unit, "Legs", _unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD + LIMPING_MIN_DAMAGE || _unit getHitPointDamage "HitLegs" <= DAMAGED_MIN_THRESHOLD] call FUNC(damageBodyPart);
+if (_isLimping) then {
+    if (_unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD && {_unit getHitPointDamage "HitLegs" != LIMPING_MIN_DAMAGE}) then {
+        [_unit, "Legs", true] call FUNC(damageBodyPart);
+    } else {
+        [_unit, "Legs", false] call FUNC(damageBodyPart);
+    };
+} else {
+    if (_unit getHitPointDamage "HitLegs" >= DAMAGED_MIN_THRESHOLD && {_unit getHitPointDamage "HitLegs" != LIMPING_MIN_DAMAGE}) then {
+        [_unit, "Legs", true] call FUNC(damageBodyPart);
+    } else {
+        [_unit, "Legs", false] call FUNC(damageBodyPart);
+    };
+};
