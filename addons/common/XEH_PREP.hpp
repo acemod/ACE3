@@ -7,6 +7,8 @@ PREP(addToInventory);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);
 PREP(ambientBrightness);
+PREP(arithmeticGetResult);
+PREP(arithmeticSetSource);
 PREP(ASLToPosition);
 PREP(binarizeNumber);
 PREP(blurScreen);

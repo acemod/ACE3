@@ -21,10 +21,15 @@ INFO_1("ACE is version %1.",_version);
 
 //CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
-private _cbaRequiredAr = (getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA")) select 1;
-INFO_2("CBA is version %1 [min required %2]",_cbaVersionAr,_cbaRequiredAr);
+private _cbaRequiredAr = getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA") select 1;
+
+private _cbaVersionStr = _cbaVersionAr joinString ".";
+private _cbaRequiredStr = _cbaRequiredAr joinString ".";
+
+INFO_2("CBA is version %1 (min required %2)",_cbaVersionStr,_cbaRequiredStr);
+
 if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
-    private _errorMsg = format ["CBA Version [%1] is outdated [required %2]", _cbaVersionAr, _cbaRequiredAr];
+    private _errorMsg = format ["CBA version %1 is outdated (required %2)", _cbaVersionStr, _cbaRequiredStr];
     ERROR(_errorMsg);
     if (hasInterface) then {
         ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
