@@ -15,8 +15,6 @@ PREP(isInMedicalVehicle);
 PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
-PREP(setHitPointDamage);
-PREP(setStructuralDamage);
 PREP(stateEvent);
 PREP(stateMachine);
 
