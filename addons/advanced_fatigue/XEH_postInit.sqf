@@ -1,5 +1,23 @@
 #include "script_component.hpp"
+
 if (!hasInterface) exitWith {};
+
+[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
+    private _unit = ACE_player;
+    private _fatigue = _unit getVariable [QGVAR(aimFatigue), 0];
+
+    switch (stance _unit) do {
+        case ("CROUCH"): {
+            1.0 + _fatigue ^ 2 * 0.1
+        };
+        case ("PRONE"): {
+            1.0 + _fatigue ^ 2 * 2.0
+        };
+        default {
+            1.5 + _fatigue ^ 2 * 3.0
+        };
+    };
+}] call EFUNC(common,arithmeticSetSource);
 
 ["ace_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
