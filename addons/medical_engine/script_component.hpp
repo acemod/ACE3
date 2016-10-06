@@ -16,8 +16,8 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-#include "script_macros_medical.hpp"
+#include "\z\ace\addons\medical\script_macros_medical.hpp"
+#include "\z\ace\addons\medical\script_macros_config.hpp"
 
 #define EMPTY_SOUND {"A3\Sounds_F\dummysound.wss",1,1}
 #define NAMESPACE_NULL locationNull
