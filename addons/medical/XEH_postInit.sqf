@@ -27,3 +27,11 @@ if (isServer) then {
         };
     };
 }] call CBA_fnc_addEventHandler;
+
+if (!hasInterface) exitWith {};
+
+[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
+    private _pain = ACE_player getVariable [QGVAR(pain), 0];
+
+    linearConversion [0, 1, _pain, 1, 5, true];
+}] call EFUNC(common,arithmeticSetSource);
