@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (["STMapGestures"] call EFUNC(common,isModLoaded)) exitWith {
-    ACE_LOGWARNING("st_map_gestures is installed - exiting [remove st_map_gestures.pbo to allow ace version]");
+    WARNING("st_map_gestures is installed - exiting [remove st_map_gestures.pbo to allow ace version]");
 };
 
 if (!hasInterface) exitWith {};
