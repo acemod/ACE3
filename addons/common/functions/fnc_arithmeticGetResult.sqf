@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Gets arithmetic resultfrom a set.
+ * Gets arithmetic result from a set.
  *
  * Arguments:
  * 0: Namespace <OBJECT><LOCATION><MISSIONNAMESPACE>
