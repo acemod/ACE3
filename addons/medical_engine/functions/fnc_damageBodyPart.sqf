@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Selection, can be "Head", "Body", "Arms" or "Legs" <STRING>
- * 2: Damage (optional, default: true) <BOOLEAN>
+ * 2: Damage <BOOLEAN>
  *
  * Return Value:
  * None
@@ -23,11 +23,7 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_selection", "", [""]], ["_damage", true, [false]]];
-
-if (!local _unit) exitWith {
-    ERROR("Unit not local or null");
-};
+params ["_unit", "_selection", "_damage"];
 
 _damage = [0, DAMAGED_MIN_THRESHOLD] select _damage;
 

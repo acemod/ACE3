@@ -16,11 +16,7 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_bodyPart", "", [""]]];
-
-if (!local _unit) exitWith {
-    ERROR("Unit not local or null");
-};
+params ["_unit", "_bodyPart"];
 
 if (_bodyPart == "All") exitWith {
     [_unit, "Head"] call FUNC(updateBodyPartVisuals);
