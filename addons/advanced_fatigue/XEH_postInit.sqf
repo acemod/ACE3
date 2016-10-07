@@ -41,7 +41,7 @@ if (!hasInterface) exitWith {};
         ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
         private _shiver = [_bodyTemp] call FUNC(calculateBodyShiver);
         private _heatStress = [_bodyTemp] call FUNC(calculateBodyHeatStress);
-        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 1000, (_heatStress + _shiver), 1, 2, true]];
+        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 2000, (_heatStress + _shiver), 1, 2, true]];
 
         [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
     };

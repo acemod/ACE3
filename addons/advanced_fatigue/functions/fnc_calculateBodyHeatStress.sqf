@@ -21,7 +21,7 @@ private _tempDif = (_bodyTemp - _normalTemp);
 private _heatStress = 0;
 
 // Check if overheating
-if (_tempDif > 2) then {
+if (_tempDif > 1.5) then {
     _heatStress = (500 * _tempDif);
 };
 

@@ -21,7 +21,7 @@ private _tempDif = _bodyTemp - _normalTemp;
 private _shiver = 0;
 
 // Check if shivering
-if (_tempDif < -2) then {
+if (_tempDif < -1.5) then {
     _shiver = 500 * (abs _tempDif);
 };
 
