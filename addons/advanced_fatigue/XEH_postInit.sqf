@@ -37,10 +37,10 @@ if (!hasInterface) exitWith {};
     }] call FUNC(addDutyFactor);
 
     DFUNC(updateHotAndCold) = {
-        private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call EFUNC(advanced_fatigue,calculateBodyTemperature);
+        private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call FUNC(calculateBodyTemperature);
         ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
-        private _shiver = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyShiver);
-        private _heatStress = [_bodyTemp] call EFUNC(advanced_fatigue,calculateBodyHeatStress);
+        private _shiver = [_bodyTemp] call FUNC(calculateBodyShiver);
+        private _heatStress = [_bodyTemp] call FUNC(calculateBodyHeatStress);
         ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 1000, (_heatStress + _shiver), 1, 2, true]];
 
         [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
