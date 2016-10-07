@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Unit That Was Hit <OBJECT>
- * 1: Name Of Hit Selection <STRING>
+ * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Shooter or source of the damage <OBJECT>
  * 4: Type of the damage done <STRING>
@@ -127,6 +127,8 @@ private _woundsCreated = [];
 } forEach _thresholds;
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+
+[_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
 
 // Only update if new wounds have been created
 if (count _woundsCreated > 0) then {

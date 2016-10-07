@@ -53,7 +53,7 @@ private _bloodLossOnSelection = 0;
 private _partNumber = (ALL_BODY_PARTS find toLower _bodyPart) max 0;
 
 // Add all bleeding from wounds on selection
-private _openWounds = _target getvariable [QEGVAR(medical,openWounds), []];
+private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
 {
     _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
     if (_selectionX == _partNumber) then {

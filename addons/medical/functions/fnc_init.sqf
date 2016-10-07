@@ -14,6 +14,10 @@
 
 params ["_unit"];
 
+if (damage _unit > 0) then {
+    _unit setDamage 0;
+};
+
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(bloodVolume), 100, true];
 _unit setVariable ["ACE_isUnconscious", false, true]; // TODO this is done based on state

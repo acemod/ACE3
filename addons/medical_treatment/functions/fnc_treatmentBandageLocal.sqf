@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Treatment classname <STRING>
+ * 1: Treatment class name <STRING>
  * 2: Body part <STRING>
  *
  * Return Value:
@@ -102,6 +102,8 @@ _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
+[_target, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
+
 // Handle the reopening of bandaged wounds
 if (_impact > 0 && {EGVAR(medical,level) >= 2} && {EGVAR(medical,enableAdvancedWounds)}) then {
     [_target, _impact, _partIndex, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
@@ -189,7 +191,7 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
 
     _target setVariable [QEGVAR(medical,bodyPartStatus), _bodyStatus, true];
 
-    [_target] call EFUNC(medical_damage,setDamage);
+    //[_target] call EFUNC(medical_damage,setDamage);
 };
 
 true
