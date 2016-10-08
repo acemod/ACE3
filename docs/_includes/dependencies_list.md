@@ -170,10 +170,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "laser_selfdesignate" %}
-`ace_laser`
-{% endif %}
-
 {% if include.component == "laserpointer" %}
 `ace_common`
 {% endif %}
