@@ -39,7 +39,7 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
 
     //Environment
     private _sun = 120 * (1 - overcast);
-    private _air = 10 * (_temperature - _normalTemp) * 2.718 ^ _windFactor * _airDensity; //increased by factor 10 to balance, poor theory FIX ME
+    private _air = (_temperature - _normalTemp) * 2.718 ^ _windFactor * _airDensity;
     private _environment = (_sun + _air) * _surfaceArea;
 
     //Heating, BMR - basal metabolic rate, muscles produce 80% waste heat
@@ -49,8 +49,8 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
         _speed = 3;
     };
     private _metabolicCosts = [player, _speed] call FUNC(getMetabolicCosts);
-    private _metabolicCosts = linearConversion [0, 1200, _metabolicCosts, 0, 1, true];
-    private _metabolism = _BMR * (1 + _metabolicCosts * 1.4);
+    private _metabolicCosts = linearConversion [0, 1200, _metabolicCosts, 0, 1.4, true];
+    private _metabolism = _BMR * (1 + _metabolicCosts);
     private _wasteHeat = (150 * _metabolicCosts * 4); //male output * cost * 4 
     private _shiver = [_bodyTemp] call FUNC(calculateBodyShiver);
     private _heat = (_metabolism + _shiver + _wasteHeat);
@@ -62,7 +62,7 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
         _wet = 1;
     };
 
-    private _cooling = (_wet * (100 - _humidity) * 2.718 ^ _windFactor * _surfaceArea / _airDensity); //2.718 is Euler constant
+    private _cooling = (100 - _humidity) * 2.718 ^ (_wet + _windFactor) * _surfaceArea / _airDensity; //2.718 is Euler constant
 
     //Calculate body temperature
     private _watt = (_bodyWeight) * 4.18; //energy to heat body 1degC in 1 second
