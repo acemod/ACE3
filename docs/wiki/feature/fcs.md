@@ -10,6 +10,7 @@ version:
   major: 3
   minor: 0
   patch: 0
+redirect_from: "/wiki/feature/laser-selfdesignate.html"
 ---
 
 ## 1. Overview
