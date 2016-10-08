@@ -68,6 +68,8 @@ private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 
 private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
+if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
+
 private _camPosASL = AGLtoASL _camPosAGL;
 private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
 
