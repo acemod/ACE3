@@ -58,7 +58,7 @@ _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
 
 _yaw = 0;
 _pitch = 0;
-_roll = 0;    
+_roll = 0;
 if((_adjustVector select 0) < 0) then {
     _yaw = - ( (_minDeflection max (abs(_adjustVector select 0) min _maxDeflection) ) );
 } else {
@@ -90,14 +90,14 @@ if(accTime > 0) then {
 };
 
 #ifdef DEBUG_MODE_FULL
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoATL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
-drawLine3D [ASLtoATL _projectilePos, ASLtoATL _profileAdjustedTargetPos, [1,0,0,1]];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,1,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, str _vectorTo, 1, 0.025, "TahomaB"];
+drawLine3D [ASLtoAGL _projectilePos, ASLtoAGL _profileAdjustedTargetPos, [1,0,0,1]];
 
-_ps = "#particlesource" createVehicleLocal (ASLtoATL _projectilePos);
+_ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
 _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
 _PS setDropInterval 3.0;
 
-hintSilent format["d: %1", _distanceToTarget];
+//hintSilent format["d: %1", _distanceToTarget];
 #endif
 
 _stateParams set[0, diag_tickTime];

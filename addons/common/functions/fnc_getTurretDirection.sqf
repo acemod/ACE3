@@ -38,5 +38,5 @@ if (_pov == "pip0_pos") then {
 
     _povDir = _gunBeginPos vectorDiff _gunEndPos;
 };
-
+_povDir = vectorNormalized _povDir;
 [_povPos, _povDir]

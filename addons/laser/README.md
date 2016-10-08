@@ -10,3 +10,5 @@ The people responsible for merging changes to this component or answering potent
 
 - [walterpearce](https://github.com/walterpearce)
 - [NouberNou](https://github.com/NouberNou)
+- [esteldunedain](https://github.com/esteldunedain)
+- [PabstMirror](https://github.com/PabstMirror)
