@@ -31,10 +31,10 @@
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸（タレット）</Japanese>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_name">
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_tooltip">
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
