@@ -22,7 +22,7 @@ private _shiver = 0;
 
 // Check if shivering
 if (_tempDif < -1.5) then {
-    _shiver = 500 * (abs _tempDif);
+    _shiver = 500 * (abs _tempDif - 1.5);
 };
 
 _shiver;
