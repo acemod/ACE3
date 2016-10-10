@@ -72,12 +72,12 @@ if (_painStatus > (_unit getVariable [QGVAR(painSuppress), 0])) then {
     };
 };
 
-if (_bloodVolume < 30) exitWith {
+if (_bloodVolume < BLOOD_VOLUME_DEAD) exitWith {
     [_unit] call FUNC(setDead);
 };
 
 if ([_unit] call EFUNC(common,isAwake)) then {
-    if (_bloodVolume < 60) then {
+    if (_bloodVolume < BLOOD_VOLUME_UNCONSCIOUS) then {
         if (random(1) > 0.9) then {
             [_unit, true, 15 + random(20)] call FUNC(setUnconscious);
         };
@@ -125,7 +125,7 @@ if (GVAR(level) >= 2) then {
     _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
     if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
-        if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < 20) then {
+        if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < BLOOD_VOLUME_CARDIAC_ARREST) then {
             [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
         };
 

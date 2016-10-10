@@ -20,3 +20,7 @@
 
 #define HAS_LOST_SOME_BLOOD_THRESHOLD 0.100 // in liters
 #define HAS_LOST_MUCH_BLOOD_THRESHOLD 0.500 // in liters
+
+#define BLOOD_VOLUME_UNCONSCIOUS 3.6 // in liters
+#define BLOOD_VOLUME_DEAD 1.8 // in liters
+#define BLOOD_VOLUME_CARDIAC_ARREST 1.2 // in liters
