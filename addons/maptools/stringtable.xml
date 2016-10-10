@@ -158,5 +158,11 @@
             <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
         </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
+            <English>Draw straight lines with maptools</English>
+        </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_description">
+            <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
+        </Key>
     </Package>
 </Project>

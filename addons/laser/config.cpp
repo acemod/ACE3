@@ -13,6 +13,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

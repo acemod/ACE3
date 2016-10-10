@@ -1,44 +1,7 @@
-enum {
-    ACE_LOBL = 1,
-    ACE_LOAL = 2
-};
-
 class CfgAmmo {
     class MissileBase;
 
-    class M_PG_AT: MissileBase {
-        model = "\A3\Weapons_F\Ammo\Rocket_01_fly_F";
-        proxyShape = "\A3\Weapons_F\Ammo\Rocket_01_F";
-
-        // Reenable this settings when ACE laser targeting and missile guidance is reenabled
-        //laserLock = 1;
-        //airLock = 0;
-        //irLock = 0;
-        //weaponLockSystem = "4 + 16";
-        //fuseDistance = 2;
-        //timeToLive = 60;
-        // Turn off arma crosshair-guidance
-        //manualControl = 0;
-        // ACE uses these values
-        //trackOversteer = 1;
-        //trackLead = 0;
-
-        maxSpeed = 720;
-        maxControlRange = 5000;
-        maneuvrability = 8;
-
-        simulationStep = 0.01;
-        airFriction = 0.1;
-        sideAirFriction = 0.16;
-        initTime = 0.002;
-        thrustTime = 1.07;
-        thrust = 530;
-
-        effectsMissileInit = "MissileDAR1";
-        effectsMissile = "missile2";
-        whistleDist = 4;
-        muzzleEffect = "";
-    };
+    class M_PG_AT: MissileBase {};
 
     class ACE_Hydra70_DAGR: M_PG_AT {
         displayName = CSTRING(Hydra70_DAGR);
@@ -47,13 +10,18 @@ class CfgAmmo {
         description = CSTRING(Hydra70_DAGR_Desc);
         descriptionShort = CSTRING(Hydra70_DAGR_Desc);
 
+        irLock = 0;
+        laserLock = 0;
+        manualControl = 0;
+        maxSpeed = 300;
+        
         EGVAR(rearm,caliber) = 70;
 
         class ADDON {
             enabled = 1;
 
-            minDeflection = 0.00025;      // Minium flap deflection for guidance
-            maxDeflection = 0.001;       // Maximum flap deflection for guidance
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
             incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode

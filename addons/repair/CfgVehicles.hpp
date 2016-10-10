@@ -377,9 +377,10 @@ class CfgVehicles {
             class HitBody {
                 armor = 0.6;
                 material = -1;
-                name = "zbytek";
+                name = "mat_rim";
                 visual = "mat_rim";
                 passThrough = 1;
+                radius = 0.1;
                 explosionShielding = 1;
             };
         };
