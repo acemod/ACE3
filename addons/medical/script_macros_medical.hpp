@@ -14,3 +14,9 @@
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 #define GET_STRING(config,default) (if (isText (config)) then {getText (config)} else {default})
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
+
+// --- blood
+#define DEFAULT_BLOOD_VOLUME 6.0 // in liters
+
+#define HAS_LOST_SOME_BLOOD_THRESHOLD 0.100 // in liters
+#define HAS_LOST_MUCH_BLOOD_THRESHOLD 0.500 // in liters

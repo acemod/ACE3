@@ -10,7 +10,6 @@
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
 params ["_unit", "_interval"];
@@ -23,27 +22,24 @@ if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
-private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), 100]) + ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
+private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
 _bloodVolume = _bloodVolume max 0;
 
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
 // Set variables for synchronizing information across the net
-if (_bloodVolume < 100) then {
-    if (_bloodVolume < 90) then {
-        TRACE_4("ACE_DEBUG",_bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
+if (_bloodVolume < DEFAULT_BLOOD_VOLUME - HAS_LOST_SOME_BLOOD_THRESHOLD) then {
+    if (_bloodVolume < DEFAULT_BLOOD_VOLUME - HAS_LOST_MUCH_BLOOD_THRESHOLD) then {
         if (_unit getVariable [QGVAR(hasLostBlood), 0] != 2) then {
             _unit setVariable [QGVAR(hasLostBlood), 2, true];
         };
     } else {
-        TRACE_4("ACE_DEBUG", _bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
         if (_unit getVariable [QGVAR(hasLostBlood), 0] != 1) then {
             _unit setVariable [QGVAR(hasLostBlood), 1, true];
         };
     };
 } else {
-    TRACE_4("ACE_DEBUG",_bloodVolume,_unit getVariable QGVAR(hasLostBlood),_syncValues,_unit);
     if (_unit getVariable [QGVAR(hasLostBlood), 0] != 0) then {
         _unit setVariable [QGVAR(hasLostBlood), 0, true];
     };

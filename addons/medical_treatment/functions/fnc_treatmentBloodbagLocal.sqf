@@ -23,5 +23,5 @@ private _bloodAdded = switch (true) do {
     default {BLOODBAGHEAL};
 };
 
-private _blood = ((_target getVariable [QEGVAR(medical,bloodVolume), 100]) + _bloodAdded) min 100;
+private _blood = ((_target getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME]) + _bloodAdded) min DEFAULT_BLOOD_VOLUME;
 _target setVariable [QEGVAR(medical,bloodVolume), _blood, true];
