@@ -3,16 +3,16 @@
  * Adds pain to unit and plays a scream sound.
  *
  * Arguments:
- * 0: Argument Name <TYPE>
- * 0: Argument Name <TYPE>
+ * 0: Unit <OBJECT>
+ * 1: Pain to add <NUMBER>
  *
  * Return Value:
- * Return Name <TYPE>
+ * Nothing
  *
  * Example:
- * ["example"] call ace_[module]_fnc_[functionName]
+ * [player, 0.5] call ace_medical_fnc_addPain
  *
- * Public: [Yes/No]
+ * Public: No
  */
 #include "script_component.hpp"
 
