@@ -66,10 +66,6 @@ if (count _woundsCreated > 0) then {
     _unit setVariable [QEGVAR(medical,lastUniqueWoundID), _woundID, true];
 };
 
-// TODO use medical add pain function instead
-private _painLevel = _unit getVariable [QEGVAR(medical,pain), 0];
-_unit setVariable [QEGVAR(medical,pain), _painLevel + _painToAdd];
+[_unit, _painToAdd] call EFUNC(medical,addPain);
 
-[_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
-
-TRACE_6("exit",_unit, _painLevel, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
