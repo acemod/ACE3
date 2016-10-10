@@ -45,3 +45,6 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
         }] call CBA_fnc_addEventHandler;
     };
 };
+
+// disable dogtags for civilians
+"CIV_F" call FUNC(disableFactionDogtags);
