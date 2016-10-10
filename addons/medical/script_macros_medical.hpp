@@ -24,3 +24,10 @@
 #define BLOOD_VOLUME_UNCONSCIOUS 3.6 // in liters
 #define BLOOD_VOLUME_DEAD 1.8 // in liters
 #define BLOOD_VOLUME_CARDIAC_ARREST 1.2 // in liters
+
+/*
+    IV Change per second calculation:
+    250ml should take 60 seconds to fill. 250/60 = 4.166.
+    Basic medical is 10x (will take 6 seconds for 250ml)
+ */
+#define IV_CHANGE_PER_SECOND         ([41.66, 4.166] select (GVAR(level) >= 2))
