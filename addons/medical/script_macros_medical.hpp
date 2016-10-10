@@ -16,6 +16,7 @@
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 
 // --- blood
+// 0.077 l/kg * 80kg = 6.16l
 #define DEFAULT_BLOOD_VOLUME 6.0 // in liters
 
 #define HAS_LOST_SOME_BLOOD_THRESHOLD 0.100 // in liters
