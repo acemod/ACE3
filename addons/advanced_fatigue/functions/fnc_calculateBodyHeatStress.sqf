@@ -22,7 +22,7 @@ private _heatStress = 0;
 
 // Check if overheating
 if (_tempDif > 1.5) then {
-    _heatStress = (500 * _tempDif);
+    _heatStress = 500 * (_tempDif - 1.5);
 };
 
 _heatStress;

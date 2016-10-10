@@ -21,10 +21,10 @@ private _tempDif = (_bodyTemp - _normalTemp);
 private _sweat = 0;
 
 // Check if sweating
-if (_tempDif > 0) then {
-    _sweat = _tempDif;
-    if (_sweat > 2) then {
-        _sweat = 2;
+if (_tempDif > 0.5) then {
+    _sweat = (_tempDif - 0.5) / 2;
+    if (_sweat > 1) then {
+        _sweat = 1;
     };
 };
 
