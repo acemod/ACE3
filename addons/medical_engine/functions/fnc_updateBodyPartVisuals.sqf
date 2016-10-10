@@ -63,4 +63,4 @@ private _bloodLossOnAffectedBodyParts = 0;
     _bloodLossOnAffectedBodyParts = _bloodLossOnAffectedBodyParts max _bloodLossOnBodyPart;
 } forEach _affectedBodyParts;
 
-[_unit, _bodyPart, _bloodLossOnAffectedBodyParts >= 0.15] call FUNC(damageBodyPart);
+[_unit, _bodyPart, _bloodLossOnAffectedBodyParts > 0] call FUNC(damageBodyPart);
