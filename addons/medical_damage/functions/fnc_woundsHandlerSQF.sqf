@@ -136,5 +136,6 @@ if (count _woundsCreated > 0) then {
 };
 
 [_unit, _painToAdd] call EFUNC(medical,addPain);
+[_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
 
 TRACE_5("exit",_unit, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

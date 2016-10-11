@@ -24,5 +24,3 @@ private _pain = _unit getVariable [QEGVAR(medical,pain), 0];
 _pain = _pain + _painToAdd * (1 - _pain);
 
 _unit setVariable [QEGVAR(medical,pain), _pain];
-
-[_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
