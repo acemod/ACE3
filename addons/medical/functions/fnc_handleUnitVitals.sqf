@@ -29,8 +29,8 @@ _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
 // Set variables for synchronizing information across the net
-if (_bloodVolume < DEFAULT_BLOOD_VOLUME - HAS_LOST_SOME_BLOOD_THRESHOLD) then {
-    if (_bloodVolume < DEFAULT_BLOOD_VOLUME - HAS_LOST_MUCH_BLOOD_THRESHOLD) then {
+if (_bloodVolume < BLOOD_VOLUME_HAS_LOST_SOME) then {
+    if (_bloodVolume < BLOOD_VOLUME_HAS_LOST_MUCH) then {
         if (_unit getVariable [QGVAR(hasLostBlood), 0] != 2) then {
             _unit setVariable [QGVAR(hasLostBlood), 2, true];
         };
