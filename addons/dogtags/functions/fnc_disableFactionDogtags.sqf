@@ -17,8 +17,4 @@
 
 params [["_faction", "", [""]]];
 
-if (isNil QGVAR(disabledFactions)) then {
-    GVAR(disabledFactions) = [] call CBA_fnc_createNamespace;
-};
-
 GVAR(disabledFactions) setVariable [_faction, true];
