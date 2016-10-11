@@ -49,7 +49,7 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
     _adjustment = _adjustment - [ObjNull];
     _unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
 
-    private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
+    private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
     if (_bloodVolume > 75) then {
         if (_bloodLoss > 0.0) then {
             if (_bloodLoss < 0.5) then {

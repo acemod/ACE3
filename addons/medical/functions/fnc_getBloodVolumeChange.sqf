@@ -14,16 +14,9 @@
 
 #include "script_component.hpp"
 
-/*
-    IV Change per second calculation:
-    250ml should take 60 seconds to fill. 250/60 = 4.166.
-    Basic medical is 10x (will take 6 seconds for 250ml)
- */
-#define IV_CHANGE_PER_SECOND         ([41.66, 4.166] select (GVAR(level) >= 2))
-
 params ["_unit", "_syncValues"];
 
-private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), 100];
+private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
 private _bloodVolumeChange = -([_unit] call FUNC(getBloodLoss));
 
 if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
@@ -33,7 +26,7 @@ if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
             _x params ["_bagVolumeRemaining"];
             private _bagChange = IV_CHANGE_PER_SECOND min _bagVolumeRemaining; // absolute value of the change in miliLiters
             _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
-            _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 70); // ((bag change in ml) / (body total:7000ml)) out of 100 percent
+            _bloodVolumeChange = _bloodVolumeChange + _bagChange;
             if (_bagVolumeRemaining < 0.01) then {
                 []
             } else {

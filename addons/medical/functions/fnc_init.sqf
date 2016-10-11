@@ -19,7 +19,7 @@ if (damage _unit > 0) then {
 };
 
 _unit setVariable [QGVAR(pain), 0, true];
-_unit setVariable [QGVAR(bloodVolume), 100, true];
+_unit setVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME, true];
 _unit setVariable ["ACE_isUnconscious", false, true]; // TODO this is done based on state
 
 // tourniquets
