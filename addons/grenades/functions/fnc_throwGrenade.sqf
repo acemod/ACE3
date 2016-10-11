@@ -56,7 +56,7 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
     private _fuzeTime = getNumber (_config >> "explosionTime");
     private _timeToLive = getNumber (_config >> "timeToLive");
 
-    [FUNC(incendiary), [_projectile, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
 };
 
 // handle throw modes
