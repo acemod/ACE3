@@ -32,14 +32,14 @@
 
 - Install `make` and `gcc`
     ```
-    sudo apt-get make gcc
+    sudo apt-get install make gcc
     ```
 
-- Install `ruby 2.0`, `rbuy2.0-dev` and `ruby-switch`
+- Install `ruby2.0`, `rbuy2.0-dev` and `ruby-switch`
     ```
     sudo apt-add-repository ppa:brightbox/ruby-ng
-    sudo apt update
-    sudo apt install ruby2.0 ruby2.0-dev ruby-switch
+    sudo apt-get update
+    sudo apt-get install ruby2.0 ruby2.0-dev ruby-switch
     ```
 
 - Set Ruby version
