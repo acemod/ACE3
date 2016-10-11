@@ -1,10 +1,10 @@
 /*
  * Author: commy2
- * Adds pain to unit and plays a scream sound.
+ * Adds or removes pain to/from unit.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Pain to add <NUMBER>
+ * 1: Pain to add. Negative to remove <NUMBER>
  *
  * Return Value:
  * Nothing
@@ -18,9 +18,12 @@
 
 params ["_unit", "_painToAdd"];
 
-_painToAdd = _painToAdd min 1;
-
 private _pain = _unit getVariable [QEGVAR(medical,pain), 0];
-_pain = _pain + _painToAdd * (1 - _pain);
+
+if (_pain > 0) then {
+    _pain = _pain + (_painToAdd min 1) * (1 - _pain);
+} else {
+    _pain = (_pain + _painToAdd) max 0;
+};
 
 _unit setVariable [QEGVAR(medical,pain), _pain];
