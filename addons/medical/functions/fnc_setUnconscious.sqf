@@ -16,7 +16,6 @@
  *
  * Public: yes
  */
-
 #include "script_component.hpp"
 
 // only run this after the settings are initialized

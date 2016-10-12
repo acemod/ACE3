@@ -15,7 +15,7 @@
 // for travis
 #define HIT_STRUCTURAL QGVAR($#structural)
 
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex"];
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator"];
 //diag_log _this;
 
 // HD sometimes triggers for remote units - ignore.
@@ -41,6 +41,9 @@ if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDa
 
 // Add injury
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
+    _unit setVariable [QGVAR(lastShooter), _shooter];
+    _unit setVariable [QGVAR(lastInstigator), _instigator];
+
     private _damageStructural = _unit getVariable [HIT_STRUCTURAL, 0];
 
     // --- Head
