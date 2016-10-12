@@ -44,6 +44,10 @@ if (_isUnconscious) then {
         // and on foot
         [_unit, "AmovPpneMstpSnonWnonDnon"] call EFUNC(common,doAnimation);
 
+        if (currentWeapon _unit == secondaryWeapon _unit && {currentWeapon _unit != ""}) then {
+            [_unit, "AmovPknlMstpSrasWlnrDnon"] call EFUNC(common,doAnimation);
+        };
+
         [{
             params ["_unit"];
 
