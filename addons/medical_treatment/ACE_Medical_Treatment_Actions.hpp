@@ -1,7 +1,7 @@
 
 class GVAR(Actions) {
     class Basic {
-        class Bandage {
+        class BasicBandage {
             displayName = ECSTRING(medical,Bandage);
             displayNameProgress = ECSTRING(medical,Bandaging);
             category = "bandage";
@@ -31,7 +31,38 @@ class GVAR(Actions) {
                 {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
             };
         };
-        class Morphine: Bandage {
+        class FieldDressing: BasicBandage {
+            displayName = ECSTRING(medical,Actions_FieldDressing);
+            items[] = {"ACE_fieldDressing"};
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
+        };
+        class PackingBandage: BasicBandage {
+            displayName = ECSTRING(medical,Actions_PackingBandage);
+            items[] = {"ACE_packingBandage"};
+            litter[] = {
+                {"All", "", {"ACE_MedicalLitter_packingBandage"}},
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
+        };
+        class ElasticBandage: BasicBandage {
+            displayName = ECSTRING(medical,Actions_ElasticBandage);
+            items[] = {"ACE_elasticBandage"};
+        };
+        class QuikClot: BasicBandage {
+            displayName = ECSTRING(medical,Actions_QuikClot);
+            items[] = {"ACE_quikclot"};
+            litter[] = {
+                {"All", "", {"ACE_MedicalLitter_QuickClot"}},
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
+        };
+
+        class Morphine: BasicBandage {
             displayName = ECSTRING(medical,Inject_Morphine);
             displayNameProgress = ECSTRING(medical,Injecting_Morphine);
             allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -53,7 +84,7 @@ class GVAR(Actions) {
             litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
         };
-        class BloodIV: Bandage {
+        class BloodIV: BasicBandage {
             displayName = ECSTRING(medical,Actions_Blood4_1000);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
             allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -74,7 +105,7 @@ class GVAR(Actions) {
             displayName = ECSTRING(medical,Actions_Blood4_250);
             items[] = {"ACE_bloodIV_250"};
         };
-        class BodyBag: Bandage {
+        class BodyBag: BasicBandage {
             displayName = ECSTRING(medical,PlaceInBodyBag);
             displayNameProgress = ECSTRING(medical,PlacingInBodyBag);
             category = "advanced";
@@ -91,7 +122,7 @@ class GVAR(Actions) {
             itemConsumed = 1;
             litter[] = {};
         };
-        class Diagnose: Bandage {
+        class Diagnose: BasicBandage {
             displayName = ECSTRING(medical,Actions_Diagnose);
             displayNameProgress = ECSTRING(medical,Actions_Diagnosing);
             category = "examine";
@@ -108,7 +139,7 @@ class GVAR(Actions) {
             itemConsumed = 0;
             litter[] = {};
         };
-        class CPR: Bandage {
+        class CPR: BasicBandage {
             displayName = ECSTRING(medical,Actions_CPR);
             displayNameProgress = ECSTRING(medical,Actions_PerformingCPR);
             category = "advanced";
