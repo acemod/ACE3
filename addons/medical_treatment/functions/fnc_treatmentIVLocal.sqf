@@ -17,9 +17,9 @@
 
 params ["_target", "_treatmentClassname"];
 
-private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), 100];
+private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
 
-if (_bloodVolume >= 100) exitWith {};
+if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {};
 
 // Find the proper attributes for the used IV
 private _config = (configFile >> "ace_medical_treatment" >> "IV");
