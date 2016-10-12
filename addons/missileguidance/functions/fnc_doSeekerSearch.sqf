@@ -1,30 +1,51 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus / nou, PabstMirror
+ * Do seeker search
+ * Handles a nil/bad return and will attempt to use last known position if enabled on ammo
+ *
+ * Arguments:
+ * 1: Guidance Arg Array <ARRAY>
+ * 3: Last known pos state array <ARRAY>
+ *
+ * Return Value:
+ * Missile Aim PosASL <ARRAY>
+ *
+ * Example:
+ * [[], [], []] call ace_missileguidance_fnc_seekerType_Optic;
+ *
+ * Public: No
+ */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private ["_seekerProfilePos", "_i", "_launchParams", "_seekerType", "_seekerTypeName", "_seekerTypesCfg", "_testName", "_testProfile"];
+params ["", "_args", "", "_lastKnownPosState"];
+_args params ["", "_launchParams"];
+_launchParams params ["", "", "_seekerTypeName"];
+_lastKnownPosState params ["_seekLastTargetPos", "_lastKnownPos"];
 
-_launchParams = ((_this select 1) select 1);
-_seekerTypeName = _launchParams select 2;
+private _seekerFunction = getText (configFile >> QGVAR(SeekerTypes) >> _seekerTypeName >> "functionName");
 
-TRACE_1("Seeker type", _seekerTypeName);
+private _seekerTargetPos = _this call (missionNamespace getVariable _seekerFunction);
 
-_seekerTypesCfg = ( configFile >> QGVAR(SeekerTypes) );
-
-_seekerType = nil;
-for [{_i = 0}, {_i< (count _seekerTypesCfg) }, {_i=_i + 1}] do {
-    _testProfile = _seekerTypesCfg select _i;
-    _testName = configName _testProfile;
-    TRACE_3("", _testName, _testProfile, _seekerTypesCfg);
-
-    if( _testName == _seekerTypeName) exitWith {
-        _seekerType = _seekerTypesCfg select _i;
+if ((isNil "_seekerTargetPos") || {(vectorMagnitude _seekerTargetPos) == 0}) then {
+    // Seeker returned nil / bad pos
+    if (_seekLastTargetPos && {(vectorMagnitude _lastKnownPos) != 0}) then {
+        TRACE_2("seeker returned bad pos - using last known",_seekLastTargetPos,_lastKnownPos);
+        _seekerTargetPos = _lastKnownPos;
+    } else {
+        TRACE_1("seeker returned no pos",_seekerTargetPos);
+        _seekerTargetPos = [0,0,0];
+    };
+} else {
+    if (_seekLastTargetPos) then {
+        TRACE_1("saving current pos",_seekLastTargetPos);
+        _lastKnownPosState set [1, _seekerTargetPos];
     };
 };
 
-_seekerProfilePos = [0, 0, 0];
-if(!isNil "_seekerType") then {
-    _seekerProfilePos = _this call (missionNamespace getVariable (getText (_seekerType >> "functionName")));
-};
+#ifdef DRAW_GUIDANCE_INFO
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _seekerTargetPos, 0.5, 0.5, 0, _seekerTypeName, 1, 0.025, "TahomaB"];
+#endif
 
-_seekerProfilePos;
+TRACE_2("return",_seekerTargetPos,_seekerTypeName);
+_seekerTargetPos;
