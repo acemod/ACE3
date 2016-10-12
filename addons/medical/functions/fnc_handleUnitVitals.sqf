@@ -14,16 +14,18 @@
 
 params ["_unit", "_interval"];
 TRACE_3("ACE_DEBUG",_unit,_interval,_unit);
+
 if (_interval == 0) exitWith {};
 
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
-private _syncValues = (CBA_missionTime - _lastTimeValuesSynced >= (10 + floor(random(10))) && GVAR(keepLocalSettingsSynced));
+private _syncValues = (CBA_missionTime - _lastTimeValuesSynced >= 10 + floor(random(10))) && GVAR(keepLocalSettingsSynced);
+
 if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
 private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
-_bloodVolume = _bloodVolume max 0;
+_bloodVolume = (_bloodVolume max 0) min DEFAULT_BLOOD_VOLUME;
 
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
@@ -45,12 +47,13 @@ if (_bloodVolume < BLOOD_VOLUME_HAS_LOST_SOME) then {
     };
 };
 
-TRACE_3("ACE_DEBUG",[_unit] call FUNC(getBloodLoss),_unit getVariable QGVAR(isBleeding),_unit);
-private _bloodLoss = [_unit] call FUNC(getBloodLoss);
+private _bloodLoss = _unit call FUNC(getBloodLoss);
+TRACE_3("ACE_DEBUG",_bloodLoss,_unit getVariable QGVAR(isBleeding),_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
 
     [_unit, "TakenInjury"] call FUNC(stateEvent);
+
     if !(_unit getVariable [QGVAR(isBleeding), false]) then {
         _unit setVariable [QGVAR(isBleeding), true, true];
     };
@@ -77,13 +80,12 @@ if (_bloodVolume < BLOOD_VOLUME_DEAD) exitWith {
 };
 
 if ([_unit] call EFUNC(common,isAwake)) then {
-    if (_bloodVolume < BLOOD_VOLUME_UNCONSCIOUS) then {
-        if (random(1) > 0.9) then {
-            [_unit, true, 15 + random(20)] call FUNC(setUnconscious);
-        };
+    if (_bloodVolume < BLOOD_VOLUME_UNCONSCIOUS && {random 1 < BLOOD_LOSS_KNOCK_OUT_CHANCE}) exitWith {
+        [_unit, true, BLOOD_LOSS_KNOCK_OUT_DURATION] call FUNC(setUnconscious);
     };
 };
 
+/*
 if (GVAR(level) == 1) then {
     TRACE_5("ACE_DEBUG_BASIC_VITALS",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
     // reduce pain
@@ -96,8 +98,10 @@ if (GVAR(level) == 1) then {
         _unit setVariable [QGVAR(morphine), ((_unit getVariable [QGVAR(morphine), 0]) - 0.0015 * _interval) max 0, _syncValues];
     };
 };
+*/
 
 // handle advanced medical, with vitals
+/*
 if (GVAR(level) >= 2) then {
     TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume, _unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
@@ -142,3 +146,4 @@ if (GVAR(level) >= 2) then {
         };
     };
 };
+*/

@@ -22,18 +22,25 @@ private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), DEFAULT
 if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {};
 
 // Find the proper attributes for the used IV
-private _config = (configFile >> "ace_medical_treatment" >> "IV");
+private _config = configFile >> QUOTE(ADDON) >> "IV";
 private _volumeAdded = getNumber (_config >> "volume");
-private _typeOf = getText (_config >> "type");
+private _type = getText (_config >> "type");
 
 if (isClass (_config >> _treatmentClassname)) then {
-    _config = (_config >> _treatmentClassname);
-    if (isNumber (_config >> "volume")) then { _volumeAdded = getNumber (_config >> "volume");};
-    if (isText (_config >> "type")) then { _typeOf = getText (_config >> "type"); };
+    _config = _config >> _treatmentClassname;
+
+    if (isNumber (_config >> "volume")) then {
+        _volumeAdded = getNumber (_config >> "volume");
+    };
+
+    if (isText (_config >> "type")) then {
+        _type = getText (_config >> "type");
+    };
 } else {
     ERROR("IV Treatment Classname not found");
 };
 
 private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
-_bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _typeOf]
+_bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _type]
+
 _target setVariable [QEGVAR(medical,ivBags), _bloodBags, true];

@@ -1,5 +1,5 @@
 
-class ACE_Medical_Treatment {
+class ADDON {
     class Bandaging {
         // Field dressing is normal average treatment
         // packing bandage is average treatment, higher reopen change, longer reopening delay

@@ -257,11 +257,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(moveUnitsFromGroupOnUnconscious) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = 0;
-    };
     class GVAR(menuTypeStyle) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(menuTypeDisplay);

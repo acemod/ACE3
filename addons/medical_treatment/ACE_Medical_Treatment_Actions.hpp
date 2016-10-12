@@ -54,7 +54,7 @@ class GVAR(Actions) {
             treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
         };
         class BloodIV: Bandage {
-            displayName = ECSTRING(medical,Transfuse_Blood);
+            displayName = ECSTRING(medical,Actions_Blood4_1000);
             displayNameProgress = ECSTRING(medical,Transfusing_Blood);
             allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
             allowSelfTreatment = 0;
@@ -62,17 +62,16 @@ class GVAR(Actions) {
             requiredMedic = 1;
             treatmentTime = 12;
             items[] = {"ACE_bloodIV"};
-            callbackSuccess = QFUNC(treatmentBloodbag);
-            // callbackSuccess = QFUNC(treatmentIV);
+            callbackSuccess = QFUNC(treatmentIV);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
         };
         class BloodIV_500: BloodIV {
-            category = "advanced";
+            displayName = ECSTRING(medical,Actions_Blood4_500);
             items[] = {"ACE_bloodIV_500"};
         };
         class BloodIV_250: BloodIV {
-            category = "advanced";
+            displayName = ECSTRING(medical,Actions_Blood4_250);
             items[] = {"ACE_bloodIV_250"};
         };
         class BodyBag: Bandage {

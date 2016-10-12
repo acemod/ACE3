@@ -9,7 +9,7 @@
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * ReturnValue:
- * nil
+ * Success? <BOOLEAN>
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;
@@ -19,36 +19,43 @@
 
 #include "script_component.hpp"
 
-#define DEFAULT_DELAY (round(random(10)+5))
-
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
 };
 
-params ["_unit", ["_set", true], ["_minUnconsciousTime", DEFAULT_DELAY], ["_force", false]];
+params ["_unit", ["_knockOut", true], ["_minUnconsciousTime", DEFAULT_KNOCK_OUT_DELAY], ["_force", false]];
 
-if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {};
+if (isNull _unit || {!(_unit isKindOf "CAManBase")}) exitWith {false};
 
-if !(_set) exitWith {
-    _unit setVariable ["ACE_isUnconscious", false, true];
+if (!local _unit) exitWith {
+    [QGVAR(setUnconscious), [_unit, _knockOut, _minUnconsciousTime, _force], _unit] call CBA_fnc_targetEvent;
+    true
+};
+
+// use maximum for wake up time
+if (_knockOut) then {
+    _unit setVariable [QGVAR(wakeUpTime), (CBA_missionTime + _minUnconsciousTime) max (_unit getVariable [QGVAR(wakeUpTime), 0])];
+};
+
+if (_knockOut isEqualTo (_unit getVariable [QGVAR(isUnconscious), false])) exitWith {false};
+
+// --- wake up
+if !(_knockOut) exitWith {
+    _unit setVariable [QGVAR(isUnconscious), false, true];
 
     if (_unit getVariable [QGVAR(inReviveState), false]) then {
         _unit setVariable [QGVAR(inReviveState), nil, true];
     };
 
     [_unit, false] call EFUNC(medical_engine,setUnconsciousAnim);
-
     ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
+
+    true
 };
 
-if (isNull _unit || {!(_unit isKindOf "CAManBase")}) exitWith {};
-
-if (!local _unit) exitWith {
-    [QGVAR(setUnconscious), [_unit, _set, _minUnconsciousTime, _force], _unit] call CBA_fnc_targetEvent;
-};
-
-_unit setVariable ["ACE_isUnconscious", true, true];
+// --- knock out
+_unit setVariable [QGVAR(isUnconscious), true, true];
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
@@ -59,6 +66,7 @@ if (_unit == ACE_player) then {
 };
 
 // if we have unconsciousness for AI disabled, we will kill the unit instead
+/*
 private _isDead = false;
 
 if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force) then {
@@ -71,37 +79,25 @@ if (!([_unit, GVAR(remoteControlledAI)] call EFUNC(common,isPlayer)) && !_force)
 };
 
 if (_isDead) exitWith {};
+*/
 
-// So the AI does not get stuck, we are moving the unit to a temp group on its own.
-// Unconscious units shouldn't be put in another group #527:
-if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
-    [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
-};
+[_unit, true] call EFUNC(medical_engine,setUnconsciousAnim);
+[_unit, "Unconscious", []] call FUNC(stateEvent);
+["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;
 
-// Delay Unconscious so the AI dont instant stop shooting on the unit #3121
+// auto wake up
 [{
     params ["_unit"];
 
-    if (_unit getVariable ["ACE_isUnconscious", false]) then {
-        [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
-    };
-}, _unit, 3] call CBA_fnc_waitAndExecute;
+    private _time = _unit getVariable [QGVAR(wakeUpTime), 0];
 
-[_unit, true] call EFUNC(medical_engine,setUnconsciousAnim);
-
-[_unit, "Unconscious", []] call FUNC(stateEvent);
-
-["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;
-
-// auto wake up, testing @todo
-[{
-    params ["_unit", "_time"];
-
-    !(_unit getVariable ["ACE_isUnconscious", false]) || {CBA_missionTime > _time}
+    !(_unit getVariable [QGVAR(isUnconscious), false]) || {CBA_missionTime > _time}
 }, {
     params ["_unit"];
 
-    if (_unit getVariable ["ACE_isUnconscious", false]) then {
+    if (_unit getVariable [QGVAR(isUnconscious), false]) then {
         [_unit, false] call FUNC(setUnconscious);
     };
-}, [_unit, CBA_missionTime + _minUnconsciousTime]] call CBA_fnc_waitUntilAndExecute;
+}, _unit] call CBA_fnc_waitUntilAndExecute;
+
+true

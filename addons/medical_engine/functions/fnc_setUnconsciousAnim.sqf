@@ -50,6 +50,6 @@ if (_isUnconscious) then {
             if (animationState _unit == "unconscious" && {lifeState _unit != "INCAPACITATED"}) then {
                 [_unit, "AmovPpneMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
             };
-        }, _unit] call CBA_fnc_execNextFrame;
+        }, _unit, 0.5] call CBA_fnc_waitAndExecute;
     };
 };
