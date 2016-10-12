@@ -27,4 +27,5 @@ PREP(handleUnitVitals);
 PREP(handleMedications);
 // PREP(handleStateRevive);
 
+PREP(addPain);
 PREP(setUnconscious);
