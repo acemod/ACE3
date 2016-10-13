@@ -12,7 +12,6 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target", "_bodyPart"];
@@ -23,7 +22,7 @@ private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
 // Check if there is a tourniquet on this bodypart
-if ((_tourniquets select _partIndex) == 0) exitWith {
+if (_tourniquets select _partIndex == 0) exitWith {
     [QEGVAR(common,displayTextStructured), [ELSTRING(medical,noTourniquetOnBodyPart), 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
@@ -34,10 +33,11 @@ _target setVariable [QEGVAR(medical,tourniquets), _tourniquets, true];
 // Adding the tourniquet item to the caller
 [_caller, "ACE_tourniquet", true] call CBA_fnc_addItem;
 
-//Handle all injected medications now that blood is flowing:
+//Handle all injected medications now that blood is flowing: @todo
 private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
 private _updatedArray = false;
 TRACE_2("meds",_partIndex,_delayedMedications);
+
 {
     _x params ["", "", "_medPartNum"];
     if (_partIndex == _medPartNum) then {
