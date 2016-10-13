@@ -5,7 +5,7 @@ class ADDON {
         // packing bandage is average treatment, higher reopen change, longer reopening delay
         // elastic bandage is higher treatment, higher reopen change, shorter reopen delay
         // quickclot is lower treatment, lower reopen change, longer reopening delay
-        class Bandage { // basic bandage
+        class BasicBandage { // basic bandage
             effectiveness = 5;
             reopeningChance = 0;
             reopeningMinDelay = 0;
