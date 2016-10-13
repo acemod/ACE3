@@ -7,7 +7,6 @@ PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getHeartRateChange);
-PREP(hasTourniquetAppliedTo);
 PREP(init);
 PREP(install);
 PREP(isInMedicalFacility);
@@ -30,3 +29,5 @@ PREP(handleMedications);
 PREP(addPain);
 PREP(setUnconscious);
 PREP(setDead);
+
+PREP(hasTourniquetAppliedTo);

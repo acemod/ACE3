@@ -32,7 +32,7 @@ _tourniquets set [_partIndex, 0];
 _target setVariable [QEGVAR(medical,tourniquets), _tourniquets, true];
 
 // Adding the tourniquet item to the caller
-_caller addItem "ACE_tourniquet";
+[_caller, "ACE_tourniquet", true] call CBA_fnc_addItem;
 
 //Handle all injected medications now that blood is flowing:
 private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];

@@ -21,19 +21,17 @@ if (count _items == 0) exitWith {false};
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
-if (_partIndex == 0 || _partIndex == 1) exitWith {false};
-
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
 if (_tourniquets select _partIndex > 0) exitWith {
-   _output = "There is already a tourniquet on this body part!"; // TODO localization
-   [QEGVAR(common,displayTextStructured), [_output, 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
+   private _output = "There is already a tourniquet on this body part!"; // TODO localization
+   [QEGVAR(common,displayTextStructured), [_output, 1.5, _caller], _caller] call CBA_fnc_targetEvent;
     false
 };
 
 private _removeItem = _items select 0;
 
-[QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _selectionName], _target] call CBA_fnc_targetEvent;
+[QGVAR(treatmentTourniquetLocal), [_target, _removeItem, _bodyPart], _target] call CBA_fnc_targetEvent;
 
 [_target, _removeItem] call FUNC(addToTriageCard);
 [_target, "activity", ELSTRING(medical,Activity_appliedTourniquet), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
