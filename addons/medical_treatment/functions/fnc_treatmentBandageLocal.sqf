@@ -29,14 +29,11 @@ private _config = configFile >> "ace_medical_treatment" >> "Bandaging";
 private _effectiveness = getNumber (_config >> "effectiveness");
 
 if (isClass (_config >> _bandage)) then {
-    systemchat ("using class: " + _bandage);
     _config = (_config >> _bandage);
 
     if (isNumber (_config >> "effectiveness")) then {
         _effectiveness = getNumber (_config >> "effectiveness");
     };
-} else {
-    systemChat "No bandage avialable";
 };
 
 // Figure out which injury for this bodypart is the best choice to bandage
