@@ -11,20 +11,20 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call FUNC(creat
 
 // @todo, ACE_Settings
 [
-    QGVAR(basicBandages),
+    QGVAR(advancedBandages),
     "CHECKBOX",
-    ["Basic Bandages", "All Bandages share the same effectiveness and reopening chances."], //@todo
+    ["Advanced Bandages", "All bandages have different wound effectivenesses and reopening chances."], //@todo
     "ACE Medical", // @todo
-    true,
+    false,
     true
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(basicIVBags),
+    QGVAR(advancedIVBags),
     "CHECKBOX",
-    ["Basic IV Bags", "IV Bags fill up lost blood instantly"], //@todo
+    ["Advanced IV Bags", "IV Bags will slowly fill up lost blood."], //@todo
     "ACE Medical", // @todo
-    true,
+    false,
     true
 ] call CBA_Settings_fnc_init;
 

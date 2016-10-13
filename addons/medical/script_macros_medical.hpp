@@ -28,7 +28,7 @@
 
 // IV Change per second calculation:
 // 250ml should take 60 seconds to fill. 250ml/60s = 4.166ml/s.
-#define IV_CHANGE_PER_SECOND ([4.166, 1000] select GVAR(basicIVBags)) // in milliliters per second
+#define IV_CHANGE_PER_SECOND ([1000, 4.166] select GVAR(advancedIVBags)) // in milliliters per second
 
 // chance per second to get knocked out due to blood loss
 #define BLOOD_LOSS_KNOCK_OUT_CHANCE 0.1 // 10%
