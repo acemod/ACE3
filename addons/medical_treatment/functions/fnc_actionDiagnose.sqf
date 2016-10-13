@@ -11,12 +11,11 @@
 *
 * Public: No
 */
-
 #include "script_component.hpp"
 
 params ["_caller", "_target"];
 
-private _genericMessages = [ELSTRING(medical,diagnoseMessage), [_target] call EFUNC(common,getName)];
+private _genericMessages = [ELSTRING(medical,diagnoseMessage), _target call EFUNC(common,getName)];
 
 if (alive _target) then {
     _genericMessages pushBack ELSTRING(medical,diagnoseAlive);
@@ -24,8 +23,8 @@ if (alive _target) then {
     _genericMessages pushBack ELSTRING(medical,diagnoseDead);
 };
 
-if (_target getVariable[QEGVAR(medical,hasLostBlood), 0] > 0) then {
-    if (_target getVariable[QEGVAR(medical,hasLostBlood), 0] > 1) then {
+if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 0) then {
+    if (_target getVariable [QEGVAR(medical,hasLostBlood), 0] > 1) then {
         _genericMessages pushBack ELSTRING(medical,lostBloodALot);
     } else {
         _genericMessages pushBack ELSTRING(medical,lostBlood);
@@ -42,4 +41,4 @@ if (alive _target) then {
     };
 };
 
-[QEGVAR(common,displayTextStructured), [_genericMessages, 3.0, _caller], [_caller]] call CBA_fnc_targetEvent;
+[QEGVAR(common,displayTextStructured), [_genericMessages, 3.0, _caller], _caller] call CBA_fnc_targetEvent;
