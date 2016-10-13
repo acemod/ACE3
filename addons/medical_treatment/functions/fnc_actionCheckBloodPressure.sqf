@@ -1,22 +1,21 @@
 /*
-* Author: Glowbal
-* Action for checking the blood pressure of the patient
-*
-* Arguments:
-* 0: The medic <OBJECT>
-* 1: The patient <OBJECT>
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
-
+ * Author: Glowbal
+ * Action for checking the blood pressure of the patient
+ *
+ * Arguments:
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
+ * 2: Body part <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-params ["_caller", "_target", "_selectionName"];
-if (local _target) then {
-    [QGVAR(actionCheckBloodPressureLocal), [_caller, _target, _selectionName]] call CBA_fnc_localEvent;
-} else {
-    [QGVAR(actionCheckBloodPressureLocal), [_caller, _target, _selectionName], _target] call CBA_fnc_targetEvent;
-};
+params ["_caller", "_target", "_bodyPart"];
+
+[QGVAR(actionCheckBloodPressureLocal), [_caller, _target, _bodyPart], _target] call CBA_fnc_targetEvent;
+
+true
