@@ -12,7 +12,7 @@ class GVAR(Actions) {
             treatmentTime = 5;
             treatmentTimeSelfCoef = 1;
             items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
-            condition = "";
+            condition = QEGVAR(medical,basicBandages);
             patientStateCondition = 0;
             itemConsumed = 1;
             callbackSuccess = QFUNC(treatmentBandage);
@@ -34,6 +34,7 @@ class GVAR(Actions) {
         class FieldDressing: BasicBandage {
             displayName = ECSTRING(medical,Actions_FieldDressing);
             items[] = {"ACE_fieldDressing"};
+            condition = QUOTE(!EGVAR(medical,basicBandages));
             litter[] = {
                 {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
                 {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
@@ -42,6 +43,7 @@ class GVAR(Actions) {
         class PackingBandage: BasicBandage {
             displayName = ECSTRING(medical,Actions_PackingBandage);
             items[] = {"ACE_packingBandage"};
+            condition = QUOTE(!EGVAR(medical,basicBandages));
             litter[] = {
                 {"All", "", {"ACE_MedicalLitter_packingBandage"}},
                 {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -51,10 +53,16 @@ class GVAR(Actions) {
         class ElasticBandage: BasicBandage {
             displayName = ECSTRING(medical,Actions_ElasticBandage);
             items[] = {"ACE_elasticBandage"};
+            condition = QUOTE(!EGVAR(medical,basicBandages));
+            litter[] = {
+                {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+                {"All", "_bloodLossOnSelection <= 0", {"ACE_MedicalLitter_clean"}}
+            };
         };
         class QuikClot: BasicBandage {
             displayName = ECSTRING(medical,Actions_QuikClot);
             items[] = {"ACE_quikclot"};
+            condition = QUOTE(!EGVAR(medical,basicBandages));
             litter[] = {
                 {"All", "", {"ACE_MedicalLitter_QuickClot"}},
                 {"All", "_bloodLossOnSelection > 0", {{"ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
@@ -70,6 +78,7 @@ class GVAR(Actions) {
             category = "medication";
             treatmentTime = 8;
             items[] = {"ACE_morphine"};
+            condition = "";
             callbackSuccess = QFUNC(treatmentMorphine);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
@@ -93,6 +102,7 @@ class GVAR(Actions) {
             requiredMedic = 1;
             treatmentTime = 12;
             items[] = {"ACE_bloodIV"};
+            condition = "";
             callbackSuccess = QFUNC(treatmentIV);
             animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
             litter[] = {};
@@ -131,6 +141,7 @@ class GVAR(Actions) {
             requiredMedic = 0;
             treatmentTime = 1;
             items[] = {};
+            condition = "";
             callbackSuccess = QFUNC(actionDiagnose);
             callbackFailure = "";
             callbackProgress = "";
