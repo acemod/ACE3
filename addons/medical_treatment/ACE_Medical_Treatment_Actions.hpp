@@ -9,7 +9,7 @@ class GVAR(Actions) {
         allowedSelections[] = {"All"};
         allowSelfTreatment = 1;
         requiredMedic = 0;
-        treatmentTime = 5;
+        treatmentTime = 8;
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
         condition = QUOTE(!EGVAR(medical,advancedBandages));
@@ -85,7 +85,6 @@ class GVAR(Actions) {
         displayName = ECSTRING(medical,Actions_RemoveTourniquet);
         displayNameProgress = ECSTRING(medical,RemovingTourniquet);
         items[] = {};
-        treatmentTime = 2.5;
         callbackSuccess = QFUNC(treatmentTourniquetRemove);
         condition = QUOTE(EGVAR(medical,advancedBandages) && {[ARR_2(_target,_bodyPart)] call EFUNC(medical,hasTourniquetAppliedTo)});
     };
@@ -97,7 +96,7 @@ class GVAR(Actions) {
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         allowSelfTreatment = 1;
         category = "medication";
-        treatmentTime = 8;
+        treatmentTime = 10;
         items[] = {"ACE_morphine"};
         condition = "";
         callbackSuccess = QFUNC(treatmentMorphine);
@@ -175,7 +174,7 @@ class GVAR(Actions) {
         treatmentLocations[] = {"All"};
         allowedSelections[] = {"Head", "Body"};
         requiredMedic = 0;
-        treatmentTime = 1;
+        treatmentTime = 2.5;
         items[] = {};
         condition = "";
         callbackSuccess = QFUNC(actionDiagnose);
@@ -190,7 +189,6 @@ class GVAR(Actions) {
         displayName = ECSTRING(medical,Actions_CheckPulse);
         displayNameProgress = ECSTRING(medical,Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        treatmentTime = 2;
         callbackSuccess = QFUNC(actionCheckPulse);
         animationCallerProne = "";
         animationCallerSelfProne = "";
@@ -203,6 +201,7 @@ class GVAR(Actions) {
     class CheckResponse: CheckPulse {
         displayName = ECSTRING(medical,Check_Response);
         displayNameProgress = ECSTRING(medical,Check_Response_Content);
+        allowedSelections[] = {"Head"};
         allowSelfTreatment = 0;
         callbackSuccess = QFUNC(actionCheckResponse);
     };
