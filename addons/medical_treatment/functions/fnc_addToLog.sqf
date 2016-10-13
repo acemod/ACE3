@@ -13,7 +13,6 @@
  *
  * Public: Yes
  */
-
 #include "script_component.hpp"
 
 params ["_unit", "_type", "_message", "_arguments"];
@@ -24,26 +23,30 @@ if (!local _unit) exitWith {
 
 date params ["", "", "", "_hour", "_minute"];
 
-private _moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute];
-private _logVarName = format[QEGVAR(medical,logFile_%1), _type];
-
+private _moment = format [["%1:%2", "%1:0%2"] select (_minute < 10), _hour, _minute];
+private _logVarName = format [QEGVAR(medical,logFile_%1), _type];
 private _log = _unit getVariable [_logVarName, []];
+
 if (count _log >= 8) then {
     private _newLog = [];
+
     {
         // ensure the first element will not be added
         if (_forEachIndex > 0) then {
             _newLog pushBack _x;
         };
     } forEach _log;
+
     _log = _newLog;
 };
+
 _log pushBack [_message, _moment, _type, _arguments];
 
 _unit setVariable [_logVarName, _log, true];
 ["ace_medicalLogEntryAdded", [_unit, _type, _message, _arguments]] call CBA_fnc_localEvent;
 
 private _logs = _unit getVariable [QEGVAR(medical,allLogs), []];
+
 if !(_logVarName in _logs) then {
     _logs pushBack _logVarName;
     _unit setVariable [QEGVAR(medical,allLogs), _logs, true];
