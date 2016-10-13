@@ -40,8 +40,6 @@ PREP(treatmentEpipen);
 //PREP(treatmentEpipenLocal);
 PREP(treatmentMedication);
 PREP(treatmentMedicationLocal);
-PREP(treatmentBloodbag);
-PREP(treatmentBloodbagLocal);
 PREP(treatmentIV);
 PREP(treatmentIVLocal);
 PREP(treatmentCPR);
