@@ -18,21 +18,39 @@
 
 params ["_target", "_player", "_partIndex", "_actionData"];
 
-private _bloodLossOnSelection = 0;
+private _bloodLossOnBodyPart = 0;
 
 // Add all bleeding from wounds on selection
 {
     _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];
 
     if (_bodyPartN == _partIndex) then {
-        _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
+        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _percentageOpen);
     };
 } forEach (_target getvariable [QEGVAR(medical,openWounds), []]);
 
-if (_bloodLossOnSelection >= 0.15) then {
-    _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed.paa)];
-} else {
-    if (_bloodLossOnSelection > 0) then {
-        _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow.paa)];
+private _hasTourniquet = ((_target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]]) select _partIndex) > 0;
+
+switch (true) do {
+    case (_bloodLossOnBodyPart >= 0.15): {
+        if (_hasTourniquet) then {
+            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed_t.paa)];
+        } else {
+            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossRed.paa)];
+        };
+    };
+
+    case (_bloodLossOnBodyPart > 0): {
+        if (_hasTourniquet) then {
+            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow_t.paa)];
+        } else {
+            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_crossYellow.paa)];
+        };
+    };
+
+    default {
+        if (_hasTourniquet) then {
+            _actionData set [2, QPATHTOEF(medical,UI\icons\medical_cross_t.paa)];
+        };
     };
 };
