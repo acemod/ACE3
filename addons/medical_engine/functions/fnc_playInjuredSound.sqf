@@ -28,11 +28,13 @@ if (!local _unit) exitWith {
     ERROR("Unit not local or null");
 };
 
+if !(_unit call EFUNC(common,isAwake)) exitWith {};
+
 private _timeOut = [TIME_OUT_HIT, TIME_OUT_MOAN] select (_type == "moan");
 
 // Handle timeout
-if (_unit getVariable [QGVAR(soundTimeout), -1] > CBA_missionTime) exitWith {};
-_unit setVariable [QGVAR(soundTimeout), CBA_missionTime + _timeOut];
+if (_unit getVariable [QGVAR(soundTimeout) + _type, -1] > CBA_missionTime) exitWith {};
+_unit setVariable [QGVAR(soundTimeout) + _type, CBA_missionTime + _timeOut];
 
 // Get sounds
 private _soundsNamespace = NAMESPACE_NULL;

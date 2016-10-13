@@ -104,7 +104,9 @@ if (weaponLowered _caller) then {
     _animDuration = _animDuration + 0.5;
 
     // fix problems with lowered weapon transitions by raising the weapon first
-    _caller action ["WeaponInHand", _caller];
+    if (currentWeapon _caller != "" && {_callerAnim != ""}) then {
+        _caller action ["WeaponInHand", _caller];
+    };
 };
 
 if (binocular _caller != "" && {binocular _caller == currentWeapon _caller}) then {

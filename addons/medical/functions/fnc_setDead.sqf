@@ -18,11 +18,8 @@
 
 params ["_unit", ["_reason", "unknown"]];
 
-// kill
-_unit setDamage 1;
-
-// reset textures
-[_unit, "All"] call EFUNC(medical_engine,updateBodyPartVisuals);
+// wait a frame to escape handleDamage
+[EFUNC(medical_engine,setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
 
 private _lastShooter = _unit getVariable [QEGVAR(medical_engine,lastShooter), objNull];
 private _lastInstigator = _unit getVariable [QEGVAR(medical_engine,lastInstigator), objNull];
