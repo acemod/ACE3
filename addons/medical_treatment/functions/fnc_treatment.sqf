@@ -5,8 +5,8 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: Treatment classname <STRING>
+ * 2: Body part <STRING>
+ * 3: Treatment class name <STRING>
  *
  * Return Value:
  * Succesful treatment started <BOOL>
@@ -15,18 +15,16 @@
  */
 #include "script_component.hpp"
 
-params ["_caller", "_target", "_selectionName", "_className"];
+params ["_caller", "_target", "_bodyPart", "_className"];
 
 // if the cursorMenu is open, the loading bar will fail. If we execute the function one frame later, it will work fine
 if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exitWith {
     [DFUNC(treatment), _this] call CBA_fnc_execNextFrame;
 };
-TRACE_1("banana",_this);
 
-if !([_caller, _target, _selectionName, _className] call FUNC(canTreat)) exitWith {false};
-TRACE_1("can treat",_this);
+if !([_caller, _target, _bodyPart, _className] call FUNC(canTreat)) exitWith {false};
 
-private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
+private _config = configFile >> QGVAR(Actions) >> _className;
 
 // handle items
 private _items = getArray (_config >> "items");
@@ -180,7 +178,7 @@ if (isArray (_config >> "sounds")) then {
 // start treatment
 [
     _treatmentTime,
-    [_caller, _target, _selectionName, _className, _items, _usersOfItems],
+    [_caller, _target, _bodyPart, _className, _items, _usersOfItems],
     DFUNC(treatment_success),
     DFUNC(treatment_failure),
     getText (_config >> "displayNameProgress"),

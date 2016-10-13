@@ -5,8 +5,8 @@
  * Arguments:
  * 0: The caller <OBJECT>
  * 1: The target <OBJECT>
- * 2: Selection name <STRING>
- * 3: ACE_Medical_Treatment Classname <STRING>
+ * 2: Body part <STRING>
+ * 3: Treatment class name <STRING>
  *
  * ReturnValue:
  * Can Treat <BOOL>
@@ -18,11 +18,11 @@
  */
 #include "script_component.hpp"
 
-params ["_caller", "_target", "_selectionName", "_className"];
+params ["_caller", "_target", "_bodyPart", "_className"];
 
 if !(_target isKindOf "CAManBase") exitWith {false};
 
-private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
+private _config = configFile >> QGVAR(Actions) >> _className;
 
 if !(isClass _config) exitwith {false};
 
@@ -46,7 +46,7 @@ if !([_caller, _medicRequired] call EFUNC(medical,isMedic)) exitWith {false};
 // check selection
 private _allowedSelections = getArray (_config >> "allowedSelections") apply {toLower _x};
 
-if !("all" in _allowedSelections || {(_selectionName in _allowedSelections)}) exitWith {false};
+if !("all" in _allowedSelections || {(_bodyPart in _allowedSelections)}) exitWith {false};
 
 // check item
 private _items = getArray (_config >> "items");

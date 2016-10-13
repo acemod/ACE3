@@ -5,8 +5,8 @@
  * Arguments:
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
- * 2: SelectionName <STRING>
- * 3: Treatment classname <STRING>
+ * 2: Body part <STRING>
+ * 3: Treatment class name <STRING>
  * 4: Items available <ARRAY<STRING>>
  *
  * Return Value:
@@ -17,7 +17,7 @@
 #include "script_component.hpp"
 
 params ["_args"];
-_args params ["_caller", "_target", "_selectionName", "_className", "_items", "_usersOfItems"];
+_args params ["_caller", "_target", "_bodyPart", "_className", "_items", "_usersOfItems"];
 
 // switch to end anim immediately
 private _endInAnim = _caller getVariable QGVAR(endInAnim);
@@ -39,7 +39,7 @@ if (!isNil "_endInAnim") then {
 } forEach _usersOfItems;
 
 // Record specific callback
-private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
+private _config = configFile >> QGVAR(Actions) >> _className;
 
 private _callback = getText (_config >> "callbackFailure");
 

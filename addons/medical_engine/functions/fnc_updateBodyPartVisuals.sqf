@@ -47,9 +47,8 @@ private _openWounds = _unit getVariable QEGVAR(medical,openWounds);
 private _bloodLossOnAffectedBodyParts = 0;
 
 {
-    private _partIndex = ALL_BODY_PARTS find toLower _x;
-
     private _bloodLossOnBodyPart = 0;
+    private _partIndex = ALL_BODY_PARTS find toLower _x;
 
     {
         _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];

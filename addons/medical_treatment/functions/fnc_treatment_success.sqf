@@ -6,7 +6,7 @@
  * 0: The medic <OBJECT>
  * 1: The patient <OBJECT>
  * 2: Body part <STRING>
- * 3: Treatment classname <STRING>
+ * 3: Treatment class name <STRING>
  * 4: Items available <ARRAY<STRING>>
  *
  * Return Value:
@@ -34,7 +34,7 @@ if (!isNil "_endInAnim") then {
 [QEGVAR(common,setAnimSpeedCoef), [_caller, 1]] call CBA_fnc_globalEvent;
 
 // Record specific callback
-private _config = configFile >> QGVAR(Actions) >> CUR_LEVEL >> _className;
+private _config = configFile >> QGVAR(Actions) >> _className;
 
 private _callback = getText (_config >> "callbackSuccess");
 
@@ -49,25 +49,27 @@ if !(_callback isEqualType {}) then {
 };
 
 //Get current blood loose on limb (for "bloody" litter)
-private _bloodLossOnSelection = 0;
-private _partNumber = (ALL_BODY_PARTS find toLower _bodyPart) max 0;
+private _bloodLossOnBodyPart = 0;
+private _partIndex = (ALL_BODY_PARTS find toLower _bodyPart) max 0;
 
 // Add all bleeding from wounds on selection
 private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+
 {
-    _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
-    if (_selectionX == _partNumber) then {
-        _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
+    _x params ["", "", "_bodyPartN", "_amountOf", "_percentageOpen"];
+
+    if (_bodyPartN isEqualTo _partIndex) then {
+        _bloodLossOnBodyPart = _bloodLossOnBodyPart + (_amountOf * _percentageOpen);
     };
 } forEach _openWounds;
-TRACE_1("advanced",_bloodLossOnSelection);
+TRACE_1("advanced",_bloodLossOnBodyPart);
 
 _args call _callback;
-_args pushBack _bloodLossOnSelection;
+_args pushBack _bloodLossOnBodyPart;
 _args call FUNC(litterCreate);
 
 //If we're not already tracking vitals, start:
-if (!(_target getVariable [QGVAR(addedToUnitLoop),false])) then {
+if !(_target getVariable [QGVAR(addedToUnitLoop),false]) then {
     [_target] call FUNC(addVitalLoop);
 };
 
