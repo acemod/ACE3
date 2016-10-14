@@ -35,7 +35,7 @@
     sudo apt-get install make gcc
     ```
 
-- Install `ruby2.0`, `rbuy2.0-dev` and `ruby-switch`
+- Install `ruby2.0`, `ruby2.0-dev` and `ruby-switch`
     ```
     sudo apt-add-repository ppa:brightbox/ruby-ng
     sudo apt-get update
