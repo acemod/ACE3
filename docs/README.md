@@ -12,17 +12,12 @@ We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a
 - cd into the `/docs/` directory
 - Open Command Prompt and navigate to this directory
     ```
-    docker build -t ace3mod/jekyll .
+    cd <ACE3_directory>/docs
     ```
 
-- Build the Dockerfile into an image
+- Build and run the container
     ```
-    docker build -t ace3mod/jekyll .
-    ```
-
-- Run the image as a container
-    ```
-    docker run -p 4000:4000 -it ace3mod/jekyll
+    docker-compose up
     ```
 
 - Navigate to [http://localhost:4000](http://localhost:4000)
