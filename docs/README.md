@@ -2,6 +2,31 @@
 
 ## Setting up the development environment
 
+### Docker
+
+We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a container. This allows you to not having to install Ruby on your computer.
+
+#### Running the Dockerfile
+
+- Install [Docker](https://www.docker.com/)
+- cd into the `/docs/` directory
+- Open Command Prompt and navigate to this directory
+    ```
+    docker build -t ace3mod/jekyll .
+    ```
+
+- Build the Dockerfile into an image
+    ```
+    docker build -t ace3mod/jekyll .
+    ```
+
+- Run the image as a container
+    ```
+    docker run -p 4000:4000 -it ace3mod/jekyll
+    ```
+
+- Navigate to [http://localhost:4000](http://localhost:4000)
+
 ### Installing prerequisites
 
 #### Windows (CMD)

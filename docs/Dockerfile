@@ -2,7 +2,7 @@
 # docker build -t ace3mod/jekyll .
 #
 # Run:
-# docker run -it ace3mod/jekyll
+# docker run -p 4000:4000 -it ace3mod/jekyll
 
 FROM starefossen/github-pages:onbuild
 MAINTAINER bux
