@@ -15,21 +15,35 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit","_object"];
 
-private _loadCar = nearestObject [_unit, "car"];
-if (_unit distance _loadCar <= MAX_LOAD_DISTANCE) exitWith {_loadCar};
+private _loadCar = nearestObjects [_unit, ["car"], MAX_LOAD_DISTANCE];
+private _index = _loadCar find _object;
+if (_index > -1) then {_loadCar deleteAt _index};
+if !(_loadCar isEqualTo []) exitWith {_loadCar select 0};
 
-private _loadHelicopter = nearestObject [_unit, "air"];
-if (_unit distance _loadHelicopter <= MAX_LOAD_DISTANCE) exitWith {_loadHelicopter};
 
-private _loadTank = nearestObject [_unit, "tank"];
-if (_unit distance _loadTank <= MAX_LOAD_DISTANCE) exitWith {_loadTank};
+private _loadHelicopter = nearestObjects [_unit, ["air"], MAX_LOAD_DISTANCE];
+_index = _loadHelicopter find _object;
+if (_index > -1) then {_loadHelicopter deleteAt _index};
+if !(_loadHelicopter isEqualTo []) exitWith {_loadHelicopter select 0};
 
-private _loadShip = nearestObject [_unit, "ship"];
-if (_unit distance _loadShip <= MAX_LOAD_DISTANCE) exitWith {_loadShip};
 
-private _loadContainer = nearestObject [_unit,"Cargo_base_F"];
-if (_unit distance _loadContainer <= MAX_LOAD_DISTANCE) exitWith {_loadContainer};
+private _loadTank = nearestObjects [_unit, ["tank"], MAX_LOAD_DISTANCE];
+_index = _loadTank find _object;
+if (_index > -1) then {_loadTank deleteAt _index};
+if !(_loadTank isEqualTo []) exitWith {_loadTank select 0};
+
+
+private _loadShip = nearestObjects [_unit, ["ship"], MAX_LOAD_DISTANCE];
+_index = _loadShip find _object;
+if (_index > -1) then {_loadShip deleteAt _index};
+if !(_loadShip isEqualTo []) exitWith {_loadShip select 0};
+
+
+private _loadContainer = nearestObjects [_unit, ["Cargo_base_F"], MAX_LOAD_DISTANCE];
+_index = _loadContainer find _object;
+if (_index > -1) then {_loadContainer deleteAt _index};
+if !(_loadContainer isEqualTo []) exitWith {_loadContainer select 0};
 
 objNull
