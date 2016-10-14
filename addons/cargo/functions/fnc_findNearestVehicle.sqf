@@ -1,15 +1,16 @@
 /*
  * Author: Glowbal
- * Get nearest vehicle from unit, priority: Car-Air-Tank-Ship.
+ * Get nearest vehicle from unit that is not excluded, priority: Car-Air-Tank-Ship.
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Object to exclude <OBJECT>
  *
  * Return Value:
  * Vehicle in Distance <OBJECT>
  *
  * Example:
- * [unit] call ace_cargo_fnc_findNearestVehicle
+ * [unit, object] call ace_cargo_fnc_findNearestVehicle
  *
  * Public: No
  */
