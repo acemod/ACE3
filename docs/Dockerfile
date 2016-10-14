@@ -4,14 +4,9 @@
 # Run:
 # docker run -p 4000:4000 -it ace3mod/jekyll
 
-FROM starefossen/github-pages:onbuild
+FROM starefossen/github-pages:latest
 MAINTAINER bux
 
-COPY . /usr/src/app
-WORKDIR /usr/src/app
+VOLUME "/usr/src/app"
 
-RUN gem install --no-document \
-  github-pages:91 \
-  jekyll-github-metadata
-
-ENTRYPOINT ["jekyll", "serve", "--future", "--incremental", "--config", "_config_dev.yml", "-H", "0.0.0.0", "-P", "4000"]
+CMD ["jekyll", "serve", "--future", "--incremental", "--config", "_config_dev.yml", "-H", "0.0.0.0", "-P", "4000"]
