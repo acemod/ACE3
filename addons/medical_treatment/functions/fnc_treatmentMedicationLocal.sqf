@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Treatment classname <STRING>
+ * 1: Treatment class name <STRING>
  * 2: Injection Site Part Number <NUMBER>
  *
  * Return Value:
@@ -14,12 +14,12 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_className", "_partNumber"];
-TRACE_3("params",_target,_className,_partNumber);
+params ["_target", "_className", "_partIndex"];
+TRACE_3("params",_target,_className,_partIndex);
 
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
-if (_tourniquets select _partNumber > 0) exitWith {
+if (_tourniquets select _partIndex > 0) exitWith {
     TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
     private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
 

@@ -21,7 +21,7 @@ TRACE_5("params",_caller,_target,_bodyPart,_className,_items);
 
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
-[QGVAR(treatmentMedicationLocal), [_target, _className, _partIndex], [_target]] call CBA_fnc_targetEvent;
+[QGVAR(treatmentMedicationLocal), [_target, _className, _partIndex], _target] call CBA_fnc_targetEvent;
 
 {
     if (_x != "") then {
