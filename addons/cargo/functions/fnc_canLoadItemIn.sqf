@@ -19,6 +19,8 @@
 params [["_item", "", [objNull,""]], "_vehicle"];
 
 if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}) exitWith {TRACE_1("vehicle not stable",_vehicle); false};
+// TODO: use unitIsUAV command for uav check once out of devbuild
+if !(_item isEqualType "" || {getNumber (configFile >> "CfgVehicles" >> typeOf _item >> "isUav") == 1} || {{alive _x} count crew _item == 0}) exitWith {TRACE_1("item is occupied",_item); false};
 
 private _itemSize = [_item] call FUNC(getSizeItem);
 private _validItem = false;
