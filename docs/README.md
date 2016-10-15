@@ -42,7 +42,7 @@ We include files for [Docker](https://www.docker.com/) to run Jekyll in a separa
 - Navigate to [http://localhost:4000](http://localhost:4000)
 
 
-### Manual setup
+### Manually
 
 #### Installing prerequisites
 
