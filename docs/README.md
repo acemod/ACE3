@@ -1,10 +1,29 @@
 # Source of http://ace3mod.com/
 
-## Setting up the development environment
+## Updating compiled JavaScript and CSS files
 
-### Docker
+- Install [Node.js](https://nodejs.org/download/)
+- Open Command Prompt and navigate to `src` directory
+    ```
+    cd <ACE3_directory>/docs/src
+    ```
 
-We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a container. This allows you to not having to install Ruby on your computer.
+- Install Node packages
+    ```
+    npm install
+    ```
+    _On Bash on Ubuntu on Windows also install `nodejs-legacy` in case of errors._
+
+- Update files
+    ```
+    grunt
+    ```
+
+## Setting up the jekyll environment
+
+### Using Docker
+
+We include files for [Docker](https://www.docker.com/) to run jekyll in a separate container. This allows you to not having to install anything apart from Docker on your computer.
 
 #### Running the Dockerfile
 
@@ -22,9 +41,12 @@ We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a
 
 - Navigate to [http://localhost:4000](http://localhost:4000)
 
-### Installing prerequisites
 
-#### Windows (CMD)
+### Using Windows
+
+#### Installing prerequisites
+
+##### Windows (CMD)
 
 - Install [Ruby 2.0.0-p648 (x64)](http://rubyinstaller.org/downloads/)
 - Install [Ruby DevKit for 2.0 (x64)](http://rubyinstaller.org/downloads/)
@@ -42,6 +64,7 @@ We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a
     ```
     bundle install
     ```
+
 
 #### Debian / Bash on Ubuntu on Windows
 
@@ -92,21 +115,3 @@ We include a Dockerfile for [Docker](https://www.docker.com/) to run jekyll in a
 
 - Navigate to http://localhost:4000
 
-### Updating compiled JavaScript and CSS files
-
-- Install [Node.js](https://nodejs.org/download/)
-- Open Command Prompt and navigate to `src` directory
-    ```
-    cd <ACE3_directory>/docs/src
-    ```
-
-- Install Node packages
-    ```
-    npm install
-    ```
-    _On Bash on Ubuntu on Windows also install `nodejs-legacy` in case of errors._
-
-- Update files
-    ```
-    grunt
-    ```
