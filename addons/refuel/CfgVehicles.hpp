@@ -196,7 +196,6 @@ class CfgVehicles {
 
     class Ship_F: Ship {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 4;
     };
 
@@ -368,19 +367,6 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 830;
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        // Commanche
-    };
-
-    class Heli_Attack_02_base_F: Helicopter_Base_F {
-        // Mi-48 Kajman
-    };
-
-    class Heli_Light_01_base_F: Helicopter_Base_H {
-        // MH-6
-        GVAR(fuelCapacity) = 242;
-    };
-
     class Heli_Light_02_base_F: Helicopter_Base_H {
         // Ka-60 Kasatka
         GVAR(fuelCapacity) = 1450;
@@ -432,11 +418,6 @@ class CfgVehicles {
     class UAV_02_base_F: UAV {
         // Assuming similar YAHBON-R2
         GVAR(fuelCapacity) = 270;
-    };
-
-    class UGV_01_base_F: Car_F {
-        // Stomper
-        GVAR(fuelCapacity) = 100;
     };
 
     class Plane_Fighter_03_base_F: Plane_Base_F {

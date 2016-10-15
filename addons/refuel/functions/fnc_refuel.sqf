@@ -23,8 +23,8 @@ private _config = configFile >> "CfgVehicles" >> typeOf _target;
 private _rate =  getNumber (_config >> QGVAR(flowRate)) * GVAR(rate);
 private _maxFuel = getNumber (_config >> QGVAR(fuelCapacity));
 
-// Fall back to vanilla fuelCapacity value (only air vehicles don't have this defined by default by us)
-// Air vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
+// Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
+// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
 if (_maxFuel == 0) then {
     _maxFuel = getNumber (_config >> "fuelCapacity");
 };
