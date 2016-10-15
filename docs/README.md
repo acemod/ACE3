@@ -19,11 +19,11 @@
     grunt
     ```
 
-## Setting up the jekyll environment
+## Setting up the Jekyll environment
 
 ### Using Docker
 
-We include files for [Docker](https://www.docker.com/) to run jekyll in a separate container. This allows you to not having to install anything apart from Docker on your computer.
+We include files for [Docker](https://www.docker.com/) to run Jekyll in a separate container. This allows you to not having to install anything apart from Docker on your computer.
 
 #### Running the Dockerfile
 
@@ -42,7 +42,7 @@ We include files for [Docker](https://www.docker.com/) to run jekyll in a separa
 - Navigate to [http://localhost:4000](http://localhost:4000)
 
 
-### Using Windows
+### Manual setup
 
 #### Installing prerequisites
 
@@ -105,7 +105,7 @@ We include files for [Docker](https://www.docker.com/) to run jekyll in a separa
     find ~/.bundle/cache -type d -exec chmod 0755 {} +
     ```
 
-### Running
+#### Running
 
 - Run Jekyll through bundler
     ```
