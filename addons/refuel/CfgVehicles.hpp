@@ -180,18 +180,13 @@ class CfgVehicles {
 
     class Helicopter: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 1500;
     };
 
     class Helicopter_Base_F: Helicopter {};
-
-    class Helicopter_Base_H: Helicopter_Base_F {
-        GVAR(fuelCapacity) = 3000;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
 
     class Plane: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 16;
     };
 
