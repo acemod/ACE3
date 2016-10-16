@@ -664,5 +664,62 @@
             <Japanese>無効な半径が入力されました</Japanese>
             <Polish>Wpisano nieprawidłowy promień</Polish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_DisplayName">
+            <English>Garrison group</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingText">
+            <English>Fill from top to bottom</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_TopDownFillingTooltip">
+            <English>Fill buildings from the highest position first</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeText">
+            <English>Building filling mode</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeEven">
+            <English>Even filling</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeBuilding">
+            <English>Building by building</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleGarrison_FillingModeRandom">
+            <English>Random filling</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_OnlyNonPlayer">
+            <English>Unit must not be a player</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleUnGarrison_DisplayName">
+            <English>Un-garrison group</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_DisplayName">
+            <English>Toggle NVGs</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitle">
+            <English>NVG equipment</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgTitleTooltip">
+            <English>Add or remove NVGs from units</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_ToggleNvgSide">
+            <English>Toggle NVG target</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleNVG_SelectedGroup">
+            <English>Selected group</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_DisplayName">
+            <English>Toggle flashlights</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightSide">
+            <English>Toggle flashlight target</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleToggleFlashlight_ToggleFlashlightTitle">
+            <English>Flashlight</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
+            <English>Add full arsenal to object</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
+            <English>Remove arsenal from object</English>
+        </Key>
     </Package>
 </Project>

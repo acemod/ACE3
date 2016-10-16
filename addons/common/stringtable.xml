@@ -874,5 +874,17 @@
             <Russian>Нет места для выгрузки</Russian>
             <Japanese>降ろすための空間がありません</Japanese>
         </Key>
+        <Key ID="STR_ACE_Common_GarrisonInvalidPosition">
+            <English>Invalid position provided.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_GarrisonNoUnits">
+            <English>No units provided.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_GarrisonNotEnoughPos">
+            <English>There isn't enough positions to place all units.</English>
+        </Key>
+        <Key ID="STR_ACE_Common_GarrisonNoBuilding">
+            <English>No building found.</English>
+        </Key>
     </Package>
 </Project>
