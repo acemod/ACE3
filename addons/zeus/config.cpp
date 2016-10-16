@@ -10,7 +10,9 @@ class CfgPatches {
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
-            QGVAR(moduleTeleportPlayers)
+            QGVAR(moduleTeleportPlayers),
+            QGVAR(moduleToggleNvg),
+            QGVAR(moduleToggleFlashlight)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
