@@ -20,9 +20,9 @@
 private _units = [];
 
 if (_target == 4) then {
-    _units =  units (attachedTo _logic);
+    _units = units (attachedTo _logic);
 } else {
-    _units =  allUnits select {alive _x && {side _x == ([blufor, opfor, independent, civilian] select _target)}},
+    _units = allUnits select {alive _x && {side _x == ([blufor, opfor, independent, civilian] select _target)}},
 };
 
 if (_toggle) then {
