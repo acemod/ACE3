@@ -1,6 +1,6 @@
 /*
  * Author: alganthe
- * Garrison function used to place / give a move waypoint, inside buildings to AI
+ * Garrison function used to garrison AI inside buildings.
  *
  * Arguments:
  * 0: The building(s) nearest this position are used <POSITION>
