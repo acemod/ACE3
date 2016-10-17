@@ -42,7 +42,7 @@ if (_toggle) then {
                 };
 
             } else {
-                _x linkitem "NVGoggles";
+                _x linkItem "NVGoggles";
             };
         };
     } foreach _units;
