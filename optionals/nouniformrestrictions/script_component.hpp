@@ -1,5 +1,5 @@
-#define COMPONENT uniforms
-#define COMPONENT_BEAUTIFIED Uniforms
+#define COMPONENT nouniformrestrictions
+#define COMPONENT_BEAUTIFIED No Uniform Restrictions
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

@@ -1,19 +1,18 @@
 /*
-* Author: BaerMitUmlaut, 654wak654
-* Generates the CfgVehicles.hpp to unlock all uniforms.
-*
-* Arguments:
-* None
-*
-* Return Value:
-* CfgVehicles.hpp content <STRING>
-*
-* Example:
-* [] call ace_uniforms_fnc_exportConfig
-*
-* Public: [Yes]
-*/
- 
+ * Author: BaerMitUmlaut, 654wak654
+ * Generates the CfgVehicles.hpp to unlock all uniforms.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * CfgVehicles.hpp content <STRING>
+ *
+ * Example:
+ * [] call ace_nouniformrestrictions_fnc_exportConfig
+ *
+ * Public: [Yes]
+ */
 #include "script_component.hpp"
 
 private _modifyClasses = [];
