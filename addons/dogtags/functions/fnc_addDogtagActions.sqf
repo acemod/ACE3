@@ -32,8 +32,7 @@ private _unitDogtagIDs = [];
 //Create action children for all dogtags
 private _actions = [];
 {
-    private _tagID = _unitDogtagIDs select _forEachIndex;
-    private _displayName = format ["%1 #%2", getText (configFile >> "CfgWeapons" >> _x >> "displayName"), _tagID];
+    private _displayName = format ["%1", getText (configFile >> "CfgWeapons" >> _x >> "displayName")];
     private _picture = getText (configFile >> "CfgWeapons" >> _x >> "picture");
 
     private _action = [_x, _displayName, _picture, {_this call FUNC(checkDogtagItem)}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
