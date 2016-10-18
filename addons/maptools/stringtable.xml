@@ -160,9 +160,11 @@
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
             <English>Draw straight lines with maptools</English>
+            <Japanese>マップ ツールを使って直線を書く</Japanese>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
+            <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
         </Key>
     </Package>
 </Project>

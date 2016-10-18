@@ -3,6 +3,7 @@
     <Package name="Laser">
         <Key ID="STR_ACE_Laser_dispersionCount_displayName">
             <English>Laser Dispersion Simulation Count</English>
+            <Japanese>レーザーの分散シミュレート数</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
