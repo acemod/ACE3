@@ -60,6 +60,9 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 if (GVAR(isSwimming)) exitWith {
     _unit setAnimSpeedCoef (1 - _fatigue / 3);
 };
+if ((getAnimSpeedCoef _unit) != 1) then {
+    _unit setAnimSpeedCoef 1;
+};
 
 if (_overexhausted) then {
     [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
