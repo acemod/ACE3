@@ -883,7 +883,7 @@
             <French>Aucune unité fourni</French>
         </Key>
         <Key ID="STR_ACE_Common_GarrisonNotEnoughPos">
-            <English>There isn't enough positions to place all units.</English>
+            <English>There aren't enough positions to place all units.</English>
             <French>Il n'y a pas assez de positions pour placer toutes les unités</French>
         </Key>
         <Key ID="STR_ACE_Common_GarrisonNoBuilding">

@@ -40,7 +40,8 @@ switch (false) do {
         [LSTRING(OnlyNonPlayer)] call _fnc_errorAndClose;
     };
 };
+private _units = units _unit;
 
-[units _unit] call EFUNC(common,unGarrison);
+[QEGVAR(common,unGarrison), [_units], _units] call CBA_fnc_targetEvent;
 
 deleteVehicle _logic;

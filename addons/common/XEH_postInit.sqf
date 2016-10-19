@@ -110,6 +110,8 @@ if (isServer) then {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(unGarrison), FUNC(unGarrison)] call CBA_fnc_addEventHandler;
+
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setFuel), {(_this select 0) setFuel (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(engineOn), {(_this select 0) engineOn (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -123,16 +125,10 @@ if (isServer) then {
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(doMove), {(_this select 0) doMove (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(doFollow), {(_this select 0) doMove (_this select 1)}] call CBA_fnc_addEventHandler;
 
 [QGVAR(disableAI), {
     params [["_units", [], [[]]], "_section"];
     {_x disableAI _section} foreach (_units select {local _x});
-}] call CBA_fnc_addEventHandler;
-[QGVAR(enableAI), {
-    params [["_units", [], [[]]], "_section"];
-    {_x enableAI _section} foreach (_units select {local _x});
 }] call CBA_fnc_addEventHandler;
 
 // Request framework
