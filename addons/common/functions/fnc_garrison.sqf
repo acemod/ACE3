@@ -62,11 +62,11 @@ if (_topDownFilling) then {
             reverse _x;
         } foreach _buildingPos;
 
-        _buildingsIndexes pushback _buildingPos;
+        _buildingsIndexes pushBack _buildingPos;
     } foreach _buildings;
 } else {
     {
-        _buildingsIndexes pushback (_x buildingPos -1);
+        _buildingsIndexes pushBack (_x buildingPos -1);
     } foreach _buildings;
 };
 
@@ -109,7 +109,7 @@ switch (_fillingType) do {
                     _unitsArray deleteAt (_unitsArray find _unit);
                     _building deleteAt 0;
                     _buildingsIndexes deleteAt 0;
-                    _buildingsIndexes pushbackUnique _building;
+                    _buildingsIndexes pushBackUnique _building;
                 };
             };
         };
