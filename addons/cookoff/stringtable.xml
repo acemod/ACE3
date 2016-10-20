@@ -31,17 +31,21 @@
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸（タレット）</Japanese>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_name">
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
+            <Japanese>弾薬箱に誘爆を有効化</Japanese>
         </Key>
-        <Key ID="STR_ACE_CookOff_enable_tooltip">
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
+            <Japanese>弾薬箱が誘爆するようになります。</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
+            <Japanese>弾薬の誘爆を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
+            <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
         </Key>
     </Package>
 </Project>

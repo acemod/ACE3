@@ -583,8 +583,8 @@ def set_version_in_files():
     newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
 
     # Regex patterns
-    pattern = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH.BUILD
-    patternShort = re.compile(r"(\b[0\.-9]+\b\.[0\.-9]+\b\.[0\.-9]+)") # MAJOR.MINOR.PATCH
+    pattern = re.compile(r"([\d]+\.[\d]+\.[\d]+\.[\d]+)") # MAJOR.MINOR.PATCH.BUILD
+    patternShort = re.compile(r"([\d]+\.[\d]+\.[\d]+)") # MAJOR.MINOR.PATCH
 
     # Change versions in files containing version
     for i in versionFiles:
@@ -608,6 +608,7 @@ def set_version_in_files():
                         # First item in the list findall returns
                         versionFound = versionFound[0]
 
+                        newVersionUsed = ""
                         # Use the same version length as the one found
                         if len(versionFound) == len(newVersion):
                             newVersionUsed = newVersion
