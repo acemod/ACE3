@@ -670,7 +670,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
-            <French>Retirer arsenal de l'object</French>
+            <French>Retirer arsenal de l'objet</French>
         </Key>
     </Package>
 </Project>
