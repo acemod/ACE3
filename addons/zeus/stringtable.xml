@@ -664,5 +664,11 @@
             <Japanese>無効な半径が入力されました</Japanese>
             <Polish>Wpisano nieprawidłowy promień</Polish>
         </Key>
+        <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
+            <English>Add full arsenal to object</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
+            <English>Remove arsenal from object</English>
+        </Key>
     </Package>
 </Project>

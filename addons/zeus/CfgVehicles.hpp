@@ -174,4 +174,14 @@ class CfgVehicles {
         function = QFUNC(moduleUnconscious);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
     };
+    class GVAR(AddFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(moduleAddFullArsenal_displayName);
+        function = QFUNC(moduleAddArsenal);
+    };
+    class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(moduleRemoveArsenal_displayName);
+        function = QFUNC(moduleRemoveArsenal);
+    };
 };
