@@ -16,7 +16,6 @@
 #define HIT_STRUCTURAL QGVAR($#structural)
 
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator"];
-//diag_log _this;
 
 // HD sometimes triggers for remote units - ignore.
 if (!local _unit) exitWith {nil};

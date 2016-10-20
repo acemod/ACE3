@@ -53,7 +53,7 @@ private _actionPathPositions = ["spine3", "pilot", "LeftForeArm", "RightForeArm"
         private _action = [
             _actionName, _displayName, _icon, _statement, _condition, {}, [_bodyPart, configName _config], [0, 0, 0], 2, [false, true, false, false, false]
         ] call EFUNC(interact_menu,createAction);
-        diag_log formatText ["ACTIONS LOL: %1", [_actionName, _displayName, _icon, _statement, _condition]];
+
         ["CAManBase", 0, [_actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
         ["CAManBase", 1, ["ACE_SelfActions", "Medical", _actionPath], _action, true] call EFUNC(interact_menu,addActionToClass);
     } forEach _allowedBodyParts;
