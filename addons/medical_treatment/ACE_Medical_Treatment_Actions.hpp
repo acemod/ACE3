@@ -90,28 +90,37 @@ class GVAR(Actions) {
     };
 
     // --- syringes
-    class Morphine: BasicBandage {
+    class Morphine: fieldDressing {
         displayName = ECSTRING(medical,Inject_Morphine);
         displayNameProgress = ECSTRING(medical,Injecting_Morphine);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        allowSelfTreatment = 1;
         category = "medication";
-        treatmentTime = 10;
         items[] = {"ACE_morphine"};
         condition = "";
-        callbackSuccess = QFUNC(treatmentMorphine);
+        treatmentTime = 10;
+        callbackSuccess = QFUNC(treatmentMedication);
         animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
     };
+    class Adenosine: Morphine {
+        displayName = ECSTRING(medical,Inject_Adenosine);
+        displayNameProgress = ECSTRING(medical,Injecting_Adenosine);
+        items[] = {"ACE_adenosine"};
+        litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
+    };
+    class Atropine: Morphine {
+        displayName = ECSTRING(medical,Inject_Atropine);
+        displayNameProgress = ECSTRING(medical,Injecting_Atropine);
+        items[] = {"ACE_atropine"};
+        litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
+    };
     class Epinephrine: Morphine {
         displayName = ECSTRING(medical,Inject_Epinephrine);
         displayNameProgress = ECSTRING(medical,Injecting_Epinephrine);
-        requiredMedic = QEGVAR(medical,medicSetting_basicEpi);
         items[] = {"ACE_epinephrine"};
-        callbackSuccess = QFUNC(treatmentEpipen);
         litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
-        treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
+        //treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
     };
 
     // --- iv bags
@@ -251,37 +260,6 @@ class GVAR(Actions) {
 
 /*
     class Advanced {
-        class Morphine: fieldDressing {
-            displayName = ECSTRING(medical,Inject_Morphine);
-            displayNameProgress = ECSTRING(medical,Injecting_Morphine);
-            allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-            category = "medication";
-            items[] = {"ACE_morphine"};
-            treatmentTime = 3;
-            callbackSuccess = QFUNC(treatmentMedication);
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };
-            sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
-        };
-        class Adenosine: Morphine {
-            displayName = ECSTRING(medical,Inject_Adenosine);
-            displayNameProgress = ECSTRING(medical,Injecting_Adenosine);
-            items[] = {"ACE_adenosine"};
-            litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
-        };
-        class Atropine: Morphine {
-            displayName = ECSTRING(medical,Inject_Atropine);
-            displayNameProgress = ECSTRING(medical,Injecting_Atropine);
-            items[] = {"ACE_atropine"};
-            litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
-        };
-        class Epinephrine: Morphine {
-            displayName = ECSTRING(medical,Inject_Epinephrine);
-            displayNameProgress = ECSTRING(medical,Injecting_Epinephrine);
-            items[] = {"ACE_epinephrine"};
-            litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
-        };
-
         class SurgicalKit: fieldDressing {
             displayName = ECSTRING(medical,Use_SurgicalKit);
             displayNameProgress = ECSTRING(medical,Stitching);

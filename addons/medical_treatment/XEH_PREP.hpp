@@ -1,4 +1,5 @@
 
+// actions
 PREP(actionCheckBloodPressure);
 PREP(actionCheckBloodPressureLocal);
 PREP(actionCheckPulse);
@@ -8,19 +9,6 @@ PREP(actionDiagnose);
 PREP(actionLoadUnit);
 PREP(actionPlaceInBodyBag);
 PREP(actionUnloadUnit);
-PREP(addToLog);
-PREP(addToTriageCard);
-PREP(addUnloadPatientActions);
-PREP(canAccessMedicalEquipment);
-PREP(displayPatientInformation);
-PREP(displayTriageCard);
-PREP(dropDownTriageCard);
-PREP(getTriageStatus);
-PREP(handleBandageOpening);
-PREP(isBeingCarried);
-PREP(isBeingDragged);
-PREP(medicationEffectLoop);
-PREP(onMedicationUsage);
 
 // treaments
 PREP(canTreat);
@@ -34,10 +22,6 @@ PREP(treatmentBandageLocal);
 PREP(treatmentTourniquet);
 PREP(treatmentTourniquetLocal);
 PREP(treatmentTourniquetRemove);
-PREP(treatmentMorphine);
-PREP(treatmentMorphineLocal);
-PREP(treatmentEpipen);
-//PREP(treatmentEpipenLocal);
 PREP(treatmentMedication);
 PREP(treatmentMedicationLocal);
 PREP(treatmentIV);
@@ -48,6 +32,21 @@ PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
 PREP(treatmentFullHealTreatmentTime);
 PREP(treatmentSurgicalKit_onProgress);
+
+// misc
+PREP(addToLog);
+PREP(addToTriageCard);
+PREP(addUnloadPatientActions);
+PREP(canAccessMedicalEquipment);
+PREP(displayPatientInformation);
+PREP(displayTriageCard);
+PREP(dropDownTriageCard);
+PREP(getTriageStatus);
+PREP(handleBandageOpening);
+PREP(isBeingCarried);
+PREP(isBeingDragged);
+PREP(medicationEffectLoop);
+PREP(onMedicationUsage);
 
 // items
 PREP(checkItems);

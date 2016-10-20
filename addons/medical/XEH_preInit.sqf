@@ -28,4 +28,13 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call FUNC(creat
     true
 ] call CBA_Settings_fnc_init;
 
+[
+    QGVAR(advancedMedication),
+    "CHECKBOX",
+    ["Advanced Medication", "Enables advanced simulation of Morphine, Epinephrine etc."], //@todo
+    "ACE Medical", // @todo
+    false,
+    true
+] call CBA_Settings_fnc_init;
+
 ADDON = true;

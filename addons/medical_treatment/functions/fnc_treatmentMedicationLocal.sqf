@@ -17,6 +17,25 @@
 params ["_target", "_className", "_partIndex"];
 TRACE_3("params",_target,_className,_partIndex);
 
+if !(EGVAR(medical,advancedMedication)) exitWith {
+    if (_className == "Morphine") exitWith {
+        #define MORPHINEHEAL 0.4
+
+        params ["_target"];
+
+        // reduce pain, pain sensitivity
+        private _morphine = ((_target getVariable [QEGVAR(medical,morphine), 0]) + MORPHINEHEAL) min 1;
+        _target setVariable [QEGVAR(medical,morphine), _morphine, true];
+
+        private _pain = ((_target getVariable [QEGVAR(medical,pain), 0]) - MORPHINEHEAL) max 0;
+        _target setVariable [QEGVAR(medical,pain), _pain, true];
+    };
+
+    if (_className == "Epinephrine") exitWith {
+        [_target, false] call EFUNC(medical,setUnconscious);
+    };
+};
+
 private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 
 if (_tourniquets select _partIndex > 0) exitWith {
@@ -35,7 +54,7 @@ private _currentInSystem = _target getVariable [_varName, 0];
 _target setVariable [_varName, _currentInSystem + 1];
 
 // Find the proper attributes for the used medication
-private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");
+private _medicationConfig = configFile >> "ace_medical_treatment" >> "Medication";
 private _painReduce = getNumber (_medicationConfig >> "painReduce");
 private _hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow");
 private _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
@@ -48,7 +67,7 @@ private _hrCallback = getText (_medicationConfig >> "hrCallback");
 private _inCompatableMedication = [];
 
 if (isClass (_medicationConfig >> _className)) then {
-    _medicationConfig = (_medicationConfig >> _className);
+    _medicationConfig = _medicationConfig >> _className;
     if (isNumber (_medicationConfig >> "painReduce")) then { _painReduce = getNumber (_medicationConfig >> "painReduce");};
     if (isArray (_medicationConfig >> "hrIncreaseLow")) then { _hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow"); };
     if (isArray (_medicationConfig >> "hrIncreaseNormal")) then { _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal"); };
@@ -91,6 +110,7 @@ if (_painReduce > 0) then {
     // Reduce pain
     private _painSuppress = _target getVariable [QEGVAR(medical,painSuppress), 0];
     _target setVariable [QEGVAR(medical,painSuppress), (_painSuppress + _painReduce) max 0];
+
     if (!GVAR(painIsOnlySuppressed)) then {
         _pain = _target getVariable [QEGVAR(medical,pain), 0];
         _target setVariable [QEGVAR(medical,pain), (_pain - _painReduce) max 0, true];
@@ -101,6 +121,6 @@ private _resistance = _target getVariable [QEGVAR(medical,peripheralResistance),
 _target setVariable [QEGVAR(medical,peripheralResistance), (_resistance + _viscosityChange) max 0];
 
 // Call back to ensure that the medication is decreased over time
-[_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
+[_target, _className, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true
