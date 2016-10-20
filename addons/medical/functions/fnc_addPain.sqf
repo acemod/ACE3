@@ -28,6 +28,6 @@ if (_pain > 0) then {
 
 _unit setVariable [QEGVAR(medical,pain), _pain];
 
-if (_pain >= PAIN_UNCONSCIOUS) then {
+if (_painToAdd > 0 && {_pain >= PAIN_UNCONSCIOUS}) then {
     [_unit, true, PAIN_KNOCK_OUT_DURATION] call FUNC(setUnconscious);
 };
