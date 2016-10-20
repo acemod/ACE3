@@ -666,9 +666,11 @@
         </Key>
         <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
             <English>Add full arsenal to object</English>
+            <French>Ajouter arsenal complet à l'objet</French>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
+            <French>Retirer arsenal de l'object</French>
         </Key>
     </Package>
 </Project>
