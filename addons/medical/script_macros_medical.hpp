@@ -36,3 +36,9 @@
 
 // --- unconsciousness
 #define DEFAULT_KNOCK_OUT_DELAY (5 + random 10)
+
+// --- pain
+#define PAIN_UNCONSCIOUS 0.7
+
+// duration in seconds to stay knocked out due to pain
+#define PAIN_KNOCK_OUT_DURATION (15 + random 20)
