@@ -25,7 +25,7 @@ private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
 if (count _openWounds == 0) exitWith {false}; // nothing to do here!
 
 // Get the default effectiveness for the used bandage
-private _config = configFile >> "ace_medical_treatment" >> "Bandaging";
+private _config = configFile >> QUOTE(ADDON) >> "Bandaging";
 private _effectiveness = getNumber (_config >> "effectiveness");
 
 if (isClass (_config >> _bandage)) then {

@@ -32,7 +32,7 @@ if !(EGVAR(medical,allowLitterCreation)) exitWith {};
 // Don't create litter if medic or patient are inside a vehicle
 if (vehicle _caller != _caller || {vehicle _target != _target}) exitWith {};
 
-private _config = configFile >> "ACE_Medical_Treatment_Actions" >> CUR_LEVEL >> _className;
+private _config = configFile >> QGVAR(Actions) >> _className;
 if !(isClass _config) exitWith {TRACE_1("No action config",_className);};
 
 if !(isArray (_config >> "litter")) exitWith {TRACE_1("No litter config",_className);};

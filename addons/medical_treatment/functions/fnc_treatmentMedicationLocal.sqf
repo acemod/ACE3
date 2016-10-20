@@ -54,7 +54,7 @@ private _currentInSystem = _target getVariable [_varName, 0];
 _target setVariable [_varName, _currentInSystem + 1];
 
 // Find the proper attributes for the used medication
-private _medicationConfig = configFile >> "ace_medical_treatment" >> "Medication";
+private _medicationConfig = configFile >> QUOTE(ADDON) >> "Medication";
 private _painReduce = getNumber (_medicationConfig >> "painReduce");
 private _hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow");
 private _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
