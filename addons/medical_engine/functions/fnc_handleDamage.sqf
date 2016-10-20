@@ -14,21 +14,36 @@
 
 // for travis
 #define HIT_STRUCTURAL QGVAR($#structural)
+#define HIT_CRASH QGVAR($#crash)
 
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator"];
+//diag_log text str _this;
 
 // HD sometimes triggers for remote units - ignore.
 if (!local _unit) exitWith {nil};
 
 // Get missing meta info
 private ["_hitPoint", "_oldDamage"];
+private _isCrash = false;
 
+// Store
 if (_hitPointIndex < 0) then {
     _hitPoint = "#structural";
     _oldDamage = damage _unit;
+
+    // Handle vehicle crashes
+    if (_damage == _unit getVariable [HIT_CRASH, -1]) then {
+        _isCrash = true;
+        _unit setVariable [HIT_CRASH, -1];
+    } else {
+        _unit setVariable [HIT_CRASH, _damage];
+    };
 } else {
     _hitPoint = toLower (getAllHitPointsDamage _unit select 0 select _hitPointIndex);
     _oldDamage = _unit getHitIndex _hitPointIndex;
+
+    // No crash, reset
+    _unit setVariable [HIT_CRASH, -1];
 };
 
 private _newDamage = _damage - _oldDamage;
@@ -109,8 +124,17 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
 // Check for drowning damage.
 // Don't change the third expression. Safe method for FLOATs.
-if (_hitPoint isEqualTo "#structural" && {getOxygenRemaining _unit <= 0.5} && {_damage isEqualTo (_oldDamage + 0.005)}) then {
+if (_hitPoint isEqualTo "#structural" && {getOxygenRemaining _unit <= 0.5} && {_damage isEqualTo (_oldDamage + 0.005)}) exitWith {
     [QGVAR(woundReceived), [_unit, "Body", _newDamage, _unit, "#drowning"]] call CBA_fnc_localEvent;
+
+    0
+};
+
+// Handle vehicle crashes
+if (_isCrash) exitWith {
+    [QGVAR(woundReceived), [_unit, "Body", _newDamage, _unit, "#vehiclecrash"]] call CBA_fnc_localEvent;
+
+    0
 };
 
 0

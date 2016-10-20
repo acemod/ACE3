@@ -15,6 +15,7 @@
 
 params ["_typeOfProjectile"];
 
+// --- projectiles
 if (_typeOfProjectile isKindOf "BulletBase") exitWith {"bullet"};
 if (_typeOfProjectile isKindOf "ShotgunBase") exitWith {"bullet"};
 if (_typeOfProjectile isKindOf "GrenadeCore") exitWith {"grenade"};
@@ -27,4 +28,11 @@ if (_typeOfProjectile isKindOf "MissileBase") exitWith {"explosive"};
 if (_typeOfProjectile isKindOf "LaserBombCore") exitWith {"explosive"};
 if (_typeOfProjectile isKindOf "BombCore") exitWith {"explosive"};
 if (_typeOfProjectile isKindOf "Grenade") exitWith {"grenade"};
+
+// --- non-projectiles reported by custom handleDamge wrapper
+if ((_typeOfProjectile select [0,1]) isEqualTo "#") then {
+    _typeOfProjectile = _typeOfProjectile select [1];
+};
+
+// --- otherwise
 toLower _typeOfProjectile
