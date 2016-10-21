@@ -18,4 +18,4 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ACE_TRACE_DRAW_INC    1
+#define ACE_TRACE_DRAW_INC 1

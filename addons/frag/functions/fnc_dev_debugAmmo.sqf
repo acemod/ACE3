@@ -32,21 +32,21 @@ private _processedCfgAmmos = [];
                 diag_log text format ["Ammo [%1] from Mag [%2] - Weak but will still frag!",_ammo,configName _x];
                 diag_log text format [" - _force=%1,_fragPower=%2",_force,_fragPower];
             };
-        
-            _warn = false;
+
+            private _warn = false;
 
             _fragTypes = getArray (_ammoConfig >> QGVAR(CLASSES));
-            if(_fragTypes isEqualTo []) then {_warn = true;};
+            if (_fragTypes isEqualTo []) then {_warn = true;};
             _c = getNumber(_ammoConfig >> QGVAR(CHARGE));
-            if(_c == 0) then {_warn = true;};
+            if (_c == 0) then {_warn = true;};
             _m = getNumber(_ammoConfig >> QGVAR(METAL));
-            if(_m == 0) then {_warn = true;};
+            if (_m == 0) then {_warn = true;};
             _k = getNumber(_ammoConfig >> QGVAR(GURNEY_K));
-            if(_k == 0) then {_warn = true;};
+            if (_k == 0) then {_warn = true;};
             _gC = getNumber(_ammoConfig >> QGVAR(GURNEY_C));
-            if(_gC == 0) then { _warn = true;};
+            if (_gC == 0) then { _warn = true;};
 
-            if(_debugMissing && _warn) then {
+            if (_debugMissing && {_warn}) then {
                 diag_log text format ["Ammo [%1] from Mag [%2] MISSING frag configs:",_ammo,configName _x];
                 diag_log text format [" - _c=%1,_m=%2,_k=%3,_gC=%4,_fragTypes=%5",_c,_m,_k,_gC,_fragTypes];
             };
