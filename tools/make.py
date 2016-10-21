@@ -625,9 +625,9 @@ def set_version_in_files():
                         if versionFound:
                             # Use the same version length as the one found
                             newVersionUsed = "" # In case undefined
-                            if len(versionFound) == len(newVersion):
+                            if versionFound.count(".") == newVersion.count("."):
                                 newVersionUsed = newVersion
-                            if len(versionFound) == len(newVersionShort):
+                            if versionFound.count(".") == newVersionShort.count("."):
                                 newVersionUsed = newVersionShort
 
                             # Print change and modify the file if changed
