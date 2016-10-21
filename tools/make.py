@@ -1175,23 +1175,6 @@ See the make.cfg file for additional build options.
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
 
-        obsolete_check_path = os.path.join(module_root, release_dir, project, "extras")
-        if os.path.exists(obsolete_check_path):
-            for file in os.listdir(obsolete_check_path):
-                if not os.path.exists(os.path.join(module_root_parent, "extras", file)):
-                    try:
-                        if os.path.isdir(os.path.join(obsolete_check_path,file)):
-                            print_yellow("Removing obsolete extras directory => {}".format(file))
-                            shutil.rmtree(os.path.join(obsolete_check_path,file), True)
-                        else:
-                            print_yellow("Removing obsolete extras file => {}".format(file))
-                            os.remove(os.path.join(obsolete_check_path,file))
-                    except:
-                        print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
-                        pass
-            if len(os.listdir(obsolete_check_path)) == 0:
-                shutil.rmtree(obsolete_check_path, True)
-
         # For each module, prep files and then build.
         print_blue("\nBuilding...")
         for module in modules:
