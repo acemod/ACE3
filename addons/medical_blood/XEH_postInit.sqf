@@ -10,13 +10,17 @@ if (isServer) then {
 
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop"];
-        GVAR(bloodDrops) pushBack _bloodDrop;
+        // Add to created queue with format [expireTime, object]
+        private _index = GVAR(bloodDrops) pushBack [(CBA_missionTime + BLOOD_OBJECT_LIFETIME), _bloodDrop];
+
         if (count GVAR(bloodDrops) >= MAX_BLOOD_OBJECTS) then {
-            private _deletedBloodDrop = GVAR(bloodDrops) deleteAt 0;
+            (GVAR(bloodDrops) deleteAt 0) params ["", "_deletedBloodDrop"];
             deleteVehicle _deletedBloodDrop;
         };
 
-        [{deleteVehicle _this}, _bloodDrop, BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
+        if (_index == 1) then { // Start the waitAndExecute loop
+            [FUNC(serverCleanupBlood), [], BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
+        };
     }] call CBA_fnc_addEventHandler;
 };
 
@@ -30,7 +34,7 @@ if (isServer) then {
     } else {
         {allUnits select {(local _x) && {[_x] call FUNC(isBleeding)}}}; // filter all local bleeding units
     };
-    
+
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
     [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
