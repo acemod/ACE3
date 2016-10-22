@@ -40,7 +40,7 @@ if (_zIndex < 5) then {
             _lastPos = _testPos;
         };
     };
-    _params set [4, _zIndex + 1];
+    _args set [4, _zIndex + 1];
 } else {
     INC(_depth);
     private _buckets = [];

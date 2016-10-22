@@ -81,7 +81,7 @@ if (!isNil "_spallPos") then {
         if (_gC == 0) then {_gC = 2440; _warn = true;};
 
         if (_warn) then {
-            ACE_LOGWARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_roundType); //TODO: turn this off when we get closer to release
+            WARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_roundType); //TODO: turn this off when we get closer to release
         };
 
         private _fragPower = (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
