@@ -2,6 +2,7 @@
 
 [QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOff), FUNC(cookOff)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
 GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
@@ -52,21 +53,31 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
     }];
 }, nil, ["Wheeled_APC_F"], true] call CBA_fnc_addClassEventHandler;
 
+["ReammoBox_F", "init", {
+    (_this select 0) addEventHandler ["HandleDamage", {
+        if (GVAR(enableAmmobox)) then {
+            ["box", _this] call FUNC(handleDamage);
+        };
+    }];
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+
 // secondary explosions
 ["AllVehicles", "killed", {
     params ["_vehicle"];
-
-    if (_vehicle getVariable [QGVAR(enable), GVAR(enable)]) then {
+    if (_vehicle getVariable [QGVAR(enable),GVAR(enable)]) then {
         _vehicle call FUNC(secondaryExplosions);
+        if (_vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
+            [_vehicle, magazinesAmmo _vehicle] call FUNC(detonateAmmunition);
+        };
     };
-}, nil, ["Man"]] call CBA_fnc_addClassEventHandler;
+}, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
 
 // blow off turret effect
 ["Tank", "killed", {
-    params ["_vehicle"];
-
-    if (_vehicle getVariable [QGVAR(enable), GVAR(enable)]) then {
-        _vehicle call FUNC(blowOffTurret);
+    if ((_this select 0) getVariable [QGVAR(enable),GVAR(enable)]) then {
+        if (random 1 < 0.15) then {
+            (_this select 0) call FUNC(blowOffTurret);
+        };
     };
 }] call CBA_fnc_addClassEventHandler;
 

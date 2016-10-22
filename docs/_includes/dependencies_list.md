@@ -75,7 +75,7 @@
 {% endif %}
 
 {% if include.component == "dogtags" %}
-`ace_common`
+`ace_interaction`
 {% endif %}
 
 {% if include.component == "dragging" %}
@@ -170,10 +170,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "laser_selfdesignate" %}
-`ace_laser`
-{% endif %}
-
 {% if include.component == "laserpointer" %}
 `ace_common`
 {% endif %}
@@ -212,6 +208,10 @@
 
 {% if include.component == "medical_ai" %}
 `ace_medical`
+{% endif %}
+
+{% if include.component == "medical_blood" %}
+`ace_main`
 {% endif %}
 
 {% if include.component == "medical_menu" %}
@@ -340,10 +340,6 @@
 
 {% if include.component == "scopes" %}
 `ace_common`
-{% endif %}
-
-{% if include.component == "sitting" %}
-`ace_interaction`
 {% endif %}
 
 {% if include.component == "slideshow" %}

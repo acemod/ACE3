@@ -4,16 +4,16 @@
 #define PREFIX ace
 
 #define MAJOR 3
-#define MINOR 7
+#define MINOR 8
 #define PATCHLVL 0
-#define BUILD 6
+#define BUILD 10
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.62
-#define REQUIRED_CBA_VERSION {3,0,0}
+#define REQUIRED_VERSION 1.64
+#define REQUIRED_CBA_VERSION {3,1,1}
 
 #ifdef COMPONENT_BEAUTIFIED
     #define COMPONENT_NAME QUOTE(ACE3 - COMPONENT_BEAUTIFIED)

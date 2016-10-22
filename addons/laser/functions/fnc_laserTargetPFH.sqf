@@ -1,27 +1,40 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: esteldunedain
+ * Maintains the tracked lasers, deleting any laser that is turned off
+ *
+ * Argument:
+ * PFEH Args
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ * [[], 1]] call ace_laser_fnc_laserTargetPFH;
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
-TRACE_1("enter", _this);
 
-//TRACE_1("enter", _this);
-params ["_args"];
-_args params ["_laserTarget", "_shooter", "_uuid"];
+params ["", "_pfhuid"];
 
-if(isNull _laserTarget || !alive _shooter) exitWith {
-    [(_this select 1)] call CBA_fnc_removePerFrameHandler;
-    REM(GVAR(VanillaLasers), _laserTarget);
+GVAR(trackedLaserTargets) = GVAR(trackedLaserTargets) select {
+    _x params ["_targetObject", "_owner", "_laserUuid"];
+    if ((isNull _targetObject) ||
+            {!(alive _targetObject)} ||
+            {isNull _owner} ||
+            {!(alive _owner)}) then {
 
-    // Remove laseron
-    [_uuid] call FUNC(laserOff);
+        // Turn off the laser in ace_laser
+        [_laserUuid] call FUNC(laserOff);
+        TRACE_1("Laser off:", _laserUuid);
+        false
+    } else {
+        true
+    };
 };
 
-#ifdef DEBUG_MODE_FULL
-// Iconize the location of the actual laserTarget
-_pos = getPosASL _laserTarget;
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,0,1], (ASLtoATL _pos), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-
-{
-    drawLine3D [ASLtoATL (_x select 0), ASLtoATL (_x select 1), (_x select 2)];
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", (_x select 2), ASLtoATL (_x select 1), 0.75, 0.75, 0, "", 0.5, 0.025, "TahomaB"];
-} forEach DRAW_LINES;
-DRAW_LINES = [];
-#endif
+if (GVAR(trackedLaserTargets) isEqualTo []) then {
+    TRACE_1("ending pfeh",count GVAR(trackedLaserTargets));
+    [_pfhuid] call CBA_fnc_removePerFrameHandler;
+    GVAR(pfehID) = -1;
+};

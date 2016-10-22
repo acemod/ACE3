@@ -12,6 +12,7 @@
             <Hungarian>Sorozat</Hungarian>
             <Portuguese>Rajada</Portuguese>
             <Italian>Raffica</Italian>
+            <Japanese>バースト</Japanese>
         </Key>
         <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
             <English>XM301</English>
@@ -24,6 +25,7 @@
             <Hungarian>XM301</Hungarian>
             <Portuguese>XM301</Portuguese>
             <Italian>XM301</Italian>
+            <Japanese>XM301</Japanese>
         </Key>
         <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
             <English>Open Cargo Door</English>
@@ -36,6 +38,7 @@
             <Russian>Открыть грузовой отсек</Russian>
             <Italian>Apri la rampa di carico</Italian>
             <Portuguese>Abrir porta de carga</Portuguese>
+            <Japanese>カーゴ ドアを開く</Japanese>
         </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
@@ -48,6 +51,7 @@
             <Russian>Закрыть грузовой отсек</Russian>
             <Italian>Chiudi la rampa di carico</Italian>
             <Portuguese>Fechar porta de carga</Portuguese>
+            <Japanese>カーゴ ドアを閉じる</Japanese>
         </Key>
     </Package>
 </Project>

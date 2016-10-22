@@ -12,6 +12,7 @@
             <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
             <Italian>Controlla le munizioni ricaricando</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
+            <Japanese>再装填された武器の弾薬を確認</Japanese>
         </Key>
         <Key ID="STR_ACE_Reload_SettingDisplayTextDesc">
             <English>Check the ammo in your new magazine on magazine reload.</English>
@@ -24,6 +25,7 @@
             <Hungarian>A lőszer ellenőrzése az új tárad behelyezésekor újratöltés közben.</Hungarian>
             <Italian>Controlla le munizioni rimanenti nel caricatore in fase di cambio caricatore.</Italian>
             <Portuguese>Confere a munição no seu novo carregador ao recarregar a arma</Portuguese>
+            <Japanese>あたらしく装填された弾倉の弾薬を確認します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Reload_checkAmmo">
             <English>Check Ammo</English>
@@ -36,6 +38,7 @@
             <Italian>Controlla le munizioni</Italian>
             <Portuguese>Conferir munições</Portuguese>
             <Russian>Проверить боеприпасы</Russian>
+            <Japanese>弾薬を確認</Japanese>
         </Key>
         <Key ID="STR_ACE_Reload_Ammo">
             <English>Ammo</English>
@@ -48,6 +51,7 @@
             <Italian>Munizioni</Italian>
             <Portuguese>Munições</Portuguese>
             <Russian>Боеприпасы</Russian>
+            <Japanese>弾薬</Japanese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -60,6 +64,7 @@
             <Hungarian>Töltényheveder összekötése</Hungarian>
             <Italian>Attacca la tracolla</Italian>
             <Portuguese>Ligar cintos de munição</Portuguese>
+            <Japanese>ベルト リンク</Japanese>
         </Key>
         <Key ID="STR_ACE_Reload_LinkingBelt">
             <English>Linking belt...</English>
@@ -72,6 +77,7 @@
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
             <Italian>Attacco la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
+            <Japanese>ベルトをつなげている・・・</Japanese>
         </Key>
     </Package>
 </Project>

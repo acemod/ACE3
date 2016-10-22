@@ -2,8 +2,8 @@
 #include "script_component.hpp"
 
 EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private ["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
-private ["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_shooterPos"];
+private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
+private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_shooterPos"];
 _seekerTargetPos = _this select 0;
 _launchParams = _this select 1;
 
@@ -13,7 +13,7 @@ _targetLaunchParams = _launchParams select 1;
 _shooterPos = getPosASL _shooter;
 _projectilePos = getPosASL _projectile;
 
-_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
+_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
 _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 
 TRACE_3("", _distanceToTarget, _distanceToShooter, _seekerTargetPos);
@@ -22,7 +22,7 @@ TRACE_3("", _distanceToTarget, _distanceToShooter, _seekerTargetPos);
 _addHeight = [0,0,0];
 
 // Always climb an arc on initial launch if we are close to the round
-if( ((ASLtoATL _projectilePos) select 2) < 5 && _distanceToShooter < 15) then {
+if( ((ASLtoAGL _projectilePos) select 2) < 5 && _distanceToShooter < 15) then {
         _addHeight = _addHeight vectorAdd [0,0,_distanceToTarget];
 } else {
     // If we are below the target, increase the climbing arc
@@ -43,7 +43,7 @@ if( (_projectilePos select 2) > (_seekerTargetPos select 2) && _distanceToTarget
 _returnTargetPos = _seekerTargetPos vectorAdd _addHeight;
 
 #ifdef DEBUG_MODE_FULL
-drawLine3D [(ASLtoATL _returnTargetPos) vectorAdd _addHeight, ASLtoATL _returnTargetPos, [0,1,0,1]];
+drawLine3D [(ASLtoAGL _returnTargetPos) vectorAdd _addHeight, ASLtoAGL _returnTargetPos, [0,1,0,1]];
 #endif
 
 TRACE_1("Adjusted target position", _returnTargetPos);

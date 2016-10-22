@@ -33,7 +33,7 @@ private _recurseFnc = {
             private _displayName = getText (_entryCfg >> "displayName");
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
-            // if (_distance < _parentDistance) then {ACE_LOGWARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
+            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
             private _icon = getText (_entryCfg >> "icon");
             private _statement = compile (getText (_entryCfg >> "statement"));
 

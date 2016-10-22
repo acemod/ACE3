@@ -12,6 +12,7 @@
             <Italian>Attacca l'oggetto</Italian>
             <Hungarian>Tárgy hozzácsatolása</Hungarian>
             <Russian>Прикрепить предмет</Russian>
+            <Japanese>&amp;gt;&amp;gt; アイテムを取り付ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -24,6 +25,7 @@
             <Italian>Attacca</Italian>
             <Hungarian>Hozzácsatolás</Hungarian>
             <Russian>Прикрепить</Russian>
+            <Japanese>取り付ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -36,6 +38,7 @@
             <Italian>Stacca l'oggetto</Italian>
             <Hungarian>Tárgy lecsatolása</Hungarian>
             <Russian>Отсоединить</Russian>
+            <Japanese>アイテムを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -48,6 +51,7 @@
             <Italian>Strobo IR attaccata</Italian>
             <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
             <Russian>ИК-маяк прикреплён</Russian>
+            <Japanese>赤外線ストロボを取り付ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -60,6 +64,7 @@
             <Italian>Strobo IR staccata</Italian>
             <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
             <Russian>ИК-маяк отсоединён</Russian>
+            <Japanese>赤外線ストロボを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
             <English>IR Grenade Attached</English>
@@ -72,6 +77,7 @@
             <Italian>Granata IR attaccata</Italian>
             <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
             <Russian>ИК-граната прикреплена</Russian>
+            <Japanese>赤外線グレネードを取り付ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -84,6 +90,7 @@
             <Italian>Granata IR staccata</Italian>
             <Hungarian>Infravörös gránát lecsatolva</Hungarian>
             <Russian>ИК-граната отсоединена</Russian>
+            <Japanese>赤外線グレネードを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
@@ -96,6 +103,7 @@
             <Italian>Chemlight attaccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет прикреплён</Russian>
+            <Japanese>ケミライトを取り付け</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
@@ -108,6 +116,7 @@
             <Italian>Chemlight staccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет отсоединён</Russian>
+            <Japanese>ケミライトを外す</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Inventory_Full">
             <English>No inventory space</English>
@@ -120,6 +129,7 @@
             <Italian>Non hai più spazio</Italian>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
+            <Japanese>インベントリに空きがない</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -132,6 +142,7 @@
             <Italian>Strobo IR</Italian>
             <Hungarian>Infravörös jeladó</Hungarian>
             <Russian>ИК-маяк</Russian>
+            <Japanese>赤外線ストロボ</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
@@ -144,6 +155,7 @@
             <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
             <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
             <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
+            <Japanese>赤外線ストロボはあなたの位置を知らせますが、夜間暗視装置を介してでしか見れません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
@@ -156,6 +168,7 @@
             <Italian>Posiziona</Italian>
             <Hungarian>Elhelyez</Hungarian>
             <Russian>Установить</Russian>
+            <Japanese>置く</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_CancelAction">
             <English>Cancel</English>
@@ -168,6 +181,7 @@
             <Italian>Annulla</Italian>
             <Hungarian>Mégse</Hungarian>
             <Russian>Отмена</Russian>
+            <Japanese>やめる</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Failed">
             <English>Attach Failed</English>
@@ -180,6 +194,7 @@
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
             <Italian>Non si attacca</Italian>
+            <Japanese>取り付けに失敗した</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -192,6 +207,7 @@
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
+            <Japanese>%1&amp;lt;br/&amp;gt; を取り付けた</Japanese>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -204,6 +220,7 @@
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
+            <Japanese>%1&amp;lt;br/&amp;gt; を外した</Japanese>
         </Key>
     </Package>
 </Project>

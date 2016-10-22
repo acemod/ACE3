@@ -39,4 +39,4 @@ _duration = _logic getVariable ["Duration", 0];
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration] call FUNC(createSlideshow);
 
-ACE_LOGINFO_1("Slideshow Module Initialized on %1 Objects", count _objects);
+INFO_1("Slideshow Module Initialized on %1 Objects", count _objects);

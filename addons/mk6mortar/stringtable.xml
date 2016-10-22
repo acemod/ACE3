@@ -12,6 +12,7 @@
             <Portuguese>Tabela de distâncias de para 82mm</Portuguese>
             <Czech>82mm Rangetable</Czech>
             <Italian>Tavola di tiro 82mm</Italian>
+            <Japanese>82mm 射表</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_description">
             <English>Range Table for the Mk6 82mm Mortar</English>
@@ -24,6 +25,7 @@
             <Portuguese>Tabela de distâncias para morteiro Mk6 82mm</Portuguese>
             <Czech>Rangetable pro Mk6 82mm minomet</Czech>
             <Italian>Tavola di tiro per il mortaio calibro 82mm Mk6</Italian>
+            <Japanese>Mk6 82mm 迫撃砲の射表</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_action">
             <English>Open 82mm Rangetable</English>
@@ -36,6 +38,7 @@
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
             <Italian>Apri la tavola di tiro 82mm</Italian>
+            <Japanese>82mm 射表を開く</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_rangetable_charge">
             <English>Charge</English>
@@ -48,6 +51,7 @@
             <Portuguese>Carregar</Portuguese>
             <Czech>Charge</Czech>
             <Italian>Carica</Italian>
+            <Japanese>装薬</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_DisplayName">
             <English>Mk6 Settings</English>
@@ -60,6 +64,7 @@
             <Hungarian>Mk6 beállítások</Hungarian>
             <Russian>Настройки Mk6</Russian>
             <Italian>Impostazioni Mk6</Italian>
+            <Japanese>Mk6 設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_DisplayName">
             <English>Air Resistance</English>
@@ -72,6 +77,7 @@
             <Hungarian>Légellenállás</Hungarian>
             <Russian>Сопротивление воздуха</Russian>
             <Italian>Resistenza dell'Aria</Italian>
+            <Japanese>空気抵抗</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
             <English>For Player Shots, Model Air Resistance and Wind Effects</English>
@@ -84,6 +90,7 @@
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
+            <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響をあたえます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_DisplayName">
             <English>Allow Mk6 Computer</English>
@@ -96,6 +103,7 @@
             <Hungarian>Mk6 számítógép engedélyezése</Hungarian>
             <Russian>Разрешить компьютер Mk6</Russian>
             <Italian>Consenti Computer Mk6</Italian>
+            <Japanese>Mk6 コンピュータを許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowComputerRangefinder_Description">
             <English>Show the Computer and Rangefinder (these NEED to be removed if you enable air resistance)</English>
@@ -108,6 +116,7 @@
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Mostra il Computer e Distaziometro (questi DEVONO essere rimossi se vuoi abilitare la resistenza dell'aria)</Italian>
+            <Japanese>コンピュータと距離を表示します (空気抵抗を有効化している場合は必ず削除してください)</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_DisplayName">
             <English>Allow Mk6 Compass</English>
@@ -120,6 +129,7 @@
             <Hungarian>Mk6 iránytű engedélyezése</Hungarian>
             <Russian>Разрешить компас Mk6</Russian>
             <Italian>Consenti Bussola Mk6</Italian>
+            <Japanese>Mk6 への方位磁石を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_allowCompass_Description">
             <English>Show the Mk6 Digital Compass</English>
@@ -132,6 +142,7 @@
             <Hungarian>Az Mk6 digitális iránytű megjelenítése</Hungarian>
             <Russian>Показывает цифровой компас Mk6</Russian>
             <Italian>Mostra la Bussola Digitale Mk6</Italian>
+            <Japanese>Mk6 のデジタル方位磁石を表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_Module_Description">
             <English>This module allows you to setup Mk6 mortar settings.</English>
@@ -143,6 +154,7 @@
             <French>Ce module permet de régler les options du mortier Mk6</French>
             <Italian>Questo modulo ti consente di impostare i parametri del mortaio Mk6.</Italian>
             <Spanish>Este módulo permite configurar los parámetros del mortero Mk6.</Spanish>
+            <Japanese>Mk6 迫撃砲への設定をできます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_DisplayName">
             <English>Use Ammunition handling</English>
@@ -153,6 +165,7 @@
             <Italian>Utilizza la gestione delle munizioni</Italian>
             <Portuguese>Usar manejo de munição</Portuguese>
             <Russian>Использовать манипуляции с боеприпасами</Russian>
+            <Japanese>弾薬の取り扱い</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
             <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
@@ -163,6 +176,7 @@
             <Italian>Toglie i proiettili dal mortaio. I colpi singoli devono essere caricati dall'operatore. Non cambia quado l'IA spara.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжащим. Не влияет на артиллерию ИИ.</Russian>
+            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI 迫撃砲へ影響を与えません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -174,6 +188,7 @@
             <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
             <Russian>Извлечь снаряд</Russian>
+            <Japanese>弾薬を除去</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMortar">
             <English>Load Mortar</English>
@@ -185,6 +200,7 @@
             <Czech>Nabít minomet</Czech>
             <Portuguese>Carregar morteiro</Portuguese>
             <Russian>Зарядить миномет</Russian>
+            <Japanese>弾薬を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadingMortar">
             <English>Unloading Round</English>
@@ -195,6 +211,7 @@
             <Italian>Scarica proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
             <Russian>Извлечение снаряда</Russian>
+            <Japanese>弾薬を除去しています</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadingMortar">
             <English>Preparing Round</English>
@@ -206,6 +223,7 @@
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
+            <Japanese>事前に装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE">
             <English>Load HE</English>
@@ -217,6 +235,7 @@
             <Czech>Nabít HE</Czech>
             <Portuguese>Carregar HE</Portuguese>
             <Russian>Зарядить фугасный</Russian>
+            <Japanese>りゅう弾を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Smoke">
             <English>Load Smoke</English>
@@ -228,6 +247,7 @@
             <Czech>Nabít Dýmovnici</Czech>
             <Portuguese>Carregar Fumaça</Portuguese>
             <Russian>Зарядить дымовой</Russian>
+            <Japanese>煙幕弾を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_Illum">
             <English>Load Illumination</English>
@@ -239,6 +259,7 @@
             <Czech>Nabít Světlici</Czech>
             <Portuguese>Carregar Iluminação</Portuguese>
             <Russian>Зарядить осветительный</Russian>
+            <Japanese>照明弾を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_Guided">
             <English>Load Guided HE</English>
@@ -250,6 +271,7 @@
             <Czech>Nabít HE (Naváděné)</Czech>
             <Portuguese>Carregar HE Guiada</Portuguese>
             <Russian>Зарядить фугасный управляемый</Russian>
+            <Japanese>誘導りゅう弾を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_loadMagazine_HE_LaserGuided">
             <English>Load Laser Guided HE</English>
@@ -261,6 +283,7 @@
             <Czech>Nabít HE (Naváděné laserem)</Czech>
             <Portuguese>Carregar HE Guiada por Laser</Portuguese>
             <Russian>Зарядить фугасный управляемый по ЛЦУ</Russian>
+            <Japanese>レーザ誘導りゅう弾を装填</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_displayName">
             <English>82mm HE Round</English>
@@ -272,6 +295,7 @@
             <Czech>82mm HE náboj</Czech>
             <Portuguese>Munição 82mm HE</Portuguese>
             <Russian>Фугасный снаряд 82мм</Russian>
+            <Japanese>82mm りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Smoke_displayName">
             <English>82mm Smoke Round</English>
@@ -283,6 +307,7 @@
             <Czech>82mm Kouřový náboj</Czech>
             <Portuguese>Munição 82mm Fumaça</Portuguese>
             <Russian>Дымовой снаряд 82мм</Russian>
+            <Japanese>82mm 煙幕弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_Illum_displayName">
             <English>82mm Illumination Round</English>
@@ -294,6 +319,7 @@
             <Czech>82mm Osvětlovací náboj</Czech>
             <Portuguese>Munição 82mm Iluminação</Portuguese>
             <Russian>Осветительный снаряд 82мм</Russian>
+            <Japanese>82mm 照明弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_Guided_displayName">
             <English>82mm Guided HE Round</English>
@@ -305,6 +331,7 @@
             <Czech>82mm HE náboj (naváděný)</Czech>
             <Portuguese>Munição 82mm HE Guiada</Portuguese>
             <Russian>Фугасный снаряд управляемый 82мм</Russian>
+            <Japanese>82mm 誘導りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_HE_LaserGuided_displayName">
             <English>82mm Laser Guided HE Round</English>
@@ -316,6 +343,7 @@
             <Czech>82mm HE náboj (naváděný laserem)</Czech>
             <Portuguese>Munição 82mm HE Guiada por Laser </Portuguese>
             <Russian>Фугасный снаряд управляемый по ЛЦУ 82мм</Russian>
+            <Japanese>82mm レーザ誘導りゅう弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_magazine_descriptionShort">
             <English>Used in Mk6 mortar</English>
@@ -327,6 +355,7 @@
             <Czech>Používá se u minometu Mk6</Czech>
             <Portuguese>Usada no Morteiro MK6</Portuguese>
             <Russian>Использовался в миномете Mk6</Russian>
+            <Japanese>Mk6 mortar で使います</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_HEBox_DisplayName">
             <English>[ACE] 82mm HE Rounds Box</English>
@@ -338,6 +367,7 @@
             <Czech>[ACE] Bedna s municí (82mm HE)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm HE</Portuguese>
             <Russian>[ACE] Ящик фугасных снарядов 82мм</Russian>
+            <Japanese>[ACE] 82mm りゅう弾入り弾薬箱</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_SmokeBox_DisplayName">
             <English>[ACE] 82mm Smoke Rounds Box</English>
@@ -349,6 +379,7 @@
             <Czech>[ACE] Bedna s municí (82mm Dýmovnice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Fumaça</Portuguese>
             <Russian>[ACE] Ящик дымовых снарядов 82мм</Russian>
+            <Japanese>[ACE] 82mm 煙幕弾入り弾薬箱</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_IllumBox_DisplayName">
             <English>[ACE] 82mm Illumination Rounds Box</English>
@@ -360,6 +391,7 @@
             <Czech>[ACE] Bedna s municí (82mm Světlice)</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Iluminação</Portuguese>
             <Russian>[ACE] Ящик осветительных снарядов 82мм</Russian>
+            <Japanese>[ACE] 82mm 照明弾入り弾薬箱</Japanese>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_ComboBox_DisplayName">
             <English>[ACE] 82mm Default Loadout Box</English>
@@ -371,6 +403,7 @@
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
+            <Japanese>[ACE] 82mm 梱包箱</Japanese>
         </Key>
     </Package>
 </Project>

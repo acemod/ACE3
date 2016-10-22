@@ -65,7 +65,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    ACE_LOGINFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -91,7 +91,7 @@ if (isServer) then {
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
-    ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
+    INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
@@ -146,7 +146,7 @@ if (isServer) then {
 // Handle JIP scenario
 if (!isServer) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP event synchronization initialized");
+        INFO("JIP event synchronization initialized");
         ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
@@ -203,13 +203,13 @@ call FUNC(checkFiles);
     if (isNil QGVAR(settings) || {!isServer && isNil QEGVAR(modules,serverModulesRead)}) exitWith {
         if !(_waitingMsgSent) then {
             _args set [0, true];
-            ACE_LOGINFO("Waiting on settings from server...");
+            INFO("Waiting on settings from server...");
         };
     };
 
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 
-    ACE_LOGINFO("Settings received from server.");
+    INFO("Settings received from server.");
 
     if (isServer) then { //read settings from paramsArray
         [] call FUNC(readSettingsFromParamsArray);
@@ -228,14 +228,14 @@ call FUNC(checkFiles);
         call FUNC(loadSettingsLocalizedText);
     };
 
-    ACE_LOGINFO("Settings initialized.");
+    INFO("Settings initialized.");
 
     //Event that settings are safe to use:
     ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
 
     //Set init finished and run all delayed functions:
     GVAR(settingsInitFinished) = true;
-    ACE_LOGINFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
+    INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
 
     {
         (_x select 1) call (_x select 0);
@@ -306,71 +306,6 @@ if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then
 // "playerChanged" event
 ["unit", {
     ACE_player = (_this select 0);
-    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVehicleChanged" event
-["vehicle", {
-    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerTurretChanged" event
-["turret", {
-    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerWeaponChanged" event
-["weapon", {
-    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerInventoryChanged" event
-["loadout", {
-    private _fnc_getAllGear = {
-        if (isNull _this) exitWith {[
-            "",
-            "",
-            "", [],
-            "", [],
-            "", [],
-            "", ["","","",""], [],
-            "", ["","","",""], [],
-            "", ["","","",""], [],
-            [],
-            "",
-            ""
-        ]};
-
-        [
-            headgear _this,
-            goggles _this,
-            uniform _this, uniformItems _this,
-            vest _this, vestItems _this,
-            backpack _this, backpackItems _this,
-            primaryWeapon _this, primaryWeaponItems _this, primaryWeaponMagazine _this,
-            secondaryWeapon _this, secondaryWeaponItems _this, secondaryWeaponMagazine _this,
-            handgunWeapon _this, handgunItems _this, handgunMagazine _this,
-            assignedItems _this,
-            binocular _this,
-            _this call CBA_fnc_binocularMagazine
-        ]
-    };
-
-    ["ace_playerInventoryChanged", [ACE_player, ACE_player call _fnc_getAllGear]] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVisionModeChanged" event
-["visionMode", {
-    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "cameraViewChanged" event
-["cameraView", {
-    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-["visibleMap", {
-    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;

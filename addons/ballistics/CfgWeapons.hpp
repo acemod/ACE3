@@ -9,7 +9,8 @@ class CfgWeapons {
     class MMG_01_base_F;
     class MMG_02_base_F;
     class Rifle_Base_F;
-    class Rifle_Long_Base_F;
+    class Rifle_Short_Base_F: Rifle_Base_F {};
+    class Rifle_Long_Base_F: Rifle_Base_F {};
     class MuzzleSlot;
 
     /* Long Rifles */
@@ -189,8 +190,8 @@ class CfgWeapons {
             dispersion = 0.0008727; // radians. Equal to 3 MOA.
         };
     };
-    class pdw2000_base_F: Rifle_Base_F {};
-    class SMG_01_Base: Rifle_Base_F {};
+    class pdw2000_base_F: Rifle_Short_Base_F {};
+    class SMG_01_Base: Rifle_Short_Base_F {};
     class SMG_02_base_F: Rifle_Base_F {};
 
     /* Pistols */

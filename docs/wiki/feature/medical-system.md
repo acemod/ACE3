@@ -339,6 +339,7 @@ For the following procedure to work revive needs to be enabled.
 - Each successful round of CPR (filled up completion bar) increases the time left in the revive state.
 
 ## 3. Guides
+
 ### 3.1 Example loadouts
 
 #### 3.1.1 Basic

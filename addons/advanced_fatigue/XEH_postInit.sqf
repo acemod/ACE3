@@ -37,8 +37,8 @@ if (!hasInterface) exitWith {};
         }] call FUNC(addDutyFactor);
     };
 
-    // - Add main PFH -------------------------------------------------------------
-    [FUNC(pfhMain), 1, []] call CBA_fnc_addPerFrameHandler;
+    // - Add main loop at 1 second interval -------------------------------------------------------------
+    [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 ["ace_settingChanged", {
