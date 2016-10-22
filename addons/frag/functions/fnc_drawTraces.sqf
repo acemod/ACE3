@@ -5,7 +5,6 @@
     private _color = _x select 5;
     private _index = 0;
     private _max = count _positions;
-    private _startSpeed = 0.01 max ((_positions select 0) select 1);
     private _lastSpd = [];
     private _lastPos = [];
     while {_index < _max} do {

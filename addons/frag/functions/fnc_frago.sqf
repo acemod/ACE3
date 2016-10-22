@@ -81,7 +81,7 @@ private _objects = _atlPos nearEntities [["Car", "Motorcycle", "Tank", "StaticWe
 private _crew = [];
 {
     {
-        _crew set [count _crew, _x]
+        _crew pushBack _x;
     } forEach (crew _x);
 } forEach _objects;
 
@@ -136,8 +136,8 @@ if (_isArmed && {!(_objects isEqualTo [])}) then {
                         private _vecVar = FRAG_VEC_VAR;
                         if (!(_target isKindOf "Man")) then {
                             _vecVar = ((sqrt _cubic) / 2000) + FRAG_VEC_VAR;
-                            if ((count (crew _target)) == 0 && {_count > 0}) then {
-                                _count = 0 max (_count/2);
+                            if (count (crew _target) == 0 && {_count > 0}) then {
+                                _count = 0 max (_count / 2);
                             };
                         };
                         for "_i" from 1 to _count do {

@@ -45,11 +45,10 @@ if (_zIndex < 5) then {
     INC(_depth);
     private _buckets = [];
     private _excludes = [];
-    private _bucketIndex = 0;
     private _bucketPos = nil;
     private _bucketList = nil;
     private _c = 0;
-    while {count(_nlos) != count(_excludes) && {_c < (count _nlos)}} do {
+    while {count _nlos != count _excludes && {_c < (count _nlos)}} do {
         scopeName "mainSearch";
         {
             if (!(_forEachIndex in _excludes)) then {
@@ -81,9 +80,9 @@ if (_zIndex < 5) then {
         private _avgZ = 0;
 
         {
-            _avgX = _avgX + (_x select 0);
-            _avgY = _avgY + (_x select 1);
-            _avgZ = _avgZ + (_x select 2);
+            ADD(_avgX,_x select 0);
+            ADD(_avgY,_x select 1);
+            ADD(_avgZ,_x select 2);
         } forEach _blist;
         _c = count _blist;
         private _bpos = [_avgX / _c, _avgY / _c, _avgZ / _c];

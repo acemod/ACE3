@@ -10,7 +10,7 @@ private _processedCfgAmmos = [];
 
 {
     private _ammo = toLower getText (_x >> "ammo");
-    if ((_ammo != "") && {!(_ammo in _processedCfgAmmos)}) then {
+    if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
         //Ignore mines/bombs

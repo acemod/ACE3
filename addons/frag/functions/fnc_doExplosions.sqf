@@ -15,7 +15,7 @@ for "_i" from _index to ((_index + 2) min (count _explosions)) do {
 
 ADD(_index,2);
 
-if (_index >= (count _explosions)) then {
+if (_index >= count _explosions) then {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 } else {
     _params set [1, _index];
