@@ -1,18 +1,18 @@
 /*
-* Author: KoffeinFlummi, commy2
-* Start a cook-off in the given vehicle.
-*
-* Arguments:
-* 0: Vehicle <Object>
-*
-* Return Value:
-* None
-*
-* Example:
-* [(vehicle player)] call ace_cookoff_fnc_cookOff
-*
-* Public: No
-*/
+ * Author: KoffeinFlummi, commy2
+ * Start a cook-off in the given vehicle.
+ *
+ * Arguments:
+ * 0: Vehicle <Object>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [(vehicle player)] call ace_cookoff_fnc_cookOff
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_vehicle"];
