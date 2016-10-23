@@ -1,18 +1,18 @@
 /*
- * Author: KoffeinFlummi, commy2
- * Start a cook-off in the given vehicle.
- *
- * Arguments:
- * 0: Vehicle <Object>
- *
- * Return Value:
- * None
- *
- * Example:
- * (vehicle player) call ace_cookoff_fnc_cookOff
- *
- * Public: No
- */
+* Author: KoffeinFlummi, commy2
+* Start a cook-off in the given vehicle.
+*
+* Arguments:
+* 0: Vehicle <Object>
+*
+* Return Value:
+* None
+*
+* Example:
+* [(vehicle player)] call ace_cookoff_fnc_cookOff
+*
+* Public: No
+*/
 #include "script_component.hpp"
 
 params ["_vehicle"];
@@ -113,14 +113,27 @@ if (local _vehicle) then {
 
         [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
 
+        private _randomPosition = [getPos _vehicle, 100, random 360] call BIS_fnc_relPos;
+
+        private _vehicleLeaders = crew _vehicle select {leader _x == _x};
+        
+        private _disableGetInUnits = crew _vehicle select {local _x && {!(_x call EFUNC(common,isPlayer))}};
+        
+        _disableGetInUnits allowGetIn false;
+
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
                 _x action ["Eject", _vehicle];
+                
+                if (_x in _vehicleLeaders) then {
+                    [group _vehicle, _randomPosition, 0, "MOVE", "AWARE", "WHITE", "FULL"] call CBA_fnc_addWaypoint;
+                    [group _vehicle, _randomPosition, 0, "MOVE", "COMBAT", "RED", "FULL"] call CBA_fnc_addWaypoint;
+                };
             };
         } forEach crew _vehicle;
 
         [{
-            params ["_vehicle", "_effects"];
+            params ["_vehicle", "_effects", "_disableGetInUnits"];
 
             {
                 deleteVehicle _x;
@@ -128,7 +141,9 @@ if (local _vehicle) then {
 
             if (local _vehicle) then {
                 _vehicle setDamage 1;
+                
+                _disableGetInUnits allowGetIn true;
             };
-        }, [_vehicle, _effects], 4 + random 20] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects, _disableGetInUnits], 4 + random 20] call CBA_fnc_waitAndExecute;
     }, [_vehicle, _effects, _positions], 3 + random 15] call CBA_fnc_waitAndExecute;
 }, _vehicle, 0.5 + random 5] call CBA_fnc_waitAndExecute;
