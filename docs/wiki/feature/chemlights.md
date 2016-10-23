@@ -19,10 +19,7 @@ version:
 
 ## 1. Overview
 
-### 1.1 Throw modes
-Provides different modes for throwing chemlights (high throw, precision throw and drop mode).
-
-### 1.2 Chemlights
+### 1.1 Chemlights
 Adds throwable chemlights in the colors white, red, green and yellow. Additionally "Hi" chemlights are added that emit a lighter glow.
 
 
