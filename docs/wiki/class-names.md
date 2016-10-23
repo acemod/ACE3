@@ -354,7 +354,7 @@ ACE_SpottingScope | Spotting Scope | ACE_ItemCore |
 ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon |
 
 ### Spraypaint
-`Added in 3.2.0`
+`Added in 3.5.0`
 
 Class Name | In-Game Name | Type |
 ---------- | --------- | ---------
