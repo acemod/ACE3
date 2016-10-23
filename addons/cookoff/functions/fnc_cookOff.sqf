@@ -113,7 +113,7 @@ if (local _vehicle) then {
 
         [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
 
-        private _randomPosition = [getPos _vehicle, 100, random 360] call BIS_fnc_relPos;
+        private _randomPosition = _vehicle getPos [100, random 360];
 
         private _disableGetInUnits = crew _vehicle select {local _x && {!(_x call EFUNC(common,isPlayer))}};
         
