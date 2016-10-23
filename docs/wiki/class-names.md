@@ -367,10 +367,10 @@ ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
 Class Name | In-Game Name | Type |
 ---------- | --------- | ---------
-ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore
-ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore
-ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore
-ACE_SpraypaintRed | Red spray paint | ACE_ItemCore
+ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore |
+ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore |
+ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore |
+ACE_SpraypaintRed | Red spray paint | ACE_ItemCore |
 
 ### Trenches
 `Added in 3.5.0`
