@@ -115,8 +115,6 @@ if (local _vehicle) then {
 
         private _randomPosition = [getPos _vehicle, 100, random 360] call BIS_fnc_relPos;
 
-        private _vehicleLeaders = crew _vehicle select {leader _x == _x};
-        
         private _disableGetInUnits = crew _vehicle select {local _x && {!(_x call EFUNC(common,isPlayer))}};
         
         _disableGetInUnits allowGetIn false;
@@ -125,7 +123,7 @@ if (local _vehicle) then {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
                 _x action ["Eject", _vehicle];
                 
-                if (_x in _vehicleLeaders) then {
+                if (leader _x == _x) then {
                     [group _x, _randomPosition, 0, "MOVE", "AWARE", "WHITE", "FULL"] call CBA_fnc_addWaypoint;
                     [group _x, _randomPosition, 0, "MOVE", "COMBAT", "RED", "FULL"] call CBA_fnc_addWaypoint;
                 };
