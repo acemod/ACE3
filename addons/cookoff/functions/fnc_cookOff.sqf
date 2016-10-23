@@ -120,6 +120,7 @@ if (local _vehicle) then {
                 _x leaveVehicle _vehicle;
                 
                 if (leader _x == _x) then {
+                    [group _x] call CBA_fnc_clearWaypoints;
                     [group _x, _randomPosition, 0, "MOVE", "AWARE", "BLUE", "FULL", "NO CHANGE", "(group this) setBehaviour 'COMBAT'; (group this) setCombatMode 'RED';"] call CBA_fnc_addWaypoint;
                 };
             };
