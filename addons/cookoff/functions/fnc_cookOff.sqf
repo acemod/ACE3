@@ -115,13 +115,9 @@ if (local _vehicle) then {
 
         private _randomPosition = _vehicle getPos [100, random 360];
 
-        private _disableGetInUnits = crew _vehicle select {local _x && {!(_x call EFUNC(common,isPlayer))}};
-        
-        _disableGetInUnits allowGetIn false;
-
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
-                _x action ["Eject", _vehicle];
+                _x leaveVehicle _vehicle;
                 
                 if (leader _x == _x) then {
                     [group _x, _randomPosition, 0, "MOVE", "AWARE", "WHITE", "FULL"] call CBA_fnc_addWaypoint;
@@ -131,7 +127,7 @@ if (local _vehicle) then {
         } forEach crew _vehicle;
 
         [{
-            params ["_vehicle", "_effects", "_disableGetInUnits"];
+            params ["_vehicle", "_effects"];
 
             {
                 deleteVehicle _x;
@@ -139,9 +135,7 @@ if (local _vehicle) then {
 
             if (local _vehicle) then {
                 _vehicle setDamage 1;
-                
-                _disableGetInUnits allowGetIn true;
             };
-        }, [_vehicle, _effects, _disableGetInUnits], 4 + random 20] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], 4 + random 20] call CBA_fnc_waitAndExecute;
     }, [_vehicle, _effects, _positions], 3 + random 15] call CBA_fnc_waitAndExecute;
 }, _vehicle, 0.5 + random 5] call CBA_fnc_waitAndExecute;
