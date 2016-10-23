@@ -43,7 +43,7 @@ If you just want to create a quick and dirty build, you can also directly downlo
 Navigate to `tools` folder in command line.
 
 ```
-cd <path-to-cloned-repository>\tools
+cd "[location of the ACE3 project]\tools"
 ```
 
 Execute `setup.py` to create symbolic links to P-drive and Arma 3 directory required for building.
@@ -59,7 +59,7 @@ mklink /J "P:\z\ace" "[location of the ACE3 project]"
 Then, copy the `cba` folder from the `tools` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
 
 
-## 4.2 Create a Test Build
+## 4.2 Creating a Test Build
 
 To create a development build of ACE3 to test changes or to debug something, run the `build.py` file in the `tools` folder. This will populate the `addons` folder with binarized PBOs. These PBOs still point to the source files in their respective folders however, which allows you to use [file patching](#file-patching). This also means that you cannot distribute this build to others.
 
@@ -69,7 +69,7 @@ To start the game using this build, you can use the following modline:
 -mod=@CBA_A3;z\ace
 ```
 
-## 4.3 Create a Release Build
+## 4.3 Creating a Release Build
 
 To create a complete build of ACE3 that you can use without the source files you will need to:
 - Ensure `.hpp` is **NOT** in pboProject's "Exclude From Pbo" list
