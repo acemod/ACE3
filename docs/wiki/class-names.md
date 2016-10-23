@@ -353,16 +353,6 @@ Class Name | In-Game Name | Type |
 ACE_SpottingScope | Spotting Scope | ACE_ItemCore |
 ACE_SpottingScopeObject | Spotting Scope (placed) | StaticATWeapon |
 
-### Spraypaint
-`Added in 3.5.0`
-
-Class Name | In-Game Name | Type |
----------- | --------- | ---------
-ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore
-ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore
-ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore
-ACE_SpraypaintRed | Red spray paint | ACE_ItemCore
-
 
 ### Tactical Ladder
 `Added in 3.1.1`
@@ -377,10 +367,10 @@ ACE_Tactical_Ladder | Telescopic Ladder (placed) | house |
 
 Class Name | In-Game Name | Type |
 ---------- | --------- | ---------
-ACE_SpraypaintBlack | Spraypaint Black | ACE_ItemCore |
-ACE_SpraypaintBlue | Spraypaint Blue | ACE_ItemCore |
-ACE_SpraypaintGreen | Spraypaint Green | ACE_ItemCore |
-ACE_SpraypaintRed | Spraypaint Red | ACE_ItemCore |
+ACE_SpraypaintBlack | Black spray paint | ACE_ItemCore
+ACE_SpraypaintBlue | Blue spray paint | ACE_ItemCore
+ACE_SpraypaintGreen | Green spray paint | ACE_ItemCore
+ACE_SpraypaintRed | Red spray paint | ACE_ItemCore
 
 ### Trenches
 `Added in 3.5.0`
