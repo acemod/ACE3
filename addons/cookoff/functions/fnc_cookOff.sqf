@@ -126,8 +126,8 @@ if (local _vehicle) then {
                 _x action ["Eject", _vehicle];
                 
                 if (_x in _vehicleLeaders) then {
-                    [group _vehicle, _randomPosition, 0, "MOVE", "AWARE", "WHITE", "FULL"] call CBA_fnc_addWaypoint;
-                    [group _vehicle, _randomPosition, 0, "MOVE", "COMBAT", "RED", "FULL"] call CBA_fnc_addWaypoint;
+                    [group _x, _randomPosition, 0, "MOVE", "AWARE", "WHITE", "FULL"] call CBA_fnc_addWaypoint;
+                    [group _x, _randomPosition, 0, "MOVE", "COMBAT", "RED", "FULL"] call CBA_fnc_addWaypoint;
                 };
             };
         } forEach crew _vehicle;
