@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Chemlights
-description: Different types and throwing modes for chemlights.
+description: Adds enhanced types of chemlights.
 group: feature
 category: equipment
 parent: wiki
@@ -20,17 +20,8 @@ version:
 ## 1. Overview
 
 ### 1.1 Chemlights
-Adds throwable chemlights in the colors white, red, green and yellow. Additionally "Hi" chemlights are added that emit a lighter glow.
+Adds throwable chemlights in the colors white, red, green and yellow. Additionally "Hi" chemlights are added that emit a brighter glow.
 
-
-## 2. Usage
-
-### 2.1 Switching between throw modes
-- Press <kbd>8</kbd> (ACE3 default key bind `Switch Grenade Mode`)
-
-### 2.2 Switching between grenades
-- Press <kbd>7</kbd> (ACE3 default key bind `Select non-frag`) to switch between `NON LETHAL` grenades
-
-## 3. Dependencies
+## 2. Dependencies
 
 {% include dependencies_list.md component="chemlights" %}
