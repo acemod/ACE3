@@ -18,10 +18,12 @@ if (!alive _round) exitWith {
     };
     if (_doSpall) then {
         DEC(GVAR(spallIsTrackingCount));
-        // diag_log text format["F: %1", _foundObjectHPIds];
+        // diag_log text format ["F: %1", _foundObjectHPIds];
         {
-            _x removeEventHandler ["hitPart", _foundObjectHPIds select _forEachIndex];
-        } forEach (_spallTrack select {!isNil "_x"});
+            if (!isNil "_x") then {
+                _x removeEventHandler ["hitPart", _foundObjectHPIds select _forEachIndex];
+            };
+        } forEach _spallTrack;
     };
     false
 };

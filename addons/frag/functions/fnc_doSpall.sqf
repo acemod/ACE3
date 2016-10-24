@@ -8,11 +8,6 @@ private _hpData = (_hitData select 1) select (_this select 1);
 
 _hpData params ["_object"];
 _object removeEventHandler ["hitPart", _initialData select 0];
-private _foundObjects = _initialData select 7;
-private _index = _foundObjects find _object;
-if (_index != -1) then {
-    _foundObjects set [_index, nil];
-};
 
 _initialData params ["", "_object", "_roundType", "_round"];
 
@@ -26,7 +21,7 @@ if (!alive _round && {(_initialData select 6) isEqualTo 1}) then {
 };
 
 if !(_alive || {_caliber >= 2.5} || {(_explosive > 0 && {_idh >= 1})}) exitWith {};
-// ACE_player sideChat format["BBBB"];
+// ACE_player sideChat format ["BBBB"];
 private _exit = false;
 private _vm = 1;
 private _velocity = _initialData select 5;
@@ -37,13 +32,13 @@ private _curVelocity = vectorMagnitude (velocity _round);
 if (alive _round) then {
     private _diff = _velocity vectorDiff (velocity _round);
     private _polar = _diff call CBA_fnc_vect2polar;
-    // ACE_player sideChat format["polar: %1", _polar];
+    // ACE_player sideChat format ["polar: %1", _polar];
     if (abs (_polar select 1) > 45 || {abs (_polar select 2) > 45}) then {
         if (_caliber < 2.5) then {
-            // ACE_player sideChat format["exit!"];
+            // ACE_player sideChat format ["exit!"];
             _exit = true;
         } else {
-            _vm = 1 - (_curVelocity / _oldVelocity);
+            SUB(_vm,_curVelocity / _oldVelocity);
         };
     };
 };
@@ -55,13 +50,13 @@ for "_i" from 0 to 100 do {
     private _pos1 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * _i));
     private _pos2 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
     // _blah = [_object, "FIRE"] intersect [_object worldToModel (ASLtoATL _pos1), _object worldToModel (ASLtoATL _pos2)];
-    // diag_log text format["b: %1", _blah];
+    // diag_log text format ["b: %1", _blah];
 
     // _data = [nil, nil, nil, 1, [[ASLtoATL _pos1, 1], [ASLtoATL _pos2, 1]]];
     // NOU_TRACES pushBack _data;
 
     if (!lineIntersects [_pos1, _pos2]) exitWith {
-        // ACE_player sideChat format["FOUND!"];
+        // ACE_player sideChat format ["FOUND!"];
         _spallPos = _pos2;
     };
 };
@@ -69,7 +64,7 @@ if (!isNil "_spallPos") then {
     private _spallPolar = _velocity call CBA_fnc_vect2polar;
 
     if (_explosive > 0) then {
-        // ACE_player sideChat format["EXPLOSIVE!"];
+        // ACE_player sideChat format ["EXPLOSIVE!"];
         private _warn = false;
         private _c = getNumber(configFile >> "CfgAmmo" >> _roundType >> QGVAR(CHARGE));
         if (_c == 0) then {_c = 1; _warn = true;};
@@ -96,7 +91,7 @@ if (!isNil "_spallPos") then {
 
     ];
 
-    // diag_log text format["SPALL POWER: %1", _spallPolar select 0];
+    // diag_log text format ["SPALL POWER: %1", _spallPolar select 0];
     private _spread = 15 + (random 25);
     private _spallCount = 5 + (random 10);
     for "_i" from 1 to _spallCount do {
@@ -116,7 +111,7 @@ if (!isNil "_spallPos") then {
         _fragment setVelocity _spallFragVect;
 
         if (GVAR(traceFrags)) then {
-            [ACE_player, _fragment, [1,0.5,0,1]] call FUNC(addTrack);
+            [ACE_player, _fragment, [1, 0.5, 0, 1]] call FUNC(addTrack);
         };
     };
     _spread = 5 + (random 5);
@@ -133,12 +128,12 @@ if (!isNil "_spallPos") then {
 
         private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
         private _fragType = round (random ((count _fragTypes) - 1));
-        private _fragment = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
+        private _fragment = (_fragTypes select _fragType) createVehicleLocal [0, 0, 10000];
         _fragment setPosASL _spallPos;
         _fragment setVelocity _spallFragVect;
 
         if (GVAR(traceFrags)) then {
-            [ACE_player, _fragment, [1,0,0,1]] call FUNC(addTrack);
+            [ACE_player, _fragment, [1, 0, 0, 1]] call FUNC(addTrack);
         };
     };
 };

@@ -14,9 +14,9 @@ private _intersectsWith = lineIntersectsWith [_curPos, _forwardPos];
 
 if (_intersectsWith isEqualTo []) exitWith {};
 
-// player sideChat format["inter: %1", _intersectsWith];
+// player sideChat format ["inter: %1", _intersectsWith];
 {
-    // diag_log text format["Adding HP: %1", _x];
+    // diag_log text format ["Adding HP: %1", _x];
     private _index = count GVAR(spallHPData);
     private _hpId = _x addEventHandler ["hitPart", compile format ["[%1, _this] call " + QFUNC(spallHP), _index]];
     _foundObjects pushBack _x;

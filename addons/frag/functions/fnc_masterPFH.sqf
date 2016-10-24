@@ -18,9 +18,10 @@ if (!GVAR(enabled)) exitWith {};
 private _gcIndex = [];
 
 private _iter = 0;
-while {(count GVAR(objects)) > 0 && {_iter < (GVAR(MaxTrackPerFrame) min (count GVAR(objects)))}} do {
+private _objectCount = count GVAR(objects);
+while {_objectCount > 0 && {_iter < (GVAR(MaxTrackPerFrame) min _objectCount)}} do {
 
-    if (GVAR(lastIterationIndex) >= (count GVAR(objects))) then {
+    if (GVAR(lastIterationIndex) >= _objectCount) then {
         GVAR(lastIterationIndex) = 0;
     };
     private _object = GVAR(objects) select GVAR(lastIterationIndex);

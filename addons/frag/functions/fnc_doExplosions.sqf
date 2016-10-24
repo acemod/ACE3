@@ -1,7 +1,7 @@
 //fnc_doExplosions.sqf
 #include "script_component.hpp"
 
-params ["_args"];
+params ["_args", "_pfhID"];
 _args params ["_explosions", "_index"];
 
 for "_i" from _index to ((_index + 2) min (count _explosions)) do {
@@ -16,7 +16,5 @@ for "_i" from _index to ((_index + 2) min (count _explosions)) do {
 ADD(_index,2);
 
 if (_index >= count _explosions) then {
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
-} else {
-    _params set [1, _index];
+    [_pfhID] call CBA_fnc_removePerFrameHandler;
 };

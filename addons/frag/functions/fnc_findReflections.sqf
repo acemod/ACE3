@@ -2,13 +2,13 @@
 #include "script_component.hpp"
 
 BEGIN_COUNTER(fnc_findReflections);
-params ["_args"];
+params ["_args", "_pfhID"];
 _args params ["_pos", "_explosiveInfo", "_los", "_nlos", "_zIndex", "_depth", "_rand"];
 
 private _split = 15;
 private _radi = 360 / _split * _depth;
 
-// player sideChat format["p: %1", _explosiveInfo];
+// player sideChat format ["p: %1", _explosiveInfo];
 _explosiveInfo params ["_indirectHitRange", "_indirectHit"];
 private _distanceCount = (floor _indirectHitRange * 4) min 100;
 
@@ -30,7 +30,7 @@ if (_zIndex < 5) then {
                 _test = false;
                 _nlos pushBack _lastPos;
                 // {
-                    // _x addEventHandler ["HandleDamage", { diag_log text format["this: %1", _this]; }];
+                    // _x addEventHandler ["HandleDamage", { diag_log text format ["this: %1", _this]; }];
                 // } forEach _res;
                 // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
                 // TEST_PAIRS pushBack [_pos, _lastPos, [1,0,0,1]];
@@ -71,7 +71,7 @@ if (_zIndex < 5) then {
         INC(_c);
     };
 
-    // player sideChat format["c: %1", count _buckets];
+    // player sideChat format ["c: %1", count _buckets];
     private _explosions = [];
     {
         private _blist = _x select 1;
@@ -89,15 +89,15 @@ if (_zIndex < 5) then {
 
         private _distance = _pos vectorDistance _bpos;
         private _hitFactor = 1 - (((_distance / (_indirectHitRange * 4)) min 1) max 0);
-        // _hitFactor = 1/(_distance^2);
+        // _hitFactor = 1 / (_distance ^ 2);
         private _hit = _indirectHit * _hitFactor;
         _hit = (floor (_hit / 4)) min 500;
-        _hit = _hit - (_hit % 10);
+        SUB(_hit,_hit % 10)
         private _range = (floor (_indirectHitRange - (_distance / 4))) min 100;
         SUB(_range,_range % 2);
 
         if (_hit >= 10 && {_range > 0}) then {
-            // TEST_ICONS pushBack [_bpos, format["h: %1, r: %2, hf: %3 d: %4 ihr: %5", _hit, _range, _hitFactor, _distance, _indirectHitRange*4]];
+            // TEST_ICONS pushBack [_bpos, format ["h: %1, r: %2, hf: %3 d: %4 ihr: %5", _hit, _range, _hitFactor, _distance, _indirectHitRange*4]];
             // TEST_PAIRS pushBack [_pos, _bpos, [1,0,0,1]];
             private _refExp = format ["ace_explosion_reflection_%1_%2", _range, _hit];
             // _refExp createVehicle (ASLtoATL _bpos);
@@ -112,6 +112,6 @@ if (_zIndex < 5) then {
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
     [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
+    [_pfhID] call CBA_fnc_removePerFrameHandler;
 };
 END_COUNTER(fnc_findReflections);

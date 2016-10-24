@@ -15,16 +15,12 @@ if (_round in GVAR(blackList)) exitWith {
 // Exit on max track
 if ((count GVAR(objects)) > GVAR(MaxTrack)) exitWith {};
 
-if (_gun == ACE_player) then {
+if (
+    _gun == ACE_player ||
+    {(gunner _gun) == ACE_player} ||
+    {local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}}
+) then {
     _doFragTrack = true;
-} else {
-    if ((gunner _gun) == ACE_player) then {
-        _doFragTrack = true;
-    } else {
-        if (local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}) then {
-            _doFragTrack = true;
-        };
-    };
 };
 
 private _doSpall = false;
@@ -39,10 +35,10 @@ if (GVAR(SpallEnabled)) then {
         INC(GVAR(spallIsTrackingCount));
     };
 };
-// ACE_player sideChat format["c: %1", GVAR(spallIsTrackingCount)];
+// ACE_player sideChat format ["c: %1", GVAR(spallIsTrackingCount)];
 
 if (GVAR(autoTrace)) then {
-    [ACE_player, _round, [1,0,0,1]] call FUNC(addTrack);
+    [ACE_player, _round, [1, 0, 0, 1]] call FUNC(addTrack);
 };
 
 // We only do the single track object check here.

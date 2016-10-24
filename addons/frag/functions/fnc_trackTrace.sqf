@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_args"];
+params ["_args", "_pfhID"];
 _args params ["_tracerObj", "_index"];
 
 if (alive _tracerObj && {!(GVAR(traces) isEqualTo [])}) then {
@@ -8,5 +8,5 @@ if (alive _tracerObj && {!(GVAR(traces) isEqualTo [])}) then {
     private _positions = _data select 4;
     _positions pushBack [getPos _tracerObj, vectorMagnitude (velocity _tracerObj)];
 } else {
-    [_this select 1] call CBA_fnc_removePerFrameHandler;
+    [_pfhID] call CBA_fnc_removePerFrameHandler;
 };

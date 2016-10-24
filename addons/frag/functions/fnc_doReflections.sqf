@@ -3,7 +3,7 @@
 
 params ["_pos", "_ammo", ["_depth", 1]];
 
-// TEST_ICONS pushBack [_pos, format["EXP!", _hit, _range, _hitFactor]];
+// TEST_ICONS pushBack [_pos, format ["EXP!", _hit, _range, _hitFactor]];
 if (_depth <= 2) then {
     private _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
     private _indirectHit = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirectHit");
