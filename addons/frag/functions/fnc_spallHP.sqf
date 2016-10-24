@@ -4,8 +4,6 @@
 
 params ["_index", "_hitPartData"];
 
-if (_index > (count GVAR(spallHPData))) exitWith {};
-
 private _initialData = GVAR(spallHPData) param [_index, []];
 if (_initialData isEqualTo []) exitWith {};
 

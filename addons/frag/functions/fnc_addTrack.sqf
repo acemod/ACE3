@@ -5,7 +5,7 @@ if (GVAR(autoTrace)) then {
 };
 
 // setAccTime 0.05;
-params ["_origin", "_obj", ["_color", [1,0,0,1]]];
+params ["_origin", "_obj", ["_color", [1, 0, 0, 1]]];
 
 private _positions = [];
 private _objSpd = vectorMagnitude (velocity _obj);
