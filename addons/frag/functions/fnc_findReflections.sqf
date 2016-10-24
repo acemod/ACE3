@@ -92,7 +92,7 @@ if (_zIndex < 5) then {
         // _hitFactor = 1 / (_distance ^ 2);
         private _hit = _indirectHit * _hitFactor;
         _hit = (floor (_hit / 4)) min 500;
-        SUB(_hit,_hit % 10)
+        SUB(_hit,_hit % 10);
         private _range = (floor (_indirectHitRange - (_distance / 4))) min 100;
         SUB(_range,_range % 2);
 

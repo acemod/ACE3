@@ -11,7 +11,7 @@ if (!isServer) exitWith {};
 BEGIN_COUNTER(frago);
 // _startTime = diag_tickTime;
 
-params ["_round", "_lastPos", "_lastVel", "_shellType", "_gun"];
+params ["_round", "_lastPos", "_lastVel", "_shellType", "_firedFrame", "_gun"];
 
 private _fragTypes = [
     QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),

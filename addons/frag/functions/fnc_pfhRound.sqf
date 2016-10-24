@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
+params ["_round", "_lastPos", "_lastVel", "_type", "_firedFrame", "_gun", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];
 
 if (_round in GVAR(blackList)) exitWith {
     false
