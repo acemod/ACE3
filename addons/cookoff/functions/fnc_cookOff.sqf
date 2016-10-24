@@ -118,10 +118,14 @@ if (local _vehicle) then {
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
                 _x leaveVehicle _vehicle;
-                
+
                 if (leader _x == _x) then {
-                    [group _x] call CBA_fnc_clearWaypoints;
-                    [group _x, _randomPosition, 0, "MOVE", "AWARE", "BLUE", "FULL", "NO CHANGE", "(group this) setBehaviour 'COMBAT'; (group this) setCombatMode 'RED';"] call CBA_fnc_addWaypoint;
+                    private _wp = group _x addWaypoint [_randomPosition, 0, 1];
+                    _wp setWaypointType "MOVE";
+                    _wp setWaypointBehaviour "AWARE";
+                    _wp setWaypointCombatMode "BLUE";
+                    _wp setWaypointSpeed "FULL";
+                    _wp setWaypointStatements ["TRUE", "(group this) setBehaviour 'COMBAT'; (group this) setCombatMode 'RED';"];
                 };
             };
         } forEach crew _vehicle;
