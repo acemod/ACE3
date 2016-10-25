@@ -27,11 +27,11 @@ private _fnc_errorAndClose = {
 };
 
 if !(isNull _object) then {
-    switch (false) do {
-        case !(isPlayer _object): {
+    switch (true) do {
+        case (isPlayer _object): {
             [LSTRING(OnlyNonPlayer)] call _fnc_errorAndClose;
         };
-        case (alive _object): {
+        case (!alive _object): {
             [LSTRING(OnlyAlive)] call _fnc_errorAndClose;
         };
     };
