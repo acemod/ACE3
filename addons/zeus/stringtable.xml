@@ -341,10 +341,10 @@
             <English>Add/Remove FRIES</English>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
-            <English>%1 has not been configured for fastroping.</English>
+            <English>%1 is not fastrope compatible.</English>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
-            <English>Can't remove FRIES from %1 because ropes are deployed.</English>
+            <English>Can't remove FRIES, ropes are deployed.</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
