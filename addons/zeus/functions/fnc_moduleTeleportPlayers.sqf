@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-params ["_logic", "_uid", "_group"];
+params ["_logic","_uid","_group"];
 
 // Get the chosen unit
 private _player = [_uid] call BIS_fnc_getUnitByUID;

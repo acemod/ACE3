@@ -16,18 +16,19 @@
 #include "script_component.hpp"
 
 params ["_logic", "_units", "_activated"];
+private ["_mouseOver", "_unit", "_captive"];
 
-if !(_activated && {local _logic}) exitWith {};
+if !(_activated && local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
-    private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
+    _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
     } else {
-        private _unit = effectivecommander (_mouseOver select 1);
+        _unit = effectivecommander (_mouseOver select 1);
 
         if !(_unit isKindOf "CAManBase") then {
             [LSTRING(OnlyInfantry)] call EFUNC(common,displayTextStructured);
@@ -35,7 +36,7 @@ if (isNil QEFUNC(captives,setHandcuffed)) then {
             if !(alive _unit) then {
                 [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
             } else {
-                private _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
+                _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
                 // Event initalized by ACE_Captives
                 [QEGVAR(captives,setHandcuffed), [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
             };
