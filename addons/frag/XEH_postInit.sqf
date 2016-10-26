@@ -10,7 +10,6 @@ if (isServer) then {
 };
 
 ["ace_settingsInitialized", {
-    //If not enabled, exit
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler
@@ -19,9 +18,9 @@ if (isServer) then {
     ["ace_firedPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
     ["ace_firedNonPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
 
-    [FUNC(masterPFH)] call CBA_fnc_addPerFrameHandler;
+    [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
-//Cache for ammo type configs
+// Cache for ammo type configs
 GVAR(cacheRoundsTypesToTrack) = createLocation ["ACE_HashLocation", [-10000, -10000, -10000], 0, 0];
 GVAR(cacheRoundsTypesToTrack) setText QGVAR(cacheRoundsTypesToTrack);

@@ -17,4 +17,6 @@ ADD(_index,2);
 
 if (_index >= count _explosions) then {
     [_pfhID] call CBA_fnc_removePerFrameHandler;
+} else {
+    _args set [1, _index];
 };
