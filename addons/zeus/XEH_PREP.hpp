@@ -7,6 +7,7 @@ PREP(bi_moduleRemoteControl);
 PREP(handleZeusUnitAssigned);
 PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
+PREP(moduleAddOrRemoveFRIES);
 PREP(moduleCaptive);
 PREP(moduleGlobalSetSkill);
 PREP(moduleGroupSide);

@@ -2,7 +2,7 @@
 
 ["ace_settingsInitialized",{
     // Only add an InitPost EH if setting is enabled (and apply retroactively)
-    if (isServer && GVAR(autoAddObjects)) then {
+    if (isServer && {GVAR(autoAddObjects)}) then {
         ["AllVehicles", "InitPost", FUNC(addObjectToCurator), true, [], true] call CBA_fnc_addClassEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
@@ -14,3 +14,4 @@ QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
 [QGVAR(modulePatrolArea), CBA_fnc_taskPatrol] call CBA_fnc_addEventHandler;
 [QGVAR(moduleSearchNearby), CBA_fnc_searchNearby] call CBA_fnc_addEventHandler;
 [QGVAR(moduleSearchArea), CBA_fnc_taskSearchArea] call CBA_fnc_addEventHandler;
+[QGVAR(equipFries), EFUNC(fastroping,equipFRIES)] call CBA_fnc_addEventHandler;

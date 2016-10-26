@@ -337,6 +337,15 @@
             <Italian>Apri Resa</Italian>
             <Japanese>捕虜としてトグル</Japanese>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleAddOrRemoveFRIES_DisplayName">
+            <English>Add/Remove FRIES</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
+            <English>%1 has not been configured for fastroping.</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
+            <English>Can't remove FRIES from %1 because ropes are deployed.</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
             <French>Téléporter joueurs</French>
