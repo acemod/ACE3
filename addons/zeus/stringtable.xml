@@ -344,7 +344,7 @@
             <English>%1 is not fastrope compatible.</English>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
-            <English>Can't remove FRIES, ropes are deployed.</English>
+            <English>Unable to remove FRIES, ropes are deployed.</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>

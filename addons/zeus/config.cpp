@@ -41,7 +41,7 @@ class CfgPatches {
             QGVAR(moduleAddSpareWheel)
         };
     };
-    class GVAR(fastRoping): ADDON {
+    class GVAR(fastroping): ADDON {
         units[] = {
             QGVAR(moduleAddOrRemoveFRIES)
         };
@@ -52,7 +52,7 @@ class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
-    GVAR(fastRoping) = "ace_fastroping";
+    GVAR(fastroping) = "ace_fastroping";
 };
 
 #include "CfgEventHandlers.hpp"
