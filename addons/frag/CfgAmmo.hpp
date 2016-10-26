@@ -1,6 +1,6 @@
-#define BASE_DRAG         -0.01
-#define HD_MULT            5
-#define BASE_DRAG_HD    (BASE_DRAG*HD_MULT)
+#define BASE_DRAG -0.01
+#define HD_MULT 5
+#define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
 
 class CfgAmmo {
     //class ace_arty_105mm_m1_m782_time;
@@ -104,10 +104,8 @@ class CfgAmmo {
         GVAR(gurney_k) = 1/2;
     };
 
-    class ACE_G_40mm_HEDP: G_40mm_HEDP {
-    };
-    class ACE_G_40mm_HE: G_40mm_HE {
-    };
+    class ACE_G_40mm_HEDP: G_40mm_HEDP {};
+    class ACE_G_40mm_HE: G_40mm_HE {};
     class ACE_G_40mm_Practice: ACE_G_40mm_HE {
         GVAR(skip) = 1;
         GVAR(force) = 0;
@@ -438,8 +436,6 @@ class CfgAmmo {
         indirectHitRange = 0.25;
         airFriction = BASE_DRAG_HD*0.65;
         caliber = 2;
-
-
     };
 
     class GVAR(huge): GVAR(large) {
