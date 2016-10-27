@@ -16,8 +16,8 @@
 // setVectorUp requires local object
 if (!local _this) exitWith {};
 
-if ((getText (configFile >> "CfgVehicles" >> (typeOf _this) >> "simulation")) == "house") then {
-    //Houses don't have gravity/physics, so make sure they are not floating
+// Objects with disabled simulation and objects with simulation type "house" don't have gravity/physics, so make sure they are not floating
+if (!simulationEnabled _this || {getText (configFile >> "CfgVehicles" >> (typeOf _this) >> "simulation") == "house"}) then {
     private _posAbove = (getPos _this) select 2;
     TRACE_2("house",_this,_posAbove);
     if (_posAbove > 0.1) then {
