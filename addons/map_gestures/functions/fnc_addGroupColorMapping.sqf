@@ -19,7 +19,6 @@
 
 if (!params [["_group", "", [grpNull, ""]], ["_leadColor", [1,1,1,1], [[]], 4], ["_unitColor", [1,1,1,1], [[]], 4]]) exitWith {
     ERROR_1("Bad Params: %1",_this);
-    -1
 };
 TRACE_3("params",_group,_leadColor,_unitColor);
 
