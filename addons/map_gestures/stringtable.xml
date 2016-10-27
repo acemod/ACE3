@@ -177,51 +177,6 @@
             <French>Temps entre les actualisations de données</French>
             <Japanese>データの更新間隔</Japanese>
         </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_displayName">
-            <English>Group color configurations</English>
-            <Portuguese>Configurações de cores de grupo</Portuguese>
-            <Polish>Konf. koloru grup</Polish>
-            <Russian>Конфигурация цвета групп</Russian>
-            <Czech>Konfigurace barvy pro skupinu</Czech>
-            <Italian>Configurazioni colori dei gruppi</Italian>
-            <German>Konfiguration der Gruppenfarbe</German>
-            <Spanish>Configuración de color de grupo</Spanish>
-            <French>Configuration des couleurs de groupe</French>
-            <Japanese>グループで使う色の設定</Japanese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurations_description">
-            <English>Group color configuration containing arrays of color pairs ([leadColor, color]).</English>
-            <Portuguese>Configuração de cores de grupo contendo arrays com pares de cores ([leadColor, color]).</Portuguese>
-            <Polish>Konfiguracja kolorów grup zawierająca tablice par kolorów ([kolorLidera, kolor]).</Polish>
-            <Russian>Конфигурация цвета групп содержит массив цветовых пар ([лид. цвет, цвет]).</Russian>
-            <Italian>Configurazioni colori gruppi contenenti array di coppie di colori ([leadColor, color]).</Italian>
-            <German>Konfiguration der Gruppenfarbe mit zugeordneten Farbpaaren der Aufstellung ([leadColor, color]).</German>
-            <Spanish>Configuración de color de grupo conteniendo una lista de pares de colores ([colorLider, colo]).</Spanish>
-            <French>Configuration des couleurs de groupe contenant des tableaux de paires de couleurs ([couleurDeCommandement, couleur]).</French>
-            <Japanese>アライに格納された組によりグループの色を設定します。([leadColor, color])</Japanese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_description">
-            <English>Hash of Group ID mapped to the Group color configuration index.</English>
-            <Portuguese>Hashes de ID de grupos mapeados para o índice de configuração de cor de grupos.</Portuguese>
-            <Polish>Hasz ID grup zmapowanych w indeksie konfiguracji koloru grup.</Polish>
-            <Russian>Хеш ID групп, соответствующих индексам конфигурации цвета групп.</Russian>
-            <Italian>Hash degli ID Gruppi mappati nell'indice configurazioni colori gruppi.</Italian>
-            <German>Hashwert der Gruppen-ID, die dem Konfigurations-Index der Gruppenfarbe zugeordnet werden.</German>
-            <Spanish>ID de Grupo mapeado al índice de la configuración de color de grupo.</Spanish>
-            <French>Hash de l'identifiant du groupe mappé à l'index de la configuration de la couleur du groupe.</French>
-            <Japanese>グループ ID のハッシュはグループの色を設定するインデックスへマッピングされます。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_map_gestures_GroupColorConfigurationMapping_displayName">
-            <English>GroupID Color configuration mapping</English>
-            <Portuguese>Mapeamento de configuração para cores de GroupID</Portuguese>
-            <Polish>Mapowanie kolorów poprzez GroupID</Polish>
-            <Russian>Соответствие ID групп конфигурации цвета групп</Russian>
-            <Italian>Mappatura configurazioni colori GroupID</Italian>
-            <German>Gruppen-ID-Farbe Konfigurationszuordnung</German>
-            <Spanish>Mapeado de ID de Grupo</Spanish>
-            <French>Configuration du mappage de l'identifiant de la couleur du groupe.</French>
-            <Japanese>GroupID の色への設定をマッピング</Japanese>
-        </Key>
         <Key ID="STR_ACE_map_gestures_enabled_description">
             <English>Enables the Map Gestures.</English>
             <Portuguese>Ativa os gestos no mapa</Portuguese>
