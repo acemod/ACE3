@@ -7,13 +7,14 @@
  *  0: Unit <OBJECT>
  *  1: Target <OBJECT>
  *  2: Start time <NUMBER>
+ *  3: Disabled Collision Objects <ARRAY> (empty for in-PFH changes)
  * 1: PFEH Id <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[player, target], 20] call ace_dragging_fnc_carryObjectPFH;
+ * [[player, target, []], 20] call ace_dragging_fnc_carryObjectPFH;
  *
  * Public: No
  */
@@ -39,7 +40,7 @@ if (!alive _target || {_unit distance _target > 10}) then {
         //so wait a full second to exit if out of range (this is critical as we would otherwise detach and set it's pos to weird pos)
         TRACE_3("ignoring bad distance at start",_unit distance _target,_startTime,CBA_missionTime);
     };
-    [_unit, _target] call FUNC(dropObject_carry);
+    [_unit, _target, _disabledCollisionObjects] call FUNC(dropObject_carry);
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
