@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player, cursorTarget, [p1, p2]] call ace_dragging_fnc_dropObject_carry;
+ * [player, cursorTarget] call ace_dragging_fnc_dropObject_carry;
  *
  * Public: No
  */
