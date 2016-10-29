@@ -5,7 +5,6 @@
  * Arguments:
  * 0: Unit that carries the other object <OBJECT>
  * 1: Carried object to drop <OBJECT>
- * 2: Disabled Collision Objects <ARRAY>
  *
  * Return Value:
  * None
@@ -17,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target", "_disabledCollisionObjects"];
+params ["_unit", "_target"];
 TRACE_1("params",_this);
 
 // remove drop action
@@ -80,4 +79,4 @@ if (_target getVariable [QGVAR(isUAV), false]) then {
 // Reenable collision with nearby objects
 {
     _target enableCollisionWith _x;
-} forEach _disabledCollisionObjects;
+} forEach (_target getVariable [QGVAR(disabledCollisionObjects), []]);
