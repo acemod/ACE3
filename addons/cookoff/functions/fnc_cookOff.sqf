@@ -116,17 +116,11 @@ if (local _vehicle) then {
         private _randomPosition = _vehicle getPos [100, random 360];
 
         {
-            _x leaveVehicle _vehicle;
-            
-            if (leader _x == _x) then {
-                private _wp = group _x addWaypoint [_randomPosition, 0, 1];
-                _wp setWaypointType "MOVE";
-                _wp setWaypointBehaviour "AWARE";
-                _wp setWaypointCombatMode "BLUE";
-                _wp setWaypointSpeed "FULL";
-                _wp setWaypointStatements ["TRUE", "(group this) setBehaviour 'COMBAT'; (group this) setCombatMode 'RED';"];
+            if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
+                _x leaveVehicle _vehicle;
+                _x doMove _randomPosition;
             };
-        } forEach ((crew _vehicle) select {local _x && {!(_x call EFUNC(common,isPlayer))}});
+        } forEach crew _vehicle;
 
         [{
             params ["_vehicle", "_effects"];
