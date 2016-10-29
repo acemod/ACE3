@@ -12,13 +12,13 @@ GVAR(ACE_rain) = rain;
 
 "ACE_WIND_PARAMS" addPublicVariableEventHandler { GVAR(wind_period_start_time) = CBA_missionTime; };
 "ACE_RAIN_PARAMS" addPublicVariableEventHandler { GVAR(rain_period_start_time) = CBA_missionTime; };
-"ACE_MISC_PARAMS" addPublicVariableEventHandler {
-    if (!isServer) then {
+if (!isServer) then {
+    "ACE_MISC_PARAMS" addPublicVariableEventHandler {
         TRACE_1("MISC PARAMS PVEH",ACE_MISC_PARAMS);
         if (GVAR(syncMisc)) then {
             30 setLightnings (ACE_MISC_PARAMS select 0);
             30 setRainbow    (ACE_MISC_PARAMS select 1);
-            30 setFog        (ACE_MISC_PARAMS select 2);
+            // 30 setFog        (ACE_MISC_PARAMS select 2); // Fog syncs fine on it's own
         };
         GVAR(temperatureShift) = (ACE_MISC_PARAMS select 3);
         GVAR(badWeatherShift)  = (ACE_MISC_PARAMS select 4);

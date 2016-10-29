@@ -1,11 +1,21 @@
 
 class CfgWeapons {
+    class NVGoggles;
+    class rhsusf_ANPVS_14: NVGoggles { // Monocular
+        modelOptics = "";
+        EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa);
+        EGVAR(nightvision,bluRadius) = 0.13;
+    };
+    class rhsusf_ANPVS_15: NVGoggles { // Binocular (same as base)
+        modelOptics = "";
+    };
+
     class Pistol_Base_F;
     class Rifle_Base_F;
     class srifle_EBR_F;
     class launch_O_Titan_F;
     class UGL_F;
-    
+
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
@@ -141,7 +151,7 @@ class CfgWeapons {
     };
     class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
-        ACE_barrelLength = 348; 
+        ACE_barrelLength = 348;
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
@@ -182,7 +192,7 @@ class CfgWeapons {
     class SMG_01_F;
     class rhsusf_weap_MP7A1_base_f : SMG_01_F {
         ACE_barrelTwist = 160.0;
-        ACE_barrelLength = 180.0;     
+        ACE_barrelLength = 180.0;
     };
     // RHS pistols
     class hgun_ACPC2_F;

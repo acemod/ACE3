@@ -19,16 +19,15 @@
 params ["_player", "_changeInBrightness"];
 TRACE_2("params",_player,_changeInBrightness);
 
-if (!hasInterface) exitWith {};
-
 private _brightness = _player getVariable [QGVAR(NVGBrightness), 0];
 
-_brightness = ((round (10 * _brightness + _changeInBrightness) / 10) min 0.5) max -0.5;
+_brightness = ((_brightness + _changeInBrightness) min 0) max -6;
 
 _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 
-GVAR(ppEffectNVGBrightness) ppEffectAdjust [1, (_brightness + 1), 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 1]];
-GVAR(ppEffectNVGBrightness) ppEffectCommit 0;
-
-[format [(localize LSTRING(NVGBrightness)), (_brightness * 10)]] call EFUNC(common,displayTextStructured);
+// [format [(localize LSTRING(NVGBrightness)), _brightness]] call EFUNC(common,displayTextStructured);
+[format ["bright %1", _brightness]] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
+
+// Trigger full ppEffects update next time run in the PFEH:
+GVAR(nextEffectsUpdate) = -1;
