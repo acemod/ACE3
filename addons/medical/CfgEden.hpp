@@ -10,7 +10,7 @@ class Cfg3DEN {
         };
         class GVAR(isMedicControl): Title {
             attributeLoad = "(_this controlsGroupCtrl 100) lbsetcursel (((_value + 1) min 3) max 0);";
-            attributeSave = "(missionnamespace getvariable ['ace_isMeidc_temp',0]) - 1;";
+            attributeSave = "(missionnamespace getvariable ['ace_isMedic_temp',0]) - 1;";
             class Controls: Controls {
                 class Title: Title{};
                 class Value: ctrlToolbox {
