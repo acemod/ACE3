@@ -22,7 +22,7 @@ class Cfg3DEN {
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignMedicRoles_role_none), CSTRING(AssignMedicRoles_role_medic), CSTRING(AssignMedicRoles_role_doctorShort)};
-                    onToolboxSelChanged = "missionnamespace setvariable ['ace_isMeidc_temp',_this select 1];";
+                    onToolboxSelChanged = "missionnamespace setvariable ['ace_isMedic_temp',_this select 1];";
                 };
             };
         };
