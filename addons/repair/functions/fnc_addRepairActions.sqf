@@ -24,7 +24,7 @@ private ["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint"
 
 _type = typeOf _vehicle;
 
-_initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
+_initializedClasses = RETDEF(GVAR(initializedClasses),[]);
 
 // do nothing if the class is already initialized
 if (_type in _initializedClasses) exitWith {};

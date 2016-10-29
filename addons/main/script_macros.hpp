@@ -34,10 +34,10 @@
 #define SETPRVAR(var1,var2) profileNamespace SETVAR_SYS(var1,var2)
 #define SETPAVAR(var1,var2) parsingNamespace SETVAR_SYS(var1,var2)
 
-#define GETGVAR(var1,var2) GETMVAR(GVAR(var1),var2)
-#define GETEGVAR(var1,var2,var3) GETMVAR(EGVAR(var1,var2),var3)
+#define GETGVAR(var1,var2) RETDEF(GVAR(var1),var2)
+#define GETEGVAR(var1,var2,var3) RETDEF(EGVAR(var1,var2),var3)
 
-#define ARR_SELECT(ARRAY,INDEX,DEFAULT) if (count ARRAY > INDEX) then {ARRAY select INDEX} else {DEFAULT}
+#define ARR_SELECT(ARRAY,INDEX,DEFAULT) (ARRAY param [INDEX,DEFAULT])
 
 
 #define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \

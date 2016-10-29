@@ -19,9 +19,9 @@ params ["_newUnit"];
 
 private _side = side group _newUnit;
 
-((GETMVAR(ACE_Rallypoint_West,             objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
-((GETMVAR(ACE_Rallypoint_West_Base,        objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
-((GETMVAR(ACE_Rallypoint_East,             objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == east));
-((GETMVAR(ACE_Rallypoint_East_Base,        objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == east));
-((GETMVAR(ACE_Rallypoint_Independent,      objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == independent));
-((GETMVAR(ACE_Rallypoint_Independent_Base, objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == independent));
+((RETDEF(ACE_Rallypoint_West,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
+((RETDEF(ACE_Rallypoint_West_Base,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == west));
+((RETDEF(ACE_Rallypoint_East,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == east));
+((RETDEF(ACE_Rallypoint_East_Base,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == east));
+((RETDEF(ACE_Rallypoint_Independent,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == independent));
+((RETDEF(ACE_Rallypoint_Independent_Base,objNull)) getVariable [QGVAR(marker), ""]) setMarkerAlphaLocal ([0, 1] select (_side == independent));

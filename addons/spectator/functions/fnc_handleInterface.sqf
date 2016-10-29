@@ -480,7 +480,7 @@ switch (toLower _mode) do {
         [{
             // PFH to re-open display when menu closes
             [{
-                if !((isNull curatorCamera) && {isNull (GETMVAR(bis_fnc_moduleRemoteControl_unit,objNull))}) exitWith {};
+                if !((isNull curatorCamera) && {isNull (RETDEF(bis_fnc_moduleRemoteControl_unit,objNull))}) exitWith {};
 
                 // If still a spectator then re-enter the interface
                 [QGVAR(zeus),false] call FUNC(interrupt);
