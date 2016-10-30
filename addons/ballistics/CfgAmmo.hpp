@@ -97,7 +97,7 @@ class CfgAmmo {
         ACE_barrelLengths[]={206.5, 414.02, 508.0};
     };
     class ACE_545x39_Ball_7N6M : B_545x39_Ball_F {
-    }
+    };
     class B_556x45_Ball_Tracer_Green;
     class ACE_545x39_Ball_7T3M : B_556x45_Ball_Tracer_Green {
         airFriction=-0.00116278;
