@@ -34,6 +34,7 @@ class CfgVehicles {
                     displayName = CSTRING(checkItem);
                     condition = "true";
                     statement = "";
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     insertChildren = QUOTE(_this call DFUNC(addDogtagActions));
                 };
             };
