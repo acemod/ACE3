@@ -39,7 +39,7 @@ if (isServer) then {
 
     ["CAManBase", "hit", {
         params ["_unit"];
-        if (GVAR(enabledFor) == 1 && {!isPlayer _unit || {_unit == ACE_player}}) exitWith {};
+        if (GVAR(enabledFor) == 1 && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
         _this call FUNC(hit);
     }] call CBA_fnc_addClassEventHandler;
 

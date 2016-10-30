@@ -15,11 +15,9 @@
  */
 #include "script_component.hpp"
 
-private ["_mapCtrl", "_unitUID", "_drawPosVariableName"];
-
 disableSerialization;
 
-_mapCtrl = findDisplay 12 displayCtrl 51;
+private _mapCtrl = findDisplay 12 displayCtrl 51;
 
 // MouseMoving EH.
 if (!isNil QGVAR(MouseMoveHandlerID)) then {
@@ -36,11 +34,7 @@ GVAR(MouseMoveHandlerID) = _mapCtrl ctrlAddEventHandler ["MouseMoving", {
         ACE_player setVariable [QGVAR(Transmit), true, true];
     };
 
-    _unitUID = getPlayerUID ACE_player;
-    _drawPosVariableName = if (!isNil "_unitUID" && _unitUID != "") then {format [QGVAR(%1_DrawPos), _unitUID]} else {nil};
-    if (!isNil "_drawPosVariableName") then {
-        missionNamespace setVariable [_drawPosVariableName, _control ctrlMapScreenToWorld [_posX, _posY]];
-    };
+    GVAR(pointPosition) = _control ctrlMapScreenToWorld [_posX, _posY];
 }];
 
 // MouseDown EH

@@ -1,5 +1,5 @@
 
-PREP(assignClientIDOnServer);
+PREP(addGroupColorMapping);
 PREP(drawMapGestures);
 PREP(endTransmit);
 PREP(getProximityPlayers);
