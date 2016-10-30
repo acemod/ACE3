@@ -1,14 +1,11 @@
+
 class RscOpticsValue;
-class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 class RscPicture;
 class RscMapControl;
-class VScrollbar;
-class HScrollbar;
 class RscLine;
 
-
 // Taken from AGM for optics management.
-
 class RscInGameUI {
     class ACE_RscOptics_javelin {
         idd = 300;
@@ -16,24 +13,13 @@ class RscInGameUI {
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
         onUnload = QUOTE(_this call FUNC(onOpticUnload));
 
-        class GVAR(elements_group): RscControlsGroup
-        {
+        class GVAR(elements_group): RscControlsGroupNoScrollbars {
             x = "SafezoneX";
             y = "SafezoneY";
             w = "SafezoneW";
             h = "SafezoneH";
             idc = 170;
-            class VScrollbar {
-                autoScrollSpeed = -1;
-                autoScrollDelay = 5;
-                autoScrollRewind = 0;
-                color[] = {1,1,1,0};
-                width = 0.001;
-            };
-            class HScrollbar {
-                color[] = {1,1,1,0};
-                height = 0.001;
-            };
+
             class Controls {
                 class CA_Distance: RscOpticsValue {
                     idc = 151;
@@ -63,23 +49,13 @@ class RscInGameUI {
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\wfov_co.paa";
                 };
-                class GVAR(WFOV_mode_group): RscControlsGroup {
+                class GVAR(WFOV_mode_group): RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW";
                     h = "SafezoneH";
                     idc = 163;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class StadiaL: RscLine {
                             x = "0.4899*SafezoneW - SafezoneX";
@@ -131,23 +107,13 @@ class RscInGameUI {
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.586/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\nfov_co.paa";
                 };
-                class GVAR(NFOV_mode_group): RscControlsGroup {
+                class GVAR(NFOV_mode_group): RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
                     idc = 162;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class StadiaL: RscLine {
                             x = "0.4788*SafezoneW - SafezoneX";
@@ -251,7 +217,7 @@ class RscInGameUI {
                 };
             };
         };
-        class ACE_Targeting : RscControlsGroup {
+        class ACE_Targeting: RscControlsGroupNoScrollbars {
             idc = 6999;
 
             x = "SafezoneX";
@@ -261,24 +227,14 @@ class RscInGameUI {
 
             enabled = 0;
             class Controls {
-                class ACE_TargetingConstrains: RscControlsGroup {
+                class ACE_TargetingConstrains: RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
 
                     enabled = 0;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class Top: RscPicture {
                             idc = 699101;
