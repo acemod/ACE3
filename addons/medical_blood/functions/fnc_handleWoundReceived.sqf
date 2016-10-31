@@ -16,7 +16,7 @@
 
 params ["_unit", "", "_damage", "_shooter"];
 
-if (GVAR(enabledFor) == 1 && {!isPlayer _unit || {_unit == ACE_player}}) exitWith {};
+if (GVAR(enabledFor) == 1 && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
 if (vehicle _unit != _unit && {!((vehicle _unit) isKindOf "StaticWeapon")}) exitWith {}; // Don't bleed on ground if mounted
 
 _damage = _damage min 1;
