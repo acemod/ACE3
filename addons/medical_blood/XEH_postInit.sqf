@@ -10,9 +10,7 @@ if (isServer) then {
 
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop"];
-
         GVAR(bloodDrops) pushBack _bloodDrop;
-
         if (count GVAR(bloodDrops) >= MAX_BLOOD_OBJECTS) then {
             private _deletedBloodDrop = GVAR(bloodDrops) deleteAt 0;
             deleteVehicle _deletedBloodDrop;
@@ -25,7 +23,7 @@ if (isServer) then {
 ["ace_settingsInitialized", {
     TRACE_1("settingsInitialized", GVAR(enabledFor));
     if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
-    if (GVAR(enabledFor) == 1 && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
+    if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
 
     private _listcode = if (GVAR(enabledFor) == 1) then {
         {[ACE_player] select {[_x] call FUNC(isBleeding)}} // ace_player is only possible local player

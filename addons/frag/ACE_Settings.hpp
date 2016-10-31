@@ -34,7 +34,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 50;
     };
-
     class GVAR(enableDebugTrace) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(EnableDebugTrace);

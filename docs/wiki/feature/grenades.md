@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Grenades
-description: Different throwing modes for grenades, a flashbang and hand flares.
+description: Different throwing modes for grenades, a flashbang, incendiary grenade and hand flares.
 group: feature
 category: equipment
 parent: wiki
@@ -27,6 +27,9 @@ Adds throwable hand flares in the colors white, red, green and yellow. Additiona
 
 ### 1.3 M84 stun grenade
 Adds the M84 stun grenade. The stun effect will also affect AI.
+
+### 1.4 M14 Incendiary grenade
+Adds the AN-M14 incendiary grenade. This grenade has a thermate filler and is primarily used for the destruction of material.
 
 ## 2. Usage
 
