@@ -149,19 +149,19 @@ def renameFunction(addon, name, newName):
 def main():
     args = sys.argv
 
-    if "-cf" in args:
+    if "-c" in args:
         createFunction(args[2], args[3])
         sys.exit(2)
 
-    if "-df" in args:
+    if "-d" in args:
         deleteFunction(args[2], args[3])
         sys.exit(2)
 
-    if "-rf" in args:
+    if "-r" in args:
         renameFunction(args[2], args[3], args[4])
         sys.exit(2)
 
-    if "-mf" in args:
+    if "-m" in args:
         moveFunction(args[2], args[3], args[4])
         sys.exit(2)
 
