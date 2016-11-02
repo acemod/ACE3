@@ -21,6 +21,7 @@ private ["_abort", "_AmmoCacheEntry", "_WeaponCacheEntry", "_opticsName", "_opti
 
 _abort = false;
 
+if (!GVAR(enabled)) exitWith {};
 if (!(_ammo isKindOf "BulletBase")) exitWith {};
 if (!alive _projectile) exitWith {};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {};
