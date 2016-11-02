@@ -350,6 +350,7 @@ class ATragMX_Display {
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="MV";
+            action=QUOTE(0 call FUNC(toggle_muzzle_velocity_data));
         };
         class TEXT_MUZZLE_VELOCITY_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=130;
@@ -1467,6 +1468,108 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.26;
             y=0.265*safezoneH+safezoneY+0.55;
             action=QUOTE(0 call FUNC(toggle_solution_setup));
+        };
+        
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE: TEXT_BORE_HEIGHT {
+            idc=16000;
+            w=0.22;
+            y=0.265*safezoneH+safezoneY+0.25;
+            sizeEx=0.022;
+            text="Temperature";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE {
+            idc=16001;
+            x=0.550*safezoneW+safezoneX+0.215;
+            sizeEx=0.022;
+            text="Muzzle velocity";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1: ATragMX_RscEdit {
+            idc=160021;
+            w=0.082;
+            h=0.035;
+            x=0.550*safezoneW+safezoneX+0.128;
+            y=0.265*safezoneH+safezoneY+0.29;
+            text="0";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_2: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160022;
+            y=0.265*safezoneH+safezoneY+0.325;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_3: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160023;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_4: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160024;
+            y=0.265*safezoneH+safezoneY+0.395;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_5: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160025;
+            y=0.265*safezoneH+safezoneY+0.430;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_6: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160026;
+            y=0.265*safezoneH+safezoneY+0.465;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_7: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160027;
+            y=0.265*safezoneH+safezoneY+0.500;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_1: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160031;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_2: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_2 {
+            idc=160032;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_3: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_3 {
+            idc=160033;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_4: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_4 {
+            idc=160034;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_5: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_5 {
+            idc=160035;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_6: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_6 {
+            idc=160036;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_7: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_7 {
+            idc=160037;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_CLEAR: TEXT_TARGET_DATA_NEXT {
+            idc=16004;
+            style=ST_CENTER;
+            h=0.035;
+            y=0.265*safezoneH+safezoneY+0.3625;
+            text="Clear";
+            action=QUOTE(call FUNC(clear_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_QUESTIONMARK: TEXT_MUZZLE_VELOCITY_DATA_CLEAR {
+            idc=16005;
+            y=0.265*safezoneH+safezoneY+0.430;
+            text="?";
+            action="";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_DONE: TEXT_TARGET_DATA_DONE {
+            idc=16006;
+            action=QUOTE(1 call FUNC(toggle_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_CANCEL: TEXT_TARGET_DATA_CANCEL {
+            idc=16007;
+            action=QUOTE(0 call FUNC(toggle_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_PREV: TEXT_TARGET_DATA_PREV {
+            idc=16008;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_NEXT: TEXT_TARGET_DATA_NEXT {
+            idc=16009;
         };
     };
 };

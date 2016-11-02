@@ -26,6 +26,8 @@ if (_restoreMemory) then {
 };
 GVAR(currentGun) = _gunID;
 
+[false, false] call FUNC(recalculate_muzzle_velocity);
+
 if (_updateDisplay) then {
     lbSetCurSel [6000, GVAR(currentGun)];
 };
@@ -37,6 +39,7 @@ GVAR(currentScopeClickNumber) = 1 max (GVAR(workingMemory) select 8) min 10;
 if (_updateDisplay) then {
     [] call FUNC(update_gun);
     [] call FUNC(update_gun_ammo_data);
+    [] call FUNC(update_muzzle_velocity_data);
 };
 
 GVAR(elevationOutput) set [GVAR(currentTarget), 0];

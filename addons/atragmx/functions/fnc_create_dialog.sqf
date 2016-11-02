@@ -32,6 +32,7 @@ GVAR(showAddNewGun) call FUNC(show_add_new_gun);
 GVAR(showAtmoEnvData) call FUNC(show_atmo_env_data);
 GVAR(showGunAmmoData) call FUNC(show_gun_ammo_data);
 GVAR(showGunList) call FUNC(show_gun_list);
+GVAR(showMuzzleVelocityData) call FUNC(show_muzzle_velocity_data);
 GVAR(showRangeCard) call FUNC(show_range_card);
 if (GVAR(showRangeCard)) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 5001);
