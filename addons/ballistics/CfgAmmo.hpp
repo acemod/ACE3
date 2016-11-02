@@ -688,7 +688,7 @@ class CfgAmmo {
         ACE_standardAtmosphere="ICAO";
         ACE_dragModel=7;
         ACE_muzzleVelocities[]={880, 895, 900};
-        ACE_barrelLengths[]={508.0, 685,8, 711.2};
+        ACE_barrelLengths[]={508.0, 685.8, 711.2};
     };
     class B_127x33_Ball: BulletBase {
         tracerScale = 1.3; //1.2;
