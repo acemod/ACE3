@@ -262,9 +262,9 @@ class CfgWeapons {
 
     /* Rifles */
     class arifle_AKS_base_F: Rifle_Base_F {
-        initSpeed = -1.00419;
+        initSpeed = -1.0;
         ACE_barrelTwist=160.02;
-        ACE_barrelLength=210.82;
+        ACE_barrelLength=206.5;
     };
     class arifle_AKM_base_F: Rifle_Base_F {
         initSpeed = -1.0014;
