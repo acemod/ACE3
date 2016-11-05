@@ -241,12 +241,26 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65x47_Scenar_mag_Description);
     };
+    class ACE_20Rnd_65x47_Scenar_mag: 20Rnd_650x39_Cased_Mag_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65x47_Ball_Scenar";
+        displayName = CSTRING(20Rnd_65x47_Scenar_mag_Name);
+        displayNameShort = CSTRING(20Rnd_65x47_Scenar_mag_NameShort);
+        descriptionShort = CSTRING(20Rnd_65x47_Scenar_mag_Description);
+    };
     class ACE_30Rnd_65_Creedmor_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65_Creedmor_Ball";
         displayName = CSTRING(30Rnd_65_Creedmor_mag_Name);
         displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65_Creedmor_mag_Description);
+    };
+    class ACE_20Rnd_65_Creedmor_mag: 20Rnd_650x39_Cased_Mag_F {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_65_Creedmor_Ball";
+        displayName = CSTRING(20Rnd_65_Creedmor_mag_Name);
+        displayNameShort = CSTRING(20Rnd_65_Creedmor_mag_NameShort);
+        descriptionShort = CSTRING(20Rnd_65_Creedmor_mag_Description);
     };
     class 10Rnd_338_Mag;
     class ACE_10Rnd_338_300gr_HPBT_Mag: 10Rnd_338_Mag {
