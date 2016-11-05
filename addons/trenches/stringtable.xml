@@ -152,6 +152,7 @@
             <Russian>Продолжить копание окопа</Russian>
             <Czech>Pokračovat v kopání</Czech>
             <Japanese>塹壕を掘りつづける</Japanese>
+            <German>Graben fortsetzen</German>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -161,6 +162,7 @@
             <Russian>Убрать окоп</Russian>
             <Czech>Odstranit zákop</Czech>
             <Japanese>塹壕を消す</Japanese>
+            <German>Schützengraben entfernen</German>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -170,6 +172,7 @@
             <Russian>Убирание окопа</Russian>
             <Czech>Odstraňuji zákop</Czech>
             <Japanese>塹壕を消している</Japanese>
+            <German>Entferne Schützengraben</German>
         </Key>
     </Package>
 </Project>

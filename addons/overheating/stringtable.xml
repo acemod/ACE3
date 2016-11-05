@@ -310,6 +310,7 @@
             <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
             <Japanese>予備銃身の温度を測る</Japanese>
             <Polish>Sprawdź temperaturę zapasowych luf</Polish>
+            <German>Temperatur der Wechselläufe prüfen</German>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
@@ -319,6 +320,7 @@
             <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
             <Japanese>予備銃身の温度を測っている・・・</Japanese>
             <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
+            <German>Prüfe Temperatur der Wechselläufe...</German>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -341,6 +343,7 @@
             <Czech>Studená náhrandí hlaveň</Czech>
             <Japanese>予備銃身は冷たい</Japanese>
             <Polish>Zimne zapasowe lufy</Polish>
+            <German>Kalte Wechselläufe</German>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
@@ -350,6 +353,7 @@
             <Czech>Teplá náhrandí hlaveň</Czech>
             <Japanese>予備銃身は温かい</Japanese>
             <Polish>Ciepłe zapasowe lufy</Polish>
+            <German>Warme Wechselläufe</German>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
@@ -359,6 +363,7 @@
             <Czech>Horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身は熱い</Japanese>
             <Polish>Gorące zapasowe lufy</Polish>
+            <German>Heiße Wechselläufe</German>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
@@ -368,6 +373,7 @@
             <Czech>Velmi horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身はとても熱い</Japanese>
             <Polish>Bardzo gorące zapasowe lufy</Polish>
+            <German>Sehr heiße Wechselläufe</German>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
@@ -377,10 +383,11 @@
             <Czech>Extrémně horká náhrandí hlaveň</Czech>
             <Japanese>予備銃身は極めて熱い</Japanese>
             <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
+            <German>Extrem heiße Wechselläufe</German>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
-            <German>Überhitzen Aktiviert</German>
+            <German>Überhitzung aktiviert</German>
             <Spanish>Activada Sobrecalentamiento</Spanish>
             <Portuguese>Superaquecimento ativado</Portuguese>
             <French>Surchauffe activée</French>
@@ -396,6 +403,7 @@
             <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
             <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
             <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
+            <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
         </Key>
     </Package>
 </Project>

@@ -7,6 +7,7 @@
             <Russian>Жетон</Russian>
             <Czech>Identifikační známka</Czech>
             <Japanese>ドッグ タグ</Japanese>
+            <German>Hundemarke</German>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -14,6 +15,7 @@
             <Russian>Проверить жетон</Russian>
             <Czech>Zkontrolovat známku</Czech>
             <Japanese>ドッグ タグを見る</Japanese>
+            <German>Hundemarke prüfen</German>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -21,6 +23,7 @@
             <Russian>Проверить</Russian>
             <Czech>Zkontroluj</Czech>
             <Japanese>見る</Japanese>
+            <German>Prüfen</German>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -28,6 +31,7 @@
             <Russian>Взять</Russian>
             <Czech>Vezmi</Czech>
             <Japanese>取る</Japanese>
+            <German>Nehmen</German>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
@@ -35,6 +39,7 @@
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
             <Japanese>%1からドッグ タグを取っている・・・</Japanese>
+            <German>Hundemarke von %1 genommen...</German>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
@@ -42,6 +47,7 @@
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
             <Japanese>すでに誰かがドッグ タグを取っているようだ・・・</Japanese>
+            <German>Jemand anderes hat bereits die Hundemarke genommen...</German>
         </Key>
     </Package>
 </Project>
