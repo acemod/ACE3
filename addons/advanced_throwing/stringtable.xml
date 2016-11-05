@@ -76,6 +76,7 @@
             <Russian>Включить подбор прикрепленных гранат</Russian>
             <Japanese>拾い上げた投てき物の取り付けを有効化</Japanese>
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
+            <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
