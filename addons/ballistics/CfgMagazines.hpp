@@ -8,6 +8,9 @@ class CfgMagazines {
     class 100Rnd_580x42_Mag_F: 30Rnd_580x42_Mag_F {
         initSpeed = 930;
     };
+    class 20Rnd_650x39_Cased_Mag_F: CA_Magazine {
+        initSpeed = 780;
+    };
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 760;
     };
