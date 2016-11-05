@@ -77,6 +77,7 @@ GVAR(showAddNewGun) = false;
 GVAR(showAtmoEnvData) = false;
 GVAR(showGunAmmoData) = false;
 GVAR(showGunList) = false;
+GVAR(showMuzzleVelocityData) = false;
 GVAR(showRangeCard) = false;
 GVAR(showRangeCardSetup) = false;
 GVAR(showSolutionSetup) = false;

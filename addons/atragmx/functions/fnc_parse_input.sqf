@@ -1,6 +1,6 @@
 /*
  * Author: Ruthberg
- * Parses all input fields in the gun, atmosphere and target column and the result input fields
+ * Parses all input fields in the gun-, atmosphere- and target column, the result input fields and the muzzle velocity data input fields
  *
  * Arguments:
  * Nothing
@@ -14,6 +14,23 @@
  * Public: No
  */
 #include "script_component.hpp"
+
+{
+    private _temperature = -50 max parseNumber(ctrlText _x) min 160;
+    if (GVAR(currentUnit) != 2) then {
+        _temperature = (_temperature - 32) / 1.8;
+    };
+    ((GVAR(workingMemory) select 18) select _forEachIndex) set [0, _temperature];
+} forEach [160021, 160022, 160023, 160024, 160025, 160026, 160027];
+{
+    private _muzzleVelocity = parseNumber(ctrlText _x);
+    if (GVAR(currentUnit) != 2) then {
+        _muzzleVelocity = _muzzleVelocity / 3.2808399;
+    };
+    ((GVAR(workingMemory) select 18) select _forEachIndex) set [1, 0 max _muzzleVelocity min 1400];
+} forEach [160031, 160032, 160033, 160034, 160035, 160036, 160037];
+
+call FUNC(rectify_muzzle_velocity_data);
 
 GVAR(altitude) = -1000 max parseNumber(ctrlText 130030) min 20000;
 GVAR(temperature) = -50 max parseNumber(ctrlText 130040) min 160;
@@ -92,6 +109,9 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 } else {
     GVAR(workingMemory) set [4, _airFriction];
 };
+if (_muzzleVelocity != GVAR(workingMemory) select 1) then {
+    (_muzzleVelocity - (GVAR(workingMemory) select 1)) call FUNC(shift_muzzle_velocity_data);
+};
 GVAR(workingMemory) set [1, _muzzleVelocity];
 GVAR(workingMemory) set [2, _zeroRange];
 
@@ -101,5 +121,6 @@ GVAR(workingMemory) set [2, _zeroRange];
 [] call FUNC(update_atmo_env_data);
 [] call FUNC(update_target);
 [] call FUNC(update_target_data);
+[] call FUNC(update_muzzle_velocity_data);
 
 [] call FUNC(store_user_data);

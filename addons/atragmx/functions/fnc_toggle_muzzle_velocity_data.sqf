@@ -1,6 +1,6 @@
 /*
  * Author: Ruthberg
- * Toggles the gun ammo data screen on/off
+ * Toggles the muzzle velocity data screen on/off
  *
  * Arguments:
  * Apply new data? <NUMBER>
@@ -9,23 +9,23 @@
  * Nothing
  *
  * Example:
- * 1 call ace_atragmx_fnc_toggle_gun_ammo_data
+ * 1 call ace_atragmx_fnc_toggle_muzzle_velocity_data
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-if (ctrlVisible 12000) then {
-    false call FUNC(show_gun_ammo_data);
+if (ctrlVisible 16000) then {
+    false call FUNC(show_muzzle_velocity_data);
     true call FUNC(show_main_page);
 
     if (_this == 1) then {
-        call FUNC(update_zero_range);
+        [true, true] call FUNC(recalculate_muzzle_velocity);
         call FUNC(calculate_target_solution);
     } else {
-        call FUNC(update_gun_ammo_data);
+        call FUNC(update_muzzle_velocity_data);
     };
 } else {
-    true call FUNC(show_gun_ammo_data);
+    true call FUNC(show_muzzle_velocity_data);
     false call FUNC(show_main_page);
 };
