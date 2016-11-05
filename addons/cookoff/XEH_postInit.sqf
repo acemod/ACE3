@@ -71,7 +71,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 
 ["ReammoBox_F", "init", {
     (_this select 0) addEventHandler ["HandleDamage", {
-        if (GVAR(enableAmmobox)) then {
+        if ((_this select 0) getVariable [QGVAR(enable), GVAR(enableAmmobox)]) then {
             ["box", _this] call FUNC(handleDamage);
         };
     }];
