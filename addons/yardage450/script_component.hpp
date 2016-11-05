@@ -1,9 +1,9 @@
 #define COMPONENT yardage450
+#define COMPONENT_BEAUTIFIED Yardage 450
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_YARDAGE450

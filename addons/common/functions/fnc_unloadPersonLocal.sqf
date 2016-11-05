@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_unit", "_vehicle", ["_unloader", objNull]];
 TRACE_3("params",_unit,_vehicle,_unloader);
@@ -24,10 +24,10 @@ private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,find
 TRACE_1("findUnloadPosition",_emptyPos);
 
 if (count _emptyPos != 3) exitwith {
-    ACE_LOGWARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
     if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
         //display text saying there are no safe places to exit the vehicle
-        ["displayTextStructured", [_unloader], [localize LSTRING(NoRoomToUnload)]] call FUNC(targetEvent);
+        [QGVAR(displayTextStructured), [localize LSTRING(NoRoomToUnload)], [_unloader]] call CBA_fnc_targetEvent;
     };
     false
 };
@@ -53,15 +53,14 @@ _unit action ["Eject", vehicle _unit];
             [_unit, _anim, 1, true] call FUNC(doAnimation);
 
             [{
-                _unit = _this select 0;
-                _anim = _this select 1;
+                params ["_unit", "_anim"];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
                     [_unit, _anim, 2, true] call FUNC(doAnimation);
                 };
-            }, [_unit, _anim], 0.5] call FUNC(waitAndExecute);
+            }, [_unit, _anim], 0.5] call CBA_fnc_waitAndExecute;
         };
     };
-}, [_unit, _emptyPos], 0.5] call FUNC(waitAndExecute);
+}, [_unit, _emptyPos], 0.5] call CBA_fnc_waitAndExecute;
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 

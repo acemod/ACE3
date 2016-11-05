@@ -7,7 +7,7 @@
  * 1: Container <OBJECT>
  *
  * Return Value:
- * Handeled <BOOL>
+ * None
  *
  * Example:
  * [player, car] call ACE_VehicleLock_fnc_onOpenInventory;
@@ -20,10 +20,7 @@ params ["_unit", "_container"];
 TRACE_2("params",_unit,_container);
 
 //Only check for player:
-if (_unit != ace_player) exitWith {false};
-
-private "_handeled";
-_handeled = false;
+if (_unit != ace_player) exitWith {};
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
         {(vehicle ace_player) == ace_player} && //Player dismounted
@@ -33,15 +30,19 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         ) then {
     //Give feedback that vehicle is locked
     playSound "ACE_Sound_Click";
-    //don't open the vehicles inventory
-    _handeled = true;
 
-    // As of 1.54 the action needs to be delayed a frame to work, which used not to be the case
+    //For compatibiltiy with ACRE, wait until the display is open, close it and then reopen the player's own inventory
+    //ref: http://gitlab.idi-systems.com/idi-systems/acre2-public/issues/70
     [{
-        TRACE_1("delaying a frame", ace_player);
-        //Just opens a dummy groundContainer (so the player can still see their own inventory)
-        ACE_player action ["Gear", objNull];
-    }, []] call EFUNC(common,execNextFrame);
+        !isNull (findDisplay 602)
+    },
+    {
+        TRACE_1("car display open: closing", _this);
+        (findDisplay 602) closeDisplay 0;
+        [{
+            TRACE_1("Opening Player Inventory", _this);
+            ACE_player action ["Gear", objNull]
+        }, []] call CBA_fnc_execNextFrame;
+    },
+    []] call CBA_fnc_waitUntilAndExecute;
 };
-
-_handeled

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="medical_blood">
+        <Key ID="STR_ACE_medical_blood_enabledFor_OnlyPlayers">
+            <English>Only Players</English>
+            <Japanese>プレイヤーのみ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_DisplayName">
+            <English>Enable Blood Drops</English>
+            <Japanese>血の滴下を有効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_Description">
+            <English>Enable or disable Blood Drops created on bleeding and taking damage</English>
+            <Japanese>ダメージを受けたり、出血していると血が滴る様子の有効か無効化</Japanese>
+        </Key>
+    </Package>
+</Project>

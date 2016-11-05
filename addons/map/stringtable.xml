@@ -12,6 +12,7 @@
             <Hungarian>Térkép</Hungarian>
             <Russian>Карта</Russian>
             <Italian>Mappa</Italian>
+            <Japanese>地図</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_DisplayName">
             <English>Map illumination?</English>
@@ -20,21 +21,23 @@
             <Spanish>¿Iluminación de mapa?</Spanish>
             <Czech>Osvětlení mapy</Czech>
             <Portuguese>Iluminação do mapa?</Portuguese>
-            <French>Luminosité</French>
+            <French>Illumination de la carte ?</French>
             <Hungarian>Térkép megvilágítása?</Hungarian>
             <Russian>Освещение карты?</Russian>
             <Italian>Illuminazione Mappa?</Italian>
+            <Japanese>地図に照明？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapIllumination_Description">
             <English>Simulate map lighting based on ambient lighting and player's items?</English>
             <German>Simuliere Kartenbeleuchtung auf Basis des Umgebungslichts sowie der mitgeführten Gegenstände?</German>
             <Polish>Symuluj oświetlenie mapy bazujące na oświetleniu otoczenia oraz przedmiotach gracza?</Polish>
-            <French>Calcul la luminosité de la carte en fonction des conditions de lumière ?</French>
+            <French>Calculer la luminosité de la carte en fonction des conditions de lumière ?</French>
             <Russian>Симулировать освещение карты на основе окружающего света и приборов игрока?</Russian>
             <Portuguese>Simular a luz do mapa baseado em luz ambiente e itens do jogador?</Portuguese>
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
+            <Japanese>環境光やプレイヤーのアイテムにより、地図へ光のシミュレーションをおこないますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_DisplayName">
             <English>Map flashlight glow?</English>
@@ -45,6 +48,8 @@
             <Spanish>Resplandor de linterna en el mapa?</Spanish>
             <Czech>Nasvícení mapy pomocí baterky?</Czech>
             <Italian>Luce della torcia in mappa?</Italian>
+            <French>Lumière de la lampe de carte ?</French>
+            <Japanese>地図をフラッシュライトで照らしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapGlow_Description">
             <English>Add external glow to players who use flashlight on map?</English>
@@ -56,6 +61,7 @@
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
             <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
+            <Japanese>プレイヤが地図上でフラッシュライトを使うと、照らすようにしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_DisplayName">
             <English>Map shake?</English>
@@ -64,10 +70,11 @@
             <German>Kamerawackeln</German>
             <Czech>Třesení mapy?</Czech>
             <Portuguese>Tremor de mapa?</Portuguese>
-            <French>Tremblement de la carte?</French>
+            <French>Tremblement de la carte ?</French>
             <Hungarian>Térkép-rázkódás?</Hungarian>
             <Russian>Тряска карты?</Russian>
             <Italian>Scuoti la mappa?</Italian>
+            <Japanese>地図を揺らしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapShake_Description">
             <English>Make map shake when walking?</English>
@@ -76,10 +83,11 @@
             <German>Kamerawackeln beim Gehen?</German>
             <Czech>Umožnit třesení mapy za pochodu?</Czech>
             <Portuguese>Tremer o mapa enquanto caminha?</Portuguese>
-            <French>La carte tremble lors d'un déplacement ?</French>
+            <French>Faire trembler la carte lors d'un déplacement?</French>
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
+            <Japanese>歩いているときは地図を揺らしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_DisplayName">
             <English>Limit map zoom?</English>
@@ -88,10 +96,11 @@
             <German>Kartenvergrößerung einschränken</German>
             <Czech>Omezit přiblížení mapy?</Czech>
             <Portuguese>Limitar zoom do mapa?</Portuguese>
-            <French>Limiter le zoom de la carte?</French>
+            <French>Limiter le zoom de la carte ?</French>
             <Hungarian>Térkép-nagyítás korlátozása?</Hungarian>
             <Russian>Ограничить приближение карты?</Russian>
             <Italian>Limita lo zoom in mappa?</Italian>
+            <Japanese>地図の拡大を制限しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapLimitZoom_Description">
             <English>Limit the amount of zoom available for the map?</English>
@@ -100,10 +109,11 @@
             <German>Schränkt die maximale Kartenvergrößerung ein.</German>
             <Czech>Omezit stupeň přiblížení pro mapu?</Czech>
             <Portuguese>Limitar a quantidade de zoom disponível para o mapa?</Portuguese>
-            <French>Limite le zoom maximum pour la carte?</French>
+            <French>Limiter le zoom maximum de la carte ?</French>
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
             <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
+            <Japanese>地図上で利用できる拡大倍率を制限しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_DisplayName">
             <English>Show cursor coordinates?</English>
@@ -116,6 +126,7 @@
             <Hungarian>Kurzor-koordináták mutatása?</Hungarian>
             <Russian>Показывать координаты курсора?</Russian>
             <Italian>Mostra coordinate sul cursore?</Italian>
+            <Japanese>カーソル先で座標を表示しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_MapShowCursorCoordinates_Description">
             <English>Show the grid coordinates on the mouse pointer?</English>
@@ -124,10 +135,11 @@
             <German>Gitter-Koordinaten auf dem Mauszeiger anzeigen?</German>
             <Czech>Zobrazit souřadnice u kurzoru v mapě?</Czech>
             <Portuguese>Mostrar as coordenadas de grade no ponteiro do mouse?</Portuguese>
-            <French>Affiche les coordonnées à coté du curseur ?</French>
+            <French>Afficher les coordonnées de la grille à coté du curseur ?</French>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
             <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
+            <Japanese>カーソルに合わせた先の地図座標を表示しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Module_Description">
             <English>This module allows you to customize the map screen.</English>
@@ -135,11 +147,12 @@
             <German>Dieses Modul erweitert die Kartenfunktionen.</German>
             <Czech>Tento modul umožňuje přizpůsobit mapu s obrazem.</Czech>
             <Portuguese>Este módulo permite que você personalize a tela de mapa.</Portuguese>
-            <French>Ce module permet de personnaliser l'écran de la carte</French>
+            <French>Ce module permet de personnaliser l'écran de la carte.</French>
             <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить отображение карты.</Russian>
             <Spanish>Este módulo permite personalizar la pantalla del mapa.</Spanish>
             <Italian>Questo modulo ti permette di customizzare lo schermo della mappa.</Italian>
+            <Japanese>モジュールは地図画面をカスタマイズできます。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_DisplayName">
             <English>Blue Force Tracking</English>
@@ -148,10 +161,11 @@
             <German>Blue Force Tracking</German>
             <Czech>Blue Force Tracking</Czech>
             <Portuguese>Rastreio de forças azuis</Portuguese>
-            <French>Blue Force Tracking</French>
+            <French>Blue Force Tracking (SFA)</French>
             <Hungarian>Blue Force követés</Hungarian>
             <Russian>Система слежения Blue Force Tracking</Russian>
             <Italian>Blue Force Tracking</Italian>
+            <Japanese>ブルー フォース トラッキング</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_DisplayName">
             <English>BFT Enable</English>
@@ -164,6 +178,7 @@
             <Hungarian>BFT engedélyezése</Hungarian>
             <Russian>Включить BFT</Russian>
             <Italian>Abilita BFT</Italian>
+            <Japanese>BFT を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Enabled_Description">
             <English>Enable Blue Force Tracking. Default: No</English>
@@ -172,10 +187,11 @@
             <Polish>Aktywuj Blue Force Tracking. Domyślnie: Nie</Polish>
             <Czech>Povolit Blue Force Tracking. Výchozí: Ne</Czech>
             <Spanish>Activar Blue Force Tracking. Por defecto: No</Spanish>
-            <French>Activer le SFA. Défaut: non</French>
+            <French>Active le SFA. Défaut : non</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По-умолчанию: Нет</Russian>
             <Italian>Abilita Blue Force Tracking. Default: No</Italian>
+            <Japanese>ブルー フォース トラッキングを有効化します。標準：無効</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_DisplayName">
             <English>Interval</English>
@@ -188,6 +204,7 @@
             <Hungarian>Intervallum</Hungarian>
             <Russian>Интервал</Russian>
             <Italian>Intervallo</Italian>
+            <Japanese>間隔</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Interval_Description">
             <English>How often the markers should be refreshed (in seconds)</English>
@@ -200,6 +217,7 @@
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
+            <Japanese>マーカが再描画される間隔を設定できます（秒）</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_DisplayName">
             <English>Hide AI groups?</English>
@@ -208,10 +226,11 @@
             <German>KI-Gruppen verstecken?</German>
             <Czech>Skrýt AI skupiny?</Czech>
             <Portuguese>Esconder grupos de IA?</Portuguese>
-            <French>Cacher les groupes IA ?</French>
+            <French>Cacher les groupes d'IA ?</French>
             <Hungarian>AI csoportok elrejtése?</Hungarian>
             <Russian>Скрыть группы ботов?</Russian>
             <Italian>Nascondere gruppi IA?</Italian>
+            <Japanese>AI グループを非表示にしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_HideAiGroups_Description">
             <English>Hide markers for 'AI only' groups?</English>
@@ -224,6 +243,7 @@
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
             <Italian>Nascondi markers per gruppi di sole IA?</Italian>
+            <Japanese>'AI のみ'グループのマーカを隠しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_DisplayName">
             <English>Show player names?</English>
@@ -232,10 +252,11 @@
             <German>Zeigen Sie die Namen der Spieler?</German>
             <Czech>Zobrazit jména hráčů?</Czech>
             <Portuguese>Mostrar os nomes dos jogadores?</Portuguese>
-            <French>Afficher les noms des joueurs?</French>
+            <French>Afficher les noms des joueurs ?</French>
             <Hungarian>Itt található az a játékos nevét?</Hungarian>
             <Russian>Показать имена игроков?</Russian>
             <Italian>Mostra i nomi dei giocatori?</Italian>
+            <Japanese>プレイヤ名を表示しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_ShowPlayerNames_Description">
             <English>Show individual player names?</English>
@@ -244,10 +265,11 @@
             <German>Zeigen einzelnen Spielernamen?</German>
             <Czech>Zobrazit názvy jednotlivých hráčů?</Czech>
             <Portuguese>Mostrar nomes individuais dos jogadores?</Portuguese>
-            <French>Afficher les noms des joueurs individuels?</French>
+            <French>Affiche les noms des joueurs individuels ?</French>
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
             <Russian>Показать отдельные имена игроков?</Russian>
             <Italian>Mostra i nomi dei giocatori singoli?</Italian>
+            <Japanese>プレイヤの名前を表示しますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_BFT_Module_Description">
             <English>This module allows the tracking of allied units with BFT map markers.</English>
@@ -260,6 +282,7 @@
             <Russian>Этот модуль позволяет отслеживать перемещение союзных войск по карте при помощи маркеров BFT.</Russian>
             <Spanish>Este módulo permite el seguimiento de las unidades aliadas con marcadores de mapa BFT.</Spanish>
             <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
+            <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_Flashlights">
             <English>Flashlights</English>
@@ -271,39 +294,43 @@
             <Czech>Svítilny</Czech>
             <Spanish>Linternas</Spanish>
             <Italian>Torcia</Italian>
+            <Japanese>フラッシュライト</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVG">
             <English>NVG</English>
             <German>NSG</German>
             <Polish>Noktowizja</Polish>
             <Portuguese>Óculos de Visão Noturna</Portuguese>
-            <French>Lunettes de vision nocturne</French>
+            <French>JVN</French>
             <Russian>ПНВ</Russian>
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
             <Italian>NVG</Italian>
+            <Japanese>夜間暗視装置</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOn">
             <English>On</English>
             <German>Ein</German>
             <Polish>Włącz</Polish>
             <Portuguese>Ligado</Portuguese>
-            <French>Allumer</French>
+            <French>Allumé</French>
             <Russian>Вкл.</Russian>
             <Czech>Zapnout</Czech>
             <Spanish>Encendido</Spanish>
             <Italian>Acceso</Italian>
+            <Japanese>起動</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGOff">
             <English>Off</English>
             <German>Aus</German>
             <Polish>Wyłącz</Polish>
             <Portuguese>Desligado</Portuguese>
-            <French>Éteindre</French>
+            <French>Éteins</French>
             <Russian>Выкл.</Russian>
             <Czech>Vypnout</Czech>
             <Spanish>Apagado</Spanish>
             <Italian>Spento</Italian>
+            <Japanese>停止</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGUp">
             <English>Increase Brightness</English>
@@ -315,6 +342,7 @@
             <Czech>Zvýšit jas</Czech>
             <Spanish>Aumentar brillo</Spanish>
             <Italian>Aumenta Luminosità</Italian>
+            <Japanese>感度を上げる</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_Action_NVGDown">
             <English>Decrease Brightness</English>
@@ -326,6 +354,7 @@
             <Czech>Snížit jas</Czech>
             <Spanish>Reducir brillo</Spanish>
             <Italian>Diminuisci Luminosità</Italian>
+            <Japanese>感度を下げる</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOn">
             <English>Turn On %1</English>
@@ -338,6 +367,7 @@
             <Hungarian>%1 Bekapcsolása</Hungarian>
             <Portuguese>Ativar %1</Portuguese>
             <Russian>Активировать %1</Russian>
+            <Japanese>%1 を点ける</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_turnLightOff">
             <English>Turn Off %1</English>
@@ -350,6 +380,7 @@
             <Hungarian>%1 Kikapcsolása</Hungarian>
             <Portuguese>Desativar %1</Portuguese>
             <Russian>Деактивировать %1</Russian>
+            <Japanese>%1 を消す</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_DisplayName">
             <English>Set Channel At Start</English>
@@ -360,6 +391,8 @@
             <Czech>Zvolit kanál po startu</Czech>
             <Italian>Imposta Canale all'Avvio</Italian>
             <Spanish>Setear canal al comenzar</Spanish>
+            <French>Mettre un canal par défaut</French>
+            <Japanese>開始時のチャンネルを決定</Japanese>
         </Key>
         <Key ID="STR_ACE_Map_DefaultChannel_Description">
             <English>Change the starting marker channel at mission start</English>
@@ -370,6 +403,18 @@
             <Czech>Nastavit kanál po startu mise</Czech>
             <Italian>Cambia il canale marker iniziale all'avvio di missione</Italian>
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
+            <French>Change le canal de communication par défaut au début de la mission.</French>
+            <Japanese>ミッション開始時にあらかじめ設定されているマーカ チャンネルを変更します</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Map_disableBFT">
+            <English>Disable BFT</English>
+            <German>BFT deaktivieren</German>
+            <Japanese>BFTを無効化</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Map_disableBFT_description">
+            <English>Always disable Blue Force Tracking for this group.</English>
+            <German>Blue Force Tracking für diese Gruppe immer deaktivieren.</German>
+            <Japanese>このグループへのブルー フォース トラッキングを常に無効化します。</Japanese>
         </Key>
     </Package>
 </Project>

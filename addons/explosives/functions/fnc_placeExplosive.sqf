@@ -27,7 +27,7 @@ TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificV
 
 private ["_ammo", "_explosive", "_attachedTo", "_magazineTrigger", "_pitch", "_digDistance", "_canDigDown", "_soundEnviron", "_surfaceType"];
 
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _attachedTo = objNull;
 if (!isNull _setupPlaceholderObject) then {
@@ -36,7 +36,7 @@ if (!isNull _setupPlaceholderObject) then {
 };
 
 if (isNil "_triggerConfig") exitWith {
-    ACE_LOGERROR_1("Config not passed to PlaceExplosive: %1",_this);
+    ERROR_1("Config not passed to PlaceExplosive: %1",_this);
     objNull
 };
 
@@ -44,7 +44,7 @@ _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Trigge
 _triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-    ACE_LOGERROR_1("Config not found in PlaceExplosive: %1",_this);
+    ERROR_1("Config not found in PlaceExplosive: %1",_this);
     objNull
 };
 
@@ -95,6 +95,6 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
 _pitch = getNumber (_magazineTrigger >> "pitch");
 
 //Globaly set the position and angle:
-[QGVAR(place), [_explosive, _dir, _pitch, _unit]] call EFUNC(common,globalEvent);
+[QGVAR(place), [_explosive, _dir, _pitch, _unit]] call CBA_fnc_globalEvent;
 
 _explosive

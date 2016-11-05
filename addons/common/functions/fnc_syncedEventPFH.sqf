@@ -18,11 +18,8 @@ if (!isServer) exitWith {false};
 // Walk through the local synced events and clean up anything thats already EOL
 // @TODO: This should be iteration limited to prevent FPS lag
 
-{
-    private _name = _x;
-
-    private _data = HASH_GET(GVAR(syncedEvents),_name);
-    _data params ["_eventTime", "_eventLog", "_globalEventTTL"];
+[GVAR(syncedEvents), {
+    _value params ["_eventTime", "_eventLog", "_globalEventTTL"];
 
     private _newEventLog = [];
 
@@ -34,7 +31,7 @@ if (!isServer) exitWith {false};
         if (_globalEventTTL isEqualType {}) then {
             _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
         } else {
-            _ttlReturn = call {_globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL}};
+            _ttlReturn = call {_globalEventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _globalEventTTL}};
         };
 
         if (_ttlReturn) then {
@@ -44,7 +41,7 @@ if (!isServer) exitWith {false};
             if (_eventTTL isEqualType {}) then {
                 _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
             } else {
-                _ttlReturn = call {_eventTTL < 1 || {ACE_diagTime < _time + _eventTTL}};
+                _ttlReturn = call {_eventTTL < 1 || {diag_tickTime < _time + _eventTTL}};
             };
         };
 
@@ -55,8 +52,8 @@ if (!isServer) exitWith {false};
         false
     } count _eventLog;
 
-    _data set [1, _newEventLog];
+    _value set [1, _newEventLog];
     false
-} count (GVAR(syncedEvents) select 0);
+}] call CBA_fnc_hashEachPair;
 
 // @TODO: Next, detect if we had a new request from a JIP player, and we need to continue syncing events

@@ -27,12 +27,19 @@ if (isNull _projectile) then {
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
-// handle special grenades
+// handle special grenades and sounds
 if (local _unit) then {
+    // handle priming sound, if present
+    private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
+    if !(_soundConfig isEqualTo []) then {
+        _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
+        playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
+    };
+
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
         private _fuzeTime = getNumber (_config >> "explosionTime");
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call EFUNC(common,waitAndExecute);
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
     };
 };
 
@@ -42,11 +49,19 @@ if (getNumber (_config >> QGVAR(flare)) == 1) then {
     private _color = getArray (_config >> QGVAR(color));
     private _intensity = _color deleteAt 3;
 
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+};
+
+if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
+    private _fuzeTime = getNumber (_config >> "explosionTime");
+    private _timeToLive = getNumber (_config >> "timeToLive");
+
+    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
 };
 
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
+if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 

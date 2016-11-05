@@ -1,0 +1,71 @@
+---
+layout: compress
+---
+
+{% include _header.html %}
+
+<main>
+    {% if page.version %}
+    <div class="row">
+        <div class="medium-8 small-12 columns">
+            <span>
+            {% if page.version.removed %}
+                {% assign type = 'removed' %}
+                {% assign typeCapital = 'Removed' %}
+            {% else %}
+                {% assign type = 'added' %}
+                {% assign typeCapital = 'Added' %}
+            {% endif %}
+
+            {% if page.mod == 'ace' %}
+
+                {% if page.version.major > site.ace.version.major %}
+                    <em>Will be {{type}} in ACE3 v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% elsif page.version.major == site.ace.version.major and page.version.minor > site.ace.version.minor %}
+                    <em>Will be {{type}} in ACE3 v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% elsif page.version.major == site.ace.version.major and page.version.minor == site.ace.version.minor and page.version.patch > site.ace.version.patch %}
+                    <em>Will be {{type}} in ACE3 v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% else %}
+                    <em>{{typeCapital}} in ACE3 v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% endif %}
+
+            {% elsif page.mod == 'acex' %}
+
+                {% if page.version.major > site.acex.version.major %}
+                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% elsif page.version.major == site.acex.version.major and page.version.minor > site.acex.version.minor %}
+                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% elsif page.version.major == site.acex.version.major and page.version.minor == site.acex.version.minor and page.version.patch > site.acex.version.patch %}
+                    <em>Will be {{type}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% else %}
+                    <em>{{typeCapital}} in ACEX v{{page.version.major}}.{{page.version.minor}}.{{page.version.patch}}</em>
+                {% endif %}
+
+            {% endif %}
+            </span>
+        </div>
+    </div>
+    {% endif %}
+    <div class="row">
+        <aside class="medium-4 medium-push-8 small-12 columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <p><a href="./"><i class="fa fa-1 fa-chevron-left"></i>&nbsp;&nbsp;Back to overview</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2 class="toc-header">Table of contents</h2>
+                    <div id="toc"></div>
+                </div>
+            </div>
+        </aside>
+        <section class="medium-8 medium-pull-4 small-12 columns">
+            <h1>{{page.title}}</h1>
+
+            <div id="content">{{ content }}</div>
+        </section>
+    </div>
+</main>
+
+{% include _footer.html %}

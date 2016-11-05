@@ -19,8 +19,7 @@
 
 params ["_vehicle", "_player"];
 
-private "_actions";
-_actions = [];
+private _actions = [];
 
 {
     private _unit = _x;
@@ -34,7 +33,7 @@ _actions = [];
         ] select (([driver _vehicle, gunner _vehicle, commander _vehicle] find _unit) + 1);
 
         if (_unit getVariable [QEGVAR(captives,isHandcuffed), false]) then {
-            _icon = QUOTE(PATHTOEF(captives,UI\handcuff_ca.paa));
+            _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
         };
 
         _actions pushBack [

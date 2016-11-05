@@ -2,6 +2,12 @@
 class CfgMagazines {
 
     class CA_Magazine;
+    class 30Rnd_580x42_Mag_F: CA_Magazine {
+        initSpeed = 930;
+    };
+    class 100Rnd_580x42_Mag_F: 30Rnd_580x42_Mag_F {
+        initSpeed = 930;
+    };
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 760;
     };
@@ -47,6 +53,10 @@ class CfgMagazines {
         descriptionShort = CSTRING(30Rnd_65x39_caseless_green_mag_Tracer_DimDescription);
     };
 
+    class 30Rnd_545x39_Mag_F: CA_Magazine {
+        initSpeed = 735;
+    };
+    
     class 30Rnd_556x45_Stanag: CA_Magazine {
     };
     class ACE_30Rnd_556x45_Stanag_M995_AP_mag: 30Rnd_556x45_Stanag {
@@ -82,6 +92,14 @@ class CfgMagazines {
         displayNameShort = CSTRING(30Rnd_556x45_mag_Tracer_DimNameShort);
         descriptionShort = CSTRING(30Rnd_556x45_mag_Tracer_DimDescription);
         picture = "\A3\weapons_f\data\ui\m_20stanag_red_ca.paa";
+    };
+
+    class 200Rnd_556x45_Box_F: CA_Magazine {
+        initSpeed = 872;
+    };
+    
+    class 30Rnd_762x39_Mag_F: CA_Magazine {
+        initSpeed = 715;
     };
     
     class 20Rnd_762x51_Mag: CA_Magazine {
@@ -121,7 +139,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(20Rnd_762x51_mag_SDDescription);
         initSpeed = 325;
     };
-    
+
     class ACE_10Rnd_762x51_M118LR_Mag: 10Rnd_762x51_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_762x51_Ball_M118LR";
@@ -247,7 +265,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(10Rnd_338_API526_Mag_Description);
         initSpeed = 880;
     };
-    
+
     class 5Rnd_127x108_Mag;
     class ACE_5Rnd_127x99_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
@@ -273,10 +291,10 @@ class CfgMagazines {
         descriptionShort = CSTRING(5Rnd_127x99_AMAX_Mag_Description);
         initSpeed = 860;
     };
-    
-    
+
+
     class 30Rnd_9x21_Mag: CA_Magazine {
-        initSpeed = 450;
+        initSpeed = 390;
     };
     class ACE_30Rnd_9x19_mag: 30Rnd_9x21_Mag {
         author = ECSTRING(common,ACETeam);
@@ -286,29 +304,36 @@ class CfgMagazines {
         descriptionShort = CSTRING(30Rnd_9x19_mag_Description);
         initSpeed = 370;
     };
+
+    class 10Rnd_50BW_Mag_F: CA_Magazine {
+        initSpeed = 552;
+    };
     
     class 11Rnd_45ACP_Mag: CA_Magazine {
         initSpeed = 250;
     };
-    
+
     class 6Rnd_45ACP_Cylinder : 11Rnd_45ACP_Mag {
         initSpeed = 250;
     };
-    
+
     class 30Rnd_45ACP_Mag_SMG_01: 30Rnd_9x21_Mag {
         initSpeed = 250;
     };
-    
+
     class 9Rnd_45ACP_Mag: 30Rnd_45ACP_Mag_SMG_01 {
         initSpeed = 250;
     };
-    
+
     class 30Rnd_45ACP_Mag_SMG_01_Tracer_Green: 30Rnd_45ACP_Mag_SMG_01 {
         initSpeed = 250;
     };
-    
+
     class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag {
-        initSpeed = 450;
+        initSpeed = 390;
+    };
+    class 10Rnd_9x21_Mag: 16Rnd_9x21_Mag {
+        initSpeed = 390;
     };
     class ACE_16Rnd_9x19_mag: 16Rnd_9x21_Mag {
         author = ECSTRING(common,ACETeam);
@@ -318,7 +343,7 @@ class CfgMagazines {
         descriptionShort = CSTRING(16Rnd_9x19_mag_Description);
         initSpeed = 370;
     };
-    
+
     class 10Rnd_762x54_Mag: 10Rnd_762x51_Mag {
         initSpeed = 800;
     };
@@ -331,15 +356,15 @@ class CfgMagazines {
         initSpeed = 800;
         tracersEvery = 1;
     };
-    
+
     class 150Rnd_762x54_Box: 150Rnd_762x51_Box {
         initSpeed = 750;
     };
-    
+
     class 150Rnd_93x64_Mag: CA_Magazine {
         initSpeed = 860;
     };
-    
+
     class 10Rnd_127x54_Mag: CA_Magazine {
         initSpeed = 300;
     };

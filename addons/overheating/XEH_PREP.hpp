@@ -1,5 +1,9 @@
 
+PREP(calculateCooling);
 PREP(canUnjam);
+PREP(canSwapBarrel);
+PREP(canCheckSpareBarrelsTemperatures);
+PREP(checkSpareBarrelsTemperatures);
 PREP(checkTemperature);
 PREP(clearJam);
 PREP(displayTemperature);
@@ -7,8 +11,12 @@ PREP(firedEH);
 PREP(getWeaponData);
 PREP(handleTakeEH);
 PREP(jamWeapon);
+PREP(loadCoolestSpareBarrel);
 PREP(overheat);
+PREP(sendSpareBarrelsTemperaturesHint);
 PREP(swapBarrel);
+PREP(swapBarrelAssistant);
 PREP(swapBarrelCallback);
+PREP(updateSpareBarrelsTemperaturesThread);
 PREP(updateTemperature);
 PREP(updateTemperatureThread);

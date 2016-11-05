@@ -2,10 +2,10 @@
  * Author: esteldunedain
  * Update cooldown calculation of all player weapons at regular intervals.
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -22,4 +22,4 @@ if ((_currentWeapon != "") && {_currentWeapon == primaryWeapon ACE_player || {_c
 };
 
 // Schedule for execution again after 5 seconds
-[DFUNC(updateTemperatureThread), [], 5] call EFUNC(common,waitAndExecute);
+[DFUNC(updateTemperatureThread), [], 5] call CBA_fnc_waitAndExecute;

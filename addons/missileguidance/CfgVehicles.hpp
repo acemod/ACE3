@@ -1,24 +1,20 @@
 class CfgVehicles {
-
-    class AllVehicles;
-    class Air: AllVehicles {
+    class Air;
+    class Helicopter: Air {
         class Turrets;
     };
-
-    class Helicopter: Air {
-        class Turrets {
-            class MainTurret;
-        };
-    };
-    class Helicopter_Base_F: Helicopter {};
-    class Heli_Attack_01_base_F: Helicopter_Base_F {};
-    class B_Heli_Attack_01_F : Heli_Attack_01_base_F {
+    class Helicopter_Base_F: Helicopter {
         class Turrets: Turrets {
             class MainTurret;
         };
     };
-    
-    class ACE_Comanche_Test : B_Heli_Attack_01_F {
+    class Heli_Attack_01_base_F: Helicopter_Base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {};
+        };
+    };
+    class B_Heli_Attack_01_F: Heli_Attack_01_base_F {};
+    class ACE_Comanche_Test : B_Heli_Attack_01_F { // Comanche testbed (Hidden: Scope=1)
         scope = 1;
         scopeCurator = 0;
         displayName = "ACE_Comanche_Test";
@@ -28,9 +24,9 @@ class CfgVehicles {
         };
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "24Rnd_ACE_Hellfire_AGM114K"};
+                weapons[] = {"gatling_20mm", "ace_missileguidance_dagr", "Laserdesignator_mounted"};
+                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "6Rnd_ACE_Hydra70_DAGR", "Laserbatteries"};
             };
         };
     };
-    
 };

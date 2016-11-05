@@ -19,7 +19,7 @@ class CfgVehicles {
                  statement = QUOTE([_player] call FUNC(cutParachute));
                  showDisabled = 0;
                  priority = 2.9;
-                 icon = QUOTE(PATHTOF(UI\cut_ca.paa));
+                 icon = QPATHTOF(UI\cut_ca.paa);
              };
          };
      };
@@ -83,7 +83,8 @@ class CfgVehicles {
         //model = "\A3\Weapons_F\Ammoboxes\Bags\Backpack_Parachute";    // @todo
         // backpackSimulation = "ParachuteNonSteerable";    //ParachuteSteerable  //Bis broke this in 1.40
         ParachuteClass = "NonSteerable_Parachute_F";
-        MACRO_HASRESERVE
+        ace_hasReserveParachute = 1;
+        ace_reserveParachute = "ACE_NonSteerableReserveParachute";
         maximumLoad = 0;
         mass = 100;
     };
@@ -96,6 +97,10 @@ class CfgVehicles {
         ParachuteClass = "Steerable_Parachute_F";
         ace_reserveParachute = "";
         ace_hasReserveParachute = 0;
+    };
+    
+    class ACE_NonSteerableReserveParachute: ACE_ReserveParachute {
+        ParachuteClass = "NonSteerable_Parachute_F";
     };
 
     class B_Soldier_05_f; class B_Pilot_F: B_Soldier_05_f {backpack = "ACE_NonSteerableParachute";};

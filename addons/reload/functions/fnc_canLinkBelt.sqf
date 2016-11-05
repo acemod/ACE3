@@ -2,12 +2,17 @@
  * Author: esteldunedain
  * Check if the target has an MG equiped with belt system that the player can link
  *
- * Argument:
+ * Arguments:
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can link belt<BOOL>
+ *
+ * Example:
+ * [player, cursorObject] call ace_reload_fnc_canLinkBelt;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

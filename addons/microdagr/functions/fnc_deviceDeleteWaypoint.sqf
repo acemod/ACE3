@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private "_waypoints";
 params ["_wpIndex"];
 
-_waypoints = ACE_player getVariable [QGVAR(waypoints), []];
+private _waypoints = ACE_player getVariable [QGVAR(waypoints), []];
 
 if ((_wpIndex < 0) || (_wpIndex > ((count _waypoints) - 1))) exitWith {ERROR("out of bounds wp");};
 

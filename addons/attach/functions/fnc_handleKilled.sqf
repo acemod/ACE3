@@ -19,11 +19,9 @@
 params ["_deadUnit"];
 TRACE_1("params",_deadUnit);
 
-private ["_attachedList"];
+private _attachedList = _deadUnit getVariable [QGVAR(attached), []];
 
-_attachedList = _deadUnit getVariable [QGVAR(attached), []];
-
-if ((count _attachedList) == 0) exitWith {};
+if (_attachedList isEqualTo []) exitWith {};
 
 {
     _x params ["_xObject"];
@@ -32,7 +30,7 @@ if ((count _attachedList) == 0) exitWith {};
     //If it's a vehicle, also delete the attached
     if (!(_deadUnit isKindOf "CAManBase")) then {
         _xObject setPos ((getPos _deadUnit) vectorAdd [0, 0, -1000]);
-        [{deleteVehicle (_this select 0)}, [_xObject], 2] call EFUNC(common,waitAndExecute);
+        [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
     };
 } forEach _attachedList;
 

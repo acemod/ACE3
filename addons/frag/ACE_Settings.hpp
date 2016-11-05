@@ -1,19 +1,19 @@
 class ACE_Settings {
-    class GVAR(Enabled) {
+    class GVAR(enabled) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(EnableFrag);
         description = CSTRING(EnableFrag_Desc);
         typeName = "BOOL";
         value = 1;
     };
-    class GVAR(SpallEnabled) {
+    class GVAR(spallEnabled) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(EnableSpall);
         description = CSTRING(EnableSpall_Desc);
         typeName = "BOOL";
         value = 0;
     };
-    class GVAR(ReflectionsEnabled) {
+    class GVAR(reflectionsEnabled) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(EnableReflections);
         description = CSTRING(EnableReflections_Desc);
@@ -27,15 +27,14 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 500;
     };
-    class GVAR(MaxTrackPerFrame) {
+    class GVAR(maxTrackPerFrame) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(MaxTrackPerFrame);
         description = CSTRING(MaxTrackPerFrame_Desc);
         typeName = "SCALAR";
         value = 50;
     };
-
-    class GVAR(EnableDebugTrace) {
+    class GVAR(enableDebugTrace) {
         category = CSTRING(Module_DisplayName);
         displayName = CSTRING(EnableDebugTrace);
         description = CSTRING(EnableDebugTrace_Desc);

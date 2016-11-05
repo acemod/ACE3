@@ -40,4 +40,8 @@ detach _carriedItem;
 _carriedItem setPosATL _position;
 _carriedItem attachTo [_unit];
 
+//reset the carry direction
+private _direction = _carriedItem getVariable [QGVAR(carryDirection), 0];
+[QEGVAR(common,setDir), [_carriedItem, _direction], _carriedItem] call CBA_fnc_targetEvent;
+
 true

@@ -1,3 +1,4 @@
+
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -8,41 +9,34 @@
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 class GVAR(TakeNozzle) { \
                     displayName = CSTRING(TakeNozzle); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
                     statement = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(TakeNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuelCounter) { \
                     displayName = CSTRING(CheckFuelCounter); \
                     condition = "true"; \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(readFuelCounter)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(CheckFuel) { \
                     displayName = CSTRING(CheckFuel); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckFuel)); \
                     statement = QUOTE([ARR_2(_player,_target)] call FUNC(checkFuel)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
                     statement = QUOTE([ARR_2(_player,_target)] call DFUNC(returnNozzle)); \
                     exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
             }; \
         }; \
@@ -51,21 +45,13 @@
 #define MACRO_CONNECT_ACTIONS \
     class ACE_Actions { \
         class ACE_MainActions { \
-            class GVAR(Refuel) { \
-                displayName = CSTRING(Refuel); \
+            class GVAR(Connect) { \
+                displayName = CSTRING(Connect); \
                 distance = REFUEL_ACTION_DISTANCE; \
-                condition = "true"; \
-                statement = ""; \
-                showDisabled = 0; \
-                priority = 2; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = PATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
+                exceptions[] = {"isNotInside"}; \
             }; \
         }; \
     };
@@ -75,48 +61,51 @@
         class ACE_MainActions { \
             displayName = CSTRING(Refuel); \
             distance = REFUEL_ACTION_DISTANCE; \
+            position = "[0,-0.025,0.125]"; \
             condition = "true"; \
             statement = ""; \
             showDisabled = 0; \
             priority = 2; \
-            icon = PATHTOF(ui\icon_refuel_interact.paa); \
+            icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(TakeNozzle)); \
+                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(takeNozzle)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOn) { \
                 displayName = CSTRING(TurnOn); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOn)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOn)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(TurnOff) { \
                 displayName = CSTRING(TurnOff); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTurnOff)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(turnOff)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
             class GVAR(Disconnect) { \
                 displayName = CSTRING(Disconnect); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDisconnect)); \
                 statement = QUOTE([ARR_2(_player,_target)] call DFUNC(disconnect)); \
                 exceptions[] = {"isNotInside"}; \
-                icon = PATHTOF(ui\icon_refuel_interact.paa); \
+                icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
         }; \
     };
+
+class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
     class ACE_Module;
     class ACE_moduleRefuelSettings: ACE_Module {
         scope = 2;
         displayName = CSTRING(RefuelSettings_Module_DisplayName);
-        icon = QUOTE(PATHTOF(ui\icon_module_refuel.paa));
+        icon = QPATHTOF(ui\icon_module_refuel.paa);
         category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
@@ -134,30 +123,29 @@ class CfgVehicles {
     };
 
     class ThingX;
-    class ACE_refuel_fuelNozzle: ThingX {
-        XEH_ENABLED;
+    class GVAR(fuelNozzle): ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         MACRO_NOZZLE_ACTIONS
         displayName = QGVAR(fuelNozzle);
         scope = 1;
         scopeCurator = 1;
-        model = PATHTOF(data\nozzle.p3d);
+        model = QPATHTOF(data\nozzle.p3d);
     };
 
     class All;
-
     class Static: All {};
-
     class Building: Static {};
-
     class NonStrategic: Building {};
-
     class HouseBase: NonStrategic {};
-
     class House: HouseBase {};
-
     class House_F: House {};
 
     class House_Small_F: House_F {
+        class EventHandlers;
+
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
@@ -192,18 +180,13 @@ class CfgVehicles {
 
     class Helicopter: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 1500;
     };
 
     class Helicopter_Base_F: Helicopter {};
-
-    class Helicopter_Base_H: Helicopter_Base_F {
-        GVAR(fuelCapacity) = 3000;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
 
     class Plane: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 16;
     };
 
@@ -213,7 +196,6 @@ class CfgVehicles {
 
     class Ship_F: Ship {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 4;
     };
 
@@ -317,10 +299,15 @@ class CfgVehicles {
     };
 
     class Van_01_fuel_base_F: Van_01_base_F {
-        transportFuel = 0; //1k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.38,-3.17,-.7},{-0.41,-3.17,-.7}};
         GVAR(fuelCargo) = 2000;
+    };
+    class C_Van_01_fuel_F: Van_01_fuel_base_F {
+        transportFuel = 0; //1k
+    };
+    class I_G_Van_01_fuel_F: Van_01_fuel_base_F {
+        transportFuel = 0; //1k
     };
 
     class Tank_F: Tank {
@@ -380,19 +367,6 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 830;
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        // Commanche
-    };
-
-    class Heli_Attack_02_base_F: Helicopter_Base_F {
-        // Mi-48 Kajman
-    };
-
-    class Heli_Light_01_base_F: Helicopter_Base_H {
-        // MH-6
-        GVAR(fuelCapacity) = 242;
-    };
-
     class Heli_Light_02_base_F: Helicopter_Base_H {
         // Ka-60 Kasatka
         GVAR(fuelCapacity) = 1450;
@@ -446,11 +420,6 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 270;
     };
 
-    class UGV_01_base_F: Car_F {
-        // Stomper
-        GVAR(fuelCapacity) = 100;
-    };
-
     class Plane_Fighter_03_base_F: Plane_Base_F {
         // L-159 ALCA
         GVAR(fuelCapacity) = 1914;
@@ -478,20 +447,23 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class Slingload_base_F;
-    class Slingload_01_Base_F: Slingload_base_F {
+    class ReammoBox_F: ThingX {
         class ACE_Actions {
-            class ACE_MainActions {
-                displayName = ECSTRING(interaction,MainAction);
-                selection = "";
-                distance = 10;
-                condition = "true";
-            };
+            class ACE_MainActions {};
         };
     };
+    class Slingload_base_F: ReammoBox_F {};
 
-    class B_Slingload_01_Fuel_F: Slingload_01_Base_F  {
-        XEH_ENABLED;
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {};
+    class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
+        transportFuel = 0; //3k
+        MACRO_REFUEL_ACTIONS
+        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
+        GVAR(fuelCargo) = 10000;
+    };
+
+    class Slingload_01_Base_F: Slingload_base_F {};
+    class B_Slingload_01_Fuel_F: Slingload_01_Base_F {
         transportFuel = 0; //3k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0.55,3.02,-0.5},{-0.52,3.02,-0.5}};
@@ -505,13 +477,6 @@ class CfgVehicles {
         GVAR(fuelCargo) = 10000;
     };
 
-    class Pod_Heli_Transport_04_base_F: StaticWeapon {};
-    class Land_Pod_Heli_Transport_04_fuel_F: Pod_Heli_Transport_04_base_F {
-        transportFuel = 0; //3k
-        MACRO_REFUEL_ACTIONS
-        GVAR(hooks)[] = {{-1.49,1.41,-.3}};
-        GVAR(fuelCargo) = 10000;
-    };
 
     class StorageBladder_base_F: NonStrategic {
         class ACE_Actions {
@@ -524,7 +489,10 @@ class CfgVehicles {
         };
     };
     class Land_StorageBladder_01_F: StorageBladder_base_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         MACRO_REFUEL_ACTIONS
         transportFuel = 0; //60k
         GVAR(hooks)[] = {{-3.35,2.45,0.17}};
@@ -533,7 +501,10 @@ class CfgVehicles {
 
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
@@ -541,7 +512,10 @@ class CfgVehicles {
     };
 
     class Land_fs_feed_F: House_Small_F {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};

@@ -29,6 +29,7 @@ Walter Pearce <jaynus@gmail.com>
 # CONTRIBUTORS
 [BIG]Bull
 11RDP-LoupVert <loupvert@11rdp.fr>
+654wak654 <ozanegitmen@gmail.com>
 ACCtomeek <tomeek99@gmail.com>
 adam3adam <br.ada@seznam.cz>
 Adanteh
@@ -65,6 +66,7 @@ F3 Project <alanr@ferstaberinde.com>
 Falke75
 Ferenczi
 Ferenzi
+FFAAMOD <modffaa@gmail.com>
 Filip Basara <filip.basara93@googlemail.com>
 fr89k <kaschitoku@web.de>
 FreeZbe <freeseb@gmail.com>
@@ -74,6 +76,7 @@ Gianmarco Varriale (TeamNuke) <admin@forhost.org>
 GieNkoV <gienkov.grzegorz@gmail.com>
 GitHawk <githawk@gmx.net>
 gpgpgpgp
+Grey-Soldierman <gungamer101@hotmail.com>
 Grzegorz
 Hamburger SV
 Harakhti <shadowdragonphd@gmail.com>
@@ -86,6 +89,7 @@ Kllrt <kllrtik@gmail.com>
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
+looter <looter222@gmail.com>
 Macusercom <macusercom@gmail.com>
 MarcBook
 meat <p.humberdroz@gmail.com>
@@ -106,10 +110,12 @@ Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
 simon84 <badguy360th@gmail.com>
+Skengman2
 Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
 Tachi <zaveruha007@gmail.com>
+Tessa Elieff <Fastroping Sound - CreativeCommons Attributions 3.0>
 Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
@@ -118,4 +124,3 @@ voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
 Winter <simon@agius-muscat.net>
 zGuba
-Grey-Soldierman <gungamer101@hotmail.com>

@@ -16,39 +16,38 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_player,_newVehicle);
-
-private["_tubeWeaponName" ,"_fireModes", "_lastFireMode"];
+params ["_player", "_newVehicle"];
 
 if (isNull _newVehicle) exitWith {};
 if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
 
 // Run magazine handling initialization if enabled
-if (!EGVAR(common,settingsInitFinished)) then {
-    EGVAR(common,runAtSettingsInitialized) pushBack [{
-        if (GVAR(useAmmoHandling) && {!(_this getVariable [QGVAR(initialized),false]) && !(_this getVariable [QGVAR(exclude),false])}) then {
-            _this call FUNC(mortarInit);
+if (!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])) then {
+    // Make sure that mortar init is executed after settings init
+    [{
+        params ["_mortar"];
+        if (GVAR(useAmmoHandling) && {!(_mortar getVariable [QGVAR(initialized),false]) && !(_mortar getVariable [QGVAR(exclude),false])}) then {
+            //wait for proper turret locality change
+            [{
+                ["ace_initMortar", [_this], [_this]] call CBA_fnc_globalEvent;
+            }, _mortar, 0.05] call CBA_fnc_waitAndExecute;
         };
-    }, _newVehicle];
-} else {
-    if (GVAR(useAmmoHandling) && {!(_newVehicle getVariable [QGVAR(initialized),false]) && !(_newVehicle getVariable [QGVAR(exclude),false])}) then {
-        _newVehicle call FUNC(mortarInit);
-    };
+    }, _newVehicle] call EFUNC(common,runAfterSettingsInit);
 };
 
-_tubeWeaponName = (weapons _newVehicle) select 0;
-_fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
+private _tubeWeaponName = (weapons _newVehicle) select 0;
+private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
 
 //Restore last firemode:
-_lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
+private _lastFireMode = _newVehicle getVariable [QGVAR(lastFireMode), -1];
 if (_lastFireMode != -1) then {
     _player action ["SwitchWeapon", _newVehicle, _player, _lastFireMode];
 };
 
 [{
-    private["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
-    PARAMS_2(_args,_pfID);
-    EXPLODE_2_PVT(_args,_mortarVeh,_fireModes);
+    private ["_chargeText", "_currentChargeMode", "_currentFireMode", "_display", "_elevDeg", "_elevationDiff", "_lookVector", "_notGunnerView", "_realAzimuth", "_realElevation", "_upVectorDir", "_useMils", "_weaponDir"];
+    params ["_args", "_pfID"];
+    _args params ["_mortarVeh", "_fireModes"];
 
     if ((vehicle ACE_player) != _mortarVeh) then {
         [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -72,7 +71,7 @@ if (_lastFireMode != -1) then {
         _display = uiNamespace getVariable ["ACE_Mk6_RscWeaponRangeArtillery", displayNull];
         if (isNull _display) exitWith {}; //It may be null for the first frame
 
-        _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QUOTE(PATHTOF(UI\ui_charges.paa))];
+        _chargeText = format ["<t size='0.8'>%1: %2 <img image='%3'/></t>", (localize LSTRING(rangetable_charge)), _currentChargeMode, QPATHTOF(UI\ui_charges.paa)];
 
         //Hud should hidden in 3rd person
         _notGunnerView = cameraView != "GUNNER";
@@ -81,7 +80,19 @@ if (_lastFireMode != -1) then {
         //(looking at the sky VS looking at ground will radicaly change fire direction because BIS)
         _realAzimuth = -1;
         _realElevation = -1;
-        if ((ctrlText (_display displayCtrl 173)) == "--") then {
+
+        private _useRealWeaponDir = (ctrlText (_display displayCtrl 173)) == "--";
+        if (_useRealWeaponDir && {(_mortarVeh ammo (currentWeapon _mortarVeh)) == 0}) then {
+            // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
+            private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
+            private _testSeekerDir = _testSeekerPosASL vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
+            private _testPoint = _testSeekerPosASL vectorAdd (_testSeekerDir vectorMultiply viewDistance);
+            if ((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint]}) then {
+                _useRealWeaponDir = false; // If we are not looking at infinity (based on viewDistance)
+            };
+        };
+
+        if (_useRealWeaponDir) then {
             //No range (looking at sky), it will follow weaponDir:
             _weaponDir = _mortarVeh weaponDirection (currentWeapon _mortarVeh);
             _realAzimuth = (_weaponDir select 0) atan2 (_weaponDir select 1);

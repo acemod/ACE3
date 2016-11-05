@@ -1,0 +1,17 @@
+<nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+        <li class="name">
+            <h3><a href="{{ site.baseurl }}/index.html"><img src="{{ site.baseurl }}/img/ace3-logo-white-tiny.png" srcset="{{ site.baseurl }}/img/ace3-logo-white-tiny.png 1x, {{ site.baseurl }}/img/ace3-logo-white-tiny-2x.png 2x" alt="ACE3 logo" width="100" height="23" /></a></h3>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <div class="top-bar-section">
+        <!-- Left Nav Section -->
+        <ul class="left">
+            {% assign pages_list = site.pages | sort: "order" %}
+            {% assign group = 'mainNav' %}
+            {% include pages_list %}
+        </ul>
+    </div>
+</nav>

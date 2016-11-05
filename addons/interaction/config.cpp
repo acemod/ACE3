@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interact_menu"};
-        author[] = {"commy2", "KoffeinFlummi", "esteldunedain", "bux578", "dixon13"};
-        authorUrl = "https://github.com/commy2/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"commy2", "KoffeinFlummi", "esteldunedain", "bux578", "dixon13"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

@@ -134,20 +134,24 @@ Author:
 #define DEBUG_MODE_MINIMAL
 #endif
 
-#ifdef THIS_FILE
-#define THIS_FILE_ 'THIS_FILE'
+#define LOG_SYS_FORMAT(LEVEL,MESSAGE) format ['[%1] (%2) %3: %4', toUpper 'PREFIX', 'COMPONENT', LEVEL, MESSAGE]
+
+#ifdef DEBUG_SYNCHRONOUS
+#define LOG_SYS(LEVEL,MESSAGE) diag_log text LOG_SYS_FORMAT(LEVEL,MESSAGE)
 #else
-#define THIS_FILE_ __FILE__
+#define LOG_SYS(LEVEL,MESSAGE) LOG_SYS_FORMAT(LEVEL,MESSAGE) call CBA_fnc_log
 #endif
+
+#define LOG_SYS_FILELINENUMBERS(LEVEL,MESSAGE) LOG_SYS(LEVEL,format [ARR_4('%1 %2:%3',MESSAGE,__FILE__,__LINE__ + 1)])
 
 /* -------------------------------------------
 Macro: LOG()
-    Log a timestamped message into the RPT log.
+    Log a debug message into the RPT log.
 
-    Only run if <DEBUG_MODE_FULL> or higher is defined.
+    Only run if <DEBUG_MODE_FULL> is defined.
 
 Parameters:
-    MESSAGE - Message to record [String]
+    MESSAGE - Message to record <STRING>
 
 Example:
     (begin example)
@@ -158,19 +162,64 @@ Author:
     Spooner
 ------------------------------------------- */
 #ifdef DEBUG_MODE_FULL
-#define LOG(MESSAGE) [THIS_FILE_, __LINE__, MESSAGE] call CBA_fnc_log
+
+#define LOG(MESSAGE) LOG_SYS_FILELINENUMBERS('LOG',MESSAGE)
+#define LOG_1(MESSAGE,ARG1) LOG(FORMAT_1(MESSAGE,ARG1))
+#define LOG_2(MESSAGE,ARG1,ARG2) LOG(FORMAT_2(MESSAGE,ARG1,ARG2))
+#define LOG_3(MESSAGE,ARG1,ARG2,ARG3) LOG(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define LOG_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) LOG(FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define LOG_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) LOG(FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define LOG_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) LOG(FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define LOG_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) LOG(FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define LOG_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) LOG(FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
+
 #else
+
 #define LOG(MESSAGE) /* disabled */
+#define LOG_1(MESSAGE,ARG1) /* disabled */
+#define LOG_2(MESSAGE,ARG1,ARG2) /* disabled */
+#define LOG_3(MESSAGE,ARG1,ARG2,ARG3) /* disabled */
+#define LOG_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) /* disabled */
+#define LOG_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) /* disabled */
+#define LOG_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) /* disabled */
+#define LOG_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) /* disabled */
+#define LOG_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) /* disabled */
+
 #endif
 
 /* -------------------------------------------
+Macro: INFO()
+    Record a message without file and line number in the RPT log.
+
+Parameters:
+    MESSAGE - Message to record <STRING>
+
+Example:
+    (begin example)
+        INFO("Mod X is loaded, do Y");
+    (end)
+
+Author:
+    commy2
+------------------------------------------- */
+#define INFO(MESSAGE) LOG_SYS('INFO',MESSAGE)
+#define INFO_1(MESSAGE,ARG1) INFO(FORMAT_1(MESSAGE,ARG1))
+#define INFO_2(MESSAGE,ARG1,ARG2) INFO(FORMAT_2(MESSAGE,ARG1,ARG2))
+#define INFO_3(MESSAGE,ARG1,ARG2,ARG3) INFO(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define INFO_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) INFO(FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define INFO_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) INFO(FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define INFO_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) INFO(FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define INFO_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) INFO(FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define INFO_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) INFO(FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
+
+/* -------------------------------------------
 Macro: WARNING()
-    Record a timestamped, non-critical error in the RPT log.
+    Record a non-critical error in the RPT log.
 
     Only run if <DEBUG_MODE_NORMAL> or higher is defined.
 
 Parameters:
-    MESSAGE - Message to record [String]
+    MESSAGE - Message to record <STRING>
 
 Example:
     (begin example)
@@ -181,21 +230,37 @@ Author:
     Spooner
 ------------------------------------------- */
 #ifdef DEBUG_MODE_NORMAL
-#define WARNING(MESSAGE) [THIS_FILE_, __LINE__, ('WARNING: ' + MESSAGE)] call CBA_fnc_log
+
+#define WARNING(MESSAGE) LOG_SYS_FILELINENUMBERS('WARNING',MESSAGE)
+#define WARNING_1(MESSAGE,ARG1) WARNING(FORMAT_1(MESSAGE,ARG1))
+#define WARNING_2(MESSAGE,ARG1,ARG2) WARNING(FORMAT_2(MESSAGE,ARG1,ARG2))
+#define WARNING_3(MESSAGE,ARG1,ARG2,ARG3) WARNING(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define WARNING_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) WARNING(FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define WARNING_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) WARNING(FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define WARNING_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) WARNING(FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define WARNING_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) WARNING(FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define WARNING_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) WARNING(FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
+
 #else
+
 #define WARNING(MESSAGE) /* disabled */
+#define WARNING_1(MESSAGE,ARG1) /* disabled */
+#define WARNING_2(MESSAGE,ARG1,ARG2) /* disabled */
+#define WARNING_3(MESSAGE,ARG1,ARG2,ARG3) /* disabled */
+#define WARNING_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) /* disabled */
+#define WARNING_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) /* disabled */
+#define WARNING_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) /* disabled */
+#define WARNING_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) /* disabled */
+#define WARNING_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) /* disabled */
+
 #endif
 
 /* -------------------------------------------
 Macro: ERROR()
-    Record a timestamped, critical error in the RPT log.
-
-    The heading is "ERROR" (use <ERROR_WITH_TITLE()> for a specific title).
-
-    TODO: Popup an error dialog & throw an exception.
+    Record a critical error in the RPT log.
 
 Parameters:
-    MESSAGE -  Message to record [String]
+    MESSAGE -  Message to record <STRING>
 
 Example:
     (begin example)
@@ -205,21 +270,53 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define ERROR(MESSAGE) \
-    [THIS_FILE_, __LINE__, "ERROR", MESSAGE] call CBA_fnc_error;
+#define ERROR(MESSAGE) LOG_SYS_FILELINENUMBERS('ERROR',MESSAGE)
+#define ERROR_1(MESSAGE,ARG1) ERROR(FORMAT_1(MESSAGE,ARG1))
+#define ERROR_2(MESSAGE,ARG1,ARG2) ERROR(FORMAT_2(MESSAGE,ARG1,ARG2))
+#define ERROR_3(MESSAGE,ARG1,ARG2,ARG3) ERROR(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define ERROR_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) ERROR(FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define ERROR_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) ERROR(FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define ERROR_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) ERROR(FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define ERROR_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) ERROR(FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define ERROR_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) ERROR(FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
+
+/* -------------------------------------------
+Macro: ERROR_MSG()
+    Record a critical error in the RPT log and display on screen error message.
+
+    Newlines (\n) in the MESSAGE will be put on separate lines.
+
+Parameters:
+    MESSAGE -  Message to record <STRING>
+
+Example:
+    (begin example)
+        ERROR_MSG("value of frog not found in config ...yada...yada...");
+    (end)
+
+Author:
+    commy2
+------------------------------------------- */
+#define ERROR_MSG(MESSAGE) ['PREFIX', 'COMPONENT', nil, MESSAGE, __FILE__, __LINE__ + 1] call CBA_fnc_error
+#define ERROR_MSG_1(MESSAGE,ARG1) ERROR_MSG(FORMAT_1(MESSAGE,ARG1))
+#define ERROR_MSG_2(MESSAGE,ARG1,ARG2) ERROR_MSG(FORMAT_2(MESSAGE,ARG1,ARG2))
+#define ERROR_MSG_3(MESSAGE,ARG1,ARG2,ARG3) ERROR_MSG(FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define ERROR_MSG_4(MESSAGE,ARG1,ARG2,ARG3,ARG4) ERROR_MSG(FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define ERROR_MSG_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) ERROR_MSG(FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define ERROR_MSG_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) ERROR_MSG(FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define ERROR_MSG_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) ERROR_MSG(FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define ERROR_MSG_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) ERROR_MSG(FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
 
 /* -------------------------------------------
 Macro: ERROR_WITH_TITLE()
-    Record a timestamped, critical error in the RPT log.
+    Record a critical error in the RPT log.
 
     The title can be specified (in <ERROR()> the heading is always just "ERROR")
     Newlines (\n) in the MESSAGE will be put on separate lines.
 
-    TODO: Popup an error dialog & throw an exception.
-
 Parameters:
-    TITLE - Title of error message [String]
-    MESSAGE -  Body of error message [String]
+    TITLE - Title of error message <STRING>
+    MESSAGE -  Body of error message <STRING>
 
 Example:
     (begin example)
@@ -229,16 +326,23 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define ERROR_WITH_TITLE(TITLE,MESSAGE) \
-    [THIS_FILE_, __LINE__, TITLE, MESSAGE] call CBA_fnc_error;
+#define ERROR_WITH_TITLE(TITLE,MESSAGE) ['PREFIX', 'COMPONENT', TITLE, MESSAGE, __FILE__, __LINE__ + 1] call CBA_fnc_error
+#define ERROR_WITH_TITLE_1(TITLE,MESSAGE,ARG1) ERROR_WITH_TITLE(TITLE,FORMAT_1(MESSAGE,ARG1))
+#define ERROR_WITH_TITLE_2(TITLE,MESSAGE,ARG1,ARG2) ERROR_WITH_TITLE(TITLE,FORMAT_2(MESSAGE,ARG1,ARG2))
+#define ERROR_WITH_TITLE_3(TITLE,MESSAGE,ARG1,ARG2,ARG3) ERROR_WITH_TITLE(TITLE,FORMAT_3(MESSAGE,ARG1,ARG2,ARG3))
+#define ERROR_WITH_TITLE_4(TITLE,MESSAGE,ARG1,ARG2,ARG3,ARG4) ERROR_WITH_TITLE(TITLE,FORMAT_4(MESSAGE,ARG1,ARG2,ARG3,ARG4))
+#define ERROR_WITH_TITLE_5(TITLE,MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5) ERROR_WITH_TITLE(TITLE,FORMAT_5(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5))
+#define ERROR_WITH_TITLE_6(TITLE,MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6) ERROR_WITH_TITLE(TITLE,FORMAT_6(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6))
+#define ERROR_WITH_TITLE_7(TITLE,MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7) ERROR_WITH_TITLE(TITLE,FORMAT_7(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7))
+#define ERROR_WITH_TITLE_8(TITLE,MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8) ERROR_WITH_TITLE(TITLE,FORMAT_8(MESSAGE,ARG1,ARG2,ARG3,ARG4,ARG5,ARG6,ARG7,ARG8))
 
 /* -------------------------------------------
 Macro: MESSAGE_WITH_TITLE()
-    Record a single line, timestamped log entry in the RPT log.
+    Record a single line in the RPT log.
 
 Parameters:
-    TITLE - Title of log message [String]
-    MESSAGE -  Body of message [String]
+    TITLE - Title of log message <STRING>
+    MESSAGE -  Body of message <STRING>
 
 Example:
     (begin example)
@@ -248,8 +352,7 @@ Example:
 Author:
     Killswitch
 ------------------------------------------- */
-#define MESSAGE_WITH_TITLE(TITLE,MESSAGE) \
-    [THIS_FILE_, __LINE__, TITLE + ': ' + (MESSAGE)] call CBA_fnc_log;
+#define MESSAGE_WITH_TITLE(TITLE,MESSAGE) LOG_SYS_FILELINENUMBERS(TITLE,MESSAGE)
 
 /* -------------------------------------------
 Macro: RETNIL()
@@ -327,35 +430,16 @@ Author:
 
 
 #ifdef DEBUG_MODE_FULL
-#define TRACE_1(MESSAGE,A) \
-    [THIS_FILE_, __LINE__, PFORMAT_1(MESSAGE,A)] call CBA_fnc_log
-
-#define TRACE_2(MESSAGE,A,B) \
-    [THIS_FILE_, __LINE__, PFORMAT_2(MESSAGE,A,B)] call CBA_fnc_log
-
-#define TRACE_3(MESSAGE,A,B,C) \
-    [THIS_FILE_, __LINE__, PFORMAT_3(MESSAGE,A,B,C)] call CBA_fnc_log
-
-#define TRACE_4(MESSAGE,A,B,C,D) \
-    [THIS_FILE_, __LINE__, PFORMAT_4(MESSAGE,A,B,C,D)] call CBA_fnc_log
-
-#define TRACE_5(MESSAGE,A,B,C,D,E) \
-    [THIS_FILE_, __LINE__, PFORMAT_5(MESSAGE,A,B,C,D,E)] call CBA_fnc_log
-
-#define TRACE_6(MESSAGE,A,B,C,D,E,F) \
-    [THIS_FILE_, __LINE__, PFORMAT_6(MESSAGE,A,B,C,D,E,F)] call CBA_fnc_log
-
-#define TRACE_7(MESSAGE,A,B,C,D,E,F,G) \
-    [THIS_FILE_, __LINE__, PFORMAT_7(MESSAGE,A,B,C,D,E,F,G)] call CBA_fnc_log
-
-#define TRACE_8(MESSAGE,A,B,C,D,E,F,G,H) \
-    [THIS_FILE_, __LINE__, PFORMAT_8(MESSAGE,A,B,C,D,E,F,G,H)] call CBA_fnc_log
-
-#define TRACE_9(MESSAGE,A,B,C,D,E,F,G,H,I) \
-    [THIS_FILE_, __LINE__, PFORMAT_9(MESSAGE,A,B,C,D,E,F,G,H,I)] call CBA_fnc_log
-
+#define TRACE_1(MESSAGE,A) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_1(str diag_frameNo + ' ' + (MESSAGE),A))
+#define TRACE_2(MESSAGE,A,B) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_2(str diag_frameNo + ' ' + (MESSAGE),A,B))
+#define TRACE_3(MESSAGE,A,B,C) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_3(str diag_frameNo + ' ' + (MESSAGE),A,B,C))
+#define TRACE_4(MESSAGE,A,B,C,D) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_4(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D))
+#define TRACE_5(MESSAGE,A,B,C,D,E) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_5(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D,E))
+#define TRACE_6(MESSAGE,A,B,C,D,E,F) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_6(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D,E,F))
+#define TRACE_7(MESSAGE,A,B,C,D,E,F,G) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_7(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D,E,F,G))
+#define TRACE_8(MESSAGE,A,B,C,D,E,F,G,H) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_8(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D,E,F,G,H))
+#define TRACE_9(MESSAGE,A,B,C,D,E,F,G,H,I) LOG_SYS_FILELINENUMBERS('TRACE',PFORMAT_9(str diag_frameNo + ' ' + (MESSAGE),A,B,C,D,E,F,G,H,I))
 #else
-
 #define TRACE_1(MESSAGE,A) /* disabled */
 #define TRACE_2(MESSAGE,A,B) /* disabled */
 #define TRACE_3(MESSAGE,A,B,C) /* disabled */
@@ -365,7 +449,6 @@ Author:
 #define TRACE_7(MESSAGE,A,B,C,D,E,F,G) /* disabled */
 #define TRACE_8(MESSAGE,A,B,C,D,E,F,G,H) /* disabled */
 #define TRACE_9(MESSAGE,A,B,C,D,E,F,G,H,I) /* disabled */
-
 #endif
 
 /* -------------------------------------------
@@ -529,6 +612,81 @@ Author:
 #define PUSH(var1,var2) (var1) pushBack (var2)
 
 /* -------------------------------------------
+Macro: MAP()
+Description:
+    Applies given code to each element of the array, then assigns the
+    resulting array to the original
+Parameters:
+    ARRAY - Array to be modified
+    CODE - Code that'll be applied to each element of the array.
+Example:
+    (begin example)
+        _array = [1, 2, 3, 4, 3, 8];
+        MAP(_array,_x + 1);
+        // _array is now [2, 3, 4, 5, 4, 9];
+    (end)
+Author:
+    654wak654
+------------------------------------------- */
+#define MAP(ARR,CODE) ARR = ARR apply {CODE}
+
+/* -------------------------------------------
+Macro: FILTER()
+Description:
+    Filters an array based on given code, then assigns the resulting array
+    to the original
+Parameters:
+    ARRAY - Array to be filtered
+    CODE - Condition to pick elements
+Example:
+    (begin example)
+        _array = [1, 2, 3, 4, 3, 8];
+        FILTER(_array,_x % 2 == 0)
+        // _array is now [2, 4, 8];
+    (end)
+Author:
+    Commy2
+------------------------------------------- */
+#define FILTER(ARR,CODE) ARR = ARR select {CODE}
+
+/* -------------------------------------------
+Macro: UNIQUE()
+Description:
+    Removes duplicate values in given array
+Parameters:
+    ARRAY - The array to be modified
+Example:
+    (begin example)
+        _someArray = [4, 4, 5, 5, 5, 2];
+        UNIQUE(_someArray);
+        // _someArray is now [4, 5, 2]
+    (end)
+Author:
+    Commy2
+------------------------------------------- */
+#define UNIQUE(ARR) ARR = ARR arrayIntersect ARR
+
+/* -------------------------------------------
+Macro: INTERSECTION()
+Description:
+    Finds unique common elements between two arrays and assigns them
+    to the first array
+Parameters:
+    ARRAY0 - The array to be modified
+    ARRAY1 - The array to find intersections with
+Example:
+    (begin example)
+        _someArray = [1, 2, 3, 4, 5, 5];
+        _anotherArray = [4, 5, 6, 7];
+        INTERSECTION(_someArray,_anotherArray);
+        // _someArray is now [4, 5]
+    (end)
+Author:
+    654wak654
+------------------------------------------- */
+#define INTERSECTION(ARG0,ARG1) ARG0 = ARG0 arrayIntersect (ARG1)
+
+/* -------------------------------------------
 Macro: ISNILS()
 
 Description:
@@ -632,6 +790,9 @@ Author:
 #define CFGSETTINGS CFGSETTINGSS(PREFIX,COMPONENT)
 #define PATHTO(var1) PATHTO_SYS(PREFIX,COMPONENT_F,var1)
 #define PATHTOF(var1) PATHTOF_SYS(PREFIX,COMPONENT,var1)
+#define PATHTOEF(var1,var2) PATHTOF_SYS(PREFIX,var1,var2)
+#define QPATHTOF(var1) QUOTE(PATHTOF(var1))
+#define QPATHTOEF(var1,var2) QUOTE(PATHTOEF(var1,var2))
 
 #define COMPILE_FILE(var1) COMPILE_FILE_SYS(PREFIX,COMPONENT_F,var1)
 #define COMPILE_FILE_CFG(var1) COMPILE_FILE_CFG_SYS(PREFIX,COMPONENT_F,var1)
@@ -674,6 +835,8 @@ Author:
 #define EGVAR(var1,var2) TRIPLES(PREFIX,var1,var2)
 #define QGVAR(var1) QUOTE(GVAR(var1))
 #define QEGVAR(var1,var2) QUOTE(EGVAR(var1,var2))
+#define QQGVAR(var1) QUOTE(QGVAR(var1))
+#define QQEGVAR(var1,var2) QUOTE(QEGVAR(var1,var2))
 
 /* -------------------------------------------
 Macro: GVARMAIN()
@@ -693,6 +856,7 @@ Author:
 ------------------------------------------- */
 #define GVARMAIN(var1) GVARMAINS(PREFIX,var1)
 #define QGVARMAIN(var1) QUOTE(GVARMAIN(var1))
+#define QQGVARMAIN(var1) QUOTE(QGVARMAIN(var1))
 // TODO: What's this?
 #define SETTINGS DOUBLES(PREFIX,settings)
 #define CREATELOGIC CREATELOGICS(PREFIX,COMPONENT)
@@ -715,10 +879,59 @@ Author:
     #define PREPMAIN(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(fnc,var1))', 'TRIPLES(PREFIX,fnc,var1)'] call SLX_XEH_COMPILE_NEW
 #endif
 
+#ifdef RECOMPILE
+    #undef RECOMPILE
+    #define RECOMPILE recompile = 1
+#else
+    #define RECOMPILE recompile = 0
+#endif
+
+/* -------------------------------------------
+Macro: PATHTO_FNC()
+
+Description:
+    Defines a function inside CfgFunctions.
+
+    Full file path in addons:
+        '\MAINPREFIX\PREFIX\SUBPREFIX\COMPONENT\fnc_<FNC>.sqf'
+    Define 'RECOMPILE' to enable recompiling.
+
+Parameters:
+    FUNCTION NAME - Name of the function, unquoted <STRING>
+
+Examples:
+    (begin example)
+        // file name: fnc_addPerFrameHandler.sqf
+        class CfgFunctions {
+            class CBA {
+                class Misc {
+                    PATHTO_FNC(addPerFrameHandler);
+                };
+            };
+        };
+        // -> CBA_fnc_addPerFrameHandler
+    (end)
+
+Author:
+    dixon13, commy2
+ ------------------------------------------- */
+#define PATHTO_FNC(func) class func {\
+    file = QPATHTOF(DOUBLES(fnc,func).sqf);\
+    RECOMPILE;\
+}
+
 #define FUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define FUNCMAIN(var1) TRIPLES(PREFIX,fnc,var1)
 #define FUNC_INNER(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 #define EFUNC(var1,var2) FUNC_INNER(var1,var2)
+#define QFUNC(var1) QUOTE(FUNC(var1))
+#define QFUNCMAIN(var1) QUOTE(FUNCMAIN(var1))
+#define QFUNC_INNER(var1,var2) QUOTE(FUNC_INNER(var1,var2))
+#define QEFUNC(var1,var2) QUOTE(EFUNC(var1,var2))
+#define QQFUNC(var1) QUOTE(QFUNC(var1))
+#define QQFUNCMAIN(var1) QUOTE(QFUNCMAIN(var1))
+#define QQFUNC_INNER(var1,var2) QUOTE(QFUNC_INNER(var1,var2))
+#define QQEFUNC(var1,var2) QUOTE(QEFUNC(var1,var2))
 
 #ifndef PRELOAD_ADDONS
     #define PRELOAD_ADDONS class CfgAddons \
@@ -1259,6 +1472,39 @@ Author:
     };
 
 /* -------------------------------------------
+Macro: TEST_DEFINED_AND_OP()
+    Tests that A and B are defined and (A OPERATOR B) is true.
+    If the test fails, an error is raised with the given MESSAGE.
+
+Parameters:
+    A - First value [Any]
+    OPERATOR - Binary operator to use [Operator]
+    B - Second value [Any]
+    MESSSAGE - Message to display [String]
+
+Example:
+    (begin example)
+        TEST_OP(_fish,>,5,"Too few fish!");
+    (end)
+
+Author:
+    Killswitch, PabstMirror
+------------------------------------------- */
+#define TEST_DEFINED_AND_OP(A,OPERATOR,B,MESSAGE) \
+    if (isNil #A) then { \
+        TEST_FAIL('(A is not defined) ' + (MESSAGE)); \
+    } else { \
+        if (isNil #B) then { \
+            TEST_FAIL('(B is not defined) ' + (MESSAGE)); \
+        } else { \
+            if ((A) OPERATOR (B)) then { \
+                TEST_SUCCESS('(A OPERATOR B) ' + (MESSAGE)) \
+            } else { \
+                TEST_FAIL('(A OPERATOR B) ' + (MESSAGE)) \
+    }; }; };
+
+
+/* -------------------------------------------
 Macro: TEST_DEFINED()
     Tests that a VARIABLE is defined.
 
@@ -1406,6 +1652,7 @@ Author:
 
 // XEH Specific
 #define XEH_CLASS CBA_Extended_EventHandlers
+#define XEH_CLASS_BASE DOUBLES(XEH_CLASS,base)
 #define XEH_DISABLED class EventHandlers { class XEH_CLASS {}; }; SLX_XEH_DISABLED = 1
 #define XEH_ENABLED class EventHandlers { class XEH_CLASS { EXTENDED_EVENTHANDLERS }; }; SLX_XEH_DISABLED = 0
 
@@ -1417,3 +1664,43 @@ Author:
 #define XEH_POST_INIT QUOTE(call COMPILE_FILE(XEH_PostInit_Once))
 #define XEH_POST_CINIT QUOTE(call COMPILE_FILE(XEH_PostClientInit_Once))
 #define XEH_POST_SINIT QUOTE(call COMPILE_FILE(XEH_PostServerInit_Once))
+
+/* -------------------------------------------
+Macro: IS_ADMIN
+    Check if the local machine is an admin in the multiplayer environment.
+
+    Reports 'true' for logged and voted in admins.
+
+Parameters:
+    None
+
+Example:
+    (begin example)
+        // print "true" if player is admin
+        systemChat str IS_ADMIN;
+    (end)
+
+Author:
+    commy2
+------------------------------------------- */
+#define IS_ADMIN serverCommandAvailable "#kick"
+
+/* -------------------------------------------
+Macro: IS_ADMIN_LOGGED
+    Check if the local machine is a logged in admin in the multiplayer environment.
+
+    Reports 'false' if the player was voted to be the admin.
+
+Parameters:
+    None
+
+Example:
+    (begin example)
+        // print "true" if player is admin and entered in the server password
+        systemChat str IS_ADMIN_LOGGED;
+    (end)
+
+Author:
+    commy2
+------------------------------------------- */
+#define IS_ADMIN_LOGGED serverCommandAvailable "#shutdown"

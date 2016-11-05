@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+[] call FUNC(parse_input);
+
 private ["_scopeBaseAngle"];
 _scopeBaseAngle = (GVAR(workingMemory) select 3);
 
@@ -28,10 +30,7 @@ _dragModel = GVAR(workingMemory) select 16;
 _atmosphereModel = GVAR(workingMemory) select 17;
 
 private ["_zeroRange"];
-_zeroRange = Round(parseNumber(ctrlText 120060));
-if (GVAR(currentUnit) == 1) then {
-    _zeroRange = _zeroRange / 1.0936133;
-};
+_zeroRange = GVAR(workingMemory) select 2;
 if (_zeroRange < 10) exitWith {
     GVAR(workingMemory) set [2, _zeroRange];
     GVAR(workingMemory) set [3, 0];
@@ -42,9 +41,17 @@ _altitude = GVAR(altitude);
 _temperature = GVAR(temperature);
 _barometricPressure = GVAR(barometricPressure);
 _relativeHumidity = GVAR(relativeHumidity);
+if (!GVAR(atmosphereModeTBH)) then {
+    _barometricPressure = 1013.25 * (1 - (0.0065 * _altitude) / (273.15 + _temperature + 0.0065 * _altitude)) ^ 5.255754495;
+    _relativeHumidity = 50;
+};
 
-private ["_result"];
-_result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0] call FUNC(calculate_solution);
+{
+    private _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0] call FUNC(calculate_solution);
+    private _offset = (_result select 0) / 60;
+    _scopeBaseAngle = _scopeBaseAngle + _offset;
+    if (_offset < 0.01) exitWith {};
+} forEach [1, 2, 3];
 
 GVAR(workingMemory) set [2, _zeroRange];
-GVAR(workingMemory) set [3, _scopeBaseAngle + (_result select 0) / 60];
+GVAR(workingMemory) set [3, _scopeBaseAngle];

@@ -92,12 +92,12 @@ if (_set) then {
         if (_this) then {
             _display displayAddEventHandler ["KeyDown", {
                 if (_this select 1 == 1) then {
-                    [false] call ace_spectator_fnc_setSpectator;
+                    [false] call FUNC(setSpectator);
                     true
                 };
             }];
         };
-    }, !_force] call EFUNC(common,execNextFrame);
+    }, !_force] call CBA_fnc_execNextFrame;
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -170,4 +170,4 @@ GVAR(interrupts) = [];
 // Mark spectator state for reference
 GVAR(isSet) = _set;
 
-["spectatorSet",[_set]] call EFUNC(common,localEvent);
+["ace_spectatorSet", [_set]] call CBA_fnc_localEvent;

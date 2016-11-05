@@ -2,11 +2,11 @@
  * Author: Commy2, based on KK_fnc_playerWeaponMulfunction from KillzoneKid
  * Jam the weapon
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -37,11 +37,14 @@ if (_ammo > 0) then {
     [{
         params ["_unit", "_weapon", "_ammo"];
         _unit setAmmo [_weapon, _ammo];
-    }, [_unit, _weapon, _ammo]] call EFUNC(common,execNextFrame);
+    }, [_unit, _weapon, _ammo]] call CBA_fnc_execNextFrame;
 };
 
 // only display the hint once, after you try to shoot an already jammed weapon
 GVAR(knowAboutJam) = false;
+
+["ace_weaponJammed", [_unit,_weapon]] call CBA_fnc_localEvent;
+
 
 if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 

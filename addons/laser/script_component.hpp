@@ -1,9 +1,10 @@
 #define COMPONENT laser
+#define COMPONENT_BEAUTIFIED Laser
 #include "\z\ace\addons\main\script_mod.hpp"
 
+// #define DRAW_LASER_INFO
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_LASER
@@ -15,9 +16,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-
-
-#define FIREMODE_DIRECT_LOAL 1
 
 
 #define __LaserDesignatorIGUI (uiNamespace getVariable ["ACE_RscOptics_LaserDesignator", nil])

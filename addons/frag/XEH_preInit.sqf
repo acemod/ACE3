@@ -4,10 +4,11 @@ ADDON = false;
 
 #include "XEH_PREP.hpp"
 
+GVAR(replacedBisArtyWrapper) = true;
 GVAR(blackList) = [];
 GVAR(traceFrags) = false;
 
-GVAR(TOTALFRAGS) = 0;
+GVAR(totalFrags) = 0;
 
 GVAR(spallHPData) = [];
 GVAR(spallIsTrackingCount) = 0;

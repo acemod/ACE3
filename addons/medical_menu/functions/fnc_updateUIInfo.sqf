@@ -18,7 +18,7 @@
 
 params ["_target", "_display"];
 
-private["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
+private ["_allInjuryTexts", "_bandagedwounds", "_damaged", "_genericMessages", "_logs", "_openWounds", "_part", "_partText", "_pointDamage", "_selectionBloodLoss", "_selectionN", "_severity", "_totalIvVolume", "_triageStatus"];
 
 if (isNil "_display" || {isNull _display}) exitWith {ERROR("No display");};
 
@@ -46,13 +46,11 @@ if (_target getVariable [QEGVAR(medical,hasPain), false]) then {
 };
 
 _totalIvVolume = 0;
+private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
 {
-    private "_value";
-    _value = _target getVariable _x;
-    if (!isNil "_value") then {
-        _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-    };
-} count EGVAR(medical,IVBags);
+    _x params ["_bagVolumeRemaining"];
+    _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
+} foreach _bloodBags;
 
 if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
@@ -106,40 +104,53 @@ if ((EGVAR(medical,level) >= 2) && {([_target] call EFUNC(medical,hasMedicalEnab
         };
     } forEach _bandagedwounds;
 } else {
-    _damaged = [true, true, true, true, true, true];
 
+    // Add all bleeding from wounds on selection
+    _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+    private "_amountOf";
     {
-        _selectionBloodLoss set [_forEachIndex, _x];
-
-        if ((_x > 0) && {_forEachIndex == _selectionN}) then {
-            _pointDamage = _x;
-            _severity = switch (true) do {
-                case (_pointDamage > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
-                case (_pointDamage > 0.1): {localize ELSTRING(medical,LightlyWounded)};
-                default                    {localize ELSTRING(medical,VeryLightlyWounded)};
-            };
-            _part = localize ([
-                ELSTRING(medical,Head),
-                ELSTRING(medical,Torso),
-                ELSTRING(medical,LeftArm),
-                ELSTRING(medical,RightArm),
-                ELSTRING(medical,LeftLeg),
-                ELSTRING(medical,RightLeg)
-            ] select _forEachIndex);
-            _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
+        _amountOf = _x select 3;
+        // Find how much this bodypart is bleeding
+        if (_amountOf > 0) then {
+            _damaged set [_x select 2, true];
+            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
         };
-    } forEach (_target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]]);
+    } forEach _openWounds;
+
+    _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+    {
+        _amountOf = _x select 3;
+        // Find how much this bodypart is bleeding
+        if !(_damaged select (_x select 2)) then {
+            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+        };
+    } forEach _bandagedwounds;
+
+    private _bloodLossOnSelection = _selectionBloodLoss select _selectionN;
+    if (_bloodLossOnSelection > 0) then {
+        private _severity = switch (true) do {
+            case (_bloodLossOnSelection > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
+            case (_bloodLossOnSelection > 0.1): {localize ELSTRING(medical,LightlyWounded)};
+            default {localize ELSTRING(medical,VeryLightlyWounded)};
+        };
+        private _part = localize ([
+            ELSTRING(medical,Head),
+            ELSTRING(medical,Torso),
+            ELSTRING(medical,LeftArm),
+            ELSTRING(medical,RightArm),
+            ELSTRING(medical,LeftLeg),
+            ELSTRING(medical,RightLeg)
+        ] select _selectionN);
+        _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
+    };
 };
 
 [_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
 
-_logs = _target getVariable [QEGVAR(medical,logFile_activity_view), []];
-[_display, _logs] call FUNC(updateActivityLog);
+[_display, _target getVariable [QEGVAR(medical,logFile_activity_view), []]] call FUNC(updateActivityLog);
+[_display, _target getVariable [QEGVAR(medical,logFile_quick_view), []]] call FUNC(updateQuickViewLog);
 
-_logs = _target getVariable [QEGVAR(medical,logFile_quick_view), []];
-[_display, _logs] call FUNC(updateQuickViewLog);
-
-_triageStatus = [_target] call EFUNC(medical,getTriageStatus);
+private _triageStatus = [_target] call EFUNC(medical,getTriageStatus);
 (_display displayCtrl 2000) ctrlSetText (_triageStatus select 0);
 (_display displayCtrl 2000) ctrlSetBackgroundColor (_triageStatus select 2);

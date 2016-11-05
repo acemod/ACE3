@@ -1,4 +1,5 @@
 #define COMPONENT noactionmenu
+#define COMPONENT_BEAUTIFIED No Action Menu
 #include "\z\ace\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_NOACTIONMENU

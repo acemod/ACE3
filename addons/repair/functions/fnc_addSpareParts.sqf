@@ -21,8 +21,8 @@
 params ["_vehicle", ["_amount", 1], ["_part", ""], ["_force", false]];
 TRACE_2("params",_vehicle,_amount);
 
-// Exit if ace_cargo is not loaded
-if !(["ace_cargo"] call EFUNC(common,isModLoaded)) exitWith {};
+// Exit if ace_cargo is not loaded or no part supplied
+if (!(["ace_cargo"] call EFUNC(common,isModLoaded)) || {_part == ""}) exitWith {};
 
 // Collect until SettingsInitialized
 if (!EGVAR(common,settingsInitFinished)) exitWith {
@@ -32,13 +32,7 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
 // Exit if not forced and add spare parts is disabled (after settings initted to make sure it really is)
 if (!_force && !GVAR(addSpareParts)) exitWith {};
 
-// Select appropriate part
-if (_part == "") then {
-    if (_vehicle isKindOf "Car") then { _part = "ACE_Wheel" };
-    if (_vehicle isKindOf "Tank") then { _part = "ACE_Track" };
-};
-// Exit if no appropriate part
-if (_part == "") exitWith {};
-
 // Load
-["AddCargoByClass", [_part, _vehicle, _amount]] call EFUNC(common,localEvent);
+[{
+    ["ace_addCargo", _this] call CBA_fnc_localEvent;
+}, [_part, _vehicle, _amount]] call CBA_fnc_execNextFrame;

@@ -1,39 +1,25 @@
+
 class RscOpticsValue;
-class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 class RscPicture;
 class RscMapControl;
-class VScrollbar;
-class HScrollbar;
 class RscLine;
 
-
 // Taken from AGM for optics management.
-
 class RscInGameUI {
     class ACE_RscOptics_javelin {
         idd = 300;
-        controls[] = { "ACE_javelin_elements_group", "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
+        controls[] = { QGVAR(elements_group), "ACE_Targeting" }; //, "ACE_TargetingConstrains", "ACE_TargetingGate", "ACE_TargetingLines"};
         onLoad = QUOTE(_this call FUNC(onOpticLoad));
         onUnload = QUOTE(_this call FUNC(onOpticUnload));
-        
-        class ACE_javelin_elements_group: RscControlsGroup
-        {
+
+        class GVAR(elements_group): RscControlsGroupNoScrollbars {
             x = "SafezoneX";
             y = "SafezoneY";
             w = "SafezoneW";
             h = "SafezoneH";
             idc = 170;
-            class VScrollbar {
-                autoScrollSpeed = -1;
-                autoScrollDelay = 5;
-                autoScrollRewind = 0;
-                color[] = {1,1,1,0};
-                width = 0.001;
-            };
-            class HScrollbar {
-                color[] = {1,1,1,0};
-                height = 0.001;
-            };
+
             class Controls {
                 class CA_Distance: RscOpticsValue {
                     idc = 151;
@@ -44,8 +30,8 @@ class RscInGameUI {
                     w = 0;
                     h = 0;
                 };
-        
-                class ACE_javelin_Day_mode_off: RscPicture {
+
+                class GVAR(Day_mode_off): RscPicture {
                     idc = 1001;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.03/4)*3*SafezoneH    - SafezoneX";
                     y = "SafezoneY+SafezoneH*0.031 - SafezoneY";
@@ -54,32 +40,22 @@ class RscInGameUI {
                     colorText[] = {0.2941,0.2941,0.2941,1};
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\day_co.paa";
                 };
-                class ACE_javelin_Day_mode: ACE_javelin_Day_mode_off {
+                class GVAR(Day_mode): GVAR(Day_mode_off) {
                     idc = 160;
                     colorText[] = {0.2941,0.8745,0.2157,1};
                 };
-                class CA_Javelin_WFOV_mode_off : ACE_javelin_Day_mode_off {
+                class CA_Javelin_WFOV_mode_off : GVAR(Day_mode_off) {
                     idc = 1004;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\wfov_co.paa";
                 };
-                class ACE_javelin_WFOV_mode_group: RscControlsGroup {
+                class GVAR(WFOV_mode_group): RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW";
                     h = "SafezoneH";
                     idc = 163;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class StadiaL: RscLine {
                             x = "0.4899*SafezoneW - SafezoneX";
@@ -123,31 +99,21 @@ class RscInGameUI {
                             h = 0;
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        
+
                     };
                 };
-                class CA_Javelin_NFOV_mode_off: ACE_javelin_Day_mode_off {
+                class CA_Javelin_NFOV_mode_off: GVAR(Day_mode_off) {
                     idc = 1003;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.586/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\nfov_co.paa";
                 };
-                class ACE_javelin_NFOV_mode_group: RscControlsGroup {
+                class GVAR(NFOV_mode_group): RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
                     idc = 162;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class StadiaL: RscLine {
                             x = "0.4788*SafezoneW - SafezoneX";
@@ -191,94 +157,84 @@ class RscInGameUI {
                             h = "0.1895*SafezoneH";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
-                        
+
                     };
                 };
 
-                class ACE_javelin_SEEK_off: ACE_javelin_Day_mode_off {
+                class GVAR(SEEK_off): GVAR(Day_mode_off) {
                     idc = 699000;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (0.863/4)*3*SafezoneH - SafezoneX";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\seek_co.paa";
                 };
-                class ACE_javelin_SEEK: ACE_javelin_SEEK_off {
+                class GVAR(SEEK): GVAR(SEEK_off) {
                     idc = 166;
                     colorText[] = {0.2941,0.8745,0.2157,0};
                 };
-                class ACE_javelin_Missle_off: ACE_javelin_Day_mode_off {
+                class GVAR(Missle_off): GVAR(Day_mode_off) {
                     idc = 1032;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (-0.134/4)*3*SafezoneH - SafezoneX";
                     y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
                     colorText[] = {0.2941,0.2941,0.2941,1};
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\missle_co.paa";
                 };
-                class ACE_javelin_Missle: ACE_javelin_Missle_off {
+                class GVAR(Missle): GVAR(Missle_off) {
                     idc = 167;
                     colorText[] = {0.9255,0.5216,0.1216,0};
                 };
-                class ACE_javelin_CLU_off: ACE_javelin_Missle_off {
+                class GVAR(CLU_off): GVAR(Missle_off) {
                     idc = 1027;
                     y = "(SafezoneY + 0.436*SafezoneH) - SafezoneY";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\clu_co.paa";
                 };
-                class ACE_javelin_HangFire_off: ACE_javelin_Missle_off {
+                class GVAR(HangFire_off): GVAR(Missle_off) {
                     idc = 1028;
                     y = "(SafezoneY + 0.669*SafezoneH) - SafezoneY";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\hangfire_co.paa";
                 };
-                class ACE_javelin_TOP_off: ACE_javelin_Day_mode_off {
+                class GVAR(TOP_off): GVAR(Day_mode_off) {
                     idc = 699001;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
                     y = "(SafezoneY + 0.208*SafezoneH) - SafezoneY";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\top_co.paa";
                     colorText[] = {0.2941,0.8745,0.2157,1};
                 };
-                class ACE_javelin_DIR: ACE_javelin_Day_mode {
+                class GVAR(DIR): GVAR(Day_mode) {
                     idc = 699002;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
                     y = "(SafezoneY + 0.436*SafezoneH)    - SafezoneY";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\dir_co.paa";
                     colorText[] = {0.2941,0.2941,0.2941,1};
                 };
-                class ACE_javelin_FLTR_mode_off: ACE_javelin_Day_mode_off {
+                class GVAR(FLTR_mode_off): GVAR(Day_mode_off) {
                     idc = 1002;
                     x = "(SafezoneX+(SafezoneW -SafezoneH*3/4)/2)+ (1.023/4)*3*SafezoneH - SafezoneX";
                     y = "(SafezoneY + 0.669*SafezoneH)    - SafezoneY";
                     text = "\A3\ui_f\data\igui\rscingameui\rscoptics_titan\fltr_co.paa";
                 };
-                class ACE_javelin_FLTR_mode: ACE_javelin_FLTR_mode_off {
+                class GVAR(FLTR_mode): GVAR(FLTR_mode_off) {
                     idc = 161;
                     colorText[] = {0.2941,0.8745,0.2157,1};
                 };
             };
         };
-        class ACE_Targeting : RscControlsGroup {
+        class ACE_Targeting: RscControlsGroupNoScrollbars {
             idc = 6999;
-            
+
             x = "SafezoneX";
             y = "SafezoneY";
             w = "SafezoneW";
             h = "SafezoneH";
-            
+
             enabled = 0;
             class Controls {
-                class ACE_TargetingConstrains: RscControlsGroup {
+                class ACE_TargetingConstrains: RscControlsGroupNoScrollbars {
                     x = "SafezoneX";
                     y = "SafezoneY";
                     w = "SafezoneW-SafezoneX";
                     h = "SafezoneH-SafezoneY";
-                    
+
                     enabled = 0;
-                    class VScrollbar {
-                        autoScrollSpeed = -1;
-                        autoScrollDelay = 5;
-                        autoScrollRewind = 0;
-                        color[] = {1,1,1,0};
-                        width = 0.001;
-                    };
-                    class HScrollbar {
-                        color[] = {1,1,1,0};
-                        height = 0.001;
-                    };
+
                     class Controls {
                         class Top: RscPicture {
                             idc = 699101;
@@ -306,7 +262,7 @@ class RscInGameUI {
                         };
                         class OpticsBorders: RscPicture {
                             idc = 699105;
-                            text = PATHTOF(data\javelin_ui_border_ca.paa);
+                            text = QPATHTOF(data\javelin_ui_border_ca.paa);
                             colorText[] = {0,0,0,1};
                             x = "((SafezoneW -(3.1/4)*SafezoneH)/2) - SafezoneX";
                             y = "0.15*SafezoneH-SafezoneY";
@@ -315,7 +271,7 @@ class RscInGameUI {
                         };
                     };
                 };
-                
+
                 class ACE_TargetingGate : ACE_TargetingConstrains {
                     idc = 699200;
                     class Controls {
@@ -401,8 +357,8 @@ class RscInGameUI {
                         };
                     };
                 };
-            
-            
+
+
                 class ACE_TargetingLines: ACE_TargetingConstrains {
                     idc = 699300;
                     class Controls {

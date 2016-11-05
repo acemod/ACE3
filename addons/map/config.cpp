@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
-        author[] = {"KoffeinFlummi","Rocko","esteldunedain"};
-        authorUrl = "https://github.com/KoffeinFlummi/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"KoffeinFlummi","Rocko","esteldunedain"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -24,11 +26,15 @@ class RscButtonMenu;
 class RscEdit;
 
 #include "ACE_Settings.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgSounds.hpp"
+#include "CfgLights.hpp"
+#include "Effects.hpp"
 
 class RscMapControl {
     maxSatelliteAlpha = 0.5;

@@ -2,6 +2,8 @@
 // interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
+PREP(getVehiclePos);
+PREP(getVehiclePosComplex);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
 
@@ -32,6 +34,7 @@ PREP(handleScrollWheel);
 PREP(openDoor);
 
 // interaction with boats
+PREP(canPush);
 PREP(push);
 
 PREP(switchLamp);

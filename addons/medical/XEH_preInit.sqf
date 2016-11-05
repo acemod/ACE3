@@ -5,14 +5,13 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 GVAR(injuredUnitCollection) = [];
-GVAR(IVBags) = [];
 
 private _versionEx = "ace_medical" callExtension "version";
 DFUNC(handleDamage_assignWounds) = if (_versionEx == "") then {
-    ACE_LOGINFO_1("Extension %1.dll not installed.","ace_medical");
+    INFO_1("Extension %1.dll not installed.","ace_medical");
     DFUNC(handleDamage_woundsOld)
 } else {
-    ACE_LOGINFO_2("Extension version: %1: %2","ace_medical",_versionEx);
+    INFO_2("Extension version: %1: %2","ace_medical",_versionEx);
     DFUNC(handleDamage_wounds)
 };
 
@@ -35,7 +34,7 @@ private _fixStatic = {
             1 preloadObject (_this select 0);
         }, {
             TRACE_1("preload done",_this);
-        }, [_vehType]] call EFUNC(common,waitUntilAndExecute);
+        }, [_vehType]] call CBA_fnc_waitUntilAndExecute;
     };
 };
 ["StaticWeapon", "init", _fixStatic] call CBA_fnc_addClassEventHandler;
@@ -47,7 +46,7 @@ addMissionEventHandler ["Loaded",{
             1 preloadObject (_this select 0);
         }, {
             TRACE_1("preload done",_this);
-        }, [_x]] call EFUNC(common,waitUntilAndExecute);
+        }, [_x]] call CBA_fnc_waitUntilAndExecute;
     } forEach GVAR(fixedStatics);
 }];
 

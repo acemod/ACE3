@@ -11,7 +11,7 @@
  * 5: Draw rank <BOOL>
  * 6: Draw soundwave <BOOL>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -33,11 +33,16 @@ _fnc_parameters = {
     private _icon = "";
     private _size = 0;
     if (_drawSoundwave) then {
-        _icon = format [QUOTE(PATHTOF(UI\soundwave%1.paa)), floor random 10];
+        _icon = format [QPATHTOF(UI\soundwave%1.paa), floor random 10];
         _size = 1;
     } else {
-        if (_drawRank) then {
-            _icon = format["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", toLower rank _target];
+        if (_drawRank && {rank _target != ""}) then {
+            _icon = GVAR(factionRanks) getVariable (_target getVariable [QGVAR(faction), faction _target]);
+            if (!isNil "_icon") then {
+                _icon = _icon param [ALL_RANKS find rank _target, ""];
+            } else {
+                _icon = format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target];
+            };
             _size = 1;
         };
     };
@@ -55,7 +60,7 @@ _fnc_parameters = {
         _color = +GVAR(defaultNametagColor); //Make a copy, then multiply both alpha values (allows client to decrease alpha in settings)
         _color set [3, (_color select 3) * _alpha];
     } else {
-        _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find (assignedTeam _target)) max 0);
+        _color = [[1, 1, 1, _alpha], [1, 0, 0, _alpha], [0, 1, 0, _alpha], [0, 0, 1, _alpha], [1, 1, 0, _alpha]] select ((["MAIN", "RED", "GREEN", "BLUE", "YELLOW"] find ([assignedTeam _target] param [0, "MAIN"])) max 0);
     };
 
     private _scale = [0.333, 0.5, 0.666, 0.83333, 1] select GVAR(tagSize);

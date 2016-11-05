@@ -13,7 +13,6 @@
 
 #include "script_component.hpp"
 
-private "_openWounds";
 params ["_unit"];
 if (!local _unit) exitWith {};
 

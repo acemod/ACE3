@@ -26,19 +26,19 @@ private _settingData = [_name] call FUNC(getSettingData);
 
 // Exit if the setting does not exist
 if (_settingData isEqualTo []) exitWith {
-    ACE_LOGERROR_1("SetSetting [%1] setting does not exist", _name);
+    ERROR_1("SetSetting [%1] setting does not exist", _name);
 };
 
 _settingData params ["", "_typeName", "_isClientSetable", "", "", "", "_isForced"];
 
 // Exit if the setting is already forced
 if (_isForced) exitWith {
-    ACE_LOGINFO_1("SetSetting [%1] Trying to set forced setting", _name);
+    INFO_1("SetSetting [%1] Trying to set forced setting", _name);
 };
 
 //This does NOT broadcast changes to GVAR(settings), so clients would not get updated force status
 if ((missionNamespace getVariable [QEGVAR(modules,serverModulesRead), false]) && {!(_isForced isEqualTo _force)}) then {
-    ACE_LOGWARNING_3("SetSetting [%1] attempting to broadcast a change to force (%2 to %3)", _name, _isForced, _force);
+    WARNING_3("SetSetting [%1] attempting to broadcast a change to force (%2 to %3)", _name, _isForced, _force);
 };
 
 // If the type is not equal, try to cast it
@@ -61,7 +61,7 @@ if (typeName _value != _settingData select 1) then {
     };
 };
 
-if (_failed) exitWith {ACE_LOGERROR_3("SetSetting [%1] bad data type expected %2 got %3", _name, _typeName, typeName _value);};
+if (_failed) exitWith {ERROR_3("SetSetting [%1] bad data type expected %2 got %3", _name, _typeName, typeName _value);};
 
 // Force it if it was required
 _settingData set [6, _force];
@@ -78,8 +78,8 @@ if (isServer && {_broadcastChanges}) then {
     publicVariable _name;
 
     // Raise event globally, this publicizes eventual changes in _force status so clients can update it locally
-    ["SettingChanged", [_name, _value, _force]] call FUNC(globalEvent);
+    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_globalEvent;
 } else {
     // Raise event locally
-    ["SettingChanged", [_name, _value, _force]] call FUNC(localEvent);
+    ["ace_settingChanged", [_name, _value, _force]] call CBA_fnc_localEvent;
 };

@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_show_main_page
+ * call ace_atragmx_fnc_show_main_page
  *
  * Public: No
  */

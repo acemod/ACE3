@@ -24,7 +24,7 @@ if( (count _state) < 1) then {
 _shooterPos = getPosASL _shooter;
 _projectilePos = getPosASL _projectile;
 
-_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
+_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
 _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
 
@@ -36,7 +36,7 @@ _returnTargetPos = _seekerTargetPos;
 switch( (_state select 0) ) do {
     case STAGE_LAUNCH: {
         TRACE_1("STAGE_LAUNCH","");
-        if(_distanceToShooter < 10) then { 
+        if(_distanceToShooter < 10) then {
             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
         } else {
             _state set[0, STAGE_CLIMB];
@@ -46,7 +46,7 @@ switch( (_state select 0) ) do {
         TRACE_1("STAGE_CLIMB","");
         _cruisAlt = 60 * (_distanceShooterToTarget/2000);
 
-        if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
+        if( ((ASLToAGL _projectilePos) select 2) - ((ASLToAGL _seekerTargetPos) select 2) >= _cruisAlt) then {
             _state set[0, STAGE_TERMINAL];
         } else {
              _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*1.5];
@@ -59,7 +59,7 @@ switch( (_state select 0) ) do {
 };
 
 #ifdef DEBUG_MODE_FULL
-drawLine3D [(ASLtoATL _returnTargetPos), (ASLtoATL _seekerTargetPos), [0,1,0,1]];
+drawLine3D [(ASLtoAGL _returnTargetPos), (ASLtoAGL _seekerTargetPos), [0,1,0,1]];
 #endif
 
 TRACE_1("Adjusted target position", _returnTargetPos);

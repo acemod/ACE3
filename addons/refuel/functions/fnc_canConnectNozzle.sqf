@@ -28,4 +28,4 @@ if (_target isKindOf "AllVehicles") then {
 !(isNull _nozzle ||
     {_engine} ||
     {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
-    {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines
+    {!isNull (_target getVariable [QGVAR(nozzle), objNull])})

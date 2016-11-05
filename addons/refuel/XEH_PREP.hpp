@@ -16,6 +16,7 @@ PREP(handleDisconnect);
 PREP(handleKilled);
 PREP(handleUnconscious);
 PREP(makeJerryCan);
+PREP(maxDistanceDropNozzle);
 PREP(moduleRefuelSettings);
 PREP(readFuelCounter);
 PREP(refuel);

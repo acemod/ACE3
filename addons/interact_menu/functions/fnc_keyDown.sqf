@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Handle interactions key down
  *
- * Argument:
+ * Arguments:
  * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
  *
- * Return value:
+ * Return Value:
  * true <BOOL>
  *
  * Public: No
@@ -32,7 +32,7 @@ if (_menuType == 0) then {
     GVAR(keyDown) = false;
     GVAR(keyDownSelfAction) = true;
 };
-GVAR(keyDownTime) = ACE_diagTime;
+GVAR(keyDownTime) = diag_tickTime;
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
@@ -83,25 +83,43 @@ if (GVAR(openedMenuType) == 0) then {
         if (vehicle ACE_player != ACE_player) then {
             GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
             GVAR(expanded) = true;
-            GVAR(expandedTime) = ACE_diagTime;
+            GVAR(expandedTime) = diag_tickTime;
             GVAR(lastPath) = +GVAR(menuDepthPath);
             GVAR(startHoverTime) = -1000;
         };
     } else {
         GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];
         GVAR(expanded) = true;
-        GVAR(expandedTime) = ACE_diagTime;
+        GVAR(expandedTime) = diag_tickTime;
         GVAR(lastPath) = +GVAR(menuDepthPath);
         GVAR(startHoverTime) = -1000;
     };
 } else {
     GVAR(menuDepthPath) = [["ACE_SelfActions", ACE_player]];
     GVAR(expanded) = true;
-    GVAR(expandedTime) = ACE_diagTime;
+    GVAR(expandedTime) = diag_tickTime;
     GVAR(lastPath) = +GVAR(menuDepthPath);
     GVAR(startHoverTime) = -1000;
 };
 
-["interactMenuOpened", [_menuType]] call EFUNC(common,localEvent);
+["ace_interactMenuOpened", [_menuType]] call CBA_fnc_localEvent;
+
+//Remove the old "DefaultAction" action event handler if it already exists
+GVAR(blockDefaultActions) params [["_player", objNull], ["_ehid", -1]];
+TRACE_2("blockDefaultActions",_player,_ehid);
+if (!isNull _player) then {
+    [_player, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+    GVAR(blockDefaultActions) = [];
+};
+//Add the "DefaultAction" action event handler
+if (alive ACE_player) then {
+    private _ehid = [ACE_player, "DefaultAction", {GVAR(openedMenuType) >= 0}, {
+        if (!GVAR(actionOnKeyRelease) && GVAR(actionSelected)) then {
+            [GVAR(openedMenuType),true] call FUNC(keyUp);
+        };
+    }] call EFUNC(common,addActionEventHandler);
+    TRACE_2("Added",ACE_player,_ehid);
+    GVAR(blockDefaultActions) = [ACE_player, _ehid];
+};
 
 true

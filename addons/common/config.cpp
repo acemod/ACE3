@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Box_Misc", "ACE_bananaItem"};
         weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main","ace_modules"};
-        author[] = {"KoffeinFlummi"};
-        authorUrl = "https://github.com/KoffeinFlummi/";
+        author = CSTRING(ACETeam);
+        authors[] = {"KoffeinFlummi"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG_COMMON;
     };
 };
@@ -20,7 +22,6 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "CfgMagazines.hpp"
 
-#include "CfgActions.hpp"
 #include "CfgMoves.hpp"
 #include "CfgVoice.hpp"
 #include "CfgUnitInsignia.hpp"

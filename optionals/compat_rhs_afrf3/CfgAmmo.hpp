@@ -39,7 +39,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={700, 800, 820, 833};
         ACE_barrelLengths[]={406.4, 508.0, 609.6, 660.4};
     };
-    class rhs_B_762x54_Ball_Tracer_Green: B_762x51_Ball {
+    class rhs_B_762x54_Ball_Tracer_Green: rhs_B_762x54_Ball {
         ACE_caliber=7.925;
         ACE_bulletLength=28.956;
         ACE_bulletMass=9.6552;
@@ -163,6 +163,8 @@ class CfgAmmo {
         ace_frag_force = 1;
     };
     class rhs_ammo_rgn: rhs_ammo_rgn_base {
+        // RGN is scripted grenade that deletes itself, which will break advanced throwing, replace with it's base
+        ace_advanced_throwing_replaceWith = "rhs_ammo_rgn_base";
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;
@@ -202,4 +204,20 @@ class CfgAmmo {
         ace_frag_skip = 1;
         ace_frag_force = 0;
     };
+    
+    class G_40mm_HE;
+    class rhs_g_vog25: G_40mm_HE {};
+    class rhs_g_vg40tb: rhs_g_vog25 { //Thermobaric
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
+        ace_frag_force = 0;
+    };
+    class rhs_GDM40: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke
+        ace_frag_force = 0;
+    };
+    
 };

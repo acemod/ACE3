@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
  *
- * Argument:
+ * Arguments:
  * 0: Object or class name <OBJECT> or <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
@@ -18,10 +18,10 @@ private _objectType = _target;
 if (_target isEqualType objNull) then {
     _objectType = typeOf _target;
 };
-private _actionsVarName = format [QGVAR(SelfAct_%1), _objectType];
+private _namespace = GVAR(ActSelfNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {missionNamespace getVariable [_actionsVarName, nil]}) exitWith {};
+if !(isNil {_namespace getVariable _objectType}) exitWith {};
 
 
 private _recurseFnc = {
@@ -125,4 +125,4 @@ private _actions = [
         ]
     ];
 
-missionNamespace setVariable [_actionsVarName, _actions];
+_namespace setVariable [_objectType, _actions];

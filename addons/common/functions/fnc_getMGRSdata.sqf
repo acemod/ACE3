@@ -4,7 +4,7 @@
  * Also gets longitude, latitude and altitude offset for the map.
  * Writes return values to GVAR(MGRS_data) if run on the current map.
  *
- * Argument:
+ * Arguments:
  * 0: Map name (default: worldName) <STRING>
  *
  * Return Value:
@@ -22,29 +22,14 @@ private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
 private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
-if (_map in ["Chernarus", "Bootcamp_ACR", "Woodland_ACR", "utes"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["Altis", "Stratis"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["Takistan", "Zargabad", "Mountains_ACR"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["Shapur_BAF", "ProvingGrounds_PMC"]) then { _lat = 35; _altitude = 100; };
-if (_map in ["fallujah"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["fata", "Abbottabad"]) then { _lat = 30; _altitude = 1000; };
-if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
-if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
-if (_map in ["Bornholm"]) then { _lat = 55; _altitude = 0; };
-if (_map in ["Imrali"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["Caribou"]) then { _lat = 68; _altitude = 0; };
-if (_map in ["Namalsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["MCN_Aliabad"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["Clafghan"]) then { _lat = 34; _altitude = 640; };
-if (_map in ["Sangin", "hellskitchen"]) then { _lat = 32; _altitude = 0; };
-if (_map in ["Sara"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["reshmaan"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["Thirsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["lingor"]) then { _lat = -4; _altitude = 0; };
-if (_map in ["Panthera3"]) then { _lat = 46; _altitude = 0; };
-if (_map in ["Kunduz"]) then { _lat = 37; _altitude = 400; };
+private _mapData = _map call FUNC(getMapData);
+if (!(_mapData isEqualTo [])) then {
+    _lat = _mapData select 0;
+    _alt = _mapData select 1;
+};
+TRACE_2("Latitude and Altitude",_lat,_alt);
 
-private _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
+private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;
 private _northing = _UTM select 1;
 //private _zone = _UTM select 2;

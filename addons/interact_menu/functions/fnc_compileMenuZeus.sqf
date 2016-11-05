@@ -2,10 +2,10 @@
  * Author: SilentSpike
  * Compile the zeus action menu (only to be done once)
  *
- * Argument:
+ * Arguments:
  * nil
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

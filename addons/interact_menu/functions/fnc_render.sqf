@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Render all available nearby interactions
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -51,12 +51,12 @@ if (GVAR(openedMenuType) >= 0) then {
     private _closest = GVAR(currentOptions) select _closestSelection;
     _closest params ["_action", "_sPos", "_hoverPath"];
 
-    private _cTime = ACE_diagTime;
+    private _cTime = diag_tickTime;
     private _delta = _cTime - GVAR(lastTime);
     GVAR(lastTime) = _cTime;
 
     GVAR(rotationAngle) = (GVAR(rotationAngle) + (270*_delta)) mod 360;
-    [_sPos, format [QUOTE(PATHTOF(ui\selector%1.paa)), floor (((abs GVAR(rotationAngle)) mod 90) / 6)]] call FUNC(renderSelector);
+    [_sPos, format [QPATHTOF(ui\selector%1.paa), floor (((abs GVAR(rotationAngle)) mod 90) / 6)]] call FUNC(renderSelector);
 
     _foundTarget = true;
     GVAR(actionSelected) = true;
@@ -65,17 +65,17 @@ if (GVAR(openedMenuType) >= 0) then {
 
     private _misMatch = !(GVAR(lastPath) isEqualTo _hoverPath);
 
-    if(_misMatch && {ACE_diagTime-GVAR(expandedTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
-        GVAR(startHoverTime) = ACE_diagTime;
+    if(_misMatch && {diag_tickTime-GVAR(expandedTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
+        GVAR(startHoverTime) = diag_tickTime;
         GVAR(lastPath) = _hoverPath;
         GVAR(expanded) = false;
     } else {
-        if(!GVAR(expanded) && {ACE_diagTime-GVAR(startHoverTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
+        if(!GVAR(expanded) && {diag_tickTime-GVAR(startHoverTime) > linearConversion [0, 2, GVAR(menuAnimationSpeed), 0.25, 0.08333333]}) then {
             GVAR(expanded) = true;
 
             // Start the expanding menu animation only if the user is not going up the menu
             if !([GVAR(menuDepthPath),GVAR(lastPath)] call FUNC(isSubPath)) then {
-                GVAR(expandedTime) = ACE_diagTime;
+                GVAR(expandedTime) = diag_tickTime;
             };
             GVAR(menuDepthPath) = +GVAR(lastPath);
 
@@ -97,7 +97,7 @@ if (GVAR(openedMenuType) >= 0) then {
                 private _target = GVAR(selectedTarget);
 
                 // Clear the conditions caches
-                ["clearConditionCaches", []] call EFUNC(common,localEvent);
+                [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
@@ -106,7 +106,7 @@ if (GVAR(openedMenuType) >= 0) then {
                     [_target, _player, _actionData select 6] call (_actionData select 3);
 
                     // Clear the conditions caches again if the action was performed
-                    ["clearConditionCaches", []] call EFUNC(common,localEvent);
+                    [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
                 };
             };
         };

@@ -2,11 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Item_Yardage450"};
         weapons[] = {"ACE_Yardage450"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_apl", "ace_laser"};
-        author[] = {"Spooner", "tcp", "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Spooner", "tcp", "Ruthberg"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

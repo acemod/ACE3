@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_calculate_target_solution
+ * call ace_atragmx_fnc_calculate_target_solution
  *
  * Public: No
  */

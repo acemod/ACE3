@@ -19,7 +19,7 @@ params ["_unit", "_target", ["_lockTarget", false]];
 private _owner = _target getVariable [QGVAR(owner), objNull];
 
 if (!isNull _owner && {!isNull _unit} && {_unit != _owner}) then {
-    ACE_LOGERROR("Claiming already owned object.");
+    ERROR("Claiming already owned object.");
 };
 
 // transfer this immediately
@@ -28,9 +28,9 @@ _target setVariable [QGVAR(owner), _unit, true];
 // lock target object
 if (_lockTarget) then {
     if (!isNull _unit) then {
-        ["lockVehicle", _target, _target] call FUNC(targetEvent);
+        [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
     } else {
-        ["unlockVehicle", _target, _target] call FUNC(targetEvent);
+        [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
     };
 };
 

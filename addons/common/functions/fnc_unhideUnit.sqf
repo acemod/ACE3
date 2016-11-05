@@ -28,5 +28,5 @@ if (_reason in _setHiddenReasons) then {
 };
 
 if (_setHiddenReasons isEqualTo []) then {
-    ["hideObjectGlobal",[_unit,false]] call FUNC(serverEvent);
+    [QGVAR(hideObjectGlobal), [_unit,false]] call CBA_fnc_serverEvent;
 };

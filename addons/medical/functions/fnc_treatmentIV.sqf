@@ -16,16 +16,15 @@
 
 #include "script_component.hpp"
 
-private "_removeItem";
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (count _items == 0) exitWith {false};
+if (_items isEqualTo []) exitWith {false};
 
-_removeItem = _items select 0;
+_items params ["_removeItem"];
 if (local _target) then {
-    ["treatmentIVLocal", [_target, _className]] call EFUNC(common,localEvent);
+    [QGVAR(treatmentIVLocal), [_target, _className]] call CBA_fnc_localEvent;
 } else {
-    ["treatmentIVLocal", _target, [_target, _className]] call EFUNC(common,targetEvent);
+    [QGVAR(treatmentIVLocal), [_target, _className], _target] call CBA_fnc_targetEvent;
 };
 
 [_target, _removeItem] call FUNC(addToTriageCard);
