@@ -20,7 +20,7 @@
             <Russian>Включить улучшенный бросок</Russian>
             <Japanese>アドバンスド投てきを有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
-            <German>Aktiviert erweitertes Werfen</German>
+            <German>Aktiviere erweitertes Werfen</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
