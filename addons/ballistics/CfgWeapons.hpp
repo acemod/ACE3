@@ -31,6 +31,11 @@ class CfgWeapons {
         initSpeed = -1.069461;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 640.0;
+        magazines[] = {
+            "20Rnd_650x39_Cased_Mag_F",
+            "ACE_20Rnd_65x47_Scenar_mag",
+            "ACE_20Rnd_65_Creedmor_mag"
+        };
     };
     
     class DMR_06_base_F: Rifle_Long_Base_F {
