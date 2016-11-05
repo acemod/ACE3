@@ -77,7 +77,7 @@ To create a complete build of ACE3 that you can use without the source files you
 
 When the requirements are met:
 
-- Execute `make.py version increment_build <other-increment-args> force check_external release` in the `tools` folder, replacing `<other-increment-args>` with the part of version you want to increment (options described below)
+- Execute `make.py version increment_build <other-increment-args> force checkexternal release` in the `tools` folder, replacing `<other-increment-args>` with the part of version you want to increment (options described below)
 
 This will populate the `release` folder with binarized PBOs, compiled extensions, copied extras, bisigns and a bikey. Additionally, an archive file will also be created in the folder. The folder and archive handle like those of any other mod.
 
@@ -89,7 +89,7 @@ Different `make.py` command line options include:
 - `increment_minor` - increments _minor_ version number and resets _patch_ version number to `0` (ignored with `increment_major`)
 - `increment_major` - increments _major_ version number and resets _minor_ and _patch_ version numbers to `0`
 - `force` - force rebuild all PBOs, even those already present in the `release` directory (combined with `compile` it will also rebuild all extensions)
-- `check_external` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
+- `checkexternal` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
 - `release` - create release packages/archives
 - `<component1> <component2>` - build only specified component(s) (incompatible with `release`)
 - `force <component1> <component2>` - force rebuild specified component(s) (incompatible with `release`)
