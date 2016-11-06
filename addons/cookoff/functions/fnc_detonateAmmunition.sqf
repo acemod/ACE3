@@ -37,7 +37,7 @@ if (_amountOfMagazines > 0) exitWith {
     _timeBetweenAmmoDetonation = _timeBetweenAmmoDetonation max 0.1;
 
     private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "ammo");
-    private _ammoCfg = (configFile >> "CfgAmmo" >> _ammo);
+    private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
 
     private _speedOfAmmo = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "initSpeed");
     private _simulationTime = getNumber (_ammoCfg >> "simulation");
@@ -53,8 +53,8 @@ if (_amountOfMagazines > 0) exitWith {
         if (_spawnPos select 2 < 0) then {
             _spawnPos set [2, 0];
         };
-        private _projectile = _ammo createVehicle [0,0,0];
-        _projectile setPos _spawnPos;
+
+        private _projectile = createVehicle [_ammo, _spawnPos, [], 0, "CAN_COLLIDE"];
         if (_flyAway) then {
             private _vectorAmmo = [(-1 + (random 2)), (-1 + (random 2)), -0.2 + (random 1)];
             private _velVec = _vectorAmmo vectorMultiply _speed;
@@ -99,7 +99,7 @@ if (_amountOfMagazines > 0) exitWith {
 
             [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
         } else {
-            "ACE_ammoExplosionLarge" createvehicle (_vehicle modelToWorld _effect2pos);
+            createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
         };
     };
     if (toLower _simType in ["shotdirectionalbomb", "shotmine"]) then {
@@ -114,7 +114,7 @@ if (_amountOfMagazines > 0) exitWith {
             if (_ammo != "") then {
                 [_vehicle, _ammo, 0, false] call _spawnProjectile;
             } else {
-                "SmallSecondary" createvehicle (_vehicle modelToWorld _effect2pos);
+                createvehicle ["SmallSecondary", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
             };
         };
     };
