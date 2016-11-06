@@ -406,7 +406,7 @@
             <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
             <Japanese>ユーザー インタフェイス要素は変更できません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
-            <German>Gesperrte UI-Element können nicht modifiziert werden.</German>
+            <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
         </Key>
     </Package>
 </Project>

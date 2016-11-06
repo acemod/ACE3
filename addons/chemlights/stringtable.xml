@@ -78,73 +78,73 @@
             <English>Chemlight (Hi Red)</English>
             <Japanese>ケミライト (高輝度 赤)</Japanese>
             <Polish>Świetlik (jaskrawy czerwony)</Polish>
-            <German>Knicklicht (Hi rot)</German>
+            <German>Knicklicht (rot, hell)</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
             <English>Red Hi Light</English>
             <Japanese>高輝度の赤色</Japanese>
             <Polish>Jaskrawe czerwone światło</Polish>
-            <German>Rotes Hi Licht</German>
+            <German>Helles rotes Knicklicht</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <Japanese>種類: 照明 - 高輝度 赤 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - rot Hi (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <German>Typ: Licht - rot, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
             <English>Chemlight (Hi Yellow)</English>
             <Japanese>ケミライト (高輝度 黄)</Japanese>
             <Polish>Świetlik (jaskrawy żółty)</Polish>
-            <German>Knicklicht (Hi gelb)</German>
+            <German>Knicklicht (gelb, hell)</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
             <English>Yellow Hi Light</English>
             <Japanese>高輝度の黄色</Japanese>
             <Polish>Jaskrawe żółte światło</Polish>
-            <German>Gelbes Hi Licht</German>
+            <German>Helles gelbes Knicklicht</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <Japanese>種類: 照明 - 高輝度 黄 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - gelb Hi (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <German>Typ: Licht - gelb, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
             <English>Chemlight (Hi Orange)</English>
             <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
             <Polish>Świetlik (jaskrawy pomarańczowy)</Polish>
-            <German>Knicklicht (Hi orange)</German>
+            <German>Knicklicht (orange, hell)</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DisplayNameShort">
             <English>Orange Hi Light</English>
             <Japanese>高輝度のオレンジ</Japanese>
             <Polish>Jaskrawe pomarańczowe światło</Polish>
-            <German>Oranges Hi Licht</German>
+            <German>Helles oranges Knicklicht</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
             <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - orange Hi (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
             <English>Chemlight (Hi White)</English>
             <Japanese>ケミライト (高輝度 白)</Japanese>
             <Polish>Świetlik (jaskrawy biały)</Polish>
-            <German>Knicklicht (Hi weiß)</German>
+            <German>Knicklicht (weiß, hell)</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
             <English>White Hi Light</English>
             <Japanese>高輝度の白色</Japanese>
             <Polish>Jaskrawe białe światło</Polish>
-            <German>Weißes Hi Licht</German>
+            <German>Helles weißes Knicklicht</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
             <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
             <Japanese>種類: 照明 - 高輝度 白 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
-            <German>Typ: Licht - weiß Hi (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <German>Typ: Licht - weiß, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DisplayName">
             <English>Chemlight (IR)</English>
@@ -156,7 +156,7 @@
             <English>IR Light</English>
             <Japanese>赤外線光</Japanese>
             <Polish>Światło podczerwone</Polish>
-            <German>IR Licht</German>
+            <German>IR-Knicklicht</German>
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>

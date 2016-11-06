@@ -239,7 +239,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_SwappingBarrel">
             <English>Swapping barrel...</English>
-            <German>Lauf wird gewechselt...</German>
+            <German>Lauf wird gewechselt ...</German>
             <Spanish>Cambiando el cañón...</Spanish>
             <Polish>Wymienianie lufy...</Polish>
             <Czech>Měním hlaveň...</Czech>
@@ -291,7 +291,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingTemperature">
             <English>Checking temperature...</English>
-            <German>Prüfe Temperatur...</German>
+            <German>Prüfe Temperatur ...</German>
             <Spanish>Verificando temperatura...</Spanish>
             <Polish>Sprawdzanie temperatury...</Polish>
             <French>Vérification de la température...</French>
@@ -320,7 +320,7 @@
             <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
             <Japanese>予備銃身の温度を測っている・・・</Japanese>
             <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
-            <German>Prüfe Temperatur der Wechselläufe...</German>
+            <German>Prüfe Temperatur der Wechselläufe ...</German>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>

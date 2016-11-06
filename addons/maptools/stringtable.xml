@@ -150,7 +150,7 @@
             <Russian>Клавиша поворота инструментов карты</Russian>
             <Japanese>マップ ツールの回転キー</Japanese>
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
-            <German>Taste zum drehen des Kartenwerkzeugs</German>
+            <German>Taste zum Drehen des Kartenwerkzeugs</German>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>

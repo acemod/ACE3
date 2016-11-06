@@ -212,7 +212,7 @@
             <Czech>Globální zkušenosti AI</Czech>
             <Japanese>総合的な AI スキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
-            <German>Globales KI-Können</German>
+            <German>Globale KI-Fähigkeit</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -221,7 +221,7 @@
             <Czech>Primární zkušenosti</Czech>
             <Japanese>総合スキル</Japanese>
             <Polish>Ogólne umiejętności</Polish>
-            <German>Allgemeines Können</German>
+            <German>Allgemeine Fähigkeit</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>

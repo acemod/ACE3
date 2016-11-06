@@ -6,21 +6,21 @@
             <Russian>Улучшенный бросок гранат</Russian>
             <Japanese>アドバンスド投てき</Japanese>
             <Polish>Zaawansowane rzucanie</Polish>
-            <German>Erweitertes Werfen</German>
+            <German>Erweitertes Wurfsystem</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
             <Japanese>アドバンスド投てきの挙動変更を許可します。</Japanese>
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
-            <German>Erlaubt es, das Verhalten beim erweiterten Werfen zu ändern.</German>
+            <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
             <Russian>Включить улучшенный бросок</Russian>
             <Japanese>アドバンスド投てきを有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
-            <German>Aktiviere erweitertes Werfen</German>
+            <German>Aktiviere erweitertes Wurfsystem</German>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>

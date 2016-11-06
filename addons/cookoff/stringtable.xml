@@ -3,7 +3,7 @@
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_enable_name">
             <English>Enable cook off</English>
-            <German>Cook-off ermöglichen</German>
+            <German>Selbstzündung ermöglichen</German>
             <Czech>Povolit explozi munice</Czech>
             <Russian>Включить воспламенение</Russian>
             <Japanese>誘爆を有効化</Japanese>
@@ -34,7 +34,7 @@
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
             <Japanese>弾薬箱に誘爆を有効化</Japanese>
-            <German>Cook-off für Munitionskisten ermöglichen</German>
+            <German>Selbstzündung für Munitionskisten ermöglichen</German>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
@@ -44,7 +44,7 @@
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
             <Japanese>弾薬の誘爆を有効化</Japanese>
-            <German>Cook-off für Munition ermöglichen</German>
+            <German>Selbstzündung für Munition ermöglichen</German>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
