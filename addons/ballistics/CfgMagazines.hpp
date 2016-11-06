@@ -8,6 +8,9 @@ class CfgMagazines {
     class 100Rnd_580x42_Mag_F: 30Rnd_580x42_Mag_F {
         initSpeed = 930;
     };
+    class 20Rnd_650x39_Cased_Mag_F: CA_Magazine {
+        initSpeed = 760;
+    };
     class 30Rnd_65x39_caseless_mag: CA_Magazine {
         initSpeed = 760;
     };
@@ -237,6 +240,7 @@ class CfgMagazines {
     class ACE_30Rnd_65x47_Scenar_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65x47_Ball_Scenar";
+        initSpeed = 761;
         displayName = CSTRING(30Rnd_65x47_Scenar_mag_Name);
         displayNameShort = CSTRING(30Rnd_65x47_Scenar_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65x47_Scenar_mag_Description);
@@ -244,6 +248,7 @@ class CfgMagazines {
     class ACE_20Rnd_65x47_Scenar_mag: 20Rnd_650x39_Cased_Mag_F {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65x47_Ball_Scenar";
+        initSpeed = 779;
         displayName = CSTRING(20Rnd_65x47_Scenar_mag_Name);
         displayNameShort = CSTRING(20Rnd_65x47_Scenar_mag_NameShort);
         descriptionShort = CSTRING(20Rnd_65x47_Scenar_mag_Description);
@@ -251,6 +256,7 @@ class CfgMagazines {
     class ACE_30Rnd_65_Creedmor_mag: 30Rnd_65x39_caseless_mag {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65_Creedmor_Ball";
+        initSpeed = 815;
         displayName = CSTRING(30Rnd_65_Creedmor_mag_Name);
         displayNameShort = CSTRING(30Rnd_65_Creedmor_mag_NameShort);
         descriptionShort = CSTRING(30Rnd_65_Creedmor_mag_Description);
@@ -258,6 +264,7 @@ class CfgMagazines {
     class ACE_20Rnd_65_Creedmor_mag: 20Rnd_650x39_Cased_Mag_F {
         author = ECSTRING(common,ACETeam);
         ammo = "ACE_65_Creedmor_Ball";
+        initSpeed = 808;
         displayName = CSTRING(20Rnd_65_Creedmor_mag_Name);
         displayNameShort = CSTRING(20Rnd_65_Creedmor_mag_NameShort);
         descriptionShort = CSTRING(20Rnd_65_Creedmor_mag_Description);
