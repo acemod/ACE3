@@ -28,7 +28,7 @@ class CfgWeapons {
     };
 
     class DMR_07_base_F: Rifle_Long_Base_F {
-        initSpeed = -0.982908;
+        initSpeed = -1.06051;
         ACE_barrelTwist = 228.6;
         ACE_barrelLength = 640.0;
         magazines[] = {
