@@ -20,7 +20,7 @@
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")
 
-private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_bulletMass", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_mv", "_mvShift", "_offset", "_relativeHumidity", "_result", "_row", "_scopeBaseAngle", "_weaponConfig", "_zeroRange", "_initSpeed", "_initSpeedCoef", "_useABConfig"];
+private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_bulletMass", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_offset", "_relativeHumidity", "_result", "_row", "_weaponConfig", "_zeroRange", "_initSpeed", "_initSpeedCoef", "_useABConfig"];
 _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 
 PARAMS_3(_ammoClass,_magazineClass,_weaponClass);
@@ -163,17 +163,21 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 
 _cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
-    _result = [0, 0, _boreHeight, _airFriction, _muzzleVelocity, 15, 1013.25, 0.5, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0, 0, _useABConfig] call FUNC(calculateSolution);
-    _scopeBaseAngle = (_result select 0) / 60;
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    private _scopeBaseAngle = 0;
+    { 
+        private _offset = [_scopeBaseAngle, 100, _muzzleVelocity, _airFriction, 1000, _boreHeight, 15, 1013.25, 0.5, _bc, _dragModel, _atmosphereModel, _useABConfig] call EFUNC(scopes,calculateZeroAngle);
+        _scopeBaseAngle = _scopeBaseAngle + _offset;
+        if (_offset < 0.01) exitWith {};
+    } forEach [1, 2, 3];
+    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
         {
-            _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
-            _mv = _muzzleVelocity + _mvShift;
+            private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
+            private _mv = _muzzleVelocity + _mvShift;
 
             [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_mv,_x,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_muzzleVelocity,15,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,3,_useABConfig] call FUNC(calculateSolution);
+        [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_muzzleVelocity,15,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,4,_useABConfig] call FUNC(calculateSolution);
     };
 
     for "_i" from 0 to 9 do {
