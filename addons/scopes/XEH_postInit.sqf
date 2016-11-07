@@ -9,6 +9,8 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(Optics) = ["", "", ""];
+
 // Check inventory when it changes
 ["loadout", FUNC(inventoryCheck)] call CBA_fnc_addPlayerEventHandler;
 

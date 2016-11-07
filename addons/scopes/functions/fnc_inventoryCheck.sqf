@@ -25,9 +25,6 @@ if (isNil "_adjustment") then {
     [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
 };
 
-if (isNil QGVAR(Optics)) then {
-    GVAR(Optics) = ["", "", ""];
-};
 private _newOptics = [_player] call FUNC(getOptics);
 
 {
