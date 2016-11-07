@@ -52,7 +52,7 @@ TRACE_3("ACE_DEBUG",_bloodLoss,_unit getVariable QGVAR(isBleeding),_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
 
-    [_unit, "TakenInjury"] call FUNC(stateEvent);
+    [QGVAR(TakenInjury), _unit] call CBA_fnc_localEvent;
 
     if !(_unit getVariable [QGVAR(isBleeding), false]) then {
         _unit setVariable [QGVAR(isBleeding), true, true];

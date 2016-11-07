@@ -1,7 +1,5 @@
 
-PREP(addStateHandler);
 PREP(adjustPainLevel);
-PREP(createStateMachine);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
@@ -14,8 +12,6 @@ PREP(isInMedicalVehicle);
 PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
-PREP(stateEvent);
-PREP(stateMachine);
 
 // PREP(hasMedicalEnabled);
 

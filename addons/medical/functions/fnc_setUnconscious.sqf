@@ -81,7 +81,7 @@ if (_isDead) exitWith {};
 */
 
 [_unit, true] call EFUNC(medical_engine,setUnconsciousAnim);
-[_unit, "Unconscious", []] call FUNC(stateEvent);
+[QGVAR(Unconscious), _unit] call CBA_fnc_localEvent;
 ["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;
 
 // auto wake up
