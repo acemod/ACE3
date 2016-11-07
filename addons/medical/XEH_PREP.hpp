@@ -1,4 +1,3 @@
-
 PREP(adjustPainLevel);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -15,12 +14,16 @@ PREP(isMedicalVehicle);
 
 // PREP(hasMedicalEnabled);
 
+PREP(enteredStateCardiacArrest);
+PREP(leavingStateCardiacArrest);
+
+PREP(enteredStateFatalInjury);
+
 PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);
 PREP(handleUnitVitals);
 PREP(handleMedications);
-// PREP(handleStateRevive);
 
 PREP(addPain);
 PREP(setUnconscious);
