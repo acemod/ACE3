@@ -28,37 +28,8 @@ TRACE_1("Adjusting With",_zeroing);
 _zeroing = _zeroing vectorMultiply 0.05625;
 
 if (_ammo isKindOf "BulletBase") then {
-    private _railHeightAboveBore = 0;
-    private _scopeHeightAboveRail = 0;
-    // Determine rail height above bore
-    private _weaponConfig = configFile >> "CfgWeapons" >> _weapon;
-    if (isNumber (_weaponConfig >> "ACE_RailHeightAboveBore")) then {
-        _railHeightAboveBore = getNumber(_weaponConfig >> "ACE_RailHeightAboveBore");
-    } else {
-        switch (_weaponIndex) do {
-            case 0: { _railHeightAboveBore = 2.0; }; // Rifle
-            case 2: { _railHeightAboveBore = 0.7; }; // Pistol
-        };
-    };
-    // Determine scope height above rail
-    private _optic = GVAR(Optics) select _weaponIndex;
-    private _opticConfig = configFile >> "CfgWeapons" >> _optic;
-    if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
-        _scopeHeightAboveRail = getNumber(_opticConfig >> "ACE_ScopeHeightAboveRail");
-    } else {
-        switch (getNumber(_opticConfig >> "ItemInfo" >> "opticType")) do {
-            case 1: { _scopeHeightAboveRail = 3.0; }; // RCO or similar
-            case 2: { _scopeHeightAboveRail = 4.0; }; // High power scope
-            default {
-                switch (_weaponIndex) do {
-                    case 0: { _scopeHeightAboveRail = 0.5; }; // Rifle iron sights
-                    case 2: { _scopeHeightAboveRail = 0.3; }; // Pistol iron sights
-                };
-            };
-        };
-    };
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
-    private _boreHeight = _railHeightAboveBore + _scopeHeightAboveRail;
+    private _boreHeight = GVAR(boreHeight) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
     private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
