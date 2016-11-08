@@ -17,8 +17,10 @@
 
 params ["_unit"];
 
+if (!GVAR(enabled)) exitWith { currentZeroing _unit };
+
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
-if (_weaponIndex < 0) exitWith { 0 };
+if (_weaponIndex < 0) exitWith { currentZeroing _unit };
 
 private _optic = GVAR(Optics) select _weaponIndex;
 private _opticConfig = configFile >> "CfgWeapons" >> _optic;
