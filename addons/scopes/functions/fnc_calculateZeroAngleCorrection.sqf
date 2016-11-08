@@ -47,11 +47,6 @@ private _vanillaZero = 0; // in degrees
     if (_offset < 0.01) exitWith {};
 } forEach [1, 2, 3];
 
-// Standard atmosphere (optionally overwrite with ace setting)
-private _temperature = 15;
-private _barometricPressure = 1013.25;
-private _relativeHumidity = 0.5;
-
 if (_advancedBallistics) then {
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]) then {
         private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _initSpeed] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
@@ -60,8 +55,8 @@ if (_advancedBallistics) then {
 };
 
 private _zeroAngle = 0; // in degrees
-{ 
-    private _offset = [_zeroAngle, _newZeroRange, _initSpeed, _airFriction, 1000, _boreHeight, _temperature, _barometricPressure, _relativeHumidity, _ballisticCoefficients select 0, _dragModel, _atmosphereModel, _advancedBallistics] call FUNC(calculateZeroAngle);
+{
+    private _offset = [_zeroAngle, _newZeroRange, _initSpeed, _airFriction, 1000, _boreHeight, GVAR(zeroReferenceTemperature), GVAR(zeroReferenceBarometricPressure), GVAR(zeroReferenceHumidity), _ballisticCoefficients select 0, _dragModel, _atmosphereModel, _advancedBallistics] call FUNC(calculateZeroAngle);
     _zeroAngle = _zeroAngle + _offset;
     if (_offset < 0.01) exitWith {};
 } forEach [1, 2, 3];
