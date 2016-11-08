@@ -10,6 +10,9 @@
 if (!hasInterface) exitWith {};
 
 GVAR(Optics) = ["", "", ""];
+GVAR(canAdjustElevation) = [false, false, false];
+GVAR(canAdjustWindage) = [false, false, false];
+GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 // Check inventory when it changes
 ["loadout", FUNC(inventoryCheck)] call CBA_fnc_addPlayerEventHandler;

@@ -3,9 +3,10 @@
  * Updates the range card data
  *
  * Arguments:
- * 0: ammo class <STRING>
- * 1: magazine class <STRING>
- * 2: weapon class <STRING>
+ * 0: zero range <NUMBER>
+ * 1: ammo class <STRING>
+ * 2: magazine class <STRING>
+ * 3: weapon class <STRING>
  *
  * Return Value:
  * Nothing
@@ -20,10 +21,9 @@
 disableSerialization;
 #define __dsp (uiNamespace getVariable "RangleCard_Display")
 
-private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barometricPressure", "_barrelLength", "_barrelTwist", "_bc", "_bulletMass", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_offset", "_relativeHumidity", "_result", "_row", "_weaponConfig", "_zeroRange", "_initSpeed", "_initSpeedCoef", "_useABConfig"];
-_useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
+private ["_airFriction", "_ammoConfig", "_atmosphereModel", "_barrelLength", "_barrelTwist", "_bc", "_boreHeight", "_cacheEntry", "_column", "_control", "_dragModel", "_i", "_muzzleVelocity", "_offset", "_row", "_weaponConfig", "_initSpeed", "_initSpeedCoef"];
 
-PARAMS_3(_ammoClass,_magazineClass,_weaponClass);
+params ["_zeroRange", "_ammoClass", "_magazineClass", "_weaponClass"];
 
 if (_ammoClass == "" || _magazineClass == "" || _weaponClass == "") exitWith {};
 
@@ -105,10 +105,9 @@ if (count (_ammoConfig select 6) > 0) then {
 };
 _dragModel = _ammoConfig select 5;
 _atmosphereModel = _ammoConfig select 8;
-_bulletMass = 5;
 _boreHeight = 3.81;
-_zeroRange = 100;
 
+private _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 if (_bc == 0) then {
     _useABConfig = false;
 };
@@ -147,25 +146,21 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     lnbAddRow [770300, ["-15°C", " 10°C", " 35°C", "-15°C", " 10°C", " 35°C"]];
 };
 
-_barometricPressure = 1013.25;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    _barometricPressure = 1013.25 * (1 - (0.0065 * EGVAR(common,mapAltitude)) / 288.15) ^ 5.255754495;
-};
-_relativeHumidity = 0.5;
+ctrlSetText [77003, format["%1m ZERO", round(_zeroRange)]];
 
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-    ctrlSetText [770001, format["Drop Tables for B.P.: %1mb; Corrected for MVV at Air/Ammo Temperatures -15-35 °C", round(_barometricPressure * 100) / 100]];
-    ctrlSetText [77004 , format["B.P.: %1mb", round(_barometricPressure * 100) / 100]];
+    ctrlSetText [770001, format["Drop Tables for B.P.: %1mb; Corrected for MVV at Air/Ammo Temperatures -15-35 °C", round(EGVAR(scopes,zeroReferenceBarometricPressure) * 100) / 100]];
+    ctrlSetText [77004 , format["B.P.: %1mb", round(EGVAR(scopes,zeroReferenceBarometricPressure) * 100) / 100]];
 } else {
     ctrlSetText [770001, ""];
     ctrlSetText [77004 , ""];
 };
 
-_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
+_cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4), _zeroRange, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
     private _scopeBaseAngle = 0;
     { 
-        private _offset = [_scopeBaseAngle, 100, _muzzleVelocity, _airFriction, 1000, _boreHeight, 15, 1013.25, 0.5, _bc, _dragModel, _atmosphereModel, _useABConfig] call EFUNC(scopes,calculateZeroAngle);
+        private _offset = [_scopeBaseAngle, _zeroRange, _muzzleVelocity, _airFriction, 1000, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel, _useABConfig] call EFUNC(scopes,calculateZeroAngle);
         _scopeBaseAngle = _scopeBaseAngle + _offset;
         if (_offset < 0.01) exitWith {};
     } forEach [1, 2, 3];
@@ -174,10 +169,10 @@ if (isNil {_cacheEntry}) then {
             private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
             private _mv = _muzzleVelocity + _mvShift;
 
-            [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_mv,_x,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
+            [_scopeBaseAngle,0,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,_bulletMass,_boreHeight,_airFriction,_muzzleVelocity,15,_barometricPressure,_relativeHumidity,1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,4,_useABConfig] call FUNC(calculateSolution);
+        [_scopeBaseAngle,0,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,4,_useABConfig] call FUNC(calculateSolution);
     };
 
     for "_i" from 0 to 9 do {
@@ -195,7 +190,7 @@ if (isNil {_cacheEntry}) then {
         };
     };
 
-    missionNamespace setVariable [format[QGVAR(%1_%2_%3), _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
+    missionNamespace setVariable [format[QGVAR(%1_%2_%3_%4), _zeroRange, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]], [GVAR(rangeCardDataElevation), GVAR(rangeCardDataWindage), GVAR(rangeCardDataLead), GVAR(rangeCardDataMVs), GVAR(lastValidRow)]];
 } else {
     GVAR(rangeCardDataElevation) = _cacheEntry select 0;
     GVAR(rangeCardDataWindage)   = _cacheEntry select 1;
