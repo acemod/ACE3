@@ -1,5 +1,5 @@
 /*
- * Author: KoffeinFlummi, esteldunedain
+ * Author: KoffeinFlummi, esteldunedain, Ruthberg
  * Adjusts the flight path of the bullet according to the zeroing. Called from the unified fired EH only for local and non-local players on foot.
  *
  * Arguments:
@@ -60,7 +60,7 @@ if (_ammo isKindOf "BulletBase") then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     private _boreHeight = _railHeightAboveBore + _scopeHeightAboveRail;
     private _oldZeroRange = currentZeroing _unit;
-    private _newZeroRange = _oldZeroRange; // Change this if you want to overwrite the discreteDistance[] setting
+    private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
     private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
     if (isNil "_zeroCorrection") then {
          _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);

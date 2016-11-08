@@ -1,6 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Scopes">
+        <Key ID="STR_ACE_Scopes_DisplayName">
+            <English>Scopes</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_enabled_displayName">
+            <English>Enable ACE Scope adjustment</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_enabled_description">
+            <English>Enable adjustmet turrets on high powered scopes</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
+            <English>Force adjustment turrets</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
+            <English>Force usage of adjustmet turrets on high powered scopes</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
+            <English>Default zero distance</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
+            <English>High power scopes will be zeroed at this distance</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
+            <English>Reference temperature</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
+            <English>Temperature at which the scope was zeroed</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
+            <English>Reference barometric pressure</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
+            <English>Barometric pressure at which the scope was zeroed</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
+            <English>Reference humidity</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
+            <English>Humidity at which the scope was zeroed</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
+            <English>Deduce pressure from altitude</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
+            <English>Deduce the barometric pressure from the terrain altitude</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <Polish>Zerowanie powoli w górę</Polish>
@@ -117,6 +162,9 @@
             <Portuguese>Zerar ajuste</Portuguese>
             <Czech>Vynulovat korekci</Czech>
             <Japanese>ゼロインを調節</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Scopes_Description">
+            <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
         </Key>
     </Package>
 </Project>

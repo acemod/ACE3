@@ -56,6 +56,8 @@ class CfgWeapons {
     
     class optic_NVS : ItemCore {
         ACE_ScopeHeightAboveRail = 4.2;
+        ACE_ScopeAdjust_Vertical[] = {0, 0};
+        ACE_ScopeAdjust_Horizontal[] = {0, 0};
     };
     
     class optic_TWS : ItemCore {
