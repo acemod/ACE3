@@ -10,8 +10,10 @@
 if (!hasInterface) exitWith {};
 
 GVAR(Optics) = ["", "", ""];
+GVAR(Guns) = ["", "", ""];
 GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
+GVAR(boreHeight) = [0, 0, 0];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 // Check inventory when it changes
