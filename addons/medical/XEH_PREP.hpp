@@ -19,6 +19,9 @@ PREP(leavingStateCardiacArrest);
 
 PREP(enteredStateFatalInjury);
 
+PREP(conditionExecutionDeath);
+PREP(transitionInstantDeathPrevented);
+
 PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);

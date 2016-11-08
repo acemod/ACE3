@@ -68,6 +68,7 @@ class ACE_Medical_StateMachine {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
             condition = QUOTE(!GVAR(enableInstantDeath));
+            onTransition = QUOTE(DFUNC(transitionInstantDeathPrevented));
         };
         class InstantDeath {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
@@ -85,6 +86,11 @@ class ACE_Medical_StateMachine {
         class Reanimated {
             targetState = "Unconscious";
             events[] = {QGVAR(CPRSucceeded)};
+        };
+        class Execution {
+            targetState = "Dead";
+            condition = QUOTE(DFUNC(conditionExecutionDeath));
+            events[] = {QGVAR(InjuryFatal)};
         };
     };
     class Dead {

@@ -47,9 +47,18 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
 ] call CBA_Settings_fnc_init;
 
 [
+    QGVAR(enableExecutions),
+    "CHECKBOX",
+    ["Enable Executions", "Enables killing units that are in cardiac arrest. Only matters when instant death is disabled."], //@todo
+    "ACE Medical", // @todo
+    true,
+    true
+] call CBA_Settings_fnc_init;
+
+[
     QGVAR(maximumCardiacArrestTime),
     "SLIDER",
-    ["Maximum Cardiac Arrest Time", "Sets the maximum amount of time a unit can stay in cardiac arrest."], //@todo
+    ["Maximum Cardiac Arrest Time", "Sets the maximum amount of time a unit can stay in cardiac arrest before dying."], //@todo
     "ACE Medical", // @todo
     [0, 30, 2, 0],
     true
