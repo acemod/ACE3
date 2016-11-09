@@ -158,12 +158,13 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
 
 _cacheEntry = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4), _zeroRange, _ammoClass, _weaponClass, missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]];
 if (isNil {_cacheEntry}) then {
-    private _scopeBaseAngle = 0;
-    { 
-        private _offset = [_scopeBaseAngle, _zeroRange, _muzzleVelocity, _airFriction, 1000, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel, _useABConfig] call EFUNC(scopes,calculateZeroAngle);
-        _scopeBaseAngle = _scopeBaseAngle + _offset;
-        if (_offset < 0.01) exitWith {};
-    } forEach [1, 2, 3];
+    private _scopeBaseAngle = if (!_useABConfig) then {
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
+        (parseNumber _zeroAngle)
+    } else {
+        private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel];
+        (parseNumber _zeroAngle)
+    };
     if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && missionNamespace getVariable [QEGVAR(advanced_ballistics,ammoTemperatureEnabled), false]) then {
         {
             private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);

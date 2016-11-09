@@ -94,7 +94,7 @@ _wind1 = [cos(270 - _windDirection * 30) * _windSpeed1, sin(270 - _windDirection
 _wind2 = [cos(270 - _windDirection * 30) * _windSpeed2, sin(270 - _windDirection * 30) * _windSpeed2, 0];
 _windDrift = 0;
 if (_useABConfig) then {
-    _bc = [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel] call EFUNC(advanced_ballistics,calculateAtmosphericCorrection);
+    _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
 };
 
 private ["_airFrictionCoef", "_airDensity"];
@@ -131,11 +131,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (_useABConfig) then {
-        private _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
-            parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]))
-        } else {
-            ([_dragModel, _bc, _trueSpeed] call EFUNC(advanced_ballistics,calculateRetardation))
-        };
+        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _trueSpeed]));
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);
