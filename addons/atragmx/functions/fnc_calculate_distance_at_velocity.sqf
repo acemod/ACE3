@@ -29,11 +29,7 @@ private _distance = 0;
 while {_velocity > _thresholdVelocity} do {
     private _bc = GVAR(targetSolutionInput) select 14;
     private _dragModel = GVAR(targetSolutionInput) select 15;
-    private _drag = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,extensionAvailable), false]) then {
-        parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _velocity]))
-    } else {
-        ([_dragModel, _bc, _velocity] call EFUNC(advanced_ballistics,calculateRetardation))
-    };
+    private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3", _dragModel, _bc, _velocity]));
     _distance = _distance + _velocity * __DELTA_T;
     _velocity = _velocity - (_drag * __DELTA_T);
 };

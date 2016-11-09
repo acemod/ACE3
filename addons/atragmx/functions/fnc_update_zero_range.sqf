@@ -17,9 +17,6 @@
 
 [] call FUNC(parse_input);
 
-private ["_scopeBaseAngle"];
-_scopeBaseAngle = (GVAR(workingMemory) select 3);
-
 private ["_bulletMass", "_boreHeight", "_airFriction", "_muzzleVelocity", "_bc", "_dragModel", "_atmosphereModel"];
 _bulletMass = GVAR(workingMemory) select 12;
 _boreHeight = GVAR(workingMemory) select 5;
@@ -46,12 +43,13 @@ if (!GVAR(atmosphereModeTBH)) then {
     _relativeHumidity = 50;
 };
 
-{
-    private _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000, [0, 0], 0, 0, 0, _zeroRange, _bc, _dragModel, _atmosphereModel, false, 1.5, 0, 0, 0] call FUNC(calculate_solution);
-    private _offset = (_result select 0) / 60;
-    _scopeBaseAngle = _scopeBaseAngle + _offset;
-    if (_offset < 0.01) exitWith {};
-} forEach [1, 2, 3];
+private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+    private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngleVanilla:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
+    (parseNumber _zeroAngle)
+} else {
+    private _zeroAngle = "ace_advanced_ballistics" callExtension format ["zeroAngle:%1:%2:%3:%4:%5:%6:%7:%8:%9", _zeroRange, _muzzleVelocity, _boreHeight, _temperature, _barometricPressure, _relativeHumidity, _bc, _dragModel, _atmosphereModel];
+    (parseNumber _zeroAngle)
+};
 
 GVAR(workingMemory) set [2, _zeroRange];
 GVAR(workingMemory) set [3, _scopeBaseAngle];
