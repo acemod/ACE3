@@ -13,4 +13,4 @@
 #include "script_component.hpp"
 params ["_unit"];
 
-GVAR(enableInstantDeath) || {GVAR(enableExecutions) && {!(_unit getVariable [QGVAR(deathBlocked), false])}}
+(GVAR(allowDeathMode) < 2) && {!(_unit getVariable [QGVAR(deathBlocked), false])}}

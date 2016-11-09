@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- * Prevents instant death for 1 second.
+ * Gives the unit a second chance and prevents death for 1 second.
  *
  * Arguments:
  * 0: The Unit <OBJECT>

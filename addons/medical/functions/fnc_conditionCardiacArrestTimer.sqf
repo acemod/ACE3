@@ -1,6 +1,6 @@
 /*
  * Author: BaerMitUmlaut
- * Handles a unit entering cardiac arrest.
+ * Checks if the cardiac arrest timer ran out.
  *
  * Arguments:
  * 0: The Unit <OBJECT>

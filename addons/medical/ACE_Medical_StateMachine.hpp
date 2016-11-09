@@ -64,13 +64,13 @@ class ACE_Medical_StateMachine {
         // Transition state for handling instant death
         // This state raises the next transition in the same frame
         onStateEntered = QUOTE(DFUNC(enteredStateFatalInjury));
-        class InstantDeathPrevented {
+        class SecondChance {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
-            condition = QUOTE(!GVAR(enableInstantDeath));
-            onTransition = QUOTE(DFUNC(transitionInstantDeathPrevented));
+            condition = QUOTE(GVAR(allowDeathMode) > 0);
+            onTransition = QUOTE(DFUNC(transitionSecondChance));
         };
-        class InstantDeath {
+        class Death {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "Dead";
             condition = "true";
@@ -79,9 +79,9 @@ class ACE_Medical_StateMachine {
     class CardiacArrest {
         onStateEntered = QUOTE(DFUNC(enteredStateCardiacArrest));
         onStateLeaving = '_this setVariable [QGVAR(cardiacArrestStart), nil]';
-        class Death {
+        class TimerRanOut {
             targetState = "Dead";
-            condition = QUOTE(DFUNC(conditionCardiacArrestDeath));
+            condition = QUOTE(DFUNC(conditionCardiacArrestTimer));
         };
         class Reanimated {
             targetState = "Unconscious";
