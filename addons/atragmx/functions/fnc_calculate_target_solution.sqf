@@ -52,7 +52,7 @@ if (!GVAR(atmosphereModeTBH)) then {
 };
 
 private ["_bulletLength", "_stabilityFactor"];
-_bulletLength = 45.72;
+_bulletLength = 50 * _bulletMass / ((_bulletDiameter/2)^2);
 _stabilityFactor = 1.5;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     if (_bulletDiameter > 0 && _bulletLength > 0 && _bulletMass > 0 && _barrelTwist > 0) then {
