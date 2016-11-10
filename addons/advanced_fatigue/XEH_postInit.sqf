@@ -12,10 +12,11 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    if !(isNull ACE_player) then {
-        [ACE_player, objNull] call FUNC(handlePlayerChanged);
-    };
-    ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+    ["visibleMap", {
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow (!visibleMap);
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
     if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
