@@ -157,6 +157,11 @@ class CfgVehicles {
         function = QFUNC(moduleSetMedicalVehicle);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
     };
+	class GVAR(moduleSimulation): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(ModuleSimulation_DisplayName);
+        function = QFUNC(moduleSimulation);
+    };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSurrender_DisplayName);

@@ -695,5 +695,8 @@
             <Polish>Wpisano nieprawidłowy promień</Polish>
             <German>Ungültiger Radius eingegeben</German>
         </Key>
+		<Key ID="STR_ACE_Zeus_ModuleSimulation_DisplayName">
+            <English>Toggle Simulation</English>
+        </Key>
     </Package>
 </Project>
