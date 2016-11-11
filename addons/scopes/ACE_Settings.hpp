@@ -1,9 +1,10 @@
 class ACE_Settings {
     class GVAR(enabled) {
-        typeName = "BOOL";
-        value = 1;
+        typeName = "SCALAR";
+        value = 2;
         displayName = CSTRING(enabled_displayName);
         description = CSTRING(enabled_description);
+        values[] = {ECSTRING(Common,Disabled), CSTRING(enabled_onlyScopes), ECSTRING(Common,Enabled)};
     };
     // ACE_ScopeAdjust_Vertical and ACE_ScopeAdjust_Horizontal will be populated with default values instead of [0,0]
     class GVAR(forceUseOfAdjustmentTurrets) {

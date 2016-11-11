@@ -23,6 +23,7 @@ if (_weaponIndex < 0) exitWith {};
 
 private _zeroing = +(_adjustment select _weaponIndex);
 TRACE_1("Adjusting With",_zeroing);
+if (_zeroing isEqualTo []) exitWith {};
 
 // Convert zeroing from mils to degrees
 _zeroing = _zeroing vectorMultiply 0.05625;

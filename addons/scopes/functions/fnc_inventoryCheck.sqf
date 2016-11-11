@@ -17,12 +17,12 @@
 
 params ["_player"];
 
-private _adjustment = ACE_player getVariable QGVAR(Adjustment);
+private _updateAdjustment = false;
+private _adjustment = _player getVariable QGVAR(Adjustment);
 if (isNil "_adjustment") then {
     // [Windage, Elevation, Zero]
     _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    ACE_player setVariable [QGVAR(Adjustment), _adjustment];
-    [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+    _updateAdjustment = true;
 };
 
 private _newOptics = [_player] call FUNC(getOptics);
@@ -30,12 +30,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
 
 {
     if (_newOptics select _forEachIndex != _x) then {
-        // The optic for this weapon changed, set adjustment to zero
-        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
-            _adjustment set [_forEachIndex, [0, 0, 0]];
-            [ACE_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
-        };
-        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);        
+        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);
         private _verticalIncrement = -1;
         if (isNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
             _verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
@@ -69,7 +64,8 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
         (GVAR(scopeAdjust) select _forEachIndex) set [3, _horizontalIncrement];
         GVAR(canAdjustElevation) set [_forEachIndex, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
         GVAR(canAdjustWindage) set [_forEachIndex, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
-        private _hideVanillaZeroing = (GVAR(enabled) && getNumber(_opticConfig >> "ItemInfo" >> "opticType") == 2 && {GVAR(canAdjustElevation) select _forEachIndex}) || {isNumber (_opticConfig >> "ACE_ScopeZeroRange")};
+
+        private _hideVanillaZeroing = ((GVAR(enabled) != 0) && getNumber(_opticConfig >> "ItemInfo" >> "opticType") == 2 && {GVAR(canAdjustElevation) select _forEachIndex}) || {isNumber (_opticConfig >> "ACE_ScopeZeroRange")};
         ["ace_scopes", true, "zeroing", !_hideVanillaZeroing] call EFUNC(ui,setElementVisibility);
     };
 } forEach GVAR(Optics);
@@ -131,10 +127,34 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             GVAR(canAdjustElevation) set [_x, (_verticalIncrement > 0) && !(_maxVertical isEqualTo [0, 0])];
             GVAR(canAdjustWindage) set [_x, (_horizontalIncrement > 0) && !(_maxHorizontal isEqualTo [0, 0])];
         };
-    }
+
+        if (GVAR(enabled) == 1) then {
+            if ((GVAR(canAdjustElevation) select _forEachIndex) || (GVAR(canAdjustWindage) select _forEachIndex)) then {
+                if (!((_adjustment select _forEachIndex) isEqualTo [0,0,0])) then {
+                    // The optic for this weapon changed, set adjustment to zero
+                    _adjustment set [_forEachIndex, [0, 0, 0]];
+                    _updateAdjustment = true;
+                };
+            } else {
+                if (!((_adjustment select _forEachIndex) isEqualTo [])) then {
+                    // Can't change this optic, set to empty set
+                    _adjustment set [_forEachIndex, []];
+                    _updateAdjustment = true;
+                };
+            };
+        } else {
+            if (!((_adjustment select _forEachIndex) isEqualTo [0,0,0])) then {
+                // The optic for this weapon changed, set adjustment to zero
+                _adjustment set [_forEachIndex, [0, 0, 0]];
+                _updateAdjustment = true;
+            };
+        };
+    };
 } forEach [0, 1, 2];
 
-_adjustment = ACE_player getVariable QGVAR(Adjustment);
 GVAR(Optics) = _newOptics;
 GVAR(Guns) = _newGuns;
 
+if (_updateAdjustment) then {
+    [_player, QGVAR(Adjustment), _adjustment, 0.5] call EFUNC(common,setVariablePublic);
+};

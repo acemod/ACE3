@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (!GVAR(enabled)) exitWith { currentZeroing _unit };
+if (GVAR(enabled) == 0) exitWith { currentZeroing _unit };
 
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith { currentZeroing _unit };
