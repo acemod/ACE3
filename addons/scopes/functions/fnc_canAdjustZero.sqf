@@ -32,7 +32,7 @@ if (isNil "_adjustment") then {
     _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 };
 
-_elevation = (_adjustment select _weaponIndex) select 0;
+_elevation = (_adjustment select _weaponIndex) param [0, 0];
 
 // You can only adjust your zero reference, if your relative elevation setting is not 0
 _elevation != 0

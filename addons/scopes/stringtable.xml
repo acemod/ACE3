@@ -7,6 +7,9 @@
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
         </Key>
+        <Key ID="STR_ACE_Scopes_enabled_onlyScopes">
+            <English>Only for scopes</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustmet turrets on high powered scopes</English>
         </Key>
