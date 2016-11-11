@@ -44,7 +44,7 @@ private _fnc_secondaryExplosion = {
     private _position = _vehicle modelToWorld (_vehicle selectionPosition "destructionEffect2");
 
     // these CfgAmmo objects are always global
-    "SmallSecondary" createVehicle _position;
+    createVehicle ["SmallSecondary", _position, [], 0, "CAN_COLLIDE"];
 
     DEC(_amount);
 
