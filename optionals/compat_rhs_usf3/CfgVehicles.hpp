@@ -390,5 +390,7 @@ class CfgVehicles {
     class Plane_Base_F;
     class RHS_C130J_Base: Plane_Base_F {
         EGVAR(refuel,fuelCapacity) = 25704;
+        EGVAR(cargo,space) = 4;
+        EGVAR(cargo,hasCargo) = 1;
     };
 };
