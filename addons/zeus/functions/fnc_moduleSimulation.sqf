@@ -19,11 +19,7 @@ private _object = attachedTo _logic;
 if (isNull _object) then {
     [LSTRING(NoObjectSelected)] call EFUNC(common,displayTextStructured);
 } else {
-    if (isMultiplayer) then {
-        _object enableSimulationGlobal !(simulationEnabled _object);
-    } else {
-        _object enableSimulation !(simulationEnabled _object);
-    };
+    _object enableSimulationGlobal !(simulationEnabled _object);
 };
 
 deleteVehicle _logic;
