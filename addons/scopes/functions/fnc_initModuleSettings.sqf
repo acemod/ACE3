@@ -30,7 +30,3 @@ GVAR(defaultZeroRange) = 0 max GVAR(defaultZeroRange) min 1000;
 GVAR(zeroReferenceTemperature) = -55 max GVAR(zeroReferenceTemperature) max 55;
 GVAR(zeroReferenceBarometricPressure) = 0 max GVAR(zeroReferenceBarometricPressure) min 1013.25;
 GVAR(zeroReferenceHumidity) = 0 max GVAR(zeroReferenceHumidity) min 1.0;
-
-if (GVAR(deduceBarometricPressureFromTerrainAltitude)) then {
-    GVAR(zeroReferenceBarometricPressure)  = 1013.25 * (1 - (0.0065 * EGVAR(common,mapAltitude)) / 288.15) ^ 5.255754495;
-};
