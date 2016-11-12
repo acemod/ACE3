@@ -50,13 +50,12 @@ private _fnc_onConfirm = {
 
     private _radius = GETVAR(_display,GVAR(radius),50);
     private _position = GETVAR(_display,GVAR(position),getPos _logic);
-	private _objectsToAdd = nearestObjects [_position, ["All"], _radius];
-	
-	{
-		_y = _x;
-		{ _x addCuratorEditableObjects [[_y], true]; } foreach allCurators;
-	} foreach _objectsToAdd;
-	
+    private _objectsToAdd = nearestObjects [_position, ["All"], _radius];
+
+    {
+        _y = _x;
+        { _x addCuratorEditableObjects [[_y], true]; } foreach allCurators;
+    } foreach _objectsToAdd;
     deleteVehicle _logic;
 };
 

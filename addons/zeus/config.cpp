@@ -4,15 +4,15 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-			QGVAR(moduleAddObjects),
+            QGVAR(moduleAddObjects),
             QGVAR(moduleDefendArea),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
-			QGVAR(moduleRemoveObjects),
+            QGVAR(moduleRemoveObjects),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
-			QGVAR(moduleSimulation),
+            QGVAR(moduleSimulation),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

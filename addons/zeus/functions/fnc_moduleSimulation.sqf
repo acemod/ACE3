@@ -23,8 +23,8 @@
 if (isNull _object) then {
     [LSTRING(NoObjectSelected)] call EFUNC(common,displayTextStructured);
 } else {
-	_simulationEnabled = simulationEnabled _object;
-	_object enableSimulationGlobal (!_simulationEnabled);
+    _simulationEnabled = simulationEnabled _object;
+    _object enableSimulationGlobal (!_simulationEnabled);
 };
 
 deleteVehicle _logic;
