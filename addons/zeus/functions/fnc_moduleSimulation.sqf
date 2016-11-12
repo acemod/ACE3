@@ -27,4 +27,3 @@ if (isNull _object) then {
 };
 
 deleteVehicle _logic;
- 
