@@ -33,7 +33,8 @@ if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
         ["_nozzle", (_args select 0) getVariable [QGVAR(nozzle), objNull], [objNull]]
     ];
 
-    if (_unit getVariable [QGVAR(isRefueling), false]) exitWith {
+    if (!(_unit getVariable [QGVAR(isRefueling), false])) exitWith {
+        TRACE_1("player not isRefueling",_unit);
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
