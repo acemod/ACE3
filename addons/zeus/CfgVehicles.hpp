@@ -100,7 +100,7 @@ class CfgVehicles {
     };
     class GVAR(moduleAddObjects): GVAR(moduleBase) {
         curatorCanAttach = 1;
-        category = "ACE_Util";
+        category = "ACE_UI_Util";
         displayName = CSTRING(AddObjectsToCurator);
         curatorInfoType = QGVAR(RscAddObjects);
     };
@@ -137,7 +137,7 @@ class CfgVehicles {
     };
     class GVAR(moduleRemoveObjects): GVAR(moduleAddObjects) {
         curatorCanAttach = 1;
-        displayName = CSTRING(RemoveObjectsToCurator);
+        displayName = CSTRING(RemoveObjectsFromCurator);
         curatorInfoType = QGVAR(RscRemoveObjects);
     };
     class GVAR(moduleSearchArea): GVAR(moduleBase) {

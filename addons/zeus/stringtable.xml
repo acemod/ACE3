@@ -608,7 +608,7 @@
             <Japanese>ユニットの上に設置</Japanese>
         </Key>
 		<Key ID="STR_ACE_Zeus_NoObjectSelected">
-            <English>Place on a object</English>
+            <English>Place on an object</English>
         </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
@@ -647,7 +647,7 @@
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
             <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
         </Key>
-		<Key ID="STR_ACE_Zeus_RemoveObjectsToCurator">
+		<Key ID="STR_ACE_Zeus_RemoveObjectsFromCurator">
             <English>Remove Objects from Curator</English>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">

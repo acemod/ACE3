@@ -320,7 +320,7 @@ class GVAR(RscAddObjects): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_AddObjects));
+            onSetFocus = QUOTE(_this call FUNC(ui_addObjects));
         };
         class ButtonCancel: ButtonCancel {};
     };
@@ -338,7 +338,7 @@ class GVAR(RscRemoveObjects): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_RemoveObjects));
+            onSetFocus = QUOTE(_this call FUNC(ui_removeObjects));
         };
         class ButtonCancel: ButtonCancel {};
     };

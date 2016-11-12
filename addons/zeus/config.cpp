@@ -52,14 +52,8 @@ class ACE_Curator {
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
 };
 
-class CfgFactionClasses {
-    class ACE_Util {
-        displayName = "ACE Util";
-        priority = 2;
-        side = 7;
-    };
-};
 
+#include "CfgFactionClasses.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
