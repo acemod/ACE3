@@ -15,6 +15,8 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
+if (!(_ammo isKindOf "BulletBase")) exitWith {};
+
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
 
@@ -25,17 +27,15 @@ TRACE_1("Adjusting With",_zeroing);
 // Convert zeroing from mils to degrees
 _zeroing = _zeroing vectorMultiply 0.05625;
 
-if (_ammo isKindOf "BulletBase") then {
-    private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
-    private _boreHeight = GVAR(boreHeight) select _weaponIndex;
-    private _oldZeroRange = currentZeroing _unit;
-    private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
-    private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
-    if (isNil "_zeroCorrection") then {
-         _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
-    };
-    _zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection];
+private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+private _boreHeight = GVAR(boreHeight) select _weaponIndex;
+private _oldZeroRange = currentZeroing _unit;
+private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
+private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];
+if (isNil "_zeroCorrection") then {
+     _zeroCorrection = [_oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics] call FUNC(calculateZeroAngleCorrection);
 };
+_zeroing = _zeroing vectorAdd [0, 0, _zeroCorrection];
 
 if (_zeroing isEqualTo [0, 0, 0]) exitWith {};
 
