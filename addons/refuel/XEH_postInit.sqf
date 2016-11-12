@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+["weapon", FUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
 
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];
