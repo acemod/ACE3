@@ -98,6 +98,12 @@ class CfgVehicles {
         function = QFUNC(moduleAddSpareTrack);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
     };
+	class GVAR(moduleAddObjects): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+		category = "ACE_Util";
+        displayName = CSTRING(AddObjectsToCurator);
+        curatorInfoType = QGVAR(RscAddObjects);
+    };
     class GVAR(moduleAddSpareWheel): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleAddSpareWheel_DisplayName);
@@ -129,6 +135,11 @@ class CfgVehicles {
         displayName = CSTRING(ModulePatrolArea_DisplayName);
         curatorInfoType = QGVAR(RscPatrolArea);
     };
+	class GVAR(moduleRemoveObjects): GVAR(moduleAddObjects) {
+        curatorCanAttach = 1;
+        displayName = CSTRING(RemoveObjectsToCurator);
+        curatorInfoType = QGVAR(RscRemoveObjects);
+    };
     class GVAR(moduleSearchArea): GVAR(moduleBase) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSearchArea_DisplayName);
@@ -157,7 +168,7 @@ class CfgVehicles {
         function = QFUNC(moduleSetMedicalVehicle);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
     };
-	class GVAR(moduleSimulation): GVAR(moduleBase) {
+	class GVAR(moduleSimulation): GVAR(moduleAddObjects) {
         curatorCanAttach = 1;
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);

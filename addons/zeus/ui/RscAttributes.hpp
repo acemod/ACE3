@@ -308,6 +308,42 @@ class GVAR(RscSearchArea): RscDisplayAttributes {
     };
 };
 
+class GVAR(RscAddObjects): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscAddObjects)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscAddObjects)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+            };
+        };
+        class ButtonOK: ButtonOK {
+            onSetFocus = QUOTE(_this call FUNC(ui_AddObjects));
+        };
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
+class GVAR(RscRemoveObjects): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscRemoveObjects)))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscRemoveObjects)))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class radius: GVAR(AttributeRadius) {};
+            };
+        };
+        class ButtonOK: ButtonOK {
+            onSetFocus = QUOTE(_this call FUNC(ui_RemoveObjects));
+        };
+        class ButtonCancel: ButtonCancel {};
+    };
+};
+
 class GVAR(RscTeleportPlayers): RscDisplayAttributes {
     onLoad = QUOTE([ARR_3('onLoad', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));
     onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QGVAR(RscTeleportPlayers)))] call FUNC(zeusAttributes));

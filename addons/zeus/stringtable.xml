@@ -607,6 +607,9 @@
             <Italian>Piazza su una unità</Italian>
             <Japanese>ユニットの上に設置</Japanese>
         </Key>
+		<Key ID="STR_ACE_Zeus_NoObjectSelected">
+            <English>Place on a object</English>
+        </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
             <Polish>Wymaga addonu, który nie jest obecny</Polish>
@@ -643,6 +646,9 @@
             <French>Ajoute n'importe quel objet spawné à tous les curateurs de la mission</French>
             <German>Fügt jedes gespawnte Objekt allen Kuratoren der Mission hinzu</German>
             <Japanese>ミッション内で作成されたオブジェクトに全キュレーターを追加</Japanese>
+        </Key>
+		<Key ID="STR_ACE_Zeus_RemoveObjectsToCurator">
+            <English>Remove Objects from Curator</English>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>

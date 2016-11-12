@@ -4,10 +4,12 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
+			QGVAR(moduleAddObjects),
             QGVAR(moduleDefendArea),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
+			QGVAR(moduleRemoveObjects),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
 			QGVAR(moduleSimulation),
@@ -48,6 +50,14 @@ class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
+};
+
+class CfgFactionClasses {
+    class ACE_Util {
+        displayName = "ACE Util";
+        priority = 2;
+        side = 7;
+    };
 };
 
 #include "CfgEventHandlers.hpp"
