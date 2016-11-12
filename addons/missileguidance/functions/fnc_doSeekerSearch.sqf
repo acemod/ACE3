@@ -27,17 +27,19 @@ private _seekerFunction = getText (configFile >> QGVAR(SeekerTypes) >> _seekerTy
 
 private _seekerTargetPos = _this call (missionNamespace getVariable _seekerFunction);
 
-if ((isNil "_seekerTargetPos") || {(vectorMagnitude _seekerTargetPos) == 0}) then {
-    // Seeker returned nil / bad pos
-    if (_seekLastTargetPos && {(vectorMagnitude _lastKnownPos) != 0}) then {
+if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { // A return of nil or [0,0,0] indicates the seeker has no target
+    if (_seekLastTargetPos && {!(_lastKnownPos isEqualTo [0,0,0])}) then { // if enabled for the ammo, use last known position if we have one stored
         TRACE_2("seeker returned bad pos - using last known",_seekLastTargetPos,_lastKnownPos);
         _seekerTargetPos = _lastKnownPos;
+        #ifdef DRAW_GUIDANCE_INFO
+        drawIcon3D ["\A3\ui_f\data\map\markers\military\unknown_CA.paa", [1,1,0,1], ASLtoAGL _lastKnownPos, 0.25, 0.25, 0, "LastKnownPos", 1, 0.02, "TahomaB"];
+        #endif
     } else {
         TRACE_1("seeker returned no pos",_seekerTargetPos);
         _seekerTargetPos = [0,0,0];
     };
 } else {
-    if (_seekLastTargetPos) then {
+    if (_seekLastTargetPos) then { // if enabled for the ammo, store last known position
         TRACE_1("saving current pos",_seekLastTargetPos);
         _lastKnownPosState set [1, _seekerTargetPos];
     };
