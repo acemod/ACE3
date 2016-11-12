@@ -12,9 +12,7 @@
  */
  
 #include "script_component.hpp"
- 
-disableSerialization;
- 
+
 params ["_control"];
 private _display = ctrlParent _control;
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
@@ -22,14 +20,6 @@ private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 _control ctrlRemoveAllEventHandlers "setFocus";
 
 scopeName "Main";
-private _fnc_errorAndClose = {
-    params ["_msg"];
-    _display closeDisplay 0;
-    deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
-    breakOut "Main";
-};
-
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
