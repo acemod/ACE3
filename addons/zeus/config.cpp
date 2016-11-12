@@ -4,12 +4,11 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            QGVAR(moduleAddObjects),
             QGVAR(moduleDefendArea),
+            QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
-            QGVAR(moduleRemoveObjects),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
             QGVAR(moduleSimulation),
