@@ -73,10 +73,6 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
 }
 
 double getSolution(double initSpeed, double airFriction, double angleTarget, double distance) {
-    double posTargetX, posTargetY;
-    posTargetX = cos(RADIANS(angleTarget)) * distance;
-    posTargetY = sin(RADIANS(angleTarget)) * distance;
-
     if (traceBullet(initSpeed, airFriction, MAXELEVATION, angleTarget, distance) < 0) {
         return MAXELEVATION - angleTarget;
     }
