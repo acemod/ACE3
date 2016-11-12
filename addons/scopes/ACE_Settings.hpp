@@ -12,6 +12,14 @@ class ACE_Settings {
         displayName = CSTRING(forceUseOfAdjustmentTurrets_displayName);
         description = CSTRING(forceUseOfAdjustmentTurrets_description);
     };
+    
+    // Auto corrects the zeroing in both vanilla- and advanced ballistics
+    class GVAR(correctZeroing) {
+        typeName = "BOOL";
+        value = 1;
+        displayName = CSTRING(correctZeroing_displayName);
+        description = CSTRING(correctZeroing_description);
+    };
     // Only affects scopes with elevation adjustment turrets (ACE_ScopeAdjust_Vertical != [0,0])
     class GVAR(defaultZeroRange) {
         typeName = "SCALAR";

@@ -28,7 +28,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
         // The optic for this weapon changed, set adjustment to zero
         if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
             _adjustment set [_forEachIndex, [0, 0, 0]];
-            _updateAdjustment;
+            _updateAdjustment = true;
         };
         private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);        
         private _verticalIncrement = -1;

@@ -16,6 +16,12 @@
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
         </Key>
+        <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
+            <English>Correct zeroing</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_correctZeroing_description">
+            <English>Corrects the zeroing of all small arms sights</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
         </Key>

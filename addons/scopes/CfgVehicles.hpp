@@ -40,6 +40,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 0;
             };
+            class correctZeroing {
+                displayName = CSTRING(correctZeroing_DisplayName);
+                description = CSTRING(correctZeroing_Description);
+                typeName = "BOOL";
+                defaultValue = 1;
+            };
             class defaultZeroRange {
                 displayName = CSTRING(defaultZeroRange_DisplayName);
                 description = CSTRING(defaultZeroRange_Description);
