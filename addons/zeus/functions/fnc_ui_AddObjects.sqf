@@ -54,9 +54,10 @@ private _fnc_onConfirm = {
 
     {
         {
-         _x addCuratorEditableObjects [_objectsToAdd, true];
+               _x addCuratorEditableObjects [_objectsToAdd, true];
         } foreach allCurators;
     } foreach _objectsToAdd;
+
     deleteVehicle _logic;
 };
 

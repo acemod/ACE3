@@ -52,7 +52,6 @@ class ACE_Curator {
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
 };
 
-
 #include "CfgFactionClasses.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
