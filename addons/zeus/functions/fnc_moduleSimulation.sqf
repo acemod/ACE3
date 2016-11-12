@@ -11,20 +11,20 @@
  * Public: No
  */
 
- #include "script_component.hpp"
+#include "script_component.hpp"
 
- params ["_logic"];
+params ["_logic"];
 
- private _object = attachedTo _logic;
- if (isNull _object) then {
+private _object = attachedTo _logic;
+if (isNull _object) then {
     [LSTRING(NoObjectSelected)] call EFUNC(common,displayTextStructured);
- } else {
+} else {
     if (isMultiplayer) then {
         _object enableSimulationGlobal !(simulationEnabled _object);
     } else {
         _object enableSimulation !(simulationEnabled _object);
     };
- };
+};
 
- deleteVehicle _logic;
+deleteVehicle _logic;
  
