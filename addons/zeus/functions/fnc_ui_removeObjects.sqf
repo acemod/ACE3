@@ -53,10 +53,8 @@ private _fnc_onConfirm = {
     private _objectsToAdd = nearestObjects [_position, ["All"], _radius];
 
     {
-        {
-              _x removeCuratorEditableObjects [_objectsToAdd, true]; 
-        } foreach allCurators;
-    } foreach _objectsToAdd;
+        _x removeCuratorEditableObjects [_objectsToAdd, true]; 
+    } forEach allCurators;
 
     deleteVehicle _logic;
 };

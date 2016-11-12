@@ -22,7 +22,8 @@
     [LSTRING(NoObjectSelected)] call EFUNC(common,displayTextStructured);
  } else {
     private _simulationEnabled = simulationEnabled _object;
-    [[_object, (!_simulationEnabled)],"enableSimulationGlobal",false] call BIS_fnc_MP;
+	_object enableSimulationGlobal (!_simulationEnabled);
  };
 
  deleteVehicle _logic;
+ 
