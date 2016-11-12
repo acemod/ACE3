@@ -22,13 +22,6 @@ private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 _control ctrlRemoveAllEventHandlers "setFocus";
 
 scopeName "Main";
-private _fnc_errorAndClose = {
-    params ["_msg"];
-    _display closeDisplay 0;
-    deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
-    breakOut "Main";
-};
 
 private _fnc_onUnload = {
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
