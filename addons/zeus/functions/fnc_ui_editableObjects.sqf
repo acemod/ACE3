@@ -15,8 +15,6 @@
 
 params ["_control"];
 
-disableSerialization;
-
 //Generic Init:
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
