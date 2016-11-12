@@ -17,7 +17,7 @@
 params ["_control"];
 TRACE_1("params",_control);
 
-private _veh = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+private _veh = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("",_veh);
 
 private _loaded = _veh getVariable [QEGVAR(cargo,loaded), []];
