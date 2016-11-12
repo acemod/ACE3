@@ -6,10 +6,7 @@
  * 0: globalSetSkill controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
- *
- * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_globalSetSkill"
+ * None
  *
  * Public: No
  */

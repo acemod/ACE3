@@ -6,10 +6,7 @@
  * 0: teleportPlayers controls group <CONTROL>
  *
  * Return Value:
- * NONE <NIL>
- *
- * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_teleportPlayers"
+ * None
  *
  * Public: No
  */

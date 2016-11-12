@@ -7,10 +7,7 @@
  * 0: ace_cargo controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
- *
- * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_vehCargo"
+ * None
  *
  * Public: No
  */

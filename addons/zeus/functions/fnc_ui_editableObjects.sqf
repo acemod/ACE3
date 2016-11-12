@@ -3,7 +3,7 @@
  * Updated all/local curator with objects in the module radius.
  *
  * Arguments:
- * 0: Dummy controls group <CONTROL>
+ * 0: editableObjects controls group <CONTROL>
  *
  * Return Value:
  * None

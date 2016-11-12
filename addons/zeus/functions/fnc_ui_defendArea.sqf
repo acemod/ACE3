@@ -6,7 +6,7 @@
  * 0: dummy controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */

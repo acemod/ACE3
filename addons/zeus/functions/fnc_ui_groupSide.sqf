@@ -6,10 +6,7 @@
  * 0: groupSide controls group <CONTROL>
  *
  * Return Value:
- * NONE <NIL>
- *
- * Example:
- * onSetFocus = "_this call ace_zeus_fnc_ui_groupSide"
+ * None
  *
  * Public: No
  */
