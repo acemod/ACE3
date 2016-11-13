@@ -13,8 +13,6 @@
 
 #include "script_component.hpp"
 
-disableSerialization;
-
 params ["_control"];
 
 //Generic Init:

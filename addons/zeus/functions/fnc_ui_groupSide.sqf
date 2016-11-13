@@ -14,8 +14,6 @@
 #include "script_component.hpp"
 #define IDCs [31201,31200,31202,31203]
 
-disableSerialization;
-
 params ["_control"];
 
 //Generic Init:

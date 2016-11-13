@@ -13,8 +13,6 @@
 
 #include "script_component.hpp"
 
-disableSerialization;
-
 //Generic Init:
 params ["_control"];
 private _display = ctrlParent _control;
