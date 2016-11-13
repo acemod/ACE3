@@ -170,10 +170,10 @@ if (isNil {_cacheEntry}) then {
             private _mvShift = [_ammoConfig select 9, _x] call EFUNC(advanced_ballistics,calculateAmmoTemperatureVelocityShift);
             private _mv = _muzzleVelocity + _mvShift;
 
-            [_scopeBaseAngle,0,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,_forEachIndex,_useABConfig] call FUNC(calculateSolution);
+            [_scopeBaseAngle,_boreHeight,_airFriction,_mv,_x,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,_forEachIndex,_useABConfig] call FUNC(calculateRangeCard);
         } forEach [-15, -5, 5, 10, 15, 20, 25, 30, 35];
     } else {
-        [_scopeBaseAngle,0,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),1000,[4,0],3,0,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,true,1.5,1,46,23,4,_useABConfig] call FUNC(calculateSolution);
+        [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,15,EGVAR(scopes,zeroReferenceBarometricPressure),EGVAR(scopes,zeroReferenceHumidity),100,4,1,GVAR(rangeCardEndRange),_bc,_dragModel,_atmosphereModel,4,_useABConfig] call FUNC(calculateRangeCard);
     };
 
     for "_i" from 0 to 9 do {
