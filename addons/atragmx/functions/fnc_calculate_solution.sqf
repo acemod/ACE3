@@ -51,7 +51,10 @@ params [
 ];
 _windSpeed params ["_windSpeed1", "_windSpeed2"];
 
-private ["_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT"];
+private ["_tx", "_tz", "_lastBulletPos", "_bulletPos", "_bulletVelocity", "_bulletAccel", "_bulletSpeed", "_gravity", "_deltaT"];
+_tx = 0;
+_tz = 0;
+_lastBulletPos = [0, 0, 0];
 _bulletPos = [0, 0, 0];
 _bulletVelocity = [0, 0, 0];
 _bulletAccel = [0, 0, 0];
@@ -74,9 +77,10 @@ _horizontalDeflection = 0;
 _spinDrift = 0;
 _spinDeflection = 0;
 
-private ["_n", "_range", "_rangeFactor"];
+private ["_n", "_range", "_trueRange", "_rangeFactor"];
 _n = 0;
 _range = 0;
+_trueRange = 0;
 _rangeFactor = 1;
 if (_storeRangeCardData) then {
     if (GVAR(currentUnit) == 1) then {
@@ -133,22 +137,25 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
 
     _bulletAccel = _bulletAccel vectorAdd _gravity;
 
+    _lastBulletPos = _bulletPos;
+    _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
-    _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply _deltaT);
+    _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
 
     _TOF = _TOF + _deltaT;
 
     if (_storeRangeCardData) then {
         _range = GVAR(rangeCardStartRange) + _n * GVAR(rangeCardIncrement);
         if ((_bulletPos select 1) * _rangeFactor >= _range && _range <= GVAR(rangeCardEndRange)) then {
-            if ((_bulletPos select 1) > 0) then {
-                _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-                _windage1 = - atan((_bulletPos select 0) / (_bulletPos select 1));
-                _windDrift = (_wind2 select 0) * (_TOF - (_range / _rangeFactor) / _muzzleVelocity);
-                _windage2 = - atan(_windDrift / (_bulletPos select 1));
-            };
-            if (_range != 0) then {
-                _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _range);
+            _trueRange = _range / _rangeFactor;
+            if (_trueRange != 0) then {
+                _tx = (_lastBulletPos select 0) + (_trueRange - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+                _tz = (_lastBulletPos select 2) + (_trueRange - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+                _elevation = - atan(_tz / _trueRange);
+                _windage1 = - atan(_tx / _trueRange);
+                _windDrift = (_wind2 select 0) * (_TOF - _trueRange / _muzzleVelocity);
+                _windage2 = - atan(_windDrift / _trueRange);
+                _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _trueRange);
             };
             _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
             _kineticEnergy = _kineticEnergy * 0.737562149;
@@ -176,14 +183,13 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     };
 };
 
-if ((_bulletPos select 1) > 0) then {
-    _elevation = - atan((_bulletPos select 2) / (_bulletPos select 1));
-    _windage1 = - atan((_bulletPos select 0) / (_bulletPos select 1));
-    _windDrift = (_wind2 select 0) * (_TOF - _targetRange / _muzzleVelocity);
-    _windage2 = - atan(_windDrift / (_bulletPos select 1));
-};
-
 if (_targetRange != 0) then {
+    _tx = (_lastBulletPos select 0) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 0) - (_lastBulletPos select 0)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+    _tz = (_lastBulletPos select 2) + (_targetRange - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
+    _elevation = - atan(_tz / _targetRange);
+    _windage1 = - atan(_tx / _targetRange);
+    _windDrift = (_wind2 select 0) * (_TOF - _targetRange / _muzzleVelocity);
+    _windage2 = - atan(_windDrift / _targetRange);
     _lead = (_targetSpeed * _TOF) / (Tan(3.38 / 60) * _targetRange);
 };
 
