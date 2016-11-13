@@ -21,15 +21,8 @@ private _adjustment = ACE_player getVariable [QGVAR(Adjustment), [[0, 0, 0], [0,
 private _updateAdjustment = false;
 
 private _newOptics = [_player] call FUNC(getOptics);
-private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
-
 {
     if (_newOptics select _forEachIndex != _x) then {
-        // The optic for this weapon changed, set adjustment to zero
-        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
-            _adjustment set [_forEachIndex, [0, 0, 0]];
-            _updateAdjustment = true;
-        };
         private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);        
         private _verticalIncrement = -1;
         if (isNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
@@ -67,8 +60,14 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
     };
 } forEach GVAR(Optics);
 
+private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapon _player];
 {
     if ((_newOptics select _x) != (GVAR(Optics) select _x) || (_newGuns select _x != GVAR(Guns) select _x)) then {
+        // The optic or the weapon changed, set adjustment to zero
+        if (!((_adjustment select _forEachIndex) isEqualTo [0, 0, 0])) then {
+            _adjustment set [_forEachIndex, [0, 0, 0]];
+            _updateAdjustment = true;
+        };
         // Determine rail height above bore
         private _railHeightAboveBore = 0;
         private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x);
