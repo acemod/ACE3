@@ -14,18 +14,12 @@ class CfgVehicles {
         };
     };
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {};
-    class ACE_Comanche_Test : B_Heli_Attack_01_F { // Comanche testbed (Hidden: Scope=1)
-        scope = 1;
-        scopeCurator = 0;
-        displayName = "ACE_Comanche_Test";
-        author = "ACE Team";
-        class Library {
-            libTextDesc = "ACE_Comanche_Test";
-        };
+    class B_Heli_Attack_01_hellfire_F: B_Heli_Attack_01_F {
+        displayName = CSTRING(HF_B_Heli_Attack_01);
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                weapons[] = {"gatling_20mm", "ace_missileguidance_dagr", "Laserdesignator_mounted"};
-                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "6Rnd_ACE_Hydra70_DAGR", "Laserbatteries"};
+                weapons[] = {"ACE_gatling_20mm_Comanche", "ace_hellfire_launcher", "Laserdesignator_mounted"};
+                magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "6Rnd_ACE_Hellfire_AGM114K", "Laserbatteries"};
             };
         };
     };

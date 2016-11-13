@@ -14,7 +14,7 @@ class CfgAmmo {
         laserLock = 0;
         manualControl = 0;
         maxSpeed = 300;
-        
+
         EGVAR(rearm,caliber) = 70;
 
         class ADDON {
@@ -43,26 +43,6 @@ class CfgAmmo {
             defaultAttackProfile = "LIN";
             attackProfiles[] = { "LIN", "DIR", "MID", "HI" };
         };
-    };
-
-    class ACE_Hellfire_AGM114K: ACE_Hydra70_DAGR {
-        displayName = CSTRING(Hellfire_AGM114K);
-        displayNameShort = CSTRING(Hellfire_AGM114K_Short);
-
-        description = CSTRING(Hellfire_AGM114K_desc);
-        descriptionShort = CSTRING(Hellfire_AGM114K_desc);
-
-        // @TODO: placeholder model to at least make it look different
-        model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
-        proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
-
-        hit = 1400;
-        indirectHit = 71;
-        indirectHitRange = 4.5;
-        effectsMissile = "missile2";
-
-        //Explicity add guidance config
-        class ADDON: ADDON {};
     };
 
     // Titan
@@ -109,7 +89,7 @@ class CfgAmmo {
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            
+
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };

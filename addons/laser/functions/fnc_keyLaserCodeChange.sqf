@@ -34,7 +34,8 @@ if (ACE_player call CBA_fnc_canUseWeapon) then {
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if ((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) exitWith {false};
+if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) &&
+        {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 private _newLaserCode = _oldLaserCode;
