@@ -15,4 +15,4 @@ params ["_unit"];
 
 private _startTime = _unit getVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
 
-(CBA_missionTime - _startTime) > (GVAR(maximumCardiacArrestTime) * 60)
+(CBA_missionTime - _startTime) > (GVAR(cardiacArrestTime) * 60)

@@ -51,9 +51,9 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(maximumCardiacArrestTime),
+    QGVAR(cardiacArrestTime),
     "SLIDER",
-    ["Maximum Cardiac Arrest Time", "Sets the maximum amount of time a unit can stay in cardiac arrest before dying."], //@todo
+    ["Cardiac Arrest Time", "Sets how long cardiac arrest will last for (in minutes)."], //@todo
     "ACE Medical", // @todo
     [0, 30, 2, 0],
     true
