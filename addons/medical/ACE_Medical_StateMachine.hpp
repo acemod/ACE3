@@ -67,7 +67,7 @@ class ACE_Medical_StateMachine {
         class SecondChance {
             events[] = {QGVAR(FatalInjuryInstantTransition)};
             targetState = "CardiacArrest";
-            condition = QUOTE(GVAR(allowDeathMode) > 0);
+            condition = QUOTE(GVAR(fatalInjuryCondition) > 0);
             onTransition = QUOTE(DFUNC(transitionSecondChance));
         };
         class Death {

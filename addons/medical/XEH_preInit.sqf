@@ -38,13 +38,13 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(allowDeathMode),
+    QGVAR(fatalInjuryCondition),
     "LIST",
-    ["Kill unit after", ""], //@todo
+    ["Allow Fatal Injury", "Governs when a fatal injury can occur."], //@todo
     "ACE Medical", // @todo
     [
         [0, 1, 2],
-        ["Fatal wound", "Second chance after fatal wound", "Only cardiac arrest time expiration"],
+        ["Always", "In Cardiac Arrest", "Never"],
         0
     ],
     true
