@@ -13,11 +13,6 @@ params ["_stamina"];
 
 private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
 
-if ((vehicle ACE_player) != ACE_player) exitWith { // Hide when mounted
-    _staminaBarContainer ctrlSetFade 1;
-    _staminaBarContainer ctrlCommit 1;
-};
-
 // - Size ---------------------------------------------------------------------
 // Shrink the container to cut off the image (other wise it would just get stretched)
 private _posAndSize = ctrlPosition _staminaBarContainer;
