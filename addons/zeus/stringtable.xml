@@ -203,6 +203,7 @@
             <Czech>Bránit oblast</Czech>
             <Japanese>防衛範囲</Japanese>
             <Polish>Osłaniaj obszar</Polish>
+            <German>Verteidige Gebiet</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -211,6 +212,7 @@
             <Czech>Globální zkušenosti AI</Czech>
             <Japanese>総合的な AI スキル</Japanese>
             <Polish>Globalne umiejętności AI</Polish>
+            <German>Globale KI-Fähigkeit</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -219,6 +221,7 @@
             <Czech>Primární zkušenosti</Czech>
             <Japanese>総合スキル</Japanese>
             <Polish>Ogólne umiejętności</Polish>
+            <German>Allgemeine Fähigkeit</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
@@ -227,6 +230,7 @@
             <Czech>Upravuje: general, commanding, courage</Czech>
             <Japanese>変更：general, commanding, courage</Japanese>
             <Polish>Zmienia: ogólne, dowodzenie, odwaga</Polish>
+            <German>Ändert: general, commanding, courage</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -235,6 +239,7 @@
             <Czech>Přesnost</Czech>
             <Japanese>精度</Japanese>
             <Polish>Precyzja</Polish>
+            <German>Genauigkeit</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
@@ -243,6 +248,7 @@
             <Czech>Upravuje: aimingAccuracy</Czech>
             <Japanese>変更：aimingAccuracy</Japanese>
             <Polish>Zmienia: precyzję celowania</Polish>
+            <German>Ändert: aimingAccuracy</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
@@ -251,6 +257,7 @@
             <Czech>Zacházení se zbraní</Czech>
             <Japanese>武器の扱い</Japanese>
             <Polish>Obsługa broni</Polish>
+            <German>Waffenhandhabung</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
@@ -259,6 +266,7 @@
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
             <Japanese>変更：aimingShake, aimingSpeed, reloadSpeed</Japanese>
             <Polish>Zmienia: drżenie broni, szybkość celowania, szybkość przeładowania</Polish>
+            <German>Ändert: aimingShake, aimingSpeed, reloadSpeed</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -267,6 +275,7 @@
             <Czech>Vnímavost</Czech>
             <Japanese>索敵</Japanese>
             <Polish>Rozpoznanie</Polish>
+            <German>Aufklärung</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
@@ -275,6 +284,7 @@
             <Czech>Upravuje: spotDistance, spotTime</Czech>
             <Japanese>変更：spotDistance, spotTime</Japanese>
             <Polish>Zmienia: zasięg rozpoznawania, czas rozpoznawania</Polish>
+            <German>Ändert: spotDistance, spotTime</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
@@ -283,6 +293,7 @@
             <Czech>Vyhledávat krytí</Czech>
             <Japanese>遮蔽</Japanese>
             <Polish>Szukaj osłon</Polish>
+            <German>Deckungssuche</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
@@ -291,6 +302,7 @@
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
             <Japanese>AI は遮蔽を取るようになります</Japanese>
             <Polish>Czy AI powinno szukać osłon</Polish>
+            <German>Soll KI nach Deckung suchen</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
@@ -299,6 +311,7 @@
             <Czech>Automatický režim boje</Czech>
             <Japanese>自動戦闘</Japanese>
             <Polish>Auto walka</Polish>
+            <German>Automatischer Kampfmodus</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
@@ -307,6 +320,7 @@
             <Czech>AI se automaticky přepne do bojového režimu</Czech>
             <Japanese>AI は自動的に戦闘状態へ切り替えます</Japanese>
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
+            <German>Soll KI automatisch in Kampfmodus umschalten</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
@@ -315,6 +329,7 @@
             <Czech>Strana skupiny</Czech>
             <Japanese>グループ側</Japanese>
             <Polish>Strona grupy</Polish>
+            <German>Gruppenseite</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
@@ -323,6 +338,7 @@
             <Czech>Oblast hlídkování</Czech>
             <Japanese>哨戒範囲</Japanese>
             <Polish>Patrol obszaru</Polish>
+            <German>Patrouillengebiet</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -344,6 +360,7 @@
             <Czech>Teleportovat hráče</Czech>
             <Japanese>プレイヤーを移動</Japanese>
             <Polish>Teleportuj graczy</Polish>
+            <German>Spieler teleportieren</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
@@ -352,6 +369,7 @@
             <Czech>Hráč</Czech>
             <Japanese>プレイヤー</Japanese>
             <Polish>Gracz</Polish>
+            <German>Spieler</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
@@ -360,6 +378,7 @@
             <Czech>Teleportuje vybraného hráče na pozici modulu</Czech>
             <Japanese>選択したプレイヤーをプレイヤーをモジュール位置へ移動します</Japanese>
             <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
+            <German>Teleportiert ausgewählten Spieler zur Position des Moduls</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
@@ -368,6 +387,7 @@
             <Czech>Teleportovat skupinu</Czech>
             <Japanese>グループを移動</Japanese>
             <Polish>Teleport grupy</Polish>
+            <German>Gruppe teleportieren</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
@@ -376,6 +396,7 @@
             <Czech>Teleportuje všechny jednotky ve skupině</Czech>
             <Japanese>グループ内の全ユニットを移動させます</Japanese>
             <Polish>Teleportuje wszystkie jednostki w grupie</Polish>
+            <German>Teleportiert alle Einheiten der Gruppe</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -397,6 +418,7 @@
             <Czech>Prohledat oblast</Czech>
             <Japanese>捜索範囲</Japanese>
             <Polish>Przeszukaj teren</Polish>
+            <German>Durchsuche Gebiet</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
@@ -405,6 +427,7 @@
             <Czech>Prohledat nejbližší budovu</Czech>
             <Japanese>近くの建物を創作します</Japanese>
             <Polish>Przeszukaj najbliższy budynek</Polish>
+            <German>Durchsuche nahegelegenes Gebäude</German>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -560,6 +583,7 @@
             <Czech>Jednotka musí patřit k příslušné straně</Czech>
             <Japanese>ユニットを適切な陣営にします</Japanese>
             <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
+            <German>Einheit muss einer passenden Seite angehören</German>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -568,6 +592,7 @@
             <Czech>Nejbližší budova je příliš daleko</Czech>
             <Japanese>近くに建物がありません。</Japanese>
             <Polish>Najbliższy budynek jest zbyt daleko</Polish>
+            <German>Nächstgelegenes Gebäude ist zu weit entfernt</German>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -626,6 +651,7 @@
             <Czech>Náklad:</Czech>
             <Japanese>カーゴ：</Japanese>
             <Polish>Ładunek:</Polish>
+            <German>Ladung:</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
@@ -634,6 +660,7 @@
             <Czech>Pozice úkolu</Czech>
             <Japanese>タスクの位置</Japanese>
             <Polish>Pozycja zadania</Polish>
+            <German>Position der Aufgabe</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
@@ -641,6 +668,7 @@
             <Russian>Выбрать местоположение для выполнения задания</Russian>
             <Japanese>次の選択位置をタスクとして実行</Japanese>
             <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
+            <German>Wähle eine Position, an der die Aufgabe ausgeführt werden soll</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -648,6 +676,7 @@
             <Russian>Радиус задания</Russian>
             <Japanese>タスク範囲</Japanese>
             <Polish>Obszar zadania</Polish>
+            <German>Radius der Aufgabe</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
@@ -655,6 +684,7 @@
             <Russian>Радиус выполнения задания</Russian>
             <Japanese>次の範囲をタスクとして実行</Japanese>
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
+            <German>Radius, in dem die Aufgabe ausgeführt werden soll</German>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -663,6 +693,7 @@
             <Czech>Vložen neplatný parametr</Czech>
             <Japanese>無効な半径が入力されました</Japanese>
             <Polish>Wpisano nieprawidłowy promień</Polish>
+            <German>Ungültiger Radius eingegeben</German>
         </Key>
     </Package>
 </Project>
