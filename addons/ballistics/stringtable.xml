@@ -1686,6 +1686,45 @@
             <Hungarian>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 8.6x70mm (API526)&amp;lt;br /&amp;gt;装填数: 10</Japanese>
         </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Name">
+            <English>.408 7Rnd Mag (305gr)</English>
+            <French>Ch. .408 7Cps (305gr)</French>
+            <Spanish>Cargador de 7 balas de .408 (305gr)</Spanish>
+            <Polish>Magazynek .408 7rd (305gr)</Polish>
+            <Russian>Магазин из 7-ти .408 (305gr)</Russian>
+            <German>.408 7-Patronen-Magazin (305gr)</German>
+            <Italian>.408 7Rnd Mag (305gr)</Italian>
+            <Czech>.408 7náb. Zásobník (305gr)</Czech>
+            <Portuguese>Carregador .408 (305gr) com 7 cartuchos </Portuguese>
+            <Hungarian>.408 7-lövedékes tár (305gr)</Hungarian>
+            <Japanese>.408 7発入り 弾倉 (305gr)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_NameShort">
+            <English>.408</English>
+            <French>.408</French>
+            <Spanish>.408</Spanish>
+            <Polish>.408</Polish>
+            <Russian>.408</Russian>
+            <German>.408</German>
+            <Italian>.408</Italian>
+            <Czech>.408</Czech>
+            <Portuguese>.408</Portuguese>
+            <Hungarian>.408</Hungarian>
+            <Japanese>.408</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Description">
+            <English>Caliber: .408 CheyTac (305gr)&lt;br /&gt;Rounds: 7</English>
+            <French>Calibre: .408 CheyTac (305gr)&lt;br /&gt;Cartouches: 7</French>
+            <Spanish>Calibre: .408 CheyTac (305gr)&lt;br /&gt;Balas: 7</Spanish>
+            <Polish>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Pociski: 7</Polish>
+            <Russian>Калибр: .408 CheyTac (305gr)&lt;br /&gt;Патронов: 7</Russian>
+            <German>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Patronen: 7</German>
+            <Italian>Calibro: .408 CheyTac (305gr)&lt;br /&gt;Munizioni: 7</Italian>
+            <Czech>Ráže: .408 CheyTac (305gr)&lt;br /&gt;Nábojů: 7</Czech>
+            <Portuguese>Calibre: .408 CheyTac (305gr)&lt;br/&gt;Cartuchos: 7</Portuguese>
+            <Hungarian>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Lövedékek: 7</Hungarian>
+            <Japanese>口径: .408 CheyTac (305gr)&amp;lt;br /&amp;gt;装填数: 7</Japanese>
+        </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
             <French>Ch. 12.7x99mm 5Cps</French>

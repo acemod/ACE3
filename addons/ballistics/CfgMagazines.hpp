@@ -286,6 +286,18 @@ class CfgMagazines {
         descriptionShort = CSTRING(10Rnd_338_API526_Mag_Description);
         initSpeed = 880;
     };
+    
+    class 7Rnd_408_Mag: CA_Magazine {
+        initSpeed = 867;
+    };
+    class ACE_7Rnd_408_305gr_Mag: 7Rnd_408_Mag {
+        author = ECSTRING(common,ACETeam);
+        ammo = "ACE_408_Ball";
+        displayName = CSTRING(7Rnd_408_305gr_Mag_Name);
+        displayNameShort = CSTRING(7Rnd_408_305gr_Mag_NameShort);
+        descriptionShort = CSTRING(7Rnd_408_305gr_Mag_Description);
+        initSpeed = 1067;
+    };
 
     class 5Rnd_127x108_Mag;
     class ACE_5Rnd_127x99_Mag: 5Rnd_127x108_Mag {

@@ -26,6 +26,7 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_30Rnd_556x45_Stanag_Tracer_Dim,1);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_300gr_HPBT_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_API526_Mag,4);
+            MACRO_ADDMAGAZINE(ACE_7Rnd_408_305gr_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_API_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);
@@ -46,6 +47,7 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_Mag_Tracer_Dim,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_300gr_HPBT_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_API526_Mag,4);
+            MACRO_ADDMAGAZINE(ACE_7Rnd_408_305gr_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_API_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);
@@ -67,6 +69,7 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_20Rnd_762x51_M993_AP_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_300gr_HPBT_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_API526_Mag,4);
+            MACRO_ADDMAGAZINE(ACE_7Rnd_408_305gr_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_API_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);
@@ -221,6 +224,7 @@ class CfgVehicles {
             MACRO_ADDMAGAZINE(ACE_30Rnd_65_Creedmor_mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_300gr_HPBT_Mag,4);
             MACRO_ADDMAGAZINE(ACE_10Rnd_338_API526_Mag,4);
+            MACRO_ADDMAGAZINE(ACE_7Rnd_408_305gr_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_API_Mag,4);
             MACRO_ADDMAGAZINE(ACE_5Rnd_127x99_AMAX_Mag,4);

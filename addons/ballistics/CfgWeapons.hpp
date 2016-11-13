@@ -541,6 +541,10 @@ class CfgWeapons {
     };
     */
     class srifle_LRR_F: LRR_base_F {
+        magazines[] = {
+            "7Rnd_408_Mag",
+            "ACE_7Rnd_408_305gr_Mag"
+        };
         initSpeed = -1.0;
         ACE_barrelTwist=330.2;
         ACE_barrelLength=736.6;
