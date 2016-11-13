@@ -17,8 +17,9 @@
  * 11: ballistic coefficient <NUMBER>
  * 12: drag model <NUMBER>
  * 13: atmosphere model <STRING>
- * 14: Range Card Slot <NUMBER>
- * 15: Use advanced ballistics config? <BOOL>
+ * 14: transonicStabilityCoef <NUMBER>
+ * 15: Range Card Slot <NUMBER>
+ * 16: Use advanced ballistics config? <BOOL>
  *
  * Return Value:
  * Nothing
@@ -33,7 +34,7 @@ params [
     "_scopeBaseAngle", "_boreHeight", "_airFriction", "_muzzleVelocity",
     "_temperature", "_barometricPressure", "_relativeHumidity", "_simSteps",
     "_windSpeed", "_targetSpeed", "_targetRange", "_bc", "_dragModel", "_atmosphereModel",
-    "_rangeCardSlot", "_useABConfig"
+    "_transonicStabilityCoef", "_rangeCardSlot", "_useABConfig"
 ];
 
 GVAR(rangeCardDataMVs) set [_rangeCardSlot, format[" %1", round(_muzzleVelocity)]];
@@ -96,8 +97,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _stepsTotal = _stepsTotal + 1;
     _speedAverage = (_speedTotal / _stepsTotal);
 
-    if (_speedAverage > 450 && _bulletSpeed < _speedOfSound) exitWith {};
-    if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
+    if (_transonicStabilityCoef < 1.0 && _speedAverage > 450 && _bulletSpeed < _speedOfSound) exitWith {};
 
     _trueVelocity = _bulletVelocity vectorDiff [-_windSpeed, 0, 0];
     _trueSpeed = vectorMagnitude _trueVelocity;
@@ -115,6 +115,8 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
     _bulletVelocity = _bulletVelocity vectorAdd (_bulletAccel vectorMultiply _deltaT);
     _bulletPos = _bulletPos vectorAdd (_bulletVelocity vectorMultiply (_deltaT * 0.5));
+    
+    if (atan((_bulletPos select 2) / (abs(_bulletPos select 1) + 1)) < -2.254) exitWith {};
 
     _TOF = _TOF + _deltaT;
 
