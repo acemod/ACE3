@@ -625,9 +625,6 @@
             <Italian>Piazza su una unità</Italian>
             <Japanese>ユニットの上に設置</Japanese>
         </Key>
-		<Key ID="STR_ACE_Zeus_NoObjectSelected">
-            <English>Place on an object</English>
-        </Key>
         <Key ID="STR_ACE_Zeus_RequiresAddon">
             <English>Requires an addon that is not present</English>
             <Polish>Wymaga addonu, który nie jest obecny</Polish>

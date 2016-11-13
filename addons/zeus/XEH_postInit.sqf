@@ -18,7 +18,7 @@ QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
 // Editable object commands must be ran on server, this events are used in the respective module
 if (isServer) then {
     [QGVAR(addObjects), {
-        params ["_objects", "_curator"];
+        params ["_objects", ["_curator",objNull]];
 
         if !(isNull _curator) exitWith { _curator addCuratorEditableObjects [_objects, true]; };
 
@@ -28,7 +28,7 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(removeObjects), {
-        params ["_objects", "_curator"];
+        params ["_objects", ["_curator",objNull]];
 
         if !(isNull _curator) exitWith { _curator removeCuratorEditableObjects [_objects, true]; };
 

@@ -180,7 +180,6 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);
-        isGlobal = 0;
     };
     class GVAR(moduleSurrender): GVAR(moduleBase) {
         curatorCanAttach = 1;

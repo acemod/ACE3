@@ -1,6 +1,6 @@
 /*
- * Author: Fisher
- * Toggle Simulation on object (runs on server only via module framework).
+ * Author: Fisher, SilentSpike
+ * Toggle Simulation on object.
  *
  * Arguments:
  * 0: The module logic <OBJECT>
@@ -15,11 +15,13 @@
 
 params ["_logic"];
 
+if !(local _logic) exitWith {};
+
 private _object = attachedTo _logic;
 if (isNull _object) then {
-    [LSTRING(NoObjectSelected)] call EFUNC(common,displayTextStructured);
+    [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
 } else {
-    _object enableSimulationGlobal !(simulationEnabled _object);
+    [QEGVAR(common,enableSimulationGlobal), [_object, !(simulationEnabled _object)]] call CBA_fnc_serverEvent;
 };
 
 deleteVehicle _logic;
