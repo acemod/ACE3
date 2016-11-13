@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
 
     // - GVAR updating and initialization -----------------------------------------
     ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
-    
+
     private _fnc_showStaminaBar = {
         private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
         _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
