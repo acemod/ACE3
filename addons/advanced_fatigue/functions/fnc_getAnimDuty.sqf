@@ -22,7 +22,7 @@ private _animType = _animName select [1, 3];
 
 GVAR(isSwimming) = false;
 
-if (_animType in ["idl", "mov"]) then {
+if (_animType in ["idl", "mov", "adj"]) then {
     switch (_animName select [5, 3]) do {
         case ("knl"): {
             _duty = 1.5;
