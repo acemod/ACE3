@@ -28,7 +28,7 @@ if (_animType in ["idl", "mov", "adj"]) then {
             _duty = 1.5;
         };
         case ("pne"): {
-            _duty = 12;
+            _duty = 10;
         };
         default {
             _duty = 1;
