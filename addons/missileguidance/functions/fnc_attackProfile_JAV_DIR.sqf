@@ -27,6 +27,8 @@ params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 
+if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {_seekerTargetPos};
+
 if (_attackProfileStateParams isEqualTo []) then {
     _attackProfileStateParams set [0, STAGE_LAUNCH];
 };

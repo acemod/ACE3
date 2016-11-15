@@ -52,10 +52,11 @@ private _projectilePos = getPosASL _projectile;
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState] call FUNC(doSeekerSearch);
 
+// Run attack profile function:
+private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
+    
 // If we have no seeker target, then do not change anything
-if (!(_seekerTargetPos isEqualTo [0,0,0])) then {
-    // Run attack profile function:
-    private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
+if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
 
     private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
