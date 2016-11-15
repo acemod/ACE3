@@ -53,7 +53,7 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
 [
     QGVAR(cardiacArrestTime),
     "SLIDER",
-    ["Cardiac Arrest Time", "Sets how long cardiac arrest will last for (in minutes)."], //@todo
+    ["Cardiac Arrest Time", "Sets how long cardiac arrest will last for on average (in minutes)."], //@todo
     "ACE Medical", // @todo
     [0, 30, 2, 0],
     true
