@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -204,6 +204,21 @@
             <Japanese>防衛範囲</Japanese>
             <Polish>Osłaniaj obszar</Polish>
             <German>Verteidige Gebiet</German>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
+            <English>Update Editable Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
+            <English>All Curators</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
+            <English>Apply changes to all curators</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
+            <English>Remove Objects</English>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
+            <English>Remove existing instead of adding new</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -464,6 +479,9 @@
             <Italian>Assegna Struttura Medica</Italian>
             <French>Assigner installation médicale</French>
             <Japanese>医療施設として割り当て</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSimulation_DisplayName">
+            <English>Toggle Simulation</English>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
