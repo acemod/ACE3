@@ -23,7 +23,7 @@
 {% endif %}
 
 {% if include.component == "atragmx" %}
-`ACE_common`, `ACE_weather`
+`ACE_Advanced_Ballistics`, `ACE_common`, `ACE_weather`
 {% endif %}
 
 {% if include.component == "attach" %}
@@ -291,7 +291,7 @@
 {% endif %}
 
 {% if include.component == "rangecard" %}
-`ACE_Advanced_Ballistics`
+`ACE_Advanced_Ballistics`, `ace_scopes`
 {% endif %}
 
 {% if include.component == "realisticnames" %}
