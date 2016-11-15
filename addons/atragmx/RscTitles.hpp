@@ -4,6 +4,8 @@
 
 #define ST_WITH_RECT 160
 
+#define LB_TEXTURES 0x10
+
 class ATragMX_RscText {
     idc=-1;
     type=0;
@@ -95,7 +97,7 @@ class ATragMX_RscToolbox {
 class ATragMX_RscListBox {
     idc=-1;
     type=5;
-    style=0;
+    style=LB_TEXTURES;
     font="TahomaB";
     sizeEx=0.028;
     rowHeight=0.03;
@@ -115,13 +117,14 @@ class ATragMX_RscListBox {
     soundSelect[]={"",0.09,1};
 
     class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        //thumb="\ca\ui\data\igui_scrollbar_thumb_ca.paa";
-        //arrowFull="\ca\ui\data\igui_arrow_top_active_ca.paa";
-        //arrowEmpty="\ca\ui\data\igui_arrow_top_ca.paa";
-        //border="\ca\ui\data\igui_border_scroll_ca.paa";
+        width=0.05;
+        color[]={0.15,0.21,0.23,0.3};
+        colorActive[]={0.15,0.21,0.23,0.3};
+        colorDisabled[]={0.15,0.21,0.23,0.3};
+        arrowEmpty="\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+        arrowFull="\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+        border="\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+        thumb="\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
 
     class ListScrollBar : ScrollBar {
@@ -130,7 +133,6 @@ class ATragMX_RscListBox {
 class ATragMX_RscListNBox: ATragMX_RscListBox {
     idc=-1;
     type=102;
-    columns[]={0.0, 0.225, 0.475, 0.7};
     drawSideArrows=0;
     idcLeft=-1;
     idcRight=-1;
@@ -636,6 +638,7 @@ class ATragMX_Display {
         };
         class TEXT_OPTIONS_LIST_OUTPUT: ATragMX_RscListBox {
             idc=3002;
+            style=0;
             w=0.17;
             h=0.28;
             x=0.550*safezoneW+safezoneX+0.225;
@@ -691,6 +694,7 @@ class ATragMX_Display {
         };
         class TEXT_RANGE_CARD_OUTPUT: ATragMX_RscListNBox {
             idc=5007;
+            columns[]={0.0, 0.225, 0.475, 0.7};
             idcLeft=50061;
             idcRight=50062;
             w=0.285;
@@ -699,16 +703,17 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.27;
         };
 
-        class TEXT_GUN_LIST_OUTPUT: ATragMX_RscListBox {
+        class TEXT_GUN_LIST_OUTPUT: ATragMX_RscListNBox {
             idc=6000;
+            columns[]={-0.05};
             w=0.16;
             h=0.45;
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.24;
-            sizeEx=0.025;
+            sizeEx=0.018;
             colorSelectBackground[]={0.15,0.21,0.23,0.3};
             colorSelectBackground2[]={0.15,0.21,0.23,0.3};
-            onMouseButtonDblClick=QUOTE(true call FUNC(toggle_gun_list));
+            onLBDblClick=QUOTE(true call FUNC(toggle_gun_list));
         };
         class TEXT_GUN_LIST_COLUMN_CAPTION: TEXT_GUN_PROFILE {
             idc=6001;
@@ -1066,6 +1071,8 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.12;
             y=0.265*safezoneH+safezoneY+0.28;
             text="";
+            onKeyDown=QUOTE(call FUNC(trim_gun_name));
+            onKeyUp=QUOTE(call FUNC(trim_gun_name));
         };
         class TEXT_ADD_NEW_GUN_OK: ATragMX_RscButton {
             idc=11002;
