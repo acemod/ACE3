@@ -58,7 +58,15 @@ if (GVAR(ppeBlackoutLast) == 1) then {
 
 // - Physical effects ---------------------------------------------------------
 if (GVAR(isSwimming)) exitWith {
-    _unit setAnimSpeedCoef (1 - _fatigue / 3);
+    _unit setAnimSpeedCoef linearConversion [0.7, 0.9, _fatigue, 1, 0.5, true];
+
+    if ((isSprintAllowed _unit) && {_fatigue > 0.7}) then {
+        [_unit, "blockSprint", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    } else {
+        if ((!isSprintAllowed _unit) && {_fatigue < 0.7}) then {
+            [_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        };
+    };
 };
 if ((getAnimSpeedCoef _unit) != 1) then {
     _unit setAnimSpeedCoef 1;
