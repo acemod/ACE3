@@ -5,11 +5,13 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleDefendArea),
+            QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
+            QGVAR(moduleSimulation),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
@@ -55,6 +57,7 @@ class ACE_Curator {
     GVAR(fastroping) = "ace_fastroping";
 };
 
+#include "CfgFactionClasses.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"

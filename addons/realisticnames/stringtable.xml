@@ -2223,6 +2223,32 @@
             <Portuguese>QBZ-95-1 (Preto)</Portuguese>
             <Japanese>QBZ-95-1 (黒)</Japanese>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTAR_ghex">
+            <English>QBZ-95-1 (Green Hex)</English>
+            <German>QBZ-95-1 (Hex Grün)</German>
+            <Spanish>QBZ-95-1 (Hex Verde)</Spanish>
+            <Polish>QBZ-95-1 (zielony hex)</Polish>
+            <Czech>QBZ-95-1 (Zelený Hex)</Czech>
+            <French>QBZ-95-1 (Hex Verte)</French>
+            <Russian>QBZ-95-1 (Зелёный Hex)</Russian>
+            <Portuguese>QBZ-95-1 (Verde Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 (Zöld Hex)</Hungarian>
+            <Italian>QBZ-95-1 (Hex Verde)</Italian>
+            <Japanese>QBZ-95-1 (緑蜂巣)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTAR_hex">
+            <English>QBZ-95-1 (Hex)</English>
+            <German>QBZ-95-1 (Hex)</German>
+            <Spanish>QBZ-95-1 (Hex)</Spanish>
+            <Polish>QBZ-95-1 (hex)</Polish>
+            <Czech>QBZ-95-1 (Hex)</Czech>
+            <French>QBZ-95-1 (Hex)</French>
+            <Russian>QBZ-95-1 (Hex)</Russian>
+            <Portuguese>QBZ-95-1 (Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 (Hex)</Hungarian>
+            <Italian>QBZ-95-1 (Hex)</Italian>
+            <Japanese>QBZ-95-1 (蜂巣)</Japanese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_blk">
             <English>QBZ-95-1 GL (Black)</English>
             <Czech>QBZ-95-1 GL (Černá)</Czech>
@@ -2236,6 +2262,32 @@
             <Portuguese>QBZ-95-1 GL (Preto)</Portuguese>
             <Japanese>QBZ-95-1 GL (黒)</Japanese>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_ghex">
+            <English>QBZ-95-1 GL (Green Hex)</English>
+            <German>QBZ-95-1 GL (Hex Grün)</German>
+            <Spanish>QBZ-95-1 GL (Hex Verde)</Spanish>
+            <Polish>QBZ-95-1 GL (zielony hex)</Polish>
+            <Czech>QBZ-95-1 GL (Zelený Hex)</Czech>
+            <French>QBZ-95-1 GL (Hex Verte)</French>
+            <Russian>QBZ-95-1 GL (Зелёный Hex)</Russian>
+            <Portuguese>QBZ-95-1 GL (Verde Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 GL (Zöld Hex)</Hungarian>
+            <Italian>QBZ-95-1 GL (Hex Verde)</Italian>
+            <Japanese>QBZ-95-1 GL (緑蜂巣)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTAR_GL_hex">
+            <English>QBZ-95-1 GL (Hex)</English>
+            <German>QBZ-95-1 GL (Hex)</German>
+            <Spanish>QBZ-95-1 GL (Hex)</Spanish>
+            <Polish>QBZ-95-1 GL (hex)</Polish>
+            <Czech>QBZ-95-1 GL (Hex)</Czech>
+            <French>QBZ-95-1 GL (Hex)</French>
+            <Russian>QBZ-95-1 GL (Hex)</Russian>
+            <Portuguese>QBZ-95-1 GL (Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 GL (Hex)</Hungarian>
+            <Italian>QBZ-95-1 GL (Hex)</Italian>
+            <Japanese>QBZ-95-1 GL (蜂巣)</Japanese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTARS_blk">
             <English>QBZ-95-1 LSW (Black)</English>
             <Czech>QBZ-95-1 LSW (Černá)</Czech>
@@ -2248,6 +2300,32 @@
             <Hungarian>QBZ-95-1 LSW (Fekete)</Hungarian>
             <Portuguese>QBZ-95-1 LSW (Preto)</Portuguese>
             <Japanese>QBZ-95-1 LSW (黒)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTARS_ghex">
+            <English>QBZ-95-1 LSW (Green Hex)</English>
+            <German>QBZ-95-1 LSW (Hex Grün)</German>
+            <Spanish>QBZ-95-1 LSW (Hex Verde)</Spanish>
+            <Polish>QBZ-95-1 LSW (zielony hex)</Polish>
+            <Czech>QBZ-95-1 LSW (Zelený Hex)</Czech>
+            <French>QBZ-95-1 LSW (Hex Verte)</French>
+            <Russian>QBZ-95-1 LSW (Зелёный Hex)</Russian>
+            <Portuguese>QBZ-95-1 LSW (Verde Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 LSW (Zöld Hex)</Hungarian>
+            <Italian>QBZ-95-1 LSW (Hex Verde)</Italian>
+            <Japanese>QBZ-95-1 LSW (緑蜂巣)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_CTARS_hex">
+            <English>QBZ-95-1 LSW (Hex)</English>
+            <German>QBZ-95-1 LSW (Hex)</German>
+            <Spanish>QBZ-95-1 LSW (Hex)</Spanish>
+            <Polish>QBZ-95-1 LSW (hex)</Polish>
+            <Czech>QBZ-95-1 LSW (Hex)</Czech>
+            <French>QBZ-95-1 LSW (Hex)</French>
+            <Russian>QBZ-95-1 LSW (Hex)</Russian>
+            <Portuguese>QBZ-95-1 LSW (Hex)</Portuguese>
+            <Hungarian>QBZ-95-1 LSW (Hex)</Hungarian>
+            <Italian>QBZ-95-1 LSW (Hex)</Italian>
+            <Japanese>QBZ-95-1 LSW (蜂巣)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_07_blk">
             <English>QBU-88 (Black)</English>

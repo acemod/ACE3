@@ -7,7 +7,7 @@
  * 1: Chosen side <SIDE>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [this, west] call ace_zeus_fnc_moduleGroupSide

@@ -14,7 +14,7 @@ private _testSeekerPosASL = AGLtoASL (_seekerVehicle modelToWorldVisual [0,0,1])
 private _testSeekerDir = vectorDirVisual _seekerVehicle;
 {
     private _code = _x;
-    private _results = [_testSeekerPosASL, _testSeekerDir, 45, [1550,1550], _code, _seekerVehicle] call FUNC(seekerFindLaserSpot);
+    private _results = [_testSeekerPosASL, _testSeekerDir, 45, 10000, [1550,1550], _code, _seekerVehicle] call FUNC(seekerFindLaserSpot);
     private _resultPos = _results select 0;
     if (!isNil "_resultPos") then {
         // Draw lock results
