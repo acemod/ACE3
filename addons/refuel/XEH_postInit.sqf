@@ -19,7 +19,8 @@ if (hasInterface) then {
             {isClass (_x >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Refuel))} &&
             {getNumber (_x >> "scope") == 2}
         ) then {
-            deleteVehicle (configName _x createVehicleLocal [0,0,0]);
+            TRACE_1("Compiling menu",configName _x);
+            [configName _x] call EFUNC(interact_menu,compileMenu);
         };
     } count ('true' configClasses (configFile >> "CfgVehicles"));
 };
