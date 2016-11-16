@@ -200,8 +200,6 @@ class CfgVehicles {
     class RHS_MELB_base: Helicopter_Base_H {};
     class RHS_MELB_MH6M: RHS_MELB_base {
         EGVAR(fastroping,enabled) = 1;
-        EGVAR(fastroping,onCut) = QFUNC(onCut);
-        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
         EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
     };
 
