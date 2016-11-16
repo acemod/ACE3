@@ -30,7 +30,7 @@ private _opticConfig = if (_optic != "") then {
 };
 
 private _zeroRange = currentZeroing _unit;
-if (GVAR(canAdjustElevation) select _weaponIndex) then {
+if (GVAR(overwriteZeroRange) && {GVAR(canAdjustElevation) select _weaponIndex}) then {
     _zeroRange = GVAR(defaultZeroRange);
 };
 if (isNumber (_opticConfig >> "ACE_ScopeZeroRange")) then {
