@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 // Distances
-if (GVAR(currentUnit) == 2) then {
+if (GVAR(currentUnit) != 1) then {
     {ctrlSetText [_x, Str(Round(((GVAR(workingMemory) select 19) select _forEachIndex) select 0))]} forEach [170021, 170022, 170023, 170024, 170025, 170026, 170027];
 } else {
     {ctrlSetText [_x, Str(Round((((GVAR(workingMemory) select 19) select _forEachIndex) select 0) * 1.0936133))]} forEach [170021, 170022, 170023, 170024, 170025, 170026, 170027];
