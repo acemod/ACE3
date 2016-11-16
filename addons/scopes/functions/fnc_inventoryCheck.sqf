@@ -23,7 +23,8 @@ private _updateAdjustment = false;
 private _newOptics = [_player] call FUNC(getOptics);
 {
     if (_newOptics select _forEachIndex != _x) then {
-        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);        
+        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);
+        private _opticType = getNumber(_opticConfig >> "ItemInfo" >> "opticType");
         private _verticalIncrement = -1;
         if (isNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
             _verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
@@ -40,7 +41,7 @@ private _newOptics = [_player] call FUNC(getOptics);
         if (isArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal")) then {
             _maxHorizontal = getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal");
         };
-        if (GVAR(forceUseOfAdjustmentTurrets)) then {
+        if (GVAR(forceUseOfAdjustmentTurrets) && _opticType == 2) then {
             if (_maxVertical   isEqualTo []) then { _maxVertical   = [-4, 30]; };
             if (_maxHorizontal isEqualTo []) then { _maxHorizontal = [-6,  6]; };
             if (_verticalIncrement   == -1) then { _verticalIncrement   = 0.1; };
