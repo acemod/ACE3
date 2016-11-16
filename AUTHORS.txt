@@ -29,6 +29,7 @@ Walter Pearce <jaynus@gmail.com>
 # CONTRIBUTORS
 [BIG]Bull
 11RDP-LoupVert <loupvert@11rdp.fr>
+654wak654 <ozanegitmen@gmail.com>
 ACCtomeek <tomeek99@gmail.com>
 adam3adam <br.ada@seznam.cz>
 Adanteh

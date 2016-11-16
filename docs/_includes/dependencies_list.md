@@ -470,6 +470,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "nouniformrestrictions" %}
+`ace_common`
+{% endif %}
+
 {% if include.component == "particles" %}
 `ace_common`
 {% endif %}

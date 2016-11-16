@@ -36,6 +36,22 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 ["Wheeled_APC_F", "init", {
     params ["_vehicle"];
 
+    private _typeOf = typeOf _vehicle;
+
+    if (isNil {GVAR(cacheTankDuplicates) getVariable _typeOf}) then {
+        private _hitpoints = (getAllHitPointsDamage _vehicle param [0, []]) apply {toLower _x};
+        private _duplicateHitpoints = [];
+
+        {
+            if ((_x != "") && {_x in (_hitpoints select [0,_forEachIndex])}) then {
+                _duplicateHitpoints pushBack _forEachIndex;
+            };
+        } forEach _hitpoints;
+
+        TRACE_2("dupes",_typeOf,_duplicateHitpoints);
+        GVAR(cacheTankDuplicates) setVariable [_typeOf, _duplicateHitpoints];
+    };
+
     _vehicle addEventHandler ["HandleDamage", {
         if ((_this select 0) getVariable [QGVAR(enable), GVAR(enable)]) then {
             ["tank", _this] call FUNC(handleDamage);
