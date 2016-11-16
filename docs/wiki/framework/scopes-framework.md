@@ -20,7 +20,7 @@ class CfgWeapons {
 
     class YourScope {
         ace_scopeZeroRange = 100; // Overwrites the ace_setting default zero range
-        ace_scopeHeightAboveRail = 3.8;  // Scope height above rail in centimeters
+        ace_scopeHeightAboveRail = 3.8;  // Distance between center of scope and rail in centimeters
         ace_scopeAdjust_vertical[] = {-4, 30};  // Maxmimum vertical adjustment limits
         ace_scopeAdjust_horizontal[] = {-6, 6};  // Maximum horizontal adjustment limits
         ace_scopeAdjust_verticalIncrement = 0.1;  // Vertical increment
@@ -36,7 +36,7 @@ class CfgWeapons {
     };
     
     class YourWeapon {
-        ace_railHeightAboveBore = 1.8;  // Rail height above bore in centimeters
+        ace_railHeightAboveBore = 1.8;  // Distance between center of bore and rail in centimeters
     };
 };
 ```
