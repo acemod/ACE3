@@ -22,6 +22,12 @@
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
         </Key>
+        <Key ID="STR_ACE_Scopes_overwriteZeroRange_displayName">
+            <English>Overwrite zero distance</English>
+        </Key>
+        <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
+            <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
+        </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
         </Key>
