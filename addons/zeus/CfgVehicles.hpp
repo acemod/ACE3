@@ -106,6 +106,7 @@ class CfgVehicles {
     };
     class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(Utility);
         displayName = CSTRING(ModuleAddOrRemoveFRIES_DisplayName);
         function = QFUNC(moduleAddOrRemoveFRIES);
     };
