@@ -196,6 +196,13 @@ class CfgVehicles {
         class Eventhandlers;
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
+    
+    class RHS_MELB_base: Helicopter_Base_H {};
+    class RHS_MELB_MH6M: RHS_MELB_base {
+        EGVAR(fastroping,enabled) = 1;
+        EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
+    };
+
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
     };
