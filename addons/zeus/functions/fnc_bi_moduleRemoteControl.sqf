@@ -53,7 +53,7 @@ if (_activated && local _logic && !isnull curatorCamera) then {
             // Added by ace_zeus to toggle remote control wind sound
             if (GVAR(remoteWind)) then {
                 //--- Play wind cue to all players
-                [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call BIS_fnc_MP;
+                [format ["wind%1",ceil random 5],"bis_fnc_playsound"] call bis_fnc_mp;
             };
 
             _blur = ppEffectCreate ["RadialBlur",144];
@@ -72,7 +72,7 @@ if (_activated && local _logic && !isnull curatorCamera) then {
             _cam camCommitPrepared 1;
             sleep 0.75;
 
-            ("bis_fnc_moduleRemoteCurator" call BIS_fnc_rscLayer) cutText ["","black out",0.25];
+            ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cutText ["","black out",0.25];
             sleep 0.25;
 
             //--- Wait for interface to close
@@ -95,13 +95,13 @@ if (_activated && local _logic && !isnull curatorCamera) then {
             _color ppEffectCommit 0;
 
             _curator = getAssignedCuratorLogic player;
-            [_curator,"curatorObjectRemoteControlled",[_curator,player,_unit,true]] call BIS_fnc_callScriptedEventHandler;
-            [["Curator","RemoteControl"],nil,nil,nil,nil,nil,nil,true] call BIS_fnc_advHint;
+            [_curator,"curatorObjectRemoteControlled",[_curator,player,_unit,true]] call bis_fnc_callScriptedEventHandler;
+            [["Curator","RemoteControl"],nil,nil,nil,nil,nil,nil,true] call bis_fnc_advHint;
 
             sleep 0.3;
             _color ppEffectAdjust [1,1,0,[0,0,0,1],[1,1,1,1],[0,0,0,0],[0.9,0.85,0,0,0,0.5,1]];
             _color ppEffectCommit 0.3;
-            ("bis_fnc_moduleRemoteCurator" call BIS_fnc_rscLayer) cutText ["","black in",0.5];
+            ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cutText ["","black in",0.5];
 
             //--- Back to player
             _vehicle = vehicle _unit;
@@ -147,7 +147,7 @@ if (_activated && local _logic && !isnull curatorCamera) then {
                     //{(_unit getvariable ["bis_fnc_moduleRemoteControl_owner",objnull] == player)}
                 ) then {
                     sleep 2;
-                    ("bis_fnc_moduleRemoteCurator" call BIS_fnc_rscLayer) cutText ["","black out",1];
+                    ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cutText ["","black out",1];
                     sleep 1;
                 };
                 if !(isNull _unit) then {
@@ -159,7 +159,7 @@ if (_activated && local _logic && !isnull curatorCamera) then {
                 };
 
                 sleep 0.1; //--- Engine needs a delay in case controlled unit was deleted
-                ("bis_fnc_moduleRemoteCurator" call BIS_fnc_rscLayer) cutText ["","black in",1e10];
+                ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cutText ["","black in",1e10];
                 openCuratorInterface;
                 ppEffectDestroy _color;
 
@@ -169,12 +169,12 @@ if (_activated && local _logic && !isnull curatorCamera) then {
             };
             player switchCamera cameraView;
             bis_fnc_moduleRemoteControl_unit = nil;
-            ("bis_fnc_moduleRemoteCurator" call BIS_fnc_rscLayer) cutText ["","black in",1];
-            [_curator,"curatorObjectRemoteControlled",[_curator,player,_unit,false]] call BIS_fnc_callScriptedEventHandler;
+            ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cutText ["","black in",1];
+            [_curator,"curatorObjectRemoteControlled",[_curator,player,_unit,false]] call bis_fnc_callScriptedEventHandler;
             sleep 0.01;
         };
     } else {
-        [objNull,_error] call BIS_fnc_showCuratorFeedbackMessage;
+        [objNull,_error] call bis_fnc_showCuratorFeedbackMessage;
     };
     deleteVehicle _logic;
 };
