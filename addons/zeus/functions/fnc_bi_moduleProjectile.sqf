@@ -87,7 +87,7 @@ if (_activated) then {
                 _velocity = [0,0,0];
                 _attach = true;
             };
-            default {["Ammo simulation '%1' is not supported",_simulation] call BIS_fnc_error;};
+            default {["Ammo simulation '%1' is not supported",_simulation] call bis_fnc_error;};
         };
         _fnc_playRadio = {
             if (_radio != "") then {
@@ -99,7 +99,7 @@ if (_activated) then {
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
                             if (CBA_missionTime > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
-                                [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call BIS_fnc_MP;
+                                [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
                                 _x setVariable ["BIS_fnc_moduleProjectile_radio",CBA_missionTime + _delay];
                             };
                         };
@@ -108,10 +108,10 @@ if (_activated) then {
             };
         };
         if (count _hint > 0 && {count objectCurators _logic > 0}) then {
-            [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectCurators _logic] call BIS_fnc_MP;
+            [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectCurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {
-            _altitude = (_logic getVariable ["altitude",_altitude]) call BIS_fnc_parseNumber;
+            _altitude = (_logic getVariable ["altitude",_altitude]) call bis_fnc_parsenumber;
             _radio = _logic getVariable ["radio",_radio];
 
             //--- Create projectile
@@ -127,7 +127,7 @@ if (_activated) then {
             };
 
             //--- Play sound
-            if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call BIS_fnc_MP;};
+            if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
 
             //--- Create sound source
             _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objNull};
@@ -152,7 +152,7 @@ if (_activated) then {
                     if (getPosATL _logic distance _pos > 0 || direction _logic != _dir) then {
                         _posNew = getPosASL _logic;
                         _dirDiff = direction _logic - _dir;
-                        _posNew = [_posNew,[getPosASL _projectile,_pos] call BIS_fnc_distance2D,direction _logic + 180] call BIS_fnc_relPos;
+                        _posNew = [_posNew,[getPosASL _projectile,_pos] call bis_fnc_distance2d,direction _logic + 180] call bis_fnc_relpos;
                         _posNew set [2,getPosASL _projectile select 2];
                         _projectile setVelocity ([velocity _projectile,-_dirDiff] call BIS_fnc_rotateVector2D);
                         _projectile setPosASL _posNew;
@@ -171,7 +171,7 @@ if (_activated) then {
                 //--- Delete curator spawned logic
                 if (_shakeStrength > 0) then {
                     if (_simulation == "shotsubmunitions") then {sleep 0.5;};
-                    [[_shakeStrength,0.7,[position _logic,_shakeRadius]],"bis_fnc_shakeCuratorCamera"] call BIS_fnc_MP;
+                    [[_shakeStrength,0.7,[position _logic,_shakeRadius]],"bis_fnc_shakeCuratorCamera"] call bis_fnc_mp;
                 };
                 deleteVehicle _logic;
             } else {
@@ -179,7 +179,7 @@ if (_activated) then {
                 //--- Repeat to achieve permanent effect
                 _repeat = _logic getVariable ["repeat",0] > 0;
                 if (_repeat) then {
-                    [_logic,_units,_activated] call BIS_fnc_moduleProjectile;
+                    [_logic,_units,_activated] call bis_fnc_moduleprojectile;
                 } else {
                     deleteVehicle _logic;
                 };
@@ -188,6 +188,6 @@ if (_activated) then {
             deleteVehicle _logic;
         };
     } else {
-        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeOf _logic] call BIS_fnc_error;
+        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeOf _logic] call bis_fnc_error;
     };
 };
