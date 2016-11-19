@@ -347,6 +347,6 @@ if (_activated) then {
         _logic addEventHandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
         _logic addEventHandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
 
-        player call BIS_fnc_curatorRespawn;
+        player call bis_fnc_curatorRespawn;
     };
 };
