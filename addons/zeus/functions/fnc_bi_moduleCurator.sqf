@@ -23,7 +23,7 @@ if (_activated) then {
 
     //--- Terminate when not created on the server
     if (!isServer && local _logic && isNull (getAssignedCuratorUnit _logic)) exitwith {
-        [format ["%1 is trying to create curator logic ModuleCurator_F",profileName],"BIS_fnc_error",false] call BIS_fnc_MP;
+        [format ["%1 is trying to create curator logic ModuleCurator_F",profileName],"bis_fnc_error",false] call BIS_fnc_MP;
         deleteVehicle _logic;
     };
 
@@ -36,7 +36,7 @@ if (_activated) then {
         if (toString _ownerVarArray == "DEV") then {_ownerUID = 1;};
     };
     if (_ownerVar == "" && !isMultiplayer) then {
-        ["Curator owner not defined, player used instead in singleplayer."] call BIS_fnc_error;
+        ["Curator owner not defined, player used instead in singleplayer."] call bis_fnc_error;
         _ownerVar = player call BIS_fnc_objectVar;
     };
     if (_ownerUID > 0 && !isMultiplayer) then {
@@ -71,7 +71,7 @@ if (_activated) then {
                     _class = _cfgPatches select _i;
                     if (isClass _class) then {_addons set [count _addons,configName _class];};
                 };
-                _addons call BIS_fnc_activateAddons;
+                _addons call bis_fnc_activateaddons;
                 removeAllCuratorAddons _logic;
                 _logic addCuratorAddons _addons;
             };
@@ -160,7 +160,7 @@ if (_activated) then {
                     if ((_logic getVariable ["showNotification",true]) && GVAR(zeusAscension)) then {
                         {
                             if (isPlayer _x) then {
-                                [["CuratorAssign",[_name,name _player]],"BIS_fnc_showNotification",_x] call BIS_fnc_MP;
+                                [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call BIS_fnc_MP;
                             };
                         } forEach (curatorEditableObjects _logic);
                     };
@@ -173,7 +173,7 @@ if (_activated) then {
                     [_logic,_player] call _msgCode;
                 };
 
-                [_logic,"curatorUnitAssigned",[_logic,_player]] call BIS_fnc_callScriptedEventHandler;
+                [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 // Added by ace_zeus
                 [QGVAR(zeusUnitAssigned), [_logic,_player]] call CBA_fnc_globalEvent;
@@ -247,7 +247,7 @@ if (_activated) then {
                 } foreach _paramAddons;
             };
         } foreach (synchronizedObjects _logic);
-        _addons call BIS_fnc_activateAddons;
+        _addons call bis_fnc_activateaddons;
     };
 
     //--- Player
@@ -270,8 +270,8 @@ if (_activated) then {
                 };
             };
             if (_isCurator) then {
-                [true,true] spawn BIS_fnc_forceCuratorInterface;
-                ("RscDisplayCurator" call BIS_fnc_rscLayer) cutText ["","black in",1e10];
+                [true,true] spawn bis_fnc_forceCuratorInterface;
+                ("RscDisplayCurator" call bis_fnc_rscLayer) cutText ["","black in",1e10];
             };
         };
 
@@ -315,9 +315,9 @@ if (_activated) then {
                 [
                     format [
                         localize "str_a3_cfgvehicles_modulecurator_f_keyNotAssigned",
-                        (["IGUI","WARNING_RGB"] call BIS_fnc_displayColorGet) call BIS_fnc_colorRGBAtoHTML
+                        (["IGUI","WARNING_RGB"] call bis_fnc_displaycolorget) call bis_fnc_colorRGBAtoHTML
                     ]
-                ] call BIS_fnc_GUImessage;
+                ] call bis_fnc_guiMessage;
             };
 
             //--- Show hint about pinging for players
@@ -331,21 +331,21 @@ if (_activated) then {
                 {player in curatorEditableObjects _logic}
             ) then {
                 sleep 0.5;
-                [["Curator","Ping"]] call BIS_fnc_advHint;
+                [["Curator","Ping"]] call bis_fnc_advHint;
             };
         };
 
         //--- Add local event handlers
-        _logic addEventHandler ["curatorFeedbackMessage",{_this call BIS_fnc_showCuratorFeedbackMessage;}];
-        _logic addEventHandler ["curatorPinged",{_this call BIS_fnc_curatorPinged;}];
-        _logic addEventHandler ["curatorObjectPlaced",{_this call BIS_fnc_curatorObjectPlaced;}];
-        _logic addEventHandler ["curatorObjectEdited",{_this call BIS_fnc_curatorObjectEdited;}];
-        _logic addEventHandler ["curatorWaypointPlaced",{_this call BIS_fnc_curatorWaypointPlaced;}];
+        _logic addEventHandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
+        _logic addEventHandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
+        _logic addEventHandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
+        _logic addEventHandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
+        _logic addEventHandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
 
-        _logic addEventHandler ["curatorObjectDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorGroupDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorWaypointDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorMarkerDoubleClicked",{(_this select 1) call BIS_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
 
         player call BIS_fnc_curatorRespawn;
     };
