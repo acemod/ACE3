@@ -114,7 +114,7 @@ private _fnc_onUnload = {
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
     private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
