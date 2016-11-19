@@ -28,18 +28,18 @@ if (_activated) then {
         if (GVAR(revealMines) > 0) then {
             //--- Reveal the mine to curator's side
             {
-                _side = (getAssignedCuratorUnit _x) call BIS_fnc_objectSide;
+                _side = (getAssignedCuratorUnit _x) call bis_fnc_objectSide;
                 _side revealMine _explosive;
             } forEach (objectCurators _logic);
 
             if (GVAR(revealMines) > 1) then {
                 //--- Mark minefields in the map
-                [] spawn BIS_fnc_drawMinefields;
+                [] spawn bis_fnc_drawMinefields;
             };
         };
 
         //--- Show hint to curator who placed the object
-        [[["Curator","PlaceMines"],nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",_logic] call BIS_fnc_MP;
+        [[["Curator","PlaceMines"],nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",_logic] call bis_fnc_mp;
 
         waitUntil {sleep 0.1; isNull _explosive || isNull _logic || !alive _logic};
         if (isNull _logic) then {deleteVehicle _explosive;} else {_explosive setDamage 1;};
