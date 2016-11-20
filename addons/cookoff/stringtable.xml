@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="CookOff">
+        <Key ID="STR_ACE_CookOff_enable_name">
+            <English>Enable cook off</English>
+            <German>Selbstzündung ermöglichen</German>
+            <Czech>Povolit explozi munice</Czech>
+            <Russian>Включить воспламенение</Russian>
+            <Japanese>誘爆を有効化</Japanese>
+            <Polish>Aktywuj efekty zapłonu</Polish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enable_tooltip">
+            <English>Enables cook off and related vehicle destruction effects.</English>
+            <German>Ermöglicht Selbstzündung und zugehörige Fahrzeug-Zerstörungseffekte.</German>
+            <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
+            <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
+            <Japanese>誘爆を有効化し、車両が誘爆によって破壊されていきます。</Japanese>
+            <Polish>Aktywuje efekt zapłonu na zniszczonych pojazdach.</Polish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_generic_turret_wreck">
+            <Original>Wreck (Turret)</Original>
+            <French>Épave (tourelle)</French>
+            <Spanish>Restos (torreta)</Spanish>
+            <Italian>Rottami (torretta)</Italian>
+            <Polish>Wrak (wieżyczka)</Polish>
+            <Russian>Обломки (башня)</Russian>
+            <German>Wrack (Geschützturm)</German>
+            <Czech>Vrak (věž)</Czech>
+            <English>Wreck (Turret)</English>
+            <Portuguese>Ruínas (torre)</Portuguese>
+            <Korean>잔해(포탑)</Korean>
+            <Japanese>残骸（タレット）</Japanese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
+            <English>Enable ammo box cook off</English>
+            <Japanese>弾薬箱に誘爆を有効化</Japanese>
+            <German>Selbstzündung für Munitionskisten ermöglichen</German>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
+            <English>Enables cooking off of ammo boxes.</English>
+            <Japanese>弾薬箱が誘爆するようになります。</Japanese>
+            <German>Ermöglicht Selbstzündung von Munitionskisten.</German>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
+            <English>Enable Ammunition cook off</English>
+            <Japanese>弾薬の誘爆を有効化</Japanese>
+            <German>Selbstzündung für Munition ermöglichen</German>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
+            <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
+            <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
+            <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
+        </Key>
+    </Package>
+</Project>

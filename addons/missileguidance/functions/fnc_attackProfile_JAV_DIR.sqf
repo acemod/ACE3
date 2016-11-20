@@ -1,4 +1,21 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus / nou
+ * Attack profile: Javelin Dir
+ *
+ * Arguments:
+ * 0: Seeker Target PosASL <ARRAY>
+ * 1: Guidance Arg Array <ARRAY>
+ * 2: Attack Profile State <ARRAY>
+ *
+ * Return Value:
+ * Missile Aim PosASL <ARRAY>
+ *
+ * Example:
+ * [[1,2,3], [], []] call ace_missileguidance_fnc_attackProfile_JAV_DIR;
+ *
+ * Public: No
+ */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 #define STAGE_LAUNCH 1
@@ -6,48 +23,43 @@
 #define STAGE_COAST 3
 #define STAGE_TERMINAL 4
 
-EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_targetPos", "_projectilePos", "_target", "_seekerTargetPos", "_launchParams", "_targetLaunchParams"];
-private["_distanceToTarget", "_distanceToShooter", "_addHeight", "_returnTargetPos", "_state"];
-private["_cruisAlt", "_distanceShooterToTarget", "_shooterPos"];
-_seekerTargetPos = _this select 0;
-_launchParams = _this select 1;
+params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
+_args params ["_firedEH"];
+_firedEH params ["_shooter","","","","","","_projectile"];
 
-_target = _launchParams select 0;
-_targetLaunchParams = _launchParams select 1;
+if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {_seekerTargetPos};
 
-_state = _this select 2;
-if( (count _state) < 1) then {
-    _state set[0, STAGE_LAUNCH];
+if (_attackProfileStateParams isEqualTo []) then {
+    _attackProfileStateParams set [0, STAGE_LAUNCH];
 };
 
-_shooterPos = getPosASL _shooter;
-_projectilePos = getPosASL _projectile;
+private _shooterPos = getPosASL _shooter;
+private _projectilePos = getPosASL _projectile;
 
-_distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;    
-_distanceToShooter = _projectilePos vectorDistance _shooterPos;
-_distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
+private _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
+private _distanceToShooter = _projectilePos vectorDistance _shooterPos;
+private _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
 
 TRACE_2("", _distanceToTarget, _distanceToShooter);
 
 // Add height depending on distance for compensate
-_returnTargetPos = _seekerTargetPos;
+private _returnTargetPos = _seekerTargetPos;
 
-switch( (_state select 0) ) do {
+switch (_attackProfileStateParams select 0) do {
     case STAGE_LAUNCH: {
         TRACE_1("STAGE_LAUNCH","");
-        if(_distanceToShooter < 10) then { 
+        if (_distanceToShooter < 10) then {
             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
         } else {
-            _state set[0, STAGE_CLIMB];
+            _attackProfileStateParams set [0, STAGE_CLIMB];
         };
     };
     case STAGE_CLIMB: {
         TRACE_1("STAGE_CLIMB","");
-        _cruisAlt = 60 * (_distanceShooterToTarget/2000);
+       private _cruisAlt = 60 * (_distanceShooterToTarget/2000);
 
-        if( ((ASLToATL _projectilePos) select 2) - ((ASLToATL _seekerTargetPos) select 2) >= _cruisAlt) then {
-            _state set[0, STAGE_TERMINAL];
+        if ( ((ASLToAGL _projectilePos) select 2) - ((ASLToAGL _seekerTargetPos) select 2) >= _cruisAlt) then {
+            _attackProfileStateParams set [0, STAGE_TERMINAL];
         } else {
              _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*1.5];
         };
@@ -57,10 +69,6 @@ switch( (_state select 0) ) do {
         _returnTargetPos = _seekerTargetPos;
     };
 };
-
-#ifdef DEBUG_MODE_FULL
-drawLine3D [(ASLtoATL _returnTargetPos), (ASLtoATL _seekerTargetPos), [0,1,0,1]];
-#endif
 
 TRACE_1("Adjusted target position", _returnTargetPos);
 _returnTargetPos;

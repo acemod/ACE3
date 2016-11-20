@@ -12,6 +12,7 @@
             <French>Sécurité</French>
             <Italian>Sicura inserita</Italian>
             <Portuguese>Modo de segurança</Portuguese>
+            <Japanese>安全装置</Japanese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -24,6 +25,7 @@
             <French>Enlever sécurité</French>
             <Italian>Togli la sicura</Italian>
             <Portuguese>Tirar segurança</Portuguese>
+            <Japanese>安全装置を外す</Japanese>
         </Key>
         <Key ID="STR_ACE_SafeMode_PutOnSafety">
             <English>Put on Safety</English>
@@ -36,6 +38,7 @@
             <French>Sécurité mise</French>
             <Italian>Sicura inserita</Italian>
             <Portuguese>Colocar Segurança</Portuguese>
+            <Japanese>安全装置を掛けた</Japanese>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -48,6 +51,7 @@
             <French>Sécurité enlevée</French>
             <Italian>Sicura tolta</Italian>
             <Portuguese>Tirou Segurança</Portuguese>
+            <Japanese>安全装置を外した</Japanese>
         </Key>
     </Package>
 </Project>

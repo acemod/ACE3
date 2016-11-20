@@ -85,7 +85,7 @@ private _size = 2 * sqrt (1 / _distance) * (call EFUNC(common,getZoom));
 
 drawIcon3D [
     format ["\a3\weapons_f\acc\data\collimdot_%1_ca.paa", ["red", "green"] select _isGreen],
-    [[1,0.25,0.25,0.5*_brightness], [0.25,1,0.25,0.5*_brightness]] select _isGreen,
+    [[1,0.25,0.25,0.6*_brightness], [0.25,1,0.25,0.5*_brightness]] select _isGreen,
     _pL,
     _size,
     _size,

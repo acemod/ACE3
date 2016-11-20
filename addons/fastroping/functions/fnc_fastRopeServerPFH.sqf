@@ -53,7 +53,12 @@ if (_hasBeenAttached && {isNull attachedTo _unit}) exitWith {
 _dummy setVelocity [0,0,-6];
 
 //Check if fast rope is finished
-if (((getPos _unit select 2) < 0.2) || {ropeLength _ropeTop == 34.5} || {vectorMagnitude (velocity _vehicle) > 5} || {!(alive _unit)} || {captive _unit}) exitWith {
+if (
+    ((getPos _unit select 2) < 0.2)
+    || {ropeLength _ropeTop == 34.5}
+    || {vectorMagnitude (velocity _vehicle) > 5}
+    || {!([_unit] call EFUNC(common,isAwake))}
+) exitWith {
     detach _unit;
 
     //Reset rope

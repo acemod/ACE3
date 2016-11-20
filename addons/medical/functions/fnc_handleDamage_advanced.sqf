@@ -9,9 +9,6 @@
  * 3: Shooter <OBJECT>
  * 4: Projectile <STRING>
  * 5: Hit part index of the hit point <NUMBER>
- * 6: Current damage to be returned <NUMBER>
- *
- * //On 1.63 dev:
  * 6: Shooter? <OBJECT>
  * 7: Current damage to be returned <NUMBER>
  *
@@ -23,12 +20,23 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "_newDamage"];
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfProjectile", "_hitPointNumber", "", "_newDamage"];
 
-//Temp fix for 1.63 handleDamage changes
-if (_newDamage isEqualType objNull) then {
-    _newDamage = _this select 7;
-};
+// For burning damage we will get a ton of very small hits of damage; they are too small to create any wounds
+// Save them up in a variable and run when it is over a noticable amount
+
+if ((_typeOfProjectile == "") && {_newDamage < 0.15} && {
+    _newDamage = _newDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
+    if (_newDamage > 0.15) then { 
+        // if the new sum is large enough, reset variable and continue with it added in
+        _unit setVariable [QGVAR(trivialDamage), 0];
+        false 
+    } else {
+        // otherwise just save the new sum into the variable and exit
+        _unit setVariable [QGVAR(trivialDamage), _newDamage];
+        true // exit
+    };
+}) exitWith {};
 
 private _part = [_selectionName] call FUNC(selectionNameToNumber);
 if (_part < 0) exitWith {};

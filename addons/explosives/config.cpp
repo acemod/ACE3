@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgCloudlets.hpp"
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
@@ -43,9 +44,4 @@ class CfgMineTriggers {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
-};
-
-class ACE_newEvents {
-    clientRequestsOrientations = QGVAR(sendOrientations);
-    serverSendsOrientations = QGVAR(orientationsSent);
 };

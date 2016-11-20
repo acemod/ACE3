@@ -141,12 +141,12 @@ class CfgWeapons {
     };
     class rhs_weap_lmg_minimi_railed; // Rifle_Base_F - scope = private;
     class rhs_weap_m249_pip_S: rhs_weap_lmg_minimi_railed {
-        ACE_barrelLength = 414; // 16.3" FN America
+        ACE_barrelLength = 348; 
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };
     class rhs_weap_m249_pip_L: rhs_weap_lmg_minimi_railed {
-        ACE_barrelLength = 520.7; // 20.5" FN America
+        ACE_barrelLength = 464.8;
         ACE_barrelTwist = 177.8;
         ACE_Overheating_allowSwapBarrel = 1;
     };

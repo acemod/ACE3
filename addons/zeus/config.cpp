@@ -5,11 +5,13 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleDefendArea),
+            QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
+            QGVAR(moduleSimulation),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
@@ -49,14 +51,8 @@ class ACE_Curator {
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
 };
 
+#include "CfgFactionClasses.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
 #include "ui\RscAttributes.hpp"
-
-class ACE_newEvents {
-    zeusUnitAssigned = QGVAR(zeusUnitAssigned);
-    SetSurrendered = QEGVAR(captives,setSurrendered);
-    SetHandcuffed = QEGVAR(captives,setHandcuffed);
-    AddCargoByClass = "ace_addCargo";
-};

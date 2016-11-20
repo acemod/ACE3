@@ -12,6 +12,7 @@
             <Italian>Spotting Scope</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
             <Portuguese>Luneta de observador</Portuguese>
+            <Japanese>観測用スコープ</Japanese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -24,6 +25,7 @@
             <Italian>Raccogli spottingscope</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
             <Portuguese>Pegar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを拾う</Japanese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -36,6 +38,7 @@
             <Italian>Posiziona spottingscope</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
             <Portuguese>Colocar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを置く</Japanese>
         </Key>
     </Package>
 </Project>

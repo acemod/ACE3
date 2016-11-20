@@ -17,10 +17,9 @@
  */
 #include "script_component.hpp"
 
-private ["_count", "_cfg"];
 params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]], ["_magazineClass", "", [""]]];
 
 if (isNull _target) exitWith {0};
 
-_count = {_x == _magazineClass} count ([_target, _turretPath] call FUNC(getConfigMagazines));
+private _count = {_x == _magazineClass} count ([_target, _turretPath] call FUNC(getConfigMagazines));
 _count

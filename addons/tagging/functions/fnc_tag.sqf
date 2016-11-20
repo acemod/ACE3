@@ -23,7 +23,7 @@ params [
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
-    ACE_LOGERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+    ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
 };
 
 private _startPosASL = eyePos _unit;
@@ -94,10 +94,10 @@ _fnc_isOk = {
     true
 };
 
-if ( !([ 0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([ 0.5*TAG_SIZE,-0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5*TAG_SIZE,-0.5*TAG_SIZE] call _fnc_isOk)}}}) exitWith {
+if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
     TRACE_3("Unsuitable location:",_touchingPoint);
     false
 };

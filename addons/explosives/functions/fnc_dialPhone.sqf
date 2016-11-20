@@ -27,7 +27,7 @@ _unit setVariable [QGVAR(Dialing), true, true];
 
 _ran = (ceil(random 8)) + 1;
 _arr = [];
-for [{_i=0}, {_i<_ran}, {_i=_i+1}] do {
+for [{_i=0}, {_i<_ran}, {_i=_i + 1}] do {
     _arr = _arr + ['.','..','...',''];
 };
 if (_unit == ace_player) then {

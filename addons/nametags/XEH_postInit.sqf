@@ -35,3 +35,6 @@ GVAR(showNamesTime) = -10;
         call FUNC(updateSettings);
     };
 }] call CBA_fnc_addEventHandler;
+
+// civilians don't use military ranks
+["CIV_F", ["","","","","","",""]] call FUNC(setFactionRankIcons);

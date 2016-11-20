@@ -19,7 +19,7 @@
 params ["_player", "_object"];
 TRACE_2("params",_player,_object);
 
-private _vehicle = [_player] call FUNC(findNearestVehicle);
+private _vehicle = [_player, _object] call FUNC(findNearestVehicle);
 
 if ((isNull _vehicle) || {_vehicle isKindOf "Cargo_Base_F"}) then {
     {

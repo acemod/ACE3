@@ -32,8 +32,7 @@ if (count _fxBloodControls != 3) then {
     _bloodCtrl3 ctrlSetText "A3\Ui_f\data\igui\rsctitles\HealthTextures\blood_upper_ca.paa";
 
     // positions are from config
-    private "_ctrlPosition";
-    _ctrlPosition = [
+    private _ctrlPosition = [
         ((0 * safezoneW) + safezoneX) + ((safezoneW - (2.125 * safezoneW * 3/4)) / 2),
         (-0.0625 * safezoneH) + safezoneY,
         2.125 * safezoneW * 3/4,

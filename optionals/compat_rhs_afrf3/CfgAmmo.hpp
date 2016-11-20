@@ -163,6 +163,8 @@ class CfgAmmo {
         ace_frag_force = 1;
     };
     class rhs_ammo_rgn: rhs_ammo_rgn_base {
+        // RGN is scripted grenade that deletes itself, which will break advanced throwing, replace with it's base
+        ace_advanced_throwing_replaceWith = "rhs_ammo_rgn_base";
         ace_frag_enabled = 0;
         ace_frag_skip = 1;
         ace_frag_force = 0;

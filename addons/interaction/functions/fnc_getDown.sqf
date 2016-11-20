@@ -22,8 +22,7 @@ params ["_unit", "_target"];
 
 [_unit, "GestureGo"] call EFUNC(common,doGesture);
 
-private "_chance";
-_chance = [0.5, 0.8] select (count weapons _unit > 0);
+private _chance = [0.5, 0.8] select (count weapons _unit > 0);
 
 {
     if (count weapons _x == 0 && {random 1 < _chance}) then {
