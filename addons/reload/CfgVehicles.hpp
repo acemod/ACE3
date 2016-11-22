@@ -23,11 +23,13 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                class GVAR(CheckAmmo) {
-                    displayName = CSTRING(checkAmmo);
-                    distance = 2.0;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                class ACE_StaticWeapon_Ammo {
+                    class GVAR(CheckAmmo) {
+                        displayName = CSTRING(checkAmmo);
+                        distance = 2.0;
+                        condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
+                        statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                    };
                 };
             };
         };

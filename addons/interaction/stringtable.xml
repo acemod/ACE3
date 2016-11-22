@@ -850,5 +850,18 @@
             <French>Montrer l'interaction "Passer un chargeur"</French>
             <Japanese>"弾倉をわたす"をインタラクションに表示する</Japanese>
         </Key>
+        <Key ID="STR_ACE_Interaction_Ammo">
+            <English>Ammo</English>
+            <German>Munition</German>
+            <Spanish>Munición</Spanish>
+            <Polish>Amunicja</Polish>
+            <French>Munitions</French>
+            <Hungarian>Lőszer</Hungarian>
+            <Czech>Munice</Czech>
+            <Italian>Munizioni</Italian>
+            <Portuguese>Munições</Portuguese>
+            <Russian>Боеприпасы</Russian>
+            <Japanese>弾薬</Japanese>
+        </Key>
     </Package>
 </Project>
