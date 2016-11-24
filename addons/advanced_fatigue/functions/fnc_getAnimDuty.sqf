@@ -28,7 +28,7 @@ if (_animType in ["idl", "mov", "adj"]) then {
             _duty = 1.5;
         };
         case ("pne"): {
-            _duty = 12;
+            _duty = 10;
         };
         default {
             _duty = 1;
@@ -47,9 +47,15 @@ if (_animType in ["idl", "mov", "adj"]) then {
     };
 } else {
     // swimming and diving
-    if (_animType in ["swm", "ssw", "bsw", "dve", "sdv", "bdv"]) then {
-        _duty = 5;
-        GVAR(isSwimming) = true;
+    switch (true) do {
+        case (_animType in ["swm", "ssw", "bsw"]): {
+            _duty = 6.5;
+            GVAR(isSwimming) = true;
+        };
+        case (_animType in ["dve", "sdv", "bdv"]): {
+            _duty = 2.5;
+            GVAR(isSwimming) = true;
+        };
     };
 };
 

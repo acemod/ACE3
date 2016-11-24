@@ -46,6 +46,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class overwriteZeroRange {
+                displayName = CSTRING(overwriteZeroRange_DisplayName);
+                description = CSTRING(overwriteZeroRange_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
             class defaultZeroRange {
                 displayName = CSTRING(defaultZeroRange_DisplayName);
                 description = CSTRING(defaultZeroRange_Description);
