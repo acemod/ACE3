@@ -845,7 +845,7 @@
             <Czech>Nastavení oprav</Czech>
             <Italian>Impostazioni Riparazioni</Italian>
             <French>Réglages de réparation</French>
-            <Japanese>車両の全種類に修理システムを適用しますか？</Japanese>
+            <Japanese>修理設定</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
