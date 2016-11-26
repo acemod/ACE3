@@ -260,8 +260,8 @@ class CfgVehicles {
         EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
-		
-		class UserActions {
+
+        class UserActions {
             class RampOpen;
             class RampClose: RampOpen
             {
