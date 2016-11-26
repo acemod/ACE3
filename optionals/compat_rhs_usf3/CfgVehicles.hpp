@@ -263,8 +263,7 @@ class CfgVehicles {
 
         class UserActions {
             class RampOpen;
-            class RampClose: RampOpen
-            {
+            class RampClose: RampOpen {
                 condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
             };
         };
