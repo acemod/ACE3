@@ -254,23 +254,21 @@ class CfgVehicles {
             };
         };
     };
-	
-	class rhsusf_CH53E_USMC: Helicopter_Base_H
-	{
-		EGVAR(fastroping,enabled) = 1;
+
+    class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 		
-		class UserActions
-		{
-			class RampOpen;
-			class RampClose: RampOpen
-			{
-				condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
-			};
-		};
-	};
+		class UserActions {
+            class RampOpen;
+            class RampClose: RampOpen
+            {
+                condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
+            };
+        };
+    };
 
     class Heli_Attack_01_base_F: Helicopter_Base_F {};
 

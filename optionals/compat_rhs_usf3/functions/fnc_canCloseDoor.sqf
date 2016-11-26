@@ -22,17 +22,17 @@ params ["_vehicle", "_door"];
 {alive _vehicle} &&
 {!(_vehicle getVariable [QEGVAR(fastroping,doorsLocked),false])} &&
 {
-	switch (true) do {
-		case (_vehicle isKindOf "rhsusf_CH53E_USMC"): {
-			ACE_player in [driver _vehicle]
-		};
-		
-		case (_vehicle isKindOf "RHS_CH_47F"): {
-			ACE_player in [driver _vehicle, _vehicle turretUnit [3], _vehicle turretUnit [4]]
-		};
-		
-		default {
-			ACE_player in _vehicle
-		};
-	}
+    switch (true) do {
+        case (_vehicle isKindOf "rhsusf_CH53E_USMC"): {
+            ACE_player in [driver _vehicle]
+        };
+
+        case (_vehicle isKindOf "RHS_CH_47F"): {
+            ACE_player in [driver _vehicle, _vehicle turretUnit [3], _vehicle turretUnit [4]]
+        };
+
+        default {
+            ACE_player in _vehicle
+        };
+    }
 }
