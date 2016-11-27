@@ -199,7 +199,7 @@ class CfgWeapons {
     };
 
     // - CZ Scorpion ----------------------------------------------------------
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         class WeaponSlotsInfo;
     };
     class SMG_02_F: SMG_02_base_F {
