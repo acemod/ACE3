@@ -313,8 +313,6 @@ class CfgAmmo {
     class B_762x54_Tracer_Green;
     class ACE_762x54_Ball_7T2 : B_762x54_Tracer_Green {
         airFriction=-0.00103989;
-        caliber=1.5;
-        hit=15;
         typicalSpeed=800;
         tracerStartTime=0.073;  // Based on the 7T2 which burns three seconds
         tracerEndTime=3;
@@ -361,8 +359,6 @@ class CfgAmmo {
     };
     class ACE_9x19_Ball : B_9x21_Ball {
         airFriction=-0.0019835;
-        typicalSpeed=370;
-        hit=6;
         ACE_caliber=9.017;
         ACE_bulletLength=15.494;
         ACE_bulletMass=8.0352;
@@ -510,10 +506,9 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={900};
         ACE_barrelLengths[]={736.6};
     };
-    class ACE_127x99_API : BulletBase {
+    class ACE_127x99_API : B_127x99_Ball {
         timeToLive=10;
         airFriction=-0.00057503;
-        typicalSpeed=900;
         tracerScale = 1.3;//
         hit=25;
         caliber=4.0;
@@ -531,7 +526,6 @@ class CfgAmmo {
     class ACE_127x99_Ball_AMAX : B_127x99_Ball {
         timeToLive=10;
         airFriction=-0.00036645;
-        typicalSpeed=860;
         caliber=3.0;
         ACE_caliber=12.954;
         ACE_bulletLength=64.516;
