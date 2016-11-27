@@ -11,10 +11,13 @@
  */
 #include "script_component.hpp"
 params ["_newUnit", "_oldUnit"];
+TRACE_2("unit changed",_newUnit,_oldUnit);
 
 if !(isNull _oldUnit) then {
     _oldUnit enableStamina true;
     _oldUnit removeEventHandler ["AnimChanged", _oldUnit getVariable [QGVAR(animHandler), -1]];
+    _oldUnit setVariable [QGVAR(animHandler), nil];
+    TRACE_1("remove old",_oldUnit getVariable QGVAR(animHandler));
 
     _oldUnit setVariable [QGVAR(ae1Reserve), GVAR(ae1Reserve)];
     _oldUnit setVariable [QGVAR(ae2Reserve), GVAR(ae2Reserve)];
@@ -30,6 +33,7 @@ if (_newUnit getVariable [QGVAR(animHandler), -1] == -1) then {
     private _animHandler = _newUnit addEventHandler ["AnimChanged", {
         GVAR(animDuty) = _this call FUNC(getAnimDuty);
     }];
+    TRACE_1("add new",_animHandler);
     _newUnit setVariable [QGVAR(animHandler), _animHandler];
 };
 
