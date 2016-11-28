@@ -39,6 +39,16 @@ call compile _extensionOutput;
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd"];
 
+    private _lethalities = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
+    {
+        if (_x select 0 == _bodyPartNToAdd) exitWith {
+            private _lethality = _x select 1;
+            if (_lethality > random 1) then {
+                [QEGVAR(medical,InjuryFatal), _unit] call CBA_fnc_localEvent;
+            };
+        };
+    } forEach _lethalities;
+    
     _foundIndex = -1;
     {
         // Check if we have an id of the given class on the given bodypart already

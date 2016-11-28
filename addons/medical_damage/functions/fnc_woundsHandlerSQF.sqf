@@ -116,6 +116,17 @@ private _woundsCreated = [];
                 _injury = _openWounds select _foundIndex;
                 _injury set [3, (_injury select 3) + 1];
             };
+    
+            private _lethalities = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
+            {
+                if (_x select 0 == _bodyPartNToAdd) exitWith {
+                    private _lethality = _x select 1;
+                    if (_lethality > random 1) then {
+                        [QEGVAR(medical,InjuryFatal), _unit] call CBA_fnc_localEvent;
+                    };
+                };
+            } forEach _lethalities;
+    
 
             // Store the injury so we can process it later correctly.
             _woundsCreated pushBack _injury;
