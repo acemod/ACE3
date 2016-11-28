@@ -6,15 +6,15 @@ class ACE_Medical_StateMachine {
         onState = QUOTE(DFUNC(handleStateDefault));
         class Injury {
             targetState = "Injured";
-            events[] = {QGVAR(TakenInjury)};
+            events[] = {QGVAR(Injury)};
         };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
-            events[] = {QGVAR(InjuryCritical), QGVAR(CriticalVitals)};
+            events[] = {QGVAR(CriticalInjury), QGVAR(CriticalVitals)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
-            events[] = {QGVAR(InjuryFatal)};
+            events[] = {QGVAR(FatalInjury)};
         };
     };
     class Injured {
@@ -23,13 +23,9 @@ class ACE_Medical_StateMachine {
             targetState = "Default";
             events[] = {QGVAR(FullHeal)};
         };
-        class LastWoundTreated {
-            targetState = "Default";
-            events[] = {QGVAR(LastWoundTreated)};
-        };
         class CriticalInjuryOrVitals {
             targetState = "Unconscious";
-            events[] = {QGVAR(InjuryCritical), QGVAR(CriticalVitals)};
+            events[] = {QGVAR(CriticalInjury), QGVAR(CriticalVitals)};
         };
         class FatalVitals {
             targetState = "CardiacArrest";
@@ -37,30 +33,25 @@ class ACE_Medical_StateMachine {
         };
         class FatalInjury {
             targetState = "FatalInjury";
-            events[] = {QGVAR(InjuryFatal)};
+            events[] = {QGVAR(FatalInjury)};
         };
     };
     class Unconscious {
         onState = QUOTE(DFUNC(handleStateUnconscious));
-        onStateEntered = QUOTE(DFUNC(enteredUnconsciousState));
-        onStateLeaving = "_this setVariable ['ACE_isUnconscious', false, true];";
-        class WakeUpFromKnockDown {
+        onStateEntered = QUOTE([ARR_2(_this,(true))] call FUNC(setUnconscious));
+        onStateLeaving = QUOTE([ARR_2(_this,(false))] call FUNC(setUnconscious));
+        class WakeUp {
             targetState = "Injured";
             condition = QUOTE(_this call FUNC(hasStableVitals));
-            events[] = {QGVAR(MinUnconsciousTimer)};
-        };
-        class WakeUpStable {
-            targetState = "Injured";
-            condition = "unitUnconsciousTimer >= MinUnconsciousTimer";
-            events[] = {QGVAR(VitalsWentStable)};
+            events[] = {QGVAR(WakeUp)};
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
-            events[] = {QGVAR(FatalVitals), QGVAR(UnconsciousTimerRanOut)};
+            events[] = {QGVAR(FatalVitals)};
         };
         class FatalInjury {
             targetState = "FatalInjury";
-            events[] = {QGVAR(InjuryFatal)};
+            events[] = {QGVAR(FatalInjury)};
         };
     };
     class FatalInjury {
@@ -81,12 +72,12 @@ class ACE_Medical_StateMachine {
     };
     class CardiacArrest {
         onStateEntered = QUOTE(DFUNC(enteredStateCardiacArrest));
-        onStateLeaving = '_this setVariable [QGVAR(cardiacArrestStart), nil]';
-        class TimerRanOut {
+        onStateLeaving = QUOTE(DFUNC(leftStateCardiacArrest));
+        class Timeout {
             targetState = "Dead";
             condition = QUOTE(DFUNC(conditionCardiacArrestTimer));
         };
-        class Reanimated {
+        class Reanimation {
             targetState = "Unconscious";
             events[] = {QGVAR(CPRSucceeded)};
         };

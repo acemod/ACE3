@@ -15,10 +15,9 @@
 
 params ["_unit"];
 
-private _totalBloodLoss = 0;
-{
-    // total bleeding ratio * percentage of injury left
-    _totalBloodLoss = _totalBloodLoss + ((_x select 4) * (_x select 3));
-} forEach (_unit getVariable [QGVAR(openWounds), []]);
+if (!alive _unit) exitWith { false };
+if (_unit call FUNC(getBloodLoss) > 0) exitWith { false };
+if (!(_unit call FUNC(hasStableVitals))) exitWith { false };
+if (_unit getVariable [QGVAR(isUnconscious), false]) exitWith { false };
 
-(_totalBloodLoss == 0);
+true

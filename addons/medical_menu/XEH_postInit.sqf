@@ -7,7 +7,7 @@ GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
 ["ace_settingsInitialized", {
-    if (EGVAR(medical,level) > 0 && {EGVAR(medical,menuTypeStyle) == 0}) then {
+    if (EGVAR(medical,menuTypeStyle) == 0) then {
         [] call FUNC(collectActions3D);
     };
 }] call CBA_fnc_addEventHandler;

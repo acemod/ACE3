@@ -99,96 +99,9 @@ _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
-[_target, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
-
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {EGVAR(medical,level) >= 2} && {EGVAR(medical,enableAdvancedWounds)}) then {
+if (_impact > 0 && {EGVAR(medical,enableAdvancedWounds)}) then {
     [_target, _impact, _partIndex, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
-};
-
-// If all wounds to a body part have been bandaged, reset damage to that body part to zero
-// so that the body part functions normally and blood is removed from the uniform.
-// Arma combines left and right arms into a single body part (HitHands), same with left and right legs (HitLegs).
-// Arms are actually hands.
-if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) then {
-    // Get the list of the wounds the target is currently suffering from.
-    private _currentWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-
-    // Tally of unbandaged wounds to each body part.
-    private _headWounds = 0;
-    private _bodyWounds = 0;
-    private _leftArmWounds = 0;
-    private _leftLegWounds = 0;
-    private _rightArmWounds = 0;
-    private _rightLegWounds = 0;
-
-    // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
-    {
-        _x params ["", "", "_partIndex", "_numOpenWounds", "_bloodLoss"];
-
-        // Use switch/case for early termination if wounded limb is found before all six are checked.
-        // Number of wounds multiplied by blood loss will return zero for a fully
-        // bandaged body part, not incrementing the wound counter; or it will return
-        // some other number which will increment the wound counter.
-        switch (_partIndex) do {
-            // Head
-            case 0: {
-                _headWounds = _headWounds + (_numOpenWounds * _bloodLoss);
-            };
-
-            // Body
-            case 1: {
-                _bodyWounds = _bodyWounds + (_numOpenWounds * _bloodLoss);
-            };
-
-            // Left Arm
-            case 2: {
-                _leftArmWounds = _leftArmWounds + (_numOpenWounds * _bloodLoss);
-            };
-
-            // Right Arm
-            case 3: {
-                _rightArmWounds = _rightArmWounds + (_numOpenWounds * _bloodLoss);
-            };
-
-            // Left Leg
-            case 4: {
-                _leftLegWounds = _leftLegWounds + (_numOpenWounds * _bloodLoss);
-            };
-
-            // Right Leg
-            case 5: {
-                _rightLegWounds = _rightLegWounds + (_numOpenWounds * _bloodLoss);
-            };
-        };
-    } forEach _currentWounds;
-
-    // ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"]
-    private _bodyStatus = _target getVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0]];
-
-    // Any body part that has no wounds is healed to full health
-    if (_headWounds == 0) then {
-        _bodyStatus set [0, 0];
-    };
-    if (_bodyWounds == 0) then {
-        _bodyStatus set [1, 0];
-    };
-    if (_leftArmWounds == 0) then {
-        _bodyStatus set [2, 0];
-    };
-    if (_rightArmWounds == 0) then {
-        _bodyStatus set [3, 0];
-    };
-    if (_leftLegWounds == 0) then {
-        _bodyStatus set [4, 0];
-    };
-    if (_rightLegWounds == 0) then {
-        _bodyStatus set [5, 0];
-    };
-
-    _target setVariable [QEGVAR(medical,bodyPartStatus), _bodyStatus, true];
-
-    //[_target] call EFUNC(medical_damage,setDamage);
 };
 
 true

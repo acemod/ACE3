@@ -18,8 +18,8 @@
 
 #ifdef DEBUG_MODE_FULL
 [QGVAR(woundReceived), {
-    diag_log _this;
-    systemChat str _this;
+    //diag_log _this;
+    //systemChat str _this;
 }] call CBA_fnc_addEventHandler;
 #endif
 

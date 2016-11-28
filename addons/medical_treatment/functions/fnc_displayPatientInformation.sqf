@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Show <BOOL> (default: true)
+ * 1: Show <NUMBER> (default: 0)
  * 2: Selection <NUMBER> (default: 0)
  *
  * ReturnValue:
@@ -16,15 +16,12 @@
 #include "script_component.hpp"
 #define MAX_DISTANCE 10
 
-// Exit for basic medical
-if (EGVAR(medical,level) < 2) exitWith {};
-
-params ["_target", ["_show", true], ["_selectionN", 0]];
+params ["_target", ["_show", 0], ["_selectionN", 0]];
 
 GVAR(currentSelectedSelectionN) = [0, _selectionN] select (IS_SCALAR(_selectionN));
 GVAR(displayPatientInformationTarget) = [ObjNull, _target] select _show;
 
-if (_show) then {
+if (_show == 1) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
     [{

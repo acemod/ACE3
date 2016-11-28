@@ -4,47 +4,49 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Global Sync Values (bloodbags) <BOOL>
+ * 1: Time since last update <NUMBER>
+ * 2: Global Sync Values (bloodbags) <BOOL>
  *
  * ReturnValue:
- * Blood volume change (in % total) <NUMBER>
+ * Blood volume change (liters per second) <NUMBER>
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_unit", "_syncValues"];
+params ["_unit", "_deltaT", "_syncValues"];
 
 private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
-private _bloodVolumeChange = -(_unit call FUNC(getBloodLoss));
+private _bloodVolumeChange = -_deltaT * (_unit call FUNC(getBloodLoss));
 
 if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
-    if (_bloodVolume < DEFAULT_BLOOD_VOLUME) then {
-        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
+    private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
 
-        _bloodBags = _bloodBags apply {
-            _x params ["_bagVolumeRemaining"];
+    _bloodBags = _bloodBags apply {
+        _x params ["_bagVolumeRemaining"];
 
-            private _bagChange = IV_CHANGE_PER_SECOND min _bagVolumeRemaining; // absolute value of the change in miliLiters
+        if (GVAR(advancedIVBags)) then {
+            private _bagChange = _deltaT * (IV_CHANGE_PER_SECOND min _bagVolumeRemaining); // absolute value of the change in miliLiters
             _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
             _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
 
             if (_bagVolumeRemaining < 0.01) then {
                 []
             } else {
-                [_bagVolumeRemaining];
+                [_bagVolumeRemaining]
             };
-        };
-
-        _bloodBags = _bloodBags - [[]]; // remove empty bags
-
-        if (_bloodBags isEqualTo []) then {
-            _unit setVariable [QGVAR(ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
         } else {
-            _unit setVariable [QGVAR(ivBags), _bloodBags, _syncValues];
+            _bloodVolumeChange = _bloodVolumeChange + (_bagVolumeRemaining / 1000);
+            []
         };
+    };
+
+    _bloodBags = _bloodBags - [[]]; // remove empty bags
+
+    if (_bloodBags isEqualTo []) then {
+        _unit setVariable [QGVAR(ivBags), nil, true]; // no bags left - clear variable (always globaly sync this)
     } else {
-        _unit setVariable [QGVAR(ivBags), nil, true]; // blood volume = 100% - clear variable (always globaly sync this)
+        _unit setVariable [QGVAR(ivBags), _bloodBags, _syncValues];
     };
 };
 

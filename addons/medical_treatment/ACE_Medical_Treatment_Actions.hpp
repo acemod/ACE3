@@ -13,7 +13,6 @@ class GVAR(Actions) {
         treatmentTimeSelfCoef = 1;
         items[] = {{"ACE_fieldDressing", "ACE_packingBandage", "ACE_elasticBandage", "ACE_quikclot"}};
         condition = QUOTE(!EGVAR(medical,advancedBandages));
-        patientStateCondition = 0;
         itemConsumed = 1;
         callbackSuccess = QFUNC(treatmentBandage);
         callbackFailure = "";
@@ -106,12 +105,14 @@ class GVAR(Actions) {
     class Adenosine: Morphine {
         displayName = ECSTRING(medical,Inject_Adenosine);
         displayNameProgress = ECSTRING(medical,Injecting_Adenosine);
+        condition = QEGVAR(medical,advancedMedication);
         items[] = {"ACE_adenosine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_adenosine"}} };
     };
     class Atropine: Morphine {
         displayName = ECSTRING(medical,Inject_Atropine);
         displayNameProgress = ECSTRING(medical,Injecting_Atropine);
+        condition = QEGVAR(medical,advancedMedication);
         items[] = {"ACE_atropine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_atropine"}} };
     };
@@ -205,6 +206,7 @@ class GVAR(Actions) {
     class CheckBloodPressure: CheckPulse {
         displayName = ECSTRING(medical,Actions_CheckBloodPressure);
         displayNameProgress = ECSTRING(medical,Check_Bloodpressure_Content);
+        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         callbackSuccess = QFUNC(actionCheckBloodPressure);
     };
     class CheckResponse: CheckPulse {
@@ -258,48 +260,43 @@ class GVAR(Actions) {
         litter[] = {};
     };
 
-/*
-    class Advanced {
-        class SurgicalKit: fieldDressing {
-            displayName = ECSTRING(medical,Use_SurgicalKit);
-            displayNameProgress = ECSTRING(medical,Stitching);
-            category = "advanced";
-            items[] = {"ACE_surgicalKit"};
-            treatmentLocations[] = {QEGVAR(medical,useLocation_SurgicalKit)};
-            allowSelfTreatment = 0;
-            requiredMedic = QEGVAR(medical,medicSetting_SurgicalKit);
-            patientStateCondition = QEGVAR(medical,useCondition_SurgicalKit);
-            treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
-            callbackSuccess = "";
-            callbackProgress = QFUNC(treatmentSurgicalKit_onProgress);
-            itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
-            animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
-        };
-        class PersonalAidKit: fieldDressing {
-            displayName = ECSTRING(medical,Use_Aid_Kit);
-            displayNameProgress = ECSTRING(medical,TreatmentAction);
-            category = "advanced";
-            items[] = {"ACE_personalAidKit"};
-            treatmentLocations[] = {QEGVAR(medical,useLocation_PAK)};
-            allowSelfTreatment = 0;
-            requiredMedic = QEGVAR(medical,medicSetting_PAK);
-            patientStateCondition = QEGVAR(medical,useCondition_PAK);
-            treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
-            callbackSuccess = QFUNC(treatmentFullHeal);
-            itemConsumed = QEGVAR(medical,consumeItem_PAK);
-            animationPatient = "";
-            animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-            animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
-            animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
-            animationCallerSelf = "";
-            animationCallerSelfProne = "";
-            litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
-                {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
-                {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
-                {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
-            };
+    class SurgicalKit: fieldDressing {
+        displayName = ECSTRING(medical,Use_SurgicalKit);
+        displayNameProgress = ECSTRING(medical,Stitching);
+        category = "advanced";
+        items[] = {"ACE_surgicalKit"};
+        treatmentLocations[] = {QEGVAR(medical,useLocation_SurgicalKit)};
+        allowSelfTreatment = 0;
+        requiredMedic = QEGVAR(medical,medicSetting_SurgicalKit);
+        treatmentTime = QUOTE(count (_target getVariable [ARR_2('EGVAR(medical,bandagedWounds)',[])]) * 5);
+        callbackSuccess = "";
+        callbackProgress = QFUNC(treatmentSurgicalKit_onProgress);
+        itemConsumed = QEGVAR(medical,consumeItem_SurgicalKit);
+        animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
+        litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"} }};
+    };
+    class PersonalAidKit: BasicBandage {
+        displayName = ECSTRING(medical,Use_Aid_Kit);
+        displayNameProgress = ECSTRING(medical,TreatmentAction);
+        category = "advanced";
+        condition = QUOTE(_target call EFUNC(medical,isInStableCondition));
+        items[] = {"ACE_personalAidKit"};
+        treatmentLocations[] = {QEGVAR(medical,useLocation_PAK)};
+        allowedSelections[] = {"Body"};
+        requiredMedic = QEGVAR(medical,medicSetting_PAK);
+        treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
+        callbackSuccess = QFUNC(treatmentFullHeal);
+        itemConsumed = QEGVAR(medical,consumeItem_PAK);
+        animationPatient = "";
+        animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+        animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
+        animationCallerProne = "AinvPpneMstpSlayW[wpn]Dnon_medicOther";
+        animationCallerSelf = "";
+        animationCallerSelfProne = "";
+        litter[] = { {"All", "", {"ACE_MedicalLitter_gloves"}},
+            {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+            {"All", "_bloodLossOnBodyPart > 0", {{"ACE_MedicalLitterBase", "ACE_MedicalLitter_bandage1", "ACE_MedicalLitter_bandage2", "ACE_MedicalLitter_bandage3"}}},
+            {"All", "_bloodLossOnBodyPart <= 0", {"ACE_MedicalLitter_clean"}}
         };
     };
-*/
 };

@@ -75,18 +75,6 @@ if (isText (_config >> "condition")) then {
 
 if !(_condition) exitWith {false};
 
-private _patientStateCondition = 0;
-
-if (isNumber (_config >> "patientStateCondition")) then {
-    _patientStateCondition = getNumber (_config >> "patientStateCondition");
-} else {
-    if (isText (_config >> "patientStateCondition")) then {
-        _patientStateCondition = missionNamespace getVariable [getText (_config >> "patientStateCondition"), 0];
-    };
-};
-
-if (_patientStateCondition == 1 && {!([_target] call EFUNC(medical,isInStableCondition))}) exitWith {false};
-
 // check allowed locations
 private _locations = getArray (_config >> "treatmentLocations") apply {toLower _x};
 

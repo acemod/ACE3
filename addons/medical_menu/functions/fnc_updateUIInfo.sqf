@@ -60,90 +60,48 @@ _damaged = [false, false, false, false, false, false];
 _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
 
 _allInjuryTexts = [];
-if (EGVAR(medical,level) >= 2) then { // && {([_target] call EFUNC(medical,hasMedicalEnabled))}
-    _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-    private "_amountOf";
-    {
-        _amountOf = _x select 3;
-        // Find how much this bodypart is bleeding
-        if (_amountOf > 0) then {
-            _damaged set [_x select 2, true];
-            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+_openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+private "_amountOf";
+{
+    _amountOf = _x select 3;
+    // Find how much this bodypart is bleeding
+    if (_amountOf > 0) then {
+        _damaged set [_x select 2, true];
+        _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
 
-            if (_selectionN == (_x select 2)) then {
-            // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-                if (_amountOf >= 1) then {
-                    // TODO localization
-                    _allInjuryTexts pushBack [format["%2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [1,1,1,1]];
-                } else {
-                    // TODO localization
-                    _allInjuryTexts pushBack [format["Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [1,1,1,1]];
-                };
-            };
-        };
-    } forEach _openWounds;
-
-    _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
-    {
-        _amountOf = _x select 3;
-        // Find how much this bodypart is bleeding
-        if !(_damaged select (_x select 2)) then {
-            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
-        };
         if (_selectionN == (_x select 2)) then {
-            // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-            if (_amountOf > 0) then {
-                if (_amountOf >= 1) then {
-                    // TODO localization
-                    _allInjuryTexts pushBack [format ["[B] %2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
-                } else {
-                    // TODO localization
-                    _allInjuryTexts pushBack [format ["[B] Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
-                };
+        // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+            if (_amountOf >= 1) then {
+                // TODO localization
+                _allInjuryTexts pushBack [format["%2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [1,1,1,1]];
+            } else {
+                // TODO localization
+                _allInjuryTexts pushBack [format["Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [1,1,1,1]];
             };
         };
-    } forEach _bandagedwounds;
-} else {
-
-    // Add all bleeding from wounds on selection
-    _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-    private "_amountOf";
-    {
-        _amountOf = _x select 3;
-        // Find how much this bodypart is bleeding
-        if (_amountOf > 0) then {
-            _damaged set [_x select 2, true];
-            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
-        };
-    } forEach _openWounds;
-
-    _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
-    {
-        _amountOf = _x select 3;
-        // Find how much this bodypart is bleeding
-        if !(_damaged select (_x select 2)) then {
-            _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
-        };
-    } forEach _bandagedwounds;
-
-    private _bloodLossOnSelection = _selectionBloodLoss select _selectionN;
-    if (_bloodLossOnSelection > 0) then {
-        private _severity = switch (true) do {
-            case (_bloodLossOnSelection > 0.5): {localize ELSTRING(medical,HeavilyWounded)};
-            case (_bloodLossOnSelection > 0.1): {localize ELSTRING(medical,LightlyWounded)};
-            default {localize ELSTRING(medical,VeryLightlyWounded)};
-        };
-        private _part = localize ([
-            ELSTRING(medical,Head),
-            ELSTRING(medical,Torso),
-            ELSTRING(medical,LeftArm),
-            ELSTRING(medical,RightArm),
-            ELSTRING(medical,LeftLeg),
-            ELSTRING(medical,RightLeg)
-        ] select _selectionN);
-        _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
     };
-};
+} forEach _openWounds;
+
+_bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+{
+    _amountOf = _x select 3;
+    // Find how much this bodypart is bleeding
+    if !(_damaged select (_x select 2)) then {
+        _selectionBloodLoss set [_x select 2, (_selectionBloodLoss select (_x select 2)) + (20 * ((_x select 4) * _amountOf))];
+    };
+    if (_selectionN == (_x select 2)) then {
+        // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+        if (_amountOf > 0) then {
+            if (_amountOf >= 1) then {
+                // TODO localization
+                _allInjuryTexts pushBack [format ["[B] %2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+            } else {
+                // TODO localization
+                _allInjuryTexts pushBack [format ["[B] Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+            };
+        };
+    };
+} forEach _bandagedwounds;
 
 [_selectionBloodLoss, _damaged, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
