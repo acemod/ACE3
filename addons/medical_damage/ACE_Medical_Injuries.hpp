@@ -101,7 +101,7 @@ class ACE_Medical_Injuries {
             };
             class Medium {
                 name = CSTRING(Crush_Medium);
-                minDamage = 0.4;
+                minDamage = 0.3;
                 maxDamage = 0.7;
                 bleedingRate = 0.007;
             };
@@ -109,7 +109,7 @@ class ACE_Medical_Injuries {
                 name = CSTRING(Crush_Large);
                 minDamage = 0.6;
                 bleedingRate = 0.0095;
-                lethalities[] = {{1, 0.05}, {0, 0.20}};
+                lethalities[] = {{1, 0.20}, {0, 0.60}};
             };
         };
         // Slicing wounds made with a sharp instrument, leaving even edges. They may be as minimal as a paper cut or as significant as a surgical incision.
