@@ -269,7 +269,7 @@ class ACE_Medical_Injuries {
             selectionSpecific = 1;
         };
         class falling {
-            thresholds[] = {{0.1, 1}};
+            thresholds[] = {{0.6, 4}, {0.35, 2}, {0.1, 1}};
             selectionSpecific = 1;
         };
         class ropeburn {
