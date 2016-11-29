@@ -17,6 +17,10 @@ TRACE_3("ACE_DEBUG",_unit,_interval,_unit);
 
 if (_interval == 0) exitWith {};
 
+private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
+private _deltaT = CBA_missionTime - _lastTimeUpdated;
+_unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
+
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
 private _syncValues = (CBA_missionTime - _lastTimeValuesSynced >= 10 + floor(random(10))) && GVAR(keepLocalSettingsSynced);
 
@@ -24,7 +28,7 @@ if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
-private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
+private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + _deltaT * ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
 _bloodVolume = (_bloodVolume max 0) min DEFAULT_BLOOD_VOLUME;
 
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];

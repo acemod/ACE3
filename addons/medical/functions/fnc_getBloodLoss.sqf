@@ -6,7 +6,7 @@
  * 0: The Unit <OBJECT>
  *
  * ReturnValue:
- * Total blood loss of unit <NUMBER>
+ * Total blood loss of unit (per second) <NUMBER>
  *
  * Public: No
  */
