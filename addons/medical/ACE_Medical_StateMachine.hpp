@@ -1,4 +1,7 @@
 class ACE_Medical_StateMachine {
+    list = "allUnits select {local _x}";
+    skipNull = 1;
+
     class Default {
         onState = QUOTE(DFUNC(handleStateDefault));
         class Injury {
