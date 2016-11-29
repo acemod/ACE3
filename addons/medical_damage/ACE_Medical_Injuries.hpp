@@ -234,7 +234,6 @@ class ACE_Medical_Injuries {
     class damageTypes {
         thresholds[] = {{0.1, 1}};
         selectionSpecific = 1;
-        lethalDamage = 0.01;
 
         class bullet {
             // above damage, amount. Put the highest threshold to the left and lower the threshold with the elements to the right of it.
@@ -256,12 +255,10 @@ class ACE_Medical_Injuries {
         class vehiclecrash {
             thresholds[] = {{0.25, 5}, {0.05, 1}};
             selectionSpecific = 0;
-            lethalDamage = 0.2;
         };
         class backblast {
             thresholds[] = {{1, 6}, {0.55, 5}, {0, 2}};
             selectionSpecific = 0;
-            lethalDamage = 1;
         };
         class stab {
             thresholds[] = {{0.1, 1}};
@@ -274,7 +271,6 @@ class ACE_Medical_Injuries {
         class falling {
             thresholds[] = {{0.1, 1}};
             selectionSpecific = 1;
-            lethalDamage = 0.4;
         };
         class ropeburn {
             thresholds[] = {{0.1, 1}};

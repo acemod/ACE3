@@ -101,12 +101,10 @@ private _classID = 0;
 
 // --- parse damage types
 GVAR(allDamageTypes) = []; // @todo, currently unused by handle damage (was GVAR(allAvailableDamageTypes))
-GVAR(lethalDamages) = []; // @todo, currently unused by handle damage (was GVAR(minLethalDamages))
 GVAR(allDamageTypesData) = [] call CBA_fnc_createNamespace;
 
 // minimum lethal damage collection, mapped to damageTypes
 private _damageTypesConfig = _injuriesConfigRoot >> "damageTypes";
-private _lethalDamageDefault = getNumber (_damageTypesConfig >> "lethalDamage");
 private _thresholdsDefault = getArray (_damageTypesConfig >> "thresholds");
 private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionSpecific");
 
@@ -116,7 +114,6 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     private _className = configName _entry;
 
     GVAR(allDamageTypes) pushBack _className;
-    GVAR(lethalDamages) pushBack GET_NUMBER(_entry >> "lethalDamage",_lethalDamageDefault);
 
     // Check if this type is in the causes of a wound class, if so, we will store the wound types for this damage type
     private _woundTypes = [];
@@ -141,7 +138,7 @@ private _selectionSpecificDefault = getNumber (_damageTypesConfig >> "selectionS
     private _extensionArgs = format [
         "addDamageType,%1,%2,%3,%4,%5",
         _className,
-        GVAR(lethalDamages) select _forEachIndex,
+        1, //@todo remove 'minLethalDamage' from extension
         _minDamageThresholds,
         _amountThresholds,
         _selectionSpecific
