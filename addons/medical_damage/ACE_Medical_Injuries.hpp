@@ -51,13 +51,13 @@ class ACE_Medical_Injuries {
                 minDamage = 4;
                 maxDamage = 8;
                 bleedingRate = 0.02;
-                lethalities[] = {{1, 0.10}, {0, 0.20}};
+                lethalities[] = {{1, 0.10}, {0, 0.80}};
             };
             class Large {
                 name = CSTRING(Avulsion_Large);
                 minDamage = 8;
                 bleedingRate = 0.05;
-                lethalities[] = {{1, 0.30}, {0, 0.80}};
+                lethalities[] = {{1, 0.30}, {0, 1.00}};
             };
         };
         // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
@@ -174,23 +174,23 @@ class ACE_Medical_Injuries {
             minDamage = 0.15;
             class Minor {
                 name = CSTRING(VelocityWound_Minor);
-                minDamage = 0.15;
+                minDamage = 0.5;
                 maxDamage = 3.5;
                 bleedingRate = 0.025;
-                lethalities[] = {{1, 0.05}, {0, 0.20}};
+                lethalities[] = {{1, 0.05}, {0, 0.50}};
             };
             class Medium {
                 name = CSTRING(VelocityWound_Medium);
                 minDamage = 3.5;
                 maxDamage = 8;
                 bleedingRate = 0.05;
-                lethalities[] = {{1, 0.15}, {0, 0.60}};
+                lethalities[] = {{1, 0.15}, {0, 0.90}};
             };
             class Large {
                 name = CSTRING(VelocityWound_Large);
                 minDamage = 8;
                 bleedingRate = 0.1;
-                lethalities[] = {{1, 0.45}, {0, 0.90}};
+                lethalities[] = {{1, 0.45}, {0, 1.0}};
             }; 
         };
         // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
