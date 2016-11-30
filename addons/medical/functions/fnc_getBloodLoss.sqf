@@ -19,14 +19,16 @@ private _bloodLossRate = 0;
 private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 
 {
-    if (_tourniquets select (_x select 2) == 0) then {
+    _x params ["", "", "_bodyPart", "_percentage", "_bleedingRate"];
+    if (_tourniquets select _bodyPart == 0) then {
         // total bleeding ratio * percentage of injury left
-        _bloodLossRate = _bloodLossRate + ((_x select 4) * (_x select 3));
+        _bloodLossRate = _bloodLossRate + (_bleedingRate * _percentage);
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);
 
 {
-    _bloodLossRate = _bloodLossRate + ((_x select 4) * (_x select 3));
+    _x params ["", "", "", "_percentage", "_bleedingRate"];
+    _bloodLossRate = _bloodLossRate + (_bleedingRate * _percentage);
 } forEach (_unit getVariable [QGVAR(internalWounds), []]);
 
 _bloodLossRate = _bloodLossRate * (_unit getVariable [QGVAR(bleedingCoefficient), GVAR(bleedingCoefficient)]);
