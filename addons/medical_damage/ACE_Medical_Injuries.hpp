@@ -51,12 +51,14 @@ class ACE_Medical_Injuries {
                 minDamage = 4;
                 maxDamage = 8;
                 bleedingRate = 0.02;
+                causeLimping = 1;
                 lethalities[] = {{1, 0.10}, {0, 0.80}};
             };
             class Large {
                 name = CSTRING(Avulsion_Large);
                 minDamage = 8;
                 bleedingRate = 0.05;
+                causeLimping = 1;
                 lethalities[] = {{1, 0.30}, {0, 1.00}};
             };
         };
@@ -104,11 +106,13 @@ class ACE_Medical_Injuries {
                 minDamage = 0.3;
                 maxDamage = 0.7;
                 bleedingRate = 0.007;
+                causeLimping = 1;
             };
             class Large {
                 name = CSTRING(Crush_Large);
                 minDamage = 0.6;
                 bleedingRate = 0.0095;
+                causeLimping = 1;
                 lethalities[] = {{1, 0.20}, {0, 0.60}};
             };
         };
@@ -136,6 +140,7 @@ class ACE_Medical_Injuries {
                 name = CSTRING(Cut_Large);
                 minDamage = 0.65;
                 bleedingRate = 0.05;
+                causeLimping = 1;
             };
         };
         // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
@@ -178,6 +183,7 @@ class ACE_Medical_Injuries {
                 maxDamage = 3.5;
                 bleedingRate = 0.025;
                 lethalities[] = {{1, 0.05}, {0, 0.50}};
+                causeLimping = 1;
             };
             class Medium {
                 name = CSTRING(VelocityWound_Medium);
@@ -185,12 +191,14 @@ class ACE_Medical_Injuries {
                 maxDamage = 8;
                 bleedingRate = 0.05;
                 lethalities[] = {{1, 0.15}, {0, 0.90}};
+                causeLimping = 1;
             };
             class Large {
                 name = CSTRING(VelocityWound_Large);
                 minDamage = 8;
                 bleedingRate = 0.1;
                 lethalities[] = {{1, 0.45}, {0, 1.0}};
+                causeLimping = 1;
             }; 
         };
         // Deep, narrow wounds produced by sharp objects such as nails, knives, and broken glass.
@@ -213,12 +221,14 @@ class ACE_Medical_Injuries {
                 maxDamage = 0.75;
                 bleedingRate = 0.03;
                 lethalities[] = {{1, 0.15}, {0, 0.60}};
+                causeLimping = 1;
             };
             class Large {
                 name = CSTRING(PunctureWound_Large);
                 minDamage = 0.65;
                 bleedingRate = 0.08;
                 lethalities[] = {{1, 0.45}, {0, 0.90}};
+                causeLimping = 1;
             };
         };
     };

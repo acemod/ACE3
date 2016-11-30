@@ -116,7 +116,7 @@ private _woundsCreated = [];
                 _injury = _openWounds select _foundIndex;
                 _injury set [3, (_injury select 3) + 1];
             };
-    
+
             private _lethalities = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
             {
                 if (_x select 0 == _bodyPartNToAdd) exitWith {
@@ -126,7 +126,11 @@ private _woundsCreated = [];
                     };
                 };
             } forEach _lethalities;
-    
+
+            private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 8;
+            if (_causeLimping == 1 && {_bodyPartNToAdd > 3}) then {
+                [_unit, true] call EFUNC(medical_engine,setLimping);
+            };
 
             // Store the injury so we can process it later correctly.
             _woundsCreated pushBack _injury;

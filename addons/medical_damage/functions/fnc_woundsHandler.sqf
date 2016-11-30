@@ -49,6 +49,11 @@ call compile _extensionOutput;
         };
     } forEach _lethalities;
     
+    private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 8;
+    if (_causeLimping == 1 && {_bodyPartNToAdd > 3}) then {
+        [_unit, true] call EFUNC(medical_engine,setLimping);
+    };
+    
     _foundIndex = -1;
     {
         // Check if we have an id of the given class on the given bodypart already

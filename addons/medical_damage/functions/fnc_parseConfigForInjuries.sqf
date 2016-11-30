@@ -51,7 +51,8 @@ private _fnc_parseSubClassWounds = {
                 [[_subClassConfig >> "minDamage", _minDamage] call _fnc_getAnyFromConfig, [_subClassConfig >> "maxDamage", _maxDamage] call _fnc_getAnyFromConfig],
                 _subClassCauses,
                 [_subClassConfig >> "name", _displayName + " " + _subClass] call _fnc_getAnyFromConfig,
-                _subClassLethalities
+                _subClassLethalities,
+                [_subClassConfig >> "causeLimping", _causeLimping] call _fnc_getAnyFromConfig
             ];
 
             _classID = _classID + 1;
@@ -84,13 +85,14 @@ private _classID = 0;
     private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _displayName = GET_STRING(_entry >> "name",_className); // @todo, don't translate in config
     private _lethalities = GET_ARRAY(_entry >> "lethalities",[]);
+    private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
 
     // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
     if !("Minor" call _fnc_parseSubClassWounds || "Medium" call _fnc_parseSubClassWounds || "Large" call _fnc_parseSubClassWounds) then {
         // There were no subclasses, so we will add this one instead.
         if (count _selections > 0 && {count _causes > 0}) then {
             GVAR(woundClassNames) pushBack _className;
-            GVAR(woundsData) pushBack [_classID, _selections, _bleedingRate, _pain, [_minDamage, _maxDamage], _causes, _displayName, _lethalities];
+            GVAR(woundsData) pushBack [_classID, _selections, _bleedingRate, _pain, [_minDamage, _maxDamage], _causes, _displayName, _lethalities, _causeLimping];
             _classID = _classID + 1;
         };
     };

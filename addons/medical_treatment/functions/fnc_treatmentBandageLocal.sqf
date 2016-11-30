@@ -185,6 +185,9 @@ if (EGVAR(medical,healHitPointAfterAdvBandage) || {EGVAR(medical,level) < 2}) th
     if (_rightLegWounds == 0) then {
         _bodyStatus set [5, 0];
     };
+    if (_leftLegWounds == 0 && {_rightLegWounds == 0}) then {
+        [_target, false] call EFUNC(medical_engine,setLimping);
+    };
 
     _target setVariable [QEGVAR(medical,bodyPartStatus), _bodyStatus, true];
 
