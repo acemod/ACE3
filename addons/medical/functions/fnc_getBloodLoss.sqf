@@ -21,7 +21,6 @@ private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 {
     _x params ["", "", "_bodyPart", "_percentage", "_bleedingRate"];
     if (_tourniquets select _bodyPart == 0) then {
-        // total bleeding ratio * percentage of injury left
         _bloodLossRate = _bloodLossRate + (_bleedingRate * _percentage);
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);

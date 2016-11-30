@@ -20,6 +20,7 @@ params ["_unit"];
 private _hrIncrease = 0;
 if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
     private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+    private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
     private _bloodLoss = [_unit] call FUNC(getBloodLoss);
 
     private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
@@ -52,12 +53,12 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
     private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
     if (_bloodVolume > DEFAULT_BLOOD_VOLUME * 0.75) then {
         if (_bloodLoss > 0.0) then {
-            if (_bloodLoss < 0.5) then {
+            if (_bloodLoss < _cardiacOutput / 2) then {
                 if (_heartRate < 126) then {
                     _hrIncrease = _hrIncrease + 0.05;
                 };
             } else {
-                if (_bloodLoss < 1) then {
+                if (_bloodLoss < _cardiacOutput) then {
                     if (_heartRate < 161) then {
                         _hrIncrease = _hrIncrease + 0.1;
                     };

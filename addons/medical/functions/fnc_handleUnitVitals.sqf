@@ -12,14 +12,15 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_interval"];
-TRACE_3("ACE_DEBUG",_unit,_interval,_unit);
-
-if (_interval == 0) exitWith {};
+params ["_unit"];
 
 private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 private _deltaT = CBA_missionTime - _lastTimeUpdated;
 _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
+
+TRACE_2("ACE_DEBUG",_unit,_deltaT);
+
+if (_deltaT == 0) exitWith {};
 
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
 private _syncValues = (CBA_missionTime - _lastTimeValuesSynced >= 10 + floor(random(10))) && GVAR(keepLocalSettingsSynced);
@@ -29,7 +30,7 @@ if (_syncValues) then {
 };
 
 private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + _deltaT * ([_unit, _syncValues] call FUNC(getBloodVolumeChange));
-_bloodVolume = (_bloodVolume max 0) min DEFAULT_BLOOD_VOLUME;
+_bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
@@ -89,34 +90,17 @@ if ([_unit] call EFUNC(common,isAwake)) then {
     };
 };
 
-/*
-if (GVAR(level) == 1) then {
-    TRACE_5("ACE_DEBUG_BASIC_VITALS",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
-    // reduce pain
-    if (_painStatus > 0) then {
-        _unit setVariable [QGVAR(pain), (_painStatus - 0.001 * _interval) max 0, _syncValues];
-    };
-
-    //// reduce painkillers
-    //if (_unit getVariable [QGVAR(morphine), 0] > 0) then {
-    //    _unit setVariable [QGVAR(morphine), ((_unit getVariable [QGVAR(morphine), 0]) - 0.0015 * _interval) max 0, _syncValues];
-    //};
-};
-*/
-
-// handle advanced medical, with vitals
-/*
 if (GVAR(level) >= 2) then {
-    TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume, _unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+    TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
     // Handle pain due tourniquets, that have been applied more than 120 s ago
     private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
     // Increase pain at a rate of 0.001 units/s per old tourniquet
-    _painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _interval;
+    _painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _deltaT;
 
     // Set the vitals
-    private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + (([_unit] call FUNC(getHeartRateChange)) * _interval);
-    _unit setVariable  [QGVAR(heartRate), _heartRate max 0, _syncValues];
+    private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + _deltaT * ([_unit] call FUNC(getHeartRateChange));
+    _unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
 
     private _bloodPressure = [_unit] call FUNC(getBloodPressure);
     _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
@@ -124,9 +108,9 @@ if (GVAR(level) >= 2) then {
     _painReduce = [0.001, 0.002] select (_painStatus > 5);
 
     // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
-    _unit setVariable [QGVAR(pain), (_painStatus - _painReduce * _interval) max 0, _syncValues];
+    _unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * _painReduce), _syncValues];
 
-    TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_interval,_syncValues,_unit);
+    TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
     // Check vitals for medical status
     // TODO check for in revive state instead of variable
@@ -137,9 +121,7 @@ if (GVAR(level) >= 2) then {
             [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
         };
 
-        if ((_bloodPressureH > 260)
-            || {_bloodPressureL < 40 && ({_heartRate > 190})}
-            || {(_bloodPressureH > 145 && {_heartRate > 150})}) then {
+        if ((_bloodPressureH > 260) || {_bloodPressureL < 40 && ({_heartRate > 190})} || {(_bloodPressureH > 145 && {_heartRate > 150})}) then {
 
             if (random(1) > 0.7) then {
                 [_unit] call FUNC(setCardiacArrest);
@@ -150,4 +132,3 @@ if (GVAR(level) >= 2) then {
         };
     };
 };
-*/

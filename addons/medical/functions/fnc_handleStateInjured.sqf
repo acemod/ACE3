@@ -1,8 +1,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_stateName", "_lastTime"];
-
+params ["_unit", "_stateName"];
 
 // If the unit died the loop is finished
 if (!alive _unit) exitWith {};
@@ -16,7 +15,7 @@ if (!local _unit) exitWith {
     _unit setVariable [QGVAR(bloodVolume), _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME], true];
 };
 
-[_unit, CBA_missionTime - _lastTime] call FUNC(handleUnitVitals);
+[_unit] call FUNC(handleUnitVitals);
 
 private _pain = _unit getVariable [QGVAR(pain), 0];
 if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
