@@ -71,7 +71,7 @@ class CfgVehicles {
                 displayName = CSTRING(simulationInterval_DisplayName);
                 description = CSTRING(simulationInterval_Description);
                 typeName = "NUMBER";
-                defaultValue = 0.0;
+                defaultValue = 0.05;
             };
             class simulationRadius {
                 displayName = CSTRING(simulationRadius_DisplayName);
