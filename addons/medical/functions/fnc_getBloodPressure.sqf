@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Calculates the blood volume change and decreases the IVs given to the unit.
+ * Calculate the blood pressure of a unit.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
