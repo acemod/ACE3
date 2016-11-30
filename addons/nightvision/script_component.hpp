@@ -17,17 +17,6 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 
-#ifdef DISABLE_COMPILE_CACHE
-    #define LINKFUNC(x) {_this call FUNC(x)}
-    #define PREP_RECOMPILE_START    PREP_RECOMPILE = {
-    #define PREP_RECOMPILE_END      }; call PREP_RECOMPILE;
-#else
-    #define LINKFUNC(x) FUNC(x)
-    #define PREP_RECOMPILE_START /* */
-    #define PREP_RECOMPILE_END /* */
-#endif
-
-
 // Effect Settings / Magic values to tweak:
 #define st_nvg_AirFogMultiplier 0.5
 
