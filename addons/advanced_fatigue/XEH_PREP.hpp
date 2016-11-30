@@ -8,7 +8,5 @@ PREP(handleStaminaBar);
 PREP(mainLoop);
 PREP(moduleSettings);
 PREP(removeDutyFactor);
-PREP(calculateBodyHeatStress);
-PREP(calculateBodyShiver);
-PREP(calculateBodySweat);
+PREP(calculateBodyFactors);
 PREP(calculateBodyTemperature);

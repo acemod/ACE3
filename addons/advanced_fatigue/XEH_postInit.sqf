@@ -12,10 +12,14 @@ if (!hasInterface) exitWith {};
     GVAR(ppeBlackout) ppEffectCommit 0.4;
 
     // - GVAR updating and initialization -----------------------------------------
-    if !(isNull ACE_player) then {
-        [ACE_player, objNull] call FUNC(handlePlayerChanged);
+    ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+
+    private _fnc_showStaminaBar = {
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
     };
-    ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+    ["visibleMap", _fnc_showStaminaBar, true] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", _fnc_showStaminaBar, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
     if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
@@ -39,9 +43,10 @@ if (!hasInterface) exitWith {};
     DFUNC(updateHotAndCold) = {
         private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call FUNC(calculateBodyTemperature);
         ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
-        private _shiver = [_bodyTemp] call FUNC(calculateBodyShiver);
-        private _heatStress = [_bodyTemp] call FUNC(calculateBodyHeatStress);
-        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 500, (_heatStress + _shiver), 1, 2, true]];
+        private _factors = [_bodyTemp] call FUNC(calculateBodyFactors); // [heatStress,sweat,shiver]
+        private _heatStress = (_factors select 0);
+        private _shiver = (_factors select 2);
+        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 2000, (_heatStress + _shiver), 1, 2, true]];
 
         [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
     };
