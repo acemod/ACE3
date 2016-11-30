@@ -6,7 +6,7 @@
  * 0: The Unit <OBJECT>
  *
  * ReturnValue:
- * Current cardiac output <NUMBER>
+ * Current cardiac output (liter per second) <NUMBER>
  *
  * Public: No
  */
@@ -15,7 +15,6 @@
 
 /*
     Cardiac output (Q or or CO ) is the volume of blood being pumped by the heart, in particular by a left or right ventricle in the CBA_missionTime interval of one minute. CO may be measured in many ways, for example dm3/min (1 dm3 equals 1 litre).
-
     Source: http://en.wikipedia.org/wiki/Cardiac_output
 */
 
@@ -24,4 +23,7 @@
 
 params ["_unit"];
 
-((_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) / MODIFIER_CARDIAC_OUTPUT) + ((_unit getVariable [QGVAR(heartRate), 80]) / 80 - 1);
+private _bloodVolume = ((_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) / DEFAULT_BLOOD_VOLUME) * 100;
+private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+
+((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / 80) - 1)) / 60

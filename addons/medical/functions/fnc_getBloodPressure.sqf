@@ -15,10 +15,10 @@
 #include "script_component.hpp"
 
 // Value is taken because with cardic output and resistance at default values, it will put blood pressure High at 120.
-#define MODIFIER_BP_HIGH     0.229
+#define MODIFIER_BP_HIGH    15
 
 // Value is taken because with cardic output and resistance at default values, it will put blood pressure Low at 80.
-#define MODIFIER_BP_LOW     0.1524
+#define MODIFIER_BP_LOW     10
 
 params ["_unit"];
 
