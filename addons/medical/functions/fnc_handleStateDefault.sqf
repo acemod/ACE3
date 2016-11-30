@@ -16,8 +16,6 @@ if (!local _unit) exitWith {
     _unit setVariable [QGVAR(bloodVolume), _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME], true];
 };
 
-systemChat format["handling state default for unit: %1", _this];
-
 [_unit, CBA_missionTime - _lastTime] call FUNC(handleUnitVitals);
 
 private _pain = _unit getVariable [QGVAR(pain), 0];
