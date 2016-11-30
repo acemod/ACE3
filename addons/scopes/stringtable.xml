@@ -4,78 +4,97 @@
         <Key ID="STR_ACE_Scopes_DisplayName">
             <English>Scopes</English>
             <Japanese>スコープ</Japanese>
+            <Polish>Celowniki optyczne</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_displayName">
             <English>Enable ACE Scope adjustment</English>
             <Japanese>ACE スコープ調節を有効化</Japanese>
+            <Polish>Włącz ustawienia celowników optycznych ACE</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustmet turrets on high powered scopes</English>
             <Japanese>高倍率スコープでACE スコープ調節を有効化</Japanese>
+            <Polish>Włącz pokrętła regulacyjne </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
             <Japanese>ACE スコープ調節を有効化</Japanese>
+            <Polish>Wymus uzycie poręteł regulacyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
             <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
+            <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o duzym powiększeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
             <Japanese>ゼロイン調節</Japanese>
+            <Polish>Poprawka zerowania </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
             <Japanese>全ての小口径用照準器のゼロインを調節します</Japanese>
+            <Polish>Poprawia zerowanie wszystkich celowników broni ręcznej</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_displayName">
             <English>Overwrite zero distance</English>
             <Japanese>ゼロイン距離を上書き</Japanese>
+            <Polish>Nadpisuje ustawienie dla zerowego dystansu </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
             <Japanese>'defaultZeroRange'設定を使う高倍率スコープのゼロイン距離を上書きします</Japanese>
+            <Polish>Używa/nadpisuje 'standardowej odległości zerowania' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
             <Japanese>標準のゼロイン距離</Japanese>
+            <Polish>Domyślny dystans zerowy</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High power scopes will be zeroed at this distance</English>
             <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
+            <Polish>Celowniki o duzym powiększeniu będą zerowane dla tej odległości</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
             <Japanese>温度の参照</Japanese>
+            <Polish>Wzorcowa temperatura</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
             <Japanese>スコープがゼロインされる温度</Japanese>
+            <Polish>Temperatura przy której celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
             <Japanese>気圧の参照</Japanese>
+            <Polish>Standardowe cisnienie barometryczne</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
             <Japanese>気圧の参照</Japanese>
+            <Polish>Ciśnienie barometryczne przy którym celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
             <Japanese>湿度の参照</Japanese>
+            <Polish>Standardowa wilgotność</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
             <English>Humidity at which the scope was zeroed</English>
             <Japanese>スコープがゼロインされる湿度</Japanese>
+            <Polish>Wilgotność przy której celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
             <Japanese>高度により圧が減少</Japanese>
+            <Polish>Cisnienie okreslone na podstawie wysokości</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
             <Japanese>標高により気圧が減少されます</Japanese>
+            <Polish>Określ ciśnienie barometryczne na podstawie wysokości </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -197,6 +216,7 @@
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
             <Japanese>モジュールは高倍率ライフル スコープにおいて横風と仰角の調節ができます。</Japanese>
+            <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
         </Key>
     </Package>
 </Project>
