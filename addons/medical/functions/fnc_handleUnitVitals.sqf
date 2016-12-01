@@ -90,45 +90,43 @@ if ([_unit] call EFUNC(common,isAwake)) then {
     };
 };
 
-if (GVAR(level) >= 2) then {
-    TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
-    // Handle pain due tourniquets, that have been applied more than 120 s ago
-    private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
-    // Increase pain at a rate of 0.001 units/s per old tourniquet
-    _painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _deltaT;
+// Handle pain due tourniquets, that have been applied more than 120 s ago
+private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
+// Increase pain at a rate of 0.001 units/s per old tourniquet
+_painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _deltaT;
 
-    // Set the vitals
-    private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + _deltaT * ([_unit] call FUNC(getHeartRateChange));
-    _unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
+// Set the vitals
+private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + _deltaT * ([_unit] call FUNC(getHeartRateChange));
+_unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
 
-    private _bloodPressure = [_unit] call FUNC(getBloodPressure);
-    _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
+private _bloodPressure = [_unit] call FUNC(getBloodPressure);
+_unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
-    _painReduce = [0.001, 0.002] select (_painStatus > 5);
+_painReduce = [0.001, 0.002] select (_painStatus > 5);
 
-    // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
-    _unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * _painReduce), _syncValues];
+// @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
+_unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * _painReduce), _syncValues];
 
-    TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
+TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
-    // Check vitals for medical status
-    // TODO check for in revive state instead of variable
-    _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
+// Check vitals for medical status
+// TODO check for in revive state instead of variable
+_bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 
-    if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
-        if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < BLOOD_VOLUME_CARDIAC_ARREST) then {
-            [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
-        };
+if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
+    if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < BLOOD_VOLUME_CARDIAC_ARREST) then {
+        [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
+    };
 
-        if ((_bloodPressureH > 260) || {_bloodPressureL < 40 && ({_heartRate > 190})} || {(_bloodPressureH > 145 && {_heartRate > 150})}) then {
+    if ((_bloodPressureH > 260) || {_bloodPressureL < 40 && ({_heartRate > 190})} || {(_bloodPressureH > 145 && {_heartRate > 150})}) then {
 
-            if (random(1) > 0.7) then {
-                [_unit] call FUNC(setCardiacArrest);
-            };
-        };
-        if (_heartRate > 200 || (_heartRate < 20)) then {
+        if (random(1) > 0.7) then {
             [_unit] call FUNC(setCardiacArrest);
         };
+    };
+    if (_heartRate > 200 || (_heartRate < 20)) then {
+        [_unit] call FUNC(setCardiacArrest);
     };
 };
