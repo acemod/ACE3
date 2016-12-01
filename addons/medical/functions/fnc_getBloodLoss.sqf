@@ -25,11 +25,6 @@ private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);
 
-{
-    _x params ["", "", "", "_percentage", "_bleedingRate"];
-    _bloodLossRate = _bloodLossRate + (_bleedingRate * _percentage);
-} forEach (_unit getVariable [QGVAR(internalWounds), []]);
-
 _bloodLossRate = _bloodLossRate * (_unit getVariable [QGVAR(bleedingCoefficient), GVAR(bleedingCoefficient)]);
 
 if (_bloodLossRate > 0) then {

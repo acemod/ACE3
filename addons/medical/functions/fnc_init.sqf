@@ -29,7 +29,6 @@ _unit setVariable [QGVAR(occludedMedications), nil, true]; //Delayed Medications
 // wounds and injuries
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
-_unit setVariable [QGVAR(internalWounds), [], true];
 
 // vitals
 _unit setVariable [QGVAR(heartRate), 80];

@@ -26,7 +26,6 @@ if (alive _target) exitWith {
     // wounds and injuries
     _target setVariable [QEGVAR(medical,openWounds), [], true];
     _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
-    _target setVariable [QEGVAR(medical,internalWounds), [], true];
 
     // vitals
     _target setVariable [QEGVAR(medical,heartRate), 80];
