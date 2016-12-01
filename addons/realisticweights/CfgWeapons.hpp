@@ -289,6 +289,16 @@ class CfgWeapons {
         };
     };
 
+    // - Cyrus ------------------------------------------------------
+    class DMR_05_base_F: Rifle_Long_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class srifle_DMR_05_blk_F: DMR_05_base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 140;
+        };
+    };
+
     // - SIG 556 --------------------------------------------------------------
     class DMR_03_base_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo;
