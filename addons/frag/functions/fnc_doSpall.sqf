@@ -103,6 +103,7 @@ for "_i" from 1 to _spallCount do {
         [ACE_player, _fragment, [1, 0.5, 0, 1]] call FUNC(addTrack);
     };
 };
+
 _spread = 5 + (random 5);
 _spallCount = 3 + (random 5);
 for "_i" from 1 to _spallCount do {

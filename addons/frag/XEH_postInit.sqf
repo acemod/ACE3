@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (GVAR(EnableDebugTrace) && {!isMultiplayer}) then {
+if (GVAR(enableDebugTrace) && {!isMultiplayer}) then {
     GVAR(traceFrags) = true;
     GVAR(autoTrace) = true;
 };

@@ -30,7 +30,7 @@ if (isNil "_shouldAdd") then {
         _shouldAdd = false;
     };
 
-    if (GVAR(SpallEnabled)) exitWith {
+    if (GVAR(spallEnabled)) exitWith {
         //Always want to run whenever spall is enabled?
         _shouldAdd = true;
         TRACE_2("SettingCache[spallEnabled]",_ammo,_shouldAdd);

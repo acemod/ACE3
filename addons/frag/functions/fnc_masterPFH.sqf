@@ -19,7 +19,7 @@ private _gcIndex = [];
 
 private _iter = 0;
 private _objectCount = count GVAR(objects);
-while {_objectCount > 0 && {_iter < (GVAR(MaxTrackPerFrame) min _objectCount)}} do {
+while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} do {
 
     if (GVAR(lastIterationIndex) >= _objectCount) then {
         GVAR(lastIterationIndex) = 0;
