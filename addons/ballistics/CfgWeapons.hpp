@@ -386,7 +386,7 @@ class CfgWeapons {
         ACE_barrelTwist=285.75;
         ACE_barrelLength=457.2;
     };
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         initSpeed = -1.10288;
         ACE_barrelTwist=254.0;
         ACE_barrelLength=195.58;
