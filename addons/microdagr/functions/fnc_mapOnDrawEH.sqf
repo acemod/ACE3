@@ -42,7 +42,7 @@ if (GVAR(currentApplicationPage) == 1) then {
             };
         };
         if ((count _targetPos) == 3) then {
-            _relBearing = [ACE_player, _targetPos] call BIS_fnc_relativeDirTo;
+            _relBearing = (ACE_player getDir _targetPos) - (([ACE_player] call CBA_fnc_headDir) select 0);
             _theMap drawIcon [QUOTE(PATHTO_R(images\compass_needle.paa)), [1,0.564,0.564,1], DUMMY_POS, _size, _size, _relBearing, '', 0 ];
         };
     };

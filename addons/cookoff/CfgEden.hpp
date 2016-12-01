@@ -11,7 +11,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(enable_tooltip);
                         expression = QUOTE(if !(_value) then {_this setVariable [ARR_3('%s',_value,true)];};);
                         typeName = "BOOL";
-                        condition = "objectVehicle";
+                        condition = "objectHasInventoryCargo";
                         defaultValue = "(true)"; // fix pbo project preprocessing bug
                     };
                 };

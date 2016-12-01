@@ -71,5 +71,5 @@ if (GVAR(currentUnit) == 1) then {
 
 GVAR(rangeCardData) = [];
 
-private _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 1000,
+private _result = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 100,
             [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, true, _stabilityFactor, _twistDirection, _latitude, _directionOfFire] call FUNC(calculate_solution);

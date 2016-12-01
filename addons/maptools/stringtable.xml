@@ -150,6 +150,7 @@
             <Russian>Клавиша поворота инструментов карты</Russian>
             <Japanese>マップ ツールの回転キー</Japanese>
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
+            <German>Taste zum Drehen des Kartenwerkzeugs</German>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
@@ -157,6 +158,17 @@
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
             <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
+            <German>Steuerungstaste, um Drehung des Kartenwerkzeugs zu ermöglichen.</German>
+        </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
+            <English>Draw straight lines with maptools</English>
+            <Japanese>マップ ツールを使って直線を書く</Japanese>
+            <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
+        </Key>
+        <Key ID="STR_ACE_MapTools_drawStaightLines_description">
+            <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
+            <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
+            <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
         </Key>
     </Package>
 </Project>
