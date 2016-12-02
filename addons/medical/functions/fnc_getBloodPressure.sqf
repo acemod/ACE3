@@ -26,4 +26,4 @@ private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 private _resistance = _unit getVariable [QGVAR(peripheralResistance), 100];
 private _bloodPressure = _cardiacOutput * _resistance;
 
-[_bloodPressure * MODIFIER_BP_LOW, _bloodPressure * MODIFIER_BP_HIGH]
+[round(_bloodPressure * MODIFIER_BP_LOW), round(_bloodPressure * MODIFIER_BP_HIGH)]

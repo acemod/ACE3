@@ -12,8 +12,7 @@ PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 
-// PREP(hasMedicalEnabled);
-
+PREP(conditionCardiacArrestTimer);
 PREP(enteredStateCardiacArrest);
 PREP(leavingStateCardiacArrest);
 

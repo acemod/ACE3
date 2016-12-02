@@ -95,7 +95,7 @@ _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
 
 if (!isPlayer _unit) then {
     private _cardiacArrest = _unit getVariable [QGVAR(inCardiacArrest), false];
-    hintSilent format["%1, %2, %3, %4, %5", _bloodVolume, round(_heartRate), _bloodPressure, _cardiacArrest, _painStatus]
+    hintSilent format["%1, %2, %3, %4, %5, %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 100) / 100, round(_heartRate), _bloodPressure, _cardiacArrest, round(_painStatus * 100) / 100];
 };
 
 _painReduce = [0.001, 0.002] select (_painStatus > 5);
@@ -107,8 +107,8 @@ TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVol
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 40) then {
-    [_unit, true] call FUNC(setUnconscious);
+    [QEGVAR(medical,InjuryCritical), _unit] call CBA_fnc_localEvent;
 };
 if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
-    [_unit] call FUNC(setCardiacArrest);
+    [QEGVAR(medical,FatalVitals), _unit] call CBA_fnc_localEvent;
 };

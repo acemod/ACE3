@@ -39,22 +39,25 @@ call compile _extensionOutput;
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
     
-    private _nastiness = (0.1 * _damage) + ((random (0.9 * _damage)) ^ 2) / 25;
+    // How much pain and bleeding does the wound induce?
+    private _nastiness = random(round(_damage ^ 2));
+    // 10 % baseline damage + 90 % random damage
+    private _inducedDamage = (0.1 * _damage) + (0.9 * _damage) * (1 - (0.99 ^ _nastiness));
 
-    _x set [4, _bleeding * _nastiness];
+    _x set [4, _bleeding * _inducedDamage];
     
-    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _nastiness;
+    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _inducedDamage / 3;
     _x pushBack _pain;
     _painToAdd = _painToAdd + _pain;
     
-    _x pushBack _nastiness;
+    _x pushBack _inducedDamage;
     
     if (_bodyPartNToAdd == 0 && {_damage > 1}) then {
         [QEGVAR(medical,InjuryFatal), _unit] call CBA_fnc_localEvent;
     };
     
     private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
-    if (_causeLimping == 1 && {_damage > 0.3} && {_bodyPartNToAdd > 3}) then {
+    if (_causeLimping == 1 && {_inducedDamage > 0.3} && {_bodyPartNToAdd > 3}) then {
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
     
