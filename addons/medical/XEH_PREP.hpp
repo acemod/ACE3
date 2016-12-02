@@ -31,5 +31,6 @@ PREP(handleMedications);
 PREP(addPain);
 PREP(setUnconscious);
 PREP(setDead);
+PREP(setCardiacArrest);
 
 PREP(hasTourniquetAppliedTo);

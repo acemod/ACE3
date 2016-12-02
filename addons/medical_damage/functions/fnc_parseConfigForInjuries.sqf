@@ -12,58 +12,6 @@
  */
 #include "script_component.hpp"
 
-private _fnc_getAnyFromConfig = {
-    params ["_config", "_default"];
-
-    if (_default isEqualType []) exitWith {
-        GET_ARRAY(_config,_default)
-    };
-
-    if (_default isEqualType 0) exitWith {
-        GET_NUMBER(_config,_default)
-    };
-
-    if (_default isEqualType "") exitWith {
-        GET_STRING(_config,_default)
-    };
-
-    _default
-};
-
-private _fnc_parseSubClassWounds = {
-    params ["_subClass"];
-
-    private _subClassConfig = _entry >> _subClass;
-
-    if (isClass _subClassConfig) exitWith {
-        private _subClassSelections = [_subClassConfig >> "selections", _selections] call _fnc_getAnyFromConfig;
-        private _subClassCauses = [_subClassConfig >> "causes", _causes] call _fnc_getAnyFromConfig;
-        private _subClassLethalities = [_subClassConfig >> "lethalities", _lethalities] call _fnc_getAnyFromConfig;
-
-        if (count _subClassSelections > 0 && {count _subClassCauses > 0}) then {
-            // constructs a type name, such as: 'woundMinor'
-            GVAR(woundClassNames) pushBack (_className + configName _subClassConfig);
-            GVAR(woundsData) pushBack [
-                _classID,
-                _subClassSelections,
-                [_subClassConfig >> "bleedingRate", _bleedingRate] call _fnc_getAnyFromConfig,
-                [_subClassConfig >> "pain", _pain] call _fnc_getAnyFromConfig,
-                [[_subClassConfig >> "minDamage", _minDamage] call _fnc_getAnyFromConfig, [_subClassConfig >> "maxDamage", _maxDamage] call _fnc_getAnyFromConfig],
-                _subClassCauses,
-                [_subClassConfig >> "name", _displayName + " " + _subClass] call _fnc_getAnyFromConfig,
-                _subClassLethalities,
-                [_subClassConfig >> "causeLimping", _causeLimping] call _fnc_getAnyFromConfig
-            ];
-
-            _classID = _classID + 1;
-        };
-
-        true
-    };
-
-    false
-};
-
 private _injuriesConfigRoot = configFile >> "ACE_Medical_Injuries";
 
 // --- parse wounds
@@ -77,29 +25,21 @@ private _classID = 0;
     private _entry = _x;
     private _className = configName _entry;
 
-    private _selections = GET_ARRAY(_entry >> "selections",[]);
-    private _bleedingRate = GET_NUMBER(_entry >> "bleedingRate",0);
+    private _selections = GET_ARRAY(_entry >> "selections",["All"]);
+    private _bleeding = GET_NUMBER(_entry >> "bleeding",0);
     private _pain = GET_NUMBER(_entry >> "pain",0);
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
     private _displayName = GET_STRING(_entry >> "name",_className); // @todo, don't translate in config
-    private _lethalities = GET_ARRAY(_entry >> "lethalities",[]);
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
 
-    // TODO instead of hardcoding minor, medium and large just go through all sub classes recursively until none are found
-    if !("Minor" call _fnc_parseSubClassWounds || "Medium" call _fnc_parseSubClassWounds || "Large" call _fnc_parseSubClassWounds) then {
-        // There were no subclasses, so we will add this one instead.
-        if (count _selections > 0 && {count _causes > 0}) then {
-            GVAR(woundClassNames) pushBack _className;
-            GVAR(woundsData) pushBack [_classID, _selections, _bleedingRate, _pain, [_minDamage, _maxDamage], _causes, _displayName, _lethalities, _causeLimping];
-            _classID = _classID + 1;
-        };
+    if (count _causes > 0) then {
+        GVAR(woundClassNames) pushBack _className;
+        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _displayName, _causeLimping];
+        _classID = _classID + 1;
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];
-
-// --- parse fractures
-//GVAR(fractureClassNames) = []; // unused
 
 // --- parse damage types
 GVAR(allDamageTypes) = []; // @todo, currently unused by handle damage (was GVAR(allAvailableDamageTypes))

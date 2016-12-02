@@ -36,8 +36,8 @@ _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
 // Set variables for synchronizing information across the net
-if (_bloodVolume < BLOOD_VOLUME_HAS_LOST_SOME) then {
-    if (_bloodVolume < BLOOD_VOLUME_HAS_LOST_MUCH) then {
+if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
+    if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
         if (_unit getVariable [QGVAR(hasLostBlood), 0] != 2) then {
             _unit setVariable [QGVAR(hasLostBlood), 2, true];
         };
@@ -80,16 +80,6 @@ if (_painStatus > (_unit getVariable [QGVAR(painSuppress), 0])) then {
     };
 };
 
-if (_bloodVolume < BLOOD_VOLUME_DEAD) exitWith {
-    [_unit, "bloodloss"] call FUNC(setDead);
-};
-
-if ([_unit] call EFUNC(common,isAwake)) then {
-    if (_bloodVolume < BLOOD_VOLUME_UNCONSCIOUS && {random 1 < BLOOD_LOSS_KNOCK_OUT_CHANCE}) exitWith {
-        [_unit, true, BLOOD_LOSS_KNOCK_OUT_DURATION] call FUNC(setUnconscious);
-    };
-};
-
 TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
 // Handle pain due tourniquets, that have been applied more than 120 s ago
@@ -97,12 +87,16 @@ private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_
 // Increase pain at a rate of 0.001 units/s per old tourniquet
 _painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _deltaT;
 
-// Set the vitals
 private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + _deltaT * ([_unit] call FUNC(getHeartRateChange));
 _unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
 
 private _bloodPressure = [_unit] call FUNC(getBloodPressure);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
+
+if (!isPlayer _unit) then {
+    private _cardiacArrest = _unit getVariable [QGVAR(inCardiacArrest), false];
+    hintSilent format["%1, %2, %3, %4, %5", _bloodVolume, round(_heartRate), _bloodPressure, _cardiacArrest, _painStatus]
+};
 
 _painReduce = [0.001, 0.002] select (_painStatus > 5);
 
@@ -111,22 +105,10 @@ _unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * _painReduce), _sy
 
 TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
-// Check vitals for medical status
-// TODO check for in revive state instead of variable
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
-
-if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
-    if (_heartRate < 10 || _bloodPressureH < 30 || _bloodVolume < BLOOD_VOLUME_CARDIAC_ARREST) then {
-        [_unit, true, 10+ random(20)] call FUNC(setUnconscious); // safety check to ensure unconsciousness for units if they are not dead already.
-    };
-
-    if ((_bloodPressureH > 260) || {_bloodPressureL < 40 && ({_heartRate > 190})} || {(_bloodPressureH > 145 && {_heartRate > 150})}) then {
-
-        if (random(1) > 0.7) then {
-            [_unit] call FUNC(setCardiacArrest);
-        };
-    };
-    if (_heartRate > 200 || (_heartRate < 20)) then {
-        [_unit] call FUNC(setCardiacArrest);
-    };
+if (_bloodPressureL < 40) then {
+    [_unit, true] call FUNC(setUnconscious);
+};
+if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
+    [_unit] call FUNC(setCardiacArrest);
 };

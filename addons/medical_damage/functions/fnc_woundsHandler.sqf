@@ -37,39 +37,28 @@ private _woundsCreated = [];
 call compile _extensionOutput;
 
 {
-    _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd"];
-
-    private _lethalities = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
-    {
-        if (_x select 0 == _bodyPartNToAdd) exitWith {
-            private _lethality = _x select 1;
-            if (_lethality > random 1) then {
-                [QEGVAR(medical,InjuryFatal), _unit] call CBA_fnc_localEvent;
-            };
-        };
-    } forEach _lethalities;
+    _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
     
-    private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 8;
-    if (_causeLimping == 1 && {_bodyPartNToAdd > 3}) then {
+    private _nastiness = (0.1 * _damage) + ((random (0.9 * _damage)) ^ 2) / 25;
+
+    _x set [4, _bleeding * _nastiness];
+    
+    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _nastiness;
+    _x pushBack _pain;
+    _painToAdd = _painToAdd + _pain;
+    
+    _x pushBack _nastiness;
+    
+    if (_bodyPartNToAdd == 0 && {_damage > 1}) then {
+        [QEGVAR(medical,InjuryFatal), _unit] call CBA_fnc_localEvent;
+    };
+    
+    private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
+    if (_causeLimping == 1 && {_damage > 0.3} && {_bodyPartNToAdd > 3}) then {
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
     
-    _foundIndex = -1;
-    {
-        // Check if we have an id of the given class on the given bodypart already
-        if ((_woundClassIDToAdd isEqualTo (_x select 1)) && {_bodyPartNToAdd isEqualTo (_x select 2)}) exitWith {
-            _foundIndex = _forEachIndex;
-        };
-    } forEach _openWounds;
-
-    if (_foundIndex < 0) then {
-        // Since it is a new injury, we will have to add it to the open wounds array to store it
-        _openWounds pushBack _x;
-    } else {
-        // We already have one of these, so we are just going to increase the number that we have of it with a new one.
-        private _injury = _openWounds select _foundIndex;
-        _injury set [3, (_injury select 3) + 1];
-    };
+    _openWounds pushBack _x;
 } forEach _woundsCreated;
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];

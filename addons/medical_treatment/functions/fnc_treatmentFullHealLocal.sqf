@@ -33,9 +33,6 @@ if (alive _target) exitWith {
     _target setVariable [QEGVAR(medical,bloodPressure), [80, 120]];
     _target setVariable [QEGVAR(medical,peripheralResistance), 100];
 
-    // fractures
-    _target setVariable [QEGVAR(medical,fractures), []];
-
     // IVs
     _target setVariable [QEGVAR(medical,ivBags), nil, true];
 

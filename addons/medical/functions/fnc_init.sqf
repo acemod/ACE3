@@ -36,9 +36,6 @@ _unit setVariable [QGVAR(heartRateAdjustments), []];
 _unit setVariable [QGVAR(bloodPressure), [80, 120]];
 _unit setVariable [QGVAR(peripheralResistance), 100];
 
-// fractures
-_unit setVariable [QGVAR(fractures), [], true];
-
 // triage card and logs
 // TODO move to treatment
 //_unit setVariable [QGVAR(triageLevel), 0, true];
