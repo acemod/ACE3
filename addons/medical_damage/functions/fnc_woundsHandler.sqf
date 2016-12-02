@@ -61,6 +61,7 @@ call compile _extensionOutput;
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
     
+    // @todo merge into existing wounds in an intelligent manner
     _openWounds pushBack _x;
 } forEach _woundsCreated;
 
