@@ -16,13 +16,12 @@
 #include "script_component.hpp"
 
 params ["_player", "_turretPath"];
-TRACE_2("turretChanged",_player,_turretPath);
 
 private _vehicle = vehicle _player;
+private _typeOf = typeOf _vehicle;
 if ((!alive _player) || {_player == _vehicle}) exitWith {};
 
-// private _enabled = false;
-private _enabled = true;
+private _enabled = false;
 {
     private _weapon = _x;
     if ((getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(enabled))) == 1) then {
@@ -30,14 +29,15 @@ private _enabled = true;
         _enabled = true;
     };
 } forEach (_vehicle weaponsTurret _turretPath);
+
+TRACE_3("turretChanged",_enabled,_typeOf,_turretPath);
 if (!_enabled) exitWith {};
-TRACE_1("enabled for vehicle",typeOf _vehicle);
 
 [_vehicle] call FUNC(insertFireModeActions);
 
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turretPath] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configFile >> "CfgVehicles" >> _typeOf, _turretPath] call EFUNC(common,getTurretConfigPath);
 private _seekerSource = getText (_turretConfig >> "memoryPointGunnerOptics");
-TRACE_2("",_vehicle,_seekerSource);
+TRACE_2("",_seekerSource,_vehicle selectionPosition _seekerSource);
 if ((_vehicle modelToWorld (_vehicle selectionPosition _seekerSource)) isEqualTo [0,0,0]) then {WARNING("seeker has no mem point");};
 
 
