@@ -18,6 +18,8 @@
 
 params ["_detectorType"];
 
+if (_detectorType isEqualTo "") exitWith {[]};
+
 private _detectorConfig = GVAR(detectorConfigs) getVariable _detectorType;
 if (isNil "_detectorConfig") then {
     private _cfgEntry = (configFile >> "ACE_detector" >> "detectors" >> _detectorType);
