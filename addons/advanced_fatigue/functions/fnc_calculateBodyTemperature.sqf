@@ -31,22 +31,29 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
 
     //Environment
     private _sun = 120 * (1 - overcast);
-    private _air = (_temperature - MALE_TEMPERATURE) * E ^ _windFactor * _airDensity;
+    private _air = (_temperature - MALE_TEMPERATURE) * E ^ _windFactor * _airDensity; //E is Euler number 2.718
     private _environment = (_sun + _air) * BODY_SURFACE_AREA;
 
     //Heating, muscles produce 80% waste heat
     private _speed = vectorMagnitude velocity player min 10;
+    if ((vehicle player == player) || {getPos player select 2 > 10}) then { //check if in vehicle OR falling, lazy evaluation
+        _speed = 0;
+    };
     private _metabolicCosts = [player, _speed] call FUNC(getMetabolicCosts);
     private _metabolicFactor = linearConversion [0, 1200, _metabolicCosts, 0, 1.4, true];
     private _metabolism = BASAL_METABOLIC_WATTAGE * (1 + _metabolicFactor);
-    private _wasteHeat = (150 * _metabolicFactor * 4); //male output * cost * 4 
+    private _wasteHeat = (150 * _metabolicFactor * 4); //male output * cost * 4 parts waste (80%) 
     private _shiver = (_factors select 2);
     private _heat = (_metabolism + _shiver + _wasteHeat);
 
     //Cooling
     private _sweat = _factors select 1;
     private _wet = (_sweat + rain) min 1;
-    private _cooling = (100 - humidity) * E ^ (_wet + _windFactor) * BODY_SURFACE_AREA / _airDensity; //2.718 is Euler constant
+    private _rainTemperature = linearConversion [0, 40, _temperature, 0, 27, true];
+    private _coldRain = 10 * rain * 1000 * (MALE_TEMPERATURE - _rainTemperature) * WATER_CAPACITY / 3600; //wattage loss per gram of rain per second
+    //Watts removed by evaporation per kilo of water per second per meter^2, 200 = MAGIC NUMBER FOR BALANCE *POOR THEORY SOMEWHERE*
+    private _evaporation = _wet * (25 + 19 * _windSpeed) * (1 - humidity) / 3600 * EVAPORATION_WATER / 200;
+    private _cooling = (_evaporation + _coldRain) * BODY_SURFACE_AREA;
 
     //Calculate body temperature
     _bodyTemp = _bodyTemp + (_environment + _heat - _cooling) * SKIN / MALE_CAPACITY;

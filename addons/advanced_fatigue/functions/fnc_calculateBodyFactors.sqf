@@ -20,21 +20,18 @@ params ["_bodyTemp"];
 private _tempDif = (_bodyTemp - MALE_TEMPERATURE);
 
 private _heatStress = 0;
-// Check if overheating
-if (_tempDif > 1.5) then {
+if (_tempDif > 1.5) then { // Check if overheating
     _heatStress = (500 * _tempDif);
 };
 
 private _sweat = 0;
-// Check if sweating
-if (_tempDif > 0) then {
+if (_tempDif > 0) then { // Check if sweating
     _sweat = _tempDif;
     _sweat min 2;
 };
 
 private _shiver = 0;
-// Check if shivering
-if (_tempDif < -1.5) then {
+if (_tempDif < -1.5) then { // Check if shivering
     _shiver = 500 * (abs _tempDif);
 };
 
