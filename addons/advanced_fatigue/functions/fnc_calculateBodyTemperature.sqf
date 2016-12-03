@@ -35,11 +35,11 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
     private _environment = (_sun + _air) * BODY_SURFACE_AREA;
 
     //Heating, muscles produce 80% waste heat
-    private _speed = vectorMagnitude velocity player min 10;
-    if ((vehicle player == player) || {getPos player select 2 > 10}) then { //check if in vehicle OR falling, lazy evaluation
+    private _speed = vectorMagnitude velocity ACE_player min 10;
+    if ((vehicle ACE_player == ACE_player) || {getPos ACE_player select 2 > 10}) then { //check if in vehicle OR falling, lazy evaluation
         _speed = 0;
     };
-    private _metabolicCosts = [player, _speed] call FUNC(getMetabolicCosts);
+    private _metabolicCosts = [ACE_player, _speed] call FUNC(getMetabolicCosts);
     private _metabolicFactor = linearConversion [0, 1200, _metabolicCosts, 0, 1.4, true];
     private _metabolism = BASAL_METABOLIC_WATTAGE * (1 + _metabolicFactor);
     private _wasteHeat = (150 * _metabolicFactor * 4); //male output * cost * 4 parts waste (80%) 
