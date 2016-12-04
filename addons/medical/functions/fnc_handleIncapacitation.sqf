@@ -14,17 +14,27 @@
 
 params ["_unit"];
 
+private _headDamage = 0;
 private _bodyDamage = 0;
 
 {
     _x params ["", "", "_bodyPart", "", "", "", "_damage"];
-    if (_bodyPart < 2 && {_damage > PENETRATION_THRESHOLD}) then {
-        _bodyDamage = _bodyDamage + _damage;
+    switch (_bodyPart) do {
+        case 0: {
+            _headDamage = _headDamage + _damage;
+        };
+        case 1: {
+            if (_damage > PENETRATION_THRESHOLD) then {
+                _bodyDamage = _bodyDamage + _damage;
+            };
+        };
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);
 
-// todo: use an ace setting for the incapacitation threshold
-private _incapacitationThreshold = 3 * PENETRATION_THRESHOLD;
-if (_bodyDamage > _incapacitationThreshold) then {
+// todo: use an ace settings for the thresholds
+if (_headDamage > 0.50) then {
+    [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
+};
+if (_bodyDamage > 1.05) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };
