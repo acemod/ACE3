@@ -40,11 +40,10 @@ if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
         _speed = 0;
     };
     private _metabolicCosts = [ACE_player, _speed] call FUNC(getMetabolicCosts);
-    private _metabolicFactor = linearConversion [0, 1200, _metabolicCosts, 0, 1.4, true];
-    private _metabolism = BASAL_METABOLIC_WATTAGE * (1 + _metabolicFactor);
-    private _wasteHeat = (150 * _metabolicFactor * 4); //male output * cost * 4 parts waste (80%) 
+    private _metabolicFactor = linearConversion [0, 1200, _metabolicCosts, 0, 4, true];
+    private _wasteHeat = (100 * _metabolicFactor * 4); // avg male output * activity * 4 parts waste (80%) 
     private _shiver = (_factors select 2);
-    private _heat = (_metabolism + _shiver + _wasteHeat);
+    private _heat = (BASAL_METABOLIC_WATTAGE + _shiver + _wasteHeat);
 
     //Cooling
     private _sweat = _factors select 1;
