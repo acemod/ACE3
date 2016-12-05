@@ -8,11 +8,11 @@ class ACE_Medical_StateMachine {
             targetState = "Injured";
             events[] = {QGVAR(TakenInjury)};
         };
-        class CriticalInjuryOrVitals {
+        class InjuryCriticalOrVitals {
             targetState = "Unconscious";
             events[] = {QGVAR(InjuryCritical), QGVAR(CriticalVitals)};
         };
-        class FatalInjury {
+        class InjuryFatal {
             targetState = "FatalInjury";
             events[] = {QGVAR(InjuryFatal)};
         };

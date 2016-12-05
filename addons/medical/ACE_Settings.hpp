@@ -49,16 +49,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(enableAirway) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
-    };
-    class GVAR(enableFractures) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
-    };
     class GVAR(enableAdvancedWounds) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_DisplayName);

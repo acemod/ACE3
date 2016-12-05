@@ -7,7 +7,7 @@
  * 1: Global Sync Values (bloodbags) <BOOL>
  *
  * ReturnValue:
- * Blood volume change (in % total) <NUMBER>
+ * Blood volume change (liters per second) <NUMBER>
  *
  * Public: No
  */

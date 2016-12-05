@@ -11,6 +11,9 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 params ["_unit"];
 
 _unit setVariable [QGVAR(cardiacArrestStart), CBA_missionTime];
+
+[_unit] call FUNC(setCardiacArrest);

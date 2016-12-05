@@ -104,7 +104,13 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
     // Check for falling damage.
     if (_ammo isEqualTo "") then {
         if (velocity _unit select 2 < -2) then {
-            _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg"];
+            if (_receivedDamage < 0.35) then {
+                // Less than ~ 5 m
+                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg"];
+            } else {
+                // More than ~ 5 m
+                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body", "Head"];
+            };
             _ammo = "#falling";
         } else {
             // Assume collision damage.

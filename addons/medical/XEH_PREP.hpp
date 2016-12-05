@@ -12,8 +12,7 @@ PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 
-// PREP(hasMedicalEnabled);
-
+PREP(conditionCardiacArrestTimer);
 PREP(enteredStateCardiacArrest);
 PREP(leavingStateCardiacArrest);
 
@@ -31,5 +30,6 @@ PREP(handleMedications);
 PREP(addPain);
 PREP(setUnconscious);
 PREP(setDead);
+PREP(setCardiacArrest);
 
 PREP(hasTourniquetAppliedTo);

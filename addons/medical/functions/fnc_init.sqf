@@ -29,16 +29,12 @@ _unit setVariable [QGVAR(occludedMedications), nil, true]; //Delayed Medications
 // wounds and injuries
 _unit setVariable [QGVAR(openWounds), [], true];
 _unit setVariable [QGVAR(bandagedWounds), [], true];
-_unit setVariable [QGVAR(internalWounds), [], true];
 
 // vitals
 _unit setVariable [QGVAR(heartRate), 80];
 _unit setVariable [QGVAR(heartRateAdjustments), []];
 _unit setVariable [QGVAR(bloodPressure), [80, 120]];
 _unit setVariable [QGVAR(peripheralResistance), 100];
-
-// fractures
-_unit setVariable [QGVAR(fractures), [], true];
 
 // triage card and logs
 // TODO move to treatment

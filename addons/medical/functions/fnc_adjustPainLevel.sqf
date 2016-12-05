@@ -23,14 +23,8 @@ params ["_unit", "_addedPain"];
 if (!local _unit) exitWith {ERROR("unit is not local");};
 TRACE_3("ACE_DEBUG: adjustPainLevel Called",_unit, _pain, _addedPain);
 
-//Ignore if medical system disabled:
-if (GVAR(level) == 0) exitWith {};
-
 private _pain = ((_unit getVariable [QGVAR(pain), 0]) + _addedPain) max 0;
 
 _unit setVariable [QGVAR(pain), _pain];
-
-//Start up the vital watching (if not already running)
-// [_unit] call FUNC(addVitalLoop);
 
 _pain;

@@ -13,15 +13,11 @@
 
 #include "script_component.hpp"
 
-#define HEART_RATE_MODIFIER 0.02
-
 params ["_unit"];
 
 private _hrIncrease = 0;
-if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
-    private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
-    private _bloodLoss = [_unit] call FUNC(getBloodLoss);
 
+if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
     private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
     {
         _x params ["_values", "_time", "_callBack"];
@@ -49,36 +45,23 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest),false])) then {
     _adjustment = _adjustment - [ObjNull];
     _unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
 
-    private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
-    if (_bloodVolume > 75) then {
-        if (_bloodLoss > 0.0) then {
-            if (_bloodLoss < 0.5) then {
-                if (_heartRate < 126) then {
-                    _hrIncrease = _hrIncrease + 0.05;
-                };
-            } else {
-                if (_bloodLoss < 1) then {
-                    if (_heartRate < 161) then {
-                        _hrIncrease = _hrIncrease + 0.1;
-                    };
-                } else {
-                    if (_heartRate < 220) then {
-                        _hrIncrease = _hrIncrease + 0.15;
-                    };
-                };
+    if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
+        private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]);
+        private _pain = _unit getVariable [QGVAR(pain), 0];        
+        private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
+        if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {
+            if (_pain > 0.2 && _heartRate < 130) then {
+                _hrIncrease = _hrIncrease + round(130 - _heartRate) / 2;
+            };
+            if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE && {_heartRate < 200}) then {
+                ([_unit] call FUNC(getBloodPressure)) params ["_bloodPressureL", "_bloodPressureH"];
+                private _meanBloodPressure = (2/3) * _bloodPressureH + (1/3) * _bloodPressureL;
+                _hrIncrease = _hrIncrease + 2 * round(107 - _meanBloodPressure);
             };
         } else {
-            // Stabalize it
-            if (_heartRate < (60 + round(random(10)))) then {
-                _hrIncrease = _hrIncrease + HEART_RATE_MODIFIER;
-            } else {
-                if (_heartRate > (77 + round(random(10)))) then {
-                    _hrIncrease = _hrIncrease - HEART_RATE_MODIFIER;
-                };
-            };
+            _hrIncrease = _hrIncrease - (random 5) * round(_heartRate / 10);
         };
-    } else {
-        _hrIncrease = _hrIncrease - HEART_RATE_MODIFIER;
     };
 };
+
 _hrIncrease

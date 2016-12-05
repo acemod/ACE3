@@ -17,28 +17,20 @@
 // 0.077 l/kg * 80kg = 6.16l
 #define DEFAULT_BLOOD_VOLUME 6.0 // in liters
 
-#define BLOOD_VOLUME_HAS_LOST_SOME 5.700 // lost 5% blood, Class I Hemorrhage
-#define BLOOD_VOLUME_HAS_LOST_MUCH 5.100 // lost 15% blood, Class II Hemorrhage
-
-#define BLOOD_VOLUME_UNCONSCIOUS 4.200 // lost 30% blood, Class III Hemorrhage
-#define BLOOD_VOLUME_DEAD 3.600 // lost 40% blood, Class IV Hemorrhage
-#define BLOOD_VOLUME_CARDIAC_ARREST 1.2 // TBD
+#define BLOOD_VOLUME_CLASS_1_HEMORRHAGE 6.000 // lost less than 15% blood, Class I Hemorrhage
+#define BLOOD_VOLUME_CLASS_2_HEMORRHAGE 5.100 // lost more than 15% blood, Class II Hemorrhage
+#define BLOOD_VOLUME_CLASS_3_HEMORRHAGE 4.200 // lost more than 30% blood, Class III Hemorrhage
+#define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
 
 // IV Change per second calculation:
 // 250ml should take 60 seconds to fill. 250ml/60s = 4.166ml/s.
 #define IV_CHANGE_PER_SECOND ([1000, 4.166] select GVAR(advancedIVBags)) // in milliliters per second
 
-// chance per second to get knocked out due to blood loss
-#define BLOOD_LOSS_KNOCK_OUT_CHANCE 0.1 // 10%
-
-// duration in seconds to stay knocked out due to blood loss
-#define BLOOD_LOSS_KNOCK_OUT_DURATION (15 + random 20)
-
 // --- unconsciousness
 #define DEFAULT_KNOCK_OUT_DELAY (5 + random 10)
 
 // --- pain
-#define PAIN_UNCONSCIOUS 0.7
+#define PAIN_UNCONSCIOUS 0.9
 
 // duration in seconds to stay knocked out due to pain
 #define PAIN_KNOCK_OUT_DURATION (15 + random 20)

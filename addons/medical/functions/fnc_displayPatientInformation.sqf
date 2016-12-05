@@ -16,8 +16,7 @@
 #include "script_component.hpp"
 #define MAX_DISTANCE 10
 
-// Exit for basic medical
-if (GVAR(level) < 2) exitWith {};
+if (GVAR(level) == 0) exitWith {};
 
 params ["_target", ["_show", true], ["_selectionN", 0]];
 
