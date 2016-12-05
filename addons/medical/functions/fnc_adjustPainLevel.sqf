@@ -1,13 +1,13 @@
 /*
  * Author: PabstMirror
- * Interface to allow external modules to safely adjust pain levels.
+ * Interface to allow external modules to affect the pain level
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Added ammount of pain (can be negative) <NUMBER>
+ * 1: Desired pain level (0 .. 1) <NUMBER>
  *
  * Return Value:
- * The new pain level <NUMBER>
+ * nothing
  *
  * Example:
  * [guy, 0.5] call ace_medical_fnc_adjustPainLevel
@@ -16,21 +16,14 @@
  */
 #include "script_component.hpp"
 
-private ["_pain"];
+params ["_unit", "_desiredPainLevel"];
 
-params ["_unit", "_addedPain"];
-//Only run on local units:
-if (!local _unit) exitWith {ERROR("unit is not local");};
-TRACE_3("ACE_DEBUG: adjustPainLevel Called",_unit, _pain, _addedPain);
+if (!local _unit) exitWith { ERROR("unit is not local"); };
 
-//Ignore if medical system disabled:
-if (GVAR(level) == 0) exitWith {};
+TRACE_2("ACE_DEBUG: adjustPainLevel Called",_unit,_desiredPainLevel);
 
-private _pain = ((_unit getVariable [QGVAR(pain), 0]) + _addedPain) max 0;
+private _pain = _unit getVariable [QGVAR(pain), 0];
+
+_pain = 0 max (_pain max _desiredPainLevel) min 1;
 
 _unit setVariable [QGVAR(pain), _pain];
-
-//Start up the vital watching (if not already running)
-// [_unit] call FUNC(addVitalLoop);
-
-_pain;

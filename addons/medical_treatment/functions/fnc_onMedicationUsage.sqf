@@ -43,7 +43,7 @@ if (!_foundEntry) then {
 
 
 private _usedMeds = _target getVariable [_variable, 0];
-if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1 && GVAR(enableOverdosing)) then {
+if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
     [_target] call EFUNC(medical,setDead);
 };
 
@@ -58,7 +58,7 @@ private _hasOverDosed = 0;
     } forEach _allUsedMedication;
 } forEach _incompatabileMeds;
 
-if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
+if (_hasOverDosed > 0) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");
     private _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {

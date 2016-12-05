@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Show <BOOL> (default: true)
+ * 1: Show <NUMBER> (default: 0)
  * 2: Selection <NUMBER> (default: 0)
  *
  * ReturnValue:
@@ -16,15 +16,12 @@
 #include "script_component.hpp"
 #define MAX_DISTANCE 10
 
-// Exit for basic medical
-if (EGVAR(medical,level) < 2) exitWith {};
-
-params ["_target", ["_show", true], ["_selectionN", 0]];
+params ["_target", ["_show", 0], ["_selectionN", 0]];
 
 GVAR(currentSelectedSelectionN) = [0, _selectionN] select (IS_SCALAR(_selectionN));
 GVAR(displayPatientInformationTarget) = [ObjNull, _target] select _show;
 
-if (_show) then {
+if (_show == 1) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
     [{
@@ -94,10 +91,10 @@ if (_show) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                     if (_amountOf >= 1) then {
                         // TODO localization
-                        _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical,AllWoundInjuryTypes) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
+                        _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical_damage,woundsData) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
                     } else {
                         // TODO localization
-                        _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
+                        _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical_damage,woundsData) select _x1) select 6], [1,1,1,1]];
                     };
                 };
             };
@@ -115,10 +112,10 @@ if (_show) then {
                 if (_amountOf > 0) then {
                     if (_amountOf >= 1) then {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
                     } else {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                     };
                 };
             };

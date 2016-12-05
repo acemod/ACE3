@@ -16,9 +16,6 @@
 
 params ["_target", "_tourniquetItem", "_bodyPart"];
 
-//If we're not already tracking vitals, start:
-[_target] call EFUNC(medical,addVitalLoop);
-
 private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
 
 // Place a tourniquet on the bodypart

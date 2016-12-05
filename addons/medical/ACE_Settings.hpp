@@ -1,17 +1,9 @@
 class ACE_Settings {
-    class GVAR(level) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_level_DisplayName);
-        description = CSTRING(MedicalSettings_level_Description);
-        value = 1;
-        typeName = "SCALAR";
-        values[] = {"Disabled", "Basic", "Advanced"};
-    };
     class GVAR(medicSetting) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_medicSetting_DisplayName);
         description = CSTRING(MedicalSettings_medicSetting_Description);
-        value = 1;
+        value = 0;
         typeName = "SCALAR";
         values[] = {"Disabled", "Normal", "Advanced"};
     };
@@ -26,14 +18,9 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_enableFor_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_enableFor_Description);
-        value = 0;
+        value = 1;
         typeName = "SCALAR";
         values[] = {"Players only", "Players and AI"};
-    };
-    class GVAR(enableOverdosing) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = 1;
     };
     class GVAR(bleedingCoefficient) {
         category = CSTRING(Category_Medical);
@@ -49,22 +36,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
-    class GVAR(enableAirway) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
-    };
-    class GVAR(enableFractures) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = false;
-    };
     class GVAR(enableAdvancedWounds) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_Description);
         typeName = "BOOL";
-        value = false;
+        value = 1;
     };
     class GVAR(enableVehicleCrashes) {
         category = CSTRING(Category_Medical);
@@ -80,6 +57,8 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    
+    // Use those for handleIncapacitation?
     class GVAR(playerDamageThreshold) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_playerDamageThreshold_DisplayName);
@@ -94,11 +73,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 1;
     };
+    
+    
     class GVAR(enableUnconsciousnessAI) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);
         description = CSTRING(MedicalSettings_enableUnconsciousnessAI_Description);
-        value = 1;
+        value = 2;
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
@@ -148,7 +129,7 @@ class ACE_Settings {
         displayName = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_DisplayName);
         description = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(medicSetting_PAK) {
@@ -156,7 +137,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_medicSetting_PAK_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_medicSetting_PAK_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(medicSetting_SurgicalKit) {
@@ -164,7 +145,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_medicSetting_SurgicalKit_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 0;
         values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(consumeItem_PAK) {
@@ -172,7 +153,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_consumeItem_PAK_Description);
         typeName = "SCALAR";
-        value = 0;
+        value = 1;
         values[] = {"No", "Yes"};
     };
     class GVAR(consumeItem_SurgicalKit) {
@@ -180,7 +161,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_consumeItem_SurgicalKit_Description);
         typeName = "SCALAR";
-        value = 0;
+        value = 1;
         values[] = {"No", "Yes"};
     };
     class GVAR(useLocation_basicEpi) {
@@ -196,7 +177,7 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_useLocation_PAK_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_useLocation_PAK_Description);
         typeName = "SCALAR";
-        value = 3;
+        value = 0;
         values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
     class GVAR(useLocation_SurgicalKit) {
@@ -204,38 +185,23 @@ class ACE_Settings {
         displayName = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName);
         description = CSTRING(AdvancedMedicalSettings_useLocation_SurgicalKit_Description);
         typeName = "SCALAR";
-        value = 2;
+        value = 0;
         values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
-    class GVAR(useCondition_PAK) {
+    class GVAR(fullHealLocation_PAK) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(AdvancedMedicalSettings_useCondition_PAK_DisplayName);
-        description = CSTRING(AdvancedMedicalSettings_useCondition_PAK_Description);
+        displayName = CSTRING(AdvancedMedicalSettings_fullHealLocation_PAK_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_fullHealLocation_PAK_Description);
         typeName = "SCALAR";
-        value = 0;
-        values[] = {"Anytime", "Stable"};
+        value = 3;
+        values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
-    class GVAR(useCondition_SurgicalKit) {
+    class GVAR(fieldEffectiveness_PAK) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName);
-        description = CSTRING(AdvancedMedicalSettings_useCondition_SurgicalKit_Description);
+        displayName = CSTRING(MedicalSettings_fieldEffectiveness_PAK_DisplayName);
+        description = CSTRING(MedicalSettings_fieldEffectiveness_PAK_Description);
         typeName = "SCALAR";
-        value = 0;
-        values[] = {"Anytime", "Stable"};
-    };
-    class GVAR(keepLocalSettingsSynced) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_keepLocalSettingsSynced_DisplayName);
-        description = CSTRING(MedicalSettings_keepLocalSettingsSynced_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
-    class GVAR(healHitPointAfterAdvBandage) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName);
-        description = CSTRING(AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description);
-        typeName = "BOOL";
-        value = 0;
+        value = 0.9;
     };
     class GVAR(painIsOnlySuppressed) {
         category = CSTRING(Category_Medical);

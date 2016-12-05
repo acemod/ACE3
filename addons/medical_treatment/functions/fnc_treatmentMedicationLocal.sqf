@@ -32,7 +32,7 @@ if !(EGVAR(medical,advancedMedication)) exitWith {
     };
 
     if (_className == "Epinephrine") exitWith {
-        [_target, false] call EFUNC(medical,setUnconscious);
+        [QEGVAR(medical,WakeUp), _target] call CBA_fnc_localEvent;
     };
 };
 

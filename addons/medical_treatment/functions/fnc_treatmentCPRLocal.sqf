@@ -24,10 +24,11 @@ if (_target getVariable [QEGVAR(medical,inReviveState), false]) then {
     };
 };
 
-if (EGVAR(medical,level) > 1 && {(random 1) >= 0.6}) then {
+if ({(random 1) >= 0.6) then {
     _target setVariable [QEGVAR(medical,inCardiacArrest), nil,true];
     _target setVariable [QEGVAR(medical,heartRate), 40];
     _target setVariable [QEGVAR(medical,bloodPressure), [50,70]];
+    [QGVAR(CPRSucceeded), _target] call CBA_fnc_localEvent;
 };
 
 [_target, "activity", ELSTRING(medical,Activity_CPR), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
