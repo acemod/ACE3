@@ -156,6 +156,8 @@ if (isNumber (_config >> "treatmentTime")) then {
 };
 TRACE_1("",_treatmentTime);
 
+if (_treatmentTime == 0) exitWith { false };
+
 // speed up animation depending on treatment time
 if (!isNil "_animDuration") then {
     [QEGVAR(common,setAnimSpeedCoef), [_caller, _animDuration / _treatmentTime]] call CBA_fnc_globalEvent;
