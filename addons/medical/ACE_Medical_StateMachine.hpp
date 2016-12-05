@@ -84,7 +84,7 @@ class ACE_Medical_StateMachine {
         class Execution {
             targetState = "Dead";
             condition = QUOTE(DFUNC(conditionExecutionDeath));
-            events[] = {QGVAR(InjuryFatal)};
+            events[] = {QGVAR(FatalInjury)};
         };
     };
     class Dead {
