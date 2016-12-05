@@ -39,9 +39,8 @@ _unit setVariable [QGVAR(bloodPressure), [80, 120]];
 _unit setVariable [QGVAR(peripheralResistance), 100];
 
 // triage card and logs
-// TODO move to treatment
-//_unit setVariable [QGVAR(triageLevel), 0, true];
-//_unit setVariable [QGVAR(triageCard), [], true];
+_unit setVariable [QGVAR(triageLevel), 0, true];
+_unit setVariable [QGVAR(triageCard), [], true];
 
 // IVs
 _unit setVariable [QGVAR(ivBags), nil, true];

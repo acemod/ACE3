@@ -76,71 +76,89 @@ if (_show == 1) then {
             _genericMessages pushback [format[localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
-        private _damaged = [false, false, false, false, false, false];
-        private _selectionBloodLoss = [0,0,0,0,0,0];
+        private _selectionTourniquet = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
+        private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
+        private _selectionDamage = [0, 0, 0, 0, 0, 0];
+        private _allInjuryTexts = [];
 
-        private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
         {
-            _x params ["", "_x1", "_selectionX", "_amountOf", "_x4"];
-            // Find how much this bodypart is bleeding
-            if (_amountOf > 0) then {
-                _damaged set [_selectionX, true];
-                _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
-
-                if (_selectionN == _selectionX) then {
-                // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-                    if (_amountOf >= 1) then {
-                        // TODO localization
-                        _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical_damage,woundsData) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
-                    } else {
-                        // TODO localization
-                        _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical_damage,woundsData) select _x1) select 6], [1,1,1,1]];
-                    };
-                };
-            };
-        } foreach _openWounds;
-
-        private _bandagedwounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
-        {
-            _x params ["", "", "_selectionX", "_amountOf", "_x4"];
-            // Find how much this bodypart is bleeding
-            if !(_damaged select _selectionX) then {
-                _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
-            };
-            if (_selectionN == _selectionX) then {
+            _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
+            _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (20 * (_bleeding * _amountOf))];
+            _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
+            if (_selectionN == _bodyPartN) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                 if (_amountOf > 0) then {
                     if (_amountOf >= 1) then {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushBack [format["%2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [1,1,1,1]];
                     } else {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushBack [format["Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [1,1,1,1]];
                     };
                 };
             };
-        } foreach _bandagedwounds;
+        } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
+
+        {
+            _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
+            _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
+            if (_selectionN == _bodyPartN) then {
+                // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                if (_amountOf > 0) then {
+                    if (_amountOf >= 1) then {
+                        // TODO localization
+                        _allInjuryTexts pushBack [format ["[B] %2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                    } else {
+                        // TODO localization
+                        _allInjuryTexts pushBack [format ["[B] Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [0.88,0.7,0.65,1]];
+                    };
+                };
+            };
+        } forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
+
+        {
+            _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
+            _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
+            if (_selectionN == _bodyPartN) then {
+                // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                if (_amountOf > 0) then {
+                    if (_amountOf >= 1) then {
+                        // TODO localization
+                        _allInjuryTexts pushBack [format ["[S] %2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [0.7,0.7,0.7,1]];
+                    } else {
+                        // TODO localization
+                        _allInjuryTexts pushBack [format ["[S] Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [0.7,0.7,0.7,1]];
+                    };
+                };
+            };
+        } forEach (_target getVariable [QEGVAR(medical,stitchedWounds), []]);
 
         // Handle the body image coloring
-        private _availableSelections = [50,51,52,53,54,55];
+        private _availableSelections = [50, 51, 52, 53, 54, 55];
         {
-            private _total = _x;
             private _red = 1;
             private _green = 1;
             private _blue = 1;
 
-            if (_total > 0) then {
-                if (_damaged select _forEachIndex) then {
-                    _green = (0.9 - _total) max 0;
+            private _torniquet = _selectionTourniquet select _forEachIndex;
+            if (_torniquet > 0) then {
+                _red = 0.77;
+                _green = 0.51;
+                _blue = 0.08;
+            } else {
+                private _bloodLoss = _selectionBloodLoss select _forEachIndex;
+                if (_bloodLoss > 0) then {
+                    _green = 0 max (0.9 - _bloodLoss);
                     _blue = _green;
                 } else {
-                    _green = (0.9 - _total) max 0;
+                    private _damage = _selectionDamage select _forEachIndex;
+                    _green = 0 max (0.9 - _damage);
                     _red = _green;
-                    //_blue = _green;
                 };
             };
-            (_display displayCtrl (_availableSelections select _foreachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
-        } foreach _selectionBloodLoss;
+
+            (_display displayCtrl _x) ctrlSetTextColor [_red, _green, _blue, 1.0];
+        } forEach _availableSelections;
 
         private _lbCtrl = (_display displayCtrl 200);
         lbClear _lbCtrl;

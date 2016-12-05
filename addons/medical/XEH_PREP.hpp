@@ -4,6 +4,8 @@ PREP(addStateHandler);
 PREP(adjustPainLevel);
 PREP(conditionCardiacArrestTimer);
 PREP(conditionExecutionDeath);
+PREP(displayPatientInformation);
+PREP(displayTriageCard);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateFatalInjury);
 PREP(getBloodLoss);

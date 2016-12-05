@@ -38,8 +38,6 @@ PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnloadPatientActions);
 PREP(canAccessMedicalEquipment);
-PREP(displayPatientInformation);
-PREP(displayTriageCard);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);

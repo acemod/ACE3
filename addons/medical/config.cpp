@@ -23,6 +23,9 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+#include "UI\CfgInGameUI.hpp"
+#include "UI\RscTitles.hpp"
+#include "UI\triagecard.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_medical"};
