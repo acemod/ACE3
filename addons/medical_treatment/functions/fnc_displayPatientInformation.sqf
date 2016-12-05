@@ -91,10 +91,10 @@ if (_show == 1) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                     if (_amountOf >= 1) then {
                         // TODO localization
-                        _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical,AllWoundInjuryTypes) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
+                        _allInjuryTexts pushback [format["%2x %1", (EGVAR(medical_damage,woundsData) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
                     } else {
                         // TODO localization
-                        _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
+                        _allInjuryTexts pushback [format["Partial %1", (EGVAR(medical_damage,woundsData) select _x1) select 6], [1,1,1,1]];
                     };
                 };
             };
@@ -112,10 +112,10 @@ if (_show == 1) then {
                 if (_amountOf > 0) then {
                     if (_amountOf >= 1) then {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushback [format["[B] %2x %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
                     } else {
                         // TODO localization
-                        _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical,AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushback [format["[B] Partial %1", (EGVAR(medical_damage,woundsData) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                     };
                 };
             };
