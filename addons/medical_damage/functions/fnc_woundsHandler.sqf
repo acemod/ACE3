@@ -51,9 +51,6 @@ private _painLevel = 0;
     private _painfullness = 0.05 + 0.95 * (1 - random[0, 1, 0.5]) ^ (1 / _nastinessLikelihood);
     
     _bleeding = _bleeding * _bloodiness;
-    if (_bleeding < 0.0001) then {
-        _bleeding = 0;
-    };
     
     _x set [4, _bleeding];
     _x set [5, _damage];
