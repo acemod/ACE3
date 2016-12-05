@@ -23,7 +23,7 @@ TRACE_2("ACE_DEBUG",_unit,_deltaT);
 if (_deltaT == 0) exitWith {};
 
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
-private _syncValues = (CBA_missionTime - _lastTimeValuesSynced >= 10 + floor(random(10))) && GVAR(keepLocalSettingsSynced);
+private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(random(10)));
 
 if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
@@ -32,6 +32,7 @@ if (_syncValues) then {
 private _bloodVolume = (_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) + ([_unit, _deltaT, _syncValues] call FUNC(getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 
+// @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
 TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
@@ -105,12 +106,9 @@ if (!isPlayer _unit) then {
 };
 #endif
 
-_painReduce = [0.001, 0.002] select (_painStatus > 5);
+_unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
 
-// @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
-_unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * _painReduce), _syncValues];
-
-TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_painReduce,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
+TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,PAIN_REDUCTION_SPEED,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 40) then {

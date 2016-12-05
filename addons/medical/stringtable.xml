@@ -2942,32 +2942,6 @@
             <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
             <Japanese>この係数では痛みの強さを変更できます</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
-            <English>Sync status</English>
-            <Russian>Синхронизация статуса</Russian>
-            <Polish>Synchronizuj status</Polish>
-            <Spanish>Sincronizador estado</Spanish>
-            <German>Status synchronisieren</German>
-            <Czech>Synchronizovat status</Czech>
-            <Portuguese>Sincronizar estado</Portuguese>
-            <French>Status de la synchronisation</French>
-            <Hungarian>Szinkronizációs állapot</Hungarian>
-            <Italian>Sincronizza stato</Italian>
-            <Japanese>同期状態</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_Description">
-            <English>Keep unit status synced. Recommended on.</English>
-            <Russian>Синхронизировать статус юнитов. Рекомендуется включить.</Russian>
-            <Polish>Utrzymuj synchronizację statusu jednostek. Zalecane zostawienie tej opcji włączonej.</Polish>
-            <Spanish>Mantener el estado de la unidad sincronizado. Recomendado activado</Spanish>
-            <German>Status der Einheit synchron halten. Sollte aktiviert bleiben.</German>
-            <Czech>Udržuje status jednotky synchronizovaný. Doporučeno zapnout.</Czech>
-            <Portuguese>Mater o estado da unidade sincronizado. Recomendado ativado.</Portuguese>
-            <French>Garder l'unité synchronisée, Recommandé sur oui.</French>
-            <Hungarian>Egységállapotok szinkronizálása. Javasolt a bekapcsolása.</Hungarian>
-            <Italian>Mantieni lo stato delle unità sincronizzato. Consigliato attivo.</Italian>
-            <Japanese>ユニット状態の同期を続けます。有効化を推奨。</Japanese>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fullHealLocation_PAK_DisplayName">
             <English>Full Heal Locations</English>
         </Key>

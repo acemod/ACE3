@@ -188,13 +188,6 @@ class ACE_Settings {
         value = 0;
         values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
     };
-    class GVAR(keepLocalSettingsSynced) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_keepLocalSettingsSynced_DisplayName);
-        description = CSTRING(MedicalSettings_keepLocalSettingsSynced_Description);
-        typeName = "BOOL";
-        value = 1;
-    };
     class GVAR(fullHealLocation_PAK) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_fullHealLocation_PAK_DisplayName);
