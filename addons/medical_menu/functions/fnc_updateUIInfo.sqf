@@ -54,16 +54,15 @@ if (_totalIvVolume >= 1) then {
     _genericMessages pushBack [format [localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
 };
 
+private _selectionTourniquet = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
 private _selectionDamage = [0, 0, 0, 0, 0, 0];
-private _selectionPain = [0, 0, 0, 0, 0, 0];
 private _allInjuryTexts = [];
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_pain", "_damage"];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
     _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (20 * (_bleeding * _amountOf))];
     _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
-    _selectionPain set [_bodyPartN, (_selectionPain select _bodyPartN) + _pain];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -79,9 +78,8 @@ private _allInjuryTexts = [];
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_pain", "_damage"];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
     _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
-    _selectionPain set [_bodyPartN, (_selectionPain select _bodyPartN) + _pain];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -97,9 +95,8 @@ private _allInjuryTexts = [];
 } forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_pain", "_damage"];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
     _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
-    _selectionPain set [_bodyPartN, (_selectionPain select _bodyPartN) + _pain];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -114,7 +111,7 @@ private _allInjuryTexts = [];
     };
 } forEach (_target getVariable [QEGVAR(medical,stitchedWounds), []]);
 
-[_selectionBloodLoss, _selectionPain, _selectionDamage, _display] call FUNC(updateBodyImage);
+[_selectionBloodLoss, _selectionDamage, _selectionTourniquet, _display] call FUNC(updateBodyImage);
 [_display, _genericMessages, _allInjuryTexts] call FUNC(updateInformationLists);
 
 [_display, _target getVariable [QEGVAR(medical,logFile_activity_view), []]] call FUNC(updateActivityLog);

@@ -1,6 +1,5 @@
 
 PREP(addDamageToUnit);
-PREP(addPain);
 PREP(addStateHandler);
 PREP(adjustPainLevel);
 PREP(conditionCardiacArrestTimer);

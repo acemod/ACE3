@@ -50,8 +50,7 @@ _unit setVariable [QGVAR(ivBags), nil, true];
 _unit setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
 
 // generic medical admin
-_unit setVariable [QGVAR(addedToUnitLoop), false, true]; // TODO this is replaced by unit state
-_unit setVariable [QGVAR(inCardiacArrest), false, true]; // TODO this is no longer present
+_unit setVariable [QGVAR(inCardiacArrest), false, true];
 _unit setVariable [QGVAR(hasLostBlood), 0, true];
 _unit setVariable [QGVAR(isBleeding), false, true];
 _unit setVariable [QGVAR(hasPain), false, true];

@@ -1,3 +1,6 @@
+// bleeding - maximum possible bleeding rate for a given wound type (0 .. 1)
+// pain - maximum possible pain level for a given wound type (0 .. 1)
+
 class ACE_Medical_Injuries {
     // Defines all the possible injury types
     class wounds {
@@ -7,7 +10,7 @@ class ACE_Medical_Injuries {
             name = CSTRING(Abrasion);
             causes[] = {"falling", "ropeburn", "vehiclecrash", "unknown"};
             bleeding = 0.001;
-            pain = 0.01;
+            pain = 0.4;
             minDamage = 0.01;
             maxDamage = 0.30;
         };
@@ -15,8 +18,8 @@ class ACE_Medical_Injuries {
         class Avulsions {
             name = CSTRING(Avulsion);
             causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
-            bleeding = 0.15;
-            pain = 0.3;
+            bleeding = 0.5;
+            pain = 1.0;
             minDamage = 4;
             causeLimping = 1;
         };
@@ -25,7 +28,7 @@ class ACE_Medical_Injuries {
             name = CSTRING(Contusion);
             causes[] = {"bullet", "backblast", "punch", "vehiclecrash", "falling"};
             bleeding = 0.0;
-            pain = 0.05;
+            pain = 0.3;
             minDamage = 0.02;
             maxDamage = 0.35;
         };
@@ -33,8 +36,8 @@ class ACE_Medical_Injuries {
         class CrushWound {
             name = CSTRING(Crush);
             causes[] = {"falling", "vehiclecrash", "punch", "unknown"};
-            bleeding = 0.025;
-            pain = 0.1;
+            bleeding = 0.1;
+            pain = 0.8;
             minDamage = 0.1;
             causeLimping = 1;
         };
@@ -42,8 +45,8 @@ class ACE_Medical_Injuries {
         class Cut {
             name = CSTRING(Cut);
             causes[] = {"vehiclecrash", "grenade", "explosive", "shell", "backblast", "stab", "unknown"};
-            bleeding = 0.01;
-            pain = 0.075;
+            bleeding = 0.04;
+            pain = 0.1;
             minDamage = 0.1;
         };
         // Also called tears, these are separating wounds that produce ragged edges. They are produced by a tremendous force against the body, either from an internal source as in childbirth, or from an external source like a punch.
@@ -51,16 +54,16 @@ class ACE_Medical_Injuries {
             name = CSTRING(Laceration);
             selections[] = {"All"};
             causes[] = {"vehiclecrash", "punch"};
-            bleeding = 0.01;
-            pain = 0.075;
+            bleeding = 0.05;
+            pain = 0.2;
             minDamage = 0.01;
         };
         // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
         class velocityWound {
             name = CSTRING(VelocityWound);
             causes[] = {"bullet", "grenade","explosive", "shell", "unknown"};
-            bleeding = 0.1;
-            pain = 0.2;
+            bleeding = 1.0;
+            pain = 0.9;
             minDamage = 0.35;
             causeLimping = 1;
         };
@@ -68,8 +71,8 @@ class ACE_Medical_Injuries {
         class punctureWound {
             name = CSTRING(PunctureWound);
             causes[] = {"stab", "grenade"};
-            bleeding = 0.01;
-            pain = 0.075;
+            bleeding = 0.1;
+            pain = 0.4;
             minDamage = 0.02;
             causeLimping = 1;
         };
@@ -97,7 +100,7 @@ class ACE_Medical_Injuries {
             selectionSpecific = 0;
         };
         class vehiclecrash {
-            thresholds[] = {{0.25, 5}, {0.05, 1}};
+            thresholds[] = {{0.5, 5}, {0.3, 2}, {0.05, 1}};
             selectionSpecific = 0;
         };
         class backblast {

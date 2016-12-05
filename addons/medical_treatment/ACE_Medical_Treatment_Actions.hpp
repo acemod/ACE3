@@ -75,7 +75,7 @@ class GVAR(Actions) {
         displayNameProgress = ECSTRING(medical,Applying_Tourniquet);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
-        treatmentTime = 4;
+        treatmentTime = 5;
         callbackSuccess = QFUNC(treatmentTourniquet);
         condition = QUOTE(EGVAR(medical,advancedBandages) && {!([ARR_2(_target,_bodyPart)] call EFUNC(medical,hasTourniquetAppliedTo))});
         litter[] = {};
@@ -96,7 +96,7 @@ class GVAR(Actions) {
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
-        treatmentTime = 10;
+        treatmentTime = 9;
         callbackSuccess = QFUNC(treatmentMedication);
         animationCaller = "AinvPknlMstpSnonWnonDnon_medic1";
         litter[] = { {"All", "", {"ACE_MedicalLitter_morphine"}} };

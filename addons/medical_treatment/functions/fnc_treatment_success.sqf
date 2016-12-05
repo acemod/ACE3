@@ -68,9 +68,4 @@ _args call _callback;
 _args pushBack _bloodLossOnBodyPart;
 _args call FUNC(litterCreate);
 
-//If we're not already tracking vitals, start:
-if !(_target getVariable [QGVAR(addedToUnitLoop),false]) then {
-    [_target] call FUNC(addVitalLoop);
-};
-
 ["ace_treatmentSucceded", [_caller, _target, _bodyPart, _className]] call CBA_fnc_localEvent;

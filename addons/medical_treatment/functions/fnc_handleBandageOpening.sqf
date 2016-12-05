@@ -74,7 +74,7 @@ private _bandagedInjury = [];
 } forEach _bandagedWounds;
 
 if !(_exist) then {
-    // [ID, classID, bodypart, percentage treated, bloodloss, pain, damage]
+    // [ID, classID, bodypart, percentage treated, bloodloss, damage]
     _bandagedInjury = +_injury;
     _bandagedInjury set [3, _impact];
     _bandagedWounds pushBack _bandagedInjury;

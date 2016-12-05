@@ -120,11 +120,16 @@ if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
 
 // Handle spontaneous wakeup from unconsciousness
 if (_unit getVariable [QGVAR(isUnconscious), false]) then {
-    private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-    if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
-        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-        if ((random 1) < SPONTANEOUS_WAKE_UP_CHANCE) then {
-            [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+    if (_unit call FUNC(hasStableVitals)) then {
+        private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+            _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+            if ((random 1) < SPONTANEOUS_WAKE_UP_CHANCE) then {
+                [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+            };
         };
+    } else {
+        // Unstable vitals, procrastinate the next wakeup check
+        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
     };
 };

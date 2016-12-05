@@ -36,27 +36,33 @@ private _woundsCreated = [];
 
 call compile _extensionOutput;
 
+// todo: Make the pain and bleeding calculations part of the extension again
+private _painLevel = 0;
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
+
+    // The higher the nastiness likelihood the higher the change to get a painful and bloody wound 
+    private _nastinessLikelihood = if (_damage > 1) then {
+        (_damage ^ 0.33)
+    } else {
+        (0.1 max _damage)
+    };
+    private _bloodiness   = 0.01 + 0.99 * (1 - random[0, 1, 0.9]) ^ (1 / _nastinessLikelihood);
+    private _painfullness = 0.05 + 0.95 * (1 - random[0, 1, 0.5]) ^ (1 / _nastinessLikelihood);
     
-    // How much bleeding do we have?
-    private _bloodiness = random (_damage ^ 2);
-    _bloodiness = (0.1 * _damage) + (0.9 * _damage) * (1 - (0.995 ^ _bloodiness));
+    _bleeding = _bleeding * _bloodiness;
+    if (_bleeding < 0.0001) then {
+        _bleeding = 0;
+    };
     
-    _x set [4, _bleeding * _bloodiness];
+    _x set [4, _bleeding];
+    _x set [5, _damage];
     
-    // How much pain do we have?
-    private _painfullness = random (_damage ^ 2);
-    _painfullness = (0.1 * _damage) + (0.9 * _damage) * (1 - (0.995 ^ _painfullness));
-    
-    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness / 3;
-    _x pushBack _pain;
-    _painToAdd = _painToAdd + _pain;
-    
-    _x pushBack _damage;
+    private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness;
+    _painLevel = _painLevel max _pain;
     
 #ifdef DEBUG_MODE_FULL
-    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, _damage, _damage > PENETRATION_THRESHOLD, _x select 4, _x select 5];
+    systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_damage * 100) / 100, _damage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
 #endif
 
     if (_bodyPartNToAdd == 0 && {_damage > 1}) then {
@@ -68,7 +74,7 @@ call compile _extensionOutput;
     if (_causeLimping == 1 && {_damage > 0.3} && {_bodyPartNToAdd > 3}) then {
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
-    
+
     _openWounds pushBack _x;
 } forEach _woundsCreated;
 
@@ -82,7 +88,7 @@ if (count _woundsCreated > 0) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
 
-[_unit, _painToAdd] call EFUNC(medical,addPain);
-[_unit, "hit", PAIN_TO_SCREAM(_painToAdd)] call EFUNC(medical_engine,playInjuredSound);
+[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
+[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 
-TRACE_5("exit",_unit, _painToAdd, _unit getVariable QEGVAR(medical,pain), _unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
+TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);

@@ -42,7 +42,7 @@ if (_partialHeal) then {
     private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
     private _stitchedWounds = _target getVariable [QEGVAR(medical,stitchedWounds), []];
     {
-        _x params ["", "", "", "", "_bleeding", "_pain", "_damage"];
+        _x params ["", "", "", "", "_bleeding", "_damage"];
         _x set [6, _damage min _persistentDamage];
     } forEach (_openWounds + _bandagedWounds + _stitchedWounds);
     
@@ -76,7 +76,6 @@ if (_partialHeal) then {
     _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 
     // generic medical admin
-    _target setVariable [QEGVAR(medical,addedToUnitLoop), false, true];
     _target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
     _target setVariable [QEGVAR(medical,inReviveState), false, true];
     _target setVariable [QEGVAR(medical,isUnconscious), false, true];

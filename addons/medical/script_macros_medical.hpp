@@ -33,7 +33,7 @@
 #define BLOOD_LOSS_KNOCK_OUT_THRESHOLD 0.5 // 50% of cardiac output
 
 // --- pain
-#define PAIN_UNCONSCIOUS 0.9
+#define PAIN_UNCONSCIOUS 0.5
 
 // duration in seconds to stay knocked out due to pain
 #define PAIN_KNOCK_OUT_DURATION (5 + random 10)

@@ -51,7 +51,7 @@ private _damageOnAffectedBodyParts = 0;
     private _partIndex = ALL_BODY_PARTS find toLower _x;
 
     {
-        _x params ["", "", "_bodyPartN", "", "_bleeding", "_pain", "_damage"];
+        _x params ["", "", "_bodyPartN", "", "_bleeding", "_damage"];
 
         if (_bodyPartN isEqualTo _partIndex) then {
             _damageOnBodyPart = _damageOnBodyPart + _damage;

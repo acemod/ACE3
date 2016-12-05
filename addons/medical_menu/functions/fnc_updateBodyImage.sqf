@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: selection bloodloss <ARRAY>
- * 1: selection pain <ARRAY>
- * 2: selection damage <ARRAY>
+ * 1: selection damage <ARRAY>
+ * 2: selection torniquet <ARRAY>
  * 3: display <DISPLAY>
  *
  * Return Value:
@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_selectionBloodLoss", "_selectionPain", "_selectionDamage", "_display"];
+params ["_selectionBloodLoss", "_selectionDamage", "_selectionTourniquet", "_display"];
 
 // Handle the body image coloring
 private _availableSelections = [50, 51, 52, 53, 54, 55];
@@ -27,20 +27,19 @@ private _availableSelections = [50, 51, 52, 53, 54, 55];
     private _green = 1;
     private _blue = 1;
 
-    private _bloodLoss = _selectionBloodLoss select _forEachIndex;
-    private _pain = _selectionPain select _forEachIndex;
-    private _damage = _selectionDamage select _forEachIndex;
-    
-    if (_bloodLoss > 0) then {
-        _green = 0 max (0.9 - _bloodLoss);
-        _blue = _green;
+    private _torniquet = _selectionTourniquet select _forEachIndex;
+    if (_torniquet > 0) then {
+        _red = 0.77;
+        _green = 0.51;
+        _blue = 0.08;
     } else {
-        if (_damage > 0.3) then {
-            _blue = 0 max (0.9 - _damage);
-            _green = 0.7;
-            _red = 0.8;
+        private _bloodLoss = _selectionBloodLoss select _forEachIndex;
+        if (_bloodLoss > 0) then {
+            _green = 0 max (0.9 - _bloodLoss);
+            _blue = _green;
         } else {
-            _green = 0 max (0.9 - _pain);
+            private _damage = _selectionDamage select _forEachIndex;
+            _green = 0 max (0.9 - _damage);
             _red = _green;
         };
     };
