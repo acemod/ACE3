@@ -24,7 +24,7 @@ if (_target getVariable [QEGVAR(medical,inReviveState), false]) then {
     };
 };
 
-if ({(random 1) >= 0.6) then {
+if ((random 1) >= 0.6) then {
     _target setVariable [QEGVAR(medical,inCardiacArrest), nil,true];
     _target setVariable [QEGVAR(medical,heartRate), 40];
     _target setVariable [QEGVAR(medical,bloodPressure), [50,70]];
