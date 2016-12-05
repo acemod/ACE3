@@ -140,6 +140,6 @@ if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
     if (!([_unit] call FUNC(getUnconsciousCondition))) then {
         //_unit setVariable ["ACE_isUnconscious", false, true];
-        [_unit, "MinUnconsciousTimer", []] call FUNC(stateEvent);
+        [QGVAR(MinUnconsciousTimer), _unit] call CBA_fnc_localEvent;
     };
 };

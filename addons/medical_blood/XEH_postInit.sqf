@@ -10,37 +10,33 @@ if (isServer) then {
 
     [QGVAR(bloodDropCreated), {
         params ["_bloodDrop"];
-
-        GVAR(bloodDrops) pushBack _bloodDrop;
+        // Add to created queue with format [expireTime, object]
+        private _index = GVAR(bloodDrops) pushBack [(CBA_missionTime + BLOOD_OBJECT_LIFETIME), _bloodDrop];
 
         if (count GVAR(bloodDrops) >= MAX_BLOOD_OBJECTS) then {
-            private _deletedBloodDrop = GVAR(bloodDrops) deleteAt 0;
+            (GVAR(bloodDrops) deleteAt 0) params ["", "_deletedBloodDrop"];
             deleteVehicle _deletedBloodDrop;
         };
 
-        [{deleteVehicle _this}, _bloodDrop, BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
+        if (_index == 1) then { // Start the waitAndExecute loop
+            [FUNC(serverCleanupBlood), [], BLOOD_OBJECT_LIFETIME] call CBA_fnc_waitAndExecute;
+        };
     }] call CBA_fnc_addEventHandler;
 };
 
 ["ace_settingsInitialized", {
     TRACE_1("settingsInitialized", GVAR(enabledFor));
     if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
-    if (GVAR(enabledFor) == 1 && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
+    if ((GVAR(enabledFor) == 1) && {!hasInterface}) exitWith {}; // 1: enabledFor_OnlyPlayers
 
     private _listcode = if (GVAR(enabledFor) == 1) then {
         {[ACE_player] select {[_x] call FUNC(isBleeding)}} // ace_player is only possible local player
     } else {
         {allUnits select {(local _x) && {[_x] call FUNC(isBleeding)}}}; // filter all local bleeding units
     };
-    
+
     private _stateMachine = [_listcode, true] call CBA_statemachine_fnc_create;
     [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
     [QEGVAR(medical_engine,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
-
-    /*["CAManBase", "hit", { @todo, remove?
-        params ["_unit"];
-        if (GVAR(enabledFor) == 1 && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
-        _this call FUNC(hit);
-    }] call CBA_fnc_addClassEventHandler;*/
 }] call CBA_fnc_addEventHandler;

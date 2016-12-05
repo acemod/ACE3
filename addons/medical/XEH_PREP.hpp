@@ -1,7 +1,4 @@
-
-PREP(addStateHandler);
 PREP(adjustPainLevel);
-PREP(createStateMachine);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
@@ -14,17 +11,22 @@ PREP(isInMedicalVehicle);
 PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
-PREP(stateEvent);
-PREP(stateMachine);
 
 // PREP(hasMedicalEnabled);
+
+PREP(enteredStateCardiacArrest);
+PREP(leavingStateCardiacArrest);
+
+PREP(enteredStateFatalInjury);
+
+PREP(conditionExecutionDeath);
+PREP(transitionSecondChance);
 
 PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);
 PREP(handleUnitVitals);
 PREP(handleMedications);
-// PREP(handleStateRevive);
 
 PREP(addPain);
 PREP(setUnconscious);
