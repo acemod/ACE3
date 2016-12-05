@@ -4,8 +4,9 @@
  *
  * Arguments:
  * 0: selection bloodloss <ARRAY>
- * 1: damaged (array of bools) <ARRAY>
- * 2: display <DISPLAY>
+ * 1: selection pain <ARRAY>
+ * 2: selection damage <ARRAY>
+ * 3: display <DISPLAY>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_selectionBloodLoss", "_damaged", "_display"];
+params ["_selectionBloodLoss", "_selectionPain", "_selectionDamage", "_display"];
 
 // Handle the body image coloring
 private _availableSelections = [50, 51, 52, 53, 54, 55];
@@ -26,16 +27,23 @@ private _availableSelections = [50, 51, 52, 53, 54, 55];
     private _green = 1;
     private _blue = 1;
 
-    if (_x > 0) then {
-        if (_damaged select _forEachIndex) then {
-            _green = (0.9 - _x) max 0;
-            _blue = _green;
+    private _bloodLoss = _selectionBloodLoss select _forEachIndex;
+    private _pain = _selectionPain select _forEachIndex;
+    private _damage = _selectionDamage select _forEachIndex;
+    
+    if (_bloodLoss > 0) then {
+        _green = 0 max (0.9 - _bloodLoss);
+        _blue = _green;
+    } else {
+        if (_damage > 0.3) then {
+            _blue = 0 max (0.9 - _damage);
+            _green = 0.7;
+            _red = 0.8;
         } else {
-            _green = (0.9 - _x) max 0;
+            _green = 0 max (0.9 - _pain);
             _red = _green;
-            //_blue = _green;
         };
     };
 
-    (_display displayCtrl (_availableSelections select _forEachIndex)) ctrlSetTextColor [_red, _green, _blue, 1.0];
-} forEach _selectionBloodLoss;
+    (_display displayCtrl _x) ctrlSetTextColor [_red, _green, _blue, 1.0];
+} forEach _availableSelections;

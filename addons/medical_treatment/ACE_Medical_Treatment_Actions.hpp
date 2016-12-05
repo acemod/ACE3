@@ -282,7 +282,6 @@ class GVAR(Actions) {
         condition = QUOTE(_target call EFUNC(medical,isInStableCondition));
         items[] = {"ACE_personalAidKit"};
         treatmentLocations[] = {QEGVAR(medical,useLocation_PAK)};
-        allowedSelections[] = {"Body"};
         requiredMedic = QEGVAR(medical,medicSetting_PAK);
         treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
         callbackSuccess = QFUNC(treatmentFullHeal);

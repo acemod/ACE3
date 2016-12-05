@@ -38,10 +38,16 @@ if (_partialHeal) then {
     private _effectiveness = (0 max EGVAR(medical,fieldEffectiveness_PAK) min 1) ^ _partialHealCounter;
     private _persistentDamage = 1 - _effectiveness;
     
+    private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+    private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+    private _stitchedWounds = _target getVariable [QEGVAR(medical,stitchedWounds), []];
     {
-        _x params ["", "", "", "", "", "", "_damage"];
+        _x params ["", "", "", "", "_bleeding", "_pain", "_damage"];
         _x set [6, _damage min _persistentDamage];
-    } forEach _openWounds;
+    } forEach (_openWounds + _bandagedWounds + _stitchedWounds);
+    
+    // todo: only reset limping if leg damage was reduced enough
+    [_unit, false] call EFUNC(medical_engine,setLimping);
     
     _target setDamage ((damage _target) min _persistentDamage);
 } else {
@@ -55,6 +61,7 @@ if (_partialHeal) then {
     // wounds and injuries
     _target setVariable [QEGVAR(medical,openWounds), [], true];
     _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
+    _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
 
     // vitals
     _target setVariable [QEGVAR(medical,heartRate), 80];
@@ -86,11 +93,11 @@ if (_partialHeal) then {
        _target setVariable [_x select 0, nil];
     } forEach _allUsedMedication;
 
+    [_unit, false] call EFUNC(medical_engine,setLimping);
+    
     // Resetting damage
     _target setDamage 0;
 };
-
-[_unit, false] call EFUNC(medical_engine,setLimping);
 
 [QEGVAR(medical,FullHeal), _target] call CBA_fnc_localEvent;
 
