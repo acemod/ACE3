@@ -3,10 +3,7 @@
 #define MAINPREFIX z
 #define PREFIX ace
 
-#define MAJOR 3
-#define MINOR 8
-#define PATCHLVL 0
-#define BUILD 10
+#include "script_version.hpp"
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

@@ -1,19 +1,19 @@
 class CfgVehicles {
     class LandVehicle;
-    class StaticWeapon : LandVehicle {
+    class StaticWeapon: LandVehicle {
         class Turrets;
     };
 
-    class StaticMGWeapon : StaticWeapon {
-        class Turrets : Turrets {
+    class StaticMGWeapon: StaticWeapon {
+        class Turrets: Turrets {
             class MainTurret;
         };
     };
     class AT_01_base_F: StaticMGWeapon {};
 
     class B_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 
@@ -30,8 +30,8 @@ class CfgVehicles {
         };
     };
     class O_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 
@@ -48,8 +48,8 @@ class CfgVehicles {
         };
     };
     class I_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
 

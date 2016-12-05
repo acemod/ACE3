@@ -111,7 +111,7 @@ class CfgWeapons {
 
     // SMG Scorpion ////////////////////////////////////////////////////
 
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         //http://www.czub.cz/zbrojovka/cz-manual/Instruction-Manual-Scorpion-EVO-3-A1_en.pdf
         // 1150 rpm
 

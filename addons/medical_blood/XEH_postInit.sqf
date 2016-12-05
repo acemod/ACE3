@@ -37,4 +37,10 @@ if (isServer) then {
     [_stateMachine, {call FUNC(onBleeding)}, {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
     [QEGVAR(medical_engine,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
+
+    /*["CAManBase", "hit", { @todo, remove?
+        params ["_unit"];
+        if (GVAR(enabledFor) == 1 && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
+        _this call FUNC(hit);
+    }] call CBA_fnc_addClassEventHandler;*/
 }] call CBA_fnc_addEventHandler;

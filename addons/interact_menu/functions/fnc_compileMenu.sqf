@@ -99,6 +99,11 @@ private _recurseFnc = {
     _actions
 };
 
+if ((getNumber (configFile >> "CfgVehicles" >> _objectType >> "isPlayableLogic")) == 1) exitWith {
+    TRACE_1("skipping playable logic",_objectType);
+    _namespace setVariable [_objectType, []];
+};
+
 private _actionsCfg = configFile >> "CfgVehicles" >> _objectType >> "ACE_Actions";
 
 TRACE_1("Building ACE_Actions",_objectType);

@@ -27,5 +27,7 @@
 [] call FUNC(update_atmo_env_data);
 [] call FUNC(update_target);
 [] call FUNC(update_target_data);
+[] call FUNC(update_muzzle_velocity_data);
+[] call FUNC(update_c1_ballistic_coefficient_data);
 
 [] call FUNC(update_result);

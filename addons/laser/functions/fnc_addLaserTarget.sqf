@@ -50,7 +50,7 @@ private _methodArgs = [_vehicleSourceSelection];
 TRACE_6("Laser on:",_vehicle,_laserMethod,_waveLength,_laserCode,_beamSpread,_methodArgs);
 private _laserUuid = [_vehicle, _vehicle, _laserMethod, _waveLength, _laserCode, _beamSpread, _methodArgs] call FUNC(laserOn);
 
-GVAR(trackedLaserTargets) pushBack [_targetObject, _vehicle, _laserUuid];
+GVAR(trackedLaserTargets) pushBack [_targetObject, _vehicle, _laserUuid, _laserCode];
 TRACE_1("",GVAR(trackedLaserTargets));
 
 if (GVAR(pfehID) == -1) then {

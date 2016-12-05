@@ -10,7 +10,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */

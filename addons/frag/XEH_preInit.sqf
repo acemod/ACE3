@@ -2,12 +2,15 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
+GVAR(replacedBisArtyWrapper) = true;
 GVAR(blackList) = [];
 GVAR(traceFrags) = false;
 
-GVAR(TOTALFRAGS) = 0;
+GVAR(totalFrags) = 0;
 
 GVAR(spallHPData) = [];
 GVAR(spallIsTrackingCount) = 0;
