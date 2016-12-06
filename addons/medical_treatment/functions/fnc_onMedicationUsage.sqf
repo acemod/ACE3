@@ -44,7 +44,7 @@ if (!_foundEntry) then {
 
 private _usedMeds = _target getVariable [_variable, 0];
 if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
-    [_target] call EFUNC(medical,setDead);
+    [QEGVAR(medical,CriticalVitals), _target] call CBA_fnc_localEvent;
 };
 
 private _hasOverDosed = 0;

@@ -34,6 +34,7 @@ PREP(treatmentFullHealTreatmentTime);
 PREP(treatmentSurgicalKit_onProgress);
 
 // misc
+PREP(addHeartRateAdjustment);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnloadPatientActions);

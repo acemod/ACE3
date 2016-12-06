@@ -557,7 +557,7 @@ class ADDON {
     class Medication {
         // How much does the pain get reduced?
         painReduce = 0;
-        // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease, seconds}
+        // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease, seconds until max. effect}
         hrIncreaseLow[] = {0, 0, 0};
         hrIncreaseNormal[] = {0, 0, 0};
         hrIncreaseHigh[] = {0, 0, 0};

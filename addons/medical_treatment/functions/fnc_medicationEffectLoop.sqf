@@ -18,7 +18,7 @@
 
 #include "script_component.hpp"
 
-params ["_unit", "_variableName", "_amountDecreased","_decreaseRate", "_viscosityAdjustmentRate", "_painReduceRate"];
+params ["_unit", "_variableName", "_amountDecreased", "_decreaseRate", "_viscosityAdjustmentRate", "_painReduceRate"];
 
 // If the unit died the loop is finished
 if (!alive _unit) exitWith {};
