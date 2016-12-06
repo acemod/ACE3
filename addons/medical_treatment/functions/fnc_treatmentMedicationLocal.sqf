@@ -53,6 +53,7 @@ private _hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow");
 private _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
 private _hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh");
 private _timeInSystem = getNumber (_medicationConfig >> "timeInSystem");
+private _timeTillMaxEffect = getNumber (_medicationConfig >> "timeTillMaxEffect");
 private _maxDose = getNumber (_medicationConfig >> "maxDose");
 private _viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
 
@@ -65,37 +66,38 @@ if (isClass (_medicationConfig >> _className)) then {
     if (isArray (_medicationConfig >> "hrIncreaseNormal")) then { _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal"); };
     if (isArray (_medicationConfig >> "hrIncreaseHigh")) then { _hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh"); };
     if (isNumber (_medicationConfig >> "timeInSystem")) then { _timeInSystem = getNumber (_medicationConfig >> "timeInSystem"); };
+    if (isNumber (_medicationConfig >> "timeTillMaxEffect")) then { _timeTillMaxEffect = getNumber (_medicationConfig >> "timeTillMaxEffect"); };
     if (isNumber (_medicationConfig >> "maxDose")) then { _maxDose = getNumber (_medicationConfig >> "maxDose"); };
     if (isArray (_medicationConfig >> "inCompatableMedication")) then { _inCompatableMedication = getArray (_medicationConfig >> "inCompatableMedication"); };
     if (isNumber (_medicationConfig >> "viscosityChange")) then { _viscosityChange = getNumber (_medicationConfig >> "viscosityChange"); };
 };
 
-// Adjust the heart rate based upon config entry
-private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
-
 if (alive _target) then {
-    if (_heartRate > 0) then {
-        if (_heartRate <= 45) then {
-            [_target, ((_hrIncreaseLow select 0) + random ((_hrIncreaseLow select 1) - (_hrIncreaseLow select 0))), (_hrIncreaseLow select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
-        } else {
-            if (_heartRate > 120) then {
-                [_target, ((_hrIncreaseHigh select 0) + random ((_hrIncreaseHigh select 1) - (_hrIncreaseHigh select 0))), (_hrIncreaseHigh select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
-            } else {
-                [_target, ((_hrIncreaseNorm select 0) + random ((_hrIncreaseNorm select 1) - (_hrIncreaseNorm select 0))), (_hrIncreaseNorm select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
-            };
-        };
+    private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
+    private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNorm, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
+    _hrIncrease params ["_minIncrease", "_maxIncrease"];
+    _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
+    
+    // Adjust the heart rate based upon config entry
+    if (_heartRateChange != 0) then {
+        private _heartRateAdjustments = _target getVariable [QEGVAR(medical,heartRateAdjustments), []];
+        _heartRateAdjustments pushBack [_heartRateChange, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [QEGVAR(medical,heartRateAdjustments), _heartRateAdjustments];
+    };
+    
+    // Adjust the pain suppression based upon config entry
+    if (_painReduce > 0) then {
+        private _painSupressAdjustments = _target getVariable [QEGVAR(medical,painSupressAdjustments), []];
+        _painSupressAdjustments pushBack [_painReduce, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [QEGVAR(medical,painSupressAdjustments), _painSupressAdjustments];
+    };
+
+    // Adjust the peripheral resistance based upon config entry
+    if (_viscosityChange != 0) then {
+        private _peripheralResistanceAdjustments = _target getVariable [QEGVAR(medical,peripheralResistanceAdjustments), []];
+        _peripheralResistanceAdjustments pushBack [_viscosityChange, _timeTillMaxEffect, _timeInSystem, 0];
+        _target setVariable [QEGVAR(medical,peripheralResistanceAdjustments), _peripheralResistanceAdjustments];
     };
 };
-
-if (_painReduce > 0) then {
-    private _painSuppress = _target getVariable [QEGVAR(medical,painSuppress), 0];
-    _target setVariable [QEGVAR(medical,painSuppress), (_painSuppress + _painReduce) max 0];
-};
-
-private _resistance = _target getVariable [QEGVAR(medical,peripheralResistance), 100];
-_target setVariable [QEGVAR(medical,peripheralResistance), (_resistance + _viscosityChange) max 0];
-
-// Call back to ensure that the medication is decreased over time
-[_target, _className, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);
 
 true

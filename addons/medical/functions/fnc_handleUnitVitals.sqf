@@ -82,8 +82,11 @@ private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_
 // Increase pain at a rate of 0.001 units/s per old tourniquet
 _pain = _pain + (count _oldTourniquets) * 0.001 * _deltaT;
 
-private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + ([_unit, _deltaT] call FUNC(getHeartRateChange));
-_unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
+[_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
+[_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
+[_unit, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
+
+private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
 
 private _bloodPressure = [_unit] call FUNC(getBloodPressure);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];

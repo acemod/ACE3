@@ -25,19 +25,14 @@ if (!isNil {_unit getVariable QGVAR(ivBags)}) then {
     _bloodBags = _bloodBags apply {
         _x params ["_bagVolumeRemaining"];
 
-        if (GVAR(advancedIVBags)) then {
-            private _bagChange = _deltaT * (IV_CHANGE_PER_SECOND min _bagVolumeRemaining); // absolute value of the change in miliLiters
-            _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
-            _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
+        private _bagChange = _deltaT * (IV_CHANGE_PER_SECOND min _bagVolumeRemaining); // absolute value of the change in miliLiters
+        _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
+        _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
 
-            if (_bagVolumeRemaining < 0.01) then {
-                []
-            } else {
-                [_bagVolumeRemaining]
-            };
-        } else {
-            _bloodVolumeChange = _bloodVolumeChange + (_bagVolumeRemaining / 1000);
+        if (_bagVolumeRemaining < 0.01) then {
             []
+        } else {
+            [_bagVolumeRemaining]
         };
     };
 

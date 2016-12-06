@@ -1,51 +1,52 @@
 /*
  * Author: Glowbal
- * Get the change in the heart rate. Used for the vitals calculations. Calculated in one seconds.
+ * Update the heart rate
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  * 1: Time since last update <NUMBER>
+ * 2: Sync value? <BOOL>
  *
  * ReturnValue:
- * Change in heart Rate <NUMBER>
+ * nothing
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_unit", "_deltaT"];
-
-private _hrIncrease = 0;
+params ["_unit", "_deltaT", "_syncValue"];
 
 private _hrTargetAdjustment = 0;
 private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
-{
-    _x params ["_value", "_timeTillMaxEffect", "_maxTimeInSystem", "_timeInSystem", "_callBack"];
-    if (abs _value > 0 && {_maxTimeInSystem > 0}) then {
-        if (_timeInSystem >= _maxTimeInSystem) then {
-             _adjustment set [_forEachIndex, ObjNull];
-             [_unit] call _callBack;
-        } else {
-            _timeInSystem = _timeInSystem + _deltaT;
-            private _effectRatio = ((_timeInSystem / (1 max _timeTillMaxEffect)) ^ 2) min 1;
-            _hrTargetAdjustment = _hrTargetAdjustment + _value * _effectRatio * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
-            _x set [3, _timeInSystem];
-        };
-    } else {
-        _adjustment set [_forEachIndex, ObjNull];
-        [_unit] call _callBack;
-    };
-} forEach _adjustment;
 
-_adjustment = _adjustment - [ObjNull];
-_unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
+if (!(_adjustment isEqualTo [])) then {
+    {
+        _x params ["_value", "_timeTillMaxEffect", "_maxTimeInSystem", "_timeInSystem"];
+        if (abs _value > 0 && {_maxTimeInSystem > 0}) then {
+            if (_timeInSystem >= _maxTimeInSystem) then {
+                 _adjustment set [_forEachIndex, ObjNull];
+            } else {
+                _timeInSystem = _timeInSystem + _deltaT;
+                private _effectRatio = ((_timeInSystem / (1 max _timeTillMaxEffect)) ^ 2) min 1;
+                _hrTargetAdjustment = _hrTargetAdjustment + _value * _effectRatio * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
+                _x set [3, _timeInSystem];
+            };
+        } else {
+            _adjustment set [_forEachIndex, ObjNull];
+        };
+    } forEach _adjustment;
+
+    _adjustment = _adjustment - [ObjNull];
+    _unit setVariable [QGVAR(heartRateAdjustments), _adjustment, _syncValue];
+};
+
+private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
 
 if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
-    private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]);
+    private _hrChange = 0;
     private _bloodVolume = _unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME];
     if (_bloodVolume > BLOOD_VOLUME_CLASS_4_HEMORRHAGE) then {
-        private _hrChange = 0;
         ([_unit] call FUNC(getBloodPressure)) params ["_bloodPressureL", "_bloodPressureH"];
         private _meanBP = (2/3) * _bloodPressureH + (1/3) * _bloodPressureL;
         private _painLevel = [_unit] call FUNC(getPainLevel);
@@ -65,14 +66,10 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
         _targetHR = _targetHR + _hrTargetAdjustment;
         
         _hrChange = round(_targetHR - _heartRate) / 2;
-        if (_hrChange < 0) then {
-            _hrChange = _hrChange / 20;
-        };
-        
-        _hrIncrease = _hrIncrease + _hrChange;
     } else {
-        _hrIncrease = _hrIncrease - round(_heartRate / 10);
+        _hrChange = -round(_heartRate / 10);
     };
+    _heartRate = _heartRate + _deltaT * _hrChange;
 };
 
-(_deltaT * _hrIncrease)
+_unit setVariable [QGVAR(heartRate), 0 max _heartRate, _syncValue];

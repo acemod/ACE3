@@ -7,8 +7,7 @@
  * 1: Medication Treatment classname <STRING>
  * 2: The medication treatment variablename <STRING>
  * 3: Max dosage <NUMBER>
- * 4: The time in the system <NUMBER>
- * 5: Incompatable medication <ARRAY<STRING>>
+ * 4: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
  * None
@@ -18,8 +17,8 @@
 
 #include "script_component.hpp"
 
-params ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_viscosityChange", "_painReduce"];
-TRACE_8("params",_target,_className,_variable,_maxDosage,_timeInSystem,_incompatabileMeds,_viscosityChange,_painReduce);
+params ["_target", "_className", "_variable", "_maxDosage", "_incompatabileMeds"];
+TRACE_5("params",_target,_className,_variable,_maxDosage,_incompatabileMeds);
 
 private _foundEntry = false;
 private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedication), []];
@@ -71,6 +70,3 @@ if (_hasOverDosed > 0) then {
     };
     [_target, _className] call _onOverDose;
 };
-
-// Run the loop that computes the effect of the medication over time
-[_target, _variable, 0, (1 / _timeInSystem), (_viscosityChange / _timeInSystem), (_painReduce / _timeInSystem)] call FUNC(medicationEffectLoop);

@@ -557,13 +557,15 @@ class ADDON {
     class Medication {
         // How much does the pain get reduced?
         painReduce = 0;
-        // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease, seconds until max. effect}
-        hrIncreaseLow[] = {0, 0, 0};
-        hrIncreaseNormal[] = {0, 0, 0};
-        hrIncreaseHigh[] = {0, 0, 0};
+        // How much will the heart rate be increased when the HR is low (below 55)? {minIncrease, maxIncrease}
+        hrIncreaseLow[] = {0, 0};    // _heartRate < 55
+        hrIncreaseNormal[] = {0, 0}; // 55 <= _heartRate <= 110
+        hrIncreaseHigh[] = {0, 0};   // 110 < _heartRate
 
         // How long until this medication has disappeared
         timeInSystem = 120;
+        // How long until the maximum effect is reached
+        timeTillMaxEffect = 30;
         // How many of this type of medication can be in the system before the patient overdoses?
         maxDose = 4;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
@@ -573,45 +575,50 @@ class ADDON {
 
         // specific details for the ACE_Morphine treatment action
         class Morphine {
-            painReduce = 15;
-            hrIncreaseLow[] = {-10, -20, 35};
-            hrIncreaseNormal[] = {-10, -30, 35};
-            hrIncreaseHigh[] = {-10, -35, 50};
+            painReduce = 1.0;
+            hrIncreaseLow[] = {-10, -20};
+            hrIncreaseNormal[] = {-10, -30};
+            hrIncreaseHigh[] = {-10, -35};
             timeInSystem = 900;
+            timeTillMaxEffect = 30;
             maxDose = 4;
             inCompatableMedication[] = {};
             viscosityChange = -10;
         };
         class Epinephrine {
             painReduce = 0;
-            hrIncreaseLow[] = {10, 20, 15};
-            hrIncreaseNormal[] = {10, 50, 10};
-            hrIncreaseHigh[] = {10, 40, 5};
+            hrIncreaseLow[] = {10, 20};
+            hrIncreaseNormal[] = {10, 50};
+            hrIncreaseHigh[] = {10, 40};
             timeInSystem = 120;
+            timeTillMaxEffect = 10;
             maxDose = 10;
             inCompatableMedication[] = {};
         };
         class Adenosine {
             painReduce = 0;
-            hrIncreaseLow[] = {-7, -10, 15};
-            hrIncreaseNormal[] = {-15, -30, 20};
-            hrIncreaseHigh[] = {-15, -35, 10};
+            hrIncreaseLow[] = {-7, -10};
+            hrIncreaseNormal[] = {-15, -30};
+            hrIncreaseHigh[] = {-15, -35};
             timeInSystem = 120;
+            timeTillMaxEffect = 15;
             maxDose = 6;
             inCompatableMedication[] = {};
         };
         class Atropine {
             painReduce = 0;
-            hrIncreaseLow[] = {-2, -5, 15};
-            hrIncreaseNormal[] = {-10, -15, 20};
-            hrIncreaseHigh[] = {-5, -20, 10};
+            hrIncreaseLow[] = {-2, -5};
+            hrIncreaseNormal[] = {-10, -15};
+            hrIncreaseHigh[] = {-5, -20};
             timeInSystem = 120;
+            timeTillMaxEffect = 15;
             maxDose = 6;
             inCompatableMedication[] = {};
         };
         class PainKillers {
-            painReduce = 0.7;
-            timeInSystem = 120;
+            painReduce = 0.1;
+            timeInSystem = 600;
+            timeTillMaxEffect = 60;
             maxDose = 10;
             inCompatableMedication[] = {};
             viscosityChange = 5;

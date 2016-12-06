@@ -63,10 +63,11 @@ if (_partialHeal) then {
     _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
 
     // vitals
-    _target setVariable [QEGVAR(medical,heartRate), 80];
-    _target setVariable [QEGVAR(medical,heartRateAdjustments), []];
-    _target setVariable [QEGVAR(medical,bloodPressure), [80, 120]];
-    _target setVariable [QEGVAR(medical,peripheralResistance), 100];
+    _target setVariable [QEGVAR(medical,heartRate), 80, true];
+    _target setVariable [QEGVAR(medical,heartRateAdjustments), [], true];
+    _target setVariable [QEGVAR(medical,bloodPressure), [80, 120], true];
+    _target setVariable [QEGVAR(medical,peripheralResistance), 100, true];
+    _target setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
 
     // IVs
     _target setVariable [QEGVAR(medical,ivBags), nil, true];
@@ -81,6 +82,7 @@ if (_partialHeal) then {
     _target setVariable [QEGVAR(medical,isBleeding), false, true];
     _target setVariable [QEGVAR(medical,hasPain), false, true];
     _target setVariable [QEGVAR(medical,painSuppress), 0, true];
+    _target setVariable [QGVAR(painSuppressAdjustments), [], true];
     _target setVariable [QGVAR(partialHealCounter), 0, true];
     
     // medication

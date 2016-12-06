@@ -33,10 +33,11 @@ _unit setVariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(stitchedWounds), [], true];
 
 // vitals
-_unit setVariable [QGVAR(heartRate), 80];
-_unit setVariable [QGVAR(heartRateAdjustments), []];
-_unit setVariable [QGVAR(bloodPressure), [80, 120]];
-_unit setVariable [QGVAR(peripheralResistance), 100];
+_unit setVariable [QGVAR(heartRate), 80, true];
+_unit setVariable [QGVAR(heartRateAdjustments), [], true];
+_unit setVariable [QGVAR(bloodPressure), [80, 120], true];
+_unit setVariable [QGVAR(peripheralResistance), 100, true];
+_unit setVariable [QGVAR(peripheralResistanceAdjustments), [], true];
 
 // triage card and logs
 _unit setVariable [QGVAR(triageLevel), 0, true];
@@ -55,6 +56,7 @@ _unit setVariable [QGVAR(isBleeding), false, true];
 _unit setVariable [QGVAR(hasPain), false, true];
 _unit setVariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
+_unit setVariable [QGVAR(painSuppressAdjustments), [], true];
 
 private ["_allUsedMedication", "_logs"];
 

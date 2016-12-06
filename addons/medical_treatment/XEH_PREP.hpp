@@ -34,7 +34,6 @@ PREP(treatmentFullHealTreatmentTime);
 PREP(treatmentSurgicalKit_onProgress);
 
 // misc
-PREP(addHeartRateAdjustment);
 PREP(addToLog);
 PREP(addToTriageCard);
 PREP(addUnloadPatientActions);
@@ -44,7 +43,6 @@ PREP(getTriageStatus);
 PREP(handleBandageOpening);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
-PREP(medicationEffectLoop);
 PREP(onMedicationUsage);
 
 // items

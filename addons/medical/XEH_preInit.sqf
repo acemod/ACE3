@@ -22,15 +22,6 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
 ] call CBA_Settings_fnc_init;
 
 [
-    QGVAR(advancedIVBags),
-    "CHECKBOX",
-    ["Advanced IV Bags", "IV Bags will slowly fill up lost blood."], //@todo
-    "ACE Medical", // @todo
-    false,
-    true
-] call CBA_Settings_fnc_init;
-
-[
     QGVAR(advancedMedication),
     "CHECKBOX",
     ["Advanced Medication", "Enables advanced simulation of Morphine, Epinephrine etc."], //@todo
