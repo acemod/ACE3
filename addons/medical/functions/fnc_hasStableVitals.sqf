@@ -26,7 +26,7 @@ private _bloodPressure = [_unit] call FUNC(getBloodPressure);
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 50 || {_bloodPressureH < 60}) exitWith { false };
 
-private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]);
+private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
 if (_heartRate < 40) exitWith { false };
 
 true

@@ -14,9 +14,9 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+
 if (!local _unit) exitWith {};
 
-_unit setVariable [QGVAR(pain), 0];
-_unit setVariable [QGVAR(heartRate), 0];
-_unit setVariable [QGVAR(bloodPressure), [0, 0]];
-_unit setVariable [QGVAR(airwayStatus), 0];
+_unit setVariable [QGVAR(pain), 0, true];
+_unit setVariable [QGVAR(heartRate), 0, true];
+_unit setVariable [QGVAR(bloodPressure), [0, 0], true];

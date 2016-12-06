@@ -18,7 +18,7 @@
 
 params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (alive _target && {(_target getVariable [QEGVAR(medical,inCardiacArrest), false] || _target getVariable [QEGVAR(medical,inReviveState), false])}) then {
+if (alive _target && {_target getVariable [QEGVAR(medical,inCardiacArrest), false]}) then {
     [_target, "activity_view", ELSTRING(medical,Activity_cpr), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
     [QGVAR(treatmentCPRLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;

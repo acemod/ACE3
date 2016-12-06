@@ -36,10 +36,6 @@ if (_knockOut isEqualTo (_unit getVariable [QGVAR(isUnconscious), false])) exitW
 if !(_knockOut) exitWith {
     _unit setVariable [QGVAR(isUnconscious), false, true];
 
-    if (_unit getVariable [QGVAR(inReviveState), false]) then {
-        _unit setVariable [QGVAR(inReviveState), nil, true];
-    };
-
     [_unit, false] call EFUNC(medical_engine,setUnconsciousAnim);
     ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;
 

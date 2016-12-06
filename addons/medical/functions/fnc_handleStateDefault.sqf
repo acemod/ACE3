@@ -15,7 +15,7 @@ if (!local _unit) exitWith {
 
 [_unit] call FUNC(handleUnitVitals);
 
-private _pain = _unit getVariable [QGVAR(pain), 0];
-if (_pain > (_unit getVariable [QGVAR(painSuppress), 0])) then {
-    [_unit, "moan", PAIN_TO_MOAN(_pain)] call EFUNC(medical_engine,playInjuredSound);
+private _painLevel = [_unit] call FUNC(getPainLevel);
+if (_painLevel > 0) then {
+    [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 };

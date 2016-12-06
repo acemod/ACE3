@@ -69,9 +69,9 @@ if (_bloodLoss > 0) then {
     };
 };
 
-private _painStatus = _unit getVariable [QGVAR(pain), 0];
-TRACE_4("ACE_DEBUG",_painStatus,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
-if (_painStatus > (_unit getVariable [QGVAR(painSuppress), 0])) then {
+private _painLevel = [_unit] call FUNC(getPainLevel);
+TRACE_4("ACE_DEBUG",_painLevel,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
+if (_painLevel > 0) then {
     if !(_unit getVariable [QGVAR(hasPain), false]) then {
         _unit setVariable [QGVAR(hasPain), true, true];
     };
@@ -81,12 +81,13 @@ if (_painStatus > (_unit getVariable [QGVAR(painSuppress), 0])) then {
     };
 };
 
-TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painStatus,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
+TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painLevel,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
+private _pain = _unit getVariable [QGVAR(pain), 0];
 // Handle pain due tourniquets, that have been applied more than 120 s ago
 private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
 // Increase pain at a rate of 0.001 units/s per old tourniquet
-_painStatus = _painStatus + (count _oldTourniquets) * 0.001 * _deltaT;
+_pain = _pain + (count _oldTourniquets) * 0.001 * _deltaT;
 
 private _heartRate = (_unit getVariable [QGVAR(heartRate), 80]) + ([_unit, _deltaT] call FUNC(getHeartRateChange));
 _unit setVariable  [QGVAR(heartRate), 0 max _heartRate, _syncValues];
@@ -101,17 +102,16 @@ if (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) then {
 
 #ifdef DEBUG_MODE_FULL
 if (!isPlayer _unit) then {
-    private _cardiacArrest = _unit getVariable [QGVAR(inCardiacArrest), false];
-    hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 1000) / 1000, round((_bloodLoss / _cardiacOutput) * 100) / 100, round(_heartRate), _bloodPressure, round(_painStatus * 100) / 100];
+    hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 1000) / 1000, round((_bloodLoss / (1 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100];
 };
 #endif
 
-_unit setVariable [QGVAR(pain), 0 max (_painStatus - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
+_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
 
-TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_painStatus,PAIN_REDUCTION_SPEED,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
+TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_pain,PAIN_REDUCTION_SPEED,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
-if (_bloodPressureL < 40) then {
+if (_bloodPressureL < 40 || {_heartRate < 30}) then {
     [QGVAR(CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
 if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {

@@ -13,6 +13,7 @@ PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getHeartRateChange);
+PREP(getPainLevel);
 PREP(handleIncapacitation);
 PREP(handleKilled);
 PREP(handleLocal);

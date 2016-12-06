@@ -52,7 +52,6 @@ if (_partialHeal) then {
     _target setDamage ((damage _target) min _persistentDamage);
 } else {
     _target setVariable [QEGVAR(medical,pain), 0, true];
-    _target setVariable [QEGVAR(medical,morphine), 0, true];
     _target setVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME, true];
 
     // tourniquets
@@ -77,7 +76,6 @@ if (_partialHeal) then {
 
     // generic medical admin
     _target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
-    _target setVariable [QEGVAR(medical,inReviveState), false, true];
     _target setVariable [QEGVAR(medical,isUnconscious), false, true];
     _target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
     _target setVariable [QEGVAR(medical,isBleeding), false, true];

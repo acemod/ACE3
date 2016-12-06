@@ -249,7 +249,7 @@ class GVAR(Actions) {
         condition = QUOTE(!(_target call EFUNC(common,isAwake)) && EGVAR(medical,enableRevive) > 0);
         callbackSuccess = QFUNC(treatmentCPR);
         callbackFailure = "";
-        callbackProgress = QUOTE((_this select 0 select 1) call EFUNC(common,isAwake));
+        callbackProgress = QUOTE(!([(_this select 0) select 1] call EFUNC(common,isAwake)));
         animationPatient = "";
         animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
         animationCaller = "AinvPknlMstpSlayW[wpn]Dnon_medic";

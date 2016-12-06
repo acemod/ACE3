@@ -14,7 +14,7 @@
 
 params ["_unit"];
 
-private _pain = _unit getVariable [QGVAR(pain), 0];
+private _painLevel = [_unit] call FUNC(getPainLevel);
 private _headDamage = 0;
 private _bodyDamage = 0;
 
@@ -40,6 +40,6 @@ if (_bodyDamage > 1.05) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };
 
-if ((_pain >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}) then {
+if ((_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };

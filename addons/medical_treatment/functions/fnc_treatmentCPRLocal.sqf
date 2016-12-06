@@ -16,19 +16,8 @@
 
 params ["_caller", "_target"];
 
-if (_target getVariable [QEGVAR(medical,inReviveState), false]) then {
-    private _reviveStartTime = _target getVariable [QEGVAR(medical,reviveStartTime),0];
-
-    if (_reviveStartTime > 0) then {
-        _target setVariable [QEGVAR(medical,reviveStartTime), (_reviveStartTime + random(20)) min CBA_missionTime];
-    };
-};
-
 if ((random 1) >= 0.6) then {
-    _target setVariable [QEGVAR(medical,inCardiacArrest), nil,true];
-    _target setVariable [QEGVAR(medical,heartRate), 40];
-    _target setVariable [QEGVAR(medical,bloodPressure), [50,70]];
-    [QGVAR(CPRSucceeded), _target] call CBA_fnc_localEvent;
+    [QEGVAR(medical,CPRSucceeded), _target] call CBA_fnc_localEvent;
 };
 
 [_target, "activity", ELSTRING(medical,Activity_CPR), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);

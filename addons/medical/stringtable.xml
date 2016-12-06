@@ -2463,19 +2463,6 @@
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
             <Japanese>包帯は体力を完全に回復する</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
-            <English>Pain is only temporarily suppressed</English>
-            <German>Schmerzen werden nur vorübergehend unterdrückt</German>
-            <Polish>Ból jest tymczasowo zwalczany</Polish>
-            <Czech>Bolest je potlačena pouze dočasně</Czech>
-            <Spanish>El dolor se suprime solo temporalmente</Spanish>
-            <Portuguese>Dor é suprimida somente temporáriamente</Portuguese>
-            <French>La douleur est seulement supprimée temporairement</French>
-            <Hungarian>A fájdalom csak ideiglenesen csökken</Hungarian>
-            <Russian>Боль приглушается только временно</Russian>
-            <Italian>Dolore è soppresso solo temporaneamente</Italian>
-            <Japanese>痛みは一時的な影響</Japanese>
-        </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
             <German>Schmerzeffekt-Typ</German>
@@ -2863,32 +2850,6 @@
             <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
             <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
             <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか？</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
-            <English>Prevent instant death</English>
-            <Russian>Откл. мгновенную смерть</Russian>
-            <Polish>Wyłącz natychmiastową śmierć</Polish>
-            <Spanish>Prevenir muerte instantánea</Spanish>
-            <German>Verhindere direkten Tod</German>
-            <Czech>Zabránit okamžité smrti</Czech>
-            <Portuguese>Previnir morte instantânea</Portuguese>
-            <French>Empêcher la mort instantanée</French>
-            <Hungarian>Azonnali halál kiiktatása</Hungarian>
-            <Italian>Previeni morte istantanea</Italian>
-            <Japanese>即死の防止</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
-            <English>Have a unit move to unconscious instead of death</English>
-            <Russian>Бойцы теряют сознание вместо того, чтобы умирать</Russian>
-            <Polish>Spraw, aby jednostka została przeniesiona do stanu nieprzytomności zamiast ginąć na miejscu od śmiertelnych obrażeń</Polish>
-            <Spanish>Mover una unidad a inconsciente en vez de a muerta</Spanish>
-            <German>Lässt eine Einheit bewusstlos werden anstatt zu sterben</German>
-            <Czech>Jednotka upadne do bezvědomí namísto smrti</Czech>
-            <Portuguese>Fazer a unidade ficar inconsciente invés de morrer</Portuguese>
-            <French>Forcer l'inconscience au lieu de la mort instantanée</French>
-            <Hungarian>Egy egység kerüljön eszméletlen állapotba a halott helyett</Hungarian>
-            <Italian>Imposta un'unità come incosciente invece di morta</Italian>
-            <Japanese>ユニットの即死を防止するために、気絶へ移行させます</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
@@ -3466,32 +3427,6 @@
             <Italian>Cura Hitpoints completamente bendati</Italian>
             <French>Soigner les plaies entièrement bandées.</French>
             <Japanese>包帯によりヒットポイントを完全に回復する</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
-            <English>Pain suppression</English>
-            <German>Schmerzunterdrückung</German>
-            <Polish>Zwalczanie bólu</Polish>
-            <Czech>Potlačení bolesti</Czech>
-            <Spanish>Supresión del dolor</Spanish>
-            <Portuguese>Supressão de dor</Portuguese>
-            <French>Suppression de la douleur</French>
-            <Hungarian>Fájdalomcsillapítás</Hungarian>
-            <Russian>Приглушение боли</Russian>
-            <Italian>Soppressione dolore</Italian>
-            <Japanese>痛みの継続</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
-            <English>Pain is only temporarily suppressed, not removed</English>
-            <German>Schmerzen werden nur vorübergehend unterdrückt, nicht deren Ursache geheilt.</German>
-            <Polish>Ból jest tylko tymczasowo zwalczany, nie jest usuwany trwale</Polish>
-            <Czech>Bolest je potlačena, ale jen dočastně</Czech>
-            <Spanish>El dolor se suprime solo temporalmente, no se elimina.</Spanish>
-            <Portuguese>Dor é somente temporáriamente suprimida, não removida</Portuguese>
-            <French>La douleur est temporairement supprimée, pas enlevée</French>
-            <Hungarian>A fájdalom csak ideiglenesen csökken, nem távolítódik el</Hungarian>
-            <Russian>Боль приглушается только временно</Russian>
-            <Italian>Dolore è solo temporaneamente soppresso, non rimosso</Italian>
-            <Japanese>痛みを一時的に継続させ、取り除かない</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>

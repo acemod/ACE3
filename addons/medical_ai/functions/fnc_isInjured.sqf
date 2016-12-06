@@ -15,8 +15,6 @@
 if !(alive _this) exitWith {false};
 
 private _bloodLoss = [_this] call EFUNC(medical,getBloodLoss);
-private _pain      = _this getVariable [QEGVAR(medical,pain), 0];
-// Advanced only?
-// private _heartRate = _this getVariable [QEGVAR(medical,heartRate), 70];
+private _pain = [_this] call EFUNC(medical,getPainLevel);
 
-(_bloodLoss > 0) || {_pain > 0.2} // || {_heartRate > 100} || {_heartRate < 40}
+((_bloodLoss > 0) || {_pain > 0.2})

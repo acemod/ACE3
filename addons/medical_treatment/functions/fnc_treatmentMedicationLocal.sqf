@@ -17,17 +17,10 @@
 params ["_target", "_className", "_partIndex"];
 TRACE_3("params",_target,_className,_partIndex);
 
-if !(EGVAR(medical,advancedMedication)) exitWith {
+if (!EGVAR(medical,advancedMedication)) exitWith {
     if (_className == "Morphine") exitWith {
         #define MORPHINEHEAL 0.4
-
-        params ["_target"];
-
-        // reduce pain, pain sensitivity
-        private _morphine = ((_target getVariable [QEGVAR(medical,morphine), 0]) + MORPHINEHEAL) min 1;
-        _target setVariable [QEGVAR(medical,morphine), _morphine, true];
-
-        private _pain = ((_target getVariable [QEGVAR(medical,pain), 0]) - MORPHINEHEAL) max 0;
+        private _pain = 0 max ((_target getVariable [QEGVAR(medical,pain), 0]) - MORPHINEHEAL);
         _target setVariable [QEGVAR(medical,pain), _pain, true];
     };
 
@@ -90,7 +83,7 @@ if !(_hrCallback isEqualType {}) then {
 };
 
 // Adjust the heart rate based upon config entry
-private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 70];
+private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
 
 if (alive _target) then {
     if (_heartRate > 0) then {
@@ -107,14 +100,8 @@ if (alive _target) then {
 };
 
 if (_painReduce > 0) then {
-    // Reduce pain
     private _painSuppress = _target getVariable [QEGVAR(medical,painSuppress), 0];
     _target setVariable [QEGVAR(medical,painSuppress), (_painSuppress + _painReduce) max 0];
-
-    if (!GVAR(painIsOnlySuppressed)) then {
-        _pain = _target getVariable [QEGVAR(medical,pain), 0];
-        _target setVariable [QEGVAR(medical,pain), (_pain - _painReduce) max 0, true];
-    };
 };
 
 private _resistance = _target getVariable [QEGVAR(medical,peripheralResistance), 100];

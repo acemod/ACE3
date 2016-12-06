@@ -41,7 +41,6 @@ if (!_foundEntry) then {
     _target setVariable [QEGVAR(medical,allUsedMedication), _allUsedMedication];
 };
 
-
 private _usedMeds = _target getVariable [_variable, 0];
 if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1) then {
     [QEGVAR(medical,CriticalVitals), _target] call CBA_fnc_localEvent;
@@ -73,8 +72,5 @@ if (_hasOverDosed > 0) then {
     [_target, _className] call _onOverDose;
 };
 
-private _decreaseAmount = 1 / _timeInSystem;
-private _viscosityAdjustment = _viscosityChange / _timeInSystem;
-
 // Run the loop that computes the effect of the medication over time
-[_target, _variable, 0, _decreaseAmount, _viscosityAdjustment, _painReduce / _timeInSystem] call FUNC(medicationEffectLoop);
+[_target, _variable, 0, (1 / _timeInSystem), (_viscosityChange / _timeInSystem), (_painReduce / _timeInSystem)] call FUNC(medicationEffectLoop);

@@ -90,19 +90,12 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
-    class GVAR(preventInstaDeath) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(MedicalSettings_preventInstaDeath_DisplayName);
-        description = CSTRING(MedicalSettings_preventInstaDeath_Description);
-        typeName = "BOOL";
-        value = 0;
-    };
     class GVAR(enableRevive) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(ReviveSettings_enableRevive_DisplayName);
         description = CSTRING(ReviveSettings_enableRevive_Description);
         typeName = "SCALAR";
-        value = 0;
+        value = 2;
         values[] = {"Disabled", "Players only", "Players and AI"};
     };
     class GVAR(maxReviveTime) {
@@ -202,13 +195,6 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_fieldEffectiveness_PAK_Description);
         typeName = "SCALAR";
         value = 0.9;
-    };
-    class GVAR(painIsOnlySuppressed) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName);
-        description = CSTRING(AdvancedMedicalSettings_painIsOnlySuppressed_Description);
-        typeName = "BOOL";
-        value = 1;
     };
     class GVAR(painEffectType) {
         category = CSTRING(Category_Medical);
