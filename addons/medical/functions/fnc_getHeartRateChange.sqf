@@ -49,21 +49,26 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
         ([_unit] call FUNC(getBloodPressure)) params ["_bloodPressureL", "_bloodPressureH"];
         private _meanBP = (2/3) * _bloodPressureH + (1/3) * _bloodPressureL;
         private _painLevel = [_unit] call FUNC(getPainLevel);
+        
         private _targetBP = 107;
-        private _targetHR = 80;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
             _targetBP = _targetBP * (_bloodVolume / DEFAULT_BLOOD_VOLUME);
         };
+        
+        private _targetHR = 80;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
             _targetHR = _heartRate * (_targetBP / (45 max _meanBP));
         };
         if (_painLevel > 0.2) then {
             _targetHR = _targetHR max (80 + 50 * _painLevel);
         };
+        _targetHR = _targetHR + _hrTargetAdjustment;
+        
         _hrChange = round(_targetHR - _heartRate) / 2;
         if (_hrChange < 0) then {
             _hrChange = _hrChange / 20;
         };
+        
         _hrIncrease = _hrIncrease + _hrChange;
     } else {
         _hrIncrease = _hrIncrease - round(_heartRate / 10);
