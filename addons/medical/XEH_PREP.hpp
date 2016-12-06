@@ -16,7 +16,6 @@ PREP(getHeartRateChange);
 PREP(handleIncapacitation);
 PREP(handleKilled);
 PREP(handleLocal);
-PREP(handleMedications);
 PREP(handleStateDefault);
 PREP(handleStateInjured);
 PREP(handleStateUnconscious);
