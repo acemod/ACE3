@@ -190,8 +190,8 @@ class ACE_Settings {
     };
     class GVAR(fullHealLocation_PAK) {
         category = CSTRING(Category_Medical);
-        displayName = CSTRING(AdvancedMedicalSettings_fullHealLocation_PAK_DisplayName);
-        description = CSTRING(AdvancedMedicalSettings_fullHealLocation_PAK_Description);
+        displayName = CSTRING(MedicalSettings_fullHealLocation_PAK_DisplayName);
+        description = CSTRING(MedicalSettings_fullHealLocation_PAK_Description);
         typeName = "SCALAR";
         value = 3;
         values[] = {CSTRING(AdvancedMedicalSettings_anywhere), CSTRING(AdvancedMedicalSettings_vehicle), CSTRING(AdvancedMedicalSettings_facility), CSTRING(AdvancedMedicalSettings_vehicleAndFacility), ECSTRING(common,Disabled)};
