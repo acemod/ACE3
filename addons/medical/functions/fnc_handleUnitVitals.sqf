@@ -18,8 +18,6 @@ private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), CBA_missio
 private _deltaT = CBA_missionTime - _lastTimeUpdated;
 _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 
-TRACE_2("ACE_DEBUG",_unit,_deltaT);
-
 if (_deltaT == 0) exitWith {};
 
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
@@ -35,7 +33,6 @@ _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 // @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
 _unit setVariable  [QGVAR(bloodVolume), _bloodVolume, _syncValues];
 
-TRACE_3("ACE_DEBUG",_bloodVolume,_syncValues,_unit);
 // Set variables for synchronizing information across the net
 if (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE) then {
     if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
@@ -54,7 +51,6 @@ if (_bloodVolume < BLOOD_VOLUME_CLASS_1_HEMORRHAGE) then {
 };
 
 private _bloodLoss = _unit call FUNC(getBloodLoss);
-TRACE_3("ACE_DEBUG",_bloodLoss,_unit getVariable QGVAR(isBleeding),_unit);
 if (_bloodLoss > 0) then {
     _unit setVariable [QGVAR(bloodloss), _bloodLoss, _syncValues];
 
@@ -70,7 +66,6 @@ if (_bloodLoss > 0) then {
 };
 
 private _painLevel = [_unit] call FUNC(getPainLevel);
-TRACE_4("ACE_DEBUG",_painLevel,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(painSuppress),_unit);
 if (_painLevel > 0) then {
     if !(_unit getVariable [QGVAR(hasPain), false]) then {
         _unit setVariable [QGVAR(hasPain), true, true];
@@ -80,8 +75,6 @@ if (_painLevel > 0) then {
         _unit setVariable [QGVAR(hasPain), false, true];
     };
 };
-
-TRACE_6("ACE_DEBUG_ADVANCED_VITALS",_painLevel,_bloodVolume,_unit getVariable QGVAR(hasPain),_unit getVariable QGVAR(morphine),_syncValues,_unit);
 
 private _pain = _unit getVariable [QGVAR(pain), 0];
 // Handle pain due tourniquets, that have been applied more than 120 s ago
@@ -107,8 +100,6 @@ if (!isPlayer _unit) then {
 #endif
 
 _unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
-
-TRACE_8("ACE_DEBUG_ADVANCED_VITALS",_pain,PAIN_REDUCTION_SPEED,_heartRate,_bloodVolume,_bloodPressure,_deltaT,_syncValues,_unit);
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 40 || {_heartRate < 30}) then {
