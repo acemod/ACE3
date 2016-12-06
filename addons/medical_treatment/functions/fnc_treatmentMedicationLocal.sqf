@@ -55,7 +55,6 @@ private _hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh");
 private _timeInSystem = getNumber (_medicationConfig >> "timeInSystem");
 private _maxDose = getNumber (_medicationConfig >> "maxDose");
 private _viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
-private _hrCallback = getText (_medicationConfig >> "hrCallback");
 
 private _inCompatableMedication = [];
 
@@ -69,17 +68,6 @@ if (isClass (_medicationConfig >> _className)) then {
     if (isNumber (_medicationConfig >> "maxDose")) then { _maxDose = getNumber (_medicationConfig >> "maxDose"); };
     if (isArray (_medicationConfig >> "inCompatableMedication")) then { _inCompatableMedication = getArray (_medicationConfig >> "inCompatableMedication"); };
     if (isNumber (_medicationConfig >> "viscosityChange")) then { _viscosityChange = getNumber (_medicationConfig >> "viscosityChange"); };
-    if (isText (_medicationConfig >> "hrCallback")) then { _hrCallback = getText (_medicationConfig >> "hrCallback"); };
-};
-
-if (isNil _hrCallback) then {
-    _hrCallback = compile _hrCallback;
-} else {
-    _hrCallback = missionNamespace getVariable _hrCallback;
-};
-
-if !(_hrCallback isEqualType {}) then {
-    _hrCallback = {TRACE_1("callback was NOT code",_hrCallback)};
 };
 
 // Adjust the heart rate based upon config entry
@@ -88,12 +76,12 @@ private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
 if (alive _target) then {
     if (_heartRate > 0) then {
         if (_heartRate <= 45) then {
-            [_target, ((_hrIncreaseLow select 0) + random ((_hrIncreaseLow select 1) - (_hrIncreaseLow select 0))), (_hrIncreaseLow select 2), _timeInSystem, _hrCallback] call FUNC(addHeartRateAdjustment);
+            [_target, ((_hrIncreaseLow select 0) + random ((_hrIncreaseLow select 1) - (_hrIncreaseLow select 0))), (_hrIncreaseLow select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
         } else {
             if (_heartRate > 120) then {
-                [_target, ((_hrIncreaseHigh select 0) + random ((_hrIncreaseHigh select 1) - (_hrIncreaseHigh select 0))), (_hrIncreaseHigh select 2), _timeInSystem, _hrCallback] call FUNC(addHeartRateAdjustment);
+                [_target, ((_hrIncreaseHigh select 0) + random ((_hrIncreaseHigh select 1) - (_hrIncreaseHigh select 0))), (_hrIncreaseHigh select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
             } else {
-                [_target, ((_hrIncreaseNorm select 0) + random ((_hrIncreaseNorm select 1) - (_hrIncreaseNorm select 0))), (_hrIncreaseNorm select 2), _timeInSystem, _hrCallback] call FUNC(addHeartRateAdjustment);
+                [_target, ((_hrIncreaseNorm select 0) + random ((_hrIncreaseNorm select 1) - (_hrIncreaseNorm select 0))), (_hrIncreaseNorm select 2), _timeInSystem] call FUNC(addHeartRateAdjustment);
             };
         };
     };

@@ -17,10 +17,10 @@
 
 #include "script_component.hpp"
 
-params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_timeTillMaxEffect", 1, [0]], ["_timeInSystem", 1, [0]], ["_callBack", {}, [{}]]];
+params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_timeTillMaxEffect", 1, [0]], ["_timeInSystem", 1, [0]]];
 
 private _adjustment = _unit getVariable [QEGVAR(medical,heartRateAdjustments), []];
-_adjustment pushBack [_value, _timeTillMaxEffect, _timeInSystem, 0, _callBack];
+_adjustment pushBack [_value, _timeTillMaxEffect, _timeInSystem, 0];
 _unit setVariable [QEGVAR(medical,heartRateAdjustments), _adjustment];
 
 ["ace_heartRateAdjustmentAdded", [_unit, _value, _time]] call CBA_fnc_localEvent;
