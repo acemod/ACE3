@@ -88,12 +88,13 @@ if (_show == 1) then {
             if (_selectionN == _bodyPartN) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                 if (_amountOf > 0) then {
+                    private _className = (EGVAR(medical_damage,woundsData) select _woundClassID) select 6;
+                    private _postfix = ["Minor", "Medium", "Large"] select (floor ((0 max _bleeding min 0.1) / 0.05));
+                    private _woundDescription = localize format [ELSTRING(medical_damage,%1_%2), _className, _postfix];
                     if (_amountOf >= 1) then {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format["%2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [1,1,1,1]];
+                        _allInjuryTexts pushBack [format["%2x %1", _woundDescription, ceil _amountOf], [1,1,1,1]];
                     } else {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format["Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [1,1,1,1]];
+                        _allInjuryTexts pushBack [format["Partial %1", _woundDescription], [1,1,1,1]];
                     };
                 };
             };
@@ -105,12 +106,13 @@ if (_show == 1) then {
             if (_selectionN == _bodyPartN) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                 if (_amountOf > 0) then {
+                    private _className = (EGVAR(medical_damage,woundsData) select _woundClassID) select 6;
+                    private _postfix = ["Minor", "Medium", "Large"] select (floor ((0 max _bleeding min 0.1) / 0.05));
+                    private _woundDescription = localize format [ELSTRING(medical_damage,%1_%2), _className, _postfix];
                     if (_amountOf >= 1) then {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format ["[B] %2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushBack [format ["[B] %2x %1", _woundDescription, ceil _amountOf], [0.88,0.7,0.65,1]];
                     } else {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format ["[B] Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [0.88,0.7,0.65,1]];
+                        _allInjuryTexts pushBack [format ["[B] Partial %1", _woundDescription], [0.88,0.7,0.65,1]];
                     };
                 };
             };
@@ -122,12 +124,13 @@ if (_show == 1) then {
             if (_selectionN == _bodyPartN) then {
                 // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
                 if (_amountOf > 0) then {
+                    private _className = (EGVAR(medical_damage,woundsData) select _woundClassID) select 6;
+                    private _postfix = ["Minor", "Medium", "Large"] select (floor ((0 max _bleeding min 0.1) / 0.05));
+                    private _woundDescription = localize format [ELSTRING(medical_damage,%1_%2), _className, _postfix];
                     if (_amountOf >= 1) then {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format ["[S] %2x %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6, ceil _amountOf], [0.7,0.7,0.7,1]];
+                        _allInjuryTexts pushBack [format ["[S] %2x %1", _woundDescription, ceil _amountOf], [0.7,0.7,0.7,1]];
                     } else {
-                        // TODO localization
-                        _allInjuryTexts pushBack [format ["[S] Partial %1", (EGVAR(medical_damage,woundsData) select _woundClassID) select 6], [0.7,0.7,0.7,1]];
+                        _allInjuryTexts pushBack [format ["[S] Partial %1", _woundDescription], [0.7,0.7,0.7,1]];
                     };
                 };
             };
@@ -148,7 +151,7 @@ if (_show == 1) then {
             } else {
                 private _bloodLoss = _selectionBloodLoss select _forEachIndex;
                 if (_bloodLoss > 0) then {
-                    _green = 0 max (0.9 - _bloodLoss);
+                    _green = 0 max (0.8 - _bloodLoss);
                     _blue = _green;
                 } else {
                     private _damage = _selectionDamage select _forEachIndex;

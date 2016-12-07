@@ -417,18 +417,5 @@
             <Czech>Velká bodná rána</Czech>
             <Japanese>大きな刺し傷</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_Femur">
-            <English>Broken Femur</English>
-            <German>Gebrochener Oberschenkelknochen</German>
-            <Italian>Femore Rotto</Italian>
-            <Russian>Перелом</Russian>
-            <Polish>Zkłamana kość udowa</Polish>
-            <French>Fémur cassé</French>
-            <Spanish>Femur roto</Spanish>
-            <Hungarian>Törött combcsont</Hungarian>
-            <Portuguese>Fêmur quebrado</Portuguese>
-            <Czech>Zlomená stehenní kost</Czech>
-            <Japanese>大腿骨の骨折</Japanese>
-        </Key>
     </Package>
 </Project>

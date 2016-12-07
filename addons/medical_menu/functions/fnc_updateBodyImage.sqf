@@ -35,7 +35,7 @@ private _availableSelections = [50, 51, 52, 53, 54, 55];
     } else {
         private _bloodLoss = _selectionBloodLoss select _forEachIndex;
         if (_bloodLoss > 0) then {
-            _green = 0 max (0.9 - _bloodLoss);
+            _green = 0 max (0.8 - _bloodLoss);
             _blue = _green;
         } else {
             private _damage = _selectionDamage select _forEachIndex;

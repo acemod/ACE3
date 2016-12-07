@@ -31,12 +31,11 @@ private _classID = 0;
     private _minDamage = GET_NUMBER(_entry >> "minDamage",0);
     private _maxDamage = GET_NUMBER(_entry >> "maxDamage",-1);
     private _causes = GET_ARRAY(_entry >> "causes",[]);
-    private _displayName = GET_STRING(_entry >> "name",_className); // @todo, don't translate in config
     private _causeLimping = GET_NUMBER(_entry >> "causeLimping",0);
 
     if (count _causes > 0) then {
         GVAR(woundClassNames) pushBack _className;
-        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _displayName, _causeLimping];
+        GVAR(woundsData) pushBack [_classID, _selections, _bleeding, _pain, [_minDamage, _maxDamage], _causes, _className, _causeLimping];
         _classID = _classID + 1;
     };
 } forEach configProperties [_woundsConfig, "isClass _x"];
