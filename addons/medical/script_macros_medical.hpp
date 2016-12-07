@@ -42,5 +42,5 @@
 #define PAIN_REDUCTION_SPEED 0.001
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_CHANCE 0.1
+#define SPONTANEOUS_WAKE_UP_CHANCE 0.2
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
