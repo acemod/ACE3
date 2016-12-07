@@ -39,12 +39,25 @@ if (_partialHeal) then {
     private _persistentDamage = 1 - _effectiveness;
     
     private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+    {
+        _x params ["", "", "", "", "_bleeding", "_damage"];
+        _x set [5, _damage min _persistentDamage];
+    } forEach _openWounds;
+    _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+    
     private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+    {
+        _x params ["", "", "", "", "_bleeding", "_damage"];
+        _x set [5, _damage min _persistentDamage];
+    } forEach _bandagedWounds;
+    _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
+    
     private _stitchedWounds = _target getVariable [QEGVAR(medical,stitchedWounds), []];
     {
         _x params ["", "", "", "", "_bleeding", "_damage"];
-        _x set [6, _damage min _persistentDamage];
-    } forEach (_openWounds + _bandagedWounds + _stitchedWounds);
+        _x set [5, _damage min _persistentDamage];
+    } forEach _stitchedWounds;
+    _target setVariable [QEGVAR(medical,stitchedWounds), _stitchedWounds, true];
     
     // todo: only reset limping if leg damage was reduced enough
     [_unit, false] call EFUNC(medical_engine,setLimping);
