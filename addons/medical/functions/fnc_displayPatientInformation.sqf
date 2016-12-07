@@ -154,7 +154,7 @@ if (_show == 1) then {
                     private _damage = _selectionDamage select _forEachIndex;
                     if (_damage > 0.1) then {
                         _blue = 0 max (1 - _damage);
-                        _green = _damage min 0.5;
+                        _green = 0.5 max (1 - _damage / 2);
                     };
                 };
             };
