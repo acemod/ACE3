@@ -33,7 +33,7 @@ if (_hitPointIndex < 0) then {
 
     // Handle vehicle crashes
     if (_damage == _unit getVariable [HIT_CRASH, -1]) then {
-        _isCrash = true;
+        _isCrash = (_ammo == "");
         _unit setVariable [HIT_CRASH, -1];
     } else {
         _unit setVariable [HIT_CRASH, _damage];
