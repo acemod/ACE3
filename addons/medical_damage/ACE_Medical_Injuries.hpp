@@ -20,7 +20,7 @@ class ACE_Medical_Injuries {
             causes[] = {"explosive", "vehiclecrash", "grenade", "shell", "bullet", "backblast", "bite"};
             bleeding = 0.5;
             pain = 1.0;
-            minDamage = 4;
+            minDamage = 0.3;
             causeLimping = 1;
         };
         // Also called bruises, these are the result of a forceful trauma that injures an internal structure without breaking the skin. Blows to the chest, abdomen, or head with a blunt instrument (e.g. a football or a fist) can cause contusions.
