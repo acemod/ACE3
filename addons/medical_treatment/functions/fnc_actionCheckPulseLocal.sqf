@@ -16,10 +16,10 @@
 
 params ["_caller", "_target", "_bodyPart"];
 
-private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
+private _heartRate = 0;
 
-if (!alive _target) then {
-    _heartRate = 0;
+if (alive _target && !([_target, _bodyPart] call EFUNC(medical,hasTourniquetAppliedTo))) then {
+    _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
 };
 
 private _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_5);
@@ -44,11 +44,6 @@ if (_heartRate > 1.0) then {
             };
         };
     };
-};
-
-if (toLower _bodyPart in ["lefthand", "righthand"] && {[_target, _bodyPart] call EFUNC(medical,hasTourniquetAppliedTo)}) then {
-    _heartRateOutput = ELSTRING(medical,Check_Pulse_Output_5);
-    _logOutPut = ELSTRING(medical,Check_Pulse_None);
 };
 
 [QEGVAR(common,displayTextStructured), [[_heartRateOutput, _target call EFUNC(common,getName), round _heartRate], 1.5, _caller], _caller] call CBA_fnc_targetEvent;
