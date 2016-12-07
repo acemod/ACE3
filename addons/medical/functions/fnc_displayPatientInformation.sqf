@@ -142,9 +142,9 @@ if (_show == 1) then {
 
             private _torniquet = _selectionTourniquet select _forEachIndex;
             if (_torniquet > 0) then {
-                _red = 0.77;
-                _green = 0.51;
-                _blue = 0.08;
+                _red = 0;
+                _green = 0;
+                _blue = 0.8;
             } else {
                 private _bloodLoss = _selectionBloodLoss select _forEachIndex;
                 if (_bloodLoss > 0) then {
@@ -152,8 +152,10 @@ if (_show == 1) then {
                     _blue = _green;
                 } else {
                     private _damage = _selectionDamage select _forEachIndex;
-                    _green = 0 max (0.9 - _damage);
-                    _red = _green;
+                    if (_damage > 0.1) then {
+                        _blue = 0 max (1 - _damage);
+                        _green = _damage min 0.5;
+                    };
                 };
             };
 
