@@ -19,7 +19,7 @@ TRACE_3("params",_target,_className,_partIndex);
 
 if (!EGVAR(medical,advancedMedication)) exitWith {
     if (_className == "Morphine") exitWith {
-        #define MORPHINEHEAL 0.4
+        #define MORPHINEHEAL 0.8
         private _pain = 0 max ((_target getVariable [QEGVAR(medical,pain), 0]) - MORPHINEHEAL);
         _target setVariable [QEGVAR(medical,pain), _pain, true];
     };
