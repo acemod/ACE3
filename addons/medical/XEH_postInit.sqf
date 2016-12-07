@@ -28,7 +28,7 @@ if (isServer) then {
 if (!hasInterface) exitWith {};
 
 [missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
-    private _pain = ACE_player getVariable [QGVAR(pain), 0];
+    private _pain = [ACE_player] call FUNC(getPainLevel);
 
     linearConversion [0, 1, _pain, 1, 5, true];
 }] call EFUNC(common,arithmeticSetSource);
