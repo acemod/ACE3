@@ -34,7 +34,7 @@ _target setVariable [QEGVAR(medical,tourniquets), _tourniquets, true];
 [_caller, "ACE_tourniquet", true] call CBA_fnc_addItem;
 
 //Handle all injected medications now that blood is flowing: @todo
-private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+private _delayedMedications = _target getVariable [QEGVAR(medical,occludedMedications), []];
 private _updatedArray = false;
 TRACE_2("meds",_partIndex,_delayedMedications);
 
@@ -42,7 +42,7 @@ TRACE_2("meds",_partIndex,_delayedMedications);
     _x params ["", "", "_medPartNum"];
     if (_partIndex == _medPartNum) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        [QGVAR(treatmentAdvanced_medicationLocal), _x, [_target]] call CBA_fnc_targetEvent;
+        [QGVAR(treatmentMedicationLocal), _x, _target] call CBA_fnc_targetEvent;
         _delayedMedications set [_forEachIndex, -1];
         _updatedArray = true;
     };
@@ -50,5 +50,5 @@ TRACE_2("meds",_partIndex,_delayedMedications);
 
 if (_updatedArray) then {
     _delayedMedications = _delayedMedications - [-1];
-    _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+    _target setVariable [QEGVAR(medical,occludedMedications), _delayedMedications, true];
 };

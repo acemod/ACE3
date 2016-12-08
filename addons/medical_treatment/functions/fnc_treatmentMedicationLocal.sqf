@@ -33,10 +33,10 @@ private _tourniquets = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,
 
 if (_tourniquets select _partIndex > 0) exitWith {
     TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
-    private _delayedMedications = _target getVariable [QGVAR(occludedMedications), []];
+    private _delayedMedications = _target getVariable [QEGVAR(medical,occludedMedications), []];
 
     _delayedMedications pushBack _this;
-    _target setVariable [QGVAR(occludedMedications), _delayedMedications, true];
+    _target setVariable [QEGVAR(medical,occludedMedications), _delayedMedications, true];
 
     true
 };

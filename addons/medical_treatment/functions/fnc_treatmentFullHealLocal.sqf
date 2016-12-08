@@ -58,6 +58,7 @@ if (_partialHeal) then {
 
     // tourniquets
     _target setVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0], true];
+    _target setVariable [QGVAR(occludedMedications), nil, true];
 
     // wounds and injuries
     _target setVariable [QEGVAR(medical,openWounds), [], true];
