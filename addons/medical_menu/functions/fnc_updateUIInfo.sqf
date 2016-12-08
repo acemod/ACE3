@@ -56,13 +56,12 @@ if (_totalIvVolume >= 1) then {
 
 private _selectionTourniquet = _target getVariable [QEGVAR(medical,tourniquets), [0,0,0,0,0,0]];
 private _selectionBloodLoss = [0, 0, 0, 0, 0, 0];
-private _selectionDamage = [0, 0, 0, 0, 0, 0];
+private _selectionDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 private _allInjuryTexts = [];
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding"];
     _selectionBloodLoss set [_bodyPartN, (_selectionBloodLoss select _bodyPartN) + (20 * (_bleeding * _amountOf))];
-    _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -79,8 +78,7 @@ private _allInjuryTexts = [];
 } forEach (_target getVariable [QEGVAR(medical,openWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
-    _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding"];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {
@@ -97,8 +95,7 @@ private _allInjuryTexts = [];
 } forEach (_target getVariable [QEGVAR(medical,bandagedWounds), []]);
 
 {
-    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding", "_damage"];
-    _selectionDamage set [_bodyPartN, (_selectionDamage select _bodyPartN) + _damage];
+    _x params ["", "_woundClassID", "_bodyPartN", "_amountOf", "_bleeding"];
     if (_selectionN == _bodyPartN) then {
         // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
         if (_amountOf > 0) then {

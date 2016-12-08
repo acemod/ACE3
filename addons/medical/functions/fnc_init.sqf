@@ -47,7 +47,10 @@ _unit setVariable [QGVAR(triageCard), [], true];
 _unit setVariable [QGVAR(ivBags), nil, true];
 
 // damage storage
+_unit setVariable [QGVAR(bodyPartDamage), [0,0,0,0,0,0], true];
+#ifdef DEBUG_TESTRESULTS
 _unit setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
+#endif
 
 // generic medical admin
 _unit setVariable [QGVAR(inCardiacArrest), false, true];

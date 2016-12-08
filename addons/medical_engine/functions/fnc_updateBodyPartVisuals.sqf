@@ -43,23 +43,13 @@ switch (toLower _bodyPart) do {
     };
 };
 
-private _openWounds = _unit getVariable QEGVAR(medical,openWounds);
+private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 private _damageOnAffectedBodyParts = 0;
-
 {
-    private _damageOnBodyPart = 0;
     private _partIndex = ALL_BODY_PARTS find toLower _x;
-
-    {
-        _x params ["", "", "_bodyPartN", "", "_bleeding", "_damage"];
-
-        if (_bodyPartN isEqualTo _partIndex) then {
-            _damageOnBodyPart = _damageOnBodyPart + _damage;
-        };
-    } forEach _openWounds;
-
+    private _damageOnBodyPart = _bodyPartDamage select _partIndex;
     // report maximum of both legs or arms
     _damageOnAffectedBodyParts = _damageOnAffectedBodyParts max _damageOnBodyPart;
 } forEach _affectedBodyParts;
 
-[_unit, _bodyPart, _damageOnAffectedBodyParts > 0.35] call FUNC(damageBodyPart);
+[_unit, _bodyPart, _damageOnAffectedBodyParts > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);

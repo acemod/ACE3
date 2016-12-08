@@ -57,24 +57,20 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
-    
-    // Use those for handleIncapacitation?
     class GVAR(playerDamageThreshold) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_playerDamageThreshold_DisplayName);
         description = CSTRING(MedicalSettings_playerDamageThreshold_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 1.05;
     };
     class GVAR(AIDamageThreshold) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_AIDamageThreshold_DisplayName);
         description = CSTRING(MedicalSettings_AIDamageThreshold_Description);
         typeName = "SCALAR";
-        value = 1;
+        value = 1.05;
     };
-    
-    
     class GVAR(enableUnconsciousnessAI) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);

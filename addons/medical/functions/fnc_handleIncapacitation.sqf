@@ -15,28 +15,28 @@
 params ["_unit"];
 
 private _painLevel = [_unit] call FUNC(getPainLevel);
-private _headDamage = 0;
-private _bodyDamage = 0;
+private _bodyPartDamage = _unit getVariable [QGVAR(bodyPartDamage), [0,0,0,0,0,0]];
 
+_bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightArmDamage", "_leftLegDamage", "_rightLegDamage"];
+
+// Exclude non penetrating body damage
 {
-    _x params ["", "", "_bodyPart", "", "", "_damage"];
-    switch (_bodyPart) do {
-        case 0: {
-            _headDamage = _headDamage + _damage;
-        };
-        case 1: {
-            if (_damage > PENETRATION_THRESHOLD) then {
-                _bodyDamage = _bodyDamage + _damage;
-            };
-        };
+    _x params ["", "", "_bodyPartN", "", "", "_damage"];
+    if (_bodyPartN == 1 && {_damage < PENETRATION_THRESHOLD}) then {
+        _bodyDamage = _bodyDamage - _damage;
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);
 
-// todo: use an ace settings for the thresholds
-if (_headDamage > 0.50) then {
+private _damageThreshold = if (isPlayer _unit) then {
+    GVAR(playerDamageThreshold)
+} else {
+    GVAR(AIDamageThreshold)
+};
+
+if (_headDamage > _damageThreshold / 2) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };
-if (_bodyDamage > 1.05) then {
+if (_bodyDamage > _damageThreshold) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };
 

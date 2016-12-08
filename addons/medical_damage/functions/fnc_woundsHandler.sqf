@@ -38,8 +38,11 @@ call compile _extensionOutput;
 
 // todo: Make the pain and bleeding calculations part of the extension again
 private _painLevel = 0;
+private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
+
+    _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _damage];
 
     // The higher the nastiness likelihood the higher the change to get a painful and bloody wound 
     private _nastinessLikelihood = if (_damage > 1) then {
@@ -49,26 +52,26 @@ private _painLevel = 0;
     };
     private _bloodiness   = 0.01 + 0.99 * (1 - random[0, 1, 0.9]) ^ (1 / _nastinessLikelihood);
     private _painfullness = 0.05 + 0.95 * (1 - random[0, 1, 0.5]) ^ (1 / _nastinessLikelihood);
-    
+
     _bleeding = _bleeding * _bloodiness;
-    
+
     _x set [4, _bleeding];
     _x set [5, _damage];
-    
+
     private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness;
     _painLevel = _painLevel max _pain;
-    
+
 #ifdef DEBUG_MODE_FULL
     systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_damage * 100) / 100, _damage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
 #endif
 
-    if (_bodyPartNToAdd == 0 && {_damage > 1}) then {
+    if (_bodyPartNToAdd == 0 && {_damage > LETHAL_HEAD_DAMAGE_THRESHOLD}) then {
         [QEGVAR(medical,FatalInjury), _unit] call CBA_fnc_localEvent;
     };
 
     // todo `forceWalk` based on leg damage
     private _causeLimping = (GVAR(woundsData) select _woundClassIDToAdd) select 7;
-    if (_causeLimping == 1 && {_damage > 0.3} && {_bodyPartNToAdd > 3}) then {
+    if (_causeLimping == 1 && {_damage > LIMPING_DAMAGE_THRESHOLD} && {_bodyPartNToAdd > 3}) then {
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
 
@@ -76,6 +79,7 @@ private _painLevel = 0;
 } forEach _woundsCreated;
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+_unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
 

@@ -35,12 +35,17 @@
 // --- pain
 #define PAIN_UNCONSCIOUS 0.5
 
-// duration in seconds to stay knocked out due to pain
-#define PAIN_KNOCK_OUT_DURATION (5 + random 10)
-
 // Pain reduction per second
 #define PAIN_REDUCTION_SPEED 0.001
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
 #define SPONTANEOUS_WAKE_UP_CHANCE 0.2
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
+
+#define LETHAL_HEAD_DAMAGE_THRESHOLD 1.0
+
+// Minimum leg damage required for limping
+#define LIMPING_DAMAGE_THRESHOLD 0.30
+
+// Minimum body part damage required for blood effect on uniform
+#define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
