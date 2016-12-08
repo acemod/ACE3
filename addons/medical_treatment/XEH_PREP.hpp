@@ -14,23 +14,25 @@ PREP(actionUnloadUnit);
 PREP(canTreat);
 PREP(canTreatCached);
 PREP(treatment);
-PREP(treatment_success);
 PREP(treatment_failure);
+PREP(treatment_success);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
-PREP(treatmentTourniquet);
-PREP(treatmentTourniquetLocal);
-PREP(treatmentTourniquetRemove);
-PREP(treatmentMedication);
-PREP(treatmentMedicationLocal);
-PREP(treatmentIV);
-PREP(treatmentIVLocal);
 PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
+PREP(treatmentIV);
+PREP(treatmentIVLocal);
+PREP(treatmentMedication);
+PREP(treatmentMedicationLocal);
+PREP(treatmentPartialHeal);
+PREP(treatmentPartialHealLocal);
 PREP(treatmentSurgicalKit_onProgress);
+PREP(treatmentTourniquet);
+PREP(treatmentTourniquetLocal);
+PREP(treatmentTourniquetRemove);
 
 // misc
 PREP(addToLog);
@@ -40,10 +42,10 @@ PREP(canAccessMedicalEquipment);
 PREP(dropDownTriageCard);
 PREP(getTriageStatus);
 PREP(handleBandageOpening);
+PREP(healTime);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
-PREP(healTime);
 
 // items
 PREP(checkItems);
@@ -53,6 +55,6 @@ PREP(useItem);
 PREP(useItems);
 
 // litter
+PREP(litterCleanupLoop);
 PREP(litterCreate);
 PREP(litterHandleCreate);
-PREP(litterCleanupLoop);
