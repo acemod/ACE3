@@ -75,7 +75,25 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
         [_unit, true] call EFUNC(medical_engine,setLimping);
     };
 
-    _openWounds pushBack _x;
+    // if possible merge into existing wounds
+    private _createNewWound = true;
+    {
+        _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+        if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(round(_damage * 10) / 10) == (round(_oldDamage * 10) / 10)}}) then {
+            private _oldCategory = (floor ((0 max _oldBleeding min 0.1) / 0.05));
+            private _newCategory = (floor ((0 max _bleeding min 0.1) / 0.05));
+            if (_oldCategory == _newCategory) exitWith {
+                private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding);
+                private _newAmountOf = _newBleeding / _oldBleeding;
+                _x set [3, _newAmountOf];
+                _createNewWound = false;
+            };
+        };
+    } forEach _openWounds;
+
+    if (_createNewWound) then {
+        _openWounds pushBack _x;
+    };
 } forEach _woundsCreated;
 
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];

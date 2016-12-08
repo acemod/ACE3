@@ -21,9 +21,9 @@ _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightA
 
 // Exclude non penetrating body damage
 {
-    _x params ["", "", "_bodyPartN", "", "", "_damage"];
+    _x params ["", "", "_bodyPartN", "_amountOf", "", "_damage"];
     if (_bodyPartN == 1 && {_damage < PENETRATION_THRESHOLD}) then {
-        _bodyDamage = _bodyDamage - _damage;
+        _bodyDamage = _bodyDamage - (_amountOf * _damage);
     };
 } forEach (_unit getVariable [QGVAR(openWounds), []]);
 
