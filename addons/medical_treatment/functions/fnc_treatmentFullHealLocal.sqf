@@ -47,11 +47,6 @@ if (_partialHeal) then {
     if ((_bodyPartDamage select 4) < 0.3 && {(_bodyPartDamage select 5) < 0.3}) then {
         [_unit, false] call EFUNC(medical_engine,setLimping);
     };
-
-    // wounds and injuries
-    _target setVariable [QEGVAR(medical,openWounds), [], true];
-    _target setVariable [QEGVAR(medical,bandagedWounds), [], true];
-    _target setVariable [QEGVAR(medical,stitchedWounds), [], true];
 } else {
     _target setVariable [QEGVAR(medical,pain), 0, true];
     _target setVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME, true];
