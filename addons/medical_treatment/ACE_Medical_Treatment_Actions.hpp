@@ -283,7 +283,7 @@ class GVAR(Actions) {
         items[] = {"ACE_personalAidKit"};
         treatmentLocations[] = {QEGVAR(medical,useLocation_PAK)};
         requiredMedic = QEGVAR(medical,medicSetting_PAK);
-        treatmentTime = QUOTE(_target call FUNC(treatmentFullHealTreatmentTime));
+        treatmentTime = QUOTE(_target call FUNC(healTime));
         callbackSuccess = QFUNC(treatmentFullHeal);
         itemConsumed = QEGVAR(medical,consumeItem_PAK);
         animationPatient = "";

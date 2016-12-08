@@ -30,7 +30,6 @@ PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
 PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
-PREP(treatmentFullHealTreatmentTime);
 PREP(treatmentSurgicalKit_onProgress);
 
 // misc
@@ -44,6 +43,7 @@ PREP(handleBandageOpening);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
+PREP(healTime);
 
 // items
 PREP(checkItems);

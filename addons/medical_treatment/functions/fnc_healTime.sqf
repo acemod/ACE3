@@ -9,7 +9,7 @@
  * treatment time <NUMBER>
  *
  * Example:
- * [_target] call ace_medical_treatment_fnc_treatmentFullHealTreatmentTime
+ * [_target] call ace_medical_treatment_fnc_healTime
  *
  * Public: No
  */
