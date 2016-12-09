@@ -79,13 +79,16 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
     private _createNewWound = true;
     {
         _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
-        if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(round(_damage * 10) / 10) == (round(_oldDamage * 10) / 10)}}) then {
+        if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(_damage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}}) then {
             private _oldCategory = (floor ((0 max _oldBleeding min 0.1) / 0.05));
             private _newCategory = (floor ((0 max _bleeding min 0.1) / 0.05));
             if (_oldCategory == _newCategory) exitWith {
-                private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding);
-                private _newAmountOf = _newBleeding / _oldBleeding;
+                private _newAmountOf = _oldAmountOf + 1;
                 _x set [3, _newAmountOf];
+                private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
+                _x set [4, _newBleeding];
+                private _newDamage = (_oldAmountOf * _oldDamage + _damage) / _newAmountOf;
+                _x set [5, _newDamage];
                 _createNewWound = false;
             };
         };
