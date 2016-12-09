@@ -22,8 +22,8 @@ private _bleedingStrength = [ACE_player] call EFUNC(medical,getBloodloss);
 private _bleeding         = _bleedingStrength > 0;
 private _bloodVolume      = ACE_player getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
 private _unconscious      = ACE_player getVariable [QEGVAR(medical,isUnconscious), false];
-private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), 70];
-private _pain             = ACE_player getVariable [QEGVAR(medical,pain), 0];
+private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
+private _pain             = [ACE_player] call EFUNC(medical,getPainLevel);
 
 // - Visual effects -----------------------------------------------------------
 [_unconscious, 2] call FUNC(effectUnconscious);
