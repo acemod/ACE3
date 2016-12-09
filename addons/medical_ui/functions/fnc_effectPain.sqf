@@ -17,6 +17,11 @@ if (!_enable) exitWith {
 };
 GVAR(ppPain) ppEffectEnable true;
 
+// Trigger effect every 2s
+private _showNextTick = ACE_player getVariable [QGVAR(showPainNextTick), true];
+ACE_player setVariable [QGVAR(showPainNextTick), !_showNextTick];
+if (_showNextTick) exitWith {};
+
 private _initialAdjust = [];
 private _delayedAdjust = [];
 
@@ -31,8 +36,8 @@ if (GVAR(painEffectType) == 0) then {
 };
 
 GVAR(ppPain) ppEffectAdjust _initialAdjust;
-GVAR(ppPain) ppEffectCommit 0.2;
+GVAR(ppPain) ppEffectCommit FX_PAIN_FADE_IN;
 [{
     GVAR(ppPain) ppEffectAdjust _this;
-    GVAR(ppPain) ppEffectCommit 0.5;
-}, _delayedAdjust, 0.2] call CBA_fnc_waitAndExecute;
+    GVAR(ppPain) ppEffectCommit FX_PAIN_FADE_OUT;
+}, _delayedAdjust, FX_PAIN_FADE_IN] call CBA_fnc_waitAndExecute;
