@@ -76,11 +76,19 @@ if (_painLevel > 0) then {
     };
 };
 
-private _pain = _unit getVariable [QGVAR(pain), 0];
 // Handle pain due tourniquets, that have been applied more than 120 s ago
-private _oldTourniquets = (_unit getVariable [QGVAR(tourniquets), []]) select {_x > 0 && {CBA_missionTime - _x > 120}};
-// Increase pain at a rate of 0.001 units/s per old tourniquet
-_pain = _pain + (count _oldTourniquets) * 0.001 * _deltaT;
+private _tourniquetPain = 0;
+private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
+{
+    if (_x > 0 && {CBA_missionTime - _x > 120}) then {
+        _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
+    };
+} forEach _tourniquets;
+[_unit, _tourniquetPain] call FUNC(adjustPainLevel);
+
+// Handle continuous pain reduction
+private _pain = _unit getVariable [QGVAR(pain), 0];
+_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
 
 [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
@@ -97,12 +105,10 @@ if (_bloodLoss > BLOOD_LOSS_KNOCK_OUT_THRESHOLD * _cardiacOutput) then {
 };
 
 #ifdef DEBUG_MODE_FULL
-if (!isPlayer _unit) then {
+if (isPlayer _unit) then {
     hintSilent format["blood volume: %1, blood loss: [%2, %3]\nhr: %4, bp: %5, pain: %6", round(_bloodVolume * 100) / 100, round(_bloodLoss * 1000) / 1000, round((_bloodLoss / (0.001 max _cardiacOutput)) * 100) / 100, round(_heartRate), _bloodPressure, round(_painLevel * 100) / 100];
 };
 #endif
-
-_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];
 if (_bloodPressureL < 40 || {_heartRate < 30}) then {
