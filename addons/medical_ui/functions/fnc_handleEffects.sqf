@@ -28,4 +28,6 @@ private _pain             = ACE_player getVariable [QEGVAR(medical,pain), 0];
 // - Visual effects -----------------------------------------------------------
 [_unconscious, _unconscious] call FUNC(effectUnconscious);
 [true, _pain] call FUNC(effectPain);
-[true, (DEFAULT_BLOOD_VOLUME - _bloodVolume) max 0] call FUNC(effectBloodVolume);
+[
+    true, linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
+] call FUNC(effectBloodVolume);
