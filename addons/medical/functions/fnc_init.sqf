@@ -57,7 +57,6 @@ _unit setVariable [QGVAR(inCardiacArrest), false, true];
 _unit setVariable [QGVAR(hasLostBlood), 0, true];
 _unit setVariable [QGVAR(isBleeding), false, true];
 _unit setVariable [QGVAR(hasPain), false, true];
-_unit setVariable [QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives), true];
 _unit setVariable [QGVAR(painSuppress), 0, true];
 _unit setVariable [QGVAR(painSuppressAdjustments), [], true];
 

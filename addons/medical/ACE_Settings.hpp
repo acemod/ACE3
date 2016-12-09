@@ -86,33 +86,6 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
-    class GVAR(enableRevive) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(ReviveSettings_enableRevive_DisplayName);
-        description = CSTRING(ReviveSettings_enableRevive_Description);
-        typeName = "SCALAR";
-        value = 2;
-        values[] = {"Disabled", "Players only", "Players and AI"};
-    };
-    class GVAR(maxReviveTime) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(ReviveSettings_maxReviveTime_DisplayName);
-        description = CSTRING(ReviveSettings_maxReviveTime_Description);
-        typeName = "SCALAR";
-        value = 120;
-    };
-    class GVAR(amountOfReviveLives) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(ReviveSettings_amountOfReviveLives_DisplayName);
-        description = CSTRING(ReviveSettings_amountOfReviveLives_Description);
-        typeName = "SCALAR";
-        value = -1;
-    };
-    class GVAR(allowDeadBodyMovement) {
-        category = CSTRING(Category_Medical);
-        typeName = "BOOL";
-        value = 0;
-    };
     class GVAR(medicSetting_basicEpi) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(BasicMedicalSettings_medicSetting_basicEpi_DisplayName);

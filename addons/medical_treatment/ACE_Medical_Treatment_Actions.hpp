@@ -246,7 +246,7 @@ class GVAR(Actions) {
         requiredMedic = 0;
         treatmentTime = 15;
         items[] = {};
-        condition = QUOTE(!(_target call EFUNC(common,isAwake)) && EGVAR(medical,enableRevive) > 0);
+        condition = QUOTE(!(_target call EFUNC(common,isAwake)));
         callbackSuccess = QFUNC(treatmentCPR);
         callbackFailure = "";
         callbackProgress = QUOTE(!([(_this select 0) select 1] call EFUNC(common,isAwake)));
