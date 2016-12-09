@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+#define MATH_E 2.71828182846
+
 params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
 
@@ -44,14 +46,10 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
 
     _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _damage];
 
-    // The higher the nastiness likelihood the higher the change to get a painful and bloody wound 
-    private _nastinessLikelihood = if (_damage > 1) then {
-        (_damage ^ 0.33)
-    } else {
-        (0.1 max _damage)
-    };
-    private _bloodiness   = 0.01 + 0.99 * (1 - random[0, 1, 0.9]) ^ (1 / _nastinessLikelihood);
-    private _painfullness = 0.05 + 0.95 * (1 - random[0, 1, 0.5]) ^ (1 / _nastinessLikelihood);
+    // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
+    private _nastinessLikelihood = linearConversion [0, 20, _damage, 0.5, 30, true];
+    private _bloodiness   = 0.01 + 0.99 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
+    private _painfullness = 0.05 + 0.95 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
 
     _bleeding = _bleeding * _bloodiness;
 

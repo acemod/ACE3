@@ -94,14 +94,10 @@ private _woundsCreated = [];
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
             _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
-            // The higher the nastiness likelihood the higher the change to get a painful and bloody wound 
-            private _nastinessLikelihood = if (_damage > 1) then {
-                (_damage ^ 0.33)
-            } else {
-                (0.1 max _damage)
-            };
-            private _bloodiness   = 0.01 + 0.99 * (1 - random[0, 1, 0.9]) ^ (1 / _nastinessLikelihood);
-            private _painfullness = 0.05 + 0.95 * (1 - random[0, 1, 0.5]) ^ (1 / _nastinessLikelihood);
+            // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
+            private _nastinessLikelihood = linearConversion [0, 20, _damage, 0.5, 30, true];
+            private _bloodiness   = 0.01 + 0.99 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
+            private _painfullness = 0.05 + 0.95 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
 
             _bleeding = _injuryBleedingRate * _bloodiness;
 
