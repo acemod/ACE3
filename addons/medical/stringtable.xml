@@ -3220,6 +3220,9 @@
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_Medkit_DisplayName">
             <English>Locations Medkit</English>
         </Key>
+        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_Medkit_Description">
+            <English>Where can the Medkit be used?</English>
+        </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Russian>Место использования аптечки</Russian>
