@@ -31,7 +31,7 @@ private _timeInCardiacArrest = 120 + round(random(600));
     params ["_args", "_idPFH"];
     _args params ["_unit", "_startTime", "_timeInCardiacArrest"];
 
-    private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+    private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
     if (_heartRate > 20 || !alive _unit) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(inCardiacArrest), nil, true];

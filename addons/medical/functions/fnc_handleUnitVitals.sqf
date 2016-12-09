@@ -86,7 +86,7 @@ _pain = _pain + (count _oldTourniquets) * 0.001 * _deltaT;
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
 [_unit, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
 
-private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
 
 private _bloodPressure = [_unit] call FUNC(getBloodPressure);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];

@@ -41,7 +41,7 @@ if (!(_adjustment isEqualTo [])) then {
     _unit setVariable [QGVAR(heartRateAdjustments), _adjustment, _syncValue];
 };
 
-private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
 
 if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
     private _hrChange = 0;

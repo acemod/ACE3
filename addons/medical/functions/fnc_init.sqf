@@ -33,7 +33,7 @@ _unit setVariable [QGVAR(bandagedWounds), [], true];
 _unit setVariable [QGVAR(stitchedWounds), [], true];
 
 // vitals
-_unit setVariable [QGVAR(heartRate), 80, true];
+_unit setVariable [QGVAR(heartRate), DEFAULT_HEART_RATE, true];
 _unit setVariable [QGVAR(heartRateAdjustments), [], true];
 _unit setVariable [QGVAR(bloodPressure), [80, 120], true];
 _unit setVariable [QGVAR(peripheralResistance), 100, true];

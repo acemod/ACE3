@@ -26,7 +26,7 @@ params ["_unit"];
 if (_unit getVariable [QGVAR(inCardiacArrest), false]) exitWith { 0 };
 
 private _bloodVolume = ((_unit getVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME]) / DEFAULT_BLOOD_VOLUME) * 100;
-private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
-private _cardiacOutput = ((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / 80) - 1)) / 60;
+private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
+private _cardiacOutput = ((_bloodVolume / MODIFIER_CARDIAC_OUTPUT) + ((_heartRate / DEFAULT_HEART_RATE) - 1)) / 60;
 
 (0 max _cardiacOutput)

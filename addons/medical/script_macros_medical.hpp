@@ -13,6 +13,8 @@
 #define GET_STRING(config,default) (if (isText (config)) then {getText (config)} else {default})
 #define GET_ARRAY(config,default) (if (isArray (config)) then {getArray (config)} else {default})
 
+#define DEFAULT_HEART_RATE 80
+
 // --- blood
 // 0.077 l/kg * 80kg = 6.16l
 #define DEFAULT_BLOOD_VOLUME 6.0 // in liters
