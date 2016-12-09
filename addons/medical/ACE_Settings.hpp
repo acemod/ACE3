@@ -230,4 +230,11 @@ class ACE_Settings {
         values[] = {CSTRING(useSelection), CSTRING(useRadial), "Disabled"};
         isClientSettable = 1;
     };
+    class GVAR(ivFlowRate) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_ivFlowRate_DisplayName);
+        description = CSTRING(MedicalSettings_ivFlowRate_Description);
+        typeName = "SCALAR";
+        value = 1;
+    };
 };

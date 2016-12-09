@@ -2931,6 +2931,12 @@
             <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
             <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_DisplayName">
+            <English>IV Transfusion Flow Rate</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_Description">
+            <English>Effects how quickly IV Bags will have effect</English>
+        </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
             <German>Standard Sanitätseinstellungen [ACE]</German>
