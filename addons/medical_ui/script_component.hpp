@@ -17,5 +17,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\medical\script_macros_medical.hpp"
+
 #define FX_PAIN_FADE_IN   0.3
 #define FX_PAIN_FADE_OUT  0.7
+#define FX_UNCON_FADE_IN  2.0
+#define FX_UNCON_FADE_OUT 5.0

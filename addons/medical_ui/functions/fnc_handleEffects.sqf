@@ -12,9 +12,9 @@
 
 private _disableAll = (!isNull curatorCamera) || {!alive ACE_player};
 if (_disableAll) exitWith {
-    [false, false] call FUNC(effectUnconscious);
-    [false]        call FUNC(effectPain);
-    [false]        call FUNC(effectBloodVolume);
+    [false, 0] call FUNC(effectUnconscious);
+    [false]    call FUNC(effectPain);
+    [false]    call FUNC(effectBloodVolume);
 };
 
 // - Current state info -------------------------------------------------------
@@ -26,7 +26,7 @@ private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), 7
 private _pain             = ACE_player getVariable [QEGVAR(medical,pain), 0];
 
 // - Visual effects -----------------------------------------------------------
-[_unconscious, _unconscious] call FUNC(effectUnconscious);
+[_unconscious, 2] call FUNC(effectUnconscious);
 [
     true, linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]
 ] call FUNC(effectBloodVolume);
