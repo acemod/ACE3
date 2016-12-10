@@ -199,7 +199,7 @@ if (_show == 1) then {
             _logCtrl lbAdd format["%1 %2", _moment, _message];
         } foreach _logs;
 
-        private _triageStatus = [_target] call FUNC(getTriageStatus);
+        private _triageStatus = [_target] call EFUNC(medical_treatment,getTriageStatus);
         (_display displayCtrl 303) ctrlSetText (_triageStatus select 0);
         (_display displayCtrl 303) ctrlSetBackgroundColor (_triageStatus select 2);
 

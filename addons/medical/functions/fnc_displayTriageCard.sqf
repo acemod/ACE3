@@ -62,7 +62,7 @@ if (_show) then {
             _lbCtrl lbAdd _x;
         } forEach _triageCardTexts;
 
-        private _triageStatus = [_target] call FUNC(getTriageStatus);
+        private _triageStatus = [_target] call EFUNC(medical_treatment,getTriageStatus);
         _triageStatus params ["_text", "", "_color"];
 
         (_display displayCtrl 2000) ctrlSetText _text;

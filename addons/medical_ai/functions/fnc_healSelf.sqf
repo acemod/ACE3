@@ -44,7 +44,7 @@ switch (true) do {
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 5];
     };
     case _needsMorphine: {
-        [_this] call EFUNC(medical,treatmentBasic_morphineLocal);
+        [_this, "Morphine", 2] call EFUNC(medical,treatmentBasic_morphineLocal);
         [_this, false, true] call FUNC(playTreatmentAnim);
         _this setVariable [QGVAR(treatmentOverAt), CBA_missionTime + 2];
 
