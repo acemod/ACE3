@@ -20,6 +20,7 @@
 params ["_target", "_impact", "_part", "_injuryIndex", "_injury", "_bandage"];
 
 private _classID = _injury select 1;
+private _bodyPartN = _injury select 2;
 private _className = EGVAR(medical_damage,woundClassNames) select _classID;
 
 // default, just in case..
@@ -59,23 +60,18 @@ if (isClass (_config >> _className)) then {
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 
 private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
-private _injuryType = _injury select 1;
 private _exist = false;
-private _bandagedInjury = [];
 {
-    if (_x select 1 == _injuryType && {_x select 2 == _injury select 2}) exitWith {
+    _x params ["", "_id", "_partN", "_amountOf"];
+    if (_id == _classID && {_partN == _bodyPartN}) exitWith {
+        _x set [3, _amountOf + _impact];
+        _bandagedWounds set [_forEachIndex, _x];
         _exist = true;
-        private _existingInjury = _x;
-        _existingInjury set [3, (_existingInjury select 3) + _impact];
-        _bandagedWounds set [_forEachIndex, _existingInjury];
-
-        _bandagedInjury = _existingInjury;
     };
 } forEach _bandagedWounds;
 
-if !(_exist) then {
-    // [ID, classID, bodypart, percentage treated, bloodloss, damage]
-    _bandagedInjury = +_injury;
+if (!_exist) then {
+    private _bandagedInjury = +_injury;
     _bandagedInjury set [3, _impact];
     _bandagedWounds pushBack _bandagedInjury;
 };
@@ -91,33 +87,31 @@ if (random 1 <= _reopeningChance) then {
         params ["_target", "_impact", "_part", "_injuryIndex", "_injury"];
         TRACE_5("params",_target,_impact,_part,_injuryIndex,_injury);
 
-        //if (alive _target) then {
-            private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
-            if (count _openWounds - 1 < _injuryIndex) exitWith {};
+        private _openWounds = _target getVariable [QEGVAR(medical,openWounds), []];
+        if (count _openWounds - 1 < _injuryIndex) exitWith {};
 
-            private _selectedInjury = _openWounds select _injuryIndex;
-            if (_selectedInjury select 1 == _injury select 1 && {_selectedInjury select 2 == _injury select 2}) then { // matching the IDs
-                private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
-                private _exist = false;
-                private _injuryId = _injury select 1;
-                {
-                    if (_x select 1 == _injuryId && {_x select 2 == _injury select 2}) exitWith {
-                        _exist = true;
-                        private _existingInjury = _x;
-                        _existingInjury set [3, ((_existingInjury select 3) - _impact) max 0];
-                        _bandagedWounds set [_forEachIndex, _existingInjury];
-                    };
-                } forEach _bandagedWounds;
-
-                if (_exist) then {
-                    TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
-                    _selectedInjury set [3, (_selectedInjury select 3) + _impact];
-                    _openWounds set [_injuryIndex, _selectedInjury];
-                    _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
-                    _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
+        _injury params ["", "_classID", "_bodyPartN"];
+        
+        private _selectedInjury = _openWounds select _injuryIndex;
+        if (_selectedInjury select 1 == _classID && {_selectedInjury select 2 == _bodyPartN}) then { // matching the IDs
+            private _bandagedWounds = _target getVariable [QEGVAR(medical,bandagedWounds), []];
+            private _exist = false;
+            {
+                _x params ["", "_id", "_partN", "_amountOf"];
+                if (_id == _classID && {_partN == _bodyPartN}) exitWith {
+                    _x set [3, 0 max (_amountOf - _impact)];
+                    _bandagedWounds set [_forEachIndex, _x];
+                    _exist = true;
                 };
+            } forEach _bandagedWounds;
+
+            if (_exist) then {
+                TRACE_2("Reopening Wound",_bandagedWounds,_openWounds);
+                _selectedInjury set [3, (_selectedInjury select 3) + _impact];
+                _openWounds set [_injuryIndex, _selectedInjury];
+                _target setVariable [QEGVAR(medical,bandagedWounds), _bandagedWounds, true];
+                _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
             };
-            // Otherwise something went wrong, we we don't reopen them..
-        //};
+        };
     }, [_target, _impact, _part, _injuryIndex, +_injury], _delay] call CBA_fnc_waitAndExecute;
 };
