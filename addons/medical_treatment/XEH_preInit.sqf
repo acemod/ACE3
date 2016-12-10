@@ -2,7 +2,9 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 // config to determine animation acceleration coefficient
 // adjusting these is trail and error

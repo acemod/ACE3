@@ -2,7 +2,9 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 // Hack for #3168 (units in static weapons do not take any damage):
 // Doing a manual pre-load with a small distance seems to fix the LOD problems

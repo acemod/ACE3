@@ -226,7 +226,7 @@ class GVAR(Actions) {
         allowSelfTreatment = 0;
         requiredMedic = 0;
         treatmentTime = 15;
-        items[] = {"ACE_BodyBag"};
+        items[] = {"ACE_bodyBag"};
         condition = "!alive _target";
         callbackSuccess = QFUNC(actionPlaceInBodyBag);
         callbackFailure = "";
