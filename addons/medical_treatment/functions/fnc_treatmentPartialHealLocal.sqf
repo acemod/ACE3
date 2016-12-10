@@ -34,10 +34,6 @@ if ((_bodyPartDamage select 4) < 0.3 && {(_bodyPartDamage select 5) < 0.3}) then
     [_unit, false] call EFUNC(medical_engine,setLimping);
 };
 
-private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
-private _bloodlossRemainder = (DEFAULT_BLOOD_VOLUME - BLOOD_VOLUME_CLASS_4_HEMORRHAGE) * (1 - _healingPower);
-_target setVariable [QEGVAR(medical,bloodVolume), _bloodVolume max (DEFAULT_BLOOD_VOLUME - _bloodlossRemainder), true];
-
 // Resetting damage
 _target setDamage 0;
 
