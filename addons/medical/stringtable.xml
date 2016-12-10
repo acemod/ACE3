@@ -779,8 +779,12 @@
             <Portuguese>Sangrando</Portuguese>
             <Japanese>出血している</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Status_MildPain">
+            <English>In mild pain</English>
+            <German>Hat leichte Schmerzen</German>
+        </Key>
         <Key ID="STR_ACE_Medical_Status_Pain">
-            <English>In Pain</English>
+            <English>In pain</English>
             <German>Hat Schmerzen</German>
             <Russian>Испытывает боль</Russian>
             <Spanish>Con dolor</Spanish>
@@ -791,6 +795,10 @@
             <Italian>Con dolore</Italian>
             <Portuguese>Com dor</Portuguese>
             <Japanese>痛みがある</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Status_SeverePain">
+            <English>In severe pain</English>
+            <German>Hat starke Schmerzen</German>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Lost_Blood">
             <English>Lost a lot of Blood</English>
