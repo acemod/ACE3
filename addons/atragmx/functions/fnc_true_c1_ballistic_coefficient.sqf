@@ -26,6 +26,7 @@ if (_actualDrop > _referenceDrop) then {
 };
 
 private _solutionInput = +GVAR(targetSolutionInput);
+_solutionInput set [ 8, 200];
 _solutionInput set [13, GVAR(truingDropRangeData) select 1];
 private _c1 = _solutionInput select 14;
 

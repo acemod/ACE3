@@ -221,6 +221,8 @@ class CfgAmmo {
             seekerMinRange = 0;
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
+            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+            
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
