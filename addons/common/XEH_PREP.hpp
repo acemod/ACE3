@@ -145,6 +145,7 @@ PREP(setPlayerOwner);
 PREP(setProne);
 PREP(setSetting);
 PREP(setSettingFromConfig);
+PREP(setUniqueEventHandler);
 PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
