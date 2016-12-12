@@ -204,6 +204,26 @@
             <Japanese>防衛範囲</Japanese>
             <Polish>Osłaniaj obszar</Polish>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
+            <English>Update Editable Objects</English>
+            <Japanese>編集可能なオブジェクトを更新</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
+            <English>All Curators</English>
+            <Japanese>全キュレーター</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
+            <English>Apply changes to all curators</English>
+            <Japanese>全キュレーターへ変更を適用</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
+            <English>Remove Objects</English>
+            <Japanese>オブジェクトの削除</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
+            <English>Remove existing instead of adding new</English>
+            <Japanese>新しく追加するために削除します</Japanese>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
             <French>Compétence global de l'IA</French>
