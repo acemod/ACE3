@@ -42,7 +42,7 @@ private _mostEffectiveInjury = _openWounds select 0;
 private _exit = false;
 
 {
-    _x params ["", "_classID", "_partIndexN", "_amountOf", "_bleeding"];
+    _x params ["", "_classID", "_partIndexN", "_amountOf", "_bleeding", "_damage", "_category"];
     TRACE_2("OPENWOUND: ", _target, _x);
 
     // Only parse injuries that are for the selected bodypart.
@@ -50,7 +50,8 @@ private _exit = false;
         private _woundEffectiveness = _effectiveness;
 
         // Select the classname from the wound classname storage
-        private _className = EGVAR(medical_damage,woundClassNames) select _classID;
+        private _postfix = ["Minor", "Medium", "Large"] select _category;
+        private _className = format ["%1%2", EGVAR(medical_damage,woundClassNames) select _classID, _postfix];
 
         // Check if this wound type has attributes specified for the used bandage
         if (isClass (_config >> _className)) then {

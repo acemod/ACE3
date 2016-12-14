@@ -52,9 +52,13 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
     private _painfullness = 0.05 + 0.95 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
 
     _bleeding = _bleeding * _bloodiness;
+    
+     // wound category (minor, medium, large)
+    private _category = floor ((0 max _bleeding min 0.1) / 0.05);
 
     _x set [4, _bleeding];
     _x set [5, _damage];
+    _x set [6, _category];
 
     private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness;
     _painLevel = _painLevel max _pain;
@@ -76,11 +80,9 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
     // if possible merge into existing wounds
     private _createNewWound = true;
     {
-        _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage"];
+        _x params ["", "_classID", "_bodyPartN", "_oldAmountOf", "_oldBleeding", "_oldDamage", "_oldCategory"];
         if (_woundClassIDToAdd == _classID && {_bodyPartNToAdd == _bodyPartN && {(_damage < PENETRATION_THRESHOLD) isEqualTo (_oldDamage < PENETRATION_THRESHOLD)}}) then {
-            private _oldCategory = (floor ((0 max _oldBleeding min 0.1) / 0.05));
-            private _newCategory = (floor ((0 max _bleeding min 0.1) / 0.05));
-            if (_oldCategory == _newCategory) exitWith {
+            if (_oldCategory == _category) exitWith {
                 private _newAmountOf = _oldAmountOf + 1;
                 _x set [3, _newAmountOf];
                 private _newBleeding = (_oldAmountOf * _oldBleeding + _bleeding) / _newAmountOf;
