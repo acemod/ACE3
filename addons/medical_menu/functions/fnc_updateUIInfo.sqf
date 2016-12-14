@@ -39,17 +39,19 @@ if (((_target getVariable [QEGVAR(medical,tourniquets), [0, 0, 0, 0, 0, 0]]) sel
     _genericMessages pushBack [localize ELSTRING(medical,Status_Tourniquet_Applied), [0.77, 0.51, 0.08, 1]];
 };
 
-private _painLevel = _target call EFUNC(medical,getPainLevel);
-if (_painLevel > 0) then {
-    private _painText = localize ELSTRING(medical,Status_Pain);
-    if (_painLevel < 0.1) then {
-        _painText = localize ELSTRING(medical,Status_MildPain);
-    } else {
-        if (_painLevel > 0.5) then {
-            _painText = localize ELSTRING(medical,Status_SeverePain);
+if ([ACE_player, EGVAR(medical,showPainInMenu)] call EFUNC(medical,isMedic)) then {
+    private _painLevel = _target call EFUNC(medical,getPainLevel);
+    if (_painLevel > 0) then {
+        private _painText = localize ELSTRING(medical,Status_Pain);
+        if (_painLevel < 0.1) then {
+            _painText = localize ELSTRING(medical,Status_MildPain);
+        } else {
+            if (_painLevel > 0.5) then {
+                _painText = localize ELSTRING(medical,Status_SeverePain);
+            };
         };
+        _genericMessages pushback [_painText, [1, 1, 1, 1]];
     };
-    _genericMessages pushback [_painText, [1, 1, 1, 1]];
 };
 
 private _totalIvVolume = 0;
