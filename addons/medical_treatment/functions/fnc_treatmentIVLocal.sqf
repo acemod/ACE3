@@ -3,9 +3,9 @@
  * IV Treatment local callback
  *
  * Arguments:
- * 0: The medic <OBJECT>
- * 1: Treatment classname <STRING>
- *
+ * 0: The patient <OBJECT>
+ * 1: Treatment class name <STRING>
+ * 2: Body part <STRING>
  *
  * Return Value:
  * None
@@ -15,7 +15,10 @@
 
 #include "script_component.hpp"
 
-params ["_target", "_treatmentClassname"];
+params ["_target", "_treatmentClassname", "_bodyPart"];
+
+private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+if (_partIndex < 0) exitWith { false };
 
 private _bloodVolume = _target getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
 
@@ -41,6 +44,6 @@ if (isClass (_config >> _treatmentClassname)) then {
 };
 
 private _bloodBags = _target getVariable [QEGVAR(medical,ivBags), []];
-_bloodBags pushBack [_volumeAdded]; // Future BagType: [_volumeAdded, _type]
+_bloodBags pushBack [_volumeAdded, _type, _partIndex];
 
 _target setVariable [QEGVAR(medical,ivBags), _bloodBags, true];

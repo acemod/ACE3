@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * IV Treatment callback
+ * Bandage treatment callback
  *
  * Arguments:
  * 0: The medic <OBJECT>
