@@ -98,7 +98,7 @@ _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 _target setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {EGVAR(medical,enableAdvancedWounds)}) then {
+if (_impact > 0 && {EGVAR(medical,woundReopening)}) then {
     [_target, _impact, _partIndex, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 

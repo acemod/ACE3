@@ -11,7 +11,7 @@ GVAR(SELECTIONS) = ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"];
 
 GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statemachine_fnc_createFromConfig;
 
-// @todo, ACE_Settings
+/*
 [
     QGVAR(advancedBandages),
     "CHECKBOX",
@@ -51,5 +51,6 @@ GVAR(STATE_MACHINE) = (configFile >> "ACE_Medical_StateMachine") call CBA_statem
     [0, 30, 2, 0],
     true
 ] call CBA_Settings_fnc_init;
+*/
 
 ADDON = true;

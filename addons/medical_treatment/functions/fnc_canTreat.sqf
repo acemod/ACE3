@@ -24,12 +24,23 @@ if !(_target isKindOf "CAManBase") exitWith {false};
 
 private _config = configFile >> QGVAR(Actions) >> _className;
 
-if !(isClass _config) exitwith {false};
+if !(isClass _config) exitWith {false};
 
 // allow self treatment check
 private _isSelf = _caller isEqualTo _target;
+private _allowSelf = 0;
 
-if (_isSelf && {getNumber (_config >> "allowSelfTreatment") == 0}) exitwith {false};
+if (_isSelf) then {
+    if (isNumber (_config >> "allowSelfTreatment")) then {
+        _allowSelf = getNumber (_config >> "allowSelfTreatment");
+    } else {
+        if (isText (_config >> "allowSelfTreatment")) then {
+            _allowSelf = missionNamespace getVariable [getText (_config >> "allowSelfTreatment"), 0];
+        };
+    };
+};
+
+if (_isSelf && {_allowSelf == 0}) exitWith {false};
 
 private _medicRequired = 0;
 

@@ -2770,6 +2770,12 @@
             <Italian>Abilita Grida da parte delle unità ferite</Italian>
             <Japanese>負傷したユニットが叫ぶように</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_showPainInMenu_DisplayName">
+            <English>Show pain</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_showPainInMenu_Description">
+            <English>Who can see the pain status in the medical menu</English>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
             <Russian>Урон игроку</Russian>
@@ -2822,57 +2828,17 @@
             <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
             <Japanese>AI が死に始める前に損傷を受けるようにしますか？</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
-            <English>AI Unconsciousness</English>
-            <Russian>Потеря сознания ботами</Russian>
-            <Polish>Nieprzytomność AI</Polish>
-            <Spanish>Inconsciencia IA</Spanish>
-            <German>KI-Bewusstlosigkeit</German>
-            <Czech>Bezvědomí AI</Czech>
-            <Portuguese>Inconsciência da IA</Portuguese>
-            <French>Inconscience des IA</French>
-            <Hungarian>AI eszméletlenség</Hungarian>
-            <Italian>Incoscienza IA</Italian>
-            <Japanese>AI の気絶</Japanese>
+        <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_DisplayName">
+            <English>Fatal Injury</English>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
-            <English>Allow AI to go unconscious</English>
-            <Russian>Позволить ботам терять сознание</Russian>
-            <Polish>Czy AI może być nieprzytomne od odniesionych obrażeń?</Polish>
-            <Spanish>Permita a la IA caer inconsciente</Spanish>
-            <German>KI kann bewusstlos werden</German>
-            <Czech>Umožňuje AI upadnout do bezvědomí</Czech>
-            <Portuguese>Permite IA ficar inconsciente</Portuguese>
-            <French>Autoriser les IA à tomber inconscients</French>
-            <Hungarian>Engedélyezi az AI eszméletének elvesztését</Hungarian>
-            <Italian>Permetti alle IA di diventare incoscienti</Italian>
-            <Japanese>AI が気絶をするように</Japanese>
+        <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_Description">
+            <English>Defines when you can receive a fatal injury</English>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
-            <English>Remote Controlled AI</English>
-            <German>Ferngesteuerte KI-Einheiten</German>
-            <Spanish>IA controlada remotamente</Spanish>
-            <Portuguese>IA controlada remotamente</Portuguese>
-            <Polish>Zdalnie sterowane AI</Polish>
-            <Czech>Vzdáleně ovládané AI</Czech>
-            <French>Contrôle à distance des IA</French>
-            <Hungarian>Távvezérelt AI</Hungarian>
-            <Russian>Зевса считать ботом</Russian>
-            <Italian>IA Controllate in Remoto</Italian>
-            <Japanese>遠隔操作された AI</Japanese>
+        <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_DisplayName">
+            <English>CA time</English>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
-            <English>Treat remote controlled units as AI not players?</English>
-            <German>Legt fest, ob ferngesteuerte Einheiten als KI anstatt als Spieler behandelt werden sollen.</German>
-            <Spanish>¿Tratar unidades remotamente controladas como IA?</Spanish>
-            <Portuguese>Tratar unidades remotamente controladas como IA?</Portuguese>
-            <Polish>Traktuj jednostki zdalnie sterowane (przez Zeusa) jako AI, nie jako graczy?</Polish>
-            <Czech>Ošetřit vzdáleně ovládané jednotky jako AI, ne jako hráče?</Czech>
-            <French>Soigner les unitées controlées à distance comme des IA et non comme des joueurs?</French>
-            <Hungarian>Távvezérelt egységek AI-ként, nem játékosként való kezelése?</Hungarian>
-            <Russian>Обрабатывать дистанционно управляемых юнитов как ботов, а не как игроков?</Russian>
-            <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
-            <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか？</Japanese>
+        <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_Description">
+            <English>Defines how long it takes to die from cardiac arrest?</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
@@ -2926,6 +2892,18 @@
             <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
             <Japanese>この係数では痛みの強さを変更できます</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_advancedBandages_DisplayName">
+            <English>Advanced Bandages</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_advancedBandages_Description">
+            <English>Enable advanced bandages</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_advancedMedication_DisplayName">
+            <English>Advanced Medication</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_advancedMedication_Description">
+            <English>Enable advanced medication</English>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
             <Russian>Включает медицинскую систему как для игроков, так и для ботов.</Russian>
@@ -2944,6 +2922,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_ivFlowRate_Description">
             <English>Effects how quickly IV Bags will have effect</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowSelfIV_DisplayName">
+            <English>Self IV Transfusion</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowSelfIV_Description">
+            <English>Allows using IV Transfusions on yourself</English>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
@@ -3074,7 +3058,7 @@
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか？</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_Epi_DisplayName">
             <English>Allow Epinephrine</English>
             <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
@@ -3086,17 +3070,8 @@
             <Russian>Разрешить Адреналин</Russian>
             <Japanese>アドレナリンの許可</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
-            <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
-            <German>Wer darf Epiniphrin zur vollständigen Heilung benutzen? (Standard Sanitätseinstellungen)</German>
-            <Spanish>Configura quienes pueden usar Epinefrina (Solo sistema médico básico)</Spanish>
-            <Polish>Kto może skorzystać z adrenaliny w celu pełnego uleczenia? (Tylko podstawowy system medyczny)</Polish>
-            <French>Qui peut utiliser l'adrénaline pour les soins complets ? (Médical basique seulement)</French>
-            <Italian>Chi può usare l'epinefrina per la cura completa? (solo per sistema medico di base)</Italian>
-            <Czech>Kdo může použít adrenalin k úplnému vyléčení? (Pouze základní zdravotní systém)</Czech>
-            <Portuguese>Quem pode usar Epinefrina para cura completa? (Somente sistema médico básico)</Portuguese>
-            <Russian>Кому разрешено использовать адреналин для полного излечения? (Только для базовой медицины)</Russian>
-            <Japanese>完全に回復できるよう誰しもがアドレナリンを使えるようにしますか？(ベーシック医療のみ)</Japanese>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_Epi_Description">
+            <English>Who can use Epinephrine?</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_Medkit_DisplayName">
             <English>Allow Medkit</English>
@@ -3201,7 +3176,7 @@
             <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
             <Japanese>応急処置キットを使うと削除しますか？</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_Epi_DisplayName">
             <English>Locations Epinephrine</English>
             <German>Orte für Epiniphrin</German>
             <Spanish>Ubicaciones epinefrina</Spanish>
@@ -3213,17 +3188,8 @@
             <Russian>Место использования адреналина</Russian>
             <Japanese>アドレナリンをつかう場所</Japanese>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
-            <English>Where can the Epinephrine be used? (Basic Medical)</English>
-            <German>Wo kann Epiniphrin verwendet werden? (Standard Sanitätseinstellungen)</German>
-            <Spanish>Configura donde puede usarse Epinefrina (Solo sistema médico básico)</Spanish>
-            <Polish>Gdzie można korzystać z adrenaliny? (Podstawowy system medyczny)</Polish>
-            <French>Où peuvent être utilisées les adrénalines ? (Médical basique)</French>
-            <Italian>Dove si può usare l'epinefrina? (Sistema medico di base)</Italian>
-            <Czech>Kde může být použit adrenalin? (Pouze základní zdravotní systém)</Czech>
-            <Portuguese>Onde pode-se usar a Epinefrina? (Somente sistema médico básico)</Portuguese>
-            <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
-            <Japanese>どこでもアドレナリンをつかえるようにしますか？(ベーシック医療のみ)</Japanese>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_Epi_Description">
+            <English>Where can the Epinephrine be used?</English>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_Medkit_DisplayName">
             <English>Locations Medkit</English>

@@ -119,9 +119,10 @@ class GVAR(Actions) {
     class Epinephrine: Morphine {
         displayName = ECSTRING(medical,Inject_Epinephrine);
         displayNameProgress = ECSTRING(medical,Injecting_Epinephrine);
+        requiredMedic = QEGVAR(medical,medicSetting_Epi);
         items[] = {"ACE_epinephrine"};
         litter[] = { {"All", "", {"ACE_MedicalLitter_epinephrine"}} };
-        //treatmentLocations[] = {QGVAR(useLocation_basicEpi)};
+        treatmentLocations[] = {QEGVAR(medical,useLocation_Epi)};
     };
 
     // --- iv bags
@@ -129,7 +130,7 @@ class GVAR(Actions) {
         displayName = ECSTRING(medical,Actions_Blood4_1000);
         displayNameProgress = ECSTRING(medical,Transfusing_Blood);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
-        allowSelfTreatment = 0;
+        allowSelfTreatment = QEGVAR(medical,allowSelfIV);
         category = "advanced";
         requiredMedic = 1;
         treatmentTime = 12;

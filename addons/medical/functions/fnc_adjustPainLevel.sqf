@@ -22,6 +22,8 @@ if (!local _unit) exitWith { ERROR("unit is not local"); };
 
 TRACE_2("ACE_DEBUG: adjustPainLevel Called",_unit,_desiredPainLevel);
 
+_desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
+
 private _pain = _unit getVariable [QGVAR(pain), 0];
 
 _pain = 0 max (_pain max _desiredPainLevel) min 1;
