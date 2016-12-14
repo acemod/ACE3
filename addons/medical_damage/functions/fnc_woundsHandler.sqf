@@ -40,6 +40,7 @@ call compile _extensionOutput;
 
 // todo: Make the pain and bleeding calculations part of the extension again
 private _painLevel = 0;
+private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
@@ -63,6 +64,9 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
     private _pain = ((GVAR(woundsData) select _woundClassIDToAdd) select 3) * _painfullness;
     _painLevel = _painLevel max _pain;
 
+    if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_damage > PENETRATION_THRESHOLD}}) then {
+        _critialDamage = true;
+    };
 #ifdef DEBUG_MODE_FULL
     systemChat format["%1, damage: %2, peneration: %3, bleeding: %4, pain: %5", _bodyPart, round(_damage * 100) / 100, _damage > PENETRATION_THRESHOLD, round(_bleeding * 1000) / 1000, round(_pain * 1000) / 1000];
 #endif
@@ -107,6 +111,8 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 // Only update if new wounds have been created
 if (count _woundsCreated > 0) then {
     _unit setVariable [QEGVAR(medical,lastUniqueWoundID), _woundID, true];
+};
+if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
 
