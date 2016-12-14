@@ -79,8 +79,9 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_showPainInMenu_DisplayName);
         description = CSTRING(MedicalSettings_showPainInMenu_Description);
-        typeName = "BOOL";
-        value = 1;
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(playerDamageThreshold) {
         category = CSTRING(Category_Medical);

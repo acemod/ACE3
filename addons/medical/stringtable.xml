@@ -2774,7 +2774,7 @@
             <English>Show pain</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_showPainInMenu_Description">
-            <English>Show pain status in the medical menu</English>
+            <English>Who can see the pain status in the medical menu</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
