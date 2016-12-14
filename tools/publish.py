@@ -112,11 +112,11 @@ def main(argv):
     
     
     #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
-    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
+    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
     publishFolder(folder, "773125288", changelog_path)
     
     #RHS Compat Commies - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
-    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
+    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
     publishFolder(folder, "773131200", changelog_path)
 
     #ADR97 (p90)- http://steamcommunity.com/sharedfiles/filedetails/?id=773136286
