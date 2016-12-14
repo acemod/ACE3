@@ -67,7 +67,7 @@ class ADDON {
             class Crush: Abrasion {
                 effectiveness = 1;
                 reopeningChance = 0.2;
-                reopeningMinDelay = 20;
+                reopeningMinDelay = 200;
                 reopeningMaxDelay = 1000;
             };
             class CrushMinor: Crush {
