@@ -89,7 +89,7 @@ class GVAR(Actions) {
     };
 
     // --- syringes
-    class Morphine: fieldDressing {
+    class Morphine: FieldDressing {
         displayName = ECSTRING(medical,Inject_Morphine);
         displayNameProgress = ECSTRING(medical,Injecting_Morphine);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
@@ -262,7 +262,7 @@ class GVAR(Actions) {
         litter[] = {};
     };
 
-    class SurgicalKit: fieldDressing {
+    class SurgicalKit: FieldDressing {
         displayName = ECSTRING(medical,Use_SurgicalKit);
         displayNameProgress = ECSTRING(medical,Stitching);
         category = "advanced";
