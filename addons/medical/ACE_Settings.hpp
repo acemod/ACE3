@@ -52,6 +52,13 @@ class ACE_Settings {
         typeName = "BOOL";
         value = 1;
     };
+    class GVAR(advancedDiagnose) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(AdvancedMedicalSettings_advancedDiagnose_DisplayName);
+        description = CSTRING(AdvancedMedicalSettings_advancedDiagnose_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
     class GVAR(woundReopening) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(AdvancedMedicalSettings_enableAdvancedWounds_DisplayName);
