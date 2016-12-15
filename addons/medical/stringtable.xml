@@ -2896,7 +2896,7 @@
             <English>Advanced Bandages</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advancedBandages_Description">
-            <English>Enable advanced bandages</English>
+            <English>Enable advanced bandages (required for wound reopening)</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advancedMedication_DisplayName">
             <English>Advanced Medication</English>
