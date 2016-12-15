@@ -37,8 +37,12 @@
 // --- pain
 #define PAIN_UNCONSCIOUS 0.5
 
-// Pain reduction per second
-#define PAIN_REDUCTION_SPEED 0.001
+// Pain fade out time (time it takes until pain is guaranteed to be completly gone)
+#define PAIN_FADE_TIME 900
+
+// Only relevant when advanced medication is disabled
+// Morphine pain suppression fade out time (time it takes until pain suppression is guaranteed to be completly gone)
+#define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
 #define SPONTANEOUS_WAKE_UP_CHANCE 0.2

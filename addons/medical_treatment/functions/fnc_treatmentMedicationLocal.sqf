@@ -19,9 +19,9 @@ TRACE_3("params",_target,_className,_partIndex);
 
 if (!EGVAR(medical,advancedMedication)) exitWith {
     if (_className == "Morphine") exitWith {
-        #define MORPHINEHEAL 0.8
-        private _pain = 0 max ((_target getVariable [QEGVAR(medical,pain), 0]) - MORPHINEHEAL);
-        _target setVariable [QEGVAR(medical,pain), _pain, true];
+        #define MORPHINE_PAIN_SUPPRESSION 0.6
+        private _painSupress = _target getVariable [QEGVAR(medical,painSuppress), 0];
+        _target setVariable [QEGVAR(medical,painSuppress), (_painSupress + MORPHINE_PAIN_SUPPRESSION) min 1, true];
     };
 
     if (_className == "Epinephrine") exitWith {

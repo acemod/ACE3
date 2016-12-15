@@ -86,10 +86,6 @@ private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 } forEach _tourniquets;
 [_unit, _tourniquetPain] call FUNC(adjustPainLevel);
 
-// Handle continuous pain reduction
-private _pain = _unit getVariable [QGVAR(pain), 0];
-_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT * PAIN_REDUCTION_SPEED), _syncValues];
-
 [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
 [_unit, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
