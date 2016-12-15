@@ -2774,7 +2774,7 @@
             <English>Show pain</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_showPainInMenu_Description">
-            <English>Who can see the pain status in the medical menu</English>
+            <English>Show pain status in the medical menu</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
@@ -3063,6 +3063,12 @@
             <Hungarian>Sérülnek-e az egységek autós ütközés során?</Hungarian>
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか？</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_PainVisualization_DisplayName">
+            <English>Allow Pain visualization</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_PainVisualization_Description">
+            <English>Who can see pain in the menu?</English>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_Epi_DisplayName">
             <English>Allow Epinephrine</English>

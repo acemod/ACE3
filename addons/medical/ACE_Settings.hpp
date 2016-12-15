@@ -86,9 +86,8 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_showPainInMenu_DisplayName);
         description = CSTRING(MedicalSettings_showPainInMenu_Description);
-        typeName = "SCALAR";
+        typeName = "BOOL";
         value = 0;
-        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(playerDamageThreshold) {
         category = CSTRING(Category_Medical);
@@ -118,6 +117,14 @@ class ACE_Settings {
         description = CSTRING(MedicalSettings_cardiacArrestTime_Description);
         value = 30;
         typeName = "SCALAR";
+    };
+    class GVAR(medicSetting_PainVisualization) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
+        description = CSTRING(MedicalSettings_medicSetting_PainVisualization_Description);
+        typeName = "SCALAR";
+        value = 0;
+        values[] = {"Anyone", "Medics only", "Doctors only"};
     };
     class GVAR(medicSetting_Epi) {
         category = CSTRING(Category_Medical);
