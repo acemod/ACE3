@@ -29,16 +29,16 @@
         _x params ["_bullet", "_airFriction"];
 
         private _bulletVelocity = velocity _bullet;
-        private _bulletSpeed = vectorMagnitude _bulletVelocity;
+        private _bulletSpeedSqr = vectorMagnitudeSqr _bulletVelocity;
 
-        if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeed < 100}}) then {
+        if ((!alive _bullet) || {(_bullet isKindOf "BulletBase") && {_bulletSpeedSqr < 10000}}) then {
             GVAR(trackedBullets) deleteAt (GVAR(trackedBullets) find _x);
         } else {
             if (_isWind) then {
                 private _trueVelocity = _bulletVelocity vectorDiff ACE_wind;
                 private _trueSpeed = vectorMagnitude _trueVelocity;
 
-                private _dragRef = _deltaT * _airFriction * _bulletSpeed * _bulletSpeed;
+                private _dragRef = _deltaT * _airFriction * _bulletSpeedSqr;
                 private _accelRef = (vectorNormalized _bulletVelocity) vectorMultiply (_dragRef);
                 _bulletVelocity = _bulletVelocity vectorDiff _accelRef;
 
