@@ -287,7 +287,7 @@ class CfgVehicles {
     class Heli_Light_02_base_F: Helicopter_Base_H {
         class Turrets: Turrets {
                 class CopilotTurret;
-                class MainTurret;
+                class MainTurret; // from RHS, not in vanilla
         };
     };
     class RHS_Mi8_base : Heli_Light_02_base_F {
