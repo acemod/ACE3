@@ -25,15 +25,13 @@ private _ammoToDetonate = [];
 private _totalAmmo = 0;
 
 // Get ammo from turrets
-if (_vehicle isKindOf "AllVehicles") then {
-    {
-        _x params ["_mag", "", "_count"];
-        if (_count > 0) then {
-            _ammoToDetonate pushBack [_mag, _count];
-            _totalAmmo = _totalAmmo + _count;
-        };
-    } forEach (magazinesAllTurrets _vehicle);
-};
+{
+    _x params ["_mag", "", "_count"];
+    if (_count > 0) then {
+        _ammoToDetonate pushBack [_mag, _count];
+        _totalAmmo = _totalAmmo + _count;
+    };
+} forEach (magazinesAllTurrets _vehicle);
 
 // Get ammo from cargo space
 {
