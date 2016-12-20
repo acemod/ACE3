@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Start fire in engine block of a car.
+ * Gets all magazines inside of a vehicle.
  *
  * Arguments:
  * 0: Vehicle <Object>
