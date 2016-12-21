@@ -11,5 +11,5 @@ if (!hasInterface) exitWith {};
 
 // Register fire event handler
 // Only for the local player and for AI. Non-local players will handle it themselves
-["ace_firedPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;
-["ace_firedNonPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;
+// ["ace_firedPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;
+// ["ace_firedNonPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;
