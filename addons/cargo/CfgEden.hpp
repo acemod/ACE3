@@ -25,11 +25,11 @@ class Cfg3DEN {
                         control = "Edit";
 
                         // Expression only runs on the server, must handle actions for all machines and future JIPs (Why BI?!)
-                        expression = QUOTE(_this setVariable [ARR_3('%s',_value,true)]; [QQGVAR(EdenObjectInit),_this] call CBA_fnc_globalEventJIP;);
+                        expression = QUOTE(_this setVariable [ARR_3('%s',_value,true)];);
                         defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(size),-1));
 
                         validate = "number";
-                        condition = "1-objectBrain";
+                        condition = "objectSimulated-objectBrain";
                         typeName = "NUMBER";
                     };
                 };

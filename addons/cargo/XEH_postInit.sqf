@@ -52,9 +52,6 @@
     _item setPosASL (AGLtoASL _emptyPosAGL);
 }] call CBA_fnc_addEventHandler;
 
-// Eden runs object attribute expressions on the server only (Why?!)
-[QGVAR(EdenObjectInit), DFUNC(initObject)] call CBA_fnc_addEventHandler;
-
 // Add all the vehicle init EHs (require initPost for set/get variables)
 ["LandVehicle", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
 ["Air", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
