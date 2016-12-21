@@ -44,10 +44,20 @@ if (_size != _currentSize) then {
     _object setVariable [QGVAR(canLoad), _size >= 0, _global]
 };
 
-// Add the load action menu if necessary
-[_object] call FUNC(initObject);
-
-// And globally if specified
+// Add the load action menu entry if necessary (globally if specified)
 if (_global) then {
-    [QGVAR(initObject), [_object]] call CBA_fnc_remoteEvent;
+    // If an existing ID is present, overwrite the current JIP-Stack-ID
+    private _jipID = _object getVariable QGVAR(setSize_jipID);
+
+    // Actions should be added to all future JIP players too
+    if (isNil "_jipID") then {
+        _jipID = [QGVAR(initObject), [_object]] call CBA_fnc_globalEventJIP;
+
+        // Store the ID for any future calls to this function
+        _object setVariable [QGVAR(setSize_jipID), _jipID, true];
+    } else {
+        [QGVAR(initObject), [_object], _jipID] call CBA_fnc_globalEventJIP;
+    };
+} else {
+    [_object] call FUNC(initObject);
 };

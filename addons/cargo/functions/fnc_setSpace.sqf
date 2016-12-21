@@ -43,10 +43,20 @@ if (_space != _currentSpace) then {
     _vehicle setVariable [QGVAR(hasCargo), _space > 0, _global];
 };
 
-// Add the load action menu if necessary
-[_vehicle] call FUNC(initVehicle);
-
-// And globally is specified
+// Add the unload action menu if necessary (globally if specified)
 if (_global) then {
-    [QGVAR(initVehicle), [_vehicle]] call CBA_fnc_remoteEvent;
+    // If an existing ID is present, overwrite the current JIP-Stack-ID
+    private _jipID = _vehicle getVariable QGVAR(setSpace_jipID);
+
+    // Actions should be added to all future JIP players too
+    if (isNil "_jipID") then {
+        _jipID = [QGVAR(initVehicle), [_vehicle]] call CBA_fnc_globalEventJIP;
+
+        // Store the ID for any future calls to this function
+        _vehicle setVariable [QGVAR(setSpace_jipID), _jipID, true];
+    } else {
+        [QGVAR(initVehicle), [_vehicle], _jipID] call CBA_fnc_globalEventJIP;
+    };
+} else {
+    [_vehicle] call FUNC(initVehicle);
 };
