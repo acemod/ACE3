@@ -42,6 +42,7 @@ if (_canLoadConfig) then {
 private _condition = {
     GVAR(enable) &&
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
+    {(crew _target) isEqualTo []} && // Can't load a vehicle with people inside
     {locked _target < 2} &&
     {alive _target} &&
     {[_player, _target, []] call EFUNC(common,canInteractWith)}
