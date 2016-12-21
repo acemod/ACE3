@@ -11,7 +11,7 @@ class Cfg3DEN {
                         property = QGVAR(space);
                         control = "Edit";
 
-                        expression = QUOTE(_this setVariable [ARR_3('%s',_value,true)];);
+                        expression = QUOTE([ARR_3(_this,_value,true)] call DFUNC(setSpace););
                         defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(space),-1));
 
                         validate = "number";
@@ -25,11 +25,11 @@ class Cfg3DEN {
                         control = "Edit";
 
                         // Expression only runs on the server, must handle actions for all machines and future JIPs (Why BI?!)
-                        expression = QUOTE(_this setVariable [ARR_3('%s',_value,true)];);
+                        expression = QUOTE([ARR_3(_this,_value,true)] call DFUNC(setSize););
                         defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(size),-1));
 
                         validate = "number";
-                        condition = "objectSimulated-objectBrain";
+                        condition = "1-objectBrain";
                         typeName = "NUMBER";
                     };
                 };

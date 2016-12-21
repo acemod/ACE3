@@ -20,12 +20,12 @@ TRACE_1("params", _vehicle);
 
 private _type = typeOf _vehicle;
 
-// If vehicle had space given to it via eden then override config hasCargo setting
-private _hasEdenCargo = _vehicle getVariable [QGVAR(space), -1] > 0;
-private _hasConfigCargo = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
+// If vehicle had space given to it via eden/public then override config hasCargo setting
+private _hasCargoPublic = _vehicle getVariable [QGVAR(hasCargo), false];
+private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
 
 // Nothing to do here if vehicle has no cargo space
-if !(_hasConfigCargo || _hasEdenCargo) exitWith {};
+if !(_hasCargoConfig || _hasCargoPublic) exitWith {};
 
 // Vehicle can have default ace cargo in its config
 if (isServer) then {
@@ -47,13 +47,17 @@ if (_type in GVAR(initializedVehicleClasses)) exitWith {};
 
 // Vehicles given cargo via eden have their actions added to the object
 // So this function may run for multiple of the same class in that case
-if (_hasConfigCargo) then {
+if (_hasCargoConfig) then {
     GVAR(initializedVehicleClasses) pushBack _type;
     TRACE_1("Adding unload cargo action to class", _type);
 };
 
 private _condition = {
-    GVAR(enable) && {locked _target < 2} && {alive _target} && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
+    GVAR(enable) &&
+    {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
+    {locked _target < 2} &&
+    {alive _target} &&
+    {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
 private _statement = {
     GVAR(interactionVehicle) = _target;
@@ -64,7 +68,7 @@ private _text = localize LSTRING(openMenu);
 private _icon = "";
 
 private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-if (_hasConfigCargo) then {
+if (_hasCargoConfig) then {
     [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
 } else {
     [_vehicle, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
@@ -88,7 +92,7 @@ if (_vehicle isKindOf "Air") then {
     private _icon = "";
 
     private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-    if (_hasConfigCargo) then {
+    if (_hasCargoConfig) then {
         [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass); // self action on the vehicle
     } else {
         [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);

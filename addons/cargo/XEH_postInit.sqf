@@ -52,6 +52,10 @@
     _item setPosASL (AGLtoASL _emptyPosAGL);
 }] call CBA_fnc_addEventHandler;
 
+// Private events to handle adding actions globally via public functions
+[QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
+[QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
+
 // Add all the vehicle init EHs (require initPost for set/get variables)
 ["LandVehicle", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
 ["Air", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;

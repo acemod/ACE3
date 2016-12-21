@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, SilentSpike
  * Initializes variables for loadable objects. Called from init EH.
  *
  * Arguments:
@@ -19,12 +19,12 @@ params ["_object"];
 private _type = typeOf _object;
 TRACE_2("params",_object,_type);
 
-// If object had size given to it via eden then override config canLoad setting
-private _canLoadEden = _object getVariable [QGVAR(size), -1] >= 0;
-private _canLoadConfig = _object getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad))] == 1;
+// If object had size given to it via eden/public then override config canLoad setting
+private _canLoadPublic = _object getVariable [QGVAR(canLoad), false];
+private _canLoadConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad)) == 1;
 
 // Nothing to do here if object can't be loaded
-if !(_canLoadConfig || _canLoadEden) exitWith {};
+if !(_canLoadConfig || _canLoadPublic) exitWith {};
 
 // Servers and HCs do not require action menus (beyond this point)
 if !(hasInterface) exitWith {};
@@ -41,7 +41,7 @@ if (_canLoadConfig) then {
 
 private _condition = {
     GVAR(enable) &&
-    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) == 1} &&
+    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
     {locked _target < 2} &&
     {alive _target} &&
     {[_player, _target, []] call EFUNC(common,canInteractWith)}
