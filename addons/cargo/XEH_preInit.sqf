@@ -7,6 +7,8 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(initializedItemClasses) = [];
+GVAR(initializedItemObjects) = [];
 GVAR(initializedVehicleClasses) = [];
+GVAR(initalizedVehicleObjects) = [];
 
 ADDON = true;

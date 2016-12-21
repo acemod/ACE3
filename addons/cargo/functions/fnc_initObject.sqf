@@ -31,15 +31,19 @@ if !(hasInterface) exitWith {};
 
 // Unnecessary to add actions to an object class that's already got them
 if (_type in GVAR(initializedItemClasses)) exitWith {};
+if (_object in GVAR(initializedItemObjects)) exitWith {};
 
 // Objects given size via eden have their actions added to the object
 // So this function may run for multiple of the same class in that case
 if (_canLoadConfig) then {
     GVAR(initializedItemClasses) pushBack _type;
     TRACE_1("Adding load cargo action to class", _type);
+} else {
+    GVAR(initializedItemObjects) pushBack _object;
+    TRACE_1("Adding load cargo action to object", _object);
 };
 
-// Vehicles with passangers inside are prevented from being loaded in `fnc_canLoadItemIn`
+// Vehicles with passengers inside are prevented from being loaded in `fnc_canLoadItemIn`
 private _condition = {
     GVAR(enable) &&
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
