@@ -39,10 +39,10 @@ if (_canLoadConfig) then {
     TRACE_1("Adding load cargo action to class", _type);
 };
 
+// Vehicles with passangers inside are prevented from being loaded in `fnc_canLoadItemIn`
 private _condition = {
     GVAR(enable) &&
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
-    {(crew _target) isEqualTo []} && // Can't load a vehicle with people inside
     {locked _target < 2} &&
     {alive _target} &&
     {[_player, _target, []] call EFUNC(common,canInteractWith)}
