@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Cargo space <NUMBER> (Default: 1)
+ * 1: Cargo space <NUMBER>
  * 2: Apply globally <BOOL> (Default: false)
  *
  * Return Value:
@@ -29,33 +29,32 @@ params [
     ["_global",false,[true]]
 ];
 
-if (isNull _vehicle) exitWith {};
+// Nothing to do here
+if (
+    (isNil "_space") ||
+    {isNull _vehicle} ||
+    {_space == _vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicle)]}
+) exitWith {};
 
-// Space matters
-private _currentSpace = _vehicle getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(space))];
-if (isNil "_space") then {
-    _space = _currentSpace;
-};
+// Apply new space globally if specified
+// Necessary to update value, even if no space, as API could be used again
+_vehicle setVariable [QGVAR(hasCargo), _space > 0, _global];
+_vehicle setVariable [QGVAR(space), _space, _global];
 
-// If specified, apply new space on all machines
-if (_space != _currentSpace) then {
-    _vehicle setVariable [QGVAR(space), _space, _global];
-    _vehicle setVariable [QGVAR(hasCargo), _space > 0, _global];
-};
+// If no cargo space no need for cargo menu
+if (_space <= 0) exitWith {};
 
-// Add the unload action menu if necessary (globally if specified)
+// Add the cargo menu if necessary (globally if specified)
 if (_global) then {
-    // If an existing ID is present, overwrite the current JIP-Stack-ID
+    // If an existing ID is present, cargo menu has already been added globally
     private _jipID = _vehicle getVariable QGVAR(setSpace_jipID);
 
-    // Actions should be added to all future JIP players too
+    // Cargo menu should be added to all future JIP players too
     if (isNil "_jipID") then {
         _jipID = [QGVAR(initVehicle), [_vehicle]] call CBA_fnc_globalEventJIP;
 
         // Store the ID for any future calls to this function
         _vehicle setVariable [QGVAR(setSpace_jipID), _jipID, true];
-    } else {
-        [QGVAR(initVehicle), [_vehicle], _jipID] call CBA_fnc_globalEventJIP;
     };
 } else {
     [_vehicle] call FUNC(initVehicle);

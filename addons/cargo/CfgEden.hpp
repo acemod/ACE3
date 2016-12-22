@@ -1,5 +1,3 @@
-#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
-
 class Cfg3DEN {
     class Object {
         class AttributeCategories {
@@ -12,7 +10,7 @@ class Cfg3DEN {
                         control = "Edit";
 
                         expression = QUOTE([ARR_3(_this,_value,true)] call DFUNC(setSpace););
-                        defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(space),-1));
+                        defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(space),0));
 
                         validate = "number";
                         condition = "objectHasInventoryCargo";

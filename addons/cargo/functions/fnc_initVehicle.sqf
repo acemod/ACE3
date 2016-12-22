@@ -44,7 +44,7 @@ if !(hasInterface) exitWith {};
 
 // Unnecessary to add actions to a vehicle class that's already got them
 if (_type in GVAR(initializedVehicleClasses)) exitWith {};
-if (_vehicle in GVAR(initalizedVehicleObjects)) exitWith {};
+if (_vehicle getVariable [QGVAR(initVehicle),false]) exitWith {};
 
 // Vehicles given cargo via eden have their actions added to the object
 // So this function may run for multiple of the same class in that case
@@ -52,7 +52,7 @@ if (_hasCargoConfig) then {
     GVAR(initializedVehicleClasses) pushBack _type;
     TRACE_1("Adding unload cargo action to class", _type);
 } else {
-    GVAR(initalizedVehicleObjects) pushBack _vehicle;
+    _vehicle setVariable [QGVAR(initVehicle),true];
     TRACE_1("Adding unload cargo action to object", _vehicle);
 };
 

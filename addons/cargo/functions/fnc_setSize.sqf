@@ -30,23 +30,24 @@ params [
     ["_global",false,[true]]
 ];
 
-if (isNull _object) exitWith {};
+// Nothing to do here
+if (
+    (isNil "_size") ||
+    {isNull _object} ||
+    {_size == _object getVariable [QGVAR(size), CARGO_SIZE(typeOf _object)]}
+) exitWith {};
 
-// Size matters
-private _currentSize = _object getVariable [QGVAR(size), [_object] call FUNC(getSizeItem)];
-if (isNil "_size") then {
-    _size = _currentSize;
-};
+// Apply new size globally if specified
+// Necessary to update value, even if unloadable, as API could be used again
+_object setVariable [QGVAR(canLoad), _size >= 0, _global];
+_object setVariable [QGVAR(size), _size, _global];
 
-// If specified, apply new size on all machines
-if (_size != _currentSize) then {
-    _object setVariable [QGVAR(size), _size, _global];
-    _object setVariable [QGVAR(canLoad), _size >= 0, _global]
-};
+// If no size no need for load action
+if (_size < 0) exitWith {};
 
-// Add the load action menu entry if necessary (globally if specified)
+// Add the load action if necessary (globally if specified)
 if (_global) then {
-    // If an existing ID is present, overwrite the current JIP-Stack-ID
+    // If an existing ID is present, load action has already been added globally
     private _jipID = _object getVariable QGVAR(setSize_jipID);
 
     // Actions should be added to all future JIP players too
@@ -55,8 +56,6 @@ if (_global) then {
 
         // Store the ID for any future calls to this function
         _object setVariable [QGVAR(setSize_jipID), _jipID, true];
-    } else {
-        [QGVAR(initObject), [_object], _jipID] call CBA_fnc_globalEventJIP;
     };
 } else {
     [_object] call FUNC(initObject);
