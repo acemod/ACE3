@@ -1,7 +1,6 @@
 class CfgMagazines {
     class CA_LauncherMagazine;
-    class NLAW_F: CA_LauncherMagazine {};
-    class ACE_NLAW_F: NLAW_F {
+    class NLAW_F: CA_LauncherMagazine {
         ammo = "ACE_NLAW";
     };
 };

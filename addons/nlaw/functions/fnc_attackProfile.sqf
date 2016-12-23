@@ -20,18 +20,37 @@
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
 _args params ["_firedEH", "_launchParams"];
 _launchParams params ["_target","_targetLaunchParams"];
-_targetLaunchParams params ["", "", "_launchPos"];
-_firedEH params ["","","","","","","_projectile"];
+_targetLaunchParams params ["_target", "", "_launchPos"];
+_firedEH params ["_shooter","","","","","","_projectile"];
 
 // Get state params:
 if (_attackProfileStateParams isEqualTo []) then {
-    TRACE_1("start of attack profile",CBA_missionTime);
+    TRACE_2("start of attack profile",CBA_missionTime,vectorDir _projectile);
     _attackProfileStateParams set [0, CBA_missionTime];
-    _attackProfileStateParams set [1, ACE_player weaponDirection (currentWeapon ACE_player)];
 
-    _attackProfileStateParams set [2, GVAR(yawChange)];
-    _attackProfileStateParams set [3, GVAR(pitchChange)];
-
+    if (isPlayer _shooter) then {
+        TRACE_2("player",GVAR(yawChange),GVAR(pitchChange));
+        _attackProfileStateParams set [1, _shooter weaponDirection (currentWeapon _shooter)];
+        _attackProfileStateParams set [2, GVAR(yawChange)];
+        _attackProfileStateParams set [3, GVAR(pitchChange)];
+    } else {
+        if ((!isNil "_target") && {!isNull _target}) then {
+            private _realLOS = (getPosASL _projectile) vectorFromTo ((aimPos _target) vectorAdd [0,0,1]);
+            (((eyePos _shooter) vectorFromTo (aimPos _target)) call CBA_fnc_vect2Polar) params ["", "_startYaw", "_startPitch"];
+            (((eyePos _shooter) vectorFromTo ((aimPos _target) vectorAdd ((velocity _target) vectorMultiply (0.8 + random 0.4)))) call CBA_fnc_vect2Polar) params ["", "_predictedYaw", "_predictedPitch"];
+            private _yawChange = ([_predictedYaw - _startYaw] call CBA_fnc_simplifyAngle180);
+            private _pitchChange = ([_predictedPitch - _startPitch] call CBA_fnc_simplifyAngle180);
+            TRACE_4("AI",_target,_realLOS,_yawChange,_pitchChange);
+            _attackProfileStateParams set [1, _realLOS];
+            _attackProfileStateParams set [2, _yawChange];
+            _attackProfileStateParams set [3, _pitchChange];
+        } else {
+            TRACE_1("AI - no target",_target);
+            _attackProfileStateParams set [1, _shooter weaponDirection (currentWeapon _shooter)];
+            _attackProfileStateParams set [2, 0];
+            _attackProfileStateParams set [3, 0];
+        };
+    };
 };
 _attackProfileStateParams params ["_startTime", "_startLOS", "_yawChange", "_pitchChange"];
 
