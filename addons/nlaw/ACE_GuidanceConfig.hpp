@@ -1,7 +1,8 @@
 class EGVAR(missileguidance,AttackProfiles) {
-    class GVAR(attackProfile) {
+    class GVAR(directAttack) {
         functionName = QFUNC(attackProfile);
     };
+    class GVAR(overflyTopAttack): GVAR(directAttack) {};
 };
 class EGVAR(missileguidance,SeekerTypes) {
     class GVAR(seeker) {

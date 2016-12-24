@@ -1,10 +1,6 @@
 class CfgAmmo {
     class M_NLAW_AT_F;
     class ACE_NLAW: M_NLAW_AT_F {
-        // irLock = 0;
-        // laserLock = 0;
-        // manualControl = 0;
-
         class ace_missileguidance {
             enabled = 1;
 
@@ -29,8 +25,11 @@ class CfgAmmo {
             seekerMaxRange = 10;      // Range from the missile which the seeker can visually search
 
             // Attack profile type selection
-            defaultAttackProfile = QGVAR(attackProfile);
-            attackProfiles[] = {QGVAR(attackProfile)};
+            defaultAttackProfile = QGVAR(directAttack);
+            attackProfiles[] = {QGVAR(directAttack), QGVAR(overflyTopAttack)};
+            
+            // Run once at fired event
+            onFired = QFUNC(onFired);
         };
     };
 };

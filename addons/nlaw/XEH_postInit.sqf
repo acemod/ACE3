@@ -18,9 +18,6 @@ GVAR(pitchChange) = 0;
     false
 }, [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
 
-
-
-
 #ifdef DRAW_NLAW_INFO
 addMissionEventHandler ["Draw3d", {
     // GREEN - Draw an object called "testTarget"'s aim pos and 1 sec aimpos predicted by velocity

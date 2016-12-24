@@ -18,42 +18,16 @@
 #include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
+
 _args params ["_firedEH", "_launchParams"];
-_launchParams params ["_target","_targetLaunchParams"];
-_targetLaunchParams params ["_target", "", "_launchPos"];
-_firedEH params ["_shooter","","","","","","_projectile"];
+_launchParams params ["","_targetLaunchParams", "", "_attackProfile"];
+_targetLaunchParams params ["", "", "_launchPos"];
+_firedEH params ["","","","","","","_projectile"];
 
-// Get state params:
-if (_attackProfileStateParams isEqualTo []) then {
-    TRACE_2("start of attack profile",CBA_missionTime,vectorDir _projectile);
-    _attackProfileStateParams set [0, CBA_missionTime];
+// Use seeker (if terminal)
+if (!(_seekerTargetPos isEqualTo [0,0,0])) exitWith {_seekerTargetPos};
 
-    if (isPlayer _shooter) then {
-        TRACE_2("player",GVAR(yawChange),GVAR(pitchChange));
-        _attackProfileStateParams set [1, _shooter weaponDirection (currentWeapon _shooter)];
-        _attackProfileStateParams set [2, GVAR(yawChange)];
-        _attackProfileStateParams set [3, GVAR(pitchChange)];
-    } else {
-        if ((!isNil "_target") && {!isNull _target}) then {
-            private _realLOS = (getPosASL _projectile) vectorFromTo ((aimPos _target) vectorAdd [0,0,1]);
-            (((eyePos _shooter) vectorFromTo (aimPos _target)) call CBA_fnc_vect2Polar) params ["", "_startYaw", "_startPitch"];
-            (((eyePos _shooter) vectorFromTo ((aimPos _target) vectorAdd ((velocity _target) vectorMultiply (0.8 + random 0.4)))) call CBA_fnc_vect2Polar) params ["", "_predictedYaw", "_predictedPitch"];
-            private _yawChange = ([_predictedYaw - _startYaw] call CBA_fnc_simplifyAngle180);
-            private _pitchChange = ([_predictedPitch - _startPitch] call CBA_fnc_simplifyAngle180);
-            TRACE_4("AI",_target,_realLOS,_yawChange,_pitchChange);
-            _attackProfileStateParams set [1, _realLOS];
-            _attackProfileStateParams set [2, _yawChange];
-            _attackProfileStateParams set [3, _pitchChange];
-        } else {
-            TRACE_1("AI - no target",_target);
-            _attackProfileStateParams set [1, _shooter weaponDirection (currentWeapon _shooter)];
-            _attackProfileStateParams set [2, 0];
-            _attackProfileStateParams set [3, 0];
-        };
-    };
-};
 _attackProfileStateParams params ["_startTime", "_startLOS", "_yawChange", "_pitchChange"];
-
 (_startLOS call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
 
 private _projectilePos = getPosASL _projectile;
@@ -64,6 +38,11 @@ private _realYaw = _yaw + _yawChange * _flightTime;
 private _realPitch = _pitch + _pitchChange * _flightTime;
 
 private _returnTargetPos = _launchPos vectorAdd ([_distanceFromLaunch, _realYaw, _realPitch] call CBA_fnc_polar2vect);
+
+if (_attackProfile == QGVAR(overflyTopAttack)) then {
+    _returnTargetPos = _returnTargetPos vectorAdd [0,0,2];
+};
+
 
 #ifdef DRAW_NLAW_INFO
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL _launchPos, 0.75, 0.75, 0, "LAUNCH", 1, 0.025, "TahomaB"];

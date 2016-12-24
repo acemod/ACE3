@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NLAW">
-        <Key ID="STR_ACE_nlaw_trackTarget">
+        <Key ID="STR_ACE_NLAW_trackTarget">
             <English>NLAW Track Target (Hold)</English>
         </Key>
     </Package>
