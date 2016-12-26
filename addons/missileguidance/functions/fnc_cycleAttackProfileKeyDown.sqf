@@ -48,6 +48,7 @@ if ((count _attackProfiles) <= 1) exitWith {TRACE_1("no choices for attack profi
 
 private _currentFireMode = _currentShooter getVariable [QGVAR(attackProfile), "#undefined"];
 
+// Just like onFired, this is case sensitive!
 private _index = _attackProfiles find _currentFireMode;
 if (_index == -1) then {
     _index = _attackProfiles find (getText (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "defaultAttackProfile"));
@@ -59,3 +60,8 @@ TRACE_4("",_currentFireMode,_nextFireMode,_index,_attackProfiles);
 _currentShooter setVariable [QGVAR(attackProfile), _nextFireMode, false];
 
 playSound "ACE_Sound_Click";
+
+if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "showHintOnCycle")) == 1) then {
+    private _localizedName = getText (configFile >> QGVAR(AttackProfiles) >> _nextFireMode >> "name");
+    [_localizedName] call EFUNC(common,displayTextStructured);
+};
