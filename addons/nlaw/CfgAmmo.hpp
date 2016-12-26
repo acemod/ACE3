@@ -14,8 +14,8 @@ class CfgAmmo {
             defaultSeekerType = QGVAR(seeker);
             seekerTypes[] = {QGVAR(seeker)};
 
-            defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = { "LOAL", "LOBL" };
+            defaultSeekerLockMode = "LOBL";
+            seekerLockModes[] = {"LOBL"};
 
             seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 45;           // Angle in front of the missile which can be searched
@@ -27,6 +27,7 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = QGVAR(directAttack);
             attackProfiles[] = {QGVAR(directAttack), QGVAR(overflyTopAttack)};
+            showHintOnCycle = 1;
             
             // Run once at fired event
             onFired = QFUNC(onFired);
