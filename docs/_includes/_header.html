@@ -8,7 +8,7 @@
         <meta name="description" content="{% if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
         <meta name="keywords" content="{% if page.keywords != null %}{{ page.keywords }}{% else %}{{site.keywords}}{% endif %}" />
         <meta name="robots" content="INDEX,FOLLOW" />
-        <link rel="canonical" href="http://ace3mod.com{{ page.url }}" />
+        <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
 
