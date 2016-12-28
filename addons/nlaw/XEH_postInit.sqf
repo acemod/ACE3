@@ -8,7 +8,7 @@ GVAR(isLockKeyDown) = false;
 GVAR(yawChange) = 0;
 GVAR(pitchChange) = 0;
 
-
+// Add keybind
 ["ACE3 Weapons", QGVAR(trackTarget), localize LSTRING(trackTarget), {
     call FUNC(keyDown);
     false // Return false so it doesn't block the rest weapon action
@@ -18,6 +18,9 @@ GVAR(pitchChange) = 0;
     false
 }, [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
 
+
+
+// Visual debuging, idealy used with a moving vehicle called "testTarget"
 #ifdef DRAW_NLAW_INFO
 addMissionEventHandler ["Draw3d", {
     // GREEN - Draw an object called "testTarget"'s aim pos and 1 sec aimpos predicted by velocity

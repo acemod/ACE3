@@ -1,7 +1,7 @@
 ace_nlaw
 ===============
 
-blah
+Adds Predicted Line Of Sight guidance to the NLAW.
 
 ## Maintainers
 
