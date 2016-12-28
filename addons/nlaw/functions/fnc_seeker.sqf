@@ -28,8 +28,8 @@ if (_attackProfile == QGVAR(directAttack)) exitWith {[0,0,0]};
 
 private _projPos = getPosASL _projectile;
 
-// Arm after 25 meters
-if ((_projPos distance _launchPos) > 25) then {
+// Arm seeker after 20 meters
+if ((_projPos distance _launchPos) >= 20) then {
     scopeName "targetScan";
     BEGIN_COUNTER(targetScan);
 
