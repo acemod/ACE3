@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * Handles the magnetic seeker for the top-down attack
+ * Handles the top down attack seeker for missile guidance.
+ * Has a very short range (IR/Magnetic?) seeker that will trigger the shaped charge midair above the target.
  *
  * Arguments:
  * 1: Guidance Arg Array <ARRAY>
@@ -27,52 +28,67 @@ if (_attackProfile == QGVAR(directAttack)) exitWith {[0,0,0]};
 
 private _projPos = getPosASL _projectile;
 
+// Arm after 25 meters
 if ((_projPos distance _launchPos) > 25) then {
     scopeName "targetScan";
+    BEGIN_COUNTER(targetScan);
+
     if (_seekerStateParams isEqualTo []) then {
-        _seekerStateParams set [0, _projPos];
-        _seekerStateParams set [1, false];
+        TRACE_2("Seeker Armed",_projPos distance _launchPos,diag_fps);
+        _seekerStateParams set [0, _projPos]; // Set _lastPos to current position
     };
+
     _seekerStateParams params ["_lastPos", "_terminal"];
     if (_terminal) exitWith {};
-    private _vectorDir = _lastPos vectorFromTo _projPos;
-    private _distance = _lastPos vectorDistance _projPos;
 
-    for "_stepSize" from 0 to _distance step 0.5 do {
+    private _vectorDir = _lastPos vectorFromTo _projPos;
+    private _frameDistance = _lastPos vectorDistance _projPos;
+
+    // Distance traveled depends on velocity and FPS - at 60fps it will be ~4m
+    // Step size will effect accuracy and performance costs
+    for "_stepSize" from 0 to _frameDistance step 0.5 do {
+        // This represents a position that the missile was at between the last frame and now
         private _virtualPos = _lastPos vectorAdd (_vectorDir vectorMultiply _stepSize);
         #ifdef DRAW_NLAW_INFO
-        drawLine3D [ASLtoAGL _virtualPos, ASLtoAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_distance max 0.1),1]];
+        drawLine3D [ASLtoAGL _virtualPos, ASLtoAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
         #endif
 
-        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-10]), _projectile];
+        // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
+        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile];
         if (!(_res isEqualTo [])) then {
             (_res select 0) params ["_targetPos", "", "_target"];
-            #ifdef DRAW_NLAW_INFO
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL _targetPos, 0.75, 0.75, 0, typeOf _target, 1, 0.025, "TahomaB"];
-            #endif
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
-                TRACE_1("firing shaped charge down",_target);
-                _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 0.5);
+                TRACE_3("Firing shaped charge down",_target,_targetPos distance _virtualPos,_frameDistance);
+                TRACE_2("",_target worldToModel (ASLtoAGL _virtualPos),boundingBoxReal _target);
+                _testX = + _virtualPos;
+                _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
+
+                deleteVehicle _projectile;
+
+                // Damage and effects of missile exploding (timeToLive is 0 so should happen next frame)
+                private _explosion = "ACE_NLAW_Explosion" createVehicle _virtualPos;
+                _explosion setPosASL _virtualPos;
+
+                // Just damage from shaped charge
+                private _shapedCharage = "ACE_NLAW_ShapedCharge" createVehicle _virtualPos;
+                _shapedCharage setPosASL _virtualPos;
+                _shapedCharage setVectorDirAndUp [[0,0,-1], [1,0,0]];
+                _shapedCharage setVelocity [0,0,-300];
+
                 _seekerStateParams set [1, true];
-                _projPos = _virtualPos;
-                _projectile setPosASL _virtualPos;
-
-                // Missile fires shaped charge straight down...
-                // This just takes the existing projectile and re-aims it to shoot it straight down
-                // Should it be a different projectile with increased penetation and decrease the hit on the normal one?
-
-                _projectile setVectorDirAndUp [[0,0,-1], [1,0,0]];
-                _projectile setVelocity ([0,0,-1] vectorMultiply (vectorMagnitude (velocity _projectile)));
+       
+                END_COUNTER(targetScan);
                 breakOut "targetScan";
             };
         };
     };
     _seekerStateParams set [0, _projPos];
+    END_COUNTER(targetScan);
 };
 
-// Terminal - going almost straight down (missile guidance doesn't like [0,0,-1])
+// Exploded, return dummy value
 if (_seekerStateParams param [1, false]) exitWith {
-    _projPos vectorAdd [0,0.01,-10];
+    [0,0,1]
 };
 
 // return:

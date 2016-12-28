@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
- * 
+ * Handles the track key being held down.
+ * Tracks change in direction of weapon and computes angle change per second.
  *
  * Arguments:
  * None
@@ -44,11 +45,11 @@ playSound "ACE_Sound_Click";
         [_pfID] call CBA_fnc_removePerFrameHandler;
         playSound "ACE_Sound_Click";
 
-        [{
+        [{ // reset gvars after a short delay
             TRACE_1("reset vars",_this);
             GVAR(yawChange) = 0;
             GVAR(pitchChange) = 0;
-        }, [], 1] call CBA_fnc_waitAndExecute;
+        }, [], 0.5] call CBA_fnc_waitAndExecute;
     };
 
     private _deltaT = CBA_missionTime - _lastTime;
@@ -59,12 +60,13 @@ playSound "ACE_Sound_Click";
     private _yawChange = ([_yaw - _lastYaw] call CBA_fnc_simplifyAngle180) / _deltaT;
     private _pitchChange = ([_pitch - _lastPitch] call CBA_fnc_simplifyAngle180) / _deltaT;
 
-    if (_initPhase) then { // initial value will use last 0.75 seconds
+    if (_initPhase) then { // initial value will use first 0.75 seconds of input
         GVAR(yawChange) = _yawChange;
         GVAR(pitchChange) = _pitchChange;
         _args set [3, false];
     } else {
-        private _alpha = _deltaT / 3; // todo: tweak filtering alpha
+        // smoothing factor alpha - higher values will be more responsive to change, but also spike higher on jerky mouse movmeent
+        private _alpha = _deltaT / 3; 
         GVAR(yawChange) = (_yawChange * _alpha) + GVAR(yawChange) * (1 - _alpha);
         GVAR(pitchChange) = (_pitchChange * _alpha) + GVAR(pitchChange) * (1 - _alpha);
     };

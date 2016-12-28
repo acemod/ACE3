@@ -35,8 +35,7 @@ if (_shooter == ACE_player) then {
     TRACE_2("isPlayer",GVAR(yawChange),GVAR(pitchChange));
     _yawChange = GVAR(yawChange);
     _pitchChange = GVAR(pitchChange);
-    (_firedLOS call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
-    TRACE_2("",_yaw,_pitch);
+    TRACE_1("los check",_firedLOS call CBA_fnc_vect2Polar);
 } else {
     if ((!isNil "_target") && {!isNull _target}) then {
         _firedLOS = (getPosASL _projectile) vectorFromTo (aimPos _target);

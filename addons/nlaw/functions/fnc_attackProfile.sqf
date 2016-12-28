@@ -18,7 +18,6 @@
 #include "script_component.hpp"
 
 params ["_seekerTargetPos", "_args", "_attackProfileStateParams"];
-
 _args params ["_firedEH", "_launchParams"];
 _launchParams params ["","_targetLaunchParams", "", "_attackProfile"];
 _targetLaunchParams params ["", "", "_launchPos"];
@@ -39,7 +38,7 @@ private _realPitch = _pitch + _pitchChange * _flightTime;
 
 private _returnTargetPos = _launchPos vectorAdd ([_distanceFromLaunch, _realYaw, _realPitch] call CBA_fnc_polar2vect);
 
-if (_attackProfile == QGVAR(overflyTopAttack)) then {
+if (_attackProfile == QGVAR(overflyTopAttack)) then { // Add 2m height in OTA attack mode
     _returnTargetPos = _returnTargetPos vectorAdd [0,0,2];
 };
 
