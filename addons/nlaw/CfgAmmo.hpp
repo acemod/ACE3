@@ -39,9 +39,11 @@ class CfgAmmo {
     // Sub ammos used in OTA mode (see fnc_seeker.sqf)
     class ACE_NLAW_Explosion: ACE_NLAW { // Based on FCS-Airburst, will explode right away
         timeToLive = 0;
+        model = "";
     };
     class ACE_NLAW_ShapedCharge: ACE_NLAW { // Shaped charge from rocket explosion, no effects
         timeToLive = 1;
+        model = "";
         hit = 750;
         indirectHit = 0;
         indirectHitRange = 0;
