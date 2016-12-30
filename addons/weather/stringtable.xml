@@ -38,7 +38,7 @@
             <Hungarian>Időjárás</Hungarian>
             <Russian>Погода</Russian>
             <Italian>Meteo</Italian>
-            <Japanese>ACE 天候モジュールではマルチプレイで同期します。</Japanese>
+            <Japanese>天候</Japanese>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
