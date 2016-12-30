@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="overpressure">
+        <Key ID="STR_ACE_overpressure_distanceCoefficient_displayName">
+            <English>Overpressure Distance Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
+            <English>Scales the overpressure effect [Default: 1]</English>
+        </Key>
+    </Package>
+</Project>

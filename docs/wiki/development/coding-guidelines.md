@@ -62,7 +62,7 @@ class ACE_Settings {
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
-- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler){:target="_blank"} and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html){:target="_blank"} form.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux/tabler){:target="_blank"} and the [translation guidelines]({{ site.baseurl }}/wiki/development/how-to-translate-ace3.html) form.
 
 
 ## 2. Macro Usage

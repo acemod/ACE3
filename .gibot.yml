@@ -35,7 +35,7 @@ stages:
        remove_label:
          - marked for cleanup
   remind_about_old_ticket:
-    days: 130
+    days: 160
     labels:
       - bug
       - critical bug
