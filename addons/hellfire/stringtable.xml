@@ -28,7 +28,7 @@
             <Japanese>Hellfire</Japanese>
         </Key>
         <Key ID="STR_ACE_Hellfire_hellfireModeAction">
-            <English>Hellfire mode: %1</English>
+            <English>Set Hellfire mode</English>
         </Key>
         <Key ID="STR_ACE_Hellfire_HF_B_Heli_Attack_01">
             <English>RAH-66 Comanche [Hellfire]</English>
