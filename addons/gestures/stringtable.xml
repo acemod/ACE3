@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_Name">
@@ -13,6 +13,7 @@
             <Russian>ACE Жесты</Russian>
             <Spanish>ACE Gestos</Spanish>
             <Japanese>ACE ジェスチャー</Japanese>
+            <Korean>ACE 수신호</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -26,6 +27,7 @@
             <Portuguese>Gestos</Portuguese>
             <Italian>Gesti</Italian>
             <Japanese>ジェスチャー</Japanese>
+            <Korean>수신호</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -39,6 +41,7 @@
             <Portuguese>Avançar</Portuguese>
             <Italian>Avanzare</Italian>
             <Japanese>警戒</Japanese>
+            <Korean>전진</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
@@ -52,6 +55,7 @@
             <Portuguese>Mover-se</Portuguese>
             <Italian>Muoversi</Italian>
             <Japanese>進め</Japanese>
+            <Korean>이동</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -65,6 +69,7 @@
             <Portuguese>Seguir</Portuguese>
             <Italian>Seguire</Italian>
             <Japanese>ついて来い</Japanese>
+            <Korean>따라올것</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -78,6 +83,7 @@
             <Portuguese>Acima</Portuguese>
             <Italian>Alzarsi</Italian>
             <Japanese>立ち上がれ</Japanese>
+            <Korean>위</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -91,6 +97,7 @@
             <Portuguese>Cessar Fogo</Portuguese>
             <Italian>Cessare il Fuoco</Italian>
             <Japanese>撃つな</Japanese>
+            <Korean>사격 중지</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -103,6 +110,7 @@
             <Italian>Stop</Italian>
             <Spanish>Detenerse</Spanish>
             <Japanese>止まれ</Japanese>
+            <Korean>멈춰</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -116,6 +124,7 @@
             <Portuguese>Alto</Portuguese>
             <Italian>Fermi</Italian>
             <Japanese>動くな</Japanese>
+            <Korean>정지</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -129,6 +138,7 @@
             <Portuguese>Proteger-se</Portuguese>
             <Italian>Copertura</Italian>
             <Japanese>隠れろ</Japanese>
+            <Korean>엄폐</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>
@@ -141,6 +151,7 @@
             <Italian>Raggruppare</Italian>
             <Spanish>Reunirse</Spanish>
             <Japanese>集合</Japanese>
+            <Korean>집결</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -153,6 +164,7 @@
             <Italian>Muovere avanti</Italian>
             <Spanish>Avanzar</Spanish>
             <Japanese>前に進め</Japanese>
+            <Korean>앞으로 이동</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -165,6 +177,7 @@
             <Italian>Ingaggiare</Italian>
             <Spanish>Atacar</Spanish>
             <Japanese>交戦しろ</Japanese>
+            <Korean>교전할것</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -177,6 +190,7 @@
             <Italian>Puntare</Italian>
             <Spanish>Señalar</Spanish>
             <Japanese>指示</Japanese>
+            <Korean>가리키기</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -189,6 +203,7 @@
             <Italian>Mantenere</Italian>
             <Spanish>Esperar</Spanish>
             <Japanese>そこにいろ</Japanese>
+            <Korean>기다려</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -201,6 +216,7 @@
             <Italian>Attenzione</Italian>
             <Spanish>Atención</Spanish>
             <Japanese>注意</Japanese>
+            <Korean>주의</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
@@ -213,6 +229,7 @@
             <Portuguese>Mostrar gestos no menu de interação</Portuguese>
             <Russian>Показать жесты в меню взаимодействия</Russian>
             <Japanese>インタラクション メニュー上でジェスチャーを表示する</Japanese>
+            <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -225,6 +242,7 @@
             <Portuguese>Mostra gestos no menu de interação, ou utilize um dos atalhos de teclado ou desative completamente</Portuguese>
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
             <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
+            <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -237,6 +255,7 @@
             <Portuguese>Somente atalhos de teclado</Portuguese>
             <Russian>Только горячие клавиши</Russian>
             <Japanese>キー操作のみ</Japanese>
+            <Korean>오직 단축키만</Korean>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -249,6 +268,7 @@
             <Portuguese>Atalhos + Menu de Interação</Portuguese>
             <Russian>Клавиши + Меню взаимодействия</Russian>
             <Japanese>キー操作とインタラクション メニュ</Japanese>
+            <Korean>단축키및 상호작용 메뉴</Korean>
         </Key>
     </Package>
 </Project>
