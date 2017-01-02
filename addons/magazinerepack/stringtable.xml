@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -13,6 +13,7 @@
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
             <Japanese>弾倉を詰め替え</Japanese>
+            <Korean>탄창 다시 채우기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_SelectMagazineMenu">
             <English>Select Magazine Menu</English>
@@ -26,6 +27,7 @@
             <Hungarian>Fegyvertár menü kiválasztás</Hungarian>
             <Russian>Меню выбора магазинов</Russian>
             <Japanese>弾倉メニューから選ぶ</Japanese>
+            <Korean>탄창 메뉴 고르기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_SelectMagazine">
             <English>Select Mag</English>
@@ -39,6 +41,7 @@
             <Hungarian>Tár kiválasztása</Hungarian>
             <Russian>Выбрать магазин</Russian>
             <Japanese>弾倉を選択</Japanese>
+            <Korean>탄창 고르기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
             <English>Repacking Magazines...</English>
@@ -52,6 +55,7 @@
             <Hungarian>Újratárazás...</Hungarian>
             <Russian>Перепаковка магазинов...</Russian>
             <Japanese>弾倉を詰め替え中・・・</Japanese>
+            <Korean>다시 채우는중...</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazines">
             <English>Repacked Magazines</English>
@@ -65,6 +69,7 @@
             <Hungarian>Újratárazott tárak</Hungarian>
             <Russian>Магазины перепакованы</Russian>
             <Japanese>弾倉の詰め替えが終わった</Japanese>
+            <Korean>탄창 채워짐</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
             <English>%1 full mag(s) and %2 extra round(s)</English>
@@ -78,6 +83,7 @@
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
             <Japanese>%1 個の満杯な弾倉と入りきらなかった %2 個の弾倉</Japanese>
+            <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
@@ -91,6 +97,7 @@
             <Italian>Caricatori riempiti</Italian>
             <Portuguese>Reorganização Terminada</Portuguese>
             <Japanese>詰め替えが完了</Japanese>
+            <Korean>탄창 채우기 끝남</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -104,6 +111,7 @@
             <Italian>Riempimento interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
             <Japanese>詰め替えを中断した</Japanese>
+            <Korean>탄창 채우기 방해받음</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
@@ -117,6 +125,7 @@
             <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
             <Japanese>%1 個の満杯で、 %2 の余分数</Japanese>
+            <Korean>%1 꽉찼고 %2 부분참</Korean>
         </Key>
     </Package>
 </Project>
