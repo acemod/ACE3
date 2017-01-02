@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -13,6 +13,7 @@
             <Italian>Cambia unità</Italian>
             <Portuguese>Trocado de unidade</Portuguese>
             <Japanese>ユニットを切り替え</Japanese>
+            <Korean>인원으로 전환</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
@@ -25,6 +26,7 @@
             <Portuguese>Tentando trocar</Portuguese>
             <Russian>Попытка переключения</Russian>
             <Japanese>切り替えを試す</Japanese>
+            <Korean>전환 시도중</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -38,6 +40,7 @@
             <Italian>Questa unità è troppo vicina al nemico.</Italian>
             <Portuguese>Essa unidade  está muito perto do inimigo.</Portuguese>
             <Japanese>このユニットは敵に近すぎます。</Japanese>
+            <Korean>그 인원은 적과 너무 가깝습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
@@ -51,6 +54,7 @@
             <Russian>Переключение между юнитами</Russian>
             <Italian>Sistema Cambio Unità</Italian>
             <Japanese>SwitchUnits システム</Japanese>
+            <Korean>인원전환 시스템</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -64,6 +68,7 @@
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
             <Japanese>ウエストへ切り替えますか？</Japanese>
+            <Korean>서방으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -77,6 +82,7 @@
             <Russian>Разрешить переключаться на синих юнитов?</Russian>
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
             <Japanese>ウエスト側ユニットへ切り替えられるようにしますか？</Japanese>
+            <Korean>서방 인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -90,6 +96,7 @@
             <Russian>На красных?</Russian>
             <Italian>Cambia per OPFOR?</Italian>
             <Japanese>イースト側へ切り替えますか？</Japanese>
+            <Korean>동방으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -103,6 +110,7 @@
             <Russian>Разрешить переключаться на красных юнитов?</Russian>
             <Italian>Consenti passaggio ad unità OPFOR?</Italian>
             <Japanese>イースト側ユニットへ切り替えられるようにしますか？</Japanese>
+            <Korean>동방인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -116,6 +124,7 @@
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
             <Japanese>インデペンデントへ切り替えますか？</Japanese>
+            <Korean>중립으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -129,6 +138,7 @@
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
             <Japanese>インデペンデント側ユニットへ切り替えられるようにしますか？</Japanese>
+            <Korean>중립 인원으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -142,6 +152,7 @@
             <Russian>На гражданских?</Russian>
             <Italian>Cambia per Civili?</Italian>
             <Japanese>シビリアンへ切り替えますか？</Japanese>
+            <Korean>민간인으로 전환합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -155,6 +166,7 @@
             <Russian>Разрешить переключаться на гражданских юнитов?</Russian>
             <Italian>Consenti passaggio ad unità civili?</Italian>
             <Japanese>シビリアン側ユニットへ切り替えられるようにしますか？</Japanese>
+            <Korean>민간인으로 전환하는걸 허가합니까?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -168,6 +180,7 @@
             <Russian>Безопасная зона</Russian>
             <Italian>Abilita Zona Sicura?</Italian>
             <Japanese>安全地帯を有効にしますか？</Japanese>
+            <Korean>안전 지대 활성화?</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -181,6 +194,7 @@
             <Russian>Включить безопасную зону вокруг вражеских юнитов? Игроки не могут переключаться на юнитов, находящихся в безопасной зоне.</Russian>
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>
             <Japanese>敵ユニットから逃れる安全地帯を有効にしますか？プレイヤーは安全地帯内のユニットへ切り替えできません。</Japanese>
+            <Korean>적 주위로 안전 지대를 활성화합니까? 안전 지대 내에서는 플레이어가 인원 전환을 할 수 없습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -194,6 +208,7 @@
             <Russian>Радиус безопасной зоны</Russian>
             <Italian>Raggio Zona Sicura</Italian>
             <Japanese>安全地帯の半径</Japanese>
+            <Korean>안전 지대 반경</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
@@ -207,6 +222,7 @@
             <Russian>Радиус безопасной зоны вокруг ироков из противоположной команды. По-умолчанию: 200</Russian>
             <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 200</Italian>
             <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準：200</Japanese>
+            <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 200</Korean>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English>Module allows you to switch side during the game.</English>
@@ -219,6 +235,7 @@
             <Italian>Questo modulo ti permette di cambiare lato durante la partita.</Italian>
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
             <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>
+            <Korean>이 모듈은 당신을 게임 중에 진영을 바꿀 수 있게 해줍니다.</Korean>
         </Key>
     </Package>
 </Project>

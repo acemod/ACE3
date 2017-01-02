@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="FlashSuppressors">
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_H">
@@ -13,6 +13,7 @@
             <Russian>Пламегаситель (6,5 мм)</Russian>
             <Spanish>Bocacha (6,5 mm)</Spanish>
             <Japanese>消炎器 (6.5 mm)</Japanese>
+            <Korean>소염기 (6.5 mm)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
             <English>Flash Suppressor (7.62 mm)</English>
@@ -26,6 +27,7 @@
             <Russian>Пламегаситель (7,62 мм)</Russian>
             <Spanish>Bocacha (7,62 mm)</Spanish>
             <Japanese>消炎器 (7.62 mm)</Japanese>
+            <Korean>소염기 (7.62 mm)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
             <English>Flash Suppressor (5.56 mm)</English>
@@ -39,6 +41,7 @@
             <Russian>Пламегаситель (5,56 мм)</Russian>
             <Spanish>Bocacha (5,56 mm)</Spanish>
             <Japanese>消炎器 (5.56 mm)</Japanese>
+            <Korean>소염기 (5.56 mm)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
             <English>Flash Suppressor (.45 ACP)</English>
@@ -52,6 +55,7 @@
             <Russian>Пламегаситель (.45 ACP)</Russian>
             <Spanish>Bocacha (.45 ACP)</Spanish>
             <Japanese>消炎器 (.45 ACP)</Japanese>
+            <Korean>소염기 (.45 ACP)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
             <English>Flash Suppressor (9 mm)</English>
@@ -65,6 +69,7 @@
             <Russian>Пламегаситель (9 мм)</Russian>
             <Spanish>Bocacha (9 mm)</Spanish>
             <Japanese>消炎器 (9 mm)</Japanese>
+            <Korean>소염기 (9 mm)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
@@ -78,6 +83,7 @@
             <Russian>Пламегаситель (.338)</Russian>
             <Spanish>Bocacha (.338)</Spanish>
             <Japanese>消炎器 (.338)</Japanese>
+            <Korean>소염기 (.338)</Korean>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
@@ -91,6 +97,7 @@
             <Russian>Пламегаситель (9,3 мм)</Russian>
             <Spanish>Bocacha (9,3 mm)</Spanish>
             <Japanese>消炎器 (9.3 mm)</Japanese>
+            <Korean>소염기 (9.3 mm)</Korean>
         </Key>
     </Package>
 </Project>
