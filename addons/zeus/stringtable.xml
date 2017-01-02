@@ -221,6 +221,12 @@
             <German>Verteidige Gebiet</German>
             <Korean>지역 방어</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
+            <English>Update Editable Objects</English>
+            <Japanese>編集可能なオブジェクトを更新</Japanese>
+            <Polish>Aktualizuj edytowalne obiekty</Polish>
+            <Korean>수정 가능한 물체 갱신</Korean>
+        </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
             <English>All Curators</English>
             <Japanese>全キュレーター</Japanese>
@@ -235,16 +241,13 @@
             <English>Remove Objects</English>
             <Japanese>オブジェクトの削除</Japanese>
             <Korean>물체 삭제</Korean>
+            <Polish>Usuń obiekty</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
             <English>Remove existing instead of adding new</English>
             <Japanese>新しく追加するために削除します</Japanese>
             <Korean>물체를 삭제합니다</Korean>
-        </Key>
-        <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
-            <English>Update Editable Objects</English>
-            <Japanese>編集可能なオブジェクトを更新</Japanese>
-            <Korean>수정 가능한 물체 갱신</Korean>
+            <Polish>Usuń istniejące zamiast dodać nowe</Polish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -550,6 +553,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSimulation_DisplayName">
             <English>Toggle Simulation</English>
+            <Polish>Włacz symulację</Polish>
             <Japanese>シミュレーションをトグル</Japanese>
             <Korean>재현 토글</Korean>
         </Key>

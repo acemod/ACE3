@@ -7,8 +7,8 @@
             <Czech>Povolit explozi munice</Czech>
             <Russian>Включить воспламенение</Russian>
             <Japanese>誘爆を有効化</Japanese>
-            <Polish>Aktywuj efekty zapłonu</Polish>
             <Korean>쿡오프 현상 활성화</Korean>
+            <Polish>Aktywuj efekty wybuchu amunicji</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
             <English>Enables cook off and related vehicle destruction effects.</English>
@@ -16,8 +16,8 @@
             <Czech>Povolí explozi munice a její následné ničivé efekty.</Czech>
             <Russian>Включает воспламенение и сопутствующие эффекты повреждения техники.</Russian>
             <Japanese>誘爆を有効化し、車両が誘爆によって破壊されていきます。</Japanese>
-            <Polish>Aktywuje efekt zapłonu na zniszczonych pojazdach.</Polish>
             <Korean>쿡오프 현상을 활성화 하고 관련된 차량에 폭발 이펙트를 적용합니다.</Korean>
+            <Polish>Aktywuje efekt wybuchu amunicji na zniszczonych pojazdach.</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <Original>Wreck (Turret)</Original>
@@ -38,6 +38,7 @@
             <Japanese>弾薬箱に誘爆を有効化</Japanese>
             <German>Selbstzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
+            <Polish>Aktywuje explozje skrzynek z amunicją</Polish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
