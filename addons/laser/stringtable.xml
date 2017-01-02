@@ -5,6 +5,7 @@
             <English>Laser Dispersion Simulation Count</English>
             <Japanese>レーザーの分散シミュレート数</Japanese>
             <German>Laserstreuung-Simulationszähler</German>
+            <Polish>Wskaźnik poziomu rozproszenia wiązki lasera </Polish>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>

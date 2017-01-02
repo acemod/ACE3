@@ -410,11 +410,13 @@
             <English>Disable BFT</English>
             <German>BFT deaktivieren</German>
             <Japanese>BFTを無効化</Japanese>
+            <Polish>Wyłacz BFT</Polish>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
             <German>Blue Force Tracking für diese Gruppe immer deaktivieren.</German>
             <Japanese>このグループへのブルー フォース トラッキングを常に無効化します。</Japanese>
+            <Polish>Zawsze wyłączaj Blue Force Tracking dlla tej grupy</Polish>
         </Key>
     </Package>
 </Project>

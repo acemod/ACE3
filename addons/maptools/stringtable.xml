@@ -164,11 +164,13 @@
             <English>Draw straight lines with maptools</English>
             <Japanese>マップ ツールを使って直線を書く</Japanese>
             <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
+            <Polish>Rysuje proste linie przy użyciu narzędzi nawigacyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
             <Japanese>マップ ツールの端から直線を書きます。メモ：線の中央ホバーすると削除します。</Japanese>
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
+            <Polish>Przyciągnij krawędź narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić nad jej środkiem</Polish>
         </Key>
     </Package>
 </Project>
