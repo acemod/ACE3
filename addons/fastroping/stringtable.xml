@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
@@ -12,6 +12,7 @@
             <Portuguese>Equipar FRIES</Portuguese>
             <Russian>Десантирование по канатам</Russian>
             <Japanese>FRIES を装備</Japanese>
+            <Korean>FRIES 장착</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Module_FRIES_Description">
             <English>Equips compatible helicopters with a Fast Rope Insertion Extraction System.</English>
@@ -24,6 +25,7 @@
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
             <Japanese>ヘリコプターで Fast Rope Insertion Extraction System を使えるようにします</Japanese>
+            <Korean>패스트로프 투입 및 탈출 시스템을 호환되는 헬리콥터에 적용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_prepareFRIES">
             <English>Prepare fast roping system</English>
@@ -36,6 +38,7 @@
             <Portuguese>Prepara sistema de descida rápida</Portuguese>
             <Russian>Подготовить канаты</Russian>
             <Japanese>ファスト ロープのシステムを準備</Japanese>
+            <Korean>패스트로프 준비</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
             <English>Deploy ropes</English>
@@ -48,6 +51,7 @@
             <Portuguese>Jogar cordas</Portuguese>
             <Russian>Зацепить канаты</Russian>
             <Japanese>ロープを展開</Japanese>
+            <Korean>줄 배치</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
@@ -60,6 +64,7 @@
             <Portuguese>Descida rápida</Portuguese>
             <Russian>Спуститься по канату</Russian>
             <Japanese>ファスト ロープをする</Japanese>
+            <Korean>강하하기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_cutRopes">
             <English>Cut ropes</English>
@@ -72,6 +77,7 @@
             <Portuguese>Cortar cordas</Portuguese>
             <Russian>Обрезать канаты</Russian>
             <Japanese>ロープを切断</Japanese>
+            <Korean>줄 자르기</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES">
             <English>Equip helicopter with FRIES</English>
@@ -84,6 +90,7 @@
             <Portuguese>Equipar helicóptero com FRIES</Portuguese>
             <Russian>Снарядить вертолет канатами для спуска</Russian>
             <Japanese>ヘリコプターへ FRIES を装備</Japanese>
+            <Korean>헬리콥터에 FRIES 장착</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Eden_equipFRIES_Tooltip">
             <English>Equips the selected helicopter with a Fast Rope Insertion Extraction System</English>
@@ -96,6 +103,7 @@
             <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
             <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
+            <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템을 장착합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Fastroping_Waypoint_Fastrope">
             <English>LET UNITS FAST ROPE</English>
