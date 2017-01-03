@@ -166,6 +166,7 @@
             <Spanish>Cambiar modo de disparo</Spanish>
             <Portuguese>Alterar Modo de Disparo</Portuguese>
             <Japanese>発射モード切り替え</Japanese>
+            <Korean>발사 방식 순환</Korean>
         </Key>
     </Package>
 </Project>
