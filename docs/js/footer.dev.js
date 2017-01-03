@@ -2,743 +2,1594 @@
  * Build: http://modernizr.com/download/#-shiv-cssclasses-load
  */
 ;window.Modernizr=function(a,b,c){function u(a){j.cssText=a}function v(a,b){return u(prefixes.join(a+";")+(b||""))}function w(a,b){return typeof a===b}function x(a,b){return!!~(""+a).indexOf(b)}function y(a,b,d){for(var e in a){var f=b[a[e]];if(f!==c)return d===!1?a[e]:w(f,"function")?f.bind(d||b):f}return!1}var d="2.8.3",e={},f=!0,g=b.documentElement,h="modernizr",i=b.createElement(h),j=i.style,k,l={}.toString,m={},n={},o={},p=[],q=p.slice,r,s={}.hasOwnProperty,t;!w(s,"undefined")&&!w(s.call,"undefined")?t=function(a,b){return s.call(a,b)}:t=function(a,b){return b in a&&w(a.constructor.prototype[b],"undefined")},Function.prototype.bind||(Function.prototype.bind=function(b){var c=this;if(typeof c!="function")throw new TypeError;var d=q.call(arguments,1),e=function(){if(this instanceof e){var a=function(){};a.prototype=c.prototype;var f=new a,g=c.apply(f,d.concat(q.call(arguments)));return Object(g)===g?g:f}return c.apply(b,d.concat(q.call(arguments)))};return e});for(var z in m)t(m,z)&&(r=z.toLowerCase(),e[r]=m[z](),p.push((e[r]?"":"no-")+r));return e.addTest=function(a,b){if(typeof a=="object")for(var d in a)t(a,d)&&e.addTest(d,a[d]);else{a=a.toLowerCase();if(e[a]!==c)return e;b=typeof b=="function"?b():b,typeof f!="undefined"&&f&&(g.className+=" "+(b?"":"no-")+a),e[a]=b}return e},u(""),i=k=null,function(a,b){function l(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function m(){var a=s.elements;return typeof a=="string"?a.split(" "):a}function n(a){var b=j[a[h]];return b||(b={},i++,a[h]=i,j[i]=b),b}function o(a,c,d){c||(c=b);if(k)return c.createElement(a);d||(d=n(c));var g;return d.cache[a]?g=d.cache[a].cloneNode():f.test(a)?g=(d.cache[a]=d.createElem(a)).cloneNode():g=d.createElem(a),g.canHaveChildren&&!e.test(a)&&!g.tagUrn?d.frag.appendChild(g):g}function p(a,c){a||(a=b);if(k)return a.createDocumentFragment();c=c||n(a);var d=c.frag.cloneNode(),e=0,f=m(),g=f.length;for(;e<g;e++)d.createElement(f[e]);return d}function q(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return s.shivMethods?o(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+m().join().replace(/[\w\-]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(s,b.frag)}function r(a){a||(a=b);var c=n(a);return s.shivCSS&&!g&&!c.hasCSS&&(c.hasCSS=!!l(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),k||q(a,c),a}var c="3.7.0",d=a.html5||{},e=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,f=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,g,h="_html5shiv",i=0,j={},k;(function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",g="hidden"in a,k=a.childNodes.length==1||function(){b.createElement("a");var a=b.createDocumentFragment();return typeof a.cloneNode=="undefined"||typeof a.createDocumentFragment=="undefined"||typeof a.createElement=="undefined"}()}catch(c){g=!0,k=!0}})();var s={elements:d.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video",version:c,shivCSS:d.shivCSS!==!1,supportsUnknownElements:k,shivMethods:d.shivMethods!==!1,type:"default",shivDocument:r,createElement:o,createDocumentFragment:p};a.html5=s,r(b)}(this,b),e._version=d,g.className=g.className.replace(/(^|\s)no-js(\s|$)/,"$1$2")+(f?" js "+p.join(" "):""),e}(this,this.document),function(a,b,c){function d(a){return"[object Function]"==o.call(a)}function e(a){return"string"==typeof a}function f(){}function g(a){return!a||"loaded"==a||"complete"==a||"uninitialized"==a}function h(){var a=p.shift();q=1,a?a.t?m(function(){("c"==a.t?B.injectCss:B.injectJs)(a.s,0,a.a,a.x,a.e,1)},0):(a(),h()):q=0}function i(a,c,d,e,f,i,j){function k(b){if(!o&&g(l.readyState)&&(u.r=o=1,!q&&h(),l.onload=l.onreadystatechange=null,b)){"img"!=a&&m(function(){t.removeChild(l)},50);for(var d in y[c])y[c].hasOwnProperty(d)&&y[c][d].onload()}}var j=j||B.errorTimeout,l=b.createElement(a),o=0,r=0,u={t:d,s:c,e:f,a:i,x:j};1===y[c]&&(r=1,y[c]=[]),"object"==a?l.data=c:(l.src=c,l.type=a),l.width=l.height="0",l.onerror=l.onload=l.onreadystatechange=function(){k.call(this,r)},p.splice(e,0,u),"img"!=a&&(r||2===y[c]?(t.insertBefore(l,s?null:n),m(k,j)):y[c].push(l))}function j(a,b,c,d,f){return q=0,b=b||"j",e(a)?i("c"==b?v:u,a,b,this.i++,c,d,f):(p.splice(this.i++,0,a),1==p.length&&h()),this}function k(){var a=B;return a.loader={load:j,i:0},a}var l=b.documentElement,m=a.setTimeout,n=b.getElementsByTagName("script")[0],o={}.toString,p=[],q=0,r="MozAppearance"in l.style,s=r&&!!b.createRange().compareNode,t=s?l:n.parentNode,l=a.opera&&"[object Opera]"==o.call(a.opera),l=!!b.attachEvent&&!l,u=r?"object":l?"script":"img",v=l?"script":u,w=Array.isArray||function(a){return"[object Array]"==o.call(a)},x=[],y={},z={timeout:function(a,b){return b.length&&(a.timeout=b[0]),a}},A,B;B=function(a){function b(a){var a=a.split("!"),b=x.length,c=a.pop(),d=a.length,c={url:c,origUrl:c,prefixes:a},e,f,g;for(f=0;f<d;f++)g=a[f].split("="),(e=z[g.shift()])&&(c=e(c,g));for(f=0;f<b;f++)c=x[f](c);return c}function g(a,e,f,g,h){var i=b(a),j=i.autoCallback;i.url.split(".").pop().split("?").shift(),i.bypass||(e&&(e=d(e)?e:e[a]||e[g]||e[a.split("/").pop().split("?")[0]]),i.instead?i.instead(a,e,f,g,h):(y[i.url]?i.noexec=!0:y[i.url]=1,f.load(i.url,i.forceCSS||!i.forceJS&&"css"==i.url.split(".").pop().split("?").shift()?"c":c,i.noexec,i.attrs,i.timeout),(d(e)||d(j))&&f.load(function(){k(),e&&e(i.origUrl,h,g),j&&j(i.origUrl,h,g),y[i.url]=2})))}function h(a,b){function c(a,c){if(a){if(e(a))c||(j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}),g(a,j,b,0,h);else if(Object(a)===a)for(n in m=function(){var b=0,c;for(c in a)a.hasOwnProperty(c)&&b++;return b}(),a)a.hasOwnProperty(n)&&(!c&&!--m&&(d(j)?j=function(){var a=[].slice.call(arguments);k.apply(this,a),l()}:j[n]=function(a){return function(){var b=[].slice.call(arguments);a&&a.apply(this,b),l()}}(k[n])),g(a[n],j,b,n,h))}else!c&&l()}var h=!!a.test,i=a.load||a.both,j=a.callback||f,k=j,l=a.complete||f,m,n;c(h?a.yep:a.nope,!!i),i&&c(i)}var i,j,l=this.yepnope.loader;if(e(a))g(a,0,l,0);else if(w(a))for(i=0;i<a.length;i++)j=a[i],e(j)?g(j,0,l,0):w(j)?B(j):Object(j)===j&&h(j,l);else Object(a)===a&&h(a,l)},B.addPrefix=function(a,b){z[a]=b},B.addFilter=function(a){x.push(a)},B.errorTimeout=1e4,null==b.readyState&&b.addEventListener&&(b.readyState="loading",b.addEventListener("DOMContentLoaded",A=function(){b.removeEventListener("DOMContentLoaded",A,0),b.readyState="complete"},0)),a.yepnope=k(),a.yepnope.executeStack=h,a.yepnope.injectJs=function(a,c,d,e,i,j){var k=b.createElement("script"),l,o,e=e||B.errorTimeout;k.src=a;for(o in d)k.setAttribute(o,d[o]);c=j?h:c||f,k.onreadystatechange=k.onload=function(){!l&&g(k.readyState)&&(l=1,c(),k.onload=k.onreadystatechange=null)},m(function(){l||(l=1,c(1))},e),i?k.onload():n.parentNode.insertBefore(k,n)},a.yepnope.injectCss=function(a,c,d,e,g,i){var e=b.createElement("link"),j,c=i?h:c||f;e.href=a,e.rel="stylesheet",e.type="text/css";for(j in d)e.setAttribute(j,d[j]);g||(n.parentNode.insertBefore(e,n),m(c,0))}}(this,document),Modernizr.load=function(){yepnope.apply(window,[].slice.call(arguments,0))};
-/*! Picturefill - v2.3.0 - 2015-03-23
-* http://scottjehl.github.io/picturefill
-* Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT */
-/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
+/*! picturefill - v3.0.2 - 2016-02-12
+ * https://scottjehl.github.io/picturefill/
+ * Copyright (c) 2016 https://github.com/scottjehl/picturefill/blob/master/Authors.txt; Licensed MIT
+ */
+/*! Gecko-Picture - v1.0
+ * https://github.com/scottjehl/picturefill/tree/3.0/src/plugins/gecko-picture
+ * Firefox's early picture implementation (prior to FF41) is static and does
+ * not react to viewport changes. This tiny module fixes this.
+ */
+(function (window) {
+    /*jshint eqnull:true */
+    var ua = navigator.userAgent;
 
-window.matchMedia || (window.matchMedia = function() {
-	"use strict";
+    if (window.HTMLPictureElement && ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 < 45)) {
+        addEventListener("resize", (function () {
+            var timer;
 
-	// For browsers that support matchMedium api such as IE 9 and webkit
-	var styleMedia = (window.styleMedia || window.media);
+            var dummySrc = document.createElement("source");
 
-	// For those that don't support matchMedium
-	if (!styleMedia) {
-		var style       = document.createElement('style'),
-			script      = document.getElementsByTagName('script')[0],
-			info        = null;
+            var fixRespimg = function (img) {
+                var source, sizes;
+                var picture = img.parentNode;
 
-		style.type  = 'text/css';
-		style.id    = 'matchmediajs-test';
+                if (picture.nodeName.toUpperCase() === "PICTURE") {
+                    source = dummySrc.cloneNode();
 
-		script.parentNode.insertBefore(style, script);
+                    picture.insertBefore(source, picture.firstElementChild);
+                    setTimeout(function () {
+                        picture.removeChild(source);
+                    });
+                } else if (!img._pfLastSize || img.offsetWidth > img._pfLastSize) {
+                    img._pfLastSize = img.offsetWidth;
+                    sizes = img.sizes;
+                    img.sizes += ",100vw";
+                    setTimeout(function () {
+                        img.sizes = sizes;
+                    });
+                }
+            };
 
-		// 'style.currentStyle' is used by IE <= 8 and 'window.getComputedStyle' for all other browsers
-		info = ('getComputedStyle' in window) && window.getComputedStyle(style, null) || style.currentStyle;
+            var findPictureImgs = function () {
+                var i;
+                var imgs = document.querySelectorAll("picture > img, img[srcset][sizes]");
+                for (i = 0; i < imgs.length; i++) {
+                    fixRespimg(imgs[i]);
+                }
+            };
+            var onResize = function () {
+                clearTimeout(timer);
+                timer = setTimeout(findPictureImgs, 99);
+            };
+            var mq = window.matchMedia && matchMedia("(orientation: landscape)");
+            var init = function () {
+                onResize();
 
-		styleMedia = {
-			matchMedium: function(media) {
-				var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
+                if (mq && mq.addListener) {
+                    mq.addListener(onResize);
+                }
+            };
 
-				// 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
-				if (style.styleSheet) {
-					style.styleSheet.cssText = text;
-				} else {
-					style.textContent = text;
-				}
+            dummySrc.srcset = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
 
-				// Test if media query is true or false
-				return info.width === '1px';
-			}
-		};
-	}
+            if (/^[c|i]|d$/.test(document.readyState || "")) {
+                init();
+            } else {
+                document.addEventListener("DOMContentLoaded", init);
+            }
 
-	return function(media) {
-		return {
-			matches: styleMedia.matchMedium(media || 'all'),
-			media: media || 'all'
-		};
-	};
-}());
-/*! Picturefill - Responsive Images that work today.
-*  Author: Scott Jehl, Filament Group, 2012 ( new proposal implemented by Shawn Jansepar )
-*  License: MIT/GPLv2
-*  Spec: http://picture.responsiveimages.org/
-*/
-(function( w, doc, image ) {
-	// Enable strict mode
-	"use strict";
+            return onResize;
+        })());
+    }
+})(window);
 
-	function expose(picturefill) {
-		/* expose picturefill */
-		if ( typeof module === "object" && typeof module.exports === "object" ) {
-			// CommonJS, just export
-			module.exports = picturefill;
-		} else if ( typeof define === "function" && define.amd ) {
-			// AMD support
-			define( "picturefill", function() { return picturefill; } );
-		}
-		if ( typeof w === "object" ) {
-			// If no AMD and we are in the browser, attach to window
-			w.picturefill = picturefill;
-		}
-	}
+/*! Picturefill - v3.0.2
+ * http://scottjehl.github.io/picturefill
+ * Copyright (c) 2015 https://github.com/scottjehl/picturefill/blob/master/Authors.txt;
+ *  License: MIT
+ */
 
-	// If picture is supported, well, that's awesome. Let's get outta here...
-	if ( w.HTMLPictureElement ) {
-		expose(function() { });
-		return;
-	}
+(function (window, document, undefined) {
+    // Enable strict mode
+    "use strict";
 
-	// HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
-	doc.createElement( "picture" );
+    // HTML shim|v it for old IE (IE9 will still need the HTML video tag workaround)
+    document.createElement("picture");
 
-	// local object for method references and testing exposure
-	var pf = w.picturefill || {};
+    var warn, eminpx, alwaysCheckWDescriptor, evalId;
+    // local object for method references and testing exposure
+    var pf = {};
+    var isSupportTestReady = false;
+    var noop = function () {
+    };
+    var image = document.createElement("img");
+    var getImgAttr = image.getAttribute;
+    var setImgAttr = image.setAttribute;
+    var removeImgAttr = image.removeAttribute;
+    var docElem = document.documentElement;
+    var types = {};
+    var cfg = {
+        //resource selection:
+        algorithm: ""
+    };
+    var srcAttr = "data-pfsrc";
+    var srcsetAttr = srcAttr + "set";
+    // ua sniffing is done for undetectable img loading features,
+    // to do some non crucial perf optimizations
+    var ua = navigator.userAgent;
+    var supportAbort = (/rident/).test(ua) || ((/ecko/).test(ua) && ua.match(/rv\:(\d+)/) && RegExp.$1 > 35 );
+    var curSrcProp = "currentSrc";
+    var regWDesc = /\s+\+?\d+(e\d+)?w/;
+    var regSize = /(\([^)]+\))?\s*(.+)/;
+    var setOptions = window.picturefillCFG;
+    /**
+     * Shortcut property for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
+     */
+        // baseStyle also used by getEmValue (i.e.: width: 1em is important)
+    var baseStyle = "position:absolute;left:0;visibility:hidden;display:block;padding:0;border:none;font-size:1em;width:1em;overflow:hidden;clip:rect(0px, 0px, 0px, 0px)";
+    var fsCss = "font-size:100%!important;";
+    var isVwDirty = true;
 
-	var regWDesc = /\s+\+?\d+(e\d+)?w/;
+    var cssCache = {};
+    var sizeLengthCache = {};
+    var DPR = window.devicePixelRatio;
+    var units = {
+        px: 1,
+        "in": 96
+    };
+    var anchor = document.createElement("a");
+    /**
+     * alreadyRun flag used for setOptions. is it true setOptions will reevaluate
+     * @type {boolean}
+     */
+    var alreadyRun = false;
 
-	// namespace
-	pf.ns = "picturefill";
+    // Reusable, non-"g" Regexes
 
-	// srcset support test
-	(function() {
-		pf.srcsetSupported = "srcset" in image;
-		pf.sizesSupported = "sizes" in image;
-	})();
+    // (Don't use \s, to avoid matching non-breaking space.)
+    var regexLeadingSpaces = /^[ \t\n\r\u000c]+/,
+        regexLeadingCommasOrSpaces = /^[, \t\n\r\u000c]+/,
+        regexLeadingNotSpaces = /^[^ \t\n\r\u000c]+/,
+        regexTrailingCommas = /[,]+$/,
+        regexNonNegativeInteger = /^\d+$/,
 
-	// just a string trim workaround
-	pf.trim = function( str ) {
-		return str.trim ? str.trim() : str.replace( /^\s+|\s+$/g, "" );
-	};
+        // ( Positive or negative or unsigned integers or decimals, without or without exponents.
+        // Must include at least one digit.
+        // According to spec tests any decimal point must be followed by a digit.
+        // No leading plus sign is allowed.)
+        // https://html.spec.whatwg.org/multipage/infrastructure.html#valid-floating-point-number
+        regexFloatingPoint = /^-?(?:[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/;
 
-	/**
-	 * Gets a string and returns the absolute URL
-	 * @param src
-	 * @returns {String} absolute URL
-	 */
-	pf.makeUrl = (function() {
-		var anchor = doc.createElement( "a" );
-		return function(src) {
-			anchor.href = src;
-			return anchor.href;
-		};
-	})();
+    var on = function (obj, evt, fn, capture) {
+        if (obj.addEventListener) {
+            obj.addEventListener(evt, fn, capture || false);
+        } else if (obj.attachEvent) {
+            obj.attachEvent("on" + evt, fn);
+        }
+    };
 
-	/**
-	 * Shortcut method for https://w3c.github.io/webappsec/specs/mixedcontent/#restricts-mixed-content ( for easy overriding in tests )
-	 */
-	pf.restrictsMixedContent = function() {
-		return w.location.protocol === "https:";
-	};
-	/**
-	 * Shortcut method for matchMedia ( for easy overriding in tests )
-	 */
+    /**
+     * simple memoize function:
+     */
 
-	pf.matchesMedia = function( media ) {
-		return w.matchMedia && w.matchMedia( media ).matches;
-	};
+    var memoize = function (fn) {
+        var cache = {};
+        return function (input) {
+            if (!(input in cache)) {
+                cache[input] = fn(input);
+            }
+            return cache[input];
+        };
+    };
 
-	// Shortcut method for `devicePixelRatio` ( for easy overriding in tests )
-	pf.getDpr = function() {
-		return ( w.devicePixelRatio || 1 );
-	};
+    // UTILITY FUNCTIONS
 
-	/**
-	 * Get width in css pixel value from a "length" value
-	 * http://dev.w3.org/csswg/css-values-3/#length-value
-	 */
-	pf.getWidthFromLength = function( length ) {
-		var cssValue;
-		// If a length is specified and doesn’t contain a percentage, and it is greater than 0 or using `calc`, use it. Else, abort.
-        if ( !(length && length.indexOf( "%" ) > -1 === false && ( parseFloat( length ) > 0 || length.indexOf( "calc(" ) > -1 )) ) {
-            return false;
+    // Manual is faster than RegEx
+    // http://jsperf.com/whitespace-character/5
+    function isSpace(c) {
+        return (c === "\u0020" || // space
+        c === "\u0009" || // horizontal tab
+        c === "\u000A" || // new line
+        c === "\u000C" || // form feed
+        c === "\u000D");  // carriage return
+    }
+
+    /**
+     * gets a mediaquery and returns a boolean or gets a css length and returns a number
+     * @param css mediaqueries or css length
+     * @returns {boolean|number}
+     *
+     * based on: https://gist.github.com/jonathantneal/db4f77009b155f083738
+     */
+    var evalCSS = (function () {
+
+        var regLength = /^([\d\.]+)(em|vw|px)$/;
+        var replace = function () {
+            var args = arguments, index = 0, string = args[0];
+            while (++index in args) {
+                string = string.replace(args[index], args[++index]);
+            }
+            return string;
+        };
+
+        var buildStr = memoize(function (css) {
+
+            return "return " + replace((css || "").toLowerCase(),
+                    // interpret `and`
+                    /\band\b/g, "&&",
+
+                    // interpret `,`
+                    /,/g, "||",
+
+                    // interpret `min-` as >=
+                    /min-([a-z-\s]+):/g, "e.$1>=",
+
+                    // interpret `max-` as <=
+                    /max-([a-z-\s]+):/g, "e.$1<=",
+
+                    //calc value
+                    /calc([^)]+)/g, "($1)",
+
+                    // interpret css values
+                    /(\d+[\.]*[\d]*)([a-z]+)/g, "($1 * e.$2)",
+                    //make eval less evil
+                    /^(?!(e.[a-z]|[0-9\.&=|><\+\-\*\(\)\/])).*/ig, ""
+                ) + ";";
+        });
+
+        return function (css, length) {
+            var parsedLength;
+            if (!(css in cssCache)) {
+                cssCache[css] = false;
+                if (length && (parsedLength = css.match(regLength))) {
+                    cssCache[css] = parsedLength[1] * units[parsedLength[2]];
+                } else {
+                    /*jshint evil:true */
+                    try {
+                        cssCache[css] = new Function("e", buildStr(css))(units);
+                    } catch (e) {
+                    }
+                    /*jshint evil:false */
+                }
+            }
+            return cssCache[css];
+        };
+    })();
+
+    var setResolution = function (candidate, sizesattr) {
+        if (candidate.w) { // h = means height: || descriptor.type === 'h' do not handle yet...
+            candidate.cWidth = pf.calcListLength(sizesattr || "100vw");
+            candidate.res = candidate.w / candidate.cWidth;
+        } else {
+            candidate.res = candidate.d;
+        }
+        return candidate;
+    };
+
+    /**
+     *
+     * @param opt
+     */
+    var picturefill = function (opt) {
+
+        if (!isSupportTestReady) {
+            return;
         }
 
-		/**
-		 * If length is specified in  `vw` units, use `%` instead since the div we’re measuring
-		 * is injected at the top of the document.
-		 *
-		 * TODO: maybe we should put this behind a feature test for `vw`? The risk of doing this is possible browser inconsistancies with vw vs %
-		 */
-		length = length.replace( "vw", "%" );
+        var elements, i, plen;
 
-		// Create a cached element for getting length value widths
-		if ( !pf.lengthEl ) {
-			pf.lengthEl = doc.createElement( "div" );
+        var options = opt || {};
 
-			// Positioning styles help prevent padding/margin/width on `html` or `body` from throwing calculations off.
-			pf.lengthEl.style.cssText = "border:0;display:block;font-size:1em;left:0;margin:0;padding:0;position:absolute;visibility:hidden";
+        if (options.elements && options.elements.nodeType === 1) {
+            if (options.elements.nodeName.toUpperCase() === "IMG") {
+                options.elements = [options.elements];
+            } else {
+                options.context = options.elements;
+                options.elements = null;
+            }
+        }
 
-			// Add a class, so that everyone knows where this element comes from
-			pf.lengthEl.className = "helper-from-picturefill-js";
-		}
+        elements = options.elements || pf.qsa((options.context || document), ( options.reevaluate || options.reselect ) ? pf.sel : pf.selShort);
 
-		pf.lengthEl.style.width = "0px";
+        if ((plen = elements.length)) {
 
-        try {
-		    pf.lengthEl.style.width = length;
-        } catch ( e ) {}
+            pf.setupRun(options);
+            alreadyRun = true;
 
-		doc.body.appendChild(pf.lengthEl);
+            // Loop through all elements
+            for (i = 0; i < plen; i++) {
+                pf.fillImg(elements[i], options);
+            }
 
-		cssValue = pf.lengthEl.offsetWidth;
+            pf.teardownRun(options);
+        }
+    };
 
-		if ( cssValue <= 0 ) {
-			cssValue = false;
-		}
+    /**
+     * outputs a warning for the developer
+     * @param {message}
+     * @type {Function}
+     */
+    warn = ( window.console && console.warn ) ?
+        function (message) {
+            console.warn(message);
+        } :
+        noop
+    ;
 
-		doc.body.removeChild( pf.lengthEl );
+    if (!(curSrcProp in image)) {
+        curSrcProp = "src";
+    }
 
-		return cssValue;
-	};
+    // Add support for standard mime types.
+    types["image/jpeg"] = true;
+    types["image/gif"] = true;
+    types["image/png"] = true;
 
-    pf.detectTypeSupport = function( type, typeUri ) {
+    function detectTypeSupport(type, typeUri) {
         // based on Modernizr's lossless img-webp test
         // note: asynchronous
-        var image = new w.Image();
-        image.onerror = function() {
-            pf.types[ type ] = false;
+        var image = new window.Image();
+        image.onerror = function () {
+            types[type] = false;
             picturefill();
         };
-        image.onload = function() {
-            pf.types[ type ] = image.width === 1;
+        image.onload = function () {
+            types[type] = image.width === 1;
             picturefill();
         };
         image.src = typeUri;
-
         return "pending";
-    };
-	// container of supported mime types that one might need to qualify before using
-	pf.types = pf.types || {};
+    }
 
-	pf.initTypeDetects = function() {
-        // Add support for standard mime types
-        pf.types[ "image/jpeg" ] = true;
-        pf.types[ "image/gif" ] = true;
-        pf.types[ "image/png" ] = true;
-        pf.types[ "image/svg+xml" ] = doc.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
-        pf.types[ "image/webp" ] = pf.detectTypeSupport("image/webp", "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=");
-    };
+    // test svg support
+    types["image/svg+xml"] = document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1");
 
-	pf.verifyTypeSupport = function( source ) {
-		var type = source.getAttribute( "type" );
-		// if type attribute exists, return test result, otherwise return true
-		if ( type === null || type === "" ) {
-			return true;
-		} else {
-				var pfType = pf.types[ type ];
-			// if the type test is a function, run it and return "pending" status. The function will rerun picturefill on pending elements once finished.
-			if ( typeof pfType === "string" && pfType !== "pending") {
-				pf.types[ type ] = pf.detectTypeSupport( type, pfType );
-				return "pending";
-			} else if ( typeof pfType === "function" ) {
-				pfType();
-				return "pending";
-			} else {
-				return pfType;
-			}
-		}
-	};
+    /**
+     * updates the internal vW property with the current viewport width in px
+     */
+    function updateMetrics() {
 
-	// Parses an individual `size` and returns the length, and optional media query
-	pf.parseSize = function( sourceSizeStr ) {
-		var match = /(\([^)]+\))?\s*(.+)/g.exec( sourceSizeStr );
-		return {
-			media: match && match[1],
-			length: match && match[2]
-		};
-	};
+        isVwDirty = false;
+        DPR = window.devicePixelRatio;
+        cssCache = {};
+        sizeLengthCache = {};
 
-	// Takes a string of sizes and returns the width in pixels as a number
-	pf.findWidthFromSourceSize = function( sourceSizeListStr ) {
-		// Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
-		//                            or (min-width:30em) calc(30% - 15px)
-		var sourceSizeList = pf.trim( sourceSizeListStr ).split( /\s*,\s*/ ),
-			winningLength;
+        pf.DPR = DPR || 1;
 
-		for ( var i = 0, len = sourceSizeList.length; i < len; i++ ) {
-			// Match <media-condition>? length, ie ( min-width: 50em ) 100%
-			var sourceSize = sourceSizeList[ i ],
-				// Split "( min-width: 50em ) 100%" into separate strings
-				parsedSize = pf.parseSize( sourceSize ),
-				length = parsedSize.length,
-				media = parsedSize.media;
+        units.width = Math.max(window.innerWidth || 0, docElem.clientWidth);
+        units.height = Math.max(window.innerHeight || 0, docElem.clientHeight);
 
-			if ( !length ) {
-				continue;
-			}
-			// if there is no media query or it matches, choose this as our winning length
-			if ( (!media || pf.matchesMedia( media )) &&
-				// pass the length to a method that can properly determine length
-				// in pixels based on these formats: http://dev.w3.org/csswg/css-values-3/#length-value
-				(winningLength = pf.getWidthFromLength( length )) ) {
-				break;
-			}
-		}
+        units.vw = units.width / 100;
+        units.vh = units.height / 100;
 
-		//if we have no winningLength fallback to 100vw
-		return winningLength || Math.max(w.innerWidth || 0, doc.documentElement.clientWidth);
-	};
+        evalId = [units.height, units.width, DPR].join("-");
 
-	pf.parseSrcset = function( srcset ) {
-		/**
-		 * A lot of this was pulled from Boris Smus’ parser for the now-defunct WHATWG `srcset`
-		 * https://github.com/borismus/srcset-polyfill/blob/master/js/srcset-info.js
-		 *
-		 * 1. Let input (`srcset`) be the value passed to this algorithm.
-		 * 2. Let position be a pointer into input, initially pointing at the start of the string.
-		 * 3. Let raw candidates be an initially empty ordered list of URLs with associated
-		 *    unparsed descriptors. The order of entries in the list is the order in which entries
-		 *    are added to the list.
-		 */
-		var candidates = [];
+        units.em = pf.getEmValue();
+        units.rem = units.em;
+    }
 
-		while ( srcset !== "" ) {
-			srcset = srcset.replace( /^\s+/g, "" );
+    function chooseLowRes(lowerValue, higherValue, dprValue, isCached) {
+        var bonusFactor, tooMuch, bonus, meanDensity;
 
-			// 5. Collect a sequence of characters that are not space characters, and let that be url.
-			var pos = srcset.search(/\s/g),
-				url, descriptor = null;
+        //experimental
+        if (cfg.algorithm === "saveData") {
+            if (lowerValue > 2.7) {
+                meanDensity = dprValue + 1;
+            } else {
+                tooMuch = higherValue - dprValue;
+                bonusFactor = Math.pow(lowerValue - 0.6, 1.5);
 
-			if ( pos !== -1 ) {
-				url = srcset.slice( 0, pos );
+                bonus = tooMuch * bonusFactor;
 
-				var last = url.slice(-1);
+                if (isCached) {
+                    bonus += 0.1 * bonusFactor;
+                }
 
-				// 6. If url ends with a U+002C COMMA character (,), remove that character from url
-				// and let descriptors be the empty string. Otherwise, follow these substeps
-				// 6.1. If url is empty, then jump to the step labeled descriptor parser.
-
-				if ( last === "," || url === "" ) {
-					url = url.replace( /,+$/, "" );
-					descriptor = "";
-				}
-				srcset = srcset.slice( pos + 1 );
-
-				// 6.2. Collect a sequence of characters that are not U+002C COMMA characters (,), and
-				// let that be descriptors.
-				if ( descriptor === null ) {
-					var descpos = srcset.indexOf( "," );
-					if ( descpos !== -1 ) {
-						descriptor = srcset.slice( 0, descpos );
-						srcset = srcset.slice( descpos + 1 );
-					} else {
-						descriptor = srcset;
-						srcset = "";
-					}
-				}
-			} else {
-				url = srcset;
-				srcset = "";
-			}
-
-			// 7. Add url to raw candidates, associated with descriptors.
-			if ( url || descriptor ) {
-				candidates.push({
-					url: url,
-					descriptor: descriptor
-				});
-			}
-		}
-		return candidates;
-	};
-
-	pf.parseDescriptor = function( descriptor, sizesattr ) {
-		// 11. Descriptor parser: Let candidates be an initially empty source set. The order of entries in the list
-		// is the order in which entries are added to the list.
-		var sizes = sizesattr || "100vw",
-			sizeDescriptor = descriptor && descriptor.replace( /(^\s+|\s+$)/g, "" ),
-			widthInCssPixels = pf.findWidthFromSourceSize( sizes ),
-			resCandidate;
-
-			if ( sizeDescriptor ) {
-				var splitDescriptor = sizeDescriptor.split(" ");
-
-				for (var i = splitDescriptor.length - 1; i >= 0; i--) {
-					var curr = splitDescriptor[ i ],
-						lastchar = curr && curr.slice( curr.length - 1 );
-
-					if ( ( lastchar === "h" || lastchar === "w" ) && !pf.sizesSupported ) {
-						resCandidate = parseFloat( ( parseInt( curr, 10 ) / widthInCssPixels ) );
-					} else if ( lastchar === "x" ) {
-						var res = curr && parseFloat( curr, 10 );
-						resCandidate = res && !isNaN( res ) ? res : 1;
-					}
-				}
-			}
-		return resCandidate || 1;
-	};
-
-	/**
-	 * Takes a srcset in the form of url/
-	 * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
-	 *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
-	 *     "images/pic-small.png"
-	 * Get an array of image candidates in the form of
-	 *      {url: "/foo/bar.png", resolution: 1}
-	 * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
-	 * If sizes is specified, resolution is calculated
-	 */
-	pf.getCandidatesFromSourceSet = function( srcset, sizes ) {
-		var candidates = pf.parseSrcset( srcset ),
-			formattedCandidates = [];
-
-		for ( var i = 0, len = candidates.length; i < len; i++ ) {
-			var candidate = candidates[ i ];
-
-			formattedCandidates.push({
-				url: candidate.url,
-				resolution: pf.parseDescriptor( candidate.descriptor, sizes )
-			});
-		}
-		return formattedCandidates;
-	};
-
-	/**
-	 * if it's an img element and it has a srcset property,
-	 * we need to remove the attribute so we can manipulate src
-	 * (the property's existence infers native srcset support, and a srcset-supporting browser will prioritize srcset's value over our winning picture candidate)
-	 * this moves srcset's value to memory for later use and removes the attr
-	 */
-	pf.dodgeSrcset = function( img ) {
-		if ( img.srcset ) {
-			img[ pf.ns ].srcset = img.srcset;
-			img.srcset = "";
-			img.setAttribute( "data-pfsrcset", img[ pf.ns ].srcset );
-		}
-	};
-
-	// Accept a source or img element and process its srcset and sizes attrs
-	pf.processSourceSet = function( el ) {
-		var srcset = el.getAttribute( "srcset" ),
-			sizes = el.getAttribute( "sizes" ),
-			candidates = [];
-
-		// if it's an img element, use the cached srcset property (defined or not)
-		if ( el.nodeName.toUpperCase() === "IMG" && el[ pf.ns ] && el[ pf.ns ].srcset ) {
-			srcset = el[ pf.ns ].srcset;
-		}
-
-		if ( srcset ) {
-			candidates = pf.getCandidatesFromSourceSet( srcset, sizes );
-		}
-		return candidates;
-	};
-
-	pf.backfaceVisibilityFix = function( picImg ) {
-		// See: https://github.com/scottjehl/picturefill/issues/332
-		var style = picImg.style || {},
-			WebkitBackfaceVisibility = "webkitBackfaceVisibility" in style,
-			currentZoom = style.zoom;
-
-		if (WebkitBackfaceVisibility) {
-			style.zoom = ".999";
-
-			WebkitBackfaceVisibility = picImg.offsetWidth;
-
-			style.zoom = currentZoom;
-		}
-	};
-
-	pf.setIntrinsicSize = (function() {
-		var urlCache = {};
-		var setSize = function( picImg, width, res ) {
-            if ( width ) {
-			    picImg.setAttribute( "width", parseInt(width / res, 10) );
+                meanDensity = lowerValue + bonus;
             }
-		};
-		return function( picImg, bestCandidate ) {
-			var img;
-			if ( !picImg[ pf.ns ] || w.pfStopIntrinsicSize ) {
-				return;
-			}
-			if ( picImg[ pf.ns ].dims === undefined ) {
-				picImg[ pf.ns].dims = picImg.getAttribute("width") || picImg.getAttribute("height");
-			}
-			if ( picImg[ pf.ns].dims ) { return; }
+        } else {
+            meanDensity = (dprValue > 1) ?
+                Math.sqrt(lowerValue * higherValue) :
+                lowerValue;
+        }
 
-			if ( bestCandidate.url in urlCache ) {
-				setSize( picImg, urlCache[bestCandidate.url], bestCandidate.resolution );
-			} else {
-				img = doc.createElement( "img" );
-				img.onload = function() {
-					urlCache[bestCandidate.url] = img.width;
+        return meanDensity > dprValue;
+    }
 
-                    //IE 10/11 don't calculate width for svg outside document
-                    if ( !urlCache[bestCandidate.url] ) {
-                        try {
-                            doc.body.appendChild( img );
-                            urlCache[bestCandidate.url] = img.width || img.offsetWidth;
-                            doc.body.removeChild( img );
-                        } catch(e){}
+    function applyBestCandidate(img) {
+        var srcSetCandidates;
+        var matchingSet = pf.getSet(img);
+        var evaluated = false;
+        if (matchingSet !== "pending") {
+            evaluated = evalId;
+            if (matchingSet) {
+                srcSetCandidates = pf.setRes(matchingSet);
+                pf.applySetCandidate(srcSetCandidates, img);
+            }
+        }
+        img[pf.ns].evaled = evaluated;
+    }
+
+    function ascendingSort(a, b) {
+        return a.res - b.res;
+    }
+
+    function setSrcToCur(img, src, set) {
+        var candidate;
+        if (!set && src) {
+            set = img[pf.ns].sets;
+            set = set && set[set.length - 1];
+        }
+
+        candidate = getCandidateForSrc(src, set);
+
+        if (candidate) {
+            src = pf.makeUrl(src);
+            img[pf.ns].curSrc = src;
+            img[pf.ns].curCan = candidate;
+
+            if (!candidate.res) {
+                setResolution(candidate, candidate.set.sizes);
+            }
+        }
+        return candidate;
+    }
+
+    function getCandidateForSrc(src, set) {
+        var i, candidate, candidates;
+        if (src && set) {
+            candidates = pf.parseSet(set);
+            src = pf.makeUrl(src);
+            for (i = 0; i < candidates.length; i++) {
+                if (src === pf.makeUrl(candidates[i].url)) {
+                    candidate = candidates[i];
+                    break;
+                }
+            }
+        }
+        return candidate;
+    }
+
+    function getAllSourceElements(picture, candidates) {
+        var i, len, source, srcset;
+
+        // SPEC mismatch intended for size and perf:
+        // actually only source elements preceding the img should be used
+        // also note: don't use qsa here, because IE8 sometimes doesn't like source as the key part in a selector
+        var sources = picture.getElementsByTagName("source");
+
+        for (i = 0, len = sources.length; i < len; i++) {
+            source = sources[i];
+            source[pf.ns] = true;
+            srcset = source.getAttribute("srcset");
+
+            // if source does not have a srcset attribute, skip
+            if (srcset) {
+                candidates.push({
+                    srcset: srcset,
+                    media: source.getAttribute("media"),
+                    type: source.getAttribute("type"),
+                    sizes: source.getAttribute("sizes")
+                });
+            }
+        }
+    }
+
+    /**
+     * Srcset Parser
+     * By Alex Bell |  MIT License
+     *
+     * @returns Array [{url: _, d: _, w: _, h:_, set:_(????)}, ...]
+     *
+     * Based super duper closely on the reference algorithm at:
+     * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-srcset-attribute
+     */
+
+    // 1. Let input be the value passed to this algorithm.
+    // (TO-DO : Explain what "set" argument is here. Maybe choose a more
+    // descriptive & more searchable name.  Since passing the "set" in really has
+    // nothing to do with parsing proper, I would prefer this assignment eventually
+    // go in an external fn.)
+    function parseSrcset(input, set) {
+
+        function collectCharacters(regEx) {
+            var chars,
+                match = regEx.exec(input.substring(pos));
+            if (match) {
+                chars = match[0];
+                pos += chars.length;
+                return chars;
+            }
+        }
+
+        var inputLength = input.length,
+            url,
+            descriptors,
+            currentDescriptor,
+            state,
+            c,
+
+            // 2. Let position be a pointer into input, initially pointing at the start
+            //    of the string.
+            pos = 0,
+
+            // 3. Let candidates be an initially empty source set.
+            candidates = [];
+
+        /**
+         * Adds descriptor properties to a candidate, pushes to the candidates array
+         * @return undefined
+         */
+        // (Declared outside of the while loop so that it's only created once.
+        // (This fn is defined before it is used, in order to pass JSHINT.
+        // Unfortunately this breaks the sequencing of the spec comments. :/ )
+        function parseDescriptors() {
+
+            // 9. Descriptor parser: Let error be no.
+            var pError = false,
+
+                // 10. Let width be absent.
+                // 11. Let density be absent.
+                // 12. Let future-compat-h be absent. (We're implementing it now as h)
+                w, d, h, i,
+                candidate = {},
+                desc, lastChar, value, intVal, floatVal;
+
+            // 13. For each descriptor in descriptors, run the appropriate set of steps
+            // from the following list:
+            for (i = 0; i < descriptors.length; i++) {
+                desc = descriptors[i];
+
+                lastChar = desc[desc.length - 1];
+                value = desc.substring(0, desc.length - 1);
+                intVal = parseInt(value, 10);
+                floatVal = parseFloat(value);
+
+                // If the descriptor consists of a valid non-negative integer followed by
+                // a U+0077 LATIN SMALL LETTER W character
+                if (regexNonNegativeInteger.test(value) && (lastChar === "w")) {
+
+                    // If width and density are not both absent, then let error be yes.
+                    if (w || d) {
+                        pError = true;
                     }
 
-					if ( picImg.src === bestCandidate.url ) {
-						setSize( picImg, urlCache[bestCandidate.url], bestCandidate.resolution );
-					}
-					picImg = null;
-					img.onload = null;
-					img = null;
-				};
-				img.src = bestCandidate.url;
-			}
-		};
-	})();
+                    // Apply the rules for parsing non-negative integers to the descriptor.
+                    // If the result is zero, let error be yes.
+                    // Otherwise, let width be the result.
+                    if (intVal === 0) {
+                        pError = true;
+                    } else {
+                        w = intVal;
+                    }
 
-	pf.applyBestCandidate = function( candidates, picImg ) {
-		var candidate,
-			length,
-			bestCandidate;
+                    // If the descriptor consists of a valid floating-point number followed by
+                    // a U+0078 LATIN SMALL LETTER X character
+                } else if (regexFloatingPoint.test(value) && (lastChar === "x")) {
 
-		candidates.sort( pf.ascendingSort );
+                    // If width, density and future-compat-h are not all absent, then let error
+                    // be yes.
+                    if (w || d || h) {
+                        pError = true;
+                    }
 
-		length = candidates.length;
-		bestCandidate = candidates[ length - 1 ];
+                    // Apply the rules for parsing floating-point number values to the descriptor.
+                    // If the result is less than zero, let error be yes. Otherwise, let density
+                    // be the result.
+                    if (floatVal < 0) {
+                        pError = true;
+                    } else {
+                        d = floatVal;
+                    }
 
-		for ( var i = 0; i < length; i++ ) {
-			candidate = candidates[ i ];
-			if ( candidate.resolution >= pf.getDpr() ) {
-				bestCandidate = candidate;
-				break;
-			}
-		}
+                    // If the descriptor consists of a valid non-negative integer followed by
+                    // a U+0068 LATIN SMALL LETTER H character
+                } else if (regexNonNegativeInteger.test(value) && (lastChar === "h")) {
 
-		if ( bestCandidate ) {
+                    // If height and density are not both absent, then let error be yes.
+                    if (h || d) {
+                        pError = true;
+                    }
 
-			bestCandidate.url = pf.makeUrl( bestCandidate.url );
+                    // Apply the rules for parsing non-negative integers to the descriptor.
+                    // If the result is zero, let error be yes. Otherwise, let future-compat-h
+                    // be the result.
+                    if (intVal === 0) {
+                        pError = true;
+                    } else {
+                        h = intVal;
+                    }
 
-			if ( picImg.src !== bestCandidate.url ) {
-				if ( pf.restrictsMixedContent() && bestCandidate.url.substr(0, "http:".length).toLowerCase() === "http:" ) {
-					if ( window.console !== undefined ) {
-						console.warn( "Blocked mixed content image " + bestCandidate.url );
-					}
-				} else {
-					picImg.src = bestCandidate.url;
-					// currentSrc attribute and property to match
-					// http://picture.responsiveimages.org/#the-img-element
-					picImg.currentSrc = picImg.src;
+                    // Anything else, Let error be yes.
+                } else {
+                    pError = true;
+                }
+            } // (close step 13 for loop)
 
-					pf.backfaceVisibilityFix( picImg );
-				}
-			}
+            // 15. If error is still no, then append a new image source to candidates whose
+            // URL is url, associated with a width width if not absent and a pixel
+            // density density if not absent. Otherwise, there is a parse error.
+            if (!pError) {
+                candidate.url = url;
 
-			pf.setIntrinsicSize(picImg, bestCandidate);
-		}
-	};
+                if (w) {
+                    candidate.w = w;
+                }
+                if (d) {
+                    candidate.d = d;
+                }
+                if (h) {
+                    candidate.h = h;
+                }
+                if (!h && !d && !w) {
+                    candidate.d = 1;
+                }
+                if (candidate.d === 1) {
+                    set.has1x = true;
+                }
+                candidate.set = set;
 
-	pf.ascendingSort = function( a, b ) {
-		return a.resolution - b.resolution;
-	};
+                candidates.push(candidate);
+            }
+        } // (close parseDescriptors fn)
 
-	/**
-	 * In IE9, <source> elements get removed if they aren't children of
-	 * video elements. Thus, we conditionally wrap source elements
-	 * using <!--[if IE 9]><video style="display: none;"><![endif]-->
-	 * and must account for that here by moving those source elements
-	 * back into the picture element.
-	 */
-	pf.removeVideoShim = function( picture ) {
-		var videos = picture.getElementsByTagName( "video" );
-		if ( videos.length ) {
-			var video = videos[ 0 ],
-				vsources = video.getElementsByTagName( "source" );
-			while ( vsources.length ) {
-				picture.insertBefore( vsources[ 0 ], video );
-			}
-			// Remove the video element once we're finished removing its children
-			video.parentNode.removeChild( video );
-		}
-	};
+        /**
+         * Tokenizes descriptor properties prior to parsing
+         * Returns undefined.
+         * (Again, this fn is defined before it is used, in order to pass JSHINT.
+         * Unfortunately this breaks the logical sequencing of the spec comments. :/ )
+         */
+        function tokenize() {
 
-	/**
-	 * Find all `img` elements, and add them to the candidate list if they have
-	 * a `picture` parent, a `sizes` attribute in basic `srcset` supporting browsers,
-	 * a `srcset` attribute at all, and they haven’t been evaluated already.
-	 */
-	pf.getAllElements = function() {
-		var elems = [],
-			imgs = doc.getElementsByTagName( "img" );
+            // 8.1. Descriptor tokeniser: Skip whitespace
+            collectCharacters(regexLeadingSpaces);
 
-		for ( var h = 0, len = imgs.length; h < len; h++ ) {
-			var currImg = imgs[ h ];
+            // 8.2. Let current descriptor be the empty string.
+            currentDescriptor = "";
 
-			if ( currImg.parentNode.nodeName.toUpperCase() === "PICTURE" ||
-			( currImg.getAttribute( "srcset" ) !== null ) || currImg[ pf.ns ] && currImg[ pf.ns ].srcset !== null ) {
-				elems.push( currImg );
-			}
-		}
-		return elems;
-	};
+            // 8.3. Let state be in descriptor.
+            state = "in descriptor";
 
-	pf.getMatch = function( img, picture ) {
-		var sources = picture.childNodes,
-			match;
+            while (true) {
 
-		// Go through each child, and if they have media queries, evaluate them
-		for ( var j = 0, slen = sources.length; j < slen; j++ ) {
-			var source = sources[ j ];
+                // 8.4. Let c be the character at position.
+                c = input.charAt(pos);
 
-			// ignore non-element nodes
-			if ( source.nodeType !== 1 ) {
-				continue;
-			}
+                //  Do the following depending on the value of state.
+                //  For the purpose of this step, "EOF" is a special character representing
+                //  that position is past the end of input.
 
-			// Hitting the `img` element that started everything stops the search for `sources`.
-			// If no previous `source` matches, the `img` itself is evaluated later.
-			if ( source === img ) {
-				return match;
-			}
+                // In descriptor
+                if (state === "in descriptor") {
+                    // Do the following, depending on the value of c:
 
-			// ignore non-`source` nodes
-			if ( source.nodeName.toUpperCase() !== "SOURCE" ) {
-				continue;
-			}
-			// if it's a source element that has the `src` property set, throw a warning in the console
-			if ( source.getAttribute( "src" ) !== null && typeof console !== undefined ) {
-				console.warn("The `src` attribute is invalid on `picture` `source` element; instead, use `srcset`.");
-			}
+                    // Space character
+                    // If current descriptor is not empty, append current descriptor to
+                    // descriptors and let current descriptor be the empty string.
+                    // Set state to after descriptor.
+                    if (isSpace(c)) {
+                        if (currentDescriptor) {
+                            descriptors.push(currentDescriptor);
+                            currentDescriptor = "";
+                            state = "after descriptor";
+                        }
 
-			var media = source.getAttribute( "media" );
+                        // U+002C COMMA (,)
+                        // Advance position to the next character in input. If current descriptor
+                        // is not empty, append current descriptor to descriptors. Jump to the step
+                        // labeled descriptor parser.
+                    } else if (c === ",") {
+                        pos += 1;
+                        if (currentDescriptor) {
+                            descriptors.push(currentDescriptor);
+                        }
+                        parseDescriptors();
+                        return;
 
-			// if source does not have a srcset attribute, skip
-			if ( !source.getAttribute( "srcset" ) ) {
-				continue;
-			}
+                        // U+0028 LEFT PARENTHESIS (()
+                        // Append c to current descriptor. Set state to in parens.
+                    } else if (c === "\u0028") {
+                        currentDescriptor = currentDescriptor + c;
+                        state = "in parens";
 
-			// if there's no media specified, OR w.matchMedia is supported
-			if ( ( !media || pf.matchesMedia( media ) ) ) {
-				var typeSupported = pf.verifyTypeSupport( source );
+                        // EOF
+                        // If current descriptor is not empty, append current descriptor to
+                        // descriptors. Jump to the step labeled descriptor parser.
+                    } else if (c === "") {
+                        if (currentDescriptor) {
+                            descriptors.push(currentDescriptor);
+                        }
+                        parseDescriptors();
+                        return;
 
-				if ( typeSupported === true ) {
-					match = source;
-					break;
-				} else if ( typeSupported === "pending" ) {
-					return false;
-				}
-			}
-		}
+                        // Anything else
+                        // Append c to current descriptor.
+                    } else {
+                        currentDescriptor = currentDescriptor + c;
+                    }
+                    // (end "in descriptor"
 
-		return match;
-	};
+                    // In parens
+                } else if (state === "in parens") {
 
-	function picturefill( opt ) {
-		var elements,
-			element,
-			parent,
-			firstMatch,
-			candidates,
-			options = opt || {};
+                    // U+0029 RIGHT PARENTHESIS ())
+                    // Append c to current descriptor. Set state to in descriptor.
+                    if (c === ")") {
+                        currentDescriptor = currentDescriptor + c;
+                        state = "in descriptor";
 
-		elements = options.elements || pf.getAllElements();
+                        // EOF
+                        // Append current descriptor to descriptors. Jump to the step labeled
+                        // descriptor parser.
+                    } else if (c === "") {
+                        descriptors.push(currentDescriptor);
+                        parseDescriptors();
+                        return;
 
-		// Loop through all elements
-		for ( var i = 0, plen = elements.length; i < plen; i++ ) {
-			element = elements[ i ];
-			parent = element.parentNode;
-			firstMatch = undefined;
-			candidates = undefined;
+                        // Anything else
+                        // Append c to current descriptor.
+                    } else {
+                        currentDescriptor = currentDescriptor + c;
+                    }
 
-			// immediately skip non-`img` nodes
-			if ( element.nodeName.toUpperCase() !== "IMG" ) {
-				continue;
-			}
+                    // After descriptor
+                } else if (state === "after descriptor") {
 
-			// expando for caching data on the img
-			if ( !element[ pf.ns ] ) {
-				element[ pf.ns ] = {};
-			}
+                    // Do the following, depending on the value of c:
+                    // Space character: Stay in this state.
+                    if (isSpace(c)) {
 
-			// if the element has already been evaluated, skip it unless
-			// `options.reevaluate` is set to true ( this, for example,
-			// is set to true when running `picturefill` on `resize` ).
-			if ( !options.reevaluate && element[ pf.ns ].evaluated ) {
-				continue;
-			}
+                        // EOF: Jump to the step labeled descriptor parser.
+                    } else if (c === "") {
+                        parseDescriptors();
+                        return;
 
-			// if `img` is in a `picture` element
-			if ( parent && parent.nodeName.toUpperCase() === "PICTURE" ) {
+                        // Anything else
+                        // Set state to in descriptor. Set position to the previous character in input.
+                    } else {
+                        state = "in descriptor";
+                        pos -= 1;
 
-				// IE9 video workaround
-				pf.removeVideoShim( parent );
+                    }
+                }
 
-				// return the first match which might undefined
-				// returns false if there is a pending source
-				// TODO the return type here is brutal, cleanup
-				firstMatch = pf.getMatch( element, parent );
+                // Advance position to the next character in input.
+                pos += 1;
 
-				// if any sources are pending in this picture due to async type test(s)
-				// remove the evaluated attr and skip for now ( the pending test will
-				// rerun picturefill on this element when complete)
-				if ( firstMatch === false ) {
-					continue;
-				}
-			} else {
-				firstMatch = undefined;
-			}
+                // Repeat this step.
+            } // (close while true loop)
+        }
 
-			// Cache and remove `srcset` if present and we’re going to be doing `picture`/`srcset`/`sizes` polyfilling to it.
-			if ( ( parent && parent.nodeName.toUpperCase() === "PICTURE" ) ||
-			( !pf.sizesSupported && ( element.srcset && regWDesc.test( element.srcset ) ) ) ) {
-				pf.dodgeSrcset( element );
-			}
+        // 4. Splitting loop: Collect a sequence of characters that are space
+        //    characters or U+002C COMMA characters. If any U+002C COMMA characters
+        //    were collected, that is a parse error.
+        while (true) {
+            collectCharacters(regexLeadingCommasOrSpaces);
 
-			if ( firstMatch ) {
-				candidates = pf.processSourceSet( firstMatch );
-				pf.applyBestCandidate( candidates, element );
-			} else {
-				// No sources matched, so we’re down to processing the inner `img` as a source.
-				candidates = pf.processSourceSet( element );
+            // 5. If position is past the end of input, return candidates and abort these steps.
+            if (pos >= inputLength) {
+                return candidates; // (we're done, this is the sole return path)
+            }
 
-				if ( element.srcset === undefined || element[ pf.ns ].srcset ) {
-					// Either `srcset` is completely unsupported, or we need to polyfill `sizes` functionality.
-					pf.applyBestCandidate( candidates, element );
-				} // Else, resolution-only `srcset` is supported natively.
-			}
+            // 6. Collect a sequence of characters that are not space characters,
+            //    and let that be url.
+            url = collectCharacters(regexLeadingNotSpaces);
 
-			// set evaluated to true to avoid unnecessary reparsing
-			element[ pf.ns ].evaluated = true;
-		}
-	}
+            // 7. Let descriptors be a new empty list.
+            descriptors = [];
 
-	/**
-	 * Sets up picture polyfill by polling the document and running
-	 * the polyfill every 250ms until the document is ready.
-	 * Also attaches picturefill on resize
-	 */
-	function runPicturefill() {
-		pf.initTypeDetects();
-		picturefill();
-		var intervalId = setInterval( function() {
-			// When the document has finished loading, stop checking for new images
-			// https://github.com/ded/domready/blob/master/ready.js#L15
-			picturefill();
+            // 8. If url ends with a U+002C COMMA character (,), follow these substeps:
+            //		(1). Remove all trailing U+002C COMMA characters from url. If this removed
+            //         more than one character, that is a parse error.
+            if (url.slice(-1) === ",") {
+                url = url.replace(regexTrailingCommas, "");
+                // (Jump ahead to step 9 to skip tokenization and just push the candidate).
+                parseDescriptors();
 
-			if ( /^loaded|^i|^c/.test( doc.readyState ) ) {
-				clearInterval( intervalId );
-				return;
-			}
-		}, 250 );
+                //	Otherwise, follow these substeps:
+            } else {
+                tokenize();
+            } // (close else of step 8)
 
-		function checkResize() {
-			var resizeThrottle;
+            // 16. Return to the step labeled splitting loop.
+        } // (Close of big while loop.)
+    }
 
-			if ( !w._picturefillWorking ) {
-				w._picturefillWorking = true;
-				w.clearTimeout( resizeThrottle );
-				resizeThrottle = w.setTimeout( function() {
-					picturefill({ reevaluate: true });
-					w._picturefillWorking = false;
-				}, 60 );
-			}
-		}
+    /*
+     * Sizes Parser
+     *
+     * By Alex Bell |  MIT License
+     *
+     * Non-strict but accurate and lightweight JS Parser for the string value <img sizes="here">
+     *
+     * Reference algorithm at:
+     * https://html.spec.whatwg.org/multipage/embedded-content.html#parse-a-sizes-attribute
+     *
+     * Most comments are copied in directly from the spec
+     * (except for comments in parens).
+     *
+     * Grammar is:
+     * <source-size-list> = <source-size># [ , <source-size-value> ]? | <source-size-value>
+     * <source-size> = <media-condition> <source-size-value>
+     * <source-size-value> = <length>
+     * http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-sizes
+     *
+     * E.g. "(max-width: 30em) 100vw, (max-width: 50em) 70vw, 100vw"
+     * or "(min-width: 30em), calc(30vw - 15px)" or just "30vw"
+     *
+     * Returns the first valid <css-length> with a media condition that evaluates to true,
+     * or "100vw" if all valid media conditions evaluate to false.
+     *
+     */
 
-		if ( w.addEventListener ) {
-			w.addEventListener( "resize", checkResize, false );
-		} else if ( w.attachEvent ) {
-			w.attachEvent( "onresize", checkResize );
-		}
-	}
+    function parseSizes(strValue) {
 
-	runPicturefill();
+        // (Percentage CSS lengths are not allowed in this case, to avoid confusion:
+        // https://html.spec.whatwg.org/multipage/embedded-content.html#valid-source-size-list
+        // CSS allows a single optional plus or minus sign:
+        // http://www.w3.org/TR/CSS2/syndata.html#numbers
+        // CSS is ASCII case-insensitive:
+        // http://www.w3.org/TR/CSS2/syndata.html#characters )
+        // Spec allows exponential notation for <number> type:
+        // http://dev.w3.org/csswg/css-values/#numbers
+        var regexCssLengthWithUnits = /^(?:[+-]?[0-9]+|[0-9]*\.[0-9]+)(?:[eE][+-]?[0-9]+)?(?:ch|cm|em|ex|in|mm|pc|pt|px|rem|vh|vmin|vmax|vw)$/i;
 
-	/* expose methods for testing */
-	picturefill._ = pf;
+        // (This is a quick and lenient test. Because of optional unlimited-depth internal
+        // grouping parens and strict spacing rules, this could get very complicated.)
+        var regexCssCalc = /^calc\((?:[0-9a-z \.\+\-\*\/\(\)]+)\)$/i;
 
-	expose( picturefill );
+        var i;
+        var unparsedSizesList;
+        var unparsedSizesListLength;
+        var unparsedSize;
+        var lastComponentValue;
+        var size;
 
-} )( window, window.document, new window.Image() );
+        // UTILITY FUNCTIONS
+
+        //  (Toy CSS parser. The goals here are:
+        //  1) expansive test coverage without the weight of a full CSS parser.
+        //  2) Avoiding regex wherever convenient.
+        //  Quick tests: http://jsfiddle.net/gtntL4gr/3/
+        //  Returns an array of arrays.)
+        function parseComponentValues(str) {
+            var chrctr;
+            var component = "";
+            var componentArray = [];
+            var listArray = [];
+            var parenDepth = 0;
+            var pos = 0;
+            var inComment = false;
+
+            function pushComponent() {
+                if (component) {
+                    componentArray.push(component);
+                    component = "";
+                }
+            }
+
+            function pushComponentArray() {
+                if (componentArray[0]) {
+                    listArray.push(componentArray);
+                    componentArray = [];
+                }
+            }
+
+            // (Loop forwards from the beginning of the string.)
+            while (true) {
+                chrctr = str.charAt(pos);
+
+                if (chrctr === "") { // ( End of string reached.)
+                    pushComponent();
+                    pushComponentArray();
+                    return listArray;
+                } else if (inComment) {
+                    if ((chrctr === "*") && (str[pos + 1] === "/")) { // (At end of a comment.)
+                        inComment = false;
+                        pos += 2;
+                        pushComponent();
+                        continue;
+                    } else {
+                        pos += 1; // (Skip all characters inside comments.)
+                        continue;
+                    }
+                } else if (isSpace(chrctr)) {
+                    // (If previous character in loop was also a space, or if
+                    // at the beginning of the string, do not add space char to
+                    // component.)
+                    if ((str.charAt(pos - 1) && isSpace(str.charAt(pos - 1)) ) || !component) {
+                        pos += 1;
+                        continue;
+                    } else if (parenDepth === 0) {
+                        pushComponent();
+                        pos += 1;
+                        continue;
+                    } else {
+                        // (Replace any space character with a plain space for legibility.)
+                        chrctr = " ";
+                    }
+                } else if (chrctr === "(") {
+                    parenDepth += 1;
+                } else if (chrctr === ")") {
+                    parenDepth -= 1;
+                } else if (chrctr === ",") {
+                    pushComponent();
+                    pushComponentArray();
+                    pos += 1;
+                    continue;
+                } else if ((chrctr === "/") && (str.charAt(pos + 1) === "*")) {
+                    inComment = true;
+                    pos += 2;
+                    continue;
+                }
+
+                component = component + chrctr;
+                pos += 1;
+            }
+        }
+
+        function isValidNonNegativeSourceSizeValue(s) {
+            if (regexCssLengthWithUnits.test(s) && (parseFloat(s) >= 0)) {
+                return true;
+            }
+            if (regexCssCalc.test(s)) {
+                return true;
+            }
+            // ( http://www.w3.org/TR/CSS2/syndata.html#numbers says:
+            // "-0 is equivalent to 0 and is not a negative number." which means that
+            // unitless zero and unitless negative zero must be accepted as special cases.)
+            if ((s === "0") || (s === "-0") || (s === "+0")) {
+                return true;
+            }
+            return false;
+        }
+
+        // When asked to parse a sizes attribute from an element, parse a
+        // comma-separated list of component values from the value of the element's
+        // sizes attribute (or the empty string, if the attribute is absent), and let
+        // unparsed sizes list be the result.
+        // http://dev.w3.org/csswg/css-syntax/#parse-comma-separated-list-of-component-values
+
+        unparsedSizesList = parseComponentValues(strValue);
+        unparsedSizesListLength = unparsedSizesList.length;
+
+        // For each unparsed size in unparsed sizes list:
+        for (i = 0; i < unparsedSizesListLength; i++) {
+            unparsedSize = unparsedSizesList[i];
+
+            // 1. Remove all consecutive <whitespace-token>s from the end of unparsed size.
+            // ( parseComponentValues() already omits spaces outside of parens. )
+
+            // If unparsed size is now empty, that is a parse error; continue to the next
+            // iteration of this algorithm.
+            // ( parseComponentValues() won't push an empty array. )
+
+            // 2. If the last component value in unparsed size is a valid non-negative
+            // <source-size-value>, let size be its value and remove the component value
+            // from unparsed size. Any CSS function other than the calc() function is
+            // invalid. Otherwise, there is a parse error; continue to the next iteration
+            // of this algorithm.
+            // http://dev.w3.org/csswg/css-syntax/#parse-component-value
+            lastComponentValue = unparsedSize[unparsedSize.length - 1];
+
+            if (isValidNonNegativeSourceSizeValue(lastComponentValue)) {
+                size = lastComponentValue;
+                unparsedSize.pop();
+            } else {
+                continue;
+            }
+
+            // 3. Remove all consecutive <whitespace-token>s from the end of unparsed
+            // size. If unparsed size is now empty, return size and exit this algorithm.
+            // If this was not the last item in unparsed sizes list, that is a parse error.
+            if (unparsedSize.length === 0) {
+                return size;
+            }
+
+            // 4. Parse the remaining component values in unparsed size as a
+            // <media-condition>. If it does not parse correctly, or it does parse
+            // correctly but the <media-condition> evaluates to false, continue to the
+            // next iteration of this algorithm.
+            // (Parsing all possible compound media conditions in JS is heavy, complicated,
+            // and the payoff is unclear. Is there ever an situation where the
+            // media condition parses incorrectly but still somehow evaluates to true?
+            // Can we just rely on the browser/polyfill to do it?)
+            unparsedSize = unparsedSize.join(" ");
+            if (!(pf.matchesMedia(unparsedSize) )) {
+                continue;
+            }
+
+            // 5. Return size and exit this algorithm.
+            return size;
+        }
+
+        // If the above algorithm exhausts unparsed sizes list without returning a
+        // size value, return 100vw.
+        return "100vw";
+    }
+
+    // namespace
+    pf.ns = ("pf" + new Date().getTime()).substr(0, 9);
+
+    // srcset support test
+    pf.supSrcset = "srcset" in image;
+    pf.supSizes = "sizes" in image;
+    pf.supPicture = !!window.HTMLPictureElement;
+
+    // UC browser does claim to support srcset and picture, but not sizes,
+    // this extended test reveals the browser does support nothing
+    if (pf.supSrcset && pf.supPicture && !pf.supSizes) {
+        (function (image2) {
+            image.srcset = "data:,a";
+            image2.src = "data:,a";
+            pf.supSrcset = image.complete === image2.complete;
+            pf.supPicture = pf.supSrcset && pf.supPicture;
+        })(document.createElement("img"));
+    }
+
+    // Safari9 has basic support for sizes, but does't expose the `sizes` idl attribute
+    if (pf.supSrcset && !pf.supSizes) {
+
+        (function () {
+            var width2 = "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
+            var width1 = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+            var img = document.createElement("img");
+            var test = function () {
+                var width = img.width;
+
+                if (width === 2) {
+                    pf.supSizes = true;
+                }
+
+                alwaysCheckWDescriptor = pf.supSrcset && !pf.supSizes;
+
+                isSupportTestReady = true;
+                // force async
+                setTimeout(picturefill);
+            };
+
+            img.onload = test;
+            img.onerror = test;
+            img.setAttribute("sizes", "9px");
+
+            img.srcset = width1 + " 1w," + width2 + " 9w";
+            img.src = width1;
+        })();
+
+    } else {
+        isSupportTestReady = true;
+    }
+
+    // using pf.qsa instead of dom traversing does scale much better,
+    // especially on sites mixing responsive and non-responsive images
+    pf.selShort = "picture>img,img[srcset]";
+    pf.sel = pf.selShort;
+    pf.cfg = cfg;
+
+    /**
+     * Shortcut property for `devicePixelRatio` ( for easy overriding in tests )
+     */
+    pf.DPR = (DPR || 1 );
+    pf.u = units;
+
+    // container of supported mime types that one might need to qualify before using
+    pf.types = types;
+
+    pf.setSize = noop;
+
+    /**
+     * Gets a string and returns the absolute URL
+     * @param src
+     * @returns {String} absolute URL
+     */
+
+    pf.makeUrl = memoize(function (src) {
+        anchor.href = src;
+        return anchor.href;
+    });
+
+    /**
+     * Gets a DOM element or document and a selctor and returns the found matches
+     * Can be extended with jQuery/Sizzle for IE7 support
+     * @param context
+     * @param sel
+     * @returns {NodeList|Array}
+     */
+    pf.qsa = function (context, sel) {
+        return ( "querySelector" in context ) ? context.querySelectorAll(sel) : [];
+    };
+
+    /**
+     * Shortcut method for matchMedia ( for easy overriding in tests )
+     * wether native or pf.mMQ is used will be decided lazy on first call
+     * @returns {boolean}
+     */
+    pf.matchesMedia = function () {
+        if (window.matchMedia && (matchMedia("(min-width: 0.1em)") || {}).matches) {
+            pf.matchesMedia = function (media) {
+                return !media || ( matchMedia(media).matches );
+            };
+        } else {
+            pf.matchesMedia = pf.mMQ;
+        }
+
+        return pf.matchesMedia.apply(this, arguments);
+    };
+
+    /**
+     * A simplified matchMedia implementation for IE8 and IE9
+     * handles only min-width/max-width with px or em values
+     * @param media
+     * @returns {boolean}
+     */
+    pf.mMQ = function (media) {
+        return media ? evalCSS(media) : true;
+    };
+
+    /**
+     * Returns the calculated length in css pixel from the given sourceSizeValue
+     * http://dev.w3.org/csswg/css-values-3/#length-value
+     * intended Spec mismatches:
+     * * Does not check for invalid use of CSS functions
+     * * Does handle a computed length of 0 the same as a negative and therefore invalid value
+     * @param sourceSizeValue
+     * @returns {Number}
+     */
+    pf.calcLength = function (sourceSizeValue) {
+
+        var value = evalCSS(sourceSizeValue, true) || false;
+        if (value < 0) {
+            value = false;
+        }
+
+        return value;
+    };
+
+    /**
+     * Takes a type string and checks if its supported
+     */
+
+    pf.supportsType = function (type) {
+        return ( type ) ? types[type] : true;
+    };
+
+    /**
+     * Parses a sourceSize into mediaCondition (media) and sourceSizeValue (length)
+     * @param sourceSizeStr
+     * @returns {*}
+     */
+    pf.parseSize = memoize(function (sourceSizeStr) {
+        var match = ( sourceSizeStr || "" ).match(regSize);
+        return {
+            media: match && match[1],
+            length: match && match[2]
+        };
+    });
+
+    pf.parseSet = function (set) {
+        if (!set.cands) {
+            set.cands = parseSrcset(set.srcset, set);
+        }
+        return set.cands;
+    };
+
+    /**
+     * returns 1em in css px for html/body default size
+     * function taken from respondjs
+     * @returns {*|number}
+     */
+    pf.getEmValue = function () {
+        var body;
+        if (!eminpx && (body = document.body)) {
+            var div = document.createElement("div"),
+                originalHTMLCSS = docElem.style.cssText,
+                originalBodyCSS = body.style.cssText;
+
+            div.style.cssText = baseStyle;
+
+            // 1em in a media query is the value of the default font size of the browser
+            // reset docElem and body to ensure the correct value is returned
+            docElem.style.cssText = fsCss;
+            body.style.cssText = fsCss;
+
+            body.appendChild(div);
+            eminpx = div.offsetWidth;
+            body.removeChild(div);
+
+            //also update eminpx before returning
+            eminpx = parseFloat(eminpx, 10);
+
+            // restore the original values
+            docElem.style.cssText = originalHTMLCSS;
+            body.style.cssText = originalBodyCSS;
+
+        }
+        return eminpx || 16;
+    };
+
+    /**
+     * Takes a string of sizes and returns the width in pixels as a number
+     */
+    pf.calcListLength = function (sourceSizeListStr) {
+        // Split up source size list, ie ( max-width: 30em ) 100%, ( max-width: 50em ) 50%, 33%
+        //
+        //                           or (min-width:30em) calc(30% - 15px)
+        if (!(sourceSizeListStr in sizeLengthCache) || cfg.uT) {
+            var winningLength = pf.calcLength(parseSizes(sourceSizeListStr));
+
+            sizeLengthCache[sourceSizeListStr] = !winningLength ? units.width : winningLength;
+        }
+
+        return sizeLengthCache[sourceSizeListStr];
+    };
+
+    /**
+     * Takes a candidate object with a srcset property in the form of url/
+     * ex. "images/pic-medium.png 1x, images/pic-medium-2x.png 2x" or
+     *     "images/pic-medium.png 400w, images/pic-medium-2x.png 800w" or
+     *     "images/pic-small.png"
+     * Get an array of image candidates in the form of
+     *      {url: "/foo/bar.png", resolution: 1}
+     * where resolution is http://dev.w3.org/csswg/css-values-3/#resolution-value
+     * If sizes is specified, res is calculated
+     */
+    pf.setRes = function (set) {
+        var candidates;
+        if (set) {
+
+            candidates = pf.parseSet(set);
+
+            for (var i = 0, len = candidates.length; i < len; i++) {
+                setResolution(candidates[i], set.sizes);
+            }
+        }
+        return candidates;
+    };
+
+    pf.setRes.res = setResolution;
+
+    pf.applySetCandidate = function (candidates, img) {
+        if (!candidates.length) {
+            return;
+        }
+        var candidate,
+            i,
+            j,
+            length,
+            bestCandidate,
+            curSrc,
+            curCan,
+            candidateSrc,
+            abortCurSrc;
+
+        var imageData = img[pf.ns];
+        var dpr = pf.DPR;
+
+        curSrc = imageData.curSrc || img[curSrcProp];
+
+        curCan = imageData.curCan || setSrcToCur(img, curSrc, candidates[0].set);
+
+        // if we have a current source, we might either become lazy or give this source some advantage
+        if (curCan && curCan.set === candidates[0].set) {
+
+            // if browser can abort image request and the image has a higher pixel density than needed
+            // and this image isn't downloaded yet, we skip next part and try to save bandwidth
+            abortCurSrc = (supportAbort && !img.complete && curCan.res - 0.1 > dpr);
+
+            if (!abortCurSrc) {
+                curCan.cached = true;
+
+                // if current candidate is "best", "better" or "okay",
+                // set it to bestCandidate
+                if (curCan.res >= dpr) {
+                    bestCandidate = curCan;
+                }
+            }
+        }
+
+        if (!bestCandidate) {
+
+            candidates.sort(ascendingSort);
+
+            length = candidates.length;
+            bestCandidate = candidates[length - 1];
+
+            for (i = 0; i < length; i++) {
+                candidate = candidates[i];
+                if (candidate.res >= dpr) {
+                    j = i - 1;
+
+                    // we have found the perfect candidate,
+                    // but let's improve this a little bit with some assumptions ;-)
+                    if (candidates[j] &&
+                        (abortCurSrc || curSrc !== pf.makeUrl(candidate.url)) &&
+                        chooseLowRes(candidates[j].res, candidate.res, dpr, candidates[j].cached)) {
+
+                        bestCandidate = candidates[j];
+
+                    } else {
+                        bestCandidate = candidate;
+                    }
+                    break;
+                }
+            }
+        }
+
+        if (bestCandidate) {
+
+            candidateSrc = pf.makeUrl(bestCandidate.url);
+
+            imageData.curSrc = candidateSrc;
+            imageData.curCan = bestCandidate;
+
+            if (candidateSrc !== curSrc) {
+                pf.setSrc(img, bestCandidate);
+            }
+            pf.setSize(img);
+        }
+    };
+
+    pf.setSrc = function (img, bestCandidate) {
+        var origWidth;
+        img.src = bestCandidate.url;
+
+        // although this is a specific Safari issue, we don't want to take too much different code paths
+        if (bestCandidate.set.type === "image/svg+xml") {
+            origWidth = img.style.width;
+            img.style.width = (img.offsetWidth + 1) + "px";
+
+            // next line only should trigger a repaint
+            // if... is only done to trick dead code removal
+            if (img.offsetWidth + 1) {
+                img.style.width = origWidth;
+            }
+        }
+    };
+
+    pf.getSet = function (img) {
+        var i, set, supportsType;
+        var match = false;
+        var sets = img [pf.ns].sets;
+
+        for (i = 0; i < sets.length && !match; i++) {
+            set = sets[i];
+
+            if (!set.srcset || !pf.matchesMedia(set.media) || !(supportsType = pf.supportsType(set.type))) {
+                continue;
+            }
+
+            if (supportsType === "pending") {
+                set = supportsType;
+            }
+
+            match = set;
+            break;
+        }
+
+        return match;
+    };
+
+    pf.parseSets = function (element, parent, options) {
+        var srcsetAttribute, imageSet, isWDescripor, srcsetParsed;
+
+        var hasPicture = parent && parent.nodeName.toUpperCase() === "PICTURE";
+        var imageData = element[pf.ns];
+
+        if (imageData.src === undefined || options.src) {
+            imageData.src = getImgAttr.call(element, "src");
+            if (imageData.src) {
+                setImgAttr.call(element, srcAttr, imageData.src);
+            } else {
+                removeImgAttr.call(element, srcAttr);
+            }
+        }
+
+        if (imageData.srcset === undefined || options.srcset || !pf.supSrcset || element.srcset) {
+            srcsetAttribute = getImgAttr.call(element, "srcset");
+            imageData.srcset = srcsetAttribute;
+            srcsetParsed = true;
+        }
+
+        imageData.sets = [];
+
+        if (hasPicture) {
+            imageData.pic = true;
+            getAllSourceElements(parent, imageData.sets);
+        }
+
+        if (imageData.srcset) {
+            imageSet = {
+                srcset: imageData.srcset,
+                sizes: getImgAttr.call(element, "sizes")
+            };
+
+            imageData.sets.push(imageSet);
+
+            isWDescripor = (alwaysCheckWDescriptor || imageData.src) && regWDesc.test(imageData.srcset || "");
+
+            // add normal src as candidate, if source has no w descriptor
+            if (!isWDescripor && imageData.src && !getCandidateForSrc(imageData.src, imageSet) && !imageSet.has1x) {
+                imageSet.srcset += ", " + imageData.src;
+                imageSet.cands.push({
+                    url: imageData.src,
+                    d: 1,
+                    set: imageSet
+                });
+            }
+
+        } else if (imageData.src) {
+            imageData.sets.push({
+                srcset: imageData.src,
+                sizes: null
+            });
+        }
+
+        imageData.curCan = null;
+        imageData.curSrc = undefined;
+
+        // if img has picture or the srcset was removed or has a srcset and does not support srcset at all
+        // or has a w descriptor (and does not support sizes) set support to false to evaluate
+        imageData.supported = !( hasPicture || ( imageSet && !pf.supSrcset ) || (isWDescripor && !pf.supSizes) );
+
+        if (srcsetParsed && pf.supSrcset && !imageData.supported) {
+            if (srcsetAttribute) {
+                setImgAttr.call(element, srcsetAttr, srcsetAttribute);
+                element.srcset = "";
+            } else {
+                removeImgAttr.call(element, srcsetAttr);
+            }
+        }
+
+        if (imageData.supported && !imageData.srcset && ((!imageData.src && element.src) || element.src !== pf.makeUrl(imageData.src))) {
+            if (imageData.src === null) {
+                element.removeAttribute("src");
+            } else {
+                element.src = imageData.src;
+            }
+        }
+
+        imageData.parsed = true;
+    };
+
+    pf.fillImg = function (element, options) {
+        var imageData;
+        var extreme = options.reselect || options.reevaluate;
+
+        // expando for caching data on the img
+        if (!element[pf.ns]) {
+            element[pf.ns] = {};
+        }
+
+        imageData = element[pf.ns];
+
+        // if the element has already been evaluated, skip it
+        // unless `options.reevaluate` is set to true ( this, for example,
+        // is set to true when running `picturefill` on `resize` ).
+        if (!extreme && imageData.evaled === evalId) {
+            return;
+        }
+
+        if (!imageData.parsed || options.reevaluate) {
+            pf.parseSets(element, element.parentNode, options);
+        }
+
+        if (!imageData.supported) {
+            applyBestCandidate(element);
+        } else {
+            imageData.evaled = evalId;
+        }
+    };
+
+    pf.setupRun = function () {
+        if (!alreadyRun || isVwDirty || (DPR !== window.devicePixelRatio)) {
+            updateMetrics();
+        }
+    };
+
+    // If picture is supported, well, that's awesome.
+    if (pf.supPicture) {
+        picturefill = noop;
+        pf.fillImg = noop;
+    } else {
+
+        // Set up picture polyfill by polling the document
+        (function () {
+            var isDomReady;
+            var regReady = window.attachEvent ? /d$|^c/ : /d$|^c|^i/;
+
+            var run = function () {
+                var readyState = document.readyState || "";
+
+                timerId = setTimeout(run, readyState === "loading" ? 200 : 999);
+                if (document.body) {
+                    pf.fillImgs();
+                    isDomReady = isDomReady || regReady.test(readyState);
+                    if (isDomReady) {
+                        clearTimeout(timerId);
+                    }
+
+                }
+            };
+
+            var timerId = setTimeout(run, document.body ? 9 : 99);
+
+            // Also attach picturefill on resize and readystatechange
+            // http://modernjavascript.blogspot.com/2013/08/building-better-debounce.html
+            var debounce = function (func, wait) {
+                var timeout, timestamp;
+                var later = function () {
+                    var last = (new Date()) - timestamp;
+
+                    if (last < wait) {
+                        timeout = setTimeout(later, wait - last);
+                    } else {
+                        timeout = null;
+                        func();
+                    }
+                };
+
+                return function () {
+                    timestamp = new Date();
+
+                    if (!timeout) {
+                        timeout = setTimeout(later, wait);
+                    }
+                };
+            };
+            var lastClientWidth = docElem.clientHeight;
+            var onResize = function () {
+                isVwDirty = Math.max(window.innerWidth || 0, docElem.clientWidth) !== units.width || docElem.clientHeight !== lastClientWidth;
+                lastClientWidth = docElem.clientHeight;
+                if (isVwDirty) {
+                    pf.fillImgs();
+                }
+            };
+
+            on(window, "resize", debounce(onResize, 99));
+            on(document, "readystatechange", run);
+        })();
+    }
+
+    pf.picturefill = picturefill;
+    //use this internally for easy monkey patching/performance testing
+    pf.fillImgs = picturefill;
+    pf.teardownRun = noop;
+
+    /* expose methods for testing */
+    picturefill._ = pf;
+
+    window.picturefillCFG = {
+        pf: pf,
+        push: function (args) {
+            var name = args.shift();
+            if (typeof pf[name] === "function") {
+                pf[name].apply(pf, args);
+            } else {
+                cfg[name] = args[0];
+                if (alreadyRun) {
+                    pf.fillImgs({reselect: true});
+                }
+            }
+        }
+    };
+
+    while (setOptions && setOptions.length) {
+        window.picturefillCFG.push(setOptions.shift());
+    }
+
+    /* expose picturefill */
+    window.picturefill = picturefill;
+
+    /* expose picturefill */
+    if (typeof module === "object" && typeof module.exports === "object") {
+        // CommonJS, just export
+        module.exports = picturefill;
+    } else if (typeof define === "function" && define.amd) {
+        // AMD support
+        define("picturefill", function () {
+            return picturefill;
+        });
+    }
+
+    // IE8 evals this sync, so it must be the last thing we do
+    if (!pf.supPicture) {
+        types["image/webp"] = detectTypeSupport("image/webp", "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==");
+    }
+
+})(window, document);
 
 /*! jQuery v2.2.0 | (c) jQuery Foundation | jquery.org/license */
 !function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error("jQuery requires a window with a document");return b(a)}:b(a)}("undefined"!=typeof window?window:this,function(a,b){var c=[],d=a.document,e=c.slice,f=c.concat,g=c.push,h=c.indexOf,i={},j=i.toString,k=i.hasOwnProperty,l={},m="2.2.0",n=function(a,b){return new n.fn.init(a,b)},o=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,p=/^-ms-/,q=/-([\da-z])/gi,r=function(a,b){return b.toUpperCase()};n.fn=n.prototype={jquery:m,constructor:n,selector:"",length:0,toArray:function(){return e.call(this)},get:function(a){return null!=a?0>a?this[a+this.length]:this[a]:e.call(this)},pushStack:function(a){var b=n.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a){return n.each(this,a)},map:function(a){return this.pushStack(n.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(e.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0>a?b:0);return this.pushStack(c>=0&&b>c?[this[c]]:[])},end:function(){return this.prevObject||this.constructor()},push:g,sort:c.sort,splice:c.splice},n.extend=n.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for("boolean"==typeof g&&(j=g,g=arguments[h]||{},h++),"object"==typeof g||n.isFunction(g)||(g={}),h===i&&(g=this,h--);i>h;h++)if(null!=(a=arguments[h]))for(b in a)c=g[b],d=a[b],g!==d&&(j&&d&&(n.isPlainObject(d)||(e=n.isArray(d)))?(e?(e=!1,f=c&&n.isArray(c)?c:[]):f=c&&n.isPlainObject(c)?c:{},g[b]=n.extend(j,f,d)):void 0!==d&&(g[b]=d));return g},n.extend({expando:"jQuery"+(m+Math.random()).replace(/\D/g,""),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return"function"===n.type(a)},isArray:Array.isArray,isWindow:function(a){return null!=a&&a===a.window},isNumeric:function(a){var b=a&&a.toString();return!n.isArray(a)&&b-parseFloat(b)+1>=0},isPlainObject:function(a){return"object"!==n.type(a)||a.nodeType||n.isWindow(a)?!1:a.constructor&&!k.call(a.constructor.prototype,"isPrototypeOf")?!1:!0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},type:function(a){return null==a?a+"":"object"==typeof a||"function"==typeof a?i[j.call(a)]||"object":typeof a},globalEval:function(a){var b,c=eval;a=n.trim(a),a&&(1===a.indexOf("use strict")?(b=d.createElement("script"),b.text=a,d.head.appendChild(b).parentNode.removeChild(b)):c(a))},camelCase:function(a){return a.replace(p,"ms-").replace(q,r)},nodeName:function(a,b){return a.nodeName&&a.nodeName.toLowerCase()===b.toLowerCase()},each:function(a,b){var c,d=0;if(s(a)){for(c=a.length;c>d;d++)if(b.call(a[d],d,a[d])===!1)break}else for(d in a)if(b.call(a[d],d,a[d])===!1)break;return a},trim:function(a){return null==a?"":(a+"").replace(o,"")},makeArray:function(a,b){var c=b||[];return null!=a&&(s(Object(a))?n.merge(c,"string"==typeof a?[a]:a):g.call(c,a)),c},inArray:function(a,b,c){return null==b?-1:h.call(b,a,c)},merge:function(a,b){for(var c=+b.length,d=0,e=a.length;c>d;d++)a[e++]=b[d];return a.length=e,a},grep:function(a,b,c){for(var d,e=[],f=0,g=a.length,h=!c;g>f;f++)d=!b(a[f],f),d!==h&&e.push(a[f]);return e},map:function(a,b,c){var d,e,g=0,h=[];if(s(a))for(d=a.length;d>g;g++)e=b(a[g],g,c),null!=e&&h.push(e);else for(g in a)e=b(a[g],g,c),null!=e&&h.push(e);return f.apply([],h)},guid:1,proxy:function(a,b){var c,d,f;return"string"==typeof b&&(c=a[b],b=a,a=c),n.isFunction(a)?(d=e.call(arguments,2),f=function(){return a.apply(b||this,d.concat(e.call(arguments)))},f.guid=a.guid=a.guid||n.guid++,f):void 0},now:Date.now,support:l}),"function"==typeof Symbol&&(n.fn[Symbol.iterator]=c[Symbol.iterator]),n.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(a,b){i["[object "+b+"]"]=b.toLowerCase()});function s(a){var b=!!a&&"length"in a&&a.length,c=n.type(a);return"function"===c||n.isWindow(a)?!1:"array"===c||0===b||"number"==typeof b&&b>0&&b-1 in a}var t=function(a){var b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u="sizzle"+1*new Date,v=a.document,w=0,x=0,y=ga(),z=ga(),A=ga(),B=function(a,b){return a===b&&(l=!0),0},C=1<<31,D={}.hasOwnProperty,E=[],F=E.pop,G=E.push,H=E.push,I=E.slice,J=function(a,b){for(var c=0,d=a.length;d>c;c++)if(a[c]===b)return c;return-1},K="checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",L="[\\x20\\t\\r\\n\\f]",M="(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",N="\\["+L+"*("+M+")(?:"+L+"*([*^$|!~]?=)"+L+"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|("+M+"))|)"+L+"*\\]",O=":("+M+")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|"+N+")*)|.*)\\)|)",P=new RegExp(L+"+","g"),Q=new RegExp("^"+L+"+|((?:^|[^\\\\])(?:\\\\.)*)"+L+"+$","g"),R=new RegExp("^"+L+"*,"+L+"*"),S=new RegExp("^"+L+"*([>+~]|"+L+")"+L+"*"),T=new RegExp("="+L+"*([^\\]'\"]*?)"+L+"*\\]","g"),U=new RegExp(O),V=new RegExp("^"+M+"$"),W={ID:new RegExp("^#("+M+")"),CLASS:new RegExp("^\\.("+M+")"),TAG:new RegExp("^("+M+"|[*])"),ATTR:new RegExp("^"+N),PSEUDO:new RegExp("^"+O),CHILD:new RegExp("^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\("+L+"*(even|odd|(([+-]|)(\\d*)n|)"+L+"*(?:([+-]|)"+L+"*(\\d+)|))"+L+"*\\)|)","i"),bool:new RegExp("^(?:"+K+")$","i"),needsContext:new RegExp("^"+L+"*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\("+L+"*((?:-\\d)?\\d*)"+L+"*\\)|)(?=[^-]|$)","i")},X=/^(?:input|select|textarea|button)$/i,Y=/^h\d$/i,Z=/^[^{]+\{\s*\[native \w/,$=/^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,_=/[+~]/,aa=/'|\\/g,ba=new RegExp("\\\\([\\da-f]{1,6}"+L+"?|("+L+")|.)","ig"),ca=function(a,b,c){var d="0x"+b-65536;return d!==d||c?b:0>d?String.fromCharCode(d+65536):String.fromCharCode(d>>10|55296,1023&d|56320)},da=function(){m()};try{H.apply(E=I.call(v.childNodes),v.childNodes),E[v.childNodes.length].nodeType}catch(ea){H={apply:E.length?function(a,b){G.apply(a,I.call(b))}:function(a,b){var c=a.length,d=0;while(a[c++]=b[d++]);a.length=c-1}}}function fa(a,b,d,e){var f,h,j,k,l,o,r,s,w=b&&b.ownerDocument,x=b?b.nodeType:9;if(d=d||[],"string"!=typeof a||!a||1!==x&&9!==x&&11!==x)return d;if(!e&&((b?b.ownerDocument||b:v)!==n&&m(b),b=b||n,p)){if(11!==x&&(o=$.exec(a)))if(f=o[1]){if(9===x){if(!(j=b.getElementById(f)))return d;if(j.id===f)return d.push(j),d}else if(w&&(j=w.getElementById(f))&&t(b,j)&&j.id===f)return d.push(j),d}else{if(o[2])return H.apply(d,b.getElementsByTagName(a)),d;if((f=o[3])&&c.getElementsByClassName&&b.getElementsByClassName)return H.apply(d,b.getElementsByClassName(f)),d}if(c.qsa&&!A[a+" "]&&(!q||!q.test(a))){if(1!==x)w=b,s=a;else if("object"!==b.nodeName.toLowerCase()){(k=b.getAttribute("id"))?k=k.replace(aa,"\\$&"):b.setAttribute("id",k=u),r=g(a),h=r.length,l=V.test(k)?"#"+k:"[id='"+k+"']";while(h--)r[h]=l+" "+qa(r[h]);s=r.join(","),w=_.test(a)&&oa(b.parentNode)||b}if(s)try{return H.apply(d,w.querySelectorAll(s)),d}catch(y){}finally{k===u&&b.removeAttribute("id")}}}return i(a.replace(Q,"$1"),b,d,e)}function ga(){var a=[];function b(c,e){return a.push(c+" ")>d.cacheLength&&delete b[a.shift()],b[c+" "]=e}return b}function ha(a){return a[u]=!0,a}function ia(a){var b=n.createElement("div");try{return!!a(b)}catch(c){return!1}finally{b.parentNode&&b.parentNode.removeChild(b),b=null}}function ja(a,b){var c=a.split("|"),e=c.length;while(e--)d.attrHandle[c[e]]=b}function ka(a,b){var c=b&&a,d=c&&1===a.nodeType&&1===b.nodeType&&(~b.sourceIndex||C)-(~a.sourceIndex||C);if(d)return d;if(c)while(c=c.nextSibling)if(c===b)return-1;return a?1:-1}function la(a){return function(b){var c=b.nodeName.toLowerCase();return"input"===c&&b.type===a}}function ma(a){return function(b){var c=b.nodeName.toLowerCase();return("input"===c||"button"===c)&&b.type===a}}function na(a){return ha(function(b){return b=+b,ha(function(c,d){var e,f=a([],c.length,b),g=f.length;while(g--)c[e=f[g]]&&(c[e]=!(d[e]=c[e]))})})}function oa(a){return a&&"undefined"!=typeof a.getElementsByTagName&&a}c=fa.support={},f=fa.isXML=function(a){var b=a&&(a.ownerDocument||a).documentElement;return b?"HTML"!==b.nodeName:!1},m=fa.setDocument=function(a){var b,e,g=a?a.ownerDocument||a:v;return g!==n&&9===g.nodeType&&g.documentElement?(n=g,o=n.documentElement,p=!f(n),(e=n.defaultView)&&e.top!==e&&(e.addEventListener?e.addEventListener("unload",da,!1):e.attachEvent&&e.attachEvent("onunload",da)),c.attributes=ia(function(a){return a.className="i",!a.getAttribute("className")}),c.getElementsByTagName=ia(function(a){return a.appendChild(n.createComment("")),!a.getElementsByTagName("*").length}),c.getElementsByClassName=Z.test(n.getElementsByClassName),c.getById=ia(function(a){return o.appendChild(a).id=u,!n.getElementsByName||!n.getElementsByName(u).length}),c.getById?(d.find.ID=function(a,b){if("undefined"!=typeof b.getElementById&&p){var c=b.getElementById(a);return c?[c]:[]}},d.filter.ID=function(a){var b=a.replace(ba,ca);return function(a){return a.getAttribute("id")===b}}):(delete d.find.ID,d.filter.ID=function(a){var b=a.replace(ba,ca);return function(a){var c="undefined"!=typeof a.getAttributeNode&&a.getAttributeNode("id");return c&&c.value===b}}),d.find.TAG=c.getElementsByTagName?function(a,b){return"undefined"!=typeof b.getElementsByTagName?b.getElementsByTagName(a):c.qsa?b.querySelectorAll(a):void 0}:function(a,b){var c,d=[],e=0,f=b.getElementsByTagName(a);if("*"===a){while(c=f[e++])1===c.nodeType&&d.push(c);return d}return f},d.find.CLASS=c.getElementsByClassName&&function(a,b){return"undefined"!=typeof b.getElementsByClassName&&p?b.getElementsByClassName(a):void 0},r=[],q=[],(c.qsa=Z.test(n.querySelectorAll))&&(ia(function(a){o.appendChild(a).innerHTML="<a id='"+u+"'></a><select id='"+u+"-\r\\' msallowcapture=''><option selected=''></option></select>",a.querySelectorAll("[msallowcapture^='']").length&&q.push("[*^$]="+L+"*(?:''|\"\")"),a.querySelectorAll("[selected]").length||q.push("\\["+L+"*(?:value|"+K+")"),a.querySelectorAll("[id~="+u+"-]").length||q.push("~="),a.querySelectorAll(":checked").length||q.push(":checked"),a.querySelectorAll("a#"+u+"+*").length||q.push(".#.+[+~]")}),ia(function(a){var b=n.createElement("input");b.setAttribute("type","hidden"),a.appendChild(b).setAttribute("name","D"),a.querySelectorAll("[name=d]").length&&q.push("name"+L+"*[*^$|!~]?="),a.querySelectorAll(":enabled").length||q.push(":enabled",":disabled"),a.querySelectorAll("*,:x"),q.push(",.*:")})),(c.matchesSelector=Z.test(s=o.matches||o.webkitMatchesSelector||o.mozMatchesSelector||o.oMatchesSelector||o.msMatchesSelector))&&ia(function(a){c.disconnectedMatch=s.call(a,"div"),s.call(a,"[s!='']:x"),r.push("!=",O)}),q=q.length&&new RegExp(q.join("|")),r=r.length&&new RegExp(r.join("|")),b=Z.test(o.compareDocumentPosition),t=b||Z.test(o.contains)?function(a,b){var c=9===a.nodeType?a.documentElement:a,d=b&&b.parentNode;return a===d||!(!d||1!==d.nodeType||!(c.contains?c.contains(d):a.compareDocumentPosition&&16&a.compareDocumentPosition(d)))}:function(a,b){if(b)while(b=b.parentNode)if(b===a)return!0;return!1},B=b?function(a,b){if(a===b)return l=!0,0;var d=!a.compareDocumentPosition-!b.compareDocumentPosition;return d?d:(d=(a.ownerDocument||a)===(b.ownerDocument||b)?a.compareDocumentPosition(b):1,1&d||!c.sortDetached&&b.compareDocumentPosition(a)===d?a===n||a.ownerDocument===v&&t(v,a)?-1:b===n||b.ownerDocument===v&&t(v,b)?1:k?J(k,a)-J(k,b):0:4&d?-1:1)}:function(a,b){if(a===b)return l=!0,0;var c,d=0,e=a.parentNode,f=b.parentNode,g=[a],h=[b];if(!e||!f)return a===n?-1:b===n?1:e?-1:f?1:k?J(k,a)-J(k,b):0;if(e===f)return ka(a,b);c=a;while(c=c.parentNode)g.unshift(c);c=b;while(c=c.parentNode)h.unshift(c);while(g[d]===h[d])d++;return d?ka(g[d],h[d]):g[d]===v?-1:h[d]===v?1:0},n):n},fa.matches=function(a,b){return fa(a,null,null,b)},fa.matchesSelector=function(a,b){if((a.ownerDocument||a)!==n&&m(a),b=b.replace(T,"='$1']"),c.matchesSelector&&p&&!A[b+" "]&&(!r||!r.test(b))&&(!q||!q.test(b)))try{var d=s.call(a,b);if(d||c.disconnectedMatch||a.document&&11!==a.document.nodeType)return d}catch(e){}return fa(b,n,null,[a]).length>0},fa.contains=function(a,b){return(a.ownerDocument||a)!==n&&m(a),t(a,b)},fa.attr=function(a,b){(a.ownerDocument||a)!==n&&m(a);var e=d.attrHandle[b.toLowerCase()],f=e&&D.call(d.attrHandle,b.toLowerCase())?e(a,b,!p):void 0;return void 0!==f?f:c.attributes||!p?a.getAttribute(b):(f=a.getAttributeNode(b))&&f.specified?f.value:null},fa.error=function(a){throw new Error("Syntax error, unrecognized expression: "+a)},fa.uniqueSort=function(a){var b,d=[],e=0,f=0;if(l=!c.detectDuplicates,k=!c.sortStable&&a.slice(0),a.sort(B),l){while(b=a[f++])b===a[f]&&(e=d.push(f));while(e--)a.splice(d[e],1)}return k=null,a},e=fa.getText=function(a){var b,c="",d=0,f=a.nodeType;if(f){if(1===f||9===f||11===f){if("string"==typeof a.textContent)return a.textContent;for(a=a.firstChild;a;a=a.nextSibling)c+=e(a)}else if(3===f||4===f)return a.nodeValue}else while(b=a[d++])c+=e(b);return c},d=fa.selectors={cacheLength:50,createPseudo:ha,match:W,attrHandle:{},find:{},relative:{">":{dir:"parentNode",first:!0}," ":{dir:"parentNode"},"+":{dir:"previousSibling",first:!0},"~":{dir:"previousSibling"}},preFilter:{ATTR:function(a){return a[1]=a[1].replace(ba,ca),a[3]=(a[3]||a[4]||a[5]||"").replace(ba,ca),"~="===a[2]&&(a[3]=" "+a[3]+" "),a.slice(0,4)},CHILD:function(a){return a[1]=a[1].toLowerCase(),"nth"===a[1].slice(0,3)?(a[3]||fa.error(a[0]),a[4]=+(a[4]?a[5]+(a[6]||1):2*("even"===a[3]||"odd"===a[3])),a[5]=+(a[7]+a[8]||"odd"===a[3])):a[3]&&fa.error(a[0]),a},PSEUDO:function(a){var b,c=!a[6]&&a[2];return W.CHILD.test(a[0])?null:(a[3]?a[2]=a[4]||a[5]||"":c&&U.test(c)&&(b=g(c,!0))&&(b=c.indexOf(")",c.length-b)-c.length)&&(a[0]=a[0].slice(0,b),a[2]=c.slice(0,b)),a.slice(0,3))}},filter:{TAG:function(a){var b=a.replace(ba,ca).toLowerCase();return"*"===a?function(){return!0}:function(a){return a.nodeName&&a.nodeName.toLowerCase()===b}},CLASS:function(a){var b=y[a+" "];return b||(b=new RegExp("(^|"+L+")"+a+"("+L+"|$)"))&&y(a,function(a){return b.test("string"==typeof a.className&&a.className||"undefined"!=typeof a.getAttribute&&a.getAttribute("class")||"")})},ATTR:function(a,b,c){return function(d){var e=fa.attr(d,a);return null==e?"!="===b:b?(e+="","="===b?e===c:"!="===b?e!==c:"^="===b?c&&0===e.indexOf(c):"*="===b?c&&e.indexOf(c)>-1:"$="===b?c&&e.slice(-c.length)===c:"~="===b?(" "+e.replace(P," ")+" ").indexOf(c)>-1:"|="===b?e===c||e.slice(0,c.length+1)===c+"-":!1):!0}},CHILD:function(a,b,c,d,e){var f="nth"!==a.slice(0,3),g="last"!==a.slice(-4),h="of-type"===b;return 1===d&&0===e?function(a){return!!a.parentNode}:function(b,c,i){var j,k,l,m,n,o,p=f!==g?"nextSibling":"previousSibling",q=b.parentNode,r=h&&b.nodeName.toLowerCase(),s=!i&&!h,t=!1;if(q){if(f){while(p){m=b;while(m=m[p])if(h?m.nodeName.toLowerCase()===r:1===m.nodeType)return!1;o=p="only"===a&&!o&&"nextSibling"}return!0}if(o=[g?q.firstChild:q.lastChild],g&&s){m=q,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n&&j[2],m=n&&q.childNodes[n];while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if(1===m.nodeType&&++t&&m===b){k[a]=[w,n,t];break}}else if(s&&(m=b,l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),j=k[a]||[],n=j[0]===w&&j[1],t=n),t===!1)while(m=++n&&m&&m[p]||(t=n=0)||o.pop())if((h?m.nodeName.toLowerCase()===r:1===m.nodeType)&&++t&&(s&&(l=m[u]||(m[u]={}),k=l[m.uniqueID]||(l[m.uniqueID]={}),k[a]=[w,t]),m===b))break;return t-=e,t===d||t%d===0&&t/d>=0}}},PSEUDO:function(a,b){var c,e=d.pseudos[a]||d.setFilters[a.toLowerCase()]||fa.error("unsupported pseudo: "+a);return e[u]?e(b):e.length>1?(c=[a,a,"",b],d.setFilters.hasOwnProperty(a.toLowerCase())?ha(function(a,c){var d,f=e(a,b),g=f.length;while(g--)d=J(a,f[g]),a[d]=!(c[d]=f[g])}):function(a){return e(a,0,c)}):e}},pseudos:{not:ha(function(a){var b=[],c=[],d=h(a.replace(Q,"$1"));return d[u]?ha(function(a,b,c,e){var f,g=d(a,null,e,[]),h=a.length;while(h--)(f=g[h])&&(a[h]=!(b[h]=f))}):function(a,e,f){return b[0]=a,d(b,null,f,c),b[0]=null,!c.pop()}}),has:ha(function(a){return function(b){return fa(a,b).length>0}}),contains:ha(function(a){return a=a.replace(ba,ca),function(b){return(b.textContent||b.innerText||e(b)).indexOf(a)>-1}}),lang:ha(function(a){return V.test(a||"")||fa.error("unsupported lang: "+a),a=a.replace(ba,ca).toLowerCase(),function(b){var c;do if(c=p?b.lang:b.getAttribute("xml:lang")||b.getAttribute("lang"))return c=c.toLowerCase(),c===a||0===c.indexOf(a+"-");while((b=b.parentNode)&&1===b.nodeType);return!1}}),target:function(b){var c=a.location&&a.location.hash;return c&&c.slice(1)===b.id},root:function(a){return a===o},focus:function(a){return a===n.activeElement&&(!n.hasFocus||n.hasFocus())&&!!(a.type||a.href||~a.tabIndex)},enabled:function(a){return a.disabled===!1},disabled:function(a){return a.disabled===!0},checked:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&!!a.checked||"option"===b&&!!a.selected},selected:function(a){return a.parentNode&&a.parentNode.selectedIndex,a.selected===!0},empty:function(a){for(a=a.firstChild;a;a=a.nextSibling)if(a.nodeType<6)return!1;return!0},parent:function(a){return!d.pseudos.empty(a)},header:function(a){return Y.test(a.nodeName)},input:function(a){return X.test(a.nodeName)},button:function(a){var b=a.nodeName.toLowerCase();return"input"===b&&"button"===a.type||"button"===b},text:function(a){var b;return"input"===a.nodeName.toLowerCase()&&"text"===a.type&&(null==(b=a.getAttribute("type"))||"text"===b.toLowerCase())},first:na(function(){return[0]}),last:na(function(a,b){return[b-1]}),eq:na(function(a,b,c){return[0>c?c+b:c]}),even:na(function(a,b){for(var c=0;b>c;c+=2)a.push(c);return a}),odd:na(function(a,b){for(var c=1;b>c;c+=2)a.push(c);return a}),lt:na(function(a,b,c){for(var d=0>c?c+b:c;--d>=0;)a.push(d);return a}),gt:na(function(a,b,c){for(var d=0>c?c+b:c;++d<b;)a.push(d);return a})}},d.pseudos.nth=d.pseudos.eq;for(b in{radio:!0,checkbox:!0,file:!0,password:!0,image:!0})d.pseudos[b]=la(b);for(b in{submit:!0,reset:!0})d.pseudos[b]=ma(b);function pa(){}pa.prototype=d.filters=d.pseudos,d.setFilters=new pa,g=fa.tokenize=function(a,b){var c,e,f,g,h,i,j,k=z[a+" "];if(k)return b?0:k.slice(0);h=a,i=[],j=d.preFilter;while(h){(!c||(e=R.exec(h)))&&(e&&(h=h.slice(e[0].length)||h),i.push(f=[])),c=!1,(e=S.exec(h))&&(c=e.shift(),f.push({value:c,type:e[0].replace(Q," ")}),h=h.slice(c.length));for(g in d.filter)!(e=W[g].exec(h))||j[g]&&!(e=j[g](e))||(c=e.shift(),f.push({value:c,type:g,matches:e}),h=h.slice(c.length));if(!c)break}return b?h.length:h?fa.error(a):z(a,i).slice(0)};function qa(a){for(var b=0,c=a.length,d="";c>b;b++)d+=a[b].value;return d}function ra(a,b,c){var d=b.dir,e=c&&"parentNode"===d,f=x++;return b.first?function(b,c,f){while(b=b[d])if(1===b.nodeType||e)return a(b,c,f)}:function(b,c,g){var h,i,j,k=[w,f];if(g){while(b=b[d])if((1===b.nodeType||e)&&a(b,c,g))return!0}else while(b=b[d])if(1===b.nodeType||e){if(j=b[u]||(b[u]={}),i=j[b.uniqueID]||(j[b.uniqueID]={}),(h=i[d])&&h[0]===w&&h[1]===f)return k[2]=h[2];if(i[d]=k,k[2]=a(b,c,g))return!0}}}function sa(a){return a.length>1?function(b,c,d){var e=a.length;while(e--)if(!a[e](b,c,d))return!1;return!0}:a[0]}function ta(a,b,c){for(var d=0,e=b.length;e>d;d++)fa(a,b[d],c);return c}function ua(a,b,c,d,e){for(var f,g=[],h=0,i=a.length,j=null!=b;i>h;h++)(f=a[h])&&(!c||c(f,d,e))&&(g.push(f),j&&b.push(h));return g}function va(a,b,c,d,e,f){return d&&!d[u]&&(d=va(d)),e&&!e[u]&&(e=va(e,f)),ha(function(f,g,h,i){var j,k,l,m=[],n=[],o=g.length,p=f||ta(b||"*",h.nodeType?[h]:h,[]),q=!a||!f&&b?p:ua(p,m,a,h,i),r=c?e||(f?a:o||d)?[]:g:q;if(c&&c(q,r,h,i),d){j=ua(r,n),d(j,[],h,i),k=j.length;while(k--)(l=j[k])&&(r[n[k]]=!(q[n[k]]=l))}if(f){if(e||a){if(e){j=[],k=r.length;while(k--)(l=r[k])&&j.push(q[k]=l);e(null,r=[],j,i)}k=r.length;while(k--)(l=r[k])&&(j=e?J(f,l):m[k])>-1&&(f[j]=!(g[j]=l))}}else r=ua(r===g?r.splice(o,r.length):r),e?e(null,g,r,i):H.apply(g,r)})}function wa(a){for(var b,c,e,f=a.length,g=d.relative[a[0].type],h=g||d.relative[" "],i=g?1:0,k=ra(function(a){return a===b},h,!0),l=ra(function(a){return J(b,a)>-1},h,!0),m=[function(a,c,d){var e=!g&&(d||c!==j)||((b=c).nodeType?k(a,c,d):l(a,c,d));return b=null,e}];f>i;i++)if(c=d.relative[a[i].type])m=[ra(sa(m),c)];else{if(c=d.filter[a[i].type].apply(null,a[i].matches),c[u]){for(e=++i;f>e;e++)if(d.relative[a[e].type])break;return va(i>1&&sa(m),i>1&&qa(a.slice(0,i-1).concat({value:" "===a[i-2].type?"*":""})).replace(Q,"$1"),c,e>i&&wa(a.slice(i,e)),f>e&&wa(a=a.slice(e)),f>e&&qa(a))}m.push(c)}return sa(m)}function xa(a,b){var c=b.length>0,e=a.length>0,f=function(f,g,h,i,k){var l,o,q,r=0,s="0",t=f&&[],u=[],v=j,x=f||e&&d.find.TAG("*",k),y=w+=null==v?1:Math.random()||.1,z=x.length;for(k&&(j=g===n||g||k);s!==z&&null!=(l=x[s]);s++){if(e&&l){o=0,g||l.ownerDocument===n||(m(l),h=!p);while(q=a[o++])if(q(l,g||n,h)){i.push(l);break}k&&(w=y)}c&&((l=!q&&l)&&r--,f&&t.push(l))}if(r+=s,c&&s!==r){o=0;while(q=b[o++])q(t,u,g,h);if(f){if(r>0)while(s--)t[s]||u[s]||(u[s]=F.call(i));u=ua(u)}H.apply(i,u),k&&!f&&u.length>0&&r+b.length>1&&fa.uniqueSort(i)}return k&&(w=y,j=v),t};return c?ha(f):f}return h=fa.compile=function(a,b){var c,d=[],e=[],f=A[a+" "];if(!f){b||(b=g(a)),c=b.length;while(c--)f=wa(b[c]),f[u]?d.push(f):e.push(f);f=A(a,xa(e,d)),f.selector=a}return f},i=fa.select=function(a,b,e,f){var i,j,k,l,m,n="function"==typeof a&&a,o=!f&&g(a=n.selector||a);if(e=e||[],1===o.length){if(j=o[0]=o[0].slice(0),j.length>2&&"ID"===(k=j[0]).type&&c.getById&&9===b.nodeType&&p&&d.relative[j[1].type]){if(b=(d.find.ID(k.matches[0].replace(ba,ca),b)||[])[0],!b)return e;n&&(b=b.parentNode),a=a.slice(j.shift().value.length)}i=W.needsContext.test(a)?0:j.length;while(i--){if(k=j[i],d.relative[l=k.type])break;if((m=d.find[l])&&(f=m(k.matches[0].replace(ba,ca),_.test(j[0].type)&&oa(b.parentNode)||b))){if(j.splice(i,1),a=f.length&&qa(j),!a)return H.apply(e,f),e;break}}}return(n||h(a,o))(f,b,!p,e,!b||_.test(a)&&oa(b.parentNode)||b),e},c.sortStable=u.split("").sort(B).join("")===u,c.detectDuplicates=!!l,m(),c.sortDetached=ia(function(a){return 1&a.compareDocumentPosition(n.createElement("div"))}),ia(function(a){return a.innerHTML="<a href='#'></a>","#"===a.firstChild.getAttribute("href")})||ja("type|href|height|width",function(a,b,c){return c?void 0:a.getAttribute(b,"type"===b.toLowerCase()?1:2)}),c.attributes&&ia(function(a){return a.innerHTML="<input/>",a.firstChild.setAttribute("value",""),""===a.firstChild.getAttribute("value")})||ja("value",function(a,b,c){return c||"input"!==a.nodeName.toLowerCase()?void 0:a.defaultValue}),ia(function(a){return null==a.getAttribute("disabled")})||ja(K,function(a,b,c){var d;return c?void 0:a[b]===!0?b.toLowerCase():(d=a.getAttributeNode(b))&&d.specified?d.value:null}),fa}(a);n.find=t,n.expr=t.selectors,n.expr[":"]=n.expr.pseudos,n.uniqueSort=n.unique=t.uniqueSort,n.text=t.getText,n.isXMLDoc=t.isXML,n.contains=t.contains;var u=function(a,b,c){var d=[],e=void 0!==c;while((a=a[b])&&9!==a.nodeType)if(1===a.nodeType){if(e&&n(a).is(c))break;d.push(a)}return d},v=function(a,b){for(var c=[];a;a=a.nextSibling)1===a.nodeType&&a!==b&&c.push(a);return c},w=n.expr.match.needsContext,x=/^<([\w-]+)\s*\/?>(?:<\/\1>|)$/,y=/^.[^:#\[\.,]*$/;function z(a,b,c){if(n.isFunction(b))return n.grep(a,function(a,d){return!!b.call(a,d,a)!==c});if(b.nodeType)return n.grep(a,function(a){return a===b!==c});if("string"==typeof b){if(y.test(b))return n.filter(b,a,c);b=n.filter(b,a)}return n.grep(a,function(a){return h.call(b,a)>-1!==c})}n.filter=function(a,b,c){var d=b[0];return c&&(a=":not("+a+")"),1===b.length&&1===d.nodeType?n.find.matchesSelector(d,a)?[d]:[]:n.find.matches(a,n.grep(b,function(a){return 1===a.nodeType}))},n.fn.extend({find:function(a){var b,c=this.length,d=[],e=this;if("string"!=typeof a)return this.pushStack(n(a).filter(function(){for(b=0;c>b;b++)if(n.contains(e[b],this))return!0}));for(b=0;c>b;b++)n.find(a,e[b],d);return d=this.pushStack(c>1?n.unique(d):d),d.selector=this.selector?this.selector+" "+a:a,d},filter:function(a){return this.pushStack(z(this,a||[],!1))},not:function(a){return this.pushStack(z(this,a||[],!0))},is:function(a){return!!z(this,"string"==typeof a&&w.test(a)?n(a):a||[],!1).length}});var A,B=/^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]*))$/,C=n.fn.init=function(a,b,c){var e,f;if(!a)return this;if(c=c||A,"string"==typeof a){if(e="<"===a[0]&&">"===a[a.length-1]&&a.length>=3?[null,a,null]:B.exec(a),!e||!e[1]&&b)return!b||b.jquery?(b||c).find(a):this.constructor(b).find(a);if(e[1]){if(b=b instanceof n?b[0]:b,n.merge(this,n.parseHTML(e[1],b&&b.nodeType?b.ownerDocument||b:d,!0)),x.test(e[1])&&n.isPlainObject(b))for(e in b)n.isFunction(this[e])?this[e](b[e]):this.attr(e,b[e]);return this}return f=d.getElementById(e[2]),f&&f.parentNode&&(this.length=1,this[0]=f),this.context=d,this.selector=a,this}return a.nodeType?(this.context=this[0]=a,this.length=1,this):n.isFunction(a)?void 0!==c.ready?c.ready(a):a(n):(void 0!==a.selector&&(this.selector=a.selector,this.context=a.context),n.makeArray(a,this))};C.prototype=n.fn,A=n(d);var D=/^(?:parents|prev(?:Until|All))/,E={children:!0,contents:!0,next:!0,prev:!0};n.fn.extend({has:function(a){var b=n(a,this),c=b.length;return this.filter(function(){for(var a=0;c>a;a++)if(n.contains(this,b[a]))return!0})},closest:function(a,b){for(var c,d=0,e=this.length,f=[],g=w.test(a)||"string"!=typeof a?n(a,b||this.context):0;e>d;d++)for(c=this[d];c&&c!==b;c=c.parentNode)if(c.nodeType<11&&(g?g.index(c)>-1:1===c.nodeType&&n.find.matchesSelector(c,a))){f.push(c);break}return this.pushStack(f.length>1?n.uniqueSort(f):f)},index:function(a){return a?"string"==typeof a?h.call(n(a),this[0]):h.call(this,a.jquery?a[0]:a):this[0]&&this[0].parentNode?this.first().prevAll().length:-1},add:function(a,b){return this.pushStack(n.uniqueSort(n.merge(this.get(),n(a,b))))},addBack:function(a){return this.add(null==a?this.prevObject:this.prevObject.filter(a))}});function F(a,b){while((a=a[b])&&1!==a.nodeType);return a}n.each({parent:function(a){var b=a.parentNode;return b&&11!==b.nodeType?b:null},parents:function(a){return u(a,"parentNode")},parentsUntil:function(a,b,c){return u(a,"parentNode",c)},next:function(a){return F(a,"nextSibling")},prev:function(a){return F(a,"previousSibling")},nextAll:function(a){return u(a,"nextSibling")},prevAll:function(a){return u(a,"previousSibling")},nextUntil:function(a,b,c){return u(a,"nextSibling",c)},prevUntil:function(a,b,c){return u(a,"previousSibling",c)},siblings:function(a){return v((a.parentNode||{}).firstChild,a)},children:function(a){return v(a.firstChild)},contents:function(a){return a.contentDocument||n.merge([],a.childNodes)}},function(a,b){n.fn[a]=function(c,d){var e=n.map(this,b,c);return"Until"!==a.slice(-5)&&(d=c),d&&"string"==typeof d&&(e=n.filter(d,e)),this.length>1&&(E[a]||n.uniqueSort(e),D.test(a)&&e.reverse()),this.pushStack(e)}});var G=/\S+/g;function H(a){var b={};return n.each(a.match(G)||[],function(a,c){b[c]=!0}),b}n.Callbacks=function(a){a="string"==typeof a?H(a):n.extend({},a);var b,c,d,e,f=[],g=[],h=-1,i=function(){for(e=a.once,d=b=!0;g.length;h=-1){c=g.shift();while(++h<f.length)f[h].apply(c[0],c[1])===!1&&a.stopOnFalse&&(h=f.length,c=!1)}a.memory||(c=!1),b=!1,e&&(f=c?[]:"")},j={add:function(){return f&&(c&&!b&&(h=f.length-1,g.push(c)),function d(b){n.each(b,function(b,c){n.isFunction(c)?a.unique&&j.has(c)||f.push(c):c&&c.length&&"string"!==n.type(c)&&d(c)})}(arguments),c&&!b&&i()),this},remove:function(){return n.each(arguments,function(a,b){var c;while((c=n.inArray(b,f,c))>-1)f.splice(c,1),h>=c&&h--}),this},has:function(a){return a?n.inArray(a,f)>-1:f.length>0},empty:function(){return f&&(f=[]),this},disable:function(){return e=g=[],f=c="",this},disabled:function(){return!f},lock:function(){return e=g=[],c||(f=c=""),this},locked:function(){return!!e},fireWith:function(a,c){return e||(c=c||[],c=[a,c.slice?c.slice():c],g.push(c),b||i()),this},fire:function(){return j.fireWith(this,arguments),this},fired:function(){return!!d}};return j},n.extend({Deferred:function(a){var b=[["resolve","done",n.Callbacks("once memory"),"resolved"],["reject","fail",n.Callbacks("once memory"),"rejected"],["notify","progress",n.Callbacks("memory")]],c="pending",d={state:function(){return c},always:function(){return e.done(arguments).fail(arguments),this},then:function(){var a=arguments;return n.Deferred(function(c){n.each(b,function(b,f){var g=n.isFunction(a[b])&&a[b];e[f[1]](function(){var a=g&&g.apply(this,arguments);a&&n.isFunction(a.promise)?a.promise().progress(c.notify).done(c.resolve).fail(c.reject):c[f[0]+"With"](this===d?c.promise():this,g?[a]:arguments)})}),a=null}).promise()},promise:function(a){return null!=a?n.extend(a,d):d}},e={};return d.pipe=d.then,n.each(b,function(a,f){var g=f[2],h=f[3];d[f[1]]=g.add,h&&g.add(function(){c=h},b[1^a][2].disable,b[2][2].lock),e[f[0]]=function(){return e[f[0]+"With"](this===e?d:this,arguments),this},e[f[0]+"With"]=g.fireWith}),d.promise(e),a&&a.call(e,e),e},when:function(a){var b=0,c=e.call(arguments),d=c.length,f=1!==d||a&&n.isFunction(a.promise)?d:0,g=1===f?a:n.Deferred(),h=function(a,b,c){return function(d){b[a]=this,c[a]=arguments.length>1?e.call(arguments):d,c===i?g.notifyWith(b,c):--f||g.resolveWith(b,c)}},i,j,k;if(d>1)for(i=new Array(d),j=new Array(d),k=new Array(d);d>b;b++)c[b]&&n.isFunction(c[b].promise)?c[b].promise().progress(h(b,j,i)).done(h(b,k,c)).fail(g.reject):--f;return f||g.resolveWith(k,c),g.promise()}});var I;n.fn.ready=function(a){return n.ready.promise().done(a),this},n.extend({isReady:!1,readyWait:1,holdReady:function(a){a?n.readyWait++:n.ready(!0)},ready:function(a){(a===!0?--n.readyWait:n.isReady)||(n.isReady=!0,a!==!0&&--n.readyWait>0||(I.resolveWith(d,[n]),n.fn.triggerHandler&&(n(d).triggerHandler("ready"),n(d).off("ready"))))}});function J(){d.removeEventListener("DOMContentLoaded",J),a.removeEventListener("load",J),n.ready()}n.ready.promise=function(b){return I||(I=n.Deferred(),"complete"===d.readyState||"loading"!==d.readyState&&!d.documentElement.doScroll?a.setTimeout(n.ready):(d.addEventListener("DOMContentLoaded",J),a.addEventListener("load",J))),I.promise(b)},n.ready.promise();var K=function(a,b,c,d,e,f,g){var h=0,i=a.length,j=null==c;if("object"===n.type(c)){e=!0;for(h in c)K(a,b,h,c[h],!0,f,g)}else if(void 0!==d&&(e=!0,n.isFunction(d)||(g=!0),j&&(g?(b.call(a,d),b=null):(j=b,b=function(a,b,c){return j.call(n(a),c)})),b))for(;i>h;h++)b(a[h],c,g?d:d.call(a[h],h,b(a[h],c)));return e?a:j?b.call(a):i?b(a[0],c):f},L=function(a){return 1===a.nodeType||9===a.nodeType||!+a.nodeType};function M(){this.expando=n.expando+M.uid++}M.uid=1,M.prototype={register:function(a,b){var c=b||{};return a.nodeType?a[this.expando]=c:Object.defineProperty(a,this.expando,{value:c,writable:!0,configurable:!0}),a[this.expando]},cache:function(a){if(!L(a))return{};var b=a[this.expando];return b||(b={},L(a)&&(a.nodeType?a[this.expando]=b:Object.defineProperty(a,this.expando,{value:b,configurable:!0}))),b},set:function(a,b,c){var d,e=this.cache(a);if("string"==typeof b)e[b]=c;else for(d in b)e[d]=b[d];return e},get:function(a,b){return void 0===b?this.cache(a):a[this.expando]&&a[this.expando][b]},access:function(a,b,c){var d;return void 0===b||b&&"string"==typeof b&&void 0===c?(d=this.get(a,b),void 0!==d?d:this.get(a,n.camelCase(b))):(this.set(a,b,c),void 0!==c?c:b)},remove:function(a,b){var c,d,e,f=a[this.expando];if(void 0!==f){if(void 0===b)this.register(a);else{n.isArray(b)?d=b.concat(b.map(n.camelCase)):(e=n.camelCase(b),b in f?d=[b,e]:(d=e,d=d in f?[d]:d.match(G)||[])),c=d.length;while(c--)delete f[d[c]]}(void 0===b||n.isEmptyObject(f))&&(a.nodeType?a[this.expando]=void 0:delete a[this.expando])}},hasData:function(a){var b=a[this.expando];return void 0!==b&&!n.isEmptyObject(b)}};var N=new M,O=new M,P=/^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,Q=/[A-Z]/g;function R(a,b,c){var d;if(void 0===c&&1===a.nodeType)if(d="data-"+b.replace(Q,"-$&").toLowerCase(),c=a.getAttribute(d),"string"==typeof c){try{c="true"===c?!0:"false"===c?!1:"null"===c?null:+c+""===c?+c:P.test(c)?n.parseJSON(c):c}catch(e){}O.set(a,b,c);
@@ -2467,7 +3318,7 @@ window.matchMedia || (window.matchMedia = function() {
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.4.1
+ Version: 1.6.0
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -2475,9 +3326,7 @@ window.matchMedia || (window.matchMedia = function() {
   Issues: http://github.com/kenwheeler/slick/issues
 
  */
-
 /* global window, document, define, jQuery, setInterval, clearInterval */
-
 (function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -2498,8 +3347,7 @@ window.matchMedia || (window.matchMedia = function() {
 
         function Slick(element, settings) {
 
-            var _ = this,
-                dataSettings, responsiveSettings, breakpoint;
+            var _ = this, dataSettings;
 
             _.defaults = {
                 accessibility: true,
@@ -2508,15 +3356,15 @@ window.matchMedia || (window.matchMedia = function() {
                 appendDots: $(element),
                 arrows: true,
                 asNavFor: null,
-                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="previous">Previous</button>',
-                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="next">Next</button>',
+                prevArrow: '<button type="button" data-role="none" class="slick-prev" aria-label="Previous" tabindex="0" role="button">Previous</button>',
+                nextArrow: '<button type="button" data-role="none" class="slick-next" aria-label="Next" tabindex="0" role="button">Next</button>',
                 autoplay: false,
                 autoplaySpeed: 3000,
                 centerMode: false,
                 centerPadding: '50px',
                 cssEase: 'ease',
                 customPaging: function(slider, i) {
-                    return '<button type="button" data-role="none">' + (i + 1) + '</button>';
+                    return $('<button type="button" data-role="none" role="button" tabindex="0" />').text(i + 1);
                 },
                 dots: false,
                 dotsClass: 'slick-dots',
@@ -2530,11 +3378,14 @@ window.matchMedia || (window.matchMedia = function() {
                 lazyLoad: 'ondemand',
                 mobileFirst: false,
                 pauseOnHover: true,
+                pauseOnFocus: true,
                 pauseOnDotsHover: false,
                 respondTo: 'window',
                 responsive: null,
+                rows: 1,
                 rtl: false,
                 slide: '',
+                slidesPerRow: 1,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 speed: 500,
@@ -2543,9 +3394,12 @@ window.matchMedia || (window.matchMedia = function() {
                 touchMove: true,
                 touchThreshold: 5,
                 useCSS: true,
+                useTransform: true,
                 variableWidth: false,
                 vertical: false,
-                waitForAnimate: true
+                verticalSwiping: false,
+                waitForAnimate: true,
+                zIndex: 1000
             };
 
             _.initials = {
@@ -2571,7 +3425,8 @@ window.matchMedia || (window.matchMedia = function() {
                 swipeLeft: null,
                 $list: null,
                 touchObject: {},
-                transformsEnabled: false
+                transformsEnabled: false,
+                unslicked: false
             };
 
             $.extend(_, _.initials);
@@ -2582,61 +3437,41 @@ window.matchMedia || (window.matchMedia = function() {
             _.breakpoints = [];
             _.breakpointSettings = [];
             _.cssTransitions = false;
-            _.hidden = "hidden";
-            _.paused = false;
+            _.focussed = false;
+            _.interrupted = false;
+            _.hidden = 'hidden';
+            _.paused = true;
             _.positionProp = null;
             _.respondTo = null;
+            _.rowCount = 1;
             _.shouldClick = true;
             _.$slider = $(element);
             _.$slidesCache = null;
             _.transformType = null;
             _.transitionType = null;
-            _.visibilityChange = "visibilitychange";
+            _.visibilityChange = 'visibilitychange';
             _.windowWidth = 0;
             _.windowTimer = null;
 
             dataSettings = $(element).data('slick') || {};
 
-            _.options = $.extend({}, _.defaults, dataSettings, settings);
+            _.options = $.extend({}, _.defaults, settings, dataSettings);
 
             _.currentSlide = _.options.initialSlide;
 
             _.originalSettings = _.options;
-            responsiveSettings = _.options.responsive || null;
 
-            if (responsiveSettings && responsiveSettings.length > -1) {
-                _.respondTo = _.options.respondTo || "window";
-                for (breakpoint in responsiveSettings) {
-                    if (responsiveSettings.hasOwnProperty(breakpoint)) {
-                        _.breakpoints.push(responsiveSettings[
-                            breakpoint].breakpoint);
-                        _.breakpointSettings[responsiveSettings[
-                            breakpoint].breakpoint] =
-                            responsiveSettings[breakpoint].settings;
-                    }
-                }
-                _.breakpoints.sort(function(a, b) {
-                    if(_.options.mobileFirst === true) {
-                        return a - b;
-                    } else {
-                        return b - a;
-                    }
-                });
-            }
-
-            if (typeof document.mozHidden !== "undefined") {
-                _.hidden = "mozHidden";
-                _.visibilityChange = "mozvisibilitychange";
-            } else if (typeof document.msHidden !== "undefined") {
-                _.hidden = "msHidden";
-                _.visibilityChange = "msvisibilitychange";
-            } else if (typeof document.webkitHidden !== "undefined") {
-                _.hidden = "webkitHidden";
-                _.visibilityChange = "webkitvisibilitychange";
+            if (typeof document.mozHidden !== 'undefined') {
+                _.hidden = 'mozHidden';
+                _.visibilityChange = 'mozvisibilitychange';
+            } else if (typeof document.webkitHidden !== 'undefined') {
+                _.hidden = 'webkitHidden';
+                _.visibilityChange = 'webkitvisibilitychange';
             }
 
             _.autoPlay = $.proxy(_.autoPlay, _);
             _.autoPlayClear = $.proxy(_.autoPlayClear, _);
+            _.autoPlayIterator = $.proxy(_.autoPlayIterator, _);
             _.changeSlide = $.proxy(_.changeSlide, _);
             _.clickHandler = $.proxy(_.clickHandler, _);
             _.selectHandler = $.proxy(_.selectHandler, _);
@@ -2644,7 +3479,6 @@ window.matchMedia || (window.matchMedia = function() {
             _.swipeHandler = $.proxy(_.swipeHandler, _);
             _.dragHandler = $.proxy(_.dragHandler, _);
             _.keyHandler = $.proxy(_.keyHandler, _);
-            _.autoPlayIterator = $.proxy(_.autoPlayIterator, _);
 
             _.instanceUid = instanceUid++;
 
@@ -2653,15 +3487,26 @@ window.matchMedia || (window.matchMedia = function() {
             // Extracted from jQuery v1.11 source
             _.htmlExpr = /^(?:\s*(<[\w\W]+>)[^>]*)$/;
 
-            _.init();
 
-            _.checkResponsive(true);
+            _.registerBreakpoints();
+            _.init(true);
 
         }
 
         return Slick;
 
     }());
+
+    Slick.prototype.activateADA = function() {
+        var _ = this;
+
+        _.$slideTrack.find('.slick-active').attr({
+            'aria-hidden': 'false'
+        }).find('a, input, button, select').attr({
+            'tabindex': '0'
+        });
+
+    };
 
     Slick.prototype.addSlide = Slick.prototype.slickAdd = function(markup, index, addBefore) {
 
@@ -2699,7 +3544,7 @@ window.matchMedia || (window.matchMedia = function() {
         _.$slideTrack.append(_.$slides);
 
         _.$slides.each(function(index, element) {
-            $(element).attr("data-slick-index",index);
+            $(element).attr('data-slick-index', index);
         });
 
         _.$slidesCache = _.$slides;
@@ -2708,17 +3553,20 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
-    Slick.prototype.animateHeight = function(){
+    Slick.prototype.animateHeight = function() {
         var _ = this;
-        if(_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
+        if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
             var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
-            _.$list.animate({height: targetHeight},_.options.speed);
+            _.$list.animate({
+                height: targetHeight
+            }, _.options.speed);
         }
     };
 
     Slick.prototype.animateSlide = function(targetLeft, callback) {
 
-        var animProps = {}, _ = this;
+        var animProps = {},
+            _ = this;
 
         _.animateHeight();
 
@@ -2795,9 +3643,33 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
+    Slick.prototype.getNavTarget = function() {
+
+        var _ = this,
+            asNavFor = _.options.asNavFor;
+
+        if ( asNavFor && asNavFor !== null ) {
+            asNavFor = $(asNavFor).not(_.$slider);
+        }
+
+        return asNavFor;
+
+    };
+
     Slick.prototype.asNavFor = function(index) {
-        var _ = this, asNavFor = _.options.asNavFor !== null ? $(_.options.asNavFor).slick('getSlick') : null;
-        if(asNavFor !== null) asNavFor.slideHandler(index, true);
+
+        var _ = this,
+            asNavFor = _.getNavTarget();
+
+        if ( asNavFor !== null && typeof asNavFor === 'object' ) {
+            asNavFor.each(function() {
+                var target = $(this).slick('getSlick');
+                if(!target.unslicked) {
+                    target.slideHandler(index, true);
+                }
+            });
+        }
+
     };
 
     Slick.prototype.applyTransition = function(slide) {
@@ -2823,13 +3695,10 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        if (_.autoPlayTimer) {
-            clearInterval(_.autoPlayTimer);
-        }
+        _.autoPlayClear();
 
-        if (_.slideCount > _.options.slidesToShow && _.paused !== true) {
-            _.autoPlayTimer = setInterval(_.autoPlayIterator,
-                _.options.autoplaySpeed);
+        if ( _.slideCount > _.options.slidesToShow ) {
+            _.autoPlayTimer = setInterval( _.autoPlayIterator, _.options.autoplaySpeed );
         }
 
     };
@@ -2837,6 +3706,7 @@ window.matchMedia || (window.matchMedia = function() {
     Slick.prototype.autoPlayClear = function() {
 
         var _ = this;
+
         if (_.autoPlayTimer) {
             clearInterval(_.autoPlayTimer);
         }
@@ -2845,34 +3715,30 @@ window.matchMedia || (window.matchMedia = function() {
 
     Slick.prototype.autoPlayIterator = function() {
 
-        var _ = this;
+        var _ = this,
+            slideTo = _.currentSlide + _.options.slidesToScroll;
 
-        if (_.options.infinite === false) {
+        if ( !_.paused && !_.interrupted && !_.focussed ) {
 
-            if (_.direction === 1) {
+            if ( _.options.infinite === false ) {
 
-                if ((_.currentSlide + 1) === _.slideCount -
-                    1) {
+                if ( _.direction === 1 && ( _.currentSlide + 1 ) === ( _.slideCount - 1 )) {
                     _.direction = 0;
                 }
 
-                _.slideHandler(_.currentSlide + _.options.slidesToScroll);
+                else if ( _.direction === 0 ) {
 
-            } else {
+                    slideTo = _.currentSlide - _.options.slidesToScroll;
 
-                if ((_.currentSlide - 1 === 0)) {
-
-                    _.direction = 1;
+                    if ( _.currentSlide - 1 === 0 ) {
+                        _.direction = 1;
+                    }
 
                 }
 
-                _.slideHandler(_.currentSlide - _.options.slidesToScroll);
-
             }
 
-        } else {
-
-            _.slideHandler(_.currentSlide + _.options.slidesToScroll);
+            _.slideHandler( slideTo );
 
         }
 
@@ -2882,21 +3748,40 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+        if (_.options.arrows === true ) {
 
-            _.$prevArrow = $(_.options.prevArrow);
-            _.$nextArrow = $(_.options.nextArrow);
+            _.$prevArrow = $(_.options.prevArrow).addClass('slick-arrow');
+            _.$nextArrow = $(_.options.nextArrow).addClass('slick-arrow');
 
-            if (_.htmlExpr.test(_.options.prevArrow)) {
-                _.$prevArrow.appendTo(_.options.appendArrows);
-            }
+            if( _.slideCount > _.options.slidesToShow ) {
 
-            if (_.htmlExpr.test(_.options.nextArrow)) {
-                _.$nextArrow.appendTo(_.options.appendArrows);
-            }
+                _.$prevArrow.removeClass('slick-hidden').removeAttr('aria-hidden tabindex');
+                _.$nextArrow.removeClass('slick-hidden').removeAttr('aria-hidden tabindex');
 
-            if (_.options.infinite !== true) {
-                _.$prevArrow.addClass('slick-disabled');
+                if (_.htmlExpr.test(_.options.prevArrow)) {
+                    _.$prevArrow.prependTo(_.options.appendArrows);
+                }
+
+                if (_.htmlExpr.test(_.options.nextArrow)) {
+                    _.$nextArrow.appendTo(_.options.appendArrows);
+                }
+
+                if (_.options.infinite !== true) {
+                    _.$prevArrow
+                        .addClass('slick-disabled')
+                        .attr('aria-disabled', 'true');
+                }
+
+            } else {
+
+                _.$prevArrow.add( _.$nextArrow )
+
+                    .addClass('slick-hidden')
+                    .attr({
+                        'aria-disabled': 'true',
+                        'tabindex': '-1'
+                    });
+
             }
 
         }
@@ -2906,22 +3791,21 @@ window.matchMedia || (window.matchMedia = function() {
     Slick.prototype.buildDots = function() {
 
         var _ = this,
-            i, dotString;
+            i, dot;
 
         if (_.options.dots === true && _.slideCount > _.options.slidesToShow) {
 
-            dotString = '<ul class="' + _.options.dotsClass + '">';
+            _.$slider.addClass('slick-dotted');
+
+            dot = $('<ul />').addClass(_.options.dotsClass);
 
             for (i = 0; i <= _.getDotCount(); i += 1) {
-                dotString += '<li>' + _.options.customPaging.call(this, _, i) + '</li>';
+                dot.append($('<li />').append(_.options.customPaging.call(this, _, i)));
             }
 
-            dotString += '</ul>';
+            _.$dots = dot.appendTo(_.options.appendDots);
 
-            _.$dots = $(dotString).appendTo(
-                _.options.appendDots);
-
-            _.$dots.find('li').first().addClass('slick-active').attr("aria-hidden","false");
+            _.$dots.find('li').first().addClass('slick-active').attr('aria-hidden', 'false');
 
         }
 
@@ -2931,16 +3815,18 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        _.$slides = _.$slider.children(_.options.slide +
-            ':not(.slick-cloned)').addClass(
-            'slick-slide');
+        _.$slides =
+            _.$slider
+                .children( _.options.slide + ':not(.slick-cloned)')
+                .addClass('slick-slide');
+
         _.slideCount = _.$slides.length;
 
         _.$slides.each(function(index, element) {
-            $(element).attr("data-slick-index",index);
+            $(element)
+                .attr('data-slick-index', index)
+                .data('originalStyling', $(element).attr('style') || '');
         });
-
-        _.$slidesCache = _.$slides;
 
         _.$slider.addClass('slick-slider');
 
@@ -2966,11 +3852,8 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.updateDots();
 
-        if (_.options.accessibility === true) {
-            _.$list.prop('tabIndex', 0);
-        }
 
-        _.setSlideClasses(typeof this.currentSlide === 'number' ? this.currentSlide : 0);
+        _.setSlideClasses(typeof _.currentSlide === 'number' ? _.currentSlide : 0);
 
         if (_.options.draggable === true) {
             _.$list.addClass('draggable');
@@ -2978,22 +3861,64 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
-    Slick.prototype.checkResponsive = function(initial) {
+    Slick.prototype.buildRows = function() {
 
-        var _ = this,
-            breakpoint, targetBreakpoint, respondToWidth;
-        var sliderWidth = _.$slider.width();
-        var windowWidth = window.innerWidth || $(window).width();
-        if (_.respondTo === "window") {
-          respondToWidth = windowWidth;
-        } else if (_.respondTo === "slider") {
-          respondToWidth = sliderWidth;
-        } else if (_.respondTo === "min") {
-          respondToWidth = Math.min(windowWidth, sliderWidth);
+        var _ = this, a, b, c, newSlides, numOfSlides, originalSlides,slidesPerSection;
+
+        newSlides = document.createDocumentFragment();
+        originalSlides = _.$slider.children();
+
+        if(_.options.rows > 1) {
+
+            slidesPerSection = _.options.slidesPerRow * _.options.rows;
+            numOfSlides = Math.ceil(
+                originalSlides.length / slidesPerSection
+            );
+
+            for(a = 0; a < numOfSlides; a++){
+                var slide = document.createElement('div');
+                for(b = 0; b < _.options.rows; b++) {
+                    var row = document.createElement('div');
+                    for(c = 0; c < _.options.slidesPerRow; c++) {
+                        var target = (a * slidesPerSection + ((b * _.options.slidesPerRow) + c));
+                        if (originalSlides.get(target)) {
+                            row.appendChild(originalSlides.get(target));
+                        }
+                    }
+                    slide.appendChild(row);
+                }
+                newSlides.appendChild(slide);
+            }
+
+            _.$slider.empty().append(newSlides);
+            _.$slider.children().children().children()
+                .css({
+                    'width':(100 / _.options.slidesPerRow) + '%',
+                    'display': 'inline-block'
+                });
+
         }
 
-        if (_.originalSettings.responsive && _.originalSettings
-            .responsive.length > -1 && _.originalSettings.responsive !== null) {
+    };
+
+    Slick.prototype.checkResponsive = function(initial, forceUpdate) {
+
+        var _ = this,
+            breakpoint, targetBreakpoint, respondToWidth, triggerBreakpoint = false;
+        var sliderWidth = _.$slider.width();
+        var windowWidth = window.innerWidth || $(window).width();
+
+        if (_.respondTo === 'window') {
+            respondToWidth = windowWidth;
+        } else if (_.respondTo === 'slider') {
+            respondToWidth = sliderWidth;
+        } else if (_.respondTo === 'min') {
+            respondToWidth = Math.min(windowWidth, sliderWidth);
+        }
+
+        if ( _.options.responsive &&
+            _.options.responsive.length &&
+            _.options.responsive !== null) {
 
             targetBreakpoint = null;
 
@@ -3013,43 +3938,53 @@ window.matchMedia || (window.matchMedia = function() {
 
             if (targetBreakpoint !== null) {
                 if (_.activeBreakpoint !== null) {
-                    if (targetBreakpoint !== _.activeBreakpoint) {
+                    if (targetBreakpoint !== _.activeBreakpoint || forceUpdate) {
                         _.activeBreakpoint =
                             targetBreakpoint;
-                        if(_.breakpointSettings[targetBreakpoint] === "unslick") {
-                            _.unslick();
+                        if (_.breakpointSettings[targetBreakpoint] === 'unslick') {
+                            _.unslick(targetBreakpoint);
                         } else {
                             _.options = $.extend({}, _.originalSettings,
                                 _.breakpointSettings[
                                     targetBreakpoint]);
-                            if(initial === true)
+                            if (initial === true) {
                                 _.currentSlide = _.options.initialSlide;
-                            _.refresh();
+                            }
+                            _.refresh(initial);
                         }
+                        triggerBreakpoint = targetBreakpoint;
                     }
                 } else {
                     _.activeBreakpoint = targetBreakpoint;
-                    if(_.breakpointSettings[targetBreakpoint] === "unslick") {
-                        _.unslick();
+                    if (_.breakpointSettings[targetBreakpoint] === 'unslick') {
+                        _.unslick(targetBreakpoint);
                     } else {
                         _.options = $.extend({}, _.originalSettings,
                             _.breakpointSettings[
                                 targetBreakpoint]);
-                        if(initial === true)
+                        if (initial === true) {
                             _.currentSlide = _.options.initialSlide;
-                        _.refresh();
+                        }
+                        _.refresh(initial);
                     }
+                    triggerBreakpoint = targetBreakpoint;
                 }
             } else {
                 if (_.activeBreakpoint !== null) {
                     _.activeBreakpoint = null;
                     _.options = _.originalSettings;
-                    if(initial === true)
+                    if (initial === true) {
                         _.currentSlide = _.options.initialSlide;
-                    _.refresh();
+                    }
+                    _.refresh(initial);
+                    triggerBreakpoint = targetBreakpoint;
                 }
             }
 
+            // only trigger breakpoints during an actual break. not on initialize.
+            if( !initial && triggerBreakpoint !== false ) {
+                _.$slider.trigger('breakpoint', [_, triggerBreakpoint]);
+            }
         }
 
     };
@@ -3057,11 +3992,18 @@ window.matchMedia || (window.matchMedia = function() {
     Slick.prototype.changeSlide = function(event, dontAnimate) {
 
         var _ = this,
-            $target = $(event.target),
+            $target = $(event.currentTarget),
             indexOffset, slideOffset, unevenOffset;
 
         // If target is a link, prevent default action.
-        $target.is('a') && event.preventDefault();
+        if($target.is('a')) {
+            event.preventDefault();
+        }
+
+        // If target is not the <li> element (ie: a child), find the <li>.
+        if(!$target.is('li')) {
+            $target = $target.closest('li');
+        }
 
         unevenOffset = (_.slideCount % _.options.slidesToScroll !== 0);
         indexOffset = unevenOffset ? 0 : (_.slideCount - _.currentSlide) % _.options.slidesToScroll;
@@ -3071,7 +4013,7 @@ window.matchMedia || (window.matchMedia = function() {
             case 'previous':
                 slideOffset = indexOffset === 0 ? _.options.slidesToScroll : _.options.slidesToShow - indexOffset;
                 if (_.slideCount > _.options.slidesToShow) {
-                    _.slideHandler(_.currentSlide  - slideOffset, false, dontAnimate);
+                    _.slideHandler(_.currentSlide - slideOffset, false, dontAnimate);
                 }
                 break;
 
@@ -3084,9 +4026,10 @@ window.matchMedia || (window.matchMedia = function() {
 
             case 'index':
                 var index = event.data.index === 0 ? 0 :
-                    event.data.index || $(event.target).parent().index() * _.options.slidesToScroll;
+                    event.data.index || $target.index() * _.options.slidesToScroll;
 
                 _.slideHandler(_.checkNavigable(index), false, dontAnimate);
+                $target.children().trigger('focus');
                 break;
 
             default:
@@ -3097,15 +4040,16 @@ window.matchMedia || (window.matchMedia = function() {
 
     Slick.prototype.checkNavigable = function(index) {
 
-        var _ = this, navigables, prevNavigable;
+        var _ = this,
+            navigables, prevNavigable;
 
         navigables = _.getNavigableIndexes();
         prevNavigable = 0;
-        if(index > navigables[navigables.length -1]){
-            index = navigables[navigables.length -1];
+        if (index > navigables[navigables.length - 1]) {
+            index = navigables[navigables.length - 1];
         } else {
-            for(var n in navigables) {
-                if(index < navigables[n]) {
+            for (var n in navigables) {
+                if (index < navigables[n]) {
                     index = prevNavigable;
                     break;
                 }
@@ -3116,11 +4060,82 @@ window.matchMedia || (window.matchMedia = function() {
         return index;
     };
 
+    Slick.prototype.cleanUpEvents = function() {
+
+        var _ = this;
+
+        if (_.options.dots && _.$dots !== null) {
+
+            $('li', _.$dots)
+                .off('click.slick', _.changeSlide)
+                .off('mouseenter.slick', $.proxy(_.interrupt, _, true))
+                .off('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+        }
+
+        _.$slider.off('focus.slick blur.slick');
+
+        if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
+            _.$prevArrow && _.$prevArrow.off('click.slick', _.changeSlide);
+            _.$nextArrow && _.$nextArrow.off('click.slick', _.changeSlide);
+        }
+
+        _.$list.off('touchstart.slick mousedown.slick', _.swipeHandler);
+        _.$list.off('touchmove.slick mousemove.slick', _.swipeHandler);
+        _.$list.off('touchend.slick mouseup.slick', _.swipeHandler);
+        _.$list.off('touchcancel.slick mouseleave.slick', _.swipeHandler);
+
+        _.$list.off('click.slick', _.clickHandler);
+
+        $(document).off(_.visibilityChange, _.visibility);
+
+        _.cleanUpSlideEvents();
+
+        if (_.options.accessibility === true) {
+            _.$list.off('keydown.slick', _.keyHandler);
+        }
+
+        if (_.options.focusOnSelect === true) {
+            $(_.$slideTrack).children().off('click.slick', _.selectHandler);
+        }
+
+        $(window).off('orientationchange.slick.slick-' + _.instanceUid, _.orientationChange);
+
+        $(window).off('resize.slick.slick-' + _.instanceUid, _.resize);
+
+        $('[draggable!=true]', _.$slideTrack).off('dragstart', _.preventDefault);
+
+        $(window).off('load.slick.slick-' + _.instanceUid, _.setPosition);
+        $(document).off('ready.slick.slick-' + _.instanceUid, _.setPosition);
+
+    };
+
+    Slick.prototype.cleanUpSlideEvents = function() {
+
+        var _ = this;
+
+        _.$list.off('mouseenter.slick', $.proxy(_.interrupt, _, true));
+        _.$list.off('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+    };
+
+    Slick.prototype.cleanUpRows = function() {
+
+        var _ = this, originalSlides;
+
+        if(_.options.rows > 1) {
+            originalSlides = _.$slides.children().children();
+            originalSlides.removeAttr('style');
+            _.$slider.empty().append(originalSlides);
+        }
+
+    };
+
     Slick.prototype.clickHandler = function(event) {
 
         var _ = this;
 
-        if(_.shouldClick === false) {
+        if (_.shouldClick === false) {
             event.stopImmediatePropagation();
             event.stopPropagation();
             event.preventDefault();
@@ -3128,7 +4143,7 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
-    Slick.prototype.destroy = function() {
+    Slick.prototype.destroy = function(refresh) {
 
         var _ = this;
 
@@ -3136,38 +4151,71 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.touchObject = {};
 
-        $('.slick-cloned', _.$slider).remove();
+        _.cleanUpEvents();
+
+        $('.slick-cloned', _.$slider).detach();
+
         if (_.$dots) {
             _.$dots.remove();
         }
-        if (_.$prevArrow && (typeof _.options.prevArrow !== 'object')) {
-            _.$prevArrow.remove();
+
+
+        if ( _.$prevArrow && _.$prevArrow.length ) {
+
+            _.$prevArrow
+                .removeClass('slick-disabled slick-arrow slick-hidden')
+                .removeAttr('aria-hidden aria-disabled tabindex')
+                .css('display','');
+
+            if ( _.htmlExpr.test( _.options.prevArrow )) {
+                _.$prevArrow.remove();
+            }
         }
-        if (_.$nextArrow && (typeof _.options.nextArrow !== 'object')) {
-            _.$nextArrow.remove();
+
+        if ( _.$nextArrow && _.$nextArrow.length ) {
+
+            _.$nextArrow
+                .removeClass('slick-disabled slick-arrow slick-hidden')
+                .removeAttr('aria-hidden aria-disabled tabindex')
+                .css('display','');
+
+            if ( _.htmlExpr.test( _.options.nextArrow )) {
+                _.$nextArrow.remove();
+            }
+
         }
 
 
-        _.$slides.removeClass('slick-slide slick-active slick-center slick-visible')
-            .attr("aria-hidden","true")
-            .removeAttr('data-slick-index')
-            .css({
-                position: '',
-                left: '',
-                top: '',
-                zIndex: '',
-                opacity: '',
-                width: ''
-            });
+        if (_.$slides) {
+
+            _.$slides
+                .removeClass('slick-slide slick-active slick-center slick-visible slick-current')
+                .removeAttr('aria-hidden')
+                .removeAttr('data-slick-index')
+                .each(function(){
+                    $(this).attr('style', $(this).data('originalStyling'));
+                });
+
+            _.$slideTrack.children(this.options.slide).detach();
+
+            _.$slideTrack.detach();
+
+            _.$list.detach();
+
+            _.$slider.append(_.$slides);
+        }
+
+        _.cleanUpRows();
 
         _.$slider.removeClass('slick-slider');
         _.$slider.removeClass('slick-initialized');
+        _.$slider.removeClass('slick-dotted');
 
-        _.$list.off('.slick');
-        $(window).off('.slick-' + _.instanceUid);
-        $(document).off('.slick-' + _.instanceUid);
+        _.unslicked = true;
 
-        _.$slider.html(_.$slides);
+        if(!refresh) {
+            _.$slider.trigger('destroy', [_]);
+        }
 
     };
 
@@ -3176,7 +4224,7 @@ window.matchMedia || (window.matchMedia = function() {
         var _ = this,
             transition = {};
 
-        transition[_.transitionType] = "";
+        transition[_.transitionType] = '';
 
         if (_.options.fade === false) {
             _.$slideTrack.css(transition);
@@ -3193,7 +4241,7 @@ window.matchMedia || (window.matchMedia = function() {
         if (_.cssTransitions === false) {
 
             _.$slides.eq(slideIndex).css({
-                zIndex: 1000
+                zIndex: _.options.zIndex
             });
 
             _.$slides.eq(slideIndex).animate({
@@ -3206,7 +4254,7 @@ window.matchMedia || (window.matchMedia = function() {
 
             _.$slides.eq(slideIndex).css({
                 opacity: 1,
-                zIndex: 1000
+                zIndex: _.options.zIndex
             });
 
             if (callback) {
@@ -3222,11 +4270,37 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
+    Slick.prototype.fadeSlideOut = function(slideIndex) {
+
+        var _ = this;
+
+        if (_.cssTransitions === false) {
+
+            _.$slides.eq(slideIndex).animate({
+                opacity: 0,
+                zIndex: _.options.zIndex - 2
+            }, _.options.speed, _.options.easing);
+
+        } else {
+
+            _.applyTransition(slideIndex);
+
+            _.$slides.eq(slideIndex).css({
+                opacity: 0,
+                zIndex: _.options.zIndex - 2
+            });
+
+        }
+
+    };
+
     Slick.prototype.filterSlides = Slick.prototype.slickFilter = function(filter) {
 
         var _ = this;
 
         if (filter !== null) {
+
+            _.$slidesCache = _.$slides;
 
             _.unload();
 
@@ -3238,6 +4312,30 @@ window.matchMedia || (window.matchMedia = function() {
 
         }
 
+    };
+
+    Slick.prototype.focusHandler = function() {
+
+        var _ = this;
+
+        _.$slider
+            .off('focus.slick blur.slick')
+            .on('focus.slick blur.slick',
+                '*:not(.slick-arrow)', function(event) {
+
+            event.stopImmediatePropagation();
+            var $sf = $(this);
+
+            setTimeout(function() {
+
+                if( _.options.pauseOnFocus ) {
+                    _.focussed = $sf.is(':focus');
+                    _.autoPlay();
+                }
+
+            }, 0);
+
+        });
     };
 
     Slick.prototype.getCurrent = Slick.prototype.slickCurrentSlide = function() {
@@ -3255,15 +4353,21 @@ window.matchMedia || (window.matchMedia = function() {
         var counter = 0;
         var pagerQty = 0;
 
-        if(_.options.infinite === true) {
-            pagerQty = Math.ceil(_.slideCount / _.options.slidesToScroll);
+        if (_.options.infinite === true) {
+            while (breakPoint < _.slideCount) {
+                ++pagerQty;
+                breakPoint = counter + _.options.slidesToScroll;
+                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
+            }
         } else if (_.options.centerMode === true) {
             pagerQty = _.slideCount;
-        } else {
-            while (breakPoint < _.slideCount){
+        } else if(!_.options.asNavFor) {
+            pagerQty = 1 + Math.ceil((_.slideCount - _.options.slidesToShow) / _.options.slidesToScroll);
+        }else {
+            while (breakPoint < _.slideCount) {
                 ++pagerQty;
-                breakPoint = counter + _.options.slidesToShow;
-                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll  : _.options.slidesToShow;
+                breakPoint = counter + _.options.slidesToScroll;
+                counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
             }
         }
 
@@ -3280,7 +4384,7 @@ window.matchMedia || (window.matchMedia = function() {
             targetSlide;
 
         _.slideOffset = 0;
-        verticalHeight = _.$slides.first().outerHeight();
+        verticalHeight = _.$slides.first().outerHeight(true);
 
         if (_.options.infinite === true) {
             if (_.slideCount > _.options.slidesToShow) {
@@ -3289,7 +4393,7 @@ window.matchMedia || (window.matchMedia = function() {
             }
             if (_.slideCount % _.options.slidesToScroll !== 0) {
                 if (slideIndex + _.options.slidesToScroll > _.slideCount && _.slideCount > _.options.slidesToShow) {
-                    if(slideIndex > _.slideCount) {
+                    if (slideIndex > _.slideCount) {
                         _.slideOffset = ((_.options.slidesToShow - (slideIndex - _.slideCount)) * _.slideWidth) * -1;
                         verticalOffset = ((_.options.slidesToShow - (slideIndex - _.slideCount)) * verticalHeight) * -1;
                     } else {
@@ -3299,13 +4403,13 @@ window.matchMedia || (window.matchMedia = function() {
                 }
             }
         } else {
-            if(slideIndex + _.options.slidesToShow > _.slideCount) {
+            if (slideIndex + _.options.slidesToShow > _.slideCount) {
                 _.slideOffset = ((slideIndex + _.options.slidesToShow) - _.slideCount) * _.slideWidth;
                 verticalOffset = ((slideIndex + _.options.slidesToShow) - _.slideCount) * verticalHeight;
             }
         }
 
-        if (_.slideCount <= _.options.slidesToShow){
+        if (_.slideCount <= _.options.slidesToShow) {
             _.slideOffset = 0;
             verticalOffset = 0;
         }
@@ -3331,15 +4435,33 @@ window.matchMedia || (window.matchMedia = function() {
                 targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow);
             }
 
-            targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+            if (_.options.rtl === true) {
+                if (targetSlide[0]) {
+                    targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+                } else {
+                    targetLeft =  0;
+                }
+            } else {
+                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+            }
 
             if (_.options.centerMode === true) {
-                if(_.options.infinite === false) {
+                if (_.slideCount <= _.options.slidesToShow || _.options.infinite === false) {
                     targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex);
                 } else {
                     targetSlide = _.$slideTrack.children('.slick-slide').eq(slideIndex + _.options.slidesToShow + 1);
                 }
-                targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+
+                if (_.options.rtl === true) {
+                    if (targetSlide[0]) {
+                        targetLeft = (_.$slideTrack.width() - targetSlide[0].offsetLeft - targetSlide.width()) * -1;
+                    } else {
+                        targetLeft =  0;
+                    }
+                } else {
+                    targetLeft = targetSlide[0] ? targetSlide[0].offsetLeft * -1 : 0;
+                }
+
                 targetLeft += (_.$list.width() - targetSlide.outerWidth()) / 2;
             }
         }
@@ -3358,21 +4480,24 @@ window.matchMedia || (window.matchMedia = function() {
 
     Slick.prototype.getNavigableIndexes = function() {
 
-        var _ = this, breakPoint = 0, counter = 0, indexes = [], max;
+        var _ = this,
+            breakPoint = 0,
+            counter = 0,
+            indexes = [],
+            max;
 
-        if(_.options.infinite === false) {
-            max = _.slideCount - _.options.slidesToShow + 1;
-            if (_.options.centerMode === true) max = _.slideCount;
+        if (_.options.infinite === false) {
+            max = _.slideCount;
         } else {
-            breakPoint = _.slideCount * -1;
-            counter = _.slideCount * -1;
+            breakPoint = _.options.slidesToScroll * -1;
+            counter = _.options.slidesToScroll * -1;
             max = _.slideCount * 2;
         }
 
-        while (breakPoint < max){
+        while (breakPoint < max) {
             indexes.push(breakPoint);
             breakPoint = counter + _.options.slidesToScroll;
-            counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll  : _.options.slidesToShow;
+            counter += _.options.slidesToScroll <= _.options.slidesToShow ? _.options.slidesToScroll : _.options.slidesToShow;
         }
 
         return indexes;
@@ -3387,12 +4512,13 @@ window.matchMedia || (window.matchMedia = function() {
 
     Slick.prototype.getSlideCount = function() {
 
-        var _ = this, slidesTraversed, swipedSlide, centerOffset;
+        var _ = this,
+            slidesTraversed, swipedSlide, centerOffset;
 
         centerOffset = _.options.centerMode === true ? _.slideWidth * Math.floor(_.options.slidesToShow / 2) : 0;
 
-        if(_.options.swipeToSlide === true) {
-            _.$slideTrack.find('.slick-slide').each(function(index, slide){
+        if (_.options.swipeToSlide === true) {
+            _.$slideTrack.find('.slick-slide').each(function(index, slide) {
                 if (slide.offsetLeft - centerOffset + ($(slide).outerWidth() / 2) > (_.swipeLeft * -1)) {
                     swipedSlide = slide;
                     return false;
@@ -3422,13 +4548,15 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
-    Slick.prototype.init = function() {
+    Slick.prototype.init = function(creation) {
 
         var _ = this;
 
         if (!$(_.$slider).hasClass('slick-initialized')) {
 
             $(_.$slider).addClass('slick-initialized');
+
+            _.buildRows();
             _.buildOut();
             _.setProps();
             _.startLoad();
@@ -3436,9 +4564,60 @@ window.matchMedia || (window.matchMedia = function() {
             _.initializeEvents();
             _.updateArrows();
             _.updateDots();
+            _.checkResponsive(true);
+            _.focusHandler();
+
         }
 
-        _.$slider.trigger("init", [ _ ]);
+        if (creation) {
+            _.$slider.trigger('init', [_]);
+        }
+
+        if (_.options.accessibility === true) {
+            _.initADA();
+        }
+
+        if ( _.options.autoplay ) {
+
+            _.paused = false;
+            _.autoPlay();
+
+        }
+
+    };
+
+    Slick.prototype.initADA = function() {
+        var _ = this;
+        _.$slides.add(_.$slideTrack.find('.slick-cloned')).attr({
+            'aria-hidden': 'true',
+            'tabindex': '-1'
+        }).find('a, input, button, select').attr({
+            'tabindex': '-1'
+        });
+
+        _.$slideTrack.attr('role', 'listbox');
+
+        _.$slides.not(_.$slideTrack.find('.slick-cloned')).each(function(i) {
+            $(this).attr({
+                'role': 'option',
+                'aria-describedby': 'slick-slide' + _.instanceUid + i + ''
+            });
+        });
+
+        if (_.$dots !== null) {
+            _.$dots.attr('role', 'tablist').find('li').each(function(i) {
+                $(this).attr({
+                    'role': 'presentation',
+                    'aria-selected': 'false',
+                    'aria-controls': 'navigation' + _.instanceUid + i + '',
+                    'id': 'slick-slide' + _.instanceUid + i + ''
+                });
+            })
+                .first().attr('aria-selected', 'true').end()
+                .find('button').attr('role', 'button').end()
+                .closest('div').attr('role', 'toolbar');
+        }
+        _.activateADA();
 
     };
 
@@ -3447,12 +4626,16 @@ window.matchMedia || (window.matchMedia = function() {
         var _ = this;
 
         if (_.options.arrows === true && _.slideCount > _.options.slidesToShow) {
-            _.$prevArrow.on('click.slick', {
-                message: 'previous'
-            }, _.changeSlide);
-            _.$nextArrow.on('click.slick', {
-                message: 'next'
-            }, _.changeSlide);
+            _.$prevArrow
+               .off('click.slick')
+               .on('click.slick', {
+                    message: 'previous'
+               }, _.changeSlide);
+            _.$nextArrow
+               .off('click.slick')
+               .on('click.slick', {
+                    message: 'next'
+               }, _.changeSlide);
         }
 
     };
@@ -3467,16 +4650,25 @@ window.matchMedia || (window.matchMedia = function() {
             }, _.changeSlide);
         }
 
-        if (_.options.dots === true && _.options.pauseOnDotsHover === true && _.options.autoplay === true) {
+        if ( _.options.dots === true && _.options.pauseOnDotsHover === true ) {
+
             $('li', _.$dots)
-                .on('mouseenter.slick', function(){
-                    _.paused = true;
-                    _.autoPlayClear();
-                })
-                .on('mouseleave.slick', function(){
-                    _.paused = false;
-                    _.autoPlay();
-                });
+                .on('mouseenter.slick', $.proxy(_.interrupt, _, true))
+                .on('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
+        }
+
+    };
+
+    Slick.prototype.initSlideEvents = function() {
+
+        var _ = this;
+
+        if ( _.options.pauseOnHover ) {
+
+            _.$list.on('mouseenter.slick', $.proxy(_.interrupt, _, true));
+            _.$list.on('mouseleave.slick', $.proxy(_.interrupt, _, false));
+
         }
 
     };
@@ -3488,6 +4680,7 @@ window.matchMedia || (window.matchMedia = function() {
         _.initArrowEvents();
 
         _.initDotEvents();
+        _.initSlideEvents();
 
         _.$list.on('touchstart.slick mousedown.slick', {
             action: 'start'
@@ -3504,52 +4697,21 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.$list.on('click.slick', _.clickHandler);
 
-        if (_.options.autoplay === true) {
+        $(document).on(_.visibilityChange, $.proxy(_.visibility, _));
 
-            $(document).on(_.visibilityChange, function(){
-                _.visibility();
-            });
-
-            if( _.options.pauseOnHover === true ) {
-
-                _.$list.on('mouseenter.slick', function(){
-                    _.paused = true;
-                    _.autoPlayClear();
-                });
-                _.$list.on('mouseleave.slick', function(){
-                    _.paused = false;
-                    _.autoPlay();
-                });
-
-            }
-
-        }
-
-        if(_.options.accessibility === true) {
+        if (_.options.accessibility === true) {
             _.$list.on('keydown.slick', _.keyHandler);
         }
 
-        if(_.options.focusOnSelect === true) {
+        if (_.options.focusOnSelect === true) {
             $(_.$slideTrack).children().on('click.slick', _.selectHandler);
         }
 
-        $(window).on('orientationchange.slick.slick-' + _.instanceUid, function() {
-            _.checkResponsive();
-            _.setPosition();
-        });
+        $(window).on('orientationchange.slick.slick-' + _.instanceUid, $.proxy(_.orientationChange, _));
 
-        $(window).on('resize.slick.slick-' + _.instanceUid, function() {
-            if ($(window).width() !== _.windowWidth) {
-                clearTimeout(_.windowDelay);
-                _.windowDelay = window.setTimeout(function() {
-                    _.windowWidth = $(window).width();
-                    _.checkResponsive();
-                    _.setPosition();
-                }, 50);
-            }
-        });
+        $(window).on('resize.slick.slick-' + _.instanceUid, $.proxy(_.resize, _));
 
-        $('*[draggable!=true]', _.$slideTrack).on('dragstart', function(e){ e.preventDefault(); });
+        $('[draggable!=true]', _.$slideTrack).on('dragstart', _.preventDefault);
 
         $(window).on('load.slick.slick-' + _.instanceUid, _.setPosition);
         $(document).on('ready.slick.slick-' + _.instanceUid, _.setPosition);
@@ -3573,30 +4735,26 @@ window.matchMedia || (window.matchMedia = function() {
 
         }
 
-        if (_.options.autoplay === true) {
-
-            _.autoPlay();
-
-        }
-
     };
 
     Slick.prototype.keyHandler = function(event) {
 
         var _ = this;
-
-        if (event.keyCode === 37 && _.options.accessibility === true) {
-            _.changeSlide({
-                data: {
-                    message: 'previous'
-                }
-            });
-        } else if (event.keyCode === 39 && _.options.accessibility === true) {
-            _.changeSlide({
-                data: {
-                    message: 'next'
-                }
-            });
+         //Dont slide if the cursor is inside the form fields and arrow keys are pressed
+        if(!event.target.tagName.match('TEXTAREA|INPUT|SELECT')) {
+            if (event.keyCode === 37 && _.options.accessibility === true) {
+                _.changeSlide({
+                    data: {
+                        message: _.options.rtl === true ? 'next' :  'previous'
+                    }
+                });
+            } else if (event.keyCode === 39 && _.options.accessibility === true) {
+                _.changeSlide({
+                    data: {
+                        message: _.options.rtl === true ? 'previous' : 'next'
+                    }
+                });
+            }
         }
 
     };
@@ -3607,43 +4765,70 @@ window.matchMedia || (window.matchMedia = function() {
             loadRange, cloneRange, rangeStart, rangeEnd;
 
         function loadImages(imagesScope) {
-            $('img[data-lazy]', imagesScope).each(function() {
-                var image = $(this),
-                    imageSource = $(this).attr('data-lazy');
 
-                image
-                  .load(function() { image.animate({ opacity: 1 }, 200); })
-                  .css({ opacity: 0 })
-                  .attr('src', imageSource)
-                  .removeAttr('data-lazy')
-                  .removeClass('slick-loading');
+            $('img[data-lazy]', imagesScope).each(function() {
+
+                var image = $(this),
+                    imageSource = $(this).attr('data-lazy'),
+                    imageToLoad = document.createElement('img');
+
+                imageToLoad.onload = function() {
+
+                    image
+                        .animate({ opacity: 0 }, 100, function() {
+                            image
+                                .attr('src', imageSource)
+                                .animate({ opacity: 1 }, 200, function() {
+                                    image
+                                        .removeAttr('data-lazy')
+                                        .removeClass('slick-loading');
+                                });
+                            _.$slider.trigger('lazyLoaded', [_, image, imageSource]);
+                        });
+
+                };
+
+                imageToLoad.onerror = function() {
+
+                    image
+                        .removeAttr( 'data-lazy' )
+                        .removeClass( 'slick-loading' )
+                        .addClass( 'slick-lazyload-error' );
+
+                    _.$slider.trigger('lazyLoadError', [ _, image, imageSource ]);
+
+                };
+
+                imageToLoad.src = imageSource;
+
             });
+
         }
 
         if (_.options.centerMode === true) {
             if (_.options.infinite === true) {
-                rangeStart = _.currentSlide + (_.options.slidesToShow/2 + 1);
+                rangeStart = _.currentSlide + (_.options.slidesToShow / 2 + 1);
                 rangeEnd = rangeStart + _.options.slidesToShow + 2;
             } else {
-                rangeStart = Math.max(0, _.currentSlide - (_.options.slidesToShow/2 + 1));
-                rangeEnd = 2 + (_.options.slidesToShow/2 + 1) + _.currentSlide;
+                rangeStart = Math.max(0, _.currentSlide - (_.options.slidesToShow / 2 + 1));
+                rangeEnd = 2 + (_.options.slidesToShow / 2 + 1) + _.currentSlide;
             }
         } else {
             rangeStart = _.options.infinite ? _.options.slidesToShow + _.currentSlide : _.currentSlide;
-            rangeEnd = rangeStart + _.options.slidesToShow;
-            if (_.options.fade === true ) {
-                if(rangeStart > 0) rangeStart--;
-                if(rangeEnd <= _.slideCount) rangeEnd++;
+            rangeEnd = Math.ceil(rangeStart + _.options.slidesToShow);
+            if (_.options.fade === true) {
+                if (rangeStart > 0) rangeStart--;
+                if (rangeEnd <= _.slideCount) rangeEnd++;
             }
         }
 
         loadRange = _.$slider.find('.slick-slide').slice(rangeStart, rangeEnd);
         loadImages(loadRange);
 
-          if (_.slideCount <= _.options.slidesToShow){
-              cloneRange = _.$slider.find('.slick-slide');
-              loadImages(cloneRange);
-          }else
+        if (_.slideCount <= _.options.slidesToShow) {
+            cloneRange = _.$slider.find('.slick-slide');
+            loadImages(cloneRange);
+        } else
         if (_.currentSlide >= _.slideCount - _.options.slidesToShow) {
             cloneRange = _.$slider.find('.slick-cloned').slice(0, _.options.slidesToShow);
             loadImages(cloneRange);
@@ -3686,6 +4871,15 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
+    Slick.prototype.orientationChange = function() {
+
+        var _ = this;
+
+        _.checkResponsive();
+        _.setPosition();
+
+    };
+
     Slick.prototype.pause = Slick.prototype.slickPause = function() {
 
         var _ = this;
@@ -3699,8 +4893,11 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        _.paused = false;
         _.autoPlay();
+        _.options.autoplay = true;
+        _.paused = false;
+        _.focussed = false;
+        _.interrupted = false;
 
     };
 
@@ -3708,16 +4905,24 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        _.$slider.trigger("afterChange", [ _, index]);
+        if( !_.unslicked ) {
 
-        _.animating = false;
+            _.$slider.trigger('afterChange', [_, index]);
 
-        _.setPosition();
+            _.animating = false;
 
-        _.swipeLeft = null;
+            _.setPosition();
 
-        if (_.options.autoplay === true && _.paused === false) {
-            _.autoPlay();
+            _.swipeLeft = null;
+
+            if ( _.options.autoplay ) {
+                _.autoPlay();
+            }
+
+            if (_.options.accessibility === true) {
+                _.initADA();
+            }
+
         }
 
     };
@@ -3734,48 +4939,158 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
-    Slick.prototype.progressiveLazyLoad = function() {
+    Slick.prototype.preventDefault = function(event) {
+
+        event.preventDefault();
+
+    };
+
+    Slick.prototype.progressiveLazyLoad = function( tryCount ) {
+
+        tryCount = tryCount || 1;
 
         var _ = this,
-            imgCount, targetImage;
+            $imgsToLoad = $( 'img[data-lazy]', _.$slider ),
+            image,
+            imageSource,
+            imageToLoad;
 
-        imgCount = $('img[data-lazy]', _.$slider).length;
+        if ( $imgsToLoad.length ) {
 
-        if (imgCount > 0) {
-            targetImage = $('img[data-lazy]', _.$slider).first();
-            targetImage.attr('src', targetImage.attr('data-lazy')).removeClass('slick-loading').load(function() {
-                targetImage.removeAttr('data-lazy');
-                _.progressiveLazyLoad();
-                
-                if( _.options.adaptiveHeight === true ) {
+            image = $imgsToLoad.first();
+            imageSource = image.attr('data-lazy');
+            imageToLoad = document.createElement('img');
+
+            imageToLoad.onload = function() {
+
+                image
+                    .attr( 'src', imageSource )
+                    .removeAttr('data-lazy')
+                    .removeClass('slick-loading');
+
+                if ( _.options.adaptiveHeight === true ) {
                     _.setPosition();
                 }
-            })
-         .error(function () {
-          targetImage.removeAttr('data-lazy');
-          _.progressiveLazyLoad();
-         });
+
+                _.$slider.trigger('lazyLoaded', [ _, image, imageSource ]);
+                _.progressiveLazyLoad();
+
+            };
+
+            imageToLoad.onerror = function() {
+
+                if ( tryCount < 3 ) {
+
+                    /**
+                     * try to load the image 3 times,
+                     * leave a slight delay so we don't get
+                     * servers blocking the request.
+                     */
+                    setTimeout( function() {
+                        _.progressiveLazyLoad( tryCount + 1 );
+                    }, 500 );
+
+                } else {
+
+                    image
+                        .removeAttr( 'data-lazy' )
+                        .removeClass( 'slick-loading' )
+                        .addClass( 'slick-lazyload-error' );
+
+                    _.$slider.trigger('lazyLoadError', [ _, image, imageSource ]);
+
+                    _.progressiveLazyLoad();
+
+                }
+
+            };
+
+            imageToLoad.src = imageSource;
+
+        } else {
+
+            _.$slider.trigger('allImagesLoaded', [ _ ]);
+
         }
 
     };
 
-    Slick.prototype.refresh = function() {
+    Slick.prototype.refresh = function( initializing ) {
 
-        var _ = this,
-            currentSlide = _.currentSlide;
+        var _ = this, currentSlide, lastVisibleIndex;
 
-        _.destroy();
+        lastVisibleIndex = _.slideCount - _.options.slidesToShow;
 
-        $.extend(_, _.initials);
+        // in non-infinite sliders, we don't want to go past the
+        // last visible index.
+        if( !_.options.infinite && ( _.currentSlide > lastVisibleIndex )) {
+            _.currentSlide = lastVisibleIndex;
+        }
+
+        // if less slides than to show, go to start.
+        if ( _.slideCount <= _.options.slidesToShow ) {
+            _.currentSlide = 0;
+
+        }
+
+        currentSlide = _.currentSlide;
+
+        _.destroy(true);
+
+        $.extend(_, _.initials, { currentSlide: currentSlide });
 
         _.init();
 
-        _.changeSlide({
-            data: {
-                message: 'index',
-                index: currentSlide
+        if( !initializing ) {
+
+            _.changeSlide({
+                data: {
+                    message: 'index',
+                    index: currentSlide
+                }
+            }, false);
+
+        }
+
+    };
+
+    Slick.prototype.registerBreakpoints = function() {
+
+        var _ = this, breakpoint, currentBreakpoint, l,
+            responsiveSettings = _.options.responsive || null;
+
+        if ( $.type(responsiveSettings) === 'array' && responsiveSettings.length ) {
+
+            _.respondTo = _.options.respondTo || 'window';
+
+            for ( breakpoint in responsiveSettings ) {
+
+                l = _.breakpoints.length-1;
+                currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
+
+                if (responsiveSettings.hasOwnProperty(breakpoint)) {
+
+                    // loop through the breakpoints and cut out any existing
+                    // ones with the same breakpoint number, we don't want dupes.
+                    while( l >= 0 ) {
+                        if( _.breakpoints[l] && _.breakpoints[l] === currentBreakpoint ) {
+                            _.breakpoints.splice(l,1);
+                        }
+                        l--;
+                    }
+
+                    _.breakpoints.push(currentBreakpoint);
+                    _.breakpointSettings[currentBreakpoint] = responsiveSettings[breakpoint].settings;
+
+                }
+
             }
-        }, true);
+
+            _.breakpoints.sort(function(a, b) {
+                return ( _.options.mobileFirst ) ? a-b : b-a;
+            });
+
+        }
 
     };
 
@@ -3783,8 +5098,10 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        _.$slides = _.$slideTrack.children(_.options.slide).addClass(
-            'slick-slide');
+        _.$slides =
+            _.$slideTrack
+                .children(_.options.slide)
+                .addClass('slick-slide');
 
         _.slideCount = _.$slides.length;
 
@@ -3796,32 +5113,49 @@ window.matchMedia || (window.matchMedia = function() {
             _.currentSlide = 0;
         }
 
+        _.registerBreakpoints();
+
         _.setProps();
-
         _.setupInfinite();
-
         _.buildArrows();
-
         _.updateArrows();
-
         _.initArrowEvents();
-
         _.buildDots();
-
         _.updateDots();
-
         _.initDotEvents();
+        _.cleanUpSlideEvents();
+        _.initSlideEvents();
 
-        if(_.options.focusOnSelect === true) {
+        _.checkResponsive(false, true);
+
+        if (_.options.focusOnSelect === true) {
             $(_.$slideTrack).children().on('click.slick', _.selectHandler);
         }
 
-        _.setSlideClasses(0);
+        _.setSlideClasses(typeof _.currentSlide === 'number' ? _.currentSlide : 0);
 
         _.setPosition();
+        _.focusHandler();
 
-        _.$slider.trigger("reInit", [ _ ]);
+        _.paused = !_.options.autoplay;
+        _.autoPlay();
 
+        _.$slider.trigger('reInit', [_]);
+
+    };
+
+    Slick.prototype.resize = function() {
+
+        var _ = this;
+
+        if ($(window).width() !== _.windowWidth) {
+            clearTimeout(_.windowDelay);
+            _.windowDelay = window.setTimeout(function() {
+                _.windowWidth = $(window).width();
+                _.checkResponsive();
+                if( !_.unslicked ) { _.setPosition(); }
+            }, 50);
+        }
     };
 
     Slick.prototype.removeSlide = Slick.prototype.slickRemove = function(index, removeBefore, removeAll) {
@@ -3841,7 +5175,7 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.unload();
 
-        if(removeAll === true) {
+        if (removeAll === true) {
             _.$slideTrack.children().remove();
         } else {
             _.$slideTrack.children(this.options.slide).eq(index).remove();
@@ -3862,7 +5196,8 @@ window.matchMedia || (window.matchMedia = function() {
     Slick.prototype.setCSS = function(position) {
 
         var _ = this,
-            positionProps = {}, x, y;
+            positionProps = {},
+            x, y;
 
         if (_.options.rtl === true) {
             position = -position;
@@ -3910,17 +5245,12 @@ window.matchMedia || (window.matchMedia = function() {
         _.listHeight = _.$list.height();
 
 
-        if(_.options.vertical === false && _.options.variableWidth === false) {
+        if (_.options.vertical === false && _.options.variableWidth === false) {
             _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
             _.$slideTrack.width(Math.ceil((_.slideWidth * _.$slideTrack.children('.slick-slide').length)));
 
         } else if (_.options.variableWidth === true) {
-            var trackWidth = 0;
-            _.slideWidth = Math.ceil(_.listWidth / _.options.slidesToShow);
-            _.$slideTrack.children('.slick-slide').each(function(){
-                trackWidth += _.listWidth;
-            });
-            _.$slideTrack.width(Math.ceil(trackWidth) + 1);
+            _.$slideTrack.width(5000 * _.slideCount);
         } else {
             _.slideWidth = Math.ceil(_.listWidth);
             _.$slideTrack.height(Math.ceil((_.$slides.first().outerHeight(true) * _.$slideTrack.children('.slick-slide').length)));
@@ -3943,7 +5273,7 @@ window.matchMedia || (window.matchMedia = function() {
                     position: 'relative',
                     right: targetLeft,
                     top: 0,
-                    zIndex: 800,
+                    zIndex: _.options.zIndex - 2,
                     opacity: 0
                 });
             } else {
@@ -3951,14 +5281,14 @@ window.matchMedia || (window.matchMedia = function() {
                     position: 'relative',
                     left: targetLeft,
                     top: 0,
-                    zIndex: 800,
+                    zIndex: _.options.zIndex - 2,
                     opacity: 0
                 });
             }
         });
 
         _.$slides.eq(_.currentSlide).css({
-            zIndex: 900,
+            zIndex: _.options.zIndex - 1,
             opacity: 1
         });
 
@@ -3968,21 +5298,107 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        if(_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
+        if (_.options.slidesToShow === 1 && _.options.adaptiveHeight === true && _.options.vertical === false) {
             var targetHeight = _.$slides.eq(_.currentSlide).outerHeight(true);
             _.$list.css('height', targetHeight);
         }
 
     };
 
-    Slick.prototype.setOption = Slick.prototype.slickSetOption = function(option, value, refresh) {
+    Slick.prototype.setOption =
+    Slick.prototype.slickSetOption = function() {
 
-        var _ = this;
-        _.options[option] = value;
+        /**
+         * accepts arguments in format of:
+         *
+         *  - for changing a single option's value:
+         *     .slick("setOption", option, value, refresh )
+         *
+         *  - for changing a set of responsive options:
+         *     .slick("setOption", 'responsive', [{}, ...], refresh )
+         *
+         *  - for updating multiple values at once (not responsive)
+         *     .slick("setOption", { 'option': value, ... }, refresh )
+         */
 
-        if (refresh === true) {
+        var _ = this, l, item, option, value, refresh = false, type;
+
+        if( $.type( arguments[0] ) === 'object' ) {
+
+            option =  arguments[0];
+            refresh = arguments[1];
+            type = 'multiple';
+
+        } else if ( $.type( arguments[0] ) === 'string' ) {
+
+            option =  arguments[0];
+            value = arguments[1];
+            refresh = arguments[2];
+
+            if ( arguments[0] === 'responsive' && $.type( arguments[1] ) === 'array' ) {
+
+                type = 'responsive';
+
+            } else if ( typeof arguments[1] !== 'undefined' ) {
+
+                type = 'single';
+
+            }
+
+        }
+
+        if ( type === 'single' ) {
+
+            _.options[option] = value;
+
+
+        } else if ( type === 'multiple' ) {
+
+            $.each( option , function( opt, val ) {
+
+                _.options[opt] = val;
+
+            });
+
+
+        } else if ( type === 'responsive' ) {
+
+            for ( item in value ) {
+
+                if( $.type( _.options.responsive ) !== 'array' ) {
+
+                    _.options.responsive = [ value[item] ];
+
+                } else {
+
+                    l = _.options.responsive.length-1;
+
+                    // loop through the responsive object and splice out duplicates.
+                    while( l >= 0 ) {
+
+                        if( _.options.responsive[l].breakpoint === value[item].breakpoint ) {
+
+                            _.options.responsive.splice(l,1);
+
+                        }
+
+                        l--;
+
+                    }
+
+                    _.options.responsive.push( value[item] );
+
+                }
+
+            }
+
+        }
+
+        if ( refresh ) {
+
             _.unload();
             _.reinit();
+
         }
 
     };
@@ -4001,7 +5417,7 @@ window.matchMedia || (window.matchMedia = function() {
             _.setFade();
         }
 
-        _.$slider.trigger("setPosition", [ _ ]);
+        _.$slider.trigger('setPosition', [_]);
 
     };
 
@@ -4021,42 +5437,51 @@ window.matchMedia || (window.matchMedia = function() {
         if (bodyStyle.WebkitTransition !== undefined ||
             bodyStyle.MozTransition !== undefined ||
             bodyStyle.msTransition !== undefined) {
-            if(_.options.useCSS === true) {
+            if (_.options.useCSS === true) {
                 _.cssTransitions = true;
+            }
+        }
+
+        if ( _.options.fade ) {
+            if ( typeof _.options.zIndex === 'number' ) {
+                if( _.options.zIndex < 3 ) {
+                    _.options.zIndex = 3;
+                }
+            } else {
+                _.options.zIndex = _.defaults.zIndex;
             }
         }
 
         if (bodyStyle.OTransform !== undefined) {
             _.animType = 'OTransform';
-            _.transformType = "-o-transform";
+            _.transformType = '-o-transform';
             _.transitionType = 'OTransition';
             if (bodyStyle.perspectiveProperty === undefined && bodyStyle.webkitPerspective === undefined) _.animType = false;
         }
         if (bodyStyle.MozTransform !== undefined) {
             _.animType = 'MozTransform';
-            _.transformType = "-moz-transform";
+            _.transformType = '-moz-transform';
             _.transitionType = 'MozTransition';
             if (bodyStyle.perspectiveProperty === undefined && bodyStyle.MozPerspective === undefined) _.animType = false;
         }
         if (bodyStyle.webkitTransform !== undefined) {
             _.animType = 'webkitTransform';
-            _.transformType = "-webkit-transform";
+            _.transformType = '-webkit-transform';
             _.transitionType = 'webkitTransition';
             if (bodyStyle.perspectiveProperty === undefined && bodyStyle.webkitPerspective === undefined) _.animType = false;
         }
         if (bodyStyle.msTransform !== undefined) {
             _.animType = 'msTransform';
-            _.transformType = "-ms-transform";
+            _.transformType = '-ms-transform';
             _.transitionType = 'msTransition';
             if (bodyStyle.msTransform === undefined) _.animType = false;
         }
         if (bodyStyle.transform !== undefined && _.animType !== false) {
             _.animType = 'transform';
-            _.transformType = "transform";
+            _.transformType = 'transform';
             _.transitionType = 'transition';
         }
-        _.transformsEnabled = (_.animType !== null && _.animType !== false);
-
+        _.transformsEnabled = _.options.useTransform && (_.animType !== null && _.animType !== false);
     };
 
 
@@ -4065,46 +5490,94 @@ window.matchMedia || (window.matchMedia = function() {
         var _ = this,
             centerOffset, allSlides, indexOffset, remainder;
 
-        _.$slider.find('.slick-slide').removeClass('slick-active').attr("aria-hidden","true").removeClass('slick-center');
-        allSlides = _.$slider.find('.slick-slide');
+        allSlides = _.$slider
+            .find('.slick-slide')
+            .removeClass('slick-active slick-center slick-current')
+            .attr('aria-hidden', 'true');
+
+        _.$slides
+            .eq(index)
+            .addClass('slick-current');
 
         if (_.options.centerMode === true) {
 
             centerOffset = Math.floor(_.options.slidesToShow / 2);
 
-            if(_.options.infinite === true) {
+            if (_.options.infinite === true) {
 
                 if (index >= centerOffset && index <= (_.slideCount - 1) - centerOffset) {
-                    _.$slides.slice(index - centerOffset, index + centerOffset + 1).addClass('slick-active').attr("aria-hidden","false");
+
+                    _.$slides
+                        .slice(index - centerOffset, index + centerOffset + 1)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
                 } else {
+
                     indexOffset = _.options.slidesToShow + index;
-                    allSlides.slice(indexOffset - centerOffset + 1, indexOffset + centerOffset + 2).addClass('slick-active').attr("aria-hidden","false");
+                    allSlides
+                        .slice(indexOffset - centerOffset + 1, indexOffset + centerOffset + 2)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
                 }
 
                 if (index === 0) {
-                    allSlides.eq(allSlides.length - 1 - _.options.slidesToShow).addClass('slick-center');
+
+                    allSlides
+                        .eq(allSlides.length - 1 - _.options.slidesToShow)
+                        .addClass('slick-center');
+
                 } else if (index === _.slideCount - 1) {
-                    allSlides.eq(_.options.slidesToShow).addClass('slick-center');
+
+                    allSlides
+                        .eq(_.options.slidesToShow)
+                        .addClass('slick-center');
+
                 }
 
             }
 
-            _.$slides.eq(index).addClass('slick-center');
+            _.$slides
+                .eq(index)
+                .addClass('slick-center');
 
         } else {
 
             if (index >= 0 && index <= (_.slideCount - _.options.slidesToShow)) {
-                _.$slides.slice(index, index + _.options.slidesToShow).addClass('slick-active').attr("aria-hidden","false");
-            } else if ( allSlides.length <= _.options.slidesToShow ) {
-                allSlides.addClass('slick-active').attr("aria-hidden","false");
+
+                _.$slides
+                    .slice(index, index + _.options.slidesToShow)
+                    .addClass('slick-active')
+                    .attr('aria-hidden', 'false');
+
+            } else if (allSlides.length <= _.options.slidesToShow) {
+
+                allSlides
+                    .addClass('slick-active')
+                    .attr('aria-hidden', 'false');
+
             } else {
-                remainder = _.slideCount%_.options.slidesToShow;
+
+                remainder = _.slideCount % _.options.slidesToShow;
                 indexOffset = _.options.infinite === true ? _.options.slidesToShow + index : index;
-                if(_.options.slidesToShow == _.options.slidesToScroll && (_.slideCount - index) < _.options.slidesToShow) {
-                    allSlides.slice(indexOffset-(_.options.slidesToShow-remainder), indexOffset + remainder).addClass('slick-active').attr("aria-hidden","false");
+
+                if (_.options.slidesToShow == _.options.slidesToScroll && (_.slideCount - index) < _.options.slidesToShow) {
+
+                    allSlides
+                        .slice(indexOffset - (_.options.slidesToShow - remainder), indexOffset + remainder)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
                 } else {
-                    allSlides.slice(indexOffset, indexOffset + _.options.slidesToShow).addClass('slick-active').attr("aria-hidden","false");
+
+                    allSlides
+                        .slice(indexOffset, indexOffset + _.options.slidesToShow)
+                        .addClass('slick-active')
+                        .attr('aria-hidden', 'false');
+
                 }
+
             }
 
         }
@@ -4137,16 +5610,16 @@ window.matchMedia || (window.matchMedia = function() {
                 }
 
                 for (i = _.slideCount; i > (_.slideCount -
-                    infiniteCount); i -= 1) {
+                        infiniteCount); i -= 1) {
                     slideIndex = i - 1;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
-                        .attr('data-slick-index', slideIndex-_.slideCount)
+                        .attr('data-slick-index', slideIndex - _.slideCount)
                         .prependTo(_.$slideTrack).addClass('slick-cloned');
                 }
                 for (i = 0; i < infiniteCount; i += 1) {
                     slideIndex = i;
                     $(_.$slides[slideIndex]).clone(true).attr('id', '')
-                        .attr('data-slick-index', slideIndex+_.slideCount)
+                        .attr('data-slick-index', slideIndex + _.slideCount)
                         .appendTo(_.$slideTrack).addClass('slick-cloned');
                 }
                 _.$slideTrack.find('.slick-cloned').find('[id]').each(function() {
@@ -4159,30 +5632,46 @@ window.matchMedia || (window.matchMedia = function() {
 
     };
 
+    Slick.prototype.interrupt = function( toggle ) {
+
+        var _ = this;
+
+        if( !toggle ) {
+            _.autoPlay();
+        }
+        _.interrupted = toggle;
+
+    };
+
     Slick.prototype.selectHandler = function(event) {
 
         var _ = this;
-        var index = parseInt($(event.target).parents('.slick-slide').attr("data-slick-index"));
-        if(!index) index = 0;
 
-        if(_.slideCount <= _.options.slidesToShow){
-            _.$slider.find('.slick-slide').removeClass('slick-active').attr("aria-hidden","true");
-            _.$slides.eq(index).addClass('slick-active').attr("aria-hidden","false");
-            if(_.options.centerMode === true) {
-                _.$slider.find('.slick-slide').removeClass('slick-center');
-                _.$slides.eq(index).addClass('slick-center');
-            }
+        var targetElement =
+            $(event.target).is('.slick-slide') ?
+                $(event.target) :
+                $(event.target).parents('.slick-slide');
+
+        var index = parseInt(targetElement.attr('data-slick-index'));
+
+        if (!index) index = 0;
+
+        if (_.slideCount <= _.options.slidesToShow) {
+
+            _.setSlideClasses(index);
             _.asNavFor(index);
             return;
+
         }
+
         _.slideHandler(index);
 
     };
 
-    Slick.prototype.slideHandler = function(index,sync,dontAnimate) {
+    Slick.prototype.slideHandler = function(index, sync, dontAnimate) {
 
         var targetSlide, animSlide, oldSlide, slideLeft, targetLeft = null,
-            _ = this;
+            _ = this, navTarget;
 
         sync = sync || false;
 
@@ -4209,9 +5698,9 @@ window.matchMedia || (window.matchMedia = function() {
         _.currentLeft = _.swipeLeft === null ? slideLeft : _.swipeLeft;
 
         if (_.options.infinite === false && _.options.centerMode === false && (index < 0 || index > _.getDotCount() * _.options.slidesToScroll)) {
-            if(_.options.fade === false) {
+            if (_.options.fade === false) {
                 targetSlide = _.currentSlide;
-                if(dontAnimate!==true) {
+                if (dontAnimate !== true) {
                     _.animateSlide(slideLeft, function() {
                         _.postSlide(targetSlide);
                     });
@@ -4221,9 +5710,9 @@ window.matchMedia || (window.matchMedia = function() {
             }
             return;
         } else if (_.options.infinite === false && _.options.centerMode === true && (index < 0 || index > (_.slideCount - _.options.slidesToScroll))) {
-            if(_.options.fade === false) {
+            if (_.options.fade === false) {
                 targetSlide = _.currentSlide;
-                if(dontAnimate!==true) {
+                if (dontAnimate !== true) {
                     _.animateSlide(slideLeft, function() {
                         _.postSlide(targetSlide);
                     });
@@ -4234,7 +5723,7 @@ window.matchMedia || (window.matchMedia = function() {
             return;
         }
 
-        if (_.options.autoplay === true) {
+        if ( _.options.autoplay ) {
             clearInterval(_.autoPlayTimer);
         }
 
@@ -4256,21 +5745,36 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.animating = true;
 
-        _.$slider.trigger("beforeChange", [ _ , _.currentSlide, animSlide]);
+        _.$slider.trigger('beforeChange', [_, _.currentSlide, animSlide]);
 
         oldSlide = _.currentSlide;
         _.currentSlide = animSlide;
 
         _.setSlideClasses(_.currentSlide);
 
+        if ( _.options.asNavFor ) {
+
+            navTarget = _.getNavTarget();
+            navTarget = navTarget.slick('getSlick');
+
+            if ( navTarget.slideCount <= navTarget.options.slidesToShow ) {
+                navTarget.setSlideClasses(_.currentSlide);
+            }
+
+        }
+
         _.updateDots();
         _.updateArrows();
 
         if (_.options.fade === true) {
-            if(dontAnimate!==true) {
+            if (dontAnimate !== true) {
+
+                _.fadeSlideOut(oldSlide);
+
                 _.fadeSlide(animSlide, function() {
                     _.postSlide(animSlide);
                 });
+
             } else {
                 _.postSlide(animSlide);
             }
@@ -4278,7 +5782,7 @@ window.matchMedia || (window.matchMedia = function() {
             return;
         }
 
-        if(dontAnimate!==true) {
+        if (dontAnimate !== true) {
             _.animateSlide(targetLeft, function() {
                 _.postSlide(animSlide);
             });
@@ -4331,6 +5835,13 @@ window.matchMedia || (window.matchMedia = function() {
         if ((swipeAngle >= 135) && (swipeAngle <= 225)) {
             return (_.options.rtl === false ? 'right' : 'left');
         }
+        if (_.options.verticalSwiping === true) {
+            if ((swipeAngle >= 35) && (swipeAngle <= 135)) {
+                return 'down';
+            } else {
+                return 'up';
+            }
+        }
 
         return 'vertical';
 
@@ -4338,44 +5849,74 @@ window.matchMedia || (window.matchMedia = function() {
 
     Slick.prototype.swipeEnd = function(event) {
 
-        var _ = this, slideCount;
+        var _ = this,
+            slideCount,
+            direction;
 
         _.dragging = false;
+        _.interrupted = false;
+        _.shouldClick = ( _.touchObject.swipeLength > 10 ) ? false : true;
 
-        _.shouldClick = (_.touchObject.swipeLength > 10) ? false : true;
-
-        if (_.touchObject.curX === undefined) {
+        if ( _.touchObject.curX === undefined ) {
             return false;
         }
 
-        if (_.touchObject.edgeHit === true) {
-            _.$slider.trigger("edge", [  _, _.swipeDirection()]);
+        if ( _.touchObject.edgeHit === true ) {
+            _.$slider.trigger('edge', [_, _.swipeDirection() ]);
         }
 
-        if (_.touchObject.swipeLength >= _.touchObject.minSwipe) {
+        if ( _.touchObject.swipeLength >= _.touchObject.minSwipe ) {
 
-            switch (_.swipeDirection()) {
+            direction = _.swipeDirection();
+
+            switch ( direction ) {
+
                 case 'left':
-                    slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide + _.getSlideCount()) : _.currentSlide + _.getSlideCount();
-                    _.slideHandler(slideCount);
+                case 'down':
+
+                    slideCount =
+                        _.options.swipeToSlide ?
+                            _.checkNavigable( _.currentSlide + _.getSlideCount() ) :
+                            _.currentSlide + _.getSlideCount();
+
                     _.currentDirection = 0;
-                    _.touchObject = {};
-                    _.$slider.trigger("swipe", [ _, "left"]);
+
                     break;
 
                 case 'right':
-                    slideCount = _.options.swipeToSlide ? _.checkNavigable(_.currentSlide - _.getSlideCount()) : _.currentSlide - _.getSlideCount();
-                    _.slideHandler(slideCount);
+                case 'up':
+
+                    slideCount =
+                        _.options.swipeToSlide ?
+                            _.checkNavigable( _.currentSlide - _.getSlideCount() ) :
+                            _.currentSlide - _.getSlideCount();
+
                     _.currentDirection = 1;
-                    _.touchObject = {};
-                    _.$slider.trigger("swipe", [ _, "right"]);
+
                     break;
+
+                default:
+
+
             }
-        } else {
-            if(_.touchObject.startX !== _.touchObject.curX) {
-                _.slideHandler(_.currentSlide);
+
+            if( direction != 'vertical' ) {
+
+                _.slideHandler( slideCount );
                 _.touchObject = {};
+                _.$slider.trigger('swipe', [_, direction ]);
+
             }
+
+        } else {
+
+            if ( _.touchObject.startX !== _.touchObject.curX ) {
+
+                _.slideHandler( _.currentSlide );
+                _.touchObject = {};
+
+            }
+
         }
 
     };
@@ -4385,9 +5926,9 @@ window.matchMedia || (window.matchMedia = function() {
         var _ = this;
 
         if ((_.options.swipe === false) || ('ontouchend' in document && _.options.swipe === false)) {
-           return;
+            return;
         } else if (_.options.draggable === false && event.type.indexOf('mouse') !== -1) {
-           return;
+            return;
         }
 
         _.touchObject.fingerCount = event.originalEvent && event.originalEvent.touches !== undefined ?
@@ -4395,6 +5936,11 @@ window.matchMedia || (window.matchMedia = function() {
 
         _.touchObject.minSwipe = _.listWidth / _.options
             .touchThreshold;
+
+        if (_.options.verticalSwiping === true) {
+            _.touchObject.minSwipe = _.listHeight / _.options
+                .touchThreshold;
+        }
 
         switch (event.data.action) {
 
@@ -4434,6 +5980,11 @@ window.matchMedia || (window.matchMedia = function() {
         _.touchObject.swipeLength = Math.round(Math.sqrt(
             Math.pow(_.touchObject.curX - _.touchObject.startX, 2)));
 
+        if (_.options.verticalSwiping === true) {
+            _.touchObject.swipeLength = Math.round(Math.sqrt(
+                Math.pow(_.touchObject.curY - _.touchObject.startY, 2)));
+        }
+
         swipeDirection = _.swipeDirection();
 
         if (swipeDirection === 'vertical') {
@@ -4445,13 +5996,17 @@ window.matchMedia || (window.matchMedia = function() {
         }
 
         positionOffset = (_.options.rtl === false ? 1 : -1) * (_.touchObject.curX > _.touchObject.startX ? 1 : -1);
+        if (_.options.verticalSwiping === true) {
+            positionOffset = _.touchObject.curY > _.touchObject.startY ? 1 : -1;
+        }
+
 
         swipeLength = _.touchObject.swipeLength;
 
         _.touchObject.edgeHit = false;
 
         if (_.options.infinite === false) {
-            if ((_.currentSlide === 0 && swipeDirection === "right") || (_.currentSlide >= _.getDotCount() && swipeDirection === "left")) {
+            if ((_.currentSlide === 0 && swipeDirection === 'right') || (_.currentSlide >= _.getDotCount() && swipeDirection === 'left')) {
                 swipeLength = _.touchObject.swipeLength * _.options.edgeFriction;
                 _.touchObject.edgeHit = true;
             }
@@ -4461,6 +6016,9 @@ window.matchMedia || (window.matchMedia = function() {
             _.swipeLeft = curLeft + swipeLength * positionOffset;
         } else {
             _.swipeLeft = curLeft + (swipeLength * (_.$list.height() / _.listWidth)) * positionOffset;
+        }
+        if (_.options.verticalSwiping === true) {
+            _.swipeLeft = curLeft + swipeLength * positionOffset;
         }
 
         if (_.options.fade === true || _.options.touchMove === false) {
@@ -4480,6 +6038,8 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this,
             touches;
+
+        _.interrupted = true;
 
         if (_.touchObject.fingerCount !== 1 || _.slideCount <= _.options.slidesToShow) {
             _.touchObject = {};
@@ -4520,46 +6080,65 @@ window.matchMedia || (window.matchMedia = function() {
         var _ = this;
 
         $('.slick-cloned', _.$slider).remove();
+
         if (_.$dots) {
             _.$dots.remove();
         }
-        if (_.$prevArrow && (typeof _.options.prevArrow !== 'object')) {
+
+        if (_.$prevArrow && _.htmlExpr.test(_.options.prevArrow)) {
             _.$prevArrow.remove();
         }
-        if (_.$nextArrow && (typeof _.options.nextArrow !== 'object')) {
+
+        if (_.$nextArrow && _.htmlExpr.test(_.options.nextArrow)) {
             _.$nextArrow.remove();
         }
-        _.$slides.removeClass('slick-slide slick-active slick-visible').attr("aria-hidden","true").css('width', '');
+
+        _.$slides
+            .removeClass('slick-slide slick-active slick-visible slick-current')
+            .attr('aria-hidden', 'true')
+            .css('width', '');
 
     };
 
-    Slick.prototype.unslick = function() {
+    Slick.prototype.unslick = function(fromBreakpoint) {
 
         var _ = this;
+        _.$slider.trigger('unslick', [_, fromBreakpoint]);
         _.destroy();
 
     };
 
     Slick.prototype.updateArrows = function() {
 
-        var _ = this, centerOffset;
+        var _ = this,
+            centerOffset;
 
         centerOffset = Math.floor(_.options.slidesToShow / 2);
 
-        if (_.options.arrows === true && _.options.infinite !==
-            true && _.slideCount > _.options.slidesToShow) {
-            _.$prevArrow.removeClass('slick-disabled');
-            _.$nextArrow.removeClass('slick-disabled');
+        if ( _.options.arrows === true &&
+            _.slideCount > _.options.slidesToShow &&
+            !_.options.infinite ) {
+
+            _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+            _.$nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
             if (_.currentSlide === 0) {
-                _.$prevArrow.addClass('slick-disabled');
-                _.$nextArrow.removeClass('slick-disabled');
+
+                _.$prevArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$nextArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
             } else if (_.currentSlide >= _.slideCount - _.options.slidesToShow && _.options.centerMode === false) {
-                _.$nextArrow.addClass('slick-disabled');
-                _.$prevArrow.removeClass('slick-disabled');
+
+                _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
             } else if (_.currentSlide >= _.slideCount - 1 && _.options.centerMode === true) {
-                _.$nextArrow.addClass('slick-disabled');
-                _.$prevArrow.removeClass('slick-disabled');
+
+                _.$nextArrow.addClass('slick-disabled').attr('aria-disabled', 'true');
+                _.$prevArrow.removeClass('slick-disabled').attr('aria-disabled', 'false');
+
             }
+
         }
 
     };
@@ -4570,8 +6149,16 @@ window.matchMedia || (window.matchMedia = function() {
 
         if (_.$dots !== null) {
 
-            _.$dots.find('li').removeClass('slick-active').attr("aria-hidden","true");
-            _.$dots.find('li').eq(Math.floor(_.currentSlide / _.options.slidesToScroll)).addClass('slick-active').attr("aria-hidden","false");
+            _.$dots
+                .find('li')
+                .removeClass('slick-active')
+                .attr('aria-hidden', 'true');
+
+            _.$dots
+                .find('li')
+                .eq(Math.floor(_.currentSlide / _.options.slidesToScroll))
+                .addClass('slick-active')
+                .attr('aria-hidden', 'false');
 
         }
 
@@ -4581,31 +6168,38 @@ window.matchMedia || (window.matchMedia = function() {
 
         var _ = this;
 
-        if( document[ _.hidden ] ) {
-            _.paused = true;
-            _.autoPlayClear();
-        } else {
-            _.paused = false;
-            _.autoPlay();
+        if ( _.options.autoplay ) {
+
+            if ( document[_.hidden] ) {
+
+                _.interrupted = true;
+
+            } else {
+
+                _.interrupted = false;
+
+            }
+
         }
 
     };
 
     $.fn.slick = function() {
-        var _ = this, opt = arguments[0], args = Array.prototype.slice.call(arguments,1), l = _.length, i = 0, ret;
-        for(i; i < l; i++) {
+        var _ = this,
+            opt = arguments[0],
+            args = Array.prototype.slice.call(arguments, 1),
+            l = _.length,
+            i,
+            ret;
+        for (i = 0; i < l; i++) {
             if (typeof opt == 'object' || typeof opt == 'undefined')
-                _[i].slick =  new Slick(_[i], opt);
+                _[i].slick = new Slick(_[i], opt);
             else
                 ret = _[i].slick[opt].apply(_[i].slick, args);
-                if (typeof ret != 'undefined') return ret;
+            if (typeof ret != 'undefined') return ret;
         }
         return _;
     };
-
-    $(function(){
-        $('[data-slick]').slick();
-    });
 
 }));
 
@@ -4848,7 +6442,6 @@ window.app.contentSearch = (function ($) {
     var $liveSearchButton = $liveSearch.find(".liveSearch-button");
 
 
-    //var $contentSearchButton = $liveSearch.find(".contentSearch-button");
     var $contentSearchField = $liveSearch.find(".contentSearch-field");
     var $contentSearchResultList = $(".searchPage-result-list");
 
@@ -4863,7 +6456,6 @@ window.app.contentSearch = (function ($) {
         $liveSearchButton.on("click", openSearchPage);
 
         $contentSearchField.on("keyup", handleContentKeyDown);
-        //$contentSearchButton.on("click", openSearchPage);
 
     }
 
@@ -4974,7 +6566,6 @@ window.app.contentSearch = (function ($) {
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
             e.preventDefault();
-            //navigateSearchResultsList(e.keyCode);
             return false;
         }
 
@@ -5071,7 +6662,6 @@ window.app.contentSearch = (function ($) {
         // arrow down, arrow up
         if (e.keyCode === 38 || e.keyCode === 40) {
             e.preventDefault();
-            //navigateSearchResultsList(e.keyCode);
             return false;
         }
 
