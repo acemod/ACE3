@@ -13,14 +13,18 @@ if (isServer) then {
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedNonPlayer", DFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedNonPlayerVehicle", DFUNC(fired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+    ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+    ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
 
-    [FUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 // Cache for ammo type configs
-GVAR(cacheRoundsTypesToTrack) = createLocation ["ACE_HashLocation", [-10000, -10000, -10000], 0, 0];
-GVAR(cacheRoundsTypesToTrack) setText QGVAR(cacheRoundsTypesToTrack);
+GVAR(cacheRoundsTypesToTrack) = [false] call CBA_fnc_createNamespace;
+
+#ifdef DEBUG_ENABLED_FRAG
+[true, true, 30] call FUNC(dev_debugAmmo);
+#endif
+

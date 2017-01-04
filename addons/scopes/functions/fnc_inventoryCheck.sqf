@@ -23,7 +23,8 @@ private _updateAdjustment = false;
 private _newOptics = [_player] call FUNC(getOptics);
 {
     if (_newOptics select _forEachIndex != _x) then {
-        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);        
+        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _forEachIndex);
+        private _opticType = getNumber(_opticConfig >> "ItemInfo" >> "opticType");
         private _verticalIncrement = -1;
         if (isNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
             _verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
@@ -40,7 +41,7 @@ private _newOptics = [_player] call FUNC(getOptics);
         if (isArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal")) then {
             _maxHorizontal = getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal");
         };
-        if (GVAR(forceUseOfAdjustmentTurrets)) then {
+        if (GVAR(forceUseOfAdjustmentTurrets) && _opticType == 2) then {
             if (_maxVertical   isEqualTo []) then { _maxVertical   = [-4, 30]; };
             if (_maxHorizontal isEqualTo []) then { _maxHorizontal = [-6,  6]; };
             if (_verticalIncrement   == -1) then { _verticalIncrement   = 0.1; };
@@ -68,35 +69,8 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             _adjustment set [_forEachIndex, [0, 0, 0]];
             _updateAdjustment = true;
         };
-        // Determine rail height above bore
-        private _railHeightAboveBore = 0;
-        private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x);
-        if (isNumber (_weaponConfig >> "ACE_RailHeightAboveBore")) then {
-            _railHeightAboveBore = getNumber(_weaponConfig >> "ACE_RailHeightAboveBore");
-        } else {
-            switch (_x) do {
-                case 0: { _railHeightAboveBore = 2.0; }; // Rifle
-                case 2: { _railHeightAboveBore = 0.7; }; // Pistol
-            };
-        };
-        // Determine scope height above rail
-        private _scopeHeightAboveRail = 0;
-        private _opticConfig = configFile >> "CfgWeapons" >> (_newOptics select _x);
-        if (isNumber (_opticConfig >> "ACE_ScopeHeightAboveRail")) then {
-            _scopeHeightAboveRail = getNumber(_opticConfig >> "ACE_ScopeHeightAboveRail");
-        } else {
-            switch (getNumber(_opticConfig >> "ItemInfo" >> "opticType")) do {
-                case 1: { _scopeHeightAboveRail = 3.0; }; // RCO or similar
-                case 2: { _scopeHeightAboveRail = 4.0; }; // High power scope
-                default {
-                    switch (_x) do {
-                        case 0: { _scopeHeightAboveRail = 0.5; }; // Rifle iron sights
-                        case 2: { _scopeHeightAboveRail = 0.3; }; // Pistol iron sights
-                    };
-                };
-            };
-        };
-        GVAR(boreHeight) set [_x, _railHeightAboveBore + _scopeHeightAboveRail];
+        
+        GVAR(boreHeight) set [_x, [_player, _x] call FUNC(getBoreHeight)];
                 
         if ((_newOptics select _x) == "") then {
             // Check if the weapon comes with an integrated optic     

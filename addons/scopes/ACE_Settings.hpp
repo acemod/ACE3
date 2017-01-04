@@ -20,6 +20,13 @@ class ACE_Settings {
         displayName = CSTRING(correctZeroing_displayName);
         description = CSTRING(correctZeroing_description);
     };
+    // Enables the use of the 'defaultZeroRange' setting to overwrite the discreteDistance[] config
+    class GVAR(overwriteZeroRange) {
+        typeName = "BOOL";
+        value = 0;
+        displayName = CSTRING(overwriteZeroRange_displayName);
+        description = CSTRING(overwriteZeroRange_description);
+    };
     // Only affects scopes with elevation adjustment turrets (ACE_ScopeAdjust_Vertical != [0,0])
     class GVAR(defaultZeroRange) {
         typeName = "SCALAR";

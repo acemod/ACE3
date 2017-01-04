@@ -26,6 +26,9 @@ private _validate_preset = {
         ERROR("Invalid gun profile name");
         _valid = false;
     };
+    if (count (_this select 0) > 14) then {
+        WARNING("Gun profile name too long (max. allowed 14 characters)");
+    };
     if (_this select 1 < 0 || _this select 1 > 1400) then {
         private _errorMsg = format ["Invalid muzzle velocity: %1", _this select 1];
         ERROR(_errorMsg);
@@ -112,6 +115,7 @@ private _validate_preset = {
         private _gun = getArray _preset;
         
         if (_gun call _validate_preset) then {
+            _gun set [0, (_gun select 0) select [0, 14]];
             _gun set [20, false];
             GVAR(gunList) = GVAR(gunList) + [_gun];
         };

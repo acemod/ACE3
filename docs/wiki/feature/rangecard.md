@@ -30,7 +30,7 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 
 - Open your rangetable and look under the `Target range` column.
 
-- Move to the `Bullet Drop` column, the drop is in MRADs, you need to compensate for it by adjusting your sight. Example, you want to adjust for a bullet drop of -7.9 MRADs  simply adjust your scope 7.9 MRADs vertically. (check [feature scopes](http://ace3mod.com/wiki/feature/scopes.html) ) for this.
+- Move to the `Bullet Drop` column, the drop is in MRADs, you need to compensate for it by adjusting your sight. Example, you want to adjust for a bullet drop of -7.9 MRADs  simply adjust your scope 7.9 MRADs vertically. (check [feature scopes]({{ site.baseurl }}/wiki/feature/scopes.html) ) for this.
 
 ## 3. Dependencies
 

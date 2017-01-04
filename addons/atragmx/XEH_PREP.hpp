@@ -70,6 +70,7 @@ PREP(toggle_target_data);
 PREP(toggle_target_range_assist);
 PREP(toggle_target_speed_assist);
 PREP(toggle_truing_drop);
+PREP(trim_gun_name);
 PREP(true_c1_ballistic_coefficient);
 PREP(true_muzzle_velocity);
 PREP(update_atmosphere);

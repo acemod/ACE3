@@ -163,6 +163,21 @@ class CfgVehicles {
         MACRO_REARM_TRUCK_ACTIONS
     };
 
+    class NATO_Box_Base: ReammoBox_F{};
+    class Box_NATO_AmmoVeh_F: NATO_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+    class EAST_Box_Base: ReammoBox_F{};
+    class Box_East_AmmoVeh_F: EAST_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+    class IND_Box_Base: ReammoBox_F{};
+    class Box_IND_AmmoVeh_F: IND_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
 
     // Dummy Vehicles
     class GVAR(defaultCarriedObject): ThingX {

@@ -97,18 +97,11 @@ if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) t
     _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
 };
 
-private ["_speedTotal", "_stepsTotal", "_speedAverage"];
-_speedTotal = 0;
-_stepsTotal = 0;
-_speedAverage = 0;
-
 private ["_eoetvoesMultiplier"];
 _eoetvoesMultiplier = 0;
 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     _eoetvoesMultiplier = 2 * (0.0000729 * _muzzleVelocity / -9.80665) * cos(_latitude) * sin(_directionOfFire);
 };
-
-_TOF = 0;
 
 _bulletPos set [0, 0];
 _bulletPos set [1, 0];
@@ -120,10 +113,6 @@ _bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
 
 while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
-
-    _speedTotal = _speedTotal + _bulletSpeed;
-    _stepsTotal = _stepsTotal + 1;
-    _speedAverage = (_speedTotal / _stepsTotal);
 
     _trueVelocity = _bulletVelocity vectorDiff _wind1;
     _trueSpeed = vectorMagnitude _trueVelocity;
@@ -162,7 +151,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
 
             if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {
                 // Coriolis
-                _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
+                _horizontalDeflection = 0.0000729 * (_bulletPos select 1) * _TOF * sin(_latitude);
                 _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
                 _windage1 = _windage1 + _horizontalCoriolis;
                 _windage2 = _windage2 + _horizontalCoriolis;
@@ -198,7 +187,7 @@ _kineticEnergy = _kineticEnergy * 0.737562149;
 
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {
     // Coriolis
-    _horizontalDeflection = 0.0000729 * ((_bulletPos select 1) ^ 2) * sin(_latitude) / _speedAverage;
+    _horizontalDeflection = 0.0000729 * (_bulletPos select 1) * _TOF * sin(_latitude);
     _horizontalCoriolis = - atan(_horizontalDeflection / (_bulletPos select 1));
     _windage1 = _windage1 + _horizontalCoriolis;
     _windage2 = _windage2 + _horizontalCoriolis;

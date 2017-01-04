@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WindDeflection">
         <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
@@ -13,6 +13,7 @@
             <Italian>Informazioni sul vento</Italian>
             <Portuguese>Informação do vento</Portuguese>
             <Japanese>風の情報</Japanese>
+            <Korean>바람 정보</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
             <English>Direction: %1</English>
@@ -26,6 +27,7 @@
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção: %1</Portuguese>
             <Japanese>風向: %1</Japanese>
+            <Korean>방향: %1</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
             <English>Speed: %1 m/s</English>
@@ -39,6 +41,7 @@
             <Italian>Velocità: %1 m/s</Italian>
             <Portuguese>Velocidade: %1 m/s</Portuguese>
             <Japanese>風速: %1 m/s</Japanese>
+            <Korean>풍속: %1 m/s</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_CATEGORY">
             <English>Weather Information</English>
@@ -52,6 +55,7 @@
             <Italian>Meteo</Italian>
             <Portuguese>Informação Meteorológica</Portuguese>
             <Japanese>天候の情報</Japanese>
+            <Korean>기상 정보</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
             <English>Humidity: %1%</English>
@@ -65,6 +69,7 @@
             <Italian>Umidità: %1%</Italian>
             <Portuguese>Humidade: %1%</Portuguese>
             <Japanese>湿度: %1%</Japanese>
+            <Korean>습도: %1%</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
             <English>Wind Deflection</English>
@@ -78,6 +83,7 @@
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
             <Japanese>風向による変化</Japanese>
+            <Korean>풍향 변화</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
             <English>Wind Deflection</English>
@@ -91,6 +97,7 @@
             <Russian>Отклонение ветром</Russian>
             <Italian>Deviazione del Vento</Italian>
             <Japanese>風向による変化</Japanese>
+            <Korean>풍향 변화</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
@@ -104,6 +111,7 @@
             <Russian>Включает отклонение ветром</Russian>
             <Italian>Abilita deviazione del vento</Italian>
             <Japanese>風向による変化を有効化</Japanese>
+            <Korean>풍향 변화를 적용합니다</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
             <English>Vehicle Enabled</English>
@@ -117,6 +125,7 @@
             <Russian>Для техники</Russian>
             <Italian>Abilita per Veicoli</Italian>
             <Japanese>車両へ有効化</Japanese>
+            <Korean>차량 적용</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
             <English>Enables wind deflection for static/vehicle gunners</English>
@@ -130,6 +139,7 @@
             <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
             <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
             <Japanese>重火器や車両へ、風による変化を有効化</Japanese>
+            <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -143,6 +153,7 @@
             <Russian>Интервал симуляции</Russian>
             <Italian>Intervallo Simulazione</Italian>
             <Japanese>シミュレーションの間隔</Japanese>
+            <Korean>재현 간격</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -156,6 +167,7 @@
             <Russian>Определяет временной интервал между расчетами</Russian>
             <Italian>Definisce l'intervallo tra ogni passaggio di calcolo</Italian>
             <Japanese>各計算に適用させる間隔を定義します</Japanese>
+            <Korean>매 계산마다의 간격을 정의합니다</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -169,6 +181,7 @@
             <Russian>Радиус симуляции</Russian>
             <Italian>Raggio Simulazione</Italian>
             <Japanese>シミュレーション半径</Japanese>
+            <Korean>재현 범위</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which projectiles are wind deflected</English>
@@ -182,6 +195,7 @@
             <Russian>Определяет радиус вокруг игрока (а метрах), в котором снаряды отклоняются ветром</Russian>
             <Italian>Definisce il raggio attorno al giocatore (in metri) dove viene applicata la deviazione del vento ai proiettili</Italian>
             <Japanese>プレイヤーの周囲に適用させる風による弾道の変化の半径を定義します (メートル)</Japanese>
+            <Korean>플레이어 주위로 발사체가 풍향 변화의 영향을 받는 범위를 정합니다 (미터)</Korean>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
@@ -195,6 +209,7 @@
             <Russian>Влияние втера на траекторию снарядов</Russian>
             <Italian>Influenza del vento sulla traiettoria dei proiettili</Italian>
             <Japanese>風が弾道へ影響させます</Japanese>
+            <Korean>발사체의 궤도에 풍향 변화를 줍니다.</Korean>
         </Key>
     </Package>
 </Project>

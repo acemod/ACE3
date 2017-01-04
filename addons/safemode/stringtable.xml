@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SafeMode">
         <Key ID="STR_ACE_SafeMode_SafeMode">
@@ -13,6 +13,7 @@
             <Italian>Sicura inserita</Italian>
             <Portuguese>Modo de segurança</Portuguese>
             <Japanese>安全装置</Japanese>
+            <Korean>안전 모드</Korean>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
@@ -26,6 +27,7 @@
             <Italian>Togli la sicura</Italian>
             <Portuguese>Tirar segurança</Portuguese>
             <Japanese>安全装置を外す</Japanese>
+            <Korean>안전장치 해제</Korean>
         </Key>
         <Key ID="STR_ACE_SafeMode_PutOnSafety">
             <English>Put on Safety</English>
@@ -39,6 +41,7 @@
             <Italian>Sicura inserita</Italian>
             <Portuguese>Colocar Segurança</Portuguese>
             <Japanese>安全装置を掛けた</Japanese>
+            <Korean>안전장치 적용</Korean>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
@@ -52,6 +55,7 @@
             <Italian>Sicura tolta</Italian>
             <Portuguese>Tirou Segurança</Portuguese>
             <Japanese>安全装置を外した</Japanese>
+            <Korean>안전장치 해제됨</Korean>
         </Key>
     </Package>
 </Project>

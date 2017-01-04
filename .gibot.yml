@@ -11,7 +11,7 @@ stages:
        - marked for cleanup
      comment:
        - 'Hello @{author}! There has been no activity on this ticket for over a period of {days} days. I am automatically replying to let you know we will close this ticket within 1 week due to inactivity and consider this resolved.'
-       - 'If you believe this in error, please reply with the requested information.'
+       - 'If you believe this is in error, please reply with the requested information.'
        - 'Thank you. :robot:'
      action:
        close: false
@@ -35,7 +35,7 @@ stages:
        remove_label:
          - marked for cleanup
   remind_about_old_ticket:
-    days: 130
+    days: 160
     labels:
       - bug
       - critical bug

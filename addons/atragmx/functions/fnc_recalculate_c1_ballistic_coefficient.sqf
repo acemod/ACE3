@@ -37,16 +37,20 @@ private ["_lowerIndex", "_upperIndex"];
 for "_index" from 1 to (_lookupTableSize - 1) do {
     _upperIndex = _index;
     _lowerIndex = _upperIndex - 1;
-    if (((_lookupTable select _index) select 0) >= (GVAR(targetRange) select GVAR(currentTarget))) exitWith {}
+    if (((_lookupTable select _index) select 0) >= (GVAR(targetRange) select GVAR(currentTarget))) exitWith {};
 };
 
-private ["_lowerDistance", "_upperDistance", "_lowerC1", "_upperC1", "_slope", "_c1"];
+private ["_lowerDistance", "_upperDistance", "_lowerC1", "_upperC1", "_c1"];
 _lowerDistance = (_lookupTable select _lowerIndex) select 0;
 _upperDistance = (_lookupTable select _upperIndex) select 0;
 _lowerC1       = (_lookupTable select _lowerIndex) select 1;
 _upperC1       = (_lookupTable select _upperIndex) select 1;
-_slope = (_upperC1 - _lowerC1) / (_upperDistance - _lowerDistance);
-_c1 = 0.1 max (_lowerC1 + ((GVAR(targetRange) select GVAR(currentTarget)) - _lowerDistance) * _slope) min 2.0;
+_c1 = _lowerC1;
+if (_lowerDistance != _upperDistance) then {
+    private _slope = (_upperC1 - _lowerC1) / (_upperDistance - _lowerDistance);
+    _c1 = _lowerC1 + ((GVAR(targetRange) select GVAR(currentTarget)) - _lowerDistance) * _slope;
+};
+_c1 = 0.1 max _c1 min 2.0;
 
 if (_c1 != GVAR(workingMemory) select 15) then {
     GVAR(workingMemory) set [15, _c1];

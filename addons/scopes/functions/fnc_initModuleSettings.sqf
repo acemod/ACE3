@@ -21,6 +21,7 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(forceUseOfAdjustmentTurrets), "forceUseOfAdjustmentTurrets"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(correctZeroing), "correctZeroing"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(overwriteZeroRange), "overwriteZeroRange"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(defaultZeroRange), "defaultZeroRange"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(zeroReferenceTemperature), "zeroReferenceTemperature"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(zeroReferenceBarometricPressure), "zeroReferenceBarometricPressure"] call EFUNC(common,readSettingFromModule);
