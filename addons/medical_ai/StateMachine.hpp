@@ -9,7 +9,7 @@ class GVAR(stateMachine) {
         };
         class HealUnit {
             targetState = "HealUnit";
-            condition = QUOTE((call FUNC(isSafe)) && {call FUNC(wasRequested)});
+            condition = QUOTE((unitReady _this) && (call FUNC(isSafe)) && {call FUNC(wasRequested)});
         };
     };
 
