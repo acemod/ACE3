@@ -27,9 +27,9 @@
     isNull curatorCamera && // Curator
     
     {isNull (RETDEF(EGVAR(spectator,camera),objNull))} && // ACE Spectator
-    {isNull (GETUVAR(BIS_fnc_arsenal_cam, objNull))} && // Arsenal camera
-    {isNull (RETDEF(BIS_fnc_establishingShot_fakeUAV, objNull))} && // Establishing shot camera
-    {isNull (RETDEF(BIS_fnc_camera_cam, objNull))} && // Splendid camera
-    {isNull (GETUVAR(BIS_fnc_animViewer_cam, objNull))} && // Animation viewer camera
-    {isNull (RETDEF(BIS_DEBUG_CAM, objNull))} // Classic camera
+    {isNull (GETUVAR(BIS_fnc_arsenal_cam,objNull))} && // Arsenal camera
+    {isNull (RETDEF(BIS_fnc_establishingShot_fakeUAV,objNull))} && // Establishing shot camera
+    {isNull (RETDEF(BIS_fnc_camera_cam,objNull))} && // Splendid camera
+    {isNull (GETUVAR(BIS_fnc_animViewer_cam,objNull))} && // Animation viewer camera
+    {isNull (RETDEF(BIS_DEBUG_CAM,objNull))} // Classic camera
 ) // return

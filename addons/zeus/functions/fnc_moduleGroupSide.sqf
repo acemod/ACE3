@@ -27,7 +27,7 @@ private _oldGroup = group _unit;
 private _newGroup = createGroup _newSide;
 
 // Pretty hacky, will replace units return group with this new group if unconcious
-if (GETVAR(_unit,ACE_isUnconscious,false) && {GETMVAR(EGVAR(medical,moveUnitsFromGroupOnUnconscious),false)}) then {
+if (GETVAR(_unit,ACE_isUnconscious,false) && {RETDEF(EGVAR(medical,moveUnitsFromGroupOnUnconscious),false)}) then {
         private _previousGroupsList = _unit getVariable [QEGVAR(common,previousGroupSwitchTo), []];
 
         {

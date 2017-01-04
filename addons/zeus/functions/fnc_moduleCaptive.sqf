@@ -23,7 +23,7 @@ if !(_activated && local _logic) exitWith {};
 if (isNil QEFUNC(captives,setHandcuffed)) then {
     [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
 } else {
-    _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
+    _mouseOver = RETDEF(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
