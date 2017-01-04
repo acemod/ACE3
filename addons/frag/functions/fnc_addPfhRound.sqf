@@ -38,7 +38,7 @@ if (GVAR(SpallEnabled)) then {
 // ACE_player sideChat format ["c: %1", GVAR(spallIsTrackingCount)];
 
 if (GVAR(autoTrace)) then {
-    [ACE_player, _round, [1,0,0,1]] call FUNC(addTrack);
+    [ACE_player, _round, [1, 0, 0, 1]] call FUNC(addTrack);
 };
 
 // We only do the single track object check here.
