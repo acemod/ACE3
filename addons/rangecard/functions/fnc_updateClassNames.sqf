@@ -37,10 +37,12 @@ if (_weaponClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass)
 if (_ammoClass == "") exitWith { (GVAR(ammoClass) != "" && GVAR(magazineClass) != "" && GVAR(weaponClass) != "") };
 
 if (_unit == ACE_player) then {
+    GVAR(zeroRange)     = [_unit] call EFUNC(scopes,getCurrentZeroRange);
     GVAR(ammoClass)     = _ammoClass;
     GVAR(magazineClass) = _magazineClass;
     GVAR(weaponClass)   = _weaponClass;
 } else {
+    GVAR(zeroRangeCopy)     = [_unit] call EFUNC(scopes,getCurrentZeroRange);
     GVAR(ammoClassCopy)     = _ammoClass;
     GVAR(magazineClassCopy) = _magazineClass;
     GVAR(weaponClassCopy)   = _weaponClass;

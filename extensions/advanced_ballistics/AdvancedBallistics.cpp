@@ -5,9 +5,12 @@
 #include <vector>
 #include <unordered_map>
 #include <random>
+#include <cmath>
 
 
+#define DELTA_T 0.02f
 #define GRAVITY 9.80665f
+#define DEGREES(X) (X * 180 / M_PI)
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
 #define CELSIUS(t) (t + ABSOLUTE_ZERO_IN_CELSIUS)
@@ -227,6 +230,113 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     }
 
     return 0.0;
+}
+
+double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
+    double zeroAngle = 0.0f;
+
+    for (int i = 0; i < 10; i++) {
+        double lx = 0.0f;
+        double ly = 0.0f;
+
+        double px = 0.0f;
+        double py = -boreHeight / 100.0f;
+
+        double gx = std::sin(zeroAngle) * -GRAVITY;
+        double gy = std::cos(zeroAngle) * -GRAVITY;
+
+        double vx = std::cos(zeroAngle) * muzzleVelocity;
+        double vy = std::sin(zeroAngle) * muzzleVelocity;
+
+        double tof = 0.0f;
+        double v = 0.0f;
+
+        while (tof < 8.0f && px < zeroRange) {
+            lx = px;
+            ly = py;
+
+            v = std::sqrt(vx*vx + vy*vy);
+
+            double ax = vx * v * airFriction;
+            double ay = vy * v * airFriction;
+            ax += gx;
+            ay += gy;
+
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+            vx += ax * DELTA_T;
+            vy += ay * DELTA_T;
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+
+            tof += DELTA_T;
+        }
+
+        double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
+        double offset = -std::atan(y / zeroRange);
+        zeroAngle += offset;
+
+        if (std::abs(offset) < 0.0001f) {
+            break;
+        }
+    }
+
+    return zeroAngle;
+}
+
+double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
+    double zeroAngle = 0.0f;
+
+    ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
+
+    for (int i = 0; i < 10; i++) {
+        double lx = 0.0f;
+        double ly = 0.0f;
+
+        double px = 0.0f;
+        double py = -boreHeight / 100.0f;
+
+        double gx = std::sin(zeroAngle) * -GRAVITY;
+        double gy = std::cos(zeroAngle) * -GRAVITY;
+
+        double vx = std::cos(zeroAngle) * muzzleVelocity;
+        double vy = std::sin(zeroAngle) * muzzleVelocity;
+
+        double tof = 0.0f;
+        double v = 0.0f;
+
+        while (tof < 8.0f && px < zeroRange) {
+            lx = px; 
+            ly = py;
+
+            v = std::sqrt(vx*vx + vy*vy);
+
+            double retard = calculateRetard(dragModel, ballisticCoefficient, v);
+            double ax = vx / v * -retard;
+            double ay = vy / v * -retard;
+            ax += gx;
+            ay += gy;
+
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+            vx += ax * DELTA_T;
+            vy += ay * DELTA_T;
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+
+            tof += DELTA_T;
+        }
+
+        double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
+        double offset = -std::atan(y / zeroRange);
+        zeroAngle += offset;
+
+        if (std::abs(offset) < 0.0001f) {
+            break;
+        }
+    }
+
+    return zeroAngle;
 }
 
 extern "C"
@@ -639,6 +749,33 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.reserve(gridCells);
         map->gridSurfaceIsWater.reserve(gridCells);
 
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "zeroAngleVanilla")) {
+        double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double initSpeed = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
+
+        double zeroAngle = calculateVanillaZeroAngle(zeroRange, initSpeed, airFriction, boreHeight);
+
+        outputStr << DEGREES(zeroAngle);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "zeroAngle")) {
+        double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double muzzleVelocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double temperature = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double pressure = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double humidity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double ballisticCoefficient = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        int dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
+        char* atmosphereModel = strtok_s(NULL, ":", &next_token);
+
+        double zeroAngle = calculateZeroAngle(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
+
+        outputStr << DEGREES(zeroAngle);
         strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     }

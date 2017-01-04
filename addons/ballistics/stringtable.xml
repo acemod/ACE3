@@ -1,6 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Ballistics">
+        <!-- QBU -->
+        <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
+            <English>6.5x47mm 20Rnd Mag (HPBT Scenar)</English>
+            <French>Ch. 6.5x47mm 20Cps (HPBT Scenar)</French>
+            <Spanish>Cargador de 20 balas de 6.5x47mm (HPBT Scenar)</Spanish>
+            <Polish>Magazynek 6,5x47mm 20rd (HPBT Scenar)</Polish>
+            <Russian>Магазин из 20-ти 6,5x47 мм (экспансивные Scenar)</Russian>
+            <German>6,5x47mm 20-Patronen-Magazin (HPBT Scenar)</German>
+            <Italian>6.5x47mm 20Rnd Mag (HPBT Scenar)</Italian>
+            <Czech>6.5x47mm 20náb. Zásobník (HPBT Scenar)</Czech>
+            <Portuguese>Carregador 6.5x47mm com 20 cartuchos (HPBT Scenar)</Portuguese>
+            <Hungarian>6,5x47mm 20-lövedékes tár (HPBT Scenar)</Hungarian>
+            <Japanese>6.5x47mm 20発入り 弾倉 (HPBT Scenar)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_NameShort">
+            <English>6.5mm Lapua</English>
+            <French>6.5mm Lapua</French>
+            <Spanish>6.5mm Lapua</Spanish>
+            <Polish>6,5mm Lapua</Polish>
+            <Russian>6,5 мм Lapua</Russian>
+            <German>6,5mm Lapua</German>
+            <Italian>6.5mm Lapua</Italian>
+            <Czech>6.5mm Lapua</Czech>
+            <Portuguese>6.5mm Lapua</Portuguese>
+            <Hungarian>6,5mm Lapua</Hungarian>
+            <Japanese>6.5mm Lapua</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Description">
+            <English>Caliber: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
+            <French>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Cartouches: 20</French>
+            <Spanish>Calibre: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
+            <Polish>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Pociski: 20</Polish>
+            <Russian>Калибр: 6,5x47 мм (экспансивные Scenar)&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются с: QBU-88</Russian>
+            <German>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: QBU-88</German>
+            <Italian>Calibro: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: QBU-88</Italian>
+            <Czech>Ráže: 6.5x47mm (HPBT Scenar)&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: QBU-88</Czech>
+            <Portuguese>Calibre: 6.5x47mm (HPBT Scenar)&lt;br/&gt;Cartuchos: 20&lt;br/&gt;Usado em: QBU-88</Portuguese>
+            <Hungarian>Kaliber: 6,5x47mm (HPBT Scenar)&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
+            <Japanese>口径: 6.5x47mm (HPBT Scenar)&amp;lt;br /&amp;gt;装填数: 20&amp;lt;br /&amp;gt;次で使用: QBU-88</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Name">
+            <English>6.5mm Creedmor 20Rnd Mag</English>
+            <Polish>Magazynek 6,5mm Creedmor 20rd</Polish>
+            <Italian>6.5mm Creedmor 20Rnd Mag</Italian>
+            <Russian>Магазин из 20-ти 6,5 мм Creedmor</Russian>
+            <German>6,5mm Creedmor 20-Patronen-Magazin</German>
+            <Spanish>Cargador de 20 balas Creedmor de 6.5mm</Spanish>
+            <French>Ch. 6.5mm Creedmor 20Cps</French>
+            <Czech>6.5mm Creedmor 20náb. Zásobník</Czech>
+            <Portuguese>Carregador 6.5mm com 20 cartuchos Creedmor</Portuguese>
+            <Hungarian>6,5mm Creedmor 20-lövedékes tár</Hungarian>
+            <Japanese>6.5mm Creedmor 20発入り 弾倉</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_NameShort">
+            <English>6.5mm CM</English>
+            <French>6.5mm CM</French>
+            <Spanish>6.5mm CM</Spanish>
+            <Polish>6,5mm CM</Polish>
+            <Russian>6,5 мм CM</Russian>
+            <German>6,5mm CM</German>
+            <Italian>6.5mm CM</Italian>
+            <Czech>6.5mm CM</Czech>
+            <Portuguese>6.5mm CM</Portuguese>
+            <Hungarian>6,5mm CM</Hungarian>
+            <Japanese>6.5mm CM</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_20Rnd_65_Creedmor_mag_Description">
+            <English>Caliber: 6.5x47mm Creedmor&lt;br /&gt;Rounds: 20&lt;br /&gt;Used in: QBU-88</English>
+            <Polish>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Pociski: 20&lt;br /&gt;Używany w: QBU-88</Polish>
+            <German>Kaliber: 6,5x47mm  Creedmor&lt;br /&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: QBU-88</German>
+            <French>Calibre: 6.5x47mm Creedmor &lt;br /&gt;Cartouches: 20&lt;br /&gt;Utilisé avec: QBU-88</French>
+            <Italian>Calibro: 6.5mm Creedmor&lt;br /&gt;Munizioni: 20&lt;br /&gt;In uso su: QBU-88</Italian>
+            <Spanish>Calibre: 6.5mm Creedmor&lt;br /&gt;Balas: 20&lt;br /&gt;Se usa en: QBU-88</Spanish>
+            <Russian>Калибр: 6,5x47мм Creedmor&lt;br /&gt;Патронов: 20&lt;br /&gt;Используются c: QBU-88</Russian>
+            <Czech>Ráže: 6.5x47mm Creedmor&lt;br /&gt;Nábojů: 20&lt;br /&gt;Použití u: QBU-88</Czech>
+            <Portuguese>Calibre: 6.5x47mm Creedmor&lt;br/&gt;Cartuchos: 20&lt;br/&gt;Usado em: QBU-88</Portuguese>
+            <Hungarian>Kaliber: 6,5x47mm Creedmor&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
+            <Japanese>口径: 6.5x47mm Creedmor&amp;lt;br /&amp;gt;装填数: 20&amp;lt;br /&amp;gt;次で使用: QBU-88</Japanese>
+        </Key>
         <!-- MX -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5mm 30Rnd Tracer IR-DIM Mag</English>
@@ -1606,6 +1685,45 @@
             <Portuguese>Calibre: 8.6x70mm  (API526)&lt;br/&gt;Cartuchos: 10</Portuguese>
             <Hungarian>Kaliber: 8,6x70mm (API526)&lt;br /&gt;Lövedékek: 10</Hungarian>
             <Japanese>口径: 8.6x70mm (API526)&amp;lt;br /&amp;gt;装填数: 10</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Name">
+            <English>.408 7Rnd Mag (305gr)</English>
+            <French>Ch. .408 7Cps (305gr)</French>
+            <Spanish>Cargador de 7 balas de .408 (305gr)</Spanish>
+            <Polish>Magazynek .408 7rd (305gr)</Polish>
+            <Russian>Магазин из 7-ти .408 (305gr)</Russian>
+            <German>.408 7-Patronen-Magazin (305gr)</German>
+            <Italian>.408 7Rnd Mag (305gr)</Italian>
+            <Czech>.408 7náb. Zásobník (305gr)</Czech>
+            <Portuguese>Carregador .408 (305gr) com 7 cartuchos </Portuguese>
+            <Hungarian>.408 7-lövedékes tár (305gr)</Hungarian>
+            <Japanese>.408 7発入り 弾倉 (305gr)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_NameShort">
+            <English>.408</English>
+            <French>.408</French>
+            <Spanish>.408</Spanish>
+            <Polish>.408</Polish>
+            <Russian>.408</Russian>
+            <German>.408</German>
+            <Italian>.408</Italian>
+            <Czech>.408</Czech>
+            <Portuguese>.408</Portuguese>
+            <Hungarian>.408</Hungarian>
+            <Japanese>.408</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Ballistics_7Rnd_408_305gr_Mag_Description">
+            <English>Caliber: .408 CheyTac (305gr)&lt;br /&gt;Rounds: 7</English>
+            <French>Calibre: .408 CheyTac (305gr)&lt;br /&gt;Cartouches: 7</French>
+            <Spanish>Calibre: .408 CheyTac (305gr)&lt;br /&gt;Balas: 7</Spanish>
+            <Polish>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Pociski: 7</Polish>
+            <Russian>Калибр: .408 CheyTac (305gr)&lt;br /&gt;Патронов: 7</Russian>
+            <German>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Patronen: 7</German>
+            <Italian>Calibro: .408 CheyTac (305gr)&lt;br /&gt;Munizioni: 7</Italian>
+            <Czech>Ráže: .408 CheyTac (305gr)&lt;br /&gt;Nábojů: 7</Czech>
+            <Portuguese>Calibre: .408 CheyTac (305gr)&lt;br/&gt;Cartuchos: 7</Portuguese>
+            <Hungarian>Kaliber: .408 CheyTac (305gr)&lt;br /&gt;Lövedékek: 7</Hungarian>
+            <Japanese>口径: .408 CheyTac (305gr)&amp;lt;br /&amp;gt;装填数: 7</Japanese>
         </Key>
         <Key ID="STR_ACE_Ballistics_5Rnd_127x99_Mag_Name">
             <English>12.7x99mm 5Rnd Mag</English>
