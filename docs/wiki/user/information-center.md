@@ -10,13 +10,10 @@ parent: wiki
 Downloaded ACE3 and have no idea where to start? This page serves as a starting point to help new players and mission makers understand what's available to them.
 
 **Q:** Don't know where to begin your ACE3 journey?  
-**A:** [**Check out ACE3 features**](http://ace3mod.com/wiki/feature/)
-
-**Q:** Are you a mission maker but don't know yet what ACE3 has to offer?  
-**A:** [**We have a wiki section just for you**](http://ace3mod.com/wiki/missionmaker/)
+**A:** [**Check out ACE3 features**]({{ site.baseurl }}/wiki/feature/)
 
 **Q:** Looking for information on ACE3 class names?  
-**A:** [**Here they are**](http://ace3mod.com/wiki/missionmaker/class-names.html)
+**A:** [**Here they are**]({{ site.baseurl }}/wiki/class-names.html)
 
 ## 1. FAQ
 
