@@ -41,7 +41,7 @@ if (_shooter == ACE_player) then {
         _firedLOS = (getPosASL _projectile) vectorFromTo (aimPos _target);
         (((eyePos _shooter) vectorFromTo (aimPos _target)) call CBA_fnc_vect2Polar) params ["", "_startYaw", "_startPitch"];
         // Add some random error to AI's velocity prediction:
-        private _random = random [(_shooter skill "aimingAccuracy") min 0.9, 1, 2-((_shooter skill "aimingAccuracy") min 0.9)];
+        private _random = random [(_shooter skillFinal "aimingAccuracy") min 0.9, 1, 2-((_shooter skillFinal "aimingAccuracy") min 0.9)];
         (((eyePos _shooter) vectorFromTo ((aimPos _target) vectorAdd ((velocity _target) vectorMultiply (_random)))) call CBA_fnc_vect2Polar) params ["", "_predictedYaw", "_predictedPitch"];
         _yawChange = ([_predictedYaw - _startYaw] call CBA_fnc_simplifyAngle180);
         _pitchChange = ([_predictedPitch - _startPitch] call CBA_fnc_simplifyAngle180);
