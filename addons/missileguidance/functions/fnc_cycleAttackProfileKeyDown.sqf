@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Cycles fire mode for any missileGuidance enabled ammo that has multiiple attack profiles
+ * Cycles fire mode for any missileGuidance enabled ammo that has multiple attack profiles
  *
  * Arguments:
  * None
@@ -16,7 +16,7 @@
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-TRACE_1("cycle fire mode", _this);
+TRACE_1("cycle fire mode",_this);
 
 if (!alive ACE_player) exitWith {};
 if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
