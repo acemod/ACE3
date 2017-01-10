@@ -83,20 +83,22 @@ if ((_vehicle modelToWorld (_vehicle selectionPosition _seekerSource)) isEqualTo
     private _haveLock = !isNil "_foundTargetPos";
 
     private _modeShort = "ERR";
-    private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), "hellfire"];
-    switch (true) do {
-    case (_vehicleLockMode == "hellfire"): {
+    private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), ""];
+
+    switch (_vehicleLockMode) do { // note: missileguidance is case sensitive
+        case ("hellfire_hi"): {
+            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
+        };
+        case ("hellfire_lo"): {
+            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
+        };
+        default {
+            _vehicleLockMode = "hellfire";
             _modeShort = if (_haveLock) then {
                 getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "nameLocked");
             } else {
                 getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
             };
-        };
-    case (_vehicleLockMode == "hellfire_hi"): {
-            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
-        };
-    case (_vehicleLockMode == "hellfire_lo"): {
-            _modeShort = getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");
         };
     };
 
