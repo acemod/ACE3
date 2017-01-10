@@ -20,7 +20,7 @@ params ["_box"];
 if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _box setVariable [QGVAR(isCookingOff), true];
 
-if (local _vehicle) then {
+if (local _box) then {
     [QGVAR(cookOffBox), _box] call CBA_fnc_remoteEvent;
 };
 
@@ -44,9 +44,9 @@ if (local _vehicle) then {
 
         // These functions are smart and do all the cooking off work
         if (local _box) then {
-            _box call FUNC(secondaryExplosions);
             if (_box getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
-                [_box, magazinesAmmo _box] call FUNC(detonateAmmunition);
+                ([_box] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
+                [_box, _mags, _total] call FUNC(detonateAmmunition);
             };
 
             // This shit is busy being on fire, magazines aren't accessible/usable
