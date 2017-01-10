@@ -61,8 +61,7 @@ if ((_vehicle modelToWorld (_vehicle selectionPosition _seekerSource)) isEqualTo
     };
 
     private _currentWeapon = _vehicle currentWeaponTurret _turretPath;
-    private _ammo = _vehicle ammo _currentWeapon;
-    private _showLockMode = ((_ammo > 0) && {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(enabled))) == 1});
+    private _showLockMode = (getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(enabled))) == 1;
 
     private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;
 
