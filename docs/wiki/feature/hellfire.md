@@ -15,7 +15,8 @@ version:
 ## 1. Overview
 
 ### 1.1 Guidance
-Hellfire missile is Semi-active laser guided; requiring an observer to guide the missile for it's entire flight.
+Hellfire missile is a semi-active laser guided weapon.
+It requires an observer (either the launch platform or an external source) to provide laser designation.
 
 ### 1.2 Attack profiles
 Missile does not need line of sight to target when fired and can Lock-On-After-Launch (can also delay lasing target).
@@ -29,17 +30,18 @@ This and the attack profile used will effect missile's flight and max altitude.
 - Switching to the hellfire weapon will show additional information about the weapon in weapon status display.
 - Shows: lock mode, laser code and a laser receiver indicator.  E.G. `LOAL-DIR    CODE: 1111`
 - Laser receiver indicator turns red when it detects a laser pulse set the the current code.
-- Cycle attack profiles with vehicle's ace_interaction menu or with the missile guidance key (default: <kbd>Ctrl</kbd> + <kbd>Tab</kbd>)
+- Cycle attack profiles with vehicle's ACE3 Interaction Menu or with the missile guidance "Cycle Fire Mode" keybind (default: <kbd>Ctrl</kbd> + <kbd>Tab</kbd>)
 
 ## 3 Adding to vehicles
 - Hellfires can be added to other vehicles via config or script.
 
 ### 3.1 Classnames
-Weapon: `ace_hellfire_launcher`
-Magazines: `6Rnd_ACE_Hellfire_AGM114K`, `8Rnd_ACE_Hellfire_AGM114K`, `12Rnd_ACE_Hellfire_AGM114K`, `16Rnd_ACE_Hellfire_AGM114K`, `24Rnd_ACE_Hellfire_AGM114K`
+- Weapon: `ace_hellfire_launcher`
+- Magazines: `6Rnd_ACE_Hellfire_AGM114K`, `8Rnd_ACE_Hellfire_AGM114K`, `12Rnd_ACE_Hellfire_AGM114K`, `16Rnd_ACE_Hellfire_AGM114K`, `24Rnd_ACE_Hellfire_AGM114K`
 
 ### 3.2 Script Example
 - Adding hellfires to the Cessna Civilian Plane:
+
 ```
 if (local this) then {
     this addWeaponTurret ["ace_hellfire_launcher", [0]];
