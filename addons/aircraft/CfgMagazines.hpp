@@ -1,4 +1,3 @@
-
 class CfgMagazines {
     // shoot helper object to tripple rof
     class VehicleMagazine;

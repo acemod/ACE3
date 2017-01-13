@@ -1,13 +1,10 @@
-
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
 
 class CfgWeapons {
-
     class RocketPods;
-    class ACE_AIR_SAFETY : RocketPods
-    {
+    class ACE_AIR_SAFETY : RocketPods {
         CanLock = 0;
         displayName = "SAFE";
         displayNameMagazine = "SAFE";
@@ -24,7 +21,7 @@ class CfgWeapons {
     // Manual Switching Of Flare Mode
     class SmokeLauncher;
     class CMFlareLauncher: SmokeLauncher {
-        modes[] = {"Single","Burst","AIBurst"};
+        modes[] = {"Single", "Burst", "AIBurst"};
         class Single: Mode_SemiAuto {
             reloadTime = 0.1;
         };
