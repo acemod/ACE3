@@ -10,12 +10,12 @@ class HScrollbar;
 class RscLadderPicture;
 class RscControlsGroupNoScrollbars;
 
-
 class RscInGameUI {
     class RscUnitInfo;
     class Rsc_ACE_Helo_UI_Turret: RscUnitInfo {
         idd = 300;
         controls[] = {"CA_IGUI_elements_group", "CA_VehicleToggles"};
+
         class VScrollbar;
         class HScrollbar;
         class CA_IGUI_elements_group: RscControlsGroup {
@@ -23,6 +23,7 @@ class RscInGameUI {
             class VScrollbar: VScrollbar {
                 width = 0;
             };
+
             class HScrollbar: HScrollbar {
                 height = 0;
             };
@@ -30,6 +31,7 @@ class RscInGameUI {
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";
             h = "40 * (0.025 * SafezoneH)";
+
             class controls {
                 class CA_Distance: RscText {
                     idc = 151;
@@ -42,6 +44,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Speed: RangeText {
                     idc = 188;
                     style = 2;
@@ -54,6 +57,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Alt: RangeText {
                     idc = 189;
                     style = 2;
@@ -66,6 +70,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_VisionMode: RscText {
                     idc = 152;
                     style = 0;
@@ -78,6 +83,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_FlirMode: RscText {
                     idc = 153;
                     style = 0;
@@ -90,6 +96,7 @@ class RscInGameUI {
                     w = "4.5 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class ValueGrid: RangeText {
                     idc = 172;
                     font = "EtelkaMonospacePro";
@@ -101,6 +108,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class TextTADS: RangeText {
                     idc = 1010;
                     text = "TADS";
@@ -112,6 +120,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class ValueTime: RangeText {
                     idc = 190;
                     text = "20:28:35";
@@ -124,6 +133,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Laser: RscText {
                     idc = 158;
                     style = "0x30 + 0x800";
@@ -136,6 +146,7 @@ class RscInGameUI {
                     w = "12.5 * (0.01875 * SafezoneH)";
                     h = "12 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Heading: RscText {
                     idc = 156;
                     style = 0;
@@ -151,20 +162,25 @@ class RscInGameUI {
             };
         };
     };
+
     class Rsc_ACE_Helo_UI_01: RscUnitInfo {
         controls[] = {"WeaponInfoControlsGroupRight", "CA_TextFlaresMode", "CA_TextFlares", "CA_VehicleToggles", "CA_Radar"};
     };
+
     class Rsc_ACE_Helo_UI_02: RscUnitInfo {
         controls[] = {"CA_TextFlaresMode", "CA_TextFlares", "CA_VehicleToggles", "CA_Radar"};
     };
+
     class Rsc_ACE_Drones_UI_Turret: RscUnitInfo {
         idd = 300;
         controls[] = {"CA_Zeroing", "CA_IGUI_elements_group", "CA_VehicleToggles"};
+
         class CA_IGUI_elements_group: RscControlsGroup {
             idc = 170;
             class VScrollbar: VScrollbar {
                 width = 0;
             };
+
             class HScrollbar: HScrollbar {
                 height = 0;
             };
@@ -172,6 +188,7 @@ class RscInGameUI {
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";
             h = "40 * (0.025 * SafezoneH)";
+
             class controls {
                 class CA_Distance: RscText {
                     idc = 151;
@@ -184,6 +201,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Speed: RangeText {
                     idc = 188;
                     style = 2;
@@ -196,6 +214,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Alt: RangeText {
                     idc = 189;
                     style = 2;
@@ -208,6 +227,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class ValueTime: RangeText {
                     idc = 190;
                     text = "20:28:35";
@@ -220,6 +240,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class CA_VisionMode: RscText {
                     idc = 152;
                     style = 0;
@@ -233,6 +254,7 @@ class RscInGameUI {
                     w = "4 * (0.01875 * SafezoneH)";
                     h = "1.0 * (0.025 * SafezoneH)";
                 };
+
                 class CA_FlirMode: RscText {
                     idc = 153;
                     style = 0;
@@ -246,6 +268,7 @@ class RscInGameUI {
                     w = "4.5 * (0.01875 * SafezoneH)";
                     h = "1.0 * (0.025 * SafezoneH)";
                 };
+
                 class TgT_Grid_text: RangeText {
                     idc = 1005;
                     text = "TGT:";
@@ -258,6 +281,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class TGT_ValueGrid: RangeText {
                     idc = 172;
                     font = "EtelkaMonospacePro";
@@ -270,6 +294,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class OWN_Grid_text: RangeText {
                     idc = 1005;
                     text = "OWN:";
@@ -282,6 +307,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class OWN_ValueGrid: RangeText {
                     idc = 171;
                     font = "EtelkaMonospacePro";
@@ -294,6 +320,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Laser: RscText {
                     idc = 158;
                     style = "0x30 + 0x800";
@@ -307,6 +334,7 @@ class RscInGameUI {
                     w = "12.5 * (0.01875 * SafezoneH)";
                     h = "12 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Heading: RscText {
                     idc = 156;
                     style = 0;
@@ -323,14 +351,17 @@ class RscInGameUI {
             };
         };
     };
+
     class Rsc_ACE_Drones_UI_Pilots: RscUnitInfo {
         idd = 300;
         controls[] = {"WeaponInfoControlsGroupRight", "CA_BackgroundVehicle", "CA_BackgroundVehicleTitle", "CA_BackgroundVehicleTitleDark", "CA_BackgroundFuel", "CA_Vehicle", "CA_VehicleRole", "CA_HitZones", "CA_SpeedBackground", "CA_SpeedUnits", "CA_Speed", "CA_ValueFuel", "CA_AltBackground", "CA_AltUnits", "CA_Alt", "CA_VehicleToggles", "CA_Radar", "DriverOpticsGroup"};
+
         class DriverOpticsGroup: RscControlsGroup {
             idc = 392;
             class VScrollbar: VScrollbar {
                 width = 0;
             };
+
             class HScrollbar: HScrollbar {
                 height = 0;
             };
@@ -351,6 +382,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class ValueGrid: TextGrid {
                     idc = 189;
                     text = "382546";
@@ -359,6 +391,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class TextTime: TextGrid {
                     idc = 1010;
                     text = "TIME [UTC]:";
@@ -367,6 +400,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class ValueTime: TextGrid {
                     idc = 101;
                     text = "20:28:35";
@@ -375,6 +409,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class TextMag: TextGrid {
                     idc = 1011;
                     text = "CAM MAG:";
@@ -383,6 +418,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class OpticsZoom: TextGrid {
                     idc = 192;
                     text = "28x";
@@ -391,6 +427,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class BorderLineSpdTop: RscPicture {
                     idc = 1203;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\border_line_ca.paa";
@@ -399,6 +436,7 @@ class RscInGameUI {
                     w = "3 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class BorderLineSpdBottom: RscPicture {
                     idc = 1207;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\border_line_ca.paa";
@@ -407,6 +445,7 @@ class RscInGameUI {
                     w = "3 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class BorderLineAltTop: RscPicture {
                     idc = 1205;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\border_line_ca.paa";
@@ -415,6 +454,7 @@ class RscInGameUI {
                     w = "3 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class BorderLineAltBottom: RscPicture {
                     idc = 1206;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\border_line_ca.paa";
@@ -423,6 +463,7 @@ class RscInGameUI {
                     w = "3 * (0.01875 * SafezoneH)";
                     h = "1 * (0.025 * SafezoneH)";
                 };
+
                 class TextSpd: TextGrid {
                     idc = 1004;
                     text = "SPD";
@@ -431,6 +472,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class SpeedValueBorder: RscPicture {
                     idc = 1200;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\altimeter_value_ca.paa";
@@ -439,6 +481,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Speed: TextGrid {
                     idc = 190;
                     sizeEx = "0.03*SafezoneH";
@@ -448,6 +491,7 @@ class RscInGameUI {
                     w = "6 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class AnalogueSpeed: RscLadderPicture {
                     idc = 384;
                     topValue = 1312;
@@ -459,6 +503,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "14 * (0.025 * SafezoneH)";
                 };
+
                 class TextAlt: TextGrid {
                     idc = 1006;
                     text = "ALT";
@@ -467,6 +512,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class AltValueBorder: RscPicture {
                     idc = 1201;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\airspeed_value_ca.paa";
@@ -475,6 +521,7 @@ class RscInGameUI {
                     w = "5 * (0.01875 * SafezoneH)";
                     h = "2 * (0.025 * SafezoneH)";
                 };
+
                 class CA_Alt: TextGrid {
                     idc = 191;
                     sizeEx = "0.03 * SafezoneH";
@@ -485,6 +532,7 @@ class RscInGameUI {
                     w = "3.2 * (0.01875 * SafezoneH)";
                     h = "1.2 * (0.025 * SafezoneH)";
                 };
+
                 class AnalogueAlt: RscLadderPicture {
                     idc = 385;
                     topValue = 14430;
@@ -496,6 +544,7 @@ class RscInGameUI {
                     w = "2.5 * (0.01875 * SafezoneH)";
                     h = "14 * (0.025 * SafezoneH)";
                 };
+
                 class AnalogueHorizon: RscLadderPicture {
                     idc = 383;
                     topValue = 90;
@@ -507,6 +556,7 @@ class RscInGameUI {
                     w = "20 * (0.01875 * SafezoneH)";
                     h = "30 * (0.025 * SafezoneH)";
                 };
+
                 class HorizonCenter: RscPicture {
                     idc = 1202;
                     text = "\A3\Ui_f\data\IGUI\Cfg\HelicopterHUD\horizon_aircraft_ca.paa";
