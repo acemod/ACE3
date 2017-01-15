@@ -93,4 +93,15 @@ class CfgWeapons {
         ace_hearing_protection = 0.5;
         ace_hearing_lowerVolume = 0.60;
     };
+    
+    class rhs_weap_d81;
+    class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
+        ace_overpressure_range = 15;
+        ace_overpressure_damage = 0.5;
+    };
+    class cannon_120mm;
+    class rhs_weap_2a28_base: cannon_120mm { // "Low pressure"
+        ace_overpressure_range = 15;
+        ace_overpressure_damage = 0.5;
+    };
 };

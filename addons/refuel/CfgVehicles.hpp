@@ -144,13 +144,11 @@ class CfgVehicles {
     class House_F: House {};
 
     class House_Small_F: House_F {
-        class EventHandlers;
-
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
                 selection = "";
-                distance = 10;
+                distance = 5;
                 condition = "true";
             };
         };
@@ -501,10 +499,6 @@ class CfgVehicles {
 
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
@@ -512,10 +506,6 @@ class CfgVehicles {
     };
 
     class Land_fs_feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};

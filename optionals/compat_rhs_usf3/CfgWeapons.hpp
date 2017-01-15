@@ -16,6 +16,9 @@ class CfgWeapons {
     class launch_O_Titan_F;
     class UGL_F;
 
+    class rhs_weap_M320_Base_F: Pistol_Base_F { // Standalone M320 (pistol slot)
+        magazines[] += {"ACE_HuntIR_M203"};
+    };
     class GM6_base_F;
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
@@ -26,7 +29,7 @@ class CfgWeapons {
         ACE_barrelLength = 609.6;
         ACE_Overheating_dispersion = 0.75;
     };
-    class rhs_weap_m24sws : rhs_weap_XM2010_Base_F {
+    class rhs_weap_m24sws: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
     };
@@ -35,97 +38,9 @@ class CfgWeapons {
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 368.3;
         class M203_GL: UGL_F {
-            magazines[] = {
-                "rhs_mag_M441_HE",
-                "rhs_mag_M433_HEDP",
-                "rhs_mag_M4009",
-                "rhs_mag_m576",
-                "rhs_mag_M585_white",
-                "rhs_mag_M661_green",
-                "rhs_mag_M662_red",
-                "rhs_mag_M713_red",
-                "rhs_mag_M714_white",
-                "rhs_mag_M715_green",
-                "rhs_mag_M716_yellow",
-
-                // bis compatibility
-                "1Rnd_HE_Grenade_shell",
-                "UGL_FlareWhite_F",
-                "UGL_FlareGreen_F",
-                "UGL_FlareRed_F",
-                "UGL_FlareYellow_F",
-                "UGL_FlareCIR_F",
-                "1Rnd_Smoke_Grenade_shell",
-                "1Rnd_SmokeRed_Grenade_shell",
-                "1Rnd_SmokeGreen_Grenade_shell",
-                "1Rnd_SmokeYellow_Grenade_shell",
-                "1Rnd_SmokePurple_Grenade_shell",
-                "1Rnd_SmokeBlue_Grenade_shell",
-                "1Rnd_SmokeOrange_Grenade_shell",
-                "3Rnd_HE_Grenade_shell",
-                "3Rnd_UGL_FlareWhite_F",
-                "3Rnd_UGL_FlareGreen_F",
-                "3Rnd_UGL_FlareRed_F",
-                "3Rnd_UGL_FlareYellow_F",
-                "3Rnd_UGL_FlareCIR_F",
-                "3Rnd_Smoke_Grenade_shell",
-                "3Rnd_SmokeRed_Grenade_shell",
-                "3Rnd_SmokeGreen_Grenade_shell",
-                "3Rnd_SmokeYellow_Grenade_shell",
-                "3Rnd_SmokePurple_Grenade_shell",
-                "3Rnd_SmokeBlue_Grenade_shell",
-                "3Rnd_SmokeOrange_Grenade_shell",
-
-                // ACE3 Compatibility
-                "ACE_HuntIR_M203"
-            };
+            magazines[] += {"ACE_HuntIR_M203"};
         };
-        class M320_GL : M203_GL {
-            magazines[] = {
-                "rhs_mag_M441_HE",
-                "rhs_mag_M433_HEDP",
-                "rhs_mag_M4009",
-                "rhs_mag_m576",
-                "rhs_mag_M585_white",
-                "rhs_mag_M661_green",
-                "rhs_mag_M662_red",
-                "rhs_mag_M713_red",
-                "rhs_mag_M714_white",
-                "rhs_mag_M715_green",
-                "rhs_mag_M716_yellow",
-
-                // bis compatibility
-                "1Rnd_HE_Grenade_shell",
-                "UGL_FlareWhite_F",
-                "UGL_FlareGreen_F",
-                "UGL_FlareRed_F",
-                "UGL_FlareYellow_F",
-                "UGL_FlareCIR_F",
-                "1Rnd_Smoke_Grenade_shell",
-                "1Rnd_SmokeRed_Grenade_shell",
-                "1Rnd_SmokeGreen_Grenade_shell",
-                "1Rnd_SmokeYellow_Grenade_shell",
-                "1Rnd_SmokePurple_Grenade_shell",
-                "1Rnd_SmokeBlue_Grenade_shell",
-                "1Rnd_SmokeOrange_Grenade_shell",
-                "3Rnd_HE_Grenade_shell",
-                "3Rnd_UGL_FlareWhite_F",
-                "3Rnd_UGL_FlareGreen_F",
-                "3Rnd_UGL_FlareRed_F",
-                "3Rnd_UGL_FlareYellow_F",
-                "3Rnd_UGL_FlareCIR_F",
-                "3Rnd_Smoke_Grenade_shell",
-                "3Rnd_SmokeRed_Grenade_shell",
-                "3Rnd_SmokeGreen_Grenade_shell",
-                "3Rnd_SmokeYellow_Grenade_shell",
-                "3Rnd_SmokePurple_Grenade_shell",
-                "3Rnd_SmokeBlue_Grenade_shell",
-                "3Rnd_SmokeOrange_Grenade_shell",
-
-                // ACE3 Compatibility
-                "ACE_HuntIR_M203"
-            };
-        };
+        // Added to the M320_GL in subConfig
     };
     class rhs_weap_m4a1;
     class rhs_weap_hk416d10: rhs_weap_m4a1 {
@@ -190,7 +105,7 @@ class CfgWeapons {
         ACE_barrelLength = 508.0;
     };
     class SMG_01_F;
-    class rhsusf_weap_MP7A1_base_f : SMG_01_F {
+    class rhsusf_weap_MP7A1_base_f: SMG_01_F {
         ACE_barrelTwist = 160.0;
         ACE_barrelLength = 180.0;
     };
@@ -237,7 +152,7 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4_2_d : rhsusf_acc_LEUPOLDMK4_2 {};
+    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {};
     class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2 {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
@@ -248,7 +163,7 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_premier_low : rhsusf_acc_premier {};
+    class rhsusf_acc_premier_low: rhsusf_acc_premier {};
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
