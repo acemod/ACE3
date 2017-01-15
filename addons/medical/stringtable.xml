@@ -4813,7 +4813,7 @@
             <Korean>의료</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
-            <English>Distance to %1 has become to far for treatment</English>
+            <English>Distance to %1 has become too far for treatment</English>
             <German>Die Entfernung zu %1 ist zu groß für eine Behandlung</German>
             <Polish>%1 odszedł zbyt daleko, nie można kontynuować leczenia</Polish>
             <Russian>Расстояние до %1 стало слишком большим для лечения</Russian>
