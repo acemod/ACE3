@@ -31,6 +31,7 @@ GVAR(ladder) animate ["rotate", 0];
 
 {
     GVAR(ladder) animate [_x, 0];
+    true
 } count __ANIMS;
 
 // remove mouse buttons and hint

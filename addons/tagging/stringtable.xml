@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_Tagging">
@@ -6,42 +6,56 @@
             <Russian>Маркировка</Russian>
             <Japanese>タグ付け</Japanese>
             <Polish>Tagowanie</Polish>
+            <German>Markierungssystem</German>
+            <Korean>뿌리기</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
             <Russian>Настройка работы системы спрей-маркеров по-умолчанию.</Russian>
             <Japanese>標準で開くタグ付けシステムの設定を行います。</Japanese>
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
+            <German>Konfiguriert, wie das Markierungssystem standardmäßig funktioniert.</German>
+            <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
             <Russian>Быстрый маркер</Russian>
             <Japanese>クイック タグ</Japanese>
             <Polish>Szybkie tagowanie</Polish>
+            <German>Schnelle Markierung</German>
+            <Korean>빠른 뿌리기</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
             <Japanese>インタラクション ポインにむけてタグ付けをします。</Japanese>
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
+            <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
+            <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
             <Russian>Повторить последний</Russian>
             <Japanese>最後の使用</Japanese>
             <Polish>Ostatnio użyte</Polish>
+            <German>Zuletzt benutzt</German>
+            <Korean>최근 사용</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
             <Russian>Случайный Х</Russian>
             <Japanese>無作為な X印</Japanese>
             <Polish>Losowy X</Polish>
+            <German>Zufällig X</German>
+            <Korean>무작위 X</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
             <Russian>Случайный</Russian>
             <Japanese>無作為</Japanese>
             <Polish>Losowy</Polish>
+            <German>Zufällig</German>
+            <Korean>무작위</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
@@ -54,6 +68,7 @@
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
+            <Korean>뿌리기</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -66,6 +81,7 @@
             <Portuguese>X em preto</Portuguese>
             <Russian>Черный Х</Russian>
             <Japanese>黒の X印</Japanese>
+            <Korean>검정 X</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_XRed">
             <English>X red</English>
@@ -78,6 +94,7 @@
             <Portuguese>X em vermelho</Portuguese>
             <Russian>Красный Х</Russian>
             <Japanese>赤の X印</Japanese>
+            <Korean>빨간 X</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_XGreen">
             <English>X green</English>
@@ -90,6 +107,7 @@
             <Portuguese>X em verde</Portuguese>
             <Russian>Зеленый Х</Russian>
             <Japanese>緑の X印</Japanese>
+            <Korean>초록 X</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlue">
             <English>X blue</English>
@@ -102,6 +120,7 @@
             <Portuguese>X em azul</Portuguese>
             <Russian>Синий Х</Russian>
             <Japanese>青の X印</Japanese>
+            <Korean>파랑 X</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Black spray paint</English>
@@ -114,6 +133,7 @@
             <Portuguese>Spray de tinta preta</Portuguese>
             <Russian>Черный спрей</Russian>
             <Japanese>黒のスプレー缶</Japanese>
+            <Korean>검정 스프레이</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintRed">
             <English>Red spray paint</English>
@@ -126,6 +146,7 @@
             <Portuguese>Spray de tinta vermelha</Portuguese>
             <Russian>Красный спрей</Russian>
             <Japanese>赤のスプレー缶</Japanese>
+            <Korean>빨강 스프레이</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintGreen">
             <English>Green spray paint</English>
@@ -138,6 +159,7 @@
             <Portuguese>Spray de tinta verde</Portuguese>
             <Russian>Зеленый спрей</Russian>
             <Japanese>緑のスプレー缶</Japanese>
+            <Korean>초록 스프레이</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Blue spray paint</English>
@@ -150,6 +172,7 @@
             <Portuguese>Spray de tinta azul</Portuguese>
             <Russian>Синий спрей</Russian>
             <Japanese>青のスプレー缶</Japanese>
+            <Korean>파랑 스프레이</Korean>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -162,6 +185,7 @@
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
             <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
             <Japanese>スプレー缶は壁にタグ付できます。</Japanese>
+            <Korean>벽에 뿌릴 수 있는 스프레이캔 입니다.</Korean>
         </Key>
     </Package>
 </Project>

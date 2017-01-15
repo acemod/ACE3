@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Weather">
         <Key ID="STR_ACE_Weather_WindInfoKeyHold">
@@ -13,6 +13,7 @@
             <Czech>Zobrazit údaje o větru</Czech>
             <Portuguese>Mostrar informação do vento</Portuguese>
             <Japanese>風速を表示</Japanese>
+            <Korean>바람 정보 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_WindInfoKeyToggle">
             <English>Show Wind Info (Toggle)</English>
@@ -26,6 +27,7 @@
             <Czech>Zobrazit údaje o větru (přep.)</Czech>
             <Portuguese>Mostrar informação do vento (alternar)</Portuguese>
             <Japanese>風速を表示 (トグル)</Japanese>
+            <Korean>바람 정보 표시 (토글)</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_Module_DisplayName">
             <English>Weather</English>
@@ -38,7 +40,8 @@
             <Hungarian>Időjárás</Hungarian>
             <Russian>Погода</Russian>
             <Italian>Meteo</Italian>
-            <Japanese>ACE 天候モジュールではマルチプレイで同期します。</Japanese>
+            <Japanese>天候</Japanese>
+            <Korean>기후</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_Module_Description">
             <English>Multiplayer synchronized ACE weather module</English>
@@ -52,6 +55,7 @@
             <Russian>ACE Модуль для синхронизации погоды в мультиплеере</Russian>
             <Italian>Modulo Sincronizzazione Meteo ACE Multiplayer</Italian>
             <Japanese>ACE 天候モジュールではマルチプレイで同期します。</Japanese>
+            <Korean>ACE 기후 모듈과 멀티플레이가 동기화됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_DisplayName">
             <English>Weather propagation</English>
@@ -65,6 +69,7 @@
             <Russian>Единая погода для всех</Russian>
             <Italian>Propagazione Meteo</Italian>
             <Japanese>天候の統一</Japanese>
+            <Korean>기후 전파</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_enableServerController_Description">
             <English>Enables server side weather propagation</English>
@@ -78,6 +83,7 @@
             <Russian>Включает управление погодой на серверной стороне</Russian>
             <Italian>Abilita propagazione meteo lato server</Italian>
             <Japanese>サーバ側による天候の統一を有効化</Japanese>
+            <Korean>서버의 기후를 전파합니다 </Korean>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_DisplayName">
             <English>ACE Weather</English>
@@ -91,6 +97,7 @@
             <Russian>Погода ACE</Russian>
             <Italian>Meteo ACE</Italian>
             <Japanese>ACE 天候</Japanese>
+            <Korean>ACE 기후</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_useACEWeather_Description">
             <English>Overrides the default weather (editor, mission settings) with ACE weather (map based)</English>
@@ -104,6 +111,7 @@
             <Russian>Заменяет погоду по-умолчанию (из редактора, настроек миссии) погодой ACE (на основе карты)</Russian>
             <Italian>Scavalca il meteo default (editor, parametri missione) con il meteo ACE (basato su mappa)</Italian>
             <Japanese>ACE 天候 (マップを元) による標準の天候 (エディタやミッション設定) を上書きします。</Japanese>
+            <Korean>기존의 기후(에디터, 임무 설정)를 ACE 기후로 치환합니다. (지도에 따라)</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_DisplayName">
             <English>Sync Rain</English>
@@ -117,6 +125,7 @@
             <Russian>Синхрониз. дождь</Russian>
             <Italian>Sincronizza Pioggia</Italian>
             <Japanese>降雨の同期</Japanese>
+            <Korean>비 동기화</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncRain_Description">
             <English>Synchronizes rain</English>
@@ -130,6 +139,7 @@
             <Russian>Синхронизирует дождь</Russian>
             <Italian>Sincronizza Pioggia</Italian>
             <Japanese>降雨の同期</Japanese>
+            <Korean>비를 동기화 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_DisplayName">
             <English>Sync Wind</English>
@@ -143,6 +153,7 @@
             <Russian>Синхрониз. ветер</Russian>
             <Italian>Sincronizza Vento</Italian>
             <Japanese>風を同期</Japanese>
+            <Korean>바람 동기화</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncWind_Description">
             <English>Synchronizes wind</English>
@@ -156,6 +167,7 @@
             <Russian>Синхронизирует ветер</Russian>
             <Italian>Sincronizza Vento</Italian>
             <Japanese>風を同期</Japanese>
+            <Korean>바람을 동기화 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_DisplayName">
             <English>Sync Misc</English>
@@ -169,6 +181,7 @@
             <Russian>Синхрониз. прочее</Russian>
             <Italian>Sincronizza Misto</Italian>
             <Japanese>その他を同期</Japanese>
+            <Korean>기타 동기화</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_syncMisc_Description">
             <English>Synchronizes lightnings, rainbow, fog,...</English>
@@ -182,6 +195,7 @@
             <Russian>Синхронизирует молнии, радугу, туман,...</Russian>
             <Italian>Sincronizza lampi, arcobaleni, nebbia,...</Italian>
             <Japanese>ライティングや虹、霧などを同期</Japanese>
+            <Korean>번개라던가, 무지개, 안개등을 동기화 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_DisplayName">
             <English>Update Interval</English>
@@ -195,6 +209,7 @@
             <Russian>Интервал обновления</Russian>
             <Italian>Intervallo Aggiornamenti</Italian>
             <Japanese>更新間隔</Japanese>
+            <Korean>갱신 간격</Korean>
         </Key>
         <Key ID="STR_ACE_Weather_serverUpdateInterval_Description">
             <English>Defines the interval (seconds) between weather updates</English>
@@ -208,6 +223,7 @@
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
             <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
             <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
+            <Korean>기후를 갱신 하는 간격을 초 단위로 정합니다.</Korean>
         </Key>
     </Package>
 </Project>

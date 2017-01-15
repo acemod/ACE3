@@ -11,10 +11,19 @@
 #include "script_component.hpp"
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
+    private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+    _staminaBarContainer ctrlSetFade 1;
+    _staminaBarContainer ctrlCommit 1;
 };
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude (velocity ACE_player)) min 6;
+
+// fix #4481. Diving to the ground is recorded as PRONE stance with running speed velocity. Cap maximum speed to fix.
+if (stance ACE_player == "PRONE") then {
+    _currentSpeed = _currentSpeed min 1.5;
+};
+
 if ((vehicle ACE_player == ACE_player) && {_currentSpeed > 0.1} && {isTouchingGround ACE_player || {underwater ACE_player}}) then {
     _currentWork = [ACE_player, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;

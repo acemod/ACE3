@@ -4,7 +4,6 @@
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_JAVELIN
@@ -17,9 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define ACE_JAV_FIREMODE_DIR 1
-#define ACE_JAV_FIREMODE_TOP 2
-
 
 // Javelin IGUI defines
 #define __JavelinIGUI (uinamespace getVariable "ACE_RscOptics_javelin")
@@ -30,8 +26,6 @@
 #define __JavelinIGUISeek (__JavelinIGUI displayCtrl 699000)
 #define __JavelinIGUITop (__JavelinIGUI displayCtrl 699001)
 #define __JavelinIGUIDir (__JavelinIGUI displayCtrl 699002)
-#define __JavelinIGUINFOV (__JavelinIGUI displayCtrl 1003)
-#define __JavelinIGUIWFOV (__JavelinIGUI displayCtrl 1004)
 #define __JavelinIGUIRangefinder (__JavelinIGUI displayCtrl 151)
 
 // Constrains

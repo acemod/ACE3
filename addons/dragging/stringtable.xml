@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dragging">
         <Key ID="STR_ACE_Dragging_Drag">
@@ -13,6 +13,7 @@
             <Italian>Trascina</Italian>
             <Hungarian>Húzás</Hungarian>
             <Japanese>引きずる</Japanese>
+            <Korean>끌기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -26,6 +27,7 @@
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
             <Japanese>はなす</Japanese>
+            <Korean>놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -39,6 +41,7 @@
             <Italian>Trascina/Lascia Oggetto</Italian>
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
             <Japanese>オブジェクトを引きずる/はなす</Japanese>
+            <Korean>물건 끌기/놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -52,6 +55,7 @@
             <Czech>Předmět je moc těžký</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
             <Japanese>アイテムが重すぎる</Japanese>
+            <Korean>물체가 너무 무겁습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -65,6 +69,7 @@
             <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
             <Japanese>運ぶ</Japanese>
+            <Korean>업기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
@@ -77,6 +82,7 @@
             <Spanish>Subir/Bajar</Spanish>
             <French>Lever/Baisser</French>
             <Japanese>上げる/下げる</Japanese>
+            <Korean>높이기/낮추기</Korean>
         </Key>
     </Package>
 </Project>

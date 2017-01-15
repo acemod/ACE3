@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -13,6 +13,7 @@
             <Hungarian>ACE-Team</Hungarian>
             <Italian>ACE-Team</Italian>
             <Japanese>ACE-Team</Japanese>
+            <Korean>ACE-Team</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -26,6 +27,7 @@
             <Hungarian>Mentés</Hungarian>
             <Italian>Salva</Italian>
             <Japanese>保存</Japanese>
+            <Korean>저장</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -39,6 +41,7 @@
             <Hungarian>Mégse</Hungarian>
             <Italian>Annulla</Italian>
             <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
@@ -52,6 +55,7 @@
             <Hungarian>ACE Beállítások</Hungarian>
             <Italian>Opzioni ACE</Italian>
             <Japanese>ACE オプション</Japanese>
+            <Korean>ACE 옵션</Korean>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
@@ -66,6 +70,7 @@
             <Hungarian>É</Hungarian>
             <Italian>N</Italian>
             <Japanese>N</Japanese>
+            <Korean>북</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -79,6 +84,7 @@
             <Hungarian>ÉÉK</Hungarian>
             <Italian>NNE</Italian>
             <Japanese>NNE</Japanese>
+            <Korean>북북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NE">
             <English>NE</English>
@@ -92,6 +98,7 @@
             <Hungarian>ÉK</Hungarian>
             <Italian>NE</Italian>
             <Japanese>NE</Japanese>
+            <Korean>북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -105,6 +112,7 @@
             <Hungarian>KÉK</Hungarian>
             <Italian>ENE</Italian>
             <Japanese>ENE</Japanese>
+            <Korean>동북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_E">
             <English>E</English>
@@ -118,6 +126,7 @@
             <Hungarian>K</Hungarian>
             <Italian>E</Italian>
             <Japanese>E</Japanese>
+            <Korean>동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -131,6 +140,7 @@
             <Hungarian>KDK</Hungarian>
             <Italian>ESE</Italian>
             <Japanese>ESE</Japanese>
+            <Korean>동남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SE">
             <English>SE</English>
@@ -144,6 +154,7 @@
             <Hungarian>DK</Hungarian>
             <Italian>SE</Italian>
             <Japanese>SE</Japanese>
+            <Korean>남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -157,6 +168,7 @@
             <Hungarian>DDK</Hungarian>
             <Italian>SSE</Italian>
             <Japanese>SSE</Japanese>
+            <Korean>남남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_S">
             <English>S</English>
@@ -170,6 +182,7 @@
             <Hungarian>D</Hungarian>
             <Italian>S</Italian>
             <Japanese>S</Japanese>
+            <Korean>남</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -183,6 +196,7 @@
             <Hungarian>DDNy</Hungarian>
             <Italian>SSO</Italian>
             <Japanese>SSW</Japanese>
+            <Korean>남남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SW">
             <English>SW</English>
@@ -196,6 +210,7 @@
             <Hungarian>DNy</Hungarian>
             <Italian>SO</Italian>
             <Japanese>SW</Japanese>
+            <Korean>남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -209,6 +224,7 @@
             <Hungarian>NyDNy</Hungarian>
             <Italian>OSO</Italian>
             <Japanese>WSW</Japanese>
+            <Korean>서남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_W">
             <English>W</English>
@@ -222,6 +238,7 @@
             <Hungarian>Ny</Hungarian>
             <Italian>O</Italian>
             <Japanese>W</Japanese>
+            <Korean>서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -235,6 +252,7 @@
             <Hungarian>NyÉNy</Hungarian>
             <Italian>ONO</Italian>
             <Japanese>WNW</Japanese>
+            <Korean>서북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NW">
             <English>NW</English>
@@ -248,6 +266,7 @@
             <Hungarian>ÉNy</Hungarian>
             <Italian>NO</Italian>
             <Japanese>NW</Japanese>
+            <Korean>북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -261,6 +280,7 @@
             <Hungarian>ÉÉNy</Hungarian>
             <Italian>NNO</Italian>
             <Japanese>NNW</Japanese>
+            <Korean>북북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
             <English>Action cancelled.</English>
@@ -274,6 +294,7 @@
             <Hungarian>Művelet megszakítva.</Hungarian>
             <Italian>Azione cancellata.</Italian>
             <Japanese>動作を中止した。</Japanese>
+            <Korean>행동 취소됨.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -287,6 +308,7 @@
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
             <Japanese>[ACE] その他のアイテム</Japanese>
+            <Korean>[ACE] 기타 물품.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
@@ -300,6 +322,7 @@
             <Italian>Disabilita menù di comando</Italian>
             <Portuguese>Desabilitar menu de comando</Portuguese>
             <Japanese>指揮メニューを無効化</Japanese>
+            <Korean>지휘 메뉴 종료</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
             <English>Unknown</English>
@@ -313,6 +336,7 @@
             <French>Inconnu</French>
             <Portuguese>Desconhecido</Portuguese>
             <Japanese>不明</Japanese>
+            <Korean>알 수 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -326,6 +350,7 @@
             <French>Pas de voix</French>
             <Portuguese>Sem voz</Portuguese>
             <Japanese>音声なし</Japanese>
+            <Korean>무음</Korean>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
             <English>Accept Requests</English>
@@ -339,6 +364,7 @@
             <Portuguese>Aceitar Pedido</Portuguese>
             <Italian>Accetta la richiesta</Italian>
             <Japanese>要求を受け入れ</Japanese>
+            <Korean>요청 수락</Korean>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -352,6 +378,7 @@
             <Portuguese>Rejeitar pedido</Portuguese>
             <Italian>Rifiuta la richiesta</Italian>
             <Japanese>要求を拒否</Japanese>
+            <Korean>요청 거부</Korean>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -365,6 +392,7 @@
             <Hungarian>Más játékosok általi kérések elfogadása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
             <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を許可します。他プレイヤは装備を共有し、使うなど特定の動作を行えます。</Japanese>
+            <Korean>다른 플레이어가 보내온 요청을 수락합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
             <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -378,6 +406,7 @@
             <Hungarian>Más játékosok általi kérések elutasítása. Ezek a kérések vonatkozhatnak a felszerelés használatára/megosztására, valamint különböző cselekményekre.</Hungarian>
             <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を拒否します。他プレイヤは装備を共有し、使うなど特定の動作をできません。</Japanese>
+            <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -391,6 +420,7 @@
             <Hungarian>Visszajelző ikonok</Hungarian>
             <Portuguese>Ícones de Feedback</Portuguese>
             <Japanese>フィードバック アイコン</Japanese>
+            <Korean>피드백 아이콘</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -404,6 +434,7 @@
             <Hungarian>Itt beállítható a visszajelző ikonok képernyőn lévő helyzete és jelenléte. Ezek az ikonok extra visszajelzést biztosítanak a karaktered állapotán és végrehajtott cselekvésein.</Hungarian>
             <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
             <Japanese>画面上に表示するフィードバック アイコンの位置や無効化を選択できます。このアイコンは自キャラクター状態や動作の状況をフィードバックするために表示されています。</Japanese>
+            <Korean>피드백 아이콘의 위치를 설정하거나 비활성화합니다. 피드백 아이콘은 캐릭터의 상세정보와 행동을 보여줍니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -417,6 +448,7 @@
             <Hungarian>Állapotjelző sáv helyzete</Hungarian>
             <Portuguese>Local da barra de progresso</Portuguese>
             <Japanese>プログレス バーの位置</Japanese>
+            <Korean>진행 막대의 위치</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -430,6 +462,7 @@
             <Hungarian>Itt beállítható az állapotjelző sáv képernyődön lévő helyzete.</Hungarian>
             <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
             <Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
+            <Korean>진행 막대를 원하는 곳에 배치합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -443,6 +476,7 @@
             <Hungarian>Súgó háttérszíne</Hungarian>
             <Portuguese>Cor do fundo da hint</Portuguese>
             <Japanese>ヒントの背景色</Japanese>
+            <Korean>힌트 배경색</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -456,6 +490,7 @@
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
             <Japanese>ACE によるヒントの背景色を指定します。</Japanese>
+            <Korean>ACE힌트의 배경색을 정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -469,6 +504,7 @@
             <Hungarian>Súgószöveg betűinek színe</Hungarian>
             <Portuguese>Cor do do texto da hint</Portuguese>
             <Japanese>ヒント文章の色</Japanese>
+            <Korean>힌트 글씨색</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -482,6 +518,7 @@
             <Hungarian>Az ACE-súgók betűkészletének színek. Ez a szín alapértelmezett az összes szövegre az ACE-súgórendszerben, ha a súgószöveg maga nem ad meg más színt.</Hungarian>
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
             <Japanese>ACE によるヒントの文章へ、色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
+            <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -495,6 +532,7 @@
             <Hungarian>Banán</Hungarian>
             <Portuguese>Banana</Portuguese>
             <Japanese>甘蕉</Japanese>
+            <Korean>바나나</Korean>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -508,6 +546,7 @@
             <French>Une banane est un fruit qui, d'un point de vue botanique, fait partie du groupe des baies. Produite par plusieurs sortes de grandes plantes à fleurs herbacées du type Musa.</French>
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
             <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
+            <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
@@ -521,6 +560,7 @@
             <Russian>Проверка аддонов</Russian>
             <Italian>Controlla PBO</Italian>
             <Japanese>PBO を検査</Japanese>
+            <Korean>PBO 검사</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
@@ -533,6 +573,7 @@
             <French>Ce module contrôle si les PBOs de chaque joueur sont corrects</French>
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
+            <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -546,6 +587,7 @@
             <Russian>Действие</Russian>
             <Italian>Azione</Italian>
             <Japanese>動作</Japanese>
+            <Korean>작동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -559,6 +601,7 @@
             <Russian>Что делать с игроками с неправильными аддонами?</Russian>
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
             <Japanese>プレイヤーが正しい PBO を持っていない場合は？</Japanese>
+            <Korean>올바르지 않는 PBO를 가진 사람을 어떻게 할까요?</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -572,6 +615,7 @@
             <Russian>Предупредить один раз</Russian>
             <Italian>Avverti una volta</Italian>
             <Japanese>一度の警告</Japanese>
+            <Korean>경고 한 번</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -585,6 +629,7 @@
             <Russian>Предупреждать (постоянно)</Russian>
             <Italian>Avverti (permanente)</Italian>
             <Japanese>警告（永久的）</Japanese>
+            <Korean>경고 (영구적)</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -598,6 +643,7 @@
             <Russian>Кикнуть</Russian>
             <Italian>Kick</Italian>
             <Japanese>排除</Japanese>
+            <Korean>추방</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -611,6 +657,7 @@
             <Russian>Проверять все аддоны</Russian>
             <Italian>Controlla tutti gli addon</Italian>
             <Japanese>全アドオンを検査</Japanese>
+            <Korean>모든 에드온 검사</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -624,6 +671,7 @@
             <Russian>Проверять все аддоны, а не только ACE?</Russian>
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
             <Japanese>ACE MOD の代わりに全アドオンを検査しますか？</Japanese>
+            <Korean>ACE를 제외한 모든 모드를 검사할까요?</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -637,6 +685,7 @@
             <Russian>Вайтлист доп. аддонов</Russian>
             <Italian>Lista Bianca</Italian>
             <Japanese>許可制</Japanese>
+            <Korean>화이트리스트</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -650,6 +699,7 @@
             <Russian>Какие аддоны дополнительно разрешены?</Russian>
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
             <Japanese>どのようなアドオンを許可しますか？</Japanese>
+            <Korean>허가되는 에드온은 어느것입니까?</Korean>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -663,6 +713,7 @@
             <Russian>Транспорт под LSD</Russian>
             <Italian>Veicoli LSD</Italian>
             <Japanese>LSD 車両</Japanese>
+            <Korean>LSD 차량</Korean>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -676,6 +727,7 @@
             <Russian>Добавляет эффект LSD (мигание всеми цветами радуги) синхронизированным транспортным средствам</Russian>
             <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
             <Japanese>同期されたオブジェクトに LSD の効果を追加します</Japanese>
+            <Korean>동기화된 차량에 LSD효과를 추가합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -689,6 +741,7 @@
             <Russian>Включить портативное устройство</Russian>
             <Italian>Apri dispositivo palmare</Italian>
             <Japanese>デバイスを常に表示</Japanese>
+            <Korean>휴대장치 토글</Korean>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -702,6 +755,7 @@
             <Russian>Закрыть портативное устройство</Russian>
             <Italian>Chiudi dispositivo palmare</Italian>
             <Japanese>デバイスを閉じる</Japanese>
+            <Korean>휴대장치 닫기</Korean>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -715,6 +769,7 @@
             <Russian>Следующее портативное устройство</Russian>
             <Italian>Cicla tra dispositivi palmari</Italian>
             <Japanese>表示するデバイスを変える</Japanese>
+            <Korean>휴대장치 순환</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
@@ -727,6 +782,7 @@
             <Russian>Откл.</Russian>
             <Spanish>Desactivado</Spanish>
             <Japanese>無効化</Japanese>
+            <Korean>비활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
@@ -739,6 +795,7 @@
             <Russian>Вкл.</Russian>
             <Spanish>Activado</Spanish>
             <Japanese>有効化</Japanese>
+            <Korean>활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -752,6 +809,7 @@
             <Portuguese>Sim</Portuguese>
             <Italian>Si</Italian>
             <Japanese>はい</Japanese>
+            <Korean>예</Korean>
         </Key>
         <Key ID="STR_ACE_Common_No">
             <English>No</English>
@@ -765,6 +823,7 @@
             <Portuguese>Não</Portuguese>
             <Italian>No</Italian>
             <Japanese>いいえ</Japanese>
+            <Korean>아니오</Korean>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -777,6 +836,7 @@
             <Italian>Solo veicoli</Italian>
             <French>Vehicules seulement</French>
             <Japanese>車両のみ</Japanese>
+            <Korean>차량 전용</Korean>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -789,6 +849,7 @@
             <Italian>Non forzare</Italian>
             <French>Ne pas forcer</French>
             <Japanese>強制しない</Japanese>
+            <Korean>강제하지 말것</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
@@ -801,6 +862,7 @@
             <Italian>Equipaggiamento ACE3</Italian>
             <French>ACE3 Equipement</French>
             <Japanese>ACE3 装備</Japanese>
+            <Korean>ACE3 장비</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
@@ -813,6 +875,7 @@
             <Italian>Comune ACE3</Italian>
             <French>ACE3 Commun</French>
             <Japanese>ACE3 全般</Japanese>
+            <Korean>ACE3 일반</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -825,6 +888,7 @@
             <Italian>Armi ACE3</Italian>
             <French>ACE3 Armes</French>
             <Japanese>ACE3 武器</Japanese>
+            <Korean>ACE3 무기</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
@@ -837,6 +901,7 @@
             <Italian>Movimento ACE3</Italian>
             <French>ACE3 Mouvement</French>
             <Japanese>ACE3 移動</Japanese>
+            <Korean>ACE3 움직임</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
@@ -849,6 +914,7 @@
             <Italian>Regolazione Ottiche ACE3</Italian>
             <French>ACE3 Ajustement de la lunette </French>
             <Japanese>ACE3 スコープ調節</Japanese>
+            <Korean>ACE3 조준경 조정</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
@@ -861,6 +927,7 @@
             <Italian>Veicoli ACE3</Italian>
             <French>ACE3 Vehicules</French>
             <Japanese>ACE3 車両</Japanese>
+            <Korean>ACE3 차량</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>

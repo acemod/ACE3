@@ -63,7 +63,7 @@ class CfgAmmo {
 
     // - Artillery smoke submunition ------------------------------------------
     class SmokeShellArty: SmokeShell {
-        explosionTime = 0;
+        explosionTime = 0.1;
         effectsSmoke = "ACE_ArtillerySmoke";
     };
 

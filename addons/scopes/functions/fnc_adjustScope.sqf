@@ -23,32 +23,20 @@ params ["_unit", "_turretAndDirection", "_majorStep"];
 
 if (!(_unit isKindOf "Man")) exitWith {false};
 if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
+if (!GVAR(enabled)) exitWith {false};
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
-_adjustment = _unit getVariable QGVAR(Adjustment);
-if (isNil "_adjustment") then {
-    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]; // [Windage, Elevation, Zero]
-};
+_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 
-if (isNil QGVAR(Optics)) then {
-    GVAR(Optics) = ["", "", ""];
-};
-
-_optic = GVAR(Optics) select _weaponIndex;
-_opticConfig = configFile >> "CfgWeapons" >> _optic;
-_verticalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_VerticalIncrement");
-_horizontalIncrement = getNumber (_opticConfig >> "ACE_ScopeAdjust_HorizontalIncrement");
-_maxVertical = getArray (_opticConfig >> "ACE_ScopeAdjust_Vertical");
-_maxHorizontal = getArray (_opticConfig >> "ACE_ScopeAdjust_Horizontal");
-
-if ((count _maxHorizontal < 2) || (count _maxVertical < 2)) exitWith {false};
-if ((_verticalIncrement == 0) && (_turretAndDirection in [ELEVATION_UP, ELEVATION_DOWN])) exitWith {false};
-if ((_horizontalIncrement == 0) && (_turretAndDirection in [WINDAGE_UP, WINDAGE_DOWN])) exitWith {false};
+if (!(GVAR(canAdjustElevation) select _weaponIndex) && (_turretAndDirection in [ELEVATION_UP, ELEVATION_DOWN])) exitWith {false};
+if (!(GVAR(canAdjustWindage) select _weaponIndex) && (_turretAndDirection in [WINDAGE_UP, WINDAGE_DOWN])) exitWith {false};
 
 _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
+
+(GVAR(scopeAdjust) select _weaponIndex) params ["_maxVertical", "_verticalIncrement", "_maxHorizontal", "_horizontalIncrement"];
 
 switch (_turretAndDirection) do {
     case ELEVATION_UP:   { _elevation = _elevation + _verticalIncrement };

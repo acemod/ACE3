@@ -28,4 +28,4 @@ GVAR(gunList) = GVAR(gunList) - [0];
 
 lbDelete [6000, _index];
 
-profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(gunList)];
+call FUNC(store_gun_list);

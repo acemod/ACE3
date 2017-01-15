@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RangeCard">
         <Key ID="STR_ACE_RangeCard_Name">
@@ -13,6 +13,7 @@
             <Russian>Таблица поправок</Russian>
             <Italian>Tavola Balistica</Italian>
             <Japanese>射表</Japanese>
+            <Korean>사거리표</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
@@ -26,6 +27,7 @@
             <Russian>Шаг 50 МЕТРОВ - MRAD/MRAD (сетка/маховички)</Russian>
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
             <Japanese>50 メートル増やす -- MRAD/MRAD (照準線/砲塔)</Japanese>
+            <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
@@ -39,6 +41,7 @@
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
+            <Korean>사거리표 열기</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
@@ -52,6 +55,7 @@
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
+            <Korean>복제 사거리표 열기</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
             <English>Open Range Card</English>
@@ -65,6 +69,7 @@
             <Russian>Открыть таблицу поправок</Russian>
             <Italian>Apri Tavola Balistica</Italian>
             <Japanese>射表を開く</Japanese>
+            <Korean>사거리표 열기</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
@@ -78,6 +83,7 @@
             <Russian>Открыть копию таблицы поправок</Russian>
             <Italian>Apri Copia Tavola Balistica</Italian>
             <Japanese>複製された射表を開く</Japanese>
+            <Korean>복제 사거리표 열기</Korean>
         </Key>
         <Key ID="STR_ACE_RangeCard_CopyRangeCard">
             <English>Copy Range Card</English>
@@ -91,6 +97,7 @@
             <Russian>Скопировать таблицу поправок</Russian>
             <Italian>Copia Tavola Balistica</Italian>
             <Japanese>射表を複製する</Japanese>
+            <Korean>사거리표 복제</Korean>
         </Key>
     </Package>
 </Project>

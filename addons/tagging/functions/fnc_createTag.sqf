@@ -24,7 +24,7 @@ params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit"];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
-    ACE_LOGERROR_1("%1 is not a valid tag texture.",_texture);
+    ERROR_1("%1 is not a valid tag texture.",_texture);
     false
 };
 

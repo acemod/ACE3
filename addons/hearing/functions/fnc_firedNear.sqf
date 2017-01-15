@@ -24,8 +24,6 @@
 
 params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 
-//Only run if firedNear object is player or player's vehicle:
-if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
 

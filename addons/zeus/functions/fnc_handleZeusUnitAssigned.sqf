@@ -12,7 +12,7 @@
  * 1: The zeus player <UNIT>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
