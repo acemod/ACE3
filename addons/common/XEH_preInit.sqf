@@ -28,6 +28,8 @@ GVAR(statusEffect_isGlobal) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 
+GVAR(localUnits) = [];
+
 //////////////////////////////////////////////////
 // Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
 //////////////////////////////////////////////////
