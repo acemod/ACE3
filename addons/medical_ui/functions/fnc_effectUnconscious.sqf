@@ -34,6 +34,9 @@ switch (_mode) do {
             GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1]];
             GVAR(ppUnconsciousBlur)     ppEffectCommit FX_UNCON_FADE_IN;
             GVAR(ppUnconsciousBlackout) ppEffectCommit FX_UNCON_FADE_IN;
+
+            // Handle next fade in
+            GVAR(nextFadeIn) = CBA_missionTime + 15 + random 5;
         } else {
             ACE_player setVariable [QGVAR(effectUnconsciousTimeout), CBA_missionTime + FX_UNCON_FADE_OUT];
             GVAR(ppUnconsciousBlur)     ppEffectEnable true;
@@ -47,6 +50,8 @@ switch (_mode) do {
 
             // Step 2: Open it
             [{
+                if (!isNull curatorCamera || {!alive ACE_player}) exitWith {};
+
                 GVAR(ppUnconsciousBlur)     ppEffectAdjust [0];
                 GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0.8], [0, 0, 0, 1], [0, 0, 0, 0], [0.7, 0.78, 0, 0, 0, 0, 1]];
                 GVAR(ppUnconsciousBlur)     ppEffectCommit (FX_UNCON_FADE_OUT * 2/3);
@@ -55,6 +60,8 @@ switch (_mode) do {
 
             // Step 3: Fade away vignette
             [{
+                if (!isNull curatorCamera || {!alive ACE_player}) exitWith {};
+
                 GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 0], [0.7, 0.78, 0, 0, 0, 0, 1]];
                 GVAR(ppUnconsciousBlackout) ppEffectCommit (FX_UNCON_FADE_OUT * 1/3);
             }, [], FX_UNCON_FADE_OUT * 2/3] call CBA_fnc_waitAndExecute;
@@ -66,14 +73,34 @@ switch (_mode) do {
         if (_animatedTimeOut > CBA_missionTime) exitWith {};
 
         if (_enable) then {
-            GVAR(ppUnconsciousBlur)     ppEffectAdjust [5];
-            GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1]];
+            if (GVAR(nextFadeIn) < CBA_missionTime) then {
+                GVAR(ppUnconsciousBlur) ppEffectAdjust [5];
+                GVAR(ppUnconsciousBlur) ppEffectCommit 0;
+
+                GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0.9], [0, 0, 0, 1], [0, 0, 0, 0], [0.51, 0.17, 0, 0, 0, 0, 1]];
+                GVAR(ppUnconsciousBlackout) ppEffectCommit (FX_UNCON_FADE_OUT * 2/3);
+
+                [{
+                    if (!isNull curatorCamera || {!alive ACE_player}) exitWith {};
+
+                    GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1]];
+                    GVAR(ppUnconsciousBlackout) ppEffectCommit (FX_UNCON_FADE_OUT * 1/3);
+                }, [], FX_UNCON_FADE_OUT * 2/3] call CBA_fnc_waitAndExecute;
+
+                ACE_player setVariable [QGVAR(effectUnconsciousTimeout), CBA_missionTime + FX_UNCON_FADE_OUT];
+                GVAR(nextFadeIn) = CBA_missionTime + FX_UNCON_FADE_OUT + 15 + random 5;
+            } else {
+                GVAR(ppUnconsciousBlur)     ppEffectAdjust [5];
+                GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 1], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1]];
+                GVAR(ppUnconsciousBlur)     ppEffectCommit 0;
+                GVAR(ppUnconsciousBlackout) ppEffectCommit 0;
+            };
         } else {
             GVAR(ppUnconsciousBlur)     ppEffectAdjust [0];
             GVAR(ppUnconsciousBlackout) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 1]];
+            GVAR(ppUnconsciousBlur)     ppEffectCommit 0;
+            GVAR(ppUnconsciousBlackout) ppEffectCommit 0;
         };
-        GVAR(ppUnconsciousBlur)     ppEffectCommit 0;
-        GVAR(ppUnconsciousBlackout) ppEffectCommit 0;
 
         GVAR(ppUnconsciousBlur)     ppEffectEnable _enable;
         GVAR(ppUnconsciousBlackout) ppEffectEnable _enable;
