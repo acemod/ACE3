@@ -106,6 +106,12 @@ class CfgVehicles {
         function = QFUNC(moduleAddSpareWheel);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);//@todo
     };
+    class GVAR(moduleAddOrRemoveFRIES): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleAddOrRemoveFRIES_DisplayName);
+        function = QFUNC(moduleAddOrRemoveFRIES);
+    };
     class GVAR(moduleCaptive): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Captive);

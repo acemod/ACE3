@@ -681,7 +681,9 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
 
         if (TOF > 0) {
             double bulletDir = atan2(velocity[0], velocity[1]);
-            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / pow(TOF, 0.17);
+            double r1 = pow(TOF - deltaT, 0.17);
+            double r2 = pow(TOF, 0.17);
+            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / ((r1 + r2) / 2.0f);
             velocityOffset[0] += sin(bulletDir + M_PI / 2) * spinAccel * deltaT;
             velocityOffset[1] += cos(bulletDir + M_PI / 2) * spinAccel * deltaT;
         }

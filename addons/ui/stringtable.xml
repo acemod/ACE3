@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="UI">
         <Key ID="STR_ACE_UI_Category">
@@ -10,6 +10,7 @@
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
             <German>Benutzeroberfläche</German>
+            <Korean>사용자 인터페이스</Korean>
         </Key>
         <Key ID="STR_ACE_UI_ModuleName">
             <English>User Interface</English>
@@ -20,6 +21,7 @@
             <Japanese>ユーザ インタフェイス</Japanese>
             <Polish>Interfejs użytkownika</Polish>
             <German>Benutzeroberfläche</German>
+            <Korean>사용자 인터페이스</Korean>
         </Key>
         <Key ID="STR_ACE_UI_ModuleDescription">
             <English>This module allows toggling visible user interface parts.</English>
@@ -29,6 +31,7 @@
             <Japanese>モジュールではユーザ インタフェイスの一部をトグル表示できます。</Japanese>
             <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
             <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
+            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는것을 가능케 해줍니다.</Korean>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
@@ -39,6 +42,7 @@
             <Japanese>選択できるユーザ インタフェイスを有効化します</Japanese>
             <Polish>Zezwól na selektywne UI</Polish>
             <German>Erlaube selektives UI</German>
+            <Korean>선택적 사용자 인터페이스 허가</Korean>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
@@ -49,6 +53,7 @@
             <Japanese>クライアントがユーザ インタフェイスを編集できるようにします。</Japanese>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
             <German>Erlaube Clients, ihr UI zu modifizieren.</German>
+            <Korean>클라이언트가 선택적 사용자 인터페이스 사용하는것을 허가합니다</Korean>
         </Key>
         <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
             <English>Soldier/Vehicle/Weapon Information</English>
@@ -59,6 +64,7 @@
             <Japanese>兵士/車両/武器の情報</Japanese>
             <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
             <German>Soldat/Fahrzeug/Waffe Information</German>
+            <Korean>병사/차량/무기 정보</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleRadar">
             <English>Vehicle Radar</English>
@@ -69,6 +75,7 @@
             <Japanese>車両のレーダ</Japanese>
             <Polish>Radar w pojeździe</Polish>
             <German>Fahrzeugradar</German>
+            <Korean>차량 레이더</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleCompass">
             <English>Vehicle Compass</English>
@@ -79,6 +86,7 @@
             <Japanese>車両のレーダ</Japanese>
             <Polish>Kompas w pojeździe</Polish>
             <German>Fahrzeugkompass</German>
+            <Korean>차량 나침반</Korean>
         </Key>
         <Key ID="STR_ACE_UI_CommandMenu">
             <English>Command Menu</English>
@@ -89,6 +97,7 @@
             <Japanese>指揮メニュー</Japanese>
             <Polish>Menu dowodzenia</Polish>
             <German>Kommandomenü</German>
+            <Korean>지휘 메뉴</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GroupBar">
             <English>Group Bar</English>
@@ -99,6 +108,7 @@
             <Japanese>指揮メニュー</Japanese>
             <Polish>Pasek grupy</Polish>
             <German>Gruppenleiste</German>
+            <Korean>그룹 막대</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -109,6 +119,7 @@
             <Japanese>武器名</Japanese>
             <Polish>Nazwa broni</Polish>
             <German>Waffenname</German>
+            <Korean>무기 이름</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponNameBackground">
             <English>Weapon Name Background</English>
@@ -119,6 +130,7 @@
             <Japanese>武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni</Polish>
             <German>Waffenname Hintergrund</German>
+            <Korean>무기 이름 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_FiringMode">
             <English>Firing Mode</English>
@@ -129,6 +141,7 @@
             <Japanese>射撃モード</Japanese>
             <Polish>Tryb ognia</Polish>
             <German>Feuermodus</German>
+            <Korean>사격 모드</Korean>
         </Key>
         <Key ID="STR_ACE_UI_AmmoType">
             <English>Ammo Type</English>
@@ -139,6 +152,7 @@
             <Japanese>弾種</Japanese>
             <Polish>Typ amunicji</Polish>
             <German>Munitionstyp</German>
+            <Korean>탄종</Korean>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
@@ -149,6 +163,7 @@
             <Japanese>弾薬数</Japanese>
             <Polish>Ilość amunicji</Polish>
             <German>Munitionsanzahl</German>
+            <Korean>탄약수</Korean>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
@@ -159,6 +174,7 @@
             <Japanese>弾倉装填数</Japanese>
             <Polish>Ilość magazynków</Polish>
             <German>Magazinanzahl</German>
+            <Korean>탄창수</Korean>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableName">
             <English>Throwable Type</English>
@@ -169,6 +185,7 @@
             <Japanese>投げる種類</Japanese>
             <Polish>Typ granatu</Polish>
             <German>Wurfobjekt-Typ</German>
+            <Korean>투척물 종류</Korean>
         </Key>
         <Key ID="STR_ACE_UI_ThrowableCount">
             <English>Throwable Count</English>
@@ -179,6 +196,7 @@
             <Japanese>投げられる数</Japanese>
             <Polish>Ilość granatów</Polish>
             <German>Wurfobjekt-Anzahl</German>
+            <Korean>투척물 개수</Korean>
         </Key>
         <Key ID="STR_ACE_UI_Zeroing">
             <English>Zeroing</English>
@@ -189,6 +207,7 @@
             <Japanese>ゼロイン</Japanese>
             <Polish>Wyzerowanie broni</Polish>
             <German>Nullung</German>
+            <Korean>영점</Korean>
         </Key>
         <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
             <English>Weapon Lower Info Background</English>
@@ -198,6 +217,7 @@
             <Japanese>武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste</German>
+            <Korean>무기 상세 정보 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_Stance">
             <English>Stance</English>
@@ -208,6 +228,7 @@
             <Japanese>姿勢</Japanese>
             <Polish>Postura</Polish>
             <German>Haltung</German>
+            <Korean>자세</Korean>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
@@ -218,6 +239,7 @@
             <Japanese>体力バー</Japanese>
             <Polish>Pasek staminy</Polish>
             <German>Ausdaueranzeige</German>
+            <Korean>체력 막대</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponName">
             <English>Gunner Weapon Name</English>
@@ -227,6 +249,7 @@
             <Japanese>射手用の武器名</Japanese>
             <Polish>Nazwa broni strzelca</Polish>
             <German>Richtschütze Waffenname</German>
+            <Korean>사수 무기 명칭</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
             <English>Gunner Weapon Name Background</English>
@@ -236,6 +259,7 @@
             <Japanese>射手用の武器名の背景表示</Japanese>
             <Polish>Tło nazwy broni strzelca</Polish>
             <German>Richtschütze Waffenname Hintergrund</German>
+            <Korean>사수 무기 명칭 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerFiringMode">
             <English>Gunner Firing Mode</English>
@@ -245,6 +269,7 @@
             <Japanese>射手用の発射モード</Japanese>
             <Polish>Tryb ognia strzelca</Polish>
             <German>Richtschütze Feuermodus</German>
+            <Korean>사수 사격 모드</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoType">
             <English>Gunner Ammo Type</English>
@@ -254,6 +279,7 @@
             <Japanese>射手用の弾種</Japanese>
             <Polish>Typ amunicji strzelca</Polish>
             <German>Richtschütze Munitionstyp</German>
+            <Korean>사수 탄종</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerAmmoCount">
             <English>Gunner Ammo Count</English>
@@ -263,6 +289,7 @@
             <Japanese>射手用の弾数</Japanese>
             <Polish>Ilość amunicji strzelca</Polish>
             <German>Richtschütze Munitionsanzahl</German>
+            <Korean>사수 탄약 수량</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerMagCount">
             <English>Gunner Magazine Count</English>
@@ -272,6 +299,7 @@
             <Japanese>射手用の弾倉数</Japanese>
             <Polish>Ilość magazynków strzelca</Polish>
             <German>Richtschütze Magazinanzahl</German>
+            <Korean>사수 탄창 수량</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableName">
             <English>Gunner Launchable Type</English>
@@ -281,6 +309,7 @@
             <Japanese>射手用のランチャーの種類</Japanese>
             <Polish>Typ rakiet strzelca</Polish>
             <German>Richtschütze Raketentyp</German>
+            <Korean>사수 발사체 종류</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerLaunchableCount">
             <English>Gunner Launchable Count</English>
@@ -290,6 +319,7 @@
             <Japanese>射手用のランチャー弾薬数</Japanese>
             <Polish>Ilość rakiet strzelca</Polish>
             <German>Richtschütze Raketenanzahl</German>
+            <Korean>사수 발사체 수량</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerZeroing">
             <English>Gunner Zeroing</English>
@@ -299,6 +329,7 @@
             <Japanese>射手用ゼロイン</Japanese>
             <Polish>Wyzerowanie broni strzelca</Polish>
             <German>Richtschütze Nullung</German>
+            <Korean>사수 영점</Korean>
         </Key>
         <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
             <English>Gunner Weapon Lower Info Background</English>
@@ -308,6 +339,7 @@
             <Japanese>射手用の武器名の背景表示 (下側)</Japanese>
             <Polish>Tło dolnej części informacji o broni strzelca</Polish>
             <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
+            <Korean>사수 무기 상세 정보 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
@@ -318,6 +350,7 @@
             <Japanese>車両名</Japanese>
             <Polish>Nazwa pojazdu</Polish>
             <German>Fahrzeugname</German>
+            <Korean>차량 명칭</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
@@ -328,6 +361,7 @@
             <Japanese>車両名の背景</Japanese>
             <Polish>Tło nazwy pojazdu</Polish>
             <German>Fahrzeugname Hintergrund</German>
+            <Korean>차량 명칭 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleFuelBar">
             <English>Vehicle Fuel Bar</English>
@@ -338,6 +372,7 @@
             <Japanese>車両の給油計</Japanese>
             <Polish>Pasek paliwa</Polish>
             <German>Fahrzeug-Treibstoffleiste</German>
+            <Korean>차량 연료 막대</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
@@ -348,6 +383,7 @@
             <Japanese>車両の速度計</Japanese>
             <Polish>Prędkościomierz</Polish>
             <German>Fahrzeuggeschwindigkeit</German>
+            <Korean>차량 속도</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleAltitude">
             <English>Vehicle Altitude</English>
@@ -358,6 +394,7 @@
             <Japanese>車両の高度計</Japanese>
             <Polish>Wysokościomierz radarowy</Polish>
             <German>Fahrzeughöhe</German>
+            <Korean>차량 고도</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleDamage">
             <English>Vehicle Damage</English>
@@ -368,6 +405,7 @@
             <Japanese>車両の損傷表示</Japanese>
             <Polish>Uszkodzenia pojazdu</Polish>
             <German>Fahrzeugschaden</German>
+            <Korean>차량 피해</Korean>
         </Key>
         <Key ID="STR_ACE_UI_VehicleInfoBackground">
             <English>Vehicle Info Background</English>
@@ -378,6 +416,7 @@
             <Japanese>車両状態の背景</Japanese>
             <Polish>Tło informacji o pojeździe</Polish>
             <German>Fahrzeug Info Hintergrund</German>
+            <Korean>차량 정보 배경</Korean>
         </Key>
         <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
             <English>Requires Soldier/Vehicle/Weapon Information.</English>
@@ -388,6 +427,7 @@
             <Japanese>兵士/車両/武器の情報を必要とします。</Japanese>
             <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
             <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
+            <Korean>병사/차량/무기의 정보가 필요합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_UI_Disallowed">
             <English>Modifying User Interface is disabled.</English>
@@ -398,6 +438,7 @@
             <Japanese>変更されたユーザ インタフェイスを無効化します。</Japanese>
             <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
             <German>Die Modifizierung des UI ist deaktiviert.</German>
+            <Korean>사용자 인터페이스 변경이 비활성화 되어있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
@@ -407,6 +448,7 @@
             <Japanese>ユーザー インタフェイス要素は変更できません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
             <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
+            <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>
         </Key>
     </Package>
 </Project>
