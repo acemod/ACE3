@@ -18,8 +18,8 @@ if (!_enable) exitWith {
 GVAR(ppPain) ppEffectEnable true;
 
 // Trigger effect every 2s
-private _showNextTick = ACE_player getVariable [QGVAR(showPainNextTick), true];
-ACE_player setVariable [QGVAR(showPainNextTick), !_showNextTick];
+private _showNextTick = missionNamespace getVariable [QGVAR(showPainNextTick), true];
+GVAR(showPainNextTick) = !_showNextTick;
 if (_showNextTick) exitWith {};
 
 private _initialAdjust = [];
