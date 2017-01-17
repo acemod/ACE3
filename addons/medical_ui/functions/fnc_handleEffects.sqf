@@ -15,6 +15,7 @@ if (_disableAll) exitWith {
     [false, 0] call FUNC(effectUnconscious);
     [false]    call FUNC(effectPain);
     [false]    call FUNC(effectBloodVolume);
+    [false]    call FUNC(effectBleeding);
 };
 
 // - Current state info -------------------------------------------------------
@@ -34,3 +35,5 @@ private _pain             = [ACE_player] call EFUNC(medical,getPainLevel);
 if (!_unconscious) then {
     [true, _pain] call FUNC(effectPain);
 };
+
+[true, _bleedingStrength] call FUNC(effectBleeding);
