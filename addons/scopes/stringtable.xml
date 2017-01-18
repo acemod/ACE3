@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Scopes">
         <Key ID="STR_ACE_Scopes_DisplayName">
@@ -23,13 +23,13 @@
             <English>Force adjustment turrets</English>
             <Japanese>ACE スコープ調節を有効化</Japanese>
             <Korean>조절 나사 강제</Korean>
-            <Polish>Wymus uzycie poręteł regulacyjnych</Polish>
+            <Polish>Wymuś użycie pokręteł regulacyjnych</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustmet turrets on high powered scopes</English>
             <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
-            <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o duzym powiększeniu</Polish>
+            <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
@@ -53,67 +53,67 @@
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
             <Japanese>'defaultZeroRange'設定を使う高倍率スコープのゼロイン距離を上書きします</Japanese>
             <Korean>기존 고성능 조준경의 영점거리에 '기본설정 영점거리' 를 덮어씌웁니다</Korean>
-            <Polish>Używa/nadpisuje 'standardowej odległości zerowania' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
+            <Polish>Używa 'defaultZeroRange' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_displayName">
             <English>Default zero distance</English>
             <Japanese>標準のゼロイン距離</Japanese>
             <Korean>기본설정 영점거리</Korean>
-            <Polish>Domyślny dystans zerowy</Polish>
+            <Polish>Domyślne zerowanie</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High power scopes will be zeroed at this distance</English>
             <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
             <Korean>고성능 조준경이 정해진 수만큼 영점거리를 맞추게 됩니다.</Korean>
-            <Polish>Celowniki o duzym powiększeniu będą zerowane dla tej odległości</Polish>
+            <Polish>Celowniki o dużym powiększeniu będą zerowane dla tej odległości</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_displayName">
             <English>Reference temperature</English>
             <Japanese>温度の参照</Japanese>
             <Korean>온도 기준</Korean>
-            <Polish>Wzorcowa temperatura</Polish>
+            <Polish>Referencyjna temperatura</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
             <Japanese>スコープがゼロインされる温度</Japanese>
             <Korean>조준경 영점조준시 온도</Korean>
-            <Polish>Temperatura przy której celownik został wyzerowany</Polish>
+            <Polish>Temperatura, przy której celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_displayName">
             <English>Reference barometric pressure</English>
             <Japanese>気圧の参照</Japanese>
             <Korean>기압 기준</Korean>
-            <Polish>Standardowe cisnienie barometryczne</Polish>
+            <Polish>Referencyjne ciśnienie barometryczne</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceBarometricPressure_description">
             <English>Barometric pressure at which the scope was zeroed</English>
             <Japanese>気圧の参照</Japanese>
             <Korean>조준경 영점조준시 기압</Korean>
-            <Polish>Ciśnienie barometryczne przy którym celownik został wyzerowany</Polish>
+            <Polish>Ciśnienie barometryczne, przy którym celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_displayName">
             <English>Reference humidity</English>
             <Japanese>湿度の参照</Japanese>
             <Korean>습도 기준</Korean>
-            <Polish>Standardowa wilgotność</Polish>
+            <Polish>Referencyjna wilgotność</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceHumidity_description">
             <English>Humidity at which the scope was zeroed</English>
             <Japanese>スコープがゼロインされる湿度</Japanese>
             <Korean>조준경 영점조준시 습도</Korean>
-            <Polish>Wilgotność przy której celownik został wyzerowany</Polish>
+            <Polish>Wilgotność powietrza, przy której celownik został wyzerowany</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_displayName">
             <English>Deduce pressure from altitude</English>
             <Japanese>高度により圧が減少</Japanese>
             <Korean>고도에 맞춰 기압 설정</Korean>
-            <Polish>Cisnienie okreslone na podstawie wysokości</Polish>
+            <Polish>Ciśnienie określone na podstawie wysokości</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_deduceBarometricPressureFromTerrainAltitude_description">
             <English>Deduce the barometric pressure from the terrain altitude</English>
             <Japanese>標高により気圧が減少されます</Japanese>
             <Korean>주변 고도에 맞춰 기압을 설정합니다</Korean>
-            <Polish>Określ ciśnienie barometryczne na podstawie wysokości </Polish>
+            <Polish>Określ ciśnienie barometryczne na podstawie wysokości terenu</Polish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
