@@ -10,8 +10,470 @@ class CfgVehicles {
         };
     };
     class ACE_Module;
-    // TODO Add settings modules
+    class ACE_moduleMedicalSettings: ACE_Module {
+        scope = 2;
+        displayName = CSTRING(MedicalSettings_Module_DisplayName);
+        icon = QPATHTOF(UI\Icon_Module_Medical_ca.paa);
+        category = "ACE_medical";
+        function = QUOTE(DFUNC(moduleMedicalSettings));
+        functionPriority = 1;
+        isGlobal = 1;
+        isSingular = 1;
+        isTriggerActivated = 0;
+        author = ECSTRING(common,ACETeam);
 
+        class Arguments {
+			class medicSetting {
+				displayName = CSTRING(MedicalSettings_medicSetting_DisplayName);
+				description = CSTRING(MedicalSettings_medicSetting_Description);
+				typeName = "NUMBER";
+				class values {
+					class disable {
+					  name = CSTRING(MedicalSettings_medicSetting_disable);
+					  value = 0;
+					};
+					class normal {
+					  name = CSTRING(MedicalSettings_basic);
+					  value = 1;
+					  default = 1;
+					};
+					class full  {
+					  name = CSTRING(MedicalSettings_advanced);
+					  value = 2;
+					};
+				};
+			};
+			class increaseTrainingInLocations {
+				displayName = CSTRING(MedicalSettings_increaseTrainingInLocations_DisplayName);
+				description = CSTRING(MedicalSettings_increaseTrainingInLocations_Description);
+				typeName = "BOOL";
+				defaultValue = 0;
+			};
+			class bleedingCoefficient {
+				displayName = CSTRING(MedicalSettings_bleedingCoefficient_DisplayName);
+				description = CSTRING(MedicalSettings_bleedingCoefficient_Description);
+				typeName = "NUMBER";
+				defaultValue = 1;
+			};
+			class painCoefficient {
+				displayName = CSTRING(MedicalSettings_painCoefficient_DisplayName);
+				description = CSTRING(MedicalSettings_painCoefficient_Description);
+				typeName = "NUMBER";
+				defaultValue = 1;
+			};
+
+			class advancedBandages {
+				displayName = CSTRING(MedicalSettings_advancedBandages_DisplayName);
+				description = CSTRING(MedicalSettings_advancedBandages_Description);
+				typeName = "BOOL";
+				defaultValue = 1;
+			};
+			class advancedMedication {
+				displayName = CSTRING(MedicalSettings_advancedMedication_DisplayName);
+				description = CSTRING(MedicalSettings_advancedMedication_Description);
+				typeName = "BOOL";
+				defaultValue = 1;
+			};
+			class advancedDiagnose {
+				displayName = CSTRING(MedicalSettings_advancedDiagnose_DisplayName);
+				description = CSTRING(MedicalSettings_advancedDiagnose_Description);
+				typeName = "BOOL";
+				defaultValue = 1;
+			};
+			class woundReopening {
+				displayName = CSTRING(MedicalSettings_enableAdvancedWounds_DisplayName);
+				description = CSTRING(MedicalSettings_enableAdvancedWounds_Description);
+				typeName = "BOOL";
+				defaultValue = 1;
+			};
+
+			class enableScreams {
+				displayName = CSTRING(MedicalSettings_enableScreams_DisplayName);
+				description = CSTRING(MedicalSettings_enableScreams_Description);
+				typeName = "BOOL";
+				defaultValue = 1;
+			};
+			class showPainInMenu {
+				displayName = CSTRING(MedicalSettings_showPainInMenu_DisplayName);
+				description = CSTRING(MedicalSettings_showPainInMenu_Description);
+				typeName = "BOOL";
+				defaultValue = 0;
+			};
+			class playerDamageThreshold {
+				displayName = CSTRING(MedicalSettings_playerDamageThreshold_DisplayName);
+				description = CSTRING(MedicalSettings_playerDamageThreshold_Description);
+				typeName = "SCALAR";
+				defaultValue = 1.05;
+			};
+			class AIDamageThreshold {
+				displayName = CSTRING(MedicalSettings_AIDamageThreshold_DisplayName);
+				description = CSTRING(MedicalSettings_AIDamageThreshold_Description);
+				typeName = "SCALAR";
+				defaultValue = 1.05;
+			};
+			class fatalInjuryCondition {
+				displayName = CSTRING(MedicalSettings_fatalInjuryCondition_DisplayName);
+				description = CSTRING(MedicalSettings_fatalInjuryCondition_Description);
+				typeName = "SCALAR";
+				//values[] = {"Always", "In Cardiac Arrest", "Never"};
+				class values {
+					class always {
+					  name = CSTRING(MedicalSettings_fatalInjuryCondition_Always);
+					  value = 0;
+					  default = 1;
+					};
+					class incardiacarrest {
+					  name = CSTRING(MedicalSettings_fatalInjuryCondition_InCardiacArrest);
+					  value = 1;
+					};
+					class never {
+					  name = CSTRING(MedicalSettings_fatalInjuryCondition_Never);
+					  value = 1;
+					};
+				};
+			};
+			class cardiacArrestTime {
+			  displayName = CSTRING(MedicalSettings_cardiacArrestTime_DisplayName);
+			  description = CSTRING(MedicalSettings_cardiacArrestTime_Description);
+			  defaultValue = 30;
+			  typeName = "SCALAR";
+			};
+			class medicSetting_PainVisualization {
+			  displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
+			  description = CSTRING(MedicalSettings_medicSetting_PainVisualization_Description);
+			  typeName = "SCALAR";
+			  //values[] = {"Anyone", "Medics only", "Doctors only"};
+			  class values {
+				  class anyone {
+					name = "Anyone";
+					value = 0;
+					default = 1;
+				  };
+				  class onlymedics {
+					name = "Medics only";
+					value = 1;
+				  };
+				  class onlydoctors {
+					name = "Doctors only";
+					value = 2;
+				  };
+			  };
+			};
+			class medicSetting_Epi {
+			  displayName = CSTRING(BasicMedicalSettings_medicSetting_Epi_DisplayName);
+			  description = CSTRING(BasicMedicalSettings_medicSetting_Epi_Description);
+			  typeName = "SCALAR";
+			  //values[] = {"Anyone", "Medics only", "Doctors only"};
+			  class values {
+				  class anyone {
+					name = "Anyone";
+					value = 0;
+					default = 1;
+				  };
+				  class onlymedics {
+					name = "Medics only";
+					value = 1;
+				  };
+				  class onlydoctors {
+					name = "Doctors only";
+					value = 2;
+				  };
+			  };
+			};
+			class medicSetting_Medkit {
+				displayName = CSTRING(MedicalSettings_medicSetting_Medkit_DisplayName);
+				description = CSTRING(MedicalSettings_medicSetting_Medkit_Description);
+				typeName = "SCALAR";
+				//values[] = {"Anyone", "Medics only", "Doctors only"};
+				class values {
+				  class anyone {
+					name = "Anyone";
+					value = 0;
+					default = 1;
+				  };
+				  class onlymedics {
+					name = "Medics only";
+					value = 1;
+				  };
+				  class onlydoctors {
+					name = "Doctors only";
+					value = 2;
+				  };
+				};
+			};
+			  class medicSetting_PAK {
+				  displayName = CSTRING(MedicalSettings_medicSetting_PAK_DisplayName);
+				  description = CSTRING(MedicalSettings_medicSetting_PAK_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anyone {
+						name = "Anyone";
+						value = 0;
+						default = 1;
+					  };
+					  class onlymedics {
+						name = "Medics only";
+						value = 1;
+					  };
+					  class onlydoctors {
+						name = "Doctors only";
+						value = 2;
+					  };
+				  };
+			  };
+			  class medicSetting_SurgicalKit {
+				  displayName = CSTRING(MedicalSettings_medicSetting_SurgicalKit_DisplayName);
+				  description = CSTRING(MedicalSettings_medicSetting_SurgicalKit_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anyone {
+						name = "Anyone";
+						value = 0;
+						default = 1;
+					  };
+					  class onlymedics {
+						name = "Medics only";
+						value = 1;
+					  };
+					  class onlydoctors {
+						name = "Doctors only";
+						value = 2;
+					  };
+				  };
+			  };
+			  class consumeItem_Medkit {
+				  displayName = CSTRING(MedicalSettings_consumeItem_Medkit_DisplayName);
+				  description = CSTRING(MedicalSettings_consumeItem_Medkit_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class no {
+						name = "No";
+						value = 0;
+					  };
+					  class yes {
+						name = "Yes";
+						value = 1;
+						default = 1;
+					  };
+				  };
+			  };
+			  class consumeItem_PAK {
+				  displayName = CSTRING(MedicalSettings_consumeItem_PAK_DisplayName);
+				  description = CSTRING(MedicalSettings_consumeItem_PAK_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class no {
+						name = "No";
+						value = 0;
+					  };
+					  class yes {
+						name = "Yes";
+						value = 1;
+						default = 1;
+					  };
+				  };
+			  };
+			  class consumeItem_SurgicalKit {
+				  displayName = CSTRING(MedicalSettings_consumeItem_SurgicalKit_DisplayName);
+				  description = CSTRING(MedicalSettings_consumeItem_SurgicalKit_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class no {
+						name = "No";
+						value = 0;
+					  };
+					  class yes {
+						name = "Yes";
+						value = 1;
+						default = 1;
+					  };
+				  };
+			  };
+			  class useLocation_Epi {
+				  displayName = CSTRING(BasicMedicalSettings_useLocation_Epi_DisplayName);
+				  description = CSTRING(BasicMedicalSettings_useLocation_Epi_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anywhere {
+						name = CSTRING(MedicalSettings_anywhere);
+						value = 0;
+						default = 1;
+					  };
+					  class vehicle {
+						name = CSTRING(MedicalSettings_vehicle);
+						value = 1;
+					  };
+					  class facility {
+						name = CSTRING(MedicalSettings_facility);
+						value = 2;
+					  };
+					  class vehicleAndFacility {
+						name = CSTRING(MedicalSettings_vehicleAndFacility);
+						value = 3;
+					  };
+					  class disabled {
+						name = ECSTRING(common,Disabled);
+						value = 4;
+					  };
+				  };
+			  };
+			  class useLocation_Medkit {
+				  displayName = CSTRING(MedicalSettings_useLocation_Medkit_DisplayName);
+				  description = CSTRING(MedicalSettings_useLocation_Medkit_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anywhere {
+						name = CSTRING(MedicalSettings_anywhere);
+						value = 0;
+						default = 1;
+					  };
+					  class vehicle {
+						name = CSTRING(MedicalSettings_vehicle);
+						value = 1;
+					  };
+					  class facility {
+						name = CSTRING(MedicalSettings_facility);
+						value = 2;
+					  };
+					  class vehicleAndFacility {
+						name = CSTRING(MedicalSettings_vehicleAndFacility);
+						value = 3;
+					  };
+					  class disabled {
+						name = ECSTRING(common,Disabled);
+						value = 4;
+					  };
+				  };
+			  };
+			  class useLocation_PAK {
+				  displayName = CSTRING(MedicalSettings_useLocation_PAK_DisplayName);
+				  description = CSTRING(MedicalSettings_useLocation_PAK_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anywhere {
+						name = CSTRING(MedicalSettings_anywhere);
+						value = 0;
+						default = 1;
+					  };
+					  class vehicle {
+						name = CSTRING(MedicalSettings_vehicle);
+						value = 1;
+					  };
+					  class facility {
+						name = CSTRING(MedicalSettings_facility);
+						value = 2;
+					  };
+					  class vehicleAndFacility {
+						name = CSTRING(MedicalSettings_vehicleAndFacility);
+						value = 3;
+					  };
+					  class disabled {
+						name = ECSTRING(common,Disabled);
+						value = 4;
+					  };
+				  };
+			  };
+			  class useLocation_SurgicalKit {
+				  displayName = CSTRING(MedicalSettings_useLocation_SurgicalKit_DisplayName);
+				  description = CSTRING(MedicalSettings_useLocation_SurgicalKit_Description);
+				  typeName = "SCALAR";
+				  class values {
+					  class anywhere {
+						name = CSTRING(MedicalSettings_anywhere);
+						value = 0;
+						default = 1;
+					  };
+					  class vehicle {
+						name = CSTRING(MedicalSettings_vehicle);
+						value = 1;
+					  };
+					  class facility {
+						name = CSTRING(MedicalSettings_facility);
+						value = 2;
+					  };
+					  class vehicleAndFacility {
+						name = CSTRING(MedicalSettings_vehicleAndFacility);
+						value = 3;
+					  };
+					  class disabled {
+						name = ECSTRING(common,Disabled);
+						value = 4;
+					  };
+				  };
+			  };
+			  class remainingDamage_Medkit {
+				  displayName = CSTRING(MedicalSettings_remainingDamage_Medkit_DisplayName);
+				  description = CSTRING(MedicalSettings_remainingDamage_Medkit_Description);
+				  typeName = "SCALAR";
+				  defaultValue = 0.1;
+			  };
+			  class painEffectType {
+				  displayName = CSTRING(painEffectType);
+				  typeName = "SCALAR";
+				  isClientSettable = 1;
+				  class values {
+					  class flash {
+						name = CSTRING(painEffect_Flash);
+						value = 0;
+						default = 1;
+					  };
+					  class chroma {
+						name = CSTRING(painEffect_Chroma);
+						value = 1;
+					  };
+				  };
+			  };
+			class allowUnconsciousAnimationOnTreatment {
+				displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
+				description = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_Description);
+				typeName = "BOOL";
+				defaultValue = 0;
+			};
+			  class menuTypeStyle {
+				  displayName = CSTRING(menuTypeDisplay);
+				  description = CSTRING(menuTypeDescription);
+				  typeName = "SCALAR";
+				  isClientSettable = 1;
+				  class values {
+					  class useSelection {
+						name = CSTRING(useSelection);
+						value = 0;
+						default = 1;
+					  };
+					  class useRadial {
+						name = CSTRING(useRadial);
+						value = 1;
+					  };
+					  class disabled {
+						name = ECSTRING(common,Disabled);
+						value = 1;
+					  };
+				  };
+			  };
+			  class ivFlowRate {
+				  displayName = CSTRING(MedicalSettings_ivFlowRate_DisplayName);
+				  description = CSTRING(MedicalSettings_ivFlowRate_Description);
+				  typeName = "SCALAR";
+				  defaultValue = 1;
+			  };
+            class allowSelfIV {
+				displayName = CSTRING(MedicalSettings_allowSelfIV_DisplayName);
+				description = CSTRING(MedicalSettings_allowSelfIV_Description);
+				typeName = "SCALAR";
+				class values {
+				  class no {
+					name = "No";
+					value = 0;
+					default = 1;
+				  };
+				  class yes {
+					name = "Yes";
+					value = 1;
+				  };
+				};
+            };
+        };
+    };
     class MapBoard_altis_F;
     class ACE_bodyBagObject: MapBoard_altis_F {
         class EventHandlers {
