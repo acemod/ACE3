@@ -33,6 +33,7 @@ PREP(isInStableCondition);
 PREP(isMedic);
 PREP(isMedicalVehicle);
 PREP(leftStateCardiacArrest);
+PREP(moduleMedicalSettings);
 PREP(moduleAssignMedicRoles);
 PREP(moduleAssignMedicalVehicle);
 PREP(serverRemoveBody);
