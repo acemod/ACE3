@@ -115,10 +115,9 @@ class CfgVehicles {
 				displayName = CSTRING(MedicalSettings_fatalInjuryCondition_DisplayName);
 				description = CSTRING(MedicalSettings_fatalInjuryCondition_Description);
 				typeName = "SCALAR";
-				//values[] = {"Always", "In Cardiac Arrest", "Never"};
 				class values {
 					class always {
-					  name = CSTRING(MedicalSettings_fatalInjuryCondition_Always);
+					  name = ECSTRING(common,Always);
 					  value = 0;
 					  default = 1;
 					};
@@ -127,7 +126,7 @@ class CfgVehicles {
 					  value = 1;
 					};
 					class never {
-					  name = CSTRING(MedicalSettings_fatalInjuryCondition_Never);
+					  name = ECSTRING(common,Never);
 					  value = 1;
 					};
 				};
@@ -142,40 +141,38 @@ class CfgVehicles {
 			  displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
 			  description = CSTRING(MedicalSettings_medicSetting_PainVisualization_Description);
 			  typeName = "SCALAR";
-			  //values[] = {"Anyone", "Medics only", "Doctors only"};
 			  class values {
 				  class anyone {
-					name = "Anyone";
+					name = CSTRING(MedicalSettings_anyone);
 					value = 0;
 					default = 1;
 				  };
 				  class onlymedics {
-					name = "Medics only";
+					name = CSTRING(MedicalSettings_Medic);
 					value = 1;
 				  };
 				  class onlydoctors {
-					name = "Doctors only";
+					name = CSTRING(MedicalSettings_Special);
 					value = 2;
 				  };
 			  };
 			};
 			class medicSetting_Epi {
-			  displayName = CSTRING(BasicMedicalSettings_medicSetting_Epi_DisplayName);
-			  description = CSTRING(BasicMedicalSettings_medicSetting_Epi_Description);
+			  displayName = CSTRING(MedicalSettings_medicSetting_Epi_DisplayName);
+			  description = CSTRING(MedicalSettings_medicSetting_Epi_Description);
 			  typeName = "SCALAR";
-			  //values[] = {"Anyone", "Medics only", "Doctors only"};
 			  class values {
 				  class anyone {
-					name = "Anyone";
+					name = CSTRING(MedicalSettings_anyone);
 					value = 0;
 					default = 1;
 				  };
 				  class onlymedics {
-					name = "Medics only";
+					name = CSTRING(MedicalSettings_Medic);
 					value = 1;
 				  };
 				  class onlydoctors {
-					name = "Doctors only";
+					name = CSTRING(MedicalSettings_Special);
 					value = 2;
 				  };
 			  };
@@ -184,19 +181,18 @@ class CfgVehicles {
 				displayName = CSTRING(MedicalSettings_medicSetting_Medkit_DisplayName);
 				description = CSTRING(MedicalSettings_medicSetting_Medkit_Description);
 				typeName = "SCALAR";
-				//values[] = {"Anyone", "Medics only", "Doctors only"};
 				class values {
 				  class anyone {
-					name = "Anyone";
+					name = CSTRING(MedicalSettings_anyone);
 					value = 0;
 					default = 1;
 				  };
 				  class onlymedics {
-					name = "Medics only";
+					name = CSTRING(MedicalSettings_Medic);
 					value = 1;
 				  };
 				  class onlydoctors {
-					name = "Doctors only";
+					name = CSTRING(MedicalSettings_Special);
 					value = 2;
 				  };
 				};
@@ -207,7 +203,7 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anyone {
-						name = "Anyone";
+						name = CSTRING(MedicalSettings_anyone);
 						value = 0;
 						default = 1;
 					  };
@@ -216,7 +212,7 @@ class CfgVehicles {
 						value = 1;
 					  };
 					  class onlydoctors {
-						name = "Doctors only";
+						name = CSTRING(MedicalSettings_Special);
 						value = 2;
 					  };
 				  };
@@ -227,16 +223,16 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anyone {
-						name = "Anyone";
+						name = CSTRING(MedicalSettings_anyone);
 						value = 0;
 						default = 1;
 					  };
 					  class onlymedics {
-						name = "Medics only";
+						name = CSTRING(MedicalSettings_Medic);
 						value = 1;
 					  };
 					  class onlydoctors {
-						name = "Doctors only";
+						name = CSTRING(MedicalSettings_Special);
 						value = 2;
 					  };
 				  };
@@ -247,11 +243,11 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class no {
-						name = "No";
+						name = ECSTRING(common,No);
 						value = 0;
 					  };
 					  class yes {
-						name = "Yes";
+						name = ECSTRING(common,Yes);
 						value = 1;
 						default = 1;
 					  };
@@ -263,11 +259,11 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class no {
-						name = "No";
+						name = ECSTRING(common,No);
 						value = 0;
 					  };
 					  class yes {
-						name = "Yes";
+						name = ECSTRING(common,Yes);
 						value = 1;
 						default = 1;
 					  };
@@ -279,11 +275,11 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class no {
-						name = "No";
+						name = ECSTRING(common,No);
 						value = 0;
 					  };
 					  class yes {
-						name = "Yes";
+						name = ECSTRING(common,Yes);
 						value = 1;
 						default = 1;
 					  };
@@ -295,12 +291,12 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anywhere {
-						name = CSTRING(MedicalSettings_anywhere);
+						name = ECSTRING(common,Anywhere);
 						value = 0;
 						default = 1;
 					  };
 					  class vehicle {
-						name = CSTRING(MedicalSettings_vehicle);
+						name = ECSTRING(common,Vehicle);
 						value = 1;
 					  };
 					  class facility {
@@ -323,12 +319,12 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anywhere {
-						name = CSTRING(MedicalSettings_anywhere);
+						name = ECSTRING(common,Anywhere);
 						value = 0;
 						default = 1;
 					  };
 					  class vehicle {
-						name = CSTRING(MedicalSettings_vehicle);
+						name = ECSTRING(common,Vehicle);
 						value = 1;
 					  };
 					  class facility {
@@ -351,12 +347,12 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anywhere {
-						name = CSTRING(MedicalSettings_anywhere);
+						name = ECSTRING(common,Anywhere);
 						value = 0;
 						default = 1;
 					  };
 					  class vehicle {
-						name = CSTRING(MedicalSettings_vehicle);
+						name = ECSTRING(common,Vehicle);
 						value = 1;
 					  };
 					  class facility {
@@ -379,12 +375,12 @@ class CfgVehicles {
 				  typeName = "SCALAR";
 				  class values {
 					  class anywhere {
-						name = CSTRING(MedicalSettings_anywhere);
+						name = ECSTRING(common,Anywhere);
 						value = 0;
 						default = 1;
 					  };
 					  class vehicle {
-						name = CSTRING(MedicalSettings_vehicle);
+						name = ECSTRING(common,Vehicle);
 						value = 1;
 					  };
 					  class facility {
@@ -462,12 +458,12 @@ class CfgVehicles {
 				typeName = "SCALAR";
 				class values {
 				  class no {
-					name = "No";
+					name = ECSTRING(common,No);
 					value = 0;
 					default = 1;
 				  };
 				  class yes {
-					name = "Yes";
+					name = ECSTRING(common,Yes);
 					value = 1;
 				  };
 				};
