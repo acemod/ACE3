@@ -2857,34 +2857,6 @@
             <Japanese>治療の再現度は？</Japanese>
             <Korean>치료 시뮬레이션 정도?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_basic">
-            <English>Basic</English>
-            <Russian>Базовый</Russian>
-            <Polish>Podstawowy</Polish>
-            <Spanish>Básico</Spanish>
-            <German>Standard</German>
-            <Czech>Základní</Czech>
-            <Portuguese>Básica</Portuguese>
-            <French>Basique</French>
-            <Hungarian>Alap</Hungarian>
-            <Italian>Basico</Italian>
-            <Japanese>ベーシック</Japanese>
-            <Korean>기본</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_MedicalSettings_advanced">
-            <English>Advanced</English>
-            <Russian>Усложненный</Russian>
-            <Polish>Zaawansowany</Polish>
-            <Spanish>Avanzado</Spanish>
-            <German>Erweitert</German>
-            <Czech>Pokročilé</Czech>
-            <Portuguese>Avançada</Portuguese>
-            <French>Avancée</French>
-            <Hungarian>Fejlett</Hungarian>
-            <Italian>Avanzato</Italian>
-            <Japanese>アドバンスド</Japanese>
-            <Korean>고급</Korean>
-        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
             <Russian>Настройки медиков</Russian>

@@ -15,6 +15,20 @@
             <Japanese>ACE-Team</Japanese>
             <Korean>ACE-Team</Korean>
         </Key>
+		<Key ID="STR_ACE_Common_Advanced">
+            <English>Advanced</English>
+            <Russian>Усложненный</Russian>
+            <Polish>Zaawansowany</Polish>
+            <Spanish>Avanzado</Spanish>
+            <German>Erweitert</German>
+            <Czech>Pokročilé</Czech>
+            <Portuguese>Avançada</Portuguese>
+            <French>Avancée</French>
+            <Hungarian>Fejlett</Hungarian>
+            <Italian>Avanzato</Italian>
+            <Japanese>アドバンスド</Japanese>
+            <Korean>고급</Korean>
+        </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
             <German>Speichern</German>
@@ -813,6 +827,20 @@
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
+        </Key>
+		<Key ID="STR_ACE_Common_Basic">
+            <English>Basic</English>
+            <Russian>Базовый</Russian>
+            <Polish>Podstawowy</Polish>
+            <Spanish>Básico</Spanish>
+            <German>Standard</German>
+            <Czech>Základní</Czech>
+            <Portuguese>Básica</Portuguese>
+            <French>Basique</French>
+            <Hungarian>Alap</Hungarian>
+            <Italian>Basico</Italian>
+            <Japanese>ベーシック</Japanese>
+            <Korean>기본</Korean>
         </Key>
         <Key ID="STR_ACE_Common_Vehicle">
             <English>Medical vehicles</English>

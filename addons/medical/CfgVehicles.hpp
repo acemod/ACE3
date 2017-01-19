@@ -33,12 +33,12 @@ class CfgVehicles {
 					  value = 0;
 					};
 					class normal {
-					  name = CSTRING(MedicalSettings_basic);
+					  name = ECSTRING(common,Normal);
 					  value = 1;
 					  default = 1;
 					};
 					class full  {
-					  name = CSTRING(MedicalSettings_advanced);
+					  name = ECSTRING(common,Advanced);
 					  value = 2;
 					};
 				};
