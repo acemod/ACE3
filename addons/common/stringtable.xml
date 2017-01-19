@@ -352,6 +352,20 @@
             <Japanese>不明</Japanese>
             <Korean>알 수 없음</Korean>
         </Key>
+		<Key ID="STR_ACE_Common_Normal">
+            <English>Normal</English>
+            <German>Normal</German>
+            <Italian>Normale</Italian>
+            <Russian>Нормальное</Russian>
+            <French>Normale</French>
+            <Polish>Normalne</Polish>
+            <Spanish>Normal</Spanish>
+            <Hungarian>Normális</Hungarian>
+            <Czech>Normální</Czech>
+            <Portuguese>Normal</Portuguese>
+            <Japanese>通常</Japanese>
+            <Korean>보통</Korean>
+        </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
             <German>Keine Stimme</German>
