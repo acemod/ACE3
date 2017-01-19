@@ -797,6 +797,37 @@
             <Japanese>有効化</Japanese>
             <Korean>활성화</Korean>
         </Key>
+		<Key ID="STR_ACE_Common_Always">
+            <English>Always</English>
+        </Key>
+		<Key ID="STR_ACE_Common_Anywhere">
+            <English>Anywhere</English>
+            <Russian>Где угодно</Russian>
+            <Polish>Wszędzie</Polish>
+            <Spanish>Donde sea</Spanish>
+            <German>Überall</German>
+            <Czech>Kdekoliv</Czech>
+            <Portuguese>Qualquer lugar</Portuguese>
+            <French>PArtout</French>
+            <Hungarian>Akárhol</Hungarian>
+            <Italian>Ovunque</Italian>
+            <Japanese>どこでも</Japanese>
+            <Korean>어디서나</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_Vehicle">
+            <English>Medical vehicles</English>
+            <Russian>В медицинском транспорте</Russian>
+            <Polish>Pojazdy medyczne</Polish>
+            <Spanish>Vehiculos médicos</Spanish>
+            <German>Sanitätsfahrzeuge</German>
+            <Czech>Zdravotnická vozidla</Czech>
+            <Portuguese>Veículos médcos</Portuguese>
+            <French>Dans les véhicules médicals</French>
+            <Hungarian>Orvosi járművek</Hungarian>
+            <Italian>Veicoli medici</Italian>
+            <Japanese>医療車両のみ</Japanese>
+            <Korean>의료차량</Korean>
+        </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
             <German>Ja</German>
@@ -824,6 +855,9 @@
             <Italian>No</Italian>
             <Japanese>いいえ</Japanese>
             <Korean>아니오</Korean>
+        </Key>
+		<Key ID="STR_ACE_Common_Never">
+            <English>Never</English>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>

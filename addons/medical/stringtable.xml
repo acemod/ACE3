@@ -3049,8 +3049,11 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_Description">
             <English>Defines when you can receive a fatal injury</English>
         </Key>
+		 <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
+            <English>In Cardiac Arrest</English>
+        </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_DisplayName">
-            <English>CA time</English>
+            <English>Cardiac Arrest time(s)</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_Description">
             <English>Defines how long it takes to die from cardiac arrest?</English>
@@ -3168,7 +3171,7 @@
             <Japanese>ベーシック医療設定 [ACE]</Japanese>
             <Korean>기본 의료 설정 [ACE]</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
             <Russian>Настройки усложненной медицины [ACE]</Russian>
             <Polish>Zaawansowane ustawienia medyczne</Polish>
@@ -3182,7 +3185,7 @@
             <Japanese>アドバンスド医療設定 [ACE]</Japanese>
             <Korean>고급 의료 설정 [ACE]</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
             <Russian>Включено для</Russian>
             <Polish>Aktywne dla</Polish>
@@ -3196,7 +3199,7 @@
             <Japanese>次を有効化</Japanese>
             <Korean>다음을 활성화</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
             <Russian>Выберите, на кого будет распространяться усложненная система медицины</Russian>
             <Polish>Wybierz dla kogo zaawansowany system medyczny będzie aktywny</Polish>
@@ -3238,7 +3241,7 @@
             <Japanese>プレイヤーと AI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableAdvancedWounds_DisplayName">
             <English>Enable Advanced wounds</English>
             <Russian>Усложненные раны</Russian>
             <Polish>Aktywuj zaawansowane rany</Polish>
@@ -3252,7 +3255,7 @@
             <Japanese>アドバンスドな傷を有効化</Japanese>
             <Korean>고급 부상 활성화</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableAdvancedWounds_Description">
             <English>Allow reopening of bandaged wounds?</English>
             <Russian>Будут ли открываться уже перевязанные раны?</Russian>
             <Polish>Pozwól na otwieranie się zabandażowanych ran?</Polish>
@@ -3266,7 +3269,7 @@
             <Japanese>包帯で巻かれた傷を再び開くようにしますか？</Japanese>
             <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
             <Russian>Аварии транспорта</Russian>
             <Polish>Obrażenia od kolizji</Polish>
@@ -3280,7 +3283,7 @@
             <Japanese>車両の衝突</Japanese>
             <Korean>차량 사고</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
             <Russian>Должны ли юниты получать повреждения от аварий на транспорте?</Russian>
             <Polish>Czy jednostki otrzymują obrażenia w wyniku kolizji pojazdów?</Polish>
@@ -3294,13 +3297,13 @@
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか？</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_PainVisualization_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PainVisualization_DisplayName">
             <English>Allow Pain visualization</English>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_PainVisualization_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PainVisualization_Description">
             <English>Who can see pain in the menu?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_Epi_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Epi_DisplayName">
             <English>Allow Epinephrine</English>
             <German>Erlaube Epiniphrin</German>
             <Spanish>Permitir Epinefrina</Spanish>
@@ -3313,16 +3316,16 @@
             <Japanese>アドレナリンの許可</Japanese>
             <Korean>에피네프린 활성화</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_Epi_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Epi_Description">
             <English>Who can use Epinephrine?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_Medkit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Medkit_DisplayName">
             <English>Allow Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_Medkit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Medkit_Description">
             <English>Who can use the Medkit for partial heal?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Использование аптечки</Russian>
             <Polish>Ustawienie apteczek osobistych</Polish>
@@ -3336,7 +3339,7 @@
             <Japanese>応急処置キットの許可</Japanese>
             <Korean>개인응급키트 활성화</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_PAK_Description">
             <English>Who can use the PAK for full heal?</English>
             <Russian>Кому разрешено выполнять полное лечение с помощью аптечки?</Russian>
             <Polish>Kto może skorzystać z apteczki osobistej w celu pełnego uleczenia?</Polish>
@@ -3350,7 +3353,7 @@
             <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか？</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anyone">
+        <Key ID="STR_ACE_Medical_MedicalSettings_anyone">
             <English>Anyone</English>
             <Russian>Кем угодно</Russian>
             <Polish>Wszyscy</Polish>
@@ -3364,7 +3367,7 @@
             <Japanese>だれでも</Japanese>
             <Korean>모두</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Medic">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Medic">
             <English>Medics only</English>
             <Russian>Только медиками</Russian>
             <Polish>Tylko medycy</Polish>
@@ -3378,7 +3381,7 @@
             <Japanese>衛生兵のみ</Japanese>
             <Korean>오직 의무병만</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Special">
             <English>Doctors only</English>
             <Russian>Только врачами</Russian>
             <Polish>Tylko doktorzy</Polish>
@@ -3392,13 +3395,13 @@
             <Japanese>医師のみ</Japanese>
             <Korean>오직 의사만</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_Medkit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_Medkit_DisplayName">
             <English>Remove Medkit on use</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_Medkit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_Medkit_Description">
             <English>Should Medkit be removed on usage?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
             <Russian>Удалять аптечки после использования</Russian>
             <Polish>Usuń apteczkę po użyciu</Polish>
@@ -3412,7 +3415,7 @@
             <Japanese>応急処置キットの削除</Japanese>
             <Korean>개인응급키트 사용후 사라짐</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_PAK_Description">
             <English>Should PAK be removed on usage?</English>
             <Russian>Нужно ли удалять аптечки после использования?</Russian>
             <Polish>Czy apteczka osobista powinna zniknąć z ekwipunku po jej użyciu?</Polish>
@@ -3442,13 +3445,13 @@
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_Epi_Description">
             <English>Where can the Epinephrine be used?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_Medkit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_Medkit_DisplayName">
             <English>Locations Medkit</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_Medkit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_Medkit_Description">
             <English>Where can the Medkit be used?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
             <Russian>Место использования аптечки</Russian>
             <Polish>Ograniczenie apteczek osobistych</Polish>
@@ -3462,7 +3465,7 @@
             <Japanese>応急処置キットをつかう場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_PAK_Description">
             <English>Where can the PAK be used?</English>
             <Russian>Где может использоваться аптечка?</Russian>
             <Polish>Gdzie można korzystać z apteczek osobistych?</Polish>
@@ -3476,7 +3479,7 @@
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
             <Korean>어디에서 개인응급키트를 사용할 수 있습니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
             <German>Bedingungen für d. Erste-Hilfe-Set</German>
             <Czech>Podmínky pro použití osobní lékárničky</Czech>
@@ -3490,7 +3493,7 @@
             <Japanese>応急処置キットの状態</Japanese>
             <Korean>개인응급키트 상태</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useCondition_PAK_Description">
             <English>When can the PAK be used?</English>
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kdy může být použita osobní lékárnička?</Czech>
@@ -3504,35 +3507,7 @@
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
             <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
-            <English>Anywhere</English>
-            <Russian>Где угодно</Russian>
-            <Polish>Wszędzie</Polish>
-            <Spanish>Donde sea</Spanish>
-            <German>Überall</German>
-            <Czech>Kdekoliv</Czech>
-            <Portuguese>Qualquer lugar</Portuguese>
-            <French>PArtout</French>
-            <Hungarian>Akárhol</Hungarian>
-            <Italian>Ovunque</Italian>
-            <Japanese>どこでも</Japanese>
-            <Korean>어디서나</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicle">
-            <English>Medical vehicles</English>
-            <Russian>В медицинском транспорте</Russian>
-            <Polish>Pojazdy medyczne</Polish>
-            <Spanish>Vehiculos médicos</Spanish>
-            <German>Sanitätsfahrzeuge</German>
-            <Czech>Zdravotnická vozidla</Czech>
-            <Portuguese>Veículos médcos</Portuguese>
-            <French>Dans les véhicules médicals</French>
-            <Hungarian>Orvosi járművek</Hungarian>
-            <Italian>Veicoli medici</Italian>
-            <Japanese>医療車両のみ</Japanese>
-            <Korean>의료차량</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_facility">
+        <Key ID="STR_ACE_Medical_MedicalSettings_facility">
             <English>Medical facility</English>
             <Russian>В госпитале</Russian>
             <Polish>Budynki medyczne</Polish>
@@ -3546,7 +3521,7 @@
             <Japanese>医療施設でのみ</Japanese>
             <Korean>의료시설</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicleAndFacility">
+        <Key ID="STR_ACE_Medical_MedicalSettings_vehicleAndFacility">
             <English>Vehicles &amp; facility</English>
             <Russian>В транспорте и госпитале</Russian>
             <Polish>Pojazdy i budynki medyczne</Polish>
@@ -3560,7 +3535,7 @@
             <Japanese>車両 &amp;amp; 施設</Japanese>
             <Korean>차량 및 시설</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical Kit (Adv)</English>
             <Russian>Хирургический набор может использоваться (усл.)</Russian>
             <Polish>Ustawienia zestawu chirurgicznego</Polish>
@@ -3574,7 +3549,7 @@
             <Japanese>縫合キットの許可 (Adv)</Japanese>
             <Korean>봉합키트 활성화 (고급)</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_SurgicalKit_Description">
             <English>Who can use the Surgical Kit?</English>
             <Russian>Кто может использовать хирургический набор?</Russian>
             <Polish>Kto może skorzystać z zestawu chirurgicznego w celu zszycia ran?</Polish>
@@ -3588,7 +3563,7 @@
             <Japanese>だれでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_SurgicalKit_DisplayName">
             <English>Remove Surgical Kit (Adv)</English>
             <Russian>Удалять хирургический набор (усл.)</Russian>
             <Polish>Usuń zestaw chirurgiczny po użyciu</Polish>
@@ -3602,7 +3577,7 @@
             <Japanese>縫合キットを削除 (Adv)</Japanese>
             <Korean>봉합키트 제거 (고급)</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_consumeItem_SurgicalKit_Description">
             <English>Should Surgical kit be removed on usage?</English>
             <Russian>Нужно ли удалять хирургический набор после использования?</Russian>
             <Polish>Czy zestaw chirurgiczny powinien zniknąć z ekwipunku po jego użyciu?</Polish>
@@ -3616,7 +3591,7 @@
             <Japanese>縫合キットをつかった後に削除しますか？</Japanese>
             <Korean>봉합키트를 사용하고 나서 제거합니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical Kit (Adv)</English>
             <Russian>Место использования хирургического набора (усл.)</Russian>
             <Polish>Ograniczenie zestawu chirurgicznego</Polish>
@@ -3630,7 +3605,7 @@
             <Japanese>縫合キットをつかう場所 (Adv)</Japanese>
             <Korean>봉합키트 사용 장소 (고급)</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useLocation_SurgicalKit_Description">
             <English>Where can the Surgical Kit be used?</English>
             <Russian>Где может использоваться хирургический набор?</Russian>
             <Polish>Gdzie można korzystać z zestawu chirurgicznego?</Polish>
@@ -3644,13 +3619,13 @@
             <Japanese>どこでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_remainingDamage_Medkit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_remainingDamage_Medkit_DisplayName">
             <English>Remaining Damage</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_remainingDamage_Medkit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_remainingDamage_Medkit_Description">
             <English>Remaining damage on Medkit usage (increases with every use)?</English>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
             <German>Beding. für d. Operationskasten (erw.)</German>
             <Czech>Podmínka chirurgické soupravy (Pokr.)</Czech>
@@ -3664,7 +3639,7 @@
             <Japanese>縫合キットの状態 (Adv)</Japanese>
             <Korean>봉합키트 상태 (고급)</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical Kit be used?</English>
             <German>Wann kann der Operationskasten verwendet werden?</German>
             <Czech>Kde může být použita chirurgická souprava?</Czech>
@@ -3678,7 +3653,7 @@
             <Japanese>いつでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Heal hitpoints</English>
             <German>Heile Trefferpunkte</German>
             <Polish>Lecz hitpointy</Polish>
@@ -3691,7 +3666,7 @@
             <Japanese>ヒットポイントの回復</Japanese>
             <Korean>체력 회복</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
             <German>Heile verbundene Trefferpunkte</German>
             <Polish>Po bandażowaniu ulecz hitpointy, usuwając z nich ślady krwi i przywracając im pełną sprawność.</Polish>
@@ -3715,7 +3690,7 @@
             <Japanese>ACE ベーシック医療による設定で、治療を設定する</Japanese>
             <Korean>ACE 기본 의료에 대한 치료 설정 수정</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
             <Russian>Настройка лечения в усложненной медицинской системе ACE</Russian>
             <Polish>Skonfiguruj zaawansowane ustawienia leczenia systemu medycznego ACE</Polish>
@@ -4142,6 +4117,12 @@
             <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
             <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
+        </Key>
+		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
+            <English>Allow Unconscious Animation.</English>
+        </Key>
+		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
+            <English>Allow Unconscious Animation on Treatment.</English>
         </Key>
     </Package>
 </Project>
