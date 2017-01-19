@@ -29,7 +29,7 @@ class CfgVehicles {
 				typeName = "NUMBER";
 				class values {
 					class disable {
-					  name = CSTRING(MedicalSettings_medicSetting_disable);
+					  name = ECSTRING(common,Disabled);
 					  value = 0;
 					};
 					class normal {
@@ -137,7 +137,7 @@ class CfgVehicles {
 			  defaultValue = 30;
 			  typeName = "SCALAR";
 			};
-			class medicSetting_PainVisualization {
+			class painVisualization {
 			  displayName = CSTRING(MedicalSettings_medicSetting_PainVisualization_DisplayName);
 			  description = CSTRING(MedicalSettings_medicSetting_PainVisualization_Description);
 			  typeName = "SCALAR";

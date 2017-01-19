@@ -4091,7 +4091,7 @@
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
         </Key>
 		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
-            <English>Allow Unconscious Animation.</English>
+            <English>Allow Unconscious Animation</English>
         </Key>
 		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow Unconscious Animation on Treatment.</English>
