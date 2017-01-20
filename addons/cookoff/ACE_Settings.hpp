@@ -18,4 +18,10 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
+    class GVAR(ammoCookoffDuration) {
+        displayName = CSTRING(ammoCookoffDuration_name);
+        description = CSTRING(ammoCookoffDuration_tooltip);
+        value = 1;
+        typeName = "SCALAR";
+    };
 };

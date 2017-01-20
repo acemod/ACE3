@@ -60,5 +60,11 @@
             <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
         </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
+            <English>Ammunition cook off duration</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
+            <English>Multiplier for how long cook off lasts</English>
+        </Key>
     </Package>
 </Project>
