@@ -64,7 +64,7 @@
             <English>Ammunition cook off duration</English>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
-            <English>Multiplier for how long cook off lasts</English>
+            <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
         </Key>
     </Package>
 </Project>
