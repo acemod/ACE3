@@ -1,15 +1,17 @@
 /*
  * Author: 654wak654
- * Shows a zeus message through the BIS function, handles localization
+ * Shows a zeus message through the BIS function, handles localization.
+ * If the _message param is an array, it gets formatted.
  *
  * Arguments:
- * 0: The message <STRING>
+ * 0: The message <STRING> or <ARRAY>
  *
  * Return Value:
  * Nothing
  *
  * Example:
  * ["something"] call ace_zeus_fnc_showMessage
+ * [["something %1", "strange"]] call ace_zeus_fnc_showMessage
  *
  * Public: Yes
  */
