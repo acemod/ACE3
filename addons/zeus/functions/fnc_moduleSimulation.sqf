@@ -19,7 +19,7 @@ if !(local _logic) exitWith {};
 
 private _object = attachedTo _logic;
 if (isNull _object) then {
-    [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
+    [LSTRING(NothingSelected)] call FUNC(showMessage);
 } else {
     [QEGVAR(common,enableSimulationGlobal), [_object, !(simulationEnabled _object)]] call CBA_fnc_serverEvent;
 };
