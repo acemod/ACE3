@@ -14,6 +14,7 @@ class CfgAmmo {
         explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
+
     class ACE_20mm_HE : B_20mm {};
     class ACE_20mm_AP : B_20mm {
         hit = 50;
@@ -30,6 +31,7 @@ class CfgAmmo {
         caliber = 1;
         deflecting = 15;
     };
+
     class B_762x51_Minigun_Tracer_Red: SubmunitionBullet {
         caliber = 1.6;
         deflecting = 15;

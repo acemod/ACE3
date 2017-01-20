@@ -1,4 +1,3 @@
-
 class CfgVehicles {
     class All {
         class Turrets;
@@ -175,7 +174,7 @@ class CfgVehicles {
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" < 0.5 AND Alive(this)";
-                statement = "this animateDoor ['cargoramp_open',  1]";
+                statement = "this animateDoor ['cargoramp_open', 1]";
             };
             class CargoRamp_Close: DoorL1_Close {
                 userActionID = 55;
@@ -184,7 +183,7 @@ class CfgVehicles {
                 position = "action_cargoramp";
                 radius = 3.0;
                 condition = "this animationPhase ""cargoramp_open"" > 0.5 AND Alive(this)";
-                statement = "this animateDoor ['cargoramp_open',  0]";
+                statement = "this animateDoor ['cargoramp_open', 0]";
             };
         };*/
     };

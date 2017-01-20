@@ -20,6 +20,7 @@ class RscInGameUI {
         class HScrollbar;
         class CA_IGUI_elements_group: RscControlsGroup {
             idc = 170;
+
             class VScrollbar: VScrollbar {
                 width = 0;
             };
@@ -27,6 +28,7 @@ class RscInGameUI {
             class HScrollbar: HScrollbar {
                 height = 0;
             };
+
             x = "0 * (0.01875 * SafezoneH) + (SafezoneX + ((SafezoneW - SafezoneH) / 2))";
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";
@@ -177,6 +179,7 @@ class RscInGameUI {
 
         class CA_IGUI_elements_group: RscControlsGroup {
             idc = 170;
+
             class VScrollbar: VScrollbar {
                 width = 0;
             };
@@ -184,6 +187,7 @@ class RscInGameUI {
             class HScrollbar: HScrollbar {
                 height = 0;
             };
+
             x = "0 * (0.01875 * SafezoneH) + (SafezoneX + ((SafezoneW - SafezoneH) / 2))";
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";
@@ -358,6 +362,7 @@ class RscInGameUI {
 
         class DriverOpticsGroup: RscControlsGroup {
             idc = 392;
+
             class VScrollbar: VScrollbar {
                 width = 0;
             };
@@ -369,6 +374,7 @@ class RscInGameUI {
             y = "0 * (0.025 * SafezoneH) + (SafezoneY)";
             w = "53.5 * (0.01875 * SafezoneH)";
             h = "40 * (0.025 * SafezoneH)";
+
             class controls {
                 class TextGrid: RscText {
                     style = 0;
