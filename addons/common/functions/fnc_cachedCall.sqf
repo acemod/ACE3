@@ -19,8 +19,11 @@
 
 params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
 
-if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
-    _namespace setVariable [_uid, [diag_tickTime + _duration, _params call _function]];
+private _cacheEntry = (_namespace getVariable [_uid, [-99999]]);
+
+if (_cacheEntry select 0 < diag_tickTime) then {
+	_cacheEntry = [diag_tickTime + _duration, _params call _function];
+    _namespace setVariable [_uid, _cacheEntry];
 
     // Does the cache needs to be cleared on an event?
     if (!isNil "_event") then {
@@ -61,4 +64,4 @@ if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
 
 };
 
-(_namespace getVariable _uid) select 1
+_cacheEntry select 1
