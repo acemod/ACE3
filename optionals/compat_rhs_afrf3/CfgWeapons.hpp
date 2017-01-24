@@ -50,6 +50,7 @@ class CfgWeapons {
     class rhs_weap_t5000: rhs_weap_orsis_Base_F { // http://en.orsis.com/production/catalog/19046/
         ACE_barrelTwist = 254.0; // 1:10"
         ACE_barrelLength = 698.5; // 27.5"
+        ACE_RailHeightAboveBore = 2.4;
     };
     class rhs_acc_sniper_base;
     class rhs_acc_pso1m2: rhs_acc_sniper_base {
@@ -67,7 +68,7 @@ class CfgWeapons {
     class ItemCore;
     class InventoryOpticsItem_Base_F;
     class rhs_acc_dh520x56: ItemCore { // http://nightvision.ru/catalog/4/item/35
-        ACE_ScopeHeightAboveRail = 4.0; // ?
+        ACE_ScopeHeightAboveRail = 4.6;
         ACE_ScopeAdjust_Vertical[] = {0, 33};
         ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
