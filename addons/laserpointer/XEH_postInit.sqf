@@ -8,8 +8,6 @@ if (!hasInterface) exitWith {};
 
 GVAR(nearUnits) = [];
 
-#include "initKeybinds.sqf"
-
 ["ace_settingsInitialized", {
     //If not enabled, dont't add draw eventhandler or PFEH (for performance)
     if (!GVAR(enabled)) exitWith {};
