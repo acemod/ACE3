@@ -36,22 +36,22 @@ GVAR(greenLaserUnits) = [];
         private _weapon = currentWeapon _unit;
         private _laser = (_unit weaponAccessories _weapon) select 1;
 
-        if (_laser != "") then {
-            private _laserID = GVAR(laserClassesCache) getVariable _laser;
+        if (_laser isEqualTo "") exitWith {};
 
-            if (isNil "_laserID") then {
-                _laserID = getNumber (configFile >> "CfgWeapons" >> _laser >> "ACE_laserpointer");
-                GVAR(laserClassesCache) setVariable [_laser, _laserID];
+        private _laserID = GVAR(laserClassesCache) getVariable _laser;
+
+        if (isNil "_laserID") then {
+            _laserID = getNumber (configFile >> "CfgWeapons" >> _laser >> "ACE_laserpointer");
+            GVAR(laserClassesCache) setVariable [_laser, _laserID];
+        };
+
+        if (_unit isFlashlightOn _weapon) then {
+            if (_laserID isEqualTo 1) exitWith {
+                GVAR(redLaserUnits) pushBackUnique _unit;
             };
 
-            if (_unit isFlashlightOn _weapon) then {
-                if (_laserID isEqualTo 1) exitWith {
-                    GVAR(redLaserUnits) pushBackUnique _unit;
-                };
-
-                if (_laserID isEqualTo 2) exitWith {
-                    GVAR(greenLaserUnits) pushBackUnique _unit;
-                };
+            if (_laserID isEqualTo 2) exitWith {
+                GVAR(greenLaserUnits) pushBackUnique _unit;
             };
         };
     }, 0.1, []] call CBA_fnc_addPerFrameHandler;
