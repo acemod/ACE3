@@ -1,6 +1,7 @@
 /*
  * Author: BaerMitUmlaut
- * Handles any audible and visual effects of medical.
+ * Handles any visual effects of medical.
+ * Note: Heart beat sounds run in a different PFH - see fnc_effectHeartBeat.
  *
  * Arguments:
  * None

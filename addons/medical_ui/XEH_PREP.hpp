@@ -1,5 +1,6 @@
 PREP(effectBleeding);
 PREP(effectBloodVolume);
+PREP(effectHeartBeat);
 PREP(effectIncapacitated);
 PREP(effectPain);
 PREP(effectUnconscious);

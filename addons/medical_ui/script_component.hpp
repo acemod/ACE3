@@ -22,3 +22,7 @@
 #define FX_PAIN_FADE_OUT  0.7
 #define FX_UNCON_FADE_IN  2.0
 #define FX_UNCON_FADE_OUT 5.0
+
+#define SND_HEARBEAT_FAST   (selectRandom ["ACE_heartbeat_fast_1", "ACE_heartbeat_fast_2", "ACE_heartbeat_fast_3"])
+#define SND_HEARBEAT_NORMAL (selectRandom ["ACE_heartbeat_norm_1", "ACE_heartbeat_norm_2"])
+#define SND_HEARBEAT_SLOW   (selectRandom ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"])

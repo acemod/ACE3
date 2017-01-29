@@ -18,4 +18,6 @@ ADDON = false;
     {} // TODO!
 ] call CBA_Settings_fnc_init;
 
+GVAR(lastHeartBeatSound) = 0;
+
 ADDON = true;

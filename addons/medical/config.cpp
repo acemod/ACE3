@@ -19,7 +19,6 @@ class CfgPatches {
 
 #include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
-#include "CfgSounds.hpp"
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
