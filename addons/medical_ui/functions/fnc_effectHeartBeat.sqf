@@ -10,7 +10,7 @@
  */
 #include "script_component.hpp"
 
-private _heartRate = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE]
+private _heartRate = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
 private _waitTime  = 60 / _heartRate;
 
 if (_heartRate == 0) exitWith {};
