@@ -12,18 +12,13 @@
  */
 #include "script_component.hpp"
 
-private _isIR = currentVisionMode ACE_player;
-
 // no lasers in thermal mode
-if !(_isIR isEqualTo 2) then {
-    // is using IR mode
-    _isIR = _isIR isEqualTo 1;
-
+if !(GVAR(isTI)) then {
     private _brightness = 2 - call EFUNC(common,ambientBrightness);
 
     {
         // red laser. draw green dot anyway in IR mode
-        [_x, 100, _isIR, _brightness] call FUNC(drawLaserpoint);
+        [_x, 100, GVAR(isIR), _brightness] call FUNC(drawLaserpoint);
     } count GVAR(redLaserUnits);
 
     {
