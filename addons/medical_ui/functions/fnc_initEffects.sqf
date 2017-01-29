@@ -10,7 +10,7 @@
  */
 #include "script_component.hpp"
 
-_fnc_createEffect = {
+private _fnc_createEffect = {
     params ["_type", "_layer", "_default"];
 
     private _effect = ppEffectCreate [_type, _layer];
