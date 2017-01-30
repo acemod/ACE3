@@ -39,11 +39,11 @@ class ACE_Medical_StateMachine {
     class Unconscious {
         onState = QUOTE(DFUNC(handleStateUnconscious));
         onStateEntered = QUOTE([ARR_2(_this,(true))] call FUNC(setUnconscious));
-        onStateLeaving = QUOTE([ARR_2(_this,(false))] call FUNC(setUnconscious));
         class WakeUp {
             targetState = "Injured";
             condition = QUOTE(_this call FUNC(hasStableVitals));
             events[] = {QGVAR(WakeUp)};
+            onTransition = QUOTE([ARR_2(_this,(false))] call FUNC(setUnconscious));
         };
         class FatalTransitions {
             targetState = "CardiacArrest";
