@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 // fixes laser when being captured. Needed, because the selectionPosition of the right hand is used
-[QEGVAR(captives,setHandcuffed), {if (_this select 1) then {(_this select 0) action ["ace_gunLightOff", _this select 0]};}] call CBA_fnc_addEventHandler;
+[QEGVAR(captives,setHandcuffed), {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -12,27 +12,12 @@ GVAR(nearUnits) = [];
     //If not enabled, dont't add draw eventhandler or PFEH (for performance)
 
     if (!GVAR(enabled)) exitWith {
-        ["CBA_switchAttachment", {
+        ["CBA_attachmentSwitched", {
             params ["_unit", "_prevItem", "_newItem", "_currWeaponType"];
-            TRACE_4("CBA_switchAttachment eh",_unit,_prevItem,_newItem,_currWeaponType);
+            TRACE_4("CBA_attachmentSwitched eh",_unit,_prevItem,_newItem,_currWeaponType);
             if ((getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer")) > 0) then {
                 TRACE_1("removing ACE_laserpointer",getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer"));
-                switch (_currWeaponType) do {
-                    case 0: {
-                        _unit removePrimaryWeaponItem _newItem;
-                        _unit addPrimaryWeaponItem _prevItem;
-                    };
-                    case 1: {
-                        _unit removeHandgunItem _newItem;
-                        _unit addHandgunItem _prevItem;
-                    };
-                    case 2: {
-                        _unit removeSecondaryWeaponItem _newItem;
-                        _unit addSecondaryWeaponItem _prevItem;
-                    };
-                };
-                // Using hint as it will clear the message from CBA_accessory_fnc_switchAttachment
-                hintSilent (localize "STR_A3_OPTIONS_DISABLED");
+                [1, "prev"] call CBA_accessory_fnc_switchAttachment;
             };
         }] call CBA_fnc_addEventHandler;
     };
