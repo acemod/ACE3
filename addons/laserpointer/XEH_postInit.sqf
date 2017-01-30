@@ -2,7 +2,7 @@
 #include "script_component.hpp"
 
 // fixes laser when being captured. Needed, because the selectionPosition of the right hand is used
-[QEGVAR(captives,setHandcuffed), {if (_this select 1) then {(_this select 0) action ["ace_gunLightOff", _this select 0]};}] call CBA_fnc_addEventHandler;
+[QEGVAR(captives,setHandcuffed), {if (_this select 1) then {(_this select 0) action ["GunLightOff", _this select 0]};}] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -10,7 +10,17 @@ GVAR(nearUnits) = [];
 
 ["ace_settingsInitialized", {
     //If not enabled, dont't add draw eventhandler or PFEH (for performance)
-    if (!GVAR(enabled)) exitWith {};
+
+    if (!GVAR(enabled)) exitWith {
+        ["CBA_attachmentSwitched", {
+            params ["_unit", "_prevItem", "_newItem", "_currWeaponType"];
+            TRACE_4("CBA_attachmentSwitched eh",_unit,_prevItem,_newItem,_currWeaponType);
+            if ((getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer")) > 0) then {
+                TRACE_1("removing ACE_laserpointer",getNumber (configFile >> "CfgWeapons" >> _newItem >> "ACE_laserpointer"));
+                [1, "prev"] call CBA_accessory_fnc_switchAttachment;
+            };
+        }] call CBA_fnc_addEventHandler;
+    };
 
     // @todo. Maybe move to common?
     [{
