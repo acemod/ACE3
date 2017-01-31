@@ -34,7 +34,7 @@ GVAR(greenLaserUnits) = [];
         params ["_unit"];
 
         private _weapon = currentWeapon _unit;
-        private _laser = (_unit weaponAccessories _weapon) select 1;
+        private _laser = [(_unit weaponAccessories _weapon) select 1] param [0, ""];
 
         if (_laser isEqualTo "") exitWith {};
 
