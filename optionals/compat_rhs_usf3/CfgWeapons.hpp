@@ -84,10 +84,12 @@ class CfgWeapons {
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
+        ACE_RailHeightAboveBore = 3.4;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.4;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
         ACE_barrelTwist = 0.0;
@@ -158,7 +160,9 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_premier_low: rhsusf_acc_premier {};
+    class rhsusf_acc_premier_low: rhsusf_acc_premier {
+        ACE_ScopeHeightAboveRail = 4.0;
+    };
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
