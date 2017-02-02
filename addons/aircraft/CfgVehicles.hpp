@@ -188,17 +188,23 @@ class CfgVehicles {
         };*/
     };
 
-    class Heli_light_03_base_F: Helicopter_Base_F {};
-    class I_Heli_light_03_base_F: Heli_light_03_base_F {
+    class Heli_light_03_base_F: Helicopter_Base_F {
+        driverCanEject = 1;
+
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                canEject = 1;
+            };
+        };
+    };
+    class I_Heli_light_03_F: Heli_light_03_base_F {
         lockDetectionSystem = 0;
         incomingMissileDetectionSystem = 16;
-        driverCanEject = 1;
         weapons[] = {"M134_minigun", "missiles_DAR", "CMFlareLauncher",  "ACE_AIR_SAFETY" };
         magazines[] = {"5000Rnd_762x51_Yellow_Belt", "24Rnd_missiles", "168Rnd_CMFlare_Chaff_Magazine"};
 
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                canEject = 1;
                 showHMD = 1;
                 gunBeg = "commanderview";
                 gunEnd = "laserstart";
@@ -209,12 +215,6 @@ class CfgVehicles {
                 magazines[] = {"Laserbatteries"};
                 inGunnerMayFire = 1;
             };
-        };
-    };
-
-    class I_Heli_light_03_F: Heli_light_03_base_F {
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {};
         };
     };
 
@@ -267,29 +267,18 @@ class CfgVehicles {
         };*/
     };
 
-    class Heli_Transport_03_base_F: Helicopter_Base_H {};
-    class B_Heli_Transport_03_base_F: Heli_Transport_03_base_F {
-        lockDetectionSystem = 12;
-        incomingMissileDetectionSystem = 16;
+    class Heli_Transport_03_base_F: Helicopter_Base_H {
         driverCanEject = 1;
 
         class Turrets: Turrets {
             class CopilotTurret: CopilotTurret {
                 canEject = 1;
             };
-            //class MainTurret: MainTurret {};
-            class RightDoorGun: MainTurret {};
         };
     };
-
-    class B_Heli_Transport_03_unarmed_base_F: Heli_Transport_03_base_F {
-        class Turrets: Turrets {
-            class CopilotTurret: CopilotTurret {
-                canEject = 1;
-            };
-            //class MainTurret: MainTurret {};
-            //class RightDoorGun: MainTurret {};
-        };
+    class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
+        lockDetectionSystem = 12;
+        incomingMissileDetectionSystem = 16;
     };
 
     class Heli_Transport_04_base_F: Helicopter_Base_H {
