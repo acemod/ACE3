@@ -8,7 +8,7 @@
  * 2: Teleport group <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [player, "5854854754", false] call ace_zeus_fnc_moduleTeleportPlayers

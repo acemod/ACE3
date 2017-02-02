@@ -33,6 +33,11 @@ if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
         ["_nozzle", (_args select 0) getVariable [QGVAR(nozzle), objNull], [objNull]]
     ];
 
+    if (!(_unit getVariable [QGVAR(isRefueling), false])) exitWith {
+        TRACE_1("player not isRefueling",_unit);
+        [_pfID] call CBA_fnc_removePerFrameHandler;
+    };
+
     if (isNull _source || {_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)} || {!alive _source}) exitWith {
         if !(isNull _nozzle) then {
             [_unit, _nozzle] call FUNC(dropNozzle);

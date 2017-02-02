@@ -4,8 +4,8 @@
 
 PARAMS_1(_round);
 
-if(_round in GVAR(blackList)) then {
-    GVAR(blackList) = GVAR(blackList) - [_round];
+if (_round in GVAR(blackList)) then {
+    REM(GVAR(blackList),_round);
 };
 
-GVAR(objects) = GVAR(objects) - [_round];
+REM(GVAR(objects),_round);

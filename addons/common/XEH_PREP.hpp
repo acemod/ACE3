@@ -141,6 +141,7 @@ PREP(setHearingCapability);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
+PREP(setPlayerOwner);
 PREP(setProne);
 PREP(setSetting);
 PREP(setSettingFromConfig);

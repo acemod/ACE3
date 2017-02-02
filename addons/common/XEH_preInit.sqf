@@ -3,7 +3,9 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 GVAR(syncedEvents) = [] call CBA_fnc_hashCreate;
 GVAR(showHudHash) = [] call CBA_fnc_hashCreate;

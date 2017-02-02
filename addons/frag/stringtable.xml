@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_Module_DisplayName">
@@ -13,6 +13,7 @@
             <Russian>Симуляция осколков</Russian>
             <Italian>Simulazione Frammentazione</Italian>
             <Japanese>破片シミュレーション</Japanese>
+            <Korean>조각 시뮬레이션</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
@@ -26,6 +27,7 @@
             <Russian>Симуляция осколков</Russian>
             <Italian>Simulazione Frammentazione</Italian>
             <Japanese>破片シミュレーション</Japanese>
+            <Korean>조각 시뮬레이션</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
@@ -39,6 +41,7 @@
             <Russian>Включить симуляцию осколков ACE</Russian>
             <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
             <Japanese>ACE 破片シミュレーションを有効化</Japanese>
+            <Korean>ACE 조각 시뮬레이션을 적용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall">
             <English>Spalling Simulation</English>
@@ -52,6 +55,7 @@
             <Russian>Симуляция обломков</Russian>
             <Italian>Simulazione Spalling</Italian>
             <Japanese>剥離シミュレーション</Japanese>
+            <Korean>파편 시뮬레이션</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableSpall_Desc">
             <English>Enable the ACE Spalling Simulation</English>
@@ -65,6 +69,7 @@
             <Russian>Включить симуляцию обломков ACE</Russian>
             <Italian>Abilita la Simulazione Spalling di ACE</Italian>
             <Japanese>ACE 剥離シミュレーションを有効化</Japanese>
+            <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections">
             <English>Explosion Reflections Simulation</English>
@@ -76,6 +81,7 @@
             <Portuguese>Simulação de reflexo de explosão</Portuguese>
             <Russian>Cимуляция отражения взрывов ACE</Russian>
             <Japanese>爆発による飛翔シミュレーション</Japanese>
+            <Korean>폭발 반사 시뮬레이션</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
@@ -87,6 +93,7 @@
             <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
             <Russian>Включить симуляцию отражения взрывов ACE</Russian>
             <Japanese>爆発による飛翔シミュレーションを有効化</Japanese>
+            <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack">
             <English>Maximum Projectiles Tracked</English>
@@ -100,6 +107,7 @@
             <Russian>Макс. количество отслеживаемых снарядов</Russian>
             <Italian>Numero massimo di Proiettili Tracciati</Italian>
             <Japanese>最大弾頭追跡数</Japanese>
+            <Korean>최대 발사체 추적수</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrack_Desc">
             <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
@@ -113,6 +121,7 @@
             <Russian>Эта настройка контролирует максимальное количество снарядов, которок отслеживает система осколков и обломков в каждый момент времени. Снаряды, выстреленные сверх этого числа, отслеживаться не будут. Уменьшите это значение, если вы не хотите падения FPS при большом количестве снарядов в одной перестрелке (&gt; 200 одновременно летящих снарядов)</Russian>
             <Italian>Questo parametro controlla il numero massimo di proiettili che la frammentazione e il sistema di spalling tracciano in ogni momento. Se più proiettili sono sparati, non verranno tracciati. Abbassa questo parametro se non vuoi cali di FPS in scenari con molti proiettili (&gt;200 proiettili in aria contemporaneamente)</Italian>
             <Japanese>時間が許すかぎり、破片と剥離システムの最大数を設定できます。設定数以上の弾丸が発射された場合、それは対象になりません。もし多い弾数による FPS の低下を望まない場合は、低い数へ設定にします。( &amp;gt;一度に空中内で200発)</Japanese>
+            <Korean>이 설정은 조각 및 파편 시스템으로 인해 생긴 발사체의 수를 결정합니다. 만약 더 많은 발사체가 나올경우 정해진 수 이외에는 추적하지 않습니다. 이 설정을 낮춤으로써 파편이 많은 시나리오를 실행할때 더욱 원활히 진행할 수 있습니다 (한 번에 200개 이하) </Korean>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
             <English>Maximum Projectiles Per Frame</English>
@@ -126,6 +135,7 @@
             <Russian>Макс. количество снарядов за кадр</Russian>
             <Italian>Numero massimo di proiettili per Frame</Italian>
             <Japanese>フレームごとの最大弾頭数</Japanese>
+            <Korean>프레임당 최대 발사체 수</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
             <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
@@ -139,6 +149,7 @@
             <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
             <Italian>Il numero di calcoli per tracciamento di spalling ad ogni frame. Questo aiuta a distribuire l'impatto del tracciamento dello spalling su più frame, limitando ancora di più l'impatto.</Italian>
             <Japanese>与えられたフレームごとに追跡する剥離の数を決定します。FPS に影響をあたえないよう、剥離を複数のフレームで追跡し、分散させています。</Japanese>
+            <Korean>가능한 프레임마다 파편을 추적 및 계산합니다. 여러 프레임에 걸쳐 파편난 발사체를 추적하여 FPS에 도움을 줍니다. 이를 제한함으로써 더욱 큰 효과를 볼 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>(SP Only) Frag/Spall Debug Tracing</English>
@@ -152,6 +163,7 @@
             <Russian>(Только для одиночной игры) Отслеживаение/отладка осколков</Russian>
             <Italian>(Solo SP) Debug Tracciamento Frag/Spall</Italian>
             <Japanese>(SP のみ) 破片/剥離のデバッグ用表示</Japanese>
+            <Korean>(싱글플레이 전용) 조각/파편 디버그 추적화</Korean>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>

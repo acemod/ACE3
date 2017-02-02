@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_cookOff
+ * [(vehicle player)] call ace_cookoff_fnc_cookOff
  *
  * Public: No
  */
@@ -113,9 +113,12 @@ if (local _vehicle) then {
 
         [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
 
+        private _randomPosition = _vehicle getPos [100, random 360];
+
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
-                _x action ["Eject", _vehicle];
+                _x leaveVehicle _vehicle;
+                _x doMove _randomPosition;
             };
         } forEach crew _vehicle;
 

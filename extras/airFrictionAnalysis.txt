@@ -31,13 +31,21 @@ Max. drop difference (cm): 1.25
 Max. tof difference (ms): 7.0
 Optimal airFriction: 0.00123272
 ##########################################
-Ammo Class: ACE_545x39_Ball_7N6M
+Ammo Class: B_545x39_Ball_F
 MaxRanges (m): [400, 500]
-MuzzleVelocities (m/s): [780, 880, 920]
-Max. velocity difference (m/s): 19.71
-Max. drop difference (cm): 2.04
+MuzzleVelocities (m/s): [735, 892]
+Max. velocity difference (m/s): 23.07
+Max. drop difference (cm): 3.76
+Max. tof difference (ms): 12.0
+Optimal airFriction: 0.00116278
+##########################################
+Ammo Class: B_580x42_Ball_F
+MaxRanges (m): [500, 500]
+MuzzleVelocities (m/s): [930, 970]
+Max. velocity difference (m/s): 24.7
+Max. drop difference (cm): 1.51
 Max. tof difference (ms): 8.0
-Optimal airFriction: 0.00114744
+Optimal airFriction: 0.00117956
 ##########################################
 Ammo Class: B_65x39_Caseless
 MaxRanges (m): [400, 800, 800]
@@ -201,11 +209,19 @@ Optimal airFriction: 0.00108571
 ##########################################
 Ammo Class: B_408_Ball
 MaxRanges (m): [1600, 1600]
-MuzzleVelocities (m/s): [905, 915]
-Max. velocity difference (m/s): 19.47
-Max. drop difference (cm): 9.17
-Max. tof difference (ms): 22.0
-Optimal airFriction: 0.00038944
+MuzzleVelocities (m/s): [862, 872]
+Max. velocity difference (m/s): 28.15
+Max. drop difference (cm): 15.97
+Max. tof difference (ms): 77.0
+Optimal airFriction: 0.00044958
+##########################################
+Ammo Class: ACE_408_Ball
+MaxRanges (m): [1200, 1200]
+MuzzleVelocities (m/s): [1057, 1067]
+Max. velocity difference (m/s): 37.45
+Max. drop difference (cm): 7.45
+Max. tof difference (ms): 56.0
+Optimal airFriction: 0.00063655
 ##########################################
 Ammo Class: ACE_106x83mm_Ball
 MaxRanges (m): [1400, 1400]
@@ -247,6 +263,14 @@ Max. drop difference (cm): 14.52
 Max. tof difference (ms): 29.0
 Optimal airFriction: 0.00069611
 ##########################################
+Ammo Class: B_50BW_Ball_F
+MaxRanges (m): [300, 400]
+MuzzleVelocities (m/s): [510, 596]
+Max. velocity difference (m/s): 29.6
+Max. drop difference (cm): 2.19
+Max. tof difference (ms): 18.0
+Optimal airFriction: 0.00202645
+##########################################
 Ammo Class: B_127x99_Ball
 MaxRanges (m): [1300, 1300]
 MuzzleVelocities (m/s): [895, 905]
@@ -280,12 +304,12 @@ Max. tof difference (ms): 9.0
 Optimal airFriction: 0.00049899
 ##########################################
 Ammo Class: B_9x21_Ball
-MaxRanges (m): [200, 300, 300]
-MuzzleVelocities (m/s): [440, 460, 480]
-Max. velocity difference (m/s): 37.94
-Max. drop difference (cm): 5.27
+MaxRanges (m): [200, 300]
+MuzzleVelocities (m/s): [380, 420]
+Max. velocity difference (m/s): 34.77
+Max. drop difference (cm): 4.7
 Max. tof difference (ms): 31.0
-Optimal airFriction: 0.00226847
+Optimal airFriction: 0.00208292
 ##########################################
 Ammo Class: ACE_9x18_Ball_57N181S
 MaxRanges (m): [100, 200, 200]
@@ -298,10 +322,10 @@ Optimal airFriction: 0.00190333
 Ammo Class: ACE_9x19_Ball
 MaxRanges (m): [100, 200, 200]
 MuzzleVelocities (m/s): [340, 370, 400]
-Max. velocity difference (m/s): 17.59
-Max. drop difference (cm): 6.56
-Max. tof difference (ms): 10.0
-Optimal airFriction: 0.0018577
+Max. velocity difference (m/s): 23.95
+Max. drop difference (cm): 3.75
+Max. tof difference (ms): 17.0
+Optimal airFriction: 0.0019835
 ##########################################
 Ammo Class: ACE_10x25_Ball
 MaxRanges (m): [200, 300, 300]
