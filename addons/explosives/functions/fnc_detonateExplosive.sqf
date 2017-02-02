@@ -43,12 +43,7 @@ if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhe
         _exp setPosASL _pos;
     };
 };
-[{
-    params ["_explosive"];
-    TRACE_1("exploding",_explosive);
-    if (!isNull _explosive) then {
-        _explosive setDamage 1;
-    };
-}, [_item select 0], (_item select 1)] call CBA_fnc_waitAndExecute;
+
+[QGVAR(detonate), [_unit, _item select 0, _item select 1]] call CBA_fnc_serverEvent;
 
 _result

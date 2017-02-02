@@ -11,7 +11,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 {
     {
         private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
-        GVAR(ammoMagLookup) setVariable [_ammo, _x];
+        if (_ammo != "") then { GVAR(ammoMagLookup) setVariable [_ammo, _x]; };
     } count (getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines"));
     nil
 } count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");

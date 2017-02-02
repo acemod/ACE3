@@ -11,6 +11,20 @@ if (isServer) then {
     _this call FUNC(resetLocal);
 }] call CBA_fnc_addEventHandler;
 
+// workaround for static fuel stations
+if (hasInterface) then {
+    {
+        if (
+            configName _x isKindOf "Building" &&
+            {isClass (_x >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(Refuel))} &&
+            {getNumber (_x >> "scope") == 2}
+        ) then {
+            TRACE_1("Compiling menu",configName _x);
+            [configName _x] call EFUNC(interact_menu,compileMenu);
+        };
+    } count ('true' configClasses (configFile >> "CfgVehicles"));
+};
+
 
 #ifdef DEBUG_MODE_FULL
 diag_log text format ["[ACE-refuel] Showing CfgVehicles with vanilla transportFuel"];

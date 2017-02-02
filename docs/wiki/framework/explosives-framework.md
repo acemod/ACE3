@@ -133,7 +133,7 @@ Name | Use
 
 ### 5.1 Scripted Explosion
 
-`ace_explosives_fnc_scriptedExplosion`
+`ace_explosives_fnc_scriptedExplosive`
 
    | Arguments | Type | Optional (default value)
 ---| --------- | ---- | ------------------------
@@ -143,7 +143,7 @@ Name | Use
 
 #### 5.1.1 Example
 
-`[[charge1, charge2], -3] call ace_explosives_fnc_scriptedExplosion;`
+`[[charge1, charge2], -3] call ace_explosives_fnc_scriptedExplosive;`
 
    | Arguments | Explanation
 ---| --------- | -----------
