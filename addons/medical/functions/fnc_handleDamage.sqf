@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-_this = _this select [0, 6];
+_this = _this select [0, 7];
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitPointIndex"];
 TRACE_5("ACE_DEBUG: HandleDamage Called",_unit, _selection, _damage, _shooter, _projectile);
 
