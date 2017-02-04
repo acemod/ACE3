@@ -41,6 +41,6 @@ private _statement = {
 private _text = localize LSTRING(loadObject);
 private _icon = QPATHTOF(UI\Icon_load.paa);
 
-private _action = [QGVAR(load), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
+private _action = [QGVAR(load), _text, _icon, _statement, _condition, {_this call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
 [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
 

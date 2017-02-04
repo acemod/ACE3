@@ -1,5 +1,6 @@
 
 PREP(addCargoItem);
+PREP(addCargoVehiclesActions);
 PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
