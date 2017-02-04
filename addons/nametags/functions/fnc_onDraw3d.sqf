@@ -20,15 +20,24 @@ BEGIN_COUNTER(GVAR(onDraw3d));
 // Don't show nametags in spectator or if RscDisplayMPInterrupt is open
 if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
-private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2, "cba_events_visionModeEvent"] call EFUNC(common,cachedCall);
+private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2] call EFUNC(common,cachedCall);
 
-_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_onKeyPressAlphaMax","_maxDistance"];
+_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistance"];
+
+private _onKeyPressAlphaMax = 1;
+if (GVAR(showPlayerNames) == 3) then {
+    _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
+    _enabledTagsNearby = _enabledTagsNearby || {_onKeyPressAlphaMax > 0}
+};
+if (GVAR(showPlayerNames) == 4) then {
+    _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
+    _enabledTagsCursor = _onKeyPressAlphaMax > 0;
+};
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
 
 private _camPosASL = AGLtoASL _camPosAGL;
-private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL;
 
 // Show nametag for the unit behind the cursor or its commander
 if (_enabledTagsCursor) then {
@@ -94,6 +103,9 @@ if (_enabledTagsNearby) then {
         private _target = _x;
 
         if !(isNull _target) then {
+            private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
+            if (_enabledTagsCursor && {!_drawSoundwave}) exitWith {}; // (Cursor Only && showSoundWaves==2) - quick exit
+
             private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
             private _distance = vectorMagnitude _relPos;
 
@@ -109,7 +121,6 @@ if (_enabledTagsNearby) then {
                 };
             };
 
-            private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
             private _alphaMax = _onKeyPressAlphaMax;
             if ((GVAR(showSoundWaves) == 2) && _drawSoundwave) then {
                 _drawName = _drawSoundwave;
