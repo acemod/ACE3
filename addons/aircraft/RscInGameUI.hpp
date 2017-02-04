@@ -10,6 +10,13 @@ class HScrollbar;
 class RscLadderPicture;
 class RscControlsGroupNoScrollbars;
 
+class GVAR(aslAltitudeText): RscText {
+    style = 1;
+    colorText[] = {"(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])", "(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"};
+    sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+};
+
+
 class RscInGameUI {
     class RscUnitInfo;
     class Rsc_ACE_Helo_UI_Turret: RscUnitInfo {
