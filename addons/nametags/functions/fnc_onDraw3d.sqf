@@ -15,57 +15,14 @@
  */
 #include "script_component.hpp"
 
-private ["_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_relPos", "_projDist", "_target"];
-
 BEGIN_COUNTER(GVAR(onDraw3d));
 
 // Don't show nametags in spectator or if RscDisplayMPInterrupt is open
 if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
-// Determine flags from current settings
-private _drawName = true;
-private _drawRank = GVAR(showPlayerRanks);
-private _enabledTagsNearby = false;
-private _enabledTagsCursor = false;
-private _onKeyPressAlphaMax = 1;
-switch (GVAR(showPlayerNames)) do {
-    case 0: {
-        // Player names Disabled
-        _drawName = false;
-        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-        _enabledTagsCursor = false;
-    };
-    case 1: {
-        // Player names Enabled
-        _enabledTagsNearby = true;
-        _enabledTagsCursor = false;
-    };
-    case 2: {
-        // Player names Only cursor
-        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-        _enabledTagsCursor = true;
-    };
-    case 3: {
-        // Player names Only Keypress
-        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
-        _enabledTagsNearby = (_onKeyPressAlphaMax) > 0 || (GVAR(showSoundWaves) == 2);
-        _enabledTagsCursor = false;
-    };
-    case 4: {
-        // Player names Only Cursor and Keypress
-        _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
-        _enabledTagsNearby = (GVAR(showSoundWaves) == 2);
-        _enabledTagsCursor = _onKeyPressAlphaMax > 0;
-    };
-    case 5: {
-        // Fade on border
-        _enabledTagsNearby = true;
-        _enabledTagsCursor = false;
-    };
-};
+private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2, "cba_events_visionModeEvent"] call EFUNC(common,cachedCall);
 
-private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_onKeyPressAlphaMax","_maxDistance"];
 
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
@@ -75,7 +32,7 @@ private _vecy = (AGLtoASL positionCameraToWorld [0, 0, 1]) vectorDiff _camPosASL
 
 // Show nametag for the unit behind the cursor or its commander
 if (_enabledTagsCursor) then {
-    _target = cursorTarget;
+    private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
         if !(_target in allUnitsUAV) then {
@@ -92,7 +49,7 @@ if (_enabledTagsCursor) then {
         {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
-        _distance = ACE_player distance _target;
+        private _distance = ACE_player distance _target;
 
         private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
         // Alpha:
