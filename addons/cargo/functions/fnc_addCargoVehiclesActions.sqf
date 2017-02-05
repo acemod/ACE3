@@ -27,14 +27,17 @@ private _statement = {
 private _actions = [];
 
 {
-    private _name = getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName");
-    private _ownerName = [_x, true] call EFUNC(common,getName);
-    if ("" != _ownerName) then {
-        _name = format ["%1 (%2)", _name, _ownerName];
+    private _config = configFile >> "CfgVehicles" >> typeOf _x;
+    if (1 == getNumber (_config >> QGVAR(hasCargo))) then {
+        private _name = getText (_config >> "displayName");
+        private _ownerName = [_x, true] call EFUNC(common,getName);
+        if ("" != _ownerName) then {
+            _name = format ["%1 (%2)", _name, _ownerName];
+        };
+        private _icon = (getText (_config >> "icon")) call BIS_fnc_textureVehicleIcon;
+        private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, [_x]] call EFUNC(interact_menu,createAction);
+        _actions pushBack [_action, [], _target];
     };
-    private _icon = (getText (configFile >> "CfgVehicles" >> typeOf _x >> "icon")) call BIS_fnc_textureVehicleIcon;
-    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, [_x]] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_action, [], _target];
     false
 } count (_player nearEntities [["Car", "Air", "Tank", "Ship", "Cargo_base_F"], MAX_LOAD_DISTANCE]);
 
