@@ -32,10 +32,13 @@ private _condition = {
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) == 1} &&
     {locked _target < 2} &&
     {alive _target} &&
-    {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+    {0 < {
+            1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo)) &&
+            {_x != _target}
+        } count (_player nearEntities [["Car", "Air", "Tank", "Ship", "Cargo_base_F"], MAX_LOAD_DISTANCE])}
 };
 private _statement = {
-    params ["_target", "_player"];
     [_player, _target] call FUNC(startLoadIn);
 };
 private _text = localize LSTRING(loadObject);

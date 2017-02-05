@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-params ["_target", "_player"];
-
 private _statement = {
     params ["_target", "_player", "_params"];
     _params params ["_vehicle"];
@@ -28,7 +26,10 @@ private _actions = [];
 
 {
     private _config = configFile >> "CfgVehicles" >> typeOf _x;
-    if (1 == getNumber (_config >> QGVAR(hasCargo))) then {
+    if (
+        1 == getNumber (_config >> QGVAR(hasCargo)) &&
+        {_x != _target}
+    ) then {
         private _name = getText (_config >> "displayName");
         private _ownerName = [_x, true] call EFUNC(common,getName);
         if ("" != _ownerName) then {

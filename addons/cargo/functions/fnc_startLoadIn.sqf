@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Object <OBJECT>
+ * 2: Vehicle <OBJECT> (Optional)
  *
  * Return Value:
  * Load ProgressBar Started <BOOL>
@@ -16,9 +17,10 @@
  */
 #include "script_component.hpp"
 
-params ["_player", "_object", ["_vehicle", objNull]];
-TRACE_3("params",_player,_object,_vehicle);
+params ["_player", "_object", ["_cargoVehicle", objNull]];
+TRACE_3("params",_player,_object,_cargoVehicle);
 
+private _vehicle = _cargoVehicle;
 if (isNull _vehicle) then {
     _vehicle = [_player, _object] call FUNC(findNearestVehicle);
     if ((isNull _vehicle) || {_vehicle isKindOf "Cargo_Base_F"}) then {
