@@ -33,7 +33,7 @@ private _actions = [];
         _name = format ["%1 (%2)", _name, _ownerName];
     };
     private _icon = (getText (configFile >> "CfgVehicles" >> typeOf _x >> "icon")) call BIS_fnc_textureVehicleIcon;
-    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, [_x]] call ace_interact_menu_fnc_createAction;
+    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, [_x]] call EFUNC(interact_menu,createAction);
     _actions pushBack [_action, [], _target];
     false
 } count (_player nearEntities [["Car", "Air", "Tank", "Ship", "Cargo_base_F"], MAX_LOAD_DISTANCE]);
