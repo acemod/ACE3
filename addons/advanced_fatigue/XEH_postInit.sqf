@@ -14,12 +14,15 @@ if (!hasInterface) exitWith {};
     // - GVAR updating and initialization -----------------------------------------
     ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
 
-    private _fnc_showStaminaBar = {
+    ["visibleMap", {
+        params ["", "_visableMap"]; // command visibleMap is updated one frame later
         private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
-    };
-    ["visibleMap", _fnc_showStaminaBar, true] call CBA_fnc_addPlayerEventHandler;
-    ["vehicle", _fnc_showStaminaBar, true] call CBA_fnc_addPlayerEventHandler;
+        _staminaBarContainer ctrlShow ((!_visableMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", {
+        private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
+        _staminaBarContainer ctrlShow ((!visableMap) && {(vehicle ACE_player) == ACE_player});
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
     if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
