@@ -40,6 +40,6 @@ private _actions = [];
         _actions pushBack [_action, [], _target];
     };
     false
-} count (_player nearEntities [["Car", "Air", "Tank", "Ship", "Cargo_base_F"], MAX_LOAD_DISTANCE]);
+} count (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE]);
 
 _actions

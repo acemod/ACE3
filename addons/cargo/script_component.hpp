@@ -17,3 +17,4 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define MAX_LOAD_DISTANCE 10
+#define CARGO_VEHICLE_CLASSES ["Car", "Air", "Tank", "Ship", "Cargo_base_F", "Land_PaperBox_closed_F"]

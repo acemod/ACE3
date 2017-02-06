@@ -36,7 +36,7 @@ private _condition = {
     {0 < {
             1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo)) &&
             {_x != _target}
-        } count (_player nearEntities [["Car", "Air", "Tank", "Ship", "Cargo_base_F"], MAX_LOAD_DISTANCE])}
+        } count (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE])}
 };
 private _statement = {
     [_player, _target] call FUNC(startLoadIn);
