@@ -13,15 +13,18 @@ class CfgWeapons {
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
+        ACE_RailHeightAboveBore = 3.8;
     };
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 609.6;
         ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 3.6;
     };
     class rhs_weap_m24sws: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
+        ACE_RailHeightAboveBore = 1.8;
     };
     class rhs_weap_m40a5: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 304.8; // 1:12"
@@ -80,6 +83,7 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 3.3;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
@@ -138,8 +142,11 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {};
+    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+        ACE_ScopeHeightAboveRail = 2.4;
+    };
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
+        ACE_ScopeHeightAboveRail = 3.8;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -149,8 +156,11 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {};
+    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {
+        ACE_ScopeHeightAboveRail = 3.8;
+    };
     class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2 {
+        ACE_ScopeHeightAboveRail = 5.4;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -164,6 +174,7 @@ class CfgWeapons {
         ACE_ScopeHeightAboveRail = 4.0;
     };
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
+        ACE_ScopeHeightAboveRail = 5.4;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_nvg {
