@@ -1,3 +1,4 @@
+sudo: required
 branches:
   only:
    - master
@@ -5,12 +6,17 @@ branches:
 language: python
 python:
 - '3.4'
+before_install:
+- sudo add-apt-repository ppa:koffeinflummi/armake -y
+- sudo apt-get update -qq
+- sudo apt-get install armake -y
 before_script:
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
     pip install pygithub;
     pip install pygithub3;
   fi
 script:
+- make
 - python3 tools/sqf_validator.py
 - python3 tools/config_style_checker.py
 - if [ -n "${GH_TOKEN}" ] && [ "${TRAVIS_BRANCH}" == "master" ] && [ "${TRAVIS_PULL_REQUEST}" == "false" ]; then
