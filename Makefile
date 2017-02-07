@@ -37,7 +37,7 @@ $(BIN)/keys/%.biprivatekey:
 
 $(BIN)/addons/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/addons/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
 	@echo "  SIG  $@"
-	@armake sign -f $(BIN)/keys/ace_$(VERSION_FULL).biprivatekey $<
+	@armake sign -f $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey $<
 
 $(BIN)/optionals/$(PREFIX)_%.pbo.$(PREFIX)_$(VERSION_FULL).bisign: $(BIN)/optionals/$(PREFIX)_%.pbo $(BIN)/keys/$(PREFIX)_$(VERSION_FULL).biprivatekey
 	@echo "  SIG  $@"
@@ -59,7 +59,7 @@ clean:
 release:
 	@"$(MAKE)" clean
 	@"$(MAKE)" $(MAKEFLAGS) signatures
-	@echo "  ZIP  ace3_$(VERSION).zip"
+	@echo "  ZIP  $(ZIP)_$(VERSION).zip"
 	@cp *.dll AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp mod.cpp README.md docs/README_DE.md docs/README_PL.md $(BIN)
 	@cp -r extras/userconfig $(BIN)/optionals
 	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
