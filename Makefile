@@ -61,7 +61,7 @@ release:
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  ace3_$(VERSION).zip"
 	@cp *.dll AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp mod.cpp README.md docs/README_DE.md docs/README_PL.md $(BIN)
-	@cp -r optionals/userconfig $(BIN)/optionals
+	@cp -r extras/userconfig $(BIN)/optionals
 	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
 
 .PHONY: release
