@@ -50,7 +50,11 @@ weaponAssembled = "{_this call _x} forEach ((_this select 0) getVariable ""cba_x
 weaponDisassembled = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponDisassembled"")"; \
 weaponDeployed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponDeployed"")"; \
 weaponRested = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponRested"")"; \
-reloaded = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_reloaded"")";
+reloaded = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_reloaded"")"; \
+firedMan = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_firedMan"")"; \
+turnIn = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_turnIn"")"; \
+turnOut = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_turnOut"")"; \
+deleted = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_deleted"")";
 
 
 /* 
@@ -99,4 +103,8 @@ weaponAssembled = ""; \
 weaponDisassembled = ""; \
 weaponDeployed = ""; \
 weaponRested = ""; \
-reloaded = "";
+reloaded = ""; \
+firedMan = ""; \
+turnIn = ""; \
+turnOut = ""; \
+deleted = "";

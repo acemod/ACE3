@@ -1,14 +1,14 @@
-MAJOR = $(shell grep "^\#define[[:space:]]*MAJOR" addons/main/script_mod.hpp | egrep -m 1 -o '[[:digit:]]+')
-MINOR = $(shell grep "^\#define[[:space:]]*MINOR" addons/main/script_mod.hpp | egrep -m 1 -o '[[:digit:]]+')
-PATCH = $(shell grep "^\#define[[:space:]]*PATCHLVL" addons/main/script_mod.hpp | egrep -m 1 -o '[[:digit:]]+')
-BUILD = $(shell grep "^\#define[[:space:]]*BUILD" addons/main/script_mod.hpp | egrep -m 1 -o '[[:digit:]]+')
-VERSION = $(MAJOR).$(MINOR).$(PATCH)
-VERSION_FULL = $(VERSION).$(BUILD)
 PREFIX = ace
 BIN = @ace
 ZIP = ace3
-CBA = tools/cba
-FLAGS = -i $(CBA) -w unquoted-string -w redefinition-wo-undef
+FLAGS = -i include -w unquoted-string -w redefinition-wo-undef
+
+MAJOR = $(shell grep "^\#define[[:space:]]*MAJOR" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
+MINOR = $(shell grep "^\#define[[:space:]]*MINOR" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
+PATCH = $(shell grep "^\#define[[:space:]]*PATCHLVL" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
+BUILD = $(shell grep "^\#define[[:space:]]*BUILD" addons/main/script_version.hpp | egrep -m 1 -o '[[:digit:]]+')
+VERSION = $(MAJOR).$(MINOR).$(PATCH)
+VERSION_FULL = $(VERSION).$(BUILD)
 
 $(BIN)/addons/$(PREFIX)_%.pbo: addons/%
 	@mkdir -p $(BIN)/addons
@@ -28,7 +28,7 @@ all: $(patsubst addons/%, $(BIN)/addons/$(PREFIX)_%.pbo, $(wildcard addons/*)) \
 		$(patsubst optionals/%, $(BIN)/optionals/$(PREFIX)_%.pbo, $(wildcard optionals/*))
 
 filepatching:
-	"$(MAKE)" $(MAKEFLAGS) FLAGS="-i $(CBA) -w unquoted-string -p"
+	"$(MAKE)" $(MAKEFLAGS) FLAGS="-w unquoted-string -p"
 
 $(BIN)/keys/%.biprivatekey:
 	@mkdir -p $(BIN)/keys
@@ -60,7 +60,8 @@ release:
 	@"$(MAKE)" clean
 	@"$(MAKE)" $(MAKEFLAGS) signatures
 	@echo "  ZIP  ace3_$(VERSION).zip"
-	@cp *.dll LICENSE README.md AUTHORS.txt logo_ace3_ca.paa mod.cpp meta.cpp $(BIN)
+	@cp *.dll AUTHORS.txt LICENSE logo_ace3_ca.paa meta.cpp mod.cpp README.md docs/README_DE.md docs/README_PL.md $(BIN)
+	@cp -r optionals/userconfig $(BIN)/optionals
 	@zip -r $(ZIP)_$(VERSION).zip $(BIN) &> /dev/null
 
 .PHONY: release
