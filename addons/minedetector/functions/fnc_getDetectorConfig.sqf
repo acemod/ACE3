@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Get the mine detector configuration from the config file
+ * Get the mine detector configuration from the cache or config file
  *
  * Arguments:
  * 0: Detector class name <STRING>
@@ -18,14 +18,20 @@
 
 params ["_detectorType"];
 
-private _config = (configFile >> "ACE_detector" >> "detectors" >> _detectorType);
-if (isClass _config) then {
-    [
-        _detectorType,
-        getNumber (_config >> "radius"),
-        GVAR(ALL_DETECTABLE_TYPES), // TODO read from config and use this as a back up value instead
-        getArray (_config >> "sounds")
-    ];
-} else {
-    [];
+if (_detectorType isEqualTo "") exitWith {[]};
+
+private _detectorConfig = GVAR(detectorConfigs) getVariable _detectorType;
+if (isNil "_detectorConfig") then {
+    private _cfgEntry = (configFile >> "ACE_detector" >> "detectors" >> _detectorType);
+    if (isClass _cfgEntry) then {
+        _detectorConfig = [
+            _detectorType,
+            getNumber (_cfgEntry >> "radius"),
+            getArray (_cfgEntry >> "sounds")
+        ];
+    } else {
+        _detectorConfig = [];
+    };
+    GVAR(detectorConfigs) setVariable [_detectorType, _detectorConfig];
 };
+_detectorConfig

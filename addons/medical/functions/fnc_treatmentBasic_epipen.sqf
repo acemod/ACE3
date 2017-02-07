@@ -18,7 +18,3 @@
 params ["_caller", "_target","_className"];
 
 [_target, false] call FUNC(setUnconscious);
-
-if (_target getVariable [QGVAR(inReviveState), false]) then {
-    _target setVariable [QGVAR(inReviveState), nil, true];
-};

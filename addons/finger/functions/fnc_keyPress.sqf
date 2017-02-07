@@ -60,6 +60,6 @@ TRACE_1("sending finger to",_sendFingerToPlayers);
 
 [QGVAR(fingered), [ACE_player, _fingerPosASL, _originASL vectorDistance _fingerPosASL], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
-ACE_player playActionNow "GestureGo";
+[ACE_player, "GestureGo"] call EFUNC(common,doGesture);
 
 true

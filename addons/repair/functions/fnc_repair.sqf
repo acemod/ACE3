@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
+private ["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
@@ -196,14 +196,13 @@ _repairTime = if (isNumber (_config >> "repairingTime")) then {
     0;
 };
 
-private ["_processText"];
 // Find localized string
-_hitPointClassname = if ((typeName _hitPoint) == "STRING") then {
+_hitPointClassname = if (_hitPoint isEqualType "") then {
     _hitPoint
 } else {
     ((getAllHitPointsDamage _target) select 0) select _hitPoint
 };
-_processText = getText (_config >> "displayNameProgress");
+private _processText = getText (_config >> "displayNameProgress");
 private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
 ([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
 

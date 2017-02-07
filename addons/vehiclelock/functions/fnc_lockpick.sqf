@@ -51,6 +51,7 @@ if (!([[_unit, _veh]] call _condition)) exitWith {false};
 
 _returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
 switch (_funcType) do {
+    case "canLockpick": {};
     case "startLockpick": {
         [_vehLockpickStrenth, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition] call EFUNC(common,progressBar);
     };

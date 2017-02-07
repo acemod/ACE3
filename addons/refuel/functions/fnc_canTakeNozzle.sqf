@@ -22,6 +22,7 @@ if (isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
     {!alive _target} ||
+    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
     {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 !(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

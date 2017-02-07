@@ -659,7 +659,7 @@ class CfgVehicles {
         scope = 1;
         scopeCurator = 2;
         side = -1;
-        model = QPATHTOEF(apl,bodybag.p3d);
+        model = QPATHTOEF(apl,ace_bodybag.p3d);
         icon = "";
         displayName = CSTRING(Bodybag_Display);
         EGVAR(dragging,canDrag) = 1;
@@ -667,6 +667,8 @@ class CfgVehicles {
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOEF(apl,data\bodybag_co.paa)};
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);

@@ -7,3 +7,4 @@ PREP(status);
 PREP(canInteract);
 PREP(calculateMass);
 PREP(hasGunbag);
+PREP(isMachineGun);

@@ -24,10 +24,6 @@ params ["_target", ["_show", true], ["_selectionN", 0]];
 GVAR(currentSelectedSelectionN) = [0, _selectionN] select (IS_SCALAR(_selectionN));
 GVAR(displayPatientInformationTarget) = [ObjNull, _target] select _show;
 
-if (USE_WOUND_EVENT_SYNC) then {
-    [_target, ACE_player] call FUNC(requestWoundSync);
-};
-
 if (_show) then {
     ("ACE_MedicalRscDisplayInformation" call BIS_fnc_rscLayer) cutRsc [QGVAR(DisplayInformation),"PLAIN"];
 
@@ -54,10 +50,8 @@ if (_show) then {
         private _allInjuryTexts = [];
         private _genericMessages = [];
 
-        if (GVAR(level) >= 2 && {([_unit] call FUNC(hasMedicalEnabled))}) then {
-            private _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
-            _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
-        };
+        private _partText = [LSTRING(Head), LSTRING(Torso), LSTRING(LeftArm) ,LSTRING(RightArm) ,LSTRING(LeftLeg), LSTRING(RightLeg)] select _selectionN;
+        _genericMessages pushback [localize _partText, [1, 1, 1, 1]];
 
         if (_target getVariable[QGVAR(isBleeding), false]) then {
             _genericMessages pushback [localize LSTRING(Status_Bleeding), [1, 0.1, 0.1, 1]];
@@ -74,87 +68,62 @@ if (_show) then {
         };
 
         private _totalIvVolume = 0;
+        private _bloodBags = _unit getVariable [QGVAR(ivBags), []];
         {
-            private _value = _target getVariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-            };
-        } foreach GVAR(IVBags);
+            _x params ["_bagVolumeRemaining"];
+            _totalIvVolume = _totalIvVolume + _bagVolumeRemaining;
+        } foreach _bloodBags;
+
         if (_totalIvVolume >= 1) then {
             _genericMessages pushback [format[localize LSTRING(receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
         };
 
         private _damaged = [false, false, false, false, false, false];
         private _selectionBloodLoss = [0,0,0,0,0,0];
-        if (GVAR(level) >= 2 && {([_target] call FUNC(hasMedicalEnabled))}) then {
-            private _openWounds = _target getVariable [QGVAR(openWounds), []];
-            {
-                _x params ["", "_x1", "_selectionX", "_amountOf", "_x4"];
-                // Find how much this bodypart is bleeding
-                if (_amountOf > 0) then {
-                    _damaged set [_selectionX, true];
-                    _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
 
-                    if (_selectionN == _selectionX) then {
-                    // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-                        if (_amountOf >= 1) then {
-                            // TODO localization
-                            _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
-                        } else {
-                            // TODO localization
-                            _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
-                        };
-                    };
-                };
-            } foreach _openWounds;
+        private _openWounds = _target getVariable [QGVAR(openWounds), []];
+        {
+            _x params ["", "_x1", "_selectionX", "_amountOf", "_x4"];
+            // Find how much this bodypart is bleeding
+            if (_amountOf > 0) then {
+                _damaged set [_selectionX, true];
+                _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
 
-            private _bandagedwounds = _target getVariable [QGVAR(bandagedWounds), []];
-            {
-                _x params ["", "", "_selectionX", "_amountOf", "_x4"];
-                // Find how much this bodypart is bleeding
-                if !(_damaged select _selectionX) then {
-                    _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
-                };
                 if (_selectionN == _selectionX) then {
-                    // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
-                    if (_amountOf > 0) then {
-                        if (_amountOf >= 1) then {
-                            // TODO localization
-                            _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
-                        } else {
-                            // TODO localization
-                            _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
-                        };
+                // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                    if (_amountOf >= 1) then {
+                        // TODO localization
+                        _allInjuryTexts pushback [format["%2x %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6, ceil _amountOf], [1,1,1,1]];
+                    } else {
+                        // TODO localization
+                        _allInjuryTexts pushback [format["Partial %1", (GVAR(AllWoundInjuryTypes) select _x1) select 6], [1,1,1,1]];
                     };
                 };
-            } foreach _bandagedwounds;
-        } else {
-            _damaged = [true, true, true, true, true, true];
-            {
-                private _hitPoint = [_target, _x, true] call FUNC(translateSelections);
-                _selectionBloodLoss set [_forEachIndex, _target getHitPointDamage _hitPoint];
-                if (_target getHitPointDamage _hitPoint > 0 && {_forEachIndex == _selectionN}) then {
-                    private _pointDamage = _target getHitPointDamage _hitPoint;
-                    private _severity = switch (true) do {
-                        case (_pointDamage > 0.5): {localize LSTRING(HeavilyWounded)};
-                        case (_pointDamage > 0.1): {localize LSTRING(LightlyWounded)};
-                        default                    {localize LSTRING(VeryLightlyWounded)};
+            };
+        } foreach _openWounds;
+
+        private _bandagedwounds = _target getVariable [QGVAR(bandagedWounds), []];
+        {
+            _x params ["", "", "_selectionX", "_amountOf", "_x4"];
+            // Find how much this bodypart is bleeding
+            if !(_damaged select _selectionX) then {
+                _selectionBloodLoss set [_selectionX, (_selectionBloodLoss select _selectionX) + (20 * (_x4 * _amountOf))];
+            };
+            if (_selectionN == _selectionX) then {
+                // Collect the text to be displayed for this injury [ Select injury class type definition - select the classname DisplayName (6th), amount of injuries for this]
+                if (_amountOf > 0) then {
+                    if (_amountOf >= 1) then {
+                        // TODO localization
+                        _allInjuryTexts pushback [format["[B] %2x %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6, ceil _amountOf], [0.88,0.7,0.65,1]];
+                    } else {
+                        // TODO localization
+                        _allInjuryTexts pushback [format["[B] Partial %1", (GVAR(AllWoundInjuryTypes) select (_x select 1)) select 6], [0.88,0.7,0.65,1]];
                     };
-                    private _part = localize ([
-                        LSTRING(Head),
-                        LSTRING(Torso),
-                        LSTRING(LeftArm),
-                        LSTRING(RightArm),
-                        LSTRING(LeftLeg),
-                        LSTRING(RightLeg)
-                    ] select _forEachIndex);
-                    _allInjuryTexts pushBack [format ["%1 %2", _severity, toLower _part], [1,1,1,1]];
                 };
-            } forEach GVAR(SELECTIONS);
-        };
+            };
+        } foreach _bandagedwounds;
 
         // Handle the body image coloring
-
         private _availableSelections = [50,51,52,53,54,55];
         {
             private _total = _x;

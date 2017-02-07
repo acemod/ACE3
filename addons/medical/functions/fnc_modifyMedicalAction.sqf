@@ -17,23 +17,21 @@
 
 #include "script_component.hpp"
 
-params ["_target", "_player", "_selectionN", "_actionData"];
+params ["_target", "_player", "_partNumber", "_actionData"];
 
-if (GVAR(level) < 2 || {!([_target] call FUNC(hasMedicalEnabled))}) exitWith {
-    private _pointDamage = (_target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]]) select _selectionN;
-
-    if (_pointDamage >= 0.8) exitWith {
-        _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
+private _bloodLossOnSelection = 0;
+// Add all bleeding from wounds on selection
+{
+    _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
+    if (_selectionX == _partNumber) then {
+        _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
     };
-    if (_pointDamage > 0) exitWith {
+} forEach (_target getvariable [QGVAR(openWounds), []]);
+
+if (_bloodLossOnSelection >= 0.15) then {
+    _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
+} else {
+    if (_bloodLossOnSelection > 0 ) then {
         _actionData set [2, QPATHTOF(UI\icons\medical_crossYellow.paa)];
     };
 };
-
-private _openWounds = _target getVariable [QGVAR(openWounds), []];
-{
-    _x params ["", "", "_selectionX", "_amountOf", "_x4"];
-    if (_amountOf > 0 && {(_selectionN == _selectionX)} && {_x4 > 0}) exitWith {
-        _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
-    };
-} forEach _openWounds;

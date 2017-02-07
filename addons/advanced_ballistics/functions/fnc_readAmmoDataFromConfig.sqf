@@ -59,7 +59,7 @@ if ((_typicalSpeed > 0) && {_typicalSpeed < 360}) then {
     if (_inheritedBarrelConfig || _inheritedTempConfig) then {
         private _parentConfig = inheritsFrom _ammoConfig;
         private _parentSpeed = getNumber (_parentConfig >> "typicalSpeed");
-        ACE_LOGWARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig, _parentSpeed);
+        WARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig, _parentSpeed);
         if (_parentSpeed <= 0) exitWith {//Handle weird or null parent
             _muzzleVelocityTable = [];
             _ammoTempMuzzleVelocityShifts = [];

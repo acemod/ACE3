@@ -42,7 +42,7 @@ if (isNil "_shouldAdd") then {
     private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
     private _indirectRange = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange");
     private _force = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(force));
-    private _fragPower = getNumber(configFile >> "CfgAmmo" >> _ammo >> "indirecthit")*(sqrt((getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange"))));
+    private _fragPower = getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirecthit") * (sqrt (getNumber (configFile >> "CfgAmmo" >> _ammo >> "indirectHitRange")));
 
     _shouldAdd = (_skip == 0) && {(_force == 1) || {_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}}};
     TRACE_6("SettingCache[willFrag?]",_skip,_explosive,_indirectRange,_force,_fragPower,_shouldAdd);

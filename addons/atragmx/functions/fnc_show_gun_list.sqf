@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_show_gun_list
+ * call ace_atragmx_fnc_show_gun_list
  *
  * Public: No
  */

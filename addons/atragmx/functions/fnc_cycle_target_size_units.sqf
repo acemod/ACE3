@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_cycle_target_size_units
+ * call ace_atragmx_fnc_cycle_target_size_units
  *
  * Public: No
  */

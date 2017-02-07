@@ -171,8 +171,7 @@ switch (_position) do {
     };
 
     case "cargo" : {
-        private "_positions";
-        _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
+        private _positions = [typeOf _vehicle] call FUNC(getVehicleCargo);
 
         {
             if (alive _x) then {_positions deleteAt (_positions find (_vehicle getCargoIndex _x))};

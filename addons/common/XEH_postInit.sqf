@@ -65,7 +65,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    ACE_LOGINFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -91,7 +91,7 @@ if (isServer) then {
 // Event to log Fix Headbug output
 [QGVAR(headbugFixUsed), {
     params ["_profileName", "_animation"];
-    ACE_LOGINFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
+    INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
@@ -118,6 +118,8 @@ if (isServer) then {
 [QGVAR(setVelocity), {(_this select 0) setVelocity (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(playMove), {(_this select 0) playMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(playMoveNow), {(_this select 0) playMoveNow (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playAction), {(_this select 0) playAction (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(playActionNow), {(_this select 0) playActionNow (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVanillaHitPointDamage), {(_this select 0) setHitPointDamage (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -144,7 +146,7 @@ if (isServer) then {
 // Handle JIP scenario
 if (!isServer) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP event synchronization initialized");
+        INFO("JIP event synchronization initialized");
         ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
@@ -157,14 +159,6 @@ if (!isServer) then {
 if (isServer) then {
     [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
-
-// @todo deprecated
-QGVAR(remoteFnc) addPublicVariableEventHandler {
-    (_this select 1) call FUNC(execRemoteFnc);
-};
-
-// @todo figure out what this does.
-[missionNamespace] call FUNC(executePersistent);
 
 
 //////////////////////////////////////////////////
@@ -209,13 +203,13 @@ call FUNC(checkFiles);
     if (isNil QGVAR(settings) || {!isServer && isNil QEGVAR(modules,serverModulesRead)}) exitWith {
         if !(_waitingMsgSent) then {
             _args set [0, true];
-            ACE_LOGINFO("Waiting on settings from server...");
+            INFO("Waiting on settings from server...");
         };
     };
 
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 
-    ACE_LOGINFO("Settings received from server.");
+    INFO("Settings received from server.");
 
     if (isServer) then { //read settings from paramsArray
         [] call FUNC(readSettingsFromParamsArray);
@@ -234,14 +228,14 @@ call FUNC(checkFiles);
         call FUNC(loadSettingsLocalizedText);
     };
 
-    ACE_LOGINFO("Settings initialized.");
+    INFO("Settings initialized.");
 
     //Event that settings are safe to use:
     ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
 
     //Set init finished and run all delayed functions:
     GVAR(settingsInitFinished) = true;
-    ACE_LOGINFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
+    INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
 
     {
         (_x select 1) call (_x select 0);
@@ -272,8 +266,8 @@ enableCamShake true;
 
 //FUNC(showHud) needs to be refreshed if it was set during mission init
 ["ace_infoDisplayChanged", {
-    GVAR(showHudHash) params ["", "_masks"];
-    if (!(_masks isEqualTo [])) then {
+    GVAR(showHudHash) params ["", "", "_masks"];
+    if !(_masks isEqualTo []) then {
         [] call FUNC(showHud);
     };
 }] call CBA_fnc_addEventHandler;
@@ -301,44 +295,17 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
+// It is possible that CBA_fnc_addPlayerEventHandler has allready been called and run
+// We will NOT get any events for the initial state, so manually set ACE_player
+if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then {
+    // INFO("CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player"); //ToDo CBA 3.1
+    diag_log text "[ACE-Common - CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player";
+    ACE_player = cba_events_oldUnit;
+};
+
 // "playerChanged" event
 ["unit", {
     ACE_player = (_this select 0);
-    ["ace_playerChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVehicleChanged" event
-["vehicle", {
-    ["ace_playerVehicleChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerTurretChanged" event
-["turret", {
-    ["ace_playerTurretChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerWeaponChanged" event
-["weapon", {
-    ["ace_playerWeaponChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerInventoryChanged" event
-["loadout", {
-    ["ace_playerInventoryChanged", [ACE_player, [ACE_player, false] call FUNC(getAllGear)]] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "playerVisionModeChanged" event
-["visionMode", {
-    ["ace_playerVisionModeChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-// "cameraViewChanged" event
-["cameraView", {
-    ["ace_cameraViewChanged", _this] call CBA_fnc_localEvent;
-}] call CBA_fnc_addPlayerEventHandler;
-
-["visibleMap", {
-    ["ace_visibleMapChanged", _this] call CBA_fnc_localEvent;
 }] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;
@@ -381,7 +348,7 @@ GVAR(OldIsCamera) = false;
 //////////////////////////////////////////////////
 
 ["isNotDead", {
-    params ["_unit", "_target"];
+    params ["_unit"];
     alive _unit
 }] call FUNC(addCanInteractWithCondition);
 
@@ -399,6 +366,49 @@ GVAR(OldIsCamera) = false;
 }] call FUNC(addCanInteractWithCondition);
 
 ["isNotInZeus", {isNull curatorCamera}] call FUNC(addCanInteractWithCondition);
+
+//////////////////////////////////////////////////
+// Set up reload mutex
+//////////////////////////////////////////////////
+
+GVAR(isReloading) = false;
+
+["keyDown", {
+    if ((_this select 1) in actionKeys "ReloadMagazine" && {alive ACE_player}) then {
+        //Ignore mounted (except ffv)
+        if (!(player call CBA_fnc_canUseWeapon)) exitWith {};
+        private _weapon = currentWeapon ACE_player;
+
+        if (_weapon != "") then {
+            private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
+            private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
+            private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
+            private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
+
+            if (_duration != 0) then {
+                _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
+            } else {
+                _duration = 3;
+            };
+
+            TRACE_2("Reloading, blocking gestures",_weapon,_duration);
+            GVAR(reloadingETA) = CBA_missionTime + _duration;
+
+            if (!GVAR(isReloading)) then {
+                GVAR(isReloading) = true;
+
+                [{
+                    CBA_missionTime > GVAR(reloadingETA)
+                },{
+                    GVAR(isReloading) = false;
+                }] call CBA_fnc_waitUntilAndExecute;
+            };
+        };
+    };
+
+    false
+}] call CBA_fnc_addDisplayHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler

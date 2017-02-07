@@ -1,13 +1,16 @@
 /*
  * Author: SzwedzikPL
- * Shows dogtag
+ * Shows dogtag.
  *
  * Arguments:
- * 0: Dog tag data <ARRAY>
+ * 0: Dogtag data <ARRAY>
  * 1: Display as double tag <BOOLEAN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [["name", "610-27-5955", "A POS"], true] call ace_dogtags_fnc_showDogtag
  *
  * Public: No
  */

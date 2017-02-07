@@ -22,6 +22,8 @@ if (!isNull (GLASSDISPLAY)) then {
     GLASSDISPLAY closeDisplay 0;
 };
 
-call FUNC(removeDirtEffect);
-call FUNC(removeRainEffect);
-call FUNC(removeDustEffect);
+if (GVAR(effects) == 2) then {
+    call FUNC(removeDirtEffect);
+    call FUNC(removeRainEffect);
+    call FUNC(removeDustEffect);
+};

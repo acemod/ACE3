@@ -22,13 +22,11 @@ class Extended_InitPost_EventHandlers {
     class Car {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE([ARR_3(_this select 0,1,'ACE_Wheel')] call DFUNC(addSpareParts));
         };
     };
     class Tank {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE([ARR_3(_this select 0,1,'ACE_Track')] call DFUNC(addSpareParts));
         };
     };
     class Motorcycle {

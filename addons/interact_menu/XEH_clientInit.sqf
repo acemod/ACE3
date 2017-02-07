@@ -3,6 +3,8 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(blockDefaultActions) = [];
+
 GVAR(cachedBuildingTypes) = [];
 GVAR(cachedBuildingActionPairs) = [];
 
@@ -52,9 +54,6 @@ GVAR(ParsedTextCached) = [];
     GVAR(actionSelected) = false;
     [GVAR(openedMenuType), false] call FUNC(keyUp);
 }] call CBA_fnc_addEventHandler;
-
-// disable firing while the interact menu is is is opened
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 
 // background options
 ["ace_interactMenuOpened", {

@@ -3,8 +3,7 @@
 
 if (hasInterface) then {
     // Add keybinds
-    ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon),
-    {
+    ["ACE3 Weapons", QGVAR(unjamWeapon), localize LSTRING(UnjamWeapon), {
         // Conditions: canInteract
         if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
         // Conditions: specific
@@ -14,9 +13,7 @@ if (hasInterface) then {
         // Statement
         [ACE_player, currentMuzzle ACE_player, false] call FUNC(clearJam);
         true
-    },
-    {false},
-    [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
+    }, {false}, [19, [true, false, false]], false] call CBA_fnc_addKeybind; //SHIFT + R Key
 };
 
 ["ace_settingsInitialized", {

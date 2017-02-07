@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 ["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
+[QGVAR(paradropItem), {_this call FUNC(paradropItem)}] call CBA_fnc_addEventHandler;
 
 ["ace_loadCargo", {
     params ["_item", "_vehicle"];

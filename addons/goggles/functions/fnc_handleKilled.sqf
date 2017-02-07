@@ -15,20 +15,21 @@
 params ["_unit"];
 
 if (_unit != ACE_player) exitWith {true};
-
-GVAR(PostProcessEyes) ppEffectEnable false;
-
-SETGLASSES(_unit,GLASSESDEFAULT);
+if (GVAR(effects) == 0) exitWith {true};
 
 call FUNC(removeGlassesEffect);
 
-GVAR(EffectsActive) = false;
+if (GVAR(effects) == 2) then {
+    GVAR(PostProcessEyes) ppEffectEnable false;
 
-_unit setVariable ["ACE_EyesDamaged", false];
+    SETGLASSES(_unit,GLASSESDEFAULT);
 
-if (GVAR(DustHandler) != -1) then {
-    [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
+    _unit setVariable ["ACE_EyesDamaged", false];
+
+    if (GVAR(DustHandler) != -1) then {
+        [GVAR(DustHandler)] call CBA_fnc_removePerFrameHandler;
+    };
+    GVAR(DustHandler) = -1;
 };
-GVAR(DustHandler) = -1;
 
 true

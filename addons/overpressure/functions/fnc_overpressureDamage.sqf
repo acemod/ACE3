@@ -30,7 +30,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
+_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {
@@ -51,6 +51,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             private _beta = sqrt (1 - _angle / _overpressureAngle);
 
             private _damage = _alpha * _beta * _overpressureDamage;
+            TRACE_1("",_damage);
 
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};

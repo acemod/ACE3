@@ -30,10 +30,10 @@ params [
 
 // Verify data
 if (_objects isEqualTo []) exitWith {
-    ACE_LOGERROR("Slideshow Objects field must NOT be empty!");
+    ERROR("Slideshow Objects field must NOT be empty!");
 };
 if (count _images != count _names || {_images isEqualTo []} || {_names isEqualTo []}) exitWith {
-    ACE_LOGERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
+    ERROR("Slideshow Images or Names fields must NOT be empty and must have equal number of items!");
 };
 
 // If no controllers use objects as controllers
@@ -58,7 +58,7 @@ _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets change
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
     _duration = NOINTERACTMENU_DURATION;
-    ACE_LOGINFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
+    INFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
 };
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions

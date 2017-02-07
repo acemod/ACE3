@@ -17,7 +17,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-class ACE_newEvents {
-    interactMenuOpened = "ace_interactMenuOpened";
-};

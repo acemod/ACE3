@@ -26,7 +26,7 @@ if !(isNull _fries) then {
     [{
         _this animateDoor ["doorRB", 0];
         _this animateDoor ["doorLB", 0];
-    }, _vehicle, 2] call EFUNC(common,waitAndExecute);
+    }, _vehicle, 2] call CBA_fnc_waitAndExecute;
 
     4
 } else {

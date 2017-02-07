@@ -23,7 +23,7 @@ TRACE_3("params",_assistant,_gunner,_weapon);
 
 if (_assistant isEqualTo _gunner) then {
     // Barrel mount gesture
-    _gunner playAction QGVAR(GestureMountMuzzle);
+    [_gunner, QGVAR(GestureMountMuzzle)] call EFUNC(common,doGesture);
     playSound "ACE_BarrelSwap";
 };
 

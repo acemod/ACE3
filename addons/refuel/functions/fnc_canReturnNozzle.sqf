@@ -18,6 +18,8 @@
 
 params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-private _nozzle = _unit getVariable QGVAR(nozzle);
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 
-(_this call FUNC(canConnectNozzle)) && {_target == (_nozzle getVariable [QGVAR(source), objNull])}
+(!isNull _nozzle) &&
+{_target distance _unit < REFUEL_ACTION_DISTANCE} &&
+{_target == (_nozzle getVariable [QGVAR(source), objNull])}

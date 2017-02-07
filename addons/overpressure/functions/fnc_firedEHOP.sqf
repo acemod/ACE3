@@ -25,7 +25,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
+_var params ["_dangerZoneAngle","_dangerZoneRange","_dangerZoneDamage"];
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
 if (_dangerZoneDamage <= 0) exitWith {};

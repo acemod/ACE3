@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
@@ -12,6 +12,8 @@
             <Czech>Prezentace</Czech>
             <Spanish>Presentación de diapositivas</Spanish>
             <Italian>Mostra Diapositive</Italian>
+            <Japanese>スライドショー</Japanese>
+            <Korean>슬라이드 쇼</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Description">
             <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
@@ -24,6 +26,8 @@
             <Spanish>Este módulo permite configurar una presentación de diapositivas en diferentes objetos. Un módulo por lista de imágenes. Sólo son soportados objetos con hiddenSelection 0.</Spanish>
             <Czech>Tento modul umožňuje nastavit prezentaci na různé objekty. Jeden modul na seznam s obrázky. Podporované jsou pouze objekty s hiddenSelection 0.</Czech>
             <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
+            <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
+            <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈당 한 이미지목록만 가능합니다. 또한 물체가 hiddenSelection 0 를 지원해야만합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
             <English>Objects</English>
@@ -36,6 +40,8 @@
             <Czech>Objekty</Czech>
             <Spanish>Objetos</Spanish>
             <Italian>Oggetti</Italian>
+            <Japanese>オブジェクト</Japanese>
+            <Korean>물체</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
             <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
@@ -48,6 +54,8 @@
             <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas. Referencia INFO para el soporte del objeto.</Spanish>
             <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více. Zkontrolujte POPIS abyste zjistili, zda je objekt podporován modulem.</Czech>
             <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno. Fai riferimento ad INFO per gli oggetti supportati.</Italian>
+            <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
+            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다. 자세한 물체목록은 INFO에서 확인하십시요.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -60,6 +68,8 @@
             <Spanish>Controladores</Spanish>
             <Czech>Kontrolor</Czech>
             <Italian>Controllori</Italian>
+            <Japanese>コントローラ</Japanese>
+            <Korean>조종 장치</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
@@ -71,6 +81,8 @@
             <Russian>Имена объектов-контроллеров, разделенные запятыми.</Russian>
             <Spanish>Nombres de objeto de controlador, separados por comas.</Spanish>
             <Italian>Nomi di oggetti controllori, separati da virgole se multipli.</Italian>
+            <Japanese>コントローラに指定するオブジェクト名を記入し、複数ある場合はコンマで区切れます。</Japanese>
+            <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_DisplayName">
             <English>Images</English>
@@ -83,6 +95,8 @@
             <Czech>Obrázky</Czech>
             <Spanish>Imágenes</Spanish>
             <Italian>Immagini</Italian>
+            <Japanese>画像</Japanese>
+            <Korean>사진</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Images_Description">
             <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
@@ -95,6 +109,8 @@
             <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
             <Czech>Seznam obrázků které budou použity v prezentaci, oddělené čárkami, s kompletní cestou ve správném formátu (např. image\image.paa).</Czech>
             <Italian>Lista di immagini che verranno usate durante la presentazione, separati da virgole, con il formato completo del percorso (es. images\image.paa)</Italian>
+            <Japanese>完全なパスでスライドショーに使う画像一覧を入力してください。コンマで区別できます。(例: images\image.paa)</Japanese>
+            <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_DisplayName">
             <English>Interaction Names</English>
@@ -107,6 +123,8 @@
             <Spanish>Nombres de interacción</Spanish>
             <Italian>Nomi Interazioni</Italian>
             <German>Interaktionsnamen</German>
+            <Japanese>インタラクション名</Japanese>
+            <Korean>상호작용 명칭</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Names_Description">
             <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
@@ -118,6 +136,8 @@
             <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
             <Italian>Lista di nomi che verranno usati per per le interazioni, separati da virgole, in ordine per immagini.</Italian>
             <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
+            <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
+            <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
@@ -130,6 +150,8 @@
             <Czech>Doba trvání snímku</Czech>
             <Italian>Durata Diapositiva</Italian>
             <German>Länge der Diavorführung pro Bild</German>
+            <Japanese>スライドの持続時間</Japanese>
+            <Korean>슬라이드 지속시간</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
@@ -142,6 +164,8 @@
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
+            <Japanese>各スライドの持続時間。標準：0 (自動的な切り替えは無効)</Japanese>
+            <Korean>매 슬라이드의 지속시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
@@ -154,6 +178,8 @@
             <Czech>Snímky</Czech>
             <Italian>Diapositive</Italian>
             <German>Dias</German>
+            <Japanese>スライド</Japanese>
+            <Korean>슬라이드</Korean>
         </Key>
     </Package>
 </Project>

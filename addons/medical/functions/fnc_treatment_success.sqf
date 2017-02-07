@@ -68,22 +68,16 @@ if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT co
 //Get current blood loose on limb (for "bloody" litter)
 private _bloodLossOnSelection = 0;
 private _partNumber = ([_selectionName] call FUNC(selectionNameToNumber)) max 0;
-if ((GVAR(level) >= 2) && {([_target] call FUNC(hasMedicalEnabled))}) then {
-    //Advanced Medical - Add all bleeding from wounds on selection
-    private _openWounds = _target getvariable [QGVAR(openWounds), []];
-    {
-        _x params ["", "", "_selectionX", "_amountOf", "_bleedingRatio"];
-        if (_selectionX == _partNumber) then {
-            _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _bleedingRatio);
-        };
-    } forEach _openWounds;
-    TRACE_1("advanced",_bloodLossOnSelection);
-} else {
-    //Basic Medical (just use blodyPartStatus):
-    private _damageBodyParts = _target getvariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
-    _bloodLossOnSelection = _damageBodyParts select _partNumber;
-    TRACE_1("basic",_bloodLossOnSelection);
-};
+
+// Add all bleeding from wounds on selection
+private _openWounds = _target getvariable [QGVAR(openWounds), []];
+{
+    _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
+    if (_selectionX == _partNumber) then {
+        _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
+    };
+} forEach _openWounds;
+TRACE_1("advanced",_bloodLossOnSelection);
 
 _args call _callback;
 _args pushBack _bloodLossOnSelection;

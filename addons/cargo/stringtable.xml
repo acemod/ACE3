@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -11,6 +11,8 @@
             <Spanish>Cargar</Spanish>
             <Italian>Carica</Italian>
             <French>Charger</French>
+            <Japanese>積み込む</Japanese>
+            <Korean>싣기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -22,6 +24,8 @@
             <Spanish>Descargar</Spanish>
             <Italian>Scarica</Italian>
             <French>Décharger</French>
+            <Japanese>下ろす</Japanese>
+            <Korean>내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -33,6 +37,8 @@
             <Spanish>Carga</Spanish>
             <Italian>Cargo</Italian>
             <French>Cargaison</French>
+            <Japanese>カーゴ</Japanese>
+            <Korean>화물</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -44,6 +50,8 @@
             <Spanish>Menu de carga</Spanish>
             <Italian>Menù Cargo</Italian>
             <French>Menu de cargaison</French>
+            <Japanese>カーゴ メニュー</Japanese>
+            <Korean>화물 메뉴</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -55,6 +63,8 @@
             <Spanish>Espacio de carga restante: %1</Spanish>
             <Italian>Spazio cargo rimanente: %1</Italian>
             <French>Espace de cargaison restant : %1</French>
+            <Japanese>カーゴの空き容量は: %1</Japanese>
+            <Korean>선적 공간 남음: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -66,6 +76,8 @@
             <Spanish>Habilitar carga</Spanish>
             <Italian>Abilita Cargo</Italian>
             <French>Activer la mise en cargaison</French>
+            <Japanese>カーゴを有効化</Japanese>
+            <Korean>화물 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -77,6 +89,8 @@
             <Czech>Umožňuje naložit předměty do nákladového prostoru vozidla</Czech>
             <Italian>Abilita il modulo di caricamento in cargo</Italian>
             <French>Active le chargement de cargaison dans un vehicule</French>
+            <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
+            <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -88,6 +102,8 @@
             <Spanish>Ajustes de carga</Spanish>
             <Italian>Impostazioni Cargo</Italian>
             <French>Paramètres de cargaison</French>
+            <Japanese>カーゴ設定</Japanese>
+            <Korean>화물 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -99,6 +115,8 @@
             <Czech>Konfigurace nákladního modulu</Czech>
             <Italian>Configura le impostazioni del modulo cargo</Italian>
             <French>Configure les paramètres du module de cargaison</French>
+            <Japanese>カーゴ モジュールの設定を構成</Japanese>
+            <Korean>화물 모듈의 환경 설정을 바꿉니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -111,6 +129,8 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
+            <Japanese>%1&amp;lt;br/&amp;gt; は &amp;lt;br/&amp;gt;%2 へ積み込まれた</Japanese>
+            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에 실림</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -123,6 +143,8 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
+            <Japanese>&amp;lt;br/&amp;gt;%2 から &amp;lt;br/&amp;gt;%1 が下ろされた</Japanese>
+            <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에서 내려짐</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
@@ -134,6 +156,8 @@
             <Italian>Caricando</Italian>
             <Spanish>Cargando</Spanish>
             <French>Chargement de la cargaison</French>
+            <Japanese>カーゴへ積み込んでいる</Japanese>
+            <Korean>화물 싣기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -145,6 +169,8 @@
             <Italian>Scaricando</Italian>
             <Spanish>Descargando</Spanish>
             <French>Déchargement de la cargaison</French>
+            <Japanese>カーゴから下ろしている</Japanese>
+            <Korean>화물 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -156,6 +182,8 @@
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
+            <Japanese>%1&amp;lt;br/&amp;gt;は積み込めなかった</Japanese>
+            <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -167,6 +195,8 @@
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
+            <Japanese>%1&amp;lt;br/&amp;gt;は下ろせなかった</Japanese>
+            <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
@@ -177,6 +207,9 @@
             <French>Rendre l'objet chargeable</French>
             <Czech>Vytvořit objekt nakladatelným</Czech>
             <Portuguese>Fazer objeto carregável</Portuguese>
+            <Russian>Сделать объект загружаемым</Russian>
+            <Japanese>オブジェクトを積載可能に</Japanese>
+            <Korean>물체를 화물화시키기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -187,6 +220,9 @@
             <French>Rend l'objet synchronisé comme chargeable par le système de cargaison.</French>
             <Czech>Nastaví synchronizované objekty nakladatelnými za pomocí Nákladního systému.</Czech>
             <Portuguese>Seta o objeto sincronizado como carregável</Portuguese>
+            <Russian>Делает синхронизированный объект загружаемым для модуля перевозки грузов.</Russian>
+            <Japanese>オブジェクトを同期させると、カーゴ システムによる積載が可能になります。</Japanese>
+            <Korean>물체를 화물 시스템과 동기화시켜 실을 수 있게 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -197,6 +233,23 @@
             <French>Taille de l'objet</French>
             <Czech>Velikost objektu</Czech>
             <Portuguese>Tamanho do objeto</Portuguese>
+            <Russian>Размер объекта</Russian>
+            <Japanese>オブジェクトの大きさ</Japanese>
+            <Korean>물체 크기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropButton">
+            <English>Airdrop</English>
+            <German>Türlast</German>
+            <Japanese>空中投下</Japanese>
+            <Polish>Zrzut zaopatrzenia</Polish>
+            <Korean>공중 투하</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
+            <English>Unlevel Flight</English>
+            <German>Schieflage</German>
+            <Japanese>機体が水平ではありません</Japanese>
+            <Polish>Nierówny lot</Polish>
+            <Korean>기체가 수평이 아닙니다</Korean>
         </Key>
     </Package>
 </Project>

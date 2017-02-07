@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -11,6 +11,8 @@
             <Italian>Impostazioni Rifornimento</Italian>
             <Spanish>Parámetros de reabastecimiento</Spanish>
             <French>Réglages de ravitaillement</French>
+            <Japanese>給油設定</Japanese>
+            <Korean>재급유 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_DisplayName">
             <English>Flow Rate</English>
@@ -22,6 +24,8 @@
             <Italian>Rateo Flusso</Italian>
             <Spanish>Caudal de llenado</Spanish>
             <French>Vitesse du ravitaillement</French>
+            <Japanese>流量</Japanese>
+            <Korean>주유량</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
@@ -33,6 +37,8 @@
             <Italian>Quanto velocemente dovrebbe essere rifornito un veicolo?</Italian>
             <Spanish>Cuán rápido se reabastecen los vehículos?</Spanish>
             <French>A quelle vitesse devrait être ravitaillé un véhicule ?</French>
+            <Japanese>どのくらいの速さで車両へ給油しますか？</Japanese>
+            <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -44,6 +50,8 @@
             <Italian>Rifornisci</Italian>
             <Spanish>Reabastecer</Spanish>
             <French>Ravitaillement</French>
+            <Japanese>給油</Japanese>
+            <Korean>재급유</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
@@ -55,6 +63,8 @@
             <Italian>Prenti manica benzina</Italian>
             <Spanish>Tomar surtidor</Spanish>
             <French>Prendre la pompe</French>
+            <Japanese>給油ノズルを取る</Japanese>
+            <Korean>주유기 획득</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzleAction">
             <English>Taking fuel nozzle...</English>
@@ -66,6 +76,8 @@
             <Italian>Sto prendendo manica benzina...</Italian>
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise de la pompe...</French>
+            <Japanese>給油ノズルを取っている・・・</Japanese>
+            <Korean>주유기 획득중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
@@ -77,6 +89,8 @@
             <Italian>Collega manica benzina</Italian>
             <Spanish>Conectar surtidor</Spanish>
             <French>Connecter la pompe</French>
+            <Japanese>給油ノズルを接続する</Japanese>
+            <Korean>주유기 꼽기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectAction">
             <English>Connecting fuel nozzle...</English>
@@ -88,6 +102,8 @@
             <Italian>Sto collegando la manica benzina...</Italian>
             <Spanish>Conectando surtidor...</Spanish>
             <French>Connection de la pompe...</French>
+            <Japanese>給油ノズルを接続している・・・</Japanese>
+            <Korean>주유기 꼽는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
@@ -99,6 +115,8 @@
             <Italian>Scollega manica benzina</Italian>
             <Spanish>Desconectar surtidor</Spanish>
             <French>Déconnecter la pompe</French>
+            <Japanese>給油ノズルを外した</Japanese>
+            <Korean>주유기 뽑기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect_Action">
             <English>Connect</English>
@@ -110,6 +128,8 @@
             <Italian>Collega</Italian>
             <Spanish>Conectar</Spanish>
             <French>Connecter</French>
+            <Japanese>接続</Japanese>
+            <Korean>꼽기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
             <English>Check remaining fuel</English>
@@ -121,6 +141,8 @@
             <Italian>Controlla benzina rimanente</Italian>
             <Spanish>Verificar combustible remanente</Spanish>
             <French>Vérifier le carburant restant</French>
+            <Japanese>残燃料を見る</Japanese>
+            <Korean>남은 연료 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelAction">
             <English>Checking remaining fuel...</English>
@@ -132,6 +154,8 @@
             <Italian>Sto controllando la benzina rimanente...</Italian>
             <Spanish>Verificando combustible remanente,,,</Spanish>
             <French>Vérifie le carburant restant...</French>
+            <Japanese>残燃料を見ている・・・</Japanese>
+            <Korean>남은 연료 확인중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
             <English>There are %1 liters left.</English>
@@ -143,6 +167,8 @@
             <Italian>Sono rimasti %1 litri.</Italian>
             <Spanish>Quedan %1 litros.</Spanish>
             <French>Il reste %1 litres.</French>
+            <Japanese>後 %1 リットル残っている。</Japanese>
+            <Korean>%1 리터 남음</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
@@ -154,6 +180,8 @@
             <Italian>Non è rimasta più benzina.</Italian>
             <Spanish>No queda combustible.</Spanish>
             <French>Il n'y a plus de carburant.</French>
+            <Japanese>もう燃料は残っていない。</Japanese>
+            <Korean>연료 없음.</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
@@ -165,6 +193,8 @@
             <Italian>Cancella</Italian>
             <Spanish>Cancelar</Spanish>
             <French>Annuler</French>
+            <Japanese>中止</Japanese>
+            <Korean>취소</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Failed">
             <English>Failed</English>
@@ -176,6 +206,8 @@
             <Italian>Fallito</Italian>
             <Spanish>Falló</Spanish>
             <French>Echoué</French>
+            <Japanese>失敗</Japanese>
+            <Korean>실패</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOff">
             <English>Stop fueling</English>
@@ -187,6 +219,8 @@
             <Italian>Ferma rifornimento</Italian>
             <Spanish>Detener reabastecimiento</Spanish>
             <French>Arrêter le ravitaillement</French>
+            <Japanese>給油をやめる</Japanese>
+            <Korean>그만 재급유하기</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOffAction">
             <English>Stopping fueling...</English>
@@ -198,6 +232,8 @@
             <Italian>Sto fermando il rifornimento...</Italian>
             <Spanish>Deteniendo reabastecimiento...</Spanish>
             <French>Arrête le ravitaillement...</French>
+            <Japanese>給油をやめている・・・</Japanese>
+            <Korean>재급유 그만하는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
@@ -209,6 +245,8 @@
             <Italian>Inizia rifornimento</Italian>
             <Spanish>Comenzar reabastecimiento</Spanish>
             <French>Débute le ravitaillement</French>
+            <Japanese>給油を始める</Japanese>
+            <Korean>재급유 시작</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOnAction">
             <English>Starting fueling...</English>
@@ -220,6 +258,8 @@
             <Italian>Sto iniziando il rifornimento...</Italian>
             <Spanish>Comenzando reabastecimiento...</Spanish>
             <French>Début du ravitaillement...</French>
+            <Japanese>給油を始めている・・・</Japanese>
+            <Korean>재급유 시작중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -231,6 +271,8 @@
             <Italian>%1 litri riforniti</Italian>
             <Spanish>%1 lt reabastecido</Spanish>
             <French>%1 litres ravitaillés</French>
+            <Japanese>%1 リッターを給油した</Japanese>
+            <Korean>%1 리터 재급유됨</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_SourceEmpty">
             <English>The fuel source is empty.</English>
@@ -242,6 +284,8 @@
             <Italian>La fonte di benzina èvuota.</Italian>
             <Spanish>La fuente de combustible está vacía.</Spanish>
             <French>La source de carburant est vide.</French>
+            <Japanese>給油元は空です。</Japanese>
+            <Korean>재급유처가 비었음.</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_TooFar">
             <English>Maximum fuel hose length reached.</English>
@@ -253,6 +297,8 @@
             <Italian>Distanza massima della manica raggiunta.</Italian>
             <Spanish>Máxima longitud de manguera alcanzada.</Spanish>
             <French>Tuyau tendu au maximum</French>
+            <Japanese>給油ホースはもうこれ以上届かない。</Japanese>
+            <Korean>주유기 호스 최대 거리에 도달함.</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Completed">
             <English>Fueling completed</English>
@@ -264,6 +310,8 @@
             <Italian>Rifornimento completato</Italian>
             <Spanish>Reabastecimiento completado</Spanish>
             <French>Ravitaillement terminé</French>
+            <Japanese>給油完了</Japanese>
+            <Korean>재급유 완료함</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Stopped">
             <English>Fueling stopped</English>
@@ -275,6 +323,8 @@
             <Italian>Rifornimento fermato</Italian>
             <Spanish>Reabastecimiento detenido</Spanish>
             <French>Ravitaillement stoppé</French>
+            <Japanese>給油を止めた</Japanese>
+            <Korean>재급유 멈춤</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Started">
             <English>Fueling started</English>
@@ -286,6 +336,8 @@
             <Italian>Rifornimento iniziato</Italian>
             <Spanish>Comenzó el reabastecimiento</Spanish>
             <French>Ravitaillement débuté</French>
+            <Japanese>給油を始めた</Japanese>
+            <Korean>재급유 시작함</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
@@ -297,6 +349,8 @@
             <Italian>Riponi manica benzina</Italian>
             <Spanish>Devolver surtidor</Spanish>
             <French>Retourner la pompe</French>
+            <Japanese>給油ノズルを戻す</Japanese>
+            <Korean>주유기 반환</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
             <English>Returning fuel nozzle...</English>
@@ -308,6 +362,8 @@
             <Italian>Sto riponendo la manica della benzina...</Italian>
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Retourne la pompe</French>
+            <Japanese>給油ノズルを戻している・・・</Japanese>
+            <Korean>주유기 반환중</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
@@ -319,6 +375,8 @@
             <Italian>Controlla indicatore livello benzina</Italian>
             <Spanish>Verificar el contador de combustible</Spanish>
             <French>Vérifier le compteur</French>
+            <Japanese>燃料計を見る</Japanese>
+            <Korean>연로카운터 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
             <English>Checking fuel counter...</English>
@@ -330,6 +388,8 @@
             <Italian>Sto controllando l'indicatore del livello benzina...</Italian>
             <Spanish>Verificando el contador de combustible</Spanish>
             <French>Vérification du compteur...</French>
+            <Japanese>燃料計を見ている・・・</Japanese>
+            <Korean>연료카운터 확인중...</Korean>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
             <English>%1 liters have been fueled.</English>
@@ -341,6 +401,8 @@
             <Italian>%1 litri sono stati riforniti.</Italian>
             <Spanish>Se reabastecieron %1 lt </Spanish>
             <French>%1 litres ont été écoulés.</French>
+            <Japanese>%1 リッターがある</Japanese>
+            <Korean>%1 리터가 재급유되었습니다.</Korean>
         </Key>
     </Package>
 </Project>

@@ -18,8 +18,6 @@
 
 params ["_unit", "_damage"];
 
-if (_unit != ACE_player) exitWith {};
-
 TRACE_2("explosion near player",_unit,_damage);
 
 private ["_strength"];

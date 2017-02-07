@@ -14,6 +14,8 @@ class CfgWeapons {
         picture = QUOTE(PATHTOF(data\equip\w_vmm3_ca.paa));
         magazines[] = { };
         modes[] = { "Single" };
+        cursor = "EmptyCursor";
+        cursorAim = "EmptyCursor";
         class Single: Mode_SemiAuto {
             displayName = "";
             sounds[] = {};

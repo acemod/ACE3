@@ -1,0 +1,43 @@
+<footer>
+    <div class="row">
+        <div class="large-4 columns">
+            <h2>ACE3</h2>
+            <p>ACE3 is a joint effort by the teams behind ACE2, AGM and CSE to improve the realism and authenticity of Arma 3.</p>
+            <p>If you want to contribute something to ACE3, simply fork the <a href="{{ site.ace.githubUrl }}" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener">GitHub repository</a> and submit your pull requests for review.</p>
+        </div>
+        <div class="large-4 columns">
+            <h2>Issues / Feedback</h2>
+            <p>Issues, feature requests and feedback are welcome at the <a href="{{ site.ace.githubUrl }}/issues" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener">ACE3 GitHub issue tracker</a>.</p>
+            <p>Before reporting an issue, please read the wiki entry <a href="{{ site.baseurl }}/wiki/user/how-to-report-an-issue.html" rel="noopener">"How to report an issue"</a>.</p>
+            <p>We have created a single <a href="{{ site.ace.githubUrl }}/issues/3594/" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener">issue for feature requests</a>.</p>
+        </div>
+        <div class="large-4 columns">
+            <h2>Social Media</h2>
+            <div class="social__icons">
+                <a class="social__icon" href="https://twitter.com/ACE3Mod" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener"><i class="fa fa-twitter fa-2x"></i></a>
+                <a class="social__icon" href="https://facebook.com/ACE3Mod" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener"><i class="fa fa-facebook-square fa-2x"></i></a>
+                <a class="social__icon" href="https://youtube.com/c/ACE3Mod" target="_blank" onclick="app.analytics.sendEvent('ExternalLink', 'Click', this.href);" rel="noopener"><i class="fa fa-youtube fa-2x"></i></a>
+            </div>
+            <script async defer src="https://slackin.ace3mod.com/slackin.js"></script>
+        </div>
+    </div>
+</footer>
+
+<script>
+if (document.location.hostname.search("ace3mod.com") !== -1) {
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61422074-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+
+}
+</script>
+
+<script src="{{ site.baseurl }}/js/footer.min.js?v={{site.time | date: '%Y%m%d%H'}}"></script>
+</body>
+</html>

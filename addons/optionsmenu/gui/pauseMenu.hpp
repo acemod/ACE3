@@ -102,13 +102,6 @@ class RscDisplayMovieInterrupt: RscStandardDisplay {
 };
 class RscDisplayMain: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
-            action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";
-            y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-            idc = 80085;
-        };
-
-
         class ACE_news_apex: RscControlsGroupNoHScrollbars {
             idc = 80090;
             x = "safezoneX + safezoneW - 10 * (pixelW * pixelGrid * 2) - (4 * pixelH)";

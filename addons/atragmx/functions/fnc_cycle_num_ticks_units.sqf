@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_cycle_num_ticks_units
+ * call ace_atragmx_fnc_cycle_num_ticks_units
  *
  * Public: No
  */

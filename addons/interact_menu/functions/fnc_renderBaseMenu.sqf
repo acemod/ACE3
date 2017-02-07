@@ -68,7 +68,7 @@ private _uid = format [QGVAR(ATCache_%1), _actionName];
 private _activeActionTree = [
                         [_object, _baseActionNode, [], _distanceToBasePoint],
                         DFUNC(collectActiveActionTree),
-                        _object, _uid, 1.0, "interactMenuClosed"
+                        _object, _uid, 1.0, "ace_interactMenuClosed"
                     ] call EFUNC(common,cachedCall);
 
 END_COUNTER(fnc_collectActiveActionTree)

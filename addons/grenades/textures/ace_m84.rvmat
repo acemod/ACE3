@@ -6,84 +6,77 @@ specular[] = {0.1,0.1,0.1,1.0};
 specularPower = 95;
 PixelShaderID = "Super";
 VertexShaderID = "Super";
-class Stage1
-{
+
+class Stage1 {
     texture = "z\ace\addons\grenades\textures\ace_m84_nohq.paa";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
-class Stage2
-{
+
+class Stage2 {
     texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {0,9,0};
         up[] = {4.5,0,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
-class Stage3
-{
+
+class Stage3 {
     texture = "#(argb,8,8,3)color(0.5,0.5,0.5,0,MC)";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
-class Stage4
-{
+
+class Stage4 {
     texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
-class Stage5
-{
+
+class Stage5 {
     texture = "z\ace\addons\grenades\textures\ace_m84_smdi.paa";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,0};
         pos[] = {0,0,0};
     };
 };
-class Stage6
-{
+
+class Stage6 {
     texture = "#(ai,16,2,2)fresnel(10.4,8.3)";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,1};
         pos[] = {0,0,0};
     };
 };
-class Stage7
-{
+
+class Stage7 {
     texture = "a3\data_f\env_land_co.paa";
     uvSource = "tex";
-    class uvTransform
-    {
+    class uvTransform {
         aside[] = {1,0,0};
         up[] = {0,1,0};
         dir[] = {0,0,0};

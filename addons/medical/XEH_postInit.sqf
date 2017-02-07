@@ -21,15 +21,17 @@ GVAR(heartBeatSounds_Slow) = ["ACE_heartbeat_slow_1", "ACE_heartbeat_slow_2"];
 [QGVAR(treatmentAdvanced_CPRLocal), DFUNC(treatmentAdvanced_CPRLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentAdvanced_fullHealLocal), DFUNC(treatmentAdvanced_fullHealLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentAdvanced_medicationLocal), DFUNC(treatmentAdvanced_medicationLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(treatmentBasic_bandageLocal), DFUNC(treatmentBasic_bandageLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentBasic_bloodbagLocal), DFUNC(treatmentBasic_bloodbagLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentBasic_morphineLocal), DFUNC(treatmentBasic_morphineLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentIVLocal), DFUNC(treatmentIVLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(treatmentTourniquetLocal), DFUNC(treatmentTourniquetLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(actionPlaceInBodyBag), FUNC(actionPlaceInBodyBag)] call CBA_fnc_addEventHandler;
 
-//Handle Deleting Bodies on Server:
-if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;};
+//Handle Deleting Bodies and creating litter on Server:
+if (isServer) then {
+    ["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc_addEventHandler;
+    [QGVAR(createLitterServer), FUNC(handleCreateLitter)] call CBA_fnc_addEventHandler;
+};
 
 ["ace_unconscious", {
     params ["_unit", "_status"];
@@ -53,10 +55,9 @@ if (isServer) then {["ace_placedInBodyBag", FUNC(serverRemoveBody)] call CBA_fnc
 if (hasInterface) then {
 
 _fnc_createEffect = {
-    private "_effect";
     params ["_type", "_layer", "_default"];
 
-    _effect = ppEffectCreate [_type, _layer];
+    private _effect = ppEffectCreate [_type, _layer];
     _effect ppEffectForceInNVG true;
     _effect ppEffectAdjust _default;
     _effect ppEffectCommit 0;
@@ -106,7 +107,7 @@ GVAR(effectTimeBlood) = CBA_missionTime;
 
 // MAIN EFFECTS LOOP
 [{
-    private["_bleeding", "_blood"];
+    private ["_bleeding", "_blood"];
     // Zeus interface is open or player is dead; disable everything
     if (!(isNull curatorCamera) or !(alive ACE_player)) exitWith {
         GVAR(effectUnconsciousCC) ppEffectEnable false;
@@ -176,7 +177,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 // HEARTRATE BASED EFFECTS
 [{
-    private["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
+    private ["_heartRate", "_interval", "_minTime", "_sound", "_strength", "_pain"];
     _heartRate = ACE_player getVariable [QGVAR(heartRate), 70];
     _pain = ACE_player getVariable [QGVAR(pain), 0];
     if (GVAR(level) == 1) then {
@@ -268,28 +269,15 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 };
 
 ["ace_settingsInitialized", {
-    // Networked litter (need to wait for GVAR(litterCleanUpDelay) to be set)
-    [QGVAR(createLitter), FUNC(handleCreateLitter), GVAR(litterCleanUpDelay)] call EFUNC(common,addSyncedEventHandler);
-
-    if (GVAR(level) == 2) exitWith {
-        [
-            {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
-            {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
-            {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
-            {((_this select 0) getVariable [QGVAR(inReviveState), false])},
-            {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
-            {((_this select 0) getVariable ["ACE_isDead", false])},
-            {(((_this select 0) getVariable [QGVAR(airwayStatus), 100]) < 80)}
-        ] call FUNC(addUnconsciousCondition);
-    };
-
     [
-        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 40)},
-        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.6},
-        {(([_this select 0] call FUNC(getBloodLoss)) > 0.1)},
+        {(((_this select 0) getVariable [QGVAR(bloodVolume), 100]) < 65)},
+        {(((_this select 0) getVariable [QGVAR(pain), 0]) - ((_this select 0) getVariable [QGVAR(painSuppress), 0])) > 0.9},
+        {(([_this select 0] call FUNC(getBloodLoss)) > 0.25)},
         {((_this select 0) getVariable [QGVAR(inReviveState), false])},
+        {((_this select 0) getVariable [QGVAR(inCardiacArrest), false])},
         {((_this select 0) getVariable ["ACE_isDead", false])}
     ] call FUNC(addUnconsciousCondition);
+
 }] call CBA_fnc_addEventHandler;
 
 // Prevent all types of interaction while unconscious
@@ -301,7 +289,7 @@ GVAR(lastHeartBeatSound) = CBA_missionTime;
 
 if (hasInterface) then {
     ["ace_playerJIP", {
-        ACE_LOGINFO("JIP Medical init for player.");
+        INFO("JIP Medical init for player.");
         [player] call FUNC(init);
     }] call CBA_fnc_addEventHandler;
 };

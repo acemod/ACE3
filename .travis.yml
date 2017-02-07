@@ -18,7 +18,7 @@ script:
   fi
 env:
   global:
-  - secure: KcJQbknBOdC5lA4nFGKPXVRVIGLDXDRzC8XkHuXJCE9pIR/wbxbkvx8fHKcC6SC9eHgzneC3+o4m4+CjIbVvIwDgslRbJ8Y59i90ncONmdoRx1HUYHwuYWVZm9HJFjCsIbrEqhSyyKS+PB3WZVOLbErtNHsgS8f43PTh5Ujg7Vg=
+  - secure: cdxkn5cAx+s1C9Ne5m+odEhde1uuSg6XGMDgepN4DwSAJwtMnUv3ZmDebd5YJC1raZJdep+n09Cj0GoTNICQRkco50DxHKHYNad41wetY0tn0cs9gmPYzyFE5q4vuWiQ47dlGhQQ7IJDyX0nU++gG5E50/PhlZfebdedGSprN/4=
 notifications:
   slack:
     rooms:

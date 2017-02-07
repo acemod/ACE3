@@ -17,8 +17,7 @@
 
 #include "script_component.hpp"
 
-private "_bodyPartn";
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
+private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
 // TODO implement internal injuries

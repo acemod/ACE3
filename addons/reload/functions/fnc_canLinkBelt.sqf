@@ -8,6 +8,11 @@
  *
  * Return Value:
  * Can link belt<BOOL>
+ *
+ * Example:
+ * [player, cursorObject] call ace_reload_fnc_canLinkBelt;
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

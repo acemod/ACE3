@@ -69,6 +69,33 @@ class CfgVehicles {
         GVAR(canCarry) = 1;
         GVAR(canDrag) = 1;
     };
+    class Box_Syndicate_Ammo_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_IED_Exp_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_Syndicate_Wps_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+    class Box_Syndicate_WpsLaunch_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(canDrag) = 1;
+    };
+
+    class Box_NATO_Equip_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryDirection) = 270;
+        GVAR(canDrag) = 1;
+    };
+    class Box_NATO_Uniforms_F: ReammoBox_F {
+        GVAR(canCarry) = 1;
+        GVAR(carryDirection) = 270;
+        GVAR(canDrag) = 1;
+    };
 
     // Remove Larger crate dragging support.
     // Would be better to allow some sort of joint push/drag functionality
@@ -133,6 +160,33 @@ class CfgVehicles {
 
     class RoadBarrier_F: RoadCone_F {
         GVAR(carryPosition)[] = {0,1,0.300671};
+    };
+
+    // Misc crates
+    class Constructions_base_F;
+    class Land_WoodenBox_F: Constructions_base_F {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.4,0};
+        GVAR(dragDirection) = 0;
+    };
+    class Land_WoodenCrate_01_F: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,1,1};
+        GVAR(carryDirection) = 270;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1.5,0};
+        GVAR(dragDirection) = 90;
     };
 
     class ACE_RepairItem_Base: ThingX {};

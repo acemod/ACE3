@@ -6,7 +6,7 @@ class CfgWeapons {
         ACE_barrelLength = 111.76;
     };
     class Pistol_Base_F;
-    class rhs_weap_makarov_pmm: rhs_weap_pya {
+    class rhs_weap_makarov_pm: rhs_weap_pya {
         ACE_barrelTwist = 240.03;
         ACE_barrelLength = 93.472;
     };
@@ -84,5 +84,16 @@ class CfgWeapons {
     class rhs_gssh18: H_HelmetB {
         ace_hearing_protection = 0.5;
         ace_hearing_lowerVolume = 0.60;
+    };
+    
+    class rhs_weap_d81;
+    class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
+        ace_overpressure_range = 15;
+        ace_overpressure_damage = 0.5;
+    };
+    class cannon_120mm;
+    class rhs_weap_2a28_base: cannon_120mm { // "Low pressure"
+        ace_overpressure_range = 15;
+        ace_overpressure_damage = 0.5;
     };
 };

@@ -57,7 +57,7 @@ private _onFailure = {
     _player addMagazine _magazine;
 };
 
-_player playActionNow "PutDown";
+[_player, "PutDown"] call EFUNC(common,doGesture);
 
 // Remove the magazine with maximum remaining ammo
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);

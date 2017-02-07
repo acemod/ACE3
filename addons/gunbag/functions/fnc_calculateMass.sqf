@@ -26,7 +26,7 @@ private _mass = getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlots
 } foreach _items;
 
 {
-    _mass = _mass + getNumber (configFile >> "CfgWeapons" >> _x >> "mass");
+    _mass = _mass + getNumber (configFile >> "CfgMagazines" >> _x >> "mass");
 } forEach _magazines;
 
 _mass

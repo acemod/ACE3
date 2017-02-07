@@ -19,8 +19,7 @@
 
 params ["_vehicle", "_player"];
 
-private "_actions";
-_actions = [];
+private _actions = [];
 
 {
     private _unit = _x;

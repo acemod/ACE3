@@ -20,9 +20,9 @@ if (isNil "ACE_maxWeightCarry") then {
 ["isNotCarrying", {!((_this select 0) getVariable [QGVAR(isCarrying), false])}] call EFUNC(common,addCanInteractWithCondition);
 
 // release object on player change. This does work when returning to lobby, but not when hard disconnecting.
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addEventHandler;
-["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
-["weapon", FUNC(handlePlayerWeaponChanged)] call CBA_fnc_addEventHandler;
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
+["weapon", FUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
 
 // handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;

@@ -34,6 +34,7 @@ if (isClass (_config >> _bandage)) then {
 };
 
 // Figure out which injury for this bodypart is the best choice to bandage
+// TODO also use up the remainder on left over injuries
 private _mostEffectiveSpot = 0;
 private _effectivenessFound = -1;
 private _mostEffectiveInjury = _openWounds select 0;
@@ -56,7 +57,10 @@ private _exit = false;
                 _woundEffectiveness = getNumber (_woundTreatmentConfig >> "effectiveness");
             };
         } else {
-            ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+            //Basic medical bandage just has a base level config (same effectivenes for all wound types)
+            if (_bandage != "Bandage") then {
+                WARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+            };
         };
 
         TRACE_2("Wound classes: ", _specificClass, _classID);
@@ -86,13 +90,10 @@ private _impact = if ((_mostEffectiveInjury select 3) >= _effectivenessFound) th
 _mostEffectiveInjury set [ 3, ((_mostEffectiveInjury select 3) - _impact) max 0];
 _openWounds set [_mostEffectiveSpot, _mostEffectiveInjury];
 
-_target setVariable [QGVAR(openWounds), _openWounds, !USE_WOUND_EVENT_SYNC];
+_target setVariable [QGVAR(openWounds), _openWounds, true];
 
-if (USE_WOUND_EVENT_SYNC) then {
-    ["ace_medical_propagateWound", [_target, _mostEffectiveInjury]] call CBA_fnc_globalEvent;
-};
 // Handle the reopening of bandaged wounds
-if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
+if (_impact > 0 && {GVAR(level) >= 2} && {GVAR(enableAdvancedWounds)}) then {
     [_target, _impact, _part, _mostEffectiveSpot, _mostEffectiveInjury, _bandage] call FUNC(handleBandageOpening);
 };
 
@@ -100,15 +101,17 @@ if (_impact > 0 && {GVAR(enableAdvancedWounds)}) then {
 // so that the body part functions normally and blood is removed from the uniform.
 // Arma combines left and right arms into a single body part (HitHands), same with left and right legs (HitLegs).
 // Arms are actually hands.
-if (GVAR(healHitPointAfterAdvBandage)) then {
+if (GVAR(healHitPointAfterAdvBandage) || {GVAR(level) < 2}) then {
     // Get the list of the wounds the target is currently suffering from.
     private _currentWounds = _target getVariable [QGVAR(openWounds), []];
 
     // Tally of unbandaged wounds to each body part.
     private _headWounds = 0;
     private _bodyWounds = 0;
-    private _legsWounds = 0;
-    private _armWounds  = 0;
+    private _leftArmWounds = 0;
+    private _leftLegWounds = 0;
+    private _rightArmWounds = 0;
+    private _rightLegWounds = 0;
 
     // Loop through all current wounds and add up the number of unbandaged wounds on each body part.
     {
@@ -131,42 +134,52 @@ if (GVAR(healHitPointAfterAdvBandage)) then {
 
             // Left Arm
             case 2: {
-                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+                _leftArmWounds = _leftArmWounds + (_numOpenWounds * _bloodLoss);
             };
 
             // Right Arm
             case 3: {
-                _armWounds = _armWounds + (_numOpenWounds * _bloodLoss);
+                _rightArmWounds = _rightArmWounds + (_numOpenWounds * _bloodLoss);
             };
 
             // Left Leg
             case 4: {
-                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+                _leftLegWounds = _leftLegWounds + (_numOpenWounds * _bloodLoss);
             };
 
             // Right Leg
             case 5: {
-                _legsWounds = _legsWounds + (_numOpenWounds * _bloodLoss);
+                _rightLegWounds = _rightLegWounds + (_numOpenWounds * _bloodLoss);
             };
         };
     } forEach _currentWounds;
 
+    // ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
+    private _bodyStatus = _target getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+
     // Any body part that has no wounds is healed to full health
     if (_headWounds == 0) then {
-        _target setHitPointDamage ["hitHead",  0.0];
+        _bodyStatus set [0, 0];
     };
-
     if (_bodyWounds == 0) then {
-        _target setHitPointDamage ["hitBody",  0.0];
+        _bodyStatus set [1, 0];
+    };
+    if (_leftArmWounds == 0) then {
+        _bodyStatus set [2, 0];
+    };
+    if (_rightArmWounds == 0) then {
+        _bodyStatus set [3, 0];
+    };
+    if (_leftLegWounds == 0) then {
+        _bodyStatus set [4, 0];
+    };
+    if (_rightLegWounds == 0) then {
+        _bodyStatus set [5, 0];
     };
 
-    if (_armWounds == 0) then {
-        _target setHitPointDamage ["hitHands", 0.0];
-    };
+    _target setVariable [QGVAR(bodyPartStatus), _bodyStatus, true];
 
-    if (_legsWounds == 0) then {
-        _target setHitPointDamage ["hitLegs",  0.0];
-    };
+    [_target] call FUNC(handleDamage_advancedSetDamage);
 };
 
 true;

@@ -1,6 +1,9 @@
 
 PREP(canActivateDetector);
+PREP(canConnectHeadphones);
 PREP(canDeactivateDetector);
+PREP(canDisconnectHeadphones);
+PREP(connectHeadphones);
 PREP(activateDetector);
 PREP(deactivateDetector);
 PREP(hasDetector);

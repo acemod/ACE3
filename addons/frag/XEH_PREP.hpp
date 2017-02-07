@@ -22,7 +22,6 @@ PREP(addPfhRound);
 PREP(removePfhRound); // THIS SHOULD ABE USED SPARINGLY
 
 // Explosive Reflection
-GVAR(replacedBisArtyWrapper) = true;
 PREP(findReflections);
 PREP(doExplosions);
 PREP(doReflections);

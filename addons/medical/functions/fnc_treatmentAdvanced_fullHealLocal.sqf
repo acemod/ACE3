@@ -36,9 +36,7 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(fractures), []];
 
     // IVs
-    _target setVariable [QGVAR(salineIVVolume), 0];
-    _target setVariable [QGVAR(plasmaIVVolume), 0];
-    _target setVariable [QGVAR(bloodIVVolume), 0];
+    _target setVariable [QGVAR(ivBags), nil, true];
 
     // damage storage
     _target setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];

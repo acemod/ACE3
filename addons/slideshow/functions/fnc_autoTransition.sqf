@@ -18,11 +18,10 @@
  */
 #include "script_component.hpp"
 
-private "_currentSlide";
 params ["_objects", "_images", "_varString", "_duration"];
 
 // Get current slide number of this slideshow
-_currentSlide = missionNamespace getVariable [_varString, 0];
+private _currentSlide = missionNamespace getVariable [_varString, 0];
 
 // Increment slide or return to first slide if reached end
 _currentSlide = (_currentSlide + 1) mod (count _images);

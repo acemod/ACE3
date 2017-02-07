@@ -1,12 +1,16 @@
 /*
  * Author: Glowbal
+ * Blurs screen.
  *
  * Arguments:
  * 0: ID <NUMBER>
- * 1: Show? <BOOL, NUMBER>
+ * 1: Show? <BOOL/NUMBER>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [5, true] call ace_common_fnc_blurScreen
  *
  * Public: Yes
  */

@@ -143,7 +143,8 @@ class CfgVehicles {
                 GVAR(Enabled) = 1;
                 GVAR(MaxDistance) = 2000;
                 discreteDistance[] = {};
-                discreteDistanceInitIndex = 0;};
+                discreteDistanceInitIndex = 0;
+            };
             class CommanderTurret: CommanderTurret {
                 GVAR(Enabled) = 0;
             };

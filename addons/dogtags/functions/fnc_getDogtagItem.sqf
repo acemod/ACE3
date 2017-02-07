@@ -1,6 +1,6 @@
 /*
  * Author: SzwedzikPL
- * Server: creates new dogtag item and send it to client
+ * Server: creates new dogtag item and send it to client.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -8,6 +8,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [player, unit] call ace_dogtags_fnc_getDogtagItem
  *
  * Public: No
  */
@@ -23,7 +26,7 @@ private _allDogtagDatas = missionNamespace getVariable [QGVAR(allDogtagDatas), [
 
 private _nextID = count _allDogtags + 1;
 
-if (_nextID > 999) exitWith {ACE_LOGERROR("Ran out of IDs");};
+if (_nextID > 999) exitWith {ERROR("Ran out of IDs");};
 
 private _dogTagData = [_target] call FUNC(getDogTagData);
 private _item = format ["ACE_dogtag_%1", _nextID];

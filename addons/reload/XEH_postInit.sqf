@@ -4,8 +4,7 @@
 if (!hasInterface) exitWith {};
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(checkAmmo), localize LSTRING(checkAmmo),
-{
+["ACE3 Weapons", QGVAR(checkAmmo), localize LSTRING(checkAmmo), {
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, ["isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -14,9 +13,7 @@ if (!hasInterface) exitWith {};
     // Statement
     [ACE_player] call FUNC(checkAmmo);
     true
-},
-{false},
-[19, [false, true, false]], false] call CBA_fnc_addKeybind;
+}, {false}, [19, [false, true, false]], false] call CBA_fnc_addKeybind;
 
 [QGVAR(syncAmmo), {
     //To propagate the setAmmo change, do it on all clients

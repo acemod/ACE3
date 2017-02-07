@@ -16,15 +16,13 @@
  */
 #include "script_component.hpp"
 
-private "_info";
-_info = [MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor);
+private _info = [MACRO_DOOR_REACH_DISTANCE] call FUNC(getDoor);
 
 _info params ["_house", "_door"];
 
 if (isNull _house) exitWith {};
 
-private "_getDoorAnimations";
-_getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
+private _getDoorAnimations = [_house, _door] call FUNC(getDoorAnimations);
 
 _getDoorAnimations params ["_animations", "_lockedVariable"];
 
@@ -49,8 +47,7 @@ GVAR(usedScrollWheel) = false;
 
         // didn't use incremental opening. Just do animation normally.
         if !(GVAR(usedScrollWheel)) then {
-            private "_phase";
-            _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
+            private _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
 
             {_house animate [_x, _phase]; false} count _animations;
         };

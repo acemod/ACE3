@@ -10,6 +10,11 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
+// Handle early CBA_fnc_addPlayerEventHandler
+if (!isNull ace_player) then {
+    [ace_player, "isPlayer"] call EFUNC(common,muteUnit);
+};
+
 // mutes/unmutes units when the player changes
 ["unit", {
     params ["_newPlayer", "_oldPlayer"];

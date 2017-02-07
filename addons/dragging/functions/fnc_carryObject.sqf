@@ -56,6 +56,9 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
 ] call EFUNC(common,addActionEventHandler)];
 
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+
 // show mouse hint
 if (_target isKindOf "CAManBase") then {
     [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);

@@ -25,7 +25,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_backblastAngle","_backblastRange","_backblastDamage"];
+_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
 TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
 
 if (_backblastDamage <= 0) exitWith {};

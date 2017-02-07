@@ -26,7 +26,7 @@ if (stance _gunner != "PRONE") then {
 };
 
 // Barrel dismount gesture
-_gunner playActionNow QGVAR(GestureDismountMuzzle);
+[_gunner, QGVAR(GestureDismountMuzzle)] call EFUNC(common,doGesture);
 playSound "ACE_BarrelSwap";
 
 private _duration = 3.0;

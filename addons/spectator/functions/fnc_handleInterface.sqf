@@ -37,8 +37,7 @@ switch (toLower _mode) do {
         GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
 
         // Populate the help window
-        private "_help";
-        _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
+        private _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
         {
             _i = _help lbAdd (_x select 0);
             if ((_x select 1) == "") then {
@@ -440,12 +439,10 @@ switch (toLower _mode) do {
     };
     // Interrupt events
     case "escape": {
-        private "_dlg";
-
         createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
 
         disableSerialization;
-        _dlg = finddisplay 49;
+        private _dlg = finddisplay 49;
         _dlg displayAddEventHandler ["KeyDown", {
             _key = _this select 1;
             !(_key == 1)

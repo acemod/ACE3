@@ -34,6 +34,9 @@ if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {}
 
 if !(_set) exitWith {
     _unit setVariable ["ACE_isUnconscious", false, true];
+    if (_unit getVariable [QGVAR(inReviveState), false]) then {
+        _unit setVariable [QGVAR(inReviveState), nil, true];
+    };
 };
 
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
@@ -43,7 +46,6 @@ if (!local _unit) exitWith {
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
-_unit setUnconscious true;
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
