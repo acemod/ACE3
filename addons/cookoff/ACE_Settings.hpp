@@ -12,10 +12,16 @@ class ACE_Settings {
         value = 1;
         typeName = "BOOL";
     };
-    class GVAR(enableAmmoCookoff) {
+    class GVAR(enableAmmoCookoff) { // For CBA Setting Switch: we can eliminate and just use (ammoCookoffDuration == 0)
         displayName = CSTRING(enableAmmoCookoff_name);
         description = CSTRING(enableAmmoCookoff_tooltip);
         value = 1;
         typeName = "BOOL";
+    };
+    class GVAR(ammoCookoffDuration) {
+        displayName = CSTRING(ammoCookoffDuration_name);
+        description = CSTRING(ammoCookoffDuration_tooltip);
+        value = 1;
+        typeName = "SCALAR";
     };
 };
