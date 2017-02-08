@@ -1,10 +1,8 @@
 
 PREP(addCargoItem);
 PREP(addCargoVehiclesActions);
-PREP(canLoad);
 PREP(canLoadItemIn);
 PREP(canUnloadItem);
-PREP(findNearestVehicle);
 PREP(getCargoSpaceLeft);
 PREP(getSizeItem);
 PREP(handleDestroyed);
