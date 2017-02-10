@@ -67,8 +67,8 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 }] call CBA_fnc_addPlayerEventhandler;
 
 ["visibleMap", {
-    params ["", "_visableMap"]; // command visibleMap is updated one frame later
-    if (_visableMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
+    params ["", "_visibleMap"]; // command visibleMap is updated one frame later
+    if (_visibleMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
         [ACE_player, "Opened Map"] call FUNC(exitThrowMode);
     };
 }] call CBA_fnc_addPlayerEventhandler;

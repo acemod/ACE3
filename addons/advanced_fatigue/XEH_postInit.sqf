@@ -15,13 +15,13 @@ if (!hasInterface) exitWith {};
     ["unit", FUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
 
     ["visibleMap", {
-        params ["", "_visableMap"]; // command visibleMap is updated one frame later
+        params ["", "_visibleMap"]; // command visibleMap is updated one frame later
         private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlShow ((!_visableMap) && {(vehicle ACE_player) == ACE_player});
+        _staminaBarContainer ctrlShow ((!_visibleMap) && {(vehicle ACE_player) == ACE_player});
     }, true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", {
         private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-        _staminaBarContainer ctrlShow ((!visableMap) && {(vehicle ACE_player) == ACE_player});
+        _staminaBarContainer ctrlShow ((!visibleMap) && {(vehicle ACE_player) == ACE_player});
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
