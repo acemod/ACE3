@@ -1,3 +1,5 @@
+LOG("prep");
+PREP(cycleAttackProfileKeyDown);
 
 PREP(changeMissileDirection);
 

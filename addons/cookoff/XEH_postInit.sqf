@@ -81,6 +81,7 @@ GVAR(cacheTankDuplicates) = call CBA_fnc_createNamespace;
 ["AllVehicles", "killed", {
     params ["_vehicle"];
     if (_vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]) then {
+        if (GVAR(ammoCookoffDuration) == 0) exitWith {};
         ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
         [_vehicle, _mags, _total] call FUNC(detonateAmmunition);
     };
