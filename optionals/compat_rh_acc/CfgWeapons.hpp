@@ -1,18 +1,18 @@
 
 class CfgWeapons {
     class ItemCore;
+
+    /* Scopes */
     class InventoryOpticsItem_Base_F;
-    
-    /*
+
     // This would require MOA turrets
-    class RH_shortdot : ItemCore {
+    /*class RH_shortdot : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -1, 25 };
         ACE_ScopeAdjust_Horizontal[] = { -13, 13 };
         ACE_ScopeAdjust_VerticalIncrement = 0.5;
         ACE_ScopeAdjust_Unit = "MOA";
-    };
-    */
-    
+    };*/
+
     class RH_accupoint : ItemCore {
         ACE_ScopeAdjust_Vertical[] = { -4, 30 };
         ACE_ScopeAdjust_Horizontal[] = { -6, 6 };
@@ -144,6 +144,20 @@ class CfgWeapons {
                     discreteDistance[] = { 100 };
                     discreteDistanceInitIndex = 0;
                 };
+            };
+        };
+    };
+
+    /* Flashlights */
+    class InventoryFlashLightItem_Base_F;
+
+    class RH_SFM952V: ItemCore {
+        class ItemInfo: InventoryFlashLightItem_Base_F {
+            class FlashLight {
+                ACE_Flashlight_Colour = "white";
+                ACE_Flashlight_Beam = QPATHTOEF(map,UI\Flashlight_beam_white_ca.paa);
+                ACE_Flashlight_Size = 2.75;
+                ACE_Flashlight_Sound = 1;
             };
         };
     };

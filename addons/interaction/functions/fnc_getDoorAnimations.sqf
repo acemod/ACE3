@@ -36,7 +36,7 @@ _index = [
     "door_11",
     "door_12",
     "door_13",
-    "Door_14",
+    "door_14",
     "door_15",
     "door_16",
     "door_17",
