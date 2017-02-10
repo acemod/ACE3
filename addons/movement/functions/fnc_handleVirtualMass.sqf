@@ -28,6 +28,8 @@ private _virtualLoad = 0;
     backpackContainer _unit
 ];
 
+_unit setVariable [QGVAR(totalLoad), (loadAbs _unit + _virtualLoad)];
+
 // get absolute vanilla load
 private _absLoad = getNumber (configFile >> "CfgInventoryGlobalVariable" >> "maxSoldierLoad");
 
