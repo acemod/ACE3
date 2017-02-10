@@ -66,7 +66,7 @@ private _atlPos = ASLtoATL _lastPos;
 
 private _fragPowerRandom = _fragPower * 0.5;
 if ((_atlPos select 2) < 0.5) then {
-    _lastPos set [2, (_lastPos select 2) + 0.5];
+    _lastPos vectorAdd [0, 0, 0.5];
 };
 
 // _manObjects = _atlPos nearEntities ["CaManBase", _fragRange];
@@ -96,7 +96,7 @@ _fragArcs set [360, 0];
 
 private _doRandom = true;
 if (_isArmed && {!(_objects isEqualTo [])}) then {
-    if (GVAR(ReflectionsEnabled)) then {
+    if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
     };
     {
@@ -115,53 +115,49 @@ if (_isArmed && {!(_objects isEqualTo [])}) then {
                 private _distance = _targetPos vectorDistance _lastPos;
                 private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
 
-                    private _targetVel = velocity _target;
+                _targetPos = _targetPos vectorAdd [
+                    (_targetVel select 0) * (_distance / _fragPower),
+                    (_targetVel select 1) * (_distance / _fragPower),
+                    _add
+                ];
 
-                    _targetPos = _targetPos vectorAdd [
-                        (_targetVel select 0) * (_distance / _fragPower),
-                        (_targetVel select 1) * (_distance / _fragPower),
-                        _add
-                    ];
+                private _baseVec = _lastPos vectorFromTo _targetPos;
 
-                    private _baseVec = _lastPos vectorFromTo _targetPos;
-
-                    private _dir = floor (_baseVec call CBA_fnc_vectDir);
-                    private _currentCount = _fragArcs select _dir;
-                    ISNILS(_currentCount,0);
-                    if (_currentCount < 20) then {
-                        private _count = ceil (random (sqrt (_m / 1000)));
-                        private _vecVar = FRAG_VEC_VAR;
-                        if (!(_target isKindOf "Man")) then {
-                            _vecVar = ((sqrt _cubic) / 2000) + FRAG_VEC_VAR;
-                            if ((crew _target) isEqualTo [] && {_count > 0}) then {
-                                _count = 0 max (_count / 2);
-                            };
+                private _dir = floor (_baseVec call CBA_fnc_vectDir);
+                private _currentCount = RETDEF(_fragArcs select _dir,0);
+                if (_currentCount < 20) then {
+                    private _count = ceil (random (sqrt (_m / 1000)));
+                    private _vecVar = FRAG_VEC_VAR;
+                    if (!(_target isKindOf "Man")) then {
+                        ADD(_vecVar,(sqrt _cubic) / 2000);
+                        if ((crew _target) isEqualTo [] && {_count > 0}) then {
+                            _count = 0 max (_count / 2);
                         };
-                        for "_i" from 1 to _count do {
-                            private _vec = _baseVec vectorDiff [
-                                (_vecVar / 2) + (random _vecVar),
-                                (_vecVar / 2) + (random _vecVar),
-                                (_vecVar / 2) + (random _vecVar)
-                            ];
-
-                            private _fp = _fragPower - (random (_fragPowerRandom));
-                            private _vel = _vec vectorMultiply _fp;
-
-                            private _fragType = round (random ((count _fragTypes) - 1));
-                            private _fragObj = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
-                            // diag_log text format ["fp: %1 %2", _fp, typeOf _fragObj];
-                            _fragObj setPosASL _lastPos;
-                            _fragObj setVectorDir _vec;
-                            _fragObj setVelocity _vel;
-                            if (GVAR(traceFrags)) then {
-                                INC(GVAR(totalFrags));
-                                [ACE_player, _fragObj, [1,0,0,1]] call FUNC(addTrack);
-                            };
-                            INC(_fragCount);
-                            INC(_currentCount);
-                        };
-                        _fragArcs set [_dir, _currentCount];
                     };
+                    for "_i" from 1 to _count do {
+                        private _vec = _baseVec vectorDiff [
+                            (_vecVar / 2) + (random _vecVar),
+                            (_vecVar / 2) + (random _vecVar),
+                            (_vecVar / 2) + (random _vecVar)
+                        ];
+
+                        private _fp = _fragPower - (random (_fragPowerRandom));
+                        private _vel = _vec vectorMultiply _fp;
+
+                        private _fragType = round (random ((count _fragTypes) - 1));
+                        private _fragObj = (_fragTypes select _fragType) createVehicleLocal [0,0,10000];
+                        // diag_log text format ["fp: %1 %2", _fp, typeOf _fragObj];
+                        _fragObj setPosASL _lastPos;
+                        _fragObj setVectorDir _vec;
+                        _fragObj setVelocity _vel;
+                        if (GVAR(traceFrags)) then {
+                            INC(GVAR(totalFrags));
+                            [ACE_player, _fragObj, [1,0,0,1]] call FUNC(addTrack);
+                        };
+                        INC(_fragCount);
+                        INC(_currentCount);
+                    };
+                    _fragArcs set [_dir, _currentCount];
                 };
             };
         //};
