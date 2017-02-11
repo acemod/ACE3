@@ -22,7 +22,7 @@
             <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
-            <French>Fourni le contrôle des différents aspects de Zeus</French>
+            <French>Fourni le contrôle des différents aspects de Zeus.</French>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
@@ -50,7 +50,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
-            <French>Affiche un message global quand un joueur est assigné en tant que Zeus</French>
+            <French>Affiche un message global quand un joueur est assigné en tant que Zeus.</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
@@ -106,7 +106,7 @@
             <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
             <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
             <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
-            <French>Joue des bruits de vent quand Zeus controle une unité</French>
+            <French>Joue des bruits de vent quand Zeus controle une unité.</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
             <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
@@ -134,7 +134,7 @@
             <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
             <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
             <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
-            <French>Joue un son radio quand le Zeus utilise du matériel militaire</French>
+            <French>Joue un son radio quand le Zeus utilise du matériel militaire.</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
             <Italian>Esegui un messaggio radio quando Zeus usa esplosivi.</Italian>
@@ -162,7 +162,7 @@
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
             <German>Melde Minen gegenüber Verbündeten und platziere entsprechende Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
-            <French>Révéler les mines et placer un marqueur sur la carte</French>
+            <French>Révéler les mines et placer un marqueur sur la carte.</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
             <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
@@ -293,7 +293,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
-            <French>Change: aimingAccuracy</French>
+            <French>Change : aimingAccuracy</French>
             <Russian>Изменяет: aimingAccuracy</Russian>
             <Czech>Upravuje: aimingAccuracy</Czech>
             <Japanese>変更：aimingAccuracy</Japanese>
@@ -313,7 +313,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
-            <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
+            <French>Change : aimingShake, aimingSpeed, reloadSpeed</French>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
             <Japanese>変更：aimingShake, aimingSpeed, reloadSpeed</Japanese>
@@ -323,7 +323,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
-            <French>repérage</French>
+            <French>Repérage</French>
             <Russian>Обнаружение</Russian>
             <Czech>Vnímavost</Czech>
             <Japanese>索敵</Japanese>
@@ -333,7 +333,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
-            <French>Change: spotDistance, spotTime</French>
+            <French>Change : spotDistance, spotTime</French>
             <Russian>Изменяет: spotDistance, spotTime</Russian>
             <Czech>Upravuje: spotDistance, spotTime</Czech>
             <Japanese>変更：spotDistance, spotTime</Japanese>
@@ -343,7 +343,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
-            <French>Chercher couverture</French>
+            <French>Chercher des couvertures</French>
             <Russian>Поиск укрытий</Russian>
             <Czech>Vyhledávat krytí</Czech>
             <Japanese>遮蔽</Japanese>
@@ -353,7 +353,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
-            <French>L'IA devrait elle chercher couverture</French>
+            <French>L'IA devrait elle chercher des couvertures</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
             <Japanese>AI は遮蔽を取るようになります</Japanese>
@@ -758,7 +758,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
-            <French>Cargo:</French>
+            <French>Cargo :</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
             <Japanese>カーゴ：</Japanese>
@@ -805,7 +805,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
-            <French>rayon invalide entré</French>
+            <French>Rayon invalide entré</French>
             <Russian>Введен неправильный радиус</Russian>
             <Czech>Vložen neplatný parametr</Czech>
             <Japanese>無効な半径が入力されました</Japanese>
