@@ -59,8 +59,8 @@ if (_warn) then {
     INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_shellType);
 };
 
-private _fragPower = (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
-MUL(_fragPower,0.8); // Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
+// Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
+private _fragPower = 0.8 * (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
 
 private _atlPos = ASLtoATL _lastPos;
 
@@ -103,12 +103,9 @@ if (_isArmed && {!(_objects isEqualTo [])}) then {
         //if (random(1) > 0.5) then {
             private _target = _x;
             if (alive _target) then {
-                private _boundingBox = boundingBox _target;
+                (boundingBox _target) params ["_boundingBoxA", "_boundingBoxB"];
 
-                private _cubic = 1;
-                for "_i" from 0 to 2 do {
-                    MUL(_cubic,(abs ((_boundingBox select 0) select _i)) + ((_boundingBox select 1) select _i));
-                };
+                private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
 
                 if (_cubic <= 1) exitWith {};
                 _doRandom = true;
@@ -116,7 +113,7 @@ if (_isArmed && {!(_objects isEqualTo [])}) then {
                 private _targetVel = velocity _target;
                 private _targetPos = getPosASL _target;
                 private _distance = _targetPos vectorDistance _lastPos;
-                private _add = (((_boundingBox select 1) select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
+                private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
 
                 _targetPos = _targetPos vectorAdd [
                     (_targetVel select 0) * (_distance / _fragPower),

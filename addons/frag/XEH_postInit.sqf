@@ -27,4 +27,3 @@ GVAR(cacheRoundsTypesToTrack) = [false] call CBA_fnc_createNamespace;
 #ifdef DEBUG_ENABLED_FRAG
 [true, true, 30] call FUNC(dev_debugAmmo);
 #endif
-
