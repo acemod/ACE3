@@ -59,8 +59,8 @@ if (_warn) then {
     INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_shellType);
 };
 
-private _fragPower = (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
-_fragPower = _fragPower * 0.8; // Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
+// Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
+private _fragPower = 0.8 * (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
 
 private _atlPos = ASLtoATL _lastPos;
 
@@ -103,16 +103,17 @@ if (_isArmed && {!(_objects isEqualTo [])}) then {
         //if (random(1) > 0.5) then {
             private _target = _x;
             if (alive _target) then {
-                private _boundingBox = boundingBox _target;
+                (boundingBox _target) params ["_boundingBoxA", "_boundingBoxB"];
+
+                private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
+
+                if (_cubic <= 1) exitWith {};
+                _doRandom = true;
+
+                private _targetVel = velocity _target;
                 private _targetPos = getPosASL _target;
-                private _distance = _targetPos distance _lastPos;
-                private _add = (((_boundingBox select 1) select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
-                private _bbX = (abs ((_boundingBox select 0) select 0)) + ((_boundingBox select 1) select 0);
-                private _bbY = (abs ((_boundingBox select 0) select 1)) + ((_boundingBox select 1) select 1);
-                private _bbZ = (abs ((_boundingBox select 0) select 2)) + ((_boundingBox select 1) select 2);
-                private _cubic = _bbX * _bbY * _bbZ;
-                if (_cubic > 1) then {
-                    _doRandom = true;
+                private _distance = _targetPos vectorDistance _lastPos;
+                private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
 
                     private _targetVel = velocity _target;
 
