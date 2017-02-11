@@ -468,6 +468,7 @@
             <Japanese>画面端では非表示</Japanese>
             <Polish>Ukryj na brzegach ekranu</Polish>
             <Korean>화면 가장자리에서 사라짐</Korean>
+            <French>Estomper sur les bords de l'écran</French>
         </Key>
     </Package>
 </Project>

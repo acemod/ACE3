@@ -8,6 +8,7 @@
             <Polish>Zaawansowane rzucanie</Polish>
             <German>Erweitertes Wurfsystem</German>
             <Korean>고급 투척</Korean>
+            <French>Lancé amélioré</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
@@ -16,6 +17,7 @@
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
             <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
             <Korean>고급 투척 행위를 허가합니다</Korean>
+            <French>Permet de changer la configuration du lancé amélioré.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
@@ -24,6 +26,7 @@
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
+            <French>Active le lancé amélioré</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
@@ -32,6 +35,7 @@
             <Polish>Aktywuje system zaawansowanego rzucania.</Polish>
             <German>Aktiviert das erweiterte Wurfsystem.</German>
             <Korean>고급 투척을 활성화 합니다</Korean>
+            <French>Active le système de lancé amélioré.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -40,6 +44,7 @@
             <Polish>Pokaż trasę lotu</Polish>
             <German>Zeige Wurfbogen</German>
             <Korean>투척 궤적 표시</Korean>
+            <French>Afficher l'arc de lancé</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
@@ -48,6 +53,7 @@
             <Polish>Wyświetla wizualizację trasy przelotu granatu.</Polish>
             <German>Aktiviert die Visualisierung des Wurfbogens (wohin das Objekt geworfen werden wird).</German>
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
+            <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
@@ -56,6 +62,7 @@
             <Polish>Pokaż podpowiedzi sterowania myszą</Polish>
             <German>Zeige Maussteuerung beim Werfen</German>
             <Korean>마우스 조작 표시</Korean>
+            <French>Afficher les contrôles à la souris du lancé</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
@@ -64,6 +71,7 @@
             <Polish>Wyświetla podpowiedzi sterowania myszą kiedy obiekt miotany jest w ręku.</Polish>
             <German>Aktiviert visuelle Hinweise zur Maussteuerung, wenn ein Objekt zum Werfen vorbereitet wird.</German>
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
+            <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
@@ -72,6 +80,7 @@
             <Polish>Zezwól na podnoszenie obiektów miotanych</Polish>
             <German>Aktiviere Aufheben von Wurfobjekten</German>
             <Korean>투척물 줍기 활성화</Korean>
+            <French>Active la récupération des objets lancés</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
             <English>Enables ability to pick up throwables from the ground.</English>
@@ -80,6 +89,7 @@
             <Polish>Umożliwia podnoszenie obiektów miotanych z ziemi.</Polish>
             <German>Aktiviert die Möglichkeit, geworfene Objekte wieder vom Boden aufzuheben.</German>
             <Korean>땅에 떨어진 투척물을 주울 수 있게 해줍니다.</Korean>
+            <French>Active la capacité de récupérer les objets lancés sur le sol.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
@@ -88,6 +98,7 @@
             <Polish>Zezwól na podnoszenie przyczepionych obiektów miotanych</Polish>
             <German>Aktiviere erneute Aufnahme befestigter Wurfobjekte</German>
             <Korean>부착 투척물 줍기 활성화</Korean>
+            <French>Active le ramassage d'objets lançables attachés</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
@@ -96,6 +107,7 @@
             <Polish>Umożliwia podnoszenie obiektów miotanych przyczepionych do innych obiektów.</Polish>
             <German>Aktiviert die Möglichkeit, befestigte Wurfobjekte erneut aufzunehmen.</German>
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
+            <French>Active la capacité à ramasser les objets lançables attaché à d'autres objets.</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
@@ -104,6 +116,7 @@
             <Polish>Przygotuj/zmień ob. miotany</Polish>
             <German>Wurfobjekt vorbereiten/wechseln</German>
             <Korean>투척물 준비/변경</Korean>
+            <French>Préparer/changer d'objet</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
             <English>Throwable Drop Mode (Hold)</English>
@@ -112,6 +125,7 @@
             <Polish>Tryb upuszczania ob. miotanego (przytrzymaj)</Polish>
             <German>Wurfobjekt Fallmodus (halten)</German>
             <Korean>투척물 떨어뜨리기 모드(꾹눌러서)</Korean>
+            <French>Mode de lancé de l'objet (Tenir)</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
@@ -120,6 +134,7 @@
             <Polish>Tryb upuszczania ob. miotanego (przełącz)</Polish>
             <German>Wurfobjekt Fallmodus (umschalten)</German>
             <Korean>투척물 떨어뜨리기 모드(토글)</Korean>
+            <French>Mode de lancé de l'objet (Basculer)</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
@@ -128,6 +143,7 @@
             <Polish>Odbezpieczony</Polish>
             <German>Scharf gemacht</German>
             <Korean>뇌관 작동</Korean>
+            <French>Amorcer</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
@@ -136,6 +152,7 @@
             <Polish>Rzuć</Polish>
             <German>Werfen</German>
             <Korean>던지기</Korean>
+            <French>Lancer</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
@@ -144,6 +161,7 @@
             <Polish>(Kółko m.) zmień tryb</Polish>
             <German>(Scrollen) Modus wechseln</German>
             <Korean>(마우스 휠) 모드 변경</Korean>
+            <French>(Molette souris) Changer de mode</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
@@ -152,6 +170,7 @@
             <Polish>(Kółko m.) przedłuż</Polish>
             <German>(Scrollen) Erweitern</German>
             <Korean>(마우스 휠) 연장</Korean>
+            <French>(Molette souris) Etendre</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -160,6 +179,7 @@
             <Polish>(Kliknięcie) Odbezpiecz</Polish>
             <German>(Klicken) Abkochen</German>
             <Korean>(클릭) 예열</Korean>
+            <French>(Clique) Dégoupiller</French>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
@@ -168,6 +188,7 @@
             <Polish>Podnieś</Polish>
             <German>Aufheben</German>
             <Korean>줍기</Korean>
+            <French>Ramasser</French>
         </Key>
     </Package>
 </Project>

@@ -36,6 +36,7 @@
             <Polish>Efekty gogli</Polish>
             <German>Brilleneffekt</German>
             <Korean>고글 효과</Korean>
+            <French>Effets des lunettes</French>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
@@ -44,6 +45,7 @@
             <Polish>Winieta</Polish>
             <German>Tönung</German>
             <Korean>색조</Korean>
+            <French>Teinte</French>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
@@ -52,6 +54,8 @@
             <Polish>Winieta + Efekty</Polish>
             <German>Tönung + Effekte</German>
             <Korean>색조+효과</Korean>
+            <French>Teinte + effets</French>
         </Key>
     </Package>
 </Project>
+
