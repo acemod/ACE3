@@ -15,12 +15,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
 #include "CfgActions.hpp"
-
 #include "CursorMenus.hpp"
-
-#include "ACE_Settings.hpp"
 
 class ACE_Extensions {
     extensions[] += {"ace_break_line", "ace_parse_imagepath"};

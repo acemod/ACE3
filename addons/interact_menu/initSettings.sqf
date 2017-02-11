@@ -1,26 +1,38 @@
-class ACE_Settings {
-    class GVAR(alwaysUseCursorSelfInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorSelfInteraction);
-    };
-    class GVAR(cursorKeepCentered) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(cursorKeepCentered);
-        description = CSTRING(cursorKeepCenteredDescription);
-    };
-    class GVAR(alwaysUseCursorInteraction) {
-        value = 0;
-        typeName = "BOOL";
-        isClientSettable = 1;
-        category = CSTRING(Category_InteractionMenu);
-        displayName = CSTRING(AlwaysUseCursorInteraction);
-    };
+
+[
+    QGVAR(alwaysUseCursorSelfInteraction),
+    "CHECKBOX",
+    LSTRING(AlwaysUseCursorSelfInteraction),
+    LSTRING(Category_InteractionMenu),
+    false
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(cursorKeepCentered),
+    "CHECKBOX",
+    [LSTRING(cursorKeepCentered), LSTRING(cursorKeepCenteredDescription)],
+    LSTRING(Category_InteractionMenu),
+    false
+] call CBA_Settings_fnc_init;
+
+[
+    QGVAR(alwaysUseCursorInteraction),
+    "CHECKBOX",
+    LSTRING(AlwaysUseCursorInteraction),
+    LSTRING(Category_InteractionMenu),
+    false
+] call CBA_Settings_fnc_init;
+
+
+
+
+
+
+
+
+
+/*
+
     class GVAR(useListMenu) {
         value = 0;
         typeName = "BOOL";
@@ -28,6 +40,20 @@ class ACE_Settings {
         category = CSTRING(Category_InteractionMenu);
         displayName = CSTRING(UseListMenu);
     };
+
+
+
+
+//
+
+["ace_settingChanged", {
+    params ["_name"];
+    if (({_x == _name} count [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) == 1) then {
+        [] call FUNC(setupTextColors);
+    };
+}] call CBA_fnc_addEventHandler;
+
+
     class GVAR(colorTextMax) {
         value[] = {1, 1, 1, 1};
         typeName = "COLOR";
@@ -64,6 +90,9 @@ class ACE_Settings {
         displayName = CSTRING(textSize);
         values[] = {"$str_very_small", "$str_small", "$str_medium", "$str_large", "$str_very_large"};
     };
+
+
+
     class GVAR(shadowSetting) {
         value = 2;
         typeName = "SCALAR";
@@ -106,3 +135,20 @@ class ACE_Settings {
         values[] = {"$str_speed_normal", "2x", "3x"};
     };
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
