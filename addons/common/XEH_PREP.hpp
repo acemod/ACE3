@@ -1,8 +1,11 @@
+TRACE_1("",QUOTE(ADDON));
+
+PREP(cbaSettings);
+PREP(cbaSettings_loadFromConfig);
 
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
-PREP(addSetting);
 PREP(addToInventory);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);
@@ -103,9 +106,6 @@ PREP(isUnderwater);
 PREP(lightIntensityFromObject);
 PREP(loadPerson);
 PREP(loadPersonLocal);
-PREP(loadSettingsFromProfile);
-PREP(loadSettingsOnServer);
-PREP(loadSettingsLocalizedText);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(muteUnit);
@@ -123,7 +123,6 @@ PREP(playerSide);
 PREP(positionToASL);
 PREP(progressBar);
 PREP(readSettingFromModule);
-PREP(readSettingsFromParamsArray);
 PREP(receiveRequest);
 PREP(removeCanInteractWithCondition);
 PREP(removeSpecificMagazine);
@@ -144,7 +143,6 @@ PREP(setPitchBankYaw);
 PREP(setPlayerOwner);
 PREP(setProne);
 PREP(setSetting);
-PREP(setSettingFromConfig);
 PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
