@@ -9,7 +9,7 @@ class CfgVehicles {
         category = "ACE_medical";
         function = QUOTE(DFUNC(module));
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);

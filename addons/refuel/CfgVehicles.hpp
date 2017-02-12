@@ -109,7 +109,7 @@ class CfgVehicles {
         category = "ACE_Logistics";
         function = QFUNC(moduleRefuelSettings);
         functionPriority = 1;
-        isGlobal = 0;
+        isGlobal = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

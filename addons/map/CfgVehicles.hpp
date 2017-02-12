@@ -82,7 +82,7 @@ class CfgVehicles {
         displayName = CSTRING(BFT_Module_DisplayName);
         function = QFUNC(blueForceTrackingModule);
         scope = 2;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_BFTracking_ca.paa);
         class Arguments {

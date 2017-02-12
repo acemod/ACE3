@@ -73,7 +73,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleInit);
         scope = 2;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_VehicleLock_ca.paa);
         functionPriority = 0;

@@ -9,7 +9,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(module);
         scope = 2;
-        isGlobal = 0;
+        isGlobal = 1;
         icon = QPATHTOF(UI\Icon_Module_Respawn_ca.paa);
 
         class Arguments {

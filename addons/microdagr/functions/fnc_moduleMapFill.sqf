@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-if !(isServer) exitWith {};
 params ["_logic"];
 
 [_logic, QGVAR(MapDataAvailable), "MapDataAvailable"] call EFUNC(common,readSettingFromModule);

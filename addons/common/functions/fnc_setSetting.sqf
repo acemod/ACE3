@@ -18,6 +18,19 @@
  *
  * Public: No
  */
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-ERROR_MSG_1("ace_common_fnc_setSetting has been removed\n%1",_this);
+params ["_name", "_value", ["_force", false], ["_broadcastChanges", false]];
+TRACE_4("setSetting",_name,_value,_force,_broadcastChanges);
+
+if (!isServer) exitWith {};
+if (!_broadcastChanges) exitWith {
+    ERROR_1("Setting [%1] - SetSetting no longer supports non-global settings",_name);
+};
+
+if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
+    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_settingName);
+};
+
+[QGVAR(setSetting), [_name, _value], (format [QGVAR(setSetting_%1), _name])] call CBA_fnc_globalEventJIP;

@@ -37,7 +37,7 @@ class CfgVehicles {
         displayName = CSTRING(Module_DisplayName);
         function = QFUNC(moduleMapFill);
         scope = 2;
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         icon = QPATHTOF(UI\Icon_Module_microDAGR_ca.paa);
         functionPriority = 0;

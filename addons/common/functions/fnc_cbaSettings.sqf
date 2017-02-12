@@ -9,6 +9,13 @@ GVAR(cbaSettings_missionSettings) = [];
 GVAR(settings) = []; // will stay empty - for BWC?
 
 // Add Event Handlers:
+[QGVAR(setSetting), {
+    params ["_settingName", "_value"];
+    TRACE_2("setSettingMission from setSetting",_settingName,_value);
+    ["CBA_settings_setSettingMission", [_settingName, _value, true]] call CBA_fnc_localEvent;
+    ["CBA_settings_refreshSetting", [_settingName]] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
 ["CBA_beforeSettingsInitialized", {
     TRACE_1("CBA_beforeSettingsInitialized EH",_this);
 

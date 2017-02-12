@@ -6,7 +6,7 @@ class CfgVehicles {
         displayName = CSTRING(moduleSettings_displayName);
         icon = QPATHTOF(UI\Icon_Module_finger_ca.paa);
         function = QFUNC(moduleSettings);
-        isGlobal = 0;
+        isGlobal = 1;
         isSingular = 1;
         author = ECSTRING(common,ACETeam);
         class Arguments {
