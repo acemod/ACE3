@@ -35,7 +35,7 @@ GVAR(lastPlayerVehicle) = objNull;
             TRACE_2("removed veh eh",_firedEH,GVAR(lastPlayerVehicle));
         };
         if ((!isNull _vehicle) && {_player != _vehicle}) then {
-            private _firedEH = _vehicle addEventHandler ["FiredNear", {call (firedNear)}];
+            private _firedEH = _vehicle addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _vehicle setVariable [QGVAR(firedEH), _firedEH];
             GVAR(lastPlayerVehicle) = _vehicle;
             TRACE_2("added veh eh",_firedEH,GVAR(lastPlayerVehicle));
@@ -60,9 +60,9 @@ GVAR(lastPlayerVehicle) = objNull;
         };
         // Don't add a new EH if the unit respawned
         if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
-            private _firedEH = _player addEventHandler ["FiredNear", {call (firedNear)}];
+            private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _player setVariable [QGVAR(firedEH), _firedEH];
-            private _explosionEH = _player addEventHandler ["Explosion", {call (explosionNear)}];
+            private _explosionEH = _player addEventHandler ["Explosion", {call FUNC(explosionNear)}];
             _player setVariable [QGVAR(explosionEH), _explosionEH];
             TRACE_3("added unit eh",_player,_firedEH,_explosionEH);
         };
