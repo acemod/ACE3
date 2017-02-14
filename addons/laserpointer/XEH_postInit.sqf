@@ -32,7 +32,5 @@ GVAR(nearUnits) = [];
 
     } , 5, []] call CBA_fnc_addPerFrameHandler;
 
-    addMissionEventHandler ["Draw3D", {
-        call FUNC(onDraw);
-    }];
+    addMissionEventHandler ["Draw3D", {call FUNC(onDraw)}];
 }] call CBA_fnc_addEventHandler;
