@@ -8,6 +8,7 @@
             <Russian>Нур сервера унд HC</Russian>
             <Japanese>サーバーと HC のみ</Japanese>
             <Polish>Tylko serwer i HC</Polish>
+            <French>Seulement sur le server ou le HC</French>
         </Key>
     </Package>
 </Project>

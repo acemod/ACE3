@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class BulletBase;
     class B_20mm : BulletBase {
@@ -11,11 +10,11 @@ class CfgAmmo {
         explosive = 1.8;
         tracersEvery = 3;
         tracerEndTime = 3.5;
-
         CraterEffects = "ExploAmmoCrater";
         explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
+
     class ACE_20mm_HE : B_20mm {};
     class ACE_20mm_AP : B_20mm {
         hit = 50;
@@ -57,7 +56,6 @@ class CfgAmmo {
         submunitionAmmo = "ACE_Gatling_30mm_HE_Plane_CAS_01_Sub";
         submunitionConeType[] = {"custom", {{0,0}, {0,0}, {0,0}} };
     };
-
     class ACE_Gatling_30mm_HE_Plane_CAS_01_Sub: Gatling_30mm_HE_Plane_CAS_01_F {};
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber

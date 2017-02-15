@@ -467,7 +467,7 @@ class CfgWeapons {
     };
 
     // Scorpion EVO
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
 
         class Single: Mode_SemiAuto {
             minRange = 50;  //2;

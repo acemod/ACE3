@@ -13,7 +13,7 @@ if (_round in GVAR(blackList)) exitWith {
 };
 
 // Exit on max track
-if ((count GVAR(objects)) > GVAR(MaxTrack)) exitWith {};
+if ((count GVAR(objects)) > GVAR(maxTrack)) exitWith {};
 
 if (
     _gun == ACE_player ||

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="tacticalladder">
         <Key ID="STR_ACE_TacticalLadder_DisplayName">
@@ -13,6 +13,7 @@
             <Hungarian>Teleszkopikus létra</Hungarian>
             <Portuguese>Escada telescópica</Portuguese>
             <Japanese>タクティカル ラダー</Japanese>
+            <Korean>로프 사다리</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Deploy">
             <English>Deploy ladder</English>
@@ -26,6 +27,7 @@
             <Hungarian>Létra lerakása</Hungarian>
             <Portuguese>Implantar escada</Portuguese>
             <Japanese>ラダーを設置</Japanese>
+            <Korean>사다리 배치</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Drop">
             <English>Drop ladder</English>
@@ -39,6 +41,7 @@
             <Hungarian>Létra eldobása</Hungarian>
             <Portuguese>Derrubar escada</Portuguese>
             <Japanese>ラダーを落とす</Japanese>
+            <Korean>사다리 놓기</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Adjust">
             <English>Extend</English>
@@ -51,6 +54,7 @@
             <Spanish>Extender</Spanish>
             <French>Déployer</French>
             <Japanese>伸ばす</Japanese>
+            <Korean>늘리기</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_AdjustTilt">
             <English>+Ctrl tilt</English>
@@ -63,6 +67,7 @@
             <French>+Ctrl incliner</French>
             <Italian>+Ctrl per inclinare</Italian>
             <Japanese>+Ctrl で傾ける</Japanese>
+            <Korean>+컨트롤키 기울이기</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Position">
             <English>Position ladder</English>
@@ -76,6 +81,7 @@
             <Hungarian>Létra elhelyezése</Hungarian>
             <Portuguese>Posicionar escada</Portuguese>
             <Japanese>ラダーの位置</Japanese>
+            <Korean>사다리 위치</Korean>
         </Key>
         <Key ID="STR_ACE_TacticalLadder_Pickup">
             <English>Pickup ladder</English>
@@ -89,6 +95,7 @@
             <Hungarian>Létra felvétele</Hungarian>
             <Portuguese>Pegar escada</Portuguese>
             <Japanese>ラダーを拾う</Japanese>
+            <Korean>사다리 줍기</Korean>
         </Key>
     </Package>
 </Project>
