@@ -47,6 +47,8 @@ Important notes:
 5  | Set Name | String | Optional (default: localized `"Slides"`)
 **R** | None | None | Return value
 
+_Note: Set Name argument added in 3.9.1._
+
 #### 2.1.1 Example
 
 `[[object1, object2], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow;`
