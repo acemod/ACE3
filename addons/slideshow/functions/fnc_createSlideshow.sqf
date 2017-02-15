@@ -19,7 +19,6 @@
  */
 #include "script_component.hpp"
 
-private ["_currentSlideshow", "_slidesAction", "_varString"];
 params [
     ["_objects", [], [[]] ],
     ["_controllers", [], [[]] ],
@@ -53,7 +52,7 @@ if (isServer) then {
     GVAR(slideshows) = GVAR(slideshows) + 1;
 };
 
-_currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
+private _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR gets changed during execution of below code
 
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
@@ -65,7 +64,17 @@ if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
 if (_duration == 0) then {
     {
         // Add Slides sub-action and populate with images
-        _slidesAction = [QGVAR(Slides), localize LSTRING(Interaction), "", {}, {true}, {(_this select 2) call FUNC(addSlideActions)}, [_objects, _images, _names, _x, _currentSlideshow], [0, 0, 0], 2] call EFUNC(interact_menu,createAction);
+        private _slidesAction = [
+            format [QGVAR(Slides%1), _currentSlideshow],
+            localize LSTRING(Interaction),
+            "",
+            {},
+            {true},
+            {(_this select 2) call FUNC(addSlideActions)},
+            [_objects, _images, _names, _x, _currentSlideshow],
+            [0, 0, 0],
+            2
+        ] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
         nil
     } count _controllers;
@@ -73,7 +82,7 @@ if (_duration == 0) then {
     if !(isServer) exitWith {};
 
     // Formatted GVAR string (multiple modules support)
-    _varString = format [QGVAR(slideshow%1), _currentSlideshow];
+    private _varString = format [QGVAR(slideshow%1), _currentSlideshow];
     TRACE_1("Current Slide",_varString);
 
     // Set formatted GVAR to first slide

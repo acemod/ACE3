@@ -17,18 +17,17 @@
 // Exit on Headless Client
 if (!hasInterface && !isDedicated) exitWith {};
 
-private ["_objects", "_controllers", "_images", "_names", "_duration"];
 params [["_logic", objNull, [objNull]], "_units", "_activated"];
 
 if !(_activated) exitWith {};
 if (isNull _logic) exitWith {};
 
 // Extract variables from logic
-_objects = [_logic getVariable ["Objects", ""], true, true] call EFUNC(common,parseList);
-_controllers = [_logic getVariable ["Controllers", ""], true, true] call EFUNC(common,parseList);
-_images = [_logic getVariable ["Images", ""], false, false] call EFUNC(common,parseList);
-_names = [_logic getVariable ["Names", ""], false, false] call EFUNC(common,parseList);
-_duration = _logic getVariable ["Duration", 0];
+private _objects = [_logic getVariable ["Objects", ""], true, true] call EFUNC(common,parseList);
+private _controllers = [_logic getVariable ["Controllers", ""], true, true] call EFUNC(common,parseList);
+private _images = [_logic getVariable ["Images", ""], false, false] call EFUNC(common,parseList);
+private _names = [_logic getVariable ["Names", ""], false, false] call EFUNC(common,parseList);
+private _duration = _logic getVariable ["Duration", 0];
 
 // Objects synced to the module
 {
