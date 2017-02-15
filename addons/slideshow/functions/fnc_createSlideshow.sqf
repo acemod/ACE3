@@ -8,12 +8,13 @@
  * 2: Image Paths <ARRAY>
  * 3: Action Names <ARRAY>
  * 4: Slide Duration <NUMBER> (0 disables automatic transitions)
+ * 5: Set Name <STRING> (default: localized "Slides")
  *
  * Return Value:
  * None
  *
  * Example:
- * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow
+ * [[object1, object2, object3], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow
  *
  * Public: Yes
  */
@@ -24,7 +25,8 @@ params [
     ["_controllers", [], [[]] ],
     ["_images", [], [[]] ],
     ["_names", [], [[]] ],
-    ["_duration", 0, [0]]
+    ["_duration", 0, [0]],
+    ["_setName", localize LSTRING(Interaction), [""]]
 ];
 
 // Verify data
@@ -40,7 +42,7 @@ if (_controllers isEqualTo []) then {
     _controllers = _objects;
 };
 
-TRACE_4("Information",_objects,_controllers,_images,_names);
+TRACE_5("Information",_objects,_controllers,_images,_names,_setName);
 
 if (isServer) then {
     // Default images on whiteboards (first image)
@@ -63,10 +65,14 @@ if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
 if (_duration == 0) then {
     {
+        if (_setName == "") then {
+            _setName = localize LSTRING(Interaction);
+        };
+
         // Add Slides sub-action and populate with images
         private _slidesAction = [
-            format [QGVAR(Slides%1), _currentSlideshow],
-            localize LSTRING(Interaction),
+            format [QGVAR(slideshow%1), _currentSlideshow],
+            _setName,
             "",
             {},
             {true},
