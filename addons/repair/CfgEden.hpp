@@ -10,7 +10,7 @@ class Cfg3DEN {
         };
         class GVAR(isEngineerControl): Title {
             attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
-            attributeSave = "(_this getVariable ['ace_isEng_temp', 0]) - 1;";
+            attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
                 class Title: Title{};
                 class Value: ctrlToolbox {
@@ -22,7 +22,6 @@ class Cfg3DEN {
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};
-                    onToolboxSelChanged = "(ctrlParentControlsGroup (_this select 0)) setVariable ['ace_isEng_temp', _this select 1];";
                 };
             };
         };

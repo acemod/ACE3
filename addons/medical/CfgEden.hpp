@@ -10,7 +10,7 @@ class Cfg3DEN {
         };
         class GVAR(isMedicControl): Title {
             attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
-            attributeSave = "(_this getVariable ['ace_isMedic_temp', 0]) - 1;";
+            attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
                 class Title: Title{};
                 class Value: ctrlToolbox {
@@ -22,7 +22,6 @@ class Cfg3DEN {
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignMedicRoles_role_none), CSTRING(AssignMedicRoles_role_medic), CSTRING(AssignMedicRoles_role_doctorShort)};
-                    onToolboxSelChanged = "(ctrlParentControlsGroup (_this select 0)) setVariable ['ace_isMedic_temp', _this select 1];";
                 };
             };
         };
@@ -36,7 +35,7 @@ class Cfg3DEN {
                         control = QGVAR(isMedicControl);
                         displayName = CSTRING(AssignMedicRoles_role_DisplayName);
                         tooltip = CSTRING(Attributes_isMedic_Description);
-                        expression = QUOTE(if (_value != -1) then {_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];};);
+                        expression = QUOTE(if (_value > -1) then {_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];};);
                         typeName = "NUMBER";
                         condition = "objectBrain";
                         defaultValue = "-1";
