@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_player"];
+
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full

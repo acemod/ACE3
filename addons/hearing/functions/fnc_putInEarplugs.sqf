@@ -16,6 +16,7 @@
 #include "script_component.hpp"
 
 params ["_player"];
+
 if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 // Plugs in inventory, putting them in
