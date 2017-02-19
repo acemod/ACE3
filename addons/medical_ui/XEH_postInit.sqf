@@ -2,9 +2,10 @@
 
 if (!hasInterface) exitWith {};
 
-[] call FUNC(initEffects);
-[FUNC(handleEffects),   1, []] call CBA_fnc_addPerFrameHandler;
-[FUNC(effectHeartBeat), 0, []] call CBA_fnc_addPerFrameHandler;
+GVAR(heartBeatEffectRunning) = false;
+
+[false] call FUNC(initEffects);
+[LINKFUNC(handleEffects), 1, []] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];

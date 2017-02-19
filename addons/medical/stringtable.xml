@@ -2676,48 +2676,6 @@
             <Japanese>包帯は体力を完全に回復する</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_painEffectType">
-            <English>Pain Effect Type</English>
-            <German>Schmerzeffekt-Typ</German>
-            <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Визуальный эффект боли</Russian>
-            <Italian>Pain Effect Type</Italian>
-            <Spanish>Tipo de efecto de dolor</Spanish>
-            <French>Type d'effet de douleur</French>
-            <Hungarian>Fájdalom-effekt típusa</Hungarian>
-            <Portuguese>Tipo do efeito de dor</Portuguese>
-            <Czech>Typ bolesti - efekt</Czech>
-            <Japanese>痛みの種類</Japanese>
-            <Korean>고통 효과 종류</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_painEffect_Flash">
-            <English>Colour Flashing</English>
-            <German>Farbblinken</German>
-            <Polish>Pulsujące kolory</Polish>
-            <Russian>Пульсирующий свет</Russian>
-            <Italian>Colore lampeggiante</Italian>
-            <Spanish>Parpadeo de color</Spanish>
-            <French>Flash de couleur</French>
-            <Hungarian>Színvillódzás</Hungarian>
-            <Portuguese>Flash de cor</Portuguese>
-            <Czech>Blikající barva</Czech>
-            <Japanese>色の点滅</Japanese>
-            <Korean>색 반짝임</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_painEffect_Chroma">
-            <English>Chromatic Aberration</English>
-            <German>Chromatische Aberration</German>
-            <Polish>Aberracja chromatyczna</Polish>
-            <Russian>Хроматическая аберрация</Russian>
-            <Italian>Aberrazione cromatica</Italian>
-            <Spanish>Aberración cromática</Spanish>
-            <French>Aberration chromatique</French>
-            <Hungarian>Kromatikus aberráció</Hungarian>
-            <Czech>Chromatická aberace</Czech>
-            <Portuguese>Aberração Cromática</Portuguese>
-            <Japanese>色の収差</Japanese>
-            <Korean>색수차</Korean>
-        </Key>
         <Key ID="STR_ACE_Medical_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
             <Polish>Styl menu medycznego</Polish>

@@ -12,7 +12,7 @@
 #include "script_component.hpp"
 params ["_enable", "_intensity"];
 
-if (!_enable) exitWith {
+if (!_enable || {_intensity == 0}) exitWith {
     GVAR(ppPain) ppEffectEnable false;
 };
 GVAR(ppPain) ppEffectEnable true;
@@ -38,6 +38,8 @@ if (GVAR(painEffectType) == 0) then {
 GVAR(ppPain) ppEffectAdjust _initialAdjust;
 GVAR(ppPain) ppEffectCommit FX_PAIN_FADE_IN;
 [{
-    GVAR(ppPain) ppEffectAdjust _this;
+    params ["_adjust", "_painEffectType"];
+    if (GVAR(painEffectType) != _painEffectType) exitWith {TRACE_1("Effect type changed",_this);};
+    GVAR(ppPain) ppEffectAdjust _adjust;
     GVAR(ppPain) ppEffectCommit FX_PAIN_FADE_OUT;
-}, _delayedAdjust, FX_PAIN_FADE_IN] call CBA_fnc_waitAndExecute;
+}, [_delayedAdjust, GVAR(painEffectType)], FX_PAIN_FADE_IN] call CBA_fnc_waitAndExecute;

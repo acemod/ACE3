@@ -10,6 +10,10 @@
  */
 #include "script_component.hpp"
 
+params [["_justPain", false]];
+
+TRACE_1("initEffects",_justPain);
+
 private _fnc_createEffect = {
     params ["_type", "_layer", "_default"];
 
@@ -20,6 +24,28 @@ private _fnc_createEffect = {
 
     _effect
 };
+
+// - Pain ---------------------------------------------------------------------
+if (!isNil QGVAR(ppPain)) then {
+    TRACE_1("delete pain",GVAR(ppPain));
+    ppEffectDestroy GVAR(ppPain)
+};
+if (GVAR(painEffectType) == 0) then {
+    GVAR(ppPain) = [
+        "ColorCorrections",
+        13502,
+        [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+    ] call _fnc_createEffect;
+} else {
+    GVAR(ppPain) = [
+        "RadialBlur", // "Will not do anything if RADIAL BLUR is disabled in Video Options."
+        13502,
+        [0, 0, 0.3, 0.39]
+    ] call _fnc_createEffect;
+};
+TRACE_1("created pain",GVAR(ppPain));
+
+if (_justPain) exitWith {};
 
 // - Unconscious --------------------------------------------------------------
 GVAR(ppUnconsciousBlur) = [
@@ -34,20 +60,6 @@ GVAR(ppUnconsciousBlackout) = [
     [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
 ] call _fnc_createEffect;
 
-// - Pain ---------------------------------------------------------------------
-if (GVAR(painEffectType) == 0) then {
-    GVAR(ppPain) = [
-        "ColorCorrections",
-        13502,
-        [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-    ] call _fnc_createEffect;
-} else {
-    GVAR(ppPain) = [
-        "RadialBlur",
-        13502,
-        [0, 0, 0.3, 0.39]
-    ] call _fnc_createEffect;
-};
 
 // - Blood volume -------------------------------------------------------------
 GVAR(ppBloodVolume) = [

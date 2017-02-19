@@ -48,7 +48,6 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(useLocation_PAK), "useLocation_PAK"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(useLocation_SurgicalKit), "useLocation_SurgicalKit"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(remainingDamage_Medkit), "remainingDamage_Medkit"] call EFUNC(common,readSettingFromModule);
-[_logic, QGVAR(painEffectType), "painEffectType"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowUnconsciousAnimationOnTreatment), "allowUnconsciousAnimationOnTreatment"] call EFUNC(common,readSettingFromModule);
 
 [_logic, QGVAR(menuTypeStyle), "menuTypeStyle"] call EFUNC(common,readSettingFromModule);

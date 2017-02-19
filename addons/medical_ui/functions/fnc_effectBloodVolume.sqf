@@ -12,7 +12,7 @@
 #include "script_component.hpp"
 params ["_enable", "_intensity"];
 
-if (!_enable) exitWith {
+if ((!_enable) || {_intensity == 0}) exitWith {
     GVAR(ppBloodVolume) ppEffectEnable false;
 };
 GVAR(ppBloodVolume) ppEffectEnable true;
