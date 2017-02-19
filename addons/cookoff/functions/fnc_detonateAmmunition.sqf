@@ -31,7 +31,7 @@ private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_amountOfMagazines"];
 
 if (_amountOfMagazines > 0) exitWith {
-    private _removed = _amountOfMagazines min floor(1 + random(6));
+    private _removed = _amountOfMagazines min floor(1 + random(6 / GVAR(ammoCookoffDuration)));
 
     _amountOfMagazines = _amountOfMagazines - _removed;
     if (_amountOfMagazines <= 0) then {

@@ -49,6 +49,7 @@
             <Polish>Podłącz słuchawki</Polish>
             <German>Kopfhörer verbinden</German>
             <Korean>헤드폰에 연결</Korean>
+            <French>Connecter les écouteurs</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
@@ -58,6 +59,7 @@
             <Polish>Odłącz słuchawki</Polish>
             <German>Kopfhörer trennen</German>
             <Korean>헤드폰 연결끊기</Korean>
+            <French>Déconnecter les écouteurs</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
@@ -67,6 +69,7 @@
             <Polish>Słuchawki podpięte</Polish>
             <German>Kopfhörer verbunden</German>
             <Korean>헤드폰 연결됨</Korean>
+            <French>Écouteurs connectés</French>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
@@ -76,6 +79,8 @@
             <Polish>Słuchawki odpięte</Polish>
             <German>Kopfhörer getrennt</German>
             <Korean>헤드폰 연결끊김</Korean>
+            <French>Écouteurs déconnectés</French>
         </Key>
     </Package>
 </Project>
+

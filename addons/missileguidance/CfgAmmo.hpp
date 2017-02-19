@@ -69,7 +69,7 @@ class CfgAmmo {
     class M_Titan_AT: MissileBase {};
 
     class ACE_Javelin_FGM148: M_Titan_AT {
-        irLock = 0;
+        irLock = 1;
         laserLock = 0;
         airLock = 0;
 

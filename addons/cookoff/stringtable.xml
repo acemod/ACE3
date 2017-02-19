@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_enable_name">
@@ -9,6 +9,7 @@
             <Japanese>誘爆を有効化</Japanese>
             <Korean>쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj efekty samozapłonu amunicji</Polish>
+            <French>Activer </French>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
             <English>Enables cook off and related vehicle destruction effects.</English>
@@ -59,6 +60,13 @@
             <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
             <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
+            <English>Ammunition cook off duration</English>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
+            <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
+            <French>Active le et les effets de destructions assosicée aux vehicules.</French>
         </Key>
     </Package>
 </Project>
