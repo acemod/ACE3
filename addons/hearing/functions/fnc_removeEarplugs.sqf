@@ -17,6 +17,8 @@
 
 params ["_player"];
 
+if (!GVAR(EnableCombatDeafness)) exitWith {};
+
 if !(_player canAdd "ACE_EarPlugs") exitWith { // inventory full
     [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };

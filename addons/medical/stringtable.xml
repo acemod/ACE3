@@ -2772,6 +2772,7 @@
             <Czech>Kruhový</Czech>
             <Italian>Radiale</Italian>
             <Japanese>円状</Japanese>
+            <Korean>다이얼형</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
             <English>Treating...</English>
@@ -3445,7 +3446,7 @@
             <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kde může být použita osobní lékárnička (PAK)?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <French>Où le Kit de Premier Secour peut être utilisé</French>
+            <French>Où le Kit de Premier Secour peut être utilisé ?</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
@@ -3470,7 +3471,7 @@
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kdy může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
-            <French>Quand peut être utilisé le Kit de Premier Secours</French>
+            <French>Quand peut être utilisé le Kit de Premier Secours ?</French>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
@@ -3712,7 +3713,7 @@
             <German>Aufzählung von Einheiten, die als Sanitäter gelten. Werden durch Kommata getrennt.</German>
             <Czech>Seznam osob které budou klasifikovány jako zdravotník, oddělené čárkami.</Czech>
             <Portuguese>Lista dos nomes das unidades que se classificam como médicos, separados por vírgulas.</Portuguese>
-            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule</French>
+            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule.</French>
             <Hungarian>Azon egységek nevei, melyek orvosként vannak meghatározva, vesszővel elválasztva.</Hungarian>
             <Italian>Lista di nomi unità che verranno classificati come medici, separati da virgole.</Italian>
             <Japanese>衛生兵として設定されるユニット名を一覧で指定でき、コンマで区切りを付けられます。</Japanese>
@@ -3908,7 +3909,7 @@
             <German>Setze medizinische Einrichtung [ACE]</German>
             <Czech>Určit zdravotnické zařízení [ACE]</Czech>
             <Portuguese>Definir instalação médica [ACE]</Portuguese>
-            <French>Définir comme équipement médical [ACE]</French>
+            <French>Définir comme installation médical [ACE]</French>
             <Hungarian>Orvosi létesítmény beállítása [ACE]</Hungarian>
             <Italian>Imposta Struttura Medica [ACE]</Italian>
             <Japanese>医療施設として設定 [ACE]</Japanese>
@@ -3922,7 +3923,7 @@
             <German>Ist eine medizinische Einrichtung</German>
             <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
-            <French>Est un équipement médical</French>
+            <French>Est une installation médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>E' Struttura Medica</Italian>
             <Japanese>医療施設として</Japanese>
@@ -3936,7 +3937,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung</German>
             <Czech>Registruje objekt jako zdravotnické zařízení</Czech>
             <Portuguese>Registra um objeto como instalacão médica</Portuguese>
-            <French>Enregistrer un objet comme un équipement médical</French>
+            <French>Enregistrer un objet comme une installation médical</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
             <Italian>Registra un oggetto come struttura medica</Italian>
             <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
@@ -3950,7 +3951,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung. Hier werden weitere, tiefgreifende Behandlungen ermöglicht. Kann Fahrzeugen oder Gebäuden zugewiesen werden.</German>
             <Czech>Definuje objekt jako zdravotnické zařízení. To umožňuje více pokročilé léčení. Může být použito na budovy nebo na vozidla.</Czech>
             <Portuguese>Define um objeto como instalação médica. Isso permite tratamentos mais avançados. Pode ser utilizado em edifícios e veículos.</Portuguese>
-            <French>Définir un objet comme équipement médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
+            <French>Définir un objet comme installation médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
             <Hungarian>Egy objektumot orvosi létesítményként határoz meg. Ez fejlett ellátási lehetőségeket engedélyez. Használható járműveken és épületeken.</Hungarian>
             <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
             <Japanese>オブジェクトを医療施設として割り当てます。割り当てられた場合、より高度な治療が可能になり、建物と車両へつかえます。</Japanese>

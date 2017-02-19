@@ -13,16 +13,24 @@ class CfgWeapons {
     class rhs_weap_M107_Base_F: GM6_base_F {
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
+        ACE_RailHeightAboveBore = 3.8;
     };
     class rhs_weap_XM2010_Base_F: Rifle_Base_F {
         ACE_barrelTwist = 254.0;
         ACE_barrelLength = 609.6;
         ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 3.6;
     };
     class rhs_weap_m24sws: rhs_weap_XM2010_Base_F {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
+        ACE_RailHeightAboveBore = 1.8;
     };
+    class rhs_weap_m40a5: rhs_weap_XM2010_Base_F {
+        ACE_barrelTwist = 304.8; // 1:12"
+        ACE_barrelLength = 635.0; // 25"
+        ACE_RailHeightAboveBore = 2.6;
+    };    
     class arifle_MX_Base_F;
     class rhs_weap_m4_Base: arifle_MX_Base_F {
         ACE_barrelTwist = 177.8;
@@ -75,14 +83,17 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 558.8;
         ACE_Overheating_dispersion = 0.75;
+        ACE_RailHeightAboveBore = 3.3;
     };
     class rhs_weap_sr25: rhs_weap_m14ebrri {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 609.6;
+        ACE_RailHeightAboveBore = 3.4;
     };
     class rhs_weap_sr25_ec: rhs_weap_sr25 {
         ACE_barrelTwist = 285.75;
         ACE_barrelLength = 508.0;
+        ACE_RailHeightAboveBore = 3.4;
     };
     class rhs_weap_M590_5RD: Rifle_Base_F {
         ACE_barrelTwist = 0.0;
@@ -131,8 +142,11 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {};
+    class rhsusf_acc_LEUPOLDMK4: rhsusf_acc_sniper_base {
+        ACE_ScopeHeightAboveRail = 2.4;
+    };
     class rhsusf_acc_LEUPOLDMK4_2: rhsusf_acc_sniper_base {
+        ACE_ScopeHeightAboveRail = 3.8;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -142,8 +156,11 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {};
+    class rhsusf_acc_LEUPOLDMK4_2_d: rhsusf_acc_LEUPOLDMK4_2 {
+        ACE_ScopeHeightAboveRail = 3.8;
+    };
     class rhsusf_acc_premier: rhsusf_acc_LEUPOLDMK4_2 {
+        ACE_ScopeHeightAboveRail = 5.4;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_scope {
@@ -153,8 +170,11 @@ class CfgWeapons {
             };
         };
     };
-    class rhsusf_acc_premier_low: rhsusf_acc_premier {};
+    class rhsusf_acc_premier_low: rhsusf_acc_premier {
+        ACE_ScopeHeightAboveRail = 4.0;
+    };
     class rhsusf_acc_premier_anpvs27: rhsusf_acc_premier {
+        ACE_ScopeHeightAboveRail = 5.4;
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class pso1_nvg {
@@ -163,6 +183,24 @@ class CfgWeapons {
                 };
             };
         };
+    };
+    class rhsusf_acc_M8541: rhsusf_acc_premier { // http://www.schmidtundbender.de/en/products/police-and-military-forces/3-12x50-pm-iilpmtc.html
+        ACE_ScopeHeightAboveRail = 4.0;
+        ACE_ScopeAdjust_Vertical[] = {0, 22};
+        ACE_ScopeAdjust_Horizontal[] = {-6, 6};
+        ACE_ScopeAdjust_VerticalIncrement = 0.1;
+        ACE_ScopeAdjust_HorizontalIncrement = 0.1;
+        class ItemInfo: InventoryOpticsItem_Base_F {
+            class OpticsModes {
+                class Snip {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };    
+            };
+        };
+    };
+    class rhsusf_acc_M8541_low: rhsusf_acc_M8541 {
+        ACE_ScopeHeightAboveRail = 3.0;
     };
     // RHS lauchers
     class rhs_weap_fgm148: launch_O_Titan_F {

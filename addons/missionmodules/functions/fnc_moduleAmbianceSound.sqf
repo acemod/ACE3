@@ -88,9 +88,9 @@ if (_activated && local _logic) then {
                 private _newPosASL = if (_followPlayers) then {
                     // Select a target unit at random.
                     private _targetUnit = selectRandom _allUnits;
-                    AGLtoASL (_targetUnit getPos [random 360, _minimalDistance + random (_maximalDistance - _minimalDistance)]);
+                    AGLtoASL (_targetUnit getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
                 } else {
-                    AGLtoASL (_logic getPos [random 360, _minimalDistance + random (_maximalDistance - _minimalDistance)]);
+                    AGLtoASL (_logic getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
                 };
 
                 TRACE_1("",_newPosASL);

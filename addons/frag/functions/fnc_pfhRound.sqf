@@ -32,8 +32,7 @@ _this set [1, getPosASL _round];
 _this set [2, velocity _round];
 
 if (_doSpall) then {
-    private ["_scale"];
-    _scale = ((count GVAR(objects)) / GVAR(MaxTrackPerFrame)) max 0.1;
+    private _scale = ((count GVAR(objects)) / GVAR(maxTrackPerFrame)) max 0.1;
     [_round, _scale, _spallTrack, _foundObjectHPIds] call FUNC(spallTrack);
 };
 

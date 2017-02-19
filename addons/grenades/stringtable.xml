@@ -302,6 +302,7 @@
             <Japanese>AN-M14 焼夷手榴弾</Japanese>
             <Polish>Granat zapalający AN-M14</Polish>
             <Korean>AN-M14 소이 수류탄</Korean>
+            <French>Grenade incendiaire AN-M14</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_NameShort">
             <English>AN-M14</English>
@@ -310,6 +311,7 @@
             <Japanese>AN-M14</Japanese>
             <Polish>AN-M14</Polish>
             <Korean>AN-M14</Korean>
+            <French>AN-M14</French>
         </Key>
         <Key ID="STR_ACE_Grenades_Incendiary_Description">
             <English>Incendiary grenade used to destroy weapons, ammunition and other equipment.</English>
@@ -318,6 +320,7 @@
             <Japanese>焼夷手榴弾は武器や弾薬箱などの装備を破壊するために使われます。</Japanese>
             <Polish>Granat zapalający, używany do niszczenia broni, amunicji i innego sprzętu.</Polish>
             <Korean>소이 수류탄은 무기나 탄약 그리고 장비를 파괴할때 쓰입니다.</Korean>
+            <French>Grenade incendiaire utilisé pour détruire des armes, munitions et autres équipements.</French>
         </Key>
     </Package>
 </Project>
