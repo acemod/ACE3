@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACEX">
+    <Package name="QuickMount">
+        <Key ID="STR_ACEX_QuickMount_Category">
+            <English>Quick Mount</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_KeybindName">
+            <English>Vehicle quick mount</English>
+            <German>Fahrzeug schnell montieren</German>
+            <Polish>Pojazd szybkie mocowanie</Polish>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_KeybindDescription">
+            <English>Quickly enter the vehicle you are directly looking at.</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_VehicleFull">
+            <English>Vehicle Full</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_Distance">
+            <English>Distance</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_DistanceDescription">
+            <English>Maximum distance to check for vehicles.</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_VehicleLocked">
+            <English>Vehicle Locked</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_Speed">
+            <English>Maximum Speed (km/h)</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_SpeedDescription">
+            <English>Maximum vehicle speed (km/h) allowed for player entry</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_Priority">
+            <English>Prioritize Seat</English>
+        </Key>
+        <Key ID="STR_ACEX_QuickMount_PriorityDescription">
+            <English>Seat priority on entry</English>
+        </Key>
+    </Package>
+</Project>
