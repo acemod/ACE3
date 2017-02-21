@@ -23,7 +23,7 @@ params [
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
-    ACE_LOGERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+    ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
 };
 
 private _startPosASL = eyePos _unit;
@@ -72,6 +72,11 @@ if (_surfaceNormal vectorDotProduct  (_endPosASL vectorDiff _startPosASL) > 0) t
 // Check if its a valid surface: big enough, reasonably plane
 private _v1 = vectorNormalized (_surfaceNormal vectorMultiply -1);
 private _v2 = vectorNormalized (_v1 vectorCrossProduct (_endPosASL vectorDiff _startPosASL));
+// If the surface is not horizontal (>20º), create vup _v2 pointing upward instead of away
+if (abs (_v1 select 2) < 0.94) then {
+    private _v3Temp = _v1 vectorCrossProduct [0, 0, 1];
+    _v2 = _v3Temp vectorCrossProduct _v1;
+};
 private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
@@ -89,10 +94,10 @@ _fnc_isOk = {
     true
 };
 
-if ( !([ 0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([ 0.5*TAG_SIZE,-0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
-    {!([-0.5*TAG_SIZE,-0.5*TAG_SIZE] call _fnc_isOk)}}}) exitWith {
+if ( !([ 0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([ 0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([-0.5 * TAG_SIZE, 0.5 * TAG_SIZE] call _fnc_isOk) ||
+    {!([-0.5 * TAG_SIZE,-0.5 * TAG_SIZE] call _fnc_isOk)}}}) exitWith {
     TRACE_3("Unsuitable location:",_touchingPoint);
     false
 };
@@ -100,7 +105,7 @@ if ( !([ 0.5*TAG_SIZE, 0.5*TAG_SIZE] call _fnc_isOk) ||
 private _vectorDirAndUp = [_surfaceNormal vectorMultiply -1, _v3];
 
 // Everything ok, make the unit create the tag
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 [{
     params ["", "", "", "", "_unit"];

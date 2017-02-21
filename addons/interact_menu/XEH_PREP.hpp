@@ -9,7 +9,6 @@ PREP(collectActiveActionTree);
 PREP(createAction);
 PREP(ctrlSetParsedTextCached);
 PREP(findActionNode);
-PREP(handlePlayerChanged);
 PREP(isSubPath);
 PREP(keyDown);
 PREP(keyUp);

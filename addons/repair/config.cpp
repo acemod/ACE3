@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Wheel", "ACE_Track"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -19,10 +20,3 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgEden.hpp"
-
-class ACE_newEvents {
-    setWheelHitPointDamage = QGVAR(setWheelHitPointDamage);
-    setVehicleHitPointDamage = QGVAR(setVehicleHitPointDamage);
-    setVehicleDamage = QGVAR(setVehicleDamage);
-    AddCargoByClass = "ace_addCargoByClass";
-};

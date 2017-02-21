@@ -14,17 +14,16 @@
 
 #include "script_component.hpp"
 
-private ["_bloodPressure", "_logOutPut", "_output"];
 params ["_caller", "_target", "_selectionName"];
 
-_bloodPressure = if (!alive _target) then {
+private _bloodPressure = if (!alive _target) then {
     [0,0]
 } else {
     [_target] call FUNC(getBloodPressure)
 };
 _bloodPressure params [ "_bloodPressureLow", "_bloodPressureHigh"];
-_output = "";
-_logOutPut = "";
+private _output = "";
+private _logOutPut = "";
 if ([_caller] call FUNC(isMedic)) then {
     _output = LSTRING(Check_Bloodpressure_Output_1);
     _logOutPut = format["%1/%2",round(_bloodPressureHigh),round(_bloodPressureLow)];

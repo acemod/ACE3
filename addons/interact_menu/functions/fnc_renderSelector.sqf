@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Render a single interaction icon
  *
- * Argument:
+ * Arguments:
  * 0: 2d position <ARRAY>
  * 1: Icon <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

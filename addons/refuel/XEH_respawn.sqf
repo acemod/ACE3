@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
-private ["_unit"];
-
-_unit = _this select 0;
+params ["_unit"];
 
 if !(local _unit) exitWith {};
 

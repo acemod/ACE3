@@ -23,8 +23,7 @@ if (!local _unit) exitWith {};
 // Group and side respawn can potentially respawn you as a captive unit
 // Base and instant respawn cannot, so captive should be entirely reset
 // So we explicity account for the respawn type
-private ["_respawn"];
-_respawn = [0] call BIS_fnc_missionRespawnType;
+private _respawn = [0] call BIS_fnc_missionRespawnType;
 
 if (_respawn > 3) then {
     if (_unit getVariable [QGVAR(isHandcuffed), false]) then {

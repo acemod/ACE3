@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_cycle_target_direction
+ * call ace_atragmx_fnc_cycle_target_direction
  *
  * Public: No
  */

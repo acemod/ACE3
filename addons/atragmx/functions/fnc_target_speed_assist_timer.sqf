@@ -23,9 +23,8 @@ if !(ctrlVisible 9000) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 9002);
 
     [{
-        private ["_args", "_startTime"];
-        _args = _this select 0;
-        _startTime = _args select 0;
+        params ["_args"];
+        _args params ["_startTime"];
 
         if (!(GVAR(speedAssistTimer))) exitWith {
             GVAR(speedAssistTimer) = true;

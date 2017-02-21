@@ -17,17 +17,27 @@
 
 private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
 params [["_vehicle", objNull, [objNull]]];
+TRACE_1("params",_vehicle);
 
+
+//ToDo: Cleanup with CBA_fnc_ownerEvent in CBA 2.4.2
+{
+    [QGVAR(rearmEntireVehicleSuccessLocalEH), [_vehicle, _x]] call CBA_fnc_globalEvent;
+} forEach REARM_TURRET_PATHS;
+
+
+/* 
 if (isServer) then {
     {
         _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+            //wtf is _truck from???
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _truck] call CBA_fnc_targetEvent;
         } else {
-            EGVAR(common,remoteFnc) = [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
-            _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_targetEvent;
         };
     } count REARM_TURRET_PATHS;
 } else {
-    [_this, QFUNC(rearmEntireVehicleSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call CBA_fnc_serverEvent;
 };
+*/

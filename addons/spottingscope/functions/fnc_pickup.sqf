@@ -6,7 +6,7 @@
  * 0: spotting scope <OBJECT>
  * 1: unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

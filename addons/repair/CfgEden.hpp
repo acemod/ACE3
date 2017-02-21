@@ -9,20 +9,19 @@ class Cfg3DEN {
             };
         };
         class GVAR(isEngineerControl): Title {
-            attributeLoad = "(_this controlsGroupCtrl 100) lbsetcursel (((_value + 1) min 3) max 0);";
-            attributeSave = "(missionnamespace getvariable ['ace_isEng_temp',0]) - 1;";
+            attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
+            attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
                 class Title: Title{};
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";
-                    x = "48 * (pixelW * pixelGrid * 0.25)";
-                    w = "82 * (pixelW * pixelGrid * 0.25)";
-                    h = "5 * (pixelH * pixelGrid * 0.25)";
+                    x = "48 * (pixelW * pixelGrid * 0.50)";
+                    w = "82 * (pixelW * pixelGrid * 0.50)";
+                    h = "5 * (pixelH * pixelGrid * 0.50)";
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};
-                    onToolboxSelChanged = "missionnamespace setvariable ['ace_isEng_temp',_this select 1];";
                 };
             };
         };

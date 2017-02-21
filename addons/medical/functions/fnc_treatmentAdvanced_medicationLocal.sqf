@@ -15,8 +15,6 @@
 
 #include "script_component.hpp"
 
-private ["_currentInSystem", "_medicationConfig", "_painReduce", "_hrIncreaseLow", "_hrIncreaseNorm", "_hrIncreaseHigh", "_maxDose", "_inCompatableMedication", "_timeInSystem", "_heartRate", "_pain", "_resistance", "_hrCallback", "_varName", "_viscosityChange"];
-
 params ["_target", "_className", "_partNumber"];
 TRACE_3("params",_target,_className,_partNumber);
 
@@ -30,23 +28,22 @@ if ((_tourniquets select _partNumber) > 0) exitWith {
 };
 
 // We have added a new dose of this medication to our system, so let's increase it
-_varName = format[QGVAR(%1_inSystem), _className];
-_currentInSystem = _target getVariable [_varName, 0];
-_currentInSystem = _currentInSystem + 1;
-_target setVariable [_varName, _currentInSystem];
+private _varName = format[QGVAR(%1_inSystem), _className];
+private _currentInSystem = _target getVariable [_varName, 0];
+_target setVariable [_varName, _currentInSystem + 1];
 
 // Find the proper attributes for the used medication
-_medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
-_painReduce = getNumber (_medicationConfig >> "painReduce");
-_hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow");
-_hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
-_hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh");
-_timeInSystem = getNumber (_medicationConfig >> "timeInSystem");
-_maxDose = getNumber (_medicationConfig >> "maxDose");
-_viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
-_hrCallback = getText (_medicationConfig >> "hrCallback");
+private _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
+private _painReduce = getNumber (_medicationConfig >> "painReduce");
+private _hrIncreaseLow = getArray (_medicationConfig >> "hrIncreaseLow");
+private _hrIncreaseNorm = getArray (_medicationConfig >> "hrIncreaseNormal");
+private _hrIncreaseHigh = getArray (_medicationConfig >> "hrIncreaseHigh");
+private _timeInSystem = getNumber (_medicationConfig >> "timeInSystem");
+private _maxDose = getNumber (_medicationConfig >> "maxDose");
+private _viscosityChange = getNumber (_medicationConfig >> "viscosityChange");
+private _hrCallback = getText (_medicationConfig >> "hrCallback");
 
-_inCompatableMedication = [];
+private _inCompatableMedication = [];
 if (isClass (_medicationConfig >> _className)) then {
     _medicationConfig = (_medicationConfig >> _className);
     if (isNumber (_medicationConfig >> "painReduce")) then { _painReduce = getNumber (_medicationConfig >> "painReduce");};
@@ -67,7 +64,7 @@ if (isNil _hrCallback) then {
 if (!(_hrCallback isEqualType {})) then {_hrCallback = {TRACE_1("callback was NOT code",_hrCallback)};};
 
 // Adjust the heart rate based upon config entry
-_heartRate = _target getVariable [QGVAR(heartRate), 70];
+private _heartRate = _target getVariable [QGVAR(heartRate), 70];
 if (alive _target) then {
     if (_heartRate > 0) then {
         if (_heartRate <= 45) then {
@@ -84,7 +81,7 @@ if (alive _target) then {
 
 if (_painReduce > 0) then {
     // Reduce pain
-    _painSuppress = _target getVariable [QGVAR(painSuppress), 0];
+    private _painSuppress = _target getVariable [QGVAR(painSuppress), 0];
     _target setVariable [QGVAR(painSuppress), (_painSuppress + _painReduce) max 0];
     if (!GVAR(painIsOnlySuppressed)) then {
         _pain = _target getVariable [QGVAR(pain), 0];
@@ -92,9 +89,8 @@ if (_painReduce > 0) then {
     };
 };
 
-_resistance = _target getVariable [QGVAR(peripheralResistance), 100];
-_resistance = _resistance + _viscosityChange;
-_target setVariable [QGVAR(peripheralResistance), _resistance max 0];
+private _resistance = _target getVariable [QGVAR(peripheralResistance), 100];
+_target setVariable [QGVAR(peripheralResistance), (_resistance + _viscosityChange) max 0];
 
 // Call back to ensure that the medication is decreased over time
 [_target, _classname, _varName, _maxDose, _timeInSystem, _inCompatableMedication, _viscosityChange, _painReduce] call FUNC(onMedicationUsage);

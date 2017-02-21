@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="overpressure">
+        <Key ID="STR_ACE_overpressure_distanceCoefficient_displayName">
+            <English>Overpressure Distance Coefficient</English>
+            <Japanese>過圧の距離係数</Japanese>
+            <Korean>초과압력 거리 계수</Korean>
+            <Polish>Mnożnik dystansu nadciśnienia</Polish>
+        </Key>
+        <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
+            <English>Scales the overpressure effect [Default: 1]</English>
+            <Japanese>過圧効果の範囲 [標準: 1]</Japanese>
+            <Korean>초과압력의 효과 크기 [기본설정: 1]</Korean>
+            <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
+        </Key>
+    </Package>
+</Project>

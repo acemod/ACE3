@@ -2,6 +2,9 @@
 // interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
+PREP(getInteractionDistance);
+PREP(getVehiclePos);
+PREP(getVehiclePosComplex);
 PREP(getWeaponPos);
 PREP(moduleInteraction);
 

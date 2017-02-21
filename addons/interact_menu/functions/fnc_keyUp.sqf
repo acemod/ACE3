@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
  *
- * Argument:
+ * Arguments:
  * 0: Type of key: 0 interaction / 1 self interaction <NUMBER>
  *
- * Return value:
+ * Return Value:
  * true <BOOL>
  *
  * Public: No
@@ -45,6 +45,14 @@ if(GVAR(actionSelected)) then {
 };
 
 ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+
+//Remove the "DefaultAction" action event handler
+GVAR(blockDefaultActions) params [["_player", objNull], ["_ehid", -1]];
+TRACE_2("blockDefaultActions",_player,_ehid);
+if (!isNull _player) then {
+    [_player, "DefaultAction", _ehid] call EFUNC(common,removeActionEventHandler);
+    GVAR(blockDefaultActions) = [];
+};
 
 GVAR(keyDown) = false;
 GVAR(keyDownSelfAction) = false;

@@ -23,8 +23,7 @@ switch (GVAR(modeReticle)) do {
     };
 };
 
-private "_fnc_setPFH";
-_fnc_setPFH = {
+private _fnc_setPFH = {
     if (GVAR(holdKeyHandler) > -1) then {
         [GVAR(holdKeyHandler)] call CBA_fnc_removePerFrameHandler;
         GVAR(holdKeyHandler) = -1;

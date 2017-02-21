@@ -15,8 +15,7 @@ params ["_unit", "_damage"];
 
 if (!local _unit) exitWith {};
 
-private "_allHitPoints";
-_allHitPoints = getAllHitPointsDamage _unit select 2;
+private _allHitPoints = getAllHitPointsDamage _unit select 2;
 
 _unit setDamage _damage;
 

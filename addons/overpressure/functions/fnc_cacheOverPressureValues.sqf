@@ -3,12 +3,12 @@
  * Cache the shot data for a given weapon/mag/ammo combination.
  * Will use the config that has the highest priority.
  *
- * Argument:
+ * Arguments:
  * 0: Weapon <STRING>
  * 1: Magazine <STRING>
  * 2: Ammo <STRING>
  *
- * Return value:
+ * Return Value:
  * Shot Config <ARRAY>:
  *  0: Angle <Number>
  *  1: Range <Number>
@@ -46,7 +46,7 @@ TRACE_1("ConfigPath",_config);
 // get the Variables out of the Configes and create a array with then
 private _return = [
     (getNumber (_config >> QGVAR(angle))),
-    (getNumber (_config >> QGVAR(range))),
+    (getNumber (_config >> QGVAR(range))) * GVAR(distanceCoefficient),
     (getNumber (_config >> QGVAR(damage)))
 ];
 

@@ -7,7 +7,7 @@
  * 1: Right Click Text <STRING>
  * 2: Scroll Text <STRING> (Optional)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -26,8 +26,7 @@ params ["_leftClick", "_rightClick", ["_scroll", ""]];
 
 disableSerialization;
 
-private "_display";
-_display = uiNamespace getVariable ["ACE_Helper_Display", objNull];
+private _display = uiNamespace getVariable ["ACE_Helper_Display", objNull];
 
 if (isNull _display) exitWith {};
 

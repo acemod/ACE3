@@ -17,10 +17,8 @@ params ["_unit"];
 
 if (!local _unit) exitWith {};
 
-private "_bodyStatus";
-
 // ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
-_bodyStatus = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
+private _bodyStatus = _unit getVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0]];
 
 _bodyStatus params ["_headDamage", "_torsoDamage", "_handsDamageR", "_handsDamageL", "_legsDamageR", "_legsDamageL"];
 

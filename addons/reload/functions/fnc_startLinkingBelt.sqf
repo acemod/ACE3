@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Start linking the belt
  *
- * Argument:
+ * Arguments:
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  */
 #include "script_component.hpp"
@@ -46,7 +46,7 @@ private _onFinish = {
     (_this select 0) params ["_player", "_target", "_magazine"];
 
     // Raise event on remote unit
-    [QGVAR(linkedAmmo), [_target, _player, _magazine], [_target]] call CBA_fnc_targetEvent;
+    [QGVAR(ammoLinked), [_target, _player, _magazine], [_target]] call CBA_fnc_targetEvent;
 };
 
 private _onFailure = {
@@ -57,7 +57,7 @@ private _onFailure = {
     _player addMagazine _magazine;
 };
 
-_player playActionNow "PutDown";
+[_player, "PutDown"] call EFUNC(common,doGesture);
 
 // Remove the magazine with maximum remaining ammo
 [_player, _magazineType, _maxAmmo] call EFUNC(common,removeSpecificMagazine);

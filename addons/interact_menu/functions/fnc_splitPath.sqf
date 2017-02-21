@@ -2,10 +2,10 @@
  * Author: esteldunedain
  * Take full path and split it between parent path and action name
  *
- * Argument:
+ * Arguments:
  * Full path of the action to remove <ARRAY>
  *
- * Return value:
+ * Return Value:
  * 0: Parent path <ARRAY>
  * 1: Action name <STRING>
  *

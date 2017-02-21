@@ -20,7 +20,7 @@ params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitWith {
-    ERROR("running setHandcuffed on remote unit");
+    WARNING("running setHandcuffed on remote unit");
 };
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
@@ -35,7 +35,7 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
 };
 
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
-    ERROR("setHandcuffed: current state same as new");
+    WARNING("setHandcuffed: current state same as new");
 };
 
 if (_state) then {
@@ -73,28 +73,7 @@ if (_state) then {
             TRACE_1("removing animChanged EH",_animChangedEHID);
             _unit removeEventHandler ["AnimChanged", _animChangedEHID];
         };
-        _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-            params ["_unit", "_newAnimation"];
-            TRACE_2("AnimChanged",_unit,_newAnimation);
-            if (_unit == (vehicle _unit)) then {
-                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-                    TRACE_1("Handcuff animation interrupted",_newAnimation);
-                    [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
-                };
-            } else {
-                _turretPath = [];
-                {
-                    _x params ["_xUnit", "", "", "_xTurretPath"];
-                    if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};
-                } forEach (fullCrew (vehicle _unit));
-                TRACE_1("turret Path",_turretPath);
-                if (_turretPath isEqualTo []) exitWith {};
-
-                TRACE_1("Handcuff (FFV) animation interrupted",_newAnimation);
-                [_unit, "ACE_HandcuffedFFV", 2] call EFUNC(common,doAnimation);
-                [_unit, "ACE_HandcuffedFFV", 1] call EFUNC(common,doAnimation);
-            };
-        }];
+        _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedHandcuffed)];
         TRACE_2("Adding animChangedEH",_unit,_animChangedEHID);
         _unit setVariable [QGVAR(handcuffAnimEHID), _animChangedEHID];
 

@@ -32,6 +32,10 @@ if ([_unit] call FUNC(isGogglesVisible)) then {
     if (_dirtImage != "") then {
         GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 0.1, false];
         (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetText _dirtImage;
+
+        private _effectBrightness = linearConversion [0,1,([] call EFUNC(common,ambientBrightness)),0.25,1];
+        (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10660) ctrlSetTextColor [_effectBrightness, _effectBrightness, _effectBrightness, 1];
+        TRACE_1("dirt",_effectBrightness);
     };
 };
 

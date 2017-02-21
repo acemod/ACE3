@@ -20,7 +20,7 @@ params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitWith {
-    ERROR("running surrender on remote unit");
+    WARNING("running surrender on remote unit");
 };
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
@@ -35,12 +35,12 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
 };
 
 if ((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _state) exitWith {
-    ERROR("Surrender: current state same as new");
+    WARNING("Surrender: current state same as new");
 };
 
 if (_state) then {
-    if ((vehicle _unit) != _unit) exitWith {ERROR("Cannot surrender while mounted");};
-    if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {ERROR("Cannot surrender while handcuffed");};
+    if ((vehicle _unit) != _unit) exitWith {WARNING("Cannot surrender while mounted");};
+    if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {WARNING("Cannot surrender while handcuffed");};
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
@@ -64,13 +64,7 @@ if (_state) then {
                 TRACE_1("removing animChanged EH",_animChangedEHID);
                 _unit removeEventHandler ["AnimChanged", _animChangedEHID];
             };
-            _animChangedEHID = _unit addEventHandler ["AnimChanged", {
-                params ["_unit", "_newAnimation"];
-                if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
-                    TRACE_1("Surrender animation interrupted",_newAnimation);
-                    [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
-                };
-            }];
+            _animChangedEHID = _unit addEventHandler ["AnimChanged", DFUNC(handleAnimChangedSurrendered)];
             _unit setVariable [QGVAR(surrenderAnimEHID), _animChangedEHID];
         };
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;

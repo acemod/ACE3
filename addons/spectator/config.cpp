@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -23,9 +24,4 @@ class CfgRespawnTemplates {
         onPlayerKilled = QFUNC(respawnTemplate);
         onPlayerRespawn = QFUNC(respawnTemplate);
     };
-};
-
-class ACE_newEvents {
-    spectatorStaged = "ace_spectatorStaged";
-    spectatorSet = "ace_spectatorSet";
 };

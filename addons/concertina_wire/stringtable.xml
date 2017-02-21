@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="concertina_wire">
         <Key ID="STR_ACE_CONCERTINA_WIRE">
@@ -12,6 +12,8 @@
             <Italian>Filo spinato di concertina</Italian>
             <Hungarian>Concertina wire</Hungarian>
             <Portuguese>Arame farpado</Portuguese>
+            <Japanese>鉄条網</Japanese>
+            <Korean>철조망</Korean>
         </Key>
         <Key ID="STR_ACE_CONCERTINA_WIRECOIL">
             <English>Concertina Wire Coil</English>
@@ -24,6 +26,8 @@
             <Italian>Bobina di concertina</Italian>
             <Hungarian>Concertina wire coil</Hungarian>
             <Portuguese>Bobina de arame farpado</Portuguese>
+            <Japanese>鉄条網コイル</Japanese>
+            <Korean>윤형 철조망</Korean>
         </Key>
         <Key ID="STR_ACE_UNROLLWIRE">
             <English>Dismount Concertina Wire</English>
@@ -36,6 +40,8 @@
             <Italian>Smonta la concertina</Italian>
             <Hungarian>Dismount Concertina wire</Hungarian>
             <Portuguese>Desmontar arame farpado</Portuguese>
+            <Japanese>鉄条網をほどく</Japanese>
+            <Korean>철조망 해체</Korean>
         </Key>
         <Key ID="STR_ACE_ROLLWIRE">
             <English>Deploy Concertina Wire</English>
@@ -48,6 +54,8 @@
             <Italian>Posa il filo di concertina</Italian>
             <Hungarian>Deploy Concertina wire</Hungarian>
             <Portuguese>Colocar arame farpado</Portuguese>
+            <Japanese>鉄条網を置く</Japanese>
+            <Korean>철조망 배치</Korean>
         </Key>
     </Package>
 </Project>

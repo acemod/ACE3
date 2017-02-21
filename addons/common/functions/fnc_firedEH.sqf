@@ -2,7 +2,7 @@
  * Author: esteldunedain
  * Unfied handling of weapon fire
  *
- * Argument:
+ * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
  * 1: weapon - Fired weapon <STRING>
  * 2: muzzle - Muzzle that was used <STRING>
@@ -11,7 +11,7 @@
  * 5: magazine - magazine name which was used <STRING>
  * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

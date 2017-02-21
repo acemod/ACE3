@@ -2,10 +2,10 @@
  * Author: ACE2 Team, Ruthberg
  * Calculate current wind locally from the data broadcasted by the server
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * Wind <ARRAY>
  *
  * Example:

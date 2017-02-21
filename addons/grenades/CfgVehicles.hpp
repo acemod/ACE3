@@ -35,6 +35,7 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_HandFlare_Green,12);
             MACRO_ADDITEM(ACE_HandFlare_Yellow,12);
             MACRO_ADDITEM(ACE_M84,12);
+            MACRO_ADDITEM(ACE_M14,12);
         };
     };
 };

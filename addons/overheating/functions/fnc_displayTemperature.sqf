@@ -3,7 +3,7 @@
  * Displays the weapon temperature
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  *
  * Return Values:
@@ -16,11 +16,13 @@
  */
 #include "script_component.hpp"
 
-params ["_player", "_weapon"];
-TRACE_2("params",_player,_weapon);
+params ["_unit", "_weapon"];
+TRACE_2("params",_unit,_weapon);
 
-// Calculate cool down of weapon since last shot
-private _temperature = [_player, _weapon, 0] call FUNC(updateTemperature);
+// Get unit's weapon's temperature:
+private _tempVarName = format [QGVAR(%1_temp), _weapon];
+private _temperature = _unit getVariable [_tempVarName, 0];
+
 private _scaledTemperature = (_temperature / 1000) min 1;
 
 private _color = [
@@ -40,6 +42,8 @@ _string = "";
 for "_a" from (_count + 1) to 12 do {
     _string = _string + "|";
 };
+
+TRACE_3("",_temperature,_color,_string);
 
 _text = composeText [_text, [_string, [0.5, 0.5, 0.5]] call EFUNC(common,stringToColoredText)];
 

@@ -21,6 +21,8 @@ if (ctrlVisible 14000) then {
 
     if (_this == 1) then {
         call FUNC(calculate_target_solution);
+    } else {
+        call FUNC(update_target_data);
     };
 } else {
     true call FUNC(show_target_data);

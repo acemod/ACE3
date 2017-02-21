@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_IR_Strobe_Item"};
         requiredVersion = REQUIRED_VERSION;
@@ -18,7 +19,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "GUI_VirtualAmmo.hpp"
-
-class ACE_newEvents {
-    interactMenuOpened = "ace_interactMenuOpened";
-};

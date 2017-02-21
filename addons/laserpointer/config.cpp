@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {"ACE_acc_pointer_red","ACE_acc_pointer_green","ACE_acc_pointer_green_IR"};
         requiredVersion = REQUIRED_VERSION;
@@ -18,8 +19,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgJointRails.hpp"
-
-class ACE_newEvents {
-    GunLightOff = "ace_gunLightOff";
-    SetHandcuffed = QEGVAR(captives,setHandcuffed);
-};

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_HuntIR", "ACE_HuntIRBox"};
         weapons[] = {"ACE_HuntIR_monitor"};
         requiredVersion = REQUIRED_VERSION;

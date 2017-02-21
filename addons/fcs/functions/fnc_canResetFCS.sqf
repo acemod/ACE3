@@ -2,7 +2,7 @@
  * Author: KoffeinFlummi
  * Called from config. Can player reset FCS?
  *
- * Argument:
+ * Arguments:
  * Nothing
  *
  * Return Value:

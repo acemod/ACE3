@@ -2,7 +2,7 @@
  * Author: commy2
  * hint the Variable ACE_isUsedBy from the input Object every frame
  *
- * Argument:
+ * Arguments:
  * <OBJECT>
  *
  * Return Value:

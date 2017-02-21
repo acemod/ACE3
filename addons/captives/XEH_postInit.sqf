@@ -13,8 +13,7 @@
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_disconnectedPlayer"];
-        private "_escortedUnit";
-        _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
+        private _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
         if ((!isNull _escortedUnit) && {(attachedTo _escortedUnit) == _disconnectedPlayer}) then {
             detach _escortedUnit;
         };
@@ -24,15 +23,15 @@ if (isServer) then {
     }];
 };
 
-["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
-[QGVAR(moveInCaptive), {_this call FUNC(vehicleCaptiveMoveIn)}] call CBA_fnc_addEventHandler;
-[QGVAR(moveOutCaptive), {_this call FUNC(vehicleCaptiveMoveOut)}] call CBA_fnc_addEventHandler;
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
+[QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
-[QGVAR(setHandcuffed), {_this call FUNC(setHandcuffed)}] call CBA_fnc_addEventHandler;
-[QGVAR(setSurrendered), {_this call FUNC(setSurrendered)}] call CBA_fnc_addEventHandler;
+[QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
+[QGVAR(setSurrendered), FUNC(setSurrendered)] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["ace_unconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call CBA_fnc_addEventHandler;
+["ace_unconscious", FUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

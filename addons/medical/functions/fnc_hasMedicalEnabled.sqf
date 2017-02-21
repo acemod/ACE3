@@ -16,10 +16,9 @@
  */
 #include "script_component.hpp"
 
-private "_medicalEnabled";
 params ["_unit"];
 
-_medicalEnabled = _unit getVariable QGVAR(enableMedical);
+private _medicalEnabled = _unit getVariable QGVAR(enableMedical);
 if (isNil "_medicalEnabled") exitWith {
     (((GVAR(enableFor) == 0 && (isPlayer _unit || (_unit getVariable [QEGVAR(common,isDeadPlayer), false])))) || (GVAR(enableFor) == 1) || GVAR(level) == 1)
 };

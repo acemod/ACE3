@@ -3,12 +3,12 @@
  * Handle "take" event
  * I think it fixs jams when manually dragging a new magazine in from player's inventory
  *
- * Argument:
+ * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
  * 1: container <OBJECT>
  * 2: item <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

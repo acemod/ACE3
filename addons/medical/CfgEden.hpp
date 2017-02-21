@@ -9,20 +9,19 @@ class Cfg3DEN {
             };
         };
         class GVAR(isMedicControl): Title {
-            attributeLoad = "(_this controlsGroupCtrl 100) lbsetcursel (((_value + 1) min 3) max 0);";
-            attributeSave = "(missionnamespace getvariable ['ace_isMeidc_temp',0]) - 1;";
+            attributeLoad = "(_this controlsGroupCtrl 100) lbSetCurSel (((_value + 1) min 3) max 0);";
+            attributeSave = "(lbCurSel (_this controlsGroupCtrl 100)) - 1";
             class Controls: Controls {
                 class Title: Title{};
                 class Value: ctrlToolbox {
                     idc = 100;
                     style = "0x02";
-                    x = "48 * (pixelW * pixelGrid * 0.25)";
-                    w = "82 * (pixelW * pixelGrid * 0.25)";
-                    h = "5 * (pixelH * pixelGrid * 0.25)";
+                    x = "48 * (pixelW * pixelGrid * 0.50)";
+                    w = "82 * (pixelW * pixelGrid * 0.50)";
+                    h = "5 * (pixelH * pixelGrid * 0.50)";
                     rows = 1;
                     columns = 4;
                     strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignMedicRoles_role_none), CSTRING(AssignMedicRoles_role_medic), CSTRING(AssignMedicRoles_role_doctorShort)};
-                    onToolboxSelChanged = "missionnamespace setvariable ['ace_isMeidc_temp',_this select 1];";
                 };
             };
         };
@@ -36,7 +35,7 @@ class Cfg3DEN {
                         control = QGVAR(isMedicControl);
                         displayName = CSTRING(AssignMedicRoles_role_DisplayName);
                         tooltip = CSTRING(Attributes_isMedic_Description);
-                        expression = QUOTE(if (_value != -1) then {_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];};);
+                        expression = QUOTE(if (_value > -1) then {_this setVariable [ARR_3(QUOTE(QGVAR(medicClass)),_value, true)];};);
                         typeName = "NUMBER";
                         condition = "objectBrain";
                         defaultValue = "-1";

@@ -3,11 +3,11 @@
  * Show the ammo counts for a static weapon.
  * Called from "insertChildren" on interact_menu
  *
- * Argument:
+ * Arguments:
  * 0: Target <OBJECT>
  * 1: Player <OBJECT>
  *
- * Return value:
+ * Return Value:
  * ChildActiosn<ARRAY>
  *
  * Example:

@@ -4,7 +4,7 @@
  * Also gets longitude, latitude and altitude offset for the map.
  * Writes return values to GVAR(MGRS_data) if run on the current map.
  *
- * Argument:
+ * Arguments:
  * 0: Map name (default: worldName) <STRING>
  *
  * Return Value:
@@ -22,83 +22,14 @@ private _long = getNumber (configFile >> "CfgWorlds" >> _map >> "longitude");
 private _lat =  getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
-_map = toLower _map;
-if (_map in ["abbottabad"]) then { _lat = 34; _altitude = 1256; };    //Abbottabad elevation 1256m (Wikipedia)
-if (_map in ["abramia"]) then { _lat = 60; _altitude = 0; };
-if (_map in ["af_kandahar_province"]) then { _lat = 42; _altitude = 0; };
-if (_map in ["altis"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["angel"]) then { _lat = 38; _altitude = 0; };
-if (_map in ["anim_helvantis_v2"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["australia"]) then { _lat = -25; _altitude = 0; };
-if (_map in ["bootcamp_acr"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["bornholm"]) then { _lat = 55; _altitude = 0; };
-if (_map in ["bozcaada"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["caribou"]) then { _lat = 68; _altitude = 0; };
-if (_map in ["catalina"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["chernarus", "chernarus_summer", "chernarus_winter"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["chernobylzone", "chernobylzonea2"]) then { _lat = 51; _altitude = 0; };
-if (_map in ["clafghan"]) then { _lat = 34; _altitude = 640; };
-if (_map in ["dakrong"]) then { _lat = 17; _altitude = 0; };    //Unsung Mod
-if (_map in ["desert_e"]) then { _lat = 40; _altitude = 800; };
-if (_map in ["dya"]) then { _lat = 34; _altitude = 110; };    //Diyala Iraq - default elevationOffset
-if (_map in ["esseker"]) then { _lat = 43; _altitude = 2000; };
-if (_map in ["evergreen"]) then { _lat = 41; _altitude = 0; };    //Burgazada, Turkey - default elevationOffset
-if (_map in ["fallujah"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["fata"]) then { _lat = 33; _altitude = 1347; };
-if (_map in ["gorgona"]) then { _lat = 43; _altitude = 0; };
-if (_map in ["hellskitchen", "hellskitchens"]) then { _lat = 32; _altitude = 900; };    //Sangin summer, Sangin winter - Sangin elevation 888m (Wikipedia)
-if (_map in ["hindukush"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["imrali", "imralispring"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["intro"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["isladuala3"]) then { _lat = -19; _altitude = 0; };
-if (_map in ["jacobi"]) then { _lat = 34; _altitude = 2000; };    //default elevationOffset     
-if (_map in ["kapaulio"]) then { _lat = 0; _altitude = 0; };
-if (_map in ["kerama"]) then { _lat = 26; _altitude = 0; };    //Kerama Islands, Japan - default elevationOffset
-if (_map in ["kholm"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["koplic"]) then { _lat = 42; _altitude = 0; };
-if (_map in ["kunduz"]) then { _lat = 37; _altitude = 0; };
-if (_map in ["lingor", "lingor3"]) then { _lat = -4; _altitude = 0; };
-if (_map in ["lost", "lostw"]) then { _lat = 60; _altitude = 0; };
-if (_map in ["mcn_aliabad"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["malvinas"]) then { _lat = -52; _altitude = 0; };
-if (_map in ["namalsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["mef_alaska"]) then { _lat = 60; _altitude = 5; };
-if (_map in ["mountains_acr"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["napf", "napfwinter"]) then { _lat = 47; _altitude = 0; };
-if (_map in ["panthera3"]) then { _lat = 46; _altitude = 0; };
-if (_map in ["pianosa_aut"]) then { _lat = 43; _altitude = 0; };    //Pianosa, Italy - default elevationOffset
-if (_map in ["pja305"]) then { _lat = 0; _altitude = 0; };    //G.O.S N'Ziwasogo
-if (_map in ["pja306"]) then { _lat = 35; _altitude = 0; };    //G.O.S Kalu Khan
-if (_map in ["pja307"]) then { _lat = 17; _altitude = 0; };    //F.S.F Daryah
-if (_map in ["pja308"]) then { _lat = 36; _altitude = 0; };    //G.O.S Gunkizli
-if (_map in ["pja310"]) then { _lat = 36; _altitude = 0; };    //G.O.S Al Rayak
-if (_map in ["pja312"]) then { _lat = 16; _altitude = 0; };    //G.O.S Song Bin Tanh
-if (_map in ["porquerolles"]) then { _lat = 43; _altitude = 0; };
-if (_map in ["porto"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["provinggrounds_pmc"]) then { _lat = 35; _altitude = 100; };
-if (_map in ["reshmaan"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["sara", "sara_dbe1"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["saralite"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["sb3"]) then { _lat = 53; _altitude = 25; };    //TrpUebPl Einfelde Nord (Munster North Training Area, Germany) - default elevationOffset
-if (_map in ["shapur_baf"]) then { _lat = 35; _altitude = 100; };
-if (_map in ["sfp_sturko"]) then { _lat = 56; _altitude = 0; };
-if (_map in ["sfp_wamako"]) then { _lat = 14; _altitude = 0; };
-if (_map in ["stratis"]) then { _lat = 40; _altitude = 0; };
-if (_map in ["sugarlake"]) then { _lat = 29; _altitude = 0; };
-if (_map in ["takistan"]) then { _lat = 35; _altitude = 2000; };
-if (_map in ["thirsk"]) then { _lat = 65; _altitude = 0; };
-if (_map in ["tilos"]) then { _lat = 36; _altitude = 0; };
-if (_map in ["utes"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["vt5"]) then { _lat = 61; _altitude = 100; };    //Vt5, Suomi Finland - default elevationOffset
-if (_map in ["wake"]) then { _lat = 19; _altitude = 0; };
-if (_map in ["waziristan"]) then { _lat = 33; _altitude = 0; };
-if (_map in ["wintermap"]) then { _lat = 61; _altitude = 0; };    //Nordkvingo - default elevationOffset
-if (_map in ["wintertown", "wintertowna3"]) then { _lat = 39; _altitude = 600; };    //U.S. state Kansas mean elevation 610m (Wikipedia)
-if (_map in ["woodland_acr"]) then { _lat = 50; _altitude = 0; };
-if (_map in ["xcam_prototype"]) then { _lat = 35; _altitude = 0; };
-if (_map in ["zargabad"]) then { _lat = 35; _altitude = 2000; };
+private _mapData = _map call FUNC(getMapData);
+if (!(_mapData isEqualTo [])) then {
+    _lat = _mapData select 0;
+    _alt = _mapData select 1;
+};
+TRACE_2("Latitude and Altitude",_lat,_alt);
 
-private _UTM = [_long,_lat] call BIS_fnc_posDegToUTM;
+private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;
 private _northing = _UTM select 1;
 //private _zone = _UTM select 2;

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -14,7 +15,3 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-
-class ACE_newEvents {
-    backpackOpened = "ace_backpackOpened";
-};

@@ -2,10 +2,10 @@
  * Author: KoffeinFlummi, Ruthberg
  * Updates the zero reference for the current scope
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * true <BOOL>
  *
  * Example:
@@ -24,12 +24,7 @@ if (vehicle _unit != _unit) exitWith {false};
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};
 
-_adjustment = _unit getVariable QGVAR(Adjustment);
-if (isNil "_adjustment") then {
-    // [Windage, Elevation, Zero]
-    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-};
-
+_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 _zeroing = _adjustment select _weaponIndex;
 _zeroing params ["_elevation", "_windage", "_zero"];
 

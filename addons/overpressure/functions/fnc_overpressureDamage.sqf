@@ -3,7 +3,7 @@
  * Calculate and apply backblast damage to potentially affected local units
  * Handles the "overpressure" event.
  *
- * Argument:
+ * Arguments:
  * 0: Unit that fired <OBJECT>
  * 1: Pos ASL of the projectile <ARRAY>
  * 2: Direction of the projectile (reversed for launcher backblast) <ARRAY>
@@ -11,7 +11,7 @@
  * 4: Magazine <STRING>
  * 5: Ammo <STRING>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -30,7 +30,7 @@ private _var = if (isNil _varName) then {
 } else {
     missionNameSpace getVariable _varName;
 };
-_var params["_overpressureAngle","_overpressureRange","_overpressureDamage"];
+_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {
@@ -51,6 +51,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             private _beta = sqrt (1 - _angle / _overpressureAngle);
 
             private _damage = _alpha * _beta * _overpressureDamage;
+            TRACE_1("",_damage);
 
             // If the target is the ACE_player
             if (_x == ACE_player) then {[_damage * 100] call BIS_fnc_bloodEffect};

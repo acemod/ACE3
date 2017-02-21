@@ -2,12 +2,12 @@
  * Author: esteldunedain
  * Calculate the cooling down of a weapon over a time interval.
  *
- * Argument:
+ * Arguments:
  * 0: Initial temperature <NUMBER>
  * 1: Barrel mass <NUMBER>
  * 2: Time interval  <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Final temperature <NUMBER>
  *
  * Example:

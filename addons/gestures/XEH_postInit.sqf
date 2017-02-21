@@ -2,9 +2,6 @@
 
 if (!hasInterface) exitWith {};
 
-// reload mutex, you can't play signal while reloading
-GVAR(ReloadMutex) = true;
-
 // Add keybinds
 {
     _x params ["_currentName", "_key", ["_vanillaKey", false] ];
@@ -17,6 +14,9 @@ GVAR(ReloadMutex) = true;
     };
 
     private _code = compile format [QUOTE('%1' call FUNC(playSignal)), _signalName];
+    if (_currentName == "Stop") then {
+        _code = compile format [QUOTE('%1' call FUNC(playSignal)), "BIgestureFreeze"];
+    };
 
     TRACE_4("Adding KeyBind",_currentName,_signalName,_code,_key);
 

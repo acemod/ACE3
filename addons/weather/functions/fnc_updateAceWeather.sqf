@@ -2,10 +2,10 @@
  * Author: ACE2 Team, esteldunedain, ruthberg
  * Updates the wind and rain evolution on the server. Broadcasts the current and next values to the clients
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

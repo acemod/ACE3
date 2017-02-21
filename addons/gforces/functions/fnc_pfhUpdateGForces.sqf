@@ -2,11 +2,11 @@
  * Author: KoffeinFlummi and esteldunedain
  * Calculates average g-forces and triggers g-effects
  *
- * Argument:
+ * Arguments:
  * 0: Arguments <ARRAY>
  * 1: pfh_id <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

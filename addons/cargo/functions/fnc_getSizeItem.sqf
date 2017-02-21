@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  *
- * Return value:
+ * Return Value:
  * Cargo size <NUMBER> (default: -1)
  *
  * Example:

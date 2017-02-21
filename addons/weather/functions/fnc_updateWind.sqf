@@ -2,10 +2,10 @@
  * Author: ACE2 Team, Ruthberg
  * Updates wind, gusts and waves based on ACE_wind
  *
- * Argument:
+ * Arguments:
  * Nothing
  *
- * Return value:
+ * Return Value:
  * Nothing
  *
  * Example:

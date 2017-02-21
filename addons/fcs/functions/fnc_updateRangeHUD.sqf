@@ -2,10 +2,10 @@
  * Author: commy2
  * Update compatible info elements.
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

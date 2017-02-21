@@ -1,7 +1,7 @@
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
- * Handles the "ace_repair_setVehicleHitPointDamage" event
+ * Handles the ace_repair_setVehicleHitPointDamage event
  *
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
@@ -21,22 +21,16 @@
 params ["_vehicle", "_hitPointIndex", "_hitPointDamage"];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
-private["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
+private ["_damageNew", "_damageOld", "_hitPointDamageRepaired", "_hitPointDamageSumOld", "_realHitpointCount", "_selectionName"];
 
 // can't execute all commands if the vehicle isn't local. exit here.
-if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
-
-//Check for bad typeName (changed from orignal v3.3 that took string)
-if (_hitPointIndex isEqualType "") then {
-    ACE_DEPRECATED("repair-setHitPointDamage (hit point name <string>","3.5.0","hit index <number>");
-    _hitPointIndex = _allHitPoints find _hitPointIndex;
-};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 // get all hitpoints and selections and damages
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ACE_LOGERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
 

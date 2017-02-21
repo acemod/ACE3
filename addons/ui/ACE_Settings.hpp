@@ -83,7 +83,7 @@ class ACE_Settings {
         displayName = CSTRING(AmmoCount);
         description = CSTRING(RequiresSoldierVehicleWeaponInfo);
         typeName = "BOOL";
-        value = 1;
+        value = 0;
         isClientSettable = 1;
     };
     class GVAR(magCount) {

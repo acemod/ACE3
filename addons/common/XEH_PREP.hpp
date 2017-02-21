@@ -1,4 +1,5 @@
 
+PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
 PREP(addSetting);
@@ -6,6 +7,8 @@ PREP(addToInventory);
 PREP(assignedItemFix);
 PREP(assignObjectsInList);
 PREP(ambientBrightness);
+PREP(arithmeticGetResult);
+PREP(arithmeticSetSource);
 PREP(ASLToPosition);
 PREP(binarizeNumber);
 PREP(blurScreen);
@@ -32,15 +35,11 @@ PREP(displayText);
 PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
+PREP(doGesture);
 PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);
 PREP(errorMessage);
-PREP(execNextFrame);
-PREP(execPersistentFnc);
-PREP(execRemoteFnc);
-PREP(executePersistent);
-PREP(filter);
 PREP(findUnloadPosition);
 PREP(firedEH);
 PREP(fixCollision);
@@ -48,30 +47,26 @@ PREP(fixFloating);
 PREP(fixLoweredRifleAnimation);
 PREP(fixPosition);
 PREP(getAllDefinedSetVariables);
-PREP(getAllGear);
 PREP(getDeathAnim);
-PREP(getCaptivityStatus);
 PREP(getDefaultAnim);
 PREP(getDefinedVariable);
 PREP(getDefinedVariableDefault);
 PREP(getDefinedVariableInfo);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
-PREP(getForceWalkStatus);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);
 PREP(getMapPosFromGrid);
 PREP(getMarkerType);
 PREP(getMGRSdata);
 PREP(getName);
-PREP(getNumberFromMissionSQM);
 PREP(getNumberMagazinesIn);
 PREP(getPitchBankYaw);
 PREP(getSettingData);
 PREP(getStaminaBarControl);
-PREP(getStringFromMissionSQM);
 PREP(getTargetAzimuthAndInclination);
 PREP(getTargetDistance);
 PREP(getTargetObject);
@@ -91,15 +86,12 @@ PREP(hadamardProduct);
 PREP(handleEngine);
 PREP(handleModifierKey);
 PREP(handleModifierKeyUp);
-PREP(handleScrollWheel);
 PREP(hasItem);
 PREP(hasMagazine);
 PREP(headBugFix);
 PREP(hideUnit);
-PREP(insertionSort);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
-PREP(isAutoWind);
 PREP(isAwake);
 PREP(isEngineer);
 PREP(isEOD);
@@ -114,7 +106,6 @@ PREP(loadPersonLocal);
 PREP(loadSettingsFromProfile);
 PREP(loadSettingsOnServer);
 PREP(loadSettingsLocalizedText);
-PREP(map);
 PREP(moduleCheckPBOs);
 PREP(moduleLSDVehicles);
 PREP(muteUnit);
@@ -126,6 +117,7 @@ PREP(numberToString);
 PREP(onAnswerRequest);
 PREP(owned);
 PREP(parseList);
+PREP(playConfigSound3D);
 PREP(player);
 PREP(playerSide);
 PREP(positionToASL);
@@ -142,16 +134,14 @@ PREP(runAfterSettingsInit);
 PREP(sanitizeString);
 PREP(sendRequest);
 PREP(serverLog);
-PREP(setAllGear);
 PREP(setApproximateVariablePublic);
-PREP(setCaptivityStatus);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
-PREP(setForceWalkStatus);
 PREP(setHearingCapability);
 PREP(setName);
 PREP(setParameter);
 PREP(setPitchBankYaw);
+PREP(setPlayerOwner);
 PREP(setProne);
 PREP(setSetting);
 PREP(setSettingFromConfig);
@@ -182,8 +172,7 @@ PREP(unloadPersonLocal);
 PREP(unmuteUnit);
 PREP(useItem);
 PREP(useMagazine);
-PREP(waitAndExecute);
-PREP(waitUntilAndExecute);
+PREP(watchVariable);
 PREP(waveHeightAt);
 
 PREP(translateToWeaponSpace);
@@ -193,14 +182,12 @@ PREP(translateToModelSpace);
 PREP(worldToScreenBounds);
 
 // config items
-PREP(getConfigType);
 PREP(getItemType);
 PREP(getWeaponType);
 PREP(getWeaponModes);
 PREP(getWeaponMuzzles);
 
 // config objects
-PREP(getConfigTypeObject);
 PREP(getConfigGunner);
 PREP(getConfigCommander);
 PREP(getSelectionsWithoutHitPoints);
@@ -211,7 +198,6 @@ PREP(getVehicleCrew);
 PREP(getVehicleUAVCrew);
 
 // turrets
-PREP(getTurrets);
 PREP(getTurretIndex);
 PREP(getTurretConfigPath);
 PREP(getTurretGunner);
@@ -222,10 +208,6 @@ PREP(getTurretsFFV);
 PREP(getTurretsOther);
 PREP(hasHatch);
 
-// missing inventory commands
-PREP(binocularMagazine);
-PREP(removeBinocularMagazine);
-
 // ACE_Debug
 PREP(getChildren);
 PREP(getDisplayConfigName);
@@ -234,15 +216,6 @@ PREP(showUser);
 
 PREP(dumpPerformanceCounters);
 PREP(dumpArray);
-
-PREP(globalEvent);
-PREP(addEventHandler);
-PREP(objectEvent);
-PREP(targetEvent);
-PREP(serverEvent);
-PREP(localEvent);
-PREP(removeEventHandler);
-PREP(removeAlLEventHandlers);
 
 // Synchronized Events
 PREP(syncedEventPFH);
@@ -258,22 +231,8 @@ PREP(_handleRequestAllSyncedEvents);
 // other eventhandlers
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
-PREP(addScrollWheelEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
-PREP(removeScrollWheelEventHandler);
 PREP(removeMapMarkerCreatedEventHandler);
-
-// hashes
-PREP(hashCreate);
-PREP(hashSet);
-PREP(hashGet);
-PREP(hashHasKey);
-PREP(hashRem);
-PREP(hashListCreateList);
-PREP(hashListCreateHash);
-PREP(hashListSelect);
-PREP(hashListSet);
-PREP(hashListPush);

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -11,6 +11,8 @@
             <Czech>Zdravotnikcá nabídka</Czech>
             <Italian>Menù Medico</Italian>
             <French>Menu médical</French>
+            <Japanese>治療メニュー</Japanese>
+            <Korean>의료 메뉴</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow">
             <English>Allow Medical Menu</English>
@@ -22,6 +24,8 @@
             <Czech>Povolit zdravotnickou nabídku</Czech>
             <Italian>Consenti Menù Medico</Italian>
             <French>Autoriser le menu médical</French>
+            <Japanese>治療メニューを有効化</Japanese>
+            <Korean>의료 메뉴 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_allow_Descr">
             <English>Allow clients to use the medical menu</English>
@@ -33,6 +37,8 @@
             <Czech>Povolit klientům používat zdravotnickou nabídku</Czech>
             <Italian>Consenti ai clients di usare il Menù Medico</Italian>
             <French>Autoriser les clients à utiliser le menu médical</French>
+            <Japanese>すべてのクライアントが治療メニューをつかえるようにする</Japanese>
+            <Korean>클라이언트가 의료 메뉴를 쓰는것을 허락합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu">
             <English>Use Medical menu</English>
@@ -44,6 +50,8 @@
             <Czech>Použít zdravotnickou nabídku</Czech>
             <Italian>Usa Menù Medico</Italian>
             <French>Utiliser le menu médical</French>
+            <Japanese>治療メニューをつかう</Japanese>
+            <Korean>의료 메뉴 사용</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_useMenu_Descr">
             <English>If allowed by server, enable the option to use the Medical Menu through keybinding and interaction menu</English>
@@ -55,6 +63,8 @@
             <Czech>Pokud je povoleno serverem, umožní použít zdravotnickou nabídku skrze kláv. zkratku a interakční menu</Czech>
             <Italian>Se consentito dal server, abilita l'opzione di usare il Menù Medico attraverso hotkeys e menù interazione</Italian>
             <French>Si autorisé par le serveur, active l'option d'utiliser le menu médical à travers les raccourcis clavier et le menu d'interaction.</French>
+            <Japanese>サーバーが有効化を許可している場合は、オプションから有効化でき治療メニューはキー割り当てとインタラクション メニューを無視できます</Japanese>
+            <Korean>서버 허가하에 단축키와 상호작용 메뉴로 의료 메뉴사용을 허가합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment">
             <English>Re-open Medical menu</English>
@@ -66,6 +76,8 @@
             <Czech>Znovu otevřít zdravotnickou nabídku</Czech>
             <Italian>Ri-apri Menù Medico</Italian>
             <French>Ré-ouvrir le menu médical</French>
+            <Japanese>治療メニューを再びひらく</Japanese>
+            <Korean>의료 메뉴 다시 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_openAfterTreatment_Descr">
             <English>Re-open the medical menu after succesful treatment</English>
@@ -77,6 +89,8 @@
             <Czech>Znovu otevřít zdravotnickou nabídku po úspěšné léčbě </Czech>
             <Italian>Ri-Apri il Menù Medico dopo un trattamento riuscito</Italian>
             <French>Ré-ouvrir le menu médical après un traitement réussi</French>
+            <Japanese>治療が終わったあと、再び治療メニューをひらく</Japanese>
+            <Korean>성공적으로 치료한후에 의료 메뉴를 다시 엽니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DisplayMenuKey">
             <English>Open Medical Menu</English>
@@ -88,6 +102,8 @@
             <Czech>Otevřít zdravotnickou nabídku</Czech>
             <Italian>Apri Menù Medico</Italian>
             <French>Ouvir le menu médical</French>
+            <Japanese>治療メニューをひらく</Japanese>
+            <Korean>의료 메뉴 열기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_DisplayName">
             <English>Medical Menu Settings</English>
@@ -99,6 +115,8 @@
             <Czech>Nastavení zdravotnické nabídky</Czech>
             <Italian>Impostazioni Menù Medico</Italian>
             <French>Réglages du menu médical</French>
+            <Japanese>治療メニューの設定</Japanese>
+            <Korean>의료 메뉴 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_module_Desc">
             <English>Configure the usage of the Medical Menu</English>
@@ -110,6 +128,8 @@
             <Czech>Konfigurace využití zdravotnické nabídky</Czech>
             <Italian>Configura l'uso del Menù Medico</Italian>
             <French>Configurer l'utilisation du menu médical</French>
+            <Japanese>治療メニューを使うための設定</Japanese>
+            <Korean>의료 메뉴 사용의 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_TREATMENT">
             <English>EXAMINE &amp; TREATMENT</English>
@@ -121,39 +141,47 @@
             <Portuguese>EXAMINAR &amp; TRATAMENTO</Portuguese>
             <Czech>VYŠETŘENÍ &amp; LÉČBA</Czech>
             <Italian>ESAMINA &amp; TRATTA</Italian>
+            <Japanese>診断 &amp; 治療</Japanese>
+            <Korean>검사 / 치료</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS">
             <English>STATUS</English>
             <German>STATUS</German>
             <Russian>СОСТОЯНИЕ</Russian>
             <Spanish>ESTADO</Spanish>
-            <French>ÉTATS</French>
+            <French>ÉTAT</French>
             <Polish>STATUS</Polish>
             <Portuguese>ESTADO</Portuguese>
             <Czech>STAV</Czech>
             <Italian>STATO</Italian>
+            <Japanese>状態</Japanese>
+            <Korean>상태</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_OVERVIEW">
             <English>OVERVIEW</English>
             <German>ÜBERSICHT</German>
             <Russian>ОБЩАЯ ИНФОРМАЦИЯ</Russian>
             <Spanish>DESCRIPCIÓN</Spanish>
-            <French>DESCRIPTION</French>
+            <French>APERÇU</French>
             <Polish>OPIS</Polish>
             <Portuguese>VISÃO GERAL</Portuguese>
             <Czech>PŘEHLED</Czech>
             <Italian>PANORAMICA</Italian>
+            <Japanese>オーバービュー</Japanese>
+            <Korean>개요</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ACTIVITY_LOG">
             <English>ACTIVITY LOG</English>
             <German>AKTIVITÄTSVERLAUF</German>
             <Russian>ПРОВЕДЕННЫЕ МАНИПУЛЯЦИИ</Russian>
             <Spanish>REGISTRO DE ACTIVIDAD</Spanish>
-            <French>REGISTRE DES SOINS</French>
+            <French>REGISTRE D'ACTIVITÉ</French>
             <Polish>LOGI AKTYWNOŚCI</Polish>
             <Portuguese>REGISTRO DE ATIVIDADE</Portuguese>
             <Czech>PROTOKOL</Czech>
             <Italian>LOG ATTIVITA'</Italian>
+            <Japanese>治療履歴</Japanese>
+            <Korean>활동 로그</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_QUICK_VIEW">
             <English>QUICK VIEW</English>
@@ -165,6 +193,8 @@
             <Portuguese>VISÃO RÁPIDA</Portuguese>
             <Czech>RYCHLÝ NÁHLED</Czech>
             <Italian>VISTA RAPIDA</Italian>
+            <Japanese>クイック ビュー</Japanese>
+            <Korean>퀵 뷰</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_VIEW_TRIAGE_CARD">
             <English>View triage Card</English>
@@ -176,6 +206,8 @@
             <Portuguese>Ver cartão de triagem</Portuguese>
             <Czech>Zkontrolovat štítek</Czech>
             <Italian>Guarda Triage Card</Italian>
+            <Japanese>トリアージ カードを見る</Japanese>
+            <Korean>부상자 카드 보기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_EXAMINE_PATIENT">
             <English>Examine Patient</English>
@@ -187,6 +219,8 @@
             <Portuguese>Examinar paciente</Portuguese>
             <Czech>Zkontrolovat pacienta</Czech>
             <Italian>Esamina Paziente</Italian>
+            <Japanese>患者を調べる</Japanese>
+            <Korean>환자 검사하기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_BANDAGE_FRACTURES">
             <English>Bandage / Fractures</English>
@@ -198,6 +232,8 @@
             <Portuguese>Bandagens / Fraturas</Portuguese>
             <Czech>Bandáž / Zlomeniny</Czech>
             <Italian>Bendaggi/Fratture</Italian>
+            <Japanese>包帯 / 骨折</Japanese>
+            <Korean>붕대 / 골절</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDICATION">
             <English>Medication</English>
@@ -209,127 +245,151 @@
             <Portuguese>Medicação</Portuguese>
             <Czech>Léky</Czech>
             <Italian>Medicazione</Italian>
+            <Japanese>薬物による治療</Japanese>
+            <Korean>약물 치료</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_AIRWAY_MANAGEMENT">
             <English>Airway Management</English>
             <Russian>Дыхательные пути</Russian>
             <Spanish>Vías Aéreas</Spanish>
-            <French>Gestion Des Voie REspiratoire</French>
+            <French>Gestion des voies respiratoires</French>
             <Polish>Drogi oddechowe</Polish>
             <Portuguese>Vias aéreas</Portuguese>
             <Czech>Dýchací systém</Czech>
             <Italian>Gestione Vie Respiratorie</Italian>
             <German>Atemwegssicherung</German>
+            <Japanese>気道を確保</Japanese>
+            <Korean>기도 관리</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ADVANCED_TREATMENT">
             <English>Advanced Treatments</English>
             <German>Erweiterte Behandlungen</German>
             <Russian>Специальная медпомощь</Russian>
             <Spanish>Tratamientos Avanzados</Spanish>
-            <French>Traitement Avancé</French>
+            <French>Traitements Avancés</French>
             <Polish>Zaawansowane zabiegi</Polish>
             <Portuguese>Tratamentos avançados</Portuguese>
             <Czech>Pokročilé ošetření</Czech>
             <Italian>Trattamenti Avanzati</Italian>
+            <Japanese>高度な治療</Japanese>
+            <Korean>고급 치료</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DRAG_CARRY">
             <English>Drag/Carry</English>
             <German>Ziehen/Tragen</German>
             <Russian>Тащить/нести</Russian>
             <Spanish>Arrastrar/Cargar</Spanish>
-            <French>Glisser/Porter</French>
+            <French>Traîner/Porter</French>
             <Polish>Ciągnij/Nieś</Polish>
             <Portuguese>Arrastar/Carregar</Portuguese>
             <Czech>Táhnout/Nést</Czech>
             <Italian>Trascina/Trasporta</Italian>
+            <Japanese>引きずる / 運ぶ</Japanese>
+            <Korean>끌기 / 들기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TOGGLE_SELF">
             <English>Toggle (Self)</English>
             <German>Umschalter (Selbst)</German>
             <Russian>Лечить себя/другого раненого</Russian>
-            <French>Activer (sois)</French>
+            <French>Basculer (soi)</French>
             <Polish>Przełącz (na siebie)</Polish>
             <Spanish>Alternar</Spanish>
             <Portuguese>Alternar (Si mesmo)</Portuguese>
             <Czech>Přepnout (na sebe)</Czech>
             <Italian>Attiva (Te Stesso)</Italian>
+            <Japanese>トグル (自分)</Japanese>
+            <Korean>토글 (자신)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TRIAGE_STATUS">
             <English>Select triage status</English>
             <German>Setze Status auf der Triagekarte</German>
             <Russian>Сортировка</Russian>
             <Spanish>Seleccionar estado de Triage</Spanish>
-            <French>Selectioner l'état de Triage</French>
+            <French>Selectioner l'état de triage</French>
             <Polish>Wybierz priorytet</Polish>
             <Portuguese>Selecionar estado de triagem</Portuguese>
             <Czech>Vybrat prioritu</Czech>
             <Italian>Seleziona stato Triage</Italian>
+            <Japanese>トリアージによる状態を選択</Japanese>
+            <Korean>부상 상태 고르기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_HEAD">
             <English>Select Head</English>
             <German>Wähle Kopf</German>
             <Russian>Выбрать голову</Russian>
             <Spanish>Seleccionar Cabeza</Spanish>
-            <French>Selectioner Tête</French>
+            <French>Selectioner la tête</French>
             <Polish>Wybierz głowę</Polish>
             <Portuguese>Selecionar Cabeça</Portuguese>
             <Czech>Vybrat Hlavu</Czech>
             <Italian>Seleziona Testa</Italian>
+            <Japanese>頭部を選ぶ</Japanese>
+            <Korean>머리 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_TORSO">
             <English>Select Torso</English>
             <German>Wähle Torso</German>
             <Russian>Выбрать торс</Russian>
             <Spanish>Seleccionar Torso</Spanish>
-            <French>Selectioner Torse</French>
+            <French>Selectioner le torse</French>
             <Polish>Wybierz tors</Polish>
             <Portuguese>Selecionar Torso</Portuguese>
             <Czech>Vybrat Trup</Czech>
             <Italian>Seleziona Torso</Italian>
+            <Japanese>胴体を選ぶ</Japanese>
+            <Korean>몸통 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_L">
             <English>Select Left Arm</English>
             <German>Wähle linken Arm</German>
             <Russian>Выбрать левую руку</Russian>
             <Spanish>Seleccionar Brazo Izquierdo</Spanish>
-            <French>Selectioner Bras Gauche</French>
+            <French>Selectioner le bras gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
             <Portuguese>Selecionar Braço Esquerdo</Portuguese>
             <Czech>Vybrat Levou ruku</Czech>
             <Italian>Seleziona Braccio Sinistro</Italian>
+            <Japanese>左腕を選ぶ</Japanese>
+            <Korean>왼쪽 팔 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_ARM_R">
             <English>Select Right Arm</English>
             <German>Wähle rechten Arm</German>
             <Russian>Выбрать правую руку</Russian>
             <Spanish>Seleccionar Brazo Derecho</Spanish>
-            <French>Selectioner Bras Droit</French>
+            <French>Selectioner le bras droit</French>
             <Polish>Wybierz prawą rękę</Polish>
             <Portuguese>Selecionar Braço Direito</Portuguese>
             <Czech>Vybrat Pravou ruku</Czech>
             <Italian>Seleziona Braccio Destro</Italian>
+            <Japanese>右腕を選ぶ</Japanese>
+            <Korean>오른쪽 팔 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_L">
             <English>Select Left Leg</English>
             <German>Wähle linkes Bein</German>
             <Russian>Выбрать левую ногу</Russian>
             <Spanish>Seleccionar Pierna Izquierda</Spanish>
-            <French>Selectioner Jambe Gauche</French>
+            <French>Selectioner la jambe gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
             <Portuguese>Selecionar Perna Esquerda</Portuguese>
             <Czech>Vybrat Levou nohu</Czech>
             <Italian>Seleziona Gamba Sinistra</Italian>
+            <Japanese>左足を選ぶ</Japanese>
+            <Korean>왼쪽 다리 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECT_LEG_R">
             <English>Select Right Leg</English>
             <German>Wähle rechtes Bein</German>
             <Russian>Выбрать правую ногу</Russian>
             <Spanish>Seleccionar Pierna Derecha</Spanish>
-            <French>Selectioner Jambe Droite</French>
+            <French>Selectioner la jambe droite</French>
             <Polish>Wybierz prawą nogę</Polish>
             <Portuguese>Selecionar Perna Direita</Portuguese>
             <Czech>Vybrat Pravou nohu</Czech>
             <Italian>Seleziona Gamba Destra</Italian>
+            <Japanese>右足を選ぶ</Japanese>
+            <Korean>오른쪽 다리 선택</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_HEAD">
             <English>Head</English>
@@ -341,6 +401,8 @@
             <Portuguese>Caebça</Portuguese>
             <Czech>Hlava</Czech>
             <Italian>Testa</Italian>
+            <Japanese>頭部</Japanese>
+            <Korean>머리</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_TORSO">
             <English>Torso</English>
@@ -352,61 +414,73 @@
             <Czech>Trup</Czech>
             <Spanish>Torso</Spanish>
             <Italian>Torso</Italian>
+            <Japanese>胴体</Japanese>
+            <Korean>몸통</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_L">
             <English>Left Arm</English>
             <German>Linker Arm</German>
             <Russian>Левая рука</Russian>
             <Spanish>Brazo Izquierdo</Spanish>
-            <French>Bras Gauche</French>
+            <French>Bras gauche</French>
             <Polish>Lewa ręka</Polish>
             <Portuguese>Braço Esquerdo</Portuguese>
             <Czech>Levá Ruka</Czech>
             <Italian>Braccio Sinistro</Italian>
+            <Japanese>左腕</Japanese>
+            <Korean>왼쪽 팔</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ARM_R">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
             <Russian>Правая рука</Russian>
             <Spanish>Brazo Derecho</Spanish>
-            <French>Bras Droit</French>
+            <French>Bras droit</French>
             <Polish>Prawa ręka</Polish>
             <Portuguese>Braço Direito</Portuguese>
             <Czech>Pravá Ruka</Czech>
             <Italian>Braccio Destro</Italian>
+            <Japanese>右腕</Japanese>
+            <Korean>오른쪽 팔</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_L">
             <English>Left Leg</English>
             <German>Linkes Bein</German>
             <Russian>Левая нога</Russian>
             <Spanish>Pierna Izquierda</Spanish>
-            <French>Jambe Gauche</French>
+            <French>Jambe gauche</French>
             <Polish>Lewa noga</Polish>
             <Portuguese>Perna Esquerda</Portuguese>
             <Czech>Levá Noha</Czech>
             <Italian>Gamba Sinistra</Italian>
+            <Japanese>左足</Japanese>
+            <Korean>왼쪽 다리</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LEG_R">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
             <Russian>Правая нога</Russian>
             <Spanish>Pierna Derecha</Spanish>
-            <French>Jambe Droite</French>
+            <French>Jambe droite</French>
             <Polish>Prawa noga</Polish>
             <Portuguese>Perna Direita</Portuguese>
             <Czech>Pravá Noha</Czech>
             <Italian>Gamba Destra</Italian>
+            <Japanese>右足</Japanese>
+            <Korean>오른쪽 다리</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SELECTED_BODY_PART">
             <English>Body Part: %1</English>
             <German>Körperteil: %1</German>
             <Russian>Часть тела: %1</Russian>
             <Spanish>Parte del cuerpo: %1</Spanish>
-            <French>Partie du corps: %1</French>
+            <French>Partie du corps : %1</French>
             <Polish>Część ciała: %1</Polish>
             <Portuguese>Parte do corpo: %1</Portuguese>
             <Czech>Část těla: %1</Czech>
             <Italian>Parte del Corpo: %1</Italian>
+            <Japanese>身体の一部: %1</Japanese>
+            <Korean>신체 부위: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SMALL">
             <English>Small</English>
@@ -418,6 +492,8 @@
             <Portuguese>Pequeno</Portuguese>
             <Czech>Malý</Czech>
             <Italian>Piccolo</Italian>
+            <Japanese>小さい</Japanese>
+            <Korean>소</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MEDIUM">
             <English>Medium</English>
@@ -429,6 +505,8 @@
             <Portuguese>Médio</Portuguese>
             <Czech>Střední</Czech>
             <Italian>Medio</Italian>
+            <Japanese>中くらい</Japanese>
+            <Korean>중</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_LARGE">
             <English>Large</English>
@@ -440,17 +518,21 @@
             <Portuguese>Grande</Portuguese>
             <Czech>Velký</Czech>
             <Italian>Grande</Italian>
+            <Japanese>大きい</Japanese>
+            <Korean>대</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_OPEN_WOUNDS">
             <English>There are %2 %1 Open Wounds</English>
             <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-            <French>Il y a %2 %1 Blessure(s) Ouverte(s)</French>
+            <French>Il y a %2 %1 blessure(s) ouverte(s)</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Aperte</Italian>
+            <Japanese>開いている傷口が %2 %1 ほどあるようだ</Japanese>
+            <Korean>여기 %2 %1 크기의 열린 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_OPEN_WOUND">
             <English>There is 1 %1 Open Wound</English>
@@ -462,94 +544,112 @@
             <Portuguese>Existe 1 %1 ferimento aberto</Portuguese>
             <Czech>Je zde 1 %1 otevřená rána</Czech>
             <Italian>C'è 1 %1 Ferita Aperta</Italian>
+            <Japanese>1 つの空いている %1 傷口</Japanese>
+            <Korean>여기 %1 크기의 열린 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_OPEN_WOUND">
             <English>There is a partial %1 Open wound</English>
             <German>Er hat eine zum Teil offene Wunde (%1)</German>
             <Russian>Частично открытая рана %1</Russian>
             <Spanish>Hay una herida parcial abierta %1</Spanish>
-            <French>Il y a une Blessure Patiellement Ouverte %1</French>
+            <French>Il y a une blessure partiellement ouverte %1</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Aperta</Italian>
+            <Japanese>部分的に開いている %1 の傷口がある</Japanese>
+            <Korean>여기 부분적으로 %1 크기의 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_MULTIPLE_BANDAGED_WOUNDS">
             <English>There are %2 %1 Bandaged Wounds</English>
             <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-            <French>Il y a %2 %1 Blessure(s) Bandée(s)</French>
+            <French>Il y a %2 %1 blessure(s) bandée(s)</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
             <Italian>Ci sono %2 %1 Ferite Bendate</Italian>
+            <Japanese>ここには %2 %1 の処置された傷がある</Japanese>
+            <Korean>여기에 붕대를 감은 %2 %1 크기의 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
             <German>Er hat 1 verbundene Wunde (%1)</German>
             <Russian>1 перевязанная рана %1</Russian>
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
-            <French>Il y a 1 %1 Blessure Bandée</French>
+            <French>Il y a 1 %1 blessure bandée</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
             <Italian>C'è 1 %1 Ferita Bendata</Italian>
+            <Japanese>1 つの包帯で巻かれている %1 傷</Japanese>
+            <Korean>여기에 붕대를 감은 %1 크기의 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_PARTIAL_BANDAGED_WOUND">
             <English>There is a partial %1 Bandaged wound</English>
             <German>Er hat eine zum Teil verbundene Wunde (%1)</German>
             <Russian>Частично перевязанная рана %1</Russian>
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
-            <French>Il y a %1 Blessure Partielment Bandée</French>
+            <French>Il y a %1 blessure partiellement bandée</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
             <Italian>C'è 1 parziale %1 Ferita Bendata</Italian>
+            <Japanese>患者には %1 の包帯で処置された傷がある</Japanese>
+            <Korean>여기 부분적으로 붕대질한 %1 크기의 상처가 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NORMAL_BREATHING">
             <English>Normal breathing</English>
             <German>Normale Atmung</German>
             <Russian>Дыхание в норме</Russian>
             <Spanish>Respiración normal</Spanish>
-            <French>Respiration Normale</French>
+            <French>Respiration normale</French>
             <Polish>Normalny oddech</Polish>
             <Portuguese>Respiração normal</Portuguese>
             <Czech>Normální dýchání</Czech>
             <Italian>Respirazione Normale</Italian>
+            <Japanese>通常の呼吸</Japanese>
+            <Korean>정상 호흡</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_NO_BREATHING">
             <English>No breathing</English>
             <German>Keine Atmung</German>
             <Russian>Дыхания нет</Russian>
             <Spanish>No respira</Spanish>
-            <French>Apnée</French>
+            <French>Aucune respiration</French>
             <Polish>Brak oddechu</Polish>
             <Portuguese>Sem respiração</Portuguese>
             <Czech>Nedýchá</Czech>
             <Italian>Nessuna Respirazione</Italian>
+            <Japanese>息をしていない</Japanese>
+            <Korean>호흡이 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_DIFFICULT_BREATHING">
             <English>Difficult breathing</English>
             <German>Schwere Atmung</German>
             <Russian>Дыхание затруднено</Russian>
             <Spanish>Dificultad para respirar</Spanish>
-            <French>Difficultée Respiratoire</French>
+            <French>Respiration difficile</French>
             <Polish>Trudności z oddychaniem</Polish>
             <Portuguese>Dificuldade para respirar</Portuguese>
             <Czech>Potíže s dýcháním</Czech>
             <Italian>Difficoltà Respiratorie</Italian>
+            <Japanese>呼吸が難しそうだ</Japanese>
+            <Korean>호흡 곤란</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_ALMOST_NO_BREATHING">
             <English>Almost no breathing</English>
             <German>Beinahe keine Atmung</German>
             <Russian>Дыхания почти нет</Russian>
             <Spanish>Casi sin respirar</Spanish>
-            <French>Respiration Faible</French>
+            <French>Respiration faible</French>
             <Polish>Prawie brak oddechu</Polish>
             <Portuguese>Quase sem respiração</Portuguese>
             <Czech>Téměř nedýchá</Czech>
             <Italian>Quasi nessuna Respirazione</Italian>
+            <Japanese>ほとんど呼吸していない</Japanese>
+            <Korean>호흡이 거의 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_BLEEDING">
             <English>Bleeding</English>
@@ -561,6 +661,8 @@
             <Portuguese>Sangrando</Portuguese>
             <Czech>Krvácí</Czech>
             <Italian>Sanguinamento</Italian>
+            <Japanese>出血</Japanese>
+            <Korean>출혈</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_PAIN">
             <English>in Pain</English>
@@ -572,17 +674,21 @@
             <Portuguese>Com dor</Portuguese>
             <Czech>v bolestech</Czech>
             <Italian>in Dolore</Italian>
+            <Japanese>痛みがある</Japanese>
+            <Korean>고통</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_LOST_BLOOD">
             <English>Lost a lot of Blood</English>
             <German>hat sehr viel Blut verloren</German>
             <Russian>Большая кровопотеря</Russian>
             <Spanish>Mucha Sangre perdida</Spanish>
-            <French>A Perdu Bcp de Sang</French>
+            <French>A perdu beaucoup de sang</French>
             <Polish>Stracił dużo krwi</Polish>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>
             <Italian>Perso molto Sangue</Italian>
+            <Japanese>大量出血している</Japanese>
+            <Korean>많은 피를 흘림</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_TOURNIQUET_APPLIED">
             <English>Tourniquet [CAT]</English>
@@ -594,6 +700,8 @@
             <Portuguese>Torniquete [CAT]</Portuguese>
             <Czech>Škrtidlo [CAT]</Czech>
             <Italian>Laccio Emostatico [CAT]</Italian>
+            <Japanese>止血帯 [CAT]</Japanese>
+            <Korean>지혈대 [CAT]</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Menu_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -605,6 +713,8 @@
             <Portuguese>Tubo nasofaríngeo [NPA]</Portuguese>
             <Czech>Nasofaryngeální trubice [NPA]</Czech>
             <Italian>Tubo Nasofaringeo [NPA]</Italian>
+            <Japanese>鼻咽頭チューブ [NPA]</Japanese>
+            <Korean>비-인두 기도기 [NPA]</Korean>
         </Key>
     </Package>
 </Project>

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -19,9 +20,3 @@ class CfgPatches {
 #include "CfgActions.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_UI.hpp"
-
-class ACE_newEvents {
-    setAmmoSync = QGVAR(syncAmmo);
-    returnedAmmo = QGVAR(returnedAmmo);
-    linkedAmmo = QGVAR(linkedAmmo);
-};

@@ -10,7 +10,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
@@ -18,18 +18,13 @@
 #include "script_component.hpp"
 
 _fnc_scriptNameParentTemp = if !(isNil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
-private ['_fnc_scriptNameParent'];
-_fnc_scriptNameParent = _fnc_scriptNameParentTemp;
+private _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
 
-private ['_fnc_scriptName'];
-_fnc_scriptName = 'BIS_fnc_moduleProjectile';
+private _fnc_scriptName = 'BIS_fnc_moduleProjectile';
 scriptname _fnc_scriptName;
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if ({local _x} count (objectcurators _logic) > 0) then {
     //--- Reveal the circle to curators
@@ -42,7 +37,6 @@ if (_activated) then {
     _ammo = _logic getVariable ["type",gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
         _CfgAmmo = configFile >> "CfgAmmo" >> _ammo;
-        //if !(isclass _CfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         _dirVar = _fnc_scriptname + typeOf _logic;
         _logic setdir (missionnamespace getVariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;
@@ -113,7 +107,7 @@ if (_activated) then {
                 } forEach _entities;
             };
         };
-        if (count _hint > 0) then {
+        if (count _hint > 0 && {count objectCurators _logic > 0}) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {

@@ -15,6 +15,7 @@
 
 #define _USE_MATH_DEFINES
 
+#include <stdlib.h>
 #include <math.h>
 #include <sstream>
 #include <vector>
@@ -72,10 +73,6 @@ double traceBullet(double initSpeed, double airFriction, double angle, double an
 }
 
 double getSolution(double initSpeed, double airFriction, double angleTarget, double distance) {
-    double posTargetX, posTargetY;
-    posTargetX = cos(RADIANS(angleTarget)) * distance;
-    posTargetY = sin(RADIANS(angleTarget)) * distance;
-
     if (traceBullet(initSpeed, airFriction, MAXELEVATION, angleTarget, distance) < 0) {
         return MAXELEVATION - angleTarget;
     }
@@ -96,15 +93,10 @@ double getSolution(double initSpeed, double airFriction, double angleTarget, dou
     return a2 - angleTarget;
 }
 
-// i like to live dangerously. jk, fix strncpy sometime pls.
-#pragma warning( push )
-#pragma warning( disable : 4996 )
-
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     ZERO_OUTPUT();
-
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
     } else {
         std::vector<std::string> argStrings = splitString(function);
         double initSpeed = std::stod(argStrings[0]);
@@ -117,10 +109,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
         std::stringstream sstream;
         sstream << result;
 
-        strcpy(output, sstream.str().c_str());
-        output[outputSize - 1] = '\0';
+        strncpy_s(output, outputSize, sstream.str().c_str(), _TRUNCATE);
     }
     EXTENSION_RETURN();
 }
-
-#pragma warning( pop )

@@ -13,6 +13,7 @@
 
 #include "shared.hpp"
 
+#include <stdlib.h>
 #include <sstream>
 #include <string>
 
@@ -36,18 +37,12 @@ std::string getImagePathFromStructuredText(const std::string & input) {
 	return returnValue;
 }
 
-#pragma warning( push )
-#pragma warning( disable : 4996 )
-
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
-	ZERO_OUTPUT();
-	if (!strcmp(function, "version")) {
-		strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
-	} else {
-		strncpy_s(output, outputSize, getImagePathFromStructuredText(function).c_str(), _TRUNCATE);
-		output[outputSize - 1] = '\0';
-	}
-	EXTENSION_RETURN();
+    ZERO_OUTPUT();
+    if (!strcmp(function, "version")) {
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
+    } else {
+        strncpy_s(output, outputSize, getImagePathFromStructuredText(function).c_str(), _TRUNCATE);
+    }
+    EXTENSION_RETURN();
 }
-
-#pragma warning( pop )

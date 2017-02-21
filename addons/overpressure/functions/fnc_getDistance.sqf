@@ -8,7 +8,7 @@
  * 2: Max distance to search <Number>
  * 3: Shooter <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Distance to intersection (999 if distance is greater than max) <NUMBER>
  *
  * Example:

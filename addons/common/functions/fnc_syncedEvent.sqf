@@ -16,8 +16,8 @@
 
 params ["_name", "_args", ["_ttl", 0]];
 
-if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    ACE_LOGERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
+if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+    ERROR_1("Synced event key [%1] not found (syncedEvent).", _name);
     false
 };
 

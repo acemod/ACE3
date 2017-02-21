@@ -24,4 +24,4 @@ if (!_activated) exitWith {};
 [_logic, QGVAR(SavePreDeathGear), "SavePreDeathGear"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(RemoveDeadBodiesDisconnected), "RemoveDeadBodiesDisconnected"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Respawn Module Initialized.");
+INFO("Respawn Module Initialized.");

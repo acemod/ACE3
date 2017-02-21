@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -25,9 +26,11 @@ class RscButtonMenu;
 class RscEdit;
 
 #include "ACE_Settings.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMarkers.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgSounds.hpp"
 #include "CfgLights.hpp"

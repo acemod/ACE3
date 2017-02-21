@@ -20,8 +20,7 @@ if (!((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapo
 switch (_this select 0) do {
     case ("azimuth"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
 
         [false] call FUNC(showCenter);
 
@@ -41,8 +40,7 @@ switch (_this select 0) do {
 
     case ("distance"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -65,8 +63,7 @@ switch (_this select 0) do {
 
         call FUNC(showAzimuth);
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -88,8 +85,7 @@ switch (_this select 0) do {
 
     case ("azimuth+inclination"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.2;
 
         [false] call FUNC(showCenter);
 
@@ -109,8 +105,7 @@ switch (_this select 0) do {
 
     case ("height+distance"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -131,8 +126,7 @@ switch (_this select 0) do {
 
     case ("relative_distance"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -154,8 +148,7 @@ switch (_this select 0) do {
 
     case ("relative_height+length"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -177,8 +170,7 @@ switch (_this select 0) do {
 
     case ("relative_azimuth+distance"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 
@@ -200,8 +192,7 @@ switch (_this select 0) do {
 
     case ("fall_of_shot"): {
 
-        private "_isReady";
-        _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 
         [_isReady] call FUNC(showCenter);
 

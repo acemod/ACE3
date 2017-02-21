@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Item_DAGR"};
         weapons[] = {"ACE_DAGR"};
         requiredVersion = REQUIRED_VERSION;
@@ -18,7 +19,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "Dialog.hpp"
 #include "RscTitles.hpp"
-
-class ACE_newEvents {
-    RangerfinderData = QEGVAR(vector,rangefinderData);
-};

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -12,12 +13,8 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Settings.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscInGameUI.hpp"
-
-class ACE_newEvents {
-    laser_laserOff = "ace_laserOff";
-    laser_laserOn = "ace_laserOn";
-};

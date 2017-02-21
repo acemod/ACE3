@@ -37,6 +37,14 @@ class CfgMagazines {
             class Tripwire;
         };
     };
+    class ACE_FlareTripMine_Mag: APERSTripMine_Wire_Mag {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_FlareTripMine_Wire_Ammo";
+        GVAR(SetupObject) = "ACE_Explosives_Place_APERSTripwireMine";
+        displayName = CSTRING(TripFlare_Name);
+        descriptionShort = CSTRING(TripFlare_Description);
+        class Library {libTextDesc = CSTRING(TripFlare_Description);};
+    };
 
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
         GVAR(Placeable) = 1;

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_ConcertinaWire", "ACE_ConcertinaWireNoGeo", "ACE_ConcertinaWireCoil"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -15,7 +16,3 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-
-class ACE_newEvents {
-    interactMenuOpened = "ace_interactMenuOpened";
-};

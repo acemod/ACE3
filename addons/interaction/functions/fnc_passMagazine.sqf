@@ -45,7 +45,7 @@ _player removeMagazines _magToPassClassName;
     };
 } foreach _filteredMags;
 
-_player playActionNow "PutDown";
+[_player, "PutDown"] call EFUNC(common,doGesture);
 
 _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 

@@ -14,17 +14,16 @@
 
 #include "script_component.hpp"
 
-private "_timeInCardiacArrest";
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(inCardiacArrest),false]) exitWith {};
 _unit setVariable [QGVAR(inCardiacArrest), true,true];
 _unit setVariable [QGVAR(heartRate), 0];
 
-["ace_enteredCardiacArrest", [_unit]] call CBA_fnc_localEvent;
+["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
 [_unit, true] call FUNC(setUnconscious);
-_timeInCardiacArrest = 120 + round(random(600));
+private _timeInCardiacArrest = 120 + round(random(600));
 
 [{
     params ["_args", "_idPFH"];

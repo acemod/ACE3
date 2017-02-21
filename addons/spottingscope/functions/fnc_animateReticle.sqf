@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Reticles RSC info display <DISPLAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

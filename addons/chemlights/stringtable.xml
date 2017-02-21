@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Chemlights">
+        <Key ID="STR_ACE_Chemlights_Action_Chemlights">
+            <English>Chemlights</English>
+            <Japanese>ケミライト</Japanese>
+            <Polish>Świetliki</Polish>
+            <German>Knicklichter</German>
+            <Korean>켐라이트</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Action_Prepare">
+            <English>Prepare %1</English>
+            <Japanese>%1 をつかう</Japanese>
+            <Polish>Przygotuj %1</Polish>
+            <German>%1 vorbereiten</German>
+            <Korean>%1 준비</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
+            <English>%1&lt;br/&gt;Prepared</English>
+            <Japanese>%1&amp;lt;br/&amp;gt; をつかった</Japanese>
+            <Polish>%1&lt;br/&gt;Przygotowany</Polish>
+            <German>%1&lt;br/&gt;vorbereitet</German>
+            <Korean>%1&lt;br/&gt;준비됨</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Inventory_Full">
+            <English>No inventory space</English>
+            <German>Kein Platz im Inventar</German>
+            <Spanish>Sin espacio en inventario</Spanish>
+            <Polish>Brak miejsca w ekwipunku</Polish>
+            <French>Pas de place dans l'inventaire</French>
+            <Czech>Nedostatek místa v inventáři</Czech>
+            <Portuguese>Sem espaço no inventário</Portuguese>
+            <Italian>Non hai più spazio</Italian>
+            <Hungarian>Nincs több hely</Hungarian>
+            <Russian>В инвентаре нет места</Russian>
+            <Japanese>インベントリに空きがありません</Japanese>
+            <Korean>소지품 공간이 없음</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Box_DisplayName">
+            <English>[ACE] Chemlights</English>
+            <Japanese>[ACE] ケミライト</Japanese>
+            <Polish>[ACE] Świetliki</Polish>
+            <German>[ACE] Knicklichter</German>
+            <Korean>[ACE] 켐라이트</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Orange_DisplayName">
+            <English>Chemlight (Orange)</English>
+            <Japanese>ケミライト (オレンジ)</Japanese>
+            <Polish>Świetlik (pomarańczowy)</Polish>
+            <German>Knicklicht (orange)</German>
+            <Korean>켐라이트 (주황)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Orange_DisplayNameShort">
+            <English>Orange Light</English>
+            <Japanese>オレンジ色</Japanese>
+            <Polish>Pomarańczowe światło</Polish>
+            <German>Oranges Knicklicht</German>
+            <Korean>주황색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
+            <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - オレンジ&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - pomarańczowe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - orange&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류:밝은 오렌지&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_White_DisplayName">
+            <English>Chemlight (White)</English>
+            <Japanese>ケミライト (白)</Japanese>
+            <Polish>Świetlik (biały)</Polish>
+            <German>Knicklicht (weiß)</German>
+            <Korean>켐라이트 (하양)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_White_DisplayNameShort">
+            <English>White Light</English>
+            <Japanese>白色</Japanese>
+            <Polish>Białe światło</Polish>
+            <German>Weißes Knicklicht</German>
+            <Korean>하얀색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
+            <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 白&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - białe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - weiß&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류:하얀색&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiRed_DisplayName">
+            <English>Chemlight (Hi Red)</English>
+            <Japanese>ケミライト (高輝度 赤)</Japanese>
+            <Polish>Świetlik (jaskrawy czerwony)</Polish>
+            <German>Knicklicht (rot, hell)</German>
+            <Korean>켐라이트 (밝은 빨간색)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiRed_DisplayNameShort">
+            <English>Red Hi Light</English>
+            <Japanese>高輝度の赤色</Japanese>
+            <Polish>Jaskrawe czerwone światło</Polish>
+            <German>Helles, rotes Knicklicht</German>
+            <Korean>밝은 빨간색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
+            <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - rot, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 빨간색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiYellow_DisplayName">
+            <English>Chemlight (Hi Yellow)</English>
+            <Japanese>ケミライト (高輝度 黄)</Japanese>
+            <Polish>Świetlik (jaskrawy żółty)</Polish>
+            <German>Knicklicht (gelb, hell)</German>
+            <Korean>켐라이트 (밝은 노란색)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiYellow_DisplayNameShort">
+            <English>Yellow Hi Light</English>
+            <Japanese>高輝度の黄色</Japanese>
+            <Polish>Jaskrawe żółte światło</Polish>
+            <German>Helles, gelbes Knicklicht</German>
+            <Korean>밝은 노란색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
+            <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - gelb, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류:밝은 노란색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayName">
+            <English>Chemlight (Hi Orange)</English>
+            <Japanese>ケミライト (高輝度 オレンジ)</Japanese>
+            <Polish>Świetlik (jaskrawy pomarańczowy)</Polish>
+            <German>Knicklicht (orange, hell)</German>
+            <Korean>켐라이트 (밝은 주황색)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiOrange_DisplayNameShort">
+            <English>Orange Hi Light</English>
+            <Japanese>高輝度のオレンジ</Japanese>
+            <Polish>Jaskrawe pomarańczowe światło</Polish>
+            <German>Helles, oranges Knicklicht</German>
+            <Korean>밝은 주황색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
+            <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 주황색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiWhite_DisplayName">
+            <English>Chemlight (Hi White)</English>
+            <Japanese>ケミライト (高輝度 白)</Japanese>
+            <Polish>Świetlik (jaskrawy biały)</Polish>
+            <German>Knicklicht (weiß, hell)</German>
+            <Korean>켐라이트 (밝은 하얀색)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiWhite_DisplayNameShort">
+            <English>White Hi Light</English>
+            <Japanese>高輝度の白色</Japanese>
+            <Polish>Jaskrawe białe światło</Polish>
+            <German>Helles, weißes Knicklicht</German>
+            <Korean>밝은 하얀색</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
+            <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 高輝度 白 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - weiß, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 밝은 하얀색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_IR_DisplayName">
+            <English>Chemlight (IR)</English>
+            <Japanese>ケミライト (IR)</Japanese>
+            <Polish>Świetlik (podczerwony)</Polish>
+            <German>Knicklicht (IR)</German>
+            <Korean>켐라이트 (적외선)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_IR_DisplayNameShort">
+            <English>IR Light</English>
+            <Japanese>赤外線光</Japanese>
+            <Polish>Światło podczerwone</Polish>
+            <German>IR-Knicklicht</German>
+            <Korean>적외선 켐라이트</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
+            <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
+            <Japanese>種類: 照明 - 赤外線&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Polish>Typ: Światło - podczerwone&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
+            <German>Typ: Licht - infrarot&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
+            <Korean>종류: 적외선&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Empty_DisplayName">
+            <English>Chemlight Shield (Empty)</English>
+            <Japanese>ケミライト シールド (空)</Japanese>
+            <Polish>Osłona na świetlik (pusta)</Polish>
+            <German>Knicklicht-Abschirmung (leer)</German>
+            <Korean>켐라이트 쉴드 (비어있음)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Empty_DescriptionShort">
+            <English>Shield for chemlights. Combine with chemlight to prepare reading light.</English>
+            <Japanese>ケミライトを入れられます。シールドとケミライトを組み合わせることで、照明にもなりえます。</Japanese>
+            <Polish>Osłona na świetliki. Połącz ją ze świetlikiem by stworzyć lampkę do czytania.</Polish>
+            <German>Abschirmung für Knicklichter. Mit Knicklicht kombinieren, um Leselicht zu erhalten.</German>
+            <Korean>켐라이트를 위한 가림막입니다. 켐라이트와 같이 사용하여  읽을 때 씁니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Green_DisplayName">
+            <English>Chemlight Shield (Green)</English>
+            <Japanese>ケミライト シールド (緑)</Japanese>
+            <Polish>Osłona na świetlik (zielona)</Polish>
+            <German>Knicklicht-Abschirmung (grün)</German>
+            <Korean>켐라이트 쉴드 (초록)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Green_DescriptionShort">
+            <English>Green reading light.</English>
+            <Japanese>緑色の照明。</Japanese>
+            <Polish>Zielona lampka.</Polish>
+            <German>Grünes Leselicht.</German>
+            <Korean>초록빛 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Red_DisplayName">
+            <English>Chemlight Shield (Red)</English>
+            <Japanese>ケミライト シールド (赤)</Japanese>
+            <Polish>Osłona na świetlik (czerwona)</Polish>
+            <German>Knicklicht-Abschirmung (rot)</German>
+            <Korean>켐라이트 쉴드 (빨강)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Red_DescriptionShort">
+            <English>Red reading light.</English>
+            <Japanese>赤色の照明。</Japanese>
+            <Polish>Czerwona lampka.</Polish>
+            <German>Rotes Leselicht.</German>
+            <Korean>빨간색 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Blue_DisplayName">
+            <English>Chemlight Shield (Blue)</English>
+            <Japanese>ケミライト シールド (青)</Japanese>
+            <Polish>Osłona na świetlik (niebieska)</Polish>
+            <German>Knicklicht-Abschirmung (blau)</German>
+            <Korean>켐라이트 쉴드 (파랑)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Blue_DescriptionShort">
+            <English>Blue reading light.</English>
+            <Japanese>青色の照明。</Japanese>
+            <Polish>Niebieska lampka.</Polish>
+            <German>Blaues Leselicht.</German>
+            <Korean>파란색 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Yellow_DisplayName">
+            <English>Chemlight Shield (Yellow)</English>
+            <Japanese>ケミライト シールド (黄)</Japanese>
+            <Polish>Osłona na świetlik (żółta)</Polish>
+            <German>Knicklicht-Abschirmung (gelb)</German>
+            <Korean>켐라이트 쉴드 (노랑)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Yellow_DescriptionShort">
+            <English>Yellow reading light.</English>
+            <Japanese>黄色の照明。</Japanese>
+            <Polish>Żółta lampka.</Polish>
+            <German>Gelbes Leselicht.</German>
+            <Korean>노란색 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Orange_DisplayName">
+            <English>Chemlight Shield (Orange)</English>
+            <Japanese>ケミライト シールド (オレンジ)</Japanese>
+            <Polish>Osłona na świetlik (pomarańczowa)</Polish>
+            <German>Knicklicht-Abschirmung (orange)</German>
+            <Korean>켐라이트 쉴드 (주황)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_Orange_DescriptionShort">
+            <English>Orange reading light.</English>
+            <Japanese>オレンジの照明。</Japanese>
+            <Polish>Pomarańczowa lampka.</Polish>
+            <German>Oranges Leselicht.</German>
+            <Korean>주황색 조명</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_White_DisplayName">
+            <English>Chemlight Shield (White)</English>
+            <Japanese>ケミライト シールド (白)</Japanese>
+            <Polish>Osłona na świetlik (biała)</Polish>
+            <German>Knicklicht-Abschirmung (weiß)</German>
+            <Korean>켐라이트 쉴드 (하양)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Chemlights_Shield_White_DescriptionShort">
+            <English>White reading light.</English>
+            <Japanese>白の照明。</Japanese>
+            <Polish>Biała lampka.</Polish>
+            <German>Weißes Leselicht.</German>
+            <Korean>주황색 조명</Korean>
+        </Key>
+    </Package>
+</Project>

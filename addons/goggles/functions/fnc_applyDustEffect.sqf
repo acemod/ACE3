@@ -26,6 +26,10 @@ if ([_unit] call FUNC(isGogglesVisible)) exitWith {
 
     ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
 
+    private _effectBrightness = linearConversion [0,1,([] call EFUNC(common,ambientBrightness)),0.25,1];
+    ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetTextColor [_effectBrightness, _effectBrightness, _effectBrightness, 1];
+    TRACE_1("dust",_effectBrightness);
+
     SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT) + 1,0,1));
     SETDUST(DBULLETS,0);
 };

@@ -33,7 +33,7 @@ GVAR(distanceIndex) = -1;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    _result = [eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player)] call EFUNC(laser,shootRay);
+    _result = [eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player), ACE_player] call EFUNC(laser,shootRay);
     _distance = _result select 1;
 
     _distance = _distance - 1 + (random 2);

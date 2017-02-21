@@ -2,13 +2,13 @@
  * Author: commy2
  * Check of the unit can reload the launcher of target unit.
  *
- * Argument:
+ * Arguments:
  * 0: Unit to do the reloading (Object)
  * 1: Unit eqipped with launcher (Object)
  * 2: weapon name (String)
  * 3: missile name (String)
  *
- * Return value:
+ * Return Value:
  * NONE
  *
  * Public: No

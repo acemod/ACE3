@@ -1,9 +1,9 @@
 #define COMPONENT ui
+#define COMPONENT_BEAUTIFIED UI
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
-// #define CBA_DEBUG_SYNCHRONOUS
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_UI
@@ -19,6 +19,11 @@
 
 // Basic Elements
 #define ELEMENTS_BASIC [QGVAR(soldierVehicleWeaponInfo), QGVAR(vehicleRadar), QGVAR(vehicleCompass), QGVAR(commandMenu), QGVAR(groupBar)]
+
+// Locations
+#define ANYWHERE 0
+#define GROUND_ONLY 1
+#define VEHICLE_ONLY 2
 
 /*
 RscUnitInfo = 300

@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Code <CODE, STRING>
  *
- * Return value:
+ * Return Value:
  * Code <STRING>
  *
  * Public: Yes

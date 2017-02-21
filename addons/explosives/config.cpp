@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_ModuleMine_SLAMBottomMine", "ACE_ModuleExplosive_IEDUrbanBig_Range", "ACE_ModuleExplosive_IEDLandBig_Range", "ACE_ModuleExplosive_IEDUrbanSmall_Range", "ACE_ModuleExplosive_IEDLandSmall_Range"};
         weapons[] = {"ACE_Clacker", "ACE_DefusalKit", "ACE_M26_Clacker", "ACE_DeadManSwitch", "ACE_Cellphone"};
         requiredVersion = REQUIRED_VERSION;
@@ -21,6 +22,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
+#include "CfgCloudlets.hpp"
 
 #include "ACE_Triggers.hpp"
 #include "ExplosivesUI.hpp"
@@ -42,9 +44,4 @@ class CfgMineTriggers {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
-};
-
-class ACE_newEvents {
-    clientRequestsOrientations = QGVAR(clientRequestOrientations);
-    serverSendsOrientations = QGVAR(serverSendOrientations);
 };

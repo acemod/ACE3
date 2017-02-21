@@ -16,8 +16,6 @@
 #include "script_component.hpp"
 #define MAX_DISTANCE 10
 
-private "_target";
-
 params ["_display"];
 
 if (isNil "_display") exitWith {};
@@ -34,7 +32,7 @@ if (isNil QGVAR(LatestDisplayOptionMenu)) then {
     };
 };
 
-_target = GVAR(INTERACTION_TARGET);
+private _target = GVAR(INTERACTION_TARGET);
 if (isNil QGVAR(INTERACTION_TARGET_PREVIOUS)) then {
     GVAR(INTERACTION_TARGET_PREVIOUS) = _target;
 };

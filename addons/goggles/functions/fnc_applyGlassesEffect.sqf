@@ -46,13 +46,15 @@ if (_imagePath != "") then {
     (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
 };
 
-if (GETDIRT) then {
-    call FUNC(applyDirtEffect);
-};
+if (GVAR(effects) == 2) then {
+    if (GETDIRT) then {
+        call FUNC(applyDirtEffect);
+    };
 
-if (GETDUSTT(DACTIVE)) then {
-    SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-    call FUNC(applyDustEffect);
+    if (GETDUSTT(DACTIVE)) then {
+        SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
+        call FUNC(applyDustEffect);
+    };
 };
 
 GVAR(EffectsActive) = true;

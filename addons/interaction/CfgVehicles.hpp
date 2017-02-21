@@ -307,8 +307,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -333,8 +334,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -383,11 +385,13 @@ class CfgVehicles {
 
     class Air;
     class Helicopter: Air {
+        GVAR(bodyWidth) = 3;
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -412,8 +416,9 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
@@ -434,13 +439,24 @@ class CfgVehicles {
         };
     };
 
+    class VTOL_Base_F;
+    class VTOL_01_base_F: VTOL_Base_F {
+        GVAR(bodyWidth) = 4;
+        GVAR(bodyLength) = 10;
+    };
+    class VTOL_02_base_F: VTOL_Base_F {
+        GVAR(bodyWidth) = 3;
+        GVAR(bodyLength) = 7;
+    };
+
     class Ship;
     class Ship_F: Ship {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
+                position = QUOTE(call DFUNC(getVehiclePos));
                 selection = "";
-                distance = 10;
+                distance = 4;
                 condition = "true";
 
                 class ACE_Push {
@@ -475,7 +491,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
                 selection = "gunnerview";
-                distance = 2;
+                distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);

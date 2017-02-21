@@ -41,6 +41,29 @@ class CfgAmmo {
         GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
     };
 
+    class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        SoundSetExplosion[] = {};
+        defaultMagazine = "ACE_FlareTripMine_Mag"; //Mag that gets dropped after defuse
+        hit = 0;
+        indirectHit = 0;
+        indirectHitRange = 0;
+        soundHit[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
+        explosionEffects = "ACE_TripflareEffect";
+        CraterEffects = "";
+        soundTrigger[] = {"",1,1};
+        class CamShakeExplode {
+            power = 0;
+            duration = 0;
+            frequency = 0;
+            distance = 0;
+        };
+    };
+    
+    class F_20mm_Red;
+    class ACE_TripFlare_FlareEffect: F_20mm_Red {
+        triggerTime = 0.1;
+    };
+
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
         GVAR(explodeOnDefuseChance) = 1;

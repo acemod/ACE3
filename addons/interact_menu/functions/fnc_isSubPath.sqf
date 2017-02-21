@@ -2,11 +2,11 @@
  * Author: esteldunedain
  * Check if the first path is a subpath of the other
  *
- * Argument:
+ * Arguments:
  * 0: LongPath <ARRAY>
  * 1: ShortPath <STRING>
  *
- * Return value:
+ * Return Value:
  * Bool
  *
  * Example:

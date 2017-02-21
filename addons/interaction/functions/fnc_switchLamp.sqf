@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Lamp <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -29,7 +29,7 @@ private _hitPointsDamage = [];
 } count _reflectors;
 
 //if lamp is on turn it off
-private _eventName = [QGVAR(lampTurnOn), QGVAR(lampTurnOff)] select _isOn;
+private _eventName = [QGVAR(setLampOn), QGVAR(setLampOff)] select _isOn;
 [_eventName, [_lamp, _hitPointsDamage, DISABLED_LAMP_DMG], [_lamp]] call CBA_fnc_targetEvent;
 
 _lamp setVariable ["ACE_lampOn", !_isOn, true];

@@ -2,13 +2,13 @@
  * Author: KoffeinFlummi, Ruthberg
  * Applies the adjustment for the current scope
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Absolute elevation <NUMBER>
  * 2: Absolute windage <NUMBER>
  * 3: Absolute zero reference <NUMBER>
  *
- * Return value:
+ * Return Value:
  * True <BOOL>
  *
  * Example:
@@ -24,13 +24,7 @@ params ["_unit", "_elevation", "_windage", "_zero"];
 
 _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 
-_adjustment = _unit getVariable QGVAR(Adjustment);
-if (isNil "_adjustment") then {
-    // [Windage, Elevation, Zero]
-    _adjustment = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-    _unit setVariable [QGVAR(Adjustment), _adjustment];
-};
-
+_adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
 _adjustmentDifference = (_adjustment select _weaponIndex) vectorDiff [_elevation, _windage, _zero];
 if (_adjustmentDifference isEqualTo [0,0,0]) exitWith {false};  // Don't coninue if no adjustment is made
 

@@ -2,11 +2,11 @@
  * Author: commy2
  * Create one action per reloadable missile
  *
- * Argument:
+ * Arguments:
  * 1: Target (Object)
  * 0: Player (Object)
  *
- * Return value:
+ * Return Value:
  * Children actions (Array)
  *
  * Public: No

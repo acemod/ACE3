@@ -2,10 +2,10 @@
  * Author: Commy2 and esteldunedain
  * Handle weapon fire. Called from the unified fired EH 1- always for the local player 2- and for non local players if dispersion is simulated.
  *
- * Argument:
+ * Arguments:
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No
@@ -40,7 +40,7 @@ TRACE_4("weapon data from cache",_weapon,_dispersion,_slowdownFactor,_jamChance)
 // Dispersion and bullet slow down
 if (GVAR(overheatingDispersion)) then {
     // Exit if GVAR(pseudoRandomList) isn't synced yet
-    if (isNil QGVAR(pseudoRandomList)) exitWith {ACE_LOGERROR("No pseudoRandomList sync");};
+    if (isNil QGVAR(pseudoRandomList)) exitWith {ERROR("No pseudoRandomList sync");};
 
     //Dispersion: 0 mils @ 0°C, 0.5 mils @ 333°C, 2.2 mils @ 666°C, 5 mils at 1000°C
     _dispersion = _dispersion * 0.28125 * (_scaledTemperature^2);
@@ -77,7 +77,7 @@ if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(
     if (_intensity > 0) then {
         drop [
         "\A3\data_f\ParticleEffects\Universal\Refract", "", "Billboard", 10, 2, _position, _direction, 0, 1.2, 1.0,
-        0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3*_intensity],[0.2,0.2,0.2,0.05*_intensity]], [0,1], 0.1, 0.05, "", "", ""];
+        0.1, [0.10,0.25], [[0.6,0.6,0.6,0.3 * _intensity],[0.2,0.2,0.2,0.05 * _intensity]], [0,1], 0.1, 0.05, "", "", ""];
     };
     // Smoke SFX, beginning at temp 150°C
     private _intensity = linearConversion [0.15, 1, _scaledTemperature, 0, 1, true];
@@ -85,7 +85,7 @@ if (GVAR(showParticleEffects) && {(CBA_missionTime > ((_unit getVariable [QGVAR(
     if (_intensity > 0) then {
         drop [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 12, 1, 16], "", "Billboard", 10, 1.2, _position,
-        [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5*_intensity],[0.2,0.2,0.2,0.15*_intensity]],
+        [0,0,0.15], 100 + random 80, 1.275, 1, 0.025, [0.15,0.43], [[0.6,0.6,0.6,0.5 * _intensity],[0.2,0.2,0.2,0.15 * _intensity]],
         [0,1], 1, 0.04, "", "", ""];
     };
 };

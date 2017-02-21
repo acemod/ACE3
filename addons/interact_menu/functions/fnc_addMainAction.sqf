@@ -2,11 +2,11 @@
  * Author: Jonpas, PabstMirror
  * Makes sure there is a ACE_MainActions on the object type
  *
- * Argument:
+ * Arguments:
  * 0: Object classname <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

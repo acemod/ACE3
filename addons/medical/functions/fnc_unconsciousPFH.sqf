@@ -36,7 +36,6 @@ if (!alive _unit) exitWith {
     [_unit, "setCaptive", "ace_unconscious", false] call EFUNC(common,statusEffect_set);
     [_unit, false] call EFUNC(common,disableAI);
     //_unit setUnitPos _originalPos;
-    _unit setUnconscious false;
 
     [_unit, "isUnconscious"] call EFUNC(common,unmuteUnit);
     ["ace_unconscious", [_unit, false]] call CBA_fnc_globalEvent;

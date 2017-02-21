@@ -16,11 +16,9 @@
  */
 #include "script_component.hpp"
 
-private "_logCtrl";
-
 params ["_display", "_logs"];
 
-_logCtrl = _display displayCtrl 214;
+private _logCtrl = _display displayCtrl 214;
 lbClear _logCtrl;
 
 {

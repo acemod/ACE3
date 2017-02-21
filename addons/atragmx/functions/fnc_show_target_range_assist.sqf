@@ -9,7 +9,7 @@
  * Nothing
  *
  * Example:
- * call ace_atragmx_show_target_range_assist
+ * call ace_atragmx_fnc_show_target_range_assist
  *
  * Public: No
  */

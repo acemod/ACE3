@@ -15,36 +15,35 @@
 
 if (!GVAR(enabled)) exitWith {};
 
-private["_gcIndex", "_iter"];
-_gcIndex = [];
+private _gcIndex = [];
 
-_iter = 0;
-while { (count GVAR(objects)) > 0 &&  { _iter < (GVAR(MaxTrackPerFrame) min (count GVAR(objects))) } } do {
-    private["_object", "_args"];
-    if(GVAR(lastIterationIndex) >= (count GVAR(objects))) then {
+private _iter = 0;
+private _objectCount = count GVAR(objects);
+while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} do {
+
+    if (GVAR(lastIterationIndex) >= _objectCount) then {
         GVAR(lastIterationIndex) = 0;
     };
-    _object = GVAR(objects) select GVAR(lastIterationIndex);
+    private _object = GVAR(objects) select GVAR(lastIterationIndex);
 
-    if(!isNil "_object") then {
-        _args = GVAR(arguments) select GVAR(lastIterationIndex);
+    if (!isNil "_object") then {
+        private _args = GVAR(arguments) select GVAR(lastIterationIndex);
 
-        if(!(_args call FUNC(pfhRound))) then {
-            _gcIndex pushBack GVAR(lastIterationIndex);    // Add it to the GC if it returns false
+        if (!(_args call FUNC(pfhRound))) then {
+            _gcIndex pushBack GVAR(lastIterationIndex); // Add it to the GC if it returns false
         };
     };
-    _iter = _iter + 1;
-    GVAR(lastIterationIndex) = GVAR(lastIterationIndex) + 1;
+    INC(_iter);
+    INC(GVAR(lastIterationIndex));
 };
 
-// clean up dead object references
-private["_deletionCount", "_deleteIndex"];
-_deletionCount = 0;
+// Clean up dead object references
+private _deletionCount = 0;
 {
     TRACE_1("GC Projectile", _x);
-    _deleteIndex = _x - _deletionCount;
+    private _deleteIndex = _x - _deletionCount;
     GVAR(objects) deleteAt _deleteIndex;
     GVAR(arguments) deleteAt _deleteIndex;
 
-    _deletionCount = _deletionCount + 1;
+    INC(_deletionCount);
 } forEach _gcIndex;

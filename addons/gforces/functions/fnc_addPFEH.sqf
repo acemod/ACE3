@@ -2,10 +2,10 @@
  * Author: KoffeinFlummi and esteldunedain
  * Adds the PFEH
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Public: No

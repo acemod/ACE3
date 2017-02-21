@@ -5,7 +5,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

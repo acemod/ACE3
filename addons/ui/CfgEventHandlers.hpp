@@ -15,3 +15,10 @@ class Extended_PostInit_EventHandlers {
         clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
     };
 };
+
+// Closing diary resets showHUD
+class Extended_DisplayUnload_EventHandlers {
+    class RscDiary {
+        ADDON = QUOTE([{[false] call FUNC(setElements)}] call CBA_fnc_execNextFrame);
+    };
+};

@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="finger">
         <Key ID="STR_ACE_finger_indicatorForSelf_name">
             <English>Show pointing indicator to self</English>
             <German>Zeigersymbol einem selbst anzeigen</German>
             <Russian>Индикатор пальца для показывающего</Russian>
-            <French>Afficher un indicateur de pointage pour soi-même</French>
+            <French>Afficher un indicateur de pointage à soi-même</French>
             <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
             <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
             <Portuguese>Mostrar indicador para si mesmo</Portuguese>
             <Spanish>Mostrar el indicador de señalado a uno mismo</Spanish>
             <Czech>Zobrazit ukázání směru pro sebe</Czech>
             <Italian>Mostra puntatore per te stesso</Italian>
+            <Japanese>自分にポインティング表記を表示する</Japanese>
+            <Korean>자신이 가리키는곳을 보여줍니다</Korean>
         </Key>
         <Key ID="STR_ACE_finger_indicatorForSelf_description">
             <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
@@ -24,6 +26,8 @@
             <Spanish>Muestra el indicador para el jugador que apunta. Esta opción no afecta si los otros jugadores verían el indicador</Spanish>
             <Czech>Zobrazit infikátor, když ukážete prstem. Tato volba nemá vliv, zda ostatní hráči uvidí indikátor nebo ne.</Czech>
             <Italian>Mostra puntatore per il giocatore indicato. Questa opzione non influisce la possibilità che gli altri giocatori vedano il puntatore</Italian>
+            <Japanese>プレイヤーへのポインティング表記を描画します。このオプションは他のプレイヤーの表記に影響しません。</Japanese>
+            <Korean>대상이 가리키는곳을 보이게 합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_name">
             <English>Pointing indicator</English>
@@ -36,18 +40,22 @@
             <Spanish>Indicador de señalado</Spanish>
             <Czech>Ukazování směru</Czech>
             <Italian>Indicatore di puntamento</Italian>
+            <Japanese>ポインティング表記</Japanese>
+            <Korean>가리키기 표시기</Korean>
         </Key>
         <Key ID="STR_ACE_finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
             <German>Farbe des Zeigersymbols</German>
             <Russian>Цвет индикатора указания пальцем</Russian>
-            <French>Couleur de l'indicateur de pointage</French>
+            <French>Couleur du cercle de l'indicateur de pointage</French>
             <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
             <Hungarian>Mutatási indikátor körének színe</Hungarian>
             <Portuguese>Cor do círculo de indicação</Portuguese>
             <Spanish>Color del círculo indicador que señala</Spanish>
             <Czech>Barva kruhu pro ukázání směru</Czech>
             <Italian>Colore del cerchio dell'indicatore di puntamento</Italian>
+            <Japanese>ポインティング表記の円の色</Japanese>
+            <Korean>가리키기의 원형 색상</Korean>
         </Key>
         <Key ID="STR_ACE_finger_keyComb">
             <English>Action "point a finger at"</English>
@@ -60,11 +68,13 @@
             <Spanish>Acción "apuntar con el dedo a"</Spanish>
             <Czech>Akce "ukázat prstem na"</Czech>
             <Italian>Azione "punta il dito a"</Italian>
+            <Japanese>"point a finger at"キー</Japanese>
+            <Korean>"손가락으로 가리키기"행동</Korean>
         </Key>
         <Key ID="STR_ACE_finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
             <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
-            <French>Montre du doigt et affiche un marqueur virtuel de la direction pointée aux uinités proches. Peut être maintenu</French>
+            <French>Montre, et affiche un marqueur virtuel là ou vous regardez aux unités proches. Peut être maintenu.</French>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
             <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
@@ -72,11 +82,13 @@
             <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
             <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
             <Italian>Punta e mostra un marker virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
+            <Japanese>ポイント、そして架空のマーカー表記は自ユニットの近くにいると表記されます。これは押しっぱなしにできます。</Japanese>
+            <Korean>당신이 보는것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른채로 유지할 수 있습니다.</Korean>
         </Key>
         <Key ID="STR_ACE_finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
             <German>Zeigen Einstellungen</German>
-            <French>Options "Montrer du doigt"</French>
+            <French>Options de pointage</French>
             <Polish>Ustawienia wskazywania palcem</Polish>
             <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
@@ -84,11 +96,13 @@
             <Spanish>Ajustes de señalado</Spanish>
             <Czech>Nastavení ukázování směru</Czech>
             <Italian>Impostazioni puntamento</Italian>
+            <Japanese>ポインティング設定</Japanese>
+            <Korean>가리키기 설정</Korean>
         </Key>
         <Key ID="STR_ACE_finger_enabled_displayName">
             <English>Pointing Enabled</English>
             <German>Zeigen aktiviert</German>
-            <French>"Montrer du doigt" activé</French>
+            <French>Pointage activé</French>
             <Polish>Aktywuj wskazywanie</Polish>
             <Hungarian>Mutatás engedélyezése</Hungarian>
             <Portuguese>Apontamento ativado</Portuguese>
@@ -96,11 +110,13 @@
             <Spanish>Señalado habilitado</Spanish>
             <Czech>Ukazování povoleno</Czech>
             <Italian>Puntamento abilitato</Italian>
+            <Japanese>ポインティングを有効</Japanese>
+            <Korean>가리키기 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_displayName">
             <English>Pointing Max Range</English>
             <German>Maximale Zeigerreichweite</German>
-            <French>Distance maximale du pointage</French>
+            <French>Distance maximale de pointage</French>
             <Polish>Maks. zasięg wskazywania</Polish>
             <Hungarian>Ujj maximum hatótávja</Hungarian>
             <Portuguese>Distância máxima do apontamento</Portuguese>
@@ -108,6 +124,8 @@
             <Spanish>Distancia máxima de señalado</Spanish>
             <Czech>Maximální dosah pro ukazování směru</Czech>
             <Italian>Raggio massimo puntamento</Italian>
+            <Japanese>ポインティングの最大範囲</Japanese>
+            <Korean>가리키기 최대 범위</Korean>
         </Key>
         <Key ID="STR_ACE_finger_maxRange_description">
             <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
@@ -120,6 +138,8 @@
             <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
             <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [default: 4 metri]</Italian>
+            <Japanese>ポインティング表記が他のプレイヤーに表示される範囲を決定できます。（標準 4 メートル）</Japanese>
+            <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
         </Key>
     </Package>
 </Project>

@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_TargetWall","ACE_Box_Ammo"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;

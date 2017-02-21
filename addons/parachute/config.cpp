@@ -1,7 +1,8 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ACE_Parachute {
+    class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_NonSteerableParachute"};
         weapons[] = {"ACE_Altimeter"};
         requiredVersion = REQUIRED_VERSION;

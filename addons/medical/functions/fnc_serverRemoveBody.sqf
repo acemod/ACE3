@@ -27,7 +27,7 @@ if (isNil QGVAR(bodiesToDelete)) then {GVAR(bodiesToDelete) = [];};
 GVAR(bodiesToDelete) pushBack _target;
 
 // Start up a loop to wait for bodies to be free to delete
-if ((count GVAR(bodiesToDelete)) > 0) then {
+if ((count GVAR(bodiesToDelete)) == 1) then {
     [] call FUNC(bodyCleanupLoop);
 };
 

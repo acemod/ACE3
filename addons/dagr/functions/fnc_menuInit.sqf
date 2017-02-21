@@ -447,11 +447,10 @@ GVAR(menuRun) = true;
                     };
                 };
                 if (GVAR(F2)) then {
-                    private ["_grid", "_gridVector"];
-                    _grid = toArray GVAR(vectorGrid);
+                    private _grid = toArray GVAR(vectorGrid);
                     _grid deleteAt 4;
                     _grid = toString _grid;
-                    _gridVector = parseNumber _grid;
+                    private _gridVector = parseNumber _grid;
                     GVAR(digit1) = floor(_gridVector / 10000000);
                     GVAR(digit2) = floor(_gridVector / 1000000 - GVAR(digit1) *10);
                     GVAR(digit3) = floor(_gridVector / 100000 - GVAR(digit2) * 10 - GVAR(digit1) * 100);

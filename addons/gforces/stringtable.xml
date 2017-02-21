@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="gforces">
         <Key ID="STR_ACE_gforces_enabledFor_displayName">
@@ -7,6 +7,11 @@
             <Spanish>Efectos Gforces</Spanish>
             <Czech>G Force efekty</Czech>
             <Portuguese>Efeitos de ForçaG</Portuguese>
+            <French>Effets de force gravitationnelle</French>
+            <Russian>Эффекты перегрузок</Russian>
+            <Japanese>G による効果</Japanese>
+            <Polish>Efekty przeciążeń</Polish>
+            <Korean>중력가속도 효과</Korean>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -14,6 +19,11 @@
             <Spanish>Sólo Aeronave</Spanish>
             <Czech>Pouze letadla</Czech>
             <Portuguese>Somente Aeronave</Portuguese>
+            <French>Avions seulement</French>
+            <Russian>Только для летательных аппаратов</Russian>
+            <Japanese>航空機のみ</Japanese>
+            <Polish>Tylko samoloty</Polish>
+            <Korean>비행기에만 적용</Korean>
         </Key>
     </Package>
 </Project>

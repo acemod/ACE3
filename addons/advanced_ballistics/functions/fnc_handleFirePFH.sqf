@@ -15,17 +15,16 @@
 private _aceTimeSecond = floor CBA_missionTime;
 
 {
-    private ["_bulletVelocity", "_bulletPosition", "_bulletSpeed"];
-    _x params["_bullet","_caliber","_bulletTraceVisible","_index"];
+    _x params ["_bullet","_caliber","_bulletTraceVisible","_index"];
 
-    _bulletVelocity = velocity _bullet;
+    private _bulletVelocity = velocity _bullet;
 
-    _bulletSpeed = vectorMagnitude _bulletVelocity;
+    private _bulletSpeed = vectorMagnitude _bulletVelocity;
 
     if (!alive _bullet || _bulletSpeed < 100) then {
         GVAR(allBullets) deleteAt (GVAR(allBullets) find _x);
     } else {
-        _bulletPosition = getPosASL _bullet;
+        private _bulletPosition = getPosASL _bullet;
 
         if (_bulletTraceVisible && _bulletSpeed > 500) then {
             drop ["\A3\data_f\ParticleEffects\Universal\Refract","","Billboard",1,0.1,getPos _bullet,[0,0,0],0,1.275,1,0,[0.02*_caliber,0.01*_caliber],[[0,0,0,0.65],[0,0,0,0.2]],[1,0],0,0,"","",""];

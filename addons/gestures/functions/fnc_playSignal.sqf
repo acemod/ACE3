@@ -17,7 +17,6 @@
 
 TRACE_1("params",_this);
 
-if (!GVAR(ReloadMutex)) exitWith {false};
 if (GVAR(showOnInteractionMenu) == 0) exitWith {false};
 if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -34,5 +33,5 @@ private _gesture = if ((_this select [0,2]) == "BI") then {
 };
 
 TRACE_1("playing gesture",_gesture);
-ACE_player playAction _gesture;
+[ACE_player, _gesture] call EFUNC(common,doGesture);
 true

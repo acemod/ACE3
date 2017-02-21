@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
+        <Key ID="STR_ACE_Laser_dispersionCount_displayName">
+            <English>Laser Dispersion Simulation Count</English>
+            <Japanese>レーザーの分散シミュレート数</Japanese>
+            <German>Laserstreuung-Simulationszähler</German>
+            <Korean>레이저 분산 시뮬레이션 수</Korean>
+            <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
+        </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>
             <German>Lasercode</German>
@@ -12,6 +19,8 @@
             <Spanish>Código del láser</Spanish>
             <Czech>Laser kód</Czech>
             <Italian>Codice laser</Italian>
+            <Japanese>レーザ コード</Japanese>
+            <Korean>레이저 코드</Korean>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeUp">
             <English>Laser - Cycle Code Up</English>
@@ -24,6 +33,8 @@
             <Spanish>Láser - Aumentar código</Spanish>
             <Czech>Laser - Kód +</Czech>
             <Italian>Codice laser +</Italian>
+            <Japanese>レーザ - コードの数値を増やす</Japanese>
+            <Korean>레이저 - 코드 순환 위</Korean>
         </Key>
         <Key ID="STR_ACE_Laser_laserCodeDown">
             <English>Laser - Cycle Code Down</English>
@@ -36,6 +47,8 @@
             <Spanish>Láser - Reducir código</Spanish>
             <Czech>Laser - Kód -</Czech>
             <Italian>Codice laser -</Italian>
+            <Japanese>レーザ - コードの数値を減らす</Japanese>
+            <Korean>레이저 - 코드 순환 아래</Korean>
         </Key>
     </Package>
 </Project>

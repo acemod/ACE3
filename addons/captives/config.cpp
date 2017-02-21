@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {QGVAR(ModuleSettings), QGVAR(ModuleSurrender), QGVAR(ModuleHandcuffed)};
         weapons[] = {"ACE_CableTie"};
         requiredVersion = REQUIRED_VERSION;
@@ -19,11 +20,3 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgEden.hpp"
-
-class ACE_newEvents {
-    SetSurrendered = QGVAR(setSurrendered);
-    SetHandcuffed = QGVAR(setHandcuffed);
-    MoveOutCaptive = QGVAR(moveOutCaptive);
-    MoveInCaptive = QGVAR(moveInCaptive);
-    CaptiveStatusChanged = "ace_captiveStatusChanged";
-};

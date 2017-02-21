@@ -48,7 +48,7 @@ if (!_error) then {
 
     [_description, _picture] call EFUNC(common,displayTextPicture);
 } else {
-    ACE_LOGERROR_3("Failed to add %1 to %2 - reverting to %3",_nextPointer,_weapon,_pointer);
+    ERROR_3("Failed to add %1 to %2 - reverting to %3",_nextPointer,_weapon,_pointer);
 };
 
 playSound "ACE_Sound_Click";

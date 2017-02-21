@@ -19,7 +19,7 @@ GVAR(pfID) = -1;
         [] call FUNC(addPFEH);
         TRACE_1("adding temp PFEH [start in]",GVAR(pfID));
     };
-    ["ace_playerVehicleChanged", {
+    ["vehicle", {
         params ["", "_vehicle"];
         TRACE_2("playerVehicleChanged",_vehicle,typeOf _vehicle);
         if (_vehicle isKindOf "Air") then {
@@ -35,5 +35,5 @@ GVAR(pfID) = -1;
                 GVAR(pfID) = -1;
             };
         };
-    }] call CBA_fnc_addEventHandler;
+    }] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;

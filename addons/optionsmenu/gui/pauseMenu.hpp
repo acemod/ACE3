@@ -102,68 +102,89 @@ class RscDisplayMovieInterrupt: RscStandardDisplay {
 };
 class RscDisplayMain: RscStandardDisplay {
     class controls {
-        class ACE_Open_settingsMenu_Btn : ACE_Open_SettingsMenu_BtnBase {
-            action = "if (missionName != '') then {createDialog 'ACE_settingsMenu';};";
-            y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + safezoneY";
-            idc = 80085;
-        };
-
-        class ACE_news: RscControlsGroupNoScrollbars {
-            idc = 80086;
-            x = "safezoneX + safezoneW - (16 *(((safezoneW / safezoneH) min 1.2) / 40))";
-            y = "safezoneY + (18.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))";
-            w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "4.95 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            class controls {
-                class ACE_NewsTitle: RscText {
-                    text = CSTRING(aceNews);
-                    colorBackground[] = {(162/255),(28/255),(28/255),0.8};
-                    idc = -1;
-                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 *(((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "1 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        class ACE_news_apex: RscControlsGroupNoHScrollbars {
+            idc = 80090;
+            x = "safezoneX + safezoneW - 10 * (pixelW * pixelGrid * 2) - (4 * pixelH)";
+            y = "safezoneY + safezoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 3 * (4 * pixelH)";
+            w = "10 * (pixelW * pixelGrid * 2)";
+            h = "2 * (pixelH * pixelGrid * 2)";
+            class Controls {
+                class Background: RscPicture {
+                    idc = 80091;
+                    text = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\gradientMods_ca.paa";
+                    colorText[] = {0,0,0,0.75};
+                    x = "(10 - 4 * 2) * (pixelW * pixelGrid * 2)";
+                    y = 0;
+                    w = "4 * 2 * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 2)";
+                    angle = 180;
                 };
-                class ACE_VersionInfo: RscText {
-                    idc = 68;
-                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "1.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.5};
+                class BackgroundIcon: RscPicture {
+                    idc = 80092;
+                    text = "\a3\Ui_f\data\GUI\Rsc\RscDisplayMain\backgroundModsIcon_ca.paa";
+                    colorText[] = {0,0,0,0.75};
+                    x = "(10 - 2 * 2) * (pixelW * pixelGrid * 2)";
+                    y = 0;
+                    w = "2 * 2 * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 2)";
+                    angle = 180;
                 };
-                class ACE_NewsBackground: RscText {
-                    idc = -1;
-                    x = "0 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "15 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "5.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    colorBackground[] = {0,0,0,0.5};
+                class Icon: RscPicture {
+                    idc = 80093;
+                    text = QPATHTOF(gui\aceMenuIcon_ca.paa);
+                    colorText[] = {1,1,1,0.5};
+                    x = "(10 - 2) * (pixelW * pixelGrid * 2)";
+                    y = 0;
+                    w = "2 * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 2)";
                 };
-                class ACE_NewsText: RscHTML {
-                    idc = 69;
-                    x = "0.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    y = "2.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-                    w = "14 *  (((safezoneW / safezoneH) min 1.2) / 40)";
-                    h = "2.75 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-
+                class CurrentVersionInfo: RscText {
+                    idc = 80094;
+                    style = 1;
+                    text = "";
+                    sizeEx = "(pixelH * pixelGrid * 1.5)";
+                    font = "RobotoCondensedLight";
+                    shadow = 1;
+                    colorBackground[] = {0,0,0,0};
+                    x = 0;
+                    y = 0;
+                    w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 1)";
+                    onLoad = "(_this select 0) ctrlenable false;";
+                };
+                class HTTPVersionInfo: RscHTML {
+                    idc = 80095;
                     shadow = 0;
                     class H1 {
-                        font = "RobotoCondensed";
+                        sizeEx = "(pixelH * pixelGrid * 1.5)";
+                        font = "RobotoCondensedLight";
                         fontBold = "RobotoCondensedLight";
-                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.4)";
+                        align = "right";
                     };
                     class H2: H1 {
-                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
-                        font = "RobotoCondensedLight";
+                        sizeEx = "(pixelH * pixelGrid * 1.5)";
                     };
                     class P: H1 {
-                        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-                        fontBold = "RobotoCondensedLight";
+                        sizeEx = "(pixelH * pixelGrid * 1.5)";
                     };
-                    colorBold[] = {0.6,0.6,0.6,1};
-                    colorLink[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};
-                    colorLinkActive[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",1};
+                    x = 0;
+                    y = "2 * (pixelH * pixelGrid * 1)";
+                    w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 1)";
+                    onLoad = "(_this select 0) ctrlenable false;";
+                };
+                class Button: RscButtonMenu {
+                    idc = 80096;
+                    colorBackground[] = {0,0,0,0};
+                    colorBackgroundFocused[] = {0,0,0,0};
+                    colorBackground2[] = {0,0,0,0};
+                    x = 0;
+                    y = 0;
+                    w = "10 * (pixelW * pixelGrid * 2)";
+                    h = "2 * (pixelH * pixelGrid * 2)";
+
+                    tooltip = "Download latest and report issues:";
+                    url = "https://github.com/acemod/ACE3";
                 };
             };
         };

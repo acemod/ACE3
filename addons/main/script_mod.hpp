@@ -3,14 +3,17 @@
 #define MAINPREFIX z
 #define PREFIX ace
 
-#define MAJOR 3
-#define MINOR 5
-#define PATCHLVL 1
-#define BUILD 0
+#include "script_version.hpp"
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.56
-#define REQUIRED_CBA_VERSION {2,4,0}
+#define REQUIRED_VERSION 1.64
+#define REQUIRED_CBA_VERSION {3,1,2}
+
+#ifdef COMPONENT_BEAUTIFIED
+    #define COMPONENT_NAME QUOTE(ACE3 - COMPONENT_BEAUTIFIED)
+#else
+    #define COMPONENT_NAME QUOTE(ACE3 - COMPONENT)
+#endif

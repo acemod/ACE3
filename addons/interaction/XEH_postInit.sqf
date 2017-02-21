@@ -18,12 +18,12 @@ ACE_Modifier = 0;
     _unit doMove _position;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(lampTurnOn), {
+[QGVAR(setLampOn), {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {if((_x select 1) == _disabledLampDMG) then {_lamp setHit [_x select 0, 0];};nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(lampTurnOff), {
+[QGVAR(setLampOff), {
     params ["_lamp", "_hitPointsDamage", "_disabledLampDMG"];
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;

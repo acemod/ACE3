@@ -49,6 +49,9 @@ _unit setVariable [QGVAR(ReleaseActionID), [
     {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
 ] call EFUNC(common,addActionEventHandler)];
 
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+
 // show mouse hint
 [localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 

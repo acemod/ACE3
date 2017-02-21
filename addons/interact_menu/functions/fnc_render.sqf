@@ -2,10 +2,10 @@
  * Author: NouberNou and esteldunedain
  * Render all available nearby interactions
  *
- * Argument:
+ * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

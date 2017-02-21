@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -17,13 +18,3 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "menu.hpp"
-
-class ACE_newEvents {
-    LoadCargo = "ace_loadCargo";
-    cargoUnloaded = "ace_cargoUnloaded";
-    cargoLoaded = "ace_cargoLoaded";
-    AddCargoByClass = "ace_addCargoByClass";
-    ServerUnloadCargo = QGVAR(serverUnload);
-    UnloadCargo = "ace_unloadCargo";
-    cargoAddedByClass = "ace_cargoAddedByClass";
-};

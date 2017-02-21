@@ -2,13 +2,13 @@
  * Author: commy2
  * Enable the object to be dragged.
  *
- * Argument:
+ * Arguments:
  * 0: Any object <OBJECT>
  * 1: true to enable dragging, false to disable <BOOL>
  * 2: Position offset for attachTo command (Array, optinal; default: [0,0,0])
  * 3: Direction in degree to rotate the object after attachTo (Number, optional; default: 0)
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

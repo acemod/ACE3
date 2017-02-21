@@ -1,15 +1,20 @@
 #include "shared.hpp"
 
+#include <stdlib.h>
 #include <string>
 #include <vector>
 #include <unordered_map>
 #include <random>
+#include <cmath>
 
 
+#define DELTA_T 0.02f
 #define GRAVITY 9.80665f
+#define DEGREES(X) (X * 180 / M_PI)
 #define ABSOLUTE_ZERO_IN_CELSIUS -273.15f
 #define KELVIN(t) (t - ABSOLUTE_ZERO_IN_CELSIUS)
 #define CELSIUS(t) (t + ABSOLUTE_ZERO_IN_CELSIUS)
+#define EARTH_ANGULAR_SPEED 0.00007292f
 #define UNIVERSAL_GAS_CONSTANT 8.314f
 #define WATER_VAPOR_MOLAR_MASS 0.018016f
 #define DRY_AIR_MOLAR_MASS 0.028964f
@@ -39,11 +44,8 @@ struct Bullet {
     double humidity;
     double overcast;
     double startTime;
-    double speed;
-    double frames;
     double lastFrame;
-    double hDeflection;
-    double spinDrift;
+    double bcDegradation;
     unsigned randSeed;
     std::default_random_engine randGenerator;
 };
@@ -64,7 +66,6 @@ Map* map = &mapDatabase[""];
 double calculateRoughnessLength(double posX, double posY) {
     // Source: http://es.ucsc.edu/~jnoble/wind/extrap/index.html
     double roughness_lengths[10] = {0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6};
-    double roughnessLength = 0.0024;
 
     int gridX = (int)floor(posX / 50);
     int gridY = (int)floor(posY / 50);
@@ -228,6 +229,113 @@ double calculateRetard(int DragFunction, double DragCoefficient, double Velocity
     return 0.0;
 }
 
+double calculateVanillaZeroAngle(double zeroRange, double muzzleVelocity, double airFriction, double boreHeight) {
+    double zeroAngle = 0.0f;
+
+    for (int i = 0; i < 10; i++) {
+        double lx = 0.0f;
+        double ly = 0.0f;
+
+        double px = 0.0f;
+        double py = -boreHeight / 100.0f;
+
+        double gx = std::sin(zeroAngle) * -GRAVITY;
+        double gy = std::cos(zeroAngle) * -GRAVITY;
+
+        double vx = std::cos(zeroAngle) * muzzleVelocity;
+        double vy = std::sin(zeroAngle) * muzzleVelocity;
+
+        double tof = 0.0f;
+        double v = 0.0f;
+
+        while (tof < 8.0f && px < zeroRange) {
+            lx = px;
+            ly = py;
+
+            v = std::sqrt(vx*vx + vy*vy);
+
+            double ax = vx * v * airFriction;
+            double ay = vy * v * airFriction;
+            ax += gx;
+            ay += gy;
+
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+            vx += ax * DELTA_T;
+            vy += ay * DELTA_T;
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+
+            tof += DELTA_T;
+        }
+
+        double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
+        double offset = -std::atan(y / zeroRange);
+        zeroAngle += offset;
+
+        if (std::abs(offset) < 0.0001f) {
+            break;
+        }
+    }
+
+    return zeroAngle;
+}
+
+double calculateZeroAngle(double zeroRange, double muzzleVelocity, double boreHeight, double temperature, double pressure, double humidity, double ballisticCoefficient, int dragModel, char*  atmosphereModel) {
+    double zeroAngle = 0.0f;
+
+    ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
+
+    for (int i = 0; i < 10; i++) {
+        double lx = 0.0f;
+        double ly = 0.0f;
+
+        double px = 0.0f;
+        double py = -boreHeight / 100.0f;
+
+        double gx = std::sin(zeroAngle) * -GRAVITY;
+        double gy = std::cos(zeroAngle) * -GRAVITY;
+
+        double vx = std::cos(zeroAngle) * muzzleVelocity;
+        double vy = std::sin(zeroAngle) * muzzleVelocity;
+
+        double tof = 0.0f;
+        double v = 0.0f;
+
+        while (tof < 8.0f && px < zeroRange) {
+            lx = px; 
+            ly = py;
+
+            v = std::sqrt(vx*vx + vy*vy);
+
+            double retard = calculateRetard(dragModel, ballisticCoefficient, v);
+            double ax = vx / v * -retard;
+            double ay = vy / v * -retard;
+            ax += gx;
+            ay += gy;
+
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+            vx += ax * DELTA_T;
+            vy += ay * DELTA_T;
+            px += vx * DELTA_T * 0.5;
+            py += vy * DELTA_T * 0.5;
+
+            tof += DELTA_T;
+        }
+
+        double y = ly + (zeroRange - lx) * (py - ly) / (px - lx);
+        double offset = -std::atan(y / zeroRange);
+        zeroAngle += offset;
+
+        if (std::abs(offset) < 0.0001f) {
+            break;
+        }
+    }
+
+    return zeroAngle;
+}
+
 extern "C"
 {
    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
@@ -238,7 +346,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
     ZERO_OUTPUT();
     std::stringstream outputStr;
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
         EXTENSION_RETURN();
     }
 
@@ -261,8 +369,8 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         // int n = sprintf(output,  "%f", retard);
 
         outputStr << retard;
-        strncpy(output, outputStr.str().c_str(), outputSize);
-        
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "atmosphericCorrection")) {
         double ballisticCoefficient = 1.0;
@@ -280,7 +388,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, humidity, atmosphereModel);
         //int n = sprintf(output,  "%f", ballisticCoefficient);
         outputStr << ballisticCoefficient;
-        strncpy(output, outputStr.str().c_str(), outputSize);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "new")) {
         unsigned int index = 0;
@@ -369,13 +477,10 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].overcast = overcast;
         bulletDatabase[index].startTime = tickTime;
         bulletDatabase[index].lastFrame = tickTime;
-        bulletDatabase[index].hDeflection = 0.0;
-        bulletDatabase[index].spinDrift = 0.0;
-        bulletDatabase[index].speed = 0.0;
-        bulletDatabase[index].frames = 0.0;
+        bulletDatabase[index].bcDegradation = 1.0;
         bulletDatabase[index].randSeed = 0;
 
-        strncpy(output, "", outputSize);
+        strncpy_s(output, outputSize, "", _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "simulate")) {
         // simulate:0:[-0.109985,542.529,-3.98301]:[3751.57,5332.23,214.252]:[0.598153,2.38829,0]:28.6:0:0.481542:0:215.16
@@ -436,8 +541,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double TOF = 0.0;
         double deltaT = 0.0;
         double bulletSpeed;
-        double bulletDir;
-        double bulletSpeedAvg = 0.0;
         double trueVelocity[3] = { 0.0, 0.0, 0.0 };
         double trueSpeed = 0.0;
         double temperature = 0.0;
@@ -445,7 +548,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         double windSpeed = 0.0;
         double windAttenuation = 1.0;
         double velocityOffset[3] = { 0.0, 0.0, 0.0 };
-        double positionOffset[3] = { 0.0, 0.0, 0.0 };
 
         TOF = tickTime - bulletDatabase[index].startTime;
 
@@ -453,11 +555,6 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         bulletDatabase[index].lastFrame = tickTime;
 
         bulletSpeed = sqrt(pow(velocity[0], 2) + pow(velocity[1], 2) + pow(velocity[2], 2));
-        bulletDir = atan2(velocity[0], velocity[1]);
-
-        bulletDatabase[index].speed += bulletSpeed;
-        bulletDatabase[index].frames += 1;
-        bulletSpeedAvg = (bulletDatabase[index].speed / bulletDatabase[index].frames);
 
         windSpeed = sqrt(pow(wind[0], 2) + pow(wind[1], 2) + pow(wind[2], 2));
         if (windSpeed > 0.1) {
@@ -506,6 +603,24 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         trueVelocity[2] = velocity[2] - wind[2];
         trueSpeed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
 
+        double speedOfSound = 331.3 + (0.6 * temperature);
+        double transonicSpeed = 394 + (0.6 * temperature);
+        if (bulletDatabase[index].transonicStabilityCoef < 1.0f && bulletSpeed < transonicSpeed && bulletSpeed > speedOfSound) {
+            std::uniform_real_distribution<double> distribution(-10.0, 10.0);
+            double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
+
+            trueVelocity[0] += distribution(bulletDatabase[index].randGenerator) * coef;
+            trueVelocity[1] += distribution(bulletDatabase[index].randGenerator) * coef;
+            trueVelocity[2] += distribution(bulletDatabase[index].randGenerator) * coef;
+            double speed = sqrt(pow(trueVelocity[0], 2) + pow(trueVelocity[1], 2) + pow(trueVelocity[2], 2));
+
+            trueVelocity[0] *= trueSpeed / speed;
+            trueVelocity[1] *= trueSpeed / speed;
+            trueVelocity[2] *= trueSpeed / speed;
+
+            bulletDatabase[index].bcDegradation *= pow(0.993, coef);
+        };
+
         temperature = bulletDatabase[index].temperature - 0.0065 * position[2];
         pressure = (1013.25 - 10 * bulletDatabase[index].overcast) * pow(1 - (0.0065 * (bulletDatabase[index].altitude + position[2])) / (273.15 + temperature + 0.0065 * bulletDatabase[index].altitude), 5.255754495);
 
@@ -529,6 +644,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             }
 
             ballisticCoefficient = calculateAtmosphericCorrection(ballisticCoefficient, temperature, pressure, bulletDatabase[index].humidity, bulletDatabase[index].atmosphereModel);
+            ballisticCoefficient *= bulletDatabase[index].bcDegradation;
             drag = deltaT * calculateRetard(bulletDatabase[index].dragModel, ballisticCoefficient, trueSpeed);
             accel[0] = (trueVelocity[0] / trueSpeed) * drag;
             accel[1] = (trueVelocity[1] / trueSpeed) * drag;
@@ -563,38 +679,26 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
             }
         }
 
-        if (bulletSpeedAvg > 0) {
-            double distanceSqr = pow(bulletDatabase[index].origin[0] - position[0], 2) + pow(bulletDatabase[index].origin[1] - position[1], 2) + pow(bulletDatabase[index].origin[2] - position[2], 2);
-            double horizontalDeflection = 0.0000729 * distanceSqr * sin(bulletDatabase[index].latitude) / bulletSpeedAvg;
-            double horizontalDeflectionPartial = horizontalDeflection - bulletDatabase[index].hDeflection;
-            bulletDatabase[index].hDeflection = horizontalDeflection;
-
-            positionOffset[0] += sin(bulletDir + M_PI / 2) * horizontalDeflectionPartial;
-            positionOffset[1] += cos(bulletDir + M_PI / 2) * horizontalDeflectionPartial;
+        if (TOF > 0) {
+            double bulletDir = atan2(velocity[0], velocity[1]);
+            double r1 = pow(TOF - deltaT, 0.17);
+            double r2 = pow(TOF, 0.17);
+            double spinAccel = bulletDatabase[index].twistDirection * (0.0482251 * (bulletDatabase[index].stabilityFactor + 1.2)) / ((r1 + r2) / 2.0f);
+            velocityOffset[0] += sin(bulletDir + M_PI / 2) * spinAccel * deltaT;
+            velocityOffset[1] += cos(bulletDir + M_PI / 2) * spinAccel * deltaT;
         }
 
-        double centripetalAccel = 2 * 0.0000729 * (bulletDatabase[index].muzzleVelocity) * cos(bulletDatabase[index].latitude) * sin(bulletDir);
-        velocityOffset[2] += centripetalAccel * deltaT;
+        double lat = bulletDatabase[index].latitude;
+        accel[0] = 2 * EARTH_ANGULAR_SPEED * +(velocity[1] * sin(lat) - velocity[2] * cos(lat));
+        accel[1] = 2 * EARTH_ANGULAR_SPEED * -(velocity[0] * sin(lat));
+        accel[2] = 2 * EARTH_ANGULAR_SPEED * +(velocity[0] * cos(lat));
 
-        double spinDrift = bulletDatabase[index].twistDirection * 0.0254 * 1.25 * (bulletDatabase[index].stabilityFactor + 1.2) * pow(TOF, 1.83);
-        double spinDriftPartial = spinDrift - bulletDatabase[index].spinDrift;
-        bulletDatabase[index].spinDrift = spinDrift;
+        velocityOffset[0] += accel[0] * deltaT;
+        velocityOffset[1] += accel[1] * deltaT;
+        velocityOffset[2] += accel[2] * deltaT;
 
-        positionOffset[0] += sin(bulletDir + M_PI / 2) * spinDriftPartial;
-        positionOffset[1] += cos(bulletDir + M_PI / 2) * spinDriftPartial;
-
-        double speedOfSound = 331.3 + (0.6 * temperature);
-        if (bulletSpeed < (speedOfSound + 5) && bulletSpeedAvg > speedOfSound && bulletSpeed > (speedOfSound - 5)) {
-            std::uniform_real_distribution<double> distribution(0.0, 1.0);
-            double coef = 1.0f - bulletDatabase[index].transonicStabilityCoef;
-
-            velocityOffset[0] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
-            velocityOffset[1] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
-            velocityOffset[2] += (distribution(bulletDatabase[index].randGenerator) * 0.8 - 0.4) * coef;
-        };
-        
-        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]); _bullet setPosASL (_bulletPosition vectorAdd [" << positionOffset[0] << "," << positionOffset[1] << "," << positionOffset[2] << "]);";
-        strncpy(output, outputStr.str().c_str(), outputSize);
+        outputStr << "_bullet setVelocity (_bulletVelocity vectorAdd [" << velocityOffset[0] << "," << velocityOffset[1] << "," << velocityOffset[2] << "]);";
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "set")) {
         int height = 0;
@@ -609,12 +713,12 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.push_back(numObjects);
         map->gridSurfaceIsWater.push_back(surfaceIsWater);
 
-        strncpy(output, outputStr.str().c_str(), outputSize);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     } else if (!strcmp(mode, "init")) {
         int mapSize = 0;
         int mapGrids = 0;
-        int gridCells = 0;
+        unsigned int gridCells = 0;
 
         worldName = strtok_s(NULL, ":", &next_token);
         mapSize = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
@@ -625,7 +729,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map = &mapDatabase[worldName];
         if (map->gridHeights.size() == gridCells) {
             outputStr << "Terrain already initialized";
-            strncpy(output, outputStr.str().c_str(), outputSize);
+            strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
             EXTENSION_RETURN();
         }
 
@@ -638,9 +742,36 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function)
         map->gridBuildingNums.reserve(gridCells);
         map->gridSurfaceIsWater.reserve(gridCells);
 
-        strncpy(output, outputStr.str().c_str(), outputSize);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "zeroAngleVanilla")) {
+        double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double initSpeed = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double airFriction = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
+
+        double zeroAngle = calculateVanillaZeroAngle(zeroRange, initSpeed, airFriction, boreHeight);
+
+        outputStr << DEGREES(zeroAngle);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
+        EXTENSION_RETURN();
+    } else if (!strcmp(mode, "zeroAngle")) {
+        double zeroRange = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double muzzleVelocity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double boreHeight = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double temperature = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double pressure = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double humidity = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        double ballisticCoefficient = strtod(strtok_s(NULL, ":", &next_token), NULL);
+        int dragModel = strtol(strtok_s(NULL, ":", &next_token), NULL, 10);
+        char* atmosphereModel = strtok_s(NULL, ":", &next_token);
+
+        double zeroAngle = calculateZeroAngle(zeroRange, muzzleVelocity, boreHeight, temperature, pressure, humidity, ballisticCoefficient, dragModel, atmosphereModel);
+
+        outputStr << DEGREES(zeroAngle);
+        strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
         EXTENSION_RETURN();
     }
-    strncpy(output, outputStr.str().c_str(), outputSize);
+    strncpy_s(output, outputSize, outputStr.str().c_str(), _TRUNCATE);
     EXTENSION_RETURN();
 }

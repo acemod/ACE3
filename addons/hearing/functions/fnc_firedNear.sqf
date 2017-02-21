@@ -24,8 +24,6 @@
 
 params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 
-//Only run if firedNear object is player or player's vehicle:
-if ((ACE_player != _object) && {(vehicle ACE_player) != _object}) exitWith {};
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
 
@@ -74,6 +72,8 @@ if (isNil "_loudness") then {
         private _initSpeed = getNumber(configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
         private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
         _caliber = call {
+            // If explicilty defined, use ACE_caliber
+            if ((count configProperties [(configFile >> "CfgAmmo" >> _ammo), "configName _x == 'ACE_caliber'", false]) == 1) exitWith {_caliber};
             if (_ammo isKindOf ["ShellBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
             if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
             if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };

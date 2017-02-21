@@ -3,6 +3,7 @@
 #define COLOUR 8.0
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -268,9 +269,4 @@ class CfgCloudlets {
         colorVar[] = {0, 0, 0, 0.1};
         destroyOnWaterSurface = 1;
     };
-};
-
-class ACE_newEvents {
-    GlassesChanged = "ace_glassesChanged";
-    GlassesCracked = "ace_glassesCracked";
 };

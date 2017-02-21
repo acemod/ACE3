@@ -1,49 +1,11 @@
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
-class MuzzleSlot;
-
-// config inheritance of weapon slot info v1.32
-class SlotInfo;
-class CowsSlot: SlotInfo {};
-class PointerSlot: SlotInfo {
-    //compatibleItems[] = {"acc_flashlight","acc_pointer_IR", "ACE_acc_flashlight_tls"};
-};
 
 class CfgWeapons {
-
-    // config inheritance of weapon slot info v1.32 for launchers
-    class Launcher;
-    class Launcher_Base_F: Launcher {
-        class WeaponSlotsInfo {};
-    };
-
-    // config inheritance of weapon slot info v1.32 for assault rifles
-    class RifleCore;
-    class Rifle: RifleCore {
-        class WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {};
-            class CowsSlot: CowsSlot {};
-            class PointerSlot: PointerSlot {};
-        };
-    };
-    class Rifle_Base_F: Rifle {};
-    class Rifle_Long_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {};
-    };
-
-    // config inheritance of weapon slot info v1.32 for handguns
-    class PistolCore;
-    class Pistol: PistolCore {
-        class WeaponSlotsInfo {
-            class CowsSlot: SlotInfo {};
-        };
-    };
-    class Pistol_Base_F: Pistol {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {};
-        };
-    };
+    class Rifle_Base_F;
+    class Rifle_Short_Base_F: Rifle_Base_F {};
+    class Rifle_Long_Base_F: Rifle_Base_F {};
 
     ///////////////////////////////////////////////////////////////////////////////
     //////////// SMALL ARMS WEAPONS ///////////////////////////////////////////////
@@ -130,7 +92,7 @@ class CfgWeapons {
 
     // SMG Vermin ////////////////////////////////////////////////////
 
-    class SMG_01_Base: Rifle_Base_F {
+    class SMG_01_Base: Rifle_Short_Base_F {
         // http://kriss-usa.com/pdf/operatormanual/
         // 1200 rpm
         class Single: Mode_SemiAuto {
@@ -149,7 +111,7 @@ class CfgWeapons {
 
     // SMG Scorpion ////////////////////////////////////////////////////
 
-    class SMG_02_base_F: Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         //http://www.czub.cz/zbrojovka/cz-manual/Instruction-Manual-Scorpion-EVO-3-A1_en.pdf
         // 1150 rpm
 
@@ -170,7 +132,7 @@ class CfgWeapons {
 
     // SMG PDW2000 ///////////////////////////////////////////////////
 
-    class pdw2000_base_F: Rifle_Base_F {
+    class pdw2000_base_F: Rifle_Short_Base_F {
         modes[] = {"Single", "FullAuto"}; // No burst on this thing
 
         class Single: Mode_SemiAuto {

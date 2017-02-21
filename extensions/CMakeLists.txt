@@ -1,9 +1,9 @@
 cmake_minimum_required (VERSION 3.0)
 project (ACE)
 
-set_property(GLOBAL PROPERTY USE_FOLDERS ON) 
+set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-if(WIN32) 
+if(WIN32)
 add_definitions(/DWINVER=0x0600 /D_WIN32_WINNT=0x0600)
 endif()
 
@@ -41,7 +41,7 @@ if(USE_BULLET)
     set(BACKUP_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_ARCHIVE_OUTPUT_DIRECTORY})
     set(BACKUP_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_LIBRARY_OUTPUT_DIRECTORY})
     set(BACKUP_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
-    
+
     add_definitions(-DUSE_DIRECTX)
     add_subdirectory(lib/bullet3)
 
@@ -58,7 +58,7 @@ if(USE_BULLET)
     set_target_properties(BulletDynamics PROPERTIES FOLDER Bullet3)
     set_target_properties(BulletFileLoader PROPERTIES FOLDER Bullet3)
     set_target_properties(BulletSoftBody PROPERTIES FOLDER Bullet3)
-    
+
     set_target_properties(BulletWorldImporter PROPERTIES FOLDER Bullet3)
     set_target_properties(BulletXmlWorldImporter PROPERTIES FOLDER Bullet3)
     set_target_properties(ConvexDecomposition PROPERTIES FOLDER Bullet3)
@@ -68,11 +68,11 @@ if(USE_BULLET)
     set_target_properties(HACD PROPERTIES FOLDER Bullet3)
     set_target_properties(OpenGLWindow PROPERTIES FOLDER Bullet3)
     set_target_properties(LinearMath PROPERTIES FOLDER Bullet3)
-    
+
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BACKUP_ARCHIVE_OUTPUT_DIRECTORY})
     set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BACKUP_LIBRARY_OUTPUT_DIRECTORY})
     set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BACKUP_RUNTIME_OUTPUT_DIRECTORY})
-    
+
     include_directories(BEFORE "lib/bullet3/src")
 endif()
 if(USE_DIRECTX)
@@ -89,7 +89,7 @@ endif()
 
 string(TIMESTAMP ACE_BUILDSTAMP "%Y-%m-%dT%H:%M:%SZ")
 set(ACE_VERSION_MAJOR 3)
-set(ACE_VERSION_MINOR 5)
+set(ACE_VERSION_MINOR 6)
 set(ACE_VERSION_REVISION 0)
 EXECUTE_PROCESS(COMMAND git rev-parse --verify HEAD
     OUTPUT_VARIABLE T_ACE_VERSION_BUILD
@@ -100,14 +100,14 @@ string(SUBSTRING ${T_ACE_VERSION_BUILD} 0 7 ACE_VERSION_BUILD )
 message("Building for: " ${ACE_VERSION_MAJOR}.${ACE_VERSION_MINOR}.${ACE_VERSION_REVISION}-${ACE_VERSION_BUILD})
 
 configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version.hpp.in" 
-    "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version.hpp" 
+    "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version.hpp.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version.hpp"
   @ONLY)
 
 if(MSVC)
     configure_file(
-        "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version_win32.rc.in" 
-        "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc" 
+        "${CMAKE_CURRENT_SOURCE_DIR}/common/ace_version_win32.rc.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc"
       @ONLY)
     set(GLOBAL_RC ${CMAKE_CURRENT_BINARY_DIR}/common/ace_version_win32.rc)
 endif()

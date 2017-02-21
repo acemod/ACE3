@@ -3,6 +3,8 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(blockDefaultActions) = [];
+
 GVAR(cachedBuildingTypes) = [];
 GVAR(cachedBuildingActionPairs) = [];
 
@@ -19,7 +21,7 @@ GVAR(ParsedTextCached) = [];
     //Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
-    addMissionEventHandler ["Draw3D", DFUNC(render)];
+    addMissionEventHandler ["Draw3D", {call FUNC(render)}];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
@@ -52,9 +54,6 @@ GVAR(ParsedTextCached) = [];
     GVAR(actionSelected) = false;
     [GVAR(openedMenuType), false] call FUNC(keyUp);
 }] call CBA_fnc_addEventHandler;
-
-// disable firing while the interact menu is is is opened
-["ace_playerChanged", {_this call FUNC(handlePlayerChanged)}] call CBA_fnc_addEventHandler;
 
 // background options
 ["ace_interactMenuOpened", {
