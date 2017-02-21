@@ -3,8 +3,12 @@
 **ACE3 Version:** `3.x.x` (stable / dev + commit hash)
 
 **Mods:**
-- `@CBA_A3`
-- `@ace`
+
+> Please avoid using `@` for listing your mods, as you may mention other users unnecessary
+
+- `CBA A3`
+- `ACE3`
+
 
 **Description:**
 - Add a detailed description of the error. This makes it easier for us to fix the issue.
