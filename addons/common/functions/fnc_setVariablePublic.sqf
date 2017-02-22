@@ -48,6 +48,7 @@ TRACE_2("Starting Embargo", _varName, _delay);
 
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
     if (!(_value isEqualTo _curValue)) then {
-        [_object, _varName, _curValue] call FUNC(setVariablePublic);
+        _this set [2, _curValue];
+        _this call FUNC(setVariablePublic);
     };
 }, _this, _delay] call CBA_fnc_waitAndExecute;
