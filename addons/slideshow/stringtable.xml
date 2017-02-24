@@ -44,18 +44,18 @@
             <Korean>물체</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
-            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
-            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt. Weiteres in der INFO für unterstützte Objekte.</German>
+            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
+            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt.</German>
             <French>Nom d'objets (peuvent aussi être des objets synchronisés) sur lesquels les diaporamas vont être affichées, séparation par virgule si plusieurs.</French>
-            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1. Sprawdź opis modułu aby dowiedzieć się jakie obiekty są wspierane przez moduł.</Polish>
-            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
-            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um. Referência INFO para suporte do objeto.</Portuguese>
-            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми. Посмотрите описание, чтобы понять, какие объекты поддерживаются.</Russian>
-            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas. Referencia INFO para el soporte del objeto.</Spanish>
-            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více. Zkontrolujte POPIS abyste zjistili, zda je objekt podporován modulem.</Czech>
-            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno. Fai riferimento ad INFO per gli oggetti supportati.</Italian>
+            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1.</Polish>
+            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
+            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um.</Portuguese>
+            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми.</Russian>
+            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas.</Spanish>
+            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více.</Czech>
+            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno.</Italian>
             <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
-            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다. 자세한 물체목록은 INFO에서 확인하십시요.</Korean>
+            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
@@ -138,6 +138,12 @@
             <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
             <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
             <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
+            <English>Set Name</English>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_Description">
+            <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
