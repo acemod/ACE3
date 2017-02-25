@@ -5,10 +5,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"acex_main"};
-        author = ACECSTRING(common,ACETeam);
+        requiredAddons[] = {"ace_common"};
+        author = ECSTRING(common,ACETeam);
         authors[] = {"Kingsley"};
-        url = ACECSTRING(main,URL);
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

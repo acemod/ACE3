@@ -1,6 +1,5 @@
 class CfgVehicles {
     class ACE_Module;
-    
     class GVAR(module): ACE_Module {
         author = ACECSTRING(common,ACETeam);
         category = "ACEX";
@@ -12,19 +11,19 @@ class CfgVehicles {
         isDisposable = 0;
         icon = QPATHTOF(UI\Icon_Module_QuickMount_ca.paa);
         class Arguments {
-            class Enabled {
+            class enabled {
                 displayName = ACECSTRING(common,Enabled);
                 description = CSTRING(KeybindDescription);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
-            class Distance {
+            class distance {
                 displayName = CSTRING(Distance);
                 description = CSTRING(DistanceDescription);
                 typeName = "NUMBER";
                 defaultValue = DEFAULT_DISTANCE;
             };
-            class Speed {
+            class speed {
                 displayName = CSTRING(Speed);
                 description = CSTRING(SpeedDescription);
                 typeName = "NUMBER";

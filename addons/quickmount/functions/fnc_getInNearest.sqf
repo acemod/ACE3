@@ -9,15 +9,14 @@
  * None
  *
  * Example:
- * [] call acex_quickmount_fnc_getInNearest;
+ * [] call ace_quickmount_fnc_getInNearest;
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-if (
-    !GVAR(enabled) ||
+if (!GVAR(enabled) ||
     {isNull ACE_player} ||
     {vehicle ACE_player != ACE_player} ||
     {!alive ACE_player} ||
@@ -67,18 +66,18 @@ if (
                 if (_x == "Cargo") then {
                     private _crew = fullCrew [_target, "turret", true];
                     private _turretSeat = (_crew select {isNull (_x select 0)}) param [0, []];
-                    
+
                     if (_turretSeat isEqualTo []) then {
                         ACE_player action ["GetIn" + _x, _target];
                     } else {
                         ACE_player action ["GetInTurret", _target, _turretSeat select 3];
                     };
-                    
+
                     _hasAction = true;
                 } else {
                     ACE_player action ["GetIn" + _x, _target];
                 };
-                
+
                 _hasAction = true;
             };
         };
