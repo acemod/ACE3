@@ -21,6 +21,6 @@ params ["_logic", "", "_activated"];
 
 if (!_activated) exitWith {};
 
-[_logic, QGVAR(enabled), "enabled"] call ACEFUNC(common,readSettingFromModule);
-[_logic, QGVAR(distance), "distance"] call ACEFUNC(common,readSettingFromModule);
-[_logic, QGVAR(speed), "speed"] call ACEFUNC(common,readSettingFromModule);
+[_logic, QGVAR(enabled), "enabled"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(distance), "distance"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(speed), "speed"] call EFUNC(common,readSettingFromModule);

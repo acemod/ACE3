@@ -29,15 +29,14 @@ private _objects = lineIntersectsSurfaces [_start, _end, ACE_player];
 private _target = (_objects param [0, []]) param [2, objNull];
 
 if (locked _target in [2,3]) exitWith {
-    [localize LSTRING(VehicleLocked)] call ACEFUNC(common,displayTextStructured);
+    [localize LSTRING(VehicleLocked)] call EFUNC(common,displayTextStructured);
     true
 };
 
-if (
-    !isNull _target &&
+if (!isNull _target &&
     {alive _target} &&
     {{_target isKindOf _x} count ["Air","LandVehicle","Ship","StaticMortar"] > 0} &&
-    {([ACE_player, _target] call ACEFUNC(common,canInteractWith))} &&
+    {([ACE_player, _target] call EFUNC(common,canInteractWith))} &&
     {speed _target <= GVAR(speed)}
 ) then {
     private _hasAction = false;
@@ -47,12 +46,18 @@ if (
     };
 
     private _seats = ["Driver", "Gunner", "Commander", "Cargo"];
-    private _sortedSeats = [(_seats select GVAR(priority))];
+    private _sortedSeats = [_seats select GVAR(priority)];
     _seats deleteAt GVAR(priority);
     _sortedSeats append _seats;
 
     {
-        private _unit = _target call compile format ["assigned%1 _this", _x];
+        private _unit = objNull;
+        switch (_x) do {
+            case "Driver": {_unit = driver _target};
+            case "Gunner": {_unit = gunner _target};
+            case "Commander": {_unit = commander _target};
+            default {}; // Includes "Cargo"
+        };
 
         if (_unit isEqualType objNull && {!isNull _unit} && {!alive _unit}) exitWith {
             if (!_hasAction) then {
@@ -83,7 +88,7 @@ if (
         };
 
         if (_forEachIndex == 3) then {
-            [localize LSTRING(VehicleFull)] call ACEFUNC(common,displayTextStructured);
+            [localize LSTRING(VehicleFull)] call EFUNC(common,displayTextStructured);
         };
     } forEach _sortedSeats;
 };
