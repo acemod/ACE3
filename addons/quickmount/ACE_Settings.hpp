@@ -3,7 +3,7 @@ class ACE_Settings {
         value = 0;
         typeName = "BOOL";
         category = CSTRING(Category);
-        displayName = ACECSTRING(common,Enabled);
+        displayName = ECSTRING(common,Enabled);
         description = CSTRING(KeybindDescription);
         isClientSettable = 1;
         force = 0;
