@@ -22,9 +22,9 @@ A server admin or mission maker can also define the minimal delay between transf
 
 ### 1.1 End Mission
 
-Additionally, Headless component supports automatic ending of mission when Headless Clients are connencted but no players are present. It is basically `server.cfg` setting `persistent = 1;` with Headless Client support.
+Since ACEX v3.1.0 Headless component supports automatic ending of mission when Headless Clients are connencted but no players are present. It is basically `server.cfg` setting `persistent = 1;` with Headless Client support.
 
-As of ACEX v3.2.0 this feature can be enabled without enabling AI distribution (overall setting).
+As of ACEX v3.2.0 this feature can also be enabled without enabling AI distribution (overall setting).
 
 
 ## 2. Scripting
