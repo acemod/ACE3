@@ -3,9 +3,8 @@
 **ACE3 Version:** `3.x.x` (stable / dev + commit hash)
 
 **Mods:**
-> Avoid using `@` for listing your mods, as you may mention other users unnecessarily
 ```
-- CBA A3
+- CBA_A3
 - ace
 ```
 
