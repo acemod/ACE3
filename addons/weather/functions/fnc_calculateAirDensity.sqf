@@ -23,7 +23,7 @@ _pressure = _pressure * 100; // hPa to Pa
 
 if (_relativeHumidity > 0) then {
     // Saturation vapor pressure calculated according to: http://wahiduddin.net/calc/density_algorithms.htm
-    private _pSat = 6.1078 * 10 ^ ((7.5 * _temperature) / (_temperature + 237.3));
+    private _pSat = 610.78 * 10 ^ ((7.5 * _temperature) / (_temperature + 237.3));
     private _vaporPressure = _relativeHumidity * _pSat;
     private _partialPressure = _pressure - _vaporPressure;
 
