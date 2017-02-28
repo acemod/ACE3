@@ -16,6 +16,7 @@ PREP(moduleSetMedic);
 PREP(moduleSetMedicalVehicle);
 PREP(moduleSetMedicalFacility);
 PREP(moduleSimulation);
+PREP(moduleSuppressiveFire);
 PREP(moduleSurrender);
 PREP(moduleTeleportPlayers);
 PREP(moduleUnconscious);

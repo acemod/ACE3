@@ -160,6 +160,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSearchNearby_DisplayName);
         function = QFUNC(moduleSearchNearby);
     };
+    class GVAR(moduleSuppressiveFire): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSuppressiveFire_DisplayName);
+        function = QFUNC(moduleSuppressiveFire);
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Medical);
