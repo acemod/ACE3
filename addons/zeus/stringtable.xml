@@ -813,5 +813,8 @@
             <German>Ungültiger Radius eingegeben</German>
             <Korean>알 수 없는 반경 입력됨</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
+            <English>Suppressive Fire</English>
+        </Key>
     </Package>
 </Project>

@@ -4,6 +4,7 @@ PREP(bi_moduleCurator);
 PREP(bi_moduleMine);
 PREP(bi_moduleProjectile);
 PREP(bi_moduleRemoteControl);
+PREP(getModuleDestination);
 PREP(handleZeusUnitAssigned);
 PREP(moduleAddSpareTrack);
 PREP(moduleAddSpareWheel);
