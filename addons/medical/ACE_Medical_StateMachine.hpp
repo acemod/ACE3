@@ -39,6 +39,10 @@ class ACE_Medical_StateMachine {
             targetState = "FatalInjury";
             events[] = {QGVAR(FatalInjury)};
         };
+        class Respawn {
+            targetState = "Default";
+            events[] = {QGVAR(initialized)};
+        };
     };
     class Unconscious {
         onState = QUOTE(DFUNC(handleStateUnconscious));
@@ -56,6 +60,10 @@ class ACE_Medical_StateMachine {
         class FatalInjury {
             targetState = "FatalInjury";
             events[] = {QGVAR(FatalInjury)};
+        };
+        class Respawn {
+            targetState = "Default";
+            events[] = {QGVAR(initialized)};
         };
     };
     class FatalInjury {
@@ -90,8 +98,16 @@ class ACE_Medical_StateMachine {
             condition = QUOTE(DFUNC(conditionExecutionDeath));
             events[] = {QGVAR(FatalInjury)};
         };
+        class Respawn {
+            targetState = "Default";
+            events[] = {QGVAR(initialized)};
+        };
     };
     class Dead {
         onStateEntered = "_this setDamage 1"; // killing a unit also exits the state machine for this unit
+        class Respawn {
+            targetState = "Default";
+            events[] = {QGVAR(initialized)};
+        };
     };
 };
