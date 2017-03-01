@@ -93,8 +93,9 @@ double calculateAirDensity(double temperature, double pressure, double relativeH
     pressure = pressure * 100;
 
     if (relativeHumidity > 0) {
-        double _pSat = 6.1078 * pow(10, ((7.5 * temperature) / (temperature + 237.3)));
-        double vaporPressure = 100 * relativeHumidity * _pSat;
+        // 610.78 gives pressure in Pa - https://en.wikipedia.org/wiki/Density_of_air
+        double _pSat = 610.78 * pow(10, ((7.5 * temperature) / (temperature + 237.3)));
+        double vaporPressure = relativeHumidity * _pSat;
         double partialPressure = pressure - vaporPressure;
 
         return (partialPressure * DRY_AIR_MOLAR_MASS + vaporPressure * WATER_VAPOR_MOLAR_MASS) / (UNIVERSAL_GAS_CONSTANT * KELVIN(temperature));
