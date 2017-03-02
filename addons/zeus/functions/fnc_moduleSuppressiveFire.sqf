@@ -45,16 +45,17 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     if (!alive _unit) exitWith {};
     private _vehicle = vehicle _unit;
 
-    private _targetASL = _mousePosASL vectorAdd [0,0,0.5]; // mouse pos is at ground level zero, raise up a bit;
+    private _targetASL = _mousePosASL vectorAdd [0,0,0.6]; // mouse pos is at ground level zero, raise up a bit;
     private _lis = lineIntersectsSurfaces [eyePos _unit, _targetASL, _unit, _vehicle];
     if ((count _lis) > 0) then { // If point is hidden, unit won't fire, do a ray cast to find where they should shoot at
         _targetASL = ((_lis select 0) select 0);
+        TRACE_1("using ray cast pos",_mousePosASL distance _targetASL);
     };
 
     if (_unit isEqualTo _vehicle) then { // Max range a unit can fire seems to be based on the weapon's config
         private _distance =  _targetASL vectorDistance eyePos _unit;
         private _maxWeaponRange = getNumber (configFile >> "CfgWeapons" >> (currentWeapon _unit) >> "maxRange");
-        TRACE_3("",_distance,currentWeapon _unit,_maxWeaponRange);
+        TRACE_3("",_distance,_maxWeaponRange,currentWeapon _unit);
         if (_distance > _maxWeaponRange) then {
             if (_distance > (2 * _maxWeaponRange)) then {
                 _targetASL = [];
@@ -62,30 +63,19 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
             } else {
                 // 1-2x the weapon max range, find a virtual point the AI can shoot at (won't have accurate elevation, but it will put rounds downrange)
                 _targetASL = (eyePos _unit) vectorAdd (((eyePos _unit) vectorFromTo _targetASL) vectorMultiply (_maxWeaponRange - 10)) vectorAdd [0,0,5];
+                TRACE_1("using virtual halfway point",_mousePosASL distance _targetASL);
             };
         };
     };
     if (_targetASL isEqualTo []) exitWith {};
+
+    TRACE_2("sending event",_unit,_targetASL);
+    [QGVAR(suppressiveFire), [_unit, _targetASL], _unit] call CBA_fnc_targetEvent;
 
 #ifdef DRAW_ZEUS_INFO
     [eyePos _unit, _mousePosASL, [0,0,1,1]] call EFUNC(common,addLineToDebugDraw);
     [eyePos _unit, _targetASL, [1,0,0,1]] call EFUNC(common,addLineToDebugDraw);
     [_vehicle] call CBA_fnc_addUnitTrackProjectiles;
 #endif
-
-    [{
-        params ["_unit", "_burstsLeft", "_nextRun", "_targetASL"];
-        if (!alive _unit) exitWith {true};
-        if (CBA_missionTime >= _nextRun) then {
-            _burstsLeft = _burstsLeft - 1;
-            _this set [1, _burstsLeft];
-            _this set [2, _nextRun + 5];
-            _unit doSuppressiveFire _targetASL;
-            TRACE_2("doSuppressiveFire",_unit,_targetASL);
-        };
-        (_burstsLeft <= 0)
-    }, {
-        TRACE_1("Suppression Done",_this);
-    }, [_unit, (40/5), CBA_missionTime, _targetASL]] call CBA_fnc_waitUntilAndExecute;
 
 }, _displayName] call FUNC(getModuleDestination);
