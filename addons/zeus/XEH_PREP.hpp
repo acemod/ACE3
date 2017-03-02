@@ -20,6 +20,7 @@ PREP(moduleSurrender);
 PREP(moduleTeleportPlayers);
 PREP(moduleUnconscious);
 PREP(moduleZeusSettings);
+PREP(showMessage);
 PREP(ui_attributeCargo);
 //PREP(ui_attributePosition);
 PREP(ui_attributeRadius);
