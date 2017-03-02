@@ -29,13 +29,13 @@ private _displayName = getText (configFile >> "CfgVehicles" >> (typeOf _logic) >
 deleteVehicle _logic; // cleanup logic now, we just needed it for the attached unit
 
 if (isNull _unit) exitWith {
-    [objnull, localize LSTRING(NothingSelected)] call bis_fnc_showCuratorFeedbackMessage;
+    [LSTRING(NothingSelected)] call FUNC(showMessage);
 };
 if (!alive _unit) exitWith {
-    [objnull, localize LSTRING(OnlyAlive)] call bis_fnc_showCuratorFeedbackMessage;
+    [localize LSTRING(OnlyAlive)] call FUNC(showMessage);
 };
 if ([_unit] call EFUNC(common,isPlayer)) exitWith {
-    [objnull, localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call bis_fnc_showCuratorFeedbackMessage;
+    ["str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer"] call FUNC(showMessage);
 };
 
 [_unit, {
@@ -59,7 +59,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
         if (_distance > _maxWeaponRange) then {
             if (_distance > (2 * _maxWeaponRange)) then {
                 _targetASL = [];
-                [objnull, localize ELSTRING(Interaction,NotInRange)] call bis_fnc_showCuratorFeedbackMessage;
+                [ELSTRING(Interaction,NotInRange)] call FUNC(showMessage);
             } else {
                 // 1-2x the weapon max range, find a virtual point the AI can shoot at (won't have accurate elevation, but it will put rounds downrange)
                 _targetASL = (eyePos _unit) vectorAdd (((eyePos _unit) vectorFromTo _targetASL) vectorMultiply (_maxWeaponRange - 10)) vectorAdd [0,0,5];
