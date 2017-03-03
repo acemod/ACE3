@@ -27,7 +27,7 @@
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
             <Japanese>怪我をしていない</Japanese>
-            <Korean>이쪽에는 부상이 없습니다...</Korean>
+            <Korean>이 부위에는 부상이 없습니다...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
@@ -1554,7 +1554,7 @@
             <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
             <Japanese>応急処置キットをつかう</Japanese>
-            <Korean>개 응급 키트사용하기</Korean>
+            <Korean>개인 응급 키트사용하기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1624,7 +1624,7 @@
             <Portuguese>Saco para cadáver</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
-            <Korean>시체 운반 부대</Korean>
+            <Korean>시체 가방</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1638,7 +1638,7 @@
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1652,7 +1652,7 @@
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -2198,7 +2198,7 @@
             <Czech>Je v bolestech</Czech>
             <Portuguese>Ele está com dor</Portuguese>
             <Japanese>彼には痛みがあるようだ</Japanese>
-            <Korean>고통스럽다</Korean>
+            <Korean>통증이 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
@@ -2212,7 +2212,7 @@
             <Czech>Nemá žádné bolesti</Czech>
             <Portuguese>Ele não está com dor</Portuguese>
             <Japanese>彼には痛みがないようだ</Japanese>
-            <Korean>고통스럽지 않다</Korean>
+            <Korean>통증이 없다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaged">
             <English>Bandaged</English>
@@ -2436,7 +2436,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
             <Japanese>死体袋に入れる</Japanese>
-            <Korean>시체 운반 부대에 담기</Korean>
+            <Korean>시체 가방에 담기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -2450,7 +2450,7 @@
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
             <Japanese>死体袋へ梱包中・・・</Japanese>
-            <Korean>시체 운반 부대에 담는중...</Korean>
+            <Korean>시체 가방에 담는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2577,7 +2577,7 @@
             <Czech>Velmi lehce raněn</Czech>
             <Portuguese>Muito levemente ferido</Portuguese>
             <Japanese>かなり浅い傷</Japanese>
-            <Korean>부상</Korean>
+            <Korean>매우 가벼운 부상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -2856,7 +2856,7 @@
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
             <Italian>Qual'è il livello di simulazione medica?</Italian>
             <Japanese>治療の再現度は？</Japanese>
-            <Korean>치료 시뮬레이션 정도?</Korean>
+            <Korean>의료 시뮬레이션의 수준</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
@@ -3170,7 +3170,7 @@
             <Hungarian>Engedélyezve</Hungarian>
             <Italian>Abilitato per</Italian>
             <Japanese>次を有効化</Japanese>
-            <Korean>다음을 활성화</Korean>
+            <Korean>활성</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -3352,7 +3352,7 @@
             <Hungarian>Csak orvosok</Hungarian>
             <Italian>Solo medici</Italian>
             <Japanese>衛生兵のみ</Japanese>
-            <Korean>오직 의무병만</Korean>
+            <Korean>의무병만</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Special">
             <English>Doctors only</English>

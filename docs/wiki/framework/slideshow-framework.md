@@ -44,11 +44,14 @@ Important notes:
 2  | Image Paths | Array | Required (paths must use backslash `\`)
 3  | Action Names | Array | Required
 4  | Slide Duration | Number | Optional (default: `0`, `0` disables automatic transitions)
+5  | Set Name | String | Optional (default: localized `"Slides"`)
 **R** | None | None | Return value
+
+_Note: Set Name argument added in 3.9.1._
 
 #### 2.1.1 Example
 
-`[[object1, object2], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5] call ace_slideshow_fnc_createSlideshow;`
+`[[object1, object2], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides"] call ace_slideshow_fnc_createSlideshow;`
 
    | Arguments | Explanation
 ---| --------- | -----------
@@ -57,3 +60,4 @@ Important notes:
 2  | `["images\image1.paa", "images\image2.paa"]` | Paths to images projected on screen objects
 3  | `["Action1", "Action2"]` | Action names for interaction menu if automatic transitions are not enabled
 4  | `5` | 5s slide duration before change to next image
+5  | `"My Slides"` | Main interaction point name, for easier distinguishing of multiple slideshow sets
