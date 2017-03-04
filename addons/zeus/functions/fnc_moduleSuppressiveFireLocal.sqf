@@ -22,11 +22,11 @@ TRACE_3("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL);
     if (CBA_missionTime >= _nextRun) then {
         _burstsLeft = _burstsLeft - 1;
         _this set [1, _burstsLeft];
-        _this set [2, _nextRun + 5];
+        _this set [2, _nextRun + 4];
         _unit doSuppressiveFire _targetASL;
         TRACE_2("doSuppressiveFire",_unit,_targetASL);
     };
     (_burstsLeft <= 0)
 }, {
     TRACE_1("Done",_this);
-}, [_unit, (40/5), CBA_missionTime, _targetASL]] call CBA_fnc_waitUntilAndExecute; // 40 seconds total
+}, [_unit, (40/4), CBA_missionTime, _targetASL]] call CBA_fnc_waitUntilAndExecute; // 40 seconds total

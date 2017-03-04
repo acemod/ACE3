@@ -12,7 +12,7 @@
  *
  * Public: No
  */
-#define DRAW_ZEUS_INFO
+// #define DRAW_ZEUS_INFO
 #include "script_component.hpp"
 
 if (canSuspend) exitWith {[FUNC(moduleSuppressiveFire), _this] call CBA_fnc_directCall;};
@@ -23,10 +23,9 @@ if !(_activated && local _logic) exitWith {};
 
 // Validate the module target
 private _unit = effectiveCommander (attachedTo _logic);
-TRACE_3("moduleSuppressiveFire placed",_unit,typeOf _unit,_logic);
+TRACE_3("moduleSuppressiveFire placed",_unit,typeOf _unit,typeOf _logic);
 
-private _displayName = getText (configFile >> "CfgVehicles" >> (typeOf _logic) >> "displayName");
-deleteVehicle _logic; // cleanup logic now, we just needed it for the attached unit
+deleteVehicle _logic; // cleanup logic now, we just needed it to get the attached unit
 
 if (isNull _unit) exitWith {
     [LSTRING(NothingSelected)] call FUNC(showMessage);
@@ -56,26 +55,36 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
         private _distance =  _targetASL vectorDistance eyePos _unit;
         private _maxWeaponRange = getNumber (configFile >> "CfgWeapons" >> (currentWeapon _unit) >> "maxRange");
         TRACE_3("",_distance,_maxWeaponRange,currentWeapon _unit);
-        if (_distance > _maxWeaponRange) then {
-            if (_distance > (2 * _maxWeaponRange)) then {
+        if (_distance > (_maxWeaponRange - 50)) then {
+            if (_distance > (2.5 * _maxWeaponRange)) then {
                 _targetASL = [];
                 [ELSTRING(Interaction,NotInRange)] call FUNC(showMessage);
             } else {
-                // 1-2x the weapon max range, find a virtual point the AI can shoot at (won't have accurate elevation, but it will put rounds downrange)
-                _targetASL = (eyePos _unit) vectorAdd (((eyePos _unit) vectorFromTo _targetASL) vectorMultiply (_maxWeaponRange - 10)) vectorAdd [0,0,5];
-                TRACE_1("using virtual halfway point",_mousePosASL distance _targetASL);
+                // 1-2.5x the weapon max range, find a virtual point the AI can shoot at (won't have accurate elevation, but it will put rounds downrange)
+                private _fakeElevation = (_distance / 100000) * (_distance - _maxWeaponRange);
+                _targetASL = (eyePos _unit) vectorAdd (((eyePos _unit) vectorFromTo _targetASL) vectorMultiply (_maxWeaponRange - 50)) vectorAdd [0,0,_fakeElevation];
+                TRACE_2("using virtual halfway point",_mousePosASL distance _targetASL,_fakeElevation);
             };
         };
     };
     if (_targetASL isEqualTo []) exitWith {};
 
-    TRACE_2("sending event",_unit,_targetASL);
-    [QGVAR(suppressiveFire), [_unit, _targetASL], _unit] call CBA_fnc_targetEvent;
+    private _units = [_unit];
+    if (_unit == (leader _unit)) then { _units = units _unit; };
+
+    {
+        if (((_unit distance _x) < 30) && {!([_x] call EFUNC(common,isPlayer))} && {[_x] call EFUNC(common,isAwake)}) then {
+            TRACE_2("sending event",_x,_targetASL);
+            [QGVAR(suppressiveFire), [_x, _targetASL], _x] call CBA_fnc_targetEvent;
+#ifdef DRAW_ZEUS_INFO
+            [_x] call CBA_fnc_addUnitTrackProjectiles;
+#endif
+        };
+    } forEach _units;
 
 #ifdef DRAW_ZEUS_INFO
     [eyePos _unit, _mousePosASL, [0,0,1,1]] call EFUNC(common,addLineToDebugDraw);
     [eyePos _unit, _targetASL, [1,0,0,1]] call EFUNC(common,addLineToDebugDraw);
-    [_vehicle] call CBA_fnc_addUnitTrackProjectiles;
 #endif
 
-}, _displayName] call FUNC(getModuleDestination);
+}, (localize LSTRING(ModuleSuppressiveFire_DisplayName))] call FUNC(getModuleDestination);
