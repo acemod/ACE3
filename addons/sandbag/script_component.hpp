@@ -16,7 +16,7 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-
+//@todo add Tanoa surfaces
 #define SURFACE_BLACKLIST [ \
     "water", \
     "tarmac", \

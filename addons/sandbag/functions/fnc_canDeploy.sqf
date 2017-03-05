@@ -19,6 +19,8 @@ params ["_unit"];
 
 if !("ACE_Sandbag_empty" in items _unit) exitWith {false};
 
+if ((getPosATL _unit) select 2 > 0.05) exitWith {false};
+
 private _surfaceClass = (surfaceType getPosASL _unit) select [1];
 private _surfaceType = getText (configFile >> "CfgSurfaces" >> _surfaceClass >> "soundEnviron");
 TRACE_1("Surface",_surfaceType);
