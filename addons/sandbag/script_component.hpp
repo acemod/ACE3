@@ -15,3 +15,15 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+
+#define SURFACE_BLACKLIST [ \
+    "water", \
+    "tarmac", \
+    "concrete", "concrete_int", "int_concrete", \
+    "wood", "wood_int", "int_wood", \
+    "metal", "metal_int", "wavymetal", "int_metal", \
+    "roof_tin", "roof_tiles", \
+    "tiling", "tiles_int", "int_tiles", \
+    "stony", "rock" \
+]
