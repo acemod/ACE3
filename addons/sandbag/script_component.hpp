@@ -16,14 +16,15 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-//@todo add Tanoa surfaces
+
 #define SURFACE_BLACKLIST [ \
-    "water", \
-    "tarmac", \
-    "concrete", "concrete_int", "int_concrete", \
-    "wood", "wood_int", "int_wood", \
-    "metal", "metal_int", "wavymetal", "int_metal", \
-    "roof_tin", "roof_tiles", \
+    "concrete", "concrete_exp", "concrete_int", "int_concrete", "int_concrete_exp", \
+    "pavement_exp", "int_pavement_exp", \
     "tiling", "tiles_int", "int_tiles", \
-    "stony", "rock" \
+    "roof_tin", "roof_tiles", "rooftiles_exp", \
+    "tarmac", "asphalt_exp", \
+    "stones_exp", "rock", "stony", \
+    "metal", "gridmetal_exp", "metalplate_exp", "int_metalplate_exp", "metal_int", "wavymetal", "wavymetal_exp", "int_metal", "steel_exp", \
+    "lino_exp", "int_lino_exp", "int_mat_exp", \
+    "wood", "wood_int", "int_wood", "softwood_exp", "int_softwood_exp", "int_solidwood_exp" \
 ]
