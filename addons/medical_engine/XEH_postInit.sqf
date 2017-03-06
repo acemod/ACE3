@@ -19,7 +19,8 @@
 
 #ifdef DEBUG_MODE_FULL
 [QGVAR(woundReceived), {
-    //diag_log _this;
+    params ["_unit", "_woundedHitPoint", "_receivedDamage", "_shooter", "_ammo"];
+    TRACE_5("wound",_unit,_woundedHitPoint, _receivedDamage, _shooter, _ammo);
     //systemChat str _this;
 }] call CBA_fnc_addEventHandler;
 #endif

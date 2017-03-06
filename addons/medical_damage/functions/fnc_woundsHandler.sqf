@@ -18,8 +18,8 @@
 
 #define MATH_E 2.71828182846
 
-params ["_unit", "_bodyPart", "_damage", "_typeOfProjectile", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_typeOfProjectile,_typeOfDamage);
+params ["_unit", "_bodyPart", "_damage", "_shooter", "_typeOfDamage"];
+TRACE_5("start",_unit,_bodyPart,_damage,_shooter,_typeOfDamage);
 
 if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
@@ -29,6 +29,7 @@ if (_typeOfDamage isEqualTo "") then {
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
 private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];
 
+TRACE_4("extension call",_bodyPart,_damage,_typeOfDamage,_woundID);
 private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _bodyPart, _damage, _typeOfDamage, _woundID];
 TRACE_1("",_extensionOutput);
 
