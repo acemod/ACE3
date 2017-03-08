@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Fire Pos ASL <ARRAY>
+ * 2: Artiller Magazine <STRING>
  *
  * Return Value:
  * None
@@ -13,20 +14,31 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_targetASL"];
-TRACE_3("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL);
+#define 
+
+params ["_unit", "_targetASL", "_artilleryMag"];
+TRACE_4("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL,_artilleryMag);
+
+private _bursts = if (_artilleryMag == "") then {11} else {4};
 
 [{
-    params ["_unit", "_burstsLeft", "_nextRun", "_targetASL"];
+    params ["_unit", "_burstsLeft", "_nextRun", "_targetASL", "_artilleryMag"];
     if (!alive _unit) exitWith {true};
     if (CBA_missionTime >= _nextRun) then {
         _burstsLeft = _burstsLeft - 1;
         _this set [1, _burstsLeft];
+        if (_artilleryMag == "") then {
+            _unit doSuppressiveFire _targetASL;
+            TRACE_2("doSuppressiveFire",_unit,_targetASL);
         _this set [2, _nextRun + 4];
-        _unit doSuppressiveFire _targetASL;
-        TRACE_2("doSuppressiveFire",_unit,_targetASL);
+        } else {
+            (vehicle _unit) doArtilleryFire [ASLtoAGL _targetASL, _artilleryMag, 1]; // note, using value greater than 1 does not always work
+            TRACE_3("doArtilleryFire",_unit,_targetASL,_artilleryMag);
+        _this set [2, _nextRun + 7];
+        };
     };
     (_burstsLeft <= 0)
 }, {
     TRACE_1("Done",_this);
-}, [_unit, (40/4), CBA_missionTime, _targetASL]] call CBA_fnc_waitUntilAndExecute; // 40 seconds total
+}, [_unit, _bursts, CBA_missionTime, _targetASL, _artilleryMag]] call CBA_fnc_waitUntilAndExecute;
+
