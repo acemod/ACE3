@@ -14,7 +14,10 @@
 
 //Reset forces array
 GVAR(GForces) = [];
-for "_i" from 1 to 30 do {GVAR(GForces) pushBack 1}; // init array to full array of neutral g-forces
+// init array to full array of neutral g-forces
+GVAR(GForces) resize 30;
+GVAR(GForces) = GVAR(GForces) apply {1};
+
 GVAR(GForces_Index) = 0;
 
 // Setup ppEffect
