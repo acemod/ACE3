@@ -1431,7 +1431,7 @@ See the make.cfg file for additional build options.
 
     # Make release
     if make_release_zip:
-        release_name = "{}_{}".format(zipPrefix, project_version)
+        release_name = "{}_{}".format(zipPrefix, project_version.rsplit(".", 1)[0])
 
         try:
             # Delete all log files

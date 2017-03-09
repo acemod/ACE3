@@ -34,8 +34,8 @@ if (_parseInput) then {
 
     _subsonicRange = _transonicRange max _subsonicRange;
     
-    _transonicDrop = 0 max abs(parseNumber(ctrlText 18013)) min 1000;
-    _subsonicDrop = 0 max abs(parseNumber(ctrlText 18014)) min 1000;
+    _transonicDrop = -100 max parseNumber(ctrlText 18013) min 100;
+    _subsonicDrop = -100 max parseNumber(ctrlText 18014) min 100;
     private _dropUnit = GVAR(currentScopeUnit);
     if (_dropUnit == 3) then {
         switch (GVAR(currentScopeClickUnit)) do {

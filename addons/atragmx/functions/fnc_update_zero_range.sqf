@@ -28,10 +28,6 @@ _atmosphereModel = GVAR(workingMemory) select 17;
 
 private ["_zeroRange"];
 _zeroRange = GVAR(workingMemory) select 2;
-if (_zeroRange < 10) exitWith {
-    GVAR(workingMemory) set [2, _zeroRange];
-    GVAR(workingMemory) set [3, 0];
-};
 
 private ["_altitude", "_temperature", "_barometricPressure", "_relativeHumidity"];
 _altitude = GVAR(altitude);

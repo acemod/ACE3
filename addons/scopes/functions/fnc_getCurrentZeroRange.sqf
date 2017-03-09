@@ -6,10 +6,10 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * current zero range
+ * current zero range <NUMBER>
  *
  * Example:
- * _unit call ace_scopes_fnc_getCurrentZeroRange
+ * [player] call ace_scopes_fnc_getCurrentZeroRange
  *
  * Public: No
  */
@@ -23,11 +23,14 @@ private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponI
 if (_weaponIndex < 0) exitWith { currentZeroing _unit };
 
 private _optic = GVAR(Optics) select _weaponIndex;
-private _opticConfig = configFile >> "CfgWeapons" >> _optic;
-private _opticType = getNumber(_opticConfig >> "ItemInfo" >> "opticType");
+private _opticConfig = if (_optic != "") then {
+    (configFile >> "CfgWeapons" >> _optic)
+} else {
+    (configFile >> "CfgWeapons" >> (GVAR(Guns) select _weaponIndex))
+};
 
 private _zeroRange = currentZeroing _unit;
-if (_opticType == 2 && {(GVAR(canAdjustElevation) select _weaponIndex) || GVAR(forceUseOfAdjustmentTurrets)}) then {
+if (GVAR(overwriteZeroRange) && {GVAR(canAdjustElevation) select _weaponIndex}) then {
     _zeroRange = GVAR(defaultZeroRange);
 };
 if (isNumber (_opticConfig >> "ACE_ScopeZeroRange")) then {

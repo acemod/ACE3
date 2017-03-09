@@ -18,6 +18,16 @@
 #define __dsp (uiNamespace getVariable "ATragMX_Display")
 #define __ctrlBackground (__dsp displayCtrl 720000)
 
+// Do all initialisation now
+if (!GVAR(initialised)) then {
+    [] call FUNC(initGunList);
+    [] call FUNC(init);
+    [] call FUNC(restore_user_data);
+    [] call FUNC(read_gun_list_entries_from_config);
+    GVAR(initialised) = true;
+    TRACE_1("",GVAR(initialised));
+};
+
 if (GVAR(active)) exitWith { false };
 if (underwater ACE_player) exitWith { false };
 if (!("ACE_ATragMX" in (uniformItems ACE_player)) && !("ACE_ATragMX" in (vestItems ACE_player))) exitWith { false };

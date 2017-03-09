@@ -70,7 +70,7 @@ _inclinationAngle = GVAR(inclinationAngle) select GVAR(currentTarget);
 _targetSpeed = GVAR(targetSpeed) select GVAR(currentTarget);
 _targetRange = GVAR(targetRange) select GVAR(currentTarget);
 
-GVAR(targetSolutionInput) = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, 100,
+GVAR(targetSolutionInput) = [_scopeBaseAngle, _bulletMass, _boreHeight, _airFriction, _muzzleVelocity, _temperature, _barometricPressure, _relativeHumidity, round(_muzzleVelocity),
             [_windSpeed1, _windSpeed2], _windDirection, _inclinationAngle, _targetSpeed, _targetRange, _bc, _dragModel, _atmosphereModel, false, _stabilityFactor, _twistDirection, _latitude, _directionOfFire];
 
 private _result = GVAR(targetSolutionInput) call FUNC(calculate_solution);

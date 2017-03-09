@@ -21,7 +21,7 @@ GVAR(ParsedTextCached) = [];
     //Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Install the render EH on the main display
-    addMissionEventHandler ["Draw3D", DFUNC(render)];
+    addMissionEventHandler ["Draw3D", {call FUNC(render)}];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
