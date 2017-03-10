@@ -28,7 +28,7 @@ Quick example with the M14 and the default 7.62mm 20Rnd Mag :
  - Open your Range Card and check your cartridge, the zeroed distance, the rifle twist, 
 the Muzzlz Velocity at 15°C and the Bore Height at the end.
 
-![Range Card](https://www.dropbox.com/s/wud5izt1pn7xhnp/atragmx_wiki_1.jpg?dl=0)
+!(http://arma3.fr/files/media/user/204_45d986716bca9973.jpg)
 
  - Open the AtragMx and the "Atmsphr" column, select "Default" and "Done".
  - "OpenGun" the 7.62x51mm M80 in the "GunList".
