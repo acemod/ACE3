@@ -49,7 +49,7 @@ missionNamespace setVariable [_nameVar, [_condition, _statement, _condition2, _s
 
 _actionIDs pushBack _id;
 
-private _addAction = parseSimpleArray format [
+private _addAction = call compile format [
     "[
         '%2',
         {[{if (inputAction '%1' == 0) then {if (_this call (%3 select 2)) then {_this call (%3 select 3)}} else {_this call (%3 select 1)}}, _this] call CBA_fnc_directCall},
