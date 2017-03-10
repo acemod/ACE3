@@ -26,7 +26,7 @@ Short description of sub-feature 2.
 Quick example with the M14 and the default 7.62mm 20Rnd Mag :
 
  - Open your Range Card and check your cartridge, the zeroed distance, the rifle twist, 
-the Muzzlz Velocity at 15°C and the Bore Height at the end.
+the Muzzle Velocity at 15°C and the Bore Height at the end.
 
 ![Range Card](http://arma3.fr/files/media/user/204_45d986716bca9973.jpg)
 
