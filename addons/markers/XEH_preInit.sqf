@@ -39,7 +39,7 @@ if (isNil QGVAR(MarkerColorsCache)) then {
 
             {
                 if !( _x isEqualType 0) then {
-                    _rgba set [_forEachIndex, call compile _x];
+                    _rgba set [_forEachIndex, parseSimpleArray _x];
                 };
             } forEach _rgba;
 
