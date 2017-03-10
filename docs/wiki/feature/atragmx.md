@@ -21,6 +21,8 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf
 
 https://www.youtube.com/watch?v=pg6oqT5jVds
+
+
 https://www.youtube.com/watch?v=7SkRnbwoPmw
 
 ## Usage
@@ -38,8 +40,10 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  - Open the `Gun` column, check and update the `Bore`, the `Rifle Twist` and `Done`.
  - Select `M` (Metric unit) at the top right.
  - Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`.
- - **!!! The Muzzle Velocity Table will be automatically updated !!!**
- - At this moment and optionally, `Save Gun` in the `GunList`.
+ 
+ 
+ **!!! The Muzzle Velocity Table will be automatically updated !!!**
+ - Optionally, `Save Gun` in the `GunList`.
  - Actualise the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the "Gun" column).
  - Actualise the `Target` column.
  - Apply the vertical and horizontal elevations on the scope.
