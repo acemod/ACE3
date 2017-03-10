@@ -36,12 +36,11 @@ https://www.dropbox.com/s/wud5izt1pn7xhnp/atragmx_wiki_1.jpg?dl=0
  - Open the "Gun" column, check and update the "Bore", the "Rifle Twist" and "Done"
  - Select "M" (Metric unit) at the top right.
  - Open the "Gun" column, check and update the "Muzzle Velocity", the "Zero Range" and "Done".
- #The Muzzle Velocity Table will be automatically updated#
+ - !!! The Muzzle Velocity Table will be automatically updated !!!
  - Actualise the "Atmsphr" column with the Kestrel and "Done" (Check the new Muzzle Velocity in the "Gun" column)
  - Actualise the "Target" column.
  - Apply the vertical and horizontal elevations on the scope.
  - Control the breath and press ...
-
 ## Dependencies
 
 {% include dependencies_list.md component="atragmx" %}
