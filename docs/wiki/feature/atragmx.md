@@ -29,7 +29,7 @@ https://www.youtube.com/watch?v=7SkRnbwoPmw
 
 Quick example with the M14 and the default 7.62mm 20Rnd Mag :
 
- - Open your Range Card and check your cartridge, the zeroed distance, the rifle twist, 
+ - Open the Range Card and check the cartridge, the zeroed distance, the rifle twist, 
 the Muzzle Velocity at 15°C and the Bore Height at the end.
 
 ![Range Card](http://arma3.fr/files/media/user/204_45d986716bca9973.jpg)
@@ -44,7 +44,7 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  
  **!!! The Muzzle Velocity Table will be automatically updated !!!**
  - Optionally, `Save Gun` in the `GunList`.
- - Actualise the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the "Gun" column).
+ - Actualise the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the `Gun` column).
  - Actualise the `Target` column.
  - Apply the vertical and horizontal elevations on the scope.
  - Control the breath and press ...
