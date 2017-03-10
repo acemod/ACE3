@@ -31,12 +31,13 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
 ![Range Card](http://arma3.fr/files/media/user/204_45d986716bca9973.jpg)
 
  - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
- - `OpenGun` the 7.62x51mm M80 in the `GunList`.
+ - `Open Gun` the 7.62x51mm M80 in the `GunList`.
  - Select `E` (English unit) at the top right.
  - Open the `Gun` column, check and update the `Bore`, the `Rifle Twist` and `Done`.
  - Select `M` (Metric unit) at the top right.
  - Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`.
  - **!!! The Muzzle Velocity Table will be automatically updated !!!**
+ - At this moment and optionally, `Save Gun` in the `GunList`.
  - Actualise the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the "Gun" column).
  - Actualise the `Target` column.
  - Apply the vertical and horizontal elevations on the scope.
