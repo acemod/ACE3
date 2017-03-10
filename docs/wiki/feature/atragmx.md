@@ -23,15 +23,15 @@ Short description of sub-feature 2.
 
 ## Usage
 
-Quick example with the M14 and the .308 M118LR :
+Quick example with the M14 and the default 7.62mm 20Rnd Mag :
 
  - Open your Range Card and check your cartridge, the zeroed distance, the rifle twist, 
 the Muzzlz Velocity at 15°C and the Bore Height at the end.
 
-    "screenshot"
+https://www.dropbox.com/s/wud5izt1pn7xhnp/atragmx_wiki_1.jpg?dl=0
 
  - Open the AtragMx and the "Atmsphr" column, select "Default" and "Done".
- - "OpenGun" the correct cartridge in the "GunList".
+ - "OpenGun" the 7.62x51mm M80 in the "GunList".
  - Select "E" (English unit) at the top right.
  - Open the "Gun" column, check and update the "Bore", the "Rifle Twist" and "Done"
  - Select "M" (Metric unit) at the top right.
@@ -39,9 +39,8 @@ the Muzzlz Velocity at 15°C and the Bore Height at the end.
  #The Muzzle Velocity Table will be automatically updated#
  - Actualise the "Atmsphr" column with the Kestrel and "Done" (Check the new Muzzle Velocity in the "Gun" column)
  - Actualise the "Target" column.
- - Apply the vertical and horizontal elevations on your scope.
- - Control your breath and press ...
-
+ - Apply the vertical and horizontal elevations on the scope.
+ - Control the breath and press ...
 
 ## Dependencies
 
