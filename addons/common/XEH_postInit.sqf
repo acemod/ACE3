@@ -156,6 +156,14 @@ if (isServer) then {
     };
 }] call CBA_fnc_addClassEventHandler;
 
+["CAManBase", "deleted", {
+    params ["_unit"];
+
+    if (local _unit) then {
+        GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
+    };
+}] call CBA_fnc_addClassEventHandler;
+
 
 //////////////////////////////////////////////////
 // Set up remote execution
