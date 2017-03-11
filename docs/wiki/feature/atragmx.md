@@ -47,6 +47,7 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  
  **!!! The Muzzle Velocity Table will be automatically updated !!!**
  - Optionally, `Save Gun` in the `GunList`.
+ 
 *- In position:*
  - Update the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the `Gun` column).
  - Update the `Target` column.
