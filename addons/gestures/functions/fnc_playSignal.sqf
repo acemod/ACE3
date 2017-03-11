@@ -18,7 +18,7 @@
 TRACE_1("params",_this);
 
 if (GVAR(showOnInteractionMenu) == 0) exitWith {false};
-if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([ACE_player, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 private _gesture = if ((_this select [0,2]) == "BI") then {
     //If it starts with BI, just strip off the leading BI and use it directly

@@ -217,7 +217,7 @@ private _treatmentTime = if (isNumber (_config >> "treatmentTime")) then {
     DFUNC(treatment_failure),
     getText (_config >> "displayNameProgress"),
     _callbackProgress,
-    ["isnotinside"]
+    ["isNotInside", "isNotSwimming"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon

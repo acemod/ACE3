@@ -216,7 +216,7 @@ TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    ["isNotOnLadder"]
+    ["isNotSwimming", "isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon

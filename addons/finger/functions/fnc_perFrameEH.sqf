@@ -17,7 +17,7 @@
 
 if (!alive ACE_player) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Conditions: canInteract
-if !([ACE_player, ACE_player, ["isNotInside"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
+if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 // Make sure player is dismounted or in a static weapon:
 if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = [] call CBA_fnc_hashCreate;};
 

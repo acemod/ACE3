@@ -8,12 +8,14 @@ class CfgVehicles {
                     distance = 2.0;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canLinkBelt));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(startLinkingBelt));
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
                 };
                 class GVAR(CheckAmmo) {
                     displayName = CSTRING(checkAmmo);
                     distance = 2.0;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
                 };
             };
         };
@@ -28,6 +30,7 @@ class CfgVehicles {
                     distance = 2.0;
                     condition = QUOTE([ARR_2(_player, _target)] call FUNC(canCheckAmmo));
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(checkAmmo));
+                    exceptions[] = {"isNotInside", "isNotSwimming"};
                 };
             };
         };

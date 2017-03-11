@@ -522,7 +522,7 @@ class CfgVehicles {
 
         class ACE_Actions {
             // Include actions in body parts for treatment while in the open
-            #define EXCEPTIONS exceptions[] = {};
+            #define EXCEPTIONS exceptions[] = {"isNotSwimming"};
             #define ACTION_CONDITION condition = QUOTE(GVAR(menuTypeStyle) == 0);
             #include "ACE_Medical_Actions.hpp"
 
@@ -538,7 +538,7 @@ class CfgVehicles {
 
                     #undef EXCEPTIONS
                     #undef ACTION_CONDITION
-                    #define EXCEPTIONS exceptions[] = {"isNotInside"};
+                    #define EXCEPTIONS exceptions[] = {"isNotInside", "isNotSwimming"};
                     #define ACTION_CONDITION condition = "true";
                     #include "ACE_Medical_Actions.hpp"
                 };
@@ -550,7 +550,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotSwimming"};
                 };
                 class GVAR(UnLoadPatient) {
                     displayName = CSTRING(UnloadPatient);
@@ -560,7 +560,7 @@ class CfgVehicles {
                     showDisabled = 0;
                     priority = 2;
                     icon = QPATHTOF(UI\icons\medical_cross.paa);
-                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside", "isNotSwimming"};
                 };
             };
         };
