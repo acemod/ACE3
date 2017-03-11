@@ -15,20 +15,23 @@ version:
 ## Overview
 
 ### AtragMx from HORUS VISION
+
 Horus ATragMX software considers atmospheric conditions, gun data, ammunition, range, speed and muzzle velocity to calculate precise aiming solutions with "come-up" results – and even accounts for Coriolis and spin drift effects. ATragMX, loaded on a handheld computer made by TDS Recon, is easy to use and lightning-fast. The Recon meets the rigorous MIL-STD-810F military standard for drops, vibration, humidity, altitude and extreme temperatures.
 
 ### Official Manual and Horus Videos
-https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf
 
-https://www.youtube.com/watch?v=pg6oqT5jVds
+[Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+
+[Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
 
 
-https://www.youtube.com/watch?v=7SkRnbwoPmw
+[Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
 
 ## Usage
 
-Quick example with the M14 and the default 7.62mm 20Rnd Mag :
+**Quick example with the M14 and the default 7.62mm 20Rnd Mag**
 
+*- Start of the mission:*
  - Open the Range Card and check the cartridge, the zeroed distance, the rifle twist, 
 the Muzzle Velocity at 15°C and the Bore Height at the end.
 
@@ -44,10 +47,11 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  
  **!!! The Muzzle Velocity Table will be automatically updated !!!**
  - Optionally, `Save Gun` in the `GunList`.
- - Actualise the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the `Gun` column).
- - Actualise the `Target` column.
+*- In position:*
+ - Update the `Atmsphr` column with the Kestrel and `Done` (Check the new Muzzle Velocity in the `Gun` column).
+ - Update the `Target` column.
  - Apply the vertical and horizontal elevations on the scope.
- - Control the breath and press ...
+ - Control the breath and press.
  
 ## Dependencies
 
