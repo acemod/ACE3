@@ -63,10 +63,8 @@ TRACE_1("sending finger to",_sendFingerToPlayers);
 // BI gestures do not work underwater, play custom "point" gesture if loaded
 if (["ace_gestures"] call EFUNC(common,isModLoaded)) then {
     QEGVAR(gestures,point) call EFUNC(gestures,playSignal); // Works underwater
-    systemChat "point";
 } else {
     [ACE_player, "GestureGo"] call EFUNC(common,doGesture); // Does not work underwater
-    systemChat "go";
 };
 
 true
