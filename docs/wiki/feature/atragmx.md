@@ -24,7 +24,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
 
-
 [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
 
 ## Usage
@@ -42,10 +41,9 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  - Select `E` (English unit) at the top right.
  - Open the `Gun` column, check and update the `Bore`, the `Rifle Twist` and `Done`.
  - Select `M` (Metric unit) at the top right.
- - Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`.
+ - Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`. 
  
- 
- **!!! The Muzzle Velocity Table will be automatically updated !!!**
+ **The Muzzle Velocity Table will be automatically updated**
  - Optionally, `Save Gun` in the `GunList`.
  
 *- In position:*
@@ -53,6 +51,25 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  - Update the `Target` column.
  - Apply the vertical and horizontal elevations on the scope.
  - Control the breath and press.
+ 
+**Quick example with the Truing tool**
+ 
+*- Start of the mission:*
+ - Select `Drag Coef Table` in the `Options` menu.
+ - Add the `ZR` and the `C1` (`Gun` column) in the table and `Done`.
+  
+*- In Position:*
+ - Open the `Truing Drop` in the `Options` menu.
+ - Add the actual `Target Range` in the `SUPER` column and `Calc`.
+ - Add the same `Target Range` in the `SUB` column  and `Calc`.
+ - Apply the actual scope elevation in the `Drop` field and `Calc`.
+ - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
+ 
+ **The Drag Coefficient Table will be automatically updated**
+ - Optionally, `Save Gun` in the `GunList`.
+ - If a new `Target Range` is applied in the `Target` column, select `Drag Coef Table` in the `Options` menu and `Done`.
+ - The ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
+ 
  
 ## Dependencies
 
