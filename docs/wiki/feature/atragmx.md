@@ -84,24 +84,39 @@ subsonic. The range increments of the RC may be
 customized by clicking on the Setup button located on the top right of
 the display.
 
-The starting range, ending range and step values can be set for the
-RC by clicking the Setup button to bring up the RC setup screen. Only
-200 lines of data are allowed at one time so choose your range card
-setup values accordingly.
+Element |                                              Description |
+------ | ----------------------------------------------------- |
+`Meters/Yards`      | Meters/Yards to Target
+`Elev`              | Scope Adjustment Up (Positive) / Down (Negative)
+`Wind`              | Scope Adjustment Left (Negative) / Right (Positive)
+`TmFlt`             | Time of Flight (In seconds)
+
+The scope adjustment values are displayed in positive or negatives.
+
+<b>Example:</b> The target is 700 meters away. This means the scope will be adjusted 6.1 UP using `Page Up` and 0.2 RIGHT using `Ctrl` + `Page Up`. The time of flight for the bullet will be 1.08 seconds.
+
 
 <div class="row">
     <div class="small-12 columns">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qFuDQnN.jpg" alt="home screen" />
+                <img src="https://i.imgur.com/qFuDQnN.jpg" alt="Range Card" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/snq0L2P.jpg" alt="home screen" />
+                <img src="https://i.imgur.com/snq0L2P.jpg" alt="Range Card Settings" />
             </div>
         </div>
     </div>
 </div>
+
+
 (Image 1 is the Range Card, Image 2 is the Setup Menu for the Range Card)
+
+The starting range, ending range and step values can be set for the
+RC by clicking the Setup button to bring up the RC setup screen. Only
+200 lines of data are allowed at one time so choose your range card
+setup values accordingly.
+
 #### 2.2.3 Gun and Ammo Data Screen
 #### 2.2.4 Atmospheric and Environmental Data Screen 
 #### 2.2.5 Target Data Screen
