@@ -97,7 +97,6 @@ The scope adjustment values are displayed in positive or negatives.
 
 
 <div class="row">
-    <div class="small-12 columns">
         <div class="row">
             <div class="small-12 medium-6 columns">
                 <img src="https://i.imgur.com/qFuDQnN.jpg" alt="Range Card" />
@@ -106,7 +105,6 @@ The scope adjustment values are displayed in positive or negatives.
                 <img src="https://i.imgur.com/snq0L2P.jpg" alt="Range Card Settings" />
             </div>
         </div>
-    </div>
 </div>
 
 
