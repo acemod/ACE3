@@ -94,7 +94,7 @@ Element |                                              Description |
 
 The scope adjustment values are displayed in positive or negatives.
 
-<b>Example:</b> The target is 700 meters away. This means the scope will be adjusted 6.1 UP using `Page Up` and 0.2 RIGHT using `Ctrl` + `Page Up`. The time of flight for the bullet will be 1.08 seconds.
+<b>Example:</b> The target is 700 meters away. This means the scope will be adjusted 6.1 UP using <kbd>Page Up</kbd> and 0.2 RIGHT using <kbd>Ctrl</kbd> + <kbd>Page Up</kbd>. The time of flight for the bullet will be 1.08 seconds.
 
 
 <div class="row">
@@ -160,7 +160,9 @@ speed and direction.
 
 In the ATragMX, parameters are provided for Magnus and coriolis corrections. Target
 Location is expressed as Hemisphere (North or South) and Latitude (0º at the equator to 90º at
-the poles). 
+the poles).
+
+Latitude is entered from -90º to 90º. Negative is South and positive is North.
 
 ##### <b>Direction of Fire</b>
 
@@ -212,7 +214,15 @@ The Targets Range can be aquired through many different ways, such as using a `V
 
 #### 2.2.6 Aiming Solution Data Screen
 
-Wind
+The `Aiming Solution Data Screen` displays the result of all the data entered into the ATragMX. Here you will find the information needed to setup your scope.
+
+##### <b>Elev</b>
+
+The field `Elev` (Elevation) is displaying how much the scope needs to be adjusted UP or DOWN. A positive value means that the scope needs to be adjusted UP using <kbd>Page Up</kbd>. A negative value means that the scope needs to be adjusted DOWN using <kbd>Page Down</kbd>.
+
+
+
+##### <b>Wind</b>
 
 The result of the low and high holdovers are displayed in the usual
 result area. Wind (just below elevation) will show the wind holdover
@@ -223,8 +233,15 @@ Lead and Wind2 is toggled to display either one solution or the other.
 
 Depending on how fast you think the wind is currently gusting, weight
 your holdover toward that wind holdover value and pull the trigger. (i.e.
-if shooting at 800 yards and I think the wind is gusting more toward the
-higher end, I may hold off closer to 1.80 rather than .97).
+if shooting at 730 meters and I think the wind is gusting more toward the
+higher end, I may hold off closer to 0.53 rather than 0.29).
+
+The `Wind`/`Wind2` field(s) display(s) how much the scope needs to be adjusted Left or Right depinding on Wind Speed and Direction. The adjustment value will be displayed with a number followed by either `L` (Left) or `R` (Right). Use <kbd>Ctrl</kbd> + <kbd>Page Down</kbd> to adjust the scope Left, use <kbd>Ctrl</kbd> + <kbd>Page Up</kbd> to adjust the scope Right.
+
+##### <b>Lead</b>
+
+
+<img src="https://i.imgur.com/dLgVqFX.jpg" alt="Aiming Solution" />
 
 #### 2.2.7 Gun/Ammunition List
 #### 2.2.8 Options
