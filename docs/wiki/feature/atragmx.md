@@ -31,7 +31,25 @@ The ATragMX features the following:
 
 The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an overview of what is to come.
 
+<img src="http://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
 
+Number |                                              Function |
+------ | ----------------------------------------------------- |
+`1`      | Displays selected Gun/Ammunition
+`2`      | Displays selected System of Measurement
+`3`      | Open - Digital Range Card
+`4`      | Gun and Ammo Data Screen
+`5`      | Atmospheric and Environmental Data Screen 
+`6`      | Target Data Screen
+`7`      | Aiming Solution Data Screen
+`8`      | Open - Gun List
+`9`      | Toggle - MILs, TMOA, SMOA, Clicks
+`10`     | Open - Options
+`11`     | Quick select next Gun/Ammunition - Up
+`12`     | Quick select next Gun/Ammunition - Down
+`13`     | Quick select next Target Calculation - Left (A B C D)
+`14`     | Quick select next Target Calculation - Right (A B C D)
+`15`     | Reset Data
 
 
 ### Sub-feature 1
