@@ -49,7 +49,7 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  - Select `Drag Coef Table` in the `Options` menu.
  - Add the `ZR` and the `C1` (`Gun` column) in the table and `Done`.
   
-**In Position:**
+**In position:**
  - Open the `Truing Drop` in the `Options` menu.
  - Add the actual `Target Range` in the `SUPER` column and `Calc`.
  - Add the same `Target Range` in the `SUB` column  and `Calc`.
