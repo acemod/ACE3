@@ -99,37 +99,14 @@ The scope adjustment values are displayed in positive or negatives.
 <div class="row">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qFuDQnN.jpg" width="382" height="676" alt="Range Card" />
+                <img src="https://i.imgur.com/qFuDQnN.jpg" alt="Range Card" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/snq0L2P.jpg" width="382" height="676" alt="Range Card Settings" />
+                <img src="https://i.imgur.com/snq0L2P.jpg" alt="Range Card Settings" />
             </div>
         </div>
 </div>
 
-
-<div class="row">
-    <div class="small-12 columns">
-        <div class="row">
-            <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qFuDQnN.jpg" width="282" height="576" alt="Range Card" />
-            </div>
-            <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/snq0L2P.jpg" width="282" height="576" alt="Range Card Settings" />
-            </div>
-        </div>
-    </div>
-    <div class="small-12 columns">
-        <div class="row">
-            <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qFuDQnN.jpg" width="282" height="576" alt="Range Card" />
-            </div>
-            <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/snq0L2P.jpg" width="282" height="576" alt="Range Card Settings" />
-            </div>
-        </div>
-    </div>
-</div>
 
 (Image 1 is the Range Card, Image 2 is the Setup Menu for the Range Card)
 
