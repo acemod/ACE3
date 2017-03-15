@@ -19,6 +19,7 @@ The ATragMX features the following:
 - Ballistics Calculation
 - Gun List
 - Digital Range Card
+- Receive Data from `Vector 21`
 
 ## 2. Use
 ### 2.1 Opening the ATragMX
@@ -149,10 +150,91 @@ temperature.
 
 
 #### 2.2.5 Target Data Screen
+
+While data for the Gun and Atmosphere groups can be set into the PDA prior to engaging the
+target, it is only when you have your target in sight that you will be able to enter ‘moment of truth’
+data such as wind speed, wind direction, uphill/downhill angle, distance to target as well as target
+speed and direction.
+
+##### <b>Latitude</b>
+
+In the ATragMX, parameters are provided for Magnus and coriolis corrections. Target
+Location is expressed as Hemisphere (North or South) and Latitude (0º at the equator to 90º at
+the poles). 
+
+##### <b>Direction of Fire</b>
+
+Direction of Fire is expressed as degrees. Unlike
+wind direction, however, direction of fire is an absolute frame of reference to true north (0º). The value is therefore given as the direction of the barrel axis from true north. In the example on the right, the direction of fire would be 120º (120 degrees).
+
+##### <b>Wind Speed</b>
+
+In the field, rarely does the wind blow at a constant speed. Generally, it will tend to have a base
+speed with occasional gusts to a higher speed. To compensate, the shooter often will “bracket” the
+wind – that is, to put the target between the low wind value and high wind value – thereby
+minimizing the overall horizontal drift should the wind suddenly gust just as the trigger is pulled.
+
+To assist the shooter, MX has a dual wind feature. Two wind speed
+values (low and high) may be entered on the target screen. These
+values are reflected on the main screen in the WS display in a
+“low/high” format.
+
+<b>IMPORTANT:</b> Please note that the `Wind` data displayed on the `Aiming Solution Data Screen` is based on the value entered in the `Wind Speed (m/s)`, `1` field. The `Wind Speed (m/s)`, `2` data field is for a seperate calculation. This means that the ATragMX will <b>NOT</b> calculate an avarage Wind Speed using those two values. It is up to the shooter to decide if the Low or High value is closest to the current Wind Speed or if the shooter should re-enter the value/s.
+
+##### <b>Wind Direction (clock)</b>
+
+Wind Direction is expressed in clock points. This illustration shows how to determine the direction. Wind direction always uses the ‘axis of the barrel bore’ as its frame of reference, hence the wind direction is a ‘relative’ direction rather than an absolute direction. Within this ‘axis of the bore’ reference system, wind is always described in terms of where it is coming from. So the direction of a right-to-left wind is therefore deemed to be coming from 3 o’clock and a wind blowing directly into your face would be coming from 12 o’clock.
+
+<img src="https://i.imgur.com/ye4wW0L.jpg" alt="Wind Direction Clock" />
+
+##### <b>Inclination Angle</b>
+
+The Inclination Angle field on the Target Screen displays data in both degees and cosine values. The degrees field is marked with a “d” and the cosine field with a “c”. These two fields are tied together and their values compliment each other – that is, the value in one field reflects the equivalent value of the other field. Changing the value in one field will automatically cause a change
+in value of the other field to match. 
+
+<b>Example:</b> A cosine value of 0.91 is equivalent to 25 degrees. If you were to change the degrees field to 40 degrees, then upon exiting the degrees field, the cosine field will automatically change to 0.77 which is the cosine approximation to 40 degrees.
+
+<b>Tip:</b> These values can be directly transfered by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
+
+##### <b>Target Speed (m/s)</b>
+
+The Target Speed’s right chevron ‘>’ indicates the direction the target is
+moving when seen through the scope (in this case, left to right). Tapping this chevron will toggle
+the direction.
+
+##### <b>Target Range (meters)</b>
+
+The Targets Range can be aquired through many different ways, such as using a `Vector`, `Range Finder` or even a `Laser Designator`.
+
+<b>Tip:</b> This value can be directly transfered by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
+
+<img src="https://i.imgur.com/nx9H6RS.jpg" alt="Target" />
+
 #### 2.2.6 Aiming Solution Data Screen
+
+Wind
+
+The result of the low and high holdovers are displayed in the usual
+result area. Wind (just below elevation) will show the wind holdover
+solution to the low wind (Wind1) value, and by toggling the Lead/Wind2
+button on the screen, the high wind (Wind2) holdover solution will be
+shown where the Lead solution is usually displayed. The solution for
+Lead and Wind2 is toggled to display either one solution or the other.
+
+Depending on how fast you think the wind is currently gusting, weight
+your holdover toward that wind holdover value and pull the trigger. (i.e.
+if shooting at 800 yards and I think the wind is gusting more toward the
+higher end, I may hold off closer to 1.80 rather than .97).
+
 #### 2.2.7 Gun/Ammunition List
 #### 2.2.8 Options
 #### 2.2.9 Physical Buttons
+
+## 3. Daily use and Setup
+
+This section is dedicated to configuring the ATragMX on a daily basis in relation to Arma 3. The documentation for the ATragMX may seem overwhelming and to complicated, that is however not the case which this quick portion will cover.
+Knowing your equipment is important, it is however not nessesary for you to know every single setting. The following is a quick checklist of things that need to be configured to use the ATragMX. Following these steps will have any shooter ready in under 60 seconds.
+
 
 
 ## Dependencies
