@@ -81,23 +81,6 @@ parameters to remind you that those quantities are in meters.
 ### 2.2.9 Physical Buttons
 
 
-
-
-
-
-### Sub-feature 1
-Short description of sub-feature 1.
-
-### Sub-feature 2
-Short description of sub-feature 2.
-
-
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings,
-instructions. May not apply to all modules.
-
-
 ## Dependencies
 
 {% include dependencies_list.md component="atragmx" %}
