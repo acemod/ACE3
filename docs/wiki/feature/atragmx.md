@@ -12,7 +12,13 @@ version:
   patch: 0
 ---
 
-## Overview
+## 1. Overview
+
+The ATragMX features the following:
+
+- Ballistics Calculation
+- Gun List
+- Digital Range Card
 
 ### Sub-feature 1
 Short description of sub-feature 1.
