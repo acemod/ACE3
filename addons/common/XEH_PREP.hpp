@@ -13,6 +13,7 @@ PREP(ASLToPosition);
 PREP(binarizeNumber);
 PREP(blurScreen);
 PREP(cachedCall);
+PREP(canDig);
 PREP(canGetInPosition);
 PREP(canInteractWith);
 PREP(changeProjectileDirection);
