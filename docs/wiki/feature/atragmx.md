@@ -116,7 +116,38 @@ RC by clicking the Setup button to bring up the RC setup screen. Only
 setup values accordingly.
 
 #### 2.2.3 Gun and Ammo Data Screen
-#### 2.2.4 Atmospheric and Environmental Data Screen 
+
+The data displayed in the `Gun and Ammo Data Screen` is automatically filled in by the ATragMX depending on the Weapon/Ammo selected in the `GunList`. The data displayed/calculated is also affected by other parameters set in the ATragMX.
+
+<b>Example:</b> The Muzzle Velocity is dependent on the Temperature. The data provided in the `Atmospheric and Environmental Data Screen` is therefore used in calculating the correct Muzzle Velocity.
+
+<img src="https://i.imgur.com/M1jVJXh.jpg" alt="Gun and Ammo Data Screen" />
+
+
+#### 2.2.4 Atmospheric and Environmental Data Screen
+
+You have two options for entering Atmospheric data. The first is AT, which allows you to enter
+Altitude and Temperature, whilst the second is TBH which allows you to enter Temperature,
+Barometric Pressure (BP) and Relative Humidity (RH). Correct air density values are essential for 
+accurate ballistic calculations. When available, TBH is the more precise option, however, when
+there is no way of obtaining BP and RH, ATragMX can approximate air density from altitude and
+temperature.
+
+<b>Tip:</b> All the information needed to fill out the TBH is located on `User Screen 2` of the `Kestrel 4500`.
+
+<div class="row">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/qu6OBZ6.jpg" alt="Atmsphr TBH" />
+            </div>
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/Aoo5YEJ.jpg" alt="Atmsphr AT" />
+            </div>
+        </div>
+</div>
+
+
+
 #### 2.2.5 Target Data Screen
 #### 2.2.6 Aiming Solution Data Screen
 #### 2.2.7 Gun/Ammunition List
