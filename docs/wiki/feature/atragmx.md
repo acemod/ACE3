@@ -20,7 +20,7 @@ The ATragMX features the following:
 - Gun List
 - Digital Range Card
 
-## 2. Usage
+## 2. Use
 ### 2.1 Opening the ATragMX
 
 1. Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd>.
@@ -31,7 +31,7 @@ The ATragMX features the following:
 
 The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an idea of what is to come.
 
-<img src="http://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
+<img src="https://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
 
 Number |                                              Function |
 ------ | ----------------------------------------------------- |
@@ -51,7 +51,7 @@ Number |                                              Function |
 `14`     | Quick select next Target Calculation - Right (A B C D)
 `15`     | Reset Data
 
-### 2.2.1 Units of Measurement
+#### 2.2.1 Units of Measurement
 
 Please refer to the image displayed in the Overview, `Number 2`.
 
@@ -68,17 +68,47 @@ with English instruments but looking through mil dot scopes. When in
 the dual mode, a small asterisk appears alongside distance
 parameters to remind you that those quantities are in meters. 
 
-### 2.2.2 Digital Range Card
+#### 2.2.2 Digital Range Card
 
+Please refer to the image displayed in the Overview, `Number 3`.
 
+ATragMX can present ‘come-up’ (hold over) results in the form of a
+Range Card (RC) display. RC values are displayed in a uniform table
+of range increments – meters or yards as set on the main screen and
+shown on the column heading along with each respective
+elevation, windage, and other associated values. Units (USMC Mils,
+TMOA, SMOA, Clicks) are the same as the setting on the main
+screen and shown on the top left corner of the display. Where
+applicable, a star will appear next to all ranges where the bullet is
+subsonic. The range increments of the RC may be
+customized by clicking on the Setup button located on the top right of
+the display.
 
-### 2.2.3 Gun and Ammo Data Screen
-### 2.2.4 Atmospheric and Environmental Data Screen 
-### 2.2.5 Target Data Screen
-### 2.2.6 Aiming Solution Data Screen
-### 2.2.7 Gun/Ammunition List
-### 2.2.8 Options
-### 2.2.9 Physical Buttons
+The starting range, ending range and step values can be set for the
+RC by clicking the Setup button to bring up the RC setup screen. Only
+200 lines of data are allowed at one time so choose your range card
+setup values accordingly.
+
+<div class="row">
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/qFuDQnN.jpg" alt="home screen" />
+            </div>
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/snq0L2P.jpg" alt="home screen" />
+            </div>
+        </div>
+    </div>
+</div>
+(Image 1 is the Range Card, Image 2 is the Setup Menu for the Range Card)
+#### 2.2.3 Gun and Ammo Data Screen
+#### 2.2.4 Atmospheric and Environmental Data Screen 
+#### 2.2.5 Target Data Screen
+#### 2.2.6 Aiming Solution Data Screen
+#### 2.2.7 Gun/Ammunition List
+#### 2.2.8 Options
+#### 2.2.9 Physical Buttons
 
 
 ## Dependencies
