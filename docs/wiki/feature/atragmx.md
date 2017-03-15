@@ -29,14 +29,14 @@ The ATragMX features the following:
 
 ### 2.2 ATragMX Interface Overview
 
-The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an overview of what is to come.
+The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an idea of what is to come.
 
 <img src="http://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
 
 Number |                                              Function |
 ------ | ----------------------------------------------------- |
-`1`      | Displays selected Gun/Ammunition
-`2`      | Displays selected System of Measurement
+`1`      | Displays selected Gun/Ammunition List
+`2`      | Displays selected Units of Measurement
 `3`      | Open - Digital Range Card
 `4`      | Gun and Ammo Data Screen
 `5`      | Atmospheric and Environmental Data Screen 
@@ -50,6 +50,39 @@ Number |                                              Function |
 `13`     | Quick select next Target Calculation - Left (A B C D)
 `14`     | Quick select next Target Calculation - Right (A B C D)
 `15`     | Reset Data
+
+### 2.2.1 Units of Measurement
+
+Please refer to the image displayed in the Overview, `Number 2`.
+
+ATrag will handle both English (Imperial) and Metric units of measure. The push button controls for
+toggling between these two systems are located at the top right of the working screen. You will
+see an ‘E’ for English, and ‘M’ for Metric. You can toggle between the two systems at any time,
+your selection effects all sub-screens throughout the system.
+
+You may also notice a ‘D’ push button, this is a special mode where
+the unit system is split into a dual state such that all distances are
+presented on screen as ‘meters’ while everything else remains in the
+English (Imperial) system of units. This is most useful when working
+with English instruments but looking through mil dot scopes. When in
+the dual mode, a small asterisk appears alongside distance
+parameters to remind you that those quantities are in meters. 
+
+### 2.2.2 Digital Range Card
+
+
+
+### 2.2.3 Gun and Ammo Data Screen
+### 2.2.4 Atmospheric and Environmental Data Screen 
+### 2.2.5 Target Data Screen
+### 2.2.6 Aiming Solution Data Screen
+### 2.2.7 Gun/Ammunition List
+### 2.2.8 Options
+### 2.2.9 Physical Buttons
+
+
+
+
 
 
 ### Sub-feature 1
