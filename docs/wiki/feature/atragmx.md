@@ -33,6 +33,7 @@ The ATragMX features the following:
 The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an idea of what is to come.
 
 <img src="https://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX1.jpg" />
 
 Number |                                              Function |
 ------ | ----------------------------------------------------- |
