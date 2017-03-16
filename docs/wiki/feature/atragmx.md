@@ -265,12 +265,75 @@ You will also see the gun’s parameters change in the Gun display box just belo
         </div>
 </div>
 
-Opening a Gun (or dubble clicking on the name) will immediately bring that Gun’s parameters into the main screen and a new shooting solution will be calculated using the new Gun’s parameters. 
+Opening a Gun (or dubble clicking on the name) will immediately bring that Gun’s parameters into the main screen and a new shooting solution will be calculated using the new Gun’s parameters.
+
 Keep in mind that cycling through (opening) a Gun in your GunList only loads that Gun’s parameters into the main screen. Changing parameters on the main screen DOES NOT change the parameters of the Gun in the GunList. The main screen and the GunList are separate. In order to store changes from the main screen into the GunList, you must go back to the GunList screen and use the Save or SaveAs buttons on the right hand side.
 
-
 #### 2.2.8 Options
-#### 2.2.9 Physical Buttons
+
+The ATragMX has a wide variety of options however, not all of them are currently implemented in ACE. The table below shows the current Options that are aviable.
+
+List |                                              Description |
+------ | ----------------------------------------------------- |
+`Accuracy 1st`      | Not in use
+`Muz Vel Table`     | Not in use
+`Drag Coef Table`   | Not in use
+`Target Speed Est`  | Calculator for Target Speed
+`Target Range Est`  | Calculator for Target Range
+`Truing Drop`       | Not in use
+`Show Coriolis`     | Toggles Data for Coriolis on Home Screen (Target)
+`Set Clicks`        | Clicks interval configuration
+`Gun Note`          | Not in use
+
+<img src="https://i.imgur.com/5qWUyOV.jpg" alt="Options" />
+
+##### <b>Target Speed Est</b>
+
+The speed of a moving target may be able to be estimated by a skilled shooter, and entered into the ballistic calculator. Alternatively, if a) the target range is known, b) your scope reticle has a number of uniform hash marks within it, c) the estimated linear worth of each individual hash mark at the target range is known, d) the number of seconds the target takes to traverse a given number of these hash marks at the target range is known, then ATrag will present you with the approximate speed of the target, expressed as ‘distance traveled over time taken’.
+
+To aid in calculating target speed, ATragMX has a timer option. Navigate to the `Target Speed Est` screen. Select “Start” to start the timer and the elapsed time screen is displayed. Select “Stop” stop the timer. The elapsed time in seconds is displayed in the Time (secs) field.
+
+<img src="https://i.imgur.com/UCV1Xb0.jpg" alt="Target Speed Est" />
+
+##### <b>Target Range Est</b>
+
+The range to a target, the target’s size, and how large the target looks through a scope form a three way relationship. Knowing any two of these values will allow you to calculate the third. For instance, the most common calculation is knowing a target’s size and how much the target subtends against the reticle markings, giving you range to target. However, it is also true that knowing the range to target and the target’s image size will allow you to calculate the target’s size. Enter which ever values you know in their appropriate boxes and tap on the “!” button in front of the field you wish to calculate and ATrag will figure out that answer. Target size can be entered as Inches, Feet, Centimeters and Meters. Image Size can be entered as MILs, TMOA, and IOA. Angle will account for up and down angle viewing which would change the range calculation. Clicking Done will export the range and angle fields to the main screen.
+
+<img src="https://i.imgur.com/6SXpEbU.jpg" alt="Target Range Est" />
+
+##### <b>Show Coriolis</b>
+
+In extreme distance shooting (1100 meters plus), the time of flight of the bullet through the air can be long enough for the Earth’s rotation (Coriolis) to ‘move’ your target from the position it was in when you pulled the trigger – causing you to miss by a yard or more. Similarly at that range, the bullets own rotation around its longitudinal axes can also ‘pull’ the bullet out of its aimed flight path (spin drift). The ATragMX compensates for these deviations.
+
+Once the feature is turned on, the aiming solution portion of the main screen will show three columns: ‘Hold’, ‘Cor’, and ‘Spin’. The HOLD column shows the come ups and wind with Coriolis and spin drift compensations factored into the values shown, providing you with the most refined aiming solution possible.. The ‘Cor’ (Coriolis) column will show the Coriolis compensation value (vertical and horizontal) for this shot. The ‘Spin’ (or spin drift) column shows the spin drift compensation value (which is horizontal only). 
+
+
+
+##### <b>Set Clicks</b>
+
+You can access the Clicks setup by either taping the number on the Home Screen next to Clicks at the lowever middle of the screen (If clicks are selected) or through the Options menu at the lower right of the Home Screen. This screen allows you to tailor the number of “clicks” your Scope uses to adjust for 1 unit of measure (i.e. 4 clicks per TMOA means it takes 4 clicks to move the cross hairs a distance equal to one True Minute of Angle). These display values will be saved along with your gun data. That way, it loads with the gun and the solution will be displayed as set for that particular gun.
+
+<div class="row">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/tZP739e.jpg" alt="Set Clicks" />
+            </div>
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/1doy8xL.jpg" alt="Show Coriolis" />
+            </div>
+        </div>
+</div>
+
+One of the handy features of ATragMX when using the Clicks option, is the ‘Relative Clicks’ (Rel) function. In other words, this allows you to track the ‘clicked’ position of your scope while using it, and also calculates the shortest number of clicks to dial up (or down) from your current setting to your next shot. 
+
+<b>Note:</b> Coriolis must be turned off.
+
+Element |                                              Description |
+------ | ----------------------------------------------------- |
+`Abs`      | Absolute solution (If scope was 0/0)
+`Rel`      | Relative solution (Relative adjustmen to Current)
+`Cur`      | Current solution (Current after Update)
+
 
 ## 3. Daily use and Setup
 
