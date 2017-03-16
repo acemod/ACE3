@@ -26,7 +26,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
  - Open the Range Card and check the cartridge, the zeroed distance, the rifle twist, 
 the Muzzle Velocity at 15°C and the Bore Height at the end.
 
- img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.jpg" width="431" height="600" alt="RangeCard" /
+ <img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.jpg" width="431" height="600" alt="RangeCard" /> 
 
  - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`.
  - `Open Gun` the 7.62x51mm M80 in the `GunList`.
@@ -58,21 +58,18 @@ the Muzzle Velocity at 15°C and the Bore Height at the end.
  - *The Drag Coefficient Table will be automatically updated.*
  - Optionally, `Save Gun` and `Done` in the `GunList`.
  
- img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" /
+ <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" />
  
  - If a new `Target Range` is applied in the `Target` column, select `Drag Coef Table` in the `Options` menu and `Done`.
  - The ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
  
-img src="{{ site.baseurl }}/img/wiki/feature/atragmx3.png" width="1123" height="600" alt="Interpolation" /
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx3.png" width="1123" height="600" alt="Interpolation" />
  
  ### 3. Official Manual and Horus Videos
-
-[Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
-
-[Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
-
-[Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
  
+ - [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+ - [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
+ - [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
  
 ### 4. Dependencies
 
