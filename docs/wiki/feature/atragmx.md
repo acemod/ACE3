@@ -244,13 +244,34 @@ The `Wind`/`Wind2` field(s) display(s) how much the scope needs to be adjusted L
 <img src="https://i.imgur.com/dLgVqFX.jpg" alt="Aiming Solution" />
 
 #### 2.2.7 Gun/Ammunition List
+
+The data displayed on the main screen reflects the current conditions under which a particular shot is being made. The top left corner of the main screen displays the name of the current Gun you have selected.
+
+You may quickly cycle through your list of stored guns by pushing the hard up or down buttons on the ATragMX. As you cycle through the gun list, you will see the gun’s name change at the top-left of the screen.
+
+You will also see the gun’s parameters change in the Gun display box just below the gun name. You can also switch Guns by tapping the GunList button at the bottom left part of the main screen. This will display the list of Guns you have saved in your GunList.
+
+<div class="row">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/yUJUnxh.jpg" alt="Home GunList" />
+            </div>
+            <div class="small-12 medium-6 columns">
+                <img src="https://i.imgur.com/I8lSAeT.jpg" alt="GunList" />
+            </div>
+        </div>
+</div>
+
+Opening a Gun (or dubble clicking on the name) will immediately bring that Gun’s parameters into the main screen and a new shooting solution will be calculated using the new Gun’s parameters. 
+Keep in mind that cycling through (opening) a Gun in your GunList only loads that Gun’s parameters into the main screen. Changing parameters on the main screen DOES NOT change the parameters of the Gun in the GunList. The main screen and the GunList are separate. In order to store changes from the main screen into the GunList, you must go back to the GunList screen and use the Save or SaveAs buttons on the right hand side.
+
+
 #### 2.2.8 Options
 #### 2.2.9 Physical Buttons
 
 ## 3. Daily use and Setup
 
-This section is dedicated to configuring the ATragMX on a daily basis in relation to Arma 3. The documentation for the ATragMX may seem overwhelming and to complicated, that is however not the case which this quick portion will cover.
-Knowing your equipment is important, it is however not nessesary for you to know every single setting. The following is a quick checklist of things that need to be configured to use the ATragMX. Following these steps will have any shooter ready in under 60 seconds.
+This section is dedicated to configuring the ATragMX on a daily basis in relation to Arma 3. The documentation for the ATragMX may seem overwhelming and to complicated, that is however not the case which this quick portion will cover. Knowing your equipment is important, it is however not nessesary for you to know every single setting. The following is a quick checklist of things that need to be configured to use the ATragMX. Following these steps will have any shooter ready in under 60 seconds.
 
 
 
