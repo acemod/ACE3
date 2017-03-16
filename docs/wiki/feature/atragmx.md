@@ -335,9 +335,24 @@ Element |                                              Description |
 `Cur`      | Current solution (Current after Update)
 
 
-## 3. Daily use and Setup
+## 3. Day to Day Setup
 
-This section is dedicated to configuring the ATragMX on a daily basis in relation to Arma 3. The documentation for the ATragMX may seem overwhelming and to complicated, that is however not the case which this quick portion will cover. Knowing your equipment is important, it is however not nessesary for you to know every single setting. The following is a quick checklist of things that need to be configured to use the ATragMX. Following these steps will have any shooter ready in under 60 seconds.
+For many the ATragMX may seem like a complicated tool, but things are much simpler than you might think since the ATragMX takes all of those complicated calculations and turns them into two numbers that will make you hit your target.
+
+The following steps will have the shooter ready to fire in less than 1 minute. (It is highly recommended that you bind the equipment to keybindings)
+
+Number |                                              Description |
+------ | ----------------------------------------------------- |
+`1`           | Open your `Kestrel 4500` and navigate to `User Screen 2`, now close your `Kestrel 4500` and then Show your `Kestrel 4500`.
+`2`           | Open your `ATragMX` and select your Gun/Ammo from the `GunList`.
+`3`           | Fill out the `Atmospheric and Environmental Data Screen` with the data provided by your `Kestrel 4500`.
+<b>Note</b>   | The Data you just filled in will provide a base for all your shots. You should only revisit these parameters if you have traveled a great distance.
+`4`           | Open the Wind Indicator and check what direction the wind is coming from.
+`5`           | Open your `Kestrel 4500` and navigate to `HEADWIND` or `CROSSWIND` depending on wind direction, now close your `Kestrel 4500` and then Show your `Kestrel 4500`.
+`6`           | Open your `ATragMX`, select the `Target Data Screen` and fill out `Wind Speed (m/s)` and `Wind Direction (clock)`.
+`7`           | Use your `Vector` to transfer `Dir of Fire (deg from N)`, `Inclination Angle` and `Target Range`.
+`8`           | Adjust your scope acording to the ATragMX and fire.
+<b>Note</b>   | Always keep an eye on the Wind Speed and Wind Direction.
 
 
 
