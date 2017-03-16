@@ -181,7 +181,7 @@ values (low and high) may be entered on the target screen. These
 values are reflected on the main screen in the WS display in a
 “low/high” format.
 
-<b>IMPORTANT:</b> Please note that the `Wind` data displayed on the `Aiming Solution Data Screen` is based on the value entered in the `Wind Speed (m/s)`, `1` field. The `Wind Speed (m/s)`, `2` data field is for a seperate calculation. This means that the ATragMX will <b>NOT</b> calculate an avarage Wind Speed using those two values. It is up to the shooter to decide if the Low or High value is closest to the current Wind Speed or if the shooter should re-enter the value/s.
+<b>IMPORTANT:</b> Please note that the `Wind` data displayed on the `Aiming Solution Data Screen` is based on the value entered in the `Wind Speed (m/s)`, `1` field. The `Wind Speed (m/s)`, `2` data field is for a separate calculation. This means that the ATragMX will <b>NOT</b> calculate an average Wind Speed using those two values. It is up to the shooter to decide if the Low or High value is closest to the current Wind Speed or if the shooter should re-enter the value/s.
 
 ##### <b>Wind Direction (clock)</b>
 
@@ -191,12 +191,12 @@ Wind Direction is expressed in clock points. This illustration shows how to dete
 
 ##### <b>Inclination Angle</b>
 
-The Inclination Angle field on the Target Screen displays data in both degees and cosine values. The degrees field is marked with a “d” and the cosine field with a “c”. These two fields are tied together and their values compliment each other – that is, the value in one field reflects the equivalent value of the other field. Changing the value in one field will automatically cause a change
+The Inclination Angle field on the Target Screen displays data in both degrees and cosine values. The degrees field is marked with a “d” and the cosine field with a “c”. These two fields are tied together and their values compliment each other – that is, the value in one field reflects the equivalent value of the other field. Changing the value in one field will automatically cause a change
 in value of the other field to match. 
 
 <b>Example:</b> A cosine value of 0.91 is equivalent to 25 degrees. If you were to change the degrees field to 40 degrees, then upon exiting the degrees field, the cosine field will automatically change to 0.77 which is the cosine approximation to 40 degrees.
 
-<b>Tip:</b> These values can be directly transfered by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
+<b>Tip:</b> These values can be directly transferred by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
 
 ##### <b>Target Speed (m/s)</b>
 
@@ -206,9 +206,9 @@ the direction.
 
 ##### <b>Target Range (meters)</b>
 
-The Targets Range can be aquired through many different ways, such as using a `Vector`, `Range Finder` or even a `Laser Designator`.
+The Targets Range can be acquired through many different ways, such as using a `Vector`, `Range Finder` or even a `Laser Designator`.
 
-<b>Tip:</b> This value can be directly transfered by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
+<b>Tip:</b> This value can be directly transferred by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
 
 <img src="https://i.imgur.com/nx9H6RS.jpg" alt="Target" />
 
@@ -236,13 +236,13 @@ your holdover toward that wind holdover value and pull the trigger. (i.e.
 if shooting at 730 meters and I think the wind is gusting more toward the
 higher end, I may hold off closer to 0.53 rather than 0.29).
 
-The `Wind`/`Wind2` field(s) display(s) how much the scope needs to be adjusted Left or Right depinding on Wind Speed and Direction. The adjustment value will be displayed with a number followed by either `L` (Left) or `R` (Right). Use <kbd>Ctrl</kbd> + <kbd>Page Down</kbd> to adjust the scope Left, use <kbd>Ctrl</kbd> + <kbd>Page Up</kbd> to adjust the scope Right.
+The `Wind`/`Wind2` field(s) display(s) how much the scope needs to be adjusted Left or Right depending on Wind Speed and Direction. The adjustment value will be displayed with a number followed by either `L` (Left) or `R` (Right). Use <kbd>Ctrl</kbd> + <kbd>Page Down</kbd> to adjust the scope Left, use <kbd>Ctrl</kbd> + <kbd>Page Up</kbd> to adjust the scope Right.
 
 ##### <b>Lead</b>
 
-The `Lead` of a target will be displayed below the `Wind`. Lead may be toggled to `Wind2` when clicking on it. The calculated result of `Lead` will be displayed as a seperate result from the `Wind` calculation.
+The `Lead` of a target will be displayed below the `Wind`. Lead may be toggled to `Wind2` when clicking on it. The calculated result of `Lead` will be displayed as a separate result from the `Wind` calculation.
 
-It is suggested that the shooter adjusts his scope acording to the `Wind` calculation and hereafter adjusts his aim left or right of the target to factor in the `Lead` using the Mildots on the scope. Using this method instead of adjusting the scope will give the shooter greater flexebility if the target suddently stops or changes speed.
+It is suggested that the shooter adjusts the scope according to the `Wind` calculation and hereafter adjusts the aim left or right of the target to factor in the `Lead` using the Mildots on the scope. Using this method instead of adjusting the scope will give the shooter greater flexibility if the target suddenly stops or changes speed.
 
 <img src="https://i.imgur.com/dLgVqFX.jpg" alt="Aiming Solution" />
 
@@ -311,7 +311,7 @@ Once the feature is turned on, the aiming solution portion of the main screen wi
 
 ##### <b>Set Clicks</b>
 
-You can access the Clicks setup by either taping the number on the Home Screen next to Clicks at the lowever middle of the screen (If clicks are selected) or through the Options menu at the lower right of the Home Screen. This screen allows you to tailor the number of “clicks” your Scope uses to adjust for 1 unit of measure (i.e. 4 clicks per TMOA means it takes 4 clicks to move the cross hairs a distance equal to one True Minute of Angle). These display values will be saved along with your gun data. That way, it loads with the gun and the solution will be displayed as set for that particular gun.
+You can access the Clicks setup by either taping the number on the Home Screen next to Clicks at the lower middle of the screen (If clicks are selected) or through the Options menu at the lower right of the Home Screen. This screen allows you to tailor the number of “clicks” your Scope uses to adjust for 1 unit of measure (i.e. 4 clicks per TMOA means it takes 4 clicks to move the cross hairs a distance equal to one True Minute of Angle). These display values will be saved along with your gun data. That way, it loads with the gun and the solution will be displayed as set for that particular gun.
 
 <div class="row">
         <div class="row">
@@ -331,7 +331,7 @@ One of the handy features of ATragMX when using the Clicks option, is the ‘Rel
 Element |                                              Description |
 ------ | ----------------------------------------------------- |
 `Abs`      | Absolute solution (If scope was 0/0)
-`Rel`      | Relative solution (Relative adjustmen to Current)
+`Rel`      | Relative solution (Relative adjustment to Current)
 `Cur`      | Current solution (Current after Update)
 
 
@@ -339,7 +339,7 @@ Element |                                              Description |
 
 For many the ATragMX may seem like a complicated tool, but things are much simpler than you might think since the ATragMX takes all of those complicated calculations and turns them into two numbers that will make you hit your target.
 
-The following steps will have the shooter ready to fire in less than 1 minute. (It is highly recommended that you bind the equipment to keybindings)
+The following steps will have the shooter ready to fire in less than 1 minute. (It is highly recommended that you bind the equipment to key bindings)
 
 Number |                                              Description |
 ------ | ----------------------------------------------------- |
@@ -351,7 +351,7 @@ Number |                                              Description |
 `5`           | Open your `Kestrel 4500` and navigate to `HEADWIND` or `CROSSWIND` depending on wind direction, now close your `Kestrel 4500` and then Show your `Kestrel 4500`.
 `6`           | Open your `ATragMX`, select the `Target Data Screen` and fill out `Wind Speed (m/s)` and `Wind Direction (clock)`.
 `7`           | Use your `Vector` to transfer `Dir of Fire (deg from N)`, `Inclination Angle` and `Target Range`.
-`8`           | Adjust your scope acording to the ATragMX and fire.
+`8`           | Adjust your scope according to the ATragMX and fire.
 <b>Note</b>   | Always keep an eye on the Wind Speed and Wind Direction.
 
 
