@@ -240,6 +240,9 @@ The `Wind`/`Wind2` field(s) display(s) how much the scope needs to be adjusted L
 
 ##### <b>Lead</b>
 
+The `Lead` of a target will be displayed below the `Wind`. Lead may be toggled to `Wind2` when clicking on it. The calculated result of `Lead` will be displayed as a seperate result from the `Wind` calculation.
+
+It is suggested that the shooter adjusts his scope acording to the `Wind` calculation and hereafter adjusts his aim left or right of the target to factor in the `Lead` using the Mildots on the scope. Using this method instead of adjusting the scope will give the shooter greater flexebility if the target suddently stops or changes speed.
 
 <img src="https://i.imgur.com/dLgVqFX.jpg" alt="Aiming Solution" />
 
