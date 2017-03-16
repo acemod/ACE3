@@ -37,7 +37,7 @@ if (isClass (_config >> _bandage)) then {
     _reopeningMinDelay = getNumber (_config >> "reopeningMinDelay");
     _reopeningMaxDelay = getNumber (_config >> "reopeningMaxDelay") max _reopeningMinDelay;
 } else {
-    ACE_LOGWARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
+    WARNING_2("No config for bandage [%1] config base [%2]", _bandage, _config);
 };
 
 if (isClass (_config >> _className)) then {
@@ -52,7 +52,7 @@ if (isClass (_config >> _className)) then {
         _reopeningMaxDelay = getNumber (_woundTreatmentConfig >> "reopeningMaxDelay") max _reopeningMinDelay;
     };
 } else {
-    ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+    WARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
 };
 TRACE_5("configs",_bandage,_className,_reopeningChance,_reopeningMinDelay,_reopeningMaxDelay);
 

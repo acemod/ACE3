@@ -8,7 +8,7 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
@@ -27,7 +27,7 @@ scopeName "Main";
 private _fnc_errorAndClose = {
     params ["_msg"];
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 

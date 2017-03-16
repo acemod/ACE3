@@ -10,7 +10,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
  *
  * Public: No
  */
@@ -98,7 +98,7 @@ if (_activated) then {
         //--- Handle ownership
         [_logic,_ownerVar,_ownerUID,_adminVar] spawn {
             scriptname "BIS_fnc_moduleCurator: Owner";
-            
+
             params ["_logic", "_ownerVar", "_ownerUID", "_adminVar"];
 
             if (_adminVar != "") then {_ownerVar = _adminVar;};

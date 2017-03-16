@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_cookOff
+ * [(vehicle player)] call ace_cookoff_fnc_cookOff
  *
  * Public: No
  */
@@ -31,7 +31,7 @@ if (local _vehicle) then {
     private _positions = getArray (_config >> QGVAR(cookoffSelections)) select {!((_vehicle selectionPosition _x) isEqualTo [0,0,0])};
 
     if (_positions isEqualTo []) then {
-        ACE_LOGWARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
+        WARNING_1("no valid selection for cookoff found. %1", typeOf _vehicle);
         _positions pushBack "#noselection";
     };
 
@@ -113,9 +113,12 @@ if (local _vehicle) then {
 
         [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
 
+        private _randomPosition = _vehicle getPos [100, random 360];
+
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
-                _x action ["Eject", _vehicle];
+                _x leaveVehicle _vehicle;
+                _x doMove _randomPosition;
             };
         } forEach crew _vehicle;
 
@@ -129,6 +132,6 @@ if (local _vehicle) then {
             if (local _vehicle) then {
                 _vehicle setDamage 1;
             };
-        }, [_vehicle, _effects], 4 + random 1] call CBA_fnc_waitAndExecute;
-    }, [_vehicle, _effects, _positions], 3 + random 2] call CBA_fnc_waitAndExecute;
-}, _vehicle, 0.5 + random 0.3] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], 14] call CBA_fnc_waitAndExecute;
+    }, [_vehicle, _effects, _positions], 10.5] call CBA_fnc_waitAndExecute;
+}, _vehicle, 3] call CBA_fnc_waitAndExecute;

@@ -6,14 +6,12 @@
  * 0: radius controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
-
-disableSerialization;
 
 //Generic Init:
 params ["_control"];

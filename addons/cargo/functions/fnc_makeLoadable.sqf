@@ -28,7 +28,7 @@ private _curSize = [_object] call FUNC(getSizeItem);
 _canLoad = [0, 1] select _canLoad; //convert true/false to scalar
 
 if ((_canLoad == 1) && {_setSize <= 0}) exitWith {
-    ACE_LOGERROR("ace_cargo_fnc_makeLoadable (size <= 0) when making loadable");
+    ERROR("ace_cargo_fnc_makeLoadable (size <= 0) when making loadable");
 };
 
 TRACE_2("setVar if different from config",_canLoad,_cfgCanLoad);

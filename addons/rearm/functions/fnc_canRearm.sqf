@@ -19,7 +19,7 @@
 private ["_dummy","_magazineClass"];
 params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
-if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_target distance _unit > REARM_ACTION_DISTANCE} || {_target getVariable [QGVAR(disabled), false]}) exitWith {false};
+if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REARM_ACTION_DISTANCE} || {_target getVariable [QGVAR(disabled), false]}) exitWith {false};
 
 _dummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _dummy) exitwith {false};

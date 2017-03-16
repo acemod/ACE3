@@ -377,9 +377,10 @@ class CfgVehicles {
             class HitBody {
                 armor = 0.6;
                 material = -1;
-                name = "zbytek";
+                name = "mat_rim";
                 visual = "mat_rim";
                 passThrough = 1;
+                radius = 0.1;
                 explosionShielding = 1;
             };
         };
@@ -470,7 +471,7 @@ class CfgVehicles {
         transportRepair = 0;
     };
 
-    class Truck_02_engineeral_base_F: Truck_02_box_base_F {
+    class Truck_02_medical_base_F: Truck_02_box_base_F {
         GVAR(canRepair) = 0;
     };
 

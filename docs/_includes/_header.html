@@ -8,7 +8,7 @@
         <meta name="description" content="{% if page.description != null %}{{ page.description }}{% else %}{{site.description}}{% endif %}" />
         <meta name="keywords" content="{% if page.keywords != null %}{{ page.keywords }}{% else %}{{site.keywords}}{% endif %}" />
         <meta name="robots" content="INDEX,FOLLOW" />
-        <link rel="canonical" href="http://ace3mod.com{{ page.url }}" />
+        <link rel="canonical" href="{{ site.baseurl }}{{ page.url }}" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
         <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
 
@@ -19,8 +19,11 @@
         <meta property="og:url" content="{{ site.productionUrl }}{{ page.url }}" />
         <meta property="og:image" content="{{ site.productionUrl }}{% if page.image != null %}{{ page.image }}{% else %}/img/slider01.jpg{% endif %}" />
 
-        <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon-32.png" sizes="32x32" />
         <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png" sizes="16x16" />
+        
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#951E14">
 
         <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css?v={{site.time | date: '%Y%m%d%H'}}" />

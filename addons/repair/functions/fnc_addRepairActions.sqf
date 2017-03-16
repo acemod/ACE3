@@ -113,7 +113,7 @@ _processedHitpoints = [];
                     if (_pos isEqualType "") exitWith {
                         _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _pos];
                     };
-                    ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
+                    ERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
                 };
             } forEach (getArray _positionsConfig);
         };

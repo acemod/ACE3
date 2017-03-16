@@ -28,20 +28,16 @@ class CfgVehicles {
 
     class Tank;
     class Tank_F: Tank {
-        GVAR(ammoLocation) = "HitTurret";
+        GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
     };
-
-    class MBT_01_base_F: Tank_F {
-        GVAR(ammoLocation) = "HitHull";
-    };
-    class APC_Tracked_01_base_F: Tank_F {
-        GVAR(ammoLocation) = "HitHull";
+    class MBT_02_base_F: Tank_F {
+        GVAR(ammoLocation) = "HitTurret";
     };
 
     class Car_F;
     class Wheeled_APC_F: Car_F {
-        GVAR(ammoLocation) = "HitTurret";
+        GVAR(ammoLocation) = "HitHull";
         GVAR(cookoffSelections)[] = {"poklop_gunner","poklop_commander"};
 
         // big explosions for wheeled APCs (same as for tanks)

@@ -586,13 +586,32 @@ class CfgWeapons {
     class arifle_CTAR_blk_F: arifle_CTAR_base_F {
         displayName = CSTRING(arifle_CTAR_blk);
     };
+    class arifle_CTAR_ghex_F: arifle_CTAR_base_F {
+        displayName = CSTRING(arifle_CTAR_ghex);
+    };
+    class arifle_CTAR_hex_F: arifle_CTAR_base_F {
+        displayName = CSTRING(arifle_CTAR_hex);
+    };
     class arifle_CTAR_GL_base_F;
     class arifle_CTAR_GL_blk_F: arifle_CTAR_GL_base_F {
         displayName = CSTRING(arifle_CTAR_GL_blk);
     };
+    class arifle_CTAR_GL_ghex_F: arifle_CTAR_GL_base_F {
+        displayName = CSTRING(arifle_CTAR_GL_ghex);
+    };
+    class arifle_CTAR_GL_hex_F: arifle_CTAR_GL_base_F {
+        displayName = CSTRING(arifle_CTAR_GL_hex);
+    };
+    
     class arifle_CTARS_base_F;
     class arifle_CTARS_blk_F: arifle_CTARS_base_F {
         displayName = CSTRING(arifle_CTARS_blk);
+    };
+    class arifle_CTARS_ghex_F: arifle_CTARS_base_F {
+        displayName = CSTRING(arifle_CTARS_ghex);
+    };
+    class arifle_CTARS_hex_F: arifle_CTARS_base_F {
+        displayName = CSTRING(arifle_CTARS_hex);
     };
 
     // QBU-88

@@ -23,8 +23,8 @@ if (isNull _target ||
     {_target getVariable [QGVAR(jerryCan), false]}) exitWith {};
 
 [_target, _fuelAmount] call FUNC(setFuel);
-_target setVariable [QGVAR(jerryCan), true, true];
-_target setVariable [QGVAR(source), _target, true];
+_target setVariable [QGVAR(jerryCan), true];
+_target setVariable [QGVAR(source), _target];
 
 // Main Action
 private _action = [QGVAR(Refuel),

@@ -23,7 +23,7 @@ params [
 ];
 
 if (isNull _unit || {_texture == ""}) exitWith {
-    ACE_LOGERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
+    ERROR_2("Tag parameters invalid. Unit: %1, Texture: %2",_unit,_texture);
 };
 
 private _startPosASL = eyePos _unit;

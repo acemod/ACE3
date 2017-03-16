@@ -1,11 +1,5 @@
 
-PREP(lockKeyDown);
-PREP(lockKeyUp);
-
-PREP(cycleFireMode);
-PREP(showFireMode);
-
-PREP(onFired);
-PREP(onOpticLoad);
+PREP(getTarget);
+PREP(mapHelperDraw);
 PREP(onOpticDraw);
-PREP(onOpticUnload);
+PREP(showFireMode);

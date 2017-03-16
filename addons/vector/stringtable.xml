@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vector">
         <Key ID="STR_ACE_Vector_VectorName">
@@ -13,6 +13,7 @@
             <Portuguese>Vector 21 Nite</Portuguese>
             <Russian>Vector 21 Nite</Russian>
             <Japanese>ベクター 21 ナイト</Japanese>
+            <Korean>Vector 21 Nite</Korean>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDayName">
             <English>Vector 21</English>
@@ -26,6 +27,7 @@
             <Portuguese>Vector 21</Portuguese>
             <Russian>Vector 21</Russian>
             <Japanese>ベクター 21</Japanese>
+            <Korean>	Vector 21</Korean>
         </Key>
         <Key ID="STR_ACE_Vector_VectorDescription">
             <English>Rangefinder</English>
@@ -39,6 +41,7 @@
             <Portuguese>Medidor de Distância</Portuguese>
             <Russian>Дальномер</Russian>
             <Japanese>測距機器</Japanese>
+            <Korean>거리측정기</Korean>
         </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
             <English>Vector - Azimuth Key</English>
@@ -52,6 +55,7 @@
             <Hungarian>Vector - Irányszög gomb</Hungarian>
             <Russian>Vector – Азимут</Russian>
             <Japanese>ベクター - 方位角キー</Japanese>
+            <Korean>Vector - 방위각 키</Korean>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
@@ -65,6 +69,7 @@
             <Hungarian>Vector - Távolság gomb</Hungarian>
             <Russian>Vector – Расстояние</Russian>
             <Japanese>ベクター - 距離キー</Japanese>
+            <Korean>Vector - 거리 키</Korean>
         </Key>
     </Package>
 </Project>

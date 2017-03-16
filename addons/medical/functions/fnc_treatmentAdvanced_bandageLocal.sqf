@@ -59,7 +59,7 @@ private _exit = false;
         } else {
             //Basic medical bandage just has a base level config (same effectivenes for all wound types)
             if (_bandage != "Bandage") then {
-                ACE_LOGWARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
+                WARNING_2("No config for wound type [%1] config base [%2]", _className, _config);
             };
         };
 

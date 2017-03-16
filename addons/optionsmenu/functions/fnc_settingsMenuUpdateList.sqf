@@ -40,7 +40,7 @@ switch (GVAR(optionMenu_openTab)) do {
                 } else {
                     private _values = _x select 5;
                     if !((!isNil "_values") && {_values isEqualType []} && {_settingsValue >= 0} && {_settingsValue < (count _values)}) exitWith {
-                        ACE_LOGERROR_3("Setting (%1) has bad values (%2) for index (%3)", _settingName, _values, _settingsValue);
+                        ERROR_3("Setting (%1) has bad values (%2) for index (%3)", _settingName, _values, _settingsValue);
                         "ERROR"
                     };
                     _values select _settingsValue;
