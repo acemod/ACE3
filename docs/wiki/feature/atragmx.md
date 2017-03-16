@@ -32,8 +32,7 @@ The ATragMX features the following:
 
 The ATragMX is a powerful yet complex tool. This brief overview of the ATragMX home screen will give you an idea of what is to come.
 
-<img src="https://i.imgur.com/y4KzvAh.jpg" alt="home screen" />
-<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX1.jpg" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX1.jpg" alt="home screen" />
 
 Number |                                              Function |
 ------ | ----------------------------------------------------- |
@@ -101,10 +100,10 @@ The scope adjustment values are displayed in positive or negatives.
 <div class="row">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qFuDQnN.jpg" alt="Range Card" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX2.jpg" alt="Range Card" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/snq0L2P.jpg" alt="Range Card Settings" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX3.jpg" alt="Range Card Settings" />
             </div>
         </div>
 </div>
@@ -123,7 +122,7 @@ The data displayed in the `Gun and Ammo Data Screen` is automatically filled in 
 
 <b>Example:</b> The Muzzle Velocity is dependent on the Temperature. The data provided in the `Atmospheric and Environmental Data Screen` is therefore used in calculating the correct Muzzle Velocity.
 
-<img src="https://i.imgur.com/M1jVJXh.jpg" alt="Gun and Ammo Data Screen" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX4.jpg" alt="Gun and Ammo Data Screen" />
 
 
 #### 2.2.4 Atmospheric and Environmental Data Screen
@@ -140,10 +139,10 @@ temperature.
 <div class="row">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/qu6OBZ6.jpg" alt="Atmsphr TBH" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX5.jpg" alt="Atmsphr TBH" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/Aoo5YEJ.jpg" alt="Atmsphr AT" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX6.jpg" alt="Atmsphr AT" />
             </div>
         </div>
 </div>
@@ -188,7 +187,7 @@ values are reflected on the main screen in the WS display in a
 
 Wind Direction is expressed in clock points. This illustration shows how to determine the direction. Wind direction always uses the ‘axis of the barrel bore’ as its frame of reference, hence the wind direction is a ‘relative’ direction rather than an absolute direction. Within this ‘axis of the bore’ reference system, wind is always described in terms of where it is coming from. So the direction of a right-to-left wind is therefore deemed to be coming from 3 o’clock and a wind blowing directly into your face would be coming from 12 o’clock.
 
-<img src="https://i.imgur.com/ye4wW0L.jpg" alt="Wind Direction Clock" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX_Clock.jpg" alt="Wind Direction Clock" />
 
 ##### <b>Inclination Angle</b>
 
@@ -211,17 +210,17 @@ The Targets Range can be acquired through many different ways, such as using a `
 
 <b>Tip:</b> This value can be directly transferred by using the `Vector`. Please refer to the manual of the `Vector` for more information on how to transfer data.
 
-<img src="https://i.imgur.com/nx9H6RS.jpg" alt="Target" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX7.jpg" alt="Target" />
 
 #### 2.2.6 Aiming Solution Data Screen
 
 The `Aiming Solution Data Screen` displays the result of all the data entered into the ATragMX. Here you will find the information needed to setup your scope.
 
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX8.jpg" alt="Aiming Solution" />
+
 ##### <b>Elev</b>
 
 The field `Elev` (Elevation) is displaying how much the scope needs to be adjusted UP or DOWN. A positive value means that the scope needs to be adjusted UP using <kbd>Page Up</kbd>. A negative value means that the scope needs to be adjusted DOWN using <kbd>Page Down</kbd>.
-
-
 
 ##### <b>Wind</b>
 
@@ -245,8 +244,6 @@ The `Lead` of a target will be displayed below the `Wind`. Lead may be toggled t
 
 It is suggested that the shooter adjusts the scope according to the `Wind` calculation and hereafter adjusts the aim left or right of the target to factor in the `Lead` using the Mildots on the scope. Using this method instead of adjusting the scope will give the shooter greater flexibility if the target suddenly stops or changes speed.
 
-<img src="https://i.imgur.com/dLgVqFX.jpg" alt="Aiming Solution" />
-
 #### 2.2.7 Gun/Ammunition List
 
 The data displayed on the main screen reflects the current conditions under which a particular shot is being made. The top left corner of the main screen displays the name of the current Gun you have selected.
@@ -258,10 +255,10 @@ You will also see the gun’s parameters change in the Gun display box just belo
 <div class="row">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/yUJUnxh.jpg" alt="Home GunList" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX9.jpg" alt="Home GunList" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/I8lSAeT.jpg" alt="GunList" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX10.jpg" alt="GunList" />
             </div>
         </div>
 </div>
@@ -286,7 +283,7 @@ List |                                              Description |
 `Set Clicks`        | Clicks interval configuration
 `Gun Note`          | Not in use
 
-<img src="https://i.imgur.com/5qWUyOV.jpg" alt="Options" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX11.jpg" alt="Options" />
 
 ##### <b>Target Speed Est</b>
 
@@ -294,13 +291,13 @@ The speed of a moving target may be able to be estimated by a skilled shooter, a
 
 To aid in calculating target speed, ATragMX has a timer option. Navigate to the `Target Speed Est` screen. Select “Start” to start the timer and the elapsed time screen is displayed. Select “Stop” stop the timer. The elapsed time in seconds is displayed in the Time (secs) field.
 
-<img src="https://i.imgur.com/UCV1Xb0.jpg" alt="Target Speed Est" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX12.jpg" alt="Target Speed Est" />
 
 ##### <b>Target Range Est</b>
 
 The range to a target, the target’s size, and how large the target looks through a scope form a three way relationship. Knowing any two of these values will allow you to calculate the third. For instance, the most common calculation is knowing a target’s size and how much the target subtends against the reticle markings, giving you range to target. However, it is also true that knowing the range to target and the target’s image size will allow you to calculate the target’s size. Enter which ever values you know in their appropriate boxes and tap on the “!” button in front of the field you wish to calculate and ATrag will figure out that answer. Target size can be entered as Inches, Feet, Centimeters and Meters. Image Size can be entered as MILs, TMOA, and IOA. Angle will account for up and down angle viewing which would change the range calculation. Clicking Done will export the range and angle fields to the main screen.
 
-<img src="https://i.imgur.com/6SXpEbU.jpg" alt="Target Range Est" />
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX13.jpg" alt="Target Range Est" />
 
 ##### <b>Show Coriolis</b>
 
@@ -317,10 +314,10 @@ You can access the Clicks setup by either taping the number on the Home Screen n
 <div class="row">
         <div class="row">
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/tZP739e.jpg" alt="Set Clicks" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX15.jpg" alt="Set Clicks" />
             </div>
             <div class="small-12 medium-6 columns">
-                <img src="https://i.imgur.com/1doy8xL.jpg" alt="Show Coriolis" />
+                <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX14.jpg" alt="Show Coriolis" />
             </div>
         </div>
 </div>
