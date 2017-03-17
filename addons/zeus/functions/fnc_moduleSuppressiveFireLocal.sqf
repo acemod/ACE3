@@ -17,7 +17,10 @@
 params ["_unit", "_targetASL", "_artilleryMag"];
 TRACE_4("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL,_artilleryMag);
 
-private _bursts = if (_artilleryMag == "") then {11} else {4};
+if (_artilleryMag != "") exitWith {
+    (vehicle _unit) doArtilleryFire [ASLtoAGL _targetASL, _artilleryMag, 4];
+    TRACE_3("doArtilleryFire",_unit,_targetASL,_artilleryMag);
+};
 
 [{
     params ["_unit", "_burstsLeft", "_nextRun", "_targetASL", "_artilleryMag"];
@@ -25,18 +28,12 @@ private _bursts = if (_artilleryMag == "") then {11} else {4};
     if (CBA_missionTime >= _nextRun) then {
         _burstsLeft = _burstsLeft - 1;
         _this set [1, _burstsLeft];
-        if (_artilleryMag == "") then {
-            _unit doSuppressiveFire _targetASL;
-            TRACE_2("doSuppressiveFire",_unit,_targetASL);
-            _this set [2, _nextRun + 4];
-        } else {
-            (vehicle _unit) doArtilleryFire [ASLtoAGL _targetASL, _artilleryMag, 1]; // note, using value greater than 1 does not always work
-            TRACE_3("doArtilleryFire",_unit,_targetASL,_artilleryMag);
-            _this set [2, _nextRun + 7];
-        };
+        _this set [2, _nextRun + 4];
+        _unit doSuppressiveFire _targetASL;
+        TRACE_2("doSuppressiveFire",_unit,_targetASL);
     };
     (_burstsLeft <= 0)
 }, {
     TRACE_1("Done",_this);
-}, [_unit, _bursts, CBA_missionTime, _targetASL, _artilleryMag]] call CBA_fnc_waitUntilAndExecute;
+}, [_unit, 11, CBA_missionTime, _targetASL, _artilleryMag]] call CBA_fnc_waitUntilAndExecute;
 
