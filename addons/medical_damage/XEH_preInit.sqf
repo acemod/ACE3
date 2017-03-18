@@ -6,6 +6,12 @@ ADDON = false;
 
 call FUNC(parseConfigForInjuries);
 
+addMissionEventHandler ["Loaded",{
+    INFO("Mission Loaded - Reloading medical configs for extension");
+    // Reload configs into extension (handle full game restart)
+    call FUNC(parseConfigForInjuries);
+}];
+
 // decide which woundsHandler to use by whether the extension is present or not  
 if ("ace_medical" callExtension "version" != "") then {
     DFUNC(woundsHandlerActive) = FUNC(woundsHandler);

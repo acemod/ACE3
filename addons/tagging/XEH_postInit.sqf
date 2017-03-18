@@ -3,8 +3,7 @@
 
 
 // Cache for static objects
-GVAR(cacheStaticModels) = createLocation ["ACE_HashLocation", [-10000,-10000,-10000], 0, 0];
-GVAR(cacheStaticModels) setText QGVAR(cacheStaticModels);
+GVAR(cacheStaticModels) = [false] call CBA_fnc_createNamespace;
 
 // Consider static everything vehicle that inherit from Static
 // This include houses (which we don't need), but also walls, that we do

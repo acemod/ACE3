@@ -61,7 +61,7 @@
             <English>Avulsion</English>
             <German>Avulsion</German>
             <Italian>Avulsione</Italian>
-            <Russian>Рваная рана</Russian>
+            <Russian>Авульсия</Russian>
             <French>Avulsion</French>
             <Polish>Rana płatowa</Polish>
             <Spanish>Avulsión</Spanish>
@@ -75,7 +75,7 @@
             <English>Minor Avulsion</English>
             <German>Kleine Avulsion</German>
             <Italian>Minima Avulsione</Italian>
-            <Russian>Малая рваная рана</Russian>
+            <Russian>Малая Авульсия</Russian>
             <French>Petite avulsion</French>
             <Polish>Pomniejsza rana płatowa</Polish>
             <Spanish>Avulsión menor</Spanish>
@@ -89,7 +89,7 @@
             <English>Medium Avulsion</English>
             <German>Mittlere Avulsion</German>
             <Italian>Media Avulsione</Italian>
-            <Russian>Средняя рваная рана</Russian>
+            <Russian>Средняя Авульсия</Russian>
             <French>Moyenne avulsion</French>
             <Polish>Średnia rana płatowa</Polish>
             <Spanish>Avulsión media</Spanish>
@@ -103,7 +103,7 @@
             <English>Large Avulsion</English>
             <German>Große Avulsion</German>
             <Italian>Alta Avulsione</Italian>
-            <Russian>Большая рваная рана</Russian>
+            <Russian>Большая Авульсия</Russian>
             <French>Grande avulsion</French>
             <Polish>Duża rana płatowa</Polish>
             <Spanish>Avulsión severa</Spanish>
