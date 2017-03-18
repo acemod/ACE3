@@ -1,3 +1,5 @@
+TRACE_1("",QUOTE(ADDON));
+
 PREP(effectBleeding);
 PREP(effectBloodVolume);
 PREP(effectHeartBeat);

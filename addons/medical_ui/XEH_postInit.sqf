@@ -2,6 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
+GVAR(nextFadeIn) = 0;
 GVAR(heartBeatEffectRunning) = false;
 
 [false] call FUNC(initEffects);

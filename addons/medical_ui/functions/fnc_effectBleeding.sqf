@@ -26,6 +26,7 @@ if (!_enable) exitWith {
 
 // Initialize controls
 if (isNull _blood1) then {
+    TRACE_1("Creating Blood Controls",_controls);
     _blood1 = findDisplay 46 ctrlCreate ["RscPicture", -1];
     _blood2 = findDisplay 46 ctrlCreate ["RscPicture", -1];
 

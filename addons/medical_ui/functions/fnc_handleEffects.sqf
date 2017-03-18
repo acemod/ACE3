@@ -18,9 +18,10 @@ if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
     [false]    call FUNC(effectBleeding);
 };
 
+BEGIN_COUNTER(handleEffects);
+
 // - Current state info -------------------------------------------------------
 private _bleedingStrength = [ACE_player] call EFUNC(medical,getBloodloss);
-// private _bleeding         = _bleedingStrength > 0;
 private _bloodVolume      = ACE_player getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
 private _unconscious      = ACE_player getVariable [QEGVAR(medical,isUnconscious), false];
 private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
@@ -43,3 +44,5 @@ if (!_unconscious) then {
 };
 
 [true, _bleedingStrength] call FUNC(effectBleeding);
+
+END_COUNTER(handleEffects);

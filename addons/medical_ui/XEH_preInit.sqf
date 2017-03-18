@@ -2,7 +2,9 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 [
     QGVAR(painEffectType),
@@ -11,7 +13,7 @@ ADDON = false;
     "ACE Medical", // @todo
     [
         [0, 1],
-        ["White flashing", "Pulsing blur"],
+        [localize LSTRING(painEffectType_whiteFlashing), localize LSTRING(painEffectType_pulsingBlur)],
         0
     ],
     false,
