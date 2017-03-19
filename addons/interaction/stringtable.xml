@@ -351,6 +351,14 @@
             <Japanese>左肩を叩かれた</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
         </Key>
+		 <Key ID="STR_ACE_Interaction_Punch">
+            <English>Punch</English>
+            <Polish>Uderz</Polish>
+        </Key>
+		<Key ID="STR_ACE_Interaction_YouWerePunched">
+            <English>You were punched.</English>
+            <Polish>Zostałeś uderzony.</Polish>
+        </Key>
         <Key ID="STR_ACE_Interaction_CancelSelection">
             <English>Cancel</English>
             <German>Abbrechen</German>
