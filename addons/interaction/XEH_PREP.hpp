@@ -25,8 +25,6 @@ PREP(canBecomeLeader);
 PREP(doBecomeLeader);
 PREP(canTapShoulder);
 PREP(tapShoulder);
-PREP(canPunch);
-PREP(punch);
 PREP(canPardon);
 PREP(pardon);
 
