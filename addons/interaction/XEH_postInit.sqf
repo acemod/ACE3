@@ -42,6 +42,21 @@ GVAR(isOpeningDoor) = false;
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(punch), {
+    params ["_unit"];
+
+    if (_unit == ACE_player) then {
+        addCamShake [4, 0.5, 5];
+        private _message = parseText format ["%1 &gt;", localize LSTRING(STR_ACE_Interaction_YouWerePunched)];
+        [_message] call EFUNC(common,displayTextStructured);
+    };
+	playSound3D [QUOTE(PATHTO_R(sounds\snd_punch.ogg)), _unit, false, (eyePos _unit), 10, 1, 15];
+	if !(isNil QEFUNC(medical,setUnconscious)) then {
+		[_unit, true, 10, true] call EFUNC(medical,setUnconscious);
+	};
+	
+	}] call CBA_fnc_addEventHandler;
+
 // add keybinds
 ["ACE3 Common", QGVAR(openDoor), localize LSTRING(OpenDoor), {
     // Conditions: canInteract

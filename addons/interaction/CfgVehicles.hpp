@@ -213,6 +213,10 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
                 statement = QUOTE([ARR_3(_player, _target, 1)] call DFUNC(tapShoulder));
             };
+			class ACE_Punch {
+                displayName = CSTRING(Punch);
+                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canPunch));
+            };
         };
 
         class ACE_SelfActions {
