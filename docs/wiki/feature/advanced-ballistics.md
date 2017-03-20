@@ -48,13 +48,15 @@ The Advanced Ballistics module improves internal and external ballistics.
 
 ### 2.4 Range Card
 
-### 2.5 Open it in-game
+### 2.5 Scopes
 
-#### 2.5.1 User Interface
+### 2.6 Open it in-game
 
-#### 2.5.2 Custom Keys
+#### 2.6.1 User Interface
 
-### 2.6 Location in the inventory 
+#### 2.6.2 Custom Keys
+
+### 2.7 In the inventory 
 
 ## 3. Dependencies
 
