@@ -1,17 +1,14 @@
-
 .contentSearch {
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 
-    @media #{$small-only} {
-        margin-bottom: 5px;
+    @include breakpoint(medium up) {
+        margin-bottom: 32px;
     }
 
     &-wrapper {
         position: relative;
         &.small-collapse {
-
             margin: 0 !important;
-
         }
     }
 }
@@ -25,25 +22,26 @@
     }
 
     &-result {
+        position: relative;
 
         &-list {
-            position: absolute;
+            position: relative;
+
+            @include breakpoint(medium up) {
+                position: absolute;
+            }
+
             width: 100%;
             height: auto;
             background: white;
-            border: 1px $iron;
+            border: 1px $medium-gray;
             border-style: none solid solid solid;
             z-index: 99;
             margin: 0;
             list-style-type: none;
 
-            @media #{$small-only} {
-                position: relative;
-            }
-
             li {
                 a {
-                    -webkit-transition: all 0.15s ease;
                     transition: all 0.15s ease;
                     padding: 4px 10px;
                     display: block;
@@ -52,7 +50,7 @@
                     line-height: 1.2;
 
                     &:hover {
-                        background-color: $smoke;
+                        background-color: $light-gray;
                     }
 
                     &:first-child {
@@ -75,9 +73,9 @@
     list-style-type: none;
 
     li {
-        margin-bottom: 20px;
-        @media #{$small-only} {
-            margin-bottom: 15px;
+        margin-bottom: 15px;
+        @include breakpoint(medium up) {
+            margin-bottom: 20px;
         }
 
         a {
@@ -96,8 +94,10 @@
         }
 
         .additionalInfo {
-            @media #{$small-only} {
-                display: none;
+            display: none;
+
+            @include breakpoint(medium up) {
+                display: block;
             }
         }
 

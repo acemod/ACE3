@@ -1,13 +1,22 @@
 {
   "name": "ACE3",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel-preset-es2015": "^6.24.0",
     "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-babel": "^6.0.0",
     "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-imagemin": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-uglify": "^2.2.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0"
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^4.5.0"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.3.1"
   }
 }

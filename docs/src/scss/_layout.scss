@@ -3,14 +3,14 @@
 }
 
 body {
-    background-color: $oil;
+    background-color: $very-dark-gray;
 }
 
 body > main {
-    padding: rem-calc(40) 0;
+    padding: rem-calc(20) 0;
 
-    @media #{$small-only} {
-        padding: rem-calc(20) 0;
+    @include breakpoint(medium up) {
+        padding: rem-calc(40) 0;
     }
 
     background-color: $white;
@@ -20,18 +20,28 @@ body > main {
     }
 }
 
-aside {
-    @media #{$small-only} {
+@include breakpoint(small) {
+    aside {
         margin-bottom: rem-calc(24);
     }
 }
 
-.row {
-    @media #{$small-only} {
-        overflow: hidden;
+.wiki-page {
+    section {
+        order: 1;
+    }
+    aside {
+        order: 0;
     }
 }
 
-/*.post > .row {
-    margin-bottom: 1.25rem;
-}*/
+@include breakpoint(medium up) {
+    .wiki-page {
+        section {
+            order: 0;
+        }
+        aside {
+            order: 1;
+        }
+    }
+}

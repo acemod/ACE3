@@ -1,18 +1,29 @@
 module.exports = function (grunt) {
 
-    /*var header = [
+    require('load-grunt-tasks')(grunt);
 
-    ];*/
-
-    var footer = [
+    var vendor = [
         "js/vendor/modernizr/modernizr.custom.18747.js",
         "js/vendor/picturefill/picturefill.js",
         "js/vendor/jquery/jquery.min.js",
-        "js/vendor/foundation/foundation.js",
-        "js/vendor/foundation/foundation.topbar.js",
-        "js/vendor/foundation/foundation.clearing.js",
         "js/vendor/slick/slick.js",
-        "js/vendor/jekyll-toc/jekyll-toc.js",
+        "js/vendor/jekyll-toc/jekyll-toc.js"
+    ];
+
+    var foundation = [
+        "js/vendor/foundation/foundation.core.js",
+        "js/vendor/foundation/foundation.util.mediaQuery.js",
+        "js/vendor/foundation/foundation.util.motion.js",
+        "js/vendor/foundation/foundation.util.triggers.js",
+        "js/vendor/foundation/foundation.toggler.js",
+        "js/vendor/foundation/foundation.responsiveMenu.js",
+        "js/vendor/foundation/foundation.responsiveToggle.js",
+        "js/vendor/foundation/foundation.sticky.js",
+        "js/vendor/foundation/foundation.magellan.js"
+
+    ];
+
+    var custom = [
         "js/core/utils.js",
         "js/components/analytics.js",
         "js/components/storage.js",
@@ -25,7 +36,15 @@ module.exports = function (grunt) {
 
         sass: {
             options: {
-                includePaths: ["components/foundation/scss"]
+                includePaths: ['node_modules/foundation-sites/scss']
+            },
+            dev: {
+                options: {
+                    outputStyle: "nested"
+                },
+                files: {
+                    "../css/app.css": "scss/app.scss"
+                }
             },
             dist: {
                 options: {
@@ -37,8 +56,30 @@ module.exports = function (grunt) {
             }
         },
 
+        postcss: {
+            autoprefixer: {
+                options: {
+                    processors: [
+                        require("autoprefixer")({browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3']})
+                    ]
+                },
+
+                files: [{
+                    src: "../css/app.css",
+                    dest: "../css/app.css",
+                    ext: ".css"
+                }]
+
+            }
+        },
+
         watch: {
-            grunt: {files: ["Gruntfile.js"]},
+            grunt: {
+                files: ["Gruntfile.js"],
+                options: {
+                    reload: true
+                }
+            },
 
             sass: {
                 files: "scss/**/*.scss",
@@ -57,30 +98,31 @@ module.exports = function (grunt) {
                 tasks: ["imagemin"]
             }
         },
+
         concat: {
-            //header: {
-            //    src: [header],
-            //    dest: "../js/header.dev.js"
-            //},
+            foundation: {
+                src: [foundation],
+                dest: ".tmp/foundation.js"
+            },
             footer: {
-                src: [footer],
-                dest: "../js/footer.dev.js"
+                src: [vendor, ".tmp/foundation.js", custom],
+                dest: "../js/footer.min.js"
             }
         },
+
+        babel: {
+            options: {
+                sourceMap: false,
+                presets: ['es2015']
+            },
+            foundation: {
+                files: {
+                    ".tmp/foundation.js": ".tmp/foundation.js"
+                }
+            }
+        },
+
         uglify: {
-            //"header": {
-            //    options: {
-            //        sourceMap: "../js/header-source-map.js",
-            //        sourceMappingURL: "header-source-map.js",
-            //        sourceMapPrefix: 2,
-            //        sourceMapRoot: "../../dist/js/",
-            //        mangle: true,
-            //        compress: true
-            //    },
-            //    files: {
-            //        "../js/header.min.js": [header]
-            //    }
-            //},
             "footer": {
                 options: {
                     sourceMap: "../js/footer-source-map.js",
@@ -91,10 +133,11 @@ module.exports = function (grunt) {
                     compress: true
                 },
                 files: {
-                    "../js/footer.min.js": [footer]
+                    "../js/footer.min.js": "../js/footer.min.js"
                 }
             }
         },
+
         imagemin: {
             dynamic: {                         // Another target
                 files: [{
@@ -107,12 +150,9 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks("grunt-sass");
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-concat");
-    grunt.loadNpmTasks("grunt-contrib-uglify");
-    grunt.loadNpmTasks("grunt-contrib-imagemin");
+    grunt.registerTask("buildJs", ["concat:foundation", "babel", "concat:footer"/*, "uglify:footer"*/]);
 
-    grunt.registerTask("build", ["sass", "concat", /*"uglify:header",*/ "uglify:footer", "imagemin"]);
+    grunt.registerTask("build", ["sass:dev", "postcss:autoprefixer", "buildJs"]);
+
     grunt.registerTask("default", ["build", "watch"]);
 };

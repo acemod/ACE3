@@ -2,6 +2,7 @@ _site/
 _theme_packages/
 _drafts/
 .jekyll-metadata
+.tmp/
 
 Thumbs.db
 .DS_Store

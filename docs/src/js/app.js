@@ -1,5 +1,3 @@
-jQuery(document).foundation();
-
 jQuery(document).ready(function(){
     var $slider = jQuery(".slider");
     if ($slider.length > 0) {
@@ -21,11 +19,12 @@ jQuery(document).ready(function(){
         });
     }
 
+    var wikiHeader = "#content h2, #content h3, #content h4, #content h5, #content h6";
 
     var $toc = jQuery("#toc");
     if ($toc.length > 0) {
         $toc.toc({
-            headers: "#content h2, #content h3, #content h4, #content h5, #content h6",
+            headers: wikiHeader,
             showEffect: "none"
         });
 
@@ -35,13 +34,14 @@ jQuery(document).ready(function(){
         }
     }
 
-
     var $tables = $("#content table");
     $tables.each(function(index, item) {
         var $table = $(item);
         $table.wrap("<div class=\"table-wrapper\">")
     });
 });
+
+jQuery(document).foundation();
 
 window.app = window.app || {};
 

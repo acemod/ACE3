@@ -4,10 +4,10 @@ layout: compress
 
 {% include _header.html %}
 
-<main>
+<main class="wiki-page">
     {% if page.version %}
     <div class="row">
-        <div class="medium-8 small-12 columns">
+        <div class="small-12 medium-8 columns">
             <span>
             {% if page.version.removed %}
                 {% assign type = 'removed' %}
@@ -47,20 +47,22 @@ layout: compress
     </div>
     {% endif %}
     <div class="row">
-        <aside class="medium-4 medium-push-8 small-12 columns">
-            <div class="row">
-                <div class="large-12 columns">
-                    <p><a href="./"><i class="fa fa-1 fa-chevron-left"></i>&nbsp;&nbsp;Back to overview</a></p>
+        <aside class="small-12 medium-4 columns sticky-container" data-sticky-container>
+            <div class="sticky" data-sticky data-top-anchor="content:top" data-sticky-on="large">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <p><a href="./"><i class="fa fa-1 fa-chevron-left"></i>&nbsp;&nbsp;Back to overview</a></p>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="large-12 columns">
-                    <h2 class="toc-header">Table of contents</h2>
-                    <div id="toc"></div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <h2 class="toc-header">Table of contents</h2>
+                        <nav id="toc" data-magellan></nav>
+                    </div>
                 </div>
             </div>
         </aside>
-        <section class="medium-8 medium-pull-4 small-12 columns">
+        <section class="small-12 medium-8 columns">
             <h1>{{page.title}}</h1>
 
             <div id="content">{{ content }}</div>

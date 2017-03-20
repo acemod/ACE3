@@ -12,15 +12,17 @@ code {
     line-height: 23px;
     margin-bottom: 30px;
     white-space: pre;
-    overflow-x: auto;
-    @media #{$small-only} {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+
+    @include breakpoint(medium up) {
+        overflow-x: auto;
     }
+
     word-break: inherit;
     word-wrap: inherit;
 
-    background: #ffffff;
+    background: $white;
 
     code {
         background-color: transparent;
@@ -38,12 +40,6 @@ code {
         border-right: 1px solid #ddd;
         color: #999;
 
-        /* Stop line numbers being visually selected */
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
         user-select: none;
     }
 
