@@ -27,5 +27,5 @@ if (_target isKindOf "AllVehicles") then {
 
 !(isNull _nozzle ||
     {_engine} ||
-    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
+    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
     {!isNull (_target getVariable [QGVAR(nozzle), objNull])})

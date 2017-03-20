@@ -48,4 +48,6 @@ if (ctrlVisible 3001) then {
     
     ctrlShow [3001, true];
     ctrlShow [3002, true];
+
+    ctrlSetFocus ((uiNamespace getVariable ["ATragMX_Display", displayNull]) displayCtrl 3002);
 };

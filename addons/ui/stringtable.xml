@@ -443,7 +443,7 @@
         <Key ID="STR_ACE_UI_Disabled">
             <English>Cannot modify a forced User Interface element.</English>
             <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
-            <French>Impossible de modifier un élément de l'interface utilisateur forcé</French>
+            <French>Impossible de modifier un élément de l'interface utilisateur forcé.</French>
             <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
             <Japanese>ユーザー インタフェイス要素は変更できません。</Japanese>
             <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>

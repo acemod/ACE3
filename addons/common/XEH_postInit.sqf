@@ -282,11 +282,11 @@ enableCamShake true;
     params ["_newPlayer","_oldPlayer"];
 
     if (alive _newPlayer) then {
-        [_newPlayer] call FUNC(setName);
+        [FUNC(setName), [_newPlayer]] call CBA_fnc_execNextFrame;
     };
 
     if (alive _oldPlayer) then {
-        [_oldPlayer] call FUNC(setName);
+        [FUNC(setName), [_oldPlayer]] call CBA_fnc_execNextFrame;
     };
 }] call CBA_fnc_addPlayerEventHandler;
 

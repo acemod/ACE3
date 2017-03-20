@@ -27,7 +27,7 @@
             <Czech>Žádné zranění na této části těla...</Czech>
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
             <Japanese>怪我をしていない</Japanese>
-            <Korean>이쪽에는 부상이 없습니다...</Korean>
+            <Korean>이 부위에는 부상이 없습니다...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -1562,7 +1562,7 @@
             <Czech>Použít osobní lékárničku (PAK)</Czech>
             <Italian>Usa il pronto soccorso personale</Italian>
             <Japanese>応急処置キットをつかう</Japanese>
-            <Korean>개 응급 키트사용하기</Korean>
+            <Korean>개인 응급 키트사용하기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1632,7 +1632,7 @@
             <Portuguese>Saco para cadáver</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
-            <Korean>시체 운반 부대</Korean>
+            <Korean>시체 가방</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1646,7 +1646,7 @@
             <Portuguese>Um saco para corpos mortos</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1660,7 +1660,7 @@
             <Portuguese>Um saco para corpos mortos.</Portuguese>
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
-            <Korean>시체를 운반할때 쓰는 부대입니다</Korean>
+            <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -2206,7 +2206,7 @@
             <Czech>Je v bolestech</Czech>
             <Portuguese>Ele está com dor</Portuguese>
             <Japanese>彼には痛みがあるようだ</Japanese>
-            <Korean>고통스럽다</Korean>
+            <Korean>통증이 있다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
@@ -2220,7 +2220,7 @@
             <Czech>Nemá žádné bolesti</Czech>
             <Portuguese>Ele não está com dor</Portuguese>
             <Japanese>彼には痛みがないようだ</Japanese>
-            <Korean>고통스럽지 않다</Korean>
+            <Korean>통증이 없다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaged">
             <English>Bandaged</English>
@@ -2444,7 +2444,7 @@
             <Portuguese>Colocar corpo dentro do saco para cadáver</Portuguese>
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
             <Japanese>死体袋に入れる</Japanese>
-            <Korean>시체 운반 부대에 담기</Korean>
+            <Korean>시체 가방에 담기</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -2458,7 +2458,7 @@
             <Portuguese>Colocando corpo dentro do saco para cadáver...</Portuguese>
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
             <Japanese>死体袋へ梱包中・・・</Japanese>
-            <Korean>시체 운반 부대에 담는중...</Korean>
+            <Korean>시체 가방에 담는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2582,7 +2582,7 @@
             <Czech>Velmi lehce raněn</Czech>
             <Portuguese>Muito levemente ferido</Portuguese>
             <Japanese>かなり浅い傷</Japanese>
-            <Korean>부상</Korean>
+            <Korean>매우 가벼운 부상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -2805,7 +2805,7 @@
             <Portuguese>Raspão</Portuguese>
             <Czech>Odřenina</Czech>
             <Japanese>擦り傷</Japanese>
-            <Korean>긁힘</Korean>
+            <Korean>찰과상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -2819,7 +2819,7 @@
             <Portuguese>Raspão leve</Portuguese>
             <Czech>Malá odřenina</Czech>
             <Japanese>小さな擦り傷</Japanese>
-            <Korean>조금 긁힘</Korean>
+            <Korean>소형 찰과상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -2833,7 +2833,7 @@
             <Portuguese>Raspão médio</Portuguese>
             <Czech>Středně velká odřenina</Czech>
             <Japanese>中くらいの擦り傷</Japanese>
-            <Korean>꽤 긁힘</Korean>
+            <Korean>중형 찰과상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
@@ -2847,7 +2847,7 @@
             <Portuguese>Raspão grave</Portuguese>
             <Czech>Velká odřenina</Czech>
             <Japanese>大きな擦り傷</Japanese>
-            <Korean>심하게 긁힘</Korean>
+            <Korean>대형 찰과상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
@@ -2861,7 +2861,7 @@
             <Portuguese>Avulsão</Portuguese>
             <Czech>Avulze</Czech>
             <Japanese>剥離傷</Japanese>
-            <Korean>떨어져나감</Korean>
+            <Korean>열상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
@@ -2875,7 +2875,7 @@
             <Portuguese>Avulsão leve</Portuguese>
             <Czech>Malá avulze</Czech>
             <Japanese>小さな剥離傷</Japanese>
-            <Korean>조금 떨어져나감</Korean>
+            <Korean>소형 열상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
@@ -2889,7 +2889,7 @@
             <Portuguese>Avulsão média</Portuguese>
             <Czech>Střední avulze</Czech>
             <Japanese>中くらいの剥離傷</Japanese>
-            <Korean>꽤 떨어져나감</Korean>
+            <Korean>중형 열상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
@@ -2903,7 +2903,7 @@
             <Portuguese>Avulsão grave</Portuguese>
             <Czech>Velká avulze</Czech>
             <Japanese>大きな剥離傷</Japanese>
-            <Korean>크게 떨어져나감</Korean>
+            <Korean>대형 열상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
@@ -2917,7 +2917,7 @@
             <Portuguese>Contusão</Portuguese>
             <Czech>Modřina</Czech>
             <Japanese>打ち傷</Japanese>
-            <Korean>멍</Korean>
+            <Korean>타박상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
@@ -2931,7 +2931,7 @@
             <Portuguese>Contusão leve</Portuguese>
             <Czech>Malá modřina</Czech>
             <Japanese>小さな打ち傷</Japanese>
-            <Korean>조금 멍듬</Korean>
+            <Korean>소형 타박상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -2945,7 +2945,7 @@
             <Portuguese>Contusão média</Portuguese>
             <Czech>Středně velká modřina</Czech>
             <Japanese>中くらいの打ち傷</Japanese>
-            <Korean>꽤 멍듬</Korean>
+            <Korean>중형 타박상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
@@ -2959,7 +2959,7 @@
             <Portuguese>Contusão grave</Portuguese>
             <Czech>Velká modřina</Czech>
             <Japanese>大きな打撲傷</Japanese>
-            <Korean>심하게 멍듬</Korean>
+            <Korean>대형 타박상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
@@ -2973,7 +2973,7 @@
             <Portuguese>Tecido esmagado</Portuguese>
             <Czech>Zhmoždění měkkých tkání</Czech>
             <Japanese>圧挫傷</Japanese>
-            <Korean>뭉개짐</Korean>
+            <Korean>좌상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
@@ -2987,7 +2987,7 @@
             <Portuguese>Tecido esmagado leve</Portuguese>
             <Czech>Malé zhmoždění měkkých tkání</Czech>
             <Japanese>小さな圧挫傷</Japanese>
-            <Korean>조금 뭉개짐</Korean>
+            <Korean>소형 좌상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
@@ -3001,7 +3001,7 @@
             <Portuguese>Tecido esmagado médio</Portuguese>
             <Czech>Střední zhmoždění měkkých tkání</Czech>
             <Japanese>中くらいの圧挫傷</Japanese>
-            <Korean>꽤 뭉개짐</Korean>
+            <Korean>중형 좌상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
@@ -3015,7 +3015,7 @@
             <Portuguese>Tecido esmagado grave</Portuguese>
             <Czech>Velké zhmoždění měkkých tkání</Czech>
             <Japanese>大きな圧挫傷</Japanese>
-            <Korean>심하게 뭉개짐</Korean>
+            <Korean>대형 좌상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
@@ -3029,7 +3029,7 @@
             <Portuguese>Corte</Portuguese>
             <Czech>Řezná rána</Czech>
             <Japanese>切り傷</Japanese>
-            <Korean>베임</Korean>
+            <Korean>절상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
@@ -3043,7 +3043,7 @@
             <Portuguese>Corte leve</Portuguese>
             <Czech>Malá řezná rána</Czech>
             <Japanese>小さな切り傷</Japanese>
-            <Korean>조금 베임</Korean>
+            <Korean>소형 절상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -3057,7 +3057,7 @@
             <Portuguese>Corte médio</Portuguese>
             <Czech>Střední řezná rána</Czech>
             <Japanese>中くらいの切り傷</Japanese>
-            <Korean>꽤 베임</Korean>
+            <Korean>중형 절상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
@@ -3071,7 +3071,7 @@
             <Portuguese>Corte grave</Portuguese>
             <Czech>Velká řezná rána</Czech>
             <Japanese>大きな切り傷</Japanese>
-            <Korean>심하게 베임</Korean>
+            <Korean>대형 절상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
@@ -3085,7 +3085,7 @@
             <Portuguese>Ruptura</Portuguese>
             <Czech>Tržná rána</Czech>
             <Japanese>裂傷</Japanese>
-            <Korean>찢어짐</Korean>
+            <Korean>창상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
@@ -3099,7 +3099,7 @@
             <Portuguese>Ruptura leve</Portuguese>
             <Czech>Malá tržná rána</Czech>
             <Japanese>小さな裂傷</Japanese>
-            <Korean>조금 찢어짐</Korean>
+            <Korean>소형 창상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
@@ -3113,7 +3113,7 @@
             <Portuguese>Ruptura média</Portuguese>
             <Czech>Střední tržná rána</Czech>
             <Japanese>中くらいの裂傷</Japanese>
-            <Korean>꽤 찢어짐</Korean>
+            <Korean>중형 창상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
@@ -3127,7 +3127,7 @@
             <Portuguese>Ruptura grave</Portuguese>
             <Czech>Velká tržná rána</Czech>
             <Japanese>大きな裂傷</Japanese>
-            <Korean>심하게 찢어짐</Korean>
+            <Korean>대형 창상</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
@@ -3337,7 +3337,7 @@
             <Hungarian>Milyen komplex legyen az orvosi szimuláció?</Hungarian>
             <Italian>Qual'è il livello di simulazione medica?</Italian>
             <Japanese>治療の再現度は？</Japanese>
-            <Korean>치료 시뮬레이션 정도?</Korean>
+            <Korean>의료 시뮬레이션의 수준</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_basic">
             <English>Basic</English>
@@ -3796,7 +3796,7 @@
             <Hungarian>Engedélyezve</Hungarian>
             <Italian>Abilitato per</Italian>
             <Japanese>次を有効化</Japanese>
-            <Korean>다음을 활성화</Korean>
+            <Korean>활성</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -3976,7 +3976,7 @@
             <Hungarian>Csak orvosok</Hungarian>
             <Italian>Solo medici</Italian>
             <Japanese>衛生兵のみ</Japanese>
-            <Korean>오직 의무병만</Korean>
+            <Korean>의무병만</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
             <English>Doctors only</English>
@@ -3990,7 +3990,7 @@
             <Hungarian>Csak doktorok</Hungarian>
             <Italian>Solo dottori</Italian>
             <Japanese>医師のみ</Japanese>
-            <Korean>오직 의사만</Korean>
+            <Korean>의사만</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
@@ -4068,7 +4068,7 @@
             <German>Wo kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kde může být použita osobní lékárnička (PAK)?</Czech>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
-            <French>Où le Kit de Premier Secour peut être utilisé</French>
+            <French>Où le Kit de Premier Secour peut être utilisé ?</French>
             <Hungarian>Hol lehet az elsősegélycsomagot használni?</Hungarian>
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
@@ -4093,7 +4093,7 @@
             <German>Wann kann das Erste-Hilfe-Set verwendet werden?</German>
             <Czech>Kdy může být použita osobní lékárnička?</Czech>
             <Spanish>¿Cuando se puede utilizar el Equipo de primeros auxilios?</Spanish>
-            <French>Quand peut être utilisé le Kit de Premier Secours</French>
+            <French>Quand peut être utilisé le Kit de Premier Secours ?</French>
             <Polish>Po spełnieniu jakich warunków apteczka osobista może zostać zastosowana na pacjencie?</Polish>
             <Hungarian>Mikor lehet az elsősegélycsomagot használni?</Hungarian>
             <Portuguese>Onde o kit de primeiros socorros pode ser utilizado?</Portuguese>
@@ -4110,7 +4110,7 @@
             <German>Überall</German>
             <Czech>Kdekoliv</Czech>
             <Portuguese>Qualquer lugar</Portuguese>
-            <French>PArtout</French>
+            <French>Partout</French>
             <Hungarian>Akárhol</Hungarian>
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
@@ -4456,7 +4456,7 @@
             <German>Aktiviert das Sanitätssystem für Spieler und KI.</German>
             <Czech>Poskytuje zdravotní systém pro hráče a AI.</Czech>
             <Portuguese>Proporciona um sistema médico para jogadores e IA.</Portuguese>
-            <French>Fourni un sytème médical pour les joueurs et les IAs</French>
+            <French>Fourni un sytème médical pour les joueurs et les IA.</French>
             <Hungarian>Egy orvosi rendszert ad játékosok és AI-k számára.</Hungarian>
             <Italian>Fornisce un sistema medico sia per giocatori che IA</Italian>
             <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
@@ -4498,7 +4498,7 @@
             <German>Aufzählung von Einheiten, die als Sanitäter gelten. Werden durch Kommata getrennt.</German>
             <Czech>Seznam osob které budou klasifikovány jako zdravotník, oddělené čárkami.</Czech>
             <Portuguese>Lista dos nomes das unidades que se classificam como médicos, separados por vírgulas.</Portuguese>
-            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule</French>
+            <French>Liste d'unité qui seront listées comme infirmier, séparation par virgule.</French>
             <Hungarian>Azon egységek nevei, melyek orvosként vannak meghatározva, vesszővel elválasztva.</Hungarian>
             <Italian>Lista di nomi unità che verranno classificati come medici, separati da virgole.</Italian>
             <Japanese>衛生兵として設定されるユニット名を一覧で指定でき、コンマで区切りを付けられます。</Japanese>
@@ -4694,7 +4694,7 @@
             <German>Setze medizinische Einrichtung [ACE]</German>
             <Czech>Určit zdravotnické zařízení [ACE]</Czech>
             <Portuguese>Definir instalação médica [ACE]</Portuguese>
-            <French>Définir comme équipement médical [ACE]</French>
+            <French>Définir comme installation médical [ACE]</French>
             <Hungarian>Orvosi létesítmény beállítása [ACE]</Hungarian>
             <Italian>Imposta Struttura Medica [ACE]</Italian>
             <Japanese>医療施設として設定 [ACE]</Japanese>
@@ -4708,7 +4708,7 @@
             <German>Ist eine medizinische Einrichtung</German>
             <Czech>Zdravotnické zařízení</Czech>
             <Portuguese>É uma instalação médica</Portuguese>
-            <French>Est un équipement médical</French>
+            <French>Est une installation médical</French>
             <Hungarian>Orvosi létesítmény-e</Hungarian>
             <Italian>E' Struttura Medica</Italian>
             <Japanese>医療施設として</Japanese>
@@ -4722,7 +4722,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung</German>
             <Czech>Registruje objekt jako zdravotnické zařízení</Czech>
             <Portuguese>Registra um objeto como instalacão médica</Portuguese>
-            <French>Enregistrer un objet comme un équipement médical</French>
+            <French>Enregistrer un objet comme une installation médical</French>
             <Hungarian>Egy objektum orvosi létesítményként való regisztrálása</Hungarian>
             <Italian>Registra un oggetto come struttura medica</Italian>
             <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
@@ -4736,7 +4736,7 @@
             <German>Definiert ein Objekt als medizinische Einrichtung. Hier werden weitere, tiefgreifende Behandlungen ermöglicht. Kann Fahrzeugen oder Gebäuden zugewiesen werden.</German>
             <Czech>Definuje objekt jako zdravotnické zařízení. To umožňuje více pokročilé léčení. Může být použito na budovy nebo na vozidla.</Czech>
             <Portuguese>Define um objeto como instalação médica. Isso permite tratamentos mais avançados. Pode ser utilizado em edifícios e veículos.</Portuguese>
-            <French>Définir un objet comme équipement médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
+            <French>Définir un objet comme installation médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
             <Hungarian>Egy objektumot orvosi létesítményként határoz meg. Ez fejlett ellátási lehetőségeket engedélyez. Használható járműveken és épületeken.</Hungarian>
             <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
             <Japanese>オブジェクトを医療施設として割り当てます。割り当てられた場合、より高度な治療が可能になり、建物と車両へつかえます。</Japanese>
@@ -4882,7 +4882,7 @@
             <Italian>Ritarda il cessate il fuoco dell'IA quando il giocatore è svenuto per motivi medici.</Italian>
             <Czech>Prodleva zastavení palby pro AI, pokud je hráč v bezvědomí ze zdravotních důvodů.</Czech>
             <Portuguese>Atraso durante cessar fogo da AI durante inconsciência médica</Portuguese>
-            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales</French>
+            <French>Délai de cessez le feu pour l'IA pendant que le joueur est inconscient pour des raisons médicales.</French>
             <Russian>Задержка прекращения огня ботами, когда игрок теряет сознание по медицинским причинам.</Russian>
             <Japanese>AI はプレイヤーが医療的な理由で気絶している場合にかぎり、撃つのをためらいます。</Japanese>
             <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
