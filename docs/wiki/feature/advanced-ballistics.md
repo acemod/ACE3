@@ -15,7 +15,7 @@ version:
 ## 1. Overview
 The Advanced Ballistics module improves internal and external ballistics.
 
-## 1.1 Features
+### 1.1 Features
 - Drag modelling based on real-world ballistic coefficients.
 - Ambient air density (air pressure, temperature, humidity) affects drag.
 - Wind affects drag and deflects the trajectory.
