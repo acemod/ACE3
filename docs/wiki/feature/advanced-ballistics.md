@@ -50,7 +50,7 @@ The Advanced Ballistics module improves internal and external ballistics.
 
 ### 2.5 Scopes
 
-### 2.6 Open it in-game
+### 2.6 Open it
 
 #### 2.6.1 User Interface
 
