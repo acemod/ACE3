@@ -7,19 +7,17 @@ PREP(spallTrack);
 
 // * Other */
 PREP(addBlackList);
-PREP(addTrack);
-PREP(drawTraces);
-PREP(removeTrack);
+PREP(dev_addTrack);
+PREP(dev_drawTraces);
 PREP(spallHP);
-PREP(startTracing);
-PREP(stopTracing);
-PREP(trackTrace);
+PREP(dev_startTracing);
+PREP(dev_stopTracing);
+PREP(dev_trackTrace);
 
 // New tracking mechanisms
 PREP(masterPFH);
 PREP(pfhRound);
 PREP(addPfhRound);
-PREP(removePfhRound); // THIS SHOULD ABE USED SPARINGLY
 
 // Explosive Reflection
 PREP(findReflections);
