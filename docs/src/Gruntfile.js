@@ -7,6 +7,7 @@ module.exports = function (grunt) {
         "js/vendor/picturefill/picturefill.js",
         "js/vendor/jquery/jquery.min.js",
         "js/vendor/slick/slick.js",
+        "js/vendor/featherlight/featherlight.min.js",
         "js/vendor/jekyll-toc/jekyll-toc.js"
     ];
 
