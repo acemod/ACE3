@@ -15,18 +15,17 @@ version:
 ## Overview
 
 The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself :
-- Heading (true & magnetic)
+- Heading
 - Wind direction
 - Crosswind
 - Headwind
 - Altitude
-- Pressure trend
 - Barometric pressure
 - Wet bulb temperature
 - Relative humidity in %
 - Density altitude
 - Wind chill
-- Air, water, and snow temperature °F or °C
+- Temperature °C
 - Current, average, and maximum air velocity
 - Time and date
 - User screen 1
