@@ -36,6 +36,8 @@ The Advanced Ballistics module improves internal and external ballistics.
 
 #### 2.1.2 Settings Framework
 
+#### 2.1.3 In-game
+
 ### 2.2 Protractor
 - You need a compatible weapon.
 - Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd>.
