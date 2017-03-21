@@ -28,35 +28,19 @@ The Advanced Ballistics module improves internal and external ballistics.
 - Bullet trace effect for supersonic bullets (light refraction due to air pressure waves).
 - A protractor for quickly measuring the inclination angle.
 
+## 2. Usage
+
 ### 1.2 Enable Advanced Ballistics module
 
 #### 1.2.1 Eden editor
 
 #### 1.2.2 Settings Framework
 
-## 2. Usage
-
-### 2.1 Protractor
+### 2.2 Protractor
 - You need a compatible weapon.
 - Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd>.
 - Red line indicates the current inclination angle in degrees.
 - Protractor will disappear if you lower or holster your weapon.
-
-### 2.2 AtragMx
-
-### 2.3 Kestrel 4500
-
-### 2.4 Range Card
-
-### 2.5 Scopes
-
-### 2.6 Open it
-
-#### 2.6.1 User Interface
-
-#### 2.6.2 Custom Keys
-
-### 2.7 In the inventory 
 
 ## 3. Dependencies
 
