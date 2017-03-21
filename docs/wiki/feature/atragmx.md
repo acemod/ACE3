@@ -57,7 +57,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 **In position:**
 - Update the `Atmsphr` column with the Kestrel and `Done`.
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
+- Update the `Target` column. [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
 - Apply the vertical and horizontal elevations on the scope.
 - Control the breath and press.
  
