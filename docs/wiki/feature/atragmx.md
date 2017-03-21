@@ -24,7 +24,6 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - [Advanced Ballistics module enabled](https://ace3mod.com/wiki/feature/advanced-ballistics.html)
 - [Range Card](https://ace3mod.com/wiki/feature/rangecard.html)
 - [Kestrel 4500](https://ace3mod.com/wiki/feature/kestrel4500.html)
-- [Scopes](https://ace3mod.com/wiki/feature/scopes.html)
 - [Weather](https://ace3mod.com/wiki/feature/weather.html)
 
 
@@ -58,7 +57,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Atmsphr` column with the Kestrel and `Done`.
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
 - Update the `Target` column. [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
-- Apply the vertical and horizontal elevations on the scope.
+- Apply the vertical and horizontal elevations on the [scope](https://ace3mod.com/wiki/feature/scopes.html).
 - Control the breath and press.
  
 ### 3.3 Example with Truing tool
