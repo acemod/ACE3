@@ -18,6 +18,7 @@ version:
 
 Horus ATragMX software considers atmospheric conditions, gun data, ammunition, range, speed and muzzle velocity to calculate precise aiming solutions with "come-up" results – and even accounts for Coriolis and spin drift effects. ATragMX, loaded on a handheld computer made by TDS Recon, is easy to use and lightning-fast. The Recon meets the rigorous MIL-STD-810F military standard for drops, vibration, humidity, altitude and extreme temperatures.
 
+
 ## 2. Requirements
 
 - [Advanced Ballistics module enabled](https://ace3mod.com/wiki/feature/advanced-ballistics.html)
@@ -25,6 +26,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - [Kestrel 4500](https://ace3mod.com/wiki/feature/kestrel4500.html)
 - [Scopes](https://ace3mod.com/wiki/feature/scopes.html)
 - [Weather](https://ace3mod.com/wiki/feature/weather.html)
+
 
 ## 3. Usage
 
@@ -55,7 +57,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 **In position:**
 - Update the `Atmsphr` column with the Kestrel and `Done`.
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30)
+- Update the `Target` column. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
 - Apply the vertical and horizontal elevations on the scope.
 - Control the breath and press.
  
@@ -88,12 +90,14 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Default zero distance" />
+
  
 ## 4. Official Manual and Horus Videos
 
 - [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
 - [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
 - [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
+
  
 ## 5. Dependencies
 
