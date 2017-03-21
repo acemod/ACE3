@@ -73,7 +73,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Add the same `Target Range` in the `SUB` column  and `Calc`.
 - Apply the actual scope elevation in the `Drop` field and `Calc`.
 - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
-- *The Drag Coefficient Table will be automatically updated.*
+- *The Drag Coefficient Table will be automatically updated.* [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" />
