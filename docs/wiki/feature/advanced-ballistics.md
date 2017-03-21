@@ -30,11 +30,11 @@ The Advanced Ballistics module improves internal and external ballistics.
 
 ## 2. Usage
 
-### 1.2 Enable Advanced Ballistics module
+### 2.1 Enable Advanced Ballistics module
 
-#### 1.2.1 Eden editor
+#### 2.1.1 Eden editor
 
-#### 1.2.2 Settings Framework
+#### 2.1.2 Settings Framework
 
 ### 2.2 Protractor
 - You need a compatible weapon.
