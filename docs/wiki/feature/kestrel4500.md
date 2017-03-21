@@ -14,18 +14,27 @@ version:
 
 ## Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
-
-### Sub-feature 2
-Short description of sub-feature 2.
-
+The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself :
+- Heading (true & magnetic)
+- Wind direction
+- Crosswind
+- Headwind
+- Altitude
+- Pressure trend
+- Barometric pressure
+- Wet bulb temperature
+- Relative humidity in %
+- Density altitude
+- Wind chill
+- Air, water, and snow temperature °F or °C
+- Current, average, and maximum air velocity
+- Time and date
+- User screen 1
+- User screen 2
 
 ## Usage
 
-Short overview of how to use the feature, e.g. menu options, key bindings,
-instructions. May not apply to all modules.
-
+[Official Manual](https://github.com/acemod/ACE3/blob/master/extras/K4500_Instruction_Manual_English.pdf)
 
 ## Dependencies
 
