@@ -19,9 +19,15 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 ## 2. Usage
 
 ### 2.1 Opening the range card
+
+#### 2.1.1 User interface
 - Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
 - Select `Equipment`
 - Select `Open Range Card`
+
+#### 2.1.2 Custom key
+
+#### 2.1.3 Inventory
 
 ### 2.2 Using the range card
 - To use this to it's full potential the use of a `Vector 21` is strongly recommended, a `Kestrel 4500` will also help.
