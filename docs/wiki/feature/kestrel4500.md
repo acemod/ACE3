@@ -12,7 +12,7 @@ version:
   patch: 0
 ---
 
-## Overview
+## 1. Overview
 
 The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself :
 - Heading
@@ -31,10 +31,22 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 - User screen 1
 - User screen 2
 
-## Usage
+## 2. Usage
 
-[Official Manual](https://github.com/acemod/ACE3/blob/master/extras/K4500_Instruction_Manual_English.pdf)
+### 2.1 Opening the Kestrel
 
-## Dependencies
+#### 2.1.1 User interface
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
+- Select `Equipment`
+- Select `Open Kestrel 4500`
+
+#### 2.1.2 Custom key
+
+#### 2.1.3 Inventory
+
+## 3. Official Manual
+- [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/K4500_Instruction_Manual_English.pdf)
+
+## 4. Dependencies
 
 {% include dependencies_list.md component="kestrel4500" %}
