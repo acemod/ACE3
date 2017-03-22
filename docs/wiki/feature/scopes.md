@@ -32,6 +32,10 @@ Please not that the following key combinations are ACE3 default key binds.
 - Major adjustment right <kbd>Ctrl</kbd> + <kbd>⇧&nbsp;Shift</kbd> + <kbd>Page Up</kbd>.
 - Major adjustment left <kbd>Ctrl</kbd> + <kbd>⇧&nbsp;Shift</kbd> + <kbd>page Down</kbd>.
 
+### 2.3 Scopes Module
+
+### 2.4 1 Mil = 1 Mil
+
 ## 3. Dependencies
 
 {% include dependencies_list.md component="scopes" %}
