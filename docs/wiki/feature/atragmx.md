@@ -27,9 +27,12 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ## 3. Usage
 
-### 3.1 Open AtragMx
+### 3.1 Opening the AtragMx
 
 #### 3.1.1 User interface
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
+- Select `Equipment`
+- Select `Open AtragMx`
 
 #### 3.1.2 Custom key
 
