@@ -24,7 +24,7 @@ private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(r
 _unit setVariable [QEGVAR(medical,lastTimeUpdated), CBA_missionTime];
 if (_deltaT != 0) then {
     private _change = ([_unit, _deltaT, _syncValues] call EFUNC(medical,getBloodVolumeChange));
-    private _bloodVolume = (_unit getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME]) + _change ;
+    private _bloodVolume = (_unit getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME]) + _change;
     _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
     _unit setVariable  [QEGVAR(medical,bloodVolume), _bloodVolume, _syncValues];
 };
