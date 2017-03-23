@@ -4,13 +4,13 @@
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *  0: Caller <OBJECT>
- *  1: Target <OBJECT>
+ *   0: Caller <OBJECT>
+ *   1: Target <OBJECT>
  * 1: Elapsed Time <NUMBER>
  * 2: Total Time <NUMBER>
  *
  * Return Value:
- * Treatment may continue <BOOL>
+ * May Treatment continue <BOOL>
  *
  * Public: No
  */

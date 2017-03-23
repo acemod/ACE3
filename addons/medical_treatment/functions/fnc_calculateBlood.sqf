@@ -3,7 +3,7 @@
  * Calculate the blood loost and blood volume for a unit. Used from CPR to simulate a heart rate while in cardiac arrest
  *
  * Arguments:
- * 0: The unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * NONE
