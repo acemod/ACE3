@@ -2,13 +2,17 @@
  * Author: Zakant
  * Handels the start of the CPR treatment.
  *
+ * Arguments:
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
+ *
  * Return Value:
  * NONE
  *
  * Public: No
  */
 #include "script_component.hpp"
-params ["_caller", "_target", "_selectionName", "_className", "_items"];
+params ["_caller", "_target"];
 
 _target setVariable [QGVAR(receiveCPR), true, true]; // Target receives CPR
 if(EGVAR(medical,CPRcreatesPulse)) then {
