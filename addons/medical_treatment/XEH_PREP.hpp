@@ -19,7 +19,8 @@ PREP(treatment_success);
 
 PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
-PREP(fnc_treatmentCPR_progress);
+PREP(treatmentCPR_failure);
+PREP(treatmentCPR_progress);
 PREP(treatmentCPR_start);
 PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
