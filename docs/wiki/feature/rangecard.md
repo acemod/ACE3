@@ -20,7 +20,7 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 
 ### 2.1 Opening the range card
 
-#### 2.1.1 User interface
+#### 2.1.1 Interaction Menu
 - Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
 - Select `Equipment`
 - Select `Open Range Card`
