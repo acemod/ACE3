@@ -23,4 +23,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+    class EGVAR(medical,CPRcreatesPulse) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(CPRcreatesPulse);
+        description = CSTRING(CPRcreatesPulse_Description);
+        typeName = "BOOL";
+        value = 1;
+    };
 };
