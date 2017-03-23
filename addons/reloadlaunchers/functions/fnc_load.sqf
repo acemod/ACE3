@@ -9,7 +9,7 @@
  * 3: missile name (String)
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */

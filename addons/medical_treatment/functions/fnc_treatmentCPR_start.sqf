@@ -7,7 +7,7 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */

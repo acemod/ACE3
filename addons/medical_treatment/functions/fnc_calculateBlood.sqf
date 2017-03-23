@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
  *
  * Public: No
  */
