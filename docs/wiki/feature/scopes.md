@@ -34,8 +34,6 @@ Please not that the following key combinations are ACE3 default key binds.
 
 ### 2.3 Scopes Module
 
-### 2.4 1 Mil = 1 Mil
-
 ## 3. Dependencies
 
 {% include dependencies_list.md component="scopes" %}
