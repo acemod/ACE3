@@ -21,6 +21,7 @@ PREP(treatmentBandage);
 PREP(treatmentBandageLocal);
 PREP(treatmentCPR);
 PREP(treatmentCPRLocal);
+PREP(treatmentCPR_start);
 PREP(treatmentFullHeal);
 PREP(treatmentFullHealLocal);
 PREP(treatmentIV);
