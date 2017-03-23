@@ -18,7 +18,7 @@
 params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_caller", "_target"];
 
-// If the patient awakes my mysterious force, no cpr is needed!
+// If the patient awakes by mysterious force, no cpr is needed!
 if(_target call EFUNC(common,isAwake)) exitWith {false};
 if(!(_target getVariable [QEGVAR(medical,inCardiacArrest), false])) exitWith {false};
 
