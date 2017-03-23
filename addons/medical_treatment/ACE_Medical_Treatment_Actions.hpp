@@ -250,7 +250,7 @@ class GVAR(Actions) {
         items[] = {};
         condition = QUOTE(!(_target call EFUNC(common,isAwake)));
         callbackSuccess = QFUNC(treatmentCPR);
-        callbackFailure = "";
+        callbackFailure = QFUNC(treatmentCPR_failure);
         callbackProgress = QUOTE(!([(_this select 0) select 1] call EFUNC(common,isAwake)));
         callbackStart = QFUNC(treatmentCPR_start);
         animationPatient = "";
