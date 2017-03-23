@@ -12,6 +12,7 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 params ["_caller", "_target"];
 
 _target setVariable [QGVAR(receiveCPR), true, true]; // Target receives CPR

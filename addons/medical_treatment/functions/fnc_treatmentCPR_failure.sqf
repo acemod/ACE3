@@ -12,6 +12,7 @@
  * Public: No
  */
 #include "script_component.hpp"
+
 params ["_caller", "_target"];
 
 if(!(_target call EFUNC(common,isAwake)) || {_target getVariable [QEGVAR(medical,inCardiacArrest), false]}) then {
