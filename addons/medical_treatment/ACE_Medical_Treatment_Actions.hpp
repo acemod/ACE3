@@ -248,7 +248,7 @@ class GVAR(Actions) {
         requiredMedic = 0;
         treatmentTime = 15;
         items[] = {};
-        condition = QUOTE(!(_target call EFUNC(common,isAwake)));
+        condition = QUOTE(!(_target call EFUNC(common,isAwake)) && {!(_target getVariable [QQGVAR(receiveCPR),false])});
         callbackSuccess = QFUNC(treatmentCPR);
         callbackFailure = QFUNC(treatmentCPR_failure);
         callbackProgress = QFUNC(treatmentCPR_progress);
