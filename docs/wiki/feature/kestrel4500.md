@@ -35,7 +35,7 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 
 ### 2.1 Opening the Kestrel
 
-#### 2.1.1 User interface
+#### 2.1.1 Interaction Menu
 - Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
 - Select `Equipment`
 - Select `Open Kestrel 4500`
