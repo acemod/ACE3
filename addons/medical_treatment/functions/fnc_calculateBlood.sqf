@@ -1,6 +1,6 @@
 /*
  * Author: Zakant
- * Calculate the blood loost and blood volume for a unit. Used from CPR to simulate a heart rate while in cardiac arrest
+ * Calculate the blood lost and blood volume for a unit. Used from CPR to simulate a heart rate while in cardiac arrest
  *
  * Arguments:
  * 0: Unit <OBJECT>

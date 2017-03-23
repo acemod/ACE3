@@ -1,6 +1,6 @@
 /*
  * Author: Zakant
- * Handels the progress of the CPR treatment.
+ * Handles the progress of the CPR treatment.
  *
  * Arguments:
  * 0: Arguments <ARRAY>

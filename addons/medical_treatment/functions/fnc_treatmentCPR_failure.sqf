@@ -1,6 +1,6 @@
 /*
  * Author: Zakant
- * Handels the failure of the CPR treatment.
+ * Handles the failure of the CPR treatment.
  *
  * Arguments:
  * 0: The medic <OBJECT>
