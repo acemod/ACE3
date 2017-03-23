@@ -49,6 +49,7 @@ PREP(healTime);
 PREP(isBeingCarried);
 PREP(isBeingDragged);
 PREP(onMedicationUsage);
+PREP(calculateBlood);
 
 // items
 PREP(checkItems);
