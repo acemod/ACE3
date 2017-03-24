@@ -41,8 +41,10 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 - Select `Open Kestrel 4500`
 
 #### 2.1.2 Custom key
+- `OPTIONS` / `CONTROLS` / `CONFIGURE ADDONS` / `ACE3 Equipment`
 
 #### 2.1.3 Inventory
+<img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory" />
 
 ## 3. Official Manual
 - [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/K4500_Instruction_Manual_English.pdf)
