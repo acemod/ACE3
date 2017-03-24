@@ -23,13 +23,13 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 - Barometric pressure
 - Wet bulb temperature
 - Relative humidity in %
+- Dewpoint
 - Density altitude
 - Wind chill
 - Temperature °C
-- Current, average, and maximum air velocity
 - Time and date
-- User screen 1
-- User screen 2
+- Minimum, Maximum and Average values
+
 
 ## 2. Usage
 
