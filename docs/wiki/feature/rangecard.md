@@ -16,6 +16,7 @@ version:
 
 Add a range card that updates itself for your weapon and the type of ammo you're using.
 
+
 ## 2. Usage
 
 ### 2.1 Opening the range card
@@ -38,6 +39,7 @@ Add a range card that updates itself for your weapon and the type of ammo you're
 - Move to the `Bullet Drop` column, the drop is in MRADs, you need to compensate for it by adjusting your sight. Example, you want to adjust for a bullet drop of -7.9 MRADs  simply adjust your scope 7.9 MRADs vertically. (check [feature scopes](https://ace3mod.com/wiki/feature/scopes.html) ) for this.
 - Possibility to modify, copy and share the range card between spotter and shooter.
 <img src="{{ site.baseurl }}/img/wiki/feature/rangecard_menu.jpg" width="350" height="350" alt="RangeCard menu" />
+
 
 ## 3. Dependencies
 
