@@ -20,7 +20,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 
 ## 2. Requirement
-- [Advanced Ballistics module enabled](https://ace3mod.com/wiki/feature/advanced-ballistics.html)
+- [Advanced Ballistics module enabled]({{ site.baseurl }}/wiki/feature/advanced-ballistics.html)
 
 
 ## 3. Usage
@@ -36,12 +36,12 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - `OPTIONS` / `CONTROLS` / `CONFIGURE ADDONS` / `ACE3 Equipment`
 
 #### 3.1.3 Inventory
-<img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory" />
+<img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory management" />
 
 ### 3.2 Example with M14 and default 7.62mm 20Rnd Mag
 
 **Start of the mission:**
-- Open the [Range Card](https://ace3mod.com/wiki/feature/rangecard.html) and check the cartridge, the zeroed distance, the rifle twist, the muzzle velocity at 15°C and the bore height.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the zeroed distance, the rifle twist, the muzzle velocity at 15°C and the bore height.
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.png" width="1400" height="600" alt="RangeCard" /> 
 
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
@@ -55,10 +55,10 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Optionally, `Save Gun` and `Done` in the `GunList`.
  
 **In position:**
-- Update the `Atmsphr` column with the [Kestrel 4500](https://ace3mod.com/wiki/feature/kestrel4500.html) and `Done`.
+- Update the `Atmsphr` column with the [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html) and `Done`.
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
-- Update the `Target` column (the [wind arrow](https://ace3mod.com/wiki/feature/weather.html) will also help). [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
-- Apply the vertical and horizontal elevations on the [scope](https://ace3mod.com/wiki/feature/scopes.html).
+- Update the `Target` column (the [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html) will also help). [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
+- Apply the vertical and horizontal elevations on the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Control the breath and press.
  
 ### 3.3 Example with Truing tool
@@ -85,8 +85,8 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.4 Example with overwritten zero distance
 
-- The `Default zero distance` can be overwritten with the [Scopes module](https://ace3mod.com/wiki/feature/scopes.html) or the [Settings Framework](https://ace3mod.com/wiki/framework/settings-framework.html).
-- In this case, the [Range Card](https://ace3mod.com/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
+- The `Default zero distance` can be overwritten with the [Scopes module]({{ site.baseurl }}/wiki/feature/scopes.html) or the [Settings Framework]({{ site.baseurl }}/wiki/framework/settings-framework.html).
+- In this case, the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
 <img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Zero distance 300m" />
@@ -94,7 +94,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
  
 ## 4. Official Manual and Horus Videos
 
-- [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+- [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/manual_Horus_ATrag-v385.pdf)
 - [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
 - [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
 
