@@ -40,7 +40,6 @@ PREP(serverRemoveBody);
 PREP(setCardiacArrest);
 PREP(setDead);
 PREP(setUnconscious);
-PREP(showBloodEffect);
 PREP(transitionSecondChance);
 PREP(updateHeartRate);
 PREP(updatePainSuppress);
