@@ -1,6 +1,7 @@
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation); }] call CBA_fnc_addEventHandler;
+["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
 
 //Handle Deleting Bodies and creating litter on Server:
 if (isServer) then {
@@ -32,7 +33,11 @@ if (!hasInterface) exitWith {};
 }] call EFUNC(common,arithmeticSetSource);
 
 #ifdef DEBUG_MODE_FULL
-    if (hasInterface) then {
+    [{!isNull findDisplay 46}, {
+        INFO("Creating Debug Display");
+        if (!isNull (uiNamespace getVariable [QGVAR(debugControl), controlNull])) then {
+            ctrlDelete (uiNamespace getVariable [QGVAR(debugControl), controlNull]); // cleanup on SP Restart
+        };
         private _ctrl = findDisplay 46 ctrlCreate ["RscText", -1];
         _ctrl ctrlSetPosition [
             safeZoneX,
@@ -51,8 +56,8 @@ if (!hasInterface) exitWith {};
 
             if (!isNull cursorTarget && {cursorTarget isKindOf "CAManBase"}) then {
                 private _targetState = [cursorTarget, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-                drawIcon3D ["", [0.6, 0, 0, 1], cursorTarget modelToWorld (cursorTarget selectionPosition "pelvis"), 0, 0, 0, format ["State: %1", _targetState], 2, 40 * pixelH, "RobotoCondensed"];
+                drawIcon3D ["", [0.6, 0, 0, 1], cursorTarget modelToWorldVisual (cursorTarget selectionPosition "pelvis"), 0, 0, 0, format ["State: %1", _targetState], 2, 40 * pixelH, "RobotoCondensed"];
             };
-        }] call CBA_fnc_addPerFrameHandler;
-    };
+        }, 0 ,[]] call CBA_fnc_addPerFrameHandler;
+    }, []] call CBA_fnc_waitUntilAndExecute;
 #endif

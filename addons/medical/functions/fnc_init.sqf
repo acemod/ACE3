@@ -78,5 +78,6 @@ _unit setVariable [QGVAR(allLogs), [], true];
 
 [{
     params ["_unit"];
+    TRACE_2("Unit Init",_unit,local _unit);
     [QGVAR(initialized), [_unit]] call CBA_fnc_localEvent;
-}, [_unit], 0.5, 0.1] call CBA_fnc_waitAndExecute;
+}, [_unit], 0.5] call CBA_fnc_waitAndExecute;
