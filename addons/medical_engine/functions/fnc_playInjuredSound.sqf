@@ -22,7 +22,7 @@
 #define TIME_OUT_MOAN 5
 
 params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]]];
-TRACE_3("",_unit,_type,_severity);
+// TRACE_3("",_unit,_type,_severity);
 
 if (!local _unit) exitWith {
     ERROR("Unit not local or null");
