@@ -22,6 +22,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 ## 2. Requirement
 - [Advanced Ballistics module enabled](https://ace3mod.com/wiki/feature/advanced-ballistics.html)
 
+
 ## 3. Usage
 
 ### 3.1 Opening the AtragMx
@@ -88,7 +89,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - In this case, the [Range Card](https://ace3mod.com/wiki/feature/rangecard.html) will be automatically updated, NOT the AtragMx.
 - Open the `Gun` column, check and update the `Zero Range` and `Done`.
  
-<img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Default zero distance" />
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Zero distance 300m" />
 
  
 ## 4. Official Manual and Horus Videos
@@ -96,6 +97,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
 - [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
 - [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
+
 
 ## 5. Dependencies
 
