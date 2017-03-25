@@ -9,7 +9,7 @@ order: 3
 
 Name | Responsibilities
 --- | ---
-[bux](https://github.com/bux578){:target="_blank"} | Scripting, Testing
+[bux](https://github.com/bux){:target="_blank"} | Scripting, Testing
 [Felix Wiegand](https://github.com/koffeinflummi){:target="_blank"} | Scripting, Model Import
 [Glowbal](https://github.com/glowbal){:target="_blank"} | Scripting, UI
 [NouberNou](https://github.com/Noubernou){:target="_blank"} | Coding, Modeling, Performance, SME
