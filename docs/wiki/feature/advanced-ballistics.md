@@ -28,6 +28,7 @@ The Advanced Ballistics module improves internal and external ballistics.
 - Bullet trace effect for supersonic bullets (light refraction due to air pressure waves).
 - A protractor for quickly measuring the inclination angle.
 
+
 ## 2. Usage
 
 ### 2.1 Enabling Advanced Ballistics
@@ -47,6 +48,7 @@ The Advanced Ballistics module improves internal and external ballistics.
 - Press <kbd>Ctrl</kbd>+<kbd>⇧&nbsp;Shift</kbd>+<kbd>K</kbd>.
 - Red line indicates the current inclination angle in degrees.
 - Protractor will disappear if you lower or holster your weapon.
+
 
 ## 3. Dependencies
 
