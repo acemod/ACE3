@@ -17,6 +17,7 @@ version:
 ### Sniper Scope Adjustment
 Allows snipers to adjust their scopes horizontally and vertically in mils.
 
+
 ## 2. Usage
 
 ### 2.1 Adjusting your scope vertically
@@ -34,6 +35,7 @@ Please not that the following key combinations are ACE3 default key binds.
 
 ### 2.3 Scopes Module
 <img src="{{ site.baseurl }}/img/wiki/feature/scope_module.jpg" width="799" height="620" alt="ScopeModule" />
+
 
 ## 3. Dependencies
 
