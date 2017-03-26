@@ -45,20 +45,6 @@ def find_bi_tools():
     else:
         raise Exception("BadTools","Arma 3 Tools are not installed correctly or the P: drive needs to be created.")
 
-def buildCompatFolder(folderName, copyFileNames):
-    compatRelease_dir = os.path.join(release_dir, folderName)
-    if os.path.exists(compatRelease_dir):
-        shutil.rmtree(compatRelease_dir)
-    os.makedirs(compatRelease_dir)
-    os.makedirs(os.path.join(compatRelease_dir, "addons"))
-    print("Adding files for folder {}".format(folderName))
-    for copyFileName in copyFileNames:
-        for file in os.listdir(ace_optionals_dir):
-            if fnmatch.fnmatch(file, copyFileName):
-                print("    Copying: {}".format(file))
-                shutil.copyfile(os.path.join(ace_optionals_dir, file), os.path.join(compatRelease_dir, "addons", file))
-
-    return compatRelease_dir
 
 def publishFolder(folder,modID,changeNotes):
     cmd = [publisherTool_path, "update", "/id:{}".format(modID), "/changeNoteFile:{}".format(changeNotes), "/path:{}".format(folder)]
@@ -105,30 +91,26 @@ def main(argv):
             return 0
 
 
-            
+
     #ACE Main - http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
     # Note: command line publisher doesn't like our file structure, just upload this one manually
 
-    
-    
+
+
     #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
-    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
-    publishFolder(folder, "773125288", changelog_path)
-    
+
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_usf3"), "773125288", changelog_path)
+
     #RHS Compat Russians - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
-    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
-    publishFolder(folder, "773131200", changelog_path)
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_afrf3"), "773131200", changelog_path)
 
     #RHS Compat GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
-    folder = buildCompatFolder("@ace_compat_rhs_gref3", ["ace_compat_rhs_gref3.*"])
-    publishFolder(folder, "884966711", changelog_path)
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_rhs_gref3"), "884966711", changelog_path)
 
     #ADR97 (p90)- http://steamcommunity.com/sharedfiles/filedetails/?id=773136286
-    folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])
-    publishFolder(folder, "773136286", changelog_path)
+    publishFolder(os.path.join(ace_optionals_dir,"@ace_compat_adr_97"), "773136286", changelog_path)
 
 
 
 if __name__ == "__main__":
     main(sys.argv)
-
