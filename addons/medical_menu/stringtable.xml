@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -305,7 +305,7 @@
             <German>Setze Status auf der Triagekarte</German>
             <Russian>Сортировка</Russian>
             <Spanish>Seleccionar estado de Triage</Spanish>
-            <French>Selectioner l'état de triage</French>
+            <French>Sélectionner l'état de triage</French>
             <Polish>Wybierz priorytet</Polish>
             <Portuguese>Selecionar estado de triagem</Portuguese>
             <Czech>Vybrat prioritu</Czech>
@@ -318,7 +318,7 @@
             <German>Wähle Kopf</German>
             <Russian>Выбрать голову</Russian>
             <Spanish>Seleccionar Cabeza</Spanish>
-            <French>Selectioner la tête</French>
+            <French>Sélectionner la tête</French>
             <Polish>Wybierz głowę</Polish>
             <Portuguese>Selecionar Cabeça</Portuguese>
             <Czech>Vybrat Hlavu</Czech>
@@ -331,7 +331,7 @@
             <German>Wähle Torso</German>
             <Russian>Выбрать торс</Russian>
             <Spanish>Seleccionar Torso</Spanish>
-            <French>Selectioner le torse</French>
+            <French>Sélectionner le torse</French>
             <Polish>Wybierz tors</Polish>
             <Portuguese>Selecionar Torso</Portuguese>
             <Czech>Vybrat Trup</Czech>
@@ -344,7 +344,7 @@
             <German>Wähle linken Arm</German>
             <Russian>Выбрать левую руку</Russian>
             <Spanish>Seleccionar Brazo Izquierdo</Spanish>
-            <French>Selectioner le bras gauche</French>
+            <French>Sélectionner le bras gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
             <Portuguese>Selecionar Braço Esquerdo</Portuguese>
             <Czech>Vybrat Levou ruku</Czech>
@@ -357,7 +357,7 @@
             <German>Wähle rechten Arm</German>
             <Russian>Выбрать правую руку</Russian>
             <Spanish>Seleccionar Brazo Derecho</Spanish>
-            <French>Selectioner le bras droit</French>
+            <French>Sélectionner le bras droit</French>
             <Polish>Wybierz prawą rękę</Polish>
             <Portuguese>Selecionar Braço Direito</Portuguese>
             <Czech>Vybrat Pravou ruku</Czech>
@@ -370,7 +370,7 @@
             <German>Wähle linkes Bein</German>
             <Russian>Выбрать левую ногу</Russian>
             <Spanish>Seleccionar Pierna Izquierda</Spanish>
-            <French>Selectioner la jambe gauche</French>
+            <French>Sélectionner la jambe gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
             <Portuguese>Selecionar Perna Esquerda</Portuguese>
             <Czech>Vybrat Levou nohu</Czech>
@@ -383,7 +383,7 @@
             <German>Wähle rechtes Bein</German>
             <Russian>Выбрать правую ногу</Russian>
             <Spanish>Seleccionar Pierna Derecha</Spanish>
-            <French>Selectioner la jambe droite</French>
+            <French>Sélectionner la jambe droite</French>
             <Polish>Wybierz prawą nogę</Polish>
             <Portuguese>Selecionar Perna Direita</Portuguese>
             <Czech>Vybrat Pravou nohu</Czech>
