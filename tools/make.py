@@ -436,7 +436,7 @@ def cleanup_optionals(mod):
 
             try:
                 file_name = "{}{}.pbo".format(pbo_name_prefix,dir_name)
-                folder= "{}{}".format(pbo_name_prefix,dir_name)
+                folder= "@{}{}".format(pbo_name_prefix,dir_name)
                 src_file_path = os.path.join(release_dir, project, "addons", file_name)
                 dst_file_path = os.path.join(release_dir, project, "optionals",folder,"addons",file_name)
 
