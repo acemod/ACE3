@@ -146,7 +146,7 @@
             <Spanish>Transfundir salino</Spanish>
             <Czech>Transfúze fyziologického roztoku</Czech>
             <Polish>Przetocz sól fizjologiczną</Polish>
-            <French>Transfuser (liquide physiologique)</French>
+            <French>Transfuser (saline)</French>
             <Russian>Перелить физраствор</Russian>
             <Hungarian>Infúzió (sós víz)</Hungarian>
             <Italian>Trasfusione di soluzione salina</Italian>
@@ -341,7 +341,7 @@
             <Spanish>Transfusión de salino...</Spanish>
             <Czech>Probíha transfúze fyziologického roztoku...</Czech>
             <Polish>Przetaczanie soli fizjologicznej...</Polish>
-            <French>Transfusion (liquide physiologique)...</French>
+            <French>Transfusion (solution saline)...</French>
             <Russian>Переливание физраствора...</Russian>
             <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
@@ -454,7 +454,7 @@
             <Russian>QuikClot</Russian>
             <Polish>Opatrunek QuikClot</Polish>
             <Czech>QuikClot</Czech>
-            <French>Compresse hydrophile</French>
+            <French>Bandage hémostatique</French>
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
@@ -691,7 +691,7 @@
             <Spanish>Dar Salino IV (1000ml)</Spanish>
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (1000ml)</Polish>
-            <French>Liquide physiologique en IV (1000ml)</French>
+            <French>Solution saline en IV (1000ml)</French>
             <Czech>Podaz fyz. roztok (1000ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
@@ -705,7 +705,7 @@
             <Spanish>Dar Salino IV (500ml)</Spanish>
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (500ml)</Polish>
-            <French>Liquide physiologique en IV (500ml)</French>
+            <French>Solution saline en IV (500ml)</French>
             <Czech>Podaz fyz. roztok (500ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (500ml)</Italian>
@@ -719,7 +719,7 @@
             <Spanish>Dar Salino IV (250ml)</Spanish>
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <Polish>Podaj sól fizjologiczną IV (250ml)</Polish>
-            <French>Liquide physiologique en IV (250ml)</French>
+            <French>Solution saline en IV (250ml)</French>
             <Czech>Podaz fyz. roztok (250ml)</Czech>
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (250ml)</Italian>
@@ -1012,7 +1012,7 @@
             <German>Bandage (Elastisch)</German>
             <Russian>Повязка (давящая)</Russian>
             <Spanish>Vendaje (Elástico)</Spanish>
-            <French>Bandage (Élastique)</French>
+            <French>Bande compressive</French>
             <Polish>Bandaż (elastyczny)</Polish>
             <Czech>Obvaz (Elastický)</Czech>
             <Hungarian>Rögzító kötszer</Hungarian>
@@ -1400,7 +1400,7 @@
             <English>Saline IV (1000ml)</English>
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <Spanish>Salino IV (1000ml)</Spanish>
-            <French>Liquide physiologique IV (1000ml)</French>
+            <French>Solution saline IV (1000ml)</French>
             <Polish>Sól fizjologiczna IV (1000ml)</Polish>
             <German>Kochsalzlösung (1000ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (1000ml)</Hungarian>
@@ -1414,7 +1414,7 @@
             <English>Saline IV, for restoring a patients blood</English>
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <Spanish>Solución salina intravenosa, para restaurar el volumen sanguíneo</Spanish>
-            <French>Liquide physiologique, pour rétablir temporairement la tension artérielle</French>
+            <French>Solution saline, pour rétablir temporairement la tension artérielle</French>
             <Polish>Używany w medycynie w formie płynu infuzyjnego jako środek nawadniający i uzupełniający niedobór elektrolitów, podawany dożylnie (IV).</Polish>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
             <Italian>Soluzione salina, usata per ripristinare sangue nei pazienti.</Italian>
@@ -1442,7 +1442,7 @@
             <English>Saline IV (500ml)</English>
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <Spanish>Salino IV (500ml)</Spanish>
-            <French>Liquide physiologique IV (500ml)</French>
+            <French>Solution saline IV (500ml)</French>
             <Polish>Sól fizjologiczna IV (500ml)</Polish>
             <German>Kochsalzlösung (500ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (500ml)</Hungarian>
@@ -1456,7 +1456,7 @@
             <English>Saline IV (250ml)</English>
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <Spanish>Salino IV (250ml)</Spanish>
-            <French>Liquide physiologique IV (250ml)</French>
+            <French>Solution saline IV (250ml)</French>
             <Polish>Sól fizjologiczna IV (250ml)</Polish>
             <German>Kochsalzlösung (250ml)</German>
             <Hungarian>0,9%-os sósvíz-infúzió (250ml)</Hungarian>
@@ -1484,7 +1484,7 @@
             <English>QuikClot bandage</English>
             <Russian>Гемостатический пакет QuikClot</Russian>
             <Spanish>Vendaje QuikClot</Spanish>
-            <French>Compresse hydrophile</French>
+            <French>Bandage hémostatique</French>
             <Polish>Proszkowy opatrunek adsorbcyjny przeznaczony do tamowania zagrażających życiu krwawień średniej i dużej intensywności.</Polish>
             <German>Bandage mit Gerinnungsmittel</German>
             <Hungarian>QuikClot kötszer</Hungarian>
