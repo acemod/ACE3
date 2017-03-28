@@ -14,6 +14,9 @@ version:
 
 ## 1. Overview
 
+The ATragMX software considers atmospheric conditions, gun data, ammunition, range, speed and muzzle velocity to calculate precise aiming solutions with "come-up" results – and even accounts for Coriolis and spin drift effects. ATragMX, loaded on a handheld computer made by TDS Recon, is easy to use and lightning-fast. The Recon meets the rigorous MIL-STD-810F military standard for drops, vibration, humidity, altitude and extreme temperatures.
+
+
 The ATragMX features the following:
 
 - Ballistics Calculation
@@ -274,16 +277,34 @@ The ATragMX has a wide variety of options however, not all of them are currently
 List |                                              Description |
 ------ | ----------------------------------------------------- |
 `Accuracy 1st`      | Not in use
-`Muz Vel Table`     | Not in use
-`Drag Coef Table`   | Not in use
+`Muz Vel Table`     | Table for Muzzle Velocity vs. Temperature Interpolation 
+`Drag Coef Table`   | Table for C1 Ballistic Coefficient vs. Distance Interpolation
 `Target Speed Est`  | Calculator for Target Speed
 `Target Range Est`  | Calculator for Target Range
-`Truing Drop`       | Not in use
+`Truing Drop`       | Truing Drop Calculator
 `Show Coriolis`     | Toggles Data for Coriolis on Home Screen (Target)
 `Set Clicks`        | Clicks interval configuration
 `Gun Note`          | Not in use
 
 <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX11.jpg" alt="Options" />
+
+##### <b>Muz Vel Table</b>
+
+Although ammunition manufacturers often specify the muzzle velocity (MV) of their factory loads, it is a well-known fact that MV varies with temperature changes due to its
+effect on powder burn rates. The ATragMX ballistic calculator accommodates these variations by allowing entry of corresponding temperature/MV pairs in a numeric table. With
+the aid of this data table, the ballistic calculator is able to automatically interpret the closest MV for the currently measured air temperature. A temperature lying between any
+two temperature/MV pairs is interpolated proportionally between the corresponding MVs, whilst MVs for air temperatures beyond the lowest and highest table entries are extrapolated by extending the value slope of the last two
+points of the table.
+
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX16.jpg" alt="Muz Vel Table" />
+
+##### <b>Drag Coef Table</b>
+
+As temperature effects muzzle velocity, bullet speed affects its ballistic coefficient (C1). In long distance flight, this C1 change will have increasing effect on drop as the bullet
+slows down. This change must be compensated for to more accurately calculate the bullet’s true flight. Since we cannot reliably know a bullet’s speed at any given point, we can
+approximate its speed by knowing how far it has flown. Therefore, C1 can be adjusted by a function of distance. The C1/distance interpolation table works much like the MV/temperature table.
+
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX17.jpg" alt="Drag Coef Table" />
 
 ##### <b>Target Speed Est</b>
 
@@ -298,6 +319,17 @@ To aid in calculating target speed, ATragMX has a timer option. Navigate to the 
 The range to a target, the target’s size, and how large the target looks through a scope form a three way relationship. Knowing any two of these values will allow you to calculate the third. For instance, the most common calculation is knowing a target’s size and how much the target subtends against the reticle markings, giving you range to target. However, it is also true that knowing the range to target and the target’s image size will allow you to calculate the target’s size. Enter which ever values you know in their appropriate boxes and tap on the “!” button in front of the field you wish to calculate and ATrag will figure out that answer. Target size can be entered as Inches, Feet, Centimeters and Meters. Image Size can be entered as MILs, TMOA, and IOA. Angle will account for up and down angle viewing which would change the range calculation. Clicking Done will export the range and angle fields to the main screen.
 
 <img src="{{ site.baseurl }}/img/wiki/feature/ATragMX13.jpg" alt="Target Range Est" />
+
+##### <b>Truing Drop Calculator</b>
+
+The Truing Drop screen is set up to guide you through the Truing process. The Zero range and drop units are
+displayed at the top of the screen. You can toggle this screen to either SUPER-sonic mode or SUB-sonic
+mode by selecting the radio buttons. The ATragMX will automatically set the corresponding fields active or inactive depending on mode selection. The fields `MV` and `BC` are being used to
+calculate the current `Drop` for target range. Initially, TR for supersonic is set to the range where the bullet slows to trans-sonic. For sub-sonic, TR is set to 200
+meters/yards beyond where the bullet drops below speed of sound. It is suggested that you use these distances (or as close as you can) to gather the real impact
+data. If you cannot, then change the TR field to the distance where the data is gathered. Then tap the `Calc` button to get new drop results.
+
+<img src="{{ site.baseurl }}/img/wiki/feature/ATragMX18.jpg" alt="Truing Drop Calculator" />
 
 ##### <b>Show Coriolis</b>
 
@@ -333,27 +365,67 @@ Element |                                              Description |
 `Cur`      | Current solution (Current after Update)
 
 
-## 3. Day to Day Setup
+## 3 Examples
 
-For many the ATragMX may seem like a complicated tool, but things are much simpler than you might think since the ATragMX takes all of those complicated calculations and turns them into two numbers that will make you hit your target.
+### 3.1 Example with M14 and default 7.62mm 20Rnd Mag
 
-The following steps will have the shooter ready to fire in less than 1 minute. (It is highly recommended that you bind the equipment to key bindings)
+**Start of the mission:**
+ - Open the Range Card and check the cartridge, the zeroed distance, the rifle twist, the muzzle velocity at 15°C and the bore height.
 
-Number |                                              Description |
------- | ----------------------------------------------------- |
-`1`           | Open your `Kestrel 4500` and navigate to `User Screen 2`, now close your `Kestrel 4500` and then Show your `Kestrel 4500`.
-`2`           | Open your `ATragMX` and select your Gun/Ammo from the `GunList`.
-`3`           | Fill out the `Atmospheric and Environmental Data Screen` with the data provided by your `Kestrel 4500`.
-<b>Note</b>   | The Data you just filled in will provide a base for all your shots. You should only revisit these parameters if you have traveled a great distance.
-`4`           | Open the Wind Indicator and check what direction the wind is coming from.
-`5`           | Open your `Kestrel 4500` and navigate to `HEADWIND` or `CROSSWIND` depending on wind direction, now close your `Kestrel 4500` and then Show your `Kestrel 4500`.
-`6`           | Open your `ATragMX`, select the `Target Data Screen` and fill out `Wind Speed (m/s)` and `Wind Direction (clock)`.
-`7`           | Use your `Vector` to transfer `Dir of Fire (deg from N)`, `Inclination Angle` and `Target Range`.
-`8`           | Adjust your scope according to the ATragMX and fire.
-<b>Note</b>   | Always keep an eye on the Wind Speed and Wind Direction.
+<img src="{{ site.baseurl }}/img/wiki/feature/atragmx1.png" width="1400" height="600" alt="RangeCard" /> 
 
+ - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. (cf manual, p 15)
+ - `Open Gun` the 7.62x51mm M80 in the `GunList`. (cf manual, p 25)
+ - Select `E` (English unit) at the top right. (cf manual, p 10)
+ - Open the `Gun` column, check and update the `Bore`, the `Rifle Twist` and `Done`.
+ - Select `M` (Metric unit) at the top right.
+ - Open the `Gun` column, check and update the `Muzzle Velocity`, the `Zero Range` and `Done`. 
+ - *The Muzzle Velocity Table will be automatically updated.* (cf manual, p 22)
+ - Optionally, `Save Gun` and `Done` in the `GunList`.
+ 
+**In position:**
+ - Update the `Atmsphr` column with the Kestrel and `Done`. (cf manual, p 15)
+ - *Check the new `Muzzle Velocity` in the `Gun` column.*
+ - Update the `Target` column. (cf manual, p 16, 30, 32, 33)
+ - Apply the vertical and horizontal elevations on the scope.
+ - Control the breath and press.
+ 
+### 3.2 Example with Truing tool
+ 
+**Start of the mission:**
+ - Select `Drag Coef Table` in the `Options` menu. (cf manual, p 22)
+ - Add the `ZR` and the `C1` (`Gun` column) in the table and `Done`.
+  
+**In position:**
+ - Open the `Truing Drop` in the `Options` menu. (cf manual, p 23)
+ - Add the actual `Target Range` in the `SUPER` column and `Calc`.
+ - Add the same `Target Range` in the `SUB` column  and `Calc`.
+ - Apply the actual scope elevation in the `Drop` field and `Calc`.
+ - `Accept` the new `C1`, `Gun` column and `Elev` are updated.
+ - *The Drag Coefficient Table will be automatically updated.*
+ - Optionally, `Save Gun` and `Done` in the `GunList`.
+ 
+ <img src="{{ site.baseurl }}/img/wiki/feature/atragmx2.png" width="1127" height="600" alt="Calculation" />
+ 
+ - If a new `Target Range` is applied in the `Target` column, select `Drag Coef Table` in the `Options` menu and `Done`.
+ - The ballistic coefficient `C1` and the elevation `Elev` will be recalculated.
+ 
+ <img src="{{ site.baseurl }}/img/wiki/feature/atragmx3.png" width="1123" height="600" alt="Interpolation" />
 
+### 3.3 Example with overwritten zero distance
 
-## Dependencies
+ - The `Default zero distance` can be overwritten with the `Scopes module` or the `serverconfig.hpp`.
+ - In this case, the Range Card will be automatically updated, NOT the AtragMx.
+ - Open the `Gun` column, check and update the `Zero Range` and `Done`.
+ 
+ <img src="{{ site.baseurl }}/img/wiki/feature/atragmx4.png" width="1400" height="600" alt="Default zero distance" />
+ 
+## 4. Official Manual and Horus Videos
+ 
+ - [Official Manual](https://github.com/acemod/ACE3/blob/master/extras/manual_Horus_ATrag-v385.pdf)
+ - [Horus video part1](https://www.youtube.com/watch?v=pg6oqT5jVds)
+ - [Horus video part2](https://www.youtube.com/watch?v=7SkRnbwoPmw)
+ 
+## 5. Dependencies
 
 {% include dependencies_list.md component="atragmx" %}
