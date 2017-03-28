@@ -269,17 +269,17 @@ class CfgWeapons {
     class arifle_AKS_base_F: Rifle_Base_F {
         initSpeed = -1.0;
         ACE_barrelTwist = 160.02;
-        ACE_barrelLength = 206.5;
+        ACE_barrelLength = 206.0;
     };
     class arifle_AKM_base_F: Rifle_Base_F {
         initSpeed = -1.0014;
         ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        ACE_barrelLength = 415.0;
     };
     class arifle_AK12_base_F: Rifle_Base_F {
         initSpeed = -1.0014;
         ACE_barrelTwist = 199.898;
-        ACE_barrelLength = 414.02;
+        ACE_barrelLength = 415.0;
     };
     class arifle_CTAR_base_F: Rifle_Base_F {
         initSpeed = -1.0;
