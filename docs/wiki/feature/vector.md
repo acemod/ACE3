@@ -86,6 +86,7 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the Fall of shot and release <kbd>Tab&nbsp;↹</kbd>. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If <kbd>R</kbd> is tapped the height correction values will be displayed (`UP` and `dn`).
 
 ### 2.10 Changing settings (degrees/mils) (meters/feet)
+
 - Tap <kbd>Tab&nbsp;↹</kbd> five times fast. "Unit SEtt" appears briefly.
 - Press <kbd>R</kbd> until the desired units are displayed.
 - Tap <kbd>Tab&nbsp;↹</kbd> five times fast to save the selection.
