@@ -65,7 +65,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Update the `Atmsphr` column with the [Kestrel 4500]({{ site.baseurl }}/wiki/feature/kestrel4500.html) and `Done`.
 - *Check the new `Muzzle Velocity` in the `Gun` column.*
 - Update the `Target` column (the [wind arrow]({{ site.baseurl }}/wiki/feature/weather.html) will also help). [[1]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=16) [[2]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=30) [[3]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=32) [[4]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=33)
-- *The latitude for all common maps can be found in the [ACE3 Github](https://github.com/acemod/ACE3/blob/master/addons/common/functions/fnc_getMapData.sqf).*
+- *The latitude for all common maps can be found in the [ACE3 Github]({{ site.ace.githubUrl }}/blob/master/addons/common/functions/fnc_getMapData.sqf).*
 - Apply the vertical and horizontal elevations on the [scope]({{ site.baseurl }}/wiki/feature/scopes.html).
 - Control the breath and press.
  
@@ -112,7 +112,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Open the `Gun` column, check and update the `Bullet Weight (grains)`, the `Bullet Diam (inches)` and `Done`.
 - Select `M` (Metric unit) at the top right.
 - Open the `Muz Vel Table` in the `Options` menu or click on `MV` in the `Gun` column. 
-- Edit manually the `Muzzle Velocity Table` according with the `Range card` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
+- Edit manually the `Muzzle Velocity Table` according with the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
 - The `C1 coefficient` of the bullet can be found, for example, in the Eden Editor `Config Viewer`:
 > configfile >> "CfgAmmo" >> "Range card cartridge" >> "ACE_ballisticCoefficients"
 
@@ -120,6 +120,9 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
+
+
+For advanced users, the ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, or an another ballistic software at your own convenience.
 
  
 ## 4. Official Manual and Horus Videos
