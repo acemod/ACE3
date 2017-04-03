@@ -54,7 +54,8 @@ deleteVehicle _activeThrowableOld;
     _activeThrowable // projectile
 ]] call CBA_fnc_globalEvent;
 
-_activeThrowable setShotParents [_unit, _unit];
+// Set prime instigator
+[QEGVAR(common,setShotParents), [_activeThrowable, _unit, _unit]] call CBA_fnc_serverEvent;
 
 if (_showHint) then {
     // Show primed hint
