@@ -54,6 +54,8 @@ deleteVehicle _activeThrowableOld;
     _activeThrowable // projectile
 ]] call CBA_fnc_globalEvent;
 
+_activeThrowable setShotParents [_unit, _unit];
+
 if (_showHint) then {
     // Show primed hint
     private _displayNameShort = getText (configFile >> "CfgMagazines" >> _throwableMag >> "displayNameShort");

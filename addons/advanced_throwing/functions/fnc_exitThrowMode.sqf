@@ -32,6 +32,8 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
     // Fix floating for throwables without proper physics (eg. IR Grenade)
     _activeThrowable setVelocity [0, 0, -0.1];
+
+    _activeThrowable setShotParents [_unit, (getShotParents _activeThrowable) select 1];
 };
 
 // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
