@@ -28,7 +28,7 @@ if (GVAR(isSpeedLimiter)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-private _maxSpeed = speed _vehicle; // "max 10" entfernt, da kein Grund mehr für Mindestgeschwindigkeit 10 km/h besteht
+private _maxSpeed = speed _vehicle;
 
 [{
     params ["_args", "_idPFH"];
