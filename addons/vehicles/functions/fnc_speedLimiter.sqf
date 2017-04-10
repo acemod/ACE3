@@ -28,7 +28,7 @@ if (GVAR(isSpeedLimiter)) exitWith {
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 
-private _maxSpeed = speed _vehicle;
+private _maxSpeed = speed _vehicle max 3;
 
 [{
     params ["_args", "_idPFH"];
