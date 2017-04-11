@@ -116,12 +116,13 @@ call FUNC(determineZoom);
 GVAR(hasWatch) = true;
 
 ["loadout", {
-    if (isNull (_this select 0)) exitWith {
+    params ["_unit"];
+    if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
-    } count (assignedItems ACE_player);
-}] call CBA_fnc_addPlayerEventHandler;
+    } count (assignedItems _unit);
+}, true] call CBA_fnc_addPlayerEventHandler;
