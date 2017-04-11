@@ -36,6 +36,6 @@ class ACE_Extensions {
 
 class CfgCommands {
     allowedHTMLLoadURIs[] += {
-        "http://ace3mod.com/version.html"
+        "https://ace3mod.com/version.html"
     };
 };
