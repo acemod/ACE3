@@ -8,13 +8,13 @@ parent: wiki
 mod: acex
 version:
   major: 3
-  minor: 0
+  minor: 2
   patch: 0
 ---
 
 ## 1. Overview
 
-Adds a keybind to toggle volume of game and music. Essentially the same functionality as the [Cyprus Push-to-Hear](http://www.armaholic.com/page.php?id=26932) mod. It's quite useful for when you're briefing in heavy rain, or if you're in an obnoxiously loud car.
+Adds a keybind to toggle volume of game and music. It's quite useful for when you're briefing in heavy rain, or if you're in an obnoxiously loud car.
 
 ## 2. Dependencies
 
