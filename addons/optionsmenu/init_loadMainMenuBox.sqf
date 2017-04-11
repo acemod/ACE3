@@ -27,8 +27,8 @@ if (profileNamespace getVariable [QGVAR(showNewsOnMainMenu), true]) then {
         params ["_control"];
         private _controlsGroup = ctrlParentControlsGroup _control;
 
-        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND) ctrlSetTextColor [1,1,1,0.75];
-        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND_ICON) ctrlSetTextColor [1,1,1,0.75];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND) ctrlSetTextColor [1,1,1,1];
+        (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BACKGROUND_ICON) ctrlSetTextColor [1,1,1,1];
         (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_ICON) ctrlSetTextColor [0,0,0,1];
     };
 
