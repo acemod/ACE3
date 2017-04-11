@@ -1,7 +1,7 @@
 /*
  * Author: Jaynus, NouberNou
- * Starts tracking a round that will frag
- * Should only be called once per round
+ * Starts tracking a round that will frag.
+ * Should only be called once per round.
  *
  * Arguments:
  * 0: Shooter <OBJECT>

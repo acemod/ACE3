@@ -1,6 +1,6 @@
 /*
  * Author: Jaynus, NouberNou
- * Adds a round to the blacklist (will be ignored)
+ * Adds a round to the blacklist (will be ignored).
  *
  * Arguments:
  * 0: Projectile <OBJECT>

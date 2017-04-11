@@ -1,6 +1,6 @@
 /*
  * Author: jaynus
- * Master single PFH abstraction for all rounds being tracked by frag/spall
+ * Master single PFH abstraction for all rounds being tracked by frag/spall.
  *
  * Arguments:
  * None

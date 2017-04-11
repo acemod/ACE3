@@ -1,6 +1,6 @@
 /*
  * Author: Jaynus, NouberNou
- * Server func to create the fragmentation for a round
+ * Server func to create the fragmentation for a round.
  *
  * Arguments:
  * 0: Last Position (ASL) <ARRAY>
