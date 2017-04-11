@@ -22,7 +22,6 @@ class CfgAddons {
     };
 };
 
-
 #include "CfgEventHandlers.hpp"
 #include "gui\define.hpp"
 #include "gui\settingsMenu.hpp"
@@ -34,7 +33,6 @@ class CfgAddons {
 class ACE_Extensions {
     extensions[] += {"ace_clipboard"};
 };
-
 
 class CfgCommands {
     allowedHTMLLoadURIs[] += {
