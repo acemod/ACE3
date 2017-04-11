@@ -143,11 +143,13 @@
             <English>Set Name</English>
             <Polish>Ustaw nazwę</Polish>
             <Japanese>名前設定</Japanese>
+            <German>Définir le nom</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
             <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
             <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
+            <German>Un nom qui sera utilisé pour interagir avec plusieurs slideshows. Par défaut : "Slides"</German>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>

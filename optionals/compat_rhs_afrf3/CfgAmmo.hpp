@@ -3,16 +3,19 @@ class CfgAmmo {
     class BulletBase;
     class B_556x45_Ball;
     class rhs_B_545x39_Ball: B_556x45_Ball {
-        ACE_caliber=5.588;
-        ACE_bulletLength=21.59;
-        ACE_bulletMass=3.42792;
+        ACE_caliber=5.62;
+        ACE_bulletLength=25.5;
+        ACE_bulletMass=3.43;
         ACE_ammoTempMuzzleVelocityShifts[]={-26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19};
         ACE_ballisticCoefficients[]={0.168};
         ACE_velocityBoundaries[]={};
         ACE_standardAtmosphere="ASM";
         ACE_dragModel=7;
-        ACE_muzzleVelocities[]={780, 880, 920};
-        ACE_barrelLengths[]={254.0, 414.02, 508.0};
+        ACE_muzzleVelocities[]={735, 861, 892};
+        ACE_barrelLengths[]={314.0, 415.0, 508.0};
+        //AK-74M Barrel length 415 mm
+        //AK-105 Barrel length 314 mm
+        //7-N-6M
     };
     class rhs_B_545x39_Ball_Tracer_Green: rhs_B_545x39_Ball {
         ACE_caliber=5.588;
@@ -116,9 +119,12 @@ class CfgAmmo {
         // @todo: Provide accurate coefficients for this subsonic ammo
         // In the meantime, prevent it inheriting from its supersonic parent
         // ammoTempMuzzleVelocityShifts scaled down from normal
+        ACE_bulletMass=5.184;
         ACE_ammoTempMuzzleVelocityShifts[]={-8.85,-8.49,-7.61667,-6.70667,-5.66,-4.26667,-2.54667,-0.51,1.98667,5.05667,8.73};
-        ACE_muzzleVelocities[] = {};
-        ACE_barrelLengths[] = {};
+        ACE_ballisticCoefficients[]={0.207};        
+        ACE_muzzleVelocities[]={303};
+        ACE_barrelLengths[]={206.0};
+        //AKS-74UN2 Barrel length 206 mm  
     };
     class rhs_B_762x39_U_Ball: rhs_B_762x39_Ball {
         // @todo: Provide accurate coefficients for this subsonic ammo
