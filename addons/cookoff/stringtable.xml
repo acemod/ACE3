@@ -41,7 +41,7 @@
             <German>Selbstzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
-            <French>Cook-off Caisses Mun</French>
+            <French>Cook-off caisses de munitions</French>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
