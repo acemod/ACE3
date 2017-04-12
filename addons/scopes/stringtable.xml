@@ -83,7 +83,7 @@
             <Japanese>温度の参照</Japanese>
             <Korean>온도 기준</Korean>
             <Polish>Referencyjna temperatura</Polish>
-            <French>Température de référence </French>
+            <French>Température de référence</French>
         </Key>
         <Key ID="STR_ACE_Scopes_zeroReferenceTemperature_description">
             <English>Temperature at which the scope was zeroed</English>
