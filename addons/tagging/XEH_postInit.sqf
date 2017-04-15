@@ -16,7 +16,7 @@ for "_index" from 0 to (_countOptions - 1) do {
             private _model = getText (_cfgClass >> "model");
             if (_model != "") then {
                 private _array = _model splitString "\";
-                GVAR(cacheStaticModels) setVariable [toLower (_array select ((count _array) - 2)), _cfgClass];
+                GVAR(cacheStaticModels) setVariable [(_array select ((count _array) - 1)), true];
             };
         };
     };
@@ -32,7 +32,7 @@ for "_index" from 0 to (_countOptions - 1) do {
             private _model = getText (_cfgClass >> "model");
             if (_model != "") then {
                 private _array = _model splitString "\";
-                GVAR(cacheStaticModels) setVariable [toLower (_array select ((count _array) - 2)), _cfgClass];
+                GVAR(cacheStaticModels) setVariable [(_array select ((count _array) - 1)), true];
             };
         };
     };

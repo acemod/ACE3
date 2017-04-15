@@ -29,7 +29,7 @@ private _listbox = _display displayCtrl 16189;
     if (alive _x) then {
         _listbox lbSetData [_listbox lbAdd (name _x), getPlayerUID _x];
     };
-} forEach allPlayers;
+} forEach ([] call CBA_fnc_players);
 
 _listbox lbSetCurSel 0;
 (_display displayCtrl 16188) cbSetChecked (_logic getVariable ["tpGroup",false]);
