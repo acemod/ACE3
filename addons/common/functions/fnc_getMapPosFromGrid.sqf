@@ -19,7 +19,7 @@
 params ["_inputString", ["_getCenterOfGrid", true]];
 
 if (count GVAR(mapGridData) == 0) exitWith {
-    ACE_LOGERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
+    ERROR("Map has bad data, falling back to BIS_fnc_gridToPos");
     (_this call BIS_fnc_gridToPos) select 0
 };
 

@@ -10,7 +10,7 @@
  * All units in proximity <ARRAY>
  *
  * Example:
- * ["example value"] call ace_module_fnc_functionName
+ * [player, 7] call ace_map_gestures_fnc_getProximityPlayers
  *
  * Public: No
  */
@@ -21,4 +21,5 @@ params ["_unit", "_range"];
 private _proximityPlayers = (getPos _unit) nearEntities [["CAMAnBase"], _range];
 _proximityPlayers deleteAt (_proximityPlayers find _unit);
 _proximityPlayers append (crew vehicle _unit);
-_proximityPlayers
+
+_proximityPlayers select {[_x, false] call EFUNC(common,isPlayer);}

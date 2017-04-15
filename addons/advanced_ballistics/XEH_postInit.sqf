@@ -39,7 +39,7 @@ if (!hasInterface) exitWith {};
     {
         _x params ["_modPBO", "_compatPBO"];
         if ((isClass (configFile >> "CfgPatches" >> _modPBO)) && {!isClass (configFile >> "CfgPatches" >> _compatPBO)}) then {
-            ACE_LOGWARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
+            WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [
         ["RH_acc","ace_compat_rh_acc"],

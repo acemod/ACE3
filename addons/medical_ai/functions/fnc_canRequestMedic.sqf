@@ -19,7 +19,7 @@
 if ([_this] call EFUNC(medical,isMedic) || {vehicle _this != _this}) exitWith {false};
 
 {
-    if ([_x] call EFUNC(medical,isMedic)) exitWith {
+    if ([_x] call EFUNC(medical,isMedic) && {!([_x] call EFUNC(common,isPlayer))}) exitWith {
         _this setVariable [QGVAR(assignedMedic), _x];
         true
     };

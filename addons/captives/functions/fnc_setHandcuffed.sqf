@@ -20,7 +20,7 @@ params ["_unit","_state"];
 TRACE_2("params",_unit,_state);
 
 if (!local _unit) exitWith {
-    ERROR("running setHandcuffed on remote unit");
+    WARNING("running setHandcuffed on remote unit");
 };
 
 if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
@@ -35,7 +35,7 @@ if !(missionNamespace getVariable [QGVAR(captivityEnabled), false]) exitWith {
 };
 
 if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith {
-    ERROR("setHandcuffed: current state same as new");
+    WARNING("setHandcuffed: current state same as new");
 };
 
 if (_state) then {

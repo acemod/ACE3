@@ -17,6 +17,8 @@
 
 params ["_player"];
 
+if (!GVAR(EnableCombatDeafness)) exitWith {};
+
 // Plugs in inventory, putting them in
 _player removeItem "ACE_EarPlugs";
 

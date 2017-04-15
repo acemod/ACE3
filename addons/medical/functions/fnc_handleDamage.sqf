@@ -9,6 +9,7 @@
  * 3: Shooter <OBJECT>
  * 4: Projectile <OBJECT/STRING>
  * 5: HitPointIndex (-1 for structural) <NUMBER>
+ * 6: Shooter <OBJECT>
  *
  * Return Value:
  * Damage To Be Inflicted <NUMBER>
@@ -17,6 +18,7 @@
  */
 #include "script_component.hpp"
 
+_this = _this select [0, 7];
 params ["_unit", "_selection", "_damage", "_shooter", "_projectile", "_hitPointIndex"];
 TRACE_5("ACE_DEBUG: HandleDamage Called",_unit, _selection, _damage, _shooter, _projectile);
 

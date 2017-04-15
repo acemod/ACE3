@@ -31,13 +31,6 @@
                     exceptions[] = {"isNotInside"}; \
                     icon = QPATHTOF(ui\icon_refuel_interact.paa); \
                 }; \
-                class GVAR(Connect) { \
-                    displayName = CSTRING(Connect); \
-                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canConnectNozzle)); \
-                    statement = QUOTE([ARR_2(_player,_target)] call DFUNC(connectNozzle)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOF(ui\icon_refuel_interact.paa); \
-                }; \
                 class GVAR(Return) { \
                     displayName = CSTRING(Return); \
                     condition = QUOTE([ARR_2(_player,_target)] call FUNC(canReturnNozzle)); \
@@ -77,7 +70,7 @@
             class GVAR(PickUpNozzle) { \
                 displayName = CSTRING(TakeNozzle); \
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeNozzle)); \
-                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(TakeNozzle)); \
+                statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(takeNozzle)); \
                 exceptions[] = {"isNotInside"}; \
                 icon = QPATHTOF(ui\icon_refuel_interact.paa); \
             }; \
@@ -151,13 +144,11 @@ class CfgVehicles {
     class House_F: House {};
 
     class House_Small_F: House_F {
-        class EventHandlers;
-
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = ECSTRING(interaction,MainAction);
                 selection = "";
-                distance = 10;
+                distance = 5;
                 condition = "true";
             };
         };
@@ -187,18 +178,13 @@ class CfgVehicles {
 
     class Helicopter: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 1500;
     };
 
     class Helicopter_Base_F: Helicopter {};
-
-    class Helicopter_Base_H: Helicopter_Base_F {
-        GVAR(fuelCapacity) = 3000;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
 
     class Plane: Air {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 16;
     };
 
@@ -208,7 +194,6 @@ class CfgVehicles {
 
     class Ship_F: Ship {
         MACRO_CONNECT_ACTIONS
-        GVAR(fuelCapacity) = 2000;
         GVAR(flowRate) = 4;
     };
 
@@ -322,7 +307,7 @@ class CfgVehicles {
     class I_G_Van_01_fuel_F: Van_01_fuel_base_F {
         transportFuel = 0; //1k
     };
-    
+
     class Tank_F: Tank {
         GVAR(fuelCapacity) = 1200;
     };
@@ -380,19 +365,6 @@ class CfgVehicles {
         GVAR(fuelCapacity) = 830;
     };
 
-    class Heli_Attack_01_base_F: Helicopter_Base_F {
-        // Commanche
-    };
-
-    class Heli_Attack_02_base_F: Helicopter_Base_F {
-        // Mi-48 Kajman
-    };
-
-    class Heli_Light_01_base_F: Helicopter_Base_H {
-        // MH-6
-        GVAR(fuelCapacity) = 242;
-    };
-
     class Heli_Light_02_base_F: Helicopter_Base_H {
         // Ka-60 Kasatka
         GVAR(fuelCapacity) = 1450;
@@ -444,11 +416,6 @@ class CfgVehicles {
     class UAV_02_base_F: UAV {
         // Assuming similar YAHBON-R2
         GVAR(fuelCapacity) = 270;
-    };
-
-    class UGV_01_base_F: Car_F {
-        // Stomper
-        GVAR(fuelCapacity) = 100;
     };
 
     class Plane_Fighter_03_base_F: Plane_Base_F {
@@ -532,10 +499,6 @@ class CfgVehicles {
 
     // Vanilla buildings
     class Land_Fuelstation_Feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{0,0,-0.5}};
@@ -543,10 +506,6 @@ class CfgVehicles {
     };
 
     class Land_fs_feed_F: House_Small_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         transportFuel = 0; //50k
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};

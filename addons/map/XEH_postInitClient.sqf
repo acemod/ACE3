@@ -63,9 +63,9 @@ call FUNC(determineZoom);
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // ACE_LOGINFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1", currentChannel);
             } else {
-                ACE_LOGERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
@@ -116,12 +116,13 @@ call FUNC(determineZoom);
 GVAR(hasWatch) = true;
 
 ["loadout", {
-    if (isNull (_this select 0)) exitWith {
+    params ["_unit"];
+    if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
     };
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
         false
-    } count (assignedItems ACE_player);
-}] call CBA_fnc_addPlayerEventHandler;
+    } count (assignedItems _unit);
+}, true] call CBA_fnc_addPlayerEventHandler;

@@ -259,12 +259,17 @@ class CfgVehicles {
         GVAR(space) = 4;
     };
 
-    // jets
+    // planes (off by default as most are attack jets)
     class Plane: Air {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
 
+    class Plane_Base_F: Plane {};
+    class Plane_Civil_01_base_F: Plane_Base_F { // Tanoa Civilian Prop Plane
+        GVAR(space) = 2;
+        GVAR(hasCargo) = 1;
+    };
     class VTOL_Base_F;
     class VTOL_01_base_F: VTOL_Base_F {
         GVAR(space) = 4;

@@ -18,4 +18,4 @@ params ["_array", "_value"];
 private _min = _array select floor _value;
 private _max = _array select ceil _value;
 
-_min + (_max - _min) * (_value % 1) // return
+linearConversion [0, 1, _value % 1, _min, _max] // return

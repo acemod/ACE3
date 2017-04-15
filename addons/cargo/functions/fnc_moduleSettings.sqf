@@ -25,4 +25,4 @@ if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
 
-ACE_LOGINFO("Cargo Module Initialized.");
+INFO("Cargo Module Initialized.");

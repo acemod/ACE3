@@ -1,3 +1,4 @@
+
 PREP(addDogtagActions);
 PREP(addDogtagItem);
 PREP(bloodType);
@@ -11,3 +12,4 @@ PREP(sendDogtagData);
 PREP(showDogtag);
 PREP(ssn);
 PREP(takeDogtag);
+PREP(disableFactionDogtags);

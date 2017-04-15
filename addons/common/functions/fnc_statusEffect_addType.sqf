@@ -21,8 +21,8 @@
 params [["_name", "", [""]], ["_isGlobal", false, [false]], ["_commonReasonsArray", [], [[]]]];
 TRACE_3("params",_name,_isGlobal,_commonReasonsArray);
 
-if (_name == "") exitWith {ACE_LOGERROR_1("addStatusEffect - Bad Name %1", _this)};
-if (_name in GVAR(statusEffect_Names)) exitWith {ACE_LOGWARNING_1("addStatusEffect - Effect Already Added (note, will not update global bit) %1", _this)};
+if (_name == "") exitWith {ERROR_1("addStatusEffect - Bad Name %1", _this)};
+if (_name in GVAR(statusEffect_Names)) exitWith {WARNING_1("addStatusEffect - Effect Already Added (note, will not update global bit) %1", _this)};
 
 GVAR(statusEffect_Names) pushBack _name;
 GVAR(statusEffect_isGlobal) pushBack _isGlobal;

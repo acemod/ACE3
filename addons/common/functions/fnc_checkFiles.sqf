@@ -17,15 +17,20 @@
 ///////////////
 private _version = getText (configFile >> "CfgPatches" >> "ace_main" >> "versionStr");
 
-ACE_LOGINFO_1("ACE is version %1.",_version);
+INFO_1("ACE is version %1.",_version);
 
 //CBA Versioning check - close main display if using incompatible version
 private _cbaVersionAr = getArray (configFile >> "CfgPatches" >> "cba_main" >> "versionAr");
-private _cbaRequiredAr = (getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA")) select 1;
-ACE_LOGINFO_2("CBA is version %1 [min required %2]",_cbaVersionAr,_cbaRequiredAr);
+private _cbaRequiredAr = getArray (configFile >> "CfgSettings" >> "CBA" >> "Versioning" >> "ACE" >> "dependencies" >> "CBA") select 1;
+
+private _cbaVersionStr = _cbaVersionAr joinString ".";
+private _cbaRequiredStr = _cbaRequiredAr joinString ".";
+
+INFO_2("CBA is version %1 (min required %2)",_cbaVersionStr,_cbaRequiredStr);
+
 if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) then {
-    private _errorMsg = format ["CBA Version [%1] is outdated [required %2]", _cbaVersionAr, _cbaRequiredAr];
-    ACE_LOGERROR(_errorMsg);
+    private _errorMsg = format ["CBA version %1 is outdated (required %2)", _cbaVersionStr, _cbaRequiredStr];
+    ERROR(_errorMsg);
     if (hasInterface) then {
         ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
     };
@@ -40,7 +45,7 @@ _addons = _addons select {_x find "ace_" == 0};
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
         private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
-        ACE_LOGERROR(_errorMsg);
+        ERROR(_errorMsg);
 
         if (hasInterface) then {
             ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
@@ -53,7 +58,7 @@ _addons = _addons select {_x find "ace_" == 0};
 // check dlls
 ///////////////
 if (toLower (productVersion select 6) in ["linux", "osx"]) then {
-    ACE_LOGINFO_2("Operating system does not support DLL file format");
+    INFO_2("Operating system does not support DLL file format");
 } else {
     {
         private _versionEx = _x callExtension "version";
@@ -61,14 +66,14 @@ if (toLower (productVersion select 6) in ["linux", "osx"]) then {
         if (_versionEx == "") then {
             private _errorMsg = format ["Extension %1.dll not installed.", _x];
 
-            ACE_LOGERROR(_errorMsg);
+            ERROR(_errorMsg);
 
             if (hasInterface) then {
                 ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
             };
         } else {
             // Print the current extension version
-            ACE_LOGINFO_2("Extension version: %1: %2",_x,_versionEx);
+            INFO_2("Extension version: %1: %2",_x,_versionEx);
         };
         false
     } count getArray (configFile >> "ACE_Extensions" >> "extensions");
@@ -97,7 +102,7 @@ if (isMultiplayer) then {
             if (_version != GVAR(ServerVersion)) then {
                 private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.", GVAR(ServerVersion), _version];
 
-                ACE_LOGERROR(_errorMsg);
+                ERROR(_errorMsg);
 
                 if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
@@ -108,7 +113,7 @@ if (isMultiplayer) then {
             if !(_addons isEqualTo []) then {
                 _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
-                ACE_LOGERROR(_errorMsg);
+                ERROR(_errorMsg);
 
                 if (hasInterface) then {
                     ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);

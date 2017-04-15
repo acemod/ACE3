@@ -26,6 +26,12 @@ if (_restoreMemory) then {
 };
 GVAR(currentGun) = _gunID;
 
+[false, false] call FUNC(recalculate_muzzle_velocity);
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    false call FUNC(restore_truing_drop);
+    [false, false] call FUNC(recalculate_c1_ballistic_coefficient);
+};
+
 if (_updateDisplay) then {
     lbSetCurSel [6000, GVAR(currentGun)];
 };
@@ -37,6 +43,8 @@ GVAR(currentScopeClickNumber) = 1 max (GVAR(workingMemory) select 8) min 10;
 if (_updateDisplay) then {
     [] call FUNC(update_gun);
     [] call FUNC(update_gun_ammo_data);
+    [] call FUNC(update_muzzle_velocity_data);
+    [] call FUNC(update_c1_ballistic_coefficient_data);
 };
 
 GVAR(elevationOutput) set [GVAR(currentTarget), 0];
@@ -45,6 +53,9 @@ GVAR(windage2Output) set [GVAR(currentTarget), 0];
 GVAR(leadOutput) set [GVAR(currentTarget), 0];
 GVAR(tofOutput) set [GVAR(currentTarget), 0];
 GVAR(velocityOutput) set [GVAR(currentTarget), 0];
+GVAR(verticalCoriolisOutput) set [GVAR(currentTarget), 0];
+GVAR(horizontalCoriolisOutput) set [GVAR(currentTarget), 0];
+GVAR(spinDriftOutput) set [GVAR(currentTarget), 0];
 
 if (_updateDisplay) then {
     [] call FUNC(calculate_target_solution);
