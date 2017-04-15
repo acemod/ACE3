@@ -9,7 +9,8 @@
         2
     ],
     true,
-    FUNC(updateUnits)
+    // This call must have no input argument
+    { [] call FUNC(updateUnits) }
 ] call CBA_Settings_fnc_init;
 
 [
@@ -23,7 +24,8 @@
         0
     ],
     true,
-    FUNC(updateUnits)
+    // This call must have no input argument
+    { [] call FUNC(updateUnits) }
 ] call CBA_Settings_fnc_init;
 
 [
