@@ -37,7 +37,10 @@
         0
     ],
     true,
-    FUNC(transitionCamera)
+    {
+        private _available = [[0,1,2], [1,2], [0], [1], [2]] select _this;
+        [_available, [0,1,2] - _available, true] call FUNC(updateCameraModes);
+    }
 ] call CBA_Settings_fnc_init;
 
 [
@@ -51,5 +54,8 @@
         0
     ],
     true,
-    FUNC(transitionCamera)
+    {
+        private _available = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select _this;
+        [_available, [-2,-1,0,1] - _available, true] call FUNC(updateVisionModes);
+    }
 ] call CBA_Settings_fnc_init;
