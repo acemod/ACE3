@@ -42,8 +42,8 @@ def main():
     try:
         reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
         key = winreg.OpenKey(reg,
-                r"SOFTWARE\Wow6432Node\bohemia interactive\arma 3")
-        armapath = winreg.EnumValue(key,1)[1]
+                r"SOFTWARE\Wow6432Node\Bohemia Interactive Studio\ArmA 3")
+        armapath = winreg.EnumValue(key,0)[1]
     except:
         print("Failed to determine Arma 3 Path.")
         return 1
