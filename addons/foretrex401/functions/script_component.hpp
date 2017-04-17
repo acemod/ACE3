@@ -1,0 +1,1 @@
+#include "\z\ace\addons\foretrex401\script_component.hpp"
