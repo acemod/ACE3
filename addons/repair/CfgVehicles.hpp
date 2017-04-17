@@ -36,9 +36,9 @@ class CfgVehicles {
                 description = CSTRING(enginerSetting_Repair_description);
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
+                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 0;};
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 0;};
                 };
             };
             class engineerSetting_Wheel {
@@ -47,8 +47,8 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };
-                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 0;};
+                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 0;};
                 };
             };
             class repairDamageThreshold {
@@ -69,7 +69,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class keep { name = ECSTRING(common,No); value = 0; default = 1; };
-                    class remove { name = ECSTRING(common,Yes); value = 1; };
+                    class remove { name = ECSTRING(common,Yes); value = 1; default = 0;};
                 };
             };
             class fullRepairLocation {
@@ -77,11 +77,11 @@ class CfgVehicles {
                 description = CSTRING(fullRepairLocation_description);
                 typeName = "NUMBER";
                 class values {
-                    class anywhere { name = CSTRING(useAnywhere); value = 0; };
-                    class vehicle { name = CSTRING(repairVehicleOnly); value = 1; };
+                    class anywhere { name = CSTRING(useAnywhere); value = 0; default = 0;};
+                    class vehicle { name = CSTRING(repairVehicleOnly); value = 1; default = 0;};
                     class facility { name = CSTRING(repairFacilityOnly); value = 2; default = 1; };
-                    class vehicleAndFacility { name = CSTRING(vehicleAndFacility); value = 3; };
-                    class disabled { name = ECSTRING(common,Disabled); value = 4;};
+                    class vehicleAndFacility { name = CSTRING(vehicleAndFacility); value = 3;default = 0;};
+                    class disabled { name = ECSTRING(common,Disabled); value = 4;default = 0;};
                 };
             };
             class engineerSetting_fullRepair {
@@ -89,8 +89,8 @@ class CfgVehicles {
                 description = CSTRING(engineerSetting_fullRepair_description);
                 typeName = "NUMBER";
                 class values {
-                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
-                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
+                    class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 0;};
+                    class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 0;};
                     class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
                 };
             };
@@ -106,7 +106,7 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 class values {
                     class None { name = "None"; value = 0;  default = 1;};
-                    class ToolKit { name = "ToolKit"; value = 1; };
+                    class ToolKit { name = "ToolKit"; value = 1; default = 0;};
                 };
             };
         };
@@ -143,6 +143,7 @@ class CfgVehicles {
                     class none {
                         name = CSTRING(AssignEngineerRole_role_none);
                         value = 0;
+						default = 0;
                     };
                     class medic {
                         name = CSTRING(AssignEngineerRole_role_engineer);
@@ -152,6 +153,7 @@ class CfgVehicles {
                     class doctor {
                         name = CSTRING(AssignEngineerRole_role_specialist);
                         value = 2;
+						default = 0;
                     };
                 };
             };
@@ -187,6 +189,7 @@ class CfgVehicles {
                     class none {
                         name = ECSTRING(common,No);
                         value = 0;
+						default = 0;
                     };
                     class isVehicle {
                         name = ECSTRING(common,Yes);
@@ -219,6 +222,7 @@ class CfgVehicles {
                     class none {
                         name = ECSTRING(common,No);
                         value = 0;
+						default = 0;
                     };
                     class isFacility {
                         name = ECSTRING(common,Yes);
@@ -264,6 +268,7 @@ class CfgVehicles {
                     class Track {
                         name = CSTRING(SpareTrack);
                         value = "ACE_Track";
+						default = 0;
                     };
                 };
             };

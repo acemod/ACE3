@@ -23,10 +23,12 @@ class CfgVehicles {
                     class ForceHide {
                         name = CSTRING(ForceHide);
                         value = 0;
+						default = 0;
                     };
                     class ForceShow {
                         name = CSTRING(ForceShow);
                         value = 1;
+						default = 0;
                     };
                     class ForceShowFadeOnBorder {
                         name = CSTRING(FadeOnBorder);
@@ -35,14 +37,17 @@ class CfgVehicles {
                     class ForceShowOnlyCursor {
                         name = CSTRING(ForceShowOnlyCursor);
                         value = 2;
+						default = 0;
                     };
                     class ForceShowOnlyKeypress {
                         name = CSTRING(ForceShowOnlyKeypress);
                         value = 3;
+						default = 0;
                     };
                     class ForceShowOnlyCursorAndKeypress {
                         name = CSTRING(ForceShowOnlyCursorAndKeypress);
                         value = 4;
+						default = 0;
                     };
                 };
             };
@@ -65,10 +70,12 @@ class CfgVehicles {
                     class ForceHide {
                         name = CSTRING(ForceHide);
                         value = 0;
+						default = 0;
                     };
                     class ForceShow {
                         name = CSTRING(ForceShow);
                         value = 1;
+						default = 0;
                     };
                 };
             };
@@ -85,10 +92,12 @@ class CfgVehicles {
                     class ForceHide {
                         name = CSTRING(ForceHide);
                         value = 0;
+						default = 0;
                     };
                     class ForceShow {
                         name = CSTRING(ForceShow);
                         value = 1;
+						default = 0;
                     };
                 };
             };

@@ -210,6 +210,7 @@ class CfgVehicles {
                     class disable {
                         name = ECSTRING(common,No);
                         value = 0;
+						default = 0;
                     };
                     class Surrender  {
                         name = CSTRING(SurrenderOnly);
@@ -219,6 +220,7 @@ class CfgVehicles {
                     class SurrenderOrNoWeapon  {
                         name = CSTRING(SurrenderOrNoWeapon);
                         value = 2;
+						default = 0;
                     };
                 };
             };
