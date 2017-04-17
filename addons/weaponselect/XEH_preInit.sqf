@@ -6,6 +6,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+PREP(selectRifleFast);
+PREP(selectPistolFast);
+
 // collect frag and other grenades separately
 GVAR(GrenadesAll) = [];
 GVAR(GrenadesFrag) = [];
