@@ -85,7 +85,7 @@ class CfgWeapons {
         ACE_ScopeHeightAboveRail = 3.0;
     };
     class R3F_EOTECH: ItemCore {
-        ACE_ScopeHeightAboveRail = 3.0;
+        ACE_ScopeHeightAboveRail = 3.8;
     };
     class R3F_J4: ItemCore {
         ACE_ScopeHeightAboveRail = 3.0;
@@ -101,6 +101,12 @@ class CfgWeapons {
                 };
             };
         };
+    };
+    class R3F_FELIN: ItemCore {
+        ACE_ScopeHeightAboveRail = 4.2;
+    };
+    class R3F_FELIN_FRF2: ItemCore {
+        ACE_ScopeHeightAboveRail = 4.0;
     };
     class R3F_J8: ItemCore {
         ACE_ScopeHeightAboveRail = 4.4;
@@ -208,6 +214,6 @@ class CfgWeapons {
         };
     };
     class R3F_OB50: ItemCore {
-        ACE_ScopeHeightAboveRail = 4.2;
+        ACE_ScopeHeightAboveRail = 4.0;
     };
 };
