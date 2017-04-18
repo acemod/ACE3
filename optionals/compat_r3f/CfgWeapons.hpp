@@ -81,6 +81,12 @@ class CfgWeapons {
     };   
     class ItemCore;
     class InventoryOpticsItem_Base_F;
+    class R3F_AIMPOINT: ItemCore {
+        ACE_ScopeHeightAboveRail = 3.0;
+    };
+    class R3F_EOTECH: ItemCore {
+        ACE_ScopeHeightAboveRail = 3.0;
+    };
     class R3F_J4: ItemCore {
         ACE_ScopeHeightAboveRail = 3.0;
         ACE_ScopeAdjust_Vertical[] = {-8, 8};
@@ -200,5 +206,8 @@ class CfgWeapons {
                 };
             };
         };
+    };
+    class R3F_OB50: ItemCore {
+        ACE_ScopeHeightAboveRail = 4.2;
     };
 };
