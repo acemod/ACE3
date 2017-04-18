@@ -22,22 +22,22 @@ private _dir = getDir _unit;
 
 _dir = [sin _dir, cos _dir, 0];
 
-private _checkPos0beg = _pos vectorAdd [0, 0, 0.9];
+private _checkPos0beg = _pos vectorAdd [0, 0, 0.9 + GVAR(climbHeight)];
 private _checkPos0end = _checkPos0beg vectorAdd (_dir vectorMultiply 1.3);
 
-private _checkPos1beg = _pos vectorAdd [0, 0, 1.75];
+private _checkPos1beg = _pos vectorAdd [0, 0, 1.75 + GVAR(climbHeight)];
 private _checkPos1end = _checkPos1beg vectorAdd (_dir vectorMultiply 1.3);
 
-private _checkPos2beg = _pos vectorAdd [0.3 * (_dir select 1), 0.3 * -(_dir select 0), 2.0];
+private _checkPos2beg = _pos vectorAdd [0.3 * (_dir select 1), 0.3 * -(_dir select 0), 2.0 + GVAR(climbHeight)];
 private _checkPos2end = _checkPos2beg vectorAdd (_dir vectorMultiply 1.3);
 
-private _checkPos3beg = _pos vectorAdd [-0.2 * (_dir select 1), -0.2 * -(_dir select 0), 2.0];
+private _checkPos3beg = _pos vectorAdd [-0.2 * (_dir select 1), -0.2 * -(_dir select 0), 2.0 + GVAR(climbHeight)];
 private _checkPos3end = _checkPos3beg vectorAdd (_dir vectorMultiply 1.3);
 
-private _checkPos4beg = _pos vectorAdd [0.3 * (_dir select 1), 0.3 * -(_dir select 0), 1.5];
+private _checkPos4beg = _pos vectorAdd [0.3 * (_dir select 1), 0.3 * -(_dir select 0), 1.5 + GVAR(climbHeight)];
 private _checkPos4end = _checkPos4beg vectorAdd (_dir vectorMultiply 1.3);
 
-private _checkPos5beg = _pos vectorAdd [-0.2 * (_dir select 1), -0.2 * -(_dir select 0), 1.5];
+private _checkPos5beg = _pos vectorAdd [-0.2 * (_dir select 1), -0.2 * -(_dir select 0), 1.5 + GVAR(climbHeight)];
 private _checkPos5end = _checkPos5beg vectorAdd (_dir vectorMultiply 1.3);
 
 #ifdef DEBUG_MODE_FULL

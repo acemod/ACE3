@@ -56,5 +56,11 @@
             <Portuguese>Não se pode subir aqui</Portuguese>
             <Japanese>ここは登れない</Japanese>
         </Key>
+        <Key ID="STR_ACE_Movement_ClimbHeight">
+            <English>Climb Height</English>
+        </Key>
+        <Key ID="STR_ACE_Movement_ClimbHeightDesc">
+            <English>Addition of height to default climb height (negative values to decrease, positive to increase).</English>
+        </Key>
     </Package>
 </Project>
