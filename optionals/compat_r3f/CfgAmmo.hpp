@@ -25,7 +25,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[] = {723, 764, 796, 825, 843, 866, 878, 892, 906, 915, 922, 900};
         ACE_barrelLengths[] = {210.82, 238.76, 269.24, 299.72, 330.2, 360.68, 391.16, 419.1, 449.58, 480.06, 508.0, 609.6};
     };
-    class R3F_762x51_Ball: BulletBase { // B_762x51_Ball, AtragMx GunList: 7.62x51mm M80 
+    class R3F_762x51_Ball: BulletBase { // B_762x51_Ball, AtragMx GunList: 7.62x51mm M80
         ACE_caliber = 7.823;
         ACE_bulletLength = 28.956;
         ACE_bulletMass = 9.4608;
