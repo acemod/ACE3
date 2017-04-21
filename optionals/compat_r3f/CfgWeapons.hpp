@@ -3,12 +3,22 @@ class CfgWeapons {
     class Rifle_Base_F;
     class R3F_Famas_F1: Rifle_Base_F {
         ACE_RailHeightAboveBore = 10.6;
-        ACE_barrelTwist = 304.8;
+        ACE_barrelTwist = 304.8; // 12"
         ACE_barrelLength = 488.0;
     };
     class R3F_Famas_surb: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 5.4;
-        ACE_barrelTwist = 304.8;
+        ACE_barrelTwist = 177.8; // 7"
+        ACE_barrelLength = 403.86;
+    };
+    class R3F_Famas_G2: R3F_Famas_F1 {
+        ACE_RailHeightAboveBore = 10.6;
+        ACE_barrelTwist = 228.6; // 9"
+        ACE_barrelLength = 488.0;
+    };
+    class R3F_Famas_felin: R3F_Famas_G2 {
+        ACE_RailHeightAboveBore = 5.4;
+        ACE_barrelTwist = 177.8; // 7"
         ACE_barrelLength = 403.86;
     };
     class R3F_FRF2: Rifle_Base_F {
