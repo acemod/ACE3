@@ -12,6 +12,10 @@ version:
   patch: 0
 ---
 
+<div class="panel callout">
+    <h5>Changes to CfgAISkill were removed in ACE 3.10 (Default AI will now be more skilled)</h5>
+</div>
+
 ## 1. Overview
 
 ### 1.1 Firing in burst mode
