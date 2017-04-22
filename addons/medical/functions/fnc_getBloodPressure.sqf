@@ -9,6 +9,9 @@
  * 0: BloodPressure Low <NUMBER>
  * 1: BloodPressure High <NUMBER>
  *
+ * Example:
+ * [player] call ace_medical_fnc_getBloodPressure
+ *
  * Public: No
  */
 
