@@ -77,7 +77,7 @@ class CfgWeapons {
         ACE_barrelLength = 368.3;
     };
     class R3F_HK416M_HG: R3F_HK416M {};
-    class R3F_HK416S_HG: R3F_HK416M_HG
+    class R3F_HK416S_HG: R3F_HK416M_HG {
         ACE_RailHeightAboveBore = 3.4;
         ACE_barrelTwist = 177.8;
         ACE_barrelLength = 279.4;
