@@ -113,7 +113,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
             _ammo = "#falling";
         } else {
-            if (_receivedDamage > 0.05) then {
+            if (_receivedDamage > 0.15) then {
                 // Assume collision damage.
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
