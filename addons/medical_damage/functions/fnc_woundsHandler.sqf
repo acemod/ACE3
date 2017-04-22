@@ -6,8 +6,7 @@
  * 0: Unit That Was Hit <OBJECT>
  * 1: Name Of Body Part <STRING>
  * 2: Amount Of Damage <NUMBER>
- * 3: Shooter or source of the damage <OBJECT>
- * 4: Type of the damage done <STRING>
+ * 3: Type of the damage done <STRING>
  *
  * Return Value:
  * None
@@ -18,8 +17,8 @@
 
 #define MATH_E 2.71828182846
 
-params ["_unit", "_bodyPart", "_damage", "_shooter", "_typeOfDamage"];
-TRACE_5("start",_unit,_bodyPart,_damage,_shooter,_typeOfDamage);
+params ["_unit", "_bodyPart", "_damage", "_typeOfDamage"];
+TRACE_5("start",_unit,_bodyPart,_damage,_typeOfDamage);
 
 if (_typeOfDamage isEqualTo "") then {
     _typeOfDamage = "unknown";
@@ -27,7 +26,7 @@ if (_typeOfDamage isEqualTo "") then {
 
 // Administration for open wounds and ids
 private _openWounds = _unit getVariable [QEGVAR(medical,openWounds), []];
-private _woundID = _unit getVariable [QEGVAR(medical,lastUniqueWoundID), 1];
+private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];  // Unique wound ids are not used anywhere: ToDo Remove from openWounds array
 
 TRACE_4("extension call",_bodyPart,_damage,_typeOfDamage,_woundID);
 private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _bodyPart, _damage, _typeOfDamage, _woundID];
@@ -109,10 +108,6 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
 
-// Only update if new wounds have been created
-if (count _woundsCreated > 0) then {
-    _unit setVariable [QEGVAR(medical,lastUniqueWoundID), _woundID, true];
-};
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };

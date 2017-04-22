@@ -1,16 +1,18 @@
 /*
-* Author: Ruthberg
-* Check if a unit has stable vitals (required to become conscious)
-*
-* Arguments:
-* 0: The patient <OBJECT>
-*
-* Return Value:
-* Has stable vitals <BOOL>
-*
-* Public: No
-*/
-
+ * Author: Ruthberg
+ * Check if a unit has stable vitals (required to become conscious)
+ *
+ * Arguments:
+ * 0: The patient <OBJECT>
+ *
+ * Return Value:
+ * Has stable vitals <BOOL>
+ *
+ * Example:
+ * [player] call ace_medical_fnc_hasStableVitals
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_unit"];
