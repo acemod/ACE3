@@ -113,10 +113,26 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
             _ammo = "#falling";
         } else {
-            // Assume collision damage.
-            // @todo, find a method for detecting burning damage.
-            _woundedHitPoint = "Body";
-            _ammo = "#collision";
+            if (_receivedDamage > 0.05) then {
+                // Assume collision damage.
+                _woundedHitPoint = "Body";
+                _ammo = "#vehiclecrash";
+            } else {
+                // Probably fire damage:
+                _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
+                _ammo = "#unknown";
+                private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
+                if (_combinedDamage > 0.15) then {
+                    // if the new sum is large enough, reset variable and continue with it added in
+                    _unit setVariable [QGVAR(trivialDamage), 0];
+                    TRACE_2("Using sum of trivialDamage",_receivedDamage,_combinedDamage);
+                    _receivedDamage = _combinedDamage;
+                } else {
+                    // otherwise just save the new sum into the variable and exit
+                    _unit setVariable [QGVAR(trivialDamage), _combinedDamage];
+                    _receivedDamage = 0;
+                };
+            };
         };
     };
 
