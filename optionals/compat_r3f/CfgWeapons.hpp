@@ -135,7 +135,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-8, 8};
         ACE_ScopeAdjust_VerticalIncrement = 0.2;
         ACE_ScopeAdjust_HorizontalIncrement = 0.2;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class J4 {
                     discreteDistance[] = {100};
@@ -156,7 +156,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class J8 {
                     discreteDistance[] = {100};
@@ -171,7 +171,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class J8_MILDOT {
                     discreteDistance[] = {100};
@@ -186,7 +186,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class J10 {
                     discreteDistance[] = {100};
@@ -201,7 +201,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-10, 10};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class J10_MILDOT {
                     discreteDistance[] = {100};
@@ -216,7 +216,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-7, 7};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class ZEISS_MILDOT {
                     discreteDistance[] = {100};
@@ -231,7 +231,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-11, 11};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class NF_MILDOT {
                     discreteDistance[] = {100};
@@ -246,7 +246,7 @@ class CfgWeapons {
         ACE_ScopeAdjust_Horizontal[] = {-9, 9};
         ACE_ScopeAdjust_VerticalIncrement = 0.1;
         ACE_ScopeAdjust_HorizontalIncrement = 0.1;
-        class ItemInfo : InventoryOpticsItem_Base_F {
+        class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
                 class NF42_MILDOT {
                     discreteDistance[] = {100};
