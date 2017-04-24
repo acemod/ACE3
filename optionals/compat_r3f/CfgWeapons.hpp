@@ -9,7 +9,7 @@ class CfgWeapons {
     class R3F_Famas_surb: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 5.4;
         ACE_barrelTwist = 228.6; // 9"
-        ACE_barrelLength = 450.0;
+        ACE_barrelLength = 450.0; // Beretta barrel
     };
     class R3F_Famas_G2: R3F_Famas_F1 {
         ACE_RailHeightAboveBore = 10.6;
@@ -19,27 +19,39 @@ class CfgWeapons {
     class R3F_Famas_felin: R3F_Famas_G2 {
         ACE_RailHeightAboveBore = 5.4;
         ACE_barrelTwist = 177.8; // 7"
-        ACE_barrelLength = 450.0;
+        ACE_barrelLength = 450.0; // Beretta barrel
     };
     class R3F_FRF2: Rifle_Base_F {
         ACE_RailHeightAboveBore = 2.2;
         ACE_barrelTwist = 304.8;
         ACE_barrelLength = 650.0;
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; // 1 MOA
+        };
     };
     class R3F_PGM_Hecate_II: Rifle_Base_F {
         ACE_RailHeightAboveBore = 2.0;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 700.0;
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029; 
+        };
     };
     class R3F_M107: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.6;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029;
+        };
     };
     class R3F_TAC50: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.2;
         ACE_barrelTwist = 381.0;
         ACE_barrelLength = 736.6;
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029;
+        };
     };
     class R3F_Minimi: Rifle_Base_F {
         ACE_RailHeightAboveBore = 4.0;
@@ -70,6 +82,9 @@ class CfgWeapons {
         ACE_RailHeightAboveBore = 3.4;
         ACE_barrelTwist = 279.4;
         ACE_barrelLength = 508.0;
+        class Single: Mode_SemiAuto {
+            dispersion = 0.00029;
+        };
     };
     class R3F_HK416M: Rifle_Base_F {
         ACE_RailHeightAboveBore = 3.4;
