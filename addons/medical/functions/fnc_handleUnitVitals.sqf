@@ -21,8 +21,10 @@ params ["_unit"];
 private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), 0];
 private _deltaT = (CBA_missionTime - _lastTimeUpdated) min 10;
 if (_deltaT < 1) exitWith {}; // state machines could be calling this very rapidly depending on number of local units
-_unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 
+BEGIN_COUNTER(Vitals);
+
+_unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
 private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(random(10)));
 
@@ -115,3 +117,4 @@ if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
     [QGVAR(FatalVitals), _unit] call CBA_fnc_localEvent;
 };
 
+END_COUNTER(Vitals);

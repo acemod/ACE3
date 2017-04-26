@@ -33,13 +33,6 @@ private _damageThreshold = if (isPlayer _unit) then {
     GVAR(AIDamageThreshold)
 };
 
-if (_headDamage > _damageThreshold / 2) then {
-    [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
-};
-if (_bodyDamage > _damageThreshold) then {
-    [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
-};
-
-if ((_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}) then {
+if ((_headDamage > _damageThreshold / 2) || {_bodyDamage > _damageThreshold} || {(_painLevel >= PAIN_UNCONSCIOUS) && {random 1 < 0.1}}) then {
     [QGVAR(CriticalInjury), _unit] call CBA_fnc_localEvent;
 };

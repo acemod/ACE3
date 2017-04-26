@@ -1,4 +1,4 @@
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 ["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
@@ -49,7 +49,7 @@ if (!hasInterface) exitWith {};
         // State:
         private _hasStableVitals = [_unit] call FUNC(hasStableVitals);
         private _targetState = [_unit, GVAR(STATE_MACHINE)] call CBA_statemachine_fnc_getCurrentState;
-        private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33A"}; default {"333333"}};
+        private _color = switch (_targetState) do {case "Default": {"33FF33"}; case "Injured": {"FF3333"}; case "Unconscious": {"FF8833"}; case "CardiacArrest": {"FF33AA"}; default {"333333"}};
         _return pushBack format ["<t color='#%1'>State: %2</t> [Stable Vitals: %3]", _color, _targetState, _hasStableVitals];
     
         // Blood:
@@ -74,12 +74,18 @@ if (!hasInterface) exitWith {};
         private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
         {
             if (_x != 0) then {
-                _return pushBack ["Tourniquet on %1 [Time On: %2]", GVAR(SELECTIONS) select _forEachIndex, (CBA_missionTime - _x)];
+                _return pushBack format ["Tourniquet on %1 [Time On: %2]", GVAR(SELECTIONS) select _forEachIndex, (CBA_missionTime - _x)];
             };
-        } forEach _tourniquets;
+        } forEach _tourniquets;        
+        
+        // Wounds:
+        private _wounds = _unit getVariable [QGVAR(openWounds), []];
+        {
+            _return pushBack format ["Wound: %1", _x];
+        } forEach _wounds;
     };
     _return joinString "<br/>";
-}, [10]] call ace_common_fnc_watchVariable;
+}, [15]] call ace_common_fnc_watchVariable;
 
 
     [{!isNull findDisplay 46}, {

@@ -8,7 +8,7 @@
  * 1: Damage to Add <NUMBER>
  * 2: Body part ("Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg") <STRING>
  * 3: Projectile Type <STRING>
- * 3: Source <OBJECT>
+ * 4: Source <OBJECT>
  *
  * Return Value:
  * Successful <BOOL>

@@ -16,9 +16,9 @@ addMissionEventHandler ["Loaded",{
 
 // decide which woundsHandler to use by whether the extension is present or not  
 if ("ace_medical" callExtension "version" != "") then {
-    DFUNC(woundsHandlerActive) = FUNC(woundsHandler);
+    DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandler);
 } else {
-    DFUNC(woundsHandlerActive) = FUNC(woundsHandlerSQF);
+    DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 };
 
 [QEGVAR(medical_engine,woundReceived), {
