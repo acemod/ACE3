@@ -3,14 +3,14 @@
  * Handles the hear beat sound.
  *
  * Arguments:
- * None
+ * 0: Heart rate <NUMBER>
  *
  * Return Value:
  * None
  */
 #include "script_component.hpp"
+params ["_heartRate"];
 
-private _heartRate = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
 if (_heartRate == 0) exitWith {
     TRACE_1("Ending heart beat effect - zero",_heartRate);
     GVAR(heartBeatEffectRunning) = false;

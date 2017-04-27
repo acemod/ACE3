@@ -21,11 +21,11 @@ if (EGVAR(common,OldIsCamera) || {!alive ACE_player}) exitWith {
 BEGIN_COUNTER(handleEffects);
 
 // - Current state info -------------------------------------------------------
-private _bleedingStrength = [ACE_player] call EFUNC(medical,getBloodloss);
-private _bloodVolume      = ACE_player getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
-private _unconscious      = ACE_player getVariable [QEGVAR(medical,isUnconscious), false];
-private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
-private _pain             = [ACE_player] call EFUNC(medical,getPainLevel);
+private _bleedingStrength = GET_BLOOD_LOSS(ACE_player);
+private _bloodVolume      = GET_BLOOD_VOLUME(ACE_player);
+private _unconscious      = IS_UNCONSCIOUS(ACE_player);
+private _heartRate        = GET_HEART_RATE(ACE_player);
+private _pain             = GET_PAIN_PERCEIVED(ACE_player);
 
 if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) || {_heartRate < 60}}) then {
     TRACE_1("Starting heart beat effect",_heartRate);
