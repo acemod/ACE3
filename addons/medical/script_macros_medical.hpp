@@ -55,3 +55,14 @@
 
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
+
+// - Status macro functions ---------------------------------------------------
+// These macros provide the same functionality as the functions in the status
+// component, but are slightly faster (because most are just object variables)
+#define GET_PAIN_TOTAL(unit)     (unit getVariable [QEGVAR(status,pain), 0])
+#define GET_PAIN_PERCEIVED(unit) ([unit] call EFUNC(status,getPainPerceived)) // Just for consistency
+#define GET_HEART_RATE(unit)     (unit getVariable [QEGVAR(status,heartRate), DEFAULT_HEART_RATE])
+#define GET_BLOOD_VOLUME(unit)   (unit getVariable [QEGVAR(status,bloodVolume), DEFAULT_BLOOD_VOLUME])
+#define GET_BLOOD_LOSS(unit)     ([unit] call EFUNC(status,getBloodLoss)) // Just for consistency
+#define IS_UNCONSCIOUS(unit)     (unit getVariable [QEGVAR(status,isUnconscious), false])
+#define IS_IN_PAIN(unit)         (GET_PAIN_PERCEIVED(unit) > 0)
