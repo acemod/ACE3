@@ -1,11 +1,11 @@
 /*
  * Author: Ruthberg
- * Get the total pain level of a unit.
+ * Get the perceived pain level of a unit.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Pain level (0 .. 1) <NUMBER>
  *
  * Public: No
