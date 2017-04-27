@@ -19,6 +19,7 @@
 params ["_unit", ["_reason", "unknown"]];
 
 // wait a frame to escape handleDamage
+// @TODO Test if this is still necessary
 [EFUNC(medical_engine,setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
 
 private _lastShooter = _unit getVariable [QEGVAR(medical_engine,lastShooter), objNull];
