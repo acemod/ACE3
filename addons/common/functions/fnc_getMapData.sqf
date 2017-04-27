@@ -71,6 +71,7 @@ if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
 if (_map in ["lingor", "lingor3", "dingor"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
+if (_map in ["lythium"]) exitWith { [34, 0] };
 if (_map in ["malvinas"]) exitWith { [-52, 0] };
 if (_map in ["marenice"]) exitWith { [51, 0] }; // CSA38 Mod (Czechoslovak army 1938 - Munich crisis), Lisatian Mountains.
 if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
