@@ -17,7 +17,7 @@ _map = toLower _map;
 
 // [latitude, altitude]
 
-// the more important ones
+// the more important ones 
 if (_map in ["tanoa"]) exitWith { [-18, 0] };
 if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
