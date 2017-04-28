@@ -17,7 +17,7 @@ _map = toLower _map;
 
 // [latitude, altitude]
 
-// the more important ones 
+// the more important ones
 if (_map in ["tanoa"]) exitWith { [-18, 0] };
 if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
@@ -47,7 +47,7 @@ if (_map in ["csj_lawlands", "uns_dong_ha"]) exitWith { [12, 0] }; // Unsung Mod
 if (_map in ["csj_sea"]) exitWith { [15, 0] }; // Unsung Mod
 if (_map in ["dakrong"]) exitWith { [16, 0] }; // Unsung Mod
 if (_map in ["desert_e"]) exitWith { [40, 800] };
-if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island   
+if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island
 if (_map in ["dya"]) exitWith { [34, 110] }; // Diyala Iraq - default elevationOffset
 if (_map in ["eden"]) exitWith { [45, 0] }; // CWR2 Everon
 if (_map in ["esseker"]) exitWith { [43, 2000] };
