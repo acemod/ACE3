@@ -2980,7 +2980,7 @@
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_Description">
             <English>Defines when you can receive a fatal injury</English>
         </Key>
-		 <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
+         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
             <English>In Cardiac Arrest</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_DisplayName">
@@ -4049,10 +4049,10 @@
             <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
         </Key>
-		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName">
             <English>Allow Unconscious Animation</English>
         </Key>
-		<Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
+        <Key ID="STR_ACE_Medical_MedicalSettings_allowUnconsciousAnimationOnTreatment_Description">
             <English>Allow Unconscious Animation on Treatment.</English>
         </Key>
     </Package>
