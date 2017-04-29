@@ -77,11 +77,9 @@ if (_show == 1) then {
 
         private _totalIvVolume = 0;
         {
-            private _value = _target getVariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-            };
-        } foreach EGVAR(medical,IVBags);
+            _x params ["_xVolumeAdded"];
+            _totalIvVolume = _totalIvVolume + _xVolumeAdded;
+        } foreach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
         if (_totalIvVolume >= 1) then {
             _genericMessages pushback [format[localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
