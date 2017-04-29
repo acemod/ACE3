@@ -1,4 +1,5 @@
 
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_unit", "_stateName"];
@@ -21,16 +22,19 @@ if (_painLevel > 0) then {
 };
 
 // Handle spontaneous wakeup from unconsciousness
-if (_unit call FUNC(hasStableVitals)) then {
-    private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-    if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
-        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-        if ((random 1) < SPONTANEOUS_WAKE_UP_CHANCE) then {
-            TRACE_1("spontaneous wake up",_unit);
-            [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+if (GVAR(spontaneousWakeUpChance) > 0) then {
+    if (_unit call FUNC(hasStableVitals)) then {
+        private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+            TRACE_2("Checking for wake up",_unit,GVAR(spontaneousWakeUpChance));
+            _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+            if ((random 1) < GVAR(spontaneousWakeUpChance)) then {
+                TRACE_1("Spontaneous wake up!",_unit);
+                [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+            };
         };
+    } else {
+        // Unstable vitals, procrastinate the next wakeup check
+        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
     };
-} else {
-    // Unstable vitals, procrastinate the next wakeup check
-    _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
 };
