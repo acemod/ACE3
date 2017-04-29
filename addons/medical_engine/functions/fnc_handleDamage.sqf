@@ -113,7 +113,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
             };
             _ammo = "#falling";
         } else {
-            if (_receivedDamage > 0.15) then {
+            if (_receivedDamage > 0.1) then {
                 // Assume collision damage.
                 _woundedHitPoint = "Body";
                 _ammo = "#vehiclecrash";
@@ -122,7 +122,7 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                 _woundedHitPoint = selectRandom ["LeftLeg", "RightLeg", "Body"];
                 _ammo = "#unknown";
                 private _combinedDamage = _receivedDamage + (_unit getVariable [QGVAR(trivialDamage), 0]);
-                if (_combinedDamage > 0.15) then {
+                if (_combinedDamage > 0.1) then {
                     // if the new sum is large enough, reset variable and continue with it added in
                     _unit setVariable [QGVAR(trivialDamage), 0];
                     TRACE_2("Using sum of trivialDamage",_receivedDamage,_combinedDamage);
