@@ -76,8 +76,9 @@ private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 private _woundsCreated = [];
 {
-    if (_x select 0 <= _damage) exitWith {
-        for "_i" from 0 to ((_x select 1)-1) do {
+    _x params ["_thresholdMinDam", "_thresholdWoundCount"];
+    if (_thresholdMinDam <= _damage) exitWith {
+        for "_i" from 0 to (_thresholdWoundCount-1) do {
             // Find the injury we are going to add. Format [ classID, allowdSelections, bleedingRate, injuryPain]
             private _oldInjury = if (random 1 >= 0.85) then {
                 _woundTypes select _highestPossibleSpot
@@ -95,11 +96,16 @@ private _woundsCreated = [];
             _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
 
             // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
-            private _nastinessLikelihood = linearConversion [0, 20, _damage, 0.5, 30, true];
-            private _bloodiness   = 0.01 + 0.99 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
-            private _painfullness = 0.05 + 0.95 * MATH_E ^ (-(random 30) / _nastinessLikelihood);
+            private _nastinessLikelihood = linearConversion [0, 20, (_damage / _thresholdWoundCount), 0.5, 30, true];
+            private _bleedingModifier = 0.25 + 8 * exp ((random [-4.5, -5, -6]) / _nastinessLikelihood);
+            private _painModifier = 0.05 + 2 * exp (-2 / _nastinessLikelihood);
 
-            _bleeding = _injuryBleedingRate * _bloodiness;
+            _bleeding = _injuryBleedingRate * _bleedingModifier;
+            private _pain = _injuryPain * _painModifier;
+            _painLevel = _painLevel + _pain;
+
+            // wound category (minor [0..0.5], medium[0.5..1.0], large[1.0+])
+            private _category = floor linearConversion [0, 1, _bleedingModifier, 0, 2, true];
 
              // wound category (minor, medium, large)
             private _category = floor ((0 max _bleeding min 0.1) / 0.05);
@@ -107,9 +113,6 @@ private _woundsCreated = [];
             _injury set [4, _bleeding];
             _injury set [5, _damage];
             _injury set [6, _category];
-
-            private _pain = _injuryPain * _painfullness;
-            _painLevel = _painLevel max _pain;
 
             if (_bodyPartNToAdd == 0 || {_bodyPartNToAdd == 1 && {_damage > PENETRATION_THRESHOLD}}) then {
                 _critialDamage = true;
@@ -163,11 +166,11 @@ _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 [_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
 
+[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
+[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
+
 if (_critialDamage || {_painLevel > PAIN_UNCONSCIOUS}) then {
     [_unit] call EFUNC(medical,handleIncapacitation);
 };
-
-[_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
-[_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 
 TRACE_5("exit",_unit,_painLevel,_unit getVariable QEGVAR(medical,pain),_unit getVariable QEGVAR(medical,openWounds),_woundsCreated);
