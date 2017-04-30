@@ -34,7 +34,7 @@ if (GVAR(interactionParadrop)) exitWith {
     // Start progress bar - paradrop
     private _size = [_item] call FUNC(getSizeItem);
     [
-        2.5 * _size,
+        GVAR(paradropTimeCoefficent) * _size,
         [_item, GVAR(interactionVehicle), ACE_player],
         {
             (_this select 0) params ["_item", "_target", "_player"];
