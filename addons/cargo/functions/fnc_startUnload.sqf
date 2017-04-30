@@ -38,7 +38,7 @@ if (GVAR(interactionParadrop)) exitWith {
             [
                 LSTRING(UnloadedItem),
                 getText (configFile >> "CfgVehicles" >> ([typeOf _item, _item] select IS_STRING(_item)) >> "displayName"),
-                getText (configFile >> "CfgVehicles" >> typeOf GVAR(interactionVehicle) >> "displayName"),
+                getText (configFile >> "CfgVehicles" >> typeOf GVAR(interactionVehicle) >> "displayName")
             ],
             3
         ] call EFUNC(common,displayTextStructured);
