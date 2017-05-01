@@ -34,14 +34,6 @@ if (GVAR(interactionParadrop)) exitWith {
     // If drop time is 0 don't show a progress bar
     if (GVAR(paradropTimeCoefficent) == 0) exitWith {
         [QGVAR(paradropItem), [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
-        [
-            [
-                LSTRING(UnloadedItem),
-                getText (configFile >> "CfgVehicles" >> ([typeOf _item, _item] select IS_STRING(_item)) >> "displayName"),
-                getText (configFile >> "CfgVehicles" >> typeOf GVAR(interactionVehicle) >> "displayName")
-            ],
-            3
-        ] call EFUNC(common,displayTextStructured);
     };
 
     // Start progress bar - paradrop
