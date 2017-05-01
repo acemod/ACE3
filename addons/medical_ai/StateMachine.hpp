@@ -1,5 +1,5 @@
 class GVAR(stateMachine) {
-    list = "allUnits select {local _x}";
+    list = QEGVAR(common,localUnits);
     skipNull = 1;
 
     class Initial {
