@@ -138,33 +138,6 @@ if (isServer) then {
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
 
-//Eventhandlers to maintain array of localUnits
-["CAManBase", "init", {
-    params ["_unit"];
-
-    if (local _unit) then {
-        GVAR(localUnits) pushBack _unit;
-    };
-}] call CBA_fnc_addClassEventHandler;
-
-["CAManBase", "local", {
-    params ["_unit", "_local"];
-
-    if (_local) then {
-        GVAR(localUnits) pushBack _unit;
-    } else {
-        GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
-    };
-}] call CBA_fnc_addClassEventHandler;
-
-["CAManBase", "deleted", {
-    params ["_unit"];
-
-    if (local _unit) then {
-        GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
-    };
-}] call CBA_fnc_addClassEventHandler;
-
 
 //////////////////////////////////////////////////
 // Set up remote execution

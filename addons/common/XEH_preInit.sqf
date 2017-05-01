@@ -28,7 +28,7 @@ GVAR(statusEffect_isGlobal) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 
-GVAR(localUnits) = [];
+[] call FUNC(setupLocalUnitsHandler); // Add local units event handlers (ace_common_localUnits)
 
 //////////////////////////////////////////////////
 // Set up PlayerChanged eventhandler for pre init (EH is installed in postInit)
