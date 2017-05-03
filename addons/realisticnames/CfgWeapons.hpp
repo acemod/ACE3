@@ -319,7 +319,7 @@ class CfgWeapons {
         };
     };
 
-    class gatling_30mm: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
+    class gatling_30mm_base: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
         displayName = "GSh-3-30";
         class LowROF: Mode_FullAuto {
             displayName = "GSh-3-30";
