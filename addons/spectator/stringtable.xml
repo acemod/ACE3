@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
+        <Key ID="STR_ACE_Spectator_SettingsCategory">
+            <English>ACE Spectator</English>
+        </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
             <German>Zuschauer Einstellungen</German>

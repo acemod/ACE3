@@ -29,15 +29,21 @@
 
 #include "script_component.hpp"
 
-params [["_addModes",[],[[]]], ["_removeModes",[],[[]]]];
-private ["_newModes","_currentModes"];
+params [["_addModes",[],[[]]], ["_removeModes",[],[[]]], ["_CBASettingCall",false]];
 
-_currentModes = GVAR(availableVisions);
+// Use of the public API overrides the CBA setting
+if (_CBASettingCall && {!isNil QGVAR(visionModesBlockCBASetting)}) exitWith {};
 
-// Restrict additions to only possible values
-_newModes = _addModes arrayIntersect [-2,-1,0,1,2,3,4,5,6,7];
-_newModes append (_currentModes - _removeModes);
+if !(_CBASettingCall) then {
+    GVAR(visionModesBlockCBASetting) = true;
+    WARNING_1("%1 has been called directly and CBA Setting for it has been blocked!",QFUNC(updateVisionModes));
+};
 
+// Vision modes must be sanitized to only possible values
+private _newModes = _addModes arrayIntersect [-2,-1,0,1,2,3,4,5,6,7];
+_newModes append (GVAR(availableVisions) - _removeModes);
+
+// Duplicate entries aren't desired
 _newModes = _newModes arrayIntersect _newModes;
 _newModes sort true;
 
