@@ -87,13 +87,14 @@ if (_set) then {
         closeDialog 0;
     };
 
-    [{
+    [{!isNull ([] call BIS_fnc_displayMission)},{
         disableSerialization;
+
         // Create the display
-        _display = (findDisplay 46) createDisplay QGVAR(interface);
+        _display = ([] call BIS_fnc_displayMission) createDisplay QGVAR(interface);
 
         // If not forced, make esc end spectator
-        if (_this) then {
+        if !(_this) then {
             _display displayAddEventHandler ["KeyDown", {
                 if (_this select 1 == 1) then {
                     [false] call FUNC(setSpectator);
@@ -101,7 +102,7 @@ if (_set) then {
                 };
             }];
         };
-    }, !_force] call CBA_fnc_execNextFrame;
+    }, _force] call CBA_fnc_waitUntilAndExecute;
 
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {

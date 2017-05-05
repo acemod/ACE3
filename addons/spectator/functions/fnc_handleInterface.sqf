@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-params ["_mode",["_args",[]]];
+params ["_mode", "_args"];
 
 switch (toLower _mode) do {
     case "onload": {
@@ -320,7 +320,7 @@ switch (toLower _mode) do {
         // Ensure a unit was selected
         if (count _sel == 3) then {
             private ["_netID","_newUnit","_newMode"];
-            _netID = (_args select 0) tvData _sel;
+            _netID = _tree tvData _sel;
             _newUnit = objectFromNetId _netID;
 
             // When unit is reselected, toggle camera mode
