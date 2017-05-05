@@ -1,10 +1,8 @@
 /*
  * Author: SilentSpike
- * Sets local client to the given spectator state (virtually)
- * To physically handle a spectator see ace_spectator_fnc_stageSpectator
+ * Enter/exit spectator mode for the local player
  *
  * Client will be able to communicate in ACRE/TFAR as appropriate
- * The spectator interface will be opened/closed
  *
  * Arguments:
  * 0: Spectator state of local client <BOOL> (default: true)
@@ -28,6 +26,15 @@ if !(hasInterface) exitWith {};
 
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitWith {};
+
+// Delay if local player is not fully initalized
+if (isNil { player } || { isNull player }) exitWith {
+    [
+        { !isNil { player } && { !isNull player } },
+        FUNC(setSpectator),
+        _this
+    ] call CBA_fnc_waitUntilAndExecute;
+};
 
 // Handle common addon audio
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
@@ -54,7 +61,7 @@ if (_set) then {
     [] call FUNC(updateUnits);
 
     // Initalize the camera objects
-    GVAR(freeCamera) = "Camera" camCreate (ASLtoATL GVAR(camPos));
+    GVAR(freeCamera) = "CamCurator" camCreate (ASLtoATL GVAR(camPos));
     GVAR(unitCamera) = "Camera" camCreate [0,0,0];
     GVAR(targetCamera) = "Camera" camCreate [0,0,0];
 
@@ -74,9 +81,6 @@ if (_set) then {
     openMap [false,false];
     clearRadio;
     enableRadio false;
-
-    // Disable BI damage effects
-    BIS_fnc_feedback_allowPP = false;
 
     // Close any open dialogs
     while {dialog} do {
@@ -134,9 +138,6 @@ if (_set) then {
     // Return to player view
     player switchCamera "internal";
 
-    // Enable BI damage effects
-    BIS_fnc_feedback_allowPP = true;
-
     // Cleanup camera variables
     GVAR(camBoom) = nil;
     GVAR(camDolly) = nil;
@@ -169,5 +170,6 @@ GVAR(interrupts) = [];
 
 // Mark spectator state for reference
 GVAR(isSet) = _set;
+player setVariable [QGVAR(isSet), true, true];
 
 ["ace_spectatorSet", [_set]] call CBA_fnc_localEvent;
