@@ -22,7 +22,9 @@ if (isNull _target ||
     {_target isKindOf "AllVehicles"} ||
     {_target getVariable [QGVAR(jerryCan), false]}) exitWith {};
 
-[_target, _fuelAmount] call FUNC(setFuel);
+if (isServer) then {
+    [_target, _fuelAmount] call FUNC(setFuel);  // has global effects
+};
 _target setVariable [QGVAR(jerryCan), true];
 _target setVariable [QGVAR(source), _target];
 
