@@ -26,6 +26,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class paradropTimeCoefficent {
+                displayName = CSTRING(paradropTimeCoefficent);
+                description = CSTRING(paradropTimeCoefficent_description);
+                typeName = "SCALAR";
+                defaultValue = 2.5;
+            };
         };
 
         class ModuleDescription {
