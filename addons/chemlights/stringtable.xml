@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Chemlights">
         <Key ID="STR_ACE_Chemlights_Action_Chemlights">
@@ -19,7 +19,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Action_Prepare_Done">
             <English>%1&lt;br/&gt;Prepared</English>
-            <Japanese>%1&amp;lt;br/&amp;gt; をつかった</Japanese>
+            <Japanese>%1&lt;br/&gt;をつかった</Japanese>
             <Polish>%1&lt;br/&gt;Przygotowany</Polish>
             <German>%1&lt;br/&gt;vorbereitet</German>
             <Korean>%1&lt;br/&gt;준비됨</Korean>
@@ -65,7 +65,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_Orange_DescriptionShort">
             <English>Type: Light - Orange&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - オレンジ&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - オレンジ&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - pomarańczowe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - orange&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류:밝은 오렌지&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
@@ -89,7 +89,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_White_DescriptionShort">
             <English>Type: Light - White&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 白&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 白&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - białe&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - weiß&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류:하얀색&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
@@ -113,7 +113,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_HiRed_DescriptionShort">
             <English>Type: Light - Red Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 高輝度 赤 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe czerwone (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - rot, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 빨간색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
@@ -137,7 +137,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_HiYellow_DescriptionShort">
             <English>Type: Light - Yellow Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 高輝度 黄 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe żółte (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - gelb, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류:밝은 노란색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: Hand</Korean>
@@ -161,7 +161,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_HiOrange_DescriptionShort">
             <English>Type: Light - Orange Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 高輝度 オレンジ (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe pomarańczowe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - orange, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 주황색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
@@ -185,7 +185,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_HiWhite_DescriptionShort">
             <English>Type: Light - White Hi (5 minute)&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 高輝度 白 (5分間)&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 高輝度 白 (5分間)&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - jaskrawe białe (5 minut)&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - weiß, hell (5 Minuten)&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 밝은 하얀색 (5분)&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
@@ -209,7 +209,7 @@
         </Key>
         <Key ID="STR_ACE_Chemlights_IR_DescriptionShort">
             <English>Type: Light - Infrared&lt;br /&gt;Rounds: 1&lt;br /&gt;Used in: Hand</English>
-            <Japanese>種類: 照明 - 赤外線&amp;lt;br /&amp;gt;装填数: 1&amp;lt;br /&amp;gt;次で使用: 携帯</Japanese>
+            <Japanese>種類: 照明 - 赤外線&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 携帯</Japanese>
             <Polish>Typ: Światło - podczerwone&lt;br/&gt;Pociski: 1&lt;br/&gt;Używany w: ręce</Polish>
             <German>Typ: Licht - infrarot&lt;br /&gt;Anzahl: 1&lt;br /&gt;Benutzt in: Hand</German>
             <Korean>종류: 적외선&lt;br /&gt;수량: 1&lt;br /&gt;사용처: 손</Korean>
