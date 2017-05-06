@@ -105,8 +105,8 @@ class CfgWeapons {
         ACE_twistDirection = 0;
         ACE_barrelLength = 508.0;
     };
-    class SMG_01_F;
-    class rhsusf_weap_MP7A1_base_f: SMG_01_F {
+    class SMG_02_base_F;
+    class rhsusf_weap_MP7A1_base_f: SMG_02_base_F {
         ACE_barrelTwist = 160.0;
         ACE_barrelLength = 180.0;
     };
