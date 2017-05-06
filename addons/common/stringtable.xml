@@ -940,6 +940,20 @@
             <Portuguese>Sem espaço para descarregar</Portuguese>
             <Russian>Нет места для выгрузки</Russian>
             <Japanese>降ろすための空間がありません</Japanese>
+        </Key>       
+        <Key ID="STR_ACE_Common_KeybindToggle">
+            <English>Toggle</English>
+            <Polish>переключить</Polish>
+            <Russian>переключить</Russian>
+            <French>Basculer</French>
+            <Spanish>Cambiar</Spanish>
+            <Italian>camb.</Italian>
+            <German>Umschalten</German>
+            <Hungarian>pecek</Hungarian>
+            <Czech>přep.</Czech>
+            <Portuguese>alternar</Portuguese>
+            <Japanese>トグル</Japanese>
+            <Korean>토글</Korean>
         </Key>
     </Package>
 </Project>

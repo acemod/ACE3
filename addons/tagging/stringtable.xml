@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_Tagging">
@@ -68,16 +68,14 @@
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Taguj</Polish>
-            <French>Tag</French>
             <Polish>Oznakuj</Polish>
-            <French>Marque</French>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
             <Korean>뿌리기</Korean>
+            <French>Tag</French>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -198,4 +196,3 @@
         </Key>
     </Package>
 </Project>
-

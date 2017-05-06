@@ -60,7 +60,7 @@
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
             <German>Steuereinheit</German>
-            <French>Controleurs</French>
+            <French>Contrôleurs</French>
             <Polish>Kontroler</Polish>
             <Hungarian>Vezérlők</Hungarian>
             <Portuguese>Controles</Portuguese>
@@ -74,7 +74,7 @@
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
             <German>Objekte die als Steuereinheit fungieren. Werden ggf. durch Kommata getrennt.</German>
-            <French>Noms de controleur d'objets, séparation par virgule si plusieurs</French>
+            <French>Noms de contrôleur d'objets, séparation par virgule si plusieurs</French>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
             <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
@@ -142,14 +142,18 @@
         <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
             <English>Set Name</English>
             <Polish>Ustaw nazwę</Polish>
+            <Japanese>名前設定</Japanese>
+            <French>Définir le nom</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_SetName_Description">
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
             <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
+            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
+            <French>Un nom qui sera utilisé pour interagir avec plusieurs diaporamas. Par défaut : "Slides"</French>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
-            <French>Durée d'une diapositive</French>
+            <French>Durée d'un diaporama</French>
             <Polish>Czas trwania slajdów</Polish>
             <Hungarian>Dia időtartam</Hungarian>
             <Portuguese>Duração do Slide</Portuguese>
@@ -163,7 +167,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
-            <French>Durée de chaque diapositive. Dafaut: 0 (transition automatique désactivée)</French>
+            <French>Durée de chaque diaporama. Défaut: 0 (transition automatique désactivée)</French>
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
@@ -177,7 +181,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
-            <French>Diapositives</French>
+            <French>Diapo</French>
             <Polish>Slajdy</Polish>
             <Hungarian>Diák</Hungarian>
             <Portuguese>Slides</Portuguese>

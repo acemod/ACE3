@@ -33,43 +33,37 @@ if !(_newUnits isEqualTo []) exitWith {
     };
 };
 
-private ["_sides","_cond","_filteredUnits","_filteredGroups"];
-
 // Unit setting filter
-_newUnits = [[],allPlayers,playableUnits,allUnits] select GVAR(filterUnits);
+private _newUnits = [[],allPlayers,playableUnits,allUnits] select GVAR(filterUnits);
 
 // Side setting filter
-_sides = [];
-_cond = [{_this == (side group player)},{(_this getFriend (side group player)) >= 0.6},{(_this getFriend (side group player)) < 0.6},{true}] select GVAR(filterSides);
-{
-    if (_x call _cond) then {
-        _sides pushBack _x;
-    };
-} forEach GVAR(availableSides);
+private _sideFilter = [
+    {_x == (side group player)},
+    {(_x getFriend (side group player)) >= 0.6},
+    {(_x getFriend (side group player)) < 0.6},
+    {true}
+] select GVAR(filterSides);
+
+private _filteredSides = GVAR(availableSides) select _sideFilter;
 
 // Filter units and append to list
-_filteredUnits = [];
-{
-    if (
-        (alive _x) &&
-        {(_x isKindOf "CAManBase")} &&
-        {(side group _x) in _sides} && // Side filter
-        {simulationEnabled _x} &&
-        {!(_x getVariable [QGVAR(isStaged), false])} // Who watches the watchmen?
-    ) then {
-        _filteredUnits pushBack _x;
-    };
-} forEach (_newUnits - GVAR(unitBlacklist));
+private _filteredUnits = (_newUnits - GVAR(unitBlacklist)) select {
+    (alive _x) &&
+    {(_x isKindOf "CAManBase")} &&
+    {(side group _x) in _filteredSides} && // Side filter
+    {simulationEnabled _x} &&
+    {!(_x getVariable [QGVAR(isStaged), false])} // Who watches the watchmen?
+};
 _filteredUnits append GVAR(unitWhitelist);
 
 // Cache icons and colour for drawing
-_filteredGroups = [];
+private _filteredGroups = [];
 {
     // Intentionally re-applied to units in case their status changes
     [_x] call FUNC(cacheUnitInfo);
-    _filteredGroups pushBack (group _x);
+    _filteredGroups pushBackUnique (group _x);
 } forEach _filteredUnits;
 
 // Replace previous lists entirely (removes any no longer valid)
+GVAR(groupList) = _filteredGroups;
 GVAR(unitList) = _filteredUnits arrayIntersect _filteredUnits;
-GVAR(groupList) = _filteredGroups arrayIntersect _filteredGroups;

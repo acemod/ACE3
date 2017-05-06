@@ -243,6 +243,7 @@
             <Japanese>空中投下</Japanese>
             <Polish>Zrzut zaopatrzenia</Polish>
             <Korean>공중 투하</Korean>
+            <French>Largage aérien</French>            
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -250,6 +251,13 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Polish>Nierówny lot</Polish>
             <Korean>기체가 수평이 아닙니다</Korean>
+            <French>Rétablir l'assiette</French>            
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
+            <English>Paradrop Time Coffecient</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
+            <English>Modifier for how long it takes to paradrop a cargo item.</English>
         </Key>
     </Package>
 </Project>
