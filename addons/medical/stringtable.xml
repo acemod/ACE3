@@ -416,7 +416,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>フィールド ドレッシング</Japanese>
+            <Japanese>緊急圧迫止血包帯</Japanese>
             <Korean>필드 드레싱</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PackingBandage">
@@ -430,7 +430,7 @@
             <French>Bande extensible</French>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz Tlakový</Czech>
-            <Japanese>パッキング バンテージ</Japanese>
+            <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_ElasticBandage">
@@ -444,7 +444,7 @@
             <Hungarian>Rögzitő kötszer</Hungarian>
             <Italian>Bendaggio elastico</Italian>
             <Portuguese>Bandagem Elástica</Portuguese>
-            <Japanese>エラスティック バンテージ</Japanese>
+            <Japanese>伸縮包帯</Japanese>
             <Korean>압박 붕대</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_QuikClot">
@@ -458,7 +458,7 @@
             <Hungarian>QuikClot</Hungarian>
             <Italian>QuikClot (polvere emostatica)</Italian>
             <Portuguese>QuikClot</Portuguese>
-            <Japanese>クイック クロット</Japanese>
+            <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CheckPulse">
@@ -976,7 +976,7 @@
             <Italian>Bendaggio compressivo</Italian>
             <Portuguese>Bandagem de Compressão</Portuguese>
             <Czech>Obvaz (Tlakový)</Czech>
-            <Japanese>パッキング バンテージ</Japanese>
+            <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Short">
@@ -990,7 +990,7 @@
             <Italian>Usato su ferite medie o larghe per fermare emorragie.</Italian>
             <Portuguese>Usado para o preenchimento de cavidades geradas por ferimentos médios e grandes e estancar o sangramento.</Portuguese>
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
-            <Japanese>パッキングは粘着フィルム状で、普通から大きめなケガにつかい止血します。</Japanese>
+            <Japanese>弾性包帯は粘着フィルム状で、普通から大きめなケガにつかい止血します。</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Use">
@@ -1018,7 +1018,7 @@
             <Hungarian>Rögzító kötszer</Hungarian>
             <Italian>Benda (elastica)</Italian>
             <Portuguese>Bandagem (Elástica)</Portuguese>
-            <Japanese>包帯 (エラスティック)</Japanese>
+            <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Short">
@@ -1032,7 +1032,7 @@
             <Italian>Kit di bendaggio, elastico</Italian>
             <Portuguese>Kit de Bandagem, Elástica</Portuguese>
             <Czech>Sada obvazů, Elastická</Czech>
-            <Japanese>包帯キット (エラスティック)</Japanese>
+            <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Use">
@@ -1477,7 +1477,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem básica (Coagulante)</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>ベーシック フィールド ドレッシング（クイック クロット）</Japanese>
+            <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>필드 드레싱 (퀵 클롯)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Desc_Short">
@@ -1491,7 +1491,7 @@
             <Italian>Bendaggio emostatico (QuikClot)</Italian>
             <Portuguese>Bandagem com agente coagulante</Portuguese>
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
-            <Japanese>クイック クロット</Japanese>
+            <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Desc_Use">
@@ -2121,7 +2121,7 @@
             <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
             <Czech>Pacient %1&lt;br/&gt;je %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Czech>
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
-            <Japanese>痛みは %1&amp;lt;br/&amp;gt; %2.&amp;lt;br/&amp;gt;%3.&amp;lt;br/&amp;gt;%4</Japanese>
+            <Japanese>痛みは %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
@@ -4155,7 +4155,7 @@
             <French>Dans les véhicules et les structures sanitaires</French>
             <Hungarian>Járművek &amp; létesítmény</Hungarian>
             <Italian>Veicoli e Strutture</Italian>
-            <Japanese>車両 &amp;amp; 施設</Japanese>
+            <Japanese>車両 &amp; 施設</Japanese>
             <Korean>차량 및 시설</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
@@ -4169,7 +4169,7 @@
             <French>Permettre les trousses chirurgicales (Avancé)</French>
             <Hungarian>Sebészkészlet (Fejlett) engedélyezése</Hungarian>
             <Italian>Permetti Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットの許可 (Adv)</Japanese>
+            <Japanese>縫合キットの許可 (アド)</Japanese>
             <Korean>봉합키트 활성화 (고급)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
@@ -4197,7 +4197,7 @@
             <French>Consommer les trousses chirurgicales (Av.)</French>
             <Hungarian>Sebészkészlet (Fejlett) eltávolítása</Hungarian>
             <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットを削除 (Adv)</Japanese>
+            <Japanese>縫合キットを削除 (アド)</Japanese>
             <Korean>봉합키트 제거 (고급)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
@@ -4225,7 +4225,7 @@
             <French>Lieu d'utilisation des trousses chirurgicales</French>
             <Hungarian>Sebészkészlet (Fejlett) helyei</Hungarian>
             <Italian>Località Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットをつかう場所 (Adv)</Japanese>
+            <Japanese>縫合キットをつかう場所 (アド)</Japanese>
             <Korean>봉합키트 사용 장소 (고급)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
@@ -4253,7 +4253,7 @@
             <Portuguese>Condição do Kit Cirúrgico (Avançado)</Portuguese>
             <Russian>Условие использования хирургического набора (усл.)</Russian>
             <Italian>Condizioni Kit Chirurgico (Avanzato)</Italian>
-            <Japanese>縫合キットの状態 (Adv)</Japanese>
+            <Japanese>縫合キットの状態 (アド)</Japanese>
             <Korean>봉합키트 상태 (고급)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
@@ -4571,7 +4571,7 @@
             <French>Médecin (traitements avancés uniquement)</French>
             <Hungarian>Doktor (csak fejlett orvosok)</Hungarian>
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
-            <Japanese>医師 (アドバンスド医療でのみ)</Japanese>
+            <Japanese>医師 (アドバンスド医療のみ)</Japanese>
             <Korean>의사 (오직 고급 의료에서만)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctorShort">
@@ -4697,7 +4697,7 @@
             <French>Définir comme installation médical [ACE]</French>
             <Hungarian>Orvosi létesítmény beállítása [ACE]</Hungarian>
             <Italian>Imposta Struttura Medica [ACE]</Italian>
-            <Japanese>医療施設として設定 [ACE]</Japanese>
+            <Japanese>医療施設を設定 [ACE]</Japanese>
             <Korean>의료시설 선정 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_DisplayName">
@@ -4739,7 +4739,7 @@
             <French>Définir un objet comme installation médical. Cela permet les traitements avancés. Peut être utilisé sur les batiments et les véhicules</French>
             <Hungarian>Egy objektumot orvosi létesítményként határoz meg. Ez fejlett ellátási lehetőségeket engedélyez. Használható járműveken és épületeken.</Hungarian>
             <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
-            <Japanese>オブジェクトを医療施設として割り当てます。割り当てられた場合、より高度な治療が可能になり、建物と車両へつかえます。</Japanese>
+            <Japanese>オブジェクトを医療施設として割り当てます。建物と車両へ割り当てられた場合、より高度な治療が可能になります。</Japanese>
             <Korean>물체를 의료시설로 정의합니다. 건물 혹은 차량이 될 수 있습니다. 이는 고급 의료 조치를 할 수 있게해줍니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate">
@@ -4753,7 +4753,7 @@
             <French>[ACE] Caisse médicale (basique)</French>
             <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Basico)</Italian>
-            <Japanese>[ACE] 医療箱 (ベーシック)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
             <Korean>[ACE] 의료 물자 (기본)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate_advanced">
@@ -4767,7 +4767,7 @@
             <French>[ACE] Caisse médicale (avancée)</French>
             <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Avanzato)</Italian>
-            <Japanese>[ACE] 医療箱 (アドバンスド)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
             <Korean>[ACE] 의료 물자 (고급)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
