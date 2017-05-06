@@ -3,6 +3,7 @@
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
             <English>ACE Spectator</English>
+            <Japanese>ACE スペクテイター</Japanese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
