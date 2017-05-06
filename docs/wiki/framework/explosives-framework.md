@@ -190,7 +190,6 @@ Jammer that blocks RF triggers:
 ```cpp
 [{
     params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
-    if (_range < 0) exitWith {true};
     if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false }; // always block cell phones
     if (_triggerItem == "ace_m26_clacker") exitWith {
         _range = _range / 1000;
@@ -198,6 +197,7 @@ Jammer that blocks RF triggers:
         systemChat format ["Limited Range For RF Clacker [%1m / %2m]", _actualRange toFixed 1, _range toFixed 1];
         (_actualRange < _range) // return bool
     };
+    // allow anything else (like timers / wired clackers)
     true
 }] call ace_explosives_fnc_addDetonateHandler;
 ```
