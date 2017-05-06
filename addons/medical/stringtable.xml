@@ -416,7 +416,7 @@
             <Hungarian>Zárókötszer</Hungarian>
             <Italian>Bendaggio rapido</Italian>
             <Portuguese>Curativo de Campo</Portuguese>
-            <Japanese>緊急圧迫止血包帯</Japanese>
+            <Japanese>緊急圧迫包帯</Japanese>
             <Korean>필드 드레싱</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PackingBandage">
@@ -934,7 +934,7 @@
             <Hungarian>Kötszer (Általános)</Hungarian>
             <Italian>Bendaggio (base)</Italian>
             <Portuguese>Bandagem(Básico)</Portuguese>
-            <Japanese>包帯 (ベーシック)</Japanese>
+            <Japanese>包帯 (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Short">
@@ -2121,7 +2121,7 @@
             <Hungarian>A páciens, %1,&lt;br/&gt;%2.&lt;br/&gt;%3.&lt;br/&gt;%4</Hungarian>
             <Czech>Pacient %1&lt;br/&gt;je %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Czech>
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
-            <Japanese>痛みは %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
+            <Japanese>痛み %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
