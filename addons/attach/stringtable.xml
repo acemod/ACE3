@@ -12,7 +12,7 @@
             <Italian>Attacca l'oggetto</Italian>
             <Hungarian>Tárgy hozzácsatolása</Hungarian>
             <Russian>Прикрепить предмет</Russian>
-            <Japanese>&amp;gt;&amp;gt; アイテムを取り付ける</Japanese>
+            <Japanese>アイテムを取り付ける</Japanese>
             <Korean>물건 부착</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
@@ -222,7 +222,7 @@
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
-            <Japanese>%1&amp;lt;br/&amp;gt; を取り付けた</Japanese>
+            <Japanese>%1&lt;br/&gt;を取り付けた</Japanese>
             <Korean>%1&lt;br/&gt;부착됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
@@ -236,7 +236,7 @@
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
-            <Japanese>%1&amp;lt;br/&amp;gt; を外した</Japanese>
+            <Japanese>%1&lt;br/&gt;を外した</Japanese>
             <Korean>%1&lt;br/&gt;분리됨</Korean>
         </Key>
     </Package>
