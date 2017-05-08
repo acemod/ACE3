@@ -24,6 +24,17 @@ GVAR(localUnits) = [];
     TRACE_2("unit init",_unit,local _unit);
 
     if (local _unit) then {
+        if (!alive _unit) exitWith {};
+        GVAR(localUnits) pushBack _unit;
+    };
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "respawn", {
+    params ["_unit"];
+    TRACE_2("unit respawn",_unit,local _unit);
+
+    if (local _unit) then {
+        if (!alive _unit) exitWith {};
         GVAR(localUnits) pushBack _unit;
     };
 }] call CBA_fnc_addClassEventHandler;
@@ -33,6 +44,7 @@ GVAR(localUnits) = [];
     TRACE_2("unit local",_unit,_local);
 
     if (_local) then {
+        if (!alive _unit) exitWith {};
         GVAR(localUnits) pushBack _unit;
     } else {
         GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
@@ -42,6 +54,15 @@ GVAR(localUnits) = [];
 ["CAManBase", "deleted", {
     params ["_unit"];
     TRACE_2("unit deleted",_unit,local _unit);
+
+    if (local _unit) then {
+        GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
+    };
+}] call CBA_fnc_addClassEventHandler;
+
+["CAManBase", "killed", {
+    params ["_unit"];
+    TRACE_2("unit killed",_unit,local _unit);
 
     if (local _unit) then {
         GVAR(localUnits) deleteAt (GVAR(localUnits) find _unit);
