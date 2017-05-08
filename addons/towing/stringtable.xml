@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Towing">
+        <Key ID="STR_ACE_Towing_TiltConnect">
+            <English>Connect tilting cable</English>
+            <German>Aufrichtseil verbinden</German>
+            <Russian>Прицепить трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Towing_TiltConnectCable">
+            <English>Connect cable</English>
+            <German>Seil verbinden</German>
+            <Russian>Прицепить трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Towing_TiltDisconnect">
+            <English>Disconnect tilting cable</English>
+            <Russian>Отцепить трос</Russian>
+            <German>Aufrichtseil entfernen</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_TowConnect">
+            <English>Connect towing bar</English>
+            <Russian>Прицепляем трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Towing_TowDisconnect">
+            <English>Disconnect towing bar</English>
+            <Russian>Отцепляем трос</Russian>
+        </Key>
+        <Key ID="STR_ACE_Towing_Cancel">
+            <English>Cancel</English>
+            <Russian>Отмена</Russian>
+            <German>Abbrechen</German>
+        </Key>
+        <Key ID="STR_ACE_Towing_Failed">
+            <English>Failed connecting cable</English>
+            <Russian>Не можем прицепить трос</Russian>
+        </Key>
+    </Package>
+</Project>
