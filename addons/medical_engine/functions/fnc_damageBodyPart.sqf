@@ -5,13 +5,13 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Selection, can be "Head", "Body", "Arms" or "Legs" <STRING>
- * 2: Damage <BOOLEAN>
+ * 2: Damaged <BOOLEAN>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "HEAD"] call ace_medical_engine_fnc_damageBodyPart
+ * [player, "HEAD", true] call ace_medical_engine_fnc_damageBodyPart
  *
  * Notes:
  * Head: Blood visuals @ 0.45
@@ -24,6 +24,7 @@
 #include "script_component.hpp"
 
 params ["_unit", "_selection", "_damage"];
+TRACE_3("damageBodyPart",_unit,_selection,_damage);
 
 _damage = [0, DAMAGED_MIN_THRESHOLD] select _damage;
 
