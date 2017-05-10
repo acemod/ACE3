@@ -59,7 +59,15 @@ if (GVAR(useCursorMenu)) then {
         createDialog QGVAR(cursorMenu);
     };
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-    (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+    (finddisplay 91919) displayAddEventHandler ["KeyDown", {
+        // Handle the escape key being pressed with menu open:
+        if ((_this select [1,4]) isEqualTo [1,false,false,false]) exitWith { // escape key with no modifiers
+            GVAR(actionSelected) = false;
+            [GVAR(openedMenuType), false] call FUNC(keyUp);
+            false // continue to pass the escape
+        };
+        [_this,'keydown'] call CBA_events_fnc_keyHandler;
+    }];
     // The dialog sets:
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
