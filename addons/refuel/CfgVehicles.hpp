@@ -512,6 +512,16 @@ class CfgVehicles {
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
+    // Helper object for non-AllVehicles objects
+    class GVAR(helper): Helicopter_Base_F {
+        author = "Beswick.T";
+        scope = 1;
+        model = QPATHTOF(data\helper.p3d);
+        class ACE_Actions {};
+        class Turrets {};
+        class TransportItems {};
+    };
+
     /* // Barrels found in config  \
         BarrelHelper: Misc_thing 100
         BarrelBase: BarrelHelper 100

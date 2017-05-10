@@ -49,6 +49,10 @@ if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
                 if !(isNull _rope) then {
                     ropeDestroy _rope;
                 };
+                private _helper = _target getVariable [QGVAR(helper), objNull];
+                if !(isNull _helper) then {
+                    deleteVehicle _helper;
+                };
                 deleteVehicle _nozzle;
             } else {
                 [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
