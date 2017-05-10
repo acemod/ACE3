@@ -104,7 +104,7 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 
 ### 3.5 Example with `Add New Gun` in `GunList`
 
-- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the caliber, the bullet weight and the muzzle velocities.
+- Open the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and check the cartridge, the bullet diameter, the bullet weight and the muzzle velocities.
 - Open the AtragMx and the `Atmsphr` column, select `Default` and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=15)
 - Select `Add New Gun` in the `GunList`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=25)
 - Add a `New Gun Name` and `Open Gun`.
@@ -113,16 +113,18 @@ Horus ATragMX software considers atmospheric conditions, gun data, ammunition, r
 - Select `M` (Metric unit) at the top right.
 - Open the `Muz Vel Table` in the `Options` menu or click on `MV` in the `Gun` column. 
 - Edit manually the `Muzzle Velocity Table` according with the [Range Card]({{ site.baseurl }}/wiki/feature/rangecard.html) and `Done`. [[Manual]](https://horusvision.com/download/manual_Horus_ATrag-v385.pdf#page=22)
-- The `C1 coefficient` of the bullet can be found, for example, in the Eden Editor `Config Viewer`:
+- The `C1 coefficient` of the bullet can be found with the Eden Editor `Config Viewer`:
+
 > configfile >> "CfgAmmo" >> "Range card cartridge" >> "ACE_ballisticCoefficients"
 
 > configfile >> "CfgAmmo" >> "Range card cartridge" >> "ACE_dragModel"
+
 - *The AtragMx accepts only **G1 ballistic coefficient**.*
 - *G7 ballistic coefficient can be converted, for example, with the online [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmgf-5.1.cgi)*.
 - Optionally, `Save Gun` and `Done` in the `GunList`.
 
 
-For advanced users, the ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, or an another ballistic software at your own convenience.
+> Note: The ballistic coefficient can be calculated by using the [360 Degree Training Course mission](https://forums.bistudio.com/forums/topic/171228-sp-360-degree-training-course/) as a chronograph at different distances and [JBM Ballistics Calculators](http://www.jbmballistics.com/cgi-bin/jbmbcv-5.1.cgi) for example, an another ballistic software at your own convenience, or the [AtragMx Truing Tool](#33-example-with-truing-tool).
 
  
 ## 4. Official Manual and Horus Videos
