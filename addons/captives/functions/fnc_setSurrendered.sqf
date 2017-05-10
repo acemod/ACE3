@@ -45,6 +45,10 @@ if (_state) then {
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
+    //TFAR disallow radio usage
+    _unit setVariable ["tf_unable_to_use_radio", true];
+    //ACRE disallow radio usage
+    _unit setVariable ["acre_sys_core_isDisabled", true, true];
 
     if (_unit == ACE_player) then {
         ["captive", [false, false, false, false, false, false, false, false]] call EFUNC(common,showHud);
@@ -71,6 +75,10 @@ if (_state) then {
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
+    //TFAR allow radio usage
+    _unit setVariable ["tf_unable_to_use_radio", false];
+    //ACRE allow radio usage
+    _unit setVariable ["acre_sys_core_isDisabled", false, true];
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];

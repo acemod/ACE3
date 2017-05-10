@@ -41,6 +41,11 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
+    call EFUNC(common,endRadioTransmission);
+    //TFAR disallow radio usage
+    _unit setVariable ["tf_unable_to_use_radio", true];
+    //ACRE disallow radio usage
+    _unit setVariable ["acre_sys_core_isDisabled", true, true];
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -81,6 +86,10 @@ if (_state) then {
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    //TFAR allow radio usage
+    _unit setVariable ["tf_unable_to_use_radio", false];
+    //ACRE allow radio usage
+    _unit setVariable ["acre_sys_core_isDisabled", false, true];
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
