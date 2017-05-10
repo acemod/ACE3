@@ -56,7 +56,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             private _ropeTarget = _target;
             if (!(_target isKindOf "AllVehicles")) then {
                 private _helper = QGVAR(helper) createVehicle [0,0,0];
-                _helper attachTo [_target, _endPosOffset];
+                _helper attachTo [_target, [0,0,0]];
                 _target setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
