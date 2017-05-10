@@ -30,7 +30,7 @@ class CfgWeapons {
         ACE_barrelTwist = 304.8; // 1:12"
         ACE_barrelLength = 635.0; // 25"
         ACE_RailHeightAboveBore = 2.6;
-    };    
+    };
     class arifle_MX_Base_F;
     class rhs_weap_m4_Base: arifle_MX_Base_F {
         ACE_barrelTwist = 177.8;
@@ -195,7 +195,7 @@ class CfgWeapons {
                 class Snip {
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
-                };    
+                };
             };
         };
     };
@@ -212,21 +212,203 @@ class CfgWeapons {
         lockedTargetSound[] = {"",0,1};
     };
 
-    class rhsusf_ach_helmet_ocp;
-    class rhsusf_opscore_01: rhsusf_ach_helmet_ocp {
+    // Fast Helmets
+    class rhsusf_opscore_01;
+    class rhsusf_opscore_aor1_pelt: rhsusf_opscore_01 {
         ace_hearing_protection = 0.50;
-        ace_hearing_lowerVolume = 0.60;
+        ace_hearing_lowerVolume = 0.40;
     };
-    class rhsusf_opscore_01_tan: rhsusf_opscore_01 {};
-    class rhsusf_opscore_03_ocp: rhsusf_opscore_01 {};
+    class rhsusf_opscore_aor1_pelt_nsw: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_bk_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_fg_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_fg_pelt_nsw: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_fg_pelt_cam: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_paint_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_paint_pelt_nsw: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_paint_pelt_nsw_cam: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_aor2_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_aor2_pelt_nsw: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_ut_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_ut_pelt_cam: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_ut_pelt_nsw_cam: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_mc_pelt: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_mc_pelt_nsw: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_cover;
+    class rhsusf_opscore_mc_cover_pelt: rhsusf_opscore_cover {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_mc_cover_pelt_cam: rhsusf_opscore_cover {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_rg_cover_pelt: rhsusf_opscore_cover {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_coy_cover_pelt: rhsusf_opscore_cover {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_mar_01;
+    class rhsusf_opscore_mar_ut_pelt: rhsusf_opscore_mar_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_opscore_mar_fg_pelt: rhsusf_opscore_mar_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
 
-    class rhsusf_cvc_helmet: rhsusf_opscore_01 {
-        ace_hearing_protection = 1;
-        ace_hearing_lowerVolume = 0.80;
+    // ACH Helmets
+    class rhsusf_ach_helmet_ocp;
+    class rhsusf_ach_bare_des_headset: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
     };
-    class rhsusf_cvc_green_helmet: rhsusf_cvc_helmet {};
-    class rhsusf_cvc_ess: rhsusf_cvc_helmet {};
-    class rhsusf_cvc_green_ess: rhsusf_cvc_ess {};
+    class rhsusf_ach_bare_des_headset_ess: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_headset: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_headset_ess: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_semi_headset: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_semi_headset_ess: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_tan_headset: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_tan_headset_ess: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_wood_headset: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_bare_wood_headset_ess: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_helmet_headset_ocp: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_ach_helmet_headset_ess_ocp: rhsusf_ach_helmet_ocp {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+
+    // ACVC Helmets
+    class rhsusf_cvc_helmet: rhsusf_opscore_01 {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+
+    // MICH Helmets
+    class rhsusf_mich_bare;
+    class rhsusf_mich_bare_alt: rhsusf_mich_bare {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos;
+    class rhsusf_mich_bare_norotos_alt: rhsusf_mich_bare_norotos {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos_arc;
+    class rhsusf_mich_bare_norotos_arc_alt: rhsusf_mich_bare_norotos_arc {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_semi;
+    class rhsusf_mich_bare_alt_semi: rhsusf_mich_bare_semi {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos_semi;
+    class rhsusf_mich_bare_norotos_alt_semi: rhsusf_mich_bare_norotos_semi {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos_arc_semi;
+    class rhsusf_mich_bare_norotos_arc_alt_semi: rhsusf_mich_bare_norotos_arc_semi {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_tan;
+    class rhsusf_mich_bare_alt_tan: rhsusf_mich_bare_tan {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos_tan;
+    class rhsusf_mich_bare_norotos_alt_tan: rhsusf_mich_bare_norotos_tan {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+    class rhsusf_mich_bare_norotos_arc_tan;
+    class rhsusf_mich_bare_norotos_arc_alt_tan: rhsusf_mich_bare_norotos_arc_tan {
+        ace_hearing_protection = 0.50;
+        ace_hearing_lowerVolume = 0.40;
+    };
+
 
     class H_PilotHelmetHeli_B;
     class H_CrewHelmetHeli_B;
