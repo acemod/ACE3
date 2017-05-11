@@ -35,6 +35,11 @@ private _problemUIs = [];
                 if (_fcsMsg != "") then {diag_log text format ["%1: %2", _vehicleType, _fcsMsg];};
             };
 
+            if (_vanillaFCS) then {
+                private _dd = getArray (_config >> "discreteDistance");
+                if (_dd isEqualTo []) exitWith {diag_log format ["%1->%2: discreteDistance with vanillaFCS [%3]", _vehicleType, _turret, _config];};
+            };
+
             if (true) then {
                 private _turretInfo = getText (_config >> "turretInfoType");
                 private _infoConfig = configFile >> "RscInGameUI" >> _turretInfo;
