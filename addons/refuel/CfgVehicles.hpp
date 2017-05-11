@@ -512,6 +512,19 @@ class CfgVehicles {
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
     };
 
+    // Helper object for non-AllVehicles objects
+    class GVAR(helper): Helicopter_Base_F {
+        scope = 1;
+        displayName = "Refuel Helper";
+        model = "\A3\Weapons_f\empty";
+        delete ACE_Actions;
+        damageEffect = "";
+        destrType = "";
+        class HitPoints {};
+        class Turrets {};
+        class TransportItems {};
+    };
+
     /* // Barrels found in config  \
         BarrelHelper: Misc_thing 100
         BarrelBase: BarrelHelper 100
