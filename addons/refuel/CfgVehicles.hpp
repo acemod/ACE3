@@ -517,7 +517,10 @@ class CfgVehicles {
         scope = 1;
         displayName = "Refuel Helper";
         model = "\A3\Weapons_f\empty";
-        delete ACE_Actions;
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
         damageEffect = "";
         destrType = "";
         class HitPoints {};
