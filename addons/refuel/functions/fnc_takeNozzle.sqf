@@ -56,7 +56,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
             private _ropeTarget = _target;
             if (!(_target isKindOf "AllVehicles")) then {
                 private _helper = QGVAR(helper) createVehicle [0,0,0];
-                hideObjectGlobal _helper;
+                [QEGVAR(common,hideObjectGlobal), [_helper, true]] call CBA_fnc_serverEvent;
                 if ((getText (configFile >> "CfgVehicles" >> typeOf _target >> "simulation")) isEqualTo "thingX") then {
                     _helper attachTo [_target, [0,0,0]];
                 } else {
