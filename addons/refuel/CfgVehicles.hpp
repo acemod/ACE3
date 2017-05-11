@@ -518,6 +518,9 @@ class CfgVehicles {
         scope = 1;
         model = QPATHTOF(data\helper.p3d);
         class ACE_Actions {};
+        damageEffect = "";
+        destrType = "";
+        class HitPoints {};
         class Turrets {};
         class TransportItems {};
     };

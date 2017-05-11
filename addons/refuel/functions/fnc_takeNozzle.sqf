@@ -56,7 +56,14 @@ if (isNull _nozzle) then { // func is called on fuel truck
             private _ropeTarget = _target;
             if (!(_target isKindOf "AllVehicles")) then {
                 private _helper = QGVAR(helper) createVehicle [0,0,0];
-                _helper attachTo [_target, [0,0,0]];
+                hideObjectGlobal _helper;
+                if ((getText (configFile >> "CfgVehicles" >> typeOf _target >> "simulation")) isEqualTo "thingX") then {
+                    _helper attachTo [_target, [0,0,0]];
+                } else {
+                    _helper setPosWorld (getPosWorld _target);
+                    _helper setDir (getDir _target);
+                    _helper setVectorUp (vectorUp _target);
+                };
                 _target setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
