@@ -514,10 +514,10 @@ class CfgVehicles {
 
     // Helper object for non-AllVehicles objects
     class GVAR(helper): Helicopter_Base_F {
-        author = "Beswick.T";
         scope = 1;
-        model = QPATHTOF(data\helper.p3d);
-        class ACE_Actions {};
+        displayName = "Refuel Helper";
+        model = "\A3\Weapons_f\empty";
+        delete ACE_Actions;
         damageEffect = "";
         destrType = "";
         class HitPoints {};
