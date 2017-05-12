@@ -1,3 +1,5 @@
+class Mode_SemiAuto;
+
 class CfgWeapons {
     class Pistol_Base_F;
     class Rifle_Base_F;
