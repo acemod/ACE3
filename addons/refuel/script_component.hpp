@@ -23,7 +23,7 @@
 #define REFUEL_HOLSTER_WEAPON \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
     _unit call EFUNC(common,fixLoweredRifleAnimation); \
-    _unit action ["SwitchWeapon", _unit, _unit, 99];
+    _unit action ["SwitchWeapon", _unit, _unit, 299];
 
 #define REFUEL_UNHOLSTER_WEAPON \
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel); \
