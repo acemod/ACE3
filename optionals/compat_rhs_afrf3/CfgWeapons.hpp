@@ -87,24 +87,20 @@ class CfgWeapons {
         ace_reloadlaunchers_enabled = 1;
     };
 
+    #define HEARING_PROTECTION_VICCREW EGVAR(hearing,protection) = 0.85; EGVAR(hearing,lowerVolume) = 0.6;
+    #define HEARING_PROTECTION_EARMUFF EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.5;
+    #define HEARING_PROTECTION_PELTOR EGVAR(hearing,protection) = 0.75; EGVAR(hearing,lowerVolume) = 0.2;
     class H_HelmetB;
     class rhs_tsh4: H_HelmetB {
-        ace_hearing_protection = 1;
-        ace_hearing_lowerVolume = 0.80;
+        HEARING_PROTECTION_VICCREW
     };
-    class rhs_tsh4_ess: rhs_tsh4 {};
-    class rhs_tsh4_bala: rhs_tsh4 {};
-    class rhs_tsh4_ess_bala: rhs_tsh4 {};
 
     class rhs_zsh7a: H_HelmetB {
-        ace_hearing_protection = 1;
-        ace_hearing_lowerVolume = 0.80;
+        HEARING_PROTECTION_VICCREW
     };
-    class rhs_zsh7a_mike: rhs_zsh7a {};
 
     class rhs_gssh18: H_HelmetB {
-        ace_hearing_protection = 0.5;
-        ace_hearing_lowerVolume = 0.60;
+        HEARING_PROTECTION_EARMUFF
     };
     
     class rhs_weap_d81;
