@@ -46,7 +46,7 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         if !(isNull _rope) then {
             ropeDestroy _rope;
         };
-        private _helper = _target getVariable [QGVAR(helper), objNull];
+        private _helper = _nozzle getVariable [QGVAR(helper), objNull];
         if !(isNull _helper) then {
             deleteVehicle _helper;
         };
