@@ -30,6 +30,6 @@ private _barrelLength = getNumber(_weaponConfig >> "ACE_barrelLength");
 
 private _result = [_barrelTwist, _twistDirection, _barrelLength];
 
-uiNamespace setVariable [format[QGVAR(%1), _weapon], _result];
+uiNamespace setVariable [format[QGVAR(%1), _this], _result];
 
 _result

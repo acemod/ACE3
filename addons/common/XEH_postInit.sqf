@@ -458,8 +458,8 @@ GVAR(deviceKeyCurrentIndex) = -1;
 ["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
-    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
-    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    private _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
     [_displayName, _iconImage] call FUNC(displayTextPicture);
     true
 },

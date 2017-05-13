@@ -46,7 +46,7 @@ if (_respawn > 3) then {
     };
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
-    if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
-        _oldUnit setVariable [QGVAR(isEscorting), false, true];
+    if (_unit getVariable [QGVAR(isEscorting), false]) then {
+        _unit setVariable [QGVAR(isEscorting), false, true];
     };
 };
