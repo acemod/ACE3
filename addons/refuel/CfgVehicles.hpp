@@ -5,7 +5,7 @@
             class GVAR(Refuel) { \
                 displayName = CSTRING(Refuel); \
                 distance = REFUEL_ACTION_DISTANCE; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
