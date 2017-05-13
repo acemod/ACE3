@@ -27,7 +27,7 @@ if (isNil QGVAR(publishSchedId)) then {
     GVAR(publishSchedId) = [{
         if (diag_tickTime > GVAR(publishNextTime)) then {
             {
-                _x params [_unit, _varName];
+                _x params ["_unit", "_varName"];
                 _unit setVariable [_varName, _unit getVariable _varName, true];
                 false
             } count GVAR(publishVarNames);
