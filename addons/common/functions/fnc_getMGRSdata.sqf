@@ -27,7 +27,7 @@ if (!(_mapData isEqualTo [])) then {
     _lat = _mapData select 0;
     _altitude = _mapData select 1;
 };
-TRACE_2("Latitude and Altitude",_lat,_alt);
+TRACE_2("Latitude and Altitude",_lat,_altitude);
 
 private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;
