@@ -44,8 +44,8 @@ def main():
     args = parser.parse_args()
  
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
         
     for filename in sqf_list:
         ret = analyze(filename)
