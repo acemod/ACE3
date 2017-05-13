@@ -28,7 +28,7 @@
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
