@@ -111,7 +111,7 @@ if (isMultiplayer) then {
 
             _addons = _addons - GVAR(ServerAddons);
             if !(_addons isEqualTo []) then {
-                _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
+                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
                 ERROR(_errorMsg);
 
