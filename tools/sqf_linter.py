@@ -21,16 +21,16 @@ def analyze(filename, writer=sys.stdout):
         except SQFParserError as e:
             print("{}:".format(filename))
             writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
-            return 0, -1
+            return 0, 1
 
         exceptions = sqf.analyzer.analyze(result).exceptions
         if (exceptions): 
             print("{}:".format(filename))
             for e in exceptions:
                 if (e.message.startswith("error")):
-                    errors = errors + 1
+                    errors += 1
                 else:
-                    warnings = warnings + 1
+                    warnings += 1
                 writer.write('    [%d,%d]:%s\n' % (e.position[0], e.position[1] - 1, e.message))
     
     return warnings, errors
@@ -54,8 +54,8 @@ def main():
         
     for filename in sqf_list:
         warnings, errors = analyze(filename)
-        all_warnings = all_warnings + warnings
-        all_errors = all_errors + errors
+        all_warnings += warnings
+        all_errors += errors
     
     print ("Parse Errors {0} - Warnings {1}".format(all_errors,all_warnings))
 
