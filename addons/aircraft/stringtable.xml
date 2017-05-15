@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Aircraft">
-        <Key ID="STR_ACE_Aircraft_CMFlareLauncher_Burst_Name">
-            <English>Burst</English>
-            <German>Feuerstoß</German>
-            <Spanish>Ráfaga</Spanish>
-            <Polish>Seria</Polish>
-            <Czech>Dávka</Czech>
-            <French>Rafale</French>
-            <Russian>Очередь</Russian>
-            <Hungarian>Sorozat</Hungarian>
-            <Portuguese>Rajada</Portuguese>
-            <Italian>Raffica</Italian>
-            <Japanese>バースト</Japanese>
-            <Korean>점사</Korean>
-        </Key>
         <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
             <English>XM301</English>
             <German>XM301</German>
