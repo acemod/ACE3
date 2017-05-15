@@ -423,6 +423,11 @@ class CfgVehicles {
 
     class rhs_2s3tank_base : Tank_F {
         EGVAR(refuel,fuelCapacity) = 830;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class OTR21_Base : Truck_F {
