@@ -62,9 +62,7 @@ if (GVAR(useCursorMenu)) then {
     (finddisplay 91919) displayAddEventHandler ["KeyDown", {
         // Handle the escape key being pressed with menu open:
         if ((_this select [1,4]) isEqualTo [1,false,false,false]) exitWith { // escape key with no modifiers
-            GVAR(actionSelected) = false;
-            [GVAR(openedMenuType), false] call FUNC(keyUp);
-            false // continue to pass the escape
+            [displayNull] call FUNC(handleEscapeMenu);
         };
         [_this,'keydown'] call CBA_events_fnc_keyHandler;
     }];
