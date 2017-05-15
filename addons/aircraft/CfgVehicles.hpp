@@ -225,7 +225,7 @@ class CfgVehicles {
         incomingMissileDetectionSystem = 16;
         class Turrets;
 
-        #include <flightmodel_thunderbolt.hpp>
+        // #include <flightmodel_thunderbolt.hpp>
     };
 
     class Plane_CAS_02_base_F: Plane_Base_F {
@@ -233,7 +233,7 @@ class CfgVehicles {
         incomingMissileDetectionSystem = 16;
         class Turrets;
 
-        #include <flightmodel_yak.hpp>
+        // #include <flightmodel_yak.hpp>
     };
 
     class Plane_Fighter_03_base_F: Plane_Base_F {
@@ -241,7 +241,7 @@ class CfgVehicles {
         incomingMissileDetectionSystem = 16;
         class Turrets;
 
-        #include <flightmodel_alca.hpp>
+        // #include <flightmodel_alca.hpp>
     };
 
     class UAV_01_base_F: Helicopter_Base_F {
