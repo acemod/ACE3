@@ -18,18 +18,27 @@
 
 #include "script_component.hpp"
 
-params [["_unit",objNull,[objNull]], ["_killer",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
+params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
 
 // Some environment information can be used for the initial camera attributes
-if (isNull _killer) then {_killer = _unit};
-private _vision = [-2,-1] select (sunOrMoon < 1);
-private _pos = (getPosATL _unit) vectorAdd [0,0,5];
+if (isNull _oldKiller) then {_oldKiller = _newCorpse};
+private _nvg = [-2,-1] select (sunOrMoon < 1);
+
+// Prepare camera attributes before entering spectator
+[2, _oldKiller, _nvg, eyePos _newCorpse, getDirVisual _newCorpse] call FUNC(setCameraAttributes);
 
 // Enter/exit spectator based on the respawn type and whether killed/respawned
-if (alive _unit) then {
+if (alive _newCorpse) then {
+    // Handle seagull respawn
     if (_respawn == 1) then {
-        [_unit] call FUNC(stageSpectator);
-        [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
+        private _grp = createGroup [sideLogic, true];
+        private _virtual = _grp createUnit [QGVAR(virtual), [0,0,0], [], 0, "NONE"];
+
+        selectPlayer _virtual;
+
+        // Delete the seagull
+        deleteVehicle _newCorpse;
+
         [true] call FUNC(setSpectator);
     } else {
         [false] call FUNC(setSpectator);
@@ -38,6 +47,5 @@ if (alive _unit) then {
     // Negligible respawn delay can result in entering spectator after respawn
     if (playerRespawnTime <= 1) exitWith {};
 
-    [2,_killer,_vision,_pos,getDir _unit] call FUNC(setCameraAttributes);
     [true] call FUNC(setSpectator);
 };

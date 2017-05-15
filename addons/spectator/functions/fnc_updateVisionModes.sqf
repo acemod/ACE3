@@ -47,7 +47,7 @@ _newModes sort true;
 
 // Can't become an empty array
 if (_newModes isEqualTo []) then {
-    ["Cannot remove all vision modes (%1)", QFUNC(updateVisionModes)] call BIS_fnc_error;
+    WARNING("Cannot remove all spectator vision modes");
 } else {
     GVAR(availableVisions) = _newModes;
 };

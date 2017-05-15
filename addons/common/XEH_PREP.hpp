@@ -76,6 +76,7 @@ PREP(getTurretDirection);
 PREP(getUavControlPosition);
 PREP(getVehicleCargo);
 PREP(getVehicleCodriver);
+PREP(getVehicleIcon);
 PREP(getVersion);
 PREP(getWeaponAzimuthAndInclination);
 PREP(getWeaponIndex);

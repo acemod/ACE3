@@ -114,4 +114,16 @@ class CfgVehicles {
             description = CSTRING(Settings_Description);
         };
     };
+    class VirtualMan_F;
+    class GVAR(vitrual): VirtualMan_F {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        scopeArsenal = 0;
+        scopeCurator = 0;
+
+        weapons[] = {};
+
+        delete ACE_Actions;
+        delete ACE_SelfActions;
+    };
 };

@@ -3,8 +3,8 @@
  * Adds or removes spectator camera modes from the selection available to the local player.
  * Possible camera modes are:
  *   - 0: Free
- *   - 1: Internal
- *   - 2: External
+ *   - 1: First person
+ *   - 2: Follow
  *
  * Arguments:
  * 0: Camera modes to add <ARRAY>
@@ -39,7 +39,7 @@ _newModes sort true;
 
 // Can't become an empty array
 if (_newModes isEqualTo []) then {
-    ["Cannot remove all camera modes (%1)", QFUNC(updateCameraModes)] call BIS_fnc_error;
+    WARNING("Cannot remove all spectator camera modes");
 } else {
     GVAR(availableModes) = _newModes;
 };

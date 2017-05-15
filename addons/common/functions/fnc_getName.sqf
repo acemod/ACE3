@@ -1,11 +1,12 @@
 /*
- * Author: commy2
+ * Author: commy2, SilentSpike
  * Returns the name of the object. Used to prevent issues with the name command.
  *
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Use effective commander name when used on vehicles (default: false) <BOOL>
  * 2: Get Raw Name (Don't sanatize HTML tags `</>`) (default: false) <BOOL>
+ * 3: Maximum number of characters to return (default: -1) <NUM>
  *
  * Return Value:
  * Object Name <STRING>
@@ -17,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", ["_showEffective", false], ["_useRaw", false]];
+params ["_unit", ["_showEffective", false], ["_useRaw", false], ["_maxChars", -1]];
 
 private _name = "";
 
@@ -31,4 +32,8 @@ if (_unit isKindOf "CAManBase") then {
     };
 };
 
-_name
+if (_maxChars >= 0) then {
+    _name select [0, _maxChars]
+} else {
+    _name
+};

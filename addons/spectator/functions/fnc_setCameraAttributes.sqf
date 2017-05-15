@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Camera mode <NUMBER>
  *   - 0: Free
- *   - 1: Internal
- *   - 2: External
+ *   - 1: First Person
+ *   - 2: Follow
  * 1: Camera unit (objNull for random) <OBJECT>
  * 2: Camera vision <NUMBER>
  *   - -2: Normal
@@ -32,14 +32,9 @@
 #include "script_component.hpp"
 
 params [
-    ["_mode",GVAR(camMode),[0]],
-    ["_unit",GVAR(camUnit),[objNull]],
-    ["_vision",GVAR(camVision),[0]],
-    ["_position",ASLtoATL GVAR(camPos),[[]],3],
-    ["_heading",GVAR(camPan),[0]],
-    ["_tilt",GVAR(camTilt),[0]],
-    ["_zoom",GVAR(camZoom),[0]],
-    ["_speed",GVAR(camSpeed),[0]]
+    ["_mode",GETMVAR(GVAR(camMode),MODE_FREE),[0]],
+    ["_focus",GETMVAR(GVAR(camTarget),objNull),[objNull]],
+    ["_vision",GETMVAR(GVAR(camVision),VISION_NORM),[0]]
 ];
 
 // Normalize input
@@ -51,18 +46,12 @@ if !(_vision in GVAR(availableVisions)) then {
     _vision = GVAR(availableVisions) select ((GVAR(availableVisions) find GVAR(camVision)) max 0);
 };
 
-GVAR(camPan) = _heading % 360;
-GVAR(camSpeed) = (_speed max 0.05) min 10;
-GVAR(camTilt) = (_tilt max -89) min 89;
-GVAR(camUnit) = _unit;
-GVAR(camVision) = _vision;
-GVAR(camZoom) = (_zoom min 2) max 0.01;
-
 // Apply if camera exists
 if (GVAR(isSet)) then {
-    GVAR(camPos) = (ATLtoASL _position); // Camera position will be updated in FUNC(handleCamera)
-    [_mode,_unit,_vision] call FUNC(transitionCamera);
+    ["SetCameraMode",[_mode]] call FUNC(camera);
+    ["SetVisionMode",[_vision]] call FUNC(camera);
 } else {
     GVAR(camMode) = _mode;
-    GVAR(camPos) = (ATLtoASL _position);
+    GVAR(camTarget) = _focus;
+    GVAR(camVision) = _vision;
 };

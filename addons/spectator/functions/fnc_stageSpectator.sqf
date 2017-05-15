@@ -1,10 +1,9 @@
 /*
  * Author: SilentSpike
- * Sets target unit to the given spectator state (physically)
- * To virtually handle a spectator see ace_spectator_fnc_setSpectator
+ * Stores and hdies an entity safely out of the way (intended for use on spectator players)
  *
  * Units will be gathered at marker ace_spectator_respawn (or [0,0,0] by default)
- * Upon unstage, units will be moved to the position they were in upon staging
+ * Upon unstage, units will be moved to the position they were in before staging
  *
  * Arguments:
  * 0: Unit to put into spectator stage <OBJECT> (default: player)
@@ -64,7 +63,7 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
 
-    ["ace_spectatorStaged", [_set]] call CBA_fnc_localEvent;
+    ["ace_spectatorStaged", [_set, _unit]] call CBA_fnc_globalEvent;
 };
 
 //BandAid for #2677 - if player in unitList weird before being staged, weird things can happen

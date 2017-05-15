@@ -1,6 +1,7 @@
 /*
  * Author: SilentSpike
  * Enter/exit spectator mode for the local player
+ * Handles the UI and camera, acts independent of player entity
  *
  * Client will be able to communicate in ACRE/TFAR as appropriate
  *
@@ -24,6 +25,10 @@ params [["_set",true,[true]], ["_force",true,[true]]];
 // Only clients can be spectators
 if !(hasInterface) exitWith {};
 
+// Let the display know if it is or isn't forced
+// Could be switched after spectator has already started
+GVAR(uiForced) = _force;
+
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitWith {};
 
@@ -45,30 +50,11 @@ if (["acre_sys_radio"] call EFUNC(common,isModLoaded)) then {[_set] call acre_ap
 if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {[player, _set] call TFAR_fnc_forceSpectator};
 
 if (_set) then {
-    // Initalize camera variables
-    GVAR(camBoom) = 0;
-    GVAR(camDolly) = [0,0];
-    GVAR(camGun) = false;
+    // Initalize the camera
+    [true] call FUNC(cam);
 
-    // Initalize display variables
-    GVAR(ctrlKey) = false;
-    GVAR(heldKeys) = [];
-    GVAR(heldKeys) resize 255;
-    GVAR(mouse) = [false,false];
-    GVAR(mousePos) = [0.5,0.5];
-
-    // Update units before opening to support pre-set camera unit
-    [] call FUNC(updateUnits);
-
-    // Initalize the camera objects
-    GVAR(freeCamera) = "CamCurator" camCreate (ASLtoATL GVAR(camPos));
-    GVAR(unitCamera) = "Camera" camCreate [0,0,0];
-    GVAR(targetCamera) = "Camera" camCreate [0,0,0];
-
-    // Initalize view
-    GVAR(unitCamera) camSetTarget GVAR(targetCamera);
-    GVAR(unitCamera) camCommit 0;
-    [] call FUNC(transitionCamera);
+    // Create the display when main display is ready
+    [{ !isNull MAIN_DISPLAY },{ [true] call FUNC(ui) }] call CBA_fnc_waitUntilAndExecute;
 
     // Cache current channel to switch back to on exit
     GVAR(channelCache) = currentChannel;
@@ -77,33 +63,6 @@ if (_set) then {
     GVAR(channel) radioChannelAdd [player];
     setCurrentChannel (5 + GVAR(channel));
 
-    // Close map and clear the chat
-    openMap [false,false];
-    clearRadio;
-    enableRadio false;
-
-    // Close any open dialogs
-    while {dialog} do {
-        closeDialog 0;
-    };
-
-    [{!isNull ([] call BIS_fnc_displayMission)},{
-        disableSerialization;
-
-        // Create the display
-        _display = ([] call BIS_fnc_displayMission) createDisplay QGVAR(interface);
-
-        // If not forced, make esc end spectator
-        if !(_this) then {
-            _display displayAddEventHandler ["KeyDown", {
-                if (_this select 1 == 1) then {
-                    [false] call FUNC(setSpectator);
-                    true
-                };
-            }];
-        };
-    }, _force] call CBA_fnc_waitUntilAndExecute;
-
     // Cache and disable nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
         GVAR(nametagSettingCache) = [EGVAR(nametags,showPlayerNames), EGVAR(nametags,showNamesForAI)];
@@ -111,19 +70,11 @@ if (_set) then {
         EGVAR(nametags,showNamesForAI) = false;
     };
 } else {
-    // Close any open dialogs (could be interrupts)
-    while {dialog} do {
-        closeDialog 0;
-    };
-
-    // Kill the display
-    (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
+    // Kill the display (ensure main display exists, handles edge case where spectator turned off before display exists)
+    [{ !isNull MAIN_DISPLAY },{ [false] call FUNC(ui) }] call CBA_fnc_waitUntilAndExecute;
 
     // Terminate camera
-    GVAR(freeCamera) cameraEffect ["terminate", "back"];
-    camDestroy GVAR(freeCamera);
-    camDestroy GVAR(unitCamera);
-    camDestroy GVAR(targetCamera);
+    [false] call FUNC(cam);
 
     // Remove from spectator chat
     GVAR(channel) radioChannelRemove [player];
@@ -131,32 +82,6 @@ if (_set) then {
     // Restore cached channel and delete cache
     setCurrentChannel GVAR(channelCache);
     GVAR(channelCache) = nil;
-
-    // Clear any residual spectator chat
-    clearRadio;
-    enableRadio true;
-
-    // Return to player view
-    player switchCamera "internal";
-
-    // Cleanup camera variables
-    GVAR(camBoom) = nil;
-    GVAR(camDolly) = nil;
-    GVAR(camGun) = nil;
-    GVAR(freeCamera) = nil;
-    GVAR(unitCamera) = nil;
-    GVAR(targetCamera) = nil;
-
-    //Kill these PFEH handlers now because the PFEH can run before the `onunload` event is handled
-    GVAR(camHandler) = nil;
-    GVAR(compHandler) = nil;
-    GVAR(toolHandler) = nil;
-
-    // Cleanup display variables
-    GVAR(ctrlKey) = nil;
-    GVAR(heldKeys) = nil;
-    GVAR(mouse) = nil;
-    GVAR(mousePos) = nil;
 
     // Reset nametag settings
     if (["ace_nametags"] call EFUNC(common,isModLoaded)) then {
@@ -173,4 +98,4 @@ GVAR(interrupts) = [];
 GVAR(isSet) = _set;
 player setVariable [QGVAR(isSet), true, true];
 
-["ace_spectatorSet", [_set]] call CBA_fnc_localEvent;
+["ace_spectatorSet", [_set, player]] call CBA_fnc_globalEvent;

@@ -29,16 +29,16 @@ if (_interrupt) then {
 };
 
 if (GVAR(interrupts) isEqualTo []) then {
-    if (isNull (GETUVAR(GVAR(interface),displayNull))) then {
+    if (isNull GVAR(interface)) then {
         (findDisplay 46) createDisplay QGVAR(interface);
         [] call FUNC(transitionCamera);
     };
 } else {
-    if !(isNull (GETUVAR(GVAR(interface),displayNull))) then {
+    if !(isNull GVAR(interface)) then {
         while {dialog} do {
             closeDialog 0;
         };
 
-        (GETUVAR(GVAR(interface),displayNull)) closeDisplay 0;
+        GVAR(interface) closeDisplay 0;
     };
 };
