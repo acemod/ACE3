@@ -1,32 +1,37 @@
 /*
  * Author: GitHawk, Jonpas
- * Returns all magazines a turret can hold according to config.
+ * Returns all magazines a turret of a vehicle class can hold according to config.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle class <STRING>
  * 1: Turret Path <ARRAY>
  *
  * Return Value:
  * Magazine classes in TurretPath <ARRAY>
  *
  * Example:
- * [vehicle, [0]] call ace_rearm_fnc_getConfigMagazines
+ * ["B_MBT_01_arty_F", [0]] call ace_rearm_fnc_getConfigMagazines
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_turretPath", [], [[]]]];
+params [
+    ["_cfgString", "", [""]],
+    ["_turretPath", [], [[]]]
+];
 
-if (isNull _target) exitWith {[]};
+if (_cfgString == "") exitWith {[]};
 
-_cfg = configFile >> "CfgVehicles" >> (typeOf _target) >> "Turrets";
+private _cfg = configFile >> "CfgVehicles" >> _cfgString >> "Turrets";
+
+if !(isClass _cfg) exitWith {[]};
 
 if (count _turretPath == 1) then {
     _turretPath params ["_subPath"];
 
     if (_subPath == -1) exitWith {
-        _cfg = configFile >> "CfgVehicles" >> (typeOf _target);
+        _cfg = configFile >> "CfgVehicles" >> _cfgString;
     };
 
     if (count _cfg > _subPath) then {

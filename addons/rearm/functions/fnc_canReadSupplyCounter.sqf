@@ -1,16 +1,16 @@
 /*
  * Author: GitHawk
- * Check if a unit can store ammo in an ammo truck.
+ * Checks if unit can read supply counter.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Ammo Truck <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
- * Can Store Ammo <BOOL>
+ * Can read supply counter <BOOL>
  *
  * Example:
- * [ammo_truck, player] call ace_rearm_fnc_canStoreAmmo
+ * [ammo_truck, player] call ace_rearm_fnc_canReadSupplyCounter
  *
  * Public: No
  */
@@ -22,8 +22,8 @@ params [
 ];
 
 !(isNull _unit ||
-    {!alive _target} || 
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
+    {!alive _truck} ||
     {(_truck distance _unit) > REARM_ACTION_DISTANCE} ||
-    {isNull (_unit getVariable [QGVAR(dummy), objNull])})
+    {GVAR(supply) == 0})

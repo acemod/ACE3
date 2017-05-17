@@ -7,7 +7,7 @@
  * 0: caller (player) <OBJECT>
  * 1: target <OBJECT>
  * 2: classnamess <ARRAY>
- * 3: Do Not Drop Ammo <BOOL><OPTIONAL>
+ * 3: Do Not Drop Ammo <BOOL> (optional)
  *
  * Return Value:
  * Nothing

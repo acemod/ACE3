@@ -6,9 +6,9 @@
  * Arguments:
  * 0: Source Vehicle <OBJECT>
  * 1: Cargo Classname <STRING>
- * 2: Unloader (player) <OBJECT><OPTIONAL>
- * 3: Max Distance (meters) <NUMBER><OPTIONAL>
- * 4: Check Vehicle is Stable <BOOL><OPTIONAL>
+ * 2: Unloader (player) <OBJECT> (optional)
+ * 3: Max Distance (meters) <NUMBER> (optional)
+ * 4: Check Vehicle is Stable <BOOL> (optional)
  *
  * Return Value:
  * Unload PositionAGL (Can Be [] if no valid pos found) <ARRAY>

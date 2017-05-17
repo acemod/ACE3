@@ -1,23 +1,21 @@
 /*
- * Author: commy2, Glowbal
+ * Author: commy2, Glowbal, GitHawk
  * Display a structured text.
  *
  * Arguments:
  * 0: Text <ANY>
  * 1: Size of the textbox <NUMBER> (default: 1.5)
  * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> (default: ACE_player)
+ * 3: Custom Width <NUMBER> (optional)
  *
  * Return Value:
  * None
- *
- * Example:
- *
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]]];
+params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]], ["_width", 10, [0]]];
 
 if (_target != ACE_player) exitWith {};
 
@@ -55,9 +53,9 @@ private _wPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_W", (10
 private _hPos = profilenamespace getVariable ["IGUI_GRID_ACE_displayText_H", (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))];
 */
 
-private _xPos = ((safezoneX + safezoneW) - (10 *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40));
+private _xPos = ((safezoneX + safezoneW) - (_width *(((safezoneW / safezoneH) min 1.2) / 40)) - 2.9 *(((safezoneW / safezoneH) min 1.2) / 40));
 private _yPos = safeZoneY + 0.175 * safezoneH;
-private _wPos =  (10 *(((safezoneW / safezoneH) min 1.2) / 40));
+private _wPos =  (_width *(((safezoneW / safezoneH) min 1.2) / 40));
 private _hPos = (2 *((((safezoneW / safezoneH) min 1.2) / 1.2) / 25));
 
 // Zeus Interface Open and Display would be under the "CREATE" list

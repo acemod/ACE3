@@ -3,7 +3,7 @@
  * Get rearm return value.
  *
  * Arguments:
- * 0: Target <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Magazine Classname <STRING>
  *
  * Return Value:
@@ -13,32 +13,35 @@
  * 2: Number of current magazines in turret path <NUMBER>
  *
  * Example:
- * [tank, "mag"] call ace_rearm_fnc_getNeedRearmMagazines
+ * [tank, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_getNeedRearmMagazines
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_return", "_magazines", "_currentMagazines"];
-params ["_target", "_magazineClass"];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_magazineClass", "", [""]]
+];
 
-_return = [false, [], 0];
+private _return = [false, [], 0];
 {
-    _magazines = [_target, _x] call FUNC(getConfigMagazines);
+    private _magazines = [_vehicle, _x] call FUNC(getVehicleMagazines);
 
     if (_magazineClass in _magazines) then {
-        _currentMagazines = {_x == _magazineClass} count (_target magazinesTurret _x);
+        private _currentMagazines = {_x == _magazineClass} count (_vehicle magazinesTurret _x);
 
-        if ((_target magazineTurretAmmo [_magazineClass, _x]) < getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count")) exitWith {
+        if ((_vehicle magazineTurretAmmo [_magazineClass, _x]) < getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count")) exitWith {
             _return = [true, _x, _currentMagazines];
         };
 
-        if (_currentMagazines < ([_target, _x, _magazineClass] call FUNC(getMaxMagazines))) exitWith {
+        if (_currentMagazines < ([_vehicle, _x, _magazineClass] call FUNC(getMaxMagazines))) exitWith {
             _return = [true, _x, _currentMagazines];
         };
     };
 
     if (_return select 0) exitWith {};
-} forEach REARM_TURRET_PATHS;
+    false
+} count REARM_TURRET_PATHS;
 
 _return

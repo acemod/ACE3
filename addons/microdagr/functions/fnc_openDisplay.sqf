@@ -3,7 +3,7 @@
  * Changes the display mode of the microDAGR
  *
  * Arguments:
- * 0: Display Mode to show the microDAGR in <NUMBER><OPTIONAL>
+ * 0: Display Mode to show the microDAGR in <NUMBER> (optional)
  *
  * Return Value:
  * None
