@@ -47,6 +47,9 @@ if (_init) then {
     // Create the display
     MAIN_DISPLAY createDisplay QGVAR(display);
 
+    // Set the initial camera mode (could be pre-set)
+    [GVAR(camMode)] call FUNC(cam_setCameraMode);
+
     // Initially hide map
     [] call FUNC(ui_toggleMap);
 

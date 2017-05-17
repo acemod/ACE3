@@ -74,9 +74,6 @@ if (_init) then {
     // Start ticking
     GVAR(camPFH) = [LINKFUNC(cam_updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
     GVAR(draw3D) = addMissionEventHandler ["Draw3D", {call FUNC(cam_draw3D)}];
-
-    // Set the initial camera mode (could be pre-set)
-    [GVAR(camMode)] call FUNC(cam_setCameraMode);
 } else {
     // Stop ticking
     removeMissionEventHandler ["Draw3D", GVAR(draw3D)];
