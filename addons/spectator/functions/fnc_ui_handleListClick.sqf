@@ -2,6 +2,10 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle list single/double clicks
  *
+ * Expected behaviour:
+ * Clicking an entry focuses the camera on it (any camera mode)
+ * Double clicking an entry teleports the free camera nearby and focuses on it
+ *
  * Public: No
  */
 #include "script_component.hpp"

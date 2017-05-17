@@ -101,7 +101,7 @@ if !(GVAR(uiMapVisible)) then {
             if (_type == 2 && { _unit distance _camera < DISTANCE_NAMES } && {_unit in _camTarget || _unit in _cursorObject}) then {
                 drawIcon3D [
                     ICON_BACKGROUND_UNIT,
-                    [0, 0, 0, if (_unit in _camTarget) then { 0.8 } else { 0.4 }],
+                    [0, 0, 0, [0.4, 0.8] select (_unit in _camTarget)],
                     _position,
                     5.0,
                     4,

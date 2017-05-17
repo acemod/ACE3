@@ -33,11 +33,15 @@ private _newList = [
             // TODO: whitelist & blacklist
         ) then {
             _newUnits pushBack ([_x] call BIS_fnc_objectVar);
+
+            private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+            if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
+
             _unitsInfo pushBack [
                 _x,
                 alive _x,
                 alive _x && { NEEDS_REVIVE(_x) },
-                [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName)
+                _name
             ];
         };
         nil // Speed loop

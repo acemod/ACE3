@@ -51,9 +51,9 @@ private _handledVehicles = [];
         private _text = "";
 
         if (GVAR(uiMapHighlighted) == _vehicle || {GVAR(uiMapHighlighted) in _vehicle}) then {
-            private _name = [GVAR(uiMapHighlighted), false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+            _text = [GVAR(uiMapHighlighted), false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+            if !(isPlayer GVAR(uiMapHighlighted)) then { _text = format ["%1: %2", localize "str_player_ai", _text]; };
             _sideColor = [0.8, 0.8, 0.5, 1];
-            _text = if (isPlayer GVAR(uiMapHighlighted)) then { _name } else { format ["%1: %2", localize "str_player_ai", _name]; };
         };
 
         if (NEEDS_REVIVE(_vehicle)) then {

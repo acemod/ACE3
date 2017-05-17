@@ -15,11 +15,8 @@ if (!GVAR(uiWidgetVisible) || {isNull GVAR(camTarget)}) exitWith {CTRL_WIDGET ct
 
 private _focus = GVAR(camTarget);
 
-private _name = if (isPlayer _focus) then {
-    [_focus, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
-} else {
-    format ["%1: %2", localize "str_player_ai", [_focus, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName)];
-};
+private _name = [_focus, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
 
 private _unitTypePicture = [_focus] call EFUNC(common,getVehicleIcon);
 private _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");

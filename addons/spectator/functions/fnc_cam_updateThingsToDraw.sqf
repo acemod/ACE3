@@ -13,10 +13,10 @@ private _thingsToDraw = [];
 
 {
     private _vehicle = vehicle _x;
-    private _notInVehicle = (_vehicle == _x);
+    private _inVehicle = (_vehicle != _x);
     private _distanceToCamera = GVAR(camera) distance _x;
 
-    if (_distanceToCamera <= 3000.0 && { _notInVehicle || { _x == effectiveCommander _vehicle } }) then {
+    if (_distanceToCamera <= 3000.0 && { !_inVehicle || { _x == effectiveCommander _vehicle } }) then {
         private _group = group _x;
         private _groupSide = side _group;
         private _groupName = groupId _group;
@@ -47,7 +47,9 @@ private _thingsToDraw = [];
         _groupColor set [3, _fadeByDistance];
 
         private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
-        if !(_notInVehicle) then {
+        if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
+
+        if (_inVehicle) then {
             private _crewCount = (({alive _x} count (crew _vehicle)) - 1);
             if (_crewCount > 0) then {
                 _name = format ["%1 (+%2)", _name, _crewCount];
@@ -89,7 +91,7 @@ private _thingsToDraw = [];
             };
         };
 
-        if (_x == _groupLeader || { !_notInVehicle && { _x == effectiveCommander _vehicle } }) then {
+        if (_x == _groupLeader || { _inVehicle && { _x == effectiveCommander _vehicle } }) then {
             // Group icon
             _thingsToDraw pushBack [_x, 0, [
                 ICON_GROUP,

@@ -68,7 +68,7 @@ if (_init) then {
     GVAR(camera) = _camera;
 
     // Create dummy target used for follow camera
-    // TODO: Check if a camera object works here
+    // TODO: Check if a camera object works here (see: https://feedback.bistudio.com/T123956)
     GVAR(camDummy) = "Land_HelipadEmpty_F" createVehicleLocal getPosASLVisual GVAR(camTarget);
 
     // Start ticking
