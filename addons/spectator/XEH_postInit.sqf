@@ -1,8 +1,5 @@
 #include "script_component.hpp"
 
-// Add interaction menu exception
-["isNotSpectating", {!(GVAR(isSet))}] call EFUNC(common,addCanInteractWithCondition);
-
 ["ace_settingsInitialized", {
     GVAR(availableModes) = [[0,1,2], [1,2], [0], [1], [2]] select GVAR(restrictModes);
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
@@ -15,3 +12,7 @@ if (isServer) then {
 };
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
+
+// TODO: Unit switch EH, if virtual spectator, start spectating
+
+// TODO: Override BI setting, hook into display init
