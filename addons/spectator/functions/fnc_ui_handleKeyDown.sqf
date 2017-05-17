@@ -118,7 +118,7 @@ if (inputAction "networkStats" > 0) exitWith {
 
 // Handle very fast speed
 if (_key == DIK_LALT) exitWith {
-    [true] call FUNC(cam_toggleVeryFastSpeed);
+    [true] call FUNC(cam_toggleVeryFast);
     true
 };
 
