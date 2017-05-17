@@ -14,7 +14,7 @@ params ["", "", "_x", "_y"];
 if (isNull GVAR(uiMapHighlighted)) then {
     // Give user feedback that camera is no longer focused
     if !(isNull GVAR(camTarget)) then {
-        playsound "ReadoutHideClick1";
+        playSound "ReadoutHideClick1";
     };
 
     // Preserve camera height on teleport
@@ -24,7 +24,7 @@ if (isNull GVAR(uiMapHighlighted)) then {
     GVAR(camera) setPosASL _pos;
 } else {
     // Give user feedback that camera is focused on highlighted unit
-    playsound "ReadoutClick";
+    playSound "ReadoutClick";
 };
 
 [GVAR(uiMapHighlighted)] call FUNC(setFocus);

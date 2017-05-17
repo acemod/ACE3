@@ -12,7 +12,7 @@
 // Moved timer into map controls group, update here
 BEGIN_COUNTER(updateTimer);
 
-// Need to check relevance of this variable, is it a general module or EG specific
+// TODO: Check relevance of this variable, is it a general module or EG specific
 private _timeLeft = -(time - (GETMVAR(BIS_hvt_timeoutTarget,0)))/3600;
 
 if (_timeLeft < 0) then {
@@ -37,13 +37,13 @@ private _handledVehicles = [];
 {
     private _dist = _x distance2D _loc;
 
-    if (_dist < _minDist && { alive _x } && { _dist < MAP_MIN_ENTITY_DISTANCE } && { simulationEnabled _x } && { !(isObjectHidden _x) }) then {
+    if (_dist < _minDist && { _dist < MAP_MIN_ENTITY_DISTANCE }) then {
         _minDist = _dist;
         _nearestEntity = _x;
     };
 
     private _vehicle = vehicle _x;
-    if (!(_vehicle in _handledVehicles) && { alive _vehicle } && { simulationEnabled _vehicle } && { !isObjectHidden _vehicle }) then {
+    if !(_vehicle in _handledVehicles) then {
         _handledVehicles pushBack _vehicle;
 
         private _vehicleTexture = [_vehicle] call EFUNC(common,getVehicleIcon);
@@ -53,7 +53,7 @@ private _handledVehicles = [];
         if (GVAR(uiMapHighlighted) == _vehicle || {GVAR(uiMapHighlighted) in _vehicle}) then {
             private _name = [GVAR(uiMapHighlighted), false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
             _sideColor = [0.8, 0.8, 0.5, 1];
-            _text = if (isPlayer GVAR(uiMapHighlighted)) then { _name } else { format ["%1: %2", "AI", _name]; };
+            _text = if (isPlayer GVAR(uiMapHighlighted)) then { _name } else { format ["%1: %2", localize "str_player_ai", _name]; };
         };
 
         if (NEEDS_REVIVE(_vehicle)) then {
