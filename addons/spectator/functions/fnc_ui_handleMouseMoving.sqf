@@ -15,6 +15,6 @@ if (GVAR(holdingRMB) && { GVAR(camMode) == MODE_FOLLOW  }) then {
     };
 
     if (_deltaY != 0) then {
-        GVAR(camPitch) = (((GVAR(camYaw) - (_deltaY * 100 * GVAR(camDeltaTime))) max -90.0) min 90.0);
+        GVAR(camPitch) = (((GVAR(camPitch) - (_deltaY * 100 * GVAR(camDeltaTime))) max -90.0) min 90.0);
     };
 };

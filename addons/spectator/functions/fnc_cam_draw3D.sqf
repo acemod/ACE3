@@ -32,55 +32,61 @@ GVAR(cursorObject) = _cursorObject;
 END_COUNTER(updateCursor);
 
 BEGIN_COUNTER(camTick);
-if !(isNull _camera) then {
-    private _cameraMode = GVAR(camMode);
-    private _focus = _camTarget;
+private _cameraMode = GVAR(camMode);
 
-    // UI mouse handler makes use of delta time between camera ticks
-    private _currentTime = diag_tickTime;
-    GVAR(camDeltaTime) = _currentTime - GVAR(camLastTickTime);
-    GVAR(camLastTickTime) = _currentTime;
+// UI mouse handler makes use of delta time between camera ticks
+private _currentTime = diag_tickTime;
+GVAR(camDeltaTime) = _currentTime - GVAR(camLastTickTime);
+GVAR(camLastTickTime) = _currentTime;
 
-    // Unit camera modes
-    if (_cameraMode in [MODE_FPS, MODE_FOLLOW]) then {
-        // If no focus in these modes find a new one
-        if (isNull _focus) then {
-            _focus = ["FindFocus"] call FUNC(display);
-        };
-
-        // If new focus was found then switch to it
-        if !(isNull _focus && {_focus != _camTarget}) then {
-            ["SetFocus", [_focus]] call FUNC(display);
-        };
-
-        if (!isNull _focus && {_cameraMode == MODE_FOLLOW}) then {
-            [_focus] call FUNC(cam_prepareTarget);
-        };
-    };
-
-    // Focus get in / out of vehicle state
-    if !(isNull _focus) then {
-        private _targetInVeh = GVAR(camTargetInVehicle);
-
-        if (GVAR(camHasTarget)) then {
-            if (!_targetInVeh && { vehicle _focus != _focus }) then {
-                [_focus] call FUNC(cam_setTarget);
-                GVAR(camTargetInVehicle) = true;
-            };
-
-            if (_targetInVeh && { vehicle _focus == _focus }) then {
-                [_focus] call FUNC(cam_setTarget);
-                GVAR(camTargetInVehicle) = false;
-            };
-        };
+// If no focus in unit camera modes try to find a new one
+if (_cameraMode in MODES_UNIT) then {
+    private _focus = if (isNull _camTarget) then {
+        private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
+        if (isNil "_testFocus") then {
+            objNull
+        } else {
+            _testFocus
+        }
     } else {
-        GVAR(camTargetInVehicle) = false;
+        _camTarget
     };
 
-    // Camera lights
-    if (count GVAR(camLights) > 1) then {
-        (GVAR(camLights) select 1) setPosASL (AGLToASL (screenToWorld getMousePosition));
+    // If new focus was found then switch to it
+    if !(isNull _focus && {_focus != _camTarget}) then {
+        [_focus] call FUNC(setFocus);
     };
+
+    if (!isNull _focus && {_cameraMode == MODE_FOLLOW}) then {
+        [_focus] call FUNC(cam_prepareTarget);
+    };
+};
+
+// Refresh the local variable
+_camTarget = GVAR(camTarget);
+
+// Focus get in / out of vehicle state
+if !(isNull _camTarget) then {
+    private _targetInVeh = GVAR(camTargetInVehicle);
+
+    if (GVAR(camHasTarget)) then {
+        if (!_targetInVeh && { vehicle _camTarget != _camTarget }) then {
+            [_camTarget] call FUNC(cam_setTarget);
+            GVAR(camTargetInVehicle) = true;
+        };
+
+        if (_targetInVeh && { vehicle _camTarget == _camTarget }) then {
+            [_camTarget] call FUNC(cam_setTarget);
+            GVAR(camTargetInVehicle) = false;
+        };
+    };
+} else {
+    GVAR(camTargetInVehicle) = false;
+};
+
+// Camera lights
+if (count GVAR(camLights) > 1) then {
+    (GVAR(camLights) select 1) setPosASL (AGLToASL (screenToWorld getMousePosition));
 };
 END_COUNTER(camTick);
 

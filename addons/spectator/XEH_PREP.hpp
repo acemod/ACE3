@@ -36,6 +36,7 @@ PREP(getTargetGroups);
 PREP(interrupt);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
+PREP(setFocus);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);

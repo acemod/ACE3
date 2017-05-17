@@ -33,6 +33,7 @@ if (_init) then {
 
     // Follow camera related
     GVAR(camDistance)           = 0;
+    GVAR(camDistanceTemp)       = 0;
     GVAR(camYaw)                = 0;
     GVAR(camPitch)              = 0;
 
@@ -73,6 +74,9 @@ if (_init) then {
     // Start ticking
     GVAR(camPFH) = [LINKFUNC(cam_updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
     GVAR(draw3D) = addMissionEventHandler ["Draw3D", {call FUNC(cam_draw3D)}];
+
+    // Set the initial camera mode (could be pre-set)
+    [GVAR(camMode)] call FUNC(cam_setCameraMode);
 } else {
     // Stop ticking
     removeMissionEventHandler ["Draw3D", GVAR(draw3D)];
@@ -110,6 +114,7 @@ if (_init) then {
     GVAR(projectiles)           = nil;
     GVAR(thingsToDraw)          = nil;
     GVAR(camDistance)           = nil;
+    GVAR(camDistanceTemp)       = nil;
     GVAR(camYaw)                = nil;
     GVAR(camPitch)              = nil;
     GVAR(camFast)               = nil;

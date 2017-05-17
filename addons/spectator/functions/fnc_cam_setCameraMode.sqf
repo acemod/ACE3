@@ -24,8 +24,10 @@ if (_newMode == _oldMode) exitWith {};
 
 private _focus = GVAR(camTarget);
 if (!isNull _focus || _newMode == MODE_FREE) then {
+    private _camera = GVAR(camera);
+
     if (_newMode == MODE_FPS) exitWith {
-        GVAR(camera) cameraEffect ["Terminate", "BACK"];
+        _camera cameraEffect ["Terminate", "BACK"];
         _focus switchCamera "INTERNAL";
 
         // Reset vision mode
@@ -34,7 +36,7 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         [] call FUNC(cam_resetTarget);
 
         // Disable camera input
-        GVAR(camera) camCommand "manual off";
+        _camera camCommand "manual off";
 
         // Update UI
         CTRL_FPS ctrlSetText CAM_ICON_FIRST_SELECTED;
@@ -48,13 +50,13 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
     };
 
     if (_newMode == MODE_FOLLOW) exitWith {
-        GVAR(camera) cameraEffect ["Internal", "BACK"];
+        _camera cameraEffect ["Internal", "BACK"];
         _focus switchCamera "EXTERNAL";
 
         [] call FUNC(cam_resetTarget);
 
         // Disable camera input
-        GVAR(camera) camCommand "manual off";
+        _camera camCommand "manual off";
 
         // Update UI
         CTRL_FPS ctrlSetText CAM_ICON_FIRST;
@@ -68,9 +70,9 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
     };
 
     if (_newMode == MODE_FREE) exitWith {
-        GVAR(camera) cameraEffect ["Internal", "BACK"];
+        _camera cameraEffect ["Internal", "BACK"];
         player switchCamera "INTERNAL";
-        GVAR(camera) setDir getDirVisual GVAR(camera);
+        _camera setDir getDirVisual _camera;
 
         if (!isNull _focus) then {
             if (_oldMode == MODE_FPS) then {
@@ -81,7 +83,7 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
 
         // Enable camera input
         if !(GVAR(uiMapVisible)) then {
-            GVAR(camera) camCommand "manual on";
+            _camera camCommand "manual on";
         };
 
         // Update UI
