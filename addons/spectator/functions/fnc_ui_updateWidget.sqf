@@ -29,10 +29,12 @@ private _weapon = currentWeapon _focus;
 private _weaponPicture = if (_weapon != "") then {
     getText (configFile >> "CfgWeapons" >> _weapon >> "Picture");
 } else {
-    if (commander vehicle _focus == _focus) exitWith {IMG_COMMANDER};
-    if (driver vehicle _focus == _focus) exitWith {IMG_DRIVER};
-    if (gunner vehicle _focus == _focus) exitWith {IMG_GUNNER};
-    IMG_CARGO
+    if (_focus != vehicle _focus) then {
+        if (commander vehicle _focus == _focus) exitWith {IMG_COMMANDER};
+        if (driver vehicle _focus == _focus) exitWith {IMG_DRIVER};
+        if (gunner vehicle _focus == _focus) exitWith {IMG_GUNNER};
+        IMG_CARGO
+    } else {""};
 };
 
 (getPlayerScores _focus) params [["_kills",0,[0]], ["_softKills",0,[0]], ["_armoredKills",0,[0]], ["_airKills",0,[0]], ["_deaths",0,[0]], ["_total",0,[0]]];
