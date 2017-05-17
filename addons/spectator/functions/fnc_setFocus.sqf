@@ -12,9 +12,9 @@ params [["_newFocus", objNull, [objNull]]];
 if (_newFocus != GVAR(camTarget) && { !(isNull _newFocus && { isNull GVAR(camTarget) }) }) then {
     GVAR(camTarget) = _newFocus;
 
-    if (isNull GVAR(camTarget)) then {
+    if (isNull _newFocus) then {
         if (GVAR(camMode) == MODE_FREE) then {
-            [] call FUNC(resetTarget);
+            [] call FUNC(cam_resetTarget);
         } else {
             [MODE_FREE] call FUNC(cam_setCameraMode);
         };

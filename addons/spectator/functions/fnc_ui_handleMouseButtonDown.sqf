@@ -2,6 +2,12 @@
  * Author: Nelson Duarte, AACO
  * Function used to handle mouse down event
  *
+ * Expected behaviour:
+ * Left clicking a unit focuses the camera on that unit (in any camera mode)
+ * Left clicking empty space removes the current camera focus in free camera
+ * Right clicking removes the current camera focus in free camera
+ * Right clicking and dragging orbits around the unit in follow camera
+ *
  * Public: No
  */
 

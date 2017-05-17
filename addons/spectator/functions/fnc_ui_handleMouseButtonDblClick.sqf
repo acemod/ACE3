@@ -1,6 +1,9 @@
 /*
- * Author: Nelson Duarte, AACO
+ * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle mouse button double clicks
+ *
+ * Expected behaviour:
+ * Double left click teleports free camera toward the unit, but does not focus
  *
  * Public: No
  */
@@ -9,7 +12,6 @@
 
 params ["", "_button"];
 
-// Left click
 if (_button == 0 && {!isNull GVAR(cursorObject)}) then {
     [GVAR(cursorObject)] call FUNC(cam_prepareTarget);
 };
