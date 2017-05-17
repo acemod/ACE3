@@ -15,7 +15,7 @@ params ["_ctrl", "_index"];
 GVAR(uiListType) = [LIST_ENTITIES, LIST_LOCATIONS] select _index;
 
 // Reset the current list
-GVAR(curList) = nil;
+GVAR(curList) = [];
 
 // Clear list
 tvClear CTRL_LIST;

@@ -7,12 +7,12 @@
 
 #include "script_component.hpp"
 
-// Temporarily do nothing
+// TODO make this function work
 if true exitWith {};
 
 private _newList = [];
 
-// <Get new list here>
+// TODO: <Get new list here>
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {

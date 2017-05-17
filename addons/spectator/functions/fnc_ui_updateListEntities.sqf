@@ -19,9 +19,8 @@ private _newList = [
 // Go through groups and get the valid ones only, also cache group units information
 {
     private _group = _x;
-    private _groupSide = side _group;
     private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
-    private _groupInfo = [_group, side _group, _groupTexture, groupId _group];
+    private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
     private _unitsInfo = [];
 
     // Validate units
@@ -31,7 +30,9 @@ private _newList = [
             {!isObjectHidden _x} &&
             {simulationEnabled vehicle _x} &&
             {!isObjectHidden vehicle _x}
+            // TODO: whitelist & blacklist
         ) then {
+            _newUnits pushBack ([_x] call BIS_fnc_objectVar);
             _unitsInfo pushBack [
                 _x,
                 alive _x,
@@ -46,8 +47,8 @@ private _newList = [
     if !(_unitsInfo isEqualTo []) then {
         _newGroups pushBack (str _group);
         {
-            if (_groupSide == (_newList select _forEachIndex) select 0) exitWith {
-                ((_newList select _forEachIndex) select 3) pushBack [_groupInfo, _unitsInfo];
+            if ((side _group) == (_x select 0)) exitWith {
+                (_x select 3) pushBack [_groupInfo, _unitsInfo];
             };
         } forEach _newList;
     };
@@ -56,10 +57,6 @@ private _newList = [
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
-    private _allElements = ["TreeGetAllElements"] call FUNC(display);
-    private _groupElements = _allElements select 1;
-    private _unitElements = _allElements select 2;
-
     // Remove groups/units that are no longer there
     private _ctrl = CTRL_LIST;
     for "_sideIndex" from (_ctrl tvCount []) to 1 do {

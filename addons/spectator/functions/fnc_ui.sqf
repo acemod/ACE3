@@ -31,11 +31,14 @@ if (_init) then {
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
 
-    // List type is used for list updates and itneraction
+    // List type is used for list updates and interaction
     GVAR(uiListType) = LIST_ENTITIES;
 
     // Highlighted map object is used for click and drawing events
     GVAR(uiMapHighlighted) = objNull;
+
+    // Holds the current list data
+    GVAR(curList) = [];
 
     // Cache view distance and set spectator default
     GVAR(oldViewDistance) = viewDistance;
@@ -82,6 +85,7 @@ if (_init) then {
     GVAR(holdingRMB)        = nil;
     GVAR(uiListType)        = nil;
     GVAR(uiMapHighlighted)  = nil;
+    GVAR(curList)           = nil;
 
     // Reset view distance
     setViewDistance GVAR(oldViewDistance);
