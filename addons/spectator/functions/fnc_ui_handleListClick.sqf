@@ -5,14 +5,12 @@
  * Public: No
  */
 #include "script_component.hpp"
-TRACE_1("Params",_this);
-disableSerialization;
 
 params ["_dblClick","_params"];
 _params params ["_list","_index"];
 
 private _handled = false;
-private _object = GETMVAR(_list tvData _index,objNull); // List contains unique object variables
+private _object = missionNamespace getVariable [_list tvData _index, objNull]; // List contains unique object variables
 
 if !(isNull _object) then {
     if (_dblClick) then {
@@ -23,13 +21,13 @@ if !(isNull _object) then {
         GVAR(camera) setPosASL _pos;
 
         [_object] call FUNC(setFocus);
-        playsound "ReadoutClick";
+        playSound "ReadoutClick";
 
         _handled = true;
     } else {
         if (_object != GVAR(camTarget)) then {
             [_object] call FUNC(setFocus);
-            playsound "ReadoutClick";
+            playSound "ReadoutClick";
 
             _handled = true;
         };

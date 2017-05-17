@@ -53,8 +53,8 @@ class GVAR(display) {
 
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
-            onTreeSelChanged = QUOTE([false,_this] call FUNC(ui_handleListClick));
-            onTreeDblClick = QUOTE([true,_this] call FUNC(ui_handleListClick));
+            onTreeSelChanged = QUOTE([ARR_2(false,_this)] call FUNC(ui_handleListClick));
+            onTreeDblClick = QUOTE([ARR_2(true,_this)] call FUNC(ui_handleListClick));
 
             x = "safeZoneX";
             y = "safezoneY + 0.06";
