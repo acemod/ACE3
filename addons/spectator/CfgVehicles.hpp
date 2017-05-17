@@ -3,7 +3,7 @@ class CfgVehicles {
     class GVAR(moduleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(Settings_DisplayName);
-        icon = QPATHTOF(UI\Icon_Module_Spectator_ca.paa);
+        icon = QPATHTOF(data\Icon_Module_Spectator_ca.paa);
         category = "ACE";
         function = QFUNC(moduleSpectatorSettings);
         isGlobal = 1;

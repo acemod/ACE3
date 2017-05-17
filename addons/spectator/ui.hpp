@@ -1,4 +1,3 @@
-// TODO: Move this to root, move icon to /data
 class RscActiveText;
 class RscButton;
 class RscButtonMenu;

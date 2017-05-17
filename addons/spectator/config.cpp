@@ -17,7 +17,7 @@ class CfgPatches {
 #include "ACE_Settings.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
-#include "ui\interface.hpp"
+#include "ui.hpp"
 
 class CfgRespawnTemplates {
     class ADDON {
