@@ -61,8 +61,8 @@ if (_init) then {
     // If camera followed terrain it would be annoying to track units, etc.
     _camera camCommand "atl off";
 
-    // If camera didn't move slower closer to the ground it would be jarring
-    _camera camCommand "surfaceSpeed on";
+    // Camera speed should be consistent irrespective of height (painfully slow otherwise)
+    _camera camCommand "surfaceSpeed off";
 
     // Store camera
     GVAR(camera) = _camera;
