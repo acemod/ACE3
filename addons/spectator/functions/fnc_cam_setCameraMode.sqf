@@ -17,8 +17,8 @@ if !(_newMode in _modes) then {
     _newMode = _modes select ((_modes find _oldMode) max 0);
 };
 
-// Nothing to do here
-if (_newMode == _oldMode) exitWith {};
+// Should run even if the mode is the same, as it handles focus
+// if (_newMode == _oldMode) exitWith {};
 
 private _focus = GVAR(camTarget);
 if (!isNull _focus || _newMode == MODE_FREE) then {
@@ -80,9 +80,7 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         };
 
         // Enable camera input
-        if !(GVAR(uiMapVisible)) then {
-            _camera camCommand "manual on";
-        };
+        _camera camCommand "manual on";
 
         // Update UI
         CTRL_FPS ctrlSetText CAM_ICON_FIRST;

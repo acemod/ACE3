@@ -17,6 +17,8 @@ if (_button == 0) exitWith {
         };
     } else {
         playsound "ReadoutClick";
+
+        // Focus will be at screen center
         setMousePosition [0.5, 0.5];
     };
     [GVAR(cursorObject)] call FUNC(setFocus);
