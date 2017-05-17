@@ -10,7 +10,7 @@ if !(isNull _focus) then {
     private _zoomTemp = GVAR(camDistanceTemp);
 
     if (_zoomTemp != _zoom) then {
-        _zoomTemp = [_zoomTemp, _zoom, 10.0, GVAR(deltaTime)] call BIS_fnc_lerp;
+        _zoomTemp = [_zoomTemp, _zoom, 10.0, GVAR(camDeltaTime)] call BIS_fnc_lerp;
         GVAR(camDistanceTemp) = _zoomTemp;
     };
 
