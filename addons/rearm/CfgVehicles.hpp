@@ -118,12 +118,7 @@ class CfgVehicles {
     };
 
     class Truck_02_base_F: Truck_F {};
-    class Truck_02_Ammo_base_F: Truck_02_base_F {};
-    class I_Truck_02_ammo_F: Truck_02_Ammo_base_F {
-        transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
-    };
-    class O_Truck_02_Ammo_F: Truck_02_Ammo_base_F {
+    class Truck_02_Ammo_base_F: Truck_02_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };

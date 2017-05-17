@@ -1,5 +1,7 @@
 // PabstMirror
-#include "script_component.hpp"
+// execVM "z\ace\addons\fcs\dev\test_debugConfigs.sqf;
+
+private _testPass = true;
 
 diag_log text format ["[ACE_FCS] ---------------"];
 private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {2 == getNumber (_x >> 'scope')}", true];
@@ -20,7 +22,10 @@ private _problemUIs = [];
                 _ballisticComputer = [_ballisticComputer, 5] call ace_common_fnc_toBin;
                 if ((_ballisticComputer select [(count _ballisticComputer) - 5, 1]) == "1") then {
                     _vanillaFCS = true;
-                    if (_aceFCS) then {diag_log text format ["%1 -> %2:  ACE FCS Enabled CONFLICTS with vanilla FCS [%3]", _vehicleType, _weapon, _ballisticComputer];};
+                    if (_aceFCS) then {
+                        _testPass = false;
+                        diag_log text format ["%1 -> %2:  ACE FCS Enabled CONFLICTS with vanilla FCS [%3]", _vehicleType, _weapon, _ballisticComputer];
+                    };
                 };
             } forEach _weapons;
 
@@ -76,7 +81,8 @@ private _problemUIs = [];
                 };
             };
         };
-    } forEach [[0],[0,0]];
+    // } forEach [[0],[0,0]];
+    } forEach [[0],[0,0], [1], [2]];
 } forEach _vehicles;
 
 _problemUIs sort true;
@@ -86,3 +92,5 @@ diag_log text format ["[ACE_FCS] ------- Problem UIs --------"];
     diag_log text format ["- %1", _x];
 } forEach _problemUIs;
 diag_log text format ["[ACE_FCS] ---------------"];
+
+_testPass

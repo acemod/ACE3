@@ -90,3 +90,9 @@ class CfgUIGrids {
 class ACE_Extensions {
     extensions[] = {};
 };
+
+class ACE_Tests {
+    class ADDON {
+        vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
+    };
+};

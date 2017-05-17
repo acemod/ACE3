@@ -30,3 +30,9 @@ class CfgPatches {
 class ACE_Extensions {
     extensions[] += {"ace_fcs"};
 };
+
+class ACE_Tests {
+    class ADDON {
+        fcsConflicts = QPATHTOF(dev\test_debugConfigs.sqf);
+    };
+};
