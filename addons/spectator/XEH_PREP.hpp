@@ -1,16 +1,17 @@
 // Camera functions
 PREP(cam);
-PREP(cam_draw3D);
 PREP(cam_prepareTarget);
 PREP(cam_resetTarget);
 PREP(cam_setCameraMode);
 PREP(cam_setTarget);
 PREP(cam_setVisionMode);
+PREP(cam_tick);
 PREP(cam_toggleVeryFast);
 PREP(cam_updateThingsToDraw);
 
 // UI functions
 PREP(ui);
+PREP(ui_draw3D);
 PREP(ui_fadeList);
 PREP(ui_getTreeDataIndex);
 PREP(ui_handleChildDestroyed);

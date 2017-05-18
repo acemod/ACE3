@@ -63,9 +63,8 @@ if (_init) then {
     // Update the focus info widget initially
     [] call FUNC(ui_updateWidget);
 
-    // Draw unit icons, locations, projectiles, etc.
-    // Also tracks current focus information
-    GVAR(draw3D) = addMissionEventHandler ["Draw3D", {call FUNC(cam_draw3D)}];
+    // Draw icons and update the cursor object
+    GVAR(uiDraw3D) = addMissionEventHandler ["Draw3D", {call FUNC(ui_draw3D)}];
 
     // Periodically update list and focus widget
     GVAR(uiPFH) = [{
@@ -81,9 +80,9 @@ if (_init) then {
     // Stop updating the list and focus widget
     [GVAR(uiPFH)] call CBA_fnc_removePerFrameHandler;
 
-    // Stop ticking
-    removeMissionEventHandler ["Draw3D", GVAR(draw3D)];
-    GVAR(draw3D) = nil;
+    // Stop drawing icons and tracking cursor object
+    removeMissionEventHandler ["Draw3D", GVAR(uiDraw3D)];
+    GVAR(uiDraw3D) = nil;
 
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;

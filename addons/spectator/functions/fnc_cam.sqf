@@ -71,12 +71,19 @@ if (_init) then {
     // TODO: Check if a camera object works here (see: https://feedback.bistudio.com/T123956)
     GVAR(camDummy) = "Land_HelipadEmpty_F" createVehicleLocal getPosASLVisual GVAR(camTarget);
 
+    // Start ticking (follow camera requires EachFrame to avoid jitter)
+    GVAR(camTick) = addMissionEventHandler ["EachFrame", {call FUNC(cam_tick)}];
+
     // Start updating things to draw
     GVAR(camPFH) = [LINKFUNC(cam_updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
 } else {
     // Stop updating things to draw
     [GVAR(camPFH)] call CBA_fnc_removePerFrameHandler;
     GVAR(camPFH) = nil;
+
+    // Stop ticking
+    removeMissionEventHandler ["EachFrame", GVAR(camTick)];
+    GVAR(camTick) = nil;
 
     // Return to player view
     if !(isNull GVAR(camera)) then {
