@@ -17,21 +17,25 @@
  */
 #include "script_component.hpp"
 
+if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addVehicleMagazinesToSupply), _this];
+};
+
 params [
     ["_truck", objNull, [objNull]],
     ["_vehicle", objNull, [objNull, ""]]
 ];
+TRACE_2("addVehicleMagazinesToSupply",_truck,_vehicle);
 
-if (isNull _truck ||
-    {_vehicle isEqualType objNull}) exitWith {};
-
-private _string = [_vehicle, typeOf _vehicle] select (_vehicle isEqualType objNull);
-if (_string == "") exitWith {
-    ERROR_1("_string [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_string);
+if (isNull _truck) exitWith {};
+if (_vehicle isEqualType objNull) then {_vehicle = typeOf _vehicle};
+if (_vehicle == "") exitWith {
+    ERROR_1("VehicleType [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_string);
 };
 {
     private _turretPath = _x;
-    private _magazines = [_string, _turretPath] call FUNC(getConfigMagazines);
+    private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
+    TRACE_2("",_turretPath,_magazines);
     {
         [_truck, _x] call FUNC(addMagazineToSupply);
         false

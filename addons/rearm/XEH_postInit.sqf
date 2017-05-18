@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+GVAR(configTypesAdded) = [];
+["ace_settingsInitialized", {
+    ["LandVehicle", "Init", {_this call FUNC(initSupplyVehicle)}, true, ["StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+    ["ReammoBox_F", "Init", {_this call FUNC(initSupplyVehicle)}, true, [], true] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addEventHandler;
+
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 ["vehicle", {
     params ["_unit"];

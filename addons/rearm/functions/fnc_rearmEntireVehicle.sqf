@@ -24,7 +24,7 @@ params [
 ];
 
 [
-    10,
+    TIME_PROGRESSBAR(10),
     [_truck, _vehicle],
     FUNC(rearmEntireVehicleSuccess),
     "",

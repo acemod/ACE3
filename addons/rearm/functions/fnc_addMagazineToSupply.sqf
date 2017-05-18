@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Adds magazines to the supply.
+ * Adds magazines to the supply. [Global Effects]
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
@@ -17,27 +17,30 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_magazineClass", "", [""]],
-    ["_partial", false, [false]]
-];
+if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addMagazineToSupply), _this];
+};
 
-if (isNull _truck ||
-    {_magazineClass isEqualTo ""} ||
-    {GVAR(supply) == 0}) exitWith {};
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_partial", false, [false]]];
+TRACE_3("addMagazineToSupply",_truck,_magazineClass,_partial);
+
+if (GVAR(supply) == 0) exitWith {WARNING("supply setting is set to unlimited");};
+
+if (isNull _truck || {_magazineClass isEqualTo ""}) exitWith {};
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
-    
+
 // With limited supply, we add the caliber to the supply count
 if (GVAR(supply) == 1) then {
     private _supply = [_truck] call FUNC(getSupplyCount);
-    if (!_partial || {GVAR(level) == 1}) then {
-        [_truck, _supply + _cal] call FUNC(setSupplyCount);
+    private _amountToAdd = if (!_partial || {GVAR(level) == 1}) then {
+        _cal
     } else {
         private _magazinePart = ((REARM_COUNT select _idx) / (getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count"))) min 1;
-        [_truck, (_supply + (_cal * _magazinePart))] call FUNC(setSupplyCount);
+        _cal * _magazinePart
     };
+    TRACE_1("Adding",_amountToAdd);
+    [_truck, (_supply + _amountToAdd)] call FUNC(setSupplyCount);
 };
 
 // With magazine specific supply, we add or update the magazineSupply array
@@ -56,7 +59,7 @@ if (GVAR(supply) == 2) then {
         _roundsPerTransaction = _roundsPerTransaction min (REARM_COUNT select _idx);
     };
     if (_magazineIdx == -1) then {
-        if (count _magazineSupply == 0) then {
+        if (_magazineSupply isEqualTo []) then {
             _magazineSupply = [[_magazineClass, _roundsPerTransaction]];
         } else {
             _magazineSupply append [[_magazineClass, _roundsPerTransaction]];

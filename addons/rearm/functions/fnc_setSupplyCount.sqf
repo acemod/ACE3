@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Sets the supply count.
+ * Sets the supply count. [Global Effects]
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
@@ -16,11 +16,13 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_supply", 0, [0]]
-];
+if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the settings are initialized
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setSupplyCount), _this];
+};
 
-if (isNull _truck) exitWith {};
+params [["_truck", objNull, [objNull]], ["_supply", 0, [0]]];
+
+if (GVAR(supply) != 1) exitWith {WARNING("supply setting is not set to limited");};
+if (isNull _truck) exitWith {WARNING_1("Truck is null [%1]", _truck);};
 
 _truck setVariable [QGVAR(currentSupply), (_supply max 0), true];

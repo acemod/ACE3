@@ -25,13 +25,14 @@ params [
     ["_args", ["", objNull], [[]]]
 ];
 _args params ["_magazineClass", "_vehicle"];
+TRACE_5("takeAmmo",_truck,_unit,_args,_magazineClass,_vehicle);
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
 REARM_HOLSTER_WEAPON;
 
 [
-    (REARM_DURATION_TAKE select _idx),
+    TIME_PROGRESSBAR(REARM_DURATION_TAKE select _idx),
     [_unit, _magazineClass, _truck],
     FUNC(takeSuccess),
     "",

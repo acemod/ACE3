@@ -17,11 +17,8 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_vehicle", objNull, [objNull]],
-    ["_turretPath", [], [[]]]
-];
+params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
 private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
 if (isNil "_magazines") exitWith {};
@@ -40,16 +37,12 @@ if (isNil "_magazines") exitWith {};
     };
     if (_currentMagazines < _maxMagazines) then {
         private _success = true;
-        if (GVAR(supply) > 0) then {
-            _success = [_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply);
-        };
-        if (_success) then {
+        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
             _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
-            for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
-                _success = true;
-                if (GVAR(supply) > 0) then {
-                    _success = [_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply);
-                };
+        };
+
+        for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
+            if ((GVAR(supply) > 0) && {[_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply)}) then {
                 _vehicle addMagazineTurret [_magazine, _turretPath];
             };
         };
@@ -64,3 +57,4 @@ if (isNil "_magazines") exitWith {};
     };
     false
 } count _magazines;
+

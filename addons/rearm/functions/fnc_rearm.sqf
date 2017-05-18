@@ -44,7 +44,7 @@ if (_magazineDisplayName == "") then {
 };
 
 [
-    (REARM_DURATION_REARM select _idx),
+    TIME_PROGRESSBAR(REARM_DURATION_REARM select _idx),
     [_target, _unit, _turretPath, _cnt, _magazineClass, (REARM_COUNT select _idx)],
     FUNC(rearmSuccess),
     "",

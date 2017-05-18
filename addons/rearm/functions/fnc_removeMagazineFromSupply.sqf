@@ -17,17 +17,18 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_magazineClass", "", [""]],
-    ["_numRounds", -1, [0]]
-];
+params [["_truck", objNull, [objNull]], ["_magazineClass", "", [""]], ["_numRounds", -1, [0]]];
+TRACE_3("removeMagazineFromSupply",_truck,_magazineClass,_numRounds);
 
-if (isNull _truck ||
-    {_magazineClass isEqualTo ""}) exitWith {false};
+if (isNull _truck || {_magazineClass isEqualTo ""}) exitWith {false};
 
 private _return = false;
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
+
+if (GVAR(supply) == 0) then {
+    WARNING("supply setting is set to unlimited"); // func shouldn't have been called
+    _return = true;
+};
 
 if (GVAR(supply) == 1) then {
     private _supply = [_truck] call FUNC(getSupplyCount);
@@ -50,6 +51,7 @@ if (GVAR(supply) == 1) then {
         };
     };
 };
+
 if (GVAR(supply) == 2) then {
     private _magazineSupply = _truck getVariable [QGVAR(magazineSupply), []];
     private _magazineIdx = -1;
