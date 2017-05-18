@@ -41,18 +41,28 @@ private _addons = "true" configClasses (configFile >> "CfgPatches");//
 _addons = _addons apply {toLower configName _x};//
 _addons = _addons select {_x find "ace_" == 0};
 
+private _oldCompats = [];
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
         private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
         ERROR(_errorMsg);
 
-        if (hasInterface) then {
-            ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+        if ((_x select [0, 10]) != "ace_compat") then {
+            if (hasInterface) then {
+                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+            };
+        } else {
+            _oldCompats pushBack _x;  // Don't block game if it's just an old compat pbo
         };
     };
     false
 } count _addons;
+if (!(_oldCompats isEqualTo [])) then {
+    [{
+        systemChat format ["Warning: The Following ACE Compatiblity PBOs are Outdated %1", _this];
+    }, _oldCompats, 10] call CBA_fnc_waitAndExecute;
+};
 
 ///////////////
 // check dlls
