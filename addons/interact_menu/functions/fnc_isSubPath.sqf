@@ -22,6 +22,7 @@ private _isSubPath = true;
 
 if (count _shortPath > count _longPath) exitWith {false};
 
+//IGNORE_PRIVATE_WARNING ["_i"];
 for [{private _i = 0},{_i < count _shortPath},{_i = _i + 1}] do {
     if !((_longPath select _i) isEqualTo (_shortPath select _i)) exitWith {
         _isSubPath = false;
