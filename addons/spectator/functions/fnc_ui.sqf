@@ -31,9 +31,10 @@ if (_init) then {
     // Drawing related
     GVAR(drawProjectiles)       = false;
     GVAR(drawUnits)             = true;
-    GVAR(grenades)              = [];
-    GVAR(projectiles)           = [];
-    GVAR(thingsToDraw)          = [];
+    GVAR(entitiesToDraw)        = [];
+    GVAR(grenadesToDraw)        = [];
+    GVAR(iconsToDraw)           = [];
+    GVAR(projectilesToDraw)     = [];
 
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
@@ -72,7 +73,7 @@ if (_init) then {
     [] call FUNC(ui_updateWidget);
 
     // Start updating things to draw
-    GVAR(collectPFH) = [LINKFUNC(updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
+    GVAR(collectPFH) = [LINKFUNC(ui_updateIconsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
 
     // Draw icons and update the cursor object
     GVAR(uiDraw3D) = addMissionEventHandler ["Draw3D", {call FUNC(ui_draw3D)}];
@@ -118,9 +119,10 @@ if (_init) then {
     // Stop drawing
     GVAR(drawProjectiles)       = nil;
     GVAR(drawUnits)             = nil;
-    GVAR(grenades)              = nil;
-    GVAR(projectiles)           = nil;
-    GVAR(thingsToDraw)          = nil;
+    GVAR(entitiesToDraw)        = nil;
+    GVAR(grenadesToDraw)        = nil;
+    GVAR(iconsToDraw)           = nil;
+    GVAR(projectilesToDraw)     = nil;
 
     // Reset view distance
     setViewDistance GVAR(oldViewDistance);

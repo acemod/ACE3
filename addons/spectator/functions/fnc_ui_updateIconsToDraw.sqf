@@ -9,7 +9,7 @@
 
 #define ICON_UNIT "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa"
 
-private _thingsToDraw = [];
+private _iconsToDraw = [];
 private _entitiesToDraw = [];
 
 {
@@ -60,7 +60,7 @@ private _entitiesToDraw = [];
         // Show unit name only if camera is near enough
         if (_distanceToCamera < DISTANCE_NAMES) then {
             // Unit name
-            _thingsToDraw pushBack [_x, 2, [
+            _iconsToDraw pushBack [_x, 2, [
                 "",
                 [1,1,1,1],
                 [0,0,0],
@@ -76,7 +76,7 @@ private _entitiesToDraw = [];
         } else {
             if (_x == _groupLeader) then {
                 // Group name
-                _thingsToDraw pushBack [_x, 0, [
+                _iconsToDraw pushBack [_x, 0, [
                     "",
                     [1,1,1,_fadeByDistance],
                     [0,0,0],
@@ -94,7 +94,7 @@ private _entitiesToDraw = [];
 
         if (_x == _groupLeader || { _inVehicle && { _x == effectiveCommander _vehicle } }) then {
             // Group icon
-            _thingsToDraw pushBack [_x, 0, [
+            _iconsToDraw pushBack [_x, 0, [
                 ICON_GROUP,
                 _groupColor,
                 [0,0,0],
@@ -110,7 +110,7 @@ private _entitiesToDraw = [];
         };
 
         // Draw unit icon
-        _thingsToDraw pushBack [_x, 1, [
+        _iconsToDraw pushBack [_x, 1, [
             [ICON_UNIT, ICON_REVIVE] select (NEEDS_REVIVE(_x)),
             _groupColor,
             [0,0,0],
@@ -136,5 +136,5 @@ private _entitiesToDraw = [];
     nil // Speed loop
 } count ([] call FUNC(getTargetEntities));
 
-GVAR(thingsToDraw) = _thingsToDraw;
+GVAR(iconsToDraw) = _iconsToDraw;
 GVAR(entitiesToDraw) = _entitiesToDraw;

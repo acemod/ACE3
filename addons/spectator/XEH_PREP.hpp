@@ -27,6 +27,7 @@ PREP(ui_handleTabSelected);
 PREP(ui_toggleMap);
 PREP(ui_toggleUI);
 PREP(ui_updateHelp);
+PREP(ui_updateIconsToDraw);
 PREP(ui_updateListEntities);
 PREP(ui_updateListFocus);
 PREP(ui_updateListLocations);
@@ -39,7 +40,6 @@ PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setFocus);
-PREP(updateThingsToDraw);
 
 // Public functions
 PREP(interrupt);

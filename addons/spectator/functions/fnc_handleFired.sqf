@@ -29,10 +29,10 @@ _unit setVariable [QGVAR(highlightTime), time + FIRE_HIGHLIGHT_TIME];
 // Store projectiles / grenades for drawing
 if (GVAR(drawProjectiles) && {!isNull _projectile}) then {
     if (_weapon == "Throw") then {
-        if (count GVAR(grenades) > MAX_GRENADES) then { GVAR(grenades) deleteAt 0; };
-        GVAR(grenades) pushBack _projectile;
+        if (count GVAR(grenadesToDraw) > MAX_GRENADES) then { GVAR(grenadesToDraw) deleteAt 0; };
+        GVAR(grenadesToDraw) pushBack _projectile;
     } else {
-        if (count GVAR(projectiles) > MAX_PROJECTILES) then { GVAR(projectiles) deleteAt 0; };
-        GVAR(projectiles) pushBack [_projectile, [[getPosVisual _projectile, [1,0,0,0]]]];
+        if (count GVAR(projectilesToDraw) > MAX_PROJECTILES) then { GVAR(projectilesToDraw) deleteAt 0; };
+        GVAR(projectilesToDraw) pushBack [_projectile, [[getPosVisual _projectile, [1,0,0,0]]]];
     };
 };
