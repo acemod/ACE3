@@ -23,9 +23,7 @@ if !(_intersections isEqualTo []) then {
 };
 
 if !(_cursorObject isKindOf "Man") then {
-    if ((crew _cursorObject) isEqualTo []) then {
-        _cursorObject = objNull;
-    };
+    _cursorObject = effectiveCommander _cursorObject;
 };
 
 GVAR(cursorObject) = _cursorObject;
