@@ -91,7 +91,8 @@ if (local _vehicle) then {
         } forEach _positions;
 
         if (isServer) then {
-            private _sound = createSoundSource [QGVAR(Sound), position _vehicle, [], 0];
+            private _sound = [QGVAR(Sound),QGVAR(Sound1),QGVAR(Sound2),QGVAR(Sound3),QGVAR(Sound4),QGVAR(Sound5)] select (_vehicle getVariable [QGVAR(sound),0]);
+            _sound = createSoundSource [_sound, position _vehicle, [], 0];
 
             _effects pushBack _sound;
         };
