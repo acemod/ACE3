@@ -1,11 +1,11 @@
 /*
- * Author: Nelson Duarte, AACO
+ * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to handle mouse down event
  *
  * Expected behaviour:
  * Left clicking a unit focuses the camera on that unit (in any camera mode)
  * Left clicking empty space removes the current camera focus in free camera
- * Right clicking removes the current camera focus in free camera
+ * Right clicking removes the camera lock, but retains the focus in free camera
  * Right clicking and dragging orbits around the unit in follow camera
  *
  * Public: No
@@ -18,16 +18,17 @@ params ["", "_button"];
 // Left click
 if (_button == 0) exitWith {
     if (isNull GVAR(cursorObject)) then {
-        if (!isNull GVAR(camTarget)) then {
-            playsound "ReadoutHideClick1";
+        if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) }) then {
+            playSound "ReadoutHideClick1";
+            [objNull] call FUNC(SetFocus);
         };
     } else {
-        playsound "ReadoutClick";
+        playSound "ReadoutClick";
 
         // Focus will be at screen center
+        [GVAR(cursorObject)] call FUNC(setFocus);
         setMousePosition [0.5, 0.5];
     };
-    [GVAR(cursorObject)] call FUNC(setFocus);
 };
 
 // Right click

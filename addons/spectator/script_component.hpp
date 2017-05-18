@@ -48,7 +48,6 @@
 
 #define DISTANCE_NAMES 175
 #define NAME_MAX_CHARACTERS         17
-#define MAX_CONTROLS_HELP_ENTRIES   12
 
 #define LIST_ENTITIES                   localize "STR_A3_Spectator_Entities"
 #define LIST_LOCATIONS                  localize "STR_A3_Spectator_Locations"

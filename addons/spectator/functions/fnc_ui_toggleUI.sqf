@@ -23,5 +23,3 @@ showChat !_visible;
 playSound (["HintExpand","HintCollapse"] select _visible);
 
 GVAR(uiVisible) = _visible;
-
-// TODO: Update help here

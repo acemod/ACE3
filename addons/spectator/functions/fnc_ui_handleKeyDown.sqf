@@ -125,7 +125,13 @@ if (_key == DIK_BACKSPACE) exitWith {
 
 // Handle toggling help
 if (_key == DIK_F1) exitWith {
-    CTRL_HELP ctrlShow !(ctrlShown HELP);
+    GVAR(uiHelpVisible) = !GVAR(uiHelpVisible);
+
+    [] call FUNC(ui_updateHelp);
+
+    CTRL_HELP ctrlShow GVAR(uiHelpVisible);
+    CTRL_HELP_BACK ctrlShow GVAR(uiHelpVisible);
+
     true
 };
 

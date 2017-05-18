@@ -94,5 +94,5 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
 
     GVAR(camMode) = _newMode;
 
-    // TODO: Update help here
+    [] call FUNC(ui_updateHelp);
 };

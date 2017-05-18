@@ -24,4 +24,5 @@ if (_newFocus != GVAR(camTarget) && { !(isNull _newFocus && { isNull GVAR(camTar
 
     [] call FUNC(ui_updateListFocus);
     [] call FUNC(ui_updateWidget);
+    [] call FUNC(ui_updateHelp);
 };

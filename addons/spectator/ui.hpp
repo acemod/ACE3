@@ -91,7 +91,7 @@ class GVAR(display) {
             columns = 2;
             strings[] = {"$STR_A3_Spectator_Entities","$STR_A3_Spectator_Locations"};
             values[] = {0,1};
-            sizeEx = H_PART(1.0);
+            sizeEx = H_PART(1);
             colorBackground[] = {0,0,0,0.75};
             colorSelectedBg[] = {0,0,0,0.65};
         };
@@ -189,7 +189,7 @@ class GVAR(display) {
                     text = "";
                     style = 2;
                     colorBackground[] = {0,0,0,0.75};
-                    sizeEx = H_PART(1.0);
+                    sizeEx = H_PART(1);
                 };
                 class GameTimeText: RscText {
                     idc = IDC_TIME;
@@ -198,7 +198,7 @@ class GVAR(display) {
                     w = 0.29;
                     h = 0.03;
                     text = "00:00:00";
-                    sizeEx = H_PART(1.0);
+                    sizeEx = H_PART(1);
                 };
                 class MapTitle: RscText {
                     idc = IDC_MAP_TITLE;
@@ -245,8 +245,8 @@ class GVAR(display) {
         };
         class HelpBackground: RscText {
             idc = IDC_HELP_BACK;
-            x = X_PART(37);
-            y = Y_PART(23);
+            x = safezoneX + safezoneW - W_PART(12);
+            y = safezoneY + safezoneH - H_PART(8);
             w = W_PART(12);
             h = H_PART(8);
             colorBackground[] = {0,0,0,0.75};
@@ -256,10 +256,10 @@ class GVAR(display) {
             disableOverflow = 0;
             rowHeight = H_PART(1);
             idc = IDC_HELP;
-            x = X_PART(37.0);
-            y = Y_PART(23.0);
-            w = W_PART(12.0);
-            h = H_PART(12.0);
+            x = safezoneX + safezoneW - W_PART(12);
+            y = safezoneY + safezoneH - H_PART(12);
+            w = W_PART(12);
+            h = H_PART(12);
         };
         class FocusInfo: RscControlsGroupNoScrollbars {
             idc = IDC_WIDGET;
