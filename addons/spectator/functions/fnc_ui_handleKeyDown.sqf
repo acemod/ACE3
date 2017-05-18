@@ -11,13 +11,19 @@
 params ["","_key","_shift","_ctrl","_alt"];
 
 // Handle map toggle
-if (inputAction "ShowMap" > 0 || inputAction "HideMap" > 0) exitWith {
+if (_key == DIK_M) exitWith {
     [] call FUNC(ui_toggleMap);
     true
 };
 
+// Handle very fast speed
+if (_key == DIK_LALT) exitWith {
+    [true] call FUNC(cam_toggleVeryFast);
+    true
+};
+
 // Handle escape menu
-if (inputAction "ingamePause" > 0) exitWith {
+if (_key == DIK_ESCAPE) exitWith {
     if (GVAR(uiMapVisible)) then {
         [] call FUNC(ui_toggleMap);
     } else {
@@ -28,97 +34,6 @@ if (inputAction "ingamePause" > 0) exitWith {
             [false] call FUNC(setSpectator);
         };
     };
-    true
-};
-
-// Handle postive change in draw
-if (inputAction "zeroingUp" > 0) exitWith {
-    setViewDistance ((viewDistance + 250.0) min MAX_VIEW_DISTANCE);
-    true
-};
-
-// Handle negative change in draw
-if (inputAction "zeroingDown" > 0) exitWith {
-    setViewDistance ((viewDistance - 250.0) max MIN_VIEW_DISTANCE);
-    true
-};
-
-// Handle vision mode cycling
-if (inputAction "nightVision" > 0) exitWith {
-    private _stepVision = [1,-1] select _shift;
-
-    private _oldVision = GVAR(camVision);
-    private _visions = GVAR(availableVisions);
-
-    // Get current index and index count
-    private _iVision = (_visions find _oldVision) max 0;
-    private _countVisions = count _visions;
-
-    if (_countVisions != 0) then {
-        _iVision = (_iVision + _stepVision) % _countVisions;
-        if (_iVision < 0) then { _iVision = _countVisions + _iVision; };
-    };
-
-    private _newVision = _visions select _iVision;
-
-    [_newVision] call FUNC(cam_setVisionMode);
-    true
-};
-
-// If the zeus key is pressed and unit is curator, open zeus interface
-if ((inputAction "CuratorInterface") > 0 && {!isNull (getAssignedCuratorLogic player)}) exitWith {
-    // Disable drawing while in zeus
-    GVAR(drawUnits) = false;
-    GVAR(drawProjectiles) = false;
-
-    SPEC_DISPLAY closeDisplay 1;
-    GVAR(camera) camCommand "manual off";
-
-    openCuratorInterface;
-    true
-};
-
-// Handle spectate lights
-if (inputAction "headlights" > 0) exitWith {
-    if (GVAR(camLight)) then {
-        { deleteVehicle _x; } forEach GVAR(camLights);
-        GVAR(camLights) = [];
-    } else {
-        private _cameraLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
-        _cameraLight setLightBrightness 2;
-        _cameraLight setLightAmbient [1,1,1];
-        _cameraLight setLightColor [0,0,0];
-        _cameraLight lightAttachObject [GVAR(camera), [0,0,0]];
-
-        private _pointerLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
-        _pointerLight setLightBrightness 1;
-        _pointerLight setLightAmbient [1,1,1];
-        _pointerLight setLightColor [0,0,0];
-
-        GVAR(camLights) = [_cameraLight, _pointerLight];
-    };
-
-    GVAR(camLight) = !GVAR(camLight);
-
-    true
-};
-
-// Handle toggle projectiles
-if (inputAction "lockTarget" > 0) exitWith {
-    GVAR(drawProjectiles) = !GVAR(drawProjectiles);
-    true
-};
-
-// Handle toggle focus info widget
-if (inputAction "networkStats" > 0) exitWith {
-    GVAR(uiWidgetVisible) = !GVAR(uiWidgetVisible);
-    [] call FUNC(ui_updateWidget);
-    true
-};
-
-// Handle very fast speed
-if (_key == DIK_LALT) exitWith {
-    [true] call FUNC(cam_toggleVeryFast);
     true
 };
 
@@ -143,6 +58,96 @@ if (_key in [DIK_SPACE, DIK_NUMPADENTER]) exitWith {
     true
 };
 
+// Handle vision mode cycling
+if (_key == DIK_N) exitWith {
+    private _stepVision = [1,-1] select _shift;
+
+    private _oldVision = GVAR(camVision);
+    private _visions = GVAR(availableVisions);
+
+    // Get current index and index count
+    private _iVision = (_visions find _oldVision) max 0;
+    private _countVisions = count _visions;
+
+    if (_countVisions != 0) then {
+        _iVision = (_iVision + _stepVision) % _countVisions;
+        if (_iVision < 0) then { _iVision = _countVisions + _iVision; };
+    };
+
+    private _newVision = _visions select _iVision;
+
+    [_newVision] call FUNC(cam_setVisionMode);
+    true
+};
+
+// Handle postive change in draw
+if (_key == DIK_PGUP) exitWith {
+    setViewDistance ((viewDistance + 250.0) min MAX_VIEW_DISTANCE);
+    true
+};
+
+// Handle negative change in draw
+if (_key == DIK_PGUP) exitWith {
+    setViewDistance ((viewDistance - 250.0) max MIN_VIEW_DISTANCE);
+    true
+};
+
+// Handle spectate lights
+if (_key == DIK_L) exitWith {
+    if (GVAR(camLight)) then {
+        { deleteVehicle _x; } forEach GVAR(camLights);
+        GVAR(camLights) = [];
+    } else {
+        private _cameraLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
+        _cameraLight setLightBrightness 2;
+        _cameraLight setLightAmbient [1,1,1];
+        _cameraLight setLightColor [0,0,0];
+        _cameraLight lightAttachObject [GVAR(camera), [0,0,0]];
+
+        private _pointerLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
+        _pointerLight setLightBrightness 1;
+        _pointerLight setLightAmbient [1,1,1];
+        _pointerLight setLightColor [0,0,0];
+
+        GVAR(camLights) = [_cameraLight, _pointerLight];
+    };
+
+    GVAR(camLight) = !GVAR(camLight);
+
+    true
+};
+
+// Handle toggling the UI
+if (_key == DIK_BACKSPACE) exitWith {
+    [] call FUNC(ui_toggleUI);
+    true
+};
+
+// Handle toggling help
+if (_key == DIK_F1) exitWith {
+    CTRL_HELP ctrlShow !(ctrlShown HELP);
+    true
+};
+
+// Handle toggle focus info widget
+if (_key == DIK_P) exitWith {
+    GVAR(uiWidgetVisible) = !GVAR(uiWidgetVisible);
+    [] call FUNC(ui_updateWidget);
+    true
+};
+
+// Handle toggling projectile drawing
+if (_key == DIK_O) exitWith {
+    GVAR(drawProjectiles) = !GVAR(drawProjectiles);
+    true
+};
+
+// Handle toggling unit drawing
+if (_key == DIK_BACKSLASH) exitWith {
+    GVAR(drawUnits) = !GVAR(drawUnits);
+    true
+};
+
 // Handle getting next focus target
 if (_key == DIK_RIGHT) exitWith {
     [true] call FUNC(switchFocus);
@@ -155,21 +160,17 @@ if (_key == DIK_LEFT) exitWith {
     true
 };
 
-// Handle toggling the UI
-if (_key == DIK_BACKSPACE) exitWith {
-    [] call FUNC(ui_toggleUI);
-    true
-};
+// If the zeus key is pressed and unit is curator, open zeus interface
+if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLogic player)}) exitWith {
+    // Disable drawing while in zeus
+    GVAR(drawUnits) = false;
+    GVAR(drawProjectiles) = false;
 
-// Handle toggling the Tags
-if (_key == DIK_BACKSLASH) exitWith {
-    GVAR(drawUnits) = !GVAR(drawUnits);
-    true
-};
+    // TODO: make this truly compatible
+    SPEC_DISPLAY closeDisplay 1;
+    GVAR(camera) camCommand "manual off";
 
-// Handle displaying help
-if (_key == DIK_F1) exitWith {
-    CTRL_HELP ctrlShow !(ctrlShown HELP);
+    openCuratorInterface;
     true
 };
 

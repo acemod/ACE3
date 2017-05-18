@@ -16,6 +16,7 @@ private _camTarget = GVAR(camTarget);
 BEGIN_COUNTER(updateCursor);
 private _cursorObject = objNull;
 
+// TODO: This function doesn't work for units underwater, perhaps a solution can be found
 private _intersections = [getMousePosition select 0, getMousePosition select 1, _camTarget, vehicle _camTarget] call BIS_fnc_getIntersectionsUnderCursor;
 
 if !(_intersections isEqualTo []) then {
