@@ -21,7 +21,7 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-REARM_HOLSTER_WEAPON
+REARM_HOLSTER_WEAPON;
 [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 
 [

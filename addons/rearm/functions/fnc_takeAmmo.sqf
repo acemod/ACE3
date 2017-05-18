@@ -28,7 +28,7 @@ _args params ["_magazineClass", "_vehicle"];
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
-REARM_HOLSTER_WEAPON
+REARM_HOLSTER_WEAPON;
 
 [
     (REARM_DURATION_TAKE select _idx),

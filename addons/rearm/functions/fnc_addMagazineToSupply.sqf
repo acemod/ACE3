@@ -27,10 +27,11 @@ if (isNull _truck ||
     {_magazineClass isEqualTo ""} ||
     {GVAR(supply) == 0}) exitWith {};
 
+([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
+    
 // With limited supply, we add the caliber to the supply count
 if (GVAR(supply) == 1) then {
     private _supply = [_truck] call FUNC(getSupplyCount);
-    ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
     if (!_partial || {GVAR(level) == 1}) then {
         [_truck, _supply + _cal] call FUNC(setSupplyCount);
     } else {

@@ -25,14 +25,14 @@ _args params [
 
 if (isServer) then {
     {
-        _turretOwnerID = _vehicle turretOwner _x;
+        private _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [QGVAR(rearmEntireVehicleSuccessLocalEH), _truck, [_truck, _vehicle, _x]] call EFUNC(common,objectEvent);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _truck] call CBA_fnc_targetEvent;
         } else {
-            [QGVAR(rearmEntireVehicleSuccessLocalEH), _turretOwnerID, [_truck, _vehicle, _x]] call EFUNC(common,targetEvent);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_ownerEvent;
         };
         false
     } count REARM_TURRET_PATHS;
 } else {
-    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call EFUNC(common,serverEvent);
+    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call CBA_fnc_serverEvent;
 };

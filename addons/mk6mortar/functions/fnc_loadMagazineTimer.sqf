@@ -6,7 +6,7 @@
  * 0: static <OBJECT>
  * 1: unit <OBJECT>
  * 2: time to load <NUMBER>
- * 3: magazineClassOptional <STRING> (optional)
+ * 3: magazineClassOptional <OPTIONAL><STRING>
  *
  * Return Value:
  * None

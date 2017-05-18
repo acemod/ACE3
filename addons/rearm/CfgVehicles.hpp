@@ -6,7 +6,7 @@
                     displayName = CSTRING(Rearm); \
                     distance = REARM_ACTION_DISTANCE; \
                     condition = QUOTE(_this call FUNC(canRearm)); \
-                    statement = QUOTE(_player call FUNC(rearm)); \
+                    statement = QUOTE(_this call FUNC(rearm)); \
                     exceptions[] = {"isNotInside"}; \
                     icon = QPATHTOF(ui\icon_rearm_interact.paa); \
                 }; \

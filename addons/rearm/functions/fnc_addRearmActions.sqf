@@ -35,7 +35,7 @@ private _vehicleActions = [];
             private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
             {
                 private _magazine = _x;
-                _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
+                private _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
                 if ((_currentMagazines < ([_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines))) && !(_magazine in _magazineHelper)) then {
                     _action = [_magazine,
                         getText(configFile >> "CfgMagazines" >> _magazine >> "displayName"),

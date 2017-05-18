@@ -5,7 +5,7 @@
  * Arguments:
  * 0: loaded Object <OBJECT>
  * 1: Object <OBJECT>
- * 2: Unloader (player) <OBJECT> (optional)
+ * 2: Unloader (player) <OPTIONAL><OBJECT>
  *
  * Return Value:
  * Can be unloaded <BOOL>

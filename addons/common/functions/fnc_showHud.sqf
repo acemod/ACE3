@@ -4,8 +4,8 @@
  * Bitwise AND Logic (a single false in a mask will make it false)
  *
  * Arguments:
- * 0: Source ID <STRING> (optional)
- * 1: Show Hud Bool Array (8 to set, empty to remove) <ARRAY> (optional)
+ * 0: Source ID <STRING><OPTIONAL>
+ * 1: Show Hud Bool Array (8 to set, empty to remove) <ARRAY><OPTIONAL>
  * - [hud, info, radar, compass, direction, menu, group, cursors]
  * - hud: Boolean - show scripted HUD (same as normal showHUD true/false)
  * - info: Boolean - show vehicle + soldier info (hides weapon info from the HUD as well)

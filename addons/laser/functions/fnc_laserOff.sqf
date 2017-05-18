@@ -5,7 +5,7 @@
  * Arguments:
  * 0: UUID (from laserOn) <STRING>
  *
- * Return Value:
+ * Return value:
  * None
  *
  * Example:

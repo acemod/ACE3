@@ -25,7 +25,9 @@ private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
 if !(isNull _attachedDummy) exitWith {};
 
 _dummy attachTo [_unit, [0,1,0], "pelvis"];
-{
-    [QGVAR(makeDummyEH), _x, [_dummy, [[-1,0,0],[0,0,1]]]] call CBA_fnc_targetEvent;
-} count (position _unit nearObjects ["CAManBase", 100]);
+
+private _nearUnits = _unit nearObjects ["CAManBase", 100];
+// disableCollisionWith damage with the nearby units:
+[QGVAR(makeDummyEH), [_dummy, [[-1,0,0],[0,0,1]]], _nearUnits] call CBA_fnc_targetEvent;
+
 _unit setVariable [QGVAR(dummy), _dummy];

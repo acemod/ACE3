@@ -31,9 +31,9 @@ if (GVAR(supply) == 1) then {
             params ["_args"];
             _args params [["_unit", objNull, [objNull]], ["_truck", objNull, [objNull]], ["_supplyCount", 0, [0]]];
             if (_supplyCount > 0 ) then {
-                ["displayTextStructured", _unit, [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit]] call EFUNC(common,objectEvent);
+                [[LSTRING(Hint_RemainingSupplyPoints), _supplyCount], 2, _unit] call EFUNC(common,displayTextStructured);
             } else {
-                ["displayTextStructured", _unit, [LSTRING(Hint_EmptySupplyPoints), 2, _unit]] call EFUNC(common,objectEvent);
+                [LSTRING(Hint_EmptySupplyPoints), 2, _unit] call EFUNC(common,displayTextStructured);
             };
             true
         },
@@ -64,9 +64,9 @@ if (GVAR(supply) == 1) then {
                 } count _magazines;
             };
             if (_supply > 1.5) then {
-                ["displayTextStructured", _unit, [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)]] call EFUNC(common,objectEvent);
+                [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)] call EFUNC(common,displayTextStructured);
             } else {
-                ["displayTextStructured", _unit, [LSTRING(Hint_Empty), 2, _unit]] call EFUNC(common,objectEvent);
+                [LSTRING(Hint_Empty), 2, _unit] call EFUNC(common,displayTextStructured);
             };
             true
         },

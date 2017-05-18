@@ -28,5 +28,4 @@ if (!_activated) exitWith {};
 [_logic, QGVAR(level), "level"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(supply), "supply"] call EFUNC(common,readSettingFromModule);
 
-diag_log text format ["[ACE]: Rearm Module Initialized on level: %1", GVAR(level)];
-diag_log text format ["[ACE]: Rearm Module Initialized on supply: %1", GVAR(supply)];
+INFO_2("Module Initialized [level: %1][supply: %2]", GVAR(level), GVAR(supply));

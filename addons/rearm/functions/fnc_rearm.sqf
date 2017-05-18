@@ -3,19 +3,21 @@
  * Starts progress bar for rearming a vehicle.
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Target Vehicle <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player] call ace_rearm_fnc_rearm
+ * [tank, player] call ace_rearm_fnc_rearm
  *
  * Public: No
  */
 #include "script_component.hpp"
 
 params [
+    ["_target", objNull, [objNull]],
     ["_unit", objNull, [objNull]]
 ];
 

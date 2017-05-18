@@ -25,8 +25,7 @@ params [
     ["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]
 ];
 _args params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
-
-//hint format ["Vehicle: %1\nTurretPath: %2\nNumMagazines: %3\nMagazine: %4\nNumRounds: %5", _vehicle, _turretPath, _numMagazines, _magazineClass, _numRounds];
+TRACE_6("rearmSuccess",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
 
 if (local _unit) then {
     [_unit, true, true] call FUNC(dropAmmo);
@@ -35,9 +34,9 @@ if (local _unit) then {
 if (isServer) then {
     private _turretOwnerID = _vehicle turretOwner _turretPath;
     if (_turretOwnerID == 0) then {
-        [QGVAR(rearmSuccessLocalEH), _vehicle, _this] call EFUNC(common,objectEvent);
+        [QGVAR(rearmSuccessLocalEH), _this, [_vehicle]] call CBA_fnc_targetEvent;
     } else {
-        [QGVAR(rearmSuccessLocalEH), _turretOwnerID, _this] call EFUNC(common,targetEvent);
+        [QGVAR(rearmSuccessLocalEH), _this, _turretOwnerID] call CBA_fnc_ownerEvent;
     };
 } else {
     [QGVAR(rearmSuccessLocalEH), _this] call EFUNC(common,serverEvent);

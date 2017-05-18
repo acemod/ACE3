@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: caller (player) <OBJECT>
- * 1: target <OBJECT> (optional)
+ * 1: target <OBJECT><OPTIONAL>
  *
  * Return Value:
  * The return value <BOOL>

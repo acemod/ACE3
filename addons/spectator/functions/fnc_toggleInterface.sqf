@@ -4,12 +4,12 @@
  *
  * Arguments:
  * 0: Display
- * 1: Toogle compass <BOOL> (optional)
- * 2: Toogle help <BOOL> (optional)
- * 3: Toogle interface <BOOL> (optional)
- * 4: Toogle map <BOOL> (optional)
- * 5: Toogle toolbar <BOOL> (optional)
- * 6: Toogle unit list <BOOL> (optional)
+ * 1: Toogle compass <BOOL> <OPTIONAL>
+ * 2: Toogle help <BOOL> <OPTIONAL>
+ * 3: Toogle interface <BOOL> <OPTIONAL>
+ * 4: Toogle map <BOOL> <OPTIONAL>
+ * 5: Toogle toolbar <BOOL> <OPTIONAL>
+ * 6: Toogle unit list <BOOL> <OPTIONAL>
  *
  * Return Value:
  * None <NIL>

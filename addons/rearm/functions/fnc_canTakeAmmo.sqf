@@ -22,7 +22,7 @@ params [
 ];
 
 !(isNull _unit ||
-    {!alive _target} || 
+    {!alive _truck} || 
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
     {(_truck distance _unit) > REARM_ACTION_DISTANCE} ||

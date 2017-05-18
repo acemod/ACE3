@@ -11,6 +11,10 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [["Test: %1", 123], 1.5] call ace_common_fnc_displayTextStructured
+ * ["wow", 1, ace_player, 3] call ace_common_fnc_displayTextStructured
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

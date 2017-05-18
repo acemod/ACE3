@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [[vehicle, player, [-1], 2, "5000Rnd_762x51_Belt", 500]] call ace_rearm_fnc_rearmSuccess
+ * [[vehicle, player, [-1], 2, "5000Rnd_762x51_Belt", 500]] call ace_rearm_fnc_rearmSuccessLocal
  *
  * Public: No
  */
@@ -25,6 +25,7 @@ params [
     ["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]
 ];
 _args params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
+TRACE_6("rearmSuccessLocal",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
 
 private _rounds = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count");
 private _currentRounds = 0;
@@ -40,15 +41,15 @@ if (_maxMagazines == 1) then {
     if (GVAR(level) == 1) then {
         // Fill magazine completely
         _vehicle setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
-        ["displayTextStructured", _unit, [[LSTRING(Hint_RearmedTriple), _rounds,
+        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit]] call EFUNC(common,objectEvent);
+            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
     } else {
         // Fill only at most _numRounds
         _vehicle setMagazineTurretAmmo [_magazineClass, ((_vehicle magazineTurretAmmo [_magazineClass, _turretPath]) + _numRounds) min _rounds, _turretPath];
-        ["displayTextStructured", _unit, [[LSTRING(Hint_RearmedTriple), _numRounds,
+        [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
             getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit]] call EFUNC(common,objectEvent);
+            getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
     };
 } else {
     for "_idx" from 1 to (_maxMagazines+1) do {
@@ -69,9 +70,9 @@ if (_maxMagazines == 1) then {
                 } else {
                     _vehicle setMagazineTurretAmmo [_magazineClass, _currentRounds + _numRounds, _turretPath];
                 };
-                ["displayTextStructured", _unit, [[LSTRING(Hint_RearmedTriple), _numRounds,
+                [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _numRounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit]] call EFUNC(common,objectEvent);
+                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
             } else {
                 // Fill current magazine completely and fill next magazine partially
                 _vehicle setMagazineTurretAmmo [_magazineClass, _rounds, _turretPath];
@@ -79,9 +80,9 @@ if (_maxMagazines == 1) then {
                     _vehicle addMagazineTurret [_magazineClass, _turretPath];
                     _vehicle setMagazineTurretAmmo [_magazineClass, _currentRounds, _turretPath];
                 };
-                ["displayTextStructured", _unit, [[LSTRING(Hint_RearmedTriple), _rounds,
+                [QEGVAR(common,displayTextStructured), [[LSTRING(Hint_RearmedTriple), _rounds,
                     getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"),
-                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit]] call EFUNC(common,objectEvent);
+                    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")], 3, _unit], [_unit]] call CBA_fnc_targetEvent;
             };
         };
         _vehicle removeMagazineTurret [_magazineClass, _turretPath];

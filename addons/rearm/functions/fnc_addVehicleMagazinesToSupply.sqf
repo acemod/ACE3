@@ -27,7 +27,7 @@ if (isNull _truck ||
 
 private _string = [_vehicle, typeOf _vehicle] select (_vehicle isEqualType objNull);
 if (_string == "") exitWith {
-    ACE_ERRORFORMAT("_string is empty in ace_rearm_fnc_addVehicleMagazinesToSupply");
+    ERROR_1("_string [%1] is empty in ace_rearm_fnc_addVehicleMagazinesToSupply",_string);
 };
 {
     private _turretPath = _x;
