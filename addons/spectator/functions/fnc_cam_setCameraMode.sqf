@@ -23,6 +23,7 @@ if !(_newMode in _modes) then {
 private _focus = GVAR(camTarget);
 if (!isNull _focus || _newMode == MODE_FREE) then {
     private _camera = GVAR(camera);
+    private _showHUD = [true,true,true,true,true,true,true,true];
 
     if (_newMode == MODE_FPS) then {
         _camera cameraEffect ["Terminate", "BACK"];
@@ -41,9 +42,8 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
         CTRL_FREE ctrlSetText CAM_ICON_FREE;
 
-        // Update HUD
-        showHUD [true, false, false, false, false, false, false, true];
-        cameraEffectEnableHUD true;
+        // Hide all unit/group information in first person view
+        _showHUD = [true,false,false,false,false,false,false,true];
     };
 
     if (_newMode == MODE_FOLLOW) then {
@@ -59,11 +59,6 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         CTRL_FPS ctrlSetText CAM_ICON_FPS;
         CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW_SELECTED;
         CTRL_FREE ctrlSetText CAM_ICON_FREE;
-
-        // Update HUD
-        showHUD [true, true, true, true, true, true, true, true];
-        cameraEffectEnableHUD true;
-        GVAR(camMode) = _newMode;
     };
 
     if (_newMode == MODE_FREE) then {
@@ -85,13 +80,11 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         CTRL_FPS ctrlSetText CAM_ICON_FPS;
         CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
         CTRL_FREE ctrlSetText CAM_ICON_FREE_SELECTED;
-
-        // Update HUD
-        showHUD [true, true, true, true, true, true, true, true];
-        cameraEffectEnableHUD true;
-        GVAR(camMode) = _newMode;
     };
 
+    // Update the HUD
+    cameraEffectEnableHUD true;
+    showHUD _showHUD;
     GVAR(camMode) = _newMode;
 
     [] call FUNC(ui_updateHelp);
