@@ -37,7 +37,7 @@ if (_group) then {
     // Must be ran where local
     private _attached = attachedTo _logic;
     if (isNull _attached) then {
-        [QGVAR(moveToRespawnPosition), [_x, _logic], _x] call CBA_fnc_targetEvent;
+        [QGVAR(moveToRespawnPosition), [_x, getPos _logic], _x] call CBA_fnc_targetEvent;
     } else {
         [QGVAR(moveToRespawnPosition), [_x, _attached], _x] call CBA_fnc_targetEvent;
     };
