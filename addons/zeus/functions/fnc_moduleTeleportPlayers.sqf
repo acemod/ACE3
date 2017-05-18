@@ -34,11 +34,12 @@ if (_group) then {
 {
     moveOut _x;
 
+    // Must be ran where local
     private _attached = attachedTo _logic;
     if (isNull _attached) then {
-        [_x, _logic] call BIS_fnc_moveToRespawnPosition;
+        [QGVAR(moveToRespawnPosition), [_x, _logic], _x] call CBA_fnc_targetEvent;
     } else {
-        [_x, _attached] call BIS_fnc_moveToRespawnPosition;
+        [QGVAR(moveToRespawnPosition), [_x, _attached], _x] call CBA_fnc_targetEvent;
     };
 } forEach _player;
 
