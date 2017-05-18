@@ -157,7 +157,7 @@ if (_key == DIK_LEFT) exitWith {
 
 // Handle toggling the UI
 if (_key == DIK_BACKSPACE) exitWith {
-    [] call FUNC(toggleUI);
+    [] call FUNC(ui_toggleUI);
     true
 };
 

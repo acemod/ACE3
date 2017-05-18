@@ -25,6 +25,7 @@ PREP(ui_handleMouseMoving);
 PREP(ui_handleMouseZChanged);
 PREP(ui_handleTabSelected);
 PREP(ui_toggleMap);
+PREP(ui_toggleUI);
 PREP(ui_updateListEntities);
 PREP(ui_updateListFocus);
 PREP(ui_updateListLocations);
