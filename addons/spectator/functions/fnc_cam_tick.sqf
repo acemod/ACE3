@@ -40,6 +40,7 @@ if (_cameraMode in MODES_UNIT) then {
         [_focus] call FUNC(setFocus);
     };
 
+    // Update the follow camera position
     if (!isNull _focus && {_cameraMode == MODE_FOLLOW}) then {
         [_focus] call FUNC(cam_prepareTarget);
     };

@@ -24,13 +24,6 @@ if (_init) then {
     GVAR(camHasTarget)          = false;
     GVAR(camTargetInVehicle)    = false;
 
-    // Drawing related
-    GVAR(drawProjectiles)       = false;
-    GVAR(drawUnits)             = true;
-    GVAR(grenades)              = [];
-    GVAR(projectiles)           = [];
-    GVAR(thingsToDraw)          = [];
-
     // Follow camera related
     GVAR(camDistance)           = 0;
     GVAR(camDistanceTemp)       = 0;
@@ -73,14 +66,7 @@ if (_init) then {
 
     // Start ticking (follow camera requires EachFrame to avoid jitter)
     GVAR(camTick) = addMissionEventHandler ["EachFrame", {call FUNC(cam_tick)}];
-
-    // Start updating things to draw
-    GVAR(camPFH) = [LINKFUNC(cam_updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
 } else {
-    // Stop updating things to draw
-    [GVAR(camPFH)] call CBA_fnc_removePerFrameHandler;
-    GVAR(camPFH) = nil;
-
     // Stop ticking
     removeMissionEventHandler ["EachFrame", GVAR(camTick)];
     GVAR(camTick) = nil;
@@ -107,11 +93,6 @@ if (_init) then {
     GVAR(camLastTickTime)       = nil;
     GVAR(camHasTarget)          = nil;
     GVAR(camTargetInVehicle)    = nil;
-    GVAR(drawProjectiles)       = nil;
-    GVAR(drawUnits)             = nil;
-    GVAR(grenades)              = nil;
-    GVAR(projectiles)           = nil;
-    GVAR(thingsToDraw)          = nil;
     GVAR(camDistance)           = nil;
     GVAR(camDistanceTemp)       = nil;
     GVAR(camYaw)                = nil;

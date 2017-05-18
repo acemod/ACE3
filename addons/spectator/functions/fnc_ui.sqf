@@ -28,6 +28,13 @@ if (_init) then {
     GVAR(uiMapVisible) = true;
     GVAR(uiWidgetVisible) = true;
 
+    // Drawing related
+    GVAR(drawProjectiles)       = false;
+    GVAR(drawUnits)             = true;
+    GVAR(grenades)              = [];
+    GVAR(projectiles)           = [];
+    GVAR(thingsToDraw)          = [];
+
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
 
@@ -39,6 +46,7 @@ if (_init) then {
 
     // Holds the current list data
     GVAR(curList) = [];
+    GVAR(curLocationList) = [];
 
     // Cache view distance and set spectator default
     GVAR(oldViewDistance) = viewDistance;
@@ -63,6 +71,9 @@ if (_init) then {
     // Update the focus info widget initially
     [] call FUNC(ui_updateWidget);
 
+    // Start updating things to draw
+    GVAR(collectPFH) = [LINKFUNC(updateThingsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;
+
     // Draw icons and update the cursor object
     GVAR(uiDraw3D) = addMissionEventHandler ["Draw3D", {call FUNC(ui_draw3D)}];
 
@@ -84,6 +95,10 @@ if (_init) then {
     removeMissionEventHandler ["Draw3D", GVAR(uiDraw3D)];
     GVAR(uiDraw3D) = nil;
 
+    // Stop updating things to draw
+    [GVAR(collectPFH)] call CBA_fnc_removePerFrameHandler;
+    GVAR(collectPFH) = nil;
+
     // Destroy the display
     SPEC_DISPLAY closeDisplay 1;
 
@@ -97,7 +112,15 @@ if (_init) then {
     GVAR(uiListType)        = nil;
     GVAR(uiMapHighlighted)  = nil;
     GVAR(curList)           = nil;
+    GVAR(curLocationList)   = nil;
     GVAR(uiHelpH)           = nil;
+
+    // Stop drawing
+    GVAR(drawProjectiles)       = nil;
+    GVAR(drawUnits)             = nil;
+    GVAR(grenades)              = nil;
+    GVAR(projectiles)           = nil;
+    GVAR(thingsToDraw)          = nil;
 
     // Reset view distance
     setViewDistance GVAR(oldViewDistance);

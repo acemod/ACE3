@@ -80,20 +80,23 @@ if !(GVAR(uiMapVisible)) then {
             ];
 
             if !(isNull _projectile) then {
+                // Store new segment
                 private _newestIndex = _segments pushBack [
                     getPosVisual _projectile,
                     (vectorMagnitude velocity _projectile) call {
                         if (_this < 250) exitWith { [0,0,1,1] };
-                        if (_this < 250) exitWith { [0,1,0,1] };
+                        if (_this < 500) exitWith { [0,1,0,1] };
                         [1,0,0,1]
                     }
                 ];
 
-                if (_newestIndex > MAX_TRACKED_PROJECTILE_SEGMENTS) then {
+                // Clamp number of segments to be drawn
+                if (_newestIndex > MAX_PROJECTILE_SEGMENTS) then {
                     _segments deleteAt 0;
                     DEC(_newestIndex);
                 };
 
+                // Draw all projectile segments
                 private _oldLoc = [];
                 {
                     _x params ["_locNew", "_colorNew"];
@@ -105,6 +108,7 @@ if !(GVAR(uiMapVisible)) then {
                     nil // Speed loop
                 } count _segments;
 
+                // Store projectiles for next frame
                 _projectilesNew pushBack [_projectile, _segments];
             };
 
@@ -116,7 +120,7 @@ if !(GVAR(uiMapVisible)) then {
             if !(isNull _x) then {
                 private _grenadeVelocityMagnitude = vectorMagnitude velocity _x;
 
-                // Draw grenade
+                // Draw grenade (rotate icon to represent spinning)
                 drawIcon3D [GRENADE_ICON, [1,0,0,1], getPosVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
 
                 // Store grenade for next frame

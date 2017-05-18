@@ -42,20 +42,21 @@
 #define MIN_VIEW_DISTANCE       500
 #define DEFAULT_VIEW_DISTANCE   1200
 
-#define MAX_TRACKED_GRENADES 15
-#define MAX_TRACKED_PROJECTILES 50
-#define MAX_TRACKED_PROJECTILE_SEGMENTS 50
+#define FIRE_HIGHLIGHT_TIME 0.05
+#define MAX_GRENADES 15
+#define MAX_PROJECTILES 50
+#define MAX_PROJECTILE_SEGMENTS 50
 
 #define DISTANCE_NAMES 175
-#define NAME_MAX_CHARACTERS         17
+#define NAME_MAX_CHARACTERS 17
 
-#define LIST_ENTITIES                   localize "STR_A3_Spectator_Entities"
-#define LIST_LOCATIONS                  localize "STR_A3_Spectator_Locations"
+#define LIST_ENTITIES localize "STR_A3_Spectator_Entities"
+#define LIST_LOCATIONS localize "STR_A3_Spectator_Locations"
 #define LIST_UPDATE_RATE 1
 
 // Revive variables
-#define BIS_REVIVE               "BIS_revive_incapacitated"
-#define ACE_REVIVE               "ACE_isUnconscious"
+#define BIS_REVIVE "BIS_revive_incapacitated"
+#define ACE_REVIVE "ACE_isUnconscious"
 #define NEEDS_REVIVE(unit) (unit getVariable [ACE_REVIVE,false]) || {unit getVariable [BIS_REVIVE,false]}
 
 // Icons used in the UI

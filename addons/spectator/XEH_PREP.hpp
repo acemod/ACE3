@@ -7,7 +7,6 @@ PREP(cam_setTarget);
 PREP(cam_setVisionMode);
 PREP(cam_tick);
 PREP(cam_toggleVeryFast);
-PREP(cam_updateThingsToDraw);
 
 // UI functions
 PREP(ui);
@@ -33,13 +32,17 @@ PREP(ui_updateListFocus);
 PREP(ui_updateListLocations);
 PREP(ui_updateWidget);
 
-// Misc/Public functions
+// Utility functions
 PREP(getTargetEntities);
 PREP(getTargetGroups);
-PREP(interrupt);
+PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setFocus);
+PREP(updateThingsToDraw);
+
+// Public functions
+PREP(interrupt);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);

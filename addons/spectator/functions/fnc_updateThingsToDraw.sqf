@@ -10,6 +10,7 @@
 #define ICON_UNIT "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa"
 
 private _thingsToDraw = [];
+private _entitiesToDraw = [];
 
 {
     private _vehicle = vehicle _x;
@@ -124,7 +125,16 @@ private _thingsToDraw = [];
         ]];
     };
 
+    // Track entities themselves for use with fired EH
+    _entitiesToDraw pushBack _x;
+
+    // Add fired EH for drawing and icon highlighting
+    if (GETVAR(_x,GVAR(firedEH),-1) == -1) then {
+        SETVAR(_x,GVAR(firedEH),_x addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+    };
+
     nil // Speed loop
 } count ([] call FUNC(getTargetEntities));
 
 GVAR(thingsToDraw) = _thingsToDraw;
+GVAR(entitiesToDraw) = _entitiesToDraw;
