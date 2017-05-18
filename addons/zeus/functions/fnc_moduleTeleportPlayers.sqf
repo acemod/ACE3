@@ -34,10 +34,10 @@ if (_group) then {
 {
     moveOut _x;
 
-    // Must be ran where local
     private _attached = attachedTo _logic;
     if (isNull _attached) then {
-        [QGVAR(moveToRespawnPosition), [_x, getPos _logic], _x] call CBA_fnc_targetEvent;
+        // Function takes position AGL and must be ran where local
+        [QGVAR(moveToRespawnPosition), [_x, _logic modelToWorld [0,0,0]], _x] call CBA_fnc_targetEvent;
     } else {
         [QGVAR(moveToRespawnPosition), [_x, _attached], _x] call CBA_fnc_targetEvent;
     };
