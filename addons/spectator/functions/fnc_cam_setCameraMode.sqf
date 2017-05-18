@@ -24,7 +24,7 @@ private _focus = GVAR(camTarget);
 if (!isNull _focus || _newMode == MODE_FREE) then {
     private _camera = GVAR(camera);
 
-    if (_newMode == MODE_FPS) exitWith {
+    if (_newMode == MODE_FPS) then {
         _camera cameraEffect ["Terminate", "BACK"];
         _focus switchCamera "INTERNAL";
 
@@ -37,17 +37,16 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         _camera camCommand "manual off";
 
         // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FIRST_SELECTED;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_THIRD;
+        CTRL_FPS ctrlSetText CAM_ICON_FPS_SELECTED;
+        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
         CTRL_FREE ctrlSetText CAM_ICON_FREE;
 
         // Update HUD
         showHUD [true, false, false, false, false, false, false, true];
         cameraEffectEnableHUD true;
-        GVAR(camMode) = _newMode;
     };
 
-    if (_newMode == MODE_FOLLOW) exitWith {
+    if (_newMode == MODE_FOLLOW) then {
         _camera cameraEffect ["Internal", "BACK"];
         _focus switchCamera "EXTERNAL";
 
@@ -57,8 +56,8 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         _camera camCommand "manual off";
 
         // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FIRST;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_THIRD_SELECTED;
+        CTRL_FPS ctrlSetText CAM_ICON_FPS;
+        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW_SELECTED;
         CTRL_FREE ctrlSetText CAM_ICON_FREE;
 
         // Update HUD
@@ -67,7 +66,7 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         GVAR(camMode) = _newMode;
     };
 
-    if (_newMode == MODE_FREE) exitWith {
+    if (_newMode == MODE_FREE) then {
         _camera cameraEffect ["Internal", "BACK"];
         player switchCamera "INTERNAL";
         _camera setDir getDirVisual _camera;
@@ -83,8 +82,8 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         _camera camCommand "manual on";
 
         // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FIRST;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_THIRD;
+        CTRL_FPS ctrlSetText CAM_ICON_FPS;
+        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
         CTRL_FREE ctrlSetText CAM_ICON_FREE_SELECTED;
 
         // Update HUD
@@ -92,4 +91,8 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
         cameraEffectEnableHUD true;
         GVAR(camMode) = _newMode;
     };
+
+    GVAR(camMode) = _newMode;
+
+    // TODO: Update help here
 };
