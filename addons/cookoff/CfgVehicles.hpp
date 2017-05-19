@@ -7,26 +7,6 @@ class CfgVehicles {
         scope = 1;
         sound = QGVAR(CookOff);
     };
-    class GVAR(Sound1): GVAR(Sound) {
-        _generalMacro = QGVAR(Sound1);
-        sound = QGVAR(CookOff1);
-    };
-    class GVAR(Sound2): GVAR(Sound) {
-        _generalMacro = QGVAR(Sound2);
-        sound = QGVAR(CookOff2);
-    };
-    class GVAR(Sound3): GVAR(Sound) {
-        _generalMacro = QGVAR(Sound3);
-        sound = QGVAR(CookOff3);
-    };
-    class GVAR(Sound4): GVAR(Sound) {
-        _generalMacro = QGVAR(Sound4);
-        sound = QGVAR(CookOff4);
-    };
-    class GVAR(Sound5): GVAR(Sound) {
-        _generalMacro = QGVAR(Sound5);
-        sound = QGVAR(CookOff5);
-    };
 
     class ThingX;
     class GVAR(Turret_MBT_01): ThingX {

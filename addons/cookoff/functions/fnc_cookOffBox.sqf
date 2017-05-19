@@ -71,6 +71,6 @@ if (local _box) then {
             if (local _box) then {
                 _box setDamage 1;
             };
-        }, [_box, _effects], 82.5] call CBA_fnc_waitAndExecute; // Give signifcant time for ammo cookoff to occur (perhaps keep the box alive until all cooked off?)
-    }, [_box, _effects], 10.5] call CBA_fnc_waitAndExecute;
-}, _box, 3] call CBA_fnc_waitAndExecute;
+        }, [_box, _effects], COOKOFF_TIME_BOX] call CBA_fnc_waitAndExecute; // TODO: Change so that box is alive until no ammo left, with locality in mind
+    }, [_box, _effects], SMOKE_TIME] call CBA_fnc_waitAndExecute;
+}, _box, IGNITE_TIME] call CBA_fnc_waitAndExecute;

@@ -2,23 +2,12 @@
 class CfgSFX {
     class GVAR(CookOff) {
         name = QGVAR(cookoff);
-        sounds[] = {QGVAR(cookoff)};
-        GVAR(cookoff)[] = {PATHTOF(sounds\cookoff.wss),6,1.8,400,1,0,0,0};
+        // Index 4 is percentage chance to play, in theory high pressure is way more likely
+        varient0[] = {PATHTOF(sounds\cookoff_low_pressure.ogg),6,1,400,0.1,0,0,0};
+        varient1[] = {PATHTOF(sounds\cookoff_mid_pressure.ogg),6,1,400,0.25,0,0,0};
+        varient2[] = {PATHTOF(sounds\cookoff_high_pressure.ogg),6,1,400,0.65,0,0,0};
+        sounds[] = {"varient0","varient1","varient2"};
+        titles[] = {};
         empty[] = {"",0,0,0,0,0,0,0};
-    };
-    class GVAR(CookOff1): GVAR(cookOff) {
-        GVAR(cookoff)[] = {PATHTOF(sounds\Cook_Off_Flames_1.ogg),6,1.8,400,1,0,0,0};
-    };
-    class GVAR(CookOff2): GVAR(cookOff) {
-        GVAR(cookoff)[] = {PATHTOF(sounds\Cook_Off_Flames_2.ogg),6,1.8,400,1,0,0,0};
-    };
-    class GVAR(CookOff3): GVAR(cookOff) {
-        GVAR(cookoff)[] = {PATHTOF(sounds\Cook_Off_Flames_3.ogg),6,1.8,400,1,0,0,0};
-    };
-    class GVAR(CookOff4): GVAR(cookOff) {
-        GVAR(cookoff)[] = {PATHTOF(sounds\Cook_Off_Flames_4.ogg),6,1.8,400,1,0,0,0};
-    };
-    class GVAR(CookOff5): GVAR(cookOff) {
-        GVAR(cookoff)[] = {PATHTOF(sounds\Cook_Off_Flames_5.ogg),6,1.8,400,1,0,0,0};
     };
 };

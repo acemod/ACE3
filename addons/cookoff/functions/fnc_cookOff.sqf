@@ -91,8 +91,8 @@ if (local _vehicle) then {
         } forEach _positions;
 
         if (isServer) then {
-            private _sound = [QGVAR(Sound),QGVAR(Sound1),QGVAR(Sound2),QGVAR(Sound3),QGVAR(Sound4),QGVAR(Sound5)] select (_vehicle getVariable [QGVAR(sound),0]);
-            _sound = createSoundSource [_sound, position _vehicle, [], 0];
+            // TODO - Players in the vehicle hear no sound (even after exiting the vehicle)
+            private _sound = createSoundSource [QGVAR(Sound), position _vehicle, [], 0];
 
             _effects pushBack _sound;
         };
@@ -108,11 +108,12 @@ if (local _vehicle) then {
             DEC(_counter);
 
             if (_counter > 0) then {
-                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], 0.4] call CBA_fnc_waitAndExecute
+                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], FLAME_EFFECT_DELAY] call CBA_fnc_waitAndExecute
             };
         };
 
-        [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
+        // Recursive function, occurs for duration of cookoff
+        [_vehicle, _fnc_FlameEffect, ceil(COOKOFF_TIME/FLAME_EFFECT_DELAY)] call _fnc_FlameEffect;
 
         private _randomPosition = _vehicle getPos [100, random 360];
 
@@ -133,6 +134,6 @@ if (local _vehicle) then {
             if (local _vehicle) then {
                 _vehicle setDamage 1;
             };
-        }, [_vehicle, _effects], 14] call CBA_fnc_waitAndExecute;
-    }, [_vehicle, _effects, _positions], 10.5] call CBA_fnc_waitAndExecute;
-}, _vehicle, 3] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], COOKOFF_TIME] call CBA_fnc_waitAndExecute; // TODO: Randomise cook off time with locality in mind
+    }, [_vehicle, _effects, _positions], SMOKE_TIME] call CBA_fnc_waitAndExecute;
+}, _vehicle, IGNITE_TIME] call CBA_fnc_waitAndExecute;
