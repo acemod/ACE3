@@ -10,7 +10,7 @@ class ACE_Settings {
         description = CSTRING(modes_Description);
         typeName = "SCALAR";
         value = 0;
-        values[] = {CSTRING(modes_all), CSTRING(modes_unit), CSTRING(modes_free), CSTRING(modes_internal), CSTRING(modes_external)};
+        values[] = {CSTRING(modes_all), CSTRING(modes_unit), "$STR_A3_Spectator_free_camera_tooltip", "$STR_A3_Spectator_1pp_camera_tooltip", "$STR_A3_Spectator_3pp_camera_tooltip"};
     };
     class GVAR(restrictVisions) {
         displayName = CSTRING(visions_DisplayName);

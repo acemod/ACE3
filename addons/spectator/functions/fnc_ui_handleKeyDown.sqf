@@ -60,8 +60,6 @@ if (_key in [DIK_SPACE, DIK_NUMPADENTER]) exitWith {
 
 // Handle vision mode cycling
 if (_key == DIK_N) exitWith {
-    private _stepVision = [1,-1] select _shift;
-
     private _oldVision = GVAR(camVision);
     private _visions = GVAR(availableVisions);
 
@@ -70,7 +68,7 @@ if (_key == DIK_N) exitWith {
     private _countVisions = count _visions;
 
     if (_countVisions != 0) then {
-        _iVision = (_iVision + _stepVision) % _countVisions;
+        _iVision = (_iVision + 1) % _countVisions;
         if (_iVision < 0) then { _iVision = _countVisions + _iVision; };
     };
 

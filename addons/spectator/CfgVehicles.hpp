@@ -30,15 +30,15 @@ class CfgVehicles {
                         value = 1;
                     };
                     class free {
-                        name = CSTRING(modes_free);
+                        name = "$STR_A3_Spectator_free_camera_tooltip";
                         value = 2;
                     };
                     class internal  {
-                        name = CSTRING(modes_internal);
+                        name = "$STR_A3_Spectator_1pp_camera_tooltip";
                         value = 3;
                     };
                     class external  {
-                        name = CSTRING(modes_external);
+                        name = "$STR_A3_Spectator_3pp_camera_tooltip";
                         value = 4;
                     };
                 };
