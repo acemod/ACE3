@@ -13,6 +13,7 @@ scopeName QGVAR(getTreeDataIndex);
 
 // Make sure data is not empty
 if (_data != "") then {
+    // This also handles the locations list (_sideIndex = _locationIndex)
     for "_sideIndex" from 0 to ((tvCount [_treeIDC, []]) - 1) do {
         if (tvData [_treeIDC, [_sideIndex]] == _data) then {
             [_sideIndex] breakOut QGVAR(getTreeDataIndex);

@@ -6,6 +6,8 @@
  *   - 1: First person
  *   - 2: Follow
  *
+ * Default selection is [0,1,2]
+ *
  * Arguments:
  * 0: Camera modes to add <ARRAY>
  * 1: Camera modes to remove <ARRAY>

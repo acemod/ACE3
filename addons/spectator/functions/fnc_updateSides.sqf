@@ -13,7 +13,7 @@
  * Spectatable sides <ARRAY>
  *
  * Example:
- * [[west], [east,civilian]] call ace_spectator_fnc_updateSpectatableSides
+ * [[west], [east,civilian]] call ace_spectator_fnc_updateSides
  *
  * Public: Yes
  */

@@ -1,7 +1,7 @@
 /*
  * Author: SilentSpike
  * Adds or removes spectator vision modes from the selection available to the local player.
- * The default selection is [-2,-1,0,1].
+ *
  * Possible vision modes are:
  *   - -2: Normal
  *   - -1: Night vision
@@ -13,6 +13,8 @@
  *   -  5: Black Hot / Darker Red Cold
  *   -  6: White Hot / Darker Red Cold
  *   -  7: Thermal (Shade of Red and Green, Bodies are white)
+ *
+ * Default selection is [-2,-1,0,1]
  *
  * Arguments:
  * 0: Vision modes to add <ARRAY>

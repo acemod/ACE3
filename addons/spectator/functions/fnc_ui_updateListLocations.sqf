@@ -1,5 +1,5 @@
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, AACO, SilentSpike
  * Updates spectator UI list of locations
  *
  * Public: No
@@ -7,54 +7,54 @@
 
 #include "script_component.hpp"
 
-// TODO make this function work
-if true exitWith {};
-
-private _newList = [];
-
-// TODO: <Get new list here>
+private _newLocations = [];
+private _newList = GVAR(locationsList);
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
-    private _allLocations = [];
 
+    // Remove locations that are no longer there
     private _ctrl = CTRL_LIST;
-    for "_i" from 0 to ((_ctrl tvCount []) - 1) do
-    {
-        _allLocations pushBack (_ctrl tvData [_i]);
+    for "_locationIndex" from (_ctrl tvCount []) to 1 do {
+        private _lookup = _newLocations find (_ctrl tvData [_locationIndex - 1]);
+        if (_lookup < 0) then {
+            _ctrl tvDelete [_locationIndex - 1];
+        } else {
+            _newLocations deleteAt _lookup;
+        };
+    };
+
+    // Hash location lookups, note hashing assumes unique location data
+    private _locationDataToPathHash = [[], []];
+
+    for "_locationIndex" from 0 to ((_ctrl tvCount []) - 1) do {
+        (_locationDataToPathHash select 0) pushBack (_ctrl tvData [_locationIndex]);
+        (_locationDataToPathHash select 1) pushBack [_locationIndex];
     };
 
     {
-        private ["_id", "_object", "_name", "_description", "_texture", "_cameraOffset"];
-        _id         = _x select 0;
-        _name       = _x select 1;
-        _description    = _x select 2;
-        _texture    = _x select 3;
-        _cameraOffset   = _x select 4;
+        _x params ["_id", "_name", "_description", "_texture"];
 
-        _allLocations = _allLocations - [_id];
+        private _lookup = (_locationDataToPathHash select 0) find _id;
+        if (_lookup < 0) then {
+            _locationIndex = _ctrl tvAdd [[], _name];
+            _ctrl tvSetData [[_locationIndex], _id];
+            _ctrl tvSetPicture [[_locationIndex], _texture];
+            _ctrl tvSetPictureColor [[_locationIndex], [1,1,1,1]];
+            _ctrl tvSetTooltip [[_locationIndex], _description];
+        } else {
+            // pop data out of hash to improve later lookups
+            (_groupDataToPathHash select 0) deleteAt _lookup;
+            private _path = (_groupDataToPathHash select 1) deleteAt _lookup;
 
-        private _i = ["TreeGetDataIndex", [_id]] call FUNC(display);
-
-        if (_i isEqualTo []) then
-        {
-            _ctrl tvAdd [[], _name];
-            _ctrl tvSetData [[_forEachIndex], _id];
-            _ctrl tvSetPicture [[_forEachIndex], _texture];
-            _ctrl tvSetPictureColor [[_forEachIndex], [1,1,1,1]];
-            _ctrl tvSetTooltip [[_forEachIndex], _name];
-        }
-        else
-        {
-            _ctrl tvSetText [_i, _name];
-            _ctrl tvSetPicture [_i, _texture];
-            _ctrl tvSetPictureColor [_i, [1,1,1,1]];
-            _ctrl tvSetTooltip [_i, _name];
+            _ctrl tvSetText [_path, _name];
+            _ctrl tvSetPicture [_path, _texture];
+            _ctrl tvSetPictureColor [_path, [1,1,1,1]];
+            _ctrl tvSetTooltip [_path, _description];
         };
-    } forEach _newList;
 
-    // Delete all elements that are now gone
-    { ["TreeDeleteItem", [_x]] call FUNC(display); } forEach _allLocations;
+        nil // Speed loop
+    } count _newList;
 
     GVAR(curList) = _newList;
 };

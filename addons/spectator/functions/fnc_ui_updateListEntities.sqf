@@ -131,8 +131,8 @@ if !(GVAR(curList) isEqualTo _newList) then {
                 _groupIndex = _path select 1;
 
                 _ctrl tvSetText [_path, _groupId];
-                _ctrl tvSetPicture [[_sideIndex, _groupIndex], _groupTexture];
-                _ctrl tvSetPictureColor [[_sideIndex, _groupIndex], [1,1,1,0.5]];
+                _ctrl tvSetPicture [_path, _groupTexture];
+                _ctrl tvSetPictureColor [_path, [1,1,1,0.5]];
                 _ctrl tvSetTooltip [_path, _groupId];
             };
 

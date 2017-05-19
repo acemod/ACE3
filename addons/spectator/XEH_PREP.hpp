@@ -42,7 +42,9 @@ PREP(respawnTemplate);
 PREP(setFocus);
 
 // Public functions
+PREP(addLocation);
 PREP(interrupt);
+PREP(removeLocation);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);
