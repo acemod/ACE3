@@ -18,7 +18,11 @@ if (GVAR(enableAI)) then {
 };
 
 // Side and number of units filter
-_groups select {
+_groups = _groups select {
     ((side _x) in GVAR(availableSides)) &&
     {!((units _x) isEqualTo [])}
-}
+};
+
+// Whitelist overrides AI setting and side settings
+_groups append (GVAR(unitWhitelist) apply {group _x});
+_groups arrayIntersect _groups

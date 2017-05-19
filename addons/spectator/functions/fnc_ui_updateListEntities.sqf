@@ -17,6 +17,7 @@ private _newList = [
 ];
 
 // Go through groups and get the valid ones only, also cache group units information
+private _blacklist = GVAR(unitBlacklist);
 {
     private _group = _x;
     private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
@@ -30,7 +31,7 @@ private _newList = [
             {!isObjectHidden _x} &&
             {simulationEnabled vehicle _x} &&
             {!isObjectHidden vehicle _x} &&
-            { _x in GVAR(unitWhitelist) || {!(_x in GVAR(unitBlacklist))} }
+            {!(_x in _blacklist)}
         ) then {
             _newUnits pushBack ([_x] call BIS_fnc_objectVar);
 
