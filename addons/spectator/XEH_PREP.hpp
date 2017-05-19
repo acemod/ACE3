@@ -46,6 +46,12 @@ PREP(interrupt);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);
-PREP(updateSpectatableSides); // TODO: Rename to updateSides
+PREP(updateSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
+
+// Deprecated (temp)
+DFUNC(updateSpectatableSides) = {
+    ACE_DEPRECATED(QFUNC(updateSpectatableSides),"3.12.0",QFUNC(updateSides));
+    _this call FUNC(updateSides);
+};
