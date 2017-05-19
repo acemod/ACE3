@@ -35,7 +35,7 @@ if (_cameraMode == MODE_FREE) then {
 };
 
 // When the camera has a focus, switch mode applies (if other modes are available)
-if (_hasTarget && {count _availableModes > 1}) then {
+if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
     _controls pushBack ["[SPACE]", localize "STR_A3_Spectator_Helper_CameraMode"];
 };
 

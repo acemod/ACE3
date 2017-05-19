@@ -47,7 +47,6 @@ if (_init) then {
 
     // Holds the current list data
     GVAR(curList) = [];
-    GVAR(curLocationList) = [];
 
     // Cache view distance and set spectator default
     GVAR(oldViewDistance) = viewDistance;
@@ -113,7 +112,6 @@ if (_init) then {
     GVAR(uiListType)        = nil;
     GVAR(uiMapHighlighted)  = nil;
     GVAR(curList)           = nil;
-    GVAR(curLocationList)   = nil;
     GVAR(uiHelpH)           = nil;
 
     // Stop drawing

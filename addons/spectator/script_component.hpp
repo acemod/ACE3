@@ -33,8 +33,6 @@
 #define MODE_FPS    1
 #define MODE_FOLLOW 2
 
-#define MODES_UNIT [MODE_FPS, MODE_FOLLOW]
-
 #define VISION_NORM -2
 #define VISION_NVG  -1
 

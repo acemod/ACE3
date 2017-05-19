@@ -21,7 +21,7 @@ params ["_id","",[""]];
 private _index = -1;
 
 {
-    if ((_this select 0) == _id) exitWith {
+    if ((_x select 0) == _id) exitWith {
         _index = _forEachIndex;
     };
 } forEach GVAR(locationsList);

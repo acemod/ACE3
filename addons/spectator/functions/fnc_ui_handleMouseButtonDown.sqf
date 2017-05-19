@@ -20,7 +20,7 @@ if (_button == 0) exitWith {
     if (isNull GVAR(cursorObject)) then {
         if (GVAR(camMode) == MODE_FREE && { !isNull GVAR(camTarget) }) then {
             playSound "ReadoutHideClick1";
-            [objNull] call FUNC(SetFocus);
+            [objNull] call FUNC(setFocus);
         };
     } else {
         playSound "ReadoutClick";

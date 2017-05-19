@@ -2,6 +2,8 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to select the camera mode
  *
+ * Intended to run even if new mode == old mode, as it handles focus
+ *
  * Public: No
  */
 
@@ -11,17 +13,15 @@ params ["_newMode"];
 
 private _oldMode = GVAR(camMode);
 private _modes = GVAR(availableModes);
+private _focus = GVAR(camTarget);
 
 // If new mode isn't available then keep current (unless current also isn't)
 if !(_newMode in _modes) then {
     _newMode = _modes select ((_modes find _oldMode) max 0);
 };
 
-// Should run even if the mode is the same, as it handles focus
-// if (_newMode == _oldMode) exitWith {};
-
-private _focus = GVAR(camTarget);
-if (!isNull _focus || _newMode == MODE_FREE) then {
+// Can't switch camera from free mode when focus is a location
+if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
     private _camera = GVAR(camera);
     private _showHUD = [true,true,true,true,true,true,true,true];
 

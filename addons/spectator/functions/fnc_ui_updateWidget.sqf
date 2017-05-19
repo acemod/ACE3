@@ -11,7 +11,8 @@
 #define IMG_GUNNER "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageGunner_ca.paa"
 #define IMG_CARGO "a3\Ui_f\data\IGUI\Cfg\CommandBar\imageCommander_ca.paa"
 
-if (!GVAR(uiWidgetVisible) || {isNull GVAR(camTarget)}) exitWith {CTRL_WIDGET ctrlShow false};
+// Hide if no target, or target is a location or widget is toggled off
+if (!GVAR(uiWidgetVisible) || {GVAR(camOnLocation)} || {isNull GVAR(camTarget)}) exitWith {CTRL_WIDGET ctrlShow false};
 
 private _focus = GVAR(camTarget);
 

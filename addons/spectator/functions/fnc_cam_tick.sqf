@@ -23,7 +23,7 @@ GVAR(camLastTickTime) = _currentTime;
 
 
 // If no focus in unit camera modes try to find a new one
-if (_cameraMode in MODES_UNIT) then {
+if (_cameraMode != MODE_FREE) then {
     private _focus = if (isNull _camTarget) then {
         private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
         if (isNil "_testFocus") then {
