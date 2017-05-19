@@ -27,7 +27,7 @@
 #include "script_component.hpp"
 
 params [
-    ["_pos",[],[[],objNull],[2,3]],
+    ["_pos",[],[[],objNull],3],
     ["_radius",50,[0]],
     ["_name","",[""]],
     ["_description","",[""]],
@@ -48,6 +48,7 @@ if (_pos isEqualTo []) then {
         if (_pos isEqualType objNull) then {
             _name = [_pos,false,false] call EFUNC(common,getName);
         } else {
+            // TODO: This function complains?
             _name = [_pos] call BIS_fnc_locationDescription;
         };
     };

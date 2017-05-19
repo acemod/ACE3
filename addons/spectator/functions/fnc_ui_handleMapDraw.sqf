@@ -88,4 +88,12 @@ if !(isNil QGVAR(camera)) then {
     _map drawArrow [_cameraPos, (_cameraPos getPos [300, _cameraDir]), [0.5, 1.0, 0.5, 1.0]];
 };
 
+// Draw locations
+{
+    _x params ["", "_name", "", "_texture", "_pos"];
+    _map drawIcon [_texture, [1,1,1,0.5], _pos, 36.0, 36.0, 0, _name, true, 0.04, "TahomaB", "right"];
+
+    nil // Speed loop
+} count (GVAR(locationsList));
+
 END_COUNTER(drawMap);

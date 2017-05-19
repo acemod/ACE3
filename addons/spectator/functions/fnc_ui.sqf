@@ -117,12 +117,12 @@ if (_init) then {
     GVAR(uiHelpH)           = nil;
 
     // Stop drawing
-    GVAR(drawProjectiles)       = nil;
-    GVAR(drawUnits)             = nil;
-    GVAR(entitiesToDraw)        = nil;
-    GVAR(grenadesToDraw)        = nil;
-    GVAR(iconsToDraw)           = nil;
-    GVAR(projectilesToDraw)     = nil;
+    GVAR(drawProjectiles)   = nil;
+    GVAR(drawUnits)         = nil;
+    GVAR(entitiesToDraw)    = nil;
+    GVAR(grenadesToDraw)    = nil;
+    GVAR(iconsToDraw)       = nil;
+    GVAR(projectilesToDraw) = nil;
 
     // Reset view distance
     setViewDistance GVAR(oldViewDistance);

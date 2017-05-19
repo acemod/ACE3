@@ -136,5 +136,18 @@ private _entitiesToDraw = [];
     nil // Speed loop
 } count ([] call FUNC(getTargetEntities));
 
+// Remove object locations that are now null
+{
+    _x params ["_id", "", "", "", "_pos"];
+
+    if (_pos isEqualType objNull) then {
+        if (isNull _pos) then {
+            [_id] call FUNC(removeLocation);
+        };
+    };
+
+    nil // Speed loop
+} count (GVAR(locationsList));
+
 GVAR(iconsToDraw) = _iconsToDraw;
 GVAR(entitiesToDraw) = _entitiesToDraw;
