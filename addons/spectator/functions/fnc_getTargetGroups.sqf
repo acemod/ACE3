@@ -10,7 +10,7 @@
 private _groups = [];
 
 // AI filter
-if (GVAR(filterUnits) == 3) then {
+if (GVAR(enableAI)) then {
     _groups = allGroups;
 } else {
     private _players = [] call CBA_fnc_players;

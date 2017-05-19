@@ -1,17 +1,9 @@
 class ACE_Settings {
-    class GVAR(filterUnits) {
-        displayName = CSTRING(units_DisplayName);
-        description = CSTRING(units_Description);
-        typeName = "SCALAR";
-        value = 2;
-        values[] = {CSTRING(units_none), CSTRING(units_players), CSTRING(units_playable), CSTRING(units_all)};
-    };
-    class GVAR(filterSides) {
-        displayName = CSTRING(sides_DisplayName);
-        description = CSTRING(sides_Description);
-        typeName = "SCALAR";
+    class GVAR(enableAI) {
+        displayName = CSTRING(ai_DisplayName);
+        description = CSTRING(ai_Description);
+        typeName = "BOOL";
         value = 0;
-        values[] = {CSTRING(sides_player), CSTRING(sides_friendly), CSTRING(sides_hostile), CSTRING(sides_all)};
     };
     class GVAR(restrictModes) {
         displayName = CSTRING(modes_DisplayName);

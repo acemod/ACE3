@@ -10,7 +10,7 @@
 private _entities = [];
 
 // AI filter
-if (GVAR(filterUnits) == 3) then {
+if (GVAR(enableAI)) then {
     _entities = allUnits;
 } else {
     _entities = [] call CBA_fnc_players;
@@ -20,5 +20,6 @@ if (GVAR(filterUnits) == 3) then {
 _entities select {
     ((side group _x) in GVAR(availableSides)) &&
     {simulationEnabled _x && {simulationEnabled vehicle _x}} &&
-    { !isObjectHidden _x && {!isObjectHidden vehicle _x} }
+    { !isObjectHidden _x && {!isObjectHidden vehicle _x} } &&
+    { _x in GVAR(unitWhitelist) || {!(_x in GVAR(unitBlacklist))} }
 }

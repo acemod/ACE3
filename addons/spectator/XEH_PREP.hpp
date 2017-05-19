@@ -46,5 +46,6 @@ PREP(interrupt);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);
-PREP(updateSpectatableSides);
+PREP(updateSpectatableSides); // TODO: Rename to updateSides
+PREP(updateUnits);
 PREP(updateVisionModes);

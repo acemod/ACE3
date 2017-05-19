@@ -29,8 +29,8 @@ private _newList = [
             simulationEnabled _x &&
             {!isObjectHidden _x} &&
             {simulationEnabled vehicle _x} &&
-            {!isObjectHidden vehicle _x}
-            // TODO: whitelist & blacklist
+            {!isObjectHidden vehicle _x} &&
+            { _x in GVAR(unitWhitelist) || {!(_x in GVAR(unitBlacklist))} }
         ) then {
             _newUnits pushBack ([_x] call BIS_fnc_objectVar);
 
