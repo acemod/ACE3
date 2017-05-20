@@ -10,6 +10,7 @@ PREP(createDummy);
 PREP(disable);
 PREP(dropAmmo);
 PREP(getCaliber);
+PREP(getHardpointMagazines);
 PREP(getMaxMagazines);
 PREP(getNeedRearmMagazines);
 PREP(getSupplyCount);

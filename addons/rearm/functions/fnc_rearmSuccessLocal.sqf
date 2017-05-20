@@ -3,31 +3,38 @@
  * Rearms a vehicle on the turret owner.
  *
  * Arguments:
- * 0: Params <ARRAY>
- *   0: Vehicle <OBJECT>
- *   1: Unit <OBJECT>
- *   2: Turret Path <ARRAY>
- *   3: Number of magazines <NUMBER>
- *   4: Magazine Classname <STRING>
- *   5: Number of rounds <NUMBER>
+ * 0: Vehicle <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: Turret Path <ARRAY>
+ * 3: Number of magazines <NUMBER>
+ * 4: Magazine Classname <STRING>
+ * 5: Number of rounds <NUMBER>
+ * 6: Pylon Index <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[vehicle, player, [-1], 2, "5000Rnd_762x51_Belt", 500]] call ace_rearm_fnc_rearmSuccessLocal
+ * [vehicle, player, [-1], 2, "5000Rnd_762x51_Belt", 500, ""] call ace_rearm_fnc_rearmSuccessLocal
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params [
-    ["_args", [objNull, objNull, [], 0, "", 0], [[]], [6]]
-];
-_args params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds"];
-TRACE_6("rearmSuccessLocal",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds);
+params ["_vehicle", "_unit", "_turretPath", "_numMagazines", "_magazineClass", "_numRounds", "_pylon"];
+TRACE_7("rearmSuccessLocal",_vehicle,_unit,_turretPath,_numMagazines,_magazineClass,_numRounds,_pylon);
 
 private _rounds = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "count");
+
+if (_pylon > 0) exitWith {
+    if (_turretPath isEqualTo [-1]) then {_turretPath = [];}; // Convert back to pylon turret format
+    private _currentCount = _vehicle ammoOnPylon _pylon;
+    private _newCount = ((_currentCount max 0) + _numRounds) min _rounds;
+    TRACE_2("",_pylon,_magazineClass,_newCount);
+    _vehicle setPylonLoadOut [_pylon, _magazineClass, false, _turretPath];
+    _vehicle setAmmoOnPylon [_pylon, _newCount];
+};
+
 private _currentRounds = 0;
 private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
 

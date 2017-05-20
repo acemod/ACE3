@@ -2,10 +2,10 @@
 #define COMPONENT_BEAUTIFIED Rearm
 #include "\z\ace\addons\main\script_mod.hpp"
 
-#define DEBUG_MODE_FULL
-#define DISABLE_COMPILE_CACHE
-#define ENABLE_PERFORMANCE_COUNTERS
-#define FAST_PROGRESSBARS
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
+// #define FAST_PROGRESSBARS
 
 #ifdef DEBUG_ENABLED_REARM
     #define DEBUG_MODE_FULL

@@ -20,6 +20,26 @@
 params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
 TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
+// 1.70 pylons
+private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+{
+    private _pylonTurret = getArray (_x >> "turret");
+    if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];}; // convert to expected array for driver
+    if (_pylonTurret isEqualTo _turretPath) then {
+        private _pylonIndex = _forEachIndex + 1; // GJ BIS
+        private _pylonAmmo = _vehicle ammoOnPylon _pylonIndex;
+        private _pylontMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
+        private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _pylontMagazine >> "count");
+        TRACE_4("",_pylonIndex,_pylonAmmo,_maxRounds,_pylontMagazine);
+        if (_pylonAmmo < _maxRounds) then {
+            if ((GVAR(supply) == 0) || {[_truck, _pylontMagazine, (_maxRounds - _pylonAmmo)] call FUNC(removeMagazineFromSupply)}) then {
+                TRACE_3("Adding Rounds",_vehicle,_pylonIndex,_maxRounds);
+                _vehicle setAmmoOnPylon [_pylonIndex, _maxRounds];
+            };
+        };
+    };
+} forEach _pylonConfigs;
+
 private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
 if (isNil "_magazines") exitWith {};
 {
@@ -42,16 +62,12 @@ if (isNil "_magazines") exitWith {};
         };
 
         for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
-            if ((GVAR(supply) > 0) && {[_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply)}) then {
+            if ((GVAR(supply) == 0) || {[_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply)}) then {
                 _vehicle addMagazineTurret [_magazine, _turretPath];
             };
         };
     } else {
-        private _success = true;
-        if (GVAR(supply) > 0) then {
-            _success = [_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply);
-        };
-        if (_success) then {
+        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
             _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
         };
     };

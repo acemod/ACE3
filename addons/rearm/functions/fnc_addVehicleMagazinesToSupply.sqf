@@ -42,3 +42,11 @@ if (_vehicle == "") exitWith {
     } count _magazines;
     false
 } count REARM_TURRET_PATHS;
+
+// 1.70 pylons
+private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
+{
+    private _defaultMag = getText (_x >> "attachment");
+    TRACE_3("",_defaultMag,configName _x,_forEachIndex);
+    [_truck, _defaultMag] call FUNC(addMagazineToSupply);
+} forEach _pylonConfigs;
