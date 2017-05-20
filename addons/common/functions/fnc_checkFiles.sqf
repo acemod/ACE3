@@ -60,8 +60,9 @@ private _oldCompats = [];
 } count _addons;
 if (!(_oldCompats isEqualTo [])) then {
     [{
-        systemChat format ["Warning: The Following ACE Compatiblity PBOs are Outdated %1", _this];
-    }, _oldCompats, 10] call CBA_fnc_waitAndExecute;
+        // Lasts for ~10 seconds
+        ERROR_WITH_TITLE_1("The Following ACE Compatiblity PBOs are Outdated", "%1", _this);
+    }, _oldCompats, 1] call CBA_fnc_waitAndExecute;
 };
 
 ///////////////
