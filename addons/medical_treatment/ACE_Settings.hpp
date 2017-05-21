@@ -23,4 +23,25 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
     };
+	class EGVAR(medical,MedkitTimeModifier) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(MedkitTimeModifier);
+        description = CSTRING(MedkitTimeModifier_Description);
+        typeName = "SCALAR";
+        value = 1;
+    };
+	class EGVAR(medical,HealTimeModifier) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(HealTimeModifier);
+        description = CSTRING(HealTimeModifier_Description);
+        typeName = "SCALAR";
+        value = 5;
+    };
+	class EGVAR(medical,HealTimeMin) {
+        category = ECSTRING(medical,Category_Medical);
+        displayName = CSTRING(HealTimeMin);
+        description = CSTRING(HealTimeMin_Description);
+        typeName = "SCALAR";
+        value = 180;
+    };
 };

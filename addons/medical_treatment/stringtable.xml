@@ -78,6 +78,22 @@
             <Hungarian>Milyen sokáig legyenek jelen a szemétobjektumok (másodpercben)? A -1 végtelen időt jelent.</Hungarian>
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
             <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
-        </Key>
-    </Package>
+        <Key ID="STR_ACE_Medical_Treatment_HealTimeModifier"> 
+            <English>Heal time modifier</English> 
+        </Key> 
+        <Key ID="STR_ACE_Medical_Treatment_HealTimeModifier_Description"> 
+            <English>Heal time modifier</English> 
+        </Key> 
+        <Key ID="STR_ACE_Medical_Treatment_HealTimeMin"> 
+            <English>Heal min</English> 
+        </Key> 
+        <Key ID="STR_ACE_Medical_Treatment_HealTimeMin_Description"> 
+            <English>Heal min</English> 
+        </Key> 
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTimeModifier"> 
+            <English>Medkit apply time modifier</English> 
+        </Key> 
+        <Key ID="STR_ACE_Medical_Treatment_MedkitTimeModifier_Description"> 
+            <English>Medkit apply time modifier</English> 
+        </Key> 
 </Project>
