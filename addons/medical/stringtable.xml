@@ -2975,12 +2975,18 @@
             <Korean>얼마정도의 부상을 인공지능이 죽기 전까지 버틸 수 있습니까?</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_DisplayName">
-            <English>Fatal Injury</English>
+            <English>Fatal Injury Player</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_Description">
-            <English>Defines when you can receive a fatal injury</English>
+            <English>Defines when Player can receive a fatal injury</English>
         </Key>
-         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
+        <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryConditionAI_DisplayName">
+            <English>Fatal Injury AI</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryConditionAI_Description">
+            <English>Defines when AI can receive a fatal injury</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
             <English>In Cardiac Arrest</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_cardiacArrestTime_DisplayName">
