@@ -3,6 +3,7 @@
 GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
 ["ace_settingsInitialized", {
+    TRACE_2("settingsInit",GVAR(level),GVAR(supply));
     ["LandVehicle", "Init", {_this call FUNC(initSupplyVehicle)}, true, ["StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
     ["ReammoBox_F", "Init", {_this call FUNC(initSupplyVehicle)}, true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;

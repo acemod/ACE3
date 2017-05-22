@@ -23,11 +23,12 @@ if (!alive _vehicle) exitWith {};
 
 private _configSupply = getNumber (configFile >> "CfgVehicles" >> _typeOf >> QGVAR(defaultSupply));
 private _isSupplyVehicle = _vehicle getVariable [QGVAR(isSupplyVehicle), false];
-TRACE_2("",_configSupply,_isSupplyVehicle);
+private _oldRearmConfig = isClass (configFile >> "CfgVehicles" >> _typeOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));
+TRACE_3("",_configSupply,_isSupplyVehicle,_oldRearmConfig);
 
-if ((_configSupply <= 0) && {!_isSupplyVehicle}) exitWith {}; // Ignore if not enabled
-if ((_configSupply > 0) && {_typeOf in GVAR(configTypesAdded)}) exitWith {}; // Only add class actions once
-if (_configSupply > 0) then {GVAR(configTypesAdded) pushBack _typeOf};
+if ((_configSupply <= 0) && {!_isSupplyVehicle} && {!_oldRearmConfig}) exitWith {}; // Ignore if not enabled
+if ((_oldRearmConfig || {_configSupply > 0}) && {_typeOf in GVAR(configTypesAdded)}) exitWith {}; // Only add class actions once
+if (_oldRearmConfig || {_configSupply > 0}) then {GVAR(configTypesAdded) pushBack _typeOf};
 
 
 private _actionReadSupplyCounter = [ // GVAR(supply) > 0
@@ -55,10 +56,10 @@ QPATHTOF(ui\icon_rearm_interact.paa),
 {_this call FUNC(canStoreAmmo)}
 ] call EFUNC(interact_menu,createAction);
 
-if (_configSupply > 0) then {
+if (_oldRearmConfig || {_configSupply > 0}) then {
     TRACE_1("Adding Class Actions",_typeOf);
     [_typeOf, 0, ["ACE_MainActions"], _actionReadSupplyCounter] call EFUNC(interact_menu,addActionToClass);
-    if (!isClass (configFile >> "CfgVehicles" >> _typeOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo))) then {
+    if (!_oldRearmConfig) then {
         [_typeOf, 0, ["ACE_MainActions"], _actionTakeAmmo] call EFUNC(interact_menu,addActionToClass);
         [_typeOf, 0, ["ACE_MainActions"], _actionStoreAmmo] call EFUNC(interact_menu,addActionToClass);
     } else {

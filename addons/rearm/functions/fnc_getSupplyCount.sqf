@@ -19,12 +19,17 @@ params [["_truck", objNull, [objNull]]];
 
 if (GVAR(supply) != 1) exitWith {
     WARNING("supply setting is not set to limited"); // func shouldn't have been called
+    -1
 };
 
 private _supply = _truck getVariable QGVAR(currentSupply);
 
 if (isNil "_supply") then {
-    _supply = getNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply));
+    if (isNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply))) then {
+        _supply = getNumber (configFile >> "CfgVehicles" >> typeOf _truck >> QGVAR(defaultSupply));
+    } else {
+        _supply = 1200;
+    };
     if (_supply > 0) then {
         _truck setVariable [QGVAR(currentSupply), _supply, true];
     };
