@@ -127,7 +127,7 @@ class CfgVehicles {
                     };
                     class never {
                         name = ECSTRING(common,Never);
-                        value = 1;
+                        value = 2;
                     };
                 };
             };
