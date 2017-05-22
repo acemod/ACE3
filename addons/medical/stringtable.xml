@@ -2981,10 +2981,16 @@
             <English>Defines when Player can receive a fatal injury</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryConditionAI_DisplayName">
-            <English>Fatal Injury AI</English>
+            <English>Instant death AI</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryConditionAI_Description">
-            <English>Defines when AI can receive a fatal injury</English>
+            <English>Defines if AI will be able to die instantly</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_unconsciousConditionAI_DisplayName">
+            <English>Forbid unconscious AI</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_MedicalSettings_unconsciousConditionAI_Description">
+            <English>Defines if AI will be denied to go unconscious and will die instead</English>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_fatalInjuryCondition_InCardiacArrest">
             <English>In Cardiac Arrest</English>

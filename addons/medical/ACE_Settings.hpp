@@ -115,9 +115,15 @@ class ACE_Settings {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_fatalInjuryConditionAI_DisplayName);
         description = CSTRING(MedicalSettings_fatalInjuryConditionAI_Description);
-        value = 0;
-        typeName = "SCALAR";
-        values[] = {"Always", "In Cardiac Arrest", "Never"};
+        value = 1;
+        typeName = "BOOL";
+    };
+    class GVAR(unconsciousConditionAI) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_unconsciousConditionAI_DisplayName);
+        description = CSTRING(MedicalSettings_unconsciousConditionAI_Description);
+        value = 1;
+        typeName = "BOOL";
     };
     class GVAR(cardiacArrestTime) {
         category = CSTRING(Category_Medical);
