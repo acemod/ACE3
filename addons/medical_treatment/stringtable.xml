@@ -95,5 +95,6 @@
         </Key> 
         <Key ID="STR_ACE_Medical_Treatment_MedkitTimeModifier_Description"> 
             <English>Medkit apply time modifier</English> 
-        </Key> 
+        </Key>
+    </Package>
 </Project>
