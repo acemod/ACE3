@@ -22,5 +22,9 @@ private _totalDamage = 0;
 {
     _totalDamage = _totalDamage + _x;
 } forEach (_unit getVariable [QEGVAR(medical,bodyPartDamage), []]);
-
-10 max (_totalDamage * QEGVAR(medical,HealTimeModifier)) min QEGVAR(medical,HealTimeMin)
+if (QEGVAR(medical,PAKTime) != 0) then {
+    _time = QEGVAR(medical,PAKTime);
+} else {
+    _time = 10 max (_totalDamage * 5) min 180;
+};
+_time
