@@ -12,3 +12,15 @@ if (isServer) then {
 };
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
+
+// Initalise virtual spectators
+[QGVAR(virtual),"initpost",{
+    if !(GVAR(isSet)) then {
+        // Delay until local player is fully initalized
+        [
+            { !isNil { player } && { !isNull player } },
+            { if (player == _this) then {[true] call FUNC(setSpectator)}; },
+            _this select 0
+        ] call CBA_fnc_waitUntilAndExecute;
+    };
+},false,[],true] call CBA_fnc_addClassEventHandler;
