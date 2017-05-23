@@ -22,6 +22,10 @@ if !(QUOTE(ADDON) in _templates) exitWith {};
 // Start our spectator
 [true] call FUNC(setSpectator);
 
+// Delete the seagull that spawns (not actually the player, a CfgNonAIVehicles object)
+// This could delete seagulls created by a wildlife module (TODO: Find a more accurate method of getting the exact seagull)
+{ if (_x isKindOf "seagull") then {deleteVehicle _x;}; } forEach (nearObjects [player, [], 250]);
+
 // Switch to a virtual unit so draw3D continues to work
 private _grp = createGroup [sideLogic, true];
 private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
