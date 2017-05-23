@@ -29,11 +29,10 @@ if (_respawn in [0,1,4,5]) exitWith {};
 if (playerRespawnTime <= 1) exitWith {};
 
 // Some environment information can be used for the initial camera attributes
-if (isNull _oldKiller) then {_oldKiller = _newCorpse};
 private _nvg = [VISION_NORM, VISION_NVG] select (sunOrMoon < 1);
 
 // Prepare camera attributes before entering spectator
-[MODE_FREE, _oldKiller, _nvg, ASLtoATL eyePos _newCorpse, getDirVisual _newCorpse] call FUNC(setCameraAttributes);
+[nil, nil, _nvg, nil, nil] call FUNC(setCameraAttributes);
 
 // Enter/exit spectator based on whether killed/respawned
 [!alive _newCorpse] call FUNC(setSpectator);

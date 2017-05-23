@@ -19,16 +19,11 @@ if !(QUOTE(ADDON) in _templates) exitWith {};
 // Kill BI spectator
 ["Terminate"] call BIS_fnc_EGSpectator;
 
-// Don't be a seagull
-// TODO: Make this work
-private _seagull = player;
-if (typeOf _seagull == "seagull") then {
-    private _grp = createGroup [sideLogic, true];
-    private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
-
-    selectPlayer _virtual;
-    deleteVehicle _seagull;
-};
-
 // Start our spectator
 [true] call FUNC(setSpectator);
+
+// Switch to a virtual unit so draw3D continues to work
+private _grp = createGroup [sideLogic, true];
+private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
+
+selectPlayer _virtual;
