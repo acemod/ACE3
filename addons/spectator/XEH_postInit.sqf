@@ -13,6 +13,4 @@ if (isServer) then {
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
 
-// TODO: Unit switch EH, if virtual spectator, start spectating
-
 // TODO: Override BI setting, hook into display init

@@ -85,7 +85,7 @@ if (_key == DIK_PGUP) exitWith {
 };
 
 // Handle negative change in draw
-if (_key == DIK_PGUP) exitWith {
+if (_key == DIK_PGDN) exitWith {
     setViewDistance ((viewDistance - 250.0) max MIN_VIEW_DISTANCE);
     true
 };
@@ -147,7 +147,7 @@ if (_key == DIK_O) exitWith {
 };
 
 // Handle toggling unit drawing
-if (_key == DIK_BACKSLASH) exitWith {
+if (_key == DIK_I) exitWith {
     GVAR(drawUnits) = !GVAR(drawUnits);
     true
 };

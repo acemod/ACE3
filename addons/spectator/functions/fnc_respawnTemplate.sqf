@@ -25,7 +25,7 @@ if (isNull _oldKiller) then {_oldKiller = _newCorpse};
 private _nvg = [-2,-1] select (sunOrMoon < 1);
 
 // Prepare camera attributes before entering spectator
-[2, _oldKiller, _nvg, eyePos _newCorpse, getDirVisual _newCorpse] call FUNC(setCameraAttributes);
+//[2, _oldKiller, _nvg, eyePos _newCorpse, getDirVisual _newCorpse] call FUNC(setCameraAttributes);
 
 // Enter/exit spectator based on the respawn type and whether killed/respawned
 if (alive _newCorpse) then {
@@ -34,6 +34,7 @@ if (alive _newCorpse) then {
         private _grp = createGroup [sideLogic, true];
         private _virtual = _grp createUnit [QGVAR(virtual), [0,0,0], [], 0, "NONE"];
 
+        // Switch to virtual spectator unit
         selectPlayer _virtual;
 
         // Delete the seagull

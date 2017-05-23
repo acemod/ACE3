@@ -24,7 +24,7 @@ class GVAR(display) {
     closeOnMissionEnd = 1;
 
     onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
-    onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp)); // TODO: Check whether key up is necessary
+    onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));
     onMouseMoving = QUOTE(_this call FUNC(ui_handleMouseMoving));
     onChildDestroyed = QUOTE(_this call FUNC(ui_handleChildDestroyed));
 
