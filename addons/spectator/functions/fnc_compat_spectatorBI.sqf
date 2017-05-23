@@ -24,7 +24,7 @@ if !(QUOTE(ADDON) in _templates) exitWith {};
 
 // Delete the seagull that spawns (not actually the player, a CfgNonAIVehicles object)
 // This could delete seagulls created by a wildlife module (TODO: Find a more accurate method of getting the exact seagull)
-{ if (_x isKindOf "seagull") then {deleteVehicle _x;}; } forEach (nearObjects [player, [], 250]);
+{ if (_x isKindOf "seagull") then {deleteVehicle _x;}; } forEach (nearestObjects [player, [], 250]);
 
 // Switch to a virtual unit so draw3D continues to work
 private _grp = createGroup [sideLogic, true];
