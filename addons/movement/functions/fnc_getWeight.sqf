@@ -18,6 +18,9 @@
 params ["_unit"];
 
 private _virtualLoad = 0;
+{ // Fix for double counted mag weight (#4745)
+    _virtualLoad = _virtualLoad - getNumber (configFile >> "CfgMagazines" >> _x >> "mass");
+} forEach ((primaryWeaponMagazine _unit) + (secondaryWeaponMagazine _unit));
 
 {
     _virtualLoad = _virtualLoad + (_x getVariable [QGVAR(vLoad), 0]);
