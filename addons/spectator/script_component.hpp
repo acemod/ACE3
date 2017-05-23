@@ -26,8 +26,8 @@
 
 // UI/Camera related values
 #define SPEED_DEFAULT   0.1
-#define SPEED_FAST      2.0
-#define SPEED_VERYFAST  3.0
+#define SPEED_FAST      2
+#define SPEED_VERYFAST  3
 
 #define MODE_FREE   0
 #define MODE_FPS    1
