@@ -53,7 +53,7 @@ if (_init) then {
     setViewDistance DEFAULT_VIEW_DISTANCE;
 
     // If counter already exists handle it, otherwise display XEH will handle it
-    [GETUVAR(RscRespawnCounter,displayNull)] call FUNC(counterCompatibility);
+    [GETUVAR(RscRespawnCounter,displayNull)] call FUNC(compat_counter);
 
     // Create the display
     MAIN_DISPLAY createDisplay QGVAR(display);
