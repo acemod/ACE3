@@ -65,13 +65,3 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
 
     ["ace_spectatorStaged", [_set, _unit]] call CBA_fnc_globalEvent;
 };
-
-//BandAid for #2677 - if player in unitList weird before being staged, weird things can happen
-if ((player in GVAR(unitList)) || {ACE_player in GVAR(unitList)}) then {
-    [] call FUNC(updateUnits);  //update list now
-    if (!(isNull (findDisplay 12249))) then {//If display is open now, close it and restart
-        WARNING("Player in unitList, call ace_spectator_fnc_stageSpectator before ace_spectator_fnc_setSpectator");
-        ["fixWeirdList", true] call FUNC(interrupt);
-        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call CBA_fnc_execNextFrame;
-    };
-};
