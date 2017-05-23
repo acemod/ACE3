@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -243,7 +243,8 @@
             <Japanese>空中投下</Japanese>
             <Polish>Zrzut zaopatrzenia</Polish>
             <Korean>공중 투하</Korean>
-            <French>Largage aérien</French>            
+            <French>Largage aérien</French>
+            <Italian>Lancio Aereo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -251,15 +252,18 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Polish>Nierówny lot</Polish>
             <Korean>기체가 수평이 아닙니다</Korean>
-            <French>Rétablir l'assiette</French>            
+            <French>Rétablir l'assiette</French>
+            <Italian>Volo non Livellato</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coffecient</English>
             <Japanese>空中投下までの時間係数</Japanese>
+            <Italian>Coefficente Tempo Lancio Paracadute</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
+            <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
         </Key>
     </Package>
 </Project>
