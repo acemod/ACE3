@@ -12,5 +12,3 @@ if (isServer) then {
 };
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;
-
-// TODO: Override BI setting, hook into display init

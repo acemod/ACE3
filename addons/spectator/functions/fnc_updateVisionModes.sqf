@@ -56,7 +56,7 @@ if (_newModes isEqualTo []) then {
 
 // Update camera in case of change
 if (GVAR(isSet)) then {
-    [] call FUNC(transitionCamera);
+    [GVAR(camMode)] call FUNC(cam_setCameraMode);
 };
 
 _newModes

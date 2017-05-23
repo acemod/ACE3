@@ -24,6 +24,6 @@ class CfgRespawnTemplates {
         displayName = CSTRING(DisplayName);
         onPlayerKilled = QFUNC(respawnTemplate);
         onPlayerRespawn = QFUNC(respawnTemplate);
-        respawnTypes[] = {2,3};
+        respawnTypes[] = {1,2,3,4,5};
     };
 };

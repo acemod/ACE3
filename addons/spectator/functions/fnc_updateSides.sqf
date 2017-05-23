@@ -1,7 +1,6 @@
 /*
  * Author: SilentSpike
  * Adds or removes sides from the selection available to spectate by the local player.
- * Note that the side filter setting is applied to the available sides dynamically.
  *
  * Default selection is [west,east,resistance,civilian]
  *
@@ -10,7 +9,7 @@
  * 1: Sides to remove <ARRAY>
  *
  * Return Value:
- * Spectatable sides <ARRAY>
+ * Sides available <ARRAY>
  *
  * Example:
  * [[west], [east,civilian]] call ace_spectator_fnc_updateSides

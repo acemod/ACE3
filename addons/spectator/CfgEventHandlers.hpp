@@ -19,6 +19,9 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscRespawnCounter {
-        ADDON = QUOTE(_this call FUNC(counterCompatibility));
+        ADDON = QUOTE(_this call FUNC(compat_counter));
+    };
+    class RscDisplayEGSpectator {
+        ADDON = QUOTE(_this call FUNC(compat_spectatorBI));
     };
 };

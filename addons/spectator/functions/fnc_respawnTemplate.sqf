@@ -21,10 +21,9 @@
 
 params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
 
-// These respawn types use engine driven magic we don't want to mess with
-if (_respawn in [0,1,4,5]) exitWith {
-    WARNING(FORMAT_2("Cannot use %1 template with respawn type %2",QUOTE(ADDON),_respawn));
-};
+// These respawn types use engine driven magic we don't want to mess with here
+// Compatibility handled via spectator display XEH
+if (_respawn in [0,1,4,5]) exitWith {};
 
 // Negligible respawn delay can result in entering spectator after respawn
 if (playerRespawnTime <= 1) exitWith {};
