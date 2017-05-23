@@ -1,6 +1,6 @@
 /*
  * Author: Nelson Duarte, SilentSpike
- * Remove a location that can be seen in spectator view
+ * Remove a location that can be seen in spectator view. Local effect.
  *
  * Arguments:
  * 0: Unique ID <STRING>

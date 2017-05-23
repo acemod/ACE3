@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Adds units to spectator whitelist/blacklist
+ * Adds units to spectator whitelist/blacklist. Local effect.
  *
  * Arguments:
  * 0: Units to add to the whitelist <ARRAY>

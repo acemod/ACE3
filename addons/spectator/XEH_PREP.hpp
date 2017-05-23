@@ -47,6 +47,7 @@ PREP(setFocus);
 PREP(addLocation);
 PREP(interrupt);
 PREP(removeLocation);
+PREP(setCameraAttributes);
 PREP(setSpectator);
 PREP(stageSpectator);
 PREP(updateCameraModes);

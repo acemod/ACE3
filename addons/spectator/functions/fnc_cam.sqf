@@ -36,15 +36,21 @@ if (_init) then {
     GVAR(camLights)             = [];
     GVAR(camLight)              = false;
 
-    // Create the camera
-    private _camera = "CamCurator" camCreate eyePos player;
+    // Handle pre-set pos and dir (delete GVARs when done)
+    private _pos = if (isNil QGVAR(camPos)) then {eyePos player} else {GVAR(camPos)};
+    private _dir = if (isNil QGVAR(camDir)) then {getDirVisual player} else {GVAR(camDir)};
+    GVAR(camPos) = nil;
+    GVAR(camDir) = nil;
+
+    // Create the camera (CamCurator required for engine driven controls)
+    private _camera = "CamCurator" camCreate _pos;
 
     if (isNull _camera) exitWith { ERROR("Camera wasn't created successfully"); };
 
     // Switch to the camera and set its attributes
     _camera cameraEffect ["internal", "back"];
-    _camera setPosASL eyePos player;
-    _camera setDir getDirVisual player;
+    _camera setPosASL _pos;
+    _camera setDir _dir;
     _camera camCommand "maxPitch 89";
     _camera camCommand "minPitch -89";
     _camera camCommand format ["speedDefault %1", SPEED_DEFAULT];

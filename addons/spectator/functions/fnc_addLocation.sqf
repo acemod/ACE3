@@ -1,6 +1,6 @@
 /*
  * Author: Nelson Duarte, SilentSpike
- * Add a location that can be seen in spectator view
+ * Add a location that can be seen in spectator view. Local effect.
  *
  * Notes:
  * - Position array is of form ASL

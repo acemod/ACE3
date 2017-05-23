@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Adds or removes sides from the selection available to spectate by the local player.
+ * Adds or removes sides from the selection available to spectate. Local effect.
  *
  * Default selection is [west,east,resistance,civilian]
  *

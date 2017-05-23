@@ -10,7 +10,7 @@
 #include "script_component.hpp"
 
 private _respawn = getMissionConfigValue ["respawn",0];
-if (_respawn isEqualType "") then { _respawn = ["","bird","","","group","side"] find (toLower _respawn); }
+if (_respawn isEqualType "") then { _respawn = ["","bird","","","group","side"] find (toLower _respawn); };
 if !(_respawn in [1,4,5]) exitWith {};
 
 private _templates = getMissionConfigValue ["respawnTemplates",[]];
@@ -20,6 +20,7 @@ if !(QUOTE(ADDON) in _templates) exitWith {};
 ["Terminate"] call BIS_fnc_EGSpectator;
 
 // Don't be a seagull
+// TODO: Make this work
 private _seagull = player;
 if (typeOf _seagull == "seagull") then {
     private _grp = createGroup [sideLogic, true];

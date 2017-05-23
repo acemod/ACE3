@@ -73,9 +73,10 @@ class CfgVehicles {
         };
     };
     class VirtualMan_F;
-    class GVAR(vitrual): VirtualMan_F {
+    class GVAR(virtual): VirtualMan_F {
         author = ECSTRING(common,ACETeam);
-        scope = 1;
+        displayName = CSTRING(DisplayName);
+        scope = 2;
         scopeArsenal = 0;
         scopeCurator = 0;
 
