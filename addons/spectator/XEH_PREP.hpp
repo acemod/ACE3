@@ -34,7 +34,7 @@ PREP(ui_updateListLocations);
 PREP(ui_updateWidget);
 
 // Utility functions
-PREP(counterCompatibility);
+PREP(compat_counter);
 PREP(getTargetEntities);
 PREP(getTargetGroups);
 PREP(handleFired);
