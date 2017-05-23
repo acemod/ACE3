@@ -37,15 +37,15 @@ if !(GVAR(curList) isEqualTo _newList) then {
 
         private _lookup = (_locationDataToPathHash select 0) find _id;
         if (_lookup < 0) then {
-            _locationIndex = _ctrl tvAdd [[], _name];
+            private _locationIndex = _ctrl tvAdd [[], _name];
             _ctrl tvSetData [[_locationIndex], _id];
             _ctrl tvSetPicture [[_locationIndex], _texture];
             _ctrl tvSetPictureColor [[_locationIndex], [1,1,1,1]];
             _ctrl tvSetTooltip [[_locationIndex], _description];
         } else {
             // pop data out of hash to improve later lookups
-            (_groupDataToPathHash select 0) deleteAt _lookup;
-            private _path = (_groupDataToPathHash select 1) deleteAt _lookup;
+            (_locationDataToPathHash select 0) deleteAt _lookup;
+            private _path = (_locationDataToPathHash select 1) deleteAt _lookup;
 
             _ctrl tvSetText [_path, _name];
             _ctrl tvSetPicture [_path, _texture];

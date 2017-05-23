@@ -39,7 +39,7 @@ params [
 // For null focus or unit camera mode with no focus, select randomly
 if (!isNil "_mode" || (!isNil "_focus" && {isNull _focus})) then {
     if ((isNil "_mode" || {_mode != MODE_FREE}) && (isNil "_focus" || {isNull _focus})) then {
-        _focus = selectRandom ([] call FUNC(getTargetEntities);
+        _focus = selectRandom ([] call FUNC(getTargetEntities));
     };
 };
 

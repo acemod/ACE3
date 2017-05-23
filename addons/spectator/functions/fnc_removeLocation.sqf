@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-params ["_id","",[""]];
+params [["_id","",[""]]];
 
 private _index = -1;
 
