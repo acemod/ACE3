@@ -774,6 +774,7 @@
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
+            <Italian>Cargo:</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
@@ -784,6 +785,7 @@
             <Polish>Pozycja zadania</Polish>
             <German>Position der Aufgabe</German>
             <Korean>작업 위치</Korean>
+            <Italian>Posizione Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
@@ -793,6 +795,7 @@
             <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
             <German>Wähle eine Position, an der die Aufgabe ausgeführt werden soll</German>
             <Korean>작업을 할 위치를 선택하십시요</Korean>
+            <Italian>Seleziona una posizione per eseguire l'incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -802,6 +805,7 @@
             <Polish>Obszar zadania</Polish>
             <German>Radius der Aufgabe</German>
             <Korean>작업 반경</Korean>
+            <Italian>Raggio Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
@@ -811,6 +815,7 @@
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
             <German>Radius, in dem die Aufgabe ausgeführt werden soll</German>
             <Korean>다음 반경 내에서 작업</Korean>
+            <Italian>Raggio per eseguire un incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -821,9 +826,11 @@
             <Polish>Wpisano nieprawidłowy promień</Polish>
             <German>Ungültiger Radius eingegeben</German>
             <Korean>알 수 없는 반경 입력됨</Korean>
+            <Italian>Raggio Invalido Inserito</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
             <English>Suppressive Fire</English>
+            <Italian>Fuoco di Soppressione</Italian>
         </Key>
     </Package>
 </Project>
