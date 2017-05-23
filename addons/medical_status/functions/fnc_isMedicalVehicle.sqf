@@ -8,6 +8,9 @@
  * ReturnValue:
  * Is in of medic class <BOOL>
  *
+ * Example:
+ * [cursorObject] call ace_medical_fnc_isMedicalVehicle
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

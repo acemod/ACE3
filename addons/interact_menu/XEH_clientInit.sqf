@@ -42,6 +42,27 @@ GVAR(ParsedTextCached) = [];
 [219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
 
 
+["ACE3 Common", QGVAR(InteractKey_Toggle),
+format ["%1 (%2)", (localize LSTRING(InteractKey)), localize ELSTRING(common,KeybindToggle)],
+{
+    if (GVAR(openedMenuType) != 0) then {
+        [0] call FUNC(keyDown)
+    } else {
+        [0,false] call FUNC(keyUp)
+    };
+}, {}, [-1, [false, false, false]], false] call CBA_fnc_addKeybind; // UNBOUND
+
+["ACE3 Common", QGVAR(SelfInteractKey_Toggle),
+format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common,KeybindToggle)],
+{
+    if (GVAR(openedMenuType) != 1) then {
+        [1] call FUNC(keyDown)
+    } else {
+        [1, false] call FUNC(keyUp)
+    };
+}, {}, [-1, [false, false, false]], false] call CBA_fnc_addKeybind; // UNBOUND
+
+
 // Listens for the falling unconscious event, just in case the menu needs to be closed
 ["ace_unconscious", {
     // If no menu is open just quit

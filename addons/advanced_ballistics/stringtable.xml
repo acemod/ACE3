@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Ballistics">
         <Key ID="STR_ACE_Advanced_Ballistics_WindInfoKey">
@@ -151,7 +151,7 @@
             <French>Active la balistique avancée pour tous les joueurs non locaux (activer cette option peut avoir un impact sur les performance en multi durant les grands échanges de tirs)</French>
             <Hungarian>Engedélyezi a fejlett ballisztikát az összes nem-helyi játékosnak (ez a funkció leronthatja a teljesítményt intenzív többjátékos tűzharcok alatt)</Hungarian>
             <Russian>Включает продвинутую баллистику для всех нелокальных игроков (включение этой опции может снизить производительность при массовых перестрелках в мультиплеере)</Russian>
-            <Italian>Abilita Balistica Avanzata per tutti i giocatori non locali (abilitare questo parametro potrebbe degradare le prestazioni durante scontri intensi in multiplayer)</Italian>
+            <Italian>Abilita Balistica Avanzata per tutti i giocatori non locali (abilitare questo parametro potrebbe ridurre le prestazioni durante scontri intensi in multiplayer)</Italian>
             <Japanese>非ローカルの全プレイヤーへアドバンスド バリスティックスを有効化します (マルチプレイで大規模な銃撃戦がおこなわれると、動作の低下を招きます)</Japanese>
             <Korean>고급 탄도학을 모든 비-로컬그룹에게도 적용합니다(적용 후 대규모 전투시 성능하락을 유발할 수 있습니다)</Korean>
         </Key>
@@ -179,7 +179,7 @@
             <French>Active tout le temps la balistique avancée quand un membre du groupe ouvre le feu</French>
             <Hungarian>Mindig engedélyezi a fejlett ballisztikát, ha egy csoporttag tüzel</Hungarian>
             <Russian>Всегда включает продвинутую баллистику когда стреляет член группы</Russian>
-            <Italian>Abilita sempre Balistica Avanzata quando un Membro del Gruppo spara</Italian>
+            <Italian>Abilita sempre Balistica Avanzata quando un membro del gruppo spara</Italian>
             <Japanese>グループ メンバーが射撃した時、常にアドバンスド バリスティックスを有効化します</Japanese>
             <Korean>그룹 멤버가 발사시 항상 고급 탄도학을 적용합니다</Korean>
         </Key>
@@ -235,7 +235,7 @@
             <French>La température de la munition influe sur la vélocité intiale</French>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
-            <Italian>Velocità alla volata varia con la temperatura delle munizioni</Italian>
+            <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
             <Japanese>弾薬の温度により初速値を変化させます</Japanese>
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
         </Key>
@@ -263,7 +263,7 @@
             <French>La longueur du canon influe sur la vélocité initale</French>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
-            <Italian>Velocità alla volata varia con la lunghezza della canna</Italian>
+            <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
             <Japanese>銃身長により初速値を変化させます</Japanese>
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
         </Key>
@@ -277,7 +277,7 @@
             <French>Activer l'effet balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
-            <Italian>Abilita effetto di tracciatura dei proiettili</Italian>
+            <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
             <Japanese>弾丸の痕跡表示を有効化</Japanese>
             <Korean>예광탄 효과 적용</Korean>
         </Key>
@@ -291,7 +291,7 @@
             <French>Active une tracante pour les munitions de gros calibre (seulement visible en utilisant des optiques avancées)</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
-            <Italian>Abilita effetto di tracciatura per proiettili di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
+            <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
             <Japanese>大口径の銃弾による弾丸の痕跡表示を有効化します (高倍率スコープを介してでしか見れません)</Japanese>
             <Korean>대구경 탄환에 예광탄 효과를 적용합니다(오직 고성능 조준경 사용시에만 보입니다)</Korean>
         </Key>

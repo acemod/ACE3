@@ -1,4 +1,4 @@
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 ["ace_interactMenuClosed", {[objNull, 0] call FUNC(displayPatientInformation);}] call CBA_fnc_addEventHandler;
@@ -33,6 +33,8 @@ if (!hasInterface) exitWith {};
 }] call EFUNC(common,arithmeticSetSource);
 
 #ifdef DEBUG_MODE_FULL
+    [] call FUNC(dev_watchMedicalStats);
+
     [{!isNull findDisplay 46}, {
         INFO("Creating Debug Display");
         if (!isNull (uiNamespace getVariable [QGVAR(debugControl), controlNull])) then {

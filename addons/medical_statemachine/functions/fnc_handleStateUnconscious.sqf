@@ -19,3 +19,18 @@ private _painLevel = [_unit] call FUNC(getPainLevel);
 if (_painLevel > 0) then {
     [_unit, "moan", PAIN_TO_MOAN(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 };
+
+// Handle spontaneous wakeup from unconsciousness
+if (_unit call FUNC(hasStableVitals)) then {
+    private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+    if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
+        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+        if ((random 1) < SPONTANEOUS_WAKE_UP_CHANCE) then {
+            TRACE_1("spontaneous wake up",_unit);
+            [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
+        };
+    };
+} else {
+    // Unstable vitals, procrastinate the next wakeup check
+    _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
+};

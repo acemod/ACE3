@@ -1,6 +1,6 @@
 /*
  * Author: Glowbal
- * Updates the vitals. Is expected to be called every second.
+ * Updates the vitals. Called from the statemachine's onState functions.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
@@ -8,18 +8,23 @@
  * ReturnValue:
  * <NIL>
  *
+ * Example:
+ * [player] call ace_medical_fnc_handleUnitVitals
+ *
  * Public: No
  */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
 params ["_unit"];
 
-private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
-private _deltaT = CBA_missionTime - _lastTimeUpdated;
+private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), 0];
+private _deltaT = (CBA_missionTime - _lastTimeUpdated) min 10;
+if (_deltaT < 1) exitWith {}; // state machines could be calling this very rapidly depending on number of local units
+
+BEGIN_COUNTER(Vitals);
+
 _unit setVariable [QGVAR(lastTimeUpdated), CBA_missionTime];
-
-if (_deltaT == 0) exitWith {};
-
 private _lastTimeValuesSynced = _unit getVariable [QGVAR(lastMomentValuesSynced), 0];
 private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(random(10)));
 
@@ -86,11 +91,9 @@ private _tourniquets = _unit getVariable [QGVAR(tourniquets), [0,0,0,0,0,0]];
 } forEach _tourniquets;
 [_unit, _tourniquetPain] call FUNC(adjustPainLevel);
 
-[_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
+private _heartRate = [_unit, _deltaT, _syncValues] call FUNC(updateHeartRate);
 [_unit, _deltaT, _syncValues] call FUNC(updatePainSuppress);
 [_unit, _deltaT, _syncValues] call FUNC(updatePeripheralResistance);
-
-private _heartRate = _unit getVariable [QGVAR(heartRate), DEFAULT_HEART_RATE];
 
 private _bloodPressure = [_unit] call FUNC(getBloodPressure);
 _unit setVariable  [QGVAR(bloodPressure), _bloodPressure, _syncValues];
@@ -114,18 +117,4 @@ if ((_heartRate < 20) || {_heartRate > 220} || {_bloodPressureH < 50}) then {
     [QGVAR(FatalVitals), _unit] call CBA_fnc_localEvent;
 };
 
-// Handle spontaneous wakeup from unconsciousness
-if (_unit getVariable [QGVAR(isUnconscious), false]) then {
-    if (_unit call FUNC(hasStableVitals)) then {
-        private _lastWakeUpCheck = _unit getVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-        if (CBA_missionTime - _lastWakeUpCheck > SPONTANEOUS_WAKE_UP_INTERVAL) then {
-            _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-            if ((random 1) < SPONTANEOUS_WAKE_UP_CHANCE) then {
-                [QGVAR(WakeUp), _unit] call CBA_fnc_localEvent;
-            };
-        };
-    } else {
-        // Unstable vitals, procrastinate the next wakeup check
-        _unit setVariable [QGVAR(lastWakeUpCheck), CBA_missionTime];
-    };
-};
+END_COUNTER(Vitals);

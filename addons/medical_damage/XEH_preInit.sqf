@@ -16,18 +16,19 @@ addMissionEventHandler ["Loaded",{
 
 // decide which woundsHandler to use by whether the extension is present or not  
 if ("ace_medical" callExtension "version" != "") then {
-    DFUNC(woundsHandlerActive) = FUNC(woundsHandler);
+    DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandler);
 } else {
-    DFUNC(woundsHandlerActive) = FUNC(woundsHandlerSQF);
+    DFUNC(woundsHandlerActive) = LINKFUNC(woundsHandlerSQF);
 };
 
 [QEGVAR(medical_engine,woundReceived), {
     params ["_unit", "_woundedHitPoint", "_receivedDamage", "", "_ammo"];
 
     private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
-    [_unit, _woundedHitPoint, _receivedDamage, _ammo, _typeOfDamage] call FUNC(woundsHandlerActive);
+    [_unit, _woundedHitPoint, _receivedDamage, _typeOfDamage] call FUNC(woundsHandlerActive);
 
-    [_unit, EGVAR(medical,STATE_MACHINE)] call EFUNC(medical,addStateHandler);
+    // Disable for now:
+    // [_unit, EGVAR(medical,STATE_MACHINE)] call EFUNC(medical,addStateHandler);
 }] call CBA_fnc_addEventHandler;
 
 ADDON = true;

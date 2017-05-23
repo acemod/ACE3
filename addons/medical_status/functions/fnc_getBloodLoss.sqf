@@ -8,6 +8,9 @@
  * ReturnValue:
  * Total blood loss of unit (liter per second) <NUMBER>
  *
+ * Example:
+ * [player] call ace_medical_fnc_getBloodLoss
+ *
  * Public: No
  */
 #include "script_component.hpp"

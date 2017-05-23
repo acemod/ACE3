@@ -7,6 +7,7 @@ PREP(conditionCardiacArrestTimer);
 PREP(conditionExecutionDeath);
 PREP(displayPatientInformation);
 PREP(displayTriageCard);
+PREP(dev_watchMedicalStats);
 PREP(enteredStateCardiacArrest);
 PREP(enteredStateFatalInjury);
 PREP(getBloodLoss);

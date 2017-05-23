@@ -56,7 +56,7 @@ _processedHitpoints = [];
 
         // An action to remove the wheel is required
         _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
-        _text = localize LSTRING(RemoveWheel);
+        private _text = localize LSTRING(RemoveWheel);
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);

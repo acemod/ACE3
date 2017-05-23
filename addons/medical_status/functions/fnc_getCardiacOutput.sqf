@@ -8,6 +8,9 @@
  * ReturnValue:
  * Current cardiac output (liter per second) <NUMBER>
  *
+ * Example:
+ * [player] call ace_medical_fnc_getCardiacOutput
+ *
  * Public: No
  */
 

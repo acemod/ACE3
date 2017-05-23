@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Reload">
         <Key ID="STR_ACE_Reload_SettingDisplayTextName">
@@ -10,7 +10,7 @@
             <Polish>Sprawdź stan amunicji przy przeładowaniu broni</Polish>
             <French>Vérification des munitions au rechargement</French>
             <Hungarian>Lőszer ellenőrzése a fegyver újratöltésekor</Hungarian>
-            <Italian>Controlla le munizioni ricaricando</Italian>
+            <Italian>Controlla le munizioni durante il ricaricamento</Italian>
             <Portuguese>Conferir munição ao recarregar a arma</Portuguese>
             <Japanese>再装填された武器の弾薬を確認</Japanese>
             <Korean>재장전시 장탄수 확인</Korean>
@@ -80,7 +80,7 @@
             <Polish>Podłączanie taśmy...</Polish>
             <German>Gurt anhängen...</German>
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
-            <Italian>Attacco la tracolla...</Italian>
+            <Italian>Attaccando la tracolla...</Italian>
             <Portuguese>Ligando cintos...</Portuguese>
             <Japanese>ベルトをつなげている・・・</Japanese>
             <Korean>벨트 연결중...</Korean>

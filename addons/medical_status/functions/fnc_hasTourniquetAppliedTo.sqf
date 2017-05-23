@@ -9,6 +9,9 @@
  * ReturnValue:
  * Has tourniquet applied <BOOL>
  *
+ * Example:
+ * [player, "leftleg"] call ace_medical_fnc_hasTourniquetAppliedTo
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

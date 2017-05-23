@@ -38,18 +38,18 @@ if (!(_adjustment isEqualTo [])) then {
     } forEach _adjustment;
 
     _adjustment = _adjustment - [ObjNull];
-    _unit setVariable [QGVAR(painSupressAdjustments), _adjustment, _syncValue];
+    _unit setVariable [QGVAR(painSupressAdjustments), _adjustment, (_syncValue || {_adjustment isEqualTo []})]; // always sync on last run
     
     _unit setVariable [QGVAR(painSuppress), 0 max _painSupressAdjustment, _syncValue];
 };
 
 // Handle continuous pain reduction
 private _pain = _unit getVariable [QGVAR(pain), 0];
-_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValues];
+_unit setVariable [QGVAR(pain), 0 max (_pain - _deltaT / PAIN_FADE_TIME), _syncValue];
 
 // Handles simple medication
 if (!GVAR(advancedMedication)) then {
     private _painSupress = _unit getVariable [QGVAR(painSuppress), 0];
     _painSupress = _painSupress - _deltaT / PAIN_SUPPRESSION_FADE_TIME;
-    _unit setVariable [QGVAR(painSuppress), 0 max _painSupress, true];
+    _unit setVariable [QGVAR(painSuppress), 0 max _painSupress, _syncValue];
 };

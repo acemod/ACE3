@@ -40,5 +40,6 @@ if (!(_adjustment isEqualTo [])) then {
     _adjustment = _adjustment - [ObjNull];
     _unit setVariable [QGVAR(peripheralResistanceAdjustments), _adjustment, _syncValue];
 
-    _unit SetVariable [QGVAR(peripheralResistance), 0 max (100 + _peripheralResistanceAdjustment), _syncValue];
+     // always sync on last run
+    _unit SetVariable [QGVAR(peripheralResistance), 0 max (100 + _peripheralResistanceAdjustment), _syncValue || {_adjustment isEqualTo []}];
 };

@@ -34,6 +34,7 @@ Please not that the following key combinations are ACE3 default key binds.
 - Major adjustment left <kbd>Ctrl</kbd> + <kbd>⇧&nbsp;Shift</kbd> + <kbd>page Down</kbd>.
 
 ### 2.3 Scopes Module
+
 <img src="{{ site.baseurl }}/img/wiki/feature/scope_module.jpg" width="799" height="620" alt="Editor's scopes module" />
 
 
