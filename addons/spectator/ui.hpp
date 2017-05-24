@@ -1,17 +1,12 @@
-class RscActiveText;
 class RscButton;
-class RscButtonMenu;
-class RscCombo;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
-class RscListBox;
 class RscListNBox {
     class ScrollBar;
 };
 class RscMapControl;
 class RscPicture;
 class RscPictureKeepAspect;
-class RscStructuredText;
 class RscText;
 class RscToolbox;
 class RscTree;
