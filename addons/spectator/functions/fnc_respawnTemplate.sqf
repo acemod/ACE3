@@ -21,18 +21,16 @@
 
 params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_respawn",0,[0]], ["_respawnDelay",0,[0]]];
 
-// These respawn types use engine driven magic we don't want to mess with here
 // Compatibility handled via spectator display XEH
-if (_respawn in [0,1,4,5]) exitWith {};
+if (_respawn in [0,1,4,5]) exitWith {
+
+    // This only applies to respawn type 1 (BIRD/SPECTATOR)
+    // Remove the seagull (not actually the player, a CfgNonAIVehicles object)
+    if (typeOf _newCorpse == "seagull") then { deleteVehicle _newCorpse; };
+};
 
 // Negligible respawn delay can result in entering spectator after respawn
 if (playerRespawnTime <= 1) exitWith {};
-
-// Some environment information can be used for the initial camera attributes
-private _nvg = [VISION_NORM, VISION_NVG] select (sunOrMoon < 1);
-
-// Prepare camera attributes before entering spectator
-[nil, nil, _nvg, nil, nil] call FUNC(setCameraAttributes);
 
 // Enter/exit spectator based on whether killed/respawned
 [!alive _newCorpse] call FUNC(setSpectator);
