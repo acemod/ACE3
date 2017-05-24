@@ -15,6 +15,7 @@ class CfgVehicles {
     };
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {};
     class B_Heli_Attack_01_hellfire_F: B_Heli_Attack_01_F {
+        scope = 2;
         displayName = CSTRING(HF_B_Heli_Attack_01);
         class Turrets: Turrets {
             class MainTurret: MainTurret {

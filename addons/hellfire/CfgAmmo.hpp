@@ -2,10 +2,10 @@ class CfgAmmo {
     class M_PG_AT;
 
     class ACE_Hellfire_AGM114K: M_PG_AT {
-        displayName = CSTRING(AGM114K);
-        displayNameShort = CSTRING(AGM114K);
-        description = CSTRING(AGM114K);
-        descriptionShort = CSTRING(AGM114K);
+        displayName = "AGM-114K";
+        displayNameShort = "AGM-114K";
+        description = "AGM-114K";
+        descriptionShort = "AGM-114K";
 
         model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
         proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";

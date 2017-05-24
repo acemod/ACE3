@@ -1,19 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hellfire">
-        <Key ID="STR_ACE_Hellfire_AGM114K">
-            <English>AGM-114K</English>
-            <Spanish>AGM-114K</Spanish>
-            <French>AGM-114K</French>
-            <Polish>AGM-114K</Polish>
-            <German>AGM-114K</German>
-            <Czech>AGM-114K</Czech>
-            <Italian>AGM-114K</Italian>
-            <Portuguese>AGM-114K</Portuguese>
-            <Hungarian>AGM-114K</Hungarian>
-            <Russian>AGM-114K</Russian>
-            <Japanese>AGM-114K</Japanese>
-        </Key>
         <Key ID="STR_ACE_Hellfire_Hellfire">
             <English>Hellfire</English>
             <Spanish>Hellfire</Spanish>
