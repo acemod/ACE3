@@ -32,7 +32,7 @@ GVAR(uiForced) = _force;
 // Exit if no change
 if (_set isEqualTo GVAR(isSet)) exitWith {};
 
-// Delay if local player is not fully initalized
+// Delay if local player (must not be ACE_Player) is not fully initalized
 if (isNil { player } || { isNull player }) exitWith {
     [
         { !isNil { player } && { !isNull player } },
