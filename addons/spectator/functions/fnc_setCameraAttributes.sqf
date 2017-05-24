@@ -1,21 +1,26 @@
 /*
  * Author: SilentSpike
- * Sets the spectator camera attributes as desired
- * All values are optional and default to no change
+ * Sets the spectator camera attributes as desired. Local effect.
+ * All values are optional and default to no change.
  *
  * Arguments:
  * 0: Camera mode <NUMBER>
  *   - 0: Free
  *   - 1: First Person
  *   - 2: Follow
- * 1: Camera focus (objNull for random) <OBJECT>
+ * 1: Camera focus <OBJECT>
  * 2: Camera vision <NUMBER>
  *   - -2: Normal
  *   - -1: Night vision
  *   -  0: Thermal white hot
  *   -  1: Thermal black hot
+ *   - ...
  * 3: Camera position (ATL) <ARRAY>
  * 4: Camera direction (0 - 360) <NUMBER>
+ *
+ * Notes:
+ * - If camera mode is not free and camera has no focus, random will be used
+ * - To remove any current camera focus in free cam, use objNull
  *
  * Return Value:
  * None <NIL>
@@ -41,10 +46,13 @@ if (count _this > 5) then {
     WARNING("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes is no longer supported");
 };
 
-// For null focus or unit camera mode with no focus, select randomly
-if (!isNil "_mode" || (!isNil "_focus" && {isNull _focus})) then {
-    if ((isNil "_mode" || {_mode != MODE_FREE}) && (isNil "_focus" || {isNull _focus})) then {
-        _focus = selectRandom ([] call FUNC(getTargetEntities));
+// For unit camera mode with no focus, select randomly
+if !(isNil "_mode" || {_mode == MODE_FREE}) then {
+    if (isNil "_focus" || {isNull _focus}) then {
+        _focus = ([] call FUNC(getTargetEntities)) select 0;
+
+        // Handle case where no available entities
+        if (isNil "_focus") then { _focus = objNull; };
     };
 };
 

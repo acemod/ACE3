@@ -2,18 +2,18 @@
  * Author: Nelson Duarte, SilentSpike
  * Add a location that can be seen in spectator view. Local effect.
  *
- * Notes:
- * - Position array is of form ASL
- * - Position objects will remove location upon objNull
- * - If an empty name is supplied, a descriptive name will be used
- * - Camera offset is used when teleporting to location, default is treated as random
- *
  * Arguments:
  * 0: Position <ARRAY or OBJECT>
  * 1: Display Name <STRING> (Default: "")
  * 2: Description <STRING> (Default: "")
  * 3: Texture <STRING> (Default: "")
  * 4: Camera Offset Vector <Array> (Default: [0,0,0])
+ *
+ * Notes:
+ * - Position array is of form ASL
+ * - Position objects will remove location upon objNull
+ * - If an empty name is supplied, a descriptive name will be used
+ * - Camera offset is used when teleporting to location, default is treated as random
  *
  * Return Value:
  * Unique ID (used to remove a location) <STRING>

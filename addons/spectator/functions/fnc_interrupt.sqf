@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * Deperecated. Technically never publically documented, but just in case.
+ * Deprecated. Technically never publically documented, but just in case.
  */
 #include "script_component.hpp"
 
