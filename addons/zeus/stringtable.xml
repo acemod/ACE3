@@ -22,7 +22,7 @@
             <Czech>Poskytuje kontrolu na různými aspekty Zeuse.</Czech>
             <German>Bietet die Steuerung verschiedener Zeus-Optionen an.</German>
             <Portuguese>Proporciona controle sobre diversos aspectos do Zeus.</Portuguese>
-            <French>Fourni le contrôle des différents aspects de Zeus</French>
+            <French>Fourni le contrôle des différents aspects de Zeus.</French>
             <Hungarian>Különböző beállítási lehetőségeket biztosít a Zeus részeihez.</Hungarian>
             <Russian>Позволяет контролировать различные аспекты Зевса.</Russian>
             <Italian>Fornisce controllo su vari aspetti di Zeus.</Italian>
@@ -50,7 +50,7 @@
             <Czech>Zobrazit globální zprávu když je hráč přiřazen jako Zeus.</Czech>
             <German>Zeige globale Popup-Nachrichten wenn ein Spieler zu Zeus wird.</German>
             <Portuguese>Mostra uma mensagem popup quando um jogador é atribuido ao Zeus.</Portuguese>
-            <French>Affiche un message global quand un joueur est assigné en tant que Zeus</French>
+            <French>Affiche un message global quand un joueur est assigné en tant que Zeus.</French>
             <Hungarian>Globális üzeneteket jelez ki, ha egy játékos Zeus-nak lesz beosztva.</Hungarian>
             <Russian>Отображает глобальное всплывающее сообщение, когда один из игроков становится Зевсом.</Russian>
             <Italian>Mostra messaggi popup globali quando un giocatore viene assegnato come Zeus.</Italian>
@@ -106,7 +106,7 @@
             <Czech>Přehrát varování (vítr) když Zeus převezmě kontrolu nad jednotkou.</Czech>
             <German>Spiele Windgeräusche ab, wenn Zeus eine Einheit steuert.</German>
             <Portuguese>Reproduz sons de vento quando uma unidade é remotamente controlada pelo Zeus.</Portuguese>
-            <French>Joue des bruits de vent quand Zeus controle une unité</French>
+            <French>Joue des bruits de vent quand Zeus controle une unité.</French>
             <Hungarian>Szélhangokat játszik le, ha a Zeus távvezérel egy egységet.</Hungarian>
             <Russian>Проигрывает звук ветра каждый раз, когда Зевс вселяется в юнита.</Russian>
             <Italian>Esegui rumori di vento quando Zeus controlla un'unità in remoto.</Italian>
@@ -134,7 +134,7 @@
             <Czech>Přehrát varování (rádio) když Zeus použije dělostřelectvo.</Czech>
             <German>Spiele eine Radiowarnung ab, wenn Zeus Artillerie verwendet.</German>
             <Portuguese>Reproduz uma aviso via rádio quando o Zeus usa um explosivo.</Portuguese>
-            <French>Joue un son radio quand le Zeus utilise du matériel militaire</French>
+            <French>Joue un son radio quand le Zeus utilise du matériel militaire.</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
             <Italian>Esegui un messaggio radio quando Zeus usa esplosivi.</Italian>
@@ -162,7 +162,7 @@
             <Czech>Odhalí miny pro spojence a umístnit jejich značku na mapu.</Czech>
             <German>Melde Minen gegenüber Verbündeten und platziere entsprechende Kartenmarkierungen.</German>
             <Portuguese>Revelar minas para aliados e colocar marcadores no mapa.</Portuguese>
-            <French>Révéler les mines et placer un marqueur sur la carte</French>
+            <French>Révéler les mines et placer un marqueur sur la carte.</French>
             <Hungarian>Feltárja az aknákat a szövetségeseknek, és jelölőket helyez el a térképen.</Hungarian>
             <Russian>Показывает мины союзникам и отмечает их маркерами на карте.</Russian>
             <Italian>Rivela mine ad alleati e piazza marcatori in mappa.</Italian>
@@ -226,30 +226,35 @@
             <Japanese>編集可能なオブジェクトを更新</Japanese>
             <Polish>Aktualizuj edytowalne obiekty</Polish>
             <Korean>수정 가능한 물체 갱신</Korean>
+            <French>Màj les objets éditables</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
             <English>All Curators</English>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
+            <French>Tous curateurs</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
             <English>Apply changes to all curators</English>
             <Japanese>全キュレーターへ変更を適用</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
+            <French>Applique les changements à tous les curateurs</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
             <English>Remove Objects</English>
             <Japanese>オブジェクトの削除</Japanese>
             <Korean>물체 삭제</Korean>
             <Polish>Usuń obiekty</Polish>
+            <French>Enlève les objets</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
             <English>Remove existing instead of adding new</English>
             <Japanese>新しく追加するために削除します</Japanese>
             <Korean>물체를 삭제합니다</Korean>
             <Polish>Usuń istniejące zamiast dodawać nowe</Polish>
+            <French>Enlève les objets existants au lieu d'en ajouter de nouveaux</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -293,7 +298,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
-            <French>Change: aimingAccuracy</French>
+            <French>Change : aimingAccuracy</French>
             <Russian>Изменяет: aimingAccuracy</Russian>
             <Czech>Upravuje: aimingAccuracy</Czech>
             <Japanese>変更：aimingAccuracy</Japanese>
@@ -313,7 +318,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
-            <French>Change: aimingShake, aimingSpeed, reloadSpeed</French>
+            <French>Change : aimingShake, aimingSpeed, reloadSpeed</French>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <Czech>Upravuje: aimingShake, aimingSpeed, reloadSpeed</Czech>
             <Japanese>変更：aimingShake, aimingSpeed, reloadSpeed</Japanese>
@@ -323,7 +328,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
-            <French>repérage</French>
+            <French>Repérage</French>
             <Russian>Обнаружение</Russian>
             <Czech>Vnímavost</Czech>
             <Japanese>索敵</Japanese>
@@ -333,7 +338,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
-            <French>Change: spotDistance, spotTime</French>
+            <French>Change : spotDistance, spotTime</French>
             <Russian>Изменяет: spotDistance, spotTime</Russian>
             <Czech>Upravuje: spotDistance, spotTime</Czech>
             <Japanese>変更：spotDistance, spotTime</Japanese>
@@ -343,7 +348,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
-            <French>Chercher couverture</French>
+            <French>Chercher des couvertures</French>
             <Russian>Поиск укрытий</Russian>
             <Czech>Vyhledávat krytí</Czech>
             <Japanese>遮蔽</Japanese>
@@ -353,7 +358,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
-            <French>L'IA devrait elle chercher couverture</French>
+            <French>L'IA devrait elle chercher des couvertures</French>
             <Russian>Должны ли боты искать укрытия</Russian>
             <Czech>AI se bude snažit vyhledávat krytí</Czech>
             <Japanese>AI は遮蔽を取るようになります</Japanese>
@@ -420,18 +425,21 @@
             <Japanese>FRUES の追加と削除</Japanese>
             <Korean>패스트로프 추가/제거</Korean>
             <Polish>Dodaj/usuń FRIES</Polish>
+            <French>Aj./Enlève FRIES</French>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
             <Japanese>%1 はファストロープに対応していません。</Japanese>
             <Korean>%1은 패스트로프하기에 적합하지 않습니다.</Korean>
             <Polish>%1 nie jest kompatybilny ze zjazdem linowym.</Polish>
+            <French>%1 n'est pas compatible.</French>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
             <Japanese>すでにロープが展開されているため、FRIES を削除できません。</Japanese>
             <Korean>패스트로프 제거 불가능, 줄이 이미 배치되었습니다.</Korean>
             <Polish>Nie można usunąć FRIES, liny są wypuszczone.</Polish>
+            <French>Pas en mesure d'enlever le FRIES, les cordes ne sont pas déployées.</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -561,6 +569,7 @@
             <Polish>Przełącz symulację</Polish>
             <Japanese>シミュレーションをトグル</Japanese>
             <Korean>재현 토글</Korean>
+            <French>Bascule Simulation</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -758,13 +767,14 @@
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeCargo">
             <English>Cargo:</English>
-            <French>Cargo:</French>
+            <French>Cargo :</French>
             <Russian>Груз:</Russian>
             <Czech>Náklad:</Czech>
             <Japanese>カーゴ：</Japanese>
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
+            <Italian>Cargo:</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
@@ -775,6 +785,7 @@
             <Polish>Pozycja zadania</Polish>
             <German>Position der Aufgabe</German>
             <Korean>작업 위치</Korean>
+            <Italian>Posizione Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
@@ -784,6 +795,7 @@
             <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
             <German>Wähle eine Position, an der die Aufgabe ausgeführt werden soll</German>
             <Korean>작업을 할 위치를 선택하십시요</Korean>
+            <Italian>Seleziona una posizione per eseguire l'incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -793,6 +805,7 @@
             <Polish>Obszar zadania</Polish>
             <German>Radius der Aufgabe</German>
             <Korean>작업 반경</Korean>
+            <Italian>Raggio Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
@@ -802,16 +815,22 @@
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
             <German>Radius, in dem die Aufgabe ausgeführt werden soll</German>
             <Korean>다음 반경 내에서 작업</Korean>
+            <Italian>Raggio per eseguire un incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
-            <French>rayon invalide entré</French>
+            <French>Rayon invalide entré</French>
             <Russian>Введен неправильный радиус</Russian>
             <Czech>Vložen neplatný parametr</Czech>
             <Japanese>無効な半径が入力されました</Japanese>
             <Polish>Wpisano nieprawidłowy promień</Polish>
             <German>Ungültiger Radius eingegeben</German>
             <Korean>알 수 없는 반경 입력됨</Korean>
+            <Italian>Raggio Invalido Inserito</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
+            <English>Suppressive Fire</English>
+            <Italian>Fuoco di Soppressione</Italian>
         </Key>
     </Package>
 </Project>

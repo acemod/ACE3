@@ -35,7 +35,7 @@ GVAR(lastPlayerVehicle) = objNull;
             TRACE_2("removed veh eh",_firedEH,GVAR(lastPlayerVehicle));
         };
         if ((!isNull _vehicle) && {_player != _vehicle}) then {
-            private _firedEH = _vehicle addEventHandler ["FiredNear", LINKFUNC(firedNear)];
+            private _firedEH = _vehicle addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _vehicle setVariable [QGVAR(firedEH), _firedEH];
             GVAR(lastPlayerVehicle) = _vehicle;
             TRACE_2("added veh eh",_firedEH,GVAR(lastPlayerVehicle));
@@ -48,7 +48,7 @@ GVAR(lastPlayerVehicle) = objNull;
     ["unit", {
         params ["_player", "_oldPlayer"];
         TRACE_2("unit change",_player,_oldPlayer);
-        
+
         if (!isNull _oldPlayer) then {
             private _firedEH = _oldPlayer getVariable [QGVAR(firedEH), -1];
             _oldPlayer removeEventHandler ["FiredNear", _firedEH];
@@ -60,16 +60,18 @@ GVAR(lastPlayerVehicle) = objNull;
         };
         // Don't add a new EH if the unit respawned
         if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
-            private _firedEH = _player addEventHandler ["FiredNear", LINKFUNC(firedNear)];
+            if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _player) >> "isPlayableLogic")) == 1) exitWith {
+                TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
+            };
+            private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _player setVariable [QGVAR(firedEH), _firedEH];
-            private _explosionEH = _player addEventHandler ["Explosion", LINKFUNC(explosionNear)];
+            private _explosionEH = _player addEventHandler ["Explosion", {call FUNC(explosionNear)}];
             _player setVariable [QGVAR(explosionEH), _explosionEH];
             TRACE_3("added unit eh",_player,_firedEH,_explosionEH);
         };
 
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
-        ACE_player setVariable [QGVAR(deaf), false];
         GVAR(time3) = 0;
         [] call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;

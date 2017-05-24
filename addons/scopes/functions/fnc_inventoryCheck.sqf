@@ -74,6 +74,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
                 
         if ((_newOptics select _x) == "") then {
             // Check if the weapon comes with an integrated optic     
+            private _weaponConfig = configFile >> "CfgWeapons" >> (_newGuns select _x); 
             private _verticalIncrement = 0;
             if (isNumber (_weaponConfig >> "ACE_ScopeAdjust_VerticalIncrement")) then {
                 _verticalIncrement = getNumber (_weaponConfig >> "ACE_ScopeAdjust_VerticalIncrement");
@@ -90,6 +91,7 @@ private _newGuns = [primaryWeapon _player, secondaryWeapon _player, handgunWeapo
             if (isArray (_weaponConfig >> "ACE_ScopeAdjust_Horizontal")) then {
                 _maxHorizontal = getArray (_weaponConfig >> "ACE_ScopeAdjust_Horizontal");
             };
+            TRACE_5("",_newGuns select _x,_verticalIncrement,_horizontalIncrement,_maxVertical,_maxHorizontal);
             (GVAR(scopeAdjust) select _x) set [0, _maxVertical];
             (GVAR(scopeAdjust) select _x) set [1, _verticalIncrement];
             (GVAR(scopeAdjust) select _x) set [2, _maxHorizontal];

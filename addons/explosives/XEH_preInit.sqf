@@ -25,4 +25,6 @@ if (isServer) then {
     GVAR(explosivesOrientations) = []
 };
 
+GVAR(detonationHandlers) = [];
+
 ADDON = true;

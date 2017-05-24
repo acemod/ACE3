@@ -54,7 +54,7 @@
             <Russian>&lt;t color='#9cf953'&gt;Использовать: &lt;/t&gt;ВКЛ/ВЫКЛ лазер</Russian>
             <Spanish>&lt;t color='#9cf953'&gt;Usar: &lt;/t&gt;Encender/Apagar láser</Spanish>
             <Hungarian>&lt;t color='#9cf953'&gt;Használat: &lt;/t&gt;Lézer BE/KI kapcsolása</Hungarian>
-            <Japanese>&amp;lt;t color='#9cf953'&amp;gt;つかう: &amp;lt;/t&amp;gt;レーザの起動/停止</Japanese>
+            <Japanese>&lt;t color='#9cf953'&gt;つかう: &lt;/t&gt;レーザの起動/停止</Japanese>
             <Korean>&lt;t color='#9cf953'&gt;사용키: &lt;/t&gt;레이저 켜기/끄기</Korean>
         </Key>
         <Key ID="STR_ACE_Laserpointer_Laser">

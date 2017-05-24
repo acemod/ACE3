@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NameTags">
         <Key ID="STR_ACE_NameTags_ShowNames">
@@ -468,6 +468,8 @@
             <Japanese>画面端では非表示</Japanese>
             <Polish>Ukryj na brzegach ekranu</Polish>
             <Korean>화면 가장자리에서 사라짐</Korean>
+            <French>Estomper sur les bords de l'écran</French>
+            <Italian>Sfocatura nei bordi dello schermo</Italian>
         </Key>
     </Package>
 </Project>
