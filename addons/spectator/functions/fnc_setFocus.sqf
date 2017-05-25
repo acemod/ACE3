@@ -30,7 +30,10 @@ if (_newFocus != GVAR(camTarget) && { !(isNull _newFocus && { isNull GVAR(camTar
     // GVAR used to prevent camera switching and UI info on locations
     GVAR(camOnLocation) = _focusIsLocation;
 
-    [] call FUNC(ui_updateListFocus);
-    [] call FUNC(ui_updateWidget);
-    [] call FUNC(ui_updateHelp);
+    // Only update display if it exists, this function is called from some other places
+    if !(isNull SPEC_DISPLAY) then {
+        [] call FUNC(ui_updateListFocus);
+        [] call FUNC(ui_updateWidget);
+        [] call FUNC(ui_updateHelp);
+    };
 };

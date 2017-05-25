@@ -1,6 +1,6 @@
 /*
  * Author: SilentSpike
- * The ace_spectator respawn template, compatible with types 2 & 3
+ * The ace_spectator respawn template, compatible with types 1,2,3,4 & 5
  *
  * Handles killed and respawned events as per BI's respawn framework:
  * https://community.bistudio.com/wiki/Arma_3_Respawn

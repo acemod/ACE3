@@ -24,4 +24,7 @@ class Extended_DisplayLoad_EventHandlers {
     class RscDisplayEGSpectator {
         ADDON = QUOTE(_this call FUNC(compat_spectatorBI));
     };
+    class RscDisplayCurator {
+        ADDON = QUOTE(_this call FUNC(compat_zeus));
+    };
 };

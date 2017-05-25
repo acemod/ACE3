@@ -2,7 +2,7 @@
  * Author: SilentSpike
  * Handles "compatibility" (i.e. override) for BI spectator respawn types 1, 4 & 5
  *
- * Called from the EG spectator display XEH
+ * Called from the RscDisplayEGSpectator XEH
  *
  * Public: No
  */
@@ -34,5 +34,11 @@ if (_respawn in [4,5]) then {
 // Switch to a virtual unit so draw3D continues to work
 private _grp = createGroup [sideLogic, true];
 private _virtual = _grp createUnit [QGVAR(virtual),[0,0,0],[],0,""];
+
+// Transfer assigned zeus if applicable
+private _zeus = getAssignedCuratorLogic player;
+if !(isNull _zeus) then {
+    [QGVAR(transferZeus), [_virtual,_zeus]] call CBA_fnc_serverEvent;
+};
 
 selectPlayer _virtual;

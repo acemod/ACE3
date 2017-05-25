@@ -36,6 +36,7 @@ PREP(ui_updateWidget);
 // Utility functions
 PREP(compat_counter);
 PREP(compat_spectatorBI);
+PREP(compat_zeus);
 PREP(getTargetEntities);
 PREP(getTargetGroups);
 PREP(handleFired);

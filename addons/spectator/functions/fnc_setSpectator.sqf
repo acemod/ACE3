@@ -73,6 +73,9 @@ if (_set) then {
     // Kill the display (ensure main display exists, handles edge case where spectator turned off before display exists)
     [{ !isNull MAIN_DISPLAY },{ [false] call FUNC(ui) }] call CBA_fnc_waitUntilAndExecute;
 
+    // This variable doesn't matter anymore
+    GVAR(uiForced) = nil;
+
     // Terminate camera
     [false] call FUNC(cam);
 

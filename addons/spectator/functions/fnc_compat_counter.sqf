@@ -2,7 +2,7 @@
  * Author: SilentSpike
  * Handles integrating the counter respawn template into the spectator UI
  *
- * Should be called from both counter display XEH and spectator init to account for arbitrary order
+ * Should be called from both RscRespawnCounter XEH and spectator init to account for arbitrary order
  *
  * Public: No
  */

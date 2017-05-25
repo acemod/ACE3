@@ -49,6 +49,8 @@ if (count _this > 5) then {
 // For unit camera mode with no focus, select randomly
 if !(isNil "_mode" || {_mode == MODE_FREE}) then {
     if (isNil "_focus" || {isNull _focus}) then {
+
+        //TODO: Check for camTarget
         _focus = ([] call FUNC(getTargetEntities)) select 0;
 
         // Handle case where no available entities

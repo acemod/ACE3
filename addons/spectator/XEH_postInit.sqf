@@ -9,6 +9,12 @@
 if (isServer) then {
     GVAR(channel) = radioChannelCreate [[0.729,0.149,0.098,1],"Spectator","Spectator (%UNIT_NAME)",[]];
     publicVariable QGVAR(channel);
+
+    // Used by the template to transfer zeus to virtual unit
+    [QGVAR(transferZeus),{
+        unassignCurator (_this select 1);
+        (_this select 0) assignCurator (_this select 1);
+    }] call CBA_fnc_addEventHandler;
 };
 
 [QGVAR(stageSpectator), FUNC(stageSpectator)] call CBA_fnc_addEventHandler;

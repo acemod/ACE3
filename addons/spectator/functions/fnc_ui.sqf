@@ -106,7 +106,6 @@ if (_init) then {
     SPEC_DISPLAY closeDisplay 1;
 
     // Stop tracking everything
-    GVAR(uiForced)          = nil;
     GVAR(uiVisible)         = nil;
     GVAR(uiHelpVisible)     = nil;
     GVAR(uiMapVisible)      = nil;

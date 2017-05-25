@@ -153,6 +153,7 @@ if (_key == DIK_I) exitWith {
 };
 
 // Handle getting next focus target
+// TODO: These keys
 if (_key == DIK_RIGHT) exitWith {
     [true] call FUNC(switchFocus);
     true
@@ -166,14 +167,11 @@ if (_key == DIK_LEFT) exitWith {
 
 // If the zeus key is pressed and unit is curator, open zeus interface
 if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLogic player)}) exitWith {
-    // Disable drawing while in zeus
-    GVAR(drawUnits) = false;
-    GVAR(drawProjectiles) = false;
-
-    // TODO: make this truly compatible
-    SPEC_DISPLAY closeDisplay 1;
+    // Close the UI and disable camera input
+    [false] call FUNC(ui);
     GVAR(camera) camCommand "manual off";
 
+    // Display XEH handles re-opening
     openCuratorInterface;
     true
 };
