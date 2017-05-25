@@ -126,11 +126,11 @@ private _entitiesToDraw = [];
     };
 
     // Track entities themselves for use with fired EH
-    _entitiesToDraw pushBack _x;
+    _entitiesToDraw pushBack _vehicle;
 
     // Add fired EH for drawing and icon highlighting
-    if (GETVAR(_x,GVAR(firedEH),-1) == -1) then {
-        SETVAR(_x,GVAR(firedEH),_x addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+    if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
+        SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
     };
 
     nil // Speed loop
