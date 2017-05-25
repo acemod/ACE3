@@ -110,21 +110,21 @@ if !(GVAR(uiMapVisible)) then {
                     DEC(_newestIndex);
                 };
 
-                // Draw all projectile segments
-                private _oldLoc = [];
-                {
-                    _x params ["_locNew", "_colorNew"];
-                    if !(_oldLoc isEqualTo []) then {
-                        drawLine3D [_oldLoc, _locNew, _colorNew];
-                    };
-                    _oldLoc = _locNew;
-
-                    nil // Speed loop
-                } count _segments;
-
                 // Store projectiles for next frame
                 _projectilesNew pushBack [_projectile, _segments];
             };
+
+            // Draw all projectile segments
+            private _oldLoc = [];
+            {
+                _x params ["_locNew", "_colorNew"];
+                if !(_oldLoc isEqualTo []) then {
+                    drawLine3D [_oldLoc, _locNew, _colorNew];
+                };
+                _oldLoc = _locNew;
+
+                nil // Speed loop
+            } count _segments;
 
             nil // Speed loop
         } count GVAR(projectilesToDraw);
