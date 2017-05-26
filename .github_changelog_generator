@@ -6,9 +6,7 @@ pr-wo-labels=false
 max-issues=0
 
 # Label filters
-exclude-labels=by design,can't reproduce,duplicate,question,invalid,wontfix,translation,ignore changelog
-bug-labels=conflict,bug,critical bug
-enhancement-labels=enhancement,feature request,Focus Feature
+exclude-labels=by design,can't reproduce,duplicate,question,invalid,wontfix,ignore changelog
 
 # Tag is created before generating changelog for release candidates
 unreleased=false

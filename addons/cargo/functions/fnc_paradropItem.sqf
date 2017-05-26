@@ -90,6 +90,15 @@ _itemObject setVelocity ((velocity _vehicle) vectorAdd ((vectorNormalized (vecto
 
 }, 1, [_itemObject]] call CBA_fnc_addPerFrameHandler;
 
+[
+    [
+        LSTRING(UnloadedItem),
+        getText (configFile >> "CfgVehicles" >> typeOf _itemObject >> "displayName"),
+        getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName")
+    ],
+    3
+] call EFUNC(common,displayTextStructured);
+
 // Invoke listenable event
 ["ace_cargoUnloaded", [_item, _vehicle, "paradrop"]] call CBA_fnc_globalEvent;
 

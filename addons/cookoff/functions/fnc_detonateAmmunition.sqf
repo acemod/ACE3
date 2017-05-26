@@ -4,6 +4,10 @@
  *
  * Arguments:
  * 0: vehicle <OBJECT>
+ * 1: Ammo Array <ARRAY>
+ *      0: Magazine Classname <STRING>
+ *      1: Ammo Count <NUMBER>
+ * 2: Total Ammo Count <NUMBER>
  *
  * Return Value:
  * None
@@ -16,7 +20,7 @@
 #include "script_component.hpp"
 #define MAX_TIME_BETWEEN_AMMO_DET 25
 
-params ["_vehicle", "_magazines"];
+params ["_vehicle", "_magazines", "_totalAmmo"];
 
 if (isNull _vehicle) exitWith {}; // vehicle got deleted
 if (_magazines isEqualTo []) exitWith {}; // nothing to detonate anymore
@@ -27,21 +31,22 @@ private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_amountOfMagazines"];
 
 if (_amountOfMagazines > 0) exitWith {
-    private _newMagCount = _amountOfMagazines - floor(1 + random(6));
-    if (_newMagCount <= 0) then {
+    private _removed = _amountOfMagazines min floor(1 + random(6 / GVAR(ammoCookoffDuration)));
+
+    _amountOfMagazines = _amountOfMagazines - _removed;
+    if (_amountOfMagazines <= 0) then {
         _magazines deleteAt _magazineIndex;
     } else {
-        _magazine set [1, _newMagCount]; // clear out the magazine
+        _magazine set [1, _amountOfMagazines]; // clear out the magazine
     };
-    private _timeBetweenAmmoDetonation = (random 7) * (1 / random (_amountOfMagazines)) min MAX_TIME_BETWEEN_AMMO_DET;
-    _timeBetweenAmmoDetonation = _timeBetweenAmmoDetonation max 0.1;
+    private _timeBetweenAmmoDetonation = (((random 10) / (sqrt _totalAmmo)) min MAX_TIME_BETWEEN_AMMO_DET) max 0.1;
+    TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
+    _totalAmmo = _totalAmmo - _removed;
 
     private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClassname >> "ammo");
     private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
 
     private _speedOfAmmo = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "initSpeed");
-    private _simulationTime = getNumber (_ammoCfg >> "simulation");
-    private _caliber = getNumber (_ammoCfg >> "caliber");
     private _simType = getText (_ammoCfg >> "simulation");
 
     private _effect2pos = _vehicle selectionPosition "destructionEffect2";
@@ -60,7 +65,6 @@ if (_amountOfMagazines > 0) exitWith {
             private _velVec = _vectorAmmo vectorMultiply _speed;
             _projectile setVectorDir _velVec;
             _projectile setVelocity _velVec;
-            [ACE_player, _projectile, [1,0,0,1]] call EFUNC(frag,addTrack);
         } else {
             _projectile setDamage 1;
         };
@@ -124,6 +128,6 @@ if (_amountOfMagazines > 0) exitWith {
         };
     };
 
-    [FUNC(detonateAmmunition), [_vehicle, _magazines], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
+    [FUNC(detonateAmmunition), [_vehicle, _magazines, _totalAmmo], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 };
-[FUNC(detonateAmmunition), [_vehicle, _magazines], random 3] call CBA_fnc_waitAndExecute;
+ERROR_1("mag with no ammo - %1", _magazine);

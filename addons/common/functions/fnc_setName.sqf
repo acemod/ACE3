@@ -13,6 +13,7 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_3("setName",_unit,alive _unit,name _unit);
 
 if (isNull _unit || {!alive _unit}) exitWith {};
 

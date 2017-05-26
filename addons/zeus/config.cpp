@@ -12,6 +12,7 @@ class CfgPatches {
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
             QGVAR(moduleSimulation),
+            QGVAR(moduleSuppressiveFire),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
@@ -22,7 +23,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
-    // Use additional cfgPatches to contextually remove modules from zeus
+    // Use additional CfgPatches to contextually remove modules from zeus
     class GVAR(captives): ADDON {
         units[] = {
             QGVAR(moduleCaptive),
@@ -43,12 +44,18 @@ class CfgPatches {
             QGVAR(moduleAddSpareWheel)
         };
     };
+    class GVAR(fastroping): ADDON {
+        units[] = {
+            QGVAR(moduleAddOrRemoveFRIES)
+        };
+    };
 };
 
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
+    GVAR(fastroping) = "ace_fastroping";
 };
 
 #include "CfgFactionClasses.hpp"

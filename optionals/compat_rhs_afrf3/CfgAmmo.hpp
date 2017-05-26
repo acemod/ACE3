@@ -213,7 +213,7 @@ class CfgAmmo {
     class rhs_g_vg40sz: rhs_g_vog25 { //Flashbang
         ace_frag_force = 0;
     };
-    class rhs_GDM40: rhs_g_vog25 { //Smoke
+    class rhs_g_gdm40: rhs_g_vog25 { //Smoke
         ace_frag_force = 0;
     };
     class rhs_g_vg40md_white: rhs_g_vog25 { //Smoke

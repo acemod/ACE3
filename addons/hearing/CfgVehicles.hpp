@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_PutInEarplugs {
                     displayName = CSTRING(EarPlugs_On);
-                    condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player} );
+                    condition = QUOTE(GVAR(EnableCombatDeafness) && {!([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player}});
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
@@ -14,7 +14,7 @@ class CfgVehicles {
                 };
                 class ACE_RemoveEarplugs {
                     displayName = CSTRING(EarPlugs_Off);
-                    condition = QUOTE( [_player] call FUNC(hasEarPlugsIn) );
+                    condition = QUOTE( GVAR(EnableCombatDeafness) && {[_player] call FUNC(hasEarPlugsIn)});
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;

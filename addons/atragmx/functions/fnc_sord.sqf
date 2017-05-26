@@ -17,6 +17,8 @@
  */
 #include "script_component.hpp"
 
+if (!GVAR(initialised)) exitWith {};
+
 params ["_slopeDistance", "_azimuth", "_inclination"];
 
 GVAR(inclinationAngle) set [GVAR(currentTarget), round(_inclination)];

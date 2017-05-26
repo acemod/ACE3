@@ -41,7 +41,7 @@
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -361,7 +361,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_02_base_F: Tank_F {};
-    class rhsusf_m113_tank_base: APC_Tracked_02_base_F {
+    class rhsusf_m113tank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -370,7 +370,6 @@ class CfgVehicles {
         };
     };
 
-    class rhsusf_m113tank_base: APC_Tracked_02_base_F {};
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;

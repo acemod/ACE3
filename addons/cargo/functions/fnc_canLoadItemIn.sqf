@@ -40,4 +40,5 @@ if (_item  isEqualType "") then {
 _validItem &&
 {_itemSize > 0} &&
 {alive _vehicle} &&
-{_itemSize <= ([_vehicle] call FUNC(getCargoSpaceLeft))}
+{_itemSize <= ([_vehicle] call FUNC(getCargoSpaceLeft))} &&
+{locked _vehicle < 2}

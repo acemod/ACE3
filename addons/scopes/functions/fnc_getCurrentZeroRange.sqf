@@ -6,10 +6,10 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * current zero range
+ * current zero range <NUMBER>
  *
  * Example:
- * _unit call ace_scopes_fnc_getCurrentZeroRange
+ * [player] call ace_scopes_fnc_getCurrentZeroRange
  *
  * Public: No
  */

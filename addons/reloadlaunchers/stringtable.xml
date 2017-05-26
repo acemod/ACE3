@@ -13,6 +13,7 @@
             <Italian>Carica lanciamissili</Italian>
             <Portuguese>Recarregar lançador</Portuguese>
             <Japanese>ランチャーを装填</Japanese>
+            <Korean>무기 재장전</Korean>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -23,9 +24,10 @@
             <Czech>Nabíjím odpalovač...</Czech>
             <Polish>Ładowanie wyrzutni...</Polish>
             <Hungarian>Kilövő betöltés alatt...</Hungarian>
-            <Italian>Carico il lanciamissili...</Italian>
+            <Italian>Caricando il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
             <Japanese>ランチャーを装填している・・・</Japanese>
+            <Korean>무기 재장전중...</Korean>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LauncherLoaded">
             <English>Launcher loaded</English>
@@ -39,6 +41,7 @@
             <Italian>Lanciamissili caricato</Italian>
             <Portuguese>Lançador Carregado</Portuguese>
             <Japanese>ランチャーの装填完了</Japanese>
+            <Korean>무기 재장전됨</Korean>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadMagazine">
             <English>Load %1</English>
@@ -52,6 +55,7 @@
             <Italian>Caricato %1</Italian>
             <Portuguese>Recarregar %1</Portuguese>
             <Japanese>%1 へ装填</Japanese>
+            <Korean>%1 장전</Korean>
         </Key>
     </Package>
 </Project>
