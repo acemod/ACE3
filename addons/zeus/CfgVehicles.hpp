@@ -86,6 +86,7 @@ class CfgVehicles {
     class GVAR(moduleBase): Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
+        function = QEFUNC(common,dummy);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
