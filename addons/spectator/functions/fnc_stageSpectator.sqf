@@ -38,20 +38,35 @@ _unit enableSimulation !_set;
 if (_set) then {
     // Position should only be saved on first entry
     if !(GETVAR(_unit,GVAR(isStaged),false)) then {
-        GVAR(oldPos) = getPosATL _unit;
+        SETVAR(_unit,GVAR(preStagePos),getPosATL _unit);
+
+        // Handle players respawning via pause menu (or script)
+        private _id = _unit addEventHandler ["Respawn",{
+            params ["_unit"];
+            [_unit] call FUNC(stageSpectator);
+        }];
+
+        SETVAR(_unit,GVAR(respawnEH),_id);
     };
 
     // Ghosts can't talk
     [_unit, QGVAR(isStaged)] call EFUNC(common,hideUnit);
     [_unit, QGVAR(isStaged)] call EFUNC(common,muteUnit);
 
+    // Position defaults to [0,0,0] if marker doesn't exist
     _unit setPos (markerPos QGVAR(respawn));
 } else {
     // Physical beings can talk
     [_unit, QGVAR(isStaged)] call EFUNC(common,unhideUnit);
     [_unit, QGVAR(isStaged)] call EFUNC(common,unmuteUnit);
 
-    _unit setPosATL GVAR(oldPos);
+    // Restore original position and delete stored value
+    _unit setPosATL (GETVAR(_unit,GVAR(preStagePos),getPosATL _unit));
+    SETVAR(_unit,GVAR(preStagePos),nil);
+
+    // Remove the respawn handling
+    _unit removeEventHandler ["Respawn",GETVAR(_unit,GVAR(respawnEH),-1)];
+    SETVAR(_unit,GVAR(respawnEH),nil);
 };
 
 // Spectators ignore damage (vanilla and ace_medical)

@@ -24,6 +24,13 @@ params [["_set",true,[true]], ["_force",true,[true]]];
 // Only clients can be spectators
 if !(hasInterface) exitWith {};
 
+// Let the display know if it is or isn't forced
+// Could be switched after spectator has already started
+GVAR(uiForced) = _force;
+
+// Exit if no change (everything above this may need to be ran again)
+if (_set isEqualTo GVAR(isSet)) exitWith {};
+
 // Delay if local player (must not be ACE_Player) is not fully initalized
 if (isNil { player } || { isNull player }) exitWith {
     [
@@ -32,18 +39,6 @@ if (isNil { player } || { isNull player }) exitWith {
         _this
     ] call CBA_fnc_waitUntilAndExecute;
 };
-
-// Let the display know if it is or isn't forced
-// Could be switched after spectator has already started
-GVAR(uiForced) = _force;
-
-// Prevent player object from moving while in FPP
-if (alive player) then {
-    player enableSimulation !_set;
-};
-
-// Exit if no change (everything above this may need to be ran again)
-if (_set isEqualTo GVAR(isSet)) exitWith {};
 
 // Remove any current deafness and disable volume updates while spectating
 if (["ace_hearing"] call EFUNC(common,isModLoaded)) then {
@@ -98,6 +93,11 @@ if (_set) then {
         EGVAR(nametags,showNamesForAI) = GVAR(nametagSettingCache) select 1;
         GVAR(nametagSettingCache) = nil;
     };
+};
+
+// Stage player if alive to prevent movement and death
+if (alive player) then {
+    [player, _set] call FUNC(stageSpectator);
 };
 
 // Reset interruptions
