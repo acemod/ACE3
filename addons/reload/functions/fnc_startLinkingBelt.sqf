@@ -16,15 +16,10 @@ params ["_player", "_target"];
 if (vehicle _target != _target) exitWith {false};
 
 private _magazineType = currentMagazine _target;
-private _magazineCfg = configFile >> "CfgMagazines" >> _magazineType;
 
-if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {false};
+private _canLink = [_player, _target] call FUNC(canLinkBelt);
 
-// Check if the ammo is not empty or full
-private _ammoCount = _target ammo currentWeapon _target;
-
-// Exit if the belt is full or empty
-if ((_ammoCount == 0)  || (getNumber (_magazineCfg >> "count") - _ammoCount) == 0) exitWith {false};
+if(!_canLink) exitWith{};
 
 // Check if the player has any of the same same magazines
 // Calculate max ammo it can link
