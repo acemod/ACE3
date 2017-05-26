@@ -23,14 +23,14 @@ params [["_newCorpse",objNull,[objNull]], ["_oldKiller",objNull,[objNull]], ["_r
 
 // Compatibility handled via spectator display XEH
 if (_respawn in [0,1,4,5]) exitWith {
-
     // This only applies to respawn type 1 (BIRD/SPECTATOR)
     // Remove the seagull (not actually the player, a CfgNonAIVehicles object)
     if (typeOf _newCorpse == "seagull") then { deleteVehicle _newCorpse; };
 };
 
-// Negligible respawn delay can result in entering spectator after respawn
-if (playerRespawnTime <= 1) exitWith {};
-
-// Enter/exit spectator based on whether killed/respawned
-[!alive _newCorpse] call FUNC(setSpectator);
+// If unit was staged then they entered spectator before dying, ignore
+if !(GETVAR(_newCorpse,GVAR(isStaged),false)) then {
+    // Negligible respawn delay can result in entering spectator after respawn
+    // So we just use this value rather than living state of the unit
+    [playerRespawnTime > 1] call FUNC(setSpectator);
+};
