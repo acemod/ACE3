@@ -18,7 +18,7 @@
 params ["_unit"];
 
 private _totalDamage = 0;
-private _treattTime = 0;
+private _treatTime = 0;
 
 {
     _totalDamage = _totalDamage + _x;
