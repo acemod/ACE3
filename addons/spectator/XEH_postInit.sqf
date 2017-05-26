@@ -5,15 +5,22 @@
     GVAR(availableVisions) = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select GVAR(restrictVisions);
 }] call CBA_fnc_addEventHandler;
 
-// Create a radio channel for any spectators to text chat in
 if (isServer) then {
+    // Create a radio channel for any spectators to text chat in
     GVAR(channel) = radioChannelCreate [[0.729,0.149,0.098,1],"Spectator","Spectator (%UNIT_NAME)",[]];
     publicVariable QGVAR(channel);
 
     // Used by the template to transfer zeus to virtual unit
+    // Commands must be ran on server
     [QGVAR(transferZeus),{
         unassignCurator (_this select 1);
-        (_this select 0) assignCurator (_this select 1);
+
+        // Can only re-assign when ready
+        [
+            {isNull getAssignedCuratorUnit (_this select 0)},
+            {(_this select 0) assignCurator (_this select 1)},
+            _this
+        ] call CBA_fnc_waitUntilAndExecute;
     }] call CBA_fnc_addEventHandler;
 };
 
