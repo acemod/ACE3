@@ -13,8 +13,7 @@ private _groups = [];
 if (GVAR(enableAI)) then {
     _groups = allGroups;
 } else {
-    private _players = [] call CBA_fnc_players;
-    { _groups pushBackUnique (group _x); } forEach _players;
+    _groups = ([] call CBA_fnc_players) apply {group _x};
 };
 
 // Side and number of units filter

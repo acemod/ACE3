@@ -27,10 +27,9 @@ private _blacklist = GVAR(unitBlacklist);
     // Validate units
     {
         if (
-            simulationEnabled _x &&
-            {!isObjectHidden _x} &&
-            {simulationEnabled vehicle _x} &&
-            {!isObjectHidden vehicle _x} &&
+            (GVAR(enableAI) || {isPlayer _x}) &&
+            {simulationEnabled _x && {simulationEnabled vehicle _x}} &&
+            { !isObjectHidden _x && {!isObjectHidden vehicle _x} } &&
             {!(_x in _blacklist)}
         ) then {
             _newUnits pushBack ([_x] call BIS_fnc_objectVar);
