@@ -7,8 +7,6 @@
 
 #include "script_component.hpp"
 
-#define ICON_UNIT "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa"
-
 private _iconsToDraw = [];
 private _entitiesToDraw = [];
 

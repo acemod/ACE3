@@ -7,7 +7,6 @@
 
 #include "script_component.hpp"
 #define MAP_MIN_ENTITY_DISTANCE 30
-#define ICON_CAMERA "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\cameraTexture_ca.paa"
 
 // Moved timer into map controls group, update here
 BEGIN_COUNTER(updateTimer);

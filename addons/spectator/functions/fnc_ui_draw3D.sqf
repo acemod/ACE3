@@ -7,8 +7,6 @@
 
 #include "script_component.hpp"
 #define HEIGHT_OFFSET 1.5
-#define GRENADE_ICON "A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_connect_ca.paa"
-#define ICON_BACKGROUND_UNIT "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitName_ca.paa"
 
 BEGIN_COUNTER(updateCursor);
 private _camTarget = GVAR(camTarget);
@@ -112,19 +110,19 @@ if !(GVAR(uiMapVisible)) then {
 
                 // Store projectiles for next frame
                 _projectilesNew pushBack [_projectile, _segments];
+
+                // Draw all projectile segments
+                private _oldLoc = [];
+                {
+                    _x params ["_locNew", "_colorNew"];
+                    if !(_oldLoc isEqualTo []) then {
+                        drawLine3D [_oldLoc, _locNew, _colorNew];
+                    };
+                    _oldLoc = _locNew;
+
+                    nil // Speed loop
+                } count _segments;
             };
-
-            // Draw all projectile segments
-            private _oldLoc = [];
-            {
-                _x params ["_locNew", "_colorNew"];
-                if !(_oldLoc isEqualTo []) then {
-                    drawLine3D [_oldLoc, _locNew, _colorNew];
-                };
-                _oldLoc = _locNew;
-
-                nil // Speed loop
-            } count _segments;
 
             nil // Speed loop
         } count GVAR(projectilesToDraw);
@@ -135,7 +133,7 @@ if !(GVAR(uiMapVisible)) then {
                 private _grenadeVelocityMagnitude = vectorMagnitude velocity _x;
 
                 // Draw grenade (rotate icon to represent spinning)
-                drawIcon3D [GRENADE_ICON, [1,0,0,1], getPosVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
+                drawIcon3D [ICON_GRENADE, [1,0,0,1], getPosVisual _x, 0.6, 0.6, if (_grenadeVelocityMagnitude > 0) then { time * 100 * _grenadeVelocityMagnitude } else { 0 }, "", 0, 0.05, "TahomaB"];
 
                 // Store grenade for next frame
                 _grenadesNew pushBack _x;

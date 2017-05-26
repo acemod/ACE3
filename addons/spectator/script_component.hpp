@@ -57,13 +57,14 @@
 #define ACE_REVIVE "ACE_isUnconscious"
 #define NEEDS_REVIVE(unit) (unit getVariable [ACE_REVIVE,false]) || {unit getVariable [BIS_REVIVE,false]}
 
-// Icons used in the UI
-#define ICON_BACKGROUND                 "A3\Ui_f\data\IGUI\Cfg\simpleTasks\background1_ca.paa"
+// Icons used in the UI/drawing
 #define ICON_DEAD                       "a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa"
 #define ICON_GROUP                      "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\GroupIcon_ca.paa"
+#define ICON_GRENADE                    "A3\Ui_f\data\IGUI\Cfg\HoldActions\holdAction_connect_ca.paa"
 #define ICON_UNIT                       "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitIcon_ca.paa"
 #define ICON_REVIVE                     "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\ReviveIcon_ca.paa"
 #define ICON_BACKGROUND_UNIT            "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\UnitName_ca.paa"
+#define ICON_CAMERA                     "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\cameraTexture_ca.paa"
 #define CAM_ICON_FREE                   "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\FreeSelected.paa"
 #define CAM_ICON_FREE_SELECTED          "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Free.paa"
 #define CAM_ICON_FOLLOW                 "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\FollowSelected.paa"
