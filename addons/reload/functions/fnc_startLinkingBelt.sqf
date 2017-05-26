@@ -19,7 +19,7 @@ private _magazineType = currentMagazine _target;
 
 private _canLink = [_player, _target] call FUNC(canLinkBelt);
 
-if(!_canLink) exitWith{};
+if ( !_canLink ) exitWith {} ;
 
 // Check if the player has any of the same same magazines
 // Calculate max ammo it can link
