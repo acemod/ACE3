@@ -422,13 +422,13 @@ class CfgVehicles {
 
     class UAV_02_dynamicLoadout_base_F;
     class B_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
-        displayName = CSTRING(UAV_02_CAS_Name);
+        displayName = CSTRING(UAV_02_Name);
     };
     class O_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
-        displayName = CSTRING(UAV_02_CAS_Name);
+        displayName = CSTRING(UAV_02_Name);
     };
     class I_UAV_02_dynamicLoadout_F: UAV_02_dynamicLoadout_base_F {
-        displayName = CSTRING(UAV_02_CAS_Name);
+        displayName = CSTRING(UAV_02_Name);
     };
 
     // pistols
