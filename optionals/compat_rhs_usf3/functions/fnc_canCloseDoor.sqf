@@ -18,7 +18,13 @@
 #include "script_component.hpp"
 params ["_vehicle", "_door"];
 
-(_vehicle doorPhase _door > 0) &&
+(
+    if (_vehicle isKindOf "RHS_CH_47F") then {
+        (_vehicle animationSourcePhase _door) > 0
+    } else {
+        (_vehicle doorPhase _door) > 0
+    }
+) &&
 {alive _vehicle} &&
 {!(_vehicle getVariable [QEGVAR(fastroping,doorsLocked),false])} &&
 {
