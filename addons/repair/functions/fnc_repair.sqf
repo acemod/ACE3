@@ -178,15 +178,13 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
 };
 
 // Get repair time
-_repairTime = _target getVariable [QGVAR(repairTime),
-    [
-        configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTime),
-        "number",
-        -1
-    ] call CBA_fnc_getConfigEntry;
-];
+_repairTime = [
+    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    "number",
+    -1
+] call CBA_fnc_getConfigEntry;
 
-if (_repairTime == -1) then {
+if (_repairTime < 0) then {
     _repairTime = if (isNumber (_config >> "repairingTime")) then {
         getNumber (_config >> "repairingTime");
     } else {
