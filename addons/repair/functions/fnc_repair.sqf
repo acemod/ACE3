@@ -189,7 +189,7 @@ if (_repairTime < 0) then {
         getNumber (_config >> "repairingTime");
     } else {
         if (isText (_config >> "repairingTime")) exitWith {
-            _repairTimeConfig = getText(_config >> "repairingTime");
+            _repairTimeConfig = getText (_config >> "repairingTime");
             if (isNil _repairTimeConfig) then {
                 _repairTimeConfig = compile _repairTimeConfig;
             } else {
