@@ -15,6 +15,8 @@
  */
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {}; // For now we just add actions, so no need non-clients
+
 params ["_vehicle"];
 private _typeOf = typeOf _vehicle;
 TRACE_2("initSupplyVehicle",_vehicle,_typeOf);
