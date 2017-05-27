@@ -70,7 +70,12 @@ if (_init) then {
     // Create dummy target used for follow camera
     GVAR(camDummy) = "Logic" createVehicleLocal getPosASLVisual GVAR(camTarget);
 
-    // If camera mode is preset (not free cam) and focus is not, find initial focus
+    // Handle initial camera mode limitation
+    if !(GVAR(camMode) in GVAR(availableModes)) then {
+        GVAR(camMode) = GVAR(availableModes) select 0;
+    };
+
+    // If inital camera mode is not free cam and no focus, find initial focus
     if (GVAR(camMode) != MODE_FREE && isNull GVAR(camTarget)) then {
         private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
         if (isNil "_testFocus") then {
@@ -80,8 +85,16 @@ if (_init) then {
         };
     };
 
-    // Set the initial camera mode (could be pre-set)
+    // Set the initial camera mode (could be pre-set or limited)
     [GVAR(camMode)] call FUNC(cam_setCameraMode);
+
+    // Handle initial vision mode limitation
+    if !(GVAR(camVision) in GVAR(availableVisions)) then {
+        GVAR(camVision) = GVAR(availableVisions) select 0;
+    };
+
+    // Set the initial vision mode (could be pre-set or limited)
+    [GVAR(camVision)] call FUNC(cam_setVisionMode);
 
     // Start ticking (follow camera requires EachFrame to avoid jitter)
     GVAR(camTick) = addMissionEventHandler ["EachFrame", {call FUNC(cam_tick)}];
