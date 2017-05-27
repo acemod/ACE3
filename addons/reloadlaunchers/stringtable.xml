@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ReloadLaunchers">
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
@@ -24,7 +24,7 @@
             <Czech>Nabíjím odpalovač...</Czech>
             <Polish>Ładowanie wyrzutni...</Polish>
             <Hungarian>Kilövő betöltés alatt...</Hungarian>
-            <Italian>Carico il lanciamissili...</Italian>
+            <Italian>Caricando il lanciamissili...</Italian>
             <Portuguese>Recarregando lançador...</Portuguese>
             <Japanese>ランチャーを装填している・・・</Japanese>
             <Korean>무기 재장전중...</Korean>

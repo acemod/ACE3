@@ -12,6 +12,7 @@ class CfgPatches {
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
             QGVAR(moduleSimulation),
+            QGVAR(moduleSuppressiveFire),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

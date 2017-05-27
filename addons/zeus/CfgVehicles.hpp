@@ -86,6 +86,7 @@ class CfgVehicles {
     class GVAR(moduleBase): Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
+        function = QEFUNC(common,dummy);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -159,6 +160,12 @@ class CfgVehicles {
         category = QGVAR(AI);
         displayName = CSTRING(ModuleSearchNearby_DisplayName);
         function = QFUNC(moduleSearchNearby);
+    };
+    class GVAR(moduleSuppressiveFire): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSuppressiveFire_DisplayName);
+        function = QFUNC(moduleSuppressiveFire);
     };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;

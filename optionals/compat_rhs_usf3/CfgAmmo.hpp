@@ -194,7 +194,7 @@ class CfgAmmo {
 
     class M_Titan_AT;
     class rhs_ammo_M_fgm148_AT: M_Titan_AT {
-        irLock = 0;
+        irLock = 1;
         laserLock = 0;
         airLock = 0;
 

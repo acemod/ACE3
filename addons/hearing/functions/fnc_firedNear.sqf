@@ -53,7 +53,7 @@ if (isNil "_loudness") then {
         };
     } count _muzzles;
     {
-        _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
+        private _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
         _weaponMagazines set [_forEachIndex, [_x, _ammoType]];
     } forEach _weaponMagazines;
 

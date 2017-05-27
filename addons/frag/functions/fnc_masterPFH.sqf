@@ -1,19 +1,20 @@
 /*
  * Author: jaynus
- *
- * Master single PFH abstraction for all rounds being tracked by frag/spall
+ * Master single PFH abstraction for all rounds being tracked by frag/spall.
  *
  * Arguments:
- *
+ * None
  *
  * Return Value:
  * None
  */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-//PARAMS_2(_pfhArgs,_handle);
 
-if (!GVAR(enabled)) exitWith {};
+BEGIN_COUNTER(PFH);
+
+// Fast exit if nothing to do
+if (GVAR(objects) isEqualTo []) exitWith {END_COUNTER(PFH);};
 
 private _gcIndex = [];
 
@@ -47,3 +48,5 @@ private _deletionCount = 0;
 
     INC(_deletionCount);
 } forEach _gcIndex;
+
+END_COUNTER(PFH);

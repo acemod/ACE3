@@ -137,7 +137,7 @@
             <French>Joue un son radio quand le Zeus utilise du matériel militaire.</French>
             <Hungarian>Rádiós figyelmeztetés kiadása, ha a Zeus tüzérséget használ.</Hungarian>
             <Russian>Проигрывает звук радио каждый раз, когда Зевс использует артиллерию.</Russian>
-            <Italian>Esegui un messaggio radio quando Zeus usa esplosivi.</Italian>
+            <Italian>Riproduci un messaggio radio quando Zeus usa esplosivi.</Italian>
             <Japanese>Zeus が砲撃をつかうときに、無線で警告を流します。</Japanese>
             <Korean>Zeus가 폭격시 경고 무전을 재생합니다.</Korean>
         </Key>
@@ -207,7 +207,7 @@
             <French>Basculer en captif</French>
             <Hungarian>Elfogott állapot váltása</Hungarian>
             <Russian>Пленный (вкл./выкл.)</Russian>
-            <Italian>Apri Catturato</Italian>
+            <Italian>Attivatore Prigioniero</Italian>
             <Japanese>捕虜としてトグル</Japanese>
             <Korean>포로 토글</Korean>
         </Key>
@@ -220,36 +220,47 @@
             <Polish>Broń obszaru</Polish>
             <German>Verteidige Gebiet</German>
             <Korean>지역 방어</Korean>
+            <Italian>Difendi Area</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_DisplayName">
             <English>Update Editable Objects</English>
             <Japanese>編集可能なオブジェクトを更新</Japanese>
             <Polish>Aktualizuj edytowalne obiekty</Polish>
             <Korean>수정 가능한 물체 갱신</Korean>
+            <French>Màj les objets éditables</French>
+            <Italian>Aggiorna Oggetti Modificabili</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators">
             <English>All Curators</English>
             <Japanese>全キュレーター</Japanese>
             <Korean>모든 큐레이터</Korean>
             <Polish>Wszyscy kuratorzy</Polish>
+            <French>Tous curateurs</French>
+            <Italian>Tutti i Moderatori</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_curators_desc">
             <English>Apply changes to all curators</English>
             <Japanese>全キュレーターへ変更を適用</Japanese>
             <Korean>모든 큐레이터에 변화를 적용합니다</Korean>
             <Polish>Zatwierdź zmiany dla wszystkich kuratorów</Polish>
+            <French>Applique les changements à tous les curateurs</French>
+            <Italian>Applica i cambiamenti a tutti i moderatori</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal">
             <English>Remove Objects</English>
             <Japanese>オブジェクトの削除</Japanese>
             <Korean>물체 삭제</Korean>
             <Polish>Usuń obiekty</Polish>
+            <French>Enlève les objets</French>
+            <Italian>Rimuovi Oggetti</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleEditableObjects_removal_desc">
             <English>Remove existing instead of adding new</English>
             <Japanese>新しく追加するために削除します</Japanese>
             <Korean>물체를 삭제합니다</Korean>
             <Polish>Usuń istniejące zamiast dodawać nowe</Polish>
+            <French>Enlève les objets existants au lieu d'en ajouter de nouveaux</French>
+            <Italian>Rimuove gli esistenti e li sostituisce con i nuovi</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_DisplayName">
             <English>Global AI Skill</English>
@@ -260,6 +271,7 @@
             <Polish>Globalne umiejętności AI</Polish>
             <German>Globale KI-Fähigkeit</German>
             <Korean>서버 인공지능 실력</Korean>
+            <Italian>Abilità AI Globale</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general">
             <English>General Skill</English>
@@ -270,6 +282,7 @@
             <Polish>Ogólne umiejętności</Polish>
             <German>Allgemeine Fähigkeit</German>
             <Korean>전반적 실력</Korean>
+            <Italian>Abilità Generale</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_general_desc">
             <English>Changes: general, commanding, courage</English>
@@ -280,6 +293,7 @@
             <Polish>Zmienia: ogólne, dowodzenie, odwaga</Polish>
             <German>Ändert: general, commanding, courage</German>
             <Korean>변화: 전반적, 지휘, 사기</Korean>
+            <Italian>Cambia: generale, comando, </Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy">
             <English>Accuracy</English>
@@ -290,6 +304,7 @@
             <Polish>Precyzja</Polish>
             <German>Genauigkeit</German>
             <Korean>명중률</Korean>
+            <Italian>Precisione</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_accuracy_desc">
             <English>Changes: aimingAccuracy</English>
@@ -300,6 +315,7 @@
             <Polish>Zmienia: precyzję celowania</Polish>
             <German>Ändert: aimingAccuracy</German>
             <Korean>변화: 조준 명중률</Korean>
+            <Italian>Cambia: aimingAccuracy</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling">
             <English>Weapon Handling</English>
@@ -310,6 +326,7 @@
             <Polish>Obsługa broni</Polish>
             <German>Waffenhandhabung</German>
             <Korean>무기 조작</Korean>
+            <Italian>Uso dell'Arma</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_handling_desc">
             <English>Changes: aimingShake, aimingSpeed, reloadSpeed</English>
@@ -320,6 +337,7 @@
             <Polish>Zmienia: drżenie broni, szybkość celowania, szybkość przeładowania</Polish>
             <German>Ändert: aimingShake, aimingSpeed, reloadSpeed</German>
             <Korean>변화: 조준시 흔들림, 조준 속도, 재장전 속도</Korean>
+            <Italian>Cambia: aimingShake, aimingSpeed, reloadSpeed</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting">
             <English>Spotting</English>
@@ -330,6 +348,7 @@
             <Polish>Rozpoznanie</Polish>
             <German>Aufklärung</German>
             <Korean>탐지</Korean>
+            <Italian>Ricognizione</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_spotting_desc">
             <English>Changes: spotDistance, spotTime</English>
@@ -340,6 +359,7 @@
             <Polish>Zmienia: zasięg rozpoznawania, czas rozpoznawania</Polish>
             <German>Ändert: spotDistance, spotTime</German>
             <Korean>변화: 탐지 거리, 탐지까지의 시간</Korean>
+            <Italian>Cambia: spotDistance, spotTime</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover">
             <English>Seek Cover</English>
@@ -350,6 +370,7 @@
             <Polish>Szukaj osłon</Polish>
             <German>Deckungssuche</German>
             <Korean>엄폐물 찾기</Korean>
+            <Italian>Cerca Copertura</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_cover_desc">
             <English>Should AI seek cover</English>
@@ -360,6 +381,7 @@
             <Polish>Czy AI powinno szukać osłon</Polish>
             <German>Soll KI nach Deckung suchen</German>
             <Korean>인공지능이 엄폐물을 찾아갑니다</Korean>
+            <Italian>Le AI dovrebbero cercare una copertura</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat">
             <English>Auto Combat</English>
@@ -370,6 +392,7 @@
             <Polish>Auto walka</Polish>
             <German>Automatischer Kampfmodus</German>
             <Korean>자동 교전</Korean>
+            <Italian>Combattimento Automatico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGlobalSetSkill_combat_desc">
             <English>Should AI automatically switch to combat mode</English>
@@ -380,6 +403,7 @@
             <Polish>Czy AI powinno automatycznie przechodzić w tryb walki</Polish>
             <German>Soll KI automatisch in Kampfmodus umschalten</German>
             <Korean>인공지능이 자동적으로 교전 상태에 돌입합니다</Korean>
+            <Italian>Le AI dovrebbero passare in modalità di combattimento automaticamente</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleGroupSide_DisplayName">
             <English>Group Side</English>
@@ -390,6 +414,7 @@
             <Polish>Strona grupy</Polish>
             <German>Gruppenseite</German>
             <Korean>진영 측</Korean>
+            <Italian>Fazione del Gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModulePatrolArea_DisplayName">
             <English>Patrol Area</English>
@@ -400,6 +425,7 @@
             <Polish>Patrol obszaru</Polish>
             <German>Patrouillengebiet</German>
             <Korean>정찰 구역</Korean>
+            <Italian>Area di Pattugliamento</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSurrender_DisplayName">
             <English>Toggle Surrender</English>
@@ -411,7 +437,7 @@
             <French>Basculer en capitulation</French>
             <Hungarian>Kapituláló állapot váltása</Hungarian>
             <Russian>Сдавшийся (вкл./выкл.)</Russian>
-            <Italian>Apri Resa</Italian>
+            <Italian>Attivatore Resa</Italian>
             <Japanese>捕虜としてトグル</Japanese>
             <Korean>항복 토글</Korean>
         </Key>
@@ -420,18 +446,24 @@
             <Japanese>FRUES の追加と削除</Japanese>
             <Korean>패스트로프 추가/제거</Korean>
             <Polish>Dodaj/usuń FRIES</Polish>
+            <French>Aj./Enlève FRIES</French>
+            <Italian>Aggiungi/Rimuovi FRIES</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_NotFastRopeCompatible">
             <English>%1 is not fastrope compatible.</English>
             <Japanese>%1 はファストロープに対応していません。</Japanese>
             <Korean>%1은 패스트로프하기에 적합하지 않습니다.</Korean>
             <Polish>%1 nie jest kompatybilny ze zjazdem linowym.</Polish>
+            <French>%1 n'est pas compatible.</French>
+            <Italian>%1 non è compatibile con il fastrope.</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_CantRemoveFRIES">
             <English>Unable to remove FRIES, ropes are deployed.</English>
             <Japanese>すでにロープが展開されているため、FRIES を削除できません。</Japanese>
             <Korean>패스트로프 제거 불가능, 줄이 이미 배치되었습니다.</Korean>
             <Polish>Nie można usunąć FRIES, liny są wypuszczone.</Polish>
+            <French>Pas en mesure d'enlever le FRIES, les cordes ne sont pas déployées.</French>
+            <Italian>Impossibile rimuovere le FRIES, le corde sono ancora dispiegate</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_DisplayName">
             <English>Teleport Players</English>
@@ -442,6 +474,7 @@
             <Polish>Teleportuj graczy</Polish>
             <German>Spieler teleportieren</German>
             <Korean>플레이어 순간이동</Korean>
+            <Italian>Teletrasporta Giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player">
             <English>Player</English>
@@ -452,6 +485,7 @@
             <Polish>Gracz</Polish>
             <German>Spieler</German>
             <Korean>플레이어</Korean>
+            <Italian>Giocatore</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_player_desc">
             <English>Teleport selected player to module position</English>
@@ -462,6 +496,7 @@
             <Polish>Teleportuje wybranego gracza na pozycję modułu</Polish>
             <German>Teleportiert ausgewählten Spieler zur Position des Moduls</German>
             <Korean>모듈의 위치로 플레이어 순간이동</Korean>
+            <Italian>Teletrasporta il giocatore selezionato nella posizione del modulo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group">
             <English>Teleport Group</English>
@@ -472,6 +507,7 @@
             <Polish>Teleport grupy</Polish>
             <German>Gruppe teleportieren</German>
             <Korean>그룹 순간이동</Korean>
+            <Italian>Teletrasporta Gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleTeleportPlayers_group_desc">
             <English>Teleports all units in group</English>
@@ -482,6 +518,7 @@
             <Polish>Teleportuje wszystkie jednostki w grupie</Polish>
             <German>Teleportiert alle Einheiten der Gruppe</German>
             <Korean>그룹내에 모든 인원을 순간이동 시킵니다</Korean>
+            <Italian>Teletrasporta tutte le unità del gruppo</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleUnconscious_DisplayName">
             <English>Toggle Unconscious</English>
@@ -493,7 +530,7 @@
             <French>Basculer en inconscient</French>
             <Hungarian>Eszméletlen állapot váltása</Hungarian>
             <Russian>Без сознания (вкл./выкл.)</Russian>
-            <Italian>Apri Incosciente</Italian>
+            <Italian>Attivatore Incoscienza</Italian>
             <Japanese>気絶をトグル</Japanese>
             <Korean>기절 토글</Korean>
         </Key>
@@ -506,6 +543,7 @@
             <Polish>Przeszukaj teren</Polish>
             <German>Durchsuche Gebiet</German>
             <Korean>지역 수색</Korean>
+            <Italian>Area di Ricerca</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSearchNearby_DisplayName">
             <English>Search Nearby Building</English>
@@ -516,6 +554,7 @@
             <Polish>Przeszukaj najbliższy budynek</Polish>
             <German>Durchsuche nahegelegenes Gebäude</German>
             <Korean>근처 건물 수색</Korean>
+            <Italian>Cerca Edifici nelle Vicinanze</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSetMedic_DisplayName">
             <English>Assign Medic</English>
@@ -561,6 +600,8 @@
             <Polish>Przełącz symulację</Polish>
             <Japanese>シミュレーションをトグル</Japanese>
             <Korean>재현 토글</Korean>
+            <French>Bascule Simulation</French>
+            <Italian>Attivatore Simulazione</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleAddSpareWheel_DisplayName">
             <English>Add Spare Wheel</English>
@@ -691,6 +732,7 @@
             <Polish>Jednostka musi należeć do odpowiedniej strony</Polish>
             <German>Einheit muss einer passenden Seite angehören</German>
             <Korean>대상이 적절한 진영에 속해야만합니다</Korean>
+            <Italian>L'unità deve appartenere ad una fazione coerente</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_BuildingTooFar">
             <English>Nearest building is too far away</English>
@@ -701,6 +743,7 @@
             <Polish>Najbliższy budynek jest zbyt daleko</Polish>
             <German>Nächstgelegenes Gebäude ist zu weit entfernt</German>
             <Korean>가장가까운 건물이 너무 멈</Korean>
+            <Italian>L'edificio più vicino è troppo lontano</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_NothingSelected">
             <English>Place on a unit</English>
@@ -765,6 +808,7 @@
             <Polish>Ładunek:</Polish>
             <German>Ladung:</German>
             <Korean>화물:</Korean>
+            <Italian>Cargo:</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition">
             <English>Task Position</English>
@@ -775,6 +819,7 @@
             <Polish>Pozycja zadania</Polish>
             <German>Position der Aufgabe</German>
             <Korean>작업 위치</Korean>
+            <Italian>Posizione Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributePosition_desc">
             <English>Select a position to perform the task at</English>
@@ -784,6 +829,7 @@
             <Polish>Wybierz pozycję na której wykonać zadanie</Polish>
             <German>Wähle eine Position, an der die Aufgabe ausgeführt werden soll</German>
             <Korean>작업을 할 위치를 선택하십시요</Korean>
+            <Italian>Seleziona una posizione per eseguire l'incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius">
             <English>Task Radius</English>
@@ -793,6 +839,7 @@
             <Polish>Obszar zadania</Polish>
             <German>Radius der Aufgabe</German>
             <Korean>작업 반경</Korean>
+            <Italian>Raggio Incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadius_desc">
             <English>Radius to perform the task within</English>
@@ -802,6 +849,7 @@
             <Polish>Obszar na którym zadanie powinno zostać wykonane</Polish>
             <German>Radius, in dem die Aufgabe ausgeführt werden soll</German>
             <Korean>다음 반경 내에서 작업</Korean>
+            <Italian>Raggio per eseguire un incarico</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_AttributeRadiusInvalid">
             <English>Invalid radius entered</English>
@@ -812,6 +860,11 @@
             <Polish>Wpisano nieprawidłowy promień</Polish>
             <German>Ungültiger Radius eingegeben</German>
             <Korean>알 수 없는 반경 입력됨</Korean>
+            <Italian>Raggio Invalido Inserito</Italian>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
+            <English>Suppressive Fire</English>
+            <Italian>Fuoco di Soppressione</Italian>
         </Key>
     </Package>
 </Project>

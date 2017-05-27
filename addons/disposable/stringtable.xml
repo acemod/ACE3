@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Disposable">
         <Key ID="STR_ACE_Disposable_UsedTube">
@@ -10,7 +10,7 @@
             <Spanish>Lanzador utilizado</Spanish>
             <Hungarian>Elhasznált kilövőcső</Hungarian>
             <Russian>Отстрелянная труба</Russian>
-            <Italian>Tubo usato</Italian>
+            <Italian>Lanciatore usato</Italian>
             <Portuguese>Tubo utilizado</Portuguese>
             <Japanese>使用済み</Japanese>
             <Korean>사용함</Korean>

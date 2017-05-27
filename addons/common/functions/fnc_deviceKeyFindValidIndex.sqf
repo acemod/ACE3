@@ -28,7 +28,7 @@ if (_searchOffsetOrName isEqualType "") then {
     } forEach GVAR(deviceKeyHandlingArray);
 } else {
     if (count GVAR(deviceKeyHandlingArray) > 0) then {
-        _baseIndex = [GVAR(deviceKeyCurrentIndex) + _searchOffsetOrName, 0] select (GVAR(deviceKeyCurrentIndex) == -1);
+        private _baseIndex = [GVAR(deviceKeyCurrentIndex) + _searchOffsetOrName, 0] select (GVAR(deviceKeyCurrentIndex) == -1);
 
         for "_offset" from _baseIndex to (count GVAR(deviceKeyHandlingArray) - 1 + _baseIndex) do {
             private _realIndex = _offset % (count GVAR(deviceKeyHandlingArray));
