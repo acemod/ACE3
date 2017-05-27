@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 // Fired XEH
-[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
+[QGVAR(throwFiredXEH), call FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Exit on HC
 if (!hasInterface) exitWith {};

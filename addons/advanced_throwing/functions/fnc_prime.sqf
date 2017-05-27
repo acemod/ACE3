@@ -44,7 +44,7 @@ _unit setVariable [QGVAR(activeThrowable), _activeThrowable];
 deleteVehicle _activeThrowableOld;
 
 // Throw Fired XEH
-[QFUNC(throwFiredXEH), [
+[QGVAR(throwFiredXEH), [
     _unit, // unit
     "Throw", // weapon
     _muzzle, // muzzle
