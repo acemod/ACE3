@@ -7,7 +7,8 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Can link belt<BOOL>
+ * MaxAmmo magazine <INT>
+ * Will return -1 on error
  *
  * Example:
  * [player, cursorObject] call ace_reload_fnc_canLinkBelt;
@@ -18,18 +19,18 @@
 
 params ["_player", "_target"];
 
-if (vehicle _target != _target) exitWith {false};
+if (vehicle _target != _target) exitWith {-1};
 
 private _magazineType = currentMagazine _target;
 private _magazineCfg = configFile >> "CfgMagazines" >> _magazineType;
 
-if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {false};
+if (getNumber (_magazineCfg >> "ACE_isBelt") == 0) exitWith {-1};
 
 // Check if the ammo is not empty or full
 private _ammoCount = _target ammo currentWeapon _target;
 
 // Exit if the belt is full or empty
-if (_ammoCount == 0 || getNumber (_magazineCfg >> "count") - _ammoCount == 0) exitWith {false};
+if (_ammoCount == 0 || getNumber (_magazineCfg >> "count") - _ammoCount == 0) exitWith {-1};
 
 // Check if the player has any of the same magazines
 // Calculate max ammo
@@ -39,4 +40,4 @@ private _maxAmmo = 0;
     _maxAmmo = _maxAmmo max (_x select 1);
 } forEach (magazinesAmmo _player select {_x select 0 == _magazineType});
 
-_maxAmmo > 0
+_maxAmmo

@@ -17,18 +17,9 @@ if (vehicle _target != _target) exitWith {false};
 
 private _magazineType = currentMagazine _target;
 
-private _canLink = [_player, _target] call FUNC(canLinkBelt);
+private _maxAmmo = [_player, _target] call FUNC(canLinkBelt);
 
-if ( !_canLink ) exitWith {} ;
-
-// Check if the player has any of the same same magazines
-// Calculate max ammo it can link
-private _maxAmmo = 0;
-
-{
-    _maxAmmo = _maxAmmo max (_x select 1);
-} forEach (magazinesAmmo _player select {_x select 0 == _magazineType});
-
+//if _maxAmmo is 0 we quit
 if (_maxAmmo == 0) exitWith {};
 
 // Condition to call each frame
