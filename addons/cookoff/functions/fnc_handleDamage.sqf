@@ -21,11 +21,11 @@ _thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIn
 // it's already dead, who cares?
 if (damage _vehicle >= 1) exitWith {};
 
-// To lower name
-_hitpoint = toLower (_hitPoint);
+// set default value
+private _hitpoint = "#structural";
 
 if (_hitIndex != -1) then {
-    _hitpoint = toLower ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
+    _hitpoint = toLower (_hitPoint);
 };
 
 // get change in damage
