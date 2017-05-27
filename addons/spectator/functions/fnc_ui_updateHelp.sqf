@@ -38,7 +38,7 @@ if (_cameraMode == MODE_FREE) then {
 // When the camera has a focus, switch mode applies (if other modes are available)
 if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
     _controls pushBack [
-        format ["[%1]", toUpper [DIK_SPACE] call CBA_fnc_localizeKey],
+        format ["[%1]", toUpper ([DIK_SPACE] call CBA_fnc_localizeKey)],
         localize "STR_A3_Spectator_Helper_CameraMode"
     ];
 };
@@ -59,7 +59,7 @@ if (_cameraMode == MODE_FREE) then {
 };
 
 _controls pushBack [
-    format ["[%1]", toUpper [DIK_BACK] call CBA_fnc_localizeKey],
+    format ["[%1]", toUpper ([DIK_BACK] call CBA_fnc_localizeKey)],
     localize "STR_A3_Spectator_Helper_Interface"
 ];
 _controls pushBack [
@@ -69,7 +69,7 @@ _controls pushBack [
 
 if (_cameraMode == MODE_FREE) then {
     _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Shift"];
-    _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Alt"];
+    _controls pushBack ["[LALT]", localize "STR_A3_Spectator_Helper_Alt"];
     _controls pushBack ["[LALT + LSHIFT]", localize "STR_A3_Spectator_Helper_ShiftAlt"];
 };
 
