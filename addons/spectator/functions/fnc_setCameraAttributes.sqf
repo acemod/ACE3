@@ -46,18 +46,6 @@ if (count _this > 5) then {
     WARNING("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes is no longer supported");
 };
 
-// For unit camera mode with no focus, select randomly
-if !(isNil "_mode" || {_mode == MODE_FREE}) then {
-    if (isNil "_focus" || {isNull _focus}) then {
-
-        //TODO: Check for camTarget
-        _focus = ([] call FUNC(getTargetEntities)) select 0;
-
-        // Handle case where no available entities
-        if (isNil "_focus") then { _focus = objNull; };
-    };
-};
-
 // Apply if camera exists
 if (GVAR(isSet)) then {
     // These functions are smart and handle unavailable inputs

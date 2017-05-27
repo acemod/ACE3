@@ -61,18 +61,17 @@ if (_init) then {
     // Store default H value for scaling purposes
     GVAR(uiHelpH) = (ctrlPosition CTRL_HELP) select 3;
 
-    // Set the initial camera mode (could be pre-set)
-    // This also updates the help element
-    [GVAR(camMode)] call FUNC(cam_setCameraMode);
-
     // Initially hide map
     [] call FUNC(ui_toggleMap);
 
     // Initially fade the list
     [true] call FUNC(ui_fadeList);
 
-    // Update the focus info widget initially
+    // Initalise the help, widget and list information
+    [] call FUNC(ui_updateListEntities);
+    [] call FUNC(ui_updateListFocus);
     [] call FUNC(ui_updateWidget);
+    [] call FUNC(ui_updateHelp);
 
     // Start updating things to draw
     GVAR(collectPFH) = [LINKFUNC(ui_updateIconsToDraw), 0.2] call CBA_fnc_addPerFrameHandler;

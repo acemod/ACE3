@@ -16,6 +16,7 @@ private _modes = GVAR(availableModes);
 private _focus = GVAR(camTarget);
 
 // If new mode isn't available then keep current (unless current also isn't)
+// TODO: If free cam isn't available and there are no available camera targets (show black overlay?)
 if !(_newMode in _modes) then {
     _newMode = _modes select ((_modes find _oldMode) max 0);
 };
@@ -87,5 +88,9 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
     showHUD _showHUD;
     GVAR(camMode) = _newMode;
 
-    [] call FUNC(ui_updateHelp);
+
+    // Only update display if it exists, this function is independent of it
+    if !(isNull SPEC_DISPLAY) then {
+        [] call FUNC(ui_updateHelp);
+    };
 };
