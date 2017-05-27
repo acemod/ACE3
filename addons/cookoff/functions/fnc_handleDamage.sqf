@@ -16,13 +16,13 @@
 #include "script_component.hpp"
 
 params ["_simulationType", "_thisHandleDamage"];
-_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter"];
+_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter", "_hitPoint"];
 
 // it's already dead, who cares?
 if (damage _vehicle >= 1) exitWith {};
 
-// get hitpoint name
-private _hitpoint = "#structural";
+// To lower name
+_hitpoint = toLower (_hitPoint);
 
 if (_hitIndex != -1) then {
     _hitpoint = toLower ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
