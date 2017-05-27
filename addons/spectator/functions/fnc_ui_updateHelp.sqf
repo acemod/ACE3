@@ -10,6 +10,7 @@
  */
 
 #include "script_component.hpp"
+#include "\A3\ui_f\hpp\defineDIKCodes.inc"
 #define MAX_CONTROLS_HELP_ENTRIES 12
 
 if !(GVAR(uiHelpVisible)) exitWith {};
@@ -36,22 +37,40 @@ if (_cameraMode == MODE_FREE) then {
 
 // When the camera has a focus, switch mode applies (if other modes are available)
 if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
-    _controls pushBack ["[SPACE]", localize "STR_A3_Spectator_Helper_CameraMode"];
+    _controls pushBack [
+        format ["[%1]", toUpper [DIK_SPACE] call CBA_fnc_localizeKey],
+        localize "STR_A3_Spectator_Helper_CameraMode"
+    ];
 };
 
 if (_cameraMode == MODE_FREE) then {
-    _controls pushback ["[W/S]", localize "STR_A3_Spectator_Helper_Movement"];
-    _controls pushback ["[A/D]", localize "STR_A3_Spectator_Helper_Strafing"];
-    _controls pushback ["[Q/Z]", localize "STR_A3_Spectator_Helper_Height"];
+    _controls pushback [
+        format ["[%1/%2]", [DIK_W] call CBA_fnc_localizeKey, [DIK_S] call CBA_fnc_localizeKey],
+        localize "STR_A3_Spectator_Helper_Movement"
+    ];
+    _controls pushback [
+        format ["[%1/%2]", [DIK_A] call CBA_fnc_localizeKey, [DIK_D] call CBA_fnc_localizeKey],
+        localize "STR_A3_Spectator_Helper_Strafing"
+    ];
+    _controls pushback [
+        format ["[%1/%2]", [DIK_Q] call CBA_fnc_localizeKey, [DIK_Z] call CBA_fnc_localizeKey],
+        localize "STR_A3_Spectator_Helper_Height"
+    ];
 };
 
-_controls pushback ["[BACK]", localize "STR_A3_Spectator_Helper_Interface"];
-_controls pushback ["[F1]", localize "STR_A3_Spectator_Helper_Controls"];
+_controls pushBack [
+    format ["[%1]", toUpper [DIK_BACK] call CBA_fnc_localizeKey],
+    localize "STR_A3_Spectator_Helper_Interface"
+];
+_controls pushBack [
+    format ["[%1]", [DIK_F1] call CBA_fnc_localizeKey],
+    localize "STR_A3_Spectator_Helper_Controls"
+];
 
 if (_cameraMode == MODE_FREE) then {
-    _controls pushback ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Shift"];
-    _controls pushback ["[LALT]", localize "STR_A3_Spectator_Helper_Alt"];
-    _controls pushback ["[LALT + LSHIFT]", localize "STR_A3_Spectator_Helper_ShiftAlt"];
+    _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Shift"];
+    _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Alt"];
+    _controls pushBack ["[LALT + LSHIFT]", localize "STR_A3_Spectator_Helper_ShiftAlt"];
 };
 
 if (count _controls > MAX_CONTROLS_HELP_ENTRIES) then {

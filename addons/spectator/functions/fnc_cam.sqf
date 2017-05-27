@@ -76,8 +76,8 @@ if (_init) then {
         if (isNil "_testFocus") then {
             WARNING("Camera mode was preset, but no available entities to focus on. Switching to free cam.");
         } else {
-            GVAR(camtarget) = _testFocus;
-        }
+            GVAR(camTarget) = _testFocus;
+        };
     };
 
     // Set the initial camera mode (could be pre-set)
