@@ -369,7 +369,7 @@ class ACE_Medical_Actions {
             allowedSelections[] = {"body"};
             allowSelfTreatment = 0;
             requiredMedic = 0;
-            treatmentTime = 15;
+            treatmentTime = "22 + (random 2)";
             items[] = {};
             condition = "!([(_this select 1)] call ace_common_fnc_isAwake)";
             callbackSuccess = QUOTE(DFUNC(treatmentAdvanced_CPR));
