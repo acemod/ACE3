@@ -292,13 +292,27 @@ class CfgVehicles {
 
     class Helicopter_Base_H: Helicopter_Base_F {
         class EventHandlers;
+        class Turrets;
     };
-    class Heli_Light_02_base_F: Helicopter_Base_H {};
+    class Heli_Light_02_base_F: Helicopter_Base_H {
+        class Turrets: Turrets {
+                class CopilotTurret;
+                class MainTurret; // from RHS, not in vanilla
+        };
+    };
     class RHS_Mi8_base : Heli_Light_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
         class EventHandlers: EventHandlers {
             class RHS_EventHandlers;
+        };
+        class Turrets: Turrets {
+            class CopilotTurret: CopilotTurret {
+                canEject = 1;
+            };
+            class MainTurret: MainTurret {
+                canEject = 1;
+            };
         };
     };
 

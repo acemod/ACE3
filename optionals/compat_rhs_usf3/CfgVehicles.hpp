@@ -167,6 +167,16 @@ class CfgVehicles {
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
         EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
 
+        driverCanEject = 1;
+        class Turrets: Turrets {
+            class CopilotTurret: MainTurret {
+                canEject = 1;
+            };
+            class MainTurret: MainTurret {
+                canEject = 1;
+            };
+        };
+
         class UserActions;
         class EventHandlers: EventHandlers {
             class RHSUSF_EventHandlers;
@@ -194,10 +204,20 @@ class CfgVehicles {
 
     class Helicopter_Base_H: Helicopter_Base_F {
         class Eventhandlers;
+        class Turrets: Turrets {
+            class CopilotTurret;
+        };
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
     
-    class RHS_MELB_base: Helicopter_Base_H {};
+    class RHS_MELB_base: Helicopter_Base_H {
+        driverCanEject = 1;
+        class Turrets: Turrets {
+            class CopilotTurret: CopilotTurret {
+                canEject = 1;
+            };
+        };
+    };
     class RHS_MELB_MH6M: RHS_MELB_base {
         EGVAR(fastroping,enabled) = 1;
         EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
@@ -216,6 +236,16 @@ class CfgVehicles {
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
         EGVAR(fastroping,ropeOrigins)[] = {"ropeOriginLeft", "ropeOriginRight"};
+
+        driverCanEject = 1;
+        class Turrets: Turrets {
+            class CopilotTurret: CopilotTurret {
+                canEject = 1;
+            };
+            class MainTurret: MainTurret {
+                canEject = 1;
+            };
+        };
 
         class UserActions {
             class OpenCargoDoor;
@@ -247,7 +277,7 @@ class CfgVehicles {
         EQUIP_FRIES_ATTRIBUTE;
     };
 
-    class Heli_Transport_02_base_F;
+    class Heli_Transport_02_base_F: Helicopter_Base_H{};
     class RHS_CH_47F_base: Heli_Transport_02_base_F {
         EGVAR(refuel,fuelCapacity) = 3914;
     };
@@ -258,12 +288,26 @@ class CfgVehicles {
         EGVAR(fastroping,onCut) = QFUNC(onCut);
         EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
 
+        driverCanEject = 1;
+        class Turrets: Turrets {
+            class CopilotTurret: CopilotTurret {
+                canEject = 1;
+            };
+            class MainTurret: MainTurret {
+                canEject = 1;
+            };
+        };
+
         class UserActions {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
             };
         };
+    };
+
+    class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        driverCanEject = 1;
     };
 
     class Heli_Attack_01_base_F: Helicopter_Base_F {};
@@ -273,6 +317,7 @@ class CfgVehicles {
     };
 
     class RHS_AH1Z: RHS_AH1Z_base {
+        driverCanEject = 1;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 ace_fcs_Enabled = 0;
@@ -283,6 +328,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 1420;
     };
     class RHS_AH64D: RHS_AH64_base {
+        driverCanEject = 1;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 ace_fcs_Enabled = 0;
@@ -398,5 +444,14 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 25704;
         EGVAR(cargo,space) = 4;
         EGVAR(cargo,hasCargo) = 1;
+        class Turrets;
+    };
+    class RHS_C130J: RHS_C130J_Base {
+        class Turrets: Turrets {
+            class MainTurret;
+            class CopilotTurret: MainTurret {
+                canEject = 1;
+            };
+        };
     };
 };
