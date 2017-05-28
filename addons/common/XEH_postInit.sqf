@@ -246,6 +246,8 @@ call FUNC(checkFiles);
     GVAR(runAtSettingsInitialized) = nil; //cleanup
 }, 0, [false]] call CBA_fnc_addPerFrameHandler;
 
+GVAR(CanInteractCache) = [-1, [], [], []];
+
 
 /***************************************************************************/
 /***************************************************************************/
