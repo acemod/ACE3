@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 params ["_simulationType", "_thisHandleDamage"];
-_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter", "_hitPoint"];
+_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter", "_hitLoc"];
 
 // it's already dead, who cares?
 if (damage _vehicle >= 1) exitWith {};
@@ -25,7 +25,7 @@ if (damage _vehicle >= 1) exitWith {};
 private _hitpoint = "#structural";
 
 if (_hitIndex != -1) then {
-    _hitpoint = toLower (_hitPoint);
+    _hitpoint = toLower (_hitLoc);
 };
 
 // get change in damage
