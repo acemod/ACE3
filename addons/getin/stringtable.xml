@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Edited with tabler - 2015-03-29 -->
+<Project name="ACE">
+  <Package name="GetIn">
+    <Key ID="STR_ACE_GetIn_Driver">
+      <English>Get in Driver</English>
+      <German>Als Fahrer in Einsteigen</German>
+      <Spanish>Subir al Conductor</Spanish>
+    </Key>
+    <Key ID="STR_ACE_GetIn_FFV">
+      <English>FFV:%1</English>
+    </Key>
+    <Key ID="STR_ACE_GetIn_GetIn">
+      <English>Get In:%1</English>
+    </Key>
+    <Key ID="STR_ACE_GetIn_CoDriver">
+      <English>Get In Fronseat</English>
+    </Key>
+    <Key ID="STR_ACE_GetIn_Cargo">
+      <English>Ride in back</English>
+    </Key>
+  </Package>
+</Project>
