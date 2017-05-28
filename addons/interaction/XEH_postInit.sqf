@@ -60,7 +60,6 @@ GVAR(isOpeningDoor) = false;
 },
 [57, [false, true, false]], false] call CBA_fnc_addKeybind; //Key CTRL+Space
 
-
 ["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
@@ -79,3 +78,20 @@ GVAR(isOpeningDoor) = false;
 
 ["isNotSwimming", {!underwater (_this select 0)}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
+
+// Zeus action events
+[QGVAR(zeusStance),{
+    { _x setUnitPos (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusBehaviour),{
+    { _x setBehaviour (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusSpeed),{
+    { _x setSpeedMode (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusFormation),{
+    { _x setFormation (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
