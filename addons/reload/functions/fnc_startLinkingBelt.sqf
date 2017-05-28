@@ -18,7 +18,7 @@ if (vehicle _target != _target) exitWith {false};
 private _magazineType = currentMagazine _target;
 
 
-private _maxAmmo = [_player, _target] call FUNC(canLinkBelt);
+private _maxAmmo = [_player, _target] call FUNC(getAmmoToLinkBelt);
 
 //if _maxAmmo is below 0 we quit
 if (_maxAmmo <= 0) exitWith {};
