@@ -84,14 +84,27 @@ GVAR(isOpeningDoor) = false;
     { _x setUnitPos (_this select 0); } forEach (_this select 1);
 }] call CBA_fnc_addEventHandler;
 
+// The following 3 events handle both waypoints and groups
 [QGVAR(zeusBehaviour),{
-    { _x setBehaviour (_this select 0); } forEach (_this select 1);
+    if (param [2,false]) then {
+        { _x setWaypointBehaviour (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setBehaviour (_this select 0); } forEach (_this select 1);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(zeusSpeed),{
-    { _x setSpeedMode (_this select 0); } forEach (_this select 1);
+    if (param [2,false]) then {
+        { _x setWaypointSpeed (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setSpeedMode (_this select 0); } forEach (_this select 1);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(zeusFormation),{
-    { _x setFormation (_this select 0); } forEach (_this select 1);
+    if (param [2,false]) then {
+        { _x setWaypointFormation (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setFormation (_this select 0); } forEach (_this select 1);
+    };
 }] call CBA_fnc_addEventHandler;
