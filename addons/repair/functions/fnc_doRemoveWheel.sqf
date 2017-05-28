@@ -30,13 +30,7 @@ if (_hitPointDamage >= 1) exitWith {};
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 
 // spawn wheel
-private _wheel = [
-    configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(wheel)
-    "text",
-    "ACE_Wheel"
-] call CBA_fnc_getConfigEntry;
-
-private _newWheel = [_wheel, getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
+private _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
 TRACE_2("new wheel created",_newWheel,damage _newWheel);
 
 // raise event to set the new hitpoint damage

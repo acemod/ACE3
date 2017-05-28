@@ -30,13 +30,7 @@ if (_hitPointDamage >= 1) exitWith {};
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 
 // spawn track
-private _track = [
-    configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(track)
-    "text",
-    "ACE_Track"
-] call CBA_fnc_getConfigEntry;
-
-private _newTrack = [_track, getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
+private _newTrack = ["ACE_Track", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
 TRACE_2("new track created",_newTrack,damage _newTrack);
 
 // raise event to set the new hitpoint damage
