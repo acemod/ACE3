@@ -865,6 +865,7 @@
         <Key ID="STR_ACE_Zeus_ModuleSuppressiveFire_DisplayName">
             <English>Suppressive Fire</English>
             <Italian>Fuoco di Soppressione</Italian>
+            <French>Tir de suppression</French>
         </Key>
     </Package>
 </Project>
