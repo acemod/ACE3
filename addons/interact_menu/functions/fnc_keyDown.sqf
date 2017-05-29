@@ -79,6 +79,10 @@ if (GVAR(useCursorMenu)) then {
     ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
     ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     setMousePosition [0.5, 0.5];
+} else {
+    if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+        (findDisplay 91919) closeDisplay 2;
+    };
 };
 
 GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
