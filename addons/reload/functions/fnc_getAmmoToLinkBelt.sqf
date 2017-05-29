@@ -7,10 +7,10 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Maximum ammo of magazine (-1 on error) <INT>
+ * Maximum ammo of magazine (-1 on error) <NUMBER>
  *
  * Example:
- * [player, cursorObject] call ace_reload_fnc_canLinkBelt;
+ * [player, cursorObject] call ace_reload_fnc_getAmmoToLinkBelt;
  *
  * Public: No
  */
