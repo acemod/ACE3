@@ -79,6 +79,7 @@ if (_init) then {
     if (GVAR(camMode) != MODE_FREE && isNull GVAR(camTarget)) then {
         private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
         if (isNil "_testFocus") then {
+            GVAR(camMode) = MODE_FREE;
             WARNING("Camera mode was preset, but no available entities to focus on. Switching to free cam.");
         } else {
             GVAR(camTarget) = _testFocus;

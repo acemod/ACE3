@@ -43,6 +43,7 @@ PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setFocus);
+PREP(switchFocus);
 
 // Public functions
 PREP(addLocation);

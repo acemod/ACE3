@@ -43,6 +43,15 @@ if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
     ];
 };
 
+_controls pushback [
+    format ["[%1]", toUpper ([DIK_RIGHT] call CBA_fnc_localizeKey)],
+    localize LSTRING(nextUnit)
+];
+_controls pushback [
+    format ["[%1]", toUpper ([DIK_LEFT] call CBA_fnc_localizeKey)],
+    localize LSTRING(prevUnit)
+];
+
 if (_cameraMode == MODE_FREE) then {
     _controls pushback [
         format ["[%1/%2]", [DIK_W] call CBA_fnc_localizeKey, [DIK_S] call CBA_fnc_localizeKey],

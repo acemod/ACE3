@@ -153,7 +153,6 @@ if (_key == DIK_I) exitWith {
 };
 
 // Handle getting next focus target
-// TODO: These keys
 if (_key == DIK_RIGHT) exitWith {
     [true] call FUNC(switchFocus);
     true
