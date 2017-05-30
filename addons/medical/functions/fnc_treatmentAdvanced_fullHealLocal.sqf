@@ -47,7 +47,6 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(airwayCollapsed), false, true];
 
     // generic medical admin
-    _target setVariable [QGVAR(addedToUnitLoop), false, true];
     _target setVariable [QGVAR(inCardiacArrest), false, true];
     _target setVariable [QGVAR(inReviveState), false, true];
     _target setVariable ["ACE_isUnconscious", false, true];

@@ -69,7 +69,7 @@ class CfgAmmo {
     class M_Titan_AT: MissileBase {};
 
     class ACE_Javelin_FGM148: M_Titan_AT {
-        irLock = 0;
+        irLock = 1;
         laserLock = 0;
         airLock = 0;
 
@@ -108,6 +108,8 @@ class CfgAmmo {
             seekerMinRange = 0;
             seekerMaxRange = 2500;      // Range from the missile which the seeker can visually search
 
+            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+            
             // Attack profile type selection
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };

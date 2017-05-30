@@ -41,18 +41,29 @@ private _addons = "true" configClasses (configFile >> "CfgPatches");//
 _addons = _addons apply {toLower configName _x};//
 _addons = _addons select {_x find "ace_" == 0};
 
+private _oldCompats = [];
 {
     if (getText (configFile >> "CfgPatches" >> _x >> "versionStr") != _version) then {
         private _errorMsg = format ["File %1.pbo is outdated.", _x];
 
         ERROR(_errorMsg);
 
-        if (hasInterface) then {
-            ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+        if ((_x select [0, 10]) != "ace_compat") then {
+            if (hasInterface) then {
+                ["[ACE] ERROR", _errorMsg, {findDisplay 46 closeDisplay 0}] call FUNC(errorMessage);
+            };
+        } else {
+            _oldCompats pushBack _x;  // Don't block game if it's just an old compat pbo
         };
     };
     false
 } count _addons;
+if (!(_oldCompats isEqualTo [])) then {
+    [{
+        // Lasts for ~10 seconds
+        ERROR_WITH_TITLE_1("The following ACE compatiblity PBOs are outdated", "%1", _this);
+    }, _oldCompats, 1] call CBA_fnc_waitAndExecute;
+};
 
 ///////////////
 // check dlls
@@ -111,7 +122,7 @@ if (isMultiplayer) then {
 
             _addons = _addons - GVAR(ServerAddons);
             if !(_addons isEqualTo []) then {
-                _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
+                private _errorMsg = format ["Client/Server Addon Mismatch. Client has extra addons: %1.",_addons];
 
                 ERROR(_errorMsg);
 

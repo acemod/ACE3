@@ -109,6 +109,7 @@ class CfgVehicles {
     // Ammo Vehicles (with full inheritance for granted ACE_Actions)
     class Car_F: Car {};
     class Truck_F: Car_F {};
+    class Tank_F: Tank {};
 
     class Truck_03_base_F: Truck_F {};
     class O_Truck_03_ammo_F: Truck_03_base_F {
@@ -131,6 +132,13 @@ class CfgVehicles {
     class B_Truck_01_transport_F: Truck_01_base_F {};
     class B_Truck_01_mover_F: B_Truck_01_transport_F {};
     class B_Truck_01_ammo_F: B_Truck_01_mover_F {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+
+    class APC_Tracked_01_base_F: Tank_F {};
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         transportAmmo = 0;
         MACRO_REARM_TRUCK_ACTIONS
     };
@@ -163,6 +171,21 @@ class CfgVehicles {
         MACRO_REARM_TRUCK_ACTIONS
     };
 
+    class NATO_Box_Base: ReammoBox_F{};
+    class Box_NATO_AmmoVeh_F: NATO_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+    class EAST_Box_Base: ReammoBox_F{};
+    class Box_East_AmmoVeh_F: EAST_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
+    class IND_Box_Base: ReammoBox_F{};
+    class Box_IND_AmmoVeh_F: IND_Box_Base {
+        transportAmmo = 0;
+        MACRO_REARM_TRUCK_ACTIONS
+    };
 
     // Dummy Vehicles
     class GVAR(defaultCarriedObject): ThingX {

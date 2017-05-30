@@ -7,9 +7,10 @@
  * 0: Position of seeker (ASL) <ARRAY>
  * 1: Direction vector (will be normalized) <ARRAY>
  * 2: Seeker FOV in degrees <NUMBER>
- * 3: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
- * 4: Seeker laser code. <NUMBER>
- * 5: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
+ * 3: Seeker max distance in meters <NUMBER>
+ * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe. <ARRAY>
+ * 5: Seeker laser code. <NUMBER>
+ * 6: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
  * Return Value:
  * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
@@ -24,13 +25,15 @@
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistnace", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
-private _seekerCos = cos _seekerFov;
 
-TRACE_5("",_posASL,_dir,_seekerFov,_seekerWavelengths,_seekerCode);
+private _seekerCos = cos _seekerFov;
+private _seekerMaxDistSq = _seekerMaxDistnace ^ 2;
+
+TRACE_6("",_posASL,_dir,_seekerFov,_seekerMaxDistnace,_seekerWavelengths,_seekerCode);
 
 private _spots = [];
 private _finalPos = nil;
@@ -76,7 +79,7 @@ private _finalOwner = objNull;
                 _testPoint = _x select 0;
                 private _testPointVector = _posASL vectorFromTo _testPoint;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if (_testDotProduct > _seekerCos) then {
+                if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
                     _spots pushBack [_testPoint, _owner];
                 };
             } forEach _resultPositions;
@@ -87,7 +90,7 @@ private _finalOwner = objNull;
             if (_distance > 0) then {
                 private _testPointVector = _posASL vectorFromTo _resultPos;
                 private _testDotProduct = _dir vectorDotProduct _testPointVector;
-                if (_testDotProduct > _seekerCos) then {
+                if ((_testDotProduct > _seekerCos) && {(_testPoint vectorDistanceSqr _posASL) < _seekerMaxDistSq}) then {
                     _spots pushBack [_resultPos, _owner];
                 };
             };

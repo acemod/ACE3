@@ -41,7 +41,7 @@
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -184,18 +184,19 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers: RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
-            };
-        };
     };
 
     class Helicopter_Base_H: Helicopter_Base_F {
         class Eventhandlers;
     };
     class Heli_Transport_01_base_F: Helicopter_Base_H {};
+    
+    class RHS_MELB_base: Helicopter_Base_H {};
+    class RHS_MELB_MH6M: RHS_MELB_base {
+        EGVAR(fastroping,enabled) = 1;
+        EGVAR(fastroping,ropeOrigins)[] = {{1.166, 0.79, -0.01}, {-1.166, 0.79, -0.01}};
+    };
+
     class RHS_UH60_Base: Heli_Transport_01_base_F {
         EGVAR(refuel,fuelCapacity) = 1360;
     };
@@ -217,11 +218,6 @@ class CfgVehicles {
             };
             class CloseCargoLDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
-            };
-        };
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
             };
         };
 
@@ -255,6 +251,20 @@ class CfgVehicles {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
+            };
+        };
+    };
+
+    class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(fastroping,enabled) = 1;
+        EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
+        EGVAR(fastroping,onCut) = QFUNC(onCut);
+        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+
+        class UserActions {
+            class RampOpen;
+            class RampClose: RampOpen {
+                condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
             };
         };
     };
@@ -351,7 +361,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_02_base_F: Tank_F {};
-    class rhsusf_m113_tank_base: APC_Tracked_02_base_F {
+    class rhsusf_m113tank_base: APC_Tracked_02_base_F {
         EGVAR(refuel,fuelCapacity) = 360;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
@@ -360,7 +370,6 @@ class CfgVehicles {
         };
     };
 
-    class rhsusf_m113tank_base: APC_Tracked_02_base_F {};
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
@@ -390,5 +399,7 @@ class CfgVehicles {
     class Plane_Base_F;
     class RHS_C130J_Base: Plane_Base_F {
         EGVAR(refuel,fuelCapacity) = 25704;
+        EGVAR(cargo,space) = 4;
+        EGVAR(cargo,hasCargo) = 1;
     };
 };

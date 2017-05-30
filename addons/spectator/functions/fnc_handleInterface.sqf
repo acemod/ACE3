@@ -34,7 +34,7 @@ switch (toLower _mode) do {
         [FUNC(handleUnits), 9, _display] call CBA_fnc_addPerFrameHandler;
 
         // Handle 3D unit icons
-        GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
+        GVAR(iconHandler) = addMissionEventHandler ["Draw3D", {call FUNC(handleIcons)}];
 
         // Populate the help window
         private _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;

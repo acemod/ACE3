@@ -14,6 +14,7 @@ PREP(dropNozzle);
 PREP(getFuel);
 PREP(handleDisconnect);
 PREP(handleKilled);
+PREP(handlePlayerWeaponChanged);
 PREP(handleUnconscious);
 PREP(makeJerryCan);
 PREP(maxDistanceDropNozzle);

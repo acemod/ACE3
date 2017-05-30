@@ -7,10 +7,7 @@
  * 1: Variable new value <ANY>
  *
  * Return Value:
- * None <NIL>
- *
- * Example:
- * "ace_zeus_GlobalSkillAI" addPublicVariableEventHandler ace_zeus_fnc_moduleGlobalSetSkill
+ * None
  *
  * Public: No
  */

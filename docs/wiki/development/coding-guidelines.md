@@ -62,7 +62,7 @@ class ACE_Settings {
 All text that shall be displayed to a user shall be defined in a `stringtable.xml` file for multi-language support.
 
 - There shall be no empty stringtable language values.
-- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux578/tabler){:target="_blank"} and the [translation guidelines](http://ace3mod.com/wiki/development/how-to-translate-ace3.html){:target="_blank"} form.
+- All stringtables shall follow the format as specified by [Tabler](https://github.com/bux/tabler){:target="_blank"} and the [translation guidelines]({{ site.baseurl }}/wiki/development/how-to-translate-ace3.html) form.
 
 
 ## 2. Macro Usage
@@ -589,6 +589,15 @@ All ACE3 components shall be implemented in an event driven fashion. This is don
 Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
+
+<div class="panel info">
+    <h5>Warning about BIS event handlers:</h5>
+    <p>BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.</p>
+    ```js
+    player addEventHandler ["Fired", FUNC(handleFired)]; // bad
+    player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
+    ```
+</div>
 
 ### 7.4 Hashes
 

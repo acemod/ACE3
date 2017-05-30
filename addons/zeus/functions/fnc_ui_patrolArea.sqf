@@ -6,19 +6,17 @@
  * 0: dummy controls group <CONTROL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-disableSerialization;
-
 //Generic Init:
 params ["_control"];
 private _display = ctrlParent _control;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
@@ -30,7 +28,7 @@ private _fnc_errorAndClose = {
     params ["_msg"];
     _display closeDisplay 0;
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 

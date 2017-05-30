@@ -13,6 +13,7 @@
             <Italian>Trancia</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
             <Japanese>ワイヤーカッター</Japanese>
+            <Korean>절단기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -23,9 +24,10 @@
             <Polish>Służą do cięcia drutu i płotów</Polish>
             <French>Pince coupante</French>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
-            <Italian>Trancia da ferro</Italian>
+            <Italian>Tronchese</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
             <Japanese>ワイヤーカッター</Japanese>
+            <Korean>절단기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
@@ -39,6 +41,7 @@
             <Hungarian>Drótkerítés átvágása</Hungarian>
             <Russian>Разрезать забор</Russian>
             <Japanese>フェンスを切断する</Japanese>
+            <Korean>철조망 자르기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
@@ -52,6 +55,7 @@
             <Hungarian>Drótok elvágása...</Hungarian>
             <Russian>Разрезаем забор / провода...</Russian>
             <Japanese>フェンス/ワイヤを切断中・・・</Japanese>
+            <Korean>철망/철조망 자르는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
@@ -65,6 +69,7 @@
             <Hungarian>Drótkerítés átvágva</Hungarian>
             <Russian>Забор разрезан</Russian>
             <Japanese>フェンスを切断した</Japanese>
+            <Korean>절단됨</Korean>
         </Key>
     </Package>
 </Project>
