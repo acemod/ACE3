@@ -47,6 +47,7 @@ PREP(switchFocus);
 
 // Public functions
 PREP(addLocation);
+PREP(getCameraAttributes);
 PREP(interrupt);
 PREP(removeLocation);
 PREP(setCameraAttributes);
