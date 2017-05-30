@@ -33,7 +33,7 @@ private ["_newModes","_currentModes"];
 _currentModes = GVAR(availableModes);
 
 // Restrict additions to only possible values
-_newModes = _addModes arrayIntersect [0,1,2];
+_newModes = _addModes arrayIntersect ALL_MODES;
 _newModes append (_currentModes - _removeModes);
 
 _newModes = _newModes arrayIntersect _newModes;
@@ -47,7 +47,7 @@ if (_newModes isEqualTo []) then {
 };
 
 // Update camera in case of change
-if (GVAR(isSet)) then {
+if !(isNil QGVAR(camera)) then {
     [GVAR(camMode)] call FUNC(cam_setCameraMode);
 };
 

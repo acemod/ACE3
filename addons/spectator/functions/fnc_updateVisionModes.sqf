@@ -55,8 +55,8 @@ if (_newModes isEqualTo []) then {
 };
 
 // Update camera in case of change
-if (GVAR(isSet)) then {
-    [GVAR(camMode)] call FUNC(cam_setCameraMode);
+if !(isNil QGVAR(camera)) then {
+    [GVAR(camVision)] call FUNC(cam_setVisionMode);
 };
 
 _newModes

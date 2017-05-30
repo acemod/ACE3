@@ -32,6 +32,7 @@
 #define MODE_FREE   0
 #define MODE_FPS    1
 #define MODE_FOLLOW 2
+#define ALL_MODES   [MODE_FREE,MODE_FPS,MODE_FOLLOW]
 
 #define VISION_NORM -2
 #define VISION_NVG  -1
