@@ -163,6 +163,7 @@
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
             <German>Taste zum Drehen des Kartenwerkzeugs</German>
             <Korean>독도용 도구 돌리기 키</Korean>
+            <Italian>Ruota Strumenti di Mappatura</Italian>
         </Key>
         <Key ID="STR_ACE_MapTools_rotateModifierKey_description">
             <English>Modifier key to allow rotating map tools</English>
@@ -172,6 +173,7 @@
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
             <German>Steuerungstaste, um Drehung des Kartenwerkzeugs zu ermöglichen.</German>
             <Korean>독도용 도구를 돌리기 위한 키를 변경할 수 있습니다.</Korean>
+            <Italian>Tasto modifica per consentire strumenti di mappatura rotanti</Italian>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_displayName">
             <English>Draw straight lines with maptools</English>
@@ -179,6 +181,8 @@
             <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
             <Korean>독도용 도구로 직선 그리기</Korean>
             <Polish>Rysuj proste linie przy użyciu narzędzi nawigacyjnych</Polish>
+            <French>Tracer des lignes droites</French>
+            <Italian>Disegna linee dritte con gli strumenti di mappatura</Italian>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStaightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>
@@ -186,6 +190,8 @@
             <German>Zeichne gerade Linien am Rand des Kartenwerkzeugs. Hinweis: zum Löschen über den Mittelpunkt der Linie fahren</German>
             <Korean>독도용 도구 가장자리에 직선을 그립니다. 주의: 삭제하기 위해선 선의 중앙에 가져다 대십시요</Korean>
             <Polish>Przeciągnij po krawędzi narzędzi nawigacyjnych by narysować prostą linię. Uwaga: aby usunąć linię - nalezy ustawić kursor nad jej środkiem.</Polish>
+            <French>Utiliser le bord des outils de navigation pour tracer des lignes droites. Note: l'on doit survoler le milieu du trait pour pouvoir le supprimer.</French>
+            <Italian>Disegna sul bordo degli strumenti di mappatura per disegnare linee dritte. Nota: Deve spostarsi al centro per essere cancellato.</Italian>
         </Key>
     </Package>
 </Project>

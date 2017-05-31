@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -24,7 +24,7 @@
             <Polish>Napraw animację</Polish>
             <French>Corriger animation</French>
             <Hungarian>Animációk kijavítása</Hungarian>
-            <Italian>Fixa l'animazione</Italian>
+            <Italian>Sistema l'animazione</Italian>
             <Portuguese>Arrumar  Animação</Portuguese>
             <Japanese>アニメーションを修正</Japanese>
             <Korean>동작 고정</Korean>
@@ -150,7 +150,7 @@
             <French>Tableau. Séparation par ,.</French>
             <Czech>Tabulka. Odděl elementy použitím ,.</Czech>
             <Hungarian>Array. Válasszad el az elemeket vesszővel.</Hungarian>
-            <Italian>Array. Separa gli elementi usando ,.</Italian>
+            <Italian>Vettor. Separa gli elementi usando ,.</Italian>
             <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
             <Japanese>アライ。,を使うことで区別できます。</Japanese>
             <Korean>배열. 요소를 ,. 로 나눔</Korean>
@@ -445,7 +445,7 @@
             <Russian>Fix Headbug</Russian>
             <Czech>Fix Headbug</Czech>
             <Spanish>Corregir error de cabeza (headbug)</Spanish>
-            <Italian>Sistema Headbug</Italian>
+            <Italian>Sistema Bug della Testa</Italian>
             <Japanese>ヘッドバグ修正</Japanese>
             <Korean>헤드버그 수정</Korean>
         </Key>
@@ -473,7 +473,7 @@
             <French>Nouveautés ACE</French>
             <Hungarian>ACE hírek</Hungarian>
             <Russian>Новости ACE</Russian>
-            <Italian>News ACE</Italian>
+            <Italian>Novità ACE</Italian>
             <Japanese>ACE からのお知らせ</Japanese>
             <Korean>ACE 새소식</Korean>
         </Key>

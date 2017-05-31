@@ -28,7 +28,7 @@
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -105,6 +105,17 @@ class CfgVehicles {
         };
         class CommanderOptics;
     };
+    class Air;
+    class Helicopter: Air {
+        class Turrets;
+    };
+    class Helicopter_Base_F: Helicopter {
+        class Turrets: Turrets {
+            class MainTurret;
+        };
+    };
+
+
     class rhs_bmd_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 300;
         class Turrets: Turrets {
@@ -279,7 +290,6 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3600;
     };
 
-    class Helicopter_Base_F;
     class Helicopter_Base_H: Helicopter_Base_F {
         class EventHandlers;
     };
@@ -334,15 +344,33 @@ class CfgVehicles {
         };
     };
 
-    class Heli_Attack_02_base_F;
+    class Heli_Attack_02_base_F: Helicopter_Base_F {};
+    class rhs_mi28_base: Heli_Attack_02_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
+    };
+
     class RHS_Ka52_base : Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1870;
         EGVAR(fastroping,enabled) = 0;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class RHS_Mi24_base : Heli_Attack_02_base_F {
         EGVAR(refuel,fuelCapacity) = 1851;
         EGVAR(fastroping,enabled) = 0;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class rhs_t80b : rhs_tank_base {
@@ -352,7 +380,7 @@ class CfgVehicles {
         ace_repair_hitpointPositions[] = {{"era_1_hitpoint", {0,0,0}}};
         ace_repair_hitpointGroups[] = {{"era_1_hitpoint", {"era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint", "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint", "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint"}}};
     };
-        
+
     class Truck_F: Car_F {};
     class RHS_Ural_BaseTurret: Truck_F {
         EGVAR(refuel,fuelCapacity) = 360;
@@ -423,6 +451,11 @@ class CfgVehicles {
 
     class rhs_2s3tank_base : Tank_F {
         EGVAR(refuel,fuelCapacity) = 830;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class OTR21_Base : Truck_F {

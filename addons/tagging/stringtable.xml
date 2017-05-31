@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tagging">
         <Key ID="STR_ACE_Tagging_Tagging">
@@ -8,6 +8,8 @@
             <Polish>Tagowanie</Polish>
             <German>Markierungssystem</German>
             <Korean>뿌리기</Korean>
+            <French>Marquage</French>
+            <Italian>Marcamento</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
@@ -16,6 +18,8 @@
             <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
             <German>Konfiguriert, wie das Markierungssystem standardmäßig funktioniert.</German>
             <Korean>뿌리기 시스템의 기본사항을 설정합니다.</Korean>
+            <French>Configure le fonctionnement par défaut du système de marquage.</French>
+            <Italian>Configura quanto il sistema di marcamento agirà da se.</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Quick Tag</English>
@@ -24,6 +28,8 @@
             <Polish>Szybkie tagowanie</Polish>
             <German>Schnelle Markierung</German>
             <Korean>빠른 뿌리기</Korean>
+            <French>Marquage rapide</French>
+            <Italian>Marcamento Rapido</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
@@ -32,6 +38,8 @@
             <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>이 동작은 상호작용에서 뿌리기를 할 수 있게 해준다</Korean>
+            <French>Action réalisé au point de marquage principal.</French>
+            <Italian>Azione eseguita sul punto di interazione dei tag principali.</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_LastUsed">
             <English>Last Used</English>
@@ -40,6 +48,8 @@
             <Polish>Ostatnio użyte</Polish>
             <German>Zuletzt benutzt</German>
             <Korean>최근 사용</Korean>
+            <French>Dernier utilisé</French>
+            <Italian>Ultimo Usato</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_RandomX">
             <English>Random X</English>
@@ -48,6 +58,8 @@
             <Polish>Losowy X</Polish>
             <German>Zufällig X</German>
             <Korean>무작위 X</Korean>
+            <French>Aléatoire X</French>
+            <Italian>Random X</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
@@ -56,19 +68,21 @@
             <Polish>Losowy</Polish>
             <German>Zufällig</German>
             <Korean>무작위</Korean>
+            <French>Aléatoire</French>
+            <Italian>Random</Italian>
         </Key>
         <Key ID="STR_ACE_Tagging_Tag">
             <English>Tag</English>
             <German>Markieren</German>
             <Spanish>Marcar</Spanish>
-            <Polish>Taguj</Polish>
-            <French>Tag</French>
+            <Polish>Oznakuj</Polish>
             <Italian>Marca</Italian>
             <Czech>Označit</Czech>
             <Portuguese>Marcar</Portuguese>
             <Russian>Маркер</Russian>
             <Japanese>タグ</Japanese>
             <Korean>뿌리기</Korean>
+            <French>Tag</French>
         </Key>
         <Key ID="STR_ACE_Tagging_XBlack">
             <English>X black</English>
@@ -179,7 +193,7 @@
             <German>Eine Farbsprühdose um Wände zu markieren.</German>
             <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
             <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Un spray de peinture pour taguer les murs.</French>
+            <French>Un spray de peinture pour marquer les murs.</French>
             <Italian>Una bomboletta di spay per contrassegnare i muri.</Italian>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
             <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>

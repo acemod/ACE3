@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical Menu">
         <Key ID="STR_ACE_Medical_Menu_OpenMenu">
@@ -305,7 +305,7 @@
             <German>Setze Status auf der Triagekarte</German>
             <Russian>Сортировка</Russian>
             <Spanish>Seleccionar estado de Triage</Spanish>
-            <French>Selectioner l'état de triage</French>
+            <French>Sélectionner l'état de triage</French>
             <Polish>Wybierz priorytet</Polish>
             <Portuguese>Selecionar estado de triagem</Portuguese>
             <Czech>Vybrat prioritu</Czech>
@@ -318,7 +318,7 @@
             <German>Wähle Kopf</German>
             <Russian>Выбрать голову</Russian>
             <Spanish>Seleccionar Cabeza</Spanish>
-            <French>Selectioner Tête</French>
+            <French>Sélectionner la tête</French>
             <Polish>Wybierz głowę</Polish>
             <Portuguese>Selecionar Cabeça</Portuguese>
             <Czech>Vybrat Hlavu</Czech>
@@ -331,7 +331,7 @@
             <German>Wähle Torso</German>
             <Russian>Выбрать торс</Russian>
             <Spanish>Seleccionar Torso</Spanish>
-            <French>Selectioner Torse</French>
+            <French>Sélectionner le torse</French>
             <Polish>Wybierz tors</Polish>
             <Portuguese>Selecionar Torso</Portuguese>
             <Czech>Vybrat Trup</Czech>
@@ -344,7 +344,7 @@
             <German>Wähle linken Arm</German>
             <Russian>Выбрать левую руку</Russian>
             <Spanish>Seleccionar Brazo Izquierdo</Spanish>
-            <French>Selectioner Bras Gauche</French>
+            <French>Sélectionner le bras gauche</French>
             <Polish>Wybierz lewą rękę</Polish>
             <Portuguese>Selecionar Braço Esquerdo</Portuguese>
             <Czech>Vybrat Levou ruku</Czech>
@@ -357,7 +357,7 @@
             <German>Wähle rechten Arm</German>
             <Russian>Выбрать правую руку</Russian>
             <Spanish>Seleccionar Brazo Derecho</Spanish>
-            <French>Selectioner Bras Droit</French>
+            <French>Sélectionner le bras droit</French>
             <Polish>Wybierz prawą rękę</Polish>
             <Portuguese>Selecionar Braço Direito</Portuguese>
             <Czech>Vybrat Pravou ruku</Czech>
@@ -370,7 +370,7 @@
             <German>Wähle linkes Bein</German>
             <Russian>Выбрать левую ногу</Russian>
             <Spanish>Seleccionar Pierna Izquierda</Spanish>
-            <French>Selectioner Jambe Gauche</French>
+            <French>Sélectionner la jambe gauche</French>
             <Polish>Wybierz lewą nogę</Polish>
             <Portuguese>Selecionar Perna Esquerda</Portuguese>
             <Czech>Vybrat Levou nohu</Czech>
@@ -383,7 +383,7 @@
             <German>Wähle rechtes Bein</German>
             <Russian>Выбрать правую ногу</Russian>
             <Spanish>Seleccionar Pierna Derecha</Spanish>
-            <French>Selectioner Jambe Droite</French>
+            <French>Sélectionner la jambe droite</French>
             <Polish>Wybierz prawą nogę</Polish>
             <Portuguese>Selecionar Perna Direita</Portuguese>
             <Czech>Vybrat Pravou nohu</Czech>
@@ -422,7 +422,7 @@
             <German>Linker Arm</German>
             <Russian>Левая рука</Russian>
             <Spanish>Brazo Izquierdo</Spanish>
-            <French>Bras Gauche</French>
+            <French>Bras gauche</French>
             <Polish>Lewa ręka</Polish>
             <Portuguese>Braço Esquerdo</Portuguese>
             <Czech>Levá Ruka</Czech>
@@ -435,7 +435,7 @@
             <German>Rechter Arm</German>
             <Russian>Правая рука</Russian>
             <Spanish>Brazo Derecho</Spanish>
-            <French>Bras Droit</French>
+            <French>Bras droit</French>
             <Polish>Prawa ręka</Polish>
             <Portuguese>Braço Direito</Portuguese>
             <Czech>Pravá Ruka</Czech>
@@ -448,7 +448,7 @@
             <German>Linkes Bein</German>
             <Russian>Левая нога</Russian>
             <Spanish>Pierna Izquierda</Spanish>
-            <French>Jambe Gauche</French>
+            <French>Jambe gauche</French>
             <Polish>Lewa noga</Polish>
             <Portuguese>Perna Esquerda</Portuguese>
             <Czech>Levá Noha</Czech>
@@ -461,7 +461,7 @@
             <German>Rechtes Bein</German>
             <Russian>Правая нога</Russian>
             <Spanish>Pierna Derecha</Spanish>
-            <French>Jambe Droite</French>
+            <French>Jambe droite</French>
             <Polish>Prawa noga</Polish>
             <Portuguese>Perna Direita</Portuguese>
             <Czech>Pravá Noha</Czech>
@@ -474,7 +474,7 @@
             <German>Körperteil: %1</German>
             <Russian>Часть тела: %1</Russian>
             <Spanish>Parte del cuerpo: %1</Spanish>
-            <French>Partie du corps: %1</French>
+            <French>Partie du corps : %1</French>
             <Polish>Część ciała: %1</Polish>
             <Portuguese>Parte do corpo: %1</Portuguese>
             <Czech>Část těla: %1</Czech>
@@ -526,7 +526,7 @@
             <German>Er hat %2 offene Wunden (%1)</German>
             <Russian>%2 открытые раны %1</Russian>
             <Spanish>Hay %2 Heridas Abiertas %1</Spanish>
-            <French>Il y a %2 %1 Blessure(s) Ouverte(s)</French>
+            <French>Il y a %2 %1 blessure(s) ouverte(s)</French>
             <Polish>Widzisz otwarte rany w ilości %2 o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos abertos %1</Portuguese>
             <Czech>Jsou zde %2 %1 otevřené rány</Czech>
@@ -552,7 +552,7 @@
             <German>Er hat eine zum Teil offene Wunde (%1)</German>
             <Russian>Частично открытая рана %1</Russian>
             <Spanish>Hay una herida parcial abierta %1</Spanish>
-            <French>Il y a une Blessure Patiellement Ouverte %1</French>
+            <French>Il y a une blessure partiellement ouverte %1</French>
             <Polish>Widzisz częściowo otwartą ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial aberto %1</Portuguese>
             <Czech>Je zde částečně %1 otevřená rána</Czech>
@@ -565,7 +565,7 @@
             <German>Er hat %2 verbundene Wunden (%1)</German>
             <Russian>%2 перевязанные раны %1</Russian>
             <Spanish>Hay %2 Heridas %1 Vendadas</Spanish>
-            <French>Il y a %2 %1 Blessure(s) Bandée(s)</French>
+            <French>Il y a %2 %1 blessure(s) bandée(s)</French>
             <Polish>Widzisz %2 zabandażowanych ran o %1 rozmiarze</Polish>
             <Portuguese>Existem %2 ferimentos %1 tratados</Portuguese>
             <Czech>Jsou zde %2 %1 ovázané rány</Czech>
@@ -578,7 +578,7 @@
             <German>Er hat 1 verbundene Wunde (%1)</German>
             <Russian>1 перевязанная рана %1</Russian>
             <Spanish>Hay 1 Herida Vendada %1</Spanish>
-            <French>Il y a 1 %1 Blessure Bandée</French>
+            <French>Il y a 1 %1 blessure bandée</French>
             <Polish>Widzisz 1 zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe 1 ferimento %1 tratado</Portuguese>
             <Czech>Je zde 1 %1 ovázaná rána</Czech>
@@ -591,7 +591,7 @@
             <German>Er hat eine zum Teil verbundene Wunde (%1)</German>
             <Russian>Частично перевязанная рана %1</Russian>
             <Spanish>Hay una Herida parcial %1 Vendada</Spanish>
-            <French>Il y a %1 Blessure Partielment Bandée</French>
+            <French>Il y a %1 blessure partiellement bandée</French>
             <Polish>Widzisz 1 częściowo zabandażowaną ranę o %1 rozmiarze</Polish>
             <Portuguese>Existe um ferimento parcial tratado %1</Portuguese>
             <Czech>Je zde částěčně %1 ovázaná rána</Czech>
@@ -682,7 +682,7 @@
             <German>hat sehr viel Blut verloren</German>
             <Russian>Большая кровопотеря</Russian>
             <Spanish>Mucha Sangre perdida</Spanish>
-            <French>A Perdu Bcp de Sang</French>
+            <French>A perdu beaucoup de sang</French>
             <Polish>Stracił dużo krwi</Polish>
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Czech>Ztratil hodně krve</Czech>

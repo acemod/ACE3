@@ -27,7 +27,7 @@ private _timeVarName = format [QGVAR(%1_time), _weapon];
 private _temperature = _unit getVariable [_tempVarName, 0];
 private _lastTime = _unit getVariable [_timeVarName, 0];
 
-private _barrelMass = 0.50 * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
+private _barrelMass = METAL_MASS_RATIO * (getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> "mass") / 22.0) max 1.0;
 
 // Calculate cooling
 _temperature = [_temperature, _barrelMass, CBA_missionTime - _lastTime] call FUNC(calculateCooling);

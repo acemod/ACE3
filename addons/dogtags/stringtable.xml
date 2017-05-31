@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dogtags">
         <Key ID="STR_ACE_Dogtags_itemName">
@@ -9,6 +9,8 @@
             <Japanese>ドッグ タグ</Japanese>
             <German>Hundemarke</German>
             <Korean>군번줄</Korean>
+            <French>Plaque d'identification</French>
+            <Italian>Piastrina</Italian>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkItem">
             <English>Check Dog Tag</English>
@@ -18,6 +20,8 @@
             <Japanese>ドッグ タグを見る</Japanese>
             <German>Hundemarke prüfen</German>
             <Korean>군번줄 확인</Korean>
+            <French>Vérifier les plaques d'identification</French>
+            <Italian>Controlla Piastrina</Italian>
         </Key>
         <Key ID="STR_ACE_Dogtags_checkDogtag">
             <English>Check</English>
@@ -27,6 +31,8 @@
             <Japanese>見る</Japanese>
             <German>Prüfen</German>
             <Korean>확인</Korean>
+            <French>Vérifier</French>
+            <Italian>Controlla</Italian>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtag">
             <English>Take</English>
@@ -36,6 +42,8 @@
             <Japanese>取る</Japanese>
             <German>Nehmen</German>
             <Korean>회수</Korean>
+            <French>Prendre</French>
+            <Italian>Prendi</Italian>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
             <English>Dogtag taken from %1...</English>
@@ -45,6 +53,8 @@
             <Japanese>%1からドッグ タグを取っている・・・</Japanese>
             <German>Hundemarke von %1 genommen ...</German>
             <Korean>%1로부터 군번줄을 회수했습니다...</Korean>
+            <French>Plaque d'identification pris sur %1...</French>
+            <Italian>Piastrina presa da %1...</Italian>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
             <English>Somebody else has already taken the dogtag...</English>
@@ -54,6 +64,8 @@
             <Japanese>すでに誰かがドッグ タグを取っているようだ・・・</Japanese>
             <German>Jemand anderes hat bereits die Hundemarke genommen ...</German>
             <Korean>누군가 이미 군번줄을 회수해갔습니다...</Korean>
+            <French>Quelqu'un d'autre a déjâ pris les plaques d'identification...</French>
+            <Italian>Qualcun altro ha già preso la piastrina...</Italian>
         </Key>
     </Package>
 </Project>
