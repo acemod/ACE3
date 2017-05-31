@@ -28,22 +28,22 @@ private _animate = configProperties [_config >> "AnimationSources", "true", fals
 private _glassDoor = _door splitString "_"; 
 private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_glassDoor select 1) + "_effects", "Memory"]);    
 
-// calculate all animation names so we know what is there   
+// Calculate all animation names so we know what is there   
 {           
     _animName = configName _x;
     if ((["door", _animName] call BIS_fnc_inString) && !(["locked", _animName] call BIS_fnc_inString) && !(["disabled", _animName] call BIS_fnc_inString) && !(["handle", _animName] call BIS_fnc_inString)) then {         
-        _splitStr = _animName splitString "_";          
-        _doorParts pushBack ((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger");
+        _splitStr = _animName splitString "_"; 
+        // Get the pos of all the door componetnts
+        _doorPos pushBack (_house selectionPosition [((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger"), "Memory"]);
     };
 } forEach _animate; 
 
-{
-    _doorPos pushBack (_house selectionPosition [_x, "Memory"]);
-} forEach _doorParts;
-
+// Calculate what door that is closest to the glass door
 private _lowestDistance = 0;    
 {       
     private _dist = _glassPos distance  _x;
+    
+    //Need to set the value in the beginning
     if (_lowestDistance == 0) then {
         _lowestDistance = _dist;
         _newString = (_doorParts select _forEachIndex) splitString "_";         
