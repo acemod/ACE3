@@ -14,6 +14,8 @@
  */
 #include "script_component.hpp"
 
+params ["_weapon"];
+
 // Look in the cache first
 private _weaponData = GVAR(cacheWeaponData) getVariable _weapon;
 if (!isNil "_weaponData") exitWith {_weaponData};

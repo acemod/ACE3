@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_player", "_target");
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 params ["_object", "_enableDrag", "_position", "_direction"];
 
 if (isNil "_position") then {
