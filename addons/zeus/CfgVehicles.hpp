@@ -216,11 +216,13 @@ class CfgVehicles {
     };
     class GVAR(AddFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(Utility);
         displayName = CSTRING(moduleAddFullArsenal_displayName);
         function = QFUNC(moduleAddArsenal);
     };
     class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
         curatorCanAttach = 1;
+        category = QGVAR(Utility);
         displayName = CSTRING(moduleRemoveArsenal_displayName);
         function = QFUNC(moduleRemoveArsenal);
     };
