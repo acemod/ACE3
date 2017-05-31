@@ -1,6 +1,6 @@
 /*
  * Author: commy2, Phyma
- * Get door animations. @todo rewrite for better custom building support could look in animationsources instead of animate
+ * Get door animations.
  *
  * Arguments:
  * 0: House <OBJECT>
