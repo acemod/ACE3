@@ -32,11 +32,15 @@ private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_g
 {           
     _animName = configName _x;
     if ((["door", _animName] call BIS_fnc_inString) && !(["locked", _animName] call BIS_fnc_inString) && !(["disabled", _animName] call BIS_fnc_inString) && !(["handle", _animName] call BIS_fnc_inString)) then {         
-        _splitStr = _animName splitString "_"; 
-        // Get the pos of all the door componetnts
-        _doorPos pushBack (_house selectionPosition [((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger"), "Memory"]);
+        _splitStr = _animName splitString "_";             
+        _doorParts pushBack ((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger");
     };
 } forEach _animate; 
+
+// Get the pos of all the door components and save the parts
+{
+    _doorPos pushBack (_house selectionPosition [_x, "Memory"]);
+} forEach _doorParts;
 
 // Calculate what door that is closest to the glass door
 private _lowestDistance = 0;    

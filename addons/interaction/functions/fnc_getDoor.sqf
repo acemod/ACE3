@@ -38,6 +38,8 @@ _intersections = [_house, "GEOM"] intersect [_position0, _position1];
 _door = _intersections select 0 select 0;
 
 //Check if door is glass because then we need to find the proper location of the door so we can use it
+if (isNil "_door") exitWith {[_house, ""]};
+
 if (["glass", _door] call BIS_fnc_inString) then {
     _glassDoor = [_house, _door] call FUNC(getGlassDoor);
     _house = _glassDoor select 0;
