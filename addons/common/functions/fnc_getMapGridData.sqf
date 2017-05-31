@@ -64,8 +64,8 @@ while {_startGrid == _originGrid} do {
 private _realOffsetY = (parseNumber (_originGrid select [count _formatX, count _formatY])) * _stepY + _heightOffset - 1;
 
 //Calculate MGRS 10digit step - they should both be 1 meter:
-_stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
-_stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
+private _stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
+private _stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
 
 if (_stepYat5 < 0) then {
     WARNING_1("Map Grid Warning (%1) - Northing is reversed.",worldName);

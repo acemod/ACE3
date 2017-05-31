@@ -133,6 +133,7 @@ if (isServer) then {
 if (isServer) then {
     [QGVAR(hideObjectGlobal), {(_this select 0) hideObjectGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
+    [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
 };
@@ -295,18 +296,10 @@ enableCamShake true;
 // Set up numerous eventhanders for player controlled units
 //////////////////////////////////////////////////
 
-// It is possible that CBA_fnc_addPlayerEventHandler has allready been called and run
-// We will NOT get any events for the initial state, so manually set ACE_player
-if (!isNull (missionNamespace getVariable ["cba_events_oldUnit", objNull])) then {
-    // INFO("CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player"); //ToDo CBA 3.1
-    diag_log text "[ACE-Common - CBA_fnc_addPlayerEventHandler has already run - manually setting ace_player";
-    ACE_player = cba_events_oldUnit;
-};
-
-// "playerChanged" event
+TRACE_1("adding unit playerEH to set ace_player",isNull cba_events_oldUnit);
 ["unit", {
     ACE_player = (_this select 0);
-}] call CBA_fnc_addPlayerEventHandler;
+}, true] call CBA_fnc_addPlayerEventHandler;
 
 GVAR(OldIsCamera) = false;
 
@@ -465,8 +458,8 @@ GVAR(deviceKeyCurrentIndex) = -1;
 ["ACE3 Equipment", QGVAR(cycleDevice), (localize "STR_ACE_Common_cycleHandheldDevices"), {
     [1] call FUNC(deviceKeyFindValidIndex);
     if (GVAR(deviceKeyCurrentIndex) == -1) exitWith {false};
-    _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
-    _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
+    private _displayName = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 0);
+    private _iconImage = ((GVAR(deviceKeyHandlingArray) select GVAR(deviceKeyCurrentIndex)) select 1);
     [_displayName, _iconImage] call FUNC(displayTextPicture);
     true
 },

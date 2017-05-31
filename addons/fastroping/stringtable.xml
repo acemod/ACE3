@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Fastroping">
         <Key ID="STR_ACE_Fastroping_Module_FRIES_DisplayName">
@@ -7,7 +7,7 @@
             <Polish>Wyposaż FRIES</Polish>
             <French>Equiper le FRIES</French>
             <Spanish>Equipar FRIES</Spanish>
-            <Italian>Equipaggia la FRIES</Italian>
+            <Italian>Equipaggia il FRIES</Italian>
             <Czech>Vybavit FRIES</Czech>
             <Portuguese>Equipar FRIES</Portuguese>
             <Russian>Десантирование по канатам</Russian>
@@ -20,7 +20,7 @@
             <Polish>Wyposaża kompatybilne helikoptery w zestaw Fast Rope Insertion Extraction System.</Polish>
             <French>Equipe les hélicoptères compatibles avec un Module Fast Rope Insertion Extraction System.</French>
             <Spanish>Equipar helicoptero compatible con un Sistema de Inserción Extracción Fast Rope.</Spanish>
-            <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Exstraction System</Italian>
+            <Italian>Equipagga l'elicottero compatibile con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit kompatibilní vrtulníky systémem Fast Rope Insertion Extraction (FRIES).</Czech>
             <Portuguese>Equipa um helicóptero compatível com o Fast Rope Insertion Exctraction System.</Portuguese>
             <Russian>Снаряжает совместимые вертолеты оборудованием для спуска десанта по канатам.</Russian>
@@ -59,7 +59,7 @@
             <Polish>Zjedź na linie</Polish>
             <French>Descendre à la corde</French>
             <Spanish>Descender por la cuerda</Spanish>
-            <Italian>Scendi sulla corda</Italian>
+            <Italian>Scendi dalla corda</Italian>
             <Czech>SLANIT</Czech>
             <Portuguese>Descida rápida</Portuguese>
             <Russian>Спуститься по канату</Russian>
@@ -85,7 +85,7 @@
             <Polish>Wyposaż helikopter w FRIES</Polish>
             <French>Equiper l'hélicoptère avec le FRIES</French>
             <Spanish>Equipar helicoptero con FRIES</Spanish>
-            <Italian>Equipaggia l'elicottero con FRIES</Italian>
+            <Italian>Equipaggia l'elicottero con il FRIES</Italian>
             <Czech>Vybavit vrtulník pomocí FRIES</Czech>
             <Portuguese>Equipar helicóptero com FRIES</Portuguese>
             <Russian>Снарядить вертолет канатами для спуска</Russian>

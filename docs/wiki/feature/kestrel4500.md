@@ -12,21 +12,45 @@ version:
   patch: 0
 ---
 
-## Overview
+## 1. Overview
 
-### Sub-feature 1
-Short description of sub-feature 1.
+The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This is a mini weather station in itself :
+- Heading
+- Wind direction
+- Crosswind
+- Headwind
+- Altitude
+- Barometric pressure
+- Wet bulb temperature
+- Relative humidity in %
+- Dewpoint
+- Density altitude
+- Wind chill
+- Temperature °C
+- Time and date
+- Minimum, Maximum and Average values
 
-### Sub-feature 2
-Short description of sub-feature 2.
+
+## 2. Usage
+
+### 2.1 Opening the Kestrel
+
+#### 2.1.1 Interaction Menu
+- Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
+- Select `Equipment`
+- Select `Open Kestrel 4500`
+
+#### 2.1.2 Custom key
+- `OPTIONS` / `CONTROLS` / `CONFIGURE ADDONS` / `ACE3 Equipment`
+
+#### 2.1.3 Inventory
+<img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory management" />
 
 
-## Usage
-
-Short overview of how to use the feature, e.g. menu options, key bindings,
-instructions. May not apply to all modules.
+## 3. Official Manual
+- [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/K4500_Instruction_Manual_English.pdf)
 
 
-## Dependencies
+## 4. Dependencies
 
 {% include dependencies_list.md component="kestrel4500" %}

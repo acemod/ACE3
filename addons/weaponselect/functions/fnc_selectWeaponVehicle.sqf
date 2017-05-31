@@ -31,7 +31,7 @@ if (_turret isEqualTo [] && {_unit == driver _vehicle}) then {
     _index = 0;
 
     while {
-        _index < 100 && {currentWeapon _vehicle != _weapon}
+        _index < 299 && {currentWeapon _vehicle != _weapon}
     } do {
         _unit action ["SwitchWeapon", _vehicle, _unit, _index];
         _index = _index + 1;
@@ -46,7 +46,7 @@ if (_turret isEqualTo [] && {_unit == driver _vehicle}) then {
     _index = 0;
 
     while {
-        _index < 100 && {_vehicle currentWeaponTurret _turret != _weapon}
+        _index < 299 && {_vehicle currentWeaponTurret _turret != _weapon}
     } do {
         _unit action ["SwitchWeapon", _vehicle, _unit, _index];
         _index = _index + 1;

@@ -170,3 +170,34 @@ Name | Use
 0  | `player` | Unit explosive will connect to
 1  | `claymore1` | Explosive object that will be connected
 2  | `"ACE_Clacker"` | Detonator type class name
+
+#### 5.3 Detonation Handler.
+
+Detonation Handlers are called when something attempts to trigger an explosive. They can be used to block the detonation.
+
+These are only used for script based triggers like clackers, cellphone and timers (anything that uses `detonateExplosive`).
+Sensor based triggers like AT Mines, Tripwires are uneffected.
+All added handlers will be called, if ANY one returns false, the detonation will be blocked.
+
+`[{CODE}] call ace_explosives_fnc_addDetonateHandler;`
+
+CODE will be passed `[Unit<OBJECT>, MaxRange <NUMBER>, Explosive <OBJECT>, FuzeTime <NUMBER>, TriggerItem <STRING>]` and should return a bool: true(allowed) / false(blocked)
+
+#### 5.3.1 Example
+
+Jammer that blocks RF triggers:
+
+```cpp
+[{
+    params ["_unit", "_range", "_explosive", "_fuzeTime", "_triggerItem"];
+    if (_triggerItem == "ace_cellphone") exitWith { systemChat "Blocking Cell Phone"; false }; // always block cell phones
+    if (_triggerItem == "ace_m26_clacker") exitWith {
+        _range = _range / 1000;
+        private _actualRange = _unit distance _explosive;
+        systemChat format ["Limited Range For RF Clacker [%1m / %2m]", _actualRange toFixed 1, _range toFixed 1];
+        (_actualRange < _range) // return bool
+    };
+    // allow anything else (like timers / wired clackers)
+    true
+}] call ace_explosives_fnc_addDetonateHandler;
+```

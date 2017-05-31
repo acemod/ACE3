@@ -115,7 +115,7 @@
             <Italian>Sto Riarmando %1 con %2...</Italian>
             <Spanish>Rearmando %1 con %2...</Spanish>
             <French>Réarmement de %1 avec %2...</French>
-            <Japanese>%2により%1を再武装する。</Japanese>
+            <Japanese>%1を%2により再武装する。</Japanese>
             <Korean>%2을 %1에 재보급중...</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_BasicRearmAction">
@@ -141,7 +141,7 @@
             <Italian>Sto prendendo %1 per %2...</Italian>
             <Spanish>Tomando %1 para %2...</Spanish>
             <French>Prend %1 pour %2...</French>
-            <Japanese>%2のために%1を取得しています・・・</Japanese>
+            <Japanese>%1を%2のために取得しています・・・</Japanese>
             <Korean>%2를 위해 %1 가져오는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_TakeAmmo">
@@ -193,7 +193,7 @@
             <Italian>Sto riponendo %1 in %2...</Italian>
             <Spanish>Guardando %1 en %2...</Spanish>
             <French>Stocke %1 dans %2...</French>
-            <Japanese>%2へ%1を戻しています・・・</Japanese>
+            <Japanese>%1を%2へ戻しています・・・</Japanese>
             <Korean>%2에 %1 보관중...</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_GrabAction">
@@ -218,7 +218,7 @@
             <Italian>Riarmati %1 colpi di %2 su %3</Italian>
             <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
             <French>%1 balles réarmées de %2 dans %3</French>
-            <Japanese>%3にある%2の%1弾頭を再武装した</Japanese>
+            <Japanese>%1発の%2を%3から装填した</Japanese>
             <Korean>%3에 2%의 %1 탄약 재보급</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
