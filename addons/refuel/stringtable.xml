@@ -404,5 +404,10 @@
             <Japanese>%1 リッターがある</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
+            <English>Refuel hose length</English>
+            <German>Betankung Schlauchlänge</German>
+            <Spanish>Reabastecer longitud de manguera</Spanish>
+        </Key>
     </Package>
 </Project>
