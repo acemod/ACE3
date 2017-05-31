@@ -66,5 +66,5 @@ GVAR(usedScrollWheel) = false;
         GVAR(usedScrollWheel) = true;
     };
     // do incremental door opening
-    {_house animate [_x, GVAR(doorTargetPhase)];  false} count _animations;
+    {_house animate [_x, GVAR(doorTargetPhase)]; false} count _animations;
 }, 0.1, [_house, _animations, getPosASL ACE_player, CBA_missionTime + 0.2, diag_frameno + 2]] call CBA_fnc_addPerFrameHandler;
