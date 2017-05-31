@@ -28,6 +28,7 @@ GVAR(initializedItemClasses) pushBack _type;
 TRACE_1("Adding load cargo action to class", _type);
 
 private _condition = {
+    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
     GVAR(enable) &&
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad))]) == 1} &&
     {locked _target < 2} &&

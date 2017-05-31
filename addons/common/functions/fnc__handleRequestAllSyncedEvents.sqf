@@ -15,6 +15,7 @@
 params ["_client"];
 
 [GVAR(syncedEvents), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
     _value params ["", "_eventLog"];
 
     ["ACEs", [_key, _eventLog], _client] call CBA_fnc_targetEvent;
