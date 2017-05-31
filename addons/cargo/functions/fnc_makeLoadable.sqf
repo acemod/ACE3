@@ -22,7 +22,7 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(makeLoadable), _this];
 };
 
-ACE_DEPRECATED(QFUNC(makeLoadable),"3.11.0",QFUNC(setSize));
+ACE_DEPRECATED(QFUNC(makeLoadable),"3.12.0",QFUNC(setSize));
 
 params [["_object", objNull, [objNull]], ["_canLoad", true, [false, 0]], ["_setSize", 1, [0]]];
 TRACE_3("params",_object,_canLoad,_setSize);

@@ -1,19 +1,18 @@
 /*
  * Author: SilentSpike
- * Set the cargo size of any object, only affects the local machine unless specified.
+ * Set the cargo size of any object. Has global effect.
  * Adds the load action menu if necessary.
  * Negative size makes unloadable.
  *
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Cargo size <NUMBER>
- * 2: Apply globally <BOOL> (Default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorTarget, 3, true] call ace_cargo_fnc_setSize
+ * [cursorTarget, 3] call ace_cargo_fnc_setSize
  *
  * Public: Yes
  */
@@ -26,8 +25,7 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
 
 params [
     ["_object",objNull,[objNull]],
-    ["_size",nil,[0]], // Default can't be a number since all are valid
-    ["_global",false,[true]]
+    ["_size",nil,[0]] // Default can't be a number since all are valid
 ];
 
 // Nothing to do here
@@ -45,18 +43,13 @@ _object setVariable [QGVAR(size), _size, _global];
 // If no size no need for load action
 if (_size < 0) exitWith {};
 
-// Add the load action if necessary (globally if specified)
-if (_global) then {
-    // If an existing ID is present, load action has already been added globally
-    private _jipID = _object getVariable QGVAR(setSize_jipID);
+// If an existing ID is present, load action has already been added globally
+private _jipID = _object getVariable QGVAR(setSize_jipID);
 
-    // Actions should be added to all future JIP players too
-    if (isNil "_jipID") then {
-        _jipID = [QGVAR(initObject), [_object]] call CBA_fnc_globalEventJIP;
+// Actions should be added to all future JIP players too
+if (isNil "_jipID") then {
+    _jipID = [QGVAR(initObject), [_object]] call CBA_fnc_globalEventJIP;
 
-        // Store the ID for any future calls to this function
-        _object setVariable [QGVAR(setSize_jipID), _jipID, true];
-    };
-} else {
-    [_object] call FUNC(initObject);
+    // Store the ID for any future calls to this function
+    _object setVariable [QGVAR(setSize_jipID), _jipID, true];
 };

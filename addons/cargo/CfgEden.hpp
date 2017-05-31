@@ -9,7 +9,7 @@ class Cfg3DEN {
                         property = QGVAR(space);
                         control = "Edit";
 
-                        expression = QUOTE([ARR_3(_this,_value,true)] call DFUNC(setSpace););
+                        expression = QUOTE([ARR_2(_this,_value)] call DFUNC(setSpace););
                         defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(space),0));
 
                         validate = "number";
@@ -23,7 +23,7 @@ class Cfg3DEN {
                         control = "Edit";
 
                         // Expression only runs on the server, must handle actions for all machines and future JIPs (Why BI?!)
-                        expression = QUOTE([ARR_3(_this,_value,true)] call DFUNC(setSize););
+                        expression = QUOTE([ARR_2(_this,_value)] call DFUNC(setSize););
                         defaultValue = QUOTE(GET_NUMBER(configFile >> 'CfgVehicles' >> typeOf _this >> QQGVAR(size),-1));
 
                         validate = "number";

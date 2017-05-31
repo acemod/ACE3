@@ -20,7 +20,7 @@
 params ["_logic", "_objects", "_activated"];
 TRACE_3("params",_logic,_objects,_activated);
 
-ACE_DEPRECATED(QFUNC(moduleMakeLoadable),"3.11.0","Eden editor object attributes");
+ACE_DEPRECATED(QFUNC(moduleMakeLoadable),"3.12.0","Eden editor object attributes");
 
 if ((isNull _logic) || {!_activated}) exitWith {};
 if (_objects isEqualTo []) exitWith {
