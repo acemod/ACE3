@@ -52,8 +52,10 @@ private _condition = {
     {alive _target} &&
     {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
     {0 < {
-            1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo)) &&
-            {_x != _target}
+            private _type = typeOf _x;
+            private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
+            private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
+            (_hasCargoPublic || _hasCargoConfig) && {_x != _target}
         } count (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE])}
 };
 private _statement = {

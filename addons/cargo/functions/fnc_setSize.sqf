@@ -27,6 +27,7 @@ params [
     ["_object",objNull,[objNull]],
     ["_size",nil,[0]] // Default can't be a number since all are valid
 ];
+TRACE_2("setSize",_object,_size);
 
 // Nothing to do here
 if (

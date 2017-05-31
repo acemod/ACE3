@@ -26,6 +26,7 @@ params [
     ["_vehicle",objNull,[objNull]],
     ["_space",nil,[0]] // Default can't be a number since all are valid
 ];
+TRACE_2("setSpace",_vehicle,_size);
 
 // Nothing to do here
 if (
