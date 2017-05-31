@@ -35,10 +35,10 @@ if (
     {_size == _object getVariable [QGVAR(size), CARGO_SIZE(typeOf _object)]}
 ) exitWith {};
 
-// Apply new size globally if specified
+// Apply new size globally
 // Necessary to update value, even if unloadable, as API could be used again
-_object setVariable [QGVAR(canLoad), _size >= 0, _global];
-_object setVariable [QGVAR(size), _size, _global];
+_object setVariable [QGVAR(canLoad), _size >= 0, true];
+_object setVariable [QGVAR(size), _size, true];
 
 // If no size no need for load action
 if (_size < 0) exitWith {};

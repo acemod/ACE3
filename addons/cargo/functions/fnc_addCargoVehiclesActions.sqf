@@ -16,6 +16,8 @@
  */
 #include "script_component.hpp"
 
+params ["_target", "_player"];
+
 private _statement = {
     params ["_target", "_player", "_params"];
     _params params ["_vehicle"];

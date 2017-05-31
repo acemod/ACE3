@@ -34,10 +34,10 @@ if (
     {_space == _vehicle getVariable [QGVAR(space), CARGO_SPACE(typeOf _vehicle)]}
 ) exitWith {};
 
-// Apply new space globally if specified
+// Apply new space globally
 // Necessary to update value, even if no space, as API could be used again
-_vehicle setVariable [QGVAR(hasCargo), _space > 0, _global];
-_vehicle setVariable [QGVAR(space), _space, _global];
+_vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
+_vehicle setVariable [QGVAR(space), _space, true];
 
 // If no cargo space no need for cargo menu
 if (_space <= 0) exitWith {};

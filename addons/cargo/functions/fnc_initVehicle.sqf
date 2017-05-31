@@ -57,6 +57,7 @@ if (_hasCargoConfig) then {
 };
 
 private _condition = {
+    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
     GVAR(enable) &&
     {(_target getVariable [QGVAR(hasCargo), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(hasCargo)) == 1])} &&
     {locked _target < 2} &&
@@ -64,6 +65,7 @@ private _condition = {
     {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
 private _statement = {
+    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
     GVAR(interactionVehicle) = _target;
     GVAR(interactionParadrop) = false;
     createDialog QGVAR(menu);
@@ -81,6 +83,7 @@ if (_hasCargoConfig) then {
 // Add the paradrop self interaction for planes and helicopters
 if (_vehicle isKindOf "Air") then {
     private _condition = {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(enable) && {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
             private _turretPath = _player call CBA_fnc_turretPath;
             (_player == (driver _target)) || // pilot
@@ -88,6 +91,7 @@ if (_vehicle isKindOf "Air") then {
             {_turretPath in (getArray (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(loadmasterTurrets)))}} // loadMaster turret from config
     };
     private _statement = {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(interactionVehicle) = _target;
         GVAR(interactionParadrop) = true;
         createDialog QGVAR(menu);
