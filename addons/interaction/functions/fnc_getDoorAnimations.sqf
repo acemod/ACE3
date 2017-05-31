@@ -22,13 +22,12 @@ params ["_house", "_door"];
 
 private ["_index", "_animations", "_lockedVariable"];
 
-private _config = _house call CBA_fnc_getObjectConfig;
-private _animate = getArray(_config >> "SimpleObject" >> "animate");
+private _animate = animationNames _house;
 private _animations = [];
 private _lockedVariable = [];
 
 {
-    _animName = _x select 0;
+    _animName = _x;
     if ([toLower _door, _animName] call BIS_fnc_inString) then {
         if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then {
             _LockedVariable pushBack _animName;

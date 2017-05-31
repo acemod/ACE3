@@ -3,13 +3,12 @@
  * Find glass door.
  *
  * Arguments:
- * 0: House <OBJECT>
- * 1: Door name <STRING>
+ * 0: Distance <NUMBER>
+ * 1: House <OBJECT>
+ * 2: Door name <STRING>
  *
- * Return Value:
- * House objects and door <ARRAY>
- * 0: House <OBJECT>
- * 1: Door Name <STRING>
+ * Return Value: 
+ * 0: Door Name <STRING>
  *
  * Example:
  * [player, target] call ace_interaction_fnc_getGlassDoor
@@ -18,19 +17,17 @@
  */
 #include "script_component.hpp"
 
-params ["_house", "_door"]; 
+params ["_distance", "_house", "_door"]; 
 
-private ["_animName", "_splitStr", "_newString", "_dist", "_animate"];
+private ["_animName", "_splitStr", "_newString", "_objDist", "_animate"];
 private _doorParts = [];
 private _doorPos = [];
-private _config = _house call CBA_fnc_getObjectConfig;  
-private _animate = configProperties [_config >> "AnimationSources", "true", false];
+private _animate = animationNames _house;
 private _glassDoor = _door splitString "_"; 
-private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_glassDoor select 1) + "_effects", "Memory"]);    
-
+private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_glassDoor select 1) + "_effects", "Memory"]);     
 // Calculate all animation names so we know what is there   
 {           
-    _animName = configName _x;
+    _animName = _x;
     if ((["door", _animName] call BIS_fnc_inString) && !(["locked", _animName] call BIS_fnc_inString) && !(["disabled", _animName] call BIS_fnc_inString) && !(["handle", _animName] call BIS_fnc_inString)) then {         
         _splitStr = _animName splitString "_";             
         _doorParts pushBack ((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger");
@@ -45,20 +42,26 @@ private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_g
 // Calculate what door that is closest to the glass door
 private _lowestDistance = 0;    
 {       
-    private _dist = _glassPos distance  _x;
+    private _objDist = _glassPos distance  _x;
     
-    //Need to set the value in the beginning
-    if (_lowestDistance == 0) then {
-        _lowestDistance = _dist;
-        _newString = (_doorParts select _forEachIndex) splitString "_";         
-        _door = ((_newString select 0) + "_" + (_newString select 1) + "_rot");
-    } else {
-        if (_dist < _lowestDistance) then {
-            _lowestDistance = _dist;
+    if (_objDist <= _distance) then {    
+        //Need to set the value in the beginning
+        if (_lowestDistance == 0) then {
+            _lowestDistance = _objDist;
             _newString = (_doorParts select _forEachIndex) splitString "_";         
-            _door = ((_newString select 0) + "_" + (_newString select 1) + "_rot");             
-        };          
-    };                          
+            _door = (_newString select 0) + "_" + (_newString select 1);
+        } else {
+            if (_objDist < _lowestDistance) then {               
+                _lowestDistance = _objDist;
+                _newString = (_doorParts select _forEachIndex) splitString "_";         
+                _door = (_newString select 0) + "_" + (_newString select 1); 
+            };          
+        };
+    };        
 } forEach _doorPos;
 
-[_house, _door]
+// Check if we have a door or if it is the glass part
+if (isNil "_door"|| (["glass", _door] call BIS_fnc_inString)) exitWith {};
+
+_door
+
