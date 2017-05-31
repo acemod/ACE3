@@ -28,14 +28,14 @@ private _animations = [];
 private _lockedVariable = [];
 
 {
-	_animName = _x select 0;
-	if ([toLower _door, _animName] call BIS_fnc_inString) then {
-		if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then {
-			_LockedVariable pushBack _animName;
-		} else {
-			_animations pushBack _animName;
-		};
-	};
+    _animName = _x select 0;
+    if ([toLower _door, _animName] call BIS_fnc_inString) then {
+        if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then {
+            _LockedVariable pushBack _animName;
+        } else {
+            _animations pushBack _animName;
+        };
+    };
 } forEach _animate;
 
 [_animations, _lockedVariable]
