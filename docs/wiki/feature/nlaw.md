@@ -8,7 +8,7 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: 9
+  minor: 10
   patch: 0
 ---
 

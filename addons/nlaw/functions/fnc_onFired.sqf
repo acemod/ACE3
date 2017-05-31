@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Sets up missile guidance state arrays (called from missileGuidance's onFired)
+ * Sets up missile guidance state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>
@@ -60,4 +60,3 @@ _attackProfileStateParams set [0, CBA_missionTime];
 _attackProfileStateParams set [1, _firedLOS];
 _attackProfileStateParams set [2, _yawChange];
 _attackProfileStateParams set [3, _pitchChange];
-

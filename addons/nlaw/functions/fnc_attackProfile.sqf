@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * NLAW missile guidance attack profile
+ * NLAW missile guidance attack profile.
  *
  * Arguments:
  * 0: Seeker Target PosASL <ARRAY>
