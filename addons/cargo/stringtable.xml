@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -236,6 +236,18 @@
             <Russian>Размер объекта</Russian>
             <Japanese>オブジェクトの大きさ</Japanese>
             <Korean>물체 크기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Cargo_space_edenName">
+            <English>Cargo Space</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_space_edenDesc">
+            <English>The cargo space available in this vehicle/container</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_size_edenName">
+            <English>Cargo Size</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_size_edenDesc">
+            <English>The cargo space required to hold this object (-1 for unloadable)</English>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
