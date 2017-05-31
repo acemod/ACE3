@@ -30,7 +30,7 @@ if (_animations isEqualTo []) exitWith {};
 
 //Check if the door can be locked aka have locked variable, otherwhise cant lock it
 if (!(isNil (_lockedVariable select 0))) then {
-    if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
+    if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
         _lockedVariable set [0, _house];
         _lockedVariable call BIS_fnc_LockedDoorOpen;
     };

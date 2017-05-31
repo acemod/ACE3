@@ -19,7 +19,6 @@
 
 params ["_distance", "_house", "_door"]; 
 
-private ["_animName", "_splitStr", "_newString", "_objDist", "_animate"];
 private _doorParts = [];
 private _doorPos = [];
 private _animate = animationNames _house;
@@ -27,9 +26,9 @@ private _glassDoor = _door splitString "_";
 private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_glassDoor select 1) + "_effects", "Memory"]);     
 // Calculate all animation names so we know what is there   
 {           
-    _animName = _x;
-    if ((["door", _animName] call BIS_fnc_inString) && !(["locked", _animName] call BIS_fnc_inString) && !(["disabled", _animName] call BIS_fnc_inString) && !(["handle", _animName] call BIS_fnc_inString)) then {         
-        _splitStr = _animName splitString "_";             
+    private _animName = toLower _x;
+    if (((_animName find "door") != -1) && ((_animName find "locked") == -1) && ((_animName find "disabled") == -1) && ((_animName find "handle") == -1)) then {         
+        private _splitStr = _animName splitString "_";             
         _doorParts pushBack ((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger");
     };
 } forEach _animate; 
@@ -42,26 +41,26 @@ private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_g
 // Calculate what door that is closest to the glass door
 private _lowestDistance = 0;    
 {       
-    private _objDist = _glassPos distance  _x;
-    
+    private _objDist = _glassPos distance  _x;   
+    //Make sure we dont take another door by mistake
     if (_objDist <= _distance) then {    
         //Need to set the value in the beginning
         if (_lowestDistance == 0) then {
             _lowestDistance = _objDist;
-            _newString = (_doorParts select _forEachIndex) splitString "_";         
-            _door = (_newString select 0) + "_" + (_newString select 1);
+            private _splitStr = (_doorParts select _forEachIndex) splitString "_";         
+            _door = (_splitStr select 0) + "_" + (_splitStr select 1);
         } else {
             if (_objDist < _lowestDistance) then {               
                 _lowestDistance = _objDist;
-                _newString = (_doorParts select _forEachIndex) splitString "_";         
-                _door = (_newString select 0) + "_" + (_newString select 1); 
+                private _splitStr = (_doorParts select _forEachIndex) splitString "_";         
+                _door = (_splitStr select 0) + "_" + (_splitStr select 1); 
             };          
         };
     };        
 } forEach _doorPos;
 
 // Check if we have a door or if it is the glass part
-if (isNil "_door"|| (["glass", _door] call BIS_fnc_inString)) exitWith {};
+if ((isNil "_door") || ((_door find "glass") != -1)) exitWith {};
 
 _door
 

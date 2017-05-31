@@ -20,17 +20,15 @@
 
 params ["_house", "_door"];
 
-private ["_index", "_animations", "_lockedVariable"];
-
 private _animate = animationNames _house;
 private _animations = [];
 private _lockedVariable = [];
 
 {
-    _animName = _x;
-    if ([toLower _door, _animName] call BIS_fnc_inString) then {
-        if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then {
-            _LockedVariable pushBack _animName;
+    private _animName = toLower _x;    
+    if ((_animName find (toLower _door)) != -1) then {        
+        if (((_animName find "disabled") != -1) || ((_animName find "locked") != -1)) then {
+            _lockedVariable pushBack _animName;
         } else {
             _animations pushBack _animName;
         };
