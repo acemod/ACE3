@@ -8,14 +8,12 @@ jQuery(document).ready(function(){
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 6000,
-            responsive: [
-                {
-                    breakpoint: 640,
-                    settings: {
-                        arrows: false
-                    }
+            responsive: [{
+                breakpoint: 639,
+                settings: {
+                    arrows: false
                 }
-            ]
+            }]
         });
     }
 

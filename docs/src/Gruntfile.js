@@ -90,7 +90,7 @@ module.exports = function (grunt) {
                 files: [
                     "js/**/*.js"
                 ],
-                tasks: ["concat", "uglify"]
+                tasks: ["buildJs"]
             },
             img: {
                 files: [
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
                 dest: ".tmp/foundation.js"
             },
             footer: {
-                src: [vendor, ".tmp/foundation.js", custom],
+                src: [vendor, ".tmp/foundation.es5.js", custom],
                 dest: "../js/footer.min.js"
             }
         },
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
             },
             foundation: {
                 files: {
-                    ".tmp/foundation.js": ".tmp/foundation.js"
+                    ".tmp/foundation.es5.js": ".tmp/foundation.js"
                 }
             }
         },
@@ -126,10 +126,6 @@ module.exports = function (grunt) {
         uglify: {
             "footer": {
                 options: {
-                    sourceMap: "../js/footer-source-map.js",
-                    sourceMappingURL: "footer-source-map.js",
-                    sourceMapPrefix: 2,
-                    sourceMapRoot: "../../dist/js/",
                     mangle: true,
                     compress: true
                 },
@@ -151,7 +147,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask("buildJs", ["concat:foundation", "babel", "concat:footer"/*, "uglify:footer"*/]);
+    grunt.registerTask("buildJs", ["concat:foundation", "babel", "concat:footer", "uglify:footer"]);
 
     grunt.registerTask("build", ["sass:dev", "postcss:autoprefixer", "buildJs"]);
 
