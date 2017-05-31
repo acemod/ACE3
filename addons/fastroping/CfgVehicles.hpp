@@ -240,4 +240,21 @@ class CfgVehicles {
             };
         };
     };
+
+    class NATO_Box_Base;
+    class ACE_fastropingSupplyCrate: NATO_Box_Base {
+        scope = 2;
+        scopeCurator = 2;
+        accuracy = 1000;
+        displayName = CSTRING(Ropesupply);
+        model = "\A3\Weapons_F\AmmoBoxes\Box_NATO_AmmoVeh_F.p3d";
+        author = ECSTRING(common,ACETeam);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_rope12,15);
+            MACRO_ADDITEM(ACE_rope15,15);
+            MACRO_ADDITEM(ACE_rope18,15);
+            MACRO_ADDITEM(ACE_rope27,15);
+            MACRO_ADDITEM(ACE_rope36,15);
+        };
+    };
 };
