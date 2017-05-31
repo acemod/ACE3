@@ -250,5 +250,6 @@ class ACE_ZeusActions {
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
+        condition = QUOTE((count (curatorSelected select 3)) > 0);
     };
 };
