@@ -21,7 +21,7 @@
 params ["", "_args", "_seekerStateParams"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
-_launchParams params ["", "_targetParams", "", "_attackProfile"];
+_launchParams params ["", "_targetLaunchParams", "", "_attackProfile"];
 _targetLaunchParams params ["", "", "_launchPos"];
 
 if (_attackProfile == QGVAR(directAttack)) exitWith {[0,0,0]};
@@ -60,7 +60,6 @@ if ((_projPos distance _launchPos) >= 20) then {
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
                 TRACE_3("Firing shaped charge down",_target,_targetPos distance _virtualPos,_frameDistance);
                 TRACE_2("",_target worldToModel (ASLtoAGL _virtualPos),boundingBoxReal _target);
-                _testX = + _virtualPos;
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
                 deleteVehicle _projectile;
