@@ -1,6 +1,6 @@
 /*
  * Author: commy2, Phyma
- * Get door animations. @todo rewrite for better custom building support
+ * Get door animations. @todo rewrite for better custom building support could look in animationsources instead of animate
  *
  * Arguments:
  * 0: House <OBJECT>
@@ -24,14 +24,13 @@ private ["_index", "_animations", "_lockedVariable"];
 
 private _config = _house call CBA_fnc_getObjectConfig;
 private _animate = getArray(_config >> "SimpleObject" >> "animate");
-
-_animations = [];
-_lockedVariable = [];
+private _animations = [];
+private _lockedVariable = [];
 
 {
 	_animName = _x select 0;
 	if ([toLower _door, _animName] call BIS_fnc_inString) then {
-		if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then{
+		if (["disabled", _animName] call BIS_fnc_inString || ["locked", _animName] call BIS_fnc_inString) then {
 			_LockedVariable pushBack _animName;
 		} else {
 			_animations pushBack _animName;
