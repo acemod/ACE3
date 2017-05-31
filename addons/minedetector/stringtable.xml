@@ -9,6 +9,8 @@
             <Japanese>地雷探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
             <German>Metalldetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Italian>Metal detector</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
@@ -18,6 +20,8 @@
             <Japanese>地雷探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
             <German>Metalldetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Italian>Metal detector</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
@@ -27,6 +31,8 @@
             <Japanese>起動</Japanese>
             <Polish>Aktywuj</Polish>
             <German>Aktivieren</German>
+            <Korean>작동</Korean>
+            <Italian>Attiva</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
@@ -36,6 +42,8 @@
             <Japanese>停止</Japanese>
             <Polish>Deaktywuj</Polish>
             <German>Deaktivieren</German>
+            <Korean>끄기</Korean>
+            <Italian>Disattiva</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -44,6 +52,9 @@
             <Japanese>ヘッドホンへつなぐ</Japanese>
             <Polish>Podłącz słuchawki</Polish>
             <German>Kopfhörer verbinden</German>
+            <Korean>헤드폰에 연결</Korean>
+            <French>Connecter les écouteurs</French>
+            <Italian>Connetti Auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
@@ -52,6 +63,9 @@
             <Japanese>ヘッドホンからはずす</Japanese>
             <Polish>Odłącz słuchawki</Polish>
             <German>Kopfhörer trennen</German>
+            <Korean>헤드폰 연결끊기</Korean>
+            <French>Déconnecter les écouteurs</French>
+            <Italian>Disconnetti Auricolari</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
@@ -60,6 +74,9 @@
             <Japanese>ヘッドホンへ接続された</Japanese>
             <Polish>Słuchawki podpięte</Polish>
             <German>Kopfhörer verbunden</German>
+            <Korean>헤드폰 연결됨</Korean>
+            <French>Écouteurs connectés</French>
+            <Italian>Auricolari Connessi</Italian>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
@@ -68,6 +85,9 @@
             <Japanese>ヘッドホンから外された</Japanese>
             <Polish>Słuchawki odpięte</Polish>
             <German>Kopfhörer getrennt</German>
+            <Korean>헤드폰 연결끊김</Korean>
+            <French>Écouteurs déconnectés</French>
+            <Italian>Auricolari Disconnessi</Italian>
         </Key>
     </Package>
 </Project>

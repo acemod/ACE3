@@ -23,7 +23,7 @@ private _doorTurrets = [];
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-    if (getNumber (_config >> "isCopilot" == 0) && {count getArray (_config >> "weapons") > 0}) then {
+    if (((getNumber (_config >> "isCopilot")) == 0) && {count getArray (_config >> "weapons") > 0}) then {
         _doorTurrets pushBack _x;
     };
     false

@@ -40,7 +40,7 @@ _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {
     _caller selectWeapon _weaponSelect;
 } else {
-    _caller action ["SwitchWeapon", _caller, _caller, 99];
+    _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
 
 //Unclaim repair objects:

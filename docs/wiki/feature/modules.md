@@ -24,4 +24,4 @@ This is taking care of module initialization. It lets us ensure that modules pla
 
 ## 3. Usage
 
-For technical usage and instructions, please refer to our [framework documentation about the module component] ({{site.baseUrl}}/wiki/framework/modules-framework.html).
+For technical usage and instructions, please refer to our <a href="{{site.baseUrl}}/wiki/framework/modules-framework.html">framework documentation about the module component</a>.

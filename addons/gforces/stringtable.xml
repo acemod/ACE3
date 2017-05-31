@@ -11,6 +11,8 @@
             <Russian>Эффекты перегрузок</Russian>
             <Japanese>G による効果</Japanese>
             <Polish>Efekty przeciążeń</Polish>
+            <Korean>중력가속도 효과</Korean>
+            <Italian>Effetti forza G</Italian>
         </Key>
         <Key ID="STR_ACE_gforces_enabledFor_onlyAircraft">
             <English>Only Aircraft</English>
@@ -22,6 +24,8 @@
             <Russian>Только для летательных аппаратов</Russian>
             <Japanese>航空機のみ</Japanese>
             <Polish>Tylko samoloty</Polish>
+            <Korean>비행기에만 적용</Korean>
+            <Italian>Solo Aerei</Italian>
         </Key>
     </Package>
 </Project>

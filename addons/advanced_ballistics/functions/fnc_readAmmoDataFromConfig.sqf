@@ -26,7 +26,7 @@
 
 TRACE_1("Reading Ammo Config",_this);
 private ["_ammo", "_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_result"];
-_ammoConfig = configFile >> "CfgAmmo" >> _this;
+private _ammoConfig = configFile >> "CfgAmmo" >> _this;
 
 _airFriction = getNumber(_ammoConfig >> "airFriction");
 _caliber = getNumber(_ammoConfig >> "ACE_caliber");

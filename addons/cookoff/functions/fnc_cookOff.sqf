@@ -132,6 +132,6 @@ if (local _vehicle) then {
             if (local _vehicle) then {
                 _vehicle setDamage 1;
             };
-        }, [_vehicle, _effects], 4 + random 20] call CBA_fnc_waitAndExecute;
-    }, [_vehicle, _effects, _positions], 3 + random 15] call CBA_fnc_waitAndExecute;
-}, _vehicle, 0.5 + random 5] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], 14] call CBA_fnc_waitAndExecute;
+    }, [_vehicle, _effects, _positions], 10.5] call CBA_fnc_waitAndExecute;
+}, _vehicle, 3] call CBA_fnc_waitAndExecute;

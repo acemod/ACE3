@@ -24,7 +24,7 @@ private _source = _nozzle getVariable QGVAR(source);
 if (isNull _nozzle || {_source != _target}) exitWith {false};
 
 [
-    2,
+    REFUEL_PROGRESS_DURATION,
     [_unit, _nozzle, _target],
     {
         params ["_args"];
@@ -45,6 +45,10 @@ if (isNull _nozzle || {_source != _target}) exitWith {false};
         private _rope = _nozzle getVariable [QGVAR(rope), objNull];
         if !(isNull _rope) then {
             ropeDestroy _rope;
+        };
+        private _helper = _nozzle getVariable [QGVAR(helper), objNull];
+        if !(isNull _helper) then {
+            deleteVehicle _helper;
         };
         deleteVehicle _nozzle;
 

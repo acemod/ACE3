@@ -74,7 +74,7 @@ if (!isServer) then {
     } forEach _files;
 
     // display and log error messages
-    _fnc_cutComma = {
+    private _fnc_cutComma = {
         _string = _this;
         _string = toArray _string;
 

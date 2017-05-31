@@ -38,7 +38,8 @@ if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull _source || {_unit distance (_source modelToWorld _endPosOffset) > (REFUEL_HOSE_LENGTH - 2)} || {!alive _source}) exitWith {
+    private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
+    if (isNull _source || {_unit distance (_source modelToWorld _endPosOffset) > (_hoseLength - 2)} || {!alive _source}) exitWith {
         if !(isNull _nozzle) then {
             [_unit, _nozzle] call FUNC(dropNozzle);
             REFUEL_UNHOLSTER_WEAPON
@@ -48,6 +49,10 @@ if (_nozzle getVariable [QGVAR(jerryCan), false]) exitWith {};
                 private _rope = _nozzle getVariable [QGVAR(rope), objNull];
                 if !(isNull _rope) then {
                     ropeDestroy _rope;
+                };
+                private _helper = _nozzle getVariable [QGVAR(helper), objNull];
+                if !(isNull _helper) then {
+                    deleteVehicle _helper;
                 };
                 deleteVehicle _nozzle;
             } else {

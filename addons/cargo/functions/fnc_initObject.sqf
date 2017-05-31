@@ -49,7 +49,11 @@ private _condition = {
     {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
     {locked _target < 2} &&
     {alive _target} &&
-    {[_player, _target, []] call EFUNC(common,canInteractWith)}
+    {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+    {0 < {
+            1 == getNumber (configFile >> "CfgVehicles" >> typeOf _x >> QGVAR(hasCargo)) &&
+            {_x != _target}
+        } count (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE])}
 };
 private _statement = {
     params ["_target", "_player"];
@@ -58,7 +62,7 @@ private _statement = {
 private _text = localize LSTRING(loadObject);
 private _icon = QPATHTOF(UI\Icon_load.paa);
 
-private _action = [QGVAR(load), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
+private _action = [QGVAR(load), _text, _icon, _statement, _condition, {call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
 if (_canLoadConfig) then {
     [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
 } else {

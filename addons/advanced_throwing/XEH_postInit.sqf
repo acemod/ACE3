@@ -67,7 +67,8 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 }] call CBA_fnc_addPlayerEventhandler;
 
 ["visibleMap", {
-    if (visibleMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
+    params ["", "_visibleMap"]; // command visibleMap is updated one frame later
+    if (_visibleMap && {ACE_player getVariable [QGVAR(inHand), false]}) then {
         [ACE_player, "Opened Map"] call FUNC(exitThrowMode);
     };
 }] call CBA_fnc_addPlayerEventhandler;
@@ -114,8 +115,7 @@ addMissionEventHandler ["Draw3D", { // Blue is predicted before throw, red is re
         drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [0,0,1,1], _newTrajAGL, 1, 1, 0, "", 2];
     } forEach GVAR(predictedPath);
     {
-        _newTrajAGL = _x;
-        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _newTrajAGL, 1, 1, 0, "", 2];
+        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _x, 1, 1, 0, "", 2];
     } forEach GVAR(flightPath)
 }];
 #endif
