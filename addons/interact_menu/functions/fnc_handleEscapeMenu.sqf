@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Handle the escape key being pressed
+ * Handle the escape key being pressed.
  *
  * Arguments:
  * 0: Escape menu display that should be closed <DISPLAY><OPTIONAL>
