@@ -9,6 +9,9 @@
 
 params ["_init"];
 
+// No change
+if (_init isEqualTo !isNull SPEC_DISPLAY) exitWith {};
+
 // Close map
 openMap [false,false];
 

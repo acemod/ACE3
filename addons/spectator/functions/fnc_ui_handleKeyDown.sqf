@@ -172,6 +172,10 @@ if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLog
 
     // Display XEH handles re-opening
     openCuratorInterface;
+
+    // Set the curator camera to the spectator camera location
+    curatorCamera setPosASL (getPosASL GVAR(camera));
+    curatorCamera setDir (getDirVisual GVAR(camera));
     true
 };
 

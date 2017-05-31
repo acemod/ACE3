@@ -88,7 +88,6 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
     showHUD _showHUD;
     GVAR(camMode) = _newMode;
 
-
     // Only update display if it exists, this function is independent of it
     if !(isNull SPEC_DISPLAY) then {
         [] call FUNC(ui_updateHelp);

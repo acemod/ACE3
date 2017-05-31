@@ -9,6 +9,9 @@
 
 params ["_init"];
 
+// No change
+if (_init isEqualTo !isNil QGVAR(camera)) exitWith {};
+
 // Note that init and destroy intentionally happen in reverse order
 // Init: Vars > Camera > Camera Stuff
 // Destroy: Camera Stuff > Camera > Vars
