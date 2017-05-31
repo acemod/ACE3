@@ -119,6 +119,11 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 10;
             };
+            class hoseLength {
+                displayName = CSTRING(RefuelSettings_hoseLength_DisplayName);
+                typeName = "NUMBER";
+                defaultValue = 12;
+            };
         };
     };
 

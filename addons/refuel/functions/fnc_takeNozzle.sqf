@@ -67,7 +67,8 @@ if (isNull _nozzle) then { // func is called on fuel truck
                 _newNozzle setVariable [QGVAR(helper), _helper, true];
                 _ropeTarget = _helper;
             };
-            private _rope = ropeCreate [_ropeTarget, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
+            private _hoseLength = _target getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
+            private _rope = ropeCreate [_ropeTarget, _endPosOffset, _newNozzle, [0, -0.20, 0.12], _hoseLength];
             _newNozzle setVariable [QGVAR(rope), _rope, true];
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
