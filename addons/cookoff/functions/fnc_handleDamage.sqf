@@ -16,21 +16,15 @@
 #include "script_component.hpp"
 
 params ["_simulationType", "_thisHandleDamage"];
-_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter", "_hitLoc"];
+_thisHandleDamage params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter", "_hitpoint", "_oldDamage"];
 
 // it's already dead, who cares?
 if (damage _vehicle >= 1) exitWith {};
 
 // set default value
-private _hitpoint = "#structural";
-
-if (_hitIndex != -1) then {
-    _hitpoint = toLower (_hitLoc);
-};
+_hitpoint = ["#structural", toLower _hitpoint] select (_hitIndex != -1);
 
 // get change in damage
-private "_oldDamage";
-
 if (_hitpoint isEqualTo "#structural") then {
     _oldDamage = damage _vehicle;
 } else {
