@@ -143,7 +143,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
-                switch (GVAR(MinAvgMax)Mode) do {
+                switch (GVAR(MinAvgMaxMode)) do {
                     case 0: {
                         _textCenterLine1Right = "--. -";
                         _textCenterLine2Right = "--. -";
@@ -175,7 +175,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
-                switch (GVAR(MinAvgMax)Mode) do {
+                switch (GVAR(MinAvgMaxMode)) do {
                     case 0: {
                         _textCenterLine1Right = "--. -";
                         _textCenterLine2Right = "--. -";

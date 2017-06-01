@@ -18,7 +18,7 @@
 
 #define REFUEL_INFINITE_FUEL -10
 #define REFUEL_ACTION_DISTANCE 7
-#define REFUEL_HOSE_LENGTH 12
+#define REFUEL_PROGRESS_DURATION 2
 
 #define REFUEL_HOLSTER_WEAPON \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
