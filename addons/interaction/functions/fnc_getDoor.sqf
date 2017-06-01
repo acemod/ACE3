@@ -41,7 +41,7 @@ if (isNil "_door") exitWith {[_house, ""]};
 
 //Check if door is glass because then we need to find the proper location of the door so we can use it
 if ((_door find "glass") != -1) then {
-    _door = [_distance, _house, _door] call FUNC(getGlassDoor);   
+    _door = [_distance, _house, _door] call FUNC(getGlassDoor);
 };
 
 if (isNil "_door") exitWith {[_house, ""]};

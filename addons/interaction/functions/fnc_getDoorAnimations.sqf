@@ -25,8 +25,8 @@ private _animations = [];
 private _lockedVariable = [];
 
 {
-    private _animName = toLower _x;    
-    if ((_animName find (toLower _door)) != -1) then {        
+    private _animName = toLower _x;
+    if ((_animName find (toLower _door)) != -1) then {
         if (((_animName find "disabled") != -1) || ((_animName find "locked") != -1)) then {
             _lockedVariable pushBack _animName;
         } else {
