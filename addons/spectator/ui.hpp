@@ -55,6 +55,7 @@ class GVAR(display) {
             w = W_PART(13.5);
             h = "safezoneH";
 
+            disableKeyboardSearch = 1;
             multiselectEnabled = 0;
             colorBorder[] = {0,0,0,0};
             colorBackground[] = {0,0,0,0.75};
