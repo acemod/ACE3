@@ -80,13 +80,7 @@ if (_init) then {
 
     // If inital camera mode is not free cam and no focus, find initial focus
     if (GVAR(camMode) != MODE_FREE && isNull GVAR(camTarget)) then {
-        private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
-        if (isNil "_testFocus") then {
-            GVAR(camMode) = MODE_FREE;
-            WARNING("Camera mode was preset, but no available entities to focus on. Switching to free cam.");
-        } else {
-            GVAR(camTarget) = _testFocus;
-        };
+        [true] call FUNC(setFocus);
     };
 
     // Set the initial camera mode (could be pre-set or limited)

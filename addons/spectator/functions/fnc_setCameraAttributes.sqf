@@ -21,6 +21,7 @@
  * Notes:
  * - If camera mode is not free and camera has no focus, random will be used
  * - To remove any current camera focus in free cam, use objNull
+ * - To select a random camera focus, use a boolean
  *
  * Return Value:
  * None
@@ -35,7 +36,7 @@
 
 params [
     ["_mode",nil,[0]],
-    ["_focus",nil,[objNull]],
+    ["_focus",nil,[objNull,true]],
     ["_vision",nil,[0]],
     ["_position",nil,[[]],3],
     ["_direction",nil,[0]]
@@ -54,6 +55,11 @@ if !(isNil QGVAR(camera)) then {
     };
 
     if !(isNil "_mode") then {
+        // If mode not free and no focus, find focus
+        if ((_mode != MODE_FREE) && {isNull GVAR(camTarget)}) then {
+            [true] call FUNC(setFocus);
+        };
+
         [_mode] call FUNC(cam_setCameraMode);
     };
 
@@ -70,6 +76,11 @@ if !(isNil QGVAR(camera)) then {
     };
 } else {
     if !(isNil "_focus") then {
+        // If there are no entities this becomes nil, handled on camera startup
+        if (_focus isEqualType true) then {
+            _focus = ([] call FUNC(getTargetEntities)) select 0;
+        };
+
         GVAR(camTarget) = _focus;
     };
 

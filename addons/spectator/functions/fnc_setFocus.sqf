@@ -7,7 +7,20 @@
 
 #include "script_component.hpp"
 
-params [["_newFocus", objNull, [objNull]], ["_focusIsLocation",false]];
+params [["_newFocus", objNull, [objNull,true]], ["_focusIsLocation",false]];
+
+// If boolean provided then first find a focus
+if (_newFocus isEqualType true) then {
+    private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
+
+    if (isNil "_testFocus") then {
+        WARNING("No available entities to focus on. Switching to free cam.");
+        [MODE_FREE] call FUNC(cam_setCameraMode);
+        _newFocus = objNull;
+    } else {
+        _newFocus = _testFocus;
+    };
+};
 
 if (_newFocus != GVAR(camTarget) && { !(isNull _newFocus && { isNull GVAR(camTarget) }) }) then {
     GVAR(camTarget) = _newFocus;
