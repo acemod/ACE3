@@ -17,7 +17,7 @@
 
 #include "script_component.hpp"
 
-params [["_newUnits",[],[[]]],["_blacklist",false,[false]]];
+params [["_newUnits",[],[[]]], ["_blacklist",false,[false]]];
 
 // Function only matters on player clients
 if (!hasInterface) exitWith {};

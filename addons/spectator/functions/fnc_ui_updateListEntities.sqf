@@ -13,25 +13,21 @@ private _newList = [
     [west, "west", localize "str_west", []],
     [east, "east", localize "str_east", []],
     [independent, "indy", localize "str_guerrila", []],
-    [civilian, "civ", localize "str_civilian", []]
+    [civilian, "civ", localize "str_civilian", []],
+    [sideUnknown, "other", localize "str_dn_unknown", []]
 ];
 
-// Go through groups and get the valid ones only, also cache group units information
-private _blacklist = GVAR(unitBlacklist);
+// Go through entity groups and cache information
+private _entities = call FUNC(getTargetEntities);
 {
-    private _group = _x;
-    private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
-    private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
-    private _unitsInfo = [];
+    private _group = group _x;
+    if !(str _group in _newGroups) then {
+        private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
+        private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
 
-    // Validate units
-    {
-        if (
-            (GVAR(enableAI) || {isPlayer _x}) &&
-            {simulationEnabled _x && {simulationEnabled vehicle _x}} &&
-            { !isObjectHidden _x && {!isObjectHidden vehicle _x} } &&
-            {!(_x in _blacklist)}
-        ) then {
+        // Cache the info of valid units in the group
+        private _unitsInfo = [];
+        {
             _newUnits pushBack ([_x] call BIS_fnc_objectVar);
 
             private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
@@ -43,29 +39,28 @@ private _blacklist = GVAR(unitBlacklist);
                 alive _x && { NEEDS_REVIVE(_x) },
                 _name
             ];
-        };
-        nil // Speed loop
-    } count (units _x);
+            nil // Speed loop
+        } count (units _group arrayIntersect _entities);
 
-    // If we have valid units in the group, group is deemed valid
-    if !(_unitsInfo isEqualTo []) then {
+        // Add it to the right index
+        // TODO: Make this more flexible (see BIS_fnc_sideName and old code)
+        private _sideIndex = ([west,east,independent,civilian]) find (side _group);
+        _sideIndex = [_sideIndex, 4] select (_sideIndex < 0);
+        ((_newList select _sideIndex) select 3) pushBack [_groupInfo, _unitsInfo];
+
         _newGroups pushBack (str _group);
-        {
-            if ((side _group) == (_x select 0)) exitWith {
-                (_x select 3) pushBack [_groupInfo, _unitsInfo];
-            };
-        } forEach _newList;
     };
     nil // Speed loop
-} count ([] call FUNC(getTargetGroups));
+} count _entities;
+//TODO: Test speed of this loop compared to original
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
     // Remove groups/units that are no longer there
     private _ctrl = CTRL_LIST;
-    for "_sideIndex" from (_ctrl tvCount []) to 1 do {
-        for "_groupIndex" from (_ctrl tvCount [_sideIndex - 1]) to 1 do {
-            for "_unitIndex" from (_ctrl tvCount [_sideIndex - 1, _groupIndex - 1]) to 1 do {
+    for "_sideIndex" from (_ctrl tvCount []) to 0 step -1 do {
+        for "_groupIndex" from (_ctrl tvCount [_sideIndex - 1]) to 0 step -1 do {
+            for "_unitIndex" from (_ctrl tvCount [_sideIndex - 1, _groupIndex - 1]) to 0 step -1 do {
                 private _lookup = _newUnits find (_ctrl tvData [_sideIndex - 1, _groupIndex - 1, _unitIndex - 1]);
                 if (_lookup < 0) then {
                     _ctrl tvDelete [_sideIndex - 1, _groupIndex - 1, _unitIndex - 1];

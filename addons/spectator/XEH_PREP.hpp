@@ -38,7 +38,6 @@ PREP(compat_counter);
 PREP(compat_spectatorBI);
 PREP(compat_zeus);
 PREP(getTargetEntities);
-PREP(getTargetGroups);
 PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
