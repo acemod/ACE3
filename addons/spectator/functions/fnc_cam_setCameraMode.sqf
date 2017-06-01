@@ -31,7 +31,7 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
         _focus switchCamera "INTERNAL";
 
         // Reset vision mode
-        // [VISION_NORM] call FUNC(cam_setVisionMode);
+        [VISION_NORM] call FUNC(cam_setVisionMode);
 
         [] call FUNC(cam_resetTarget);
 

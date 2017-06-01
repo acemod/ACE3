@@ -174,8 +174,13 @@ if ((_key in (actionKeys "CuratorInterface")) && {!isNull (getAssignedCuratorLog
     openCuratorInterface;
 
     // Set the curator camera to the spectator camera location
-    curatorCamera setPosASL (getPosASL GVAR(camera));
-    curatorCamera setDir (getDirVisual GVAR(camera));
+    [{!isNull curatorCamera},{
+        curatorCamera setPosASL (getPosASL GVAR(camera));
+        curatorCamera setDir (getDirVisual GVAR(camera));
+
+        // Curator tracks its own vision mode
+        [getAssignedCuratorLogic player, 0] call bis_fnc_toggleCuratorVisionMode;
+    }] call CBA_fnc_waitUntilAndExecute;
     true
 };
 

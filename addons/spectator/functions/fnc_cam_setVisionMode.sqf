@@ -17,9 +17,6 @@ if !(_newVision in _visions) then {
     _newVision = _visions select ((_visions find _oldVision) max 0);
 };
 
-// Nothing to do here
-if (_newVision == _oldVision) exitWith {};
-
 // Vision mode does not apply to fps view
 if (GVAR(camMode) != MODE_FPS) then {
     // 0+ are all thermal vision types
@@ -31,7 +28,9 @@ if (GVAR(camMode) != MODE_FPS) then {
     };
 
     // Give user feedback that vision mode changed
-    playSound "RscDisplayCurator_visionMode";
-};
+    if (_newVision != _oldVision) then {
+        playSound "RscDisplayCurator_visionMode";
 
-GVAR(camVision) = _newVision;
+        GVAR(camVision) = _newVision;
+    };
+};

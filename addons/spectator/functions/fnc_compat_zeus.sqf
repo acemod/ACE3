@@ -16,7 +16,9 @@ _display displayAddEventHandler ["Unload",{
     if (GVAR(isSet) && {isNull (GETMVAR(bis_fnc_moduleRemoteControl_unit,objNull))}) then {
         // Display must be opened next frame to prevent game crash
         [{
+            // Reset the camera and vision modes
             [GVAR(camMode)] call FUNC(cam_setCameraMode);
+            [GVAR(camVision)] call FUNC(cam_setVisionMode);
             [true] call FUNC(ui);
         }] call CBA_fnc_execNextFrame;
     };
