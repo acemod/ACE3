@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
- * 2: Only partial <BOOL>(optional)
+ * 2: Only partial <BOOL> (default: false)
  *
  * Return Value:
  * None

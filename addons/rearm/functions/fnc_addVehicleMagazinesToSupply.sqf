@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
- * 1: Vehicle or Vehicle class <OBJECT/STRING>
+ * 1: Vehicle object or Vehicle class <OBJECT><STRING>
  *
  * Return Value:
  * None
@@ -21,10 +21,7 @@ if !(EGVAR(common,settingsInitFinished)) exitWith { // only run this after the s
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addVehicleMagazinesToSupply), _this];
 };
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_vehicle", objNull, [objNull, ""]]
-];
+params [["_truck", objNull, [objNull]],["_vehicle", objNull, [objNull, ""]]];
 TRACE_2("addVehicleMagazinesToSupply",_truck,_vehicle);
 
 if (isNull _truck) exitWith {};

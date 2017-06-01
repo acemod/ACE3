@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Ammo Truck <OBJECT>
  * 1: Magazine Classname <STRING>
- * 2: Number of Rounds to withdraw <NUMBER>(optional)
+ * 2: Number of Rounds to withdraw <NUMBER> (default: -1)
  *
  * Return Value:
  * Magazine was removed <BOOL>
