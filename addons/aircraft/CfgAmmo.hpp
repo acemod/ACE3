@@ -36,4 +36,23 @@ class CfgAmmo {
         caliber = 1.6;
         deflecting = 15;
     };
+
+    // also adjust tracer, "muh lightshow"; also adjust splash damage radius
+    class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
+        hit = 80; // default: 180
+        indirectHit = 12; // default: 4
+        indirectHitRange = 3; // default: 3
+        caliber = 1.4; // default: 5
+        deflecting = 3; // default: 5
+        fuseDistance = 3; // default: 10
+        tracerStartTime = 0.02; // default: 0.1
+        timeToLive = 40; // default: 6
+    };
+
+    // adjust damage and splash damage, closer to bluefor gatling with same caliber
+    class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
+        hit = 70; // default: 150
+        indirectHit = 11; // default: 4
+        indirectHitRange = 3; // default: 3
+    };
 };
