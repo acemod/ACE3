@@ -19,6 +19,7 @@ params [
 
 // Remove the EH when spectator is no longer active or unit is removed
 if (isNil QGVAR(entitiesToDraw) || {!(_unit in GVAR(entitiesToDraw))}) exitWith {
+    //USES_VARIABLES ["_thisEventHandler"]
     _unit removeEventHandler ["Fired", _thisEventHandler];
     SETVAR(_unit,GVAR(firedEH),nil);
 };
