@@ -62,7 +62,7 @@ if (_entityList) then {
         };
 
         // If in a unit camera mode then only focus when double click
-        if (GVAR(camMode) == MODE_FREE || {_dblClick}) then {
+        if (GVAR(camMode) == MODE_FREE || {_dblClick && {FREE_MODE in GVAR(availableModes)}}) then {
             [_dummy, true] call FUNC(setFocus);
         };
 
