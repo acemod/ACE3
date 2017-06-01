@@ -48,6 +48,11 @@ if (_newModes isEqualTo []) then {
 
 // Update camera in case of change
 if !(isNil QGVAR(camera)) then {
+    // If mode was free and no longer available, find a focus
+    if (!(MODE_FREE in _newModes) && {GVAR(camMode) == MODE_FREE} && {isNull GVAR(camTarget) || GVAR(camOnLocation)}) then {
+        [true] call FUNC(setFocus);
+    };
+
     [GVAR(camMode)] call FUNC(cam_setCameraMode);
 };
 
