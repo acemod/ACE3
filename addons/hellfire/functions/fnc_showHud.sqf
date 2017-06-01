@@ -28,9 +28,8 @@ if ((alive _player) && {_player != _vehicle}) then {
         _turretPath = _player call CBA_fnc_turretPath
     };
     {
-        private _weapon = _x;
-        if ((getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(enabled))) == 1) then {
-            TRACE_1("enabled",_weapon);
+        if ((getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(enabled))) == 1) then {
+            TRACE_1("enabled",_x);
             _enabled = true;
         };
     } forEach (_vehicle weaponsTurret _turretPath);
@@ -49,7 +48,7 @@ if (!_enabled) exitWith {TRACE_2("Disabled - Now Off",_enabled,GVAR(pfID));};
 
 TRACE_2("Enabled - Adding actions and PFEH",_enabled,GVAR(pfID));
 
-[_vehicle] call FUNC(insertFireModeActions);
+[_vehicle, _turretPath] call FUNC(setupVehicle);
 
 private _adjustDown = false; // Flares display will block ours, if present just move ours down a bit
 {

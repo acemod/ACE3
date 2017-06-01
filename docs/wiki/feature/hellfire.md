@@ -8,7 +8,7 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: 9
+  minor: 10
   patch: 0
 ---
 
@@ -33,22 +33,34 @@ This and the attack profile used will effect missile's flight and max altitude.
 - Cycle attack profiles with vehicle's ACE3 Interaction Menu or with the missile guidance "Cycle Fire Mode" keybind (default: <kbd>Ctrl</kbd> + <kbd>Tab</kbd>)
 
 ## 3 Adding to vehicles
-- Hellfires can be added to other vehicles via config or script.
+- Easiest way to add is via the 1.70 Pylons system.
+- Hellfires can also be added to other vehicles via config or script.
 
 ### 3.1 Classnames
 - Weapon: `ace_hellfire_launcher`
-- Magazines: `6Rnd_ACE_Hellfire_AGM114K`, `8Rnd_ACE_Hellfire_AGM114K`, `12Rnd_ACE_Hellfire_AGM114K`, `16Rnd_ACE_Hellfire_AGM114K`, `24Rnd_ACE_Hellfire_AGM114K`
+- Magazines: `6Rnd_ACE_Hellfire_AGM114K`
+- Pylon Magazines: `PylonMissile_1Rnd_ACE_Hellfire_AGM114K`, `PylonRack_1Rnd_ACE_Hellfire_AGM114K`, `PylonRack_3Rnd_ACE_Hellfire_AGM114K`, `PylonRack_4Rnd_ACE_Hellfire_AGM114K`
 
 ### 3.2 Script Example
 - Adding hellfires to the Cessna Civilian Plane:
 
 ```
 if (local this) then {
-    this addWeaponTurret ["ace_hellfire_launcher", [0]];
-    this addMagazineTurret ["6Rnd_ACE_Hellfire_AGM114K", [0]];
+    this addWeaponTurret ["ace_hellfire_launcher", [-1]];
+    this addMagazineTurret ["6Rnd_ACE_Hellfire_AGM114K", [-1]];
 };
 ```
 
-## 3. Dependencies
+## 4 Automaticly adding a laser designator
+- Can automaticly add a laser designator if hellfire launcher is present
+- Ideal for pylon dynamic loadouts
 
-{% include dependencies_list.md component="missileguidance" %}
+```cpp
+class myChopper: HeliBase {
+    ace_hellfire_addLaserDesignator = 1;
+};
+```
+
+## 5. Dependencies
+
+{% include dependencies_list.md component="hellfire" %}

@@ -1,5 +1,5 @@
 LOG("prep");
 PREP(attackProfile);
 PREP(getAttackProfileSettings);
-PREP(insertFireModeActions);
+PREP(setupVehicle);
 PREP(showHud);
