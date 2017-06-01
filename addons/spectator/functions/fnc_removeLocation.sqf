@@ -28,5 +28,12 @@ private _index = -1;
 
 GVAR(locationsList) deleteAt _index;
 
+// Update the list if appropriate
+if !(isNull SPEC_DISPLAY) then {
+    if (GVAR(uiListType) == LIST_LOCATIONS) then {
+        [] call FUNC(ui_updateListLocations);
+    };
+};
+
 // Return
 _index != -1

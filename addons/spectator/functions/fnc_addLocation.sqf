@@ -10,7 +10,7 @@
  * 4: Camera Offset Vector <Array> (Default: [0,0,0])
  *
  * Notes:
- * - Position array is of form ASL
+ * - Position array is of form ATL
  * - Position objects will remove location upon objNull
  * - If an empty name is supplied, a descriptive name will be used
  * - Camera offset is used when teleporting to location, default is treated as random
@@ -52,10 +52,22 @@ if (_pos isEqualTo []) then {
         };
     };
 
+    // AGL is used for rendering purposes, but it makes sense for public function to take ATL
+    if (_pos isEqualType []) then {
+        _pos = ASLtoAGL ATLtoASL _pos;
+    };
+
     // When no texture, just use a transparent procedural
     if (_texture == "") then { _texture = "#(rgb,8,8,3)color(0,0,0,0)"; };
 
     GVAR(locationsList) pushBack [_id, _name, _description, _texture, _pos, _offset];
+
+    // Update the list if appropriate
+    if !(isNull SPEC_DISPLAY) then {
+        if (GVAR(uiListType) == LIST_LOCATIONS) then {
+            [] call FUNC(ui_updateListLocations);
+        };
+    };
 };
 
 _id

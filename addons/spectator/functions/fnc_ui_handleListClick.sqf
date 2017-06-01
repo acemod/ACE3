@@ -68,7 +68,7 @@ if (_entityList) then {
 
         // If double clicked, teleport the camera
         if (_dblClick) then {
-            if (_pos isEqualType objNull) then { _pos = getPosASL _pos; };
+            if (_pos isEqualType objNull) then { _pos = getPosASL _pos; } else { _pos = AGLtoASL _pos; };
             if (_offset isEqualTo [0,0,0]) then { _offset = _offset apply { _x + 1 + random 30 }; };
             GVAR(camera) setPosASL (_pos vectorAdd _offset);
 
