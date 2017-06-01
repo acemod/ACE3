@@ -9,22 +9,15 @@
 
 private _newUnits = [];
 private _newGroups = [];
-private _newList = [
-    [west, "west", localize "str_west", []],
-    [east, "east", localize "str_east", []],
-    [independent, "indy", localize "str_guerrila", []],
-    [civilian, "civ", localize "str_civilian", []],
-    [sideUnknown, "other", localize "str_dn_unknown", []]
-];
+private _newSides = [];
+private _newList = [];
 
 // Go through entity groups and cache information
 private _entities = call FUNC(getTargetEntities);
 {
+    // Add the group if new
     private _group = group _x;
     if !(str _group in _newGroups) then {
-        private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
-        private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
-
         // Cache the info of valid units in the group
         private _unitsInfo = [];
         {
@@ -42,10 +35,28 @@ private _entities = call FUNC(getTargetEntities);
             nil // Speed loop
         } count (units _group arrayIntersect _entities);
 
+        // Cache the info of the group itself
+        private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
+        private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
+
+        // Add the group to the correct side
+        private _side = side _group;
+        private _sideIndex = _newSides find (str _side);
+
+        // Add the side if new
+        if (_sideIndex < 0) then {
+            _sideIndex = _newList pushBack [
+                _side,
+                str _side,
+                [_side] call BIS_fnc_sideName,
+                [_side] call BIS_fnc_sideColor,
+                []
+            ];
+
+            _newSides pushBack (str _side);
+        };
+
         // Add it to the right index
-        // TODO: Make this more flexible (see BIS_fnc_sideName and old code)
-        private _sideIndex = ([west,east,independent,civilian]) find (side _group);
-        _sideIndex = [_sideIndex, 4] select (_sideIndex < 0);
         ((_newList select _sideIndex) select 3) pushBack [_groupInfo, _unitsInfo];
 
         _newGroups pushBack (str _group);
@@ -56,33 +67,42 @@ private _entities = call FUNC(getTargetEntities);
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
-    // Remove groups/units that are no longer there
     private _ctrl = CTRL_LIST;
-    for "_sideIndex" from (_ctrl tvCount []) to 0 step -1 do {
-        for "_groupIndex" from (_ctrl tvCount [_sideIndex - 1]) to 0 step -1 do {
-            for "_unitIndex" from (_ctrl tvCount [_sideIndex - 1, _groupIndex - 1]) to 0 step -1 do {
-                private _lookup = _newUnits find (_ctrl tvData [_sideIndex - 1, _groupIndex - 1, _unitIndex - 1]);
+
+    // Remove groups/units that are no longer there
+    for "_sideIndex" from (_ctrl tvCount [] - 1) to 0 step -1 do {
+        for "_groupIndex" from (_ctrl tvCount [_sideIndex] - 1) to 0 step -1 do {
+            for "_unitIndex" from (_ctrl tvCount [_sideIndex, _groupIndex] - 1) to 0 step -1 do {
+                private _lookup = _newUnits find (_ctrl tvData [_sideIndex, _groupIndex, _unitIndex]);
                 if (_lookup < 0) then {
-                    _ctrl tvDelete [_sideIndex - 1, _groupIndex - 1, _unitIndex - 1];
+                    _ctrl tvDelete [_sideIndex, _groupIndex, _unitIndex];
                 } else {
                     _newUnits deleteAt _lookup;
                 };
             };
-            private _lookup = _newGroups find (_ctrl tvData [_sideIndex - 1, _groupIndex - 1]);
+            private _lookup = _newGroups find (_ctrl tvData [_sideIndex, _groupIndex]);
             if (_lookup < 0) then {
-                _ctrl tvDelete [_sideIndex - 1, _groupIndex - 1];
+                _ctrl tvDelete [_sideIndex, _groupIndex];
             } else {
                 _newGroups deleteAt _lookup;
             };
         };
+        private _lookup = _newSides find (_ctrl tvData [_sideIndex]);
+        if (_lookup < 0) then {
+            _ctrl tvDelete [_sideIndex];
+        } else {
+            _newSides deleteAt _lookup;
+        };
     };
 
-
-    // Hash location lookups, note hashing assumes unique group/unit data
+    // Hash location lookups, note hashing assumes unique side/group/unit data
+    private _sideDataToPathHash = [[], []];
     private _groupDataToPathHash = [[], []];
     private _unitDataToPathHash = [[], []];
 
     for "_sideIndex" from 0 to ((_ctrl tvCount []) - 1) do {
+        (_sideDataToPathHash select 0) pushBack (_ctrl tvData [_sideIndex]);
+        (_sideDataToPathHash select 1) pushBack [_sideIndex];
         for "_groupIndex" from 0 to ((_ctrl tvCount [_sideIndex]) - 1) do {
             (_groupDataToPathHash select 0) pushBack (_ctrl tvData [_sideIndex, _groupIndex]);
             (_groupDataToPathHash select 1) pushBack [_sideIndex, _groupIndex];
@@ -95,16 +115,22 @@ if !(GVAR(curList) isEqualTo _newList) then {
 
     // Update/add the values
     {
-        _x params ["_side", "_sideStr", "_sideTitle", "_nestedGroupData"];
-        private _sideIndex = _forEachIndex;
-        private _sideColor = [_side] call BIS_fnc_sideColor;
+        _x params ["_side", "_sideStr", "_sideTitle", "_sideColor", "_nestedGroupData"];
 
-        if (_ctrl tvCount [] == _sideIndex) then {
-            _ctrl tvAdd [[], _sideTitle];
+        private _sideIndex = -1;
+        private _lookup = (_sideDataToPathHash select 0) find _sideStr;
+        if (_lookup < 0) then {
+            _sideIndex = _ctrl tvAdd [[], _sideTitle];
             _ctrl tvSetData [[_sideIndex], _sideStr];
-        };
+            _ctrl tvExpand [_sideIndex];
+        } else {
+            // pop data out of hash to improve later lookups
+            (_sideDataToPathHash select 0) deleteAt _lookup;
+            private _path = (_sideDataToPathHash select 1) deleteAt _lookup;
+            _sideIndex = _path select 0;
 
-        _ctrl tvExpand [_sideIndex];
+            _ctrl tvSetText [_path, _sideTitle];
+        };
 
         {
             _x params ["_groupInfo", "_nestedUnitData"];
@@ -161,7 +187,8 @@ if !(GVAR(curList) isEqualTo _newList) then {
             } count _nestedUnitData;
             nil // Speed loop
         } count _nestedGroupData;
-    } forEach _newList;
+        nil // Speed loop
+    } count _newList;
 
     // Store the new list as the current list
     GVAR(curList) = _newList;

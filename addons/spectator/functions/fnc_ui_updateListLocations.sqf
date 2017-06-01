@@ -12,13 +12,13 @@ private _newList = GVAR(locationsList);
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
+    private _ctrl = CTRL_LIST;
 
     // Remove locations that are no longer there
-    private _ctrl = CTRL_LIST;
-    for "_locationIndex" from (_ctrl tvCount []) to 0 step -1 do {
-        private _lookup = _newLocations find (_ctrl tvData [_locationIndex - 1]);
+    for "_locationIndex" from (_ctrl tvCount [] - 1) to 0 step -1 do {
+        private _lookup = _newLocations find (_ctrl tvData [_locationIndex]);
         if (_lookup < 0) then {
-            _ctrl tvDelete [_locationIndex - 1];
+            _ctrl tvDelete [_locationIndex];
         } else {
             _newLocations deleteAt _lookup;
         };
