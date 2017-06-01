@@ -25,6 +25,8 @@
  */
 #include "script_component.hpp"
 
+#define LIFETIMEOFFSET 5
+
 private ["_startingOffset", "_startDistanceFromCenter", "_closeInUnitVector", "_closeInMax", "_closeInMin", "_closeInDistance", "_endPosTestOffset", "_endPosTest", "_doesIntersect", "_startingPosShifted", "_startASL", "_endPosShifted", "_endASL", "_attachedObject", "_attachList"];
 
 params ["_unit", "_attachToVehicle", "_itemClassname", "_itemVehClass", "_onAtachText", "_startingPosition"];
@@ -91,5 +93,8 @@ _unit removeItem _itemClassname;
 _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
+
+// Put this handler if the target have a finite life
+[_attachToVehicle, _unit, _itemClassname] call FUNC(removeItemEvent);
 
 [_onAtachText] call EFUNC(common,displayTextStructured);

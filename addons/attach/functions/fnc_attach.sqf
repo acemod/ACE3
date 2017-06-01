@@ -17,8 +17,6 @@
  */
 #include "script_component.hpp"
 
-#define LIFETIMEOFFSET 5
-
 params ["_attachToVehicle","_unit","_args", ["_silentScripted", false]];
 _args params [["_itemClassname","", [""]]];
 TRACE_4("params",_attachToVehicle,_unit,_itemClassname,_silentScripted);
@@ -49,52 +47,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     };
 
     // Add a handler that will detach and remove anything that have a time to live
-    private _timeLive = getNumber (configfile >> "CfgAmmo" >> _itemVehClass >> "timeToLive");
-    if (0 < _timeLive && _timeLive < 1500) then {
-        //Make sure we remove  it before it is consumed
-        private _lifeTime = _timeLive - LIFETIMEOFFSET;
-
-        [{
-            params ["_args", "_handle"];
-            _args params ["_unit"];
-            private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
-            {
-                private _xItemName = _x select 1;
-                if ([_attachToVehicle, _unit] call FUNC(canDetach)) then {
-                    [_attachToVehicle, _unit] call FUNC(detach);
-                    //Remove item from inventory because it's consumed
-                    if (_xItemName in ((itemsWithMagazines _unit) + [""])) then {
-                        _unit  removeItem _xItemName;
-                    };
-                };
-            } forEach _attachedList;
-        }, [_unit], _lifeTime] call CBA_fnc_waitAndExecute;
-    };
+    [_attachToVehicle, _unit, _itemClassname] call FUNC(removeItemEvent);
 
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
     [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
-
-    private _timeLive = getNumber (configfile >> "CfgAmmo" >> _itemVehClass >> "timeToLive");
-    if (0 < _timeLive && _timeLive < 1500) then {
-        //Make sure we remove  it before it is consumed
-        private _lifeTime = _timeLive - LIFETIMEOFFSET;
-        [{
-            params ["_args", "_handle"];
-            _args params ["_unit", "_attachToVehicle"];
-            private _attachedList = (vehicle _unit) getVariable [QGVAR(attached), []];
-            {
-                systemChat "lets take it off";
-                _x params ["_xObject","_xItemName"];
-                detach _xObject;
-                //_xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
-                // Delete attached item after 0.5 seconds
-                [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
-            } forEach _attachedList;
-        }, [_unit, _attachToVehicle], _lifeTime] call CBA_fnc_waitAndExecute;
-    };
 
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];

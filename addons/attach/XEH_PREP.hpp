@@ -8,3 +8,4 @@ PREP(handleGetIn);
 PREP(handleGetOut);
 PREP(handleKilled);
 PREP(placeApprove);
+PREP(removeItemEvent);
