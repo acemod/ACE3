@@ -39,8 +39,10 @@ if (0 < _timeLive && _timeLive < 1500) then {
                 _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
                 // Delete attached item after 0.5 seconds
                 [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
+                // Delete the variable
+                _attachedList deleteAt _forEachIndex;
+                _attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
             };
-
         } forEach _attachedList;
 
     }, [_unit, _attachToVehicle, _itemClassname], _lifeTime] call CBA_fnc_waitAndExecute;
