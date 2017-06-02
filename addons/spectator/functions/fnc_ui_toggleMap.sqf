@@ -20,7 +20,7 @@ if (GVAR(uiMapVisible)) then {
     CTRL_MAP ctrlShow true;
     CTRL_MAP_GROUP ctrlShow true;
 
-    CTRL_MAP_TITLE ctrlSetText (getMissionConfigValue ["onLoadName", getMissionConfigValue ["briefingName", "???"]]);
+    CTRL_MAP_TITLE ctrlSetText (getMissionConfigValue ["onLoadName", getMissionConfigValue ["briefingName", localize ELSTRING(common,unknown)]]);
     CTRL_MAP_SPEC_NUM ctrlSetText str ({GETVAR(_x,GVAR(isSet),false)} count allPlayers);
 
     CTRL_MAP ctrlMapAnimAdd [0, 0.05, getPosASLVisual GVAR(camera)];
