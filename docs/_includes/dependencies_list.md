@@ -138,6 +138,10 @@
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "hellfire" %}
+`ace_interaction`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "hitreactions" %}
 `ace_common`
 {% endif %}
@@ -256,6 +260,10 @@
 
 {% if include.component == "nightvision" %}
 `ace_common`
+{% endif %}
+
+{% if include.component == "nlaw" %}
+`ace_missileguidance`
 {% endif %}
 
 {% if include.component == "noidle" %}
