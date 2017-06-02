@@ -258,10 +258,6 @@
 `ace_common`
 {% endif %}
 
-{% if include.component == "nlaw" %}
-`ace_missileguidance`
-{% endif %}
-
 {% if include.component == "noidle" %}
 `ace_common`
 {% endif %}
