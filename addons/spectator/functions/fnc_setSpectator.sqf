@@ -11,7 +11,7 @@
  * 1: Force interface <BOOL> (default: true)
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [true] call ace_spectator_fnc_setSpectator

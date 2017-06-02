@@ -48,6 +48,7 @@ PREP(switchFocus);
 // Public functions
 PREP(addLocation);
 PREP(getCameraAttributes);
+PREP(players);
 PREP(removeLocation);
 PREP(setCameraAttributes);
 PREP(setSpectator);
