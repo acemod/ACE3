@@ -7,11 +7,14 @@
 
 #include "script_component.hpp"
 
+// Include dead units if specified (used by entity list)
+private _entities = allUnits;
+if (param [0,false]) then { _entities append allDeadMen; };
+
 // Quicker to use local vars that are accessed often in iteration
 private _sides = GVAR(availableSides);
 
 // Apply entity filtering
-private _entities = allUnits;
 _entities = _entities select {
     (GVAR(enableAI) || {isPlayer _x}) && // AI setting
     {(side group _x) in _sides} && // Available sides

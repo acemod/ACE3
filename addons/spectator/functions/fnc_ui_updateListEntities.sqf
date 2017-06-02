@@ -12,57 +12,61 @@ private _newGroups = [];
 private _newSides = [];
 private _newList = [];
 
-// Go through entity groups and cache information
-private _entities = call FUNC(getTargetEntities);
+// Go through entity groups and cache information (include dead entities)
+private _entities = [true] call FUNC(getTargetEntities);
 {
     // Add the group if new
-    private _group = group _x;
+    private _group = _x;
     if !(str _group in _newGroups) then {
-        // Cache the info of valid units in the group
-        private _unitsInfo = [];
-        {
-            _newUnits pushBack ([_x] call BIS_fnc_objectVar);
+        // Include the group if it contains valid entities
+        private _entitiesGroup = units _group arrayIntersect _entities;
 
-            private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
-            if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
+        if !(_entitiesGroup isEqualTo []) then {
+            // Cache the info of valid units in the group
+            private _unitsInfo = [];
+            {
+                _newUnits pushBack ([_x] call BIS_fnc_objectVar);
 
-            _unitsInfo pushBack [
-                _x,
-                alive _x,
-                alive _x && { NEEDS_REVIVE(_x) },
-                _name
-            ];
-            nil // Speed loop
-        } count (units _group arrayIntersect _entities);
+                private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+                if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
 
-        // Cache the info of the group itself
-        private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
-        private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
+                _unitsInfo pushBack [
+                    _x,
+                    alive _x,
+                    alive _x && { NEEDS_REVIVE(_x) },
+                    _name
+                ];
+                nil // Speed loop
+            } count _entitiesGroup;
 
-        // Add the group to the correct side
-        private _side = side _group;
-        private _sideIndex = _newSides find (str _side);
+            // Cache the info of the group itself
+            private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
+            private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
 
-        // Add the side if new
-        if (_sideIndex < 0) then {
-            _newList pushBack [
-                _side,
-                str _side,
-                [_side] call BIS_fnc_sideName,
-                [_side] call BIS_fnc_sideColor,
-                []
-            ];
+            // Add the group to the correct side
+            private _side = side _group;
+            private _sideIndex = _newSides find (str _side);
 
-            _sideIndex = _newSides pushBack (str _side);
+            // Add the side if new
+            if (_sideIndex < 0) then {
+                _newList pushBack [
+                    _side,
+                    str _side,
+                    [_side] call BIS_fnc_sideName,
+                    [_side] call BIS_fnc_sideColor,
+                    []
+                ];
+
+                _sideIndex = _newSides pushBack (str _side);
+            };
+
+            // Add it to the right index
+            _newGroups pushBack (str _group);
+            ((_newList select _sideIndex) select 4) pushBack [_groupInfo, _unitsInfo];
         };
-
-        // Add it to the right index
-        ((_newList select _sideIndex) select 4) pushBack [_groupInfo, _unitsInfo];
-
-        _newGroups pushBack (str _group);
     };
     nil // Speed loop
-} count _entities;
+} count allGroups;
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
