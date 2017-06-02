@@ -31,9 +31,9 @@ if (_part < 0 || _part > 5) exitWith {false};
 // Find the correct Damage threshold for unit.
 private _damageThreshold = [1,1,1];
 if ([_unit] call EFUNC(common,IsPlayer)) then {
-    _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(playerDamageThreshold), GVAR(playerDamageThreshold), GVAR(playerDamageThreshold) * 1.7]];
+    _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(playerDamageThreshold), GVAR(playerDamageThreshold), GVAR(playerDamageThreshold) * 1]];
 } else {
-    _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(AIDamageThreshold), GVAR(AIDamageThreshold), GVAR(AIDamageThreshold) * 1.7]];
+    _damageThreshold =_unit getVariable[QGVAR(unitDamageThreshold), [GVAR(AIDamageThreshold), GVAR(AIDamageThreshold), GVAR(AIDamageThreshold) * 1]];
 };
 _damageThreshold params ["_thresholdHead", "_thresholdTorso",  "_thresholdLimbs"];
 
@@ -52,5 +52,5 @@ if (_part == 1) exitWith {
 };
 // Check if damage to body part is higher as damage limbs
 // We use a slightly lower decrease for limbs, as we want any injuries done to those to be less likely to be fatal compared to head shots or torso.
-private _chanceFatal = CHANGE_FATAL_LIMB + ((INCREASE_CHANGE_LIMB * (_damageBodyPart - _thresholdLimbs)) * 10);
-(_damageBodyPart >= _thresholdLimbs && {(_chanceFatal >= random(1))});
+private _chanceFatal = CHANGE_FATAL_LIMB + ((INCREASE_CHANGE_LIMB * (_damageBodyPart - _thresholdLimbs)) * 199);
+(_damageBodyPart >= _thresholdLimbs);
