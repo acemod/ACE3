@@ -37,11 +37,6 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
         // Disable camera input
         _camera camCommand "manual off";
 
-        // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FPS_SELECTED;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
-        CTRL_FREE ctrlSetText CAM_ICON_FREE;
-
         // Hide all unit/group information in first person view
         _showHUD = [true,false,false,false,false,false,false,true];
     };
@@ -54,11 +49,6 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
 
         // Disable camera input
         _camera camCommand "manual off";
-
-        // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FPS;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW_SELECTED;
-        CTRL_FREE ctrlSetText CAM_ICON_FREE;
     };
 
     if (_newMode == MODE_FREE) then {
@@ -75,11 +65,6 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
 
         // Enable camera input
         _camera camCommand "manual on";
-
-        // Update UI
-        CTRL_FPS ctrlSetText CAM_ICON_FPS;
-        CTRL_FOLLOW ctrlSetText CAM_ICON_FOLLOW;
-        CTRL_FREE ctrlSetText CAM_ICON_FREE_SELECTED;
     };
 
     // Update the HUD
@@ -89,6 +74,7 @@ if (!(isNull _focus || GVAR(camOnLocation)) || _newMode == MODE_FREE) then {
 
     // Only update display if it exists, this function is independent of it
     if !(isNull SPEC_DISPLAY) then {
+        [] call FUNC(ui_updateCamButtons);
         [] call FUNC(ui_updateHelp);
     };
 };

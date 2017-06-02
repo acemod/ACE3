@@ -70,6 +70,7 @@ if (_init) then {
     [true] call FUNC(ui_fadeList);
 
     // Initalise the help, widget and list information
+    [] call FUNC(ui_updateCamButtons);
     [] call FUNC(ui_updateListEntities);
     [] call FUNC(ui_updateListFocus);
     [] call FUNC(ui_updateWidget);
