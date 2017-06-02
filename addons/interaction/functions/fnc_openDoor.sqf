@@ -28,9 +28,12 @@ _getDoorAnimations params ["_animations", "_lockedVariable"];
 
 if (_animations isEqualTo []) exitWith {};
 
-if (_house animationPhase (_animations select 0) <= 0 && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
-    _lockedVariable set [0, _house];
-    _lockedVariable call BIS_fnc_LockedDoorOpen;
+//Check if the door can be locked aka have locked variable, otherwhise cant lock it
+if (!(isNil (_lockedVariable select 0))) then {
+    if ((_house animationPhase (_animations select 0) <= 0) && {_house getVariable [_lockedVariable select 0, 0] == 1}) exitWith {
+        _lockedVariable set [0, _house];
+        _lockedVariable call BIS_fnc_LockedDoorOpen;
+    };
 };
 
 playSound "ACE_Sound_Click"; // @todo replace with smth. more fitting
@@ -62,7 +65,6 @@ GVAR(usedScrollWheel) = false;
     if (CBA_missionTime > _time && {diag_frameno > _frame}) then {
         GVAR(usedScrollWheel) = true;
     };
-
     // do incremental door opening
     {_house animate [_x, GVAR(doorTargetPhase)]; false} count _animations;
 }, 0.1, [_house, _animations, getPosASL ACE_player, CBA_missionTime + 0.2, diag_frameno + 2]] call CBA_fnc_addPerFrameHandler;
