@@ -43,5 +43,11 @@
             <Japanese>カーゴ ドアを閉じる</Japanese>
             <Korean>화물칸 폐쇄</Korean>
         </Key>
+        <Key ID="STR_ACE_Aircraft_Mirror">
+            <English>Mirror</English>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_AircraftLoadoutTitle">
+            <English>AIRCRAFT LOADOUT</English>
+        </Key>
     </Package>
 </Project>
