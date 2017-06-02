@@ -67,6 +67,13 @@ if (_cameraMode == MODE_FREE) then {
     ];
 };
 
+if (_cameraMode != MODE_FPS) then {
+    _controls pushback [
+        format ["[%1]", ([DIK_N] call CBA_fnc_localizeKey)],
+        localize LSTRING(nextVis)
+    ];
+};
+
 _controls pushBack [
     format ["[%1]", toUpper ([DIK_BACK] call CBA_fnc_localizeKey)],
     localize "STR_A3_Spectator_Helper_Interface"

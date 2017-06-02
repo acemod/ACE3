@@ -67,6 +67,4 @@ _unit setVariable [QEGVAR(medical,allowDamage), !_set];
 if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
-
-    ["ace_spectatorStaged", [_set, _unit]] call CBA_fnc_globalEvent;
 };

@@ -42,22 +42,22 @@ PREP(handleFired);
 PREP(moduleSpectatorSettings);
 PREP(respawnTemplate);
 PREP(setFocus);
+PREP(stageSpectator);
 PREP(switchFocus);
 
 // Public functions
 PREP(addLocation);
 PREP(getCameraAttributes);
-PREP(interrupt);
 PREP(removeLocation);
 PREP(setCameraAttributes);
 PREP(setSpectator);
-PREP(stageSpectator);
 PREP(updateCameraModes);
 PREP(updateSides);
 PREP(updateUnits);
 PREP(updateVisionModes);
 
 // Deprecated (temp)
+PREP(interrupt);
 DFUNC(updateSpectatableSides) = {
     ACE_DEPRECATED(QFUNC(updateSpectatableSides),"3.12.0",QFUNC(updateSides));
     _this call FUNC(updateSides);
