@@ -29,12 +29,13 @@ if (ACE_player call CBA_fnc_canUseWeapon) then {
     _currentWeapon = currentWeapon ACE_player;
 } else {
     _currentShooter = vehicle ACE_player;
-    private _turret = [ACE_player] call ace_common_fnc_getTurretIndex;
-    _currentWeapon = _currentShooter currentWeaponTurret _turret;
+    private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    _currentWeapon = _currentShooter currentWeaponTurret _turretPath;
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if ((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) exitWith {false};
+if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) &&
+        {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
 private _newLaserCode = _oldLaserCode;
@@ -52,7 +53,7 @@ if (((_codeChange < 0) && {_oldLaserCode > ACE_DEFAULT_LASER_CODE}) || {(_codeCh
 TRACE_2("",_oldLaserCode,_newLaserCode);
 
 if (_oldLaserCode != _newLaserCode) then {
-    _currentShooter setVariable [QGVAR(code), _newLaserCode, false];
+    _currentShooter setVariable [QGVAR(code), _newLaserCode, true];
 };
 [format ["%1: %2", localize LSTRING(laserCode), _newLaserCode]] call EFUNC(common,displayTextStructured);
 
