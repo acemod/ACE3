@@ -36,14 +36,34 @@ if (0 < _timeLive && _timeLive < 1500) then {
             _x params ["_xObject", "_xItemName"];
             if (_xItemName == _itemClassname) then {
                 detach _xObject;
-                _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
+                // TODO FIX _XPOS MATH
+                //private _xPos = (getPos _xObject) vectorDiff (getPos _attachToVehicle); //worldToModel [0,0,0]; (_obj modelToWorld [0,0,0]) vectorDiff (getPos player)
+                private _xPos = _attachToVehicle worldToModel//(_xObject modelToWorldVisual [0,0,0]) vectorDiff (_attachToVehicle modelToWorldVisual [0,0,0]);//(_xObject modelToWorld [0,0,0]) vectorDiff (getPos _attachToVehicle);
+                systemChat format["xpos: %1", _xPos];
+                _xObject setPos ((getPos _attachToVehicle) vectorAdd [0, 0, -1000]);
                 // Delete attached item after 0.5 seconds
                 [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
-                // Delete the variable
                 _attachedList deleteAt _forEachIndex;
-                _attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
+
+                //Create new item
+                private _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
+                private _attachedObject = _itemVehClass createVehicle [0,0,0];
+                systemChat format["Add more: %1", _attachedObject];
+                // Delete the variable
+                if (_attachToVehicle == _unit) then {
+                    _attachedObject attachTo [_attachToVehicle, _xPos, "leftshoulder"];
+
+                } else {
+                    _attachedObject attachTo [_attachToVehicle, _xPos];
+                    systemChat "vehicle";
+                };
+
+                private _newList = _attachToVehicle getVariable [QGVAR(attached), []];
+                _newList pushBack [_attachedObject, _itemClassname];
+                _attachToVehicle setVariable [QGVAR(attached), _newList, true];
+
             };
         } forEach _attachedList;
 
-    }, [_unit, _attachToVehicle, _itemClassname], _lifeTime] call CBA_fnc_waitAndExecute;
+    }, [_attachToVehicle, _unit, _itemClassname], _lifeTime] call CBA_fnc_waitAndExecute;
 };
