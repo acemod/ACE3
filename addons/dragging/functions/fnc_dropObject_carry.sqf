@@ -31,6 +31,11 @@ private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 // release object
 detach _target;
 
+// Set to default value
+_parentConfig = [_target] call CBA_fnc_getObjectConfig;
+_defaultPos = getArray(_parentConfig >> QGVAR(carryPosition));
+_target setVariable [QGVAR(carryPosition), _defaultPos, true];
+
 // fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
     if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {

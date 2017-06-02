@@ -30,15 +30,15 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 //disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-private _position = getPosATL _carriedItem;
+private _position = _carriedItem getVariable [QGVAR(carryPosition), [0, 0, 0]];
 private _maxHeight = (_unit modelToWorldVisual [0,0,0]) select 2;
 
 _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
 
 // move up/down object and reattach at current position
 detach _carriedItem;
-_carriedItem setPosATL _position;
-_carriedItem attachTo [_unit];
+_carriedItem setVariable [QGVAR(carryPosition), _position, [0,0,0]];
+_carriedItem attachTo [_unit, _position];
 
 //reset the carry direction
 private _direction = _carriedItem getVariable [QGVAR(carryDirection), 0];
