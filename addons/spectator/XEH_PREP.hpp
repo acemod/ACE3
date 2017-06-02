@@ -6,7 +6,7 @@ PREP(cam_setCameraMode);
 PREP(cam_setTarget);
 PREP(cam_setVisionMode);
 PREP(cam_tick);
-PREP(cam_toggleVeryFast);
+PREP(cam_toggleSlow);
 
 // UI functions
 PREP(ui);
@@ -15,7 +15,6 @@ PREP(ui_fadeList);
 PREP(ui_getTreeDataIndex);
 PREP(ui_handleChildDestroyed);
 PREP(ui_handleKeyDown);
-PREP(ui_handleKeyUp);
 PREP(ui_handleListClick);
 PREP(ui_handleMapClick);
 PREP(ui_handleMapDraw);

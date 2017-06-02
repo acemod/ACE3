@@ -260,18 +260,8 @@
             <Japanese>次のビジョン モード</Japanese>
             <Korean>다음 시야 모드</Korean>
         </Key>
-        <Key ID="STR_ACE_Spectator_prevVis">
-            <English>Previous Vision Mode</English>
-            <German>Vorheriger Sichtmodus</German>
-            <Polish>Poprzedni tryb wizji</Polish>
-            <Portuguese>Modo de visão anterior</Portuguese>
-            <Russian>Предыдущий режим видения</Russian>
-            <Spanish>Anterior modo de visión</Spanish>
-            <Czech>Předchozí mód zobrazení</Czech>
-            <Italian>Precedente Modalità Visiva</Italian>
-            <French>Mode de vision précédent</French>
-            <Japanese>前のビジョン モード</Japanese>
-            <Korean>이전 시야 모드</Korean>
+        <Key ID="STR_ACE_Spectator_camSlow">
+            <English>Toggle Slow Speed</English>
         </Key>
     </Package>
 </Project>

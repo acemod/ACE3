@@ -35,7 +35,7 @@ if (_init) then {
     GVAR(camPitch)              = 0;
 
     // Toggles
-    GVAR(camFast)               = false;
+    GVAR(camSlow)               = false;
     GVAR(camLights)             = [];
     GVAR(camLight)              = false;
 
@@ -128,7 +128,7 @@ if (_init) then {
     GVAR(camDistanceTemp)       = nil;
     GVAR(camYaw)                = nil;
     GVAR(camPitch)              = nil;
-    GVAR(camFast)               = nil;
+    GVAR(camSlow)               = nil;
     GVAR(camLights)             = nil;
     GVAR(camLight)              = nil;
 };

@@ -43,15 +43,6 @@ if (_hasTarget && {!GVAR(camOnLocation)} && {count _availableModes > 1}) then {
     ];
 };
 
-_controls pushback [
-    format ["[%1]", toUpper ([DIK_RIGHT] call CBA_fnc_localizeKey)],
-    localize LSTRING(nextUnit)
-];
-_controls pushback [
-    format ["[%1]", toUpper ([DIK_LEFT] call CBA_fnc_localizeKey)],
-    localize LSTRING(prevUnit)
-];
-
 if (_cameraMode == MODE_FREE) then {
     _controls pushback [
         format ["[%1/%2]", [DIK_W] call CBA_fnc_localizeKey, [DIK_S] call CBA_fnc_localizeKey],
@@ -64,6 +55,15 @@ if (_cameraMode == MODE_FREE) then {
     _controls pushback [
         format ["[%1/%2]", [DIK_Q] call CBA_fnc_localizeKey, [DIK_Z] call CBA_fnc_localizeKey],
         localize "STR_A3_Spectator_Helper_Height"
+    ];
+} else {
+    _controls pushback [
+        format ["[%1]", toUpper ([DIK_RIGHT] call CBA_fnc_localizeKey)],
+        localize LSTRING(nextUnit)
+    ];
+    _controls pushback [
+        format ["[%1]", toUpper ([DIK_LEFT] call CBA_fnc_localizeKey)],
+        localize LSTRING(prevUnit)
     ];
 };
 
@@ -78,8 +78,7 @@ _controls pushBack [
 
 if (_cameraMode == MODE_FREE) then {
     _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Shift"];
-    _controls pushBack ["[LALT]", localize "STR_A3_Spectator_Helper_Alt"];
-    _controls pushBack ["[LALT + LSHIFT]", localize "STR_A3_Spectator_Helper_ShiftAlt"];
+    _controls pushBack ["[LALT]", localize LSTRING(camSlow)];
 };
 
 if (count _controls > MAX_CONTROLS_HELP_ENTRIES) then {

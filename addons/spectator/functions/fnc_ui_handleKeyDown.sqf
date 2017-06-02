@@ -18,7 +18,7 @@ if (_key == DIK_M) exitWith {
 
 // Handle very fast speed
 if (_key == DIK_LALT) exitWith {
-    [true] call FUNC(cam_toggleVeryFast);
+    [] call FUNC(cam_toggleSlow);
     true
 };
 

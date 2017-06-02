@@ -25,9 +25,9 @@
 #define Y_PART(num) (H_PART(num) + (safezoneY + (safezoneH - SIZEY)/2))
 
 // UI/Camera related values
-#define SPEED_DEFAULT   0.1
-#define SPEED_FAST      2
-#define SPEED_VERYFAST  3
+#define SPEED_SLOW      0.1
+#define SPEED_DEFAULT   1
+#define SPEED_FAST      2 // Seems to be some form of multiplier (but using 1 stil makes it faster...?)
 
 #define MODE_FREE   0
 #define MODE_FPS    1
