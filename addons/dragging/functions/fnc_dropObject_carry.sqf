@@ -32,8 +32,8 @@ private _inBuilding = [_unit] call FUNC(isObjectOnObject);
 detach _target;
 
 // Set to default value
-_parentConfig = [_target] call CBA_fnc_getObjectConfig;
-_defaultPos = getArray(_parentConfig >> QGVAR(carryPosition));
+private _parentConfig = [_target] call CBA_fnc_getObjectConfig;
+private _defaultPos = getArray(_parentConfig >> QGVAR(carryPosition));
 _target setVariable [QGVAR(carryPosition), _defaultPos, true];
 
 // fix anim when aborting carrying persons
