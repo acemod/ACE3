@@ -8,27 +8,22 @@
 #include "script_component.hpp"
 
 // Quicker to use local vars that are accessed often in iteration
-private _whitelist = GVAR(unitWhitelist);
-private _blacklist = GVAR(unitBlacklist);
 private _sides = GVAR(availableSides);
 
-private _entities = [];
-
-// AI filter
-if (GVAR(enableAI)) then {
-    _entities = allUnits;
-} else {
-    _entities = [] call CBA_fnc_players;
+// Apply entity filtering
+private _entities = allUnits;
+_entities = _entities select {
+    (GVAR(enableAI) || {isPlayer _x}) && // AI setting
+    {(side group _x) in _sides} && // Available sides
+    {simulationEnabled _x && {simulationEnabled vehicle _x}} && // Hide disabled things
+    { !isObjectHidden _x && {!isObjectHidden vehicle _x} } // Hide hidden things
 };
 
-// Whitelist overrides AI setting
-_entities append _whitelist;
-_entities = _entities arrayIntersect _entities; // No duplicates
+// Respect the blacklist
+_entities = _entities - GVAR(unitBlacklist);
 
-// Whitelist overrides side settings, but not simulation/hidden filtering
-_entities select {
-    ((side group _x) in _sides || {_x in _whitelist}) &&
-    {simulationEnabled _x && {simulationEnabled vehicle _x}} &&
-    { !isObjectHidden _x && {!isObjectHidden vehicle _x} } &&
-    {!(_x in _blacklist)}
-}
+// Whitelist overrides filtering
+_entities append GVAR(unitWhitelist);
+
+// Return no duplicates
+_entities arrayIntersect _entities
