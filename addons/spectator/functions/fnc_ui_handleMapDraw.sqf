@@ -9,18 +9,7 @@
 #define MAP_MIN_ENTITY_DISTANCE 30
 
 // Moved timer into map controls group, update here
-BEGIN_COUNTER(updateTimer);
-
-// TODO: Check relevance of this variable, is it a general module or EG specific
-private _timeLeft = -(time - (GETMVAR(BIS_hvt_timeoutTarget,0)))/3600;
-
-if (_timeLeft < 0) then {
-    CTRL_TIME ctrlSetText (["+", [time / 3600] call BIS_fnc_timeToString] joinString "");
-} else {
-    CTRL_TIME ctrlSetText (["-", [_timeLeft] call BIS_fnc_timeToString] joinString "");
-};
-
-END_COUNTER(updateTimer);
+CTRL_TIME ctrlSetText (["+", [time / 3600] call BIS_fnc_timeToString] joinString "");
 
 BEGIN_COUNTER(drawMap);
 

@@ -14,9 +14,15 @@ if (_newFocus isEqualType true) then {
     private _testFocus = ([] call FUNC(getTargetEntities)) select 0;
 
     if (isNil "_testFocus") then {
-        WARNING("No available entities to focus on. Switching to free cam.");
-        [MODE_FREE] call FUNC(cam_setCameraMode);
-        _newFocus = objNull;
+        if (MODE_FREE in GVAR(availableModes)) then {
+            WARNING("No available entities to focus on. Switching to free cam.");
+            [MODE_FREE] call FUNC(cam_setCameraMode);
+            _newFocus = objNull;
+        } else {
+            // Default to player if necessary
+            WARNING("No available entities to focus on. Using player.");
+            _newFocus = player;
+        };
     } else {
         _newFocus = _testFocus;
     };

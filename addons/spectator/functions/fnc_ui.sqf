@@ -16,7 +16,6 @@ if (_init isEqualTo !isNull SPEC_DISPLAY) exitWith {};
 openMap [false,false];
 
 // Close any open dialogs
-// TODO: Could this be unnecessary? Might have adverse side effects in certain situations
 while {dialog} do {
     closeDialog 0;
 };
