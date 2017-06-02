@@ -32,4 +32,4 @@ It will also correct for gravity drop.
 
 ## 3. Dependencies
 
-{% include dependencies_list.md component="missileguidance" %}
+{% include dependencies_list.md component="nlaw" %}

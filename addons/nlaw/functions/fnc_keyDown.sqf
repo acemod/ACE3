@@ -76,6 +76,6 @@ playSound "ACE_Sound_Click";
     _args set [2, _pitch];
 
     #ifdef DEBUG_MODE_FULL
-    hintSilent format ["Now\n%1\n%2\nGVAR\n%3\n%4", _yawChange, _pitchChange, GVAR(yawChange), GVAR(pitchChange)];
+    hintSilent format ["Instantaneous\nYaw: %1\n Pitch: %2\nGVAR\nYaw: %3\nPitch: %4", _yawChange, _pitchChange, GVAR(yawChange), GVAR(pitchChange)];
     #endif
 }, .25, [CBA_missionTime, _yaw, _pitch, true]] call CBA_fnc_addPerFrameHandler;
