@@ -45,7 +45,7 @@ private _entities = call FUNC(getTargetEntities);
 
         // Add the side if new
         if (_sideIndex < 0) then {
-            _sideIndex = _newList pushBack [
+            _newList pushBack [
                 _side,
                 str _side,
                 [_side] call BIS_fnc_sideName,
@@ -53,26 +53,25 @@ private _entities = call FUNC(getTargetEntities);
                 []
             ];
 
-            _newSides pushBack (str _side);
+            _sideIndex = _newSides pushBack (str _side);
         };
 
         // Add it to the right index
-        ((_newList select _sideIndex) select 3) pushBack [_groupInfo, _unitsInfo];
+        ((_newList select _sideIndex) select 4) pushBack [_groupInfo, _unitsInfo];
 
         _newGroups pushBack (str _group);
     };
     nil // Speed loop
 } count _entities;
-//TODO: Test speed of this loop compared to original
 
 // Whether an update to the list is required (really only if something changed)
 if !(GVAR(curList) isEqualTo _newList) then {
     private _ctrl = CTRL_LIST;
 
     // Remove groups/units that are no longer there
-    for "_sideIndex" from (_ctrl tvCount [] - 1) to 0 step -1 do {
-        for "_groupIndex" from (_ctrl tvCount [_sideIndex] - 1) to 0 step -1 do {
-            for "_unitIndex" from (_ctrl tvCount [_sideIndex, _groupIndex] - 1) to 0 step -1 do {
+    for "_sideIndex" from ((_ctrl tvCount []) - 1) to 0 step -1 do {
+        for "_groupIndex" from ((_ctrl tvCount [_sideIndex]) - 1) to 0 step -1 do {
+            for "_unitIndex" from ((_ctrl tvCount [_sideIndex, _groupIndex]) - 1) to 0 step -1 do {
                 private _lookup = _newUnits find (_ctrl tvData [_sideIndex, _groupIndex, _unitIndex]);
                 if (_lookup < 0) then {
                     _ctrl tvDelete [_sideIndex, _groupIndex, _unitIndex];

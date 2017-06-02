@@ -15,7 +15,7 @@ if !(GVAR(curList) isEqualTo _newList) then {
     private _ctrl = CTRL_LIST;
 
     // Remove locations that are no longer there
-    for "_locationIndex" from (_ctrl tvCount [] - 1) to 0 step -1 do {
+    for "_locationIndex" from ((_ctrl tvCount []) - 1) to 0 step -1 do {
         private _lookup = _newLocations find (_ctrl tvData [_locationIndex]);
         if (_lookup < 0) then {
             _ctrl tvDelete [_locationIndex];
