@@ -3,6 +3,8 @@
  * Enter/exit spectator mode for the local player
  *
  * Client will be able to communicate in ACRE/TFAR as appropriate
+ * If player is alive, will be moved to marker ace_spectator_respawn (or [0,0,0] by default)
+ * If player is alive upon exit, will be moved back to original position
  *
  * Arguments:
  * 0: Spectator state of local client <BOOL> (default: true)

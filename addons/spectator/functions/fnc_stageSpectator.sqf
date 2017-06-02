@@ -1,21 +1,11 @@
 /*
  * Author: SilentSpike
- * Stores and hdies an entity safely out of the way (intended for use on spectator players)
+ * Stores and hides a player safely out of the way (used on spectator players)
  *
  * Units will be gathered at marker ace_spectator_respawn (or [0,0,0] by default)
  * Upon unstage, units will be moved to the position they were in before staging
  *
- * Arguments:
- * 0: Unit to put into spectator stage <OBJECT> (default: player)
- * 1: Unit should be staged <BOOL> (default: true)
- *
- * Return Value:
- * None <NIL>
- *
- * Example:
- * [player, false] call ace_spectator_fnc_stageSpectator
- *
- * Public: Yes
+ * Public: No
  */
 
 #include "script_component.hpp"
