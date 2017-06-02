@@ -258,6 +258,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "nlaw" %}
+`ace_missileguidance`
+{% endif %}
+
 {% if include.component == "noidle" %}
 `ace_common`
 {% endif %}
@@ -287,6 +291,10 @@
 {% endif %}
 
 {% if include.component == "parachute" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "quickmount" %}
 `ace_common`
 {% endif %}
 
