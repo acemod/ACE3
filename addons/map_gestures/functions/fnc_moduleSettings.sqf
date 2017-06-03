@@ -28,14 +28,14 @@ if (!_activated || !isServer) exitWith {};
 //For default fallback colors, setting to empty ("") will not force on clients
 private _defaultLeadColor = _logic getVariable ["defaultLeadColor", ""];
 if (_defaultLeadColor != "") then {
-    _defaultLeadColor = call compile ("[" + _defaultLeadColor + "]");
+    _defaultLeadColor = parseSimpleArray ("[" + _defaultLeadColor + "]");
     if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
     [QGVAR(defaultLeadColor), _defaultLeadColor, true, true] call EFUNC(common,setSetting);
 };
 
 private _defaultColor = _logic getVariable ["defaultColor", ""];
 if (_defaultColor != "") then {
-    _defaultColor = call compile ("[" + _defaultColor + "]");
+    _defaultColor = parseSimpleArray ("[" + _defaultColor + "]");
     if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
     [QGVAR(defaultColor), _defaultColor, true, true] call EFUNC(common,setSetting);
 };
