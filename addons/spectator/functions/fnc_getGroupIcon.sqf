@@ -143,8 +143,8 @@ if (count _vehicles >= 0.33 * count _units) exitWith {
 };
 
 // Check leader for medic/engineer/etc, otherwise just default to infantry
-private _medic = [_leader] call FUNC(isMedic);
-private _engineer = [_leader] call FUNC(isMedic);
+private _medic = [_leader] call EFUNC(common,isMedic);
+private _engineer = [_leader] call EFUNC(common,isMedic);
 
 if (_medic && _engineer) exitWith {
     ICON_SUPPORT
