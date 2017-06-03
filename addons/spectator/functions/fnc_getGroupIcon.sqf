@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Group to get the icon of <GROUP>
- * 1: Allow leader's squad.xml logo <BOOL> (Default: false)
+ * 1: Return icons for draw3D use <BOOL> (Default: false)
  *
  * Return Value:
  * Icon of group <STRING>
@@ -12,47 +12,42 @@
  * Examples:
  * [group player] call ace_common_fnc_getGroupIcon;
  *
- * Public: Yes
+ * Public: No
  */
 
 #include "script_component.hpp"
 
 // Military icons
-#define ICON_UNKNOWN "a3\ui_f\data\Map\Markers\NATO\data\b_unknown.paa"
-#define ICON_UAV "a3\ui_f\data\Map\Markers\NATO\data\b_uav.paa"
-#define ICON_SUPPORT "a3\ui_f\data\Map\Markers\NATO\data\b_support.paa"
-#define ICON_SERVICE "a3\ui_f\data\Map\Markers\NATO\data\b_service.paa"
-#define ICON_RECON "a3\ui_f\data\Map\Markers\NATO\data\b_recon.paa"
-#define ICON_PLANE "a3\ui_f\data\Map\Markers\NATO\data\b_plane.paa"
-#define ICON_NAVAL "a3\ui_f\data\Map\Markers\NATO\data\b_naval.paa"
-#define ICON_MOTOR_INF "a3\ui_f\data\Map\Markers\NATO\data\b_motor_inf.paa"
-#define ICON_MORTAR "a3\ui_f\data\Map\Markers\NATO\data\b_mortar.paa"
-#define ICON_MED "a3\ui_f\data\Map\Markers\NATO\data\b_med.paa"
-#define ICON_MECH_INF "a3\ui_f\data\Map\Markers\NATO\data\b_mech_inf.paa"
-#define ICON_MAINT "a3\ui_f\data\Map\Markers\NATO\data\b_maint.paa"
-#define ICON_INSTALLATION "a3\ui_f\data\Map\Markers\NATO\data\b_installation.paa"
-#define ICON_INF "a3\ui_f\data\Map\Markers\NATO\data\b_inf.paa"
-#define ICON_ART "a3\ui_f\data\Map\Markers\NATO\data\b_art.paa"
-#define ICON_ARMOR "a3\ui_f\data\Map\Markers\NATO\data\b_armor.paa"
-#define ICON_AIR "a3\ui_f\data\Map\Markers\NATO\data\b_air.paa"
+#define ICON_UNKNOWN ["a3\ui_f\data\Map\Markers\NATO\data\b_unknown.paa", QPATHTOF(data\b_unknown.paa)] select _forDraw
+#define ICON_UAV ["a3\ui_f\data\Map\Markers\NATO\data\b_uav.paa", QPATHTOF(data\b_uav.paa)] select _forDraw
+#define ICON_SUPPORT ["a3\ui_f\data\Map\Markers\NATO\data\b_support.paa", QPATHTOF(data\b_support.paa)] select _forDraw
+#define ICON_SERVICE ["a3\ui_f\data\Map\Markers\NATO\data\b_service.paa", QPATHTOF(data\b_service.paa)] select _forDraw
+#define ICON_RECON ["a3\ui_f\data\Map\Markers\NATO\data\b_recon.paa", QPATHTOF(data\b_recon.paa)] select _forDraw
+#define ICON_PLANE ["a3\ui_f\data\Map\Markers\NATO\data\b_plane.paa", QPATHTOF(data\b_plane.paa)] select _forDraw
+#define ICON_NAVAL ["a3\ui_f\data\Map\Markers\NATO\data\b_naval.paa", QPATHTOF(data\b_naval.paa)] select _forDraw
+#define ICON_MOTOR_INF ["a3\ui_f\data\Map\Markers\NATO\data\b_motor_inf.paa", QPATHTOF(data\b_motor_inf.paa)] select _forDraw
+#define ICON_MORTAR ["a3\ui_f\data\Map\Markers\NATO\data\b_mortar.paa", QPATHTOF(data\b_mortar.paa)] select _forDraw
+#define ICON_MED ["a3\ui_f\data\Map\Markers\NATO\data\b_med.paa", QPATHTOF(data\b_med.paa)] select _forDraw
+#define ICON_MECH_INF ["a3\ui_f\data\Map\Markers\NATO\data\b_mech_inf.paa", QPATHTOF(data\b_mech_inf.paa)] select _forDraw
+#define ICON_MAINT ["a3\ui_f\data\Map\Markers\NATO\data\b_maint.paa", QPATHTOF(data\b_maint.paa)] select _forDraw
+#define ICON_INSTALLATION ["a3\ui_f\data\Map\Markers\NATO\data\b_installation.paa", QPATHTOF(data\b_installation.paa)] select _forDraw
+#define ICON_INF ["a3\ui_f\data\Map\Markers\NATO\data\b_inf.paa", QPATHTOF(data\b_inf.paa)] select _forDraw
+#define ICON_ART ["a3\ui_f\data\Map\Markers\NATO\data\b_art.paa", QPATHTOF(data\b_art.paa)] select _forDraw
+#define ICON_ARMOR ["a3\ui_f\data\Map\Markers\NATO\data\b_armor.paa", QPATHTOF(data\b_armor.paa)] select _forDraw
+#define ICON_AIR ["a3\ui_f\data\Map\Markers\NATO\data\b_air.paa", QPATHTOF(data\b_air.paa)] select _forDraw
 
 // Civilian icons
-#define CIV_ICON_UNKNOWN "a3\ui_f\data\Map\Markers\NATO\data\c_unknown.paa"
-#define CIV_ICON_AIR "a3\ui_f\data\Map\Markers\NATO\data\c_air.paa"
-#define CIV_ICON_CAR "a3\ui_f\data\Map\Markers\NATO\data\c_car.paa"
-#define CIV_ICON_PLANE "a3\ui_f\data\Map\Markers\NATO\data\c_plane.paa"
-#define CIV_ICON_SHIP "a3\ui_f\data\Map\Markers\NATO\data\c_ship.paa"
+#define CIV_ICON_UNKNOWN ["a3\ui_f\data\Map\Markers\NATO\data\c_unknown.paa", QPATHTOF(data\c_unknown.paa)] select _forDraw
+#define CIV_ICON_AIR ["a3\ui_f\data\Map\Markers\NATO\data\c_air.paa", QPATHTOF(data\c_air.paa)] select _forDraw
+#define CIV_ICON_CAR ["a3\ui_f\data\Map\Markers\NATO\data\c_car.paa", QPATHTOF(data\c_car.paa)] select _forDraw
+#define CIV_ICON_PLANE ["a3\ui_f\data\Map\Markers\NATO\data\c_plane.paa", QPATHTOF(data\c_plane.paa)] select _forDraw
+#define CIV_ICON_SHIP ["a3\ui_f\data\Map\Markers\NATO\data\c_ship.paa", QPATHTOF(data\c_ship.paa)] select _forDraw
 
-params [["_group", grpNull, [grpNull]], ["_useXML", false, [true]]];
+params [["_group", grpNull, [grpNull]], ["_forDraw", false, [true]]];
 
 // Handle empty or null group
 private _leader = leader _group;
 if (isNull _leader) exitWith { [ICON_UNKNOWN, CIV_ICON_UNKNOWN] select (side _group == civilian) };
-
-// Handle cases where player has a valid squad.xml logo
-if (_useXML && {(((squadParams _leader) param [0,[]]) param [4,""]) != ""}) exitWith {
-    ((squadParams _leader) select 0) select 4
-};
 
 // Civilians are easy, just check leader's vehicle (unlikely group is large)
 if (side _group == civilian) exitWith {

@@ -93,7 +93,7 @@ private _entitiesToDraw = [];
         if (_x == _groupLeader || { _inVehicle && { _x == effectiveCommander _vehicle } }) then {
             // Group icon
             _iconsToDraw pushBack [_x, 0, [
-                ICON_GROUP,
+                [_group, true] call FUNC(getGroupIcon),
                 _groupColor,
                 [0,0,0],
                 _sizeByDistance,

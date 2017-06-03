@@ -38,6 +38,7 @@ PREP(ui_updateWidget);
 PREP(compat_counter);
 PREP(compat_spectatorBI);
 PREP(compat_zeus);
+PREP(getGroupIcon);
 PREP(getTargetEntities);
 PREP(handleFired);
 PREP(moduleSpectatorSettings);

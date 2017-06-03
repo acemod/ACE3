@@ -55,7 +55,6 @@ PREP(getDefinedVariableDefault);
 PREP(getDefinedVariableInfo);
 PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
-PREP(getGroupIcon);
 PREP(getGunner);
 PREP(getInPosition);
 PREP(getMapData);

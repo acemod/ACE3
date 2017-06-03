@@ -46,7 +46,7 @@ private _entities = [true] call FUNC(getTargetEntities);
             } count _entitiesGroup;
 
             // Cache the info of the group itself
-            private _groupTexture = [_group, true] call EFUNC(common,getGroupIcon);
+            private _groupTexture = [_group] call FUNC(getGroupIcon);
             private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
 
             // Add the group to the correct side
