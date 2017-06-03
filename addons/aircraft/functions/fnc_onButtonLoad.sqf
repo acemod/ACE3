@@ -1,7 +1,21 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Loads selected pylon configuration from either config or profile
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_aircraft_fnc_onButtonLoad
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-[nil, 0] call FUNC(onPylonMirror);
+[false] call FUNC(onPylonMirror);
 ((findDisplay 654654) displayCtrl 130) cbSetChecked false;
 
 private _loadoutName = ctrlText 170;

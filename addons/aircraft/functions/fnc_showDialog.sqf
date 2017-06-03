@@ -1,4 +1,18 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Shows the aircraft loadout dialog for given aircraft
+ *
+ * Arguments:
+ * 0: The aircraft <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [vehicle ace_player] call ace_aircraft_fnc_showDialog
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 params ["_aircraft"];
@@ -79,4 +93,4 @@ private _edit = _display displayCtrl 170;
 _edit ctrlAddEventHandler ["KeyUp", {call FUNC(onNameChange)}];
 
 private _checkbox = _display displayCtrl 130;
-_checkbox ctrlAddEventHandler ["CheckedChanged", {call FUNC(onPylonMirror)}];
+_checkbox ctrlAddEventHandler ["CheckedChanged", {[(_this select 1) == 1] call FUNC(onPylonMirror)}];

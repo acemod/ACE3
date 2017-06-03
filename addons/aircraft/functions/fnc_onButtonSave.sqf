@@ -1,4 +1,18 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Saves the selected pylon configuration to profileNamespace
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_aircraft_fnc_onButtonSave
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private _loadoutName = ctrlText 170;

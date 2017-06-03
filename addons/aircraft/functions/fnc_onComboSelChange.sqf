@@ -1,4 +1,19 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Mirrors magazine selection to the opposite pylon if mirroring is on
+ *
+ * Arguments:
+ * 0: Combobox <CONTROL>
+ * 1: Index of selected magazine in the combobox <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false] call ace_aircraft_fnc_onComboSelChange
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 params ["_ctrl", "_index"];

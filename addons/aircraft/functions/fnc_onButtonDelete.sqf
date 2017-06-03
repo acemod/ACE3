@@ -1,4 +1,18 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Deletes the selected pylon configuration from profileNamespace
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_aircraft_fnc_onButtonDelete
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 private _selection = lbText [160, lbCurSel 160];

@@ -1,4 +1,19 @@
-// TODO: Header
+/*
+ * Author: 654wak654
+ * Called when current loadout name is changed
+ * Prevents default presets from gettings deleted / overwritten
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_aircraft_fnc_onNameChange
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
 if ((ctrlText 170) in GVAR(defaultLoadoutNames)) then {
