@@ -14,7 +14,7 @@ if (isServer) then {
     ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
     ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
 
-    [LINKFUNC(masterPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    addMissionEventHandler ["EachFrame", {call FUNC(masterPFH)}];
 }] call CBA_fnc_addEventHandler;
 
 // Cache for ammo type configs

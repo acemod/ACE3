@@ -6,7 +6,7 @@
  * None
  *
  * Return Value:
- * None
+ * Near Units <ARRAY>
  *
  * Public: No
  */
@@ -15,7 +15,7 @@
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 
 // handle RHS / bugged vehicle slots
-if !((_camPosAGL select 0) isEqualType 0) exitWith {};
+if !((_camPosAGL select 0) isEqualType 0) exitWith { [] };
 
 private _nearUnits = [];
 

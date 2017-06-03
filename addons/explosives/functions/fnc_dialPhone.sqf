@@ -41,6 +41,6 @@ if (_unit == ace_player) then {
             playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_this select 1),3.16228,1,75];
             (_this select 0) setVariable [QGVAR(Dialing), false, true];
         }, [_unit,_explosive select 0], 0.25 * (count _arr - 4)] call CBA_fnc_waitAndExecute;
-        [_explosive select 0,(0.25 * (count _arr - 1)) + (_explosive select 2)] call FUNC(startTimer);
+        [_explosive select 0,(0.25 * (count _arr - 1)) + (_explosive select 2), "ACE_Cellphone"] call FUNC(startTimer);
     };
 };

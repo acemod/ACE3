@@ -17,7 +17,7 @@
 params ["_litterClass", "_position", "_direction"];
 TRACE_3("params",_litterClass,_position,_direction);
 
-//IGNORE_PRIVATE_WARNING(_values);
+//IGNORE_PRIVATE_WARNING ["_values"];
 
 if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(allCreatedLitter) = [];

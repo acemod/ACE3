@@ -5,7 +5,7 @@
             class GVAR(Refuel) { \
                 displayName = CSTRING(Refuel); \
                 distance = REFUEL_ACTION_DISTANCE; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -118,6 +118,11 @@ class CfgVehicles {
                 description = CSTRING(RefuelSettings_speed_Description);
                 typeName = "NUMBER";
                 defaultValue = 10;
+            };
+            class hoseLength {
+                displayName = CSTRING(RefuelSettings_hoseLength_DisplayName);
+                typeName = "NUMBER";
+                defaultValue = 12;
             };
         };
     };
@@ -510,6 +515,22 @@ class CfgVehicles {
         MACRO_REFUEL_ACTIONS
         GVAR(hooks)[] = {{-0.4,0.022,-.23}};
         GVAR(fuelCargo) = REFUEL_INFINITE_FUEL;
+    };
+
+    // Helper object for non-AllVehicles objects
+    class GVAR(helper): Helicopter_Base_F {
+        scope = 1;
+        displayName = "Refuel Helper";
+        model = "\A3\Weapons_f\empty";
+        class ACE_Actions {};
+        class ACE_SelfActions {};
+        EGVAR(cargo,hasCargo) = 0;
+        EGVAR(cargo,space) = 0;
+        damageEffect = "";
+        destrType = "";
+        class HitPoints {};
+        class Turrets {};
+        class TransportItems {};
     };
 
     /* // Barrels found in config  \

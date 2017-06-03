@@ -26,6 +26,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class paradropTimeCoefficent {
+                displayName = CSTRING(paradropTimeCoefficent);
+                description = CSTRING(paradropTimeCoefficent_description);
+                typeName = "SCALAR";
+                defaultValue = 2.5;
+            };
         };
 
         class ModuleDescription {
@@ -279,7 +285,7 @@ class CfgVehicles {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
-    
+
     // autonomus
     class UAV_01_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
@@ -340,7 +346,7 @@ class CfgVehicles {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
     };
-    
+
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(size) = 2; // 1 = small, 2 = large
