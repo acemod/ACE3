@@ -1,6 +1,6 @@
 /*
  * Author: AACO
- * Function used to get the vehicle icon for provided object (cached)
+ * Function used to get the vehicle icon for provided object (cached for repeat use)
  *
  * Arguments:
  * 0: Object to get icon of <OBJECT/STRING>
@@ -15,7 +15,7 @@
  */
 
 #include "script_component.hpp"
-#define DEFAULT_TEXTURE "\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa"
+#define DEFAULT_TEXTURE "\A3\ui_f\data\Map\VehicleIcons\iconVehicle_ca.paa"
 
 params [["_object", objNull, [objNull, ""]]];
 
