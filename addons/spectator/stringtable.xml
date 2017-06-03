@@ -195,31 +195,11 @@
             <Korean>열상</Korean>
         </Key>
         <!-- Controls -->
-        <Key ID="STR_ACE_Spectator_uiToggleIcons">
-            <English>Toggle Unit Icons</English>
-            <German>Einheitensymbole umschalten</German>
-            <Polish>Przełącz ikony jednostek</Polish>
-            <Portuguese>Alternar ícone de unidades</Portuguese>
-            <Russian>Вкл./выкл. иконки юнитов</Russian>
-            <Czech>Zobrazit/skrýt ikony jednotek</Czech>
-            <Spanish>Conmutar iconos de unidad</Spanish>
-            <Italian>Apri Icone Unità</Italian>
-            <French>Bascule des icônes des unités</French>
-            <Japanese>ユニット アイコンをトグル</Japanese>
-            <Korean>인원 아이콘 토글</Korean>
+        <Key ID="STR_ACE_Spectator_uiIcons">
+            <English>Icons</English>
         </Key>
-        <Key ID="STR_ACE_Spectator_uiToggleMap">
-            <English>Toggle Map</English>
-            <German>Karte umschalten</German>
-            <Polish>Przełącz mapę</Polish>
-            <Portuguese>Alternar mapa</Portuguese>
-            <Russian>Вкл./выкл. карту</Russian>
-            <Czech>Zobrazit/skrýt mapu</Czech>
-            <Spanish>Conmutar map</Spanish>
-            <Italian>Apri Mappa</Italian>
-            <French>Basculer la carte</French>
-            <Japanese>地図をトグル</Japanese>
-            <Korean>지도 토글</Korean>
+        <Key ID="STR_ACE_Spectator_uiProjectiles">
+            <English>Projectiles</English>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -248,17 +228,7 @@
             <Korean>이전 인원</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
-            <English>Next Vision Mode</English>
-            <German>Nächster Sichtmodus</German>
-            <Polish>Następny tryb wizji</Polish>
-            <Portuguese>Próximo modo de visão</Portuguese>
-            <Russian>Следующий режим видения</Russian>
-            <Spanish>Siguiente modo de visión</Spanish>
-            <Czech>Následující mód zobrazení</Czech>
-            <Italian>Prossima Modalità Visiva</Italian>
-            <French>Mode de vision suivant</French>
-            <Japanese>次のビジョン モード</Japanese>
-            <Korean>다음 시야 모드</Korean>
+            <English>Vision Mode</English>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>

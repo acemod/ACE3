@@ -83,6 +83,20 @@ _controls pushBack [
     localize "STR_A3_Spectator_Helper_Controls"
 ];
 
+// Too many controls in the UI, leave these out?
+// _controls pushBack [
+//     format ["[%1]", [DIK_M] call CBA_fnc_localizeKey],
+//     localize "str_usract_map"
+// ];
+// _controls pushBack [
+//     format ["[%1]", [DIK_I] call CBA_fnc_localizeKey],
+//     localize LSTRING(uiIcons)
+// ];
+// _controls pushBack [
+//     format ["[%1]", [DIK_O] call CBA_fnc_localizeKey],
+//     localize LSTRING(uiProjectiles)
+// ];
+
 if (_cameraMode == MODE_FREE) then {
     _controls pushBack ["[LSHIFT]", localize "STR_A3_Spectator_Helper_Shift"];
     _controls pushBack ["[LALT]", localize LSTRING(camSlow)];
