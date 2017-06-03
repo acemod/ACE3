@@ -169,11 +169,12 @@ if !(GVAR(curList) isEqualTo _newList) then {
             {
                 _x params ["_unit", "_isAlive", "_isIncapacitated", "_name"];
 
-                private _tooltip = format ["%1 - %2", [_unit] call EFUNC(common,getName), _groupId];
+                private _tooltip = format ["%1 - %2", [_unit] call EFUNC(common,getName), [rank _unit] call CBA_fnc_capitalize];
                 private _texture = [_isAlive, _isIncapacitated, _unit] call {
+                    params ["","","_unit"];
                     if !(_this select 0) exitWith { ICON_DEAD };
                     if (_this select 1) exitWith { ICON_REVIVE };
-                    [_this select 2] call EFUNC(common,getVehicleIcon)
+                    [vehicle _unit] call EFUNC(common,getVehicleIcon)
                 };
 
                 private _lookup = (_unitDataToPathHash select 0) find ([_unit] call BIS_fnc_objectVar);
