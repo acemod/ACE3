@@ -1,5 +1,3 @@
-// TODO: Add interact menu action to all aircraft that have pylons & are in 30 m distance of a rearm truck
-
 class CfgVehicles {
     class All {
         class Turrets;
