@@ -29,7 +29,7 @@ _drawVehicles = [];
         _color = GETVAR(_x,GVAR(gColor),[ARR_4(0,0,0,0)]);
         _txt = groupID _x;
 
-        drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color, (_leader modelToWorldVisual (_leader selectionPosition "Head")) vectorAdd [0,0,1.5], 1, 1, 0, _txt, 2, 0.02];
+        drawIcon3D ["\A3\ui_f\data\map\markers\nato\b_inf.paa", _color, (_leader modelToWorldVisual (_leader selectionPosition "Head")) vectorAdd [0,0,28.5], 1, 1, 0, _txt, 2, 0.02];
     } else {
         _drawVehicles append (units _x);
     };
