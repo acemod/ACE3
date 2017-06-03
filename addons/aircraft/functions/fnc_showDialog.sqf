@@ -79,7 +79,7 @@ GVAR(defaultLoadoutNames) = [];
 } forEach (profileNamespace getVariable [QGVAR(aircraftLoadouts), []]);
 
 private _displayName = getText (_config >> "displayName"); 
-ctrlSetText [150, format ["Loadouts for %1", _displayName]]; // TODO: Localize
+ctrlSetText [150, format [localize LSTRING(LoadoutsFor), _displayName]];
 
 private _list = _display displayCtrl 160;
 _list ctrlAddEventHandler ["LBSelChanged", {

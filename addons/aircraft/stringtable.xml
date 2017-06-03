@@ -49,5 +49,8 @@
         <Key ID="STR_ACE_Aircraft_AircraftLoadoutTitle">
             <English>AIRCRAFT LOADOUT</English>
         </Key>
+        <Key ID="STR_ACE_Aircraft_LoadoutsFor">
+            <English>Loadouts for %1</English>
+        </Key>
     </Package>
 </Project>
