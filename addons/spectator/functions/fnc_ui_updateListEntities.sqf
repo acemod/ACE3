@@ -46,7 +46,7 @@ private _entities = [true] call FUNC(getTargetEntities);
             } count _entitiesGroup;
 
             // Cache the info of the group itself
-            private _groupTexture = ["GetGroupTexture", [_group]] call BIS_fnc_dynamicGroups;
+            private _groupTexture = [_group, true] call EFUNC(common,getGroupIcon);
             private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
 
             // Add the group to the correct side
@@ -151,7 +151,7 @@ if !(GVAR(curList) isEqualTo _newList) then {
                 _groupIndex = _ctrl tvAdd [[_sideIndex], _groupId];
                 _ctrl tvSetData [[_sideIndex, _groupIndex], _groupStr];
                 _ctrl tvSetPicture [[_sideIndex, _groupIndex], _groupTexture];
-                _ctrl tvSetPictureColor [[_sideIndex, _groupIndex], [1,1,1,0.5]];
+                _ctrl tvSetPictureColor [[_sideIndex, _groupIndex], _sideColor];
                 _ctrl tvSetTooltip [[_sideIndex, _groupIndex], _groupId];
                 _ctrl tvExpand [_sideIndex, _groupIndex];
             } else {
@@ -162,7 +162,7 @@ if !(GVAR(curList) isEqualTo _newList) then {
 
                 _ctrl tvSetText [_path, _groupId];
                 _ctrl tvSetPicture [_path, _groupTexture];
-                _ctrl tvSetPictureColor [_path, [1,1,1,0.5]];
+                _ctrl tvSetPictureColor [_path, _sideColor];
                 _ctrl tvSetTooltip [_path, _groupId];
             };
 
