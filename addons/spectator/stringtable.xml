@@ -261,7 +261,7 @@
             <Korean>다음 시야 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
-            <English>Toggle Speed</English>
+            <English>Slow Speed</English>
         </Key>
     </Package>
 </Project>

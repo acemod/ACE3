@@ -15,6 +15,7 @@ PREP(ui_fadeList);
 PREP(ui_getTreeDataIndex);
 PREP(ui_handleChildDestroyed);
 PREP(ui_handleKeyDown);
+PREP(ui_handleKeyUp);
 PREP(ui_handleListClick);
 PREP(ui_handleMapClick);
 PREP(ui_handleMapDraw);

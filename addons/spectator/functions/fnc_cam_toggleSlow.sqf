@@ -7,16 +7,21 @@
 
 #include "script_component.hpp"
 
-private _camera = GVAR(camera);
+params ["_slowSpeed"];
 
-if (GVAR(camMode) != MODE_FREE) exitWith {
-    _camera camCommand format ["speedDefault %1", SPEED_DEFAULT];
-    GVAR(camSlow) = false;
-};
+if !(GVAR(camSlow) isEqualTo _slowSpeed) then {
+    private _camera = GVAR(camera);
 
-GVAR(camSlow) = !GVAR(camSlow);
-if (GVAR(camSlow)) then {
-    _camera camCommand format ["speedDefault %1", SPEED_SLOW];
-} else {
-    _camera camCommand format ["speedDefault %1", SPEED_DEFAULT];
+    if (GVAR(camMode) == MODE_FREE) then {
+        GVAR(camSlow) = _slowSpeed;
+
+        if (_slowSpeed) then {
+            _camera camCommand format ["speedDefault %1", SPEED_SLOW];
+        } else {
+           _camera camCommand format ["speedDefault %1", SPEED_DEFAULT];
+        };
+    } else {
+        _camera camCommand format ["speedDefault %1", SPEED_DEFAULT];
+        GVAR(camSlow) = false;
+    };
 };
