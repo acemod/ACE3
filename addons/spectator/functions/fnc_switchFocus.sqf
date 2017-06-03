@@ -8,7 +8,7 @@
 #include "script_component.hpp"
 
 private _next = param [0, true];
-private _entities = [] call FUNC(getTargetEntities);
+private _entities = [true] call FUNC(getTargetEntities);
 private _focus = GVAR(camTarget);
 
 // No entities to switch to
