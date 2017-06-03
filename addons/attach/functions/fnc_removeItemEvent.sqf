@@ -38,8 +38,14 @@ if (0 < _timeLive && _timeLive < 1500) then {
                 detach _xObject;
                 // TODO FIX _XPOS MATH
                 //private _xPos = (getPos _xObject) vectorDiff (getPos _attachToVehicle); //worldToModel [0,0,0]; (_obj modelToWorld [0,0,0]) vectorDiff (getPos player)
-                private _xPos = _attachToVehicle worldToModel//(_xObject modelToWorldVisual [0,0,0]) vectorDiff (_attachToVehicle modelToWorldVisual [0,0,0]);//(_xObject modelToWorld [0,0,0]) vectorDiff (getPos _attachToVehicle);
-                systemChat format["xpos: %1", _xPos];
+                //private _xPos = _attachToVehicle worldToModel//(_xObject modelToWorldVisual [0,0,0]) vectorDiff (_attachToVehicle modelToWorldVisual [0,0,0]);//(_xObject modelToWorld [0,0,0]) vectorDiff (getPos _attachToVehicle);
+                private _position = getPosATL _xObject;
+                private _positionChange =  _position vectorDiff (getPosATL _xObject);
+                private _selectionPosition = _attachToVehicle worldToModel (ASLtoAGL getPosWorld _xObject);
+                _selectionPosition = _selectionPosition vectorAdd _positionChange;
+
+
+                systemChat format["xpos: %1, change: %2", _selectionPosition, _positionChange];
                 _xObject setPos ((getPos _attachToVehicle) vectorAdd [0, 0, -1000]);
                 // Delete attached item after 0.5 seconds
                 [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
@@ -51,10 +57,10 @@ if (0 < _timeLive && _timeLive < 1500) then {
                 systemChat format["Add more: %1", _attachedObject];
                 // Delete the variable
                 if (_attachToVehicle == _unit) then {
-                    _attachedObject attachTo [_attachToVehicle, _xPos, "leftshoulder"];
+                    _attachedObject attachTo [_attachToVehicle, _selectionPosition, "leftshoulder"];
 
                 } else {
-                    _attachedObject attachTo [_attachToVehicle, _xPos];
+                    _attachedObject attachTo [_attachToVehicle, _selectionPosition];
                     systemChat "vehicle";
                 };
 
