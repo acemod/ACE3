@@ -9,8 +9,14 @@
 
 private _newUnits = [];
 private _newGroups = [];
-private _newSides = [];
-private _newList = [];
+// Always show the 4 main sides in this intuative order
+private _newSides = [str west, str east, str resistance, str civilian];
+private _newList = [
+    [west, str west, [west] call BIS_fnc_sideName, [west] call BIS_fnc_sideColor, []],
+    [east, str east, [east] call BIS_fnc_sideName, [east] call BIS_fnc_sideColor, []],
+    [resistance, str resistance, [resistance] call BIS_fnc_sideName, [resistance] call BIS_fnc_sideColor, []],
+    [civilian, str civilian, [civilian] call BIS_fnc_sideName, [civilian] call BIS_fnc_sideColor, []]
+];
 
 // Go through entity groups and cache information (include dead entities)
 private _entities = [true] call FUNC(getTargetEntities);
