@@ -115,6 +115,15 @@ private _args = [_this,
             [ diag_tickTime, [], [], _lastKnownPosState]
         ];
 
+
+// Run the "onFired" function passing the full guidance args array
+private _onFiredFunc = getText (_config >> "onFired");
+TRACE_1("",_onFiredFunc);
+if (_onFiredFunc != "") then {
+    _args call (missionNamespace getVariable _onFiredFunc);
+};
+        
+        
 // Reverse:
 //  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];

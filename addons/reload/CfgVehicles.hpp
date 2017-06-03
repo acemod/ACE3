@@ -6,7 +6,7 @@ class CfgVehicles {
                 class GVAR(LinkBelt) {
                     displayName = CSTRING(LinkBelt);
                     distance = 2.0;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canLinkBelt));
+                    condition = QUOTE(([ARR_2(_player, _target)] call FUNC(getAmmoToLinkBelt)) > 0);
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(startLinkingBelt));
                 };
                 class GVAR(CheckAmmo) {

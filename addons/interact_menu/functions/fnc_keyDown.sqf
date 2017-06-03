@@ -59,7 +59,13 @@ if (GVAR(useCursorMenu)) then {
         createDialog QGVAR(cursorMenu);
     };
     (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-    (finddisplay 91919) displayAddEventHandler ["KeyDown", {[_this,'keydown'] call CBA_events_fnc_keyHandler}];
+    (finddisplay 91919) displayAddEventHandler ["KeyDown", {
+        // Handle the escape key being pressed with menu open:
+        if ((_this select [1,4]) isEqualTo [1,false,false,false]) exitWith { // escape key with no modifiers
+            [displayNull] call FUNC(handleEscapeMenu);
+        };
+        [_this,'keydown'] call CBA_events_fnc_keyHandler;
+    }];
     // The dialog sets:
     // uiNamespace getVariable QGVAR(dlgCursorMenu);
     // uiNamespace getVariable QGVAR(cursorMenuOpened);
@@ -73,6 +79,10 @@ if (GVAR(useCursorMenu)) then {
     ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
     ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     setMousePosition [0.5, 0.5];
+} else {
+    if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
+        (findDisplay 91919) closeDisplay 2;
+    };
 };
 
 GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
