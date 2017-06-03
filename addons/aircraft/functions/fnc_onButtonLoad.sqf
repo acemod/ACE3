@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 [nil, 0] call FUNC(onPylonMirror);
 ((findDisplay 654654) displayCtrl 130) cbSetChecked false;

@@ -1,4 +1,9 @@
-#include "\x\cba\addons\main\script_resources.hpp"
+class IGUIBack;
+class RscCheckBox;
+class RscListBox;
+class RscEdit;
+class RscButtonMenu;
+class RscButtonMenuCancel;
 
 class GVAR(DialogLoadout) {
     idd = 654654;
@@ -122,5 +127,3 @@ class GVAR(DialogLoadout) {
         };
     };
 };
-
-// TODO: Add interact menu action to all aircraft that have pylons & are in 30 m distance of a rearm truck

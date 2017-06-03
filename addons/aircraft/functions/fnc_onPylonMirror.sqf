@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 params ["_ctrl", "_checked"];
 

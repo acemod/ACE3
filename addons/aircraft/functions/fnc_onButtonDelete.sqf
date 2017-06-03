@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 private _selection = lbText [160, lbCurSel 160];
 

@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 {
     private _pylon = (_x select 0) lbData (lbCurSel (_x select 0));

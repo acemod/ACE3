@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 if ((ctrlText 170) in GVAR(defaultLoadoutNames)) then {
     ctrlEnable [180, false];

@@ -1,4 +1,5 @@
 // TODO: Header
+#include "script_component.hpp"
 
 private _loadoutName = ctrlText 170;
 private _loadoutPylons = [];
