@@ -34,7 +34,7 @@ GVAR(comboBoxes) = [];
     private _ctrl = _display ctrlCreate ["RscCombo", -1];
 
     private _uiPos = getArray (_pylon >> "UIposition");
-    private _picturePos = ctrlPosition (_display displayCtrl 120);
+    private _picturePos = ctrlPosition (_display displayCtrl 111);
     _ctrl ctrlsetPosition [
         (_picturePos select 0) + (_uiPos select 0),
         (_picturePos select 1) + (_uiPos select 1),

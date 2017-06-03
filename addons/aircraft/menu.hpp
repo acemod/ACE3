@@ -34,13 +34,13 @@ class GVAR(DialogLoadout) {
             y = 0.318 * safezoneH + safezoneY;
             w = 0.441347 * safezoneW;
             h = 0.392 * safezoneH;
-            colorBackground[] = {0.2,0.2,0.2,1};
+            colorBackground[] = {0.3,0.3,0.3,1};
         };
         class PictureAircraft: RscPicture {
             idc = 120;
-            x = 0.171616 * safezoneW + safezoneX;
+            x = 0.245174 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
-            w = 0.441347 * safezoneW;
+            w = 0.294231 * safezoneW;
             h = 0.392 * safezoneH;
         };
         class CheckboxMirror: RscCheckBox {
@@ -57,7 +57,7 @@ class GVAR(DialogLoadout) {
             y = 0.318 * safezoneH + safezoneY;
             w = 0.0656768 * safezoneW;
             h = 0.028 * safezoneH;
-            colorBackground[] = {0,0,0,0.7};
+            colorBackground[] = {0,0,0,0.5};
         };
         class TextListTitle: RscText {
             idc = 150;
@@ -65,7 +65,7 @@ class GVAR(DialogLoadout) {
             y = 0.318 * safezoneH + safezoneY;
             w = 0.203437 * safezoneW;
             h = 0.028 * safezoneH;
-            colorBackground[] = {0,0,0,0.7};
+            colorBackground[] = {0,0,0,0.5};
         };
         class ListLoadouts: RscListBox {
             idc = 160;
