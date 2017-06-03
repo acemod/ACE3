@@ -99,6 +99,7 @@ PREP(isEngineer);
 PREP(isEOD);
 PREP(isFeatureCameraActive);
 PREP(isInBuilding);
+PREP(isMedic);
 PREP(isModLoaded);
 PREP(isPlayer);
 PREP(isUnderwater);

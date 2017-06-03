@@ -169,7 +169,12 @@ if !(GVAR(curList) isEqualTo _newList) then {
             {
                 _x params ["_unit", "_isAlive", "_isIncapacitated", "_name"];
 
-                private _tooltip = format ["%1 - %2", [_unit] call EFUNC(common,getName), [rank _unit] call CBA_fnc_capitalize];
+                // Show full name in tooltip + whether medic + whether engineer
+                private _tooltip = [[_unit] call EFUNC(common,getName)];
+                if ([_unit] call EFUNC(common,isMedic)) then { _tooltip pushBack (localize "str_support_medic"); };
+                if ([_unit] call EFUNC(common,isEngineer)) then { _tooltip pushBack (localize LSTRING(TooltipEngineer)); };
+                _tooltip = _tooltip joinString " - ";
+
                 private _texture = [_isAlive, _isIncapacitated, _unit] call {
                     params ["","","_unit"];
                     if !(_this select 0) exitWith { ICON_DEAD };

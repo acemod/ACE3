@@ -142,6 +142,19 @@
             <Korean>열화상</Korean>
         </Key>
         <!-- Interface strings -->
+        <Key ID="STR_ACE_Spectator_TooltipEngineer">
+            <English>Engineer</English>
+            <German>Pionier</German>
+            <Polish>Mechanik</Polish>
+            <Portuguese>Engenheiro</Portuguese>
+            <Russian>Инженер</Russian>
+            <Czech>Inženýr</Czech>
+            <Spanish>Ingeniero</Spanish>
+            <Italian>Geniere</Italian>
+            <French>Ingénieur</French>
+            <Japanese>専門兵</Japanese>
+            <Korean>정비공</Korean>
+        </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
             <German>Frei</German>
