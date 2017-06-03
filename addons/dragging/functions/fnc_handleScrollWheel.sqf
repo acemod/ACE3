@@ -30,7 +30,7 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 //disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-private _position  = getPosATL _carriedItem;
+private _position = getPosATL _carriedItem;
 private _maxHeight = (_unit modelToWorldVisual [0,0,0]) select 2;
 
 _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) max _maxHeight];
