@@ -39,7 +39,6 @@ if (_target isKindOf "CAManBase") then {
     private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
     _position = _position vectorAdd [0, 0, _offset];
-    _target setVariable [QGVAR(carryPosition), _position, true];
 
     // attach object
     _target attachTo [_unit, _position];
