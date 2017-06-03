@@ -94,7 +94,7 @@ _attachList = _attachToVehicle getVariable [QGVAR(attached), []];
 _attachList pushBack [_attachedObject, _itemClassname];
 _attachToVehicle setVariable [QGVAR(attached), _attachList, true];
 
-// Put this handler if the target have a finite life
-[_attachToVehicle, _unit, _itemClassname] call FUNC(removeItemEvent);
+// Add a handler that will refresh a item when it is about to die
+[_attachToVehicle, _unit, _itemClassname, _endPosTestOffset] call FUNC(refreshItem);
 
 [_onAtachText] call EFUNC(common,displayTextStructured);

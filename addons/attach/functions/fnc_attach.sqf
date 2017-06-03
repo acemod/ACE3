@@ -40,14 +40,15 @@ _onAtachText = format [localize LSTRING(Item_Attached), _onAtachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
+    private _position = [0.05, -0.09, 0.1];
+    _attachedItem attachTo [_unit, _position, "leftshoulder"];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAtachText] call EFUNC(common,displayTextStructured);
     };
 
-    // Add a handler that will detach and remove anything that have a time to live
-    [_attachToVehicle, _unit, _itemClassname] call FUNC(removeItemEvent);
+    // Add a handler that will refresh a item when it is about to die
+    [_attachToVehicle, _unit, _itemClassname, _position] call FUNC(refreshItem);
 
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
