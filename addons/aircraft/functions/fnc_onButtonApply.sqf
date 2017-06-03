@@ -18,7 +18,7 @@
 {
     private _pylon = (_x select 0) lbData (lbCurSel (_x select 0));
 
-    if (GVAR(loadPylonsEmpty)) then {
+    if (GVAR(makeNewPylonsEmpty)) then {
         private _pylonMagazines = getPylonMagazines GVAR(currentAircraft);
         if ((_pylonMagazines select _forEachIndex) != _pylon) then {
             GVAR(currentAircraft) setPylonLoadout [_forEachIndex + 1, _pylon, true];
