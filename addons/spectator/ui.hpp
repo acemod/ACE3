@@ -51,9 +51,9 @@ class GVAR(display) {
             onTreeDblClick = QUOTE([ARR_2(true,_this)] call FUNC(ui_handleListClick));
 
             x = "safeZoneX";
-            y = "safezoneY + 0.06";
+            y = safeZoneY + H_PART(1.5);
             w = W_PART(13.5);
-            h = "safezoneH";
+            h = safeZoneH - H_PART(1.5);
 
             disableKeyboardSearch = 1;
             multiselectEnabled = 0;
