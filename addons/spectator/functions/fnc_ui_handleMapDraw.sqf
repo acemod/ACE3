@@ -39,7 +39,7 @@ private _handledVehicles = [];
         private _text = "";
 
         if (GVAR(uiMapHighlighted) == _vehicle || {GVAR(uiMapHighlighted) in _vehicle}) then {
-            _text = [GVAR(uiMapHighlighted), false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+            _text = ([GVAR(uiMapHighlighted)] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
             if !(isPlayer GVAR(uiMapHighlighted)) then { _text = format ["%1: %2", localize "str_player_ai", _text]; };
             _sideColor = [0.8, 0.8, 0.5, 1];
         };
@@ -62,7 +62,7 @@ private _handledVehicles = [];
 private _text = if (isNull _nearestEntity) then {
     ""
 } else {
-    format ["%1 [%2 m]", [_nearestEntity] call EFUNC(common,getName), round (_nearestEntity distance GVAR(camera))]
+    format ["%1 [%2 m]", [_nearestEntity] call EFUNC(common,getName), round (_nearestEntity distance2D GVAR(camera))]
 };
 
 GVAR(uiMapHighlighted) = _nearestEntity;

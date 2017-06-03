@@ -16,7 +16,7 @@ if (!GVAR(uiWidgetVisible) || {GVAR(camOnLocation)} || {isNull GVAR(camTarget)})
 
 private _focus = GVAR(camTarget);
 
-private _name = [_focus, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+private _name = ([_focus] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
 if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
 
 private _unitTypePicture = [_focus] call EFUNC(common,getVehicleIcon);

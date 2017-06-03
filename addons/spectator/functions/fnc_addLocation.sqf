@@ -46,7 +46,7 @@ if (_pos isEqualTo []) then {
     // Must have a name to display in the list
     if (_name == "") then {
         if (_pos isEqualType objNull) then {
-            _name = [_pos,false,false] call EFUNC(common,getName);
+            _name = [_pos] call EFUNC(common,getName);
         } else {
             _name = _pos call BIS_fnc_locationDescription;
         };

@@ -45,7 +45,7 @@ private _entitiesToDraw = [];
         // Apply color fade
         _groupColor set [3, _fadeByDistance];
 
-        private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+        private _name = ([_x] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
         if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
 
         if (_inVehicle) then {

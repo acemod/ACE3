@@ -33,7 +33,7 @@ private _entities = [true] call FUNC(getTargetEntities);
             {
                 _newUnits pushBack ([_x] call BIS_fnc_objectVar);
 
-                private _name = [_x, false, false, NAME_MAX_CHARACTERS] call EFUNC(common,getName);
+                private _name = ([_x] call EFUNC(common,getName)) select [0, NAME_MAX_CHARACTERS];
                 if !(isPlayer _x) then { _name = format ["%1: %2", localize "str_player_ai", _name]; };
 
                 _unitsInfo pushBack [
@@ -169,7 +169,7 @@ if !(GVAR(curList) isEqualTo _newList) then {
             {
                 _x params ["_unit", "_isAlive", "_isIncapacitated", "_name"];
 
-                private _tooltip = format ["%1 - %2", _name, _groupId];
+                private _tooltip = format ["%1 - %2", [_unit] call EFUNC(common,getName), _groupId];
                 private _texture = [_isAlive, _isIncapacitated, _unit] call {
                     if !(_this select 0) exitWith { ICON_DEAD };
                     if (_this select 1) exitWith { ICON_REVIVE };
