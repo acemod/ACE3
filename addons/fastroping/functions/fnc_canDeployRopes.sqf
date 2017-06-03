@@ -29,5 +29,4 @@ _deploymentStage = _vehicle getVariable [QGVAR(deploymentStage), 0];
 {
     (_deploymentStage == 0 && {getText (_config >> QGVAR(onPrepare)) == ""}) ||
     {_deploymentStage == 2 && {getText (_config >> QGVAR(onPrepare)) != ""}}
-} &&
-{("ACE_rope12" in (backpackItems _unit)) || ("ACE_rope15" in (backpackItems _unit)) || ("ACE_rope18" in (backpackItems _unit)) || ("ACE_rope27" in (backpackItems _unit)) || ("ACE_rope36" in (backpackItems _unit)) || ("ACE_rope12" in (ItemCargo _vehicle)) || ("ACE_rope15" in (ItemCargo _vehicle)) || ("ACE_rope18" in (ItemCargo _vehicle)) || ("ACE_rope27" in (ItemCargo _vehicle)) || ("ACE_rope36" in (ItemCargo _vehicle))}
+}
