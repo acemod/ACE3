@@ -23,9 +23,12 @@ if (_entityList) then {
 
     if !(isNull _object) then {
         if (_dblClick) then {
+            // Place camera within ~10m of the object and above ground level
             private _pos = getPosASLVisual _object;
-            GVAR(camera) setPosASL (_pos apply { _x + 1 + random 10 });
+            GVAR(camera) setPosASL (AGLtoASL (_pos getPos [1 + random 10, random 360]) vectorAdd [0,0,2 + random 10]);
 
+            // Reset the focus
+            [objNull] call FUNC(setFocus);
             [_object] call FUNC(setFocus);
 
             _handled = true;
@@ -63,14 +66,24 @@ if (_entityList) then {
 
         // If in a unit camera mode then only focus when double click
         if (GVAR(camMode) == MODE_FREE || {_dblClick && {FREE_MODE in GVAR(availableModes)}}) then {
+            // Reset the focus
+            [objNull] call FUNC(setFocus);
             [_dummy, true] call FUNC(setFocus);
         };
 
-        // If double clicked, teleport the camera
-        if (_dblClick) then {
-            if (_pos isEqualType objNull) then { _pos = getPosASL _pos; } else { _pos = AGLtoASL _pos; };
-            if (_offset isEqualTo [0,0,0]) then { _offset = _offset apply { _x + 1 + random 30 }; };
-            GVAR(camera) setPosASL (_pos vectorAdd _offset);
+        // If double clicked ande mode is now free camera, teleport the camera
+        if (_dblClick && {GVAR(camMode) == MODE_FREE}) then {
+            // If location has unspecified offset place randomly within ~30m above ground level
+            if (_offset isEqualTo [0,0,0]) then {
+                _pos = AGLtoASL (_pos getPos [5 + random 30, random 360]) vectorAdd [0,0,2 + random 28];
+            } else {
+                if (_pos isEqualType objNull) then {
+                    _pos = (getPosASL _pos) vectorAdd _offset;
+                } else {
+                    _pos = (AGLtoASL _pos) vectorAdd _offset;
+                };
+            };
+            GVAR(camera) setPosASL _pos;
 
             // Location info text
             [parseText format [ "<t align='right' size='1.2'><t font='PuristaBold' size='1.6'>""%1""</t><br/>%2</t>", _name, _description], true, nil, 7, 0.7, 0] spawn BIS_fnc_textTiles;
