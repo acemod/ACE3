@@ -40,18 +40,25 @@
             <Japanese>ファスト ロープのシステムを準備</Japanese>
             <Korean>패스트로프 준비</Korean>
         </Key>
-        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes">
-            <English>Deploy ropes</English>
-            <German>Seile auswerfen</German>
-            <Polish>Wypuść liny</Polish>
-            <French>Déployer les cordes</French>
-            <Spanish>Desplegar cuerdas</Spanish>
-            <Italian>Srotola le corde</Italian>
-            <Czech>Připravit lana</Czech>
-            <Portuguese>Jogar cordas</Portuguese>
-            <Russian>Зацепить канаты</Russian>
-            <Japanese>ロープを展開</Japanese>
-            <Korean>줄 배치</Korean>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes12">
+            <English>Deploy 12m ropes</English>
+            <French>Déployer les cordes 12m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes15">
+            <English>Deploy 15m ropes</English>
+            <French>Déployer les cordes 15m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes18">
+            <English>Deploy 18m ropes</English>
+            <French>Déployer les cordes 18m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes27">
+            <English>Deploy 27m ropes</English>
+            <French>Déployer les cordes 27m</French>
+        </Key>
+        <Key ID="STR_ACE_Fastroping_Interaction_deployRopes36">
+            <English>Deploy 36m ropes</English>
+            <French>Déployer les cordes 36m</French>
         </Key>
         <Key ID="STR_ACE_Fastroping_Interaction_fastRope">
             <English>Fast rope</English>
