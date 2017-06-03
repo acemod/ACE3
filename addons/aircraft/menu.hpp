@@ -29,7 +29,7 @@ class GVAR(DialogLoadout) {
             colorBackground[] = {0,0,0,0.3};
         };
         class BackgroundPicture: IGUIBack {
-            idc = 110;
+            idc = 111;
             x = 0.171616 * safezoneW + safezoneX;
             y = 0.318 * safezoneH + safezoneY;
             w = 0.441347 * safezoneW;
