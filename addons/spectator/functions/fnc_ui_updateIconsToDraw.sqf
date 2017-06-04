@@ -22,9 +22,9 @@ private _entitiesToDraw = [];
 {
     private _vehicle = vehicle _x;
     private _inVehicle = (_vehicle != _x);
-    private _distanceToCamera = GVAR(camera) distanceSqr _x;
+    private _distanceToCameraSqr = GVAR(camera) distanceSqr _x;
 
-    if (_distanceToCamera <= 3000 && { !_inVehicle || { _x == effectiveCommander _vehicle } }) then {
+    if (_distanceToCameraSqr <= DISTANCE_ICONS_SQR && { !_inVehicle || { _x == effectiveCommander _vehicle } }) then {
         private _group = group _x;
         private _groupSide = side _group;
         private _groupName = groupId _group;
@@ -32,20 +32,20 @@ private _entitiesToDraw = [];
         private _groupColor = [_groupSide] call BIS_fnc_sideColor;
 
         // Calculate distance fade
-        (_distanceToCamera call {
-            if (_this <= 500) exitWith {
+        (_distanceToCameraSqr call {
+            if (_this <= 250000) exitWith { // 500^2
                 [1, 4, -2.5, 0.04]
             };
-            if (_this <= 1000) exitWith {
+            if (_this <= 1000000) exitWith { // 1000^2
                 [0.75, 3.5, -2.2, 0.035]
             };
-            if (_this <= 1500) exitWith {
+            if (_this <= 2250000) exitWith { // 1500^2
                 [0.5, 3, -1.9, 0.03]
             };
-            if (_this <= 2000) exitWith {
+            if (_this <= 4000000) exitWith { // 2000^2
                 [0.3, 2.5, -1.6, 0.025]
             };
-            if (_this <= 2500) exitWith {
+            if (_this <= 6250000) exitWith { // 2500^2
                 [0.2, 2, -1.3, 0.02]
             };
             [0.15, 1.5, -1, 0.015]
@@ -65,7 +65,7 @@ private _entitiesToDraw = [];
         };
 
         // Show unit name only if camera is near enough
-        if (_distanceToCamera < DISTANCE_NAMES_SQR) then {
+        if (_distanceToCameraSqr < DISTANCE_NAMES_SQR) then {
             // Unit name
             _iconsToDraw pushBack [_x, 2, [
                 "",

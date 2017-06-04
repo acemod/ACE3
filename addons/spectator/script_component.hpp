@@ -46,7 +46,8 @@
 #define MAX_PROJECTILES 50
 #define MAX_PROJECTILE_SEGMENTS 50
 
-#define DISTANCE_NAMES_SQR 30625 // Names are rendered at 175m, squared for `distanceSqr` speed
+#define DISTANCE_ICONS_SQR 9000000 // Icons are rendered within 3000m, squared for `distanceSqr` speed
+#define DISTANCE_NAMES_SQR 30625 // Names are rendered within 175m, squared for `distanceSqr` speed
 #define NAME_MAX_CHARACTERS 17
 
 #define LIST_ENTITIES localize "STR_A3_Spectator_Entities"
