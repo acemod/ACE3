@@ -67,6 +67,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class mapLocations {
+                displayName = CSTRING(mapLocations_DisplayName);
+                description = CSTRING(mapLocations_Description);
+                typeName = "BOOL";
+                defaultValue = 0;
+            };
         };
         class ModuleDescription {
             description = CSTRING(Settings_Description);

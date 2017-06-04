@@ -25,7 +25,7 @@ if !(isNull _focus) then {
     private _zoomTemp = GVAR(camDistanceTemp);
 
     if (_zoomTemp != _zoom) then {
-        _zoomTemp = [_zoomTemp, _zoom, 10.0, GVAR(camDeltaTime)] call BIS_fnc_lerp;
+        _zoomTemp = [_zoomTemp, _zoom, 10, GVAR(camDeltaTime)] call BIS_fnc_lerp;
         GVAR(camDistanceTemp) = _zoomTemp;
     };
 
@@ -35,7 +35,7 @@ if !(isNull _focus) then {
 
     // The pivot on the target vehicle
     private _isMan = _focus isKindOf "Man";
-    private _height = if !(_isMan) then { (_bbd select 2) / 3.0 } else { switch (stance _focus) do { case "STAND": {1.4}; case "CROUCH": {0.8}; default {0.4}; }; };
+    private _height = if !(_isMan) then { (_bbd select 2) / 3 } else { switch (stance _focus) do { case "STAND": {1.4}; case "CROUCH": {0.8}; default {0.4}; }; };
 
     private _center = if (_isMan) then { AGLToASL (_focus modelToWorldVisual (_focus selectionPosition "Spine3")) } else { AGLToASL (_focus modelToWorldVisual [0,0,_height]) };
 

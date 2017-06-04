@@ -33,7 +33,7 @@ if (GVAR(uiVisible)) then {
         showChat true;
     } else {
         _list ctrlSetBackgroundColor [0,0,0,0.75];
-        _list ctrlSetFade 0.0;
+        _list ctrlSetFade 0;
         ctrlSetFocus _list;
 
         // Disable camera input while using the list

@@ -22,3 +22,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(enableAI), "enableAI"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(restrictModes), "cameraModes"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(restrictVisions), "visionModes"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(mapLocations), "mapLocations"] call EFUNC(common,readSettingFromModule);

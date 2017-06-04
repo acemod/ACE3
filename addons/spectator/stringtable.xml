@@ -35,7 +35,7 @@
             <English>AI Enabled</English>
         </Key>
         <Key ID="STR_ACE_Spectator_ai_Description">
-            <English>Whether AI can be viewed in spectator</English>
+            <English>Make AI viewable in spectator</English>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -51,7 +51,7 @@
             <Korean>카메라 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
-            <English>Camera modes that can be used.</English>
+            <English>Camera modes that can be used</English>
             <German>Verwendbare Kameramodi</German>
             <Polish>Tryby kamery, jakie mogą być używane.</Polish>
             <Portuguese>Modos de camera que podem ser utilizados</Portuguese>
@@ -103,7 +103,7 @@
             <Korean>시야 모드</Korean>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
-            <English>Vision modes that can be used.</English>
+            <English>Vision modes that can be used</English>
             <German>Sichtmodi die verwendet werden können.</German>
             <Polish>Tryby wizji, jakie mogą być używane.</Polish>
             <Portuguese>Modos de visão que podem ser utilizados</Portuguese>
@@ -206,6 +206,12 @@
             <French>Thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열상</Korean>
+        </Key>
+        <Key ID="STR_ACE_Spectator_mapLocations_DisplayName">
+            <English>Add Map Locations</English>
+        </Key>
+        <Key ID="STR_ACE_Spectator_mapLocations_Description">
+            <English>Add map locations to the spectator UI</English>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">

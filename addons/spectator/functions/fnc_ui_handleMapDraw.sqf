@@ -62,7 +62,7 @@ private _handledVehicles = [];
             _sideColor = [1, 1, 1, 1];
         };
 
-        _map drawIcon [_vehicleTexture, _sideColor, getPosASLVisual _vehicle, 24.0, 24.0, getDirVisual _vehicle, _text, 1, 0.04, "TahomaB", "right"];
+        _map drawIcon [_vehicleTexture, _sideColor, getPosASLVisual _vehicle, 24, 24, getDirVisual _vehicle, _text, 1, 0.04, "TahomaB", "right"];
     };
     nil // Speed loop
 } count ([] call FUNC(getTargetEntities));
@@ -81,14 +81,14 @@ CTRL_MAP_FOOTER ctrlSetText _text;
 if !(isNil QGVAR(camera)) then {
     private _cameraPos = getPosASLVisual GVAR(camera);
     private _cameraDir = getDirVisual GVAR(camera);
-    _map drawIcon [ICON_CAMERA, [0.5, 1.0, 0.5, 1.0], _cameraPos, 32.0, 48.0, _cameraDir, "", 1, 0.05, "TahomaB", "right"];
-    _map drawArrow [_cameraPos, (_cameraPos getPos [300, _cameraDir]), [0.5, 1.0, 0.5, 1.0]];
+    _map drawIcon [ICON_CAMERA, [0.5, 1, 0.5, 1], _cameraPos, 32, 48, _cameraDir, "", 1, 0.05, "TahomaB", "right"];
+    _map drawArrow [_cameraPos, (_cameraPos getPos [300, _cameraDir]), [0.5, 1, 0.5, 1]];
 };
 
 // Draw locations
 {
     _x params ["", "_name", "", "_texture", "_pos"];
-    _map drawIcon [_texture, [1,1,1,0.5], _pos, 36.0, 36.0, 0, _name, true, 0.04, "TahomaB", "right"];
+    _map drawIcon [_texture, [1,1,1,0.5], _pos, 36, 36, 0, _name, true, 0.04, "TahomaB", "right"];
 
     nil // Speed loop
 } count (GVAR(locationsList));

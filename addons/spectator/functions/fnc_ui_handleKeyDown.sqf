@@ -93,13 +93,13 @@ if (_key == DIK_N) exitWith {
 
 // Handle postive change in draw
 if (_key == DIK_PGUP) exitWith {
-    setViewDistance ((viewDistance + 250.0) min MAX_VIEW_DISTANCE);
+    setViewDistance ((viewDistance + 250) min MAX_VIEW_DISTANCE);
     true
 };
 
 // Handle negative change in draw
 if (_key == DIK_PGDN) exitWith {
-    setViewDistance ((viewDistance - 250.0) max MIN_VIEW_DISTANCE);
+    setViewDistance ((viewDistance - 250) max MIN_VIEW_DISTANCE);
     true
 };
 

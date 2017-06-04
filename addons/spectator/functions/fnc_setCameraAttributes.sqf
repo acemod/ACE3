@@ -42,9 +42,8 @@ params [
     ["_direction",nil,[0]]
 ];
 
-// ACE_DEPRECATED (< Tag so that this is found via a search, can remove the warning in 3.12.0)
 if (count _this > 5) then {
-    WARNING("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes is no longer supported");
+    ACE_DEPRECATED("Use of ""tilt"", ""zoom"" and ""speed"" camera attributes","3.12.0","N/A")
 };
 
 // Apply if camera exists

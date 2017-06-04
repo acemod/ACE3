@@ -43,14 +43,14 @@ if !(GVAR(uiMapVisible)) then {
             _x params ["_unit", "_type", "_icon"];
             private _position = (_unit modelToWorldVisual (_unit selectionPosition "Head")) vectorAdd [0,0,HEIGHT_OFFSET];
 
-            if (_type == 2 && { _unit distance GVAR(camera) < DISTANCE_NAMES } && {_unit in _camTarget || _unit in _cursorObject}) then {
+            if (_type == 2 && { _unit distanceSqr GVAR(camera) < DISTANCE_NAMES_SQR } && {_unit in _camTarget || _unit in _cursorObject}) then {
                 drawIcon3D [
                     ICON_BACKGROUND_UNIT,
                     [0, 0, 0, [0.4, 0.8] select (_unit in _camTarget)],
                     _position,
-                    5.0,
+                    5,
                     4,
-                    0.0,
+                    0,
                     "",
                     0,
                     0.035,
@@ -73,7 +73,8 @@ if !(GVAR(uiMapVisible)) then {
 
         // Draw locations
         {
-            _x params ["", "_name", "", "_texture", "_pos"];
+            _x params ["_pos", "_name", "_texture"];
+
             if (_pos isEqualType objNull) then {
                 _pos = (_pos modelToWorldVisual (_pos selectionPosition "Head")) vectorAdd [0,0,2*HEIGHT_OFFSET];
             };
@@ -81,7 +82,7 @@ if !(GVAR(uiMapVisible)) then {
             drawIcon3D [_texture, [1,1,1,0.4], _pos, 0.8, 0.8, 0, _name];
 
             nil // Speed loop
-        } count (GVAR(locationsList));
+        } count (GVAR(locationsToDraw));
         END_COUNTER(drawTags);
     };
 

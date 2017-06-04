@@ -34,18 +34,19 @@ while {dialog} do {
 // Destroy: UI Stuff > Display > Vars
 if (_init) then {
     // UI visibility tracking
-    GVAR(uiVisible) = true;
-    GVAR(uiHelpVisible) = true;
-    GVAR(uiMapVisible) = true;
-    GVAR(uiWidgetVisible) = true;
+    GVAR(uiVisible)         = true;
+    GVAR(uiHelpVisible)     = true;
+    GVAR(uiMapVisible)      = true;
+    GVAR(uiWidgetVisible)   = true;
 
     // Drawing related
-    GVAR(drawProjectiles)       = false;
-    GVAR(drawUnits)             = true;
-    GVAR(entitiesToDraw)        = [];
-    GVAR(grenadesToDraw)        = [];
-    GVAR(iconsToDraw)           = [];
-    GVAR(projectilesToDraw)     = [];
+    GVAR(drawProjectiles)   = false;
+    GVAR(drawUnits)         = true;
+    GVAR(entitiesToDraw)    = [];
+    GVAR(grenadesToDraw)    = [];
+    GVAR(iconsToDraw)       = [];
+    GVAR(locationsToDraw)   = [];
+    GVAR(projectilesToDraw) = [];
 
     // RMB tracking is used for follow camera mode
     GVAR(holdingRMB) = false;
@@ -133,6 +134,7 @@ if (_init) then {
     GVAR(entitiesToDraw)    = nil;
     GVAR(grenadesToDraw)    = nil;
     GVAR(iconsToDraw)       = nil;
+    GVAR(locationsToDraw)   = nil;
     GVAR(projectilesToDraw) = nil;
 
     // Reset view distance

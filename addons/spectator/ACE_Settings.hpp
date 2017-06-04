@@ -19,4 +19,10 @@ class ACE_Settings {
         value = 0;
         values[] = {CSTRING(modes_all), CSTRING(visions_nv), CSTRING(visions_ti), "$STR_Special_None"};
     };
+    class GVAR(mapLocations) {
+        displayName = CSTRING(mapLocations_DisplayName);
+        description = CSTRING(mapLocations_Description);
+        typeName = "BOOL";
+        value = 0;
+    };
 };
