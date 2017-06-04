@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -940,14 +940,14 @@
             <Portuguese>Sem espaço para descarregar</Portuguese>
             <Russian>Нет места для выгрузки</Russian>
             <Japanese>降ろすための空間がありません</Japanese>
-        </Key>       
+        </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
             <Polish>переключить</Polish>
             <Russian>переключить</Russian>
             <French>Basculer</French>
             <Spanish>Cambiar</Spanish>
-            <Italian>camb.</Italian>
+            <Italian>Cambia</Italian>
             <German>Umschalten</German>
             <Hungarian>pecek</Hungarian>
             <Czech>přep.</Czech>

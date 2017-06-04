@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Zeus">
         <Key ID="STR_ACE_Zeus_Settings_DisplayName">
@@ -870,10 +870,12 @@
         <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
             <English>Add full arsenal to object</English>
             <French>Ajouter arsenal complet à l'objet</French>
+            <Italian>Aggiunge arsenale completo all'oggetto</Italian>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
             <French>Retirer arsenal de l'objet</French>
+            <Italian>Rimuove arsenale completo dall'oggetto</Italian>
         </Key>
     </Package>
 </Project>
