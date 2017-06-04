@@ -19,7 +19,7 @@
 
 params ["_unit", ["_medicN", 1]];
 
-private _class = _unit getVariable [QGVAR(medicClass), _unit getUnitTrait "medic"];
+private _class = _unit getVariable [QGVAR(medicClass), [0, 1] select (_unit getUnitTrait "medic")];
 
 if (_class >= _medicN min GVAR(medicSetting)) exitWith {true};
 if (!GVAR(increaseTrainingInLocations)) exitWith {false};
