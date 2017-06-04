@@ -34,28 +34,28 @@ if (_oldRearmConfig || {_configSupply > 0}) then {GVAR(configTypesAdded) pushBac
 
 
 private _actionReadSupplyCounter = [ // GVAR(supply) > 0
-QGVAR(ReadSupplyCounter),
-localize LSTRING(ReadSupplyCounter), // Check remaining ammunition
-QPATHTOF(ui\icon_rearm_interact.paa),
-{_this call FUNC(readSupplyCounter)},
-{_this call FUNC(canReadSupplyCounter)}
+    QGVAR(ReadSupplyCounter),
+    localize LSTRING(ReadSupplyCounter), // Check remaining ammunition
+    QPATHTOF(ui\icon_rearm_interact.paa),
+    {_this call FUNC(readSupplyCounter)},
+    {_this call FUNC(canReadSupplyCounter)}
 ] call EFUNC(interact_menu,createAction);
 
 private _actionTakeAmmo = [
-QGVAR(takeAmmo),
-localize ([LSTRING(Rearm), LSTRING(TakeAmmo)] select (GVAR(level) > 0)),
-QPATHTOF(ui\icon_rearm_interact.paa),
-{},
-{_this call FUNC(canTakeAmmo)},
-{_this call FUNC(addRearmActions)}
+    QGVAR(takeAmmo),
+    localize ([LSTRING(Rearm), LSTRING(TakeAmmo)] select (GVAR(level) > 0)),
+    QPATHTOF(ui\icon_rearm_interact.paa),
+    {},
+    {_this call FUNC(canTakeAmmo)},
+    {_this call FUNC(addRearmActions)}
 ] call EFUNC(interact_menu,createAction);
 
 private _actionStoreAmmo = [
-QGVAR(StoreAmmo),
-localize LSTRING(StoreAmmo), // "Store ammo"
-QPATHTOF(ui\icon_rearm_interact.paa),
-{_this call FUNC(storeAmmo)},
-{_this call FUNC(canStoreAmmo)}
+    QGVAR(StoreAmmo),
+    localize LSTRING(StoreAmmo), // "Store ammo"
+    QPATHTOF(ui\icon_rearm_interact.paa),
+    {_this call FUNC(storeAmmo)},
+    {_this call FUNC(canStoreAmmo)}
 ] call EFUNC(interact_menu,createAction);
 
 if (_oldRearmConfig || {_configSupply > 0}) then {

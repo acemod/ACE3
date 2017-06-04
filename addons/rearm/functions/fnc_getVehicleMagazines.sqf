@@ -16,6 +16,4 @@
  */
 #include "script_component.hpp"
 
-private _turretConfig = _this call CBA_fnc_getTurret;
-
-getArray (_turretConfig  >> "magazines")
+getArray ((_this call CBA_fnc_getTurret) >> "magazines")
