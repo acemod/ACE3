@@ -955,17 +955,17 @@
             <Korean>오직 정비공만</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
-            <English>Repair Specialist only</English>
-            <German>Nur Reparaturspezialist</German>
+            <English>Advanced Engineer only</English>
+            <German>Nur Ingenieur</German>
             <Polish>Tylko inżynierowie</Polish>
-            <Portuguese>Somente especialista em reparos</Portuguese>
-            <Russian>Только ремонтные специалисты</Russian>
-            <Czech>Pouze specialista na opravování</Czech>
-            <Spanish>Solo especialista en reparación</Spanish>
-            <Italian>Solo Specialista Riparazioni</Italian>
-            <French>Spécialistes de réparation seulement</French>
-            <Japanese>専門兵のみ</Japanese>
-            <Korean>오직 정비 특기만</Korean>
+            <Portuguese>Somente engenheiro avançado</Portuguese>
+            <Russian>Только продвинутый инженер</Russian>
+            <Czech>Pokročilý inženýr pouze</Czech>
+            <Spanish>Solo Ingeniero avanzado</Spanish>
+            <Italian>Solo Ingegnere avanzato</Italian>
+            <French>Ingénieur Avancé seulement</French>
+            <Japanese>高度なエンジニアのみ</Japanese>
+            <Korean>고급 엔지니어 전용</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1241,17 +1241,17 @@
             <Korean>정비공</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
-            <English>Specialist</English>
-            <German>Reparaturspezialist</German>
-            <Polish>Inżynier</Polish>
-            <Portuguese>Especialista</Portuguese>
-            <Russian>Специалист</Russian>
-            <Czech>Specialista</Czech>
-            <Spanish>Especialista</Spanish>
-            <Italian>Specialista Riparazioni</Italian>
-            <French>Spécialiste</French>
-            <Japanese>工兵として単体、複数ユニットを割り当てます。</Japanese>
-            <Korean>정비 특기</Korean>
+            <English>Advanced Engineer</English>
+            <German>Ingenieur</German>
+            <Polish>inżynierowie</Polish>
+            <Portuguese>engenheiro avançado</Portuguese>
+            <Russian>продвинутый инженер</Russian>
+            <Czech>Pokročilý inženýr</Czech>
+            <Spanish>Ingeniero avanzado</Spanish>
+            <Italian>Ingegnere avanzato</Italian>
+            <French>Ingénieur Avancé</French>
+            <Japanese>上級エンジニア</Japanese>
+            <Korean>고급 엔지니어</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
