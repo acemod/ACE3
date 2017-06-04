@@ -96,6 +96,12 @@ class CfgVehicles {
                 typeName = "NUMBER";
                 defaultValue = 1;
             };
+            class maxUnconsciousTime {
+                displayName = CSTRING(MedicalSettings_maxUnconsciousTime_DisplayName);
+                description = CSTRING(MedicalSettings_maxUnconsciousTime_Description);
+                typeName = "NUMBER";
+                defaultValue = -1;
+            };
             class enableUnconsciousnessAI {
                 displayName = CSTRING(MedicalSettings_enableUnconsciousnessAI_DisplayName);
                 description = CSTRING(MedicalSettings_enableUnconsciousnessAI_Description);

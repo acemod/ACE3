@@ -102,6 +102,13 @@ class ACE_Settings {
         typeName = "SCALAR";
         values[] = {"Disabled", "50/50", "Enabled"};
     };
+    class GVAR(maxUnconsciousTime) {
+        displayName = CSTRING(MedicalSettings_maxUnconsciousTime_DisplayName);
+        description = CSTRING(MedicalSettings_maxUnconsciousTime_Description);
+        typeName = "SCALAR";
+        value = -1; // -1 means disabled
+        isClientSettable = 0;
+    };
     class GVAR(remoteControlledAI) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_remoteControlledAI_DisplayName);

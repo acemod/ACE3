@@ -134,6 +134,10 @@ if (!local _unit) exitWith {
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };
 
+if ((GVAR(maxUnconsciousTime) > -1) && {!(_unit getvariable [QGVAR(inReviveState), false])} && {(GVAR(level) == 1)} && {(ACE_time - _startingTime) >= GVAR(maxUnconsciousTime)}) then {
+    _unit setvariable ["ACE_isUnconscious", false, true]; // wake up sleepy head, regardless of whether he should stay unconscious
+};
+
 // Ensure we are waiting at least a minimum period before checking if we can wake up the unit again, allows for temp knock outs
 if ((CBA_missionTime - _startingTime) >= _minWaitingTime) exitWith {
     TRACE_2("ACE_DEBUG_Unconscious_Temp knock outs",_unit, [_unit] call FUNC(getUnconsciousCondition));
