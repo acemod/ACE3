@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to add projectiles to be drawn when a unit fires
  *
+ * Arguments:
+ * Fired EH arguments
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _unit addEventHandler ["Fired",{_this call ace_spectator_fnc_handleFired}]
+ *
  * Public: No
  */
 

@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, SilentSpike
  * Handles camera initialisation and destruction
  *
+ * Arguments:
+ * 0: Init/Terminate <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [true] call ace_spectator_fnc_cam
+ *
  * Public: No
  */
 

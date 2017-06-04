@@ -8,7 +8,7 @@
  *   - 0: Free
  *   - 1: First Person
  *   - 2: Follow
- * 1: Camera focus <OBJECT>
+ * 1: Camera focus <OBJECT or BOOL>
  * 2: Camera vision <NUMBER>
  *   - -2: Normal
  *   - -1: Night vision

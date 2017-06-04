@@ -2,6 +2,15 @@
  * Author: SilentSpike
  * Handles UI initialisation and destruction
  *
+ * Arguments:
+ * 0: Init/Terminate <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false] call ace_spectator_fnc_ui
+ *
  * Public: No
  */
 

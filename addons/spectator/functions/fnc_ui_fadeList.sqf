@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO
  * Function used to fade/unfade the entitiy/location list
  *
+ * Arguments:
+ * 0: Fade the list <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false] call ace_spectator_fnc_ui_fadeList
+ *
  * Public: No
  */
 

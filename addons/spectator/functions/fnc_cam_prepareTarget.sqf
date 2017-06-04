@@ -1,3 +1,19 @@
+/*
+ * Author: Nelson Duarte, SilentSpike
+ * Moves the spectator camera to a position relative to the camera focus.
+ * Used for 3PP camera and teleporting, etc.
+ *
+ * Arguments:
+ * 0: New Target <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ace_spectator_fnc_cam_prepareTarget
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, SilentSpike
  * Updates spectator UI unit info widget
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_ui_updateWidget
+ *
  * Public: No
  */
 

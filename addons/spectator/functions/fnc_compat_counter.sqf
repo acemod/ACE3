@@ -4,6 +4,15 @@
  *
  * Should be called from both RscRespawnCounter XEH and spectator init to account for arbitrary order
  *
+ * Arguments:
+ * 0: RscRespawnCounter <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [GETUVAR(RscRespawnCounter,displayNull)] call ace_spectator_fnc_compat_counter
+ *
  * Public: No
  */
 

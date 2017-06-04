@@ -1,6 +1,18 @@
 /*
  * Author: Nelson Duarte, AACO
- * Function used to handle map mouse clicks
+ * Function used to handle map mouse click events
+ *
+ * Arguments:
+ * 0: Map control <CONTROL>
+ * 1: Mouse button pressed <NUMBER>
+ * 2: x screen coordinate clicked <BOOL>
+ * 3: y screen coordinate clicked <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleMapClick
  *
  * Public: No
  */

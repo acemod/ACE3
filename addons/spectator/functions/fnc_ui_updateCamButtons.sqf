@@ -3,6 +3,15 @@
  * Used to update the docked camera buttons
  * Disables unavailable, highlights current
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_ui_updateCamButtons
+ *
  * Public: No
  */
 

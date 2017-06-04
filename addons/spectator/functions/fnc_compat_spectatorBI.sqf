@@ -4,6 +4,15 @@
  *
  * Called from the RscDisplayEGSpectator XEH
  *
+ * Arguments:
+ * 0: RscDisplayEGSpectator <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_compat_spectatorBI
+ *
  * Public: No
  */
 

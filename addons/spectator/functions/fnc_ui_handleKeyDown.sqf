@@ -1,6 +1,19 @@
 /*
  * Author: Nelson Duarte, AACO, SilentSpike
- * Function used to handle key press
+ * Function used to handle key down event
+ *
+ * Arguments:
+ * 0: Spectator display <DISPLAY>
+ * 1: Key DIK code <NUMBER>
+ * 2: State of shift <BOOL>
+ * 3: State of ctrl <BOOL>
+ * 4: State of alt <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleKeyDown
  *
  * Public: No
  */

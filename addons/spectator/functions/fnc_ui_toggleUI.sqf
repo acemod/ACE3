@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to toggle the whole user interface
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_ui_toggleUI
+ *
  * Public: No
  */
 

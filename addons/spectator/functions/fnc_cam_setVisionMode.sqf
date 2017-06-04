@@ -1,6 +1,15 @@
 /*
  * Author: SilentSpike
- * Function used to select the vision mode
+ * Function used to select the camera vision mode
+ *
+ * Arguments:
+ * 0: New vision mode <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [-1] call ace_spectator_fnc_cam_setVisionMode
  *
  * Public: No
  */

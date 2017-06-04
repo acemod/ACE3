@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Updates spectator UI list of locations
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_ui_updateListLocations
+ *
  * Public: No
  */
 

@@ -6,6 +6,15 @@
  * This is intentional, since controls appear via priority que
  * The overhead is minimal
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_ui_updateHelp
+ *
  * Public: No
  */
 

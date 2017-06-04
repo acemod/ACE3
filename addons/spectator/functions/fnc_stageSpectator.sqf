@@ -1,9 +1,19 @@
 /*
  * Author: SilentSpike
- * Stores and hides a player safely out of the way (used on spectator players)
+ * Stores and hides a player safely out of the way (used by setSpectator on living players)
  *
  * Units will be gathered at marker ace_spectator_respawn (or [0,0,0] by default)
  * Upon unstage, units will be moved to the position they were in before staging
+ *
+ * Arguments:
+ * 0: Unit to handle <OBJECT>
+ * 1: Stage/Unstage <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, true] call ace_spectator_fnc_stageSpectator
  *
  * Public: No
  */

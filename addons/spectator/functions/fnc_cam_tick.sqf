@@ -7,6 +7,15 @@
  * Updates camera when focus enters/exits a vehicle
  * Updates camera lights position
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * addMissionEventHandler ["EachFrame", {call ace_spectator_fnc_cam_tick}]
+ *
  * Public: No
  */
 

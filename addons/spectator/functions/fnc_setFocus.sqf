@@ -2,6 +2,16 @@
  * Author: AACO, SilentSpike
  * Function used to set the camera focus
  *
+ * Arguments:
+ * 0: New focus <OBJECT>
+ * 1: Focus is a location <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, false] call ace_spectator_fnc_setFocus
+ *
  * Public: No
  */
 

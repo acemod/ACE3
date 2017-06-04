@@ -4,6 +4,15 @@
  *
  * Called from the RscDisplayCurator XEH
  *
+ * Arguments:
+ * 0: RscDisplayCurator <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_compat_zeus
+ *
  * Public: No
  */
 

@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used to draw the 3D icons and track the cursor object
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * addMissionEventHandler ["Draw3D", {call ace_spectator_fnc_ui_draw3D}]
+ *
  * Public: No
  */
 

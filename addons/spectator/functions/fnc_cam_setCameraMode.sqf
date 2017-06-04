@@ -4,6 +4,15 @@
  *
  * Intended to run even if new mode == old mode, as it handles focus
  *
+ * Arguments:
+ * 0: New camera mode <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [1] call ace_spectator_fnc_cam_setCameraMode
+ *
  * Public: No
  */
 

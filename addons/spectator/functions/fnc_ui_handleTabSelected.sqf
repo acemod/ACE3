@@ -2,6 +2,16 @@
  * Author: Nelson Duarte, SilentSpike
  * Function used to handle list tab change
  *
+ * Arguments:
+ * 0: Control <CONTROL>
+ * 1: New tab index <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleTabSelected
+ *
  * Public: No
  */
 

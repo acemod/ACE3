@@ -1,3 +1,18 @@
+/*
+ * Author: Nelson Duarte, SilentSpike
+ * Removes the current camera interest and detaches dummy target.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_spectator_fnc_cam_resetTarget
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

@@ -2,6 +2,16 @@
  * Author: Nelson Duarte, AACO
  * Function used to handle mouse scroll event
  *
+ * Arguments:
+ * 0: Control <CONTROL>
+ * 1: Change in Z <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleMouseZChanged
+ *
  * Public: No
  */
 

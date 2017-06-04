@@ -5,6 +5,16 @@
  * Expected behaviour:
  * Double left click teleports free camera toward the unit, but does not focus
  *
+ * Arguments:
+ * 0: Control <CONTROL>
+ * 1: Mouse button pressed <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleMouseButtonDblClick
+ *
  * Public: No
  */
 

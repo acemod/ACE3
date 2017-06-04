@@ -8,6 +8,16 @@
  * Right clicking removes the camera lock, but retains the focus in free camera
  * Right clicking and dragging orbits around the unit in follow camera
  *
+ * Arguments:
+ * 0: Control <CONTROL>
+ * 1: Mouse button pressed <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleMouseButtonDown
+ *
  * Public: No
  */
 

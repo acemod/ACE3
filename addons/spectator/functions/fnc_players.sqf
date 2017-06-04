@@ -3,7 +3,7 @@
  * Return all of the player entities who are currently in ace spectator
  *
  * Arguments:
- * NONE
+ * None
  *
  * Return Value:
  * Spectator Players <ARRAY>

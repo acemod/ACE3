@@ -10,7 +10,7 @@
  * Icon of group <STRING>
  *
  * Examples:
- * [group player] call ace_common_fnc_getGroupIcon;
+ * [group player] call ace_spectator_fnc_getGroupIcon
  *
  * Public: No
  */
@@ -144,7 +144,7 @@ if (count _vehicles >= 0.33 * count _units) exitWith {
 
 // Check leader for medic/engineer/etc, otherwise just default to infantry
 private _medic = [_leader] call EFUNC(common,isMedic);
-private _engineer = [_leader] call EFUNC(common,isMedic);
+private _engineer = [_leader] call EFUNC(common,isEngineer);
 
 if (_medic && _engineer) exitWith {
     ICON_SUPPORT

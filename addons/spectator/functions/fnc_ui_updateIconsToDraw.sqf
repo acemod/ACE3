@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO, SilentSpike
  * Function used update the things to 3D draw
  *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Examples:
+ * [] call ace_spectator_fnc_ui_updateIconsToDraw
+ *
  * Public: No
  */
 

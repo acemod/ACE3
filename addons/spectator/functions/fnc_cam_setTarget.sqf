@@ -1,3 +1,18 @@
+/*
+ * Author: Nelson Duarte, SilentSpike
+ * Sets the current camera interest using dummy target.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player] call ace_spectator_fnc_cam_setTarget
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 #define CAMERA_TARGET_CHANGE_TIME 0.5

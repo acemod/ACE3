@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO
  * Function used to handle map draw
  *
+ * Arguments:
+ * 0: Map control <CONTROL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * _this call ace_spectator_fnc_ui_handleMapDraw
+ *
  * Public: No
  */
 

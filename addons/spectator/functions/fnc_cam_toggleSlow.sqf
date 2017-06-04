@@ -1,6 +1,15 @@
 /*
  * Author: Nelson Duarte, SilentSpike
- * Function used to toggle camera slow speed mode
+ * Function used to set camera slow speed mode
+ *
+ * Arguments:
+ * 0: Enable slow speed <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [true] call ace_spectator_fnc_cam_toggleSlow
  *
  * Public: No
  */

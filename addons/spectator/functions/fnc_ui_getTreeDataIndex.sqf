@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, AACO
  * Function used to find a tree path of a unit
  *
+ * Arguments:
+ * 0: Data to search tree for <STRING>
+ *
+ * Return Value:
+ * Tree path to data <ARRAY>
+ *
+ * Example:
+ * [groupID _group] call ace_spectator_fnc_ui_getTreeDataIndex
+ *
  * Public: No
  */
 

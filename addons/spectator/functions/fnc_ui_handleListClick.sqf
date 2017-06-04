@@ -6,6 +6,16 @@
  * Clicking an entry focuses the camera on it (any camera mode)
  * Double clicking an entry teleports the free camera nearby and focuses on it
  *
+ * Arguments:
+ * 0: Double clicked <BOOL>
+ * 1: List Click EH's _this <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false, _this] call ace_spectator_fnc_ui_handleListClick
+ *
  * Public: No
  */
 #include "script_component.hpp"

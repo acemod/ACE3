@@ -2,6 +2,15 @@
  * Author: Nelson Duarte, SilentSpike
  * Function used to switch to next or previous camera focus
  *
+ * Arguments:
+ * 0: Next/Prev unit <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [false] call ace_spectator_fnc_switchFocus
+ *
  * Public: No
  */
 

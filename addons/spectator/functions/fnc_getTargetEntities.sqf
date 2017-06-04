@@ -1,6 +1,16 @@
 /*
  * Author: SilentSpike
- * Gets the possible entities to spectate based on settings
+ * Gets the possible entities to spectate based on settings.
+ * Optionally includes dead units for the list and switching.
+ *
+ * Arguments:
+ * 0: Include dead <BOOL>
+ *
+ * Return Value:
+ * Valid entities <ARRAY>
+ *
+ * Example:
+ * [true] call ace_spectator_fnc_getTargetEntities
  *
  * Public: No
  */
