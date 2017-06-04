@@ -38,7 +38,7 @@ _position set [2, ((_position select 2) + _scrollAmount min (_maxHeight + 1.5)) 
 // move up/down object and reattach at current position
 detach _carriedItem;
 
-// Uses this method of selecting position because on dedicated server setATL doesn't work when object is not local
+// Uses this method of selecting position because setPosATL did not have immediate effect
 private _positionChange = _position vectorDiff (getPosATL _carriedItem);
 private _selectionPosition = _unit worldToModel (ASLtoAGL getPosWorld _carriedItem);
 _selectionPosition = _selectionPosition vectorAdd _positionChange;
