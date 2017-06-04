@@ -49,14 +49,14 @@ if (!(_return select 0)) then {
         private _pylonName = configName _x;
         private _pylonIndex = _forEachIndex + 1; // WTF BIS
         private _pylonAmmo = _vehicle ammoOnPylon _pylonName;
-        private _pylontMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
+        private _pylonMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
         private _pylonTurret = getArray (_x >> "turret");
         if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];}; // convert to expected array for driver
-        TRACE_4("",_pylonName,_pylonAmmo,_pylontMagazine,_pylonTurret);
+        TRACE_4("",_pylonName,_pylonAmmo,_pylonMagazine,_pylonTurret);
 
         if (_pylonAmmo > 0) then {
-            if (_magazineClass == _pylontMagazine) then { // Try to refill current pylon:
-                private _magAmmo = getNumber (configFile >> "CfgMagazines" >> _pylontMagazine >> "count");
+            if (_magazineClass == _pylonMagazine) then { // Try to refill current pylon:
+                private _magAmmo = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
                 if (_pylonAmmo < _magAmmo) then {
                     _return = [true, _pylonTurret, 0, _pylonIndex];
                 };

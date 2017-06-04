@@ -47,14 +47,14 @@ private _vehicleActions = [];
     {
         private _pylonName = configName _x;
         private _pylonAmmo = _vehicle ammoOnPylon _pylonName;
-        private _pylontMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
-        TRACE_3("",_pylonName,_pylonAmmo,_pylontMagazine);
+        private _pylonMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
+        TRACE_3("",_pylonName,_pylonAmmo,_pylonMagazine);
 
         if (_pylonAmmo > 0) then {
             // Try to refill current pylon:
-            private _magAmmo = getNumber (configFile >> "CfgMagazines" >> _pylontMagazine >> "count");
-            if ((!(_pylontMagazine in _magazineHelper)) && {_pylonAmmo < _magAmmo}) then {
-                _magazineHelper pushBack _pylontMagazine;
+            private _magAmmo = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
+            if ((!(_pylonMagazine in _magazineHelper)) && {_pylonAmmo < _magAmmo}) then {
+                _magazineHelper pushBack _pylonMagazine;
             };
         } else {
             // See what we magazines can add to the empty pylon:
