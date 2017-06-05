@@ -943,7 +943,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
-            <German>Nur pionier</German>
+            <German>Pionier</German>
             <Polish>Tylko mechanicy</Polish>
             <Portuguese>Somente engenheiro</Portuguese>
             <Russian>Только инженеры</Russian>
@@ -956,16 +956,6 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
             <English>Advanced Engineer only</English>
-            <German>Nur ingenieur</German>
-            <Polish>Tylko inżynierowie</Polish>
-            <Portuguese>Somente engenheiro avançado</Portuguese>
-            <Russian>Только продвинутый инженер</Russian>
-            <Czech>Pokročilý inženýr pouze</Czech>
-            <Spanish>Solo ingeniero avanzado</Spanish>
-            <Italian>Solo ingegnere avanzato</Italian>
-            <French>Ingénieur avancé seulement</French>
-            <Japanese>高度なエンジニアのみ</Japanese>
-            <Korean>고급 엔지니어 전용</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1242,16 +1232,6 @@
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
             <English>Advanced Engineer</English>
-            <German>Ingenieur</German>
-            <Polish>inżynierowie</Polish>
-            <Portuguese>engenheiro avançado</Portuguese>
-            <Russian>продвинутый инженер</Russian>
-            <Czech>Pokročilý inženýr</Czech>
-            <Spanish>Ingeniero avanzado</Spanish>
-            <Italian>Ingegnere avanzato</Italian>
-            <French>Ingénieur Avancé</French>
-            <Japanese>上級エンジニア</Japanese>
-            <Korean>고급 엔지니어</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
