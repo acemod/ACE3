@@ -45,7 +45,6 @@
 #define PAIN_SUPPRESSION_FADE_TIME 1800
 
 // Chance to wake up when vitals are stable (checked once every SPONTANEOUS_WAKE_UP_INTERVAL seconds)
-#define SPONTANEOUS_WAKE_UP_CHANCE 0.2
 #define SPONTANEOUS_WAKE_UP_INTERVAL 15
 
 #define LETHAL_HEAD_DAMAGE_THRESHOLD 1.0

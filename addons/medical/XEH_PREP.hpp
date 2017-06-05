@@ -41,6 +41,7 @@ PREP(serverRemoveBody);
 PREP(setCardiacArrest);
 PREP(setDead);
 PREP(setUnconscious);
+PREP(setUnconsciousStatemachine);
 PREP(transitionSecondChance);
 PREP(updateHeartRate);
 PREP(updatePainSuppress);
