@@ -1,6 +1,6 @@
 class CfgWeapons {
     class InventoryItem_Base_F;
-	class ACE_ItemCore;
+    class ACE_ItemCore;
 
     class ACE_rope12: ACE_ItemCore {
         scope = 2;
@@ -13,7 +13,7 @@ class CfgWeapons {
             mass = 36;
         };
     };
-	class ACE_rope15: ACE_ItemCore {
+    class ACE_rope15: ACE_ItemCore {
         scope = 2;
         picture = QPATHTOF(data\m_rope_ca);
         model = "\A3\Structures_F_Heli\Items\Tools\Rope_01_F.p3d";
