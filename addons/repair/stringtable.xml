@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -943,7 +943,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_EngineerOnly">
             <English>Engineer only</English>
-            <German>Pionier</German>
+            <German>Nur pionier</German>
             <Polish>Tylko mechanicy</Polish>
             <Portuguese>Somente engenheiro</Portuguese>
             <Russian>Только инженеры</Russian>
@@ -956,14 +956,14 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
             <English>Advanced Engineer only</English>
-            <German>Nur Ingenieur</German>
+            <German>Nur ingenieur</German>
             <Polish>Tylko inżynierowie</Polish>
             <Portuguese>Somente engenheiro avançado</Portuguese>
             <Russian>Только продвинутый инженер</Russian>
             <Czech>Pokročilý inženýr pouze</Czech>
-            <Spanish>Solo Ingeniero avanzado</Spanish>
-            <Italian>Solo Ingegnere avanzato</Italian>
-            <French>Ingénieur Avancé seulement</French>
+            <Spanish>Solo ingeniero avanzado</Spanish>
+            <Italian>Solo ingegnere avanzato</Italian>
+            <French>Ingénieur avancé seulement</French>
             <Japanese>高度なエンジニアのみ</Japanese>
             <Korean>고급 엔지니어 전용</Korean>
         </Key>
