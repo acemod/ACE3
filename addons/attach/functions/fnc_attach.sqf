@@ -51,7 +51,6 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     // Add a handler that will refresh a item when it is about to die
     [_attachToVehicle, _unit, _itemClassname, _position] call FUNC(refreshItem);
-
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 

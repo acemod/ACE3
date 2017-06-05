@@ -40,7 +40,6 @@ if (0 < _timeLive && _timeLive < 1500) then {
             _x params ["_xObject", "_xItemName"];
 
             if (_xItemName == _itemClassname) then {
-
                 detach _xObject;
 
                 // Delete attached item after 0.5 seconds
@@ -66,7 +65,6 @@ if (0 < _timeLive && _timeLive < 1500) then {
 
         // Refresh the finished list
         _attachToVehicle setVariable [QGVAR(attached), _newList, true];
-
 
     }, _timeLive, [_attachToVehicle, _unit, _itemClassname, _position]] call CBA_fnc_addPerFrameHandler;
 };
