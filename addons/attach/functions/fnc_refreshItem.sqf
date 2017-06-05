@@ -32,32 +32,33 @@ if (0 < _timeLive && _timeLive < 1500) then {
 
     [{
         params ["_args", "_handle"];
-        _args params ["_unit", "_attachToVehicle", "_itemClassname", "_position"];
+        _args params ["_attachToVehicle", "_unit", "_itemClassname", "_position"];
+        private ["_attachedObject"];
         private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
         private _newList = _attachedList;
-        systemChat "Works";
         {
             _x params ["_xObject", "_xItemName"];
+
             if (_xItemName == _itemClassname) then {
 
                 detach _xObject;
 
                 // Delete attached item after 0.5 seconds
-                _xObject setPos ((getPos _attachToVehicle) vectorAdd [0, 0, -1000]);
+                _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
                 [{deleteVehicle (_this select 0)}, [_xObject], 2] call CBA_fnc_waitAndExecute;
                 _newList deleteAt _forEachIndex;
 
                 // Create new item
                 private _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
-                private _attachedObject = _itemVehClass createVehicle (getPos _attachToVehicle);
 
                 if (_attachToVehicle == _unit) then {
                     _attachedObject = _itemVehClass createVehicle [0, 0, 0];
                     _attachedObject attachTo [_attachToVehicle, _position, "leftshoulder"];
                 } else {
-                    _attachedObject = _itemVehClass createVehicle (getPos _attachToVehicle);
+                    _attachedObject = _itemVehClass createVehicle (getPos _unit);
                     _attachedObject attachTo [_attachToVehicle, _position];
                 };
+
                 // Add it to the list
                 _newList pushBack [_attachedObject, _itemClassname];
             };
@@ -65,6 +66,7 @@ if (0 < _timeLive && _timeLive < 1500) then {
 
         // Refresh the finished list
         _attachToVehicle setVariable [QGVAR(attached), _newList, true];
+
 
     }, _timeLive, [_attachToVehicle, _unit, _itemClassname, _position]] call CBA_fnc_addPerFrameHandler;
 };

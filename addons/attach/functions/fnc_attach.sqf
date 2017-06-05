@@ -47,10 +47,11 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
         [_onAtachText] call EFUNC(common,displayTextStructured);
     };
 
+    _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
+
     // Add a handler that will refresh a item when it is about to die
     [_attachToVehicle, _unit, _itemClassname, _position] call FUNC(refreshItem);
 
-    _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
