@@ -1231,7 +1231,7 @@
             <Korean>정비공</Korean>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
-            <English>Advanced Engineer</English>
+            <English>Adv. Engineer</English> <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
