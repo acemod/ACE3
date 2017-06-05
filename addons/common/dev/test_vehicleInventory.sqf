@@ -1,4 +1,5 @@
 // PabstMirror
+// ["ace_common"] call ace_common_fnc_runTests;
 // execVM "z\ace\addons\common\dev\test_vehicleInventory.sqf";
 
 private _testPass = true;

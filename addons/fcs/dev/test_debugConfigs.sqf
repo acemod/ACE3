@@ -1,4 +1,5 @@
 // PabstMirror
+// ["ace_fcs"] call ace_common_fnc_runTests;
 // execVM "z\ace\addons\fcs\dev\test_debugConfigs.sqf;
 
 private _testPass = true;

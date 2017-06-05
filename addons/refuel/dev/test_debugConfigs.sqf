@@ -1,4 +1,5 @@
-// execVM "z\ace\addons\common\refuel\test_debugConfigs.sqf";
+// ["ace_refuel"] call ace_common_fnc_runTests;
+// execVM "z\ace\addons\refuel\dev\test_debugConfigs.sqf";
 
 #include "\z\ace\addons\refuel\script_component.hpp"
 

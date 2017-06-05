@@ -1,4 +1,5 @@
 // PabstMirror
+// ["ace_common"] call ace_common_fnc_runTests;
 // execVM "z\ace\addons\common\dev\test_mapConfigs.sqf";
 
 #include "\z\ace\addons\common\script_component.hpp"
