@@ -93,6 +93,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 
 // Set last thrown time on Vanilla Throwing and Advanced Throwing
 ["ace_firedPlayer", {
+    //IGNORE_PRIVATE_WARNING ["_unit", "_weapon"];
     if (_weapon == "Throw") then {
         _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
     };

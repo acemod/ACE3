@@ -26,6 +26,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
 
 // Draw all lasers
 [GVAR(laserEmitters), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
     // TRACE_2("",_key,_value);
     _value params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
 

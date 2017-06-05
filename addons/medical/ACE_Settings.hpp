@@ -265,4 +265,11 @@ class ACE_Settings {
         value = 0;
         values[] = {"No", "Yes"};
     };
+    class GVAR(spontaneousWakeUpChance) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
+        description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
+        typeName = "SCALAR";
+        value = 0;
+    };
 };

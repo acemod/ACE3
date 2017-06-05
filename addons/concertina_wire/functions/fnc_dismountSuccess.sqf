@@ -13,7 +13,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_1(_wire);
+params ["_wire"];
 
 {
     _wire animate [_x, 1];

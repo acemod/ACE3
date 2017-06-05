@@ -464,6 +464,12 @@ class CfgVehicles {
                     };
                 };
             };
+            class spontaneousWakeUpChance {
+                displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
+                description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
+                typeName = "SCALAR";
+                defaultValue = 0;
+            };
         };
     };
     class MapBoard_altis_F;
