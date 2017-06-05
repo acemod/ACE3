@@ -204,7 +204,10 @@ Exceptions:
 
 ## 5. Code Style
 
+To help with some of the coding style we recommend you get the plugin [EditorConfig](http://editorconfig.org/#download) for your editor. It will help with correct indentations and deleting trailing spaces.
+
 ### 5.1 Braces placement
+
 Braces `{ }` which enclose a code block will have the first bracket placed behind the statement in case of `if`, `switch` statements or `while`, `waitUntil` & `for` loops. The second brace will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
@@ -264,7 +267,7 @@ class Three {foo = 3;};
 Putting the opening brace in its own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 ### 5.2 Indents
-Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
+Every new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed. Tabs or spaces are not allowed to trail on a line, last character needs to be non blank.
 
 Good:
 
