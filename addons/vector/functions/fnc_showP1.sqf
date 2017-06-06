@@ -1,10 +1,16 @@
 /*
+ * Author: commy2
+ * Shows or hides the 1-P text line.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
-by commy2
-
-Shows or hides the 1-P text line.
-
-*/
 #include "script_component.hpp"
 
 disableSerialization;

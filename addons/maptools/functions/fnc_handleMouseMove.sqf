@@ -8,6 +8,8 @@
  *
  * Return Value:
  * Boolean, true if event was handled
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

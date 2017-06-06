@@ -10,6 +10,9 @@
  * 1: bank <NUMBER>
  * 2: yaw <NUMBER>
  *
+ * Example:
+ * [plane] call ace_common_fnc_getPitchBankYaw
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

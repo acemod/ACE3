@@ -1,15 +1,16 @@
 /*
-* Author: Rocko
-* Calculate the maximum zoom level allowed for the current map
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
+ * Author: Rocko
+ * Calculate the maximum zoom level allowed for the current map
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private _grids = (configFile >> "CfgWorlds" >> worldName >> "Grid");

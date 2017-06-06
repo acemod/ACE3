@@ -9,7 +9,7 @@
  * Return Value:
  * ?
  *
- * Public: ?
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * Something
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 ((_this select 0) displayCtrl 1016) ctrlShow GVAR(mapShowCursorCoordinates);

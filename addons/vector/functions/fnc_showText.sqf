@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 disableSerialization;

@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ * Dev things
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 //fnc_doReflections.sqf
 #include "script_component.hpp"
 

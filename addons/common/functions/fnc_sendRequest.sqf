@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "ID", "Message", {callback}] call ace_common_fnc_sendRequest
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

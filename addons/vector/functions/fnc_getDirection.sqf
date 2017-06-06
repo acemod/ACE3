@@ -1,3 +1,16 @@
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * <ARRAY>
+ *
+ * Public: No
+ */
+
 // by commy2
 #include "script_component.hpp"
 

@@ -1,4 +1,4 @@
-    /*
+/*
  * Author: KoffeinFlummi, Glowbal, commy2
  * Main HandleDamage EH function.
  *

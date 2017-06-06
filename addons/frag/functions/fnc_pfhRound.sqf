@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_round", "_lastPos", "_lastVel", "_shellType", "_firedFrame", "_gun", "_doSpall", "_spallTrack", "_foundObjectHPIds", "_skip", "_explosive", "_indirectRange", "_force", "_fragPower"];

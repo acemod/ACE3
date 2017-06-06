@@ -9,6 +9,9 @@
  * Return Value:
  * Brightest light level
  *
+ * Example:
+ * [reciever, giver] call ace_common_fnc_lightIntensityFromObject
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

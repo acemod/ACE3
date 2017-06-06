@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 

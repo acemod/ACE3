@@ -1,4 +1,16 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: <STRING>
+ *
+ * Return Value:
+ * <ARRAY>
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 switch (_this select 0) do {

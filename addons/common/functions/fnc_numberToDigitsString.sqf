@@ -9,6 +9,9 @@
  * Return Value:
  * Digits. The maximum length is six digits. <STRING>
  *
+ * Example:
+ * [5, 5] call ace_common_fnc_numberToDigitsString
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

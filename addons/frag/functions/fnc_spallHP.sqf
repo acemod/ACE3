@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 //player sideChat format ["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];

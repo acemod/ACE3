@@ -8,7 +8,10 @@
  *
  * Return Value:
  * Boolean, true if event was handled
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_dir", "_params"];
@@ -26,16 +29,16 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
             private _markerName = allMapMarkers select (count allMapMarkers - 1);
             private _markerPos = getMarkerPos _markerName;
             private _distanceCheck = _markerPos distance2d GVAR(drawPosStart);
-            
+
             TRACE_3("Line Drawn",_markerName,_markerPos,_distanceCheck);
-            
+
             if (_distanceCheck > 1) exitWith {WARNING("Wrong Marker!");};
             if ((count GVAR(freeDrawingData)) != 3) exitWith {TRACE_1("never touched roamer",GVAR(freeDrawingData));};
-            
+
             GVAR(freeDrawingData) params ["", "_startStraightPos", "_endStraightPos"];
            _startStraightPos set [2, 0];
-            _endStraightPos set [2, 0]; 
-            
+            _endStraightPos set [2, 0];
+
             // Convert marker to rectangle and change it's pos/size/dir
             _markerName setMarkerShape "RECTANGLE";
 

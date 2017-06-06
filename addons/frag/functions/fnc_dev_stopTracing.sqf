@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ * Dev things
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 if (!GVAR(tracesStarted)) exitWith {};

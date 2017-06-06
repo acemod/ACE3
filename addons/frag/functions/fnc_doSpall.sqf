@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ * Dev things
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 //fnc_doSpall.sqf
 #include "script_component.hpp"
 // ACE_player sideChat "WAAAAAAAAAAAAAAAAAAAAA";

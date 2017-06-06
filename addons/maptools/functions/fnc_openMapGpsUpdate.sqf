@@ -1,5 +1,15 @@
-//esteldunedain
-//update gps display
+/*
+ * Author: esteldunedain
+ * update gps display
+ *
+ * Arguments:
+ * Something
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

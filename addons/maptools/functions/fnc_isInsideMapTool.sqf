@@ -8,7 +8,10 @@
  *
  * Return Value:
  * Boolean
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 if (GVAR(mapTool_Shown) == 0) exitWith {false};

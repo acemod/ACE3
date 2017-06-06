@@ -1,10 +1,16 @@
 /*
+ * Author: commy2
+ * Handles pressing the special vector keys.
+ *
+ * Arguments:
+ * 0: <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
-by commy2
-
-Handles pressing the special vector keys.
-
-*/
 #include "script_component.hpp"
 
 // set vector config settings

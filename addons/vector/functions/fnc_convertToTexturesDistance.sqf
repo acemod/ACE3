@@ -1,8 +1,16 @@
-/* by commy2
+/*
+ * Author: commy2
+ * converts rangefinder distance into array of textures for the vectors scripted info control
+ *
+ * Arguments:
+ * 0: <NUMBER>
+ *
+ * Return Value:
+ * <ARRAY>
+ *
+ * Public: No
+ */
 
-converts rangefinder distance into array of textures for the vectors scripted info control
-
-*/
 
 #include "script_component.hpp"
 

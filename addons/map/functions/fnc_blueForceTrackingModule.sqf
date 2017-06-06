@@ -1,13 +1,15 @@
 /*
-* Author: KoffeinFlummi
-* Initializes the blue force tracking module.
-*
-* Arguments:
-* Whatever the module provides. (I dunno.)
-*
-* Return Value:
-* None
-*/
+ * Author: KoffeinFlummi
+ * Initializes the blue force tracking module.
+ *
+ * Arguments:
+ * Whatever the module provides. (I dunno.)
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

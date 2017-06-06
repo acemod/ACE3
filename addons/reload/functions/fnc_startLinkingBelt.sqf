@@ -8,7 +8,10 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_player", "_target"];

@@ -8,7 +8,7 @@
  * 2: Minimum unconscious time <NUMBER> (default: (round(random(10)+5)))
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
- * ReturnValue:
+ * Return Value:
  * nil
  *
  * Example:

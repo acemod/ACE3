@@ -1,4 +1,17 @@
-// Not currently used
+/*
+ * Author: ACE
+ * Not currently used
+ *
+ * Arguments:
+ * 0: TARGET <OBJECT>
+ * 1: ARGS <ARRAY>
+ *
+ * Return Value:
+ * <BOOLEAN>
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 PARAMS_2(_target,_args);
 

@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_origin", "_obj", ["_color", [1, 0, 0, 1]]];

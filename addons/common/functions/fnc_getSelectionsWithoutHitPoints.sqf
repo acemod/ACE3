@@ -8,6 +8,8 @@
  *
  * Return Value:
  * The selections without hitpoints, i.e. reflectors. (Array)
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

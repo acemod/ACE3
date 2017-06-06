@@ -1,11 +1,18 @@
-/**
- * fn_heal.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ *
+ * Arguments:
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: SelectionName <STRING>
+ * 3: ClassName <STRING>
+ * 4: Item
+ *
+ * Return Value:
+ * <BOOL>
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

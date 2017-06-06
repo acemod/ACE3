@@ -1,10 +1,16 @@
 /*
+ * Author: commy2
+ * Clears the vectors control items.
+ *
+ * Arguments:
+ * 0: <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
-by commy2
-
-Clears the vectors control items.
-
-*/
 #include "script_component.hpp"
 
 disableSerialization;

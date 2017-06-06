@@ -7,7 +7,10 @@
  *
  * Return Value:
  * Nothing
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 #define COUNT_BARS 12

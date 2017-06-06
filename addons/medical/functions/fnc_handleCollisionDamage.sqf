@@ -1,4 +1,17 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: New Damage <SCALAR>
+ *
+ * ReturnValue:
+ * None
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_unit", "_newDamage"];

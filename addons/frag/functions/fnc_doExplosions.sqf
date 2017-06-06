@@ -1,3 +1,18 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ *
+ * Public: No
+ */
+
 //fnc_doExplosions.sqf
 #include "script_component.hpp"
 

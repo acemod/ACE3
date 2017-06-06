@@ -1,3 +1,19 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ *
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_map", "_theta"];

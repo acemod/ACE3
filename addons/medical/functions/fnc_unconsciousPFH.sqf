@@ -12,11 +12,15 @@
  *      5: Parachute Check <BOOL>
  * 1: PFEH ID <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [[unit,"pos", 5, 5, true, false], 5], "classname"] call ace_medical_fnc_unconsciousPFH
  *
  * Public: yes
  */
+
 #include "script_component.hpp"
 
 private ["_unit", "_minWaitingTime", "_slotInfo", "_hasMovedOut", "_parachuteCheck", "_args", "_originalPos", "_startingTime", "_awakeInVehicleAnimation", "_oldVehicleAnimation", "_vehicle"];

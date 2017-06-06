@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["Name", 5] call ace_common_fnc_setParameter
+ *
  * Public: Yes
  *
  * Deprecated

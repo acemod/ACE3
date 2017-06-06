@@ -1,3 +1,20 @@
+/*
+ * Author: ACE
+ *
+ *
+ * Argument:
+ * None
+ *
+ * Return value:
+ * None
+ *
+ * Example:
+ *
+ *
+ * Public: No
+ */
+
+
 // Dev Debug Function
 // Displays lasers and attempts to lock on to codes 1111 and 1112 from a target vehicle's view
 // On Screen Debug:

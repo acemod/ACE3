@@ -8,7 +8,7 @@
  * Return Value:
  * None
  *
- * Public : No
+ * Public: No
  */
 #include "script_component.hpp"
 

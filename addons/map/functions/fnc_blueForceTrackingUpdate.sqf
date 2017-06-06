@@ -1,3 +1,17 @@
+/*
+ * Author: ACE
+ * Update the blue force tracking.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
+
+
 // #define ENABLE_PERFORMANCE_COUNTERS
 #include "script_component.hpp"
 // BEGIN_COUNTER(blueForceTrackingUpdate);

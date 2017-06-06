@@ -8,6 +8,9 @@
  * Return Value:
  * <Bool>
  *
+ * Example:
+ * [bob] call ace_common_fnc_inTransitionAnim
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

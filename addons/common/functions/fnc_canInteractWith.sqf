@@ -10,6 +10,9 @@
  * Return Value:
  * Unit can interact?
  *
+ * Example:
+ * [bob, target, []] call ace_common_fnc_canInteractWith
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
