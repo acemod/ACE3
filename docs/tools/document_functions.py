@@ -23,11 +23,44 @@ import argparse
 def document_public():
     return
 
+def process_author(text):
+    authors = text.splitlines()[0]
+    description = "".join([x[3:] for x in text.splitlines(1)[1:]])
+    return [authors, description]
+
+def process_argument(argument):
+    definition = re.match(r"^(\d+):\s(.+)\<([\s\w]+)\>\s?(\(default: ([\w\s]+)\))?", argument);
+
+    if definition:
+        index = definition.group(1)
+        name = definition.group(2)
+        data_types = definition.group(3).split(" or ")
+        default_value = definition.group(5)
+    else:
+        return []
+    return [index, name, data_types, default_value]
+
+def process_arguments(text):
+    # Remove the header characters
+    arguments = [x[3:] for x in text.splitlines(1)]
+
+    # Find lines which new arguments start on (for multi-line descriptions)
+    arg_indices = [i for i, line in enumerate(arguments) if re.match(r"^\d+:", line)]
+
+    return [process_argument(arguments[i]) for i in arg_indices]
+
+def process_return(text):
+    return
+
+def process_example(text):
+    return
+
 def read_func(code, debug=False):
     header = re.match(r"\s*/\*.+?\*/", code, re.S)
     if header:
         sections = re.split(r"^\s\*\s+(Author|Argument|Return Value|Example|Public)s?:\s?", header.group(), 0, re.I|re.M)
 
+        # Check if public
         try:
             public_value = re.match(r"(Yes|No)", sections[sections.index("Public") + 1], re.I)
 
@@ -36,10 +69,42 @@ def read_func(code, debug=False):
             else:
                 return "Invalid \"Public\" header value"
         except ValueError:
-            return "Missing \"Public\" header value"
+            return "Missing \"Public\" header section"
 
-        if is_public and not debug:
-            document_public(sections)
+        # Just return here if private function
+        if not is_public:
+            return ""
+
+        # Process the Author: section
+        try:
+            author_text = sections[sections.index("Author") + 1]
+        except ValueError:
+            return "Missing \"Author\" header section"
+
+        # Process the Arguments: section
+        try:
+            arguments_text = sections[sections.index("Argument") + 1]
+        except ValueError:
+            return "Missing \"Arguments\" header section"
+
+        # Process the Return Value: section
+        try:
+            return_text = sections[sections.index("Return Value") + 1]
+        except ValueError:
+            return "Missing \"Return Value\" header section"
+
+        # Process the Example: section
+        try:
+            example_text = sections[sections.index("Example") + 1]
+        except ValueError:
+            return "Missing \"Example\" header section"
+
+        if not debug:
+            print(process_author(author_text))
+            print(process_arguments(arguments_text))
+            process_return(return_text)
+            process_example(example_text)
+            #document_public(sections)
             return "Processed"
     else:
         return "Invalid header"
