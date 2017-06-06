@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
         <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
@@ -266,7 +266,7 @@
             <Russian>Смена ствола...</Russian>
             <Hungarian>Cső kicserélése folyamatban...</Hungarian>
             <Portuguese>Substituindo cano...</Portuguese>
-            <Italian>Sto sostituendo la canna...</Italian>
+            <Italian>Sostituendo la canna...</Italian>
             <Japanese>銃身を交換中・・・</Japanese>
             <Korean>총열 교체중...</Korean>
         </Key>
@@ -321,7 +321,7 @@
             <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
             <Czech>Zjišťuju teplotu...</Czech>
             <Portuguese>Conferindo temperatura...</Portuguese>
-            <Italian>Sto controllando la temperatura...</Italian>
+            <Italian>Controllando la temperatura...</Italian>
             <Russian>Проверка температуры...</Russian>
             <Japanese>温度を測っている・・・</Japanese>
             <Korean>무기 온도 확인중...</Korean>
@@ -336,6 +336,7 @@
             <Polish>Sprawdź temperaturę zapasowych luf</Polish>
             <German>Temperatur der Wechselläufe prüfen</German>
             <Korean>총열 온도 확인</Korean>
+            <Italian>Controlla la temperatura della canna di ricambio</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
             <English>Checking spare barrels temperatures...</English>
@@ -347,6 +348,7 @@
             <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
             <German>Prüfe Temperatur der Wechselläufe ...</German>
             <Korean>총열 온도 확인중...</Korean>
+            <Italian>Controllando la temperatura della canna di ricambio...</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_Temperature">
             <English>Temperature</English>
@@ -372,6 +374,7 @@
             <Polish>Zimne zapasowe lufy</Polish>
             <German>Kalte Wechselläufe</German>
             <Korean>차가운 예비 총열</Korean>
+            <Italian>Canna/e di Ricambio Fredda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelWarm">
             <English>Warm Spare Barrel/s</English>
@@ -383,6 +386,7 @@
             <Polish>Ciepłe zapasowe lufy</Polish>
             <German>Warme Wechselläufe</German>
             <Korean>따뜻한 예비 총열</Korean>
+            <Italian>Canna/e di Ricambio Calda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelHot">
             <English>Hot Spare Barrel/s</English>
@@ -394,6 +398,7 @@
             <Polish>Gorące zapasowe lufy</Polish>
             <German>Heiße Wechselläufe</German>
             <Korean>뜨거운 예비 총열</Korean>
+            <Italian>Canna/e di Ricambio Molto Calda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelVeryHot">
             <English>Very Hot Spare Barrel/s</English>
@@ -405,6 +410,7 @@
             <Polish>Bardzo gorące zapasowe lufy</Polish>
             <German>Sehr heiße Wechselläufe</German>
             <Korean>매우 뜨거운 예비 총열</Korean>
+            <Italian>Canna/e di Ricambio Estremamente Calda</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
@@ -416,6 +422,7 @@
             <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
             <German>Extrem heiße Wechselläufe</German>
             <Korean>엄청나게 뜨거운 예비 총열</Korean>
+            <Italian>Canna/e di Ricambio Rovente</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_displayName">
             <English>Overheating Enabled</English>
@@ -428,6 +435,7 @@
             <Japanese>過熱を有効化</Japanese>
             <Polish>Przegrzewanie włączone</Polish>
             <Korean>과열 활성화</Korean>
+            <Italian>Surriscaldamento Abilitato</Italian>
         </Key>
         <Key ID="STR_ACE_Overheating_enabled_description">
             <English>Master enable for the overheating/jamming module</English>
@@ -438,6 +446,7 @@
             <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
             <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
             <Korean>과열/탄걸림 최종 활성화</Korean>
+            <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
         </Key>
     </Package>
 </Project>

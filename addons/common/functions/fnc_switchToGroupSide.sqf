@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", side _unit]];
+params [["_unit", objNull], ["_switch", false], ["_id", ""], ["_side", sideUnknown]];
 
 private _previousGroupsList = _unit getVariable [QGVAR(previousGroupSwitchTo), []];
 

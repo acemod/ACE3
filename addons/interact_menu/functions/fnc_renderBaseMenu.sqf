@@ -61,7 +61,7 @@ if ((_sPos select 0) < safeZoneXAbs || {(_sPos select 0) > safeZoneXAbs + safeZo
 if ((_sPos select 1) < safeZoneY    || {(_sPos select 1) > safeZoneY    + safeZoneH}) exitWith {false};
 
 
-BEGIN_COUNTER(fnc_collectActiveActionTree)
+BEGIN_COUNTER(fnc_collectActiveActionTree);
 
 // Collect active tree
 private _uid = format [QGVAR(ATCache_%1), _actionName];
@@ -71,7 +71,7 @@ private _activeActionTree = [
                         _object, _uid, 1.0, "ace_interactMenuClosed"
                     ] call EFUNC(common,cachedCall);
 
-END_COUNTER(fnc_collectActiveActionTree)
+END_COUNTER(fnc_collectActiveActionTree);
 
 #ifdef DEBUG_MODE_EXTRA
 diag_log "Printing: _activeActionTree";
@@ -79,9 +79,6 @@ diag_log "Printing: _activeActionTree";
     params ["_level", "_node"];
     _node params ["_actionData", "_children", "_object"];
     diag_log text format ["Level %1 -> %2 on %3", _level, _actionData select 0, _object];
-    {
-        [_level + 1, _x] call _fnc_print;
-    } forEach _children;
 };
 #endif
 
@@ -101,6 +98,6 @@ GVAR(collectedActionPoints) pushBack [_sPos select 2, _sPos, _activeActionTree];
 
 END_COUNTER(fnc_renderMenus);
 
-END_COUNTER(fnc_renderBaseMenu)
+END_COUNTER(fnc_renderBaseMenu);
 
 true

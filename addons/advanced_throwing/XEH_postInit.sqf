@@ -93,6 +93,7 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
 
 // Set last thrown time on Vanilla Throwing and Advanced Throwing
 ["ace_firedPlayer", {
+    //IGNORE_PRIVATE_WARNING ["_unit", "_weapon"];
     if (_weapon == "Throw") then {
         _unit setVariable [QGVAR(lastThrownTime), CBA_missionTime];
     };
@@ -115,8 +116,7 @@ addMissionEventHandler ["Draw3D", { // Blue is predicted before throw, red is re
         drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [0,0,1,1], _newTrajAGL, 1, 1, 0, "", 2];
     } forEach GVAR(predictedPath);
     {
-        _newTrajAGL = _x;
-        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _newTrajAGL, 1, 1, 0, "", 2];
+        drawIcon3D ["\a3\ui_f\data\gui\cfg\hints\icon_text\group_1_ca.paa", [1,0,0,1], _x, 1, 1, 0, "", 2];
     } forEach GVAR(flightPath)
 }];
 #endif

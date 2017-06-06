@@ -19,6 +19,7 @@
 params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
 
 !(isNull _unit ||
+    {!alive _target} || 
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
     {(_target distance _unit) > REARM_ACTION_DISTANCE} ||

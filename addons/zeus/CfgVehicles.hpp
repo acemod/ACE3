@@ -86,6 +86,7 @@ class CfgVehicles {
     class GVAR(moduleBase): Module_F {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
+        function = QEFUNC(common,dummy);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;
@@ -160,6 +161,12 @@ class CfgVehicles {
         displayName = CSTRING(ModuleSearchNearby_DisplayName);
         function = QFUNC(moduleSearchNearby);
     };
+    class GVAR(moduleSuppressiveFire): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(AI);
+        displayName = CSTRING(ModuleSuppressiveFire_DisplayName);
+        function = QFUNC(moduleSuppressiveFire);
+    };
     class GVAR(moduleSetMedic): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(Medical);
@@ -206,5 +213,17 @@ class CfgVehicles {
         displayName = CSTRING(ModuleUnconscious_DisplayName);
         function = QFUNC(moduleUnconscious);
         icon = QPATHTOF(UI\Icon_Module_Zeus_Unconscious_ca.paa);
+    };
+    class GVAR(AddFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(moduleAddFullArsenal_displayName);
+        function = QFUNC(moduleAddArsenal);
+    };
+    class GVAR(RemoveFullArsenal): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(moduleRemoveArsenal_displayName);
+        function = QFUNC(moduleRemoveArsenal);
     };
 };

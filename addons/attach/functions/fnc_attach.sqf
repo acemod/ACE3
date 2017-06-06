@@ -57,7 +57,6 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
 
     //Display to show virtual object:
-    private [];
     _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");
     if (_model == "") then {
         _model = getText (configFile >> "CfgVehicles" >> _itemVehClass >> "model");

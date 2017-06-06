@@ -56,7 +56,7 @@ if (inputAction "nextWeapon" > 0) then {
     // switch to last mode
     _index = 0;
     while {
-        _index < 100 && {currentMuzzle _unit != _weapon || {currentWeaponMode _unit != _mode}}
+        _index < 299 && {currentMuzzle _unit != _weapon || {currentWeaponMode _unit != _mode}}
     } do {
         _unit action ["SwitchWeapon", _unit, _unit, _index];
         _index = _index + 1;

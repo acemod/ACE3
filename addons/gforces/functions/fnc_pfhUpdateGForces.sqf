@@ -17,7 +17,7 @@
 if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
 GVAR(lastUpdateTime) = CBA_missionTime;
 
-if (isNull ACE_player || !(alive ACE_player)) exitWith {};
+if (GVAR(playerIsVirtual) || {!alive ACE_player}) exitWith {};
 
 BEGIN_COUNTER(everyInterval);
 

@@ -1,27 +1,38 @@
+/*
+ * Author: Jaynus, NouberNou
+ * Starts tracking a round that will frag.
+ * Should only be called once per round.
+ *
+ * Arguments:
+ * 0: Shooter <OBJECT>
+ * 1: Ammo classname <STRING>
+ * 2: Projectile <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Example:
+ * [player, "handGrenade", bullet] call ace_frag_fnc_addPfhRound
+ *
+ * Public: No
+ */
 //#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-params ["_gun", "_type", "_round", ["_doFragTrack", false]];
+params ["_gun", "_type", "_round"];
+TRACE_3("addPfhRound",_gun,_type,_round);
 
-if (!GVAR(enabled)) exitWith {};
+if (!GVAR(enabled)) exitWith {TRACE_1("setting disabled",_this);};
 
-//_enabled = getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(enabled));
-//if (_enabled < 1) exitWith {};
+if (!alive _round) exitWith {TRACE_1("round dead?",_this);};
 
 if (_round in GVAR(blackList)) exitWith {
+    TRACE_1("round in blackList",_this);
     REM(GVAR(blackList),_round);
 };
 
 // Exit on max track
-if ((count GVAR(objects)) > GVAR(maxTrack)) exitWith {};
-
-if (
-    _gun == ACE_player ||
-    {(gunner _gun) == ACE_player} ||
-    {local _gun && {!(isPlayer (gunner _gun))} && {!(isPlayer _gun)}}
-) then {
-    _doFragTrack = true;
-};
+if ((count GVAR(objects)) >= GVAR(maxTrack)) exitWith {TRACE_1("maxTrack limit",count GVAR(objects));};
 
 private _doSpall = false;
 if (GVAR(SpallEnabled)) then {
@@ -29,23 +40,23 @@ if (GVAR(SpallEnabled)) then {
         GVAR(spallHPData) = [];
     };
     if (GVAR(spallIsTrackingCount) > 5) then {
-        // ACE_player sideChat "LIMT!";
+        TRACE_1("At Spall Limit",GVAR(spallIsTrackingCount));
     } else {
         _doSpall = true;
         INC(GVAR(spallIsTrackingCount));
     };
+    TRACE_2("",_doSpall,GVAR(spallIsTrackingCount));
 };
-// ACE_player sideChat format ["c: %1", GVAR(spallIsTrackingCount)];
 
-if (GVAR(autoTrace)) then {
-    [ACE_player, _round, [1, 0, 0, 1]] call FUNC(addTrack);
-};
+#ifdef DRAW_FRAG_INFO
+[ACE_player, _round, [0, 1, 0, 1]] call FUNC(dev_addTrack);
+#endif
 
 // We only do the single track object check here.
 // We should do an {!(_round in GVAR(objects))}
 // But we leave that out here for optimization. So this cannot be a framework function
 // Otherwise, it should only be added once and from the FiredEH
-if (_doFragTrack && {alive _round}) then {
+if (alive _round) then {
     private _spallTrack = [];
     private _spallTrackID = [];
 
@@ -64,5 +75,4 @@ if (_doFragTrack && {alive _round}) then {
     if (_doSpall) then {
         [_round, 1, _spallTrack, _spallTrackID] call FUNC(spallTrack);
     };
-    // ACE_player sideChat "WTF2";
 };
