@@ -20,42 +20,82 @@ import sys
 import re
 import argparse
 
+class Writer:
+    def __init__(self, path="", debug=False):
+        self.path = path
+        self.debug = debug
+        self.logged = False
+
+    def log_file(self, error=False):
+        # When in debug mode we only want to see the files with errors
+        if not self.debug or error:
+            if not self.logged:
+                self.write("Processing... {}".format(self.path), 1)
+                self.logged = True
+
+    def error(self, message):
+        self.log_file(self.debug)
+        self.write("Error: {}".format(message))
+
+    def write(self, message, indent=2):
+        to_print = ["  "]*indent
+        to_print.append(message)
+        print("".join(to_print))
+
+
 def document_public():
     return
 
-def process_author(text):
+def process_author(text, writer):
     authors = text.splitlines()[0]
     description = "".join([x[3:] for x in text.splitlines(1)[1:]])
     return [authors, description]
 
-def process_argument(argument):
+def process_argument(argument, writer):
+    if argument.startswith("None"):
+        return ["","None","",""]
+
     definition = re.match(r"^(\d+):\s(.+)\<([\s\w]+)\>\s?(\(default: ([\w\s]+)\))?", argument);
 
     if definition:
         index = definition.group(1)
         name = definition.group(2)
-        data_types = definition.group(3).split(" or ")
+        data_types = definition.group(3)
         default_value = definition.group(5)
     else:
-        return []
+        writer.error("Malformed argument")
+        return ["","","",""]
     return [index, name, data_types, default_value]
 
-def process_arguments(text):
+def process_arguments(text, writer):
     # Remove the header characters
     arguments = [x[3:] for x in text.splitlines(1)]
 
     # Find lines which new arguments start on (for multi-line descriptions)
     arg_indices = [i for i, line in enumerate(arguments) if re.match(r"^\d+:", line)]
 
-    return [process_argument(arguments[i]) for i in arg_indices]
+    return [process_argument(arguments[i], writer) for i in arg_indices]
 
-def process_return(text):
+def process_return(text, writer):
+    # Remove header characters and only use first line
+    text = text.splitlines()[0][3:]
+
+    if text.startswith("None"):
+        return ["None", ""]
+
+    valid_value = re.match(r"^(.+)\<([\s\w]+)\>", text)
+
+    if valid_value:
+        return [valid_value.group(1), valid_value.group(2)]
+    else:
+        writer.error("Malformed \"Return Value\"")
+
+    return ["", ""]
+
+def process_example(text, writer):
     return
 
-def process_example(text):
-    return
-
-def read_func(code, debug=False):
+def read_func(code, writer):
     header = re.match(r"\s*/\*.+?\*/", code, re.S)
     if header:
         sections = re.split(r"^\s\*\s+(Author|Argument|Return Value|Example|Public)s?:\s?", header.group(), 0, re.I|re.M)
@@ -67,49 +107,50 @@ def read_func(code, debug=False):
             if public_value:
                 is_public = public_value.group().lower() == "yes"
             else:
-                return "Invalid \"Public\" header value"
+                writer.error("Invalid \"Public\" header value")
+                return
         except ValueError:
-            return "Missing \"Public\" header section"
+            writer.error("Missing \"Public\" header section")
+            return
 
-        # Just return here if private function
-        if not is_public:
-            return ""
+        # Log all functions processed
+        writer.log_file()
 
         # Process the Author: section
         try:
             author_text = sections[sections.index("Author") + 1]
+            author, description = process_author(author_text, writer)
         except ValueError:
-            return "Missing \"Author\" header section"
+            writer.error("Missing \"Author\" header section")
+            return
 
         # Process the Arguments: section
         try:
             arguments_text = sections[sections.index("Argument") + 1]
+            arguments = process_arguments(arguments_text, writer)
         except ValueError:
-            return "Missing \"Arguments\" header section"
+            writer.error("Missing \"Arguments\" header section")
+            return
 
         # Process the Return Value: section
         try:
             return_text = sections[sections.index("Return Value") + 1]
+            return_value = process_return(return_text, writer)
         except ValueError:
-            return "Missing \"Return Value\" header section"
+            writer.error("Missing \"Return Value\" header section")
+            return
 
         # Process the Example: section
         try:
             example_text = sections[sections.index("Example") + 1]
+            process_example(example_text, writer)
         except ValueError:
-            return "Missing \"Example\" header section"
-
-        if not debug:
-            print(process_author(author_text))
-            print(process_arguments(arguments_text))
-            process_return(return_text)
-            process_example(example_text)
-            #document_public(sections)
-            return "Processed"
+            writer.error("Missing \"Example\" header section")
+            return
     else:
-        return "Invalid header"
+        writer.error("Invalid header")
 
-    return ""
+    return
 
 def crawl_dir(directory, debug=False):
     for root, dirs, files in os.walk(directory):
@@ -117,11 +158,10 @@ def crawl_dir(directory, debug=False):
             if file.endswith(".sqf") and file.startswith("fnc_"):
                 file_path = os.path.join(root, file)
 
-                with open(file_path) as f:
-                    output = read_func(f.read(), debug)
+                writer = Writer(os.path.relpath(file_path, directory), debug)
 
-                    if output:
-                        print("{0}: {1}".format(output, os.path.relpath(file_path, directory)))
+                with open(file_path) as f:
+                    read_func(f.read(), writer)
 
 def main():
     print("""
@@ -138,7 +178,7 @@ def main():
     # abspath is just used for the terminal output
     prospective_dir = os.path.abspath(os.path.join('../../addons/',args.directory))
     if os.path.isdir(prospective_dir):
-        print("Processing: {}".format(prospective_dir))
+        print("Directory: {}".format(prospective_dir))
         crawl_dir(prospective_dir, args.debug)
     else:
         print("Invalid directory: {}".format(prospective_dir))
