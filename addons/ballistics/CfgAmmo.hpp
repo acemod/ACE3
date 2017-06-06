@@ -152,7 +152,7 @@ class CfgAmmo {
     class B_762x51_Ball : BulletBase {
         airFriction=-0.00100957;
         tracerScale = 1.2; //0.6;
-        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m 
+        tracerStartTime=0.073;  // Based on the British L5A1 which burns out to 1000m
         tracerEndTime=2.15957;  // Time in seconds calculated with ballistics calculator
         ACE_caliber=7.823;
         ACE_bulletLength=28.956;
@@ -611,5 +611,10 @@ class CfgAmmo {
     };
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
         tracerScale = 2.5;
+    };
+
+    class SmokeShell;
+    class G_40mm_Smoke: SmokeShell {
+        simulation = "shotSmoke";
     };
 };
