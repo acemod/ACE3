@@ -76,7 +76,7 @@ _unit setVariable [QEGVAR(medical,allowDamage), !_set];
 // No theoretical change if an existing spectator was reset
 if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
-    _unit setVariable [QGVAR(isStaged), _set, true];
+    _unit setVariable [QGVAR(isStaged), _set];
 };
 
 // If display exists already update the entity list to hide player
