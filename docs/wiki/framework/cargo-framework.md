@@ -46,19 +46,18 @@ class staticBananaLauncher {
 
 ### 2.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
+Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
-`cargoLoaded` | Cargo has been loaded | ` [_item, _vehicle]` | Global
-`cargoUnloaded` | Cargo has been unloaded | `[_item, _vehicle]` | Global
-`cargoAddedByClass` | Cargo items have been added | `[_itemClass, _vehicle, _amount]` | Global
+`ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
+`ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
 
 ### 2.2 Callable
 
-Event Name | Description | Passed Parameter(s) | Locality
+Event Name | Passed Parameter(s) | Locality | Description
 ---------- | ----------- | ------------------- | --------
-`LoadCargo` | Load object into vehicle. | `[_object, _vehicle, _showHint]` | Local
-`UnloadCargo` | Unload object from vehicle. | `[_object, _vehicle]` | Local
-`AddCargoByClass` | Adds a cargo item to the vehicle. | `[_itemClass, _vehicle, _amount, _showHint]` | Local
+`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Scripted way to add cargo to vehicle
+`ace_loadCargo` | `[_object, _vehicle, _showHint]` | Target | Load object into vehicle.
+`ace_unloadCargo` | `[_object, _vehicle]` | Target | Unload object from vehicle.
 
 
 ## 3. Scripting
