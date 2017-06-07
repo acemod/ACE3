@@ -22,28 +22,28 @@ private _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
 
 private _fnc_scriptName = 'BIS_fnc_moduleProjectile';
-scriptname _fnc_scriptName;
+scriptName _fnc_scriptName;
 
 params ["_logic", "_units", "_activated"];
 
-if ({local _x} count (objectcurators _logic) > 0) then {
+if ({local _x} count (objectCurators _logic) > 0) then {
     //--- Reveal the circle to curators
-    _logic hideobject false;
-    _logic setpos position _logic;
+    _logic hideObject false;
+    _logic setPos position _logic;
 };
 if !(isserver) exitWith {};
 
 if (_activated) then {
-    _ammo = _logic getVariable ["type",gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
+    _ammo = _logic getVariable ["type",getText (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
         _CfgAmmo = configFile >> "CfgAmmo" >> _ammo;
         _dirVar = _fnc_scriptname + typeOf _logic;
-        _logic setdir (missionnamespace getVariable [_dirVar,direction _logic]); //--- Restore custom direction
-        _pos = getposatl _logic;
+        _logic setDir (missionNamespace getVariable [_dirVar,direction _logic]); //--- Restore custom direction
+        _pos = getPosATL _logic;
         _posAmmo = +_pos;
         _posAmmo set [2,0];
         _dir = direction _logic;
-        _simulation = tolower gettext (configFile >> "CfgAmmo" >> _ammo >> "simulation");
+        _simulation = toLower getText (configFile >> "CfgAmmo" >> _ammo >> "simulation");
         _altitude = 0;
         _velocity = [];
         _attach = false;
@@ -59,15 +59,15 @@ if (_activated) then {
                 _altitude = 1000;
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
-                _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
+                _sounds = if (getNumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
                 _sound = selectRandom _sounds;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
                 _shakeRadius = 300;
             };
             case "shotsubmunitions": {
-                _posAmmo = [_posAmmo,500,_dir + 180] call bis_fnc_relpos;
-                _altitude = 1000 - ((getterrainheightasl _posAmmo) - (getterrainheightasl _pos));
+                _posAmmo = [_posAmmo,500,_dir + 180] call BIS_fnc_relPos;
+                _altitude = 1000 - ((getTerrainHeightASL _posAmmo) - (getTerrainHeightASL _pos));
                 _posAmmo set [2,_altitude];
                 _velocity = [sin _dir * 68,cos _dir * 68,-100];
                 _radio = "SentGenIncoming";
@@ -91,10 +91,10 @@ if (_activated) then {
         };
         _fnc_playRadio = {
             if (_radio != "") then {
-                _entities = (getposatl _logic) nearentities ["All",100];
+                _entities = (getPosATL _logic) nearEntities ["All",100];
                 _sides = [];
                 {
-                    if (isplayer _x) then {
+                    if (isPlayer _x) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
@@ -108,7 +108,7 @@ if (_activated) then {
             };
         };
         if (count _hint > 0 && {count objectCurators _logic > 0}) then {
-            [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
+            [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectCurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {
             _altitude = (_logic getVariable ["altitude",_altitude]) call bis_fnc_parsenumber;
@@ -116,10 +116,10 @@ if (_activated) then {
 
             //--- Create projectile
             _posAmmo set [2,_altitude];
-            _projectile = createvehicle [_ammo,_posAmmo,[],0,"none"];
-            _projectile setpos _posAmmo;
-            _projectile setvelocity _velocity;
-            if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
+            _projectile = createVehicle [_ammo,_posAmmo,[],0,"none"];
+            _projectile setPos _posAmmo;
+            _projectile setVelocity _velocity;
+            if (_attach) then {_projectile attachTo [_logic,[0,0,_altitude]];};
 
            // Added by ace_zeus for ace_frag compatibility
             if (!isNil QEFUNC(frag,addPfhRound)) then {
@@ -130,7 +130,7 @@ if (_activated) then {
             if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
 
             //--- Create sound source
-            _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objnull};
+            _soundSource = if (_soundSourceClass != "") then {createSoundSource [_soundSourceClass,_pos,[],0]} else {objNull};
 
             // Added by ace_zeus to toggle ordnance radio message
             if (GVAR(radioOrdnance)) then {
@@ -141,39 +141,39 @@ if (_activated) then {
             //--- Update
             if (_attach) then {
                 waitUntil {
-                    _soundSource setposatl getposatl _projectile;
+                    _soundSource setPosATL getPosATL _projectile;
                     sleep 1;
-                    isnull _projectile || isnull _logic
+                    isNull _projectile || isNull _logic
                 };
             } else {
                 waitUntil {
-                    _soundSource setposatl getposatl _projectile;
+                    _soundSource setPosATL getPosATL _projectile;
 
-                    if (getposatl _logic distance _pos > 0 || direction _logic != _dir) then {
-                        _posNew = getposasl _logic;
+                    if (getPosATL _logic distance _pos > 0 || direction _logic != _dir) then {
+                        _posNew = getPosASL _logic;
                         _dirDiff = direction _logic - _dir;
-                        _posNew = [_posNew,[getposasl _projectile,_pos] call bis_fnc_distance2d,direction _logic + 180] call bis_fnc_relpos;
-                        _posNew set [2,getposasl _projectile select 2];
-                        _projectile setvelocity ([velocity _projectile,-_dirDiff] call bis_fnc_rotatevector2d);
-                        _projectile setposasl _posNew;
-                        _pos = getposatl _logic;
+                        _posNew = [_posNew,[getPosASL _projectile,_pos] call bis_fnc_distance2d,direction _logic + 180] call bis_fnc_relpos;
+                        _posNew set [2,getPosASL _projectile select 2];
+                        _projectile setVelocity ([velocity _projectile,-_dirDiff] call BIS_fnc_rotateVector2D);
+                        _projectile setPosASL _posNew;
+                        _pos = getPosATL _logic;
                         _dir = direction _logic;
-                        missionnamespace setVariable [_dirVar,_dir];
+                        missionNamespace setVariable [_dirVar,_dir];
                     };
                     sleep 0.1;
-                    isnull _projectile || isnull _logic
+                    isNull _projectile || isNull _logic
                 };
             };
-            deletevehicle _projectile;
-            deletevehicle _soundSource;
-            if (count objectcurators _logic > 0) then {
+            deleteVehicle _projectile;
+            deleteVehicle _soundSource;
+            if (count objectCurators _logic > 0) then {
 
                 //--- Delete curator spawned logic
                 if (_shakeStrength > 0) then {
                     if (_simulation == "shotsubmunitions") then {sleep 0.5;};
                     [[_shakeStrength,0.7,[position _logic,_shakeRadius]],"bis_fnc_shakeCuratorCamera"] call bis_fnc_mp;
                 };
-                deletevehicle _logic;
+                deleteVehicle _logic;
             } else {
 
                 //--- Repeat to achieve permanent effect
@@ -181,11 +181,11 @@ if (_activated) then {
                 if (_repeat) then {
                     [_logic,_units,_activated] call bis_fnc_moduleprojectile;
                 } else {
-                    deletevehicle _logic;
+                    deleteVehicle _logic;
                 };
             };
         } else {
-            deletevehicle _logic;
+            deleteVehicle _logic;
         };
     } else {
         ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeOf _logic] call bis_fnc_error;
