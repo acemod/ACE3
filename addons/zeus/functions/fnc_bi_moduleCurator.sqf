@@ -279,6 +279,7 @@ if (_activated) then {
         if (_isAdmin) then {
             _adminVar = _logic getvariable ["adminVar",""];
             _logic setvariable ["adminVar",nil];
+
             if (isserver) then {
                 //--- Host
                 missionnamespace setvariable [_adminVar,player];
@@ -286,10 +287,20 @@ if (_activated) then {
                 //--- Client
                 [_logic,_adminVar,_serverCommand] spawn {
                     scriptname "BIS_fnc_moduleCurator: Admin check";
+                    params ["_logic", "_adminVar", "_serverCommand"];
 
-                    _logic = _this select 0;
-                    _adminVar = _this select 1;
-                    _serverCommand = _this select 2;
+                    // _adminVar empty, probable race with server/network
+                    if (_adminVar == "") then {
+                        private _timeout = diag_tickTime + 10;
+                        waitUntil {
+                            _adminVar = _logic getvariable ["adminVar",""];
+                            _adminVar != "" || diag_tickTime > _timeout
+                        };
+                    };
+
+                    // _adminVar still empty, exit the admin logic, throw warn
+                    if (_adminVar == "") exitWith { WARNING("Player is admin, but adminVar could not be retrieved from the curator module"); };
+
                     while {true} do {
                         waituntil {sleep 0.1; servercommandavailable _serverCommand};
                         missionnamespace setvariable [_adminVar,player];
