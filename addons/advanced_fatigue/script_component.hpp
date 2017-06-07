@@ -27,3 +27,12 @@
 #define AE1_MAXRESERVE 4000000
 #define AE2_MAXRESERVE   84000
 #define AN_MAXRESERVE     2300
+
+#define MALE_WEIGHT 87          //kg
+#define MALE_HEIGHT 177         //cm
+#define MALE_TEMPERATURE 37     //degC
+#define BODY_SURFACE_AREA 2.068 //sqrt (MALE_WEIGHT * MALE_HEIGHT / 3600);
+#define BASAL_METABOLIC_WATTAGE //Mifflin St Jeor Equation converted to watts (10 * MALE_WEIGHT + 6.25 * MALE_HEIGHT + 5 * 21 + 5) * 0.048;
+#define WATER 4.18              //specific heat capacity Joule/gram/degC
+#define SKIN 0.5                //skin conductance factor
+#define E 2.718                 //natural number

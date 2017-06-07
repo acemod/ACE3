@@ -38,11 +38,23 @@ if (!hasInterface) exitWith {};
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Weather"] call EFUNC(common,isModLoaded)) then {
-        [QEGVAR(weather,temperature), { // 35->1, 45->2
-            linearConversion [35, 45, (missionNamespace getVariable [QEGVAR(weather,currentTemperature), 25]), 1, 2, true];
-        }] call FUNC(addDutyFactor);
+
+    [QGVAR(hotAndCold), {
+        ACE_player getVariable [QGVAR(hotAndColdDuty), 1];
+    }] call FUNC(addDutyFactor);
+
+    DFUNC(updateHotAndCold) = {
+        private _bodyTemp = [ACE_player getVariable [QGVAR(bodyTemperature),37]] call FUNC(calculateBodyTemperature);
+        ACE_player setVariable [QGVAR(bodyTemperature),_bodyTemp];
+        private _factors = [_bodyTemp] call FUNC(calculateBodyFactors); // [heatStress,sweat,shiver]
+        private _heatStress = (_factors select 0);
+        private _shiver = (_factors select 2);
+        ACE_player setVariable [QGVAR(hotAndColdDuty), linearConversion [0, 2000, (_heatStress + _shiver), 1, 2, true]];
+
+        [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
     };
+ 
+    [FUNC(updateHotAndCold), [], 1] call CBA_fnc_waitAndExecute;
 
     // - Add main loop at 1 second interval -------------------------------------------------------------
     [FUNC(mainLoop), [], 1] call CBA_fnc_waitAndExecute;
