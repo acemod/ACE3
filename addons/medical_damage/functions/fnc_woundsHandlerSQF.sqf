@@ -74,6 +74,7 @@ private _woundID = _unit getVariable [QGVAR(lastUniqueWoundID), 1];  // Unique w
 private _painLevel = 0;
 private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 private _woundsCreated = [];
 {
     _x params ["_thresholdMinDam", "_thresholdWoundCount"];
@@ -92,6 +93,7 @@ private _woundsCreated = [];
             private _bodyPartNToAdd = [floor random 6, _bodyPartN] select _isSelectionSpecific; // 6 == count ALL_BODY_PARTS
             
             _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
+            _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
             
             // Create a new injury. Format [ID, classID, bodypart, percentage treated, bleeding rate]
             _injury = [_woundID, _woundClassIDToAdd, _bodyPartNToAdd, 1, _injuryBleedingRate];
@@ -165,7 +167,7 @@ private _woundsCreated = [];
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
-[_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
+_bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
 [_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
 [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
