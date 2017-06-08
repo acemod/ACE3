@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bullet, 2, 5, 3] call ace_common_fnc_changeProjectileDirection
+ *
  * Public: No
  */
 #include "script_component.hpp"

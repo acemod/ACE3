@@ -14,7 +14,7 @@
  *      0: Number of structured text lines (default: 1) <OPTIONAL><NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["CBA_missionTime"] call ace_common_fnc_watchVariable; // Uses title as code

@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Item classnames <ARRAY>
  *
- * ReturnValue:
+ * Return Value:
  * [Had Item to Use <BOOL>, Array of units that used the items <ARRAY>] <ARRAY>
  *
  * Example:

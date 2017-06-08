@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL] call ace_zeus_fnc_ui_attributeCargo
+ *
  * Public: No
  */
 

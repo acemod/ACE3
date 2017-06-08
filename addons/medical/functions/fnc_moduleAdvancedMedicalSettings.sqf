@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleAdvancedMedicalSettings
+ *
  * Public: No
  */
 

@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, [], 5] call ace_fcs_fnc_adjustRange
+ *
  * Public: No
  */
 #include "script_component.hpp"

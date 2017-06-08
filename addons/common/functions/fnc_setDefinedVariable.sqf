@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "var", 5] call ace_common_fnc_setDefinedVariable
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -3,10 +3,10 @@
  * Calculates distance at which the bullet velocity drops below the threshold velocity
  *
  * Arguments:
- * theshold velocity <number>
+ * theshold velocity <NUMBER>
  *
  * Return Value:
- * distance <number
+ * distance <NUMBER>
  *
  * Example:
  * 403 call ace_atragmx_fnc_calculate_distance_at_velocity

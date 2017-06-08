@@ -10,7 +10,7 @@
  * Return Value:
  * None
  *
- * Example;
+ * Example:
  * function = "ace_rearm_fnc_moduleRearmSettings"
  *
  * Public: No

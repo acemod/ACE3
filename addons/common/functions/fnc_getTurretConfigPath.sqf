@@ -9,6 +9,9 @@
  * Return Value:
  * Turret config <CONFIG>
  *
+ * Example:
+ * [CfgVehicle, [Array]] call ace_common_fnc_getTurretConfigPath
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

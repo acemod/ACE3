@@ -9,6 +9,9 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient] call ace_medical_fnc_treatmentAdvanced_CPRLocal
+ *
  * Public: Yes
  */
 

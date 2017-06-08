@@ -7,7 +7,7 @@
  * Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [0] call ace_explosives_fnc_interactEH
