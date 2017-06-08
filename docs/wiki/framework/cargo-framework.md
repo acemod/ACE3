@@ -51,15 +51,6 @@ Event Name | Passed Parameter(s) | Locality | Description
 `ace_cargoLoaded` | [_item, _vehicle] | Global | Cargo has been Loaded into vehicle
 `ace_cargoUnloaded` | [_item, _vehicle] | Global | Cargo has been Unloaded from vehicle
 
-### 2.2 Callable
-
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ----------- | ------------------- | --------
-`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Scripted way to add cargo to vehicle
-`ace_loadCargo` | `[_object, _vehicle, _showHint]` | Target | Load object into vehicle.
-`ace_unloadCargo` | `[_object, _vehicle]` | Target | Unload object from vehicle.
-
-
 ## 3. Scripting
 
 ### 3.1 Disabling cargo for a mission object
@@ -68,4 +59,38 @@ To disable cargo for a mission object use:
 
 ```cpp
 this setVariable ["ace_cargo_size", -1];
+```
+
+### 3.2 Add cargo to vehicle 
+
+`ace_cargo_fnc_loadItem` (Also callable from cba event `ace_loadCargo`)
+Note first arg can be a in-game object or a classname of an object type.
+
+```cpp
+ * Arguments:
+ * 0: Item <OBJECT or STRING>
+ * 1: Vehicle <OBJECT>
+ *
+ * Return Value:
+ * Object loaded <BOOL>
+ *
+ * Example:
+ * [object, vehicle] call ace_cargo_fnc_loadItem
+```
+
+### 3.3 Unload cargo from vehicle 
+
+`ace_cargo_fnc_unloadItem` (Also callable from cba event `ace_unloadCargo`)
+
+```cpp
+ * Arguments:
+ * 0: Item <OBJECT or STRING>
+ * 1: Vehicle <OBJECT>
+ * 2: Unloader <OBJECT> (default: objNull)
+ *
+ * Return Value:
+ * Object was unloaded <BOOL>
+ *
+ * Example:
+ * [object, vehicle] call ace_cargo_fnc_unloadItem
 ```
