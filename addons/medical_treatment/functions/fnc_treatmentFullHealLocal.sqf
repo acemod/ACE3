@@ -62,7 +62,7 @@ private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedicati
    _target setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 
-[_unit, false] call EFUNC(medical_engine,setLimping);
+[_target, false] call EFUNC(medical_engine,setLimping);
 
 // Resetting damage
 _target setDamage 0;

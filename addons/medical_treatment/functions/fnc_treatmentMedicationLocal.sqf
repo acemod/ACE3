@@ -76,7 +76,7 @@ if (alive _target) then {
     private _heartRate = _target getVariable [QEGVAR(medical,heartRate), 80];
     private _hrIncrease = [_hrIncreaseLow, _hrIncreaseNorm, _hrIncreaseHigh] select (floor ((0 max _heartRate min 110) / 55));
     _hrIncrease params ["_minIncrease", "_maxIncrease"];
-    _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
+    private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
     
     // Adjust the heart rate based upon config entry
     if (_heartRateChange != 0) then {

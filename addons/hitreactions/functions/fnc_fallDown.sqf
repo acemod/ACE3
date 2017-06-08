@@ -27,6 +27,9 @@ if (_unit == _firer) exitWith {};
 
 // camshake for player
 if (_unit == ACE_player) then {
+    if (visibleMap) then {
+        openMap false;
+    };
     addCamShake [3, 5, _damage + random 10];
 };
 

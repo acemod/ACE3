@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_Wirecutter">
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
@@ -24,7 +24,7 @@
             <Polish>Służą do cięcia drutu i płotów</Polish>
             <French>Pince coupante</French>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
-            <Italian>Trancia da ferro</Italian>
+            <Italian>Tronchese</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
             <Japanese>ワイヤーカッター</Japanese>
             <Korean>절단기</Korean>

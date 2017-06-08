@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -20,7 +20,7 @@
             <German>Versuche zu Wechseln</German>
             <Czech>Snažím se přehodit</Czech>
             <Polish>Próba zmiany</Polish>
-            <Italian>Sto provando a cambiare</Italian>
+            <Italian>Provando a cambiare</Italian>
             <Spanish>Intentando cambiar</Spanish>
             <French>Essaye de basculer</French>
             <Portuguese>Tentando trocar</Portuguese>

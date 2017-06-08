@@ -77,7 +77,7 @@ private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
 
-_fnc_isOk = {
+private _fnc_isOk = {
     params ["_rx", "_ry"];
     private _startPosASL2 = _touchingPoint vectorAdd (_v2 vectorMultiply _rx) vectorAdd (_v3 vectorMultiply _ry) vectorAdd (_v1 vectorMultiply (-0.06));
     private _endPosASL2   = _startPosASL2 vectorAdd (_v1 vectorMultiply (0.12));

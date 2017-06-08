@@ -37,6 +37,7 @@ PREP(displayTextPicture);
 PREP(displayTextStructured);
 PREP(doAnimation);
 PREP(doGesture);
+PREP(dummy);
 PREP(dropBackpack);
 PREP(endRadioTransmission);
 PREP(eraseCache);

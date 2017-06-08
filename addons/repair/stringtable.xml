@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -51,7 +51,7 @@
             <Russian>Замена колеса...</Russian>
             <Czech>Měním kolo...</Czech>
             <Spanish>Cambiando rueda...</Spanish>
-            <Italian>Sto sostituendo la ruota...</Italian>
+            <Italian>Sostituendo la ruota...</Italian>
             <French>Remplacement de la roue...</French>
             <Japanese>タイヤを交換中・・・</Japanese>
             <Korean>바퀴 교체중...</Korean>
@@ -91,7 +91,7 @@
             <Russian>Снятие колеса...</Russian>
             <Czech>Odstraňuji kolo...</Czech>
             <Spanish>Quitando rueda...</Spanish>
-            <Italian>Sto rimuovendo la ruota...</Italian>
+            <Italian>Rimuovendo la ruota...</Italian>
             <French>Démontage de la roue...</French>
             <Japanese>タイヤを外している・・</Japanese>
             <Korean>바퀴 제거중...</Korean>
@@ -130,7 +130,7 @@
             <Russian>Замена гусеницы...</Russian>
             <Czech>Měním pás...</Czech>
             <Spanish>Cambiando oruga...</Spanish>
-            <Italian>Sto sostituendo il cingolo...</Italian>
+            <Italian>Sostituendo il cingolo...</Italian>
             <French>Remplacement de la chenille...</French>
             <Japanese>履帯を交換中・・・</Japanese>
             <Korean>궤도 교체중...</Korean>
@@ -169,7 +169,7 @@
             <Russian>Снятие гусеницы...</Russian>
             <Czech>Odstraňuji pás...</Czech>
             <Spanish>Quitando oruga...</Spanish>
-            <Italian>Sto rimuovendo il cingolo...</Italian>
+            <Italian>Rimuovendo il cingolo...</Italian>
             <French>Enlèvement de la chenille...</French>
             <Japanese>履帯を外している・・・</Japanese>
             <Korean>궤도 제거중...</Korean>
@@ -208,7 +208,7 @@
             <Russian>Ремонт транспорта...</Russian>
             <Czech>Opravuji vozidlo...</Czech>
             <Spanish>Reparando vehículo...</Spanish>
-            <Italian>Sto riparando il veicolo...</Italian>
+            <Italian>Riparando il veicolo...</Italian>
             <French>Réparation du véhicule...</French>
             <Japanese>車両を修理中・・・</Japanese>
             <Korean>차량 수리중...</Korean>
@@ -339,7 +339,7 @@
             <Polish>Naprawianie...</Polish>
             <Czech>Opravuji...</Czech>
             <Portuguese>Reparando...</Portuguese>
-            <Italian>Sto riparando...</Italian>
+            <Italian>Riparando...</Italian>
             <Hungarian>javítása...</Hungarian>
             <Russian>Ремонтируем...</Russian>
             <Japanese>修理中・・・</Japanese>
@@ -353,7 +353,7 @@
             <Polish>Naprawianie %1...</Polish>
             <Czech>Opravuji %1...</Czech>
             <Portuguese>Reparando %1...</Portuguese>
-            <Italian>Sto riparando %1...</Italian>
+            <Italian>Riparando %1...</Italian>
             <Hungarian>%1 javítása...</Hungarian>
             <Russian>Ремонтируем %1...</Russian>
             <Japanese>%1 を修理中・・・</Japanese>
@@ -1563,6 +1563,7 @@
             <Japanese>修理のためにエンジンを停止させる必要があります。</Japanese>
             <Polish>Silnik musi być wyłączony w celu naprawy</Polish>
             <Korean>수리를 위해서는 엔진을 꺼야만 합니다</Korean>
+            <Italian>Il motore deve essere spento per poter riparare</Italian>
         </Key>
     </Package>
 </Project>

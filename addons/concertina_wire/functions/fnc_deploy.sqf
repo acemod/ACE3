@@ -14,7 +14,7 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_wirecoil,_unit);
+params ["_wirecoil", "_unit"];
 
 private _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {

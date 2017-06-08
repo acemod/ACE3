@@ -62,7 +62,7 @@
     private _damage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
     private _limping = if (_unit getVariable [QEGVAR(medical_engine,isLimping), false]) then {"[<t color ='#FFCC22'> Limping </t>]"} else {""};
     _return pushBack format ["Damage: [H: %1] [B: %2] %3", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2, _limping];
-    _return pushBack format ["[LA:%1] [RA: %2] [LL:%1] [RL: %2]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
+    _return pushBack format ["[LA:%1] [RA: %2] [LL:%3] [RL: %4]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
 
 
     // Tourniquets:
