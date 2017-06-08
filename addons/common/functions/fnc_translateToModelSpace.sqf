@@ -1,12 +1,15 @@
 /*
- * Author: ?
+ * Author: ACE-Team
  * ?
  *
  * Arguments:
- * ?
+ * <UNKNOWN>
  *
  * Return Value:
- * ?
+ * Something <UNKNOWN>
+ *
+ * Example:
+ * [UNKNOWN] call ace_common_fnc_translateToModelSpace
  *
  * Public: No
  */

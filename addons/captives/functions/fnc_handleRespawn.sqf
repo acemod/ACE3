@@ -7,7 +7,7 @@
  * 1: Corpse <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [alive, body] call ACE_captives_fnc_handleRespawn;

@@ -7,7 +7,10 @@
  *
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC] call ace_modules_fnc_moduleInit
  *
  * Public: No
  */

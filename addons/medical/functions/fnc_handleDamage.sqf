@@ -7,12 +7,15 @@
  * 1: Name Of Hit Selection <STRING>
  * 2: Amount Of Damage <NUMBER>
  * 3: Shooter <OBJECT>
- * 4: Projectile <OBJECT/STRING>
+ * 4: Projectile <OBJECT, STRING>
  * 5: HitPointIndex (-1 for structural) <NUMBER>
  * 6: Shooter <OBJECT>
  *
  * Return Value:
  * Damage To Be Inflicted <NUMBER>
+ *
+ * Example:
+ * [bob, "leg", 2, kevin, "bullet", -1, kevin] call ACE_medical_fnc_handleDamage
  *
  * Public: No
  */

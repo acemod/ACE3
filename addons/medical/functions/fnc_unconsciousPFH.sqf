@@ -3,7 +3,7 @@
  * PFH logic for unconscious state
  *
  * Arguments:
- * 0: PFEH - Args
+ * 0: PFEH - <ARRAY>
  *      0: The unit that will be put in an unconscious state <OBJECT>
  *      1: unitPos (stance) <STRING>
  *      2: Starting Time <NUMBER>

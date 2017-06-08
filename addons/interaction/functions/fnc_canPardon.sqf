@@ -9,6 +9,9 @@
  * Return Value:
  * Unit can pardon target <BOOL>
  *
+ * Example:
+ * [bob, kevin] call ACE_interaction_fnc_canPardon
+ *
  * Public: No
  */
 #include "script_component.hpp"

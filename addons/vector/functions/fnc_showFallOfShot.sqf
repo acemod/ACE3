@@ -3,10 +3,13 @@
  *
  *
  * Arguments:
- * 0:
+ * 0: Unknown <UNKNOWN>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [?] call ace_vector_fnc_showFallOfShot
  *
  * Public: No
  */

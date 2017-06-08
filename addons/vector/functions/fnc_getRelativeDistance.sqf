@@ -6,7 +6,10 @@
  * None
  *
  * Return Value:
- * <NUMBER>
+ * Number <NUMBER>
+ *
+ * Example:
+ * call ace_vector_fnc_getRelativeDistance
  *
  * Public: No
  */

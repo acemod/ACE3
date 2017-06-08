@@ -1,14 +1,15 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  *
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_frag_fnc_doExplosions
  *
  * Public: No
  */

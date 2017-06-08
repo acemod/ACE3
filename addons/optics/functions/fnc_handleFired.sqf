@@ -1,5 +1,5 @@
 /*
- * Original Author: Taosenai
+ * Author: Taosenai
  * Adapted By: KoffeinFlummi, commy2
  *
  * Animates the scope when firing. Called from the unified fired EH only for the local player.
@@ -9,6 +9,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ace_optics_fnc_handleFired
  *
  * Public: No
  */

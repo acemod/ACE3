@@ -8,7 +8,7 @@
  * 2: Common Effect Reaons to pre-seed durring init <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["setCaptive", true, []] call ace_common_fnc_statusEffect_addType

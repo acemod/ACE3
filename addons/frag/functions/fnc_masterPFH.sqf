@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_frag_fnc_masterPFH
+ *
  * Public: No
  */
 

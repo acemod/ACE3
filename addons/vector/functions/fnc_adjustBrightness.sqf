@@ -3,10 +3,13 @@
  *
  *
  * Arguments:
- * 0: <NUMBER>
+ * 0: Number <NUMBER>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [5] call ace_vector_fnc_adjustBrigthness
  *
  * Public: No
  */

@@ -6,7 +6,10 @@
  * None
  *
  * Return Value:
- * <ARRAY>
+ * Array <ARRAY>
+ *
+ * Example:
+ * call ace_vector_fnc_getRelativeHeightLength
  *
  * Public: No
  */

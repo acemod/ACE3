@@ -2,12 +2,12 @@
  * Author: Pabst Mirror
  * Converts numbers into nicely formated strings.
  *
- * Parameters:
+ * Arguments:
  * 0: Input number <NUMBER>
  * 1: Output type (see case statement) <STRING>
  * 2: If output type is mil, convert input type from deg->mil <BOOL>
  *
- * Returns:
+ * Return Value:
  * Formatted number <STRING>
  *
  * Example:

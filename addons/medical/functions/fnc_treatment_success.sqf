@@ -12,6 +12,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selectionname", "classname", ["bandage"]] call ACE_medical_fnc_treatment_success
+ *
  * Public: No
  */
 

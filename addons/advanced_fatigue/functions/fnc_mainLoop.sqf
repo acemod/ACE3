@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_advanced_fatigue_fnc_mainLoop
+ *
  * Public: No
  */
 #include "script_component.hpp"

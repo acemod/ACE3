@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_maptools_fnc_openMapGpsUpdate
+ *
  * Public: No
  */
 

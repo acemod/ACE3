@@ -1,14 +1,15 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  * Dev things
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_frag_fnc_dev_trackTrace
  *
  * Public: No
  */

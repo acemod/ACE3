@@ -9,6 +9,9 @@
  * Return Value:
  * Magazine amount <NUMBER>
  *
+ * Example:
+ * [bob, "magazine"] call ace_common_fnc_getNumberMagazinesIn
+ *
  * Public: No
  */
 #include "script_component.hpp"

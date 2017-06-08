@@ -13,7 +13,7 @@
  * 6: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
  * Return Value:
- * Array, [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found.
+ * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found. <ARRAY>
  *
  * Example:
  * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot;

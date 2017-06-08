@@ -9,7 +9,7 @@
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
  * Return Value:
- * nil
+ * None
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;

@@ -4,10 +4,13 @@
  * Returns all damageable selections without hitpoints of any vehicle.
  *
  * Arguments:
- * 0: A vehicle, not the classname (Object)
+ * 0: A vehicle, not the classname <OBJECT>
  *
  * Return Value:
- * The selections without hitpoints, i.e. reflectors. (Array)
+ * The selections without hitpoints, i.e. reflectors. <ARRAY>
+ *
+ * Example:
+ * [car] call ace_common_fnc_getSelectionsWithoutHitPoints
  *
  * Public: No
  */

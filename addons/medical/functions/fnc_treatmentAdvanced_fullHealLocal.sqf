@@ -7,7 +7,10 @@
  * 1: Target <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_treatmentAdvanced_fullHealLocal
  *
  * Public: No
  */

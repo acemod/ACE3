@@ -1,15 +1,15 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  *
  *
  * Argument:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
- *
+ * call ace_laser_fnc_dev_drawVisibleLaserTargets
  *
  * Public: No
  */

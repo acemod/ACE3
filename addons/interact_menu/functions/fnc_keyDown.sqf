@@ -8,6 +8,9 @@
  * Return Value:
  * true <BOOL>
  *
+ * Example:
+ * [0] call ACE_interact_menu_fnc_keyDown
+ *
  * Public: No
  */
 #include "script_component.hpp"

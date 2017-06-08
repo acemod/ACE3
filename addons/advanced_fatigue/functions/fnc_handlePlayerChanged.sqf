@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [newbob, oldbob] call ace_advanced_fatigue_fnc_handlePlayerChanged
+ *
  * Public: No
  */
 #include "script_component.hpp"

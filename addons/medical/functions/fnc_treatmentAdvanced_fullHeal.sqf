@@ -7,10 +7,13 @@
  * 1: Target <OBJECT>
  * 2: SelectionName <STRING>
  * 3: ClassName <STRING>
- * 4: Item
+ * 4: Item <UNKNOWN>
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [bob, kevin, "selection", "classname", ] call ACE_medical_fnc_treatmentAdvanced_fullHeal
  *
  * Public: No
  */

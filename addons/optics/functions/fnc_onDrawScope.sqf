@@ -3,10 +3,13 @@
  *
  *
  * Arguments:
- * 0: Display
+ * 0: Display <DISPLAY>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [DISPLAY] call ace_optics_fnc_onDrawScope
  *
  * Public: No
  */

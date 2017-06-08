@@ -7,7 +7,10 @@
  * 1: y Position (in meters) <NUMBER>
  *
  * Return Value:
- * Boolean
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [0, 5] call ACE_maptools_fnc_isInsideMapTool
  *
  * Public: No
  */

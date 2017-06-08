@@ -2,13 +2,13 @@
  * Author: esteldunedain
  * Handler function for finding position and direction of a vanilla laser.
  *
- * Argument:
+ * Arguments:
  * 0: Vehicle (shooter of laser) <OBJECT>
  * 6: Method Args <ARRAY>
- *      0: Laser Source selection on Vehicle
+ *      0: Laser Source selection on Vehicle <STRING>
  *
- * Return value:
- *    [position, direction]
+ * Return Value:
+ * [position, direction] <ARRAY>
  *
  * Example:
  * [player, x,x,x,x,x, ["pilot"]] call ace_laser_fnc_findLaserSource;

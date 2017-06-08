@@ -3,12 +3,13 @@
  * DAGR vector output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputVector
  *
  * Public: No
  */

@@ -10,6 +10,9 @@
  * Return Value:
  * Boolean of success <BOOL>
  *
+ * Example:
+ * ["bob", [args], 5] call ace_common_fnc_syncedEvent
+ *
  * Public: No
  */
 #include "script_component.hpp"

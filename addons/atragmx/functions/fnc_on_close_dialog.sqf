@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_atragmx_fnc_on_close_dialog
+ *
  * Public: No
  */
 

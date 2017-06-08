@@ -12,7 +12,7 @@
  * 6: Method Args <OPTIONAL><ANY>
  *
  * Return Value:
- * <String> UUID for sending to laserOff function.
+ * UUID for sending to laserOff function. <String>
  *
  * Example:
  * [hmg, hmg, [[0,0,1], "HMG_static"], 1550, 1111, 1] call ace_laser_fnc_laserOn;

@@ -8,6 +8,9 @@
  * Return Value:
  * Event is successed <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc__handleRequestAllSyncedEvents
+ *
  * Public: No
  */
 #include "script_component.hpp"

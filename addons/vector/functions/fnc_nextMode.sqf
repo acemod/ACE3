@@ -3,10 +3,13 @@
  *
  *
  * Arguments:
- * 0: <STRING>
+ * 0: String<STRING>
  *
  * Return Value:
- * <ARRAY>
+ * Array <ARRAY>
+ *
+ * Example:
+ * ["5"] call ace_vector_fnc_nextMode
  *
  * Public: No
  */

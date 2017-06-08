@@ -3,10 +3,10 @@
  * Updates the result input and output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_result
@@ -28,7 +28,7 @@ _wind2 = GVAR(windage2Output) select GVAR(currentTarget);
 if (GVAR(showCoriolis)) then {
     _elevationRel = GVAR(verticalCoriolisOutput) select GVAR(currentTarget);
     _windageRel = GVAR(horizontalCoriolisOutput) select GVAR(currentTarget);
-    
+
     _windageCur = GVAR(spinDriftOutput) select GVAR(currentTarget);
 } else {
     _elevationCur = GVAR(workingMemory) select 10;

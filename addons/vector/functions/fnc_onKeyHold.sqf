@@ -3,11 +3,14 @@
  * PFH executed while holding a vector key down.
  *
  * Arguments:
- * 0: <STRING>
- * 1: <NUMBER>
+ * 0: String <STRING>
+ * 1: Number <NUMBER>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["5", 5] call ace_vector_fnc_onKeyHold
  *
  * Public: No
  */

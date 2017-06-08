@@ -5,10 +5,7 @@
  * Argument:
  * 0: Vanilla Laser (base type LaserTarget) <OBJECT>
  *
- * Return value:
- * None
- *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

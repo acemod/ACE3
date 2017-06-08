@@ -5,7 +5,7 @@
  * Argument:
  * 0: Change in code <NUMBER>
  *
- * Return value:
+ * Return Value:
  * Key Handled <BOOL>
 
  * Example:

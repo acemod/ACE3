@@ -3,10 +3,13 @@
  * Handles pressing the special vector keys.
  *
  * Arguments:
- * 0: <STRING>
+ * 0: String <STRING>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * ["5"] call ace_vector_fnc_onKeyDown
  *
  * Public: No
  */

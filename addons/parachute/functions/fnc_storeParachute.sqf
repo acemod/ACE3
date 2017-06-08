@@ -6,10 +6,10 @@
  * None
  *
  * Return Value:
- * 0: Unit
+ * 0: Unit <OBJECT>
  *
  * Example:
- * None
+ * call ace_parachute_fnc_storeParachute
  *
  * Public: No
  */

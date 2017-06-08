@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_map_fnc_onDrawMap
+ *
  * Public: No
  */
 

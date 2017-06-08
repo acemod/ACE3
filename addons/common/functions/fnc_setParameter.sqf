@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: Parameter name <STRING>
- * 1: Value
+ * 1: Value <BOOL, NUMBER>
  *
  * Return Value:
  * None

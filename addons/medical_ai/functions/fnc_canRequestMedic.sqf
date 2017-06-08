@@ -8,6 +8,9 @@
  * Return Value:
  * Can request medic <BOOL>
  *
+ * Example:
+ * call ACE_medical_ai_fnc_canRequestMedic
+ *
  * Public: No
  */
 #include "script_component.hpp"

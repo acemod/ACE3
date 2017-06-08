@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire] call ace_concertina_wire_fnc_dismountSuccess
+ *
  * Public: No
  */
 #include "script_component.hpp"

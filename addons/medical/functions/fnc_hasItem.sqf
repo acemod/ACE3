@@ -8,7 +8,7 @@
  * 2: Item <STRING>
  *
  * Return Value:
- * <NIL>
+ * None
  *
  * Example:
  * [bob, patient, "bandage"] call ace_medical_fnc_hasItem

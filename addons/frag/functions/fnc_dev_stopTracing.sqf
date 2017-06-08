@@ -1,12 +1,12 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  * Dev things
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  *

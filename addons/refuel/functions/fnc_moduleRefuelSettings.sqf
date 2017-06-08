@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_refuel_fnc_moduleRefuelSettings
+ *
  * Public: No
  */
 

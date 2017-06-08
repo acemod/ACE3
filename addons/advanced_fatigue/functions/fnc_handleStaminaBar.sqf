@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [0.5] call ace_advanced_fatigue_fnc_handleStaminaBar
+ *
  * Public: No
  */
 #include "script_component.hpp"

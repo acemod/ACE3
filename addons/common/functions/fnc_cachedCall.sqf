@@ -13,6 +13,9 @@
  * Return Value:
  * Result of the function <ANY>
  *
+ * Example:
+ * [[array]], {dothings}, NAMESPACE, "UID", 5, "clear"] call ace_common_fnc_cachedCall
+ *
  * Public: No
  */
 #include "script_component.hpp"

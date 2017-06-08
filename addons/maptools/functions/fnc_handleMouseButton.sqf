@@ -3,11 +3,14 @@
  * Handle mouse buttons.
  *
  * Arguments:
- * 0: 1 if mouse down down, 0 if mouse button up (Number)
- * 1: Parameters of the mouse button event
+ * 0: 1 if mouse down down, 0 if mouse button up <Number>
+ * 1: Parameters of the mouse button event <ARRAY>
  *
  * Return Value:
- * Boolean, true if event was handled
+ * true if event was handled <BOOL>
+ *
+ * Example:
+ * [0, [array]] call ACE_maptools_fnc_handleMouseButton
  *
  * Public: No
  */

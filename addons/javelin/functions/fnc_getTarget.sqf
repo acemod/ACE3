@@ -4,13 +4,13 @@
  *
  * Arguments:
  * 0: Last Target (seeds the scan) <OBJECT>
- * 1: Max Range (meters) <NUMBER)
+ * 1: Max Range (meters) <NUMBER>
  *
  * Return Value:
  * Target <OBJECT>
  *
  * Example:
- * [] call ace_javelin_fnc_getTarget
+ * [bob, 5] call ace_javelin_fnc_getTarget
  *
  * Public: No
  */
@@ -27,12 +27,12 @@ private _viewDir = _viewASL vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]
 // Attempt to lock onto current target if it is still valid
 if (!isNull _lastTarget) then {
     private _aimASL = aimPos _lastTarget;
-    
+
     if ((_viewASL vectorDistance _aimASL) > _maxRange) exitWith {};
-    if ((acos ((_viewASL vectorFromTo _aimASL) vectorDotProduct _viewDir)) > 0.6) exitWith {};   
-    
+    if ((acos ((_viewASL vectorFromTo _aimASL) vectorDotProduct _viewDir)) > 0.6) exitWith {};
+
     private _relAngle = (_lastTarget getRelDir _viewASL);
-    
+
     for "_xOffset" from -2.5 to 2.5 step 0.5 do {
         for "_yOffset" from -2 to 1 step 0.5 do {
             // Find test points in the model based on the angle that we are viewing it from (not true 3d projection, but not bad)

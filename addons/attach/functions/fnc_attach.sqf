@@ -8,7 +8,7 @@
  * 2: Array containing a string of the attachable item <ARRAY>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, bob, ["light"]] call ace_attach_fnc_attach;

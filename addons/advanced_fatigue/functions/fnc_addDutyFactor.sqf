@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["ID", 5] call ace_advanced_fatigue_fnc_addDutyFactor
+ *
  * Public: No
  */
 #include "script_component.hpp"

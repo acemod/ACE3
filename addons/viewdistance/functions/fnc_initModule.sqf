@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC; [bob, kevin], true] call ace_viewdistance_fnc_initModule
+ *
  * Public: No
  */
 

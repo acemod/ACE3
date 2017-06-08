@@ -2,12 +2,12 @@
  * Author: Pabst Mirror
  * Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
  *
- * Parameters:
+ * Arguments:
  * 0: Muzzle Velocity <NUMBER>
  * 1: Air Friction <NUMBER>
  * 2: Range To Hit <NUMBER>
  *
- * Returns:
+ * Return Value:
  * Range Table Line Data (see return line) <ARRAY>
  *
  * Example:

@@ -1,5 +1,5 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  * Update the blue force tracking.
  *
  * Arguments:
@@ -7,6 +7,9 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ACE_map_fnc_blueForceTrackingUpdate
  *
  * Public: No
  */

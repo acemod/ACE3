@@ -6,7 +6,10 @@
  * 0: Target <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob] call ace_reload_fnc_displayAmmo
  *
  * Public: No
  */

@@ -1,5 +1,5 @@
 /*
- * Author: ?
+ * Author: ACE-Team
  *
  * ?
  *
@@ -7,7 +7,10 @@
  * ?
  *
  * Return Value:
- * ?
+ * None
+ *
+ * Example:
+ * [?] call ace_common_fnc_syncedEventPFH
  *
  * Public: No
  */

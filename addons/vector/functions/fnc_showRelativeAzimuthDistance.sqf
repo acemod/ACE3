@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_vector_fnc_showRelativeAzimuthDistance
+ *
  * Public: No
  */
 

@@ -1,14 +1,15 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  *
  *
  * Arguments:
  * Nothing
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_fcs_fnc_onForceUpdate
  *
  * Public: No
  */

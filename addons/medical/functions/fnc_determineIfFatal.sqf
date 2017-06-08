@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 2, 5] call ACE_medical_fnc_determineIfFatal
+ *
  * Public: No
  */
 #include "script_component.hpp"

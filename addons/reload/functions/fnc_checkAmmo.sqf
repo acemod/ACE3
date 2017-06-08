@@ -7,7 +7,10 @@
  * 1: Target. Optional, if not suplied the player counts his personal or static weapon ammo <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
+ *
+ * Example:
+ * [bob, kevin] call ace_reload_fnc_checkAmmo
  *
  * Public: No
  */

@@ -1,5 +1,5 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  * Not currently used
  *
  * Arguments:
@@ -7,7 +7,10 @@
  * 1: ARGS <ARRAY>
  *
  * Return Value:
- * <BOOLEAN>
+ * Boolean <BOOLEAN>
+ *
+ * Example:
+ * [bob, kevin] call ACE_missileguidance_fnc_handleHandoff
  *
  * Public: No
  */
