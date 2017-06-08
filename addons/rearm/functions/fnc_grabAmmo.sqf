@@ -25,7 +25,7 @@ REARM_HOLSTER_WEAPON;
 [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 
 [
-    5,
+    TIME_PROGRESSBAR(5),
     [_dummy, _unit],
     {
         private ["_actionID"];

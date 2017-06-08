@@ -25,7 +25,7 @@ private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
 if (isNull _attachedDummy) exitwith {};
 
 [
-    5,
+    TIME_PROGRESSBAR(5),
     [_unit, _truck, _attachedDummy],
     {
         params ["_args"];

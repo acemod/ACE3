@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Disables rearm for a vehicle.
+ * Disables being able to rearm a vehicle's turrets. [Global Effects]
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

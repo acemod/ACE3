@@ -6,7 +6,7 @@
  * 0: Text <ANY>
  * 1: Size of the textbox <NUMBER> (default: 1.5)
  * 2: Target Unit. Will only display if target is the player controlled object <OBJECT> (default: ACE_player)
- * 3: Custom Width <NUMBER> (optional)
+ * 3: Custom Width <NUMBER> (default: 10)
  *
  * Return Value:
  * None

@@ -3,7 +3,7 @@
  * Returns all magazines a turret of a vehicle object can hold according to config.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Vehicle object or typeOf <OBJECT><STRING>
  * 1: Turret Path <ARRAY>
  *
  * Return Value:
@@ -16,11 +16,4 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_vehicle", objNull, [objNull]],
-    ["_turretPath", [], [[]]]
-];
-
-if (isNull _vehicle) exitWith {[]};
-
-([typeOf _vehicle, _turretPath] call FUNC(getConfigMagazines))
+getArray ((_this call CBA_fnc_getTurret) >> "magazines")

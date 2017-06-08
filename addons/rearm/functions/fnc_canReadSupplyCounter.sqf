@@ -1,6 +1,6 @@
 /*
  * Author: GitHawk
- * Checks if unit can read supply counter.
+ * Checks if unit can read supply counter. [Only for GVAR(supply) > 0]
  *
  * Arguments:
  * 0: Ammo Truck <OBJECT>
@@ -21,9 +21,11 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-!(isNull _unit ||
-    {!(_unit isKindOf "CAManBase")} ||
-    {!local _unit} ||
-    {!alive _truck} ||
-    {(_truck distance _unit) > REARM_ACTION_DISTANCE} ||
-    {GVAR(supply) == 0})
+(alive _unit)
+&& {_unit isKindOf "CAManBase"}
+&& {local _unit}
+&& {alive _truck}
+&& {(_truck distance _unit) < REARM_ACTION_DISTANCE}
+&& {GVAR(supply) > 0}
+&& {[_unit, _truck, ["IsNotInside"]] call EFUNC(common,canInteractWith)} // manually added actions need this
+

@@ -16,16 +16,14 @@
  */
 #include "script_component.hpp"
 
-params [
-    ["_truck", objNull, [objNull]],
-    ["_unit", objNull, [objNull]]
-];
+params [["_truck", objNull, [objNull]],["_unit", objNull, [objNull]]];
+TRACE_2("readSupplyCounter",_truck,_unit);
 
-if (GVAR(supply) == 0) exitWith {};
+if (GVAR(supply) == 0) exitWith {WARNING("Supply is unlimited");};
 
 if (GVAR(supply) == 1) then {
     [
-        5,
+        TIME_PROGRESSBAR(5),
         [_unit, _truck, [_truck] call FUNC(getSupplyCount)],
         {
             params ["_args"];
@@ -44,7 +42,7 @@ if (GVAR(supply) == 1) then {
     ] call EFUNC(common,progressBar);
 } else {
     [
-        5,
+        TIME_PROGRESSBAR(5),
         [_unit, _truck],
         {
             params ["_args"];

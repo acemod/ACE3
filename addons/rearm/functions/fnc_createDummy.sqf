@@ -32,4 +32,6 @@ if !(_dummyName == "") then {
 _dummy allowDamage false;
 _dummy setVariable [QGVAR(magazineClass), _magazineClass, true];
 
+TRACE_4("createdDummy",_unit,_magazineClass,_dummyName,_dummy);
+
 _dummy
