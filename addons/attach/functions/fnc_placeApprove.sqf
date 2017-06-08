@@ -60,7 +60,6 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
                     _args params ["_startingPosShifted", "_endPosShifted", "_timeAdded"];
                     drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
                     if (_timeAdded + 5 < CBA_missionTime) then {
-                        systemChat "removed";
                         [_idPFH] call CBA_fnc_removePerFrameHandler;
                     };
                 }, 0, [_startingPosShifted, _endPosShifted, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
