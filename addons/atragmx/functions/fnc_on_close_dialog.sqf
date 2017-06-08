@@ -1,5 +1,5 @@
 /*
- * Author: ACE
+ * Author: ACE-Team
  * On close Dialog
  *
  * Arguments:
