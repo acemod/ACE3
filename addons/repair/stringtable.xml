@@ -954,7 +954,7 @@
             <Japanese>工兵のみ</Japanese>
             <Korean>오직 정비공만</Korean>
         </Key>
-        <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
+        <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
@@ -1230,8 +1230,9 @@
             <Japanese>専門兵</Japanese>
             <Korean>정비공</Korean>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
-            <English>Adv. Engineer</English> <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
+            <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
+            <English>Adv. Engineer</English>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
