@@ -169,12 +169,14 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         _caller selectWeapon (primaryWeapon _caller); // unit always has a primary weapon here
     };
 
-    if (stance _caller == "STAND") then {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
-    } else {
-        _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+    if (!underwater _caller) then {
+        if (stance _caller == "STAND") then {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+        } else {
+            _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+        };
+        [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
-    [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
 // Get repair time
