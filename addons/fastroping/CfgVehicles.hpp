@@ -16,9 +16,10 @@ class CfgVehicles {
     class Module_F: Logic {
         class ModuleDescription;
     };
-    class ACE_Module: Module_F {};
-    class ACE_moduleEquipFRIES: ACE_Module {
+    class ACE_moduleEquipFRIES: Module_F {
         scope = 2;
+        scopeCurator = 2;
+        curatorCanAttach = 1;
         displayName = CSTRING(Module_FRIES_DisplayName);
         icon = QPATHTOF(UI\Icon_Module_FRIES_ca.paa);
         category = "ACE";
