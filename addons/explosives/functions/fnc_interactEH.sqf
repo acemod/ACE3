@@ -43,11 +43,19 @@ if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
             {
                 if (((_x distance ACE_player) < 15) && {!(_x in _minesHelped)}) then {
                     TRACE_3("Making Defuse Helper",(_x),(typeOf _x),(_x isKindOf "UnderwaterMine_Range_Ammo"));
-                    private _defuseHelper = if (_x isKindOf "UnderwaterMine_Range_Ammo") then {
+                    /*private _defuseHelper = if (_x isKindOf "UnderwaterMine_Range_Ammo") then {
                         "ACE_DefuseObject_Large" createVehicleLocal (getPos _x);
                     } else {
                         "ACE_DefuseObject" createVehicleLocal (getPos _x);
+                    };*/
+                    private ["_defuseHelper"];
+                    private _magazine = getText ((_x call CBA_fnc_getObjectConfig) >> "ace_explosives_magazine");
+                    if ((_magazine == "IEDLandBig_Remote_Mag") || (_magazine == "IEDUrbanBig_Remote_Mag")) then {
+                        _defuseHelper = "ACE_DefuseObject_Large" createVehicleLocal (getPos _x);
+                    } else {
+                        _defuseHelper = "ACE_DefuseObject" createVehicleLocal (getPos _x);
                     };
+
 
                     private _config = configFile >> "CfgAmmo" >> typeOf _x;
 
