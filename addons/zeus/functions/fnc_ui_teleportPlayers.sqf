@@ -21,7 +21,7 @@ params ["_control"];
 //Generic Init:
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
@@ -40,7 +40,7 @@ _listbox lbSetCurSel 0;
 private _fnc_onUnload = {
     params ["_display"];
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
     // Store checkbox value for reopening
@@ -53,7 +53,7 @@ private _fnc_onConfirm = {
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
     private _lb = _display displayCtrl 16189;

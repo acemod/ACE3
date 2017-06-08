@@ -26,7 +26,7 @@ if !(_activated && local _logic) exitWith {};
 if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
-    _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
+    _mouseOver = RETDEF(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);

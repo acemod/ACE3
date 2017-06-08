@@ -17,6 +17,6 @@
 
 params ["_unit"];
 
-if (!isNull (GETMVAR(GVAR(ladder),objNull)) && {GVAR(ladder) in attachedObjects _unit}) then {
+if (!isNull (RETDEF(GVAR(ladder),objNull)) && {GVAR(ladder) in attachedObjects _unit}) then {
     [_unit, GVAR(ladder)] call FUNC(cancelTLdeploy);
 };

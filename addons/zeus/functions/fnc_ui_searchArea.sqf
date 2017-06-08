@@ -19,7 +19,7 @@
 //Generic Init:
 params ["_control"];
 private _display = ctrlParent _control;
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
 
@@ -48,7 +48,7 @@ switch (false) do {
 };
 
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
     if (_this select 1 == 2) then {
@@ -62,7 +62,7 @@ private _fnc_onConfirm = {
     private _display = ctrlparent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
     private _unit = effectiveCommander (attachedTo _logic);

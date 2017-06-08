@@ -22,7 +22,7 @@ TRACE_1("params",_control);
 //Generic Init:
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
 _control ctrlRemoveAllEventHandlers "setFocus";
@@ -48,7 +48,7 @@ private _fnc_sliderMove = {
 (_display displayCtrl 16189) cbSetChecked (GVAR(GlobalSkillAI) select 5);
 
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = RETDEF(BIS_fnc_initCuratorAttributes_target,objnull);
     if (isNull _logic) exitWith {};
 
     deleteVehicle _logic;

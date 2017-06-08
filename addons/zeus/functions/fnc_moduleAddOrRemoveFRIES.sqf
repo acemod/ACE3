@@ -24,7 +24,7 @@ if !(_activated && {local _logic}) exitWith {};
 if !(["ace_fastroping"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
-    (GETMVAR(BIS_fnc_curatorObjectPlaced_mouseOver,[""])) params ["_mouseOverType", "_mouseOverUnit"];
+    (RETDEF(BIS_fnc_curatorObjectPlaced_mouseOver,[""])) params ["_mouseOverType", "_mouseOverUnit"];
 
     if (_mouseOverType != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);

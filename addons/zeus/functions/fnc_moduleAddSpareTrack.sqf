@@ -24,7 +24,7 @@ if !(_activated && local _logic) exitWith {};
 if !(["ace_cargo"] call EFUNC(common,isModLoaded) && ["ace_repair"] call EFUNC(common,isModLoaded)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
-    (GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""])) params ["_mouseOverType", "_mouseOverUnit"];
+    (RETDEF(bis_fnc_curatorObjectPlaced_mouseOver,[""])) params ["_mouseOverType", "_mouseOverUnit"];
 
     if (_mouseOverType != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
