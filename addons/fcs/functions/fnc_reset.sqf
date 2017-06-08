@@ -7,7 +7,10 @@
  * 1: Turret <ARRAY>
  *
  * Return Value:
- * none
+ * None
+ *
+ * Example:
+ * [car, [turret]] call ace_fcs_fnc_reset
  *
  * Public: No
  */

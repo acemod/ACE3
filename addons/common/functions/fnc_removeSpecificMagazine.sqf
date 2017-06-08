@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "magazine", 5] call ace_common_fnc_removeSpecificMagazine
+ *
  * Public: No
  */
 #include "script_component.hpp"

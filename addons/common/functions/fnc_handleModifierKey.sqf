@@ -8,7 +8,10 @@
  * Return Value:
  * None
  *
- * Public : No
+ * Example:
+ * call ace_common_fnc_handleModifierKey
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

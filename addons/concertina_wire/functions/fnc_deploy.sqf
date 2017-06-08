@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [coil, bob] call ace_concertina_wire_fnc_deploy
+ *
  * Public: No
  */
 #include "script_component.hpp"

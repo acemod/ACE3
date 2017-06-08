@@ -10,6 +10,9 @@
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
  *
+ * Example:
+ * [bob, car, bob] call ace_common_fnc_unloadpersonLocal
+ *
  * Public: No
  */
 #include "script_component.hpp"

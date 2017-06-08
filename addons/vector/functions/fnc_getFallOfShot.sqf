@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Array <ARRAY>
+ *
+ * Example:
+ * call ace_vector_fnc_getFallOfShot
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_distanceP1", "_directionP1", "_azimuthP1", "_inclinationP1", "_distanceP2", "_directionP2", "_azimuthP2", "_inclinationP2"];

@@ -10,8 +10,11 @@
  * 4: Viscosity adjustment rate <NUMBER>
  * 5: Pain reduction rate <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, "leg", 1, 2, 3, 4] call ACE_medical_fnc_medicationEffectLoop
  *
  * Public: No
  */

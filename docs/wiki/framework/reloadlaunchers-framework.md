@@ -28,4 +28,4 @@ class CfgWeapons {
 
 Event Name | Description | Passed Parameter(s) | Locality
 ---------- | ----------- | ------------------- | --------
-`reloadLauncher` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target
+`ace_reloadlaunchers_reloadLauncher` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target

@@ -8,6 +8,9 @@
  * Return Value:
  * All turret indecies of the Vehicle <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getDoorTurrets
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

@@ -3,10 +3,13 @@
  * Compile the zeus action menu (only to be done once)
  *
  * Arguments:
- * nil
+ * None
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ACE_interact_menu_fnc_compileMenuZeus
  *
  * Public: No
  */

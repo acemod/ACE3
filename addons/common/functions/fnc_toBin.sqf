@@ -8,6 +8,9 @@
  * Return Value:
  * A binary number as string <STRING>
  *
+ * Example:
+ * [5] call ace_common_fnc_toBin
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

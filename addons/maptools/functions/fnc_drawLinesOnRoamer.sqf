@@ -7,7 +7,7 @@
  * 1: Roamer Width <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [map, 300] call ace_maptools_fnc_drawLinesOnRoamer

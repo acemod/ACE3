@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 1, 2, 3] call ace_common_fnc_setPitchBankYaw
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
