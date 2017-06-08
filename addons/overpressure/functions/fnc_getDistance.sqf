@@ -3,9 +3,9 @@
  * Calculate the distance to the first intersection of a line
  *
  * Arguments:
- * 0: Pos ASL of origin (ARRAY>
+ * 0: Pos ASL of origin <ARRAY>
  * 1: Direction <ARRAY>
- * 2: Max distance to search <Number>
+ * 2: Max distance to search <NUMBER>
  * 3: Shooter <OBJECT>
  *
  * Return Value:

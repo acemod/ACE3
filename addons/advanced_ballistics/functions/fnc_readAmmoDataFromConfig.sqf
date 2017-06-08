@@ -7,18 +7,21 @@
  * ammo - classname <STRING>
  *
  * Return Value:
- * 0: _airFriction
- * 1: _caliber
- * 2: _bulletLength
- * 3: _bulletMass
- * 4: _transonicStabilityCoef
- * 5: _dragModel
- * 6: _ballisticCoefficients
- * 7: _velocityBoundaries
- * 8: _atmosphereModel
- * 9: _ammoTempMuzzleVelocityShifts
- * 10: _muzzleVelocityTable
- * 11: _barrelLengthTable
+ * 0: _airFriction <NUMBER>
+ * 1: _caliber <NUMBER>
+ * 2: _bulletLength <NUMBER>
+ * 3: _bulletMass <NUMBER>
+ * 4: _transonicStabilityCoef <NUMBER>
+ * 5: _dragModel <NUMBER>
+ * 6: _ballisticCoefficients <NUMBER>
+ * 7: _velocityBoundaries <NUMBER>
+ * 8: _atmosphereModel <NUMBER>
+ * 9: _ammoTempMuzzleVelocityShifts <NUMBER>
+ * 10: _muzzleVelocityTable <NUMBER>
+ * 11: _barrelLengthTable <NUMBER>
+ *
+ * Example:
+ * ["ammo"] call ace_advanced_ballistics_fnc_readAmmoDataFromConfig
  *
  * Public: No
  */

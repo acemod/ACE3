@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
@@ -8,6 +8,7 @@
             <Polish>Współczynnik wydolności</Polish>
             <Korean>성능 요인</Korean>
             <French>Facteur de performance</French>
+            <Italian>Fattore Prestazione</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
@@ -16,6 +17,7 @@
             <Polish>Wpływa na ogólną wydolność organizmu u wszystkich graczy bez ustawionego niestandardowego współczynnika. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de tous les joueurs sans facteurs personalisés. Une valeur plus élevée implique de meilleures performances.</French>
+            <Italian>Influenza qualsiasi prestazione di tutti i giocatori smuniti di un fattore personalizzato. Maggiore significa migliore.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
@@ -24,6 +26,7 @@
             <Polish>Wpływa na ogólną wydolność tej jednostki. Więcej znaczy lepiej.</Polish>
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de cette unité. Une valeur plus élevée implique de meilleures performances.</French>
+            <Italian>Influenza qualsiasi prestazione di questa unità. Maggiore significa migliore.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
             <English>Recovery Factor</English>
@@ -32,6 +35,7 @@
             <Polish>Współczynnik regeneracji</Polish>
             <Korean>회복 요인</Korean>
             <French>Facteur de récupération</French>
+            <Italian>Fattore Recupero</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
@@ -40,6 +44,7 @@
             <Polish>Wpływa na czas regeneracji podczas postoju. Więcej znaczy szybciej.</Polish>
             <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Change la vitesse à laquelle les joueurs récupèrent leur endurance lorsqu'ils se reposent. Une valeur plus élevée implique une récupération plus rapide.</French>
+            <Italian>Determina in quanto tempo il giocatore recupera quando rilassato. Maggiore significa migliore.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor">
             <English>Load Factor</English>
@@ -48,6 +53,7 @@
             <Polish>Współczynnik masy ekwipunku</Polish>
             <Korean>부담 요인</Korean>
             <French>Facteur d'encombrement</French>
+            <Italian>Fattore Caricamento</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
@@ -56,6 +62,7 @@
             <Polish>Zmniejsza lub zwiększa wpływ ciężaru ekwipunku na wydolność gracza. Zero oznacza kompletny brak wpływu na wydolność.</Polish>
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
             <French>Augmente ou réduit l'influence que le poids à sur les performances des joueurs. Zéro implique que le poids de l'équipement n'a pas d'influence sur les performances.</French>
+            <Italian>Incrementa o decrementa quanto il peso influenza le prestazioni dei giocatori. Zero significa che il peso dell'equipaggiamento non ha alcuna influenza nelle prestazioni.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor">
             <English>Terrain Gradient Factor</English>
@@ -64,6 +71,7 @@
             <Polish>Współczynnik terenu</Polish>
             <Korean>지형 경사도 요인</Korean>
             <French>Facteur d'inclinaison du terrain</French>
+            <Italian>Fattore Pendenza Terreno</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
@@ -72,6 +80,7 @@
             <Polish>Wpływa na to w jakim stopniu stromy teren wpływa na utratę wytrzymałości. Więcej oznacza szybszą utratę wytrzymałości.</Polish>
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
             <French>Configure l'influence de l'inclinaison du terrain sur la perte d'endurance. Une valeur plus élevée implique une perte d'endurance plus importante.</French>
+            <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -80,6 +89,7 @@
             <Polish>Włączone</Polish>
             <Korean>활성화</Korean>
             <French>Activé</French>
+            <Italian>Abilitato</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
@@ -88,6 +98,7 @@
             <Polish>Włącza/wyłącza zaawansowaną wytrzymałość</Polish>
             <Korean>고급 피로도 활성화/비활성화</Korean>
             <French>Active/désactive la fatigue avancée.</French>
+            <Italian>Abilita/disabilita la Fatica Avanzata.</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
             <English>Show stamina bar</English>
@@ -96,6 +107,7 @@
             <Polish>Pokaż pasek wytrzymałości</Polish>
             <Korean>피로도 막대</Korean>
             <French>Afficher la barre d'endurance</French>
+            <Italian>Mostra barra stamina</Italian>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
             <English>Shows the stamina bar.</English>
@@ -104,6 +116,7 @@
             <Polish>Pokazuje pasek wytrzymałości.</Polish>
             <Korean>피로도 막대를 보여줍니다.</Korean>
             <French>Affiche la barre d'endurance.</French>
+            <Italian>Mostra la barra della stamina.</Italian>
         </Key>
     </Package>
 </Project>

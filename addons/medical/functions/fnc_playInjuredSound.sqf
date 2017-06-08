@@ -8,8 +8,11 @@
  * 0: The Unit <OBJECT>
  * 1: Amount of Pain <NUMBER>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, 5] call ACE_medical_fnc_playInjuredSound
  *
  * Public: No
  */

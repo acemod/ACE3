@@ -19,6 +19,9 @@
  * 2: Maximal X <NUMMBER>
  * 3: Maximal Y <NUMMBER>
  *
+ * Example:
+ * [bob, [5, 5, 5], [6, 6, 6]] call ace_common_fnc_worldToScreenBounds
+ *
  * Public: No
  */
 #include "script_component.hpp"

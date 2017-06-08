@@ -6,7 +6,7 @@
  * 0: The Unit <OBJECT>
  * 1: Class <NUMBER> (default: 1)
  *
- * ReturnValue:
+ * Return Value:
  * Is in of medic class <BOOL>
  *
  * Example:

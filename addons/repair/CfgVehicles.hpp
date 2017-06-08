@@ -38,7 +38,7 @@ class CfgVehicles {
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; default = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; };
                 };
             };
             class engineerSetting_Wheel {
@@ -48,7 +48,7 @@ class CfgVehicles {
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; default = 1; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; };
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; };
                 };
             };
             class repairDamageThreshold {
@@ -91,7 +91,7 @@ class CfgVehicles {
                 class values {
                     class anyone { name = CSTRING(engineerSetting_anyone); value = 0; };
                     class Engineer { name = CSTRING(engineerSetting_EngineerOnly); value = 1; };
-                    class Special { name = CSTRING(engineerSetting_RepairSpecialistOnly); value = 2; default = 1;};
+                    class Advanced { name = CSTRING(engineerSetting_AdvancedOnly); value = 2; default = 1;};
                 };
             };
             class addSpareParts {
@@ -150,7 +150,7 @@ class CfgVehicles {
                         default = 1;
                     };
                     class doctor {
-                        name = CSTRING(AssignEngineerRole_role_specialist);
+                        name = CSTRING(AssignEngineerRole_role_advanced);
                         value = 2;
                     };
                 };

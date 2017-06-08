@@ -7,9 +7,10 @@
  * 1: airFriction - air friction of the bullet <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * [bullet, 2] call ace_winddeflection_fnc_updateTrajectoryPFH
  *
  * Public: No
  */

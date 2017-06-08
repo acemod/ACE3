@@ -13,6 +13,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "classname", "varname", 5, 6, ["stuff"]] call ACE_medical_fnc_onMedicationUsage
+ *
  * Public: No
  */
 

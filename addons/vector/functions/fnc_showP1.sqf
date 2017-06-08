@@ -1,10 +1,19 @@
 /*
+ * Author: commy2
+ * Shows or hides the 1-P text line.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_vector_fnc_showP1
+ *
+ * Public: No
+ */
 
-by commy2
-
-Shows or hides the 1-P text line.
-
-*/
 #include "script_component.hpp"
 
 disableSerialization;

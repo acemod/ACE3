@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Current cardiac output <NUMBER>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_getCardiacOutput
  *
  * Public: No
  */

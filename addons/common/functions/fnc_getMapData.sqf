@@ -9,6 +9,9 @@
  * 0: Latitude <NUMBER>
  * 1: Altitude <NUMBER>
  *
+ * Example:
+ * ["altis"] call ace_common_fnc_getMapData
+ *
  * Public: No
  */
 

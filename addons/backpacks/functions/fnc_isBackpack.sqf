@@ -8,6 +8,9 @@
  * Return Value:
  * Boolean <BOOL>
  *
+ * Example:
+ * [bob] call ace_backpacks_fnc_isBackpack
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

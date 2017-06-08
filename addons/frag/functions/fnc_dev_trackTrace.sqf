@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ * Dev things
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_dev_trackTrace
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_args", "_pfhID"];

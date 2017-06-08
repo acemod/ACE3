@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_overheating_fnc_firedEH
+ *
  * Public: No
  */
 #include "script_component.hpp"
