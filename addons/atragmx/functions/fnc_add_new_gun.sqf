@@ -6,7 +6,7 @@
  * Nothing
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_add_new_gun

@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [logic] call ace_finger_fnc_moduleSettings
+ *
  * Public: No
  */
 

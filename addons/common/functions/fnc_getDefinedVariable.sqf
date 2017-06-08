@@ -9,6 +9,9 @@
  * Return Value:
  * Value of variable or default value, if the variable is undefined <ANY>
  *
+ * Example:
+ * [bob, "var"] call ace_common_fnc_getDefinedVariable
+ *
  * Public: No
  */
 #include "script_component.hpp"

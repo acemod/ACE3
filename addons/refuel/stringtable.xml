@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -21,7 +21,7 @@
             <Russian>Скорость заправки</Russian>
             <Portuguese>Velocidade da vazão</Portuguese>
             <Czech>Rychlost tankování</Czech>
-            <Italian>Rateo Flusso</Italian>
+            <Italian>Portata Flusso</Italian>
             <Spanish>Caudal de llenado</Spanish>
             <French>Vitesse du ravitaillement</French>
             <Japanese>流量</Japanese>
@@ -60,7 +60,7 @@
             <Russian>Взять топливный шланг</Russian>
             <Portuguese>Pegar o bocal de combustível</Portuguese>
             <Czech>Vzít výdejní pistoli</Czech>
-            <Italian>Prenti manica benzina</Italian>
+            <Italian>Prendi manica benzina</Italian>
             <Spanish>Tomar surtidor</Spanish>
             <French>Prendre la pompe</French>
             <Japanese>給油ノズルを取る</Japanese>
@@ -73,7 +73,7 @@
             <Russian>Берем топливный шланг...</Russian>
             <Portuguese>Pegando o bocal de combustível...</Portuguese>
             <Czech>Beru výdejní pistoli...</Czech>
-            <Italian>Sto prendendo manica benzina...</Italian>
+            <Italian>Prendendo manicotto benzina...</Italian>
             <Spanish>Tomando surtidor...</Spanish>
             <French>Prise de la pompe...</French>
             <Japanese>給油ノズルを取っている・・・</Japanese>
@@ -99,7 +99,7 @@
             <Russian>Присоединяем топливный шланг...</Russian>
             <Portuguese>Conectando o bocal de combustível...</Portuguese>
             <Czech>Připojuji výdejní pistoli...</Czech>
-            <Italian>Sto collegando la manica benzina...</Italian>
+            <Italian>Collegando manicotto benzina...</Italian>
             <Spanish>Conectando surtidor...</Spanish>
             <French>Connection de la pompe...</French>
             <Japanese>給油ノズルを接続している・・・</Japanese>
@@ -112,7 +112,7 @@
             <Russian>Отсоединить топливный шланг</Russian>
             <Portuguese>Desconectar o bocal de combustível</Portuguese>
             <Czech>Odpojit výdejní pistoli</Czech>
-            <Italian>Scollega manica benzina</Italian>
+            <Italian>Scollega manicotto benzina</Italian>
             <Spanish>Desconectar surtidor</Spanish>
             <French>Déconnecter la pompe</French>
             <Japanese>給油ノズルを外した</Japanese>
@@ -151,7 +151,7 @@
             <Russian>Проверяем остаток топлива...</Russian>
             <Portuguese>Verificando combustível restante...</Portuguese>
             <Czech>Kontroluji zůstatek paliva...</Czech>
-            <Italian>Sto controllando la benzina rimanente...</Italian>
+            <Italian>Controllando la benzina rimanente...</Italian>
             <Spanish>Verificando combustible remanente,,,</Spanish>
             <French>Vérifie le carburant restant...</French>
             <Japanese>残燃料を見ている・・・</Japanese>
@@ -229,7 +229,7 @@
             <Russian>Останавливаем заправку...</Russian>
             <Portuguese>Parando reabastecimento...</Portuguese>
             <Czech>Zastavuji tankování...</Czech>
-            <Italian>Sto fermando il rifornimento...</Italian>
+            <Italian>Fermando il rifornimento...</Italian>
             <Spanish>Deteniendo reabastecimiento...</Spanish>
             <French>Arrête le ravitaillement...</French>
             <Japanese>給油をやめている・・・</Japanese>
@@ -255,7 +255,7 @@
             <Russian>Начинаем заправку...</Russian>
             <Portuguese>Começando reabastecimento...</Portuguese>
             <Czech>Spouštím tankování...</Czech>
-            <Italian>Sto iniziando il rifornimento...</Italian>
+            <Italian>Iniziando il rifornimento...</Italian>
             <Spanish>Comenzando reabastecimiento...</Spanish>
             <French>Début du ravitaillement...</French>
             <Japanese>給油を始めている・・・</Japanese>
@@ -281,7 +281,7 @@
             <Russian>Источник топлива пустой.</Russian>
             <Portuguese>A fonte de combustível está vazia.</Portuguese>
             <Czech>Zdroj paliva je prázdný.</Czech>
-            <Italian>La fonte di benzina èvuota.</Italian>
+            <Italian>La fonte di benzina è vuota.</Italian>
             <Spanish>La fuente de combustible está vacía.</Spanish>
             <French>La source de carburant est vide.</French>
             <Japanese>給油元は空です。</Japanese>
@@ -294,7 +294,7 @@
             <Russian>Достигнута максимальная длина шланга.</Russian>
             <Portuguese>Distância máxima da mangueira de combustível alcançada.</Portuguese>
             <Czech>Dosažena maximální délka hadice</Czech>
-            <Italian>Distanza massima della manica raggiunta.</Italian>
+            <Italian>Distanza massima della pompa raggiunta.</Italian>
             <Spanish>Máxima longitud de manguera alcanzada.</Spanish>
             <French>Tuyau tendu au maximum</French>
             <Japanese>給油ホースはもうこれ以上届かない。</Japanese>
@@ -346,7 +346,7 @@
             <Russian>Вернуть топливный шланг</Russian>
             <Portuguese>Retornar bocal de combustível</Portuguese>
             <Czech>Vrátit výdejní pistoli</Czech>
-            <Italian>Riponi manica benzina</Italian>
+            <Italian>Riponi manicotto benzina</Italian>
             <Spanish>Devolver surtidor</Spanish>
             <French>Retourner la pompe</French>
             <Japanese>給油ノズルを戻す</Japanese>
@@ -359,7 +359,7 @@
             <Russian>Возвращаем топливный шланг...</Russian>
             <Portuguese>Retornando bocal de combustível...</Portuguese>
             <Czech>Vracím výdejní pistoli...</Czech>
-            <Italian>Sto riponendo la manica della benzina...</Italian>
+            <Italian>Riponendo la manica della benzina...</Italian>
             <Spanish>Devolviendo el surtidor...</Spanish>
             <French>Retourne la pompe</French>
             <Japanese>給油ノズルを戻している・・・</Japanese>
@@ -385,7 +385,7 @@
             <Russian>Проверяем счетчик топлива...</Russian>
             <Portuguese>Verificando contador de combustível...</Portuguese>
             <Czech>Konroluji palivoměr...</Czech>
-            <Italian>Sto controllando l'indicatore del livello benzina...</Italian>
+            <Italian>Controllando l'indicatore del livello benzina...</Italian>
             <Spanish>Verificando el contador de combustible</Spanish>
             <French>Vérification du compteur...</French>
             <Japanese>燃料計を見ている・・・</Japanese>
@@ -403,6 +403,12 @@
             <French>%1 litres ont été écoulés.</French>
             <Japanese>%1 リッターがある</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
+            <English>Refuel hose length</English>
+            <German>Betankung Schlauchlänge</German>
+            <Spanish>Reabastecer longitud de manguera</Spanish>
+            <Italian>Rifiuta lungezza tubo</Italian>
         </Key>
     </Package>
 </Project>

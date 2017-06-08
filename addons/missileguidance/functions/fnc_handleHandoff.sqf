@@ -1,4 +1,20 @@
-// Not currently used
+/*
+ * Author: ACE-Team
+ * Not currently used
+ *
+ * Arguments:
+ * 0: TARGET <OBJECT>
+ * 1: ARGS <ARRAY>
+ *
+ * Return Value:
+ * Boolean <BOOLEAN>
+ *
+ * Example:
+ * [bob, kevin] call ACE_missileguidance_fnc_handleHandoff
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 PARAMS_2(_target,_args);
 

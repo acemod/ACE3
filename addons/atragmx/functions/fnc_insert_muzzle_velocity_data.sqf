@@ -7,7 +7,7 @@
  * muzzle velocity - <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [10, 800] call ace_atragmx_fnc_insert_muzzle_velocity_data

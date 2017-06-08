@@ -8,6 +8,9 @@
  * Return Value:
  * All burning lights <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getTurnedOnLights
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

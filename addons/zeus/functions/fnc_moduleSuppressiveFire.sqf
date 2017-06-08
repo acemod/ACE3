@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleSuppressiveFire
+ *
  * Public: No
  */
 // #define DRAW_ZEUS_INFO

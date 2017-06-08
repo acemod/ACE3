@@ -8,7 +8,7 @@
  * 1: Display is now open <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob1, false] call ACE_captives_fnc_handleZeusDisplayChanged

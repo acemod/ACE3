@@ -3,10 +3,10 @@
  * Calculates the target range and updates the output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_calculate_target_range_assist
@@ -74,7 +74,7 @@ switch (_this) do {
         if (_estRange > 0) then {
             _imageSize = atan(_targetSize / _estRange);
         };
-        
+
         switch (GVAR(rangeAssistImageSizeUnit)) do {
             case 0: {
                 _imageSize = _imageSize * 6400 / 360;
@@ -93,7 +93,7 @@ switch (_this) do {
         if (tan(_imageSize) != 0) then {
             _estRange = _targetSize / tan(_imageSize);
         };
-        
+
         ctrlSetText [7013, Str(Round(_estRange))];
     };
 };

@@ -160,12 +160,6 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers: RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
-            };
-        };
     };
 
     class Helicopter_Base_H: Helicopter_Base_F {
@@ -202,11 +196,6 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
-            };
-        };
 
         EQUIP_FRIES_ATTRIBUTE;
     };
@@ -238,6 +227,20 @@ class CfgVehicles {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
+            };
+        };
+    };
+
+    class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(fastroping,enabled) = 1;
+        EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
+        EGVAR(fastroping,onCut) = QFUNC(onCut);
+        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+
+        class UserActions {
+            class RampOpen;
+            class RampClose: RampOpen {
+                condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
             };
         };
     };

@@ -12,6 +12,9 @@
  * 2: Magazines <ARRAY>
  * 3: Ammo <ARRAY>
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_getWeaponState
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -42,4 +45,4 @@ private _ammo = _muzzles apply {0};
     false
 } count magazinesAmmoFull _unit;
 
-[_attachments, _muzzles, _magazines, _ammo]; 
+[_attachments, _muzzles, _magazines, _ammo];

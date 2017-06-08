@@ -6,9 +6,9 @@
  * 0: Object <OBJECT>
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
  *
- * Example;
+ * Example:
  * [player] call ace_dragging_fnc_isObjectOnObject
  *
  * Public: No

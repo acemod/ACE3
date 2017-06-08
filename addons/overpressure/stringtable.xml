@@ -7,6 +7,7 @@
             <Korean>초과압력 거리 계수</Korean>
             <Polish>Mnożnik dystansu nadciśnienia</Polish>
             <French>Coéfficient de distance pour la surpression</French>
+            <Italian>Coefficente Distanza Sovrapressione</Italian>
         </Key>
         <Key ID="STR_ACE_overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
@@ -14,6 +15,7 @@
             <Korean>초과압력의 효과 크기 [기본설정: 1]</Korean>
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
             <French>Échelonne les effets de la surpression [Par défaut : 1]</French>
+            <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
         </Key>
     </Package>
 </Project>

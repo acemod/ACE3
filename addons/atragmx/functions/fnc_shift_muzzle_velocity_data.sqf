@@ -6,7 +6,7 @@
  * velocity - <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 10 call ace_atragmx_fnc_shift_muzzle_velocity_data

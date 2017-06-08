@@ -28,6 +28,36 @@ ACE_Modifier = 0;
     {_lamp setHit [_x select 0, (_x select 1) max _disabledLampDMG];nil} count _hitPointsDamage;
 }] call CBA_fnc_addEventHandler;
 
+// Zeus action events
+[QGVAR(zeusStance),{
+    { _x setUnitPos (_this select 0); } forEach (_this select 1);
+}] call CBA_fnc_addEventHandler;
+
+// The following 3 events handle both waypoints and groups
+[QGVAR(zeusBehaviour),{
+    if (param [2,false]) then {
+        { _x setWaypointBehaviour (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setBehaviour (_this select 0); } forEach (_this select 1);
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusSpeed),{
+    if (param [2,false]) then {
+        { _x setWaypointSpeed (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setSpeedMode (_this select 0); } forEach (_this select 1);
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(zeusFormation),{
+    if (param [2,false]) then {
+        { _x setWaypointFormation (_this select 0); } forEach (_this select 1);
+    } else {
+        { _x setFormation (_this select 0); } forEach (_this select 1);
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(isOpeningDoor) = false;
@@ -59,7 +89,6 @@ GVAR(isOpeningDoor) = false;
     true
 },
 [57, [false, true, false]], false] call CBA_fnc_addKeybind; //Key CTRL+Space
-
 
 ["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract

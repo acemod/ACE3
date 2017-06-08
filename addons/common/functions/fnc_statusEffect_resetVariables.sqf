@@ -6,7 +6,7 @@
  * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, true] call ace_common_fnc_statusEffect_resetVariables

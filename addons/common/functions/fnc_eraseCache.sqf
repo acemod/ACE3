@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [NAMESPACE, "UID"] call ace_common_fnc_eraseCache
+ *
  * Public: No
  */
 #include "script_component.hpp"

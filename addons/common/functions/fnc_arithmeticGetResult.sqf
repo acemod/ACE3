@@ -8,7 +8,7 @@
  * 2: Operation (sum, product, min, max, avg) <STRING>
  *
  * Return Value:
- * <NUMBER>
+ * Value <NUMBER>
  *
  * Example:
  * [ace_player, "ace_aimCoefficents", "product"] call ace_common_fnc_arithmeticGetResult

@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "because"] call ace_common_fnc_unmuteUnit
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

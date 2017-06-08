@@ -8,6 +8,9 @@
  * Return Value:
  * Unit has a hatch? <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_hasHatch
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

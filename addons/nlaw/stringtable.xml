@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="NLAW">
+        <Key ID="STR_ACE_NLAW_trackTarget">
+            <English>NLAW Track Target (Hold)</English>
+            <Italian>NLAW Traccia Bersaglio (Mantieni)</Italian>
+        </Key>
+        <Key ID="STR_ACE_NLAW_directAttack">
+            <English>Direct Attack</English>
+            <Italian>Attacco Diretto</Italian>
+        </Key>
+        <Key ID="STR_ACE_NLAW_overflyTopAttack">
+            <English>Overfly Top Attack</English>
+            <Italian>Attacco dall'alto</Italian>
+        </Key>
+    </Package>
+</Project>
