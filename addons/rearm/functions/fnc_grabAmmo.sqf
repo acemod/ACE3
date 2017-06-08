@@ -16,15 +16,19 @@
  */
 #include "script_component.hpp"
 
-params [["_dummy", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_dummy", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
-REARM_HOLSTER_WEAPON
+REARM_HOLSTER_WEAPON;
 [_unit, "forceWalk", QGVAR(vehRearm), true] call EFUNC(common,statusEffect_set);
 
 [
     5,
     [_dummy, _unit],
     {
+        private ["_actionID"];
         params ["_args"];
         _args params ["_dummy", "_unit"];
         [_dummy, _unit] call FUNC(pickUpAmmo);

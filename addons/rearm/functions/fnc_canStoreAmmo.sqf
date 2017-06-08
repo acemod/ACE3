@@ -10,17 +10,20 @@
  * Can Store Ammo <BOOL>
  *
  * Example:
- * [player, tank] call ace_rearm_fnc_canStoreAmmo
+ * [ammo_truck, player] call ace_rearm_fnc_canStoreAmmo
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
+];
 
 !(isNull _unit ||
-    {!alive _target} || 
+    {!alive _truck} || 
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
-    {(_target distance _unit) > REARM_ACTION_DISTANCE} ||
+    {(_truck distance _unit) > REARM_ACTION_DISTANCE} ||
     {isNull (_unit getVariable [QGVAR(dummy), objNull])})
