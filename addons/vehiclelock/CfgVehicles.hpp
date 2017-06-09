@@ -64,9 +64,6 @@ class CfgVehicles {
     class Helicopter: Air {
         MACRO_LOCK_ACTIONS
     };
-    class Plane: Air {
-        MACRO_LOCK_ACTIONS
-    };
     class Motorcycle: LandVehicle {
         MACRO_LOCK_ACTIONS
     };

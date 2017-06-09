@@ -66,7 +66,7 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
             #endif
 
             // Default max results is 1, so take only first subarray and select parentObject (object itself or parent of proxy)
-            private _intersectObject = ((lineIntersectsSurfaces [_startASL, _endASL, _unit]) select 0) select 3;
+            private _intersectObject = ((lineIntersectsSurfaces [_startASL, _endASL, _unit]) param [0, objNull]) param [3, objNull];
             if (_attachToVehicle == _intersectObject) exitWith {_doesIntersect = true};
         } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
     } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
