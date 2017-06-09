@@ -54,6 +54,7 @@ class CfgAmmo {
         triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
         ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12}; // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
+        ACE_explosives_size = 0; // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
     };
 };
 ```
