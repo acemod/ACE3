@@ -60,11 +60,11 @@ class CfgVehicles {
                 icon = QPATHTOF(UI\Defuse_ca.paa);
             };
         };
-    };    
+    };
     class ACE_DefuseObject_Large: ACE_DefuseObject {
         class ACE_Actions: ACE_Actions {
             class ACE_Defuse: ACE_Defuse {
-                distance = 1.5;
+                distance = 2;
             };
         };
     };
