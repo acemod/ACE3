@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -956,6 +956,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
+            <Italian>Solo Geniere avanzato</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1233,6 +1234,7 @@
         <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
             <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
             <English>Adv. Engineer</English>
+            <Italian>Adv. Geniere</Italian>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>
