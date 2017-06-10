@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_findReflections
+ *
+ * Public: No
+ */
+
 //fnc_findReflections.sqf
 #include "script_component.hpp"
 
@@ -78,7 +94,7 @@ if (_zIndex < 5) then {
         private _avg = [0, 0, 0];
 
         {
-            _avg = _avg vectorAdd _x; 
+            _avg = _avg vectorAdd _x;
         } forEach _blist;
         _c = count _blist;
         private _bpos = _avg vectorMultiply (1 / _c);

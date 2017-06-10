@@ -6,7 +6,7 @@
  * ballistic coefficient - <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 10 call ace_atragmx_fnc_shift_c1_ballistic_coefficient_data

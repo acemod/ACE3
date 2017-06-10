@@ -12,6 +12,9 @@
  * 0: Added to player <BOOL>
  * 1: weaponholder <OBJECT>
  *
+ * Example:
+ * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

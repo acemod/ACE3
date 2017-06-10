@@ -17,3 +17,11 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define MAX_LOAD_DISTANCE 10
+
+#define CARGO_VEHICLE_CLASSES ["Car", "Air", "Tank", "Ship", "Cargo_base_F", "Land_PaperBox_closed_F"]
+
+#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+
+// Default cargo size is -1 as 0 is a valid size
+#define CARGO_SIZE(classname) GET_NUMBER(configFile >> "CfgVehicles" >> (classname) >> QGVAR(size),-1)
+#define CARGO_SPACE(classname) GET_NUMBER(configFile >> "CfgVehicles" >> (classname) >> QGVAR(space),0)

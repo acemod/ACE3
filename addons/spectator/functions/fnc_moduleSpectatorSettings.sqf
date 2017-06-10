@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_spectator_fnc_moduleSpectatorSettings
+ *
  * Public: No
  */
 

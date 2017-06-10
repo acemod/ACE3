@@ -2,7 +2,6 @@ class CfgMagazines {
     // shoot helper object to tripple rof
     class VehicleMagazine;
     class 1000Rnd_Gatling_30mm_Plane_CAS_01_F: VehicleMagazine {
-        ammo = "ACE_Gatling_30mm_HE_Plane_CAS_01_Deploy";
         count = 1170;
     };
 

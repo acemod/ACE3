@@ -3,10 +3,10 @@
  * Updates the relative click memory
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_relative_click_memory

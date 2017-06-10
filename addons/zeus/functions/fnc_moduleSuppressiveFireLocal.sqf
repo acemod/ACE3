@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, [5, 6, 7], "bigmagazine"] call ace_zeus_fnc_moduleSuppressiveFireLocal
+ *
  * Public: No
  */
 #include "script_component.hpp"

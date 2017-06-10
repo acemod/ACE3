@@ -10,6 +10,9 @@
  * 1: Status ID <NUMBER>
  * 2: Color <ARRAY <NUMBER>>
  *
+ * Example:
+ * [bob] call ace_medical_fnc_getTriageStatus
+ *
  * Public: Yes
  */
 

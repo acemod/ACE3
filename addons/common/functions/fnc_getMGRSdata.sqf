@@ -12,6 +12,9 @@
  * 1: 100km square <STRING>
  * 2: GZD + 100km sq. as a single string <STRING>
  *
+ * Example:
+ * ["worldName"] call ace_common_fnc_getMGRSdata
+ *
  * Public: No
  */
 #include "script_component.hpp"

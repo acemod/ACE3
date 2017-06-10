@@ -7,7 +7,7 @@
  * 1: PFID <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [[], 0] call ace_missileguidance_fnc_guidancePFH;
@@ -54,7 +54,7 @@ private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosSta
 
 // Run attack profile function:
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams] call FUNC(doAttackProfile);
-    
+
 // If we have no seeker target, then do not change anything
 if (!(_profileAdjustedTargetPos isEqualTo [0,0,0])) then {
 
@@ -111,4 +111,4 @@ _PS setDropInterval 3.0;
 _stateParams set [0, diag_tickTime];
 
 END_COUNTER(guidancePFH);
-    
+

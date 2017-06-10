@@ -8,7 +8,7 @@
  * N: Anything <ANY><OPTIONAL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * ["something"] call ace_zeus_fnc_showMessage

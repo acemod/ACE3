@@ -7,7 +7,7 @@
  * 1: Target explosive <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;

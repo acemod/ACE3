@@ -6,10 +6,10 @@
  * Open copy? <BOOLEAN>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_rangecard_fnc_openRangeCard
+ * [true] call ace_rangecard_fnc_openRangeCard
  *
  * Public: No
  */

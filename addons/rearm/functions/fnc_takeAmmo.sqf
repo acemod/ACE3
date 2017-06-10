@@ -19,40 +19,21 @@
  */
 #include "script_component.hpp"
 
-private ["_ammo", "_tmpCal", "_cal", "_idx"];
-
-params [["_target", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", ["", objNull], [[]]]];
+params [
+    ["_truck", objNull, [objNull]],
+    ["_unit", objNull, [objNull]],
+    ["_args", ["", objNull], [[]]]
+];
 _args params ["_magazineClass", "_vehicle"];
+TRACE_5("takeAmmo",_truck,_unit,_args,_magazineClass,_vehicle);
 
-_ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
-_tmpCal = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ace_caliber");
-_cal = 8;
-if (_tmpCal > 0) then {
-    _cal = _tmpCal;
-} else {
-    _tmpCal = getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(caliber));
-    if (_tmpCal > 0) then {
-        _cal = _tmpCal;
-    } else {
-        diag_log format ["[ACE] ERROR: Undefined Ammo [%1 : %2]", _ammo, inheritsFrom (configFile >> "CfgAmmo" >> _ammo)];
-        if (_ammo isKindOf "BulletBase") then {
-            _cal = 8;
-        } else {
-            _cal = 100;
-        };
-    };
-};
-_cal = round _cal;
-_idx = REARM_CALIBERS find _cal;
-if (_idx == -1 ) then {
-    _idx = 2;
-};
+([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
-REARM_HOLSTER_WEAPON
+REARM_HOLSTER_WEAPON;
 
 [
-    (REARM_DURATION_TAKE select _idx),
-    [_unit, _magazineClass, _target],
+    TIME_PROGRESSBAR(REARM_DURATION_TAKE select _idx),
+    [_unit, _magazineClass, _truck],
     FUNC(takeSuccess),
     "",
     format [localize LSTRING(TakeAction), getText(configFile >> "CfgMagazines" >> _magazineClass >> "displayName"), getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")],

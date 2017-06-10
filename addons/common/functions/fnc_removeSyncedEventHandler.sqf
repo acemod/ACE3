@@ -6,7 +6,10 @@
  * 0: Name <STRING>
  *
  * Return Value:
- * Boolean of success
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_removeSyncedEventHandler
  *
  * Public: No
  */

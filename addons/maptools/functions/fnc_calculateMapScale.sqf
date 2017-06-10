@@ -6,7 +6,10 @@
  * None
  *
  * Return Value:
- * No
+ * None
+ *
+ * Example:
+ * call ACE_maptools_fnc_calculateMapScale
  *
  * Public: No
  */

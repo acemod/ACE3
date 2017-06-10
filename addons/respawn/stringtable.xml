@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
         <Key ID="STR_ACE_Respawn_Deploy">
@@ -330,7 +330,7 @@
             <French>ACE Respawn</French>
             <Hungarian>ACE Respawn</Hungarian>
             <Russian>ACE Возрождение</Russian>
-            <Italian>Respawn ACE</Italian>
+            <Italian>Rigenerazione ACE</Italian>
             <Japanese>ACE リスポン</Japanese>
             <Korean>ACE 재배치</Korean>
         </Key>

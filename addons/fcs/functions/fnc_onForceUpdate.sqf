@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * Nothing
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_fcs_fnc_onForceUpdate
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_unit"];

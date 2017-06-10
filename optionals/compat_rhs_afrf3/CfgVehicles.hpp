@@ -1,27 +1,3 @@
-#define MACRO_REARM_TRUCK_ACTIONS \
-        class ACE_Actions: ACE_Actions { \
-            class ACE_MainActions: ACE_MainActions { \
-                class EGVAR(rearm,TakeAmmo) { \
-                    displayName = ECSTRING(rearm,TakeAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
-                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
-                    exceptions[] = {"isNotInside"}; \
-                    showDisabled = 0; \
-                    priority = 2; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-                class EGVAR(rearm,StoreAmmo) { \
-                    displayName = ECSTRING(rearm,StoreAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
-                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-            }; \
-        };
-
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -408,7 +384,7 @@ class CfgVehicles {
 
     class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class MRAP_02_base_F;
@@ -451,6 +427,11 @@ class CfgVehicles {
 
     class rhs_2s3tank_base : Tank_F {
         EGVAR(refuel,fuelCapacity) = 830;
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                EGVAR(fcs,enabled) = 0;
+            };
+        };
     };
 
     class OTR21_Base : Truck_F {

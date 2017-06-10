@@ -4,10 +4,13 @@
  *
  * Arguments:
  * 0: Number to 'digitize' <NUMBER>
- * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Number, optional)
+ * 1: Set the minimal length of the returned string. Useful for getting left hand zeroes. (Optional) <NUMBER>
  *
  * Return Value:
  * Digits. The maximum length is six digits. <STRING>
+ *
+ * Example:
+ * [5, 5] call ace_common_fnc_numberToDigitsString
  *
  * Public: Yes
  */
