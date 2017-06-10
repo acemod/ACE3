@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Rearm">
         <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
@@ -95,42 +95,52 @@
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
             <English>Ammunition supply</English>
             <German>Munitionsvorat</German>
+            <Italian>Scorta munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
             <English>How much ammunition does an ammo truck carry?</English>
             <German>Wie viel Munition transportiert ein Munitionslaster?</German>
+            <Italian>Quante munizioni può trasportare un camion?</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
             <German>Unbegrenzter Munitionsvorat</German>
+            <Italian>Scorta munizioni infinita</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
             <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
+            <Italian>Scorta munizioni limitata in base al calibro</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
             <German>Nur bestimmte Magazine</German>
+            <Italian>Solo specifici caricatori</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
             <English>Check remaining ammunition</English>
             <German>Verbleibende Munition prüfen</German>
+            <Italian>Controlla munizioni rimanenti</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
             <German>Überprüfe verbleibende Munition...</German>
+            <Italian>Controllando le munizioni rimanenti</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
             <German>Es ist noch Munition für %1 Punkte übrig.</German>
+            <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
             <German>Folgende Munition ist übrig:%1</German>
+            <Italian>Mancano le seguenti:%1</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_Empty">
             <English>There is no ammunition left.</English>
             <German>Es ist keine Munition übrig.</German>
+            <Italian>Non ci sono munizioni rimanenti.</Italian>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
@@ -152,7 +162,7 @@
             <Russian>Перевооружается %1 снарядами %2...</Russian>
             <Portuguese>Rearmando %1 com %2...</Portuguese>
             <Czech>Přezbrojuji %1 za pomoci %2...</Czech>
-            <Italian>Sto Riarmando %1 con %2...</Italian>
+            <Italian>Riarmando %1 con %2...</Italian>
             <Spanish>Rearmando %1 con %2...</Spanish>
             <French>Réarmement de %1 avec %2...</French>
             <Japanese>%1を%2により再武装する。</Japanese>
