@@ -6,7 +6,7 @@
  * target <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 2 call ace_atragmx_fnc_change_target_slot

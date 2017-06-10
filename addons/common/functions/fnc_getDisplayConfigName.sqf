@@ -8,6 +8,9 @@
  * Return Value:
  * Display Classnames <ARRAY>
  *
+ * Example:
+ * [5] call ace_common_fnc_getDisplayConfigName
+ *
  * Public: Yes
  *
  * Note: Really slow due to iteration through whole config. Meant for debugging.

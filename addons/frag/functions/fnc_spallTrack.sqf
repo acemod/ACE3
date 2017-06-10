@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_spallTrack
+ *
+ * Public: No
+ */
+
 //fnc_spallTrack.sqf
 #include "script_component.hpp"
 

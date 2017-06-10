@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, true, "id", SIDE] call ace_common_fnc_switchToGroupSide
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

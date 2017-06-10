@@ -9,7 +9,7 @@
  * 3: Absolute tolerance <NUMBER>
  *
  * Return Value:
- * Nothing.
+ * None
  *
  * Example:
  * [player, "balls", 2, 0.1] call ace_common_fnc_setApproximateVariablePublic;

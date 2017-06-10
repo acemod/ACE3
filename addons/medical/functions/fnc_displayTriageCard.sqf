@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, true] call ace_medical_fnc_displayTriageCard
+ *
  * Public: Yes
  */
 

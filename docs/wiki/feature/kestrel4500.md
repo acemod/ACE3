@@ -36,18 +36,28 @@ The Kestrel 4500 Pocket Weather Tracker is Kestrel's environmental meter. This i
 ### 2.1 Opening the Kestrel
 
 #### 2.1.1 Interaction Menu
+
 - Open the self interaction menu <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd>
 - Select `Equipment`
 - Select `Open Kestrel 4500`
 
 #### 2.1.2 Custom key
+
 - `OPTIONS` / `CONTROLS` / `CONFIGURE ADDONS` / `ACE3 Equipment`
 
 #### 2.1.3 Inventory
+
 <img src="{{ site.baseurl }}/img/wiki/feature/abtools_inventory.png" width="900" height="450" alt="Inventory management" />
+
+### 2.2 `CROSSWIND` / `HEADWIND` Feature
+
+- https://www.youtube.com/watch?v=4Q_qgXwlRqk
+
+- *[Wind info]({{ site.baseurl }}/wiki/feature/weather.html) is toggled on/off using <kbd>SHIFT</kbd> + <kbd>K</kbd>.*
 
 
 ## 3. Official Manual
+
 - [Official Manual]({{ site.ace.githubUrl }}/blob/master/extras/K4500_Instruction_Manual_English.pdf)
 
 

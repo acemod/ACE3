@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "bandage"] call ace_medical_fnc_addToTriageCard
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

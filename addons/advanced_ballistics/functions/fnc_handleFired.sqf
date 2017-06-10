@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_advanced_ballistics_fnc_handleFired
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -3,10 +3,10 @@
  * Called when listbox selection changes.  Updates the rangetable with new values.
  *
  * Arguments:
- * No
+ * None
  *
  * Return Value:
- * No
+ * None
  *
  * Example:
  * [] call ace_mk6mortar_fnc_rangeTablePageChange

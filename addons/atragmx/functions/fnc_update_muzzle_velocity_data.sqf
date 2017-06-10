@@ -3,10 +3,10 @@
  * Updates the muzzle velocity data fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_muzzle_velocity_data

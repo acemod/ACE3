@@ -8,6 +8,9 @@
  * Return Value:
  * Near Units <ARRAY>
  *
+ * Example:
+ * call ACE_laserpointer_fnc_getNearUnits
+ *
  * Public: No
  */
 #include "script_component.hpp"

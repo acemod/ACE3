@@ -11,30 +11,6 @@
     }; \
 }
 
-#define MACRO_REARM_TRUCK_ACTIONS \
-        class ACE_Actions: ACE_Actions { \
-            class ACE_MainActions: ACE_MainActions { \
-                class EGVAR(rearm,TakeAmmo) { \
-                    displayName = ECSTRING(rearm,TakeAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
-                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
-                    exceptions[] = {"isNotInside"}; \
-                    showDisabled = 0; \
-                    priority = 2; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-                class EGVAR(rearm,StoreAmmo) { \
-                    displayName = ECSTRING(rearm,StoreAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
-                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-            }; \
-        };
-
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
@@ -316,19 +292,19 @@ class CfgVehicles {
     class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M978A4_usarmy_wd: rhsusf_M977A4_usarmy_wd {
@@ -373,7 +349,7 @@ class CfgVehicles {
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class APC_Tracked_03_base_F;

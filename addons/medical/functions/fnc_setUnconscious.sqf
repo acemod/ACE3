@@ -9,7 +9,7 @@
  * 2: Minimum unconscious time (set to 0 to ignore) <NUMBER><OPTIONAL> (default: 0)
  * 3: Force wakeup at given time if vitals are stable <BOOL><OPTIONAL> (default: false)
  *
- * ReturnValue:
+ * Return Value:
  * Success? <BOOLEAN>
  *
  * Example:

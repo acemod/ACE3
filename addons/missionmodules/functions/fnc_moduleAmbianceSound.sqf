@@ -8,10 +8,10 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * N/A
+ * [LOGIC, [bob, kevin], true] call ace_missionmodules_fnc_moduleAmbianceSound
  *
  * Public: No
  */

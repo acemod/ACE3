@@ -3,10 +3,10 @@
  * Saves the persistent gun list entries into profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_store_user_data

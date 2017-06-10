@@ -7,7 +7,7 @@
  * 1: New Vehicle <OBJECT>
  *
  * Return Value:
- * No
+ * None
  *
  * Example:
  * [bob, mortar] call ace_mk6mortar_fnc_handlePlayerVehicleChanged;
