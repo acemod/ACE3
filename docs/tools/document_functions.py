@@ -31,8 +31,13 @@ class FunctionFile:
         self.path = ""
         self.header = ""
 
-        # False until determined from header
+        # Defaults until header is processed
         self.public = False
+        self.authors = []
+        self.description = ""
+        self.arguments = []
+        self.return_value = []
+        self.examples = []
 
         # Filepath should only be logged once
         self.logged = False
@@ -62,10 +67,8 @@ class FunctionFile:
         # Split the header into expected sections
         self.sections = re.split(r"^(Author|Argument|Return Value|Example|Public)s?:\s?", self.header_text, 0, re.M)
 
-        # Retrieve the raw public text for processing
-        public_raw = self.get_section("Public")
-
         # If public section is missing we can't continue
+        public_raw = self.get_section("Public")
         if not public_raw:
             self.feedback("Public value undefined", 3)
             return
@@ -85,8 +88,16 @@ class FunctionFile:
         example_raw = self.get_section("Example")
 
         # Author and description are stored in first section
-        self.authors = self.process_author(author_raw)
-        self.description = self.process_description(author_raw)
+        if author_raw:
+            self.authors = self.process_author(author_raw)
+            self.description = self.process_description(author_raw)
+
+        if arguments_raw:
+            self.arguments = self.process_arguments(arguments_raw)
+
+        # Process return
+
+        # Process example
 
     def get_section(self, section_name):
         try:
@@ -121,6 +132,48 @@ class FunctionFile:
 
         return description_text
 
+    def process_arguments(self, raw):
+        lines = raw.splitlines()
+
+        if lines[0] == "None":
+            return []
+
+        if lines.count("") == len(lines):
+            self.feedback("No arguments provided (use \"None\" where appropriate)", 2)
+            return []
+
+        if lines[-1] == "":
+            lines.pop()
+        else:
+            self.feedback("No blank line after arguments list", 1)
+
+        arguments = []
+        for argument in lines:
+            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w]+?)\>(\s\(default: (.+)\))?$", argument)
+
+            if valid:
+                arg_index = valid.group(1)
+                arg_name = valid.group(2)
+                arg_types = valid.group(3).split(" or ")
+                arg_default = valid.group(5)
+                arg_notes = []
+
+                if arg_index != str(len(arguments)):
+                    self.feedback("Argument index {} does not match listed order".format(arg_index), 1)
+
+                if arg_default == None:
+                    arg_default = ""
+
+                arguments.append([arg_index, arg_name, arg_types, arg_default, arg_notes])
+            else:
+                # Notes about the above argument won't start with an index
+                # Only applies if there exists an above argument
+                if re.match(r"^(\d+):", argument) or not arguments:
+                    self.feedback("Malformed argument \"{}\"".format(argument), 2)
+                else:
+                    arguments[-1][-1].append(argument)
+
+        return arguments
 
     def log_file(self, error=False):
         # When in debug mode we only want to see the files with errors
@@ -141,31 +194,6 @@ class FunctionFile:
         to_print = ["  "]*indent
         to_print.append(message)
         print("".join(to_print))
-
-# def process_argument(argument, writer):
-#     definition = re.match(r"^(\d+):\s(.+?)\<(\w+?)\>(\s\(default: (.+)\))?$", argument);
-
-#     if definition:
-#         index = definition.group(1)
-#         name = definition.group(2)
-#         data_types = definition.group(3).split("/")
-#         default_value = definition.group(5)
-#     else:
-#         writer.error("Malformed argument {}".format(argument))
-#         return Argument()
-#     return Argument(index, Value(name, data_types), default_value)
-
-# def process_arguments(text, writer):
-#     # Remove the header characters
-#     arguments = [x[3:] for x in text.splitlines(1)]
-
-#     if arguments[0] == "None":
-#         return [Argument()]
-
-#     # Find lines which new arguments start on (for multi-line descriptions)
-#     arg_indices = [i for i, line in enumerate(arguments) if re.match(r"^\d+:", line)]
-
-#     return [process_argument(arguments[i], writer) for i in arg_indices]
 
 # def process_return(text, writer):
 #     # Remove header characters and only use first line
