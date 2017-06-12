@@ -100,8 +100,9 @@ if ((_minLethalDamage <= _newDamage) && {[_unit, [_effectiveSelectionName] call 
     };
 } else {
     if (!GVAR(useDefaultDamageProcessing)) then {
+        //Return to default damage processing only for overall damage
         _damageReturn = _damageReturn min 0.89;
-    }
+    };
 };
 
 // Start the loop that tracks the unit vitals
