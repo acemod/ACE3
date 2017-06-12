@@ -10,7 +10,7 @@
  * Can Treat <BOOL>
  *
  * Example:
- * [bob, target] call ace_medical_fnc_canAccessMedicalEquipment
+ * [bob, target] call ACE_medical_treatment_fnc_canAccessMedicalEquipment
  *
  * Public: Yes
  */

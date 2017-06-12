@@ -48,8 +48,9 @@ if (_name isEqualTo "toggle") exitWith {
 };
 
 // Clean the dropdown options list from all actions
-for [{_x = START_IDC}, {_x <= END_IDC}, {_x = _x + 1}] do {
-    _ctrl = (_display displayCtrl (_x));
+//IGNORE_PRIVATE_WARNING ["_i"];
+for [{_i = START_IDC}, {_i <= END_IDC}, {_i = _i + 1}] do {
+    _ctrl = (_display displayCtrl (_i));
     _ctrl ctrlSetText "";
     _ctrl ctrlShow false;
     _ctrl ctrlSetEventHandler ["ButtonClick",""];

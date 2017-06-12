@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * ["litter", [2, 5, 6], bob] call ACE_medical_fnc_handleCreateLitter
+ * ["litter", [2, 5, 6], bob] call ACE_medical_treatment_fnc_handleCreateLitter
  *
  * Public: No
  */

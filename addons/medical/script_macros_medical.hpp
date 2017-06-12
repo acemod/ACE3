@@ -1,6 +1,8 @@
 
 #define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
 
+#define MEDICAL_ACTION_DISTANCE 1.75
+
 // scale received pain to 0-2 level to select type of scream
 // below 0.25: 0, from 0.25 to 0.5: 1, more than 0.5: 2
 #define PAIN_TO_SCREAM(pain) (floor (4 * pain) min 2)

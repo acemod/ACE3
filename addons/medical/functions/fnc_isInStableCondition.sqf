@@ -19,7 +19,7 @@
 params ["_unit"];
 
 if (!alive _unit) exitWith { false };
-if (_unit getVariable [QGVAR(isUnconscious), false]) exitWith { false };
+if (_unit getVariable ["ACE_isUnconscious", false]) exitWith { false };
 if (_unit call FUNC(getBloodLoss) > 0) exitWith { false };
 if (!(_unit call FUNC(hasStableVitals))) exitWith { false };
 
