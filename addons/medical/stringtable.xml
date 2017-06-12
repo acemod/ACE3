@@ -4901,5 +4901,13 @@
             <Japanese>AI は気絶している人へ、ためらってから射撃します</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_MedicalSettings_useDefaultDamageProcessing_DisplayName">
+            <English>Use Vanilla damage processing</English>
+            <Russian>Использовать обработку урона по-умолчанию</Russian>
+        </Key>
+        <Key ID="STR_ACE_MedicalSettings_useDefaultDamageProcessing_Description">
+            <English>Don not reduce damage to non-fatal value.</English>
+            <Russian>Не уменьшать урон до нефатального значения. </Russian>
+        </Key>        
     </Package>
 </Project>

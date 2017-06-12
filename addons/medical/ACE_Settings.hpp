@@ -302,4 +302,11 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 3;
     };
+    class GVAR(useDefaultDamageProcessing) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_useDefaultDamageProcessing_DisplayName);
+        description = CSTRING(MedicalSettings_useDefaultDamageProcessing_Description);
+        typeName = "BOOL";
+        value = 0;
+    };    
 };

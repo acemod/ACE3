@@ -25,3 +25,12 @@ if (GVAR(level) >= 2) then {
     _unit setVariable [QGVAR(bloodPressure), [0, 0]];
     _unit setVariable [QGVAR(airwayStatus), 0];
 };
+
+if (!(_unit getVariable ["ACE_isDead", false])) then {
+    _unit setVariable ["ACE_isDead", true, true];
+    if (isPLayer _unit) then {
+        _unit setVariable ["isDeadPlayer", true, true];
+    };
+
+    ["ace_killed", [_unit]] call CBA_fnc_localEvent;
+}
