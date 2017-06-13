@@ -891,7 +891,7 @@ class CfgVehicles {
         accuracy = 1000;
         displayName = CSTRING(medicalSupplyCrate);
         model = QPATHTOF(data\ace_medcrate.p3d);
-        author = ECSTRING(common,ACETeam);
+        author = "ElTyranos";
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
             MACRO_ADDITEM(ACE_morphine,25);
