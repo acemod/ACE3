@@ -7,7 +7,7 @@
  * 1: Radius to check for helicopter (default: 15) <NUMBER>
  *
  * Return Value:
- * <ARRAY>:
+ * Array <ARRAY>:
  *     0: In rotorwash <BOOL>
  *     1: Amount of rotor wash. <NUMBER>
  *

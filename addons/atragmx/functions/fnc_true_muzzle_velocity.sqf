@@ -3,10 +3,10 @@
  * Trues the muzzle velocity
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_true_muzzle_velocity

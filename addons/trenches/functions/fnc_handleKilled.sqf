@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_trenches_fnc_handleKilled
+ *
  * Public: No
 */
 #include "script_component.hpp"

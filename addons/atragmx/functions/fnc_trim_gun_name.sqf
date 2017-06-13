@@ -3,10 +3,10 @@
  * Trims the gun name input field
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_trim_gun_name

@@ -14,6 +14,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [0, false, ""] call ace_common_fnc_checkPBOs
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

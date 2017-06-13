@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperature
+ *
  *
  * Public: No
  */

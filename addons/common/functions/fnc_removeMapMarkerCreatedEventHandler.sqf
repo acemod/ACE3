@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [5] call ace_common_fnc_removeMapMarkerCreatedEventHandler
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

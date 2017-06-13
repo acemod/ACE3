@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_gforces_fnc_addPFEH
+ *
  * Public: No
  */
 #include "script_component.hpp"

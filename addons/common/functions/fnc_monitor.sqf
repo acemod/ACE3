@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [{code}] call ace_common_fnc_monitor
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

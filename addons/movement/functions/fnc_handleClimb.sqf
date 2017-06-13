@@ -7,7 +7,7 @@
  * 1: The finisehd animation <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "ACE_climb"] call ace_movement_fnc_handleClimb

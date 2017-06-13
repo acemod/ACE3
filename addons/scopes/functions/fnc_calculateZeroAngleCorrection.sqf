@@ -11,7 +11,10 @@
  * 5: Advanced Ballistics enabled? <BOOL>
  *
  * Return Value:
- * zeroAngleCorrection
+ * zeroAngleCorrection <NUMBER>
+ *
+ * Example:
+ * [5, 6, gun, ammo, magazine, true] call ace_scopes_fnc_calculateZeroAngleCorrection
  *
  * Public: No
  */

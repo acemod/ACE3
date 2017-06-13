@@ -1,5 +1,3 @@
-class Mode_SemiAuto;
-class Mode_Burst;
 class Mode_FullAuto;
 
 class CfgWeapons {
@@ -16,20 +14,6 @@ class CfgWeapons {
         burst = 0;
         reloadTime = 0.01;
         magazineReloadTime = 0.1;
-    };
-
-    // Manual Switching Of Flare Mode
-    class SmokeLauncher;
-    class CMFlareLauncher: SmokeLauncher {
-        modes[] = {"Single", "Burst", "AIBurst"};
-
-        class Single: Mode_SemiAuto {
-            reloadTime = 0.1;
-        };
-
-        class Burst: Mode_Burst {
-            displayName = CSTRING(CMFlareLauncher_Burst_Name);
-        };
     };
 
     // bigger mag for comanche
@@ -126,23 +110,5 @@ class CfgWeapons {
         class short: close {};
         class medium: LowROF {};
         class far: medium {};
-    };
-
-    class Gatling_30mm_Plane_CAS_01_F: CannonCore {
-        autoFire = 1;
-        burst = 1;
-
-        class LowROF: Mode_FullAuto {
-            autoFire = 0;
-            burst = 22; //65;
-            reloadTime = 0.0462; //0.0154; //0.034;
-            multiplier = 3;
-        };
-
-        class close: LowROF {};
-        class near: close {};
-        class short: close {};
-        class medium: close {};
-        class far: close {};
     };
 };

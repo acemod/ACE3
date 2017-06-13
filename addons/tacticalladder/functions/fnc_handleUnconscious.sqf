@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_tacticalladder_fnc_handleUnconscious
+ *
  * Public: No
 */
 #include "script_component.hpp"

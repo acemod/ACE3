@@ -8,7 +8,7 @@
  * 2: Vehicle to load the captive into. ObjNull for the nearest vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, tom, car] call ACE_captives_fnc_doLoadCaptive

@@ -3,10 +3,10 @@
  * Updates all input fields based on the currently selected unit
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_unit_selection

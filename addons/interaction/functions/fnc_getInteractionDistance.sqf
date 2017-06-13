@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  * 0: Target Vehicle <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Distance to interaction point <NUMBER>
  *
  * Example:

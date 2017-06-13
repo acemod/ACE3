@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [kevin, bob], true] call ACE_medical_fnc_moduleAssignMedicalFacility
+ *
  * Public: No
  */
 

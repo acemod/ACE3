@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_addTack
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_origin", "_obj", ["_color", [1, 0, 0, 1]]];

@@ -8,6 +8,9 @@
  * Return Value:
  * If unit's head is underwater <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_isUnderwater
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

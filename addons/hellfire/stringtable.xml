@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Hellfire">
+        <Key ID="STR_ACE_Hellfire_Hellfire">
+            <English>Hellfire</English>
+            <Spanish>Hellfire</Spanish>
+            <French>Hellfire</French>
+            <Polish>Hellfire</Polish>
+            <German>Hellfire</German>
+            <Czech>Hellfire</Czech>
+            <Italian>Hellfire</Italian>
+            <Portuguese>Hellfire</Portuguese>
+            <Hungarian>Hellfire</Hungarian>
+            <Russian>Hellfire</Russian>
+            <Japanese>Hellfire</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hellfire_hellfireModeAction">
+            <English>Set Hellfire mode</English>
+            <Italian>Imposta modalità Hellfire</Italian>
+        </Key>
+    </Package>
+</Project>

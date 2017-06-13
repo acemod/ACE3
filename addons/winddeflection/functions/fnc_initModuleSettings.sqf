@@ -10,6 +10,9 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_winddeflection_fnc_initModuelSettings
+ *
  * Public: No
  */
 

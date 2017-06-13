@@ -6,7 +6,7 @@
  * Reference input field ID <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 0 call ace_atragmx_fnc_update_inclination_angle

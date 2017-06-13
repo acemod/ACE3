@@ -911,6 +911,20 @@
             <Japanese>AW101 マーリン</Japanese>
             <Korean>AW101 Merlin</Korean>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_Name">
+            <English>L-159 ALCA</English>
+            <German>L-159 ALCA</German>
+            <Spanish>L-159 ALCA</Spanish>
+            <Polish>L-159 ALCA</Polish>
+            <Czech>L-159 ALCA</Czech>
+            <French>L-159 ALCA</French>
+            <Russian>L-159 Альбатрос</Russian>
+            <Portuguese>L-159 ALCA</Portuguese>
+            <Hungarian>L-159 ALCA</Hungarian>
+            <Italian>L-159 ALCA</Italian>
+            <Japanese>L-159 アルカ</Japanese>
+            <Korean>L-159 ALCA</Korean>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Plane_Fighter_03_CAS_Name">
             <English>L-159 ALCA (CAS)</English>
             <German>L-159 ALCA (CAS)</German>

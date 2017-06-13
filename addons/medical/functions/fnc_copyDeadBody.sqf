@@ -9,6 +9,9 @@
  * Return Value:
  * Returns the copy of the unit. If no copy could be made, returns the oldBody <OBJECT>
  *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_copyDeadBody
+ *
  * Public: No
  */
 

@@ -6,7 +6,7 @@
  * 0: Target <OBJECT>
  * 1: Player's Position ASL <ARRAY>
  *
- * Return value:
+ * Return Value:
  * Interaction point in model cords <ARRAY>
  *
  * Example:

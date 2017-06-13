@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="QuickMount">
+        <Key ID="STR_ACE_QuickMount_Category">
+            <English>Quick Mount</English>
+            <Italian>Entrata Rapida</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_KeybindName">
+            <English>Vehicle quick mount</English>
+            <German>Fahrzeug schnell montieren</German>
+            <Polish>Pojazd szybkie mocowanie</Polish>
+            <Italian>Entrata rapida veicolo</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_KeybindDescription">
+            <English>Quickly enter the vehicle you are directly looking at.</English>
+            <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_VehicleFull">
+            <English>Vehicle Full</English>
+            <Italian>Veicolo Pieno</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Distance">
+            <English>Distance</English>
+            <Italian>Distanza</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_DistanceDescription">
+            <English>Maximum distance to check for vehicles.</English>
+            <Italian>Distanza massima per controllare i veicoli.</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_VehicleLocked">
+            <English>Vehicle Locked</English>
+            <Italian>Veicolo Bloccato.</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Speed">
+            <English>Maximum Speed (km/h)</English>
+            <Italian>Velocità Massima (km/h)</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_SpeedDescription">
+            <English>Maximum vehicle speed (km/h) allowed for player entry</English>
+            <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_Priority">
+            <English>Prioritize Seat</English>
+            <Italian>Priorità Sedile</Italian>
+        </Key>
+        <Key ID="STR_ACE_QuickMount_PriorityDescription">
+            <English>Seat priority on entry</English>
+            <Italian>Priorità del sedile in entrata</Italian>
+        </Key>
+    </Package>
+</Project>

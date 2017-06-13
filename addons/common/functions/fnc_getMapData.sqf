@@ -9,6 +9,9 @@
  * 0: Latitude <NUMBER>
  * 1: Altitude <NUMBER>
  *
+ * Example:
+ * ["altis"] call ace_common_fnc_getMapData
+ *
  * Public: No
  */
 
@@ -47,7 +50,7 @@ if (_map in ["csj_lawlands", "uns_dong_ha"]) exitWith { [12, 0] }; // Unsung Mod
 if (_map in ["csj_sea"]) exitWith { [15, 0] }; // Unsung Mod
 if (_map in ["dakrong"]) exitWith { [16, 0] }; // Unsung Mod
 if (_map in ["desert_e"]) exitWith { [40, 800] };
-if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island   
+if (_map in ["desert_island"]) exitWith { [40, 0] }; // CWR2 Desert Island
 if (_map in ["dya"]) exitWith { [34, 110] }; // Diyala Iraq - default elevationOffset
 if (_map in ["eden"]) exitWith { [45, 0] }; // CWR2 Everon
 if (_map in ["esseker"]) exitWith { [43, 2000] };
@@ -71,6 +74,7 @@ if (_map in ["koplic"]) exitWith { [42, 0] };
 if (_map in ["kunduz"]) exitWith { [37, 0] };
 if (_map in ["lingor", "lingor3", "dingor"]) exitWith { [-4, 0] };
 if (_map in ["lost", "lostw"]) exitWith { [60, 0] };
+if (_map in ["lythium"]) exitWith { [34, 0] };
 if (_map in ["malvinas"]) exitWith { [-52, 0] };
 if (_map in ["marenice"]) exitWith { [51, 0] }; // CSA38 Mod (Czechoslovak army 1938 - Munich crisis), Lisatian Mountains.
 if (_map in ["mcn_aliabad"]) exitWith { [36, 0] };
