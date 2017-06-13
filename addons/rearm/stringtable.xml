@@ -37,7 +37,7 @@
             <Italian>Ammontare Riarmo</Italian>
             <Spanish>Velocidad de rearme</Spanish>
             <French>Quantité à réarmer</French>
-            <Japanese>再武装の度合い</Japanese>
+            <Japanese>再武装できる量</Japanese>
             <Korean>재보급 양</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
@@ -89,58 +89,68 @@
             <Italian>Ammontare basato sul calibro</Italian>
             <Spanish>Cantidad basada en el calibre</Spanish>
             <French>Quantité basée sur le calibre</French>
-            <Japanese>口径に基づいた度合い</Japanese>
+            <Japanese>口径に基づいた量</Japanese>
             <Korean>구경에 따라 수량 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
             <English>Ammunition supply</English>
             <German>Munitionsvorat</German>
             <Italian>Scorta munizioni</Italian>
+            <Japanese>弾薬の供給</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
             <English>How much ammunition does an ammo truck carry?</English>
             <German>Wie viel Munition transportiert ein Munitionslaster?</German>
             <Italian>Quante munizioni può trasportare un camion?</Italian>
+            <Japanese>弾薬トラックがどの位の弾薬を供給できるようにしますか？</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
             <English>Unlimited ammo supply</English>
             <German>Unbegrenzter Munitionsvorat</German>
             <Italian>Scorta munizioni infinita</Italian>
+            <Japanese>無制限供給</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_limited">
             <English>Limited ammo supply based on caliber</English>
             <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
             <Italian>Scorta munizioni limitata in base al calibro</Italian>
+            <Japanese>口径に基づいた限定的供給</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
             <English>Only specific Magazines</English>
             <German>Nur bestimmte Magazine</German>
             <Italian>Solo specifici caricatori</Italian>
+            <Japanese>特定の弾薬のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
             <English>Check remaining ammunition</English>
             <German>Verbleibende Munition prüfen</German>
             <Italian>Controlla munizioni rimanenti</Italian>
+            <Japanese>残弾薬を確認</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
             <English>Checking remaining ammunition...</English>
             <German>Überprüfe verbleibende Munition...</German>
             <Italian>Controllando le munizioni rimanenti</Italian>
+            <Japanese>残弾薬を確認しています・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
             <English>There is ammunition worth %1 points left.</English>
             <German>Es ist noch Munition für %1 Punkte übrig.</German>
             <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
+            <Japanese>この弾薬は%1残っている</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
             <English>The following ammunition is left:%1</English>
             <German>Folgende Munition ist übrig:%1</German>
             <Italian>Mancano le seguenti:%1</Italian>
+            <Japanese>この弾薬の残りは:%1</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Hint_Empty">
             <English>There is no ammunition left.</English>
             <German>Es ist keine Munition übrig.</German>
             <Italian>Non ci sono munizioni rimanenti.</Italian>
+            <Japanese>弾薬は残っていません。</Japanese>
         </Key>
         <Key ID="STR_ACE_Rearm_Rearm">
             <English>Rearm</English>
