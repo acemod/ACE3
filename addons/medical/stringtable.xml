@@ -4901,5 +4901,13 @@
             <Japanese>AI は気絶している人へ、ためらってから射撃します</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_openLid">
+            <English>Open lid</English>
+            <German>Deckel aufklappen</German>
+        </Key>
+        <Key ID="STR_ACE_Medical_closeLid">
+            <English>Close lid</English>
+            <German>Deckel zuklappen</German>
+        </Key>
     </Package>
 </Project>
