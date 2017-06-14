@@ -4,48 +4,59 @@
         <Key ID="STR_ACE_QuickMount_Category">
             <English>Quick Mount</English>
             <Italian>Entrata Rapida</Italian>
+            <Japanese>クイック マウント</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
             <German>Fahrzeug schnell montieren</German>
             <Polish>Pojazd szybkie mocowanie</Polish>
             <Italian>Entrata rapida veicolo</Italian>
+            <Japanese>車両クイック マウント</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
             <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
+            <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
             <Italian>Veicolo Pieno</Italian>
+            <Japanese>車両は満員</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
             <Italian>Distanza</Italian>
+            <Japanese>距離</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
             <Italian>Distanza massima per controllare i veicoli.</Italian>
+            <Japanese>車両を確認できる最大距離</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
             <Italian>Veicolo Bloccato.</Italian>
+            <Japanese>車両は施錠されている</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
             <Italian>Velocità Massima (km/h)</Italian>
+            <Japanese>最高速度 (km/h)</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
+            <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
             <Italian>Priorità Sedile</Italian>
+            <Japanese>優先席</Japanese>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
             <Italian>Priorità del sedile in entrata</Italian>
+            <Japanese>搭乗の際の優先順位</Japanese>
         </Key>
     </Package>
 </Project>
