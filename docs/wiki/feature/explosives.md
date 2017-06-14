@@ -41,6 +41,8 @@ Enables attaching explosives to vehicles.
 - Select `Disarm`.
 - You are safe to pick it up after the action has completed.
 
+**Tip:** To increase the success rate when defusing, make sure you crawl up to the IED.
+
 ## 3. Dependencies
 
 {% include dependencies_list.md component="explosives" %}

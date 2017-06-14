@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_ai">
         <Key ID="STR_ACE_medical_ai_enabledFor_OnlyServerAndHC">
@@ -8,6 +8,8 @@
             <Russian>Нур сервера унд HC</Russian>
             <Japanese>サーバーと HC のみ</Japanese>
             <Polish>Tylko serwer i HC</Polish>
+            <French>Seulement sur le server ou le HC</French>
+            <Italian>Solo Server e HC</Italian>
         </Key>
     </Package>
 </Project>

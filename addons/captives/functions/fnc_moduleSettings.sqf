@@ -8,6 +8,9 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [LOGIC] call ace_captives_fnc_moduleSettings
+ *
  * Public: No
  */
 

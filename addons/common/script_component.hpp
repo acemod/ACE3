@@ -19,3 +19,16 @@
 #define VERSION_CONFIG_COMMON VERSION_CONFIG;\
     versionDesc = "ACE 3";\
     versionAct = QUOTE(call COMPILE_FILE(init_versionTooltip))
+
+
+#define DIG_SURFACE_BLACKLIST [ \
+    "concrete", "concrete_exp", "concrete_int", "int_concrete", "int_concrete_exp", \
+    "pavement_exp", "int_pavement_exp", \
+    "tiling", "tiles_int", "int_tiles", \
+    "roof_tin", "roof_tiles", "rooftiles_exp", \
+    "tarmac", "asphalt_exp", \
+    "stones_exp", "rock", "stony", \
+    "metal", "gridmetal_exp", "metalplate_exp", "int_metalplate_exp", "metal_int", "wavymetal", "wavymetal_exp", "int_metal", "steel_exp", \
+    "lino_exp", "int_lino_exp", "int_mat_exp", \
+    "wood", "wood_int", "int_wood", "softwood_exp", "int_softwood_exp", "int_solidwood_exp" \
+]

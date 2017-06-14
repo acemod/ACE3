@@ -78,12 +78,18 @@ The Vector is controlled with 2 keys: the azimuth key and the range key; <kbd>Ta
 - Sight the circle on the first object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point).
 - Sight the second object and release <kbd>Tab&nbsp;↹</kbd>.
 
-### 2.9 Fall of shot
+#### 2.9 Fall of shot
 <img src="{{ site.baseurl }}/img/wiki/user/vector9.jpg" width="500" height="160" alt="Measuring Fall of shot"/>
 
 - Tap <kbd>Tab&nbsp;↹</kbd> once then press and hold it until the azimuth appears.
 - Sight the circle on the object and tap <kbd>R</kbd> while further holding <kbd>Tab&nbsp;↹</kbd>. The first measurement is confirmed ("1-P" = first point).
 - Sight the Fall of shot and release <kbd>Tab&nbsp;↹</kbd>. The left digits display the left (`L`)/right (`r`) correction value in meter and the right digits display the longer (`A` = add)/shorter (`d` = drop) correction value in meter. If <kbd>R</kbd> is tapped the height correction values will be displayed (`UP` and `dn`).
+
+#### 2.10 Setting the measurement units (degrees/mils &amp; meters/feet)
+
+- Tap <kbd>Tab&nbsp;↹</kbd> five times fast. "Unit SEtt" appears briefly.
+- Press <kbd>R</kbd> until the desired units are displayed.
+- Tap <kbd>Tab&nbsp;↹</kbd> five times fast to save the selection.
 
 ## 3. Dependencies
 

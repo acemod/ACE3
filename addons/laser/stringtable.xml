@@ -7,6 +7,8 @@
             <German>Laserstreuung-Simulationszähler</German>
             <Korean>레이저 분산 시뮬레이션 수</Korean>
             <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
+            <French>Compte de la simulation de la dispersion du laser</French>
+            <Italian>Contatore Simulazione Dispersione Laser</Italian>
         </Key>
         <Key ID="STR_ACE_Laser_laserCode">
             <English>Laser Code</English>

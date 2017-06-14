@@ -24,6 +24,7 @@ PREP(cycle_target_speed_direction);
 PREP(delete_gun);
 PREP(evaluate_option_menu_input);
 PREP(init);
+PREP(initGunList);
 PREP(insert_c1_ballistic_coefficient_data);
 PREP(insert_muzzle_velocity_data);
 PREP(parse_input);

@@ -7,19 +7,25 @@
             <German>Nur Spieler</German>
             <Korean>오직 플레이어만</Korean>
             <Polish>Tylko gracze</Polish>
+            <French>Joueurs seulement</French>
+            <Italian>Solo Giocatori</Italian>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_DisplayName">
             <English>Enable Blood Drops</English>
-            <Japanese>血の滴下を有効化</Japanese>
+            <Japanese>血痕を有効化</Japanese>
             <German>Aktiviere Blutspritzer</German>
             <Korean>피흘리기 활성화</Korean>
             <Polish>Włącz ślady krwi na ziemi</Polish>
+            <French>Active les gouttes de sang</French>
+            <Italian>Abilita Perdite di Sangue</Italian>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_Description">
             <English>Enable or disable Blood Drops created on bleeding and taking damage</English>
-            <Japanese>ダメージを受けたり、出血していると血が滴る様子の有効か無効化</Japanese>
+            <Japanese>ダメージを受けたり、出血していると出る血痕の有効か無効化</Japanese>
             <German>Aktiviere oder deaktiviere Blutspritzer, die durch Blutungen oder bei Schadensnahme entstehen.</German>
             <Polish>Włącz lub wyłącz pozostawianie śladów krwi na ziemi kiedy postać odnosi obrażenia bądź krwawi</Polish>
+            <French>(Dés)active les gouttes de sang lors d'un saignement ou de blessure</French>
+            <Italian>Abilita o disabilita la Perdite di Sangue create sanguinando e prendendo danno</Italian>
         </Key>
     </Package>
 </Project>

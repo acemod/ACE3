@@ -3,10 +3,10 @@
  * Cycles through the scope units
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_cycle_scope_unit

@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[args], 2] call ACE_minedetector_fnc_detectorLoop
+ *
  * Public: No
  */
 

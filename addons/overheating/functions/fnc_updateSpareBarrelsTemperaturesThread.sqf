@@ -18,7 +18,10 @@
 
 private _pairs = [];
 TRACE_1("updateSpareBarrelsTemperaturesThread1",GVAR(storedSpareBarrels));
-[GVAR(storedSpareBarrels), {_pairs pushBack [_key, _value];}] call CBA_fnc_hashEachPair;
+[GVAR(storedSpareBarrels), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
+    _pairs pushBack [_key, _value];
+}] call CBA_fnc_hashEachPair;
 TRACE_1("updateSpareBarrelsTemperaturesThread2",_pairs);
 {
     _x params ["_barrelMagazineID","_value"];

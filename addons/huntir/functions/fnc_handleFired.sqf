@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_huntir_fnc_handleFired
+ *
  * Public: No
  */
 #include "script_component.hpp"

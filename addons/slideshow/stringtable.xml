@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
         <Key ID="STR_ACE_Slideshow_DisplayName">
@@ -44,23 +44,23 @@
             <Korean>물체</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Objects_Description">
-            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple. Reference INFO for object support.</English>
-            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt. Weiteres in der INFO für unterstützte Objekte.</German>
+            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
+            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt.</German>
             <French>Nom d'objets (peuvent aussi être des objets synchronisés) sur lesquels les diaporamas vont être affichées, séparation par virgule si plusieurs.</French>
-            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1. Sprawdź opis modułu aby dowiedzieć się jakie obiekty są wspierane przez moduł.</Polish>
-            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva. Objektumtámogatásért az INFO-t tekintsd meg.</Hungarian>
-            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um. Referência INFO para suporte do objeto.</Portuguese>
-            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми. Посмотрите описание, чтобы понять, какие объекты поддерживаются.</Russian>
-            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas. Referencia INFO para el soporte del objeto.</Spanish>
-            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více. Zkontrolujte POPIS abyste zjistili, zda je objekt podporován modulem.</Czech>
-            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno. Fai riferimento ad INFO per gli oggetti supportati.</Italian>
+            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1.</Polish>
+            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
+            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um.</Portuguese>
+            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми.</Russian>
+            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas.</Spanish>
+            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více.</Czech>
+            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno.</Italian>
             <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
-            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다. 자세한 물체목록은 INFO에서 확인하십시요.</Korean>
+            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
             <German>Steuereinheit</German>
-            <French>Controleurs</French>
+            <French>Contrôleurs</French>
             <Polish>Kontroler</Polish>
             <Hungarian>Vezérlők</Hungarian>
             <Portuguese>Controles</Portuguese>
@@ -74,7 +74,7 @@
         <Key ID="STR_ACE_Slideshow_Controllers_Description">
             <English>Controller object names, separated by commas if multiple.</English>
             <German>Objekte die als Steuereinheit fungieren. Werden ggf. durch Kommata getrennt.</German>
-            <French>Noms de controleur d'objets, séparation par virgule si plusieurs</French>
+            <French>Noms de contrôleur d'objets, séparation par virgule si plusieurs</French>
             <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
             <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
             <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
@@ -139,9 +139,23 @@
             <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
             <Korean>상호작용 메세지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
+            <English>Set Name</English>
+            <Polish>Ustaw nazwę</Polish>
+            <Japanese>名前設定</Japanese>
+            <French>Définir le nom</French>
+            <Italian>Imposta Nome</Italian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_Description">
+            <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
+            <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
+            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
+            <French>Un nom qui sera utilisé pour interagir avec plusieurs diaporamas. Par défaut : "Slides"</French>
+            <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
+        </Key>
         <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
             <English>Slide Duration</English>
-            <French>Durée d'une diapositive</French>
+            <French>Durée d'un diaporama</French>
             <Polish>Czas trwania slajdów</Polish>
             <Hungarian>Dia időtartam</Hungarian>
             <Portuguese>Duração do Slide</Portuguese>
@@ -155,7 +169,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
-            <French>Durée de chaque diapositive. Dafaut: 0 (transition automatique désactivée)</French>
+            <French>Durée de chaque diaporama. Défaut: 0 (transition automatique désactivée)</French>
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
             <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
@@ -169,7 +183,7 @@
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
-            <French>Diapositives</French>
+            <French>Diapo</French>
             <Polish>Slajdy</Polish>
             <Hungarian>Diák</Hungarian>
             <Portuguese>Slides</Portuguese>

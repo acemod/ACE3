@@ -36,6 +36,11 @@ if (_throwable isEqualTo [] && {!_primed}) exitWith {
 
 private _throwableMag = _throwable param [0, "#none"];
 
+// If not primed, double check we actually have the magazine in inventory
+if ((!_primed) && {!((_throwableMag in (uniformItems ACE_player)) || {_throwableMag in (vestItems ACE_player)} || {_throwableMag in (backpackItems ACE_player)})}) exitWith {
+    [ACE_player, "No valid throwable (glitched currentThrowable)"] call FUNC(exitThrowMode);
+};
+
 // Get correct throw power for primed grenade
 if (_primed) then {
     private _ammoType = typeOf _activeThrowable;

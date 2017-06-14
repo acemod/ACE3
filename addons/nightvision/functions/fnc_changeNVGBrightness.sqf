@@ -7,7 +7,7 @@
  * 1: Change in brightness (1 or -1) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, 1] call ace_nightvision_fnc_changeNVGBrightness

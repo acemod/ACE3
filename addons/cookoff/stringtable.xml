@@ -9,6 +9,8 @@
             <Japanese>誘爆を有効化</Japanese>
             <Korean>쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj efekty samozapłonu amunicji</Polish>
+            <French>Active le cook-off</French>
+            <Italian>Abilita Esplosione</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
             <English>Enables cook off and related vehicle destruction effects.</English>
@@ -18,6 +20,8 @@
             <Japanese>誘爆を有効化し、車両が誘爆によって破壊されていきます。</Japanese>
             <Korean>쿡오프 현상을 활성화 하고 관련된 차량에 폭발 이펙트를 적용합니다.</Korean>
             <Polish>Aktywuje efekt samozapłonu amunicji na zniszczonych pojazdach.</Polish>
+            <French>Active le cook-off (autocombustion des munitions) et les effets de destruction liés.</French>
+            <Italian>Abilita l'esplosione e i relativi effetti di distruzione del veicolo.</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <Original>Wreck (Turret)</Original>
@@ -39,6 +43,8 @@
             <German>Selbstzündung für Munitionskisten ermöglichen</German>
             <Korean>탄약 상자 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
+            <French>Cook-off caisses de munitions</French>
+            <Italian>Abilita esplosione cassa munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
@@ -46,6 +52,8 @@
             <German>Ermöglicht Selbstzündung von Munitionskisten.</German>
             <Korean>탄약 상자에 쿡오프 현상을 적용합니다.</Korean>
             <Polish>Aktywuje samozapłon skrzyń z amunicją</Polish>
+            <French>Active le cook-off sur toutes les caisses de munitions.</French>
+            <Italian>Abilita l'esplosione della cassa di munizioni. </Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
@@ -53,18 +61,30 @@
             <German>Selbstzündung für Munition ermöglichen</German>
             <Korean>탄약 쿡오프 현상 활성화</Korean>
             <Polish>Aktywuj samozapłon amunicji</Polish>
+            <French>Active le cook-off des munitions</French>
+            <Italian>Abilita Esplosione munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
             <Japanese>弾薬が誘爆します。車両が燃えると、搭載している弾薬が激しく燃え上がりす。</Japanese>
             <German>Ermöglicht Selbstzündung von Munition. Feuert Projektile der Munition ab, solange das Fahrzeug brennt und Munition besitzt.</German>
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
+            <French>Mets à feu les munitions lorsqu'un véhicule est en feu et contient des munitions.</French>
+            <Italian>Abilita l'esplosione delle munizioni. Spara munizioni di proiettili quando il veicolo va a fuoco e contiene munizioni.</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
+            <Polish>Czas trwania samozapłonu amunicji</Polish>
+            <Japanese>弾薬の誘爆持続時間</Japanese>
+            <French>Durée cook-off des munitions</French>
+            <Italian>Durata esplosione munizioni</Italian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
+            <French>Multiplicateur de la durée du cook-off des munitions [Une valeur de 0 désactive l'effet]</French>
+            <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
+            <Japanese>誘爆の持続時間を乗数で設定。[0 に設定で誘爆を無効化]</Japanese>
+            <Italian>Moltiplicatore della durata dell'esplosione [Impostare 0 disabiliterà l'esplosione delle munizioni]</Italian>
         </Key>
     </Package>
 </Project>

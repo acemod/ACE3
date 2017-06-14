@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_advanced_ballistics_fnc_displayProtractor
+ *
  * Public: No
  */
 #include "script_component.hpp"

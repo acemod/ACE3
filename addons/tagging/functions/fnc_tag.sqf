@@ -49,15 +49,11 @@ if ((!isNull _object) && {
     if (_object isKindOf "Static") exitWith {false};
 
     // If the class is not categorized correctly search the cache
-    private _array = str(_object) splitString " ";
-    private _str = toLower (_array select 1);
-    TRACE_1("Object:",_str);
-    private _objClass = GVAR(cacheStaticModels) getVariable _str;
+    private _modelName = (getModelInfo _object) select 0;
+    private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+    TRACE_2("Object:",_modelName,_isStatic);
     // If the class in not on the cache, exit
-    if (isNil "_objClass") exitWith {
-        false
-    };
-    true
+    (!_isStatic)
 }) exitWith {
     TRACE_1("Pointed object is non static",_object);
     false
@@ -81,7 +77,7 @@ private _v3 = _v2 vectorCrossProduct _v1;
 
 TRACE_3("Reference:", _v1, _v2, _v3);
 
-_fnc_isOk = {
+private _fnc_isOk = {
     params ["_rx", "_ry"];
     private _startPosASL2 = _touchingPoint vectorAdd (_v2 vectorMultiply _rx) vectorAdd (_v3 vectorMultiply _ry) vectorAdd (_v1 vectorMultiply (-0.06));
     private _endPosASL2   = _startPosASL2 vectorAdd (_v1 vectorMultiply (0.12));
