@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-TRACE_1("refresh",_this);
+TRACE_1("refreshGoggleType",_this);
 
 if (!GVAR(running)) exitWith {};
 

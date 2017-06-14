@@ -6,7 +6,7 @@
  * 0: Player <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ace_nightvision_fnc_onLoadoutChange
@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 params ["_player"];
-TRACE_1("loadoutChange",_player);
+TRACE_1("onLoadoutChange",_player);
 
 private _newHMD = hmd _player;
 if (_newHMD != GVAR(playerHMD)) then {

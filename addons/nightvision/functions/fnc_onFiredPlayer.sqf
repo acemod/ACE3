@@ -6,10 +6,10 @@
  * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * [clientFiredBIS-XEH] call ace_nightvision_fnc_blending
+ * [clientFiredBIS-XEH] call ace_nightvision_fnc_onFiredPlayer
  *
  * Public: No
  */

@@ -6,7 +6,7 @@
  * 0: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [true] call ace_nightvision_fnc_setupDisplayEffects
@@ -16,7 +16,7 @@
 #include "script_component.hpp"
 
 params ["_activated"];
-TRACE_1("setup",_activated);
+TRACE_1("setupDisplayEffects",_activated);
 
 // Backup and restore changes to fog:
 // Note: modifying the fog

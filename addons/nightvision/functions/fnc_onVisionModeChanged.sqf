@@ -17,6 +17,7 @@
 #include "script_component.hpp"
 
 params ["_unit", "_visionMode"];
+TRACE_2("onVisionModeChanged",_unit,_visionMode);
 
 // Start PFEH when entering night vision mode:
 if (_visionMode == 1) then {
