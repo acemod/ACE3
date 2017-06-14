@@ -56,7 +56,7 @@ private _condition = {
             private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
             private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
             (_hasCargoPublic || _hasCargoConfig) && {_x != _target}
-        } count (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE])}
+        } count (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE])}
 };
 private _statement = {
     params ["_target", "_player"];
