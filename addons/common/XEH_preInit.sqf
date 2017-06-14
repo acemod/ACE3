@@ -18,7 +18,7 @@ GVAR(runAtSettingsInitialized) = [];
 //Debug
 ACE_COUNTERS = [];
 
-// Load settings
+// Load ace_settings into CBA Settings
 [] call FUNC(cbaSettings);
 
 GVAR(statusEffect_Names) = [];

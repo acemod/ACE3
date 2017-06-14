@@ -1,3 +1,18 @@
+/*
+ * Author: PabstMirror
+ * Converts a ace_setting config into a cba setting
+ *
+ * Arguments:
+ * 0: Setting config <CONFIG>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_common_fnc_cbaSettings_loadFromConfig;
+ *
+ * Public: No
+ */
 // #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
@@ -21,11 +36,6 @@ private _cbaIsGlobal = (!_isClientSettable) || _isForced;
 if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLower _varName);};
 
 // Basic handling of setting types CBA doesn't support:
-if (_typeName == "STRING") exitWith {
-    WARNING_1("Setting [%1] is type STRING - limited support",_varName);
-    private _value = getText (_config >> "value");
-    if (isServer) then {missionNamespace setVariable [_varName, _value, true];};
-};
 if (_typeName == "ARRAY") exitWith {
     WARNING_1("Setting [%1] is type ARRAY - limited support",_varName);
     private _value = getArray (_config >> "value");
@@ -61,6 +71,11 @@ case ("COLOR"): {
         _cbaSettingType = "COLOR";
         _cbaValueInfo = getArray (_config >> "value");
     };
+case ("STRING"): {
+        if (!isText (_config >> "value")) then {WARNING_2("Setting [%1] - value type [%2] is missing text",_varName,_typeName);};
+        _cbaSettingType = "EDITBOX";
+        _cbaValueInfo = getText (_config >> "value");
+    };
 };
 
 if (_cbaSettingType == "") exitWith {ERROR_3("Setting [%1] - value type [%2] is unknown - %3",_varName,_typeName,_cbaValueInfo);};
@@ -68,14 +83,15 @@ if (_cbaSettingType == "") exitWith {ERROR_3("Setting [%1] - value type [%2] is 
 if (_localizedDescription == "") then {_localizedDescription = _varName};
 if (_category == "") then {
     // WARNING_1("Setting [%1] - no category",_varName);
-    _category = "ACE_TEST";
+    _category = "Uncategorized";
 };
+if (((_varName select [0, 3]) == "ACE") && {(_category select [0, 3]) != "ACE"}) then {_category = format ["ACE - %1", _category];};
 
 private _code = compile format ["['ace_settingChanged', ['%1', _this]] call CBA_fnc_localEvent", _varName];
 
 TRACE_2("setting",_cbaSettingType,_cbaValueInfo);
 TRACE_4("",_isForced,_cbaIsGlobal,_category,_cbaValueInfo);
-private _return = [_varName, _cbaSettingType, _localizedName, _category, _cbaValueInfo, _cbaIsGlobal, _code] call CBA_settings_fnc_init;
+private _return = [_varName, _cbaSettingType, [_localizedName, _localizedDescription], _category, _cbaValueInfo, _cbaIsGlobal, _code] call CBA_settings_fnc_init;
 TRACE_1("returned",_return);
 if ((isNil "_return") || {_return != 0}) then {ERROR_1("Setting [%1] - CBA Error",_varName);};
 _return

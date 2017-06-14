@@ -1,3 +1,18 @@
+/*
+ * Author: PabstMirror
+ * Called at pre-init: Loads all ace_settings and converts them to CBA Settings.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_common_fnc_cbaSettings;
+ *
+ * Public: No
+ */
 #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
