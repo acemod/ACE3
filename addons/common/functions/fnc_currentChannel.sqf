@@ -8,6 +8,9 @@
  * Return Value:
  * The current channel ("group", "side", "global", "command", "vehicle", "direct", "custom_X") <STRING>
  *
+ * Example:
+ * [] call ace_common_fnc_currentChannel
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

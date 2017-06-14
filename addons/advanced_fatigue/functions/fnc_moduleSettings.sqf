@@ -7,6 +7,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [MODULE] call ace_advanced_fatigue_fnc_moduleSettings
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 params ["_logic"];

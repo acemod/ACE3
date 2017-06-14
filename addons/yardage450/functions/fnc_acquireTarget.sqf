@@ -3,12 +3,13 @@
  * Fires the laser to acquire the target
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_yardage450_fnc_acquireTarget
  *
  * Public: No
  */

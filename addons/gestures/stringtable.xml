@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_Name">
@@ -8,7 +8,7 @@
             <Czech>ACE Posunky</Czech>
             <French>ACE Gestes</French>
             <Hungarian>ACE Kézjelek</Hungarian>
-            <Italian>ACE Gesti</Italian>
+            <Italian>Gesti ACE</Italian>
             <Portuguese>ACE Gestos</Portuguese>
             <Russian>ACE Жесты</Russian>
             <Spanish>ACE Gestos</Spanish>
@@ -236,7 +236,7 @@
             <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
             <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
             <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
-            <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente Hotkey, o disabilita completamente</Italian>
+            <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente tasti di scelta rapida, o disabilita completamente</Italian>
             <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
             <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
             <Portuguese>Mostra gestos no menu de interação, ou utilize um dos atalhos de teclado ou desative completamente</Portuguese>
@@ -249,7 +249,7 @@
             <German>Nur Schnelltasten</German>
             <Czech>Pouze klávesové zkratky</Czech>
             <Polish>Tylko skróty klaw.</Polish>
-            <Italian>Solo Hotkey</Italian>
+            <Italian>Solo tasti di scelta rapida</Italian>
             <Spanish>Solo mediante teclas</Spanish>
             <French>Seulement les touches</French>
             <Portuguese>Somente atalhos de teclado</Portuguese>
@@ -262,7 +262,7 @@
             <German>Schnelltasten+ Interaktionsmenü</German>
             <Czech>Klávesové zkratky + interakční menu</Czech>
             <Polish>Skróty klaw. + menu interakcji</Polish>
-            <Italian>Hotkey + Menù Interazione</Italian>
+            <Italian>Tasti di scelta rapida + Menù Interazione</Italian>
             <Spanish>Teclas y Menú de Interacción</Spanish>
             <French>Touches + menu d'interaction</French>
             <Portuguese>Atalhos + Menu de Interação</Portuguese>

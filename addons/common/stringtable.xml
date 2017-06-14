@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -69,7 +69,7 @@
             <Portuguese>N</Portuguese>
             <Hungarian>É</Hungarian>
             <Italian>N</Italian>
-            <Japanese>N</Japanese>
+            <Japanese>北</Japanese>
             <Korean>북</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
@@ -83,7 +83,7 @@
             <Portuguese>NNE</Portuguese>
             <Hungarian>ÉÉK</Hungarian>
             <Italian>NNE</Italian>
-            <Japanese>NNE</Japanese>
+            <Japanese>北北東</Japanese>
             <Korean>북북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NE">
@@ -97,7 +97,7 @@
             <Portuguese>NE</Portuguese>
             <Hungarian>ÉK</Hungarian>
             <Italian>NE</Italian>
-            <Japanese>NE</Japanese>
+            <Japanese>北東</Japanese>
             <Korean>북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
@@ -111,7 +111,7 @@
             <Portuguese>LNE</Portuguese>
             <Hungarian>KÉK</Hungarian>
             <Italian>ENE</Italian>
-            <Japanese>ENE</Japanese>
+            <Japanese>東北東</Japanese>
             <Korean>동북동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_E">
@@ -125,7 +125,7 @@
             <Portuguese>L</Portuguese>
             <Hungarian>K</Hungarian>
             <Italian>E</Italian>
-            <Japanese>E</Japanese>
+            <Japanese>東</Japanese>
             <Korean>동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
@@ -139,7 +139,7 @@
             <Portuguese>LSE</Portuguese>
             <Hungarian>KDK</Hungarian>
             <Italian>ESE</Italian>
-            <Japanese>ESE</Japanese>
+            <Japanese>東南東</Japanese>
             <Korean>동남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SE">
@@ -153,7 +153,7 @@
             <Portuguese>SE</Portuguese>
             <Hungarian>DK</Hungarian>
             <Italian>SE</Italian>
-            <Japanese>SE</Japanese>
+            <Japanese>南東</Japanese>
             <Korean>남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
@@ -167,7 +167,7 @@
             <Portuguese>SSE</Portuguese>
             <Hungarian>DDK</Hungarian>
             <Italian>SSE</Italian>
-            <Japanese>SSE</Japanese>
+            <Japanese>南南東</Japanese>
             <Korean>남남동</Korean>
         </Key>
         <Key ID="STR_ACE_Common_S">
@@ -181,7 +181,7 @@
             <Portuguese>S</Portuguese>
             <Hungarian>D</Hungarian>
             <Italian>S</Italian>
-            <Japanese>S</Japanese>
+            <Japanese>南</Japanese>
             <Korean>남</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
@@ -195,7 +195,7 @@
             <Portuguese>SSO</Portuguese>
             <Hungarian>DDNy</Hungarian>
             <Italian>SSO</Italian>
-            <Japanese>SSW</Japanese>
+            <Japanese>南南西</Japanese>
             <Korean>남남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_SW">
@@ -209,7 +209,7 @@
             <Portuguese>SO</Portuguese>
             <Hungarian>DNy</Hungarian>
             <Italian>SO</Italian>
-            <Japanese>SW</Japanese>
+            <Japanese>南西</Japanese>
             <Korean>남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
@@ -223,7 +223,7 @@
             <Portuguese>OSO</Portuguese>
             <Hungarian>NyDNy</Hungarian>
             <Italian>OSO</Italian>
-            <Japanese>WSW</Japanese>
+            <Japanese>西南西</Japanese>
             <Korean>서남서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_W">
@@ -237,7 +237,7 @@
             <Portuguese>O</Portuguese>
             <Hungarian>Ny</Hungarian>
             <Italian>O</Italian>
-            <Japanese>W</Japanese>
+            <Japanese>西</Japanese>
             <Korean>서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
@@ -251,7 +251,7 @@
             <Portuguese>ONO</Portuguese>
             <Hungarian>NyÉNy</Hungarian>
             <Italian>ONO</Italian>
-            <Japanese>WNW</Japanese>
+            <Japanese>北北西</Japanese>
             <Korean>서북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NW">
@@ -265,7 +265,7 @@
             <Portuguese>NO</Portuguese>
             <Hungarian>ÉNy</Hungarian>
             <Italian>NO</Italian>
-            <Japanese>NW</Japanese>
+            <Japanese>北西</Japanese>
             <Korean>북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
@@ -279,7 +279,7 @@
             <Portuguese>NNO</Portuguese>
             <Hungarian>ÉÉNy</Hungarian>
             <Italian>NNO</Italian>
-            <Japanese>NNW</Japanese>
+            <Japanese>北北西</Japanese>
             <Korean>북북서</Korean>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
@@ -940,6 +940,20 @@
             <Portuguese>Sem espaço para descarregar</Portuguese>
             <Russian>Нет места для выгрузки</Russian>
             <Japanese>降ろすための空間がありません</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Common_KeybindToggle">
+            <English>Toggle</English>
+            <Polish>переключить</Polish>
+            <Russian>переключить</Russian>
+            <French>Basculer</French>
+            <Spanish>Cambiar</Spanish>
+            <Italian>Cambia</Italian>
+            <German>Umschalten</German>
+            <Hungarian>pecek</Hungarian>
+            <Czech>přep.</Czech>
+            <Portuguese>alternar</Portuguese>
+            <Japanese>トグル</Japanese>
+            <Korean>토글</Korean>
         </Key>
     </Package>
 </Project>

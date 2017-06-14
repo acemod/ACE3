@@ -11,37 +11,13 @@
     }; \
 }
 
-#define MACRO_REARM_TRUCK_ACTIONS \
-        class ACE_Actions: ACE_Actions { \
-            class ACE_MainActions: ACE_MainActions { \
-                class EGVAR(rearm,TakeAmmo) { \
-                    displayName = ECSTRING(rearm,TakeAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canTakeAmmo)); \
-                    insertChildren = QUOTE(_target call EFUNC(rearm,addRearmActions)); \
-                    exceptions[] = {"isNotInside"}; \
-                    showDisabled = 0; \
-                    priority = 2; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-                class EGVAR(rearm,StoreAmmo) { \
-                    displayName = ECSTRING(rearm,StoreAmmo); \
-                    distance = 7; \
-                    condition = QUOTE(_this call EFUNC(rearm,canStoreAmmo)); \
-                    statement = QUOTE(_this call EFUNC(rearm,storeAmmo)); \
-                    exceptions[] = {"isNotInside"}; \
-                    icon = QPATHTOEF(rearm,ui\icon_rearm_interact.paa); \
-                }; \
-            }; \
-        };
-
 #define MACRO_REFUEL_ACTIONS \
     class ACE_Actions: ACE_Actions { \
         class ACE_MainActions: ACE_MainActions { \
             class EGVAR(refuel,Refuel) { \
                 displayName = ECSTRING(refuel,Refuel); \
                 distance = 7; \
-                condition = "true"; \
+                condition = "alive _target"; \
                 statement = ""; \
                 showDisabled = 0; \
                 priority = 2; \
@@ -184,12 +160,6 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers: RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
-            };
-        };
     };
 
     class Helicopter_Base_H: Helicopter_Base_F {
@@ -226,11 +196,6 @@ class CfgVehicles {
                 condition = QUOTE([ARR_2(this,'doorLB')] call FUNC(canCloseDoor));
             };
         };
-        class EventHandlers: EventHandlers {
-            class RHSUSF_EventHandlers {
-                getOut = QUOTE(if !((_this select 0) getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)]) then {_this call rhs_fnc_uh60_doors});
-            };
-        };
 
         EQUIP_FRIES_ATTRIBUTE;
     };
@@ -262,6 +227,20 @@ class CfgVehicles {
             class OpenCargoDoor;
             class CloseCargoDoor: OpenCargoDoor {
                 condition = QUOTE([ARR_2(this,'ramp_anim')] call FUNC(canCloseDoor));
+            };
+        };
+    };
+
+    class rhsusf_CH53E_USMC: Helicopter_Base_H {
+        EGVAR(fastroping,enabled) = 1;
+        EGVAR(fastroping,ropeOrigins)[] = {{0,-9.5,2.6}};
+        EGVAR(fastroping,onCut) = QFUNC(onCut);
+        EGVAR(fastroping,onPrepare) = QFUNC(onPrepare);
+
+        class UserActions {
+            class RampOpen;
+            class RampClose: RampOpen {
+                condition = QUOTE([ARR_2(this,'ramp_bottom')] call FUNC(canCloseDoor));
             };
         };
     };
@@ -313,19 +292,19 @@ class CfgVehicles {
     class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class rhsusf_M978A4_usarmy_wd: rhsusf_M977A4_usarmy_wd {
@@ -370,7 +349,7 @@ class CfgVehicles {
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
-        MACRO_REARM_TRUCK_ACTIONS
+        ace_rearm_supply = 1200;
     };
 
     class APC_Tracked_03_base_F;

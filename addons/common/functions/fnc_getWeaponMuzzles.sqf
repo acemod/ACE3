@@ -8,6 +8,9 @@
  * Return Value:
  * All weapon muzzles <ARRAY>
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponMuzzles
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

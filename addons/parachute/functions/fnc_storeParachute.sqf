@@ -1,18 +1,19 @@
 /*
-   * Author: joko // Jonas
-   * Add the Reserve Parachute to Units or Save Backpack if is a Parachute in Unit
-   *
-   * Arguments:
-   * None
-   *
-   * Return Value:
-   * 0: Unit
-   *
-   * Example:
-   * None
-   *
-   * Public: No
-   */
+ * Author: joko // Jonas
+ * Add the Reserve Parachute to Units or Save Backpack if is a Parachute in Unit
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * 0: Unit <OBJECT>
+ *
+ * Example:
+ * call ace_parachute_fnc_storeParachute
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 params ["_unit"];

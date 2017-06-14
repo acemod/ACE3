@@ -8,8 +8,8 @@
  * 2: Ignore 1 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  * 2: Ignore 2 (e.g. Player's vehicle) <OPTIONAL><OBJECT>
  *
- * Return value:
- * <ARRAY> [posASL, distance] - pos will be nil if no intersection
+ * Return Value:
+ * [posASL, distance] - pos will be nil if no intersection <ARRAY>
  *
  * Example:
  * [getPosASL player, [0,1,0], player] call ace_laser_fnc_shootRay;

@@ -1,5 +1,5 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, SilentSpike
  * Get the cargo size of an object.
  *
  * Arguments:
@@ -17,23 +17,13 @@
 
 params ["_item"];
 
-scopeName "return";
-
-private _isVirtual = (_item isEqualType "");
-private _itemClass = if (_isVirtual) then {_item} else {typeOf _item};
-private _config = (configFile >> "CfgVehicles" >> _itemClass >> QGVAR(size));
-
-if (_isVirtual) then {
-    if (isNumber _config) then {
-        (getNumber _config) breakOut "return";
-    };
+// Virtual items are much easier to deal with
+if (_item isEqualType "") then {
+    CARGO_SIZE(_item)
 } else {
-    if (!isNil {_item getVariable QGVAR(size)}) then {
-        (_item getVariable QGVAR(size)) breakOut "return";
-    };
-    if (isNumber _config) then {
-        (getNumber _config) breakOut "return";
+    if (isNil {_item getVariable QGVAR(size)}) then {
+        CARGO_SIZE(typeOf _item)
+    } else {
+        _item getVariable QGVAR(size)
     };
 };
-
--1

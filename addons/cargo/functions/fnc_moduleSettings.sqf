@@ -22,5 +22,6 @@ params ["_logic", "", "_activated"];
 if (!_activated) exitWith {};
 
 [_logic, QGVAR(enable), "enable"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(paradropTimeCoefficent), "paradropTimeCoefficent"] call EFUNC(common,readSettingFromModule);
 
 INFO("Cargo Module Initialized.");

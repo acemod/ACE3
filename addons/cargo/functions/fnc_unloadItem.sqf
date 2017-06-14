@@ -5,14 +5,15 @@
  * Arguments:
  * 0: Item <OBJECT or STRING>
  * 1: Vehicle <OBJECT>
+ * 2: Unloader <OBJECT> (default: objNull)
  *
  * Return Value:
- * Object unloaded <BOOL>
+ * Object was unloaded <BOOL>
  *
  * Example:
  * [object, vehicle] call ace_cargo_fnc_unloadItem
  *
- * Public: No
+ * Public: Yes
  */
 #include "script_component.hpp"
 

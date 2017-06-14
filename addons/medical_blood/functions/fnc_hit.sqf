@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, 5] call ACE_medical_blood_fnc_hit
+ *
  * Public: No
  */
 #include "script_component.hpp"

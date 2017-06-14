@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * <NIL>
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_handleUnitVitals
  *
  * Public: No
  */

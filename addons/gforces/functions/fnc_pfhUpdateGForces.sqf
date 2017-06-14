@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[args], 5] call ace_gforces_fnc_pfhUpdateGForces
+ *
  * Public: No
  */
  #include "script_component.hpp"
@@ -17,7 +20,7 @@
 if ((CBA_missionTime - GVAR(lastUpdateTime)) < INTERVAL) exitWith {};
 GVAR(lastUpdateTime) = CBA_missionTime;
 
-if (isNull ACE_player || !(alive ACE_player)) exitWith {};
+if (GVAR(playerIsVirtual) || {!alive ACE_player}) exitWith {};
 
 BEGIN_COUNTER(everyInterval);
 
@@ -27,7 +30,7 @@ private _accel = ((_newVel vectorDiff GVAR(oldVel)) vectorMultiply (1 / INTERVAL
 private _currentGForce = (((_accel vectorDotProduct vectorUp (vehicle ACE_player)) / 9.8) max -10) min 10;
 
 GVAR(GForces) set [GVAR(GForces_Index), _currentGForce];
-GVAR(GForces_Index) = (GVAR(GForces_Index) + 1) % round (AVERAGEDURATION / INTERVAL);
+GVAR(GForces_Index) = (GVAR(GForces_Index) + 1) % 30; // 30 = round (AVERAGEDURATION / INTERVAL);
 GVAR(oldVel) = _newVel;
 
 /* Source: https://github.com/KoffeinFlummi/AGM/issues/1774#issuecomment-70341573

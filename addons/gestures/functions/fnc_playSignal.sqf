@@ -6,7 +6,7 @@
  * Animation <STRING>
  *
  * Return Value:
- * <BOOL>
+ * Boolean <BOOL>
  *
  * Example:
  * "GeniusAnimation" call ace_gestures_fnc_playSignal

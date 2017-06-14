@@ -1,8 +1,8 @@
-name = "Advanced Combat Environment 3.8.3";
+name = "Advanced Combat Environment 3.9.2";
 picture = "logo_ace3_ca.paa";
 actionName = "GitHub";
 action = "https://github.com/acemod/ACE3";
-description = "ACE3 - Version 3.8.3";
+description = "ACE3 - Version 3.9.2";
 logo = "logo_ace3_ca.paa";
 logoOver = "logo_ace3_ca.paa";
 tooltip = "ACE3";

@@ -204,7 +204,10 @@ Exceptions:
 
 ## 5. Code Style
 
+To help with some of the coding style we recommend you get the plugin [EditorConfig](http://editorconfig.org/#download) for your editor. It will help with correct indentations and deleting trailing spaces.
+
 ### 5.1 Braces placement
+
 Braces `{ }` which enclose a code block will have the first bracket placed behind the statement in case of `if`, `switch` statements or `while`, `waitUntil` & `for` loops. The second brace will be placed on the same column as the statement but on a separate line.
 
 - Opening brace on the same line as keyword
@@ -264,7 +267,7 @@ class Three {foo = 3;};
 Putting the opening brace in its own line wastes a lot of space, and keeping the closing brace on the same level as the keyword makes it easier to recognize what exactly the brace closes.
 
 ### 5.2 Indents
-Ever new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed.
+Every new scope should be on a new indent. This will make the code easier to understand and read. Indentations consist of 4 spaces. Tabs are not allowed. Tabs or spaces are not allowed to trail on a line, last character needs to be non blank.
 
 Good:
 
@@ -589,6 +592,15 @@ All ACE3 components shall be implemented in an event driven fashion. This is don
 Event handlers in ACE3 are implemented through the CBA event system (ACE3's own event system is deprecated since 3.6.0). They should be used to trigger or allow triggering of specific functionality.
 
 More information on the [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} and [CBA Player Events](https://github.com/CBATeam/CBA_A3/wiki/Player-Events){:target="_blank"} pages.
+
+<div class="panel info">
+    <h5>Warning about BIS event handlers:</h5>
+    <p>BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when passing a large code variable. Use a short code block that calls the function you want.</p>
+    ```js
+    player addEventHandler ["Fired", FUNC(handleFired)]; // bad
+    player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
+    ```
+</div>
 
 ### 7.4 Hashes
 

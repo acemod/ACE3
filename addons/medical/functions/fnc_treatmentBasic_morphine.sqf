@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_morphine
+ *
  * Public: No
  */
 

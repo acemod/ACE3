@@ -13,8 +13,7 @@
  * Example:
  * [logic, [unit1, unit2], true] call ace_advanced_throwing_fnc_moduleInit
  *
- * Public:
- * No
+ * Public: No
  */
 #include "script_component.hpp"
 

@@ -31,6 +31,10 @@ if !(isNil "_nozzle") then {
     if !(isNull _rope) then {
         ropeDestroy _rope;
     };
+    private _helper = _nozzle getVariable [QGVAR(helper), objNull];
+    if !(isNull _helper) then {
+        deleteVehicle _helper;
+    };
 
     {
         [QGVAR(resetLocal), [_x, _nozzle], _x] call CBA_fnc_targetEvent;

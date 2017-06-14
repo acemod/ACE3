@@ -1,3 +1,20 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Argument:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_laser_fnc_dev_drawVisibleLaserTargets
+ *
+ * Public: No
+ */
+
+
 // Dev Debug Function
 // Displays lasers and attempts to lock on to codes 1111 and 1112 from a target vehicle's view
 // On Screen Debug:
@@ -26,6 +43,7 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
 
 // Draw all lasers
 [GVAR(laserEmitters), {
+    //IGNORE_PRIVATE_WARNING ["_key", "_value"];
     // TRACE_2("",_key,_value);
     _value params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
 
