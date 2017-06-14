@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hellfire">
         <Key ID="STR_ACE_Hellfire_Hellfire">
@@ -12,11 +12,12 @@
             <Portuguese>Hellfire</Portuguese>
             <Hungarian>Hellfire</Hungarian>
             <Russian>Hellfire</Russian>
-            <Japanese>Hellfire</Japanese>
+            <Japanese>ヘルファイア</Japanese>
         </Key>
         <Key ID="STR_ACE_Hellfire_hellfireModeAction">
             <English>Set Hellfire mode</English>
             <Italian>Imposta modalità Hellfire</Italian>
+            <Japanese>ヘルファイア モードを設定</Japanese>
         </Key>
     </Package>
 </Project>

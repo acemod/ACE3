@@ -866,16 +866,19 @@
             <English>Suppressive Fire</English>
             <Italian>Fuoco di Soppressione</Italian>
             <French>Tir de suppression</French>
+            <Japanese>制圧射撃</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleAddFullArsenal_displayName">
             <English>Add full arsenal to object</English>
             <French>Ajouter arsenal complet à l'objet</French>
             <Italian>Aggiunge arsenale completo all'oggetto</Italian>
+            <Japanese>オブジェクトに完全なアーセナルを追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Zeus_moduleRemoveArsenal_displayName">
             <English>Remove arsenal from object</English>
             <French>Retirer arsenal de l'objet</French>
             <Italian>Rimuove arsenale completo dall'oggetto</Italian>
+            <Japanese>オブジェクトからアーセナルを削除</Japanese>
         </Key>
     </Package>
 </Project>
