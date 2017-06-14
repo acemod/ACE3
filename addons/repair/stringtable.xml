@@ -957,6 +957,7 @@
         <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
             <English>Advanced Engineer only</English>
             <Italian>Solo Geniere avanzato</Italian>
+            <Japanese>上級工兵のみ</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
