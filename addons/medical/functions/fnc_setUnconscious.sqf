@@ -37,7 +37,7 @@ if (!local _unit) exitWith {
     [QGVAR(setUnconscious), [_unit, _knockOut], _unit] call CBA_fnc_targetEvent;
     true
 };
-if (_knockOut isEqualTo (_unit getVariable [QGVAR(isUnconscious), false])) exitWith {
+if (_knockOut isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {
     WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]", _unit, _knockOut);
     false
 };

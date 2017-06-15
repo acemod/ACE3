@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-alive _unit && {!(_unit getVariable [QEGVAR(medical,isUnconscious), false])}
+alive _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob, kevin] call ACE_medical_fnc_actionCheckResponse
+ * [bob, kevin] call ACE_medical_treatment_fnc_actionCheckResponse
  *
  * Public: No
  */

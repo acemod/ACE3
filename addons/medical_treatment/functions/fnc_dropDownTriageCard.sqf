@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [true] call ace_medical_fnc_dropDownTriageCard
+ * [true] call ACE_medical_treatment_fnc_dropDownTriageCard
  *
  * Public: Yes
  */
