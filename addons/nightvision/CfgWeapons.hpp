@@ -25,17 +25,17 @@ class CfgWeapons {
     class ACE_NVG_Gen1: NVGoggles_OPFOR {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(NVG_Gen1);
-        GVAR(nvgGeneration) = 1;
+        GVAR(generation) = 1;
     };
     class ACE_NVG_Gen2: NVGoggles_INDEP {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(NVG_Gen2);
-        GVAR(nvgGeneration) = 2;
+        GVAR(generation) = 2;
     };
     class ACE_NVG_Gen4: NVGoggles {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(NVG_Gen4);
-        GVAR(nvgGeneration) = 4;
+        GVAR(generation) = 4;
     };
     class ACE_NVG_Wide: NVGoggles {
         author = ECSTRING(common,ACETeam);

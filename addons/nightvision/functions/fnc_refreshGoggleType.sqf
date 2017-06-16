@@ -39,8 +39,8 @@ if (alive ACE_player) then {
             !("NVG" in getArray (_vehConfig >> "ViewOptics" >> "visionMode"));
         };
         private _result = true;
-        private _turret = [ACE_player] call EFUNC(common,getTurretIndex);
-        private _turretConfig = [_vehConfig, _turret] call EFUNC(common,getTurretConfigPath);
+        private _turret = ACE_player call CBA_fnc_turretPath;
+        private _turretConfig = [_currentVehicle, _turret] call CBA_fnc_getTurret;
         
         // Seems to cover things like the offroad technical
         if ((isNumber (_turretConfig >> "optics")) && {(getNumber (_turretConfig >> "optics")) == 0}) exitWith {true};
@@ -51,7 +51,7 @@ if (alive ACE_player) then {
                 if ("NVG" in getArray (_turretConfigOpticsIn select _index >> "visionMode")) exitWith {_result = false};
             };
         } else {
-            //No OpticsIn usualy means RCWS, still need to test on more vehicles
+            // No OpticsIn usualy means RCWS, still need to test on more vehicles
             _result = false;
         };
         _result
@@ -59,7 +59,7 @@ if (alive ACE_player) then {
         if ((cameraView == "GUNNER") && {currentWeapon ACE_player != ""} && {binocular ACE_player == currentWeapon ACE_player}) exitWith {
             TRACE_1("souce: binocular",binocular ACE_player); // Source is from player's binocular (Rangefinder/Vector21bNite)
             private _config = configFile >> "CfgWeapons" >> (binocular ACE_player);
-            if (isNumber (_config >> QGVAR(nvgGeneration))) then {_nvgGen = getNumber (_config >> QGVAR(nvgGeneration));};
+            if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
         };
         
         TRACE_1("source: hmd",GVAR(playerHMD)); // Source is player's HMD (or possibly a NVG scope, but no good way to detect that)
@@ -73,7 +73,7 @@ if (alive ACE_player) then {
             _hideHex = (getNumber (_config >> QGVAR(hideHex))) == 1;
             if (isNumber (_config >> QGVAR(bluRadius))) then {_blurRadius = getNumber (_config >> QGVAR(bluRadius));};
         };
-        if (isNumber (_config >> QGVAR(nvgGeneration))) then {_nvgGen = getNumber (_config >> QGVAR(nvgGeneration));};
+        if (isNumber (_config >> QGVAR(generation))) then {_nvgGen = getNumber (_config >> QGVAR(generation));};
 
     } else {
         TRACE_1("source: vehicle - defaults",typeOf vehicle ACE_player);

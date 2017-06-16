@@ -19,18 +19,17 @@ params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);
 
 // Backup and restore changes to fog:
-// Note: modifying the fog
-if (missionNamespace getVariable [QGVAR(enableChangingFog), true]) then {
+if (GVAR(fogEffectScale) > 0) then {
     if (_activated) then {
         if (isNil QGVAR(priorFog)) then {
             TRACE_1("Backing up fog",fogParams);
             GVAR(priorFog) = fogParams;
         } else {
-            LOG("fog already backed up");
+            ERROR("fog already backed up");
         };
 
         // Handle non-dedicated:
-        if (isServer) then {
+        if (isServer && hasInterface) then {
             missionNamespace setVariable [QGVAR(serverPriorFog), fogParams, true];
             [QGVAR(nonDedicatedFix), []] call CBA_fnc_globalEvent;
         };
@@ -43,7 +42,7 @@ if (missionNamespace getVariable [QGVAR(enableChangingFog), true]) then {
         };
 
         // Handle non-dedicated:
-        if (isServer) then {
+        if (isServer && hasInterface) then {
             missionNamespace setVariable [QGVAR(serverPriorFog), nil, true];
         };
     };

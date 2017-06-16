@@ -25,8 +25,7 @@ _brightness = ((_brightness + _changeInBrightness) min 0) max -6;
 
 _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 
-// [format [(localize LSTRING(NVGBrightness)), _brightness]] call EFUNC(common,displayTextStructured);
-[format ["bright %1", _brightness]] call EFUNC(common,displayTextStructured);
+[format [(localize LSTRING(NVGBrightness)), _brightness]] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 
 // Trigger full ppEffects update next time run in the PFEH:

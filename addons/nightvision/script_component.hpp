@@ -18,27 +18,31 @@
 
 
 // Effect Settings / Magic values to tweak:
-#define st_nvg_AirFogMultiplier 0.5
 
-#define st_nvg_CameraBlurSights_MaxBlur 6
+// Decreases fog when in air vehicles
+#define ST_NVG_AIR_FOG_MULTIPLIER 0.5
 
-#define st_nvg_MinFog 0.2 
-#define st_nvg_MaxFog 0.3
+// Increase blur when looking down sights
+#define ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE 6
+#define ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL 2
 
-#define st_nvg_Grain_Min 2.25
-#define st_nvg_Grain_Max 2.7
+#define ST_NVG_MINFOG 0.2 
+#define ST_NVG_MAXFOG 0.3
 
-#define st_nvg_Blur_Min 0.05
-#define st_nvg_Blur_Max 0.11
+#define ST_NVG_GRAIN_MIN 2.25
+#define ST_NVG_GRAIN_MAX 2.7
 
-#define st_nvg_Bright_Min 0.65
-#define st_nvg_Bright_Max 0.75
+#define ST_NVG_BLUR_MIN 0.05
+#define ST_NVG_BLUR_MAX 0.11
 
-#define st_nvg_Contrast_Min 0.4
-#define st_nvg_Contrast_Max 0.8
+#define ST_NVG_BRIGHT_MIN 0.65
+#define ST_NVG_BRIGHT_MAX 0.75
 
-#define st_nvg_NoiseIntensity_Min 0.4
-#define st_nvg_NoiseIntensity_Max 0.55
+#define ST_NVG_CONTRAST_MIN 0.4
+#define ST_NVG_CONTRAST_MAX 0.8
 
-#define st_nvg_NoiseSharpness_Min 1.2
-#define st_nvg_NoiseSharpness_Max 1 
+#define ST_NVG_NOISEINTENSITY_MIN 0.4
+#define ST_NVG_NOISEINTENSITY_MAX 0.55
+
+#define ST_NVG_NOISESHARPNESS_MIN 1.2
+#define ST_NVG_NOISESHARPNESS_MAX 1 

@@ -207,5 +207,11 @@
             <Japanese>スコープを使い狙いを付けると、夜間暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_NightVision_fogEffectScale_DisplayName">
+            <English>NVG Fog Effect Scale</English>
+        </Key>
+        <Key ID="STR_ACE_NightVision_fogEffectScale_DisplayName">
+            <English>Fog is used to limit visibility. [Will be disabled if set to 0]</English>
+        </Key>
     </Package>
 </Project>

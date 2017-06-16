@@ -30,7 +30,7 @@ if (EGVAR(common,OldIsCamera)) exitWith {
     };
 };
 if (!GVAR(running)) then {
-    TRACE_1("Un-Pausing",GVAR(paused));
+    TRACE_1("Un-Pausing", GVAR(paused));
     GVAR(running) = true;
     [true] call FUNC(setupDisplayEffects);
     [] call FUNC(refreshGoggleType);
@@ -57,37 +57,37 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         GVAR(ppeffectRadialBlur) ppEffectCommit 0;
     };
     // Need to rapidly update fog or it will try to resync from the server
-    if (missionNamespace getVariable [QGVAR(enableChangingFog), true]) then {
+    if (GVAR(fogEffectScale) > 0) then {
         0 setFog GVAR(nvgFog);
     };
 } else {
     // Redo full effects less often
-    GVAR(nextEffectsUpdate) = CBA_missionTime + 3;
+    GVAR(nextEffectsUpdate) = CBA_missionTime + 5;
 
-    // Detecting the efficiency of the nightvision. TODO, break this into its own thing that runs less frequently. Doing it this way just to expedite for testing.
+    // Detecting the efficiency of the nightvision.
     private _lightFinal = 0 max (moonIntensity - ((overcast * .8) min .275) - (rain * .5));
     private _effectiveLight = _lightFinal * linearConversion [1, 3, GVAR(nvgGeneration), 0.25, 1];
     private _effectMod = linearConversion [1, 3, GVAR(nvgGeneration), 1.5, 1];
     // This has become a little weird. Basically means that lightfinal is unlikely to reach zero with any moon in the sky
     // buuut it just so happens that setting it like this means that the lighting progression from clear -> cloudy -> rainy works particularly well.
 
-    private _grainFinal = linearConversion [1,0,_effectiveLight,st_nvg_Grain_Min,st_nvg_Grain_Max,true];
-    private _blurFinal = _effectMod *_effectMod * linearConversion [1,0,_effectiveLight,st_nvg_Blur_Min,st_nvg_Blur_Max,true];
-    private _brightFinal = linearConversion [0,1,_effectiveLight,st_nvg_Bright_Min,st_nvg_Bright_Max,true];
-    private _contrastFinal = linearConversion [0,1,_effectiveLight,st_nvg_Contrast_Min,st_nvg_Contrast_Max,true];
-    private _grainIntensityFinal = _effectMod * linearConversion [1,0,_effectiveLight,st_nvg_NoiseIntensity_Min,st_nvg_NoiseIntensity_Max,true];
-    private _noiseSharpnessFinal = linearConversion [1,0,_effectiveLight,st_nvg_NoiseSharpness_Min,st_nvg_NoiseSharpness_Max,true];
+    private _grainFinal = linearConversion [1, 0, _effectiveLight, ST_NVG_GRAIN_MIN, ST_NVG_GRAIN_MAX, true];
+    private _blurFinal = _effectMod *_effectMod * linearConversion [1, 0, _effectiveLight, ST_NVG_BLUR_MIN, ST_NVG_BLUR_MAX, true];
+    private _brightFinal = linearConversion [0, 1, _effectiveLight, ST_NVG_BRIGHT_MIN, ST_NVG_BRIGHT_MAX, true];
+    private _contrastFinal = linearConversion [0, 1, _effectiveLight, ST_NVG_CONTRAST_MIN, ST_NVG_CONTRAST_MAX, true];
+    private _grainIntensityFinal = _effectMod * linearConversion [1, 0, _effectiveLight, ST_NVG_NOISEINTENSITY_MIN, ST_NVG_NOISEINTENSITY_MAX, true];
+    private _noiseSharpnessFinal = linearConversion [1, 0, _effectiveLight, ST_NVG_NOISESHARPNESS_MIN, ST_NVG_NOISESHARPNESS_MAX, true];
 
     private _playerBrightSetting = ACE_player getVariable [QGVAR(NVGBrightness), 0];
     _brightFinal = _brightFinal + (_playerBrightSetting / 20);
 
-    private _fogApply = linearConversion [0,1,_effectiveLight,st_nvg_MaxFog,st_nvg_MinFog,true];
+    private _fogApply = linearConversion [0, 1, _effectiveLight, ST_NVG_MAXFOG, ST_NVG_MINFOG, true];
 
     // Modify blur if looking down scope
     if ((cameraView == "GUNNER") && {[ACE_player] call CBA_fnc_canUseWeapon}) then {
         if (currentWeapon ACE_player == "") exitWith {};
-        if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * st_nvg_CameraBlurSights_MaxBlur}; // Rifles are bad
-        if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ((st_nvg_CameraBlurSights_MaxBlur / 3) max 1)}; // Pistols aren't so bad
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ST_NVG_CAMERA_BLUR_SIGHTS_RIFLE}; // Rifles are bad
+        if (currentWeapon ACE_player == handgunWeapon ACE_player) exitWith {_blurFinal = _blurFinal * ST_NVG_CAMERA_BLUR_SIGHTS_PISTOL}; // Pistols aren't so bad
     };
 
     // Setup all effects
@@ -115,7 +115,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     };
 
     // ColorCorrections - Changes brightness, contrast and "green" color of nvg
-    // Params: [brightness(0..2), contrast(0..inf),offset(-x..+x), blendArray, colorizeArray, weightArray]
+    // Params: [brightness(0..2), contrast(0..inf), offset(-x..+x), blendArray, colorizeArray, weightArray]
     GVAR(ppeffectColorCorrect) = ppEffectCreate ["ColorCorrections", 2003];
     GVAR(ppeffectColorCorrect) ppEffectAdjust [_brightFinal, _contrastFinal, 0, [0.0, 0.0, 0.0, 0.0], [1.3, 1.2, 0.0, 0.9], [6, 1, 1, 0.0]];
     GVAR(ppeffectColorCorrect) ppEffectCommit 0;
@@ -132,17 +132,19 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
     GVAR(ppeffectBlur) ppEffectEnable true;
 
     // Modify local fog:
-    if (missionNamespace getVariable [QGVAR(enableChangingFog), true]) then {
-        if ((vehicle ACE_player) != ACE_player) then {  // For flying in particular, can refine nicer later.
-            _fogApply = _fogApply * st_nvg_AirFogMultiplier
+    if (GVAR(fogEffectScale) > 0) then {
+        if (((vehicle ACE_player) != ACE_player) && {(vehicle ACE_player) isKindOf "Air"}) then {  // For flying in particular, can refine nicer later.
+            _fogApply = _fogApply * ST_NVG_AIR_FOG_MULTIPLIER;
         };
-        _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, _fogApply, 1]; // mix in old fog if present
+        _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogEffectScale) * _fogApply), 1]; // mix in old fog if present
         GVAR(nvgFog) = [_fogApply, 0, 0];
         0 setFog GVAR(nvgFog)
     };
+    
+    systemChat str time;
 
     #ifdef DEBUG_MODE_FULL
     private _aceAmbient = [] call EFUNC(common,ambientBrightness);
-    hintSilent format ["EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8",_effectiveLight,_lightFinal,_aceAmbient,_brightFinal,_contrastFinal,[_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal], _blurFinal, _fogApply];
+    hintSilent format ["EffectiveLight %1\nLight: %2\nACE Ambient: %3\nBrightness: %4\nContrast: %5\nGrain: %6\nBlur: %7\nFog: %8", _effectiveLight, _lightFinal, _aceAmbient, _brightFinal, _contrastFinal, [_grainIntensityFinal, _noiseSharpnessFinal, _grainFinal], _blurFinal, _fogApply];
     #endif
 };

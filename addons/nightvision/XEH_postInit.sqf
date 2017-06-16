@@ -24,12 +24,12 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
 
 
 ["ace_settingsInitialized", {
-    TRACE_1("setting init",GVAR(disableNVGsWithSights));
+    TRACE_2("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogEffectScale));
 
     ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
-    ["visionMode", LINKFUNC(onVisionModeChanged), true] call CBA_fnc_addPlayerEventHandler;
+    ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
-    ["vehicle", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
 
     ["ace_firedPlayer", LINKFUNC(onFiredPlayer)] call CBA_fnc_addEventHandler;
@@ -39,7 +39,7 @@ GVAR(ppEffectCCMuzzleFlash) = -1;
 
 addMissionEventHandler ["Loaded", { // Restart UI vars on misison load
     if (GVAR(running)) then {
-        LOG("restarting effects");
+        TRACE_1("restarting effects",CBA_missionTime);
         [false] call FUNC(setupDisplayEffects);
         [true] call FUNC(setupDisplayEffects);
     };
