@@ -30,7 +30,7 @@ if (missionNamespace getVariable [QGVAR(moduleDestination_running), false]) exit
 GVAR(moduleDestination_running) = true;
 
 // Add mouse button eh for the zeus display (triggered from 2d or 3d)
-GVAR(moduleDestination_displayEH) = [(findDisplay 312), "mouseButtonDown", {
+GVAR(moduleDestination_displayEHMouse) = [(findDisplay 312), "mouseButtonDown", {
     params ["", "_mouseButton"];
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
     _thisArgs params ["_object", "_code"];
@@ -44,6 +44,24 @@ GVAR(moduleDestination_displayEH) = [(findDisplay 312), "mouseButtonDown", {
     TRACE_2("placed",_object,_mousePosASL);
     [true, _object, _mousePosASL] call _code;
     GVAR(moduleDestination_running) = false;
+}, [_object, _code]] call CBA_fnc_addBISEventHandler;
+
+// Add key eh for the zeus display (triggered from 2d or 3d)
+GVAR(moduleDestination_displayEHKeyboard) = [(findDisplay 312), "KeyDown", {
+    params ["", "_keyCode"];
+    if (_keyCode != 1) exitWith {}; // Only watch for ESC
+    _thisArgs params ["_object", "_code"];
+    private _mousePosASL = if (ctrlShown ((findDisplay 312) displayCtrl 50)) then {
+        private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);
+        _pos2d set [2, getTerrainHeightASL _pos2d];
+        _pos2d
+    } else {
+        AGLToASL (screenToWorld getMousePosition);
+    };
+    TRACE_2("aborted",_object,_mousePosASL);
+    [false, _object, _mousePosASL] call _code;
+    GVAR(moduleDestination_running) = false;
+    true;
 }, [_object, _code]] call CBA_fnc_addBISEventHandler;
 
 // Add draw eh for the zeus map - draws the 2d icon and line
@@ -71,9 +89,11 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
     } else {
         TRACE_3("cleaning up",_this select 1, GVAR(moduleDestination_displayEH), GVAR(moduleDestination_mapDrawEH));
         (_this select 1) call CBA_fnc_removePerFrameHandler;
-        (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEH)];
+        (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
+        (findDisplay 312) displayRemoveEventHandler ["KeyDown", GVAR(moduleDestination_displayEHKeyboard)];
         ((findDisplay 312) displayCtrl 50) ctrlRemoveEventHandler ["draw", GVAR(moduleDestination_mapDrawEH)];
-        GVAR(moduleDestination_displayEH) = nil;
+        GVAR(moduleDestination_displayEHMouse) = nil;
+        GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;
     };
 }, 0, [_object, _code, _text, _icon, _color]] call CBA_fnc_addPerFrameHandler;
