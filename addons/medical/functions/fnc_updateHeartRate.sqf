@@ -8,7 +8,10 @@
  * 2: Sync value? <BOOL>
  *
  * ReturnValue:
- * nothing
+ * Current Heart Rate <NUMBER>
+ *
+ * Example:
+ * [player, 1, false] call ace_medical_fnc_updateHeartRate
  *
  * Public: No
  */
@@ -25,7 +28,7 @@ if (!(_adjustment isEqualTo [])) then {
         _x params ["_value", "_timeTillMaxEffect", "_maxTimeInSystem", "_timeInSystem"];
         if (abs _value > 0 && {_maxTimeInSystem > 0}) then {
             if (_timeInSystem >= _maxTimeInSystem) then {
-                 _adjustment set [_forEachIndex, ObjNull];
+                _adjustment set [_forEachIndex, ObjNull];
             } else {
                 _timeInSystem = _timeInSystem + _deltaT;
                 private _effectRatio = ((_timeInSystem / (1 max _timeTillMaxEffect)) ^ 2) min 1;
@@ -50,12 +53,12 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
         ([_unit] call FUNC(getBloodPressure)) params ["_bloodPressureL", "_bloodPressureH"];
         private _meanBP = (2/3) * _bloodPressureH + (1/3) * _bloodPressureL;
         private _painLevel = [_unit] call FUNC(getPainLevel);
-        
+
         private _targetBP = 107;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_3_HEMORRHAGE) then {
             _targetBP = _targetBP * (_bloodVolume / DEFAULT_BLOOD_VOLUME);
         };
-        
+
         private _targetHR = 80;
         if (_bloodVolume < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) then {
             _targetHR = _heartRate * (_targetBP / (45 max _meanBP));
@@ -64,12 +67,15 @@ if (!(_unit getVariable [QGVAR(inCardiacArrest), false])) then {
             _targetHR = _targetHR max (80 + 50 * _painLevel);
         };
         _targetHR = _targetHR + _hrTargetAdjustment;
-        
+
         _hrChange = round(_targetHR - _heartRate) / 2;
     } else {
         _hrChange = -round(_heartRate / 10);
     };
-    _heartRate = _heartRate + _deltaT * _hrChange;
+    _heartRate = (_heartRate + _deltaT * _hrChange) max 0;
 };
 
-_unit setVariable [QGVAR(heartRate), 0 max _heartRate, _syncValue];
+_unit setVariable [QGVAR(heartRate), _heartRate, _syncValue];
+
+_heartRate
+

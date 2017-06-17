@@ -47,7 +47,7 @@ _target setVariable [QEGVAR(medical,bodyPartStatus), [0,0,0,0,0,0], true];
 
 // generic medical admin
 _target setVariable [QEGVAR(medical,inCardiacArrest), false, true];
-_target setVariable [QEGVAR(medical,isUnconscious), false, true];
+_target setVariable ["ACE_isUnconscious", false, true];
 _target setVariable [QEGVAR(medical,hasLostBlood), 0, true];
 _target setVariable [QEGVAR(medical,isBleeding), false, true];
 _target setVariable [QEGVAR(medical,hasPain), false, true];
@@ -62,7 +62,7 @@ private _allUsedMedication = _target getVariable [QEGVAR(medical,allUsedMedicati
    _target setVariable [_x select 0, nil];
 } forEach _allUsedMedication;
 
-[_unit, false] call EFUNC(medical_engine,setLimping);
+[_target, false] call EFUNC(medical_engine,setLimping);
 
 // Resetting damage
 _target setDamage 0;

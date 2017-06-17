@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * Something
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ACE_map_fnc_onDrawMap
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 ((_this select 0) displayCtrl 1016) ctrlShow GVAR(mapShowCursorCoordinates);

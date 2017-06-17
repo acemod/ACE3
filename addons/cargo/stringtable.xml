@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -63,7 +63,7 @@
             <Spanish>Espacio de carga restante: %1</Spanish>
             <Italian>Spazio cargo rimanente: %1</Italian>
             <French>Espace de cargaison restant : %1</French>
-            <Japanese>カーゴの空き容量は: %1</Japanese>
+            <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
@@ -129,7 +129,7 @@
             <Italian>%1&lt;br/&gt;caricato su&lt;br/&gt;%2</Italian>
             <Hungarian>%1&lt;br/&gt;berakodva ide:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
-            <Japanese>%1&amp;lt;br/&amp;gt; は &amp;lt;br/&amp;gt;%2 へ積み込まれた</Japanese>
+            <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれた</Japanese>
             <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에 실림</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
@@ -143,7 +143,7 @@
             <Italian>Hai scaricato&lt;br/&gt;%1 da&lt;br/&gt;%2</Italian>
             <Hungarian>1%&lt;br/&gt;kirakodva ebből:&lt;br/&gt;%2</Hungarian>
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
-            <Japanese>&amp;lt;br/&amp;gt;%2 から &amp;lt;br/&amp;gt;%1 が下ろされた</Japanese>
+            <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされた</Japanese>
             <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에서 내려짐</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
@@ -169,7 +169,7 @@
             <Italian>Scaricando</Italian>
             <Spanish>Descargando</Spanish>
             <French>Déchargement de la cargaison</French>
-            <Japanese>カーゴから下ろしている</Japanese>
+            <Japanese>カーゴから降ろしている</Japanese>
             <Korean>화물 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
@@ -182,7 +182,7 @@
             <Italian>%1&lt;br/&gt;non può essere caricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser cargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
-            <Japanese>%1&amp;lt;br/&amp;gt;は積み込めなかった</Japanese>
+            <Japanese>%1&lt;br/&gt;は積み込めなかった</Japanese>
             <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
@@ -195,7 +195,7 @@
             <Italian>%1&lt;br/&gt;non può essere scaricato</Italian>
             <Spanish>%1&lt;br/&gt;no pudo ser descargado</Spanish>
             <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
-            <Japanese>%1&amp;lt;br/&amp;gt;は下ろせなかった</Japanese>
+            <Japanese>%1&lt;br/&gt;は降ろせなかった</Japanese>
             <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
@@ -237,12 +237,30 @@
             <Japanese>オブジェクトの大きさ</Japanese>
             <Korean>물체 크기</Korean>
         </Key>
+        <Key ID="STR_ACE_Cargo_space_edenName">
+            <English>Cargo Space</English>
+            <Italian>Spazio Cargo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_space_edenDesc">
+            <English>The cargo space available in this vehicle/container</English>
+            <Italian>Lo spazio disponibile in questo veicolo/container</Italian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_size_edenName">
+            <English>Cargo Size</English>
+            <Italian>Dimensioni Cargo</Italian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_size_edenDesc">
+            <English>The cargo space required to hold this object (-1 for unloadable)</English>
+            <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
+        </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
             <German>Türlast</German>
             <Japanese>空中投下</Japanese>
             <Polish>Zrzut zaopatrzenia</Polish>
             <Korean>공중 투하</Korean>
+            <French>Largage aérien</French>
+            <Italian>Lancio Aereo</Italian>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -250,6 +268,20 @@
             <Japanese>機体が水平ではありません</Japanese>
             <Polish>Nierówny lot</Polish>
             <Korean>기체가 수평이 아닙니다</Korean>
+            <French>Rétablir l'assiette</French>
+            <Italian>Volo non Livellato</Italian>
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
+            <English>Paradrop Time Coffecient</English>
+            <Japanese>空中投下までの時間係数</Japanese>
+            <Italian>Coefficente Tempo Lancio Paracadute</Italian>
+            <French>Coefficient Temps de largage de cargaison</French>
+        </Key>
+        <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
+            <English>Modifier for how long it takes to paradrop a cargo item.</English>
+            <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
+            <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
+            <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
         </Key>
     </Package>
 </Project>

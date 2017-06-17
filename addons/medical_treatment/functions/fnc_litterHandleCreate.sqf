@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["litter", [2, 5, 6], bob] call ACE_medical_treatment_fnc_handleCreateLitter
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -17,7 +20,7 @@
 params ["_litterClass", "_position", "_direction"];
 TRACE_3("params",_litterClass,_position,_direction);
 
-//IGNORE_PRIVATE_WARNING(_values);
+//IGNORE_PRIVATE_WARNING ["_values"];
 
 if (isNil QGVAR(allCreatedLitter)) then {
     GVAR(allCreatedLitter) = [];

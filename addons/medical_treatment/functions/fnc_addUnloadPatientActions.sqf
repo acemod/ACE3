@@ -5,10 +5,13 @@
  * Argument:
  * 0: Vehicle <OBJECT>
  * 1: Player <OBJECT>
- * 3: Parameters <ARRAY>
+ * 2: Parameters <ARRAY>
  *
  * Return value:
  * Children actions <ARRAY>
+ *
+ * Example:
+ * [car, kevin, [params]] call ACE_medical_treatment_fnc_addUnloadPatientActions
  *
  * Public: No
  */

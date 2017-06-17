@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="trenches">
         <Key ID="STR_ACE_Trenches_EntrenchingToolName">
@@ -147,7 +147,7 @@
             <English>Digging Trench</English>
             <German>Grabe Schützengraben</German>
             <Polish>Kopanie wnęki</Polish>
-            <Italian>Sto Scavando la Trincea</Italian>
+            <Italian>Scavando la Trincea</Italian>
             <Spanish>Cavando trinchera</Spanish>
             <French>Creuse la tranchée</French>
             <Czech>Vykopat zákop</Czech>
@@ -166,6 +166,7 @@
             <Japanese>塹壕を掘りつづける</Japanese>
             <German>Graben fortsetzen</German>
             <Korean>계속해서 참호파기</Korean>
+            <Italian>Continua a Scavare la Trincea</Italian>
         </Key>
         <Key ID="STR_ACE_Trenches_RemoveEnvelope">
             <English>Remove Trench</English>
@@ -177,6 +178,7 @@
             <Japanese>塹壕を消す</Japanese>
             <German>Schützengraben entfernen</German>
             <Korean>참호 제거</Korean>
+            <Italian>Rimuove Trincea</Italian>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -188,6 +190,7 @@
             <Japanese>塹壕を消している</Japanese>
             <German>Entferne Schützengraben</German>
             <Korean>참호 제거중...</Korean>
+            <Italian>Rimuovendo la Trincea</Italian>
         </Key>
     </Package>
 </Project>

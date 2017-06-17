@@ -31,7 +31,7 @@ _bodyPartDamage = _bodyPartDamage apply {
 _target setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
 if ((_bodyPartDamage select 4) < 0.3 && {(_bodyPartDamage select 5) < 0.3}) then {
-    [_unit, false] call EFUNC(medical_engine,setLimping);
+    [_target, false] call EFUNC(medical_engine,setLimping);
 };
 
 // Resetting damage

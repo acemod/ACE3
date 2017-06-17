@@ -9,7 +9,7 @@
  * 3: Embargo delay <NUMBER> (Optional. Default: 1)
  *
  * Return Value:
- * Nothing.
+ * None
  *
  * Example:
  * [player, "balls", 2, 1] call ace_common_fnc_setVariablePublic;
@@ -48,6 +48,7 @@ TRACE_2("Starting Embargo", _varName, _delay);
 
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
     if (!(_value isEqualTo _curValue)) then {
+        _this set [2, _curValue];
         _this call FUNC(setVariablePublic);
     };
 }, _this, _delay] call CBA_fnc_waitAndExecute;

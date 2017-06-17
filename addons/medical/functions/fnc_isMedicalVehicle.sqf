@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Vehicle <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Is in of medic class <BOOL>
+ *
+ * Example:
+ * [cursorObject] call ace_medical_fnc_isMedicalVehicle
  *
  * Public: Yes
  */

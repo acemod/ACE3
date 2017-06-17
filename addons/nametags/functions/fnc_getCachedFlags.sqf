@@ -6,7 +6,7 @@
  * None
  *
  * Return Value:
- * [_drawName,_drawRank,_enabledTagsNearby,_enabledTagsCursor,_maxDistance]
+ * [_drawName,_drawRank,_enabledTagsNearby,_enabledTagsCursor,_maxDistance] <ARRAY>
  *
  * Example:
  * call ace_nametags_fnc_getCachedFlags

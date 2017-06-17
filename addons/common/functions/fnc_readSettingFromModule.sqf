@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [MODULE, "Param", "paramname"] call ace_common_fnc_readSettingFromModule
+ *
  * Public: No
  */
 #include "script_component.hpp"

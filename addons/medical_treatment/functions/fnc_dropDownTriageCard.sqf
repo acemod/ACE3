@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [true] call ACE_medical_treatment_fnc_dropDownTriageCard
+ *
  * Public: Yes
  */
 

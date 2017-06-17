@@ -21,7 +21,7 @@ class Cfg3DEN {
                     h = "5 * (pixelH * pixelGrid * 0.50)";
                     rows = 1;
                     columns = 4;
-                    strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_specialist)};
+                    strings[] = {"$STR_3DEN_Attributes_Lock_Default_text", CSTRING(AssignEngineerRole_role_none), CSTRING(AssignEngineerRole_role_engineer), CSTRING(AssignEngineerRole_role_advanced)};
                 };
             };
         };

@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "type", "message", [_args]] call ACE_medical_treatment_fnc_addToLog
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

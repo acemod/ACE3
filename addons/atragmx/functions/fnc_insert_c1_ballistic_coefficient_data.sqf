@@ -8,7 +8,7 @@
  * c1 ballistic coefficient - <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [800, 0.485] call ace_atragmx_fnc_insert_c1_ballistic_coefficient_data

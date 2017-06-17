@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_vector_fnc_showRelativeAzimuthDistance
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 disableSerialization;

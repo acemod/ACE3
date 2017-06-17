@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[2, 5], "icon"] call ACE_interact_menu_fnc_renderSelector
+ *
  * Public: No
  */
 #include "script_component.hpp"

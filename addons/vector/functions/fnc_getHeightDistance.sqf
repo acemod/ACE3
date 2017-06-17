@@ -1,4 +1,19 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Array <ARRAY>
+ *
+ * Example:
+ * call ace_vector_fnc_getHeightDistance
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 private ["_distance", "_direction", "_azimuth", "_inclination"];

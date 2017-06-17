@@ -8,7 +8,7 @@
  * 2: Inclination (Degrees) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [1000, 45, 1] call ace_dagr_fnc_handleRangeFinderData

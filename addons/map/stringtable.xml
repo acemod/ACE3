@@ -444,6 +444,8 @@
             <Japanese>BFTを無効化</Japanese>
             <Korean>GPS피아식별기 끄기</Korean>
             <Polish>Wyłącz BFT</Polish>
+            <French>Désactive le BFT</French>
+            <Italian>Disablita BFT</Italian>
         </Key>
         <Key ID="STR_ACE_Map_disableBFT_description">
             <English>Always disable Blue Force Tracking for this group.</English>
@@ -451,6 +453,8 @@
             <Japanese>このグループへのブルー フォース トラッキングを常に無効化します。</Japanese>
             <Korean>이 그룹에 한해 GPS피아식별기를 항상 끕니다.</Korean>
             <Polish>Zawsze wyłączaj Blue Force Tracking dla tej grupy.</Polish>
+            <French>Désactive en permanence le Blue Force Tracking pour ce groupe.</French>
+            <Italian>Disabilita sempre il Blue Force Tracking per questo gruppo.</Italian>
         </Key>
     </Package>
 </Project>

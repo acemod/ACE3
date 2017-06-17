@@ -3,10 +3,13 @@
  * reset all variables that have been defined
  *
  * Arguments:
- * ?
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * ?
+ * ? <UNKNOWN>
+ *
+ * Example:
+ * [bob] call ace_common_fnc_resetAllDefaults
  *
  * Public: No
  */

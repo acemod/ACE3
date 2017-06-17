@@ -39,7 +39,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
         _endPosOffset = _endPosOffset select 0;
     };
     [
-        2,
+        REFUEL_PROGRESS_DURATION,
         [_unit, _target, _endPosOffset],
         {
             params ["_args"];
@@ -53,11 +53,23 @@ if (isNull _nozzle) then { // func is called on fuel truck
             _newNozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             _unit setVariable [QGVAR(nozzle), _newNozzle, true];
 
-            if (_target isKindOf "AllVehicles") then {
-                // Currently ropeCreate requires its first parameter to be a real vehicle
-                private _rope = ropeCreate [_target, _endPosOffset, _newNozzle, [0, -0.20, 0.12], REFUEL_HOSE_LENGTH];
-                _newNozzle setVariable [QGVAR(rope), _rope, true];
+            private _ropeTarget = _target;
+            if (!(_target isKindOf "AllVehicles")) then {
+                private _helper = QGVAR(helper) createVehicle [0,0,0];
+                [QEGVAR(common,hideObjectGlobal), [_helper, true]] call CBA_fnc_serverEvent;
+                if ((getText (configFile >> "CfgVehicles" >> typeOf _target >> "simulation")) isEqualTo "thingX") then {
+                    _helper attachTo [_target, [0,0,0]];
+                } else {
+                    _helper setPosWorld (getPosWorld _target);
+                    _helper setDir (getDir _target);
+                    _helper setVectorUp (vectorUp _target);
+                };
+                _newNozzle setVariable [QGVAR(helper), _helper, true];
+                _ropeTarget = _helper;
             };
+            private _hoseLength = _target getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
+            private _rope = ropeCreate [_ropeTarget, _endPosOffset, _newNozzle, [0, -0.20, 0.12], _hoseLength];
+            _newNozzle setVariable [QGVAR(rope), _rope, true];
             _newNozzle setVariable [QGVAR(attachPos), _endPosOffset, true];
             _newNozzle setVariable [QGVAR(source), _target, true];
 
@@ -93,7 +105,7 @@ if (isNull _nozzle) then { // func is called on fuel truck
     ] call EFUNC(common,progressBar);
 } else { // func is called on muzzle either connected or on ground
     [
-        2,
+        REFUEL_PROGRESS_DURATION,
         [_unit, _nozzle],
         {
             params ["_args"];

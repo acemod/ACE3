@@ -221,14 +221,6 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0.1;
     };
-    class GVAR(painEffectType) {
-        category = CSTRING(Category_Medical);
-        displayName = CSTRING(painEffectType);
-        typeName = "SCALAR";
-        value = 0;
-        values[] = {CSTRING(painEffect_Flash), CSTRING(painEffect_Chroma)};
-        isClientSettable = 1;
-    };
     class GVAR(allowUnconsciousAnimationOnTreatment) {
         category = CSTRING(Category_Medical);
         displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
@@ -258,5 +250,12 @@ class ACE_Settings {
         typeName = "SCALAR";
         value = 0;
         values[] = {"No", "Yes"};
+    };
+    class GVAR(spontaneousWakeUpChance) {
+        category = CSTRING(Category_Medical);
+        displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
+        description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
+        typeName = "SCALAR";
+        value = 0;
     };
 };

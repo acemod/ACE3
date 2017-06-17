@@ -20,7 +20,7 @@ params ["_unit", "_desiredPainLevel"];
 
 if (!local _unit) exitWith { ERROR("unit is not local"); };
 
-TRACE_2("ACE_DEBUG: adjustPainLevel Called",_unit,_desiredPainLevel);
+TRACE_2("adjustPainLevel",_unit,_desiredPainLevel);
 
 _desiredPainLevel = _desiredPainLevel * GVAR(painCoefficient);
 

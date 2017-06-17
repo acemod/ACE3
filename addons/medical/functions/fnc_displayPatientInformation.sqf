@@ -7,8 +7,11 @@
  * 1: Show <NUMBER> (default: 0)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */
@@ -77,11 +80,9 @@ if (_show == 1) then {
 
         private _totalIvVolume = 0;
         {
-            private _value = _target getVariable _x;
-            if !(isnil "_value") then {
-                _totalIvVolume = _totalIvVolume + (_target getVariable [_x, 0]);
-            };
-        } foreach EGVAR(medical,IVBags);
+            _x params ["_xVolumeAdded"];
+            _totalIvVolume = _totalIvVolume + _xVolumeAdded;
+        } foreach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
         if (_totalIvVolume >= 1) then {
             _genericMessages pushback [format[localize ELSTRING(medical,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];

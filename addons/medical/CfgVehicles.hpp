@@ -1,6 +1,4 @@
 
-#define MEDICAL_ACTION_DISTANCE 1.75
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
@@ -403,22 +401,6 @@ class CfgVehicles {
                 typeName = "SCALAR";
                 defaultValue = 0.1;
             };
-            class painEffectType {
-                displayName = CSTRING(painEffectType);
-                typeName = "SCALAR";
-                isClientSettable = 1;
-                class values {
-                    class flash {
-                        name = CSTRING(painEffect_Flash);
-                        value = 0;
-                        default = 1;
-                    };
-                    class chroma {
-                        name = CSTRING(painEffect_Chroma);
-                        value = 1;
-                    };
-                };
-            };
             class allowUnconsciousAnimationOnTreatment {
                 displayName = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_DisplayName);
                 description = CSTRING(MedicalSettings_allowUnconsciousAnimationOnTreatment_Description);
@@ -467,6 +449,12 @@ class CfgVehicles {
                         value = 1;
                     };
                 };
+            };
+            class spontaneousWakeUpChance {
+                displayName = CSTRING(MedicalSettings_spontaneousWakeUpChance_DisplayName);
+                description = CSTRING(MedicalSettings_spontaneousWakeUpChance_Description);
+                typeName = "SCALAR";
+                defaultValue = 0;
             };
         };
     };

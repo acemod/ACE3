@@ -6,7 +6,7 @@
  * open menu item <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_option_menu
@@ -29,7 +29,7 @@ if (ctrlVisible 3001) then {
     };
 } else {
     lbClear 3002;
-    
+
     lbAdd [3002, "Accuracy 1st"];
     lbAdd [3002, "Muz Vel Table"];
     lbAdd [3002, "Drag Coef Table"];
@@ -43,9 +43,11 @@ if (ctrlVisible 3001) then {
     };
     lbAdd [3002, "Set Clicks"];
     lbAdd [3002, "Gun Note"];
-    
+
     lbSetCurSel [3002, 0];
-    
+
     ctrlShow [3001, true];
     ctrlShow [3002, true];
+
+    ctrlSetFocus ((uiNamespace getVariable ["ATragMX_Display", displayNull]) displayCtrl 3002);
 };

@@ -6,8 +6,11 @@
  * Arguments:
  * 0: The unit that will be put in cardiac arrest state <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_setCardiacArrest
  *
  * Public: yes
  */
@@ -23,5 +26,5 @@ _unit setVariable [QGVAR(heartRate), 0, true];
 
 ["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
-[_unit, true] call FUNC(setUnconscious);
-[QEGVAR(medical,InjuryCritical), _unit] call CBA_fnc_localEvent;
+[_unit, true] call FUNC(setUnconsciousStatemachine);
+

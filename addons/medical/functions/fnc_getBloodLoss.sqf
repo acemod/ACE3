@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * Total blood loss of unit (liter per second) <NUMBER>
+ * Return Value:
+ * Total blood loss of unit <NUMBER>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_getBloodLoss
  *
  * Public: No
  */

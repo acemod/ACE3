@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SafeMode">
         <Key ID="STR_ACE_SafeMode_SafeMode">
@@ -10,7 +10,7 @@
             <Hungarian>Biztonságos mód</Hungarian>
             <Russian>Предохранитель</Russian>
             <French>Sécurité</French>
-            <Italian>Sicura inserita</Italian>
+            <Italian>Modalità Sicura</Italian>
             <Portuguese>Modo de segurança</Portuguese>
             <Japanese>安全装置</Japanese>
             <Korean>안전 모드</Korean>

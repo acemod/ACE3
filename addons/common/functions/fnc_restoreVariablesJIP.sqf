@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_restoreVariablesJIP
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -1,10 +1,10 @@
 /*
  * Author: GitHawk
- * Disables rearm for a vehicle.
+ * Disables being able to rearm a vehicle's turrets. [Global Effects]
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Disable <BOOL><OPTIONAL>
+ * 0: Vehicle <OBJECT>
+ * 1: Disable <BOOL>(optional)
  *
  * Return Value:
  * None
@@ -17,5 +17,9 @@
  */
 #include "script_component.hpp"
 
-params [["_target", objNull, [objNull]], ["_disable", true, [true]]];
-_target setVariable [QGVAR(disabled), _disable, true];
+params [
+    ["_vehicle", objNull, [objNull]],
+    ["_disable", true, [true]]
+];
+
+_vehicle setVariable [QGVAR(disabled), _disable, true];

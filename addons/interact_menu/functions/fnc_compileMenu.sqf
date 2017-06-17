@@ -8,9 +8,12 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ACE_interact_menu_fnc_compileMenu
+ *
  * Public: No
  */
-#include "script_component.hpp";
+#include "script_component.hpp"
 
 params ["_target"];
 

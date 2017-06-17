@@ -7,8 +7,11 @@
  * 1: Patient <OBJECT>
  * 2: Item <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Has the items <BOOL>
+ *
+ * Example:
+ * [bob, patient, "bandage"] call ACE_medical_treatment_fnc_hasItem
  *
  * Public: Yes
  */
