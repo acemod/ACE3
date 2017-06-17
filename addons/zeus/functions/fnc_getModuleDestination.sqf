@@ -87,7 +87,7 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
         drawIcon3D [_icon, _color, _mousePosAGL, 1.5, 1.5, 45, _text];
         drawLine3D [_mousePosAGL, ASLtoAGL (getPosASL _object), _color];;
     } else {
-        TRACE_3("cleaning up",_this select 1, GVAR(moduleDestination_displayEH), GVAR(moduleDestination_mapDrawEH));
+        TRACE_4("cleaning up",_this select 1,GVAR(moduleDestination_displayEHMouse),GVAR(moduleDestination_displayEHKeyboard),GVAR(moduleDestination_mapDrawEH));
         (_this select 1) call CBA_fnc_removePerFrameHandler;
         (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
         (findDisplay 312) displayRemoveEventHandler ["KeyDown", GVAR(moduleDestination_displayEHKeyboard)];
