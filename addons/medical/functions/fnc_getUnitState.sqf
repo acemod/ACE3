@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Name of the current medical state of the unit <STRING>
+ *
+ * Example:
+ * [player] call ace_medical_fnc_getUnitState
  *
  * Public: Yes
  */
