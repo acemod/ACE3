@@ -88,6 +88,10 @@ class ACE_Medical_StateMachine {
     class CardiacArrest {
         onStateEntered = QUOTE(DFUNC(enteredStateCardiacArrest));
         onStateLeaving = QUOTE(DFUNC(leftStateCardiacArrest));
+        class DeathAI {
+            targetState = "Dead";
+            condition = QUOTE(!isPlayer _this && {GVAR(fatalInjuryConditionAI)});
+        };
         class Timeout {
             targetState = "Dead";
             condition = QUOTE(DFUNC(conditionCardiacArrestTimer));
