@@ -2,6 +2,7 @@ ace_medical_menu
 ===============
 
 Provides the CSE medical menu for the advanced medical system.
+Also responsible for adding all interaction menu actions.
 
 
 ## Maintainers

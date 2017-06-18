@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, nozzle, [2, 1, 5]] call ace_refuel_fnc_refuel
+ *
  * Public: No
  */
 

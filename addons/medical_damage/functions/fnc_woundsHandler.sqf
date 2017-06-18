@@ -41,10 +41,12 @@ private _woundDamage = _damage / ((count _woundsCreated) max 1); // If the damag
 private _painLevel = 0;
 private _critialDamage = false;
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 {
     _x params ["", "_woundClassIDToAdd", "_bodyPartNToAdd", "", "_bleeding"];
 
     _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
+    _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
     // The higher the nastiness likelihood the higher the change to get a painful and bloody wound
     private _nastinessLikelihood = linearConversion [0, 20, _woundDamage, 0.5, 30, true];
@@ -107,7 +109,8 @@ private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,
 _unit setVariable [QEGVAR(medical,openWounds), _openWounds, true];
 _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
-[_unit, _bodyPart] call EFUNC(medical_engine,updateBodyPartVisuals);
+_bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
+
 [_unit, _painLevel] call EFUNC(medical,adjustPainLevel);
 [_unit, "hit", PAIN_TO_SCREAM(_painLevel)] call EFUNC(medical_engine,playInjuredSound);
 

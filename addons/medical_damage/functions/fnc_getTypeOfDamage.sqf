@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The projectile classname or object <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Type of damage <STRING>
+ *
+ * Example:
+ * ["bullet"] call ACE_medical_fnc_getTypeOfDamage
  *
  * Public: No
  */

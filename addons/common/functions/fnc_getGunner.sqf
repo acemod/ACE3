@@ -9,6 +9,9 @@
  * Return Value:
  * Gunner <OBJECT>
  *
+ * Example:
+ * [car, "gun"] call ace_common_fnc_getGunner
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

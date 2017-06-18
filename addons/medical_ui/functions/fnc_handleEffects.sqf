@@ -23,7 +23,7 @@ BEGIN_COUNTER(handleEffects);
 // - Current state info -------------------------------------------------------
 private _bleedingStrength = [ACE_player] call EFUNC(medical,getBloodloss);
 private _bloodVolume      = ACE_player getVariable [QEGVAR(medical,bloodVolume), DEFAULT_BLOOD_VOLUME];
-private _unconscious      = ACE_player getVariable [QEGVAR(medical,isUnconscious), false];
+private _unconscious      = ACE_player getVariable ["ACE_isUnconscious", false];
 private _heartRate        = ACE_player getVariable [QEGVAR(medical,heartRate), DEFAULT_HEART_RATE];
 private _pain             = [ACE_player] call EFUNC(medical,getPainLevel);
 

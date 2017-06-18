@@ -8,6 +8,9 @@
  * Return Value:
  * Vehicle codriver positions <ARRAY>
  *
+ * Example:
+ * ["car"] call ace_common_fnc_getVehicleCodriver
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

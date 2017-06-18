@@ -6,11 +6,7 @@ GVAR(MenuPFHID) = -1;
 GVAR(lastOpenedOn) = -1;
 GVAR(pendingReopen) = false;
 
-["ace_settingsInitialized", {
-    if (EGVAR(medical,menuTypeStyle) == 0) then {
-        [] call FUNC(collectActions3D);
-    };
-}] call CBA_fnc_addEventHandler;
+[] call FUNC(collectActions3D);
 
 ["ace_treatmentSucceded", {
     if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {

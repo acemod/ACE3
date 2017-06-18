@@ -10,7 +10,7 @@
  * Return Value:
  * Available actions <ARRAY>
  *
- * Exmaple:
+ * Example:
  * [ACE_player, poor_dude, "some category"] call ace_medical_menu_fnc_getTreatmentOptions
  *
  * Public: No

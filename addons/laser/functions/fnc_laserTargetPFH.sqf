@@ -5,7 +5,7 @@
  * Argument:
  * PFEH Args
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:

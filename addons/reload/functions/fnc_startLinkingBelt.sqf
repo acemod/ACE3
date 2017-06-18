@@ -8,7 +8,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [bob, kevin] call ace_reload_fnc_startLinkingBelt
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_player", "_target"];

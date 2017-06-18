@@ -9,7 +9,7 @@
  * Is being carried <BOOL>
  *
  * Example:
- * [bob] call ace_medical_fnc_isBeingCarried
+ * [bob] call ACE_medical_treatment_fnc_isBeingCarried
  *
  * Public: No
  */

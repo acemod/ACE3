@@ -16,19 +16,7 @@
         </Key>
         <Key ID="STR_ACE_Hellfire_hellfireModeAction">
             <English>Set Hellfire mode</English>
-        </Key>
-        <Key ID="STR_ACE_Hellfire_HF_B_Heli_Attack_01">
-            <English>RAH-66 Comanche [Hellfire]</English>
-            <German>RAH-66 Comanche [Hellfire]</German>
-            <Spanish>RAH-66 Comanche [Hellfire]</Spanish>
-            <Polish>RAH-66 Comanche [Hellfire]</Polish>
-            <Czech>RAH-66 Comanche [Hellfire]</Czech>
-            <French>RAH-66 Commanche [Hellfire]</French>
-            <Russian>RAH-66 Команч [Hellfire]</Russian>
-            <Portuguese>RAH-66 Comanche [Hellfire]</Portuguese>
-            <Hungarian>RAH-66 Comanche [Hellfire]</Hungarian>
-            <Italian>RAH-66 Comanche [Hellfire]</Italian>
-            <Japanese>RAH-66 コマンチ [Hellfire]</Japanese>
+            <Italian>Imposta modalità Hellfire</Italian>
         </Key>
     </Package>
 </Project>

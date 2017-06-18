@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_init
  *
  * Public: No
  */
@@ -20,7 +23,7 @@ if (damage _unit > 0) then {
 
 _unit setVariable [QGVAR(pain), 0, true];
 _unit setVariable [QGVAR(bloodVolume), DEFAULT_BLOOD_VOLUME, true];
-_unit setVariable [QGVAR(isUnconscious), false, true];
+_unit setVariable ["ACE_isUnconscious", false, true];
 _unit setVariable [QGVAR(partialHealCounter), 0, true];
 
 // tourniquets

@@ -3,10 +3,10 @@
  * Updates GVAR(currentHumidity)
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [] call ace_weather_fnc_updateHumidity

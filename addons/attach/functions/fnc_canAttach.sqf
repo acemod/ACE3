@@ -27,7 +27,7 @@ _attachLimit = [6, 1] select (_player == _attachToVehicle);
 _attachedObjects = _attachToVehicle getVariable [QGVAR(attached), []];
 
 ((_player == _attachToVehicle) || {canStand _player}) &&
-{(_attachToVehicle distance _player) < 7} && 
-{alive _attachToVehicle} && 
-{(count _attachedObjects) < _attachLimit} && 
+{(_attachToVehicle distance _player) < 10} &&
+{alive _attachToVehicle} &&
+{(count _attachedObjects) < _attachLimit} &&
 {_itemClassname in ((itemsWithMagazines _player) + [""])};

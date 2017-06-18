@@ -10,6 +10,9 @@
  * Return Value:
  * Was the menu rendered <BOOL>
  *
+ * Example:
+ * [bob, [node], [0, 0, 0]] call ACE_interact_menu_fnc_renderBaseMenu
+ *
  * Public: No
  */
 #include "script_component.hpp"

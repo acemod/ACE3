@@ -7,6 +7,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_advanced_fatigue_fnc_mainLoop
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 if (!alive ACE_player) exitWith { // Dead people don't breath, Will also handle null (Map intros)

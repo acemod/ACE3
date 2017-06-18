@@ -7,8 +7,11 @@
  * 1: Show <NUMBER> (default: 0)
  * 2: Selection <NUMBER> (default: 0)
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true, 2] call ACE_medical_fnc_displayPatientInformation
  *
  * Public: No
  */

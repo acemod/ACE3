@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="repair">
         <Key ID="STR_ACE_Repair_SpareTrack">
@@ -954,18 +954,8 @@
             <Japanese>工兵のみ</Japanese>
             <Korean>오직 정비공만</Korean>
         </Key>
-        <Key ID="STR_ACE_Repair_engineerSetting_RepairSpecialistOnly">
-            <English>Repair Specialist only</English>
-            <German>Nur Reparaturspezialist</German>
-            <Polish>Tylko inżynierowie</Polish>
-            <Portuguese>Somente especialista em reparos</Portuguese>
-            <Russian>Только ремонтные специалисты</Russian>
-            <Czech>Pouze specialista na opravování</Czech>
-            <Spanish>Solo especialista en reparación</Spanish>
-            <Italian>Solo Specialista Riparazioni</Italian>
-            <French>Spécialistes de réparation seulement</French>
-            <Japanese>専門兵のみ</Japanese>
-            <Korean>오직 정비 특기만</Korean>
+        <Key ID="STR_ACE_Repair_engineerSetting_AdvancedOnly">
+            <English>Advanced Engineer only</English>
         </Key>
         <Key ID="STR_ACE_Repair_enginerSetting_Wheel_name">
             <English>Allow Wheel</English>
@@ -1240,18 +1230,9 @@
             <Japanese>専門兵</Japanese>
             <Korean>정비공</Korean>
         </Key>
-        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_specialist">
-            <English>Specialist</English>
-            <German>Reparaturspezialist</German>
-            <Polish>Inżynier</Polish>
-            <Portuguese>Especialista</Portuguese>
-            <Russian>Специалист</Russian>
-            <Czech>Specialista</Czech>
-            <Spanish>Especialista</Spanish>
-            <Italian>Specialista Riparazioni</Italian>
-            <French>Spécialiste</French>
-            <Japanese>工兵として単体、複数ユニットを割り当てます。</Japanese>
-            <Korean>정비 특기</Korean>
+        <Key ID="STR_ACE_Repair_AssignEngineerRole_role_advanced">
+            <!-- Advanced Engineer is to long for some fields so it it shorted to Adv. -->
+            <English>Adv. Engineer</English>
         </Key>
         <Key ID="STR_ACE_Repair_AssignEngineerRole_Module_Description">
             <English>Assign one or multiple units as an engineer</English>

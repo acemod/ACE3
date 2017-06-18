@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [[args], 5] call ace_gforces_fnc_pfhUpdateGForces
+ *
  * Public: No
  */
  #include "script_component.hpp"

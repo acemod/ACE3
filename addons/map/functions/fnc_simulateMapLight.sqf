@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL, 5, [5, 4, 6], []] call ACE_map_fnc_simulateMapLights
+ *
  * Public: No
  */
 

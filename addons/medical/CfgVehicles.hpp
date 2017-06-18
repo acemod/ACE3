@@ -1,6 +1,4 @@
 
-#define MEDICAL_ACTION_DISTANCE 1.75
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
