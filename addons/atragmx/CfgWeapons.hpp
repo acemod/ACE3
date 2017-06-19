@@ -8,8 +8,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(Name);
         descriptionShort = CSTRING(Description);
-        model = PATHTOF(data\tdsrecon.p3d);
-        picture = PATHTOF(UI\ATRAG_Icon.paa);
+        model = QPATHTOF(data\tdsrecon.p3d);
+        picture = QPATHTOF(UI\ATRAG_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
 

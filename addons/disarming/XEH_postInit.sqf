@@ -1,4 +1,4 @@
 #include "script_component.hpp"
 
-["DisarmDropItems", FUNC(eventTargetStart)] call EFUNC(common,addEventHandler);
-["DisarmDebugCallback", FUNC(eventCallerFinish)] call EFUNC(common,addEventHandler);
+[QGVAR(dropItems), FUNC(eventTargetStart)] call CBA_fnc_addEventHandler;
+[QGVAR(debugCallback), FUNC(eventCallerFinish)] call CBA_fnc_addEventHandler;

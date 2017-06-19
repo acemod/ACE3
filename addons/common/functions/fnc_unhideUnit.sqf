@@ -7,22 +7,20 @@
  * 1: Reason to unhide the unit <STRING>
  *
  * Return Value:
- * nil
+ * None
  *
  * Example:
  * [ACE_Player, "SpectatorMode"] call ace_common_fnc_unhideUnit
  *
- * Public: No
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
-private "_setHiddenReasons";
-_setHiddenReasons = _unit getVariable [QGVAR(setHiddenReasons), []];
+private _setHiddenReasons = _unit getVariable [QGVAR(setHiddenReasons), []];
 
 if (_reason in _setHiddenReasons) then {
     _setHiddenReasons deleteAt (_setHiddenReasons find _reason);
@@ -30,5 +28,5 @@ if (_reason in _setHiddenReasons) then {
 };
 
 if (_setHiddenReasons isEqualTo []) then {
-    ["hideObjectGlobal",[_unit,false]] call FUNC(serverEvent);
+    [QGVAR(hideObjectGlobal), [_unit,false]] call CBA_fnc_serverEvent;
 };

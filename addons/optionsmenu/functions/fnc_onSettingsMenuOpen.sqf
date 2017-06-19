@@ -21,6 +21,7 @@ private ["_setting", "_menu"];
 // Filter only user setable setting
 GVAR(clientSideOptions) = [];
 GVAR(clientSideColors) = [];
+private _clientSettableCategories = [""];
 
 {
     // If the setting is user setable and not forced
@@ -37,14 +38,15 @@ GVAR(clientSideColors) = [];
         if ((_x select 1) == "COLOR") then {
             GVAR(clientSideColors) pushBack _setting;
         };
+        _clientSettableCategories pushBackUnique (_x select 8); //Add to list of user-settable categories
     };
 } forEach EGVAR(common,settings);
 
 //Delay a frame
-[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+[{ [MENU_TAB_OPTIONS] call FUNC(onListBoxShowSelectionChanged) }, []] call CBA_fnc_execNextFrame;
 
 disableSerialization;
-_menu = uiNamespace getvariable "ACE_settingsMenu";
+_menu = uiNamespace getVariable "ACE_settingsMenu";
 (_menu displayCtrl 1002) ctrlEnable false;
 (_menu displayCtrl 1003) ctrlEnable false;
 
@@ -55,10 +57,13 @@ if (GVAR(serverConfigGeneration) == 0) then {
 
 lbClear (_menu displayCtrl 14);
 {
-    if (_x == "") then {
-        _x = localize LSTRING(category_all);
+    if (_x in _clientSettableCategories) then { //only show category if it has user-settable options
+        if (_x == "") then {
+            _x = localize LSTRING(category_all);
+        };
+        private _Index = (_menu displayCtrl 14) lbAdd _x;
+        (_menu displayCtrl 14) lbSetValue [_Index, _forEachIndex];
     };
-    (_menu displayCtrl 14) lbAdd _x;
 } forEach GVAR(categories);
 
 (_menu displayCtrl 14) lbSetCurSel GVAR(currentCategorySelection); //All Catagoies

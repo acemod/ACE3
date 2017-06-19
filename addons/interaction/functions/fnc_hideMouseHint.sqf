@@ -5,7 +5,7 @@
  * Arguments:
  * None
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -15,7 +15,11 @@
  */
 #include "script_component.hpp"
 
-if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith{};
+if (isNull (uiNamespace getVariable ["ACE_Helper_Display", objNull])) exitWith {};
 
 (QGVAR(InteractionHelper) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
-showHUD true;
+
+// Disable action menu, showHud also disables all scripted UI (such as drawIcon3D)
+inGameUISetEventHandler ["PrevAction", "false"];
+inGameUISetEventHandler ["NextAction", "false"];
+inGameUISetEventHandler ["Action", "false"];

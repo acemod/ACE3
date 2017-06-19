@@ -1,30 +1,25 @@
 /*
  * Author: commy2
- *
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.
  *
- * Argument:
- * 0: Unit that has a backpack (Object)
+ * Arguments:
+ * 0: Unit that has a backpack <OBJECT>
  *
- * Return value:
- * Ground wepaon holder with backpack (Object)
+ * Return Value:
+ * Ground wepaon holder with backpack <OBJECT>
  *
+ * Example:
+ * [unit] call ace_common_fnc_dropBackpack
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params [["_unit", objNull, [objNull]]];
 
-private ["_backpackObject","_holder"];
+private _backpackObject = backpackContainer _unit;
 
-_backpackObject = backpackContainer _unit;
-_unit addBackpack "Bag_Base";
+_unit addBackpack "ACE_FakeBackpack";
 removeBackpack _unit;
-_holder = objNull;
 
-{
-    if (_backpackObject in everyBackpack _x) exitWith {
-        _holder = _x;
-    };
-} forEach (position _unit nearObjects ["WeaponHolder", 5]); 
-
-_holder
+objectParent _backpackObject // return

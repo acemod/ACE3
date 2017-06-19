@@ -1,4 +1,5 @@
-#define COMPONENT RH_acc_comp
+#define COMPONENT compat_rh_acc
+#define COMPONENT_BEAUTIFIED RH Accessories Compatibility
 
 #include "\z\ace\addons\main\script_mod.hpp"
 

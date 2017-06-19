@@ -1,7 +1,6 @@
 /*
  * Author: Winter
- * Initialises the view distance limiter module
- *
+ * Initializes the view distance limiter module.
  *
  * Arguments:
  * 0: logic <OBJECT>
@@ -11,6 +10,10 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC; [bob, kevin], true] call ace_viewdistance_fnc_initModule
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
@@ -20,10 +23,10 @@ if (!isServer) exitWith {};
 params ["_logic", "_units", "_activated"];
 
 if (!_activated) exitWith {
-    diag_log text "[ACE]: View Distance Limit Module is placed but NOT active.";
+    WARNING("View Distance Limit Module is placed but NOT active.");
 };
 
 [_logic, QGVAR(enabled),"moduleViewDistanceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(limitViewDistance),"moduleViewDistanceLimit"] call EFUNC(common,readSettingFromModule);
 
-diag_log format ["[ACE]: View Distance Limit Module Initialized. Limit set by module: %1",GVAR(limitViewDistance)];
+INFO_1("View Distance Limit Module Initialized. Limit set by module: %1",GVAR(limitViewDistance));

@@ -6,8 +6,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(Battery_Name);
         descriptionShort = CSTRING(Battery_Description);
-        model = QUOTE(PATHTOF(data\ace_battery.p3d));
-        picture = QUOTE(PATHTOF(ui\UAV_battery_ca.paa));
+        model = QPATHTOF(data\ace_battery.p3d);
+        picture = QPATHTOF(ui\UAV_battery_ca.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 20;
         };

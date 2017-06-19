@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="sandbag">
         <Key ID="STR_ACE_Sandbag_sandbag_displayName">
@@ -12,6 +12,8 @@
             <Italian>Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák</Hungarian>
             <Portuguese>Saco de Areia</Portuguese>
+            <Japanese>土のう</Japanese>
+            <Korean>모래주머니</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -24,6 +26,8 @@
             <Italian>Sacco di Sabbia (Vuoto)</Italian>
             <Hungarian>Homokzsák (üres)</Hungarian>
             <Portuguese>Saco de Areia (vazio)</Portuguese>
+            <Japanese>土のう (空)</Japanese>
+            <Korean>모래주머니(비어있음)</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
@@ -36,6 +40,8 @@
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
             <Portuguese>Não pode contruir aqui</Portuguese>
+            <Japanese>ここでは作れない</Japanese>
+            <Korean>여기에 지을 수 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -48,6 +54,8 @@
             <Italian>Prendi Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák felvétele</Hungarian>
             <Portuguese>Pegar saco de areia</Portuguese>
+            <Japanese>土のうを拾う</Japanese>
+            <Korean>모래주머니 줍기</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -60,6 +68,8 @@
             <Italian>Trasporta Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák cipelése</Hungarian>
             <Portuguese>Carregar saco de areia</Portuguese>
+            <Japanese>土のうを運ぶ</Japanese>
+            <Korean>모래주머니 옮기기</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -72,6 +82,8 @@
             <Italian>Fine Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
             <Portuguese>Parar de carregar</Portuguese>
+            <Japanese>下ろす</Japanese>
+            <Korean>그만 옮기기</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -84,6 +96,8 @@
             <Italian>Lascia Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák eldobása</Hungarian>
             <Portuguese>Derrubar saco de areia</Portuguese>
+            <Japanese>土のうを落とす</Japanese>
+            <Korean>여기에 놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -96,6 +110,8 @@
             <Italian>Conferma Posizionamento</Italian>
             <Hungarian>Lerak</Hungarian>
             <Portuguese>Confirmar implantação</Portuguese>
+            <Japanese>ここで作る</Japanese>
+            <Korean>설치 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -108,6 +124,8 @@
             <Italian>Cancella Posizionamento</Italian>
             <Hungarian>Visszavonás</Hungarian>
             <Portuguese>Cancelar implantação</Portuguese>
+            <Japanese>作るのをやめる</Japanese>
+            <Korean>설치 취소</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -120,6 +138,8 @@
             <Italian>Posiziona Sacco di Sabbia</Italian>
             <Hungarian>Homokzsák lerakása</Hungarian>
             <Portuguese>Implantar saco de areia</Portuguese>
+            <Japanese>土のうを設置</Japanese>
+            <Korean>모래주머니 설치</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -132,6 +152,8 @@
             <Italian>Contenitore Sacchi di Sabbia</Italian>
             <Hungarian>Homokzsákos láda</Hungarian>
             <Portuguese>Caixa de saco de areia</Portuguese>
+            <Japanese>土のう入れ</Japanese>
+            <Korean>모래주머니 상자</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -144,18 +166,22 @@
             <Italian>Qui non cè Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
             <Portuguese>Aqui não tem areia</Portuguese>
+            <Japanese>ここに土は無い</Japanese>
+            <Korean>흙이 없습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
-            <English>+ Modifier, rotates</English>
-            <German>+ Modifikator, drehen</German>
-            <Spanish>+ Modificador, girar</Spanish>
-            <French>+ Modificateur, tourner</French>
-            <Italian>+ Modificatore, rotazione</Italian>
-            <Czech>+ Modifikátor, otočit</Czech>
-            <Hungarian>+ Változtatás, forgatás</Hungarian>
-            <Polish>+ Modyfikator, obrót</Polish>
-            <Portuguese>+ Modificador, rotaciona</Portuguese>
-            <Russian>+ Bращать</Russian>
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
+            <Japanese>回転</Japanese>
+            <Korean>돌리기</Korean>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dragging">
         <Key ID="STR_ACE_Dragging_Drag">
@@ -12,6 +12,8 @@
             <Portuguese>Arrastar</Portuguese>
             <Italian>Trascina</Italian>
             <Hungarian>Húzás</Hungarian>
+            <Japanese>引きずる</Japanese>
+            <Korean>끌기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -24,6 +26,22 @@
             <Portuguese>Soltar</Portuguese>
             <Italian>Lascia</Italian>
             <Hungarian>Elengedés</Hungarian>
+            <Japanese>はなす</Japanese>
+            <Korean>놓기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Dragging_DragKeybind">
+            <English>Drag/Release Object</English>
+            <Russian>Тащить/Отпустить Объекты</Russian>
+            <Spanish>Arrastrar/Soltar Objeto</Spanish>
+            <Polish>Ciągnij/Puść Obiekt</Polish>
+            <Czech>Táhnout/Položit Objekt</Czech>
+            <French>Trainer/Lâcher Objets</French>
+            <German>Objekt ziehen/loslassen</German>
+            <Portuguese>Arrastar/Soltar Objeto</Portuguese>
+            <Italian>Trascina/Lascia Oggetto</Italian>
+            <Hungarian>Húzás/Elengedés Objektum</Hungarian>
+            <Japanese>オブジェクトを引きずる/はなす</Japanese>
+            <Korean>물건 끌기/놓기</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -34,8 +52,10 @@
             <Portuguese>Objeto muito pesado</Portuguese>
             <Italian>L'oggetto pesa troppo</Italian>
             <Russian>Предмет слишком тяжёлый</Russian>
-            <Czech>Moc težké</Czech>
+            <Czech>Předmět je moc těžký</Czech>
             <Hungarian>Az objektum túl nehéz</Hungarian>
+            <Japanese>アイテムが重すぎる</Japanese>
+            <Korean>물체가 너무 무겁습니다</Korean>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -48,6 +68,21 @@
             <Hungarian>Felvevés</Hungarian>
             <Italian>Trasporta</Italian>
             <Russian>Нести</Russian>
+            <Japanese>運ぶ</Japanese>
+            <Korean>업기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Dragging_LowerRaise">
+            <English>Raise/Lower</English>
+            <German>Heben/Senken</German>
+            <Polish>Wyżej/Niżej</Polish>
+            <Portuguese>Levantar/Abaixar</Portuguese>
+            <Russian>Поднять/Опустить</Russian>
+            <Czech>Zvýšit/Snížit</Czech>
+            <Italian>Alza/Abbassa</Italian>
+            <Spanish>Subir/Bajar</Spanish>
+            <French>Lever/Baisser</French>
+            <Japanese>上げる/下げる</Japanese>
+            <Korean>높이기/낮추기</Korean>
         </Key>
     </Package>
 </Project>

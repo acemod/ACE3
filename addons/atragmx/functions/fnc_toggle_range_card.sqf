@@ -3,10 +3,10 @@
  * Toggles the range card screen on/off
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_toggle_range_card
@@ -21,9 +21,9 @@ if (ctrlVisible 5006) then {
 } else {
     false call FUNC(show_main_page);
     true call FUNC(show_range_card);
-    
+
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 5001);
-    
+
     [] call FUNC(calculate_range_card);
     [] call FUNC(update_range_card);
 };

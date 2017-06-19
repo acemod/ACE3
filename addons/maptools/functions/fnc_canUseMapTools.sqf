@@ -5,8 +5,11 @@
  * Arguments:
  * None
  *
- * Return value:
- * <BOOL>
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * call ACE_maptools_fnc_canUseMapTools
  *
  * Public: No
  */

@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Attach">
         <Key ID="STR_ACE_Attach_AttachDetach">
-            <English>Attach item &gt;&gt;</English>
-            <German>Gegenstand befestigen &gt;&gt;</German>
-            <Spanish>Acoplar objeto &gt;&gt;</Spanish>
-            <Polish>Przyczep &gt;&gt;</Polish>
-            <French>Attacher l'objet &gt;&gt;</French>
-            <Czech>Připnout předmět &gt;&gt;</Czech>
-            <Portuguese>Fixar item &gt;&gt;</Portuguese>
-            <Italian>Attacca l'oggetto &gt;&gt;</Italian>
-            <Hungarian>Tárgy hozzácsatolása &gt;&gt;</Hungarian>
+            <English>Attach item</English>
+            <German>Gegenstand befestigen</German>
+            <Spanish>Acoplar objeto</Spanish>
+            <Polish>Przyczep</Polish>
+            <French>Attacher l'objet</French>
+            <Czech>Připnout</Czech>
+            <Portuguese>Fixar item</Portuguese>
+            <Italian>Attacca l'oggetto</Italian>
+            <Hungarian>Tárgy hozzácsatolása</Hungarian>
             <Russian>Прикрепить предмет</Russian>
+            <Japanese>アイテムを取り付ける</Japanese>
+            <Korean>물건 부착</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Attach">
             <English>Attach</English>
@@ -24,6 +26,8 @@
             <Italian>Attacca</Italian>
             <Hungarian>Hozzácsatolás</Hungarian>
             <Russian>Прикрепить</Russian>
+            <Japanese>取り付ける</Japanese>
+            <Korean>부착</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Detach">
             <English>Detach item</English>
@@ -36,6 +40,8 @@
             <Italian>Stacca l'oggetto</Italian>
             <Hungarian>Tárgy lecsatolása</Hungarian>
             <Russian>Отсоединить</Russian>
+            <Japanese>アイテムを外す</Japanese>
+            <Korean>분리</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Attached">
             <English>IR Strobe Attached</English>
@@ -48,6 +54,8 @@
             <Italian>Strobo IR attaccata</Italian>
             <Hungarian>Infravörös jeladó hozzácsatolva</Hungarian>
             <Russian>ИК-маяк прикреплён</Russian>
+            <Japanese>赤外線ストロボを取り付ける</Japanese>
+            <Korean>적외선 스트로브 부착됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Detached">
             <English>IR Strobe Detached</English>
@@ -60,6 +68,8 @@
             <Italian>Strobo IR staccata</Italian>
             <Hungarian>Infravörös jeladó lecsatolva</Hungarian>
             <Russian>ИК-маяк отсоединён</Russian>
+            <Japanese>赤外線ストロボを外す</Japanese>
+            <Korean>적외선 스트로브 분리됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Attached">
             <English>IR Grenade Attached</English>
@@ -72,6 +82,8 @@
             <Italian>Granata IR attaccata</Italian>
             <Hungarian>Infravörös gránát hozzácsatolva</Hungarian>
             <Russian>ИК-граната прикреплена</Russian>
+            <Japanese>赤外線グレネードを取り付ける</Japanese>
+            <Korean>적외선 수류탄 부착됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrGrenade_Detached">
             <English>IR Grenade Detached</English>
@@ -84,30 +96,36 @@
             <Italian>Granata IR staccata</Italian>
             <Hungarian>Infravörös gránát lecsatolva</Hungarian>
             <Russian>ИК-граната отсоединена</Russian>
+            <Japanese>赤外線グレネードを外す</Japanese>
+            <Korean>적외선 수류탄 분리됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
             <German>Leuchtstab befestigt</German>
             <Spanish>Barra de luz acoplada</Spanish>
             <Polish>Przyczepiono światło chemiczne</Polish>
-            <French>Chemlight attachée</French>
+            <French>Cyalume attachée</French>
             <Czech>Chemické světlo připnuto</Czech>
             <Portuguese>Chemlight Fixada</Portuguese>
             <Italian>Chemlight attaccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет прикреплён</Russian>
+            <Japanese>ケミライトを取り付け</Japanese>
+            <Korean>켐라이트 부착됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Detached">
             <English>Chemlight Detached</English>
             <German>Leuchtstab entfernt</German>
             <Spanish>Barra de luz quitada</Spanish>
             <Polish>Odczepiono światło chemiczne</Polish>
-            <French>Chemlight détachée</French>
+            <French>Cyalume détachée</French>
             <Czech>Chemické světlo odepnuto</Czech>
             <Portuguese>Chemlight Separada</Portuguese>
             <Italian>Chemlight staccata</Italian>
             <Hungarian>Chemlight hozzácsatolva</Hungarian>
             <Russian>Химсвет отсоединён</Russian>
+            <Japanese>ケミライトを外す</Japanese>
+            <Korean>켐라이트 분리됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Inventory_Full">
             <English>No inventory space</English>
@@ -115,11 +133,13 @@
             <Spanish>Sin espacio en inventario</Spanish>
             <Polish>Brak miejsca w ekwipunku</Polish>
             <French>Pas de place dans l'inventaire</French>
-            <Czech>Není místo v inventáři</Czech>
+            <Czech>Nedostatek místa v inventáři</Czech>
             <Portuguese>Sem espaço no inventário</Portuguese>
             <Italian>Non hai più spazio</Italian>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
+            <Japanese>インベントリに空きがない</Japanese>
+            <Korean>넣을 공간이 없음</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Name">
             <English>IR Strobe</English>
@@ -132,18 +152,22 @@
             <Italian>Strobo IR</Italian>
             <Hungarian>Infravörös jeladó</Hungarian>
             <Russian>ИК-маяк</Russian>
+            <Japanese>赤外線ストロボ</Japanese>
+            <Korean>적외선 스트로브</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_IrStrobe_Description">
             <English>IR Strobe allows you to signal your position through a pulsating beacon only visible with NVGs.</English>
             <German>Das IR-Stroboskop erlaubt es dir deine Position mit einem blinkenden Leuchtfeuer zu signalisieren, welches nur mit Nachtsichtgerät zu erkennen ist.</German>
             <Polish>Stroboskop światła podczerwieni umożliwia oznaczenie swojej pozycji pulsacyjnym światłem widocznym tylko przez optykę noktowizyjną i gogle noktowizyjne.</Polish>
             <Spanish>El Marcador IR permite señalizar su posisición a través de una baliza visible solo a través de dispositivos de visión nocturna. </Spanish>
-            <French>La balise IR permet de signaler votre position grace à un clignotement visible par des JVN.</French>
+            <French>La balise IR permet de signaler votre position grâce à un clignotement visible par des JVN.</French>
             <Czech>IR Značkovač je Infračerveně zářící stroboskop umožňující signalizaci vaší pozice díky blikajícímu světlu, které je vidět pouze při užití noktovizoru.</Czech>
             <Portuguese>O Marcador IV permite que você sinalize sua posição através de um pulso visível somente com equipamento de visão noturna.</Portuguese>
             <Italian>La Strobo IR è una luce stroboscopica che ti permette di segnalare la tua posizione grazie all'emissione di impulsi ad infrarossi visibili solo con i visori notturni.</Italian>
             <Hungarian>Az infravörös jeladóval megjelölheted a helyzetedet úgy, hogy annak pulzáló fénye csak éjjellátó készülékkel látható.</Hungarian>
             <Russian>ИК-маяк позволяет сигнализировать о своём местоположении через пульсирующий свет, видимый только через ПНВ.</Russian>
+            <Japanese>赤外線ストロボはあなたの位置を知らせますが、夜間暗視装置を介してでしか見れません。</Japanese>
+            <Korean>적외선 스트로브는 자신의 위치를 반짝이면서 표시합니다. 이는 야간투시경으로 밖에 보지 못합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_PlaceAction">
             <English>Place</English>
@@ -156,6 +180,8 @@
             <Italian>Posiziona</Italian>
             <Hungarian>Elhelyez</Hungarian>
             <Russian>Установить</Russian>
+            <Japanese>置く</Japanese>
+            <Korean>두기</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_CancelAction">
             <English>Cancel</English>
@@ -168,6 +194,8 @@
             <Italian>Annulla</Italian>
             <Hungarian>Mégse</Hungarian>
             <Russian>Отмена</Russian>
+            <Japanese>やめる</Japanese>
+            <Korean>취소</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Failed">
             <English>Attach Failed</English>
@@ -175,11 +203,13 @@
             <German>Befestigen fehlgeschlagen</German>
             <Russian>Не удалось присоединить</Russian>
             <Spanish>Error al acoplar</Spanish>
-            <Czech>Připnutí selhalo</Czech>
+            <Czech>Připnout přesmět se nezdařilo</Czech>
             <Portuguese>Erro ao fixar</Portuguese>
             <Polish>Przyczepianie nie powiodło się</Polish>
             <Hungarian>Hozzácsatolás sikertelen</Hungarian>
             <Italian>Non si attacca</Italian>
+            <Japanese>取り付けに失敗した</Japanese>
+            <Korean>부착 실패</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Attached">
             <English>%1&lt;br/&gt;Attached</English>
@@ -187,11 +217,13 @@
             <Spanish>%1&lt;br/&gt;acoplada</Spanish>
             <Polish>Przyczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;attachée</French>
-            <Czech>%1&lt;br/&gt;Připnutý</Czech>
+            <Czech>%1&lt;br/&gt;Připnuto</Czech>
             <Portuguese>%1&lt;br/&gt;Fixada</Portuguese>
             <Italian>%1&lt;br/&gt;attaccata</Italian>
             <Hungarian>%1&lt;br/&gt;hozzácsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;присоединен(-а)</Russian>
+            <Japanese>%1&lt;br/&gt;を取り付けた</Japanese>
+            <Korean>%1&lt;br/&gt;부착됨</Korean>
         </Key>
         <Key ID="STR_ACE_Attach_Item_Detached">
             <English>%1&lt;br/&gt;Detached</English>
@@ -199,11 +231,13 @@
             <Spanish>%1&lt;br/&gt;quitada</Spanish>
             <Polish>Odczepiono&lt;br/&gt;%1</Polish>
             <French>%1&lt;br/&gt;détachée</French>
-            <Czech>%1&lt;br/&gt;Odepnutý</Czech>
+            <Czech>%1&lt;br/&gt;Odepnuto</Czech>
             <Portuguese>%1&lt;br/&gt;Separada</Portuguese>
             <Italian>%1&lt;br/&gt;staccata</Italian>
             <Hungarian>%1&lt;br/&gt;lecsatolva</Hungarian>
             <Russian>%1&lt;br/&gt;отсоединен(-а)</Russian>
+            <Japanese>%1&lt;br/&gt;を外した</Japanese>
+            <Korean>%1&lt;br/&gt;분리됨</Korean>
         </Key>
     </Package>
 </Project>

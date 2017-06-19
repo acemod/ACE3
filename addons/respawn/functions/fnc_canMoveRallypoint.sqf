@@ -1,33 +1,30 @@
 /*
-  Name: ACE_Respawn_fnc_canMoveRallypoint
-  
-  Author(s):
-    commy2
-  
-  Description:
-    checks if a unit can move a rally point
-  
-  Parameters:
-    0: OBJECT - unit
-    1: OBJECT - side
-  
-  Returns:
-    BOOLEAN
-*/
-
+ * Author: commy2
+ * Checks if a unit can move a rally point.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Side <SIDE>
+ *
+ * Return Value:
+ * Can move <BOOL>
+ *
+ * Example:
+ * [ACE_Player, side ACE_Player] call ace_respawn_fnc_canMoveRallypoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_unit", "_side"];
+params ["_unit", "_side"];
 
-_unit = _this select 0;
-_side = _this select 1;
+// player has to be a rallypoint mover. group leader by default
+if !(_unit getVariable ["ACE_canMoveRallypoint", false]) exitWith {false};
 
-// rallypoint names are defined in CfgVehicles.hpp
-
-_unit getVariable ["ACE_canMoveRallypoint", false]
-&& {!isNull ([
+// rallypoint of that side has to exist
+!isNull ([
     objNull,
     missionNamespace getVariable ["ACE_Rallypoint_West", objNull],
     missionNamespace getVariable ["ACE_Rallypoint_East", objNull],
     missionNamespace getVariable ["ACE_Rallypoint_Independent", objNull]
-] select ([west, east, independent] find _side) + 1)}
+] select ([west, east, independent] find _side) + 1) // return

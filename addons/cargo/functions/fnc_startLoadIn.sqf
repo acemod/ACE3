@@ -3,29 +3,52 @@
  * Start load item.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Player <OBJECT>
+ * 1: Object <OBJECT>
+ * 2: Vehicle <OBJECT> (Optional)
  *
- * Return value:
- * Object loaded <BOOL>
+ * Return Value:
+ * Load ProgressBar Started <BOOL>
  *
  * Example:
- * [object] call ace_cargo_fnc_starLoadIn
+ * [player, cursorTarget] call ace_cargo_fnc_startLoadIn
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_player", "_object"];
+params ["_player", "_object", ["_cargoVehicle", objNull]];
+TRACE_3("params",_player,_object,_cargoVehicle);
 
-private ["_nearestVehicle"];
-_nearestVehicle = [_player] call FUNC(findNearestVehicle);
-
-if (isNull _nearestVehicle || _nearestVehicle isKindOf "Cargo_Base_F") then {
+private _vehicle = _cargoVehicle;
+if (isNull _vehicle) then {
     {
-        if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_nearestVehicle = _x};
-    } foreach (nearestObjects [_player, ["Cargo_base_F", "Land_PaperBox_closed_F"], MAX_LOAD_DISTANCE]);
+        if ([_object, _x] call FUNC(canLoadItemIn)) exitWith {_vehicle = _x};
+    } forEach (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]);
 };
 
-if (isNull _nearestVehicle) exitWith {false};
+if (isNull _vehicle) exitWith {
+    TRACE_3("Could not find vehicle",_player,_object,_vehicle);
+    false
+};
 
-[_object, _nearestVehicle] call FUNC(loadItem)
+private _return = false;
+// Start progress bar
+if ([_object, _vehicle] call FUNC(canLoadItemIn)) then {
+    private _size = [_object] call FUNC(getSizeItem);
+
+    [
+        5 * _size,
+        [_object,_vehicle],
+        {["ace_loadCargo", _this select 0] call CBA_fnc_localEvent},
+        {},
+        localize LSTRING(LoadingItem)
+    ] call EFUNC(common,progressBar);
+    _return = true;
+} else {
+    private _displayName = getText (configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
+
+    [[LSTRING(LoadingFailed), _displayName], 3.0] call EFUNC(common,displayTextStructured);
+};
+
+_return

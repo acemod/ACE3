@@ -1,50 +1,48 @@
-/**
- * fn_setHearingCapability.sqf
- * @Descr: Handle set volume calls. Will use the lowest available volume setting.
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Handle set volume calls. Will use the lowest available volume setting.
  *
- * @Arguments: [id STRING, settings NUMBER, add BOOL (Optional. True will add, false will remove. Default value is true)]
- * @Return: nil
- * @PublicAPI: true
+ * Arguments:
+ * 0: id <STRING>
+ * 1: settings <NUMBER>
+ * 2: add [true] OR remove [false] (default: true) <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["earwax", 0.5, true] call ace_common_fnc_setHearingCapability
+ *
+ * Public: Yes
  */
-
 #include "script_component.hpp"
 
-private ["_add", "_exists", "_map", "_lowestVolume"];
+params ["_id", "_setting", ["_add", true]];
 
-PARAMS_2(_id,_settings);
+private _exists = false;
+private _lowestVolume = 1;
 
-_add = true;
-if (count _this > 2) then {
-    _add = _this select 2;
-};
-
-_map = missionNamespace getVariable [QGVAR(setHearingCapabilityMap),[]];
-
-_exists = false;
-{
-    if (_id == _x select 0) exitWith {
+GVAR(setHearingCapabilityMap) = GVAR(setHearingCapabilityMap) select {
+    _x params ["_xID", "_xSetting"];
+    if (_id == _xID) then {
         _exists = true;
         if (_add) then {
-            _x set [1, _settings];
+            _x set [1, _setting];
+            _lowestVolume = _lowestVolume min _setting;
+            true
         } else {
-            _map set [_forEachIndex, 0];
-            _map = _map - [0];
+            false
         };
+    } else {
+        _lowestVolume = _lowestVolume min _xSetting;
+        true
     };
-} forEach _map;
-
-if (!_exists && _add) then {
-    _map pushBack [_id, _settings];
 };
 
-missionNamespace setVariable [QGVAR(setHearingCapabilityMap), _map];
-
-// find lowest volume
-_lowestVolume = 1;
-{
-    _lowestVolume = (_x select 1) min _lowestVolume;
-} forEach _map;
+if (!_exists && _add) then {
+    _lowestVolume = _lowestVolume min _setting;
+    GVAR(setHearingCapabilityMap) pushBack [_id, _setting];
+};
 
 // in game sounds
 0 fadeSound _lowestVolume;
@@ -52,5 +50,5 @@ _lowestVolume = 1;
 0 fadeMusic _lowestVolume;
 
 // Set Radio mod variables.
-player setVariable ["tf_globalVolume", _lowestVolume];
+ACE_player setVariable ["tf_globalVolume", _lowestVolume];
 if (!isNil "acre_api_fnc_setGlobalVolume") then { [_lowestVolume^0.33] call acre_api_fnc_setGlobalVolume; };

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="ATragMX">
         <Key ID="STR_ACE_ATragMX_Name">
@@ -12,18 +12,22 @@
             <Hungarian>ATragMX</Hungarian>
             <Portuguese>ATragMX</Portuguese>
             <Russian>ATragMX</Russian>
+            <Japanese>ATragMX</Japanese>
+            <Korean>ATragMX</Korean>
         </Key>
         <Key ID="STR_ACE_ATragMX_OpenATragMXDialog">
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
             <Russian>Открыть ATragMX</Russian>
             <Spanish>Abrir ATragMX</Spanish>
-            <French>Ouvrir ATragMX</French>
+            <French>Ouvrir l'ATragMX</French>
             <German>ATragMX öffnen</German>
             <Italian>Apri ATragMX</Italian>
             <Hungarian>ATragMX elővétele</Hungarian>
             <Czech>Otevřít ATragMX</Czech>
             <Portuguese>Abrir ATragMX</Portuguese>
+            <Japanese>ATragMX を開く</Japanese>
+            <Korean>ATragMX 열기</Korean>
         </Key>
         <Key ID="STR_ACE_ATragMX_Description">
             <English>Rugged PDA with ATragMX</English>
@@ -36,18 +40,22 @@
             <Hungarian>Megerősített PDA, ATragMX-el</Hungarian>
             <Czech>PDA s ATragMX</Czech>
             <Portuguese>PDA Robusto com ATragMX</Portuguese>
+            <Japanese>ATragMX 付きの携行型端末</Japanese>
+            <Korean>ATragMX가 달린 PDA</Korean>
         </Key>
         <Key ID="STR_ACE_ATragMX_ATragMXDialogKey">
             <English>Open ATragMX</English>
             <Polish>Otwórz ATragMX</Polish>
             <Russian>Открыть ATragMX</Russian>
             <Spanish>Abrir ATragMX</Spanish>
-            <French>Ouvrir ATragMX</French>
+            <French>Ouvrir l'ATragMX</French>
             <German>ATragMX öffnen</German>
             <Italian>Apri ATragMX</Italian>
             <Hungarian>ATragMX elővétele</Hungarian>
             <Czech>Otevřít ATragMX</Czech>
             <Portuguese>Abrir ATragMX</Portuguese>
+            <Japanese>ATragMX を開く</Japanese>
+            <Korean>ATragMX 열기</Korean>
         </Key>
     </Package>
 </Project>

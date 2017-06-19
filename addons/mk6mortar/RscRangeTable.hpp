@@ -7,7 +7,7 @@ class ACE_82mm_RangeTable_Dialog {
     class ControlsBackground {
         class TableBackground: RscPicture {
             idc = -1;
-            text = QUOTE(PATHTOF(UI\RangeTable_background.paa));
+            text = QPATHTOF(UI\RangeTable_background.paa);
             x = "18 *(safeZoneH / 40) +       (safezoneX + (safezoneW - safeZoneH)/2)";
             y = "1 * ((safeZoneH / 1.2) / 25) +   (safezoneY + (safezoneH - (safeZoneH / 1.2))/2)";
             w = "16.2634559672906 * (safeZoneH / 40)";

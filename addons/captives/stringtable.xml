@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
             <German>Gefangen nehmen</German>
             <Spanish>Tomar prisionero</Spanish>
-            <French>Capturer le prisonnier</French>
+            <French>Prendre le prisonnier</French>
             <Polish>Aresztuj</Polish>
-            <Czech>Zajmout Osobu</Czech>
+            <Czech>Zajmout osobu</Czech>
             <Italian>Arresta il prigioniero</Italian>
             <Portuguese>Tomar Prisioneiro</Portuguese>
             <Hungarian>Foglyul ejtés</Hungarian>
             <Russian>Взять в плен</Russian>
+            <Japanese>捕虜にする</Japanese>
+            <Korean>사로잡기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ReleaseCaptive">
             <English>Free Prisoner</English>
@@ -19,11 +21,13 @@
             <Spanish>Liberar prisionero</Spanish>
             <Polish>Wypuść więźnia</Polish>
             <French>Libérer le prisonnier</French>
-            <Czech>Osvobodit Zajatce</Czech>
+            <Czech>Osvobodit zajatce</Czech>
             <Italian>Libera il prigioniero</Italian>
             <Portuguese>Libertar Prisioneiro</Portuguese>
             <Hungarian>Fogoly szabadon engedése</Hungarian>
             <Russian>Освободить пленника</Russian>
+            <Japanese>捕虜を解放する</Japanese>
+            <Korean>풀어주기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_EscortCaptive">
             <English>Escort Prisoner</English>
@@ -31,11 +35,13 @@
             <Spanish>Escoltar prisionero</Spanish>
             <Polish>Eskortuj więźnia</Polish>
             <French>Escorter le prisonnier</French>
-            <Czech>Eskortovat Zajatce</Czech>
+            <Czech>Eskortovat zajatce</Czech>
             <Italian>Scorta il Prigioniero</Italian>
             <Portuguese>Escoltar Prisioneiro</Portuguese>
             <Hungarian>Fogoly kísérése</Hungarian>
             <Russian>Конвоировать пленника</Russian>
+            <Japanese>捕虜を移動させる</Japanese>
+            <Korean>포로 호송하기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_StopEscorting">
             <English>Release Prisoner</English>
@@ -43,23 +49,27 @@
             <Spanish>Soltar prisionero</Spanish>
             <Polish>Anuluj eskortowanie</Polish>
             <French>Relâcher le prisonnier</French>
-            <Czech>Uvolnit Zajatce</Czech>
+            <Czech>Uvolnit zajatce</Czech>
             <Italian>Rilascia il Prigioniero</Italian>
             <Portuguese>Largar Prisioneiro</Portuguese>
             <Hungarian>Fogoly elengedése</Hungarian>
             <Russian>Прекратить конвоирование</Russian>
+            <Japanese>捕虜を解放する</Japanese>
+            <Korean>포로 풀어주기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
             <German>Du musst ihn zuerst gefangen nehmen.</German>
             <Spanish>Necesitas hacerle prisionero primero!</Spanish>
             <Polish>Najpierw musisz go aresztować!</Polish>
-            <French>Vous devez d'abord le capturer!</French>
+            <French>Vous devez d'abord le capturer !</French>
             <Czech>Musíš ho nejdříve zajmout!</Czech>
             <Italian>Prima devi arrestarlo!</Italian>
             <Portuguese>Você deve tomá-lo como prisioneiro primeiro!</Portuguese>
             <Hungarian>Először foglyul kell ejtened őt!</Hungarian>
             <Russian>Вы должны сначала взять его в плен!</Russian>
+            <Japanese>あなたは先に捕虜を取る必要があります。</Japanese>
+            <Korean>먼저 포로로 만들어야합니다!</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_LoadCaptive">
             <English>Load Captive</English>
@@ -72,6 +82,8 @@
             <Russian>Загрузить пленного</Russian>
             <Portuguese>Embarcar Prisioneiro</Portuguese>
             <Italian>Fai salire il prigioniero</Italian>
+            <Japanese>捕虜を乗せる</Japanese>
+            <Korean>포로 태우기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -84,6 +96,8 @@
             <Russian>Выгрузить пленного</Russian>
             <Portuguese>Desembarcar Prisioneiro</Portuguese>
             <Italian>Fai scendere il prigioniero</Italian>
+            <Japanese>捕虜を降ろす</Japanese>
+            <Korean>포로 내리기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -91,15 +105,17 @@
             <Polish>Opaska zaciskowa</Polish>
             <Spanish>Precinto</Spanish>
             <French>Serflex</French>
-            <Czech>Stahovací Pásek</Czech>
+            <Czech>Stahovací pásek</Czech>
             <Portuguese>Algema Plástica</Portuguese>
             <Italian>Fascietta</Italian>
             <Hungarian>Gyorskötöző</Hungarian>
             <Russian>Кабельная стяжка</Russian>
+            <Japanese>ケーブル タイ</Japanese>
+            <Korean>케이블 타이</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
-            <German>Kabelbinder ermöglichen es, Gefangene zu fesseln.</German>
+            <German>Mit Kabelbindern können Gefangene gefesselt werden.</German>
             <Polish>Opaska zaciskowa pozwala na skrępowanie dłoni u więźnia.</Polish>
             <Spanish>Los precintos permiten maniatar prisioneros</Spanish>
             <French>Les Serflex permettent de menotter les prisonniers.</French>
@@ -108,11 +124,13 @@
             <Italian>Fascetta per arrestare i prigionieri</Italian>
             <Hungarian>Gyorskötöző, emberek foglyulejtéséhez használható.</Hungarian>
             <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
+            <Japanese>ケーブル タイは捕虜を制圧できます。</Japanese>
+            <Korean>케이블 타이는 포로를 구류시킬때 씁니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_FriskMenuHeader">
             <English>Inventory of frisked person</English>
             <German>Inventar der durchsuchten Person</German>
-            <French>Inventaire de la fouille</French>
+            <French>Inventaire de la personne fouillé</French>
             <Spanish>Inventario de la persona cacheada</Spanish>
             <Hungarian>Motozott személy felszerelése</Hungarian>
             <Czech>Inventář prohledávané osoby</Czech>
@@ -120,11 +138,13 @@
             <Russian>Инвентарь обысканного человека</Russian>
             <Portuguese>Inventário da pessoa revistada</Portuguese>
             <Italian>Inventario della persona perquisita</Italian>
+            <Japanese>捕虜の持ち物を確認する</Japanese>
+            <Korean>검문당한 사람의 소지품</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
             <German>Person durchsuchen</German>
-            <French>Fouiller</French>
+            <French>Fouiller la personne</French>
             <Spanish>Cachear</Spanish>
             <Czech>Prohledávaná osoba</Czech>
             <Polish>Rewiduj osobę</Polish>
@@ -132,6 +152,8 @@
             <Russian>Обыскать человека</Russian>
             <Portuguese>Revistar</Portuguese>
             <Italian>Perquisisci la persona</Italian>
+            <Japanese>捕虜の持ち物</Japanese>
+            <Korean>검문당한사람</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -144,10 +166,12 @@
             <Russian>Сдаться</Russian>
             <Hungarian>Megadás</Hungarian>
             <Italian>Arrenditi</Italian>
+            <Japanese>投降</Japanese>
+            <Korean>투항</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
-            <French>Annuler la capitulation</French>
+            <French>Annuler la reddition</French>
             <German>Den Kampf erneut aufnehmen</German>
             <Spanish>Dejar de rendirse</Spanish>
             <Portuguese>Parar de se render</Portuguese>
@@ -156,6 +180,8 @@
             <Russian>Прекратить сдачу в плен</Russian>
             <Hungarian>Megadás abbahagyása</Hungarian>
             <Italian>Smetti di arrenderti</Italian>
+            <Japanese>投降をやめる</Japanese>
+            <Korean>투항하는것을 멈춤</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>
@@ -164,16 +190,52 @@
             <German>Einheit kapitulieren lassen</German>
             <Czech>Vzdávající se jednotka</Czech>
             <Portuguese>Fazer unidade se render</Portuguese>
+            <French>Faire capituler l'unité</French>
             <Hungarian>Egység kapitulálása</Hungarian>
+            <Russian>Заставить юнита сдаться</Russian>
+            <Italian>Fai arrendere l'unità</Italian>
+            <Japanese>ユニットを投降させる</Japanese>
+            <Korean>투항시키기</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
-            <English>Sync a unit to make them surrender.&lt;br /&gt;Source: ace_captives</English>
-            <Polish>Zsynchronizuj z jednostką, aby skapitulowała.&lt;br /&gt;Źródło: ace_captives</Polish>
-            <Spanish>Sincroniza una unidad para hacer que se rinda.&lt;br /&gt;Fuente: ace_captives</Spanish>
-            <German>Einheit synchronisieren, um sie kapitulieren zu lassen.&lt;br /&gt;Quelle: ace_captives</German>
-            <Czech>Synchronizuj s jednotkou, která se má vzdát.&lt;br /&gt;Zdroj: ace_captives</Czech>
-            <Portuguese>Sincroniza uma unidade para fazer com que ela se renda. &lt;br/&gt;Fonte: ace_captives</Portuguese>
-            <Hungarian>Egység szinkronizálása, hogy kapituláljon.&lt;br /&gt;Forrás: ace_captives</Hungarian>
+            <English>Sync a unit to make them surrender.</English>
+            <Polish>Zsynchronizuj z jednostką, aby skapitulowała.</Polish>
+            <Spanish>Sincroniza una unidad para hacer que se rinda.</Spanish>
+            <German>Einheit synchronisieren, um sie kapitulieren zu lassen.</German>
+            <Czech>Synchronizuj s jednotkou, která se má vzdát.</Czech>
+            <Portuguese>Sincroniza uma unidade para fazer com que ela se renda.</Portuguese>
+            <French>Synchronise une unité pour la rendre captive.</French>
+            <Hungarian>Egység szinkronizálása, hogy kapituláljon.</Hungarian>
+            <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться в плен.</Russian>
+            <Italian>Sincronizza una unità per farla arrendere.</Italian>
+            <Japanese>同期されたユニットを投降させます。</Japanese>
+            <Korean>투항시키기 위해 동기화합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
+            <English>Make Unit Handcuffed</English>
+            <German>Einheit in Handschellen legen</German>
+            <Polish>Skuj jednostkę</Polish>
+            <Portuguese>Fazer unidade algemada</Portuguese>
+            <Russian>Связать юнита</Russian>
+            <Czech>Spoutat jednotku</Czech>
+            <Italian>Metti manette all'unità</Italian>
+            <Spanish>Hacer que la unidad esté esposada</Spanish>
+            <French>Rendre une unité captive</French>
+            <Japanese>ユニットを拘束する</Japanese>
+            <Korean>수갑을 채우기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
+            <English>Sync a unit to make them handcuffed.</English>
+            <German>Synchronisiere eine Einheit um sie in Handschellen zu legen.</German>
+            <Polish>Zsynchronizuj z jednostką, aby została skuta.</Polish>
+            <Portuguese>Sincronizar uma unidade para deixá-la algemada.</Portuguese>
+            <Russian>Синхронизируйте с юнитами, чтобы сделать их связанными.</Russian>
+            <Czech>Synchronizovat s jednotkou, která má být v poutech.</Czech>
+            <Italian>Sincronizza un'unità per metterle le manette.</Italian>
+            <Spanish>Sincroniza una unidad para hacer que esté esposada.</Spanish>
+            <French>Synchronisez une unité pour la rendre captive.</French>
+            <Japanese>同期されたユニットを拘束させます。</Japanese>
+            <Korean>수갑을 채우기 위해 동기화합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -182,7 +244,12 @@
             <Czech>Nastavení zajatce</Czech>
             <German>Gefangenen-Einstellungen</German>
             <Portuguese>Ajustes de prisioneiros</Portuguese>
+            <French>Options de reddition</French>
             <Hungarian>Fogoly-beállítások</Hungarian>
+            <Russian>Настройки пленения</Russian>
+            <Italian>Impostazioni Prigionieri</Italian>
+            <Japanese>拘束の設定</Japanese>
+            <Korean>포로 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -191,25 +258,40 @@
             <Czech>Toto kontroluje nastavení kapitulace a pout</Czech>
             <German>Einstellungen zur Kapitulation und Kabelbindern</German>
             <Portuguese>Controla as configurações de rendição e abraçadeiras</Portuguese>
+            <French>Contrôle les paramètres de la reddition et des Serflex</French>
             <Hungarian>Szabályozza a kapituláció és bilincselés beállításait</Hungarian>
+            <Russian>Управляет настройками сдачи в плен и связывания</Russian>
+            <Italian>Controlla le impostazioni per la resa e le manette</Italian>
+            <Japanese>投降したユニットや拘束されたユニットの扱いを設定します。</Japanese>
+            <Korean>투항과 케이블 타이에 관련한 설정</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
             <Polish>Skuwanie sojuszników</Polish>
             <Spanish>Se puede  esposar el bando propio</Spanish>
             <Czech>Může spoutat spolubojovníky</Czech>
-            <German>Kann Teamkollegen fesseln</German>
+            <German>Kann Kameraden fesseln</German>
             <Portuguese>Pode algemar o próprio lado</Portuguese>
+            <French>Peut capturer sa propre faction</French>
             <Hungarian>Saját oldal megbilincselhető</Hungarian>
+            <Russian>Связать союзника</Russian>
+            <Italian>Puoi ammanettare unità alleate</Italian>
+            <Japanese>自陣営への拘束を可能に</Japanese>
+            <Korean>자기편에게 수갑을 채울 수 있게 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
             <Polish>Czy gracze mogą skuwać sojuszników?</Polish>
             <Spanish>Pueden los jugadores esposar unidades en su propio bando</Spanish>
             <Czech>Mohou hráči spoutat jednotky na své straně</Czech>
-            <German>Können Spieler eigene Einheiten fesseln</German>
+            <German>Spieler können eigene Einheiten fesseln. </German>
             <Portuguese>Os jogadores podem algemar unidades do seu lado</Portuguese>
+            <French>Les joueurs peuvent utiliser les Serflex sur leur propre camp</French>
             <Hungarian>A játékosok megkötözhetik-e a saját oldalukon lévő egységeket</Hungarian>
+            <Russian>Разрешить игрокам связывать юнитов своей стороны</Russian>
+            <Italian>I giocatori possono ammanettare unità alleate</Italian>
+            <Japanese>プレイヤーがユニットを拘束し、彼らの陣営に変更できます。</Japanese>
+            <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -218,32 +300,78 @@
             <Czech>Povolit vzdávání</Czech>
             <German>Kapitulation erlauben</German>
             <Portuguese>Permite rendição</Portuguese>
+            <French>Permettre la reddition</French>
             <Hungarian>Kapituláció engedélyezése</Hungarian>
+            <Russian>Сдаться в плен</Russian>
+            <Italian>Permetti Resa</Italian>
+            <Japanese>投降を許可</Japanese>
+            <Korean>투항 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
             <Polish>Gracze mogą skapitulować po schowaniu swojej broni do kabury</Polish>
             <Spanish>Los jugadores pueden rendirse después de enfundar su arma</Spanish>
             <Czech>Hráč se může vzdát poté, co si skryje zbraň</Czech>
-            <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben</German>
+            <German>Spieler können kapitulieren, nachdem sie ihre Waffe geholstert haben.</German>
             <Portuguese>Jogadores podem se render depois de guardar sua arma</Portuguese>
+            <French>Les joueurs peuvent se rendre après avoir rangé leur arme</French>
             <Hungarian>A játékosok megadhatják magukat a fegyverük elrakása után</Hungarian>
+            <Russian>Игроки могут сдаться в плен после того, как уберут оружие</Russian>
+            <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
+            <Japanese>プレイヤーは武器を収めたあとに投降できるようにします。</Japanese>
+            <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
+            <German>Benötigt Kapitulation</German>
             <Polish>Wymagaj kapitulacji</Polish>
+            <Portuguese>Requer rendição</Portuguese>
+            <Russian>Требовать пленения</Russian>
+            <Spanish>Requiere rendición</Spanish>
+            <Czech>Vzdávání vyžadováno</Czech>
+            <Italian>Richiedi Resa</Italian>
+            <French>Requiert la reddition</French>
+            <Japanese>投降を必要とする</Japanese>
+            <Korean>투항 필요</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
+            <German>Spieler müssen sich erst ergeben, bevor sie gefangen genommen werden können</German>
             <Polish>Wymagaj od graczy kapitulacji zanim będzie można ich zaaresztować</Polish>
+            <Portuguese>Requer que jogadores se rendam antes de poderem ser presos</Portuguese>
+            <Russian>Требуется, чтобы игрок сдался в плен прежде, чем его можно будет связать</Russian>
+            <Spanish>Requiere que los Jugadores se rindan antes de arrestarlos</Spanish>
+            <Czech>Vyžaduje, aby se hráč nejdříve vzdal, poté může být spoután</Czech>
+            <Italian>I giocatori devono arrendersi prima che possano essere arrestati</Italian>
+            <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
+            <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
+            <Korean>체포하기 전에 플레이어가 투항을 먼저해야만 합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
+            <German>Nur Ergeben</German>
             <Polish>Tylko kapitulacja</Polish>
+            <Portuguese>Somente rendição </Portuguese>
+            <Russian>Только сдавшийся в плен</Russian>
+            <Spanish>Solo rendición</Spanish>
+            <Czech>Pouze vzdávání</Czech>
+            <Italian>Solo Resa</Italian>
+            <French>Reddition seulement</French>
+            <Japanese>投降中のみ</Japanese>
+            <Korean>투항 중에만</Korean>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
+            <German>Ergeben oder keine Waffe</German>
             <Polish>Kapitulacja lub brak broni</Polish>
+            <Portuguese>Rendição ou desarmado</Portuguese>
+            <Russian>Сдавшийся или безоружный</Russian>
+            <Spanish>Rendición o desarme</Spanish>
+            <Czech>Vzdávání nebo beze zbraně</Czech>
+            <Italian>Resa o senza armi</Italian>
+            <French>Capitulation ou desarmé</French>
+            <Japanese>投降中か非武装時</Japanese>
+            <Korean>투항 중 혹은 비무장</Korean>
         </Key>
     </Package>
 </Project>

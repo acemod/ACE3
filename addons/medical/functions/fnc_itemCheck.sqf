@@ -5,16 +5,18 @@
  * Arguments:
  * 0: The unit <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_itemCheck
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit"];
-_unit = _this select 0;
+params ["_unit"];
 
 while {({_x == "FirstAidKit"} count items _unit) > 0} do {
     _unit removeItem "FirstAidKit";

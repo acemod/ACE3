@@ -1,48 +1,52 @@
 /*
  * Author: jaynus
- * 
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- * Arguments [Client] :
- * 0: eventName (String)
- * 1: eventLog (Array)
- * 
- * Arguments [Server] :
- * 0: eventName (String)
- * 1: client (Object)
- * 
- * Return value:
- * Boolean of success
+ * Arguments [Client]:
+ * 0: eventName <STRING>
+ * 1: eventLog <ARRAY>
+ *
+ * Arguments [Server]:
+ * 0: eventName <STRING>
+ * 1: client <OBJECT>
+ *
+ * Return Value:
+ * Event is successed <BOOL>
+ *
+ * Example:
+ * ["name", [LOG]] call ace_common_fnc__handleRequestSyncedEvent //Client
+ * ["name", bob] call ace_common_fnc__handleRequestSyncedEvent//Server
+ *
+ * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
-
 //SEH_s
-if(isServer) then {
+if (isServer) then {
     // Find the event name, and shovel out the events to the client
-    PARAMS_2(_eventName,_client);
-    private["_eventEntry", "_eventLog"];
-    
-    if(!HASH_HASKEY(GVAR(syncedEvents),_eventName)) exitWith {
-        diag_log text format["[ACE] Error, request for synced event - key not found."];
+    params ["_eventName", "_client"];
+
+    if !([GVAR(syncedEvents), _eventName] call CBA_fnc_hashHasKey) exitWith {
+        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
-    _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
-    _eventLog = _eventEntry select 1;
-    
-    ["SEH_s", _client, [_eventName, _eventLog] ] call FUNC(targetEvent);
+
+    private _eventEntry = [GVAR(syncedEvents), _eventName] call CBA_fnc_hashGet;
+    _eventEntry params ["", "_eventLog"];
+
+    ["ACEs", [_eventName, _eventLog], _client] call CBA_fnc_targetEvent;
 } else {
-    PARAMS_2(_eventName,_eventLog);
-    private ["_eventArgs"];
+    params ["_eventName", "_eventLog"];
+
     // This is the client handling the response from the server
     // Start running the events
     {
-        _eventArgs = _x select 1;
-        [_eventName, _eventArgs, (_x select 2)] call FUNC(_handleSyncedEvent);
-    } forEach _eventLog;
-    diag_log text format["[ACE] + [%1] synchronized", _eventName];
+        _x params ["", "_eventArgs","_ttl"];
+        [_eventName, _eventArgs, _ttl] call FUNC(_handleSyncedEvent);
+        false
+    } count _eventLog;
+
+    INFO_1("[%1] synchronized",_eventName);
 };
 
 true

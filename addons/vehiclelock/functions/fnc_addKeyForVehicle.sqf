@@ -36,7 +36,7 @@ if (_useCustom) then {
     _keyMagazine = _newMags select 0;
     TRACE_2("setting up key on server",_veh,_keyMagazine);
     //Have the server run add the key to the vehicle's key array:
-    ["VehicleLock_SetupCustomKey", [_veh, _keyMagazine]] call EFUNC(common,serverEvent);
+    [QGVAR(setupCustomKey), [_veh, _keyMagazine]] call CBA_fnc_serverEvent;
 } else {
     _keyName = [_veh] call FUNC(getVehicleSideKey);
     _unit addItem _keyName; //addItem has global effects

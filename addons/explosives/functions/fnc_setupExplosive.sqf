@@ -24,15 +24,15 @@
 params ["_vehicle", "_unit", "_magClassname"];
 TRACE_3("params",_vehicle,_unit,_magClassname);
 
-private["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
+private ["_isAttachable", "_setupObjectClass", "_supportedTriggers", "_p3dModel"];
 
 //Get setup object vehicle and model:
-_setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> "ACE_SetupObject");
+_setupObjectClass = getText(ConfigFile >> "CfgMagazines" >> _magClassname >> QGVAR(SetupObject));
 if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR("Bad Vehicle");};
 _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "ACE_Explosives", true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
@@ -62,7 +62,7 @@ GVAR(TweakedAngle) = 0;
     params ["_args", "_pfID"];
     _args params ["_unit", "_magClassname", "_setupObjectClass", "_isAttachable"];
 
-    private["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
+    private ["_angle", "_attachVehicle", "_badPosition", "_basePosASL", "_cameraAngle", "_distanceFromBase", "_expSetupVehicle", "_index", "_intersectsWith", "_lookDirVector", "_max", "_min", "_modelDir", "_modelOffset", "_modelUp", "_placeAngle", "_realDistance", "_return", "_screenPos", "_testBase", "_testPos", "_testPositionIsValid", "_virtualPosASL"];
 
     _lookDirVector = ((positionCameraToWorld [0,0,0]) call EFUNC(common,positionToASL)) vectorFromTo ((positionCameraToWorld [0,0,10]) call EFUNC(common,positionToASL));
     _basePosASL = (eyePos _unit);
@@ -141,10 +141,10 @@ GVAR(TweakedAngle) = 0;
     //Don't allow placing in a bad position:
     if (_badPosition && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
 
-    if (((inputAction "zoomTemp") > 0) || //Cancel on RMB, For some reason this works (when held) but AddActionEventHandler doesn't
-            {_unit != ACE_player} ||
-            {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
-            {!(_magClassname in (magazines _unit))}) then {
+    if (_unit != ACE_player ||
+        {!([_unit, objNull, ["isNotSwimming"]] call EFUNC(common,canInteractWith))} ||
+        {!(_magClassname in (magazines _unit))}
+    ) then {
         GVAR(placeAction) = PLACE_CANCEL;
     };
 
@@ -152,7 +152,7 @@ GVAR(TweakedAngle) = 0;
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
 
-        [_unit, "ACE_Explosives", false] call EFUNC(common,setForceWalkStatus);
+        [_unit, "forceWalk", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
         [] call EFUNC(interaction,hideMouseHint);
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
         [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
@@ -185,9 +185,9 @@ GVAR(TweakedAngle) = 0;
             _expSetupVehicle setVariable [QGVAR(Direction), _placeAngle, true];
 
             _unit removeMagazine _magClassname;
-            _unit playActionNow "PutDown";
+            [_unit, "PutDown"] call EFUNC(common,doGesture);
             _unit setVariable [QGVAR(PlantingExplosive), true];
-            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call EFUNC(common,waitAndExecute);
+            [{_this setVariable [QGVAR(PlantingExplosive), false]}, _unit, 1.5] call CBA_fnc_waitAndExecute;
 
         };
     } else {

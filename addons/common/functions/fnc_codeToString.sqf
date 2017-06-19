@@ -1,22 +1,25 @@
 /*
  * Author: commy2
- *
  * Removes the brackets around a code and returns the code as a string. It does nothing if the code is already a string.
  *
- * Argument:
- * 0: Code (Code or String)
+ * Arguments:
+ * 0: Code <CODE, STRING>
  *
- * Return value:
- * Code (String)
+ * Return Value:
+ * Code <STRING>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_codeToString
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_1(_function);
+params ["_code"];
+if (_code isEqualType "") exitWith {_code};
 
-if (typeName _function == "STRING") exitWith {_function};
+_code = str(_code);
+_code = _code select [1, count _code - 2];
 
-_function = toArray str _function;
-_function set [0, -1];
-_function set [count _function - 1, -1];
-_function = toString (_function - [-1]);
-_function
+_code
+

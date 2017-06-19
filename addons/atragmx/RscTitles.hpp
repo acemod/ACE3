@@ -2,6 +2,10 @@
 #define ST_RIGHT 1
 #define ST_CENTER 2
 
+#define ST_WITH_RECT 160
+
+#define LB_TEXTURES 0x10
+
 class ATragMX_RscText {
     idc=-1;
     type=0;
@@ -93,7 +97,7 @@ class ATragMX_RscToolbox {
 class ATragMX_RscListBox {
     idc=-1;
     type=5;
-    style=0;
+    style=LB_TEXTURES;
     font="TahomaB";
     sizeEx=0.028;
     rowHeight=0.03;
@@ -113,13 +117,14 @@ class ATragMX_RscListBox {
     soundSelect[]={"",0.09,1};
 
     class ScrollBar {
-        color[]={1,1,1,0.6};
-        colorActive[]={1,1,1,1};
-        colorDisabled[]={1,1,1,0.3};
-        //thumb="\ca\ui\data\igui_scrollbar_thumb_ca.paa";
-        //arrowFull="\ca\ui\data\igui_arrow_top_active_ca.paa";
-        //arrowEmpty="\ca\ui\data\igui_arrow_top_ca.paa";
-        //border="\ca\ui\data\igui_border_scroll_ca.paa";
+        width=0.05;
+        color[]={0.15,0.21,0.23,0.3};
+        colorActive[]={0.15,0.21,0.23,0.3};
+        colorDisabled[]={0.15,0.21,0.23,0.3};
+        arrowEmpty="\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+        arrowFull="\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+        border="\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+        thumb="\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
     };
 
     class ListScrollBar : ScrollBar {
@@ -128,7 +133,6 @@ class ATragMX_RscListBox {
 class ATragMX_RscListNBox: ATragMX_RscListBox {
     idc=-1;
     type=102;
-    columns[]={0.0, 0.225, 0.475, 0.7};
     drawSideArrows=0;
     idcLeft=-1;
     idcRight=-1;
@@ -230,7 +234,7 @@ class ATragMX_Display {
             idc=-1;
             x=0.55*safezoneW+safezoneX+0.315;
         };
-        
+
         class TEXT_GUN_FRAME: ATragMX_RscText {
             idc=1001;
             style=64;
@@ -350,6 +354,7 @@ class ATragMX_Display {
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorFocused[]={0.15,0.21,0.23,0.2};
             text="MV";
+            action=QUOTE(0 call FUNC(toggle_muzzle_velocity_data));
         };
         class TEXT_MUZZLE_VELOCITY_OUTPUT: TEXT_BORE_HEIGHT_OUTPUT {
             idc=130;
@@ -383,18 +388,18 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.320;
             text="";
         };
-        class TEXT_BAROMETRIC_PRESSURE: TEXT_AIR_FRICTION {
+        class TEXT_BAROMETRIC_PRESSURE: TEXT_TEMPERATURE {
             idc=21;
             x=0.550*safezoneW+safezoneX+0.20;
+            y=0.265*safezoneH+safezoneY+0.355;
             text="BP";
         };
         class TEXT_BAROMETRIC_PRESSURE_OUTPUT: TEXT_TEMPERATURE_OUTPUT {
             idc=210;
             y=0.265*safezoneH+safezoneY+0.355;
         };
-        class TEXT_RELATIVE_HUMIDITY: TEXT_AIR_FRICTION {
+        class TEXT_RELATIVE_HUMIDITY: TEXT_BAROMETRIC_PRESSURE {
             idc=22;
-            x=0.550*safezoneW+safezoneX+0.20;
             y=0.265*safezoneH+safezoneY+0.390;
             text="RH";
         };
@@ -526,7 +531,7 @@ class ATragMX_Display {
         };
         class TEXT_ELEVATION_OUTPUT_ABSOLUTE: ATragMX_RscText {
             idc=400;
-            style=160;
+            style=ST_WITH_RECT+ST_RIGHT;
             sizeEx=0.025;
             w=0.065;
             h=0.032;
@@ -606,17 +611,40 @@ class ATragMX_Display {
         class TEXT_SCOPE_CLICK_NUMBER: TEXT_GUN_LIST {
             idc=2001;
             style=ST_CENTER;
-            w=0.03;
+            w=0.025;
             x=0.550*safezoneW+safezoneX+0.27;
             text="4";
             action=QUOTE(call FUNC(toggle_solution_setup));
-        };        
-        class TEXT_CALCULATE: TEXT_SCOPE_UNIT {
+        };
+        class TEXT_OPTIONS: TEXT_GUN_LIST {
             idc=3000;
             style=ST_RIGHT;
             x=0.550*safezoneW+safezoneX+0.3;
-            text="Calc";
-            action=QUOTE(call FUNC(calculate_target_solution));
+            text="Options";
+            action=QUOTE(false call FUNC(toggle_option_menu));
+        };
+        class TEXT_OPTIONS_BACKGROUND: ATragMX_RscButton {
+            idc=3001;
+            colorBackground[]={0.15,0.21,0.23,0.2};
+            colorBackgroundActive[]={0.15,0.21,0.23,0.2};
+            colorFocused[]={0.15,0.21,0.23,0.2};
+            x=0.550*safezoneW+safezoneX+0.105;
+            y=0.265*safezoneH+safezoneY+0.17;
+            w=0.3;
+            h=0.535;
+            offsetPressedX=0.0;
+            offsetPressedY=0.0;
+            action=QUOTE(false call FUNC(toggle_option_menu));
+        };
+        class TEXT_OPTIONS_LIST_OUTPUT: ATragMX_RscListBox {
+            idc=3002;
+            style=0;
+            w=0.17;
+            h=0.28;
+            x=0.550*safezoneW+safezoneX+0.225;
+            y=0.265*safezoneH+safezoneY+0.355;
+            sizeEx=0.025;
+            onMouseButtonClick=QUOTE(true call FUNC(toggle_option_menu));
         };
 
         class TEXT_RANGE_CARD_SCOPE_UNIT: TEXT_GUN_PROFILE {
@@ -666,6 +694,7 @@ class ATragMX_Display {
         };
         class TEXT_RANGE_CARD_OUTPUT: ATragMX_RscListNBox {
             idc=5007;
+            columns[]={0.0, 0.225, 0.475, 0.7};
             idcLeft=50061;
             idcRight=50062;
             w=0.285;
@@ -674,16 +703,17 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.27;
         };
 
-        class TEXT_GUN_LIST_OUTPUT: ATragMX_RscListBox {
+        class TEXT_GUN_LIST_OUTPUT: ATragMX_RscListNBox {
             idc=6000;
+            columns[]={-0.05};
             w=0.16;
             h=0.45;
             x=0.550*safezoneW+safezoneX+0.11;
             y=0.265*safezoneH+safezoneY+0.24;
-            sizeEx=0.025;
+            sizeEx=0.018;
             colorSelectBackground[]={0.15,0.21,0.23,0.3};
             colorSelectBackground2[]={0.15,0.21,0.23,0.3};
-            onMouseButtonDblClick=QUOTE(true call FUNC(toggle_gun_list));
+            onLBDblClick=QUOTE(true call FUNC(toggle_gun_list));
         };
         class TEXT_GUN_LIST_COLUMN_CAPTION: TEXT_GUN_PROFILE {
             idc=6001;
@@ -766,8 +796,9 @@ class ATragMX_Display {
         class TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE: TEXT_TARGET_RANGE_ASSIST_MEASUREMENT_METHOD {
             idc=7003;
             style=ST_RIGHT;
-            x=0.550*safezoneW+safezoneX+0.10;
+            x=0.550*safezoneW+safezoneX+0.092;
             y=0.265*safezoneH+safezoneY+0.4;
+            w=0.128;
             text="Target Size";
         };
         class TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE {
@@ -874,22 +905,22 @@ class ATragMX_Display {
 
         class TEXT_TARGET_SPEED_ASSIST_TARGET_RANGE: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE {
             idc=8000;
-            x=0.550*safezoneW+safezoneX+0.13;
+            x=0.550*safezoneW+safezoneX+0.12;
             text="Target Range";
         };
         class TEXT_TARGET_SPEED_ASSIST_NUM_TICKS: TEXT_TARGET_RANGE_ASSIST_IMAGE_SIZE {
             idc=8001;
-            x=0.550*safezoneW+safezoneX+0.13;
+            x=0.550*safezoneW+safezoneX+0.12;
             text="Num Ticks";
         };
         class TEXT_TARGET_SPEED_ASSIST_TIME: TEXT_TARGET_RANGE_ASSIST_ANGLE {
             idc=8002;
-            x=0.550*safezoneW+safezoneX+0.13;
+            x=0.550*safezoneW+safezoneX+0.12;
             text="Time (secs)";
         };
         class TEXT_TARGET_SPEED_ASSIST_TARGET_ESTIMATED_SPEED: TEXT_TARGET_RANGE_ASSIST_ESTIMATED_RANGE {
             idc=8003;
-            x=0.550*safezoneW+safezoneX+0.13;
+            x=0.550*safezoneW+safezoneX+0.12;
             text="Est Speed";
         };
         class TEXT_TARGET_SPEED_ASSIST_TARGET_RANGE_INPUT: TEXT_TARGET_RANGE_ASSIST_TARGET_SIZE_INPUT {
@@ -1040,6 +1071,8 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.12;
             y=0.265*safezoneH+safezoneY+0.28;
             text="";
+            onKeyDown=QUOTE(call FUNC(trim_gun_name));
+            onKeyUp=QUOTE(call FUNC(trim_gun_name));
         };
         class TEXT_ADD_NEW_GUN_OK: ATragMX_RscButton {
             idc=11002;
@@ -1059,7 +1092,7 @@ class ATragMX_Display {
             text="Cancel";
             action=QUOTE(false call FUNC(show_add_new_gun); true call FUNC(show_gun_list));
         };
-        
+
         class TEXT_GUN_AMMO_DATA_BORE_HEIGHT: TEXT_BORE_HEIGHT {
             idc=12000;
             w=0.22;
@@ -1147,7 +1180,7 @@ class ATragMX_Display {
         class TEXT_GUN_AMMO_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=12011;
         };
-        
+
         class TEXT_ATMO_ENV_DATA_DEFAULT: TEXT_LEAD {
             idc=13000;
             w=0.08;
@@ -1231,7 +1264,7 @@ class ATragMX_Display {
             y=0.265*safezoneH+safezoneY+0.29;
             text="Calc Method";
         };
-        
+
         class TEXT_TARGET_DATA_LATITUDE: TEXT_BORE_HEIGHT {
             idc=14000;
             w=0.22;
@@ -1379,7 +1412,7 @@ class ATragMX_Display {
         class TEXT_TARGET_DATA_NEXT: TEXT_TARGET_SPEED_ASSIST_NEXT {
             idc=14011;
         };
-        
+
         class TEXT_SOLUTION_SETUP_SHOW_RESULT_IN: TEXT_GUN_AMMO_DATA_BORE_HEIGHT {
             idc=15000;
             style=64;
@@ -1467,6 +1500,344 @@ class ATragMX_Display {
             x=0.550*safezoneW+safezoneX+0.26;
             y=0.265*safezoneH+safezoneY+0.55;
             action=QUOTE(0 call FUNC(toggle_solution_setup));
+        };
+
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE: TEXT_BORE_HEIGHT {
+            idc=16000;
+            w=0.22;
+            y=0.265*safezoneH+safezoneY+0.25;
+            sizeEx=0.022;
+            text="Temperature";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE {
+            idc=16001;
+            x=0.550*safezoneW+safezoneX+0.215;
+            sizeEx=0.022;
+            text="Muzzle velocity";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1: ATragMX_RscEdit {
+            idc=160021;
+            w=0.082;
+            h=0.035;
+            x=0.550*safezoneW+safezoneX+0.128;
+            y=0.265*safezoneH+safezoneY+0.29;
+            text="0";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_2: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160022;
+            y=0.265*safezoneH+safezoneY+0.325;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_3: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160023;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_4: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160024;
+            y=0.265*safezoneH+safezoneY+0.395;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_5: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160025;
+            y=0.265*safezoneH+safezoneY+0.430;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_6: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160026;
+            y=0.265*safezoneH+safezoneY+0.465;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_7: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160027;
+            y=0.265*safezoneH+safezoneY+0.500;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_1: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_1 {
+            idc=160031;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_2: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_2 {
+            idc=160032;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_3: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_3 {
+            idc=160033;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_4: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_4 {
+            idc=160034;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_5: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_5 {
+            idc=160035;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_6: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_6 {
+            idc=160036;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_MUZZLE_VELOCITY_INPUT_7: TEXT_MUZZLE_VELOCITY_DATA_TEMPERATURE_INPUT_7 {
+            idc=160037;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_CLEAR: TEXT_TARGET_DATA_NEXT {
+            idc=16004;
+            style=ST_CENTER;
+            h=0.035;
+            y=0.265*safezoneH+safezoneY+0.3625;
+            text="Clear";
+            action=QUOTE(call FUNC(clear_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_QUESTIONMARK: TEXT_MUZZLE_VELOCITY_DATA_CLEAR {
+            idc=16005;
+            y=0.265*safezoneH+safezoneY+0.430;
+            text="?";
+            action="";
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_DONE: TEXT_TARGET_DATA_DONE {
+            idc=16006;
+            action=QUOTE(1 call FUNC(toggle_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_CANCEL: TEXT_TARGET_DATA_CANCEL {
+            idc=16007;
+            action=QUOTE(0 call FUNC(toggle_muzzle_velocity_data));
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_PREV: TEXT_TARGET_DATA_PREV {
+            idc=16008;
+        };
+        class TEXT_MUZZLE_VELOCITY_DATA_NEXT: TEXT_TARGET_DATA_NEXT {
+            idc=16009;
+        };
+
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE: TEXT_BORE_HEIGHT {
+            idc=17000;
+            w=0.22;
+            x=0.550*safezoneW+safezoneX+0.15;
+            y=0.265*safezoneH+safezoneY+0.25;
+            sizeEx=0.022;
+            text="Meters";
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE {
+            idc=17001;
+            x=0.550*safezoneW+safezoneX+0.235;
+            sizeEx=0.022;
+            text="BC-Coef";
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1: ATragMX_RscEdit {
+            idc=170021;
+            w=0.082;
+            h=0.035;
+            x=0.550*safezoneW+safezoneX+0.128;
+            y=0.265*safezoneH+safezoneY+0.29;
+            text="0";
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_2: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170022;
+            y=0.265*safezoneH+safezoneY+0.325;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_3: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170023;
+            y=0.265*safezoneH+safezoneY+0.360;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_4: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170024;
+            y=0.265*safezoneH+safezoneY+0.395;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_5: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170025;
+            y=0.265*safezoneH+safezoneY+0.430;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_6: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170026;
+            y=0.265*safezoneH+safezoneY+0.465;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_7: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170027;
+            y=0.265*safezoneH+safezoneY+0.500;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_1: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_1 {
+            idc=170031;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_2: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_2 {
+            idc=170032;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_3: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_3 {
+            idc=170033;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_4: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_4 {
+            idc=170034;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_5: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_5 {
+            idc=170035;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_6: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_6 {
+            idc=170036;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_C1_BALLISTIC_COEFFICIENT_INPUT_7: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DISTANCE_INPUT_7 {
+            idc=170037;
+            x=0.550*safezoneW+safezoneX+0.225;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_QUESTIONMARK: TEXT_TARGET_DATA_NEXT {
+            idc=17004;
+            style=ST_CENTER;
+            w=0.04;
+            h=0.035;
+            y=0.265*safezoneH+safezoneY+0.35;
+            text="?";
+            action="";
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_CLEAR: TEXT_C1_BALLISTIC_COEFFICIENT_DATA_QUESTIONMARK {
+            idc=17005;
+            w=0.07;
+            y=0.265*safezoneH+safezoneY+0.4175;
+            text="Clear";
+            action=QUOTE(call FUNC(clear_c1_ballistic_coefficient_data));
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_DONE: TEXT_TARGET_DATA_DONE {
+            idc=17006;
+            action=QUOTE(1 call FUNC(toggle_c1_ballistic_coefficient_data));
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_CANCEL: TEXT_TARGET_DATA_CANCEL {
+            idc=17007;
+            action=QUOTE(0 call FUNC(toggle_c1_ballistic_coefficient_data));
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_PREV: TEXT_TARGET_DATA_PREV {
+            idc=17008;
+        };
+        class TEXT_C1_BALLISTIC_COEFFICIENT_DATA_NEXT: TEXT_TARGET_DATA_NEXT {
+            idc=17009;
+        };
+
+        class TEXT_TRUING_DROP_ZERO_RANGE: ATragMX_RscText {
+            idc=18000;
+            style=ST_LEFT;
+            x=0.550*safezoneW+safezoneX+0.115;
+            y=0.265*safezoneH+safezoneY+0.220;
+            w=0.135;
+            h=0.03;
+            sizeEx=0.025;
+            text="ZR=100meters";
+        };
+        class TEXT_TRUING_DROP_DROP_UNIT: TEXT_TRUING_DROP_ZERO_RANGE {
+            idc=18001;
+            style=ST_LEFT;
+            x=0.550*safezoneW+safezoneX+0.25;
+            text="Drop=mil";
+        };
+        class TEXT_TRUING_DROP_TARGET_RANGE: TEXT_TRUING_DROP_ZERO_RANGE {
+            idc=18002;
+            y=0.265*safezoneH+safezoneY+0.35;
+            sizeEx=0.027;
+            text="Target Range";
+        };
+        class TEXT_TRUING_DROP_DROP: TEXT_TRUING_DROP_TARGET_RANGE {
+            idc=18003;
+            w=0.07;
+            y=0.265*safezoneH+safezoneY+0.40;
+            text="Drop";
+        };
+        class TEXT_TRUING_DROP_MUZZLE_VELOCITY: TEXT_TRUING_DROP_DROP {
+            idc=18004;
+            y=0.265*safezoneH+safezoneY+0.50;
+            text="MV";
+        };
+        class TEXT_TRUING_DROP_C1_BALLISTIC_COEFFICIENT: TEXT_TRUING_DROP_DROP {
+            idc=18005;
+            y=0.265*safezoneH+safezoneY+0.55;
+            text="C1";
+        };
+        class TEXT_TRUING_DROP_DROP_OUTPUT: ATragMX_RscEdit {
+            idc=18006;
+            style=ST_WITH_RECT+ST_RIGHT;
+            colorBackground[]={0.15,0.21,0.23,0.3};
+            colorDisabled[]={0,0,0,1};
+            w=0.06;
+            y=0.265*safezoneH+safezoneY+0.40;
+            x=0.550*safezoneW+safezoneX+0.17;
+            text="";
+        };
+        class TEXT_TRUING_DROP_MUZZLE_VELOCITY_OUTPUT: TEXT_TRUING_DROP_DROP_OUTPUT {
+            idc=18007;
+            y=0.265*safezoneH+safezoneY+0.50;
+            text="";
+        };
+        class TEXT_TRUING_DROP_C1_BALLISTIC_COEFFICIENT_OUTPUT: TEXT_TRUING_DROP_DROP_OUTPUT {
+            idc=18008;
+            y=0.265*safezoneH+safezoneY+0.55;
+            text="";
+        };
+        class TEXT_TRUING_DROP_SUPER: TEXT_TARGET_A {
+            idc=18009;
+            w=0.06;
+            x=0.550*safezoneW+safezoneX+0.25;
+            y=0.265*safezoneH+safezoneY+0.30;
+            text="SUPER";
+            action=QUOTE(GVAR(truingDropMode) = 0; call FUNC(update_truing_drop_selection));
+        };
+        class TEXT_TRUING_DROP_SUB: TEXT_TRUING_DROP_SUPER {
+            idc=18010;
+            x=0.550*safezoneW+safezoneX+0.32;
+            text="SUB";
+            action=QUOTE(GVAR(truingDropMode) = 1; call FUNC(update_truing_drop_selection));
+        };
+        class TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT: ATragMX_RscEdit {
+            idc=18011;
+            style=ST_WITH_RECT+ST_RIGHT;
+            colorDisabled[]={0,0,0,0.6};
+            w=0.06;
+            x=0.550*safezoneW+safezoneX+0.25;
+            y=0.265*safezoneH+safezoneY+0.35;
+        };
+        class TEXT_TRUING_DROP_TARGET_RANGE_SUB_INPUT: TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT {
+            idc=18012;
+            x=0.550*safezoneW+safezoneX+0.32;
+        };
+        class TEXT_TRUING_DROP_DROP_SUPER_INPUT: TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT {
+            idc=18013;
+            y=0.265*safezoneH+safezoneY+0.40;
+        };
+        class TEXT_TRUING_DROP_DROP_SUB_INPUT: TEXT_TRUING_DROP_TARGET_RANGE_SUB_INPUT {
+            idc=18014;
+            y=0.265*safezoneH+safezoneY+0.40;
+        };
+        class TEXT_TRUING_DROP_CALC: TEXT_GUN_LIST {
+            idc=18015;
+            style=ST_CENTER;
+            w=0.11;
+            x=0.550*safezoneW+safezoneX+0.26;
+            y=0.265*safezoneH+safezoneY+0.45;
+            text="Calc";
+            action=QUOTE(true call FUNC(calculate_truing_drop));
+        };
+        class TEXT_TRUING_DROP_MV_INPUT: TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT {
+            idc=18016;
+            y=0.265*safezoneH+safezoneY+0.50;
+        };
+        class TEXT_TRUING_DROP_C1_BALLISTIC_COEFFICIENT_INPUT: TEXT_TRUING_DROP_TARGET_RANGE_SUB_INPUT {
+            idc=18017;
+            y=0.265*safezoneH+safezoneY+0.55;
+        };
+        class TEXT_TRUING_DROP_ACCEPT: TEXT_GUN_LIST {
+            idc=18018;
+            w=0.085;
+            h=0.04;
+            x=0.550*safezoneW+safezoneX+0.125;
+            y=0.265*safezoneH+safezoneY+0.60;
+            text="Accept";
+            action=QUOTE(1 call FUNC(toggle_truing_drop));
+        };
+        class TEXT_TRUING_DROP_CANCEL: TEXT_TRUING_DROP_ACCEPT {
+            idc=18019;
+            x=0.550*safezoneW+safezoneX+0.210;
+            text="Cancel";
+            action=QUOTE(0 call FUNC(toggle_truing_drop));
+        };
+        class TEXT_TRUING_DROP_RESTORE: TEXT_TRUING_DROP_CANCEL {
+            idc=18020;
+            x=0.550*safezoneW+safezoneX+0.29525;
+            text="Restore";
+            action=QUOTE(true call FUNC(restore_truing_drop));
         };
     };
 };

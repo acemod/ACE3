@@ -4,14 +4,12 @@
  *
  * Arguments:
  * 0: The module logic <OBJECT>
- * 1: Synchronized units <ARRAY>
- * 2: Activated <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * function = "ace_repair_fnc_moduleRepairSettings"
+ * [logic] call ace_repair_fnc_moduleRepairSettings
  *
  * Public: No
  */
@@ -31,4 +29,8 @@ if (!isServer) exitWith {};
 [_logic, QGVAR(fullRepairLocation), "fullRepairLocation"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(engineerSetting_fullRepair), "engineerSetting_fullRepair"] call EFUNC(common,readSettingFromModule);
 
-diag_log text "[ACE]: Repair Module Initialized.";
+[_logic, QGVAR(addSpareParts), "addSpareParts"] call EFUNC(common,readSettingFromModule);
+
+[_logic, QGVAR(wheelRepairRequiredItems), "wheelRepairRequiredItems"] call EFUNC(common,readSettingFromModule);
+
+INFO("Repair Module Initialized.");

@@ -7,7 +7,7 @@
  * 1: A captive loaded in a vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, prisoner] call ACE_captives_fnc_doUnloadCaptive
@@ -18,4 +18,4 @@
 
 params ["_unit", "_target"];
 
-["MoveOutCaptive", [_target], [_target]] call EFUNC(common,targetEvent);
+[QGVAR(moveOutCaptive), [_target], [_target]] call CBA_fnc_targetEvent;

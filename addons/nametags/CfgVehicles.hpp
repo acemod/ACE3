@@ -7,7 +7,8 @@ class CfgVehicles {
         function = QFUNC(moduleNameTags);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_NameTags_ca.paa));
+        isSingular = 1;
+        icon = QPATHTOF(UI\Icon_Module_NameTags_ca.paa);
         class Arguments {
             class showPlayerNames {
                 displayName = CSTRING(ShowPlayerNames);
@@ -26,6 +27,10 @@ class CfgVehicles {
                     class ForceShow {
                         name = CSTRING(ForceShow);
                         value = 1;
+                    };
+                    class ForceShowFadeOnBorder {
+                        name = CSTRING(FadeOnBorder);
+                        value = 5;
                     };
                     class ForceShowOnlyCursor {
                         name = CSTRING(ForceShowOnlyCursor);

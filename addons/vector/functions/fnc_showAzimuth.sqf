@@ -1,16 +1,27 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_vector_fnc_showAzimuth
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-private ["_direction", "_digits"];
+private _direction = call FUNC(getDirection);
 
-_direction = call FUNC(getDirection);
-
-_digits = _direction call FUNC(convertToTexturesDegree);
+private _digits = _direction call FUNC(convertToTexturesDegree);
 
 (_dlgVector displayCtrl 1315) ctrlSetText (_digits select 0);
 (_dlgVector displayCtrl 1316) ctrlSetText (_digits select 1);

@@ -5,6 +5,7 @@
  * Arguments:
  * 0: Explosive <OBJECT>
  * 1: Time till detonate <NUMBER>
+ * 2: Trigger Item Classname <STRING><OPTIONAL>
  *
  * Return Value:
  * None
@@ -16,13 +17,13 @@
  */
 #include "script_component.hpp"
 
-params ["_explosive", "_delay"];
-TRACE_2("params",_explosive,_delay);
+params ["_explosive", "_delay", ["_triggerClassname", "#timer", [""]]];
+TRACE_3("startTimer",_explosive,_delay,_triggerClassname);
 
 [{
-    params ["_explosive"];
+    params ["_explosive", "_triggerClassname"];
     TRACE_1("Explosive Going Boom",_explosive);
     if (!isNull _explosive) then {
-        [_explosive, -1, [_explosive, 0]] call FUNC(detonateExplosive);
+        [_explosive, -1, [_explosive, 0], _triggerClassname] call FUNC(detonateExplosive);
     };
-}, [_explosive], _delay] call EFUNC(common,waitAndExecute);
+}, [_explosive, _triggerClassname], _delay] call CBA_fnc_waitAndExecute;

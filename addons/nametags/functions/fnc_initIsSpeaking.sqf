@@ -28,24 +28,23 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-["playerChanged", {
+["unit", {
     //When player changes, make sure to reset old unit's variable
     params ["", "_oldUnit"];
     if ((!isNull _oldUnit) && {_oldUnit getVariable [QGVAR(isSpeakingInGame), false]}) then {
         _oldUnit setVariable [QGVAR(isSpeakingInGame), false, true];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;
 
-
-if (isClass (configFile >> "cfgPatches" >> "acre_api")) then {
-    diag_log text format ["[ACE_nametags] - ACRE Detected"];
+if (isClass (configFile >> "CfgPatches" >> "acre_api")) then {
+    INFO("ACRE Detected.");
     DFUNC(isSpeaking) = {
         params ["_unit"];
-        (([_unit] call acre_api_fnc_isSpeaking) || {[ACE_player] call acre_api_fnc_isBroadcasting}) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+        ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
     };
 } else {
-    if (isClass (configFile >> "cfgPatches" >> "task_force_radio")) then {
-        diag_log text format ["[ACE_nametags] - TFR Detected"];
+    if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) then {
+        INFO("TFR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
             (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}

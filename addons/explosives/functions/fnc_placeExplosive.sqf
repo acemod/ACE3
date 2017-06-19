@@ -27,7 +27,7 @@ TRACE_7("params",_unit,_pos,_dir,_magazineClass,_triggerConfig,_triggerSpecificV
 
 private ["_ammo", "_explosive", "_attachedTo", "_magazineTrigger", "_pitch", "_digDistance", "_canDigDown", "_soundEnviron", "_surfaceType"];
 
-_unit playActionNow "PutDown";
+[_unit, "PutDown"] call EFUNC(common,doGesture);
 
 _attachedTo = objNull;
 if (!isNull _setupPlaceholderObject) then {
@@ -36,7 +36,7 @@ if (!isNull _setupPlaceholderObject) then {
 };
 
 if (isNil "_triggerConfig") exitWith {
-    diag_log format ["ACE_Explosives: Error config not passed to PlaceExplosive: %1", _this];
+    ERROR_1("Config not passed to PlaceExplosive: %1",_this);
     objNull
 };
 
@@ -44,7 +44,7 @@ _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Trigge
 _triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
-    diag_log format ["ACE_Explosives: Error config not found in PlaceExplosive: %1", _this];
+    ERROR_1("Config not found in PlaceExplosive: %1",_this);
     objNull
 };
 
@@ -62,8 +62,8 @@ if (isNumber (_magazineTrigger >> "digDistance")) then {
     _canDigDown = true;
     _surfaceType = surfaceType _pos;
     if ((_surfaceType select [0,1]) == "#") then {_surfaceType = _surfaceType select [1, 99];};
-    if ((_surfaceType != "") || {isClass (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
-        _soundEnviron = getText (configfile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
+    if ((_surfaceType != "") || {isClass (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
+        _soundEnviron = getText (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
         TRACE_2("Dig Down Surface",_surfaceType,_soundEnviron);
         _canDigDown = !(_soundEnviron in ["road", "tarmac", "concrete", "concrete_int", "int_concrete", "concrete_ext"]);
     };
@@ -94,7 +94,7 @@ if (isText(_triggerConfig >> "onPlace") && {[_unit,_explosive,_magazineClass,_tr
 
 _pitch = getNumber (_magazineTrigger >> "pitch");
 
-//Globaly set the position angle:
-[QGVAR(place), [_explosive, _dir, _pitch]] call EFUNC(common,globalEvent);
+//Globaly set the position and angle:
+[QGVAR(place), [_explosive, _dir, _pitch, _unit]] call CBA_fnc_globalEvent;
 
 _explosive

@@ -2,13 +2,8 @@
 
 ADDON = false;
 
-PREP(checkTemperature);
-PREP(clearJam);
-PREP(cooldown);
-PREP(displayTemperature);
-PREP(jamWeapon);
-PREP(overheat);
-PREP(swapBarrel);
-PREP(swapBarrelCallback);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

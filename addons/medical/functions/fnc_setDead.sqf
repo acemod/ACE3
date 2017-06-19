@@ -4,33 +4,34 @@
  *
  * Arguments:
  * 0: The unit that will be killed <OBJECT>
+ * 1: Force Dead (ignore revive setting) <BOOL> (default: false)
+ * 1: Delay setDamage for a frame  <BOOL> (default: false)
  *
- * ReturnValue:
- * <NIL>
+ * Return Value:
+ * Did he died? <BOOL>
+ *
+ * Example:
+ * [bob, false, false] call ace_medical_fnc_setDead
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_force", "_reviveVal", "_lifesLeft"];
-_unit = _this select 0;
-_force = false;
-if (count _this >= 2) then {
-    _force = _this select 1;
-};
+private ["_reviveVal", "_lifesLeft"];
+params ["_unit", ["_force", false], ["_delaySetDamage", false]];
 
-if (!alive _unit) exitwith{true};
+if ((!alive _unit) || {_unit getVariable ["ACE_isDead", false]}) exitWith {true};
 if (!local _unit) exitwith {
-    [[_unit, _force], QUOTE(DFUNC(setDead)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [QGVAR(setDead), [_unit, _force], _unit] call CBA_fnc_targetEvent;
     false;
 };
 
 _reviveVal = _unit getVariable [QGVAR(enableRevive), GVAR(enableRevive)];
 if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 2)) && !_force) exitwith {
-    if (_unit getvariable [QGVAR(inReviveState), false]) exitwith {
+    if (_unit getVariable [QGVAR(inReviveState), false]) exitwith {
         if (GVAR(amountOfReviveLives) > 0) then {
-            _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
+            _lifesLeft = _unit getVariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
             if (_lifesLeft == 0) then {
                 [_unit, true] call FUNC(setDead);
             };
@@ -39,48 +40,29 @@ if (((_reviveVal == 1 && {[_unit] call EFUNC(common,isPlayer)} || _reviveVal == 
         false;
     };
 
-    _unit setvariable [QGVAR(inReviveState), true, true];
-    _unit setvariable [QGVAR(reviveStartTime), ACE_time];
+    _unit setVariable [QGVAR(inReviveState), true, true];
+    _unit setVariable [QGVAR(reviveStartTime), CBA_missionTime];
     [_unit, true] call FUNC(setUnconscious);
 
-    [{
-        private ["_args","_unit","_startTime"];
-        _args = _this select 0;
-        _unit = _args select 0;
-        _startTime = _unit getvariable [QGVAR(reviveStartTime), 0];
-
-        if (GVAR(maxReviveTime) > 0 && {ACE_time - _startTime > GVAR(maxReviveTime)}) exitwith {
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
-            _unit setvariable [QGVAR(inReviveState), nil, true];
-            _unit setvariable [QGVAR(reviveStartTime), nil];
-            [_unit, true] call FUNC(setDead);
-        };
-
-        if !(_unit getvariable [QGVAR(inReviveState), false]) exitwith {
-            // revived without dieing, so in case we have lifes, remove one.
-            if (GVAR(amountOfReviveLives) > 0) then {
-                _lifesLeft = _unit getvariable[QGVAR(amountOfReviveLives), GVAR(amountOfReviveLives)];
-                _unit setvariable [QGVAR(amountOfReviveLives), _lifesLeft - 1, true];
-            };
-
-            _unit setvariable [QGVAR(reviveStartTime), nil];
-            [(_this select 1)] call cba_fnc_removePerFrameHandler;
-        };
-        if (GVAR(level) >= 2) then {
-            if (_unit getvariable [QGVAR(heartRate), 60] > 0) then {
-                _unit setvariable [QGVAR(heartRate), 0];
-            };
-        };
-    }, 1, [_unit] ] call CBA_fnc_addPerFrameHandler;
+    // Run the loop that tracks the revive state
+    [_unit ] call FUNC(reviveStateLoop);
     false;
 };
 
-_unit setvariable ["ACE_isDead", true, true];
+_unit setVariable ["ACE_isDead", true, true];
 if (isPLayer _unit) then {
-    _unit setvariable ["isDeadPlayer", true, true];
+    _unit setVariable ["isDeadPlayer", true, true];
 };
 
-["medical_onSetDead", [_unit]] call EFUNC(common,localEvent);
+["ace_killed", [_unit]] call CBA_fnc_localEvent;
 
-_unit setdamage 1;
+//Delay a frame before killing the unit via scripted damage
+//to avoid triggering the "Killed" Event twice (and having the wrong killer)
+
+if (!_delaySetDamage) then {
+    [_unit, 1] call FUNC(setStructuralDamage);
+} else {
+    [FUNC(setStructuralDamage), [_unit, 1]] call CBA_fnc_execNextFrame;
+};
+
 true;

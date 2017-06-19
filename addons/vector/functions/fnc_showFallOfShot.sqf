@@ -1,22 +1,31 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: Unknown <UNKNOWN>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [?] call ace_vector_fnc_showFallOfShot
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
 GVAR(FOSState) = _this select 0;
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-private "_fosData";
-
-_fosData = GVAR(FOSData);
+private _fosData = GVAR(FOSData);
 
 if !(_this select 0) then {
-    private "_digits";
-
     // of ordinate
-    _digits = [_fosData, 1] call FUNC(convertToTexturesFOS);
+    private _digits = [_fosData, 1] call FUNC(convertToTexturesFOS);
 
     (_dlgVector displayCtrl 1310) ctrlSetText (_digits select 0);
     (_dlgVector displayCtrl 1311) ctrlSetText (_digits select 1);
@@ -34,10 +43,8 @@ if !(_this select 0) then {
     (_dlgVector displayCtrl 1319) ctrlSetText (_digits select 4);
 
 } else {
-    private "_digits";
-
     // applicate
-    _digits = [_fosData, 2] call FUNC(convertToTexturesFOS);
+    private _digits = [_fosData, 2] call FUNC(convertToTexturesFOS);
 
     (_dlgVector displayCtrl 1310) ctrlSetText (_digits select 0);
     (_dlgVector displayCtrl 1311) ctrlSetText (_digits select 1);

@@ -38,7 +38,7 @@ class CfgWeapons {
         weaponInfoType = "ACE_RscWeaponZeroing";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_shortdot_optics.p3d));
+            modelOptics = QPATHTOF(models\ace_shortdot_optics.p3d);
 
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
@@ -65,10 +65,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_Hamr_2D: optic_Hamr {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\hamr-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\hamr-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\hamr-reticle65_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\hamr-reticle65Illum_ca.paa));
+        GVAR(BodyDay) = QPATHTOF(reticles\hamr-body_ca.paa);
+        GVAR(BodyNight) = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
+        GVAR(ReticleDay) = QPATHTOF(reticles\hamr-reticle65_ca.paa);
+        GVAR(ReticleNight) = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Hamr_2D";
@@ -76,7 +76,7 @@ class CfgWeapons {
         weaponInfoType = "ACE_RscWeapon_Hamr";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_reticle90.p3d);
 
             class OpticsModes: OpticsModes {
                 class Hamr2Collimator: Hamr2Collimator {};
@@ -101,7 +101,7 @@ class CfgWeapons {
         displayName = CSTRING(hamr_pip);
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_pip.p3d);
         };
     };
 
@@ -115,10 +115,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_Arco_2D: optic_Arco {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\arco-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\arco-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\arco-reticle65_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\arco-reticle65Illum_ca.paa));
+        GVAR(BodyDay) = QPATHTOF(reticles\arco-body_ca.paa);
+        GVAR(BodyNight) = QPATHTOF(reticles\arco-bodyNight_ca.paa);
+        GVAR(ReticleDay) = QPATHTOF(reticles\arco-reticle65_ca.paa);
+        GVAR(ReticleNight) = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_Arco_2D";
@@ -126,7 +126,7 @@ class CfgWeapons {
         weaponInfoType = "ACE_RscWeapon_Arco";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_reticle90.p3d);
 
             class OpticsModes: OpticsModes {
                 class ARCO2collimator: ARCO2collimator {};
@@ -150,7 +150,7 @@ class CfgWeapons {
         displayName = CSTRING(arco_pip);
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_pip.p3d);
         };
     };
 
@@ -164,10 +164,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_MRCO_2D: optic_MRCO {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\mrco-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\mrco-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\mrco-reticle556_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\mrco-reticle556Illum_ca.paa));
+        GVAR(BodyDay) = QPATHTOF(reticles\mrco-body_ca.paa);
+        GVAR(BodyNight) = QPATHTOF(reticles\mrco-bodyNight_ca.paa);
+        GVAR(ReticleDay) = QPATHTOF(reticles\mrco-reticle556_ca.paa);
+        GVAR(ReticleNight) = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_MRCO_2D";
@@ -175,7 +175,7 @@ class CfgWeapons {
         weaponInfoType = "ACE_RscWeapon_MRCO";
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_reticle90.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_reticle90.p3d);
 
             class OpticsModes: OpticsModes {
                 class MRCOcq: MRCOcq {};
@@ -200,7 +200,7 @@ class CfgWeapons {
         displayName = CSTRING(valdada_pip);
 
         class ItemInfo: ItemInfo {
-            modelOptics = QUOTE(PATHTOF(models\ace_optics_pip.p3d));
+            modelOptics = QPATHTOF(models\ace_optics_pip.p3d);
         };
     };
 
@@ -214,10 +214,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_SOS_2D: optic_SOS {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+        GVAR(BodyDay) = QPATHTOF(reticles\sos-body_ca.paa);
+        GVAR(BodyNight) = QPATHTOF(reticles\sos-bodyNight_ca.paa);
+        GVAR(ReticleDay) = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
+        GVAR(ReticleNight) = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_SOS_2D";
@@ -227,7 +227,13 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_reticle90.p3d)),QUOTE(PATHTOF(models\ace_optics_reticle90.p3d))};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d),QPATHTOF(models\ace_optics_reticle90.p3d)};
+                    useModelOptics = 1;
+                    opticsZoomInit = 0.0116;
+                    opticsZoomMax = 0.0464;
+                    opticsZoomMin = 0.0116;
+                    discreteFOV[] = {0.0464, 0.0116};
+                    opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
                 };
                 class Iron: Iron {};
@@ -244,7 +250,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_pip.p3d)),QUOTE(PATHTOF(models\ace_optics_pip.p3d))};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d),QPATHTOF(models\ace_optics_pip.p3d)};
                 };
                 class Iron: Iron {};
             };
@@ -260,10 +266,10 @@ class CfgWeapons {
     };
 
     class ACE_optic_LRPS_2D: optic_LRPS {
-        GVAR(BodyDay) = QUOTE(PATHTOF(reticles\sos-body_ca.paa));
-        GVAR(BodyNight) = QUOTE(PATHTOF(reticles\sos-bodyNight_ca.paa));
-        GVAR(ReticleDay) = QUOTE(PATHTOF(reticles\sos-reticleMLR_ca.paa));
-        GVAR(ReticleNight) = QUOTE(PATHTOF(reticles\sos-reticleMLRIllum_ca.paa));
+        GVAR(BodyDay) = QPATHTOF(reticles\sos-body_ca.paa);
+        GVAR(BodyNight) = QPATHTOF(reticles\sos-bodyNight_ca.paa);
+        GVAR(ReticleDay) = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
+        GVAR(ReticleNight) = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
 
         author = ECSTRING(common,ACETeam);
         _generalMacro = "ACE_optic_LRPS_2D";
@@ -273,11 +279,11 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_reticle90.p3d)),QUOTE(PATHTOF(models\ace_optics_reticle90.p3d))};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_reticle90.p3d),QPATHTOF(models\ace_optics_reticle90.p3d)};
                     useModelOptics = 1;
-                    opticsZoomInit = 0.01234;
-                    opticsZoomMax = 0.04673;
-                    opticsZoomMin = 0.01234;
+                    opticsZoomInit = 0.0116;
+                    opticsZoomMax = 0.0464;
+                    opticsZoomMin = 0.0116;
                     discreteFOV[] = {};
                     opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1","ACE_OpticsRadBlur1"};
                     opticsDisablePeripherialVision = 0;
@@ -295,7 +301,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {QUOTE(PATHTOF(models\ace_optics_pip.p3d)),QUOTE(PATHTOF(models\ace_optics_pip.p3d))};
+                    modelOptics[] = {QPATHTOF(models\ace_optics_pip.p3d),QPATHTOF(models\ace_optics_pip.p3d)};
                 };
             };
         };

@@ -14,60 +14,34 @@ GVAR(showNamesTime) = -10;
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    GVAR(showNamesTime) = ACE_time;
-    if (call FUNC(canShow)) then{ call FUNC(doShow); };
+    GVAR(showNamesTime) = CBA_missionTime;
+    // if (call FUNC(canShow)) then{ call FUNC(doShow); }; // This code doesn't work (canShow has a nil / has never worked??)
     // Return false so it doesn't block other actions
     false
 },
 {false},
-[29, [false, false, false]], false] call cba_fnc_addKeybind; //LeftControl Key
-
-// Monitor the assigned teams, and propegate them appropriately for the player
-// This allows for assigned team colors to match across the entire group
-[{
-    private["_leader", "_playerIsLeader", "_unitTeam"];
-    if (!(isNull ACE_player) && { alive ACE_player } ) then {
-        _leader = leader (group ACE_player);
-        _playerIsLeader = false;
-        
-        if(alive _leader) then {
-            if(_leader == ACE_player) then {
-                _playerIsLeader = true;
-            };
-        };
-        
-        if (_playerIsLeader) then {
-            {
-                if(alive _x) then {
-                    _unitTeam = _x getVariable [QGVAR(teamAssignment),"MAIN"];
-                    if (_unitTeam != assignedTeam _x) then {
-                        _x setVariable [QGVAR(teamAssignment), assignedTeam _x,true];
-                    };
-                };
-            } forEach units (group ACE_player);
-        } else {
-            {
-                if(alive _x) then {
-                    _unitTeam = _x getVariable [QGVAR(teamAssignment),"MAIN"];
-                    if (_unitTeam != assignedTeam _x) then {
-                        _x assignTeam _unitTeam;
-                    };
-                };
-            } forEach units (group ACE_player);
-        };
-    };
-}, 5, []] call CBA_fnc_addPerFrameHandler;
+[29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
 // Wait until the colors are defined before starting to draw the nametags
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
-["SettingChanged", {
+["ace_settingChanged", {
     params ["_name"];
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
     };
-}] call EFUNC(common,addEventHandler);
+    // Reset nametag flag cache on setting change:
+    ACE_player setVariable [QGVAR(flagsCache), nil];
+}] call CBA_fnc_addEventHandler;
+
+["cba_events_visionModeEvent", {
+    // Reset nametag flag cache on vision mode change:
+    ACE_player setVariable [QGVAR(flagsCache), nil];
+}] call CBA_fnc_addEventHandler;
+
+// civilians don't use military ranks
+["CIV_F", ["","","","","","",""]] call FUNC(setFactionRankIcons);

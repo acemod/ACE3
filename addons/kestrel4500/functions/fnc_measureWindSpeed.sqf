@@ -3,12 +3,13 @@
  * Measures the wind speed, stores the information in GVAR(MeasuredWindSpeed) and updates GVAR(ImpellerState)
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * wind speed <NUMBER>
  *
  * Example:
+ * call ace_kestrel4500_fnc_canShow
  *
  * Public: No
  */

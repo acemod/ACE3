@@ -2,14 +2,8 @@
 
 ADDON = false;
 
-PREP(attach);
-PREP(canAttach);
-PREP(canDetach);
-PREP(detach);
-PREP(getChildrenAttachActions);
-PREP(handleGetIn);
-PREP(handleGetOut);
-PREP(handleKilled);
-PREP(placeApprove);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

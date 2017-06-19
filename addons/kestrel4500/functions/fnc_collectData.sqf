@@ -3,18 +3,19 @@
  * Gathers the weather data for the Kestrel 4500
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_kestrel4500_fnc_collectData
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_altitude", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_fnc_updateMemory", "_windSpeed", "_crosswind", "_headwind"];
+private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_altitude", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_windSpeed", "_crosswind", "_headwind"];
 _playerDir = getDir ACE_player;
 _playerAltitude = (getPosASL ACE_player) select 2;
 _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
@@ -35,25 +36,19 @@ if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
 
 {
     GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-} forEach [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+} count [1, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
-_fnc_updateMemory = {
-    PARAMS_2(_slot,_value);
-    GVAR(MIN)   set [_slot, (GVAR(MIN) select _slot) min _value];
-    GVAR(MAX)   set [_slot, _value max (GVAR(MAX) select _slot)];
-    GVAR(TOTAL) set [_slot, (GVAR(TOTAL) select _slot) + _value];
-};
 
-[0, _playerDir] call _fnc_updateMemory;
+[0, _playerDir] call FUNC(updateMemory);
 
 if (GVAR(MinAvgMaxMode) == 1) then {
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-    } forEach [2, 3, 4];
+    } count [2, 3, 4];
 
     // Wind SPD
     _windSpeed = call FUNC(measureWindSpeed);
-    [2, _windSpeed] call _fnc_updateMemory;
+    [2, _windSpeed] call FUNC(updateMemory);
 
     // CROSSWIND
     _crosswind = 0;
@@ -62,7 +57,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     } else {
         _crosswind = abs(sin(GVAR(RefHeading)) * _windSpeed);
     };
-    [3, _crosswind] call _fnc_updateMemory;
+    [3, _crosswind] call FUNC(updateMemory);
 
     // HEADWIND
     _headwind = 0;
@@ -80,12 +75,4 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _headwind];
 };
 
-[5, _temperature] call _fnc_updateMemory;
-[6, _chill] call _fnc_updateMemory;
-[7, _humidity] call _fnc_updateMemory;
-[8, _heatIndex] call _fnc_updateMemory;
-[9, _dewPoint] call _fnc_updateMemory;
-[10, _wetBulb] call _fnc_updateMemory;
-[11, _barometricPressure] call _fnc_updateMemory;
-[12, _altitude] call _fnc_updateMemory;
-[13, _densityAltitude] call _fnc_updateMemory;
+{ _x call FUNC(updateMemory); true } count [[5, _temperature],[6, _chill],[7, _humidity],[8, _heatIndex],[9, _dewPoint],[10, _wetBulb],[11, _barometricPressure],[12, _altitude],[13, _densityAltitude]];

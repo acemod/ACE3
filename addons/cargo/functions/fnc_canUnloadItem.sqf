@@ -5,8 +5,9 @@
  * Arguments:
  * 0: loaded Object <OBJECT>
  * 1: Object <OBJECT>
+ * 2: Unloader (player) <OPTIONAL><OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can be unloaded <BOOL>
  *
  * Example:
@@ -16,29 +17,14 @@
  */
 #include "script_component.hpp"
 
-private ["_loaded", "_validVehiclestate", "_emptyPos"];
+params ["_item", "_vehicle", ["_unloader", objNull]];
+TRACE_2("params",_item,_vehicle);
 
-params ["_item", "_vehicle"];
-
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 if !(_item in _loaded) exitWith {false};
 
-_validVehiclestate = true;
-_emptyPos = [];
-if (_vehicle isKindOf "Ship" ) then {
-    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, typeOf _item]); // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air" ) then {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
-        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
-    } else {
-        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
-        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 15, typeOf _item]);
-    };
-};
+private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
-if (!_validVehiclestate) exitWith {false};
+private _emptyPos = [_vehicle, _itemClass, _unloader] call EFUNC(common,findUnloadPosition);
 
-(count _emptyPos != 0)
+(count _emptyPos) == 3

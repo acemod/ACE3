@@ -1,11 +1,18 @@
-/**
- * fn_getVersion.sqf
- * @Descr: Get the version number of the current ACE Build
- * @Author: Glowbal
+/*
+ * Author: Glowbal
+ * Get the version number of the current ACE build.
  *
- * @Arguments: []
- * @Return: STRING String containing the version
- * @PublicAPI: true
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * ACE Version <STRING>
+ *
+ * Example:
+ * [] call ace_common_fnc_getVersion
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
-getText (configFile >> "cfgPatches" >> "ACE_main" >> "version");
+
+getText (configFile >> "CfgPatches" >> "ACE_main" >> "version") // return

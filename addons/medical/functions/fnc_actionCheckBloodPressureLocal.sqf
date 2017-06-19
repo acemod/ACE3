@@ -7,27 +7,26 @@
  * 1: The patient <OBJECT>
  *
  * Return Value:
- * NONE
+ * None
+ *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_actionCheckBloodPressureLocal
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_caller","_target","_selectionName","_bloodPressure","_bloodPressureHigh","_bloodPressureLow", "_logOutPut", "_output"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
+params ["_caller", "_target", "_selectionName"];
 
-_bloodPressure = [_target] call FUNC(getBloodPressure);
-if (!alive _target) then {
-    _bloodPressure = [0,0];
+private _bloodPressure = if (!alive _target) then {
+    [0,0]
+} else {
+    [_target] call FUNC(getBloodPressure)
 };
-
-_bloodPressureHigh = _bloodPressure select 1;
-_bloodPressureLow = _bloodPressure select 0;
-_output = "";
-_logOutPut = "";
+_bloodPressure params [ "_bloodPressureLow", "_bloodPressureHigh"];
+private _output = "";
+private _logOutPut = "";
 if ([_caller] call FUNC(isMedic)) then {
     _output = LSTRING(Check_Bloodpressure_Output_1);
     _logOutPut = format["%1/%2",round(_bloodPressureHigh),round(_bloodPressureLow)];
@@ -60,9 +59,9 @@ if (_selectionName in ["hand_l","hand_r"] && {[_unit, _selectionName] call FUNC(
     _logOutPut = "";
 };
 
-["displayTextStructured", [_caller], [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [[_output, [_target] call EFUNC(common,getName), round(_bloodPressureHigh),round(_bloodPressureLow)], 1.75, _caller], [_caller]] call CBA_fnc_targetEvent;
 
 if (_logOutPut != "") then {
-    [_target,"activity", LSTRING(Check_Bloodpressure_Log), [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
-    [_target,"quick_view", LSTRING(Check_Bloodpressure_Log), [[_caller] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"activity", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
+    [_target,"quick_view", LSTRING(Check_Bloodpressure_Log), [[_caller, false, true] call EFUNC(common,getName), _logOutPut]] call FUNC(addToLog);
 };

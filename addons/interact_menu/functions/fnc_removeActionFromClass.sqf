@@ -2,12 +2,12 @@
  * Author: esteldunedain
  * Removes an action from a class
  *
- * Argument:
+ * Arguments:
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Full path of the new action <ARRAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -19,18 +19,20 @@
 
 params ["_objectType", "_typeNum", "_fullPath"];
 
-private ["_res","_varName","_actionTrees", "_parentNode", "_found"];
-_res = _fullPath call FUNC(splitPath);
+private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
-_varName = format [[QGVAR(Act_%1), QGVAR(SelfAct_%1)] select _typeNum, _objectType];
-_actionTrees = missionNamespace getVariable [_varName, []];
+private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
+private _actionTrees = _namespace getVariable _objectType;
+if (isNil "_actionTrees") then {
+    _actionTrees = [];
+};
 
-_parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
+private _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
 if (isNil {_parentNode}) exitWith {};
 
 // Iterate through children of the father
-_found = false;
+private _found = false;
 {
     if (((_x select 0) select 0) == _actionName) exitWith {
         TRACE_2("Deleting Action", _forEachIndex, _x);

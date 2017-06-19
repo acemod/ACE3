@@ -25,7 +25,7 @@ _isEven = {
         if (_forEachIndex <= _index && {_x == 39}) then {
             _count = _count + 1;
         };
-    }foreach _array;
+    }forEach _array;
 
     _count %2 == 0;
 };
@@ -35,9 +35,9 @@ _isEven = {
 _array = toArray _str;
 {
     if (_x == 34) then {
-        _array set [_foreachIndex, 39];
+        _array set [_forEachIndex, 39];
     };
-}foreach _array;
+}forEach _array;
 
 _maxIndex = count _array;
 for "_i" from 0 to _maxIndex /* step +1 */ do {
@@ -52,8 +52,8 @@ for "_i" from 0 to _maxIndex /* step +1 */ do {
 
 {
     if (_x == 34) then {
-        _array set [_foreachIndex, 39];
+        _array set [_forEachIndex, 39];
     };
-}foreach _array;
+}forEach _array;
 
 toString _array;

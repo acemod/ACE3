@@ -6,7 +6,7 @@
  * Apply new data? <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_solution_setup
@@ -18,7 +18,7 @@
 if (ctrlVisible 15000) then {
     false call FUNC(show_solution_setup);
     true call FUNC(show_main_page);
-    
+
     if (_this == 1) then {
         GVAR(currentScopeClickUnit) = GVAR(currentScopeClickUnitTemp);
         GVAR(currentScopeClickNumber) = GVAR(currentScopeClickNumberTemp);
@@ -30,9 +30,9 @@ if (ctrlVisible 15000) then {
 } else {
     true call FUNC(show_solution_setup);
     false call FUNC(show_main_page);
-    
+
     GVAR(currentScopeClickUnitTemp) = GVAR(currentScopeClickUnit);
     GVAR(currentScopeClickNumberTemp) = GVAR(currentScopeClickNumber);
-    
+
     [] call FUNC(update_solution_setup);
 };

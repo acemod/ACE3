@@ -3,12 +3,13 @@
  * Toggles the DAGR overlay
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_toggleOverlay
  *
  * Public: No
  */
@@ -23,11 +24,12 @@ if (GVAR(run)) then {
     };
     GVAR(hidden) = true;
     [{
-        EXPLODE_1_PVT(_this select 0,_vehicle);
+        params ["_args", "_idPFH"];
+        _args params ["_vehicle"];
         if (!GVAR(run) || (!alive ACE_player) || (vehicle ACE_player != _vehicle)) exitWith {
             GVAR(run) = false;
             135471 cutText ["", "PLAIN"];
-            [_this select 1] call CBA_fnc_removePerFrameHandler;
+            [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
         if (cameraView == "GUNNER") then {
             if (!GVAR(hidden)) then {

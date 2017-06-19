@@ -6,10 +6,10 @@
  * step <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_cycle_image_size_units
+ * call ace_atragmx_fnc_cycle_image_size_units
  *
  * Public: No
  */

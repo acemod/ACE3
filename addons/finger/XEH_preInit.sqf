@@ -2,9 +2,8 @@
 
 ADDON = false;
 
-PREP(incomingFinger);
-PREP(keyPress);
-PREP(moduleSettings);
-PREP(perFrameEH);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

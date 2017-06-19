@@ -21,9 +21,7 @@ params ["_vehicle", "", "_unit"];
 TRACE_2("params",_vehicle,_unit);
 
 if ((local _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}) then {
-    private ["_cargoIndex"];
-
-    _cargoIndex = _unit getVariable [QGVAR(CargoIndex), -1];
+    private _cargoIndex = _unit getVariable [QGVAR(CargoIndex), -1];
 
     if (_cargoIndex != -1) then {
         //If captive was not "unloaded", then move them back into the vehicle.

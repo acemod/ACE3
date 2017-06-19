@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WeaponSelect">
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
@@ -12,6 +12,8 @@
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrat texto ao lançar granada</Portuguese>
+            <Japanese>手榴弾を投げるときに通知</Japanese>
+            <Korean>수류탄 투척시 화면에 문자 표시</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
             <English>Display a hint or text on grenade throw.</English>
@@ -24,30 +26,36 @@
             <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
             <Italian>Mostra una notifica quando si lanciano granate</Italian>
             <Portuguese>Mostra um hint ou texto ao lançar uma granada</Portuguese>
+            <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
+            <Korean>수류탄 투척시 화면에 문자나 힌트를 표시합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectPistol">
             <English>Select Pistol</English>
             <German>Pistole auswählen</German>
             <Spanish>Seleccionar pistola</Spanish>
             <Polish>Wybierz pistolet</Polish>
-            <Czech>Zvolit příruční zbraň</Czech>
+            <Czech>Zvolit Pistoly</Czech>
             <Russian>Выбрать пистолет</Russian>
             <French>Sélectionner Pistolet</French>
             <Hungarian>Pisztoly Kiválasztása</Hungarian>
             <Portuguese>Selecionar Pistola</Portuguese>
             <Italian>Seleziona la Pistola</Italian>
+            <Japanese>拳銃を選択</Japanese>
+            <Korean>권총 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifle">
             <English>Select Rifle</English>
             <German>Gewehr auswählen</German>
             <Spanish>Seleccionar fusil</Spanish>
             <Polish>Wybierz karabin</Polish>
-            <Czech>Zvolit hlavní zbraň</Czech>
+            <Czech>Zvolit Pušku</Czech>
             <Russian>Выбрать винтовку</Russian>
             <French>Sélectionner Fusil</French>
             <Hungarian>Puska Kiválasztása</Hungarian>
             <Portuguese>Selecionar Rifle</Portuguese>
             <Italian>Seleziona il fucile</Italian>
+            <Japanese>小銃を選択</Japanese>
+            <Korean>소총 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
             <English>Select Launcher</English>
@@ -60,6 +68,8 @@
             <Hungarian>Rakétavető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lançador</Portuguese>
             <Italian>Seleziona il lanciamissili</Italian>
+            <Japanese>ランチャーを選択</Japanese>
+            <Korean>발사기 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
             <English>Select Grenade Launcher</English>
@@ -72,6 +82,8 @@
             <Hungarian>Gránátvető Kiválasztása</Hungarian>
             <Portuguese>Selecionar Lança-Granadas</Portuguese>
             <Italian>Seleziona il lanciagranate</Italian>
+            <Japanese>グレネード ランチャーを選択</Japanese>
+            <Korean>유탄발사기 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
             <English>Select Binoculars</English>
@@ -84,6 +96,8 @@
             <Hungarian>Távcső Kiválasztása</Hungarian>
             <Portuguese>Selecionar Binóculos</Portuguese>
             <Italian>Seleziona il Binocolo</Italian>
+            <Japanese>双眼鏡を選択</Japanese>
+            <Korean>망원경 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
             <English>Holster Weapon</English>
@@ -96,6 +110,8 @@
             <Hungarian>Fegyvert tokba</Hungarian>
             <Portuguese>Guardar Arma</Portuguese>
             <Italian>Nascondi l'arma</Italian>
+            <Japanese>武器をしまう</Japanese>
+            <Korean>무기 집어넣기</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOn">
             <English>Engine on</English>
@@ -108,6 +124,8 @@
             <Portuguese>Ligar Motor</Portuguese>
             <Italian>Motore acceso</Italian>
             <Russian>Включить двигатель</Russian>
+            <Japanese>エンジン始動</Japanese>
+            <Korean>엔진 켜기</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
@@ -120,6 +138,8 @@
             <Portuguese>Desligar Motor</Portuguese>
             <Italian>Motore spento</Italian>
             <Russian>Выключить двигатель</Russian>
+            <Japanese>エンジン停止</Japanese>
+            <Korean>엔진 끄기</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
             <English>Select Main Gun</English>
@@ -132,6 +152,8 @@
             <Portuguese>Selecionar Arma Principal</Portuguese>
             <Italian>Seleziona Arma Primaria</Italian>
             <Russian>Выбрать основное оружие</Russian>
+            <Japanese>主砲を選択</Japanese>
+            <Korean>주포 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
             <English>Select Machine Gun</English>
@@ -144,6 +166,8 @@
             <Portuguese>Selecionar Metralhadora</Portuguese>
             <Italian>Seleziona Mitragliatrice</Italian>
             <Russian>Выбрать пулемёт</Russian>
+            <Japanese>機関砲を選択</Japanese>
+            <Korean>기관총 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
             <English>Select Missiles</English>
@@ -156,6 +180,8 @@
             <Portuguese>Selecionar Mísseis</Portuguese>
             <Italian>Seleziona Missili</Italian>
             <Russian>Выбрать ракеты</Russian>
+            <Japanese>ミサイルを選択</Japanese>
+            <Korean>미사일 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
             <English>Grenade %1</English>
@@ -168,6 +194,8 @@
             <French>Grenade %1</French>
             <Italian>Granata %1</Italian>
             <Portuguese>Granada %1</Portuguese>
+            <Japanese>%1 手榴弾</Japanese>
+            <Korean>%1 수류탄</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
@@ -180,6 +208,8 @@
             <French>Grenade prête</French>
             <Italian>Granata pronta</Italian>
             <Portuguese>Granada pronta</Portuguese>
+            <Japanese>投てきよし</Japanese>
+            <Korean>투척물 준비</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
@@ -188,10 +218,12 @@
             <Polish>Wybierz granat odłamkowy</Polish>
             <French>Sélectionner grenade à fragmentation</French>
             <Hungarian>Repeszgránát Kiválasztása</Hungarian>
-            <Czech>Zvolit Výbušný Granát</Czech>
+            <Czech>Zvolit výbušný granát</Czech>
             <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
             <Italian>Seleziona Granata a Frammentazione</Italian>
             <Russian>Выбрать осколочную гранату</Russian>
+            <Japanese>破片手榴弾を選択</Japanese>
+            <Korean>살상 투척물 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
             <English>Select Non-Frag Grenade</English>
@@ -200,10 +232,12 @@
             <Polish>Wybierz granat nieodłamkowy</Polish>
             <French>Sélectionner grenade non-léthale</French>
             <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
-            <Czech>Zvolit Ne-Výbušný Granát</Czech>
+            <Czech>Zvolit ne-výbušný granát</Czech>
             <Portuguese>Selecionar Granada</Portuguese>
             <Italian>Seleziona granate non a frammentazione</Italian>
             <Russian>Выбрать гранату</Russian>
+            <Japanese>その他の手榴弾を選択</Japanese>
+            <Korean>비살상 투척물 선택</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
@@ -212,10 +246,12 @@
             <Polish>Rzuć wybrany granat</Polish>
             <French>Lancer la grenade sélectionnée</French>
             <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
-            <Czech>Hodit Zvolený Granát</Czech>
+            <Czech>Hodit zvolený granát</Czech>
             <Portuguese>Lançar Granada Selecionada</Portuguese>
             <Italian>Lancia la Granata Selezionata</Italian>
             <Russian>Бросить выбранную гранату</Russian>
+            <Japanese>選択された手榴弾を投げる</Japanese>
+            <Korean>선택된 투척물 투척</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
             <English>No grenades left</English>
@@ -228,6 +264,8 @@
             <Russian>Гранат не осталось</Russian>
             <Italian>Granate esaurite</Italian>
             <Portuguese>Sem mais granadas</Portuguese>
+            <Japanese>もう手榴弾は無い</Japanese>
+            <Korean>투척물 없음</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
             <English>No frags left</English>
@@ -236,10 +274,12 @@
             <Polish>Brak granatów odłamkowych</Polish>
             <French>Plus de grenades à fragmentation</French>
             <Hungarian>Nincs több repeszgránát</Hungarian>
-            <Czech>Už nejsou granáty</Czech>
+            <Czech>Žádné výbušné granáty</Czech>
             <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
             <Italian>Nessuna granata a frammentazione rimanente</Italian>
             <Russian>Осколочных гранат нет</Russian>
+            <Japanese>もう破片手榴弾は無い</Japanese>
+            <Korean>세열 수류탄 없음</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
             <English>No misc. grenades left</English>
@@ -252,6 +292,8 @@
             <Portuguese>Não há outras granadas restantes</Portuguese>
             <Italian>Nessun'altra granata rimanente.</Italian>
             <Russian>Нелетальные гранаты закончились</Russian>
+            <Japanese>もうその他の手榴弾は無い</Japanese>
+            <Korean>기타 투척물 없음</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
             <English>No grenade selected</English>
@@ -264,6 +306,8 @@
             <Portuguese>Nenhuma granada selecionada</Portuguese>
             <Italian>Nessuna granata selezionata</Italian>
             <Russian>Нет выбранной гранаты</Russian>
+            <Japanese>手榴弾は選択されていない</Japanese>
+            <Korean>선택된 수류탄 없음</Korean>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
             <English>Fire Smoke Launcher</English>
@@ -276,6 +320,8 @@
             <Russian>Пустить дымовую завесу</Russian>
             <Italian>Lancia fumogeno</Italian>
             <Portuguese>Lançador de fumaça</Portuguese>
+            <Japanese>煙幕発射機を発射</Japanese>
+            <Korean>연막발사기 박사</Korean>
         </Key>
     </Package>
 </Project>

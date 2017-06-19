@@ -8,7 +8,7 @@ class CfgVehicles {
                     distance = 2.0;
                     condition = QUOTE(_target call FUNC(canCopy));
                     statement = QUOTE(_target call FUNC(updateClassNames));
-                    icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                    icon = QPATHTOF(UI\RangeCard_Icon.paa);
                 };
             };
         };
@@ -20,7 +20,7 @@ class CfgVehicles {
                     statement = QUOTE(false call FUNC(openRangeCard));
                     showDisabled = 0;
                     priority = 0.1;
-                    icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                    icon = QPATHTOF(UI\RangeCard_Icon.paa);
                     exceptions[] = {"notOnMap"};
                     class GVAR(openCopy) {
                         displayName = CSTRING(OpenRangeCardCopy);
@@ -28,16 +28,16 @@ class CfgVehicles {
                         statement = QUOTE(true call FUNC(openRangeCard));
                         showDisabled = 0;
                         priority = 0.1;
-                        icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                        icon = QPATHTOF(UI\RangeCard_Icon.paa);
                         exceptions[] = {"notOnMap"};
                     };
                     class GVAR(makeCopy) {
                         displayName = CSTRING(CopyRangeCard);
                         condition = QUOTE(call FUNC(canShow) && !GVAR(RangeCardOpened));
-                        statement = QUOTE(GVAR(ammoClassCopy) = GVAR(ammoClass); GVAR(magazineClassCopy) = GVAR(magazineClass); GVAR(weaponClassCopy) = GVAR(ammoClass););
+                        statement = QUOTE(GVAR(zeroRangeCopy)=GVAR(zeroRange); GVAR(boreHeightCopy)=GVAR(boreHeight); GVAR(ammoClassCopy)=GVAR(ammoClass); GVAR(magazineClassCopy)=GVAR(magazineClass); GVAR(weaponClassCopy)=GVAR(weaponClass););
                         showDisabled = 0;
                         priority = 0.1;
-                        icon = QUOTE(PATHTOF(UI\RangeCard_Icon.paa));
+                        icon = QPATHTOF(UI\RangeCard_Icon.paa);
                         exceptions[] = {"notOnMap"};
                     };
                 };

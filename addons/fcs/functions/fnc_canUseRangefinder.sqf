@@ -1,16 +1,19 @@
 /*
  * Author: commy2
- *
  * Returns true if the laser distance measurement can be read from the engine.
  *
- * Argument:
- * Nothing
+ * Arguments:
+ * None
  *
- * Return value:
- * Boolean (Bool)
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * call ace_fcs_fnc_canUseRangeFinder
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
 !isNull ((uiNamespace getVariable ["ACE_dlgRangefinder", displayNull]) displayCtrl 1713151)
-&& {cameraView == "GUNNER"}
+&& {cameraView == "GUNNER"} // return

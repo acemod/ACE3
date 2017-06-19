@@ -2,15 +2,8 @@
 
 ADDON = false;
 
-PREP(addEarPlugs);
-PREP(earRinging);
-PREP(explosionNear);
-PREP(firedNear);
-PREP(hasEarPlugsIn);
-PREP(moduleHearing);
-PREP(putInEarPlugs);
-PREP(removeEarPlugs);
-PREP(updatePlayerVehAttenuation);
-PREP(updateVolume);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

@@ -1,33 +1,35 @@
 /*
  * Author: Glowbal
  * Play the injured sound for a unit if the unit is damaged. The sound broadcasted across MP.
- * Will not play if the unit has already played a sound within to close a ACE_time frame.
+ * Will not play if the unit has already played a sound within to close a time frame.
  * Delay: With minimal damage (below 1), the delay is (10 + random(50)) seconds. Otherwise it is 60 seconds / damage.
  *
  * Arguments:
  * 0: The Unit <OBJECT>
+ * 1: Amount of Pain <NUMBER>
  *
- * ReturnValue:
- * <NIL>
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, 5] call ACE_medical_fnc_playInjuredSound
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_unit","_availableSounds_A","_availableSounds_B","_availableSounds_C","_sound", "_pain"];
-_unit = _this select 0;
-_pain = _this select 1;
-if (!local _unit || !GVAR(enableScreams)) exitwith{};
+params ["_unit", "_pain"];
+if (!local _unit || !GVAR(enableScreams)) exitWith{};
 
 // Lock if the unit is already playing a sound.
-if ((_unit getvariable [QGVAR(playingInjuredSound),false])) exitwith {};
-_unit setvariable [QGVAR(playingInjuredSound),true];
+if ((_unit getVariable [QGVAR(playingInjuredSound),false])) exitWith {};
+_unit setVariable [QGVAR(playingInjuredSound),true];
 
 // Play the sound if there is any damage present.
-if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
+if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitWith {
     // Classnames of the available sounds.
-    _availableSounds_A = [
+    private _availableSounds_A = [
         "WoundedGuyA_01",
         "WoundedGuyA_02",
         "WoundedGuyA_03",
@@ -37,7 +39,7 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
         "WoundedGuyA_07",
         "WoundedGuyA_08"
     ];
-    _availableSounds_B = [
+    private _availableSounds_B = [
         "WoundedGuyB_01",
         "WoundedGuyB_02",
         "WoundedGuyB_03",
@@ -47,37 +49,36 @@ if (_pain > 0 && {[_unit] call EFUNC(common,isAwake)}) exitwith {
         "WoundedGuyB_07",
         "WoundedGuyB_08"
     ];
-    _availableSounds_C = [
+    private _availableSounds_C = [
         "WoundedGuyC_01",
         "WoundedGuyC_02",
         "WoundedGuyC_03",
         "WoundedGuyC_04",
         "WoundedGuyC_05"
     ];
-    _sound = "";
+    private _sound = "";
 
     // Select the to be played sound based upon damage amount.
     if (_pain > 0.5) then {
         if (random(1) > 0.5) then {
-            _sound = _availableSounds_A select (round(random((count _availableSounds_A) - 1)));
+            _sound = selectRandom _availableSounds_A;
         } else {
-            _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+            _sound = selectRandom _availableSounds_B;
         };
     } else {
-        _sound = _availableSounds_B select (round(random((count _availableSounds_B) - 1)));
+        _sound = selectRandom _availableSounds_B;
     };
     // Play the sound
     playSound3D [(getArray(configFile >> "CfgSounds" >> _sound >> "sound") select 0) + ".wss", objNull, false, getPos _unit, 15, 1, 25]; // +2db, 15 meters.
 
     // Figure out what the delay will be before it is possible to play a sound again.
-    private "_delay";
-    _delay = (30 - (random(25) * _pain)) max (3.5 + random(2));
+    private _delay = (30 - (random(25) * _pain)) max (3.5 + random(2));
 
     // Clean up the lock
     [{
-        (_this select 0) setvariable [QGVAR(playingInjuredSound),nil];
-    }, [_unit], _delay, _delay] call EFUNC(common,waitAndExecute);
+        (_this select 0) setVariable [QGVAR(playingInjuredSound), nil];
+    }, [_unit], _delay, _delay] call CBA_fnc_waitAndExecute;
 };
 
 // Clean up in case there has not been played any sounds.
-_unit setvariable [QGVAR(playingInjuredSound),nil];
+_unit setVariable [QGVAR(playingInjuredSound), nil];

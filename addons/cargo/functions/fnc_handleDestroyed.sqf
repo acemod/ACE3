@@ -1,11 +1,11 @@
 /*
  * Author: Glowbal
- * Handle object being destroyed.
+ * Handle object being destroyed. Only runs on server.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -16,16 +16,17 @@
 #include "script_component.hpp"
 
 params ["_vehicle"];
+TRACE_1("params",_vehicle);
 
-private["_loaded"];
-
-_loaded = _vehicle getVariable [QGVAR(loaded), []];
-if (count _loaded == 0) exitWith {};
+private _loaded = _vehicle getVariable [QGVAR(loaded), []];
+if (_loaded isEqualTo []) exitWith {};
 
 {
-    // TODO deleteVehicle or just delete vehicle? Do we want to be able to recover destroyed equipment?
-    deleteVehicle _x;
-    //_x setDamage 1;
+    // TODO Do we want to be able to recover destroyed equipment?
+    if (_x isEqualType objNull) then {
+        deleteVehicle _x;
+    };
+    nil
 } count _loaded;
 
 [_vehicle] call FUNC(validateCargoSpace);

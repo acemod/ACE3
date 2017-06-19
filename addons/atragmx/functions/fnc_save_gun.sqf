@@ -3,13 +3,13 @@
  * Saves the currently select gun profile into the profileNamespace
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_save_gun
+ * call ace_atragmx_fnc_save_gun
  *
  * Public: No
  */
@@ -25,4 +25,4 @@ lbClear 6000;
     lbAdd [6000, _x select 0];
 } forEach GVAR(gunList);
 
-profileNamespace setVariable ["ACE_ATragMX_gunList", GVAR(gunList)];
+call FUNC(store_gun_list);

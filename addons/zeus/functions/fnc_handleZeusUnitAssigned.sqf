@@ -12,7 +12,10 @@
  * 1: The zeus player <UNIT>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, bob] call ace_zeus_fnc_handleZeusUnitAssigned
  *
  * Public: No
  */

@@ -7,37 +7,35 @@
  * 1: The patient <OBJECT>
  * 2: SelectionName <STRING>
  * 3: Treatment classname <STRING>
- *
+ * 4: Item <STRING>
+ * 5: specific Spot <NUMBER> (default: -1)
  *
  * Return Value:
  * Succesful treatment started <BOOL>
+ *
+ * Example:
+ * [medic, patient, "Selectionname", "bandage", "bandage", -1] call ace_medical_fnc_treatmentAdvanced_bandage
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items", "_specificSpot"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_items = _this select 4;
+params ["_caller", "_target", "_selectionName", "_className", "_items", "", ["_specificSpot", -1]];
 
-_specificSpot = if (count _this > 6) then {_this select 6} else {-1};
+[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 
-if !([_target] call FUNC(hasMedicalEnabled)) exitwith {
-    _this call FUNC(treatmentBasic_bandage);
+if (local _target) then {
+    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot]] call CBA_fnc_localEvent;
+} else {
+    [QGVAR(treatmentAdvanced_bandageLocal), [_target, _className, _selectionName, _specificSpot], _target] call CBA_fnc_targetEvent;
 };
 
-[[_target, _className, _selectionName, _specificSpot], QUOTE(DFUNC(treatmentAdvanced_bandageLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
 /*    {
     if (_x != "") then {
         [_target, _x] call FUNC(addToTriageCard);
     };
-}foreach _items;*/
-
-[_target, "activity", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-[_target, "activity_view", LSTRING(Activity_bandagedPatient), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+}forEach _items;*/
 
 true;

@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+["ace_settingsInitialized", {
+    // Hold on a little bit longer to ensure anims will work
+    [{
+        GVAR(captivityEnabled) = true;
+    }, [], 0.05] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addEventHandler;
 
 //Handles when someone starts escorting and then disconnects, leaving the captive attached
 //This is normaly handled by the PFEH in doEscortCaptive, but that won't be running if they DC
@@ -7,8 +13,7 @@
 if (isServer) then {
     addMissionEventHandler ["HandleDisconnect", {
         params ["_disconnectedPlayer"];
-        private "_escortedUnit";
-        _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
+        private _escortedUnit = _disconnectedPlayer getVariable [QGVAR(escortedUnit), objNull];
         if ((!isNull _escortedUnit) && {(attachedTo _escortedUnit) == _disconnectedPlayer}) then {
             detach _escortedUnit;
         };
@@ -18,17 +23,15 @@ if (isServer) then {
     }];
 };
 
-["playerVehicleChanged", {_this call FUNC(handleVehicleChanged)}] call EFUNC(common,addEventHandler);
-["zeusDisplayChanged",   {_this call FUNC(handleZeusDisplayChanged)}] call EFUNC(common,addEventHandler);
-["playerChanged", {_this call FUNC(handlePlayerChanged)}] call EFUNC(common,addEventhandler);
-["MoveInCaptive", {_this call FUNC(vehicleCaptiveMoveIn)}] call EFUNC(common,addEventHandler);
-["MoveOutCaptive", {_this call FUNC(vehicleCaptiveMoveOut)}] call EFUNC(common,addEventHandler);
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
+[QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
-["SetHandcuffed", {_this call FUNC(setHandcuffed)}] call EFUNC(common,addEventHandler);
-["SetSurrendered", {_this call FUNC(setSurrendered)}] call EFUNC(common,addEventHandler);
+[QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
+[QGVAR(setSurrendered), FUNC(setSurrendered)] call CBA_fnc_addEventHandler;
 
-//Medical Integration Events???
-["medical_onUnconscious", {_this call ACE_Captives_fnc_handleOnUnconscious}] call EFUNC(common,addEventHandler);
+//Medical Integration Events
+["ace_unconscious", FUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

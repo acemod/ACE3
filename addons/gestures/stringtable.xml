@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Gestures">
+        <Key ID="STR_ACE_Gestures_Name">
+            <English>ACE Gestures</English>
+            <German>ACE Gesten</German>
+            <Polish>ACE Gesty</Polish>
+            <Czech>ACE Posunky</Czech>
+            <French>ACE Gestes</French>
+            <Hungarian>ACE Kézjelek</Hungarian>
+            <Italian>Gesti ACE</Italian>
+            <Portuguese>ACE Gestos</Portuguese>
+            <Russian>ACE Жесты</Russian>
+            <Spanish>ACE Gestos</Spanish>
+            <Japanese>ACE ジェスチャー</Japanese>
+            <Korean>ACE 수신호</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Gestures">
+            <English>Gestures</English>
+            <German>Gesten</German>
+            <Spanish>Gestos</Spanish>
+            <Polish>Gesty</Polish>
+            <Czech>Posunky</Czech>
+            <French>Gestes</French>
+            <Russian>Жесты</Russian>
+            <Hungarian>Kézjelek</Hungarian>
+            <Portuguese>Gestos</Portuguese>
+            <Italian>Gesti</Italian>
+            <Japanese>ジェスチャー</Japanese>
+            <Korean>수신호</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Advance">
+            <English>Advance</English>
+            <German>Vordringen</German>
+            <Spanish>Avanzar</Spanish>
+            <Polish>Naprzód</Polish>
+            <Czech>Postoupit</Czech>
+            <French>Avancer</French>
+            <Russian>Продвигаться</Russian>
+            <Hungarian>Előre</Hungarian>
+            <Portuguese>Avançar</Portuguese>
+            <Italian>Avanzare</Italian>
+            <Japanese>警戒</Japanese>
+            <Korean>전진</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Go">
+            <English>Go</English>
+            <German>Los</German>
+            <Spanish>Adelante</Spanish>
+            <Polish>Szybko</Polish>
+            <Czech>Jít</Czech>
+            <French>Aller</French>
+            <Russian>Идти</Russian>
+            <Hungarian>Mozgás</Hungarian>
+            <Portuguese>Mover-se</Portuguese>
+            <Italian>Muoversi</Italian>
+            <Japanese>進め</Japanese>
+            <Korean>이동</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Follow">
+            <English>Follow</English>
+            <German>Folgen</German>
+            <Spanish>Seguirme</Spanish>
+            <Polish>Za mną</Polish>
+            <Czech>Následovat</Czech>
+            <French>Suivre</French>
+            <Russian>Следовать</Russian>
+            <Hungarian>Utánam</Hungarian>
+            <Portuguese>Seguir</Portuguese>
+            <Italian>Seguire</Italian>
+            <Japanese>ついて来い</Japanese>
+            <Korean>따라올것</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Up">
+            <English>Up</English>
+            <German>Aufstehen</German>
+            <Spanish>Arriba</Spanish>
+            <Polish>Do góry</Polish>
+            <Czech>Vztyk</Czech>
+            <French>Debout</French>
+            <Russian>Вверх</Russian>
+            <Hungarian>Fel</Hungarian>
+            <Portuguese>Acima</Portuguese>
+            <Italian>Alzarsi</Italian>
+            <Japanese>立ち上がれ</Japanese>
+            <Korean>위</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_CeaseFire">
+            <English>Cease Fire</English>
+            <German>Feuer einstellen</German>
+            <Spanish>Alto el fuego</Spanish>
+            <Polish>Wstrzymać ogień</Polish>
+            <Czech>Zastavit palbu</Czech>
+            <French>Cesser le feu</French>
+            <Russian>Прекратить огонь</Russian>
+            <Hungarian>Tüzet szüntess</Hungarian>
+            <Portuguese>Cessar Fogo</Portuguese>
+            <Italian>Cessare il Fuoco</Italian>
+            <Japanese>撃つな</Japanese>
+            <Korean>사격 중지</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Stop">
+            <English>Stop</English>
+            <French>Stop</French>
+            <German>Halt</German>
+            <Polish>Stop</Polish>
+            <Russian>Стоп</Russian>
+            <Portuguese>Parar</Portuguese>
+            <Czech>Stop</Czech>
+            <Italian>Stop</Italian>
+            <Spanish>Detenerse</Spanish>
+            <Japanese>止まれ</Japanese>
+            <Korean>멈춰</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Freeze">
+            <English>Freeze</English>
+            <German>Keine Bewegung</German>
+            <Spanish>Alto</Spanish>
+            <Polish>Stać</Polish>
+            <Czech>Stát</Czech>
+            <French>Halte</French>
+            <Russian>Замереть</Russian>
+            <Hungarian>Állj</Hungarian>
+            <Portuguese>Alto</Portuguese>
+            <Italian>Fermi</Italian>
+            <Japanese>動くな</Japanese>
+            <Korean>정지</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Cover">
+            <English>Cover</English>
+            <German>Deckung</German>
+            <Spanish>Cubrirse</Spanish>
+            <Polish>Do osłony</Polish>
+            <Czech>Krýt se</Czech>
+            <French>À couvert</French>
+            <Russian>Укрыться</Russian>
+            <Hungarian>Fedezékbe</Hungarian>
+            <Portuguese>Proteger-se</Portuguese>
+            <Italian>Copertura</Italian>
+            <Japanese>隠れろ</Japanese>
+            <Korean>엄폐</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Regroup">
+            <English>Rally up</English>
+            <French>Regroupement</French>
+            <German>Sammeln</German>
+            <Polish>Zbiórka</Polish>
+            <Russian>Собраться</Russian>
+            <Portuguese>Reagrupar</Portuguese>
+            <Czech>Přeskupit</Czech>
+            <Italian>Raggruppare</Italian>
+            <Spanish>Reunirse</Spanish>
+            <Japanese>集合</Japanese>
+            <Korean>집결</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Forward">
+            <English>Move forward</English>
+            <French>En avant</French>
+            <German>Vorwärts Bewegen</German>
+            <Polish>Naprzód</Polish>
+            <Russian>Вперед</Russian>
+            <Portuguese>Mover em frente</Portuguese>
+            <Czech>Kupředu</Czech>
+            <Italian>Muovere avanti</Italian>
+            <Spanish>Avanzar</Spanish>
+            <Japanese>前に進め</Japanese>
+            <Korean>앞으로 이동</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Engage">
+            <English>Engage</English>
+            <German>Angriff</German>
+            <French>Engager</French>
+            <Polish>Atak</Polish>
+            <Russian>Открыть огонь</Russian>
+            <Portuguese>Engajar</Portuguese>
+            <Czech>Útok</Czech>
+            <Italian>Ingaggiare</Italian>
+            <Spanish>Atacar</Spanish>
+            <Japanese>交戦しろ</Japanese>
+            <Korean>교전할것</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Point">
+            <English>Point</English>
+            <French>Pointer</French>
+            <German>Zeigen</German>
+            <Polish>Wskaż</Polish>
+            <Russian>Показать направление</Russian>
+            <Portuguese>Ponta</Portuguese>
+            <Czech>Ukázat</Czech>
+            <Italian>Puntare</Italian>
+            <Spanish>Señalar</Spanish>
+            <Japanese>指示</Japanese>
+            <Korean>가리키기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Hold">
+            <English>Hold</English>
+            <French>Tenir</French>
+            <German>Anhalten</German>
+            <Polish>Wstrzymać</Polish>
+            <Russian>Ждать</Russian>
+            <Portuguese>Esperar</Portuguese>
+            <Czech>Čekej</Czech>
+            <Italian>Mantenere</Italian>
+            <Spanish>Esperar</Spanish>
+            <Japanese>そこにいろ</Japanese>
+            <Korean>기다려</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_Warning">
+            <English>Warning</English>
+            <French>Attention</French>
+            <German>Achtung</German>
+            <Polish>Uwaga</Polish>
+            <Russian>Внимание</Russian>
+            <Portuguese>Aviso</Portuguese>
+            <Czech>Pozor</Czech>
+            <Italian>Attenzione</Italian>
+            <Spanish>Atención</Spanish>
+            <Japanese>注意</Japanese>
+            <Korean>주의</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
+            <English>Show Gestures On Interaction Menu</English>
+            <German>Zeige Gesten im Interaktionsmenü</German>
+            <Czech>Zobrazit posunky v interakčním menu</Czech>
+            <Polish>Pokaż gesty w menu interakcji</Polish>
+            <Italian>Mostra Gesti su Menù Interazione</Italian>
+            <Spanish>Mostrar gestos en el menú de interacción</Spanish>
+            <French>Afficher les gestes dans le menu d'interaction.</French>
+            <Portuguese>Mostrar gestos no menu de interação</Portuguese>
+            <Russian>Показать жесты в меню взаимодействия</Russian>
+            <Japanese>インタラクション メニュー上でジェスチャーを表示する</Japanese>
+            <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
+            <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
+            <German>Zeige Gesten im Selbst-Interkationsmenü, lege sie auf Schnelltasten, oder deaktiviere sie vollständig.</German>
+            <Czech>Zobrazit posunky pro vlastní interakční menu, nebo prostě použít klávesové zkratky, nebo to zakázat úplně</Czech>
+            <Polish>Pokaż listę gestów w menu własnej interakcji, użyj tylko skrótów na klawiaturze lub wyłącz całkowicie</Polish>
+            <Italian>Mostra Gesti nel Menù Interazione Personale, o usa solamente tasti di scelta rapida, o disabilita completamente</Italian>
+            <Spanish>Muestror los gestos en el menú de interacción propia, utilizar solo combinación de teclas o desactivarlos completamente</Spanish>
+            <French>Afficher les gestes dans le menu d'interaction personnel, ou seulement utiliser les touches, ou desactiver complètement.</French>
+            <Portuguese>Mostra gestos no menu de interação, ou utilize um dos atalhos de teclado ou desative completamente</Portuguese>
+            <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
+            <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
+            <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_JustKeybinds">
+            <English>Just Keybinds</English>
+            <German>Nur Schnelltasten</German>
+            <Czech>Pouze klávesové zkratky</Czech>
+            <Polish>Tylko skróty klaw.</Polish>
+            <Italian>Solo tasti di scelta rapida</Italian>
+            <Spanish>Solo mediante teclas</Spanish>
+            <French>Seulement les touches</French>
+            <Portuguese>Somente atalhos de teclado</Portuguese>
+            <Russian>Только горячие клавиши</Russian>
+            <Japanese>キー操作のみ</Japanese>
+            <Korean>오직 단축키만</Korean>
+        </Key>
+        <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
+            <English>Keybinds + Interaction Menu</English>
+            <German>Schnelltasten+ Interaktionsmenü</German>
+            <Czech>Klávesové zkratky + interakční menu</Czech>
+            <Polish>Skróty klaw. + menu interakcji</Polish>
+            <Italian>Tasti di scelta rapida + Menù Interazione</Italian>
+            <Spanish>Teclas y Menú de Interacción</Spanish>
+            <French>Touches + menu d'interaction</French>
+            <Portuguese>Atalhos + Menu de Interação</Portuguese>
+            <Russian>Клавиши + Меню взаимодействия</Russian>
+            <Japanese>キー操作とインタラクション メニュ</Japanese>
+            <Korean>단축키및 상호작용 메뉴</Korean>
+        </Key>
+    </Package>
+</Project>

@@ -1,5 +1,10 @@
 #define COMPONENT gforces
+#define COMPONENT_BEAUTIFIED G-Forces
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_GFORCES
     #define DEBUG_MODE_FULL

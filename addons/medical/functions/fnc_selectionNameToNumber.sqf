@@ -5,8 +5,11 @@
  * Arguments:
  * 0: The selection name of a unit <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Number representation. -1 if invalid. <NUMBER>
+ *
+ * Example:
+ * ["head"] call ace_medical_fnc_selectionNameToNumber
  *
  * Public: yes
  */

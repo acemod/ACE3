@@ -6,15 +6,20 @@
  * None
  *
  * Return Value:
- * Whether the camera is in external view or not. If the "showInThirdPerson" option is checked, this will always return false. <BOOL>
+ * Whether the camera is in external view or not. <BOOL>
  *
  * Example:
- * call ace_goggles_fnc_removeRainEffect;
+ * call ace_goggles_fnc_externalCamera;
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-if (GVAR(showInThirdPerson)) exitWith { false };
+// Handle the ThreeDen Editor Camera
+if (is3DEN) exitWith {true};
 
-(cameraView in ["EXTERNAL", "GROUP"] || {call EFUNC(common,isFeatureCameraActive)})
+if (GVAR(showInThirdPerson)) then {
+    cameraView in ["GROUP"] || EFUNC(common,isFeatureCameraActive) 
+} else {
+    cameraView in ["EXTERNAL", "GROUP"] || EFUNC(common,isFeatureCameraActive) 
+};

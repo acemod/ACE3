@@ -19,7 +19,7 @@
 
 params ["_text"];
 
-private["_ctrl"];
+private ["_ctrl"];
 
 disableSerialization;
 

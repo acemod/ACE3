@@ -7,14 +7,15 @@
  * 1: vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
- *
- * Return value:
  * None
+ *
+ * Example:
+ * [wire, car] call ace_concertina_wire_fnc_vehicleDamage
+ *
+ * Public: No
  */
 #include "script_component.hpp"
-
-PARAMS_2(_wire,_vehicle);
+params ["_wire", "_vehicle"];
 
 private ["_type", "_mode", "_anim", "_parts", "_selectionPart", "_selection", "_pos_w", "_dir_w"];
 
@@ -43,23 +44,23 @@ _dir_w = getDir _wire;
 
 if (_mode == 0) then {
     private ["_x", "_y", "_found", "_wireCheckPosAr", "_no"];
-    _x = _pos_w select 0;
-    _y = _pos_w select 1;
+    _pos_w params ["_x","_y"];
+
     // Check if two Single coils are placed next to each other (i.e playes have built a big wire obstacle)
     _wireCheckPosAr = [
-    [_x + (sin (_dir_w+90) * 1.5),_y + (cos (_dir_w+90) * 1.5)],
-    [(_x-(sin _dir_w)) + (sin (_dir_w+90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w+90) * 1.5)],
-    [_x + (sin (_dir_w-90) * 1.5),_y + (cos (_dir_w-90) * 1.5)],
-    [(_x-(sin _dir_w)) + (sin (_dir_w-90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w-90) * 1.5)]
+    [_x + (sin (_dir_w + 90) * 1.5),_y + (cos (_dir_w + 90) * 1.5)],
+    [(_x-(sin _dir_w)) + (sin (_dir_w + 90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w + 90) * 1.5)],
+    [_x + (sin (_dir_w - 90) * 1.5),_y + (cos (_dir_w - 90) * 1.5)],
+    [(_x-(sin _dir_w)) + (sin (_dir_w - 90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w - 90) * 1.5)]
     ];
     {
         _found = false;
-        _no = nearestObjects [_x, [typeOf _wire], 3]; 	//diag_log _no; diag_log ".....";
-        _no = _no - [_wire];							//diag_log _no;
+        _no = nearestObjects [_x, [typeOf _wire], 3];     //diag_log _no; diag_log ".....";
+        _no = _no - [_wire];                            //diag_log _no;
         if (count _no > 0) exitWith {
-            _found = true;								//diag_log "found";
+            _found = true;                                //diag_log "found";
         };
-    } foreach _wireCheckPosAr;
+    } forEach _wireCheckPosAr;
     // Double coil found!
     if (_found) then {
         _mode = 1;
@@ -115,8 +116,8 @@ if (_mode == 1) then {
         _vPos = getPosASL _vehicle;
         _vDir = getDir _vehicle;
         _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]);
-        // TODO: Needs to be placed in safe distance to wire, so we do not constantly re-spawn new wires
-    }, [_vehicle, _wire], 0.1] call EFUNC(common,waitAndExecute);
+        // TODO: Needs to be placed in safe distance to wire, so we do not constantly re - spawn new wires
+    }, [_vehicle, _wire], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 //TODO: Create broken geoless wire (two version)

@@ -1,15 +1,26 @@
 #include "script_component.hpp"
 
+if (!hasInterface) exitWith {};
+
 GVAR(ladder) = objNull;
 GVAR(cancelTime) = 0;
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
-// Cancel tactical ladder deployment if the interact menu is opened
-["interactMenuOpened", {
-    if ((ACE_time > GVAR(cancelTime)) && !isNull GVAR(ladder)) then {
+/*["ace_interactMenuOpened", {
+    if ((CBA_missionTime > GVAR(cancelTime)) && !isNull GVAR(ladder)) then {
         GVAR(ladder) call FUNC(cancelTLdeploy);
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;*/
 
-[{(_this select 0) call FUNC(handleScrollWheel);}] call EFUNC(Common,addScrollWheelEventHandler);
+// Cancel adjustment if interact menu opens
+["ace_interactMenuOpened", {[ACE_player] call FUNC(handleInteractMenuOpened)}] call CBA_fnc_addEventHandler;
+
+// Cancel adjusting on player change.
+["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
+
+// handle falling unconscious
+["ace_unconscious", {_this call FUNC(handleUnconscious)}] call CBA_fnc_addEventHandler;
+
+// @todo captivity?

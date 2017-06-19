@@ -1,0 +1,467 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Rearm">
+        <Key ID="STR_ACE_Rearm_RearmSettings_Module_DisplayName">
+            <English>Rearm Settings</English>
+            <German>Aufmunitioniereinstellungen</German>
+            <Polish>Ustawienia przezbrajania</Polish>
+            <Russian>Настройки перевооружения</Russian>
+            <Portuguese>Ajustes de rearme</Portuguese>
+            <Czech>Nastavení přezbrojení</Czech>
+            <Italian>Impostazioni Riarmo</Italian>
+            <Spanish>Parámetros de rearme</Spanish>
+            <French>Options de réarmement</French>
+            <Japanese>再武装設定</Japanese>
+            <Korean>재보급 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_Module_Description">
+            <English>This module allows you to tweak rearm system settings.</English>
+            <German>Mittels diesem Modul kann das Aufmunitioniersystem angepasst werden.</German>
+            <Polish>Ten moduł pozwala dostosować ustawienia przezbrajania.</Polish>
+            <Russian>Этот модуль позволяет изменить настройки системы перевооружения.</Russian>
+            <Portuguese>Este módulo permite que você ajuste o sistema de rearme.</Portuguese>
+            <Czech>Tento modul umožňuje upravovat systém přezbrojení.</Czech>
+            <Italian>Questo modulo ti consente di cambiare le impostazioni del sistema Riarmo.</Italian>
+            <Spanish>Este módulo permite cambiar los parámetros de rearme.</Spanish>
+            <French>Ce module autorise l'amélioration du système de réarmement.</French>
+            <Japanese>再武装システムの設定を微調整します。</Japanese>
+            <Korean>이 모듈은 재보급시의 설정을 바꿀수 있게해줍니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_DisplayName">
+            <English>Rearm Amount</English>
+            <German>Aufmunitioniermenge</German>
+            <Polish>Szybkość przezbrajania</Polish>
+            <Russian>Количество вооружения</Russian>
+            <Portuguese>Quantidade de rearme</Portuguese>
+            <Czech>Rychlost přezbrojení</Czech>
+            <Italian>Ammontare Riarmo</Italian>
+            <Spanish>Velocidad de rearme</Spanish>
+            <French>Quantité à réarmer</French>
+            <Japanese>再武装できる量</Japanese>
+            <Korean>재보급 양</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_level_Description">
+            <English>How fast should a vehicle be rearmed?</English>
+            <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
+            <Polish>Jak szybko pojazd zostanie przezbrojony?</Polish>
+            <Russian>Как быстро техника должна перевооружаться?</Russian>
+            <Portuguese>Quão rápido o veículo deve ser rearmado?</Portuguese>
+            <Czech>Jak rychle bude vozidlo přezbrojeno?</Czech>
+            <Italian>Quanto velocemente dovrebbe essere riarmato un veicolo?</Italian>
+            <Spanish>Cuán rápido es el proceso de rearme?</Spanish>
+            <French>A quelle vitesse devrait être réarmé un véhicule ?</French>
+            <Japanese>車両を再武装する速さを設定しますか？</Japanese>
+            <Korean>차량을 얼마나 빨리 재보급 시킵니까?</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_vehicle">
+            <English>Entire Vehicle</English>
+            <German>Gesamtes Fahrzeug</German>
+            <Polish>Cały pojazd</Polish>
+            <Russian>Полностью техника</Russian>
+            <Portuguese>Todo o veículo</Portuguese>
+            <Czech>Celé vozidlo</Czech>
+            <Italian>Tutto il Veicolo</Italian>
+            <Spanish>Vehículo completo</Spanish>
+            <French>Véhicule entier</French>
+            <Japanese>対象の車両</Japanese>
+            <Korean>모든 차량</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_magazine">
+            <English>Entire Magazine</English>
+            <German>Gesamtes Magazin</German>
+            <Polish>Cały magazynek</Polish>
+            <Russian>Полный магазин</Russian>
+            <Portuguese>Todo o carregador</Portuguese>
+            <Czech>Celý zásobník</Czech>
+            <Italian>Tutto il Caricatore</Italian>
+            <Spanish>Cargador completo</Spanish>
+            <French>Chargeur entier</French>
+            <Japanese>対象の弾薬</Japanese>
+            <Korean>모든 탄창</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_caliber">
+            <English>Amount based on caliber</English>
+            <German>Kaliberbasierte Anzahl</German>
+            <Polish>Ilość zależna od kalibru</Polish>
+            <Russian>Количество зависит от калибра</Russian>
+            <Portuguese>Quantidade baseada no calibre</Portuguese>
+            <Czech>Rychlost závisí na ráži</Czech>
+            <Italian>Ammontare basato sul calibro</Italian>
+            <Spanish>Cantidad basada en el calibre</Spanish>
+            <French>Quantité basée sur le calibre</French>
+            <Japanese>口径に基づいた量</Japanese>
+            <Korean>구경에 따라 수량 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_supply_DisplayName">
+            <English>Ammunition supply</English>
+            <German>Munitionsvorat</German>
+            <Italian>Scorta munizioni</Italian>
+            <Japanese>弾薬の供給</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_supply_Description">
+            <English>How much ammunition does an ammo truck carry?</English>
+            <German>Wie viel Munition transportiert ein Munitionslaster?</German>
+            <Italian>Quante munizioni può trasportare un camion?</Italian>
+            <Japanese>弾薬トラックがどの位の弾薬を供給できるようにしますか？</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_unlimited">
+            <English>Unlimited ammo supply</English>
+            <German>Unbegrenzter Munitionsvorat</German>
+            <Italian>Scorta munizioni infinita</Italian>
+            <Japanese>無制限供給</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_limited">
+            <English>Limited ammo supply based on caliber</English>
+            <German>Begrenzter, kaliberabhängiger Munitionsvorat</German>
+            <Italian>Scorta munizioni limitata in base al calibro</Italian>
+            <Japanese>口径に基づいた限定的供給</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmSettings_magazineSupply">
+            <English>Only specific Magazines</English>
+            <German>Nur bestimmte Magazine</German>
+            <Italian>Solo specifici caricatori</Italian>
+            <Japanese>特定の弾薬のみ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_ReadSupplyCounter">
+            <English>Check remaining ammunition</English>
+            <German>Verbleibende Munition prüfen</German>
+            <Italian>Controlla munizioni rimanenti</Italian>
+            <Japanese>残弾薬を確認</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_ReadSupplyCounterAction">
+            <English>Checking remaining ammunition...</English>
+            <German>Überprüfe verbleibende Munition...</German>
+            <Italian>Controllando le munizioni rimanenti</Italian>
+            <Japanese>残弾薬を確認しています・・・</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RemainingSupplyPoints">
+            <English>There is ammunition worth %1 points left.</English>
+            <German>Es ist noch Munition für %1 Punkte übrig.</German>
+            <Italian>E' presente una penalità delle munizioni %1 punti rimanenti.</Italian>
+            <Japanese>この弾薬は%1残っている</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RemainingAmmo">
+            <English>The following ammunition is left:%1</English>
+            <German>Folgende Munition ist übrig:%1</German>
+            <Italian>Mancano le seguenti:%1</Italian>
+            <Japanese>この弾薬の残りは:%1</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_Empty">
+            <English>There is no ammunition left.</English>
+            <German>Es ist keine Munition übrig.</German>
+            <Italian>Non ci sono munizioni rimanenti.</Italian>
+            <Japanese>弾薬は残っていません。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Rearm">
+            <English>Rearm</English>
+            <German>Aufmunitionieren</German>
+            <Polish>Przezbrój</Polish>
+            <Russian>Перевооружить</Russian>
+            <Portuguese>Rearmar</Portuguese>
+            <Czech>Přezbrojit</Czech>
+            <Italian>Riarma</Italian>
+            <Spanish>Rearmar</Spanish>
+            <French>Réarmer</French>
+            <Japanese>再武装</Japanese>
+            <Korean>재보급</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_RearmAction">
+            <English>Rearming %1 with %2...</English>
+            <German>Munitioniere %1 auf mit %2...</German>
+            <Polish>Przezbrajanie %1 przy pomocy %2...</Polish>
+            <Russian>Перевооружается %1 снарядами %2...</Russian>
+            <Portuguese>Rearmando %1 com %2...</Portuguese>
+            <Czech>Přezbrojuji %1 za pomoci %2...</Czech>
+            <Italian>Riarmando %1 con %2...</Italian>
+            <Spanish>Rearmando %1 con %2...</Spanish>
+            <French>Réarmement de %1 avec %2...</French>
+            <Japanese>%1を%2により再武装する。</Japanese>
+            <Korean>%2을 %1에 재보급중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_BasicRearmAction">
+            <English>Rearming %1...</English>
+            <German>Munitioniere %1 auf...</German>
+            <Polish>Przezbrajanie %1...</Polish>
+            <Russian>Перевооружается %1...</Russian>
+            <Portuguese>Rearmando %1...</Portuguese>
+            <Czech>Přezbrojuji %1...</Czech>
+            <Italian>Riarmando %1...</Italian>
+            <Spanish>Rearmando %1...</Spanish>
+            <French>Réarmement de %1...</French>
+            <Japanese>%1を再武装中・・・</Japanese>
+            <Korean>%1 재보급중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_TakeAction">
+            <English>Taking %1 for %2...</English>
+            <German>Nehme %1 für %2...</German>
+            <Polish>Pobieranie %1 dla %2...</Polish>
+            <Russian>Забираем %1 для %2...</Russian>
+            <Portuguese>Pegando %1 para %2...</Portuguese>
+            <Czech>Beru %1 pro %2...</Czech>
+            <Italian>Sto prendendo %1 per %2...</Italian>
+            <Spanish>Tomando %1 para %2...</Spanish>
+            <French>Prend %1 pour %2...</French>
+            <Japanese>%1を%2のために取得しています・・・</Japanese>
+            <Korean>%2를 위해 %1 가져오는중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_TakeAmmo">
+            <English>Take ammo</English>
+            <German>Munition nehmen</German>
+            <Polish>Pobierz amunicję</Polish>
+            <Russian>Взять боекомплект</Russian>
+            <Portuguese>Tomar munição</Portuguese>
+            <Czech>Vít munici</Czech>
+            <Italian>Prendi munizioni</Italian>
+            <Spanish>Tomar munición</Spanish>
+            <French>Prendre la munition</French>
+            <Japanese>弾薬をとる</Japanese>
+            <Korean>탄약 가지기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_PickUpAmmo">
+            <English>Pick up ammo</English>
+            <German>Munition aufnehmen</German>
+            <Polish>Podnieś amunicję</Polish>
+            <Russian>Поднять боекомплект</Russian>
+            <Portuguese>Pegar munição</Portuguese>
+            <Czech>Sebrat munici</Czech>
+            <Italian>Raccogli munizioni</Italian>
+            <Spanish>Levantar munición</Spanish>
+            <French>Ramasser la munition</French>
+            <Japanese>弾薬を拾う</Japanese>
+            <Korean>탄약 줍기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmo">
+            <English>Store ammo</English>
+            <German>Munition verstauen</German>
+            <Polish>Przechowaj amunicję</Polish>
+            <Russian>Сохранить боекомплект</Russian>
+            <Portuguese>Guardar munição</Portuguese>
+            <Czech>Uskladnit munici</Czech>
+            <Italian>Riponi munizioni</Italian>
+            <Spanish>Guardar munición</Spanish>
+            <French>Stocker la munition</French>
+            <Japanese>弾薬を戻す</Japanese>
+            <Korean>탄약 보관하기</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_StoreAmmoAction">
+            <English>Storing %1 in %2...</English>
+            <German>Verstaue %1 in %2...</German>
+            <Polish>Przechowywanie %1 w %2...</Polish>
+            <Russian>Сохраняется %1 в %2...</Russian>
+            <Portuguese>Guardando %1 em %2...</Portuguese>
+            <Czech>Ukládám %1 v %2...</Czech>
+            <Italian>Sto riponendo %1 in %2...</Italian>
+            <Spanish>Guardando %1 en %2...</Spanish>
+            <French>Stocke %1 dans %2...</French>
+            <Japanese>%1を%2へ戻しています・・・</Japanese>
+            <Korean>%2에 %1 보관중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_GrabAction">
+            <English>Picking up ammo...</English>
+            <German>Nehme Munition...</German>
+            <Polish>Podnoszenie amunicji...</Polish>
+            <Russian>Поднятие боекомплекта...</Russian>
+            <Portuguese>Pegando munição...</Portuguese>
+            <Italian>Sto raccogliendo le munizioni...</Italian>
+            <Spanish>Levantando munición...</Spanish>
+            <French>Ramassage des munitions...</French>
+            <Japanese>弾薬を拾っている・・・</Japanese>
+            <Korean>탄약 줍는중...</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Hint_RearmedTriple">
+            <English>Rearmed %1 rounds of %2 on %3</English>
+            <German>%3 wurde mit %1 Patronen %2 aufmunitioniert</German>
+            <Polish>Przezbrojono %1 pocisków %2 na %3</Polish>
+            <Russian>Перевооружено %1 снарядов %2 на %3</Russian>
+            <Portuguese>Rearmando %1 cartuchos de %2 em %3</Portuguese>
+            <Czech>Přezbrojeno % nábojů z %2 u %3</Czech>
+            <Italian>Riarmati %1 colpi di %2 su %3</Italian>
+            <Spanish>Rearmadas %1 rondas de %2 en %3</Spanish>
+            <French>%1 balles réarmées de %2 dans %3</French>
+            <Japanese>%1発の%2を%3から装填した</Japanese>
+            <Korean>%3에 2%의 %1 탄약 재보급</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_SmokeLauncherMag">
+            <English>Smoke Screen</English>
+            <Czech>Kouřová clona</Czech>
+            <French>Écran de fumée</French>
+            <German>Rauchwand</German>
+            <Italian>Cortina fumogena</Italian>
+            <Polish>Zasłona dymna</Polish>
+            <Portuguese>Cortina de fumaça</Portuguese>
+            <Russian>Дым. завеса</Russian>
+            <Spanish>Pantalla de humo</Spanish>
+            <Japanese>煙幕弾</Japanese>
+            <Korean>연막 차장</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_60Rnd_CMFlareMagazine">
+            <English>Flares</English>
+            <Czech>Světlice</Czech>
+            <French>Fusées</French>
+            <German>Leuchtkörper</German>
+            <Italian>Razzi luminosi</Italian>
+            <Polish>Flary</Polish>
+            <Portuguese>Sinalizadores</Portuguese>
+            <Russian>ЛТЦ</Russian>
+            <Spanish>Bengalas</Spanish>
+            <Japanese>フレア</Japanese>
+            <Korean>기만체</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_1000Rnd_Gatling_30mm_Plane_CAS_01_F">
+            <English>30mm HEI</English>
+            <German>30mm HEI</German>
+            <Polish>30mm HEI</Polish>
+            <Russian>30мм ОФЗ</Russian>
+            <Portuguese>30mm HEI</Portuguese>
+            <Czech>30mm HEI</Czech>
+            <Italian>30mm HEI</Italian>
+            <Spanish>30mm HEI</Spanish>
+            <French>30mm HEI</French>
+            <Japanese>30mm 焼夷りゅう弾</Japanese>
+            <Korean>30mm 고폭소이탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_500Rnd_Cannon_30mm_Plane_CAS_02_F">
+            <English>30mm HEI-T</English>
+            <German>30mm HEI-T</German>
+            <Polish>30mm HEI-T</Polish>
+            <Russian>30мм ОФЗТ</Russian>
+            <Portuguese>30mm HEI-T</Portuguese>
+            <Czech>30mm HEI-T</Czech>
+            <Italian>30mm HEI-T</Italian>
+            <Spanish>30mm HEI-T</Spanish>
+            <French>30mm HEI-T</French>
+            <Japanese>30mm 焼夷曳光りゅう弾</Japanese>
+            <Korean>30mm 고폭소이예광탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_04_F">
+            <English>AIM-9 Sidewinder</English>
+            <German>AIM-9 Sidewinder</German>
+            <Polish>AIM-9 Sidewinder</Polish>
+            <Russian>AIM-9 Sidewinder</Russian>
+            <Portuguese>AIM-9 Sidewinder</Portuguese>
+            <Czech>AIM-9 Sidewinder</Czech>
+            <Italian>AIM-9 Sidewinder</Italian>
+            <Spanish>AIM-9 Sidewinder</Spanish>
+            <French>AIM-9 Sidewinder</French>
+            <Japanese>AIM-9 サイドワインダー</Japanese>
+            <Korean>AIM-9 Sidewinder</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Missile_AA_03_F">
+            <English>Wympel R-73</English>
+            <German>Wympel R-73</German>
+            <Polish>Wympel R-73</Polish>
+            <Russian>Р-73 (Вымпел)</Russian>
+            <Portuguese>Wympel R-73</Portuguese>
+            <Czech>Wympel R-73</Czech>
+            <Italian>Wympel R-73</Italian>
+            <Spanish>Wympel R-73</Spanish>
+            <French>Wympel R-73</French>
+            <Japanese>ヴィンペル R-73</Japanese>
+            <Korean>Vympel R-73</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_6Rnd_Missile_AGM_02_F">
+            <English>AGM-65 Maverick</English>
+            <German>AGM-65 Maverick</German>
+            <Polish>AGM-65 Maverick</Polish>
+            <Russian>AGM-65 Maverick</Russian>
+            <Portuguese>AGM-65 Maverick</Portuguese>
+            <Czech>AGM-65 Maverick</Czech>
+            <Italian>AGM-65 Maverick</Italian>
+            <Spanish>AGM-65 Maverick</Spanish>
+            <French>AGM-65 Maverick</French>
+            <Japanese>AGM-65 マーベリック</Japanese>
+            <Korean>AGM-65 Maverick</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_4Rnd_Missile_AGM_01_F">
+            <English>Kh-25MTP</English>
+            <German>Kh-25MTP</German>
+            <Polish>Ch-25MTP</Polish>
+            <Russian>Х-25МТП</Russian>
+            <Portuguese>Ch-25MTP</Portuguese>
+            <Czech>Kh-25MTP</Czech>
+            <Italian>Kh-25MTP</Italian>
+            <Spanish>Kh-25MTP</Spanish>
+            <French>Kh-25MTP</French>
+            <Japanese>Kh-25MTP</Japanese>
+            <Korean>Kh-25MTP</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_HE_F">
+            <English>Hydra 70 HE</English>
+            <German>Hydra 70 HE</German>
+            <Polish>Hydra 70 HE</Polish>
+            <Russian>Hydra 70 HE</Russian>
+            <Portuguese>Hydra 70 HE</Portuguese>
+            <Czech>Hydra 70 HE</Czech>
+            <Italian>Hydra 70 HE</Italian>
+            <Spanish>Hydra 70 HE</Spanish>
+            <French>Hydra 70 HE</French>
+            <Japanese>ハイドラ 70 りゅう弾</Japanese>
+            <Korean>Hydra 70 고폭탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_HE_F">
+            <English>S-8 HE</English>
+            <German>S-8 HE</German>
+            <Polish>S-8 HE</Polish>
+            <Russian>С-8 ОФ</Russian>
+            <Portuguese>S-8 HE</Portuguese>
+            <Czech>S-8 HE</Czech>
+            <Italian>S-8 HE</Italian>
+            <Spanish>S-8 HE</Spanish>
+            <French>S-8 HE</French>
+            <Japanese>S-8 りゅう弾</Japanese>
+            <Korean>S-8 고폭탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_7Rnd_Rocket_04_AP_F">
+            <English>Hydra 70 AP</English>
+            <German>Hydra 70 AP</German>
+            <Polish>Hydra 70 AP</Polish>
+            <Russian>Hydra 70 AP</Russian>
+            <Portuguese>Hydra 70 AP</Portuguese>
+            <Czech>Hydra 70 AP</Czech>
+            <Italian>Hydra 70 AP</Italian>
+            <Spanish>Hydra 70 AP</Spanish>
+            <French>Hydra 70 AP</French>
+            <Japanese>ハイドラ 70 徹甲弾</Japanese>
+            <Korean>Hydra 70 철갑탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_20Rnd_Rocket_03_AP_F">
+            <English>S-8 AP</English>
+            <German>S-8 AP</German>
+            <Polish>S-8 AP</Polish>
+            <Russian>С-8КОМ</Russian>
+            <Portuguese>S-8 AP</Portuguese>
+            <Czech>S-8 AP</Czech>
+            <Italian>S-8 AP</Italian>
+            <Spanish>S-8 AP</Spanish>
+            <French>S-8 AP</French>
+            <Japanese>S-8 徹甲弾</Japanese>
+            <Korean>S-8 철갑탄</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_4Rnd_Bomb_04_F">
+            <English>GBU-12</English>
+            <German>GBU-12</German>
+            <Polish>GBU-12</Polish>
+            <Russian>GBU-12</Russian>
+            <Portuguese>GBU-12</Portuguese>
+            <Czech>GBU-12</Czech>
+            <Italian>GBU-12</Italian>
+            <Spanish>GBU-12</Spanish>
+            <French>GBU-12</French>
+            <Japanese>GBU-12</Japanese>
+            <Korean>GBU-12</Korean>
+        </Key>
+        <Key ID="STR_ACE_Rearm_Mag_2Rnd_Bomb_03_F">
+            <English>FAB-250M-54</English>
+            <German>FAB-250M-54</German>
+            <Polish>FAB-250M-54</Polish>
+            <Russian>ФАБ-250М-54</Russian>
+            <Portuguese>FAB-250M-54</Portuguese>
+            <Czech>FAB-250M-54</Czech>
+            <Italian>FAB-250M-54</Italian>
+            <Spanish>FAB-250M-54</Spanish>
+            <French>FAB-250M-54</French>
+            <Japanese>FAB-250M-54</Japanese>
+            <Korean>FAB-250M-54</Korean>
+        </Key>
+    </Package>
+</Project>

@@ -1,34 +1,30 @@
 /*
  * Author: jaynus
- *
  * Register an event handler for an ACE synced event
  *
- * Argument:
- * 0: Name (String)
- * 1: Handler (Code)  
- * 2: TTL (Number or Code) [Optional]
- * 
- * Return value:
- * Boolean of success
+ * Arguments:
+ * 0: Name <STRING>
+ * 1: Handler <CODE>
+ * 2: TTL (optional: 0) <NUMBER, CODE>
+ *
+ * Return Value:
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["myEvent", {_this call x}, 0] call ace_common_fnc_addSyncedEventHandler
+ *
+ * Public: Yes
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
-//IGNORE_PRIVATE_WARNING("_handleSyncedEvent");
 
-PARAMS_2(_name,_handler);
+params ["_name", "_handler", ["_ttl", 0]];
 
-private["_ttl", "_eventId", "_data"];
-if( (count _this) > 2) then {
-    _ttl = _this select 2;
-} else {
-    _ttl = 0;
-};
-
-if(HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    diag_log text format["[ACE] Error, duplicate synced event creation."];
+if ([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+    ERROR_1("Duplicate synced event [%1] creation.",_name);
     false
 };
 
-_eventId = [_name, FUNC(_handleSyncedEvent)] call FUNC(addEventHandler);
-_data = [_handler,[],_ttl,_eventId];
-HASH_SET(GVAR(syncedEvents),_name,_data);
+private _eventId = [_name, FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+private _data = [_handler, [], _ttl, _eventId];
+
+[GVAR(syncedEvents), _name, _data] call CBA_fnc_hashSet;

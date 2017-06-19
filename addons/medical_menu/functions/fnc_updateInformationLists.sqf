@@ -10,15 +10,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [DISPLAY, [messagecollection], [injurycollection]] call ACE_medical_menu_fnc_updateInformationLists
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private "_lbCtrl";
-
 params ["_display", "_genericMessages", "_allInjuryTexts"];
 
-_lbCtrl = _display displayCtrl 213;
+private _lbCtrl = _display displayCtrl 213;
 lbClear _lbCtrl;
 {
     _x params ["_add", "_color"];
@@ -26,13 +27,13 @@ lbClear _lbCtrl;
     _lbCtrl lbSetColor [_forEachIndex, _color];
 } forEach _genericMessages;
 
-_amountOfGeneric = count _genericMessages;
+private _amountOfGeneric = count _genericMessages;
 {
-    _x params ["_add", "_Color"];
+    _x params ["_add", "_color"];
     _lbCtrl lbAdd _add;
     _lbCtrl lbSetColor [_forEachIndex + _amountOfGeneric, _color];
 } forEach _allInjuryTexts;
 
-if !(_allInjuryTexts isEqualTo []) then {
+if (_allInjuryTexts isEqualTo []) then {
     _lbCtrl lbAdd localize ELSTRING(medical,NoInjuriesBodypart);
 };

@@ -3,11 +3,12 @@ class CfgVehicles {
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(windDeflection_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Wind_ca.paa);
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
         functionPriority = 1;
         isGlobal = 1;
+        isSingular = 1;
         isTriggerActivated = 0;
         author = ECSTRING(common,ACETeam);
         class Arguments {

@@ -28,7 +28,7 @@
     [vehicle ACE_player, [ACE_player] call EFUNC(common,getTurretIndex)] call FUNC(keyUp);
     false
 },
-[15, [false, false, false]], false] call cba_fnc_addKeybind;  //Tab Key
+[15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
 
 ["ACE3 Vehicles", QGVAR(adjustRangeUp), localize LSTRING(AdjustRangeUp),
 {
@@ -42,7 +42,7 @@
     true
 },
 {false},
-[201, [false, false, false]], false] call cba_fnc_addKeybind;  //PageUp Key
+[201, [false, false, false]], false] call CBA_fnc_addKeybind;  //PageUp Key
 
 ["ACE3 Vehicles", QGVAR(adjustRangDown), localize LSTRING(AdjustRangeDown),
 {
@@ -56,4 +56,4 @@
     true
 },
 {false},
-[209, [false, false, false]], false] call cba_fnc_addKeybind; //PageDown Key
+[209, [false, false, false]], false] call CBA_fnc_addKeybind; //PageDown Key

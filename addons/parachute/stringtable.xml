@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Parachute">
         <Key ID="STR_ACE_Parachute_showAltimeter">
@@ -12,18 +12,22 @@
             <Russian>Высотомер</Russian>
             <Italian>Altimetro</Italian>
             <Portuguese>Altímetro</Portuguese>
+            <Japanese>高度計</Japanese>
+            <Korean>고도계</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
             <French>Montre altimètre</French>
             <German>Höhenmesser</German>
-            <Czech>Hodinky s výškoměrem</Czech>
+            <Czech>Hodinky s Výškoměrem</Czech>
             <Polish>Zegarek z wysokościomierzem</Polish>
             <Spanish>Reloj altímetro</Spanish>
             <Hungarian>Magasságmérős karóra</Hungarian>
             <Russian>Часы с высотомером</Russian>
             <Italian>Controlla l'altimetro</Italian>
             <Portuguese>Relógio Altímetro</Portuguese>
+            <Japanese>時計型高度計</Japanese>
+            <Korean>고도계 시계</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
@@ -36,6 +40,8 @@
             <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
             <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
             <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
+            <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
+            <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -48,18 +54,36 @@
             <Russian>Неуправляемый парашют</Russian>
             <Italian>Paracadute non manovrabile</Italian>
             <Portuguese>Para-querdas não controlável</Portuguese>
+            <Japanese>非操作型パラシュート</Japanese>
+            <Korean>비-조종 낙하산</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
             <German>Fallschirm abschneiden</German>
+            <French>Couper le parachute</French>
             <Polish>Odetnij spadochron</Polish>
             <Hungarian>Ejtőernyő elvágása</Hungarian>
+            <Portuguese>Cortar para-quedas</Portuguese>
+            <Russian>Обрезать стропы</Russian>
+            <Czech>Odžíznout padák</Czech>
+            <Spanish>Cortar paracaídas</Spanish>
+            <Italian>Taglia Paracadute</Italian>
+            <Japanese>パラシュートを切断</Japanese>
+            <Korean>낙하산 자르기</Korean>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
             <German>Reserve Fallschirm</German>
+            <French>Parachute de secours</French>
             <Polish>Spadochron awaryjny</Polish>
             <Hungarian>Tartalék ejtőernyő</Hungarian>
+            <Portuguese>Para-quedas de reserva</Portuguese>
+            <Russian>Запасной парашют</Russian>
+            <Czech>Záložní padák</Czech>
+            <Spanish>Paracaídas de reserva</Spanish>
+            <Italian>Paracadute di Riserva</Italian>
+            <Japanese>予備パラシュート</Japanese>
+            <Korean>예비 낙하산</Korean>
         </Key>
     </Package>
 </Project>

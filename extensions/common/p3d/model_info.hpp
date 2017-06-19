@@ -70,5 +70,5 @@ namespace ace {
         };
         typedef std::shared_ptr<model_info> model_info_p;
 
-    };
-};
+    }
+}

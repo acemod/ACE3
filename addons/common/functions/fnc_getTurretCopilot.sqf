@@ -1,31 +1,22 @@
 /*
  * Author: commy2
- *
  * Get the turret index of a vehicles copilot.
  *
- * Argument:
- * 0: Vehicle (Object)
+ * Arguments:
+ * 0: Vehicle <OBJECT>
  *
- * Return value:
- * Turret index of the vehicles gunner. Empty array means no copilot position. (Array)
+ * Return Value:
+ * Vehicle Copilot Turret indecies <ARRAY>
+ *
+ * Example:
+ * [car] call ace_common_fnc_getTurretCopilot
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-private ["_turrets", "_turret", "_config"];
+params [["_vehicle", objNull, [objNull]]];
 
-PARAMS_1(_vehicle);
-
-_turrets = allTurrets [_vehicle, true];
-
-_turret = [];
-{
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-
-    _config = [_config, _x] call FUNC(getTurretConfigPath);
-
-    if (getNumber (_config >> "isCopilot") == 1 && {getNumber (_config >> "primaryGunner") != 1} && {getNumber (_config >> "primaryObserver") != 1}) exitWith {
-        _turret = _x;
-    };
-} forEach _turrets;
-
-_turret
+fullCrew [_vehicle, "turret", true] apply {_x select 3} select {
+    getNumber ([_vehicle, _x] call CBA_fnc_getTurret >> "isCopilot") == 1
+} param [0, []] // return

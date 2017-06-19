@@ -12,6 +12,8 @@
             <Hungarian>Drótvágó</Hungarian>
             <Italian>Trancia</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
+            <Japanese>ワイヤーカッター</Japanese>
+            <Korean>절단기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
             <English>Wirecutter</English>
@@ -22,8 +24,10 @@
             <Polish>Służą do cięcia drutu i płotów</Polish>
             <French>Pince coupante</French>
             <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
-            <Italian>Trancia da ferro</Italian>
+            <Italian>Tronchese</Italian>
             <Portuguese>Cortador de Arame</Portuguese>
+            <Japanese>ワイヤーカッター</Japanese>
+            <Korean>절단기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
@@ -31,23 +35,27 @@
             <Spanish>Cortar alambrado</Spanish>
             <Polish>Przetnij płot</Polish>
             <Czech>Přestřihnout plot</Czech>
-            <French>Cisailler Clôture</French>
+            <French>Cisailler l'obstacle</French>
             <Portuguese>Cortar Cerca</Portuguese>
             <Italian>Taglia</Italian>
             <Hungarian>Drótkerítés átvágása</Hungarian>
             <Russian>Разрезать забор</Russian>
+            <Japanese>フェンスを切断する</Japanese>
+            <Korean>철조망 자르기</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
-            <English>Cutting Fences / Wires ...</English>
-            <German>Zaun / Draht schneiden ...</German>
-            <Spanish>Cortando alambrado / cables ...</Spanish>
-            <Polish>Przecinanie płotu / drutów ...</Polish>
-            <Czech>Přestřihávám plot / dráty ...</Czech>
-            <French>Cisaille l'obstacle ...</French>
-            <Portuguese>Cortando Cerca / Arame ...</Portuguese>
-            <Italian>Sto tagliando ...</Italian>
-            <Hungarian>Drótok elvágása ...</Hungarian>
-            <Russian>Разрезаем забор / провода ...</Russian>
+            <English>Cutting Fences / Wires...</English>
+            <German>Zaun / Draht schneiden...</German>
+            <Spanish>Cortando alambrado / cables...</Spanish>
+            <Polish>Przecinanie płotu / drutów...</Polish>
+            <Czech>Přestřihávám plot / dráty...</Czech>
+            <French>Cisaillement de l'obstacle...</French>
+            <Portuguese>Cortando Cerca / Arame...</Portuguese>
+            <Italian>Sto tagliando...</Italian>
+            <Hungarian>Drótok elvágása...</Hungarian>
+            <Russian>Разрезаем забор / провода...</Russian>
+            <Japanese>フェンス/ワイヤを切断中・・・</Japanese>
+            <Korean>철망/철조망 자르는중...</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
@@ -55,11 +63,13 @@
             <Spanish>Alambrado cortado</Spanish>
             <Polish>Płot przecięty</Polish>
             <Czech>Plot přestřižen</Czech>
-            <French>Clôture cisaillée</French>
+            <French>Obstacle cisaillé</French>
             <Portuguese>Cerca cortada</Portuguese>
             <Italian>Fatto!</Italian>
             <Hungarian>Drótkerítés átvágva</Hungarian>
             <Russian>Забор разрезан</Russian>
+            <Japanese>フェンスを切断した</Japanese>
+            <Korean>절단됨</Korean>
         </Key>
     </Package>
 </Project>

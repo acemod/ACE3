@@ -5,26 +5,28 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Should the unit stay unconscious? <BOOL>
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_getUnconsciousCondition
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit","_return"];
-_unit = _this select 0;
+params ["_unit"];
 
 if (isnil QGVAR(unconsciousConditions)) then {
     GVAR(unconsciousConditions) = [];
 };
 
-_return = false;
+private _return = false;
 {
-    if (typeName _x == typeName {} && {([_unit] call _x)}) exitwith {
+    if ((_x isEqualType {}) && {([_unit] call _x)}) exitwith {
        _return = true;
     };
-}foreach GVAR(unconsciousConditions);
+} foreach GVAR(unconsciousConditions);
 
-_return;
+_return

@@ -17,21 +17,24 @@
  */
 #include "script_component.hpp"
 
-if (!isServer) exitWith {};
-
 params ["", "", "_unit"];
 TRACE_1("params",_unit);
 
-private ["_attachedList"];
+if (!local _unit) exitWith {};
 
-_attachedList = _unit getVariable [QGVAR(attached), []];
-if ((count _attachedList) == 0) exitWith {};
+private _attachedList = _unit getVariable [QGVAR(attached), []];
+if (_attachedList isEqualTo []) exitWith {};
 
 (_attachedList select 0) params ["_xObject"];
 if (!isNull _xObject) then {
+    TRACE_1("detaching and moving attached light",_xObject);
     detach _xObject;
     _xObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
-    [{deleteVehicle (_this select 0)}, [_xObject], 2] call EFUNC(common,waitAndExecute);
+    [{
+        params ["_detachedLight"];
+        TRACE_1("delayed delete",_detachedLight);
+        deleteVehicle _detachedLight;
+    }, [_xObject], 2] call CBA_fnc_waitAndExecute;
     (_attachedList select 0) set [0, objNull];
 };
 

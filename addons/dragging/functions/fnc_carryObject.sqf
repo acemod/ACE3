@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Carry an object.
  *
  * Arguments:
@@ -10,17 +9,20 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_carryObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // get attachTo offset and direction.
-private ["_position", "_direction"];
 
-_position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
-_direction = _target getVariable [QGVAR(carryDirection), 0];
+private _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
+private _direction = _target getVariable [QGVAR(carryDirection), 0];
 
 // handle objects vs persons
 if (_target isKindOf "CAManBase") then {
@@ -34,8 +36,7 @@ if (_target isKindOf "CAManBase") then {
 } else {
 
     // add height offset of model
-    private "_offset";
-    _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
+    private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
 
     _position = _position vectorAdd [0, 0, _offset];
 
@@ -43,34 +44,38 @@ if (_target isKindOf "CAManBase") then {
     _target attachTo [_unit, _position];
 
 };
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 _unit setVariable [QGVAR(isCarrying), true, true];
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
-// add scrollwheel action to release object
-private "_actionID";
-_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+// add drop action
+_unit setVariable [QGVAR(ReleaseActionID), [
+    _unit, "DefaultAction",
+    {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
+    {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull]] call FUNC(dropObject_carry)}
+] call EFUNC(common,addActionEventHandler)];
 
-if (_actionID != -1) then {
-    _unit removeAction _actionID;
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+
+// show mouse hint
+if (_target isKindOf "CAManBase") then {
+    [localize LSTRING(Drop), "", ""] call EFUNC(interaction,showMouseHint);
+} else {
+    [localize LSTRING(Drop), "", localize LSTRING(LowerRaise)] call EFUNC(interaction,showMouseHint);
 };
 
-_actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
-    QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(carriedObject)),objNull)])] call FUNC(dropObject_carry)),
-    nil,
-    20,
-    false,
-    true,
-    "",
-    QUOTE(!isNull (_this getVariable [ARR_2(QUOTE(QGVAR(carriedObject)),objNull)]))
-];
-
-_unit setVariable [QGVAR(ReleaseActionID), _actionID];
-
 // check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
+
+// prevent UAVs from firing
+private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
+if !(_UAVCrew isEqualTo []) then {
+    {_target deleteVehicleCrew _x} count _UAVCrew;
+    _target setVariable [QGVAR(isUAV), true, true];
+};

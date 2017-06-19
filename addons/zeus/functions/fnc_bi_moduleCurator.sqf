@@ -10,16 +10,17 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleCurator
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
 
@@ -57,12 +58,12 @@ if (_activated) then {
         if (_isAdmin) then {
             _letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
             _adminVar = "admin_";
-            for "_i" from 0 to 9 do {_adminVar = _adminVar + (_letters call bis_fnc_selectrandom);};
+            for "_i" from 0 to 9 do {_adminVar = _adminVar + selectRandom _letters};
             _logic setvariable ["adminVar",_adminVar,true];
         };
 
         //--- Get allowed addons
-        _addonsType = _logic getvariable ["Addons",0];
+        _addonsType = _logic getvariable ["Addons",2];
         _addons = [];
         switch _addonsType do {
 
@@ -101,10 +102,7 @@ if (_activated) then {
         [_logic,_ownerVar,_ownerUID,_adminVar] spawn {
             scriptname "BIS_fnc_moduleCurator: Owner";
 
-            _logic = _this select 0;
-            _ownerVar = _this select 1;
-            _ownerUID = _this select 2;
-            _adminVar = _this select 3;
+            params ["_logic", "_ownerVar", "_ownerUID", "_adminVar"];
 
             if (_adminVar != "") then {_ownerVar = _adminVar;};
 
@@ -113,7 +111,7 @@ if (_activated) then {
             if (_name == "") then {_name = localize "STR_A3_curator";};
 
             //--- Wait until mission starts
-            waituntil {time > 0}; // NOTE: DO NOT CHANGE TO ACE_TIME, IT BREAKS THE MODULE
+            waitUntil {time > 0}; // NOTE: DO NOT CHANGE TO CBA_missionTime, IT BREAKS THE MODULE
 
             //--- Refresh addon list, so it's broadcasted to clients
             _addons = curatoraddons _logic;
@@ -157,30 +155,31 @@ if (_activated) then {
                     _x radiochanneladd [_player];
                 } foreach (_logic getvariable ["channels",[]]);
 
-                // Added by ace_zeus to delay ascension message at mission start
-                [{
-                    _logic = _this select 0;
-                    _player = _this select 1;
+                // Added by ace_zeus to delay ascension message code
+                private _msgCode = {
+                    params ["_logic","_player"];
 
                     //--- Sent notification to all assigned players
-                    if ((_logic getvariable ["showNotification",true]) && GVAR(zeusAscension)) then {
+                    if ((_logic getVariable ["showNotification",true]) && GVAR(zeusAscension)) then {
                         {
                             if (isplayer _x) then {
                                 [["CuratorAssign",[_name,name _player]],"bis_fnc_showNotification",_x] call bis_fnc_mp;
                             };
-                        } foreach (curatoreditableobjects _logic);
+                        } forEach (curatoreditableobjects _logic);
                     };
-                },[_logic,_player]] call EFUNC(common,execNextFrame);
+                };
+
+                // Added by ace_zeus to hide ascension messages
+                if !(EGVAR(common,settingsInitFinished)) then {
+                    EGVAR(common,runAtSettingsInitialized) pushBack [_msgCode, [_logic,_player]];
+                } else {
+                    [_logic,_player] call _msgCode;
+                };
 
                 [_logic,"curatorUnitAssigned",[_logic,_player]] call bis_fnc_callscriptedeventhandler;
 
                 // Added by ace_zeus
-                ["zeusUnitAssigned", [_logic,_player]] call EFUNC(common,globalEvent);
-
-                //--- Forced interface
-                //if (_forced) then {
-                //  [[true,true],"bis_fnc_forceCuratorInterface",_player] call bis_fnc_mp;
-                //};
+                [QGVAR(zeusUnitAssigned), [_logic,_player]] call CBA_fnc_globalEvent;
 
                 //--- Wait for player to stop being Zeus
                 switch true do {
@@ -207,6 +206,37 @@ if (_activated) then {
             };
         };
 
+        // Added by ace_zeus to delay bird code
+        private _birdCode = {
+            params ["_logic"];
+
+            if (GVAR(zeusBird)) then {
+                //--- Create bird
+                _birdType = _logic getVariable ["birdType","eagle_f"];
+                if (_birdType != "") then {
+                    _bird = createvehicle [_birdType,[100,100,100],[],0,"none"];
+                    _logic setVariable ["bird",_bird,true];
+                };
+
+                //--- Locality changed
+                _logic addeventhandler [
+                    "local",
+                    {
+                        _logic = _this select 0;
+                        _bird = _logic getVariable ["bird",objnull];
+                        _bird setowner owner _logic;
+                    }
+                ];
+            };
+        };
+
+        // Added by ace_zeus to hide camera bird
+        if !(EGVAR(common,settingsInitFinished)) then {
+            EGVAR(common,runAtSettingsInitialized) pushBack [_birdCode, [_logic]];
+        } else {
+            [_logic] call _birdCode;
+        };
+
         //--- Activated all future addons
         _addons = [];
         {
@@ -221,30 +251,6 @@ if (_activated) then {
             };
         } foreach (synchronizedobjects _logic);
         _addons call bis_fnc_activateaddons;
-
-        // Added by ace_zeus to delay bird code
-        [{
-            _logic = _this select 0;
-
-            if (GVAR(zeusBird)) then {
-                //--- Create bird
-                _birdType = _logic getvariable ["birdType","eagle_f"];
-                if (_birdType != "") then {
-                    _bird = createvehicle [_birdType,[100,100,100],[],0,"none"];
-                    _logic setvariable ["bird",_bird,true];
-                };
-
-                //--- Locality changed
-                _logic addeventhandler [
-                    "local",
-                    {
-                        _logic = _this select 0;
-                        _bird = _logic getvariable ["bird",objnull];
-                        _bird setowner owner _logic;
-                    }
-                ];
-            };
-        },[_logic]] call EFUNC(common,execNextFrame);
     };
 
     //--- Player

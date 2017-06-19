@@ -1,52 +1,62 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: ACE-Team
+ *
+ * ?
+ *
+ * Arguments:
+ * ?
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [?] call ace_common_fnc_syncedEventPFH
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-if(!isServer) exitWith { false };
+if (!isServer) exitWith {false};
 
 // Walk through the local synced events and clean up anything thats already EOL
 // @TODO: This should be iteration limited to prevent FPS lag
-private["_data"];
-{
-    private["_data", "_eventLog", "_newEventLog", "_name", "_globalEventTTL"];
-    _name = _x;
 
-    _data = HASH_GET(GVAR(syncedEvents),_name);
-    _eventLog = _data select 1;
-    _globalEventTTL = _data select 2; 
-    _newEventLog = [];
-    
+[GVAR(syncedEvents), {
+    _value params ["_eventTime", "_eventLog", "_globalEventTTL"];
+
+    private _newEventLog = [];
+
     // @TODO: This should be iteration limited to prevent FPS lag
     {
-        private["_eventEntry", "_ttlReturn"];
-        _eventEntry = _x;
-        
-        _ttlReturn = true;
-        if(typeName _globalEventTTL == "CODE") then {
-            _ttlReturn = [(_data select 0),_eventEntry] call _globalEventTTL;
+        private _eventEntry = _x;
+        private _ttlReturn = true;
+
+        if (_globalEventTTL isEqualType {}) then {
+            _ttlReturn = [_eventTime, _eventEntry] call _globalEventTTL;
         } else {
-            _ttlReturn = call { _globalEventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _globalEventTTL} };
+            _ttlReturn = call {_globalEventTTL < 1 || {diag_tickTime < (_eventEntry select 0) + _globalEventTTL}};
         };
 
-        if(_ttlReturn) then {
+        if (_ttlReturn) then {
             // Do event based TTL check
-            private["_eventTTL"];
-            _eventTTL = _eventEntry select 2;
-            
-            if(typeName _eventTTL == "CODE") then {
-                _ttlReturn = [(_data select 0),_eventEntry] call _eventTTL;
+            _eventEntry params ["_time", "", "_eventTTL"];
+
+            if (_eventTTL isEqualType {}) then {
+                _ttlReturn = [_eventTime, _eventEntry] call _eventTTL;
             } else {
-                _ttlReturn = call { _eventTTL < 1 || {ACE_diagTime < (_eventEntry select 0) + _eventTTL} };
+                _ttlReturn = call {_eventTTL < 1 || {diag_tickTime < _time + _eventTTL}};
             };
         };
 
         // Finally drop it if the TTL check fails
-        if(_ttlReturn) then {
+        if (_ttlReturn) then {
             _newEventLog pushBack _x;
         };
-    } forEach _eventLog;
-    
-    _data set[1, _newEventLog];
-} forEach (GVAR(syncedEvents) select 0);
+        false
+    } count _eventLog;
 
+    _value set [1, _newEventLog];
+    false
+}] call CBA_fnc_hashEachPair;
 
 // @TODO: Next, detect if we had a new request from a JIP player, and we need to continue syncing events

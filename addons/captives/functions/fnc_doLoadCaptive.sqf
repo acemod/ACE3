@@ -8,7 +8,7 @@
  * 2: Vehicle to load the captive into. ObjNull for the nearest vehicle <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, tom, car] call ACE_captives_fnc_doLoadCaptive
@@ -27,7 +27,7 @@ if ((isNull _target) && {_unit getVariable [QGVAR(isEscorting), false]}) then {
         };
     } forEach (attachedObjects _unit);
 };
-if ((isNull _target) || {(vehicle _target) != _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {ERROR("");};
+if ((isNull _target) || {(vehicle _target) != _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {WARNING("");};
 
 if (isNull _vehicle) then {
     //Looking at a captive unit, search for nearby vehicles with valid seats:
@@ -44,7 +44,7 @@ if (isNull _vehicle) then {
     };
 };
 
-if (isNull _vehicle) exitWith {ERROR("");};
+if (isNull _vehicle) exitWith {WARNING("Could not find vehicle to load captive");};
 
 _unit setVariable [QGVAR(isEscorting), false, true];
-["MoveInCaptive", [_target], [_target, _vehicle]] call EFUNC(common,targetEvent);
+[QGVAR(moveInCaptive), [_target, _vehicle], [_target]] call CBA_fnc_targetEvent;

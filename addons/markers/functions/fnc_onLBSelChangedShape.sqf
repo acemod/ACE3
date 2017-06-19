@@ -16,15 +16,25 @@
  */
 #include "script_component.hpp"
 
-private ["_data", "_config"];
-
 params ["_ctrl", "_index"];
 TRACE_2("params",_ctrl,_index);
 
-_data = _ctrl lbValue _index;
+private _data = _ctrl lbValue _index;
 
 GVAR(curSelMarkerShape) = _index;
 
-_config = (configfile >> "CfgMarkers") select _data;
+private _config = (configFile >> "CfgMarkers") select _data;
 
-GVAR(currentMarkerConfigName) = (configName _config);
+GVAR(currentMarkerConfigName) = configName _config;
+
+//Set map display to same shape:
+private _bisShapeLB = switch (false) do {
+    case (isNull findDisplay 12): {(findDisplay 12) displayCtrl 1091};
+    case (isNull findDisplay 52): {(findDisplay 52) displayCtrl 1091};
+    case (isNull findDisplay 53): {(findDisplay 53) displayCtrl 1091};
+    case (isNull findDisplay 37): {(findDisplay 37) displayCtrl 1091};
+    default {controlNull};
+};
+if (_ctrl != _bisShapeLB) then { //Don't set what we got a EH from
+    _bisShapeLB lbSetCurSel GVAR(curSelMarkerShape);
+};

@@ -2,29 +2,22 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"VKing"};
-        authorUrl = "http://ace3mod.com/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"VKing", "Jonpas"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-class RscText;
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
+#include "ACE_Settings.hpp"
+#include "ACE_UI.hpp"
 
-class RscDisplayChat {
-    class controls {
-        delete Line;
-        delete Background;
-        class CA_Background: RscText {
-            colorBackground[] = {0.5,0.5,0.5,0.33}; // Make the chat entry field slightly darker
-        };
-    };
-};
-
-class RscChatListDefault {
-    colorBackground[] = {0,0,0,0.5}; // Make the chat background darker
-    colorMessageProtocol[] = {0.85,0.85,0.85,1}; // And the chat text brighter
-};
+#include "RscChat.hpp"
+#include "RscVignette.hpp"

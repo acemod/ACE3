@@ -35,7 +35,8 @@ class CfgVehicles {
         function = QFUNC(moduleCheckPBOs);
         scope = 2;
         isGlobal = 1;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_CheckPBO_ca.paa));
+        isSingular = 1;
+        icon = QPATHTOF(UI\Icon_Module_CheckPBO_ca.paa);
         class Arguments {
             class Action {
                 displayName = CSTRING(CheckPBO_Action_DisplayName);
@@ -81,7 +82,7 @@ class CfgVehicles {
         displayName = CSTRING(LSDVehicles_DisplayName);
         function = "ACE_Common_fnc_moduleLSDVehicles";
         scope = 2;
-        icon = QUOTE(PATHTOF(UI\Icon_Module_LSD_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_LSD_ca.paa);
         isGlobal = 1;
         class Arguments {};
         class ModuleDescription: ModuleDescription {
@@ -131,7 +132,7 @@ class CfgVehicles {
     class ACE_Headbug_Fix: Bicycle {
         scope = 1;
         side = 3;
-        model = PATHTOF(data\ACE_HeadBanger.p3d);
+        model = QPATHTOF(data\ACE_HeadBanger.p3d);
         //model = QPATHTO_M(ACE_HeadBanger.p3d);
         author = CSTRING(ACETeam);
         displayName = " ";
@@ -139,5 +140,11 @@ class CfgVehicles {
         soundEnviron[] = {"", 25, 0.925};
         isBicycle = 1;
         XEH_DISABLED;
+    };
+
+    class Bag_Base;
+    class ACE_FakeBackpack: Bag_Base {
+        scope = 1;
+        maximumLoad = 1E6;
     };
 };

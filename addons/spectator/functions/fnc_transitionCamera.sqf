@@ -43,15 +43,16 @@ if (_newMode != 1) then {
     GVAR(camGun) = false;
 };
 
+private ["_camera"];
 if (_newMode == 0) then { // Free
+    _camera = GVAR(freeCamera);
+
     // Preserve camUnit value for consistency when manually changing view
-    GVAR(camera) cameraEffect ["internal", "back"];
-    showCinemaBorder false;
-    cameraEffectEnableHUD true;
+    _camera cameraEffect ["internal", "back"];
 
     // Apply the camera zoom
-    GVAR(camera) camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
-    GVAR(camera) camCommit 0;
+    _camera camSetFov -(linearConversion [0.01,2,GVAR(camZoom),-2,-0.01,true]);
+    _camera camCommit 0;
 
     // Agent is switched to in free cam to hide death table and prevent AI chat while allowing icons to draw (also prevents systemChat and unit HUD)
     // (Why is so much stuff tied into the current camera unit BI?!)
@@ -60,14 +61,48 @@ if (_newMode == 0) then { // Free
     };
 
     GVAR(camAgent) switchCamera "internal";
-    clearRadio;
+} else {
+    _camera = GVAR(unitCamera);
+
+    // When null unit is given choose random
+    if (isNull _newUnit) then {
+        _newUnit = selectRandom GVAR(unitList);
+    };
+
+    // Switch camera view to internal unit view (external uses the camera)
+    if (GVAR(camGun)) then {
+        _newUnit switchCamera "gunner";
+    } else {
+        _newUnit switchCamera "internal";
+    };
+
+    // Handle camera differently for internal/external view
+    if (_newMode == 1) then {
+        // Terminate camera view
+        _camera cameraEffect ["terminate", "back"];
+        GVAR(camHandler) = nil;
+    } else {
+        // Switch to the camera
+        _camera cameraEffect ["internal", "back"];
+    };
+
+    GVAR(camUnit) = _newUnit;
+};
+
+if (_newMode in [0,2]) then {
+    // Set up camera UI
+    showCinemaBorder false;
+    cameraEffectEnableHUD true;
+
+    // Handle camera movement
+    if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
 
     // If new vision isn't available then keep current (unless current also isn't)
     if !(_newVision in GVAR(availableVisions)) then {
         _newVision = GVAR(availableVisions) select ((GVAR(availableVisions) find GVAR(camVision)) max 0);
     };
 
-    // Vision mode only applies to free cam
+    // Vision mode applies to free and external cam
     if (_newVision < 0) then {
         false setCamUseTi 0;
         camUseNVG (_newVision >= -1);
@@ -75,37 +110,6 @@ if (_newMode == 0) then { // Free
         true setCamUseTi _newVision;
     };
     GVAR(camVision) = _newVision;
-
-    // Handle camera movement
-    if (isNil QGVAR(camHandler)) then { GVAR(camHandler) = [FUNC(handleCamera), 0] call CBA_fnc_addPerFrameHandler; };
-} else {
-    // When null unit is given choose random
-    if (isNull _newUnit) then {
-        _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
-    };
-
-    if (_newMode == 1) then { // Internal
-        // Handle gun cam
-        if (GVAR(camGun)) then {
-            _newUnit switchCamera "gunner";
-        } else {
-            _newUnit switchCamera "internal";
-        };
-    } else { // External
-        _newUnit switchCamera "external";
-    };
-
-    // Clear radio if group changed
-    if (group _newUnit != group GVAR(camUnit)) then {
-        clearRadio;
-    };
-
-    GVAR(camUnit) = _newUnit;
-
-    // Terminate camera view
-    GVAR(camera) cameraEffect ["terminate", "back"];
-    GVAR(camHandler) = nil;
-    cameraEffectEnableHUD true;
 };
 
 GVAR(camMode) = _newMode;

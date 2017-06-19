@@ -3,7 +3,7 @@
  * Switches to a unit close to a clicked map position
  *
  * Arguments:
- * 0: Faction
+ * 0: Faction <ARRAY>
  *   0: unit <OBJECT>
  *   1: sides <ARRAY>
  * 1: Map Position <ARRAY>
@@ -18,12 +18,10 @@
  */
 #include "script_component.hpp"
 
-private ["_sideNearest"];
-
 params ["_faction", "_pos"];
 _faction params ["", "_sides"];
 
-_sideNearest = [];
+private _sideNearest = [];
 
 {
     if ([_x] call FUNC(isValidAi) && (side group _x in _sides)) then {

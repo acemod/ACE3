@@ -20,7 +20,7 @@ class CfgVehicles {
                     statement = QUOTE([ARR_2(_player, _target)] call FUNC(refuelUAV));
                     showDisabled = 0;
                     priority = 1.245;
-                    icon = QUOTE(PATHTOF(ui\UAV_battery_ca.paa));
+                    icon = QPATHTOF(ui\UAV_battery_ca.paa);
                 };
             };
         };

@@ -19,9 +19,9 @@ class Rsc_ACE_CallScreen_Edit:RscEdit {
     colorText[] = {0,0,0,1};
     colorDisabled[] = {1,1,1,0.25};
     colorSelection[] = {
-        "(profilenamespace getvariable ['GUI_BCG_RGB_R',0.69])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.75])",
-        "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.5])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])",
+        "(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])",
         1
     };
     text = "";
@@ -113,7 +113,7 @@ class Rsc_ACE_PhoneInterface {
     class controls {
         class RscPicture_1200: RscPicture {
             idc = 1200;
-            text = PATHTOF(Data\UI\Cellphone_Background.paa);
+            text = QPATHTOF(Data\UI\Cellphone_Background.paa);
             x = 0.231875 * safezoneW + safezoneX;
             y = 0.104 * safezoneH + safezoneY;
             w = 0.195937 * safezoneW;

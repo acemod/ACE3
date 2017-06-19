@@ -1,32 +1,26 @@
 /*
  * Author: commy2
+ * Move unit to kneeling position (only if not yet prone).
  *
- * Abhocken! Unit goes kneeling if not prone already and lowers weapon. Try, throw, catch because I'm bored.
+ * Arguments:
+ * 0: Unit <OBJECT>
  *
- * Argument:
- * 0: Unit (Object)
+ * Return Value:
+ * None
  *
- * Return value:
- * None.
+ * Example:
+ * [bob] call ace_common_fnc_goKneeling
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_unit);
+params ["_unit"];
 
-//IGNORE_PRIVATE_WARNING("_exception");
+// Animation changes even inside vehicle post-1.60
+if (stance _unit == "PRONE" || {vehicle ACE_player != ACE_player}) exitWith {};
 
-try {
-    if (_unit == vehicle _unit) then {
-        switch (currentWeapon _unit) do {
-            case "" : {throw "AmovPknlMstpSnonWnonDnon"};
-            case (primaryWeapon _unit) : {throw "AmovPknlMstpSlowWrflDnon"};
-            case (secondaryWeapon _unit) : {throw "AmovPknlMstpSrasWlnrDnon"};
-            case (handgunWeapon _unit) : {throw "AmovPknlMstpSlowWpstDnon"};
-            case (binocular _unit) : {throw "AmovPknlMstpSoptWbinDnon"};
-          };
-    };
-} catch {
-    if (stance _unit != "PRONE") then {
-        [_unit, _exception] call FUNC(doAnimation);
-    };
-};
+[
+    _unit,
+    ["AmovPknlMstpSnonWnonDnon", "AmovPknlMstpSlowWrflDnon", "AmovPknlMstpSrasWlnrDnon", "AmovPknlMstpSlowWpstDnon", "AmovPknlMstpSoptWbinDnon"] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit, binocular _unit] find currentWeapon _unit) max 0)
+] call FUNC(doAnimation);

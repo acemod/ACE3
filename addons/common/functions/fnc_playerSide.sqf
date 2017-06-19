@@ -1,4 +1,18 @@
-// by commy2
+/*
+ * Author: commy2
+ * Return the current side of the player
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * current local side <SIDE>
+ *
+ * Example:
+ * [] call ace_common_fnc_playerSide
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
 side group ACE_player

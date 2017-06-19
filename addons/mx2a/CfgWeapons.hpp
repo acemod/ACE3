@@ -5,9 +5,9 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(DisplayName);
         descriptionShort = CSTRING(Description);
-        model = PATHTOF(data\ace_mx2a.p3d);
-        modelOptics = QUOTE(PATHTOEF(apl,LWTS_optic.p3d));
-        picture = PATHTOF(UI\w_mx2a_ca.paa);
+        model = QPATHTOF(data\ace_mx2a.p3d);
+        modelOptics = QPATHTOEF(apl,LWTS_optic.p3d);
+        picture = QPATHTOF(UI\w_mx2a_ca.paa);
         opticsZoomMax = 0.1;
         distanceZoomMax = 120;
         opticsZoomMin = 0.05;

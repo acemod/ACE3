@@ -1,12 +1,12 @@
 /*
  * Author: commy2
- * Checks if the player can tap a shoulder
+ * Checks if the player can tap a shoulder.
  *
  * Arguments:
  * 0: Player <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Able to tap a shoulder <BOOL>
  *
  * Example:
@@ -16,9 +16,9 @@
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_target);
+params ["_unit", "_target"];
 
 _target isKindOf "CAManBase" &&
 {alive _target} &&
 {_unit distance _target < 4} &&
-{!(_target getVariable ["ACE_isUnconscious", false])}
+{!(_target getVariable ["ACE_isUnconscious", false])} // return

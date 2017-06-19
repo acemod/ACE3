@@ -2,46 +2,57 @@
  * Author: Winter
  * Sets the player's current view distance according to allowed values.
  *
- *
  * Arguments:
- * 0: View Distance setting INDEX <SCALAR>
+ * 0: View Distance setting INDEX <NUMBER>
  * 1: Show Prompt <BOOL>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_viewdistance_fnc_changeViewDistance;
+ * [] call ace_viewdistance_fnc_changeViewDistance
  *
  * Public: No
  */
-
 #include "script_component.hpp"
 
-private ["_text","_new_view_distance","_view_distance_limit","_object_view_distance_coeff"];
+params ["_indexRequested", "_showPrompt"];
 
-params ["_index_requested", "_show_prompt"];
+private _newViewDistance = [_indexRequested] call FUNC(returnValue); // changes the setting index into an actual view distance value
+private _objectViewDistanceCoeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
+private _viewDistanceLimit = GVAR(limitViewDistance); // Grab the limit
 
-_new_view_distance = [_index_requested] call FUNC(returnValue); // changes the setting index into an actual view distance value
-_object_view_distance_coeff = [GVAR(objectViewDistanceCoeff)] call FUNC(returnObjectCoeff); // changes the setting index into a coefficient.
-_view_distance_limit = GVAR(limitViewDistance); // Grab the limit
+TRACE_3("Limit",_newViewDistance,_viewDistanceLimit,_showPrompt);
+setViewDistance (_newViewDistance min _viewDistanceLimit);
 
-TRACE_2("Limit",_new_view_distance,_view_distance_limit);
-setViewDistance (_new_view_distance min _view_distance_limit);
-
-if (_object_view_distance_coeff > 0) then {
-    setObjectViewDistance (_object_view_distance_coeff * viewDistance);
+if (_objectViewDistanceCoeff isEqualType 0) then {
+    if (_objectViewDistanceCoeff > 0) then {
+        setObjectViewDistance (_objectViewDistanceCoeff * viewDistance);
+    } else {
+        // Restore correct view distance when changing from FoV Based to Off
+        // Restoring directly inside PFH's self-exit resulted in the need of selecting another option to take effect
+        setObjectViewDistance GVAR(fovBasedPFHminimalViewDistance);
+    };
+} else {
+    if (isNil QGVAR(fovBasedPFHminimalViewDistance)) then {
+        GVAR(fovBasedPFHminimalViewDistance) = getObjectViewDistance select 0; // Minimal view distance holder and PFH isRunning variable
+        [FUNC(setFovBasedOvdPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    };
 };
 
-if (_show_prompt) then {
-    _text = if (_new_view_distance <= _view_distance_limit) then {
-            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_infotext"), str(viewDistance)];
-        } else {
-            format ["<t align='center'>%1 %2m", (localize "STR_ACE_ViewDistance_invalid"), str(viewDistance)];
-        };
-
+if (_showPrompt) then {
     if (GVAR(objectViewDistanceCoeff) > 0) then {
-        _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", (localize "STR_ACE_ViewDistance_objectinfotext"), str(_object_view_distance_coeff * 100),"%"];
+        private _text = "";
+        // FoV Based or %
+        if (GVAR(objectViewDistanceCoeff) == 6) then {
+            _text = format ["<t align='center'>%1 %2<br/>Min. %3<br/>Max. %4</t>", localize LSTRING(objectinfotext), localize LSTRING(object_fovBased), GVAR(fovBasedPFHminimalViewDistance), viewDistance];
+        } else {
+            _text = [
+                format ["<t align='center'>%1 %2m", localize LSTRING(invalid), viewDistance],
+                format ["<t align='center'>%1 %2m", localize LSTRING(infotext), viewDistance]
+            ] select (_newViewDistance <= _viewDistanceLimit);
+            _text = _text + format ["<br/><t align='center'>%1 %2%3</t>", localize LSTRING(objectinfotext), _objectViewDistanceCoeff * 100, "%"];
+        };
+        [parseText _text, 2] call EFUNC(common,displayTextStructured);
     };
-    [parseText _text,2] call EFUNC(common,displayTextStructured);
 };

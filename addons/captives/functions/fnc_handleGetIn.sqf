@@ -26,12 +26,12 @@ if (local _unit) then {
     };
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {
-        [_unit, false] call FUNC(setSurrender);
+        [_unit, false] call FUNC(setSurrendered);
     };
 
     if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
         //Need to force animation for FFV turrets
-        _turretPath = [];
+        private _turretPath = [];
         {
             _x params ["_xUnit", "", "", "_xTurretPath"];
             if (_unit == _xUnit) exitWith {_turretPath = _xTurretPath};

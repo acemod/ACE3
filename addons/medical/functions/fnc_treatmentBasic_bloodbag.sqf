@@ -9,16 +9,20 @@
  * 3: Treatment classname <STRING>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_bloodbag
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_treatmentClassname"];
-_caller = _this select 0;
-_target = _this select 1;
-_treatmentClassname = _this select 3;
+params ["_caller", "_target", "_treatmentClassname"];
 
-[[_target, _treatmentClassname], QUOTE(DFUNC(treatmentBasic_bloodbagLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname]] call CBA_fnc_localEvent;
+} else {
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname], _target] call CBA_fnc_targetEvent;
+};

@@ -49,7 +49,7 @@ class ACE_Settings {
         description = CSTRING(SettingFeedbackIconsDesc);
         values[] = {ECSTRING(optionsmenu,Hide), ECSTRING(optionsmenu,TopRightDown), ECSTRING(optionsmenu,TopRightLeft), ECSTRING(optionsmenu,TopLeftDown), ECSTRING(optionsmenu,TopLeftRight)};
     };
-    class GVAR(SettingProgressBarLocation) {
+    class GVAR(settingProgressBarLocation) {
         value = 0;
         typeName = "SCALAR";
         force = 0;

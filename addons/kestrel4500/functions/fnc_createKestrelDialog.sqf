@@ -3,12 +3,13 @@
  * Opens the Kestrel 4500 dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_kestrel4500_fnc_createKestrelDialog
  *
  * Public: No
  */
@@ -29,7 +30,7 @@ createDialog 'Kestrel4500_Display';
         GVAR(Kestrel4500) = false;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     [] call FUNC(updateDisplay);
 }, 1, _this select 0] call CBA_fnc_addPerFrameHandler;
 

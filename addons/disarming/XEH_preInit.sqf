@@ -2,16 +2,8 @@
 
 ADDON = false;
 
-PREP(canBeDisarmed);
-PREP(canPlayerDisarmUnit);
-PREP(disarmDropItems);
-PREP(eventCallerFinish);
-PREP(eventTargetFinish);
-PREP(eventTargetStart);
-PREP(getAllGearContainer);
-PREP(getAllGearUnit);
-PREP(openDisarmDialog);
-PREP(showItemsInListbox);
-PREP(verifyMagazinesMoved);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

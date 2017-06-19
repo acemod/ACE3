@@ -5,25 +5,35 @@
  * Sets dirt/rain overlay for glasses.
  *
  * Arguments:
- * 0: Glasses classname to be applied <STRING>
+ * 0: Player <OBJECT>
+ * 1: Glasses classname to be applied <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [goggles ace_player] call ace_goggles_fnc_ApplyGlassesEffect;
+ * [ace_player, goggles ace_player] call ace_goggles_fnc_applyGlassesEffect
  *
  * Public: No
  */
 #include "script_component.hpp"
-private["_postProcessColour", "_postProcessTintAmount", "_glassesClassname", "_glassImagePath"];
 
-_glassesClassname = _this select 0;
-_postProcessColour = getArray(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Color");
-_postProcessTintAmount = getNumber(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_TintAmount");
+params ["_player", "_glasses"];
+TRACE_2("applyGlassesEffect",_player,_glasses);
 
+// remove old effect
 call FUNC(removeGlassesEffect);
-GVAR(EffectsActive) = true;
+
+if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _player) >> "isPlayableLogic")) == 1) exitWith {
+    TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
+};
+
+private ["_config", "_postProcessColour", "_postProcessTintAmount", "_imagePath"];
+
+_config = configFile >> "CfgGlasses" >> _glasses;
+
+_postProcessColour = getArray (_config >> "ACE_Color");
+_postProcessTintAmount = getNumber (_config >> "ACE_TintAmount");
 
 if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
     _postProcessColour set [3, _postProcessTintAmount/100];
@@ -35,20 +45,22 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)}) then {
     GVAR(PostProcess) ppEffectCommit 30;
 };
 
-_glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_Overlay");
-if GETBROKEN then {
-    _glassImagePath = getText(configFile >> "CfgGlasses" >> _glassesClassname >> "ACE_OverlayCracked");
-};
-if (_glassImagePath != "") then {
-    150 cutRsc["RscACE_Goggles", "PLAIN",1, false];
-    (GLASSDISPLAY displayCtrl 10650) ctrlSetText _glassImagePath;
+_imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] select GETBROKEN);
+
+if (_imagePath != "") then {
+    GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false];
+    (GLASSDISPLAY displayCtrl 10650) ctrlSetText _imagePath;
 };
 
-if GETDIRT then {
-    call FUNC(applyDirtEffect);
+if (GVAR(effects) == 2) then {
+    if (GETDIRT) then {
+        call FUNC(applyDirtEffect);
+    };
+
+    if (GETDUSTT(DACTIVE)) then {
+        SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
+        call FUNC(applyDustEffect);
+    };
 };
 
-if GETDUSTT(DACTIVE) then {
-    SETDUST(DAMOUNT,CLAMP(GETDUSTT(DAMOUNT)-1,0,2));
-    call FUNC(applyDust);
-};
+GVAR(EffectsActive) = true;

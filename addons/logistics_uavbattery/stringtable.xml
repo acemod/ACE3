@@ -1,29 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_UAVbattery">
         <Key ID="STR_ACE_Logistics_UAVbattery_Full">
             <English>Drone is full</English>
             <German>Drohne ist voll</German>
             <Spanish>El VANT está lleno</Spanish>
-            <French>L'UAV est chargé</French>
+            <French>Le drone est chargé</French>
             <Polish>Dron jest naładowany</Polish>
             <Hungarian>A drón fel van töltve</Hungarian>
             <Czech>Dron je nabitý</Czech>
             <Portuguese>O VANT está cheio</Portuguese>
             <Italian>Il drone è pieno</Italian>
             <Russian>БПЛА полностью заряжен</Russian>
+            <Japanese>ドローンは充電完了</Japanese>
+            <Korean>드론 충전완료</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
             <German>Du brauchst eine UAV-Batterie</German>
             <Spanish>Necesitas una batería para VANT</Spanish>
-            <French>L'UAV nécessite une  batterie</French>
+            <French>Le drone nécessite une batterie</French>
             <Polish>Potrzebujesz baterii UAV</Polish>
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
             <Czech>Potřebuješ UAV baterii</Czech>
             <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
             <Italian>Hai bisogno di una Batteria UAV</Italian>
             <Russian>Требуется аккумулятор для БПЛА</Russian>
+            <Japanese>UAV バッテリが必要です</Japanese>
+            <Korean>UAV 배터리가 필요합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
@@ -36,42 +40,49 @@
             <Portuguese>Recarregar</Portuguese>
             <Italian>Ricarica</Italian>
             <Russian>Зарядить</Russian>
+            <Japanese>充電</Japanese>
+            <Korean>재충전</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
             <German>UAV-Batterie</German>
             <Spanish>Batería para VANT</Spanish>
-            <French>Batterie UAV</French>
+            <French>Batterie pour drone</French>
             <Polish>Bateria UAV</Polish>
             <Hungarian>UAV akkumulátor</Hungarian>
             <Czech>UAV baterie</Czech>
             <Portuguese>Bateria para VANT</Portuguese>
             <Italian>Batteria UAV</Italian>
             <Russian>Аккумулятор БПЛА</Russian>
+            <Japanese>UAV バッテリ</Japanese>
+            <Korean>UAV 배터리</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
             <German>Verwendet zum Aufladen von tragbaren UAVs</German>
             <Spanish>Usada para reabastecer el VANT</Spanish>
-            <French>Utilisée pour recharger l'UAV</French>
+            <French>Utilisée pour recharger un drone</French>
             <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
             <Czech>Používané k dobíjení UAV</Czech>
             <Portuguese>Usada para reabastecer o VANT</Portuguese>
             <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
+            <Japanese>運んでいる UAV を充電に使う</Japanese>
+            <Korean>UAV를 재충전 할때 씁니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
-            <English>Recharging ...</English>
-            <German>Aufladen ...</German>
-            <Spanish>Recargando ...</Spanish>
-            <French>Rechargement ...</French>
-            <Polish>Ładowanie ...</Polish>
-            <Hungarian>Akku feltöltése ...</Hungarian>
-            <Czech>Dobíjení ...</Czech>
-            <Portuguese>Recarregando ...</Portuguese>
-            <Italian>In ricarica ...</Italian>
-            <Russian>Заряжается ...</Russian>
+            <English>Recharging...</English>
+            <German>Aufladen...</German>
+            <Spanish>Recargando...</Spanish>
+            <French>Rechargement...</French>
+            <Polish>Ładowanie...</Polish>
+            <Hungarian>Akku feltöltése...</Hungarian>
+            <Czech>Dobíjení...</Czech>
+            <Portuguese>Recarregando...</Portuguese>
+            <Italian>In ricarica...</Italian>
+            <Russian>Заряжается...</Russian>
+            <Japanese>充電中</Japanese>
         </Key>
     </Package>
 </Project>

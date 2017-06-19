@@ -1,25 +1,25 @@
 /*
  * Author: commy2
- *
  * Check of the unit can reload the launcher of target unit.
  *
- * Argument:
- * 0: Unit to do the reloading (Object)
- * 1: Unit eqipped with launcher (Object)
- * 2: weapon name (String)
- * 3: missile name (String)
+ * Arguments:
+ * 0: Unit to do the reloading <OBJECT>
+ * 1: Unit eqipped with launcher <OBJECT>
+ * 2: weapon name <STRING>
+ * 3: missile name <STRING>
  *
- * Return value:
- * NONE
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_canLoad
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_unit", "_target", "_weapon", "_magazine"];
-
-_unit = _this select 0;
-_target = _this select 1;
-_weapon = _this select 2;
-_magazine = _this select 3;
+params ["_unit", "_target", "_weapon", "_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
 if (!alive _target) exitWith {false};
 if (vehicle _target != _target) exitWith {false};

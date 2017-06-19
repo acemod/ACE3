@@ -27,10 +27,10 @@ class RscTitles {
             size = 0.018;
             colorBackground[] = { 0, 0, 0, 0 };
             colortext[] = {
-                "(profilenamespace getvariable ['IGUI_TEXT_RGB_R',0])",
-                "(profilenamespace getvariable ['IGUI_TEXT_RGB_G',1])",
-                "(profilenamespace getvariable ['IGUI_TEXT_RGB_B',1])",
-                "(profilenamespace getvariable ['IGUI_TEXT_RGB_A',0.8])"
+                "(profilenamespace getVariable ['IGUI_TEXT_RGB_R',0])",
+                "(profilenamespace getVariable ['IGUI_TEXT_RGB_G',1])",
+                "(profilenamespace getVariable ['IGUI_TEXT_RGB_B',1])",
+                "(profilenamespace getVariable ['IGUI_TEXT_RGB_A',0.8])"
             };
             text = "";
             class Attributes {

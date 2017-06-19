@@ -1,28 +1,33 @@
 /*
  * Author: commy2
+ * Handle the open inventory event. Camshake and sound on target client.
  *
- * Handle the open inventory event. Display message on traget client.
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Backpack <OBJECT>
  *
- * Argument:
- * Input from "InventoryOpened" eventhandler
+ * Return Value:
+ * false. Always open the inventory dialog. <BOOL>
  *
- * Return value:
- * false. Always open the inventory dialog. (Bool)
+ * Example:
+ * [bob, backpack] call ace_backpacks_fnc_onOpenInventory
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private "_target";
-params ["","_backpack"];
+params ["_unit", "_backpack"];
 
-// exit if the target is not a backpack
-if !([_backpack] call FUNC(isBackpack)) exitWith {};
+// exit if the target is not a real backpack, i.e. parachute, static weapon bag etc.
+if !(_backpack call FUNC(isBackpack)) exitWith {false};
 
 // get the unit that wears the backpack object
-_target = _this call FUNC(getBackpackAssignedUnit);
+private _target = objectParent _backpack;
 
 if (isNull _target) exitWith {false};
+
 // raise event on target unit
-["backpackOpened", _target, [_target, _backpack]] call EFUNC(common,targetEvent);
+["ace_backpackOpened", [_target, _backpack], _target] call CBA_fnc_targetEvent;
 
 // return false to open inventory as usual
 false

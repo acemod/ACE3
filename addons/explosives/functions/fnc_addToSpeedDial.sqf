@@ -29,7 +29,7 @@ if ((_code) == "") exitWith {
 };
 {
     if ((_x select 0) == _name) exitWith {
-        _speedDial set [_foreachindex, _this];
+        _speedDial set [_forEachIndex, _this];
         _found = true;
     };
 } forEach _speedDial;

@@ -9,32 +9,32 @@
  * 2: Selection Number <NUMBER>
  * 3: The action to modify <OBJECT>
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, kevin, 2, "action"] call ACE_medical_fnc_modifyMedicalAction
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-EXPLODE_4_PVT(_this,_target,_player,_selectionN,_actionData);
-if (GVAR(level) < 2) exitwith {
-    private ["_pointDamage"];
-    _pointDamage = _target getHitPointDamage (["HitHead", "HitBody", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"] select _selectionN);
+params ["_target", "_player", "_partNumber", "_actionData"];
 
-    if (_pointDamage >= 0.8) exitWith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
+private _bloodLossOnSelection = 0;
+// Add all bleeding from wounds on selection
+{
+    _x params ["", "", "_selectionX", "_amountOf", "_percentageOpen"];
+    if (_selectionX == _partNumber) then {
+        _bloodLossOnSelection = _bloodLossOnSelection + (_amountOf * _percentageOpen);
     };
-    if (_pointDamage > 0) exitWith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossYellow.paa))];
+} forEach (_target getvariable [QGVAR(openWounds), []]);
+
+if (_bloodLossOnSelection >= 0.15) then {
+    _actionData set [2, QPATHTOF(UI\icons\medical_crossRed.paa)];
+} else {
+    if (_bloodLossOnSelection > 0 ) then {
+        _actionData set [2, QPATHTOF(UI\icons\medical_crossYellow.paa)];
     };
 };
-
-private ["_openWounds", "_amountOf"];
-_openWounds = _target getvariable [QGVAR(openWounds), []];
-{
-    _amountOf = _x select 3;
-    if (_amountOf > 0 && {(_selectionN == (_x select 2))} && {(_x select 4) > 0}) exitwith {
-        _actionData set [2, QUOTE(PATHTOF(UI\icons\medical_crossRed.paa))];
-    };
-} foreach _openWounds;

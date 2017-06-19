@@ -1,16 +1,19 @@
+
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_Sandbags {
+            class GVAR(place) {
                 displayName = CSTRING(DeploySandbag);
-                condition = QUOTE(call FUNC(canDeploy));
-                //wait a frame to handle "Do When releasing action menu key" option:
-                statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [])] call EFUNC(common,execNextFrame));
+                condition = QUOTE(_this call FUNC(canDeploy));
+                //wait a frame to handle "Do When releasing action menu key" option
+                statement = QUOTE([ARR_2({_this call FUNC(deploy)},_this)] call CBA_fnc_execNextFrame);
                 exceptions[] = {"isNotSwimming"};
-                showDisabled = 1;
+                showDisabled = 0;
                 priority = 4;
-                icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                icon = QPATHTOF(UI\icon_sandbag_ca.paa);
             };
         };
     };
@@ -26,8 +29,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Sandbag_empty,1);
         };
     };
-    /*
-    class ACE_Item_Sandbag: Item_Base_F {
+
+    /*class ACE_Item_Sandbag: Item_Base_F {
         author = ECSTRING(common,ACETeam);
         scope = 2;
         scopeCurator = 2;
@@ -39,26 +42,30 @@ class CfgVehicles {
                 count = 1;
             };
         };
-    };
-    */
-    class thingX;
-    class ACE_SandbagObject: thingX {
+    };*/
+
+    class ThingX;
+    class ACE_SandbagObject: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         author = ECSTRING(common,ACETeam);
-        XEH_ENABLED;
-        scope = 1;
-        side = -1;
-        model = PATHTOF(data\ace_sandbag_build.p3d);
+        scope = 2;
+        side = 3;
+        model = QPATHTOF(data\ace_sandbag_build.p3d);
         displayName = CSTRING(sandbag_displayName);
+        vehicleClass = "ACE_Logistics_Items";
         typicalCargo[] = {};
         armor = 12000; // Withstand 200 5.56 bullets before sandbag hull is cheese
         mapSize = 0.4;
         nameSound = "Bunker";
-        icon = PATHTOF(UI\icon_sandbag_ca.paa);
+        icon = QPATHTOF(UI\icon_sandbag_ca.paa);
         accuracy = 1000;
-
         destrType = "DestructDefault";
 
         class DestructionEffects {};
+
         class Damage {
             tex[] = {};
             mat[] = {
@@ -67,39 +74,31 @@ class CfgVehicles {
                 "z\ace\addons\sandbag\data\bag_destruct.rvmat"
             };
         };
+
         class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
                 distance = 5;
                 condition = "true";
+
                 class ACE_PickUp {
                     selection = "";
                     displayName = CSTRING(PICKUPSB);
                     distance = 4;
-                    condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
+                    condition = QUOTE(!(_player getVariable [ARR_2(QUOTE(QGVAR(isUsingSandbag)),false)]));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
-                };
-                class ACE_Carry {
-                    selection = "";
-                    displayName = CSTRING(CARRYSB);
-                    distance = 4;
-                    condition = QUOTE(!(_player getVariable [ARR_2('ace_sandbag_usingSandbag',false)]));
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(carry));
-                    showDisabled = 0;
-                    exceptions[] = {};
-                    priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
     };
+
     class ACE_SandbagObject_NoGeo: ACE_SandbagObject {
         scope = 1;
-        model = PATHTOF(data\ace_sandbag_nogeo.p3d);
+        model = QPATHTOF(data\ace_sandbag_nogeo.p3d);
     };
 
     class Box_NATO_Support_F;

@@ -9,48 +9,45 @@
  * 3: The arguments for localization <ARRAY>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [bob, "type", "message", [_args]] call ace_medical_fnc_addToLog
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_type", "_message", "_arguments", "_lastNumber", "_moment", "_logVarName", "_log","_newLog", "_logs"];
-_unit = _this select 0;
-_type = _this select 1;
-_message = _this select 2;
-_arguments = _this select 3;
+params ["_unit", "_type", "_message", "_arguments"];
 
-if (!local _unit) exitwith {
-    [_this, QUOTE(DFUNC(addToLog)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (!local _unit) exitWith {
+    [QGVAR(addToMedicalLog), _this, _unit] call CBA_fnc_targetEvent;
 };
 
-_lastNumber = date select 4;
-_moment = format["%1:%2",date select 3, _lastNumber];
-if (_lastNumber < 10) then {
-    _moment = format["%1:0%2",date select 3, _lastNumber];
-};
-_logVarName = format[QGVAR(logFile_%1), _type];
+date params ["", "", "", "_hour", "_minute"];
 
-_log = _unit getvariable [_logVarName, []];
+private _moment = format [ (["%1:%2", "%1:0%2"] select (_minute < 10)), _hour, _minute];
+private _logVarName = format[QGVAR(logFile_%1), _type];
+
+private _log = _unit getVariable [_logVarName, []];
 if (count _log >= 8) then {
-    _newLog = [];
+    private _newLog = [];
     {
         // ensure the first element will not be added
-        if (_foreachIndex > 0) then {
-            _newLog pushback _x;
+        if (_forEachIndex > 0) then {
+            _newLog pushBack _x;
         };
-    }foreach _log;
+    } forEach _log;
     _log = _newLog;
 };
-_log pushback [_message,_moment,_type, _arguments];
+_log pushBack [_message, _moment, _type, _arguments];
 
-_unit setvariable [_logVarName, _log, true];
-["medical_onLogEntryAdded", [_unit, _type, _message, _arguments]] call EFUNC(common,localEvent);
+_unit setVariable [_logVarName, _log, true];
+["ace_medicalLogEntryAdded", [_unit, _type, _message, _arguments]] call CBA_fnc_localEvent;
 
-_logs = _unit getvariable [QGVAR(allLogs), []];
+private _logs = _unit getVariable [QGVAR(allLogs), []];
 if !(_logVarName in _logs) then {
-    _logs pushback _logVarName;
-    _unit setvariable [QGVAR(allLogs), _logs, true];
+    _logs pushBack _logVarName;
+    _unit setVariable [QGVAR(allLogs), _logs, true];
 };

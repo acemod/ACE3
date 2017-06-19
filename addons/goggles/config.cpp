@@ -3,20 +3,22 @@
 #define COLOUR 8.0
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"Garth 'L-H' de Wet"};
-        authorUrl = "http://garth.snakebiteink.co.za/";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Garth 'L-H' de Wet"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
 
-#define COMBAT_GOGGLES         ACE_Overlay = QUOTE(PATHTOF(textures\HUD\CombatGoggles.paa)); \
-        ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\CombatGogglesCracked.paa)); \
+#define COMBAT_GOGGLES         ACE_Overlay = QPATHTOF(textures\HUD\CombatGoggles.paa); \
+        ACE_OverlayCracked = QPATHTOF(textures\HUD\CombatGogglesCracked.paa); \
         ACE_Resistance = 2; \
         ACE_Protection = 1;
 
@@ -26,10 +28,10 @@ class CfgGlasses {
         ACE_TintAmount=0;
         ACE_Overlay = "";
         ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
-        ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\Cracked.paa));
+        ACE_OverlayCracked = QPATHTOF(textures\HUD\Cracked.paa);
         ACE_Resistance = 0;
         ACE_Protection = 0;
-        ACE_DustPath = QUOTE(PATHTOF(textures\fx\dust\%1.paa));
+        ACE_DustPath = QPATHTOF(textures\fx\dust\%1.paa);
     };
 
     class G_Combat:None {
@@ -37,8 +39,8 @@ class CfgGlasses {
     };
 
     class G_Diving {
-        ACE_Overlay = QUOTE(PATHTOF(textures\HUD\DivingGoggles.paa));
-        ACE_OverlayCracked = QUOTE(PATHTOF(textures\HUD\DivingGogglesCracked.paa));
+        ACE_Overlay = QPATHTOF(textures\HUD\DivingGoggles.paa);
+        ACE_OverlayCracked = QPATHTOF(textures\HUD\DivingGogglesCracked.paa);
         ACE_Resistance = 2;
         ACE_Protection = 1;
     };
@@ -183,13 +185,13 @@ class CfgGlasses {
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_sport:G_Bandanna_blk {
+    class G_Bandanna_sport: G_Bandanna_shades {
         ACE_Color[] = {1,0,0};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
         ACE_Protection = 1;
     };
-    class G_Bandanna_aviator:G_Bandanna_blk {
+    class G_Bandanna_aviator: G_Bandanna_shades {
         ACE_Color[] = {0,0,-1};
         ACE_TintAmount=COLOUR;
         ACE_Resistance = 1;
@@ -209,7 +211,7 @@ class CfgGesturesMale {
     class States {
         class GestureFreezeStand;
         class GestureWipeFace: GestureFreezeStand {
-            file = QUOTE(PATHTOF(anim\WipeGlasses.rtm));
+            file = QPATHTOF(anim\WipeGlasses.rtm);
             canPullTrigger = 0;
         };
     };

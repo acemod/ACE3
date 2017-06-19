@@ -1,20 +1,22 @@
 /*
  * Author: Ruthberg
- *
  * Calculates wind chill based on temperature and wind speed
  *
  * Arguments:
- * 0: temperature - degrees celcius <NUMBER>
- * 2: wind speed - m/s <NUMBER>
+ * 0: temperature - degrees celsius <NUMBER>
+ * 1: wind speed - m/s <NUMBER>
  *
  * Return Value:
- * 0: wind chill <NUMBER>
+ * wind chill <NUMBER>
+ *
+ * Example:
+ * [0, 10] call ace_weather_fnc_calculateWindChill
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_2(_t,_v);
+params ["_t", "_v"];
 
 // Source: https://en.wikipedia.org/wiki/Wind_chill
 

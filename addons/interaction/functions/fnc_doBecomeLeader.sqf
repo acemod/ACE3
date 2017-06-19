@@ -1,21 +1,21 @@
- /*
+/*
  * Author: PabstMirror
- * Become Leader of group
+ * Become Leader of group.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, player] call ace_interaction_fnc_doBecomeLeader
+ * [player] call ace_interaction_fnc_doBecomeLeader
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
-PARAMS_2(_target,_player);
+params ["_unit"];
 
-[QGVAR(selectLeader), (units group _player), [(group _player), _player]] call EFUNC(common,targetEvent);
+[QEGVAR(common,selectLeader), [group _unit, _unit], units group _unit] call CBA_fnc_targetEvent;

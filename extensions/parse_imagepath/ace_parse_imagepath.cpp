@@ -13,12 +13,13 @@
 
 #include "shared.hpp"
 
+#include <stdlib.h>
 #include <sstream>
 #include <string>
 
 extern "C" {
-    __declspec (dllexport) void __stdcall RVExtension(char *output, int outputSize, const char *function);
-};
+    EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+}
 
 std::string getImagePathFromStructuredText(const std::string & input) {
 	std::string returnValue = "";
@@ -36,19 +37,12 @@ std::string getImagePathFromStructuredText(const std::string & input) {
 	return returnValue;
 }
 
-// i like to live dangerously. jk, fix strncpy sometime pls.
-#pragma warning( push )
-#pragma warning( disable : 4996 )
-
 void __stdcall RVExtension(char *output, int outputSize, const char *function) {
-	ZERO_OUTPUT();
+    ZERO_OUTPUT();
     if (!strcmp(function, "version")) {
-        strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        strncpy_s(output, outputSize, ACE_FULL_VERSION_STR, _TRUNCATE);
     } else {
-        strncpy(output, getImagePathFromStructuredText(function).c_str(), outputSize);
-        output[outputSize - 1] = '\0';
+        strncpy_s(output, outputSize, getImagePathFromStructuredText(function).c_str(), _TRUNCATE);
     }
-	EXTENSION_RETURN();
+    EXTENSION_RETURN();
 }
-
-#pragma warning( pop )

@@ -1,35 +1,37 @@
 /*
  * Author: commy2
- *
  * Mutes the unit. It won't trigger auto generated chat messages either.
  *
- * Argument:
- * 0: Unit (Object)
- * 1: Reason to mute the unit (String)
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Reason to mute the unit <STRING>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, "because"] call ace_common_fnc_muteUnit
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 
-PARAMS_2(_unit,_reason);
+params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
 // add reason to mute to the unit
-private "_muteUnitReasons";
-_muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
+private _muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
 
 if !(_reason in _muteUnitReasons) then {
     _muteUnitReasons pushBack _reason;
     _unit setVariable [QGVAR(muteUnitReasons), _muteUnitReasons, true];
 };
 
-private "_speaker";
-_speaker = speaker _unit;
+private _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};
 
-["setSpeaker", [_unit, "ACE_NoVoice"]] call FUNC(globalEvent);
+[QGVAR(setSpeaker), [_unit, "ACE_NoVoice"]] call CBA_fnc_globalEvent;
 
 _unit setVariable ["ACE_OriginalSpeaker", _speaker, true];

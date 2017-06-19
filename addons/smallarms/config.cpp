@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"TaoSensai", "KoffeinFlummi"};
-        authorUrl = "https://github.com/Taosenai/tmr";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"TaoSensai", "KoffeinFlummi"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

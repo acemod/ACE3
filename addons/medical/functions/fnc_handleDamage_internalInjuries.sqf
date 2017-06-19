@@ -10,19 +10,17 @@
  * 4: Type of the damage done <STRING>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_internalInjuries
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage", "_bodyPartn"];
-_unit = _this select 0;
-_selectionName = _this select 1;
-_amountOfDamage = _this select 2;
-_sourceOfDamage = _this select 3;
-_typeOfDamage = _this select 4;
-_bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
+params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
+private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
 // TODO implement internal injuries

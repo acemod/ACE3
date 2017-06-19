@@ -1,26 +1,29 @@
 /*
  * Author: commy2
- *
  * Sets the name variable of the object. Used to prevent issues with the name command.
  *
- * Argument:
- * 0: Object (Object)
+ * Arguments:
+ * 0: Object <OBJECT>
  *
- * Return value:
- * Nothing.
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob] call ace_common_fnc_setName
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private ["_name"];
-
-PARAMS_1(_unit);
+params ["_unit"];
+TRACE_3("setName",_unit,alive _unit,name _unit);
 
 if (isNull _unit || {!alive _unit}) exitWith {};
 
 if (_unit isKindOf "CAManBase") then {
-    _name = [name _unit, true] call FUNC(sanitizeString);
-    
-    //if (_name != _unit getVariable ["ACE_Name", ""]) then {
-    _unit setVariable ["ACE_Name", _name, true];
-    //};
+    private _sanitizedName = [name _unit, true] call FUNC(sanitizeString);
+    private _rawName = [name _unit, false] call FUNC(sanitizeString);
+
+    _unit setVariable ["ACE_Name", _sanitizedName, true];
+    _unit setVariable ["ACE_NameRaw", _rawName, true];
 };

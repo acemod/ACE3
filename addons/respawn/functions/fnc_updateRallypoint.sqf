@@ -1,11 +1,23 @@
-// by commy2
+/*
+ * Author: commy2
+ * Updates marker position and texts.
+ *
+ * Arguments:
+ * 0: Marker <STRING>
+ * 1: Side <SIDE>
+ * 2: Position <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [marker_name, side ACE_Player, getPos ACE_Player] call ace_respawn_fnc_updateRallypoint
+ *
+ * Public: No
+ */
 #include "script_component.hpp"
 
-private ["_rallypoint", "_side", "_position"];
-
-_rallypoint = _this select 0;
-_side = _this select 1;
-_position = _this select 2;
+params ["_rallypoint", "_side", "_position"];
 
 if (!hasInterface) exitWith {};
 

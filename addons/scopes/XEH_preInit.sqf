@@ -2,15 +2,8 @@
 
 ADDON = false;
 
-PREP(adjustScope);
-PREP(adjustZero);
-PREP(applyScopeAdjustment);
-PREP(canAdjustZero);
-PREP(firedEH);
-PREP(getOptics);
-PREP(inventoryCheck);
-PREP(showZeroing);
-
-GVAR(fadeScript) = scriptNull;
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

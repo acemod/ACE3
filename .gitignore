@@ -1,4 +1,5 @@
 release/*
+tools/temp
 *.cache
 *.pbo
 texHeaders.bin
@@ -6,3 +7,4 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
+CHANGELOG.md

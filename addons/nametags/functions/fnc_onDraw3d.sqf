@@ -15,108 +15,131 @@
  */
 #include "script_component.hpp"
 
-private ["_onKeyPressAlphaMax", "_defaultIcon", "_distance", "_alpha", "_icon", "_targets", "_pos2", "_vecy", "_relPos", "_projDist", "_pos", "_target", "_targetEyePosASL", "_ambientBrightness", "_maxDistance"];
+BEGIN_COUNTER(GVAR(onDraw3d));
 
-//don't show nametags in spectator or if RscDisplayMPInterrupt is open
+// Don't show nametags in spectator or if RscDisplayMPInterrupt is open
 if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) exitWith {};
 
-_ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-_maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2] call EFUNC(common,cachedCall);
 
-_onKeyPressAlphaMax = if ((GVAR(showPlayerNames) in [3,4])) then {
-    2 + (GVAR(showNamesTime) - ACE_time); //after release 1 second of full opacity, 1 second of fading to 0
-} else {
-    1
+_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistance"];
+
+private _onKeyPressAlphaMax = 1;
+if (GVAR(showPlayerNames) == 3) then {
+    _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
+    _enabledTagsNearby = _enabledTagsNearby || {_onKeyPressAlphaMax > 0}
+};
+if (GVAR(showPlayerNames) == 4) then {
+    _onKeyPressAlphaMax = 2 + (GVAR(showNamesTime) - CBA_missionTime);
+    _enabledTagsCursor = _onKeyPressAlphaMax > 0;
 };
 
-_defaultIcon = if (GVAR(showPlayerRanks)) then {
-    ICON_NAME_RANK;
-} else {
-    ICON_NAME;
-};
+private _camPosAGL = positionCameraToWorld [0, 0, 0];
+if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
 
-//When cursorTarget is on a vehicle show the nametag for the commander.
-//If set to "Only On Keypress" settings, fade just like main tags
-if (GVAR(showCursorTagForVehicles) && {_onKeyPressAlphaMax > 0}) then {
-    _target = cursorTarget;
-    if ((!(_target isKindOf "CAManBase")) && {!(_target in allUnitsUAV)}) then {
-        _target = effectiveCommander _target;
-        if ((!isNull _target) &&
-                {(side (group _target)) == (side (group ACE_player))} &&
-                {_target != ACE_player} &&
-                {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-                {!(_target getVariable ["ACE_hideName", false])}) then {
-            _distance = ACE_player distance _target;
-            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
-            [ACE_player, _target, _alpha, _distance * 0.026, _defaultIcon] call FUNC(drawNameTagIcon);
-        };
-    };
-};
+private _camPosASL = AGLtoASL _camPosAGL;
 
-//"Only Cursor" mode, only show nametags for humans on cursorTarget
-if ((GVAR(showPlayerNames) in [2,4]) && {_onKeyPressAlphaMax > 0}) then {
-    _target = cursorTarget;
-    if ((!isNull _target) &&
-            {_target isKindOf "CAManBase"} &&
-            {(side (group _target)) == (side (group ACE_player))} &&
-            {_target != ACE_player} &&
-            {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-            {!(_target getVariable ["ACE_hideName", false])}) then {
-        _distance = ACE_player distance _target;
-        if (_distance > (_maxDistance + 5)) exitWith {};
-        _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
-        _icon = ICON_NONE;
-        if (GVAR(showSoundWaves) == 2) then {  //icon will be drawn below, so only show name here
-            _icon = if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}) then {ICON_NAME} else {_defaultIcon};
+// Show nametag for the unit behind the cursor or its commander
+if (_enabledTagsCursor) then {
+    private _target = cursorTarget;
+    if !(_target isKindOf "CAManBase") then {
+        // When cursorTarget is on a vehicle show the nametag for the commander.
+        if !(_target in allUnitsUAV) then {
+            _target = effectiveCommander _target;
         } else {
-            _icon = if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {ICON_NAME_SPEAK} else {_defaultIcon};
+            _target = objNull;
         };
+    };
+    if (isNull _target) exitWith {};
 
-        [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
+    if (_target != ACE_player &&
+        {(side group _target) == (side group ACE_player)} &&
+        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
+        {!isObjectHidden _target}) then {
+
+        private _distance = ACE_player distance _target;
+
+        private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
+        // Alpha:
+        // - base value determined by GVAR(playerNamesMaxAlpha)
+        // - decreases when _distance > _maxDistance
+        // - increases when the unit is speaking
+        // - it's clamped by the value of _onKeyPressAlphaMax
+        private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
+
+        if (_alpha > 0) then {
+            [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
+        };
     };
 };
 
-if (((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) || {GVAR(showSoundWaves) == 2}) then {
-    _pos = positionCameraToWorld [0, 0, 0];
-    _targets = _pos nearObjects ["CAManBase", _maxDistance + 5];
-
-    if (!surfaceIsWater _pos) then {
-        _pos = ATLtoASL _pos;
-    };
-    _pos2 = positionCameraToWorld [0, 0, 1];
-    if (!surfaceIsWater _pos2) then {
-        _pos2 = ATLtoASL _pos2;
-    };
-    _vecy = _pos2 vectorDiff _pos;
+// Show nametags for nearby units
+if (_enabledTagsNearby) then {
+    // Find valid targets and cache them
+    private _targets = [[], {
+        private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
+        _nearMen = _nearMen select {
+            _x != ACE_player &&
+            {(side group _x) == (side group ACE_player)} &&
+            {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
+            {!isObjectHidden _x}
+        };
+        private _crewMen = [];
+        if (vehicle ACE_player != ACE_player) then {
+            _crewMen = (crew vehicle ACE_player) select {
+                _x != ACE_player &&
+                {(side group _x) == (side group ACE_player)} &&
+                {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+                {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
+                {!isObjectHidden _x}
+            };
+        };
+        (_nearMen + _crewMen)
+    }, missionNamespace, QGVAR(nearMen), 0.5] call EFUNC(common,cachedCall);
 
     {
-        _target = _x;
+        private _target = _x;
 
-        _icon = ICON_NONE;
-        if ((GVAR(showPlayerNames) in [1,3]) && {_onKeyPressAlphaMax > 0}) then {
-            if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target} && {GVAR(showSoundWaves) > 0}) then {_icon = ICON_NAME_SPEAK;} else {_icon = _defaultIcon};
-        } else {
-            //showSoundWaves must be 2, only draw speak icon
-            if (([_target] call FUNC(isSpeaking)) && {(vehicle _target) == _target}) then {_icon = ICON_SPEAK;};
-        };
+        if !(isNull _target) then {
+            private _drawSoundwave = (GVAR(showSoundWaves) > 0) && {[_target] call FUNC(isSpeaking)};
+            if (_enabledTagsCursor && {!_drawSoundwave}) exitWith {}; // (Cursor Only && showSoundWaves==2) - quick exit
 
-        if ((_icon != ICON_NONE) &&
-                {(side (group _target)) == (side (group ACE_player))} &&
-                {_target != ACE_player} &&
-                {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-                {!(_target getVariable ["ACE_hideName", false])}) then {
+            private _relPos = (visiblePositionASL _target) vectorDiff _camPosASL;
+            private _distance = vectorMagnitude _relPos;
 
-            _targetEyePosASL = eyePos _target;
-            if (lineIntersects [_pos, _targetEyePosASL, ACE_player, _target]) exitWith {}; // Check if there is line of sight
+            // Fade on border
+            private _centerOffsetFactor = 1;
+            if (GVAR(showPlayerNames) == 5) then {
+                private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
+                if !(_screenPos isEqualTo []) then {
+                    // Distance from center / half of screen width
+                    _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
+                } else {
+                    _centerOffsetFactor = 0;
+                };
+            };
 
-            _relPos = (visiblePositionASL _target) vectorDiff _pos;
-            _distance = vectorMagnitude _relPos;
-            _projDist = _relPos vectorDistance (_vecy vectorMultiply (_relPos vectorDotProduct _vecy));
+            private _alphaMax = _onKeyPressAlphaMax;
+            if ((GVAR(showSoundWaves) == 2) && _drawSoundwave) then {
+                _drawName = _drawSoundwave;
+                _drawRank = false;
+                _alphaMax = 1;
+            };
+            // Alpha:
+            // - base value determined by GVAR(playerNamesMaxAlpha)
+            // - decreases when _distance > _maxDistance
+            // - increases when the unit is speaking
+            // - it's clamped by the value of _onKeyPressAlphaMax unless soundwaves are forced on and the unit is talking
+            private _alpha = (((1 + ([0, 0.2] select _drawSoundwave) - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha) * _centerOffsetFactor) min _alphaMax;
 
-            _alpha = (((1 - 0.2 * (_distance - _maxDistance)) min 1) * GVAR(playerNamesMaxAlpha)) min _onKeyPressAlphaMax;
-
-            [ACE_player, _target, _alpha, _distance * 0.026, _icon] call FUNC(drawNameTagIcon);
+            if (_alpha > 0) then {
+                [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
+            };
         };
         nil
     } count _targets;
 };
+
+END_COUNTER(GVAR(onDraw3d));

@@ -3,7 +3,7 @@
  * Correctly handles toggling of spectator interface elements for clean UX
  *
  * Arguments:
- * 0: Display
+ * 0: Display <DISPLAY>
  * 1: Toogle compass <BOOL> <OPTIONAL>
  * 2: Toogle help <BOOL> <OPTIONAL>
  * 3: Toogle interface <BOOL> <OPTIONAL>
@@ -15,7 +15,7 @@
  * None <NIL>
  *
  * Example:
- * [_dsiplay, nil, true] call ace_spectator_fnc_toggleInterface
+ * [_display, nil, true] call ace_spectator_fnc_toggleInterface
  *
  * Public: No
  */
@@ -43,7 +43,7 @@ if (GVAR(showMap)) then {
 
     // Centre map on camera/unit upon opening
     if (_toggleMap) then {
-        _map ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(camera)] select (GVAR(camMode) == 0)];
+        _map ctrlMapAnimAdd [0, 0.5, [GVAR(camUnit),GVAR(freeCamera)] select (GVAR(camMode) == 0)];
         ctrlMapAnimCommit _map;
     };
 } else {

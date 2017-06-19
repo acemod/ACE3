@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MX2A">
         <Key ID="STR_ACE_Yardage450_DisplayName">
@@ -9,6 +9,11 @@
             <German>Yardage 450</German>
             <Portuguese>Yardage 450</Portuguese>
             <Hungarian>Yardage 450</Hungarian>
+            <Russian>Yardage 450</Russian>
+            <Italian>Yardage 450</Italian>
+            <French>Yardage 450</French>
+            <Japanese>ヤードエイジ 450</Japanese>
+            <Korean>Yardage 450</Korean>
         </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
@@ -18,6 +23,11 @@
             <Czech>Laserový dálkoměr</Czech>
             <Portuguese>Medidor de Distância a laser</Portuguese>
             <Hungarian>Lézeres távolságmérő</Hungarian>
+            <Russian>Лазерный дальномер</Russian>
+            <Italian>Distanziometro Laser</Italian>
+            <French>Télémètre laser</French>
+            <Japanese>レーザー測距機</Japanese>
+            <Korean>레이저 거리측정기</Korean>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
@@ -27,6 +37,11 @@
             <Czech>Yardage 450 - Tlačítko napájení</Czech>
             <Portuguese>Yardage 450 - Botão de energia</Portuguese>
             <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
+            <Russian>Yardage 450 - Кнопка питания</Russian>
+            <Italian>Yardage 450 - Bottone Accensione</Italian>
+            <French>Yardage 450 - bouton d'alimentation</French>
+            <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
+            <Korean>Yardage 450 - 전원 버튼</Korean>
         </Key>
     </Package>
 </Project>

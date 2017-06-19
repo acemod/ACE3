@@ -1,25 +1,30 @@
 /*
  * Author: commy2
- *
  * Reload a launcher
  *
- * Argument:
- * 0: Unit to do the reloading (Object)
- * 1: Target to rload (Object)
- * 2: weapon name (String)
- * 3: missile name (String)
+ * Arguments:
+ * 0: Unit to do the reloading <OBJECT>
+ * 1: Target to rload <OBJECT>
+ * 2: weapon name <STRING>
+ * 3: missile name <STRING>
  *
- * Return value:
- * NONE
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_realoadLauncher
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_4(_unit,_target,_weapon,_magazine);
+params ["_unit","_target","_weapon","_magazine"];
+TRACE_4("params",_unit,_target,_weapon,_magazine);
 
 _target selectWeapon _weapon;
 
 if (currentWeapon _target != _weapon) exitWith {};
 if (currentMagazine _target != "") exitWith {};
 
-// command is wip, reload ACE_time for launchers is not intended.
-_target addWeaponItem [_weapon, _magazine]; 
+// command is wip, reload time for launchers is not intended.
+_target addWeaponItem [_weapon, _magazine];

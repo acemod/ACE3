@@ -15,18 +15,20 @@
  * Return Value:
  * stability factor <NUMBER>
  *
+ * Example:
+ * [1, 2, 3, 4, 5, 6, 7] call ace_advanced_ballistics_fnc_calculateStabilityFactor
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_twist", "_length", "_stabilityFactor"];
 params ["_caliber", "_bulletLength", "_bulletMass", "_barrelTwist", "_muzzleVelocity", "_temperature", "_barometricPressure"];
 
 // Source: http://www.jbmballistics.com/ballistics/bibliography/articles/miller_stability_1.pdf
-_twist = _barrelTwist / _caliber;
-_length = _bulletLength / _caliber;
+private _twist = _barrelTwist / _caliber;
+private _length = _bulletLength / _caliber;
 
-_stabilityFactor = 7587000 * _bulletMass / (_twist^2 * _caliber^3 * _length * (1 + _length^2));
+private _stabilityFactor = 7587000 * _bulletMass / (_twist^2 * _caliber^3 * _length * (1 + _length^2));
 
 if (_muzzleVelocity > 341.376) then {
     (_stabilityFactor * (_muzzleVelocity / 853.44) ^ (1/3)) * KELVIN(_temperature) / KELVIN(15) * 1013.25 / _barometricPressure

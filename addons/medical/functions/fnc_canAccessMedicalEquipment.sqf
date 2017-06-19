@@ -6,26 +6,27 @@
  * 0: The caller <OBJECT>
  * 1: The target <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * Can Treat <BOOL>
+ *
+ * Example:
+ * [bob, target] call ace_medical_fnc_canAccessMedicalEquipment
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_target", "_caller", "_accessLevel", "_return"];
-_caller = _this select 0;
-_target = _this select 1;
+params ["_caller", "_target"];
 
-_accessLevel = _target getvariable [QGVAR(allowSharedEquipmentAccess), -1];
+private _accessLevel = _target getVariable [QGVAR(allowSharedEquipmentAccess), -1];
 
-_return = false;
+private _return = false;
 
 if (_accessLevel >= 0) then {
-    if (_accessLevel == 0) exitwith { _return = true; };
-    if (_accessLevel == 1) exitwith { _return = (side _target == side _caller); };
-    if (_accessLevel == 2) exitwith { _return = (group _target == group _caller); };
+    if (_accessLevel == 0) exitWith { _return = true; };
+    if (_accessLevel == 1) exitWith { _return = (side _target == side _caller); };
+    if (_accessLevel == 2) exitWith { _return = (group _target == group _caller); };
 };
 
 _return;

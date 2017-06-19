@@ -4,8 +4,8 @@
  *
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
- * 1: Vehicle to repair <OBJECT
- * 2: Selected hitpoint <STRING>
+ * 1: Vehicle to repair <OBJECT>
+ * 2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
  * 3: Repair Action Classname <STRING>
  *
  * Return Value:
@@ -21,81 +21,113 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_calller,_target,_hitPoint,_className);
 
-private["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_locations", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn"];
+private ["_callbackProgress", "_callerAnim", "_calller", "_condition", "_config", "_consumeItems", "_displayText", "_engineerRequired", "_iconDisplayed", "_items", "_repairTime", "_repairTimeConfig", "_return", "_usersOfItems", "_vehicleStateCondition", "_wpn", "_settingName", "_settingItemsArray", "_hitPointClassname"];
 
 _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
-if !(isClass _config) exitwith {false}; // or go for a default?
+if !(isClass _config) exitWith {false}; // or go for a default?
 
 _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
     getNumber (_config >> "requiredEngineer");
 } else {
     // Check for required class
-    if (isText (_config >> "requiredEngineer")) exitwith {
+    if (isText (_config >> "requiredEngineer")) exitWith {
         missionNamespace getVariable [(getText (_config >> "requiredEngineer")), 0];
     };
     0;
 };
-if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitwith {false};
-if (isEngineOn _target) exitwith {false};
-_items = getArray (_config >> "items");
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitwith {false};
+if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
+
+if ((isEngineOn _target) && {GVAR(autoShutOffEngineWhenStartingRepair)}) then {
+    [QEGVAR(common,engineOn), [_target, false], _target] call CBA_fnc_targetEvent;
+};
+if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWith {
+    [LSTRING(shutOffEngineWarning), 1.5, _caller] call EFUNC(common,displayTextStructured);
+    false
+};
+
+//Items can be an array of required items or a string to a ACE_Setting array
+_items = if (isArray (_config >> "items")) then {
+    getArray (_config >> "items");
+} else {
+    _settingName = getText (_config >> "items");
+    _settingItemsArray = getArray (configFile >> "ACE_Settings" >> _settingName >> "_values");
+    if ((isNil _settingName) || {(missionNamespace getVariable _settingName) >= (count _settingItemsArray)}) exitWith {
+        ERROR("bad setting"); ["BAD"]
+    };
+    _settingItemsArray select (missionNamespace getVariable _settingName);
+};
+if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 _return = true;
 if (getText (_config >> "condition") != "") then {
     _condition = getText (_config >> "condition");
-    if (isnil _condition) then {
+    if (isNil _condition) then {
         _condition = compile _condition;
     } else {
         _condition = missionNamespace getVariable _condition;
     };
-    if (typeName _condition == "BOOL") then {
+    if (_condition isEqualType false) then {
         _return = _condition;
     } else {
         _return = [_caller, _target, _hitPoint, _className] call _condition;
     };
 };
-if (!_return) exitwith {false};
+if (!_return) exitWith {false};
 
-_vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
-    missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
-} else {
-    getNumber(_config >> "vehicleStateCondition")
-};
-// if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitwith {false};
+// _vehicleStateCondition = if (isText(_config >> "vehicleStateCondition")) then {
+    // missionNamespace getVariable [getText(_config >> "vehicleStateCondition"), 0]
+// } else {
+    // getNumber(_config >> "vehicleStateCondition")
+// };
+// if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
-_locations = getArray (_config >> "repairLocations");
-if ("All" in _locations) exitwith {true};
-
-private ["_repairFacility", "_repairVeh"];
-_repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
-_repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
-
-{
-    if (_x == "field") exitwith {_return = true;};
-    if (_x == "RepairFacility" && _repairFacility) exitwith {_return = true;};
-    if (_x == "RepairVehicle" && _repairVeh) exitwith {_return = true;};
-    if !(isnil _x) exitwith {
-        private "_val";
-        _val = missionNamespace getVariable _x;
-        if (typeName _val == "SCALAR") then {
-            _return = switch (_val) do {
-                case 0: {true}; //useAnywhere
-                case 1: {call _repairVeh}; //repairVehicleOnly
-                case 2: {call _repairFacility}; //repairFacilityOnly
-                case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
-                default {false}; //Disabled
+private _repairLocations = getArray (_config >> "repairLocations");
+if (!("All" in _repairLocations)) then {
+    private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
+    private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
+    {
+        if (_x == "field") exitWith {_return = true;};
+        if (_x == "RepairFacility" && _repairFacility) exitWith {_return = true;};
+        if (_x == "RepairVehicle" && _repairVeh) exitWith {_return = true;};
+        if !(isNil _x) exitWith {
+            private _val = missionNamespace getVariable _x;
+            if (_val isEqualType 0) then {
+                _return = switch (_val) do {
+                    case 0: {true}; //useAnywhere
+                    case 1: {call _repairVeh}; //repairVehicleOnly
+                    case 2: {call _repairFacility}; //repairFacilityOnly
+                    case 3: {(call _repairFacility) || {call _repairVeh}}; //vehicleAndFacility
+                    default {false}; //Disabled
+                };
             };
         };
-    };
-} forEach _locations;
+    } forEach _repairLocations;
+};
 
-if !(_return && alive _target) exitwith {false};
+private _requiredObjects = getArray (_config >> "claimObjects");
+private _claimObjectsAvailable = [];
+if (!(_requiredObjects isEqualTo [])) then {
+    _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    if (_claimObjectsAvailable isEqualTo []) then {
+        TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
+        _return = false
+    };
+};
+
+if !(_return && alive _target) exitWith {false};
+//Last exitWith: repair_success or repair_failure will be run
+
+//Claim required objects
+{
+    TRACE_2("Claiming", _x, (typeOf _x));
+    [_caller, _x, false] call EFUNC(common,claim);
+} forEach _claimObjectsAvailable;
 
 _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
     getNumber (_config >> "itemConsumed");
 } else {
     // Check for required class
-    if (isText (_config >> "itemConsumed")) exitwith {
+    if (isText (_config >> "itemConsumed")) exitWith {
         missionNamespace getVariable [(getText (_config >> "itemConsumed")), 0];
     };
     0;
@@ -103,7 +135,7 @@ _consumeItems = if (isNumber (_config >> "itemConsumed")) then {
 
 _usersOfItems = [];
 if (_consumeItems > 0) then {
-    _usersOfItems = ([_caller, _target, _items] call FUNC(useItems)) select 1;
+    _usersOfItems = ([_caller, _items] call FUNC(useItems)) select 1;
 };
 
 // Parse the config for the progress callback
@@ -120,7 +152,7 @@ if (isNil _callbackProgress) then {
 
 // Player Animation
 _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
-_caller setvariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
+_caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
 
 // Cannot use secondairy weapon for animation
 if (currentWeapon _caller == secondaryWeapon _caller) then {
@@ -138,46 +170,61 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
     };
 
     if (stance _caller == "STAND") then {
-        _caller setvariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
+        _caller setVariable [QGVAR(repairPrevAnimCaller), "amovpknlmstpsraswrfldnon"];
     } else {
-        _caller setvariable [QGVAR(repairPrevAnimCaller), animationState _caller];
+        _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
     };
     [_caller, _callerAnim] call EFUNC(common,doAnimation);
 };
 
-//Get repair time
-_repairTime = if (isNumber (_config >> "repairingTime")) then {
-    getNumber (_config >> "repairingTime");
-} else {
-    if (isText (_config >> "repairingTime")) exitwith {
-        _repairTimeConfig = getText(_config >> "repairingTime");
-        if (isnil _repairTimeConfig) then {
-            _repairTimeConfig = compile _repairTimeConfig;
-        } else {
-            _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
+// Get repair time
+_repairTime = [
+    configFile >> "CfgVehicles" >> typeOf _target >> QGVAR(repairTimes) >> configName _config,
+    "number",
+    -1
+] call CBA_fnc_getConfigEntry;
+
+if (_repairTime < 0) then {
+    _repairTime = if (isNumber (_config >> "repairingTime")) then {
+        getNumber (_config >> "repairingTime");
+    } else {
+        if (isText (_config >> "repairingTime")) exitWith {
+            _repairTimeConfig = getText (_config >> "repairingTime");
+            if (isNil _repairTimeConfig) then {
+                _repairTimeConfig = compile _repairTimeConfig;
+            } else {
+                _repairTimeConfig = missionNamespace getVariable _repairTimeConfig;
+            };
+            if (_repairTimeConfig isEqualType 0) exitWith {
+                _repairTimeConfig;
+            };
+            [_caller, _target, _hitPoint, _className] call _repairTimeConfig;
         };
-        if (typeName _repairTimeConfig == "SCALAR") exitwith {
-            _repairTimeConfig;
-        };
-        [_caller, _target, _hitPoint, _className] call _repairTimeConfig;
+        0;
     };
-    0;
 };
 
-private ["_processText"];
 // Find localized string
-_processText = getText (_config >> "displayNameProgress");
-([_hitPoint, _processText, _processText] call FUNC(getHitPointString)) params ["_text"];
+_hitPointClassname = if (_hitPoint isEqualType "") then {
+    _hitPoint
+} else {
+    ((getAllHitPointsDamage _target) select 0) select _hitPoint
+};
+private _processText = getText (_config >> "displayNameProgress");
+private _backupText = format [localize LSTRING(RepairingHitPoint), _hitPointClassname];
+([_hitPointClassname, _processText, _backupText] call FUNC(getHitPointString)) params ["_text"];
+
+TRACE_4("display",_hitPoint,_hitPointClassname,_processText,_text);
 
 // Start repair
 [
     _repairTime,
-    [_caller, _target, _hitPoint, _className, _items, _usersOfItems],
+    [_caller, _target, _hitPoint, _className, _items, _usersOfItems, _claimObjectsAvailable],
     DFUNC(repair_success),
     DFUNC(repair_failure),
     _text,
     _callbackProgress,
-    []
+    ["isNotOnLadder"]
 ] call EFUNC(common,progressBar);
 
 // Display Icon
@@ -195,7 +242,7 @@ if (_target != _caller) then {
 };
 
 if (_displayText != "") then {
-    ["displayTextStructured", [_caller], [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller]] call EFUNC(common,targetEvent);
+    [QEGVAR(common,displayTextStructured), [[_displayText, [_caller] call EFUNC(common,getName), [_target] call EFUNC(common,getName)], 1.5, _caller], [_caller]] call CBA_fnc_targetEvent;
 };
 
 true;

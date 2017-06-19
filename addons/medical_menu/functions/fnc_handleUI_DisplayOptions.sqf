@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * ["some category"] call ace_medical_menu_handleUI_DisplayOptions
+ * ["some category"] call ace_medical_menu_fnc_handleUI_DisplayOptions
  *
  * Public: No
  */
@@ -19,21 +19,23 @@
 #define END_IDC 27
 #define AMOUNT_OF_ENTRIES (count _entries)
 
-if (!hasInterface) exitwith{};
+if (!hasInterface) exitWith{};
 
-private ["_entries", "_display", "_newTarget", "_card", "_ctrl", "_code"];
+private ["_entries", "_display", "_newTarget", "_ctrl", "_code"];
 
 params ["_name"];
 
 disableSerialization;
 
 _display = uiNamespace getVariable QGVAR(medicalMenu);
-if (isNil "_display") exitwith {}; // no valid dialog present
+if (isNil "_display") exitWith {}; // no valid dialog present
 
-if (_name isEqualTo "toggle") exitwith {
-    if (GVAR(INTERACTION_TARGET) != ACE_player) then {
-        _newTarget = ACE_player;
-    } else {
+if (_name isEqualTo "toggle") exitWith {
+    _newTarget = ACE_player;
+    //If we are on the player, and only if our old target is still valid, switch to it:
+    if ((GVAR(INTERACTION_TARGET) == ACE_player) &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS), ["isNotInside"]] call EFUNC(common,canInteractWith)} &&
+            {[ACE_player, GVAR(INTERACTION_TARGET_PREVIOUS)] call FUNC(canOpenMenu)}) then {
         _newTarget = GVAR(INTERACTION_TARGET_PREVIOUS);
     };
 
@@ -42,7 +44,7 @@ if (_name isEqualTo "toggle") exitwith {
     closeDialog 0;
     [{
         [_this select 0] call FUNC(openMenu);
-    }, [_newTarget], 0.1] call EFUNC(common,waitAndExecute);
+    }, [_newTarget], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 // Clean the dropdown options list from all actions
@@ -59,11 +61,11 @@ GVAR(LatestDisplayOptionMenu) = _name;
 
 // The triage card has no options available
 lbClear 212;
-if (_name isEqualTo "triage") exitwith {
+if (_name isEqualTo "triage") exitWith {
 
     ctrlEnable [212, true];
     private ["_log", "_triageCardTexts", "_message"];
-    _log = GVAR(INTERACTION_TARGET) getvariable [QEGVAR(medical,triageCard), []];
+    _log = GVAR(INTERACTION_TARGET) getVariable [QEGVAR(medical,triageCard), []];
     _triageCardTexts = [];
     {
         _x params ["_item", "_amount", "_time"];
@@ -75,11 +77,11 @@ if (_name isEqualTo "triage") exitwith {
                 _message = localize _message;
             };
         };
-        _triageCardTexts pushback format["%1x - %2 (%3m)", _amount, _message, round((ACE_time - _time) / 60)];
+        _triageCardTexts pushBack format["%1x - %2 (%3m)", _amount, _message, round((CBA_missionTime - _time) / 60)];
         nil;
     } count _log;
 
-    if (count _triageCardTexts == 0) exitwith {
+    if (count _triageCardTexts == 0) exitWith {
         lbAdd [212,(localize ELSTRING(medical,TriageCard_NoEntry))];
     };
     {
@@ -94,7 +96,7 @@ _entries = [ACE_player, GVAR(INTERACTION_TARGET), _name] call FUNC(getTreatmentO
 
 {
     //player sidechat format["TRIGGERED: %1",_x];
-    if (_forEachIndex > END_IDC) exitwith {};
+    if (_forEachIndex > END_IDC) exitWith {};
     _ctrl = (_display displayCtrl (START_IDC + _forEachIndex));
     if (!(_forEachIndex > AMOUNT_OF_ENTRIES)) then {
         _ctrl ctrlSetText (_x select 0);

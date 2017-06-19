@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Unit to check <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Flashlight classnames (empty for none) <ARRAY>
  *
  * Example:
@@ -18,11 +18,11 @@
 
 params ["_unit"];
 
-_flashlights = [];
+private _flashlights = [];
 
 {
-    if ((isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) && !(_x in _flashlights)) then {
-        _flashlights pushBack _x;
+    if (isText (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "FlashLight" >> "ACE_Flashlight_Colour")) then {
+        _flashlights pushBackUnique _x;
     };
 } forEach (items _unit);
 

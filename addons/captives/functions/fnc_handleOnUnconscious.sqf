@@ -1,13 +1,13 @@
 /*
  * Author: commy2, PabstMirror
- * Handles the "medical_onUnconscious" event
+ * Handles the "ace_unconscious" event
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 0: Is Unconsisisiouses <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [bob, true] call ACE_captives_fnc_handleOnUnconscious

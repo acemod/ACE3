@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
@@ -7,47 +7,55 @@
             <Spanish>Reorganizar cargadores</Spanish>
             <French>Réorganiser les chargeurs</French>
             <Polish>Przepakuj magazynki</Polish>
-            <Czech>Přepáskovat Zásobníky</Czech>
-            <Italian>Ricarica caricatori</Italian>
+            <Czech>Přepáskovat zásobníky</Czech>
+            <Italian>Riempi i caricatori</Italian>
             <Portuguese>Reorganizar Carregadores</Portuguese>
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
+            <Japanese>弾倉を詰め替え</Japanese>
+            <Korean>탄창 다시 채우기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_SelectMagazineMenu">
             <English>Select Magazine Menu</English>
             <German>Magazinauswahlmenü</German>
             <Spanish>Menú de selección de cargador</Spanish>
-            <French>Sélectionner menu des chargeurs</French>
+            <French>Sélectionner le menu des chargeurs</French>
             <Polish>Menu wyboru magazynków</Polish>
-            <Czech>Zvolit Menu zásobníků</Czech>
+            <Czech>Zvolit menu zásobníků</Czech>
             <Italian>Seleziona menù di ricarica</Italian>
             <Portuguese>Menu de Seleção de Carregador</Portuguese>
             <Hungarian>Fegyvertár menü kiválasztás</Hungarian>
             <Russian>Меню выбора магазинов</Russian>
+            <Japanese>弾倉メニューから選ぶ</Japanese>
+            <Korean>탄창 메뉴 고르기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_SelectMagazine">
             <English>Select Mag</English>
             <German>Magazin auswählen</German>
             <Spanish>Seleccionar cargador</Spanish>
-            <French>Sélectionner chargeur</French>
+            <French>Sélectionner le chargeur</French>
             <Polish>Wybierz magazynek</Polish>
-            <Czech>Zvolit zásobník</Czech>
+            <Czech>Vyber zásobník</Czech>
             <Italian>Seleziona caricatore</Italian>
             <Portuguese>Selecionar Carregador</Portuguese>
             <Hungarian>Tár kiválasztása</Hungarian>
             <Russian>Выбрать магазин</Russian>
+            <Japanese>弾倉を選択</Japanese>
+            <Korean>탄창 고르기</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
-            <English>Repacking Magazines ...</English>
-            <German>Magazine umpacken ...</German>
-            <Spanish>Reorganizando cargadores ...</Spanish>
-            <French>Réorganisation des chargeurs ...</French>
-            <Polish>Przepakowywanie magazynków ...</Polish>
-            <Czech>Páskuji zásobníky ...</Czech>
-            <Italian>Sto ricaricando le munizioni ...</Italian>
-            <Portuguese>Reorganizando Carregadores ...</Portuguese>
-            <Hungarian>Újratárazás ...</Hungarian>
-            <Russian>Перепаковка магазинов ...</Russian>
+            <English>Repacking Magazines...</English>
+            <German>Magazine umpacken...</German>
+            <Spanish>Reorganizando cargadores...</Spanish>
+            <French>Réorganisation des chargeurs...</French>
+            <Polish>Przepakowywanie magazynków...</Polish>
+            <Czech>Přepáskovávám zásobník...</Czech>
+            <Italian>Sto riempendo i caricatori...</Italian>
+            <Portuguese>Reorganizando Carregadores...</Portuguese>
+            <Hungarian>Újratárazás...</Hungarian>
+            <Russian>Перепаковка магазинов...</Russian>
+            <Japanese>弾倉を詰め替え中・・・</Japanese>
+            <Korean>다시 채우는중...</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazines">
             <English>Repacked Magazines</English>
@@ -56,10 +64,12 @@
             <French>Chargeurs réorganisés</French>
             <Polish>Magazynki przepakowane</Polish>
             <Czech>Přepáskované zásobníky</Czech>
-            <Italian>Caricatore ricaricato</Italian>
+            <Italian>Caricatore riempito</Italian>
             <Portuguese>Carregadores Reorganizados</Portuguese>
             <Hungarian>Újratárazott tárak</Hungarian>
             <Russian>Магазины перепакованы</Russian>
+            <Japanese>弾倉の詰め替えが終わった</Japanese>
+            <Korean>탄창 채워짐</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
             <English>%1 full mag(s) and %2 extra round(s)</English>
@@ -68,10 +78,12 @@
             <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en rab</French>
             <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
             <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
-            <Italian>%1 caricatore(i) pieno e %2 munizioni extra</Italian>
+            <Italian>%1 caricatore(i) pieno e %2 munizione(i) extra</Italian>
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
+            <Japanese>%1 個の満杯な弾倉と入りきらなかった %2 個の弾倉</Japanese>
+            <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
@@ -82,8 +94,10 @@
             <Czech>Páskování dokončeno</Czech>
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
-            <Italian>Riempi caricatore</Italian>
+            <Italian>Caricatori riempiti</Italian>
             <Portuguese>Reorganização Terminada</Portuguese>
+            <Japanese>詰め替えが完了</Japanese>
+            <Korean>탄창 채우기 끝남</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
@@ -96,11 +110,13 @@
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento interrotto</Italian>
             <Portuguese>Reorganização Interrompida</Portuguese>
+            <Japanese>詰め替えを中断した</Japanese>
+            <Korean>탄창 채우기 방해받음</Korean>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
             <French>%1 plein(s) et %2 partiel(s)</French>
-            <German>%1 Vollständigen und %2 Teilweisen</German>
+            <German>%1 volle Magazine und 1 Magazin mit %2 Partronen</German>
             <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
@@ -108,6 +124,8 @@
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 pieno(i) e %2 parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
+            <Japanese>%1 個の満杯で、 %2 の余分数</Japanese>
+            <Korean>%1 꽉찼고 %2 부분참</Korean>
         </Key>
     </Package>
 </Project>

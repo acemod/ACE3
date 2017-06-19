@@ -1,27 +1,29 @@
 /*
  * Author: jaynus
- *
  * Remove a synced event handler
  *
- * Argument:
- * 0: Name (String)
- * 
- * Return value:
- * Boolean of success
+ * Arguments:
+ * 0: Name <STRING>
+ *
+ * Return Value:
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_removeSyncedEventHandler
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-PARAMS_1(_name);
+params ["_name"];
 
-private ["_data", "_eventId"];
-
-if (!HASH_HASKEY(GVAR(syncedEvents),_name)) exitWith {
-    diag_log text format["[ACE] Error, synced event key not found."];
+if !([GVAR(syncedEvents), _name] call CBA_fnc_hashHasKey) exitWith {
+    ERROR_1("Synced event key [%1] not found (removeSyncedEventHandler).", _name);
     false
 };
 
-_data = HASH_GET(GVAR(syncedEvents),_name);
-_eventId = _data select 3;
+private _data = [GVAR(syncedEvents), _name] call CBA_fnc_hashGet;
+_data params ["", "", "", "_eventId"];
 
-[_eventId] call ace_common_fnc_removeEventHandler;
-HASH_REM(GVAR(syncedEvents),_name);
+[_eventId] call CBA_fnc_removeEventHandler;
+[GVAR(syncedEvents), _name] call CBA_fnc_hashRem;

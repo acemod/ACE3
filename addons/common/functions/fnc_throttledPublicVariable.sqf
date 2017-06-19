@@ -17,21 +17,20 @@
  */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_varName,_maxDelay);
+params ["_unit", "_varName", "_maxDelay"];
 
-// Create the publish scheduler PFH the first ACE_time
+// Create the publish scheduler PFH the first time
 if (isNil QGVAR(publishSchedId)) then {
-
     GVAR(publishVarNames) = [];
     GVAR(publishNextTime) = 1e7;
 
     GVAR(publishSchedId) = [{
-
-        if (ACE_diagTime > GVAR(publishNextTime)) then {
+        if (diag_tickTime > GVAR(publishNextTime)) then {
             {
-                EXPLODE_2_PVT(_x,_unit,_varName);
-                _unit setVariable [_varName, (_unit getVariable _varName), true];
-            } forEach GVAR(publishVarNames);
+                _x params ["_unit", "_varName"];
+                _unit setVariable [_varName, _unit getVariable _varName, true];
+                false
+            } count GVAR(publishVarNames);
 
             GVAR(publishVarNames) = [];
             GVAR(publishNextTime) = 1e7;
@@ -40,10 +39,10 @@ if (isNil QGVAR(publishSchedId)) then {
 };
 
 // If the variable is not on the list
-if (GVAR(publishVarNames) find [_unit,_varName] == -1) exitWith {
-    GVAR(publishVarNames) pushBack [_unit,_varName];
-    GVAR(publishNextTime) = GVAR(publishNextTime) min (ACE_diagTime + _maxDelay);
+if (GVAR(publishVarNames) find [_unit, _varName] == -1) exitWith {
+    GVAR(publishVarNames) pushBack [_unit, _varName];
+    GVAR(publishNextTime) = GVAR(publishNextTime) min (diag_tickTime + _maxDelay);
 };
 
 // If the variable is on the list
-GVAR(publishNextTime) = GVAR(publishNextTime) min (ACE_diagTime + _maxDelay);
+GVAR(publishNextTime) = GVAR(publishNextTime) min (diag_tickTime + _maxDelay);

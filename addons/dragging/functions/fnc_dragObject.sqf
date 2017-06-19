@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Drag an object. Called from ace_dragging_fnc_startDrag
  *
  * Arguments:
@@ -10,25 +9,31 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_dragObject;
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_position", "_direction", "_offset", "_actionID"];
 params ["_unit", "_target"];
+TRACE_2("params",_unit,_target);
 
 // get attachTo offset and direction.
-_position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
-_direction = _target getVariable [QGVAR(dragDirection), 0];
+private _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
+private _direction = _target getVariable [QGVAR(dragDirection), 0];
 
 // add height offset of model
-_offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
-
+private _offset = (_target modelToWorldVisual [0, 0, 0] select 2) - (_unit modelToWorldVisual [0, 0, 0] select 2);
+if (_target isKindOf "CAManBase") then {
+    _offset = 0;
+};
 _position = _position vectorAdd [0, 0, _offset];
 
 // attach object
+TRACE_3("attaching",_position,_offset,_direction);
 _target attachTo [_unit, _position];
-["setDir", _target, [_target, _direction]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
 if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0, true] call EFUNC(common,doAnimation);
@@ -37,28 +42,29 @@ if (_target isKindOf "CAManBase") then {
 _unit setVariable [QGVAR(isDragging), true, true];
 _unit setVariable [QGVAR(draggedObject), _target, true];
 
-// add scrollwheel action to release object
-_actionID = _unit getVariable [QGVAR(ReleaseActionID), -1];
+// add drop action
+_unit setVariable [QGVAR(ReleaseActionID), [
+    _unit, "DefaultAction",
+    {!isNull ((_this select 0) getVariable [QGVAR(draggedObject), objNull])},
+    {[_this select 0, (_this select 0) getVariable [QGVAR(draggedObject), objNull]] call FUNC(dropObject)}
+] call EFUNC(common,addActionEventHandler)];
 
-if (_actionID != -1) then {
-    _unit removeAction _actionID;
-};
+// add anim changed EH
+[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
-_actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize LSTRING(Drop)],
-    QUOTE([ARR_2(_this select 0, (_this select 0) getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)])] call FUNC(dropObject)),
-    nil,
-    20,
-    false,
-    true,
-    "",
-    QUOTE(!isNull (_this getVariable [ARR_2(QUOTE(QGVAR(draggedObject)),objNull)]))
-];
-
-_unit setVariable [QGVAR(ReleaseActionID), _actionID];
+// show mouse hint
+[localize LSTRING(Drop), ""] call EFUNC(interaction,showMouseHint);
 
 // check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target]] call CBA_fnc_addPerFrameHandler;
+[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // reset current dragging height.
 GVAR(currentHeightChange) = 0;
+
+// prevent UAVs from firing
+private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
+
+if !(_UAVCrew isEqualTo []) then {
+    {_target deleteVehicleCrew _x} count _UAVCrew;
+    _target setVariable [QGVAR(isUAV), true, true];
+};

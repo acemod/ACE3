@@ -10,7 +10,10 @@
  * Return Value:
  * None
  *
- * Public: No
+ * Example:
+ * [1, 1, 1] call ace_common_fnc_positionToASL
+ *
+ * Public: Yes
  */
 #include "script_component.hpp"
 

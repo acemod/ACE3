@@ -6,7 +6,7 @@
     // Conditions: specific
     if !(GVAR(active)) exitWith {false};
     if (currentWeapon ACE_player != "ACE_Yardage450" || cameraView != "GUNNER") exitWith {false};
-    
+
     // Statement
     if !(GVAR(powerButtonPressed)) then {
         GVAR(powerButtonPressed) = true;
@@ -19,7 +19,7 @@
     if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (currentWeapon ACE_player != "ACE_Yardage450" || cameraView != "GUNNER") exitWith {false};
-    
+
     // Statement
     GVAR(powerButtonPressed) = false;
     call FUNC(turnOn);

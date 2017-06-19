@@ -3,76 +3,73 @@
  * Unload a person from a vehicle, local
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: unit to unload <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: Unloader (player) <OBJECT><OPTIONAL>
  *
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
  *
+ * Example:
+ * [bob, car, bob] call ace_common_fnc_unloadpersonLocal
+ *
  * Public: No
  */
-//#define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
-private ["_loaded", "_emptyPos","_validVehiclestate"];
-PARAMS_2(_unit,_vehicle);
-_validVehiclestate = true;
+params ["_unit", "_vehicle", ["_unloader", objNull]];
+TRACE_3("params",_unit,_vehicle,_unloader);
 
-if (_vehicle isKindOf "Ship" ) then {
-    if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)}) then {_validVehiclestate = false};
-    TRACE_1("SHIP Ground Check", getPosATL _vehicle );
-    _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]); // TODO: if spot is underwater pick another spot.
-} else {
-    if (_vehicle isKindOf "Air" ) then {
-        if !(speed _vehicle <1 && {isTouchingGround _vehicle})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = (getPosASL _vehicle) call EFUNC(common,ASLtoPosition);
-        _emptyPos = [(_emptyPos select 0) + random(5), (_emptyPos select 1) + random(5), _emptyPos select 2 ];
-    } else {
-        if !(speed _vehicle <1 && {(((getPosATL _vehicle) select 2) < 2)})  then {_validVehiclestate = false};
-        TRACE_1("Vehicle Ground Check", isTouchingGround _vehicle);
-        _emptyPos = ((getPosASL _vehicle) call EFUNC(common,ASLtoPosition) findEmptyPosition [0, 13, typeof _unit]);
+//This covers testing vehicle stability and finding a safe position
+private _emptyPos = [_vehicle, (typeOf _unit), _unloader] call EFUNC(common,findUnloadPosition);
+TRACE_1("findUnloadPosition",_emptyPos);
+
+if (count _emptyPos != 3) exitwith {
+    WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
+        //display text saying there are no safe places to exit the vehicle
+        [QGVAR(displayTextStructured), [localize LSTRING(NoRoomToUnload)], [_unloader]] call CBA_fnc_targetEvent;
     };
+    false
 };
-
-TRACE_1("getPosASL Vehicle Check", getPosASL _vehicle);
-if (!_validVehiclestate) exitwith { diag_log format["Unable to unload patient because invalid (%1) vehicle state. Either moving or Not close enough on the ground. position: %2 isTouchingGround: %3 Speed: %4", _vehicle, getPos _vehicle, isTouchingGround _vehicle, speed _vehicle]; false };
-
-diag_log str _emptyPos;
-
-if (count _emptyPos == 0) exitwith {diag_log format["No safe empty spots to unload patient. %1", _emptyPos]; false};  //consider displaying text saying there are no safe places to exit the vehicle
-
 
 unassignVehicle _unit;
 [_unit] orderGetIn false;
+
 TRACE_1("Ejecting", alive _unit);
+
 _unit action ["Eject", vehicle _unit];
-[ {
-    private "_anim";
-    PARAMS_2(_unit,_emptyPos);
-    _unit setPosASL (_emptyPos call EFUNC(common,PositiontoASL));
-    if (!([_unit] call FUNC(isAwake))) then {
+
+[{
+    params ["_unit", "_emptyPos"];
+
+    _unit setPosASL AGLToASL _emptyPos;
+
+    if !([_unit] call FUNC(isAwake)) then {
         TRACE_1("Check if isAwake", [_unit] call FUNC(isAwake));
+
         if (driver _unit == _unit) then {
-            _anim = [_unit] call EFUNC(common,getDeathAnim);
-            [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
+            private _anim = [_unit] call FUNC(getDeathAnim);
+
+            [_unit, _anim, 1, true] call FUNC(doAnimation);
+
             [{
-                _unit = _this select 0;
-                _anim = _this select 1;
+                params ["_unit", "_anim"];
                 if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
-                    [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
+                    [_unit, _anim, 2, true] call FUNC(doAnimation);
                 };
-            }, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
+            }, [_unit, _anim], 0.5] call CBA_fnc_waitAndExecute;
         };
     };
-},[_unit,_emptyPos], 0.5, 0] call EFUNC(common,waitAndExecute);
-
+}, [_unit, _emptyPos], 0.5] call CBA_fnc_waitAndExecute;
 
 [_unit, false, GROUP_SWITCH_ID, side group _unit] call FUNC(switchToGroupSide);
 
-_loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
-_loaded = _loaded - [_unit];
-_vehicle setvariable [QGVAR(loaded_persons),_loaded,true];
+private _loaded = _vehicle getvariable [QGVAR(loaded_persons),[]];
+_loaded deleteAt (_loaded find _unit);
+
+_vehicle setvariable [QGVAR(loaded_persons), _loaded, true];
 
 true

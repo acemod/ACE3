@@ -2,23 +2,25 @@
  * Author: esteldunedain
  * Take full path and split it between parent path and action name
  *
- * Argument:
+ * Arguments:
  * Full path of the action to remove <ARRAY>
  *
- * Return value:
+ * Return Value:
  * 0: Parent path <ARRAY>
  * 1: Action name <STRING>
+ *
+ * Example:
+ * [[path]] call ACE_interact_menu_fnc_splitPath
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_parentPath","_actionName", "_i"];
-_parentPath = [];
-for [{_i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
+private _parentPath = [];
+for [{private _i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
     _parentPath pushBack (_this select _i);
 };
-_actionName = if (count _this > 0) then {
+private _actionName = if (count _this > 0) then {
     _this select ((count _this) - 1);
 } else {
     ""

@@ -15,7 +15,6 @@
  */
 #include "script_component.hpp"
 
-private["_fingerPosPrecise", "_playerEyePos", "_sendFingerToPlayers", "_nearbyMen"];
 
 if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
@@ -25,27 +24,31 @@ if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "Stat
 //Check camera view (not in GUNNER)
 if !(cameraView in ["INTERNAL", "EXTERNAL"]) exitWith {false};
 //Exit if run recently (run every 1 seconds)
-if (ACE_diagTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
+if (diag_tickTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
 
-GVAR(lastFPTime) = ACE_diagTime;
+GVAR(lastFPTime) = diag_tickTime;
 
-_fingerPosPrecise = positionCameraToWorld [0, 0, FP_DISTANCE];
-_playerEyePos = eyePos ACE_player;
+// Find where is the finger pointing
+private _originASL = AGLtoASL positionCameraToWorld [0, 0, 0];
+private _fingerPosASL = AGLtoASL positionCameraToWorld [0, 0, FP_DISTANCE];
+private _intersections = lineIntersectsSurfaces [_originASL, _fingerPosASL, ACE_player, vehicle ACE_player, true, 1];
+if !(_intersections isEqualTo []) then {
+    _fingerPosASL = _intersections select 0 select 0;
+};
 
-_sendFingerToPlayers = [];
-
-
-_nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
+// Find who should the finger be sent to
+private _playerEyePosASL = eyePos ACE_player;
+private _sendFingerToPlayers = [];
+private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 {
     _nearbyMen append (crew _x);
 } count (ACE_player nearObjects ["StaticWeapon", (GVAR(maxRange) + 2)]);
-
 {
-    if ((((eyePos _x) vectorDistance _playerEyePos) < GVAR(maxRange)) &&
+    if ((((eyePos _x) vectorDistance _playerEyePosASL) < GVAR(maxRange)) &&
             {alive _x} &&
             {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
-            {!(lineIntersects [(eyePos _x), _playerEyePos, ACE_player, _x])} &&
+            {!(lineIntersects [(eyePos _x), _playerEyePosASL, ACE_player, _x])} &&
             {[_x] call EFUNC(common,isPlayer)}) then {
 
         _sendFingerToPlayers pushBack _x;
@@ -55,8 +58,8 @@ _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]);
 
 TRACE_1("sending finger to",_sendFingerToPlayers);
 
-[QGVAR(fingered), _sendFingerToPlayers, [ACE_player, _fingerPosPrecise]] call EFUNC(common,targetEvent);
+[QGVAR(fingered), [ACE_player, _fingerPosASL, _originASL vectorDistance _fingerPosASL], _sendFingerToPlayers] call CBA_fnc_targetEvent;
 
-ACE_player playActionNow "GestureGo";
+[ACE_player, "GestureGo"] call EFUNC(common,doGesture);
 
 true

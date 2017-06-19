@@ -2,11 +2,8 @@
 
 ADDON = false;
 
-PREP(deploy);
-PREP(dismount);
-PREP(dismountSuccess);
-PREP(handleDamage);
-PREP(handleKilled);
-PREP(vehicleDamage);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

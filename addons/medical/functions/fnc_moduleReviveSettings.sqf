@@ -8,17 +8,17 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleReviveSettings
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if !(_activated) exitWith {};
 

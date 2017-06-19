@@ -1,12 +1,13 @@
 class CfgVehicles {
     class ACE_Module;
-    class GVAR(ModuleSettings) : ACE_Module {
+    class GVAR(ModuleSettings): ACE_Module {
         author = ECSTRING(common,ACETeam);
         category = "ACE";
         function = QUOTE(DFUNC(initModule));
         displayName = CSTRING(Module_DisplayName);
         scope = 2;
         isGlobal = 1;
+        isSingular = 1;
         //icon = ""; // needs an icon
         class Arguments {
             class moduleViewDistanceEnabled {

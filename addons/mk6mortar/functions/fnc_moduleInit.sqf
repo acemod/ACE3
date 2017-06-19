@@ -25,3 +25,4 @@ if (!isServer) exitWith {};
 [_logic, QGVAR(airResistanceEnabled), "airResistanceEnabled"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowComputerRangefinder), "allowComputerRangefinder"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowCompass), "allowCompass"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(useAmmoHandling), "useAmmoHandling"] call EFUNC(common,readSettingFromModule);

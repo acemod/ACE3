@@ -7,7 +7,7 @@
  * 1: Corpse <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [alive, body] call ACE_captives_fnc_handleRespawn;
@@ -20,20 +20,33 @@ params ["_unit","_dead"];
 
 if (!local _unit) exitWith {};
 
-//With respawn="group", we could be respawning into a unit that is handcuffed/captive
-//If they are, reset and rerun the SET function
-//if not, make sure to explicity disable the setCaptivityStatus, because captiveNum does not work correctly on respawn
+// Group and side respawn can potentially respawn you as a captive unit
+// Base and instant respawn cannot, so captive should be entirely reset
+// So we explicity account for the respawn type
+private _respawn = [0] call BIS_fnc_missionRespawnType;
 
-if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
-    _unit setVariable [QGVAR(isHandcuffed), false];
-    [_unit, true] call FUNC(setHandcuffed);
-} else {
-    [_unit, QGVAR(Handcuffed), false] call EFUNC(common,setCaptivityStatus);
-};
+if (_respawn > 3) then {
+    if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
+        _unit setVariable [QGVAR(isHandcuffed), false];
+        [_unit, true] call FUNC(setHandcuffed);
+    };
 
-if (_unit getVariable [QGVAR(isSurrendering), false]) then {
-    _unit setVariable [QGVAR(isSurrendering), false];
-    [_unit, true] call FUNC(setSurrendered);
+    if (_unit getVariable [QGVAR(isSurrendering), false]) then {
+        _unit setVariable [QGVAR(isSurrendering), false];
+        [_unit, true] call FUNC(setSurrendered);
+    };
 } else {
-    [_unit, QGVAR(Surrendered), false] call EFUNC(common,setCaptivityStatus);
+    if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
+        [_unit, false] call FUNC(setHandcuffed);
+    };
+    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+
+    if (_unit getVariable [QGVAR(isSurrendering), false]) then {
+        [_unit, false] call FUNC(setSurrendered);
+    };
+    [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
+
+    if (_unit getVariable [QGVAR(isEscorting), false]) then {
+        _unit setVariable [QGVAR(isEscorting), false, true];
+    };
 };

@@ -5,7 +5,7 @@
     if (GVAR(Kestrel4500)) exitWith {
         closeDialog 0;
         false
-    };    
+    };
     // Statement
     [] call FUNC(createKestrelDialog);
     false
@@ -17,7 +17,7 @@
 {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["notOnMap", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
-    
+
     // Statement
     [] call FUNC(displayKestrel);
     false
@@ -34,7 +34,7 @@ _conditonCode = {
 _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
-    
+
     // Statement
     if (!GVAR(Overlay)) then {
         //If no overlay, show it:
@@ -56,4 +56,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-[(localize LSTRING(Name)), QUOTE(PATHTOF(UI\Kestrel4500.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+[(localize LSTRING(Name)), QPATHTOF(UI\Kestrel4500.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);

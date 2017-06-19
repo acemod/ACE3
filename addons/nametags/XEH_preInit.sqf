@@ -2,14 +2,8 @@
 
 ADDON = false;
 
-PREP(canShow);
-PREP(doShow);
-PREP(drawNameTagIcon);
-PREP(getVehicleData);
-PREP(initIsSpeaking);
-PREP(moduleNameTags);
-PREP(onDraw3d);
-PREP(setText);
-PREP(updateSettings);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

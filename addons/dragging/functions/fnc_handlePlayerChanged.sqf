@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Handle player changes.
  *
  * Arguments:
@@ -11,13 +10,14 @@
  * None
  *
  * Example:
- * [_unitNew, _unitOld] call ace_dragging_fnc_handlePlayerChanged;
+ * [_newPlayer, _oldPlayer] call ace_dragging_fnc_handlePlayerChanged;
  *
  * Public: No
 */
 #include "script_component.hpp"
 
 params ["_newPlayer", "_oldPlayer"];
+TRACE_2("params",_newPlayer,_oldPlayer);
 
 {
     if (_x getVariable [QGVAR(isDragging), false]) then {

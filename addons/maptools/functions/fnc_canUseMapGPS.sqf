@@ -5,8 +5,11 @@
  * Arguments:
  * None
  *
- * Return value:
- * <BOOL>
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * call ACE_map_fnc_canUseMapGPS
  *
  * Public: No
  */

@@ -11,19 +11,23 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [medic, patient, "selectionName", "bandage"] call ace_medical_fnc_treatmentAdvanced_CPR
+ *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_caller", "_target", "_selectionName", "_className", "_items"];
-_caller = _this select 0;
-_target = _this select 1;
-_selectionName = _this select 2;
-_className = _this select 3;
-_items = _this select 4;
+params ["_caller", "_target", "_selectionName", "_className", "_items"];
 
-if (alive _target && {(_target getvariable [QGVAR(inCardiacArrest), false] || _target getvariable [QGVAR(inReviveState), false])}) then {
-    [[_caller, _target], QUOTE(DFUNC(treatmentAdvanced_CPRLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (alive _target && {(_target getVariable [QGVAR(inCardiacArrest), false] || _target getVariable [QGVAR(inReviveState), false])}) then {
+    [_target, "activity_view", LSTRING(Activity_cpr), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+
+    if (local _target) then {
+        [QGVAR(treatmentAdvanced_CPRLocal), [_caller, _target]] call CBA_fnc_localEvent;
+    } else {
+        [QGVAR(treatmentAdvanced_CPRLocal), [_caller, _target], _target] call CBA_fnc_targetEvent;
+    };
 };
 true;

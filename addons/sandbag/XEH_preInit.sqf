@@ -2,13 +2,8 @@
 
 ADDON = false;
 
-PREP(canDeploy);
-PREP(carry);
-PREP(deploy);
-PREP(deployCancel);
-PREP(deployConfirm);
-PREP(drop);
-PREP(handleScrollWheel);
-PREP(pickup);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

@@ -16,8 +16,6 @@
  */
 #include "script_component.hpp"
 
-private ["_cargo"];
-
 params ["_player", "_unit"];
 
 ((vehicle _unit) != _unit) && {_unit getVariable [QGVAR(isHandcuffed), false]}

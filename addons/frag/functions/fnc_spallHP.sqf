@@ -1,29 +1,43 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_spallHP
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private ["_initialData", "_hpData", "_round", "_hpRound", "_hpDirect"];
-//player sideChat format["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];
+//player sideChat format ["f: %1 c: %2", (_this select 0), (count GVAR(spallHPData))];
 
-if ((_this select 0) <= (count GVAR(spallHPData))) then {
-    _initialData = GVAR(spallHPData) select (_this select 0);
-    if (!isNil "_initialData") then {
-        _hpRound = ((_this select 1) select 0) select 2;
-        _round = _initialData select 3;
-        _hpDirect = ((_this select 1) select 0) select 10;
-        if (_hpDirect && {_round == _hpRound}) then {
-            {
-                _hpData =  _x;
-                _round = _initialData select 3;
-                // diag_log text format["HPDUMP-------------------------------------"];
-                // {
-                    // _hp = _x;
-                    // diag_log text format["%1 --", _forEachIndex];
-                    // {
-                        // diag_log text format["%1: %2", _forEachIndex, _x];
-                    // } forEach _hp;
-                // } forEach (_this select 1);
-                [DFUNC(doSpall), [_this, _forEachIndex]] call EFUNC(common,execNextFrame);
-                // player sideChat "WEEE";
-            } forEach (_this select 1);
-        };
-    };
+params ["_index", "_hitPartData"];
+
+private _initialData = GVAR(spallHPData) param [_index, []];
+if (_initialData isEqualTo []) exitWith {};
+
+private _hpRound = (_hitPartData select 0) select 2;
+private _round = _initialData select 3;
+private _hpDirect = (_hitPartData select 0) select 10;
+
+if (_hpDirect && {_round == _hpRound}) then {
+    {
+        // diag_log text format ["HPDUMP-------------------------------------"];
+        // {
+            // _hp = _x;
+            // diag_log text format ["%1 --", _forEachIndex];
+            // {
+                // diag_log text format ["%1: %2", _forEachIndex, _x];
+            // } forEach _hp;
+        // } forEach (_this select 1);
+        [DFUNC(doSpall), [_this, _forEachIndex]] call CBA_fnc_execNextFrame;
+        // player sideChat "WEEE";
+    } forEach _hitPartData;
 };

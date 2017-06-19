@@ -1,11 +1,11 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, SilentSpike
  * Initializes variables for loadable objects. Called from init EH.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -16,15 +16,59 @@
 #include "script_component.hpp"
 
 params ["_object"];
+private _type = typeOf _object;
+TRACE_2("params",_object,_type);
 
-if (getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(canLoad)) != 1) exitWith {};
+// If object had size given to it via eden/public then override config canLoad setting
+private _canLoadPublic = _object getVariable [QGVAR(canLoad), false];
+private _canLoadConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(canLoad)) == 1;
 
-private ["_type", "_action"];
-_type = typeOf _object;
+// Nothing to do here if object can't be loaded
+if !(_canLoadConfig || _canLoadPublic) exitWith {};
 
-// do nothing if the class is already initialized
+// Servers and HCs do not require action menus (beyond this point)
+if !(hasInterface) exitWith {};
+
+// Unnecessary to add actions to an object class that's already got them
 if (_type in GVAR(initializedItemClasses)) exitWith {};
-GVAR(initializedItemClasses) pushBack _type;
+if (_object getVariable [QGVAR(initObject),false]) exitWith {};
 
-_action = [QGVAR(load), localize LSTRING(loadObject), QUOTE(PATHTOF(UI\Icon_load.paa)), {[_player, _target] call FUNC(startLoadIn)}, {GVAR(enable) && {[_player, _target] call FUNC(canLoad)}}] call EFUNC(interact_menu,createAction);
-[_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+// Objects given size via eden have their actions added to the object
+// So this function may run for multiple of the same class in that case
+if (_canLoadConfig) then {
+    GVAR(initializedItemClasses) pushBack _type;
+    TRACE_1("Adding load cargo action to class", _type);
+} else {
+    _object setVariable [QGVAR(initObject),true];
+    TRACE_1("Adding load cargo action to object", _object);
+};
+
+// Vehicles with passengers inside are prevented from being loaded in `fnc_canLoadItemIn`
+private _condition = {
+    //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+    GVAR(enable) &&
+    {(_target getVariable [QGVAR(canLoad), getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(canLoad)) == 1])} &&
+    {locked _target < 2} &&
+    {alive _target} &&
+    {[_player, _target, []] call EFUNC(common,canInteractWith)} &&
+    {0 < {
+            private _type = typeOf _x;
+            private _hasCargoPublic = _x getVariable [QGVAR(hasCargo), false];
+            private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGVAR(hasCargo)) == 1;
+            (_hasCargoPublic || _hasCargoConfig) && {_x != _target}
+        } count (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE])}
+};
+private _statement = {
+    params ["_target", "_player"];
+    [_player, _target] call FUNC(startLoadIn);
+};
+private _text = localize LSTRING(loadObject);
+private _icon = QPATHTOF(UI\Icon_load.paa);
+
+private _action = [QGVAR(load), _text, _icon, _statement, _condition, {call FUNC(addCargoVehiclesActions)}] call EFUNC(interact_menu,createAction);
+if (_canLoadConfig) then {
+    [_type, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToClass);
+} else {
+    [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
+};
+

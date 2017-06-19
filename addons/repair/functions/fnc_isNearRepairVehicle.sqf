@@ -24,7 +24,7 @@ _nearObjects = nearestObjects [_unit, ["Air","LandVehicle"], 20];
 
 _return = false;
 {
-    if ([_x] call FUNC(isRepairVehicle)) exitwith {_return = true;};
+    if ([_x] call FUNC(isRepairVehicle)) exitWith {_return = true;};
 } forEach _nearObjects;
 
 _return;

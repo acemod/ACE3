@@ -6,7 +6,12 @@
  * 0: The unit <OBJECT>
  *
  * Return Value:
- * Triage status from the unit. Name, statusID, color <ARRAY <STRING><NUMBER><ARRAY>>
+ * 0: Name <STRING>
+ * 1: Status ID <NUMBER>
+ * 2: Color <ARRAY <NUMBER>>
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_getTriageStatus
  *
  * Public: Yes
  */
@@ -14,8 +19,8 @@
 #include "script_component.hpp"
 
 private ["_unit","_return","_status"];
-_unit = _this select 0;
-_status = _unit getvariable [QGVAR(triageLevel), -1];
+params ["_unit"];
+_status = _unit getVariable [QGVAR(triageLevel), -1];
 _return = switch (_status) do {
     case 1: {[localize LSTRING(Triage_Status_Minor), 1, [0, 0.5, 0, 0.9]]};
     case 2: {[localize LSTRING(Triage_Status_Delayed), 2, [0.7, 0.5, 0, 0.9]]};
@@ -23,4 +28,4 @@ _return = switch (_status) do {
     case 4: {[localize LSTRING(Triage_Status_Deceased), 4, [0, 0, 0, 0.9]]};
     default {[localize LSTRING(Triage_Status_None), 0, [0, 0, 0, 0.9]]};
 };
-_return;
+_return

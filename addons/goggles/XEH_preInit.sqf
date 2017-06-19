@@ -1,42 +1,9 @@
-/*
- * Author: Garth 'L-H' de Wet
- * Initialises Goggles.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
 #include "script_component.hpp"
 
 ADDON = false;
 
-PREP(applyDirtEffect);
-PREP(applyDust);
-PREP(applyGlassesEffect);
-
-PREP(checkGoggles);
-PREP(clearGlasses);
-PREP(dustHandler);
-PREP(externalCamera);
-PREP(getExplosionIndex);
-
-PREP(isDivingGoggles);
-PREP(isGogglesVisible);
-PREP(isInRotorWash);
-
-PREP(onEachFrame);
-PREP(rainEffect);
-
-PREP(removeDirtEffect);
-PREP(removeDustEffect);
-PREP(removeGlassesEffect);
-PREP(removeRainEffect);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

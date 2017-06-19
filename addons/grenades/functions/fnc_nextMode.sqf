@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private ["_mode", "_hint"];
-
-_mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode == 4) then {
     _mode = 0;
@@ -30,13 +28,13 @@ if (_mode == 3) then {
     _mode = 4;
 };
 
-_hint = [
-localize LSTRING(NormalThrow),
-localize LSTRING(HighThrow),
-localize LSTRING(PreciseThrow),
-localize LSTRING(RollGrenade),
-localize LSTRING(DropGrenade)
-] select _mode;
+private _hint = localize ([
+    LSTRING(NormalThrow),
+    LSTRING(HighThrow),
+    LSTRING(PreciseThrow),
+    LSTRING(RollGrenade),
+    LSTRING(DropGrenade)  
+] select _mode);
 
 [_hint] call EFUNC(common,displayTextStructured);
 

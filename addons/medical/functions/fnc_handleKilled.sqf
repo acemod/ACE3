@@ -5,28 +5,23 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_handleKilled
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private["_unit", "_openWounds"];
-_unit = _this select 0;
-if (!local _unit) exitwith {};
+params ["_unit"];
+if (!local _unit) exitWith {};
 
-_unit setvariable [QGVAR(pain), 0];
+_unit setVariable [QGVAR(pain), 0];
 if (GVAR(level) >= 2) then {
-    _unit setvariable [QGVAR(heartRate), 0];
-    _unit setvariable [QGVAR(bloodPressure), [0, 0]];
-    _unit setvariable [QGVAR(airwayStatus), 0];
-
-    if (USE_WOUND_EVENT_SYNC) then {
-        _openWounds = _unit getvariable [QGVAR(openWounds), []];
-        {
-            ["medical_propagateWound", [_unit, _x]] call EFUNC(common,globalEvent);
-        }foreach _openWounds;
-    };
+    _unit setVariable [QGVAR(heartRate), 0];
+    _unit setVariable [QGVAR(bloodPressure), [0, 0]];
+    _unit setVariable [QGVAR(airwayStatus), 0];
 };

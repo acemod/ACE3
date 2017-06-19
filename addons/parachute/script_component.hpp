@@ -1,6 +1,10 @@
-#define DEBUG_ENABLED_PARACHUTE
 #define COMPONENT parachute
+#define COMPONENT_BEAUTIFIED Parachute
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_PARACHUTE
   #define DEBUG_MODE_FULL

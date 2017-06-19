@@ -10,12 +10,15 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_menu_fnc_module
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+params ["_logic", "", "_activated"];
 
 if !(_activated) exitWith {};
 

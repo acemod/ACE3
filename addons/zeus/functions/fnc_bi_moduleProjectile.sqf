@@ -10,46 +10,43 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleProjectile
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-_fnc_scriptNameParentTemp = if !(isnil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
-private ['_fnc_scriptNameParent'];
-_fnc_scriptNameParent = _fnc_scriptNameParentTemp;
+_fnc_scriptNameParentTemp = if !(isNil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
+private _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
 
-private ['_fnc_scriptName'];
-_fnc_scriptName = 'BIS_fnc_moduleProjectile';
+private _fnc_scriptName = 'BIS_fnc_moduleProjectile';
 scriptname _fnc_scriptName;
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if ({local _x} count (objectcurators _logic) > 0) then {
     //--- Reveal the circle to curators
     _logic hideobject false;
     _logic setpos position _logic;
 };
-if !(isserver) exitwith {};
+if !(isserver) exitWith {};
 
 if (_activated) then {
-    _ammo = _logic getvariable ["type",gettext (configfile >> "cfgvehicles" >> typeof _logic >> "ammo")];
+    _ammo = _logic getVariable ["type",gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
-        _cfgAmmo = configfile >> "cfgammo" >> _ammo;
-        //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
-        _dirVar = _fnc_scriptname + typeof _logic;
-        _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
+        _CfgAmmo = configFile >> "CfgAmmo" >> _ammo;
+        _dirVar = _fnc_scriptname + typeOf _logic;
+        _logic setdir (missionnamespace getVariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;
         _posAmmo = +_pos;
         _posAmmo set [2,0];
         _dir = direction _logic;
-        _simulation = tolower gettext (configfile >> "cfgammo" >> _ammo >> "simulation");
+        _simulation = tolower gettext (configFile >> "CfgAmmo" >> _ammo >> "simulation");
         _altitude = 0;
         _velocity = [];
         _attach = false;
@@ -66,7 +63,7 @@ if (_activated) then {
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
                 _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
-                _sound = _sounds call bis_fnc_selectrandom;
+                _sound = selectRandom _sounds;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
                 _shakeRadius = 300;
@@ -104,21 +101,21 @@ if (_activated) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
-                            if (ACE_time > _x getvariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
+                            if (CBA_missionTime > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
                                 [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
-                                _x setvariable ["BIS_fnc_moduleProjectile_radio",ACE_time + _delay];
+                                _x setVariable ["BIS_fnc_moduleProjectile_radio",CBA_missionTime + _delay];
                             };
                         };
                     };
-                } foreach _entities;
+                } forEach _entities;
             };
         };
-        if (count _hint > 0) then {
+        if (count _hint > 0 && {count objectCurators _logic > 0}) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {
-            _altitude = (_logic getvariable ["altitude",_altitude]) call bis_fnc_parsenumber;
-            _radio = _logic getvariable ["radio",_radio];
+            _altitude = (_logic getVariable ["altitude",_altitude]) call bis_fnc_parsenumber;
+            _radio = _logic getVariable ["radio",_radio];
 
             //--- Create projectile
             _posAmmo set [2,_altitude];
@@ -128,7 +125,7 @@ if (_activated) then {
             if (_attach) then {_projectile attachto [_logic,[0,0,_altitude]];};
 
            // Added by ace_zeus for ace_frag compatibility
-            if (!isnil QEFUNC(frag,addPfhRound)) then {
+            if (!isNil QEFUNC(frag,addPfhRound)) then {
                 [objNull, _ammo, _projectile, true] call EFUNC(frag,addPfhRound);
             };
 
@@ -146,13 +143,13 @@ if (_activated) then {
 
             //--- Update
             if (_attach) then {
-                waituntil {
+                waitUntil {
                     _soundSource setposatl getposatl _projectile;
                     sleep 1;
                     isnull _projectile || isnull _logic
                 };
             } else {
-                waituntil {
+                waitUntil {
                     _soundSource setposatl getposatl _projectile;
 
                     if (getposatl _logic distance _pos > 0 || direction _logic != _dir) then {
@@ -164,7 +161,7 @@ if (_activated) then {
                         _projectile setposasl _posNew;
                         _pos = getposatl _logic;
                         _dir = direction _logic;
-                        missionnamespace setvariable [_dirVar,_dir];
+                        missionnamespace setVariable [_dirVar,_dir];
                     };
                     sleep 0.1;
                     isnull _projectile || isnull _logic
@@ -183,7 +180,7 @@ if (_activated) then {
             } else {
 
                 //--- Repeat to achieve permanent effect
-                _repeat = _logic getvariable ["repeat",0] > 0;
+                _repeat = _logic getVariable ["repeat",0] > 0;
                 if (_repeat) then {
                     [_logic,_units,_activated] call bis_fnc_moduleprojectile;
                 } else {
@@ -194,6 +191,6 @@ if (_activated) then {
             deletevehicle _logic;
         };
     } else {
-        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeof _logic] call bis_fnc_error;
+        ["Cannot create projectile, 'ammo' config attribute is missing in %1",typeOf _logic] call bis_fnc_error;
     };
 };

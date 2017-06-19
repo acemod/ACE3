@@ -7,34 +7,34 @@
  * 1: Patient <OBJECT>
  * 2: Items <ARRAY<STRING>>
  *
- * ReturnValue:
- * <NIL>
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [unit, patient, ["bandage"]] call ace_medical_fnc_useItems
  *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_medic", "_patient", "_items", "_itemUsedInfo", "_itemsUsedBy"];
-_medic = _this select 0;
-_patient = _this select 1;
-_items = _this select 2;
+params ["_medic", "_patient", "_items"];
 
-_itemsUsedBy = [];
+private _itemsUsedBy = [];
 {
     // handle a one of type use item
-    if (typeName _x == "ARRAY") then {
+    if (_x isEqualType []) then {
         {
-            _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-            if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
-        }foreach _x;
+            private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
+            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
+        } forEach _x;
     };
 
     // handle required item
-    if (typeName _x == "STRING") then {
-        _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
-        if (_itemUsedInfo select 0) exitwith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+    if (_x isEqualType "") then {
+        private _itemUsedInfo = [_medic, _patient, _x] call FUNC(useItem);
+        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
     };
-}foreach _items;
+} forEach _items;
 
 [count _items == count _itemsUsedBy, _itemsUsedBy];
