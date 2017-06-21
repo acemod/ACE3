@@ -50,7 +50,7 @@ class CfgMagazines {
     class 6Rnd_ACE_Hellfire_AGM114N: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
         count = 6;
         ammo = "ACE_Hellfire_AGM114N";
-        displayName = "AGM-114K [ACE]";
+        displayName = "AGM-114N [ACE]";
         displayNameShort = "AGM-114N";
         descriptionShort = "AGM-114N";
     };
