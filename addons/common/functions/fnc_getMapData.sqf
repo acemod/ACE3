@@ -24,6 +24,7 @@ _map = toLower _map;
 if (_map in ["tanoa"]) exitWith { [-18, 0] };
 if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
+if (_map in ["malden"]) exitWith { [38.8, 0] };
 
 if (_map in ["abbottabad"]) exitWith { [34, 1256] }; // Abbottabad elevation 1256m (Wikipedia)
 if (_map in ["abel"]) exitWith { [39, 0] }; // CWR2 Malden
