@@ -1,7 +1,7 @@
 class CfgWeapons {
     class missiles_SCALPEL;
     class GVAR(launcher): missiles_SCALPEL {
-        displayName = CSTRING(Hellfire);
+        displayName = "AGM-114K Hellfire II";
         GVAR(enabled) = 1; // show attack profile / lock on hud
         EGVAR(laser,canSelect) = 1; // can ace_laser lock (allows switching laser code)
         canLock = 0;

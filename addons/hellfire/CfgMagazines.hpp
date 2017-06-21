@@ -49,30 +49,38 @@ class CfgMagazines {
     // November - Metal augmented charge (Thermobaric) (Enclosures, ships, urban targets, air defense units)
     class 6Rnd_ACE_Hellfire_AGM114N: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
         count = 6;
-        ammo = "ACE_Hellfire_AGM114K";
+        ammo = "ACE_Hellfire_AGM114N";
         displayName = "AGM-114K [ACE]";
-        displayNameShort = "AGM-114K";
-        descriptionShort = "AGM-114K";
+        displayNameShort = "AGM-114N";
+        descriptionShort = "AGM-114N";
     };
 
     // 1.70 pylon magazines:
     class PylonMissile_1Rnd_ACE_Hellfire_AGM114N: PylonMissile_1Rnd_ACE_Hellfire_AGM114K { // Bare missle
         displayName = "1x AGM-114N [ACE]";
+        displayNameShort = "AGM-114N";
+        descriptionShort = "AGM-114N";
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114N: PylonRack_1Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
         displayName = "1x AGM-114N [ACE]";
+        displayNameShort = "AGM-114N";
+        descriptionShort = "AGM-114N";
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_3Rnd_ACE_Hellfire_AGM114N: PylonRack_3Rnd_ACE_Hellfire_AGM114K { // 3x Launcher Support Rack
         displayName = "3x AGM-114N [ACE]";
+        displayNameShort = "AGM-114N";
+        descriptionShort = "AGM-114N";
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
     class PylonRack_4Rnd_ACE_Hellfire_AGM114N: PylonRack_4Rnd_ACE_Hellfire_AGM114K { // 4x Launcher Support Rack
         displayName = "4x AGM-114N [ACE]";
+        displayNameShort = "AGM-114N";
+        descriptionShort = "AGM-114N";
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };

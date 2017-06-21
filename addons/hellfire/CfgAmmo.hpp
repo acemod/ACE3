@@ -19,7 +19,7 @@ class CfgAmmo {
         laserLock = 0;
         manualControl = 0;
         maxSpeed = 450;
-        
+
         thrustTime = 2.5; // motor burn 2-3 sec
         thrust = 250;
         timeToLive = 40;
@@ -63,5 +63,8 @@ class CfgAmmo {
         indirectHit = 200;
         indirectHitRange = 10;
         explosionEffects = "BombExplosion";
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1; // Missile Guidance must be explicitly enabled
+        };
     };
 };
