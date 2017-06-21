@@ -54,4 +54,14 @@ class CfgAmmo {
             attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
         };
     };
+    class ACE_Hellfire_AGM114N: ACE_Hellfire_AGM114K {
+        displayName = "AGM-114N";
+        displayNameShort = "AGM-114N";
+        description = "AGM-114N";
+        descriptionShort = "AGM-114N";
+        hit = 1100;
+        indirectHit = 200;
+        indirectHitRange = 10;
+        explosionEffects = "BombExplosion";
+    };
 };
