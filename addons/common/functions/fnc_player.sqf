@@ -9,6 +9,9 @@
  * Return Value:
  * Player controlled unit <OBJECT>
  *
+ * Example:
+ * [] call ace_common_fnc_player
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

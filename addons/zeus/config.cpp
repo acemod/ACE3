@@ -15,6 +15,9 @@ class CfgPatches {
             QGVAR(moduleToggleNvg),
             QGVAR(moduleToggleFlashlight),
             QGVAR(moduleSimulation),
+            QGVAR(moduleSuppressiveFire),
+            QGVAR(AddFullArsenal),
+            QGVAR(RemoveFullArsenal),
             QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};

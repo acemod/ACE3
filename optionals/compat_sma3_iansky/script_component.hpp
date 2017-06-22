@@ -1,4 +1,4 @@
-#define COMPONENT sma3_iansky_comp
+#define COMPONENT compat_sma3_iansky
 #define COMPONENT_BEAUTIFIED Iansky Scope Mod Compatibility
 
 #include "\z\ace\addons\main\script_mod.hpp"

@@ -3,10 +3,10 @@
  * Cut Parachute and delete Old
  *
  * Arguments:
- * 0: Object
+ * 0: Object <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call FUNC(cutParachute);

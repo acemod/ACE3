@@ -2,6 +2,7 @@
 // interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
+PREP(getInteractionDistance);
 PREP(getVehiclePos);
 PREP(getVehiclePosComplex);
 PREP(getWeaponPos);
@@ -29,6 +30,7 @@ PREP(pardon);
 
 // interaction with doors
 PREP(getDoor);
+PREP(getGlassDoor);
 PREP(getDoorAnimations);
 PREP(handleScrollWheel);
 PREP(openDoor);

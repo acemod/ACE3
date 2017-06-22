@@ -1,15 +1,18 @@
 /*
-* Author: Glowbal
-* Check if a unit is in a stable condition
-*
-* Arguments:
-* 0: The patient <OBJECT>
-*
-* Return Value:
-* Is in stable condition <BOOL>
-*
-* Public: No
-*/
+ * Author: Glowbal
+ * Check if a unit is in a stable condition
+ *
+ * Arguments:
+ * 0: The patient <OBJECT>
+ *
+ * Return Value:
+ * Is in stable condition <BOOL>
+ *
+ * Example:
+ * [bob] call ACE_medical_fnc_isInStableCondition
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 

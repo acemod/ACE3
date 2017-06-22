@@ -8,6 +8,9 @@
  * Return Value:
  * Wind cardinal direction <STRING>
  *
+ * Example:
+ * [] call ace_common_fnc_getWindDirection
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

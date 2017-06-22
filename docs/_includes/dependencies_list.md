@@ -138,6 +138,10 @@
 `ace_interaction`
 {% endif %}
 
+{% if include.component == "hellfire" %}
+`ace_interaction`, `ace_missileguidance`
+{% endif %}
+
 {% if include.component == "hitreactions" %}
 `ace_common`
 {% endif %}
@@ -258,6 +262,10 @@
 `ace_common`
 {% endif %}
 
+{% if include.component == "nlaw" %}
+`ace_missileguidance`
+{% endif %}
+
 {% if include.component == "noidle" %}
 `ace_common`
 {% endif %}
@@ -287,6 +295,10 @@
 {% endif %}
 
 {% if include.component == "parachute" %}
+`ace_common`
+{% endif %}
+
+{% if include.component == "quickmount" %}
 `ace_common`
 {% endif %}
 
@@ -448,6 +460,10 @@
 
 {% if include.component == "compat_rhs_afrf3" %}
 `ace_rearm`, `ace_refuel`, `ace_repair`, `rhs_c_weapons`, `rhs_c_troops`, `rhs_c_bmd`, `rhs_c_bmp`, `rhs_c_bmp3`, `rhs_c_a2port_armor`, `rhs_c_btr`, `rhs_c_sprut`, `rhs_c_t72`, `rhs_c_tanks`, `rhs_c_a2port_air`, `rhs_c_a2port_car`, `rhs_c_cars`, `rhs_c_trucks`, `rhs_c_2s3`, `rhs_c_rva`, `rhs_c_heavyweapons`
+{% endif %}
+
+{% if include.component == "compat_rhs_gref3" %}
+`rhsgref_main`, `rhsgref_c_weapons`
 {% endif %}
 
 {% if include.component == "compat_rhs_usf3" %}

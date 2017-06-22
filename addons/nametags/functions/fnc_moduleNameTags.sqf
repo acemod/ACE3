@@ -7,6 +7,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [] call ace_nametags_fnc_moduleNameTags
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"

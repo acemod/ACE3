@@ -10,17 +10,22 @@
  * Return Value:
  * None
  *
- * Example;
+ * Example:
  * function = "ace_rearm_fnc_moduleRearmSettings"
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-params ["_logic", "", ["_activated", false, [false]]];
+params [
+    "_logic",
+    "",
+    ["_activated", false, [false]]
+];
 
 if (!_activated) exitWith {};
 
 [_logic, QGVAR(level), "level"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(supply), "supply"] call EFUNC(common,readSettingFromModule);
 
-diag_log text format ["[ACE]: Rearm Module Initialized on level: %1", GVAR(level)];
+INFO_2("Module Initialized [level: %1][supply: %2]", GVAR(level), GVAR(supply));

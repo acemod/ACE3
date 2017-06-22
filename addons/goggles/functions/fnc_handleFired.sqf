@@ -8,6 +8,9 @@
  * Return Value:
  * Function is handled? <BOOL>
  *
+ * Example:
+ * call ace_goggles_fnc_handleFired
+ *
  * Public: No
  */
 #include "script_component.hpp"

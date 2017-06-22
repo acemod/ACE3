@@ -37,7 +37,7 @@ class Extended_InitPost_EventHandlers {
     class Helicopter {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            exclude[] = {QEGVAR(fastroping,helper), "ACE_friesBase"};
+            exclude[] = {QEGVAR(fastroping,helper), "ACE_friesBase", QEGVAR(refuel,helper)};
         };
     };
     class Plane {

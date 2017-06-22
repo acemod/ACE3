@@ -10,7 +10,7 @@
  * 2: errorMsg <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player1, player2, "Someting fucked up"] call ace_disarming_fnc_eventTargetFinish

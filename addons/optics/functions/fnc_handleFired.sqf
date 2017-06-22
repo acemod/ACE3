@@ -1,5 +1,5 @@
 /*
- * Original Author: Taosenai
+ * Author: Taosenai
  * Adapted By: KoffeinFlummi, commy2
  *
  * Animates the scope when firing. Called from the unified fired EH only for the local player.
@@ -9,7 +9,13 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ace_optics_fnc_handleFired
+ *
+ * Public: No
  */
+
 #include "script_component.hpp"
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];

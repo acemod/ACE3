@@ -13,6 +13,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 5, 5, 1, [injury], "bandage"] call ACE_medical_fnc_handleBandageOpening
+ *
  * Public: No
  */
 

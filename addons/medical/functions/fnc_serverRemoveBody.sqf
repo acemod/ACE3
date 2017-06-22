@@ -7,7 +7,7 @@
  * 0: Mr Body <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [cursorTarget] call ace_medical_fnc_serverRemoveBody

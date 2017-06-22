@@ -8,6 +8,9 @@
  * Return Value:
  * Variable Metadata <ARRAY>
  *
+ * Example:
+ * ["var"] call ace_common_fnc_getDefinedVariableInfo
+ *
  * Public: No
  */
 #include "script_component.hpp"

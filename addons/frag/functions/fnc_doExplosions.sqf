@@ -1,3 +1,19 @@
+/*
+ * Author: ACE-Team
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_frag_fnc_doExplosions
+ *
+ * Public: No
+ */
+
 //fnc_doExplosions.sqf
 #include "script_component.hpp"
 

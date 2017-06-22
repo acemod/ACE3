@@ -8,6 +8,11 @@
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [newbob, oldbob] call ace_advanced_fatigue_fnc_handlePlayerChanged
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 params ["_newUnit", "_oldUnit"];
@@ -54,7 +59,6 @@ GVAR(peakPower)       = VO2MAX_STRENGTH * GVAR(VO2MaxPower);
 
 GVAR(ae1PathwayPower) = GVAR(peakPower) / (13.3 + 16.7 + 113.3) * 13.3 * ANTPERCENT ^ 1.28 * 1.362;
 GVAR(ae2PathwayPower) = GVAR(peakPower) / (13.3 + 16.7 + 113.3) * 16.7 * ANTPERCENT ^ 1.28 * 1.362;
-GVAR(anPathwayPower)  = GVAR(peakPower) - _ae1PathwayPower - _ae2PathwayPower;
 
 GVAR(ppeBlackoutLast) = 100;
 GVAR(lastBreath)      = 0;

@@ -50,6 +50,9 @@ addMissionEventHandler ["Loaded",{
             TRACE_1("preload done",_this);
         }, [_x]] call CBA_fnc_waitUntilAndExecute;
     } forEach GVAR(fixedStatics);
+
+    // Reload configs into extension (handle full game restart)
+    call FUNC(parseConfigForInjuries);
 }];
 
 

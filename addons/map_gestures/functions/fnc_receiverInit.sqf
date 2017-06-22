@@ -22,4 +22,4 @@ if (!isNil QGVAR(DrawMapHandlerID)) then {
     (findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ["Draw", GVAR(DrawMapHandlerID)];
     GVAR(DrawMapHandlerID) = nil;
 };
-GVAR(DrawMapHandlerID) = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", FUNC(drawMapGestures)];
+GVAR(DrawMapHandlerID) = findDisplay 12 displayCtrl 51 ctrlAddEventHandler ["Draw", {call FUNC(drawMapGestures)}];

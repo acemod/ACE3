@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [CONTROL] call ace_zeus_fnc_ui_defendArea
+ *
  * Public: No
  */
 
@@ -28,7 +31,7 @@ private _fnc_errorAndClose = {
     params ["_msg"];
     _display closeDisplay 0;
     deleteVehicle _logic;
-    [_msg] call EFUNC(common,displayTextStructured);
+    [_msg] call FUNC(showMessage);
     breakOut "Main";
 };
 

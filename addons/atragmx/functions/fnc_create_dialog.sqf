@@ -3,10 +3,10 @@
  * Creates the ATragMX dialog
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_create_dialog
@@ -17,6 +17,16 @@
 
 #define __dsp (uiNamespace getVariable "ATragMX_Display")
 #define __ctrlBackground (__dsp displayCtrl 720000)
+
+// Do all initialisation now
+if (!GVAR(initialised)) then {
+    [] call FUNC(initGunList);
+    [] call FUNC(init);
+    [] call FUNC(restore_user_data);
+    [] call FUNC(read_gun_list_entries_from_config);
+    GVAR(initialised) = true;
+    TRACE_1("",GVAR(initialised));
+};
 
 if (GVAR(active)) exitWith { false };
 if (underwater ACE_player) exitWith { false };
