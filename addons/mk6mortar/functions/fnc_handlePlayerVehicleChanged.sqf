@@ -7,7 +7,7 @@
  * 1: New Vehicle <OBJECT>
  *
  * Return Value:
- * No
+ * None
  *
  * Example:
  * [bob, mortar] call ace_mk6mortar_fnc_handlePlayerVehicleChanged;
@@ -86,10 +86,10 @@ if (_lastFireMode != -1) then {
             // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
             private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
             private _testSeekerDir = _testSeekerPosASL vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
-            private _laserRange = [_testSeekerPosASL, _testSeekerDir, _mortarVeh] call EFUNC(laser,shootRay);
-            _laserRange params ["", ["_rayDistance", -5]]; // ToDo: move shootRay to common
-            TRACE_2("",_rayDistance,viewDistance);
-            _useRealWeaponDir = _rayDistance > viewDistance; // If we are looking at infinity (based on viewDistance)
+            private _testPoint = _testSeekerPosASL vectorAdd (_testSeekerDir vectorMultiply viewDistance);
+            if ((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint]}) then {
+                _useRealWeaponDir = false; // If we are not looking at infinity (based on viewDistance)
+            };
         };
 
         if (_useRealWeaponDir) then {

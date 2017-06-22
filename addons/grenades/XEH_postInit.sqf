@@ -4,6 +4,11 @@
 
 ["ace_flashbangExploded", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
 
+// Register fired event handlers
+["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
@@ -21,8 +26,3 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     // Statement
     [] call FUNC(nextMode);
 }, {false}, [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
-
-// Register fire event handler
-["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
-["ace_firedPlayerNonLocal", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
-["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

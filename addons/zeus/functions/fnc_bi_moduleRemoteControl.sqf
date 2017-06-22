@@ -9,7 +9,10 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleRemoteControl
  *
  * Public: No
  */

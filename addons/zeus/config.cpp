@@ -5,14 +5,19 @@ class CfgPatches {
         name = COMPONENT_NAME;
         units[] = {
             QGVAR(moduleDefendArea),
+            QGVAR(moduleEditableObjects),
             QGVAR(moduleGlobalSetSkill),
             QGVAR(moduleGroupSide),
             QGVAR(modulePatrolArea),
             QGVAR(moduleSearchArea),
             QGVAR(moduleSearchNearby),
-            QGVAR(moduleTeleportPlayers),
             QGVAR(moduleGarrison),
             QGVAR(moduleUnGarrison)
+            QGVAR(moduleSimulation),
+            QGVAR(moduleSuppressiveFire),
+            QGVAR(AddFullArsenal),
+            QGVAR(RemoveFullArsenal),
+            QGVAR(moduleTeleportPlayers)
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -22,7 +27,7 @@ class CfgPatches {
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
-    // Use additional cfgPatches to contextually remove modules from zeus
+    // Use additional CfgPatches to contextually remove modules from zeus
     class GVAR(captives): ADDON {
         units[] = {
             QGVAR(moduleCaptive),
@@ -43,14 +48,21 @@ class CfgPatches {
             QGVAR(moduleAddSpareWheel)
         };
     };
+    class GVAR(fastroping): ADDON {
+        units[] = {
+            QGVAR(moduleAddOrRemoveFRIES)
+        };
+    };
 };
 
 class ACE_Curator {
     GVAR(captives) = "ace_captives";
     GVAR(medical) = "ace_medical";
     GVAR(cargoAndRepair)[] = {"ace_cargo", "ace_repair"};
+    GVAR(fastroping) = "ace_fastroping";
 };
 
+#include "CfgFactionClasses.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"

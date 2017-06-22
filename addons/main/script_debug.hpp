@@ -1,4 +1,21 @@
 /**
+Fast Recompiling via function
+**/
+// #define DISABLE_COMPILE_CACHE
+// To Use: [] call ACE_PREP_RECOMPILE;
+
+#ifdef DISABLE_COMPILE_CACHE
+    #define LINKFUNC(x) {_this call FUNC(x)}
+    #define PREP_RECOMPILE_START    if (isNil "ACE_PREP_RECOMPILE") then {ACE_RECOMPILES = []; ACE_PREP_RECOMPILE = {{call _x} forEach ACE_RECOMPILES;}}; private _recomp = {
+    #define PREP_RECOMPILE_END      }; call _recomp; ACE_RECOMPILES pushBack _recomp;
+#else
+    #define LINKFUNC(x) FUNC(x)
+    #define PREP_RECOMPILE_START /* */
+    #define PREP_RECOMPILE_END /* */
+#endif
+
+
+/**
 STACK TRACING
 **/
 //#define ENABLE_CALLSTACK
@@ -23,6 +40,7 @@ STACK TRACING
 PERFORMANCE COUNTERS SECTION
 **/
 //#define ENABLE_PERFORMANCE_COUNTERS
+// To Use: [] call ace_common_fnc_dumpPerformanceCounters; 
 
 #ifdef ENABLE_PERFORMANCE_COUNTERS
     #define CBA_fnc_addPerFrameHandler { _ret = [(_this select 0), (_this select 1), (_this select 2), #function] call CBA_fnc_addPerFrameHandler; if(isNil "ACE_PFH_COUNTER" ) then { ACE_PFH_COUNTER=[]; }; ACE_PFH_COUNTER pushBack [[_ret, __FILE__, __LINE__], [(_this select 0), (_this select 1), (_this select 2)]];  _ret }

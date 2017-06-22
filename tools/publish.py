@@ -107,17 +107,21 @@ def main(argv):
 
             
     #ACE Main - http://steamcommunity.com/sharedfiles/filedetails/?id=463939057
-    # publishFolder(ace_release_dir, "463939057", changelog_path)
+    # Note: command line publisher doesn't like our file structure, just upload this one manually
 
     
     
     #RHS Compat USA - http://steamcommunity.com/sharedfiles/filedetails/?id=773125288
-    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
+    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
     publishFolder(folder, "773125288", changelog_path)
     
-    #RHS Compat Commies - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
-    folder = buildCompatFolder("@ace_compat_rhs_usf3", ["ace_compat_rhs_usf3.*"])
+    #RHS Compat Russians - http://steamcommunity.com/sharedfiles/filedetails/?id=773131200
+    folder = buildCompatFolder("@ace_compat_rhs_afrf3", ["ace_compat_rhs_afrf3.*"])
     publishFolder(folder, "773131200", changelog_path)
+
+    #RHS Compat GREF - http://steamcommunity.com/sharedfiles/filedetails/?id=884966711
+    folder = buildCompatFolder("@ace_compat_rhs_gref3", ["ace_compat_rhs_gref3.*"])
+    publishFolder(folder, "884966711", changelog_path)
 
     #ADR97 (p90)- http://steamcommunity.com/sharedfiles/filedetails/?id=773136286
     folder = buildCompatFolder("@ace_adr97_compat", ["ace_compat_adr_97.*"])

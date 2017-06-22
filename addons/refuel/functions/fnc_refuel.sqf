@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, nozzle, [2, 1, 5]] call ace_refuel_fnc_refuel
+ *
  * Public: No
  */
 
@@ -18,8 +21,16 @@
 
 params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_connectToPoint", [0,0,0], [[]], 3]];
 
-private _rate =  getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(flowRate)) * GVAR(rate);
-private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> QGVAR(fuelCapacity));
+private _config = configFile >> "CfgVehicles" >> typeOf _target;
+
+private _rate =  getNumber (_config >> QGVAR(flowRate)) * GVAR(rate);
+private _maxFuel = getNumber (_config >> QGVAR(fuelCapacity));
+
+// Fall back to vanilla fuelCapacity value (only air and sea vehicles don't have this defined by default by us)
+// Air and sea vehicles have that value properly defined in liters, unlike ground vehicles which is is formula of (range * tested factor) - different fuel consumption system than ground vehicles
+if (_maxFuel == 0) then {
+    _maxFuel = getNumber (_config >> "fuelCapacity");
+};
 
 [{
     params ["_args", "_pfID"];
@@ -36,7 +47,8 @@ private _maxFuel = getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >>
         _sink setVariable [QGVAR(nozzle), objNull, true];
         [_pfID] call CBA_fnc_removePerFrameHandler;
     };
-    private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (REFUEL_HOSE_LENGTH - 2);
+    private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
+    private _tooFar = ((_sink modelToWorld _connectToPoint) distance (_source modelToWorld _connectFromPoint)) > (_hoseLength - 2);
     if (_tooFar && {!(_nozzle getVariable [QGVAR(jerryCan), false])}) exitWith {
         [LSTRING(Hint_TooFar), 2, _unit] call EFUNC(common,displayTextStructured);
 

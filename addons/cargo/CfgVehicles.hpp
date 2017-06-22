@@ -26,6 +26,12 @@ class CfgVehicles {
                 typeName = "BOOL";
                 defaultValue = 1;
             };
+            class paradropTimeCoefficent {
+                displayName = CSTRING(paradropTimeCoefficent);
+                description = CSTRING(paradropTimeCoefficent_description);
+                typeName = "SCALAR";
+                defaultValue = 2.5;
+            };
         };
 
         class ModuleDescription {
@@ -259,12 +265,17 @@ class CfgVehicles {
         GVAR(space) = 4;
     };
 
-    // jets
+    // planes (off by default as most are attack jets)
     class Plane: Air {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
     };
 
+    class Plane_Base_F: Plane {};
+    class Plane_Civil_01_base_F: Plane_Base_F { // Tanoa Civilian Prop Plane
+        GVAR(space) = 2;
+        GVAR(hasCargo) = 1;
+    };
     class VTOL_Base_F;
     class VTOL_01_base_F: VTOL_Base_F {
         GVAR(space) = 4;
@@ -274,7 +285,7 @@ class CfgVehicles {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
-    
+
     // autonomus
     class UAV_01_base_F: Helicopter_Base_F {
         GVAR(space) = 0;
@@ -316,26 +327,6 @@ class CfgVehicles {
         GVAR(canLoad) = 1;
     };
 
-    // Taru pods
-    class Pod_Heli_Transport_04_base_F;
-    class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
-        GVAR(space) = 8;
-        GVAR(hasCargo) = 1;
-    };
-    class Land_Pod_Heli_Transport_04_box_F: Pod_Heli_Transport_04_base_F {
-        GVAR(space) = 20;
-        GVAR(hasCargo) = 1;
-    };
-    class Land_Pod_Heli_Transport_04_repair_F: Pod_Heli_Transport_04_base_F {
-        GVAR(space) = 12;
-        GVAR(hasCargo) = 1;
-    };
-    class Pod_Heli_Transport_04_crewed_base_F;
-    class Land_Pod_Heli_Transport_04_medevac_F: Pod_Heli_Transport_04_crewed_base_F {
-        GVAR(space) = 8;
-        GVAR(hasCargo) = 1;
-    };
-    
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(size) = 2; // 1 = small, 2 = large
@@ -366,6 +357,37 @@ class CfgVehicles {
     };
     class Slingload_01_Base_F: Slingload_base_F { //Huron 20ft containers
         GVAR(canLoad) = 0;
+        GVAR(size) = -1;
+    };
+
+    // Taru pods
+    class Pod_Heli_Transport_04_base_F: Slingload_base_F {
+        GVAR(canLoad) = 0;
+        GVAR(size) = -1;
+    };
+    class Land_Pod_Heli_Transport_04_ammo_F: Pod_Heli_Transport_04_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class Land_Pod_Heli_Transport_04_box_F: Pod_Heli_Transport_04_base_F {
+        GVAR(space) = 20;
+        GVAR(hasCargo) = 1;
+    };
+    class Land_Pod_Heli_Transport_04_repair_F: Pod_Heli_Transport_04_base_F {
+        GVAR(space) = 12;
+        GVAR(hasCargo) = 1;
+    };
+    class Pod_Heli_Transport_04_crewed_base_F: StaticWeapon {
+        GVAR(canLoad) = 0;
+        GVAR(size) = -1;
+    };
+    class Land_Pod_Heli_Transport_04_covered_F: Pod_Heli_Transport_04_crewed_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
+    };
+    class Land_Pod_Heli_Transport_04_medevac_F: Pod_Heli_Transport_04_crewed_base_F {
+        GVAR(space) = 8;
+        GVAR(hasCargo) = 1;
     };
 
     //Plastic and metal case

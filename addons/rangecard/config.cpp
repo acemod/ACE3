@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {"ACE_Item_RangeCard"};
         weapons[] = {"ACE_RangeCard"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ACE_Advanced_Ballistics"};
+        requiredAddons[] = {"ACE_Advanced_Ballistics","ace_scopes"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg"};
         url = ECSTRING(main,URL);

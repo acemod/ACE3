@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "weapon"] call ace_sandbag_fnc_handlePlayerInventoryChanged
+ *
  * Public: No
 */
 #include "script_component.hpp"

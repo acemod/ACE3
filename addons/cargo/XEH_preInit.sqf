@@ -2,9 +2,12 @@
 
 ADDON = false;
 
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 GVAR(initializedItemClasses) = [];
 GVAR(initializedVehicleClasses) = [];
+GVAR(cargoHolderTypes) = ["Car", "Air", "Tank", "Ship", "Cargo_base_F", "Land_PaperBox_closed_F"];
 
 ADDON = true;

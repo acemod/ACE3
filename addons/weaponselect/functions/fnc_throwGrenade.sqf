@@ -20,7 +20,7 @@ TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectil
 
 if (_weapon != "Throw") exitWith {};
 
-private _count = {_x == _magazine} count magazines _unit;
+private _count = ({_x == _magazine} count uniformItems _unit) + ({_x == _magazine} count vestItems _unit) + ({_x == _magazine} count backpackItems _unit);
 
 [_magazine, _count] call FUNC(displayGrenadeTypeAndNumber);
 

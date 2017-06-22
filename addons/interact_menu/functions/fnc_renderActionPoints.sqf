@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_interact_menu_fnc_renderActionPoints
+ *
  * Public: No
  */
 #include "script_component.hpp"

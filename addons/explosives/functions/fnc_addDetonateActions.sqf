@@ -43,7 +43,7 @@ _explosivesList = [];
                         {(_this select 2) call FUNC(detonateExplosive);},
                         {true},
                         {},
-                        [_unit,_range,_x]
+                        [_unit,_range,_x,_detonator]
                     ] call EFUNC(interact_menu,createAction),
                     [],
                     _unit
@@ -62,7 +62,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             {(_this select 2) call FUNC(detonateExplosiveAll);},
             {true},
             {},
-            [_unit,_range,_explosivesList]
+            [_unit,_range,_explosivesList, _detonator]
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit

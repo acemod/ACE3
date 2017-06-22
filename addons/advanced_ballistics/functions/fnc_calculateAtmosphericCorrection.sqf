@@ -13,6 +13,9 @@
  * Return Value:
  * corrected ballistic coefficient <NUMBER>
  *
+ * Example:
+ * [2, 5, 5, 0.5, "ASM"] call ace_advanced_ballistics_fnc_calculateAtmosphericCorrection
+ *
  * Public: No
  */
 #include "script_component.hpp"

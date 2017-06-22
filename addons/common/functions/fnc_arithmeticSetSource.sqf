@@ -9,7 +9,7 @@
  * 3: Code that returns a number (can access var _namespace) [use {} to remove] <CODE>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [missionNameSpace, "ace_hearing", "myMission", {0.5}] call ace_common_fnc_arithmeticSetSource

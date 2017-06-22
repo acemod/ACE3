@@ -12,7 +12,7 @@
  * 6: projectile - Object of the projectile that was shot <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_mk6mortar_fnc_handleFired

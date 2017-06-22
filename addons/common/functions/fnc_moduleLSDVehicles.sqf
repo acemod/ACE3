@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, target, []] call ace_common_fnc_moduleLSDVehicles
+ *
  * Public: No
  */
 #include "script_component.hpp"

@@ -13,6 +13,9 @@
             <Italian>Misura la distanza</Italian>
             <Portuguese>Marcar com laser / Medir Distância</Portuguese>
             <Japanese>レーザー ターゲット / 計測距離</Japanese>
+            <Korean>목표까지 거리를 레이저로 취득</Korean>
+            <SChinese>雷射指示目标 / 测量距离</SChinese>
+            <TChinese>雷射指示目標 / 測量距離</TChinese>
         </Key>
         <Key ID="STR_ACE_FCS_ZeroedTo">
             <English>Zeroed To</English>
@@ -26,6 +29,9 @@
             <Portuguese>Fixado em</Portuguese>
             <Italian>Azzeramento a</Italian>
             <Japanese>次にゼロイン</Japanese>
+            <Korean>영점 조절</Korean>
+            <SChinese>归零到</SChinese>
+            <TChinese>歸零到</TChinese>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeUp">
             <English>Adjust FCS Range (Up)</English>
@@ -39,6 +45,9 @@
             <Italian>Aumentare la distanza dell'FCS</Italian>
             <Russian>Диапазон СУО (Выше)</Russian>
             <Japanese>FCS による距離を調節 (上げ)</Japanese>
+            <Korean>사통장치 거리 조정 (위로)</Korean>
+            <SChinese>调整火控系统距离 (上)</SChinese>
+            <TChinese>調整火控系統距離 (上)</TChinese>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeDown">
             <English>Adjust FCS Range (Down)</English>
@@ -52,6 +61,9 @@
             <Italian>Ridurre la distanza dell'FCS</Italian>
             <Russian>Диапазон СУО (Ниже)</Russian>
             <Japanese>FCS による距離を調節 (下げ)</Japanese>
+            <Korean>사통장치 거리 조정 (아래로)</Korean>
+            <SChinese>调整火控系统距离 (下)</SChinese>
+            <TChinese>調整火控系統距離 (下)</TChinese>
         </Key>
         <Key ID="STR_ACE_FCS_ResetFCS">
             <English>Reset FCS</English>
@@ -65,6 +77,9 @@
             <Italian>Azzeramento dell'FCS</Italian>
             <Russian>Обнулить СУО</Russian>
             <Japanese>FCS を初期化</Japanese>
+            <Korean>사통장치 초기화</Korean>
+            <SChinese>重置火控系统</SChinese>
+            <TChinese>重置火控系統</TChinese>
         </Key>
         <Key ID="STR_ACE_FCS_HasBeenReset">
             <English>FCS has been reset.</English>
@@ -78,6 +93,9 @@
             <Italian>L'FCS è stato azzerato</Italian>
             <Russian>СУО обнулен.</Russian>
             <Japanese>FCS は初期化された</Japanese>
+            <Korean>사통장치 초기화됨</Korean>
+            <SChinese>火控系统已被重置</SChinese>
+            <TChinese>火控系統已被重置</TChinese>
         </Key>
     </Package>
 </Project>

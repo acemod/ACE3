@@ -13,6 +13,9 @@
             <Russian>MX-2A</Russian>
             <Italian>MX-2A</Italian>
             <Japanese>MX-2A</Japanese>
+            <Korean>MX-2A</Korean>
+            <SChinese>MX-2A</SChinese>
+            <TChinese>MX-2A</TChinese>
         </Key>
         <Key ID="STR_ACE_MX2A_Description">
             <English>Thermal imaging device</English>
@@ -26,6 +29,9 @@
             <Russian>Тепловизионный прибор</Russian>
             <Italian>Dispositivo di visione termica</Italian>
             <Japanese>サーマル画像表示双眼鏡</Japanese>
+            <Korean>열영상 장치</Korean>
+            <SChinese>热成像装置</SChinese>
+            <TChinese>熱成像裝置</TChinese>
         </Key>
     </Package>
 </Project>

@@ -7,7 +7,7 @@
  * 1: Corpse <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [alive, body] call ACE_captives_fnc_handleRespawn;
@@ -46,7 +46,7 @@ if (_respawn > 3) then {
     };
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
-    if (_oldUnit getVariable [QGVAR(isEscorting), false]) then {
-        _oldUnit setVariable [QGVAR(isEscorting), false, true];
+    if (_unit getVariable [QGVAR(isEscorting), false]) then {
+        _unit setVariable [QGVAR(isEscorting), false, true];
     };
 };

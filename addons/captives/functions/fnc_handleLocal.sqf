@@ -6,8 +6,11 @@
  * 0: The Unit <OBJECT>
  * 1: Is local <BOOL>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob, true] call ACE_captives_fnc_handleLocal
  *
  * Public: No
  */

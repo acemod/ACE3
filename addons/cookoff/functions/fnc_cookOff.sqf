@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_cookoff_fnc_cookOff
+ * [(vehicle player)] call ace_cookoff_fnc_cookOff
  *
  * Public: No
  */
@@ -91,6 +91,7 @@ if (local _vehicle) then {
         } forEach _positions;
 
         if (isServer) then {
+            // TODO - Players in the vehicle hear no sound (even after exiting the vehicle)
             private _sound = createSoundSource [QGVAR(Sound), position _vehicle, [], 0];
 
             _effects pushBack _sound;
@@ -107,15 +108,19 @@ if (local _vehicle) then {
             DEC(_counter);
 
             if (_counter > 0) then {
-                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], 0.4] call CBA_fnc_waitAndExecute
+                [_fnc_FlameEffect, [_vehicle, _fnc_FlameEffect, _counter], FLAME_EFFECT_DELAY] call CBA_fnc_waitAndExecute
             };
         };
 
-        [_vehicle, _fnc_FlameEffect, 12] call _fnc_FlameEffect; // recursive function
+        // Recursive function, occurs for duration of cookoff
+        [_vehicle, _fnc_FlameEffect, ceil(COOKOFF_TIME/FLAME_EFFECT_DELAY)] call _fnc_FlameEffect;
+
+        private _randomPosition = _vehicle getPos [100, random 360];
 
         {
             if (local _x && {!(_x call EFUNC(common,isPlayer))}) then {
-                _x action ["Eject", _vehicle];
+                _x leaveVehicle _vehicle;
+                _x doMove _randomPosition;
             };
         } forEach crew _vehicle;
 
@@ -129,6 +134,6 @@ if (local _vehicle) then {
             if (local _vehicle) then {
                 _vehicle setDamage 1;
             };
-        }, [_vehicle, _effects], 4 + random 20] call CBA_fnc_waitAndExecute;
-    }, [_vehicle, _effects, _positions], 3 + random 15] call CBA_fnc_waitAndExecute;
-}, _vehicle, 0.5 + random 5] call CBA_fnc_waitAndExecute;
+        }, [_vehicle, _effects], COOKOFF_TIME] call CBA_fnc_waitAndExecute; // TODO: Randomise cook off time with locality in mind
+    }, [_vehicle, _effects, _positions], SMOKE_TIME] call CBA_fnc_waitAndExecute;
+}, _vehicle, IGNITE_TIME] call CBA_fnc_waitAndExecute;

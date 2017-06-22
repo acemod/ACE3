@@ -10,7 +10,7 @@
  * 2: Magazine Classname <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, player, "30Rnd_65x39_caseless_mag"] call ace_magazinerepack_fnc_startRepackingMagazine

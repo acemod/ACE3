@@ -3,10 +3,10 @@
  * Updates the result input and output fields
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * call ace_atragmx_fnc_update_result
@@ -15,17 +15,28 @@
  */
 #include "script_component.hpp"
 
-private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_wind2", "_windageRel", "_windageCur", "_lead", "_clickSize", "_clickNumber", "_clickInterval"];
+private ["_elevationAbs", "_elevationRel", "_elevationCur", "_windageAbs", "_windageRel", "_windageCur", "_wind2", "_lead", "_clickSize", "_clickNumber", "_clickInterval"];
 _elevationAbs = GVAR(elevationOutput) select GVAR(currentTarget);
+_elevationRel = 0;
+_elevationCur = 0;
 _windageAbs = GVAR(windage1Output) select GVAR(currentTarget);
+_windageRel = 0;
+_windageCur = 0;
 
 _wind2 = GVAR(windage2Output) select GVAR(currentTarget);
 
-_elevationCur = GVAR(workingMemory) select 10;
-_windageCur = GVAR(workingMemory) select 11;
+if (GVAR(showCoriolis)) then {
+    _elevationRel = GVAR(verticalCoriolisOutput) select GVAR(currentTarget);
+    _windageRel = GVAR(horizontalCoriolisOutput) select GVAR(currentTarget);
 
-_elevationRel = _elevationAbs - _elevationCur;
-_windageRel = _windageAbs - _windageCur;
+    _windageCur = GVAR(spinDriftOutput) select GVAR(currentTarget);
+} else {
+    _elevationCur = GVAR(workingMemory) select 10;
+    _windageCur = GVAR(workingMemory) select 11;
+
+    _elevationRel = _elevationAbs - _elevationCur;
+    _windageRel = _windageAbs - _windageCur;
+};
 
 _lead = GVAR(leadOutput) select GVAR(currentTarget);
 

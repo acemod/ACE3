@@ -12,6 +12,9 @@
  * Return Value:
  * Succesful treatment started <BOOL>
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentTourniquet
+ *
  * Public: No
  */
 

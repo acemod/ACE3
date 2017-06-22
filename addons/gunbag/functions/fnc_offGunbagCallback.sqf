@@ -29,6 +29,16 @@ if (_state isEqualTo []) exitWith {
 _state params ["_weapon", "_items", "_magazines"];
 
 _unit addWeapon _weapon;
+
+// Game will auto add magazines from player's inventory, put these back in player inventory as they will be overwritten
+([_unit, _weapon] call EFUNC(common,getWeaponState)) params ["", "", "_addedMags", "_addedAmmo"];
+{
+    if (((_x select 0) != "") && {(_addedMags select _forEachIndex) != ""}) then {
+        TRACE_2("Re-adding mag",_x,_addedMags select _forEachIndex);
+        _unit addMagazine [_addedMags select _forEachIndex, _addedAmmo select _forEachIndex];
+    };
+} forEach _magazines;
+
 removeAllPrimaryWeaponItems _unit;
 
 {

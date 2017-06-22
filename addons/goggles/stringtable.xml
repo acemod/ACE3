@@ -13,6 +13,9 @@
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
             <Japanese>三人称視点でもゴーグルによる効果を出す</Japanese>
+            <Korean>3인칭시에도 고글 효과를 보이게 합니다</Korean>
+            <SChinese>在第三人称视角显示护目镜效果</SChinese>
+            <TChinese>在第三人稱視角顯示護目鏡效果</TChinese>
         </Key>
         <Key ID="STR_ACE_Goggles_WipeGlasses">
             <English>Wipe Goggles</English>
@@ -26,24 +29,45 @@
             <Portuguese>Limpar Óculos</Portuguese>
             <Italian>Pulisci gli occhiali</Italian>
             <Japanese>ゴーグルを拭く</Japanese>
+            <Korean>고글 닦기</Korean>
+            <SChinese>擦拭护目镜</SChinese>
+            <TChinese>擦拭護目鏡</TChinese>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_displayName">
             <English>Goggle Effects</English>
             <Russian>Эффект очков</Russian>
             <Japanese>ゴーグルによる効果</Japanese>
             <Polish>Efekty gogli</Polish>
+            <German>Brilleneffekt</German>
+            <Korean>고글 효과</Korean>
+            <French>Effets des lunettes</French>
+            <Italian>Effetto Occhiali</Italian>
+            <SChinese>护目镜效果</SChinese>
+            <TChinese>護目鏡效果</TChinese>
         </Key>
         <Key ID="STR_ACE_Goggles_effects_tintOnly">
             <English>Tint</English>
             <Russian>Тонировка</Russian>
             <Japanese>色彩のみ</Japanese>
             <Polish>Winieta</Polish>
+            <German>Tönung</German>
+            <Korean>색조</Korean>
+            <French>Teinte</French>
+            <Italian>Colore</Italian>
+            <SChinese>染色</SChinese>
+            <TChinese>染色</TChinese>
         </Key>
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
             <Japanese>色彩 + 効果</Japanese>
             <Polish>Winieta + Efekty</Polish>
+            <German>Tönung + Effekte</German>
+            <Korean>색조+효과</Korean>
+            <French>Teinte + effets</French>
+            <Italian>Colore + Effetti</Italian>
+            <SChinese>染色 + 影响</SChinese>
+            <TChinese>染色 + 影響</TChinese>
         </Key>
     </Package>
 </Project>

@@ -9,6 +9,9 @@
  * 0: Azimuth <NUMBER>
  * 1: Inclination <NUMBER>
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponAzimuthAndInclination
+ *
  * Public: Yes
  */
 #include "script_component.hpp"

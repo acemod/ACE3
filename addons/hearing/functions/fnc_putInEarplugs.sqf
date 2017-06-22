@@ -3,7 +3,7 @@
  * Puts in earplugs.
  *
  * Arguments:
- * 0:Unit (player) <OBJECT>
+ * 0: Unit (player) <OBJECT>
  *
  * Return Value:
  * None
@@ -16,6 +16,8 @@
 #include "script_component.hpp"
 
 params ["_player"];
+
+if (!GVAR(EnableCombatDeafness)) exitWith {};
 
 // Plugs in inventory, putting them in
 _player removeItem "ACE_EarPlugs";

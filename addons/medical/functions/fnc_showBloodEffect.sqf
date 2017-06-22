@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [2] call ace_medical_fnc_showBloodEffect
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
