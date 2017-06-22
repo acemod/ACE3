@@ -116,6 +116,7 @@ class CfgVehicles {
                     displayName = CSTRING(JoinGroup);
                     condition = QUOTE(GVAR(EnableTeamManagement) && {[ARR_2(_player,_target)] call DFUNC(canJoinGroup)});
                     statement = QUOTE([_player] joinSilent group _target);
+                    modifierFunction = QUOTE(call FUNC(modifyJoinGroupAction));
                     showDisabled = 0;
                     priority = 2.6;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
