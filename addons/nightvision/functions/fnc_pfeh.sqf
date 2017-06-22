@@ -140,8 +140,6 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         GVAR(nvgFog) = [_fogApply, 0, 0];
         0 setFog GVAR(nvgFog)
     };
-    
-    systemChat str time;
 
     #ifdef DEBUG_MODE_FULL
     private _aceAmbient = [] call EFUNC(common,ambientBrightness);
