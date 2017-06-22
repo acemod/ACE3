@@ -317,6 +317,30 @@ GVAR(OldIsCamera) = false;
     END_COUNTER(stateChecker);
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
+// Add event handler for UAV control change
+ACE_controlledUAV = [objnull, objnull, [], ""];
+addMissionEventHandler ["PlayerViewChanged", {
+    params ["", "", "", "", "", "_UAV"];
+    
+    private _position = (UAVControl _UAV) param [1, ""];
+    private _seatAI = objnull;
+    private _turret = [];
+    switch (toLower _position) do {
+        case ("driver"): {
+            _turret = [-1];
+            _seatAI = driver _UAV;
+        };
+        case ("gunner"): {
+            _turret = [0];
+            _seatAI = gunner _UAV;
+        };
+    };
+
+    TRACE_5("PlayerViewChanged",_UAV,_seatAI,_turret,_position,ACE_controlledUAV);
+    ACE_controlledUAV = [_UAV, _seatAI, _turret, _position];
+    ["ACE_controlledUAV", [_UAV, _seatAI, _turret, _position]] call CBA_fnc_localEvent;
+}];
+
 
 //////////////////////////////////////////////////
 // Eventhandlers for player controlled machines
