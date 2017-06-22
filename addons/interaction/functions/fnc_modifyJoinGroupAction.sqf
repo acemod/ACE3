@@ -5,14 +5,14 @@
  * Arguments:
  * 0: Target <OBJECT>
  * 1: Player <OBJECT>
- * 2: Args <Any>
+ * 2: Args <ANY>
  * 3: Action Data <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorObject, player, [], []] call ace_interaction_fnc_modifyJoinGroupAction;
+ * [cursorObject, player, [], []] call ace_interaction_fnc_modifyJoinGroupAction
  *
  * Public: No
  */
