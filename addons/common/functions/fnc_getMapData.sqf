@@ -24,9 +24,9 @@ _map = toLower _map;
 if (_map in ["tanoa"]) exitWith { [-18, 0] };
 if (_map in ["altis"]) exitWith { [40, 0] };
 if (_map in ["stratis"]) exitWith { [40, 0] };
+if (_map in ["malden", "abel"]) exitWith { [38.8, 0] }; // 1.72 Malden and CWR2 Malden
 
 if (_map in ["abbottabad"]) exitWith { [34, 1256] }; // Abbottabad elevation 1256m (Wikipedia)
-if (_map in ["abel"]) exitWith { [39, 0] }; // CWR2 Malden
 if (_map in ["abramia"]) exitWith { [60, 0] };
 if (_map in ["af_kandahar_province"]) exitWith { [42, 0] };
 if (_map in ["angel"]) exitWith { [38, 0] };
@@ -98,6 +98,7 @@ if (_map in ["pja308"]) exitWith { [36, 0] }; // G.O.S Gunkizli
 if (_map in ["pja310"]) exitWith { [36, 0] }; // G.O.S Al Rayak
 if (_map in ["pja312"]) exitWith { [16, 0] }; // G.O.S Song Bin Tanh
 if (_map in ["pja314"]) exitWith { [46, 0] }; // G.O.S Leskovets
+if (_map in ["pja319"]) exitWith { [20, 0] }; // G.O.S N'Djenahoud, Ennedi Massif (Republic of Chad)
 if (_map in ["plr_bulge"]) exitWith { [49, 0] }; // I44: Battle of the Bulge
 if (_map in ["porquerolles"]) exitWith { [43, 0] };
 if (_map in ["porto"]) exitWith { [40, 0] };

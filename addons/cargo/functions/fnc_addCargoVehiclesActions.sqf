@@ -40,6 +40,6 @@ private _actions = [];
         private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, [_x]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _target];
     };
-} forEach (nearestObjects [_player, CARGO_VEHICLE_CLASSES, MAX_LOAD_DISTANCE]);
+} forEach (nearestObjects [_player, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE]);
 
 _actions

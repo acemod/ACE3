@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Dragging">
         <Key ID="STR_ACE_Dragging_Drag">
@@ -14,6 +14,8 @@
             <Hungarian>Húzás</Hungarian>
             <Japanese>引きずる</Japanese>
             <Korean>끌기</Korean>
+            <TChinese>拖拉</TChinese>
+            <SChinese>拖拉</SChinese>
         </Key>
         <Key ID="STR_ACE_Dragging_Drop">
             <English>Release</English>
@@ -28,6 +30,8 @@
             <Hungarian>Elengedés</Hungarian>
             <Japanese>はなす</Japanese>
             <Korean>놓기</Korean>
+            <TChinese>放開</TChinese>
+            <SChinese>放开</SChinese>
         </Key>
         <Key ID="STR_ACE_Dragging_DragKeybind">
             <English>Drag/Release Object</English>
@@ -42,6 +46,8 @@
             <Hungarian>Húzás/Elengedés Objektum</Hungarian>
             <Japanese>オブジェクトを引きずる/はなす</Japanese>
             <Korean>물건 끌기/놓기</Korean>
+            <TChinese>拖拉/放開物品</TChinese>
+            <SChinese>拖拉/放开物品</SChinese>
         </Key>
         <Key ID="STR_ACE_Dragging_UnableToDrag">
             <English>Item too heavy</English>
@@ -56,6 +62,8 @@
             <Hungarian>Az objektum túl nehéz</Hungarian>
             <Japanese>アイテムが重すぎる</Japanese>
             <Korean>물체가 너무 무겁습니다</Korean>
+            <TChinese>此物品過重</TChinese>
+            <SChinese>此物品过重</SChinese>
         </Key>
         <Key ID="STR_ACE_Dragging_Carry">
             <English>Carry</English>
@@ -70,6 +78,8 @@
             <Russian>Нести</Russian>
             <Japanese>運ぶ</Japanese>
             <Korean>업기</Korean>
+            <TChinese>背起</TChinese>
+            <SChinese>背起</SChinese>
         </Key>
         <Key ID="STR_ACE_Dragging_LowerRaise">
             <English>Raise/Lower</English>
@@ -83,6 +93,8 @@
             <French>Lever/Baisser</French>
             <Japanese>上げる/下げる</Japanese>
             <Korean>높이기/낮추기</Korean>
+            <TChinese>提高/下降</TChinese>
+            <SChinese>提高/下降</SChinese>
         </Key>
     </Package>
 </Project>

@@ -292,19 +292,19 @@ class CfgVehicles {
     class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_usarmy_wd: rhsusf_M977A4_BKIT_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M977A4_BKIT_M2_usarmy_wd: rhsusf_M977A4_usarmy_wd {};
     class rhsusf_M977A4_AMMO_BKIT_M2_usarmy_wd: rhsusf_M977A4_BKIT_M2_usarmy_wd {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class rhsusf_M978A4_usarmy_wd: rhsusf_M977A4_usarmy_wd {
@@ -349,7 +349,7 @@ class CfgVehicles {
     class rhsusf_m113_usarmy: rhsusf_m113tank_base {};
     class rhsusf_m113_usarmy_supply: rhsusf_m113_usarmy {
         transportAmmo = 0;
-        ace_rearm_supply = 1200;
+        ace_rearm_defaultSupply = 1200;
     };
 
     class APC_Tracked_03_base_F;

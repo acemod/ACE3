@@ -27,6 +27,16 @@ private _hasCargoConfig = getNumber (configFile >> "CfgVehicles" >> _type >> QGV
 // Nothing to do here if vehicle has no cargo space
 if !(_hasCargoConfig || _hasCargoPublic) exitWith {};
 
+// Check if cargo is in cargo holder types (checked when trying to search for loadable objects)
+private _addCargoType = true;
+{
+    if (_type isKindOf _x) exitWith {_addCargoType = false};
+} forEach GVAR(cargoHolderTypes);
+TRACE_2("",_addCargoType,_type);
+if (_addCargoType) then {
+    GVAR(cargoHolderTypes) pushBack _type;
+};
+
 // Vehicle can have default ace cargo in its config
 if (isServer) then {
     {

@@ -42,14 +42,16 @@ if (!("ACE_DefusalKit" in (items ACE_player))) exitWith {};
         if (((getPosASL ace_player) distance _setPosition) > 5) then {
             {
                 if (((_x distance ACE_player) < 15) && {!(_x in _minesHelped)}) then {
-                    TRACE_3("Making Defuse Helper",(_x),(typeOf _x),(_x isKindOf "UnderwaterMine_Range_Ammo"));
-                    private _defuseHelper = if (_x isKindOf "UnderwaterMine_Range_Ammo") then {
-                        "ACE_DefuseObject_Large" createVehicleLocal (getPos _x);
-                    } else {
-                        "ACE_DefuseObject" createVehicleLocal (getPos _x);
-                    };
 
                     private _config = configFile >> "CfgAmmo" >> typeOf _x;
+                    private _size = getNumber (_config >> QGVAR(size));
+                    TRACE_3("Making Defuse Helper",(_x),(typeOf _x),(_size == 1));
+                    private ["_defuseHelper"];
+                    if (_size == 1) then {
+                        _defuseHelper = "ACE_DefuseObject_Large" createVehicleLocal (getPos _x);
+                    } else {
+                        _defuseHelper = "ACE_DefuseObject" createVehicleLocal (getPos _x);
+                    };
 
                     private _defuseObjectPosition = getArray (_config >> QGVAR(defuseObjectPosition));
                     if (_defuseObjectPosition isEqualTo []) then {

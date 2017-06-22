@@ -10,7 +10,6 @@
                 showDisabled = 0; \
                 priority = 0; \
                 icon = QPATHTOF(UI\attach_ca.paa); \
-                distance = 4.5; \
             }; \
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
@@ -20,7 +19,6 @@
                 showDisabled = 0; \
                 priority = 0.1; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
-                distance = 4.5; \
             }; \
         }; \
     };
