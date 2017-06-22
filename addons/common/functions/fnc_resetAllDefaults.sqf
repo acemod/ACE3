@@ -3,10 +3,13 @@
  * reset all variables that have been defined
  *
  * Arguments:
- * ?
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * ?
+ * ? <UNKNOWN>
+ *
+ * Example:
+ * [bob] call ace_common_fnc_resetAllDefaults
  *
  * Public: No
  */
@@ -19,11 +22,6 @@ _unit setVariable ["ACE_isUnconscious", nil, true];
 
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
-    // [false] call FUNC(disableKeyInput); //func does not exist
-    
-    if (["ace_medical"] call FUNC(isModLoaded)) then {
-        // [false] call EFUNC(medical,effectBlackOut); //func does not exist
-    };
 
     if !(isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
         // clear all disable user input
@@ -40,5 +38,3 @@ if (isPlayer _unit) then {
     };
     false
 } count ([_unit] call FUNC(getAllDefinedSetVariables));
-
-_unit setVariable ["ACE_forceWalkStatusNumber", 0, true];

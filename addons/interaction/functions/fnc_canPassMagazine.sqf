@@ -18,11 +18,11 @@
 
 #include "script_component.hpp"
 params ["_player", "_target", "_weapon"];
-private ["_compatibleMags"];
 
 if (!GVAR(enableMagazinePassing)) exitWith {false};
+if (((vehicle _target) != _target) && {(vehicle _target) != (vehicle _player)}) exitWith {false};
 
-_compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
+private _compatibleMags = getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines");
 {
     _x params ["_className", "", "_loaded"];
     if ((_className in _compatibleMags) && {!_loaded} && {_target canAdd _className}) exitWith {true};

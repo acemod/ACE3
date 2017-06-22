@@ -10,7 +10,10 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleProjectile
  *
  * Public: No
  */
@@ -18,18 +21,13 @@
 #include "script_component.hpp"
 
 _fnc_scriptNameParentTemp = if !(isNil '_fnc_scriptName') then {_fnc_scriptName} else {'BIS_fnc_moduleProjectile'};
-private ['_fnc_scriptNameParent'];
-_fnc_scriptNameParent = _fnc_scriptNameParentTemp;
+private _fnc_scriptNameParent = _fnc_scriptNameParentTemp;
 _fnc_scriptNameParentTemp = nil;
 
-private ['_fnc_scriptName'];
-_fnc_scriptName = 'BIS_fnc_moduleProjectile';
+private _fnc_scriptName = 'BIS_fnc_moduleProjectile';
 scriptname _fnc_scriptName;
 
-private ["_logic", "_units", "_activated"];
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if ({local _x} count (objectcurators _logic) > 0) then {
     //--- Reveal the circle to curators
@@ -42,7 +40,6 @@ if (_activated) then {
     _ammo = _logic getVariable ["type",gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "ammo")];
     if (_ammo != "") then {
         _CfgAmmo = configFile >> "CfgAmmo" >> _ammo;
-        //if !(isclass _CfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         _dirVar = _fnc_scriptname + typeOf _logic;
         _logic setdir (missionnamespace getVariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getposatl _logic;
@@ -65,8 +62,8 @@ if (_activated) then {
                 _altitude = 1000;
                 _velocity = [0,0,-100];
                 _radio = "SentGenIncoming";
-                _sounds = if (getnumber (_CfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
-                _sound = _sounds call bis_fnc_selectrandom;
+                _sounds = if (getnumber (_cfgAmmo >> "hit") < 200) then {["mortar1","mortar2"]} else {["shell1","shell2","shell3","shell4"]};
+                _sound = selectRandom _sounds;
                 _hint = ["Curator","PlaceOrdnance"];
                 _shakeStrength = 0.01;
                 _shakeRadius = 300;
@@ -104,16 +101,16 @@ if (_activated) then {
                         _side = side group _x;
                         if (_side in [east,west,resistance,civilian]) then {
                             //--- Play radio (only if it wasn't played recently)
-                            if (ACE_time > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
+                            if (CBA_missionTime > _x getVariable ["BIS_fnc_moduleProjectile_radio",-_delay]) then {
                                 [[_side,_radio,"side"],"bis_fnc_sayMessage",_x] call bis_fnc_mp;
-                                _x setVariable ["BIS_fnc_moduleProjectile_radio",ACE_time + _delay];
+                                _x setVariable ["BIS_fnc_moduleProjectile_radio",CBA_missionTime + _delay];
                             };
                         };
                     };
                 } forEach _entities;
             };
         };
-        if (count _hint > 0) then {
+        if (count _hint > 0 && {count objectCurators _logic > 0}) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectcurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {

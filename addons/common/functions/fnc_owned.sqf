@@ -6,7 +6,10 @@
  * 0: Any object. <OBJECT>
  *
  * Return Value:
- * Is this object claimed by someone?
+ * Is this object claimed by someone? <BOOL>
+ *
+ * Example:
+ * [bob] call ace_common_fnc_owned
  *
  * Public: No
  */

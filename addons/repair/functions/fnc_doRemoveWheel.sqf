@@ -27,14 +27,14 @@ private _hitPointDamage = _vehicle getHitPointDamage _hitPoint;
 if (_hitPointDamage >= 1) exitWith {};
 
 // don't die by spawning / moving the wheel
-["fixCollision", _unit] call EFUNC(common,localEvent);
+[QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 
 // spawn wheel
 private _newWheel = ["ACE_Wheel", getPosASL _unit, _hitPointDamage] call FUNC(spawnObject);
 TRACE_2("new wheel created",_newWheel,damage _newWheel);
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, 1]] call EFUNC(common,targetEvent);
+[QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, 1], _vehicle] call CBA_fnc_targetEvent;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {

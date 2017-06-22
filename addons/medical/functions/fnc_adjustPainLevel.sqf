@@ -26,15 +26,11 @@ TRACE_3("ACE_DEBUG: adjustPainLevel Called",_unit, _pain, _addedPain);
 //Ignore if medical system disabled:
 if (GVAR(level) == 0) exitWith {};
 
-_pain = _unit getVariable [QGVAR(pain), 0];
-
-_pain = _pain + _addedPain;
-if (GVAR(level) == 1) then {_pain = _pain min 1;}; //for basic, cap at 1
-_pain = _pain max 0;
+private _pain = ((_unit getVariable [QGVAR(pain), 0]) + _addedPain) max 0;
 
 _unit setVariable [QGVAR(pain), _pain];
 
 //Start up the vital watching (if not already running)
-[_unit] call FUNC(addToInjuredCollection);
+[_unit] call FUNC(addVitalLoop);
 
-_pain
+_pain;

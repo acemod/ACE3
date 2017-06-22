@@ -61,13 +61,12 @@ if (_newMode == 0) then { // Free
     };
 
     GVAR(camAgent) switchCamera "internal";
-    clearRadio;
 } else {
     _camera = GVAR(unitCamera);
 
     // When null unit is given choose random
     if (isNull _newUnit) then {
-        _newUnit = GVAR(unitList) select floor(random(count GVAR(unitList)));
+        _newUnit = selectRandom GVAR(unitList);
     };
 
     // Switch camera view to internal unit view (external uses the camera)
@@ -85,11 +84,6 @@ if (_newMode == 0) then { // Free
     } else {
         // Switch to the camera
         _camera cameraEffect ["internal", "back"];
-    };
-
-    // Clear radio if group changed
-    if (group _newUnit != group GVAR(camUnit)) then {
-        clearRadio;
     };
 
     GVAR(camUnit) = _newUnit;

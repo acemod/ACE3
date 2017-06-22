@@ -5,23 +5,21 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ACE_PutInEarplugs {
                     displayName = CSTRING(EarPlugs_On);
-                    condition = QUOTE( !([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player} );
+                    condition = QUOTE(GVAR(EnableCombatDeafness) && {!([_player] call FUNC(hasEarPlugsIn)) && {'ACE_EarPlugs' in items _player}});
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(putInEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
-                    icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
-                    hotkey = "E";
+                    icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
                 class ACE_RemoveEarplugs {
                     displayName = CSTRING(EarPlugs_Off);
-                    condition = QUOTE( [_player] call FUNC(hasEarPlugsIn) );
+                    condition = QUOTE( GVAR(EnableCombatDeafness) && {[_player] call FUNC(hasEarPlugsIn)});
                     exceptions[] = {"isNotInside", "isNotSitting"};
                     statement = QUOTE( [_player] call FUNC(removeEarPlugs) );
                     showDisabled = 0;
                     priority = 2.5;
-                    icon = PATHTOF(UI\ACE_earplugs_x_ca.paa);
-                    hotkey = "E";
+                    icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
             };
         };
@@ -102,16 +100,17 @@ class CfgVehicles {
         scope = 2;
         isGlobal = 1;
         isSingular = 1;
-        icon = PATHTOF(UI\Icon_Module_Hearing_ca.paa);
+        icon = QPATHTOF(UI\Icon_Module_Hearing_ca.paa);
         class Arguments {
             class EnableCombatDeafness {
-                displayName = CSTRING(CombatDeafness_DisplayName);
-                description = CSTRING(CombatDeafness_Description);
+                displayName = CSTRING(EnableCombatDeafness_DisplayName);
+                description = CSTRING(EnableCombatDeafness_Description);
                 typeName = "BOOL";
                 defaultValue = 1;
             };
             class DisableEarRinging {
-                displayName = CSTRING(DisableEarRinging);
+                displayName = CSTRING(DisableEarRinging_DisplayName);
+                description = CSTRING(DisableEarRinging_Description);
                 typeName = "NUMBER";
                 class values {
                     class DoNotForce {

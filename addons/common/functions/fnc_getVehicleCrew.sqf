@@ -9,14 +9,16 @@
  * Return Value:
  * Crew <ARRAY>
  *
+ * Example:
+ * [car, ["driver"]] call ace_common_fnc_getVehicleCrew
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_vehicle", ["_types", ["driver", "commander", "gunner", "turret", "cargo", "ffv"]]];
 
-private "_crew";
-_crew = [];
+private _crew = [];
 
 // iterate through all crew members
 {

@@ -12,17 +12,18 @@
  *   3 = handgun
  *  -1 = other
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponType
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_weapon"];
 
-private ["_type", "_index"];
+private _type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
 
-_type = [getNumber (configFile >> "CfgWeapons" >> _weapon >> "type")] call FUNC(binarizeNumber);
-
-_index = 0;
+private _index = 0;
 
 while {!(_type select _index) && {_index < 16}} do {
     _index = _index + 1;

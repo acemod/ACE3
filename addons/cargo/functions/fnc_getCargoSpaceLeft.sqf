@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Cargo space left <NUMBER>
  *
  * Example:
@@ -16,5 +16,6 @@
 #include "script_component.hpp"
 
 params ["_object"];
+// TRACE_1("params",_object);
 
-_object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(space))]
+(_object getVariable [QGVAR(space), getNumber (configFile >> "CfgVehicles" >> typeOf _object >> QGVAR(space))]) max 0

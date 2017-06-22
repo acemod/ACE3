@@ -5,7 +5,7 @@
  * Arguments:
  * 0: Display <DISPLAY>
  *
- * Return value:
+ * Return Value:
  * None
  *
  * Example:
@@ -21,27 +21,36 @@ params ["_display"];
 
 uiNamespace setVariable [QGVAR(menuDisplay), _display];
 
+if (GVAR(interactionParadrop)) then {
+    (_display displayCtrl 12) ctrlSetText (localize LSTRING(paradropButton));
+};
+
 [{
-    private ["_display","_loaded", "_ctrl", "_class", "_label"];
     disableSerialization;
-    _display = uiNamespace getVariable QGVAR(menuDisplay);
+    private _display = uiNamespace getVariable QGVAR(menuDisplay);
     if (isnil "_display") exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (isNull GVAR(interactionVehicle) || ACE_player distance GVAR(interactionVehicle) >= 10) exitWith {
+    if (isNull GVAR(interactionVehicle) || {(ACE_player distance GVAR(interactionVehicle) >= 10) && {(vehicle ACE_player) != GVAR(interactionVehicle)}}) exitWith {
         closeDialog 0;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-    _ctrl = _display displayCtrl 100;
-    _label = _display displayCtrl 2;
+    private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+    private _ctrl = _display displayCtrl 100;
+    private _label = _display displayCtrl 2;
 
     lbClear _ctrl;
     {
-        _class = if (_x isEqualType "") then {_x} else {typeOf _x};
-        _ctrl lbAdd (getText(configfile >> "CfgVehicles" >> _class >> "displayName"));
+        private _class = if (_x isEqualType "") then {_x} else {typeOf _x};
+        private _displayName = getText (configfile >> "CfgVehicles" >> _class >> "displayName");
+        if (GVAR(interactionParadrop)) then {
+            _ctrl lbAdd format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_class] call FUNC(getSizeItem))];
+        } else {
+            _ctrl lbAdd _displayName;
+        };
+
         true
     } count _loaded;
 

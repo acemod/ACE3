@@ -2,11 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {"ACE_Item_DAGR"};
         weapons[] = {"ACE_DAGR"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_weather"};
-        author[] = {"Rosuto", "Ruthberg"};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Rosuto", "Ruthberg"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };

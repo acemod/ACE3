@@ -1,11 +1,9 @@
 #include "script_component.hpp"
 
-private ["_unit"];
-
-_unit = _this select 0;
+params ["_unit"];
 
 if !(local _unit) exitWith {};
 
-[_unit, QGVAR(vehAttach), false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
 _unit setVariable [QGVAR(isRefueling), false];

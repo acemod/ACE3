@@ -18,10 +18,8 @@
 
 params ["_unit", ["_type", 0]];
 
-private ["_currentGrenade", "_magazines", "_grenades", "_nextGrenadeIndex", "_nextGrenade", "_uniformGrenades", "_vestGrenades", "_backpackGrenades"];
-
 // get currently selected grenade
-_currentGrenade = currentThrowable _unit;
+private _currentGrenade = currentThrowable _unit;
 
 // get correct array format if no grenade is selected
 if (_currentGrenade isEqualTo []) then {
@@ -31,9 +29,9 @@ if (_currentGrenade isEqualTo []) then {
 _currentGrenade = _currentGrenade select 0;
 
 // get available magazines for that unit
-_magazines = magazines _unit;
+private _magazines = magazines _unit;
 
-_grenades = [];
+private _grenades = [];
 
 {
     if (_x in _magazines) then {
@@ -46,22 +44,22 @@ _grenades = [];
 if (_grenades isEqualTo []) exitWith {false};
 
 // get next grenade muzzle
-_nextGrenadeIndex = (_grenades find _currentGrenade) + 1;
+private _nextGrenadeIndex = (_grenades find _currentGrenade) + 1;
 
 // roll over if the last grenade was selected
 if (_nextGrenadeIndex >= count _grenades) then {
     _nextGrenadeIndex = 0;
 };
 
-_nextGrenade = _grenades select _nextGrenadeIndex;
+private _nextGrenade = _grenades select _nextGrenadeIndex;
 
 // abort if the same grenade would be selected
 if (_currentGrenade == _nextGrenade) exitWith {false};
 
 // current best method to select a grenade: remove all grenades except the one you want to select, then add them back
-_uniformGrenades =  [uniformItems  _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
-_vestGrenades =     [vestItems     _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
-_backpackGrenades = [backpackItems _unit, {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}}] call EFUNC(common,filter);
+private _uniformGrenades =  uniformItems  _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // remove all grenades except those we are switching to --> this breaks the selector
 {_unit removeItemFromUniform  _x; false} count _uniformGrenades;

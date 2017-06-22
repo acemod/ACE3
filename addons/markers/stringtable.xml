@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
             <German>Drehung: %1°</German>
-            <French>Direction: %1°</French>
+            <French>Direction : %1°</French>
             <Czech>Směr: %1°</Czech>
             <Polish>Kierunek: %1°</Polish>
             <Spanish>Dirección: %1°</Spanish>
@@ -12,6 +12,10 @@
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
             <Portuguese>Direção %1</Portuguese>
+            <Japanese>方位：%1°</Japanese>
+            <Korean>방위: %1°</Korean>
+            <SChinese>方位: %1°</SChinese>
+            <TChinese>方位: %1°</TChinese>
         </Key>
     </Package>
 </Project>

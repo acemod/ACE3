@@ -8,15 +8,16 @@
  * Return Value:
  * Gunner config <CONFIG>
  *
+ * Example:
+ * [car] call ace_common_fnc_getConfigGunner
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_vehicle"];
 
-private ["_config", "_turret"];
-
-_config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-_turret = [_vehicle] call FUNC(getTurretGunner);
+private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _turret = _vehicle call FUNC(getTurretGunner);
 
 [_config, _turret] call FUNC(getTurretConfigPath) // return

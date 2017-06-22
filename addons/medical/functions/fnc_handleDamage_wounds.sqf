@@ -12,32 +12,36 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_wounds
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_bodyPartn", "_injuryTypeInfo", "_allInjuriesForDamageType", "_allPossibleInjuries", "_highestPossibleDamage", "_highestPossibleSpot", "_minDamage", "_openWounds", "_woundID", "_toAddInjury", "_painToAdd", "_bloodLoss", "_bodyPartNToAdd", "_classType", "_damageLevels", "_foundIndex", "_i", "_injury", "_maxDamage", "_pain", "_painLevel", "_selections", "_toAddClassID", "_woundsCreated"];
 params ["_unit", "_selectionName", "_damage", "_typeOfProjectile", "_typeOfDamage"];
 TRACE_6("ACE_DEBUG: HandleDamage Called",_unit, _selectionName, _damage, _shooter, _typeOfProjectile,_typeOfDamage);
 
+if (_typeOfDamage == "") then {_typeOfDamage = "unknown";};
+
 // Administration for open wounds and ids
-_openWounds = _unit getVariable[QGVAR(openWounds), []];
-_woundID = _unit getVariable[QGVAR(lastUniqueWoundID), 1];
+private _openWounds = _unit getVariable[QGVAR(openWounds), []];
+private _woundID = _unit getVariable[QGVAR(lastUniqueWoundID), 1];
 
-_extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
+private _extensionOutput = "ace_medical" callExtension format ["HandleDamageWounds,%1,%2,%3,%4", _selectionName, _damage, _typeOfDamage, _woundID];
 
-_painToAdd = 0;
-_woundsCreated = [];
+private _painToAdd = 0;
+private _woundsCreated = [];
 
 call compile _extensionOutput;
-_foundIndex = -1;
 {
-    _toAddClassID = _x select 1;
-    _bodyPartNToAdd = _x select 2;
+    _x params ["", "_toAddClassID", "_bodyPartNToAdd"];
+    _foundIndex = -1;
     {
+        _x params ["", "_compareId", "_comparyBodyPartN"];
         // Check if we have an id of the given class on the given bodypart already
-        if (_x select 1 == _toAddClassID && {_x select 2 == _bodyPartNToAdd}) exitWith {
+        if (_compareId == _toAddClassID && {_comparyBodyPartN == _bodyPartNToAdd}) exitWith {
             _foundIndex = _forEachIndex;
         };
     } forEach _openWounds;
@@ -47,7 +51,7 @@ _foundIndex = -1;
         _openWounds pushBack _x;
     } else {
         // We already have one of these, so we are just going to increase the number that we have of it with a new one.
-        _injury = _openWounds select _foundIndex;
+        private _injury = _openWounds select _foundIndex;
         _injury set [3, (_injury select 3) + 1];
     };
 } forEach _woundsCreated;
@@ -59,6 +63,6 @@ if (count _woundsCreated > 0) then {
     _unit setVariable [QGVAR(lastUniqueWoundID), _woundID, true];
 };
 
-_painLevel = _unit getVariable [QGVAR(pain), 0];
+private _painLevel = _unit getVariable [QGVAR(pain), 0];
 _unit setVariable [QGVAR(pain), _painLevel + _painToAdd];
 TRACE_6("ACE_DEBUG: HandleDamage_WoundsOLD",_unit, _painLevel, _painToAdd, _unit getVariable QGVAR(pain), _unit getVariable QGVAR(openWounds),_woundsCreated);

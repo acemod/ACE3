@@ -9,18 +9,19 @@
  * 0: Azimuth <NUMBER>
  * 1: Inclination <NUMBER>
  *
+ * Example:
+ * ["gun"] call ace_common_fnc_getWeaponAzimuthAndInclination
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_weapon"];
 
-private ["_direction", "_azimuth", "_inclination"];
+private _direction = ACE_player weaponDirection _weapon;
 
-_direction = ACE_player weaponDirection _weapon;
-
-_azimuth = (_direction select 0) atan2 (_direction select 1);
-_inclination = asin (_direction select 2);
+private _azimuth = (_direction select 0) atan2 (_direction select 1);
+private _inclination = asin (_direction select 2);
 
 if (_azimuth < 0) then {_azimuth = _azimuth + 360};
 

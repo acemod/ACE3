@@ -9,10 +9,15 @@
  * Return Value:
  * has Item <BOOL>
  *
+ * Example:
+ * [[bob, "item"] call ace_common_fnc_hasItem
+ *
  * Public: yes
+ *
+ * Note: Case sensitive
  */
 #include "script_component.hpp"
 
-params ["_unit", "_item"];
+params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
 _item in items _unit // return

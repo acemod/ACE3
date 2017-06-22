@@ -18,7 +18,7 @@
 params ["_magazineClassname"];
 TRACE_1("params",_magazineClassname);
 
-private["_result", "_config", "_count", "_index"];
+private ["_result", "_config", "_count", "_index"];
 
 _result = [];
 _config = getArray (ConfigFile >> "CfgMagazines" >> _magazineClassname >> "ACE_Triggers" >> "SupportedTriggers");

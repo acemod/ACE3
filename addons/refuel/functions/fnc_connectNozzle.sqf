@@ -21,30 +21,28 @@
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
 
-private ["_nozzle", "_actionID"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle) exitWith {};
 
 GVAR(placeAction) = PLACE_WAITING;
 
-[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call EFUNC(common,execNextFrame);
+[{[localize LSTRING(Connect_Action), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
-_actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL;}];
+private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(Cancel)], {GVAR(placeAction) = PLACE_CANCEL;}];
 
 [{
-    private["_virtualPos", "_virtualPosASL", "_lineInterection"];
     params ["_args","_pfID"];
-    _args params ["_unit", "_target", "_nozzle", "_actionID"];
+    _args params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_actionID", -1, [0]]];
 
-    _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
+    private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
     if (cameraView == "EXTERNAL") then {
         _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
     };
-    _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-    _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
+    private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
+    private _lineInterection = lineIntersects [eyePos ace_player, _virtualPosASL, ace_player];
 
     //Don't allow placing in a bad position:
     if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};

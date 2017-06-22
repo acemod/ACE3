@@ -8,10 +8,14 @@
             <Polish>Teleskop</Polish>
             <Spanish>Telescopio</Spanish>
             <French>Téléscope de visée</French>
-            <Czech>Zaměřovací Dalekohled</Czech>
+            <Czech>Zaměřovací dalekohled</Czech>
             <Italian>Spotting Scope</Italian>
             <Hungarian>Megfigyelő távcső</Hungarian>
             <Portuguese>Luneta de observador</Portuguese>
+            <Japanese>観測用スコープ</Japanese>
+            <Korean>감적 망원경</Korean>
+            <SChinese>观测镜</SChinese>
+            <TChinese>觀測鏡</TChinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
@@ -20,10 +24,14 @@
             <Polish>Zabierz teleskop</Polish>
             <Spanish>Coger telescopio</Spanish>
             <French>Prendre téléscope de visée</French>
-            <Czech>Zvednout Zaměřovací dalekohled</Czech>
+            <Czech>Zvednout zaměřovací dalekohled</Czech>
             <Italian>Raccogli spottingscope</Italian>
             <Hungarian>Mefgigy. távcső felvétele</Hungarian>
             <Portuguese>Pegar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを拾う</Japanese>
+            <Korean>감적 망원경 줍기</Korean>
+            <SChinese>捡起观测镜</SChinese>
+            <TChinese>撿起觀測鏡</TChinese>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
@@ -32,10 +40,14 @@
             <Polish>Ustaw teleskop</Polish>
             <Spanish>Colocar telescopio</Spanish>
             <French>Placer téléscope de visée</French>
-            <Czech>Položit Zaměřovací dalekohled</Czech>
+            <Czech>Položit zaměřovací dalekohled</Czech>
             <Italian>Posiziona spottingscope</Italian>
             <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
             <Portuguese>Colocar luneta de observador</Portuguese>
+            <Japanese>観測用スコープを置く</Japanese>
+            <Korean>감적 망원경 배치</Korean>
+            <SChinese>放置观测镜</SChinese>
+            <TChinese>放置觀測鏡</TChinese>
         </Key>
     </Package>
 </Project>

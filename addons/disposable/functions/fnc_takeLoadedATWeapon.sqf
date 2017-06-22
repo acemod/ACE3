@@ -20,17 +20,12 @@ TRACE_1("params",_unit);
 
 if (!local _unit) exitWith {};
 
-private ["_launcher", "_config"];
-
-_launcher = secondaryWeapon _unit;
-_config = configFile >> "CfgWeapons" >> _launcher;
+private _launcher = secondaryWeapon _unit;
+private _config = configFile >> "CfgWeapons" >> _launcher;
 
 if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber (_config >> "ACE_isUsedLauncher") != 1} && {count secondaryWeaponMagazine _unit == 0}) then {
-    private ["_magazine", "_isLauncherSelected", "_didAdd"];
-
-    _magazine = getArray (_config >> "magazines") select 0;
-
-    _isLauncherSelected = currentWeapon _unit == _launcher;
+    private _magazine = getArray (_config >> "magazines") select 0;
+    private _isLauncherSelected = currentWeapon _unit == _launcher;
 
     _unit removeMagazines _magazine;
 
@@ -38,8 +33,9 @@ if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber
         _unit addBackpack "ACE_FakeBackpack";
         _unit removeWeapon _launcher;
         _unit addMagazine _magazine;
-        _didAdd = _magazine in (magazines _unit);
+        private _didAdd = _magazine in magazines _unit;
         _unit addWeapon _launcher;
+
         if (!_didAdd) then {
             TRACE_1("Failed To Add Disposable Magazine Normally, doing backup method (no backpack)",_unit);
             _unit addSecondaryWeaponItem _magazine;
@@ -48,8 +44,9 @@ if (isClass _config && {getText (_config >> "ACE_UsedTube") != ""} && {getNumber
     } else {
         _unit removeWeapon _launcher;
         _unit addMagazine _magazine;
-        _didAdd = _magazine in (magazines _unit);
+        private _didAdd = _magazine in magazines _unit;
         _unit addWeapon _launcher;
+
         if (!_didAdd) then {
             TRACE_2("Failed To Add Disposable Magazine Normally, doing backup method",_unit,(backpack _unit));
             _unit addSecondaryWeaponItem _magazine;

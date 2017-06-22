@@ -12,6 +12,9 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_fractures
+ *
  * Public: No
  */
 

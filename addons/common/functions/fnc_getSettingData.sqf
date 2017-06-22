@@ -6,7 +6,7 @@
  * 0: Setting Name <STRING>
  *
  * Return Value:
- * Setting Data (Array)
+ * Setting Data <ARRAY>
  * 0: Name <STRING>
  * 1: Type Name <STRING>
  * 2: Is Client Settable <BOOL>
@@ -17,18 +17,22 @@
  * 7: Default Value <ANY>
  * 8: Localized Category <STRING>
  *
+ * Example:
+ * ["setting"] call ace_common_fnc_getSettingData
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_name"];
 
-private "_value";
-_value = [];
+scopeName "main";
 
 {
-    if (_x select 0 == _name) exitWith {_value = _x};
+    if (_x select 0 == _name) then {
+        _x breakOut "main";
+    };
     false
 } count GVAR(settings);
 
-_value
+[]

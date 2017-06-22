@@ -7,19 +7,21 @@
  * weapon - classname <STRING>
  *
  * Return Value:
- * 0: _barrelTwist
- * 1: _twistDirection
- * 2: _barrelLength
+ * 0: _barrelTwist <NUMBER>
+ * 1: _twistDirection <NUMBER>
+ * 2: _barrelLength <NUMBER>
+ *
+ * Example:
+ * ["weapon"] call ace_advanced_ballistics_fnc_readWeaponDataFromConfig
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_weaponConfig", "_barrelTwist", "_twistDirection", "_barrelLength", "_result"];
-_weaponConfig = (configFile >> "CfgWeapons" >> _this);
+private _weaponConfig = (configFile >> "CfgWeapons" >> _this);
 
-_barrelTwist = getNumber(_weaponConfig >> "ACE_barrelTwist");
-_twistDirection = 1;
+private _barrelTwist = getNumber(_weaponConfig >> "ACE_barrelTwist");
+private _twistDirection = 1;
 if (isNumber (_weaponConfig >> "ACE_twistDirection")) then {
     _twistDirection = getNumber (_weaponConfig >> "ACE_twistDirection");
     if !(_twistDirection in [-1, 0, 1]) then {
@@ -27,10 +29,10 @@ if (isNumber (_weaponConfig >> "ACE_twistDirection")) then {
     };
 };
 
-_barrelLength = getNumber(_weaponConfig >> "ACE_barrelLength");
+private _barrelLength = getNumber(_weaponConfig >> "ACE_barrelLength");
 
-_result = [_barrelTwist, _twistDirection, _barrelLength];
+private _result = [_barrelTwist, _twistDirection, _barrelLength];
 
-uiNamespace setVariable [format[QGVAR(%1), _weapon], _result];
+uiNamespace setVariable [format[QGVAR(%1), _this], _result];
 
 _result

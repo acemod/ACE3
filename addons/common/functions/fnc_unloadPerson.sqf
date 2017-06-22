@@ -8,28 +8,25 @@
  * Return Value:
  * Returns true if succesfully unloaded person <BOOL>
  *
+ * Example:
+ * [hurtGuy] call ace_common_fnc_unloadPerson
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-#define GROUP_SWITCH_ID QUOTE(FUNC(loadPerson))
+#define GROUP_SWITCH_ID QFUNC(loadPerson)
 
 params ["_unit"];
 
-private "_vehicle";
-_vehicle = vehicle _unit;
+private _vehicle = vehicle _unit;
 
 if (_vehicle == _unit) exitWith {false};
 
-if (speed _vehicle > 1 || getPos _vehicle select 2 > 2) exitWith {false};
-
-private "_emptyPos";
-_emptyPos = (getPos _vehicle) findEmptyPosition [0, 10, typeOf _unit]; // @todo to small?
-
-if (count _emptyPos == 0) exitWith {false};
+if (speed _vehicle > 1 || {((getPos _vehicle) select 2) > 2}) exitWith {false};
 
 if (!isNull _vehicle) then {
-    [[_unit], QUOTE(FUNC(unloadPersonLocal)), _unit, false] call FUNC(execRemoteFnc);
+    ["ace_unloadPersonEvent", [_unit, _vehicle], [_unit]] call CBA_fnc_targetEvent;
 };
 
 true

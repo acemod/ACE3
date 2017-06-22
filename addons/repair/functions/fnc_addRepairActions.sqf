@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 params ["_vehicle"];
 TRACE_2("params", _vehicle,typeOf _vehicle);
 
-private["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint", "_hitPointsAddedAmount", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_icon", "_initializedClasses", "_name", "_position", "_positionsConfig", "_processedHitPoints", "_selection", "_statement", "_target", "_type"];
+private ["_action", "_childHitPoint", "_condition", "_groupsConfig", "_hitPoint", "_hitPointsAddedAmount", "_hitPointsAddedNames", "_hitPointsAddedStrings", "_icon", "_initializedClasses", "_name", "_position", "_positionsConfig", "_processedHitPoints", "_selection", "_statement", "_target", "_type"];
 
 _type = typeOf _vehicle;
 
@@ -56,7 +56,7 @@ _processedHitpoints = [];
 
         // An action to remove the wheel is required
         _name = format ["Remove_%1_%2", _forEachIndex, _hitpoint];
-        _text = localize LSTRING(RemoveWheel);
+        private _text = localize LSTRING(RemoveWheel);
         _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(canRepair)};
         _statement = {[_this select 1, _this select 0, _this select 2 select 0, "RemoveWheel"] call DFUNC(repair)};
         _action = [_name, _text, _icon, _statement, _condition, {}, [_hitpoint], _position, 2] call EFUNC(interact_menu,createAction);
@@ -113,7 +113,7 @@ _processedHitpoints = [];
                     if (_pos isEqualType "") exitWith {
                         _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _pos];
                     };
-                    ACE_LOGERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
+                    ERROR_3("Invalid custom position %1 of hitpoint %2 in vehicle %3.",_position,_hitpoint,_type);
                 };
             } forEach (getArray _positionsConfig);
         };
@@ -132,9 +132,9 @@ _processedHitpoints = [];
             // Tracks should always be unique
             if (_hitpoint in _processedHitpoints) exitWith {TRACE_3("Duplicate Track",_hitpoint,_forEachIndex,_selection);};
             if (_hitpoint == "HitLTrack") then {
-                _position = [-1.75, 0, -1.75];
+                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             } else {
-                _position = [1.75, 0, -1.75];
+                _position = compile format ["private _return = _target selectionPosition ['%1', 'HitPoints']; _return set [1, 0]; _return", _selection];
             };
             TRACE_4("Adding RepairTrack",_hitpoint,_forEachIndex,_selection,_text);
             _condition = {[_this select 1, _this select 0, _this select 2 select 0, "RepairTrack"] call DFUNC(canRepair)};

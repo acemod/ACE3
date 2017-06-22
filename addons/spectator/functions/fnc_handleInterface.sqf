@@ -22,19 +22,22 @@ params ["_mode",["_args",[]]];
 switch (toLower _mode) do {
     case "onload": {
         _args params ["_display"];
+        SETUVAR(GVAR(interface),_display);
 
         // Always show interface and hide map upon opening
         [_display,nil,nil,!GVAR(showInterface),GVAR(showMap)] call FUNC(toggleInterface);
 
+        // Initalize the unit tree
+        ["onUnitsUpdate",[(_display displayCtrl IDC_UNIT) controlsGroupCtrl IDC_UNIT_TREE]] call FUNC(handleInterface);
+
         // Keep unit list and tree up to date
-        [FUNC(handleUnits), 21, _display] call CBA_fnc_addPerFrameHandler;
+        [FUNC(handleUnits), 9, _display] call CBA_fnc_addPerFrameHandler;
 
         // Handle 3D unit icons
-        GVAR(iconHandler) = addMissionEventHandler ["Draw3D",FUNC(handleIcons)];
+        GVAR(iconHandler) = addMissionEventHandler ["Draw3D", {call FUNC(handleIcons)}];
 
         // Populate the help window
-        private "_help";
-        _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
+        private _help = (_display displayCtrl IDC_HELP) controlsGroupCtrl IDC_HELP_LIST;
         {
             _i = _help lbAdd (_x select 0);
             if ((_x select 1) == "") then {
@@ -107,7 +110,7 @@ switch (toLower _mode) do {
                 _timer ctrlCommit 0;
                 _frame ctrlCommit 0;
             };
-        },[],0.5] call EFUNC(common,waitAndExecute);
+        },[],0.5] call CBA_fnc_waitAndExecute;
     };
     case "onunload": {
         // Kill GUI PFHs
@@ -172,8 +175,11 @@ switch (toLower _mode) do {
             [QGVAR(zeus)] call FUNC(interrupt);
             ["zeus"] call FUNC(handleInterface);
         };
-        if ((isServer || {serverCommandAvailable "#kick"}) && {_dik in (actionKeys "Chat" + actionKeys "PrevChannel" + actionKeys "NextChannel")}) exitWith {
+        if (_dik in (actionKeys "Chat")) exitWith {
             false
+        };
+        if (_dik in (actionKeys "PrevChannel" + actionKeys "NextChannel")) exitWith {
+            !(isServer || serverCommandAvailable "#kick")
         };
 
         // Handle held keys (prevent repeat calling)
@@ -327,31 +333,40 @@ switch (toLower _mode) do {
     };
     case "onunitsupdate": {
         _args params ["_tree"];
-        private ["_cachedUnits","_cachedGrps","_cachedSides","_s","_g","_grp","_u","_unit","_side"];
+        private ["_cachedUnits","_cachedGrps","_cachedSides","_sT","_gT","_uT","_s","_g","_u","_grp","_unit","_side"];
 
         // Cache existing group and side nodes and cull removed data
         _cachedUnits = [];
         _cachedGrps = [];
         _cachedSides = [];
-        for "_s" from 0 to ((_tree tvCount []) - 1) do {
-            for "_g" from 0 to ((_tree tvCount [_s]) - 1) do {
+        // Track deleted nodes to account for decrease in index
+        _sT = _tree tvCount [];
+        for [{_s = 0;}, {_s < _sT}, {_s = _s + 1}] do {
+            _gT = _tree tvCount [_s];
+
+            for [{_g = 0;}, {_g < _gT}, {_g = _g + 1}] do {
                 _grp = groupFromNetID (_tree tvData [_s,_g]);
 
                 if (_grp in GVAR(groupList)) then {
                     _cachedGrps pushBack _grp;
                     _cachedGrps pushBack _g;
 
-                    for "_u" from 0 to ((_tree tvCount [_s,_g])) do {
+                    _uT = _tree tvCount [_s,_g];
+                    for [{_u = 0;}, {_u < _uT}, {_u = _u + 1}] do {
                         _unit = objectFromNetId (_tree tvData [_s,_g,_u]);
 
                         if (_unit in GVAR(unitList)) then {
                             _cachedUnits pushBack _unit;
                         } else {
                             _tree tvDelete [_s,_g,_u];
+                            _u = _u - 1;
+                            _uT = _uT - 1;
                         };
                     };
                 } else {
                     _tree tvDelete [_s,_g];
+                    _g = _g - 1;
+                    _gT = _gT - 1;
                 };
             };
 
@@ -360,6 +375,8 @@ switch (toLower _mode) do {
                 _cachedSides pushBack _s;
             } else {
                 _tree tvDelete [_s];
+                _s = _s - 1;
+                _sT = _sT - 1;
             };
         };
 
@@ -422,12 +439,10 @@ switch (toLower _mode) do {
     };
     // Interrupt events
     case "escape": {
-        private "_dlg";
-
         createDialog (["RscDisplayInterrupt", "RscDisplayMPInterrupt"] select isMultiplayer);
 
         disableSerialization;
-        _dlg = finddisplay 49;
+        private _dlg = finddisplay 49;
         _dlg displayAddEventHandler ["KeyDown", {
             _key = _this select 1;
             !(_key == 1)
@@ -451,13 +466,13 @@ switch (toLower _mode) do {
 
         // PFH to re-open display when menu closes
         [{
-            if !(isNull (findDisplay 49)) exitWith {};
+            if !(isNull (_this select 0)) exitWith {};
 
             // If still a spectator then re-enter the interface
             [QGVAR(escape),false] call FUNC(interrupt);
 
             [_this select 1] call CBA_fnc_removePerFrameHandler;
-        },0] call CBA_fnc_addPerFrameHandler;
+        },0,_dlg] call CBA_fnc_addPerFrameHandler;
     };
     case "zeus": {
         openCuratorInterface;
@@ -472,7 +487,7 @@ switch (toLower _mode) do {
 
                 [_this select 1] call CBA_fnc_removePerFrameHandler;
             },0] call CBA_fnc_addPerFrameHandler;
-        },[],5] call EFUNC(common,waitAndExecute);
+        },[],5] call CBA_fnc_waitAndExecute;
 
         true
     };

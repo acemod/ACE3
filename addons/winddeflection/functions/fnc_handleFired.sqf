@@ -1,18 +1,12 @@
 /*
  * Author: Glowbal, Ruthberg
- * Handles wind deflection for projectiles.
+ * Handles wind deflection for projectiles. Called from the unified fired EH only for players on foot and their vehicles if required by settings.
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [clientFiredBIS-XEH] call ace_advanced_ballistics_fnc_handleFired
@@ -21,17 +15,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "", "", "", "_ammo", "", "_bullet"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && (_bullet isKindOf "BulletBase") && (_unit isKindOf "Man")) exitWith {false};
+if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] && {_projectile isKindOf "BulletBase"} && {_unit isKindOf "Man"}) exitWith {false};
 
-if (!hasInterface) exitWith {false};
-if (!(GVAR(enabled))) exitWith {false};
-if (!(GVAR(vehicleEnabled)) && !(_unit isKindOf "Man")) exitWith {false};
-if (!((_bullet isKindOf "BulletBase") || (_bullet isKindOf "GrenadeBase"))) exitWith {false};
+if (!((_projectile isKindOf "BulletBase") || {_projectile isKindOf "GrenadeBase"})) exitWith {false};
 if (_unit distance ACE_player > GVAR(simulationRadius)) exitWith {false};
-if (!([_unit] call EFUNC(common,isPlayer))) exitWith {false};
 
-GVAR(trackedBullets) pushBack [_bullet, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];
-
-true;
+GVAR(trackedBullets) pushBack [_projectile, getNumber(configFile >> "CfgAmmo" >> _ammo >> "airFriction")];

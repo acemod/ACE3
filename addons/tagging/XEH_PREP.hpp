@@ -1,0 +1,10 @@
+PREP(addCustomTag);
+PREP(addTagActions);
+PREP(applyCustomTag);
+PREP(checkTaggable);
+PREP(compileConfigTags);
+PREP(createTag);
+PREP(moduleInit);
+PREP(quickTag);
+PREP(tag);
+PREP(tagTestingThread);

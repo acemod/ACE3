@@ -1,21 +1,23 @@
 /*
- * Author: ?
+ * Author: ACE-Team
  * ?
  *
  * Arguments:
- * ?
+ * <UNKOWN>
  *
  * Return Value:
- * ?
+ * Unknown <UNKNOWN>
  *
- * Public: ?
+ * Example:
+ * [UNKOWN] call ace_common_fnc_translateToWeaponSpace
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 params ["_object", "_matrix", "_offset"];
 
-private "_origin";
-_origin = getPosASL _object;
+private _origin = getPosASL _object;
 
 _matrix params ["_xVec", "_yVec", "_zVec"];
 

@@ -12,7 +12,7 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canReplaceWheel));
             itemConsumed = 0;
             claimObjects[] = {{"ACE_Wheel"}};
-            
+
             callbackSuccess = QUOTE(call FUNC(doReplaceWheel));
             callbackFailure = "";
             callbackProgress = "";
@@ -34,10 +34,11 @@ class ACE_Repair {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
             condition = QUOTE(call FUNC(canMiscRepair));
-            requiredEngineer = 0;
+            requiredEngineer = QGVAR(engineerSetting_Repair);
             repairingTime = 15;
             callbackSuccess = QUOTE(call FUNC(doRepair));
             items[] = {"ToolKit"};
+            itemConsumed = QGVAR(consumeItem_ToolKit);
             claimObjects[] = {};
         };
         class RepairTrack: MiscRepair {
@@ -47,6 +48,7 @@ class ACE_Repair {
             callbackSuccess = QUOTE(call FUNC(doRepairTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
             claimObjects[] = {{"ACE_Track"}};
+            itemConsumed = 0;
         };
         class RemoveTrack: MiscRepair {
             displayName = CSTRING(RemoveTrack);
@@ -54,6 +56,7 @@ class ACE_Repair {
             condition = QUOTE(call FUNC(canRemove));
             callbackSuccess = QUOTE(call FUNC(doRemoveTrack));
             requiredEngineer = QGVAR(engineerSetting_Wheel);
+            itemConsumed = 0;
         };
         class ReplaceTrack: RemoveTrack {
             displayName = CSTRING(ReplaceTrack);
@@ -69,8 +72,9 @@ class ACE_Repair {
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
             repairingTime = 30;
-            condition = "damage _target > 0";
+            condition = "0 < ({_x>0} count (getAllHitPointsDamage _target param [2,[]]))";
             callbackSuccess = QUOTE(call FUNC(doFullRepair));
+            itemConsumed = QGVAR(consumeItem_ToolKit);
         };
     };
 };

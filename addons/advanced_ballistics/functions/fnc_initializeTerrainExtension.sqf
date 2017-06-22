@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [] call ace_advanced_ballistics_fnc_initializeTerrainExtension
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -18,13 +21,14 @@ if (!GVAR(extensionAvailable)) exitWith {};
 
 private ["_initStartTime", "_mapSize", "_mapGrids", "_gridCells", "_x", "_y", "_gridCenter", "_gridHeight", "_gridNumObjects", "_gridSurfaceIsWater"];
 
-_initStartTime = ACE_time;
+_initStartTime = CBA_missionTime;
 _mapSize = getNumber (configFile >> "CfgWorlds" >> worldName >> "MapSize");
 
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
+    INFO_1("Terrain already initialized [world: %1]", worldName);
     #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
-    #endIf
+    #endif
 };
 
 _mapGrids = ceil(_mapSize / 50) + 1;
@@ -32,13 +36,16 @@ _gridCells = _mapGrids * _mapGrids;
 
 GVAR(currentGrid) = 0;
 
+INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldName);
+
 [{
     params ["_args","_idPFH"];
     _args params ["_mapGrids", "_gridCells", "_initStartTime"];
 
     if (GVAR(currentGrid) >= _gridCells) exitWith {
+        INFO_2("Finished terrain initialization in %1 seconds [world: %2]", ceil(CBA_missionTime - _initStartTime), worldName);
         #ifdef DEBUG_MODE_FULL
-            systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", ceil(ACE_time - _initStartTime)];
+            systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", ceil(CBA_missionTime - _initStartTime)];
         #endif
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };

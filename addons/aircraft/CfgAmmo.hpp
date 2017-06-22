@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class BulletBase;
     class B_20mm : BulletBase {
@@ -11,11 +10,11 @@ class CfgAmmo {
         explosive = 1.8;
         tracersEvery = 3;
         tracerEndTime = 3.5;
-        
         CraterEffects = "ExploAmmoCrater";
         explosionEffects = "ExploAmmoExplosion";
         model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
     };
+
     class ACE_20mm_HE : B_20mm {};
     class ACE_20mm_AP : B_20mm {
         hit = 50;
@@ -40,30 +39,20 @@ class CfgAmmo {
 
     // also adjust tracer, "muh lightshow"; also adjust splash damage radius
     class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
-        hit = 80;
-        indirectHit = 12;
-        indirectHitRange = 3; //2;
-        caliber = 1.4;
-        deflecting = 3;
-        fuseDistance = 3;
-        tracerStartTime = 0.02;
-        timeToLive = 40;
+        hit = 80; // default: 180
+        indirectHit = 12; // default: 4
+        indirectHitRange = 3; // default: 3
+        caliber = 1.4; // default: 5
+        deflecting = 3; // default: 5
+        fuseDistance = 3; // default: 10
+        tracerStartTime = 0.02; // default: 0.1
+        timeToLive = 40; // default: 6
     };
-
-    // helper projectiles to simulate a rof > fps
-    class ACE_Gatling_30mm_HE_Plane_CAS_01_Deploy: Gatling_30mm_HE_Plane_CAS_01_F {
-        simulation = "shotSubmunitions";
-        triggerTime = 0;
-        submunitionAmmo = "ACE_Gatling_30mm_HE_Plane_CAS_01_Sub";
-        submunitionConeType[] = {"custom", {{0,0}, {0,0}, {0,0}} };
-    };
-
-    class ACE_Gatling_30mm_HE_Plane_CAS_01_Sub: Gatling_30mm_HE_Plane_CAS_01_F {};
 
     // adjust damage and splash damage, closer to bluefor gatling with same caliber
     class Cannon_30mm_HE_Plane_CAS_02_F: Gatling_30mm_HE_Plane_CAS_01_F {
-        hit = 70; //40;
-        indirectHit = 11; //14;
-        indirectHitRange = 3;
+        hit = 70; // default: 150
+        indirectHit = 11; // default: 4
+        indirectHitRange = 3; // default: 3
     };
 };

@@ -13,16 +13,19 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "classname", "varname", 5, 6, ["stuff"]] call ACE_medical_fnc_onMedicationUsage
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_foundEntry", "_allUsedMedication","_allMedsFromClassname", "_usedMeds", "_hasOverDosed", "_med", "_limit", "_decreaseAmount", "_viscosityAdjustment", "_medicationConfig", "_onOverDose"];
 params ["_target", "_className", "_variable", "_maxDosage", "_timeInSystem", "_incompatabileMeds", "_viscosityChange", "_painReduce"];
+TRACE_8("params",_target,_className,_variable,_maxDosage,_timeInSystem,_incompatabileMeds,_viscosityChange,_painReduce);
 
-_foundEntry = false;
-_allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
+private _foundEntry = false;
+private _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
 {
     _x params ["_variableX", "_allMedsFromClassname"];
     if (_variableX== _variable) exitWith {
@@ -42,12 +45,12 @@ if (!_foundEntry) then {
 };
 
 
-_usedMeds = _target getVariable [_variable, 0];
+private _usedMeds = _target getVariable [_variable, 0];
 if (_usedMeds >= floor (_maxDosage + round(random(2))) && _maxDosage >= 1 && GVAR(enableOverdosing)) then {
     [_target] call FUNC(setDead);
 };
 
-_hasOverDosed = 0;
+private _hasOverDosed = 0;
 {
     _x params ["_med", "_limit"];
     {
@@ -59,8 +62,8 @@ _hasOverDosed = 0;
 } forEach _incompatabileMeds;
 
 if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
-    _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
-    _onOverDose = getText (_medicationConfig >> "onOverDose");
+    private _medicationConfig = (configFile >> "ACE_Medical_Advanced" >> "Treatment" >> "Medication");
+    private _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {
         _medicationConfig = (_medicationConfig >> _className);
          if (isText (_medicationConfig  >> "onOverDose")) then { _onOverDose = getText (_medicationConfig >> "onOverDose"); };
@@ -73,25 +76,8 @@ if (_hasOverDosed > 0 && GVAR(enableOverdosing)) then {
     [_target, _className] call _onOverDose;
 };
 
-_decreaseAmount = 1 / _timeInSystem;
-_viscosityAdjustment = _viscosityChange / _timeInSystem;
+private _decreaseAmount = 1 / _timeInSystem;
+private _viscosityAdjustment = _viscosityChange / _timeInSystem;
 
-[{
-    params ["_args", "_idPFH"];
-    _args params ["_target", "_timeInSystem", "_variable", "_amountDecreased","_decreaseAmount", "_viscosityAdjustment", "_painReduce"];
-    private "_usedMeds";
-    _usedMeds = _target getVariable [_variable, 0];
-    _usedMeds = _usedMeds - _decreaseAmount;
-    _target setVariable [_variable, _usedMeds];
-
-    _amountDecreased = _amountDecreased + _decreaseAmount;
-
-    // Restoring the viscosity while the medication is leaving the system
-    _target setVariable [QGVAR(peripheralResistance), ((_target getVariable [QGVAR(peripheralResistance), 100]) - _viscosityAdjustment) max 0];
-    _target setVariable [QGVAR(painSuppress), ((_target getVariable [QGVAR(painSuppress), 0]) - _painReduce) max 0];
-
-    if (_amountDecreased >= 1 || (_usedMeds <= 0) || !alive _target) then {
-        [_idPFH] call CBA_fnc_removePerFrameHandler;
-    };
-    _args set [3, _amountDecreased];
-}, 1, [_target, _timeInSystem, _variable, 0, _decreaseAmount, _viscosityAdjustment, _painReduce / _timeInSystem] ] call CBA_fnc_addPerFrameHandler;
+// Run the loop that computes the effect of the medication over time
+[_target, _variable, 0, _decreaseAmount, _viscosityAdjustment, _painReduce / _timeInSystem] call FUNC(medicationEffectLoop);

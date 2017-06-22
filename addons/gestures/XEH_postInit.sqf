@@ -2,37 +2,48 @@
 
 if (!hasInterface) exitWith {};
 
-#include "key.sqf"
+// Add keybinds
+{
+    _x params ["_currentName", "_key", ["_vanillaKey", false] ];
 
-// reload mutex, you can't play signal while reloading
-GVAR(ReloadMutex) = true;
+    // Don't add "ace_gestures_" prefix to BI gestures
+    private _signalName = if (_vanillaKey) then {
+        format ["BIgesture%1", _currentName];
+    } else {
+        format [QGVAR(%1), _currentName];
+    };
 
-// Event for main display to be loaded:
-["mainDisplayLoaded", {
-    // handle reloading
-    (findDisplay 46) displayAddEventHandler ["KeyDown", {
-        if ((_this select 1) in actionKeys "ReloadMagazine") then {
-            if ((isNull ACE_player) || {!alive ACE_player}) exitWith {false};
-            private _weapon = currentWeapon ACE_player;
+    private _code = compile format [QUOTE('%1' call FUNC(playSignal)), _signalName];
+    if (_currentName == "Stop") then {
+        _code = compile format [QUOTE('%1' call FUNC(playSignal)), "BIgestureFreeze"];
+    };
 
-            if (_weapon != "") then {
-                GVAR(ReloadMutex) = false;
+    TRACE_4("Adding KeyBind",_currentName,_signalName,_code,_key);
 
-                private _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
-                private _isLauncher = _weapon isKindOf ["Launcher", (configFile >> "CfgWeapons")];
-                private _config = ["CfgGesturesMale", "CfgMovesMaleSdr"] select _isLauncher;
-                private _duration = getNumber (configfile >> _config >> "States" >> _gesture >> "speed");
-
-                if (_duration != 0) then {
-                    _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
-                } else {
-                    _duration = 3;
-                };
-
-                TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-                [{GVAR(ReloadMutex) = true;}, [], _duration] call EFUNC(common,waitAndExecute);
-            };
-        };
+    [
+        "ACE3 Gestures",
+        _currentName,
+        localize format [LSTRING(%1), _currentName],
+        _code,
+        {false},
+        [_key,  [false, (_key != -1), false]],
         false
-    }];
-}] call EFUNC(common,addEventHandler);
+    ] call CBA_fnc_addKeybind;
+
+    false
+} count [
+    ["Freeze", 80], // Numpad 2
+    ["Cover", 81], // Numpad 3
+    ["Forward", 75], // Numpad 4
+    ["Regroup", 76], // Numpad 5
+    ["Engage", 77], // Numpad 6
+    ["Point", 71], // Numpad 7
+    ["Hold", 72], // Numpad 8
+    ["Warning", 73], // Numpad 9
+    ["Go", -1, true],
+    ["Advance", -1, true],
+    ["Follow", -1, true],
+    ["Up", -1, true],
+    ["Stop", -1, true],
+    ["CeaseFire", -1, true]
+];

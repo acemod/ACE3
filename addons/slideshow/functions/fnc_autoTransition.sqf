@@ -18,11 +18,10 @@
  */
 #include "script_component.hpp"
 
-private "_currentSlide";
 params ["_objects", "_images", "_varString", "_duration"];
 
 // Get current slide number of this slideshow
-_currentSlide = missionNamespace getVariable [_varString, 0];
+private _currentSlide = missionNamespace getVariable [_varString, 0];
 
 // Increment slide or return to first slide if reached end
 _currentSlide = (_currentSlide + 1) mod (count _images);
@@ -37,4 +36,4 @@ missionNamespace setVariable [_varString, _currentSlide];
 
 // Log current slide and execute Next slide
 TRACE_4("Auto-transition",_images select _currentSlide,_currentSlide,count _images,_duration);
-[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call EFUNC(common,waitAndExecute);
+[FUNC(autoTransition), [_objects, _images, _varString, _duration], _duration] call CBA_fnc_waitAndExecute;

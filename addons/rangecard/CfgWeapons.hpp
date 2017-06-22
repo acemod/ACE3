@@ -8,7 +8,7 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(Name);
         descriptionShort = CSTRING(Description);
-        picture = PATHTOF(UI\RangeCard_Icon.paa);
+        picture = QPATHTOF(UI\RangeCard_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
 

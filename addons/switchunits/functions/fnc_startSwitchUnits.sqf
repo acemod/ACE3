@@ -19,8 +19,7 @@
 params ["_player"];
 
 if (GVAR(EnableSwitchUnits)) then {
-    private "_sides";
-    _sides = [];
+    private _sides = [];
 
     if(GVAR(SwitchToWest)) then {_sides pushBack west;};
     if(GVAR(SwitchToEast)) then {_sides pushBack east;};

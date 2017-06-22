@@ -1,17 +1,18 @@
 /*
  * Author: Ruthberg
- *
  * Calculates dew point based on temperature and relative humidity
  *
  * Arguments:
- * 0: temperature - degrees celcius <NUMBER>
- * 2: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
+ * 0: temperature - degrees celsius <NUMBER>
+ * 1: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
  * dew point <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * [32, 0.4] call ace_weather_fnc_calculateDewPoint
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -24,7 +25,6 @@ if (_rh == 0) exitWith { CELSIUS(0) };
 
 // Source: https://en.wikipedia.org/wiki/Dew_point
 
-private ["_gamma"];
-_gamma = ln(_rh) + (__b * _t) / (__c + _t);
+private _gamma = ln(_rh) + (__b * _t) / (__c + _t);
 
 (__c * _gamma) / (__b - _gamma)

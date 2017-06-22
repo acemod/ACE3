@@ -8,12 +8,14 @@
  * Return Value:
  * Bitmask <NUMBER>
  *
+ * Example:
+ * [[true, false]] call ace_common_fnc_toBitmask
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-private "_result";
-_result = 0;
+private _result = 0;
 
 {
     if (_x) then {_result = _result + 2 ^ _forEachIndex};

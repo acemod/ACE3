@@ -2,15 +2,8 @@
 
 ADDON = false;
 
-PREP(addKeyForVehicle);
-PREP(getVehicleSideKey);
-PREP(handleVehicleInitPost);
-PREP(hasKeyForVehicle);
-PREP(lockpick);
-PREP(moduleInit);
-PREP(moduleSync);
-PREP(onOpenInventory);
-PREP(serverSetupCustomKeyEH);
-PREP(setVehicleLockEH);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

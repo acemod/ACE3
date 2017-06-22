@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [player, kevin, 5] call ACE_hitreactions_fnc_fallDown
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -27,16 +30,18 @@ if (_unit == _firer) exitWith {};
 
 // camshake for player
 if (_unit == ACE_player) then {
+    if (visibleMap) then {
+        openMap false;
+    };
     addCamShake [3, 5, _damage + random 10];
 };
 
 // play scream sound
-if (!isNil QUOTE(EFUNC(medical,playInjuredSound))) then {
+if (!isNil QEFUNC(medical,playInjuredSound)) then {
     [_unit] call EFUNC(medical,playInjuredSound);
 };
 
-private "_vehicle";
-_vehicle = vehicle _unit;
+private _vehicle = vehicle _unit;
 
 // handle static weapons
 if (_vehicle isKindOf "StaticWeapon") exitWith {
@@ -53,61 +58,20 @@ if (_vehicle != _unit) exitWith {};
 if !([_unit, _vehicle] call EFUNC(common,canInteractWith)) exitWith {};
 
 // handle ladders
-if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "AGM_isLadder") == 1) exitWith {
+if (getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState _unit >> "ACE_isLadder") == 1) exitWith {
     _unit action ["LadderOff", nearestObject [position _unit, "House"]];
 };
 
 // only play animation when standing due to lack of animations, sry
 if !(stance _unit in ["CROUCH", "STAND"]) exitWith {};
 
-private "_velocity";
-_velocity = vectorMagnitude velocity _unit;
+private _velocity = vectorMagnitude velocity _unit;
 
 // only fall when moving
 if (_velocity < 2) exitWith {};
 
 // get correct animation by weapon
-private "_anim";
-
-call {
-    private "_weapon";
-    _weapon = currentWeapon _unit;
-
-    if (_weapon == "") exitWith {
-        _anim = "AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon"
-    };
-
-    if (_weapon == primaryWeapon _unit) exitWith {
-        if ([_unit] call EFUNC(common,isPlayer)) then {
-            private "_isRunning";
-            _isRunning = _velocity > 4;
-
-            _anim = [
-                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-                ["AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon_2", "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon"] select _isRunning,
-                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDleft",
-                "AmovPercMstpSrasWrflDnon_AadjPpneMstpSrasWrflDright"
-            ] select floor random 4;
-        } else {
-            _anim = "AmovPercMsprSlowWrfldf_AmovPpneMstpSrasWrflDnon";
-        };
-    };
-
-    if (_weapon == handgunWeapon _unit) exitWith {
-        if ([_unit] call EFUNC(common,isPlayer)) then {
-            _anim = [
-                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-                "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon",
-                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDleft",
-                "AmovPercMstpSrasWpstDnon_AadjPpneMstpSrasWpstDright"
-            ] select floor random 4;
-        } else {
-            _anim = "AmovPercMsprSlowWpstDf_AmovPpneMstpSrasWpstDnon";
-        };
-    };
-
-    _anim = "";
-};
+private _anim = _unit call FUNC(getRandomAnimation);
 
 // exit if no animation for this weapon exists, i.e. binocular or rocket launcher
 if (_anim == "") exitWith {};

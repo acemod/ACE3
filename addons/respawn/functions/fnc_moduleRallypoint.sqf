@@ -26,4 +26,4 @@ if !(_activated) exitWith {};
     false
 } count _units;
 
-ACE_LOGINFO("Rallypoint Module Initialized.");
+INFO("Rallypoint Module Initialized.");

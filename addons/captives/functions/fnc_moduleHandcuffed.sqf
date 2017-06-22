@@ -1,6 +1,7 @@
 /*
  * Author: PabstMirror
  * Module Function to make a unit handcuffed (can be called from editor)
+ * Also used for threeden attribute expression with dummy Logic Object
  *
  * Arguments:
  * 0: The Module Logic <OBJECT>
@@ -8,10 +9,10 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * Called from module
+ * [objNull, [player], true] call ace_captives_fnc_moduleHandcuffed
  *
  * Public: No
  */
@@ -28,8 +29,11 @@ if (!isServer) exitWith {};
 [{
     params ["_units"];
     {
-        ["SetHandcuffed", [_x], [_x, true]] call EFUNC(common,targetEvent);
+        TRACE_2("event",_x,local _x);
+        [QGVAR(setHandcuffed), [_x, true], [_x]] call CBA_fnc_targetEvent;
     } forEach _units;
-}, [_units], 0.05] call EFUNC(common,waitAndExecute);
+}, [_units], 0.05] call CBA_fnc_waitAndExecute;
 
-deleteVehicle _logic;
+if (!isNull _logic) then {
+    deleteVehicle _logic;
+};

@@ -26,11 +26,11 @@ params ["_originalPlayerUnit"];
 
     if (local _originalPlayerUnit) exitWith {
         selectPlayer _originalPlayerUnit;
-        deleteVehicle _currentUnit;
 
-        private "_layer";
-        _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
-        _layer cuttext ["","plain"];
+        // deleteVehicle _currentUnit;
+
+        // private _layer = "BIS_fnc_respawnCounter" call bis_fnc_rscLayer;
+        // _layer cuttext ["","plain"];
 
         [_pfhId] call CBA_fnc_removePerFrameHandler;
     };

@@ -1,45 +1,78 @@
 #include "script_component.hpp"
 
-["AddCargoByClass", {_this call FUNC(addCargoItem)}] call EFUNC(common,addEventHandler);
+["ace_addCargo", {_this call FUNC(addCargoItem)}] call CBA_fnc_addEventHandler;
+[QGVAR(paradropItem), {_this call FUNC(paradropItem)}] call CBA_fnc_addEventHandler;
 
-["LoadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
-    private ["_loaded", "_hint", "_itemName", "_vehicleName"];
+["ace_loadCargo", {
+    params ["_item", "_vehicle"];
+    TRACE_2("LoadCargo EH",_item,_vehicle);
 
-    _loaded = [_item, _vehicle] call FUNC(loadItem);
+    private _loaded = [_item, _vehicle] call FUNC(loadItem);
 
     // Show hint as feedback
-    _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
-    _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
-    _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _hint = [LSTRING(LoadingFailed), LSTRING(LoadedItem)] select _loaded;
+    private _itemName = getText (configFile >> "CfgVehicles" >> typeOf _item >> "displayName");
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_loaded) then {
         // Invoke listenable event
-        ["cargoLoaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["ace_cargoLoaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-["UnloadCargo", {
-    (_this select 0) params ["_item","_vehicle"];
-    private ["_unloaded", "_itemClass", "_hint", "_itemName", "_vehicleName"];
+["ace_unloadCargo", {
+    params ["_item", "_vehicle", ["_unloader", objNull]];
+    TRACE_3("UnloadCargo EH",_item,_vehicle,_unloader);
 
-    _unloaded = [_item, _vehicle] call FUNC(unloadItem);
+    private _unloaded = [_item, _vehicle, _unloader] call FUNC(unloadItem); //returns true if sucessful
 
-    _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
+    private _itemClass = if (_item isEqualType "") then {_item} else {typeOf _item};
 
     // Show hint as feedback
-    _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
-    _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
-    _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+    private _hint = [LSTRING(UnloadingFailed), LSTRING(UnloadedItem)] select _unloaded;
+    private _itemName = getText (configFile >> "CfgVehicles" >> _itemClass >> "displayName");
+    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
 
-    ["displayTextStructured", [[_hint, _itemName, _vehicleName], 3.0]] call EFUNC(common,localEvent);
+    [[_hint, _itemName, _vehicleName], 3.0] call EFUNC(common,displayTextStructured);
 
     if (_unloaded) then {
         // Invoke listenable event
-        ["cargoUnloaded", [_item, _vehicle]] call EFUNC(common,globalEvent);
+        ["ace_cargoUnloaded", [_item, _vehicle]] call CBA_fnc_globalEvent;
     };
 
     // TOOO maybe drag/carry the unloaded item?
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(serverUnload), {
+    params ["_item", "_emptyPosAGL"];
+
+    _item hideObjectGlobal false;
+    _item setPosASL (AGLtoASL _emptyPosAGL);
+}] call CBA_fnc_addEventHandler;
+
+// Private events to handle adding actions globally via public functions
+[QGVAR(initObject), DFUNC(initObject)] call CBA_fnc_addEventHandler;
+[QGVAR(initVehicle), DFUNC(initVehicle)] call CBA_fnc_addEventHandler;
+
+// Add all the vehicle init EHs (require initPost for set/get variables)
+["LandVehicle", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Air", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Ship_F", "initPost", DFUNC(initVehicle), nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+// Add all the object init EHs
+["StaticWeapon", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Land_PortableLight_single_F", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+["ACE_ConcertinaWireCoil", "initPost", DFUNC(initObject), nil, nil, true] call CBA_fnc_addClassEventHandler;
+
+// Add all the vehicle/object init EHs
+["ThingX", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+["Land_PaperBox_closed_F", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+["PlasticCase_01_base_F", "initPost", {
+    _this call DFUNC(initObject); _this call DFUNC(initVehicle);
+}, nil, nil, true] call CBA_fnc_addClassEventHandler;

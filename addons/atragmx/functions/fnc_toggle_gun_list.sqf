@@ -6,7 +6,7 @@
  * change gun? <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * false call ace_atragmx_fnc_toggle_gun_list
@@ -18,7 +18,7 @@
 if (ctrlVisible 6000) then {
     false call FUNC(show_gun_list);
     true call FUNC(show_main_page);
-    
+
     if (_this) then {
         [lbCurSel 6000, true, true] call FUNC(change_gun);
     };

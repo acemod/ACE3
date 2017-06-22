@@ -15,9 +15,7 @@
  */
 #include "script_component.hpp"
 
-private "_totalDamage";
-
-_totalDamage = 0;
+private _totalDamage = 0;
 
 {
     _totalDamage = _totalDamage + _x;

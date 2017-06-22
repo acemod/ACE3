@@ -1,13 +1,15 @@
 /*
  * Author: commy2
- *
  * Check if Object is Overlapping
  *
- * Argument:
+ * Arguments:
  * 0: Object <OBJECT>
  *
- * Return value:
- * <BOOL>
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [player] call ace_dragging_fnc_isObjectOnObject
  *
  * Public: No
  */

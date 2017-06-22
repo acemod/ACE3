@@ -19,10 +19,9 @@
 
 params ["_unit", "_side", "_rallypoint"];
 
-private "_toBase";
-_toBase = _rallypoint find "_Base" != -1;
+private _toBase = _rallypoint find "_Base" != -1;
 
-_rallypoint = missionNamespace getVariable [_rallypoint, objNull],
+_rallypoint = missionNamespace getVariable [_rallypoint, objNull];
 
 if (isNull _rallypoint) exitWith {};
 

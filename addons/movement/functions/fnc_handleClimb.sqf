@@ -7,7 +7,7 @@
  * 1: The finisehd animation <STRING>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, "ACE_climb"] call ace_movement_fnc_handleClimb
@@ -16,12 +16,10 @@
  */
 #include "script_component.hpp"
 
-private ["_unit", "_anim", "_pos"];
+params ["_unit", "_anim"];
 
-_unit = _this select 0;
-_anim = _this select 1;
+private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
-_pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 [_unit, "AmovPknlMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");

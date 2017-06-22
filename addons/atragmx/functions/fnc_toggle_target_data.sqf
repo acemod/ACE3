@@ -6,7 +6,7 @@
  * Apply new data? <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * 1 call ace_atragmx_fnc_toggle_target_data
@@ -18,9 +18,11 @@
 if (ctrlVisible 14000) then {
     false call FUNC(show_target_data);
     true call FUNC(show_main_page);
-    
+
     if (_this == 1) then {
         call FUNC(calculate_target_solution);
+    } else {
+        call FUNC(update_target_data);
     };
 } else {
     true call FUNC(show_target_data);

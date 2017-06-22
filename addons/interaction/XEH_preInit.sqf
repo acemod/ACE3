@@ -2,40 +2,8 @@
 
 ADDON = false;
 
-// interaction menu
-PREP(addPassengerActions);
-PREP(addPassengersActions);
-PREP(getWeaponPos);
-PREP(moduleInteraction);
-PREP(removeTag);
-
-// scroll wheel hint
-PREP(showMouseHint);
-PREP(hideMouseHint);
-
-// interaction with units
-PREP(canInteractWithCivilian);
-PREP(getDown);
-PREP(sendAway);
-PREP(canJoinGroup);
-PREP(canJoinTeam);
-PREP(joinTeam);
-PREP(canPassMagazine);
-PREP(passMagazine);
-PREP(canBecomeLeader);
-PREP(doBecomeLeader);
-PREP(canTapShoulder);
-PREP(tapShoulder);
-PREP(canPardon);
-PREP(pardon);
-
-// interaction with doors
-PREP(getDoor);
-PREP(getDoorAnimations);
-PREP(handleScrollWheel);
-PREP(openDoor);
-
-// interaction with boats
-PREP(push);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

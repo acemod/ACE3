@@ -31,7 +31,7 @@
  */
 #include "script_component.hpp"
 
-if (ACE_diagTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
+if (diag_tickTime - GVAR(headingSetDisplayTimer) < 0.8) exitWith {["", "", "  Heading Set", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]};
 
 private ["_playerDir", "_playerAltitude", "_temperature", "_humidity", "_barometricPressure", "_airDensity", "_densityAltitude", "_chill", "_heatIndex", "_dewPoint", "_wetBulb", "_dayString", "_monthString", "_windSpeed", "_windDir", "_textTop", "_textCenterBig", "_textCenter", "_textCenterLine1Left", "_textCenterLine2Left", "_textCenterLine3Left", "_textCenterLine1Right", "_textCenterLine2Right", "_textCenterLine3Right", "_textInfoLine1", "_textInfoLine2", "_textBottomBig", "_textCenterLine1", "_textCenterLine2", "_textCenterLine3", "_textCenterLine4", "_textCenterLine5", "_textCenterLine6"];
 
@@ -107,7 +107,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 2: { // Wind SPD
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(abs(_windSpeed) * 10) / 10);
+                _textCenterBig = Str(round(_windSpeed * 10) / 10);
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
@@ -134,7 +134,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
                     _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
-                    _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
+                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
                     _textCenterBig = Str(round(abs(sin(GVAR(RefHeading)) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
@@ -143,7 +143,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
-                switch (GVAR(MinAvgMax)Mode) do {
+                switch (GVAR(MinAvgMaxMode)) do {
                     case 0: {
                         _textCenterLine1Right = "--. -";
                         _textCenterLine2Right = "--. -";
@@ -166,7 +166,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
                     _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
-                    _textInfoLine1 = format["%1 m/s @ %2", round((abs(cos(_playerDir - _windDir)) * _windSpeed) * 10) / 10, round(_playerDir)];
+                    _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
                     _textCenterBig = Str(round(cos(GVAR(RefHeading)) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_windDir)];
@@ -175,7 +175,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
-                switch (GVAR(MinAvgMax)Mode) do {
+                switch (GVAR(MinAvgMaxMode)) do {
                     case 0: {
                         _textCenterLine1Right = "--. -";
                         _textCenterLine2Right = "--. -";

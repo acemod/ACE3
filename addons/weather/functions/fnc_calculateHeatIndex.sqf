@@ -1,17 +1,18 @@
 /*
  * Author: Ruthberg
- *
  * Calculates heat index based on temperature and relative humidity
  *
  * Arguments:
- * 0: temperature - degrees celcius <NUMBER>
+ * 0: temperature - degrees celsius <NUMBER>
  * 1: relativeHumidity - value between 0.0 and 1.0 <NUMBER>
  *
  * Return Value:
  * heat index <NUMBER>
  *
- * Return value:
- * None
+ * Example:
+ * [36, 0.75] call ace_weather_fnc_calculateHeatIndex
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 

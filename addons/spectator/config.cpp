@@ -2,12 +2,14 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
-        author[] = {"F3 Project","Head","SilentSpike","voiper"};
-        authorUrl = "https://github.com/acemod";
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"F3 Project","Head","SilentSpike","voiper"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
@@ -19,7 +21,9 @@ class CfgPatches {
 
 class CfgRespawnTemplates {
     class ADDON {
+        displayName = CSTRING(DisplayName);
         onPlayerKilled = QFUNC(respawnTemplate);
         onPlayerRespawn = QFUNC(respawnTemplate);
+        respawnTypes[] = {2,3};
     };
 };

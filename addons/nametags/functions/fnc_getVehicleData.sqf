@@ -1,6 +1,6 @@
 /*
  * Author: aeroson
- * Gathers and caches data needed by AGM_CrewInfo_fnc_doShow.
+ * Gathers and caches data needed by ace_nametags_fnc_doShow.
  * What really does make difference for the engine is simulation of CfgAmmo.
  * Priority of roles  is: driver/pilot, gunner, copilot, commander, FFV, cargo.
  *
@@ -18,35 +18,30 @@
  * Public: No
  */
 #include "script_component.hpp"
-#include "common.hpp";
-
-private ["_type", "_varName", "_data", "_isAir", "_config", "_fnc_addTurret", "_fnc_addTurretUnit"];
+#include "common.hpp"
 
 params ["_type"];
 
-_varName = format ["ACE_CrewInfo_Cache_%1", _type];
-_data = + (uiNamespace getVariable _varName);
+private _varName = format ["ACE_CrewInfo_Cache_%1", _type];
+private _data = + (uiNamespace getVariable _varName);
 
 if (!isNil "_data") exitWith {_data};
 
 _data = [];
-_isAir = _type isKindOf "Air";
+private _isAir = _type isKindOf "Air";
 
-_fnc_addTurretUnit = {
-    private  ["_config", "_path", "_role", "_simulationEmpty", "_simulationLaserDesignate", "_simulationOther", "_magazine", "_ammo", "_simulation"];
+private _fnc_addTurretUnit = {
+    params ["_config", "_path"];
+    private _role = CARGO;
 
-    _config = _this select 0;
-    _path = _this select 1;
-    _role = CARGO;
-
-    _simulationEmpty = 0;
-    _simulationLaserDesignate = 0;
-    _simulationOther = 0;
+    private _simulationEmpty = 0;
+    private _simulationLaserDesignate = 0;
+    private _simulationOther = 0;
     {
         {
-            _magazine = configFile >> "CfgMagazines" >> _x;
-            _ammo = configFile >> "CfgAmmo" >> getText (_magazine >> "ammo");
-            _simulation = getText (_ammo >> "simulation");
+            private _magazine = configFile >> "CfgMagazines" >> _x;
+            private _ammo = configFile >> "CfgAmmo" >> getText (_magazine >> "ammo");
+            private _simulation = getText (_ammo >> "simulation");
 
             if(_simulation=="") then {
                 _simulationEmpty = _simulationEmpty + 1;
@@ -78,21 +73,17 @@ _fnc_addTurretUnit = {
 };
 
 
-_fnc_addTurret = {
-
-    private ["_config", "_path", "_count", "_offset", "_index", "_turretPath", "_turretConfig"];
-
-    _config = _this select 0;
-    _path = _this select 1;
+private _fnc_addTurret = {
+    params ["_config", "_path"];
 
     _config = _config >> "Turrets";
-    _count = count _config;
+    private _count = count _config;
 
-    _offset = 0;    
+    private _offset = 0;
 
     for "_index" from 0 to (_count - 1) do {
-        _turretPath = _path + [_index - _offset];
-        _turretConfig = _config select _index;
+        private _turretPath = _path + [_index - _offset];
+        private _turretConfig = _config select _index;
         if (isClass _turretConfig) then {           
             [_turretConfig, _turretPath] call _fnc_addTurretUnit;
             [_turretConfig, _turretPath] call _fnc_addTurret;

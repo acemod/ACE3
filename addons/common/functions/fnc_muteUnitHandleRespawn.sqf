@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_muteUnitHandleRespawn
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -18,4 +21,4 @@ params ["_unit"];
 _unit setVariable [QGVAR(muteUnitReasons), _unit getVariable [QGVAR(muteUnitReasons), []], true];
 
 // fix mp issues with respawning and the speaker
-["setSpeaker", [_unit, speaker _unit]] call FUNC(globalEvent);
+[QGVAR(setSpeaker), [_unit, speaker _unit]] call CBA_fnc_globalEvent;

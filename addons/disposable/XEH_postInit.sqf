@@ -3,12 +3,13 @@
 
 if (!hasInterface) exitWith {};
 
-["inventoryDisplayLoaded", {
-    [ACE_player, _this select 0] call FUNC(updateInventoryDisplay)
-}] call EFUNC(common,addEventHandler);
-
-["playerInventoryChanged", {
+["loadout", {
     params ["_unit"];
     [_unit] call FUNC(takeLoadedATWeapon);
     [_unit] call FUNC(updateInventoryDisplay);
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Register fire event handler
+// Only for the local player and for AI. Non-local players will handle it themselves
+["ace_firedPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;
+["ace_firedNonPlayer", DFUNC(replaceATWeapon)] call CBA_fnc_addEventHandler;

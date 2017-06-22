@@ -20,9 +20,7 @@
 params ["_explosive", "_magazine", "_trigger"];
 TRACE_3("params",_explosive,_magazine,_trigger);
 
-private ["_config"];
-
-_config = ConfigFile >> "ACE_Triggers" >> _trigger;
+private _config = ConfigFile >> "ACE_Triggers" >> _trigger;
 
 // If the onSetup function returns true, it is handled elsewhere
 if (isText(_config >> "onSetup") && {[_explosive,_magazine] call compile getText (_config >> "onSetup")}) exitWith {

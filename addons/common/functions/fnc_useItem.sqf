@@ -9,14 +9,16 @@
  * Return Value:
  * if item has been used. <BOOL>
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_useItem
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_unit", "_item", ["_vehicleUsage", false]];
 
-private "_return";
-_return = false;
+private _return = false;
 
 if !(_vehicleUsage) then {
     if (_item != "") then {

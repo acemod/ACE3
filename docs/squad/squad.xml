@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE squad SYSTEM "squad.dtd">
+<squad nick="ACE-Team">
+<name>ACE-Team</name>
+    <web>www.ace3mod.com</web>
+    <picture>logo_ace3_ca.paa</picture>
+    <title></title>
+    <member id="76561197969985591" nick="ace_bux">
+        <name>ace_bux</name>
+        <email></email>
+        <remark>ACE Core Developer</remark>
+    </member>
+    <member id="76561198009834665" nick="SilentSpike">
+        <name>SilentSpike</name>
+        <email></email>
+        <remark>ACE Core Developer</remark>
+    </member>
+</squad>

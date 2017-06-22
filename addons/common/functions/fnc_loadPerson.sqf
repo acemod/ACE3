@@ -9,6 +9,9 @@
  * Return Value:
  * the vehicle that the unitToBeloaded has been loaded in. Returns ObjNull if function failed <OBJECT>
  *
+ * Example:
+ * [bob, kevin] call ace_common_fnc_loadPerson
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -17,39 +20,22 @@
 
 params ["_caller", "_unit"];
 
-private ["_vehicle", "_loadcar", "_loadair", "_loadtank", "_loadboat"];
-
-_vehicle = objNull;
+private _vehicle = objNull;
 
 if (!([_caller, _unit, ["isNotDragging", "isNotCarrying"]] call FUNC(canInteractWith)) || {_caller == _unit}) exitWith {_vehicle};
 
-_loadcar = nearestObject [_unit, "Car"];
+private _nearVehicles = nearestObjects [_unit, ["Car", "Air", "Tank", "Ship_F"], 10];
 
-if (_unit distance _loadcar <= 10) then {
-    _vehicle = _loadcar;
-} else {
-    _loadair = nearestObject [_unit, "Air"];
-
-    if (_unit distance _loadair <= 10) then {
-        _vehicle = _loadair;
-    } else {
-        _loadtank = nearestObject [_unit, "Tank"];
-
-        if (_unit distance _loadtank <= 10) then {
-            _vehicle = _loadtank;
-        } else {
-            _loadboat = nearestObject [_unit, "Ship_F"];
-
-            if (_unit distance _loadboat <= 10) then {
-                _vehicle = _loadboat;
-            };
-        };
+{
+    TRACE_1("",_x);
+    if ((_x emptyPositions "cargo" > 0) || {_x emptyPositions "gunner" > 0}) exitWith {
+        _vehicle = _x;
     };
-};
+} forEach _nearVehicles;
 
 if (!isNull _vehicle) then {
     [_unit, true, GROUP_SWITCH_ID, side group _caller] call FUNC(switchToGroupSide);
-    [[_unit, _vehicle, _caller], QFUNC(loadPersonLocal), _unit, false] call FUNC(execRemoteFnc);
+    ["ace_loadPersonEvent", [_unit, _vehicle, _caller], _unit] call CBA_fnc_targetEvent;
 };
 
 _vehicle

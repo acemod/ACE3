@@ -1,5 +1,3 @@
-//CfgAmmoReflections.hpp
-
 #define ACE_EXPLOSION_REFLECTION(range, hit)\
 class ace_explosion_reflection_##range##_##hit : ace_explosion_reflection_base {\
     indirectHitRange = range;\

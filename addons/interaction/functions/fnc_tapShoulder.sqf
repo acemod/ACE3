@@ -23,6 +23,6 @@ if (_unit == ACE_player) then {
     addCamShake [4, 0.5, 5];
 };
 
-_unit playActionNow "PutDown";
+[_unit, "gesturePoint"] call EFUNC(common,doGesture);
 
-["tapShoulder", [_target], [_target, _shoulderNum]] call EFUNC(common,targetEvent);
+[QGVAR(tapShoulder), [_target, _shoulderNum], [_target]] call CBA_fnc_targetEvent;

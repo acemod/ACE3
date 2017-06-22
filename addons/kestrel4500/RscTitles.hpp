@@ -348,25 +348,25 @@ class RscTitles {
         fadeout = 0;
         class controls {
             class Preload_0 {
-                text = PATHTOF(UI\Kestrel4500_0.paa);
+                text = QPATHTOF(UI\Kestrel4500_0.paa);
             };
             class Preload_1 {
-                text = PATHTOF(UI\Kestrel4500_1.paa);
+                text = QPATHTOF(UI\Kestrel4500_1.paa);
             };
             class Preload_2 {
-                text = PATHTOF(UI\Kestrel4500_2.paa);
+                text = QPATHTOF(UI\Kestrel4500_2.paa);
             };
             class Preload_3 {
-                text = PATHTOF(UI\Kestrel4500_3.paa);
+                text = QPATHTOF(UI\Kestrel4500_3.paa);
             };
             class Preload_4 {
-                text = PATHTOF(UI\Kestrel4500_4.paa);
+                text = QPATHTOF(UI\Kestrel4500_4.paa);
             };
             class Preload_5 {
-                text = PATHTOF(UI\Kestrel4500_5.paa);
+                text = QPATHTOF(UI\Kestrel4500_5.paa);
             };
             class Preload_6 {
-                text = PATHTOF(UI\Kestrel4500_6.paa);
+                text = QPATHTOF(UI\Kestrel4500_6.paa);
             };
         };
     };

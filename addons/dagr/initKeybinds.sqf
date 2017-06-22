@@ -37,7 +37,7 @@ _conditonCode = {
 _toggleCode = {
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {};
-    
+
     // Statement
     [] call FUNC(toggleOverlay);
     if (!GVAR(run)) then {
@@ -56,4 +56,4 @@ _closeCode = {
         closeDialog 0;
     };
 };
-["DAGR", QUOTE(PATHTOF(UI\DAGR_Icon.paa)), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);
+["DAGR", QPATHTOF(UI\DAGR_Icon.paa), _conditonCode, _toggleCode, _closeCode] call EFUNC(common,deviceKeyRegisterNew);

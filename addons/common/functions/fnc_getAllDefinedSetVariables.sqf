@@ -14,6 +14,9 @@
  *   3: publicFlag <BOOL>
  *   4: peristentFlag <BOOL>
  *
+ * Example:
+ * [bob, ""] call ace_common_fnc_getAllDefinedSetVariables
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -22,12 +25,10 @@ params ["_object", ["_category", ""]];
 
 if (isNil QGVAR(OBJECT_VARIABLES_STORAGE)) exitWith {[]};
 
-private ["_return", "_val"];
-
-_return = [];
+private _return = [];
 
 {
-    _val = _object getVariable (_x select 0);
+    private _val = _object getVariable (_x select 0);
 
     if (!isNil "_val") then {
         if (_category == "" || _category == _x select 3) then {

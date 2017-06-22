@@ -11,6 +11,9 @@
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
  *
+ * Example:
+ * [bob, "DefaultAction", "condition", "execute"] call ace_common_fnc_addActionEventHandler
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -25,10 +28,8 @@ if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-private ["_name", "_actionsVar"];
-
-_name = format ["ACE_Action_%1", _action];
-_actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
+private _name = format ["ACE_Action_%1", _action];
+private _actionsVar = _unit getVariable [_name, [-1, [-1, [], []], objNull]];
 
 if (_unit != _actionsVar select 2) then {  // check if the unit is still valid, fixes respawn issues
     _actionsVar = [-1, [-1, [], []], objNull];
@@ -44,11 +45,10 @@ _actions pushBack [_condition, _statement];
 
 // first action to add, unit needs addAction command
 if (_actionID == -1) then {
-    private "_addAction";
-    _addAction = call compile format [
+    private _addAction = call compile format [
         "[
             '',
-            {if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)},
+            {[{if (inputAction '%1' == 0) exitWith {}; {if (_this call (_x select 0)) then {_this call (_x select 1)}} forEach (((_this select 0) getVariable '%2') select 1 select 2)}, _this] call CBA_fnc_directCall},
             nil,
             -1,
             false,

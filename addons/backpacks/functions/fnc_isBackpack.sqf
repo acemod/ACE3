@@ -8,17 +8,19 @@
  * Return Value:
  * Boolean <BOOL>
  *
+ * Example:
+ * [bob] call ace_backpacks_fnc_isBackpack
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_backpack"];
+params [["_backpack", objNull, [objNull, ""]]];
 
 if (_backpack isEqualType objNull) then {
     _backpack = typeOf _backpack;
 };
 
-private "_config";
-_config = configFile >> "CfgVehicles" >> _backpack;
+private _config = configFile >> "CfgVehicles" >> _backpack;
 
 getText (_config >> "vehicleClass") == "backpacks" && {getNumber (_config >> "maximumLoad") > 0} // return

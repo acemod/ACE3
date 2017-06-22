@@ -8,14 +8,16 @@
  * Return Value:
  * The number as string <STRING>
  *
+ * Example:
+ * [5] call ace_common_fnc_numberToString
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_number"];
 
-private "_decimals";
-_decimals = str (abs _number mod 1);
+private _decimals = str (abs _number mod 1);
 _decimals = toArray _decimals;
 _decimals deleteAt 0;
 

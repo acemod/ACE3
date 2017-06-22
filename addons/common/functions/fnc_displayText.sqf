@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * ["Message", true, 5, 2] call ace_common_fnc_displayText
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -23,12 +26,9 @@ if (isNil QGVAR(lastHint)) then {
 
 if !(typeName _text in ["STRING", "TEXT"]) then {_text = str _text};
 
-private ["_lastHintTime", "_lastHintPriority", "_time"];
+GVAR(lastHint) params ["_lastHintTime", "_lastHintPriority"];
 
-_lastHintTime = GVAR(lastHint) select 0;
-_lastHintPriority = GVAR(lastHint) select 1;
-
-_time = ACE_time;
+private _time = CBA_missionTime;
 
 if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     hintSilent _text;
@@ -36,5 +36,5 @@ if (_time > _lastHintTime + _delay || {_priority >= _lastHintPriority}) then {
     GVAR(lastHint) set [0, _time];
     GVAR(lastHint) set [1, _priority];
 
-    [{if ((_this select 0) == GVAR(lastHint) select 0) then {hintSilent ""};}, [_time], _delay, 0] call FUNC(waitAndExecute);
+    [{if ((_this select 0) == GVAR(lastHint) select 0) then {hintSilent ""};}, [_time], _delay, 0] call CBA_fnc_waitAndExecute;
 };

@@ -5,8 +5,11 @@
  * Arguments:
  * 0: Open GPS? <BOOL>
  *
- * Return value:
- * Nothing
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [true] call ACE_maptools_fnc_openMapGps
  *
  * Public: No
  */
@@ -14,9 +17,7 @@
 
 params ["_shouldOpenGps"];
 
-private ["_isOpen"];
-
-_isOpen = !(isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull]));
+private _isOpen = !(isNull (uiNamespace getVariable [QGVAR(ui_mapGpsDisplay), displayNull]));
 
 if (_shouldOpenGps && {"ItemGPS" in assignedItems ACE_player} && {!_isOpen}) then {
     ("RscACE_MapGps" call BIS_fnc_rscLayer) cutRsc ["RscACE_MapGps","PLAIN"];

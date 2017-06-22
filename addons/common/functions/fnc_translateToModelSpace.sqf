@@ -1,21 +1,23 @@
 /*
- * Author: ?
+ * Author: ACE-Team
  * ?
  *
  * Arguments:
- * ?
+ * <UNKNOWN>
  *
  * Return Value:
- * ?
+ * Something <UNKNOWN>
  *
- * Public: ?
+ * Example:
+ * [UNKNOWN] call ace_common_fnc_translateToModelSpace
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
 params ["_object", "_matrix", "_offset"];
 
-private "_origin";
-_origin = getPosASL _object;
+private _origin = getPosASL _object;
 
 _matrix params ["_xVec", "_yVec", "_zVec"];
 

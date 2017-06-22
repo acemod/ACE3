@@ -3,12 +3,13 @@
  * DAGR data output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputData
  *
  * Public: No
  */
@@ -25,12 +26,12 @@
 #define __timeControl (__display displayCtrl 266855)
 #define __background (__display displayCtrl 266856)
 
-__background ctrlSetText QUOTE(PATHTOF(UI\dagr_gps.paa));
+__background ctrlSetText QPATHTOF(UI\dagr_gps.paa);
 
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private["_dagrElevation", "_dagrGrid", "_dagrHeading", "_dagrSpeed", "_dagrTime", "_elevation", "_gridArray", "_speed"];
+    private ["_dagrElevation", "_dagrGrid", "_dagrHeading", "_dagrSpeed", "_dagrTime", "_elevation", "_gridArray", "_speed"];
 
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {

@@ -12,13 +12,15 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "leg", 2, kevin, "shot"] call ACE_medical_fnc_handleDamage_internalInjuries
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private "_bodyPartn";
 params ["_unit", "_selectionName", "_amountOfDamage", "_sourceOfDamage", "_typeOfDamage"];
-_bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
+private _bodyPartn = [_selectionName] call FUNC(selectionNameToNumber);
 
 // TODO implement internal injuries

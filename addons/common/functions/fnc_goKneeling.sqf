@@ -1,6 +1,6 @@
 /*
  * Author: commy2
- * Move unit to kneeling position.
+ * Move unit to kneeling position (only if not yet prone).
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -8,13 +8,17 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_goKneeling
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit"];
 
-if (stance _unit == "PRONE") exitWith {};
+// Animation changes even inside vehicle post-1.60
+if (stance _unit == "PRONE" || {vehicle ACE_player != ACE_player}) exitWith {};
 
 [
     _unit,

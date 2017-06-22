@@ -2,11 +2,11 @@
  * Author: CAA-Picard
  * Check if the player can check the ammo of the target.
  *
- * Argument:
+ * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Can link belt<BOOL> 
  *
  * Example:

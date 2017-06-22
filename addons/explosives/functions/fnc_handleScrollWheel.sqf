@@ -15,7 +15,7 @@
  */
 #include "script_component.hpp"
 
-if ((!GVAR(pfeh_running)) || {ACE_Modifier == 0}) exitWith {false};
+if (!GVAR(pfeh_running)) exitWith {false};
 
 GVAR(TweakedAngle) = ((GVAR(TweakedAngle) + 7.2 * _this) + 360) % 360;
 

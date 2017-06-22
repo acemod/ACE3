@@ -16,14 +16,14 @@
  */
 #include "script_component.hpp"
 
-private ["_sink"];
-params ["_unit", "_nozzle"];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 if (isNull _unit ||
     {isNull _nozzle} ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
+    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
     {(_nozzle distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
-_sink = _nozzle getVariable [QGVAR(sink), objNull];
+private _sink = _nozzle getVariable [QGVAR(sink), objNull];
 !((isNull _sink) || {_nozzle getVariable [QGVAR(isRefueling), false]})

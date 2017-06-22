@@ -16,12 +16,13 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
 if (isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
     {!alive _target} ||
-    {(_target distance _unit) > REFUEL_ACTION_DISTANCE}) exitWith {false};
+    {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} ||
+    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 !(_target getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

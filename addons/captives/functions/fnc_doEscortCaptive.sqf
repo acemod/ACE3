@@ -30,14 +30,14 @@ if (_state) then {
     _unit setVariable [QGVAR(escortedUnit), _target, true];
 
     //Add Actionmenu to release captive
-    _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
+    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(StopEscorting)],
     {[(_this select 0), ((_this select 0) getVariable [QGVAR(escortedUnit), objNull]), false] call FUNC(doEscortCaptive);},
     nil, 20, false, true, "", QUOTE(!isNull (GETVAR(_target,QGVAR(escortedUnit),objNull)))];
 
     [{
         params ["_args", "_pfID"];
         _args params ["_unit", "_target", "_actionID"];
-        
+
         if (_unit getVariable [QGVAR(isEscorting), false]) then {
             if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
                 _unit setVariable [QGVAR(isEscorting), false, true];

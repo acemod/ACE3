@@ -9,29 +9,32 @@
  * 0: Type ("weapon", "item", "magazine", "") <STRING>
  * 1: Item Description <STRING>
  *
+ * Example:
+ * ["tire"] call ace_common_fnc_getItemType
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_item"];
 
-private ["_cfgType", "_config", "_type", "_simulation", "_default"];
+private _config = _item call CBA_fnc_getItemConfig;
 
-_cfgType = [_item] call FUNC(getConfigType);
+if (isNull _config) exitWith {["", ""]};
 
-if (_cfgType == "") exitWith {["", ""]};
+private _cfgType = configName ((configHierarchy _config) param [1, configNull]);
 
 if (_cfgType == "CfgGlasses") exitWith {["item", "glasses"]};
 
-_config = configFile >> _cfgType >> _item;
-_type = getNumber (_config >> "type");
-_simulation = getText (_config >> "simulation");
+private _config = configFile >> _cfgType >> _item;
+private _type = getNumber (_config >> "type");
+private _simulation = getText (_config >> "simulation");
 
 if (isNumber (_config >> "ItemInfo" >> "type")) then {
     _type = getNumber (_config >> "ItemInfo" >> "type");
 };
 
-_default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
+private _default = ["item", "magazine"] select (_cfgType == "CfgMagazines");
 
 switch (true) do {
     case (_type == 0): {[_default, "unknown"]};

@@ -19,7 +19,7 @@ params ["_vehicle"];
 TRACE_2("params",_vehicle, typeOf _vehicle);
 
 // Can't execute all commands if the vehicle isn't local, exit if that's so
-if !(local _vehicle) exitWith {ACE_LOGERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 

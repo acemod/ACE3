@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Handle death of the dragger
  *
  * Arguments:
@@ -17,17 +16,16 @@
 #include "script_component.hpp"
 
 params ["_unit"];
+TRACE_1("params",_unit);
 
 if (_unit getVariable [QGVAR(isDragging), false]) then {
-    private "_draggedObject";
-    _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
+    private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
 
     [_unit, _draggedObject] call FUNC(dropObject);
 };
 
 if (_unit getVariable [QGVAR(isCarrying), false]) then {
-    private "_carriedObject";
-    _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
+    private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
 
     [_unit, _carriedObject] call FUNC(dropObject_carry);
 };

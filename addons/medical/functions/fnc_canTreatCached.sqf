@@ -8,8 +8,11 @@
  * 2: Selection name <STRING>
  * 3: ACE_Medical_Treatments Classname <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * Can Treat <BOOL>
+ *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_canTreatCached
  *
  * Public: No
  */
@@ -20,4 +23,4 @@
 params ["", "_target", "_selection", "_classname"];
 
 // parameters, function, namespace, uid
-[_this, DFUNC(canTreat), _target, format [QGVAR(canTreat_%1_%2), _selection, _classname], MAX_DURATION_CACHE, "clearConditionCaches"] call EFUNC(common,cachedCall);
+[_this, DFUNC(canTreat), _target, format [QGVAR(canTreat_%1_%2), _selection, _classname], MAX_DURATION_CACHE, QEGVAR(interact_menu,clearConditionCaches)] call EFUNC(common,cachedCall);

@@ -11,26 +11,25 @@
  * 0: Intersects <BOOL>
  * 1: Intersection Position ASL <ARRAY>
  *
+ * Example:
+ * [[1,2,3], [0,0,5], 5] call ace_common_fnc_getFirstObjectIntersection
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_source", "_destination", "_accuracy"];
 
-private ["_result", "_distance"];
+private _result = [false, [0, 0, 0]];
 
-_result = [false, [0, 0, 0]];
-
-_distance = _source vectorDistance _destination;
+private _distance = _source vectorDistance _destination;
 
 if !(lineIntersectsWith [_source, _destination] isEqualTo []) then {
-    private ["_lower", "_upper", "_mid", "_dir"];
+    private _lower = 0;
+    private _upper = 1;
+    private _mid = 0.5;
 
-    _lower = 0;
-    _upper = 1;
-    _mid = 0.5;
-
-    _dir = _source vectorFromTo _destination;
+    private _dir = _source vectorFromTo _destination;
 
     while {(_upper - _lower) * _distance > _accuracy} do {
         _mid = _lower + (_upper - _lower) / 2;

@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_bloodbag
+ *
  * Public: No
  */
 
@@ -18,4 +21,8 @@
 
 params ["_caller", "_target", "_treatmentClassname"];
 
-[[_target, _treatmentClassname], QUOTE(DFUNC(treatmentBasic_bloodbagLocal)), _target] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+if (local _target) then {
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname]] call CBA_fnc_localEvent;
+} else {
+    [QGVAR(treatmentBasic_bloodbagLocal), [_target, _treatmentClassname], _target] call CBA_fnc_targetEvent;
+};

@@ -7,7 +7,10 @@
  * 1: Backpack <OBJECT>
  *
  * Return Value:
- * false. Always open the inventory dialog. (Bool)
+ * false. Always open the inventory dialog. <BOOL>
+ *
+ * Example:
+ * [bob, backpack] call ace_backpacks_fnc_onOpenInventory
  *
  * Public: No
  */
@@ -16,16 +19,15 @@
 params ["_unit", "_backpack"];
 
 // exit if the target is not a real backpack, i.e. parachute, static weapon bag etc.
-if !([_backpack] call FUNC(isBackpack)) exitWith {false};
+if !(_backpack call FUNC(isBackpack)) exitWith {false};
 
 // get the unit that wears the backpack object
-private "_target";
-_target = objectParent _backpack;
+private _target = objectParent _backpack;
 
 if (isNull _target) exitWith {false};
 
 // raise event on target unit
-["backpackOpened", _target, [_target, _backpack]] call EFUNC(common,targetEvent);
+["ace_backpackOpened", [_target, _backpack], _target] call CBA_fnc_targetEvent;
 
 // return false to open inventory as usual
 false

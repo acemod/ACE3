@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_target_speed_assist
+ * false call ace_atragmx_fnc_show_target_speed_assist
  *
  * Public: No
  */
@@ -21,7 +21,7 @@ GVAR(showTargetSpeedAssist) = _this;
 
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 8012);
-    
+
     ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
 
     if (GVAR(currentUnit) == 1) then {
@@ -29,7 +29,7 @@ if (_this) then {
     } else {
         ctrlSetText [8008, "Meters"];
     };
-    
+
     if (GVAR(currentUnit) == 2) then {
         ctrlSetText [8011, "m/s"];
     } else {

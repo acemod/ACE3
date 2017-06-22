@@ -17,12 +17,8 @@
 
 ADDON = false;
 
-PREP(doLanding);
-PREP(handleInfoDisplayChanged);
-PREP(hideAltimeter);
-PREP(onEachFrame);
-PREP(showAltimeter);
-PREP(cutParachute);
-PREP(checkCutParachute);
-PREP(storeParachute);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
+
 ADDON = true;

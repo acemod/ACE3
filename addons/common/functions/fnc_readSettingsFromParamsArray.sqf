@@ -32,14 +32,14 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // Check if the variable is already defined
         if (isNil _settingName) exitWith {
-            ACE_LOGERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
+            ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
         };
 
         private _settingData = [_settingName] call FUNC(getSettingData);
         _settingData params ["", "_typeName", "", "", "", "", "_isForced"];
 
         // Check if it's already forced and quit
-        if (_isForced) exitWith {ACE_LOGWARNING_1("readSettingsFromParamsArray - param [%1] is already set and forced", _settingName);};
+        if (_isForced) exitWith {WARNING_1("readSettingsFromParamsArray - param [%1] is already set and forced", _settingName);};
 
         // The setting is not forced, so update the value
         // Read entry and cast it to the correct type from the existing variable
@@ -54,7 +54,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
         };
 
         if (!_validValue) exitWith {
-            ACE_LOGWARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
+            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_typeName);
         };
 
         // Update the variable globaly and Force

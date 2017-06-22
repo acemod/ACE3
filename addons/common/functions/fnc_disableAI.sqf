@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_disable"];
+params [["_unit", objNull, [objNull]], ["_disable", true, [false]]];
 
 if (!local _unit) exitWith {};
 

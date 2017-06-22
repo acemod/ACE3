@@ -19,20 +19,18 @@
 
 GVAR(mapGridData) = [];
 
-private ["_cfgGrid", "_offsetX", "_offsetY", "_zoomMax", "_formatX", "_formatY", "_stepX", "_stepY", "_zoom", "_letterGrid", "_heightOffset", "_startGrid", "_originGrid", "_realOffsetY"];
-
 //--- Extract grid values from world config (Borrowed from BIS_fnc_gridToPos)
-_cfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
-_offsetX = getNumber (_cfgGrid >> "offsetX");
-_offsetY = getNumber (_cfgGrid >> "offsetY");
-_zoomMax = 1e99;
-_formatX = "";
-_formatY = "";
-_stepX = 1e10;
-_stepY = 1e10;
+private _cfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
+private _offsetX = getNumber (_cfgGrid >> "offsetX");
+private _offsetY = getNumber (_cfgGrid >> "offsetY");
+private _zoomMax = 1e99;
+private _formatX = "";
+private _formatY = "";
+private _stepX = 1e10;
+private _stepY = 1e10;
 
 {
-    _zoom = getnumber (_x >> "zoomMax");
+    private _zoom = getnumber (_x >> "zoomMax");
     if (_zoom < _zoomMax) then {
         _zoomMax = _zoom;
         _formatX = getText (_x >> "formatX");
@@ -43,19 +41,19 @@ _stepY = 1e10;
     false
 } count configProperties [_cfgGrid, "isClass _x", false];
 
-_letterGrid = false;
+private _letterGrid = false;
 
 if (toLower _formatX find "a" != -1) then {_letterGrid = true};
 if (toLower _formatY find "a" != -1) then {_letterGrid = true};
 
 if (_letterGrid) exitWith {
-    ACE_LOGWARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);
+    WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);
 };
 
 //Start at [0, 500] and move north until we get a change in grid
-_heightOffset = 500;
-_startGrid = mapGridPosition [0, _heightOffset];
-_originGrid = _startGrid;
+private _heightOffset = 500;
+private _startGrid = mapGridPosition [0, _heightOffset];
+private _originGrid = _startGrid;
 
 while {_startGrid == _originGrid} do {
     _heightOffset = _heightOffset + 1;
@@ -63,22 +61,22 @@ while {_startGrid == _originGrid} do {
 };
 
 //Calculate the real y offset
-_realOffsetY = (parseNumber (_originGrid select [count _formatX, count _formatY])) * _stepY + _heightOffset - 1;
+private _realOffsetY = (parseNumber (_originGrid select [count _formatX, count _formatY])) * _stepY + _heightOffset - 1;
 
 //Calculate MGRS 10digit step - they should both be 1 meter:
-_stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
-_stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
+private _stepXat5 = _stepX * 10 ^ ((count _formatX) - 5);
+private _stepYat5 = -1 * _stepY * 10 ^ ((count _formatY) - 5);
 
 if (_stepYat5 < 0) then {
-    ACE_LOGWARNING_1("Map Grid Warning (%1) - Northing is reversed.",worldName);
+    WARNING_1("Map Grid Warning (%1) - Northing is reversed.",worldName);
 };
 
 if (_stepXat5 != 1) then {
-    ACE_LOGWARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for x.",worldName,_stepXat5);
+    WARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for x.",worldName,_stepXat5);
 };
 
 if (_stepYat5 != 1 && {_stepYat5 != -1}) then {
-    ACE_LOGWARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for y.",worldName,_stepXat5);
+    WARNING_2("Map Grid Warning (%1) - MGRS 10 digit grid does not equal 1 meter: (%2) for y.",worldName,_stepXat5);
 };
 
 GVAR(mapGridData) = [_offsetX, _realOffsetY, _stepXat5, _stepYat5];

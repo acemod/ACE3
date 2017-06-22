@@ -3,10 +3,13 @@
  * Get the apropriate marker for a group.
  *
  * Arguments:
- * 0: Group
+ * 0: Group <GROUP>
  *
  * Return Value:
  * Marker Type <STRING>
+ *
+ * Example:
+ * ["GROUP"] call ace_common_fnc_getmarkerType
  *
  * Public: No
  */
@@ -14,11 +17,9 @@
 
 params ["_group"];
 
-private ["_leader", "_vehicle", "_side"];
-
-_leader = leader _group;
-_vehicle = vehicle _leader;
-_side = side _leader;
+private _leader = leader _group;
+private _vehicle = vehicle _leader;
+private _side = side _leader;
 
 if (_vehicle == _leader) exitWith {
     if (

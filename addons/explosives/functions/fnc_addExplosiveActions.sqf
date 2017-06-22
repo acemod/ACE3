@@ -6,7 +6,10 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Actions
+ * Actions <ARRAY>
+ *
+ * Example:
+ * [bob] call ace_explosives_fnc_addExplosiveActions
  *
  * Public: No
  */
@@ -22,7 +25,7 @@ _list = [];
 _itemCount = [];
 {
     _item = ConfigFile >> "CfgMagazines" >> _x;
-    if (getNumber(_item >> "ACE_Placeable") == 1) then {
+    if (getNumber(_item >> QGVAR(Placeable)) == 1) then {
         _index = _list find _item;
         if (_index != -1) then {
             _itemCount set [_index, (_itemCount select _index) + 1];
@@ -36,16 +39,18 @@ _itemCount = [];
 _children = [];
 
 {
-    private "_name";
-    _name = if(isText(_x >> "displayNameShort") && {getText(_x >> "displayNameShort") != ""}) then
-        {getText (_x >> "displayNameShort")}else{getText(_x >> "displayName")};
+    private _name = getText (_x >> "displayNameShort");
+    if (_name isEqualTo "") then {
+        _name = getText (_x >> "displayName");
+    };
+
     _children pushBack
         [
             [
                 format ["Explosive_%1", _forEachIndex],
                 format [_name + " (%1)", _itemCount select _forEachIndex],
                 getText(_x >> "picture"),
-                {[{_this call FUNC(setupExplosive)}, _this] call EFUNC(common,execNextFrame)},
+                {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame},
                 {true},
                 {},
                 (configName _x)

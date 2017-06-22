@@ -8,10 +8,10 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * N/A
+ * [LOGIC, [bob, kevin], true] call ace_missionmodules_fnc_moduleAmbianceSound
  *
  * Public: No
  */
@@ -36,7 +36,7 @@ if (_activated && local _logic) then {
     _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
 
     {
-        _x = [_x] call EFUNC(common,stringRemoveWhiteSpace);
+        _x = [_x] call CBA_fnc_removeWhitespace;
 
         if (isClass (missionConfigFile >> "CfgSounds" >> _x)) then {
             // CfgSounds accepts a leading backslash, but a double backslash
@@ -49,9 +49,11 @@ if (_activated && local _logic) then {
             };
         } else {
             if (isClass (configFile >> "CfgSounds" >> _x)) then {
-                _ambianceSounds pushBack ((getArray(configFile >> "CfgSounds" >> _x >> "sound") select 0));
+                _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
+                if ((_soundPath select [0, 1]) == "\") then {_soundPath = _soundPath select [1];};
+                _ambianceSounds pushBack _soundPath;
             } else {
-                ACE_LOGERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
+                ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
             };
         };
 
@@ -65,8 +67,9 @@ if (_activated && local _logic) then {
         };
     } forEach _ambianceSounds;
 
+    TRACE_1("",_ambianceSounds);
+
     [{
-        private ["_newPos", "_allUnits", "_targetUnit"];
         params ["_args", "_pfhHandle"];
         _args params ["_logic", "_ambianceSounds", "_minimalDistance", "_maximalDistance", "_minDelayBetweensounds", "_maxDelayBetweenSounds", "_volume", "_followPlayers", "_lastTimePlayed"];
 
@@ -74,46 +77,35 @@ if (_activated && local _logic) then {
             [_pfhHandle] call CBA_fnc_removePerFrameHandler;
         };
 
-        if (ACE_time - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
+        if (CBA_missionTime - _lastTimePlayed >= ((_minDelayBetweensounds + random(_maxDelayBetweenSounds)) min _maxDelayBetweenSounds)) then {
 
             // Find all players in session.
-            _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
+            private _allUnits = if (isMultiplayer) then {playableUnits} else {[ACE_player]};
 
             // Check if there are enough players to even start playing this sound.
             if (count _allUnits > 0) then {
-
-                // Select a target unit at random.
-                _targetUnit = _allUnits call BIS_fnc_selectRandom;
-
                 // find the position from which we are going to play this sound from.
-                _newPos = (getPos _targetUnit);
-                if (!_followPlayers) then {
-                    _newPos = getPos _logic;
-                };
-
-                // Randomize this position.
-                if (random(1) >= 0.5) then {
-                    if (random(1) >= 0.5) then {
-                        _newPos set [0, (_newPos select 0) + (_minimalDistance + random(_maximalDistance))];
-                    } else {
-                        _newPos set [0, (_newPos select 0) - (_minimalDistance + random(_maximalDistance))];
-                    };
+                private _newPosASL = if (_followPlayers) then {
+                    // Select a target unit at random.
+                    private _targetUnit = selectRandom _allUnits;
+                    AGLtoASL (_targetUnit getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
                 } else {
-                    if (random(1) >= 0.5) then {
-                        _newPos set [1, (_newPos select 1) + (_minimalDistance + random(_maximalDistance))];
-                    } else {
-                        _newPos set [1, (_newPos select 1) - (_minimalDistance + random(_maximalDistance))];
-                    };
+                    AGLtoASL (_logic getPos [_minimalDistance + random (_maximalDistance - _minimalDistance), random 360]);
                 };
 
+                TRACE_1("",_newPosASL);
                 // If no unit is to close to this position, we will play the sound.
-                if ({(_newPos distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
-                    playSound3D [_ambianceSounds call BIS_fnc_selectRandom, objNull,  false, _newPos, _volume, 1, 1000];
-                    _args set [8, ACE_time];
+                if ({(_newPosASL distance _x < (_minimalDistance / 2))}count _allUnits == 0) then {
+                    private _soundFile = selectRandom _ambianceSounds;
+                    TRACE_2("playing file",_soundFile,_newPosASL);
+                    playSound3D [_soundFile, objNull,  false, _newPosASL, _volume, 1, 1000];
+                    _args set [8, CBA_missionTime];
+                } else {
+                    TRACE_1("pos is too close to a player",_newPosASL);
                 };
             };
         };
-    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, ACE_time] ] call CBA_fnc_addPerFrameHandler;
+    }, 0.1, [_logic, _ambianceSounds, _minimalDistance, _maximalDistance, _minDelayBetweensounds, _maxDelayBetweenSounds, _volume, _followPlayers, CBA_missionTime] ] call CBA_fnc_addPerFrameHandler;
 };
 
 true;

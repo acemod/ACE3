@@ -11,15 +11,18 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 1, 5, {callback}] call ace_medical_fnc_addHeartRateAdjustment
+ *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-
 params [["_unit", objNull, [objNull]], ["_value", 0, [0]], ["_time", 1, [0]], ["_callBack", {}, [{}]]];
 
-_adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
+private _adjustment = _unit getVariable [QGVAR(heartRateAdjustments), []];
 _adjustment pushBack [_value, _time, _callBack];
-_unit setVariable [QGVAR(heartRateAdjustments), _adjustment ];
-["Medical_onHeartRateAdjustmentAdded", [_unit, _value, _time]] call EFUNC(common,localEvent);
+_unit setVariable [QGVAR(heartRateAdjustments), _adjustment];
+
+["ace_heartRateAdjustmentAdded", [_unit, _value, _time]] call CBA_fnc_localEvent;

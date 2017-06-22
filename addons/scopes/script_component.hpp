@@ -1,5 +1,10 @@
 #define COMPONENT scopes
+#define COMPONENT_BEAUTIFIED Scopes
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #define ELEVATION_UP   0
 #define ELEVATION_DOWN 1

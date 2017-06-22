@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_common_fnc_loadSettingsFromProfile
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -21,8 +24,7 @@
     if (_isClientSetable) then {
         // If setting is not forced
         if !(_isForced) then {
-            private "_profileValue";
-            _profileValue = profileNamespace getVariable _name;
+            private _profileValue = profileNamespace getVariable _name;
 
             // If the setting is stored on the profile
             if !(isNil "_profileValue") then {

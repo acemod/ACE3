@@ -1,14 +1,16 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Fence;
-    class thingX;
-    class NonStrategic;
-
     class ACE_ConcertinaWireNoGeo: Fence {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 1;
         displayName = "";
-        model = PATHTOF(data\ACE_ConcertinaWireNoGeo.p3d);
+        model = QPATHTOF(data\ACE_ConcertinaWireNoGeo.p3d);
         destrType = "DestructTent";
         accuracy = 0.3;
         mapSize = 2.8;
@@ -73,7 +75,7 @@ class CfgVehicles {
     class ACE_ConcertinaWire: ACE_ConcertinaWireNoGeo {
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRE;
-        model = PATHTOF(data\ACE_ConcertinaWire.p3d);
+        model = QPATHTOF(data\ACE_ConcertinaWire.p3d);
         EGVAR(logistics_wirecutter,isFence) = 1;
         class ACE_Actions {
             class ACE_MainActions {
@@ -84,21 +86,26 @@ class CfgVehicles {
                     selection = "";
                     displayName = "$STR_ACE_UNROLLWIRE";
                     distance = 5;
-                    condition = "true";
+                    condition = "alive _target";
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(dismount));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
     };
-    class ACE_ConcertinaWireCoil: thingX {
-        XEH_ENABLED;
+
+    class ThingX;
+    class ACE_ConcertinaWireCoil: ThingX {
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         scope = 2;
         displayName = $STR_ACE_CONCERTINA_WIRECOIL;
-        model = PATHTOF(data\ACE_ConcertinaWireCoil.p3d);
+        model = QPATHTOF(data\ACE_ConcertinaWireCoil.p3d);
         mapsize = 0.5;
         animated = 0;
         nameSound = "fence";
@@ -112,7 +119,7 @@ class CfgVehicles {
         accuracy = 1000;
         autocenter = 0;
         EGVAR(dragging,canDrag) = 1;
-        EGVAR(dragging,dragPosition[]) = {0,0.5,0.5};
+        EGVAR(dragging,dragPosition)[] = {0,0.5,0.5};
         EGVAR(dragging,dragDirection) = 0;
         EGVAR(cargo,size) = 1;
         EGVAR(cargo,canLoad) = 1;
@@ -127,17 +134,20 @@ class CfgVehicles {
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\icon_sandbag_ca.paa);
+                    icon = QPATHTOF(UI\icon_sandbag_ca.paa);
                 };
             };
         };
     };
 
+    class NonStrategic;
     class Land_Razorwire_F: NonStrategic {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
     };
 };

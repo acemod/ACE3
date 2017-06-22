@@ -1,16 +1,16 @@
 <p align="center">
-    <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
+    <img src="https://github.com/acemod/ACE3/raw/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
-        <img src="https://img.shields.io/badge/Version-3.4.1-blue.svg?style=flat-square" alt="ACE3 Version">
-    </a>
-    <a href="https://github.com/acemod/ACE3/releases/download/v3.4.1/ace3_3.4.1.zip">
-        <img src="https://img.shields.io/badge/Download-72.6_MB-green.svg?style=flat-square" alt="ACE3 Download">
+    <a href="https://github.com/acemod/ACE3/releases/latest">
+        <img src="https://img.shields.io/badge/Version-3.10.1-blue.svg?style=flat-square" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
+    </a>
+    <a href="https://github.com/acemod/ACE3/releases">
+        <img src="https://img.shields.io/github/downloads/acemod/ACE3/total.svg?style=flat-square&label=Downloads" alt="ACE3 Downloads">
     </a>
     <a href="https://forums.bistudio.com/topic/181341-ace3-a-collaborative-merger-between-agm-cse-and-ace/?p=2859670">
         <img src="https://img.shields.io/badge/BIF-Thread-lightgrey.svg?style=flat-square" alt="BIF Thread">
@@ -64,7 +64,6 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 - Magazine repacking
 - Realistic weapon overheating mechanic
 - Combat deafness (temporary loss of hearing) simulation
-- Improved ragdoll physics
 - Improved interactions for AARs and ammo bearers
 - Adjustable sniper scopes
 - No idle animation with lowered weapon

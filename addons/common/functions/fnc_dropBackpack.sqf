@@ -5,18 +5,19 @@
  * Arguments:
  * 0: Unit that has a backpack <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Ground wepaon holder with backpack <OBJECT>
+ *
+ * Example:
+ * [unit] call ace_common_fnc_dropBackpack
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_backpackObject", "_holder"];
-
-_backpackObject = backpackContainer _unit;
+private _backpackObject = backpackContainer _unit;
 
 _unit addBackpack "ACE_FakeBackpack";
 removeBackpack _unit;

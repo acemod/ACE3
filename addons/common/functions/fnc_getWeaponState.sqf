@@ -4,7 +4,7 @@
  *
  * Arguments:
  * 0: unit <OBJECT>
- * 1: weapon <STRING>
+ * 1: weapon (optional, default: units current weapon) <STRING>
  *
  * Return Value:
  * 0: Attachements <ARRAY>
@@ -12,34 +12,30 @@
  * 2: Magazines <ARRAY>
  * 3: Ammo <ARRAY>
  *
+ * Example:
+ * [bob, "gun"] call ace_common_fnc_getWeaponState
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon"];
+params [["_unit", objNull, [objNull]], ["_weapon", nil, [""]]];
 
-private ["_muzzles", "_weaponInfo"];
+if (isNil "_weapon") then {
+    _weapon = currentWeapon _unit;
+};
 
-_muzzles = [_weapon] call FUNC(getWeaponMuzzles);
+private _attachments = [_unit weaponAccessories _weapon] param [0, ["","","",""]];
 
-_weaponInfo = [["","","",""], primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] select ((["", primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] find _weapon) max 0);
+private _muzzles = _weapon call FUNC(getWeaponMuzzles);
 
 // get loaded magazines and ammo
-private ["_magazines", "_ammo"];
-
-_magazines = [];
-_ammo = [];
-
-{
-    _magazines pushBack "";
-    _ammo pushBack 0;
-    false
-} count _muzzles;
+private _magazines = _muzzles apply {""};
+private _ammo = _muzzles apply {0};
 
 {
     if (_x select 2) then {
-        private "_index";
-        _index = _muzzles find (_x select 4);
+        private _index = _muzzles find (_x select 4);
 
         if (_index != -1) then {
             _magazines set [_index, _x select 0];
@@ -49,6 +45,4 @@ _ammo = [];
     false
 } count magazinesAmmoFull _unit;
 
-_weaponInfo append [_muzzles, _magazines, _ammo]; 
-
-_weaponInfo
+[_attachments, _muzzles, _magazines, _ammo];

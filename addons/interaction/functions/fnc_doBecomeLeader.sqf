@@ -1,4 +1,4 @@
- /*
+/*
  * Author: PabstMirror
  * Become Leader of group.
  *
@@ -13,8 +13,9 @@
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 params ["_unit"];
 
-["selectLeader", units group _unit, [group _unit, _unit]] call EFUNC(common,targetEvent);
+[QEGVAR(common,selectLeader), [group _unit, _unit], units group _unit] call CBA_fnc_targetEvent;

@@ -19,9 +19,9 @@ class CfgVehicles {
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_ca.paa);
         category = "ACE";
-        function = QUOTE(FUNC(initModule));
+        function = QFUNC(initModule);
         functionPriority = 1;
         isGlobal = 1;
         isTriggerActivated = 0;

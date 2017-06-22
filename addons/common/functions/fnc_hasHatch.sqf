@@ -8,11 +8,14 @@
  * Return Value:
  * Unit has a hatch? <BOOL>
  *
+ * Example:
+ * [bob] call ace_common_fnc_hasHatch
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 private _vehicle = vehicle _unit;
 

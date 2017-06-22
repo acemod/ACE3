@@ -8,27 +8,13 @@
  * Return Value:
  * Vehicle commander turrent indecies <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getTurretCommander
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_vehicle"];
+params [["_vehicle", objNull, [objNull]]];
 
-private ["_turrets", "_turret", "_config"];
-
-_turrets = allTurrets [_vehicle, true];
-
-_turret = [];
-
-{
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
-
-    _config = [_config, _x] call FUNC(getTurretConfigPath);
-
-    if (getNumber (_config >> "primaryObserver") == 1) exitWith {
-        _turret = _x;
-    };
-    false
-} count _turrets;
-
-_turret
+fullCrew [_vehicle, "commander", true] apply {_x select 3} param [0, []] // return

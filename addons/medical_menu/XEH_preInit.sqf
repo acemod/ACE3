@@ -2,23 +2,9 @@
 
 ADDON = false;
 
-PREP(onMenuOpen);
-PREP(onMenuClose);
-PREP(openMenu);
-
-PREP(canOpenMenu);
-PREP(updateIcons);
-PREP(updateUIInfo);
-PREP(handleUI_DisplayOptions);
-PREP(handleUI_dropDownTriageCard);
-PREP(getTreatmentOptions);
-PREP(updateActivityLog);
-PREP(updateQuickViewLog);
-PREP(updateBodyImage);
-PREP(updateInformationLists);
-PREP(setTriageStatus);
-PREP(collectActions);
-PREP(module);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 GVAR(INTERACTION_TARGET) = objNull;
 GVAR(actionsOther) = [];

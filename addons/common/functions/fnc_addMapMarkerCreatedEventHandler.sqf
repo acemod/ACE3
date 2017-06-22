@@ -8,6 +8,9 @@
  * Return Value:
  * ID of the event script (used to remove it later). <NUMBER>
  *
+ * Example:
+ * ["bob"] call ace_common_fnc_addMapMarkerCreatedEventHandler
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -18,8 +21,7 @@ if (_statement isEqualType "") then {
     _statement = compile _statement;
 };
 
-private "_actionsVar";
-_actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
+private _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
 _actionsVar params ["_id", "_actionIDs", "_actions"];
 

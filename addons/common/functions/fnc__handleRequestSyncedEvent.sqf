@@ -2,16 +2,20 @@
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
  *
- * Arguments [Client] :
+ * Arguments [Client]:
  * 0: eventName <STRING>
  * 1: eventLog <ARRAY>
  *
- * Arguments [Server] :
+ * Arguments [Server]:
  * 0: eventName <STRING>
  * 1: client <OBJECT>
  *
  * Return Value:
  * Event is successed <BOOL>
+ *
+ * Example:
+ * ["name", [LOG]] call ace_common_fnc__handleRequestSyncedEvent //Client
+ * ["name", bob] call ace_common_fnc__handleRequestSyncedEvent//Server
  *
  * Public: No
  */
@@ -22,17 +26,15 @@ if (isServer) then {
     // Find the event name, and shovel out the events to the client
     params ["_eventName", "_client"];
 
-    if (!HASH_HASKEY(GVAR(syncedEvents),_eventName)) exitWith {
-        ACE_LOGERROR("Request for synced event - key not found.");
+    if !([GVAR(syncedEvents), _eventName] call CBA_fnc_hashHasKey) exitWith {
+        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
         false
     };
 
-    private ["_eventEntry", "_eventLog"];
+    private _eventEntry = [GVAR(syncedEvents), _eventName] call CBA_fnc_hashGet;
+    _eventEntry params ["", "_eventLog"];
 
-    _eventEntry = HASH_GET(GVAR(syncedEvents),_eventName);
-    _eventLog = _eventEntry select 1;
-
-    ["SEH_s", _client, [_eventName, _eventLog]] call FUNC(targetEvent);
+    ["ACEs", [_eventName, _eventLog], _client] call CBA_fnc_targetEvent;
 } else {
     params ["_eventName", "_eventLog"];
 
@@ -44,7 +46,7 @@ if (isServer) then {
         false
     } count _eventLog;
 
-    ACE_LOGINFO_1("[%1] synchronized",_eventName);
+    INFO_1("[%1] synchronized",_eventName);
 };
 
 true

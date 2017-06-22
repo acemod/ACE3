@@ -10,15 +10,19 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_refuel_fnc_moduleRefuelSettings
+ *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-params ["_logic", "_units", "_activated"];
+params ["_logic", "", ["_activated", false, [false]]];
 
 if !(_activated) exitWith {};
 
 [_logic, QGVAR(rate), "rate"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(hoseLength), "hoseLength"] call EFUNC(common,readSettingFromModule);
 
-diag_log text format ["[ACE]: Refuel Module Initialized with flow rate: %1", GVAR(rate)];
+INFO_2("Refuel Module Initialized with flow rate: %1 - hoseLength: %2",GVAR(rate), GVAR(hoseLength))

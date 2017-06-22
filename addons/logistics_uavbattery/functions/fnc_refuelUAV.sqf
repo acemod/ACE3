@@ -7,7 +7,7 @@
  * 1: UAV <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, theUAV] call ace_logistics_uavbattery_fnc_refuelUAV
@@ -15,19 +15,18 @@
  * Public: No
  */
 #include "script_component.hpp"
-private ["_onFinish", "_onFailure"];
 params ["_caller", "_target"];
 
 if (!(_this call FUNC(canRefuelUAV))) exitWith {};
 
-_onFinish = {
+private _onFinish = {
     (_this select 0) params ["_caller", "_target"];
     _caller removeItem "ACE_UAVBattery";
     playSound3D [QUOTE(PATHTO_R(sounds\exchange_battery.ogg)), objNull, false, getPosASL _caller, 1, 1, 10];
-      ["setFuel", [_target], [_target, 1]] call EFUNC(common,targetEvent); //setFuel is local
+      [QEGVAR(common,setFuel), [_target, 1], [_target]] call CBA_fnc_targetEvent; //setFuel is local
 };
 
-_onFailure = {
+private _onFailure = {
     (_this select 0) params ["_caller", "_target"];
     [_caller, "AmovPknlMstpSrasWrflDnon", 1] call EFUNC(common,doAnimation);
 };

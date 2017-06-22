@@ -1,49 +1,11 @@
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
-class MuzzleSlot;
-
-// config inheritance of weapon slot info v1.32
-class SlotInfo;
-class CowsSlot: SlotInfo {};
-class PointerSlot: SlotInfo {
-    //compatibleItems[] = {"acc_flashlight","acc_pointer_IR", "ACE_acc_flashlight_tls"};
-};
 
 class CfgWeapons {
-
-    // config inheritance of weapon slot info v1.32 for launchers
-    class Launcher;
-    class Launcher_Base_F: Launcher {
-        class WeaponSlotsInfo {};
-    };
-
-    // config inheritance of weapon slot info v1.32 for assault rifles
-    class RifleCore;
-    class Rifle: RifleCore {
-        class WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot {};
-            class CowsSlot: CowsSlot {};
-            class PointerSlot: PointerSlot {};
-        };
-    };
-    class Rifle_Base_F: Rifle {};
-    class Rifle_Long_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {};
-    };
-
-    // config inheritance of weapon slot info v1.32 for handguns
-    class PistolCore;
-    class Pistol: PistolCore {
-        class WeaponSlotsInfo {
-            class CowsSlot: SlotInfo {};
-        };
-    };
-    class Pistol_Base_F: Pistol {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: SlotInfo {};
-        };
-    };
+    class Rifle_Base_F;
+    class Rifle_Short_Base_F: Rifle_Base_F {};
+    class Rifle_Long_Base_F: Rifle_Base_F {};
 
     ///////////////////////////////////////////////////////////////////////////////
     //////////// SMALL ARMS WEAPONS ///////////////////////////////////////////////
@@ -58,18 +20,12 @@ class CfgWeapons {
     // Grenade launchers /////////////////////////////////////
     // Updated strings are in weapon configs.
     class GrenadeLauncher;
-    class UGL_F : GrenadeLauncher {};
+    class UGL_F: GrenadeLauncher {};
 
     // MXs ////////////////////////////////////////////////////
 
-    class arifle_MX_Base_F : Rifle_Base_F {
-        //magazines[] = {"30Rnd_65x39_caseless_mag", "30Rnd_65x39_caseless_mag_Tracer", "100Rnd_65x39_caseless_mag", "100Rnd_65x39_caseless_mag_Tracer"};
-
-        // http://www.bushmaster.com/acr/#/intro
-        // 800 rpm (whatever, fictional lol)
-
-        //class Single : Mode_SemiAuto {};
-        class Single : Mode_SemiAuto {
+    class arifle_MX_Base_F: Rifle_Base_F {
+        class Single: Mode_SemiAuto {
             reloadTime = 0.075;
         };
 
@@ -78,20 +34,20 @@ class CfgWeapons {
         };
     };
 
-    class arifle_MX_SW_F : arifle_MX_Base_F {
+    class arifle_MX_SW_F: arifle_MX_Base_F {
         modes[] = {"Single", "manual", "close", "short", "medium", "far_optic1", "far_optic2"};
 
-        //class Single : Single {};
-        //class manual : FullAuto {};
+        //class Single: Single {};
+        //class manual: FullAuto {};
     };
 
     // Katibas ////////////////////////////////////////////////////
 
-    class arifle_katiba_Base_F : Rifle_Base_F {
+    class arifle_katiba_Base_F: Rifle_Base_F {
         // http://world.guns.ru/assault/iran/khaybar-kh2002-e.html
         // 800 rpm
 
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             reloadTime = 0.075;
         };
 
@@ -102,16 +58,16 @@ class CfgWeapons {
 
     // SDAR //////////////////////////////////////////////////
 
-    class SDAR_base_F : Rifle_Base_F {
+    class SDAR_base_F: Rifle_Base_F {
         modes[] = {"Single", "FullAuto"}; // Leave in the imaginary full-auto mode because, whatever.
     };
 
     // Tavor TRG ////////////////////////////////////////////////
 
-    class Tavor_base_F : Rifle_Base_F {
+    class Tavor_base_F: Rifle_Base_F {
         // http://www.israel-weapon.com/files/brochure_2012/IWI_TAVOR_AR.pdf
         // 700 ~1000 rpm (850)
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             reloadTime = 0.07;
         };
 
@@ -122,10 +78,10 @@ class CfgWeapons {
 
     // Mk20 (F2000) //////////////////////////////////////////////////
 
-    class mk20_base_F : Rifle_Base_F {
+    class mk20_base_F: Rifle_Base_F {
         // http://www.fnherstal.com/primary-menu/products-capabilities/rifles/technical-data/product/182/232/182/1/_/fn-f2000R-standard.html
         // 850 rpm
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             reloadTime = 0.07;
         };
 
@@ -136,14 +92,14 @@ class CfgWeapons {
 
     // SMG Vermin ////////////////////////////////////////////////////
 
-    class SMG_01_Base : Rifle_Base_F {
+    class SMG_01_Base: Rifle_Short_Base_F {
         // http://kriss-usa.com/pdf/operatormanual/
         // 1200 rpm
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             reloadTime = 0.05;
         };
 
-        class Burst : Mode_Burst {
+        class Burst: Mode_Burst {
             burst = 2;
             reloadTime = 0.05;
         };
@@ -155,17 +111,17 @@ class CfgWeapons {
 
     // SMG Scorpion ////////////////////////////////////////////////////
 
-    class SMG_02_base_F : Rifle_Base_F {
+    class SMG_02_base_F: Rifle_Short_Base_F  {
         //http://www.czub.cz/zbrojovka/cz-manual/Instruction-Manual-Scorpion-EVO-3-A1_en.pdf
         // 1150 rpm
 
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             // http://www.stengg.com/upload/915fGdhTi3ggnnGQGGL.pdf
             // 900-1100 rpm (1000rpm)
             reloadTime = 0.052;
         };
 
-        class Burst : Mode_Burst {
+        class Burst: Mode_Burst {
             reloadTime = 0.052;
         };
 
@@ -176,12 +132,10 @@ class CfgWeapons {
 
     // SMG PDW2000 ///////////////////////////////////////////////////
 
-    class pdw2000_base_F: Rifle_Base_F {
-        magazines[] = {"30Rnd_9x21_Mag"};
-
+    class pdw2000_base_F: Rifle_Short_Base_F {
         modes[] = {"Single", "FullAuto"}; // No burst on this thing
 
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             // http://www.stengg.com/upload/915fGdhTi3ggnnGQGGL.pdf
             // 900-1100 rpm (1000rpm)
             reloadTime = 0.06;
@@ -194,24 +148,18 @@ class CfgWeapons {
 
     // Pistols //////////////////////////////////////////////
 
-    class hgun_P07_F : Pistol_Base_F {
-        magazines[] = {"16Rnd_9x21_Mag"};
-    };
-
-    class hgun_Rook40_F : Pistol_Base_F {
-        magazines[] = {"16Rnd_9x21_Mag"};
-    };
-
-    /*class hgun_ACPC2_F: Pistol_Base_F {};
+    /*class hgun_P07_F: Pistol_Base_F {};
+    class hgun_Rook40_F: Pistol_Base_F {};
+    class hgun_ACPC2_F: Pistol_Base_F {};
     class hgun_Pistol_heavy_01_F: Pistol_Base_F {};
     class hgun_Pistol_heavy_02_F: Pistol_Base_F {};*/
 
     // LMGs //////////////////////////////////////////////
 
-    class LMG_Mk200_F : Rifle_Long_Base_F {
+    class LMG_Mk200_F: Rifle_Long_Base_F {
         modes[] = {"manual", "Single", "close", "short", "medium", "far_optic1", "far_optic2"};
 
-        class manual : Mode_FullAuto {
+        class manual: Mode_FullAuto {
             // http://www.defensereview.com/kac-stoner-lmg-belt-fed-5-56mm-nato-lightweight-light-machine-gun-squad-automatic-weapon-lmgsaw-displayed-at-sofic-2010/
             // 550 rpm
             reloadTime = 0.109;
@@ -219,7 +167,7 @@ class CfgWeapons {
 
         // Add semi-auto mode.
         // Inherit from 'manual' for sound reasons.
-        class Single : manual {
+        class Single: manual {
             reloadTime = 0.109;
             dispersion = 0.00175; // radians. Equal to 6 MOA.
             autofire = 0;
@@ -233,28 +181,28 @@ class CfgWeapons {
     class LMG_Zafir_F: Rifle_Long_Base_F {
         modes[] = {"FullAuto", "Single",  "close", "short", "medium", "far_optic1", "far_optic2"};
 
-        class FullAuto : Mode_FullAuto {
+        class FullAuto: Mode_FullAuto {
             reloadTime = 0.070; // 850 RPM on gas position 1
         };
     };
 
     // Sniper and anti-materiel rifles /////////////////////////////////
 
-    class EBR_base_F : Rifle_Long_Base_F {
+    class EBR_base_F: Rifle_Long_Base_F {
         // EMR/EBR is typically issued semi-auto AFAIK
         modes[] = {"Single", "single_close_optics1", "single_medium_optics1", "single_far_optics1"};
         cursor = "arifle";
     };
 
-    class LRR_base_F : Rifle_Long_Base_F {
+    class LRR_base_F: Rifle_Long_Base_F {
         cursor = "arifle";
     };
 
-    class GM6_base_F : Rifle_Long_Base_F {
+    class GM6_base_F: Rifle_Long_Base_F {
         cursor = "arifle";
 
         // Fuck your balancing, BI.
-        class Single : Mode_SemiAuto {
+        class Single: Mode_SemiAuto {
             // 250 rpm is probably the limit of the finger on a heavy bullpup trigger like this thing must have.
             reloadTime = 0.24;
         };

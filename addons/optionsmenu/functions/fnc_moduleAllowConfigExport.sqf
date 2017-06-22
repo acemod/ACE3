@@ -3,18 +3,20 @@
  *
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * call ace_optionsmenu_fnc_moduleAllowConfigExport
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-private ["_logic"];
-_logic = _this select 0;
+params ["_logic"];
 
 if (isMultiplayer) exitWith {};
 

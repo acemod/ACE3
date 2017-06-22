@@ -27,7 +27,7 @@ if (isServer) then {
         missionNamespace setVariable [QGVAR(showFriendlyFireMessage), true];
         publicVariable QGVAR(showFriendlyFireMessage);
     },
-    [], 0.1] call EFUNC(common,waitAndExecute);
+    [], 0.1] call CBA_fnc_waitAndExecute;
 };
 
-ACE_LOGINFO("Friendly Fire Messages Module Initialized.");
+INFO("Friendly Fire Messages Module Initialized.");

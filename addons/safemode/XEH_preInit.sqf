@@ -2,9 +2,8 @@
 
 ADDON = false;
 
-PREP(lockSafety);
-PREP(playChangeFiremodeSound);
-PREP(setSafeModeVisual);
-PREP(unlockSafety);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

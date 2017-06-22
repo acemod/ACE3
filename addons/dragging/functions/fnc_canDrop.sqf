@@ -1,6 +1,5 @@
 /*
  * Author: commy2
- *
  * Check if unit can drop the object.
  *
  * Arguments:
@@ -9,6 +8,9 @@
  *
  * Return Value:
  * Can the unit drop the object? <BOOL>
+ *
+ * Example:
+ * [player, cursorTarget] call ace_dragging_fnc_canDrop;
  *
  * Public: No
  */

@@ -1,15 +1,9 @@
 /*
  * Author: commy2
- * Adjust the grenades throwing direction and speed to the selected throwing mode.
+ * Adjust the grenades throwing direction and speed to the selected throwing mode. Called from the unified fired EH only for CAManBase
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: weapon - Fired weapon <STRING>
- * 2: muzzle - Muzzle that was used <STRING>
- * 3: mode - Current mode of the fired weapon <STRING>
- * 4: ammo - Ammo used <STRING>
- * 5: magazine - magazine name which was used <STRING>
- * 6: projectile - Object of the projectile that was shot <OBJECT>
+ * None. Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
@@ -21,7 +15,8 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
+TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
 
 if (_weapon != "Throw") exitWith {};
 
@@ -30,37 +25,48 @@ if (isNull _projectile) then {
     _projectile = nearestObject [_unit, _ammo];
 };
 
-// handle special grenades
-if (local _unit) then {
-    if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flashbang)) == 1) then {
-        private "_fuzeTime";
-        _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
+private _config = configFile >> "CfgAmmo" >> _ammo;
 
-        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+// handle special grenades and sounds
+if (local _unit) then {
+    // handle priming sound, if present
+    private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
+    if !(_soundConfig isEqualTo []) then {
+        _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
+        playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
+    };
+
+    if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
+        private _fuzeTime = getNumber (_config >> "explosionTime");
+
+        [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
     };
 };
 
-if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(flare)) == 1) then {
-    private ["_fuzeTime", "_timeToLive", "_color", "_intensity"];
+if (getNumber (_config >> QGVAR(flare)) == 1) then {
+    private _fuzeTime = getNumber (_config >> "explosionTime");
+    private _timeToLive = getNumber (_config >> "timeToLive");
+    private _color = getArray (_config >> QGVAR(color));
+    private _intensity = _color deleteAt 3;
 
-    _fuzeTime = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosionTime");
-    _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
-    _color = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(color));
-    _intensity = _color select 3;
-    _color resize 3;
+    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+};
 
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime, 0] call EFUNC(common,waitAndExecute);
+if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
+    private _fuzeTime = getNumber (_config >> "explosionTime");
+    private _timeToLive = getNumber (_config >> "timeToLive");
+
+    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
 };
 
 // handle throw modes
 if (_unit != ACE_player) exitWith {};
+if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
-private "_mode";
-_mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
 
 if (_mode != 0) then {
-    private "_velocity";
-    _velocity = velocity _projectile;
+    private _velocity = velocity _projectile;
 
     switch (_mode) do {
         //high throw

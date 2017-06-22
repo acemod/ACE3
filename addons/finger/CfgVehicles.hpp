@@ -4,7 +4,7 @@ class CfgVehicles {
         scope = 2;
         category = "ACE";
         displayName = CSTRING(moduleSettings_displayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_finger_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_finger_ca.paa);
         function = QFUNC(moduleSettings);
         isGlobal = 0;
         isSingular = 1;
@@ -12,6 +12,7 @@ class CfgVehicles {
         class Arguments {
             class enabled {
                 displayName = CSTRING(enabled_DisplayName);
+                description = CSTRING(enabled_DisplayName);
                 typeName = "BOOL";
                 defaultValue = 1;
             };

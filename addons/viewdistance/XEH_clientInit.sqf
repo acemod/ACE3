@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-["SettingsInitialized", {
+["ace_settingsInitialized", {
     // if not enabled, then bugger off.
     if !(GVAR(enabled)) exitWith {};
 
@@ -10,7 +10,7 @@ if (!hasInterface) exitWith {};
     [false] call FUNC(adaptViewDistance);
 
     // Set the EH which waits for any of the view distance settings to be changed, so that the effect is show immediately
-    ["SettingChanged",{
+    ["ace_settingChanged",{
         params ["_name"];
         if ((_name  == QGVAR(viewDistanceOnFoot)) ||
             (_name  == QGVAR(viewDistanceLandVehicle)) ||
@@ -19,11 +19,11 @@ if (!hasInterface) exitWith {};
 
             [true] call FUNC(adaptViewDistance);
         };
-    }] call EFUNC(common,addEventHandler);
+    }] call CBA_fnc_addEventHandler;
 
     // Set the EH which waits for a vehicle change to automatically swap between On Foot/In Land Vehicle/In Air Vehicle
     // Also run when SettingsInitialized runs (not guaranteed)
-    ["playerVehicleChanged",{
-        [false] call FUNC(adaptViewDistance)
-    }] call EFUNC(common,addEventHandler);
-}] call EFUNC(common,addEventHandler);
+    ["vehicle",{
+        [false] call FUNC(adaptViewDistance);
+    }] call CBA_fnc_addPlayerEventHandler;
+}] call CBA_fnc_addEventHandler;

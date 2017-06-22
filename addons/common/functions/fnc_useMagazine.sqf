@@ -9,14 +9,16 @@
  * Return Value:
  * if magazine has been used. <BOOL>
  *
+ * Example:
+ * [bob, "magazine"] call ace_common_fnc_useMagazine
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_unit", "_magazine", ["_vehicleUsage", false]];
 
-private "_return";
-_return = false;
+private _return = false;
 
 if !(_vehicleUsage) then {
     if (_magazine != "") then {

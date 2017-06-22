@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, 2] call ACE_medical_menu_fnc_setTriageStatus
+ *
  * Public: No
  */
 #include "script_component.hpp"

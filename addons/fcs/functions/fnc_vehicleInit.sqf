@@ -1,24 +1,24 @@
 /*
  * Author: KoffeinFlummi, commy2
- *
  * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
  *
  * Arguments:
- * 0: Vehicle
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * none
+ * None
+ *
+ * Example:
+ * [car] call ace_fcs_fnc_vehicleInit
+ *
+ * Public: No
  */
-
 #include "script_component.hpp"
 
-private "_vehicle";
-
-_vehicle = _this select 0;
+params ["_vehicle"];
 
 {
-    private "_turretConfig";
-    _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
+    private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
         _vehicle setVariable [format ["%1_%2", QGVAR(Distance),  _x],  0, true];
@@ -42,4 +42,5 @@ _vehicle = _this select 0;
             _vehicle setVariable [format ["%1_%2", QGVAR(ViewDiff), _x],         0, true];
         };
     };
-} forEach allTurrets _vehicle;
+    false
+} count allTurrets _vehicle;

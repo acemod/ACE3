@@ -11,27 +11,30 @@
  * 5: HitPointIndex (-1 for structural) <NUMBER>
  *
  * Return Value:
- * <nil>
+ * None
+ *
+ * Example:
+ * [bob, "leg", 2, kevin, "bullet", -1] call ACE_medical_fnc_handleDamage_caching
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_hitSelections", "_hitPoints", "_impactVelocity", "_newDamage", "_cache_hitpoints", "_cache_projectiles", "_cache_params", "_cache_damages"];
 params ["_unit", "_selectionName", "_damage", "_source", "_projectile", "_hitPointIndex"];
 
-_hitSelections = GVAR(SELECTIONS);
+private _hitSelections = GVAR(SELECTIONS);
 
 // Calculate change in damage - use getHitIndex because selection is translated (hitdiaphragm->body)
-_newDamage = _damage - (damage _unit);
+private _newDamage = _damage - (damage _unit);
 if (_hitPointIndex >= 0) then {_newDamage = _damage - (_unit getHitIndex _hitPointIndex)};
 
 TRACE_7("ACE_DEBUG: HandleDamage_Caching Called",_unit, _selectionName, _damage, _source, _projectile,_hitPointIndex,_newDamage);
 
 // Check for vehicle crash
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isNull _source} && {_projectile == ""} && {_selectionName == ""}) then {
+private _vehicle = vehicle _unit;
+if ((_vehicle != _unit) && {!(_vehicle isKindOf "StaticWeapon")} && {_source in [objNull, driver _vehicle, _vehicle]} && {_projectile == ""} && {_selectionName == ""}) then {
     if (GVAR(enableVehicleCrashes)) then {
-        _selectionName = _hitSelections select (floor(random(count _hitSelections)));
+        _selectionName = selectRandom _hitSelections;
         _projectile = "vehiclecrash";
         _this set [1, _selectionName];
         _this set [4, _projectile];
@@ -39,8 +42,8 @@ if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")} && {isN
 };
 
 // Handle falling damage
-_impactVelocity = (velocity _unit) select 2;
-if (_impactVelocity < -5 && {vehicle _unit == _unit}) then {
+private _impactVelocity = (velocity _unit) select 2;
+if (_impactVelocity < -5 && {_vehicle == _unit}) then {
      TRACE_1("Starting isFalling", time);
     _unit setVariable [QGVAR(isFalling), true];
     _unit setVariable [QGVAR(impactVelocity), _impactVelocity];
@@ -50,6 +53,7 @@ if (_impactVelocity < -5 && {vehicle _unit == _unit}) then {
         _unit setVariable [QGVAR(isFalling), false];
     };
 };
+
 if (_unit getVariable [QGVAR(isFalling), false]) then {
     if !(_selectionName in ["", "leg_l", "leg_r"]) then {
         if (_selectionName == "body") then {
@@ -57,9 +61,10 @@ if (_unit getVariable [QGVAR(isFalling), false]) then {
         } else {
             _newDamage = _newDamage * 0.5;
         };
+        if (_newDamage < 0.075) then {_newDamage = 0;}; //Filter minor falling damage to non-leg hitpoints
     } else {
         if (_selectionName == "") then {
-            _selectionName = ["leg_l", "leg_r"] select (floor(random 2));
+            _selectionName = selectRandom ["leg_l", "leg_r"];
             _this set [1, _selectionName];
         };
         _newDamage = _newDamage * 0.7;
@@ -75,23 +80,16 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
 
     // handle the cached damages 3 frames later
     [{
-        private ["_args", "_params"];
         params ["_args", "_idPFH"];
         _args params ["_unit", "_frameno"];
         if (diag_frameno >= _frameno + 2) then {
             _unit setDamage 0;
-
-            if (GVAR(level) < 2 || {!([_unit] call FUNC(hasMedicalEnabled))}) then {
-                [_unit] call FUNC(handleDamage_basic);
-            } else {
-                _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
-                _cache_damages = _unit getVariable QGVAR(cachedDamages);
-                {
-                    _params = _x + [_cache_damages select _forEachIndex];
-                    _params call FUNC(handleDamage_advanced);
-                } forEach _cache_params;
-                [_unit] call FUNC(handleDamage_advancedSetDamage);
-            };
+            private _cache_params = _unit getVariable [QGVAR(cachedHandleDamageParams), []];
+            private _cache_damages = _unit getVariable QGVAR(cachedDamages);
+            {
+                (_x + [_cache_damages select _forEachIndex]) call FUNC(handleDamage_advanced);
+            } forEach _cache_params;
+            [_unit] call FUNC(handleDamage_advancedSetDamage);
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
     }, 0, [_unit, diag_frameno] ] call CBA_fnc_addPerFrameHandler;
@@ -104,24 +102,23 @@ if (diag_frameno > (_unit getVariable [QGVAR(frameNo_damageCaching), -3]) + 2) t
 
 // Caching of the damage events
 if (_selectionName != "") then {
-    _cache_projectiles = _unit getVariable QGVAR(cachedProjectiles);
-    private ["_index","_otherDamage"];
-    _index = _cache_projectiles find _projectile;
+    private _cache_projectiles = _unit getVariable QGVAR(cachedProjectiles);
+    private _index = _cache_projectiles find _projectile;
+
     // Check if the current projectile has already been handled once
     if (_index >= 0 && {_projectile != "falling"}) exitWith {
-        _cache_damages = _unit getVariable QGVAR(cachedDamages);
-        // Find the previous damage this projectile has done
-        _otherDamage = (_cache_damages select _index);
+
+        private _cache_damages = _unit getVariable QGVAR(cachedDamages);
+        private _otherDamage = (_cache_damages select _index); // Find the previous damage this projectile has done
 
         // Take the highest damage of the two
         if (_newDamage > _otherDamage) then {
-            _cache_params = _unit getVariable QGVAR(cachedHandleDamageParams);
-            _cache_hitpoints = _unit getVariable QGVAR(cachedHitPoints);
+            private _cache_params = _unit getVariable QGVAR(cachedHandleDamageParams);
+            private _cache_hitpoints = _unit getVariable QGVAR(cachedHitPoints);
 
-            private ["_hitPoint", "_restore"];
             // Restore the damage before the previous damage was processed
-            _hitPoint = _cache_hitpoints select _index;
-            _restore = ((_unit getHitIndex _hitPoint) - _otherDamage) max 0;
+            private _hitPoint = _cache_hitpoints select _index;
+            private _restore = ((_unit getHitIndex _hitPoint) - _otherDamage) max 0;
             _unit setHitIndex [_hitPoint, _restore];
 
             _cache_hitpoints set [_index, _hitPointIndex];
@@ -135,9 +132,9 @@ if (_selectionName != "") then {
         };
     };
 
-    _cache_hitpoints = _unit getVariable QGVAR(cachedHitPoints);
-    _cache_damages = _unit getVariable QGVAR(cachedDamages);
-    _cache_params = _unit getVariable QGVAR(cachedHandleDamageParams);
+    private _cache_hitpoints = _unit getVariable QGVAR(cachedHitPoints);
+    private _cache_damages = _unit getVariable QGVAR(cachedDamages);
+    private _cache_params = _unit getVariable QGVAR(cachedHandleDamageParams);
 
     // This is an unhandled projectile
     _cache_projectiles pushBack _projectile;

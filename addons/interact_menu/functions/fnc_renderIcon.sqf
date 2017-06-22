@@ -2,34 +2,36 @@
  * Author: NouberNou and esteldunedain
  * Render a single interaction icon
  *
- * Argument:
+ * Arguments:
  * 0: Text <STRING>
  * 1: Icon <STRING>
  * 2: 2d position <ARRAY>
  * 3: Text Settings <STRING>
  *
- * Return value:
+ * Return Value:
  * None
+ *
+ * Example:
+ * ["text", "icon", [5, 6], "text"] call ACE_interact_menu_fnc_renderIcon
  *
  * Public: No
  */
 #include "script_component.hpp"
 #define DEFAULT_ICON QUOTE(\z\ace\addons\interaction\ui\dot_ca.paa)
-private ["_ctrl", "_pos", "_displayNum"];
 
 params ["_text", "_icon", "_sPos", "_textSettings"];
 
-//systemChat format ["Icon %1 - %2,%3", _text, _sPos select 0, _sPos select 1];
+TRACE_2("Icon",_text,_sPos);
 
 if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
-    _displayNum = [[46, 12] select visibleMap,91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
-    GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021+GVAR(iconCount)]);
+    private _displayNum = [[46, 12] select visibleMap, 91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
+    GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021 + GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
-        ((finddisplay _displayNum) displayctrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
-        ((finddisplay _displayNum) displayctrl (54021+GVAR(iconCount))) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
+        ((finddisplay _displayNum) displayctrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
+        ((finddisplay _displayNum) displayctrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     };
 };
-_ctrl = GVAR(iconCtrls) select GVAR(iconCount);
+private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
 
 if(_icon == "") then {
     _icon = DEFAULT_ICON;
@@ -41,14 +43,13 @@ _text = if (GVAR(UseListMenu)) then {
     format ["<img image='%1' align='center'/><br/><t %2 align='center'>%3</t>", _icon, _textSettings, "ace_break_line" callExtension _text];
 };
 
-//_ctrl ctrlSetStructuredText parseText _text;
 [_ctrl, GVAR(iconCount), _text] call FUNC(ctrlSetParsedTextCached);
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
-_pos = if (GVAR(UseListMenu)) then {
-    [(_sPos select 0)-(0.0095*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.20*SafeZoneW, 0.035*SafeZoneW]
+private _pos = if (GVAR(UseListMenu)) then {
+    [(_sPos select 0) - (0.0095 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.20 * SafeZoneW, 0.035 * SafeZoneW]
 } else {
-    [(_sPos select 0)-(0.0750*SafeZoneW), (_sPos select 1)-(0.0095*SafeZoneW), 0.15*SafeZoneW, 0.100*SafeZoneW]
+    [(_sPos select 0) - (0.0750 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.15 * SafeZoneW, 0.100 * SafeZoneW]
 };
 
 if (GVAR(cursorKeepCentered) && {uiNamespace getVariable [QGVAR(cursorMenuOpened),false]}) then {

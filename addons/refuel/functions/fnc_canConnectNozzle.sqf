@@ -16,11 +16,17 @@
  */
 #include "script_component.hpp"
 
-private ["_nozzle"];
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _engine = false;
+
+if (_target isKindOf "AllVehicles") then {
+    _engine = isEngineOn _target;
+};
 
 !(isNull _nozzle ||
-    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
-    {!isNull (_target getVariable [QGVAR(nozzle), objNull])}) // TODO verify cant connect multiple fuel lines
+    {!alive _target} ||
+    {_engine} ||
+    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
+    {!isNull (_target getVariable [QGVAR(nozzle), objNull])})

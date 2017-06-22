@@ -18,19 +18,16 @@
  */
 #include "script_component.hpp"
 
-private ["_currentAmmoCount", "_addedMagazines", "_missingAmmo", "_index", "_updateMagazinesOnPlayerFnc"];
-
-params ["_ars", "_elapsedTime", "_totalTime"];
+params ["_args", "_elapsedTime", "_totalTime"];
 _args params ["_magazineClassname", "_lastAmmoCount", "_simEvents"];
 
 if !((_simEvents select 0) params ["_nextEventTime", "_nextEventIsBullet", "_nextEventMags"]) exitWith { ERROR("No Event"); false };
 
 
-
 if (_nextEventTime > _elapsedTime) exitWith { true };//waiting on next event
 
 //Verify we aren't missing any ammo
-_currentAmmoCount = [];
+private _currentAmmoCount = [];
 {
     _x params ["_xClassname", "_xCount"];
     if (_xClassname == _magazineClassname) then {
@@ -39,11 +36,11 @@ _currentAmmoCount = [];
 } forEach (magazinesAmmo ACE_player);  //only inventory mags
 
 //Go through mags we currently have and check off the ones we should have
-_addedMagazines = +_currentAmmoCount;
-_missingAmmo = false;
+private _addedMagazines = +_currentAmmoCount;
+private _missingAmmo = false;
 {
     if (_x > 0) then {
-        _index = _addedMagazines find _x;
+        private _index = _addedMagazines find _x;
         if (_index != -1) then {
             _addedMagazines deleteAt _index;
         } else {
@@ -54,7 +51,7 @@ _missingAmmo = false;
 
 if (_missingAmmo) exitWith { false };  //something removed ammo that was being repacked (could be other players or scripts)
 
-_updateMagazinesOnPlayerFnc = {
+private _updateMagazinesOnPlayerFnc = {
     ACE_player removeMagazines _magazineClassname;  //remove inventory magazines
     {
         if (_x > 0) then {

@@ -3,7 +3,7 @@ class CfgVehicles {
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Wind_ca.paa);
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
         functionPriority = 1;
@@ -71,7 +71,7 @@ class CfgVehicles {
                 displayName = CSTRING(simulationInterval_DisplayName);
                 description = CSTRING(simulationInterval_Description);
                 typeName = "NUMBER";
-                defaultValue = 0.0;
+                defaultValue = 0.05;
             };
             class simulationRadius {
                 displayName = CSTRING(simulationRadius_DisplayName);

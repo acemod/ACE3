@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_main_page
+ * false call ace_atragmx_fnc_show_main_page
  *
  * Public: No
  */
@@ -21,6 +21,18 @@ GVAR(showMainPage) = _this;
                                 500, 501, 502, 503, 600, 601, 602, 603, 1000, 1001, 1002, 1003, 1004, 2000, 2001, 3000, 4000, 4001, 4002, 4003, 4004, 4005, 4006, 4007, 4008];
 
 if (_this) then {
+    if (GVAR(showCoriolis)) then {
+        ctrlSetText [4003, "Hold"];
+        ctrlSetText [4004, "Cor"];
+        ctrlSetText [4005, "Spin"];
+        {ctrlShow [_x, false]} forEach [402, 4006, 4007];
+    } else {
+        ctrlSetText [4003, "Abs"];
+        ctrlSetText [4004, "Rel"];
+        ctrlSetText [4005, "Cur"];
+        private _visible = (GVAR(currentScopeUnit) == 3);
+         {ctrlShow [_x, _visible]} forEach [401, 402, 411, 412, 4004, 4005, 4006, 4007];
+    };
     if (GVAR(atmosphereModeTBH)) then {
         {ctrlShow [_x, false]} forEach [23, 230];
     } else {

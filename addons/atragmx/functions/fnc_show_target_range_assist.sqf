@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_target_range_assist
+ * false call ace_atragmx_fnc_show_target_range_assist
  *
  * Public: No
  */
@@ -21,7 +21,6 @@ GVAR(showTargetRangeAssist) = _this;
 
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 7018);
-    
     ctrlSetText [7012, Str(parseNumber(ctrlText 320))];
     ctrlSetText [7013, Str(parseNumber(ctrlText 340))];
 

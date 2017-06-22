@@ -20,8 +20,7 @@
 
 params ["_projectile", "_color", "_intensity", "_timeToLive"];
 
-private "_light";
-_light = "#lightpoint" createVehicleLocal position _projectile;
+private _light = "#lightpoint" createVehicleLocal position _projectile;
 
 _light setLightColor _color;
 _light setLightAmbient _color;
@@ -37,4 +36,4 @@ _light setLightDayLight true;
 _light lightAttachObject [_projectile, [0,0,0]];
 //_light attachTo [_projectile, [0,0,0]];
 
-[{deleteVehicle _this}, _light, _timeToLive, 1] call EFUNC(common,waitAndExecute);
+[{deleteVehicle _this}, _light, _timeToLive] call CBA_fnc_waitAndExecute;

@@ -1,14 +1,25 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * 0: Number <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [5] call ace_vector_fnc_adjustBrigthness
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-private "_color";
-
-_color = [[1,0,0,0.5], [1,0,0,1]] select (_this select 0);
+private _color = [[1,0,0,0.5], [1,0,0,1]] select (_this select 0);
 
 (_dlgVector displayCtrl 1301) ctrlSetTextColor _color;
 (_dlgVector displayCtrl 1302) ctrlSetTextColor _color;

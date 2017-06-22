@@ -1,16 +1,22 @@
-/**
- * fn_healLocal.sqf
- * @Descr: N/A
- * @Author: Glowbal
+/*
+ * Author: Glowbal
  *
- * @Arguments: []
- * @Return:
- * @PublicAPI: false
+ *
+ * Arguments:
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ *
+ * Return Value:
+ * Boolean <BOOL>
+ *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_treatmentAdvanced_fullHealLocal
+ *
+ * Public: No
  */
 
 #include "script_component.hpp"
 
-private "_allUsedMedication";
 params ["_caller", "_target"];
 
 if (alive _target) exitWith {
@@ -37,9 +43,7 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(fractures), []];
 
     // IVs
-    _target setVariable [QGVAR(salineIVVolume), 0];
-    _target setVariable [QGVAR(plasmaIVVolume), 0];
-    _target setVariable [QGVAR(bloodIVVolume), 0];
+    _target setVariable [QGVAR(ivBags), nil, true];
 
     // damage storage
     _target setVariable [QGVAR(bodyPartStatus), [0,0,0,0,0,0], true];
@@ -50,7 +54,6 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(airwayCollapsed), false, true];
 
     // generic medical admin
-    _target setVariable [QGVAR(addedToUnitLoop), false, true];
     _target setVariable [QGVAR(inCardiacArrest), false, true];
     _target setVariable [QGVAR(inReviveState), false, true];
     _target setVariable ["ACE_isUnconscious", false, true];
@@ -60,7 +63,7 @@ if (alive _target) exitWith {
     _target setVariable [QGVAR(painSuppress), 0, true];
 
     // medication
-    _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
+    private _allUsedMedication = _target getVariable [QGVAR(allUsedMedication), []];
     {
        _target setVariable [_x select 0, nil];
     } forEach _allUsedMedication;
@@ -68,6 +71,6 @@ if (alive _target) exitWith {
     // Resetting damage
     _target setDamage 0;
 
-    [_target, "activity", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog);
-    [_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
+    [_target, "activity", LSTRING(Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
+    [_target, "activity_view", LSTRING(Activity_fullHeal), [[_caller, false, true] call EFUNC(common,getName)]] call FUNC(addToLog); // TODO expand message
 };

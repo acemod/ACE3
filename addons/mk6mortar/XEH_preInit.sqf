@@ -2,20 +2,8 @@
 
 ADDON = false;
 
-PREP(dev_buildTable);
-PREP(dev_formatNumber);
-PREP(dev_simulateCalcRangeTableLine);
-PREP(dev_simulateFindSolution);
-PREP(dev_simulateShot);
-
-PREP(handleFired);
-PREP(handlePlayerVehicleChanged);
-PREP(moduleInit);
-PREP(rangeTableCanUse);
-PREP(rangeTableOpen);
-PREP(rangeTablePageChange);
-PREP(rangeTablePreCalculatedValues);
-PREP(toggleMils);
-PREP(turretDisplayLoaded);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

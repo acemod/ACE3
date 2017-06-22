@@ -1,29 +1,40 @@
-//#define DEBUG_MODE_FULL
+/*
+ * Author: jaynus / nou, PabstMirror
+ * Do attack profile with a valid seeker target location
+ *
+ * Arguments:
+ * 0: Seeker Target PosASL <ARRAY>
+ * 1: Guidance Arg Array <ARRAY>
+ * 2: Seeker State <ARRAY>
+ *
+ * Return Value:
+ * Missile Aim PosASL <ARRAY>
+ *
+ * Example:
+ * [[1,2,3], [], []] call ace_missileguidance_fnc_doAttackProfile;
+ *
+ * Public: No
+ */
+// #define DEBUG_MODE_FULL
 #include "script_component.hpp"
 
-EXPLODE_7_PVT(((_this select 1) select 0),_shooter,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
-private["_testName", "_attackProfilePos", "_attackProfile", "_attackProfileName", "_attackProfilesCfg", "_i", "_launchParams", "_testame", "_testProfile"];
-_launchParams = ((_this select 1) select 1);
-_attackProfileName = _launchParams select 3;
+params ["_seekerTargetPos", "_args"];
+_args params ["", "_launchParams"];
+_launchParams params ["", "", "", "_attackProfileName"];
 
-TRACE_1("Attacking profile", _attackProfileName);
+private _attackProfileFunction = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfileName >> "functionName");
 
-_attackProfilesCfg = ( configFile >> QGVAR(AttackProfiles) );
+private _attackProfilePos = _this call (missionNamespace getVariable _attackProfileFunction);
 
-_attackProfile = nil;
-for [{_i=0}, {_i< (count _attackProfilesCfg) }, {_i=_i+1}] do {
-    _testProfile = _attackProfilesCfg select _i;
-    _testName = configName _testProfile;
-    TRACE_3("", _testName, _testProfile, _attackProfilesCfg);
-    
-    if( _testName == _attackProfileName) exitWith {
-        _attackProfile = _attackProfilesCfg select _i;
-    };
+if ((isNil "_attackProfilePos") || {_attackProfilePos isEqualTo [0,0,0]}) exitWith {
+    ERROR_1("attack profile returned bad pos",_attackProfilePos);
+    [0,0,0]
 };
 
-_attackProfilePos = [0,0,0];
-if(!isNil "_attackProfile") then {
-    _attackProfilePos = _this call (missionNamespace getVariable (getText (_attackProfile >> "functionName")));
-};
+#ifdef DRAW_GUIDANCE_INFO
+drawLine3D [(ASLtoAGL _attackProfilePos), (ASLtoAGL _seekerTargetPos), [0,1,1,1]];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,1,1], ASLtoAGL _attackProfilePos, 0.5, 0.5, 0, _attackProfileName, 1, 0.025, "TahomaB"];
+#endif
 
+TRACE_2("return",_attackProfilePos,_attackProfileName);
 _attackProfilePos;

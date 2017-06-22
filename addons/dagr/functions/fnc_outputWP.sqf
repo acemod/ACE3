@@ -1,14 +1,15 @@
-﻿/*
+/*
  * Author: Rosuto
  * DAGR waypoint output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputWP
  *
  * Public: No
  */
@@ -25,12 +26,12 @@
 #define __timeControl (__display displayCtrl 266859)
 #define __background (__display displayCtrl 266856)
 
-__background ctrlSetText QUOTE(PATHTOF(UI\dagr_wp.paa));
+__background ctrlSetText QPATHTOF(UI\dagr_wp.paa);
 
 if (GVAR(outputPFH) != -1) exitWith {};
 
 GVAR(outputPFH) = [{
-    private["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
+    private ["_MYpos", "_WPpos", "_bearing", "_dagrDistance", "_dagrGrid", "_dagrHeading", "_distance", "_gridArray"];
 
     // Abort Condition
     if !(GVAR(run) && [ACE_player, "ACE_DAGR"] call EFUNC(common,hasItem)) exitWith {
@@ -79,7 +80,11 @@ GVAR(outputPFH) = [{
     });
 
     // WP Heading
-    _bearing = floor ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir);
+    _bearing = floor (if (GVAR(useDegrees)) then {
+        ((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir)
+    } else {
+        DEG_TO_MIL(((_WPpos vectorDiff _MYpos) call CBA_fnc_vectDir))
+    });
 
     // Output
     __gridControl ctrlSetText format ["%1", _dagrGrid];

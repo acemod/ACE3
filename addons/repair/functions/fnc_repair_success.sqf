@@ -40,7 +40,7 @@ _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
 if (_weaponSelect != "") then {
     _caller selectWeapon _weaponSelect;
 } else {
-    _caller action ["SwitchWeapon", _caller, _caller, 99];
+    _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
 
 //Unclaim repair objects:
@@ -58,6 +58,8 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
+if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
+
 _args call _callback;
 
 //todo: repair litter?

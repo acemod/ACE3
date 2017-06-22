@@ -18,9 +18,8 @@
 
 params ["_boat", "_unit"];
 
-private "_newVelocity";
-_newVelocity = vectorDir _unit;
+private _newVelocity = vectorDir _unit;
 _newVelocity set [2, 0.25];
 _newVelocity = _newVelocity vectorMultiply 2;
 
-["setVelocity", [_boat], [_boat, _newVelocity]] call EFUNC(common,targetEvent);
+[QEGVAR(common,setVelocity), [_boat, _newVelocity], [_boat]] call CBA_fnc_targetEvent;

@@ -21,7 +21,7 @@
 params ["_unit", "_ladder"];
 
 // prevent the placing unit from running
-[_unit, "ACE_Ladder", true] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Ladder", true] call EFUNC(common,statusEffect_set);
 
 {
     _ladder animate [_x, 0];
@@ -37,21 +37,16 @@ _ladder animate ["rotate", 0];
 } count ["extract_1", "extract_2", "extract_3"]; // Extract ladder at head height (extract_3)
 
 GVAR(ladder) = _ladder;
-GVAR(cancelTime) = ACE_time + 1; // Workaround to prevent accidental canceling
+GVAR(cancelTime) = CBA_missionTime + 1; // Workaround to prevent accidental canceling
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
 // add mouse buttons and hints
-[localize LSTRING(Deploy), localize LSTRING(Drop), localize LSTRING(Adjust)] call EFUNC(interaction,showMouseHint);
+//private _adjustText = format ["%1, +%2", localize LSTRING(Adjust), localize LSTRING(AdjustTilt)]; // Tilting disabled due to sinking, interaction point offset and unsuitable animation
+[localize LSTRING(Deploy), localize LSTRING(Drop), /*_adjustText*/ localize LSTRING(Adjust)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Deploy), [
     _unit, "DefaultAction",
     {!isNull GVAR(ladder)},
     {[_this select 0, GVAR(ladder)] call FUNC(confirmTLdeploy)}
-] call EFUNC(common,addActionEventHandler)];
-
-_unit setVariable [QGVAR(Cancel), [
-    _unit, "zoomtemp",
-    {!isNull GVAR(ladder)},
-    {[_this select 0, GVAR(ladder)] call FUNC(cancelTLdeploy)}
 ] call EFUNC(common,addActionEventHandler)];

@@ -1,6 +1,6 @@
 /*
  * Author: PabstMirror
- * Sets a vehicle lock state because of a "VehicleLock_SetVehicleLock" event
+ * Sets a vehicle lock state because of a "ace_vehiclelock_setVehicleLock" event
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -16,11 +16,9 @@
  */
 #include "script_component.hpp"
 
-private ["_lockNumber"];
-
 params ["_veh", "_isLocked"];
 TRACE_2("params",_veh,_isLocked);
 
-_lockNumber = if (_isLocked) then {2} else {0};
+private _lockNumber = [0, 2] select _isLocked;
 TRACE_2("Setting Lock State", _veh, _lockNumber);
 _veh lock _lockNumber;

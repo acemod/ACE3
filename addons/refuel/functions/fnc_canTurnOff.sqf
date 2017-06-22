@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_nozzle"];
+params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]]];
 
 if (isNull _unit  ||
     {isNull _nozzle} ||

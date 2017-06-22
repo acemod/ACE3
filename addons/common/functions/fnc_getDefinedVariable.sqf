@@ -9,21 +9,22 @@
  * Return Value:
  * Value of variable or default value, if the variable is undefined <ANY>
  *
+ * Example:
+ * [bob, "var"] call ace_common_fnc_getDefinedVariable
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit", "_variable", "_defaultValue"];
 
-private "_value";
-_value = _unit getVariable _variable;
+private _value = _unit getVariable _variable;
 
 if (isNil "_value") then {
     if (!isNil "_defaultValue") then {
         _value = _defaultValue;
     } else {
-        private "_definedVariable";
-        _definedVariable = [_variable] call FUNC(getDefinedVariableInfo);
+        private _definedVariable = _variable call FUNC(getDefinedVariableInfo);
 
         if (count _definedVariable > 1) then {
             _value = _definedVariable select 1;

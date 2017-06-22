@@ -8,14 +8,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_restoreVariablesJIP
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["_unit"];
 
-private "_respawnVariables";
-_respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
+private _respawnVariables = _unit getVariable ["ACE_respawnVariables", []];
 
 // yes those
 _respawnVariables pushBack "ACE_PersistentFunctions";

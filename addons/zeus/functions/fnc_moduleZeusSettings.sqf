@@ -8,7 +8,10 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleZeusSettings
  *
  * Public: No
  */
@@ -24,3 +27,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(radioOrdnance), "radioOrdnance"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(revealMines), "revealMines"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(remoteWind), "remoteWind"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(autoAddObjects), "autoAddObjects"] call EFUNC(common,readSettingFromModule);

@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * ["myID", true, QUOTE(PATHTOF(data\icon_group.paa)), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
+ * ["myID", true, QPATHTOF(data\icon_group.paa), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
  *
  * Public: Yes
  */
@@ -45,14 +45,11 @@ disableSerialization;
 
 params ["_iconId", "_show", "_icon", "_color", ["_timeAlive", DEFAULT_TIME]];
 
-private ["_list", "_refresh"];
+private _list = missionNamespace getVariable [QGVAR(displayIconList), []];
 
-_list = missionNamespace getVariable [QGVAR(displayIconList), []];
-
-_refresh = {
+private _refresh = {
     // Refreshing of all icons..
-    private "_allControls";
-    _allControls = missionNamespace getVariable [QGVAR(displayIconListControls), []];
+    private _allControls = missionNamespace getVariable [QGVAR(displayIconListControls), []];
 
     {
         ctrlDelete _x;
@@ -61,22 +58,20 @@ _refresh = {
 
     _allControls = [];
 
-    private ["_setting", "_ctrl", "_position"];
-
-    _setting = missionNamespace getVariable [QGVAR(settingFeedbackIcons), 0];
+    private _setting = missionNamespace getVariable [QGVAR(settingFeedbackIcons), 0];
 
     if (_setting > 0) then {
         {
             _x params ["", "_xicon", "_xcolor"];
 
             // +19000 because we want to make certain we are using free IDCs..
-            _ctrl = (findDisplay 46) ctrlCreate ["RscPicture", _forEachIndex + 19000];
+            private _ctrl = (findDisplay 46) ctrlCreate ["RscPicture", _forEachIndex + 19000];
 
-            _position = switch (_setting) do {
+            private _position = switch (_setting) do {
                 case TOP_RIGHT_DOWN: {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
+                case TOP_RIGHT_LEFT: {[X_POS_ICONS_SECOND - ((_forEachIndex + 3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND - (ICON_WIDTH / 2), ICON_WIDTH, ICON_WIDTH]};
                 case TOP_LEFT_DOWN: {[LEFT_SIDE + (0.5 * ICON_WIDTH), Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
-                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_forEachIndex+3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
+                case TOP_LEFT_RIGHT: {[LEFT_SIDE + (0.5 * ICON_WIDTH) - ((_forEachIndex + 3) * DIFFERENCE_ICONS), Y_POS_ICONS_SECOND, ICON_WIDTH, ICON_WIDTH]};
                 default {[X_POS_ICONS, Y_POS_ICONS + (_forEachIndex * DIFFERENCE_ICONS), ICON_WIDTH, ICON_WIDTH]};
             };
 
@@ -94,11 +89,11 @@ _refresh = {
 
 if (_show) then {
     if ({_x select 0 == _iconId} count _list == 0) then {
-        _list pushBack [_iconId, _icon, _color, ACE_time];
+        _list pushBack [_iconId, _icon, _color, CBA_missionTime];
     } else {
         {
             if (_x select 0 == _iconId) exitWith {
-                _list set [_forEachIndex, [_iconId, _icon, _color, ACE_time]];
+                _list set [_forEachIndex, [_iconId, _icon, _color, CBA_missionTime]];
             };
         } forEach _list;
     };
@@ -109,14 +104,13 @@ if (_show) then {
     if (_timeAlive >= 0) then {
         [{
             [_this select 0, false, "", [0,0,0], 0] call FUNC(displayIcon);
-        }, [_iconId], _timeAlive, _timeAlive] call FUNC(waitAndExecute);
+        }, [_iconId], _timeAlive, _timeAlive] call CBA_fnc_waitAndExecute;
     };
 
 } else {
 
     if ({_x select 0 == _iconId} count _list == 1) then {
-        private "_newList";
-        _newList = [];
+        private _newList = [];
 
         {
             if (_x select 0 != _iconId) then {

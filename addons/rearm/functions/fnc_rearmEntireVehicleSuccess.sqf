@@ -3,31 +3,36 @@
  * Rearm an entire vehicle.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Rearm information <ARRAY>
+ *   0: Ammo Truck <OBJECT>
+ *   1: Vehicle <OBJECT
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank] call ace_rearm_fnc_rearmEntireVehicleSuccess
+ * [[ammo_truck, tank]] call ace_rearm_fnc_rearmEntireVehicleSuccess
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_turretPath", "_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params ["_vehicle"];
+params ["_args"];
+_args params [
+    ["_truck", objNull, [objNull]],
+    ["_vehicle", objNull, [objNull]]
+];
 
 if (isServer) then {
     {
-        _turretOwnerID = _vehicle turretOwner _x;
+        private _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
-            [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), _target] call EFUNC(common,execRemoteFnc);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _truck] call CBA_fnc_targetEvent;
         } else {
-            EGVAR(common,remoteFnc) = [[_vehicle, _x], QFUNC(rearmEntireVehicleSuccessLocal), 0];
-            _turretOwnerID publicVariableClient QEGVAR(common,remoteFnc);
+            [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_ownerEvent;
         };
+        false
     } count REARM_TURRET_PATHS;
 } else {
-    [_this, QFUNC(rearmEntireVehicleSuccess), 1] call EFUNC(common,execRemoteFnc);
+    [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call CBA_fnc_serverEvent;
 };

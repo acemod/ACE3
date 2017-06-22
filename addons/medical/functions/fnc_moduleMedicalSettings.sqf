@@ -10,6 +10,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ACE_medical_fnc_moduleMedicalSettings
+ *
  * Public: No
  */
 
@@ -21,6 +24,7 @@ if !(_activated) exitWith {};
 
 [_logic, QGVAR(level), "level"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(medicSetting), "medicSetting"] call EFUNC(common,readSettingFromModule);
+[_logic, QGVAR(increaseTrainingInLocations), "increaseTrainingInLocations"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(allowLitterCreation), "allowLitterCreation"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(litterCleanUpDelay), "litterCleanUpDelay"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(enableScreams), "enableScreams"] call EFUNC(common,readSettingFromModule);
@@ -32,3 +36,4 @@ if !(_activated) exitWith {};
 [_logic, QGVAR(bleedingCoefficient), "bleedingCoefficient"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(painCoefficient), "painCoefficient"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(keepLocalSettingsSynced), "keepLocalSettingsSynced"] call EFUNC(common,readSettingFromModule);
+// [_logic, QGVAR(delayUnconCaptive), "delayUnconCaptive"] call EFUNC(common,readSettingFromModule);

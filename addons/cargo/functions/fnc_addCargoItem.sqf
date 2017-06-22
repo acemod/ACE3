@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params ["_itemClass", "_vehicle", ["_amount", 1], ["_showHint", false, [false]] ];
+params ["_itemClass", "_vehicle", ["_amount", 1], ["_showHint", false, [false]]];
 TRACE_3("params",_itemClass,_vehicle,_amount);
 
 for "_i" from 1 to _amount do {
@@ -26,4 +26,4 @@ for "_i" from 1 to _amount do {
 };
 
 // Invoke listenable event
-["cargoAddedByClass", [_itemClass, _vehicle, _amount]] call EFUNC(common,globalEvent);
+["ace_cargoAdded", [_itemClass, _vehicle, _amount]] call CBA_fnc_globalEvent;

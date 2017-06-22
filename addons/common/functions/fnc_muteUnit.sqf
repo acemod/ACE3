@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "because"] call ace_common_fnc_muteUnit
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
@@ -17,20 +20,18 @@ params ["_unit", "_reason"];
 
 if (isNull _unit) exitWith {};
 
-private ["_muteUnitReasons", "_speaker"];
-
 // add reason to mute to the unit
-_muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
+private _muteUnitReasons = _unit getVariable [QGVAR(muteUnitReasons), []];
 
 if !(_reason in _muteUnitReasons) then {
     _muteUnitReasons pushBack _reason;
     _unit setVariable [QGVAR(muteUnitReasons), _muteUnitReasons, true];
 };
 
-_speaker = speaker _unit;
+private _speaker = speaker _unit;
 
 if (_speaker == "ACE_NoVoice") exitWith {};
 
-["setSpeaker", [_unit, "ACE_NoVoice"]] call FUNC(globalEvent);
+[QGVAR(setSpeaker), [_unit, "ACE_NoVoice"]] call CBA_fnc_globalEvent;
 
 _unit setVariable ["ACE_OriginalSpeaker", _speaker, true];

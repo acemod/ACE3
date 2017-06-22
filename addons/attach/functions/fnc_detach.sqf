@@ -7,7 +7,7 @@
  * 1: unit doing the detaching (player) <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [car, bob] call ace_attach_fnc_detach
@@ -19,7 +19,7 @@
 params ["_attachToVehicle","_unit"],
 TRACE_2("params",_attachToVehicle,_unit);
 
-private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance"];
+private ["_attachedList", "_itemDisplayName", "_attachedObject", "_attachedIndex", "_itemName", "_minDistance", "_isChemlight"];
 
 _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 
@@ -44,22 +44,34 @@ _minDistance = 1000;
 // Check if unit has an attached item
 if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find attached object")};
 
+// Check if item is a chemlight
+_isChemlight = _attachedObject isKindOf "Chemlight_base";
+
 // Exit if can't add the item
-if !(_unit canAdd _itemName) exitWith {
+if (!(_unit canAdd _itemName) && {!_isChemlight}) exitWith {
     [localize LSTRING(Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
-// Add item to inventory
-_unit addItem _itemName;
+// Add item to inventory (unless it's a chemlight)
+if (!_isChemlight) then {
+    _unit addItem _itemName;
+};
 
 if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then {
     // Hack for dealing with X_IR_Grenade effect not dissapearing on deleteVehicle
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);
     // Delete attached item after 0.5 seconds
-    [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call EFUNC(common,waitAndExecute);
+    [{deleteVehicle (_this select 0)}, [_attachedObject], 2] call CBA_fnc_waitAndExecute;
 } else {
+    //handle any objects that may be attached to the object
+    {
+        detach _x;
+        deleteVehicle _x;
+    } forEach (attachedObjects _attachedObject);
+
     // Delete attached item
+    detach _attachedObject;
     deleteVehicle _attachedObject;
 };
 

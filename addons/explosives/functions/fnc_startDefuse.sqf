@@ -7,7 +7,7 @@
  * 1: Target explosive <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player, ACE_Interaction_Target] call ACE_Explosives_fnc_StartDefuse;
@@ -19,7 +19,7 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
-private["_actionToPlay", "_defuseTime", "_isEOD"];
+private ["_actionToPlay", "_defuseTime", "_isEOD"];
 
 _target = attachedTo (_target);
 
@@ -28,8 +28,8 @@ _fnc_DefuseTime = {
     TRACE_2("defuseTime",_specialist,_target);
     private ["_defuseTime"];
     _defuseTime = 5;
-    if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime")) then {
-        _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> "ACE_DefuseTime");
+    if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime))) then {
+        _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime));
     };
     if (!_specialist && {GVAR(PunishNonSpecialists)}) then {
         _defuseTime = _defuseTime * 1.5;
@@ -44,9 +44,9 @@ if (STANCE _unit == "Prone") then {
 if (ACE_player != _unit) then {
     // If the unit is a player, call the function on the player.
     if (isPlayer _unit) then {
-        [[_unit, _target], QFUNC(startDefuse), _unit] call EFUNC(common,execRemoteFnc);
+        [QGVAR(startDefuse), [_unit, _target], _unit] call CBA_fnc_targetEvent;
     } else {
-        _unit playActionNow _actionToPlay;
+        [_unit, _actionToPlay] call EFUNC(common,doGesture);
         _unit disableAI "MOVE";
         _unit disableAI "TARGET";
         _defuseTime = [[_unit] call EFUNC(Common,isEOD), _target] call _fnc_DefuseTime;
@@ -56,13 +56,13 @@ if (ACE_player != _unit) then {
             [_unit, _target] call FUNC(defuseExplosive);
             _unit enableAI "MOVE";
             _unit enableAI "TARGET";
-        }, [_unit, _target], _defuseTime] call EFUNC(common,waitAndExecute);
+        }, [_unit, _target], _defuseTime] call CBA_fnc_waitAndExecute;
     };
 } else {
-    _unit playActionNow _actionToPlay;
+    [_unit, _actionToPlay] call EFUNC(common,doGesture);
     _isEOD = [_unit] call EFUNC(Common,isEOD);
     _defuseTime = [_isEOD, _target] call _fnc_DefuseTime;
     if (_isEOD || {!GVAR(RequireSpecialist)}) then {
-        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive))] call EFUNC(common,progressBar);
+        [_defuseTime, [_unit,_target], {(_this select 0) call FUNC(defuseExplosive)}, {}, (localize LSTRING(DefusingExplosive)), {true}, ["isNotSwimming"]] call EFUNC(common,progressBar);
     };
 };

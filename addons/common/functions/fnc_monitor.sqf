@@ -2,11 +2,14 @@
  * Author: commy2
  * hint retun value of given function every frame
  *
- * Argument:
+ * Arguments:
  * <CODE>
  *
  * Return Value:
  * None
+ *
+ * Example:
+ * [{code}] call ace_common_fnc_monitor
  *
  * Public: Yes
  */

@@ -15,12 +15,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
 if (!local _unit) exitWith {};
 
 _unit setVariable [QGVAR(selectedWeaponOnRefuel), nil];
-_nozzle = _unit getVariable [QGVAR(nozzle), objNull];
+private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if !(isNull _nozzle) then {
     [_unit, _nozzle] call FUNC(dropNozzle);
 };

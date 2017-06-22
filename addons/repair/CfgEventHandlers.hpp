@@ -1,3 +1,10 @@
+
+class Extended_PreStart_EventHandlers {
+    class ADDON {
+        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+    };
+};
+
 class Extended_PreInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_FILE(XEH_preInit));
@@ -15,31 +22,32 @@ class Extended_InitPost_EventHandlers {
     class Car {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
         };
     };
     class Tank {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
+        };
+    };
+    class Motorcycle {
+        class ADDON {
+            init = QUOTE(_this call DFUNC(addRepairActions));
         };
     };
     class Helicopter {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
+            exclude[] = {QEGVAR(fastroping,helper), "ACE_friesBase", QEGVAR(refuel,helper)};
         };
     };
     class Plane {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
         };
     };
     class Ship_F {
         class ADDON {
             init = QUOTE(_this call DFUNC(addRepairActions));
-            serverInit = QUOTE(_this call DFUNC(addSpareParts));
         };
     };
 };

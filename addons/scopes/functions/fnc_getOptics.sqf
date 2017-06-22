@@ -17,11 +17,9 @@
  */
 #include "script_component.hpp"
 
-private "_optics";
-
 params ["_unit"];
 
-_optics = ["", "", ""];
+private _optics = ["", "", ""];
 
 if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
 

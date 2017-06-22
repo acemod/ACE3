@@ -3,7 +3,7 @@ class RscInGameUI {
         class CA_IGUI_elements_group: RscControlsGroup {};
     };
     class ACE_Mk6_RscWeaponRangeArtillery: RscWeaponRangeArtillery {
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_Mk6_RscWeaponRangeArtillery', _this select 0)]; [ARR_2('infoDisplayChanged', [ARR_2(_this select 0, 'Mk6Mortar')])]   call EFUNC(common,localEvent););
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2('ACE_Mk6_RscWeaponRangeArtillery', _this select 0)]; [ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Mk6Mortar')])]   call CBA_fnc_localEvent;);
         controls[] = {"ACE_ChargeDisplay", "ACE_MILS_GROUP", "CA_IGUI_elements_group","CA_RangeElements_group"};
         class ACE_ChargeDisplay: RscStructuredText {
             idc = 80085;

@@ -11,6 +11,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin, "selection", "classname"] call ACE_medical_fnc_treatmentBasic_epipen
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -18,7 +21,3 @@
 params ["_caller", "_target","_className"];
 
 [_target, false] call FUNC(setUnconscious);
-
-if (_target getVariable [QGVAR(inReviveState), false]) then {
-    _target setVariable [QGVAR(inReviveState), nil, true];
-};

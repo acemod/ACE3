@@ -9,16 +9,17 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleMine
  *
  * Public: No
  */
 
 #include "script_component.hpp"
 
-_logic = _this select 0;
-_units = _this select 1;
-_activated = _this select 2;
+params ["_logic", "_units", "_activated"];
 
 if (_activated) then {
     _explosive = gettext (configFile >> "CfgVehicles" >> typeOf _logic >> "explosive");

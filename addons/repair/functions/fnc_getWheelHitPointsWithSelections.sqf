@@ -19,11 +19,10 @@
 params ["_vehicle"];
 TRACE_1("params",_vehicle);
 
-private["_bestDist", "_bestIndex", "_wheelBone", "_wheelBoneNameResized", "_wheelCenter", "_wheelCenterPos", "_wheelHitPoint", "_wheelHitPointSelection", "_wheelHitPointSelections", "_wheelHitPoints", "_wheelName", "_xDist", "_xPos"];
+private ["_bestDist", "_bestIndex", "_wheelBone", "_wheelBoneNameResized", "_wheelCenter", "_wheelCenterPos", "_wheelHitPoint", "_wheelHitPointSelection", "_wheelHitPointSelections", "_wheelHitPoints", "_wheelName", "_xDist", "_xPos"];
 
 // get the vehicles wheel config
-private "_wheels";
-_wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
+private _wheels = configFile >> "CfgVehicles" >> typeOf _vehicle >> "Wheels";
 
 // exit with nothing if the vehicle has no wheels class
 if !(isClass _wheels) exitWith {TRACE_1("No Wheels",_wheels); [[],[]]};
@@ -70,6 +69,8 @@ _wheelHitPointSelections = [];
             _bestIndex = -1;
             {
                 if (_x != "") then {
+                     //Filter out things that definitly aren't wheeels (#3759)
+                    if ((toLower (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
                     _xPos = _vehicle selectionPosition _x;
                     if (_xPos isEqualTo [0,0,0]) exitWith {};
                     _xDist = _wheelCenterPos distance _xPos;

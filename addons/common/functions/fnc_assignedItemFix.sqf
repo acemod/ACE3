@@ -8,17 +8,18 @@
  * Return Value:
  * None
  *
- * Public : No
+ * Example:
+ * call ace_common_fnc_assignedItemFix
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
-private "_config";
-
-ACE_isMapEnabled     = call {_config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
-ACE_isCompassEnabled = call {_config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
-ACE_isWatchEnabled   = call {_config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
-ACE_isRadioEnabled   = call {_config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
-ACE_isGPSEnabled     = call {_config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
+ACE_isMapEnabled     = call {private _config = missionConfigFile >> "showMap";     !isNumber _config || {getNumber _config == 1}};  // default value is 1, so do isNumber check first
+ACE_isCompassEnabled = call {private _config = missionConfigFile >> "showCompass"; !isNumber _config || {getNumber _config == 1}};
+ACE_isWatchEnabled   = call {private _config = missionConfigFile >> "showWatch";   !isNumber _config || {getNumber _config == 1}};
+ACE_isRadioEnabled   = call {private _config = missionConfigFile >> "showRadio";   !isNumber _config || {getNumber _config == 1}};
+ACE_isGPSEnabled     = call {private _config = missionConfigFile >> "showGPS";     !isNumber _config || {getNumber _config == 1}};
 
 GVAR(AssignedItems) = [];
 GVAR(AssignedItemsInfo) = [];
@@ -30,40 +31,18 @@ GVAR(AssignedItemsShownItems) = [
     ACE_isGPSEnabled
 ];
 
-["playerInventoryChanged", {
-    params ["_unit", "_assignedItems"];
+["loadout", {
+    params ["_unit"];
 
-    _assignedItems = _assignedItems select 17;
+    private _assignedItems = getUnitLoadout _unit param [9, ["","","","","",""]]; // ["ItemMap","ItemGPS","ItemRadio","ItemCompass","ItemWatch","NVGoggles"]
 
-    GVAR(AssignedItemsShownItems) = [true, true, true, true, true];
-
-    {
-        if !(_x in GVAR(AssignedItems)) then {
-            GVAR(AssignedItems) pushBack _x;
-            GVAR(AssignedItemsInfo) pushBack toLower getText (configFile >> "CfgWeapons" >> _x >> "ACE_hideItemType");
-        };
-
-        switch (GVAR(AssignedItemsInfo) select (GVAR(AssignedItems) find _x)) do {
-            case ("map"): {
-                GVAR(AssignedItemsShownItems) set [0, false];
-            };
-            case ("compass"): {
-                GVAR(AssignedItemsShownItems) set [1, false];
-            };
-            case ("watch"): {
-                GVAR(AssignedItemsShownItems) set [2, false];
-            };
-            case ("radio"): {
-                GVAR(AssignedItemsShownItems) set [3, false];
-            };
-            case ("gps"): {
-                GVAR(AssignedItemsShownItems) set [4, false];
-            };
-        };
-        false
-    } count _assignedItems;
-
-    //systemChat str GVAR(AssignedItemsShownItems);
+    GVAR(AssignedItemsShownItems) = [
+        !((_assignedItems select 0) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 0 >> "ACE_hideItemType") != "map"},
+        !((_assignedItems select 3) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 3 >> "ACE_hideItemType") != "compass"},
+        !((_assignedItems select 4) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 4 >> "ACE_hideItemType") != "watch"},
+        !((_assignedItems select 2) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 2 >> "ACE_hideItemType") != "radio"},
+        !((_assignedItems select 1) isEqualTo "") && {getText (configFile >> "CfgWeapons" >> _assignedItems select 1 >> "ACE_hideItemType") != "gps"}
+    ];
 
     GVAR(AssignedItemsShownItems) params ["_showMap", "_showCompass", "_showWatch", "_showRadio", "_showGPS"];
 
@@ -72,4 +51,4 @@ GVAR(AssignedItemsShownItems) = [
     showWatch _showWatch;
     showRadio _showRadio;
     showGPS (_showGPS || {cameraOn == getConnectedUAV _unit});  //If player is activly controling a UAV, showGPS controls showing the map (m key)
-}] call FUNC(addEventHandler);
+}] call CBA_fnc_addPlayerEventHandler;

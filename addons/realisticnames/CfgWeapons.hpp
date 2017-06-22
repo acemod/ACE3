@@ -319,7 +319,7 @@ class CfgWeapons {
         };
     };
 
-    class gatling_30mm: CannonCore { // This is a fictional veresion of the GSh-6-30, with 3 barrels
+    class gatling_30mm_base: CannonCore { // This is a fictional version of the GSh-6-30, with 3 barrels
         displayName = "GSh-3-30";
         class LowROF: Mode_FullAuto {
             displayName = "GSh-3-30";
@@ -527,10 +527,10 @@ class CfgWeapons {
     };
     // class ACE_LMG_coax_PKT_mem2: LMG_coax {};
     class ACE_LMG_coax_MAG58_mem2: LMG_coax {
-        displayName = "MAG 58";
+        displayName = "MAG 58M";
     };
     class ACE_LMG_coax_MAG58_mem3: LMG_coax {
-        displayName = "MAG 58";
+        displayName = "MAG 58M";
     };
     class ACE_LMG_coax_L94A1_mem3: LMG_coax {
         displayName = "L94A1";
@@ -577,5 +577,131 @@ class CfgWeapons {
 
     class acc_flashlight: ItemCore {
         displayName = "UTG Defender 126";
+    };
+
+    // APEX/Tanoa
+
+    // QBZ-95 and variants
+    class arifle_CTAR_base_F;
+    class arifle_CTAR_blk_F: arifle_CTAR_base_F {
+        displayName = CSTRING(arifle_CTAR_blk);
+    };
+    class arifle_CTAR_ghex_F: arifle_CTAR_base_F {
+        displayName = CSTRING(arifle_CTAR_ghex);
+    };
+    class arifle_CTAR_hex_F: arifle_CTAR_base_F {
+        displayName = CSTRING(arifle_CTAR_hex);
+    };
+    class arifle_CTAR_GL_base_F;
+    class arifle_CTAR_GL_blk_F: arifle_CTAR_GL_base_F {
+        displayName = CSTRING(arifle_CTAR_GL_blk);
+    };
+    class arifle_CTAR_GL_ghex_F: arifle_CTAR_GL_base_F {
+        displayName = CSTRING(arifle_CTAR_GL_ghex);
+    };
+    class arifle_CTAR_GL_hex_F: arifle_CTAR_GL_base_F {
+        displayName = CSTRING(arifle_CTAR_GL_hex);
+    };
+
+    class arifle_CTARS_base_F;
+    class arifle_CTARS_blk_F: arifle_CTARS_base_F {
+        displayName = CSTRING(arifle_CTARS_blk);
+    };
+    class arifle_CTARS_ghex_F: arifle_CTARS_base_F {
+        displayName = CSTRING(arifle_CTARS_ghex);
+    };
+    class arifle_CTARS_hex_F: arifle_CTARS_base_F {
+        displayName = CSTRING(arifle_CTARS_hex);
+    };
+
+    // QBU-88
+    class DMR_07_base_F;
+    class srifle_DMR_07_blk_F: DMR_07_base_F {
+        displayName = CSTRING(srifle_DMR_07_blk);
+    };
+    class srifle_DMR_07_ghex_F: DMR_07_base_F {
+        displayName = CSTRING(srifle_DMR_07_ghex);
+    };
+    class srifle_DMR_07_hex_F: DMR_07_base_F {
+        displayName = CSTRING(srifle_DMR_07_hex);
+    };
+
+    // GM6
+    class srifle_GM6_ghex_F: srifle_GM6_F {
+        displayName = CSTRING(srifle_GM6_ghex);
+    };
+
+    // M249
+    class LMG_03_base_F;
+    class LMG_03_F: LMG_03_base_F {
+        displayName = CSTRING(LMG_03);
+    };
+
+    // Intervention
+    class srifle_LRR_tna_F: srifle_LRR_camo_F {
+        displayName = CSTRING(srifle_LRR_tna);
+    };
+
+    // MP5
+    class SMG_05_base_F;
+    class SMG_05_F: SMG_05_base_F {
+        displayName = CSTRING(SMG_05);
+    };
+
+    // HK416 and variants
+    class arifle_SPAR_01_base_F;
+    class arifle_SPAR_01_blk_F: arifle_SPAR_01_base_F {
+        displayName = CSTRING(arifle_SPAR_01_blk);
+    };
+    class arifle_SPAR_01_khk_F: arifle_SPAR_01_base_F {
+        displayName = CSTRING(arifle_SPAR_01_khk);
+    };
+    class arifle_SPAR_01_snd_F: arifle_SPAR_01_base_F {
+        displayName = CSTRING(arifle_SPAR_01_snd);
+    };
+    class arifle_SPAR_01_GL_base_F;
+    class arifle_SPAR_01_GL_blk_F: arifle_SPAR_01_GL_base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_blk);
+    };
+    class arifle_SPAR_01_GL_khk_F: arifle_SPAR_01_GL_base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_khk);
+    };
+    class arifle_SPAR_01_GL_snd_F: arifle_SPAR_01_GL_base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_snd);
+    };
+    class arifle_SPAR_02_base_F;
+    class arifle_SPAR_02_blk_F: arifle_SPAR_02_base_F {
+        displayName = CSTRING(arifle_SPAR_02_blk);
+    };
+    class arifle_SPAR_02_khk_F: arifle_SPAR_02_base_F {
+        displayName = CSTRING(arifle_SPAR_02_khk);
+    };
+    class arifle_SPAR_02_snd_F: arifle_SPAR_02_base_F {
+        displayName = CSTRING(arifle_SPAR_02_snd);
+    };
+    class arifle_SPAR_03_base_F;
+    class arifle_SPAR_03_blk_F: arifle_SPAR_03_base_F {
+        displayName = CSTRING(arifle_SPAR_03_blk);
+    };
+    class arifle_SPAR_03_khk_F: arifle_SPAR_03_base_F {
+        displayName = CSTRING(arifle_SPAR_03_khk);
+    };
+    class arifle_SPAR_03_snd_F: arifle_SPAR_03_base_F {
+        displayName = CSTRING(arifle_SPAR_03_snd);
+    };
+
+    // RPG-32
+    class launch_RPG32_ghex_F: launch_RPG32_F {
+        displayName = CSTRING(launch_RPG32_ghex);
+    };
+
+    // P99
+    class hgun_P07_khk_F: hgun_P07_F {
+        displayName = CSTRING(hgun_P07_khk);
+    };
+
+    // Makarov
+    class hgun_Pistol_01_F: Pistol_Base_F {
+        displayName = CSTRING(hgun_Pistol_01);
     };
 };

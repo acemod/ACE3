@@ -1,30 +1,32 @@
 /*
-* Author: Glowbal
-* Action for diagnosing in basic medical
-*
-* Arguments:
-* 0: The medic <OBJECT>
-* 1: The patient <OBJECT>
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
+ * Author: Glowbal
+ * Action for diagnosing in basic medical
+ *
+ * Arguments:
+ * 0: The medic <OBJECT>
+ * 1: The patient <OBJECT>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [bob, kevin] call ACE_medical_fnc_actionDiagnose
+ *
+ * Public: No
+ */
 
 #include "script_component.hpp"
 
-private "_genericMessages";
 params ["_caller", "_target"];
 
-_genericMessages = [LSTRING(diagnoseMessage)];
+private _genericMessages = [LSTRING(diagnoseMessage), [_target] call EFUNC(common,getName)];
 
-_genericMessages pushBack ([_target] call EFUNC(common,getName));
 if (alive _target) then {
     _genericMessages pushBack LSTRING(diagnoseAlive);
 } else {
     _genericMessages pushBack LSTRING(diagnoseDead);
 };
+
 if (_target getVariable[QGVAR(hasLostBlood), 0] > 0) then {
     if (_target getVariable[QGVAR(hasLostBlood), 0] > 1) then {
         _genericMessages pushBack LSTRING(lostBloodALot);
@@ -43,4 +45,4 @@ if (alive _target) then {
     };
 };
 
-["displayTextStructured", [_caller], [_genericMessages, 3.0, _caller]] call EFUNC(common,targetEvent);
+[QEGVAR(common,displayTextStructured), [_genericMessages, 3.0, _caller], [_caller]] call CBA_fnc_targetEvent;

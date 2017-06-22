@@ -1,15 +1,19 @@
 
+class CBA_Extended_EventHandlers;
+
 class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
-            class ACE_TacticalLadders {
-                displayName = CSTRING(Deploy);
-                condition = QUOTE(backpack _player == 'ACE_TacticalLadder_Pack');
-                statement = QUOTE([_player] call FUNC(deployTL));
-                exceptions[] = {};
-                showDisabled = 1;
-                priority = 4;
+            class ACE_Equipment {
+                class ACE_TacticalLadders {
+                    displayName = CSTRING(Deploy);
+                    condition = QUOTE(backpack _player == 'ACE_TacticalLadder_Pack');
+                    statement = QUOTE([_player] call FUNC(deployTL));
+                    exceptions[] = {};
+                    showDisabled = 1;
+                    priority = 4;
+                };
             };
         };
     };
@@ -19,8 +23,8 @@ class CfgVehicles {
         scope = 2;
         displayName = CSTRING(DisplayName);
         descriptionShort = "";
-        model = PATHTOF(data\ace_tacticalladder_pack.p3d);
-        picture = PATHTOF(UI\ace_tactical_ladder_pack_ca.paa);
+        model = QPATHTOF(data\ace_tacticalladder_pack.p3d);
+        picture = QPATHTOF(UI\ace_tactical_ladder_pack_ca.paa);
         maximumLoad = 0;
         mass = 50;
     };
@@ -34,10 +38,13 @@ class CfgVehicles {
 
     class House;
     class ACE_TacticalLadder: House {
-        XEH_ENABLED;
+        class EventHandlers {
+            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
+        };
+
         displayName = CSTRING(DisplayName);
         class DestructionEffects {};
-        model = PATHTOF(data\ace_tacticalladder.p3d);
+        model = QPATHTOF(data\ace_tacticalladder.p3d);
         animated = 1;
         autocenter = 0;
         featureSize = 12;
@@ -68,7 +75,7 @@ class CfgVehicles {
             class ACE_MainActions {
                 selection = "roadway";
                 distance = 5;
-                condition = "true";
+                condition = QUOTE(_target call FUNC(isLadderEmpty));
 
                 class ACE_PickUp {
                     selection = "";
@@ -87,7 +94,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call EFUNC(common,execNextFrame));
+                    statement = QUOTE([ARR_2({_this call FUNC(positionTL)},[ARR_2(_player,_target)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;

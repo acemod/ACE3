@@ -9,27 +9,28 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, "bandage"] call ace_medical_fnc_addToTriageCard
+ *
  * Public: Yes
  */
 
 #include "script_component.hpp"
 
-private ["_log", "_inList", "_amount"];
 params ["_unit", "_newItem"];
 
 if (!local _unit) exitWith {
-    [_this, QUOTE(DFUNC(addToTriageCard)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [QGVAR(addToTriageCard), _this, _unit] call CBA_fnc_targetEvent;
 };
 
-_log = _unit getVariable [QGVAR(triageCard), []];
-_inList = false;
-_amount = 1;
+private _log = _unit getVariable [QGVAR(triageCard), []];
+private _inList = false;
+private _amount = 1;
 {
     if ((_x select 0) == _newItem) exitWith {
-        private "_info";
-        _info = _log select _forEachIndex;
+        private _info = _log select _forEachIndex;
         _info set [1,(_info select 1) + 1];
-        _info set [2, ACE_gameTime];
+        _info set [2, CBA_missionTime];
         _log set [_forEachIndex, _info];
 
         _amount = (_info select 1);
@@ -38,7 +39,7 @@ _amount = 1;
 } forEach _log;
 
 if (!_inList) then {
-    _log pushBack [_newItem, 1, ACE_gameTime];
+    _log pushBack [_newItem, 1, CBA_missionTime];
 };
 _unit setVariable [QGVAR(triageCard), _log, true];
-["Medical_onItemAddedToTriageCard", [_unit, _newItem, _amount]] call EFUNC(common,localEvent);
+["ace_triageCardItemAdded", [_unit, _newItem, _amount]] call CBA_fnc_localEvent;

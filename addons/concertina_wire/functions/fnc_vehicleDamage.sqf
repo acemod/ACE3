@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [wire, car] call ace_concertina_wire_fnc_vehicleDamage
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -45,10 +48,10 @@ if (_mode == 0) then {
 
     // Check if two Single coils are placed next to each other (i.e playes have built a big wire obstacle)
     _wireCheckPosAr = [
-    [_x + (sin (_dir_w+90) * 1.5),_y + (cos (_dir_w+90) * 1.5)],
-    [(_x-(sin _dir_w)) + (sin (_dir_w+90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w+90) * 1.5)],
-    [_x + (sin (_dir_w-90) * 1.5),_y + (cos (_dir_w-90) * 1.5)],
-    [(_x-(sin _dir_w)) + (sin (_dir_w-90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w-90) * 1.5)]
+    [_x + (sin (_dir_w + 90) * 1.5),_y + (cos (_dir_w + 90) * 1.5)],
+    [(_x-(sin _dir_w)) + (sin (_dir_w + 90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w + 90) * 1.5)],
+    [_x + (sin (_dir_w - 90) * 1.5),_y + (cos (_dir_w - 90) * 1.5)],
+    [(_x-(sin _dir_w)) + (sin (_dir_w - 90) * 1.5),(_y-(cos _dir_w)) + (cos (_dir_w - 90) * 1.5)]
     ];
     {
         _found = false;
@@ -113,8 +116,8 @@ if (_mode == 1) then {
         _vPos = getPosASL _vehicle;
         _vDir = getDir _vehicle;
         _vehicle setPosASL (_vPos vectorAdd [-0.35 * sin(_vDir), -0.35 * cos(_vDir), 0]);
-        // TODO: Needs to be placed in safe distance to wire, so we do not constantly re-spawn new wires
-    }, [_vehicle, _wire], 0.1] call EFUNC(common,waitAndExecute);
+        // TODO: Needs to be placed in safe distance to wire, so we do not constantly re - spawn new wires
+    }, [_vehicle, _wire], 0.1] call CBA_fnc_waitAndExecute;
 };
 
 //TODO: Create broken geoless wire (two version)

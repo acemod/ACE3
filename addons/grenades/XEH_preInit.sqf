@@ -2,10 +2,8 @@
 
 ADDON = false;
 
-PREP(flare);
-PREP(flashbangExplosionEH);
-PREP(flashbangThrownFuze);
-PREP(nextMode);
-PREP(throwGrenade);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

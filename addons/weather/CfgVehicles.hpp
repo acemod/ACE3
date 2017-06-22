@@ -3,7 +3,7 @@ class CfgVehicles {
     class GVAR(ModuleSettings): ACE_Module {
         scope = 2;
         displayName = CSTRING(Module_DisplayName);
-        icon = QUOTE(PATHTOF(UI\Icon_Module_Wind_ca.paa));
+        icon = QPATHTOF(UI\Icon_Module_Wind_ca.paa);
         category = "ACE";
         function = QUOTE(DFUNC(initModuleSettings));
         functionPriority = 1;

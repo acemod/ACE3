@@ -64,7 +64,7 @@ class ACE_RangeCard_Dialog {
     onLoad = "uiNamespace setVariable ['RangleCard_Display', (_this select 0)]";
     onUnload = QUOTE(_this call FUNC(onCloseDialog));
     objects[] = {};
-    
+
     class controls {
         class BACKGROUND {
             moving=1;
@@ -79,7 +79,7 @@ class ACE_RangeCard_Dialog {
             h="1.62727";
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
-            text=QUOTE(PATHTOF(UI\RangeCard.paa));
+            text=QPATHTOF(UI\RangeCard.paa);
         };
         class CAPTION_TEXT_1: RangeCard_RscText {
             idc=770000;

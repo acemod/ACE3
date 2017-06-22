@@ -1,17 +1,19 @@
-﻿/*
+/*
  * Author: Rosuto
  * DAGR vector output loop
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_dagr_fnc_outputVector
  *
  * Public: No
  */
+
 #include "script_component.hpp"
 
 private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevation", "_dagrTime", "_elevation", "_xCoord", "_yCoord"];
@@ -27,7 +29,7 @@ private ["_xGrid", "_yGrid", "_dagrGrid", "_bearing", "_dagrDist", "_dagrElevati
 #define __timeControl (__display displayCtrl 266855)
 #define __background (__display displayCtrl 266856)
 
-__background ctrlSetText QUOTE(PATHTOF(UI\dagr_vector.paa));
+__background ctrlSetText QPATHTOF(UI\dagr_vector.paa);
 
 if (GVAR(noVectorData)) exitWith {};
 GVAR(LAZPOS) params ["_lazPosX", "_lazPosY", "_lazPosZ"];

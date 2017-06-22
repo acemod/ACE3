@@ -2,15 +2,8 @@
 
 ADDON = false;
 
-PREP(addMapFunction);
-PREP(handleMapClick);
-PREP(initPlayer);
-PREP(isValidAi);
-PREP(markAiOnMap);
-PREP(module);
-PREP(nearestPlayers);
-PREP(startSwitchUnits);
-PREP(switchBack);
-PREP(switchUnit);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

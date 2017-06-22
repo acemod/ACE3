@@ -4,9 +4,12 @@
  *
  * Arguments:
  * 0: eventName <STRING>
- * 
+ *
  * Return Value:
- * Boolean of success
+ * Boolean of success <BOOL>
+ *
+ * Example:
+ * ["event"] call ace_common_fnc_requestSyncedEvent
  *
  * Public: No
  */
@@ -17,4 +20,4 @@ params ["_eventName"];
 // Only JIP machines on initialization send this off, requesting sync on events with the serverCommand
 if (isServer) exitWith {false};
 
-["SEH_s", [_eventName, ACE_player] ] call FUNC(serverEvent);
+["ACEs", [_eventName, ACE_player]] call CBA_fnc_serverEvent;

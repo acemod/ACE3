@@ -6,39 +6,40 @@
  * Arguments:
  * 0: The unit that will be put in cardiac arrest state <OBJECT>
  *
- * ReturnValue:
+ * Return Value:
  * None
+ *
+ * Example:
+ * [bob] call ace_medical_fnc_setCardiacArrest
  *
  * Public: yes
  */
 
 #include "script_component.hpp"
 
-private "_timeInCardiacArrest";
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(inCardiacArrest),false]) exitWith {};
 _unit setVariable [QGVAR(inCardiacArrest), true,true];
 _unit setVariable [QGVAR(heartRate), 0];
 
-["Medical_onEnteredCardiacArrest", [_unit]] call EFUNC(common,localEvent);
+["ace_cardiacArrestEntered", [_unit]] call CBA_fnc_localEvent;
 
 [_unit, true] call FUNC(setUnconscious);
-_timeInCardiacArrest = 120 + round(random(600));
+private _timeInCardiacArrest = 120 + round(random(600));
 
 [{
-    private ["_args","_unit","_startTime","_timeInCardiacArrest","_heartRate"];
     params ["_args", "_idPFH"];
     _args params ["_unit", "_startTime", "_timeInCardiacArrest"];
 
-    _heartRate = _unit getVariable [QGVAR(heartRate), 80];
+    private _heartRate = _unit getVariable [QGVAR(heartRate), 80];
     if (_heartRate > 0 || !alive _unit) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(inCardiacArrest), nil,true];
     };
-    if (ACE_time - _startTime >= _timeInCardiacArrest) exitWith {
+    if (CBA_missionTime - _startTime >= _timeInCardiacArrest) exitWith {
         [_idPFH] call CBA_fnc_removePerFrameHandler;
         _unit setVariable [QGVAR(inCardiacArrest), nil,true];
         [_unit] call FUNC(setDead);
     };
-}, 1, [_unit, ACE_time, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;
+}, 1, [_unit, CBA_missionTime, _timeInCardiacArrest] ] call CBA_fnc_addPerFrameHandler;

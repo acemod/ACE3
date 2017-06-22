@@ -16,11 +16,11 @@
  */
 #include "script_component.hpp"
 
-params ["_unit", "_target"];
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]]];
 
 !(isNull _unit ||
     {!(_unit isKindOf "CAManBase")} ||
     {!local _unit} ||
     {!alive _target} ||
-    {(_target distance _unit) > REFUEL_ACTION_DISTANCE} ||
+    {([_unit, _target] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
     {(_target call FUNC(getFuel) == REFUEL_INFINITE_FUEL)})

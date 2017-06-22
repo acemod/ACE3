@@ -3,12 +3,13 @@
  * Shows the Yardage 450 screen elements
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
+ * call ace_yardage450_fnc_acquireTarget
  *
  * Public: No
  */
@@ -23,22 +24,22 @@
 
 if (currentWeapon ACE_player != "ACE_Yardage450" || cameraView != "GUNNER") exitWith {};
 
-GVAR(powerOnTime) = ACE_time;
+GVAR(powerOnTime) = CBA_missionTime;
 
 if (GVAR(active)) exitWith {};
 
 GVAR(active) = true;
 
 [{
-    if (ACE_time - GVAR(powerOnTime) > 30) exitWith {
+    if (CBA_missionTime - GVAR(powerOnTime) > 30) exitWith {
         GVAR(active) = false;
         74210 cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
-    
+
     if (currentWeapon ACE_player == "ACE_Yardage450" && cameraView == "GUNNER") then {
         74210 cutRsc ["ACE_RscYardage450", "PLAIN", 1, false];
-        
+
         __ctrlLaser ctrlShow GVAR(lasing);
         if (GVAR(targetAcquired)) then {
             __ctrlTarget ctrlSetText "Target Acquired";
@@ -52,5 +53,5 @@ GVAR(active) = true;
     } else {
         74210 cutText ["", "PLAIN"];
     };
-    
+
 }, 0, []] call CBA_fnc_addPerFrameHandler;

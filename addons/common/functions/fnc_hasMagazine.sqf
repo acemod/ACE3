@@ -9,10 +9,15 @@
  * Return Value:
  * has Magazine <BOOL>
  *
+ * Example:
+ * [bob, "magazine"] call ace_common_fnc_hasMagazine
+ *
  * Public: yes
+ *
+ * Note: Case sensitive
  */
 #include "script_component.hpp"
 
-params ["_unit", "_magazine"];
+params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
 _magazine in magazines _unit // return

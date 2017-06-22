@@ -29,7 +29,7 @@ class Tree {
 class Legend {
     x = SafeZoneX+SafeZoneW-.340;
     y = SafeZoneY+SafeZoneH-.152;
-    font = "PuristaMedium";
+    font = "RobotoCondensed";
     w = .340;
     h = .152;
     sizeEx = 0.039210;

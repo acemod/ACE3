@@ -16,7 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue", "_setting", "_menu", "_settingsMenu"];
+private ["_setting", "_settingsMenu"];
 
 if (GVAR(serverConfigGeneration) == 0 || isMultiplayer) exitWith {closeDialog 145246;};
 
@@ -25,13 +25,7 @@ GVAR(serverSideOptions) = [];
 GVAR(serverSideColors) = [];
 GVAR(serverSideValues) = [];
 {
-    _name = _x select 0;
-    _typeName = _x select 1;
-    _isClientSetable = _x select 2;
-    _localizedName = _x select 3;
-    _localizedDescription = _x select 4;
-    _possibleValues = _x select 5;
-    _defaultValue = _x select 6;
+    _x params ["_name", "_typeName", "_isClientSetable", "_localizedName", "_localizedDescription", "_possibleValues", "_defaultValue"];
 
     // Exclude client side options if they are not included for the export
     if (!(_isClientSetable) || GVAR(ClientSettingsExportIncluded)) then {
@@ -54,10 +48,10 @@ GVAR(serverSideValues) = [];
 } forEach EGVAR(common,settings);
 
 //Delay a frame
-[{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call EFUNC(common,execNextFrame);
+[{ [MENU_TAB_SERVER_OPTIONS] call FUNC(onServerListBoxShowSelectionChanged) }, []] call CBA_fnc_execNextFrame;
 
 disableSerialization;
-_menu = uiNamespace getVariable "ACE_serverSettingsMenu";
+private _menu = uiNamespace getVariable "ACE_serverSettingsMenu";
 (_menu displayCtrl 1003) ctrlEnable false;
 
 if (GVAR(ClientSettingsExportIncluded)) then {

@@ -26,7 +26,7 @@ TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
 _claimedObjects params [["_wheel", objNull]];
 if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
-    ACE_LOGWARNING_1("Bad Claimed Wheel", _claimedObjects);
+    WARNING_1("Bad Claimed Wheel", _claimedObjects);
 };
 
 // get current hitpoint damage
@@ -44,7 +44,7 @@ if (_newHitPointDamage >= 1) exitWith {};
 deleteVehicle _wheel;
 
 // raise event to set the new hitpoint damage
-["setWheelHitPointDamage", _vehicle, [_vehicle, _hitPoint, _newHitPointDamage]] call EFUNC(common,targetEvent);
+[QGVAR(setWheelHitPointDamage), [_vehicle, _hitPoint, _newHitPointDamage], _vehicle] call CBA_fnc_targetEvent;
 
 // display text message if enabled
 if (GVAR(DisplayTextOnRepair)) then {

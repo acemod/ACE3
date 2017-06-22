@@ -7,8 +7,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(itemName);
         descriptionShort = CSTRING(itemDescription);
-        model = QUOTE(PATHTOF(data\MicroDAGR.p3d));
-        picture = QUOTE(PATHTOF(images\microDAGR_item.paa));
+        model = QPATHTOF(data\MicroDAGR.p3d);
+        picture = QPATHTOF(images\microDAGR_item.paa);
         class ItemInfo: InventoryItem_Base_F {
             mass = 2;
         };

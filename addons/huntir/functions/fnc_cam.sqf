@@ -9,6 +9,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [cam] call ACE_huntir_fnc_cam
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -29,9 +32,9 @@ GVAR(ELEVAT) = 0.01;
 HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 
 closedialog 0;
-createDialog "ace_huntir_cam_dialog";
-uiNameSpace setVariable ["ace_huntir_monitor", findDisplay 18880];
-(uiNameSpace getVariable "ace_huntir_monitor") displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+createDialog QGVAR(cam_dialog);
+uiNameSpace setVariable [QGVAR(monitor), findDisplay 18880];
+(uiNameSpace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 
@@ -65,7 +68,7 @@ GVAR(no_cams) sort true;
 } forEach GVAR(no_cams);
 [{
     //Close monitor if we no longer have the item:
-    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable ["ace_huntir_monitor", displayNull])}) then {
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
         closeDialog 0;
     };
 
@@ -145,7 +148,7 @@ GVAR(no_cams) sort true;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
     ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
-    _cam_time = ACE_time - (GVAR(huntIR) getVariable [QGVAR(startTime), ACE_time]);
+    _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
     _cam_pos = getPosVisual GVAR(huntIR);
     _cam_pos = format ["X = %1, Y = %2", round (_cam_pos select 0), round (_cam_pos select 1)];

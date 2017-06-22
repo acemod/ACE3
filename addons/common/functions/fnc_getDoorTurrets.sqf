@@ -8,24 +8,25 @@
  * Return Value:
  * All turret indecies of the Vehicle <ARRAY>
  *
+ * Example:
+ * [car] call ace_common_fnc_getDoorTurrets
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_vehicle"];
 
-private ["_turrets", "_doorTurrets", "_config"];
+private _turrets = allTurrets [_vehicle, true];
 
-_turrets = allTurrets [_vehicle, true];
-
-_doorTurrets = [];
+private _doorTurrets = [];
 
 {
-    _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+    private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
 
     _config = [_config, _x] call FUNC(getTurretConfigPath);
 
-    if (getNumber (_config >> "isCopilot" == 0) && {count getArray (_config >> "weapons") > 0}) then {
+    if (((getNumber (_config >> "isCopilot")) == 0) && {count getArray (_config >> "weapons") > 0}) then {
         _doorTurrets pushBack _x;
     };
     false

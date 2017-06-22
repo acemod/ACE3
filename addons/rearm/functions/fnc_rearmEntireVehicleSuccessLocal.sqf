@@ -3,33 +3,51 @@
  * Rearm an entire turret locally.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Ammo Truck <OBJECT>
+ * 1: Vehicle <OBJECT>
+ * 2: TurretPath <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank, [0]] call ace_rearm_fnc_rearmEntireVehicleSuccessLocal
+ * [ammo_truck, tank, [0]] call ace_rearm_fnc_rearmEntireVehicleSuccessLocal
  *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_magazines", "_magazine", "_currentMagazines", "_maxMagazines", "_maxRounds", "_currentRounds"];
-params ["_vehicle", "_turretPath"];
+params [["_truck", objNull, [objNull]], ["_vehicle", objNull, [objNull]], ["_turretPath", [], [[]]]];
+TRACE_3("rearmEntireVehicleSuccessLocal",_truck,_vehicle,_turretPath);
 
-_magazines = [];
-if (_turretPath isEqualTo [-1]) then {
-    _magazines = [_vehicle, _turretPath] call FUNC(getConfigMagazines);
-} else {
-    _magazines = _vehicle magazinesTurret _turretPath;
-};
+// 1.70 pylons
+private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
-    _magazine = _x;
-    _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
-    _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
-    _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
-    _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
+    private _pylonTurret = getArray (_x >> "turret");
+    if (_pylonTurret isEqualTo []) then {_pylonTurret = [-1];}; // convert to expected array for driver
+    if (_pylonTurret isEqualTo _turretPath) then {
+        private _pylonIndex = _forEachIndex + 1; // GJ BIS
+        private _pylonAmmo = _vehicle ammoOnPylon _pylonIndex;
+        private _pylonMagazine = (getPylonMagazines _vehicle) select _forEachIndex;
+        private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _pylonMagazine >> "count");
+        TRACE_4("",_pylonIndex,_pylonAmmo,_maxRounds,_pylonMagazine);
+        if (_pylonAmmo < _maxRounds) then {
+            if ((GVAR(supply) == 0) || {[_truck, _pylonMagazine, (_maxRounds - _pylonAmmo)] call FUNC(removeMagazineFromSupply)}) then {
+                TRACE_3("Adding Rounds",_vehicle,_pylonIndex,_maxRounds);
+                _vehicle setAmmoOnPylon [_pylonIndex, _maxRounds];
+            };
+        };
+    };
+} forEach _pylonConfigs;
+
+private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
+if (isNil "_magazines") exitWith {};
+{
+    private _magazine = _x;
+    private _currentMagazines = { _x == _magazine } count (_vehicle magazinesTurret _turretPath);
+    private _maxMagazines = [_vehicle, _turretPath, _magazine] call FUNC(getMaxMagazines);
+    private _maxRounds = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
+    private _currentRounds = _vehicle magazineTurretAmmo [_magazine, _turretPath];
 
     TRACE_7("Rearmed Turret",_vehicle,_turretPath,_currentMagazines,_maxMagazines,_currentRounds,_maxRounds,_magazine);
 
@@ -38,11 +56,21 @@ if (_turretPath isEqualTo [-1]) then {
         _currentMagazines =  _currentMagazines + 1;
     };
     if (_currentMagazines < _maxMagazines) then {
-        _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
+        private _success = true;
+        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
+            _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
+        };
+
         for "_idx" from 1 to (_maxMagazines - _currentMagazines) do {
-            _vehicle addMagazineTurret [_magazine, _turretPath];
+            if ((GVAR(supply) == 0) || {[_truck, _magazine, _maxRounds] call FUNC(removeMagazineFromSupply)}) then {
+                _vehicle addMagazineTurret [_magazine, _turretPath];
+            };
         };
     } else {
-        _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
+        if ((GVAR(supply) == 0) || {[_truck, _magazine, (_maxRounds - _currentRounds)] call FUNC(removeMagazineFromSupply)}) then {
+            _vehicle setMagazineTurretAmmo [_magazine, _maxRounds, _turretPath];
+        };
     };
-} foreach _magazines;
+    false
+} count _magazines;
+

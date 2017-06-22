@@ -7,7 +7,7 @@
  * 1: Player <OBJECT>
  *
  * Return Value:
- * No
+ * None
  *
  * Example:
  * [mortar,bob] call ace_mk6mortar_fnc_toggleMils;
@@ -18,7 +18,5 @@
 
 PARAMS_2(_mortarVeh,_unit);
 
-private "_currentSetting";
-
-_currentSetting = _mortarVeh getVariable [QGVAR(useMils), true];
+private _currentSetting = _mortarVeh getVariable [QGVAR(useMils), true];
 _mortarVeh setVariable [QGVAR(useMils), (!_currentSetting)];

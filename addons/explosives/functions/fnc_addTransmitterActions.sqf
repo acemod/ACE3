@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ACE_Explosives_fnc_addTransmitterActions;
@@ -33,10 +33,10 @@ _children = [];
                 {},
                 {true},
                 {(_this select 2) call FUNC(addDetonateActions);},
-                [ACE_player,_x]
+                [_unit,_x]
             ] call EFUNC(interact_menu,createAction),
             [],
-            ACE_Player
+            _unit
         ];
 } forEach _detonators;
 

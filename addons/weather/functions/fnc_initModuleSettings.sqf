@@ -10,6 +10,9 @@
  * Return Value:
  * None <NIL>
  *
+ * Example:
+ * [module, [], true] call ace_weather_fnc_initModuleSettings
+ *
  * Public: No
  */
 

@@ -109,10 +109,10 @@ namespace ace {
                                 injuries::OpenWound newWound(woundID++, injuryToAdd->ID, bodyPartID, 1, injuryToAdd->bloodLoss, injuryToAdd->pain);
                                 injuriesToAdd.push_back(newWound);
                             }
+                            return injuriesToAdd;
                         }
                         ++c;
                     }
-                    return injuriesToAdd;
                 }
             }
             return injuriesToAdd;

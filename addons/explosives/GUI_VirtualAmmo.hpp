@@ -5,7 +5,7 @@ class RscTitles {
         duration = 9999999;
         fadein = 0;
         fadeout = 0;
-        onLoad = "uiNamespace setVariable ['ACE_explosives_virtualAmmoDisplay', (_this select 0)];";
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(virtualAmmoDisplay), _this select 0)]);
         class controls {};
         class objects {
             class TheObject {

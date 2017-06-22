@@ -8,14 +8,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [5] call ace_common_fnc_removeMapMarkerCreatedEventHandler
+ *
  * Public: Yes
  */
 #include "script_component.hpp"
 
 params ["_id"];
 
-private "_actionsVar";
-_actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
+private _actionsVar = missionNamespace getVariable ["ACE_EventHandler_MapMarker", [-1, [], []]];
 
 _actionsVar params ["_currentId", "_actionIDs", "_actions"];
 

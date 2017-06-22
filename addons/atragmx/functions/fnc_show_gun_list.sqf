@@ -6,10 +6,10 @@
  * visible - <BOOL>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_show_gun_list
+ * false call ace_atragmx_fnc_show_gun_list
  *
  * Public: No
  */
@@ -21,6 +21,5 @@ GVAR(showGunList) = _this;
 
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 6002);
-    
     lbSetCurSel [6000, GVAR(currentGun)];
 };

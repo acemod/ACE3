@@ -8,7 +8,10 @@
  * 2: Activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_moduleCaptive
  *
  * Public: No
  */
@@ -21,24 +24,24 @@ private ["_mouseOver", "_unit", "_captive"];
 if !(_activated && local _logic) exitWith {};
 
 if (isNil QEFUNC(captives,setHandcuffed)) then {
-    [LSTRING(RequiresAddon)] call EFUNC(common,displayTextStructured);
+    [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
 
     if ((_mouseOver select 0) != "OBJECT") then {
-        [LSTRING(NothingSelected)] call EFUNC(common,displayTextStructured);
+        [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
         _unit = effectivecommander (_mouseOver select 1);
 
         if !(_unit isKindOf "CAManBase") then {
-            [LSTRING(OnlyInfantry)] call EFUNC(common,displayTextStructured);
+            [LSTRING(OnlyInfantry)] call FUNC(showMessage);
         } else {
             if !(alive _unit) then {
-                [LSTRING(OnlyAlive)] call EFUNC(common,displayTextStructured);
+                [LSTRING(OnlyAlive)] call FUNC(showMessage);
             } else {
                 _captive = GETVAR(_unit,EGVAR(captives,isHandcuffed),false);
                 // Event initalized by ACE_Captives
-                ["SetHandcuffed", _unit, [_unit, !_captive]] call EFUNC(common,targetEvent);
+                [QEGVAR(captives,setHandcuffed), [_unit, !_captive], _unit] call CBA_fnc_targetEvent;
             };
         };
     };

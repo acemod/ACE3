@@ -5,8 +5,11 @@
  * Arguments:
  * 0: Unit <OBJECT>
  *
- * Return value:
+ * Return Value:
  * Is the unit in a building? <BOOL>
+ *
+ * Example:
+ * [bob] call ace_common_fnc_isInBuilding
  *
  * Public: Yes
  */
@@ -14,13 +17,11 @@
 
 #define CHECK_DISTANCE 10
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-private ["_position", "_intersections"];
+private _position = eyePos _unit;
 
-_position = eyePos _unit;
-
-_intersections = 0;
+private _intersections = 0;
 
 if (lineIntersects [_position, _position vectorAdd [0, 0, +CHECK_DISTANCE]]) then {
   _intersections = _intersections + 1;

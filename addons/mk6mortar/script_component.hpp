@@ -1,5 +1,10 @@
 #define COMPONENT mk6mortar
+#define COMPONENT_BEAUTIFIED Mk6 Mortar
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_MK6MORTAR
     #define DEBUG_MODE_FULL

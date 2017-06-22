@@ -2,43 +2,14 @@
 
 ADDON = false;
 
-PREP(addRepairActions);
-PREP(addSpareParts);
-PREP(canMiscRepair);
-PREP(canRemove);
-PREP(canRepair);
-PREP(canRepairTrack);
-PREP(canReplaceTrack);
-PREP(canReplaceWheel);
-PREP(doFullRepair);
-PREP(doRemoveTrack);
-PREP(doRemoveWheel);
-PREP(doRepair);
-PREP(doRepairTrack);
-PREP(doReplaceTrack);
-PREP(doReplaceWheel);
-PREP(getClaimObjects);
-PREP(getHitPointString);
-PREP(getPostRepairDamage);
-PREP(getWheelHitPointsWithSelections);
-PREP(hasItems);
-PREP(isEngineer);
-PREP(isInRepairFacility);
-PREP(isNearRepairVehicle);
-PREP(isRepairVehicle);
-PREP(moduleAddSpareParts);
-PREP(moduleAssignEngineer);
-PREP(moduleAssignRepairVehicle);
-PREP(moduleAssignRepairFacility);
-PREP(moduleRepairSettings);
-PREP(normalizeHitPoints);
-PREP(repair);
-PREP(repair_failure);
-PREP(repair_success);
-PREP(setDamage);
-PREP(setHitPointDamage);
-PREP(spawnObject);
-PREP(useItem);
-PREP(useItems);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
+
+["ACE_RepairItem_Base", "killed", {
+    params ["_object"];
+
+    [{deleteVehicle _this}, _object, 5] call CBA_fnc_waitAndExecute;
+}] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;

@@ -3,13 +3,13 @@
  * Cycles through the range card columns
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
- * call ace_atragmx_cycle_range_card_columns
+ * call ace_atragmx_fnc_cycle_range_card_columns
  *
  * Public: No
  */

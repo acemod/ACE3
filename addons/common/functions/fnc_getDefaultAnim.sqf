@@ -17,12 +17,10 @@
 
 params ["_unit"];
 
-private ["_anim", "_stance"];
-
-_anim = toLower animationState _unit;
+private _anim = toLower animationState _unit;
 
 // stance is broken for some animations.
-_stance = stance _unit;
+private _stance = stance _unit;
 
 if (_anim find "ppne" == 4) then {
     _stance = "PRONE";

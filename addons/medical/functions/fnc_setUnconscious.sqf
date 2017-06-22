@@ -8,8 +8,8 @@
  * 2: Minimum unconscious time <NUMBER> (default: (round(random(10)+5)))
  * 3: Force AI Unconscious (skip random death chance) <BOOL> (default: false)
  *
- * ReturnValue:
- * nil
+ * Return Value:
+ * None
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;
@@ -34,16 +34,18 @@ if (_set isEqualTo (_unit getVariable ["ACE_isUnconscious", false])) exitWith {}
 
 if !(_set) exitWith {
     _unit setVariable ["ACE_isUnconscious", false, true];
+    if (_unit getVariable [QGVAR(inReviveState), false]) then {
+        _unit setVariable [QGVAR(inReviveState), nil, true];
+    };
 };
 
 if !(!(isNull _unit) && {(_unit isKindOf "CAManBase") && ([_unit] call EFUNC(common,isAwake))}) exitWith{};
 
 if (!local _unit) exitWith {
-    [[_unit, _set, _minWaitingTime, _force], QUOTE(DFUNC(setUnconscious)), _unit, false] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    [QGVAR(setUnconscious), [_unit, _set, _minWaitingTime, _force], _unit] call CBA_fnc_targetEvent;
 };
 
 _unit setVariable ["ACE_isUnconscious", true, true];
-_unit setUnconscious true;
 
 if (_unit == ACE_player) then {
     if (visibleMap) then {openMap false};
@@ -94,8 +96,18 @@ _unit setUnitPos "DOWN";
 if (GVAR(moveUnitsFromGroupOnUnconscious)) then {
     [_unit, true, "ACE_isUnconscious", side group _unit] call EFUNC(common,switchToGroupSide);
 };
+// Delay Unconscious so the AI dont instant stop shooting on the unit #3121
+if (GVAR(delayUnconCaptive) == 0) then {
+    [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+} else {
+    [{
+        params ["_unit"];
+        if (_unit getVariable ["ACE_isUnconscious", false]) then {
+            [_unit, "setCaptive", "ace_unconscious", true] call EFUNC(common,statusEffect_set);
+        };
+    },[_unit], GVAR(delayUnconCaptive)] call CBA_fnc_waitAndExecute;
+};
 
-[_unit, QGVAR(unconscious), true] call EFUNC(common,setCaptivityStatus);
 _anim = [_unit] call EFUNC(common,getDeathAnim);
 [_unit, _anim, 1, true] call EFUNC(common,doAnimation);
 [{
@@ -103,13 +115,13 @@ _anim = [_unit] call EFUNC(common,getDeathAnim);
     if ((_unit getVariable "ACE_isUnconscious") and (animationState _unit != _anim)) then {
         [_unit, _anim, 2, true] call EFUNC(common,doAnimation);
     };
-}, [_unit, _anim], 0.5, 0] call EFUNC(common,waitAndExecute);
+}, [_unit, _anim], 0.5, 0] call CBA_fnc_waitAndExecute;
 
-_startingTime = ACE_time;
+_startingTime = CBA_missionTime;
 
 [DFUNC(unconsciousPFH), 0.1, [_unit, _originalPos, _startingTime, _minWaitingTime, false, vehicle _unit isKindOf "ParachuteBase"] ] call CBA_fnc_addPerFrameHandler;
 
 // unconscious can't talk
 [_unit, "isUnconscious"] call EFUNC(common,muteUnit);
 
-["medical_onUnconscious", [_unit, true]] call EFUNC(common,globalEvent);
+["ace_unconscious", [_unit, true]] call CBA_fnc_globalEvent;

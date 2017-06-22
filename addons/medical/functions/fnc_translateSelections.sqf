@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: selection name <STRING>
- * 2: HitPoint Index/True to get hitpoint <SCALAR><BOOL>
+ * 2: HitPoint Index/True to get hitpoint <NUMBER><BOOL>
  *
  * Return Value:
  * translated selection/hitpoint name <STRING>
@@ -46,7 +46,7 @@ if (_hitPointIndex isEqualTo true) exitWith {
     if (!isNil {_unit getHitPointDamage _returnHitPoint}) exitWith {
         _returnHitPoint;
     };
-    
+
     //Those VR fuckers have weird limb hitpoints
     private _hitPoints = switch (_selection) do {
         case ("hand_l"): {L_ARM_HITPOINTS};

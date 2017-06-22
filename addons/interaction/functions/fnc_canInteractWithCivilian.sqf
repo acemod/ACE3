@@ -18,5 +18,4 @@
 #include "script_component.hpp"
 
 params ["_unit", "_target", ["_isCivilian", true]];
-
 alive _target && [side _target != side _unit, side group _target == civilian] select _isCivilian // return

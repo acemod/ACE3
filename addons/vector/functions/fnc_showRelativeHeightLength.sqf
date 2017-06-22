@@ -1,17 +1,28 @@
-// by commy2
+/*
+ * Author: commy2
+ *
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_vector_fnc_showRelativeHeightLength
+ *
+ * Public: No
+ */
+
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
-private ["_heightLength", "_digits"];
-
-_heightLength = call FUNC(getRelativeHeightLength);
+private _heightLength = call FUNC(getRelativeHeightLength);
 
 // height
-_digits = [_heightLength select 0] call FUNC(convertToTexturesDistance);
+private _digits = [_heightLength select 0] call FUNC(convertToTexturesDistance);
 
 (_dlgVector displayCtrl 1311) ctrlSetText (_digits select 0);
 (_dlgVector displayCtrl 1312) ctrlSetText (_digits select 1);

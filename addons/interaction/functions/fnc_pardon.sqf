@@ -9,10 +9,13 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob, kevin] call ACE_interaction_fnc_pardon
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 params ["", "_target"];
 
-["pardon", [_target], [_target]] call EFUNC(common,targetEvent);
+[QGVAR(pardon), [_target], [_target]] call CBA_fnc_targetEvent;

@@ -9,13 +9,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ACE_huntir_fnc_huntirCompass
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
 disableSerialization;
 
-#define __DSP (uiNamespace getVariable "ace_huntir_cam_rose")
+#define __DSP (uiNamespace getVariable QGVAR(cam_rose))
 #define __CHAR_N (__DSP displayCtrl 64432)
 #define __CHAR_E (__DSP displayCtrl 64433)
 #define __CHAR_S (__DSP displayCtrl 64434)
@@ -48,7 +51,7 @@ _fnc_correctIt = {
     _pos
 };
 
-HUNTIR_CAM_ROSE_LAYER_ID cutRsc ["ace_huntir_cam_rose", "PLAIN"];
+HUNTIR_CAM_ROSE_LAYER_ID cutRsc [QGVAR(cam_rose), "PLAIN"];
 
 [{
     params ["_args", "_idPFH"];

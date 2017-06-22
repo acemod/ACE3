@@ -1,16 +1,23 @@
 /*
+ * Author: commy2
+ * Clears the vectors control items.
+ *
+ * Arguments:
+ * 0: String <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [5] call ace_vector_fnc_clearDisplay
+ *
+ * Public: No
+ */
 
-by commy2
-
-Clears the vectors control items.
-
-*/
 #include "script_component.hpp"
 
-private "_dlgVector";
-
 disableSerialization;
-_dlgVector = GETUVAR(ACE_dlgVector,displayNull);
+private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 switch (_this select 0) do {
     case ("azimuth"): {

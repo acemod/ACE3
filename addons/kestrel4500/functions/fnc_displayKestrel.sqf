@@ -59,11 +59,10 @@ GVAR(Overlay) = true;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    if (ACE_diagTime > GVAR(updateTimer)) then {
-        GVAR(updateTimer) = ACE_diagTime + 1;
+    if (diag_tickTime > GVAR(updateTimer)) then {
+        GVAR(updateTimer) = diag_tickTime + 1;
 
-        private ["_outputData"];
-        _outputData = [] call FUNC(generateOutputData);
+        private _outputData = [] call FUNC(generateOutputData);
 
         3 cutRsc ["RscKestrel4500", "PLAIN", 1, false];
         _outputData params [
@@ -126,7 +125,7 @@ GVAR(Overlay) = true;
     };
 
     call FUNC(updateImpellerState);
-    __ctrlKestrel4500 ctrlSetText format [QUOTE(PATHTOF(UI\Kestrel4500_%1.paa)), floor(GVAR(ImpellerState) % 7)];
+    __ctrlKestrel4500 ctrlSetText format [QPATHTOF(UI\Kestrel4500_%1.paa), floor(GVAR(ImpellerState) % 7)];
 
 }, 0.01, []] call CBA_fnc_addPerFrameHandler;
 

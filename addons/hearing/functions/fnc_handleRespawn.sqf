@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [player] call ACE_hearing_fnc_handleRespawn;
@@ -19,6 +19,9 @@ params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
 if (!local _unit) exitWith {}; //XEH should only be called on local units
+
+//Do not add or remove earplugs if gear should be preserved
+if (missionNamespace getVariable [QEGVAR(respawn,SavePreDeathGear), false]) exitWith {};
 
 private _respawn = [0] call BIS_fnc_missionRespawnType;
 

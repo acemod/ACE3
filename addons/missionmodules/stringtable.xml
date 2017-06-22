@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MissionModules">
         <Key ID="STR_ACE_MissionModules_Category_DisplayName">
@@ -11,6 +11,11 @@
             <French>ACE module de mission</French>
             <Hungarian>ACE küldetési modulok</Hungarian>
             <Russian>Модули миссий ACE</Russian>
+            <Italian>Moduli Missione ACE</Italian>
+            <Japanese>ACE ミッション モジュール</Japanese>
+            <Korean>ACE 미션 모듈</Korean>
+            <SChinese>ACE 任务模块</SChinese>
+            <TChinese>ACE 任務模塊</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_DisplayName">
             <English>Ambiance Sounds [ACE]</English>
@@ -22,6 +27,11 @@
             <French>Sons d'ambiance [ACE]</French>
             <Hungarian>Ambiens hangok [ACE]</Hungarian>
             <Russian>Звук окружения [ACE]</Russian>
+            <Italian>Souni Ambientali [ACE]</Italian>
+            <Japanese>環境音 [ACE]</Japanese>
+            <Korean>환경 효과음 [ACE]</Korean>
+            <SChinese>环境声音 [ACE]</SChinese>
+            <TChinese>環境聲音 [ACE]</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_DisplayName">
             <English>Sounds</English>
@@ -33,6 +43,11 @@
             <French>Sons</French>
             <Hungarian>Hangok</Hungarian>
             <Russian>Звуки</Russian>
+            <Italian>Suoni</Italian>
+            <Japanese>効果音</Japanese>
+            <Korean>효과음</Korean>
+            <SChinese>声音</SChinese>
+            <TChinese>聲音</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundFiles_Description">
             <English>Class names of the ambiance sounds to be played. Seperated by ','</English>
@@ -43,6 +58,11 @@
             <Portuguese>Nomes de classe dos sons de ambiente para serem reproduzidos. Separados por ","</Portuguese>
             <Russian>Имена классов звуков окружения, которые должны проигрываться. Разделенные ','</Russian>
             <French>ClassNames des sons d'ambiances. Séparation par ","</French>
+            <Italian>Nomi classi dei suoni ambientali da eseguire. Separati da ','</Italian>
+            <Japanese>再生する環境音のクラスネームを記載。','で複数指定できます。</Japanese>
+            <Korean>재생되는 환경 효과음의 단위와 이름입니다. ','로 구분됩니다.</Korean>
+            <SChinese>输入想使用的环境声音classname. 每个classname用','做区隔</SChinese>
+            <TChinese>輸入想使用的環境聲音classname. 每個classname用','做區隔</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_DisplayName">
             <English>Minimal Distance</English>
@@ -54,6 +74,11 @@
             <French>Distance minimale</French>
             <Hungarian>Minimális távolság</Hungarian>
             <Russian>Минимальная дистанция</Russian>
+            <Italian>Distanza Minimale</Italian>
+            <Japanese>最低距離</Japanese>
+            <Korean>최소 거리</Korean>
+            <SChinese>最小距离</SChinese>
+            <TChinese>最小距離</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDistance_Description">
             <English>Used for calculating a random position and sets the minimal distance between the players and the played sound file(s)</English>
@@ -65,6 +90,11 @@
             <French>Utilisé pour calculer une position aléatoire et pour définir la distance minimale entre le joueur les sons lus.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a minimum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает минимальное расстояние между игроками и источниками звука</Russian>
+            <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file suono eseguito</Italian>
+            <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最低距離を設定します</Japanese>
+            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최소 거리를 설정합니다.</Korean>
+            <SChinese>声音将随机产生在玩家附近, 此选项定义该声音最近会距离玩家多少公尺.</SChinese>
+            <TChinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最近會距離玩家多少公尺.</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_DisplayName">
             <English>Maximum Distance</English>
@@ -76,6 +106,11 @@
             <French>Distance maximale</French>
             <Hungarian>Maximális távolság</Hungarian>
             <Russian>Максимальная дистанция</Russian>
+            <Italian>Distanza Massima</Italian>
+            <Japanese>最大距離</Japanese>
+            <Korean>최대 거리</Korean>
+            <SChinese>最大距离</SChinese>
+            <TChinese>最大距離</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDistance_Description">
             <English>Used for calculating a random position and sets the maximum distance between the players and the played sound file(s)</English>
@@ -87,6 +122,11 @@
             <French>Utilisé pour calculer une position aléatoire et pour définir la distance maximale entre le joueur les sons lus.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a maximum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает максимальное расстояние между игроками и источниками звука</Russian>
+            <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file suono eseguito</Italian>
+            <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最大距離を設定します</Japanese>
+            <Korean>무작위 위치 계산에 사용되며 플레이어와 재생 된 사운드 파일 간의 최대 거리를 설정합니다.</Korean>
+            <SChinese>声音将随机产生在玩家附近, 此选项定义该声音最远会距离玩家多少公尺.</SChinese>
+            <TChinese>聲音將隨機產生在玩家附近, 此選項定義該聲音最遠會距離玩家多少公尺.</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_DisplayName">
             <English>Minimal Delay</English>
@@ -98,6 +138,11 @@
             <French>Délais minimal</French>
             <Hungarian>Minimum késleltetés</Hungarian>
             <Russian>Минимальная задержка</Russian>
+            <Italian>Pausa Minima</Italian>
+            <Japanese>最低遅延</Japanese>
+            <Korean>최소 지연</Korean>
+            <SChinese>最小延迟</SChinese>
+            <TChinese>最小延遲</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_minimalDelay_Description">
             <English>Minimal delay between sounds played</English>
@@ -109,6 +154,11 @@
             <French>Délais minimal entre les sons lus.</French>
             <Hungarian>Minimum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Минимальная задержка между воспроизведением звуков</Russian>
+            <Italian>Pausa Minima tra suoni eseguiti</Italian>
+            <Japanese>再生されるまでの最低遅延</Japanese>
+            <Korean>재생된 소리간 최소 지연시간</Korean>
+            <SChinese>设定每个声音档案中间最少间隔多久再进行播放</SChinese>
+            <TChinese>設定每個聲音檔案中間最少間隔多久再進行播放</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_DisplayName">
             <English>Maximum Delay</English>
@@ -120,6 +170,11 @@
             <French>Délais maximal</French>
             <Hungarian>Maximum késleltetés</Hungarian>
             <Russian>Максимальная задержка</Russian>
+            <Italian>Pausa Massima</Italian>
+            <Japanese>最大遅延</Japanese>
+            <Korean>최대 지연</Korean>
+            <SChinese>最大延迟</SChinese>
+            <TChinese>最大延遲</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_maximalDelay_Description">
             <English>Maximum delay between sounds played</English>
@@ -131,6 +186,11 @@
             <French>Délais maximal entre les sons lus.</French>
             <Hungarian>Maximum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Максимальная задержка между воспроизведением звуков</Russian>
+            <Italian>Pausa Massima tra suoni eseguiti</Italian>
+            <Japanese>再生されるまでの最大遅延</Japanese>
+            <Korean>재생된 소리간 최대 지연시간</Korean>
+            <SChinese>设定每个声音档案中间最多间隔多久再进行播放</SChinese>
+            <TChinese>設定每個聲音檔案中間最多間隔多久再進行播放</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_DisplayName">
             <English>Follow Players</English>
@@ -142,6 +202,11 @@
             <French>Suivre les joueurs</French>
             <Hungarian>Játékosok követése</Hungarian>
             <Russian>Следовать за игроками</Russian>
+            <Italian>Segui Giocatori</Italian>
+            <Japanese>プレイヤーを追随</Japanese>
+            <Korean>플레이어 따라가기</Korean>
+            <SChinese>跟随玩家</SChinese>
+            <TChinese>跟隨玩家</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_followPlayers_Description">
             <English>Follow players. If set to false, loop will play sounds only nearby logic position.</English>
@@ -153,6 +218,11 @@
             <French>Suivre le joueur. Si défini sur false, les sons seront joués en boucle autour la position logique</French>
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
             <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
+            <Italian>Segui Giocatori. Se impostato su falso, il ciclo eseguirà i suoni solo vicino ad una posizione logica.</Italian>
+            <Japanese>プレイヤーを追随します。False に設定するとロジックの近くで延々と再生します。</Japanese>
+            <Korean>플레이어를 따라갑니다. 거짓으로 설정될경우 오직 한 자리에서만 반복해서 소리를 재생합니다.</Korean>
+            <SChinese>设定声音是否会在玩家的附近产生. 假如关闭此功能, 声音只会在模块的位置产生.</SChinese>
+            <TChinese>設定聲音是否會在玩家的附近產生. 假如關閉此功能, 聲音只會在模塊的位置產生.</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_DisplayName">
             <English>Volume</English>
@@ -164,6 +234,11 @@
             <French>Volume</French>
             <Hungarian>Hangerő</Hungarian>
             <Russian>Громкость</Russian>
+            <Italian>Volume</Italian>
+            <Japanese>音量</Japanese>
+            <Korean>볼륨</Korean>
+            <SChinese>音量</SChinese>
+            <TChinese>音量</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_soundVolume_Description">
             <English>The volume of the sounds played</English>
@@ -175,6 +250,11 @@
             <French>Volume des sons lus</French>
             <Hungarian>A lejátszott hangok hangereje</Hungarian>
             <Russian>Громкость воспроизводимых звуков</Russian>
+            <Italian>Il volume dei suoni eseguiti</Italian>
+            <Japanese>再生される音の大きさ</Japanese>
+            <Korean>재생되는 소리의 볼륨</Korean>
+            <SChinese>调整声音的音量</SChinese>
+            <TChinese>調整聲音的音量</TChinese>
         </Key>
         <Key ID="STR_ACE_MissionModules_AmbianceSounds_Description">
             <English>Ambiance sounds loop (synced across MP)</English>
@@ -186,6 +266,11 @@
             <French>Sons d'ambiance lus en boucle (Synchronisation MP)</French>
             <Hungarian>Ambiens hangok folyamatossága (MP alatt szinkronizálva)</Hungarian>
             <Russian>Циклически воспроизводимые звуки окружения (синх. между игроками)</Russian>
+            <Italian>Ciclo Suoni Ambientali (sincronizzato in MP)</Italian>
+            <Japanese>環境音の繰り返し (MP 間で同期させます)</Japanese>
+            <Korean>환경 효과음 반복 (멀티플레이 전반적으로 동기화됨)</Korean>
+            <SChinese>循环的环境声音 (在多人游戏中会同步所有玩家的播放状态)</SChinese>
+            <TChinese>循環的環境聲音 (在多人遊戲中會同步所有玩家的播放狀態)</TChinese>
         </Key>
     </Package>
 </Project>

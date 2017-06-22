@@ -8,103 +8,95 @@
 // MACRO: EXTENDED_EVENTHANDLERS
 // Add all XEH event handlers
 /////////////////////////////////////////////////////////////////////////////////
-#define EXTENDED_EVENTHANDLERS init = "_this call SLX_XEH_EH_Init"; \
-fired              = "_this call SLX_XEH_EH_Fired"; \
-animChanged        = "_this call SLX_XEH_EH_AnimChanged"; \
-animDone           = "_this call SLX_XEH_EH_AnimDone"; \
-animStateChanged   = "_this call SLX_XEH_EH_AnimStateChanged"; \
-containerClosed    = "_this call SLX_XEH_EH_ContainerClosed"; \
-containerOpened    = "_this call SLX_XEH_EH_ContainerOpened"; \
-controlsShifted    = "_this call SLX_XEH_EH_ControlsShifted"; \
-dammaged           = "_this call SLX_XEH_EH_Dammaged"; \
-engine             = "_this call SLX_XEH_EH_Engine"; \
-epeContact         = "_this call SLX_XEH_EH_EpeContact"; \
-epeContactEnd      = "_this call SLX_XEH_EH_EpeContactEnd"; \
-epeContactStart    = "_this call SLX_XEH_EH_EpeContactStart"; \
-explosion          = "_this call SLX_XEH_EH_Explosion"; \
-firedNear          = "_this call SLX_XEH_EH_FiredNear"; \
-fuel               = "_this call SLX_XEH_EH_Fuel"; \
-gear               = "_this call SLX_XEH_EH_Gear"; \
-getIn              = "_this call SLX_XEH_EH_GetIn"; \
-getOut             = "_this call SLX_XEH_EH_GetOut"; \
-handleHeal         = "_this call SLX_XEH_EH_HandleHeal"; \
-hit                = "_this call SLX_XEH_EH_Hit"; \
-hitPart            = "_this call SLX_XEH_EH_HitPart"; \
-incomingMissile    = "_this call SLX_XEH_EH_IncomingMissile"; \
-inventoryClosed    = "_this call SLX_XEH_EH_InventoryClosed"; \
-inventoryOpened    = "_this call SLX_XEH_EH_InventoryOpened"; \
-killed             = "_this call SLX_XEH_EH_Killed"; \
-landedTouchDown    = "_this call SLX_XEH_EH_LandedTouchDown"; \
-landedStopped      = "_this call SLX_XEH_EH_LandedStopped"; \
-local              = "_this call SLX_XEH_EH_Local"; \
-respawn            = "_this call SLX_XEH_EH_Respawn"; \
-put                = "_this call SLX_XEH_EH_Put"; \
-take               = "_this call SLX_XEH_EH_Take"; \
-seatSwitched       = "_this call SLX_XEH_EH_SeatSwitched"; \
-soundPlayed        = "_this call SLX_XEH_EH_SoundPlayed"; \
-weaponAssembled    = "_this call SLX_XEH_EH_WeaponAssembled"; \
-weaponDisAssembled = "_this call SLX_XEH_EH_WeaponDisassembled";
 
-//handleDamage      = "_this call SLX_XEH_EH_HandleDamage"; \
-//mpHit             = "_this call SLX_XEH_EH_MPHit"; \
-//mpKilled          = "_this call SLX_XEH_EH_MPKilled"; \
-//mpRespawn         = "_this call SLX_XEH_EH_MPRespawn";
-
+#define EXTENDED_EVENTHANDLERS init = "(_this select 0) call CBA_fnc_initEvents; (_this select 0) call CBA_fnc_init"; \
+fired = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_fired"")"; \
+animChanged = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_animChanged"")"; \
+animDone = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_animDone"")"; \
+animStateChanged = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_animStateChanged"")"; \
+containerClosed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_containerClosed"")"; \
+containerOpened = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_containerOpened"")"; \
+controlsShifted = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_controlsShifted"")"; \
+dammaged = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_dammaged"")"; \
+engine = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_engine"")"; \
+epeContact = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_epeContact"")"; \
+epeContactEnd = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_epeContactEnd"")"; \
+epeContactStart = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_epeContactStart"")"; \
+explosion = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_explosion"")"; \
+firedNear = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_firedNear"")"; \
+fuel = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_cba_xeh_fuel"")"; \
+gear = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_gear"")"; \
+getIn = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_getIn"")"; \
+getInMan = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_getInMan"")"; \
+getOut = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_getOut"")"; \
+getOutMan = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_getOutMan"")"; \
+handleHeal = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_handleHeal"")"; \
+hit = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_hit"")"; \
+hitPart = "{_this call _x} forEach ((_this select 0 select 0) getVariable ""cba_xeh_hitPart"")"; \
+incomingMissile = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_incomingMissile"")"; \
+inventoryClosed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_inventoryClosed"")"; \
+inventoryOpened = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_inventoryOpened"")"; \
+killed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_killed"")"; \
+landedTouchDown = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_landedTouchDown"")"; \
+landedStopped = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_landedStopped"")"; \
+local = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_local"")"; \
+respawn = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_respawn"")"; \
+put = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_put"")"; \
+take = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_take"")"; \
+seatSwitched = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_seatSwitched"")"; \
+seatSwitchedMan = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_seatSwitchedMan"")"; \
+soundPlayed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_soundPlayed"")"; \
+weaponAssembled = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponAssembled"")"; \
+weaponDisassembled = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponDisassembled"")"; \
+weaponDeployed = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponDeployed"")"; \
+weaponRested = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_weaponRested"")"; \
+reloaded = "{_this call _x} forEach ((_this select 0) getVariable ""cba_xeh_reloaded"")";
 
 
 /* 
    MACRO: DELETE_EVENTHANDLERS
 
-   Removes all event handlers.
- 
-  Example:
- (begin example)
-    class DefaultEventhandlers;
-    class Car_F;
-    class MRAP_01_base_F: Car_F {
-        class EventHandlers;
-    };
-    class B_MRAP_01_F: MRAP_01_base_F {
-        class Eventhandlers: EventHandlers {
-            DELETE_EVENTHANDLERS
-        };
-    };
- (end example)
+    Removes all event handlers.
 */
 
-#define DELETE_EVENTHANDLERS delete init; \
-delete fired; \
-delete animChanged; \
-delete animDone; \
-delete animStateChanged; \
-delete containerClosed; \
-delete containerOpened; \
-delete controlsShifted; \
-delete dammaged; \
-delete engine; \
-delete epeContact; \
-delete epeContactEnd; \
-delete epeContactStart; \
-delete explosion; \
-delete firedNear; \
-delete fuel; \
-delete gear; \
-delete getIn; \
-delete getOut; \
-delete handleHeal; \
-delete hit; \
-delete hitPart; \
-delete incomingMissile; \
-delete inventoryClosed; \
-delete inventoryOpened; \
-delete killed; \
-delete landedTouchDown; \
-delete landedStopped; \
-delete local;  \
-delete respawn;  \
-delete put;  \
-delete take; \
-delete seatSwitched; \
-delete soundPlayed; \
-delete weaponAssembled; \
-delete weaponDisAssembled;
+#define DELETE_EVENTHANDLERS init = ""; \
+fired = ""; \
+animChanged = ""; \
+animDone = ""; \
+animStateChanged = ""; \
+containerClosed = ""; \
+containerOpened = ""; \
+controlsShifted = ""; \
+dammaged = ""; \
+engine = ""; \
+epeContact = ""; \
+epeContactEnd = ""; \
+epeContactStart = ""; \
+explosion = ""; \
+firedNear = ""; \
+fuel = ""; \
+gear = ""; \
+getIn = ""; \
+getInMan = ""; \
+getOut = ""; \
+getOutMan = ""; \
+handleHeal = ""; \
+hit = ""; \
+hitPart = ""; \
+incomingMissile = ""; \
+inventoryClosed = ""; \
+inventoryOpened = ""; \
+killed = ""; \
+landedTouchDown = ""; \
+landedStopped = ""; \
+local = ""; \
+respawn = ""; \
+put = ""; \
+take = ""; \
+seatSwitched = ""; \
+soundPlayed = ""; \
+weaponAssembled = ""; \
+weaponDisassembled = ""; \
+weaponDeployed = ""; \
+weaponRested = ""; \
+reloaded = "";

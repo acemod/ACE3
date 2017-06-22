@@ -10,15 +10,16 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [DISPLAY, [messagecollection], [injurycollection]] call ACE_medical_menu_fnc_updateInformationLists
+ *
  * Public: No
  */
 #include "script_component.hpp"
 
-private ["_lbCtrl", "_amountOfGeneric"];
-
 params ["_display", "_genericMessages", "_allInjuryTexts"];
 
-_lbCtrl = _display displayCtrl 213;
+private _lbCtrl = _display displayCtrl 213;
 lbClear _lbCtrl;
 {
     _x params ["_add", "_color"];
@@ -26,7 +27,7 @@ lbClear _lbCtrl;
     _lbCtrl lbSetColor [_forEachIndex, _color];
 } forEach _genericMessages;
 
-_amountOfGeneric = count _genericMessages;
+private _amountOfGeneric = count _genericMessages;
 {
     _x params ["_add", "_color"];
     _lbCtrl lbAdd _add;

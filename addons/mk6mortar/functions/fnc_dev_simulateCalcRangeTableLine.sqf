@@ -1,19 +1,19 @@
 /*
-Author: Pabst Mirror
-
-Description:
-Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
-
-Parameters:
-0: NUMBER - Muzzle Velocity
-1: NUMBER - Air Friction
-2: NUMBER - Range To Hit
-
-Returns:
-ARRAY - Range Table Line Data (see return line)
-
-Example:
-[300, -0.0001, 3000] call ace_mk6mortar_fnc_simulateCalcRangeTableLine
+ * Author: Pabst Mirror
+ * Builds a rangeTable line for a certian range, given muzzle velocity and air friction, returns [] if out of range.
+ *
+ * Arguments:
+ * 0: Muzzle Velocity <NUMBER>
+ * 1: Air Friction <NUMBER>
+ * 2: Range To Hit <NUMBER>
+ *
+ * Return Value:
+ * Range Table Line Data (see return line) <ARRAY>
+ *
+ * Example:
+ * [300, -0.0001, 3000] call ace_mk6mortar_fnc_simulateCalcRangeTableLine
+ *
+ * Public: No
  */
 #include "script_component.hpp"
 
@@ -21,7 +21,7 @@ Example:
 
 private ["_startTime", "_muzzleVelocity", "_rangeToHit", "_airFriction", "_vacElevation", "_radicand", "_maxElev", "_minElev", "_error", "_solutionElevation", "_lastTestResult", "_numberOfAttempts", "_lineElevation", "_lineTimeOfFlight", "_lineHeightElevation", "_lineHeightTimeDelta", "_lineCrosswindDeg", "_lineHeadwindMeters", "_lineTailWindMeters", "_result"];
 
-_startTime = ACE_diagTime;
+_startTime = diag_tickTime;
 
 _muzzleVelocity = _this select 0;
 _rangeToHit = _this select 1;
@@ -74,6 +74,6 @@ _lineAirDensDec = (_rangeToHit - (_lastTestResult select 0)) / 10;
 _lastTestResult = [_lineElevation, _muzzleVelocity, _airFriction, 15, 1.1, 0, 0, 0, TIME_STEP] call FUNC(dev_simulateShot);
 _lineAirDensInc = (_rangeToHit - (_lastTestResult select 0)) / 10;
 
-// systemChat format ["debug: Range %1 - in %2 sec", _rangeToHit, (ACE_diagTime - _startTime)];
+// systemChat format ["debug: Range %1 - in %2 sec", _rangeToHit, (diag_tickTime - _startTime)];
 
 [_rangeToHit, _lineElevation, _lineHeightElevation, _lineHeightTimeDelta, _lineTimeOfFlight, _lineCrosswindDeg, _lineHeadwindMeters, _lineTailWindMeters, _lineTempDec, _lineTempInc, _lineAirDensDec, _lineAirDensInc]

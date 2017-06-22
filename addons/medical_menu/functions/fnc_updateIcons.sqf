@@ -18,15 +18,13 @@
 #define START_IDC 111
 #define END_IDC 118
 
-private ["_display", "_idc", "_options", "_amount"];
-
 disableSerialization;
 
-_display = uiNamespace getVariable QGVAR(medicalMenu);
+private _display = uiNamespace getVariable QGVAR(medicalMenu);
+private _options = ["triage" , "examine", "bandage", "medication", "airway", "advanced", "drag", "toggle"];
 
-_options = ["triage" , "examine", "bandage", "medication", "airway", "advanced", "drag", "toggle"];
 for "_idc" from START_IDC to END_IDC step 1 do {
-    _amount = [ACE_player, GVAR(INTERACTION_TARGET), _options select (_idc - START_IDC)] call FUNC(getTreatmentOptions);
+    private _amount = [ACE_player, GVAR(INTERACTION_TARGET), _options select (_idc - START_IDC)] call FUNC(getTreatmentOptions);
     if ((count _amount) > 0 || _idc == START_IDC || _idc == END_IDC) then {
         (_display displayCtrl _idc) ctrlSettextColor [1, 1, 1, 1];
     } else {

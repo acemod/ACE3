@@ -9,7 +9,10 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * nil
+ * None
+ *
+ * Example:
+ * [LOGIC, [bob, kevin], true] call ace_zeus_fnc_bi_moduleRemoteControl
  *
  * Public: No
  */
@@ -23,11 +26,11 @@ _activated = _this select 2;
 if (_activated && local _logic && !isnull curatorcamera) then {
 
     //--- Terminate when remote control is already in progress
-    if !(isnull (missionnamespace getVariable ["bis_fnc_moduleRemoteControl_unit",objnull])) exitWith {};
+    if !(isnull (missionnamespace getvariable ["bis_fnc_moduleRemoteControl_unit",objnull])) exitwith {};
 
     //--- Get unit under cursor
     _unit = objnull;
-    _mouseOver = missionnamespace getVariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
+    _mouseOver = missionnamespace getvariable ["bis_fnc_curatorObjectPlaced_mouseOver",[""]];
     if ((_mouseOver select 0) == typename objnull) then {_unit = _mouseOver select 1;};
     _unit = effectivecommander _unit;
 
@@ -37,7 +40,8 @@ if (_activated && local _logic && !isnull curatorcamera) then {
     if (isplayer _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorPlayer";};
     if !(alive _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorDestroyed";};
     if (isnull _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorNull";};
-    if !(isnull (_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull])) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
+    if !(isnull (_unit getvariable ["bis_fnc_moduleRemoteControl_owner",objnull])) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
+    if (isuavconnected vehicle _unit) then {_error = localize "str_a3_cfgvehicles_moduleremotecontrol_f_errorControl";};
 
     if (_error == "") then {
         _unit spawn {
@@ -47,7 +51,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             _vehicleRole = str assignedvehiclerole _unit;
 
             bis_fnc_moduleRemoteControl_unit = _unit;
-            _unit setVariable ["bis_fnc_moduleRemoteControl_owner",player,true];
+            _unit setvariable ["bis_fnc_moduleRemoteControl_owner",player,true];
 
             // Added by ace_zeus to toggle remote control wind sound
             if (GVAR(remoteWind)) then {
@@ -76,7 +80,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
 
             //--- Wait for interface to close
             (finddisplay 312) closedisplay 2;
-            waitUntil {isnull curatorcamera};
+            waituntil {isnull curatorcamera};
 
             //--- Switch
             player remotecontrol _unit;
@@ -106,7 +110,7 @@ if (_activated && local _logic && !isnull curatorcamera) then {
             _vehicle = vehicle _unit;
             _vehicleRole = str assignedvehiclerole _unit;
             _rating = rating player;
-            waitUntil {
+            waituntil {
                 //--- Refresh when vehicle or vehicle role changes
                 if ((vehicle _unit != _vehicle || str assignedvehiclerole _unit != _vehicleRole) && {alive _unit}) then {
                     player remotecontrol _unit;
@@ -123,43 +127,49 @@ if (_activated && local _logic && !isnull curatorcamera) then {
                 ||
                 {!alive _unit} //--- Also isnull check, objNull is not alive
                 ||
+                {!alive player}
+                ||
                 {isnull getassignedcuratorlogic player}
-                //||
-                //{_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull] != player} //--- Another curator stole the unit
             };
 
             player addrating (-rating player + _rating);
             objnull remotecontrol _unit;
-            _unit setVariable ["bis_fnc_moduleRemoteControl_owner",nil,true];
+            _unit setvariable ["bis_fnc_moduleRemoteControl_owner",nil,true];
 
-            //--- Death screen
-            if (
-                isnull curatorcamera
-                &&
-                {cameraon != vehicle player}
-                &&
-                {!isnull _unit}
-                &&
-                {!isnull getassignedcuratorlogic player}
-                //&&
-                //{(_unit getVariable ["bis_fnc_moduleRemoteControl_owner",objnull] == player)}
-            ) then {
-                sleep 2;
-                ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black out",1];
-                sleep 1;
+            if (alive player) then {
+                //--- Death screen
+                if (
+                    isnull curatorcamera
+                    &&
+                    {cameraon != vehicle player}
+                    &&
+                    {!isnull _unit}
+                    &&
+                    {!isnull getassignedcuratorlogic player}
+                    //&&
+                    //{(_unit getvariable ["bis_fnc_moduleRemoteControl_owner",objnull] == player)}
+                ) then {
+                    sleep 2;
+                    ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black out",1];
+                    sleep 1;
+                };
+                if !(isnull _unit) then {
+                    _unitPos = getposatl _unit;
+                    _camPos = [_unitPos,10,direction _unit + 180] call bis_fnc_relpos;
+                    _camPos set [2,(_unitPos select 2) + (getterrainheightasl _unitPos) - (getterrainheightasl _camPos) + 10];
+                    //[_camPos,_unit] call bis_fnc_setcuratorcamera;
+                    (getassignedcuratorlogic player) setvariable ["bis_fnc_modulecuratorsetcamera_params",[_camPos,_unit]];
+                };
+
+                sleep 0.1; //--- Engine needs a delay in case controlled unit was deleted
+                ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black in",1e10];
+                opencuratorinterface;
+                ppeffectdestroy _color;
+
+                waituntil {!isnull curatorcamera};
+            } else {
+                ppeffectdestroy _color;
             };
-            _unitPos = getposatl _unit;
-            _camPos = [_unitPos,10,direction _unit + 180] call bis_fnc_relpos;
-            _camPos set [2,(_unitPos select 2) + (getterrainheightasl _unitPos) - (getterrainheightasl _camPos) + 10];
-            //[_camPos,_unit] call bis_fnc_setcuratorcamera;
-            (getassignedcuratorlogic player) setVariable ["bis_fnc_modulecuratorsetcamera_params",[_camPos,_unit]];
-
-            sleep 0.1; //--- Engine needs a delay in case controlled unit was deleted
-            ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black in",1e10];
-            opencuratorinterface;
-            ppeffectdestroy _color;
-
-            waitUntil {!isnull curatorcamera};
             player switchcamera cameraview;
             bis_fnc_moduleRemoteControl_unit = nil;
             ("bis_fnc_moduleRemoteCurator" call bis_fnc_rscLayer) cuttext ["","black in",1];

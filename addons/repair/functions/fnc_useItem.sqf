@@ -6,7 +6,7 @@
  * 0: Unit <OBJECT>
  * 1: Item classname <STRING>
  *
- * ReturnValue:
+ * Return Value:
  * [Had Item to Use <BOOL>, Unit <OBJECT>] <ARRAY>
  *
  * Example:
@@ -20,7 +20,7 @@ params ["_unit", "_item"];
 TRACE_2("params",_unit,_item);
 
 if ([_unit, _item] call EFUNC(common,hasItem)) exitWith {
-    [[_unit, _item], QUOTE(EFUNC(common,useItem)), _unit] call EFUNC(common,execRemoteFnc); /* TODO Replace by event system */
+    ["ace_useItem", [_unit, _item], _unit] call CBA_fnc_targetEvent;
     [true, _unit];
 };
 

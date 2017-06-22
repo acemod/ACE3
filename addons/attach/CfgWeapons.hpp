@@ -8,8 +8,8 @@ class CfgWeapons {
         scope = 2;
         displayName = CSTRING(IrStrobe_Name);
         descriptionShort = CSTRING(IrStrobe_Description);
-        model = QUOTE(PATHTOF(data\ace_IRStrobe.p3d));
-        picture = PATHTOF(UI\irstrobe_item.paa);
+        model = QPATHTOF(data\ace_IRStrobe.p3d);
+        picture = QPATHTOF(UI\irstrobe_item.paa);
 
         class ItemInfo: InventoryItem_Base_F {
             mass = 1;

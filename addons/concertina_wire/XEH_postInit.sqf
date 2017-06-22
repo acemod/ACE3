@@ -4,10 +4,10 @@ GVAR(placer) = objNull;
 GVAR(deployPFH) = -1;
 
 // Deploy concertina wire if interact menu is opened
-["interactMenuOpened", {
+["ace_interactMenuOpened", {
     if (GVAR(deployPFH) != -1) then {
         GVAR(placer) setVariable [QGVAR(wireDeployed), true];
     };
-}] call EFUNC(common,addEventHandler);
+}] call CBA_fnc_addEventHandler;
 
-[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call EFUNC(common,addEventHandler);
+[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call CBA_fnc_addEventHandler;

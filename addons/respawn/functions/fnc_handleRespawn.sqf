@@ -20,7 +20,11 @@ params ["_unit"];
 
 // Restores the gear when the player respawns
 if (GVAR(SavePreDeathGear)) then {
-    [_unit, GVAR(unitGear)] call FUNC(restoreGear);
+    [
+        _unit,
+        _unit getVariable QGVAR(unitGear),
+        _unit getVariable QGVAR(activeWeaponAndMuzzle)
+    ] call FUNC(restoreGear);
 };
 
 // fix for setVariable public being lost on respawn for machines that JIP after the command was broadcasted

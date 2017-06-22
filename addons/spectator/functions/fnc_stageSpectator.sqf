@@ -27,7 +27,7 @@ params [["_unit",player,[objNull]], ["_set",true,[true]]];
 if !(_set || (GETVAR(_unit,GVAR(isStaged),false))) exitWith {};
 
 if !(local _unit) exitWith {
-    [[_unit, _set], QFUNC(stageSpectator), _unit] call EFUNC(common,execRemoteFnc);
+    [QGVAR(stageSpectator), [_unit, _set], _unit] call CBA_fnc_targetEvent;
 };
 
 // Prevent unit falling into water
@@ -64,5 +64,15 @@ if !(_set isEqualTo (GETVAR(_unit,GVAR(isStaged),false))) then {
     // Mark spectator state for reference
     _unit setVariable [QGVAR(isStaged), _set, true];
 
-    ["spectatorStaged",[_set]] call EFUNC(common,localEvent);
+    ["ace_spectatorStaged", [_set]] call CBA_fnc_localEvent;
+};
+
+//BandAid for #2677 - if player in unitList weird before being staged, weird things can happen
+if ((player in GVAR(unitList)) || {ACE_player in GVAR(unitList)}) then {
+    [] call FUNC(updateUnits);  //update list now
+    if (!(isNull (findDisplay 12249))) then {//If display is open now, close it and restart
+        WARNING("Player in unitList, call ace_spectator_fnc_stageSpectator before ace_spectator_fnc_setSpectator");
+        ["fixWeirdList", true] call FUNC(interrupt);
+        [{["fixWeirdList", false] call FUNC(interrupt);}, []] call CBA_fnc_execNextFrame;
+    };
 };

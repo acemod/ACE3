@@ -2,13 +2,8 @@
 
 ADDON = false;
 
-PREP(calculateSolution);
-PREP(canCopy);
-PREP(canShow);
-PREP(canShowCopy);
-PREP(onCloseDialog);
-PREP(openRangeCard);
-PREP(updateClassNames);
-PREP(updateRangeCard);
+PREP_RECOMPILE_START;
+#include "XEH_PREP.hpp"
+PREP_RECOMPILE_END;
 
 ADDON = true;

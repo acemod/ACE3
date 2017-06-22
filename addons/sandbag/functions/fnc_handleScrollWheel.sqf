@@ -15,9 +15,9 @@
  */
 #include "script_component.hpp"
 
-params ["_scroll"];
+if (GVAR(deployPFH) == -1) exitWith {false};
 
-if (GETMVAR(ACE_Modifier,0) == 0 || GVAR(deployPFH) == -1) exitWith { false };
+params ["_scroll"];
 
 GVAR(deployDirection) = GVAR(deployDirection) + (_scroll * 5);
 

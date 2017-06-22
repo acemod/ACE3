@@ -3,7 +3,8 @@
  * Cancels sandbag deployment
  *
  * Arguments:
- * 0: unit <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Key <NUMBER>
  *
  * Return Value:
  * None
@@ -15,10 +16,12 @@
  */
 #include "script_component.hpp"
 
-params ["_unit"];
+params ["_unit", "_key"];
+
+if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
 // enable running again
-[_unit, "ACE_Sandbag", false] call EFUNC(common,setForceWalkStatus);
+[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(sandBag);

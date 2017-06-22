@@ -1,24 +1,24 @@
 class CfgVehicles {
     class LandVehicle;
-    class StaticWeapon : LandVehicle {
+    class StaticWeapon: LandVehicle {
         class Turrets;
     };
-    
-    class StaticMGWeapon : StaticWeapon {
-        class Turrets : Turrets {
+
+    class StaticMGWeapon: StaticWeapon {
+        class Turrets: Turrets {
             class MainTurret;
         };
     };
     class AT_01_base_F: StaticMGWeapon {};
-    
+
     class B_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-                
+
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;
@@ -30,13 +30,13 @@ class CfgVehicles {
         };
     };
     class O_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-                
+
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;
@@ -48,13 +48,13 @@ class CfgVehicles {
         };
     };
     class I_static_AT_F: AT_01_base_F {
-        class Turrets : Turrets {
-            class MainTurret : MainTurret {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
                 weapons[] = { QGVAR(Titan_Static) };
                 magazines[] = {"1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles","1Rnd_GAT_missiles"};
-                
+
                 turretInfoType = "ACE_RscOptics_javelin";
-                gunnerOpticsModel = PATHTOF(data\reticle_titan.p3d);
+                gunnerOpticsModel = QPATHTOF(data\reticle_titan.p3d);
                 opticsZoomMin = 0.08333;
                 opticsZoomMax = 0.04167;
                 opticsZoomInit = 0.08333;

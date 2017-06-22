@@ -1,5 +1,10 @@
 #define COMPONENT refuel
+#define COMPONENT_BEAUTIFIED Refuel
 #include "\z\ace\addons\main\script_mod.hpp"
+
+// #define DEBUG_MODE_FULL
+// #define DISABLE_COMPILE_CACHE
+// #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_REFUEL
     #define DEBUG_MODE_FULL
@@ -11,13 +16,14 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define REFUEL_INFINITE_FUEL -1
-#define REFUEL_ACTION_DISTANCE 37
-#define REFUEL_HOSE_LENGTH 12
+#define REFUEL_INFINITE_FUEL -10
+#define REFUEL_ACTION_DISTANCE 7
+#define REFUEL_PROGRESS_DURATION 2
 
 #define REFUEL_HOLSTER_WEAPON \
     _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit]; \
-    _unit action ["SwitchWeapon", _unit, _unit, 99];
+    _unit call EFUNC(common,fixLoweredRifleAnimation); \
+    _unit action ["SwitchWeapon", _unit, _unit, 299];
 
 #define REFUEL_UNHOLSTER_WEAPON \
     _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRefuel); \

@@ -6,7 +6,7 @@
  * Interact Menu Type (0 - world, 1 - self) <NUMBER>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [0] call ace_logistics_wirecutter_fnc_interactEH
@@ -46,9 +46,14 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
                 [_player, _attachedFence] call FUNC(cutDownFence);
             };
             _fncCondition = {
-                params ["", "_player", "_attachedFence"];
+                params ["_helper", "_player", "_attachedFence"];
                 if (!([_player, _attachedFence, []] call EFUNC(common,canInteractWith))) exitWith {false};
-                ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))})
+                ((!isNull _attachedFence) && {(damage _attachedFence) < 1} && {("ACE_wirecutter" in (items _player))} && {
+                    //Custom LOS check for fence
+                    private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
+                    ((!(lineIntersects [AGLtoASL _headPos, AGLtoASL (_helper modelToWorldVisual [0,0,1.25]), _attachedFence, ACE_player])) ||
+                    {!(lineIntersects [AGLtoASL _headPos, getPosASL _attachedFence, _attachedFence, ACE_player])})
+                })
             };
 
             {
@@ -56,7 +61,7 @@ TRACE_1("Starting wire-cut action PFEH",_interactionType);
                     if ([_x] call FUNC(isFence)) then {
                         _fencesHelped pushBack _x;
                         _helper = "ACE_LogicDummy" createVehicleLocal (getpos _x);
-                        _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QUOTE(PATHTOF(ui\wirecutter_ca.paa)), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5] call EFUNC(interact_menu,createAction);
+                        _action = [QGVAR(helperCutFence), (localize LSTRING(CutFence)), QPATHTOF(ui\wirecutter_ca.paa), _fncStatement, _fncCondition, {}, _x, {[0,0,0]}, 5.5, [false, false, false, false, true]] call EFUNC(interact_menu,createAction);
                         [_helper, 0, [],_action] call EFUNC(interact_menu,addActionToObject);
                         _helper setPosASL ((getPosASL _x) vectorAdd [0,0,1.25]);
                         _addedHelpers pushBack _helper;

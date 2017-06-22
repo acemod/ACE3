@@ -8,6 +8,9 @@
  * Return Value:
  * None
  *
+ * Example:
+ * [bob] call ace_common_fnc_fixCollision
+ *
  * Public: No
  */
 #include "script_component.hpp"
@@ -15,8 +18,8 @@
 // allowDamage requires local object
 if (!local _this) exitWith {};
 
-// prevent collision damage, @todo allowDamage API
-_this allowDamage false;
+// prevent collision damage
+[_this, "blockDamage", "fixCollision", true] call FUNC(statusEffect_set);
 
 // re-allow damage after 2 seconds
-[{_this allowDamage true}, _this, 2, 0] call EFUNC(common,waitAndExecute);
+[{[_this, "blockDamage", "fixCollision", false] call FUNC(statusEffect_set);}, _this, 2] call CBA_fnc_waitAndExecute;

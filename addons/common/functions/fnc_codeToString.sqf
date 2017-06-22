@@ -5,19 +5,21 @@
  * Arguments:
  * 0: Code <CODE, STRING>
  *
- * Return value:
+ * Return Value:
  * Code <STRING>
+ *
+ * Example:
+ * ["bob"] call ace_common_fnc_codeToString
  *
  * Public: Yes
  */
 #include "script_component.hpp"
 
-params ["_function"];
+params ["_code"];
+if (_code isEqualType "") exitWith {_code};
 
-if (_function isEqualType "") exitWith {_function};
+_code = str(_code);
+_code = _code select [1, count _code - 2];
 
-_function = toArray str _function;
-_function deleteAt 0;
-_function deleteAt (count _function - 1);
+_code
 
-toString _function // return

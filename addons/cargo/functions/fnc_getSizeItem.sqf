@@ -1,11 +1,11 @@
 /*
- * Author: Glowbal
+ * Author: Glowbal, SilentSpike
  * Get the cargo size of an object.
  *
  * Arguments:
  * 0: Item <OBJECT or STRING>
  *
- * Return value:
+ * Return Value:
  * Cargo size <NUMBER> (default: -1)
  *
  * Example:
@@ -16,23 +16,14 @@
 #include "script_component.hpp"
 
 params ["_item"];
-private ["_isVirtual","_itemClass","_config"];
-scopeName "return";
 
-_isVirtual = (_item isEqualType "");
-_itemClass = if (_isVirtual) then {_item} else {typeOf _item};
-_config = (configFile >> "CfgVehicles" >> _itemClass >> QGVAR(size));
-
-if (_isVirtual) then {
-    if (isNumber _config) then {
-        (getNumber _config) breakOut "return";
-    };
+// Virtual items are much easier to deal with
+if (_item isEqualType "") then {
+    CARGO_SIZE(_item)
 } else {
-    _config = (configFile >> "CfgVehicles" >> typeOf _item >> QGVAR(size));
-
-    if (isNumber _config) then {
-        (_item getVariable [QGVAR(size), getNumber _config]) breakOut "return";
+    if (isNil {_item getVariable QGVAR(size)}) then {
+        CARGO_SIZE(typeOf _item)
+    } else {
+        _item getVariable QGVAR(size)
     };
 };
-
--1
