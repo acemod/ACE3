@@ -22,8 +22,10 @@ if (!GVAR(enabled) || isNull ACE_player) exitWith {};
 
 private _vehicle = vehicle ACE_player;
 
-private _landVehicle = _vehicle isKindOf "LandVehicle" || {_vehicle isKindOf "Ship_F"};
-private _airVehicle = _vehicle isKindOf "Air";
+private _isControllingDrone = !( (UAVControl (getconnectedUAV _vehicle) select 1) isEqualTo "" );
+
+private _landVehicle = _vehicle isKindOf "LandVehicle" || {_vehicle isKindOf "Ship_F"} || { _isControllingDrone && {(getconnectedUAV _vehicle) isKindOf "LandVehicle"} };
+private _airVehicle = _vehicle isKindOf "Air" || { _isControllingDrone && {(getconnectedUAV _vehicle) isKindOf "Air"} };
 
 if (!_landVehicle && !_airVehicle) exitWith {
     [GVAR(viewDistanceOnFoot), _showPrompt] call FUNC(changeViewDistance);
