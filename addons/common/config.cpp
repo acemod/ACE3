@@ -92,8 +92,6 @@ class ACE_Extensions {
 };
 
 class ACE_Tests {
-    class ADDON {
-        vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
-        mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
-    };
+    vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
+    mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
 };

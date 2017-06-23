@@ -32,7 +32,5 @@ class ACE_Extensions {
 };
 
 class ACE_Tests {
-    class ADDON {
-        fcsConflicts = QPATHTOF(dev\test_debugConfigs.sqf);
-    };
+    fcs = QPATHTOF(dev\test_debugConfigs.sqf);
 };

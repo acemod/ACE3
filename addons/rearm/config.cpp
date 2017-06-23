@@ -22,7 +22,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_Tests {
-    class ADDON {
-        vehicleTransportAmmo = QPATHTOF(dev\test_debugConfigs.sqf);
-    };
+    vehicleTransportAmmo = QPATHTOF(dev\test_debugConfigs.sqf);
 };

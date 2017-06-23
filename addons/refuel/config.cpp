@@ -19,7 +19,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 
 class ACE_Tests {
-    class ADDON {
-        vehicleTransportFuel = QPATHTOF(dev\test_debugConfigs.sqf);
-    };
+    vehicleTransportFuel = QPATHTOF(dev\test_debugConfigs.sqf);
 };
