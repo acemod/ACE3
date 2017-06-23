@@ -45,7 +45,7 @@ _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaire
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
 
-        if ((((toLower _x) find "glass") == -1) && {!isText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")}) then {
+        if ((((toLower _x) find "glass") == -1) && {(getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
             _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
                 _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;
