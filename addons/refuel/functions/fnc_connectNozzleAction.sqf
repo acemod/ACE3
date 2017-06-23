@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
- * 2: Visual Position <ARRAY>
+ * 2: Visual Position ASL <ARRAY>
  * 3: Nozzle <OBJECT>
  *
  * Return Value:
@@ -20,60 +20,55 @@
 #include "script_component.hpp"
 private ["_closeInDistance", "_endPosTestOffset"];
 
-params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_startingPosition", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
-private _startingOffset = _target worldToModel _startingPosition;
+params [["_unit", objNull, [objNull]], ["_target", objNull, [objNull]], ["_startingPosASL", [0,0,0], [[]], 3], ["_nozzle", objNull, [objNull]]];
 
-private _startDistanceFromCenter = vectorMagnitude _startingOffset;
-private _closeInUnitVector = vectorNormalized (_startingOffset vectorFromTo [0,0,0]);
 
-private _closeInMax = _startDistanceFromCenter;
-private _closeInMin = 0;
+private _bestPosASL = [];
+private _bestPosDistance = 1e99;
+private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
+private _modelVector = _startingPosASL vectorFromTo (AGLtoASL (_target modelToWorld [0,0,0]));
+private _modelVectorLow = _startingPosASL vectorFromTo (AGLtoASL (_target modelToWorld [0,0,-1]));
 
-while {(_closeInMax - _closeInMin) > 0.01} do {
-    _closeInDistance = (_closeInMax + _closeInMin) / 2;
-    _endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-    _endPosTestOffset set [2, (_startingOffset select 2)];
-    private _endPosTest = _target modelToWorldVisual _endPosTestOffset;
-
-    private _doesIntersect = false;
+{
+    private _endPosASL = _x;
+    // [_startingPosASL, _endPosASL, [1,0,0,1]] call EFUNC(common,addLineToDebugDraw); // Debug scan lines
+    private _intersections = lineIntersectsSurfaces [_startingPosASL, _endPosASL, _unit];
     {
-        if (_doesIntersect) exitWith {};
-        private _startingPosShifted = _startingPosition vectorAdd _x;
-        _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
-        {
-            _endPosShifted = _endPosTest vectorAdd _x;
-            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
-
-            //Uncomment to see the lazor show, and see how the scanning works:
-            // drawLine3D [_startingPosShifted, _endPosShifted, [1,0,0,1]];
-            if (_target in lineIntersectsWith [_startASL, _endASL, _unit]) exitWith {_doesIntersect = true};
-        } forEach [[0,0,0.045], [0,0,-0.045], [0,0.045,0], [0,-0.045,0], [0.045,0,0], [-0.045,0,0]];
-    } forEach [[0,0,0], [0,0,0.05], [0,0,-0.05]];
-
-    if (_doesIntersect) then {
-        _closeInMax = _closeInDistance;
-    } else {
-        _closeInMin = _closeInDistance;
-    };
-};
-
-_closeInDistance = (_closeInMax + _closeInMin) / 2;
+        _x params ["_intersectPosASL", "", "_intersectObject"];
+        if (_intersectObject == _target) then {
+            private _distance = _startingPosASL distance _intersectPosASL;
+            if (_distance < _bestPosDistance) then {
+                _bestPosDistance = _distance;
+                _bestPosASL = _intersectPosASL;
+            };
+        };
+    } forEach _intersections;
+} forEach [
+    // Shoot rays towards player's view angle and see which spot is closest
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,0,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,-0.25,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [-0.25,-0.25,1])) vectorMultiply 3),
+    _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0.25,-0.25,1])) vectorMultiply 3),
+    AGLtoASL (_target modelToWorld [0,0,0]), // Try old method of just using model center
+    AGLtoASL (_target modelToWorld [0,0,-0.5])
+];
 
 //Checks (too close to center or can't attach)
-if ((_startDistanceFromCenter - _closeInDistance) < 0.1) exitWith {
+if (_bestPosASL isEqualTo []) exitWith {
     TRACE_2("no valid spot found",_closeInDistance,_startDistanceFromCenter);
     [localize LSTRING(Failed)] call EFUNC(common,displayTextStructured);
 };
 
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
-_closeInDistance = (_closeInDistance - 0.05);
+_bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-_endPosTestOffset = _startingOffset vectorAdd (_closeInUnitVector vectorMultiply _closeInDistance);
-_endPosTestOffset set [2, (_startingOffset select 2)];
+private _attachPosModel = _target worldToModel (ASLtoAGL _bestPosASL);
 
 [
-    REFUEL_PROGRESS_DURATION,
-    [_unit, _nozzle, _target, _endPosTestOffset],
+    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    [_unit, _nozzle, _target, _attachPosModel],
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_target", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
