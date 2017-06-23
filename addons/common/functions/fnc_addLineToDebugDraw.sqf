@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [[0,0,0], [1,1,0], [1,0,0,1]]] call ace_common_fnc_addLineToDebugDraw;
+ * [[0,0,0], [1,1,0], [1,0,0,1]] call ace_common_fnc_addLineToDebugDraw;
  *
  * Public: No
  */

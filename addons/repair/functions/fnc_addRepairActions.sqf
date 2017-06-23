@@ -79,7 +79,8 @@ _processedHitpoints = [];
         if (_selection isEqualTo "") exitWith { TRACE_3("Selection Empty",_hitpoint,_forEachIndex,_selection); };
         if (_hitpoint isEqualTo "") exitWith { TRACE_3("Hitpoint Empty",_hitpoint,_forEachIndex,_selection); };
         //Depends hitpoints shouldn't be modified directly (will be normalized)
-        if (isText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) exitWith {
+        // Biki: Clearing 'depends' in case of inheritance cannot be an empty string (rpt warnings), but rather a "0" value.
+        if (!((getText (configFile >> "CfgVehicles" >> _type >> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) exitWith {
             TRACE_3("Skip Depends",_hitpoint,_forEachIndex,_selection);
         };
 
