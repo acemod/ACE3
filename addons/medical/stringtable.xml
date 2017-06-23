@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical">
         <Key ID="STR_ACE_Medical_Injuries">
@@ -394,7 +394,7 @@
             <Hungarian>Infúzió sós vizzel...</Hungarian>
             <Italian>Effettuo la rasfusione di soluzione salina</Italian>
             <Portuguese>Transfundindo Soro...</Portuguese>
-            <Japanese>血しょうを投与中・・・</Japanese>
+            <Japanese>生理食塩水を投与中・・・</Japanese>
             <Korean>생리식염수 수혈중...</Korean>
             <SChinese>施打生理食盐水中 ...</SChinese>
             <TChinese>施打生理食鹽水中 ...</TChinese>
@@ -410,7 +410,7 @@
             <Hungarian>Infúzió vérplazmával...</Hungarian>
             <Italian>Effettu la trasfusione di plasma...</Italian>
             <Portuguese>Transfundindo Plasma...</Portuguese>
-            <Japanese>生理食塩水を投与中・・・</Japanese>
+            <Japanese>血しょうを投与中・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
             <SChinese>输血浆中 ...</SChinese>
             <TChinese>輸血漿中 ...</TChinese>
@@ -794,7 +794,7 @@
             <Hungarian>Sós víz adása intravénásan (1000ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (1˙000ml)</Italian>
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
-            <Japanese>血しょう IV (1000ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (1000ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
             <SChinese>注射生理食盐水 (1000ml)</SChinese>
             <TChinese>注射生理食鹽水 (1000ml)</TChinese>
@@ -810,7 +810,7 @@
             <Hungarian>Sós víz adása intravénásan (500ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (500ml)</Italian>
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
-            <Japanese>血しょう IV (500ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (500ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
             <SChinese>注射生理食盐水 (500ml)</SChinese>
             <TChinese>注射生理食鹽水 (500ml)</TChinese>
@@ -826,7 +826,7 @@
             <Hungarian>Sós víz adása intravénásan (250ml)</Hungarian>
             <Italian>Effettua trasfusione salina EV (250ml)</Italian>
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
-            <Japanese>血しょう IV (250ml) をあたえる</Japanese>
+            <Japanese>生理食塩水 IV (250ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
             <SChinese>注射生理食盐水 (250ml)</SChinese>
             <TChinese>注射生理食鹽水 (250ml)</TChinese>
@@ -1098,7 +1098,7 @@
             <Italian>Una benda apposita, utilizzata per coprire una ferita, la quale viene applicata su di essa una volta fermata l'emorragia.</Italian>
             <Portuguese>Uma curativo, material específico para cobrir um ferimento que é aplicado assim que o sangramento é estancando.</Portuguese>
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
-            <Japanese>ドレッシングは、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
+            <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
             <SChinese>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止.</SChinese>
             <TChinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止.</TChinese>
@@ -1447,7 +1447,7 @@
             <Italian>Plasma EV (1000ml)</Italian>
             <Portuguese>Plasma IV (1000ml)</Portuguese>
             <Czech>Krevní plazma (1000ml)</Czech>
-            <Japanese>生理食塩水 IV (1000ml)</Japanese>
+            <Japanese>血しょう IV (1000ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
             <SChinese>血浆 (1000ml)</SChinese>
             <TChinese>血漿 (1000ml)</TChinese>
@@ -1495,7 +1495,7 @@
             <Italian>Plasma EV (500ml)</Italian>
             <Portuguese>Plasma IV (500ml)</Portuguese>
             <Czech>Krevní plazma (500ml)</Czech>
-            <Japanese>生理食塩水 IV (500ml)</Japanese>
+            <Japanese>血しょう IV (500ml)</Japanese>
             <Korean>혈장 IV (500ml)</Korean>
             <SChinese>血浆 (500ml)</SChinese>
             <TChinese>血漿 (500ml)</TChinese>
@@ -1511,7 +1511,7 @@
             <Italian>Plasma EV (250ml)</Italian>
             <Portuguese>Plasma IV (250ml)</Portuguese>
             <Czech>Krevní plazma (250ml)</Czech>
-            <Japanese>生理食塩水 IV (250ml)</Japanese>
+            <Japanese>血しょう IV (250ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
             <SChinese>血浆 (250ml)</SChinese>
             <TChinese>血漿 (250ml)</TChinese>
