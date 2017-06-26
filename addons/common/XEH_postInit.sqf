@@ -318,7 +318,7 @@ GVAR(OldIsCamera) = false;
 }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 
 // Add event handler for UAV control change
-ACE_controlledUAV = [objnull, objnull, [], ""];
+ACE_controlledUAV = [objNull, objNull, [], ""];
 addMissionEventHandler ["PlayerViewChanged", {
     // On non-server client this command is semi-broken
     // arg index 5 should be the controlled UAV, but it will often be objNull (delay from locality switching?)
@@ -332,7 +332,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _UAV = getConnectedUAV player;
         if (!alive player) then {_UAV = objNull;};
         private _position = (UAVControl _UAV) param [1, ""];
-        private _seatAI = objnull;
+        private _seatAI = objNull;
         private _turret = [];
         switch (toLower _position) do {
             case (""): {
