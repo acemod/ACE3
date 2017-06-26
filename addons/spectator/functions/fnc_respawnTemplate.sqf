@@ -31,8 +31,8 @@ if (_respawn in [0,1,4,5]) exitWith {
     if (typeOf _newCorpse == "seagull") then { deleteVehicle _newCorpse; };
 };
 
-// If unit was staged then they entered spectator before dying, ignore
-if !(GETVAR(_newCorpse,GVAR(isStaged),false)) then {
+// If player died while already in spectator, ignore
+if (!GVAR(isSet) || {alive _newCorpse}) then {
     // Negligible respawn delay can result in entering spectator after respawn
     // So we just use this value rather than living state of the unit
     [playerRespawnTime > 1] call FUNC(setSpectator);

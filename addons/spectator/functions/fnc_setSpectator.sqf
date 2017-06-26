@@ -3,12 +3,12 @@
  * Enter/exit spectator mode for the local player
  *
  * Client will be able to communicate in ACRE/TFAR as appropriate
- * If player is alive, will be moved to marker ace_spectator_respawn (or [0,0,0] by default)
- * If player is alive upon exit, will be moved back to original position
+ * If "hide player" is true player will be hidden from group, invisible and invulnerable, but unmoved
  *
  * Arguments:
  * 0: Spectator state of local client <BOOL> (default: true)
  * 1: Force interface <BOOL> (default: true)
+ * 2: Hide player (if alive) <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -21,7 +21,7 @@
 
 #include "script_component.hpp"
 
-params [["_set",true,[true]], ["_force",true,[true]]];
+params [["_set",true,[true]], ["_force",true,[true]], ["_hide",true,[true]]];
 
 // Only clients can be spectators
 if !(hasInterface) exitWith {};
@@ -97,9 +97,20 @@ if (_set) then {
     };
 };
 
-// Stage player if alive to prevent movement and death
+// Hide/Unhide the player if enabled and alive
 if (alive player) then {
-    [player, _set] call FUNC(stageSpectator);
+    private _hidden = (_hide && _set);
+
+    // Ignore damage (vanilla and ace_medical)
+    player allowDamage !_hidden;
+    _unit setVariable [QEGVAR(medical,allowDamage), !_hidden];
+
+    // Move to/from group as appropriate
+    [_unit, _hidden, QGVAR(isSet), side group _unit] call EFUNC(common,switchToGroupSide);
+
+    // Ghosts can't talk
+    [_hidden, QGVAR(isSet)] call EFUNC(common,hideUnit);
+    [_hidden, QGVAR(isSet)] call EFUNC(common,muteUnit);
 };
 
 // Reset interruptions

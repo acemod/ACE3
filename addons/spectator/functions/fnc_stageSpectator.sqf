@@ -20,6 +20,8 @@
 
 #include "script_component.hpp"
 
+ACE_DEPRECATED(QFUNC(stageSpectator),"3.12.0",[ARR_2(QFUNC(setSpectator),"'s new 3rd parameter")] joinString "");
+
 params [["_unit",player,[objNull]], ["_set",true,[true]]];
 
 // No change, no service (but allow spectators to be reset)

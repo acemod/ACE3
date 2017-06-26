@@ -38,5 +38,8 @@ _entities = _entities - GVAR(unitBlacklist);
 // Whitelist overrides filtering
 _entities append GVAR(unitWhitelist);
 
+// Never include the local player
+_entities deleteAt (_entities find player);
+
 // Return no duplicates
 _entities arrayIntersect _entities
