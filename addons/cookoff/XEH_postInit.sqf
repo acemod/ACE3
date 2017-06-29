@@ -122,6 +122,6 @@ if (hasInterface) then {
         [{
             params ["_obj", "_sound"];
             _obj say3D _sound;
-        }, [_obj, _sound], _distance / 343] call CBA_fnc_waitAndExecute;
+        }, [_obj, _sound], _distance / SPEED_OF_SOUND] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 };

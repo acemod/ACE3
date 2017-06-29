@@ -27,3 +27,5 @@
 
 // Delay between flame effect for players in a cooking off vehicle
 #define FLAME_EFFECT_DELAY 0.4
+
+#define SPEED_OF_SOUND 343
