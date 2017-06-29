@@ -108,3 +108,20 @@ if (isServer) then {
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
 };
+
+if (hasInterface) then {
+    [QGVAR(playCookoffSound), {
+        params ["_obj", "_sound", "_maxDis"];
+        if (isNull _obj) exitWith {};
+        private _distance = _obj distance (positionCameraToWorld [0,0,0]);
+        if (_distance > _maxDis) exitWith {};
+
+        // TODO select Sound
+
+        // Delay sound after Rule of SOS.
+        [{
+            params ["_obj", "_sound"];
+            _obj say3D _sound;
+        }, [_obj, _sound], _distance / 343] call CBA_fnc_waitAndExecute;
+    }] call CBA_fnc_addEventHandler;
+};

@@ -73,61 +73,58 @@ if (_amountOfMagazines > 0) exitWith {
     };
 
     private _speed = random (_speedOfAmmo / 10) max 1;
-
-    if (toLower _simType == "shotbullet") then {
-        private _sound = selectRandom [QUOTE(PATHTO_R(sounds\light_crack_close.wss)), QUOTE(PATHTO_R(sounds\light_crack_close_filtered.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
-        playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1250];
-
-        if (random 1 < 0.6) then {
-            [_vehicle, _ammo, _speed, true] call _spawnProjectile;
-        };
-    };
-    if (toLower _simType == "shotshell") then {
-        private _sound = selectRandom [QUOTE(PATHTO_R(sounds\heavy_crack_close.wss)), QUOTE(PATHTO_R(sounds\heavy_crack_close_filtered.wss))];
-        playSound3D [_sound, objNull, false, (getPosASL _vehicle), 2, 1, 1300];
-
-        if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
-        };
-    };
-    if (toLower _simType == "shotgrenade") then {
-        if (random 1 < 0.9) then {
-            _speed = 0;
-        };
-        [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
-    };
-    if (toLower _simType in ["shotrocket", "shotmissile", "shotsubmunitions"]) then {
-        if (random 1 < 0.1) then {
-            private _sound = selectRandom [QUOTE(PATHTO_R(sounds\cannon_crack_close.wss)), QUOTE(PATHTO_R(sounds\cannon_crack_close_filtered.wss))];
-            playSound3D [_sound, objNull, false, (getPosASL _vehicle), 3, 1, 1600];
-
-            [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
-        } else {
-            createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
-        };
-    };
-    if (toLower _simType in ["shotdirectionalbomb", "shotmine"]) then {
-        if (random 1 < 0.5) then {
-            // Not all explosives detonate on destruction, some have scripted alternatives
-            private _scripted = getNumber (_ammoCfg >> "triggerWhenDestroyed") == 1;
-            if !(_scripted) then {
-                _ammo = getText (_ammoCfg >> "ace_explosives_Explosive");
+    _simType = toLower _simType;
+    switch (_simType) do {
+        case ("shotbullet"): {
+            [QGVAR(playCookoffSound), [_vehicle, _simType, 1250]] call CBA_fnc_globalEvent;
+            if (random 1 < 0.6) then {
+                [_vehicle, _ammo, _speed, true] call _spawnProjectile;
             };
+        };
+        case ("shotshell"): {
+            [QGVAR(playCookoffSound), [_vehicle, "shotshell", 1300]] call CBA_fnc_globalEvent;
 
-            // If a scripted alternative doesn't exist use generic explosion
-            if (_ammo != "") then {
-                [_vehicle, _ammo, 0, false] call _spawnProjectile;
+            if (random 1 < 0.15) then {
+                [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
+            };
+        };
+        case ("shotgrenade"): {
+            if (random 1 < 0.9) then {
+                _speed = 0;
+            };
+            [_vehicle, _ammo, _speed, random 1 < 0.5] call _spawnProjectile;
+        };
+        case ("shotrocket"); case ("shotmissile"); case ("shotsubmunitions"): {
+            if (random 1 < 0.1) then {
+                [QGVAR(playCookoffSound), [_vehicle, _simType, 1600]] call CBA_fnc_globalEvent;
+
+                [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
             } else {
-                createvehicle ["SmallSecondary", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
+                createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
+            };
+        };
+        case ("shotmine"); case ("shotdirectionalbomb"): {
+            if (random 1 < 0.5) then {
+                // Not all explosives detonate on destruction, some have scripted alternatives
+                private _scripted = getNumber (_ammoCfg >> "triggerWhenDestroyed") == 1;
+                if !(_scripted) then {
+                    _ammo = getText (_ammoCfg >> "ace_explosives_Explosive");
+                };
+
+                // If a scripted alternative doesn't exist use generic explosion
+                if (_ammo != "") then {
+                    [_vehicle, _ammo, 0, false] call _spawnProjectile;
+                } else {
+                    createvehicle ["SmallSecondary", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
+                };
+            };
+        };
+        case ("shotilluminating"): {
+            if (random 1 < 0.15) then {
+                [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
             };
         };
     };
-    if (toLower _simType == "shotilluminating") then {
-        if (random 1 < 0.15) then {
-            [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
-        };
-    };
-
     [FUNC(detonateAmmunition), [_vehicle, _magazines, _totalAmmo], _timeBetweenAmmoDetonation] call CBA_fnc_waitAndExecute;
 };
 ERROR_1("mag with no ammo - %1", _magazine);
