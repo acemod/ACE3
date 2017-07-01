@@ -116,12 +116,29 @@ if (hasInterface) then {
         private _distance = _obj distance (positionCameraToWorld [0,0,0]);
         if (_distance > _maxDis) exitWith {};
 
-        // TODO select Sound
-
+        private _dis = switch (true) do {
+            case (_distance <= 225): {
+                "close"
+            };
+            case (_distance > 225): {
+                "far"
+            };
+            default {
+                "close"
+            };
+        };
+        _sound = format ["%1_%2_%3", _sound, _dis, (floor random 4) + 1];
         // Delay sound after Rule of SOS.
         [{
             params ["_obj", "_sound"];
-            _obj say3D _sound;
+            
+            private _soundSource = "#particlesource" createVehicleLocal [0,0,0];
+            _soundSource setPos (getPos _obj);
+            _soundSource say3D [_sound, ((positionCameraToWorld [0, 0, 0]) distance _obj * 4), 0.9 + (random 0.2)];
+            [{
+                params ["_soundObj"];
+                deleteVehicle _soundObj;
+            }, _soundSource, 2] call CBA_fnc_waitAndExecute;
         }, [_obj, _sound], _distance / SPEED_OF_SOUND] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 };
