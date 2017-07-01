@@ -127,7 +127,7 @@ if (hasInterface) then {
                 "close"
             };
         };
-        _sound = format ["%1_%2_%3", _sound, _dis, (floor random 4) + 1];
+        _sound = format [QGVAR(%1_%2_%3), _sound, _dis, (floor random 4) + 1];
         // Delay sound after Rule of SOS.
         [{
             params ["_obj", "_sound"];

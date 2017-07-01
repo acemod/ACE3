@@ -78,13 +78,13 @@ private _speed = random (_speedOfAmmo / 10) max 1;
 _simType = toLower _simType;
 switch (_simType) do {
     case ("shotbullet"): {
-        [QGVAR(playCookoffSound), [_vehicle, "shotbullet", 1250]] call CBA_fnc_globalEvent;
+        [QGVAR(playCookoffSound), [_vehicle, _simType, 1250]] call CBA_fnc_globalEvent;
         if (random 1 < 0.6) then {
             [_vehicle, _ammo, _speed, true] call _spawnProjectile;
         };
     };
     case ("shotshell"): {
-        [QGVAR(playCookoffSound), [_vehicle, "shotshell", 1300]] call CBA_fnc_globalEvent;
+        [QGVAR(playCookoffSound), [_vehicle, _simType, 1300]] call CBA_fnc_globalEvent;
         if (random 1 < 0.15) then {
             [_vehicle, _ammo, _speed, random 1 < 0.15] call _spawnProjectile;
         };
@@ -97,7 +97,7 @@ switch (_simType) do {
     };
     case ("shotrocket"); case ("shotmissile"); case ("shotsubmunitions"): {
         if (random 1 < 0.1) then {
-            [QGVAR(playCookoffSound), [_vehicle, "shotrocket", 1600]] call CBA_fnc_globalEvent;
+            [QGVAR(playCookoffSound), [_vehicle, _simType, 1600]] call CBA_fnc_globalEvent;
             [_vehicle, _ammo, _speed, random 1 < 0.3] call _spawnProjectile;
         } else {
             createvehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld _effect2pos), [], 0 , "CAN_COLLIDE"];
