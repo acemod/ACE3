@@ -115,26 +115,29 @@ if (hasInterface) then {
         if (isNull _obj) exitWith {};
         private _distance = _obj distance (positionCameraToWorld [0,0,0]);
         if (_distance > _maxDis) exitWith {};
-
+        _distance = _distance + (random (100) - 50);
         private _dis = switch (true) do {
             case (_distance <= 225): {
                 "close"
             };
-            case (_distance > 225): {
+            case (_distance > 225 && _distance < 852): {
+                "mid"
+            };
+            case (_distance >= 852): {
                 "far"
             };
             default {
                 "close"
             };
         };
-        _sound = format [QGVAR(%1_%2_%3), _sound, _dis, (floor random 4) + 1];
+        _sound = format [QGVAR(%1_%2_%3), _sound, _dis, (floor random 3) + 1];
         // Delay sound after Rule of SOS.
         [{
             params ["_obj", "_sound"];
-            
-            private _soundSource = "#particlesource" createVehicleLocal [0,0,0];
+
+            private _soundSource = "#particlesource" createVehicleLocal [0,0,0]; // We maybe should switch to a pool of objects that we dont need to create every time a sound plays a new source
             _soundSource setPos (getPos _obj);
-            _soundSource say3D [_sound, ((positionCameraToWorld [0, 0, 0]) distance _obj * 4), 0.9 + (random 0.2)];
+            _soundSource say3D [_sound, 3000, 0.9 + (random 0.2)];
             [{
                 params ["_soundObj"];
                 deleteVehicle _soundObj;
