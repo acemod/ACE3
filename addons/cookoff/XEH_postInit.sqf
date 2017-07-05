@@ -156,8 +156,9 @@ if (hasInterface) then {
     }] call CBA_fnc_addEventHandler;
 
     [{
+        if (GVAR(soundObjPool) isEqualTo []) exitWith {};
         private _element = GVAR(soundObjPool) param [0, [time, objNull]];
-        if ((_element select 0) > (time + 120)) then {
+        if (((_element select 0) + 120) < time) then {
             GVAR(soundObjPool) deleteAt 0;
             deleteVehicle (_element select 1);
         };
