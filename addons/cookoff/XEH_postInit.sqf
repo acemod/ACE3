@@ -110,20 +110,34 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
+    GVAR(soundObjPool) = [];
+
+    [QFUNC(poolGetObject), {
+        private _pooledObject = GVAR(soundObjPool) param [0, [-999, objNull]];
+        _pooledObject params ["_time", "_obj"];
+        if (isNull _obj || _time >= time) then {
+            _obj = "#particlesource" createVehicleLocal [0, 0, 0];
+        } else {
+            GVAR(soundObjPool) deleteAt 0;
+        };
+        GVAR(soundObjPool) pushBack [time + 6, _obj];
+        _obj; // return
+    }] call CBA_fnc_compileFinal;
+
     [QGVAR(playCookoffSound), {
         params ["_obj", "_sound", "_maxDis"];
         if (isNull _obj) exitWith {};
         private _distance = _obj distance (positionCameraToWorld [0,0,0]);
         if (_distance > _maxDis) exitWith {};
-        _distance = _distance + (random (100) - 50);
+        _distance = _distance + (random (50) - 25);
         private _dis = switch (true) do {
-            case (_distance <= 225): {
+            case (_distance <= 325): {
                 "close"
             };
-            case (_distance > 225 && _distance < 852): {
+            case (_distance > 325 && _distance < 952): {
                 "mid"
             };
-            case (_distance >= 852): {
+            case (_distance >= 952): {
                 "far"
             };
             default {
@@ -135,13 +149,17 @@ if (hasInterface) then {
         [{
             params ["_obj", "_sound"];
 
-            private _soundSource = "#particlesource" createVehicleLocal [0,0,0]; // We maybe should switch to a pool of objects that we dont need to create every time a sound plays a new source
+            private _soundSource = call FUNC(poolGetObject);
             _soundSource setPos (getPos _obj);
             _soundSource say3D [_sound, 3000, 0.9 + (random 0.2)];
-            [{
-                params ["_soundObj"];
-                deleteVehicle _soundObj;
-            }, _soundSource, 2] call CBA_fnc_waitAndExecute;
         }, [_obj, _sound], _distance / SPEED_OF_SOUND] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
+
+    [{
+        private _element = GVAR(soundObjPool) param [0, [time, objNull]];
+        if ((_element select 0) < (time + 300)) then {
+            GVAR(soundObjPool) deleteAt 0;
+            deleteVehicle (_element select 1);
+        };
+    }, 0.5] call CBA_fnc_addPerFrameHandler;
 };
