@@ -157,7 +157,7 @@ if (hasInterface) then {
 
     [{
         private _element = GVAR(soundObjPool) param [0, [time, objNull]];
-        if ((_element select 0) > (time + 300)) then {
+        if ((_element select 0) > (time + 120)) then {
             GVAR(soundObjPool) deleteAt 0;
             deleteVehicle (_element select 1);
         };
