@@ -120,7 +120,7 @@ if (hasInterface) then {
         } else {
             GVAR(soundObjPool) deleteAt 0;
         };
-        GVAR(soundObjPool) pushBack [time + 6, _obj];
+        GVAR(soundObjPool) pushBack [time + 8, _obj];
         _obj; // return
     }] call CBA_fnc_compileFinal;
 
