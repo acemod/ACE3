@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MineDetector">
         <Key ID="STR_ACE_MineDetector_VMM3_Description">
@@ -11,8 +11,8 @@
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
             <Italian>Metal detector</Italian>
-            <SChinese>金属探测器</SChinese>
-            <TChinese>金屬探測器</TChinese>
+            <Chinesesimp>金属探测器</Chinesesimp>
+            <Chinese>金屬探測器</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_MetalDetector">
             <English>Metal detector</English>
@@ -24,8 +24,8 @@
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
             <Italian>Metal detector</Italian>
-            <SChinese>金属探测器</SChinese>
-            <TChinese>金屬探測器</TChinese>
+            <Chinesesimp>金属探测器</Chinesesimp>
+            <Chinese>金屬探測器</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
@@ -37,8 +37,8 @@
             <German>Aktivieren</German>
             <Korean>작동</Korean>
             <Italian>Attiva</Italian>
-            <SChinese>启用探测器</SChinese>
-            <TChinese>啟用探測器</TChinese>
+            <Chinesesimp>启用探测器</Chinesesimp>
+            <Chinese>啟用探測器</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DeactivateDetector">
             <English>Deactivate</English>
@@ -50,8 +50,8 @@
             <German>Deaktivieren</German>
             <Korean>끄기</Korean>
             <Italian>Disattiva</Italian>
-            <SChinese>停用探测器</SChinese>
-            <TChinese>停用探測器</TChinese>
+            <Chinesesimp>停用探测器</Chinesesimp>
+            <Chinese>停用探測器</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
@@ -63,8 +63,8 @@
             <Korean>헤드폰에 연결</Korean>
             <French>Connecter les écouteurs</French>
             <Italian>Connetti Auricolari</Italian>
-            <SChinese>连接耳机</SChinese>
-            <TChinese>連接耳機</TChinese>
+            <Chinesesimp>连接耳机</Chinesesimp>
+            <Chinese>連接耳機</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
@@ -76,8 +76,8 @@
             <Korean>헤드폰 연결끊기</Korean>
             <French>Déconnecter les écouteurs</French>
             <Italian>Disconnetti Auricolari</Italian>
-            <SChinese>断开耳机</SChinese>
-            <TChinese>斷開耳機</TChinese>
+            <Chinesesimp>断开耳机</Chinesesimp>
+            <Chinese>斷開耳機</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
@@ -89,8 +89,8 @@
             <Korean>헤드폰 연결됨</Korean>
             <French>Écouteurs connectés</French>
             <Italian>Auricolari Connessi</Italian>
-            <SChinese>已连接耳机</SChinese>
-            <TChinese>已連接耳機</TChinese>
+            <Chinesesimp>已连接耳机</Chinesesimp>
+            <Chinese>已連接耳機</Chinese>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
@@ -102,8 +102,8 @@
             <Korean>헤드폰 연결끊김</Korean>
             <French>Écouteurs déconnectés</French>
             <Italian>Auricolari Disconnessi</Italian>
-            <SChinese>已断开耳机</SChinese>
-            <TChinese>已斷開耳機</TChinese>
+            <Chinesesimp>已断开耳机</Chinesesimp>
+            <Chinese>已斷開耳機</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Common">
         <Key ID="STR_ACE_Common_ACETeam">
@@ -14,8 +14,8 @@
             <Italian>ACE-Team</Italian>
             <Japanese>ACE-Team</Japanese>
             <Korean>ACE-Team</Korean>
-            <TChinese>ACE-製作團隊</TChinese>
-            <SChinese>ACE-制作团队</SChinese>
+            <Chinese>ACE-製作團隊</Chinese>
+            <Chinesesimp>ACE-制作团队</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Save">
             <English>Save</English>
@@ -30,8 +30,8 @@
             <Italian>Salva</Italian>
             <Japanese>保存</Japanese>
             <Korean>저장</Korean>
-            <TChinese>儲存</TChinese>
-            <SChinese>储存</SChinese>
+            <Chinese>儲存</Chinese>
+            <Chinesesimp>储存</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Cancel">
             <English>Cancel</English>
@@ -46,8 +46,8 @@
             <Italian>Annulla</Italian>
             <Japanese>中止</Japanese>
             <Korean>취소</Korean>
-            <TChinese>取消</TChinese>
-            <SChinese>取消</SChinese>
+            <Chinese>取消</Chinese>
+            <Chinesesimp>取消</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Options">
             <English>ACE Options</English>
@@ -62,8 +62,8 @@
             <Italian>Opzioni ACE</Italian>
             <Japanese>ACE オプション</Japanese>
             <Korean>ACE 옵션</Korean>
-            <TChinese>ACE設定選項</TChinese>
-            <SChinese>ACE设定选项</SChinese>
+            <Chinese>ACE設定選項</Chinese>
+            <Chinesesimp>ACE设定选项</Chinesesimp>
         </Key>
         <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
@@ -79,8 +79,8 @@
             <Italian>N</Italian>
             <Japanese>北</Japanese>
             <Korean>북</Korean>
-            <TChinese>北</TChinese>
-            <SChinese>北</SChinese>
+            <Chinese>北</Chinese>
+            <Chinesesimp>北</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NNE">
             <English>NNE</English>
@@ -95,8 +95,8 @@
             <Italian>NNE</Italian>
             <Japanese>北北東</Japanese>
             <Korean>북북동</Korean>
-            <TChinese>北北東</TChinese>
-            <SChinese>北北东</SChinese>
+            <Chinese>北北東</Chinese>
+            <Chinesesimp>北北东</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NE">
             <English>NE</English>
@@ -111,8 +111,8 @@
             <Italian>NE</Italian>
             <Japanese>北東</Japanese>
             <Korean>북동</Korean>
-            <TChinese>東北</TChinese>
-            <SChinese>东北</SChinese>
+            <Chinese>東北</Chinese>
+            <Chinesesimp>东北</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ENE">
             <English>ENE</English>
@@ -127,8 +127,8 @@
             <Italian>ENE</Italian>
             <Japanese>東北東</Japanese>
             <Korean>동북동</Korean>
-            <TChinese>東北東</TChinese>
-            <SChinese>东北东</SChinese>
+            <Chinese>東北東</Chinese>
+            <Chinesesimp>东北东</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_E">
             <English>E</English>
@@ -143,8 +143,8 @@
             <Italian>E</Italian>
             <Japanese>東</Japanese>
             <Korean>동</Korean>
-            <TChinese>東</TChinese>
-            <SChinese>东</SChinese>
+            <Chinese>東</Chinese>
+            <Chinesesimp>东</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ESE">
             <English>ESE</English>
@@ -159,8 +159,8 @@
             <Italian>ESE</Italian>
             <Japanese>東南東</Japanese>
             <Korean>동남동</Korean>
-            <TChinese>東南東</TChinese>
-            <SChinese>东南东</SChinese>
+            <Chinese>東南東</Chinese>
+            <Chinesesimp>东南东</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SE">
             <English>SE</English>
@@ -175,8 +175,8 @@
             <Italian>SE</Italian>
             <Japanese>南東</Japanese>
             <Korean>남동</Korean>
-            <TChinese>東南</TChinese>
-            <SChinese>东南</SChinese>
+            <Chinese>東南</Chinese>
+            <Chinesesimp>东南</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SSE">
             <English>SSE</English>
@@ -191,8 +191,8 @@
             <Italian>SSE</Italian>
             <Japanese>南南東</Japanese>
             <Korean>남남동</Korean>
-            <TChinese>南南東</TChinese>
-            <SChinese>南南东</SChinese>
+            <Chinese>南南東</Chinese>
+            <Chinesesimp>南南东</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_S">
             <English>S</English>
@@ -207,8 +207,8 @@
             <Italian>S</Italian>
             <Japanese>南</Japanese>
             <Korean>남</Korean>
-            <TChinese>南</TChinese>
-            <SChinese>南</SChinese>
+            <Chinese>南</Chinese>
+            <Chinesesimp>南</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SSW">
             <English>SSW</English>
@@ -223,8 +223,8 @@
             <Italian>SSO</Italian>
             <Japanese>南南西</Japanese>
             <Korean>남남서</Korean>
-            <TChinese>南南西</TChinese>
-            <SChinese>南南西</SChinese>
+            <Chinese>南南西</Chinese>
+            <Chinesesimp>南南西</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SW">
             <English>SW</English>
@@ -239,8 +239,8 @@
             <Italian>SO</Italian>
             <Japanese>南西</Japanese>
             <Korean>남서</Korean>
-            <TChinese>西南</TChinese>
-            <SChinese>西南</SChinese>
+            <Chinese>西南</Chinese>
+            <Chinesesimp>西南</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_WSW">
             <English>WSW</English>
@@ -255,8 +255,8 @@
             <Italian>OSO</Italian>
             <Japanese>西南西</Japanese>
             <Korean>서남서</Korean>
-            <TChinese>西南西</TChinese>
-            <SChinese>西南西</SChinese>
+            <Chinese>西南西</Chinese>
+            <Chinesesimp>西南西</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_W">
             <English>W</English>
@@ -271,8 +271,8 @@
             <Italian>O</Italian>
             <Japanese>西</Japanese>
             <Korean>서</Korean>
-            <TChinese>西</TChinese>
-            <SChinese>西</SChinese>
+            <Chinese>西</Chinese>
+            <Chinesesimp>西</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_WNW">
             <English>WNW</English>
@@ -287,8 +287,8 @@
             <Italian>ONO</Italian>
             <Japanese>北北西</Japanese>
             <Korean>서북서</Korean>
-            <TChinese>西北西</TChinese>
-            <SChinese>西北西</SChinese>
+            <Chinese>西北西</Chinese>
+            <Chinesesimp>西北西</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NW">
             <English>NW</English>
@@ -303,8 +303,8 @@
             <Italian>NO</Italian>
             <Japanese>北西</Japanese>
             <Korean>북서</Korean>
-            <TChinese>西北</TChinese>
-            <SChinese>西北</SChinese>
+            <Chinese>西北</Chinese>
+            <Chinesesimp>西北</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NNW">
             <English>NNW</English>
@@ -319,8 +319,8 @@
             <Italian>NNO</Italian>
             <Japanese>北北西</Japanese>
             <Korean>북북서</Korean>
-            <TChinese>北北西</TChinese>
-            <SChinese>北北西</SChinese>
+            <Chinese>北北西</Chinese>
+            <Chinesesimp>北北西</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ActionAborted">
             <English>Action cancelled.</English>
@@ -335,8 +335,8 @@
             <Italian>Azione cancellata.</Italian>
             <Japanese>動作を中止した。</Japanese>
             <Korean>행동 취소됨.</Korean>
-            <TChinese>動作已被取消</TChinese>
-            <SChinese>动作已被取消</SChinese>
+            <Chinese>動作已被取消</Chinese>
+            <Chinesesimp>动作已被取消</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_MiscItems">
             <English>[ACE] Miscellaneous Items</English>
@@ -351,8 +351,8 @@
             <Italian>[ACE] Oggetti vari</Italian>
             <Japanese>[ACE] その他のアイテム</Japanese>
             <Korean>[ACE] 기타 물품.</Korean>
-            <TChinese>[ACE] 雜項</TChinese>
-            <SChinese>[ACE] 杂项</SChinese>
+            <Chinese>[ACE] 雜項</Chinese>
+            <Chinesesimp>[ACE] 杂项</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_EnableNumberHotkeys">
             <English>Disable Command Menu</English>
@@ -367,8 +367,8 @@
             <Portuguese>Desabilitar menu de comando</Portuguese>
             <Japanese>指揮メニューを無効化</Japanese>
             <Korean>지휘 메뉴 종료</Korean>
-            <TChinese>關閉命令選單</TChinese>
-            <SChinese>关闭命令选单</SChinese>
+            <Chinese>關閉命令選單</Chinese>
+            <Chinesesimp>关闭命令选单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Unknown">
             <English>Unknown</English>
@@ -383,8 +383,8 @@
             <Portuguese>Desconhecido</Portuguese>
             <Japanese>不明</Japanese>
             <Korean>알 수 없음</Korean>
-            <TChinese>未知的</TChinese>
-            <SChinese>未知的</SChinese>
+            <Chinese>未知的</Chinese>
+            <Chinesesimp>未知的</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NoVoice">
             <English>No Voice</English>
@@ -399,8 +399,8 @@
             <Portuguese>Sem voz</Portuguese>
             <Japanese>音声なし</Japanese>
             <Korean>무음</Korean>
-            <TChinese>沒聲音</TChinese>
-            <SChinese>没声音</SChinese>
+            <Chinese>沒聲音</Chinese>
+            <Chinesesimp>没声音</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TITLE">
             <English>Accept Requests</English>
@@ -415,8 +415,8 @@
             <Italian>Accetta la richiesta</Italian>
             <Japanese>要求を受け入れ</Japanese>
             <Korean>요청 수락</Korean>
-            <TChinese>接受請求</TChinese>
-            <SChinese>接受请求</SChinese>
+            <Chinese>接受請求</Chinese>
+            <Chinesesimp>接受请求</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TITLE">
             <English>Decline Requests</English>
@@ -431,8 +431,8 @@
             <Italian>Rifiuta la richiesta</Italian>
             <Japanese>要求を拒否</Japanese>
             <Korean>요청 거부</Korean>
-            <TChinese>拒絕請求</TChinese>
-            <SChinese>拒绝请求</SChinese>
+            <Chinese>拒絕請求</Chinese>
+            <Chinesesimp>拒绝请求</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ACTION_ACCEPT_REQUEST_KEY_TOOLTIP">
             <English>Accept Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -447,8 +447,8 @@
             <Portuguese>Aceitar pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を許可します。他プレイヤは装備を共有し、使うなど特定の動作を行えます。</Japanese>
             <Korean>다른 플레이어가 보내온 요청을 수락합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <TChinese>接受由其他玩家送出的請求. 包含使用/共享裝備與執行特定動作</TChinese>
-            <SChinese>接受由其他玩家送出的请求. 包含使用/共享装备与执行特定动作</SChinese>
+            <Chinese>接受由其他玩家送出的請求. 包含使用/共享裝備與執行特定動作</Chinese>
+            <Chinesesimp>接受由其他玩家送出的请求. 包含使用/共享装备与执行特定动作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ACTION_DECLINE_REQUEST_KEY_TOOLTIP">
             <English>Decline Requests send by other players. These can be requests to use / share equipment, perform certain actions.</English>
@@ -463,8 +463,8 @@
             <Portuguese>Rejeita pedidos enviados por outros jogadores. Podem ser pedidos para usar/ compartilhar equipamento, realizar certas ações.</Portuguese>
             <Japanese>他プレイヤからの要求を拒否します。他プレイヤは装備を共有し、使うなど特定の動作をできません。</Japanese>
             <Korean>다른 플레이어가 보내온 요청을 거부합니다. 이것은 장비 사용 / 공유 요청, 특정 작업 수행 등이 될 수 있습니다.</Korean>
-            <TChinese>拒絕由其他玩家送出的請求. 包含使用/共享裝備與執行特定動作</TChinese>
-            <SChinese>拒绝由其他玩家送出的请求. 包含使用/共享装备与执行特定动作</SChinese>
+            <Chinese>拒絕由其他玩家送出的請求. 包含使用/共享裝備與執行特定動作</Chinese>
+            <Chinesesimp>拒绝由其他玩家送出的请求. 包含使用/共享装备与执行特定动作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsName">
             <English>Feedback icons</English>
@@ -479,8 +479,8 @@
             <Portuguese>Ícones de Feedback</Portuguese>
             <Japanese>フィードバック アイコン</Japanese>
             <Korean>피드백 아이콘</Korean>
-            <TChinese>回饋圖標</TChinese>
-            <SChinese>回馈图标</SChinese>
+            <Chinese>回饋圖標</Chinese>
+            <Chinesesimp>回馈图标</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingFeedbackIconsDesc">
             <English>Select the position of or disable the feedback icons on your screen. These icons will show to provide extra feedback on your character status and actions performed.</English>
@@ -495,8 +495,8 @@
             <Portuguese>Selecione a posição ou disabilite a posição dos ícones de feedback na sua tela. Esses ícones irão aparecer para mostrar feedback extra do status do seu personagem e ações realizadas.</Portuguese>
             <Japanese>画面上に表示するフィードバック アイコンの位置や無効化を選択できます。このアイコンは自キャラクター状態や動作の状況をフィードバックするために表示されています。</Japanese>
             <Korean>피드백 아이콘의 위치를 설정하거나 비활성화합니다. 피드백 아이콘은 캐릭터의 상세정보와 행동을 보여줍니다.</Korean>
-            <TChinese>選擇位置或取消回饋圖標顯示在螢幕上. 這些圖標將顯示出你角色額外的狀態與行動等資訊.</TChinese>
-            <SChinese>选择位置或取消回馈图标显示在荧幕上. 这些图标将显示出你角色额外的状态与行动等资讯.</SChinese>
+            <Chinese>選擇位置或取消回饋圖標顯示在螢幕上. 這些圖標將顯示出你角色額外的狀態與行動等資訊.</Chinese>
+            <Chinesesimp>选择位置或取消回馈图标显示在荧幕上. 这些图标将显示出你角色额外的状态与行动等资讯.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationName">
             <English>Progress bar location</English>
@@ -511,8 +511,8 @@
             <Portuguese>Local da barra de progresso</Portuguese>
             <Japanese>プログレス バーの位置</Japanese>
             <Korean>진행 막대의 위치</Korean>
-            <TChinese>進度欄位置</TChinese>
-            <SChinese>进度栏位置</SChinese>
+            <Chinese>進度欄位置</Chinese>
+            <Chinesesimp>进度栏位置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingProgressbarLocationDesc">
             <English>Set the desired location of the progress bar on your screen.</English>
@@ -527,8 +527,8 @@
             <Portuguese>Define o local desejado da barra de progresso na sua tela.</Portuguese>
             <Japanese>画面上に表示されるプログレス バーの位置を設定できます。</Japanese>
             <Korean>진행 막대를 원하는 곳에 배치합니다.</Korean>
-            <TChinese>設定進度欄在畫面中的位置</TChinese>
-            <SChinese>设定进度栏在画面中的位置</SChinese>
+            <Chinese>設定進度欄在畫面中的位置</Chinese>
+            <Chinesesimp>设定进度栏在画面中的位置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorName">
             <English>Hint Background color</English>
@@ -543,8 +543,8 @@
             <Portuguese>Cor do fundo da hint</Portuguese>
             <Japanese>ヒントの背景色</Japanese>
             <Korean>힌트 배경색</Korean>
-            <TChinese>提示的背景顏色</TChinese>
-            <SChinese>提示的背景颜色</SChinese>
+            <Chinese>提示的背景顏色</Chinese>
+            <Chinesesimp>提示的背景颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextColorDesc">
             <English>The color of the background from the ACE hints.</English>
@@ -559,8 +559,8 @@
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
             <Japanese>ACE によるヒントの背景色を指定します。</Japanese>
             <Korean>ACE힌트의 배경색을 정합니다.</Korean>
-            <TChinese>設定ACE提示的背景顏色.</TChinese>
-            <SChinese>设定ACE提示的背景颜色.</SChinese>
+            <Chinese>設定ACE提示的背景顏色.</Chinese>
+            <Chinesesimp>设定ACE提示的背景颜色.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorName">
             <English>Hint text font color</English>
@@ -575,8 +575,8 @@
             <Portuguese>Cor do do texto da hint</Portuguese>
             <Japanese>ヒント文章の色</Japanese>
             <Korean>힌트 글씨색</Korean>
-            <TChinese>提示文字的顏色</TChinese>
-            <SChinese>提示文字的颜色</SChinese>
+            <Chinese>提示文字的顏色</Chinese>
+            <Chinesesimp>提示文字的颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_SettingDisplayTextFontColorDesc">
             <English>The color of the text font from the ACE hints. This color is the default color for all text displayed through the ACE Hint system, if the hint text has no other color specified.</English>
@@ -591,8 +591,8 @@
             <Portuguese>A cor do texto das hints do ACE. Essa cor é a cor default para todos os texos exibidos pelo sistema de hints do ACE , caso o texto da hint não tem outra cor especificada.</Portuguese>
             <Japanese>ACE によるヒントの文章へ、色を設定できます。この色は ACE ヒント システムを介して表示される全文章の色と標準でなっており、特定の色を設定していても、標準色になります。</Japanese>
             <Korean>ACE 힌트에 쓰이는 글씨 색입니다. 힌트 글씨의 색이 정해지지 않을경우 모든 힌트의 색은 기본으로 설정됩니다.</Korean>
-            <TChinese>設定ACE提示文字的顏色. 若提示字體並無指定其他顏色, 將會自動選用ACE系統的預設顏色</TChinese>
-            <SChinese>设定ACE提示文字的颜色. 若提示字体并无指定其他颜色, 将会自动选用ACE系统的预设颜色</SChinese>
+            <Chinese>設定ACE提示文字的顏色. 若提示字體並無指定其他顏色, 將會自動選用ACE系統的預設顏色</Chinese>
+            <Chinesesimp>设定ACE提示文字的颜色. 若提示字体并无指定其他颜色, 将会自动选用ACE系统的预设颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDisplayName">
             <English>Banana</English>
@@ -607,8 +607,8 @@
             <Portuguese>Banana</Portuguese>
             <Japanese>甘蕉</Japanese>
             <Korean>바나나</Korean>
-            <TChinese>香蕉</TChinese>
-            <SChinese>香蕉</SChinese>
+            <Chinese>香蕉</Chinese>
+            <Chinesesimp>香蕉</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -623,8 +623,8 @@
             <Portuguese>A banana é uma fruta comestível, botanicamente uma baga, produzida por vários tipos de plantas herbáceas grandes do genero Musa.</Portuguese>
             <Japanese>甘蕉は食べられる果物でバショウ科バショウ属のうち、果実を食用とする品種群の総称。また、その果実のこと。いくつかの原種から育種された多年草。種によっては熟すまでは毒を持つものもある。</Japanese>
             <Korean>바나나는 식용 과일로써 식물학적으로 열매류이며 여러 종류의 개화가능한 초본의 파초과로 부터 생산됩니다.</Korean>
-            <TChinese>香蕉(學名: Musa × paradisiaca), 為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種, 為多年生草本植物. 果實長有棱; 果皮黃色, 果肉白色, 味道香甜. 主要生長在熱帶、亞熱帶地區. 原產於亞洲東南部熱帶、亞熱帶地區.</TChinese>
-            <SChinese>香蕉(学名: Musa × paradisiaca), 为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种, 为多年生草本植物. 果实长有棱; 果皮黄色, 果肉白色, 味道香甜. 主要生长在热带、亚热带地区. 原产于亚洲东南部热带、亚热带地区.</SChinese>
+            <Chinese>香蕉(學名: Musa × paradisiaca), 為芭蕉科芭蕉屬小果野蕉及野蕉的人工栽培雜交種, 為多年生草本植物. 果實長有棱; 果皮黃色, 果肉白色, 味道香甜. 主要生長在熱帶、亞熱帶地區. 原產於亞洲東南部熱帶、亞熱帶地區.</Chinese>
+            <Chinesesimp>香蕉(学名: Musa × paradisiaca), 为芭蕉科芭蕉属小果野蕉及野蕉的人工栽培杂交种, 为多年生草本植物. 果实长有棱; 果皮黄色, 果肉白色, 味道香甜. 主要生长在热带、亚热带地区. 原产于亚洲东南部热带、亚热带地区.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_DisplayName">
             <English>Check PBOs</English>
@@ -639,8 +639,8 @@
             <Italian>Controlla PBO</Italian>
             <Japanese>PBO を検査</Japanese>
             <Korean>PBO 검사</Korean>
-            <TChinese>檢查PBO檔</TChinese>
-            <SChinese>检查PBO档</SChinese>
+            <Chinese>檢查PBO檔</Chinese>
+            <Chinesesimp>检查PBO档</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Description">
             <English>Check addon integrity with server and do selected action if an addon is missing.</English>
@@ -654,8 +654,8 @@
             <Italian>Controlla l'integrità degli addon con il server ed esegui l'azione selezionata se un addon è mancante</Italian>
             <Japanese>サーバがアドオンの整合性を検査し、もし不備があれば実行する動作を選択できます。</Japanese>
             <Korean>서버 에드온의 무결성을 검사하고 사라진 에드온이 있을경우 행동을 선택합니다.</Korean>
-            <TChinese>檢查客戶端與伺服器端的模組清單是否一致且完整, 並提供訊息表示遺失的模組.</TChinese>
-            <SChinese>检查客户端与伺服器端的模组清单是否一致且完整, 并提供讯息表示遗失的模组.</SChinese>
+            <Chinese>檢查客戶端與伺服器端的模組清單是否一致且完整, 並提供訊息表示遺失的模組.</Chinese>
+            <Chinesesimp>检查客户端与伺服器端的模组清单是否一致且完整, 并提供讯息表示遗失的模组.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_DisplayName">
             <English>Action</English>
@@ -670,8 +670,8 @@
             <Italian>Azione</Italian>
             <Japanese>動作</Japanese>
             <Korean>작동</Korean>
-            <TChinese>動作</TChinese>
-            <SChinese>动作</SChinese>
+            <Chinese>動作</Chinese>
+            <Chinesesimp>动作</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Description">
             <English>What to do with people who do not have the right PBOs?</English>
@@ -686,8 +686,8 @@
             <Italian>Cosa fare con giocatori che non hanno i PBO corretti?</Italian>
             <Japanese>プレイヤーが正しい PBO を持っていない場合は？</Japanese>
             <Korean>올바르지 않는 PBO를 가진 사람을 어떻게 할까요?</Korean>
-            <TChinese>若玩家沒有正確的PBO檔時, 將採取何種動作?</TChinese>
-            <SChinese>若玩家没有正确的PBO档时, 将采取何种动作?</SChinese>
+            <Chinese>若玩家沒有正確的PBO檔時, 將採取何種動作?</Chinese>
+            <Chinesesimp>若玩家没有正确的PBO档时, 将采取何种动作?</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnOnce">
             <English>Warn once</English>
@@ -702,8 +702,8 @@
             <Italian>Avverti una volta</Italian>
             <Japanese>一度の警告</Japanese>
             <Korean>경고 한 번</Korean>
-            <TChinese>警告 (一次)</TChinese>
-            <SChinese>警告 (一次)</SChinese>
+            <Chinese>警告 (一次)</Chinese>
+            <Chinesesimp>警告 (一次)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_WarnPerm">
             <English>Warn (permanent)</English>
@@ -718,8 +718,8 @@
             <Italian>Avverti (permanente)</Italian>
             <Japanese>警告（永久的）</Japanese>
             <Korean>경고 (영구적)</Korean>
-            <TChinese>警告 (持續)</TChinese>
-            <SChinese>警告 (持续)</SChinese>
+            <Chinese>警告 (持續)</Chinese>
+            <Chinesesimp>警告 (持续)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Action_Kick">
             <English>Kick</English>
@@ -734,8 +734,8 @@
             <Italian>Kick</Italian>
             <Japanese>排除</Japanese>
             <Korean>추방</Korean>
-            <TChinese>踢除</TChinese>
-            <SChinese>踢除</SChinese>
+            <Chinese>踢除</Chinese>
+            <Chinesesimp>踢除</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_DisplayName">
             <English>Check all addons</English>
@@ -750,8 +750,8 @@
             <Italian>Controlla tutti gli addon</Italian>
             <Japanese>全アドオンを検査</Japanese>
             <Korean>모든 에드온 검사</Korean>
-            <TChinese>檢查所有模組</TChinese>
-            <SChinese>检查所有模组</SChinese>
+            <Chinese>檢查所有模組</Chinese>
+            <Chinesesimp>检查所有模组</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_CheckAll_Description">
             <English>Check all addons instead of only those of ACE?</English>
@@ -766,8 +766,8 @@
             <Italian>Controlla tutti gli addon invece dei soli addon ACE?</Italian>
             <Japanese>ACE MOD の代わりに全アドオンを検査しますか？</Japanese>
             <Korean>ACE를 제외한 모든 모드를 검사할까요?</Korean>
-            <TChinese>檢查包含ACE之外的其他模組?</TChinese>
-            <SChinese>检查包含ACE之外的其他模组?</SChinese>
+            <Chinese>檢查包含ACE之外的其他模組?</Chinese>
+            <Chinesesimp>检查包含ACE之外的其他模组?</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_DisplayName">
             <English>Whitelist</English>
@@ -782,8 +782,8 @@
             <Italian>Lista Bianca</Italian>
             <Japanese>許可制</Japanese>
             <Korean>화이트리스트</Korean>
-            <TChinese>白名單</TChinese>
-            <SChinese>白名单</SChinese>
+            <Chinese>白名單</Chinese>
+            <Chinesesimp>白名单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
@@ -798,8 +798,8 @@
             <Italian>Quali addon sono permessi in ogni caso?</Italian>
             <Japanese>どのようなアドオンを許可しますか？</Japanese>
             <Korean>허가되는 에드온은 어느것입니까?</Korean>
-            <TChinese>哪些模組是可被允許/忽略的?</TChinese>
-            <SChinese>哪些模组是可被允许/忽略的?</SChinese>
+            <Chinese>哪些模組是可被允許/忽略的?</Chinese>
+            <Chinesesimp>哪些模组是可被允许/忽略的?</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_DisplayName">
             <English>LSD Vehicles</English>
@@ -814,8 +814,8 @@
             <Italian>Veicoli LSD</Italian>
             <Japanese>LSD 車両</Japanese>
             <Korean>LSD 차량</Korean>
-            <TChinese>迷幻載具</TChinese>
-            <SChinese>迷幻载具</SChinese>
+            <Chinese>迷幻載具</Chinese>
+            <Chinesesimp>迷幻载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_LSDVehicles_Description">
             <English>Adds LSD effect to synchronized vehicle</English>
@@ -830,8 +830,8 @@
             <Italian>Aggiunge effetti LSD ai veicoli sincronizzati</Italian>
             <Japanese>同期されたオブジェクトに LSD の効果を追加します</Japanese>
             <Korean>동기화된 차량에 LSD효과를 추가합니다.</Korean>
-            <TChinese>使被同步的載具產生瘋狂的迷幻效果. (後果自負)</TChinese>
-            <SChinese>使被同步的载具产生疯狂的迷幻效果. (后果自负)</SChinese>
+            <Chinese>使被同步的載具產生瘋狂的迷幻效果. (後果自負)</Chinese>
+            <Chinesesimp>使被同步的载具产生疯狂的迷幻效果. (后果自负)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_toggleHandheldDevice">
             <English>Toggle Handheld Device</English>
@@ -846,8 +846,8 @@
             <Italian>Apri dispositivo palmare</Italian>
             <Japanese>デバイスを常に表示</Japanese>
             <Korean>휴대장치 토글</Korean>
-            <TChinese>切換手持裝備</TChinese>
-            <SChinese>切换手持装备</SChinese>
+            <Chinese>切換手持裝備</Chinese>
+            <Chinesesimp>切换手持装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -862,8 +862,8 @@
             <Italian>Chiudi dispositivo palmare</Italian>
             <Japanese>デバイスを閉じる</Japanese>
             <Korean>휴대장치 닫기</Korean>
-            <TChinese>關閉手持裝備</TChinese>
-            <SChinese>关闭手持装备</SChinese>
+            <Chinese>關閉手持裝備</Chinese>
+            <Chinesesimp>关闭手持装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_cycleHandheldDevices">
             <English>Cycle Handheld Devices</English>
@@ -878,8 +878,8 @@
             <Italian>Cicla tra dispositivi palmari</Italian>
             <Japanese>表示するデバイスを変える</Japanese>
             <Korean>휴대장치 순환</Korean>
-            <TChinese>循環切換手持裝備</TChinese>
-            <SChinese>循环切换手持装备</SChinese>
+            <Chinese>循環切換手持裝備</Chinese>
+            <Chinesesimp>循环切换手持装备</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Disabled">
             <English>Disabled</English>
@@ -893,8 +893,8 @@
             <Spanish>Desactivado</Spanish>
             <Japanese>無効化</Japanese>
             <Korean>비활성화</Korean>
-            <TChinese>停用</TChinese>
-            <SChinese>停用</SChinese>
+            <Chinese>停用</Chinese>
+            <Chinesesimp>停用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Enabled">
             <English>Enabled</English>
@@ -908,8 +908,8 @@
             <Spanish>Activado</Spanish>
             <Japanese>有効化</Japanese>
             <Korean>활성화</Korean>
-            <TChinese>啟用</TChinese>
-            <SChinese>启用</SChinese>
+            <Chinese>啟用</Chinese>
+            <Chinesesimp>启用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_Yes">
             <English>Yes</English>
@@ -924,8 +924,8 @@
             <Italian>Si</Italian>
             <Japanese>はい</Japanese>
             <Korean>예</Korean>
-            <TChinese>是</TChinese>
-            <SChinese>是</SChinese>
+            <Chinese>是</Chinese>
+            <Chinesesimp>是</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_No">
             <English>No</English>
@@ -940,8 +940,8 @@
             <Italian>No</Italian>
             <Japanese>いいえ</Japanese>
             <Korean>아니오</Korean>
-            <TChinese>否</TChinese>
-            <SChinese>否</SChinese>
+            <Chinese>否</Chinese>
+            <Chinesesimp>否</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_VehiclesOnly">
             <English>Vehicles only</English>
@@ -955,8 +955,8 @@
             <French>Vehicules seulement</French>
             <Japanese>車両のみ</Japanese>
             <Korean>차량 전용</Korean>
-            <TChinese>只有載具</TChinese>
-            <SChinese>只有载具</SChinese>
+            <Chinese>只有載具</Chinese>
+            <Chinesesimp>只有载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_DoNotForce">
             <English>Do Not Force</English>
@@ -970,8 +970,8 @@
             <French>Ne pas forcer</French>
             <Japanese>強制しない</Japanese>
             <Korean>강제하지 말것</Korean>
-            <TChinese>不要強行</TChinese>
-            <SChinese>不要强行</SChinese>
+            <Chinese>不要強行</Chinese>
+            <Chinesesimp>不要强行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryEquipment">
             <English>ACE3 Equipment</English>
@@ -985,8 +985,8 @@
             <French>ACE3 Equipement</French>
             <Japanese>ACE3 装備</Japanese>
             <Korean>ACE3 장비</Korean>
-            <TChinese>ACE3 裝備按鍵</TChinese>
-            <SChinese>ACE3 装备按键</SChinese>
+            <Chinese>ACE3 裝備按鍵</Chinese>
+            <Chinesesimp>ACE3 装备按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryCommon">
             <English>ACE3 Common</English>
@@ -1000,8 +1000,8 @@
             <French>ACE3 Commun</French>
             <Japanese>ACE3 全般</Japanese>
             <Korean>ACE3 일반</Korean>
-            <TChinese>ACE3 通用按鍵</TChinese>
-            <SChinese>ACE3 通用按键</SChinese>
+            <Chinese>ACE3 通用按鍵</Chinese>
+            <Chinesesimp>ACE3 通用按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryWeapons">
             <English>ACE3 Weapons</English>
@@ -1015,8 +1015,8 @@
             <French>ACE3 Armes</French>
             <Japanese>ACE3 武器</Japanese>
             <Korean>ACE3 무기</Korean>
-            <TChinese>ACE3 武器按鍵</TChinese>
-            <SChinese>ACE3 武器按键</SChinese>
+            <Chinese>ACE3 武器按鍵</Chinese>
+            <Chinesesimp>ACE3 武器按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryMovement">
             <English>ACE3 Movement</English>
@@ -1030,8 +1030,8 @@
             <French>ACE3 Mouvement</French>
             <Japanese>ACE3 移動</Japanese>
             <Korean>ACE3 움직임</Korean>
-            <TChinese>ACE3 動作按鍵</TChinese>
-            <SChinese>ACE3 动作按键</SChinese>
+            <Chinese>ACE3 動作按鍵</Chinese>
+            <Chinesesimp>ACE3 动作按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryScopeAdjustment">
             <English>ACE3 Scope Adjustment</English>
@@ -1045,8 +1045,8 @@
             <French>ACE3 Ajustement de la lunette </French>
             <Japanese>ACE3 スコープ調節</Japanese>
             <Korean>ACE3 조준경 조정</Korean>
-            <TChinese>ACE3 瞄準鏡調節按鍵</TChinese>
-            <SChinese>ACE3 瞄准镜调节按键</SChinese>
+            <Chinese>ACE3 瞄準鏡調節按鍵</Chinese>
+            <Chinesesimp>ACE3 瞄准镜调节按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_ACEKeybindCategoryVehicles">
             <English>ACE3 Vehicles</English>
@@ -1060,8 +1060,8 @@
             <French>ACE3 Vehicules</French>
             <Japanese>ACE3 車両</Japanese>
             <Korean>ACE3 차량</Korean>
-            <TChinese>ACE3 載具按鍵</TChinese>
-            <SChinese>ACE3 载具按键</SChinese>
+            <Chinese>ACE3 載具按鍵</Chinese>
+            <Chinesesimp>ACE3 载具按键</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_NoRoomToUnload">
             <English>No Room to unload</English>
@@ -1074,8 +1074,8 @@
             <Portuguese>Sem espaço para descarregar</Portuguese>
             <Russian>Нет места для выгрузки</Russian>
             <Japanese>降ろすための空間がありません</Japanese>
-            <TChinese>沒有空間可卸載</TChinese>
-            <SChinese>没有空间可卸载</SChinese>
+            <Chinese>沒有空間可卸載</Chinese>
+            <Chinesesimp>没有空间可卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_KeybindToggle">
             <English>Toggle</English>
@@ -1090,8 +1090,8 @@
             <Portuguese>alternar</Portuguese>
             <Japanese>トグル</Japanese>
             <Korean>토글</Korean>
-            <TChinese>切換</TChinese>
-            <SChinese>切换</SChinese>
+            <Chinese>切換</Chinese>
+            <Chinesesimp>切换</Chinesesimp>
         </Key>
     </Package>
 </Project>

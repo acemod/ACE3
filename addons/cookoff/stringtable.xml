@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
         <Key ID="STR_ACE_CookOff_enable_name">
@@ -11,8 +11,8 @@
             <Polish>Aktywuj efekty samozapłonu amunicji</Polish>
             <French>Active le cook-off</French>
             <Italian>Abilita Esplosione</Italian>
-            <TChinese>開啟殉爆效果</TChinese>
-            <SChinese>开启殉爆效果</SChinese>
+            <Chinese>開啟殉爆效果</Chinese>
+            <Chinesesimp>开启殉爆效果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enable_tooltip">
             <English>Enables cook off and related vehicle destruction effects.</English>
@@ -24,8 +24,8 @@
             <Polish>Aktywuje efekt samozapłonu amunicji na zniszczonych pojazdach.</Polish>
             <French>Active le cook-off (autocombustion des munitions) et les effets de destruction liés.</French>
             <Italian>Abilita l'esplosione e i relativi effetti di distruzione del veicolo.</Italian>
-            <TChinese>開啟此功能後, 將使有關載具在損毀時有殉爆的效果.</TChinese>
-            <SChinese>开启此功能后, 将使有关载具在损毁时有殉爆的效果.</SChinese>
+            <Chinese>開啟此功能後, 將使有關載具在損毀時有殉爆的效果.</Chinese>
+            <Chinesesimp>开启此功能后, 将使有关载具在损毁时有殉爆的效果.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_generic_turret_wreck">
             <Original>Wreck (Turret)</Original>
@@ -40,8 +40,8 @@
             <Portuguese>Ruínas (torre)</Portuguese>
             <Korean>잔해(포탑)</Korean>
             <Japanese>残骸（タレット）</Japanese>
-            <TChinese>殘骸 (砲塔)</TChinese>
-            <SChinese>残骸 (炮塔)</SChinese>
+            <Chinese>殘骸 (砲塔)</Chinese>
+            <Chinesesimp>残骸 (炮塔)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook off</English>
@@ -51,8 +51,8 @@
             <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
             <French>Cook-off caisses de munitions</French>
             <Italian>Abilita esplosione cassa munizioni</Italian>
-            <TChinese>開啟彈藥箱殉爆效果</TChinese>
-            <SChinese>开启弹药箱殉爆效果</SChinese>
+            <Chinese>開啟彈藥箱殉爆效果</Chinese>
+            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.</English>
@@ -62,8 +62,8 @@
             <Polish>Aktywuje samozapłon skrzyń z amunicją</Polish>
             <French>Active le cook-off sur toutes les caisses de munitions.</French>
             <Italian>Abilita l'esplosione della cassa di munizioni. </Italian>
-            <TChinese>開啟彈藥箱殉爆效果.</TChinese>
-            <SChinese>开启弹药箱殉爆效果.</SChinese>
+            <Chinese>開啟彈藥箱殉爆效果.</Chinese>
+            <Chinesesimp>开启弹药箱殉爆效果.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable Ammunition cook off</English>
@@ -73,8 +73,8 @@
             <Polish>Aktywuj samozapłon amunicji</Polish>
             <French>Active le cook-off des munitions</French>
             <Italian>Abilita Esplosione munizioni</Italian>
-            <TChinese>開啟彈藥殉爆效果</TChinese>
-            <SChinese>开启弹药殉爆效果</SChinese>
+            <Chinese>開啟彈藥殉爆效果</Chinese>
+            <Chinesesimp>开启弹药殉爆效果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables Ammunition cook off. Fires ammunition projectiles while vehicle is on fire and has ammunition.</English>
@@ -83,8 +83,8 @@
             <Polish>Aktywuje samozapłon amunicji. Wystrzeliwuje pociski podczas gdy pojazd płonie i posiada amunicję.</Polish>
             <French>Mets à feu les munitions lorsqu'un véhicule est en feu et contient des munitions.</French>
             <Italian>Abilita l'esplosione delle munizioni. Spara munizioni di proiettili quando il veicolo va a fuoco e contiene munizioni.</Italian>
-            <TChinese>開啟彈藥殉爆效果. 當一台載有彈藥的載具起火時, 將會有殉爆的效果.</TChinese>
-            <SChinese>开启弹药殉爆效果. 当一台载有弹药的载具起火时, 将会有殉爆的效果.</SChinese>
+            <Chinese>開啟彈藥殉爆效果. 當一台載有彈藥的載具起火時, 將會有殉爆的效果.</Chinese>
+            <Chinesesimp>开启弹药殉爆效果. 当一台载有弹药的载具起火时, 将会有殉爆的效果.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammunition cook off duration</English>
@@ -92,8 +92,8 @@
             <Japanese>弾薬の誘爆持続時間</Japanese>
             <French>Durée cook-off des munitions</French>
             <Italian>Durata esplosione munizioni</Italian>
-            <TChinese>彈藥殉爆效果持續時間</TChinese>
-            <SChinese>弹药殉爆效果持续时间</SChinese>
+            <Chinese>彈藥殉爆效果持續時間</Chinese>
+            <Chinesesimp>弹药殉爆效果持续时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long cook off lasts [Setting to 0 will disable ammo cookoff]</English>
@@ -101,8 +101,8 @@
             <Polish>Mnożnik decydujący jak długo ma trwać samozapłon amunicji [Ustawienie na 0 spowoduje wyłącznie samozapłonu]</Polish>
             <Japanese>誘爆の持続時間を乗数で設定。[0 に設定で誘爆を無効化]</Japanese>
             <Italian>Moltiplicatore della durata dell'esplosione [Impostare 0 disabiliterà l'esplosione delle munizioni]</Italian>
-            <TChinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</TChinese>
-            <SChinese>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</SChinese>
+            <Chinese>設定彈藥殉爆效果會持續多久時間 [輸入0來關閉殉爆效果]</Chinese>
+            <Chinesesimp>设定弹药殉爆效果会持续多久时间 [输入0来关闭殉爆效果]</Chinesesimp>
         </Key>
     </Package>
 </Project>

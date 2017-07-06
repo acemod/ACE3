@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SwitchUnits">
         <Key ID="STR_ACE_SwitchUnits_SwitchedUnit">
@@ -14,8 +14,8 @@
             <Portuguese>Trocado de unidade</Portuguese>
             <Japanese>ユニットを切り替え</Japanese>
             <Korean>인원으로 전환</Korean>
-            <SChinese>切换单位</SChinese>
-            <TChinese>切換單位</TChinese>
+            <Chinesesimp>切换单位</Chinesesimp>
+            <Chinese>切換單位</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TryingToSwitch">
             <English>Trying to switch</English>
@@ -29,8 +29,8 @@
             <Russian>Попытка переключения</Russian>
             <Japanese>切り替えを試す</Japanese>
             <Korean>전환 시도중</Korean>
-            <SChinese>尝试切换中</SChinese>
-            <TChinese>嘗試切換中</TChinese>
+            <Chinesesimp>尝试切换中</Chinesesimp>
+            <Chinese>嘗試切換中</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_TooCloseToEnemy">
             <English>This unit is too close to the enemy.</English>
@@ -45,8 +45,8 @@
             <Portuguese>Essa unidade  está muito perto do inimigo.</Portuguese>
             <Japanese>このユニットは敵に近すぎます。</Japanese>
             <Korean>그 인원은 적과 너무 가깝습니다.</Korean>
-            <SChinese>这单位太接近敌人了.</SChinese>
-            <TChinese>這單位太接近敵人了.</TChinese>
+            <Chinesesimp>这单位太接近敌人了.</Chinesesimp>
+            <Chinese>這單位太接近敵人了.</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_DisplayName">
             <English>SwitchUnits System</English>
@@ -61,8 +61,8 @@
             <Italian>Sistema Cambio Unità</Italian>
             <Japanese>SwitchUnits システム</Japanese>
             <Korean>인원전환 시스템</Korean>
-            <SChinese>切换单位系统</SChinese>
-            <TChinese>切換單位系統</TChinese>
+            <Chinesesimp>切换单位系统</Chinesesimp>
+            <Chinese>切換單位系統</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_DisplayName">
             <English>Switch to West?</English>
@@ -77,8 +77,8 @@
             <Italian>Cambia per BLUFOR?</Italian>
             <Japanese>ウエストへ切り替えますか？</Japanese>
             <Korean>서방으로 전환합니까?</Korean>
-            <SChinese>切换至蓝方?</SChinese>
-            <TChinese>切換至藍方?</TChinese>
+            <Chinesesimp>切换至蓝方?</Chinesesimp>
+            <Chinese>切換至藍方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToWest_Description">
             <English>Allow switching to west units?</English>
@@ -93,8 +93,8 @@
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
             <Japanese>ウエスト側ユニットへ切り替えられるようにしますか？</Japanese>
             <Korean>서방 인원으로 전환합니까?</Korean>
-            <SChinese>允许切换至蓝方?</SChinese>
-            <TChinese>允許切換至藍方?</TChinese>
+            <Chinesesimp>允许切换至蓝方?</Chinesesimp>
+            <Chinese>允許切換至藍方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_DisplayName">
             <English>Switch to East?</English>
@@ -109,8 +109,8 @@
             <Italian>Cambia per OPFOR?</Italian>
             <Japanese>イースト側へ切り替えますか？</Japanese>
             <Korean>동방으로 전환합니까?</Korean>
-            <SChinese>切换至红方?</SChinese>
-            <TChinese>切換至紅方?</TChinese>
+            <Chinesesimp>切换至红方?</Chinesesimp>
+            <Chinese>切換至紅方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToEast_Description">
             <English>Allow switching to east units?</English>
@@ -125,8 +125,8 @@
             <Italian>Consenti passaggio ad unità OPFOR?</Italian>
             <Japanese>イースト側ユニットへ切り替えられるようにしますか？</Japanese>
             <Korean>동방인원으로 전환합니까?</Korean>
-            <SChinese>允许切换至红方?</SChinese>
-            <TChinese>允許切換至紅方?</TChinese>
+            <Chinesesimp>允许切换至红方?</Chinesesimp>
+            <Chinese>允許切換至紅方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_DisplayName">
             <English>Switch to Independent?</English>
@@ -141,8 +141,8 @@
             <Italian>Cambia per INDFOR?</Italian>
             <Japanese>インデペンデントへ切り替えますか？</Japanese>
             <Korean>중립으로 전환합니까?</Korean>
-            <SChinese>切换至独立方?</SChinese>
-            <TChinese>切換至獨立方?</TChinese>
+            <Chinesesimp>切换至独立方?</Chinesesimp>
+            <Chinese>切換至獨立方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToIndependent_Description">
             <English>Allow switching to independent units?</English>
@@ -157,8 +157,8 @@
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
             <Japanese>インデペンデント側ユニットへ切り替えられるようにしますか？</Japanese>
             <Korean>중립 인원으로 전환합니까?</Korean>
-            <SChinese>允许切换至独立方?</SChinese>
-            <TChinese>允許切換至獨立方?</TChinese>
+            <Chinesesimp>允许切换至独立方?</Chinesesimp>
+            <Chinese>允許切換至獨立方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_DisplayName">
             <English>Switch to Civilian?</English>
@@ -173,8 +173,8 @@
             <Italian>Cambia per Civili?</Italian>
             <Japanese>シビリアンへ切り替えますか？</Japanese>
             <Korean>민간인으로 전환합니까?</Korean>
-            <SChinese>切换至平民方?</SChinese>
-            <TChinese>切換至平民方?</TChinese>
+            <Chinesesimp>切换至平民方?</Chinesesimp>
+            <Chinese>切換至平民方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SwitchToCivilian_Description">
             <English>Allow switching to civilian units?</English>
@@ -189,8 +189,8 @@
             <Italian>Consenti passaggio ad unità civili?</Italian>
             <Japanese>シビリアン側ユニットへ切り替えられるようにしますか？</Japanese>
             <Korean>민간인으로 전환하는걸 허가합니까?</Korean>
-            <SChinese>允许切换至平民方?</SChinese>
-            <TChinese>允許切換至平民方?</TChinese>
+            <Chinesesimp>允许切换至平民方?</Chinesesimp>
+            <Chinese>允許切換至平民方?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_DisplayName">
             <English>Enable Safe Zone?</English>
@@ -205,8 +205,8 @@
             <Italian>Abilita Zona Sicura?</Italian>
             <Japanese>安全地帯を有効にしますか？</Japanese>
             <Korean>안전 지대 활성화?</Korean>
-            <SChinese>启用安全区?</SChinese>
-            <TChinese>啟用安全區?</TChinese>
+            <Chinesesimp>启用安全区?</Chinesesimp>
+            <Chinese>啟用安全區?</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_EnableSafeZone_Description">
             <English>Enable a safe zone around enemy units? Players can't switch to units inside of the safe zone.</English>
@@ -221,8 +221,8 @@
             <Italian>Abilita una zona sicura attorno ad unità nemiche? I giocatori non possono cambiare ad unità dentro la zona sicura.</Italian>
             <Japanese>敵ユニットから逃れる安全地帯を有効にしますか？プレイヤーは安全地帯内のユニットへ切り替えできません。</Japanese>
             <Korean>적 주위로 안전 지대를 활성화합니까? 안전 지대 내에서는 플레이어가 인원 전환을 할 수 없습니다.</Korean>
-            <SChinese>启用敌方周围安全地带? 玩家不能切换到安全区内的单位.</SChinese>
-            <TChinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位.</TChinese>
+            <Chinesesimp>启用敌方周围安全地带? 玩家不能切换到安全区内的单位.</Chinesesimp>
+            <Chinese>啟用敵方周圍安全地帶? 玩家不能切換到安全區內的單位.</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_DisplayName">
             <English>Safe Zone Radius</English>
@@ -237,8 +237,8 @@
             <Italian>Raggio Zona Sicura</Italian>
             <Japanese>安全地帯の半径</Japanese>
             <Korean>안전 지대 반경</Korean>
-            <SChinese>安全区半径</SChinese>
-            <TChinese>安全區半徑</TChinese>
+            <Chinesesimp>安全区半径</Chinesesimp>
+            <Chinese>安全區半徑</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_SafeZoneRadius_Description">
             <English>The safe zone around players from a different team. Default: 200</English>
@@ -253,8 +253,8 @@
             <Italian>La zona sicura attorno ai giocatori di un team diverso. Default: 200</Italian>
             <Japanese>別のチームへのプレイヤーの周囲にある安全地帯の範囲。標準：200</Japanese>
             <Korean>다른 진영으로 부터의 플레이어 안전 지대. 기본설정: 200</Korean>
-            <SChinese>安全区的范围. 预设值：200</SChinese>
-            <TChinese>安全區的範圍. 預設值：200</TChinese>
+            <Chinesesimp>安全区的范围. 预设值：200</Chinesesimp>
+            <Chinese>安全區的範圍. 預設值：200</Chinese>
         </Key>
         <Key ID="STR_ACE_SwitchUnits_Module_Description">
             <English>Module allows you to switch side during the game.</English>
@@ -268,8 +268,8 @@
             <Spanish>El módulo permite a las unidades cambiar de bando durante el juego.</Spanish>
             <Japanese>モジュールはゲームにおいて、陣営の切り替えを有効にします。</Japanese>
             <Korean>이 모듈은 당신을 게임 중에 진영을 바꿀 수 있게 해줍니다.</Korean>
-            <SChinese>此模块允许你在游戏中切换至另一方.</SChinese>
-            <TChinese>此模塊允許你在遊戲中切換至另一方.</TChinese>
+            <Chinesesimp>此模块允许你在游戏中切换至另一方.</Chinesesimp>
+            <Chinese>此模塊允許你在遊戲中切換至另一方.</Chinese>
         </Key>
     </Package>
 </Project>

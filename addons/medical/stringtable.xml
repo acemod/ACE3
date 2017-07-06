@@ -14,8 +14,8 @@
             <Portuguese>FERIMENTOS</Portuguese>
             <Japanese>負傷</Japanese>
             <Korean>부상</Korean>
-            <SChinese>受伤</SChinese>
-            <TChinese>受傷</TChinese>
+            <Chinesesimp>受伤</Chinesesimp>
+            <Chinese>受傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_NoInjuriesBodypart">
             <English>No injuries on this bodypart...</English>
@@ -30,8 +30,8 @@
             <Portuguese>Nenhum ferimento nesta parte do corpo...</Portuguese>
             <Japanese>怪我をしていない</Japanese>
             <Korean>이 부위에는 부상이 없습니다...</Korean>
-            <SChinese>此身体部位没有受伤</SChinese>
-            <TChinese>此身體部位沒有受傷</TChinese>
+            <Chinesesimp>此身体部位没有受伤</Chinesesimp>
+            <Chinese>此身體部位沒有受傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail">
             <English>Litter Simulation Detail</English>
@@ -46,8 +46,8 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu</Czech>
             <Japanese>医療廃棄物を再現する詳細度</Japanese>
             <Korean>의료폐기물 재현 상세도</Korean>
-            <SChinese>医疗废弃物模拟细节</SChinese>
-            <TChinese>醫療廢棄物模擬細節</TChinese>
+            <Chinesesimp>医疗废弃物模拟细节</Chinesesimp>
+            <Chinese>醫療廢棄物模擬細節</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_litterSimulationDetail_Desc">
             <English>Litter simulation detail level sets the number of litter items which will be locally spawned in the client. Excessive amounts in local areas could cause FPS lag, so this is a client only setting.</English>
@@ -62,8 +62,8 @@
             <Czech>Počet zobrazených předmětů po použití zdravotnického materiálu ovlivňuje počet objektů, které budou zobrazeny klientovi v místě použití zdravotnického materiálu. Vyšší množství objektů může způsobovat poklesy FPS a proto je toto nastavení čistě na klientovi.</Czech>
             <Japanese>医療廃棄物再現度は各クライアントでローカルに作成される、医療廃棄物への詳細度を決定できます。ローカルで多くのアイテムがあると FPS の低下を引き起こすため、クライアント側のみの設定です。</Japanese>
             <Korean>의료폐기물 재현 상세도의 경우 얼마나 많은 수의 폐기물이 클라이언트 주변에 생성되는지를 정합니다. 매우 많은 수의 지역은 프레임드랍을 유발할 수 있습니다, 고로 이는 클라이언트 전용 설정입니다.</Korean>
-            <SChinese>设定医疗废弃物的最大产生数量, 过多的数量会导致画面更新率延迟, 因此这由用户端来设定</SChinese>
-            <TChinese>設定醫療廢棄物的最大產生數量, 過多的數量會導致畫面更新率延遲, 因此這由用戶端來設定</TChinese>
+            <Chinesesimp>设定医疗废弃物的最大产生数量, 过多的数量会导致画面更新率延迟, 因此这由用户端来设定</Chinesesimp>
+            <Chinese>設定醫療廢棄物的最大產生數量, 過多的數量會導致畫面更新率延遲, 因此這由用戶端來設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Adenosine">
             <English>Inject Adenosine</English>
@@ -77,8 +77,8 @@
             <Russian>Ввести аденозин</Russian>
             <Japanese>アデノシンを投与</Japanese>
             <Korean>아데노신 주사</Korean>
-            <SChinese>注射腺苷</SChinese>
-            <TChinese>注射腺苷</TChinese>
+            <Chinesesimp>注射腺苷</Chinesesimp>
+            <Chinese>注射腺苷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Atropine">
             <English>Inject Atropine</English>
@@ -93,8 +93,8 @@
             <Portuguese>Injetar Atropina</Portuguese>
             <Japanese>アトロピンを投与</Japanese>
             <Korean>아트로핀 주사</Korean>
-            <SChinese>注射阿托品</SChinese>
-            <TChinese>注射阿托品</TChinese>
+            <Chinesesimp>注射阿托品</Chinesesimp>
+            <Chinese>注射阿托品</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Epinephrine">
             <English>Inject Epinephrine</English>
@@ -109,8 +109,8 @@
             <Italian>Inietta adrenalina</Italian>
             <Japanese>アドレナリンを投与</Japanese>
             <Korean>에피네프린 주사</Korean>
-            <SChinese>注射肾上腺素</SChinese>
-            <TChinese>注射腎上腺素</TChinese>
+            <Chinesesimp>注射肾上腺素</Chinesesimp>
+            <Chinese>注射腎上腺素</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Inject_Morphine">
             <English>Inject Morphine</English>
@@ -125,8 +125,8 @@
             <Italian>Inietta morfina</Italian>
             <Japanese>モルヒネを投与</Japanese>
             <Korean>모르핀 주사</Korean>
-            <SChinese>注射吗啡</SChinese>
-            <TChinese>注射嗎啡</TChinese>
+            <Chinesesimp>注射吗啡</Chinesesimp>
+            <Chinese>注射嗎啡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Blood">
             <English>Transfuse Blood</English>
@@ -141,8 +141,8 @@
             <Italian>Trasfusione di sangue</Italian>
             <Japanese>輸血する</Japanese>
             <Korean>혈액 수혈</Korean>
-            <SChinese>输血液</SChinese>
-            <TChinese>輸血液</TChinese>
+            <Chinesesimp>输血液</Chinesesimp>
+            <Chinese>輸血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Plasma">
             <English>Transfuse Plasma</English>
@@ -157,8 +157,8 @@
             <Portuguese>Transfundir Plasma</Portuguese>
             <Japanese>血しょうを投与</Japanese>
             <Korean>혈장 수혈</Korean>
-            <SChinese>输血浆</SChinese>
-            <TChinese>輸血漿</TChinese>
+            <Chinesesimp>输血浆</Chinesesimp>
+            <Chinese>輸血漿</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfuse_Saline">
             <English>Transfuse Saline</English>
@@ -173,8 +173,8 @@
             <Portuguese>Transfundir Soro</Portuguese>
             <Japanese>生理食塩水を投与</Japanese>
             <Korean>생리식염수 수혈</Korean>
-            <SChinese>注射生理食盐水</SChinese>
-            <TChinese>注射生理食鹽水</TChinese>
+            <Chinesesimp>注射生理食盐水</Chinesesimp>
+            <Chinese>注射生理食鹽水</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Tourniquet">
             <English>Apply Tourniquet</English>
@@ -189,8 +189,8 @@
             <Hungarian>Érszorító alkalmazása</Hungarian>
             <Japanese>止血帯を巻く</Japanese>
             <Korean>지혈대 적용</Korean>
-            <SChinese>使用军用止血带</SChinese>
-            <TChinese>使用軍用止血帶</TChinese>
+            <Chinesesimp>使用军用止血带</Chinesesimp>
+            <Chinese>使用軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage">
             <English>Bandage</English>
@@ -205,8 +205,8 @@
             <Russian>Перевязать</Russian>
             <Japanese>包帯</Japanese>
             <Korean>붕대</Korean>
-            <SChinese>绷带</SChinese>
-            <TChinese>繃帶</TChinese>
+            <Chinesesimp>绷带</Chinesesimp>
+            <Chinese>繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitHead">
             <English>Bandage Head</English>
@@ -221,8 +221,8 @@
             <Italian>Benda la testa</Italian>
             <Japanese>包帯を頭へ</Japanese>
             <Korean>머리에 붕대감기</Korean>
-            <SChinese>绷带包扎 头部</SChinese>
-            <TChinese>繃帶包紮 頭部</TChinese>
+            <Chinesesimp>绷带包扎 头部</Chinesesimp>
+            <Chinese>繃帶包紮 頭部</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitBody">
             <English>Bandage Torso</English>
@@ -237,8 +237,8 @@
             <Italian>Benda il torso</Italian>
             <Japanese>包帯を胴体へ</Japanese>
             <Korean>몸통에 붕대감기</Korean>
-            <SChinese>绷带包扎 身体</SChinese>
-            <TChinese>繃帶包紮 身體</TChinese>
+            <Chinesesimp>绷带包扎 身体</Chinesesimp>
+            <Chinese>繃帶包紮 身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitLeftArm">
             <English>Bandage Left Arm</English>
@@ -253,8 +253,8 @@
             <Italian>Benda il braccio sinistro</Italian>
             <Japanese>包帯を左腕に</Japanese>
             <Korean>왼팔에 붕대감기</Korean>
-            <SChinese>绷带包扎 左手</SChinese>
-            <TChinese>繃帶包紮 左手</TChinese>
+            <Chinesesimp>绷带包扎 左手</Chinesesimp>
+            <Chinese>繃帶包紮 左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitRightArm">
             <English>Bandage Right Arm</English>
@@ -269,8 +269,8 @@
             <Italian>Benda il braccio destro</Italian>
             <Japanese>包帯を右腕に</Japanese>
             <Korean>오른팔에 붕대감기</Korean>
-            <SChinese>绷带包扎 右手</SChinese>
-            <TChinese>繃帶包紮 右手</TChinese>
+            <Chinesesimp>绷带包扎 右手</Chinesesimp>
+            <Chinese>繃帶包紮 右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitLeftLeg">
             <English>Bandage Left Leg</English>
@@ -285,8 +285,8 @@
             <Italian>Benda la gamba sinistra</Italian>
             <Japanese>包帯を左足へ</Japanese>
             <Korean>왼쪽 다리에 붕대감기</Korean>
-            <SChinese>绷带包扎 左脚</SChinese>
-            <TChinese>繃帶包紮 左腳</TChinese>
+            <Chinesesimp>绷带包扎 左脚</Chinesesimp>
+            <Chinese>繃帶包紮 左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_HitRightLeg">
             <English>Bandage Right Leg</English>
@@ -301,8 +301,8 @@
             <Italian>Benda la gamba destra</Italian>
             <Japanese>包帯を右足へ</Japanese>
             <Korean>오른쪽 다리에 붕대감기</Korean>
-            <SChinese>绷带包扎 右脚</SChinese>
-            <TChinese>繃帶包紮 右腳</TChinese>
+            <Chinesesimp>绷带包扎 右脚</Chinesesimp>
+            <Chinese>繃帶包紮 右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Morphine">
             <English>Injecting Morphine...</English>
@@ -317,8 +317,8 @@
             <Italian>Inietto la morfina...</Italian>
             <Japanese>モルヒネを投与中・・・</Japanese>
             <Korean>모르핀 주사중...</Korean>
-            <SChinese>吗啡注射中...</SChinese>
-            <TChinese>嗎啡注射中...</TChinese>
+            <Chinesesimp>吗啡注射中...</Chinesesimp>
+            <Chinese>嗎啡注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Epinephrine">
             <English>Injecting Epinephrine...</English>
@@ -333,8 +333,8 @@
             <Italian>Inietto l'adrenalina...</Italian>
             <Japanese>アドレナリンを投与中・・・</Japanese>
             <Korean>에피네프린 주사중...</Korean>
-            <SChinese>肾上腺素注射中...</SChinese>
-            <TChinese>腎上腺素注射中...</TChinese>
+            <Chinesesimp>肾上腺素注射中...</Chinesesimp>
+            <Chinese>腎上腺素注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Adenosine">
             <English>Injecting Adenosine...</English>
@@ -348,8 +348,8 @@
             <Russian>Введение аденозина...</Russian>
             <Japanese>アドネシンを投与中・・・</Japanese>
             <Korean>아데노신 주사중...</Korean>
-            <SChinese>腺苷注射中...</SChinese>
-            <TChinese>腺苷注射中...</TChinese>
+            <Chinesesimp>腺苷注射中...</Chinesesimp>
+            <Chinese>腺苷注射中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Injecting_Atropine">
             <English>Injecting Atropine...</English>
@@ -364,8 +364,8 @@
             <Portuguese>Injetando Atropina</Portuguese>
             <Japanese>アトロピンを投与中・・・</Japanese>
             <Korean>아트리핀 주사중...</Korean>
-            <SChinese>阿托品注射中 ...</SChinese>
-            <TChinese>阿托品注射中 ...</TChinese>
+            <Chinesesimp>阿托品注射中 ...</Chinesesimp>
+            <Chinese>阿托品注射中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Blood">
             <English>Transfusing Blood...</English>
@@ -380,8 +380,8 @@
             <Italian>Effettuo la trasfusione di sangue...</Italian>
             <Japanese>輸血中・・・</Japanese>
             <Korean>혈액 수혈중...</Korean>
-            <SChinese>输血液中 ...</SChinese>
-            <TChinese>輸血液中 ...</TChinese>
+            <Chinesesimp>输血液中 ...</Chinesesimp>
+            <Chinese>輸血液中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Saline">
             <English>Transfusing Saline...</English>
@@ -396,8 +396,8 @@
             <Portuguese>Transfundindo Soro...</Portuguese>
             <Japanese>生理食塩水を投与中・・・</Japanese>
             <Korean>생리식염수 수혈중...</Korean>
-            <SChinese>施打生理食盐水中 ...</SChinese>
-            <TChinese>施打生理食鹽水中 ...</TChinese>
+            <Chinesesimp>施打生理食盐水中 ...</Chinesesimp>
+            <Chinese>施打生理食鹽水中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Transfusing_Plasma">
             <English>Transfusing Plasma...</English>
@@ -412,8 +412,8 @@
             <Portuguese>Transfundindo Plasma...</Portuguese>
             <Japanese>血しょうを投与中・・・</Japanese>
             <Korean>혈장 수혈중...</Korean>
-            <SChinese>输血浆中 ...</SChinese>
-            <TChinese>輸血漿中 ...</TChinese>
+            <Chinesesimp>输血浆中 ...</Chinesesimp>
+            <Chinese>輸血漿中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaging">
             <English>Bandaging...</English>
@@ -428,8 +428,8 @@
             <Russian>Перевязывание...</Russian>
             <Japanese>包帯を巻いています・・・</Japanese>
             <Korean>붕대감는중...</Korean>
-            <SChinese>绷带包扎中 ...</SChinese>
-            <TChinese>繃帶包紮中 ...</TChinese>
+            <Chinesesimp>绷带包扎中 ...</Chinesesimp>
+            <Chinese>繃帶包紮中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Applying_Tourniquet">
             <English>Applying Tourniquet...</English>
@@ -444,8 +444,8 @@
             <Portuguese>Applicando Torniquete</Portuguese>
             <Japanese>止血帯を巻いています・・・</Japanese>
             <Korean>지혈대 적용중...</Korean>
-            <SChinese>使用军用止血带中 ...</SChinese>
-            <TChinese>使用軍用止血帶中 ...</TChinese>
+            <Chinesesimp>使用军用止血带中 ...</Chinesesimp>
+            <Chinese>使用軍用止血帶中 ...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Medical">
             <English>Medical</English>
@@ -460,8 +460,8 @@
             <Hungarian>Orvosi</Hungarian>
             <Japanese>治療</Japanese>
             <Korean>치료</Korean>
-            <SChinese>医疗</SChinese>
-            <TChinese>醫療</TChinese>
+            <Chinesesimp>医疗</Chinesesimp>
+            <Chinese>醫療</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_FieldDressing">
             <English>Field Dressing</English>
@@ -476,8 +476,8 @@
             <Portuguese>Curativo de Campo</Portuguese>
             <Japanese>緊急圧迫包帯</Japanese>
             <Korean>필드 드레싱</Korean>
-            <SChinese>基础绷带</SChinese>
-            <TChinese>基礎繃帶</TChinese>
+            <Chinesesimp>基础绷带</Chinesesimp>
+            <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PackingBandage">
             <English>Packing Bandage</English>
@@ -492,8 +492,8 @@
             <Czech>Obvaz Tlakový</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
-            <SChinese>包扎绷带</SChinese>
-            <TChinese>包紮繃帶</TChinese>
+            <Chinesesimp>包扎绷带</Chinesesimp>
+            <Chinese>包紮繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_ElasticBandage">
             <English>Elastic Bandage</English>
@@ -508,8 +508,8 @@
             <Portuguese>Bandagem Elástica</Portuguese>
             <Japanese>伸縮包帯</Japanese>
             <Korean>압박 붕대</Korean>
-            <SChinese>弹性绷带</SChinese>
-            <TChinese>彈性繃帶</TChinese>
+            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_QuikClot">
             <English>QuikClot</English>
@@ -524,8 +524,8 @@
             <Portuguese>QuikClot</Portuguese>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯</Korean>
-            <SChinese>止血粉</SChinese>
-            <TChinese>止血粉</TChinese>
+            <Chinesesimp>止血粉</Chinesesimp>
+            <Chinese>止血粉</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CheckPulse">
             <English>Check Pulse</English>
@@ -540,8 +540,8 @@
             <Portuguese>Checar Pulso</Portuguese>
             <Japanese>心拍数をはかる</Japanese>
             <Korean>맥박 확인</Korean>
-            <SChinese>检查脉搏</SChinese>
-            <TChinese>檢查脈搏</TChinese>
+            <Chinesesimp>检查脉搏</Chinesesimp>
+            <Chinese>檢查脈搏</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CheckBloodPressure">
             <English>Check Blood Pressure</English>
@@ -556,8 +556,8 @@
             <Portuguese>Chegar Pressão Sanguínea</Portuguese>
             <Japanese>血圧をはかる</Japanese>
             <Korean>혈압 확인</Korean>
-            <SChinese>检查血压</SChinese>
-            <TChinese>檢查血壓</TChinese>
+            <Chinesesimp>检查血压</Chinesesimp>
+            <Chinese>檢查血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_TriageCard">
             <English>Triage Card</English>
@@ -572,8 +572,8 @@
             <Portuguese>Cartão de Triagem</Portuguese>
             <Japanese>トリアージ カード</Japanese>
             <Korean>부상자 분류 카드</Korean>
-            <SChinese>检伤分类卡</SChinese>
-            <TChinese>檢傷分類卡</TChinese>
+            <Chinesesimp>检伤分类卡</Chinesesimp>
+            <Chinese>檢傷分類卡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
@@ -588,8 +588,8 @@
             <Portuguese>Nenhuma entrada neste cartão de triagem</Portuguese>
             <Japanese>トリアージ カードには何も無い</Japanese>
             <Korean>부상자 분류 카드에 쓰여있는것이 없습니다.</Korean>
-            <SChinese>此检伤分类卡上没有任何资料</SChinese>
-            <TChinese>此檢傷分類卡上沒有任何資料</TChinese>
+            <Chinesesimp>此检伤分类卡上没有任何资料</Chinesesimp>
+            <Chinese>此檢傷分類卡上沒有任何資料</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Tourniquet">
             <English>Tourniquet</English>
@@ -604,8 +604,8 @@
             <Portuguese>Torniquete</Portuguese>
             <Japanese>止血帯</Japanese>
             <Korean>지혈대</Korean>
-            <SChinese>军用止血带</SChinese>
-            <TChinese>軍用止血帶</TChinese>
+            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_RemoveTourniquet">
             <English>Remove Tourniquet</English>
@@ -620,8 +620,8 @@
             <Portuguese>Remover Torniquete</Portuguese>
             <Japanese>止血帯をはずす</Japanese>
             <Korean>지혈대 제거</Korean>
-            <SChinese>移除军用止血带</SChinese>
-            <TChinese>移除軍用止血帶</TChinese>
+            <Chinesesimp>移除军用止血带</Chinesesimp>
+            <Chinese>移除軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnose">
             <English>Diagnose</English>
@@ -636,8 +636,8 @@
             <Portuguese>Diagnosticar</Portuguese>
             <Japanese>診断する</Japanese>
             <Korean>진단</Korean>
-            <SChinese>诊断</SChinese>
-            <TChinese>診斷</TChinese>
+            <Chinesesimp>诊断</Chinesesimp>
+            <Chinese>診斷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Diagnosing">
             <English>Diagnosing...</English>
@@ -652,8 +652,8 @@
             <Portuguese>Diagnosticando...</Portuguese>
             <Japanese>診断中・・・</Japanese>
             <Korean>진단중...</Korean>
-            <SChinese>诊断中...</SChinese>
-            <TChinese>診斷中...</TChinese>
+            <Chinesesimp>诊断中...</Chinesesimp>
+            <Chinese>診斷中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_CPR">
             <English>CPR</English>
@@ -668,8 +668,8 @@
             <Portuguese>SBV</Portuguese>
             <Japanese>心肺蘇生</Japanese>
             <Korean>심폐소생술</Korean>
-            <SChinese>心肺复苏术</SChinese>
-            <TChinese>心肺復甦術</TChinese>
+            <Chinesesimp>心肺复苏术</Chinesesimp>
+            <Chinese>心肺復甦術</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_PerformingCPR">
             <English>Performing CPR...</English>
@@ -684,8 +684,8 @@
             <Portuguese>Realizando o SBV...</Portuguese>
             <Japanese>心肺蘇生を実行中・・・</Japanese>
             <Korean>심폐소생중...</Korean>
-            <SChinese>进行心肺复苏术中...</SChinese>
-            <TChinese>進行心肺復甦術中...</TChinese>
+            <Chinesesimp>进行心肺复苏术中...</Chinesesimp>
+            <Chinese>進行心肺復甦術中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_1000">
             <English>Give Blood IV (1000ml)</English>
@@ -700,8 +700,8 @@
             <Portuguese>Administrar Sangue IV (1000ml)</Portuguese>
             <Japanese>血液 IV (1000ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (1000ml)</Korean>
-            <SChinese>输血液 (1000ml)</SChinese>
-            <TChinese>輸血液 (1000ml)</TChinese>
+            <Chinesesimp>输血液 (1000ml)</Chinesesimp>
+            <Chinese>輸血液 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_500">
             <English>Give Blood IV (500ml)</English>
@@ -716,8 +716,8 @@
             <Portuguese>Administrar Sangue IV (500ml)</Portuguese>
             <Japanese>血液 IV (500ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (500ml)</Korean>
-            <SChinese>输血液 (500ml)</SChinese>
-            <TChinese>輸血液 (500ml)</TChinese>
+            <Chinesesimp>输血液 (500ml)</Chinesesimp>
+            <Chinese>輸血液 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Blood4_250">
             <English>Give Blood IV (250ml)</English>
@@ -732,8 +732,8 @@
             <Portuguese>Administrar Sangue IV (250ml)</Portuguese>
             <Japanese>血液 IV (250ml) をあたえる</Japanese>
             <Korean>IV 혈액 수혈 (250ml)</Korean>
-            <SChinese>输血液 (250ml)</SChinese>
-            <TChinese>輸血液 (250ml)</TChinese>
+            <Chinesesimp>输血液 (250ml)</Chinesesimp>
+            <Chinese>輸血液 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_1000">
             <English>Give Plasma IV (1000ml)</English>
@@ -748,8 +748,8 @@
             <Portuguese>Administrar Plasma IV (1000ml)</Portuguese>
             <Japanese>血しょう IV (1000ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (1000ml)</Korean>
-            <SChinese>输血浆 (1000ml)</SChinese>
-            <TChinese>輸血漿 (1000ml)</TChinese>
+            <Chinesesimp>输血浆 (1000ml)</Chinesesimp>
+            <Chinese>輸血漿 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_500">
             <English>Give Plasma IV (500ml)</English>
@@ -764,8 +764,8 @@
             <Portuguese>Administrar Plasma IV (500ml)</Portuguese>
             <Japanese>血しょう IV (500ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (500ml)</Korean>
-            <SChinese>输血浆 (500ml)</SChinese>
-            <TChinese>輸血漿 (500ml)</TChinese>
+            <Chinesesimp>输血浆 (500ml)</Chinesesimp>
+            <Chinese>輸血漿 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Plasma4_250">
             <English>Give Plasma IV (250ml)</English>
@@ -780,8 +780,8 @@
             <Portuguese>Administrar Plasma IV (250ml)</Portuguese>
             <Japanese>血しょう IV (250ml) をあたえる</Japanese>
             <Korean>IV 혈장 수혈 (250ml)</Korean>
-            <SChinese>输血浆 (250ml)</SChinese>
-            <TChinese>輸血漿 (250ml)</TChinese>
+            <Chinesesimp>输血浆 (250ml)</Chinesesimp>
+            <Chinese>輸血漿 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_1000">
             <English>Give Saline IV (1000ml)</English>
@@ -796,8 +796,8 @@
             <Portuguese>Administrar Soro IV (1000ml)</Portuguese>
             <Japanese>生理食塩水 IV (1000ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <SChinese>注射生理食盐水 (1000ml)</SChinese>
-            <TChinese>注射生理食鹽水 (1000ml)</TChinese>
+            <Chinesesimp>注射生理食盐水 (1000ml)</Chinesesimp>
+            <Chinese>注射生理食鹽水 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_500">
             <English>Give Saline IV (500ml)</English>
@@ -812,8 +812,8 @@
             <Portuguese>Administrar Soro IV (500ml)</Portuguese>
             <Japanese>生理食塩水 IV (500ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <SChinese>注射生理食盐水 (500ml)</SChinese>
-            <TChinese>注射生理食鹽水 (500ml)</TChinese>
+            <Chinesesimp>注射生理食盐水 (500ml)</Chinesesimp>
+            <Chinese>注射生理食鹽水 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Actions_Saline4_250">
             <English>Give Saline IV (250ml)</English>
@@ -828,8 +828,8 @@
             <Portuguese>Administrar Soro IV (250ml)</Portuguese>
             <Japanese>生理食塩水 IV (250ml) をあたえる</Japanese>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <SChinese>注射生理食盐水 (250ml)</SChinese>
-            <TChinese>注射生理食鹽水 (250ml)</TChinese>
+            <Chinesesimp>注射生理食盐水 (250ml)</Chinesesimp>
+            <Chinese>注射生理食鹽水 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Minor">
             <English>Minor</English>
@@ -844,8 +844,8 @@
             <Portuguese>Leve</Portuguese>
             <Japanese>保留群</Japanese>
             <Korean>경미</Korean>
-            <SChinese>轻微</SChinese>
-            <TChinese>輕微</TChinese>
+            <Chinesesimp>轻微</Chinesesimp>
+            <Chinese>輕微</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Delayed">
             <English>Delayed</English>
@@ -860,8 +860,8 @@
             <Portuguese>Atrasado</Portuguese>
             <Japanese>待機的治療群</Japanese>
             <Korean>늦어짐</Korean>
-            <SChinese>延后</SChinese>
-            <TChinese>延後</TChinese>
+            <Chinesesimp>延后</Chinesesimp>
+            <Chinese>延後</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Immediate">
             <English>Immediate</English>
@@ -876,8 +876,8 @@
             <Portuguese>Imediato</Portuguese>
             <Japanese>再優先治療群</Japanese>
             <Korean>긴급</Korean>
-            <SChinese>紧急</SChinese>
-            <TChinese>緊急</TChinese>
+            <Chinesesimp>紧急</Chinesesimp>
+            <Chinese>緊急</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_Deceased">
             <English>Deceased</English>
@@ -892,8 +892,8 @@
             <Portuguese>Falecido</Portuguese>
             <Japanese>死亡群</Japanese>
             <Korean>사망</Korean>
-            <SChinese>死亡</SChinese>
-            <TChinese>死亡</TChinese>
+            <Chinesesimp>死亡</Chinesesimp>
+            <Chinese>死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Triage_Status_None">
             <English>None</English>
@@ -908,8 +908,8 @@
             <Portuguese>Nenhum</Portuguese>
             <Japanese>なし</Japanese>
             <Korean>없음</Korean>
-            <SChinese>未分类</SChinese>
-            <TChinese>未分類</TChinese>
+            <Chinesesimp>未分类</Chinesesimp>
+            <Chinese>未分類</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Normal_Breathing">
             <English>Normal breathing</English>
@@ -924,8 +924,8 @@
             <Portuguese>Respiração normal</Portuguese>
             <Japanese>通常の呼吸</Japanese>
             <Korean>정상 호흡</Korean>
-            <SChinese>呼吸正常</SChinese>
-            <TChinese>呼吸正常</TChinese>
+            <Chinesesimp>呼吸正常</Chinesesimp>
+            <Chinese>呼吸正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_No_Breathing">
             <English>No breathing</English>
@@ -940,8 +940,8 @@
             <Portuguese>Não respira</Portuguese>
             <Japanese>息をしていない</Japanese>
             <Korean>호흡 불가</Korean>
-            <SChinese>没有呼吸</SChinese>
-            <TChinese>沒有呼吸</TChinese>
+            <Chinesesimp>没有呼吸</Chinesesimp>
+            <Chinese>沒有呼吸</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Difficult_Breathing">
             <English>Difficult breathing</English>
@@ -956,8 +956,8 @@
             <Portuguese>Dificuldade para respirar</Portuguese>
             <Japanese>呼吸が苦しそうだ</Japanese>
             <Korean>호흡 곤란</Korean>
-            <SChinese>呼吸困难</SChinese>
-            <TChinese>呼吸困難</TChinese>
+            <Chinesesimp>呼吸困难</Chinesesimp>
+            <Chinese>呼吸困難</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Almost_No_Breathing">
             <English>Almost no breathing</English>
@@ -972,8 +972,8 @@
             <Portuguese>Quase não respira</Portuguese>
             <Japanese>ほとんど呼吸をしていない</Japanese>
             <Korean>호흡이 없음</Korean>
-            <SChinese>快要没呼吸</SChinese>
-            <TChinese>快要沒呼吸</TChinese>
+            <Chinesesimp>快要没呼吸</Chinesesimp>
+            <Chinese>快要沒呼吸</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Bleeding">
             <English>Bleeding</English>
@@ -988,8 +988,8 @@
             <Portuguese>Sangrando</Portuguese>
             <Japanese>出血している</Japanese>
             <Korean>출혈</Korean>
-            <SChinese>流血中</SChinese>
-            <TChinese>流血中</TChinese>
+            <Chinesesimp>流血中</Chinesesimp>
+            <Chinese>流血中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Pain">
             <English>In pain</English>
@@ -1004,8 +1004,8 @@
             <Portuguese>Com dor</Portuguese>
             <Japanese>痛みがある</Japanese>
             <Korean>고통</Korean>
-            <SChinese>疼痛中</SChinese>
-            <TChinese>疼痛中</TChinese>
+            <Chinesesimp>疼痛中</Chinesesimp>
+            <Chinese>疼痛中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Lost_Blood">
             <English>Lost a lot of Blood</English>
@@ -1020,8 +1020,8 @@
             <Portuguese>Perdeu muito sangue</Portuguese>
             <Japanese>大量出血している</Japanese>
             <Korean>많은 양의 혈액을 잃음</Korean>
-            <SChinese>大量失血中</SChinese>
-            <TChinese>大量失血中</TChinese>
+            <Chinesesimp>大量失血中</Chinesesimp>
+            <Chinese>大量失血中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Status_Tourniquet_Applied">
             <English>Tourniquet [CAT]</English>
@@ -1036,8 +1036,8 @@
             <Portuguese>Torniquete [CAT]</Portuguese>
             <Japanese>止血帯 [CAT]</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <SChinese>军用止血带</SChinese>
-            <TChinese>軍用止血帶</TChinese>
+            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_receivingIvVolume">
             <English>Receiving IV [%1ml]</English>
@@ -1052,8 +1052,8 @@
             <Portuguese>Recebendo IV [%1ml]</Portuguese>
             <Japanese>IV [%1ml] を投与されている</Japanese>
             <Korean>IV로 [%1ml] 수혈중</Korean>
-            <SChinese>接收静脉注射液中 [%1ml]</SChinese>
-            <TChinese>接收靜脈注射液中 [%1ml]</TChinese>
+            <Chinesesimp>接收静脉注射液中 [%1ml]</Chinesesimp>
+            <Chinese>接收靜脈注射液中 [%1ml]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Display">
             <English>Bandage (Basic)</English>
@@ -1068,8 +1068,8 @@
             <Portuguese>Bandagem(Básico)</Portuguese>
             <Japanese>包帯 (緊急圧迫)</Japanese>
             <Korean>붕대 (기본)</Korean>
-            <SChinese>基础绷带</SChinese>
-            <TChinese>基礎繃帶</TChinese>
+            <Chinesesimp>基础绷带</Chinesesimp>
+            <Chinese>基礎繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Short">
             <English>Used to cover a wound</English>
@@ -1084,8 +1084,8 @@
             <Czech>Slouží k překrytí poranění</Czech>
             <Japanese>傷口をおおう</Japanese>
             <Korean>상처를 덮을때 씁니다</Korean>
-            <SChinese>用于覆盖伤口</SChinese>
-            <TChinese>用於覆蓋傷口</TChinese>
+            <Chinesesimp>用于覆盖伤口</Chinesesimp>
+            <Chinese>用於覆蓋傷口</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Basic_Desc_Use">
             <English>A dressing, that is a particular material used to cover a wound, which is applied over the wound once bleeding has been stemmed.</English>
@@ -1100,8 +1100,8 @@
             <Czech>Obvaz je vhodným způsobem upravený sterilní materiál, určený k překrytí rány, případně k fixaci poranění.</Czech>
             <Japanese>緊急圧迫包帯は、傷口を血液凝固剤でおおうようにできていて、つかうと出血の原因を取りさります。</Japanese>
             <Korean>드레싱, 출혈을 막고서 상처를 덮기위해 쓰는 물건입니다.</Korean>
-            <SChinese>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止.</SChinese>
-            <TChinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止.</TChinese>
+            <Chinesesimp>用于覆盖伤口以防止出血, 透过敷料的止血剂来让出血慢慢停止.</Chinesesimp>
+            <Chinese>用於覆蓋傷口以防止出血, 透過敷料的止血劑來讓出血慢慢停止.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Display">
             <English>Packing Bandage</English>
@@ -1116,8 +1116,8 @@
             <Czech>Obvaz (Tlakový)</Czech>
             <Japanese>弾性包帯</Japanese>
             <Korean>거즈 붕대</Korean>
-            <SChinese>包扎绷带</SChinese>
-            <TChinese>包紮繃帶</TChinese>
+            <Chinesesimp>包扎绷带</Chinesesimp>
+            <Chinese>包紮繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -1132,8 +1132,8 @@
             <Czech>Používá se k zastavení středních až silnějších krvácení</Czech>
             <Japanese>弾性包帯は粘着フィルム状で、普通から大きめなケガにつかい止血します。</Japanese>
             <Korean>중형 또는 대형 상처를 채우고 출혈을 막기위해 쓰입니다</Korean>
-            <SChinese>用于包扎中到大型伤口, 并防止出血</SChinese>
-            <TChinese>用於包紮中到大型傷口, 並防止出血</TChinese>
+            <Chinesesimp>用于包扎中到大型伤口, 并防止出血</Chinesesimp>
+            <Chinese>用於包紮中到大型傷口, 並防止出血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Packing_Bandage_Desc_Use">
             <English>A bandage used to pack the wound to stem bleeding and facilitate wound healing. Packing a wound is an option in large polytrauma injuries.</English>
@@ -1148,8 +1148,8 @@
             <Czech>Tlakový obvaz se skládá se ze sterilní krycí vrstvy, na kterou je přiložena silná vrstva savého materiálu stlačující cévu v ráně a která je přitlačována k ráně a připevněna obinadlem. Slouží k zastavení silnějších krvácení.</Czech>
             <Japanese>包帯をつかうと出血の原因を取りのぞき、それを促進させます。また大きめな多発性外傷にたいしても使えます。</Japanese>
             <Korean>출혈을 막고 상처를 치유하기 위한 붕대. 다발성외상의 경우 상처를 채우는것도 한 가지 방법입니다.</Korean>
-            <SChinese>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</SChinese>
-            <TChinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</TChinese>
+            <Chinesesimp>用于包扎中到大型伤口, 并防止出血, 为在大型多处性伤口的选项之一!</Chinesesimp>
+            <Chinese>用於包紮中到大型傷口, 並防止出血, 為在大型多處性傷口的選項之一!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Display">
             <English>Bandage (Elastic)</English>
@@ -1164,8 +1164,8 @@
             <Portuguese>Bandagem (Elástica)</Portuguese>
             <Japanese>包帯 (伸縮)</Japanese>
             <Korean>붕대 (압박)</Korean>
-            <SChinese>弹性绷带</SChinese>
-            <TChinese>彈性繃帶</TChinese>
+            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Short">
             <English>Bandage kit, Elastic</English>
@@ -1180,8 +1180,8 @@
             <Czech>Sada obvazů, Elastická</Czech>
             <Japanese>包帯キット (伸縮)</Japanese>
             <Korean>붕대, 압박</Korean>
-            <SChinese>弹性绷带</SChinese>
-            <TChinese>彈性繃帶</TChinese>
+            <Chinesesimp>弹性绷带</Chinesesimp>
+            <Chinese>彈性繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandage_Elastic_Desc_Use">
             <English>Allows an even compression and extra support to the injured area.</English>
@@ -1196,8 +1196,8 @@
             <Czech>Hodí se k fixačním účelům a to i v oblastech kloubů.</Czech>
             <Japanese>負傷部分へ最大の対応と止血を続けられます。</Japanese>
             <Korean>부상 부위를 골고루 압박해주면서 동시에 고정시켜 줍니다.</Korean>
-            <SChinese>可对伤口持续压迫并固定以防止伤口情况变严重.</SChinese>
-            <TChinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重.</TChinese>
+            <Chinesesimp>可对伤口持续压迫并固定以防止伤口情况变严重.</Chinesesimp>
+            <Chinese>可對傷口持續壓迫並固定以防止傷口情況變嚴重.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Display">
             <English>Tourniquet (CAT)</English>
@@ -1212,8 +1212,8 @@
             <Portuguese>Torniquete (CAT)</Portuguese>
             <Japanese>止血帯 (CAT)</Japanese>
             <Korean>지혈대 [CAT]</Korean>
-            <SChinese>军用止血带</SChinese>
-            <TChinese>軍用止血帶</TChinese>
+            <Chinesesimp>军用止血带</Chinesesimp>
+            <Chinese>軍用止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Desc_Short">
             <English>Slows down blood loss when bleeding</English>
@@ -1228,8 +1228,8 @@
             <Czech>Zpomaluje ztráty krve při krvácení</Czech>
             <Japanese>出血しているときに、流れ出る量をへらします。</Japanese>
             <Korean>출혈 시 혈액손실을 늦춰줍니다</Korean>
-            <SChinese>减缓失血的速度</SChinese>
-            <TChinese>減緩失血的速度</TChinese>
+            <Chinesesimp>减缓失血的速度</Chinesesimp>
+            <Chinese>減緩失血的速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Tourniquet_Desc_Use">
             <English>A constricting device used to compress venous and arterial circulation in effect inhibiting or slowing blood flow and therefore decreasing loss of blood.</English>
@@ -1244,8 +1244,8 @@
             <Czech>Zařízení používané ke stlačení venózního a arteriálního oběhu. V důsledku dochází ke zpomalení toku krve a tedy i snížení ztrát krve.</Czech>
             <Japanese>止血帯は静脈や動脈へ圧力をかけ、循環を遅らせることで血液の流れをおそくし、失血を防ぎます。</Japanese>
             <Korean>정맥과 동맥을 압축시키켜 혈액순환을 억제 혹은 늦추게하여 혈액손실을 줄이는 도구입니다.</Korean>
-            <SChinese>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的.</SChinese>
-            <TChinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的.</TChinese>
+            <Chinesesimp>用于压迫静脉与动脉的血液流动, 达到减缓失血速度的目的.</Chinesesimp>
+            <Chinese>用於壓迫靜脈與動脈的血液流動, 達到減緩失血速度的目的.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Display">
             <English>Morphine autoinjector</English>
@@ -1260,8 +1260,8 @@
             <Portuguese>Auto-injetor de morfina</Portuguese>
             <Japanese>モルヒネ</Japanese>
             <Korean>모르핀 자동주사기</Korean>
-            <SChinese>吗啡自动注射器</SChinese>
-            <TChinese>嗎啡自動注射器</TChinese>
+            <Chinesesimp>吗啡自动注射器</Chinesesimp>
+            <Chinese>嗎啡自動注射器</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Desc_Short">
             <English>Used to combat moderate to severe pain experiences</English>
@@ -1276,8 +1276,8 @@
             <Czech>Slouží k tlumení středně těžkých a těžkých bolestí</Czech>
             <Japanese>戦闘が収まったとき、痛みにたいしてつかいます。</Japanese>
             <Korean>심한 통증을 완화하는데 쓰입니다</Korean>
-            <SChinese>减低中度至重度的疼痛感</SChinese>
-            <TChinese>減低中度至重度的疼痛感</TChinese>
+            <Chinesesimp>减低中度至重度的疼痛感</Chinesesimp>
+            <Chinese>減低中度至重度的疼痛感</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Morphine_Desc_Use">
             <English>An analgesic used to combat moderate to severe pain experiences.</English>
@@ -1292,8 +1292,8 @@
             <Czech>Analgetikum slouží k tlumení středně těžkých a těžkých bolestí</Czech>
             <Japanese>戦闘が収まったとき、モルヒネを痛みにたいしてつかいます。</Japanese>
             <Korean>심한 통증을 완화하기 위해 쓰이는 진통제입니다.</Korean>
-            <SChinese>止痛药的一种, 用于减低中度至重度的疼痛感.</SChinese>
-            <TChinese>止痛藥的一種, 用於減低中度至重度的疼痛感.</TChinese>
+            <Chinesesimp>止痛药的一种, 用于减低中度至重度的疼痛感.</Chinesesimp>
+            <Chinese>止痛藥的一種, 用於減低中度至重度的疼痛感.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Display">
             <English>Adenosine autoinjector</English>
@@ -1307,8 +1307,8 @@
             <Russian>Аденозин в пневмошприце</Russian>
             <Japanese>アデノシン</Japanese>
             <Korean>아데노신 자동주사기</Korean>
-            <SChinese>腺苷自动注射器</SChinese>
-            <TChinese>腺苷自動注射器</TChinese>
+            <Chinesesimp>腺苷自动注射器</Chinesesimp>
+            <Chinese>腺苷自動注射器</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Short">
             <English>Used to counter effects of Epinephrine</English>
@@ -1322,8 +1322,8 @@
             <Russian>Используется для купирования эффектов адреналина</Russian>
             <Japanese>アドレナリンの反対の効果としてつかいます。</Japanese>
             <Korean>에피네프린 대응책으로 쓰입니다</Korean>
-            <SChinese>用来对付肾上腺素的影响</SChinese>
-            <TChinese>用來對付腎上腺素的影響</TChinese>
+            <Chinesesimp>用来对付肾上腺素的影响</Chinesesimp>
+            <Chinese>用來對付腎上腺素的影響</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Adenosine_Desc_Use">
             <English>A drug used to counter the effects of Epinephrine</English>
@@ -1337,8 +1337,8 @@
             <Russian>Препарат используется для купирования эффектов адреналина</Russian>
             <Japanese>つかうと、アドレナリンと反対の効果がでます。</Japanese>
             <Korean>에피네프린에 대응용으로 쓰이는 약품</Korean>
-            <SChinese>一种药物用于减低肾上腺素的效果</SChinese>
-            <TChinese>一種藥物用於減低腎上腺素的效果</TChinese>
+            <Chinesesimp>一种药物用于减低肾上腺素的效果</Chinesesimp>
+            <Chinese>一種藥物用於減低腎上腺素的效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Display">
             <English>Atropine autoinjector</English>
@@ -1353,8 +1353,8 @@
             <Portuguese>Auto-injetor de Atropina</Portuguese>
             <Japanese>アトロピン</Japanese>
             <Korean>아트로핀 자동주사기</Korean>
-            <SChinese>阿托品自动注射器</SChinese>
-            <TChinese>阿托品自動注射器</TChinese>
+            <Chinesesimp>阿托品自动注射器</Chinesesimp>
+            <Chinese>阿托品自動注射器</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Desc_Short">
             <English>Used in NBC scenarios</English>
@@ -1369,8 +1369,8 @@
             <Czech>Používá se v přítomnosti nervových plynů</Czech>
             <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰입니다</Korean>
-            <SChinese>使用于核生化污染的情况</SChinese>
-            <TChinese>使用於核生化汙染的情況</TChinese>
+            <Chinesesimp>使用于核生化污染的情况</Chinesesimp>
+            <Chinese>使用於核生化汙染的情況</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Atropine_Desc_Use">
             <English>A drug used by the Military in NBC scenarios.</English>
@@ -1385,8 +1385,8 @@
             <Czech>Atropin slouží jako protijed na otravu organofosfátovými insekticidy (diazinon) a nervovými plyny.</Czech>
             <Japanese>核・生物・化学兵器がつかわれている条件下にてつかいます。</Japanese>
             <Korean>핵,생물,화학 상황에 쓰이는 군용 약품</Korean>
-            <SChinese>军用神经解毒针, 用来应付核生化污染的情况.</SChinese>
-            <TChinese>軍用神經解毒針, 用來應付核生化汙染的情況.</TChinese>
+            <Chinesesimp>军用神经解毒针, 用来应付核生化污染的情况.</Chinesesimp>
+            <Chinese>軍用神經解毒針, 用來應付核生化汙染的情況.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Display">
             <English>Epinephrine autoinjector</English>
@@ -1401,8 +1401,8 @@
             <Portuguese>Auto-injetor de epinefrina</Portuguese>
             <Japanese>アドレナリン</Japanese>
             <Korean>에피네프린 자동주사기</Korean>
-            <SChinese>肾上腺素自动注射器</SChinese>
-            <TChinese>腎上腺素自動注射器</TChinese>
+            <Chinesesimp>肾上腺素自动注射器</Chinesesimp>
+            <Chinese>腎上腺素自動注射器</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Short">
             <English>Increase heart rate and counter effects given by allergic reactions</English>
@@ -1417,8 +1417,8 @@
             <Czech>Zvyšuje srdeční frekvenci a chrání před alergickými reakcemi</Czech>
             <Japanese>心拍数を増加させたり、アレルギー反応を収める効果もあります。</Japanese>
             <Korean>심박수를 높이며 알러지반응의 대응책입니다</Korean>
-            <SChinese>增加心跳速率的一种药物</SChinese>
-            <TChinese>增加心跳速率的一種藥物</TChinese>
+            <Chinesesimp>增加心跳速率的一种药物</Chinesesimp>
+            <Chinese>增加心跳速率的一種藥物</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Epinephrine_Desc_Use">
             <English>A drug that works on a sympathetic response to dilate the bronchi, increase heart rate and counter such effects given by allergic reactions (anaphylaxis). Used in sudden cardiac arrest scenarios with decreasing positive outcomes.</English>
@@ -1433,8 +1433,8 @@
             <Czech>Zúžení periferních cév díky působení na alfa receptory a následné kontrakci hladkých svalů, tím dochází k tzv. centralizaci oběhu, krev se soustřeďuje v životně důležitých centrálních orgánech (srdce, mozek, plíce), působí také pozitivně na srdeční činnost a dochází ke zvýšení krevního tlaku a tepu. Dále se používá při náhlé srdeční zástavě.</Czech>
             <Japanese>薬は気管支を拡張するよう交感神経を拡張させ、心拍数を増加させます。それにアレルギー反応を収める効果もあります（アナフィラキシー ショック）。得られる効果は少ないですが、心停止している場合などにつかわれます。</Japanese>
             <Korean>기관지를 확장시키는 교감 신경 반응을 이끌어내는 약물로써, 심박을 높이고 알러지 효과에 대응합니다(아나필락시스). 심폐가 정지하는 경우 호전이 되지않을때 사용합니다.</Korean>
-            <SChinese>俗称强心针, 为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应(过敏性休克), 在心跳骤停时有恢复心跳的效果!</SChinese>
-            <TChinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</TChinese>
+            <Chinesesimp>俗称强心针, 为一种支气管扩张药物, 会增加心跳速率并减缓过敏反应(过敏性休克), 在心跳骤停时有恢复心跳的效果!</Chinesesimp>
+            <Chinese>俗稱強心針, 為一種支氣管擴張藥物, 會增加心跳速率並減緩過敏反應(過敏性休克), 在心跳驟停時有恢復心跳的效果!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV">
             <English>Plasma IV (1000ml)</English>
@@ -1449,8 +1449,8 @@
             <Czech>Krevní plazma (1000ml)</Czech>
             <Japanese>血しょう IV (1000ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
-            <SChinese>血浆 (1000ml)</SChinese>
-            <TChinese>血漿 (1000ml)</TChinese>
+            <Chinesesimp>血浆 (1000ml)</Chinesesimp>
+            <Chinese>血漿 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Short">
             <English>A volume-expanding blood supplement.</English>
@@ -1465,8 +1465,8 @@
             <Czech>Intravenózně podávaný doplněk k zvětšení objemu krve</Czech>
             <Japanese>血液量を増加させる補助です。</Japanese>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <SChinese>可快速得到血液补充</SChinese>
-            <TChinese>可快速得到血液補充</TChinese>
+            <Chinesesimp>可快速得到血液补充</Chinesesimp>
+            <Chinese>可快速得到血液補充</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_Desc_Use">
             <English>A volume-expanding blood supplement.</English>
@@ -1481,8 +1481,8 @@
             <Czech>Intravenózně podávaný doplněk k zvětšení objemu krve</Czech>
             <Japanese>血液量を増加させる補助です。</Japanese>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <SChinese>可快速得到血液补充</SChinese>
-            <TChinese>可快速得到血液補充</TChinese>
+            <Chinesesimp>可快速得到血液补充</Chinesesimp>
+            <Chinese>可快速得到血液補充</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_500">
             <English>Plasma IV (500ml)</English>
@@ -1497,8 +1497,8 @@
             <Czech>Krevní plazma (500ml)</Czech>
             <Japanese>血しょう IV (500ml)</Japanese>
             <Korean>혈장 IV (500ml)</Korean>
-            <SChinese>血浆 (500ml)</SChinese>
-            <TChinese>血漿 (500ml)</TChinese>
+            <Chinesesimp>血浆 (500ml)</Chinesesimp>
+            <Chinese>血漿 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Plasma_IV_250">
             <English>Plasma IV (250ml)</English>
@@ -1513,8 +1513,8 @@
             <Czech>Krevní plazma (250ml)</Czech>
             <Japanese>血しょう IV (250ml)</Japanese>
             <Korean>혈장 IV (250ml)</Korean>
-            <SChinese>血浆 (250ml)</SChinese>
-            <TChinese>血漿 (250ml)</TChinese>
+            <Chinesesimp>血浆 (250ml)</Chinesesimp>
+            <Chinese>血漿 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV">
             <English>Blood IV (1000ml)</English>
@@ -1529,8 +1529,8 @@
             <Czech>Krevní transfúze (1000ml)</Czech>
             <Japanese>血液 IV (1000ml)</Japanese>
             <Korean>혈액 IV (1000ml)</Korean>
-            <SChinese>血液 (1000ml)</SChinese>
-            <TChinese>血液 (1000ml)</TChinese>
+            <Chinesesimp>血液 (1000ml)</Chinesesimp>
+            <Chinese>血液 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_Desc_Short">
             <English>Blood IV, for restoring a patients blood (keep cold)</English>
@@ -1545,8 +1545,8 @@
             <Czech>Krevní transfuze pro doplnění pacientovi krve (skladujte v chladu)</Czech>
             <Japanese>血液 IV は、患者へ血液を補給します。（要低温保存）</Japanese>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다. (차갑게 할것)</Korean>
-            <SChinese>血液, 用于补充伤者流失的血液 (需冷藏)</SChinese>
-            <TChinese>血液, 用於補充傷者流失的血液 (需冷藏)</TChinese>
+            <Chinesesimp>血液, 用于补充伤者流失的血液 (需冷藏)</Chinesesimp>
+            <Chinese>血液, 用於補充傷者流失的血液 (需冷藏)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_Desc_Use">
             <English>O Negative infusion blood used in strict and rare events to replenish blood supply usually conducted in the transport phase of medical care.</English>
@@ -1561,8 +1561,8 @@
             <Czech>0 Rh negativní krev se používá v vzácných případech k doplnění pacientovy hladiny krve, obvykle při převozu zraněné osoby do nemocnice.</Czech>
             <Japanese>O 型への輸血はまれで厳格であり、通常は治療のための輸送段階で輸血をおこないます。</Japanese>
             <Korean>O- 형 혈액 투여는 매우 엄격하고 드문 혈액보급의 경우에 쓰이는데 주로 치료의 운송단계에서 사용됩니다.</Korean>
-            <SChinese>O型负值注射用血液, 在紧急情况时使用, 用于补充伤者流失的血液</SChinese>
-            <TChinese>O型負值注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</TChinese>
+            <Chinesesimp>O型负值注射用血液, 在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
+            <Chinese>O型負值注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_500">
             <English>Blood IV (500ml)</English>
@@ -1577,8 +1577,8 @@
             <Czech>Krevní transfúze (500ml)</Czech>
             <Japanese>血液 IV (500ml)</Japanese>
             <Korean>혈액 IV (500ml)</Korean>
-            <SChinese>血液 (500ml)</SChinese>
-            <TChinese>血液 (500ml)</TChinese>
+            <Chinesesimp>血液 (500ml)</Chinesesimp>
+            <Chinese>血液 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Blood_IV_250">
             <English>Blood IV (250ml)</English>
@@ -1593,8 +1593,8 @@
             <Czech>Krevní transfúze (250ml)</Czech>
             <Japanese>血液 IV (250ml)</Japanese>
             <Korean>혈액 IV (250ml)</Korean>
-            <SChinese>血液 (250ml)</SChinese>
-            <TChinese>血液 (250ml)</TChinese>
+            <Chinesesimp>血液 (250ml)</Chinesesimp>
+            <Chinese>血液 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV">
             <English>Saline IV (1000ml)</English>
@@ -1609,8 +1609,8 @@
             <Czech>Fyziologický roztok (1000ml)</Czech>
             <Japanese>生理食塩水 IV (1000ml)</Japanese>
             <Korean>생리식염수 IV (1000ml)</Korean>
-            <SChinese>生理食盐水 (1000ml)</SChinese>
-            <TChinese>生理食鹽水 (1000ml)</TChinese>
+            <Chinesesimp>生理食盐水 (1000ml)</Chinesesimp>
+            <Chinese>生理食鹽水 (1000ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_Desc_Short">
             <English>Saline IV, for restoring a patients blood</English>
@@ -1625,8 +1625,8 @@
             <Czech>Fyziologický roztok se aplikuje intravenózně a slouží k obnově pacientovi krve</Czech>
             <Japanese>生理食塩水 IV は、患者の血液量を補助します</Japanese>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
-            <SChinese>生理食盐水, 用于恢复伤者血液</SChinese>
-            <TChinese>生理食鹽水, 用於恢復傷者血液</TChinese>
+            <Chinesesimp>生理食盐水, 用于恢复伤者血液</Chinesesimp>
+            <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_Desc_Use">
             <English>A medical volume-replenishing agent introduced into the blood system through an IV infusion.</English>
@@ -1641,8 +1641,8 @@
             <Czech>Fyziologický roztok se využívá nejčastěji jako infuze při dehydrataci organismu.</Czech>
             <Japanese>生理食塩水 IV を静脈へ投与し、血液量を増加させることができます。</Japanese>
             <Korean>혈류에 IV로 투여되는 의료 용적 대체 요법</Korean>
-            <SChinese>利用静脉注射进入人体血液系统, 帮助伤者血液恢复</SChinese>
-            <TChinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</TChinese>
+            <Chinesesimp>利用静脉注射进入人体血液系统, 帮助伤者血液恢复</Chinesesimp>
+            <Chinese>利用靜脈注射進入人體血液系統, 幫助傷者血液恢復</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_500">
             <English>Saline IV (500ml)</English>
@@ -1657,8 +1657,8 @@
             <Czech>Fyziologický roztok (500ml)</Czech>
             <Japanese>生理食塩水 IV (500ml)</Japanese>
             <Korean>생리식염수 IV (500ml)</Korean>
-            <SChinese>生理食盐水 (500ml)</SChinese>
-            <TChinese>生理食鹽水 (500ml)</TChinese>
+            <Chinesesimp>生理食盐水 (500ml)</Chinesesimp>
+            <Chinese>生理食鹽水 (500ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Saline_IV_250">
             <English>Saline IV (250ml)</English>
@@ -1673,8 +1673,8 @@
             <Czech>Fyziologický roztok (250ml)</Czech>
             <Japanese>生理食塩水 IV (250ml)</Japanese>
             <Korean>생리식염수 IV (250ml)</Korean>
-            <SChinese>生理食盐水 (250ml)</SChinese>
-            <TChinese>生理食鹽水 (250ml)</TChinese>
+            <Chinesesimp>生理食盐水 (250ml)</Chinesesimp>
+            <Chinese>生理食鹽水 (250ml)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Display">
             <English>Basic Field Dressing (QuikClot)</English>
@@ -1689,8 +1689,8 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>緊急圧迫止血包帯 (クイッククロット)</Japanese>
             <Korean>필드 드레싱 (퀵 클롯)</Korean>
-            <SChinese>基本战地包扎 (止血粉)</SChinese>
-            <TChinese>基本戰地包紮 (止血粉)</TChinese>
+            <Chinesesimp>基本战地包扎 (止血粉)</Chinesesimp>
+            <Chinese>基本戰地包紮 (止血粉)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Desc_Short">
             <English>QuikClot bandage</English>
@@ -1705,8 +1705,8 @@
             <Czech>Hemostatický obvaz (QuikClot)</Czech>
             <Japanese>クイッククロット</Japanese>
             <Korean>퀵 클롯 붕대</Korean>
-            <SChinese>止血粉绷带</SChinese>
-            <TChinese>止血粉繃帶</TChinese>
+            <Chinesesimp>止血粉绷带</Chinesesimp>
+            <Chinese>止血粉繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_QuikClot_Desc_Use">
             <English>Hemostatic bandage with coagulant that stops bleeding.</English>
@@ -1721,8 +1721,8 @@
             <Czech>Hemostatický obvaz určený k zástavě krvácení</Czech>
             <Japanese>血液凝固剤をふくむ包帯により、止血できます。</Japanese>
             <Korean>지혈시 사용하는 붕대로 혈액 응고제를 포함하고있습니다.</Korean>
-            <SChinese>包含止血粉成分的止血绷带, 可用于止血</SChinese>
-            <TChinese>包含止血粉成分的止血繃帶, 可用於止血</TChinese>
+            <Chinesesimp>包含止血粉成分的止血绷带, 可用于止血</Chinesesimp>
+            <Chinese>包含止血粉成分的止血繃帶, 可用於止血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Display">
             <English>Personal Aid Kit</English>
@@ -1737,8 +1737,8 @@
             <Czech>Osobní lékárnička (PAK)</Czech>
             <Japanese>応急処置キット</Japanese>
             <Korean>개인응급키트</Korean>
-            <SChinese>个人急救包</SChinese>
-            <TChinese>個人急救包</TChinese>
+            <Chinesesimp>个人急救包</Chinesesimp>
+            <Chinese>個人急救包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Short">
             <English>Includes various treatment kit needed for stitching or advanced treatment</English>
@@ -1753,8 +1753,8 @@
             <Czech>Osobní lékárnička obsahuje zdravotnický materiál umožňující šití a pokročilejší ošetřování raněných</Czech>
             <Japanese>縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
             <Korean>봉합및 고급 조치에 필요한 다양한 치료 도구가 있습니다.</Korean>
-            <SChinese>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品.</SChinese>
-            <TChinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品.</TChinese>
+            <Chinesesimp>包含各种医疗套件, 以及进阶伤口系统需要的缝合用品.</Chinesesimp>
+            <Chinese>包含各種醫療套件, 以及進階傷口系統需要的縫合用品.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Aid_Kit_Desc_Use">
             <English>Personal Aid Kit for in field stitching or advanced treatment</English>
@@ -1769,8 +1769,8 @@
             <Italian>Pronto soccorso personale da campo per mettersi i punti o per trattamenti avanzati.</Italian>
             <Japanese>戦場で縫合や高度な処置に必要とされる、さまざまな治療器具が含まれています。</Japanese>
             <Korean>야전에서 봉합및 고급 조치를 위한 개인응급키트</Korean>
-            <SChinese>个人急救包可用于战地缝合手术或进阶伤口系统使用.</SChinese>
-            <TChinese>個人急救包可用於戰地縫合手術或進階傷口系統使用.</TChinese>
+            <Chinesesimp>个人急救包可用于战地缝合手术或进阶伤口系统使用.</Chinesesimp>
+            <Chinese>個人急救包可用於戰地縫合手術或進階傷口系統使用.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Use_Aid_Kit">
             <English>Use Personal Aid Kit</English>
@@ -1785,8 +1785,8 @@
             <Italian>Usa il pronto soccorso personale</Italian>
             <Japanese>応急処置キットをつかう</Japanese>
             <Korean>개인 응급 키트사용하기</Korean>
-            <SChinese>使用个人急救包</SChinese>
-            <TChinese>使用個人急救包</TChinese>
+            <Chinesesimp>使用个人急救包</Chinesesimp>
+            <Chinese>使用個人急救包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Display">
             <English>Surgical Kit</English>
@@ -1801,8 +1801,8 @@
             <Czech>Chirurgická sada</Czech>
             <Japanese>縫合キット</Japanese>
             <Korean>봉합 키트</Korean>
-            <SChinese>手术包</SChinese>
-            <TChinese>手術包</TChinese>
+            <Chinesesimp>手术包</Chinesesimp>
+            <Chinese>手術包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Short">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -1817,8 +1817,8 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <SChinese>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</SChinese>
-            <TChinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</TChinese>
+            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</Chinesesimp>
+            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_SurgicalKit_Desc_Use">
             <English>Surgical Kit for in field advanced medical treatment</English>
@@ -1833,8 +1833,8 @@
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>縫合キットは戦場で高度な処置をするためにつかわれます。</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
-            <SChinese>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</SChinese>
-            <TChinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</TChinese>
+            <Chinesesimp>用于在战场上为伤口进行缝合(需要开启进阶伤口系统).</Chinesesimp>
+            <Chinese>用於在戰場上為傷口進行縫合(需要開啟進階傷口系統).</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Use_SurgicalKit">
             <English>Use Surgical Kit</English>
@@ -1849,8 +1849,8 @@
             <Portuguese>Usar kit cirúrgico</Portuguese>
             <Japanese>縫合キットをつかう</Japanese>
             <Korean>봉합키트 사용하기</Korean>
-            <SChinese>使用手术包</SChinese>
-            <TChinese>使用手術包</TChinese>
+            <Chinesesimp>使用手术包</Chinesesimp>
+            <Chinese>使用手術包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Display">
             <English>Bodybag</English>
@@ -1865,8 +1865,8 @@
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋</Japanese>
             <Korean>시체 가방</Korean>
-            <SChinese>尸袋</SChinese>
-            <TChinese>屍袋</TChinese>
+            <Chinesesimp>尸袋</Chinesesimp>
+            <Chinese>屍袋</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Short">
             <English>A bodybag for dead bodies</English>
@@ -1881,8 +1881,8 @@
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
             <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
-            <SChinese>用来装尸体用</SChinese>
-            <TChinese>用來裝屍體用</TChinese>
+            <Chinesesimp>用来装尸体用</Chinesesimp>
+            <Chinese>用來裝屍體用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bodybag_Desc_Use">
             <English>A bodybag for dead bodies</English>
@@ -1897,8 +1897,8 @@
             <Czech>Pytel na mrtvoly</Czech>
             <Japanese>死体袋は死体を入れるためにつかいます</Japanese>
             <Korean>시체를 운반할때 쓰는 가방입니다</Korean>
-            <SChinese>用来装尸体用</SChinese>
-            <TChinese>用來裝屍體用</TChinese>
+            <Chinesesimp>用来装尸体用</Chinesesimp>
+            <Chinese>用來裝屍體用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -1913,8 +1913,8 @@
             <Czech>Krevní tlak</Czech>
             <Japanese>血圧を測る</Japanese>
             <Korean>혈압</Korean>
-            <SChinese>血压</SChinese>
-            <TChinese>血壓</TChinese>
+            <Chinesesimp>血压</Chinesesimp>
+            <Chinese>血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Content">
             <English>Checking Blood Pressure..</English>
@@ -1929,8 +1929,8 @@
             <Czech>Měřím krevní tlak...</Czech>
             <Japanese>血圧を測定中・・・</Japanese>
             <Korean>혈압 측정증...</Korean>
-            <SChinese>检查血压中...</SChinese>
-            <TChinese>檢查血壓中...</TChinese>
+            <Chinesesimp>检查血压中...</Chinesesimp>
+            <Chinese>檢查血壓中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Log">
             <English>%1 checked Blood Pressure: %2</English>
@@ -1945,8 +1945,8 @@
             <Portuguese>%1 verificou pressão arterial: %2</Portuguese>
             <Japanese>%1 が測った血圧は: %2</Japanese>
             <Korean>%1 (이)가 혈압을 측정했습니다: %2</Korean>
-            <SChinese>已由%1确认血压: %2</SChinese>
-            <TChinese>已由%1確認血壓: %2</TChinese>
+            <Chinesesimp>已由%1确认血压: %2</Chinesesimp>
+            <Chinese>已由%1確認血壓: %2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Checked_Medic">
             <English>You checked %1</English>
@@ -1961,8 +1961,8 @@
             <Czech>Zkontroloval jsi %1</Czech>
             <Japanese>自分の血圧は %1</Japanese>
             <Korean>나의 혈압은 %1 이다</Korean>
-            <SChinese>你已经检查 %1</SChinese>
-            <TChinese>你已經檢查 %1</TChinese>
+            <Chinesesimp>你已经检查 %1</Chinesesimp>
+            <Chinese>你已經檢查 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_1">
             <English>You find a blood pressure of %2/%3</English>
@@ -1977,8 +1977,8 @@
             <Czech>Naměřil si krevní tlak u %2/%3</Czech>
             <Japanese>血圧は %2/%3</Japanese>
             <Korean>혈압이 %2/%3 이다</Korean>
-            <SChinese>血压为%2/%3</SChinese>
-            <TChinese>血壓為%2/%3</TChinese>
+            <Chinesesimp>血压为%2/%3</Chinesesimp>
+            <Chinese>血壓為%2/%3</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_2">
             <English>You find a low blood pressure</English>
@@ -1993,8 +1993,8 @@
             <Czech>Naměřil si nízký krevní tlak</Czech>
             <Japanese>血圧はかなり低い</Japanese>
             <Korean>혈압이 매우 낮다</Korean>
-            <SChinese>发现到低血压</SChinese>
-            <TChinese>發現到低血壓</TChinese>
+            <Chinesesimp>发现到低血压</Chinesesimp>
+            <Chinese>發現到低血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_3">
             <English>You find a normal blood pressure</English>
@@ -2009,8 +2009,8 @@
             <Czech>Naměřil si normální krevní tlak</Czech>
             <Japanese>血圧は通常</Japanese>
             <Korean>혈압이 정상이다</Korean>
-            <SChinese>发现到正常血压</SChinese>
-            <TChinese>發現到正常血壓</TChinese>
+            <Chinesesimp>发现到正常血压</Chinesesimp>
+            <Chinese>發現到正常血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_4">
             <English>You find a high blood pressure</English>
@@ -2025,8 +2025,8 @@
             <Czech>Naměřil si vysoký krevní tlak</Czech>
             <Japanese>血圧はかなり高い</Japanese>
             <Korean>혈압이 매우 높다</Korean>
-            <SChinese>发现到高血压</SChinese>
-            <TChinese>發現到高血壓</TChinese>
+            <Chinesesimp>发现到高血压</Chinesesimp>
+            <Chinese>發現到高血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_5">
             <English>You find no blood pressure</English>
@@ -2041,8 +2041,8 @@
             <Czech>Nenaměřil si žádný krevní tlak</Czech>
             <Japanese>血圧は測れなかった</Japanese>
             <Korean>혈압이 잡히지 않는다</Korean>
-            <SChinese>量不到血压</SChinese>
-            <TChinese>量不到血壓</TChinese>
+            <Chinesesimp>量不到血压</Chinesesimp>
+            <Chinese>量不到血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Output_6">
             <English>You fail to find a blood pressure</English>
@@ -2057,8 +2057,8 @@
             <Czech>Nedokázal si změřit krevní tlak</Czech>
             <Japanese>血圧を測るのに失敗</Japanese>
             <Korean>혈압을 잡을 수 없었다</Korean>
-            <SChinese>检查血压的动作失败</SChinese>
-            <TChinese>檢查血壓的動作失敗</TChinese>
+            <Chinesesimp>检查血压的动作失败</Chinesesimp>
+            <Chinese>檢查血壓的動作失敗</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Low">
             <English>Low</English>
@@ -2073,8 +2073,8 @@
             <Portuguese>Baixa</Portuguese>
             <Japanese>低い</Japanese>
             <Korean>낮음</Korean>
-            <SChinese>低</SChinese>
-            <TChinese>低</TChinese>
+            <Chinesesimp>低</Chinesesimp>
+            <Chinese>低</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_Normal">
             <English>Normal</English>
@@ -2089,8 +2089,8 @@
             <Portuguese>Normal</Portuguese>
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
-            <SChinese>正常</SChinese>
-            <TChinese>正常</TChinese>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_High">
             <English>High</English>
@@ -2105,8 +2105,8 @@
             <Portuguese>Alta</Portuguese>
             <Japanese>高い</Japanese>
             <Korean>높음</Korean>
-            <SChinese>高</SChinese>
-            <TChinese>高</TChinese>
+            <Chinesesimp>高</Chinesesimp>
+            <Chinese>高</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Bloodpressure_NoBloodpressure">
             <English>No Blood Pressure</English>
@@ -2121,8 +2121,8 @@
             <Portuguese>Sem pressão arterial</Portuguese>
             <Japanese>血圧なし</Japanese>
             <Korean>혈압 없음</Korean>
-            <SChinese>无血压</SChinese>
-            <TChinese>無血壓</TChinese>
+            <Chinesesimp>无血压</Chinesesimp>
+            <Chinese>無血壓</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse">
             <English>Pulse</English>
@@ -2137,8 +2137,8 @@
             <Czech>Puls</Czech>
             <Japanese>心拍数</Japanese>
             <Korean>맥박</Korean>
-            <SChinese>脉搏</SChinese>
-            <TChinese>脈搏</TChinese>
+            <Chinesesimp>脉搏</Chinesesimp>
+            <Chinese>脈搏</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Content">
             <English>Checking Heart Rate...</English>
@@ -2153,8 +2153,8 @@
             <Czech>Kontroluji srdeční tep...</Czech>
             <Japanese>心拍数を測定中・・・</Japanese>
             <Korean>맥박 확인중...</Korean>
-            <SChinese>检查心跳中...</SChinese>
-            <TChinese>檢查心跳中...</TChinese>
+            <Chinesesimp>检查心跳中...</Chinesesimp>
+            <Chinese>檢查心跳中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Checked_Medic">
             <English>You checked %1</English>
@@ -2169,8 +2169,8 @@
             <Czech>Zkontroloval si %1</Czech>
             <Japanese>心拍数は %1</Japanese>
             <Korean>나의 맥박은 %1 이다</Korean>
-            <SChinese>你已经检查 %1</SChinese>
-            <TChinese>你已經檢查 %1</TChinese>
+            <Chinesesimp>你已经检查 %1</Chinesesimp>
+            <Chinese>你已經檢查 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Log">
             <English>%1 checked Heart Rate: %2</English>
@@ -2185,8 +2185,8 @@
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
             <Japanese>%1 が測った心拍数は: %2</Japanese>
             <Korean>%1 (이)가 맥박을 측정했습니다: %2</Korean>
-            <SChinese>已由%1确认心跳: %2</SChinese>
-            <TChinese>已由%1確認心跳: %2</TChinese>
+            <Chinesesimp>已由%1确认心跳: %2</Chinesesimp>
+            <Chinese>已由%1確認心跳: %2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_None">
             <English>None</English>
@@ -2201,8 +2201,8 @@
             <Italian>Niente</Italian>
             <Japanese>なし</Japanese>
             <Korean>없음</Korean>
-            <SChinese>无</SChinese>
-            <TChinese>無</TChinese>
+            <Chinesesimp>无</Chinesesimp>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Weak">
             <English>Weak</English>
@@ -2217,8 +2217,8 @@
             <Portuguese>Fraca</Portuguese>
             <Japanese>弱い</Japanese>
             <Korean>약함</Korean>
-            <SChinese>微弱</SChinese>
-            <TChinese>微弱</TChinese>
+            <Chinesesimp>微弱</Chinesesimp>
+            <Chinese>微弱</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Normal">
             <English>Normal</English>
@@ -2233,8 +2233,8 @@
             <Portuguese>Normal</Portuguese>
             <Japanese>通常</Japanese>
             <Korean>보통</Korean>
-            <SChinese>正常</SChinese>
-            <TChinese>正常</TChinese>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Strong">
             <English>Strong</English>
@@ -2249,8 +2249,8 @@
             <Portuguese>Forte</Portuguese>
             <Japanese>強い</Japanese>
             <Korean>강함</Korean>
-            <SChinese>过快</SChinese>
-            <TChinese>過快</TChinese>
+            <Chinesesimp>过快</Chinesesimp>
+            <Chinese>過快</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_1">
             <English>You find a Heart Rate of %2</English>
@@ -2265,8 +2265,8 @@
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>心拍数は %2</Japanese>
             <Korean>맥박이 %2 이다</Korean>
-            <SChinese>心跳为%2</SChinese>
-            <TChinese>心跳為%2</TChinese>
+            <Chinesesimp>心跳为%2</Chinesesimp>
+            <Chinese>心跳為%2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_2">
             <English>You find a weak Heart Rate</English>
@@ -2281,8 +2281,8 @@
             <Czech>Nahmatal si slabý srdeční puls</Czech>
             <Japanese>自分の心拍数は低い</Japanese>
             <Korean>약한 맥박이다</Korean>
-            <SChinese>心跳微弱</SChinese>
-            <TChinese>心跳微弱</TChinese>
+            <Chinesesimp>心跳微弱</Chinesesimp>
+            <Chinese>心跳微弱</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_3">
             <English>You find a strong Heart Rate</English>
@@ -2297,8 +2297,8 @@
             <Czech>Nahmatal si silný srdeční puls</Czech>
             <Japanese>自分の心拍数は強い</Japanese>
             <Korean>강한 맥박이다</Korean>
-            <SChinese>心跳过快</SChinese>
-            <TChinese>心跳過快</TChinese>
+            <Chinesesimp>心跳过快</Chinesesimp>
+            <Chinese>心跳過快</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_4">
             <English>You find a normal Heart Rate</English>
@@ -2313,8 +2313,8 @@
             <Czech>Nahmatal si normální srdeční puls</Czech>
             <Japanese>自分の心拍数は通常</Japanese>
             <Korean>보통 맥박이다</Korean>
-            <SChinese>心跳正常</SChinese>
-            <TChinese>心跳正常</TChinese>
+            <Chinesesimp>心跳正常</Chinesesimp>
+            <Chinese>心跳正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Pulse_Output_5">
             <English>You find no Heart Rate</English>
@@ -2329,8 +2329,8 @@
             <Czech>Žádný puls</Czech>
             <Japanese>心拍数を測れなかった</Japanese>
             <Korean>맥박을 찾을 수가 없다</Korean>
-            <SChinese>量不到心跳</SChinese>
-            <TChinese>量不到心跳</TChinese>
+            <Chinesesimp>量不到心跳</Chinesesimp>
+            <Chinese>量不到心跳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response">
             <English>Response</English>
@@ -2345,8 +2345,8 @@
             <Czech>Odezva</Czech>
             <Japanese>反応を見る</Japanese>
             <Korean>반응</Korean>
-            <SChinese>反应</SChinese>
-            <TChinese>反應</TChinese>
+            <Chinesesimp>反应</Chinesesimp>
+            <Chinese>反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Content">
             <English>You check response of patient</English>
@@ -2361,8 +2361,8 @@
             <Czech>Zkontroloval jsi reakci pacienta</Czech>
             <Japanese>患者からの反応をみる</Japanese>
             <Korean>대상의 반응 확인중</Korean>
-            <SChinese>检查伤者的反应</SChinese>
-            <TChinese>檢查傷者的反應</TChinese>
+            <Chinesesimp>检查伤者的反应</Chinesesimp>
+            <Chinese>檢查傷者的反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Responsive">
             <English>%1 is responsive</English>
@@ -2377,8 +2377,8 @@
             <Czech>%1 odpovídá</Czech>
             <Japanese>%1 は反応あり</Japanese>
             <Korean>%1 은 반응이있다</Korean>
-            <SChinese>%1 有反应</SChinese>
-            <TChinese>%1 有反應</TChinese>
+            <Chinesesimp>%1 有反应</Chinesesimp>
+            <Chinese>%1 有反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
@@ -2393,8 +2393,8 @@
             <Czech>%1 neodpovídá</Czech>
             <Japanese>%1 の反応なし</Japanese>
             <Korean>%1 은 반응이없다</Korean>
-            <SChinese>%1 没有反应</SChinese>
-            <TChinese>%1 沒有反應</TChinese>
+            <Chinesesimp>%1 没有反应</Chinesesimp>
+            <Chinese>%1 沒有反應</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2409,8 +2409,8 @@
             <Czech>Zkontroloval jsi %1</Czech>
             <Japanese>%1 を見た</Japanese>
             <Korean>%1 을 확인함</Korean>
-            <SChinese>你已经检查 %1</SChinese>
-            <TChinese>你已經檢查 %1</TChinese>
+            <Chinesesimp>你已经检查 %1</Chinesesimp>
+            <Chinese>你已經檢查 %1</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseMessage">
             <English>Patient %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</English>
@@ -2425,8 +2425,8 @@
             <Portuguese>Paciente %1&lt;br/&gt;é %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Portuguese>
             <Japanese>痛み %1&lt;br/&gt;は %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Japanese>
             <Korean>환자 %1&lt;br/&gt;는 %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Korean>
-            <SChinese>伤者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</SChinese>
-            <TChinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</TChinese>
+            <Chinesesimp>伤者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinesesimp>
+            <Chinese>傷者 %1&lt;br/&gt;is %2.&lt;br/&gt;%3.&lt;br/&gt;%4</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseAlive">
             <English>alive</English>
@@ -2441,8 +2441,8 @@
             <Portuguese>vivo</Portuguese>
             <Japanese>生存</Japanese>
             <Korean>생존</Korean>
-            <SChinese>活着</SChinese>
-            <TChinese>活著</TChinese>
+            <Chinesesimp>活着</Chinesesimp>
+            <Chinese>活著</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_diagnoseDead">
             <English>dead</English>
@@ -2457,8 +2457,8 @@
             <Portuguese>morto</Portuguese>
             <Japanese>死亡</Japanese>
             <Korean>사망</Korean>
-            <SChinese>死亡</SChinese>
-            <TChinese>死亡</TChinese>
+            <Chinesesimp>死亡</Chinesesimp>
+            <Chinese>死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_lostBlood">
             <English>He's lost some blood</English>
@@ -2473,8 +2473,8 @@
             <Portuguese>Ele perdeu um pouco de sangue</Portuguese>
             <Japanese>彼は出血している</Japanese>
             <Korean>적은 양의 피를 잃었다</Korean>
-            <SChinese>他流失一些血液</SChinese>
-            <TChinese>他流失一些血液</TChinese>
+            <Chinesesimp>他流失一些血液</Chinesesimp>
+            <Chinese>他流失一些血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_lostBloodALot">
             <English>He's lost a lot of blood</English>
@@ -2489,8 +2489,8 @@
             <Italian>Ha perso molto sangue</Italian>
             <Japanese>彼は大量出血している</Japanese>
             <Korean>많은 양의 피를 잃었다</Korean>
-            <SChinese>他流失大量血液</SChinese>
-            <TChinese>他流失大量血液</TChinese>
+            <Chinesesimp>他流失大量血液</Chinesesimp>
+            <Chinese>他流失大量血液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -2505,8 +2505,8 @@
             <Portuguese>Ele não perdeu sangue</Portuguese>
             <Japanese>彼は出血していない</Japanese>
             <Korean>피를 잃지 않았다</Korean>
-            <SChinese>他并没有失血</SChinese>
-            <TChinese>他並沒有失血</TChinese>
+            <Chinesesimp>他并没有失血</Chinesesimp>
+            <Chinese>他並沒有失血</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_inPain">
             <English>He is in pain</English>
@@ -2521,8 +2521,8 @@
             <Portuguese>Ele está com dor</Portuguese>
             <Japanese>彼には痛みがあるようだ</Japanese>
             <Korean>통증이 있다</Korean>
-            <SChinese>他感到疼痛</SChinese>
-            <TChinese>他感到疼痛</TChinese>
+            <Chinesesimp>他感到疼痛</Chinesesimp>
+            <Chinese>他感到疼痛</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_noPain">
             <English>He is not in pain</English>
@@ -2537,8 +2537,8 @@
             <Portuguese>Ele não está com dor</Portuguese>
             <Japanese>彼には痛みがないようだ</Japanese>
             <Korean>통증이 없다</Korean>
-            <SChinese>他不会疼痛</SChinese>
-            <TChinese>他不會疼痛</TChinese>
+            <Chinesesimp>他不会疼痛</Chinesesimp>
+            <Chinese>他不會疼痛</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Bandaged">
             <English>Bandaged</English>
@@ -2553,8 +2553,8 @@
             <Czech>Obvázaný</Czech>
             <Japanese>包帯</Japanese>
             <Korean>붕대 감음</Korean>
-            <SChinese>绷带</SChinese>
-            <TChinese>繃帶</TChinese>
+            <Chinesesimp>绷带</Chinesesimp>
+            <Chinese>繃帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Apply_Bandage">
             <English>You bandage %1 (%2)</English>
@@ -2569,8 +2569,8 @@
             <Czech>Obvazuješ %1 (%2)</Czech>
             <Japanese>%1 (%2) 包帯をつかった</Japanese>
             <Korean>%1 (%2) 붕대를 감았다</Korean>
-            <SChinese>你正在对 %1 (%2) 包扎绷带中</SChinese>
-            <TChinese>你正在對 %1 (%2) 包紮繃帶中</TChinese>
+            <Chinesesimp>你正在对 %1 (%2) 包扎绷带中</Chinesesimp>
+            <Chinese>你正在對 %1 (%2) 包紮繃帶中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Is_Bandaging_You">
             <English>%1 is bandaging you</English>
@@ -2585,8 +2585,8 @@
             <Czech>%1 tě obvazuje</Czech>
             <Japanese>%1 は自分に包帯を巻いている</Japanese>
             <Korean>%1 (이)가 나에게 붕대를 감고있다</Korean>
-            <SChinese>%1 正在对你包扎绷带中</SChinese>
-            <TChinese>%1 正在對你包紮繃帶中</TChinese>
+            <Chinesesimp>%1 正在对你包扎绷带中</Chinesesimp>
+            <Chinese>%1 正在對你包紮繃帶中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Start_Stitching_Injuries">
             <English>You start stitching injuries from %1 (%2)</English>
@@ -2601,8 +2601,8 @@
             <Czech>Zašíváš rány %1 (%2)</Czech>
             <Japanese>あなたは %1 (%2) の外傷へ縫合をはじめた</Japanese>
             <Korean>나는 %1(%2) 상처로부터 봉합을 시작했다</Korean>
-            <SChinese>你正开始对 %1 (%2) 缝合伤口中</SChinese>
-            <TChinese>你正開始對 %1 (%2) 縫合傷口中</TChinese>
+            <Chinesesimp>你正开始对 %1 (%2) 缝合伤口中</Chinesesimp>
+            <Chinese>你正開始對 %1 (%2) 縫合傷口中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Stitching">
             <English>Stitching</English>
@@ -2617,8 +2617,8 @@
             <Czech>Šití</Czech>
             <Japanese>縫合</Japanese>
             <Korean>붕합중</Korean>
-            <SChinese>缝合中</SChinese>
-            <TChinese>縫合中</TChinese>
+            <Chinesesimp>缝合中</Chinesesimp>
+            <Chinese>縫合中</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_You_Treat_Airway">
             <English>You treat the airway of %1</English>
@@ -2633,8 +2633,8 @@
             <Czech>Ošetřuješ dýchací cesty %1</Czech>
             <Japanese>%1 の気道を診断する</Japanese>
             <Korean>%1의 기도를 확보했다</Korean>
-            <SChinese>你治疗 %1 的呼吸道</SChinese>
-            <TChinese>你治療 %1 的呼吸道</TChinese>
+            <Chinesesimp>你治疗 %1 的呼吸道</Chinesesimp>
+            <Chinese>你治療 %1 的呼吸道</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Airway">
             <English>Airway</English>
@@ -2649,8 +2649,8 @@
             <Czech>Dýchací cesty</Czech>
             <Japanese>気道</Japanese>
             <Korean>기도</Korean>
-            <SChinese>呼吸道</SChinese>
-            <TChinese>呼吸道</TChinese>
+            <Chinesesimp>呼吸道</Chinesesimp>
+            <Chinese>呼吸道</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Is_Treating_Your_Airway">
             <English>%1 is treating your airway</English>
@@ -2665,8 +2665,8 @@
             <Czech>%1 ošetřuje tvoje dýchací cesty</Czech>
             <Japanese>%1 はあなたの気道を見ている</Japanese>
             <Korean>%1 (이)가 나의 기도를 확보중이다</Korean>
-            <SChinese>%1 正在治疗你的呼吸道</SChinese>
-            <TChinese>%1 正在治療你的呼吸道</TChinese>
+            <Chinesesimp>%1 正在治疗你的呼吸道</Chinesesimp>
+            <Chinese>%1 正在治療你的呼吸道</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Drag">
             <English>Drag</English>
@@ -2681,8 +2681,8 @@
             <Italian>Trascina</Italian>
             <Japanese>引きずる</Japanese>
             <Korean>끌다</Korean>
-            <SChinese>拖拉</SChinese>
-            <TChinese>拖拉</TChinese>
+            <Chinesesimp>拖拉</Chinesesimp>
+            <Chinese>拖拉</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Carry">
             <English>Carry</English>
@@ -2697,8 +2697,8 @@
             <Italian>Trasporta</Italian>
             <Japanese>運ぶ</Japanese>
             <Korean>업다</Korean>
-            <SChinese>背起</SChinese>
-            <TChinese>背起</TChinese>
+            <Chinesesimp>背起</Chinesesimp>
+            <Chinese>背起</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Release">
             <English>Release</English>
@@ -2713,8 +2713,8 @@
             <Italian>Rrilascia</Italian>
             <Japanese>離す</Japanese>
             <Korean>내려놓기</Korean>
-            <SChinese>放下</SChinese>
-            <TChinese>放下</TChinese>
+            <Chinesesimp>放下</Chinesesimp>
+            <Chinese>放下</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Load">
             <English>Load Patient Into</English>
@@ -2729,8 +2729,8 @@
             <Italian>Carica paziente nel</Italian>
             <Japanese>患者を載せる</Japanese>
             <Korean>환자 싣기</Korean>
-            <SChinese>将伤者放入</SChinese>
-            <TChinese>將傷者放入</TChinese>
+            <Chinesesimp>将伤者放入</Chinesesimp>
+            <Chinese>將傷者放入</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Unload">
             <English>Unload Patient</English>
@@ -2745,8 +2745,8 @@
             <Italian>Scarica il paziente</Italian>
             <Japanese>患者を降ろす</Japanese>
             <Korean>환자 내리기</Korean>
-            <SChinese>将伤者背出</SChinese>
-            <TChinese>將傷者背出</TChinese>
+            <Chinesesimp>将伤者背出</Chinesesimp>
+            <Chinese>將傷者背出</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_UnloadPatient">
             <English>Unload patient</English>
@@ -2761,8 +2761,8 @@
             <Czech>Vyložit pacienta</Czech>
             <Japanese>患者を降ろす</Japanese>
             <Korean>환자 내리기</Korean>
-            <SChinese>将伤者背出</SChinese>
-            <TChinese>將傷者背出</TChinese>
+            <Chinesesimp>将伤者背出</Chinesesimp>
+            <Chinese>將傷者背出</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_LoadPatient">
             <English>Load patient</English>
@@ -2777,8 +2777,8 @@
             <Czech>Naložit pacienta</Czech>
             <Japanese>患者を載せる</Japanese>
             <Korean>환자 싣기</Korean>
-            <SChinese>将伤者放入</SChinese>
-            <TChinese>將傷者放入</TChinese>
+            <Chinesesimp>将伤者放入</Chinesesimp>
+            <Chinese>將傷者放入</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_PlaceInBodyBag">
             <English>Place body in bodybag</English>
@@ -2793,8 +2793,8 @@
             <Czech>Umístni tělo do pytle na mrtvoly</Czech>
             <Japanese>死体袋に入れる</Japanese>
             <Korean>시체 가방에 담기</Korean>
-            <SChinese>将尸体放入尸袋</SChinese>
-            <TChinese>將屍體放入屍袋</TChinese>
+            <Chinesesimp>将尸体放入尸袋</Chinesesimp>
+            <Chinese>將屍體放入屍袋</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -2809,8 +2809,8 @@
             <Czech>Umístňuji tělo do pytle na mrtvoly...</Czech>
             <Japanese>死体袋へ梱包中・・・</Japanese>
             <Korean>시체 가방에 담는중...</Korean>
-            <SChinese>将尸体放入尸袋中...</SChinese>
-            <TChinese>將屍體放入屍袋中...</TChinese>
+            <Chinesesimp>将尸体放入尸袋中...</Chinesesimp>
+            <Chinese>將屍體放入屍袋中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -2825,8 +2825,8 @@
             <Czech>%1 již obvázal pacienta</Czech>
             <Japanese>%1 は包帯を巻いた</Japanese>
             <Korean>%1 (이)가 붕대를 감아줬다</Korean>
-            <SChinese>%1 已包扎伤者</SChinese>
-            <TChinese>%1 已包紮傷者</TChinese>
+            <Chinesesimp>%1 已包扎伤者</Chinesesimp>
+            <Chinese>%1 已包紮傷者</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_CPR">
             <English>%1 performed CPR</English>
@@ -2840,8 +2840,8 @@
             <French>%1 à fait une RCP</French>
             <Japanese>%1 は心肺蘇生をした</Japanese>
             <Korean>%1 (이)가 심폐소생술을 실시했다</Korean>
-            <SChinese>%1 已执行心肺复苏术</SChinese>
-            <TChinese>%1 已執行心肺復甦術</TChinese>
+            <Chinesesimp>%1 已执行心肺复苏术</Chinesesimp>
+            <Chinese>%1 已執行心肺復甦術</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_usedItem">
             <English>%1 used %2</English>
@@ -2856,8 +2856,8 @@
             <Czech>%1 použil %2</Czech>
             <Japanese>%1 は %2 をつかった</Japanese>
             <Korean>%1 (이)가 %2 을 썼다</Korean>
-            <SChinese>%1 已使用 %2</SChinese>
-            <TChinese>%1 已使用 %2</TChinese>
+            <Chinesesimp>%1 已使用 %2</Chinesesimp>
+            <Chinese>%1 已使用 %2</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_gaveIV">
             <English>%1 has given an IV</English>
@@ -2872,8 +2872,8 @@
             <Czech>%1 již aplikoval IV</Czech>
             <Japanese>%1 は IV を与えた</Japanese>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
-            <SChinese>%1 已经给予静脉注射液</SChinese>
-            <TChinese>%1 已經給予靜脈注射液</TChinese>
+            <Chinesesimp>%1 已经给予静脉注射液</Chinesesimp>
+            <Chinese>%1 已經給予靜脈注射液</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_appliedTourniquet">
             <English>%1 applied a tourniquet</English>
@@ -2888,8 +2888,8 @@
             <Czech>%1 použil škrtidlo</Czech>
             <Japanese>%1 は止血帯を巻いた</Japanese>
             <Korean>%1 (이)가 지혈대를 적용했다</Korean>
-            <SChinese>%1 已经绑上止血带</SChinese>
-            <TChinese>%1 已經綁上止血帶</TChinese>
+            <Chinesesimp>%1 已经绑上止血带</Chinesesimp>
+            <Chinese>%1 已經綁上止血帶</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Activity_fullHeal">
             <English>%1 used Personal Aid Kit</English>
@@ -2903,8 +2903,8 @@
             <French>%1 a utilisé une trousse</French>
             <Japanese>%1 は応急処置キットをつかった</Japanese>
             <Korean>%1 (이)가 개인응급키트를 사용했다</Korean>
-            <SChinese>%1 已使用了个人急救包</SChinese>
-            <TChinese>%1 已使用了個人急救包</TChinese>
+            <Chinesesimp>%1 已使用了个人急救包</Chinesesimp>
+            <Chinese>%1 已使用了個人急救包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2919,8 +2919,8 @@
             <Portuguese>Gravemente ferido</Portuguese>
             <Japanese>重傷</Japanese>
             <Korean>중상</Korean>
-            <SChinese>重伤</SChinese>
-            <TChinese>重傷</TChinese>
+            <Chinesesimp>重伤</Chinesesimp>
+            <Chinese>重傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_LightlyWounded">
             <English>Lightly wounded</English>
@@ -2935,8 +2935,8 @@
             <Portuguese>Levemente ferido</Portuguese>
             <Japanese>軽傷</Japanese>
             <Korean>경상</Korean>
-            <SChinese>轻伤</SChinese>
-            <TChinese>輕傷</TChinese>
+            <Chinesesimp>轻伤</Chinesesimp>
+            <Chinese>輕傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_VeryLightlyWounded">
             <English>Very lightly wounded</English>
@@ -2951,8 +2951,8 @@
             <Portuguese>Muito levemente ferido</Portuguese>
             <Japanese>かなり浅い傷</Japanese>
             <Korean>매우 가벼운 부상</Korean>
-            <SChinese>小伤</SChinese>
-            <TChinese>小傷</TChinese>
+            <Chinesesimp>小伤</Chinesesimp>
+            <Chinese>小傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Head">
             <English>Head</English>
@@ -2967,8 +2967,8 @@
             <Portuguese>Cabeça</Portuguese>
             <Japanese>頭部</Japanese>
             <Korean>머리</Korean>
-            <SChinese>头部</SChinese>
-            <TChinese>頭部</TChinese>
+            <Chinesesimp>头部</Chinesesimp>
+            <Chinese>頭部</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Torso">
             <English>Torso</English>
@@ -2983,8 +2983,8 @@
             <Portuguese>Torso</Portuguese>
             <Japanese>胴体</Japanese>
             <Korean>몸통</Korean>
-            <SChinese>身体</SChinese>
-            <TChinese>身體</TChinese>
+            <Chinesesimp>身体</Chinesesimp>
+            <Chinese>身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_LeftArm">
             <English>Left Arm</English>
@@ -2999,8 +2999,8 @@
             <Portuguese>Braço Esquerdo</Portuguese>
             <Japanese>左腕</Japanese>
             <Korean>왼쪽 팔</Korean>
-            <SChinese>左手</SChinese>
-            <TChinese>左手</TChinese>
+            <Chinesesimp>左手</Chinesesimp>
+            <Chinese>左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_RightArm">
             <English>Right Arm</English>
@@ -3015,8 +3015,8 @@
             <Portuguese>Braço Direito</Portuguese>
             <Japanese>右腕</Japanese>
             <Korean>오른쪽 팔</Korean>
-            <SChinese>右手</SChinese>
-            <TChinese>右手</TChinese>
+            <Chinesesimp>右手</Chinesesimp>
+            <Chinese>右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_LeftLeg">
             <English>Left Leg</English>
@@ -3031,8 +3031,8 @@
             <Portuguese>Perna Esquerda</Portuguese>
             <Japanese>左足</Japanese>
             <Korean>왼쪽 다리</Korean>
-            <SChinese>左脚</SChinese>
-            <TChinese>左腳</TChinese>
+            <Chinesesimp>左脚</Chinesesimp>
+            <Chinese>左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_RightLeg">
             <English>Right Leg</English>
@@ -3047,8 +3047,8 @@
             <Portuguese>Perna Direita</Portuguese>
             <Japanese>右足</Japanese>
             <Korean>오른쪽 다리</Korean>
-            <SChinese>右脚</SChinese>
-            <TChinese>右腳</TChinese>
+            <Chinesesimp>右脚</Chinesesimp>
+            <Chinese>右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_healHitPointAfterAdvBandage">
             <English>Heal fully bandaged hitpoints</English>
@@ -3062,8 +3062,8 @@
             <German>Heilt vollständig bandagierte Trefferpunkte</German>
             <Japanese>包帯は体力を完全に回復する</Japanese>
             <Korean>붕대를 감은후 체력을 회복함</Korean>
-            <SChinese>完全医疗包扎的部位至痊愈</SChinese>
-            <TChinese>完全醫療包紮的部位至痊癒</TChinese>
+            <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
+            <Chinese>完全醫療包紮的部位至痊癒</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_painIsOnlySuppressed">
             <English>Pain is only temporarily suppressed</English>
@@ -3078,8 +3078,8 @@
             <Italian>Dolore è soppresso solo temporaneamente</Italian>
             <Japanese>痛みは一時的な影響</Japanese>
             <Korean>고통은 일시적으로만 회복가능</Korean>
-            <SChinese>疼痛只会暂时性压制</SChinese>
-            <TChinese>疼痛只會暫時性壓制</TChinese>
+            <Chinesesimp>疼痛只会暂时性压制</Chinesesimp>
+            <Chinese>疼痛只會暫時性壓制</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_painEffectType">
             <English>Pain Effect Type</English>
@@ -3094,8 +3094,8 @@
             <Czech>Typ bolesti - efekt</Czech>
             <Japanese>痛みの種類</Japanese>
             <Korean>고통 효과 종류</Korean>
-            <SChinese>疼痛效果类型</SChinese>
-            <TChinese>疼痛效果類型</TChinese>
+            <Chinesesimp>疼痛效果类型</Chinesesimp>
+            <Chinese>疼痛效果類型</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Flash">
             <English>Colour Flashing</English>
@@ -3110,8 +3110,8 @@
             <Czech>Blikající barva</Czech>
             <Japanese>色の点滅</Japanese>
             <Korean>색 반짝임</Korean>
-            <SChinese>闪烁颜色</SChinese>
-            <TChinese>閃爍顏色</TChinese>
+            <Chinesesimp>闪烁颜色</Chinesesimp>
+            <Chinese>閃爍顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_painEffect_Chroma">
             <English>Chromatic Aberration</English>
@@ -3126,8 +3126,8 @@
             <Portuguese>Aberração Cromática</Portuguese>
             <Japanese>色の収差</Japanese>
             <Korean>색수차</Korean>
-            <SChinese>色差</SChinese>
-            <TChinese>色差</TChinese>
+            <Chinesesimp>色差</Chinesesimp>
+            <Chinese>色差</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDisplay">
             <English>Style of menu (Medical)</English>
@@ -3142,8 +3142,8 @@
             <Italian>Stile del menù (medico)</Italian>
             <Japanese>メニューの表示形式 (治療)</Japanese>
             <Korean>메뉴의 스타일 (의료)</Korean>
-            <SChinese>选单样式 (医疗)</SChinese>
-            <TChinese>選單樣式 (醫療)</TChinese>
+            <Chinesesimp>选单样式 (医疗)</Chinesesimp>
+            <Chinese>選單樣式 (醫療)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_menuTypeDescription">
             <English>Select the type of menu you prefer; default 3d selections or radial.</English>
@@ -3158,8 +3158,8 @@
             <Italian>Seleziona il tipo di menù che preferisci: selezione (3D), radiale o disabilitata.</Italian>
             <Japanese>好みに応じてメニューの表示形式を選んでください。標準では 3D 選択か円状です。</Japanese>
             <Korean>선호하는 종류의 메뉴를 고르세요; 기본 3d 선택형 혹은 다이얼형</Korean>
-            <SChinese>选择你喜欢的选单样式; 预设为3D选项或放射状</SChinese>
-            <TChinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</TChinese>
+            <Chinesesimp>选择你喜欢的选单样式; 预设为3D选项或放射状</Chinesesimp>
+            <Chinese>選擇你喜歡的選單樣式; 預設為3D選項或放射狀</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_useSelection">
             <English>Selections (3d)</English>
@@ -3174,8 +3174,8 @@
             <Italian>Selezione (3D)</Italian>
             <Japanese>選択 (3d)</Japanese>
             <Korean>선택 (3d)</Korean>
-            <SChinese>选择 (3D)</SChinese>
-            <TChinese>選擇 (3D)</TChinese>
+            <Chinesesimp>选择 (3D)</Chinesesimp>
+            <Chinese>選擇 (3D)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_useRadial">
             <English>Radial</English>
@@ -3190,8 +3190,8 @@
             <Italian>Radiale</Italian>
             <Japanese>円状</Japanese>
             <Korean>다이얼형</Korean>
-            <SChinese>放射状</SChinese>
-            <TChinese>放射狀</TChinese>
+            <Chinesesimp>放射状</Chinesesimp>
+            <Chinese>放射狀</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion">
             <English>Scrape</English>
@@ -3206,8 +3206,8 @@
             <Czech>Odřenina</Czech>
             <Japanese>擦り傷</Japanese>
             <Korean>찰과상</Korean>
-            <SChinese>擦伤</SChinese>
-            <TChinese>擦傷</TChinese>
+            <Chinesesimp>擦伤</Chinesesimp>
+            <Chinese>擦傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Minor">
             <English>Minor Scrape</English>
@@ -3222,8 +3222,8 @@
             <Czech>Malá odřenina</Czech>
             <Japanese>小さな擦り傷</Japanese>
             <Korean>소형 찰과상</Korean>
-            <SChinese>小擦伤</SChinese>
-            <TChinese>小擦傷</TChinese>
+            <Chinesesimp>小擦伤</Chinesesimp>
+            <Chinese>小擦傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Medium">
             <English>Medium Scrape</English>
@@ -3238,8 +3238,8 @@
             <Czech>Středně velká odřenina</Czech>
             <Japanese>中くらいの擦り傷</Japanese>
             <Korean>중형 찰과상</Korean>
-            <SChinese>中擦伤</SChinese>
-            <TChinese>中擦傷</TChinese>
+            <Chinesesimp>中擦伤</Chinesesimp>
+            <Chinese>中擦傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Abrasion_Large">
             <English>Large Scrape</English>
@@ -3254,8 +3254,8 @@
             <Czech>Velká odřenina</Czech>
             <Japanese>大きな擦り傷</Japanese>
             <Korean>대형 찰과상</Korean>
-            <SChinese>大擦伤</SChinese>
-            <TChinese>大擦傷</TChinese>
+            <Chinesesimp>大擦伤</Chinesesimp>
+            <Chinese>大擦傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion">
             <English>Avulsion</English>
@@ -3270,8 +3270,8 @@
             <Czech>Avulze</Czech>
             <Japanese>剥離傷</Japanese>
             <Korean>열상</Korean>
-            <SChinese>撕脱伤</SChinese>
-            <TChinese>撕脫傷</TChinese>
+            <Chinesesimp>撕脱伤</Chinesesimp>
+            <Chinese>撕脫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Minor">
             <English>Minor Avulsion</English>
@@ -3286,8 +3286,8 @@
             <Czech>Malá avulze</Czech>
             <Japanese>小さな剥離傷</Japanese>
             <Korean>소형 열상</Korean>
-            <SChinese>小撕脱伤</SChinese>
-            <TChinese>小撕脫傷</TChinese>
+            <Chinesesimp>小撕脱伤</Chinesesimp>
+            <Chinese>小撕脫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Medium">
             <English>Medium Avulsion</English>
@@ -3302,8 +3302,8 @@
             <Czech>Střední avulze</Czech>
             <Japanese>中くらいの剥離傷</Japanese>
             <Korean>중형 열상</Korean>
-            <SChinese>中撕脱伤</SChinese>
-            <TChinese>中撕脫傷</TChinese>
+            <Chinesesimp>中撕脱伤</Chinesesimp>
+            <Chinese>中撕脫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Avulsion_Large">
             <English>Large Avulsion</English>
@@ -3318,8 +3318,8 @@
             <Czech>Velká avulze</Czech>
             <Japanese>大きな剥離傷</Japanese>
             <Korean>대형 열상</Korean>
-            <SChinese>大撕脱伤</SChinese>
-            <TChinese>大撕脫傷</TChinese>
+            <Chinesesimp>大撕脱伤</Chinesesimp>
+            <Chinese>大撕脫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion">
             <English>Bruise</English>
@@ -3334,8 +3334,8 @@
             <Czech>Modřina</Czech>
             <Japanese>打ち傷</Japanese>
             <Korean>타박상</Korean>
-            <SChinese>挫伤</SChinese>
-            <TChinese>挫傷</TChinese>
+            <Chinesesimp>挫伤</Chinesesimp>
+            <Chinese>挫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Minor">
             <English>Minor Bruise</English>
@@ -3350,8 +3350,8 @@
             <Czech>Malá modřina</Czech>
             <Japanese>小さな打ち傷</Japanese>
             <Korean>소형 타박상</Korean>
-            <SChinese>小挫伤</SChinese>
-            <TChinese>小挫傷</TChinese>
+            <Chinesesimp>小挫伤</Chinesesimp>
+            <Chinese>小挫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Medium">
             <English>Medium Bruise</English>
@@ -3366,8 +3366,8 @@
             <Czech>Středně velká modřina</Czech>
             <Japanese>中くらいの打ち傷</Japanese>
             <Korean>중형 타박상</Korean>
-            <SChinese>中挫伤</SChinese>
-            <TChinese>中挫傷</TChinese>
+            <Chinesesimp>中挫伤</Chinesesimp>
+            <Chinese>中挫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Contusion_Large">
             <English>Large Bruise</English>
@@ -3382,8 +3382,8 @@
             <Czech>Velká modřina</Czech>
             <Japanese>大きな打撲傷</Japanese>
             <Korean>대형 타박상</Korean>
-            <SChinese>大挫伤</SChinese>
-            <TChinese>大挫傷</TChinese>
+            <Chinesesimp>大挫伤</Chinesesimp>
+            <Chinese>大挫傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush">
             <English>Crushed tissue</English>
@@ -3398,8 +3398,8 @@
             <Czech>Zhmoždění měkkých tkání</Czech>
             <Japanese>圧挫傷</Japanese>
             <Korean>좌상</Korean>
-            <SChinese>撞伤</SChinese>
-            <TChinese>撞傷</TChinese>
+            <Chinesesimp>撞伤</Chinesesimp>
+            <Chinese>撞傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Minor">
             <English>Minor crushed tissue</English>
@@ -3414,8 +3414,8 @@
             <Czech>Malé zhmoždění měkkých tkání</Czech>
             <Japanese>小さな圧挫傷</Japanese>
             <Korean>소형 좌상</Korean>
-            <SChinese>小撞伤</SChinese>
-            <TChinese>小撞傷</TChinese>
+            <Chinesesimp>小撞伤</Chinesesimp>
+            <Chinese>小撞傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Medium">
             <English>Medium crushed tissue</English>
@@ -3430,8 +3430,8 @@
             <Czech>Střední zhmoždění měkkých tkání</Czech>
             <Japanese>中くらいの圧挫傷</Japanese>
             <Korean>중형 좌상</Korean>
-            <SChinese>中撞伤</SChinese>
-            <TChinese>中撞傷</TChinese>
+            <Chinesesimp>中撞伤</Chinesesimp>
+            <Chinese>中撞傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Crush_Large">
             <English>Large crushed tissue</English>
@@ -3446,8 +3446,8 @@
             <Czech>Velké zhmoždění měkkých tkání</Czech>
             <Japanese>大きな圧挫傷</Japanese>
             <Korean>대형 좌상</Korean>
-            <SChinese>大撞伤</SChinese>
-            <TChinese>大撞傷</TChinese>
+            <Chinesesimp>大撞伤</Chinesesimp>
+            <Chinese>大撞傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut">
             <English>Cut</English>
@@ -3462,8 +3462,8 @@
             <Czech>Řezná rána</Czech>
             <Japanese>切り傷</Japanese>
             <Korean>절상</Korean>
-            <SChinese>割伤</SChinese>
-            <TChinese>割傷</TChinese>
+            <Chinesesimp>割伤</Chinesesimp>
+            <Chinese>割傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Minor">
             <English>Small Cut</English>
@@ -3478,8 +3478,8 @@
             <Czech>Malá řezná rána</Czech>
             <Japanese>小さな切り傷</Japanese>
             <Korean>소형 절상</Korean>
-            <SChinese>小割伤</SChinese>
-            <TChinese>小割傷</TChinese>
+            <Chinesesimp>小割伤</Chinesesimp>
+            <Chinese>小割傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Medium">
             <English>Medium Cut</English>
@@ -3494,8 +3494,8 @@
             <Czech>Střední řezná rána</Czech>
             <Japanese>中くらいの切り傷</Japanese>
             <Korean>중형 절상</Korean>
-            <SChinese>中割伤</SChinese>
-            <TChinese>中割傷</TChinese>
+            <Chinesesimp>中割伤</Chinesesimp>
+            <Chinese>中割傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Cut_Large">
             <English>Large Cut</English>
@@ -3510,8 +3510,8 @@
             <Czech>Velká řezná rána</Czech>
             <Japanese>大きな切り傷</Japanese>
             <Korean>대형 절상</Korean>
-            <SChinese>大割伤</SChinese>
-            <TChinese>大割傷</TChinese>
+            <Chinesesimp>大割伤</Chinesesimp>
+            <Chinese>大割傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration">
             <English>Tear</English>
@@ -3526,8 +3526,8 @@
             <Czech>Tržná rána</Czech>
             <Japanese>裂傷</Japanese>
             <Korean>창상</Korean>
-            <SChinese>撕裂伤</SChinese>
-            <TChinese>撕裂傷</TChinese>
+            <Chinesesimp>撕裂伤</Chinesesimp>
+            <Chinese>撕裂傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Minor">
             <English>Small Tear</English>
@@ -3542,8 +3542,8 @@
             <Czech>Malá tržná rána</Czech>
             <Japanese>小さな裂傷</Japanese>
             <Korean>소형 창상</Korean>
-            <SChinese>小撕裂伤</SChinese>
-            <TChinese>小撕裂傷</TChinese>
+            <Chinesesimp>小撕裂伤</Chinesesimp>
+            <Chinese>小撕裂傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Medium">
             <English>Medium Tear</English>
@@ -3558,8 +3558,8 @@
             <Czech>Střední tržná rána</Czech>
             <Japanese>中くらいの裂傷</Japanese>
             <Korean>중형 창상</Korean>
-            <SChinese>中撕裂伤</SChinese>
-            <TChinese>中撕裂傷</TChinese>
+            <Chinesesimp>中撕裂伤</Chinesesimp>
+            <Chinese>中撕裂傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Laceration_Large">
             <English>Large Tear</English>
@@ -3574,8 +3574,8 @@
             <Czech>Velká tržná rána</Czech>
             <Japanese>大きな裂傷</Japanese>
             <Korean>대형 창상</Korean>
-            <SChinese>大撕裂伤</SChinese>
-            <TChinese>大撕裂傷</TChinese>
+            <Chinesesimp>大撕裂伤</Chinesesimp>
+            <Chinese>大撕裂傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound">
             <English>Velocity Wound</English>
@@ -3590,8 +3590,8 @@
             <Czech>Střelné poranění</Czech>
             <Japanese>銃創</Japanese>
             <Korean>총상</Korean>
-            <SChinese>穿透伤</SChinese>
-            <TChinese>穿透傷</TChinese>
+            <Chinesesimp>穿透伤</Chinesesimp>
+            <Chinese>穿透傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Minor">
             <English>Small Velocity Wound</English>
@@ -3606,8 +3606,8 @@
             <Czech>Malé střelné poranění</Czech>
             <Japanese>小さな銃創</Japanese>
             <Korean>소형 총상</Korean>
-            <SChinese>小穿透伤</SChinese>
-            <TChinese>小穿透傷</TChinese>
+            <Chinesesimp>小穿透伤</Chinesesimp>
+            <Chinese>小穿透傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Medium">
             <English>Medium Velocity Wound</English>
@@ -3622,8 +3622,8 @@
             <Czech>Střední střelné poranění</Czech>
             <Japanese>中くらいの銃創</Japanese>
             <Korean>중형 총상</Korean>
-            <SChinese>中穿透伤</SChinese>
-            <TChinese>中穿透傷</TChinese>
+            <Chinesesimp>中穿透伤</Chinesesimp>
+            <Chinese>中穿透傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_VelocityWound_Large">
             <English>Large Velocity Wound</English>
@@ -3638,8 +3638,8 @@
             <Czech>Velké střelné poranění</Czech>
             <Japanese>大きな銃創</Japanese>
             <Korean>대형 총상</Korean>
-            <SChinese>大穿透伤</SChinese>
-            <TChinese>大穿透傷</TChinese>
+            <Chinesesimp>大穿透伤</Chinesesimp>
+            <Chinese>大穿透傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound">
             <English>Puncture Wound</English>
@@ -3654,8 +3654,8 @@
             <Czech>Bodná rána</Czech>
             <Japanese>刺し傷</Japanese>
             <Korean>관통상</Korean>
-            <SChinese>穿刺伤</SChinese>
-            <TChinese>穿刺傷</TChinese>
+            <Chinesesimp>穿刺伤</Chinesesimp>
+            <Chinese>穿刺傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Minor">
             <English>Minor Puncture Wound</English>
@@ -3670,8 +3670,8 @@
             <Czech>Malá bodná rána</Czech>
             <Japanese>小さな刺し傷</Japanese>
             <Korean>소형 관통상</Korean>
-            <SChinese>小穿刺伤</SChinese>
-            <TChinese>小穿刺傷</TChinese>
+            <Chinesesimp>小穿刺伤</Chinesesimp>
+            <Chinese>小穿刺傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Medium">
             <English>Medium Puncture Wound</English>
@@ -3686,8 +3686,8 @@
             <Czech>Střední bodná rána</Czech>
             <Japanese>中くらいの刺し傷</Japanese>
             <Korean>중형 관통상</Korean>
-            <SChinese>中穿刺伤</SChinese>
-            <TChinese>中穿刺傷</TChinese>
+            <Chinesesimp>中穿刺伤</Chinesesimp>
+            <Chinese>中穿刺傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_PunctureWound_Large">
             <English>Large Puncture Wound</English>
@@ -3702,8 +3702,8 @@
             <Czech>Velká bodná rána</Czech>
             <Japanese>大きな刺し傷</Japanese>
             <Korean>대형 관통상</Korean>
-            <SChinese>大穿刺伤</SChinese>
-            <TChinese>大穿刺傷</TChinese>
+            <Chinesesimp>大穿刺伤</Chinesesimp>
+            <Chinese>大穿刺傷</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Wounds_Femur">
             <English>Broken Femur</English>
@@ -3718,8 +3718,8 @@
             <Czech>Zlomená stehenní kost</Czech>
             <Japanese>大腿骨の骨折</Japanese>
             <Korean>대퇴골 골절</Korean>
-            <SChinese>大腿骨骨折</SChinese>
-            <TChinese>大腿骨骨折</TChinese>
+            <Chinesesimp>大腿骨骨折</Chinesesimp>
+            <Chinese>大腿骨骨折</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_TreatmentAction">
             <English>Treating...</English>
@@ -3734,8 +3734,8 @@
             <Italian>Curando...</Italian>
             <Japanese>治療中・・・</Japanese>
             <Korean>치료중...</Korean>
-            <SChinese>治疗中...</SChinese>
-            <TChinese>治療中...</TChinese>
+            <Chinesesimp>治疗中...</Chinesesimp>
+            <Chinese>治療中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_RemovingTourniquet">
             <English>Removing Tourniquet...</English>
@@ -3750,8 +3750,8 @@
             <Italian>Togliendo il laccio emostatico...</Italian>
             <Japanese>止血帯を外している・・・</Japanese>
             <Korean>지혈대 제거중...</Korean>
-            <SChinese>移除军用止血带中...</SChinese>
-            <TChinese>移除軍用止血帶中...</TChinese>
+            <Chinesesimp>移除军用止血带中...</Chinesesimp>
+            <Chinese>移除軍用止血帶中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Category_DisplayName">
             <English>ACE Medical</English>
@@ -3766,8 +3766,8 @@
             <Italian>ACE Medical</Italian>
             <Japanese>ACE 医療</Japanese>
             <Korean>ACE 의료</Korean>
-            <SChinese>ACE 医疗系统</SChinese>
-            <TChinese>ACE 醫療系統</TChinese>
+            <Chinesesimp>ACE 医疗系统</Chinesesimp>
+            <Chinese>ACE 醫療系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_DisplayName">
             <English>Medical Settings [ACE]</English>
@@ -3782,8 +3782,8 @@
             <Italian>Impostazioni Mediche [ACE]</Italian>
             <Japanese>医療設定 [ACE]</Japanese>
             <Korean>의료 설정 [ACE]</Korean>
-            <SChinese>医疗设定 [ACE]</SChinese>
-            <TChinese>醫療設定 [ACE]</TChinese>
+            <Chinesesimp>医疗设定 [ACE]</Chinesesimp>
+            <Chinese>醫療設定 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_DisplayName">
             <English>Medical Level</English>
@@ -3798,8 +3798,8 @@
             <Italian>Livello Medico</Italian>
             <Japanese>医療レベル</Japanese>
             <Korean>의료 수준</Korean>
-            <SChinese>医疗等级</SChinese>
-            <TChinese>醫療等級</TChinese>
+            <Chinesesimp>医疗等级</Chinesesimp>
+            <Chinese>醫療等級</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_level_Description">
             <English>What is the medical simulation level?</English>
@@ -3814,8 +3814,8 @@
             <Italian>Qual'è il livello di simulazione medica?</Italian>
             <Japanese>治療の再現度は？</Japanese>
             <Korean>의료 시뮬레이션의 수준</Korean>
-            <SChinese>选择需要的医疗模拟等级</SChinese>
-            <TChinese>選擇需要的醫療模擬等級</TChinese>
+            <Chinesesimp>选择需要的医疗模拟等级</Chinesesimp>
+            <Chinese>選擇需要的醫療模擬等級</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_basic">
             <English>Basic</English>
@@ -3830,8 +3830,8 @@
             <Italian>Basico</Italian>
             <Japanese>ベーシック</Japanese>
             <Korean>기본</Korean>
-            <SChinese>基本</SChinese>
-            <TChinese>基本</TChinese>
+            <Chinesesimp>基本</Chinesesimp>
+            <Chinese>基本</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_advanced">
             <English>Advanced</English>
@@ -3846,8 +3846,8 @@
             <Italian>Avanzato</Italian>
             <Japanese>アドバンスド</Japanese>
             <Korean>고급</Korean>
-            <SChinese>进阶</SChinese>
-            <TChinese>進階</TChinese>
+            <Chinesesimp>进阶</Chinesesimp>
+            <Chinese>進階</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_DisplayName">
             <English>Medics setting</English>
@@ -3862,8 +3862,8 @@
             <Italian>Parametri Medici</Italian>
             <Japanese>治療の設定</Japanese>
             <Korean>의료 설정</Korean>
-            <SChinese>医护兵等级</SChinese>
-            <TChinese>醫護兵等級</TChinese>
+            <Chinesesimp>医护兵等级</Chinesesimp>
+            <Chinese>醫護兵等級</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_Description">
             <English>What is the level of detail prefered for medics?</English>
@@ -3878,8 +3878,8 @@
             <Italian>Qual'è il livello di dettagli preferito per i medici?</Italian>
             <Japanese>&gt;衛生兵への再現度をどのくらいに設定しますか？</Japanese>
             <Korean>의무병의 시뮬레이션 정도?</Korean>
-            <SChinese>设定医护兵的预设医疗水平(医疗兵, 军医)</SChinese>
-            <TChinese>設定醫護兵的預設醫療水平(醫療兵, 軍醫)</TChinese>
+            <Chinesesimp>设定医护兵的预设医疗水平(医疗兵, 军医)</Chinesesimp>
+            <Chinese>設定醫護兵的預設醫療水平(醫療兵, 軍醫)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_DisplayName">
             <English>Locations boost training</English>
@@ -3893,8 +3893,8 @@
             <Russian>Места ускоренного обучения</Russian>
             <Japanese>衛生兵としての能力を与える場所</Japanese>
             <Korean>교육 증가 지역</Korean>
-            <SChinese>受所在位置影响提升医疗能力</SChinese>
-            <TChinese>受所在位置影響提升醫療能力</TChinese>
+            <Chinesesimp>受所在位置影响提升医疗能力</Chinesesimp>
+            <Chinese>受所在位置影響提升醫療能力</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_increaseTrainingInLocations_Description">
             <English>Boost medic rating in medical vehicles or near medical facilities [untrained becomes medic, medic becomes doctor]</English>
@@ -3908,8 +3908,8 @@
             <Russian>Улучшает медицинскую подготовку в мед. транспорте и около мед. строений [нетренированные становятся медиками, медики становятся врачами]</Russian>
             <Japanese>医療車両や医療施設の近くは衛生兵としての能力を与える場所となり、衛生兵の訓練を受けていないのに衛生兵としてなる（未訓練は衛生兵に、衛生兵は医師に）</Japanese>
             <Korean>의무병의 수준이 주변의 차량이나 의료시설에 따라 증가합니다. [비교육자가 의무병이되고, 의무병이 의사가 됩니다]</Korean>
-            <SChinese>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</SChinese>
-            <TChinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</TChinese>
+            <Chinesesimp>当人员在医疗载具或是医护设施旁进行医疗时, 该员医疗能力将会有所提升 (未受训人员提升为医疗兵, 医疗兵提升为军医)</Chinesesimp>
+            <Chinese>當人員在醫療載具或是醫護設施旁進行醫療時, 該員醫療能力將會有所提升 (未受訓人員提升為醫療兵, 醫療兵提升為軍醫)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_medicSetting_disable">
             <English>Disable medics</English>
@@ -3924,8 +3924,8 @@
             <Italian>Disabilita medici</Italian>
             <Japanese>衛生兵を無効化</Japanese>
             <Korean>의무병 비활성화</Korean>
-            <SChinese>关闭医护兵</SChinese>
-            <TChinese>關閉醫護兵</TChinese>
+            <Chinesesimp>关闭医护兵</Chinesesimp>
+            <Chinese>關閉醫護兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_DisplayName">
             <English>Enable Litter</English>
@@ -3940,8 +3940,8 @@
             <Italian>Abilita Barella</Italian>
             <Japanese>医療廃棄物の表示を有効化</Japanese>
             <Korean>의료폐기물 활성화</Korean>
-            <SChinese>启用医疗废弃物</SChinese>
-            <TChinese>啟用醫療廢棄物</TChinese>
+            <Chinesesimp>启用医疗废弃物</Chinesesimp>
+            <Chinese>啟用醫療廢棄物</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_allowLitterCreation_Description">
             <English>Enable litter being created upon treatment</English>
@@ -3956,8 +3956,8 @@
             <Italian>Abilita la creazione della barella dopo trattamento</Italian>
             <Japanese>治療を始めると、医療廃棄物の作成を有効化する</Japanese>
             <Korean>의료폐기물이 치료중 주변에 생성되는것을 활성화 합니다</Korean>
-            <SChinese>本功能启用后, 当每次医疗动作结束时, 地上会产生相应的医疗废弃物</SChinese>
-            <TChinese>本功能啟用後, 當每次醫療動作結束時, 地上會產生相應的醫療廢棄物</TChinese>
+            <Chinesesimp>本功能启用后, 当每次医疗动作结束时, 地上会产生相应的医疗废弃物</Chinesesimp>
+            <Chinese>本功能啟用後, 當每次醫療動作結束時, 地上會產生相應的醫療廢棄物</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_DisplayName">
             <English>Life time of litter objects</English>
@@ -3972,8 +3972,8 @@
             <Italian>Tempo di vita delle barelle</Italian>
             <Japanese>医療廃棄物の作成限界数を設定</Japanese>
             <Korean>의료폐기물 시간제한</Korean>
-            <SChinese>医疗废弃物存在时间</SChinese>
-            <TChinese>醫療廢棄物存在時間</TChinese>
+            <Chinesesimp>医疗废弃物存在时间</Chinesesimp>
+            <Chinese>醫療廢棄物存在時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_litterCleanUpDelay_Description">
             <English>How long should litter objects stay? In seconds. -1 is forever.</English>
@@ -3988,8 +3988,8 @@
             <Italian>Per quanto devono restare le barelle? In secondi. -1 è permanente</Italian>
             <Japanese>医療廃棄物オブジェクトが表示されつづける時間を設定しますか？-1 は永遠です。</Japanese>
             <Korean>얼마동안 폐기물이 존재합니까? 초 단위. -1 은 영구적.</Korean>
-            <SChinese>定义医疗废弃物存在时间, 以秒为单位, -1为永远存在.</SChinese>
-            <TChinese>定義醫療廢棄物存在時間, 以秒為單位, -1為永遠存在.</TChinese>
+            <Chinesesimp>定义医疗废弃物存在时间, 以秒为单位, -1为永远存在.</Chinesesimp>
+            <Chinese>定義醫療廢棄物存在時間, 以秒為單位, -1為永遠存在.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_DisplayName">
             <English>Enable Screams</English>
@@ -4004,8 +4004,8 @@
             <Italian>Abilita Grida</Italian>
             <Japanese>叫びを有効化</Japanese>
             <Korean>비명 활성화</Korean>
-            <SChinese>启用尖叫</SChinese>
-            <TChinese>啟用尖叫</TChinese>
+            <Chinesesimp>启用尖叫</Chinesesimp>
+            <Chinese>啟用尖叫</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableScreams_Description">
             <English>Enable screaming by injured units</English>
@@ -4020,8 +4020,8 @@
             <Italian>Abilita Grida da parte delle unità ferite</Italian>
             <Japanese>負傷したユニットが叫ぶように</Japanese>
             <Korean>부상당한 인원이 소리지르는것을 활성화합니다</Korean>
-            <SChinese>启用伤者的尖叫声</SChinese>
-            <TChinese>啟用傷者的尖叫聲</TChinese>
+            <Chinesesimp>启用伤者的尖叫声</Chinesesimp>
+            <Chinese>啟用傷者的尖叫聲</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_DisplayName">
             <English>Player Damage</English>
@@ -4036,8 +4036,8 @@
             <Italian>Danno Giocatore</Italian>
             <Japanese>プレイヤーへの損傷</Japanese>
             <Korean>플레이어 부상</Korean>
-            <SChinese>玩家伤害</SChinese>
-            <TChinese>玩家傷害</TChinese>
+            <Chinesesimp>玩家伤害</Chinesesimp>
+            <Chinese>玩家傷害</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_playerDamageThreshold_Description">
             <English>What is the damage a player can take before being killed?</English>
@@ -4052,8 +4052,8 @@
             <Italian>Quanto è il danno che un giocatore può sostenere prima di essere ucciso?</Italian>
             <Japanese>プレイヤーが死に始める前に損傷を受けるようにしますか？</Japanese>
             <Korean>얼마정도의 부상을 플레이어가 죽기 전까지 버틸 수 있습니까?</Korean>
-            <SChinese>玩家死亡前所能承受的伤害程度</SChinese>
-            <TChinese>玩家死亡前所能承受的傷害程度</TChinese>
+            <Chinesesimp>玩家死亡前所能承受的伤害程度</Chinesesimp>
+            <Chinese>玩家死亡前所能承受的傷害程度</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_DisplayName">
             <English>AI Damage</English>
@@ -4068,8 +4068,8 @@
             <Italian>Danno AI</Italian>
             <Japanese>AI への損傷</Japanese>
             <Korean>인공지능 부상</Korean>
-            <SChinese>AI伤害</SChinese>
-            <TChinese>AI傷害</TChinese>
+            <Chinesesimp>AI伤害</Chinesesimp>
+            <Chinese>AI傷害</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_AIDamageThreshold_Description">
             <English>What is the damage an AI can take before being killed?</English>
@@ -4084,8 +4084,8 @@
             <Italian>Quanto è il danno che un'IA può sostenere prima di essere uccisa?</Italian>
             <Japanese>AI が死に始める前に損傷を受けるようにしますか？</Japanese>
             <Korean>얼마정도의 부상을 인공지능이 죽기 전까지 버틸 수 있습니까?</Korean>
-            <SChinese>AI 死亡前所能承受的伤害程度</SChinese>
-            <TChinese>AI 死亡前所能承受的傷害程度</TChinese>
+            <Chinesesimp>AI 死亡前所能承受的伤害程度</Chinesesimp>
+            <Chinese>AI 死亡前所能承受的傷害程度</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_DisplayName">
             <English>AI Unconsciousness</English>
@@ -4100,8 +4100,8 @@
             <Italian>Incoscienza IA</Italian>
             <Japanese>AI の気絶</Japanese>
             <Korean>인공지능 기절</Korean>
-            <SChinese>AI无意识</SChinese>
-            <TChinese>AI無意識</TChinese>
+            <Chinesesimp>AI无意识</Chinesesimp>
+            <Chinese>AI無意識</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_enableUnconsciousnessAI_Description">
             <English>Allow AI to go unconscious</English>
@@ -4116,8 +4116,8 @@
             <Italian>Permetti alle IA di diventare incoscienti</Italian>
             <Japanese>AI が気絶をするように</Japanese>
             <Korean>인공지능도 기절에 빠지게 합니다</Korean>
-            <SChinese>允许AI进入无意识状态</SChinese>
-            <TChinese>允許AI進入無意識狀態</TChinese>
+            <Chinesesimp>允许AI进入无意识状态</Chinesesimp>
+            <Chinese>允許AI進入無意識狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_DisplayName">
             <English>Remote Controlled AI</English>
@@ -4132,8 +4132,8 @@
             <Italian>IA Controllate in Remoto</Italian>
             <Japanese>遠隔操作された AI</Japanese>
             <Korean>인공지능 원격조종</Korean>
-            <SChinese>遥控AI</SChinese>
-            <TChinese>遙控AI</TChinese>
+            <Chinesesimp>遥控AI</Chinesesimp>
+            <Chinese>遙控AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_remoteControlledAI_Description">
             <English>Treat remote controlled units as AI not players?</English>
@@ -4148,8 +4148,8 @@
             <Italian>Considera le unità controllate in remoto come IA e non come giocatori?</Italian>
             <Japanese>遠隔操作された AI は、非プレイヤーとして扱いますか？</Japanese>
             <Korean>원격 조작하는 AI는 비 플레이어로 취급합니까?</Korean>
-            <SChinese>以医疗AI的方式医疗被遥控的单位</SChinese>
-            <TChinese>以醫療AI的方式醫療被遙控的單位</TChinese>
+            <Chinesesimp>以医疗AI的方式医疗被遥控的单位</Chinesesimp>
+            <Chinese>以醫療AI的方式醫療被遙控的單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_DisplayName">
             <English>Prevent instant death</English>
@@ -4164,8 +4164,8 @@
             <Italian>Previeni morte istantanea</Italian>
             <Japanese>即死の防止</Japanese>
             <Korean>즉사 방지</Korean>
-            <SChinese>防止当场死亡</SChinese>
-            <TChinese>防止當場死亡</TChinese>
+            <Chinesesimp>防止当场死亡</Chinesesimp>
+            <Chinese>防止當場死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_preventInstaDeath_Description">
             <English>Have a unit move to unconscious instead of death</English>
@@ -4180,8 +4180,8 @@
             <Italian>Imposta un'unità come incosciente invece di morta</Italian>
             <Japanese>ユニットの即死を防止するために、気絶へ移行させます</Japanese>
             <Korean>인원의 즉사를 방지코자 즉사 대신 기절시킵니다</Korean>
-            <SChinese>伤者最严重只会立即进入昏迷, 而非立即死亡</SChinese>
-            <TChinese>傷者最嚴重只會立即進入昏迷, 而非立即死亡</TChinese>
+            <Chinesesimp>伤者最严重只会立即进入昏迷, 而非立即死亡</Chinesesimp>
+            <Chinese>傷者最嚴重只會立即進入昏迷, 而非立即死亡</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_DisplayName">
             <English>Bleeding coefficient</English>
@@ -4196,8 +4196,8 @@
             <Italian>Coefficiente sanguinamento</Italian>
             <Japanese>出血の係数</Japanese>
             <Korean>출혈 계수</Korean>
-            <SChinese>流血系数</SChinese>
-            <TChinese>流血係數</TChinese>
+            <Chinesesimp>流血系数</Chinesesimp>
+            <Chinese>流血係數</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_bleedingCoefficient_Description">
             <English>Coefficient to modify the bleeding speed</English>
@@ -4212,8 +4212,8 @@
             <Italian>Coefficiente che modifica la velocità di sanguinamento</Italian>
             <Japanese>この係数では出血速度を変更できます</Japanese>
             <Korean>출혈의 속도를 계수만큼 변경합니다</Korean>
-            <SChinese>修改流血速度</SChinese>
-            <TChinese>修改流血速度</TChinese>
+            <Chinesesimp>修改流血速度</Chinesesimp>
+            <Chinese>修改流血速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_DisplayName">
             <English>Pain coefficient</English>
@@ -4228,8 +4228,8 @@
             <Italian>Coefficiente dolore</Italian>
             <Japanese>痛みの係数</Japanese>
             <Korean>고통 계수</Korean>
-            <SChinese>疼痛系数</SChinese>
-            <TChinese>疼痛係數</TChinese>
+            <Chinesesimp>疼痛系数</Chinesesimp>
+            <Chinese>疼痛係數</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_painCoefficient_Description">
             <English>Coefficient to modify the pain intensity</English>
@@ -4244,8 +4244,8 @@
             <Italian>Coefficiente che modifica l'intensità del dolore</Italian>
             <Japanese>この係数では痛みの強さを変更できます</Japanese>
             <Korean>고통의 정도를 계수만큼 변경합니다</Korean>
-            <SChinese>修改疼痛强度的系数</SChinese>
-            <TChinese>修改疼痛強度的係數</TChinese>
+            <Chinesesimp>修改疼痛强度的系数</Chinesesimp>
+            <Chinese>修改疼痛強度的係數</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_DisplayName">
             <English>Sync status</English>
@@ -4260,8 +4260,8 @@
             <Italian>Sincronizza stato</Italian>
             <Japanese>同期状態</Japanese>
             <Korean>상태 동기화</Korean>
-            <SChinese>同步状态</SChinese>
-            <TChinese>同步狀態</TChinese>
+            <Chinesesimp>同步状态</Chinesesimp>
+            <Chinese>同步狀態</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_keepLocalSettingsSynced_Description">
             <English>Keep unit status synced. Recommended on.</English>
@@ -4276,8 +4276,8 @@
             <Italian>Mantieni lo stato delle unità sincronizzato. Consigliato attivo.</Italian>
             <Japanese>ユニット状態の同期を続けます。有効化を推奨。</Japanese>
             <Korean>인원의 상태를 동기화합니다. 켜기를 권장합니다.</Korean>
-            <SChinese>保持单位状态同步, 建议启用!</SChinese>
-            <TChinese>保持單位狀態同步, 建議啟用!</TChinese>
+            <Chinesesimp>保持单位状态同步, 建议启用!</Chinesesimp>
+            <Chinese>保持單位狀態同步, 建議啟用!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -4292,8 +4292,8 @@
             <Italian>Fornisce un sistema medico sia per giocatori che IA.</Italian>
             <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
             <Korean>의료 시스템을 플레이어 및 인공지능에게 제공합니다.</Korean>
-            <SChinese>医疗系统将同时对玩家与AI发生作用</SChinese>
-            <TChinese>醫療系統將同時對玩家與AI發生作用</TChinese>
+            <Chinesesimp>医疗系统将同时对玩家与AI发生作用</Chinesesimp>
+            <Chinese>醫療系統將同時對玩家與AI發生作用</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_DisplayName">
             <English>Basic Medical Settings [ACE]</English>
@@ -4307,8 +4307,8 @@
             <Russian>Настройки базовой медицины [ACE]</Russian>
             <Japanese>ベーシック医療設定 [ACE]</Japanese>
             <Korean>기본 의료 설정 [ACE]</Korean>
-            <SChinese>基本医疗设定 [ACE]</SChinese>
-            <TChinese>基本醫療設定 [ACE]</TChinese>
+            <Chinesesimp>基本医疗设定 [ACE]</Chinesesimp>
+            <Chinese>基本醫療設定 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_DisplayName">
             <English>Advanced Medical Settings [ACE]</English>
@@ -4323,8 +4323,8 @@
             <Italian>Impostazioni Mediche Avanzate [ACE]</Italian>
             <Japanese>アドバンスド医療設定 [ACE]</Japanese>
             <Korean>고급 의료 설정 [ACE]</Korean>
-            <SChinese>进阶医疗设定 [ACE]</SChinese>
-            <TChinese>進階醫療設定 [ACE]</TChinese>
+            <Chinesesimp>进阶医疗设定 [ACE]</Chinesesimp>
+            <Chinese>進階醫療設定 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_DisplayName">
             <English>Enabled for</English>
@@ -4339,8 +4339,8 @@
             <Italian>Abilitato per</Italian>
             <Japanese>次を有効化</Japanese>
             <Korean>활성</Korean>
-            <SChinese>被启用给</SChinese>
-            <TChinese>被啟用給</TChinese>
+            <Chinesesimp>被启用给</Chinesesimp>
+            <Chinese>被啟用給</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableFor_Description">
             <English>Select what units the advanced medical system will be enabled for</English>
@@ -4355,8 +4355,8 @@
             <Italian>Seleziona per quali unità verrà abilitato i sistema medico avanzato</Italian>
             <Japanese>選択されたユニットが、アドバンスド医療が使えるようになります</Japanese>
             <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
-            <SChinese>选择进阶医疗系统影响的对象</SChinese>
-            <TChinese>選擇進階醫療系統影響的對象</TChinese>
+            <Chinesesimp>选择进阶医疗系统影响的对象</Chinesesimp>
+            <Chinese>選擇進階醫療系統影響的對象</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_playeronly">
             <English>Players only</English>
@@ -4371,8 +4371,8 @@
             <Italian>Solo giocatori</Italian>
             <Japanese>プレイヤーのみ</Japanese>
             <Korean>플레이어만</Korean>
-            <SChinese>只限玩家</SChinese>
-            <TChinese>只限玩家</TChinese>
+            <Chinesesimp>只限玩家</Chinesesimp>
+            <Chinese>只限玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_playersandai">
             <English>Players and AI</English>
@@ -4387,8 +4387,8 @@
             <Italian>Giocatori ed IA</Italian>
             <Japanese>プレイヤーと AI</Japanese>
             <Korean>플레이어 및 인공지능</Korean>
-            <SChinese>玩家与AI</SChinese>
-            <TChinese>玩家與AI</TChinese>
+            <Chinesesimp>玩家与AI</Chinesesimp>
+            <Chinese>玩家與AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_DisplayName">
             <English>Enable Advanced wounds</English>
@@ -4403,8 +4403,8 @@
             <Italian>Abilita ferite Avanzate</Italian>
             <Japanese>アドバンスドな傷を有効化</Japanese>
             <Korean>고급 부상 활성화</Korean>
-            <SChinese>启用进阶伤口系统</SChinese>
-            <TChinese>啟用進階傷口系統</TChinese>
+            <Chinesesimp>启用进阶伤口系统</Chinesesimp>
+            <Chinese>啟用進階傷口系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableAdvancedWounds_Description">
             <English>Allow reopening of bandaged wounds?</English>
@@ -4419,8 +4419,8 @@
             <Italian>Permetti la riapertura di ferite bendate?</Italian>
             <Japanese>包帯で巻かれた傷を再び開くようにしますか？</Japanese>
             <Korean>붕대가 풀리는것을 활성화합니까?</Korean>
-            <SChinese>启用进阶伤口系统会使已被包扎的伤口有机率裂开</SChinese>
-            <TChinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</TChinese>
+            <Chinesesimp>启用进阶伤口系统会使已被包扎的伤口有机率裂开</Chinesesimp>
+            <Chinese>啟用進階傷口系統會使已被包紮的傷口有機率裂開</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_DisplayName">
             <English>Vehicle Crashes</English>
@@ -4435,8 +4435,8 @@
             <Italian>Schianto Veicoli</Italian>
             <Japanese>車両の衝突</Japanese>
             <Korean>차량 사고</Korean>
-            <SChinese>载具碰撞</SChinese>
-            <TChinese>載具碰撞</TChinese>
+            <Chinesesimp>载具碰撞</Chinesesimp>
+            <Chinese>載具碰撞</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_enableVehicleCrashes_Description">
             <English>Do units take damage from a vehicle crash?</English>
@@ -4451,8 +4451,8 @@
             <Italian>Le unità sostengono danni da incidenti con veicoli?</Italian>
             <Japanese>ユニットは車両の衝突による損傷を受けるようにしますか？</Japanese>
             <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
-            <SChinese>设定人员是否会因为载具冲撞别的物件而产生伤害?</SChinese>
-            <TChinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</TChinese>
+            <Chinesesimp>设定人员是否会因为载具冲撞别的物件而产生伤害?</Chinesesimp>
+            <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_DisplayName">
             <English>Allow Epinephrine</English>
@@ -4466,8 +4466,8 @@
             <Russian>Разрешить Адреналин</Russian>
             <Japanese>アドレナリンの許可</Japanese>
             <Korean>에피네프린 활성화</Korean>
-            <SChinese>允许使用肾上腺素</SChinese>
-            <TChinese>允許使用腎上腺素</TChinese>
+            <Chinesesimp>允许使用肾上腺素</Chinesesimp>
+            <Chinese>允許使用腎上腺素</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_medicSetting_basicEpi_Description">
             <English>Who can use Epinephrine for full heal? (Basic medical only)</English>
@@ -4481,8 +4481,8 @@
             <Russian>Кому разрешено использовать адреналин для полного излечения? (Только для базовой медицины)</Russian>
             <Japanese>完全に回復できるよう誰しもがアドレナリンを使えるようにしますか？(ベーシック医療のみ)</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 에피네프린을 쓸 수 있습니까? (기본 의료 전용)</Korean>
-            <SChinese>谁可以使用肾上腺素完整医治? (仅适用于基本医疗)</SChinese>
-            <TChinese>誰可以使用腎上腺素完整醫治? (僅適用於基本醫療)</TChinese>
+            <Chinesesimp>谁可以使用肾上腺素完整医治? (仅适用于基本医疗)</Chinesesimp>
+            <Chinese>誰可以使用腎上腺素完整醫治? (僅適用於基本醫療)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_DisplayName">
             <English>Allow PAK</English>
@@ -4497,8 +4497,8 @@
             <Italian>Consenti Kit di Pronto Soccorso</Italian>
             <Japanese>応急処置キットの許可</Japanese>
             <Korean>개인응급키트 활성화</Korean>
-            <SChinese>允许使用个人急救包</SChinese>
-            <TChinese>允許使用個人急救包</TChinese>
+            <Chinesesimp>允许使用个人急救包</Chinesesimp>
+            <Chinese>允許使用個人急救包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_PAK_Description">
             <English>Who can use the PAK for full heal?</English>
@@ -4513,8 +4513,8 @@
             <Italian>Chi può usare il KPS per cura completa?</Italian>
             <Japanese>完全に回復できるよう誰しもが応急処置キットを使えるようにしますか？</Japanese>
             <Korean>완전한 체력회복을 위해 어느 인원이 개인응급키트을 쓸 수 있습니까? (기본 의료 전용)</Korean>
-            <SChinese>谁能够使用个人急救包来达到完整医疗?</SChinese>
-            <TChinese>誰能夠使用個人急救包來達到完整醫療?</TChinese>
+            <Chinesesimp>谁能够使用个人急救包来达到完整医疗?</Chinesesimp>
+            <Chinese>誰能夠使用個人急救包來達到完整醫療?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anyone">
             <English>Anyone</English>
@@ -4529,8 +4529,8 @@
             <Italian>Chiunque</Italian>
             <Japanese>だれでも</Japanese>
             <Korean>모두</Korean>
-            <SChinese>任何人</SChinese>
-            <TChinese>任何人</TChinese>
+            <Chinesesimp>任何人</Chinesesimp>
+            <Chinese>任何人</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Medic">
             <English>Medics only</English>
@@ -4545,8 +4545,8 @@
             <Italian>Solo medici</Italian>
             <Japanese>衛生兵のみ</Japanese>
             <Korean>의무병만</Korean>
-            <SChinese>只限医疗兵</SChinese>
-            <TChinese>只限醫療兵</TChinese>
+            <Chinesesimp>只限医疗兵</Chinesesimp>
+            <Chinese>只限醫療兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Special">
             <English>Doctors only</English>
@@ -4561,8 +4561,8 @@
             <Italian>Solo dottori</Italian>
             <Japanese>医師のみ</Japanese>
             <Korean>의사만</Korean>
-            <SChinese>只限军医</SChinese>
-            <TChinese>只限軍醫</TChinese>
+            <Chinesesimp>只限军医</Chinesesimp>
+            <Chinese>只限軍醫</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_DisplayName">
             <English>Remove PAK on use</English>
@@ -4577,8 +4577,8 @@
             <Italian>Rimuovi Kit Pronto Soccorso dopo l'uso</Italian>
             <Japanese>応急処置キットの削除</Japanese>
             <Korean>개인응급키트 사용후 사라짐</Korean>
-            <SChinese>在使用后删除个人急救包</SChinese>
-            <TChinese>在使用後刪除個人急救包</TChinese>
+            <Chinesesimp>在使用后删除个人急救包</Chinesesimp>
+            <Chinese>在使用後刪除個人急救包</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_PAK_Description">
             <English>Should PAK be removed on usage?</English>
@@ -4593,8 +4593,8 @@
             <Italian>Il Kit Pronto Soccorso dev'essere rimosso dopo l'utilizzo?</Italian>
             <Japanese>応急処置キットを使うと削除しますか？</Japanese>
             <Korean>개인응급키트를 사용하고 나서 제거합니까?</Korean>
-            <SChinese>要在使用后删除个人急救包吗?</SChinese>
-            <TChinese>要在使用後刪除個人急救包嗎?</TChinese>
+            <Chinesesimp>要在使用后删除个人急救包吗?</Chinesesimp>
+            <Chinese>要在使用後刪除個人急救包嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_DisplayName">
             <English>Locations Epinephrine</English>
@@ -4608,8 +4608,8 @@
             <Russian>Место использования адреналина</Russian>
             <Japanese>アドレナリンをつかう場所</Japanese>
             <Korean>에피네프린 사용 장소</Korean>
-            <SChinese>肾上腺素使用地点</SChinese>
-            <TChinese>腎上腺素使用地點</TChinese>
+            <Chinesesimp>肾上腺素使用地点</Chinesesimp>
+            <Chinese>腎上腺素使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_useLocation_basicEpi_Description">
             <English>Where can the Epinephrine be used? (Basic Medical)</English>
@@ -4623,8 +4623,8 @@
             <Russian>Где может использоваться адреналин? (Базовая медицина)</Russian>
             <Japanese>どこでもアドレナリンをつかえるようにしますか？(ベーシック医療のみ)</Japanese>
             <Korean>어디에서 에피네프린을 사용할 수 있습니까? (기본 의료)</Korean>
-            <SChinese>在哪里可以使用肾上腺素? (基本医疗)</SChinese>
-            <TChinese>在哪裡可以使用腎上腺素? (基本醫療)</TChinese>
+            <Chinesesimp>在哪里可以使用肾上腺素? (基本医疗)</Chinesesimp>
+            <Chinese>在哪裡可以使用腎上腺素? (基本醫療)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_DisplayName">
             <English>Locations PAK</English>
@@ -4639,8 +4639,8 @@
             <Italian>Locazioni Kit Pronto Soccorso</Italian>
             <Japanese>応急処置キットをつかう場所</Japanese>
             <Korean>개인응급키트 사용 장소</Korean>
-            <SChinese>个人急救包使用地点</SChinese>
-            <TChinese>個人急救包使用地點</TChinese>
+            <Chinesesimp>个人急救包使用地点</Chinesesimp>
+            <Chinese>個人急救包使用地點</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_PAK_Description">
             <English>Where can the PAK be used?</English>
@@ -4655,8 +4655,8 @@
             <Italian>Dove può essere usato il Kit Pronto Soccorso?</Italian>
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
             <Korean>어디에서 개인응급키트를 사용할 수 있습니까?</Korean>
-            <SChinese>在哪里可以使用个人急救包?</SChinese>
-            <TChinese>在哪裡可以使用個人急救包?</TChinese>
+            <Chinesesimp>在哪里可以使用个人急救包?</Chinesesimp>
+            <Chinese>在哪裡可以使用個人急救包?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_DisplayName">
             <English>Condition PAK</English>
@@ -4671,8 +4671,8 @@
             <Italian>Condizioni Kit Pronto Soccorso</Italian>
             <Japanese>応急処置キットの状態</Japanese>
             <Korean>개인응급키트 상태</Korean>
-            <SChinese>个人急救包使用条件</SChinese>
-            <TChinese>個人急救包使用條件</TChinese>
+            <Chinesesimp>个人急救包使用条件</Chinesesimp>
+            <Chinese>個人急救包使用條件</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_PAK_Description">
             <English>When can the PAK be used?</English>
@@ -4687,8 +4687,8 @@
             <Italian>Quando può essere usato il Kit Pronto Soccorso?</Italian>
             <Japanese>どこでも応急処置キットをつかえるようにしますか？</Japanese>
             <Korean>언제 개인응급키트를 사용할 수 있습니까?</Korean>
-            <SChinese>何时可以使用个人急救包?</SChinese>
-            <TChinese>何時可以使用個人急救包?</TChinese>
+            <Chinesesimp>何时可以使用个人急救包?</Chinesesimp>
+            <Chinese>何時可以使用個人急救包?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_anywhere">
             <English>Anywhere</English>
@@ -4703,8 +4703,8 @@
             <Italian>Ovunque</Italian>
             <Japanese>どこでも</Japanese>
             <Korean>어디서나</Korean>
-            <SChinese>任何地方</SChinese>
-            <TChinese>任何地方</TChinese>
+            <Chinesesimp>任何地方</Chinesesimp>
+            <Chinese>任何地方</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicle">
             <English>Medical vehicles</English>
@@ -4719,8 +4719,8 @@
             <Italian>Veicoli medici</Italian>
             <Japanese>医療車両のみ</Japanese>
             <Korean>의료차량</Korean>
-            <SChinese>医疗载具</SChinese>
-            <TChinese>醫療載具</TChinese>
+            <Chinesesimp>医疗载具</Chinesesimp>
+            <Chinese>醫療載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_facility">
             <English>Medical facility</English>
@@ -4735,8 +4735,8 @@
             <Italian>Strutture mediche</Italian>
             <Japanese>医療施設でのみ</Japanese>
             <Korean>의료시설</Korean>
-            <SChinese>医疗设施</SChinese>
-            <TChinese>醫療設施</TChinese>
+            <Chinesesimp>医疗设施</Chinesesimp>
+            <Chinese>醫療設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_vehicleAndFacility">
             <English>Vehicles &amp; facility</English>
@@ -4751,8 +4751,8 @@
             <Italian>Veicoli e Strutture</Italian>
             <Japanese>車両 &amp; 施設</Japanese>
             <Korean>차량 및 시설</Korean>
-            <SChinese>医疗载具 &amp; 医疗设施</SChinese>
-            <TChinese>醫療載具 &amp; 醫療設施</TChinese>
+            <Chinesesimp>医疗载具 &amp; 医疗设施</Chinesesimp>
+            <Chinese>醫療載具 &amp; 醫療設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_DisplayName">
             <English>Allow Surgical Kit (Adv)</English>
@@ -4767,8 +4767,8 @@
             <Italian>Permetti Kit Chirurgico (Avanzato)</Italian>
             <Japanese>縫合キットの許可 (アド)</Japanese>
             <Korean>봉합키트 활성화 (고급)</Korean>
-            <SChinese>允许使用手术包 (进阶伤口)</SChinese>
-            <TChinese>允許使用手術包 (進階傷口)</TChinese>
+            <Chinesesimp>允许使用手术包 (进阶伤口)</Chinesesimp>
+            <Chinese>允許使用手術包 (進階傷口)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_medicSetting_SurgicalKit_Description">
             <English>Who can use the Surgical Kit?</English>
@@ -4783,8 +4783,8 @@
             <Italian>Chi può usare il Kit Chirurgico?</Italian>
             <Japanese>だれでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>어느 인원이 봉합키트를 사용할 수 있습니까?</Korean>
-            <SChinese>谁能够使用手术包?</SChinese>
-            <TChinese>誰能夠使用手術包?</TChinese>
+            <Chinesesimp>谁能够使用手术包?</Chinesesimp>
+            <Chinese>誰能夠使用手術包?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_DisplayName">
             <English>Remove Surgical Kit (Adv)</English>
@@ -4799,8 +4799,8 @@
             <Italian>Rimuovi Kit Chirurgico (Avanzato)</Italian>
             <Japanese>縫合キットを削除 (アド)</Japanese>
             <Korean>봉합키트 제거 (고급)</Korean>
-            <SChinese>在使用后删除手术包 (进阶伤口)</SChinese>
-            <TChinese>在使用後刪除手術包 (進階傷口)</TChinese>
+            <Chinesesimp>在使用后删除手术包 (进阶伤口)</Chinesesimp>
+            <Chinese>在使用後刪除手術包 (進階傷口)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_consumeItem_SurgicalKit_Description">
             <English>Should Surgical kit be removed on usage?</English>
@@ -4815,8 +4815,8 @@
             <Italian>Il Kit Chirurgico dev'essere rimosso dopo l'uso?</Italian>
             <Japanese>縫合キットをつかった後に削除しますか？</Japanese>
             <Korean>봉합키트를 사용하고 나서 제거합니까?</Korean>
-            <SChinese>手术包会在使用后被删除吗?</SChinese>
-            <TChinese>手術包會在使用後被刪除嗎?</TChinese>
+            <Chinesesimp>手术包会在使用后被删除吗?</Chinesesimp>
+            <Chinese>手術包會在使用後被刪除嗎?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_DisplayName">
             <English>Locations Surgical Kit (Adv)</English>
@@ -4831,8 +4831,8 @@
             <Italian>Località Kit Chirurgico (Avanzato)</Italian>
             <Japanese>縫合キットをつかう場所 (アド)</Japanese>
             <Korean>봉합키트 사용 장소 (고급)</Korean>
-            <SChinese>手术包使用地点 (进阶伤口)</SChinese>
-            <TChinese>手術包使用地點 (進階傷口)</TChinese>
+            <Chinesesimp>手术包使用地点 (进阶伤口)</Chinesesimp>
+            <Chinese>手術包使用地點 (進階傷口)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useLocation_SurgicalKit_Description">
             <English>Where can the Surgical Kit be used?</English>
@@ -4847,8 +4847,8 @@
             <Italian>Dove può essere usato il Kit Chirurgico?</Italian>
             <Japanese>どこでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>어디에서 봉합키트를 사용할 수 있게 합니까?</Korean>
-            <SChinese>定义手术包可被使用的地方?</SChinese>
-            <TChinese>定義手術包可被使用的地方?</TChinese>
+            <Chinesesimp>定义手术包可被使用的地方?</Chinesesimp>
+            <Chinese>定義手術包可被使用的地方?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_DisplayName">
             <English>Condition Surgical Kit (Adv)</English>
@@ -4863,8 +4863,8 @@
             <Italian>Condizioni Kit Chirurgico (Avanzato)</Italian>
             <Japanese>縫合キットの状態 (アド)</Japanese>
             <Korean>봉합키트 상태 (고급)</Korean>
-            <SChinese>使用手术包的条件 (进阶伤口)</SChinese>
-            <TChinese>使用手術包的條件 (進階傷口)</TChinese>
+            <Chinesesimp>使用手术包的条件 (进阶伤口)</Chinesesimp>
+            <Chinese>使用手術包的條件 (進階傷口)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_useCondition_SurgicalKit_Description">
             <English>When can the Surgical Kit be used?</English>
@@ -4879,8 +4879,8 @@
             <Italian>Quando può essere usato il Kit Chirurgico?</Italian>
             <Japanese>いつでも縫合キットをつかえるようにしますか？</Japanese>
             <Korean>언제 봉합키트를 사용할 수 있습니까?</Korean>
-            <SChinese>何时可以使用手术工具包?</SChinese>
-            <TChinese>何時可以使用手術工具包?</TChinese>
+            <Chinesesimp>何时可以使用手术工具包?</Chinesesimp>
+            <Chinese>何時可以使用手術工具包?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_DisplayName">
             <English>Heal hitpoints</English>
@@ -4894,8 +4894,8 @@
             <French>Soigner les blessures</French>
             <Japanese>ヒットポイントの回復</Japanese>
             <Korean>체력 회복</Korean>
-            <SChinese>完整治疗</SChinese>
-            <TChinese>完整治療</TChinese>
+            <Chinesesimp>完整治疗</Chinesesimp>
+            <Chinese>完整治療</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_healHitPointAfterAdvBandage_Description">
             <English>Heal fully bandaged hitpoints</English>
@@ -4909,8 +4909,8 @@
             <French>Soigner les plaies entièrement bandées.</French>
             <Japanese>包帯によりヒットポイントを完全に回復する</Japanese>
             <Korean>붕대를 감아서 체력을 회복</Korean>
-            <SChinese>完全医疗包扎的部位至痊愈</SChinese>
-            <TChinese>完全醫療包紮的部位至痊癒</TChinese>
+            <Chinesesimp>完全医疗包扎的部位至痊愈</Chinesesimp>
+            <Chinese>完全醫療包紮的部位至痊癒</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_DisplayName">
             <English>Pain suppression</English>
@@ -4925,8 +4925,8 @@
             <Italian>Soppressione dolore</Italian>
             <Japanese>痛みの継続</Japanese>
             <Korean>고통 억제</Korean>
-            <SChinese>疼痛抑制</SChinese>
-            <TChinese>疼痛抑制</TChinese>
+            <Chinesesimp>疼痛抑制</Chinesesimp>
+            <Chinese>疼痛抑制</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_painIsOnlySuppressed_Description">
             <English>Pain is only temporarily suppressed, not removed</English>
@@ -4941,8 +4941,8 @@
             <Italian>Dolore è solo temporaneamente soppresso, non rimosso</Italian>
             <Japanese>痛みを一時的に継続させ、取り除かない</Japanese>
             <Korean>고통은 제거가 아닌 일시적으로 억제만 가능합니다.</Korean>
-            <SChinese>疼痛只会被暂时抑制, 而不能完全消除</SChinese>
-            <TChinese>疼痛只會被暫時抑制, 而不能完全消除</TChinese>
+            <Chinesesimp>疼痛只会被暂时抑制, 而不能完全消除</Chinesesimp>
+            <Chinese>疼痛只會被暫時抑制, 而不能完全消除</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_BasicMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Basic Medical</English>
@@ -4955,8 +4955,8 @@
             <Russian>Настройка лечения в базовой медицинской системе ACE</Russian>
             <Japanese>ACE ベーシック医療による設定で、治療を設定する</Japanese>
             <Korean>ACE 기본 의료에 대한 치료 설정 수정</Korean>
-            <SChinese>设定ACE基本医疗的规则</SChinese>
-            <TChinese>設定ACE基本醫療的規則</TChinese>
+            <Chinesesimp>设定ACE基本医疗的规则</Chinesesimp>
+            <Chinese>設定ACE基本醫療的規則</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AdvancedMedicalSettings_Module_Description">
             <English>Configure the treatment settings from ACE Advanced Medical</English>
@@ -4971,8 +4971,8 @@
             <Italian>Configura le impostazioni trattamenti per ACE Medical</Italian>
             <Japanese>ACE アドバンスド医療による設定で、治療を設定する</Japanese>
             <Korean>ACE 고급 의료에 대한 치료 설정 수정</Korean>
-            <SChinese>设定ACE进阶医疗的规则</SChinese>
-            <TChinese>設定ACE進階醫療的規則</TChinese>
+            <Chinesesimp>设定ACE进阶医疗的规则</Chinesesimp>
+            <Chinese>設定ACE進階醫療的規則</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_Module_DisplayName">
             <English>Revive Settings [ACE]</English>
@@ -4987,8 +4987,8 @@
             <Italian>Impostazioni Revive [ACE]</Italian>
             <Japanese>リバイブ設定 [ACE]</Japanese>
             <Korean>소생 설정 [ACE]</Korean>
-            <SChinese>复苏设定 [ACE]</SChinese>
-            <TChinese>復甦設定 [ACE]</TChinese>
+            <Chinesesimp>复苏设定 [ACE]</Chinesesimp>
+            <Chinese>復甦設定 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_DisplayName">
             <English>Enable Revive</English>
@@ -5003,8 +5003,8 @@
             <Italian>Abilita Revive</Italian>
             <Japanese>リバイブを有効化</Japanese>
             <Korean>소생 활성화</Korean>
-            <SChinese>启用复苏</SChinese>
-            <TChinese>啟用復甦</TChinese>
+            <Chinesesimp>启用复苏</Chinesesimp>
+            <Chinese>啟用復甦</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_enableRevive_Description">
             <English>Enable a basic revive system</English>
@@ -5019,8 +5019,8 @@
             <Italian>Abilita un sistema revive basico</Italian>
             <Japanese>ベーシックなリバイブを有効化</Japanese>
             <Korean>기본 소생 시스템 활성화</Korean>
-            <SChinese>启用基本复苏系统</SChinese>
-            <TChinese>啟用基本復甦系統</TChinese>
+            <Chinesesimp>启用基本复苏系统</Chinesesimp>
+            <Chinese>啟用基本復甦系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_DisplayName">
             <English>Max Revive time</English>
@@ -5035,8 +5035,8 @@
             <Italian>Tempo massimo Revive</Italian>
             <Japanese>最大リバイブ時間</Japanese>
             <Korean>최대 소생 시간</Korean>
-            <SChinese>最大复苏时间</SChinese>
-            <TChinese>最大復甦時間</TChinese>
+            <Chinesesimp>最大复苏时间</Chinesesimp>
+            <Chinese>最大復甦時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_maxReviveTime_Description">
             <English>Max amount of seconds a unit can spend in revive state</English>
@@ -5051,8 +5051,8 @@
             <Italian>Numero massimo di secondi che un'unità può spendere in stato revive</Italian>
             <Japanese>ユニットがリバイブ状態になっている最大時間を設定できます</Japanese>
             <Korean>소생상태에서 인원이 버틸 수 있는 최대 시간을 초 단위로 정합니다</Korean>
-            <SChinese>人员在等待复苏状态下能够等待的最大时间(秒)</SChinese>
-            <TChinese>人員在等待復甦狀態下能夠等待的最大時間(秒)</TChinese>
+            <Chinesesimp>人员在等待复苏状态下能够等待的最大时间(秒)</Chinesesimp>
+            <Chinese>人員在等待復甦狀態下能夠等待的最大時間(秒)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_DisplayName">
             <English>Max Revive lives</English>
@@ -5067,8 +5067,8 @@
             <Italian>Numero massimo Revives</Italian>
             <Japanese>最大リバイブ数</Japanese>
             <Korean>최대 소생 횟수</Korean>
-            <SChinese>最大被救活次数</SChinese>
-            <TChinese>最大被救活次數</TChinese>
+            <Chinesesimp>最大被救活次数</Chinesesimp>
+            <Chinese>最大被救活次數</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_amountOfReviveLives_Description">
             <English>Max amount of lives a unit. 0 or -1 is disabled.</English>
@@ -5083,8 +5083,8 @@
             <Italian>Numero massimo di vite di un'unità. 0 o -1 per disabilitare.</Italian>
             <Japanese>ユニットの最大リバイブ数を設定できます。0 または -1 は無効化になります</Japanese>
             <Korean>소생 가능한 횟수입니다. 0 혹은 -1 로 비활성화 합니다</Korean>
-            <SChinese>一个人员最大可被救活次数, 0或-1为关闭 (无限救活).</SChinese>
-            <TChinese>一個人員最大可被救活次數, 0或-1為關閉 (無限救活).</TChinese>
+            <Chinesesimp>一个人员最大可被救活次数, 0或-1为关闭 (无限救活).</Chinesesimp>
+            <Chinese>一個人員最大可被救活次數, 0或-1為關閉 (無限救活).</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_ReviveSettings_Module_Description">
             <English>Provides a medical system for both players and AI.</English>
@@ -5099,8 +5099,8 @@
             <Italian>Fornisce un sistema medico sia per giocatori che IA</Italian>
             <Japanese>プレイヤーと AI の両方へ医療システムを提供します。</Japanese>
             <Korean>플레이어와 인공지능 모두에게 의료 시스템을 지원합니다.</Korean>
-            <SChinese>医疗系统将同时作用在玩家与AI</SChinese>
-            <TChinese>醫療系統將同時作用在玩家與AI</TChinese>
+            <Chinesesimp>医疗系统将同时作用在玩家与AI</Chinesesimp>
+            <Chinese>醫療系統將同時作用在玩家與AI</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_DisplayName">
             <English>Set Medic Class [ACE]</English>
@@ -5115,8 +5115,8 @@
             <Italian>Imposta Classe Medico [ACE]</Italian>
             <Japanese>衛生兵クラスとして設定 [ACE]</Japanese>
             <Korean>의무병 보직 설정 [ACE]</Korean>
-            <SChinese>设定医疗兵单位 [ACE]</SChinese>
-            <TChinese>設定醫療兵單位 [ACE]</TChinese>
+            <Chinesesimp>设定医疗兵单位 [ACE]</Chinesesimp>
+            <Chinese>設定醫療兵單位 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_DisplayName">
             <English>List</English>
@@ -5131,8 +5131,8 @@
             <Italian>Lista</Italian>
             <Japanese>一覧</Japanese>
             <Korean>목록</Korean>
-            <SChinese>列表</SChinese>
-            <TChinese>列表</TChinese>
+            <Chinesesimp>列表</Chinesesimp>
+            <Chinese>列表</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_EnableList_Description">
             <English>List of unit names that will be classified as medic, separated by commas.</English>
@@ -5147,8 +5147,8 @@
             <Italian>Lista di nomi unità che verranno classificati come medici, separati da virgole.</Italian>
             <Japanese>衛生兵として設定されるユニット名を一覧で指定でき、コンマで区切りを付けられます。</Japanese>
             <Korean>보직 이름 목록으로 의무병이 구분됩니다, 쉼표로 구분.</Korean>
-            <SChinese>列出的单位名字将被指派为医疗兵, 记得用逗号隔开!</SChinese>
-            <TChinese>列出的單位名字將被指派為醫療兵, 記得用逗號隔開!</TChinese>
+            <Chinesesimp>列出的单位名字将被指派为医疗兵, 记得用逗号隔开!</Chinesesimp>
+            <Chinese>列出的單位名字將被指派為醫療兵, 記得用逗號隔開!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_DisplayName">
             <English>Is Medic</English>
@@ -5163,8 +5163,8 @@
             <Italian>E' Medico</Italian>
             <Japanese>衛生兵として</Japanese>
             <Korean>의무병</Korean>
-            <SChinese>是医疗兵</SChinese>
-            <TChinese>是醫療兵</TChinese>
+            <Chinesesimp>是医疗兵</Chinesesimp>
+            <Chinese>是醫療兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_Description">
             <English>This module allows you to assign the medic class to selected units.</English>
@@ -5179,8 +5179,8 @@
             <Italian>Questo modulo ti permette di assegnare la classe Medico alle unità selezionate.</Italian>
             <Japanese>選択されたユニットを衛生兵として指定します。</Japanese>
             <Korean>이 모듈은 선택한 보직이 의무병을 할 수 있게 해줍니다.</Korean>
-            <SChinese>本模块可让被同步的单位成为医疗兵.</SChinese>
-            <TChinese>本模塊可讓被同步的單位成為醫療兵.</TChinese>
+            <Chinesesimp>本模块可让被同步的单位成为医疗兵.</Chinesesimp>
+            <Chinese>本模塊可讓被同步的單位成為醫療兵.</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_none">
             <English>None</English>
@@ -5195,8 +5195,8 @@
             <Italian>Nessuno</Italian>
             <Japanese>なし</Japanese>
             <Korean>없음</Korean>
-            <SChinese>无</SChinese>
-            <TChinese>無</TChinese>
+            <Chinesesimp>无</Chinesesimp>
+            <Chinese>無</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_medic">
             <English>Regular medic</English>
@@ -5211,8 +5211,8 @@
             <Italian>Medico Regolare</Italian>
             <Japanese>通常の衛生兵</Japanese>
             <Korean>일반 의무병</Korean>
-            <SChinese>普通医疗兵</SChinese>
-            <TChinese>普通醫療兵</TChinese>
+            <Chinesesimp>普通医疗兵</Chinesesimp>
+            <Chinese>普通醫療兵</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctor">
             <English>Doctor (Only Advanced Medics)</English>
@@ -5227,8 +5227,8 @@
             <Italian>Dottore (Solo Medici Avanzati)</Italian>
             <Japanese>医師 (アドバンスド医療のみ)</Japanese>
             <Korean>의사 (오직 고급 의료에서만)</Korean>
-            <SChinese>军医 (只限进阶医疗系统)</SChinese>
-            <TChinese>軍醫 (只限進階醫療系統)</TChinese>
+            <Chinesesimp>军医 (只限进阶医疗系统)</Chinesesimp>
+            <Chinese>軍醫 (只限進階醫療系統)</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_role_doctorShort">
             <English>Doctor</English>
@@ -5243,8 +5243,8 @@
             <Italian>Dottore</Italian>
             <Japanese>医師</Japanese>
             <Korean>의사</Korean>
-            <SChinese>军医</SChinese>
-            <TChinese>軍醫</TChinese>
+            <Chinesesimp>军医</Chinesesimp>
+            <Chinese>軍醫</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicRoles_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
@@ -5259,8 +5259,8 @@
             <Italian>Assegna la classe medico ACE ad un'unità</Italian>
             <Japanese>ユニットを ACE の衛生兵として割り当てる</Japanese>
             <Korean>인원에게 ACE 의무병 보직 선정</Korean>
-            <SChinese>指派ACE医疗职位给该单位</SChinese>
-            <TChinese>指派ACE醫療職位給該單位</TChinese>
+            <Chinesesimp>指派ACE医疗职位给该单位</Chinesesimp>
+            <Chinese>指派ACE醫療職位給該單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_DisplayName">
             <English>Set Medical Vehicle [ACE]</English>
@@ -5275,8 +5275,8 @@
             <Italian>Imposta Veicolo Medico [ACE]</Italian>
             <Japanese>医療車両を設定 [ACE]</Japanese>
             <Korean>의료 차랑 선정 [ACE]</Korean>
-            <SChinese>设定医疗载具 [ACE]</SChinese>
-            <TChinese>設定醫療載具 [ACE]</TChinese>
+            <Chinesesimp>设定医疗载具 [ACE]</Chinesesimp>
+            <Chinese>設定醫療載具 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_DisplayName">
             <English>List</English>
@@ -5291,8 +5291,8 @@
             <Italian>Lista</Italian>
             <Japanese>一覧</Japanese>
             <Korean>목록</Korean>
-            <SChinese>列表</SChinese>
-            <TChinese>列表</TChinese>
+            <Chinesesimp>列表</Chinesesimp>
+            <Chinese>列表</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_EnableList_Description">
             <English>List of vehicles that will be classified as medical vehicle, separated by commas.</English>
@@ -5307,8 +5307,8 @@
             <Italian>Lista di veicoli che verranno classificati come veicoli medici, separati da virgole.</Italian>
             <Japanese>医療車両として設定されるクラス名を一覧で指定でき、コンマで区切りを付けられます</Japanese>
             <Korean>차량 명칭 목록으로 의료차량이 구분됩니다, 쉼표로 구분.</Korean>
-            <SChinese>列出的载具将被指定为医疗载具, 记得用逗号隔开!</SChinese>
-            <TChinese>列出的載具將被指定為醫療載具, 記得用逗號隔開!</TChinese>
+            <Chinesesimp>列出的载具将被指定为医疗载具, 记得用逗号隔开!</Chinesesimp>
+            <Chinese>列出的載具將被指定為醫療載具, 記得用逗號隔開!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_DisplayName">
             <English>Is Medical Vehicle</English>
@@ -5323,8 +5323,8 @@
             <Italian>E' Veicolo Medico</Italian>
             <Japanese>医療車両として</Japanese>
             <Korean>의료 차량</Korean>
-            <SChinese>是医疗载具</SChinese>
-            <TChinese>是醫療載具</TChinese>
+            <Chinesesimp>是医疗载具</Chinesesimp>
+            <Chinese>是醫療載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_enabled_Description">
             <English>Whatever or not the objects in the list will be a medical vehicle.</English>
@@ -5339,8 +5339,8 @@
             <Italian>Gli oggetti nella lista verranno considerati veicoli medici o meno.</Italian>
             <Japanese>どれでも、またはこの一覧にないオブジェクトを医療車両として割り当てる。</Japanese>
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
-            <SChinese>列表中的载具将会变成医疗载具</SChinese>
-            <TChinese>列表中的載具將會變成醫療載具</TChinese>
+            <Chinesesimp>列表中的载具将会变成医疗载具</Chinesesimp>
+            <Chinese>列表中的載具將會變成醫療載具</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicVehicle_Module_Description">
             <English>Assigns the ACE medic class to a unit</English>
@@ -5355,8 +5355,8 @@
             <Italian>Assegna la classe medico ACE ad un'unità</Italian>
             <Japanese>ユニットを ACE の衛生兵として割り当てる</Japanese>
             <Korean>차량에 ACE 의무병 보직 선정</Korean>
-            <SChinese>指派ACE医疗职位给该单位</SChinese>
-            <TChinese>指派ACE醫療職位給該單位</TChinese>
+            <Chinesesimp>指派ACE医疗职位给该单位</Chinesesimp>
+            <Chinese>指派ACE醫療職位給該單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_DisplayName">
             <English>Set Medical Facility [ACE]</English>
@@ -5371,8 +5371,8 @@
             <Italian>Imposta Struttura Medica [ACE]</Italian>
             <Japanese>医療施設を設定 [ACE]</Japanese>
             <Korean>의료시설 선정 [ACE]</Korean>
-            <SChinese>设定医疗设施 [ACE]</SChinese>
-            <TChinese>設定醫療設施 [ACE]</TChinese>
+            <Chinesesimp>设定医疗设施 [ACE]</Chinesesimp>
+            <Chinese>設定醫療設施 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_DisplayName">
             <English>Is Medical Facility</English>
@@ -5387,8 +5387,8 @@
             <Italian>E' Struttura Medica</Italian>
             <Japanese>医療施設として</Japanese>
             <Korean>의료시설</Korean>
-            <SChinese>是医疗设施</SChinese>
-            <TChinese>是醫療設施</TChinese>
+            <Chinesesimp>是医疗设施</Chinesesimp>
+            <Chinese>是醫療設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_enabled_Description">
             <English>Registers an object as a medical facility</English>
@@ -5403,8 +5403,8 @@
             <Italian>Registra un oggetto come struttura medica</Italian>
             <Japanese>オブジェクトを医療施設として割り当てる</Japanese>
             <Korean>물체를 의료시설로 등록합니다</Korean>
-            <SChinese>指定一个物件作为医疗设施</SChinese>
-            <TChinese>指定一個物件作為醫療設施</TChinese>
+            <Chinesesimp>指定一个物件作为医疗设施</Chinesesimp>
+            <Chinese>指定一個物件作為醫療設施</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AssignMedicalFacility_Module_Description">
             <English>Defines an object as a medical facility. This allows for more advanced treatments. Can be used on buildings and vehicles.</English>
@@ -5419,8 +5419,8 @@
             <Italian>Definisce un oggetto come struttura medica. Questo permette cure più avanzate. Può essere usato su edifici e veicoli.</Italian>
             <Japanese>オブジェクトを医療施設として割り当てます。建物と車両へ割り当てられた場合、より高度な治療が可能になります。</Japanese>
             <Korean>물체를 의료시설로 정의합니다. 건물 혹은 차량이 될 수 있습니다. 이는 고급 의료 조치를 할 수 있게해줍니다.</Korean>
-            <SChinese>定义一个物件作为医疗设施, 此医疗设施将被允许使用更进阶的医疗方法. 此功能可用于建筑物或是载具上!</SChinese>
-            <TChinese>定義一個物件作為醫療設施, 此醫療設施將被允許使用更進階的醫療方法. 此功能可用於建築物或是載具上!</TChinese>
+            <Chinesesimp>定义一个物件作为医疗设施, 此医疗设施将被允许使用更进阶的医疗方法. 此功能可用于建筑物或是载具上!</Chinesesimp>
+            <Chinese>定義一個物件作為醫療設施, 此醫療設施將被允許使用更進階的醫療方法. 此功能可用於建築物或是載具上!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -5435,8 +5435,8 @@
             <Italian>[ACE] Cassa Rifornimenti Medici (Basico)</Italian>
             <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
             <Korean>[ACE] 의료 물자 (기본)</Korean>
-            <SChinese>[ACE] 医疗补给箱（基本）</SChinese>
-            <TChinese>[ACE] 醫療補給箱（基本）</TChinese>
+            <Chinesesimp>[ACE] 医疗补给箱（基本）</Chinesesimp>
+            <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_medicalSupplyCrate_advanced">
             <English>[ACE] Medical Supply Crate (Advanced)</English>
@@ -5451,8 +5451,8 @@
             <Italian>[ACE] Cassa Rifornimenti Medici (Avanzato)</Italian>
             <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
             <Korean>[ACE] 의료 물자 (고급)</Korean>
-            <SChinese>[ACE] 医疗补给箱（进阶）</SChinese>
-            <TChinese>[ACE] 醫療補給箱（進階）</TChinese>
+            <Chinesesimp>[ACE] 医疗补给箱（进阶）</Chinesesimp>
+            <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_AnyTime">
             <English>Anytime</English>
@@ -5467,8 +5467,8 @@
             <Italian>Sempre</Italian>
             <Japanese>いつでも</Japanese>
             <Korean>언제나</Korean>
-            <SChinese>任何时间</SChinese>
-            <TChinese>任何時間</TChinese>
+            <Chinesesimp>任何时间</Chinesesimp>
+            <Chinese>任何時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Stable">
             <English>Stable</English>
@@ -5483,8 +5483,8 @@
             <Italian>Stabile</Italian>
             <Japanese>安定</Japanese>
             <Korean>안정된</Korean>
-            <SChinese>稳定状态下</SChinese>
-            <TChinese>穩定狀態下</TChinese>
+            <Chinesesimp>稳定状态下</Chinesesimp>
+            <Chinese>穩定狀態下</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Category_Medical">
             <English>Medical</English>
@@ -5499,8 +5499,8 @@
             <Hungarian>Orvosi</Hungarian>
             <Japanese>治療</Japanese>
             <Korean>의료</Korean>
-            <SChinese>医疗设定</SChinese>
-            <TChinese>醫療設定</TChinese>
+            <Chinesesimp>医疗设定</Chinesesimp>
+            <Chinese>醫療設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_DistanceToFar">
             <English>Distance to %1 has become to far for treatment</English>
@@ -5514,8 +5514,8 @@
             <French>%1 est trop loin pour être soigné</French>
             <Japanese>%1 は治療をできない所まで離れた</Japanese>
             <Korean>%1 부터의 거리가 너무 멀어 치료할 수 없습니다</Korean>
-            <SChinese>设定当距离超过%1将不能使用治疗动作</SChinese>
-            <TChinese>設定當距離超過%1將不能使用治療動作</TChinese>
+            <Chinesesimp>设定当距离超过%1将不能使用治疗动作</Chinesesimp>
+            <Chinese>設定當距離超過%1將不能使用治療動作</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_CanNotLoaded">
             <English>This person (%1) is awake and cannot be loaded</English>
@@ -5529,8 +5529,8 @@
             <French>%1 est conscient et ne peut être embarqué.</French>
             <Japanese>患者 (%1) は意識があり、積み込めない</Japanese>
             <Korean>이 사람 (%1) 은(는) 의식이 있어 태우지 못합니다</Korean>
-            <SChinese>此人(%1)是清醒且不能被装载</SChinese>
-            <TChinese>此人(%1)是清醒且不能被裝載</TChinese>
+            <Chinesesimp>此人(%1)是清醒且不能被装载</Chinesesimp>
+            <Chinese>此人(%1)是清醒且不能被裝載</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_noTourniquetOnBodyPart">
             <English>There is no tourniquet on this body part!</English>
@@ -5544,8 +5544,8 @@
             <French>Il n'y a pas de garrot sur ce membre !</French>
             <Japanese>身体には止血帯が無い！</Japanese>
             <Korean>이 부위에는 지혈대가 없습니다!</Korean>
-            <SChinese>这部位没有止血带!</SChinese>
-            <TChinese>這部位沒有止血帶!</TChinese>
+            <Chinesesimp>这部位没有止血带!</Chinesesimp>
+            <Chinese>這部位沒有止血帶!</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedic_Description">
             <English>Medical training</English>
@@ -5559,8 +5559,8 @@
             <Russian>Медицинская подготовка</Russian>
             <Japanese>治療の訓練</Japanese>
             <Korean>의료 훈련</Korean>
-            <SChinese>医疗训练</SChinese>
-            <TChinese>醫療訓練</TChinese>
+            <Chinesesimp>医疗训练</Chinesesimp>
+            <Chinese>醫療訓練</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Attributes_isMedicalVehicle_Description">
             <English>Whether or not the object will be a medical vehicle.</English>
@@ -5573,8 +5573,8 @@
             <Russian>Будет ли объект считаться медицинским транспортом.</Russian>
             <Japanese>どれでも、またはオブジェクトを医療車両として割り当てます。</Japanese>
             <Korean>무엇이 되었던간에 이 목록에 있는 물체는 의료 차량이 됩니다.</Korean>
-            <SChinese>是否使该载具为医疗载具?</SChinese>
-            <TChinese>是否使該載具為醫療載具?</TChinese>
+            <Chinesesimp>是否使该载具为医疗载具?</Chinesesimp>
+            <Chinese>是否使該載具為醫療載具?</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_Description">
             <English>Delay cease fire of AI while player is unconscious for medical reasons.</English>
@@ -5587,8 +5587,8 @@
             <Japanese>AI はプレイヤーが医療的な理由で気絶している場合にかぎり、撃つのをためらいます。</Japanese>
             <Polish>Opóźnij stan wstrzymania ognia u AI kiedy gracz jest nieprzytomny z powodów medycznych.</Polish>
             <Korean>의료상의 이유로 플레이어가 기절할 경우 인공지능이 발사를 지연합니다.</Korean>
-            <SChinese>当玩家为无意识的状态时, 延长AI的停火时间</SChinese>
-            <TChinese>當玩家為無意識的狀態時, 延長AI的停火時間</TChinese>
+            <Chinesesimp>当玩家为无意识的状态时, 延长AI的停火时间</Chinesesimp>
+            <Chinese>當玩家為無意識的狀態時, 延長AI的停火時間</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_MedicalSettings_delayUnconCaptive_DisplayName">
             <English>Delay cease fire of AI for unconsciousness</English>
@@ -5602,8 +5602,8 @@
             <Russian>Задержка прекращения огня ботами при потере сознания</Russian>
             <Japanese>AI は気絶している人へ、ためらってから射撃します</Japanese>
             <Korean>기절할 경우 인공지능이 발사를 지연합니다</Korean>
-            <SChinese>延长AI对已无意识玩家的停火时间</SChinese>
-            <TChinese>延長AI對已無意識玩家的停火時間</TChinese>
+            <Chinesesimp>延长AI对已无意识玩家的停火时间</Chinesesimp>
+            <Chinese>延長AI對已無意識玩家的停火時間</Chinese>
         </Key>
     </Package>
 </Project>

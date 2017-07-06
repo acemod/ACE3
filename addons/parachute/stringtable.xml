@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Parachute">
         <Key ID="STR_ACE_Parachute_showAltimeter">
@@ -14,8 +14,8 @@
             <Portuguese>Altímetro</Portuguese>
             <Japanese>高度計</Japanese>
             <Korean>고도계</Korean>
-            <SChinese>高度计</SChinese>
-            <TChinese>高度計</TChinese>
+            <Chinesesimp>高度计</Chinesesimp>
+            <Chinese>高度計</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
@@ -30,8 +30,8 @@
             <Portuguese>Relógio Altímetro</Portuguese>
             <Japanese>時計型高度計</Japanese>
             <Korean>고도계 시계</Korean>
-            <SChinese>高度计手表</SChinese>
-            <TChinese>高度計手錶</TChinese>
+            <Chinesesimp>高度计手表</Chinesesimp>
+            <Chinese>高度計手錶</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDescription">
             <English>Used to show height, descent rate and the time.</English>
@@ -46,8 +46,8 @@
             <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
             <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
             <Korean>높이와, 하강속도 그리고 시간을 보여줍니다.</Korean>
-            <SChinese>用于显示高度, 下降率和时间.</SChinese>
-            <TChinese>用於顯示高度, 下降率和時間.</TChinese>
+            <Chinesesimp>用于显示高度, 下降率和时间.</Chinesesimp>
+            <Chinese>用於顯示高度, 下降率和時間.</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_NonSteerableParachute">
             <English>Non-Steerable Parachute</English>
@@ -62,8 +62,8 @@
             <Portuguese>Para-querdas não controlável</Portuguese>
             <Japanese>非操作型パラシュート</Japanese>
             <Korean>비-조종 낙하산</Korean>
-            <SChinese>非可操控降落伞</SChinese>
-            <TChinese>非可操控降落傘</TChinese>
+            <Chinesesimp>非可操控降落伞</Chinesesimp>
+            <Chinese>非可操控降落傘</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
@@ -78,8 +78,8 @@
             <Italian>Taglia Paracadute</Italian>
             <Japanese>パラシュートを切断</Japanese>
             <Korean>낙하산 자르기</Korean>
-            <SChinese>剪断降落伞</SChinese>
-            <TChinese>剪斷降落傘</TChinese>
+            <Chinesesimp>剪断降落伞</Chinesesimp>
+            <Chinese>剪斷降落傘</Chinese>
         </Key>
         <Key ID="STR_ACE_Parachute_ReserveParachute">
             <English>Reserve Parachute</English>
@@ -94,8 +94,8 @@
             <Italian>Paracadute di Riserva</Italian>
             <Japanese>予備パラシュート</Japanese>
             <Korean>예비 낙하산</Korean>
-            <SChinese>备用降落伞</SChinese>
-            <TChinese>備用降落傘</TChinese>
+            <Chinesesimp>备用降落伞</Chinesesimp>
+            <Chinese>備用降落傘</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="medical_blood">
         <Key ID="STR_ACE_medical_blood_enabledFor_OnlyPlayers">
@@ -9,8 +9,8 @@
             <Polish>Tylko gracze</Polish>
             <French>Joueurs seulement</French>
             <Italian>Solo Giocatori</Italian>
-            <SChinese>只有玩家</SChinese>
-            <TChinese>只有玩家</TChinese>
+            <Chinesesimp>只有玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_DisplayName">
             <English>Enable Blood Drops</English>
@@ -20,8 +20,8 @@
             <Polish>Włącz ślady krwi na ziemi</Polish>
             <French>Active les gouttes de sang</French>
             <Italian>Abilita Perdite di Sangue</Italian>
-            <SChinese>开启血液滴落效果</SChinese>
-            <TChinese>開啟血液滴落效果</TChinese>
+            <Chinesesimp>开启血液滴落效果</Chinesesimp>
+            <Chinese>開啟血液滴落效果</Chinese>
         </Key>
         <Key ID="STR_ACE_medical_blood_MedicalBloodSettings_enabledFor_Description">
             <English>Enable or disable Blood Drops created on bleeding and taking damage</English>
@@ -30,8 +30,8 @@
             <Polish>Włącz lub wyłącz pozostawianie śladów krwi na ziemi kiedy postać odnosi obrażenia bądź krwawi</Polish>
             <French>(Dés)active les gouttes de sang lors d'un saignement ou de blessure</French>
             <Italian>Abilita o disabilita la Perdite di Sangue create sanguinando e prendendo danno</Italian>
-            <SChinese>开启后, 会让受伤时伤口有血液滴落的效果.</SChinese>
-            <TChinese>開啟後, 會讓受傷時傷口有血液滴落的效果.</TChinese>
+            <Chinesesimp>开启后, 会让受伤时伤口有血液滴落的效果.</Chinesesimp>
+            <Chinese>開啟後, 會讓受傷時傷口有血液滴落的效果.</Chinese>
         </Key>
     </Package>
 </Project>

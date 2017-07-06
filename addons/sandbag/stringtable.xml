@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="sandbag">
         <Key ID="STR_ACE_Sandbag_sandbag_displayName">
@@ -14,8 +14,8 @@
             <Portuguese>Saco de Areia</Portuguese>
             <Japanese>土のう</Japanese>
             <Korean>모래주머니</Korean>
-            <SChinese>沙包</SChinese>
-            <TChinese>沙包</TChinese>
+            <Chinesesimp>沙包</Chinesesimp>
+            <Chinese>沙包</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
             <English>Sandbag (empty)</English>
@@ -30,8 +30,8 @@
             <Portuguese>Saco de Areia (vazio)</Portuguese>
             <Japanese>土のう (空)</Japanese>
             <Korean>모래주머니(비어있음)</Korean>
-            <SChinese>沙包 (空)</SChinese>
-            <TChinese>沙包 (空)</TChinese>
+            <Chinesesimp>沙包 (空)</Chinesesimp>
+            <Chinese>沙包 (空)</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
@@ -46,8 +46,8 @@
             <Portuguese>Não pode contruir aqui</Portuguese>
             <Japanese>ここでは作れない</Japanese>
             <Korean>여기에 지을 수 없습니다</Korean>
-            <SChinese>无法放置在此</SChinese>
-            <TChinese>無法放置在此</TChinese>
+            <Chinesesimp>无法放置在此</Chinesesimp>
+            <Chinese>無法放置在此</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_PICKUPSB">
             <English>Pick up Sandbag</English>
@@ -62,8 +62,8 @@
             <Portuguese>Pegar saco de areia</Portuguese>
             <Japanese>土のうを拾う</Japanese>
             <Korean>모래주머니 줍기</Korean>
-            <SChinese>捡起沙包</SChinese>
-            <TChinese>撿起沙包</TChinese>
+            <Chinesesimp>捡起沙包</Chinesesimp>
+            <Chinese>撿起沙包</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
@@ -78,8 +78,8 @@
             <Portuguese>Carregar saco de areia</Portuguese>
             <Japanese>土のうを運ぶ</Japanese>
             <Korean>모래주머니 옮기기</Korean>
-            <SChinese>搬运沙包</SChinese>
-            <TChinese>搬運沙包</TChinese>
+            <Chinesesimp>搬运沙包</Chinesesimp>
+            <Chinese>搬運沙包</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
             <English>End Carrying</English>
@@ -94,8 +94,8 @@
             <Portuguese>Parar de carregar</Portuguese>
             <Japanese>下ろす</Japanese>
             <Korean>그만 옮기기</Korean>
-            <SChinese>停止搬运</SChinese>
-            <TChinese>停止搬運</TChinese>
+            <Chinesesimp>停止搬运</Chinesesimp>
+            <Chinese>停止搬運</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DropSandbag">
             <English>Drop Sandbag</English>
@@ -110,8 +110,8 @@
             <Portuguese>Derrubar saco de areia</Portuguese>
             <Japanese>土のうを落とす</Japanese>
             <Korean>여기에 놓기</Korean>
-            <SChinese>放下沙包</SChinese>
-            <TChinese>放下沙包</TChinese>
+            <Chinesesimp>放下沙包</Chinesesimp>
+            <Chinese>放下沙包</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
             <English>Confirm Deployment</English>
@@ -126,8 +126,8 @@
             <Portuguese>Confirmar implantação</Portuguese>
             <Japanese>ここで作る</Japanese>
             <Korean>설치 확인</Korean>
-            <SChinese>确认布署</SChinese>
-            <TChinese>確認佈署</TChinese>
+            <Chinesesimp>确认布署</Chinesesimp>
+            <Chinese>確認佈署</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
@@ -142,8 +142,8 @@
             <Portuguese>Cancelar implantação</Portuguese>
             <Japanese>作るのをやめる</Japanese>
             <Korean>설치 취소</Korean>
-            <SChinese>取消布署</SChinese>
-            <TChinese>取消佈署</TChinese>
+            <Chinesesimp>取消布署</Chinesesimp>
+            <Chinese>取消佈署</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
@@ -158,8 +158,8 @@
             <Portuguese>Implantar saco de areia</Portuguese>
             <Japanese>土のうを設置</Japanese>
             <Korean>모래주머니 설치</Korean>
-            <SChinese>布署沙包</SChinese>
-            <TChinese>佈署沙包</TChinese>
+            <Chinesesimp>布署沙包</Chinesesimp>
+            <Chinese>佈署沙包</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_SANDBOX">
             <English>Sandbag Box</English>
@@ -174,8 +174,8 @@
             <Portuguese>Caixa de saco de areia</Portuguese>
             <Japanese>土のう入れ</Japanese>
             <Korean>모래주머니 상자</Korean>
-            <SChinese>沙包箱</SChinese>
-            <TChinese>沙包箱</TChinese>
+            <Chinesesimp>沙包箱</Chinesesimp>
+            <Chinese>沙包箱</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
@@ -190,8 +190,8 @@
             <Portuguese>Aqui não tem areia</Portuguese>
             <Japanese>ここに土は無い</Japanese>
             <Korean>흙이 없습니다</Korean>
-            <SChinese>这里没有沙</SChinese>
-            <TChinese>這裡沒有沙</TChinese>
+            <Chinesesimp>这里没有沙</Chinesesimp>
+            <Chinese>這裡沒有沙</Chinese>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>
@@ -206,8 +206,8 @@
             <Russian>Bращать</Russian>
             <Japanese>回転</Japanese>
             <Korean>돌리기</Korean>
-            <SChinese>旋转</SChinese>
-            <TChinese>旋轉</TChinese>
+            <Chinesesimp>旋转</Chinesesimp>
+            <Chinese>旋轉</Chinese>
         </Key>
     </Package>
 </Project>

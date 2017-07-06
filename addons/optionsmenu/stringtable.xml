@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_OpenConfigMenu">
@@ -14,8 +14,8 @@
             <Italian>Opzioni ACE</Italian>
             <Japanese>ACE オプション</Japanese>
             <Korean>ACE 옵션</Korean>
-            <SChinese>ACE 设定 </SChinese>
-            <TChinese>ACE 設定 </TChinese>
+            <Chinesesimp>ACE 设定 </Chinesesimp>
+            <Chinese>ACE 設定 </Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_FixAnimation">
             <English>Fix Animation</English>
@@ -30,8 +30,8 @@
             <Portuguese>Arrumar  Animação</Portuguese>
             <Japanese>アニメーションを修正</Japanese>
             <Korean>동작 고정</Korean>
-            <SChinese>修复动作BUG</SChinese>
-            <TChinese>修復動作BUG</TChinese>
+            <Chinesesimp>修复动作BUG</Chinesesimp>
+            <Chinese>修復動作BUG</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_ResetAll">
             <English>Reset All</English>
@@ -46,8 +46,8 @@
             <Portuguese>Resetar Tudo</Portuguese>
             <Japanese>すべて初期化</Japanese>
             <Korean>모두 초기화</Korean>
-            <SChinese>重置为预设值</SChinese>
-            <TChinese>重置為預設值</TChinese>
+            <Chinesesimp>重置为预设值</Chinesesimp>
+            <Chinese>重置為預設值</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabColors">
             <English>Colors</English>
@@ -62,8 +62,8 @@
             <Portuguese>Cores</Portuguese>
             <Japanese>色</Japanese>
             <Korean>색상</Korean>
-            <SChinese>颜色</SChinese>
-            <TChinese>顏色</TChinese>
+            <Chinesesimp>颜色</Chinesesimp>
+            <Chinese>顏色</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabOptions">
             <English>Options</English>
@@ -78,8 +78,8 @@
             <Italian>Opzioni</Italian>
             <Japanese>オプション</Japanese>
             <Korean>옵션</Korean>
-            <SChinese>中文化由[MR]Diss制作</SChinese>
-            <TChinese>設定</TChinese>
+            <Chinesesimp>中文化由[MR]Diss制作</Chinesesimp>
+            <Chinese>設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TabValues">
             <English>Values</English>
@@ -94,8 +94,8 @@
             <Portuguese>Valores</Portuguese>
             <Japanese>値</Japanese>
             <Korean>값</Korean>
-            <SChinese>数值</SChinese>
-            <TChinese>數值</TChinese>
+            <Chinesesimp>数值</Chinesesimp>
+            <Chinese>數值</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Setting">
             <English>Setting:</English>
@@ -110,8 +110,8 @@
             <Portuguese>Opção:</Portuguese>
             <Japanese>設定：</Japanese>
             <Korean>설정:</Korean>
-            <SChinese>设定:</SChinese>
-            <TChinese>設定:</TChinese>
+            <Chinesesimp>设定:</Chinesesimp>
+            <Chinese>設定:</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Export">
             <English>Export</English>
@@ -126,8 +126,8 @@
             <Portuguese>Exportar</Portuguese>
             <Japanese>出力</Japanese>
             <Korean>내보내기</Korean>
-            <SChinese>输出</SChinese>
-            <TChinese>輸出</TChinese>
+            <Chinesesimp>输出</Chinesesimp>
+            <Chinese>輸出</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_OpenExport">
             <English>Open Export Menu</English>
@@ -142,8 +142,8 @@
             <Portuguese>Abrir menu de exportação</Portuguese>
             <Japanese>出力メニューを開く</Japanese>
             <Korean>내보내기 메뉴 열기</Korean>
-            <SChinese>开启输出选单</SChinese>
-            <TChinese>開啟輸出選單</TChinese>
+            <Chinesesimp>开启输出选单</Chinesesimp>
+            <Chinese>開啟輸出選單</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_stringType">
             <English>String input.</English>
@@ -158,8 +158,8 @@
             <Portuguese>Input de String</Portuguese>
             <Japanese>文字列の入力</Japanese>
             <Korean>문자열 입력</Korean>
-            <SChinese>输入数值</SChinese>
-            <TChinese>輸入數值</TChinese>
+            <Chinesesimp>输入数值</Chinesesimp>
+            <Chinese>輸入數值</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_arrayType">
             <English>Array. Seperate elements by using ,.</English>
@@ -174,8 +174,8 @@
             <Portuguese>Vetor. Separe elementos usando *,*.</Portuguese>
             <Japanese>アライ。,を使うことで区別できます。</Japanese>
             <Korean>배열. 요소를 ,. 로 나눔</Korean>
-            <SChinese>阵列. 使用','来做每个值的区隔.</SChinese>
-            <TChinese>陣列. 使用','來做每個值的區隔.</TChinese>
+            <Chinesesimp>阵列. 使用','来做每个值的区隔.</Chinesesimp>
+            <Chinese>陣列. 使用','來做每個值的區隔.</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_scalarType">
             <English>Number</English>
@@ -190,8 +190,8 @@
             <Portuguese>Número</Portuguese>
             <Japanese>数</Japanese>
             <Korean>숫자</Korean>
-            <SChinese>数字</SChinese>
-            <TChinese>數字</TChinese>
+            <Chinesesimp>数字</Chinesesimp>
+            <Chinese>數字</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_unknownType">
             <English>Uknown input type</English>
@@ -206,8 +206,8 @@
             <Portuguese>Tipo desonhecido de input</Portuguese>
             <Japanese>不明な入力です</Japanese>
             <Korean>불분명한 입력입니다</Korean>
-            <SChinese>未知输入类型</SChinese>
-            <TChinese>未知輸入類型</TChinese>
+            <Chinesesimp>未知输入类型</Chinesesimp>
+            <Chinese>未知輸入類型</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_SaveInput">
             <English>Save input</English>
@@ -222,8 +222,8 @@
             <Portuguese>Salvar input</Portuguese>
             <Japanese>入力を保存</Japanese>
             <Korean>입력 저장</Korean>
-            <SChinese>储存输入</SChinese>
-            <TChinese>儲存輸入</TChinese>
+            <Chinesesimp>储存输入</Chinesesimp>
+            <Chinese>儲存輸入</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_inClientSettings">
             <English>Include Client Settings</English>
@@ -238,8 +238,8 @@
             <Portuguese>Incluir opções do cliente</Portuguese>
             <Japanese>クライアント設定を含む</Japanese>
             <Korean>클라이언트 설정 포함</Korean>
-            <SChinese>包含客户端设定</SChinese>
-            <TChinese>包含客戶端設定</TChinese>
+            <Chinesesimp>包含客户端设定</Chinesesimp>
+            <Chinese>包含客戶端設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_exClientSettings">
             <English>Exclude Client Settings</English>
@@ -254,8 +254,8 @@
             <Portuguese>Excluir opções do cliente</Portuguese>
             <Japanese>クライアント設定を実行する</Japanese>
             <Korean>클라이언트 설정 제외</Korean>
-            <SChinese>不包含客户端设定</SChinese>
-            <TChinese>不包含客戶端設定</TChinese>
+            <Chinesesimp>不包含客户端设定</Chinesesimp>
+            <Chinese>不包含客戶端設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_settingsExported">
             <English>Settings exported to clipboard</English>
@@ -270,8 +270,8 @@
             <Portuguese>Opções exportadas para o clipboard.</Portuguese>
             <Japanese>クリップボードに設定を出力する</Japanese>
             <Korean>클립보드로 설정 내보내기</Korean>
-            <SChinese>设定输出至剪贴簿</SChinese>
-            <TChinese>設定輸出至剪貼簿</TChinese>
+            <Chinesesimp>设定输出至剪贴簿</Chinesesimp>
+            <Chinese>設定輸出至剪貼簿</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_uiScaing">
             <English>Option Menu UI Scaling</English>
@@ -286,8 +286,8 @@
             <Italian>Proporzioni della interfaccia utente</Italian>
             <Japanese>オプション メニューにあるユーザ インタフェイスの大きさ</Japanese>
             <Korean>옵션메뉴 UI 비례도</Korean>
-            <SChinese>调整设定选单视窗大小</SChinese>
-            <TChinese>調整設定選單視窗大小</TChinese>
+            <Chinesesimp>调整设定选单视窗大小</Chinesesimp>
+            <Chinese>調整設定選單視窗大小</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_DisplayName">
             <English>Allow Config Export [ACE]</English>
@@ -302,8 +302,8 @@
             <Italian>Consenti Esportazione del Config [ACE]</Italian>
             <Japanese>設定の出力を許可 [ACE]</Japanese>
             <Korean>설정 내보내기 허가 [ACE]</Korean>
-            <SChinese>允许配置导出 [ACE]</SChinese>
-            <TChinese>允許配置導出 [ACE]</TChinese>
+            <Chinesesimp>允许配置导出 [ACE]</Chinesesimp>
+            <Chinese>允許配置導出 [ACE]</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_DisplayName">
             <English>Allow</English>
@@ -318,8 +318,8 @@
             <Italian>Consenti</Italian>
             <Japanese>許可</Japanese>
             <Korean>허가</Korean>
-            <SChinese>允许</SChinese>
-            <TChinese>允許</TChinese>
+            <Chinesesimp>允许</Chinesesimp>
+            <Chinese>允許</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_allowconfigurationExport_Description">
             <English>Allow export of all settings to a server config formatted.</English>
@@ -334,8 +334,8 @@
             <Italian>Consenti esportazione di tutti i parametri ad config formato per server.</Italian>
             <Japanese>全ての設定をサーバ用設定の形式へと出力できるようにします。</Japanese>
             <Korean>모든 설정을 서버 설정 형식으로 내보내는것을 허락합니다.</Korean>
-            <SChinese>允许导出所有设定成伺服器配置格式的档案.</SChinese>
-            <TChinese>允許導出所有設定成伺服器配置格式的檔案.</TChinese>
+            <Chinesesimp>允许导出所有设定成伺服器配置格式的档案.</Chinesesimp>
+            <Chinese>允許導出所有設定成伺服器配置格式的檔案.</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_AllowConfigExport_Module_Description">
             <English>When allowed, you have access to the settings modification and export in SP. Clicking export will place the formated config on your clipboard.</English>
@@ -350,8 +350,8 @@
             <Italian>Quando consentito, hai accesso alle modifiche delle impostazioni ed esportazione in SP. Cliccando Esporta piazzera il config formattato sul tuo Blocco Note.</Italian>
             <Japanese>許可の場合、あなたは設定の変更と出力をシングルプレイで可能です。出力をクリックすると、サーバ用設定の形式となっている設定がクリップボードに保存されます。</Japanese>
             <Korean>허락하는 경우 싱글플레이에서 설정의 변경과 내보내기가 가능해집니다. 내보내기를 눌러서 서버 형성의 설정을 클립보드로 보냅니다.</Korean>
-            <SChinese>当本功能开启时, 你将能在单人模式中调整并输出设定. 点击输出按钮后将会让相关设定参数复制到剪贴簿上.</SChinese>
-            <TChinese>當本功能開啟時, 你將能在單人模式中調整並輸出設定. 點擊輸出按鈕後將會讓相關設定參數複製到剪貼簿上.</TChinese>
+            <Chinesesimp>当本功能开启时, 你将能在单人模式中调整并输出设定. 点击输出按钮后将会让相关设定参数复制到剪贴簿上.</Chinesesimp>
+            <Chinese>當本功能開啟時, 你將能在單人模式中調整並輸出設定. 點擊輸出按鈕後將會讓相關設定參數複製到剪貼簿上.</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Hide">
             <English>Hide</English>
@@ -366,8 +366,8 @@
             <Italian>Nascondi</Italian>
             <Japanese>非表示</Japanese>
             <Korean>숨기기</Korean>
-            <SChinese>隐藏</SChinese>
-            <TChinese>隱藏</TChinese>
+            <Chinesesimp>隐藏</Chinesesimp>
+            <Chinese>隱藏</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightDown">
             <English>Top right, downwards</English>
@@ -382,8 +382,8 @@
             <Italian>In Alto a Destra, verso il Basso</Italian>
             <Japanese>右上、下側</Japanese>
             <Korean>오른쪽 위에서 아래로</Korean>
-            <SChinese>右上角, 向下</SChinese>
-            <TChinese>右上角, 向下</TChinese>
+            <Chinesesimp>右上角, 向下</Chinesesimp>
+            <Chinese>右上角, 向下</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopRightLeft">
             <English>Top right, to the left</English>
@@ -398,8 +398,8 @@
             <Italian>In Alto a Destra, verso Sinistra</Italian>
             <Japanese>右上、左詰</Japanese>
             <Korean>오른쪽 위에서 왼쪽으로</Korean>
-            <SChinese>右上角, 向左</SChinese>
-            <TChinese>右上角, 向左</TChinese>
+            <Chinesesimp>右上角, 向左</Chinesesimp>
+            <Chinese>右上角, 向左</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftDown">
             <English>Top left, downwards</English>
@@ -414,8 +414,8 @@
             <Italian>In Alto a Sinistra, verso il Basso</Italian>
             <Japanese>左上、下側</Japanese>
             <Korean>왼쪽 위에서 아래로</Korean>
-            <SChinese>左上角, 向下</SChinese>
-            <TChinese>左上角, 向下</TChinese>
+            <Chinesesimp>左上角, 向下</Chinesesimp>
+            <Chinese>左上角, 向下</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_TopLeftRight">
             <English>Top left, to the right</English>
@@ -430,8 +430,8 @@
             <Italian>In Alto a Sinistra, verso Destra</Italian>
             <Japanese>右上、右詰</Japanese>
             <Korean>왼쪽 위에서 오른쪽으로</Korean>
-            <SChinese>左上角, 向右</SChinese>
-            <TChinese>左上角, 向右</TChinese>
+            <Chinesesimp>左上角, 向右</Chinesesimp>
+            <Chinese>左上角, 向右</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Top">
             <English>Top</English>
@@ -446,8 +446,8 @@
             <Italian>Alto</Italian>
             <Japanese>上側</Japanese>
             <Korean>상단</Korean>
-            <SChinese>上方</SChinese>
-            <TChinese>上方</TChinese>
+            <Chinesesimp>上方</Chinesesimp>
+            <Chinese>上方</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_Bottom">
             <English>Bottom</English>
@@ -462,8 +462,8 @@
             <Italian>Basso</Italian>
             <Japanese>下側</Japanese>
             <Korean>하단</Korean>
-            <SChinese>下方</SChinese>
-            <TChinese>下方</TChinese>
+            <Chinesesimp>下方</Chinesesimp>
+            <Chinese>下方</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
@@ -478,8 +478,8 @@
             <Italian>Debug su Blocco Note</Italian>
             <Japanese>クリップボードへデバッグ</Japanese>
             <Korean>디버그를 클립보드로</Korean>
-            <SChinese>复制除错讯息至剪贴簿</SChinese>
-            <TChinese>複製除錯訊息至剪貼簿</TChinese>
+            <Chinesesimp>复制除错讯息至剪贴簿</Chinesesimp>
+            <Chinese>複製除錯訊息至剪貼簿</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
@@ -494,8 +494,8 @@
             <Italian>Invia informazioni di debug all'RPT e al Blocco Note</Italian>
             <Japanese>デバッグ情報の RPT とクリップボードに送ります。</Japanese>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
-            <SChinese>复制除错讯息至剪贴簿与RPT报告档中.</SChinese>
-            <TChinese>複製除錯訊息至剪貼簿與RPT報告檔中.</TChinese>
+            <Chinesesimp>复制除错讯息至剪贴簿与RPT报告档中.</Chinesesimp>
+            <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中.</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFix">
             <English>Headbug Fix</English>
@@ -510,8 +510,8 @@
             <Italian>Sistema Bug della Testa</Italian>
             <Japanese>ヘッドバグ修正</Japanese>
             <Korean>헤드버그 수정</Korean>
-            <SChinese>修复动作BUG</SChinese>
-            <TChinese>修復動作BUG</TChinese>
+            <Chinesesimp>修复动作BUG</Chinesesimp>
+            <Chinese>修復動作BUG</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
             <English>Resets your animation state.</English>
@@ -526,8 +526,8 @@
             <Italian>Resetta il tuo stato animazione</Italian>
             <Japanese>現在のアニメーションの状況を初期化します。</Japanese>
             <Korean>자신의 동작 상태 초기화</Korean>
-            <SChinese>当ACE发生动作BUG时, 点此修复.</SChinese>
-            <TChinese>當ACE發生動作BUG時, 點此修復.</TChinese>
+            <Chinesesimp>当ACE发生动作BUG时, 点此修复.</Chinesesimp>
+            <Chinese>當ACE發生動作BUG時, 點此修復.</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
@@ -542,8 +542,8 @@
             <Italian>Novità ACE</Italian>
             <Japanese>ACE からのお知らせ</Japanese>
             <Korean>ACE 새소식</Korean>
-            <SChinese>ACE新闻</SChinese>
-            <TChinese>ACE新聞</TChinese>
+            <Chinesesimp>ACE新闻</Chinesesimp>
+            <Chinese>ACE新聞</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
@@ -558,8 +558,8 @@
             <Italian>Mostra News nel Menù Princinpale</Italian>
             <Japanese>メイン メニュにお知らせを表示します</Japanese>
             <Korean>메인메뉴에 새소식을 표시합니다</Korean>
-            <SChinese>显示新闻消息于主选单</SChinese>
-            <TChinese>顯示新聞消息於主選單</TChinese>
+            <Chinesesimp>显示新闻消息于主选单</Chinesesimp>
+            <Chinese>顯示新聞消息於主選單</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_category_all">
             <English>All Categories</English>
@@ -573,8 +573,8 @@
             <French>Toutes les catégories</French>
             <Japanese>全カテゴリ</Japanese>
             <Korean>모든 카테고리</Korean>
-            <SChinese>全局设定</SChinese>
-            <TChinese>全局設定</TChinese>
+            <Chinesesimp>全局设定</Chinesesimp>
+            <Chinese>全局設定</Chinese>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_CategoryLogistics">
             <English>Logistics</English>
@@ -588,8 +588,8 @@
             <French>Logistique</French>
             <Japanese>ロジスティクス</Japanese>
             <Korean>보급</Korean>
-            <SChinese>后勤设定</SChinese>
-            <TChinese>後勤設定</TChinese>
+            <Chinesesimp>后勤设定</Chinesesimp>
+            <Chinese>後勤設定</Chinese>
         </Key>
     </Package>
 </Project>

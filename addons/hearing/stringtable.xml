@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hearing">
         <Key ID="STR_ACE_Hearing_EarPlugs_Name">
@@ -14,8 +14,8 @@
             <Italian>Tappi auricolari</Italian>
             <Japanese>耳栓</Japanese>
             <Korean>귀마개</Korean>
-            <SChinese>耳塞</SChinese>
-            <TChinese>耳塞</TChinese>
+            <Chinesesimp>耳塞</Chinesesimp>
+            <Chinese>耳塞</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Description">
             <English>Protective Earplugs allow the wearer to be near loud weaponry without damage to his hearing.</English>
@@ -30,8 +30,8 @@
             <Italian>Proteggono l'apparato uditivo, permettendo a chi li indossa di resistere ai suoni particolarmente forti senza alcun danno.</Italian>
             <Japanese>着けることにより、近くの大きな銃声から聴覚を保護します。</Japanese>
             <Korean>보호용 귀마개는 화기로부터의 큰소리로부터 사용자의 청력을 보호합니다.</Korean>
-            <SChinese>配戴防护耳塞, 遇到大声的武器发射时也不会损害听力.</SChinese>
-            <TChinese>配戴防護耳塞, 遇到大聲的武器發射時也不會損害聽力.</TChinese>
+            <Chinesesimp>配戴防护耳塞, 遇到大声的武器发射时也不会损害听力.</Chinesesimp>
+            <Chinese>配戴防護耳塞, 遇到大聲的武器發射時也不會損害聽力.</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_On">
             <English>Earplugs in</English>
@@ -46,8 +46,8 @@
             <Italian>Indossa i tappi auricolari</Italian>
             <Japanese>耳栓を着ける</Japanese>
             <Korean>귀마개 착용</Korean>
-            <SChinese>塞入耳塞</SChinese>
-            <TChinese>塞入耳塞</TChinese>
+            <Chinesesimp>塞入耳塞</Chinesesimp>
+            <Chinese>塞入耳塞</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Off">
             <English>Earplugs out</English>
@@ -62,8 +62,8 @@
             <Italian>Levati i tappi auricolari</Italian>
             <Japanese>耳栓を外す</Japanese>
             <Korean>귀마개 뺌</Korean>
-            <SChinese>取出耳塞</SChinese>
-            <TChinese>取出耳塞</TChinese>
+            <Chinesesimp>取出耳塞</Chinesesimp>
+            <Chinese>取出耳塞</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_On">
             <English>Earplugs in</English>
@@ -78,8 +78,8 @@
             <Italian>Indossa i tappi auricolari</Italian>
             <Japanese>耳栓を着けた</Japanese>
             <Korean>귀마개 착용</Korean>
-            <SChinese>耳塞已塞入</SChinese>
-            <TChinese>耳塞已塞入</TChinese>
+            <Chinesesimp>耳塞已塞入</Chinesesimp>
+            <Chinese>耳塞已塞入</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EarPlugs_Are_Off">
             <English>Earplugs out</English>
@@ -94,8 +94,8 @@
             <Italian>Levati i tappi auricolari</Italian>
             <Japanese>耳栓を外した</Japanese>
             <Korean>귀마개 뺌</Korean>
-            <SChinese>耳塞已取出</SChinese>
-            <TChinese>耳塞已取出</TChinese>
+            <Chinesesimp>耳塞已取出</Chinesesimp>
+            <Chinese>耳塞已取出</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_NoPlugs">
             <English>You have no earplugs</English>
@@ -110,8 +110,8 @@
             <Italian>Non hai i tappi auricolari</Italian>
             <Japanese>耳栓を持っていません</Japanese>
             <Korean>귀마개가 없습니다</Korean>
-            <SChinese>你没有耳塞</SChinese>
-            <TChinese>你沒有耳塞</TChinese>
+            <Chinesesimp>你没有耳塞</Chinesesimp>
+            <Chinese>你沒有耳塞</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_Inventory_Full">
             <English>No inventory space</English>
@@ -126,8 +126,8 @@
             <Russian>Нет места в инвентаре</Russian>
             <Japanese>インベントリに空きがありません。</Japanese>
             <Korean>넣을 공간이 없습니다</Korean>
-            <SChinese>无可用空间</SChinese>
-            <TChinese>無可用空間</TChinese>
+            <Chinesesimp>无可用空间</Chinesesimp>
+            <Chinese>無可用空間</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_DisplayName">
             <English>Disable ear ringing</English>
@@ -142,8 +142,8 @@
             <Portuguese>Desabilitar zumbido de ouvidos</Portuguese>
             <Japanese>耳鳴りを無効化する</Japanese>
             <Korean>이명현상 끄기</Korean>
-            <SChinese>关闭耳鸣效果</SChinese>
-            <TChinese>關閉耳鳴效果</TChinese>
+            <Chinesesimp>关闭耳鸣效果</Chinesesimp>
+            <Chinese>關閉耳鳴效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_DisableEarRinging_Description">
             <English>Remove tinnitus effect when the player takes hearing damage</English>
@@ -156,8 +156,8 @@
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
             <Japanese>プレイヤーの聴覚が損傷をしたら耳鳴りの効果を削除します</Japanese>
             <Korean>플레이어가 청력손실을 입을때 생기는 이명현상을 제거합니다.</Korean>
-            <SChinese>关闭耳鸣效果时, 就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果.</SChinese>
-            <TChinese>關閉耳鳴效果時, 就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果.</TChinese>
+            <Chinesesimp>关闭耳鸣效果时, 就算玩家受到相当程度的听力伤害, 也不会造成耳鸣效果.</Chinesesimp>
+            <Chinese>關閉耳鳴效果時, 就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果.</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_DisplayName">
             <English>Hearing</English>
@@ -172,8 +172,8 @@
             <Italian>Udito</Italian>
             <Japanese>聴覚</Japanese>
             <Korean>청력</Korean>
-            <SChinese>听力设定</SChinese>
-            <TChinese>聽力設定</TChinese>
+            <Chinesesimp>听力设定</Chinesesimp>
+            <Chinese>聽力設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_DisplayName">
             <English>Enable Combat Deafness</English>
@@ -188,8 +188,8 @@
             <Italian>Sordità da combattimento</Italian>
             <Japanese>戦闘による難聴を有効化</Japanese>
             <Korean>전투 난청 켜기</Korean>
-            <SChinese>启用战斗性耳聋?</SChinese>
-            <TChinese>啟用戰鬥性耳聾?</TChinese>
+            <Chinesesimp>启用战斗性耳聋?</Chinesesimp>
+            <Chinese>啟用戰鬥性耳聾?</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -203,8 +203,8 @@
             <French>Réduire l'audition lorsque le joueur prend des dommages auditifs.</French>
             <Japanese>音による損傷をうけ、聴覚が減る可能性があります</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
-            <SChinese>当玩家听力受损时降低听力能力?</SChinese>
-            <TChinese>當玩家聽力受損時降低聽力能力?</TChinese>
+            <Chinesesimp>当玩家听力受损时降低听力能力?</Chinesesimp>
+            <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
@@ -219,8 +219,8 @@
             <Italian>Controlla la sordità da combattimento e fischio alle orecchie. Quando attivato, i giocatori possono essere assordati quando un'arma spara vicino o avviene un'esplosione senza protezione uditiva</Italian>
             <Japanese>戦闘による難聴や、耳鳴りを設定します。有効になった場合、聴覚を保護していないと近傍の銃声や爆発音により、難聴になります。</Japanese>
             <Korean>전투 난청과 이명현상을 조작합니다. 작동시 플레이어가 화기나 폭발의 주변에 있을경우 청력보호장치가 없을때 청력손실을 입습니다.</Korean>
-            <SChinese>设定战斗性耳聋和耳鸣. 当启用后, 玩家会在有武器在旁边射击或爆炸产生时造成耳鸣效果</SChinese>
-            <TChinese>設定戰鬥性耳聾和耳鳴. 當啟用後, 玩家會在有武器在旁邊射擊或爆炸產生時造成耳鳴效果</TChinese>
+            <Chinesesimp>设定战斗性耳聋和耳鸣. 当启用后, 玩家会在有武器在旁边射击或爆炸产生时造成耳鸣效果</Chinesesimp>
+            <Chinese>設定戰鬥性耳聾和耳鳴. 當啟用後, 玩家會在有武器在旁邊射擊或爆炸產生時造成耳鳴效果</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_DisplayName">
             <English>Effect Zeus RC</English>
@@ -234,8 +234,8 @@
             <French>Effet sur le CàD du Zeus</French>
             <Japanese>Zeus RC への効果</Japanese>
             <Korean>Zeus RC 효과</Korean>
-            <SChinese>启用效果在宙斯远程遥控</SChinese>
-            <TChinese>啟用效果在宙斯遠程遙控</TChinese>
+            <Chinesesimp>启用效果在宙斯远程遥控</Chinesesimp>
+            <Chinese>啟用效果在宙斯遠程遙控</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_enabledForZeusUnits_Description">
             <English>Allow zeus remote controlled units to be able to take hearing damage.</English>
@@ -249,8 +249,8 @@
             <French>Permet aux unités controlées à distance de subir des traumatismes sonores.</French>
             <Japanese>Zeus により遠隔操作されたユニットにも、聴覚へ損傷を受けるようにします。</Japanese>
             <Korean>Zeus가 원격으로 청력손실을 입힐 수 있게 합니다.</Korean>
-            <SChinese>设定宙斯远程遥控的单位也会受到耳鸣的效果.</SChinese>
-            <TChinese>設定宙斯遠程遙控的單位也會受到耳鳴的效果.</TChinese>
+            <Chinesesimp>设定宙斯远程遥控的单位也会受到耳鸣的效果.</Chinesesimp>
+            <Chinese>設定宙斯遠程遙控的單位也會受到耳鳴的效果.</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_DisplayName">
             <English>Add earplugs to units</English>
@@ -264,8 +264,8 @@
             <French>Ajouter des bouchons anti-bruits aux unités</French>
             <Japanese>ユニットへ耳栓を追加</Japanese>
             <Korean>해당 인원에게 귀마개 추가</Korean>
-            <SChinese>增加耳塞给单位</SChinese>
-            <TChinese>增加耳塞給單位</TChinese>
+            <Chinesesimp>增加耳塞给单位</Chinesesimp>
+            <Chinese>增加耳塞給單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
@@ -279,8 +279,8 @@
             <French>Ajoute l'objet "Ace_EarPlugs" à toutes les unités ayant des armes bruyantes. Peut être désactivé par des loadouts personalisés.</French>
             <Japanese>全ユニットへ`ACE_EarPlugs`アイテムをもたせます。これは変更された武装で無効化できます。</Japanese>
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화 할 수 있습니다.</Korean>
-            <SChinese>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位. 当你想自定装备时, 此功能可被关闭.</SChinese>
-            <TChinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位. 當你想自定裝備時, 此功能可被關閉.</TChinese>
+            <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位. 当你想自定装备时, 此功能可被关闭.</Chinesesimp>
+            <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位. 當你想自定裝備時, 此功能可被關閉.</Chinese>
         </Key>
     </Package>
 </Project>

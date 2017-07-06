@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Hellfire">
         <Key ID="STR_ACE_Hellfire_hellfireModeAction">
             <English>Set Hellfire mode</English>
             <Italian>Imposta modalità Hellfire</Italian>
             <Japanese>ヘルファイア モードを設定</Japanese>
-            <SChinese>设定地狱火模式</SChinese>
-            <TChinese>設定地獄火模式</TChinese>
+            <Chinesesimp>设定地狱火模式</Chinesesimp>
+            <Chinese>設定地獄火模式</Chinese>
         </Key>
     </Package>
 </Project>

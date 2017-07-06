@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
         <Key ID="STR_ACE_Interaction_MainAction">
@@ -14,8 +14,8 @@
             <Portuguese>Interaçãoes</Portuguese>
             <Japanese>インタラクション</Japanese>
             <Korean>상호작용</Korean>
-            <SChinese>互动</SChinese>
-            <TChinese>互動</TChinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Chinese>互動</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Torso">
             <English>Torso</English>
@@ -30,8 +30,8 @@
             <Portuguese>Torso</Portuguese>
             <Japanese>胴体</Japanese>
             <Korean>몸통</Korean>
-            <SChinese>身体</SChinese>
-            <TChinese>身體</TChinese>
+            <Chinesesimp>身体</Chinesesimp>
+            <Chinese>身體</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
@@ -46,8 +46,8 @@
             <Portuguese>Cabeça</Portuguese>
             <Japanese>頭部</Japanese>
             <Korean>머리</Korean>
-            <SChinese>头部</SChinese>
-            <TChinese>頭部</TChinese>
+            <Chinesesimp>头部</Chinesesimp>
+            <Chinese>頭部</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
@@ -62,8 +62,8 @@
             <Portuguese>Braço Esquerdo</Portuguese>
             <Japanese>左腕</Japanese>
             <Korean>왼쪽 팔</Korean>
-            <SChinese>左手</SChinese>
-            <TChinese>左手</TChinese>
+            <Chinesesimp>左手</Chinesesimp>
+            <Chinese>左手</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
@@ -78,8 +78,8 @@
             <Portuguese>Braço Direito</Portuguese>
             <Japanese>右腕</Japanese>
             <Korean>오른쪽 팔</Korean>
-            <SChinese>右手</SChinese>
-            <TChinese>右手</TChinese>
+            <Chinesesimp>右手</Chinesesimp>
+            <Chinese>右手</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -94,8 +94,8 @@
             <Portuguese>Perna Esquerda</Portuguese>
             <Japanese>左足</Japanese>
             <Korean>왼쪽 다리</Korean>
-            <SChinese>左脚</SChinese>
-            <TChinese>左腳</TChinese>
+            <Chinesesimp>左脚</Chinesesimp>
+            <Chinese>左腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
@@ -110,8 +110,8 @@
             <Portuguese>Perna Direita</Portuguese>
             <Japanese>右足</Japanese>
             <Korean>오른쪽 다리</Korean>
-            <SChinese>右脚</SChinese>
-            <TChinese>右腳</TChinese>
+            <Chinesesimp>右脚</Chinesesimp>
+            <Chinese>右腳</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
@@ -126,8 +126,8 @@
             <Portuguese>Arma</Portuguese>
             <Japanese>武器</Japanese>
             <Korean>무기</Korean>
-            <SChinese>武器</SChinese>
-            <TChinese>武器</TChinese>
+            <Chinesesimp>武器</Chinesesimp>
+            <Chinese>武器</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenu">
             <English>Interaction Menu</English>
@@ -142,8 +142,8 @@
             <Italian>Menù interazione</Italian>
             <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
-            <SChinese>互动选单</SChinese>
-            <TChinese>互動選單</TChinese>
+            <Chinesesimp>互动选单</Chinesesimp>
+            <Chinese>互動選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_InteractionMenuSelf">
             <English>Interaction Menu (Self)</English>
@@ -158,8 +158,8 @@
             <Italian>Menù interazione (individuale)</Italian>
             <Japanese>インタラクション メニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
-            <SChinese>互动选单 (自我)</SChinese>
-            <TChinese>互動選單 (自我)</TChinese>
+            <Chinesesimp>互动选单 (自我)</Chinesesimp>
+            <Chinese>互動選單 (自我)</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenDoor">
             <English>Open / Close Door</English>
@@ -174,8 +174,8 @@
             <Italian>Apri / Chiudi la porta</Italian>
             <Japanese>ドアの開け閉め</Japanese>
             <Korean>문 열기 / 닫기</Korean>
-            <SChinese>打开/关上 门</SChinese>
-            <TChinese>打開/關上 門</TChinese>
+            <Chinesesimp>打开/关上 门</Chinesesimp>
+            <Chinese>打開/關上 門</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LockDoor">
             <English>Lock Door</English>
@@ -190,8 +190,8 @@
             <Czech>Zamknout dveře</Czech>
             <Japanese>ドアの鍵を閉める</Japanese>
             <Korean>문 잠그기</Korean>
-            <SChinese>锁门</SChinese>
-            <TChinese>鎖門</TChinese>
+            <Chinesesimp>锁门</Chinesesimp>
+            <Chinese>鎖門</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockDoor">
             <English>Unlock Door</English>
@@ -206,8 +206,8 @@
             <Czech>Odemknout dveře</Czech>
             <Japanese>ドアの鍵を開ける</Japanese>
             <Korean>잠긴문 열기</Korean>
-            <SChinese>解锁门</SChinese>
-            <TChinese>解鎖門</TChinese>
+            <Chinesesimp>解锁门</Chinesesimp>
+            <Chinese>解鎖門</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LockedDoor">
             <English>Locked Door</English>
@@ -222,8 +222,8 @@
             <Czech>Zamčené dveře</Czech>
             <Japanese>ドアの鍵を締めた</Japanese>
             <Korean>잠긴 문</Korean>
-            <SChinese>门已上锁</SChinese>
-            <TChinese>門已上鎖</TChinese>
+            <Chinesesimp>门已上锁</Chinesesimp>
+            <Chinese>門已上鎖</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_UnlockedDoor">
             <English>Unlocked Door</English>
@@ -238,8 +238,8 @@
             <Czech>Odemčené dveře</Czech>
             <Japanese>ドアの鍵を開けられた</Japanese>
             <Korean>열린 문</Korean>
-            <SChinese>门未上锁</SChinese>
-            <TChinese>門未上鎖</TChinese>
+            <Chinesesimp>门未上锁</Chinesesimp>
+            <Chinese>門未上鎖</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinGroup">
             <English>Join group</English>
@@ -254,8 +254,8 @@
             <Italian>Unisciti alla squadra</Italian>
             <Japanese>グループにはいる</Japanese>
             <Korean>그룹 참여</Korean>
-            <SChinese>加入小队</SChinese>
-            <TChinese>加入小隊</TChinese>
+            <Chinesesimp>加入小队</Chinesesimp>
+            <Chinese>加入小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveGroup">
             <English>Leave Group</English>
@@ -270,8 +270,8 @@
             <Italian>Lascia la squadra</Italian>
             <Japanese>グループをぬける</Japanese>
             <Korean>그룹 나가기</Korean>
-            <SChinese>离开小队</SChinese>
-            <TChinese>離開小隊</TChinese>
+            <Chinesesimp>离开小队</Chinesesimp>
+            <Chinese>離開小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_BecomeLeader">
             <English>Become Leader</English>
@@ -286,8 +286,8 @@
             <Italian>Prendi il comando</Italian>
             <Japanese>リーダーになる</Japanese>
             <Korean>리더 되기</Korean>
-            <SChinese>成为队长</SChinese>
-            <TChinese>成為隊長</TChinese>
+            <Chinesesimp>成为队长</Chinesesimp>
+            <Chinese>成為隊長</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -302,8 +302,8 @@
             <Italian>DANZA!</Italian>
             <Japanese>おどれ！</Japanese>
             <Korean>춤추기!</Korean>
-            <SChinese>跳舞</SChinese>
-            <TChinese>跳舞</TChinese>
+            <Chinesesimp>跳舞</Chinesesimp>
+            <Chinese>跳舞</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_StopDancing">
             <English>Stop Dancing</English>
@@ -318,8 +318,8 @@
             <Italian>Smetti di ballare</Italian>
             <Japanese>踊るのをやめる</Japanese>
             <Korean>춤 멈추기</Korean>
-            <SChinese>停止跳舞</SChinese>
-            <TChinese>停止跳舞</TChinese>
+            <Chinesesimp>停止跳舞</Chinesesimp>
+            <Chinese>停止跳舞</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Back">
             <English>&lt;&lt; Back</English>
@@ -334,8 +334,8 @@
             <Italian>&lt;&lt; Indietro</Italian>
             <Japanese>&amp;lt;&amp;lt; もどる</Japanese>
             <Korean>&lt;&lt;뒤로</Korean>
-            <SChinese>&lt;&lt;返回</SChinese>
-            <TChinese>&lt;&lt;返回</TChinese>
+            <Chinesesimp>&lt;&lt;返回</Chinesesimp>
+            <Chinese>&lt;&lt;返回</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_WeaponOnBack">
             <English>Put weapon on back</English>
@@ -350,8 +350,8 @@
             <Italian>Metti l'arma in spalla</Italian>
             <Japanese>武器を背負う</Japanese>
             <Korean>등에 무기 메기</Korean>
-            <SChinese>将武器放到背后</SChinese>
-            <TChinese>將武器放到背後</TChinese>
+            <Chinesesimp>将武器放到背后</Chinesesimp>
+            <Chinese>將武器放到背後</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TapShoulder">
             <English>Tap Shoulder</English>
@@ -366,8 +366,8 @@
             <Italian>Dai un colpetto</Italian>
             <Japanese>肩をたたく</Japanese>
             <Korean>어깨 두드리기</Korean>
-            <SChinese>轻拍肩膀</SChinese>
-            <TChinese>輕拍肩膀</TChinese>
+            <Chinesesimp>轻拍肩膀</Chinesesimp>
+            <Chinese>輕拍肩膀</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedRight">
             <English>You were tapped on the RIGHT shoulder</English>
@@ -382,8 +382,8 @@
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
             <Japanese>右肩を叩かれた</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
-            <SChinese>你的右肩膀被轻拍了一下</SChinese>
-            <TChinese>你的右肩膀被輕拍了一下</TChinese>
+            <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
+            <Chinese>你的右肩膀被輕拍了一下</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_YouWereTappedLeft">
             <English>You were tapped on the LEFT shoulder.</English>
@@ -398,8 +398,8 @@
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
             <Japanese>左肩を叩かれた</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
-            <SChinese>你的左肩膀被轻拍了一下</SChinese>
-            <TChinese>你的左肩膀被輕拍了一下</TChinese>
+            <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
+            <Chinese>你的左肩膀被輕拍了一下</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_CancelSelection">
             <English>Cancel</English>
@@ -414,8 +414,8 @@
             <Hungarian>Mégse</Hungarian>
             <Japanese>中止</Japanese>
             <Korean>취소</Korean>
-            <SChinese>取消</SChinese>
-            <TChinese>取消</TChinese>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_MakeSelection">
             <English>Select</English>
@@ -430,8 +430,8 @@
             <Hungarian>Kiválaszt</Hungarian>
             <Japanese>選択</Japanese>
             <Korean>선택</Korean>
-            <SChinese>选择</SChinese>
-            <TChinese>選擇</TChinese>
+            <Chinesesimp>选择</Chinesesimp>
+            <Chinese>選擇</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_SendAway">
             <English>Go Away!</English>
@@ -446,8 +446,8 @@
             <Italian>Via di qui!</Italian>
             <Japanese>うせろ！</Japanese>
             <Korean>저리 가!</Korean>
-            <SChinese>走开!</SChinese>
-            <TChinese>走開!</TChinese>
+            <Chinesesimp>走开!</Chinesesimp>
+            <Chinese>走開!</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_GetDown">
             <English>Get Down!</English>
@@ -462,8 +462,8 @@
             <Italian>A terra!</Italian>
             <Japanese>ふせろ！</Japanese>
             <Korean>엎드려!</Korean>
-            <SChinese>趴下!</SChinese>
-            <TChinese>趴下!</TChinese>
+            <Chinesesimp>趴下!</Chinesesimp>
+            <Chinese>趴下!</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_GetOut">
             <English>Get Out</English>
@@ -476,8 +476,8 @@
             <Czech>Vystupte</Czech>
             <Japanese>降りる</Japanese>
             <Korean>나가</Korean>
-            <SChinese>出去</SChinese>
-            <TChinese>出去</TChinese>
+            <Chinesesimp>出去</Chinesesimp>
+            <Chinese>出去</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamManagement">
             <English>Team Management</English>
@@ -492,8 +492,8 @@
             <Hungarian>Csapat kezelése</Hungarian>
             <Japanese>チーム管理</Japanese>
             <Korean>팀 설정</Korean>
-            <SChinese>小队管理</SChinese>
-            <TChinese>小隊管理</TChinese>
+            <Chinesesimp>小队管理</Chinesesimp>
+            <Chinese>小隊管理</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -508,8 +508,8 @@
             <Hungarian>Piros</Hungarian>
             <Japanese>レッド</Japanese>
             <Korean>빨강</Korean>
-            <SChinese>红色</SChinese>
-            <TChinese>紅色</TChinese>
+            <Chinesesimp>红色</Chinesesimp>
+            <Chinese>紅色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamGREEN">
             <English>Green</English>
@@ -524,8 +524,8 @@
             <Hungarian>Zöld</Hungarian>
             <Japanese>グリーン</Japanese>
             <Korean>초록</Korean>
-            <SChinese>绿色</SChinese>
-            <TChinese>綠色</TChinese>
+            <Chinesesimp>绿色</Chinesesimp>
+            <Chinese>綠色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamBLUE">
             <English>Blue</English>
@@ -540,8 +540,8 @@
             <Hungarian>Kék</Hungarian>
             <Japanese>ブルー</Japanese>
             <Korean>파랑</Korean>
-            <SChinese>蓝色</SChinese>
-            <TChinese>藍色</TChinese>
+            <Chinesesimp>蓝色</Chinesesimp>
+            <Chinese>藍色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamYELLOW">
             <English>Yellow</English>
@@ -556,8 +556,8 @@
             <Hungarian>Sárga</Hungarian>
             <Japanese>イエロー</Japanese>
             <Korean>노랑</Korean>
-            <SChinese>黄色</SChinese>
-            <TChinese>黃色</TChinese>
+            <Chinesesimp>黄色</Chinesesimp>
+            <Chinese>黃色</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamRed">
             <English>Assign Red</English>
@@ -572,8 +572,8 @@
             <Italian>Assegna al team rosso</Italian>
             <Japanese>レッドにする</Japanese>
             <Korean>빨강에 등록</Korean>
-            <SChinese>指派为红组</SChinese>
-            <TChinese>指派為紅組</TChinese>
+            <Chinesesimp>指派为红组</Chinesesimp>
+            <Chinese>指派為紅組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamGreen">
             <English>Assign Green</English>
@@ -588,8 +588,8 @@
             <Italian>Assegna al team verde</Italian>
             <Japanese>グリーンにする</Japanese>
             <Korean>초록에 등록</Korean>
-            <SChinese>指派为绿组</SChinese>
-            <TChinese>指派為綠組</TChinese>
+            <Chinesesimp>指派为绿组</Chinesesimp>
+            <Chinese>指派為綠組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
@@ -604,8 +604,8 @@
             <Italian>Assegna al team blu</Italian>
             <Japanese>ブルーにする</Japanese>
             <Korean>파랑이 등록</Korean>
-            <SChinese>指派为蓝组</SChinese>
-            <TChinese>指派為藍組</TChinese>
+            <Chinesesimp>指派为蓝组</Chinesesimp>
+            <Chinese>指派為藍組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamYellow">
             <English>Assign Yellow</English>
@@ -620,8 +620,8 @@
             <Italian>Assegna al team giallo</Italian>
             <Japanese>イエローにする</Japanese>
             <Korean>노랑에 등록</Korean>
-            <SChinese>指派为黄组</SChinese>
-            <TChinese>指派為黃組</TChinese>
+            <Chinesesimp>指派为黄组</Chinesesimp>
+            <Chinese>指派為黃組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -636,8 +636,8 @@
             <Italian>Unirsi al team rosso</Italian>
             <Japanese>レッドに入る</Japanese>
             <Korean>빨강에 참여</Korean>
-            <SChinese>加入红组</SChinese>
-            <TChinese>加入紅組</TChinese>
+            <Chinesesimp>加入红组</Chinesesimp>
+            <Chinese>加入紅組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamGreen">
             <English>Join Green</English>
@@ -652,8 +652,8 @@
             <Italian>Unirsi al team verde</Italian>
             <Japanese>グリーンに入る</Japanese>
             <Korean>초록에 참여</Korean>
-            <SChinese>加入绿组</SChinese>
-            <TChinese>加入綠組</TChinese>
+            <Chinesesimp>加入绿组</Chinesesimp>
+            <Chinese>加入綠組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamBlue">
             <English>Join Blue</English>
@@ -668,8 +668,8 @@
             <Italian>Unirsi al team blu</Italian>
             <Japanese>ブルーに入る</Japanese>
             <Korean>파랑에 참여</Korean>
-            <SChinese>加入蓝组</SChinese>
-            <TChinese>加入藍組</TChinese>
+            <Chinesesimp>加入蓝组</Chinesesimp>
+            <Chinese>加入藍組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamYellow">
             <English>Join Yellow</English>
@@ -684,8 +684,8 @@
             <Italian>Unirsi al team giallo</Italian>
             <Japanese>イエローに入る</Japanese>
             <Korean>노랑에 참여</Korean>
-            <SChinese>加入黄组</SChinese>
-            <TChinese>加入黃組</TChinese>
+            <Chinesesimp>加入黄组</Chinesesimp>
+            <Chinese>加入黃組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -700,8 +700,8 @@
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
             <Japanese>チーム %1 に入った</Japanese>
             <Korean>당신은 %1팀에 참여했습니다</Korean>
-            <SChinese>你已加入%1组</SChinese>
-            <TChinese>你已加入%1組</TChinese>
+            <Chinesesimp>你已加入%1组</Chinesesimp>
+            <Chinese>你已加入%1組</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LeaveTeam">
             <English>Leave Team</English>
@@ -716,8 +716,8 @@
             <Hungarian>Csapat elhagyása</Hungarian>
             <Japanese>チームを抜ける</Japanese>
             <Korean>팀 나가기</Korean>
-            <SChinese>离开小队</SChinese>
-            <TChinese>離開小隊</TChinese>
+            <Chinesesimp>离开小队</Chinesesimp>
+            <Chinese>離開小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_LeftTeam">
             <English>You left the Team</English>
@@ -732,8 +732,8 @@
             <Hungarian>Elhagytad a csapatot</Hungarian>
             <Japanese>チームを抜けた</Japanese>
             <Korean>팀을 나갔습니다</Korean>
-            <SChinese>你已离开小队</SChinese>
-            <TChinese>你已離開小隊</TChinese>
+            <Chinesesimp>你已离开小队</Chinesesimp>
+            <Chinese>你已離開小隊</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Pardon">
             <English>Pardon</English>
@@ -748,8 +748,8 @@
             <Hungarian>Megbocsátás</Hungarian>
             <Japanese>許す</Japanese>
             <Korean>허용</Korean>
-            <SChinese>原谅</SChinese>
-            <TChinese>原諒</TChinese>
+            <Chinesesimp>原谅</Chinesesimp>
+            <Chinese>原諒</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_ScrollHint">
             <English>Scroll</English>
@@ -764,8 +764,8 @@
             <Czech>Posunout</Czech>
             <Japanese>スクロール</Japanese>
             <Korean>스크롤</Korean>
-            <SChinese>滚动</SChinese>
-            <TChinese>滾動</TChinese>
+            <Chinesesimp>滚动</Chinesesimp>
+            <Chinese>滾動</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_ModifierKey">
             <English>Modifier Key</English>
@@ -780,8 +780,8 @@
             <Czech>Modifikátor</Czech>
             <Japanese>キーを割り当て</Japanese>
             <Korean>키 할당하기</Korean>
-            <SChinese>编辑按键</SChinese>
-            <TChinese>編輯按鍵</TChinese>
+            <Chinesesimp>编辑按键</Chinesesimp>
+            <Chinese>編輯按鍵</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_NotInRange">
             <English>Not in Range</English>
@@ -796,8 +796,8 @@
             <Italian>Fuori limite</Italian>
             <Japanese>範囲内にありません</Japanese>
             <Korean>범위 내에 없습니다</Korean>
-            <SChinese>不在范围内</SChinese>
-            <TChinese>不在範圍內</TChinese>
+            <Chinesesimp>不在范围内</Chinesesimp>
+            <Chinese>不在範圍內</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Equipment">
             <English>Equipment</English>
@@ -812,8 +812,8 @@
             <Portuguese>Equipamento</Portuguese>
             <Japanese>装備</Japanese>
             <Korean>장비</Korean>
-            <SChinese>装备</SChinese>
-            <TChinese>裝備</TChinese>
+            <Chinesesimp>装备</Chinesesimp>
+            <Chinese>裝備</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Push">
             <English>Push</English>
@@ -828,8 +828,8 @@
             <Italian>Spingere</Italian>
             <Japanese>押す</Japanese>
             <Korean>밀기</Korean>
-            <SChinese>推</SChinese>
-            <TChinese>推</TChinese>
+            <Chinesesimp>推</Chinesesimp>
+            <Chinese>推</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Interact">
             <English>Interact</English>
@@ -844,8 +844,8 @@
             <Portuguese>Interagir</Portuguese>
             <Japanese>インタラクト</Japanese>
             <Korean>상호작용</Korean>
-            <SChinese>互动</SChinese>
-            <TChinese>互動</TChinese>
+            <Chinesesimp>互动</Chinesesimp>
+            <Chinese>互動</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -860,8 +860,8 @@
             <Portuguese>Passageiros</Portuguese>
             <Japanese>後部座席</Japanese>
             <Korean>승객</Korean>
-            <SChinese>乘客</SChinese>
-            <TChinese>乘客</TChinese>
+            <Chinesesimp>乘客</Chinesesimp>
+            <Chinese>乘客</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
@@ -876,8 +876,8 @@
             <German>Öffnen</German>
             <Japanese>開く</Japanese>
             <Korean>열기</Korean>
-            <SChinese>打开</SChinese>
-            <TChinese>打開</TChinese>
+            <Chinesesimp>打开</Chinesesimp>
+            <Chinese>打開</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_DisplayName">
             <English>Interaction System</English>
@@ -892,8 +892,8 @@
             <Italian>Sistema Interazioni</Italian>
             <Japanese>インタラクション システム</Japanese>
             <Korean>상호작용 시스템</Korean>
-            <SChinese>互动系统</SChinese>
-            <TChinese>互動系統</TChinese>
+            <Chinesesimp>互动系统</Chinesesimp>
+            <Chinese>互動系統</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_DisplayName">
             <English>Enable Team Management</English>
@@ -908,8 +908,8 @@
             <Italian>Abilità Management Squadra</Italian>
             <Japanese>チーム管理をつかう</Japanese>
             <Korean>팀 설정 활성화</Korean>
-            <SChinese>启用小队管理</SChinese>
-            <TChinese>啟用小隊管理</TChinese>
+            <Chinesesimp>启用小队管理</Chinesesimp>
+            <Chinese>啟用小隊管理</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_EnableTeamManagement_Description">
             <English>Should players be allowed to use the Team Management Menu? Default: Yes</English>
@@ -924,8 +924,8 @@
             <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
             <Japanese>プレイヤーがチーム管理メニューを使えるようにしますか？標準：はい</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
-            <SChinese>允许玩家使用小队管理选单? 预设: 是</SChinese>
-            <TChinese>允許玩家使用小隊管理選單? 預設: 是</TChinese>
+            <Chinesesimp>允许玩家使用小队管理选单? 预设: 是</Chinesesimp>
+            <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_Module_Description">
             <English>Team management allows color allocation for team members, taking team command and joining/leaving teams.</English>
@@ -940,8 +940,8 @@
             <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
             <Japanese>チーム管理はチーム メンバーへ色の割り当てや指揮権を取ったり、チームの出入りを許可します。</Japanese>
             <Korean>팀 설정은 팀 멤버에게 색을 부여하거나  팀에 참여 혹은 나가게 할 수 있게 합니다.</Korean>
-            <SChinese>队伍管理系统允许将指定颜色分配到队伍成员上, 接管队长职位或加入/离开队伍.</SChinese>
-            <TChinese>隊伍管理系統允許將指定顏色分配到隊伍成員上, 接管隊長職位或加入/離開隊伍.</TChinese>
+            <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上, 接管队长职位或加入/离开队伍.</Chinesesimp>
+            <Chinese>隊伍管理系統允許將指定顏色分配到隊伍成員上, 接管隊長職位或加入/離開隊伍.</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOn">
             <English>Turn on</English>
@@ -955,8 +955,8 @@
             <Russian>Включить</Russian>
             <Japanese>中に入る</Japanese>
             <Korean>켜기</Korean>
-            <SChinese>开启</SChinese>
-            <TChinese>開啟</TChinese>
+            <Chinesesimp>开启</Chinesesimp>
+            <Chinese>開啟</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_TurnOff">
             <English>Turn off</English>
@@ -970,8 +970,8 @@
             <Russian>Выключить</Russian>
             <Japanese>外に出す</Japanese>
             <Korean>끄기</Korean>
-            <SChinese>关闭</SChinese>
-            <TChinese>關閉</TChinese>
+            <Chinesesimp>关闭</Chinesesimp>
+            <Chinese>關閉</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazine">
             <English>Pass magazine</English>
@@ -985,8 +985,8 @@
             <French>Passer un chargeur</French>
             <Japanese>弾倉をわたす</Japanese>
             <Korean>탄창 건네기</Korean>
-            <SChinese>给予弹匣</SChinese>
-            <TChinese>給予彈匣</TChinese>
+            <Chinesesimp>给予弹匣</Chinesesimp>
+            <Chinese>給予彈匣</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazinePrimary">
             <English>Primary magazine</English>
@@ -1000,8 +1000,8 @@
             <French>Chargeur de l'arme principale</French>
             <Japanese>プライマリ用弾倉</Japanese>
             <Korean>주무기 탄창</Korean>
-            <SChinese>给予主武器弹匣</SChinese>
-            <TChinese>給予主武器彈匣</TChinese>
+            <Chinesesimp>给予主武器弹匣</Chinesesimp>
+            <Chinese>給予主武器彈匣</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHandgun">
             <English>Pistol magazine</English>
@@ -1015,8 +1015,8 @@
             <French>Chargeur de pistolet</French>
             <Japanese>拳銃の弾倉</Japanese>
             <Korean>부무기 탄창</Korean>
-            <SChinese>给予手枪弹匣</SChinese>
-            <TChinese>給予手槍彈匣</TChinese>
+            <Chinesesimp>给予手枪弹匣</Chinesesimp>
+            <Chinese>給予手槍彈匣</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineHint">
             <English>%1 passed you a %2 magazine.</English>
@@ -1030,8 +1030,8 @@
             <French>%1 vous a passé un chargeur de %2.</French>
             <Japanese>%1 はあなたに %2 弾倉をわたした</Japanese>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
-            <SChinese>%1给你%2弹匣</SChinese>
-            <TChinese>%1給你%2彈匣</TChinese>
+            <Chinesesimp>%1给你%2弹匣</Chinesesimp>
+            <Chinese>%1給你%2彈匣</Chinese>
         </Key>
         <Key ID="STR_ACE_Interaction_PassMagazineSetting">
             <English>Show "pass magazine" interaction</English>
@@ -1045,8 +1045,8 @@
             <French>Montrer l'interaction "Passer un chargeur"</French>
             <Japanese>"弾倉をわたす"をインタラクションに表示する</Japanese>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
-            <SChinese>显示"给予弹匣"互动动作</SChinese>
-            <TChinese>顯示"給予彈匣"互動動作</TChinese>
+            <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
+            <Chinese>顯示"給予彈匣"互動動作</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Cargo">
         <Key ID="STR_ACE_Cargo_loadObject">
@@ -13,8 +13,8 @@
             <French>Charger</French>
             <Japanese>積み込む</Japanese>
             <Korean>싣기</Korean>
-            <TChinese>裝載</TChinese>
-            <SChinese>装载</SChinese>
+            <Chinese>裝載</Chinese>
+            <Chinesesimp>装载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_unloadObject">
             <English>Unload</English>
@@ -28,8 +28,8 @@
             <French>Décharger</French>
             <Japanese>下ろす</Japanese>
             <Korean>내리기</Korean>
-            <TChinese>卸載</TChinese>
-            <SChinese>卸载</SChinese>
+            <Chinese>卸載</Chinese>
+            <Chinesesimp>卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_openMenu">
             <English>Cargo</English>
@@ -43,8 +43,8 @@
             <French>Cargaison</French>
             <Japanese>カーゴ</Japanese>
             <Korean>화물</Korean>
-            <TChinese>貨物</TChinese>
-            <SChinese>货物</SChinese>
+            <Chinese>貨物</Chinese>
+            <Chinesesimp>货物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -58,8 +58,8 @@
             <French>Menu de cargaison</French>
             <Japanese>カーゴ メニュー</Japanese>
             <Korean>화물 메뉴</Korean>
-            <TChinese>貨物選單</TChinese>
-            <SChinese>货物选单</SChinese>
+            <Chinese>貨物選單</Chinese>
+            <Chinesesimp>货物选单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>
@@ -73,8 +73,8 @@
             <French>Espace de cargaison restant : %1</French>
             <Japanese>カーゴの空き容量: %1</Japanese>
             <Korean>선적 공간 남음: %1</Korean>
-            <TChinese>貨物剩餘空間: %1</TChinese>
-            <SChinese>货物剩余空间: %1</SChinese>
+            <Chinese>貨物剩餘空間: %1</Chinese>
+            <Chinesesimp>货物剩余空间: %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -88,8 +88,8 @@
             <French>Activer la mise en cargaison</French>
             <Japanese>カーゴを有効化</Japanese>
             <Korean>화물 활성화</Korean>
-            <TChinese>啟用貨物裝載</TChinese>
-            <SChinese>启用货物装载</SChinese>
+            <Chinese>啟用貨物裝載</Chinese>
+            <Chinesesimp>启用货物装载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable_Description">
             <English>Enable the load in cargo module</English>
@@ -103,8 +103,8 @@
             <French>Active le chargement de cargaison dans un vehicule</French>
             <Japanese>カーゴ モジュールで積み込みを有効化</Japanese>
             <Korean>화물 모듈에 싣기를 활성화합니다</Korean>
-            <TChinese>啟用貨物裝載功能</TChinese>
-            <SChinese>启用货物装载功能</SChinese>
+            <Chinese>啟用貨物裝載功能</Chinese>
+            <Chinesesimp>启用货物装载功能</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_DisplayName">
             <English>Cargo Settings</English>
@@ -118,8 +118,8 @@
             <French>Paramètres de cargaison</French>
             <Japanese>カーゴ設定</Japanese>
             <Korean>화물 설정</Korean>
-            <TChinese>貨物設定</TChinese>
-            <SChinese>货物设定</SChinese>
+            <Chinese>貨物設定</Chinese>
+            <Chinesesimp>货物设定</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_SettingsModule_Description">
             <English>Configure the cargo module settings</English>
@@ -133,8 +133,8 @@
             <French>Configure les paramètres du module de cargaison</French>
             <Japanese>カーゴ モジュールの設定を構成</Japanese>
             <Korean>화물 모듈의 환경 설정을 바꿉니다</Korean>
-            <TChinese>配置貨物模塊設定</TChinese>
-            <SChinese>配置货物模块设定</SChinese>
+            <Chinese>配置貨物模塊設定</Chinese>
+            <Chinesesimp>配置货物模块设定</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadedItem">
             <English>%1&lt;br/&gt;loaded into&lt;br/&gt;%2</English>
@@ -149,8 +149,8 @@
             <Russian>%1&lt;br/&gt;загружен в&lt;br/&gt;%2</Russian>
             <Japanese>%1&lt;br/&gt;は&lt;br/&gt;%2へ積み込まれた</Japanese>
             <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에 실림</Korean>
-            <TChinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</TChinese>
-            <SChinese>%1&lt;br/&gt;装载至&lt;br/&gt;%2</SChinese>
+            <Chinese>%1&lt;br/&gt;裝載至&lt;br/&gt;%2</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;装载至&lt;br/&gt;%2</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -165,8 +165,8 @@
             <Russian>%1&lt;br/&gt;разгружен из&lt;br/&gt;%2</Russian>
             <Japanese>&lt;br/&gt;%1が&lt;br/&gt;%2から降ろされた</Japanese>
             <Korean>%1&lt;br/&gt;는&lt;br/&gt;%2 에서 내려짐</Korean>
-            <TChinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</TChinese>
-            <SChinese>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</SChinese>
+            <Chinese>從&lt;br/&gt;%2卸載&lt;br/&gt;%1</Chinese>
+            <Chinesesimp>从&lt;br/&gt;%2卸载&lt;br/&gt;%1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingItem">
             <English>Loading Cargo</English>
@@ -180,8 +180,8 @@
             <French>Chargement de la cargaison</French>
             <Japanese>カーゴへ積み込んでいる</Japanese>
             <Korean>화물 싣기</Korean>
-            <TChinese>裝載貨物中</TChinese>
-            <SChinese>装载货物中</SChinese>
+            <Chinese>裝載貨物中</Chinese>
+            <Chinesesimp>装载货物中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading Cargo</English>
@@ -195,8 +195,8 @@
             <French>Déchargement de la cargaison</French>
             <Japanese>カーゴから降ろしている</Japanese>
             <Korean>화물 내리기</Korean>
-            <TChinese>卸載貨物中</TChinese>
-            <SChinese>卸载货物中</SChinese>
+            <Chinese>卸載貨物中</Chinese>
+            <Chinesesimp>卸载货物中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -210,8 +210,8 @@
             <French>%1&lt;br /&gt; n'a pas pu être chargé</French>
             <Japanese>%1&lt;br/&gt;は積み込めなかった</Japanese>
             <Korean>%1&lt;br/&gt;이 실릴 수가 없습니다</Korean>
-            <TChinese>%1&lt;br/&gt;無法被裝載</TChinese>
-            <SChinese>%1&lt;br/&gt;无法被装载</SChinese>
+            <Chinese>%1&lt;br/&gt;無法被裝載</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;无法被装载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingFailed">
             <English>%1&lt;br/&gt;could not be unloaded</English>
@@ -225,8 +225,8 @@
             <French>%1&lt;br /&gt; n'a pas pu être déchargé</French>
             <Japanese>%1&lt;br/&gt;は降ろせなかった</Japanese>
             <Korean>%1&lt;br/&gt;이 내려질 수가 없습니다</Korean>
-            <TChinese>%1&lt;br/&gt;無法被卸載</TChinese>
-            <SChinese>%1&lt;br/&gt;无法被卸载</SChinese>
+            <Chinese>%1&lt;br/&gt;無法被卸載</Chinese>
+            <Chinesesimp>%1&lt;br/&gt;无法被卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_displayName">
             <English>Make Object Loadable</English>
@@ -240,8 +240,8 @@
             <Russian>Сделать объект загружаемым</Russian>
             <Japanese>オブジェクトを積載可能に</Japanese>
             <Korean>물체를 화물화시키기</Korean>
-            <TChinese>使物件可裝載</TChinese>
-            <SChinese>使物件可装载</SChinese>
+            <Chinese>使物件可裝載</Chinese>
+            <Chinesesimp>使物件可装载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_description">
             <English>Sets the synced object as loadable by the cargo system.</English>
@@ -255,8 +255,8 @@
             <Russian>Делает синхронизированный объект загружаемым для модуля перевозки грузов.</Russian>
             <Japanese>オブジェクトを同期させると、カーゴ システムによる積載が可能になります。</Japanese>
             <Korean>물체를 화물 시스템과 동기화시켜 실을 수 있게 합니다</Korean>
-            <TChinese>使用同步線來使該物件可被裝載.</TChinese>
-            <SChinese>使用同步线来使该物件可被装载.</SChinese>
+            <Chinese>使用同步線來使該物件可被裝載.</Chinese>
+            <Chinesesimp>使用同步线来使该物件可被装载.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_makeLoadable_setSize_displayName">
             <English>Object's Size</English>
@@ -270,36 +270,36 @@
             <Russian>Размер объекта</Russian>
             <Japanese>オブジェクトの大きさ</Japanese>
             <Korean>물체 크기</Korean>
-            <TChinese>物件的大小</TChinese>
-            <SChinese>物件的大小</SChinese>
+            <Chinese>物件的大小</Chinese>
+            <Chinesesimp>物件的大小</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenName">
             <English>Cargo Space</English>
             <Italian>Spazio Cargo</Italian>
             <Japanese>カーゴ スペース</Japanese>
-            <TChinese>貨物空間</TChinese>
-            <SChinese>货物空间</SChinese>
+            <Chinese>貨物空間</Chinese>
+            <Chinesesimp>货物空间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_space_edenDesc">
             <English>The cargo space available in this vehicle/container</English>
             <Italian>Lo spazio disponibile in questo veicolo/container</Italian>
             <Japanese>この車両/コンテナでカーゴ スペースを使えるようにします</Japanese>
-            <TChinese>設定此載具/集裝箱可裝載多少貨物</TChinese>
-            <SChinese>设定此载具/集装箱可装载多少货物</SChinese>
+            <Chinese>設定此載具/集裝箱可裝載多少貨物</Chinese>
+            <Chinesesimp>设定此载具/集装箱可装载多少货物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenName">
             <English>Cargo Size</English>
             <Italian>Dimensioni Cargo</Italian>
             <Japanese>カーゴ サイズ</Japanese>
-            <TChinese>貨物的大小</TChinese>
-            <SChinese>货物的大小</SChinese>
+            <Chinese>貨物的大小</Chinese>
+            <Chinesesimp>货物的大小</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_size_edenDesc">
             <English>The cargo space required to hold this object (-1 for unloadable)</English>
             <Italian>Lo spazio del cargo necessita di mantenere questo oggetto (-1 per scaricabile)</Italian>
             <Japanese>このオブジェクトを積載するのに必要なカーゴ スペース (-1 で積載不可)</Japanese>
-            <TChinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</TChinese>
-            <SChinese>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</SChinese>
+            <Chinese>此貨物會佔掉多少空間(設定-1的話此貨物就不能被裝載)</Chinese>
+            <Chinesesimp>此货物会占掉多少空间(设定-1的话此货物就不能被装载)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropButton">
             <English>Airdrop</English>
@@ -309,8 +309,8 @@
             <Korean>공중 투하</Korean>
             <French>Largage aérien</French>
             <Italian>Lancio Aereo</Italian>
-            <TChinese>空投</TChinese>
-            <SChinese>空投</SChinese>
+            <Chinese>空投</Chinese>
+            <Chinesesimp>空投</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_unlevelFlightWarning">
             <English>Unlevel Flight</English>
@@ -320,24 +320,24 @@
             <Korean>기체가 수평이 아닙니다</Korean>
             <French>Rétablir l'assiette</French>
             <Italian>Volo non Livellato</Italian>
-            <TChinese>此架飛機並無保持水平飛行</TChinese>
-            <SChinese>此架飞机并无保持水平飞行</SChinese>
+            <Chinese>此架飛機並無保持水平飛行</Chinese>
+            <Chinesesimp>此架飞机并无保持水平飞行</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent">
             <English>Paradrop Time Coffecient</English>
             <Japanese>空中投下までの時間係数</Japanese>
             <Italian>Coefficente Tempo Lancio Paracadute</Italian>
             <French>Coefficient Temps de largage de cargaison</French>
-            <TChinese>空投時間係數</TChinese>
-            <SChinese>空投时间系数</SChinese>
+            <Chinese>空投時間係數</Chinese>
+            <Chinesesimp>空投时间系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_paradropTimeCoefficent_description">
             <English>Modifier for how long it takes to paradrop a cargo item.</English>
             <Japanese>カーゴ アイテムを空中投下するまでの時間を変更します。</Japanese>
             <Italian>Modificato per quanto tempo ci impiega a paracadutare un oggetto cargo.</Italian>
             <French>Modifier le temps qu'il faut pour larguer la cargaison.</French>
-            <TChinese>設定空投所需消耗的時間.</TChinese>
-            <SChinese>设定空投所需消耗的时间.</SChinese>
+            <Chinese>設定空投所需消耗的時間.</Chinese>
+            <Chinesesimp>设定空投所需消耗的时间.</Chinesesimp>
         </Key>
     </Package>
 </Project>

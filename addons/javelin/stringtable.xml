@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Javelin">
         <Key ID="STR_ACE_Javelin_LockTarget">
@@ -14,8 +14,8 @@
             <Portuguese>Travar Alvo(Segurar)</Portuguese>
             <Japanese>目標を捕捉 (押しっぱ)</Japanese>
             <Korean>표적 획득 (누르기)</Korean>
-            <SChinese>锁定目标 (按住)</SChinese>
-            <TChinese>鎖定目標 (按住)</TChinese>
+            <Chinesesimp>锁定目标 (按住)</Chinesesimp>
+            <Chinese>鎖定目標 (按住)</Chinese>
         </Key>
     </Package>
 </Project>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
@@ -12,8 +12,8 @@
             <Italian>Logistica ACE</Italian>
             <French>ACE Logistique</French>
             <Japanese>ACE ロジスティクス</Japanese>
-            <SChinese>ACE 后勤</SChinese>
-            <TChinese>ACE 後勤</TChinese>
+            <Chinesesimp>ACE 后勤</Chinesesimp>
+            <Chinese>ACE 後勤</Chinese>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>http://ace3mod.com/</English>
@@ -27,8 +27,8 @@
             <French>http://ace3mod.com/</French>
             <Korean>http://ace3mod.com/</Korean>
             <Japanese>http://ace3mod.com/</Japanese>
-            <SChinese>http://ace3mod.com/</SChinese>
-            <TChinese>http://ace3mod.com/</TChinese>
+            <Chinesesimp>http://ace3mod.com/</Chinesesimp>
+            <Chinese>http://ace3mod.com/</Chinese>
         </Key>
     </Package>
 </Project>
