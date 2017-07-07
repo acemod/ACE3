@@ -374,11 +374,10 @@ GVAR(isReloading) = false;
 
         if (_weapon != "") then {
             private _muzzle = currentMuzzle ACE_player;
-            private ["_gesture"];
-            if(_weapon isEqualTo _muzzle) then {
-                _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
+            private _gesture = if (_weapon isEqualTo _muzzle) then {
+                getText (configfile >> "CfgWeapons" >> _weapon >> "reloadAction");
             } else {
-                _gesture  = getText (configfile >> "CfgWeapons" >> _weapon >> _muzzle >> "reloadAction");
+                getText (configfile >> "CfgWeapons" >> _weapon >> _muzzle >> "reloadAction");
             };
             if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
             private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
