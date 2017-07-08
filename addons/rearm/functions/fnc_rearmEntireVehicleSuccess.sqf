@@ -24,6 +24,7 @@ _args params [
 ];
 
 if (isServer) then {
+    private _turrets = [_vehicle] call FUNC(getAllTurrets);
     {
         private _turretOwnerID = _vehicle turretOwner _x;
         if (_turretOwnerID == 0) then {
@@ -32,7 +33,7 @@ if (isServer) then {
             [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_ownerEvent;
         };
         false
-    } count REARM_TURRET_PATHS;
+    } count _turrets;
 } else {
     [QGVAR(rearmEntireVehicleSuccessLocalEH), _this] call CBA_fnc_serverEvent;
 };

@@ -9,6 +9,7 @@ PREP(canTakeAmmo);
 PREP(createDummy);
 PREP(disable);
 PREP(dropAmmo);
+PREP(getAllTurrets);
 PREP(getCaliber);
 PREP(getHardpointMagazines);
 PREP(getMaxMagazines);

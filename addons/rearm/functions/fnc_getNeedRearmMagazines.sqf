@@ -23,6 +23,7 @@
 params [["_vehicle", objNull, [objNull]], ["_magazineClass", "", [""]]];
 
 private _return = [false, [], 0, -1];
+private _turrets = [_vehicle] call FUNC(getAllTurrets);
 {
     private _magazines = [_vehicle, _x] call FUNC(getVehicleMagazines);
 
@@ -40,7 +41,7 @@ private _return = [false, [], 0, -1];
 
     if (_return select 0) exitWith {};
     false
-} count REARM_TURRET_PATHS;
+} count _turrets;
 
 if (!(_return select 0)) then {
     // 1.70 pylons

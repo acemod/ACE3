@@ -24,6 +24,7 @@ private _vehicleActions = [];
 {
     private _vehicle = _x;
     private _magazineHelper = [];
+    private _turrets = [_vehicle] call FUNC(getAllTurrets);
     {
         private _turretPath = _x;
         private _magazines = [_vehicle, _turretPath] call FUNC(getVehicleMagazines);
@@ -40,7 +41,7 @@ private _vehicleActions = [];
             false
         } count _magazines;
         false
-    } count REARM_TURRET_PATHS;
+    } count _turrets;
 
     // 1.70 pylons
     private _pylonConfigs = configProperties [configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
