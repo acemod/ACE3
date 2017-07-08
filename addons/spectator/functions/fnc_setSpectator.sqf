@@ -103,10 +103,10 @@ if (alive player) then {
 
     // Ignore damage (vanilla and ace_medical)
     player allowDamage !_hidden;
-    _unit setVariable [QEGVAR(medical,allowDamage), !_hidden];
+    player setVariable [QEGVAR(medical,allowDamage), !_hidden];
 
     // Move to/from group as appropriate
-    [_unit, _hidden, QGVAR(isSet), side group _unit] call EFUNC(common,switchToGroupSide);
+    [player, _hidden, QGVAR(isSet), side group player] call EFUNC(common,switchToGroupSide);
 
     // Ghosts can't talk
     [_hidden, QGVAR(isSet)] call EFUNC(common,hideUnit);
