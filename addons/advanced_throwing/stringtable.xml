@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Throwing">
         <Key ID="STR_ACE_Advanced_Throwing_Category">
@@ -10,8 +10,8 @@
             <Korean>고급 투척</Korean>
             <French>Lancé amélioré</French>
             <Italian>Lancio Avanzato</Italian>
-            <TChinese>進階投擲</TChinese>
-            <SChinese>进阶投掷</SChinese>
+            <Chinese>進階投擲</Chinese>
+            <Chinesesimp>进阶投掷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Module_Description">
             <English>Allows changing advanced throwing behaviour.</English>
@@ -22,8 +22,8 @@
             <Korean>고급 투척 행위를 허가합니다</Korean>
             <French>Permet de changer la configuration du lancé amélioré.</French>
             <Italian>Permette il cambiamento della modalità di tiro.</Italian>
-            <TChinese>允許使用更多不同的投擲方式.</TChinese>
-            <SChinese>允许使用更多不同的投掷方式.</SChinese>
+            <Chinese>允許使用更多不同的投擲方式.</Chinese>
+            <Chinesesimp>允许使用更多不同的投掷方式.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_DisplayName">
             <English>Enable Advanced Throwing</English>
@@ -34,8 +34,8 @@
             <Korean>고급 투척 활성화 </Korean>
             <French>Active le lancé amélioré</French>
             <Italian>Abilita Lancio Avanzato</Italian>
-            <TChinese>啟用進階投擲</TChinese>
-            <SChinese>启用进阶投掷</SChinese>
+            <Chinese>啟用進階投擲</Chinese>
+            <Chinesesimp>启用进阶投掷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Enable_Description">
             <English>Enables advanced throwing system.</English>
@@ -46,8 +46,8 @@
             <Korean>고급 투척을 활성화 합니다</Korean>
             <French>Active le système de lancé amélioré.</French>
             <Italian>Abilita il sistema di lancio avanzato.</Italian>
-            <TChinese>啟用進階投擲系統.</TChinese>
-            <SChinese>启用进阶投掷系统.</SChinese>
+            <Chinese>啟用進階投擲系統.</Chinese>
+            <Chinesesimp>启用进阶投掷系统.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_DisplayName">
             <English>Show Throw Arc</English>
@@ -58,8 +58,8 @@
             <Korean>투척 궤적 표시</Korean>
             <French>Afficher l'arc de lancé</French>
             <Italian>Mostra Arco di Tiro</Italian>
-            <TChinese>顯示投擲軌道</TChinese>
-            <SChinese>显示投掷轨道</SChinese>
+            <Chinese>顯示投擲軌道</Chinese>
+            <Chinesesimp>显示投掷轨道</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowThrowArc_Description">
             <English>Enables visualization of the throw arc (where throwable will fly).</English>
@@ -70,8 +70,8 @@
             <Korean>투척 궤도를 시각화 합니다(투척물이 어디로 갈지)</Korean>
             <French>Active la visualisation de l'arc de lancé (où l'objet lancé va atterrir).</French>
             <Italian>Abilita la visualizzazione dell'arco del tiro (dove l'oggetto lanciabile volerà).</Italian>
-            <TChinese>顯示投擲軌道幫助投擲.</TChinese>
-            <SChinese>显示投掷轨道帮助投掷.</SChinese>
+            <Chinese>顯示投擲軌道幫助投擲.</Chinese>
+            <Chinesesimp>显示投掷轨道帮助投掷.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_DisplayName">
             <English>Show Throwing Mouse Controls</English>
@@ -82,8 +82,8 @@
             <Korean>마우스 조작 표시</Korean>
             <French>Afficher les contrôles à la souris du lancé</French>
             <Italian>Mostra Comandi Mouse Lancio</Italian>
-            <TChinese>顯示滑鼠投擲控制提示</TChinese>
-            <SChinese>显示滑鼠投掷控制提示</SChinese>
+            <Chinese>顯示滑鼠投擲控制提示</Chinese>
+            <Chinesesimp>显示滑鼠投掷控制提示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ShowMouseControls_Description">
             <English>Enables visual cues for mouse controls when throwable is prepared.</English>
@@ -94,8 +94,8 @@
             <Korean>투척물을 준비시 마우스 조작을 시각화해서 보여줍니다</Korean>
             <French>Active les aides visuels pour les controles à la souris lorsqu'un lancé est préparé.</French>
             <Italian>Abilita la visualizzazione dei controlli del mouse quando l'oggetto lanciabile è pronto.</Italian>
-            <TChinese>開啟後會在準備投擲時, 顯示滑鼠相關操作.</TChinese>
-            <SChinese>开启后会在准备投掷时, 显示滑鼠相关操作.</SChinese>
+            <Chinese>開啟後會在準備投擲時, 顯示滑鼠相關操作.</Chinese>
+            <Chinesesimp>开启后会在准备投掷时, 显示滑鼠相关操作.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_DisplayName">
             <English>Enable Throwables Pick Up</English>
@@ -106,8 +106,8 @@
             <Korean>투척물 줍기 활성화</Korean>
             <French>Active la récupération des objets lancés</French>
             <Italian>Abilita Raccogli Oggetti</Italian>
-            <TChinese>啟用可撿取地面投擲物</TChinese>
-            <SChinese>启用可捡取地面投掷物</SChinese>
+            <Chinese>啟用可撿取地面投擲物</Chinese>
+            <Chinesesimp>启用可捡取地面投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUp_Description">
             <English>Enables ability to pick up throwables from the ground.</English>
@@ -118,8 +118,8 @@
             <Korean>땅에 떨어진 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la capacité de récupérer les objets lancés sur le sol.</French>
             <Italian>Abilita la possibilità di raccogliere un oggetto lanciabile da terra.</Italian>
-            <TChinese>啟用後, 可撿取地面上的投擲物.</TChinese>
-            <SChinese>启用后, 可捡取地面上的投掷物.</SChinese>
+            <Chinese>啟用後, 可撿取地面上的投擲物.</Chinese>
+            <Chinesesimp>启用后, 可捡取地面上的投掷物.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_DisplayName">
             <English>Enable Attached Throwables Pick Up</English>
@@ -130,8 +130,8 @@
             <Korean>부착 투척물 줍기 활성화</Korean>
             <French>Active le ramassage d'objets lançables attachés</French>
             <Italian>Abilita Raccogli Oggetti Lanciabili da altri Oggetti</Italian>
-            <TChinese>啟用可撿取附著投擲物</TChinese>
-            <SChinese>启用可捡取附着投掷物</SChinese>
+            <Chinese>啟用可撿取附著投擲物</Chinese>
+            <Chinesesimp>启用可捡取附着投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnablePickUpAttached_Description">
             <English>Enables ability to pick up throwables from attached objects.</English>
@@ -142,8 +142,8 @@
             <Korean>부착된 투척물을 주울 수 있게 해줍니다.</Korean>
             <French>Active la capacité à ramasser les objets lançables attaché à d'autres objets.</French>
             <Italian>Abilita la possibilità di raccogliere gli oggetti lanciabili dagli altri oggetti. </Italian>
-            <TChinese>啟用後, 可撿取附著在物件上的投擲物.</TChinese>
-            <SChinese>启用后, 可捡取附着在物件上的投掷物.</SChinese>
+            <Chinese>啟用後, 可撿取附著在物件上的投擲物.</Chinese>
+            <Chinesesimp>启用后, 可捡取附着在物件上的投掷物.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
@@ -154,8 +154,8 @@
             <Korean>투척물 준비/변경</Korean>
             <French>Préparer/changer d'objet</French>
             <Italian>Prepara/Cambia Oggetto lanciabile</Italian>
-            <TChinese>準備/變更投擲物</TChinese>
-            <SChinese>准备/变更投掷物</SChinese>
+            <Chinese>準備/變更投擲物</Chinese>
+            <Chinesesimp>准备/变更投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_dropModeHold">
             <English>Throwable Drop Mode (Hold)</English>
@@ -166,8 +166,8 @@
             <Korean>투척물 떨어뜨리기 모드(꾹눌러서)</Korean>
             <French>Mode de lancé de l'objet (Tenir)</French>
             <Italian>Modalità Oggetto Gettabile (Mantenere)</Italian>
-            <TChinese>投擲模式 (按住)</TChinese>
-            <SChinese>投掷模式 (按住)</SChinese>
+            <Chinese>投擲模式 (按住)</Chinese>
+            <Chinesesimp>投掷模式 (按住)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_DropModeToggle">
             <English>Throwable Drop Mode (Toggle)</English>
@@ -178,8 +178,8 @@
             <Korean>투척물 떨어뜨리기 모드(토글)</Korean>
             <French>Mode de lancé de l'objet (Basculer)</French>
             <Italian>Modalità Oggetto lanciabile Gettabile (Interruttore)</Italian>
-            <TChinese>投擲模式 (切換)</TChinese>
-            <SChinese>投掷模式 (切换)</SChinese>
+            <Chinese>投擲模式 (切換)</Chinese>
+            <Chinesesimp>投掷模式 (切换)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Primed">
             <English>Primed</English>
@@ -190,8 +190,8 @@
             <Korean>뇌관 작동</Korean>
             <French>Amorcer</French>
             <Italian>Armato</Italian>
-            <TChinese>引信開始燃燒</TChinese>
-            <SChinese>引信开始燃烧</SChinese>
+            <Chinese>引信開始燃燒</Chinese>
+            <Chinesesimp>引信开始燃烧</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Throw">
             <English>Throw</English>
@@ -202,8 +202,8 @@
             <Korean>던지기</Korean>
             <French>Lancer</French>
             <Italian>Lanciare</Italian>
-            <TChinese>投擲</TChinese>
-            <SChinese>投掷</SChinese>
+            <Chinese>投擲</Chinese>
+            <Chinesesimp>投掷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_ChangeMode">
             <English>(Scroll) Change Mode</English>
@@ -214,8 +214,8 @@
             <Korean>(마우스 휠) 모드 변경</Korean>
             <French>(Molette souris) Changer de mode</French>
             <Italian>(Scorrere) Cambio Modalità</Italian>
-            <TChinese>(滾輪) 變更模式</TChinese>
-            <SChinese>(滚轮) 变更模式</SChinese>
+            <Chinese>(滾輪) 變更模式</Chinese>
+            <Chinesesimp>(滚轮) 变更模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Extend">
             <English>(Scroll) Extend</English>
@@ -226,8 +226,8 @@
             <Korean>(마우스 휠) 연장</Korean>
             <French>(Molette souris) Etendre</French>
             <Italian>(Scorrere) Estendere</Italian>
-            <TChinese>(滾輪) 延長</TChinese>
-            <SChinese>(滚轮) 延长</SChinese>
+            <Chinese>(滾輪) 延長</Chinese>
+            <Chinesesimp>(滚轮) 延长</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Cook">
             <English>(Click) Cook</English>
@@ -238,8 +238,8 @@
             <Korean>(클릭) 예열</Korean>
             <French>(Clique) Dégoupiller</French>
             <Italian>(Click) Arma</Italian>
-            <TChinese>(點擊) 提早拉開引信</TChinese>
-            <SChinese>(点击) 提早拉开引信</SChinese>
+            <Chinese>(點擊) 提早拉開引信</Chinese>
+            <Chinesesimp>(点击) 提早拉开引信</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_PickUp">
             <English>Pick Up</English>
@@ -250,8 +250,8 @@
             <Korean>줍기</Korean>
             <French>Ramasser</French>
             <Italian>Raccogli</Italian>
-            <TChinese>撿取</TChinese>
-            <SChinese>捡取</SChinese>
+            <Chinese>撿取</Chinese>
+            <Chinesesimp>捡取</Chinesesimp>
         </Key>
     </Package>
 </Project>

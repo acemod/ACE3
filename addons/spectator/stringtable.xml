@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Spectator">
         <Key ID="STR_ACE_Spectator_DisplayName">
@@ -6,8 +6,8 @@
             <Japanese>ACE スペクテイター</Japanese>
             <Italian>Spettatore ACE</Italian>
             <French>Spectateur ACE</French>
-            <SChinese>ACE 旁观者</SChinese>
-            <TChinese>ACE 旁觀者</TChinese>
+            <Chinesesimp>ACE 旁观者</Chinesesimp>
+            <Chinese>ACE 旁觀者</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_DisplayName">
             <English>Spectator Settings</English>
@@ -21,8 +21,8 @@
             <French>Réglages de spectateur</French>
             <Japanese>スペクテイター設定</Japanese>
             <Korean>관전자 설정</Korean>
-            <SChinese>旁观者设定</SChinese>
-            <TChinese>旁觀者設定</TChinese>
+            <Chinesesimp>旁观者设定</Chinesesimp>
+            <Chinese>旁觀者設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
@@ -36,8 +36,8 @@
             <French>Configure comment le système de spectateurs opère par défaut.</French>
             <Japanese>スペクテイター システムが標準でどのように動作するか設定できます。</Japanese>
             <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
-            <SChinese>设定旁观者系统相关配置.</SChinese>
-            <TChinese>設定旁觀者系統相關配置.</TChinese>
+            <Chinesesimp>设定旁观者系统相关配置.</Chinesesimp>
+            <Chinese>設定旁觀者系統相關配置.</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_DisplayName">
             <English>Unit filter</English>
@@ -51,8 +51,8 @@
             <French>Filtre d'unités</French>
             <Japanese>ユニット フィルタ</Japanese>
             <Korean>인원 필터</Korean>
-            <SChinese>单位过滤器</SChinese>
-            <TChinese>單位過濾器</TChinese>
+            <Chinesesimp>单位过滤器</Chinesesimp>
+            <Chinese>單位過濾器</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_Description">
             <English>Method of filtering spectatable units.</English>
@@ -66,8 +66,8 @@
             <French>Méthode de filtration des unités regardables.</French>
             <Japanese>観察できるユニットへのフィルタ設定ができます。</Japanese>
             <Korean>관전할 수 있는 인원을 고릅니다</Korean>
-            <SChinese>过滤哪些单位可以使用旁观者系统.</SChinese>
-            <TChinese>過濾哪些單位可以使用旁觀者系統.</TChinese>
+            <Chinesesimp>过滤哪些单位可以使用旁观者系统.</Chinesesimp>
+            <Chinese>過濾哪些單位可以使用旁觀者系統.</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_none">
             <English>No units</English>
@@ -81,8 +81,8 @@
             <French>Pas d'unités</French>
             <Japanese>ユニットなし</Japanese>
             <Korean>인원 없음</Korean>
-            <SChinese>无单位</SChinese>
-            <TChinese>無單位</TChinese>
+            <Chinesesimp>无单位</Chinesesimp>
+            <Chinese>無單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_players">
             <English>Only players</English>
@@ -96,8 +96,8 @@
             <French>Joueurs seulements</French>
             <Japanese>プレイヤのみ</Japanese>
             <Korean>플레이어만</Korean>
-            <SChinese>只有玩家</SChinese>
-            <TChinese>只有玩家</TChinese>
+            <Chinesesimp>只有玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_playable">
             <English>Playable Units</English>
@@ -111,8 +111,8 @@
             <French>Unités jouables</French>
             <Japanese>プレイ可能なユニットのみ</Japanese>
             <Korean>플레이 가능한 인원</Korean>
-            <SChinese>可扮演单位</SChinese>
-            <TChinese>可扮演單位</TChinese>
+            <Chinesesimp>可扮演单位</Chinesesimp>
+            <Chinese>可扮演單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_units_all">
             <English>All units</English>
@@ -126,8 +126,8 @@
             <French>Toutes les unités</French>
             <Japanese>全てのユニット</Japanese>
             <Korean>모든 인원</Korean>
-            <SChinese>所有单位</SChinese>
-            <TChinese>所有單位</TChinese>
+            <Chinesesimp>所有单位</Chinesesimp>
+            <Chinese>所有單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_DisplayName">
             <English>Side filter</English>
@@ -141,8 +141,8 @@
             <French>Filtre de faction</French>
             <Japanese>勢力フィルタ</Japanese>
             <Korean>진영 필터</Korean>
-            <SChinese>阵营过滤器</SChinese>
-            <TChinese>陣營過濾器</TChinese>
+            <Chinesesimp>阵营过滤器</Chinesesimp>
+            <Chinese>陣營過濾器</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_Description">
             <English>Method of filtering spectatable sides.</English>
@@ -156,8 +156,8 @@
             <French>Méthode de filtration des factions regardables</French>
             <Japanese>観察できる勢力へのフィルタ設定ができます。</Japanese>
             <Korean>관전할 수 있는 진영을 고릅니다</Korean>
-            <SChinese>过滤可旁观的阵营.</SChinese>
-            <TChinese>過濾可旁觀的陣營.</TChinese>
+            <Chinesesimp>过滤可旁观的阵营.</Chinesesimp>
+            <Chinese>過濾可旁觀的陣營.</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_player">
             <English>Player side</English>
@@ -171,8 +171,8 @@
             <French>Faction du joueur</French>
             <Japanese>プレイヤーと同じ勢力</Japanese>
             <Korean>플레이어 진영</Korean>
-            <SChinese>玩家</SChinese>
-            <TChinese>玩家</TChinese>
+            <Chinesesimp>玩家</Chinesesimp>
+            <Chinese>玩家</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_friendly">
             <English>Friendly sides</English>
@@ -186,8 +186,8 @@
             <French>Factions amies</French>
             <Japanese>友軍勢力</Japanese>
             <Korean>아군 진영</Korean>
-            <SChinese>友军</SChinese>
-            <TChinese>友軍</TChinese>
+            <Chinesesimp>友军</Chinesesimp>
+            <Chinese>友軍</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_hostile">
             <English>Hostile sides</English>
@@ -201,8 +201,8 @@
             <French>Factions hostiles</French>
             <Japanese>敵対勢力</Japanese>
             <Korean>적군 진영</Korean>
-            <SChinese>敌方</SChinese>
-            <TChinese>敵方</TChinese>
+            <Chinesesimp>敌方</Chinesesimp>
+            <Chinese>敵方</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_sides_all">
             <English>All sides</English>
@@ -216,8 +216,8 @@
             <French>Toutes les factions</French>
             <Japanese>全ての勢力</Japanese>
             <Korean>모든 진영</Korean>
-            <SChinese>所有阵营</SChinese>
-            <TChinese>所有陣營</TChinese>
+            <Chinesesimp>所有阵营</Chinesesimp>
+            <Chinese>所有陣營</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_DisplayName">
             <English>Camera modes</English>
@@ -231,8 +231,8 @@
             <French>Mode de caméra</French>
             <Japanese>カメラ モード</Japanese>
             <Korean>카메라 모드</Korean>
-            <SChinese>摄影机模式</SChinese>
-            <TChinese>攝影機模式</TChinese>
+            <Chinesesimp>摄影机模式</Chinesesimp>
+            <Chinese>攝影機模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_Description">
             <English>Camera modes that can be used.</English>
@@ -246,8 +246,8 @@
             <French>Modes de caméra qui peuvent être utilisés</French>
             <Japanese>カメラ モードを使えます。</Japanese>
             <Korean>사용할 수 있는 카메라 모드들 입니다</Korean>
-            <SChinese>设定可使用的摄影机模式.</SChinese>
-            <TChinese>設定可使用的攝影機模式.</TChinese>
+            <Chinesesimp>设定可使用的摄影机模式.</Chinesesimp>
+            <Chinese>設定可使用的攝影機模式.</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_all">
             <English>All</English>
@@ -261,8 +261,8 @@
             <French>Tous</French>
             <Japanese>全て</Japanese>
             <Korean>모두</Korean>
-            <SChinese>所有</SChinese>
-            <TChinese>所有</TChinese>
+            <Chinesesimp>所有</Chinesesimp>
+            <Chinese>所有</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_free">
             <English>Free only</English>
@@ -276,17 +276,17 @@
             <French>Libre seulement</French>
             <Japanese>自由視点のみ</Japanese>
             <Korean>오직 자유만</Korean>
-            <SChinese>只有自由模式</SChinese>
-            <TChinese>只有自由模式</TChinese>
+            <Chinesesimp>只有自由模式</Chinesesimp>
+            <Chinese>只有自由模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_modes_internal">
             <English>Internal only</English>
             <German>Erste Person</German> //Bitte überprüfen!
-        <Polish>Tylko wewnętrzna</Polish><Portuguese>Somente interna</Portuguese><Russian>Только внутренняя</Russian><Czech>Pouze pohled z první osoby</Czech><Spanish>Solo interna</Spanish><Italian>Solo interna</Italian><French>Interne seulement</French><Japanese>一人称視点のみ</Japanese><Korean>오직 내부만</Korean><SChinese>只有第一人称</SChinese><TChinese>只有第一人稱</TChinese></Key>
+        <Polish>Tylko wewnętrzna</Polish><Portuguese>Somente interna</Portuguese><Russian>Только внутренняя</Russian><Czech>Pouze pohled z první osoby</Czech><Spanish>Solo interna</Spanish><Italian>Solo interna</Italian><French>Interne seulement</French><Japanese>一人称視点のみ</Japanese><Korean>오직 내부만</Korean><Chinesesimp>只有第一人称</Chinesesimp><Chinese>只有第一人稱</Chinese></Key>
         <Key ID="STR_ACE_Spectator_modes_external">
             <English>External only</English>
             <German>Dritte Person</German> //Bitte überpfüfen!
-        <Polish>Tylko zewnętrzna</Polish><Portuguese>Somente externa</Portuguese><Russian>Только внешняя</Russian><Czech>Pouze pohled z třetí osoby</Czech><Spanish>Solo externa</Spanish><Italian>Solo esterna</Italian><French>Externe seulement</French><Japanese>三人称視点のみ</Japanese><Korean>오직 외부만</Korean><SChinese>只有第三人称</SChinese><TChinese>只有第三人稱</TChinese></Key>
+        <Polish>Tylko zewnętrzna</Polish><Portuguese>Somente externa</Portuguese><Russian>Только внешняя</Russian><Czech>Pouze pohled z třetí osoby</Czech><Spanish>Solo externa</Spanish><Italian>Solo esterna</Italian><French>Externe seulement</French><Japanese>三人称視点のみ</Japanese><Korean>오직 외부만</Korean><Chinesesimp>只有第三人称</Chinesesimp><Chinese>只有第三人稱</Chinese></Key>
         <Key ID="STR_ACE_Spectator_modes_unit">
             <English>Internal and external</English>
             <German>Erste und dritte Person</German>
@@ -299,8 +299,8 @@
             <French>Interne et externe</French>
             <Japanese>一人称と三人称視点</Japanese>
             <Korean>외부 및 내부</Korean>
-            <SChinese>第一和第三人称</SChinese>
-            <TChinese>第一和第三人稱</TChinese>
+            <Chinesesimp>第一和第三人称</Chinesesimp>
+            <Chinese>第一和第三人稱</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_DisplayName">
             <English>Vision modes</English>
@@ -314,8 +314,8 @@
             <French>Modes de vision</French>
             <Japanese>ビジョン モード</Japanese>
             <Korean>시야 모드</Korean>
-            <SChinese>视觉模式</SChinese>
-            <TChinese>視覺模式</TChinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Chinese>視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_Description">
             <English>Vision modes that can be used.</English>
@@ -329,8 +329,8 @@
             <French>Modes de visions qui peuvent être utilisés</French>
             <Japanese>ビジョン モードを使えます。</Japanese>
             <Korean>사용할 수 있는 시야 모드들 입니다</Korean>
-            <SChinese>设定可使用的视觉模式.</SChinese>
-            <TChinese>設定可使用的視覺模式.</TChinese>
+            <Chinesesimp>设定可使用的视觉模式.</Chinesesimp>
+            <Chinese>設定可使用的視覺模式.</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_nv">
             <English>Night vision</English>
@@ -344,8 +344,8 @@
             <French>Vision nocturne</French>
             <Japanese>夜間暗視</Japanese>
             <Korean>야간투시경</Korean>
-            <SChinese>夜视</SChinese>
-            <TChinese>夜視</TChinese>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_visions_ti">
             <English>Thermal imaging</English>
@@ -359,8 +359,8 @@
             <French>Vision thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열화상</Korean>
-            <SChinese>热成像</SChinese>
-            <TChinese>熱成像</TChinese>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
         </Key>
         <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_UnitTitle">
@@ -375,8 +375,8 @@
             <French>Unités spectatrices</French>
             <Japanese>スペクテイター ユニット</Japanese>
             <Korean>관전 인원</Korean>
-            <SChinese>旁观者单位</SChinese>
-            <TChinese>旁觀者單位</TChinese>
+            <Chinesesimp>旁观者单位</Chinesesimp>
+            <Chinese>旁觀者單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_HelpTitle">
             <English>Spectator Controls</English>
@@ -390,8 +390,8 @@
             <French>Contrôles de spectateur</French>
             <Japanese>スペクテイター操作</Japanese>
             <Korean>관전 조작</Korean>
-            <SChinese>旁观者控制</SChinese>
-            <TChinese>旁觀者控制</TChinese>
+            <Chinesesimp>旁观者控制</Chinesesimp>
+            <Chinese>旁觀者控制</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
@@ -405,17 +405,17 @@
             <French>Libre</French>
             <Japanese>自由視点</Japanese>
             <Korean>자유</Korean>
-            <SChinese>自由模式</SChinese>
-            <TChinese>自由模式</TChinese>
+            <Chinesesimp>自由模式</Chinesesimp>
+            <Chinese>自由模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewInternal">
             <English>Internal</English>
             <German>Erste Person</German> //Bitte überprüfen!
-        <Polish>Wewnętrzna</Polish><Portuguese>Interna</Portuguese><Russian>Внутренняя</Russian><Czech>Pohled z první osoby</Czech><Spanish>Interna</Spanish><Italian>Interna</Italian><French>Interne</French><Japanese>一人称視点</Japanese><Korean>내부</Korean><SChinese>第一人称</SChinese><TChinese>第一人稱</TChinese></Key>
+        <Polish>Wewnętrzna</Polish><Portuguese>Interna</Portuguese><Russian>Внутренняя</Russian><Czech>Pohled z první osoby</Czech><Spanish>Interna</Spanish><Italian>Interna</Italian><French>Interne</French><Japanese>一人称視点</Japanese><Korean>내부</Korean><Chinesesimp>第一人称</Chinesesimp><Chinese>第一人稱</Chinese></Key>
         <Key ID="STR_ACE_Spectator_ViewExternal">
             <English>External</English>
             <German>Dritte Person</German> //Bitte überprüfen!
-        <Polish>Zewnętrzna</Polish><Portuguese>Externa</Portuguese><Russian>Внешняя</Russian><Czech>Pohled z třetí osoby</Czech><Spanish>Externa</Spanish><Italian>Esterna</Italian><French>Externe</French><Japanese>三人称視点</Japanese><Korean>외부</Korean><SChinese>第三人称</SChinese><TChinese>第三人稱</TChinese></Key>
+        <Polish>Zewnętrzna</Polish><Portuguese>Externa</Portuguese><Russian>Внешняя</Russian><Czech>Pohled z třetí osoby</Czech><Spanish>Externa</Spanish><Italian>Esterna</Italian><French>Externe</French><Japanese>三人称視点</Japanese><Korean>외부</Korean><Chinesesimp>第三人称</Chinesesimp><Chinese>第三人稱</Chinese></Key>
         <Key ID="STR_ACE_Spectator_VisionNormal">
             <English>Normal</English>
             <German>Normal</German>
@@ -428,8 +428,8 @@
             <French>Normale</French>
             <Japanese>通常</Japanese>
             <Korean>정상</Korean>
-            <SChinese>正常</SChinese>
-            <TChinese>正常</TChinese>
+            <Chinesesimp>正常</Chinesesimp>
+            <Chinese>正常</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
@@ -443,8 +443,8 @@
             <French>Nuit</French>
             <Japanese>暗視装置</Japanese>
             <Korean>야간</Korean>
-            <SChinese>夜视</SChinese>
-            <TChinese>夜視</TChinese>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
@@ -458,8 +458,8 @@
             <French>Thermique</French>
             <Japanese>熱源画像</Japanese>
             <Korean>열상</Korean>
-            <SChinese>热成像</SChinese>
-            <TChinese>熱成像</TChinese>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Chinese>熱成像</Chinese>
         </Key>
         <!-- Controls -->
         <Key ID="STR_ACE_Spectator_freeCamControls">
@@ -474,8 +474,8 @@
             <French>Caméra libre</French>
             <Japanese>自由視点</Japanese>
             <Korean>자유 카메라</Korean>
-            <SChinese>自由摄影机</SChinese>
-            <TChinese>自由攝影機</TChinese>
+            <Chinesesimp>自由摄影机</Chinesesimp>
+            <Chinese>自由攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamForward">
             <English>Camera Forward</English>
@@ -489,8 +489,8 @@
             <French>Caméra en avant</French>
             <Japanese>カメラを前に</Japanese>
             <Korean>카메라 앞으로</Korean>
-            <SChinese>摄影机往前</SChinese>
-            <TChinese>攝影機往前</TChinese>
+            <Chinesesimp>摄影机往前</Chinesesimp>
+            <Chinese>攝影機往前</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBackward">
             <English>Camera Backward</English>
@@ -504,8 +504,8 @@
             <French>Caméra en arrière</French>
             <Japanese>カメラを後ろに</Japanese>
             <Korean>카메라 뒤로</Korean>
-            <SChinese>摄影机往后</SChinese>
-            <TChinese>攝影機往後</TChinese>
+            <Chinesesimp>摄影机往后</Chinesesimp>
+            <Chinese>攝影機往後</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLeft">
             <English>Camera Left</English>
@@ -519,8 +519,8 @@
             <French>Caméra à gauche</French>
             <Japanese>カメラを左に</Japanese>
             <Korean>카메라 왼쪽으로</Korean>
-            <SChinese>摄影机往左</SChinese>
-            <TChinese>攝影機往左</TChinese>
+            <Chinesesimp>摄影机往左</Chinesesimp>
+            <Chinese>攝影機往左</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamRight">
             <English>Camera Right</English>
@@ -534,8 +534,8 @@
             <French>Caméra à droite</French>
             <Japanese>カメラを右に</Japanese>
             <Korean>카메라 오른쪽으로</Korean>
-            <SChinese>摄影机往右</SChinese>
-            <TChinese>攝影機往右</TChinese>
+            <Chinesesimp>摄影机往右</Chinesesimp>
+            <Chinese>攝影機往右</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamUp">
             <English>Camera Up</English>
@@ -549,8 +549,8 @@
             <French>Caméra en haut</French>
             <Japanese>カメラを上に</Japanese>
             <Korean>카메라 위로</Korean>
-            <SChinese>摄影机往上</SChinese>
-            <TChinese>攝影機往上</TChinese>
+            <Chinesesimp>摄影机往上</Chinesesimp>
+            <Chinese>攝影機往上</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDown">
             <English>Camera Down</English>
@@ -564,8 +564,8 @@
             <French>Caméra en bas</French>
             <Japanese>カメラを下に</Japanese>
             <Korean>카메라 아래로</Korean>
-            <SChinese>摄影机往下</SChinese>
-            <TChinese>攝影機往下</TChinese>
+            <Chinesesimp>摄影机往下</Chinesesimp>
+            <Chinese>攝影機往下</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamPan">
             <English>Pan Camera</English>
@@ -579,8 +579,8 @@
             <French>Tourner la caméra</French>
             <Japanese>カメラを振る</Japanese>
             <Korean>카메라 돌리기</Korean>
-            <SChinese>平移摄影机</SChinese>
-            <TChinese>平移攝影機</TChinese>
+            <Chinesesimp>平移摄影机</Chinesesimp>
+            <Chinese>平移攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamDolly">
             <English>Dolly Camera</English>
@@ -594,8 +594,8 @@
             <French>Bouger la caméra</French>
             <Japanese>カメラを動かす</Japanese>
             <Korean>카메라 추적</Korean>
-            <SChinese>移动摄影机</SChinese>
-            <TChinese>移動攝影機</TChinese>
+            <Chinesesimp>移动摄影机</Chinesesimp>
+            <Chinese>移動攝影機</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamLock">
             <English>Lock Camera to Target</English>
@@ -609,8 +609,8 @@
             <French>Verrouiller la caméra sur la cible</French>
             <Japanese>カメラを目標に固定</Japanese>
             <Korean>목표에 카메라 고정</Korean>
-            <SChinese>锁定摄影机观察单一目标</SChinese>
-            <TChinese>鎖定攝影機觀察單一目標</TChinese>
+            <Chinesesimp>锁定摄影机观察单一目标</Chinesesimp>
+            <Chinese>鎖定攝影機觀察單一目標</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_freeCamBoost">
             <English>Speed Boost</English>
@@ -624,8 +624,8 @@
             <French>Boost de vitesse</French>
             <Japanese>速度の増加</Japanese>
             <Korean>속도 증가</Korean>
-            <SChinese>速度提升</SChinese>
-            <TChinese>速度提升</TChinese>
+            <Chinesesimp>速度提升</Chinesesimp>
+            <Chinese>速度提升</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiControls">
             <English>Interface</English>
@@ -639,8 +639,8 @@
             <French>Interface</French>
             <Japanese>インターフェイス</Japanese>
             <Korean>인터페이스</Korean>
-            <SChinese>介面</SChinese>
-            <TChinese>介面</TChinese>
+            <Chinesesimp>介面</Chinesesimp>
+            <Chinese>介面</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleInterface">
             <English>Toggle Interface</English>
@@ -654,8 +654,8 @@
             <French>Bascule de l'interface</French>
             <Japanese>インターフェイスをトグル</Japanese>
             <Korean>인터페이스 토글</Korean>
-            <SChinese>切换介面</SChinese>
-            <TChinese>切換介面</TChinese>
+            <Chinesesimp>切换介面</Chinesesimp>
+            <Chinese>切換介面</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleIcons">
             <English>Toggle Unit Icons</English>
@@ -669,8 +669,8 @@
             <French>Bascule des icônes des unités</French>
             <Japanese>ユニット アイコンをトグル</Japanese>
             <Korean>인원 아이콘 토글</Korean>
-            <SChinese>切换单位图示</SChinese>
-            <TChinese>切換單位圖示</TChinese>
+            <Chinesesimp>切换单位图示</Chinesesimp>
+            <Chinese>切換單位圖示</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleUnits">
             <English>Toggle Unit List</English>
@@ -684,8 +684,8 @@
             <French>Bascule de la liste des unités</French>
             <Japanese>ユニット一覧をトグル</Japanese>
             <Korean>인원 목록 토글</Korean>
-            <SChinese>切换单位名单</SChinese>
-            <TChinese>切換單位名單</TChinese>
+            <Chinesesimp>切换单位名单</Chinesesimp>
+            <Chinese>切換單位名單</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleTools">
             <English>Toggle Toolbar</English>
@@ -699,8 +699,8 @@
             <French>Bascule de la barre d'outils</French>
             <Japanese>ツールバーをトグル</Japanese>
             <Korean>툴바 토글</Korean>
-            <SChinese>切换工具栏</SChinese>
-            <TChinese>切換工具欄</TChinese>
+            <Chinesesimp>切换工具栏</Chinesesimp>
+            <Chinese>切換工具欄</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleCompass">
             <English>Toggle Compass</English>
@@ -714,8 +714,8 @@
             <French>Basculer le compas</French>
             <Japanese>方位磁石をトグル</Japanese>
             <Korean>나침반 토글</Korean>
-            <SChinese>切换指北针</SChinese>
-            <TChinese>切換指北針</TChinese>
+            <Chinesesimp>切换指北针</Chinesesimp>
+            <Chinese>切換指北針</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleMap">
             <English>Toggle Map</English>
@@ -729,8 +729,8 @@
             <French>Basculer la carte</French>
             <Japanese>地図をトグル</Japanese>
             <Korean>지도 토글</Korean>
-            <SChinese>切换地图</SChinese>
-            <TChinese>切換地圖</TChinese>
+            <Chinesesimp>切换地图</Chinesesimp>
+            <Chinese>切換地圖</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_uiToggleHelp">
             <English>Toggle Help</English>
@@ -744,8 +744,8 @@
             <French>Basculer l'aide</French>
             <Japanese>ヘルプをトグル</Japanese>
             <Korean>도움 토글</Korean>
-            <SChinese>切换帮助</SChinese>
-            <TChinese>切換幫助</TChinese>
+            <Chinesesimp>切换帮助</Chinesesimp>
+            <Chinese>切換幫助</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_attributeControls">
             <English>Camera Attributes</English>
@@ -759,8 +759,8 @@
             <French>Propriétés de la caméra</French>
             <Japanese>カメラ高度</Japanese>
             <Korean>카메라 속성</Korean>
-            <SChinese>摄影机属性</SChinese>
-            <TChinese>攝影機屬性</TChinese>
+            <Chinesesimp>摄影机属性</Chinesesimp>
+            <Chinese>攝影機屬性</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextCam">
             <English>Next Camera</English>
@@ -774,8 +774,8 @@
             <French>Caméra suivante</French>
             <Japanese>次のカメラ</Japanese>
             <Korean>다음 카메라</Korean>
-            <SChinese>下个镜头</SChinese>
-            <TChinese>下個鏡頭</TChinese>
+            <Chinesesimp>下个镜头</Chinesesimp>
+            <Chinese>下個鏡頭</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_prevCam">
             <English>Previous Camera</English>
@@ -789,8 +789,8 @@
             <French>Caméra précédente</French>
             <Japanese>前のカメラ</Japanese>
             <Korean>이전 카메라</Korean>
-            <SChinese>上个镜头</SChinese>
-            <TChinese>上個鏡頭</TChinese>
+            <Chinesesimp>上个镜头</Chinesesimp>
+            <Chinese>上個鏡頭</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextUnit">
             <English>Next Unit</English>
@@ -804,8 +804,8 @@
             <French>Unité suivante</French>
             <Japanese>次のユニット</Japanese>
             <Korean>다음 인원</Korean>
-            <SChinese>下个单位</SChinese>
-            <TChinese>下個單位</TChinese>
+            <Chinesesimp>下个单位</Chinesesimp>
+            <Chinese>下個單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_prevUnit">
             <English>Previous Unit</English>
@@ -819,8 +819,8 @@
             <French>Unité précédente</French>
             <Japanese>前のユニット</Japanese>
             <Korean>이전 인원</Korean>
-            <SChinese>上个单位</SChinese>
-            <TChinese>上個單位</TChinese>
+            <Chinesesimp>上个单位</Chinesesimp>
+            <Chinese>上個單位</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_nextVis">
             <English>Next Vision Mode</English>
@@ -834,8 +834,8 @@
             <French>Mode de vision suivant</French>
             <Japanese>次のビジョン モード</Japanese>
             <Korean>다음 시야 모드</Korean>
-            <SChinese>下个视觉模式</SChinese>
-            <TChinese>下個視覺模式</TChinese>
+            <Chinesesimp>下个视觉模式</Chinesesimp>
+            <Chinese>下個視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_prevVis">
             <English>Previous Vision Mode</English>
@@ -849,8 +849,8 @@
             <French>Mode de vision précédent</French>
             <Japanese>前のビジョン モード</Japanese>
             <Korean>이전 시야 모드</Korean>
-            <SChinese>上个视觉模式</SChinese>
-            <TChinese>上個視覺模式</TChinese>
+            <Chinesesimp>上个视觉模式</Chinesesimp>
+            <Chinese>上個視覺模式</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_adjZoom">
             <English>Adjust Zoom</English>
@@ -864,8 +864,8 @@
             <French>Ajuster le zoom</French>
             <Japanese>拡大倍率を調節</Japanese>
             <Korean>줌 조절</Korean>
-            <SChinese>调整倍率</SChinese>
-            <TChinese>調整倍率</TChinese>
+            <Chinesesimp>调整倍率</Chinesesimp>
+            <Chinese>調整倍率</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_adjSpeed">
             <English>Adjust Speed</English>
@@ -879,8 +879,8 @@
             <French>Ajuster la vitesse</French>
             <Japanese>速度を調節</Japanese>
             <Korean>속도 조절</Korean>
-            <SChinese>调整速度</SChinese>
-            <TChinese>調整速度</TChinese>
+            <Chinesesimp>调整速度</Chinesesimp>
+            <Chinese>調整速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_incZoom">
             <English>Increment Zoom</English>
@@ -894,8 +894,8 @@
             <French>Augmenter le zoom</French>
             <Japanese>拡大倍率を増やす</Japanese>
             <Korean>줌 증가</Korean>
-            <SChinese>增加放大</SChinese>
-            <TChinese>增加放大</TChinese>
+            <Chinesesimp>增加放大</Chinesesimp>
+            <Chinese>增加放大</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_incSpeed">
             <English>Increment Speed</English>
@@ -909,8 +909,8 @@
             <French>Augmenter la vitesse</French>
             <Japanese>速度を増やす</Japanese>
             <Korean>속도 증가</Korean>
-            <SChinese>增加速度</SChinese>
-            <TChinese>增加速度</TChinese>
+            <Chinesesimp>增加速度</Chinesesimp>
+            <Chinese>增加速度</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_reZoom">
             <English>Reset Zoom</English>
@@ -924,8 +924,8 @@
             <French>RAZ zoom</French>
             <Japanese>拡大倍率を初期化</Japanese>
             <Korean>줌 초기화</Korean>
-            <SChinese>重置缩放</SChinese>
-            <TChinese>重置縮放</TChinese>
+            <Chinesesimp>重置缩放</Chinesesimp>
+            <Chinese>重置縮放</Chinese>
         </Key>
         <Key ID="STR_ACE_Spectator_reSpeed">
             <English>Reset Speed</English>
@@ -939,8 +939,8 @@
             <French>RAZ vitesse</French>
             <Japanese>速度を初期化</Japanese>
             <Korean>속도 초기화</Korean>
-            <SChinese>重置速度</SChinese>
-            <TChinese>重置速度</TChinese>
+            <Chinesesimp>重置速度</Chinesesimp>
+            <Chinese>重置速度</Chinese>
         </Key>
     </Package>
 </Project>

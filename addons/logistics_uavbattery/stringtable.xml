@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_UAVbattery">
         <Key ID="STR_ACE_Logistics_UAVbattery_Full">
@@ -14,8 +14,8 @@
             <Russian>БПЛА полностью заряжен</Russian>
             <Japanese>ドローンは充電完了</Japanese>
             <Korean>드론 충전완료</Korean>
-            <SChinese>无人载具电池已充满</SChinese>
-            <TChinese>無人載具電池已充滿</TChinese>
+            <Chinesesimp>无人载具电池已充满</Chinesesimp>
+            <Chinese>無人載具電池已充滿</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
             <English>You need a UAV Battery</English>
@@ -30,8 +30,8 @@
             <Russian>Требуется аккумулятор для БПЛА</Russian>
             <Japanese>UAV バッテリが必要です</Japanese>
             <Korean>UAV 배터리가 필요합니다</Korean>
-            <SChinese>你需要一个无人载具电池</SChinese>
-            <TChinese>你需要一個無人載具電池</TChinese>
+            <Chinesesimp>你需要一个无人载具电池</Chinesesimp>
+            <Chinese>你需要一個無人載具電池</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
             <English>Recharge</English>
@@ -46,8 +46,8 @@
             <Russian>Зарядить</Russian>
             <Japanese>充電</Japanese>
             <Korean>재충전</Korean>
-            <SChinese>充电</SChinese>
-            <TChinese>充電</TChinese>
+            <Chinesesimp>充电</Chinesesimp>
+            <Chinese>充電</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
@@ -62,8 +62,8 @@
             <Russian>Аккумулятор БПЛА</Russian>
             <Japanese>UAV バッテリ</Japanese>
             <Korean>UAV 배터리</Korean>
-            <SChinese>无人载具电池</SChinese>
-            <TChinese>無人載具電池</TChinese>
+            <Chinesesimp>无人载具电池</Chinesesimp>
+            <Chinese>無人載具電池</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
             <English>Used to refuel Carried UAV's</English>
@@ -78,8 +78,8 @@
             <Russian>Используется для зарядки переносных БПЛА</Russian>
             <Japanese>運んでいる UAV を充電に使う</Japanese>
             <Korean>UAV를 재충전 할때 씁니다.</Korean>
-            <SChinese>对可携式无人载具进行充电</SChinese>
-            <TChinese>對可攜式無人載具進行充電</TChinese>
+            <Chinesesimp>对可携式无人载具进行充电</Chinesesimp>
+            <Chinese>對可攜式無人載具進行充電</Chinese>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>
@@ -93,8 +93,8 @@
             <Italian>In ricarica...</Italian>
             <Russian>Заряжается...</Russian>
             <Japanese>充電中</Japanese>
-            <SChinese>充电中...</SChinese>
-            <TChinese>充電中...</TChinese>
+            <Chinesesimp>充电中...</Chinesesimp>
+            <Chinese>充電中...</Chinese>
         </Key>
     </Package>
 </Project>

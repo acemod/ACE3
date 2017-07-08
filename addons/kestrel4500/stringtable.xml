@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Kestrel4500">
         <Key ID="STR_ACE_Kestrel4500_Name">
@@ -14,8 +14,8 @@
             <Russian>Kestrel 4500NV</Russian>
             <Japanese>Kestrel 4500NV</Japanese>
             <Korean>Kestrel 4500NV</Korean>
-            <SChinese>猎隼4500测风仪</SChinese>
-            <TChinese>獵隼4500測風儀</TChinese>
+            <Chinesesimp>猎隼4500测风仪</Chinesesimp>
+            <Chinese>獵隼4500測風儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_Description">
             <English>Kestrel 4500 Pocket Weather Tracker</English>
@@ -30,8 +30,8 @@
             <Czech>Příruční meteostanice Kestrel 4500</Czech>
             <Japanese>Kestrel 4500 携帯型風速計</Japanese>
             <Korean>Kestrel 4500 휴대형 기상 관측기</Korean>
-            <SChinese>猎隼4500掌上型天气追踪仪</SChinese>
-            <TChinese>獵隼4500掌上型天氣追蹤儀</TChinese>
+            <Chinesesimp>猎隼4500掌上型天气追踪仪</Chinesesimp>
+            <Chinese>獵隼4500掌上型天氣追蹤儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
             <English>Open Kestrel 4500</English>
@@ -46,8 +46,8 @@
             <Czech>Otevřít Kestrel 4500</Czech>
             <Japanese>Kestrel 4500 を開く</Japanese>
             <Korean>Kestrel 4500 열기</Korean>
-            <SChinese>开启猎隼4500测风仪</SChinese>
-            <TChinese>開啟獵隼4500測風儀</TChinese>
+            <Chinesesimp>开启猎隼4500测风仪</Chinesesimp>
+            <Chinese>開啟獵隼4500測風儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
             <English>Show Kestrel 4500</English>
@@ -62,8 +62,8 @@
             <Portuguese>Mostrar Kestrel 4500</Portuguese>
             <Japanese>Kestrel 4500 を見る</Japanese>
             <Korean>Kestrel 4500 보이기</Korean>
-            <SChinese>显示猎隼4500测风仪</SChinese>
-            <TChinese>顯示獵隼4500測風儀</TChinese>
+            <Chinesesimp>显示猎隼4500测风仪</Chinesesimp>
+            <Chinese>顯示獵隼4500測風儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_HideKestrel">
             <English>Hide Kestrel 4500</English>
@@ -78,8 +78,8 @@
             <Portuguese>Ocultar Kestrel 4500</Portuguese>
             <Japanese>Kestrel 4500 を隠す</Japanese>
             <Korean>Kestrel 4500 숨기기</Korean>
-            <SChinese>隐藏猎隼4500测风仪</SChinese>
-            <TChinese>隱藏獵隼4500測風儀</TChinese>
+            <Chinesesimp>隐藏猎隼4500测风仪</Chinesesimp>
+            <Chinese>隱藏獵隼4500測風儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
             <English>Open Kestrel 4500</English>
@@ -94,8 +94,8 @@
             <Portuguese>Abrir Kestrel 4500</Portuguese>
             <Japanese>Kestrel 4500 を開く</Japanese>
             <Korean>Kestrel 4500 열기</Korean>
-            <SChinese>开启猎隼4500测风仪</SChinese>
-            <TChinese>開啟獵隼4500測風儀</TChinese>
+            <Chinesesimp>开启猎隼4500测风仪</Chinesesimp>
+            <Chinese>開啟獵隼4500測風儀</Chinese>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
@@ -110,8 +110,8 @@
             <Portuguese>Mostrar Kestrel 4500</Portuguese>
             <Japanese>Kestrel 4500 を見る</Japanese>
             <Korean>Kestrel 4500 숨기기</Korean>
-            <SChinese>显示猎隼4500测风仪</SChinese>
-            <TChinese>顯示獵隼4500測風儀</TChinese>
+            <Chinesesimp>显示猎隼4500测风仪</Chinesesimp>
+            <Chinese>顯示獵隼4500測風儀</Chinese>
         </Key>
     </Package>
 </Project>

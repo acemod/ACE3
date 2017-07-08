@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
         <Key ID="STR_ACE_Refuel_RefuelSettings_Module_DisplayName">
@@ -13,8 +13,8 @@
             <French>Réglages de ravitaillement</French>
             <Japanese>給油設定</Japanese>
             <Korean>재급유 설정</Korean>
-            <SChinese>加油设定</SChinese>
-            <TChinese>加油設定</TChinese>
+            <Chinesesimp>加油设定</Chinesesimp>
+            <Chinese>加油設定</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_DisplayName">
             <English>Flow Rate</English>
@@ -28,8 +28,8 @@
             <French>Vitesse du ravitaillement</French>
             <Japanese>流量</Japanese>
             <Korean>주유량</Korean>
-            <SChinese>油料流量</SChinese>
-            <TChinese>油料流量</TChinese>
+            <Chinesesimp>油料流量</Chinesesimp>
+            <Chinese>油料流量</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
@@ -43,8 +43,8 @@
             <French>A quelle vitesse devrait être ravitaillé un véhicule ?</French>
             <Japanese>どのくらいの速さで車両へ給油しますか？</Japanese>
             <Korean>차량이 얼마나 빨리 재급유될 수 있습니까?</Korean>
-            <SChinese>载具多快会加油完毕?</SChinese>
-            <TChinese>載具多快會加油完畢?</TChinese>
+            <Chinesesimp>载具多快会加油完毕?</Chinesesimp>
+            <Chinese>載具多快會加油完畢?</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -58,8 +58,8 @@
             <French>Ravitaillement</French>
             <Japanese>給油</Japanese>
             <Korean>재급유</Korean>
-            <SChinese>加油</SChinese>
-            <TChinese>加油</TChinese>
+            <Chinesesimp>加油</Chinesesimp>
+            <Chinese>加油</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
@@ -73,8 +73,8 @@
             <French>Prendre la pompe</French>
             <Japanese>給油ノズルを取る</Japanese>
             <Korean>주유기 획득</Korean>
-            <SChinese>拿取燃料喷嘴</SChinese>
-            <TChinese>拿取燃料噴嘴</TChinese>
+            <Chinesesimp>拿取燃料喷嘴</Chinesesimp>
+            <Chinese>拿取燃料噴嘴</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzleAction">
             <English>Taking fuel nozzle...</English>
@@ -88,8 +88,8 @@
             <French>Prise de la pompe...</French>
             <Japanese>給油ノズルを取っている・・・</Japanese>
             <Korean>주유기 획득중...</Korean>
-            <SChinese>拿取燃料喷嘴中...</SChinese>
-            <TChinese>拿取燃料噴嘴中...</TChinese>
+            <Chinesesimp>拿取燃料喷嘴中...</Chinesesimp>
+            <Chinese>拿取燃料噴嘴中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect">
             <English>Connect fuel nozzle</English>
@@ -103,8 +103,8 @@
             <French>Connecter la pompe</French>
             <Japanese>給油ノズルを接続する</Japanese>
             <Korean>주유기 꼽기</Korean>
-            <SChinese>连接燃料喷嘴</SChinese>
-            <TChinese>連接燃料噴嘴</TChinese>
+            <Chinesesimp>连接燃料喷嘴</Chinesesimp>
+            <Chinese>連接燃料噴嘴</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectAction">
             <English>Connecting fuel nozzle...</English>
@@ -118,8 +118,8 @@
             <French>Connection de la pompe...</French>
             <Japanese>給油ノズルを接続している・・・</Japanese>
             <Korean>주유기 꼽는중...</Korean>
-            <SChinese>连结燃料喷嘴中...</SChinese>
-            <TChinese>連結燃料噴嘴中...</TChinese>
+            <Chinesesimp>连结燃料喷嘴中...</Chinesesimp>
+            <Chinese>連結燃料噴嘴中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Disconnect">
             <English>Disconnect fuel nozzle</English>
@@ -133,8 +133,8 @@
             <French>Déconnecter la pompe</French>
             <Japanese>給油ノズルを外した</Japanese>
             <Korean>주유기 뽑기</Korean>
-            <SChinese>断开燃料喷嘴</SChinese>
-            <TChinese>斷開燃料噴嘴</TChinese>
+            <Chinesesimp>断开燃料喷嘴</Chinesesimp>
+            <Chinese>斷開燃料噴嘴</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect_Action">
             <English>Connect</English>
@@ -148,8 +148,8 @@
             <French>Connecter</French>
             <Japanese>接続</Japanese>
             <Korean>꼽기</Korean>
-            <SChinese>连结</SChinese>
-            <TChinese>連結</TChinese>
+            <Chinesesimp>连结</Chinesesimp>
+            <Chinese>連結</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
             <English>Check remaining fuel</English>
@@ -163,8 +163,8 @@
             <French>Vérifier le carburant restant</French>
             <Japanese>残燃料を見る</Japanese>
             <Korean>남은 연료 확인</Korean>
-            <SChinese>检查剩余燃料</SChinese>
-            <TChinese>檢查剩餘燃料</TChinese>
+            <Chinesesimp>检查剩余燃料</Chinesesimp>
+            <Chinese>檢查剩餘燃料</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelAction">
             <English>Checking remaining fuel...</English>
@@ -178,8 +178,8 @@
             <French>Vérifie le carburant restant...</French>
             <Japanese>残燃料を見ている・・・</Japanese>
             <Korean>남은 연료 확인중...</Korean>
-            <SChinese>检查剩余燃料中...</SChinese>
-            <TChinese>檢查剩餘燃料中...</TChinese>
+            <Chinesesimp>检查剩余燃料中...</Chinesesimp>
+            <Chinese>檢查剩餘燃料中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_RemainingFuel">
             <English>There are %1 liters left.</English>
@@ -193,8 +193,8 @@
             <French>Il reste %1 litres.</French>
             <Japanese>後 %1 リットル残っている。</Japanese>
             <Korean>%1 리터 남음</Korean>
-            <SChinese>剩下%1公升的燃料.</SChinese>
-            <TChinese>剩下%1公升的燃料.</TChinese>
+            <Chinesesimp>剩下%1公升的燃料.</Chinesesimp>
+            <Chinese>剩下%1公升的燃料.</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Empty">
             <English>There is no fuel left.</English>
@@ -208,8 +208,8 @@
             <French>Il n'y a plus de carburant.</French>
             <Japanese>もう燃料は残っていない。</Japanese>
             <Korean>연료 없음.</Korean>
-            <SChinese>没有剩余的燃料</SChinese>
-            <TChinese>沒有剩餘的燃料</TChinese>
+            <Chinesesimp>没有剩余的燃料</Chinesesimp>
+            <Chinese>沒有剩餘的燃料</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Cancel">
             <English>Cancel</English>
@@ -223,8 +223,8 @@
             <French>Annuler</French>
             <Japanese>中止</Japanese>
             <Korean>취소</Korean>
-            <SChinese>取消</SChinese>
-            <TChinese>取消</TChinese>
+            <Chinesesimp>取消</Chinesesimp>
+            <Chinese>取消</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Failed">
             <English>Failed</English>
@@ -238,8 +238,8 @@
             <French>Echoué</French>
             <Japanese>失敗</Japanese>
             <Korean>실패</Korean>
-            <SChinese>失败</SChinese>
-            <TChinese>失敗</TChinese>
+            <Chinesesimp>失败</Chinesesimp>
+            <Chinese>失敗</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOff">
             <English>Stop fueling</English>
@@ -253,8 +253,8 @@
             <French>Arrêter le ravitaillement</French>
             <Japanese>給油をやめる</Japanese>
             <Korean>그만 재급유하기</Korean>
-            <SChinese>停止加油</SChinese>
-            <TChinese>停止加油</TChinese>
+            <Chinesesimp>停止加油</Chinesesimp>
+            <Chinese>停止加油</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOffAction">
             <English>Stopping fueling...</English>
@@ -268,8 +268,8 @@
             <French>Arrête le ravitaillement...</French>
             <Japanese>給油をやめている・・・</Japanese>
             <Korean>재급유 그만하는중...</Korean>
-            <SChinese>停止加油中...</SChinese>
-            <TChinese>停止加油中...</TChinese>
+            <Chinesesimp>停止加油中...</Chinesesimp>
+            <Chinese>停止加油中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOn">
             <English>Start fueling</English>
@@ -283,8 +283,8 @@
             <French>Débute le ravitaillement</French>
             <Japanese>給油を始める</Japanese>
             <Korean>재급유 시작</Korean>
-            <SChinese>开始加油</SChinese>
-            <TChinese>開始加油</TChinese>
+            <Chinesesimp>开始加油</Chinesesimp>
+            <Chinese>開始加油</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_TurnOnAction">
             <English>Starting fueling...</English>
@@ -298,8 +298,8 @@
             <French>Début du ravitaillement...</French>
             <Japanese>給油を始めている・・・</Japanese>
             <Korean>재급유 시작중...</Korean>
-            <SChinese>开始加油中...</SChinese>
-            <TChinese>開始加油中...</TChinese>
+            <Chinesesimp>开始加油中...</Chinesesimp>
+            <Chinese>開始加油中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelProgress">
             <English>%1 Liters fueled</English>
@@ -313,8 +313,8 @@
             <French>%1 litres ravitaillés</French>
             <Japanese>%1 リッターを給油した</Japanese>
             <Korean>%1 리터 재급유됨</Korean>
-            <SChinese>已加入%1公升的燃料</SChinese>
-            <TChinese>已加入%1公升的燃料</TChinese>
+            <Chinesesimp>已加入%1公升的燃料</Chinesesimp>
+            <Chinese>已加入%1公升的燃料</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_SourceEmpty">
             <English>The fuel source is empty.</English>
@@ -328,8 +328,8 @@
             <French>La source de carburant est vide.</French>
             <Japanese>給油元は空です。</Japanese>
             <Korean>재급유처가 비었음.</Korean>
-            <SChinese>燃料来源已空.</SChinese>
-            <TChinese>燃料來源已空.</TChinese>
+            <Chinesesimp>燃料来源已空.</Chinesesimp>
+            <Chinese>燃料來源已空.</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_TooFar">
             <English>Maximum fuel hose length reached.</English>
@@ -343,8 +343,8 @@
             <French>Tuyau tendu au maximum</French>
             <Japanese>給油ホースはもうこれ以上届かない。</Japanese>
             <Korean>주유기 호스 최대 거리에 도달함.</Korean>
-            <SChinese>已加满至最大油量.</SChinese>
-            <TChinese>已加滿至最大油量.</TChinese>
+            <Chinesesimp>已加满至最大油量.</Chinesesimp>
+            <Chinese>已加滿至最大油量.</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Completed">
             <English>Fueling completed</English>
@@ -358,8 +358,8 @@
             <French>Ravitaillement terminé</French>
             <Japanese>給油完了</Japanese>
             <Korean>재급유 완료함</Korean>
-            <SChinese>加油完毕</SChinese>
-            <TChinese>加油完畢</TChinese>
+            <Chinesesimp>加油完毕</Chinesesimp>
+            <Chinese>加油完畢</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Stopped">
             <English>Fueling stopped</English>
@@ -373,8 +373,8 @@
             <French>Ravitaillement stoppé</French>
             <Japanese>給油を止めた</Japanese>
             <Korean>재급유 멈춤</Korean>
-            <SChinese>已停止加油</SChinese>
-            <TChinese>已停止加油</TChinese>
+            <Chinesesimp>已停止加油</Chinesesimp>
+            <Chinese>已停止加油</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_Started">
             <English>Fueling started</English>
@@ -388,8 +388,8 @@
             <French>Ravitaillement débuté</French>
             <Japanese>給油を始めた</Japanese>
             <Korean>재급유 시작함</Korean>
-            <SChinese>已开始加油</SChinese>
-            <TChinese>已開始加油</TChinese>
+            <Chinesesimp>已开始加油</Chinesesimp>
+            <Chinese>已開始加油</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Return">
             <English>Return fuel nozzle</English>
@@ -403,8 +403,8 @@
             <French>Retourner la pompe</French>
             <Japanese>給油ノズルを戻す</Japanese>
             <Korean>주유기 반환</Korean>
-            <SChinese>放回燃料喷嘴</SChinese>
-            <TChinese>放回燃料噴嘴</TChinese>
+            <Chinesesimp>放回燃料喷嘴</Chinesesimp>
+            <Chinese>放回燃料噴嘴</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_ReturnAction">
             <English>Returning fuel nozzle...</English>
@@ -418,8 +418,8 @@
             <French>Retourne la pompe</French>
             <Japanese>給油ノズルを戻している・・・</Japanese>
             <Korean>주유기 반환중</Korean>
-            <SChinese>放回燃料喷嘴中...</SChinese>
-            <TChinese>放回燃料噴嘴中...</TChinese>
+            <Chinesesimp>放回燃料喷嘴中...</Chinesesimp>
+            <Chinese>放回燃料噴嘴中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounter">
             <English>Check fuel counter</English>
@@ -433,8 +433,8 @@
             <French>Vérifier le compteur</French>
             <Japanese>燃料計を見る</Japanese>
             <Korean>연로카운터 확인</Korean>
-            <SChinese>检查燃料表</SChinese>
-            <TChinese>檢查燃料表</TChinese>
+            <Chinesesimp>检查燃料表</Chinesesimp>
+            <Chinese>檢查燃料表</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_CheckFuelCounterAction">
             <English>Checking fuel counter...</English>
@@ -448,8 +448,8 @@
             <French>Vérification du compteur...</French>
             <Japanese>燃料計を見ている・・・</Japanese>
             <Korean>연료카운터 확인중...</Korean>
-            <SChinese>检查燃料表中...</SChinese>
-            <TChinese>檢查燃料表中...</TChinese>
+            <Chinesesimp>检查燃料表中...</Chinesesimp>
+            <Chinese>檢查燃料表中...</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_Hint_FuelCounter">
             <English>%1 liters have been fueled.</English>
@@ -463,8 +463,8 @@
             <French>%1 litres ont été écoulés.</French>
             <Japanese>%1 リッターがある</Japanese>
             <Korean>%1 리터가 재급유되었습니다.</Korean>
-            <SChinese>已加入%1公升.</SChinese>
-            <TChinese>已加入%1公升.</TChinese>
+            <Chinesesimp>已加入%1公升.</Chinesesimp>
+            <Chinese>已加入%1公升.</Chinese>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
@@ -472,8 +472,8 @@
             <Spanish>Reabastecer longitud de manguera</Spanish>
             <Italian>Rifiuta lungezza tubo</Italian>
             <Japanese>給油ホースの長さ</Japanese>
-            <SChinese>加油软管长度</SChinese>
-            <TChinese>加油軟管長度</TChinese>
+            <Chinesesimp>加油软管长度</Chinesesimp>
+            <Chinese>加油軟管長度</Chinese>
         </Key>
     </Package>
 </Project>

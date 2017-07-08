@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NightVision">
         <Key ID="STR_ACE_NightVision_NVG_Gen1">
@@ -14,8 +14,8 @@
             <Hungarian>Éjjellátó szemüveg (1. Gen.)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第1世代)</Japanese>
             <Korean>야투경 (1세대)</Korean>
-            <SChinese>夜视镜 (初代)</SChinese>
-            <TChinese>夜視鏡 (初代)</TChinese>
+            <Chinesesimp>夜视镜 (初代)</Chinesesimp>
+            <Chinese>夜視鏡 (初代)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen2">
             <English>NV Goggles (Gen2)</English>
@@ -30,8 +30,8 @@
             <Hungarian>Éjjellátó szemüveg (2. Gen.)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第2世代)</Japanese>
             <Korean>야투경 (2세대)</Korean>
-            <SChinese>夜视镜 (二代)</SChinese>
-            <TChinese>夜視鏡 (二代)</TChinese>
+            <Chinesesimp>夜视镜 (二代)</Chinesesimp>
+            <Chinese>夜視鏡 (二代)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3">
             <English>NV Goggles (Gen3)</English>
@@ -46,8 +46,8 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen.)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第3世代)</Japanese>
             <Korean>야투경 (3세대)</Korean>
-            <SChinese>夜视镜 (三代)</SChinese>
-            <TChinese>夜視鏡 (三代)</TChinese>
+            <Chinesesimp>夜视镜 (三代)</Chinesesimp>
+            <Chinese>夜視鏡 (三代)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_brown">
             <English>NV Goggles (Gen3, Brown)</English>
@@ -62,8 +62,8 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., barna)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第3世代、ブラウン)</Japanese>
             <Korean>야투경 (3세대, 갈색)</Korean>
-            <SChinese>夜视镜 (三代, 棕色)</SChinese>
-            <TChinese>夜視鏡 (三代, 棕色)</TChinese>
+            <Chinesesimp>夜视镜 (三代, 棕色)</Chinesesimp>
+            <Chinese>夜視鏡 (三代, 棕色)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_green">
             <English>NV Goggles (Gen3, Green)</English>
@@ -78,8 +78,8 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., zöld)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第3世代、グリーン)</Japanese>
             <Korean>야투경 (3세대, 녹색)</Korean>
-            <SChinese>夜视镜 (三代, 绿色)</SChinese>
-            <TChinese>夜視鏡 (三代, 綠色)</TChinese>
+            <Chinesesimp>夜视镜 (三代, 绿色)</Chinesesimp>
+            <Chinese>夜視鏡 (三代, 綠色)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen3_black">
             <English>NV Goggles (Gen3, Black)</English>
@@ -94,8 +94,8 @@
             <Hungarian>Éjjellátó szemüveg (3. Gen., fekete)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第3世代、ブラック)</Japanese>
             <Korean>야투경 (3세대, 검정색)</Korean>
-            <SChinese>夜视镜 (三代, 黑色)</SChinese>
-            <TChinese>夜視鏡 (三代, 黑色)</TChinese>
+            <Chinesesimp>夜视镜 (三代, 黑色)</Chinesesimp>
+            <Chinese>夜視鏡 (三代, 黑色)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_Gen4">
             <English>NV Goggles (Gen4)</English>
@@ -110,8 +110,8 @@
             <Hungarian>Éjjellátó szemüveg (4. Gen.)</Hungarian>
             <Japanese>夜間暗視装置つきゴーグル (第4世代)</Japanese>
             <Korean>야투경 (4세대)</Korean>
-            <SChinese>夜视镜 (四代)</SChinese>
-            <TChinese>夜視鏡 (四代)</TChinese>
+            <Chinesesimp>夜视镜 (四代)</Chinesesimp>
+            <Chinese>夜視鏡 (四代)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVG_FullScreen">
             <English>NV Goggles (Wide)</English>
@@ -126,8 +126,8 @@
             <Italian>Occhiali notturni (Larghi)</Italian>
             <Japanese>夜間暗視装置つきゴーグル (ワイド)</Japanese>
             <Korean>야투경 (넓음)</Korean>
-            <SChinese>夜视镜 (宽版)</SChinese>
-            <TChinese>夜視鏡 (寬版)</TChinese>
+            <Chinesesimp>夜视镜 (宽版)</Chinesesimp>
+            <Chinese>夜視鏡 (寬版)</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_NVGBrightness">
             <English>Brightness: %1</English>
@@ -142,8 +142,8 @@
             <Italian>Luminosità: %1</Italian>
             <Japanese>光度：%1</Japanese>
             <Korean>밝기: %1</Korean>
-            <SChinese>亮度: %1</SChinese>
-            <TChinese>亮度: %1</TChinese>
+            <Chinesesimp>亮度: %1</Chinesesimp>
+            <Chinese>亮度: %1</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_IncreaseNVGBrightness">
             <English>Increase NVG Brightness</English>
@@ -158,8 +158,8 @@
             <Italian>Aumenta la luminosità dell'NVG</Italian>
             <Japanese>夜間暗視装置の光度を上げる</Japanese>
             <Korean>야투경 밝기 높이기</Korean>
-            <SChinese>增加夜视镜亮度</SChinese>
-            <TChinese>增加夜視鏡亮度</TChinese>
+            <Chinesesimp>增加夜视镜亮度</Chinesesimp>
+            <Chinese>增加夜視鏡亮度</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_DecreaseNVGBrightness">
             <English>Decrease NVG Brightness</English>
@@ -174,8 +174,8 @@
             <Italian>Riduci la luminosità dell'NVG</Italian>
             <Japanese>夜間暗視装置の光度を下げる</Japanese>
             <Korean>야투경 밝기 줄이기</Korean>
-            <SChinese>减少夜视镜亮度</SChinese>
-            <TChinese>減少夜視鏡亮度</TChinese>
+            <Chinesesimp>减少夜视镜亮度</Chinesesimp>
+            <Chinese>減少夜視鏡亮度</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_DisplayName">
             <English>Nightvision</English>
@@ -189,8 +189,8 @@
             <French>Vision nocturne</French>
             <Japanese>夜間暗視装置</Japanese>
             <Korean>야간투시경</Korean>
-            <SChinese>夜视</SChinese>
-            <TChinese>夜視</TChinese>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Chinese>夜視</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_Module_Description">
             <English>Settings for night vision.</English>
@@ -204,8 +204,8 @@
             <French>Réglage pour la vision nocturne</French>
             <Japanese>夜間暗視装置の設定。</Japanese>
             <Korean>야간투시경 설정</Korean>
-            <SChinese>设定夜视选项.</SChinese>
-            <TChinese>設定夜視選項.</TChinese>
+            <Chinesesimp>设定夜视选项.</Chinesesimp>
+            <Chinese>設定夜視選項.</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_DisplayName">
             <English>Disable NVGs in scope</English>
@@ -219,8 +219,8 @@
             <French>Desactiver les JVN dans les viseurs.</French>
             <Japanese>スコープを覗くと夜間暗視装置を無効化</Japanese>
             <Korean>조준경 사용시 야투경 비활성화</Korean>
-            <SChinese>使用瞄准镜时关闭夜视镜</SChinese>
-            <TChinese>使用瞄準鏡時關閉夜視鏡</TChinese>
+            <Chinesesimp>使用瞄准镜时关闭夜视镜</Chinesesimp>
+            <Chinese>使用瞄準鏡時關閉夜視鏡</Chinese>
         </Key>
         <Key ID="STR_ACE_NightVision_DisableNVGsWithSights_Description">
             <English>Blocks the usage of night vision goggles whilst aiming down the sight.</English>
@@ -234,8 +234,8 @@
             <French>Bloque l'usage des JVN pendant la visée.</French>
             <Japanese>スコープを使い狙いを付けると、夜間暗視装置を無効化します。</Japanese>
             <Korean>조준시 야투경의 사용을 제한합니다.</Korean>
-            <SChinese>此功能开启后, 当要使用瞄准镜时, 为避免夜视镜镜头碰撞到瞄准镜, 会先拿开夜视镜后再进行瞄准镜瞄准.</SChinese>
-            <TChinese>此功能開啟後, 當要使用瞄準鏡時, 為避免夜視鏡鏡頭碰撞到瞄準鏡, 會先拿開夜視鏡後再進行瞄準鏡瞄準.</TChinese>
+            <Chinesesimp>此功能开启后, 当要使用瞄准镜时, 为避免夜视镜镜头碰撞到瞄准镜, 会先拿开夜视镜后再进行瞄准镜瞄准.</Chinesesimp>
+            <Chinese>此功能開啟後, 當要使用瞄準鏡時, 為避免夜視鏡鏡頭碰撞到瞄準鏡, 會先拿開夜視鏡後再進行瞄準鏡瞄準.</Chinese>
         </Key>
     </Package>
 </Project>

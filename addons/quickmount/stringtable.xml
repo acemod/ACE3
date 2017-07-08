@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="QuickMount">
         <Key ID="STR_ACE_QuickMount_Category">
             <English>Quick Mount</English>
             <Italian>Entrata Rapida</Italian>
             <Japanese>クイック マウント</Japanese>
-            <SChinese>快速搭乘</SChinese>
-            <TChinese>快速搭乘</TChinese>
+            <Chinesesimp>快速搭乘</Chinesesimp>
+            <Chinese>快速搭乘</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindName">
             <English>Vehicle quick mount</English>
@@ -14,71 +14,71 @@
             <Polish>Pojazd szybkie mocowanie</Polish>
             <Italian>Entrata rapida veicolo</Italian>
             <Japanese>車両クイック マウント</Japanese>
-            <SChinese>快速搭乘载具</SChinese>
-            <TChinese>快速搭乘載具</TChinese>
+            <Chinesesimp>快速搭乘载具</Chinesesimp>
+            <Chinese>快速搭乘載具</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_KeybindDescription">
             <English>Quickly enter the vehicle you are directly looking at.</English>
             <Italian>Entra velocemente nel veicolo che stai guardando.</Italian>
             <Japanese>直接見ている車両へ迅速に搭乗します。</Japanese>
-            <SChinese>快速进入你正在看的载具之中.</SChinese>
-            <TChinese>快速進入你正在看的載具之中.</TChinese>
+            <Chinesesimp>快速进入你正在看的载具之中.</Chinesesimp>
+            <Chinese>快速進入你正在看的載具之中.</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleFull">
             <English>Vehicle Full</English>
             <Italian>Veicolo Pieno</Italian>
             <Japanese>車両は満員</Japanese>
-            <SChinese>载具已满</SChinese>
-            <TChinese>載具已滿</TChinese>
+            <Chinesesimp>载具已满</Chinesesimp>
+            <Chinese>載具已滿</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Distance">
             <English>Distance</English>
             <Italian>Distanza</Italian>
             <Japanese>距離</Japanese>
-            <SChinese>距离</SChinese>
-            <TChinese>距離</TChinese>
+            <Chinesesimp>距离</Chinesesimp>
+            <Chinese>距離</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_DistanceDescription">
             <English>Maximum distance to check for vehicles.</English>
             <Italian>Distanza massima per controllare i veicoli.</Italian>
             <Japanese>車両を確認できる最大距離</Japanese>
-            <SChinese>最大可检查载具的距离.</SChinese>
-            <TChinese>最大可檢查載具的距離.</TChinese>
+            <Chinesesimp>最大可检查载具的距离.</Chinesesimp>
+            <Chinese>最大可檢查載具的距離.</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_VehicleLocked">
             <English>Vehicle Locked</English>
             <Italian>Veicolo Bloccato.</Italian>
             <Japanese>車両は施錠されている</Japanese>
-            <SChinese>载具已上锁</SChinese>
-            <TChinese>載具已上鎖</TChinese>
+            <Chinesesimp>载具已上锁</Chinesesimp>
+            <Chinese>載具已上鎖</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Speed">
             <English>Maximum Speed (km/h)</English>
             <Italian>Velocità Massima (km/h)</Italian>
             <Japanese>最高速度 (km/h)</Japanese>
-            <SChinese>最高速度 (公里/小时)</SChinese>
-            <TChinese>最高速度 (公里/小時)</TChinese>
+            <Chinesesimp>最高速度 (公里/小时)</Chinesesimp>
+            <Chinese>最高速度 (公里/小時)</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_SpeedDescription">
             <English>Maximum vehicle speed (km/h) allowed for player entry</English>
             <Italian>Velocità massima del veicolo (km/h) consentita per far salire un giocatore</Italian>
             <Japanese>プレイヤーが搭乗できる限界速度 (km/h)</Japanese>
-            <SChinese>设置玩家能在最高多少的速度之下进入载具.</SChinese>
-            <TChinese>設置玩家能在最高多少的速度之下進入載具.</TChinese>
+            <Chinesesimp>设置玩家能在最高多少的速度之下进入载具.</Chinesesimp>
+            <Chinese>設置玩家能在最高多少的速度之下進入載具.</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_Priority">
             <English>Prioritize Seat</English>
             <Italian>Priorità Sedile</Italian>
             <Japanese>優先席</Japanese>
-            <SChinese>优先座位</SChinese>
-            <TChinese>優先座位</TChinese>
+            <Chinesesimp>优先座位</Chinesesimp>
+            <Chinese>優先座位</Chinese>
         </Key>
         <Key ID="STR_ACE_QuickMount_PriorityDescription">
             <English>Seat priority on entry</English>
             <Italian>Priorità del sedile in entrata</Italian>
             <Japanese>搭乗の際の優先順位</Japanese>
-            <SChinese>优先想进入哪个座位.</SChinese>
-            <TChinese>優先想進入哪個座位.</TChinese>
+            <Chinesesimp>优先想进入哪个座位.</Chinesesimp>
+            <Chinese>優先想進入哪個座位.</Chinese>
         </Key>
     </Package>
 </Project>

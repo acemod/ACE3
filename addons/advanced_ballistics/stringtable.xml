@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Ballistics">
         <Key ID="STR_ACE_Advanced_Ballistics_WindInfoKey">
@@ -14,8 +14,8 @@
             <Portuguese>Mostrar Informação do Vento</Portuguese>
             <Japanese>風の情報を表示</Japanese>
             <Korean>바람의 정보를 표시</Korean>
-            <TChinese>顯示風況</TChinese>
-            <SChinese>显示风况</SChinese>
+            <Chinese>顯示風況</Chinese>
+            <Chinesesimp>显示风况</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ProtractorKey">
             <English>Show Protractor</English>
@@ -30,8 +30,8 @@
             <Portuguese>Mostrar Transferidor</Portuguese>
             <Japanese>分度器を表示</Japanese>
             <Korean>각도기 표시</Korean>
-            <TChinese>顯示量角器</TChinese>
-            <SChinese>显示量角器</SChinese>
+            <Chinese>顯示量角器</Chinese>
+            <Chinesesimp>显示量角器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_DisplayName">
             <English>Advanced Ballistics</English>
@@ -46,8 +46,8 @@
             <Italian>Balistica Avanzata</Italian>
             <Japanese>アドバンスド バリスティックス</Japanese>
             <Korean>고급 탄도학</Korean>
-            <TChinese>先進彈道系統</TChinese>
-            <SChinese>先进弹道系统</SChinese>
+            <Chinese>先進彈道系統</Chinese>
+            <Chinesesimp>先进弹道系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_DisplayName">
             <English>Advanced Ballistics</English>
@@ -62,8 +62,8 @@
             <Italian>Balistica Avanzata</Italian>
             <Japanese>アドバンスド バリスティックス</Japanese>
             <Korean>고급 탄도학</Korean>
-            <TChinese>先進彈道系統</TChinese>
-            <SChinese>先进弹道系统</SChinese>
+            <Chinese>先進彈道系統</Chinese>
+            <Chinesesimp>先进弹道系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_enabled_Description">
             <English>Enables advanced ballistics</English>
@@ -78,8 +78,8 @@
             <Italian>Abilita Balistica Avanzata</Italian>
             <Japanese>アドバンスド バリスティックスを有効化</Japanese>
             <Korean>고급 탄도학을 적용합니다</Korean>
-            <TChinese>啟用先進彈道系統</TChinese>
-            <SChinese>启用先进弹道系统</SChinese>
+            <Chinese>啟用先進彈道系統</Chinese>
+            <Chinesesimp>启用先进弹道系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_DisplayName">
             <English>Enabled For Snipers</English>
@@ -94,8 +94,8 @@
             <Italian>Abilita per Tiratori Scelti</Italian>
             <Japanese>狙撃手へ有効化</Japanese>
             <Korean>저격수만 적용</Korean>
-            <TChinese>啟用給狙擊手</TChinese>
-            <SChinese>启用给狙击手</SChinese>
+            <Chinese>啟用給狙擊手</Chinese>
+            <Chinesesimp>启用给狙击手</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForSnipers_Description">
             <English>Enables advanced ballistics for non local snipers (when using high power optics)</English>
@@ -110,8 +110,8 @@
             <Italian>Abilita Balistica Avanzata per Tiratori Scelti non locali (con ottiche ad alto potenziale)</Italian>
             <Japanese>非ローカルの狙撃手 (高倍率スコープを使っている場合)へアドバンスド バリスティックスを有効化します</Japanese>
             <Korean>고급 탄도학을 비-저격수 인원에게도 적용합니다(고성능 조준경을 사용시)</Korean>
-            <TChinese>啟用先進彈道系統給非本地狙擊手(當使用高倍率光學瞄鏡時)</TChinese>
-            <SChinese>启用先进弹道系统给非本地狙击手(当使用高倍率光学瞄镜时)</SChinese>
+            <Chinese>啟用先進彈道系統給非本地狙擊手(當使用高倍率光學瞄鏡時)</Chinese>
+            <Chinesesimp>启用先进弹道系统给非本地狙击手(当使用高倍率光学瞄镜时)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_DisplayName">
             <English>Enabled For Group Members</English>
@@ -126,8 +126,8 @@
             <Italian>Abilita per Membri del Gruppo</Italian>
             <Japanese>グループ メンバーへ有効化</Japanese>
             <Korean>그룹 멤버도 적용</Korean>
-            <TChinese>啟用給小隊成員</TChinese>
-            <SChinese>启用给小队成员</SChinese>
+            <Chinese>啟用給小隊成員</Chinese>
+            <Chinesesimp>启用给小队成员</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForGroupMembers_Description">
             <English>Enables advanced ballistics for non local group members</English>
@@ -142,8 +142,8 @@
             <Italian>Abilita Balistica Avanzata per Membri non locali del Gruppo</Italian>
             <Japanese>非ローカルのグループ メンバーへアドバンスド バリスティックスを有効化します</Japanese>
             <Korean>고급 탄도학을 비-그룹멤버에게도 적용합니다</Korean>
-            <TChinese>啟用先進彈道系統給非本地小隊成員</TChinese>
-            <SChinese>启用先进弹道系统给非本地小队成员</SChinese>
+            <Chinese>啟用先進彈道系統給非本地小隊成員</Chinese>
+            <Chinesesimp>启用先进弹道系统给非本地小队成员</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_DisplayName">
             <English>Enabled For Everyone</English>
@@ -158,8 +158,8 @@
             <Italian>Abilita per tutti</Italian>
             <Japanese>全員に有効化</Japanese>
             <Korean>모두에게 적용</Korean>
-            <TChinese>啟用給所有人</TChinese>
-            <SChinese>启用给所有人</SChinese>
+            <Chinese>啟用給所有人</Chinese>
+            <Chinesesimp>启用给所有人</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulateForEveryone_Description">
             <English>Enables advanced ballistics for all non local players (enabling this may degrade performance during heavy firefights in multiplayer)</English>
@@ -174,8 +174,8 @@
             <Italian>Abilita Balistica Avanzata per tutti i giocatori non locali (abilitare questo parametro potrebbe ridurre le prestazioni durante scontri intensi in multiplayer)</Italian>
             <Japanese>非ローカルの全プレイヤーへアドバンスド バリスティックスを有効化します (マルチプレイで大規模な銃撃戦がおこなわれると、動作の低下を招きます)</Japanese>
             <Korean>고급 탄도학을 모든 비-로컬그룹에게도 적용합니다(적용 후 대규모 전투시 성능하락을 유발할 수 있습니다)</Korean>
-            <TChinese>啟用先進彈道系統給所有非本地玩家 (啟用此功能後,在多人連線大量交火時可能會降低效能)</TChinese>
-            <SChinese>启用先进弹道系统给所有非本地玩家 (启用此功能后,在多人连线大量交火时可能会降低效能)</SChinese>
+            <Chinese>啟用先進彈道系統給所有非本地玩家 (啟用此功能後,在多人連線大量交火時可能會降低效能)</Chinese>
+            <Chinesesimp>启用先进弹道系统给所有非本地玩家 (启用此功能后,在多人连线大量交火时可能会降低效能)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_DisplayName">
             <English>Always Enabled For Group Members</English>
@@ -190,8 +190,8 @@
             <Italian>Sempre abilitato per Membri del Gruppo</Italian>
             <Japanese>常にグループ メンバーへ有効化</Japanese>
             <Korean>그룹 멤버에게 항상 적용</Korean>
-            <TChinese>永遠啟用給小隊成員</TChinese>
-            <SChinese>永远启用给小队成员</SChinese>
+            <Chinese>永遠啟用給小隊成員</Chinese>
+            <Chinesesimp>永远启用给小队成员</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_alwaysSimulateForGroupMembers_Description">
             <English>Always enables advanced ballistics when a group member fires</English>
@@ -206,8 +206,8 @@
             <Italian>Abilita sempre Balistica Avanzata quando un membro del gruppo spara</Italian>
             <Japanese>グループ メンバーが射撃した時、常にアドバンスド バリスティックスを有効化します</Japanese>
             <Korean>그룹 멤버가 발사시 항상 고급 탄도학을 적용합니다</Korean>
-            <TChinese>當小隊成員開火時,永遠啟用先進彈道系統</TChinese>
-            <SChinese>当小队成员开火时,永远启用先进弹道系统</SChinese>
+            <Chinese>當小隊成員開火時,永遠啟用先進彈道系統</Chinese>
+            <Chinesesimp>当小队成员开火时,永远启用先进弹道系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_DisplayName">
             <English>Disabled In FullAuto Mode</English>
@@ -222,8 +222,8 @@
             <Italian>Disabilita in modalità di fuoco automatico</Italian>
             <Japanese>フルオートでは無効化</Japanese>
             <Korean>조정간 자동시 비활성화</Korean>
-            <TChinese>在全自動模式時關閉</TChinese>
-            <SChinese>在全自动模式时关闭</SChinese>
+            <Chinese>在全自動模式時關閉</Chinese>
+            <Chinesesimp>在全自动模式时关闭</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_disabledInFullAutoMod_Description">
             <English>Disables the advanced ballistics during full auto fire</English>
@@ -238,8 +238,8 @@
             <Italian>Disabilita Balistica Avanzata durante fuoco automatico</Italian>
             <Japanese>フルオートで射撃中ではアドバンスド バリスティックスを無効化します</Japanese>
             <Korean>조정간 자동시 고급 탄도학을 비활성화 합니다</Korean>
-            <TChinese>在全自動模式開火時,關閉先進彈道系統</TChinese>
-            <SChinese>在全自动模式开火时,关闭先进弹道系统</SChinese>
+            <Chinese>在全自動模式開火時,關閉先進彈道系統</Chinese>
+            <Chinesesimp>在全自动模式开火时,关闭先进弹道系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_DisplayName">
             <English>Enable Ammo Temperature Simulation</English>
@@ -254,8 +254,8 @@
             <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
             <Japanese>弾薬の温度シミュレーションを有効化</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
-            <TChinese>啟用彈藥溫度模擬系統</TChinese>
-            <SChinese>启用弹药温度模拟系统</SChinese>
+            <Chinese>啟用彈藥溫度模擬系統</Chinese>
+            <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_ammoTemperatureEnabled_Description">
             <English>Muzzle velocity varies with ammo temperature</English>
@@ -270,8 +270,8 @@
             <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
             <Japanese>弾薬の温度により初速値を変化させます</Japanese>
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
-            <TChinese>子彈初速將隨彈藥溫度而有所變化</TChinese>
-            <SChinese>子弹初速将随弹药温度而有所变化</SChinese>
+            <Chinese>子彈初速將隨彈藥溫度而有所變化</Chinese>
+            <Chinesesimp>子弹初速将随弹药温度而有所变化</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_DisplayName">
             <English>Enable Barrel Length Simulation</English>
@@ -286,8 +286,8 @@
             <Italian>Abilita simulazione della lunghezza della canna</Italian>
             <Japanese>銃身長のシミュレーションを有効化</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
-            <TChinese>啟用槍管長度模擬系統</TChinese>
-            <SChinese>启用枪管长度模拟系统</SChinese>
+            <Chinese>啟用槍管長度模擬系統</Chinese>
+            <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_barrelLengthInfluenceEnabled_Description">
             <English>Muzzle velocity varies with barrel length</English>
@@ -302,8 +302,8 @@
             <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
             <Japanese>銃身長により初速値を変化させます</Japanese>
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
-            <TChinese>子彈初速將隨槍管長度而有所變化</TChinese>
-            <SChinese>子弹初速将随枪管长度而有所变化</SChinese>
+            <Chinese>子彈初速將隨槍管長度而有所變化</Chinese>
+            <Chinesesimp>子弹初速将随枪管长度而有所变化</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_DisplayName">
             <English>Enable Bullet Trace Effect</English>
@@ -318,8 +318,8 @@
             <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
             <Japanese>弾丸の痕跡表示を有効化</Japanese>
             <Korean>예광탄 효과 적용</Korean>
-            <TChinese>啟用曳光彈效果</TChinese>
-            <SChinese>启用曳光弹效果</SChinese>
+            <Chinese>啟用曳光彈效果</Chinese>
+            <Chinesesimp>启用曳光弹效果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_bulletTraceEnabled_Description">
             <English>Enables a bullet trace effect to high caliber bullets (only visible when looking through high power optics)</English>
@@ -334,8 +334,8 @@
             <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
             <Japanese>大口径の銃弾による弾丸の痕跡表示を有効化します (高倍率スコープを介してでしか見れません)</Japanese>
             <Korean>대구경 탄환에 예광탄 효과를 적용합니다(오직 고성능 조준경 사용시에만 보입니다)</Korean>
-            <TChinese>啟用曳光彈效果給大口徑子彈 (只有透過高倍率光學瞄鏡才能看到)</TChinese>
-            <SChinese>启用曳光弹效果给大口径子弹 (只有透过高倍率光学瞄镜才能看到)</SChinese>
+            <Chinese>啟用曳光彈效果給大口徑子彈 (只有透過高倍率光學瞄鏡才能看到)</Chinese>
+            <Chinesesimp>启用曳光弹效果给大口径子弹 (只有透过高倍率光学瞄镜才能看到)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_DisplayName">
             <English>Simulation Interval</English>
@@ -350,8 +350,8 @@
             <Italian>Intervallo Simulazione</Italian>
             <Japanese>シミュレーション間隔</Japanese>
             <Korean>구현 간격</Korean>
-            <TChinese>模擬間隔</TChinese>
-            <SChinese>模拟间隔</SChinese>
+            <Chinese>模擬間隔</Chinese>
+            <Chinesesimp>模拟间隔</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
@@ -366,8 +366,8 @@
             <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
             <Japanese>各計算ごとの間隔を定義します</Japanese>
             <Korean>각 계산 단위의 간격을 정의합니다</Korean>
-            <TChinese>定義每個模擬計算之間的時間間隔</TChinese>
-            <SChinese>定义每个模拟计算之间的时间间隔</SChinese>
+            <Chinese>定義每個模擬計算之間的時間間隔</Chinese>
+            <Chinesesimp>定义每个模拟计算之间的时间间隔</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_DisplayName">
             <English>Simulation Radius</English>
@@ -382,8 +382,8 @@
             <Italian>Raggio Simulazione</Italian>
             <Japanese>シミュレーションの適用範囲</Japanese>
             <Korean>구현 범위</Korean>
-            <TChinese>模擬半徑</TChinese>
-            <SChinese>模拟半径</SChinese>
+            <Chinese>模擬半徑</Chinese>
+            <Chinesesimp>模拟半径</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_simulationRadius_Description">
             <English>Defines the radius around the player (in meters) at which advanced ballistics are applied to projectiles</English>
@@ -398,8 +398,8 @@
             <Italian>Definisce il raggio attorno al giocatore (in metri) per cui la Balistica Avanzata è applicata ai proiettili</Italian>
             <Japanese>プレイヤーの周囲にアドバンスド バリスティックスによる弾道を適用させる範囲を半径で定義します (メートル)</Japanese>
             <Korean>플레이어 주위의 발사체를 고급 탄도학으로 정의하는 범위를 정합니다(미터)</Korean>
-            <TChinese>以玩家的半徑距離(公尺)定義先進彈道系統啟用範圍</TChinese>
-            <SChinese>以玩家的半径距离(公尺)定义先进弹道系统启用范围</SChinese>
+            <Chinese>以玩家的半徑距離(公尺)定義先進彈道系統啟用範圍</Chinese>
+            <Chinesesimp>以玩家的半径距离(公尺)定义先进弹道系统启用范围</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Ballistics_Description">
             <English>This module enables advanced ballistics simulation - meaning the trajectory of projectiles is influenced by variables like air temperature, atmospheric pressure, humidity, gravity, the type of ammunition and the weapon from which it was fired.</English>
@@ -414,8 +414,8 @@
             <Italian>Questo modulo abilita la simulazione della Balistica Avanzata - cioè la traiettoria dei proiettili è influenzata da variabili come la temperatura dell'aria, pressione atmosferica, umidità, gravità, il tipo di munizione e l'arma da cui è sparata</Italian>
             <Japanese>このモジュールはアドバンスド バリスティックスを有効化します。弾道は気温や気圧、湿度、重力、弾薬の種類、発射する武器から影響を受けるようになります。</Japanese>
             <Korean>이 모듈은 고급 탄도학을 적용시킵니다 - 이는 발사체의 궤적이 기온, 대기압, 습도, 중력, 탄환의 종류와 어느 무기에서 발사되는지에 따라 영향을 받습니다.</Korean>
-            <TChinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響.</TChinese>
-            <SChinese>该模块实现先进的弹道仿真 - 这意味着子弹的轨迹是由空气温度、大气压力、湿度、重力、弹药类型以及射击的武器所影响.</SChinese>
+            <Chinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響.</Chinese>
+            <Chinesesimp>该模块实现先进的弹道仿真 - 这意味着子弹的轨迹是由空气温度、大气压力、湿度、重力、弹药类型以及射击的武器所影响.</Chinesesimp>
         </Key>
     </Package>
 </Project>

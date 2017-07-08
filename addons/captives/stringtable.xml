@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Captives">
         <Key ID="STR_ACE_Captives_SetCaptive">
@@ -14,8 +14,8 @@
             <Russian>Взять в плен</Russian>
             <Japanese>捕虜にする</Japanese>
             <Korean>사로잡기</Korean>
-            <TChinese>逮捕俘虜</TChinese>
-            <SChinese>逮捕俘虏</SChinese>
+            <Chinese>逮捕俘虜</Chinese>
+            <Chinesesimp>逮捕俘虏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ReleaseCaptive">
             <English>Free Prisoner</English>
@@ -30,8 +30,8 @@
             <Russian>Освободить пленника</Russian>
             <Japanese>捕虜を解放する</Japanese>
             <Korean>풀어주기</Korean>
-            <TChinese>釋放俘虜</TChinese>
-            <SChinese>释放俘虏</SChinese>
+            <Chinese>釋放俘虜</Chinese>
+            <Chinesesimp>释放俘虏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_EscortCaptive">
             <English>Escort Prisoner</English>
@@ -46,8 +46,8 @@
             <Russian>Конвоировать пленника</Russian>
             <Japanese>捕虜を移動させる</Japanese>
             <Korean>포로 호송하기</Korean>
-            <TChinese>護送俘虜</TChinese>
-            <SChinese>护送俘虏</SChinese>
+            <Chinese>護送俘虜</Chinese>
+            <Chinesesimp>护送俘虏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_StopEscorting">
             <English>Release Prisoner</English>
@@ -62,8 +62,8 @@
             <Russian>Прекратить конвоирование</Russian>
             <Japanese>捕虜を解放する</Japanese>
             <Korean>포로 풀어주기</Korean>
-            <TChinese>停止護送俘虜</TChinese>
-            <SChinese>停止护送俘虏</SChinese>
+            <Chinese>停止護送俘虜</Chinese>
+            <Chinesesimp>停止护送俘虏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_NoCaptive">
             <English>You need to take him as prisoner first!</English>
@@ -78,8 +78,8 @@
             <Russian>Вы должны сначала взять его в плен!</Russian>
             <Japanese>あなたは先に捕虜を取る必要があります。</Japanese>
             <Korean>먼저 포로로 만들어야합니다!</Korean>
-            <TChinese>你必須先逮捕他!</TChinese>
-            <SChinese>你必须先逮捕他!</SChinese>
+            <Chinese>你必須先逮捕他!</Chinese>
+            <Chinesesimp>你必须先逮捕他!</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_LoadCaptive">
             <English>Load Captive</English>
@@ -94,8 +94,8 @@
             <Italian>Fai salire il prigioniero</Italian>
             <Japanese>捕虜を乗せる</Japanese>
             <Korean>포로 태우기</Korean>
-            <TChinese>將俘虜放入載具</TChinese>
-            <SChinese>将俘虏放入载具</SChinese>
+            <Chinese>將俘虜放入載具</Chinese>
+            <Chinesesimp>将俘虏放入载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_UnloadCaptive">
             <English>Unload Captive</English>
@@ -110,8 +110,8 @@
             <Italian>Fai scendere il prigioniero</Italian>
             <Japanese>捕虜を降ろす</Japanese>
             <Korean>포로 내리기</Korean>
-            <TChinese>將俘虜帶出載具</TChinese>
-            <SChinese>将俘虏带出载具</SChinese>
+            <Chinese>將俘虜帶出載具</Chinese>
+            <Chinesesimp>将俘虏带出载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -126,8 +126,8 @@
             <Russian>Кабельная стяжка</Russian>
             <Japanese>ケーブル タイ</Japanese>
             <Korean>케이블 타이</Korean>
-            <TChinese>束線帶</TChinese>
-            <SChinese>束线带</SChinese>
+            <Chinese>束線帶</Chinese>
+            <Chinesesimp>束线带</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_CableTieDescription">
             <English>Cable ties that allow you to restrain prisoners.</English>
@@ -142,8 +142,8 @@
             <Russian>Кабельные стяжки позволяют связывать пленников.</Russian>
             <Japanese>ケーブル タイは捕虜を制圧できます。</Japanese>
             <Korean>케이블 타이는 포로를 구류시킬때 씁니다.</Korean>
-            <TChinese>束線帶可以綁住俘虜</TChinese>
-            <SChinese>束线带可以绑住俘虏</SChinese>
+            <Chinese>束線帶可以綁住俘虜</Chinese>
+            <Chinesesimp>束线带可以绑住俘虏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_FriskMenuHeader">
             <English>Inventory of frisked person</English>
@@ -158,8 +158,8 @@
             <Italian>Inventario della persona perquisita</Italian>
             <Japanese>捕虜の持ち物を確認する</Japanese>
             <Korean>검문당한 사람의 소지품</Korean>
-            <TChinese>搜身選單</TChinese>
-            <SChinese>搜身选单</SChinese>
+            <Chinese>搜身選單</Chinese>
+            <Chinesesimp>搜身选单</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_FriskPerson">
             <English>Frisk person</English>
@@ -174,8 +174,8 @@
             <Italian>Perquisisci la persona</Italian>
             <Japanese>捕虜の持ち物</Japanese>
             <Korean>검문당한사람</Korean>
-            <TChinese>搜身</TChinese>
-            <SChinese>搜身</SChinese>
+            <Chinese>搜身</Chinese>
+            <Chinesesimp>搜身</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_StartSurrendering">
             <English>Surrender</English>
@@ -190,8 +190,8 @@
             <Italian>Arrenditi</Italian>
             <Japanese>投降</Japanese>
             <Korean>투항</Korean>
-            <TChinese>投降</TChinese>
-            <SChinese>投降</SChinese>
+            <Chinese>投降</Chinese>
+            <Chinesesimp>投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_StopSurrendering">
             <English>Stop Surrendering</English>
@@ -206,8 +206,8 @@
             <Italian>Smetti di arrenderti</Italian>
             <Japanese>投降をやめる</Japanese>
             <Korean>투항하는것을 멈춤</Korean>
-            <TChinese>停止投降</TChinese>
-            <SChinese>停止投降</SChinese>
+            <Chinese>停止投降</Chinese>
+            <Chinesesimp>停止投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_DisplayName">
             <English>Make Unit Surrender</English>
@@ -222,8 +222,8 @@
             <Italian>Fai arrendere l'unità</Italian>
             <Japanese>ユニットを投降させる</Japanese>
             <Korean>투항시키기</Korean>
-            <TChinese>使單位投降</TChinese>
-            <SChinese>使单位投降</SChinese>
+            <Chinese>使單位投降</Chinese>
+            <Chinesesimp>使单位投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSurrender_Description">
             <English>Sync a unit to make them surrender.</English>
@@ -238,8 +238,8 @@
             <Italian>Sincronizza una unità per farla arrendere.</Italian>
             <Japanese>同期されたユニットを投降させます。</Japanese>
             <Korean>투항시키기 위해 동기화합니다.</Korean>
-            <TChinese>同步此模塊到一個單位, 使該單位投降</TChinese>
-            <SChinese>同步此模块到一个单位, 使该单位投降</SChinese>
+            <Chinese>同步此模塊到一個單位, 使該單位投降</Chinese>
+            <Chinesesimp>同步此模块到一个单位, 使该单位投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_DisplayName">
             <English>Make Unit Handcuffed</English>
@@ -253,8 +253,8 @@
             <French>Rendre une unité captive</French>
             <Japanese>ユニットを拘束する</Japanese>
             <Korean>수갑을 채우기</Korean>
-            <TChinese>使單位戴上手銬</TChinese>
-            <SChinese>使单位戴上手铐</SChinese>
+            <Chinese>使單位戴上手銬</Chinese>
+            <Chinesesimp>使单位戴上手铐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleHandcuffed_Description">
             <English>Sync a unit to make them handcuffed.</English>
@@ -268,8 +268,8 @@
             <French>Synchronisez une unité pour la rendre captive.</French>
             <Japanese>同期されたユニットを拘束させます。</Japanese>
             <Korean>수갑을 채우기 위해 동기화합니다.</Korean>
-            <TChinese>使單位戴上手銬</TChinese>
-            <SChinese>使单位戴上手铐</SChinese>
+            <Chinese>使單位戴上手銬</Chinese>
+            <Chinesesimp>使单位戴上手铐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_DisplayName">
             <English>Captives Settings</English>
@@ -284,8 +284,8 @@
             <Italian>Impostazioni Prigionieri</Italian>
             <Japanese>拘束の設定</Japanese>
             <Korean>포로 설정</Korean>
-            <TChinese>俘虜設定</TChinese>
-            <SChinese>俘虏设定</SChinese>
+            <Chinese>俘虜設定</Chinese>
+            <Chinesesimp>俘虏设定</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_Description">
             <English>Controls settings for surrender and cable ties</English>
@@ -300,8 +300,8 @@
             <Italian>Controlla le impostazioni per la resa e le manette</Italian>
             <Japanese>投降したユニットや拘束されたユニットの扱いを設定します。</Japanese>
             <Korean>투항과 케이블 타이에 관련한 설정</Korean>
-            <TChinese>定義投降與束帶等設定</TChinese>
-            <SChinese>定义投降与束带等设定</SChinese>
+            <Chinese>定義投降與束帶等設定</Chinese>
+            <Chinesesimp>定义投降与束带等设定</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_name">
             <English>Can handcuff own side</English>
@@ -316,8 +316,8 @@
             <Italian>Puoi ammanettare unità alleate</Italian>
             <Japanese>自陣営への拘束を可能に</Japanese>
             <Korean>자기편에게 수갑을 채울 수 있게 합니다</Korean>
-            <TChinese>可以銬住同陣營隊友</TChinese>
-            <SChinese>可以铐住同阵营队友</SChinese>
+            <Chinese>可以銬住同陣營隊友</Chinese>
+            <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_handcuffSide_description">
             <English>Can players cabletie units on their own side</English>
@@ -332,8 +332,8 @@
             <Italian>I giocatori possono ammanettare unità alleate</Italian>
             <Japanese>プレイヤーがユニットを拘束し、彼らの陣営に変更できます。</Japanese>
             <Korean>자기편에게 케이블타이를 사용할 수 있게합니다</Korean>
-            <TChinese>玩家可以使用束線帶銬住同陣營隊友</TChinese>
-            <SChinese>玩家可以使用束线带铐住同阵营队友</SChinese>
+            <Chinese>玩家可以使用束線帶銬住同陣營隊友</Chinese>
+            <Chinesesimp>玩家可以使用束线带铐住同阵营队友</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_name">
             <English>Allow surrendering</English>
@@ -348,8 +348,8 @@
             <Italian>Permetti Resa</Italian>
             <Japanese>投降を許可</Japanese>
             <Korean>투항 활성화</Korean>
-            <TChinese>允許投降</TChinese>
-            <SChinese>允许投降</SChinese>
+            <Chinese>允許投降</Chinese>
+            <Chinesesimp>允许投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_allowSurrender_description">
             <English>Players can surrender after holstering their weapon</English>
@@ -364,8 +364,8 @@
             <Italian>I giocatori possono arrendersi dopo aver messo via le proprie armi</Italian>
             <Japanese>プレイヤーは武器を収めたあとに投降できるようにします。</Japanese>
             <Korean>비무장한 플레이어가 투항할 수 있게 합니다</Korean>
-            <TChinese>玩家能在收起自己武器後投降</TChinese>
-            <SChinese>玩家能在收起自己武器后投降</SChinese>
+            <Chinese>玩家能在收起自己武器後投降</Chinese>
+            <Chinesesimp>玩家能在收起自己武器后投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_name">
             <English>Require surrendering</English>
@@ -379,8 +379,8 @@
             <French>Requiert la reddition</French>
             <Japanese>投降を必要とする</Japanese>
             <Korean>투항 필요</Korean>
-            <TChinese>要求目標投降</TChinese>
-            <SChinese>要求目标投降</SChinese>
+            <Chinese>要求目標投降</Chinese>
+            <Chinesesimp>要求目标投降</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_ModuleSettings_requireSurrender_description">
             <English>Require Players to surrender before they can be arrested</English>
@@ -394,8 +394,8 @@
             <French>Requiert la capitulation des joueurs avant qu'ils ne puissent être arrêtés</French>
             <Japanese>プレイヤーは拘束される前に、投降する必要があります。</Japanese>
             <Korean>체포하기 전에 플레이어가 투항을 먼저해야만 합니다</Korean>
-            <TChinese>玩家須先要求目標投降, 才可以進行逮捕</TChinese>
-            <SChinese>玩家须先要求目标投降, 才可以进行逮捕</SChinese>
+            <Chinese>玩家須先要求目標投降, 才可以進行逮捕</Chinese>
+            <Chinesesimp>玩家须先要求目标投降, 才可以进行逮捕</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOnly">
             <English>Surrendering only</English>
@@ -409,8 +409,8 @@
             <French>Reddition seulement</French>
             <Japanese>投降中のみ</Japanese>
             <Korean>투항 중에만</Korean>
-            <TChinese>只能在投降狀態</TChinese>
-            <SChinese>只能在投降状态</SChinese>
+            <Chinese>只能在投降狀態</Chinese>
+            <Chinesesimp>只能在投降状态</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SurrenderOrNoWeapon">
             <English>Surrendering or No weapon</English>
@@ -424,8 +424,8 @@
             <French>Capitulation ou desarmé</French>
             <Japanese>投降中か非武装時</Japanese>
             <Korean>투항 중 혹은 비무장</Korean>
-            <TChinese>投降或無武器狀態</TChinese>
-            <SChinese>投降或无武器状态</SChinese>
+            <Chinese>投降或無武器狀態</Chinese>
+            <Chinesesimp>投降或无武器状态</Chinesesimp>
         </Key>
     </Package>
 </Project>

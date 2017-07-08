@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Gestures">
         <Key ID="STR_ACE_Gestures_Name">
@@ -14,8 +14,8 @@
             <Spanish>ACE Gestos</Spanish>
             <Japanese>ACE ジェスチャー</Japanese>
             <Korean>ACE 수신호</Korean>
-            <SChinese>ACE 手势</SChinese>
-            <TChinese>ACE 手勢</TChinese>
+            <Chinesesimp>ACE 手势</Chinesesimp>
+            <Chinese>ACE 手勢</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Gestures">
             <English>Gestures</English>
@@ -30,8 +30,8 @@
             <Italian>Gesti</Italian>
             <Japanese>ジェスチャー</Japanese>
             <Korean>수신호</Korean>
-            <SChinese>手势</SChinese>
-            <TChinese>手勢</TChinese>
+            <Chinesesimp>手势</Chinesesimp>
+            <Chinese>手勢</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Advance">
             <English>Advance</English>
@@ -46,8 +46,8 @@
             <Italian>Avanzare</Italian>
             <Japanese>警戒</Japanese>
             <Korean>전진</Korean>
-            <SChinese>前进</SChinese>
-            <TChinese>前進</TChinese>
+            <Chinesesimp>前进</Chinesesimp>
+            <Chinese>前進</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Go">
             <English>Go</English>
@@ -62,8 +62,8 @@
             <Italian>Muoversi</Italian>
             <Japanese>進め</Japanese>
             <Korean>이동</Korean>
-            <SChinese>出发</SChinese>
-            <TChinese>出發</TChinese>
+            <Chinesesimp>出发</Chinesesimp>
+            <Chinese>出發</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Follow">
             <English>Follow</English>
@@ -78,8 +78,8 @@
             <Italian>Seguire</Italian>
             <Japanese>ついて来い</Japanese>
             <Korean>따라올것</Korean>
-            <SChinese>跟进</SChinese>
-            <TChinese>跟進</TChinese>
+            <Chinesesimp>跟进</Chinesesimp>
+            <Chinese>跟進</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Up">
             <English>Up</English>
@@ -94,8 +94,8 @@
             <Italian>Alzarsi</Italian>
             <Japanese>立ち上がれ</Japanese>
             <Korean>위</Korean>
-            <SChinese>起立</SChinese>
-            <TChinese>起立</TChinese>
+            <Chinesesimp>起立</Chinesesimp>
+            <Chinese>起立</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_CeaseFire">
             <English>Cease Fire</English>
@@ -110,8 +110,8 @@
             <Italian>Cessare il Fuoco</Italian>
             <Japanese>撃つな</Japanese>
             <Korean>사격 중지</Korean>
-            <SChinese>停火</SChinese>
-            <TChinese>停火</TChinese>
+            <Chinesesimp>停火</Chinesesimp>
+            <Chinese>停火</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Stop">
             <English>Stop</English>
@@ -125,8 +125,8 @@
             <Spanish>Detenerse</Spanish>
             <Japanese>止まれ</Japanese>
             <Korean>멈춰</Korean>
-            <SChinese>停止</SChinese>
-            <TChinese>停止</TChinese>
+            <Chinesesimp>停止</Chinesesimp>
+            <Chinese>停止</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Freeze">
             <English>Freeze</English>
@@ -141,8 +141,8 @@
             <Italian>Fermi</Italian>
             <Japanese>動くな</Japanese>
             <Korean>정지</Korean>
-            <SChinese>不准动</SChinese>
-            <TChinese>不准動</TChinese>
+            <Chinesesimp>不准动</Chinesesimp>
+            <Chinese>不准動</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Cover">
             <English>Cover</English>
@@ -157,8 +157,8 @@
             <Italian>Copertura</Italian>
             <Japanese>隠れろ</Japanese>
             <Korean>엄폐</Korean>
-            <SChinese>掩护</SChinese>
-            <TChinese>掩護</TChinese>
+            <Chinesesimp>掩护</Chinesesimp>
+            <Chinese>掩護</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Regroup">
             <English>Rally up</English>
@@ -172,8 +172,8 @@
             <Spanish>Reunirse</Spanish>
             <Japanese>集合</Japanese>
             <Korean>집결</Korean>
-            <SChinese>集合</SChinese>
-            <TChinese>集合</TChinese>
+            <Chinesesimp>集合</Chinesesimp>
+            <Chinese>集合</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Forward">
             <English>Move forward</English>
@@ -187,8 +187,8 @@
             <Spanish>Avanzar</Spanish>
             <Japanese>前に進め</Japanese>
             <Korean>앞으로 이동</Korean>
-            <SChinese>往前走</SChinese>
-            <TChinese>往前走</TChinese>
+            <Chinesesimp>往前走</Chinesesimp>
+            <Chinese>往前走</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Engage">
             <English>Engage</English>
@@ -202,8 +202,8 @@
             <Spanish>Atacar</Spanish>
             <Japanese>交戦しろ</Japanese>
             <Korean>교전할것</Korean>
-            <SChinese>交战</SChinese>
-            <TChinese>交戰</TChinese>
+            <Chinesesimp>交战</Chinesesimp>
+            <Chinese>交戰</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Point">
             <English>Point</English>
@@ -217,8 +217,8 @@
             <Spanish>Señalar</Spanish>
             <Japanese>指示</Japanese>
             <Korean>가리키기</Korean>
-            <SChinese>指出</SChinese>
-            <TChinese>指出</TChinese>
+            <Chinesesimp>指出</Chinesesimp>
+            <Chinese>指出</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Hold">
             <English>Hold</English>
@@ -232,8 +232,8 @@
             <Spanish>Esperar</Spanish>
             <Japanese>そこにいろ</Japanese>
             <Korean>기다려</Korean>
-            <SChinese>停住</SChinese>
-            <TChinese>停住</TChinese>
+            <Chinesesimp>停住</Chinesesimp>
+            <Chinese>停住</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_Warning">
             <English>Warning</English>
@@ -247,8 +247,8 @@
             <Spanish>Atención</Spanish>
             <Japanese>注意</Japanese>
             <Korean>주의</Korean>
-            <SChinese>警告</SChinese>
-            <TChinese>警告</TChinese>
+            <Chinesesimp>警告</Chinesesimp>
+            <Chinese>警告</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_displayName">
             <English>Show Gestures On Interaction Menu</English>
@@ -262,8 +262,8 @@
             <Russian>Показать жесты в меню взаимодействия</Russian>
             <Japanese>インタラクション メニュー上でジェスチャーを表示する</Japanese>
             <Korean>수신호를 상호작용 메뉴에서 보여줍니다</Korean>
-            <SChinese>显示手势互动选单</SChinese>
-            <TChinese>顯示手勢互動選單</TChinese>
+            <Chinesesimp>显示手势互动选单</Chinesesimp>
+            <Chinese>顯示手勢互動選單</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_ShowOnInteractionMenu_description">
             <English>Show gestures on the self interaction menu, or just use keybinds, or disable completely</English>
@@ -277,8 +277,8 @@
             <Russian>Показать жесты в меню взамиодейтсвия с собой или только использовать горячие клавиши, или полностью отключить</Russian>
             <Japanese>キー操作や同時使用を無効化している場合はセルフ インタラクション メニュ上でジェスチャーを表示します</Japanese>
             <Korean>수신호를 상호작용 메뉴에서 보여주거나 혹은 단축키를 지정하거나 아니면 아예 사용하지 않습니다.</Korean>
-            <SChinese>显示手势选项在自己的互动选单上, 或只利用键盘来使用手势, 或完全禁用</SChinese>
-            <TChinese>顯示手勢選項在自己的互動選單上, 或只利用鍵盤來使用手勢, 或完全禁用</TChinese>
+            <Chinesesimp>显示手势选项在自己的互动选单上, 或只利用键盘来使用手势, 或完全禁用</Chinesesimp>
+            <Chinese>顯示手勢選項在自己的互動選單上, 或只利用鍵盤來使用手勢, 或完全禁用</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_JustKeybinds">
             <English>Just Keybinds</English>
@@ -292,8 +292,8 @@
             <Russian>Только горячие клавиши</Russian>
             <Japanese>キー操作のみ</Japanese>
             <Korean>오직 단축키만</Korean>
-            <SChinese>只利用键盘</SChinese>
-            <TChinese>只利用鍵盤</TChinese>
+            <Chinesesimp>只利用键盘</Chinesesimp>
+            <Chinese>只利用鍵盤</Chinese>
         </Key>
         <Key ID="STR_ACE_Gestures_KeysAndInteractionMenu">
             <English>Keybinds + Interaction Menu</English>
@@ -307,8 +307,8 @@
             <Russian>Клавиши + Меню взаимодействия</Russian>
             <Japanese>キー操作とインタラクション メニュ</Japanese>
             <Korean>단축키및 상호작용 메뉴</Korean>
-            <SChinese>键盘 + 互动选单</SChinese>
-            <TChinese>鍵盤 + 互動選單</TChinese>
+            <Chinesesimp>键盘 + 互动选单</Chinesesimp>
+            <Chinese>鍵盤 + 互動選單</Chinese>
         </Key>
     </Package>
 </Project>

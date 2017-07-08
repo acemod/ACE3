@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Advanced_Fatigue">
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor">
@@ -9,8 +9,8 @@
             <Korean>성능 요인</Korean>
             <French>Facteur de performance</French>
             <Italian>Fattore Prestazione</Italian>
-            <TChinese>體力值</TChinese>
-            <SChinese>体力值</SChinese>
+            <Chinese>體力值</Chinese>
+            <Chinesesimp>体力值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_Description">
             <English>Influences the overall performance of all players with no custom factor. Higher means better.</English>
@@ -20,8 +20,8 @@
             <Korean>모든 성능이 임의로 설정된 값 없이 영향받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de tous les joueurs sans facteurs personalisés. Une valeur plus élevée implique de meilleures performances.</French>
             <Italian>Influenza qualsiasi prestazione di tutti i giocatori smuniti di un fattore personalizzato. Maggiore significa migliore.</Italian>
-            <TChinese>影響所有玩家的體力表現. 值越高代表體力越好.</TChinese>
-            <SChinese>影响所有玩家的体力表现. 值越高代表体力越好.</SChinese>
+            <Chinese>影響所有玩家的體力表現. 值越高代表體力越好.</Chinese>
+            <Chinesesimp>影响所有玩家的体力表现. 值越高代表体力越好.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_PerformanceFactor_EdenDescription">
             <English>Influences the overall performance of this unit. Higher means better.</English>
@@ -31,8 +31,8 @@
             <Korean>모든 성능이 이 단위로 영향을 받습니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Influence les performances générales de cette unité. Une valeur plus élevée implique de meilleures performances.</French>
             <Italian>Influenza qualsiasi prestazione di questa unità. Maggiore significa migliore.</Italian>
-            <TChinese>影響這個單位的體力表現. 值越高代表體力越好.</TChinese>
-            <SChinese>影响这个单位的体力表现. 值越高代表体力越好.</SChinese>
+            <Chinese>影響這個單位的體力表現. 值越高代表體力越好.</Chinese>
+            <Chinesesimp>影响这个单位的体力表现. 值越高代表体力越好.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor">
             <English>Recovery Factor</English>
@@ -42,8 +42,8 @@
             <Korean>회복 요인</Korean>
             <French>Facteur de récupération</French>
             <Italian>Fattore Recupero</Italian>
-            <TChinese>回復值</TChinese>
-            <SChinese>回复值</SChinese>
+            <Chinese>回復值</Chinese>
+            <Chinesesimp>回复值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_RecoveryFactor_Description">
             <English>Changes how fast the player recovers when resting. Higher is faster.</English>
@@ -53,8 +53,8 @@
             <Korean>얼마나 빨리 회복하는지를 바꿉니다. 값이 클수록 더 나은 성능을 발휘합니다</Korean>
             <French>Change la vitesse à laquelle les joueurs récupèrent leur endurance lorsqu'ils se reposent. Une valeur plus élevée implique une récupération plus rapide.</French>
             <Italian>Determina in quanto tempo il giocatore recupera quando rilassato. Maggiore significa migliore.</Italian>
-            <TChinese>決定玩家休息多久就能回復體力. 值越高恢復越快.</TChinese>
-            <SChinese>决定玩家休息多久就能回复体力. 值越高恢复越快.</SChinese>
+            <Chinese>決定玩家休息多久就能回復體力. 值越高恢復越快.</Chinese>
+            <Chinesesimp>决定玩家休息多久就能回复体力. 值越高恢复越快.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor">
             <English>Load Factor</English>
@@ -64,8 +64,8 @@
             <Korean>부담 요인</Korean>
             <French>Facteur d'encombrement</French>
             <Italian>Fattore Caricamento</Italian>
-            <TChinese>負重量</TChinese>
-            <SChinese>负重量</SChinese>
+            <Chinese>負重量</Chinese>
+            <Chinesesimp>负重量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_LoadFactor_Description">
             <English>Increases or decreases how much weight influences the players performance. Zero means equipment weight has no performance influence.</English>
@@ -75,8 +75,8 @@
             <Korean>플레이어가 무게에 따라 얼마나 영향받는지를 증가시키거나 감소시킵니다. 0의 경우 플레이어가 장비 무게에 영향받지 않습니다.</Korean>
             <French>Augmente ou réduit l'influence que le poids à sur les performances des joueurs. Zéro implique que le poids de l'équipement n'a pas d'influence sur les performances.</French>
             <Italian>Incrementa o decrementa quanto il peso influenza le prestazioni dei giocatori. Zero significa che il peso dell'equipaggiamento non ha alcuna influenza nelle prestazioni.</Italian>
-            <TChinese>增加或降低玩家所能承受的負重量. 如設定值為0, 代表裝備的重量將不會影響到玩家的體力表現.</TChinese>
-            <SChinese>增加或降低玩家所能承受的负重量. 如设定值为0, 代表装备的重量将不会影响到玩家的体力表现.</SChinese>
+            <Chinese>增加或降低玩家所能承受的負重量. 如設定值為0, 代表裝備的重量將不會影響到玩家的體力表現.</Chinese>
+            <Chinesesimp>增加或降低玩家所能承受的负重量. 如设定值为0, 代表装备的重量将不会影响到玩家的体力表现.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor">
             <English>Terrain Gradient Factor</English>
@@ -86,8 +86,8 @@
             <Korean>지형 경사도 요인</Korean>
             <French>Facteur d'inclinaison du terrain</French>
             <Italian>Fattore Pendenza Terreno</Italian>
-            <TChinese>地形陡峭影響值</TChinese>
-            <SChinese>地形陡峭影响值</SChinese>
+            <Chinese>地形陡峭影響值</Chinese>
+            <Chinesesimp>地形陡峭影响值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_TerrainGradientFactor_Description">
             <English>Sets how much steep terrain increases stamina loss. Higher means higher stamina loss.</English>
@@ -97,8 +97,8 @@
             <Korean>경사도에 따라 얼마나 피로해지는지를 정합니다.  값이 클수록 더 많은 피로를 유발합니다.</Korean>
             <French>Configure l'influence de l'inclinaison du terrain sur la perte d'endurance. Une valeur plus élevée implique une perte d'endurance plus importante.</French>
             <Italian>Stabilisce quanto la pendenza del terreno incrementa la perdita della stamina. Maggiore significa più stamina persa.</Italian>
-            <TChinese>設定陡峭的地形將會影響多少體力的流失. 值越高代表體力流失越快.</TChinese>
-            <SChinese>设定陡峭的地形将会影响多少体力的流失. 值越高代表体力流失越快.</SChinese>
+            <Chinese>設定陡峭的地形將會影響多少體力的流失. 值越高代表體力流失越快.</Chinese>
+            <Chinesesimp>设定陡峭的地形将会影响多少体力的流失. 值越高代表体力流失越快.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled">
             <English>Enabled</English>
@@ -108,8 +108,8 @@
             <Korean>활성화</Korean>
             <French>Activé</French>
             <Italian>Abilitato</Italian>
-            <TChinese>啟用</TChinese>
-            <SChinese>启用</SChinese>
+            <Chinese>啟用</Chinese>
+            <Chinesesimp>启用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_Enabled_Description">
             <English>Enables/disables Advanced Fatigue.</English>
@@ -119,8 +119,8 @@
             <Korean>고급 피로도 활성화/비활성화</Korean>
             <French>Active/désactive la fatigue avancée.</French>
             <Italian>Abilita/disabilita la Fatica Avanzata.</Italian>
-            <TChinese>啟用/關閉進階體力.</TChinese>
-            <SChinese>启用/关闭进阶体力.</SChinese>
+            <Chinese>啟用/關閉進階體力.</Chinese>
+            <Chinesesimp>启用/关闭进阶体力.</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar">
             <English>Show stamina bar</English>
@@ -130,8 +130,8 @@
             <Korean>피로도 막대</Korean>
             <French>Afficher la barre d'endurance</French>
             <Italian>Mostra barra stamina</Italian>
-            <TChinese>顯示體力條</TChinese>
-            <SChinese>显示体力条</SChinese>
+            <Chinese>顯示體力條</Chinese>
+            <Chinesesimp>显示体力条</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Advanced_Fatigue_EnableStaminaBar_Description">
             <English>Shows the stamina bar.</English>
@@ -141,8 +141,8 @@
             <Korean>피로도 막대를 보여줍니다.</Korean>
             <French>Affiche la barre d'endurance.</French>
             <Italian>Mostra la barra della stamina.</Italian>
-            <TChinese>顯示體力條.</TChinese>
-            <SChinese>显示体力条.</SChinese>
+            <Chinese>顯示體力條.</Chinese>
+            <Chinesesimp>显示体力条.</Chinesesimp>
         </Key>
     </Package>
 </Project>
